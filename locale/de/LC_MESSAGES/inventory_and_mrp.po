@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-23 07:52+0000\n"
+"POT-Creation-Date: 2024-08-20 14:22+0000\n"
 "PO-Revision-Date: 2021-11-02 08:48+0000\n"
 "Last-Translator: Larissa Manderfeld, 2024\n"
 "Language-Team: German (https://app.transifex.com/odoo/teams/41243/de/)\n"
@@ -1591,7 +1591,7 @@ msgstr ":guilabel:`Los` im Pop-up für Detaillierte Vorgänge"
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouses_locations.rst:44
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/cross_dock.rst:18
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:21
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:104
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:26
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/operation/invoicing.rst:17
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/operation/label_type.rst:13
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/operation/labels.rst:15
@@ -10778,73 +10778,341 @@ msgid ""
 ":guilabel:`Costing Method`:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:85
-msgid ""
-":guilabel:`Standard Price`: the default costing method in Odoo. The cost of "
-"the product is manually defined on the product form, and this cost is used "
-"to compute the valuation. Even if the purchase price on a purchase order "
-"differs, the valuation will still use the cost defined on the product form."
-msgstr ""
-":guilabel:`Standardpreis`: ist die Standardkalkulationsmethode in Odoo. Die "
-"Kosten des Produkts werden manuell auf dem Produktformular definiert, und "
-"diese Kosten werden für die Berechnung der Bewertung verwendet. Auch wenn "
-"der Einkaufspreis in einem Einkaufsauftrag abweicht, wird die Bewertung "
-"anhand der im Produktformular definierten Kosten vorgenommen."
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:88
+msgid "Standard Price"
+msgstr "Standardpreis"
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:89
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:90
 msgid ""
-":guilabel:`Average Cost (AVCO)`: calculates the valuation of a product based"
-" on the average cost of that product, divided by the total number of "
-"available stock on-hand. With this costing method, inventory valuation is "
-"*dynamic*, and constantly adjusts based on the purchase price of products."
+"The default costing method in Odoo. The cost of the product is manually "
+"defined on the product form, and this cost is used to compute the valuation."
+" Even if the purchase price on a purchase order differs, the valuation is "
+"the cost defined on the product form."
 msgstr ""
-":guilabel:`Durchschnittskosten (AVCO)`: Berechnet die Bewertung eines "
-"Produkts auf der Grundlage der durchschnittlichen Kosten dieses Produkts, "
-"geteilt durch die Gesamtzahl der verfügbaren Bestände im Lager. Bei dieser "
-"Kalkulationsmethode ist die Bestandsbewertung *dynamisch* und wird ständig "
-"auf der Grundlage des Einkaufspreises der Produkte angepasst."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:94
-msgid ""
-"When choosing :guilabel:`Average Cost (AVCO)` as the :guilabel:`Costing "
-"Method`, changing the numerical value in the :guilabel:`Cost` field for "
-"products in the respective product category creates a new record in the "
-"*Inventory Valuation* report to adjust the value of the product. The "
-":guilabel:`Cost` amount will then automatically update based on the average "
-"purchase price both of inventory on hand and the costs accumulated from "
-"validated purchase orders."
-msgstr ""
-"Wenn Sie :guilabel:`Durchschnittskosten (AVCO)` als "
-":guilabel:`Kalkulationsverfahren` wählen, wird bei einer Änderung des "
-"numerischen Wertes im Feld :guilabel:`Kosten` für Produkte in der jeweiligen"
-" Produktkategorie ein neuer Datensatz im Bericht *Bestandsbewertung` "
-"erstellt, um den Wert des Produkts anzupassen. Der :guilabel:`Kosten`-Betrag"
-" wird dann automatisch auf der Grundlage des durchschnittlichen "
-"Einkaufspreises sowohl des Lagerbestands als auch der aus validierten "
-"Bestellungen kumulierten Kosten aktualisiert."
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:98
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:139
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:210
+msgid "Operation"
+msgstr "Vorgang"
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:99
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:140
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:211
+msgid "Unit Cost"
+msgstr "Einzelkosten"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:100
-msgid ""
-":guilabel:`First In First Out (FIFO)`: tracks the costs of incoming and "
-"outgoing items in real-time and uses the real price of the products to "
-"change the valuation. The oldest purchase price is used as the cost for the "
-"next good sold until an entire lot of that product is sold. When the next "
-"inventory lot moves up in the queue, an updated product cost is used based "
-"on the valuation of that specific lot. This method is arguably the most "
-"accurate inventory valuation method for a variety of reasons, however, it is"
-" highly sensitive to input data and human error."
-msgstr ""
-":guilabel:`First In First Out (FIFO)`: Verfolgt die Kosten der ein- und "
-"ausgehenden Artikel in Echtzeit und verwendet den tatsächlichen Preis der "
-"Produkte, um die Bewertung zu ändern. Der älteste Einkaufspreis wird als "
-"Kosten für die nächste verkaufte Ware verwendet, bis ein ganzes Los dieses "
-"Produkts verkauft ist. Wenn das nächste Lagerlos in der Warteschlange "
-"nachrückt, werden die aktualisierten Produktkosten auf der Grundlage der "
-"Bewertung dieses spezifischen Loses verwendet. Diese Methode ist aus einer "
-"Reihe von Gründen die wohl genaueste Methode zur Bestandsbewertung, "
-"allerdings ist sie sehr anfällig für Eingabedaten und menschliche Fehler."
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:141
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:212
+msgid "Qty On Hand"
+msgstr "Vorrätige Menge"
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:101
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:142
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:213
+msgid "Incoming Value"
+msgstr "Eingangswert"
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:102
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:143
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:214
+msgid "Inventory Value"
+msgstr "Bestandswert"
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:104
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:109
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:114
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:119
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:124
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:150
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:221
+msgid "$10"
+msgstr "10 €"
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:105
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:146
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:217
+msgid "0"
+msgstr "0"
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:107
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:145
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:148
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:216
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:219
+msgid "$0"
+msgstr "0 €"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:108
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:149
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:220
+msgid "Receive 8 products for $10/unit"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:110
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:151
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:222
+msgid "8"
+msgstr "8"
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:111
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:152
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:223
+msgid "8 * $10"
+msgstr "8 * 10 €"
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:112
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:153
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:224
+msgid "$80"
+msgstr "80 $"
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:113
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:154
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:225
+msgid "Receive 4 products for $16/unit"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:115
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:156
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:227
+msgid "12"
+msgstr "12"
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:116
+msgid "4 * $10"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:117
+msgid "$120"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:118
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:159
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:230
+msgid "Deliver 10 products"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:120
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:161
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:232
+msgid "2"
+msgstr "2"
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:121
+msgid "-10 * $10"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:122
+msgid "$20"
+msgstr "20 $"
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:123
+msgid "Receive 2 products for $9/unit"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:125
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:166
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:238
+msgid "4"
+msgstr "4"
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:126
+msgid "2 * $10"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:127
+msgid "$40"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:129
+msgid "Average Cost (AVCO)"
+msgstr "Durchschnittskosten (AVCO)"
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:131
+msgid ""
+"Calculates the valuation of a product based on the average cost of that "
+"product, divided by the total number of available stock on-hand. With this "
+"costing method, inventory valuation is *dynamic*, and constantly adjusts "
+"based on the purchase price of products."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:155
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:160
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:226
+msgid "$12"
+msgstr "12 €"
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:157
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:228
+msgid "4 * $16"
+msgstr "4 * 16 €"
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:158
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:229
+msgid "$144"
+msgstr "144 €"
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:162
+msgid "-10 * $12"
+msgstr "-10 * 12 €"
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:163
+msgid "$24"
+msgstr "24 €"
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:164
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:236
+msgid "Receive 2 products for $6/unit"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:165
+msgid "$9"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:167
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:239
+msgid "2 * $6"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:168
+msgid "$36"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:170
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:242
+msgid "How are unit cost and inventory value calculated at each step?"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:172
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:244
+msgid "When receiving four products for $16 each:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:174
+msgid ""
+"Inventory value is calculated by adding the previous inventory value with "
+"the incoming value: :math:`$80 + (4 * $16) = $144`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:176
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:248
+msgid ""
+"Unit cost is calculated by dividing the inventory value by the quantity on-"
+"hand: :math:`$144 / 12 = $12`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:179
+msgid ""
+"When delivering ten products, the average unit cost is used to calculate the"
+" inventory value, regardless of the purchase price of the product. "
+"Therefore, inventory value is :math:`$144 + (-10 * $12) = $24`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:183
+msgid "Receive two products for $6 each:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:185
+msgid "Inventory value: :math:`$24 + (2 * $6) = $36`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:186
+msgid "Unit cost: :math:`$36 / 4 = $9`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:189
+msgid ""
+"When choosing :guilabel:`Average Cost (AVCO)` as the :guilabel:`Costing "
+"Method`, changing the numerical value in the *Cost* field for products in "
+"the respective product category creates a new record in the *Inventory "
+"Valuation* report to adjust the value of the product. The *Cost* amount is "
+"then automatically updated, based on the average purchase price of both the "
+"inventory on-hand and the costs accumulated from validated purchase orders."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:196
+msgid "First In First Out (FIFO)"
+msgstr "First In – First Out (FIFO)"
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:198
+msgid ""
+"Tracks the costs of incoming and outgoing items in real-time, and uses the "
+"real price of the products to change the valuation. The oldest purchase "
+"price is used as the cost for the next good sold, until an entire lot of "
+"that product is sold. When the next inventory lot moves up in the queue, an "
+"updated product cost is used based on the valuation of that specific lot."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:203
+msgid ""
+"This method is arguably the most accurate inventory valuation method for a "
+"variety of reasons, but it is highly sensitive to input data and human "
+"error."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:231
+msgid "$16"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:0
+msgid "-8 * $10"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:0
+msgid "-2 * $16"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:235
+msgid "$32"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:237
+msgid "$11"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:240
+msgid "$44"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:246
+msgid ""
+"Inventory value is calculated by adding the previous inventory value to the "
+"incoming value: :math:`$80 + (4 * $16) = $144`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:251
+msgid ""
+"When delivering ten products, eight units were purchased for $10, and two "
+"units were purchased for $16."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:254
+msgid ""
+"First, the incoming value is calculated by multiplying the on-hand quantity "
+"by the purchased price: :math:`(-8 * $10) + (-2 * $16) = -112`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:256
+msgid ""
+"The inventory value is calculated by subtracting the incoming value from the"
+" previous inventory value: :math:`$144 - $112 = $32`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:258
+msgid ""
+"Unit cost is calculated by dividing the inventory value by the remaining "
+"quantity: :math:`$32 / 2 = $16`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:261
+msgid ""
+"When receiving two products for $6, inventory value is :math:`$32 + $12 = "
+"$44`. Unit cost is :math:`$44 / 4 = $11`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:265
 msgid ""
 "Changing the costing method greatly impacts inventory valuation. It is "
 "highly recommended to consult an accountant first before making any "
@@ -10854,11 +11122,11 @@ msgstr ""
 "Bestandsbewertung. Es wird dringend empfohlen, zunächst einen Buchhalter zu "
 "konsultieren, bevor Sie hier Anpassungen vornehmen."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:112
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:269
 msgid ":doc:`using_inventory_valuation`"
 msgstr ":doc:`using_inventory_valuation`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:114
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:271
 msgid ""
 "When the :guilabel:`Costing Method` is changed, products already in stock "
 "that were using the :guilabel:`Standard` costing method **do not** change "
@@ -10877,29 +11145,29 @@ msgstr ""
 "auf einem Produktformular manuell geändert wird, erzeugt Odoo einen "
 "entsprechenden Eintrag im Bericht *Bestandsbewertung*."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:123
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:280
 msgid "Inventory valuation"
 msgstr "Lagerbewertung"
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:125
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:282
 msgid ""
 "Inventory valuation in Odoo can be set to be updated manually or "
 "automatically. While *Expense* accounts apply to both, the *Stock Input* and"
 " *Stock Output* accounts are only used for automated valuation."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:129
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:286
 msgid ""
 "Refer to the :ref:`Expense <inventory/management/expense-account>` and "
 ":ref:`Stock input/output <inventory/management/stock-account>` sections for "
 "details on configuring each account type."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:135
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:292
 msgid "Expense account"
 msgstr "Auslagenkonto"
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:137
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:294
 msgid ""
 "To configure the *expense account*, go to the :guilabel:`Account Properties`"
 " section of the intended product category (:menuselection:`Inventory app -->"
@@ -10907,31 +11175,31 @@ msgid ""
 "from the :guilabel:`Expense Account` drop-down menu."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:141
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:298
 msgid ""
 "To ensure the chosen account is the correct :guilabel:`Type,` click the "
 "|external link| icon to the right of the account. Then, set the account type"
 " based on the information below."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:146
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:214
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:303
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:371
 msgid "Anglo-Saxon"
 msgstr "Angelsächsisch"
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:150
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:177
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:307
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:334
 msgid "Automated"
 msgstr "Automatisch"
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:152
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:309
 msgid ""
 "In Anglo-Saxon accounting for automated inventory valuation, set the "
 ":guilabel:`Expense Account` to the `Expenses` account. Then, click the "
 "|external link| icon to the right of the account."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:156
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:313
 msgid ""
 "In the pop-up window, choose :guilabel:`Expenses` or :guilabel:`Cost of "
 "Revenue` from the :guilabel:`Type` drop-down menu."
@@ -10943,12 +11211,12 @@ msgstr ""
 msgid "Show **Expense Account** field, and external link icon."
 msgstr "Anzeige des Felds **Aufwandskonto** und Symbol für externen Link."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:163
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:182
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:320
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:339
 msgid "Manual"
 msgstr "Manuell"
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:165
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:322
 msgid ""
 "To configure the :guilabel:`Expense Account`, choose :guilabel:`Stock "
 "Valuation` from the field's drop-down menu. Verify the account's type by "
@@ -10960,13 +11228,13 @@ msgstr ""
 msgid "Show the **Expense Account** field."
 msgstr "Anzeige des Felds **Aufwandskonto**."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:173
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:232
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:330
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:389
 msgid "Continental"
 msgstr "Kontinental"
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:179
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:184
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:336
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:341
 msgid ""
 "Set the :guilabel:`Expense Account` to the :guilabel:`Expenses` or "
 ":guilabel:`Cost of Revenue` account type."
@@ -10974,11 +11242,11 @@ msgstr ""
 "Setzen Sie das :guilabel:`Aufwandskonto` auf den Kontotyp "
 ":guilabel:`Aufwand` oder :guilabel:`Umsatzkosten`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:190
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:347
 msgid "Stock input/output (automated only)"
 msgstr "Bestandseingang/-ausgang (nur automatisiert)"
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:192
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:349
 msgid ""
 "To configure the :guilabel:`Stock Input Account` and :guilabel:`Stock Output"
 " Account`, go to :menuselection:`Inventory app --> Configuration --> Product"
@@ -10989,7 +11257,7 @@ msgstr ""
 ":menuselection:`Lager --> Konfiguration --> Produktkategorien` und wählen "
 "Sie die gewünschte Produktkategorie."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:196
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:353
 msgid ""
 "In the :guilabel:`Inventory Valuation` field, select :guilabel:`Automated`. "
 "Doing so makes the :guilabel:`Account Stock Properties` section appear. "
@@ -11000,7 +11268,7 @@ msgstr ""
 ":guilabel:`Buchhaltungseigenschaften für den Bestand` angezeigt. Diese "
 "Konten sind wie folgt definiert:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:199
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:356
 msgid ""
 ":guilabel:`Stock Valuation Account`: when automated inventory valuation is "
 "enabled on a product, this account will hold the current value of the "
@@ -11010,7 +11278,7 @@ msgstr ""
 " für ein Produkt aktiviert ist, enthält dieses Konto den aktuellen Wert der "
 "Produkte."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:201
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:358
 msgid ""
 ":guilabel:`Stock Journal`: accounting journal where entries are "
 "automatically posted when a product's inventory valuation changes."
@@ -11019,7 +11287,7 @@ msgstr ""
 "Buchungen vorgenommen werden, wenn sich die Bestandsbewertung eines Produkts"
 " ändert."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:203
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:360
 msgid ""
 ":guilabel:`Stock Input Account`: counterpart journal items for all incoming "
 "stock moves will be posted in this account, unless there is a specific "
@@ -11033,7 +11301,7 @@ msgstr ""
 "Standardwert für alle Produkte in dieser Kategorie. Er kann auch direkt für "
 "jedes Produkt festgelegt werden."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:207
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:364
 msgid ""
 ":guilabel:`Stock Output Account`: counterpart journal items for all outgoing"
 " stock moves will be posted in this account, unless there is a specific "
@@ -11047,7 +11315,7 @@ msgstr ""
 "Standardwert für alle Produkte in dieser Kategorie. Er kann auch direkt für "
 "jedes Produkt festgelegt werden."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:216
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:373
 msgid ""
 "In Anglo-Saxon accounting, the :guilabel:`Stock Input Account` and "
 ":guilabel:`Stock Output Account` are set to *different* :guilabel:`Current "
@@ -11063,7 +11331,7 @@ msgstr ""
 "und die Rechnungsstellung an den Lieferanten das Konto *Bestandseingang* "
 "ausgleichen."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:221
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:378
 msgid ""
 "To modify the account type, go to the click the |external link| icon to the "
 "right of the stock input/output account. In the pop-up window, choose "
@@ -11075,7 +11343,7 @@ msgid "Display account setup page, highlighting the **Type** field."
 msgstr ""
 "Anzeige der Kontoeinrichtungsseite mit Hervorhebung des Feldes **Typ**."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:229
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:386
 msgid ""
 "The *Stock Input* account is set to `Stock Interim (Received)`, a *Current "
 "Asset* account type."
@@ -11083,7 +11351,7 @@ msgstr ""
 "Das Konto *Bestandseingang* ist auf *Vorläufiger Bestand (Erhalten)* "
 "eingestellt, ein Kontotyp *Umlaufvermögen*."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:234
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:391
 msgid ""
 "In Continental accounting, the :guilabel:`Stock Input Account` and "
 ":guilabel:`Stock Output Account` are set to **the same** :guilabel:`Current "
@@ -11095,7 +11363,7 @@ msgstr ""
 "auf **das gleiche** :guilabel:`Umlaufvermögen` gesetzt. Auf diese Weise kann"
 " ein Konto ausgeglichen werden, wenn Artikel gekauft und verkauft werden."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:239
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:396
 msgid ""
 "The stock input and output accounts are both set to `Stock Interim "
 "(Received)`, a :guilabel:`Current Assets` account type. They can also be set"
@@ -11112,11 +11380,11 @@ msgstr ""
 msgid "Show the Stock Input and Output accounts."
 msgstr "Anzeige der Bestandseingangs- und ausgangskonten."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:249
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:406
 msgid "Inventory valuation reporting"
 msgstr "Bestandsbewertungsbericht"
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:251
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:408
 msgid ""
 "To start, go to :menuselection:`Accounting --> Reporting --> Balance Sheet`."
 " At the top of the dashboard, change the :guilabel:`As of` field value to "
@@ -11129,11 +11397,11 @@ msgstr ""
 ":guilabel:`Heute` und stellen Sie die Filterung :guilabel:`Optionen` auf "
 ":guilabel:`Alle ausklappen`, um alle aktuellen Daten auf einmal zu sehen."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:257
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:414
 msgid ":doc:`../../../../finance/accounting/get_started/cheat_sheet`"
 msgstr ":doc:`../../../../finance/accounting/get_started/cheat_sheet`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:259
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:416
 msgid ""
 "Under the parent :guilabel:`Current Assets` line item, look for the nested "
 ":guilabel:`Stock Valuation Account` line item, where the total valuation of "
@@ -11143,7 +11411,7 @@ msgstr ""
 "verschachtelte Position :guilabel:`Bestandsbewertungskonto`, in der die "
 "Gesamtbewertung des gesamten Lagerbestands angezeigt wird."
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:263
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:420
 msgid ""
 "Access more specific information with the :guilabel:`Stock Valuation "
 "Account` drop-down menu, by selecting either the :guilabel:`General Ledger` "
@@ -15899,208 +16167,6 @@ msgstr ""
 msgid "Some examples of putaway rules."
 msgstr "Andere Beispiele für Einlagerungsregeln."
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:97
-msgid "Storage categories"
-msgstr "Lagerkategorien"
-
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:99
-msgid ""
-"A *storage category* is an extra location attribute. Storage categories "
-"allow the user to define the quantity of products that can be stored in the "
-"location, and how the location will be selected with putaway rules."
-msgstr ""
-"Eine *Lagerkategorie* ist ein zusätzliches Standortattribut. Lagerkategorien"
-" ermöglichen es dem Benutzer, die Menge der Produkte zu definieren, die an "
-"dem Ort gelagert werden können und wie der Ort mit Einlagerungsregeln "
-"ausgewählt wird"
-
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:106
-msgid ""
-"To enable storage categories, go to :menuselection:`Inventory app --> "
-"Configuration --> Settings`, and activate the :guilabel:`Storage Categories`"
-" feature in the :guilabel:`Warehouse` section. Then, click :guilabel:`Save`."
-msgstr ""
-"Um verschiedene Pakete zu verwenden, gehen Sie zunächst zu "
-":menuselection:`Lager --> Konfiguration --> Einstellungen` zum Abschnitt "
-":guilabel:`Lagerhaus` und aktivieren Sie die Einstellung "
-":guilabel:`Lagerkategorien`. Klicken Sie dann auf :guilabel:`Speichern`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:111
-msgid ""
-"The :guilabel:`Storage Locations` feature **must** be enabled to enable "
-":guilabel:`Storage Categories`."
-msgstr ""
-"Die Funktion :guilabel:`Lagerorte` **muss** aktiviert sein, um "
-":guilabel:`Lagerkategorien` zu aktivieren."
-
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:115
-msgid "Define storage category"
-msgstr "Lagerkategorie festlegen"
-
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:117
-msgid ""
-"To create a storage category, go to :menuselection:`Inventory app --> "
-"Configuration --> Storage Categories` and click :guilabel:`Create`."
-msgstr ""
-"Um eine Lagerkategorie zu erstellen, gehen Sie zu :menuselection:`Lager --> "
-"Konfiguration --> Lagerkategorien` und klicken Sie auf :guilabel:`Neu`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:120
-msgid ""
-"On the storage category form, type a name for the :guilabel:`Storage "
-"Category` field."
-msgstr ""
-"Geben Sie im Formular der Lagerkategorie einen Namen für das Feld "
-":guilabel:`Lagerkategorie` ein."
-
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:122
-msgid ""
-"Options are available to limit the capacity by weight, by product, or by "
-"package type. The :guilabel:`Allow New Product` field defines when the "
-"location is considered available to store a product:"
-msgstr ""
-"Es gibt verfügbare Optionen zur Begrenzung der Kapazität nach Gewicht, nach "
-"Produkt oder nach Pakettyp. Das Feld :guilabel:`Neues Produkt erlauben` legt"
-" fest, wann der Standort als verfügbar für die Lagerung eines Produkts "
-"angesehen wird:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:126
-msgid ""
-":guilabel:`If location is empty`: a product can be added there only if the "
-"location is empty."
-msgstr ""
-":guilabel:`Wenn der Lagerort leer ist`: Ein Produkt kann dort nur "
-"hinzugefügt werden, wenn der Ort leer ist."
-
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:127
-msgid ""
-":guilabel:`If products are the same`: a product can be added there only if "
-"the same product is already there."
-msgstr ""
-":guilabel:`Wenn alle Produkte gleich sind`: ein Produkt kann dort nur "
-"hinzugefügt werden, wenn das gleiche Produkt bereits dort vorhanden ist."
-
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:129
-msgid ""
-":guilabel:`Allow mixed products`: several different products can be stored "
-"in this location at the same time."
-msgstr ""
-":guilabel:`Gemischte Produkte erlauben`: An diesem Ort können mehrere "
-"verschiedene Produkte gleichzeitig gelagert werden."
-
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:133
-msgid ""
-"Create putaway rules for pallet-stored items and ensure real-time storage "
-"capacity checks by creating the `High Frequency pallets` storage category."
-msgstr ""
-"Erstellen Sie Einlagerungsregeln für auf Paletten gelagerte Artikel und "
-"sorgen Sie für eine Überprüfung der Lagerkapazität in Echtzeit, indem Sie "
-"die Lagerkategorie `Häufig genutzte Paletten` anlegen."
-
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:136
-msgid ""
-"Name the :guilabel:`Storage Category`, and select :guilabel:`If all products"
-" are same` in the :guilabel:`Allow New Product` field."
-msgstr ""
-"Benennen Sie die :guilabel:`Lagerkategorie` und wählen Sie :guilabel:`Wenn "
-"alle Produkte gleich sind` im Feld :guilabel:`Neues Produkt erlauben`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:139
-msgid ""
-"Then, define package capacity in the :guilabel:`Capacity by Package` tab, "
-"specifying the number of packages for the designated :guilabel:`Package "
-"Type` and setting a maximum of `2.00` `Pallets` for a specific location."
-msgstr ""
-"Definieren Sie dann die Paketkapazität im Reiter :guilabel:`Kapazität nach "
-"Paket`, indem Sie die Anzahl der Pakete für den gewünschten "
-":guilabel:`Pakettyp` angeben und ein Maximum von `2,00` `Paletten` für einen"
-" bestimmten Standort festlegen."
-
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:0
-msgid "Create a storage category on the page."
-msgstr "Erstellung einer Lagerkategorie auf der Seite."
-
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:147
-msgid ""
-"Once the storage category settings are saved, the storage category can be "
-"linked to a location."
-msgstr ""
-"Sobald die Einstellungen der Lagerkategorie gespeichert sind, kann die "
-"Lagerkategorie mit einem Ort verknüpft werden."
-
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:149
-msgid ""
-"To do that, navigate to the location by going to :menuselection:`Inventory "
-"app --> Configuration --> Locations`, and select the location. Click "
-":guilabel:`Edit` and select the created category in the :guilabel:`Storage "
-"Category` field."
-msgstr ""
-"Navigieren Sie dazu zu dem Lagerort, indem Sie zu :menuselection:`Lager --> "
-"Konfiguration --> Lagerorte` gehen und den Lagerort auswählen. Klicken Sie "
-"auf :guilabel:`Bearbeiten` und wählen Sie die erstellte Kategorie im Feld "
-":guilabel:`Lagerkategorie`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:154
-msgid ""
-"Assign the `High Frequency pallets` storage category to the "
-"`WH/Stock/pallets/PAL 1` sub-location."
-msgstr ""
-"Weisen Sie die Lagerkategorie `Häufig benutzte Paletten` dem Unterstandort "
-"`WH/Stock/pallets/PAL 1` zu."
-
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:0
-msgid ""
-"When a Storage Category is created, it can be linked to a warehouse "
-"location."
-msgstr ""
-"Wenn eine Lagerkategorie erstellt wird, kann sie mit einem Lagerort "
-"verknüpft werden."
-
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:162
-msgid "Storage categories in putaway rules"
-msgstr "Lagerkategorien in Einlagerungsregeln"
-
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:164
-msgid ""
-"To continue the example from above, apply the `High Frequency Pallets` on "
-"the `PAL1` and `PAL2` locations and :ref:`rework the putaway rules "
-"<inventory/routes/putaway-rule>` as follows:"
-msgstr ""
-"Um das obige Beispiel fortzusetzen, wenden Sie die `Häufig genutzte "
-"Paletten` auf die Standorte `PAL1` und `PAL2` an und :ref:`überarbeiten Sie "
-"die Einlagerungsregeln <inventory/routes/putaway-rule>` wie folgt:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:167
-msgid "Assume one pallet of lemonade cans is received:"
-msgstr "Angenommen, eine Palette mit Limonadendosen geht ein:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:169
-msgid ""
-"If PAL1 and PAL2 are empty, the pallet will be redirected to "
-"WH/Stock/Pallets/PAL1."
-msgstr ""
-"Wenn PAL1 und PAL2 leer sind, wird die Palette nach WH/Bestand/Paletten/PAL1"
-" umgeleitet."
-
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:170
-msgid ""
-"If PAL1 is full, the pallet will be redirected to WH/Stock/Pallets/PAL2."
-msgstr ""
-"Wenn PAL1 voll ist, wird die Palette nach WH/Bestand/Paletten/PAL2 "
-"umgeleitet."
-
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:171
-msgid ""
-"If PAL1 and 2 are full, the pallet will be redirected to WH/Stock/Pallets."
-msgstr ""
-"Wenn PAL1 und PAL2 voll sind, wird die Palette nach WH/Bestand/Paletten "
-"umgeleitet."
-
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst-1
-msgid "Storage Categories used in a variety of putaway rules."
-msgstr ""
-"Lagerkategorien, die in eine Vielzahl von Einlagerungsregeln verwendet wird."
-
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:3
 msgid "Removal strategies (FIFO, LIFO, FEFO)"
 msgstr ""
@@ -16710,6 +16776,330 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst-1
 msgid "Hand cream lot numbers selected for the sales order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:3
+msgid "Storage categories"
+msgstr "Lagerkategorien"
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:5
+msgid ""
+"A *storage category* is used with :doc:`putaway rules <putaway>`, as an "
+"extra location attribute to automatically propose optimal storage locations "
+"for products."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:8
+msgid "Follow these steps to complete the setup:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:10
+msgid ""
+":ref:`Enable the Storage Category feature <inventory/routes/enable-storage-"
+"categories>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:11
+msgid ""
+":ref:`Define a storage category <inventory/routes/define-storage>` with "
+"specific limitations"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:12
+msgid ""
+"Assign a :ref:`category to storage locations <inventory/routes/assign-"
+"location>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:13
+msgid ""
+"Add the storage category as an attribute to a :ref:`putaway rule "
+"<inventory/routes/set-putaway-attribute>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:17
+msgid ":doc:`putaway`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:20
+msgid ""
+"Assigning categories to storage locations tells Odoo these locations meet "
+"specific requirements, such as temperature or accessibility. Odoo then "
+"evaluates these locations, based on defined capacity, and recommends the "
+"best one on the warehouse transfer form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:28
+msgid ""
+"To enable storage categories, go to :menuselection:`Inventory app --> "
+"Configuration --> Settings`. Then, in the :guilabel:`Warehouse` section, "
+"ensure the :guilabel:`Storage Locations` and :guilabel:`Multi-Step Routes` "
+"features are enabled."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:32
+msgid ""
+"Next, activate the :guilabel:`Storage Categories` feature. Finally, click "
+":guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst-1
+msgid "Show the Storage Categories feature."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:41
+msgid "Define storage category"
+msgstr "Lagerkategorie festlegen"
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:43
+msgid ""
+"A storage category with specific limitations **must** be created first, "
+"before it is applied to locations, in order to decide the optimal storage "
+"location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:46
+msgid ""
+"To create a storage category, go to :menuselection:`Inventory app --> "
+"Configuration --> Storage Categories`, and click :guilabel:`Create`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:49
+msgid ""
+"On the storage category form, type a name for the category in the "
+":guilabel:`Storage Category` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:52
+msgid ""
+"Options are available to limit capacity by weight, product, and package "
+"type."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:55
+msgid ""
+"Weight limits can be combined with capacity by package or product (e.g. a "
+"maximum of one hundred products with a total weight of two hundred "
+"kilograms)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:58
+msgid ""
+"While it is possible to limit capacity by product and package type at the "
+"same location, it may be more practical to store items in different amounts "
+"across various locations, as shown in this example of :ref:`capacity by "
+"package <inventory/routes/set-capacity-package>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:62
+msgid ""
+"The :guilabel:`Allow New Product` field defines when the location is "
+"considered available to store a product:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:65
+msgid ""
+":guilabel:`If location is empty`: a product can be added there only if the "
+"location is empty."
+msgstr ""
+":guilabel:`Wenn der Lagerort leer ist`: Ein Produkt kann dort nur "
+"hinzugefügt werden, wenn der Ort leer ist."
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:66
+msgid ""
+":guilabel:`If products are the same`: a product can be added there only if "
+"the same product is already there."
+msgstr ""
+":guilabel:`Wenn alle Produkte gleich sind`: ein Produkt kann dort nur "
+"hinzugefügt werden, wenn das gleiche Produkt bereits dort vorhanden ist."
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:68
+msgid ""
+":guilabel:`Allow mixed products`: several different products can be stored "
+"in this location at the same time."
+msgstr ""
+":guilabel:`Gemischte Produkte erlauben`: An diesem Ort können mehrere "
+"verschiedene Produkte gleichzeitig gelagert werden."
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:72
+msgid ""
+"When clicked, the :guilabel:`Location` smart button shows which storage "
+"locations the category has been assigned to."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:76
+msgid "Capacity by weight"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:78
+msgid ""
+"On a storage category form (:menuselection:`Inventory app --> Configuration "
+"--> Storage Categories`), set a maximum product weight in the :guilabel:`Max"
+" Weight` field. This limit applies to each location assigned this storage "
+"category."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:83
+msgid "Capacity by product"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:85
+msgid ""
+"In the :guilabel:`Capacity by Product` tab, click :guilabel:`Add a Line` to "
+"input items, and enter their capacities in the :guilabel:`Quantity` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:89
+msgid ""
+"Ensure only a maximum of five `Large Cabinets` and two `Corner Desk Right "
+"Sit` are stored at a single storage location, by specifying those amounts in"
+" the :guilabel:`Capacity by Product` tab of a storage category form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:0
+msgid "Show storage category limiting by product count."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:100
+msgid "Capacity by package"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:102
+msgid ""
+"For companies using :doc:`packages <../../management/products/usage>`, it "
+"becomes possible to ensure real-time storage capacity checks, based on "
+"package types (e.g., crates, bins, boxes, etc.)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:106
+msgid ""
+"Enable the :guilabel:`Packages` feature in :menuselection:`Inventory app -->"
+" Configuration --> Settings` to show the :guilabel:`Capacity by Package` "
+"tab."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:110
+msgid ""
+"Create putaway rules for pallet-stored items, by creating the `High "
+"Frequency pallets` storage category."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:113
+msgid ""
+"In the :guilabel:`Capacity by Package` tab, specify the number of packages "
+"for the designated :guilabel:`Package Type`, and set a maximum of `2.00` "
+"`Pallets` for a specific location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:0
+msgid "Create a storage category on the page."
+msgstr "Erstellung einer Lagerkategorie auf der Seite."
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:123
+msgid "Assign to location"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:125
+msgid ""
+"Once the storage category is created, assign it to a location. Navigate to "
+"the location by going to :menuselection:`Inventory app --> Configuration -->"
+" Locations`, and select the desired location. Then, select the created "
+"category in the :guilabel:`Storage Category` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:130
+msgid ""
+"Assign the `High Frequency pallets` storage category (which limits pallets "
+"stored at any location to two pallets) to the `WH/Stock/pallets/PAL 1` sub-"
+"location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:0
+msgid ""
+"When a Storage Category is created, it can be linked to a warehouse "
+"location."
+msgstr ""
+"Wenn eine Lagerkategorie erstellt wird, kann sie mit einem Lagerort "
+"verknüpft werden."
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:140
+msgid "Putaway rule"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:142
+msgid ""
+"With the :ref:`storage category <inventory/routes/define-storage>` and "
+":ref:`location <inventory/routes/assign-location>` set up, create the "
+":doc:`putaway rule <putaway>` by navigating to :menuselection:`Inventory app"
+" --> Configuration --> Putaway Rules`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:146
+msgid ""
+"Click the :guilabel:`Create` button to create the putaway rule. In the "
+":guilabel:`Having Category` field of the new putaway rule form, select the "
+"storage category."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:150
+msgid ""
+"Continuing the example from above, the `High Frequency Pallets` storage "
+"category is assigned to the putaway rule directing pallets of lemonade to "
+"locations with the `High Frequency Pallets` storage category :ref:`assigned "
+"to them <inventory/routes/assign-location>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:0
+msgid "Storage Categories used in a variety of putaway rules."
+msgstr ""
+"Lagerkategorien, die in eine Vielzahl von Einlagerungsregeln verwendet wird."
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:159
+msgid "Use case: limit capacity by package"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:161
+msgid ""
+"To limit the capacity of a storage location by a specific number of "
+"packages, :ref:`create a storage category with a Capacity By Package "
+"<inventory/routes/set-capacity-package>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:164
+msgid ""
+"Continuing the example from above, the `High Frequency Pallets` storage "
+"category is assigned to the `PAL1` and `PAL2` locations."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:167
+msgid ""
+"Then, :ref:`putaway rules <inventory/routes/putaway-rule>` are set, so that "
+"any pallets received in the warehouse are directed to be stored in `PAL1` "
+"and `PAL2` locations."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:170
+msgid ""
+"Depending on the number of pallets on-hand at each of the storage locations,"
+" when one pallet of lemonade cans is received, the following scenarios "
+"happen:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:173
+msgid ""
+"If `PAL1` and `PAL2` are empty, the pallet is redirected to "
+"`WH/Stock/Pallets/PAL1`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:174
+msgid ""
+"If `PAL1` is full, the pallet is redirected to `WH/Stock/Pallets/PAL2`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/storage_category.rst:175
+msgid ""
+"If `PAL1` and `PAL2` are full, the pallet is redirected to "
+"`WH/Stock/Pallets`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping.rst:5
@@ -17936,6 +18326,10 @@ msgid ""
 "shipping services. Doing so submits a request to enter a contractual "
 "business relationship between the company and Bpost."
 msgstr ""
+"Folgen Sie den Schritten auf der Website, um die Registrierung "
+"abzuschließen, und melden Sie sich für die Versanddienste an. Damit wird ein"
+" Antrag auf Aufnahme einer vertraglichen Geschäftsbeziehung zwischen dem "
+"Unternehmen und Bpost gestellt."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:33
 msgid ""
@@ -17943,6 +18337,9 @@ msgid ""
 "<https://bpost.freshdesk.com/support/solutions/articles/174847-account-id-"
 "and-passphrase>`_ accounts."
 msgstr ""
+"Odoo **kann nicht** `nicht geschäftlichen Bpost "
+"<https://bpost.freshdesk.com/support/solutions/articles/174847-account-id-"
+"and-passphrase>`_-Konten integiert werden."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/bpost.rst:37
 msgid ""
