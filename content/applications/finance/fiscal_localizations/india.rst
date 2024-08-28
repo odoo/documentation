@@ -550,3 +550,13 @@ The :guilabel:`GSTR-3` report contains different sections:
 
    .. image:: india/gst-gstr-3-report.png
       :alt: GSTR-3 Report
+
+Profit and Loss (IN) report
+---------------------------
+
+This is a :guilabel:`Profit and Loss` report that displays the balances for **Opening Stock** and
+**Closing Stock**. It helps users using Continental accounting to accurately determine the cost of
+goods (i.e :guilabel:`Opening Stock` + purchases during the period - :guilabel:`Closing Stock`).
+
+   .. image:: india/profit-and-loss-report.png
+      :alt: Profit and Loss report
