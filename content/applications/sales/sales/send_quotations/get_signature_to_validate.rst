@@ -23,20 +23,32 @@ Settings`, scroll to the :guilabel:`Quotations \& Orders` heading, and activate 
 
 Then, click the :guilabel:`Save` button in the top-left corner.
 
+When making a quotation template, the online signature feature is the :guilabel:`Signature`
+option, located in the :guilabel:`Online confirmation` field of the quotation template form.
+
+.. image:: get_signature_to_validate/signature-feature-quotation-template.png
+   :align: center
+   :alt: The Online confirmation signature option found on every quotation template in Odoo.
+
+On standard quotations, the online signature feature is the :guilabel:`Signature` option, located
+under the :guilabel:`Other Info` tab of the quotation form.
+
+.. image:: get_signature_to_validate/signature-other-info-tab.png
+   :align: center
+   :alt: The online signature feature option in the Other Info tab of a quotation form in Odoo.
+
 .. note::
-   When making a quotation template, the online signature feature is the :guilabel:`Signature`
-   option, located in the :guilabel:`Online confirmation` field of the quotation template form.
+   When in :doc:`Developer Mode <../../../general/developer_mode>`, a :guilabel:`Customer Signature`
+   tab appears on quotation/sales order forms. In the :guilabel:`Customer Signature` tab, there are
+   three tabs: :guilabel:`Signed By`, :guilabel:`Signed On`, and :guilabel:`Signature`.
 
-   .. image:: get_signature_to_validate/signature-feature-quotation-template.png
+   .. image:: get_signature_to_validate/customer-signature-tab.png
       :align: center
-      :alt: The Online confirmation signature option found on every quotation template in Odoo.
+      :alt: The Customer Signature tab that appears on sales orders while in developer mode.
 
-   On standard quotations, the online signature feature is the :guilabel:`Signature` option, located
-   under the :guilabel:`Other Info` tab of the quotation form.
-
-   .. image:: get_signature_to_validate/signature-other-info-tab.png
-      :align: center
-      :alt: The online signature feature option in the Other Info tab of a quotation form in Odoo.
+   The :guilabel:`Signed By` field indicates who signed the quotation/sales order. The
+   :guilabel:`Signed On` field represents the date on which the signature was provided. The
+   :guilabel:`Signature` field, provides a visual representation of the provided signature.
 
 Order confirmations with online signatures
 ==========================================
