@@ -567,3 +567,95 @@ goods (i.e :guilabel:`Opening Stock` + purchases during the period - :guilabel:`
 
    .. image:: india/profit-and-loss-report.png
       :alt: Profit and Loss report
+
+.. _india/tds-tcs-threshold:
+
+TDS/TCS threshold alert
+=======================
+
+:abbr:`TDS (tax deducted at source)` and :abbr:`TCS (tax collected at source)` are tax provisions
+under Indian law, triggered when transaction amounts exceed specified thresholds. This alert
+notifies users when the value of invoices or bills surpasses these limits, prompting the application
+of the appropriate TDS/TCS.
+
+To configure Odoo to advise you on when to apply TDS/TCS, set the :guilabel:`TDS/TCS section`
+field on the corresponding account in the chart of accounts. Odoo will display a banner suggesting
+the TDS/TCS section under which tax might be applicable when recording an invoice or bill.
+
+Configuration
+-------------
+
+#. Navigate to :menuselection:`Accounting --> Configuration --> Settings`
+#. In the :guilabel:`Indian Integration` section, enable the :guilabel:`TDS and TCS` feature.
+#. Navigate to :menuselection:`Accounting --> Configuration --> Chart of Accounts`.
+#. Click :guilabel:`View` on the desired account, and set the :guilabel:`TDS/TCS Section` field.
+
+.. note::
+   The TDS/TCS sections are pre-configured with threshold limits. If you need to modify these
+   limits, go to :menuselection:`Accounting --> Configuration --> Taxes`. In the :guilabel:`Advanced
+   Options` tab, click on the  :icon:`fa-arrow-right` :guilabel:`(internal link)` icon of the
+   :guilabel:`Section` field.
+
+   .. image:: india/tds-tcs-section-modify.png
+      :alt: TDS/TCS section modify
+
+Applying TCS/TDS on invoices and bills
+--------------------------------------
+
+Based on the account used on the customer invoice or vendor bill, Odoo checks the TCS/TDS threshold
+limit. If the limit specified in the :guilabel:`TCS/TDS Section` of the account is exceeded, Odoo
+displays an alert that suggests applying the appropriate TCS/TDS. The alert will disappear once the
+TCS/TDS is applied.
+
+.. image:: india/tcs-warning.png
+   :alt: TCS advice
+
+**TCS** is directly applicable in the tax on the invoice lines. To apply **TDS**, click the
+:guilabel:`TDS Entry` smart button on the vendor bill/payment. The popup window allows specifying
+the TDS details. Confirm the entry to apply the TDS.
+
+.. image:: india/tds-apply.png
+   :alt: TDS application
+
+In Odoo, the aggregate total is calculated for partners sharing the same PAN number, across all company branches.
+
+.. example::
+
+   .. list-table::
+      :header-rows: 1
+      :widths: 10 20 10 20 15
+
+      * - **Branch**
+        - **Customer**
+        - **Invoice**
+        - **Transaction Amount (₹)**
+        - **PAN Number**
+      * - IN - MH
+        - XYZ Enterprise - GJ
+        - Invoice 1
+        - ₹50,000
+        - ABCPX1234E
+      * - IN - MH
+        - XYZ Enterprise - GJ
+        - Invoice 2
+        - ₹30,000
+        - ABCPX1234E
+      * - IN - MH
+        - XYZ Enterprise - MH
+        - Invoice 3
+        - ₹40,000
+        - ABCPX1234E
+      * - IN - DL
+        - XYZ Enterprise - GJ
+        - Invoice 4
+        - ₹20,000
+        - ABCPX1234E
+      * - IN - GJ
+        - XYZ Enterprise - MH
+        - Invoice 5
+        - ₹60,000
+        - ABCPX1234E
+
+   -  **Aggregate total** = 50,000 + 30,000 + 40,000 + 20,000 + 60,000 = ₹200,000
+   -  The aggregate total for all customers (XYZ Enterprise - GJ, MH, DL) sharing the PAN number
+      ABCPX1234E across all branches is ₹200,000.
