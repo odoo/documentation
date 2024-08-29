@@ -6,14 +6,11 @@ Ponto
 place and directly see all their transactions within one app. It is a third-party solution that is
 continuously expanding the number of bank institutions that can be synchronized with Odoo.
 
-.. image:: ponto/ponto-logo.png
-   :alt: Logo of the Ponto brand
-
 **Odoo** can synchronize directly with your bank to get all bank statements imported automatically
 into your database.
 
 Ponto is a paid third-party provider that can handle the synchronization between your bank accounts
-and Odoo. `Its pricing is 4€/month per account/integration <https://myponto.com/en#pricing>`_.
+and Odoo.
 
 .. seealso::
    - :doc:`../bank_synchronization`
@@ -32,27 +29,25 @@ Link your bank accounts with Ponto
    .. image:: ponto/ponto-organization.png
       :alt: Fill out the form to add an organization in Ponto.
 
-#. | Go to :menuselection:`Accounts --> Live`, and click on *Add account*.
-   | You might have to add your **Billing Information** first.
+#. Go to :menuselection:`Accounts --> Live`, and click :guilabel:`Add account`. You might have to
+   add your **Billing Information** first.
 #. Select your country, your bank institutions, give your consent to Ponto, and follow the steps
    on-screen to link your bank account with your Ponto account.
 
    .. image:: ponto/ponto-add-account.png
       :alt: Add bank accounts to your Ponto account.
 
-#. Make sure to add all bank accounts you want to synchronize with your Odoo database before moving
-   on to the next steps.
+#. Add all bank accounts you want to synchronize with your Odoo database and move to the next steps.
 
 Link your Ponto account with your Odoo database
 -----------------------------------------------
 
 #. Go to :menuselection:`Accounting --> Configuration --> Add a Bank Account`.
-#. Search your institution, make sure to select the right institution. By selecting the institution,
-   you can verify that the third party provider is Ponto.
-#. Click on *Connect* and follow the steps.
-#. At some point, you will have to authorize the accounts you want to access in Odoo. Please select
-   **all the accounts** you want to synchronize. Even the ones coming from other banking
-   institutions.
+#. Search for your institution and select it so you can verify that the third party provider is
+   Ponto.
+#. Click :guilabel:`Connect` and follow the steps.
+#. Select **all accounts** you want to access and synchronize in Odoo, even the ones coming from
+   other banking institutions.
 
    .. image:: ponto/ponto-select-accounts.png
       :alt: Selection of the accounts you wish to synchronize with Odoo.
@@ -66,26 +61,26 @@ Link your Ponto account with your Odoo database
 Update your synchronization credentials
 ---------------------------------------
 
-You might have to update your Ponto credentials or modify the synchronization settings.
+To update your Ponto credentials or modify the synchronization settings, activate the
+:ref:`developer mode <developer-mode>`, go to :menuselection:`Accounting --> Configuration -->
+Online Synchronization`, and select the institution from which you want to fetch the other
+accounts. Click :guilabel:`Fetch Accounts` to start the flow.
 
-To do so, go to :menuselection:`Accounting --> Configuration --> Online Synchronization` and select
-the institution you want to fetch the other accounts. Click on *Fetch Accounts* button to start the
-flow.
-
-During the update, select **all the accounts** you want to synchronize, even the ones coming
-from other banking institutions.
+.. note::
+   During the update, select **all accounts** you want to synchronize, even the ones coming from
+   other banking institutions.
 
 Fetch new accounts
 ------------------
 
-You might want to add new online accounts to your connection.
+To add new online accounts to your connection, activate the :ref:`developer mode <developer-mode>`,
+go to :menuselection:`Accounting --> Configuration --> Online Synchronization`, and select the
+institution from which you want to fetch the other accounts. Click :guilabel:`Fetch Accounts` to
+start the flow.
 
-To do so, go to :menuselection:`Accounting --> Configuration --> Online Synchronization` and select
-the institution you want to fetch the other accounts. Click on *Fetch Accounts* button to start the
-flow.
-
-Don't forget to keep authorization for existing accounts (for all institutions that you
-have synchronized with Ponto).
+.. note::
+   Don't forget to keep authorization for existing accounts (for all institutions that you have
+   synchronized with Ponto).
 
 FAQ
 ===
