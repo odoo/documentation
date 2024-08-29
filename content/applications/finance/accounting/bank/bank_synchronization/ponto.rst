@@ -7,7 +7,6 @@ place and directly see all their transactions within one app. It is a third-part
 continuously expanding the number of bank institutions that can be synchronized with Odoo.
 
 .. image:: ponto/ponto-logo.png
-   :align: center
    :alt: Logo of the Ponto brand
 
 **Odoo** can synchronize directly with your bank to get all bank statements imported automatically
@@ -31,7 +30,6 @@ Link your bank accounts with Ponto
 #. Once you are logged in, create an *organization*.
 
    .. image:: ponto/ponto-organization.png
-      :align: center
       :alt: Fill out the form to add an organization in Ponto.
 
 #. | Go to :menuselection:`Accounts --> Live`, and click on *Add account*.
@@ -40,7 +38,6 @@ Link your bank accounts with Ponto
    on-screen to link your bank account with your Ponto account.
 
    .. image:: ponto/ponto-add-account.png
-      :align: center
       :alt: Add bank accounts to your Ponto account.
 
 #. Make sure to add all bank accounts you want to synchronize with your Odoo database before moving
@@ -58,7 +55,6 @@ Link your Ponto account with your Odoo database
    institutions.
 
    .. image:: ponto/ponto-select-accounts.png
-      :align: center
       :alt: Selection of the accounts you wish to synchronize with Odoo.
 
 #. Finish the flow.
@@ -102,7 +98,7 @@ You selected an institution from the list and did not authorize any accounts fro
 I have an error about that my authorization has expired
 -------------------------------------------------------
 
-Every **3 months** (90 days) you must re-authorize the connection between your bank account
+Every **6 months** (180 days) you must re-authorize the connection between your bank account
 and Ponto. This must be done from the `Ponto website <https://myponto.com>`_. If you do not
 do this, the synchronization will stop for these accounts.
 
