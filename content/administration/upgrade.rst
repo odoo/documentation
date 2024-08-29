@@ -171,6 +171,21 @@ database. However, depending on the hosting type, you can upgrade from the comma
 
          $ python <(curl -s https://upgrade.odoo.com/upgrade) test -d <your db name> -t <target version>
 
+      .. note::
+         This command has some requirements on the environment it runs in:
+
+         - Some external commands that must be provided by the operating system, normally found in
+           any Linux distribution (including WSL). An error will be displayed if one or several of
+           them are missing.
+         - The system user that executes the command needs to be configured with access to the
+           database. Please refer to the PostgreSQL documentation of the `client environment
+           <https://www.postgresql.org/docs/current/libpq-envars.html>`_ or the `client password
+           file <https://www.postgresql.org/docs/current/libpq-pgpass.html>`_ for this requirement.
+         - The script needs to be able to reach one or multiple servers of the upgrade platform
+           both on TCP port 443 and to any random TCP port in the range between 32768 and 60999.
+           This can be in conflict with your restrictive firewall and may need an exception added
+           to the firewall configuration.
+
       The following command can be used to display the general help and the main commands:
 
       .. code-block:: console
