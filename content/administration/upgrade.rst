@@ -156,6 +156,17 @@ project <https://odoo.sh/project>`_.
 
          $ python <(curl -s https://upgrade.odoo.com/upgrade) test -d <your db name> -t <target version>
 
+      .. note::
+         This command has some requirements on the environment it runs in:
+
+         - Some external commands. It will complain if one is missing.
+         - The system user that executes the command needs to be configured with access to the
+           database.
+         - It needs to be able to reach one or multiple servers of the upgrade platform both on TCP
+           port 443 and to any random TCP port in the range 32768 to 60999. This can be in conflict
+           with your restrictive firewall and may need an exception added to the firewall
+           configuration.
+
       The following command can be used to display the general help and the main commands:
 
       .. code-block:: console
