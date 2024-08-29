@@ -20,6 +20,8 @@ product, used to distinguish it from other items or products.
    - :doc:`product_tracking/lots`
    - :doc:`product_tracking/serial_numbers`
 
+.. _inventory/product_management/enable-lot-serial:
+
 Enable lots & serial numbers
 ============================
 

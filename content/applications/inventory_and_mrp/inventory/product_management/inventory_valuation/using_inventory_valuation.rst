@@ -108,6 +108,8 @@ available during a prior specified date can be seen and selected.
    the teal :guilabel:`➡️ (right arrow)` button to the right of the :guilabel:`Reference` column
    value.
 
+.. _inventory/product_management/update-unit-price:
+
 Update product unit price
 -------------------------
 
