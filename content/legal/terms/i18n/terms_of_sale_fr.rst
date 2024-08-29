@@ -8,84 +8,75 @@ Conditions Générales de Vente
 
    `Download PDF <https://www.odoo.com/documentation/{CURRENT_BRANCH}/terms_of_sale_fr.pdf>`_
 
-.. note:: Dernière modification: 12 septembre 2023.
+.. note:: Dernière modification : 27 août 2024.
 
-Ces conditions régissent la vente de produits et services entre
-Odoo S.A. et ses filiales (collectivement, "Odoo S.A.") et le client.
-Des conditions supplémentaires peuvent s'appliquer pour d'autres services
-offerts par Odoo S.A. (par exemple, l'Odoo Enterprise Subscription Agreement).
-Si ces conditions supplémentaires entrent en contradiction avec les Conditions
-Générales de Vente, les conditions supplémentaires prévaudront.
+Les présentes Conditions Générales de Vente (ci-après le « Contrat ») régissent
+la vente de biens et services par Odoo S.A. et ses affiliés (collectivement
+désignés ci-après « Odoo S.A. ») au Client. Des conditions supplémentaires
+peuvent s'appliquer aux services prestés par Odoo S.A. (par exemple, l'Odoo
+Enterprise Subscription Agreement). En cas d'incohérence entre ces conditions
+supplémentaires et le Contrat, les conditions supplémentaires prévalent.
 
-Veuillez lire ces conditions attentivement avant de faire une commande
-auprès d'Odoo S.A. En commandant auprès d'Odoo S.A., le client marque son
-accord avec les présentes conditions.
+Avant toute commande auprès d'Odoo S.A., veuillez lire attentivement les
+conditions. Passer commande marque l'accord tacite du Client avec les
+dispositions du Contrat et autres conditions supplémentaires.
 
-Le client renonce explicitement à ses propres conditions générales, même dans le
-cas où celles-ci seraient postérieures aux présentes conditions générales. Toute
-dérogation doit, pour être valable, être convenue de manière expresse, préalable
-et par écrit. Les présentes conditions sont une prolongation du contrat signé
-entre parties et font en tant que telles partie intégrante de la relation
-contractuelle entre parties.
+Le Client renonce expressément à ses propres conditions générales, même dans le
+cas où celles-ci seraient postérieures au présent Contrat. Toute dérogation
+doit, pour être valide, être convenue avec Odoo S.A. de manière expresse,
+préalable, et par écrit.
 
-Toutes les offres, tarifs ou listes de prix d’Odoo S.A. s’entendent, sauf
-stipulation contraire, sans engagement. Sauf stipulation contraire, toutes les
-factures sont payables à Odoo S.A. au comptant, au moment de la livraison.
-L'endroit de paiement est le siège social de Odoo S.A. peut envoyer des factures
-pour des marchandises déjà livrées même avant la livraison complète des
-marchandises. Le Client ne peut en aucun cas compenser une quelconque créance
-sur Odoo S.A. avec son obligation de paiement, sauf stipulation contraire.
+Les factures émises par Odoo S.A. doivent être réglées endéans les 21 jours
+ouvrables, sauf mention contraire sur la facture ou la commande. Dans
+l'éventualité d'un non-paiement de tout ou partie de la facture à l'échéance,
+Odoo S.A. se réserve le droit de demander le paiement d'une indemnité
+forfaitaire de 15 % du montant restant dû, et de suspendre toute prestation de
+service sans avertissement préalable.
 
-Si la facture n’est pas payée à son échéance, elle sera, à titre d’indemnité
-forfaitaire, majorée de 15% et majorée d'autres indemnités, éventuellement dues
-pour tout préjudice, à démontrer par Odoo S.A.. Le non-paiement de tout ou
-partie d’une facture à son échéance rend immédiatement exigibles toutes sommes
-ou toutes factures dues non-encore échue. En cas de non-paiement d’une facture,
-Odoo S.A.  a le droit de rompre toutes les conventions de vente qui restent
-encore à exécuter.
+Si une facture demeure impayée plus de 60 jours après la date d'échéance,
+Odoo S.A. se réserve le droit de faire appel aux services d'une société de
+recouvrement de créances. Tous les frais de justice seront à la charge du
+Client.
 
-Si le Client est autorisé à effectuer des paiements à terme, l’absence de
-paiement d’un seul terme entraînera de plein droit et sans mise en demeure
-l’exigibilité de toute la dette, nonobstant toute indemnité supplémentaire.
+Certains pays appliquent une retenue à la source sur le montant des factures,
+conformément à leur législation propre. Toute retenue à la source est payée par
+le Client aux autorités fiscales compétentes. Odoo S.A. n'est en aucun cas
+impliqué dans les coûts liés à la législation d'un pays. Le montant de la
+facture est donc dû dans son intégralité à Odoo S.A. et ne comprend pas les
+éventuels frais supplémentaires liés à la législation du pays dans lequel se
+trouve le Client.
 
-Certains pays appliquent une retenue à la source sur le montant de la facture,
-conformément à leur législation interne. La retenue à la source sera réglée par
-le client, auprès de l'administration fiscale. En aucun cas, Odoo S.A. ne sera
-impliquée dans les coûts liés à la législation du pays. Le montant de la facture
-est donc dû à Odoo S.A. dans son intégralité et n’inclus pas les coûts relatifs
-à la législation du pays où se trouve le client.
+Pour le Client implanté dans plusieurs pays, la tarification applicable est
+toujours celle du site dans lequel le Client est établi ayant les tarifs les
+plus élevés, sauf mention contraire par écrit au moment de l'achat.
 
-Pour les clients implantés dans plusieurs pays, les prix applicables seront
-toujours basés sur l'implantation géographique ayant la liste de prix la plus
-élevée, sauf stipulation contraire par écrit au moment de la commande.
+Les abonnements mensuels sont uniquement disponibles pour l'hébergement sur les
+plateformes *cloud* (Odoo SaaS et Odoo.sh). Les abonnements mensuels ne peuvent
+être réglés que par carte de crédit ou par une méthode de prélèvement
+automatique équivalente prise en charge. Odoo S.A. se réserve le droit de
+refuser tout abonnement mensuel non conforme à ces conditions.
 
-Les abonnements mensuels sont uniquement disponibles pour l'hébergement sur la
-Plate-forme Cloud (Odoo SaaS et Odoo SH). Le paiement des abonnements mensuels
-ne peut être effectué que par carte de crédit ou par une méthode de prélèvement
-automatique équivalente prise en charge. Odoo S.A. se réserve le droit de refuser
-tout abonnement mensuel ne respectant pas ces conditions.
+Odoo S.A. s'engage à fournir le *best effort* quant à la disponibilité de ses
+services en temps utile. Toutefois, aucune de ses obligations ne peut être
+considérée comme une obligation de résultat. Odoo S.A. ne peut en aucun cas être
+appelé en garantie dans le cadre d'une action en dommages et intérêts intentée
+par le consommateur final à l'encontre du Client.
 
-Odoo S.A. s'engage à faire ses meilleurs efforts en vue de fournir en temps
-utile des services performants. Toutefois, aucune de ses obligations ne peut
-être considérée comme étant une obligation de résultat. Odoo S.A. ne peut, en
-aucun cas, être appelée en garantie par le client dans le cadre de demandes en
-dommages et intérêts formulée par le consommateur final à l'encontre du client.
+Afin d'être recevable, toute réclamation doit être notifiée à Odoo S.A. par
+courrier recommandé à son siège social dans les 8 jours suivant la livraison des
+biens ou la prestation des services.
 
-Dans la limite autorisée par la loi, la responsabilité globale de chaque partie,
-ainsi que de ses filiales ne dépassera pas 50% du montant total réglé par le
-Client en vertu des présentes conditions au cours des 12 mois précédant la date
-de l'événement donnant lieu à une telle réclamation. Des réclamations multiples
-n'augmenteront pas cette limite.
+Dans la limite autorisée par la loi, la responsabilité globale de chaque partie
+ainsi que de leurs filiales ne peut dépasser 50 % du montant réglé par le Client
+en vertu des présentes conditions au cours des 12 mois précédant immédiatement
+la date de l'événement à l'origine de la réclamation. Réitérer la réclamation
+n'étend pas ce délai.
 
-Toute réclamation doit, pour être recevable, être notifiée à Odoo S.A., à son
-siège social, par courrier recommandé dans les 8 jours suivant la livraison des
-marchandises ou la prestation des services.
+Odoo S.A. se réserve le droit de modifier le Contrat à tout moment et sans
+préavis. Le Client est soumis aux conditions du Contrat en application au moment
+de l'acceptation des conditions.
 
-Odoo S.A. se réserve le droit de modifier ces conditions à n'importe quel moment
-et sans notification préalable. Le client est soumis aux conditions en
-application au moment de son acceptation de ces conditions.
-
-Tout litige résultant de la présente convention ressort de l’application du
-droit belge et est de la compétence des Tribunaux de l’arrondissement du siège
-social d’Odoo S.A. hormis le droit d’Odoo S.A. de porter le litige devant une
-autre juridiction compétente.
+Toute relation contractuelle est exclusivement soumise à la loi belge. En outre,
+tout litige éventuel ne peut être soumis qu'à la compétence d'un tribunal de
+l'arrondissement de Nivelles (Belgique), hormis le droit d'Odoo S.A. de porter
+le litige devant une autre juridiction compétente.
