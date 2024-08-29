@@ -7,7 +7,6 @@ in one place. It offers non-intrusive connectivity to ASPSPs' official APIs acro
 storing data.
 
 .. image:: enablebanking/enablebanking.png
-   :align: center
    :alt:   Enable Banking logo
 
 **Odoo** synchronizes directly with banks to get access to all bank transactions and automatically
@@ -30,7 +29,6 @@ Link bank accounts with Odoo
    :guilabel:`Continue authentication`;
 
    .. image:: enablebanking/enablebankingauth.png
-      :align: center
       :alt: Enable Banking authentication page
 
 #. Finally, you are redirected to your bank's login page.
