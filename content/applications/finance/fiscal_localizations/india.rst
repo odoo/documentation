@@ -46,6 +46,13 @@ localization:
 
 .. _india/e-invoicing:
 
+Indian Configuration
+====================
+
+In :menuselection:`Settings --> Users & Companies --> Companies`, add your :guilabel:`PAN` and
+:guilabel:`GSTIN`. The PAN is essential for determining the type of taxpayer,
+while GSTIN is required for generating e-Invoices and E-waybills.
+
 e-Invoice system
 ================
 
