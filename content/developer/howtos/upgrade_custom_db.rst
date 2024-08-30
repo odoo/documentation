@@ -9,7 +9,7 @@ for guidance on how to upgrade a database without customized modules.
 
 We consider a custom module, any module that extends the standard code of Odoo and that was not
 built with the Studio app. Before upgrading such a module, or before requesting its upgrade, have a
-look at the :ref:`upgrade/sla` to make sure who's responsible for it.
+look at the :ref:`upgrade-sla` to make sure who's responsible for it.
 
 While working on what we refer to as the **custom upgrade** of your database, keep in mind the goals
 of an upgrade:
@@ -60,8 +60,8 @@ Step 2: Request an upgraded database
 
 Once the developments have stopped for the custom modules and the implemented features have been
 challenged to remove redundancy and unnecessary code, the next step is to request an upgraded test
-database. To do so, follow the steps mentioned in :ref:`upgrade/request-test-database`, depending on
-the hosting type of your database.
+database. To do so, follow the steps mentioned in :ref:`upgrade-request-test`, depending on the
+hosting type of your database.
 
 The purpose of this stage is not to start working with the custom modules in the upgraded database,
 but to make sure the standard upgrade process works seamlessly, and the test database is delivered
@@ -175,7 +175,7 @@ Step 4: Upgraded database
 =========================
 
 Once the custom modules are installable and working properly in an empty database, it is time to
-make them work on an :ref:`upgraded database <upgrade/request-test-database>`.
+make them work on an :ref:`upgraded database <upgrade-request-test>`.
 
 To make sure the custom code is working flawlessly in the new version, follow these steps:
 
@@ -243,8 +243,8 @@ Running and testing upgrade scripts
 
    .. group-tab:: Odoo.sh
 
-      As explained on the `Odoo.sh` tab of :ref:`upgrade/request-test-database`, Odoo.sh is
-      integrated with the upgrade platform.
+      As explained on the `Odoo.sh` tab of :ref:`upgrade-request-test`, Odoo.sh is integrated with
+      the upgrade platform.
 
       Once the upgrade of a staging branch is on "Update on commit" mode, each time a commit is
       pushed on the branch, the upgraded backup is restored and all the custom modules are updated.
@@ -277,9 +277,9 @@ are consistent and that nothing was lost during the upgrade process.
 Things to pay attention to:
 
 - Views not working: During the upgrade, if a view causes issues because of its content, it gets
-  disabled. You can find the information on disabled views on the :ref:`Upgrade report
-  <upgrade/upgrade_report>`. This view needs to be activated again (or removed if not useful anymore).
-  To achieve this, we recommend the use of upgrade scripts.
+  disabled. You can find the information on disabled views on the Upgrade report. This view needs to
+  be activated again (or removed if not useful anymore). To achieve this, we recommend the use of
+  upgrade scripts.
 - :doc:`Module data <../tutorials/define_module_data>` not updated: Custom records that have the
   ``noupdate`` flag are not updated when upgrading the module in the new database. For the custom
   data that needs to be updated due to changes in the new version, we recommend to use upgrade
@@ -293,9 +293,9 @@ Step 5: Testing and rehearsal
 When the custom modules are working properly in the upgraded database, it is crucial to do another
 round of testing to assess the database usability and detect any issues that might have gone
 unnoticed in previous tests. For further information about testing the upgraded database, check
-:ref:`upgrade/test_your_db`.
+:ref:`upgrade-testing`.
 
-As mentioned in :ref:`upgrade/upgrade-prod`, both standard upgrade scripts and your database are
+As mentioned in :ref:`upgrade-production`, both standard upgrade scripts and your database are
 constantly evolving. Therefore it is highly recommended to frequently request new upgraded test
 databases and ensure that the upgrade process is still successful.
 
@@ -309,4 +309,4 @@ Step 6: Production upgrade
 ==========================
 
 Once you are confident about upgrading your production database, follow the process described on
-:ref:`upgrade/upgrade-prod`, depending on the hosting type of your database.
+:ref:`upgrade-production`, depending on the hosting type of your database.
