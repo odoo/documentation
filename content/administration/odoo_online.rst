@@ -46,7 +46,7 @@ Trigger a database upgrade.
 
 .. seealso::
    For more information about the upgrade process, check out the :ref:`Odoo Online upgrade
-   documentation <upgrade/request-test-database>`.
+   documentation <upgrade-request-test>`.
 
 .. _odoo_online/duplicate:
 
