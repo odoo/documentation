@@ -1571,7 +1571,7 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:36
 msgid "How can I automate tasks when an IP address change occurs?"
-msgstr ""
+msgstr "ฉันจะทำให้งานเป็นอัตโนมัติได้อย่างไรเมื่อมีการเปลี่ยนแปลงที่อยู่ IP?"
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:38
 msgid ""
@@ -1581,6 +1581,11 @@ msgid ""
 "address included as a query string parameter (`new`), along with the "
 "previous IP address as an additional parameter (`old`)."
 msgstr ""
+"**Odoo.sh แจ้งให้ผู้ดูแลระบบโครงการทราบเกี่ยวกับการเปลี่ยนแปลงที่อยู่ IP** "
+"นอกจากนี้ เมื่อที่อยู่ IP ของอินสแตนซ์การใช้งานจริงมีการเปลี่ยนแปลง "
+"จะมีการส่งคำขอ HTTP `GET` ไปยังเส้นทาง `/_odoo.sh/ip-change` โดยรวมที่อยู่ "
+"IP ใหม่เป็นพารามิเตอร์สตริงแบบสอบถาม (`ใหม่`) พร้อมกับที่อยู่ IP "
+"ก่อนหน้านี้เป็นพารามิเตอร์เพิ่มเติม (`เก่า`)"
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:43
 msgid ""
@@ -1588,6 +1593,9 @@ msgid ""
 "address change (e.g., sending an email, contacting a firewall API, "
 "configuring database objects, etc.)"
 msgstr ""
+"กลไกนี้ช่วยให้สามารถนำการดำเนินการแบบกำหนดเองมาใช้เพื่อตอบสนองต่อการเปลี่ยนแปลงที่อยู่"
+" IP ได้ (เช่น การส่งอีเมล การติดต่อ API ไฟร์วอลล์ การกำหนดค่าวัตถุฐานข้อมูล "
+"ฯลฯ)"
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:46
 msgid ""
@@ -1595,10 +1603,13 @@ msgid ""
 "internally by the platform itself and returns a `403` response if accessed "
 "through any other means."
 msgstr ""
+"ด้วยเหตุผลด้านความปลอดภัย เส้นทาง `/_odoo.sh/ip-change` "
+"จะสามารถเข้าถึงได้จากภายในแพลตฟอร์มเท่านั้น และจะส่งกลับการตอบสนอง `403` "
+"หากเข้าถึงผ่านวิธีการอื่น"
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:49
 msgid "Here is a pseudo-implementation example:"
-msgstr ""
+msgstr "นี่คือตัวอย่างการนำไปปฏิบัติแบบหลอก:"
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:6
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:170
@@ -2785,6 +2796,11 @@ msgid ""
 "explained in the documentation about :ref:`SPF <email-domain-spf>` and "
 ":ref:`DKIM <email-domain-dkim>`."
 msgstr ""
+"ในกรณีที่โดเมนของที่อยู่อีเมลผู้ใช้ของคุณใช้ SPF (Sender Policy Framework) "
+"หรือ DKIM (DomainKeys Identified Mail) อย่าลืมอนุญาตให้ Odoo "
+"เป็นโฮสต์ผู้ส่งในส่วนการตั้งค่าชื่อโดเมนของคุณเพื่อเพิ่มความสามารถในการส่งอีเมลขาออกของคุณ"
+" ขั้นตอนการกำหนดค่าอธิบายไว้ในเอกสารประกอบเกี่ยวกับ :ref:`SPF <email-domain-"
+"spf>` และ :ref:`DKIM <email-domain-dkim>`"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:410
 msgid ""
@@ -7300,6 +7316,8 @@ msgid ""
 "If you do not have access/manage your email server, use :ref:`incoming mail "
 "servers <email-inbound-custom-domain-incoming-server>`."
 msgstr ""
+"หากคุณไม่มีสิทธิ์เข้าถึง/จัดการเซิร์ฟเวอร์อีเมลของคุณ ให้ใช้ "
+":ref:`เซิร์ฟเวอร์อีเมลขาเข้า <email-inbound-custom-domain-incoming-server>`"
 
 #: ../../content/administration/on_premise/geo_ip.rst:3
 msgid "Geo IP"
@@ -7617,7 +7635,7 @@ msgstr ""
 "แพ็คเกจ Windows "
 "มีไว้เพื่อความสะดวกในการทดสอบหรือเรียกใช้อินสแตนซ์ภายในเครื่องแบบผู้ใช้คนเดียว"
 " "
-"แต่การปรับใช้งานจริงไม่ได้รับการสนับสนุนเนื่องจากข้อจำกัดและความเสี่ยงหลายประการที่เกี่ยวข้องกับการปรับใช้"
+"แต่การปรับใช้งานจริงไม่ได้รับการสนับสนุนเนื่องจากข้อจำกัดและความเสี่ยงหลายอย่างที่เกี่ยวข้องกับการปรับใช้"
 " Odoo บนแพลตฟอร์ม Windows"
 
 #: ../../content/administration/on_premise/packages.rst:155
@@ -8653,7 +8671,7 @@ msgstr "สิ้นสุดการสนับสนุน"
 
 #: ../../content/administration/supported_versions.rst:34
 msgid "Odoo saas~17.4"
-msgstr ""
+msgstr "Odoo saas~17.4"
 
 #: ../../content/administration/supported_versions.rst:36
 #: ../../content/administration/supported_versions.rst:37
@@ -8666,7 +8684,7 @@ msgstr "ไม่ระบุ"
 
 #: ../../content/administration/supported_versions.rst:38
 msgid "July 2024"
-msgstr ""
+msgstr "กรกฎาคม 2024"
 
 #: ../../content/administration/supported_versions.rst:40
 msgid "Odoo saas~17.2"
@@ -9541,7 +9559,7 @@ msgid ""
 "The process of upgrading a production database is similar to upgrading a "
 "test database with a few exceptions."
 msgstr ""
-"กระบวนการอัปเกรดฐานข้อมูลการใช้งานจริงจะคล้ายกับการอัปเกรดฐานข้อมูลทดสอบโดยมีข้อยกเว้นบางประการ"
+"กระบวนการอัปเกรดฐานข้อมูลการใช้งานจริงจะคล้ายกับการอัปเกรดฐานข้อมูลทดสอบโดยมีข้อยกเว้นบางอย่าง"
 
 #: ../../content/administration/upgrade.rst:298
 msgid ""

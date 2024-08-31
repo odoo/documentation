@@ -4,9 +4,9 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Martin Trigaux, 2023
-# Daye Jeong, 2024
+# Martin Trigaux, 2024
 # Wil Odoo, 2024
+# Daye Jeong, 2024
 # Sarah Park, 2024
 # 
 #, fuzzy
@@ -668,7 +668,7 @@ msgstr ""
 
 #: ../../content/applications/general/companies.rst:258
 msgid ":doc:`../finance/accounting/get_started/multi_currency`"
-msgstr ""
+msgstr ":doc:`../finance/accounting/get_started/multi_currency`"
 
 #: ../../content/applications/general/companies/digest_emails.rst:3
 msgid "Digest emails"
@@ -1419,7 +1419,7 @@ msgstr ""
 
 #: ../../content/applications/general/companies/email_template.rst:64
 msgid ":guilabel:`Media`"
-msgstr ""
+msgstr ":guilabel:`매체`"
 
 #: ../../content/applications/general/companies/email_template.rst:66
 msgid ":guilabel:`Image`: Insert an image."
@@ -1431,7 +1431,7 @@ msgstr ""
 
 #: ../../content/applications/general/companies/email_template.rst:69
 msgid ":guilabel:`Navigation`"
-msgstr ""
+msgstr ":guilabel:`이동`"
 
 #: ../../content/applications/general/companies/email_template.rst:71
 msgid ":guilabel:`Link`: Add a link."
@@ -1451,7 +1451,7 @@ msgstr ""
 
 #: ../../content/applications/general/companies/email_template.rst:76
 msgid ":guilabel:`Widgets`"
-msgstr ""
+msgstr ":guilabel:`위젯`"
 
 #: ../../content/applications/general/companies/email_template.rst:78
 msgid ":guilabel:`3 Stars`: Insert a rating over three stars."
@@ -2067,6 +2067,12 @@ msgid ""
 "domain-mx>`). Everything is covered in the :doc:`Manage inbound messages "
 "documentation <email_communication/email_servers_inbound>`."
 msgstr ""
+"이메일을 수신하는 경우 자체 도메인을 추가하면 :ref:`고객의 답신 메일은 도메인으로 회신됩니다 <email-inbound-"
+"custom-domain>`, 이메일을 다시 Odoo로 가져오는 방법에는 다음과 같은 세 가지 방법이 있습니다 (:ref:`수신 메일 "
+"서버 <email-inbound-custom-domain-incoming-server>`, :ref:`리디렉션/포워딩 <email-"
+"inbound-custom-domain-redirections>` 또는 :ref:`DNS MX 레코드 <email-inbound-"
+"custom-domain-mx>` 사용). 모든 내용은 :doc:`수신 메시지 관리 "
+"문서<email_communication/email_servers_inbound>` 에서 확인해 보세요."
 
 #: ../../content/applications/general/email_communication.rst:59
 msgid "On-premise users"
@@ -2093,6 +2099,10 @@ msgid ""
 "check out the :ref:`\"Use a custom domain for inbound messages\" "
 "documentation <email-inbound-custom-domain>`."
 msgstr ""
+"수신 이메일의 경우, 새로운 이메일을 가져오는 빈도를 응답성을 고려하여 충분히 낮추되 시스템이나 공급업체에 부담을 주지 않을 정도로 "
+"적당히 높여서 설정합니다. 이와 같은 이유 및 간단하게 환경 설정을 할 수 있다는 점에서 보통은 수신 메일 서버를 사용하는 것이 "
+"좋습니다. SMTP 서버를 사용하려면 :ref:`\"수신 메시지에 사용자 지정 도메인 사용\" 문서 <email-inbound-"
+"custom-domain>` 를 확인하세요."
 
 #: ../../content/applications/general/email_communication.rst:74
 msgid "Using a third-party provider's mail server"
@@ -2203,7 +2213,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:15
 msgid ":doc:`/applications/general/users/azure`"
-msgstr ""
+msgstr ":doc:`/applications/general/users/azure`"
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:16
 msgid ":doc:`/applications/productivity/calendar/outlook`"
@@ -2298,11 +2308,11 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:58
 msgid ":guilabel:`SMTP.Send`"
-msgstr ""
+msgstr ":guilabel:`SMTP.Send`"
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:59
 msgid ":guilabel:`IMAP.AccessAsUser.All`"
-msgstr ""
+msgstr ":guilabel:`IMAP.AccessAsUser.All`"
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:62
 msgid "The :guilabel:`User.Read` permission will be added by default."
@@ -2898,6 +2908,9 @@ msgid ""
 "domain name. If the signature and the key contained in the record match, it "
 "proves the message is authentic and has not been altered during transport."
 msgstr ""
+"이메일을 전송할 때 Odoo 이메일 서버에서는 헤더에 고유한 :abbr:`DKIM (DomainKeys Identified Mail: "
+"도메인키 식별 메일)` 서명을 넣습니다. 수신자의 서버에서는 데이터베이스 도메인 주소의 DKIM 레코드를 사용하여 이 서명을 해독합니다."
+" 레코드에 포함된 키가 서명과 일치하면 메시지가 진본이며 전송 중에 변경되지 않았음을 증명합니다."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:72
 msgid ""
@@ -3119,10 +3132,13 @@ msgid ""
 "name.odoo.com`. The reply will be posted in the right chatter, according to "
 "the *message-id* header."
 msgstr ""
+"위에 표시된 예에서 `info@company-name.odoo.com` 으로 이메일을 보내면 해당 영업 팀에 새로운 영업기회나 영업제안이"
+" 자동으로 배정됩니다. 기존 영업기회 메시지창에서 이메일이 전송되는 경우에 *회신 대상* 은 `info@company-"
+"name.odoo.com` 이 됩니다. 답신은 *메시지 ID* 헤더에 따라 알맞은 메시지창에 게시됩니다."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:39
 msgid "Catchall"
-msgstr ""
+msgstr "일반"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:41
 msgid ""
@@ -3161,6 +3177,10 @@ msgid ""
 "options unless specific needs dictate, as it will affect all replies to "
 "previously sent emails."
 msgstr ""
+"위의 스크린샷에 있는 이메일 주소인 `info@company-name.com`은 회사에서 설정한 이메일 주소입니다. 회사 프로필에서 "
+"개발자 모드로 들어가면 추가 설정 옵션 (예: 캐치올 및 반송)을 확인할 수 있습니다. 수정하려면 이메일 도메인의 내부 링크를 "
+"클릭합니다. 수정할 경우 이전에 전송된 모든 이메일 관련 회신 메일에 영향을 미치게 되므로 특별히 필요하지 않는 한 수정하지 않는 것이 "
+"좋습니다."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:63
 msgid ""
@@ -3186,7 +3206,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:77
 msgid "Bounce"
-msgstr ""
+msgstr "반송"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:79
 msgid ""
@@ -3340,14 +3360,17 @@ msgid ""
 "display them in the chatter or to create new records, it is necessary to "
 "retrieve these incoming emails in the Odoo database."
 msgstr ""
+"이 사용자 지정 도메인을 사용하는 경우, 별칭을 사용한 모든 이메일 (답장, 반송 및 직접 전송)은 해당 도메인 주소로 전송됩니다. "
+"따라서 이메일은 도메인에 연결된 이메일 서버 (MX 레코드)로 전달됩니다. 메시지창에 표시되게 하거나 새 레코드를 만들려면 Odoo "
+"데이터베이스에서 해당 수신 이메일을 검색해야 합니다."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:171
 msgid "Method"
-msgstr ""
+msgstr "방법"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:172
 msgid "Benefits"
-msgstr ""
+msgstr "헤택"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:173
 msgid "Drawbacks"
@@ -3496,6 +3519,10 @@ msgid ""
 "going to :menuselection:`Settings --> Technical --> Emails: Incoming Mail "
 "Servers`."
 msgstr ""
+"앞서 언급된 것처럼 Odoo에서 이메일을 수신하는 방법으로 리디렉션을 사용하는 것을 권장합니다. 다만 수신 메일 서버를 설정하는 것도 "
+"가능합니다. 설정할 경우 서버의 각 사서함, 캐치올, 반송 및 데이터베이스의 모든 별칭에 대한 수신 이메일 서버가 생성되어 모든 수신 "
+"이메일을 가져오게 됩니다. 수신 메일 서버는 :menuselection:`설정 --> 기술 --> 이메일: 수신 메일 서버` 로 이동하여"
+" 생성합니다."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:245
 msgid ""
@@ -3554,7 +3581,7 @@ msgstr ""
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:281
 #: ../../content/applications/general/email_communication/faq.rst:296
 msgid "Odoo Online"
-msgstr ""
+msgstr "Odoo 온라인"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:283
 msgid ""
@@ -3565,7 +3592,7 @@ msgstr ""
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:286
 #: ../../content/applications/general/email_communication/faq.rst:301
 msgid "Odoo.sh"
-msgstr ""
+msgstr "Odoo.sh"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:288
 msgid ""
@@ -3688,6 +3715,11 @@ msgid ""
 "domain can be utilized when sending emails either with Odoo’s email servers "
 "or an external one."
 msgstr ""
+"데이터베이스에서 사용자 지정 도메인을 사용하도록 설정할 수 있으며, 이 경우 모든 기본 이메일 주소는 사용자 지정 도메인을 통해 "
+"구축됩니다. 사용자 지정 도메인이 `company-name.com`인 경우 발신자 주소는 `notifications@company-"
+"name.com`이 되고, *회신* 주소는 `catchall@company-name.com`, *반송* 주소는 "
+"`bounce@company-name.com`이 됩니다. 사용자 지정 도메인은 Odoo의 이메일 서버 또는 외부 이메일 서버를 사용하여 "
+"이메일을 전송할 경우 활용할 수 있습니다."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:42
 msgid ""
@@ -3872,11 +3904,11 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:129
 msgid ":doc:`google_oauth`"
-msgstr ""
+msgstr ":doc:`google_oauth`"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:130
 msgid ":doc:`azure_oauth`"
-msgstr ""
+msgstr ":doc:`azure_oauth`"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:135
 msgid "Setting up different servers for transactional and mass emails"
@@ -3910,6 +3942,10 @@ msgid ""
 "transactional server (e.g., `1`) over the mass mailings server (e.g., `2`) "
 "so transactional emails are given priority."
 msgstr ""
+"먼저 :ref:`개발자 모드`를 활성화한 후 :menuselection:`설정 --> 기술 --> 이메일: 발신 메일 서버` 로 "
+"이동합니다. 여기에서 두 개의 발신 이메일 서버 레코드를 추가하며, 이때 하나는 트랜잭션 이메일 서버용이고 다른 하나는 대량 메일 "
+"서버용입니다. 트랜잭션 서버에 대한 :guilabel:`우선순위` 값을 대량 메일 서버 (예: `2`)보다 낮게 입력 (예: `1`)하여"
+" 트랜잭션 이메일이 우선순위에 오도록 합니다."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst-1
 msgid "Example of split between transaction and mass mailing mail servers."
@@ -4088,6 +4124,9 @@ msgid ""
 "of Odoo when using a custom email server. Odoo does not allow the "
 "configuration of Odoo's subdomain."
 msgstr ""
+"자체 도메인을 사용하는 경우에는 DNS 환경 설정을 해야 합니다. 외부 발신 메일 서버를 사용하더라도, 사용자 지정 이메일 서버는 "
+"Odoo와 독립적이기 때문에 :doc:`메일 서버용 Odoo DNS 설정 문서 <email_domain>` 에 설명된 대로 레코드를 "
+"구성하더라도 기대하는 효과를 얻을 수 **없습니다.** Odoo에서는 Odoo 하위 도메인 설정을 하는 것이 허용되지 않습니다."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:268
 msgid "Port restriction"
@@ -4101,7 +4140,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:276
 msgid "Alias domain"
-msgstr ""
+msgstr "별칭 도메인"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:278
 msgid ""
@@ -4167,6 +4206,10 @@ msgid ""
 "overridden with the value `notifications@company-name.odoo.com` instead of "
 "`mary@customer.example.com`."
 msgstr ""
+"Mary라는 이름을 쓰는 직원의 도메인은 별칭 도메인이 없으므로 Odoo에서는 이메일 주소를 재지정한 후 안내용 이메일 주소를 사용하여 "
+"팔로워에게 안내합니다. 재지정 내용은 데이터베이스 설정에 따라서 달라집니다. 기본적으로 Odoo 온라인 및 Odoo.sh에서 이메일의 "
+"`보낸 사람` 주소는 `mary@customer.example.com` 대신 `notifications@company-"
+"name.odoo.com` 값으로 재지정됩니다."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:317
 msgid ""
@@ -4232,6 +4275,9 @@ msgid ""
 "content of the same email (when sent to multiple recipients) if the content "
 "is already present in the chatter."
 msgstr ""
+"기본값으로, 알림이나 거래 이메일 (견적서, 청구서 및 연락처 다이렉트 메시지)이 성공적으로 전송되면 이메일 객체는 삭제됩니다. 이메일 "
+"메시지의 콘텐츠는 관련 레코드의 메시지창에 남아 있습니다. 메시지창에 이미 콘텐츠가 있음에도 불구하고 동일한 이메일 콘텐츠 사본이 여러 "
+"개 남아서 (여러 수신자에게 전송된 경우) 데이터베이스가 복잡해지는 것을 방지합나다."
 
 #: ../../content/applications/general/email_communication/faq.rst:25
 msgid ""
@@ -4250,6 +4296,10 @@ msgid ""
 "in a spam or quarantine folder. In other words, any email unrelated to an "
 "Odoo database is lost."
 msgstr ""
+"수신 이메일은 *받는 사람* 이메일 주소가 Odoo 데이터베이스에서 유효한 이메일 주소인지 여부로 확인하며, 이메일 답신의 경우에는 "
+"이메일 헤더에 있는 메시지에 대한 참조가 Odoo 데이터베이스에서 보낸 메시지와 일치하는지 확인하는 방법으로 처리됩니다. 그 외 모든 "
+"이메일은 반송되며 스팸 또는 별도 폴더에 일시 보관되지 **않습니다**. 즉, Odoo 데이터베이스와 관련이 없는 이메일은 전혀 남지 "
+"않습니다."
 
 #: ../../content/applications/general/email_communication/faq.rst:37
 msgid "Outgoing emails"
@@ -4277,7 +4327,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/faq.rst:56
 msgid "Delivery failure"
-msgstr ""
+msgstr "전송 실패"
 
 #: ../../content/applications/general/email_communication/faq.rst:58
 msgid ""
@@ -4374,6 +4424,9 @@ msgid ""
 " to addresses that do not exist or are no longer valid. It also applies to "
 "unsolicited spam emails sent through an Odoo database."
 msgstr ""
+"Odoo에서 Odoo 온라인 데이터베이스를 통해 보낼 수 있는 이메일 수는 제한되어 있습니다. 대부분의 이메일 서비스 제공업체 (예: "
+"Google, Yahoo 등)는 Odoo 이메일 서버가 없거나 더 이상 유효하지 않은 주소인 경우에 너무 많은 이메일을 보내게 되면 "
+"Odoo 서버 IP를 차단하게 됩니다. 또한 Odoo 데이터베이스를 통해 불필요한 스팸 메일을 보내는 경우에도 적용됩니다."
 
 #: ../../content/applications/general/email_communication/faq.rst:115
 msgid ""
@@ -4542,6 +4595,10 @@ msgid ""
 "marketing automation, and events). This avoids cluttering the mail servers "
 "and, instead, prioritizes individual communication."
 msgstr ""
+"정확한 이메일 전송 시각은 시스템 유틸리티 *크론* (예약된 작업)에서 처리하며, 이를 통해 미리 주기를 정하여 자동으로 실행되도록 "
+"작업을 예약할 수 있습니다. Odoo는 이와 같은 접근 방식으로 \"긴급하지 않은\" 이메일 (예: 대량 메일링, 마케팅 자동화, "
+"이벤트와 같은 뉴스레터 형식)을 전송합니다. 이렇게 하면 메일 서버가 복잡해지는 것을 방지할 수 있으며 대신 개별 커뮤니케이션의 "
+"우선순위를 지정할 수 있게 됩니다."
 
 #: ../../content/applications/general/email_communication/faq.rst:222
 msgid ""
@@ -4552,6 +4609,9 @@ msgid ""
 "generally not recommended, as it might create errors or break specific "
 "workflows."
 msgstr ""
+"크론은 작업을 완료하기 위해 Odoo가 백그라운드에서 특정 코드를 통해 실행하는 작업입니다. 또한 Odoo에서는 워크플로우에서 예약된 "
+"작업을 예약된 날짜보다 일찍 실행되도록 할 수 있는 크론 트리거를 생성합니다. 예약된 작업을 수동으로 실행하거나 빈도를 변경할 경우에는 "
+"오류가 발생하거나 특정 워크플로가 중단될 수 있기 때문에 일반적으로 권장하지 않습니다."
 
 #: ../../content/applications/general/email_communication/faq.rst:227
 msgid ""
@@ -4561,6 +4621,9 @@ msgid ""
 "operation. If the interval is too short, not all emails may be processed, "
 "which may cause the cron to timeout."
 msgstr ""
+"기본적으로 일반 이메일 대기열의 경우 :guilabel:`메일: 이메일 대기열 관리자` 크론은 60분마다 실행됩니다. 크론의 최소 실행 "
+"간격은 5분입니다. Odoo에서 알맞게 작동될 수 있도록 권장하는 간격은 15분입니다. 간격이 너무 짧을 경우에는 모든 이메일을 처리할 "
+"수 없게 되며 이로 인해 크론에서 시간이 초과됩니다."
 
 #: ../../content/applications/general/email_communication/faq.rst:232
 msgid ""
@@ -4591,6 +4654,9 @@ msgid ""
 " times is **not recommended**, as it will not accelerate the processing time"
 " and might create errors."
 msgstr ""
+"이메일 마케팅 대기열의 경우 하루에 한 번씩 :guilabel:`메일 마케팅: 프로세스 대기열` 크론이 실행되지만, 캠페인이 이 기본 "
+"주기를 벗어나서 예약된 경우에는 **자동으로 일찍 실행됩니다.** 메일링 목록 수신자가 많은 경우에 수동으로 여러 번 크론을 실행하는 "
+"것은 **권장하지 않습니다.** 처리 시간을 단축할 수 없으며 오류가 발생할 수 있기 때문입니다."
 
 #: ../../content/applications/general/email_communication/faq.rst:249
 msgid ""
@@ -4642,6 +4708,10 @@ msgid ""
 " if the two other campaigns are sent. Then we could try to fix Campaign_1 or"
 " contact :ref:`Odoo Support <email-issues-support>`."
 msgstr ""
+"이메일 캠페인이 계속 대기열에 있는 경우 대기열의 맨 위쪽에 있는 캠페인에 문제가 있는 것일 수 있습니다. 문제를 해결하려면 "
+":guilabel:`취소` 버튼을 클릭하여 대기열에서 Campaign_1을 제거한 후에 다른 두 건의 캠페인이 전송되는지 여부를 "
+"확인합니다. 그런 다음 Campaign_1을 수정하거나 :ref:`Odoo 고객 지원 <email-issues-support>` 으로 "
+"문의하세요."
 
 #: ../../content/applications/general/email_communication/faq.rst:283
 msgid "Incoming emails"
@@ -4675,6 +4745,10 @@ msgid ""
 "to send repeatedly. Logs show every action to the email servers from the "
 "database."
 msgstr ""
+"데이터베이스 로그를 통해 문제를 파악하고 해결할 수 있습니다. 로그에는 데이터베이스에서 완료된 모든 작업이 ​​저장되어 모여 있습니다. "
+"로그는 텍스트만으로 표시되며 Odoo 데이터베이스에서 수행된 모든 작업의 ​​타임스탬프가 들어 있습니다. 이를 통해 데이터베이스에서 "
+"전송되는 이메일을 추적하는 데 유용하게 사용할 수 있습니다. 로그에서 메시지를 반복적으로 전송 시도하는 것을 통해 전송 실패 여부도 "
+"확인할 수 있습니다. 데이터베이스에서 이메일 서버로 작업한 모든 내용이 로그에 표시됩니다."
 
 #: ../../content/applications/general/email_communication/faq.rst:310
 msgid ""

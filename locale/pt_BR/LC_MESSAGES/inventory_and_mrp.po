@@ -10,9 +10,11 @@
 # Martin Trigaux, 2023
 # a75f12d3d37ea5bf159c4b3e85eb30e7_0fa6927, 2023
 # Marcel Savegnago <marcel.savegnago@gmail.com>, 2024
-# Luis Felipe Miléo <mileo@kmee.com.br>, 2024
+# Jonas Vieira de Souza, 2024
+# braydon ehnes, 2024
 # Wil Odoo, 2024
 # Maitê Dietze, 2024
+# Luis Felipe Miléo <mileo@kmee.com.br>, 2024
 # 
 #, fuzzy
 msgid ""
@@ -21,7 +23,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-08-21 11:43+0000\n"
 "PO-Revision-Date: 2023-11-08 08:57+0000\n"
-"Last-Translator: Maitê Dietze, 2024\n"
+"Last-Translator: Luis Felipe Miléo <mileo@kmee.com.br>, 2024\n"
 "Language-Team: Portuguese (Brazil) (https://app.transifex.com/odoo/teams/41243/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -8989,6 +8991,14 @@ msgid ""
 "settings can be configured for receipts and deliveries; they do not have to "
 "be configured to have the same number of steps."
 msgstr ""
+"Há várias maneiras de lidar com a forma como um armazém recebe "
+"(recebimentos) e envia (entregas) produtos. Dependendo de vários fatores, "
+"como o tipo de produtos estocados e vendidos, o tamanho do armazém e a "
+"quantidade de recebimentos e ordens de entrega confirmados diariamente, a "
+"maneira como os produtos são tratados ao entrar e sair do armazém pode "
+"variar muito. Diferentes configurações podem ser definidas para recebimentos"
+" e entregas; não é preciso configurar para que tenham o mesmo número de "
+"etapas."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:15
 msgid ""
@@ -9003,10 +9013,14 @@ msgid ""
 "`Push & Pull Rules (eLearning Tutorial) "
 "<https://www.odoo.com/slides/slide/push-pull-rules-1024>`_"
 msgstr ""
+"`Regras Push e Pull (Tutorial de eLearning) "
+"<https://www.odoo.com/slides/slide/push-pull-rules-1024>`_"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:20
 msgid "Choosing the right inventory flow to handle receipts and deliveries"
 msgstr ""
+"Como escolher o fluxo de estoque correto para lidar com recebimentos e "
+"entregas"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:22
 msgid ""
@@ -9019,6 +9033,14 @@ msgid ""
 "performing quality checks on received products, or using special packaging "
 "on shipped products."
 msgstr ""
+"Por padrão, o Odoo lida com envio e recebimento de três maneiras diferentes:"
+" em uma, duas ou três etapas. A configuração mais simples é a de uma etapa, "
+"que é a padrão. Cada etapa adicional necessária em um armazém, seja para o "
+"processo de recebimento ou de envio, acrescentará uma camada adicional de "
+"operações a serem executadas antes que um produto seja recebido ou enviado. "
+"Essas configurações dependem inteiramente dos requisitos dos produtos "
+"armazenados, como a realização de verificações de qualidade nos produtos "
+"recebidos ou o uso de embalagens especiais nos produtos enviados."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:30
 msgid "One-step flow"
@@ -9038,12 +9060,18 @@ msgid ""
 "between receipt and stock occur, such as a transfer to a quality control "
 "location."
 msgstr ""
+"**Recebimento**: Receber produtos diretamente no estoque. Não ocorrem etapas"
+" intermediárias entre o recebimento e o estoque, como uma transferência para"
+" um local de controle de qualidade."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:36
 msgid ""
 "**Shipping**: Ship products directly from stock. No intermediate steps "
 "between stock and shipping occur, such as a transfer to a packing location."
 msgstr ""
+"**Envio**: Enviar produtos diretamente do estoque. Não há etapas "
+"intermediárias entre o estoque e o envio, como transferência para um local "
+"de embalagem."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:38
 msgid ""
@@ -9051,10 +9079,14 @@ msgid ""
 ":abbr:`LIFO (Last In, First Out)`, or :abbr:`FEFO (First Expired, First "
 "Out)` removal strategies."
 msgstr ""
+"Só pode ser usado se não estiver usando as estratégias de remoção "
+":abbr:`PEPS (primeiro a entrar, primeiro a sair)`, :abbr:`UEPS (último a "
+"entrar, primeiro a sair)` ou :abbr:`PVPS (primeiro a vencer, primeiro a "
+"sair)`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:40
 msgid "Receipts and/or deliveries are handled quickly."
-msgstr ""
+msgstr "Os recebimentos e/ou as entregas são processados rapidamente."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:41
 msgid ""
@@ -9091,6 +9123,10 @@ msgid ""
 "such as various shelves, freezers, and locked areas, before being stocked in"
 " the warehouse."
 msgstr ""
+"**Entrada + estoque**: Trazer produtos para um local de entrada *antes* de "
+"movê-los para o estoque. Os produtos podem ser organizados por diferentes "
+"locais de armazenamento interno, como várias prateleiras, freezers e áreas "
+"restritas, antes de serem estocados no armazém."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:55
 msgid ""
@@ -9098,6 +9134,9 @@ msgid ""
 "Packages can be organized by different carriers or shipping docks before "
 "being shipped."
 msgstr ""
+"**Separação + envio**: Levar os produtos para um local de saída antes do "
+"envio. Os pacotes podem ser organizados por diferentes transportadoras ou "
+"plataformas de expedição antes de serem enviados."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:57
 msgid ""
@@ -9105,12 +9144,18 @@ msgid ""
 "with a :abbr:`FIFO (First In, First Out)`, :abbr:`LIFO (Last In, First Out)`"
 " or :abbr:`FEFO (First Expired, First Out)` removal strategy."
 msgstr ""
+"Requisito mínimo para usar números de série ou lote para rastrear produtos "
+"com uma estratégia de remoção :abbr:`PEPS (primeiro a entrar, primeiro a "
+"sair)`, :abbr:`UEPS (último a entrar, primeiro a sair)` ou :abbr:`PVPS "
+"(primeiro a vencer, primeiro a sair)`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:60
 msgid ""
 "Recommended for larger warehouses with high stock levels, or when stocking "
 "large items (such as mattresses, large furniture, heavy machinery, etc.)."
 msgstr ""
+"Recomendado para armazéns maiores com altos níveis de estoque ou ao estocar "
+"itens grandes (como colchões, móveis grandes, maquinário pesado etc.)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:62
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:83
@@ -9143,6 +9188,9 @@ msgid ""
 "transfer them to a quality control area, and move the ones that pass "
 "inspection into stock."
 msgstr ""
+"**Entrada + qualidade + estoque**: Receber produtos no local de entrada, "
+"transferi-los para uma área de controle de qualidade e mover os que passam "
+"pela inspeção para o estoque."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:75
 msgid ""
@@ -9150,6 +9198,9 @@ msgid ""
 "pack them in a dedicated packing area, and bring them to an output location "
 "for shipping."
 msgstr ""
+"**Separação + embalagem + envio**: Separar os produtos de acordo com sua "
+"estratégia de remoção, embalá-los em uma área de embalagem dedicada e levá-"
+"los a um local de saída para envio."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:77
 msgid ""
@@ -9157,6 +9208,10 @@ msgid ""
 ":abbr:`FIFO (First In, First Out)`, :abbr:`LIFO (Last In, First Out)`, or "
 ":abbr:`FEFO (First Expired, First Out)` removal strategy."
 msgstr ""
+"Pode ser usado ao rastrear produtos por números de série ou lote ao usar uma"
+" estratégia de remoção :abbr:`PEPS (primeiro a entrar, primeiro a sair)`, "
+":abbr:`UEPS (último a entrar, primeiro a sair)` ou :abbr:`PVPS (primeiro a "
+"vencer, primeiro a sair)`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:80
 msgid "Recommended for very large warehouses with very high stock levels."
@@ -17669,7 +17724,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:60
 msgid "General information"
-msgstr ""
+msgstr "Informações gerais"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:62
 msgid ""
@@ -25213,7 +25268,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:113
 msgid "Standard Price"
-msgstr ""
+msgstr "Preço padrão"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:115
 msgid ""
@@ -25227,13 +25282,13 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:164
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:235
 msgid "Operation"
-msgstr ""
+msgstr "Operação"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:124
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:165
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:236
 msgid "Unit Cost"
-msgstr ""
+msgstr "Custo unitário"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:125
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:166
@@ -25251,7 +25306,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:168
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:239
 msgid "Inventory Value"
-msgstr ""
+msgstr "Valor de inventário"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:129
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:134
@@ -25261,7 +25316,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:175
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:246
 msgid "$10"
-msgstr ""
+msgstr "R$10"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:130
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:171
@@ -25287,7 +25342,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:176
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:247
 msgid "8"
-msgstr ""
+msgstr "8"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:136
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:177
@@ -25299,7 +25354,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:178
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:249
 msgid "$80"
-msgstr ""
+msgstr "R$ 80"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:138
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:179
@@ -25311,7 +25366,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:181
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:252
 msgid "12"
-msgstr ""
+msgstr "12"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:141
 msgid "4 * $10"
@@ -25333,7 +25388,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:147
 msgid "$20"
-msgstr ""
+msgstr "R$ 20"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:148
 msgid "Receive 2 products for $9/unit"
@@ -25343,7 +25398,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:191
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:263
 msgid "4"
-msgstr ""
+msgstr "4"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:151
 msgid "2 * $10"
@@ -25355,7 +25410,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:154
 msgid "Average Cost (AVCO)"
-msgstr ""
+msgstr "Custo médio (AVCO)"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:156
 msgid ""
@@ -25369,7 +25424,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:185
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:251
 msgid "$12"
-msgstr ""
+msgstr "$12"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:182
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:253
@@ -25387,7 +25442,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:188
 msgid "$24"
-msgstr ""
+msgstr "$24"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:189
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:261
@@ -25461,7 +25516,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:221
 msgid "First In First Out (FIFO)"
-msgstr ""
+msgstr "Primeiro a entrar, primeiro a sair (PEPS)"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:223
 msgid ""
@@ -37256,7 +37311,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_analysis.rst:24
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:25
 msgid "Measures"
-msgstr ""
+msgstr "Medidas"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_analysis.rst:26
 msgid ""
@@ -48994,7 +49049,7 @@ msgstr ":doc:`control_bills`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:3
 msgid "Requests for quotation"
-msgstr ""
+msgstr "Solicitações de cotação"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:12
 msgid ""
@@ -49264,7 +49319,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:159
 msgid "Confirm order"
-msgstr ""
+msgstr "Confirmar pedido"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:161
 msgid ""

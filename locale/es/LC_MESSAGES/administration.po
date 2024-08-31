@@ -19,8 +19,8 @@
 # Braulio D. López Vázquez <bdl@odoo.com>, 2024
 # Wil Odoo, 2024
 # Larissa Manderfeld, 2024
-# Fernanda Alvarez, 2024
 # Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2024
+# Fernanda Alvarez, 2024
 # 
 #, fuzzy
 msgid ""
@@ -29,7 +29,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-08-21 11:43+0000\n"
 "PO-Revision-Date: 2023-11-08 08:55+0000\n"
-"Last-Translator: Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2024\n"
+"Last-Translator: Fernanda Alvarez, 2024\n"
 "Language-Team: Spanish (https://app.transifex.com/odoo/teams/41243/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1677,6 +1677,7 @@ msgstr ""
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:36
 msgid "How can I automate tasks when an IP address change occurs?"
 msgstr ""
+"¿Cómo puedo automatizar tareas cuando ocurre un cambio de dirección IP?"
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:38
 msgid ""
@@ -1686,6 +1687,12 @@ msgid ""
 "address included as a query string parameter (`new`), along with the "
 "previous IP address as an additional parameter (`old`)."
 msgstr ""
+"**Odoo.sh le notifica a los administradores del proyecto si hay cambios en "
+"la dirección IP.** Además, cuando la dirección IP de una instancia de "
+"producción cambia, se realiza una petición HTTP `GET` en la ruta "
+"`/_odoo.sh/ip-change` con la nueva dirección IP incluida como un parámetro "
+"de cadena de consulta (`new`), junto con la dirección IP anterior como un "
+"parámetro adicional (`old`)."
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:43
 msgid ""
@@ -1693,6 +1700,10 @@ msgid ""
 "address change (e.g., sending an email, contacting a firewall API, "
 "configuring database objects, etc.)"
 msgstr ""
+"Este mecanismo permite que pueda aplicar acciones personalizadas como "
+"respuesta al cambio de dirección IP (por ejemplo, enviar un correo "
+"electrónico, contactar una API de firewall, configurar objetos de la base de"
+" datos, etc.)."
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:46
 msgid ""
@@ -1700,10 +1711,13 @@ msgid ""
 "internally by the platform itself and returns a `403` response if accessed "
 "through any other means."
 msgstr ""
+"Por motivos de seguridad, solo es posible acceder a la ruta `/_odoo.sh/ip-"
+"change` desde la plataforma y devuelve la respuesta `403` si intenta acceder"
+" por otros medios."
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:49
 msgid "Here is a pseudo-implementation example:"
-msgstr ""
+msgstr "Este es un ejemplo de pseudo-implementación:"
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:6
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:170
@@ -2939,6 +2953,12 @@ msgid ""
 "explained in the documentation about :ref:`SPF <email-domain-spf>` and "
 ":ref:`DKIM <email-domain-dkim>`."
 msgstr ""
+"Si el dominio de las direcciones de correo electrónico de sus usuarios "
+"utiliza SPF (Convenio de remitentes) o DKIM (DomainKeys Identified Mail) no "
+"olvide autorizar a Odoo como host emisor en los ajustes de su nombre de "
+"dominio para incrementar la entrega de sus correos salientes. Los pasos de "
+"configuración se explican en la documentación sobre :ref:`SPF <email-domain-"
+"spf>` y :ref:`DKIM <email-domain-dkim>`."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:410
 msgid ""
@@ -7633,6 +7653,9 @@ msgid ""
 "If you do not have access/manage your email server, use :ref:`incoming mail "
 "servers <email-inbound-custom-domain-incoming-server>`."
 msgstr ""
+"Use los :ref:`servidores de correo entrante <email-inbound-custom-domain-"
+"incoming-server>` si no tiene acceso a su servidor de correo electrónico o "
+"no lo gestiona usted."
 
 #: ../../content/administration/on_premise/geo_ip.rst:3
 msgid "Geo IP"
@@ -9036,7 +9059,7 @@ msgstr "Fin del soporte"
 
 #: ../../content/administration/supported_versions.rst:34
 msgid "Odoo saas~17.4"
-msgstr ""
+msgstr "Odoo saas~17.4"
 
 #: ../../content/administration/supported_versions.rst:36
 #: ../../content/administration/supported_versions.rst:37
@@ -9049,7 +9072,7 @@ msgstr "N/A"
 
 #: ../../content/administration/supported_versions.rst:38
 msgid "July 2024"
-msgstr ""
+msgstr "Julio de 2024"
 
 #: ../../content/administration/supported_versions.rst:40
 msgid "Odoo saas~17.2"
