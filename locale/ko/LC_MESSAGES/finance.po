@@ -5516,6 +5516,8 @@ msgid ""
 " helps you get started. This onboarding banner is displayed until you choose"
 " to close it."
 msgstr ""
+"처음으로 Odoo 회계 앱을 여는 경우에는시작을 도와주는 마법사인 단계별 온보딩 배너가 :guilabel:`회계 현황판` 에서 사용자를 "
+"맞이합니다. 해당 온보딩 배너는 사용자가 닫을 때까지 계속 표시됩니다."
 
 #: ../../content/applications/finance/accounting/get_started.rst:11
 msgid ""
@@ -5559,7 +5561,7 @@ msgstr ":ref:`accounting-setup-bank`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:30
 msgid ":ref:`accounting-setup-taxes`"
-msgstr ""
+msgstr ":ref:`회계-설정-세금`"
 
 #: ../../content/applications/finance/accounting/get_started.rst:31
 msgid ":ref:`accounting-setup-chart`"
@@ -5575,6 +5577,8 @@ msgid ""
 "generate reports automatically, and set your **Tax Return Periodicity**, "
 "along with a reminder to never miss a tax return deadline."
 msgstr ""
+"보고서 자동 생성에 적용할 수 있도록 **회계연도**' 시작일과 마감일을 지정하고, 세금 신고 마감일을 놓치지 않도록 **세금 신고 "
+"주기** 를 리마인더와 함께 설정하세요."
 
 #: ../../content/applications/finance/accounting/get_started.rst:42
 msgid ""
@@ -5600,6 +5604,8 @@ msgid ""
 "synced automatically. To do so, find your bank in the list, click "
 ":guilabel:`Connect`, and follow the instructions on-screen."
 msgstr ""
+"데이터베이스에 은행 계좌를 연결하여 은행 명세서를 자동으로 동기화되도록 설정하세요. 설정하려면 목록에서 은행을 찾아서 *연결* 을 클릭한"
+" 다음 화면에 나오는 안내대로 진행합니다."
 
 #: ../../content/applications/finance/accounting/get_started.rst:58
 msgid ""
@@ -11578,6 +11584,12 @@ msgid ""
 " completely change the resulting hash. Consequently, the SHA-256 algorithm "
 "is often used, among others, for data integrity verification purposes."
 msgstr ""
+"이를 위해 Odoo에서는 항목이 게시될 때마다 **SHA-256 알고리즘** 을 사용하여 고유한 지문을 생성할 수 있습니다. 이 지문을 "
+"해시라고 합니다. 해시는 항목의 필수 데이터 (`date`, `journal_id`, `company_id`, `debit`, "
+"`credit`, `account_id`, `partner_id` 필드 값)를 가져와서 연결한 다음 SHA-256 해시 함수에 입력하면 "
+"고정 크기 (256비트) 문자열이 출력되는 방식으로 생성됩니다. 해시 함수는 결정론적 ('입력값이 같을 경우 항상 같은 출력값을 "
+"생성')이기 때문에 원본 데이터를 일부만 수정하더라도 해시가 완전히 변경됩니다. 따라서 SHA-256 알고리즘은 데이터 무결성 검증 "
+"목적으로 자주 사용됩니다."
 
 #: ../../content/applications/finance/accounting/reporting/data_inalterability.rst:17
 msgid ""
@@ -17646,6 +17658,11 @@ msgid ""
 " internal link to :doc:`view, create, and edit the units of measure "
 "<../inventory_and_mrp/inventory/product_management/configure/uom>`."
 msgstr ""
+"*판매* 앱에서 측정 단위 (예: 단위, 마일, 일 등)에 대한 사양을 생성하여 편집할 수 있습니다. :menuselection:`판매 "
+"앱 --> 환경 설정 --> 설정` 에 있는 `품목 카탈로그` 섹션에서 `측정 단위` 가 활성화되어 있는지 확인합니다. "
+":guilabel:`측정 단위` 내부 링크를 클릭하여 :doc:`측정 단위 보기, 만들기 및 편집 "
+"<../inventory_and_mrp/inventory/product_management/configure/uom>` 을 할 수 "
+"있습니다."
 
 #: ../../content/applications/finance/expenses.rst:50
 msgid ""
@@ -33391,25 +33408,26 @@ msgid ""
 "The `04|` is only a code that helps Odoo to perform this process. It has no "
 "relation to the method 04 reason for cancellation."
 msgstr ""
+"Odoo에서 `04|`는 이 프로세스를 수행하는 데 사용하는 코드일 뿐입니다. 취소 사유인 04 방법과는 아무런 관련이 없습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst-1
 msgid "Old invoice with CFDI Origin."
-msgstr ""
+msgstr "CFDI 원산지가 표시되어 있는 이전 청구서"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst-1
 msgid ""
 "Invoice with the Substituted By field referencing the CFDI Origin invoice."
-msgstr ""
+msgstr "대체 기준 항목으로 CFDI 원산지 청구서를 기재한 청구서"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:514
 msgid "02 - invoices sent with errors without a relation"
-msgstr ""
+msgstr "02 - 관련성 없이 오류가 있는 청구서가 전송됨"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:516
 msgid ""
 "This cancellation reason has to be used when an invoice was sent with an "
 "error in any field, and does not need to be replaced by another one."
-msgstr ""
+msgstr "이 취소 사유는 청구서 항목에 오류가 있는 상태로 전송된 경우에 선택하도록 하며, 다른 내용으로 변경할 필요는 없습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:519
 msgid ""
@@ -33672,7 +33690,7 @@ msgstr "정확한 :guilabel:`인코텀즈` (국제 상거래 조건) (*원산지
 msgid ""
 "This allows the correct identification of exporters and importers, in "
 "addition to expanding the description of the merchandise sold."
-msgstr ""
+msgstr "이를 통해 판매된 품목에 대해 자세하게 설명할 수 있을 뿐 아니라 수출업체 및 수입업체를 정확하게 확인할 수 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:641
 msgid ""
@@ -33688,12 +33706,14 @@ msgid ""
 "In order to use this feature, the modules :guilabel:`l10n_mx_edi_extended` "
 "and :guilabel:`l10n_mx_edi_extended_40` have to be installed."
 msgstr ""
+"이 기능을 사용하려면 :guilabel:`l10n_mx_edi_extended` 및 "
+":guilabel:`l10n_mx_edi_extended_40` 모듈을 설치해야 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:648
 msgid ""
 "Before installing, make sure your business needs to use this feature. "
 "Consult your accountant first, if needed, before installing any modules."
-msgstr ""
+msgstr "설치하기 전에 비즈니스에 이 기능이 필요한지 확인합니다. 필요한 경우 모듈을 설치하기 전에 먼저 회계 담당자에게 문의하세요."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:657
 msgid ""
@@ -33716,6 +33736,8 @@ msgid ""
 "not in the company itself. You can find your company's contact in "
 ":menuselection:`Accounting --> Customers --> Customers`."
 msgstr ""
+"회사 자체가 아니라 회사 *연락처* 에 :guilabel:`시` 및 :guilabel:`주` 를 추가합니다. 회사의 연락처는 "
+":menuselection:`회계 --> 고객 --> 고객` 에서 확인할 수 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:668
 msgid ""
@@ -33745,13 +33767,13 @@ msgstr ""
 msgid ""
 "The entire company :guilabel:`Address`, including a valid :guilabel:`ZIP` "
 "code and the foreign :guilabel:`Country`."
-msgstr ""
+msgstr "유효한 :guilabel:`ZIP` 코드 및 외국 :guilabel:`국가` 를 포함한 전체 회사 :guilabel:`주소`"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:682
 msgid ""
 "The format of the foreign :guilabel:`VAT` (tax identification number, for "
 "example: Colombia `123456789-1`)"
-msgstr ""
+msgstr "외국 :guilabel:`부가가치세` 형식 (세금 식별 번호, 예: 콜롬비아 `123456789-1`)"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:684
 msgid ""
@@ -33759,6 +33781,8 @@ msgid ""
 "goods for a period of time temporarily (:guilabel:`Temporary`) or "
 "permanently (:guilabel:`Definitive`)."
 msgstr ""
+":guilabel:`멕시코 EDI` 탭에서 고객이 일시적으로 (:guilabel:`임시`) 또는 영구적으로 (:guilabel:`최종`)"
+" 품목을 수령하는지 여부를 지정해야 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:688
 msgid ""
@@ -33774,19 +33798,21 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst-1
 msgid "Required external trade customer fields."
-msgstr ""
+msgstr "해외 거래 고객에 대한 필수 항목입니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:698
 msgid ""
 "In the resulting XML and PDF files, the :guilabel:`VAT` is automatically "
 "replaced by the generic VAT for abroad transactions: `XEXX010101000`."
 msgstr ""
+"XML 결과 및 PDF 파일의 :guilabel:`부가가치세` 는 해외 거래에 있어서 일반 부가가치세인 `XEXX010101000` 으로"
+" 자동 대체됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:704
 msgid ""
 "All products involved with external trade have four fields that are "
 "required, two of them exclusive to external trade."
-msgstr ""
+msgstr "해외 거래과 관련된 모든 품목에는 4개의 필수 필드가 있으며 그 중 2개는 해외 거래 전용입니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:707
 msgid ""
@@ -33804,27 +33830,29 @@ msgid ""
 " :guilabel:`Tariff Fraction` of the product in the :guilabel:`Accounting` "
 "tab."
 msgstr ""
+"품목에 대한 `정확한 <https://www.ventanillaunica.gob.mx/vucem/Clasificador.html>`_ "
+":guilabel:`관세율` 은 :guilabel:`회계` 탭에 표시되어 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:711
 msgid ""
 "The :guilabel:`UMT Aduana` corresponds to the :guilabel:`Tariff Fraction`."
-msgstr ""
+msgstr ":guilabel:`UMT 기준` 은 :guilabel:`관세율` 에 해당합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst-1
 msgid "Required external trade product fields."
-msgstr ""
+msgstr "해외 거래 품목에 대한 필수 항목입니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:718
 msgid ""
 "If the UoM code of the :guilabel:`Tariff Fraction` is `01`, the correct "
 ":guilabel:`UMT Aduana` is `kg`."
-msgstr ""
+msgstr ":guilabel:`관세율` UoM 코드가 `01`인 경우 올바른 :guilabel:`UMT 기준` 은 `kg`입니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:720
 msgid ""
 "If the UoM code of the :guilabel:`Tariff Fraction` is `06`, the correct "
 ":guilabel:`UMT Aduana` is `Units`."
-msgstr ""
+msgstr ":guilabel:`관세율` UoM 코드가 `06`인 경우 올바른 :guilabel:`UMT 기준` 은 `단위`입니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:724
 msgid "Invoicing flow"
@@ -33851,16 +33879,19 @@ msgid ""
 "and the optional :guilabel:`Certificate Source` in the :guilabel:`Other "
 "Info` tab."
 msgstr ""
+"그런 다음 :menuselection:`회계 --> 설정 --> 통화` 에 정확하게 환율 설정을 했으면, 이제 "
+":guilabel:`인코텀즈` 및 :guilabel:`기타 정보` 탭에 있는 선택 항목인 :guilabel:`인증서 출처` 만 입력하면 "
+"됩니다. "
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst-1
 msgid "External trade Other Info tab of a product."
-msgstr ""
+msgstr "해외 거래 품목에 대한 기타 정보 탭입니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:740
 msgid ""
 "Finally, sign the invoice with the same process as a regular invoice, and "
 "click the :guilabel:`Process Now` button."
-msgstr ""
+msgstr "마지막으로 일반 청구서와 동일한 절차로 청구서에 서명한 후 :guilabel:`지금 처리하기` 버튼을 클릭합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:746
 msgid ""
@@ -33868,6 +33899,8 @@ msgid ""
 "porte->`_ is a bill of lading: a document that states the type, quantity, "
 "and destination of goods being carried."
 msgstr ""
+"`운송 증서 <https://www.sat.gob.mx/consultas/68823/complemento-carta-porte->`_ 란"
+" 운송되는 품목의 종류, 수량 및 목적지가 기재된 문서인 선하증권입니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:749
 msgid ""
@@ -33884,6 +33917,7 @@ msgid ""
 "Odoo can create XML and PDF files with (or without) ground transport, and "
 "can process materials that are treated as *Dangerous Hazards*."
 msgstr ""
+"Odoo는 지상 운송 시 (또는 제외 시) XML 및 PDF 파일을 생성할 수 있으며 *위험물* 취급되는 물품을 처리할 수 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:756
 msgid ""
@@ -33891,6 +33925,9 @@ msgid ""
 ":guilabel:`l10n_mx_edi_extended_40`, :guilabel:`l10n_mx_edi_stock` and "
 ":guilabel:`l10n_mx_edi_stock_40` have to be installed."
 msgstr ""
+"이 기능을 사용하려면 :guilabel:`l10n_mx_edi_extended`, "
+":guilabel:`l10n_mx_edi_extended_40`, :guilabel:`l10n_mx_edi_stock` 및 "
+":guilabel:`l10n_mx_edi_stock_40` 모듈이 설치되어 있어야 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:760
 msgid ""
@@ -33898,6 +33935,8 @@ msgid ""
 "<../../inventory_and_mrp/inventory>` and :doc:`Sales <../../sales/sales>` "
 "apps installed, as well."
 msgstr ""
+"이 외에도 다음과 같이 :doc:`재고 관리 <../../inventory_and_mrp/inventory>` 및 :doc:`판매 "
+"<../../sales/sales>` 앱도 함께 설치되어 있어야 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:764
 msgid ""
@@ -33905,10 +33944,12 @@ msgid ""
 "or marine transport. Consult your accountant first if this feature is needed"
 " before doing any modifications."
 msgstr ""
+"Odoo는 운송 증서류의 문서 유형 \"I\" (Ingreso), 항공 또는 해상 운송을 지원하지 않습니다. 이 기능이 필요한 경우 수정"
+" 전에 먼저 회계 담당자에게 문의하세요."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:770
 msgid "Odoo manages two different types of CFDI:"
-msgstr ""
+msgstr "Odoo에서 관리하는 CFDI 에는 두 가지 종류가 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:772
 msgid ""
@@ -33916,12 +33957,15 @@ msgid ""
 " than 30 KM "
 "<http://omawww.sat.gob.mx/cartaporte/Paginas/documentos/PreguntasFrecuentes_Autotransporte.pdf>`_."
 msgstr ""
+"**연방 고속도로 없음**: *목적지까지의 거리* 가 '30KM 미만 "
+"<http://omawww.sat.gob.mx/cartaporte/Paginas/documentos/PreguntasFrecuentes_Autotransporte.pdf>`_"
+" 인 경우에 선택합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:774
 msgid ""
 "**Federal Transport**: Is used when the *Distance to Destination* exceeds 30"
 " KM."
-msgstr ""
+msgstr "**연방 교통편**: *목적지까지의 거리* 가 30KM를 초과하는 경우에 선택합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:776
 msgid ""
@@ -33929,6 +33973,8 @@ msgid ""
 "customer, the UNSPSC code, etc.), if you are using *No Federal Highways*, no"
 " external configuration is needed."
 msgstr ""
+"정기 청구서 발행 시의 표준 요구 사항 (고객의 |RFC|, UNSPSC 코드 등) 외에 *연방 고속도로 없음* 을 선택한 경우에는 외부"
+" 설정을 하지 않아도 됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:779
 msgid ""
@@ -33936,6 +33982,8 @@ msgid ""
 "contacts, vehicle setups, and products. Those configurations are added to "
 "the XML and PDF files."
 msgstr ""
+"*연방 교통편* 의 경우 연락처, 차량 설정 및 품목에 몇 가지 환경 설정을 추가해야 합니다. 해당 설정 내용은 XML 및 PDF 파일에"
+" 추가됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:783
 msgid "Contacts and vehicles"
@@ -33954,11 +34002,11 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:790
 msgid "The field, :guilabel:`Locality`, is optional for both addresses."
-msgstr ""
+msgstr "두 주소 모두 :guilabel:`지역` 은 선택 사항입니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst-1
 msgid "Delivery guide contact configuration."
-msgstr ""
+msgstr "배송 가이드 연락처에 대한 환경 설정입니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:797
 msgid ""
@@ -33982,13 +34030,13 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:805
 msgid "All fields are mandatory to create a correct delivery guide."
-msgstr ""
+msgstr "필수 항목을 모두 입력해야 배송 가이드를 정확하게 생성할 수 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:808
 msgid ""
 "The fields, :guilabel:`Vehicle Plate Number` and :guilabel:`Number Plate`, "
 "must contain between 5 to 7 characters."
-msgstr ""
+msgstr ":guilabel:`차량 번호판` 및 :guilabel:`번호판` 은 반드시 5~7자를 입력해야 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:811
 msgid ""
@@ -33996,10 +34044,12 @@ msgid ""
 "vehicle. The only mandatory fields for this contact are the :guilabel:`VAT` "
 "and :guilabel:`Operator Licence`."
 msgstr ""
+":guilabel:`중개자` 섹션에서 차량 운전자를 추가해야 합니다. 이 연락처는 필수 입력 항목으로 :guilabel:`부가가치세` 및"
+" :guilabel:`운영자 라이센스` 만 입력하면 됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst-1
 msgid "Delivery guide vehicle configuration."
-msgstr ""
+msgstr "배송 가이드 차량 환경 설정입니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:821
 msgid ""
@@ -34007,18 +34057,20 @@ msgid ""
 "category`. In addition to this, there are two extra configurations for "
 "products involved in delivery guides:"
 msgstr ""
+"일반 청구서 발행과 마찬가지로 모든 품목에는 :guilabel:`UNSPSC 카테고리` 가 있어야 합니다. 이 외에도 배송 가이드와 "
+"관련된 품목에는 다음과 같은 두 가지 추가 설정을 해야 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:824
 msgid ""
 "The :guilabel:`Product Type` must be set as :guilabel:`Storable Product` for"
 " stock movements to be created."
-msgstr ""
+msgstr "재고 이동을 하려면 :guilabel:`품목 유형` 을 :guilabel:`저장 가능한 품목` 으로 설정해야 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:826
 msgid ""
 "In the :guilabel:`Inventory` tab, the field :guilabel:`Weight` should have "
 "more than `0`."
-msgstr ""
+msgstr ":guilabel:`재고 관리` 탭에서 :guilabel:`중량` 은 `0`보다 커야 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:829
 msgid ""
@@ -34032,11 +34084,11 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst-1
 msgid "Delivery guide product configuration."
-msgstr ""
+msgstr "배송 가이드 상품에 대한 환경 설정입니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:838
 msgid "Sales and inventory flow"
-msgstr ""
+msgstr "판매 및 재고 흐름"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:840
 msgid ""
@@ -34054,6 +34106,8 @@ msgid ""
 "select the :guilabel:`Transport Type` (either :guilabel:`No Federal "
 "Highways` or :guilabel:`Federal Transport`)."
 msgstr ""
+"상태가 :guilabel:`완료` 로 설정된 후에는 이동 항목을 편집할 수 있으며, :guilabel:`운송 유형` "
+"(:guilabel:`연방 고속도로 없음` 또는 :guilabel:`연방 교통편`)을 선택할 수 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:848
 msgid ""
@@ -34070,6 +34124,8 @@ msgid ""
 ":guilabel:`No Federal Highways` do not require any special configuration to "
 "be sent to the government."
 msgstr ""
+"모든 품목에서 :guilabel:`UNSPSC` 외에, 배송가이드에 :guilabel:`연방 고속도로 없음` 으로 되어 있는 경우에는 "
+"정부에 보내려면 특별히 다른 설정이 필요하지 않습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:855
 msgid ""
@@ -34097,6 +34153,10 @@ msgid ""
 " as *dangerous hazards*. These categories need additional considerations "
 "when creating a delivery guide with :guilabel:`Federal Transport`."
 msgstr ""
+":guilabel:`UNSPSC 카테고리` 의 특정 값은 `공식 SAT 카탈로그 "
+"<http://omawww.sat.gob.mx/tramitesyservicios/Paginas/complemento_carta_porte.htm>`_"
+" 에서 *위험물* 로 간주됩니다. :guilabel:`연방 운송` 를 사용하여 배송 가이드를 만들 경우에는 이러한 카테고리에 대해 추가로"
+" 고려해야 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:871
 msgid ""
@@ -34112,7 +34172,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst-1
 msgid "Delivery guide hazardous material product required fields."
-msgstr ""
+msgstr "배송 가이드의 위험물 품목에 대한 필수 항목입니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:879
 msgid ""
@@ -34126,7 +34186,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst-1
 msgid "Delivery Guide environment insurer required fields."
-msgstr ""
+msgstr "배송 가이드의 환경 보험사 필수 항목입니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:888
 msgid "Customs numbers"
@@ -34138,6 +34198,8 @@ msgid ""
 "certifies that all contributions to the fiscal entity (the |SAT|) has been "
 "paid for, including the import/export of goods."
 msgstr ""
+"*세관 신고서* (Pedimento Aduanero)는 품목에 대한 수입/수출을 포함하여 재정 기관 (|SAT|)에 모든 부담금 납부를 "
+"완료하였음을 증명하는 재정 문서입니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:894
 msgid ""
@@ -34159,6 +34221,10 @@ msgid ""
 ":doc:`Purchase <../../inventory_and_mrp/purchase>` and :doc:`Sales "
 "<../../sales/sales>` apps."
 msgstr ""
+"진행하려면 반드시 :guilabel:`l10n_mx_edi_landing` 모듈을 설치해야 하며, :doc:`재고 관리 "
+"<../../inventory_and_mrp/inventory>`, :doc:`매입 "
+"<../../inventory_and_mrp/purchase>` 및 :doc:`판매 <../../sales/sales>` 앱도 설치해야 "
+"합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:903
 msgid ""
@@ -34189,6 +34255,8 @@ msgid ""
 ":guilabel:`Purchase` tab, activate :guilabel:`Is a Landed Cost`, and select "
 "a :guilabel:`Default Split Method`."
 msgstr ""
+"먼저 '요청'이라는 유형으로 *서비스* 품목을 생성합니다. :guilabel:`매입` 탭에서 :guilabel:`양륙 비용` 을 활성화한"
+" 후 :guilabel:`기본 분할 방법` 을 선택합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:918
 msgid ""
@@ -34196,6 +34264,8 @@ msgid ""
 " so, create the storable products, and make sure the :guilabel:`Product "
 "Category` has the following configuration."
 msgstr ""
+"그런 다음 *저장 가능한 품목* 에 세관 번호가 지정되도록 설정합니다. 설정하려면 저장 가능한 품목을 생성한 후 :guilabel:`품목"
+" 카테고리` 에 다음 환경 설정이 되어 있는지 확인합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:921
 msgid ""
@@ -34228,21 +34298,22 @@ msgstr ":guilabel:`재고 출고 계정`: :guilabel:`115.05.01 이동 중인 품
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst-1
 msgid "Storable products general configuration."
-msgstr ""
+msgstr "저장 가능한 품목의 일반 설정"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst-1
 msgid "Storable product category configuration."
-msgstr ""
+msgstr "저장 가능한 품목의 카테고리 설정"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:937
 msgid "Purchase and sales flow"
-msgstr ""
+msgstr "매입 및 판매 흐름"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:939
 msgid ""
 "After you configure your product, follow the standard :doc:`purchase flow "
 "<../../inventory_and_mrp/purchase>`."
 msgstr ""
+"품목을 설정한 후 표준 :doc:`매입 흐름 <../../inventory_and_mrp/purchase>` 에 따라 진행하세요."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:942
 msgid ""
@@ -34270,22 +34341,24 @@ msgid ""
 " Once :guilabel:`Posted`, all products related to that receipt have the "
 "customs number assigned."
 msgstr ""
+"선택 사항으로, 비용 금액을 추가할 수 있습니다. 그런 다음 양륙 비용에 대한 유효성을 검사합니다. :guilabel:`게시됨` 을 "
+"선택하면 해당 영수증과 관련된 모든 품목에 세관 번호가 지정됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:953
 msgid ""
 "You can only add the *Pedimentos* number **once**, so be careful when "
 "associating the correct number with the transfer(s)."
-msgstr ""
+msgstr "*요청* 번호는 **한 번 만** 추가할 수 있으므로 이송 시 정확한 번호를 연결하도록 유의합니다. "
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst-1
 msgid "Customs number on a landed costs Inventory record."
-msgstr ""
+msgstr "양륙 비용 재고 기록에 대한 세관 번호입니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:960
 msgid ""
 "Now, create a sales order, and confirm it. This should trigger a "
 ":guilabel:`Delivery` smart button. Validate it."
-msgstr ""
+msgstr "이제 판매주문서를 생성하고 확인합니다. 그러면 :guilabel:`배송` 스마트 버튼이 실행됩니다. 유효성을 검사합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:963
 msgid ""
@@ -34319,24 +34392,24 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:979
 msgid "It consists of three main XML files:"
-msgstr ""
+msgstr "이 항목은 세 가지 주요 XML 파일로 설정되어 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:981
 msgid ""
 "The updated list of the chart of accounts that you are currently using."
-msgstr ""
+msgstr "현재 사용 중인 계정과목표가 업데이트되어 있는 목록입니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:982
 msgid ""
 "A monthly trial balance, plus a closing entry report, also known as: *Trial "
 "Balance Month 13*."
-msgstr ""
+msgstr "월별 시산표 및 결산 항목 보고서이며, *13월 시산표* 라고도 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:983
 msgid ""
 "Either optional, or for a compulsory audit, an export of the journal entries"
 " in your general ledger."
-msgstr ""
+msgstr "선택 혹은 강제 감사를 할 수 있도록 총계정원장의 전표 항목을 내보냅니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:986
 msgid ""
@@ -34344,6 +34417,9 @@ msgid ""
 "Contabilidad Electrónica 1.3 "
 "<https://www.gob.mx/cms/uploads/attachment/file/151135/Anexo24_05012015.pdf>`_."
 msgstr ""
+"그 결과 XML 파일은 `전자 회계 관련 기술 부속서 1.3 "
+"<https://www.gob.mx/cms/uploads/attachment/file/151135/Anexo24_05012015.pdf>`_"
+" 의 요구 사항에 부합할 수 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:989
 msgid ""
@@ -34383,6 +34459,8 @@ msgid ""
 "might change according to your fiscal regime. Always contact your accountant"
 " before sending any documents to the government."
 msgstr ""
+"전송할 보고서의 구체적인 특성 및 의무 사항은 회계 제도에 따라 변경될 수 있습니다. 정부에 문서를 전송하기 전에는 항상 회계 담당자에게"
+" 문의하세요."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:1012
 msgid ""
@@ -34391,12 +34469,18 @@ msgid ""
 "cuentas "
 "<http://omawww.sat.gob.mx/fichas_tematicas/buzon_tributario/Documents/codigo_agrupador.pdf>`_."
 msgstr ""
+"멕시코의 :doc:`계정과목표 <../accounting/get_started/chart_of_accounts>` 는 |SAT| 의 "
+"'계정 그룹 코드 "
+"<<http://omawww.sat.gob.mx/fichas_tematicas/buzon_tributario/Documents/codigo_agrupador.pdf>`_"
+" 를 기준으로 한 특정한 패턴을 따릅니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:1016
 msgid ""
 "You can create any account, as long as it respects |SAT|'s encoding group: "
 "the pattern is `NNN.YY.ZZ` or `NNN.YY.ZZZ`."
 msgstr ""
+"|SAT| 인코딩 그룹에 맞추기만 하면 어떤 계정이든 생성할 수 있습니다. 생성 패턴은 `NNN.YY.ZZ` 또는 "
+"`NNN.YY.ZZZ`입니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:1020
 msgid "Some examples are `102.01.99` or `401.01.001`."
@@ -34416,7 +34500,7 @@ msgstr ""
 msgid ""
 "Once you create all your accounts, make sure the correct :guilabel:`Tags` "
 "are added."
-msgstr ""
+msgstr "모든 계정이 생성되면 :guilabel:`태그` 가 정확하게 추가되었는지 확인합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:1029
 msgid ""
@@ -34424,6 +34508,8 @@ msgid ""
 "`100.01.01`, `301.00.003` or `604.77.00`). This triggers errors in the "
 "report."
 msgstr ""
+"섹션 패턴은 0으로 끝날 수 없습니다 (예: `100.01.01`, `301.00.003` 또는 `604.77.00`). 0으로 끝날 "
+"경우에는 보고서에 오류가 발생합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:1032
 msgid ""
@@ -34442,6 +34528,8 @@ msgid ""
 "your accounts, provided that you added their correct :ref:`encoding group "
 "<l10n_mx/chart-of-accounts>`."
 msgstr ""
+"시산표에서 계정의 초기 잔액, 차액 및 총 잔액을 확인할 수 있습니다. 이를 위해서는 :ref:`인코딩 그룹 <l10n_mx/chart-"
+"of-accounts>` 을 정확히 추가해야 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:1042
 msgid ""
@@ -34459,13 +34547,14 @@ msgstr "시산표 보고서"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:1051
 msgid "Odoo does not generate the *Balanza de Comprobación Complementaria*."
-msgstr ""
+msgstr "Odoo는 *추가 평가판에 대해 잔액* 이 생성되지 않습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:1053
 msgid ""
 "An additional report is the *Month 13*: a closing balance sheet that shows "
 "any adjustments or movements made in the accounting to close the year."
 msgstr ""
+"추가 보고서는 *13월* 용입니다. 해당 연도를 마감하기 위해 회계 상의 전체 조정 또는 이동 내용을 보여주는 결산용 재무상태표입니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:1056
 msgid ""
@@ -34490,15 +34579,15 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:1064
 msgid ""
 "The XML file is generated by pressing the :guilabel:`SAT (XML)` button."
-msgstr ""
+msgstr ":guilabel:`SAT (XML)` 버튼을 누르면 XML 파일이 생성됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst-1
 msgid "Trial Balance Month 13 setup."
-msgstr ""
+msgstr "시산표에 13월 설정"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst-1
 msgid "Trial Balance Month 13 report."
-msgstr ""
+msgstr "시산표 13월 보고서"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:1077
 msgid ""
@@ -34513,7 +34602,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:1082
 msgid ""
 "You can filter by period, or by journal, according to your current needs."
-msgstr ""
+msgstr "현재 필요한 내용에 따라 기간별 또는 전표별로 필터를 적용할 수 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:1084
 msgid ""
@@ -34521,22 +34610,24 @@ msgid ""
 "Reports --> General Ledger`, and click :guilabel:`XML (Polizas)`. Here, you "
 "can select between four types of :guilabel:`Export` types:"
 msgstr ""
+"XML을 생성하려면 :menuselection:`회계 --> 보고 --> 감사 보고서 --> 총계정원장` 으로 이동하여 "
+":guilabel:`XML (정책)` 을 클릭합니다. 여기서는 4가지 :guilabel:`내보내기` 유형 중에서 선택할 수 있습니다:"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:1088
 msgid ":guilabel:`Tax audit`"
-msgstr ""
+msgstr ":guilabel:`세무 감사`"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:1089
 msgid ":guilabel:`Audit certification`"
-msgstr ""
+msgstr ":guilabel:`감사 인증`"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:1090
 msgid ":guilabel:`Return of goods`"
-msgstr ""
+msgstr ":guilabel:`품목 반품`"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:1091
 msgid ":guilabel:`Compensation`"
-msgstr ""
+msgstr ":guilabel:`보상`"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:1093
 msgid ""
@@ -34555,6 +34646,8 @@ msgid ""
 ":guilabel:`Order Number` and `AB123451234512` for :guilabel:`Process "
 "Number`."
 msgstr ""
+"이 보고서를 전송하지 않은 상태로 보려면, :guilabel:`주문 번호` 에는`ABC6987654/99` 를 입력하고 "
+":guilabel:`프로세스 번호` 에는 `AB123451234512` 를 입력합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:1103
 msgid "DIOT report"
@@ -34603,7 +34696,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst-1
 msgid "A Vendor Bill that is In Payment."
-msgstr ""
+msgstr "결제 과정 중인 공급업체 청구서"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst-1
 msgid "DIOT (TXT) download button."
@@ -34645,21 +34738,21 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/netherlands.rst:15
 msgid "Dutch Accounting Reports"
-msgstr ""
+msgstr "네덜란드 회계 보고서"
 
 #: ../../content/applications/finance/fiscal_localizations/netherlands.rst:17
 msgid ""
 "If you install the Dutch accounting localization, you will have access to "
 "some reports that are specific to the Netherlands such as :"
-msgstr ""
+msgstr "네덜란드 회계 현지화를 설치하면 다음과 같은 네덜란드 전용 보고서에 액세스할 수 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/netherlands.rst:21
 msgid "Tax Report (Aangifte omzetbelasting)"
-msgstr ""
+msgstr "세금계산서 (Aangifte omzetbelasting)"
 
 #: ../../content/applications/finance/fiscal_localizations/netherlands.rst:22
 msgid "Intrastat Report (ICP)"
-msgstr ""
+msgstr "인트라스탯 보고서 (ICP)"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:3
 msgid "Peru"
@@ -34669,7 +34762,7 @@ msgstr "페루"
 msgid ""
 "The Peruvian localization has been improved and extended, in this version "
 "the next modules are available:"
-msgstr ""
+msgstr "페루 현지화가 더욱 개선 및 확장되었습니다. 이 버전에서는 다음 모듈을 사용할 수 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:16
 msgid ""
@@ -34701,13 +34794,15 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:30
 msgid "`App Tour - Localización de Peru <https://youtu.be/Ic3mGovkf8Y>`_"
-msgstr ""
+msgstr "`앱 투어 - 페루 현지화 <https://youtu.be/Ic3mGovkf8Y>`_"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:31
 msgid ""
 "`Smart Tutorial - Localización de Peru <https://www.odoo.com/slides/smart-"
 "tutorial-localizacion-de-peru-133>`_"
 msgstr ""
+"`스마트 튜토리얼 - 페루 현지화 <https://www.odoo.com/slides/smart-tutorial-localizacion-"
+"de-peru-133>`_"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:37
 msgid "Install the Peruvian localization modules"
@@ -34724,13 +34819,13 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "The \"Module\" filter is set on \"Peru\""
-msgstr ""
+msgstr "\"모듈\" 필터가 '페루'로 설정되어 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:48
 msgid ""
 "When you install a database from scratch selecting Peru as country, Odoo "
 "automatically installs the base module: Peru - Accounting."
-msgstr ""
+msgstr "국가로 페루를 선택한 후 처음부터 데이터베이스를 설치하면 Odoo는 기본 모듈인 페루 - 회계를 자동으로 설치합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:54
 msgid ""
@@ -34745,7 +34840,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Company data for Peru including RUC and Address type code"
-msgstr ""
+msgstr "RUC 및 주소 유형 코드가 들어있는 페루용 회사 데이터"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:65
 msgid ""
@@ -34758,7 +34853,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:69
 msgid "The NIF should be set following the RUC format."
-msgstr ""
+msgstr "RUC 형식에 따라 NIF를 설정해야 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:73
 msgid "Chart of Account"
@@ -34769,11 +34864,11 @@ msgid ""
 "The chart of accounts is installed by default as part of the set of data "
 "included in the localization module, the accounts are mapped automatically "
 "in:"
-msgstr ""
+msgstr "계정과목표는 현지화 모듈에 포함된 데이터 세트의 일부로 기본 설치되며 계정은 다음 위치에 자동으로 매핑됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:79
 msgid "Default Account Payable."
-msgstr ""
+msgstr "기본 미지급금 계정"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:82
 msgid ""
@@ -34804,34 +34899,39 @@ msgstr "기본 개념"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:98
 msgid "Here are some terms that are essential on the Peruvian localization:"
-msgstr ""
+msgstr "다음은 페루 현지화에 필수적인 용어 모음입니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:100
 msgid ""
 "**EDI**: Electronic Data Interchange, which in this refers to the Electronic"
 " Invoice."
-msgstr ""
+msgstr "**EDI**: 전자 데이터 교환이라는 뜻으로, 여기서는 전자 청구서를 의미합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:101
 msgid ""
 "**SUNAT**: is the organization that enforces customs and taxation in Peru."
-msgstr ""
+msgstr "**SUNAT**: 페루의 관세 및 조세 집행 기관입니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:102
 msgid ""
 "**OSE**: Electronic Service Operator, `OSE SUNAT's definition "
 "<https://cpe.sunat.gob.pe/aliados/ose#:~:text=El%20Operador%20de%20Servicios%20Electr%C3%B3nicos%20(OSE)%20es%20qui%C3%A9n%20se%20encarga,otro%20documento%20que%20se%20emita>`_."
 msgstr ""
+"**OSE**: 전자 서비스 운영자로서, `OSE SUNAT의 정의 "
+"<https://cpe.sunat.gob.pe/aliados/ose#:~:text=El%20Operador%20de%20Servicios%20Electr%C3%B3nicos%20(OSE)%20es%20qui%C3%A9n%20se%20encarga,otro%20documento%20que%20se%20emita>`_"
+" 를 참조하세요."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:104
 msgid "**CDR**: Receipt certificate (Constancia de Recepción)."
-msgstr ""
+msgstr "**CDR**: 영수 증명서 (Constancia de Recepción) 입니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:105
 msgid ""
 "**SOL Credentials**: Sunat Operaciones en Línea. User and password are "
 "provided by the SUNAT and grant access to Online Operations systems."
 msgstr ""
+"**SOL 자격 증명**: Sunat 온라인 운영 (SunatOperaciones en Línea)을 위한 것으로, 사용자 및 비밀번호는"
+" SUNAT에서 제공하며 온라인 운영 시스템에 대한 액세스 권한을 부여합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:110
 msgid "Signature Provider"
@@ -34974,7 +35074,7 @@ msgstr "무엇을 도와드릴까요?"
 msgid ""
 "In Odoo, once your enterprise contract is activated and you start working in"
 " Production, you need to buy credits once the first 1000 are consumed."
-msgstr ""
+msgstr "Odoo에서 기업 계약이 활성화되어 프로덕션 작업이 시작된 후, 최초의 1000개가 소진되면 크레딧을 구매해야 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:172
 msgid ""
@@ -34994,6 +35094,9 @@ msgid ""
 " "
 "<https://drive.google.com/file/d/1QZoqWvtQERpS0pqp6LcKmw7EBlm9EroU/view?usp=sharing>`_."
 msgstr ""
+"Digiflow를 공인 PSE로 등록하려면 `PSE 제휴 가이드 "
+"<https://drive.google.com/file/d/1QZoqWvtQERpS0pqp6LcKmw7EBlm9EroU/view?usp=sharing>`_"
+" 를 확인하세요."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:183
 msgid ""
@@ -35001,6 +35104,8 @@ msgid ""
 " you can send your document validation directly to Digiflow. In this case "
 "you need to consider:"
 msgstr ""
+"대신 이 항목을 선택할 수 있으며, IAP 서비스를 사용하는 대신에 문서에 대한 유효성 검사를 Digiflow로 직접 전송할 수 "
+"있습니다. 이 경우 다음과 같은 내용을 고려해야 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:186
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:203
@@ -35010,12 +35115,15 @@ msgid ""
 "Ceritifcates "
 "<https://cpe.sunat.gob.pe/informacion_general/certificados_digitales/>`_."
 msgstr ""
+"자체 디지털 인증서를 구매할 수 있습니다. 공식 업체 목록 및 인증서를 받는 프로세스에 대한 자세한 내용은 `SUNAT 디지털 인증서 "
+"<https://cpe.sunat.gob.pe/informacion_general/certificados_digitales/>`_ 를 "
+"참조하세요."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:189
 msgid ""
 "Sign a service agreement directly with `Digiflow "
 "<https://www.digiflow.pe/>`_."
-msgstr ""
+msgstr "`Digiflow <https://www.digiflow.pe/>`_ 와 직접 서비스 계약을 체결하세요."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:190
 msgid "Provide your SOL credentials."
@@ -35039,6 +35147,8 @@ msgid ""
 "When using direct connection with the SUNAT, the SOL User must be set with "
 "the Company RUT + User Id. Example: ``20121888549JOHNSMITH``"
 msgstr ""
+"SUNAT에 직접 연결하는 경우 SOL 사용자는 회사 RUT + 사용자 ID로 설정해야 합니다. 예: "
+"``20121888549JOHNSMITH``"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:214
 msgid "Testing environment"
@@ -35048,7 +35158,7 @@ msgstr "테스트 환경"
 msgid ""
 "Odoo provides a testing environment that can be activated before your "
 "company goes into production."
-msgstr ""
+msgstr "Odoo는 회사에서 프로덕션에 들어가기 전에 활성화할 수 있는 테스트 환경을 제공합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:218
 msgid ""
@@ -35056,12 +35166,13 @@ msgid ""
 "buy testing credits for your transactions as all of them are validated by "
 "default."
 msgstr ""
+"테스트 환경 및 IAP 서명을 거칠 때 기본적으로 모든 거래가 검증되므로 거래에 대한 테스트용으로 크레딧을 구매할 필요가 없습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:222
 msgid ""
 "By default the databases are set to work on production, make sure to enable "
 "the testing mode if needed."
-msgstr ""
+msgstr "기본적으로 데이터베이스는 프로덕션에서 작동하도록 설정되어 있으며 필요한 경우에는 테스트 모드를 활성화해야 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:228
 msgid ""
@@ -35082,16 +35193,19 @@ msgid ""
 " Odoo can connect directly to its services and get the currency rate either "
 "automatically or manually."
 msgstr ""
+"페루의 공식 환율은 페루 은행에서 제공합니다. Odoo에서 해당 서비스에 직접 연결하여 자동 또는 수동으로 환율을 확인할 수 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Bank of Peru is displayed in Multicurrency Service option"
-msgstr ""
+msgstr "페루 은행이 다중 통화 서비스 항목에 표시됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:246
 msgid ""
 "Please refer to the next section in our documentation for more information "
 "about :doc:`multicurrencies <../accounting/get_started/multi_currency>`."
 msgstr ""
+":doc:`다중 통화 <../accounting/get_started/multi_currency>` 에 대한 자세한 내용은 문서에 있는 "
+"다음 섹션에서 참조하세요."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:252
 msgid "Configure Master data"
@@ -35101,7 +35215,7 @@ msgstr "마스터 데이터 환경 설정"
 msgid ""
 "As part of the localization module the taxes are created automatically with "
 "their related financial account and electronic invoice configuration."
-msgstr ""
+msgstr "현지화 모듈의 일부로 세금은 관련 회계 계정 및 전자 청구서 설정을 통해 자동으로 생성됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "List of default taxes"
@@ -35122,7 +35236,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Taxes EDI data for Peru"
-msgstr ""
+msgstr "페루용 세금 EDI 데이터"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:277
 msgid "Fiscal Positions"
@@ -35132,17 +35246,17 @@ msgstr "재정 상태"
 msgid ""
 "There are two main fiscal positions included by default when you install the"
 " Peruvian localization."
-msgstr ""
+msgstr "페루 현지화를 설치하면 두 가지 주요 재정 위치가 기본값으로 포함되어 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:281
 msgid ""
 "**Extranjero - Exportación**: Set this fiscal position on customers for "
 "Exportation transactions."
-msgstr ""
+msgstr "**해외 - 수출**: 수출 거래용으로 고객에 대해 재정 위치를 설정합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:283
 msgid "**Local Peru**: Set this fiscal position on local customers."
-msgstr ""
+msgstr "**페루 국내**: 현지 고객용으로 재정 위치를 설정합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:286
 msgid "Document Types"
@@ -35172,23 +35286,23 @@ msgstr ""
 msgid ""
 "The information required for the document types is included by default so "
 "the user does not need to fill anything on this view:"
-msgstr ""
+msgstr "문서 유형에 필요한 정보는 기본값으로 포함되어 있으므로 이 보기에서는 아무것도 입력하지 않아도 됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Document Type list"
-msgstr ""
+msgstr "문서 유형 목록"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:304
 msgid ""
 "Currently the documents supported on customer invoices are: Invoice, Boleta,"
 " Debit Note and Credit Note."
-msgstr ""
+msgstr "현재 고객 청구서에서 지원되는 문서는 청구서, 영수증, 차변전표 및 대변전표입니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:310
 msgid ""
 "When creating Sales Journals, the following information must be filled, in "
 "addition to the standard fields on the Journals:"
-msgstr ""
+msgstr "판매 전표를 생성하려면 전표 표준 항목 이외에 다음과 같은 내용을 입력해야 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:314
 msgid "Use Documents"
@@ -35212,17 +35326,17 @@ msgstr "전자 데이터 교환"
 msgid ""
 "This  section indicates which EDI workflow is used in the invoice, for Peru "
 "we must select “Peru UBL 2.1”."
-msgstr ""
+msgstr "이 섹션에서는 청구서에서의 EDI 작업 흐름을 보여주며, 페루의 경우 \"Peru UBL 2.1\"을 선택해야 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Journal EDI field"
-msgstr ""
+msgstr "전표 EDI 항목"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:331
 msgid ""
 "By default, the value Factur-X (FR) is always displayed, make sure you can "
 "uncheck it manually."
-msgstr ""
+msgstr "기본적으로 항상 팩터-X (FR) 값이 표시되므로 수동으로 선택을 해제할 수 있는지 확인합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:337
 msgid "Identification Type and VAT"
@@ -35240,7 +35354,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Partner identification type"
-msgstr ""
+msgstr "파트너 식별 유형"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:349
 #: ../../content/applications/finance/fiscal_localizations/romania.rst:109
@@ -35252,7 +35366,7 @@ msgid ""
 "Additional to the basic information in your products, for the Peruvian "
 "localization, the UNSPC Code on the product is a required value to be "
 "configured."
-msgstr ""
+msgstr "기본 품목 정보 외에 페루 현지화의 경우 품목의 UNSPC 코드를 설정하기 위한 필수 값입니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "UNSPC Code on products"
@@ -35302,7 +35416,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:0
 msgid "Invoice operation type field on invoices"
-msgstr ""
+msgstr "청구서에 있는 청구서 작업 유형 항목"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:388
 msgid ""
@@ -35318,7 +35432,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:0
 msgid "Tax affectation reason in invoice line"
-msgstr ""
+msgstr "청구서 내역에 대한 과세 사유"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:400
 msgid ""
@@ -35332,13 +35446,13 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Sending of EDI Invoice in blue"
-msgstr ""
+msgstr "파란색으로 표시된 EDI 청구서 전송하기"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:408
 msgid ""
 "Asynchronous means that the document is not sent automatically after the "
 "invoice has been posted."
-msgstr ""
+msgstr "비동기 방식이란 청구서가 게시된 후 문서가 자동 전송되지 않는다는 의미입니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:411
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:505
@@ -35356,7 +35470,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Send EDI manually"
-msgstr ""
+msgstr "수동으로 EDI 전송하기"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:421
 msgid ""
@@ -35369,7 +35483,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Message on chatter when the invoice is valid"
-msgstr ""
+msgstr "유효한 청구서인 경우 메시지창에 표시되는 메시지"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:429
 msgid ""
@@ -35377,6 +35491,7 @@ msgid ""
 " “To be sent” so the corrections can be made and the invoice can be sent "
 "again."
 msgstr ""
+"유효성 검사 오류가 있는 경우에 전자 청구서 상태는 계속 \"전송 예정\" 상태로 있으므로 수정한 후 청구서를 재전송할 수 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:433
 msgid ""
@@ -35402,7 +35517,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:444
 msgid "If a validation error is received, you have two options:"
-msgstr ""
+msgstr "유효성 검사 오류가 수신되면, 다음의 두 가지 내용을 확인합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:446
 msgid ""
@@ -35425,17 +35540,19 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:0
 msgid "List of common errors on invoices"
-msgstr ""
+msgstr "청구서에서 발생하는 일반적인 오류 목록"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:458
 msgid ""
 "For more detail please refert to `Common errors in SUNAT "
 "<https://www.nubefact.com/codigos-error-sunat/>`_."
 msgstr ""
+"자세한 내용은 `SUNAT에서 발생하는 일반적인 오류 <https://www.nubefact.com/codigos-error-"
+"sunat/>`_ 를 참조하세요."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:462
 msgid "Invoice PDF Report"
-msgstr ""
+msgstr "청구서 PDF 보고서"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:464
 msgid ""
@@ -35456,6 +35573,8 @@ msgid ""
 "consumed in your production database, your company must buy new credits in "
 "order to process your transactions."
 msgstr ""
+"Odoo 전자 IAP에서는 1000 크레딧을 무료로 제공하며, 프로덕션 데이터베이스에서 이 크레딧이 소진되면 거래를 처리하기 위해 "
+"회사에서 새 크레딧을 구매해야 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:477
 msgid ""
@@ -35468,13 +35587,13 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Buying credits in the IAP"
-msgstr ""
+msgstr "IAP에서 크레딧 구매하기"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:485
 msgid ""
 "In the IAP service includes packages with different pricing based on the "
 "number of credits. The price list in the IAP is always displayed in EUR."
-msgstr ""
+msgstr "IAP 서비스에 있는 패키지는 크레딧 수에 따라 가격이 달라집니다. IAP에서 가격표는 항상 EUR로 표시되어 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:489
 msgid "Special Use cases"
@@ -35497,11 +35616,11 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Request invoice cancellation button"
-msgstr ""
+msgstr "청구서 취소 요청 버튼"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:502
 msgid "In order to cancel an invoice, please provide a cancellation Reason."
-msgstr ""
+msgstr "청구서를 취소하려면 취소 사유를 입력합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:507
 msgid ""
@@ -35517,7 +35636,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Cancellation CDR sent by the SUNAT"
-msgstr ""
+msgstr "SUNAT에서 보낸 취소용 CDR"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:516
 msgid ""
@@ -35531,33 +35650,33 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "nvoice after cancellation"
-msgstr ""
+msgstr "취소 후 청구서"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:525
 msgid "One credit is consumed on each cancellation request."
-msgstr ""
+msgstr "취소 요청이 있을 때마다 크레딧 1개가 차감됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:530
 msgid ""
 "When creating exportation invoices, take into account the next "
 "considerations:"
-msgstr ""
+msgstr "수출용 청구서를 생성할 경우 다음 사항을 고려합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:532
 msgid "The Identification type on your customer must be Foreign ID."
-msgstr ""
+msgstr "고객 신분증 유형으로는 반드시 외국인 ID를 사용합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:533
 msgid "Operation type in your invoice must be an Exportation one."
-msgstr ""
+msgstr "청구서의 작업 유형은 반드시 수출로 되어 있어야 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:534
 msgid "The taxes included in the invoice lines should be EXP taxes."
-msgstr ""
+msgstr "청구서 내역에 기재되어 있는 세금은 EXP 세금이어야 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Exportation invoices main data"
-msgstr ""
+msgstr "수출용 청구서의 기본 데이터"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:541
 msgid "Advance Payments"
@@ -35588,30 +35707,30 @@ msgstr "최종 청구서의 잔액은 일반 결제 거래로 결제해야 합�
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:550
 msgid "Detraction Invoices"
-msgstr ""
+msgstr "공제 청구서"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:552
 msgid ""
 "When creating invoices that is subject to Detractions, take into account the"
 " next considerations:"
-msgstr ""
+msgstr "공제 대상 청구서를 생성할 때는 다음과 같은 사항을 고려하도록 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:554
 msgid ""
 "All the products included in the invoice must have these fields configured:"
-msgstr ""
+msgstr "청구서 상의 모든 품목에 대해서는 다음과 같은 항목이 설정되어 있어야 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:0
 msgid "Detraction fields on products"
-msgstr ""
+msgstr "품목에 대한 공제 항목"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:560
 msgid "Operation type in your invoice must be ``1001``"
-msgstr ""
+msgstr "청구서의 작업 유형은 ``1001``로 설정"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:0
 msgid "Detraction code on invoices."
-msgstr ""
+msgstr "청구서에 대한 공제 코드"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:567
 msgid "Credit Notes"
@@ -35635,26 +35754,28 @@ msgstr "청구서에서 대변전표 추가하기"
 msgid ""
 "When creating your first credit Note, select the Credit Method: Partial "
 "Refund, this allows you to define the credit note sequence."
-msgstr ""
+msgstr "처음으로 대변전표를 생성할 때 대변 기재 방법으로 부분 환불을 선택하면 대변전표 순서를 지정할 수 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:581
 msgid "By default the Credit Note is set in the document type:"
-msgstr ""
+msgstr "기본적으로 대변전표는 문서 유형으로 설정되어 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Credit Note document type"
-msgstr ""
+msgstr "대변전표 문서 유형"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:587
 msgid ""
 "To finish the workflow please follow the instructions on :doc:`our page "
 "about Credit Notes <../accounting/customer_invoices/credit_notes>`."
 msgstr ""
+"작업 흐름을 완료하려면 :doc:`대변전표 페이지 <../accounting/customer_invoices/credit_notes>` "
+"의 안내 사항대로 진행하세요."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:591
 msgid ""
 "The EDI workflow for the Credit notes works in the same way as the invoices."
-msgstr ""
+msgstr "대변전표에 대한 EDI 작업 흐름은 청구서와 동일한 방식으로 작동합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:594
 msgid "Debit Notes"
@@ -35666,10 +35787,12 @@ msgid ""
 "existing document you can also create debit Notes. For this just use the "
 "button “Add Debit Note”."
 msgstr ""
+"페루 현지화의 일부로 기존 문서에서 대변전표를 생성하는 것 외에 차변전표도 생성할 수도 있습니다. \"차변전표 추가\" 버튼만 클릭하면 "
+"됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:599
 msgid "By default the Debit Note is set in the document type."
-msgstr ""
+msgstr "기본적으로 차변전표는 문서 유형에 설정되어 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:604
 msgid "Electronic delivery guide 2.0"
@@ -35721,10 +35844,11 @@ msgid ""
 "at the beginning of the shipment. The sender delivery guide is supported in "
 "Odoo."
 msgstr ""
+"본 배송 가이드는 배송이 시작될 때 품목에 대한 소유자 (발송인)가 발행하는 것입니다. 발신자 배송 가이드는 Odoo에서 지원됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:629
 msgid "`SUNAT guía de remisión <https://www.gob.pe/7899-guia-de-remision>`_"
-msgstr ""
+msgstr "`SUNAT 안내용 가이드 <https://www.gob.pe/7899-guia-de-remision>`_"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:632
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:753
@@ -35735,27 +35859,29 @@ msgstr "운송업체"
 msgid ""
 "The *Carrier* delivery guide type justifies the transportation service the "
 "driver (or carrier) performs."
-msgstr ""
+msgstr "*운송업체* 에 대한 배송 가이드 유형은 운송 담당자 (또는 운송업체)가 수행하는 운송 서비스에 대한 내용을 담고 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:637
 msgid ""
 "This delivery guide is issued by the carrier and must be issued to each "
 "shipper when the shipment goes through public transport."
-msgstr ""
+msgstr "본 배송 가이드는 운송업체에서 발행하며, 대중 교통을 이용하여 화물을 운송하는 경우 반드시 각 발송인에게 발행해야 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:641
 msgid "The carrier delivery guide is **not** supported in Odoo."
-msgstr ""
+msgstr "운송업체 배송 가이드는 Odoo에서 지원되지 **않습니다**."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:644
 msgid ""
 "`SUNAT guía de remisión transportista <https://tefacturo.pe/blog/sunat/guia-"
 "de-remision-electronica/guia-de-remision-transportista/>`_"
 msgstr ""
+"`SUNAT 배송 가이드 <https://tefacturo.pe/blog/sunat/guia-de-remision-"
+"electronica/guia-de-remision-transportista/>`_"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:648
 msgid "Transportation types"
-msgstr ""
+msgstr "운송 유형"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:651
 msgid "Private"
@@ -35767,6 +35893,8 @@ msgid ""
 "goods using their own vehicles. In this case, a sender's delivery guide must"
 " be issued."
 msgstr ""
+"소유자가 자신의 차량을 사용하여 물품을 운송하는 경우에는 운송 유형이 *개인* 으로 되어 있습니다. 이 경우 반드시 발송인이 제공한 "
+"배송안내서를 발행하여야 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:657
 msgid "Public"
@@ -35783,7 +35911,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:664
 msgid "Direct submission to SUNAT"
-msgstr ""
+msgstr "SUNAT에 직접 제출하기"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:666
 msgid ""
@@ -35791,10 +35919,12 @@ msgid ""
 "to the |SUNAT|, regardless of the electronic document provider: IAP, "
 "Digiflow, or |SUNAT|."
 msgstr ""
+"Odoo에서 작성한 |GRE| 배송 가이드는 IAP, Digiflow 또는 |SUNAT| 등 전자 문서 제공업체에 관계없이 |SUNAT|"
+" 로 직접 전송해야 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:670
 msgid "Required information"
-msgstr ""
+msgstr "필수 정보"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:672
 msgid ""
@@ -35814,23 +35944,23 @@ msgstr "취소"
 msgid ""
 "**Both** the sender and the carrier can cancel the electronic waybill as "
 "long as the following conditions are met:"
-msgstr ""
+msgstr "다음 조건을 충족하는 경우 발송인과 운송업체 **누구든** 전자 운송장을 취소할 수 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:682
 msgid "The shipment has not been initiated."
-msgstr ""
+msgstr "아직 배송이 시작되지 않았습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:683
 msgid ""
 "If the shipment has been initiated, the receiver **must** be changed before "
 "reaching the final destination."
-msgstr ""
+msgstr "배송이 시작된 경우에는, 최종 목적지에 도착하기 전에 **반드시** 수취인을 변경해야 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:687
 msgid ""
 "The |SUNAT| no longer uses the term \"Anula\", but now uses the term \"Dar "
 "de baja\" for cancellations."
-msgstr ""
+msgstr "|SUNAT| 에서는 더 이상 \"무효화\" 라는 용어를 사용하지 않고 이제 취소 시 \"수신 중단\" 이라는 용어를 사용합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:691
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:110
@@ -35843,29 +35973,32 @@ msgid ""
 "delivery guides that were generated by mistake **will** be sent to the "
 "|SUNAT|."
 msgstr ""
+"|SUNAT| 에서는 테스트 환경이 지원되지 않습니다. 즉 배송 가이드가 실수로 생성된 경우에도 |SUNAT| 으로 **전송됩니다**."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:696
 msgid ""
 "If, by mistake, the waybill was created in this environment, it is necessary"
 " to delete it from the |SUNAT| portal."
-msgstr ""
+msgstr "이 환경에서 운송장이 실수로 생성된 경우에는 |SUNAT| 포털에서 해당 운송장을 삭제해야 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:703
 msgid ""
 "Electronic sender's |GRE| is currently the only supported type of waybill in"
 " Odoo."
-msgstr ""
+msgstr "현재 Odoo에서 운송장 유형은 전자 발신자 |GRE| 형식만 지원됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:704
 msgid ""
 "The delivery guide is dependent on the Odoo *Inventory* app, the "
 ":guilabel:`l10n_pe_edi` and :guilabel:`l10n_pe` modules."
 msgstr ""
+"배송 가이드는 Odoo *재고 관리* 앱, :guilabel:`l10n_pe_edi` 및 :guilabel:`l10n_pe` 모듈에 따라"
+" 달라집니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:706
 msgid ""
 "A second user **must** be added for the creation of electronic documents."
-msgstr ""
+msgstr "전자 문서를 생성하려면 **반드시** 두 번째 사용자를 추가해야 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:708
 msgid ""
@@ -35874,6 +36007,9 @@ msgid ""
 ":ref:`install <general/install>` the :guilabel:`Peruvian - Electronic "
 "Delivery Note 2.0` module (`l10n_pe_edi_stock_20`)."
 msgstr ""
+":ref:`전자 청구서 <peru/accounting-settings>` 및 :ref:`마스터 데이터 <peru/master_data>`"
+" 설정 단계 후:guilabel :`페루 - 전자 배송 노트 2.0` 모듈 (`l10n_pe_edi_stock_20`)을 :ref:`설치"
+" <general/install>` 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:712
 msgid ""
@@ -35882,12 +36018,17 @@ msgid ""
 "<https://cpe.sunat.gob.pe/sites/default/files/inline-"
 "files/Manual_Servicios_GRE.pdf>`_."
 msgstr ""
+"다음으로 |SUNAT| 에서 *클라이언트 ID* 와 *클라이언트 비밀번호* 를 확인해야 합니다. 확인하려면 `새로운 GRE 웹 플랫폼 "
+"서비스 매뉴얼 <https://cpe.sunat.gob.pe/sites/default/files/inline-"
+"files/Manual_Servicios_GRE.pdf>`_ 애 따라 진행하세요."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:717
 msgid ""
 "In the |SUNAT| portal, it is important to have the correct access rights "
 "enabled, as they may differ from the user set for electronic invoicing."
 msgstr ""
+"|SUNAT| 포털의 경우 전자 청구서 발행 시 설정되어 있는 사용자와 다를 수 있으므로 정확하게 액세스 권한을 활성화하는 것이 "
+"중요합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:720
 msgid ""
@@ -35895,10 +36036,12 @@ msgid ""
 "settings from :menuselection:`Accounting --> Configuration --> Settings --> "
 "Peruvian Electronic Invoicing`."
 msgstr ""
+"이 자격 증명을 사용하여 :menuselection:`회계 --> 환경 설정 --> 설정 --> 페루 전자 청구서` 에서 배송 가이드에 "
+"대한 일반 설정을 진행합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Example for the SUNAT Delivery Guide API section configuration."
-msgstr ""
+msgstr "SUNAT 배송 가이드 API 섹션 설정의 예시입니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:727
 msgid ""
@@ -35918,13 +36061,13 @@ msgstr "운영자"
 msgid ""
 "The *operator* is the vehicle's driver in cases where the delivery guide is "
 "through *private* transport."
-msgstr ""
+msgstr "*개인* 운송을 통하여 배송 가이드가 진행되는 경우 *운영자* 는 차량의 운전자가 됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:737
 msgid ""
 "To create a new operator, navigate to :menuselection:`Contacts --> Create` "
 "and fill out the contact information."
-msgstr ""
+msgstr "새 운영자를 생성하려면 :menuselection:`연락처 --> 만들기` 로 이동하여 연락처 정보를 입력합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:740
 msgid ""
@@ -35932,40 +36075,42 @@ msgid ""
 "add the :guilabel:`Operator License` in the :guilabel:`Accounting` tab of "
 "the contact form."
 msgstr ""
+"먼저 :guilabel:`회사 유형` 으로 :guilabel:`개인` 을 선택합니다. 그런 다음 연락처 양식에 있는 "
+":guilabel:`회계` 탭에 :guilabel:`운영자 라이선스` 를 추가합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:743
 msgid "For the customer address, make sure the following fields are complete:"
-msgstr ""
+msgstr "고객 주소의 경우 다음의 항목이 입력되어 있는지 확인합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:745
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:766
 msgid ":guilabel:`District`"
-msgstr ""
+msgstr ":guilabel:`구역`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:746
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:767
 msgid ":guilabel:`Tax ID` (:guilabel:`DNI`/:guilabel:`RUC`)"
-msgstr ""
+msgstr ":guilabel:`세금 ID` (:guilabel:`DNI`/:guilabel:`RUC`)"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:747
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:768
 msgid ":guilabel:`Tax ID Number`"
-msgstr ""
+msgstr ":guilabel:`세금 ID 번호`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Individual type operator configurations in the Contact form."
-msgstr ""
+msgstr "연락처 양식에 있는 개별적인 종류의 연산자 설정 메뉴입니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:755
 msgid ""
 "The *carrier* is used when the delivery guide is through *public* transport."
-msgstr ""
+msgstr "*운송업체* 는 배송 가이드에서 *대중 교통* 수단을 통하는 경우에 선택됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:757
 msgid ""
 "To create a new carrier, navigate to :menuselection:`Contacts --> Create` "
 "and fill out the contact information."
-msgstr ""
+msgstr "새 운송업체를 생성하려면 :menuselection:`연락처 --> 만들기` 로 이동하여 연락처 정보를 입력합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:760
 msgid ""
@@ -35973,14 +36118,16 @@ msgid ""
 " the :guilabel:`MTC Registration Number`, :guilabel:`Authorization Issuing "
 "Entity`, and the :guilabel:`Authorization Number`."
 msgstr ""
+"먼저, :guilabel:`회사 유형` 으로 :guilabel:`회사` 를 선택합니다. 그 다음 :guilabel:`MTC 등록 번호`,"
+" :guilabel:`인증 발급 기관` 및 :guilabel:`인증 번호` 를 추가합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:764
 msgid "For the company address, make sure the following fields are complete:"
-msgstr ""
+msgstr "회사 주소에 다음 내용이 전부 입력되어 있는지 확인합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Company type operator configurations in the Contact form."
-msgstr ""
+msgstr "연락처 양식에 있는 회사 유형 운영자 환경 설정"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:774
 msgid "Vehicles"
@@ -35992,6 +36139,8 @@ msgid ""
 "--> Configuration --> Vehicles` and fill in the vehicle form with the "
 "information needed for the vehicle:"
 msgstr ""
+"사용할 수 있는 차량을 설정하려면 :menuselection:`재고 --> 환경 설정 --> 차량` 으로 이동하여 차량 양식에 차량에 "
+"필요한 정보를 입력합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:779
 msgid ":guilabel:`Vehicle Name`"
@@ -36026,16 +36175,17 @@ msgid ""
 "It is important to check the :guilabel:`Is M1 or L?` checkbox if the vehicle"
 " has fewer than four wheels or fewer than eight seats."
 msgstr ""
+"차량이 사륜구동 미만이거나 8인승 미만인 경우에는 :guilabel:`M1 또는 L 중 어느 것인가요?` 확인란에 표시해야 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Vehicle not selected as an M1 or L type with extra fields shown."
-msgstr ""
+msgstr "추가 항목과 함께 M1 또는 L 유형 중 선택되지 않은 차량"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:797
 msgid ""
 "To configure the available products, navigate to :menuselection:`Inventory "
 "--> Products` and open the product to be configured."
-msgstr ""
+msgstr "사용 가능한 품목을 설정하려면 :menuselection:`재고 관리 --> 품목` 으로 이동하여 설정할 품목을 엽니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:800
 msgid ""
@@ -36043,6 +36193,7 @@ msgid ""
 "configured. The :guilabel:`Partida Arancelaria` (Tariff Item) field needs to"
 " be completed."
 msgstr ""
+"품목 양식에 해당하는 정보가 모든 설정되어 있는지 확인합니다. :guilabel:`관세 품목` (요금 항목) 을 입력해야 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:804
 msgid "Generating a GRE"
@@ -36053,35 +36204,36 @@ msgid ""
 "Once the delivery from inventory is created during the sales workflow, make "
 "sure you complete the |GRE| fields on the top-right section of the transfer "
 "form for the fields:"
-msgstr ""
+msgstr "판매 작업 흐름 중에 재고에서 배송 항목이 생성되면 오른쪽 상단 섹션에 해당 항목에 대한 |GRE| 를 작성해야 합니다:"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:809
 msgid ":guilabel:`Transport Type`"
-msgstr ""
+msgstr ":guilabel:`이동 유형`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:810
 msgid ":guilabel:`Reason for Transfer`"
-msgstr ""
+msgstr ":guilabel:`이동 사유`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:811
 msgid ":guilabel:`Departure start date`"
-msgstr ""
+msgstr ":guilabel:`출발 시작일`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:813
 msgid ""
 "It is also required to complete the :guilabel:`Vehicle` and "
 ":guilabel:`Operator` fields under the :guilabel:`Guia de Remision PE` tab."
 msgstr ""
+"또한 :guilabel:`차량 변경 가이드` 탭에 있는 :guilabel:`차량` 및 :guilabel:`운영자` 항목을 입력합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:816
 msgid ""
 "The delivery transfer has to be marked as *Done* for the :guilabel:`Generar "
 "Guia de Remision` button to appear on the left menu of the transfer form."
-msgstr ""
+msgstr "배송 양식을 *완료* 로 표시해야 이동 양식의 왼쪽 메뉴에 :guilabel:`수정 가이드 생성` 버튼이 나타납니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Generar Guia de Remision button on a transfer form in the Done stage."
-msgstr ""
+msgstr "전송 양식에서 완료 단계에 있는 수정 가이드 생성 버튼"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:822
 msgid ""
@@ -36094,11 +36246,11 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Transfer details and QR code on generated delivery slip."
-msgstr ""
+msgstr "생성된 배송 전표에 기재되어 있는 세부 이동 내역 및 QR코드"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:832
 msgid "`Diferente prefijo para productos (T001 en algunos, T002 en otros)`"
-msgstr ""
+msgstr "`품목 접두사가 다른 품목 (일부의 경우 T001, 다른 경우 T002)`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:834
 msgid ""
@@ -36114,7 +36266,7 @@ msgstr ""
 msgid ""
 "`2325 - GrossWeightMeasure - El dato no cumple con el formato establecido "
 "\"Hace falta el campo\" \"Peso\"\" en el producto`"
-msgstr ""
+msgstr "`2325 - 총측정중량 - 데이터가 품목에 정해진 “중량” 항목이 누락되었습니다\" 형식을 충족하지 않습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:840
 msgid ""
@@ -36130,7 +36282,7 @@ msgstr ""
 msgid ""
 "`JSONDecodeError: Expecting value: line 1 column 1 (char 0) when creating a "
 "Delivery Guide`"
-msgstr ""
+msgstr "`JSON디코딩에러: 예상 값: 배송 가이드게재 생성 시 1줄 당 1열 (문자 0)`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:845
 msgid ""
@@ -36145,13 +36297,13 @@ msgstr ""
 msgid ""
 "`El número de documento relacionado al traslado de mercancía no cumple con "
 "el formato establecido: error: documento relacionado`"
-msgstr ""
+msgstr "`거래 전송과 관련된 문서 번호가 설정되어 있는 형식과 일치하지 않습니다: 오류: 관련 문서`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:851
 msgid ""
 "The *Related Document Type* and *Related Document Number* fields only apply "
 "to invoices and receipts."
-msgstr ""
+msgstr "청구서 및 영수증에 한해서만 *관련된 문서 유형* 및 *관련된 문서 번호* 가 적용됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:853
 msgid "`400 Client error: Bad Request for URL`"
@@ -36162,11 +36314,13 @@ msgid ""
 "This error is not solvable from Odoo; it is advised you reach out to the "
 "|SUNAT| and verify the user. It may be necessary to create a new user."
 msgstr ""
+"이 오류는 Odoo에서 해결할 수 없는 문제로, |SUNAT| 측에 연락하여 사용자를 확인하도록 합니다. 사용자를 새로 생성해야 할 수도"
+" 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:858
 msgid ""
 "`Invalid content was found starting with element 'cac:BuyerCustomerParty'`"
-msgstr ""
+msgstr "`'cac:BuyerCustomerParty' 요소로 시작하는 잘못된 콘텐츠가 발견되었습니다`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:860
 msgid ""
@@ -36182,7 +36336,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:864
 msgid "`Duda cliente: consumo de créditos IAP al usar GRE 2.0`"
-msgstr ""
+msgstr "`클라이언트 고객: GRE 2.0 사용 시 IAP 크레딧 소진`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:866
 msgid ""
@@ -36190,10 +36344,12 @@ msgid ""
 "does not go through the OSE, i.e., these documents are directly sent to the "
 "|SUNAT|."
 msgstr ""
+"IAP를 사용하는 라이브 클라이언트의 경우에는 OSE를 거치지 않기 때문에 (이론적으로) 크레딧이 소진되지 않습니다. 즉, 해당 문서는 "
+"|SUNAT| 로 직접 전송됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:868
 msgid "`Errores con formato credenciales GRE 2.0 (traceback error)`"
-msgstr ""
+msgstr "`GRE 2.0 자격 증명 형식 관련 오류 (추적 오류)`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:870
 msgid ""
@@ -36225,7 +36381,7 @@ msgid ""
 "When creating a new database and selecting the `Philippines` as a country, "
 "the fiscal localization module **Philippines - Accounting** is automatically"
 " installed."
-msgstr ""
+msgstr "새 데이터베이스를 생성한 후 국가로 '필리핀'을 선택하면 회계 현지화 모듈인 **필리핀 - 회계** 가 자동으로 설치됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst:16
 msgid ""
@@ -36233,23 +36389,25 @@ msgid ""
 " and **taxes** will *not* be replaced if there are already posted journal "
 "entries."
 msgstr ""
+"기존 회사에 모듈을 설치할 때 이미 전표가 게시되어 있는 경우에는 **계정과목표** 및 **세금** 은 변경되지 *않습니다*."
 
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst:18
 msgid ""
 "The BIR 2307 report is installed, but the withholding taxes may need to be "
 "manually created."
-msgstr ""
+msgstr "BIR 2307 보고서가 설치되었으나 원천징수 세금은 수동으로 생성해야 할 수 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst:21
 #: ../../content/applications/finance/fiscal_localizations/thailand.rst:28
 msgid "Chart of accounts and taxes"
-msgstr ""
+msgstr "계정과목표 및 세금"
 
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst:23
 msgid ""
 "A minimum configuration default chart of accounts is installed, and the "
 "following types of taxes are installed and linked to the relevant account:"
 msgstr ""
+"최소한으로 환경 설정이 되어 있는 기본 계정과목표가 설치되어 있으며, 다음과 같은 종류의 세금이 설치되어 해당 계정에도 연결됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst:26
 msgid "VAT 12%"
@@ -36265,16 +36423,18 @@ msgid ""
 "is an additional :guilabel:`Philippines ATC` field under the "
 ":guilabel:`Philippines` tab."
 msgstr ""
+"원천징수 세금용으로 (:menuselection:`환경 설정 --> 세금`) :guilabel:`필리핀` 탭에 추가 "
+":guilabel:`필리핀 ATC` 항목이 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst-1
 msgid "Philippines ATC code field set on taxes."
-msgstr ""
+msgstr "세금에 설정되어 있는 필리핀 ATC 코드입니다."
 
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst:37
 msgid ""
 "Taxes' ATC codes are used for the BIR 2307 report. If a tax is created "
 "manually, its ATC code must be added."
-msgstr ""
+msgstr "세금의 ATC 코드는 BIR 2307 보고서에 사용합니다. 세금을 수동으로 생성한 경우 해당 ATC 코드를 추가해야 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst:43
 msgid ""
@@ -36282,28 +36442,30 @@ msgid ""
 "located in the Philippines, fill in the :guilabel:`Tax ID` field with their "
 "`Taxpayer Identification Number (TIN)`."
 msgstr ""
+"회사 또는 개인 (회사 소속이 아닌 개인) 연락처가 필리핀 번호인 경우에는 :guilabel:`세금 ID` 필드에 `납세자 식별 번호 "
+"(TIN)` 를 입력합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst:46
 msgid ""
 "For individuals not belonging to a company, identify them by using the "
 "following additional fields:"
-msgstr ""
+msgstr "회사에 소속되지 않은 개인의 경우에는 다음 추가 항목을 통해 신원을 인식합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst:48
 msgid ":guilabel:`First Name`"
-msgstr ""
+msgstr ":guilabel:`이름`"
 
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst:49
 msgid ":guilabel:`Middle Name`"
-msgstr ""
+msgstr ":guilabel:`중간 이름`"
 
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst:50
 msgid ":guilabel:`Last Name`"
-msgstr ""
+msgstr ":guilabel:`성`"
 
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst-1
 msgid "Individual type contact with First, Middle, and Last Name fields."
-msgstr ""
+msgstr "이름, 중간 이름, 성을 입력하는 항목이 있는 개인 유형 연락처입니다."
 
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst:56
 msgid ""
@@ -36316,7 +36478,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst:61
 msgid "BIR 2307 report"
-msgstr ""
+msgstr "BIR 2307 보고서"
 
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst:63
 msgid ""
@@ -36325,36 +36487,41 @@ msgid ""
 "forms/certificates.html>`_, can be generated for purchase orders and vendor "
 "payments with the applicable withholding taxes."
 msgstr ""
+"**BIR 2307** 보고서 데이터는 `원천징수 공제 증명서 <https://www.bir.gov.ph/index.php/bir-"
+"forms/certificates.html>`_ 라고도 하며, 구매발주서 및 공급업체 결제 항목에 해당 원천징수세가 포함되어 있는 경우 "
+"생성할 수 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst:67
 msgid ""
 "To generate a BIR 2307 report, select one or multiple vendor bills from the "
 "list view, and click :menuselection:`Action --> Download BIR 2307 XLS`."
 msgstr ""
+"BIR 2307 보고서를 생성하려면 목록 보기에서 하나 이상 공급업체 청구서를 선택한 후 :menuselection:`작업 --> BIR"
+" 2307 XLS 다운로드` 를 클릭합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst-1
 msgid "Multiple vendor bills selected with action to \"Download BIR 2307 XLS\"."
-msgstr ""
+msgstr "여러 개의 공급업체 청구서를 \"BIR 2307 XLS 다운로드\" 작업으로 선택합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst:74
 msgid "The same action can be performed on a vendor bill from the form view."
-msgstr ""
+msgstr "양식 보기에서 공급업체 청구서에 대해서도 동일한 작업을 진행할 수 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst:76
 msgid ""
 "A pop-up appears to review the selection, then click on "
 ":guilabel:`Generate`."
-msgstr ""
+msgstr "선택 사항을 검토하기 위한 팝업이 나타나면 :guilabel:`생성` 을 클릭합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst-1
 msgid "Pop up menu to generate BIR 2307 XLS file."
-msgstr ""
+msgstr "팝업 메뉴로 BIR 2307 XLS 파일을 생성합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst:81
 msgid ""
 "This generates the `Form_2307.xls` file that lists all the vendor bill lines"
 " with the applicable withholding tax."
-msgstr ""
+msgstr "그러면 'Form_2307.xls' 파일이 생성되어 모든 공급업체 청구서 내역이 원천징수세와 함께 표시됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst:84
 msgid ""
@@ -36362,12 +36529,14 @@ msgid ""
 "<../accounting/payments>` if it is linked to one or more :doc:`vendor bills "
 "<../accounting/payments>` with applied withholding taxes."
 msgstr ""
+"위의 프로세스는 *단일* 공급업체 :doc:`결제 <../accounting/payments>` 의 경우에도 사용할 수 있으며, 이 경우"
+" 원천징수세가 적용된 하나 이상의 :doc:`공급업체 청구서 <../accounting/payments>` 에 연결되어 있어야 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst:89
 msgid ""
 "If no withholding tax is applied, then the XLS file will not generate "
 "records for those vendor bill lines."
-msgstr ""
+msgstr "원천징수세가 적용되지 않은 경우 XLS 파일에는 해당 공급업체 청구서 내역에 대한 레코드가 생성되지 않습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst:91
 msgid ""
@@ -36433,6 +36602,8 @@ msgid ""
 "must report their accounting data to the Romanian Tax Agency monthly or "
 "quarterly in the D.406 declaration."
 msgstr ""
+"2023년 1월 1일부터 루마니아에서 세무 목적으로 등록된 회사는 D.406 신고서를 통해 월별 또는 분기별로 루마니아 국세청에 회계 "
+"데이터를 보고해야 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/romania.rst:33
 msgid ""
@@ -36473,6 +36644,9 @@ msgid ""
 " in the :guilabel:`Company ID` field, without the `RO` prefix (e.g., "
 "`18547290`)."
 msgstr ""
+":guilabel:`회사 ID` 에 회사 :abbr:`CUI (Codul Unic de Inregistrare: 고유 등록 번호)` 번호"
+" 또는 :abbr:`CIF (*Codul de identificareficială*: 회계 식별 번호)` 번호 (외국 회사의 경우)를 "
+"`RO` 접두사를 제외하고 (예: `18547290`) 입력합니다. "
 
 #: ../../content/applications/finance/fiscal_localizations/romania.rst:53
 msgid ""
@@ -36512,6 +36686,7 @@ msgid ""
 "To generate a file receivable by the Romanian Tax Agency, the chart of "
 "accounts must not deviate from an official chart of accounts, such as:"
 msgstr ""
+"루마니아 국세청에 제출할 수 있는 파일을 생성하려면, 반드시 계정과목표가 다음과 같이 공식 계정과목표에 맞추어져 있어야 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/romania.rst:70
 msgid ""
@@ -36519,12 +36694,13 @@ msgid ""
 "which is installed by default when creating a company with the Romanian "
 "localization or;"
 msgstr ""
+"루마니아 현지화를 통해 회사를 만들 때 기본적으로 설치되는 상업 회사의 계정과목표 (*PlanConturiBalSocCom*) 또는"
 
 #: ../../content/applications/finance/fiscal_localizations/romania.rst:72
 msgid ""
 "the chart of accounts for companies following `IFRS "
 "<https://www.ifrs.org/>`_ (*PlanConturiIFRS*)."
-msgstr ""
+msgstr "`IFRS <https://www.ifrs.org/>`_ 에 의거한 회사의 계정과목표 (*PlanConturiIFRS*)"
 
 #: ../../content/applications/finance/fiscal_localizations/romania.rst:74
 msgid ""
@@ -36532,6 +36708,8 @@ msgid ""
 "section, set the :guilabel:`Tax Accounting Basis` to reflect the accounting "
 "regulations and Chart of Accounts used by the company."
 msgstr ""
+":guilabel:`설정 --> 회계` 에 있는 **루마니아 현지화** 섹션에 회사에서 사용하는 회계 규정 및 계정과목표를 반영하는 "
+":guilabel:`세무 회계 기준` 을 설정합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/romania.rst:82
 msgid "Customer and supplier"
@@ -36543,6 +36721,8 @@ msgid ""
 "of each partner that appears in your invoices, vendor bills, or payments "
 "through the **Contacts** app."
 msgstr ""
+"**연락처** 앱을 통해 청구서, 공급업체 청구서 또는 결제에 표시될 파트너별 :guilabel:`국가`, :guilabel:`시` 및 "
+":guilabel:`우편번호` 를 입력합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/romania.rst:87
 msgid ""
@@ -36586,6 +36766,8 @@ msgid ""
 "For some types of goods transactions, the :guilabel:`Intrastat Code` (Cod "
 "NC) must be configured on the product, as it is required by Romanian law:"
 msgstr ""
+"품목 거래에 있어서 경우에 따라서는 루마니아 법률에 의거하여 반드시 품목에 :guilabel:`인트라스탯 코드` (Cod NC)를 "
+"설정해야 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/romania.rst:114
 msgid "import / export transactions;"
@@ -36604,19 +36786,19 @@ msgstr "통계청 보고 대상인 지역 사회 내 이동;"
 msgid ""
 "acquisitions / supplies subjected to local reversed VAT charge (depending on"
 " Cod NC); and"
-msgstr ""
+msgstr "현지 부가가치세 환급 대상이 되는 경우의 취득 / 공급 (Cod NC에 따라 다름); 및"
 
 #: ../../content/applications/finance/fiscal_localizations/romania.rst:118
 msgid ""
 "transactions with excisable products for which excise duties are determined "
 "based on the Cod NC."
-msgstr ""
+msgstr "Cod NC를 기준으로 소비세가 결정되는 소비세 대상 품목에 대한 거래."
 
 #: ../../content/applications/finance/fiscal_localizations/romania.rst:120
 msgid ""
 "If the Intrastat Code is not specified on a non-service product, the default"
 " code '0' will be used."
-msgstr ""
+msgstr "서비스 외 품목에 인트라스탯 코드가 지정되지 않은 경우에는 기본 코드 '0'을 사용합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/romania.rst:122
 msgid ""
@@ -36655,16 +36837,19 @@ msgid ""
 ":menuselection:`Accounting --> Reports --> General Ledger` and click on "
 ":guilabel:`SAF-T`."
 msgstr ""
+"D.406 신고서를 XML로 내보내려면 :menuselection:`회계 --> 보고서 --> 총계정원장` 으로 이동하여 "
+":guilabel:`SAF-T` 를 클릭합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/romania.rst-1
 msgid "Click on the 'SAF-T' button to export the D.406 XML declaration."
-msgstr ""
+msgstr "D.406 XML 신고서를 내보내려면 'SAF-T' 버튼을 클릭합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/romania.rst:149
 msgid ""
 "You can then validate and sign the XML file using the Romanian Tax Agency's "
 "validation software, *DUKIntegrator*."
 msgstr ""
+"그런 다음 루마니아 국세청의 유효성 검사 소프트웨어인 *DUKIntegrator* 를 통해 XML 파일을 검사하고 서명할 수 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/romania.rst:153
 msgid "Signing the report"
@@ -36676,12 +36861,15 @@ msgid ""
 "`website of the Romanian Tax Agency "
 "<https://www.anaf.ro/anaf/internet/ANAF/despre_anaf/strategii_anaf/proiecte_digitalizare/saf_t/>`_."
 msgstr ""
+"루마니아 국세청 웹사이트 "
+"<https://www.anaf.ro/anaf/internet/ANAF/despre_anaf/strategii_anaf/proiecte_digitalizare/saf_t/>`_"
+" 에서 *DUKIntegrator* 유효성 검사 소프트웨어를 다운로드하여 설치합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/romania.rst:158
 msgid ""
 "Once you have generated the XML, open 'DUKIntegrator' and select the file "
 "you have just generated."
-msgstr ""
+msgstr "XML가 생성되면 'DUKIntegrator'를 열고 방금 생성한 파일을 선택합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/romania.rst:160
 msgid ""
@@ -36689,6 +36877,8 @@ msgid ""
 "containing your report, or :guilabel:`Validare + creare PDF semnat` to "
 "create a **signed** PDF containing your report."
 msgstr ""
+":guilabel:`유효성 검사 + PDF 만들기` 를 클릭하면 보고서와 함께 **서명되지 않은** PDF가 생성되고, "
+":guilabel:`유효성 검사 + 서명된 PDF 만들기` 를 클릭하면 보고서와 함께 **서명된** PDF가 생성됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/romania.rst-1
 msgid "The DUKIntegrator validation software."
@@ -36712,7 +36902,7 @@ msgstr "사우디 아라비아"
 msgid ""
 ":ref:`Install <general/install>` the following modules to get all the "
 "features of the Saudi Arabian localization:"
-msgstr ""
+msgstr "다음 모듈을 :ref:`설치 <general/install>` 하면 사우디아라비아 현지화 기능을 모두 사용할 수 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:18
 msgid "Saudi Arabia - Accounting"
@@ -36732,7 +36922,7 @@ msgstr "`l10n_sa_edi`"
 
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:23
 msgid "ZATCA e-invoices implementation"
-msgstr ""
+msgstr "ZATCA 전자 청구서 구현"
 
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:24
 msgid "Saudi Arabia - E-invoicing (Simplified)"
@@ -36756,23 +36946,27 @@ msgstr "`l10n_sa_pos`"
 
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:29
 msgid "Point of Sale compliance"
-msgstr ""
+msgstr "POS 규정 준수"
 
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:32
 msgid "ZATCA e-invoices"
-msgstr ""
+msgstr "ZATCA 전자 청구서"
 
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:34
 msgid ""
 "The ZATCA e-invoicing system is designed to streamline and digitize the "
 "invoicing process for businesses operating in Saudi Arabia."
 msgstr ""
+"ZATCA 전자 청구서 발행 시스템은 사우디아라비아에서 운영되는 기업의 청구서 발행 프로세스를 간소화하고 디지털화할 수 있도록 "
+"설계되었습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:38
 msgid ""
 "`ZATCA e-invoicing page "
 "<https://zatca.gov.sa/en/E-Invoicing/Pages/default.aspx>`_"
 msgstr ""
+"`ZATCA 전자 청구서 발행 페이지 "
+"<https://zatca.gov.sa/en/E-Invoicing/Pages/default.aspx>`_"
 
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:43
 msgid ""
@@ -36780,45 +36974,48 @@ msgid ""
 ":guilabel:`Update info`, and ensure the following company information is "
 "complete and up-to-date."
 msgstr ""
+":menuselection:`설정 --> 일반 설정 --> 회사` 로 이동하여 :guilabel:`정보 업데이트` 를 클릭한 후 다음의 "
+"회사 정보가 전체 내용을 반영한 최신 정보인지 확인합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:46
 msgid "The full :guilabel:`Company Name`."
-msgstr ""
+msgstr "전체 :guilabel:`회사명`."
 
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:47
 msgid ""
 "All relevant :guilabel:`Address` fields, including the :guilabel:`Building "
 "Number` and :guilabel:`Plot Identification` (four digits each)."
 msgstr ""
+":guilabel:`건물 호수` 및 :guilabel:`구획 주소` (각각 4자리)을 포함한 모든 관련 :guilabel:`주소` 항목."
 
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:49
 msgid ""
 "Select an enterprise :guilabel:`Identification Scheme`. It is recommended to"
 " use the :guilabel:`Commercial Registration Number`."
-msgstr ""
+msgstr "기업 :guilabel:`식별 체계` 를 선택합니다. :guilabel:`사업자 등록 번호` 를 사용하는 것이 좋습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:51
 msgid ""
 "Enter the :guilabel:`Identification Number` for the selected "
 ":guilabel:`Identification Scheme`."
-msgstr ""
+msgstr "선택한 :guilabel:`식별 체계` 에 대하여 :guilabel:`식별 번호` 를 입력합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:52
 msgid "The :guilabel:`VAT` number."
-msgstr ""
+msgstr ":guilabel:`부가가치세` 번호."
 
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:53
 msgid "Ensure the :guilabel:`Currency` is set to :guilabel:`SAR`."
-msgstr ""
+msgstr ":guilabel:`통화` 설정이 :guilabel:`SAR` 로 되어 있는지 확인합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:56
 msgid ""
 "It is also necessary to fill out similar information for partner companies."
-msgstr ""
+msgstr "파트너사에 대해서도 비슷하게 내용을 입력합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:59
 msgid "Simulation mode"
-msgstr ""
+msgstr "시뮬레이션 모드"
 
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:62
 msgid ""
@@ -36832,7 +37029,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:67
 msgid "Fatoora simulation portal"
-msgstr ""
+msgstr "Fatoora 시뮬레이션 포털"
 
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:69
 msgid ""
@@ -36840,16 +37037,20 @@ msgid ""
 "company's ZATCA credentials. Then, click the :guilabel:`Fatoora Simulation "
 "Portal` button to switch to the simulation portal."
 msgstr ""
+"회사의 ZATCA 자격 증명을 사용하여 `Fatoora 포털 <https://fatoora.zatca.gov.sa/>`_ 에 "
+"로그인합니다. 그런 다음 :guilabel:`Fatoora 시뮬레이션 포털` 버튼을 클릭하면 시뮬레이션 포털로 전환됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:74
 msgid ""
 "`ZACTA Fatoora portal user manual version 3 (May 2023) "
 "<https://zatca.gov.sa/en/E-Invoicing/Introduction/Guidelines/Documents/Fatoora_Portal_User_Manual_English.pdf>`_"
 msgstr ""
+"`ZACTA Fatoora 포털 사용자 매뉴얼 버전 3 (2023년 5월) "
+"<https://zatca.gov.sa/en/E-Invoicing/Introduction/Guidelines/Documents/Fatoora_Portal_User_Manual_English.pdf>`_"
 
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:79
 msgid "ZATCA API integration"
-msgstr ""
+msgstr "ZATCA API 통합"
 
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:81
 msgid ""
@@ -36857,6 +37058,9 @@ msgid ""
 "Under :guilabel:`ZATCA API Integration`, select the :guilabel:`Simulation "
 "(Pre-Production)` :guilabel:`API mode` and click :guilabel:`Save`."
 msgstr ""
+"Odoo에서 :menuselection:`계정 --> 환경 설정 --> 설정` 으로 이동합니다. :guilabel:`ZATCA API "
+"통합` 에서 :guilabel:`API 모드` :guilabel:`시뮬레이션 (사전 제작)` 을 선택한 후 :guilabel:`저장` 을"
+" 클릭합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:90
 msgid ""
@@ -36872,7 +37076,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:95
 msgid ""
 "The same serial number can be used for all of the company's sales journals."
-msgstr ""
+msgstr "회사의 모든 판매 전표에 동일한 일련번호를 사용할 수 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:97
 msgid ""
@@ -36892,13 +37096,13 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:104
 msgid "OTP codes expire after one hour."
-msgstr ""
+msgstr "OTP 코드는 1시간 후에 만료됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:107
 msgid ""
 "If any issue occurs during onboarding, click :guilabel:`Regenerate CSR` to "
 "start again."
-msgstr ""
+msgstr "온보딩 중에 문제가 발생할 경우에는 :guilabel:`CSR 재생성` 을 클릭하여 다시 시작합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:112
 msgid ""
@@ -36916,13 +37120,13 @@ msgstr ""
 msgid ""
 "Testing all invoicing workflows, preferably with real invoices and for a "
 "reasonable amount of time, is recommended."
-msgstr ""
+msgstr "가능한 한 실제 청구서를 사용하여 합리적인 시간 동안 모든 청구서 발행에 대한 작업 흐름을 테스트하는 것이 좋습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:120
 msgid ""
 "Compare the invoices received statistics page on the Fatoora simulation "
 "portal with the list of invoices on Odoo to ensure both align."
-msgstr ""
+msgstr "Fatoora 시뮬레이션 포털에서 청구서 수신 통계 페이지와 Odoo의 청구서 목록을 비교하여 서로 일치하는지 확인합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:126
 msgid ""
@@ -36940,7 +37144,7 @@ msgstr ""
 msgid ""
 "When using **retention** or **withholding an amount** in a customer invoice,"
 " the tax used to retain the amount needs to be specified."
-msgstr ""
+msgstr "고객 청구서에서 **유보** 또는 **원천징수** 를 적용하는 경우에는 해당 금액을 유보하기 위한 세금을 지정해야 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:135
 msgid "Production mode"
@@ -36951,12 +37155,14 @@ msgid ""
 "When ready for production, change the :ref:`API mode <saudi-arabia/api-"
 "mode>` to :guilabel:`Production` and click :guilabel:`Save`."
 msgstr ""
+"생산 준비가 완료되면 :ref:`API 모드 <saudi-arabia/api-mode>` 를 :guilabel:`프로덕션` 으로 변경한 "
+"후 :guilabel:`저장` 을 클릭합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:141
 msgid ""
 "Setting the :guilabel:`API mode` to :guilabel:`Production` is "
 "**irreversible**."
-msgstr ""
+msgstr ":guilabel:`API 모드` 를 :guilabel:`프로덕션` 으로 설정할 경우에는 **되돌릴 수 없습니다**."
 
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:143
 msgid ""
@@ -37010,7 +37216,7 @@ msgstr ""
 msgid ""
 "You can only change the accounting package as long as you have not created "
 "any accounting entry."
-msgstr ""
+msgstr "회계 항목을 생성한 적이 없는 경우에만 회계 패키지를 변경할 수 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:24
 msgid "Spanish accounting reports"
@@ -37048,7 +37254,7 @@ msgstr "스위스"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:6
 msgid "ISR (In-payment Slip with Reference number)"
-msgstr ""
+msgstr "ISR (참조 번호가 표시되어 있는 결제 전표)"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:8
 msgid ""
@@ -37056,6 +37262,8 @@ msgid ""
 "from Odoo. On the customer invoices, there is a new button called *Print "
 "ISR*."
 msgstr ""
+"ISR은 스위스에서 사용되는 결제 전표입니다. Odoo에서 직접 인쇄할 수 있습니다. 고객 청구서에는 *ISR 인쇄* 라는 새로운 버튼이"
+" 나타납니다."
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:16
 msgid ""
@@ -37063,10 +37271,12 @@ msgid ""
 "the invoice. You can use CH6309000000250097798 as bank account number and "
 "010391391 as CHF ISR reference."
 msgstr ""
+"*ISR 인쇄* 버튼은 청구서에 은행 계좌가 지정되어 있는 경우에만 나타납니다. 은행 계좌 번호로 "
+"CH6309000000250097798을 사용하고, CHF ISR 참조로 010391391을 사용합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:23
 msgid "Then you open a pdf with the ISR."
-msgstr ""
+msgstr "그런 다음 ISR이 있는 PDF를 엽니다."
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:28
 msgid ""
@@ -37082,13 +37292,13 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:38
 msgid "ISR reference on invoices"
-msgstr ""
+msgstr "청구서에 대한 ISR 참조"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:40
 msgid ""
 "To ease the reconciliation process, you can add your ISR reference as "
 "**Payment Reference** on your invoices."
-msgstr ""
+msgstr "조정 프로세스를 간소화하기 위해 청구서에 ISR 참조를 **결제 참조** 로 추가할 수 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:43
 msgid ""
@@ -37107,11 +37317,11 @@ msgstr ""
 msgid ""
 "Configure your Journal to display your ISR as payment reference on your "
 "invoices in Odoo"
-msgstr ""
+msgstr "Odoo 청구서에 ISR을 결제 참조로 표시하도록 전표를 설정합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:53
 msgid "Currency Rate Live Update"
-msgstr ""
+msgstr "환율 실시간 업데이트"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:55
 msgid ""
@@ -37125,7 +37335,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:64
 msgid "Updated VAT for January 2018"
-msgstr ""
+msgstr "2018년 1월 부가가치세 업데이트"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:66
 msgid ""
@@ -37139,13 +37349,13 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:71
 msgid ""
 "How to update your taxes in Odoo Enterprise (Odoo Online or On-premise)?"
-msgstr ""
+msgstr "Odoo 엔터프라이즈 (Odoo 온라인 또는 온프레미스)에서 세금은 어떻게 업데이트하나요?"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:73
 msgid ""
 "If you have the V11.1 version, all the work is already been done, you don't "
 "have to do anything."
-msgstr ""
+msgstr "V11.1 버전을 사용 중이라면 모든 작업이 이미 완료되어 있으므로 아무것도 하지 않아도 됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:76
 msgid ""
@@ -37163,7 +37373,7 @@ msgstr ""
 msgid ""
 "Once it has been done, you can work on creating new taxes for the updated "
 "rates."
-msgstr ""
+msgstr "업데이트가 완료되면 변경된 세율로 세금을 새로 생성할 수 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:87
 msgid ""
@@ -37177,13 +37387,13 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:92
 msgid "The creation of such taxes should be done in the following manner:"
-msgstr ""
+msgstr "이와 같은 세금을 새로 생성하는 방식은 다음과 같습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:94
 msgid ""
 "**Purchase taxes**: copy the origin tax, change its name, label on invoice, "
 "rate and tax group (effective from v10 only)"
-msgstr ""
+msgstr "**구매세**: 원산지 세금 복사, 이름 변경, 청구서 라벨, 세율 및 세금 그룹 (v10부터 적용)"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:97
 msgid ""
@@ -37198,47 +37408,47 @@ msgstr ""
 msgid ""
 "For 7.7% taxes: Switzerland VAT Form: grid 302 base, Switzerland VAT Form: "
 "grid 302 tax"
-msgstr ""
+msgstr "세율 7.7%: 스위스 부가가치세 양식: 기본 세율표 302 , 스위스 VAT 양식: 세율표 302"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:105
 msgid ""
 "For 3.7% taxes: Switzerland VAT Form: grid 342 base, Switzerland VAT Form: "
 "grid 342 tax"
-msgstr ""
+msgstr "세율 3.7%: 스위스 VAT 양식: 기본 세율표 342, 스위스 VAT 양식: 세율표 342"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:108
 msgid ""
 "You'll find below, as examples, the correct configuration for all taxes "
 "included in Odoo by default"
-msgstr ""
+msgstr "아래에 있는 예시에서 Odoo에 기본값으로 포함되어 있는 모든 세금과 관련하여 정확한 환경 설정을 확인해 보세요."
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:112
 msgid "**Tax Name**"
-msgstr ""
+msgstr "**세금명**"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:112
 msgid "**Rate**"
-msgstr ""
+msgstr "**세율**"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:112
 msgid "**Label on Invoice**"
-msgstr ""
+msgstr "**청구서 라벨**"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:112
 msgid "**Tax Group (effective from V10)**"
-msgstr ""
+msgstr "**세금 그룹 (V10부터 적용)**"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:112
 msgid "**Tax Scope**"
-msgstr ""
+msgstr "**세금 범위**"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:112
 msgid "**Tag**"
-msgstr ""
+msgstr "**태그**"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:114
 msgid "TVA 7.7% sur achat B&S (TN)"
-msgstr ""
+msgstr "TVA 7.7% sur achat B&S (TN)"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:114
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:116
@@ -37252,7 +37462,7 @@ msgstr "7.7%"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:114
 msgid "7.7% achat"
-msgstr ""
+msgstr "7.7% achat"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:114
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:116
@@ -37261,7 +37471,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:130
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:132
 msgid "TVA 7.7%"
-msgstr ""
+msgstr "TVA 7.7%"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:114
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:116
@@ -37279,42 +37489,42 @@ msgstr "매입"
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:122
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:124
 msgid "Switzerland VAT Form: grid 400"
-msgstr ""
+msgstr "스위스 VAT 양식: 세율표 400"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:116
 msgid "TVA 7.7% sur achat B&S (Incl. TN)"
-msgstr ""
+msgstr "TVA 7.7% sur achat B&S (TN 포함)"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:116
 msgid "7.7% achat Incl."
-msgstr ""
+msgstr "7.7% achat 포함"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:118
 msgid "TVA 7.7% sur invest. et autres ch. (TN)"
-msgstr ""
+msgstr "TVA 7.7% sur invest. et autres ch. (TN)"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:118
 msgid "7.7% invest."
-msgstr ""
+msgstr "7.7% 투자 항목"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:118
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:120
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:126
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:128
 msgid "Switzerland VAT Form: grid 405"
-msgstr ""
+msgstr "스위스 VAT 양식: 세율표 405"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:120
 msgid "TVA 7.7% sur invest. et autres ch. (Incl. TN)"
-msgstr ""
+msgstr "TVA 7.7% 추가 투자 및 기타 항목 (TN 포함)"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:120
 msgid "7.7% invest. Incl."
-msgstr ""
+msgstr "7.7% 투자 항목 포함"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:122
 msgid "TVA 3.7% sur achat B&S (TS)"
-msgstr ""
+msgstr "TVA 3.7% 초과 B&S (TS)"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:122
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:124
@@ -37328,7 +37538,7 @@ msgstr "3.7%"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:122
 msgid "3.7% achat"
-msgstr ""
+msgstr "3.7% 구매세"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:122
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:124
@@ -37337,41 +37547,41 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:134
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:136
 msgid "TVA 3.7%"
-msgstr ""
+msgstr "TVA 3.7%"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:124
 msgid "TVA 3.7% sur achat B&S (Incl. TS)"
-msgstr ""
+msgstr "TVA 3.7% 추가 구매 B&S (TS 포함)"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:124
 msgid "3.7% achat Incl."
-msgstr ""
+msgstr "3.7% 구매세 포함"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:126
 msgid "TVA 3.7% sur invest. et autres ch. (TS)"
-msgstr ""
+msgstr "TVA 3.7% 추가 투자 및 기타 항목 (TS)"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:126
 msgid "3.7% invest"
-msgstr ""
+msgstr "3.7% 투자"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:128
 msgid "TVA 3.7% sur invest. et autres ch. (Incl. TS)"
-msgstr ""
+msgstr "TVA 3.7% 추가 투자 및 기타 항목 (TS포함)"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:128
 msgid "3.7% invest Incl."
-msgstr ""
+msgstr "3.7% 투자 포함"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:130
 msgid "TVA due a 7.7% (TN)"
-msgstr ""
+msgstr "TVA 세율 7.7% (TN)"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:130
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:132
 msgid ""
 "Switzerland VAT Form: grid 302 base, Switzerland VAT Form: grid 302 tax"
-msgstr ""
+msgstr "스위스 VAT 양식: 기본 세율표 302, 스위스 VAT 양식: 세율표 302 세금"
 
 #: ../../content/applications/finance/fiscal_localizations/switzerland.rst:132
 msgid "TVA due à 7.7% (Incl. TN)"
@@ -37454,33 +37664,33 @@ msgstr "태국 현지화 모듈"
 msgid ""
 "Odoo's fiscal localization package for Thailand includes the following "
 "taxes:"
-msgstr ""
+msgstr "Odoo 태국 재정 현지화 패키지에는 다음과 같은 세금이 포함되어 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/thailand.rst:32
 msgid "VAT 7%"
-msgstr ""
+msgstr "부가가치세 7%"
 
 #: ../../content/applications/finance/fiscal_localizations/thailand.rst:33
 msgid "VAT-exempted"
-msgstr ""
+msgstr "부가가치세 면제"
 
 #: ../../content/applications/finance/fiscal_localizations/thailand.rst:34
 msgid "Withholding tax"
-msgstr ""
+msgstr "원천징수 세금"
 
 #: ../../content/applications/finance/fiscal_localizations/thailand.rst:35
 msgid "Withholding income tax"
-msgstr ""
+msgstr "소득세 원천징수"
 
 #: ../../content/applications/finance/fiscal_localizations/thailand.rst:40
 msgid ""
 "Odoo allows users to generate Excel files to submit their VAT to the "
 "**Revenue Department** of Thailand."
-msgstr ""
+msgstr "Odoo를 통해 엑셀 파일을 생성하여 태국 **국세청** 에 부가가치세 내역을 제출할 수 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/thailand.rst:44
 msgid "Sales and purchase tax report"
-msgstr ""
+msgstr "판매세 및 매입세 신고서"
 
 #: ../../content/applications/finance/fiscal_localizations/thailand.rst:46
 msgid ""
@@ -37495,11 +37705,11 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/thailand.rst-1
 msgid "Thai purchase and sales taxes reports"
-msgstr ""
+msgstr "태국 매입세 및 판매세 보고서"
 
 #: ../../content/applications/finance/fiscal_localizations/thailand.rst:54
 msgid "Withholding PND tax report"
-msgstr ""
+msgstr "원천징수 PND 세금계산서"
 
 #: ../../content/applications/finance/fiscal_localizations/thailand.rst:56
 msgid ""
@@ -37531,6 +37741,8 @@ msgid ""
 "on the `RDprep for Thailand e-Filling application "
 "<https://efiling.rd.go.th/rd-cms/>`_."
 msgstr ""
+"PND 세금계산서를 통해 사용자는 '태국용 RDprep 전자 신고 애플리케이션 <https://efiling.rd.go.th/rd-"
+"cms/>`_ 에 업로드할 수 있는 청구서용 CSV 파일을 생성할 수 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/thailand.rst:71
 msgid ""
@@ -37538,6 +37750,8 @@ msgid ""
 "--> Tax Report`, select a specific time or time range on the tax report, and"
 " click :guilabel:`PND3` or :guilabel:`PND53`."
 msgstr ""
+"PND CSV 파일을 생성하려면 :menuselection:`회계 --> 보고 --> 세무 신고서` 로 이동하여 세무 신고서에서 특정 "
+"시간 또는 기간을 선택한 다음 :guilabel:`PND3` 또는 :guilabel:`PND53` 을 클릭합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/thailand.rst:74
 msgid ""
@@ -37545,6 +37759,8 @@ msgid ""
 "PND53.csv` files that lists all the vendor bill lines with the applicable "
 "withholding tax."
 msgstr ""
+"그러면 해당 원천징수세를 비롯한 모든 공급업체 청구서 항목이 기재된 :file:`세금계산서 PND3.csv` 및 :file:`세금계산서 "
+"PND53.csv` 파일이 생성됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/thailand.rst-1
 msgid "PND3 and PND53 CSV files"
@@ -37581,11 +37797,11 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/thailand.rst-1
 msgid "Commercial invoice printing"
-msgstr ""
+msgstr "상업용 청구서 인쇄하기"
 
 #: ../../content/applications/finance/fiscal_localizations/thailand.rst:98
 msgid "Headquarter/Branch number settings"
-msgstr ""
+msgstr "본사/지사 번호 설정하기"
 
 #: ../../content/applications/finance/fiscal_localizations/thailand.rst:100
 msgid ""
@@ -37600,23 +37816,23 @@ msgstr ""
 msgid ""
 "If the contact is identified as a branch, input the **Branch number** in the"
 " :guilabel:`Company ID` field."
-msgstr ""
+msgstr "연락처가 지사 연락처인 경우에는 :guilabel:`회사 ID` 필드에 **지사 번호** 를 입력합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/thailand.rst:105
 msgid ""
 "If the contact is a **Headquarters**, leave the :guilabel:`Company ID` field"
 " **blank**."
-msgstr ""
+msgstr "연락처가 **본사** 로 되어 있는 경우, :guilabel:`회사 ID` 는 **공백** 으로 둡니다."
 
 #: ../../content/applications/finance/fiscal_localizations/thailand.rst-1
 msgid "Company Headquarter/Branch number"
-msgstr ""
+msgstr "회사 본사/지사 번호"
 
 #: ../../content/applications/finance/fiscal_localizations/thailand.rst:111
 msgid ""
 "This information is used in the **tax invoice** PDF report and PND **tax "
 "report** export."
-msgstr ""
+msgstr "이 내용은 **세금계산서** PDF 보고서 및 PND **세금계산서** 내보내기를 할 때 사용됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:3
 msgid "United Arab Emirates"
@@ -37627,10 +37843,12 @@ msgid ""
 ":ref:`Install <general/install>` the following modules to get all the "
 "features of the **United Arab Emirates** localization:"
 msgstr ""
+":guilabel:`영국 - 회계` 및 :guilabel:`영국 - 회계 보고서` 모듈을 :ref:`설치 "
+"<general/install>` 하면 영국 현지화 기능을 모두 사용할 수 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:19
 msgid ":guilabel:`United Arab Emirates - Accounting`"
-msgstr ""
+msgstr ":guilabel:`아랍에미리트 - 회계`"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:20
 msgid "``l10n_ae``"
@@ -37642,10 +37860,12 @@ msgid ""
 "</applications/finance/fiscal_localizations>`. Includes all accounts, taxes,"
 " and reports."
 msgstr ""
+"기본 :doc:`재정 현지화 패키지 </applications/finance/fiscal_localizations>` 입니다. 모든 "
+"계정, 세금 및 보고서가 포함되어 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:23
 msgid ":guilabel:`U.A.E. - Payroll`"
-msgstr ""
+msgstr ":guilabel:`아랍에미리트 - 급여`"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:24
 msgid "``l10n_ae_hr_payroll``"
@@ -37653,11 +37873,11 @@ msgstr "``l10n_ae_hr_payroll``"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:25
 msgid "Includes all rules, calculations, and salary structures."
-msgstr ""
+msgstr "모든 규칙, 계산 및 급여 구조가 포함되어 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:26
 msgid ":guilabel:`U.A.E. - Payroll with Accounting`"
-msgstr ""
+msgstr ":guilabel:`아랍에미리트 - 회계 및 급여`"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:27
 msgid "``l10n_ae_hr_payroll_account``"
@@ -37665,11 +37885,11 @@ msgstr "``l10n_ae_hr_payroll_account``"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:28
 msgid "Includes all accounts related to the payroll module."
-msgstr ""
+msgstr "급여 모듈과 관련된 모든 계정이 포함되어 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:29
 msgid ":guilabel:`United Arab Emirates - Point of Sale`"
-msgstr ""
+msgstr ":guilabel:`아랍에미리트 - POS`"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:30
 msgid "``l10n_ae_pos``"
@@ -37677,11 +37897,11 @@ msgstr "``l10n_ae_pos``"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:31
 msgid "Includes the UAE-compliant POS receipt."
-msgstr ""
+msgstr "아랍에미리트 전용 POS 영수증이 포함되어 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst-1
 msgid "Select the modules to install."
-msgstr ""
+msgstr "설치할 모듈을 선택합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:40
 msgid ""
@@ -37701,7 +37921,7 @@ msgstr ""
 msgid ""
 "Always keep at least one **receivable account** and one **payable account** "
 "active."
-msgstr ""
+msgstr "**수취 계정** 및 **지급 계정** 은 항상 하나 이상 각각 활성화해 둡니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:48
 msgid ""
@@ -37709,6 +37929,8 @@ msgid ""
 "either as transitory accounts by Odoo or are specific to the **UAE "
 "localization package**."
 msgstr ""
+"또한 Odoo에서 사용하는 임시 계정이거나 **아랍에미리트 현지화 패키지** 전용 계정이므로 **아래 계정을 활성화된 상태로 유지** "
+"하는 것이 좋습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:55
 msgid "Account Name"
@@ -37724,7 +37946,7 @@ msgstr "102012"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:61
 msgid "Accounts Receivable (POS)"
-msgstr ""
+msgstr "매출채권 (POS)"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:63
 msgid "201002"
@@ -37772,7 +37994,7 @@ msgstr "104041"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:82
 msgid "VAT Input"
-msgstr ""
+msgstr "부가가치세 입력"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:84
 msgid "100103"
@@ -37780,7 +38002,7 @@ msgstr "100103"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:85
 msgid "VAT Receivable"
-msgstr ""
+msgstr "부가가치세 미수금"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:87
 msgid "101001"
@@ -37796,7 +38018,7 @@ msgstr "201017"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:91
 msgid "VAT Output"
-msgstr ""
+msgstr "부가가치세 결과"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:93
 msgid "202001"
@@ -37812,7 +38034,7 @@ msgstr "202003"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:97
 msgid "VAT Payable"
-msgstr ""
+msgstr "부가가치세 미납액"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:99
 msgid "999999"
@@ -37836,7 +38058,7 @@ msgstr "400004"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:106
 msgid "Housing Allowance"
-msgstr ""
+msgstr "주택 수당"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:108
 msgid "400005"
@@ -37844,7 +38066,7 @@ msgstr "400005"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:109
 msgid "Transportation Allowance"
-msgstr ""
+msgstr "교통비 보조"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:111
 msgid "400008"
@@ -37852,7 +38074,7 @@ msgstr "400008"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:112
 msgid "End of Service Indemnity"
-msgstr ""
+msgstr "서비스 종료 보상"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:118
 msgid ""
@@ -37875,15 +38097,15 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:127
 msgid "The :abbr:`RCM (Reverse Charge Mechanism)` is supported by Odoo."
-msgstr ""
+msgstr "Odoo에서는 :abbr:`RCM (Reverse Charge Mechanism: 역충전 메커니즘)` 을 지원합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst-1
 msgid "Preview of the UAE localization package's taxes."
-msgstr ""
+msgstr "아랍에미리트 현지화 패키지의 세금을 미리 살펴봅니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:134
 msgid "Currency exchange rates"
-msgstr ""
+msgstr "환율"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:136
 msgid ""
@@ -37891,18 +38113,24 @@ msgid ""
 "Configuration --> Settings --> Currencies`. Click on the update button "
 "(:guilabel:`🗘`) found next to the :guilabel:`Next Run` field."
 msgstr ""
+"환율을 업데이트하려면 :menuselection:`회계 --> 환경 설정 --> 설정 --> 통화` 로 이동합니다. "
+":guilabel:`다음 실행` 옆에 있는 업데이트 버튼 (:guilabel:`🗘`)을 클릭합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:140
 msgid ""
 "To launch the update automatically at set intervals, change the "
 ":guilabel:`Interval` from :guilabel:`Manually` to the desired frequency."
 msgstr ""
+"설정한 주기에 맞추어 업데이트를 자동 실행하려면 :guilabel:`주기` 를 :guilabel:`수동` 에서 원하는 주기의 빈도로 "
+"변경합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:144
 msgid ""
 "By default, the UAE Central Bank exchange rates web service is used. Several"
 " other providers are available under the :guilabel:`Service` field."
 msgstr ""
+"기본값으로 아랍에미리트 중앙은행 환율 웹 서비스를 사용합니다. 여러 가지 다른 업체를 :guilabel:`서비스` 필드에서 선택할 수 "
+"있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:150
 msgid "Payroll"
@@ -37920,11 +38148,11 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst-1
 msgid "The UAE Employee Payroll Structure."
-msgstr ""
+msgstr "아랍에미리트 직원 급여 구조"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:161
 msgid "Salary rules"
-msgstr ""
+msgstr "급여 규칙"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:163
 msgid ""
@@ -37933,32 +38161,34 @@ msgid ""
 "employee's contract. In the :guilabel:`Salary Structure Type` field, select "
 ":guilabel:`UAE Employee`."
 msgstr ""
+"이러한 규칙을 직원 계약서에 적용하려면 :menuselection:`급여 --> 계약서 --> 계약서` 로 이동하여 직원 계약서를 "
+"선택합니다. :guilabel:`급여 구조 유형` 에서 :guilabel:`아랍에미리트 직원` 을 선택합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst-1
 msgid "Select the Salary Structure Type to apply to the contract."
-msgstr ""
+msgstr "계약에 적용할 급여 구조 유형을 선택합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:171
 msgid ""
 "Under the :guilabel:`Salary Information` tab, you can find details such as "
 "the:"
-msgstr ""
+msgstr "guilabel:`급여 정보` 탭에서 다음과 같이 세부 정보를 확인할 수 있습니다:"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:173
 msgid ":guilabel:`Wage`;"
-msgstr ""
+msgstr ":guilabel:`임금`;"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:174
 msgid ":guilabel:`Housing Allowance`;"
-msgstr ""
+msgstr ":guilabel:`주택 수당`;"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:175
 msgid ":guilabel:`Transportation Allowance`;"
-msgstr ""
+msgstr ":guilabel:`교통비`;"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:176
 msgid ":guilabel:`Other Allowances`;"
-msgstr ""
+msgstr ":guilabel:`기타 수당`;"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:177
 msgid ""
@@ -37972,19 +38202,19 @@ msgstr ""
 msgid ""
 "**Leave deductions** are calculated using a salary rule linked to the "
 "**unpaid leave** time-off type;"
-msgstr ""
+msgstr "**휴가 공제** 는 **무급 휴가** 휴가 유형에 연결되어 있는 급여 규칙을 사용하여 계산됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:183
 msgid ""
 "Any other deductions or reimbursements are made *manually* using other "
 "inputs;"
-msgstr ""
+msgstr "기타 공제 또는 환급 항목은 다음의 내용을 입력하여 *수동으로* 작성됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:184
 msgid ""
 "**Overtimes** are added *manually* by going to :menuselection:`Work Entries "
 "--> Work Entries`;"
-msgstr ""
+msgstr "**초과 근무** 는 :menuselection:`근무 항목 --> 근무 항목` 으로 이동하여 *수동으로* 추가합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:185
 msgid ""
@@ -37993,6 +38223,9 @@ msgid ""
 "the :guilabel:`Employee` and the :guilabel:`Type (Attachment of Salary, "
 "Assignment of Salary, Child Support)`."
 msgstr ""
+"**급여 공제** 는 :menuselection:`계약서 --> 급여 공제` 로 이동하여 생성합니다. 그런 다음 공제 항목 "
+":guilabel:`만들기` 를 한 후 :guilabel:`직원` 및 :guilabel:`유형 (급여 공제, 급여 할당, 자녀 양육비)`"
+" 을 선택합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:190
 msgid ""
@@ -38033,7 +38266,7 @@ msgstr ""
 msgid ""
 "The end of service amount is calculated based on the gross salary and the "
 "start and end dates of the employee’s contract."
-msgstr ""
+msgstr "근무 종료 지급액은 총 급여 및 직원 계약서 상의 시작 및 종료일을 기준으로 계산됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:214
 msgid ""
@@ -38041,6 +38274,8 @@ msgid ""
 "Arabic, or both. The localization also includes a line to display the **VAT "
 "amount** per line."
 msgstr ""
+"아랍에미리트 현지화 패키지에서는 청구서를 영어, 아랍어 또는 두 언어 모두로 생성할 수 있습니다. 또한 현지화에는 각 줄에 **부가가치세"
+" 금액** 이 표시되어 있는 줄이 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:3
 msgid "United Kingdom"
@@ -38052,10 +38287,12 @@ msgid ""
 ":guilabel:`UK - Accounting Reports` modules to get all the features of the "
 "UK localization."
 msgstr ""
+":guilabel:`영국 - 회계` 및 :guilabel:`영국 - 회계 보고서` 모듈을 :ref:`설치 "
+"<general/install>` 하면 영국 현지화 기능을 모두 사용할 수 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:17
 msgid ":guilabel:`UK - Accounting`"
-msgstr ""
+msgstr ":guilabel:`영국 - 회계`"
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:18
 msgid "`l10n_uk`"
@@ -38063,19 +38300,19 @@ msgstr "`l10n_uk`"
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:19
 msgid "CT600-ready chart of accounts"
-msgstr ""
+msgstr "계정과목표 CT600 지원"
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:20
 msgid "VAT100-ready tax structure"
-msgstr ""
+msgstr "세금 구조 부가가치세100 지원 "
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:21
 msgid "Infologic UK counties listing"
-msgstr ""
+msgstr "인포로직 영국 카운티 목록"
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:22
 msgid ":guilabel:`UK - Accounting Reports`"
-msgstr ""
+msgstr ":guilabel:`영국 - 회계 보고서`"
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:23
 msgid "`l10n_uk_reports`"
@@ -38083,11 +38320,11 @@ msgstr "`l10n_uk_reports`"
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:24
 msgid "Accounting reports for the UK"
-msgstr ""
+msgstr "영국 회계 보고서"
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:25
 msgid "Allows sending the tax report via the MTD-VAT API to HMRC."
-msgstr ""
+msgstr "MTD-부가가치세 API를 통해 세금계산서를 HMRC로 전송할 수 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst-1
 msgid "Odoo uk packages"
@@ -38095,19 +38332,20 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:32
 msgid "Only UK-based companies can submit reports to HMRC."
-msgstr ""
+msgstr "영국에 본사를 두고 있는 회사만 영국 국세청에 신고서를 제출할 수 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:33
 msgid ""
 "Installing the module :guilabel:`UK - Accounting Reports` installs all two "
 "modules at once."
-msgstr ""
+msgstr ":guilabel:`영국 - 회계 보고서` 모듈을 설치하면 두 모듈이 모두 한꺼번에 설치됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:36
 msgid ""
 "`HM Revenue & Customs <https://www.gov.uk/government/organisations/hm-"
 "revenue-customs/>`_"
 msgstr ""
+"`영국 국세청 <https://www.gov.uk/government/organisations/hm-revenue-customs/>`_"
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:37
 msgid ""
@@ -38115,6 +38353,8 @@ msgid ""
 "<https://www.gov.uk/government/publications/making-tax-digital/overview-of-"
 "making-tax-digital/>`_"
 msgstr ""
+"`디지털 세무 전체보기 <https://www.gov.uk/government/publications/making-tax-"
+"digital/overview-of-making-tax-digital/>`_"
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:43
 msgid ""
@@ -38122,6 +38362,8 @@ msgid ""
 "module. Go to :menuselection:`Accounting --> Configuration --> Accounting: "
 "Chart of Accounts` to access it."
 msgstr ""
+"영국 계정과목표는 :guilabel:`영국 - 회계` 모듈에 포함되어 있습니다. :menuselection:`회계 --> 환경 설정 "
+"--> 회계: 계정과목표` 로 이동하여 액세스합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:46
 msgid ""
@@ -38130,12 +38372,14 @@ msgid ""
 "Import section` and choose to :guilabel:`Review Manually` or "
 ":guilabel:`Import (recommended)` your initial balances."
 msgstr ""
+":menuselection:`회계 --> 환경 설정 --> 설정 --> 회계 가져오기 섹션` 으로 이동하여 :abbr:`CoA "
+"(계정과목표)` 를 설정한 후 :guilabel:`수동 검토` 또는 :guilabel:`기초 잔액 가져오기 (권장)` 를 선택합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:53
 msgid ""
 "As part of the localization module, UK taxes are created automatically with "
 "their related financial accounts and configuration."
-msgstr ""
+msgstr "현지화 모듈의 일부로 영국 세금은 관련된 금융 계정 및 설정 메뉴와 함께 자동으로 생성됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:56
 msgid ""
@@ -38143,32 +38387,38 @@ msgid ""
 "to update the :guilabel:`Default Taxes`, the :guilabel:`Tax Return "
 "Periodicity` or to :guilabel:`Configure your tax accounts`."
 msgstr ""
+":menuselection:`회계 --> 환경 설정 --> 설정 --> 세금` 으로 이동하여 :guilabel:`기본 세금`, "
+":guilabel:`세금 신고 주기` 또는 :guilabel:`세금 계정 환경 설정` 을 업데이트합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:60
 msgid ""
 "To edit existing taxes or to :guilabel:`Create` a new tax, go to "
 ":menuselection:`Accounting --> Configuration --> Accounting: Taxes`."
 msgstr ""
+"기존 세금을 편집하거나 새로 세금을 :guilabel:`생성` 하려면 :menuselection:`회계 --> 환경 설정 --> 회계: "
+"세금` 으로 이동합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:64
 msgid ":doc:`taxes <../accounting/taxes>`"
-msgstr ""
+msgstr ":doc:`세금 <../accounting/taxes>`"
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:65
 msgid ""
 "Tutorial: `Tax report and return <https://www.odoo.com/slides/slide/tax-"
 "report-and-return-1719?fullscreen=1>`_."
 msgstr ""
+"튜토리얼: `세금 신고 및 환급 <https://www.odoo.com/slides/slide/tax-report-and-"
+"return-1719?fullscreen=1>`_."
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:69
 msgid "Making Tax Digital (MTD)"
-msgstr ""
+msgstr "MTD (Making Tax Digital: 디지털 세무)"
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:71
 msgid ""
 "In the UK, all VAT-registered businesses have to follow the MTD rules by "
 "using software to submit their VAT returns."
-msgstr ""
+msgstr "영국에서 모든 부가가치세 등록 사업자는 소프트웨어를 사용하여 부가가치세 신고서를 제출하는 MTD 규칙을 따라야 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:74
 msgid ""
@@ -38178,6 +38428,10 @@ msgid ""
 "<https://www.gov.uk/government/publications/making-tax-digital/overview-of-"
 "making-tax-digital/>`_."
 msgstr ""
+"**영국 - 회계 보고서** 모듈을 사용하면 '세금 부과'에 관한 '영국 국세청 "
+"<https://www.gov.uk/government/organisations/hm-revenue-customs/>`_ 요구 사항에 "
+"부합하는 '디지털 세무 <https://www.gov.uk/government/publications/making-tax-"
+"digital/overview-of-making-tax-digital/>' 를 실행할 수 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:80
 msgid ""
@@ -38191,7 +38445,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:87
 msgid "Register your company to HMRC before the first submission"
-msgstr ""
+msgstr "최초 제출 전에 회사를 HMRC에 등록합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:89
 msgid ""
@@ -38199,16 +38453,20 @@ msgid ""
 ":guilabel:`Connect to HMRC`. Enter your company information on the HMRC "
 "platform. You only need to do it once."
 msgstr ""
+":menuselection:`회계 --> 보고 --> 세금계산서` 로 이동하여 :guilabel:`HMRC에 연결` 을 클릭합니다. "
+"HMRC 플랫폼에 회사 정보를 입력합니다. 한 번만 입력해두면 됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:94
 msgid "Periodic submission to HMRC"
-msgstr ""
+msgstr "영국 국세청에 정기 제출하기"
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:96
 msgid ""
 "Import your obligations HMRC, filter on the period you want to submit, and "
 "send your tax report by clicking :guilabel:`Send to HMRC`."
 msgstr ""
+"의무 제출 항목을 가져오고, 제출 기간을 필터로 적용한 후 :guilabel:`영국 국세청으로 보내기` 를 클릭하여 세금계산서를 "
+"전송합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:100
 msgid ""
@@ -38226,7 +38484,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:107
 msgid "Periodic submission to HMRC for multi-company"
-msgstr ""
+msgstr "다중 회사용 영국 국세청 정기 제출"
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:109
 msgid ""
@@ -38239,13 +38497,15 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:113
 msgid "Log into the company for which the submission has to be done."
-msgstr ""
+msgstr "제출하려는 회사에 로그인합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:114
 msgid ""
 "Go to :guilabel:`General Settings`, and in the :guilabel:`Users` section, "
 "click :guilabel:`Manage Users`. Select the user who is connected to HMRC."
 msgstr ""
+":guilabel:`일반 설정` 으로 이동하여 :guilabel:`사용자` 섹션에서 :guilabel:`사용자 관리` 를 클릭합니다. "
+"영국 국세청에 연결되어 있는 사용자를 선택합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:116
 msgid ""
@@ -38253,22 +38513,26 @@ msgid ""
 "Authentication Credentials` or :guilabel:`Remove Authentication Credentials`"
 " button."
 msgstr ""
+":guilabel:`영국 국세청 통합` 탭으로 이동하여 :guilabel:`자격 증명 인증서 초기화` 또는 :guilabel:`자격 증명"
+" 인증서 삭제` 버튼을 클릭합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:118
 msgid ""
 "You can now :ref:`register your company to HMRC <uk_localization/hmrc-"
 "registration>` and submit the tax report for this company."
 msgstr ""
+"이제 :ref:`영국 국세청에 회사를 등록 <uk_localization/hmrc-registration>` 하고 회사에 대한 "
+"세금계산서를 제출할 수 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:120
 msgid "Repeat the steps for other companies' HMRC submissions."
-msgstr ""
+msgstr "다른 회사에 대해 영국 국세청에 제출할 때는 이 단계를 반복합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:123
 msgid ""
 "During this process, the :guilabel:`Connect to HMRC` button no longer "
 "appears for other UK-based companies."
-msgstr ""
+msgstr "이 과정에서 다른 영국 소재 회사에는 :guilabel:`영국 국세청에 연결` 버튼이 더 이상 표시되지 않습니다."
 
 #: ../../content/applications/finance/payment_providers.rst:27
 msgid ""
