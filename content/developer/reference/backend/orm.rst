@@ -1086,13 +1086,17 @@ Map
 
 .. note::
 
-    Since V13, multi-relational field access is supported and works like a mapped call:
+    Accessing relational attributes returns the union of the recordsets.
+    You should probably always use simple attribute access and only ``mapped``
+    when you may have multiple records and you want to get a value for each
+    record in the recordset.
 
     .. code-block:: python3
 
-        records.partner_id  # == records.mapped('partner_id')
-        records.partner_id.bank_ids  # == records.mapped('partner_id.bank_ids')
-        records.partner_id.mapped('name')  # == records.mapped('partner_id.name')
+        records.partner_id  # union of partner_id from records
+        records.mapped('partner_id')  # [record['partner_id'] for record in records]
+        records.partner_id.bank_ids  # union of banks of partners of records
+        records.mapped('partner_id.name')  # for each record, get the name of the partner
 
 Sort
 ~~~~
