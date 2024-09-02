@@ -324,27 +324,26 @@ Each call to ``execute_kw`` takes the following parameters:
 
 .. example::
 
-   For instance, to see if we can read the ``res.partner`` model, we can call
-   ``check_access_rights`` with ``operation`` passed by position and
-   ``raise_exception`` passed by keyword (in order to get a true/false result
-   rather than true/error):
+   For instance, to search for records in the ``res.partner`` model, we can call
+   ``name_search`` with ``name`` passed by position and ``limit`` passed by
+   keyword (in order to get maximum 10 results):
 
    .. tabs::
 
       .. code-tab:: python
 
          models = xmlrpc.client.ServerProxy('{}/xmlrpc/2/object'.format(url))
-         models.execute_kw(db, uid, password, 'res.partner', 'check_access_rights', ['read'], {'raise_exception': False})
+         models.execute_kw(db, uid, password, 'res.partner', 'name_search', ['foo'], {'limit': 10})
 
       .. code-tab:: ruby
 
          models = XMLRPC::Client.new2("#{url}/xmlrpc/2/object").proxy
-         models.execute_kw(db, uid, password, 'res.partner', 'check_access_rights', ['read'], {raise_exception: false})
+         models.execute_kw(db, uid, password, 'res.partner', 'name_search', ['foo'], {limit: 10})
 
       .. code-tab:: php
 
          $models = ripcord::client("$url/xmlrpc/2/object");
-         $models->execute_kw($db, $uid, $password, 'res.partner', 'check_access_rights', array('read'), array('raise_exception' => false));
+         $models->execute_kw($db, $uid, $password, 'res.partner', 'name_search', array('foo'), array('limit' => 10));
 
       .. code-tab:: java
 
@@ -355,9 +354,9 @@ Each call to ``execute_kw`` takes the following parameters:
          }};
          models.execute("execute_kw", asList(
              db, uid, password,
-             "res.partner", "check_access_rights",
-             asList("read"),
-             new HashMap() {{ put("raise_exception", false); }}
+             "res.partner", "name_search",
+             asList("foo"),
+             new HashMap() {{ put("limit", 10); }}
          ));
 
       .. code-tab:: go
@@ -369,9 +368,9 @@ Each call to ``execute_kw`` takes the following parameters:
          var result bool
          if err := models.Call("execute_kw", []any{
              db, uid, password,
-             "res.partner", "check_access_rights",
-             []string{"read"},
-             map[string]bool{"raise_exception": false},
+             "res.partner", "name_search",
+             []string{"foo"},
+             map[string]bool{"limit": 10},
          }, &result); err != nil {
              log.Fatal(err)
          }
