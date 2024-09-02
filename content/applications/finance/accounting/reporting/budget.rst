@@ -1,5 +1,5 @@
 ================
-Financial budget
+Analytic budgets
 ================
 
 Managing budgets is an essential part of running a business. Budgets help people become more
