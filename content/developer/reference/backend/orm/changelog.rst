@@ -9,6 +9,9 @@ Odoo version 18.0
 
 - Searching by name is now implemented as `_search_display_name` like all other fields.
   See `#174967 <https://github.com/odoo/odoo/pull/174967>`_.
+- New methods to check access rights and rules now combine both access rights
+  and rules: `check_access`, `has_access` and `_filtered_access`.
+  See `#179148 <https://github.com/odoo/odoo/pull/179148>`_.
 
 
 Odoo Online version 17.4

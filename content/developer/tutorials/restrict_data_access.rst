@@ -355,21 +355,15 @@ Explicit security checks can be performed by:
   specific models or records.
 * Checking that the current user has specific groups hard-coded to allow or deny
   an operation (``self.env.user.has_group``).
-* Calling the ``check_access_rights(operation)`` method on a recordset, this
-  verifies whether the current user has access to the model itself.
-* Calling ``check_access_rule(operations)`` on a non-empty recordset, this
-  verifies that the current user is allowed to perform the operation on *every*
-  record of the set.
-
-.. warning:: Checking access rights and checking record rules are separate
-             operations, if you're checking record rules you usually want to
-             also check access rights beforehand.
+* Calling ``check_access(operations)`` on a recordset, this verifies that the
+  current user is allowed to perform the operation on *every* record of the set.
+  As a special case, when the recordset is empty, it verifies that the current
+  user has some access rights to perform the operation on the model in general.
 
 .. exercise::
 
-    Before creating the invoice, use ``check_access_rights`` and
-    ``check_access_rule`` to ensure that the current user can update properties
-    in general as well as the specific property the invoice is for.
+    Before creating the invoice, use ``check_access`` to ensure that the current
+    user can update the property the invoice is for.
 
     Re-run the bypass script, check that the error occurs before the print.
 
