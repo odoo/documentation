@@ -199,7 +199,7 @@ clicking :guilabel:`Create`.
    :guilabel:`Lost Reason` parameter.
 
    To set up new values for this field, navigate to :menuselection:`CRM --> Configuration --> Lost
-   Reasons`, and click both :guilabel:`New`and :guilabel:`Save` for each new entry added to the
+   Reasons`, and click both :guilabel:`New` and :guilabel:`Save` for each new entry added to the
    list.
 
 Additional notes and comments can be added in the :guilabel:`Closing Note` field.
