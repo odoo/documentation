@@ -4,7 +4,7 @@ Git guidelines
 
 Configure your git
 ------------------
-
+          
 Based on ancestral experience and oral tradition, the following things go a long
 way towards making your commits more helpful:
 
