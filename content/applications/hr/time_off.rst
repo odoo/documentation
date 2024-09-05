@@ -237,6 +237,23 @@ Enter the following information on the form:
 - :guilabel:`Based on worked time`: Enable this option if time off accrual is determined by the
   employee's worked hours. Days **not** considered as worked time do **not** contribute to the
   accrual plan in Odoo.
+
+  .. example::
+     An employee is granted time off from an accrual plan configured to accrue one day of vacation
+     for every five days worked. The accrual plan is based on the employee's worked time (the
+     :guilabel:`Based on worked time` checkbox is ticked).
+
+     The employee works standard 40-hour weeks. According to the accrual plan, they should earn
+     four vacation days per month.
+
+     The employee takes five days off. The :ref:`time off type <time_off/time-off-types>` the
+     employee has taken has the :guilabel:`Kind of Time Off` configured as an :guilabel:`Absence`.
+
+     Since the accrual plan only grants time off based on the worked time, the employee does **not**
+     accrue a vacation day for the five days of time off that is considered an absence.
+
+     At the end of the month, the employee accrues only three days, instead of four.
+
 - :guilabel:`Milestone Transition`: This field is **only** visible after a minimum of two
   :ref:`rules <time_off/rules>` have been configured on the accrual plan. This selection determines
   when employees move up to a new milestone. If they qualify to change milestones in the middle of a
