@@ -156,6 +156,8 @@ on :guilabel:`Confirm Password`. Next, activate :abbr:`2FA (two-factor authentic
 
 Finally, click :guilabel:`Enable two-factor authentication` to complete the setup.
 
+.. _users-portal-payment-methods:
+
 Change payment info
 -------------------
 
