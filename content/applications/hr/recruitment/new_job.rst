@@ -39,6 +39,8 @@ button to delete it.
 Once the job position has been created, it appears as a card in the Kanban view on the main
 *Recruitment* app dashboard.
 
+.. _recruitment/new_job_position/edit:
+
 Edit a new job position
 -----------------------
 
