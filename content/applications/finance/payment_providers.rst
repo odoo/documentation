@@ -177,8 +177,8 @@ Bank payments
 
 .. _payment_providers/add_new:
 
-Enable a payment provider
-=========================
+Enabling a payment provider
+===========================
 
 To add a new payment provider and make its related payment methods available to your customers,
 proceed as follows:
@@ -284,10 +284,19 @@ In this case, a **payment token** is created in Odoo to be used as a payment met
 payments without the customer having to enter their payment method details again. This is
 particularly useful for the eCommerce conversion rate and subscriptions that use recurring payments.
 
-.. note::
-   You remain fully PCI-compliant when you enable this feature because Odoo does not store the card
-   details directly. Instead, it creates a payment token that only references the card details
-   stored on the payment provider's server.
+.. tip::
+   To add or delete their saved payment method details, customers can click :guilabel:`Manage
+   payment methods` in the :ref:`customer portal <users-portal-payment-methods>`.
+
+.. admonition:: PCI DSS and Attestation of Compliance
+
+   Odoo is not `PCI <https://www.pcisecuritystandards.org>`_ DSS-certified because it does not
+   store cardholder data or process payments. Instead, it outsources tokenization and payment to
+   :ref:`external payment providers <payment_providers/online_providers>`, which means that as an
+   Odoo customer, you only need to complete the minimal Self-Assessment Questionnaire (SAQ) with
+   the provider to obtain the Attestation of Compliance (AoC) and achieve PCI compliance. Odoo
+   should not be mentioned as a payment processor or a third-party service provider in the
+   :abbr:`SAQ (Self-Assessment Questionnaire)`.
 
 .. _payment_providers/manual_capture:
 
