@@ -416,11 +416,14 @@ To enable check printing from Odoo, navigate to :menuselection:`Accounting --> C
 Settings` and find the :guilabel:`Vendor Payments` section. From here, tick the :guilabel:`Checks`
 checkbox to reveal several fields for check configuration.
 
-Select a :guilabel:`Check Layout` from the drop-down menu:
+Select a pre-printed or blank :guilabel:`Check Layout` from the drop-down menu:
 
 - :guilabel:`Print Check (Top) - US`
 - :guilabel:`Print Check (Middle) - US`
 - :guilabel:`Print Check (Bottom) - US`
+- :guilabel:`Print Blank Check (Top) - US`
+- :guilabel:`Print Blank Check (Middle) - US`
+- :guilabel:`Print Blank Check (Bottom) - US`
 
 Next, choose whether or not to enable the :guilabel:`Multi-Pages Check Stub` checkbox.
 
@@ -429,8 +432,17 @@ Optionally set a :guilabel:`Check Top Margin` and :guilabel:`Check Left Margin`,
 Once all check configurations are complete, :guilabel:`Save` the settings.
 
 .. tip::
-   Some of the check formats may require pre-printed paper from a third party vendor,
-   https://checkdepot.net/collections/odoo-checks is recommended.
+   Pre-printed check formats (non-blank checks) require pre-printed paper from a third-party vendor.
+   `Pre-printed checks from checkdepot.net <https://checkdepot.net/collections/odoo-checks>`_ are
+   recommended.
+
+.. important::
+   Use one of the blank check formats to print the information of the check ad-hoc when needed. This
+   requires the use of both :abbr:`MICR (Magnetic Ink Character Recognition)` ink or toner complying
+   with the standards for check printing, as well as `check quality paper
+   <https://checkdepot.net/collections/blank-check-paper/products/top-format-blank-check-paper-cdt164>`_.
+   Other information, such as the company name, bank account, and check number, is printed when
+   creating the blank check.
 
 .. seealso::
    :doc:`../accounting/payments/pay_checks`
