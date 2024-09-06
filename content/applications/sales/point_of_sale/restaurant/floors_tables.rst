@@ -76,22 +76,6 @@ After making all the necessary modifications, click :guilabel:`CLOSE` to save.
 .. warning::
    Removing a table or a floor cannot be undone.
 
-.. _floors_tables/orders:
-
-Take orders
-===========
-
-Click a table to access the POS interface and start taking your customer's order. The system
-automatically associates the orders and the table, allowing you to add more items later and generate
-a bill specifically for that table's orders.
-
-Once you have taken an order, click :guilabel:`Change table` to return to the floor plan view.
-
-.. note::
-   As soon as you click a table, the number of guests is automatically set to one. If you
-   mistakenly select a table, click :guilabel:`Release table` to free it or :ref:`transfer the
-   customer <floors_tables/transfer>` to another table.
-
 .. _floors_tables/transfer:
 
 Table transfer
