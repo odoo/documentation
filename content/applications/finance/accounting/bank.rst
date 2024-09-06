@@ -193,4 +193,3 @@ Payments` tab. To display the outstanding accounts column, click on the toggle b
    bank/reconciliation
    bank/reconciliation_models
    bank/foreign_currency
-   bank/cash_register
