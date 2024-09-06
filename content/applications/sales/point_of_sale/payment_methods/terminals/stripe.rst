@@ -77,8 +77,8 @@ Swipe right on your payment terminal, click :guilabel:`Settings`, enter the admi
 and select your network.
 
 .. note::
-   - The device must be connected to a secured WI-FI network.
-   - Your Odoo database and payment terminal must share the same network.
+   - The user's device and the terminal must share the same network.
+   - In case of a Wi-Fi connection, the network must be secured.
    - You must enter the admin PIN code to access your payment terminal settings. By default, this
      code is `07139`.
 
