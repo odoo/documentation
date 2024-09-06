@@ -118,6 +118,17 @@ To return and refund a product,
      setting a negative quantity that equals the number of returned products. To do so, click
      :guilabel:`Qty` and :guilabel:`+/-`, followed by the quantity of returned products.
 
+.. _pos/cash-register:
+
+Manage the cash register
+========================
+
+To add or take out cash to/from the register, click :guilabel:`Cash In/Out` on the upper left side
+of the screen.
+
+Doing so opens a pop-up window on which you can select :guilabel:`Cash In` or :guilabel:`Cash Out`,
+enter the amount and the reason, and click :guilabel:`Confirm`.
+
 .. _pos/session-close:
 
 Close the POS session
