@@ -1523,13 +1523,15 @@ msgstr "Câu hỏi về Kỹ thuật Thường gặp"
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:9
 msgid "\"Scheduled actions do not run at the exact time they were expected\""
-msgstr ""
+msgstr "\"Tác vụ đã lên lịch không diễn ra đúng vào thời điểm dự kiến\""
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:11
 msgid ""
 "On the Odoo.sh platform, we cannot guarantee an exact running time for "
 "scheduled actions."
 msgstr ""
+"Trên nền tảng Odoo.sh, chúng tôi không thể đảm bảo thời gian chạy chính xác "
+"của các tác vụ đã lên lịch."
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:13
 msgid ""
@@ -1538,15 +1540,21 @@ msgid ""
 " Scheduled actions are therefore implemented slightly differently than on a "
 "regular Odoo server, and are run on a *best effort* policy."
 msgstr ""
+"Điều này là do có thể có nhiều khách hàng trên cùng một máy chủ và chúng tôi"
+" phải đảm bảo phân chia máy chủ một cách công bằng cho mỗi khách hàng. Do "
+"đó, các tác vụ đã lên lịch được triển khai hơi khác so với trên máy chủ Odoo"
+" thông thường và được chạy theo chính sách *nỗ lực hết sức*."
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:16
 msgid ""
 "Do not expect any scheduled action to be run more often than every 5 min."
 msgstr ""
+"Xin đừng mong đợi bất kỳ tác vụ đã lên lịch nào được thực hiện thường xuyên "
+"hơn 5 phút một lần."
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:19
 msgid "Are there \"best practices\" regarding scheduled actions?"
-msgstr ""
+msgstr "Có \"giải pháp tối ưu nhất\" về các tác vụ đã lên lịch không?"
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:21
 msgid ""
@@ -1554,6 +1562,9 @@ msgid ""
 "crons).** Therefore, you must keep this fact in mind when developing your "
 "own crons."
 msgstr ""
+"**Odoo.sh luôn giới hạn thời gian thực hiện các tác vụ đã lên lịch (*hay còn"
+" gọi là* cron).** Do đó, bạn cần ghi nhớ điều này khi phát triển cron của "
+"riêng mình."
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:24
 msgid "We advise that:"
@@ -1561,7 +1572,7 @@ msgstr "Chúng tôi khuyên rằng:"
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:26
 msgid "Your scheduled actions should work on small batches of records."
-msgstr ""
+msgstr "Các tác vụ đã lên lịch của bạn nên áp dụng cho các lô bản ghi nhỏ."
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:27
 msgid ""
@@ -1569,6 +1580,9 @@ msgid ""
 " this way, if they get interrupted by the time-limit, there is no need to "
 "start over."
 msgstr ""
+"Các tác vụ đã lên lịch của bạn sẽ hoạt động sau khi xử lý từng đợt; như vậy,"
+" nếu chúng bị gián đoạn do giới hạn thời gian, thì bạn sẽ không cần phải bắt"
+" đầu lại."
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:29
 msgid ""
@@ -1576,10 +1590,14 @@ msgid ""
 "<https://stackoverflow.com/a/1077421/3332416>`_: they must not cause side-"
 "effects if they are started more often than expected."
 msgstr ""
+"Các tác vụ đã lên lịch của bạn phải `có tính bất biến "
+"<https://stackoverflow.com/a/1077421/3332416>`_: chúng không được gây ra tác"
+" dụng phụ nếu được thực hiện thường xuyên hơn dự kiến."
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:36
 msgid "How can I automate tasks when an IP address change occurs?"
 msgstr ""
+"Làm thế nào tôi có thể tự động hóa các nhiệm vụ khi địa chỉ IP thay đổi?"
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:38
 msgid ""
@@ -1589,6 +1607,11 @@ msgid ""
 "address included as a query string parameter (`new`), along with the "
 "previous IP address as an additional parameter (`old`)."
 msgstr ""
+"**Odoo.sh thông báo cho quản trị viên dự án về những thay đổi địa chỉ IP.** "
+"Ngoài ra, khi địa chỉ IP của phiên bản production thay đổi, yêu cầu HTTP "
+"`GET` sẽ được gửi đến đường dẫn `/_odoo.sh/ip-change` với địa chỉ IP mới "
+"được bao gồm dưới dạng tham số chuỗi truy vấn (`new`), cùng với địa chỉ IP "
+"trước đó dưới dạng tham số bổ sung (`old`)."
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:43
 msgid ""
@@ -1596,6 +1619,9 @@ msgid ""
 "address change (e.g., sending an email, contacting a firewall API, "
 "configuring database objects, etc.)"
 msgstr ""
+"Cơ chế này cho phép áp dụng các tác vụ tùy chỉnh để phản hồi lại sự thay đổi"
+" địa chỉ IP (VD: gửi email, liên hệ với API tường lửa, cấu hình đối tượng cơ"
+" sở dữ liệu,...)"
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:46
 msgid ""
@@ -1603,10 +1629,13 @@ msgid ""
 "internally by the platform itself and returns a `403` response if accessed "
 "through any other means."
 msgstr ""
+"Vì lý do bảo mật, tuyến `/_odoo.sh/ip-change` chỉ có thể được chính nền tảng"
+" truy cập nội bộ và sẽ trả về phản hồi `403` nếu được truy cập thông qua bất"
+" kỳ phương tiện nào khác."
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:49
 msgid "Here is a pseudo-implementation example:"
-msgstr ""
+msgstr "Sau đây là một ví dụ triển khai giả lập:"
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:6
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:170
@@ -1619,6 +1648,9 @@ msgid ""
 "allows you to integrate other Git projects into your code, without the need "
 "to copy-paste all their code."
 msgstr ""
+"`Phân hệ phụ Git <https://git-scm.com/book/en/v2/Git-Tools-Submodules>`_ cho"
+" phép bạn tích hợp các dự án Git khác vào mã của mình mà không cần phải sao "
+"chép-dán toàn bộ mã của chúng."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:14
 msgid ""
@@ -1629,6 +1661,12 @@ msgid ""
 "servers easier, as you can clone the repositories added as submodules at the"
 " same time you clone your own repository."
 msgstr ""
+"Các phân hệ tùy chỉnh của bạn có thể phụ thuộc vào phân hệ từ các kho lưu "
+"trữ khác. Đối với Odoo, tính năng này cho phép bạn thêm phân hệ từ các kho "
+"lưu trữ Git khác vào các nhánh kho lưu trữ của bạn. Việc thêm các phụ thuộc "
+"này vào nhánh của bạn thông qua phân hệ phụ giúp bạn triển khai mã và máy "
+"chủ dễ dàng hơn, vì bạn có thể sao chép các kho lưu trữ được thêm dưới dạng "
+"phân hệ phụ cùng lúc sao chép kho lưu trữ của riêng mình."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:19
 msgid ""
@@ -1637,6 +1675,10 @@ msgid ""
 "whether you want to pin the submodule to a specific revision and when you "
 "want to update to a newer revision."
 msgstr ""
+"Ngoài ra, bạn có thể chọn nhánh kho lưu trữ được thêm vào dưới dạng phân hệ "
+"phụ và có thể kiểm soát bản sửa đổi mà bạn muốn. Bạn có quyền quyết định xem"
+" có muốn ghim phân hệ phụ vào một bản sửa đổi cụ thể hay không và khi nào "
+"bạn muốn cập nhật lên bản sửa đổi mới hơn."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:24
 msgid ""
@@ -1645,6 +1687,11 @@ msgid ""
 "added modules through submodules in your branches and add them to your "
 "addons path automatically so you can install them in your databases."
 msgstr ""
+"Trong Odoo.sh, các phân hệ phụ cung cấp cho bạn khả năng sử dụng và phụ "
+"thuộc vào những phân hệ có sẵn trong các kho lưu trữ khác. Nền tảng sẽ phát "
+"hiện việc bạn thêm phân hệ thông qua phân hệ phụ  trong nhánh và tự động "
+"thêm chúng vào đường dẫn addon của bạn để bạn có thể cài đặt chúng trong cơ "
+"sở dữ liệu của mình."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:28
 msgid ""
@@ -1654,6 +1701,11 @@ msgid ""
 "The procedure is detailed in the chapter :ref:`Settings > Submodules "
 "<odoosh-gettingstarted-settings-submodules>`."
 msgstr ""
+"Nếu bạn thêm kho lưu trữ riêng tư dưới dạng phân hệ phụ trong các nhánh, bạn"
+" cần cấu hình mã khóa triển khai trong cài đặt dự án Odoo.sh và trong cài "
+"đặt kho lưu trữ của mình. Nếu không, Odoo.sh sẽ không được phép tải chúng "
+"xuống. Quy trình này được trình bày chi tiết trong chương :ref:`Cài đặt > "
+"Phân hệ phụ <odoosh-gettingstarted-settings-submodules>`."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:34
 msgid "Adding a submodule"
@@ -1669,41 +1721,51 @@ msgid ""
 " You can nevertheless do so :ref:`with Git <odoosh-advanced-submodules-"
 "withgit>`."
 msgstr ""
+"Hiện tại không thể thêm kho lưu trữ **riêng tư** bằng phương pháp này. Tuy "
+"nhiên, bạn vẫn có thể tiến hành :ref:`qua Git <odoosh-advanced-submodules-"
+"withgit>`."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:43
 msgid ""
 "On Odoo.sh, in the branches view of your project, choose the branch in which"
 " you want to add a submodule."
 msgstr ""
+"Trên Odoo.sh, trong chế độ xem nhánh của dự án, hãy chọn nhánh mà bạn muốn "
+"thêm phân hệ phụ."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:45
 msgid ""
 "In the upper right corner, click on the *Submodule* button, and then on "
 "*Run*."
 msgstr ""
+"Ở góc trên bên phải, nhấp vào nút *Phân hệ phụ*, sau đó nhấp vào *Chạy*."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:50
 msgid "A dialog with a form is shown. Fill the inputs as follows:"
 msgstr ""
+"Một hộp thoại có biểu mẫu sẽ hiển thị. Điền các thông tin đầu vào như sau:"
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:52
 msgid "Repository URL: The SSH URL of the repository."
-msgstr ""
+msgstr "URL kho lưu trữ: URL SSH của kho lưu trữ."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:53
 msgid "Branch: The branch you want to use."
-msgstr ""
+msgstr "Nhánh: Nhánh bạn muốn sử dụng."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:54
 msgid ""
 "Path: The folder in which you want to add this submodule in your branch."
 msgstr ""
+"Đường dẫn: Thư mục mà bạn muốn thêm phân hệ phụ này vào nhánh của mình."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:59
 msgid ""
 "On Github, you can get the repository URL with the *Clone or download* "
 "button of the repository. Make sure to *use SSH*."
 msgstr ""
+"Trên Github, bạn có thể lấy URL kho lưu trữ bằng nút *Sao chép hoặc tải "
+"xuống* của kho lưu trữ. Hãy nhớ *sử dụng SSH*."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:67
 msgid "With Git (advanced)"
@@ -1714,10 +1776,12 @@ msgid ""
 "In a terminal, in the folder where your Git repository is cloned, checkout "
 "the branch in which you want to add a submodule:"
 msgstr ""
+"Trong terminal, trong thư mục nơi kho lưu trữ Git của bạn được sao chép, "
+"checkout nhánh mà bạn muốn thêm phân hệ phụ:"
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:76
 msgid "Then, add the submodule using the command below:"
-msgstr ""
+msgstr "Sau đó, thêm phân hệ phụ bằng lệnh dưới đây:"
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:82
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:94
@@ -1731,14 +1795,16 @@ msgid ""
 "*<git@yourprovider.com>:<username/repository.git>* by the SSH URL of the "
 "repository you want to add as submodule,"
 msgstr ""
+"*<git@yourprovider.com>:<username/repository.git>* bằng URL SSH của kho lưu "
+"trữ mà bạn muốn thêm dưới dạng phân hệ phụ,"
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:85
 msgid "*<branch>* by the branch you want to use in the above repository,"
-msgstr ""
+msgstr "*<branch>* bằng nhánh bạn muốn sử dụng trong kho lưu trữ trên,"
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:86
 msgid "*<path>* by the folder in which you want to add this submodule."
-msgstr ""
+msgstr "*<path>* bằng thư mục mà bạn muốn thêm phân hệ phụ này."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:88
 msgid "Commit and push your changes:"
@@ -1749,12 +1815,16 @@ msgid ""
 "<remote> by the repository on which you want to push your changes. For a "
 "standard Git setup, this is *origin*."
 msgstr ""
+"<remote> bằng kho lưu trữ mà bạn muốn push các thay đổi của mình. Đối với "
+"thiết lập Git chuẩn, đây là *gốc*."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:97
 msgid ""
 "<branch> by the branch on which you want to push your changes. Most likely "
 "the branch you used :code:`git checkout` on in the first step."
 msgstr ""
+"<branch> bằng nhánh mà bạn muốn push các thay đổi của mình. Thường là nhánh "
+"mà bạn đã sử dụng :code:`git checkout` ở bước đầu tiên."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:100
 msgid ""
@@ -1765,10 +1835,16 @@ msgid ""
 "changes <https://git-scm.com/book/en/v2/Git-Tools-"
 "Submodules#_pulling_in_upstream_changes_from_the_submodule_remote>`_."
 msgstr ""
+"Bạn có thể đọc `tài liệu git-scm.com <https://git-scm.com/book/en/v2/Git-"
+"Tools-Submodules>`_ để tìm hiểu thêm về các phân hệ phụ Git. Ví dụ, nếu bạn "
+"muốn cập nhật phân hệ phụ của mình để có bản sửa đổi mới nhất, bạn có thể "
+"làm theo chương `Pull các thay đổi upstream <https://git-"
+"scm.com/book/en/v2/Git-Tools-"
+"Submodules#_pulling_in_upstream_changes_from_the_submodule_remote>`_."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:107
 msgid "Ignore modules"
-msgstr ""
+msgstr "Bỏ qua phân hệ"
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:109
 msgid ""
@@ -1778,6 +1854,11 @@ msgid ""
 ":code:`.`. The platform will ignore this folder and you can hand pick your "
 "modules by creating symlinks to them from another folder."
 msgstr ""
+"Nếu bạn thêm một kho lưu trữ chứa nhiều phân hệ, bạn có thể muốn bỏ qua một "
+"số phân hệ trong trường hợp có phân hệ được cài đặt tự động. Để làm như vậy,"
+" bạn có thể thêm tiền tố vào thư mục phân hệ phụ của mình bằng :code:`.`. "
+"Nền tảng sẽ bỏ qua thư mục này và bạn có thể tự tay chọn phân hệ của mình "
+"bằng cách tạo liên kết tượng trưng đến chúng từ một thư mục khác."
 
 #: ../../content/administration/odoo_sh/getting_started.rst:5
 msgid "Get started"
@@ -2850,7 +2931,7 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:443
 msgid "Fork"
-msgstr "Tạo mới"
+msgstr "Sao chép"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:445
 msgid "Create a new branch based on the current branch."
@@ -3698,16 +3779,20 @@ msgid ""
 "This chapter helps you to create your first Odoo module and deploy it in "
 "your Odoo.sh project."
 msgstr ""
+"Chương này giúp bạn tạo phân hệ Odoo đầu tiên và triển khai phân hệ đó trong"
+" dự án Odoo.sh của bạn."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:10
 msgid ""
 "This tutorial requires :ref:`you created a project on Odoo.sh <odoosh-"
 "gettingstarted-create>`, and you know your Github repository's URL."
 msgstr ""
+"Hướng dẫn này yêu cầu :ref:`bạn tạo một dự án trên Odoo.sh <odoosh-"
+"gettingstarted-create>` và biết URL kho lưu trữ Github của mình."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:13
 msgid "Basic use of Git and Github is explained."
-msgstr ""
+msgstr "Giải thích cách sử dụng cơ bản của Git và Github."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:15
 msgid "The below assumptions are made:"
@@ -3718,6 +3803,8 @@ msgid ""
 "*~/src* is the directory where are located the Git repositories related to "
 "your Odoo projects,"
 msgstr ""
+"*~/src* là thư mục chứa kho lưu trữ Git liên quan đến các dự án Odoo của "
+"bạn,"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:18
 msgid "*odoo* is the Github user,"
@@ -3729,19 +3816,19 @@ msgstr "*odoo-addons* là kho lưu trữ Github,"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:20
 msgid "*feature-1* is the name of a development branch,"
-msgstr ""
+msgstr "*feature-1* là tên của nhánh phát triển,"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:21
 msgid "*master* is the name of the production branch,"
-msgstr ""
+msgstr "*master* là tên của nhánh production,"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:22
 msgid "*my_module* is the name of the module."
-msgstr ""
+msgstr "*my_module* là tên của phân hệ."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:24
 msgid "Replace these by the values of your choice."
-msgstr ""
+msgstr "Thay thế các giá trị này bằng giá trị mà bạn muốn."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:27
 msgid "Create the development branch"
@@ -3757,15 +3844,15 @@ msgstr "Trong chế độ xem nhánh:"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:34
 msgid "hit the :code:`+` button next to the development stage,"
-msgstr ""
+msgstr "nhấn nút :code:`+` bên cạnh giai đoạn phát triển,"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:35
 msgid "choose the branch *master* in the *Fork* selection,"
-msgstr ""
+msgstr "chọn nhánh *master* trong tuỳ chọn *Sao chép*,"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:36
 msgid "type *feature-1* in the *To* input."
-msgstr ""
+msgstr "nhập *feature-1* vào mục *Thành*."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:38
 msgid "|pic1|  |pic2|"
@@ -3786,6 +3873,8 @@ msgid ""
 "Once the build created, you can access the editor and browse to the folder "
 "*~/src/user* to access to the code of your development branch."
 msgstr ""
+"Sau khi bản dựng được tạo, bạn có thể truy cập trình chỉnh sửa và đi đến thư"
+" mục *~/src/user* để truy cập vào mã nhánh phát triển của bạn."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:56
 msgid "From your computer"
@@ -3793,7 +3882,7 @@ msgstr "Từ máy tính của bạn"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:58
 msgid "Clone your Github repository on your computer:"
-msgstr ""
+msgstr "Sao chép kho lưu trữ Github trên máy tính của bạn:"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:67
 msgid "Create a new branch:"
@@ -3805,7 +3894,7 @@ msgstr "Tạo cấu trúc phân hệ"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:77
 msgid "Scaffolding the module"
-msgstr ""
+msgstr "Tạo khung cho phân hệ"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:79
 msgid ""
@@ -3813,16 +3902,21 @@ msgid ""
 " module structure. You can scaffold a new module using the executable *odoo-"
 "bin*."
 msgstr ""
+"Mặc dù không cần thiết, việc tạo khung giúp tránh sự nhàm chán khi thiết lập"
+" cấu trúc phân hệ Odoo cơ bản. Bạn có thể tạo khung cho một phân hệ mới bằng"
+" cách sử dụng *odoo-bin* có thể thực thi."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:82
 msgid "From the Odoo.sh editor, in a terminal:"
-msgstr ""
+msgstr "Từ trình soạn thảo Odoo.sh, trong terminal:"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:88
 msgid ""
 "Or, from your computer, if you have an :doc:`installation of Odoo "
 "<../../on_premise/source>`:"
 msgstr ""
+"Hoặc từ máy tính của bạn, nếu bạn có một :doc:`bản cài đặt Odoo "
+"<../../on_premise/source>`:"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:94
 msgid ""
@@ -3831,10 +3925,13 @@ msgid ""
 "<first_module/my_module.zip>` in which you replace every occurrences of "
 "*my_module* to the name of your choice."
 msgstr ""
+"Nếu không muốn mất công cài đặt Odoo trên máy tính, bạn cũng có thể "
+":download:`tải xuống mẫu cấu trúc phân hệ này <first_module/my_module.zip>`,"
+" trong đó bạn thay thế toàn bộ *my_module* bằng tên bạn chọn."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:98
 msgid "The below structure will be generated:"
-msgstr ""
+msgstr "Cấu trúc dưới đây sẽ được tạo ra:"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:121
 msgid ""
@@ -3843,35 +3940,44 @@ msgid ""
 "classes of your module, and having classes name with special characters "
 "other than the underscore is not valid in Python."
 msgstr ""
+"Không sử dụng các ký tự đặc biệt khác ngoài dấu gạch dưới (_) cho tên phân "
+"hệ của bạn, kể cả dấu gạch nối (-). Tên này được sử dụng cho các lớp Python "
+"trong phân hệ của bạn và việc đặt tên lớp bằng các ký tự đặc biệt khác ngoài"
+" dấu gạch dưới là không hợp lệ trong Python."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:125
 msgid "Uncomment the content of the files:"
-msgstr ""
+msgstr "Bỏ chú thích nội dung của các tệp:"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:127
 msgid "*models/models.py*, an example of model with its fields,"
-msgstr ""
+msgstr "*models/models.py*, ví dụ về mô hình với các trường của mô hình đó,"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:129
 msgid ""
 "*views/views.xml*, a tree and a form view, with the menus opening them,"
 msgstr ""
+"*views/views.xml*, một chế độ xem biểu mẫu và cây, với các menu mở chúng,"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:131
 msgid "*demo/demo.xml*, demo records for the above example model,"
-msgstr ""
+msgstr "*demo/demo.xml*, bản ghi demo cho mô hình ví dụ ở trên,"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:133
 msgid ""
 "*controllers/controllers.py*, an example of controller implementing some "
 "routes,"
 msgstr ""
+"*controllers/controllers.py*, ví dụ về bộ điều khiển triển khai một số "
+"tuyến,"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:135
 msgid ""
 "*views/templates.xml*, two example qweb views used by the above controller "
 "routes,"
 msgstr ""
+"*views/templates.xml*, hai ví dụ về chế độ xem qweb được sử dụng bởi các "
+"tuyến bộ điều khiển ở trên,"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:137
 msgid ""
@@ -3879,6 +3985,9 @@ msgid ""
 "title, description and data files to load. You just need to uncomment the "
 "access control list data file:"
 msgstr ""
+"*__manifest__.py*, tệp kê khai phân hệ của bạn, ví dụ bao gồm tiêu đề, mô tả"
+" và các tệp dữ liệu cần tải. Bạn chỉ cần bỏ chú thích tệp dữ liệu danh sách "
+"kiểm soát truy cập:"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:146
 msgid "Manually"
@@ -3897,7 +4006,7 @@ msgstr "Push nhánh phát triển"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:155
 msgid "Stage the changes to be committed"
-msgstr ""
+msgstr "Chọn thay đổi cần được commit"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:161
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:395
@@ -3906,7 +4015,7 @@ msgstr "Commit thay đổi của bạn"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:167
 msgid "Push your changes to your remote repository"
-msgstr ""
+msgstr "Push thay đổi của bạn vào kho lưu trữ từ xa"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:169
 msgid "From an Odoo.sh editor terminal:"
@@ -3920,6 +4029,11 @@ msgid ""
 "explanation regarding the fact you will be prompted to type your username "
 "and password, and what to do if you use the two-factor authentication."
 msgstr ""
+"Lệnh trên được giải thích trong phần :ref:`Commit & push thay đổi của bạn "
+"<odoosh-gettingstarted-online-editor-push>` trong chương :ref:`Trình chỉnh "
+"sửa online <odoosh-gettingstarted-online-editor>`. Phần này bao gồm giải "
+"thích về việc bạn sẽ được nhắc nhập tên người dùng và mật khẩu, và những "
+"việc cần làm nếu bạn sử dụng xác thực hai yếu tố."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:183
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:383
@@ -3932,6 +4046,8 @@ msgid ""
 "You need to specify *-u origin feature-1* for the first push only. From that"
 " point, to push your future changes from your computer, you can simply use"
 msgstr ""
+"Bạn chỉ cần xác định *-u origin feature-1* cho lần push đầu tiên. Sau đó, để"
+" push các thay đổi trong tương lai từ máy tính của bạn, bạn chỉ cần sử dụng"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:197
 msgid "Test your module"
@@ -3940,13 +4056,15 @@ msgstr "Kiểm thử phân hệ của bạn"
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:199
 msgid ""
 "Your branch should appear in your development branches in your project."
-msgstr ""
+msgstr "Nhánh của bạn sẽ xuất hiện trong nhánh phát triển của dự án."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:204
 msgid ""
 "In the branches view of your project, you can click on your branch name in "
 "the left navigation panel to access its history."
 msgstr ""
+"Trong chế độ xem nhánh của dự án, bạn có thể nhấp vào tên nhánh ở bảng điều "
+"hướng bên trái để truy cập lịch sử của nhánh đó."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:210
 msgid ""
@@ -3954,6 +4072,9 @@ msgid ""
 " Once the database ready, you can access it by clicking the *Connect* "
 "button."
 msgstr ""
+"Ở đây, bạn có thể thấy được những thay đổi bạn vừa push, bao gồm cả chú "
+"thích bạn đã thiết lập. Khi cơ sở dữ liệu đã sẵn sàng, bạn có thể truy cập "
+"bằng cách nhấp vào nút *Kết nối*."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:216
 msgid ""
@@ -3961,12 +4082,17 @@ msgid ""
 "you will directly see it amongst the database apps. Otherwise, it will be "
 "available in the apps to install."
 msgstr ""
+"Nếu bạn cấu hình dự án Odoo.sh để tự động cài đặt phân hệ, bạn sẽ thấy ngay "
+"trong số các ứng dụng cơ sở dữ liệu. Nếu không, nó sẽ có trong các ứng dụng "
+"cần cài đặt."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:220
 msgid ""
 "You can then play around with your module, create new records and test your "
 "features and buttons."
 msgstr ""
+"Sau đó, bạn có thể dùng thử phân hệ của mình, tạo bản ghi mới và kiểm thử "
+"các tính năng và nút."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:223
 msgid "Test with the production data"
@@ -3977,6 +4103,8 @@ msgid ""
 "You need to have a production database for this step. You can create it if "
 "you do not have it yet."
 msgstr ""
+"Bạn cần có cơ sở dữ liệu production cho bước này. Bạn có thể tạo mới nếu "
+"chưa có."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:227
 msgid ""
@@ -3984,6 +4112,9 @@ msgid ""
 "believe it is ready, you can test it with the production data using a "
 "staging branch."
 msgstr ""
+"Sau khi đã kiểm thử phân hệ trong bản dựng phát triển bằng dữ liệu demo và "
+"tin rằng mọi thứ đã sẵn sàng, bạn có thể kiểm thử với dữ liệu production "
+"bằng cách sử dụng nhánh staging."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:230
 msgid "You can either:"
@@ -3994,17 +4125,23 @@ msgid ""
 "Make your development branch a staging branch, by drag and dropping it onto "
 "the *staging* section title."
 msgstr ""
+"Biến nhánh phát triển thành nhánh staging bằng cách kéo và thả nhánh này vào"
+" tiêu đề phần *staging*."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:238
 msgid ""
 "Merge it in an existing staging branch, by drag and dropping it onto the "
 "given staging branch."
 msgstr ""
+"Gộp nhánh này vào nhánh staging hiện có bằng cách kéo và thả nó vào nhánh "
+"staging đã cho."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:243
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:289
 msgid "You can also use the :code:`git merge` command to merge your branches."
 msgstr ""
+"Bạn cũng có thể sử dụng lệnh :code:`git merge` để hợp nhất các nhánh của "
+"mình."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:245
 msgid ""
@@ -4012,11 +4149,15 @@ msgid ""
 "database and make it run using a server updated with your latest changes of "
 "your branch."
 msgstr ""
+"Thao tác này sẽ tạo ra bản dựng staging mới, bản dựng này sẽ sao chép cơ sở "
+"dữ liệu production và chạy nó bằng máy chủ đã cập nhật những thay đổi mới "
+"nhất cho nhánh của bạn."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:251
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:297
 msgid "Once the database ready, you can access it using the *Connect* button."
 msgstr ""
+"Khi cơ sở dữ liệu đã sẵn sàng, bạn có thể truy cập bằng nút *Kết nối*."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:256
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:300
@@ -4031,12 +4172,18 @@ msgid ""
 "production you would not like your module to be installed automatically, but"
 " on demand."
 msgstr ""
+"Phân hệ của bạn sẽ không được cài đặt tự động, mà bạn phải cài đặt từ menu "
+"ứng dụng. Trong thực tế, mục đích của bản dựng staging là để kiểm thử hành "
+"vi các thay đổi của bạn như sẽ diễn ra trong production. Và trên production,"
+" bạn sẽ không muốn phân hệ được cài đặt tự động mà cài theo yêu cầu."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:263
 msgid ""
 "Your module may not appear directly in your apps to install either, you need"
 " to update your apps list first:"
 msgstr ""
+"Phân hệ có thể không xuất hiện trực tiếp trong ứng dụng để bạn cài đặt, mà "
+"trước tiên bạn cần cập nhật danh sách ứng dụng:"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:266
 msgid "Activate the :ref:`developer mode <developer-mode>`"
@@ -4044,15 +4191,16 @@ msgstr "Kích hoạt chế độ :ref:`nhà phát triển <developer-mode>`"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:267
 msgid "in the apps menu, click the *Update Apps List* button,"
-msgstr ""
+msgstr "trong menu ứng dụng, nhấp vào nút *Cập nhật danh sách ứng dụng*,"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:268
 msgid "in the dialog that appears, click the *Update* button."
-msgstr ""
+msgstr "trong hộp thoại xuất hiện, nhấp vào nút *Cập nhật*."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:273
 msgid "Your module will then appear in the list of available apps."
 msgstr ""
+"Sau đó, phân hệ của bạn sẽ xuất hiện trong danh sách các ứng dụng có sẵn."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:279
 msgid "Deploy in production"
@@ -4064,16 +4212,22 @@ msgid ""
 "and believe it is ready for production, you can merge your branch in the "
 "production branch."
 msgstr ""
+"Sau khi bạn đã kiểm thử phân hệ trong nhánh staging bằng dữ liệu production "
+"và tin rằng mọi thứ đã sẵn sàng cho production, bạn có thể hợp nhất nhánh "
+"của mình vào nhánh production."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:284
 msgid "Drag and drop your staging branch on the production branch."
-msgstr ""
+msgstr "Kéo và thả nhánh staging của bạn vào nhánh production."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:291
 msgid ""
 "This will merge the latest changes of your staging branch in the production "
 "branch, and update your production server with these latest changes."
 msgstr ""
+"Thao tác này sẽ hợp nhất những thay đổi mới nhất của nhánh staging vào nhánh"
+" production và cập nhật những thay đổi mới nhất này cho máy chủ production "
+"của bạn."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:302
 msgid ""
@@ -4082,6 +4236,9 @@ msgid ""
 "module in staging databases <odoosh-gettingstarted-firstmodule-"
 "productiondata-install>`."
 msgstr ""
+"Phân hệ của bạn sẽ không được cài đặt tự động, mà bạn phải cài đặt thủ công "
+"như đã giải thích trong :ref:`phần ở trên về cài đặt phân hệ trong cơ sở dữ "
+"liệu staging <odoosh-gettingstarted-firstmodule-productiondata-install>`."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:308
 msgid "Add a change"
@@ -4092,6 +4249,8 @@ msgid ""
 "This section explains how to add a change in your module by adding a new "
 "field in a model and deploy it."
 msgstr ""
+"Phần này giải thích cách thêm thay đổi vào phân hệ của bạn bằng cách thêm "
+"trường mới vào mô hình và triển khai trường đó."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:315
 msgid "From the Odoo.sh editor,"
@@ -4099,7 +4258,7 @@ msgstr "Từ trình soạn thảo Odoo.sh,"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:314
 msgid "browse to your module folder *~/src/user/my_module*,"
-msgstr ""
+msgstr "đi đến thư mục phân hệ của bạn *~/src/user/my_module*,"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:315
 msgid "then, open the file *models/models.py*."
@@ -4114,12 +4273,16 @@ msgid ""
 "use the file browser of your choice to browse to your module folder "
 "*~/src/odoo-addons/my_module*,"
 msgstr ""
+"sử dụng trình duyệt tệp bạn chọn để đi đến thư mục phân hệ của bạn "
+"*~/src/odoo-addons/my_module*,"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:320
 msgid ""
 "then, open the file *models/models.py* using the editor of your choice, such"
 " as *Atom*, *Sublime Text*, *PyCharm*, *vim*, ..."
 msgstr ""
+"sau đó, mở tệp *models/models.py* bằng trình soạn thảo bạn chọn, chẳng hạn "
+"như *Atom*, *Sublime Text*, *PyCharm*, *vim*, ..."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:323
 msgid "Then, after the description field"
@@ -4150,12 +4313,16 @@ msgid ""
 "These changes alter the database structure by adding a column in a table, "
 "and modify a view stored in database."
 msgstr ""
+"Những thay đổi này làm thay đổi cấu trúc cơ sở dữ liệu bằng cách thêm một "
+"cột vào bảng và sửa đổi chế độ xem được lưu trữ trong cơ sở dữ liệu."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:352
 msgid ""
 "In order to be applied in existing databases, such as your production "
 "database, these changes requires the module to be updated."
 msgstr ""
+"Để áp dụng được vào các cơ sở dữ liệu hiện có, chẳng hạn như cơ sở dữ liệu "
+"production, những thay đổi này yêu cầu phải cập nhật phân hệ."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:355
 msgid ""
@@ -4163,6 +4330,8 @@ msgid ""
 "platform when you push your changes, increase your module version in its "
 "manifest."
 msgstr ""
+"Nếu bạn muốn nền tảng Odoo.sh tự động cập nhật khi bạn push các thay đổi, "
+"hãy tăng phiên bản phân hệ trong tệp kê khai."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:358
 msgid "Open the module manifest *__manifest__.py*."
@@ -4178,10 +4347,12 @@ msgid ""
 "The platform will detect the change of version and trigger the update of the"
 " module upon the new revision deployment."
 msgstr ""
+"Nền tảng sẽ phát hiện sự thay đổi phiên bản và kích hoạt cập nhật phân hệ "
+"khi triển khai bản sửa đổi mới."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:375
 msgid "Browse to your Git folder."
-msgstr ""
+msgstr "Đi đến thư mục Git của bạn."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:377
 msgid "Then, from an Odoo.sh terminal:"
@@ -4189,7 +4360,7 @@ msgstr "Sau đó, từ terminal Odoo.sh:"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:389
 msgid "Then, stage your changes to be committed"
-msgstr ""
+msgstr "Khi đó, chọn thay đổi cần được commit"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:401
 msgid "Push your changes:"
@@ -4201,7 +4372,7 @@ msgstr "Từ terminal Odoo.sh:"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:415
 msgid "The platform will then create a new build for the branch *feature-1*."
-msgstr ""
+msgstr "Sau đó, nền tảng sẽ tạo bản dựng mới cho nhánh *feature-1*."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:420
 msgid ""
@@ -4212,6 +4383,12 @@ msgid ""
 "field will be directly available. Otherwise you can manually update the "
 "module within the apps list."
 msgstr ""
+"Sau khi đã kiểm thử các thay đổi, bạn có thể hợp nhất chúng vào nhánh "
+"production, ví dụ bằng cách kéo và thả nhánh này trên nhánh production trong"
+" giao diện Odoo.sh. Khi bạn tăng phiên bản phân hệ trong tệp kê khai, nền "
+"tảng sẽ tự động cập nhật phân hệ và trường mới của bạn sẽ có ngay. Nếu "
+"không, bạn có thể cập nhật phân hệ trong danh sách ứng dụng theo cách thủ "
+"công."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:426
 msgid "Use an external Python library"
@@ -4223,6 +4400,9 @@ msgid ""
 "by default, you can define a *requirements.txt* file listing the external "
 "libraries your modules depends on."
 msgstr ""
+"Nếu bạn muốn sử dụng thư viện Python bên ngoài không được cài đặt theo mặc "
+"định, bạn có thể xác định tệp *requirements.txt* liệt kê các thư viện bên "
+"ngoài mà phân hệ của bạn phụ thuộc vào."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:432
 msgid ""
@@ -4232,50 +4412,65 @@ msgid ""
 "requiring system packages for their compilation, and **third-party Odoo "
 "modules**."
 msgstr ""
+"Không thể cài đặt hoặc nâng cấp các gói hệ thống trên cơ sở dữ liệu Odoo.sh "
+"(VD: các gói apt). Tuy nhiên, trong những trường hợp cụ thể, các gói có thể "
+"được cân nhắc cài đặt. Điều này cũng áp dụng cho **các phân hệ Python** cần "
+"gói hệ thống để biên dịch và **các phân hệ Odoo của bên thứ ba**."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:436
 msgid "**PostgreSQL extensions** are not supported on Odoo.sh."
-msgstr ""
+msgstr "**Các tiện ích mở rộng PostgreSQL** không được hỗ trợ trên Odoo.sh."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:437
 msgid ""
 "For more information, consult our `FAQ "
 "<https://www.odoo.sh/faq#install_dependencies>`_."
 msgstr ""
+"Để tìm hiểu thêm thông tin, vui lòng tham khảo `FAQ "
+"<https://www.odoo.sh/faq#install_dependencies>`_."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:439
 msgid ""
 "The platform will use this file to automatically install the Python "
 "libraries your project needs."
 msgstr ""
+"Nền tảng sẽ sử dụng tệp này để tự động cài đặt các thư viện Python mà dự án "
+"của bạn cần."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:441
 msgid ""
 "The feature is explained in this section by using the `Unidecode library "
 "<https://pypi.python.org/pypi/Unidecode>`_ in your module."
 msgstr ""
+"Tính năng này được giải thích trong phần này bằng cách sử dụng `thư viện "
+"Unidecode <https://pypi.python.org/pypi/Unidecode>`_ trong phân hệ của bạn."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:444
 msgid "Create a file *requirements.txt* in the root folder of your repository"
 msgstr ""
+"Tạo một tệp *requirements.txt* trong thư mục gốc của kho lưu trữ của bạn"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:446
 msgid ""
 "From the Odoo.sh editor, create and open the file "
 "~/src/user/requirements.txt."
 msgstr ""
+"Từ trình soạn thảo Odoo.sh, tạo và mở tệp ~/src/user/requirements.txt."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:448
 msgid ""
 "Or, from your computer, create and open the file ~/src/odoo-"
 "addons/requirements.txt."
 msgstr ""
+"Hoặc từ máy tính của bạn, tạo và mở tệp ~/src/odoo-addons/requirements.txt."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:456
 msgid ""
 "Then use the library in your module, for instance to remove accents from "
 "characters in the name field of your model."
 msgstr ""
+"Sau đó, sử dụng thư viện trong phân hệ của bạn, ví dụ để xóa dấu khỏi các ký"
+" tự trong trường tên của mô hình."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:459
 msgid "Open the file *models/models.py*."
@@ -4290,14 +4485,16 @@ msgid ""
 "Adding a Python dependency requires a module version increase for the "
 "platform to install it."
 msgstr ""
+"Việc thêm phụ thuộc Python yêu cầu tăng phiên bản phân hệ để nền tảng có thể"
+" cài đặt phụ thuộc đó."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:496
 msgid "Edit the module manifest *__manifest__.py*"
-msgstr ""
+msgstr "Chỉnh sửa tệp kê khai phân hệ *__manifest__.py*"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:510
 msgid "Stage and commit your changes:"
-msgstr "Stage và commit thay đổi của bạn:"
+msgstr "Chọn và commit thay đổi của bạn:"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:518
 msgid "Then, push your changes:"
@@ -4322,6 +4519,10 @@ msgid ""
 "consoles, Odoo Shell consoles and `Notebooks "
 "<https://jupyterlab.readthedocs.io/en/stable/user/notebook.html>`_."
 msgstr ""
+"Trình soạn thảo online cho phép bạn chỉnh sửa mã nguồn của bản dựng từ trình"
+" duyệt web. Nhờ nó, bạn cũng khả năng mở terminal, bảng điều khiển Python, "
+"bảng điều khiển Odoo Shell và `Notebooks "
+"<https://jupyterlab.readthedocs.io/en/stable/user/notebook.html>`_."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:18
 msgid ""
@@ -4331,6 +4532,11 @@ msgid ""
 " to your build domain name (e.g. *https://odoo-addons-"
 "master-1.dev.odoo.com/odoo-sh/editor*)."
 msgstr ""
+"Bạn có thể truy cập trình soạn thảo của bản dựng thông qua :ref:`các tab "
+"nhánh <odoosh-gettingstarted-branches-tabs>`, :ref:`menu thả xuống của bản "
+"dựng <odoosh-gettingstarted-builds-dropdown-menu>` hoặc bằng cách thêm "
+"*/odoo-sh/editor* vào tên miền bản dựng của bạn (VD: *https://odoo-addons-"
+"master-1.dev.odoo.com/odoo-sh/editor*)."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:25
 msgid "Edit the source code"
@@ -4338,34 +4544,40 @@ msgstr "Chỉnh sửa mã nguồn"
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:27
 msgid "The working directory is composed of the following folders:"
-msgstr ""
+msgstr "Thư mục làm việc bao gồm các thư mục sau:"
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:49
 msgid ""
 "You can edit the source code (files under */src*) in development and staging"
 " builds."
 msgstr ""
+"Bạn có thể chỉnh sửa mã nguồn (các tệp trong thư mục */src*) trong bản dựng "
+"phát triển và bản dựng staging."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:52
 msgid ""
 "Your changes won't be propagated to a new build, you must commit them in "
 "your source code if you want to make them persist."
 msgstr ""
+"Những thay đổi của bạn sẽ không được chuyển sang bản dựng mới, bạn phải "
+"commit chúng vào mã nguồn nếu muốn chúng được lưu lại."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:56
 msgid ""
 "For production builds, the source code is read-only, because applying local "
 "changes on a production server is not a good practice."
 msgstr ""
+"Đối với bản dựng production, mã nguồn ở chế độ chỉ đọc vì không nên áp dụng "
+"các thay đổi cục bộ trên máy chủ production."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:59
 msgid ""
 "The source code of your Github repository is located under */src/user*,"
-msgstr ""
+msgstr "Mã nguồn của kho lưu trữ Github của bạn nằm trong */src/user*,"
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:60
 msgid "The source code of Odoo is located under"
-msgstr ""
+msgstr "Mã nguồn của Odoo nằm trong"
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:62
 msgid "*/src/odoo* (`odoo/odoo <https://github.com/odoo/odoo>`_),"
@@ -4390,6 +4602,8 @@ msgid ""
 "To open a file in the editor, just double-click on it in the file browser "
 "panel on the left."
 msgstr ""
+"Để mở một tệp trong trình soạn thảo, chỉ cần nhấp đúp vào tệp đó trong bảng "
+"duyệt tệp ở bên trái."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:71
 msgid ""
@@ -4397,6 +4611,9 @@ msgid ""
 "menu :menuselection:`File --> Save .. File` or by hitting the :kbd:`Ctrl+S` "
 "shortcut."
 msgstr ""
+"Sau đó, bạn có thể bắt đầu thực hiện các thay đổi. Bạn có thể lưu thay đổi "
+"của mình bằng menu :menuselection:`Tệp --> Lưu .. Tệp` hoặc bằng cách nhấn "
+"phím tắt :kbd:`Ctrl+S`."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:77
 msgid ""
@@ -4404,6 +4621,10 @@ msgid ""
 "will detect it and reload automatically so your changes are reflected "
 "immediately, without having to restart the server manually."
 msgstr ""
+"Nếu bạn lưu tệp Python nằm trong đường dẫn tiện ích bổ sung máy chủ Odoo, "
+"thì Odoo sẽ phát hiện tệp đó và tự động tải lại để các thay đổi của bạn có "
+"hiệu lực ngay lập tức mà không cần phải khởi động lại máy chủ theo cách thủ "
+"công."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:84
 msgid ""
@@ -4423,7 +4644,7 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:93
 msgid "You can also open a terminal and execute the command:"
-msgstr ""
+msgstr "Bạn cũng có thể mở terminal và thực hiện lệnh:"
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:102
 msgid "Commit & Push your changes"
@@ -4434,26 +4655,27 @@ msgid ""
 "You have the possibility to commit and push your changes to your Github "
 "repository."
 msgstr ""
+"Bạn có thể commit và push những thay đổi của mình lên kho lưu trữ Github."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:106
 msgid "Open a terminal (:menuselection:`File --> New --> Terminal`),"
-msgstr ""
+msgstr "Mở terminal (:menuselection:`Tệp --> Mới --> Terminal`),"
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:107
 msgid "Change the directory to *~/src/user* using :code:`cd ~/src/user`,"
-msgstr ""
+msgstr "Thay đổi thư mục thành *~/src/user* bằng :code:`cd ~/src/user`,"
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:108
 msgid "Stage your changes using :code:`git add`,"
-msgstr ""
+msgstr "Chọn thay đổi của bạn bằng :code:`git add`,"
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:109
 msgid "Commit your changes using :code:`git commit`,"
-msgstr ""
+msgstr "Commit thay đổi của bạn bằng :code:`git commit`,"
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:110
 msgid "Push your changes using :code:`git push https HEAD:<branch>`."
-msgstr ""
+msgstr "Push thay đổi của bạn bằng :code:`git push https HEAD:<branch>`."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:112
 msgid "In this last command,"
@@ -4464,10 +4686,12 @@ msgid ""
 "*https* is the name of your *HTTPS* Github remote repository (e.g. "
 "https://github.com/username/repository.git),"
 msgstr ""
+"*https* là tên kho lưu trữ *HTTPS* Github từ xa của bạn (VD: "
+"https://github.com/username/repository.git),"
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:116
 msgid "HEAD is the reference to the latest revision you committed,"
-msgstr ""
+msgstr "HEAD là tham chiếu đến bản sửa đổi mới nhất mà bạn đã commit,"
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:117
 msgid ""
@@ -4475,6 +4699,8 @@ msgid ""
 "push the changes, most-likely the current branch if you work in a "
 "development build."
 msgstr ""
+"<branch> phải được thay thế bằng tên nhánh mà bạn muốn push các thay đổi "
+"tới, thường là nhánh hiện tại nếu bạn làm việc trong bản dựng phát triển."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:124
 msgid ""
@@ -4490,6 +4716,17 @@ msgid ""
 "command-line/>`_ and use it as password. Granting the ``repo`` permission "
 "suffices."
 msgstr ""
+"SSH Github từ xa không được sử dụng vì mã khóa riêng tư SSH của bạn không "
+"được lưu trữ trong container bản dựng (vì những lo ngại hợp lý về bảo mật) "
+"và không được chuyển tiếp qua SSH Agent (vì bạn truy cập trình soạn thảo này"
+" thông qua trình duyệt web) và do đó bạn không thể xác thực chính mình với "
+"Github bằng SSH. Bạn phải sử dụng HTTPS từ xa của kho lưu trữ Github để push"
+" các thay đổi của mình, được tự động thêm vào với tên là *https* trong Git "
+"từ xa của bạn. Bạn sẽ được nhắc nhập tên người dùng và mật khẩu Github. Nếu "
+"đã kích hoạt xác thực hai yếu tố trên Github, bạn có thể tạo `token truy cập"
+" cá nhân <https://help.github.com/articles/creating-a-personal-access-token-"
+"for-the-command-line/>`_ và sử dụng nó làm mật khẩu. Chỉ cần cấp quyền "
+"``repo`` là đủ."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:137
 msgid ""
@@ -4498,6 +4735,11 @@ msgid ""
 "rather than branches. In other words, this means you can have multiple "
 "builds on the same branch, but on different revisions."
 msgstr ""
+"Thư mục nguồn Git *~/src/user* không được checkout trên một nhánh mà trong "
+"một bản sửa đổi tách biệt: Điều này là do các bản dựng hoạt động trong những"
+" bản sửa đổi cụ thể mà không phải các nhánh. Nói cách khác, điều này có "
+"nghĩa là bạn có thể có nhiều bản dựng trên cùng một nhánh, nhưng nằm trong "
+"các bản sửa đổi khác nhau."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:141
 msgid ""
@@ -4507,10 +4749,16 @@ msgid ""
 " same revision as the new build that was created, but always make sure to be"
 " in an editor of a build using the latest revision of your branch."
 msgstr ""
+"Sau khi các thay đổi được push, theo :ref:`hành vi push nhánh <odoosh-"
+"gettingstarted-branches-tabs-settings>` của bạn, một bản dựng mới có thể "
+"được tạo. Bạn có thể tiếp tục làm việc trong trình soạn thảo mà bạn đã push,"
+" vì nó sẽ có cùng bản sửa đổi với bản dựng mới được tạo, nhưng hãy luôn đảm "
+"bảo rằng bạn làm việc trong trình soạn thảo của bản dựng sử dụng bản sửa đổi"
+" mới nhất của nhánh."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:148
 msgid "Consoles"
-msgstr ""
+msgstr "Bảng điều khiển"
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:150
 msgid ""
@@ -4522,12 +4770,20 @@ msgid ""
 "display>`_ capabilities. Thanks to this, you will be able to display objects"
 " in HTML."
 msgstr ""
+"Bạn có thể mở bảng điều khiển Python, là `các shell tương tác IPython "
+"<https://ipython.readthedocs.io/en/stable/interactive/tutorial.html>`_. Một "
+"trong những bổ sung thú vị nhất khi sử dụng bảng điều khiển Python thay cho "
+"IPython shell trong terminal là khả năng `hiển thị phong phú "
+"<https://ipython.readthedocs.io/en/stable/config/integrating.html#rich-"
+"display>`_. Nhờ đó, bạn có thể hiển thị các đối tượng trong HTML."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:158
 msgid ""
 "You can for instance display cells of a CSV file using `pandas "
 "<https://pandas.pydata.org/pandas-docs/stable/tutorials.html>`_."
 msgstr ""
+"Ví dụ, bạn có thể hiển thị các ô của tệp CSV bằng cách sử dụng `pandas "
+"<https://pandas.pydata.org/pandas-docs/stable/tutorials.html>`_."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:164
 msgid ""
@@ -4535,6 +4791,9 @@ msgid ""
 "registry and model methods of your database. You can also directly read or "
 "write on your records."
 msgstr ""
+"Bạn cũng có thể mở bảng điều khiển Odoo Shell để dùng thử Odoo registry và "
+"các phương pháp mô hình của cơ sở dữ liệu. Bạn cũng có thể trực tiếp đọc "
+"hoặc ghi vào bản ghi của mình."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:169
 msgid ""
@@ -4544,12 +4803,19 @@ msgid ""
 "in your database as well. You therefore should use Odoo consoles carefully "
 "on production databases."
 msgstr ""
+"Trong Bảng điều khiển Odoo, các giao dịch được tự động commit. Ví dự, điều "
+"này có nghĩa là các thay đổi trong bản ghi được áp dụng hiệu quả trong cơ sở"
+" dữ liệu. Nếu bạn thay đổi tên người dùng, thì tên người dùng cũng sẽ được "
+"thay đổi trong cơ sở dữ liệu của bạn. Do đó, bạn nên sử dụng bảng điều khiển"
+" Odoo thật cẩn thận trên cơ sở dữ liệu production."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:174
 msgid ""
 "You can use *env* to invoke models of your database registry, e.g. "
 ":code:`env['res.users']`."
 msgstr ""
+"Bạn có thể sử dụng *env* để gọi các mô hình của registry cơ sở dữ liệu. VD: "
+":code:`env['res.users']`."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:184
 msgid ""
@@ -4558,16 +4824,22 @@ msgid ""
 "<https://ipython.readthedocs.io/en/stable/config/integrating.html#rich-"
 "display>`_ mentioned above."
 msgstr ""
+"Lớp :code:`Pretty` cho phép bạn dễ dàng hiển thị các danh sách và từ điển "
+"một cách đẹp mắt, bằng cách sử dụng `hiển thị phong phú "
+"<https://ipython.readthedocs.io/en/stable/config/integrating.html#rich-"
+"display>`_ đã đề cập ở trên."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:192
 msgid ""
 "You can also use `pandas <https://pandas.pydata.org/pandas-"
 "docs/stable/tutorials.html>`_ to display graphs."
 msgstr ""
+"Bạn cũng có thể sử dụng `pandas <https://pandas.pydata.org/pandas-"
+"docs/stable/tutorials.html>`_ để hiển thị biểu đồ."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:8
 msgid "The settings allow you to manage the configuration of your project."
-msgstr ""
+msgstr "Các cài đặt cho phép bạn quản lý cấu hình của dự án."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:14
 msgid "Project name"
@@ -4582,6 +4854,8 @@ msgid ""
 "This defines the address that will be used to access your production "
 "database."
 msgstr ""
+"Thông tin này xác định địa chỉ sẽ được sử dụng để truy cập vào cơ sở dữ liệu"
+" production của bạn."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:23
 msgid ""
@@ -4589,6 +4863,9 @@ msgid ""
 "and assigned automatically. However, when you change your project name, only"
 " future builds will use the new name."
 msgstr ""
+"Địa chỉ của bản dựng staging và phát triển của bạn được lấy từ tên này và "
+"được gán tự động. Tuy nhiên, nếu bạn thay đổi tên dự án, thì chỉ các bản "
+"dựng trong tương lai mới sử dụng tên mới."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:29
 msgid "Collaborators"
@@ -4596,21 +4873,23 @@ msgstr "Cộng tác viên"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:31
 msgid "Manage the Github users who can access your project."
-msgstr ""
+msgstr "Quản lý người dùng Github có thể truy cập vào dự án của bạn."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:36
 msgid "There are two levels of users:"
-msgstr ""
+msgstr "Có hai cấp độ người dùng:"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:38
 msgid "Admin: has access to all features of Odoo.sh."
-msgstr ""
+msgstr "Quản trị viên: có quyền truy cập vào tất cả tính năng của Odoo.sh."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:39
 msgid ""
 "User: does not have access to the project settings nor to the production and"
 " staging databases."
 msgstr ""
+"Người dùng: không có quyền truy cập vào cài đặt dự án cũng như cơ sở dữ liệu"
+" production và staging."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:41
 msgid ""
@@ -4620,12 +4899,19 @@ msgid ""
 "connect* feature, but they can of course use their regular account on these "
 "databases if they have one, using their regular credentials."
 msgstr ""
+"Nhóm người dùng chỉ các lập trình viên có thể thực hiện sửa đổi trong mã của"
+" bạn nhưng không được phép truy cập dữ liệu production. Người dùng của nhóm "
+"này không thể kết nối với cơ sở dữ liệu production và staging bằng tính năng"
+" *kết nối 1 lần nhấp*, nhưng tất nhiên họ có thể sử dụng tài khoản thông "
+"thường của mình trên các cơ sở dữ liệu này nếu có, bằng thông tin đăng nhập "
+"thông thường của họ."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:46
 msgid ""
 "In addition, they cannot use the webshell nor have access to the server "
 "logs."
 msgstr ""
+"Ngoài ra, họ không thể sử dụng webshell hay truy cập vào nhật ký máy chủ."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:54
 msgid "User"
@@ -4680,7 +4966,7 @@ msgstr "|green|"
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:61
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:89
 msgid "1-click connect"
-msgstr "Kết nối bằng một cú nhấp chuột"
+msgstr "Kết nối 1 lần nhấp"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:69
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:97
@@ -4710,25 +4996,31 @@ msgstr "Truy cập công khai"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:147
 msgid "Allow public access to your development builds."
-msgstr ""
+msgstr "Cấp quyền truy cập công khai vào bản dựng phát triển của bạn."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:152
 msgid ""
 "If activated, this option exposes the Builds page publicly, allowing "
 "visitors to connect to your development builds."
 msgstr ""
+"Nếu được kích hoạt, tùy chọn này sẽ hiển thị công khai trang Bản dựng, cho "
+"phép khách truy cập kết nối với bản dựng phát triển của bạn."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:155
 msgid ""
 "In addition, visitors have access to the logs, shell and mails of your "
 "development builds."
 msgstr ""
+"Ngoài ra, khách truy cập cũng có thể truy cập vào nhật ký, shell và email "
+"của bản dựng phát triển của bạn."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:157
 msgid ""
 "Production and staging builds are excluded, visitors can only see their "
 "status."
 msgstr ""
+"Quyền này không bao gồm bản dựng production và staging, khách truy cập chỉ "
+"có thể xem trạng thái của chúng."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:162
 msgid "Custom domains"
@@ -4739,12 +5031,16 @@ msgid ""
 "To configure additional domains please refer to the corresponding branch's "
 ":ref:`settings tab <odoosh-gettingstarted-branches-tabs-settings>`."
 msgstr ""
+"Để cấu hình các miền bổ sung, vui lòng tham khảo :ref:`phần cài đặt <odoosh-"
+"gettingstarted-branches-tabs-settings>` của nhánh."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:172
 msgid ""
 "Configure the deploy keys for the private repositories you use as submodules"
 " in your branches to allow Odoo.sh to download them."
 msgstr ""
+"Cấu hình mã khóa triển khai cho các kho lưu trữ riêng tư mà bạn sử dụng làm "
+"phân hệ phụ trong nhánh của mình để cho phép Odoo.sh tải chúng xuống."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:176
 msgid ""
@@ -4753,6 +5049,9 @@ msgid ""
 "chapter :ref:`Submodules <odoosh-advanced-submodules>` of this "
 "documentation."
 msgstr ""
+"Các cài đặt này chỉ bắt buộc đối với **kho lưu trữ riêng tư**. Nếu đang tìm "
+"hiểu cách thiết lập các phân hệ phụ, bạn có thể tham khảo hướng dẫn trong "
+"chương :ref:`Phân hệ phụ <odoosh-advanced-submodules> của tài liệu này."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:183
 msgid ""
@@ -4761,17 +5060,25 @@ msgid ""
 "for Odoo.sh, so the remote Git server allows our platform to download the "
 "revisions of this private repository."
 msgstr ""
+"Khi một kho lưu trữ được đặt là riêng tư, thì sẽ không thể công khai tải "
+"xuống các nhánh và bản sửa đổi của nó. Do đó, bạn cần cấu hình mã khóa triển"
+" khai cho Odoo.sh, để máy chủ Git từ xa cho phép nền tảng của chúng tôi tải "
+"xuống các bản sửa đổi của kho lưu trữ riêng tư này."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:188
 msgid ""
 "To configure the deploy key for a private repository, proceed as follows:"
 msgstr ""
+"Để cấu hình mã khóa triển khai cho kho lưu trữ riêng tư, hãy thực hiện như "
+"sau:"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:190
 msgid ""
 "in the input, paste the SSH URL of your private sub-repository and click on "
 "*Add*,"
 msgstr ""
+"trong phần nhập thông tin, dán URL SSH của kho lưu trữ riêng tư phụ của bạn "
+"và nhấp vào *Thêm*,"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:192
 msgid "e.g. *git@github.com:USERNAME/REPOSITORY.git*"
@@ -4782,6 +5089,8 @@ msgid ""
 "it can be another Git server than Github, such as Bitbucket, Gitlab or even "
 "your own self-hosted server"
 msgstr ""
+"nó có thể là một máy chủ Git khác Github, chẳng hạn như Bitbucket, Gitlab "
+"hoặc thậm chí là máy chủ tự lưu trữ của bạn"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:196
 msgid "copy the public key,"
@@ -4790,31 +5099,41 @@ msgstr "sao chép mã khóa công khai,"
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:198
 msgid "it should look like *ssh-rsa some...random...characters...here...==*"
 msgstr ""
+"nó phải có định dạng *ssh-rsa một số...ký tự...ngẫu nhiên...ở đây...==*"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:200
 msgid ""
 "in the settings of the private sub-repository, add the public key amongst "
 "the deploy keys."
 msgstr ""
+"trong phần cài đặt của kho lưu trữ riêng tư phụ, thêm mã khóa công khai vào "
+"trong số các mã khóa triển khai."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:202
 msgid ""
 "Github.com: :menuselection:`Settings --> Deploy keys --> Add deploy key`"
 msgstr ""
+"Github.com: :menuselection:`Cài đặt --> Mã khoá triển khai --> Thêm mã khoá "
+"triển khai`"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:203
 msgid "Bitbucket.com: :menuselection:`Settings --> Access keys --> Add key`"
 msgstr ""
+"Bitbucket.com: :menuselection:`Cài đặt --> Mã khoá triển khai --> Thêm mã "
+"khoá`"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:204
 msgid "Gitlab.com: :menuselection:`Settings --> Repository --> Deploy Keys`"
 msgstr ""
+"Gitlab.com: :menuselection:`Cài đặt --> Kho lưu trữ --> Mã khoá triển khai`"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:205
 msgid ""
 "Self-hosted: append the key to the git user’s authorized_keys file in its "
 ".ssh directory"
 msgstr ""
+"Tự lưu trữ: thêm mã khóa vào tệp authorized_keys của người dùng git trong "
+"thư mục .ssh của người dùng đó"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:208
 msgid "Storage Size"
@@ -4822,33 +5141,39 @@ msgstr "Kích thước Lưu trữ"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:210
 msgid "This section shows the storage size used by your project."
-msgstr ""
+msgstr "Phần này hiển thị kích thước lưu trữ mà dự án của bạn sử dụng."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:215
 msgid "Storage size is computed as follows:"
-msgstr ""
+msgstr "Kích thước lưu trữ được tính như sau:"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:217
 msgid "the size of the PostgreSQL database"
-msgstr ""
+msgstr "kích thước của cơ sở dữ liệu PostgreSQL"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:219
 msgid ""
 "the size of the disk files available in your container: database filestore, "
 "sessions storage directory..."
 msgstr ""
+"kích thước của các tệp đĩa có sẵn trong container của bạn: filestore của cơ "
+"sở dữ liệu, thư mục lưu trữ phiên..."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:222
 msgid ""
 "In case you want to analyze disk usage, you can run the tool `ncdu "
 "<https://dev.yorhel.nl/ncdu/man>`_ in your Web Shell."
 msgstr ""
+"Nếu muốn phân tích mức sử dụng đĩa, bạn có thể chạy công cụ `ncdu "
+"<https://dev.yorhel.nl/ncdu/man>`_ trong Web Shell của mình."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:225
 msgid ""
 "Should your production database size grow to exceed what's provisioned in "
 "your subscription, it will automatically be synchronized with it."
 msgstr ""
+"Nếu kích thước cơ sở dữ liệu production của bạn tăng quá mức được cung cấp "
+"trong gói đăng ký, chúng sẽ tự động được đồng bộ hóa với nhau."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:229
 msgid "Database Workers"
@@ -4860,6 +5185,10 @@ msgid ""
 "increase the load your production database is able to handle. If you add "
 "more, it will automatically be synchronized with your subscription."
 msgstr ""
+"Bạn có thể cấu hình thêm các worker cơ sở dữ liệu tại đây. Việc có nhiều "
+"worker hơn giúp tăng tải lượng mà cơ sở dữ liệu production của bạn có thể xử"
+" lý. Nếu bạn thêm nhiều worker hơn, nó sẽ tự động được đồng bộ hóa với gói "
+"đăng ký của bạn."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:239
 msgid ""
@@ -4869,6 +5198,11 @@ msgid ""
 "it's not due to your own customizations you can open a ticket `here "
 "<https://www.odoo.com/help>`_."
 msgstr ""
+"Việc tăng worker sẽ không hoàn toàn giải quyết được mọi vấn đề về hiệu suất,"
+" mà điều này chỉ cho phép máy chủ xử lý nhiều kết nối hơn cùng một lúc. Nếu "
+"một số thao tác chậm bất thường, thì rất có thể là do vấn đề về mã. Trong "
+"trường hợp không phải do tùy chỉnh của bạn, bạn có thể mở phiếu hỗ trợ `tại "
+"đây <https://www.odoo.com/help>`_."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:245
 msgid "Staging Branches"
@@ -4880,6 +5214,9 @@ msgid ""
 "the same time. If you add more, it will automatically be synchronized with "
 "your subscription."
 msgstr ""
+"Các nhánh staging bổ sung cho phép bạn phát triển và kiểm thử nhiều tính "
+"năng hơn cùng lúc. Nếu bạn tăng nhánh staging, nó sẽ tự động được đồng bộ "
+"hóa với gói đăng ký của bạn."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:254
 msgid "Activation"
@@ -4890,12 +5227,16 @@ msgid ""
 "Shows the status of the project's activation. You can change the project's "
 "activation code if needed."
 msgstr ""
+"Hiển thị trạng thái kích hoạt của dự án. Bạn có thể thay đổi mã kích hoạt "
+"của dự án nếu cần."
 
 #: ../../content/administration/odoo_sh/getting_started/status.rst:8
 msgid ""
 "The status page shows statistics regarding the servers your project uses. It"
 " includes the servers availability."
 msgstr ""
+"Trang trạng thái hiển thị số liệu thống kê liên quan đến các máy chủ mà dự "
+"án của bạn sử dụng. Nó bao gồm cả tình trạng khả dụng của máy chủ."
 
 #: ../../content/administration/odoo_sh/overview/introduction.rst:3
 msgid "Introduction to Odoo.sh"
@@ -4924,11 +5265,14 @@ msgid ""
 " app dashboard. If the registration is successful, the banner will turn "
 "green and display the database expiration date."
 msgstr ""
+"Để đăng ký cơ sở dữ liệu của bạn, hãy nhập mã đăng ký vào banner trong trang"
+" chủ ứng dụng. Nếu đăng ký thành công, banner sẽ chuyển sang màu xanh lá cây"
+" và hiển thị ngày hết hạn của cơ sở dữ liệu."
 
 #: ../../content/administration/on_premise.rst:14
 msgid ""
 "The expiration date is also displayed at the bottom of the Settings page."
-msgstr ""
+msgstr "Ngày hết hạn cũng được hiển thị ở cuối trang Cài đặt."
 
 #: ../../content/administration/on_premise.rst:19
 msgid "Duplicate a database"
@@ -4942,10 +5286,16 @@ msgid ""
 " by checking the neutralize box when prompted, which executes all "
 ":file:`neutralize.sql` scripts for every installed module."
 msgstr ""
+"Sao chép cơ sở dữ liệu bằng cách truy cập trình quản lý cơ sở dữ liệu trên "
+"máy chủ của bạn (`<odoo-server>/web/database/manager`). Thông thường, bạn "
+"nên sao chép cơ sở dữ liệu production thành cơ sở dữ liệu kiểm thử bị vô "
+"hiệu hóa một phần. Bạn có thể thực hiện bằng cách chọn ô vô hiệu hóa một "
+"phần khi được nhắc, điều này sẽ thực thi tất cả các tập lệnh "
+":file:`neutralize.sql` cho mọi phân hệ đã cài đặt."
 
 #: ../../content/administration/on_premise.rst:27
 msgid "Common error messages and solutions"
-msgstr ""
+msgstr "Các thông báo lỗi thường gặp và giải pháp"
 
 #: ../../content/administration/on_premise.rst:30
 msgid "Registration error"
@@ -4954,7 +5304,7 @@ msgstr "Lỗi đăng ký"
 #: ../../content/administration/on_premise.rst:32
 msgid ""
 "In case of a registration error, the following message should be displayed."
-msgstr ""
+msgstr "Trong trường hợp xảy ra lỗi đăng ký, thông báo sau sẽ hiển thị."
 
 #: ../../content/administration/on_premise.rst-1
 msgid "Database registration error message"
@@ -4971,18 +5321,26 @@ msgid ""
 " Account <https://accounts.odoo.com/my/subscription>`_ or contact your "
 "Account Manager."
 msgstr ""
+"Kiểm tra **tính hợp lệ của gói đăng ký Odoo Enterprise** của bạn bằng cách "
+"xác minh xem thông tin đăng ký của bạn có thẻ :guilabel:`Đang hoạt động` "
+"trên `Tài khoản Odoo <https://accounts.odoo.com/my/subscription>`_ hay không"
+" hoặc liên hệ với Chuyên viên Quản lý Tài khoản của bạn."
 
 #: ../../content/administration/on_premise.rst:43
 msgid ""
 "Ensure that **no other database is linked** to the subscription code, as "
 "only one database can be linked per subscription."
 msgstr ""
+"Đảm bảo rằng **không có cơ sở dữ liệu nào khác được liên kết** với mã đăng "
+"ký, vì mỗi gói đăng ký chỉ có thể liên kết với một cơ sở dữ liệu."
 
 #: ../../content/administration/on_premise.rst:47
 msgid ""
 "If a test or a development database is needed, you can :ref:`duplicate a "
 "database <on-premise/duplicate>`."
 msgstr ""
+"Nếu cần cơ sở dữ liệu kiểm thử hoặc phát triển, bạn có thể :ref:`sao chép cơ"
+" sở dữ liệu <on-premise/duplicate>`."
 
 #: ../../content/administration/on_premise.rst:50
 msgid ""
@@ -4991,6 +5349,10 @@ msgid ""
 "<https://accounts.odoo.com/my/subscription>`_. If two or more databases "
 "share the same UUID, their name will be displayed."
 msgstr ""
+"Xác minh rằng **không có cơ sở dữ liệu nào dùng cùng một UUID** (Mã định "
+"danh duy nhất) bằng cách mở `Odoo Hợp đồng "
+"<https://accounts.odoo.com/my/subscription>`_. Nếu hai hoặc nhiều cơ sở dữ "
+"liệu đang dùng cùng một UUID, tên của chúng sẽ được hiển thị."
 
 #: ../../content/administration/on_premise.rst-1
 msgid "Database UUID error message"
@@ -5001,6 +5363,8 @@ msgid ""
 "If that is the case, manually change the database(s) UUID or `send a support"
 " ticket <https://www.odoo.com/help>`_."
 msgstr ""
+"Nếu đúng như vậy, hãy thay đổi UUID của cơ sở dữ liệu theo cách thủ công "
+"hoặc `gửi phiếu hỗ trợ <https://www.odoo.com/help>`_."
 
 #: ../../content/administration/on_premise.rst:60
 msgid ""
@@ -5008,20 +5372,27 @@ msgid ""
 "validation servers, ensure your **network and firewall settings** allow the "
 "Odoo server to open outgoing connections towards:"
 msgstr ""
+"Vì thông báo cập nhật phải có thể đến được máy chủ xác thực đăng ký của "
+"Odoo, hãy đảm bảo **cài đặt mạng và tường lửa** của bạn cho phép máy chủ "
+"Odoo mở các kết nối đi tới:"
 
 #: ../../content/administration/on_premise.rst:64
 msgid "`services.odoo.com` on port `443` (or `80`)"
-msgstr ""
+msgstr "`services.odoo.com` trên cổng `443` (hoặc `80`)"
 
 #: ../../content/administration/on_premise.rst:65
 msgid "for older deployments, `services.openerp.com` on port `443` (or `80`)"
 msgstr ""
+"đối với các triển khai cũ hơn, `services.openerp.com` trên cổng `443` (hoặc "
+"`80`)"
 
 #: ../../content/administration/on_premise.rst:67
 msgid ""
 "These ports must be kept open even after registering a database, as the "
 "update notification runs once a week."
 msgstr ""
+"Các cổng này phải được để mở ngay cả sau khi đăng ký cơ sở dữ liệu thành "
+"công, vì thông báo cập nhật sẽ chạy mỗi tuần một lần."
 
 #: ../../content/administration/on_premise.rst:71
 msgid "Too many users error"
@@ -5032,21 +5403,25 @@ msgid ""
 "If you have more users in a local database than provisioned in your Odoo "
 "Enterprise subscription, the following message should be displayed."
 msgstr ""
+"Nếu bạn có nhiều người dùng trong cơ sở dữ liệu cục bộ hơn số lượng được "
+"cung cấp trong gói đăng ký Odoo Enterprise, thông báo sau sẽ hiển thị."
 
 #: ../../content/administration/on_premise.rst-1
 msgid "Too many users on a database error message"
-msgstr ""
+msgstr "Thông báo lỗi quá nhiều người dùng trên một cơ sở dữ liệu"
 
 #: ../../content/administration/on_premise.rst:79
 msgid ""
 "When the message appears, you have 30 days to act before the database "
 "expires. The countdown is updated every day."
 msgstr ""
+"Khi thông báo này xuất hiện, bạn có 30 ngày để hành động trước khi cơ sở dữ "
+"liệu hết hạn. Số ngày đếm ngược sẽ được cập nhật mỗi ngày."
 
 #: ../../content/administration/on_premise.rst:82
 #: ../../content/administration/on_premise.rst:108
 msgid "To resolve the issue, either:"
-msgstr ""
+msgstr "Để xử lý vấn đề:"
 
 #: ../../content/administration/on_premise.rst:84
 msgid ""
@@ -5054,12 +5429,17 @@ msgid ""
 "your subscription` link displayed in the message to validate the upsell "
 "quotation and pay for the extra users."
 msgstr ""
+"**Thêm người dùng** vào gói đăng ký của bạn bằng cách nhấp vào liên kết "
+":guilabel:`Nâng cấp gói đăng ký` hiển thị trong thông báo để xác thực báo "
+"giá bán thêm và thanh toán cho số lượng người dùng bổ sung."
 
 #: ../../content/administration/on_premise.rst:86
 msgid ""
 ":ref:`Deactivate users <users/deactivate>` and **reject** the upsell "
 "quotation."
 msgstr ""
+":ref:`Huỷ kích hoạt người dùng <users/deactivate>` và **từ chối** báo giá "
+"bán thêm."
 
 #: ../../content/administration/on_premise.rst:89
 msgid ""
@@ -5069,6 +5449,12 @@ msgid ""
 "upsell quotation by clicking the banner to update the subscription or `send "
 "a support ticket <https://www.odoo.com/help>`_ to resolve the issue."
 msgstr ""
+"Nếu bạn đang sử dụng gói đăng ký theo tháng, cơ sở dữ liệu sẽ tự động cập "
+"nhật để phản ánh (những) người dùng đã thêm. Nếu bạn đang sử dụng gói theo "
+"năm hoặc nhiều năm, banner hết hạn sẽ xuất hiện trong cơ sở dữ liệu. Bạn có "
+"thể tạo báo giá bán thêm bằng cách nhấp vào banner để cập nhật gói đăng ký "
+"hoặc `gửi phiếu hỗ trợ <https://www.odoo.com/help>`_ để giải quyết vấn đề "
+"này."
 
 #: ../../content/administration/on_premise.rst:94
 msgid ""
@@ -5076,6 +5462,8 @@ msgid ""
 "disappears automatically after a few days, when the next verification "
 "occurs."
 msgstr ""
+"Khi cơ sở dữ liệu của bạn có đúng số lượng người dùng, thông báo hết hạn sẽ "
+"tự động biến mất sau vài ngày khi xác minh tiếp theo diễn ra."
 
 #: ../../content/administration/on_premise.rst:98
 msgid "Database expired error"
@@ -5086,6 +5474,8 @@ msgid ""
 "If your database expires before you renew your subscription, the following "
 "message should be displayed."
 msgstr ""
+"Nếu cơ sở dữ liệu hết hạn trước khi bạn gia hạn gói đăng ký, thông báo sau "
+"sẽ hiển thị."
 
 #: ../../content/administration/on_premise.rst-1
 msgid "Database expired error message"
@@ -5096,6 +5486,8 @@ msgid ""
 "This message appears if you fail to act before the end of the 30-day "
 "countdown."
 msgstr ""
+"Thông báo này sẽ xuất hiện nếu bạn không hành động trước khi thời gian đếm "
+"ngược 30 ngày kết thúc."
 
 #: ../../content/administration/on_premise.rst:110
 msgid ""
@@ -5104,10 +5496,14 @@ msgid ""
 "will be renewed when the payment arrives which can take a few days. Credit "
 "card payments are processed immediately."
 msgstr ""
+"Nhấp vào liên kết :guilabel:`Gia hạn gói đăng ký` hiển thị trong thông báo "
+"và hoàn tất quy trình. Nếu bạn thanh toán bằng chuyển khoản, gói đăng ký của"
+" bạn sẽ được gia hạn khi khoản thanh toán được nhận, có thể mất vài ngày. "
+"Thanh toán bằng thẻ tín dụng sẽ được xử lý ngay lập tức."
 
 #: ../../content/administration/on_premise.rst:113
 msgid "`Send a support ticket <https://www.odoo.com/help>`_."
-msgstr ""
+msgstr "`Gửi phiếu hỗ trợ qua <https://www.odoo.com/help>`_."
 
 #: ../../content/administration/on_premise/community_to_enterprise.rst:6
 msgid "Switch from Community to Enterprise"
@@ -5118,6 +5514,8 @@ msgid ""
 "Depending on your current installation, there are multiple ways to upgrade "
 "your community version. In any case the basic guidelines are:"
 msgstr ""
+"Có nhiều cách để nâng cấp phiên bản community tuỳ vào cài đặt hiện tại của "
+"bạn. Trong mọi trường hợp, các hướng dẫn cơ bản là:"
 
 #: ../../content/administration/on_premise/community_to_enterprise.rst:12
 #: ../../content/administration/on_premise/community_to_enterprise.rst:31
@@ -5141,7 +5539,7 @@ msgstr "Khởi động lại máy chủ của bạn"
 
 #: ../../content/administration/on_premise/community_to_enterprise.rst:23
 msgid "Enter your Odoo Enterprise Subscription code"
-msgstr ""
+msgstr "Nhập mã đăng ký Odoo Enterprise của bạn"
 
 #: ../../content/administration/on_premise/community_to_enterprise.rst:29
 msgid "On Linux, using an installer"
@@ -5154,11 +5552,11 @@ msgstr "Ngừng máy chủ Odoo"
 #: ../../content/administration/on_premise/community_to_enterprise.rst:39
 msgid ""
 "Install the enterprise .deb (it should install over the community package)"
-msgstr ""
+msgstr "Cài đặt enterprise .deb (nó sẽ cài đặt đè lên gói community)"
 
 #: ../../content/administration/on_premise/community_to_enterprise.rst:45
 msgid "Update your database to the enterprise packages using"
-msgstr ""
+msgstr "Cập nhật cơ sở dữ liệu của bạn lên gói enterprise bằng cách sử dụng"
 
 #: ../../content/administration/on_premise/community_to_enterprise.rst:51
 msgid ""
@@ -5167,10 +5565,13 @@ msgid ""
 " Enterprise Subscription by entering the code you received by e-mail in the "
 "form input"
 msgstr ""
+"Bạn sẽ có thể kết nối với phiên bản Odoo Enterprise của mình bằng cách định "
+"danh thông thường. Sau đó, bạn có thể liên kết cơ sở dữ liệu với Đăng ký "
+"Odoo Enterprise bằng cách nhập mã bạn nhận được qua email vào biểu mẫu"
 
 #: ../../content/administration/on_premise/community_to_enterprise.rst:57
 msgid "On Linux, using the source code"
-msgstr ""
+msgstr "Trên Linux, sử dụng mã nguồn"
 
 #: ../../content/administration/on_premise/community_to_enterprise.rst:59
 msgid ""
@@ -5178,20 +5579,27 @@ msgid ""
 "probably have your own favourite. You may need to adapt sections to your "
 "usual workflow."
 msgstr ""
+"Có nhiều cách để khởi chạy máy chủ khi sử dụng nguồn và có thể bạn có cách "
+"yêu thích riêng. Bạn có thể cần điều chỉnh các phần cho phù hợp với quy "
+"trình làm việc thông thường của mình."
 
 #: ../../content/administration/on_premise/community_to_enterprise.rst:64
 msgid ""
 "Update the ``--addons-path`` parameter of your launch command (see "
 ":doc:`../on_premise/source`)"
 msgstr ""
+"Cập nhật tham số ``--addons-path`` của lệnh khởi chạy của bạn (tham khảo "
+":doc:`../on_premise/source`)"
 
 #: ../../content/administration/on_premise/community_to_enterprise.rst:65
 msgid "Install the web_enterprise module by using"
-msgstr ""
+msgstr "Cài đặt phân hệ web_enterprise bằng cách sử dụng"
 
 #: ../../content/administration/on_premise/community_to_enterprise.rst:71
 msgid "Depending on the size of your database, this may take some time."
 msgstr ""
+"Tùy thuộc vào kích thước cơ sở dữ liệu của bạn, việc này có thể mất một thời"
+" gian."
 
 #: ../../content/administration/on_premise/community_to_enterprise.rst:73
 msgid ""
@@ -5200,6 +5608,10 @@ msgid ""
 "Odoo Enterprise Subscription by entering the code you received by e-mail in "
 "the form input"
 msgstr ""
+"Khởi động lại máy chủ của bạn với đường dẫn addons đã cập nhật ở mục 3. Bạn "
+"sẽ có thể kết nối với phiên bản của mình. Sau đó, bạn có thể liên kết cơ sở "
+"dữ liệu với Đăng ký Odoo Enterprise bằng cách nhập mã bạn nhận được qua "
+"email vào biểu mẫu"
 
 #: ../../content/administration/on_premise/community_to_enterprise.rst:78
 msgid "On Windows"
@@ -5210,6 +5622,8 @@ msgid ""
 "Uninstall Odoo Community (using the Uninstall executable in the installation"
 " folder) - PostgreSQL will remain installed"
 msgstr ""
+"Gỡ cài đặt Odoo Community (sử dụng tệp thực thi Uninstall trong thư mục cài "
+"đặt) - PostgreSQL sẽ vẫn được cài đặt"
 
 #: ../../content/administration/on_premise/community_to_enterprise.rst:88
 msgid ""
@@ -5218,12 +5632,18 @@ msgid ""
 "installation (this folder still contains the PostgreSQL installation). "
 "Uncheck ``Start Odoo`` at the end of the installation"
 msgstr ""
+"Khởi chạy Trình cài đặt Odoo Enterprise và làm theo các bước như bình "
+"thường. Khi chọn đường dẫn cài đặt, bạn có thể thiết lập thư mục cài đặt "
+"Community (thư mục này vẫn chứa cài đặt PostgreSQL). Bỏ chọn ``khởi động "
+"Odoo`` ở cuối quá trình cài đặt"
 
 #: ../../content/administration/on_premise/community_to_enterprise.rst:96
 msgid ""
 "Using a command window, update your Odoo Database using this command (from "
 "the Odoo installation path, in the server subfolder)"
 msgstr ""
+"Sử dụng cửa sổ lệnh, cập nhật Cơ sở dữ liệu Odoo của bạn bằng lệnh này (từ "
+"đường dẫn cài đặt Odoo, trong thư mục phụ của máy chủ)"
 
 #: ../../content/administration/on_premise/community_to_enterprise.rst:103
 msgid ""
@@ -5232,6 +5652,10 @@ msgid ""
 "identification. You can then link your database with your Odoo Enterprise "
 "Subscription by entering the code you received by e-mail in the form input"
 msgstr ""
+"Không cần khởi chạy máy chủ theo cách thủ công, dịch vụ vẫn đang chạy. Bạn "
+"sẽ có thể kết nối với phiên bản Odoo Enterprise của mình bằng cách định danh"
+" thông thường. Sau đó, bạn có thể liên kết cơ sở dữ liệu với Đăng ký Odoo "
+"Enterprise bằng cách nhập mã bạn nhận được qua email vào biểu mẫu"
 
 #: ../../content/administration/on_premise/deploy.rst:3
 msgid "System configuration"
@@ -5244,12 +5668,18 @@ msgid ""
 "is not generally necessary for a development systems that is not exposed on "
 "the internet."
 msgstr ""
+"Tài liệu này mô tả các bước cơ bản để thiết lập Odoo trong môi trường "
+"production hoặc trên máy chủ kết nối internet. Tài liệu này tuân theo "
+":doc:`cài đặt <../on_premise>` và thường không cần thiết cho các hệ thống "
+"phát triển không được triển khai trên internet."
 
 #: ../../content/administration/on_premise/deploy.rst:10
 msgid ""
 "If you are setting up a public server, be sure to check our :ref:`security` "
 "recommendations!"
 msgstr ""
+"Nếu bạn đang thiết lập máy chủ công khai, hãy nhớ tham khảo các khuyến nghị "
+"về :ref:`bảo mật` của chúng tôi!"
 
 #: ../../content/administration/on_premise/deploy.rst:15
 msgid "dbfilter"
@@ -5262,6 +5692,10 @@ msgid ""
 "customizations (starting from the modules being loaded) depending on the "
 "\"current database\"."
 msgstr ""
+"Odoo là hệ thống multi-tenant: một hệ thống Odoo duy nhất có thể chạy và "
+"phục vụ nhiều phiên bản cơ sở dữ liệu. Nó cũng có khả năng tùy chỉnh cao và "
+"các tùy chỉnh (bắt đầu từ các phân hệ được tải) phụ thuộc vào \"cơ sở dữ "
+"liệu hiện tại\"."
 
 #: ../../content/administration/on_premise/deploy.rst:21
 msgid ""
@@ -5269,6 +5703,9 @@ msgid ""
 "in company user: the database can be selected when logging in, and "
 "customizations loaded afterwards."
 msgstr ""
+"Không có vấn đề gì khi làm việc với backend (máy khách web) với tư cách là "
+"người dùng công ty đã đăng nhập: có thể chọn cơ sở dữ liệu khi đăng nhập và "
+"tải các tùy chỉnh sau đó."
 
 #: ../../content/administration/on_premise/deploy.rst:25
 msgid ""
@@ -5279,6 +5716,12 @@ msgid ""
 "multiple databases accessible Odoo needs a rule to know which one it should "
 "use."
 msgstr ""
+"Tuy nhiên, lại có vấn đề đối với người dùng không đăng nhập (cổng thông tin,"
+" trang web) mà không ràng buộc với cơ sở dữ liệu nào: Odoo cần biết cơ sở dữ"
+" liệu nào nên được sử dụng để tải trang web hoặc thực hiện thao tác. Sẽ "
+"không thành vấn đề nếu không sử dụng multi-tenancy, vì chỉ có một cơ sở dữ "
+"liệu để sử dụng. Nhưng nếu có thể truy cập nhiều cơ sở dữ liệu, thì Odoo cần"
+" một quy tắc để biết nên sử dụng cơ sở dữ liệu nào."
 
 #: ../../content/administration/on_premise/deploy.rst:31
 msgid ""
@@ -5288,6 +5731,11 @@ msgid ""
 "possibly including the dynamically injected hostname (``%h``) or the first "
 "subdomain (``%d``) through which the system is being accessed."
 msgstr ""
+"Đó là một trong những mục đích của :option:`--db-filter <odoo-bin --db-"
+"filter>`: nó chỉ định cách cơ sở dữ liệu sẽ được chọn dựa trên tên máy chủ "
+"(miền) đang được yêu cầu. Giá trị là một `biểu thức chính quy`_, có thể bao "
+"gồm tên máy chủ được cung cấp động (``%h``) hoặc miền phụ đầu tiên (``%d``) "
+"mà hệ thống đang được truy cập."
 
 #: ../../content/administration/on_premise/deploy.rst:37
 msgid ""
@@ -5295,6 +5743,9 @@ msgid ""
 "``website`` is used, dbfilter **must** be set, otherwise a number of "
 "features will not work correctly."
 msgstr ""
+"Đối với các máy chủ lưu trữ nhiều cơ sở dữ liệu trong production, đặc biệt "
+"nếu sử dụng ``trang web``, dbfilter **phải** được thiết lập, nếu không một "
+"số tính năng sẽ không hoạt động chính xác."
 
 #: ../../content/administration/on_premise/deploy.rst:42
 msgid "Configuration samples"
@@ -5309,7 +5760,7 @@ msgstr "Chỉ hiển thị các cơ sở dữ liệu có tên bắt đầu bằn
 #: ../../content/administration/on_premise/deploy.rst:153
 #: ../../content/administration/on_premise/deploy.rst:280
 msgid "in :ref:`the configuration file <reference/cmdline/config_file>` set:"
-msgstr ""
+msgstr "trong :ref:`tệp cấu hình <reference/cmdline/config_file>` thiết lập:"
 
 #: ../../content/administration/on_premise/deploy.rst:53
 msgid ""
@@ -5318,6 +5769,10 @@ msgid ""
 " ``www.mycompany.com`` or ``mycompany.co.uk``, but not for "
 "``www2.mycompany.com`` or ``helpdesk.mycompany.com``."
 msgstr ""
+"Chỉ hiển thị các cơ sở dữ liệu khớp với tên miền phụ đầu tiên sau ``www``: "
+"ví dụ cơ sở dữ liệu “mycompany” sẽ được hiển thị nếu yêu cầu đến được gửi "
+"đến ``www.mycompany.com`` hoặc ``mycompany.co.uk``, nhưng không hiển thị đối"
+" với ``www2.mycompany.com`` hoặc ``helpdesk.mycompany.com``."
 
 #: ../../content/administration/on_premise/deploy.rst:67
 msgid ""
@@ -5328,6 +5783,13 @@ msgid ""
 "database-list`` startup parameter to prevent listing your databases, and to "
 "block access to the database management screens. See also security_."
 msgstr ""
+"Thiết lập :option:`--db-filter <odoo-bin --db-filter>` phù hợp là một phần "
+"quan trọng trong việc bảo mật triển khai của bạn. Khi nó hoạt động chính xác"
+" và chỉ khớp với một cơ sở dữ liệu duy nhất cho mỗi tên máy chủ, chúng tôi "
+"khuyến nghị bạn nên chặn quyền truy cập vào màn hình trình quản lý cơ sở dữ "
+"liệu và sử dụng tham số khởi động ``--no-database-list`` để ngăn việc công "
+"khai cơ sở dữ liệu của bạn và chặn quyền truy cập vào màn hình quản lý cơ sở"
+" dữ liệu. Đọc thêm về security_."
 
 #: ../../content/administration/on_premise/deploy.rst:76
 #: ../../content/administration/on_premise/source.rst:189
@@ -5340,6 +5802,9 @@ msgid ""
 " connections (from \"localhost\", the same machine the PostgreSQL server is "
 "installed on)."
 msgstr ""
+"Theo mặc định, PostgreSQL chỉ cho phép kết nối qua socket UNIX và kết nối "
+"vòng lặp (từ \"localhost\", cùng một máy mà máy chủ PostgreSQL được cài "
+"đặt)."
 
 #: ../../content/administration/on_premise/deploy.rst:82
 msgid ""
@@ -5348,6 +5813,11 @@ msgid ""
 "and PostgreSQL to execute on different machines [#different-machines]_ it "
 "will need to `listen to network interfaces`_ [#remote-socket]_, either:"
 msgstr ""
+"UNIX socket hoạt động bình thường nếu bạn muốn Odoo và PostgreSQL thực thi "
+"trên cùng một máy và là tuỳ chọn mặc định khi không cung cấp máy chủ. Tuy "
+"nhiên, nếu bạn muốn Odoo và PostgreSQL thực thi trên các máy khác nhau "
+"[#different-machines]_ thì nó sẽ cần phải `tuân thủ giao diện mạng`_ "
+"[#remote-socket]_, theo một trong hai cách sau:"
 
 #: ../../content/administration/on_premise/deploy.rst:87
 msgid ""
@@ -5355,6 +5825,9 @@ msgid ""
 "machine on which Odoo runs and the one on which PostgreSQL runs, then "
 "configure Odoo to connect to its end of the tunnel"
 msgstr ""
+"Chỉ chấp nhận các kết nối vòng lặp và `sử dụng SSH tunnel`_ giữa máy chạy "
+"Odoo và máy chạy PostgreSQL, sau đó cấu hình Odoo để kết nối đến cuối tunnel"
+" của nó"
 
 #: ../../content/administration/on_premise/deploy.rst:90
 msgid ""
@@ -5362,6 +5835,9 @@ msgid ""
 "ssl (see `PostgreSQL connection settings`_ for details), then configure Odoo"
 " to connect over the network"
 msgstr ""
+"Chấp nhận kết nối tới máy mà Odoo được cài đặt, có thể qua ssl (tham khảo "
+"`Cài đặt kết nối PostgreSQL`_ để biết thêm chi tiết), sau đó cấu hình Odoo "
+"để kết nối qua mạng"
 
 #: ../../content/administration/on_premise/deploy.rst:95
 #: ../../content/administration/on_premise/deploy.rst:145
@@ -5376,7 +5852,7 @@ msgstr "Cho phép kết nối tcp trên máy chủ localhost"
 
 #: ../../content/administration/on_premise/deploy.rst:98
 msgid "Allow tcp connection from 192.168.1.x network"
-msgstr ""
+msgstr "Cho phép kết nối tcp từ mạng 192.168.1.x"
 
 #: ../../content/administration/on_premise/deploy.rst:100
 msgid "in ``/etc/postgresql/<YOUR POSTGRESQL VERSION>/main/pg_hba.conf`` set:"
@@ -5402,12 +5878,18 @@ msgid ""
 "<reference/cmdline/server/database>` when your Postgres deployment is not "
 "local and/or does not use the installation defaults."
 msgstr ""
+"Odoo có sẵn kết nối với postgres cục bộ qua UNIX socket thông qua cổng 5432."
+" Bạn có thể ghi đè tùy chọn này bằng cách sử dụng :ref:`tùy chọn cơ sở dữ "
+"liệu <reference/cmdline/server/database>` khi triển khai Postgres của bạn "
+"không phải là cục bộ và/hoặc không sử dụng cài đặt mặc định."
 
 #: ../../content/administration/on_premise/deploy.rst:126
 msgid ""
 "The :doc:`packaged installers <packages>` will automatically create a new "
 "user (``odoo``) and set it as the database user."
 msgstr ""
+":doc:`Trình cài đặt trọn gói <packages>` sẽ tự động tạo một người dùng mới "
+"(``odoo``) và thiết lập người dùng đó làm người dùng cơ sở dữ liệu."
 
 #: ../../content/administration/on_premise/deploy.rst:129
 msgid ""
@@ -5417,6 +5899,11 @@ msgid ""
 " randomly generated value to ensure third parties can not use this "
 "interface."
 msgstr ""
+"Màn hình quản lý cơ sở dữ liệu được bảo vệ bằng cài đặt ``admin_passwd``. "
+"Cài đặt này chỉ có thể được thiết lập bằng cách sử dụng các tệp cấu hình và "
+"chỉ cần kiểm tra trước khi thực hiện thay đổi cơ sở dữ liệu. Nó nên được "
+"thiết lập thành một giá trị được tạo ngẫu nhiên để đảm bảo bên thứ ba không "
+"thể sử dụng giao diện này."
 
 #: ../../content/administration/on_premise/deploy.rst:134
 msgid ""
@@ -5425,6 +5912,10 @@ msgid ""
 "screen. For the database management screen to work requires that the "
 "PostgreSQL user have ``createdb`` right."
 msgstr ""
+"Tất cả hoạt động cơ sở dữ liệu đều sử dụng :ref:`tuỳ chọn cơ sở dữ liệu "
+"<reference/cmdline/server/database>`, bao gồm cả màn hình quản lý cơ sở dữ "
+"liệu. Để màn hình quản lý cơ sở dữ liệu hoạt động, người dùng PostgreSQL "
+"phải có quyền ``createdb``."
 
 #: ../../content/administration/on_premise/deploy.rst:138
 msgid ""
@@ -5433,14 +5924,18 @@ msgid ""
 "with ``no-createdb`` and the database must be owned by a different "
 "PostgreSQL user."
 msgstr ""
+"Người dùng luôn có thể xóa cơ sở dữ liệu mà họ sở hữu. Để màn hình quản lý "
+"cơ sở dữ liệu ngừng hoạt động hoàn toàn, người dùng PostgreSQL cần được tạo "
+"bằng ``no-createdb`` và cơ sở dữ liệu phải thuộc sở hữu của một người dùng "
+"PostgreSQL khác."
 
 #: ../../content/administration/on_premise/deploy.rst:142
 msgid "the PostgreSQL user *must not* be a superuser"
-msgstr ""
+msgstr "người dùng PostgreSQL *không được* là siêu người dùng"
 
 #: ../../content/administration/on_premise/deploy.rst:147
 msgid "connect to a PostgreSQL server on 192.168.1.2"
-msgstr ""
+msgstr "kết nối tới máy chủ PostgreSQL trên 192.168.1.2"
 
 #: ../../content/administration/on_premise/deploy.rst:148
 msgid "port 5432"
@@ -5456,7 +5951,7 @@ msgstr "với 'pwd' là mật khẩu"
 
 #: ../../content/administration/on_premise/deploy.rst:151
 msgid "filtering only db with a name beginning with 'mycompany'"
-msgstr ""
+msgstr "chỉ lọc db có tên bắt đầu bằng 'mycompany'"
 
 #: ../../content/administration/on_premise/deploy.rst:168
 msgid "SSL Between Odoo and PostgreSQL"
@@ -5469,6 +5964,10 @@ msgid ""
 "value chosen out of 'disable', 'allow', 'prefer', 'require', 'verify-ca' or "
 "'verify-full'"
 msgstr ""
+"Kể từ Odoo 11.0, bạn có thể thực thi kết nối ssl giữa Odoo và PostgreSQL. "
+"Trong Odoo, db_sslmode kiểm soát bảo mật ssl của kết nối với giá trị được "
+"chọn từ 'disable', 'allow', 'prefer', 'require', 'verify-ca' hoặc 'verify-"
+"full'"
 
 #: ../../content/administration/on_premise/deploy.rst:175
 msgid ""
@@ -5478,13 +5977,15 @@ msgstr ""
 
 #: ../../content/administration/on_premise/deploy.rst:180
 msgid "Builtin server"
-msgstr ""
+msgstr "Máy chủ tích hợp"
 
 #: ../../content/administration/on_premise/deploy.rst:182
 msgid ""
 "Odoo includes built-in HTTP, cron, and live-chat servers, using either "
 "multi-threading or multi-processing."
 msgstr ""
+"Odoo tích hợp sẵn các máy chủ HTTP, cron và livechat, sử dụng đa luồng hoặc "
+"đa xử lý."
 
 #: ../../content/administration/on_premise/deploy.rst:185
 msgid ""
@@ -5495,6 +5996,11 @@ msgid ""
 "cron threads are spawned too. Due to a Python limitation (GIL), it doesn't "
 "make the best use of the hardware."
 msgstr ""
+"Máy chủ **đa luồng** là máy chủ đơn giản hơn, chủ yếu được sử dụng để phát "
+"triển và trình bày, và tương thích với nhiều hệ điều hành (bao gồm Windows)."
+" Một luồng mới được tạo ra cho mỗi yêu cầu HTTP mới, ngay cả đối với các kết"
+" nối tồn tại lâu dài như websocket. Các luồng daemon cron bổ sung cũng được "
+"tạo ra. Do hạn chế của Python (GIL), phần cứng không được tận dụng tối đa."
 
 #: ../../content/administration/on_premise/deploy.rst:191
 msgid ""
@@ -5502,6 +6008,9 @@ msgid ""
 " It is selected by leaving the :option:`--workers <odoo-bin --workers>` "
 "option out or setting it to ``0``."
 msgstr ""
+"Máy chủ đa luồng là máy chủ mặc định, cũng dành cho các container docker. "
+"Bạn có thể chọn nó bằng cách bỏ tùy chọn :option:`--workers <odoo-bin "
+"--workers>` hoặc đặt thành ``0``."
 
 #: ../../content/administration/on_premise/deploy.rst:194
 msgid ""
@@ -5529,12 +6038,16 @@ msgid ""
 "The multi-processing server is opt-in. It is selected by setting the "
 ":option:`--workers <odoo-bin --workers>` option to a non-null integer."
 msgstr ""
+"Máy chủ đa luồng là máy chủ tuỳ chọn. Bạn có thể chọn nó bằng cách đặt tùy "
+"chọn :option:`--workers <odoo-bin --workers>` thành số nguyên không null."
 
 #: ../../content/administration/on_premise/deploy.rst:205
 msgid ""
 "Because it is highly customized for Linux servers, the multi-processing "
 "server is not available on Windows."
 msgstr ""
+"Vì được tùy chỉnh cao cho máy chủ Linux nên máy chủ đa xử lý không khả dụng "
+"trên Windows."
 
 #: ../../content/administration/on_premise/deploy.rst:209
 msgid "Worker number calculation"
@@ -5542,7 +6055,7 @@ msgstr "Tính toán số lượng worker"
 
 #: ../../content/administration/on_premise/deploy.rst:211
 msgid "Rule of thumb : (#CPU * 2) + 1"
-msgstr ""
+msgstr "Nguyên tắc chung: (#CPU * 2) + 1"
 
 #: ../../content/administration/on_premise/deploy.rst:212
 msgid "Cron workers need CPU"
@@ -5550,7 +6063,7 @@ msgstr "Cron worker cần CPU"
 
 #: ../../content/administration/on_premise/deploy.rst:213
 msgid "1 worker ~= 6 concurrent users"
-msgstr ""
+msgstr "1 worker ~= 6 người dùng đồng thời"
 
 #: ../../content/administration/on_premise/deploy.rst:216
 msgid "memory size calculation"
@@ -5561,24 +6074,32 @@ msgid ""
 "We consider 20% of the requests are heavy requests, while 80% are simpler "
 "ones"
 msgstr ""
+"Chúng tôi coi 20% yêu cầu là yêu cầu nặng, trong khi 80% là yêu cầu đơn giản"
+" hơn"
 
 #: ../../content/administration/on_premise/deploy.rst:219
 msgid ""
 "A heavy worker, when all computed field are well designed, SQL requests are "
 "well designed, ... is estimated to consume around 1GB of RAM"
 msgstr ""
+"Một worker nặng, khi tất cả các trường tính toán được thiết kế tốt, các yêu "
+"cầu SQL cũng được thiết kế tốt,... ước tính sẽ tiêu thụ khoảng 1GB RAM"
 
 #: ../../content/administration/on_premise/deploy.rst:220
 msgid ""
 "A lighter worker, in the same scenario, is estimated to consume around 150MB"
 " of RAM"
 msgstr ""
+"Trong tình huống tương tự, một worker nhẹ hơn ước tính sẽ tiêu thụ khoảng "
+"150MB RAM"
 
 #: ../../content/administration/on_premise/deploy.rst:222
 msgid ""
 "Needed RAM = #worker * ( (light_worker_ratio * light_worker_ram_estimation) "
 "+ (heavy_worker_ratio * heavy_worker_ram_estimation) )"
 msgstr ""
+"RAM cần thiết = #worker * ( (tỷ lệ_worker_nhẹ * ước tính_ram_cho_worker_nhẹ)"
+" + (tỷ lệ_worker_nặng * ước tính_ram_cho_worker_nặng) )"
 
 #: ../../content/administration/on_premise/deploy.rst:225
 #: ../../content/administration/on_premise/deploy.rst:413
@@ -5615,21 +6136,24 @@ msgstr "60 người dung truy cập đồng thời"
 
 #: ../../content/administration/on_premise/deploy.rst:240
 msgid "60 users / 6 = 10 <- theoretical number of worker needed"
-msgstr ""
+msgstr "60 người dùng/6 = 10 <- số lượng worker cần thiết theo lý thuyết"
 
 #: ../../content/administration/on_premise/deploy.rst:241
 msgid "(4 * 2) + 1 = 9 <- theoretical maximal number of worker"
-msgstr ""
+msgstr "(4 * 2) + 1 = 9 <- số lượng worker tối đa theo lý thuyết"
 
 #: ../../content/administration/on_premise/deploy.rst:242
 msgid ""
 "We'll use 8 workers + 1 for cron. We'll also use a monitoring system to "
 "measure cpu load, and check if it's between 7 and 7.5 ."
 msgstr ""
+"Chúng tôi sẽ sử dụng 8 worker + 1 cho cron. Chúng tôi cũng sẽ sử dụng hệ "
+"thống giám sát để đo tải CPU và kiểm tra xem nó có nằm trong khoảng từ 7 đến"
+" 7,5 không."
 
 #: ../../content/administration/on_premise/deploy.rst:243
 msgid "RAM = 9 * ((0.8*150) + (0.2*1024)) ~= 3Go RAM for Odoo"
-msgstr ""
+msgstr "RAM = 9 * ((0.8*150) + (0.2*1024)) ~= 3Go RAM cho Odoo"
 
 #: ../../content/administration/on_premise/deploy.rst:245
 msgid "in :ref:`the configuration file <reference/cmdline/config_file>`:"
@@ -5646,26 +6170,35 @@ msgid ""
 "Odoo must use HTTPS\\ [#switching]_. SSL termination can be implemented via "
 "just about any SSL termination proxy, but requires the following setup:"
 msgstr ""
+"Cho dù được truy cập thông qua trang web/máy khách web hay dịch vụ web, Odoo"
+" đều truyền thông tin xác thực dưới dạng văn bản thuần túy. Điều này có "
+"nghĩa là việc triển khai Odoo an toàn phải sử dụng HTTPS\\ [#switching]_. Có"
+" thể triển khai chấm dứt SSL thông qua hầu hết mọi proxy chấm dứt SSL, nhưng"
+" yêu cầu thiết lập sau:"
 
 #: ../../content/administration/on_premise/deploy.rst:268
 msgid ""
 "Enable Odoo's :option:`proxy mode <odoo-bin --proxy-mode>`. This should only"
 " be enabled when Odoo is behind a reverse proxy"
 msgstr ""
+"Bật :option:`chế độ proxy <odoo-bin --proxy-mode>` của Odoo. Chỉ nên bật tùy"
+" chọn này khi Odoo nằm sau proxy đảo ngược"
 
 #: ../../content/administration/on_premise/deploy.rst:269
 msgid "Set up the SSL termination proxy (`Nginx termination example`_)"
-msgstr ""
+msgstr "Thiết lập proxy chấm dứt SSL (`Ví dụ chấm dứt Nginx`_)"
 
 #: ../../content/administration/on_premise/deploy.rst:270
 msgid "Set up the proxying itself (`Nginx proxying example`_)"
-msgstr ""
+msgstr "Thiết lập proxy (`Ví dụ proxy Nginx`_)"
 
 #: ../../content/administration/on_premise/deploy.rst:271
 msgid ""
 "Your SSL termination proxy should also automatically redirect non-secure "
 "connections to the secure port"
 msgstr ""
+"Proxy chấm dứt SSL của bạn cũng sẽ tự động chuyển hướng các kết nối không an"
+" toàn đến cổng an toàn"
 
 #: ../../content/administration/on_premise/deploy.rst:277
 msgid "Redirect http requests to https"
@@ -5677,11 +6210,11 @@ msgstr "Yêu cầu proxy tới Odoo"
 
 #: ../../content/administration/on_premise/deploy.rst:286
 msgid "in ``/etc/nginx/sites-enabled/odoo.conf`` set:"
-msgstr ""
+msgstr "trong ``/etc/nginx/sites-enabled/odoo.conf`` cài đặt:"
 
 #: ../../content/administration/on_premise/deploy.rst:362
 msgid "HTTPS Hardening"
-msgstr ""
+msgstr "Nâng cao bảo mật HTTPS"
 
 #: ../../content/administration/on_premise/deploy.rst:364
 msgid ""
@@ -5691,12 +6224,18 @@ msgid ""
 "this domain at all times, otherwise your users will see security alerts or "
 "be entirely unable to access it."
 msgstr ""
+"Thêm header `Strict-Transport-Security` vào tất cả yêu cầu để ngăn trình "
+"duyệt gửi yêu cầu HTTP thuần túy đến miền này. Bạn luôn cần duy trì dịch vụ "
+"HTTPS đang hoạt động với chứng chỉ hợp lệ trên miền này. Nếu không, người "
+"dùng của bạn sẽ thấy cảnh báo bảo mật hoặc hoàn toàn không thể truy cập."
 
 #: ../../content/administration/on_premise/deploy.rst:370
 msgid ""
 "Force HTTPS connections during a year for every visitor in NGINX with the "
 "line:"
 msgstr ""
+"Bắt buộc kết nối HTTPS trong năm cho mọi khách truy cập vào NGINX bằng dòng "
+"lệnh:"
 
 #: ../../content/administration/on_premise/deploy.rst:376
 msgid ""
@@ -5704,6 +6243,9 @@ msgid ""
 "`Secure` flag can be added to ensure it is never transmitted over HTTP and "
 "`SameSite=Lax` to prevent authenticated `CSRF`_."
 msgstr ""
+"Cấu hình bổ sung có thể được xác định cho cookie `session_id`. Bạn có thể "
+"thêm cờ `Secure` để đảm bảo nó không bao giờ được truyền qua HTTP và "
+"`SameSite=Lax` để ngăn chặn `CSRF`_ đã xác thực."
 
 #: ../../content/administration/on_premise/deploy.rst:387
 msgid "Odoo as a WSGI Application"
@@ -7697,7 +8239,7 @@ msgstr "Ngừng hỗ trợ"
 
 #: ../../content/administration/supported_versions.rst:34
 msgid "Odoo saas~17.4"
-msgstr ""
+msgstr "Odoo saas~17.4"
 
 #: ../../content/administration/supported_versions.rst:36
 #: ../../content/administration/supported_versions.rst:37
@@ -7710,7 +8252,7 @@ msgstr "N/A"
 
 #: ../../content/administration/supported_versions.rst:38
 msgid "July 2024"
-msgstr ""
+msgstr "Tháng 7 2024"
 
 #: ../../content/administration/supported_versions.rst:40
 msgid "Odoo saas~17.2"
@@ -8226,7 +8768,7 @@ msgstr ""
 
 #: ../../content/administration/upgrade.rst:214
 msgid "Are your website pages working correctly?"
-msgstr ""
+msgstr "Các trang trên trang web của bạn có hoạt động bình thường không?"
 
 #: ../../content/administration/upgrade.rst:215
 msgid ""
@@ -8244,7 +8786,7 @@ msgstr ""
 
 #: ../../content/administration/upgrade.rst:219
 msgid "Are your search filters still present?"
-msgstr ""
+msgstr "Bộ lọc tìm kiếm của bạn vẫn còn chứ?"
 
 #: ../../content/administration/upgrade.rst:220
 msgid "Can you export your data?"

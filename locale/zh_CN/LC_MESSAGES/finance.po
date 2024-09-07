@@ -11061,6 +11061,11 @@ msgid ""
 " completely change the resulting hash. Consequently, the SHA-256 algorithm "
 "is often used, among others, for data integrity verification purposes."
 msgstr ""
+"为此，Odoo 可以使用 **SHA-256 算法** "
+"为每个发布的条目创建唯一指纹。该指纹称为哈希值。哈希值是通过获取记项的基本数据（`name`、`date`、`journal_id`、`company_id`、`debit`、`credit`、`account_id`"
+" 和 `partner_id` "
+"字段的值）生成散列，将数据串联起来，并输入SHA-256散列函数，函数输出固定大小（256位）的字符串。散列函数是确定性的（:dfn:`相同的输入必定会得到相同的输出`）：对原始数据的任何细微修改都会完全改变散列结果。因此，SHA-256"
+" 算法通常用于数据完整性验证等目的。"
 
 #: ../../content/applications/finance/accounting/reporting/data_inalterability.rst:17
 msgid ""
@@ -12151,6 +12156,8 @@ msgid ""
 "Install the :guilabel:`Irreversible Lock Date` (`account_lock`) module to "
 "make the :guilabel:`All Users Lock Date` *irreversible* once set."
 msgstr ""
+"安装 :guilabel:`不可逆转的锁定日期` (`account_lock`) 模块，使 :guilabel:`所有用户锁定日期` 设置为 "
+"*不可逆转*。"
 
 #: ../../content/applications/finance/accounting/reporting/year_end.rst:109
 msgid ""
@@ -14432,12 +14439,15 @@ msgid ""
 "<https://community.avalara.com/support/s/document-"
 "item?language=en_US&bundleId=hps1656397152776_hps1656397152776&topicId=Learn_about_Managed_Returns.html&_LANG=enus>`_."
 msgstr ""
+"点击 :guilabel:`开始` 开始退税流程。有关更多信息，请参阅 Avalara 文档：`有关托管退税 "
+"<https://community.avalara.com/support/s/document-"
+"item?language=en_US&bundleId=hps1656397152776_hps1656397152776&topicId=Learn_about_Managed_Returns.html&_LANG=enus>`_。"
 
 #: ../../content/applications/finance/accounting/taxes/avatax/avalara_portal.rst:252
 msgid ""
 "Alternatively, click on the :menuselection:`Returns` button in the top menu "
 "of the Avalara management console."
-msgstr ""
+msgstr "或者，点击 Avalara 管理控制台顶部菜单中的 :menuselection:`退货` 按钮。"
 
 #: ../../content/applications/finance/accounting/taxes/avatax/avalara_portal.rst:256
 #: ../../content/applications/finance/accounting/taxes/avatax/avatax_use.rst:159
@@ -14450,7 +14460,7 @@ msgstr ":doc:`avatax_use`"
 
 #: ../../content/applications/finance/accounting/taxes/avatax/avatax_use.rst:3
 msgid "AvaTax use"
-msgstr ""
+msgstr "使用 AvaTax"
 
 #: ../../content/applications/finance/accounting/taxes/avatax/avatax_use.rst:5
 msgid ""
@@ -14458,6 +14468,8 @@ msgid ""
 " United States and Canada. Once the :doc:`integration setup <../avatax>` is "
 "complete, the calculated tax is simple and automatic."
 msgstr ""
+"AvaTax 是一款税务计算软件，可以与美国和加拿大的 Odoo 集成。一旦 :doc:`整合设置 <../avatax>` "
+"完成，计算的税费就变得简单且自动。"
 
 #: ../../content/applications/finance/accounting/taxes/avatax/avatax_use.rst:10
 msgid "Tax calculation"
@@ -14489,10 +14501,12 @@ msgid ""
 "trigger <avatax/automatic-triggers>` and :ref:`manual trigger "
 "<avatax/manual-triggers>` circumstances."
 msgstr ""
+"在以下 :ref:`自动触发 <avatax/automatic-triggers>` 和 :ref:`手动触发 <avatax/manual-"
+"triggers>` 情况下触发税款计算。"
 
 #: ../../content/applications/finance/accounting/taxes/avatax/avatax_use.rst:30
 msgid "Automatic triggers"
-msgstr ""
+msgstr "自动触发"
 
 #: ../../content/applications/finance/accounting/taxes/avatax/avatax_use.rst:32
 msgid ""
@@ -17912,7 +17926,7 @@ msgstr ""
 
 #: ../../content/applications/finance/expenses.rst-1
 msgid "Ensure the customer to be invoiced is called out on the expense."
-msgstr ""
+msgstr "确保在费用上注明要开具发票的客户。"
 
 #: ../../content/applications/finance/expenses.rst:603
 msgid ""
@@ -18465,13 +18479,13 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:41
 msgid "`l10n_ar_edi`"
-msgstr ""
+msgstr "`l10n_ar_edi`"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:42
 msgid ""
 "Includes all technical and functional requirements to generate electronic "
 "invoices via web service, based on the AFIP regulations."
-msgstr ""
+msgstr "包括根据 AFIP 规定，通过网络服务生成电子发票的所有技术和功能要求。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:44
 msgid ":guilabel:`Argentinean eCommerce`"
@@ -18479,14 +18493,14 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:45
 msgid "`l10n_ar_website_sale`"
-msgstr ""
+msgstr "`l10n_ar_website_sale`"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:46
 msgid ""
 "(optional) Allows the user to see Identification Type and AFIP "
 "Responsibility in the eCommerce checkout form in order to create electronic "
 "invoices."
-msgstr ""
+msgstr "（可选）允许用户在电子商务结账表单中查看标识类型和 AFIP 责任，以便创建电子发票。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:50
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:62
@@ -18503,11 +18517,12 @@ msgid ""
 "in is the :guilabel:`AFIP Responsibility Type`, which represents the fiscal "
 "obligation and structure of the company."
 msgstr ""
+"安装本地化模块后，第一步是设置公司数据。除基本信息外，需要填写的一个关键字段是 :guilabel:`AFIP 责任类型`，它代表公司的财政义务和结构。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst-1
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst-1
 msgid "Select AFIP Responsibility Type."
-msgstr ""
+msgstr "选择 AFIP 责任类型。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:61
 msgid "Chart of account"
@@ -18520,28 +18535,30 @@ msgid ""
 "type, and consider the difference between companies that do not require as "
 "many accounts as the companies that have more complex fiscal requirements:"
 msgstr ""
+"在会计中，有三种不同的 :guilabel:`会计账目总表` 软件套装可供选择。它们基于公司的 AFIP "
+"责任类型，并考虑到不需要大量账户及具有复杂财务要求的公司之间的差异："
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:68
 msgid "Monotributista (227 accounts);"
-msgstr ""
+msgstr "Monotributista (227 种账户)；"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:69
 msgid "IVA Exento (290 accounts);"
-msgstr ""
+msgstr "IVA Exento (290 种账户)；"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:70
 msgid "Responsable Inscripto (298 Accounts)."
-msgstr ""
+msgstr "Responsable Inscripto (298 种账户)."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst-1
 msgid "Select Fiscal Localization Package."
-msgstr ""
+msgstr "选择财务本地化套装。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:77
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:151
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:240
 msgid "Configure master data"
-msgstr ""
+msgstr "配置主数据"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:80
 msgid "Electronic Invoice Credentials"
@@ -18555,7 +18572,7 @@ msgstr "Environment"
 msgid ""
 "The AFIP infrastructure is replicated in two separate environments, "
 "**testing** and **production**."
-msgstr ""
+msgstr "AFIP 基础设施复制在两个独立的环境中：**测试** 和 **正式运行**。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:87
 msgid ""
@@ -18564,6 +18581,7 @@ msgid ""
 "environments are completely isolated from each other, the digital "
 "certificates of one instance are not valid in the other one."
 msgstr ""
+"提供测试环境是为了让公司测试其数据库，直到他们准备好进入 **正式运行** 环境。由于这两个环境完全相互隔离，其中一个实例的数字证书在另一个实例中无效。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:91
 msgid ""
@@ -18571,26 +18589,28 @@ msgid ""
 "Settings --> Argentinean Localization` and choose either :guilabel:`Prueba "
 "(Testing)` or :guilabel:`Produccion (Production)`."
 msgstr ""
+"要选择数据库环境，请进入 :menuselection:`会计 --> 设置 --> 阿根廷本地化`，然后选择 "
+":guilabel:`Prueba（测试）` 或 :guilabel:`Produccion（正式运行）` 。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst-1
 msgid "Select AFIP database environment: Testing or Production."
-msgstr ""
+msgstr "选择 AFIP 数据库环境：测试或正式运行。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:99
 msgid "AFIP certificates"
-msgstr ""
+msgstr "AFIP 认证"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:101
 msgid ""
 "The electronic invoice and other AFIP services work with :guilabel:`Web "
 "Services (WS)` provided by the AFIP."
-msgstr ""
+msgstr "电子发票和其他 AFIP 服务，可与 AFIP 提供的 :guilabel:`网络服务（WS）` 协同工作。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:104
 msgid ""
 "In order to enable communication with the AFIP, the first step is to request"
 " a :guilabel:`Digital Certificate` if you do not have one already."
-msgstr ""
+msgstr "为了启用与 AFIP 的通信，第一步是要求 :guilabel:`数字证书` （如无）。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:107
 msgid ""
@@ -18598,10 +18618,12 @@ msgid ""
 "selected, a file with extension `.csr` (certificate signing request) is "
 "generated to be used in the AFIP portal to request the certificate."
 msgstr ""
+":guilabel:`生成证书签名请求（Odoo）`。选择此选项后，将生成一个扩展名为 `.csr`（证书签名请求）的文件，用于在 AFIP "
+"门户中请求证书。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:0
 msgid "Request a certificate."
-msgstr ""
+msgstr "请求证书。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:114
 msgid ""
@@ -18610,6 +18632,9 @@ msgid ""
 "<https://drive.google.com/file/d/17OKX2lNWd1bjUt3NxfqcCKBkBh-Xlpo-/ view>`_ "
 "to get a certificate."
 msgstr ""
+":guilabel:`生成证书（AFIP）`。访问 AFIP 门户网站，并按照`本文档 "
+"<https://drive.google.com/file/d/17OKX2lNWd1bjUt3NxfqcCKBkBh-Xlpo-/ view>`_ "
+"中描述的说明获取证书。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:118
 msgid ""
@@ -18617,6 +18642,8 @@ msgid ""
 "is generated, upload it to Odoo using the :guilabel:`Pencil` icon next to "
 "the field :guilabel:`Certificado` and select the corresponding file."
 msgstr ""
+":guilabel:`上传证书和私钥（Odoo）`。证书生成后，使用 :guilabel:`Certificado` 字段旁边的 "
+":guilabel:`铅笔` 图标将其上传到 Odoo，并选择相应文件。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:0
 msgid "Upload Certificate and Private Key."
@@ -22593,6 +22620,8 @@ msgid ""
 "their related financial account and configuration. These taxes can be "
 "managed from :menuselection:`Accounting --> Configuration --> Taxes`."
 msgstr ""
+"作为本地化模块的一部分，税款会自动创建，并附带相关的财务账户和配置。可通过 :menuselection:`账户 --> 配置 --> 税务` "
+"管理这些税项。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:380
 msgid "Chile has several tax types, the most common ones are:"
@@ -22600,11 +22629,11 @@ msgstr "Chile has several tax types, the most common ones are:"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:382
 msgid "**VAT**: the regular VAT can have several rates."
-msgstr ""
+msgstr "**增值税**：常规增值税可以有多种税率。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:383
 msgid "**ILA**: the tax for alcoholic drinks."
-msgstr ""
+msgstr "**ILA**：酒精饮料税。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:386
 #: ../../content/applications/finance/fiscal_localizations/egypt.rst:125
@@ -22623,6 +22652,8 @@ msgid ""
 "explains how information is shared to the :abbr:`SII (Servicio de Impuestos "
 "Internos)`, customers, and vendors."
 msgstr ""
+"在智利本地化中，电子发票工作流程包括客户发票开具和供应商账单接收。下图解释了信息如何共享给 :abbr:`SII（Servicio de "
+"Impuestos Internos）`、客户和供应商。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Diagram with Electronic invoice transactions."
@@ -22640,10 +22671,12 @@ msgid ""
 "document type can be changed manually if needed on the invoice by navigating"
 " to :menuselection:`Accounting --> Customers --> Invoices`."
 msgstr ""
+"创建和配置合作伙伴和日记账后，发票将以标准方式创建。对于智利来说，不同之处在于根据纳税人自动选择的文档类型。如有需要，可通过导航至 "
+":menuselection:`会计 --> 客户 --> 发票` 手动更改发票上的文档类型。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Customer invoice document type selection."
-msgstr ""
+msgstr "客户发票文件类型选择。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:415
 msgid ""
@@ -22651,30 +22684,34 @@ msgid ""
 " with tax, otherwise the :abbr:`SII (Servicio de Impuestos Internos)` "
 "rejects the document validation."
 msgstr ""
+":guilabel:`文档类型 33` 电子发票必须至少有一项含税项目，否则 :abbr:`SII (Servicio de Impuestos "
+"Internos)` 会拒绝文档验证。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:421
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:921
 msgid "Validation and DTE status"
-msgstr ""
+msgstr "验证和 DTE 状态"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:423
 msgid ""
 "Once all invoice information is filled, either manually or automatically "
 "when generated from a sales order, validate the invoice. After the invoice "
 "is posted:"
-msgstr ""
+msgstr "填写了所有发票信息（手动填写或根据销售订单自动生成）后，即对发票进行验证。发票过账后："
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:426
 msgid ""
 "The :abbr:`DTE (Documentos Tributarios Electrónicos)` file is created "
 "automatically and recorded in the chatter."
-msgstr ""
+msgstr "自动创建并记录在聊天记录中的 :abbr:`DTE（电子税务文件）` 文件。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:428
 msgid ""
 "The :abbr:`DTE (Documentos Tributarios Electrónicos)` :abbr:`SII (Servicio "
 "de Impuestos Internos)` status is set as :guilabel:`Pending` to be sent."
 msgstr ""
+"The :abbr:`DTE (Documentos Tributarios Electrónicos)` :abbr:`SII (Servicio "
+"de Impuestos Internos)` status is set as :guilabel:`Pending` to be sent."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:0
 msgid "DTE XML File displayed in chatter."
@@ -22688,10 +22725,14 @@ msgid ""
 "needed immediately, you can do it manually as well by following the "
 ":abbr:`DTE (Documentos Tributarios Electrónicos)` status workflow:"
 msgstr ""
+":abbr:`DTE (Documentos Tributarios Electrónicos)` 状态是由 Odoo "
+"通过每天晚上运行的预定操作进行自动更新。若需要立即取得税务机关（:abbr:`SII (Servicio de Impuestos "
+"Internos)`）的回应，您也可以按照 :abbr:`DTE (Documentos Tributarios Electrónicos)` "
+"状态工作流程，手动执行："
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Transition of DTE status flow."
-msgstr ""
+msgstr "DTE 状态流的转换。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:444
 msgid ""
@@ -22930,12 +22971,14 @@ msgid ""
 "**Error:** `Element '{http://www.sii.cl/SiiDte%7DRutReceptor': This element "
 "is not expected. Expected is ( {http://www.sii.cl/SiiDte%7DRutEnvia ).`"
 msgstr ""
+"**错误：** `Element '{http://www.sii.cl/SiiDte%7DRutReceptor'： 此元素不是预期元素。预期元素为 "
+"（{http://www.sii.cl/SiiDte%7DRutEnvia ).`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:0
 msgid ""
 "**Hint:** Make sure the field :guilabel:`Document Type` and :guilabel:`VAT` "
 "are set in the customer and in the main company."
-msgstr ""
+msgstr "**提示：** 确保在客户和主公司中设置了 :guilabel:`文件类型` 和 :guilabel:`VAT` 字段。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:0
 msgid "**Error:** `Usuario sin permiso de envio.`"
@@ -22955,6 +22998,12 @@ msgid ""
 "Tributarios Electrónicos)` files to the :abbr:`SII (Servicio de Impuestos "
 "Internos)`."
 msgstr ""
+"**提示：**此错误表明贵公司很可能尚未通过 :abbr:`SII （Servicio de Impuestos Internos）` - "
+"Sistema de Facturación de Mercado中的 "
+"`认证程序<https://www.sii.cl/factura_electronica/factura_mercado/proceso_certificacion.htm>`_。如果是这种情况，请联系您的客户经理或客户支持，因为该认证不属于"
+" Odoo 服务的一部分，但我们可以为您提供一些替代方案。如果您已通过认证程序，当与证书所有者不同的用户试图发送 "
+":abbr:`DTE（Documentos Tributarios Electrónicos）` 文件到 :abbr:`SII（Servicio de "
+"Impuestos Internos）` 时，会出现此错误。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:0
 msgid "**Error:** `CARATULA`"
@@ -22976,7 +23025,7 @@ msgstr "公司的:abbr:`RUT（Rol Único Tributario）号码不正确或丢失�
 msgid ""
 "The certificate owner :abbr:`RUT (Rol Único Tributario)` number is incorrect"
 " or missing."
-msgstr ""
+msgstr "证书所有者 :abbr:`RUT (Rol Único Tributario) 号码不正确或丢失。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:584
 msgid ""
@@ -22984,14 +23033,16 @@ msgid ""
 "Tributario)` number (this should be correct by default) is incorrect or "
 "missing."
 msgstr ""
+":abbr:`SII's (Servicio de Impuestos Internos)` :abbr:`RUT (Rol Único "
+"Tributario)` 编号（默认情况下应正确）不正确或丢失。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:586
 msgid "The resolution date is incorrect or missing."
-msgstr ""
+msgstr "解决日期不正确或缺失。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:587
 msgid "The resolution number is incorrect or missing."
-msgstr ""
+msgstr "解决编号不正确或缺失。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:592
 #: ../../content/applications/finance/fiscal_localizations/colombia.rst:344
@@ -23009,6 +23060,11 @@ msgid ""
 "<chile/caf-documentation>` for more information on the process to load the "
 ":abbr:`CAF (Folio Authorization Code)` on each document type."
 msgstr ""
+"当需要取消或更正已确认的发票时，必须生成信用证。需要注意的是，信用证需要一个 :abbr:`CAF (Folio Authorization "
+"Code)` 文件，该文件在 :abbr:`SII (Servicio de Impuestos Internos)` 中被识别为 "
+":guilabel:`文件类型` :guilabel:`61`。请参阅 :ref:`CAF 部分 <chile/caf-"
+"documentation>`，了解有关在每种单证类型上加载 :abbr:`CAF (Folio Authorization Code)` "
+"的过程的更多信息。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Creation of CAF for Credit notes."
