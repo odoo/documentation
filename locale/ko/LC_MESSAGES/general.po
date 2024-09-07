@@ -404,6 +404,9 @@ msgid ""
 "database into a multi-company setup, it will need to switch to the *Custom* "
 "pricing plan. This does not affect databases on the *One-app free* plan."
 msgstr ""
+"*유료* 스탠다드 요금제로 데이터베이스를 사용 중인 경우에 회사에 지사를 추가하면 상향 판매가 실행됩니다. 하나 이상의 지사를 추가하게 "
+"되면 데이터베이스가 다중 회사 설정으로 변경되므로 *커스텀* 요금제로 변경해야 합니다. *무료* 요금제로 사용 중인 데이터베이스에는 "
+"영향이 없습니다."
 
 #: ../../content/applications/general/companies.rst:135
 msgid ""
@@ -2818,6 +2821,9 @@ msgid ""
 "it is required to use the SPF and DKIM records specific to that email "
 "service and a custom domain."
 msgstr ""
+":ref:`사용자 지정 도메인에서 이메일을 전송하기 위한 기본 Odoo 이메일 서버 <email-outbound-custom-"
+"domain-odoo-server>` 를 사용하는 경우 반드시 아래에 안내된 대로 SPF 및 DKIM 레코드를 설정해야 합니다. 발신용 "
+"이메일 서버를 통해 전송하는 경우 해당 이메일 서비스와 사용자 지정 도메인 전용인 SPF 및 DKIM 레코드를 사용해야 합니다."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:22
 msgid ""
@@ -2958,6 +2964,11 @@ msgid ""
 "contained in the DMARC record of a domain name tell the destination server "
 "what to do with an incoming email that fails the SPF and/or DKIM check."
 msgstr ""
+":abbr:`DMARC (Domain-based Message Authentication, Reporting, & Conformance:"
+" 도메인 기반 메일 인증)` 레코드는 :abbr:`SPF(Sender Policy Framework: 메일 서버 등록)`와 "
+":abbr:`DKIM (DomainKeys Identified Mail: 도메인키 식별 메일)` 을 통합하는 프로토콜입니다. 도메인 "
+"주소의 DMARC 레코드에 있는 지침을 통해 대상 서버에서 수신한 이메일이 SPF 및/또는 DKIM 검사를 통과하지 못했을 경우 수행할 "
+"작업을 안내합니다."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:105
 msgid ""
@@ -3700,6 +3711,9 @@ msgid ""
 "Emails sent to an alias are automatically routed and will reply to an "
 "existing and linked record or will create a new one in the database."
 msgstr ""
+"캐치올, 반송 및 알림 주소의 경우에는 다른 별칭과 같은 방식으로 작동하지 않습니다. 이 항목에는 데이터베이스에 레코드를 생성하는 기능이"
+" 없습니다. 별칭으로 전송된 이메일은 자동으로 라우팅되어 기존 및 연결된 레코드에 회신을 하거나 데이터베이스에서 새로운 레코드를 "
+"생성합니다."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:34
 msgid "Using a custom domain to send emails"
@@ -3926,6 +3940,9 @@ msgid ""
 "emails*, including the sending of batches of invoices or quotations, will be"
 " managed by the Marketing Automation or Email Marketing application."
 msgstr ""
+"Odoo에서 별도의 이메일 서버를 통해 거래 이메일 및 대량 메일을 발송할 수 있습니다. 이렇게 하면 고객에게 보내는 일상적인 이메일, "
+"견적서 또는 청구서를 *거래 이메일* 로 처리하게 됩니다. *대량 발송 이메일* 는 청구서나 견적서를 일괄 발송하는 것과 같은 경우와 "
+"같이, 마케팅 자동화 또는 이메일 마케팅 애플리케이션에서 관리합니다."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:148
 msgid ""
@@ -3981,6 +3998,9 @@ msgid ""
 "address** that matches the sender’s email address and is trusted on the "
 "outgoing mail server provider's side."
 msgstr ""
+":guilabel:`보낸 사람 필터` 를 적용하면 *보낸 사람* 이메일 주소 또는 도메인에 따라 Odoo를 통해 전송하는 발신 이메일 "
+"서버를 사용할 수 있습니다.이 값은 반드시 보낸 사람의 이메일 주소와 일치하고 발신 메일 서버 공급자 측에서 신뢰하는 **도메인 혹은 "
+"전체 이메일 주소** 여야 합니다."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:182
 msgid ""
@@ -4066,6 +4086,9 @@ msgid ""
 "there is no FROM filtering, the email will go out using the notification "
 "address."
 msgstr ""
+"발신 메일 서버가 Odoo의 기본 서버 (CLI)와 동시에 사용되는 경우에는 발신 메일 서버의 FROM 필터에는 사용자 지정 도메인이 "
+"포함되어야 하고 CLI의 FROM 필터에는 Odoo의 하위 도메인이 포함되어야 합니다. FROM 필터가 지정되지 않을 경우 알림 주소를 "
+"통해 이메일을 발송합니다."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst-1
 msgid ""
@@ -4114,6 +4137,10 @@ msgid ""
 "records (SPF, DKIM, and DMARC). A list of the :ref:`most common providers is"
 " available <email-domain-providers-documentation>`."
 msgstr ""
+":ref:` 이전 내용 <email-outbound-different-servers-external-odoo>` 과 마찬가지로, 외부 "
+"이메일 서버에서 사용자 지정 도메인으로 이메일을 전송할 수 있게 하려면 알맞게 환경 설정을 해야 합니다. 공급업체 문서를 참조하여 관련 "
+"레코드 (SPF, DKIM 및 DMARC)를 올바르게 설정합니다. :ref:`가장 많이 선택하는 업체 <email-domain-"
+"providers-documentation>` 목록을 참조하세요."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:259
 msgid ""
@@ -4542,6 +4569,9 @@ msgid ""
 "starting point to troubleshoot the issue, and verify that you whitelisted "
 "the email address on the side of sendgrid.com."
 msgstr ""
+"확인되지 않은 이메일 주소에서 이메일 전송을 시도했다는 오류 메시지입니다. 발신 이메일 서버에 대한 환경 설정 혹은 데이터베이스의 기본 "
+"*발신자* 주소를 조사하는 것이 문제 해결을 위한 시작점이 될 수 있으며, sendgrid.com 측에서 이메일 주소를 허용 목록에 "
+"추가했는지 확인합니다."
 
 #: ../../content/applications/general/email_communication/faq.rst:184
 msgid ""
@@ -4581,6 +4611,10 @@ msgid ""
 ":doc:`Communication in Odoo by email documentation <../email_communication>`"
 " for more information."
 msgstr ""
+"이메일 전송에 실패했는데도 오류 메시지가 나타나지 않는 이유 중 가장 일반적인 것으로는 :ref:`SPF <email-domain-"
+"spf>` 또는 :ref:`DKIM <email-domain-dkim>` 환경 설정과 관련이 있습니다. 또한 이메일 알림 설정이 구현될 "
+"때 비즈니스 요구 사항에 맞게 조정되었는지 확인하세요. 자세한 내용은 :doc:`이메일을 통한 Odoo 커뮤니케이션 문서 "
+"<../email_communication>` 를 참조하세요."
 
 #: ../../content/applications/general/email_communication/faq.rst:212
 msgid "Execution time"
@@ -8324,6 +8358,8 @@ msgid ""
 "not work as the TM-U220B printer model does not support `GS v 0`. Instead "
 "random characters will print:"
 msgstr ""
+"TM-U220B 프린터 모델에서는 'GS v 0'이 지원되지 않으므로 알맞게 양식이 적용되기 전에 영수증을 바로 인쇄하려고 하면 작동하지"
+" 않습니다. 대신 임의의 문자가 인쇄됩니다:"
 
 #: ../../content/applications/general/iot/config/troubleshooting.rst:0
 msgid "Printer paper with seemingly random characters."
@@ -9833,6 +9869,9 @@ msgid ""
 ":menuselection:`Windows Defender Firewall` program. In the left-hand menu, "
 "navigate to :guilabel:`Advanced Settings`."
 msgstr ""
+"먼저 :menuselection:`시작 메뉴` 로 이동한 후 `방화벽` 을 입력하여 *Windows 방화벽* 을 엽니다. 그런 다음 "
+":menuselection:`Windows Defender 방화벽` 프로그램을 엽니다. 왼쪽에 있는 메뉴에서 :guilabel:`고급 "
+"설정` 으로 이동합니다."
 
 #: ../../content/applications/general/iot/config/windows_iot.rst:175
 msgid ""
@@ -10849,6 +10888,8 @@ msgid ""
 "anything because it will be automatically detected as soon as it is "
 "connected."
 msgstr ""
+"중량계가 `Odoo IoT 박스 호환 <https://www.odoo.com/page/iot-hardware>`_ 되는 경우에는, "
+"연결되는 즉시 자동으로 인식되므로 별도로 설정할 필요가 없습니다. ."
 
 #: ../../content/applications/general/iot/devices/scale.rst-1
 msgid "IOT box auto detection."
@@ -10996,6 +11037,8 @@ msgid ""
 "a blank, black screen on the screen display. Using the specific cable for "
 "the display connection is recommended."
 msgstr ""
+"HDMI/마이크로 HDMI 어댑터를 사용하면 화면 디스플레이에 내용이 없는 화면이 표시되는 문제가 발생할 수 있습니다. 디스플레이를 "
+"연결할 때에는 지정된 케이블을 사용하는 것이 좋습니다."
 
 #: ../../content/applications/general/iot/devices/screen.rst:47
 msgid ""
@@ -11015,6 +11058,8 @@ msgid ""
 ":abbr:`IoT (Internet of Things)` box homepage. Alternatively, the display "
 "can be seen by accessing :menuselection:`IoT app --> Devices`."
 msgstr ""
+"이 화면은 :abbr:`IoT (사물 인터넷)` 박스 홈페이지의 :guilabel:`디스플레이` 목록에도 나타납니다. 또는 "
+":menuselection:`IoT 앱 --> 장치` 에 액세스하면 디스플레이를 볼 수 있습니다."
 
 #: ../../content/applications/general/iot/devices/screen.rst-1
 msgid "An example of a screen display name shown on the IoT Box Home Page."

@@ -8305,6 +8305,10 @@ msgid ""
 "specific **tax ID** intended only for **tax returns**. **Constituent** "
 "companies keep their **tax ID** used for **commercial purposes**."
 msgstr ""
+"一个 **税务单位** 是一组增值税应税企业，它们在法律上相互独立，但在财务、组织和经济上紧密相连，因此被视为同一个增值税应税企业。**税务单位** "
+"不是强制性的，但如果成立，单位的组成公司必须属于同一个 **国家/地区**，使用同一种 **货币**，并且必须指定一家公司作为 **税务单位** 的 "
+"**代表** 公司。**税务单位** 会收到一个特定的 **税号**，仅用于 **报税**。**成员** 公司保留其 **税号**，用于 "
+"**商业目的**。"
 
 #: ../../content/applications/finance/accounting/get_started/tax_units.rst:17
 msgid ""
@@ -8313,6 +8317,8 @@ msgid ""
 " two amounts balance out and must conjointly only pay €20.000,00 of VAT "
 "taxes."
 msgstr ""
+"企业**A**欠增值税税款 €300.000,00，企业**B**可收回增值税税款 "
+"€280.000,00。它们组成一个**税务单位**，两笔税款相抵，必须共同只缴纳 €20.000,00 增值税税款。"
 
 #: ../../content/applications/finance/accounting/get_started/tax_units.rst:24
 msgid ""
@@ -8322,6 +8328,9 @@ msgid ""
 "the unit, the :guilabel:`Main Company`, and the :guilabel:`Tax ID` of the "
 "**constituent** company of that tax unit."
 msgstr ""
+"要创建 **税务单位**，请转到 :menuselection:`会计 --> 配置 --> 税务单位`，然后点击 "
+":guilabel:`新建`。输入单位的 **名称**，选择 :guilabel:`国家/地区`、要纳入单位的 "
+":guilabel:`公司`、:guilabel:`主要公司` 和该税务单位的 **组成** 公司的 :guilabel:`税号`。"
 
 #: ../../content/applications/finance/accounting/get_started/tax_units.rst:30
 #: ../../content/applications/finance/accounting/taxes/avatax.rst:340
@@ -8335,6 +8344,8 @@ msgid ""
 "position) <../taxes/fiscal_positions>` to avoid the application of VAT on "
 "inter-constituent transactions."
 msgstr ""
+"由于同一 **税务单位** 的成员之间的交易不征收增值税，因此可以创建 "
+":doc:`税收映射（财务状况）<../taxes/fiscal_positions>` 来避免对成员之间的交易征收增值税。"
 
 #: ../../content/applications/finance/accounting/get_started/tax_units.rst:36
 msgid ""
@@ -8364,7 +8375,7 @@ msgstr "根据您的 :doc:`本地化套装`，税额可能与显示的截图不�
 
 #: ../../content/applications/finance/accounting/get_started/tax_units.rst:0
 msgid "Tax mapping of fiscal position for tax unit"
-msgstr ""
+msgstr "税务单位财务状况的税收映射"
 
 #: ../../content/applications/finance/accounting/get_started/tax_units.rst:52
 msgid ""
@@ -8375,6 +8386,8 @@ msgid ""
 "the process for each **constituent** company card form, on each company "
 "database."
 msgstr ""
+"然后，打开**联系人**应用程序，分配财政状况。搜索**成员**公司，打开联系人**卡片**。点击 :guilabel:`销售与采购` 选项卡，在 "
+":guilabel:`财政状况` 字段中输入为**税务单位**创建的**财政状况**。在每个公司数据库中，对每个**成员**公司卡片表单重复此过程。"
 
 #: ../../content/applications/finance/accounting/get_started/tax_units.rst:58
 msgid ":doc:`../taxes/fiscal_positions`."
@@ -8388,10 +8401,13 @@ msgid ""
 " contains the aggregated transactions of all **constituents** and the .XML "
 "export contains the name and VAT number of the **main** company."
 msgstr ""
+"**代表**公司可进入:menuselection:`会计 --> 报告 --> 税务报告`，并在:guilabel:`税务单位`中选择 "
+"**税务单位**，以获取 **税务单位** 的汇总税务报告。该报告包含所有 **成员** 的汇总交易，.XML 导出包含 **主** "
+"公司的名称和增值税号。"
 
 #: ../../content/applications/finance/accounting/get_started/tax_units.rst-1
 msgid "tax unit tax report"
-msgstr ""
+msgstr "税务单位税务报告"
 
 #: ../../content/applications/finance/accounting/payments.rst:5
 msgid "Payments"
@@ -11663,6 +11679,11 @@ msgid ""
 " completely change the resulting hash. Consequently, the SHA-256 algorithm "
 "is often used, among others, for data integrity verification purposes."
 msgstr ""
+"为此，Odoo 可以使用 **SHA-256 算法** "
+"为每个发布的条目创建唯一指纹。该指纹称为哈希值。哈希值是通过获取记项的基本数据（`name`、`date`、`journal_id`、`company_id`、`debit`、`credit`、`account_id`"
+" 和 `partner_id` "
+"字段的值）生成散列，将数据串联起来，并输入SHA-256散列函数，函数输出固定大小（256位）的字符串。散列函数是确定性的（:dfn:`相同的输入必定会得到相同的输出`）：对原始数据的任何细微修改都会完全改变散列结果。因此，SHA-256"
+" 算法通常用于数据完整性验证等目的。"
 
 #: ../../content/applications/finance/accounting/reporting/data_inalterability.rst:17
 msgid ""
@@ -12759,6 +12780,8 @@ msgid ""
 "Install the :guilabel:`Irreversible Lock Date` (`account_lock`) module to "
 "make the :guilabel:`All Users Lock Date` *irreversible* once set."
 msgstr ""
+"安装 :guilabel:`不可逆转的锁定日期` (`account_lock`) 模块，使 :guilabel:`所有用户锁定日期` 设置为 "
+"*不可逆转*。"
 
 #: ../../content/applications/finance/accounting/reporting/year_end.rst:109
 msgid ""
@@ -13735,13 +13758,15 @@ msgstr "AvaTax 和 Odoo 使用的是公司地址，**不是** 仓库地址。"
 msgid ""
 "Excise tax is **not** supported. This includes tobacco/vape taxes, fuel "
 "taxes, and other specific industries."
-msgstr ""
+msgstr "**不支持**对某些特定商品（如烟草、燃料等）征收的补充税费。"
 
 #: ../../content/applications/finance/accounting/taxes/avatax.rst:35
 msgid ""
 "Avalara's support documents: `About AvaTax "
 "<https://community.avalara.com/support/s/document-item?language=en_US>`_"
 msgstr ""
+"Avalara 的支持文档：`关于 AvaTax <https://community.avalara.com/support/s/document-"
+"item?language=en_US>`_"
 
 #: ../../content/applications/finance/accounting/taxes/avatax.rst:39
 msgid "Set up on AvaTax"
@@ -13767,7 +13792,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/taxes/avatax.rst:49
 msgid "Then, `create a basic company profile <https://www.odoo.com/r/2k0>`_."
-msgstr ""
+msgstr "然后，`创建基本的公司简介 <https://www.odoo.com/r/2k0>`_。"
 
 #: ../../content/applications/finance/accounting/taxes/avatax.rst:53
 msgid "Create basic company profile"
@@ -13784,7 +13809,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/taxes/avatax.rst:59
 msgid "`Add company information <https://www.odoo.com/r/XZDW>`_."
-msgstr ""
+msgstr "`添加公司信息 <https://www.odoo.com/r/XZDW>`_."
 
 #: ../../content/applications/finance/accounting/taxes/avatax.rst:61
 msgid ""
@@ -15192,12 +15217,15 @@ msgid ""
 "<https://community.avalara.com/support/s/document-"
 "item?language=en_US&bundleId=hps1656397152776_hps1656397152776&topicId=Learn_about_Managed_Returns.html&_LANG=enus>`_."
 msgstr ""
+"点击 :guilabel:`开始` 开始退税流程。有关更多信息，请参阅 Avalara 文档：`有关托管退税 "
+"<https://community.avalara.com/support/s/document-"
+"item?language=en_US&bundleId=hps1656397152776_hps1656397152776&topicId=Learn_about_Managed_Returns.html&_LANG=enus>`_。"
 
 #: ../../content/applications/finance/accounting/taxes/avatax/avalara_portal.rst:252
 msgid ""
 "Alternatively, click on the :menuselection:`Returns` button in the top menu "
 "of the Avalara management console."
-msgstr ""
+msgstr "或者，点击 Avalara 管理控制台顶部菜单中的 :menuselection:`退货` 按钮。"
 
 #: ../../content/applications/finance/accounting/taxes/avatax/avalara_portal.rst:256
 #: ../../content/applications/finance/accounting/taxes/avatax/avatax_use.rst:161
@@ -15210,7 +15238,7 @@ msgstr ":doc:`avatax_use`"
 
 #: ../../content/applications/finance/accounting/taxes/avatax/avatax_use.rst:3
 msgid "AvaTax use"
-msgstr ""
+msgstr "使用 AvaTax"
 
 #: ../../content/applications/finance/accounting/taxes/avatax/avatax_use.rst:5
 msgid ""
@@ -15218,6 +15246,8 @@ msgid ""
 " United States and Canada. Once the :doc:`integration setup <../avatax>` is "
 "complete, the calculated tax is simple and automatic."
 msgstr ""
+"AvaTax 是一款税务计算软件，可以与美国和加拿大的 Odoo 集成。一旦 :doc:`整合设置 <../avatax>` "
+"完成，计算的税费就变得简单且自动。"
 
 #: ../../content/applications/finance/accounting/taxes/avatax/avatax_use.rst:10
 msgid "Tax calculation"
@@ -15230,16 +15260,18 @@ msgid ""
 "the taxes manually by clicking the :guilabel:`Compute Taxes` button, while "
 "these documents are in draft stage."
 msgstr ""
+"通过在销售流程中确认文档，使用 AvaTax 自动计算 Odoo 报价单和发票上的税金。或者，当这些文件处于草稿阶段时，点击 "
+":guilabel:`计算税款` 按钮手动计算税款。"
 
 #: ../../content/applications/finance/accounting/taxes/avatax/avatax_use.rst:17
 msgid ""
 "Clicking the :guilabel:`Compute Taxes` button recalculates taxes, if any "
 "product lines are edited on the invoice."
-msgstr ""
+msgstr "点击 :guilabel:`计算税款` 按钮，如果发票上有任何产品项目被编辑，则重新计算税款。"
 
 #: ../../content/applications/finance/accounting/taxes/avatax/avatax_use.rst-1
 msgid "Sales quotation with the confirm and compute taxes button highlighted."
-msgstr ""
+msgstr "销售报价单，确认和计算税款按钮突出显示。"
 
 #: ../../content/applications/finance/accounting/taxes/avatax/avatax_use.rst:24
 msgid ""
@@ -15247,10 +15279,12 @@ msgid ""
 "trigger <avatax/automatic-triggers>` and :ref:`manual trigger "
 "<avatax/manual-triggers>` circumstances."
 msgstr ""
+"在以下 :ref:`自动触发 <avatax/automatic-triggers>` 和 :ref:`手动触发 <avatax/manual-"
+"triggers>` 情况下触发税款计算。"
 
 #: ../../content/applications/finance/accounting/taxes/avatax/avatax_use.rst:30
 msgid "Automatic triggers"
-msgstr ""
+msgstr "自动触发"
 
 #: ../../content/applications/finance/accounting/taxes/avatax/avatax_use.rst:32
 msgid ""
@@ -18234,6 +18268,8 @@ msgid ""
 ":doc:`/applications/websites/website/configuration/domain_names` "
 "documentation for setup instructions and more information."
 msgstr ""
+"有关设置说明和更多信息，请参阅 "
+":doc:`/applications/websites/website/configuration/domain_names` 文档。"
 
 #: ../../content/applications/finance/expenses/log_expenses.rst:186
 msgid ""
@@ -18332,7 +18368,7 @@ msgstr ""
 
 #: ../../content/applications/finance/expenses/post_expenses.rst:12
 msgid "Accounting: *Accountant* or *Adviser*"
-msgstr ""
+msgstr "会计：*会计师* 或 *顾问*"
 
 #: ../../content/applications/finance/expenses/post_expenses.rst:13
 msgid "Expenses: *Manager*"
@@ -18802,12 +18838,15 @@ msgid ""
 "customer. Using the drop-down menu, select the :abbr:`SO (Sales Order)` to "
 "add the expense to in the :guilabel:`Customer to Reinvoice` field."
 msgstr ""
+"首先，当 :doc:`创建新费用 <../expenses/log_expenses>` "
+"时，需要输入正确的信息，以便向客户重新开具费用发票。使用下拉菜单，在 :guilabel:`客户重新开发票` 字段中选择要添加费用的 "
+":abbr:`SO（销售订单）`。"
 
 #: ../../content/applications/finance/expenses/reinvoice_expenses.rst:54
 msgid ""
 "Next, select the :guilabel:`Analytic Distribution` the expense is posted to."
 " Multiple accounts can be selected, if desired."
-msgstr ""
+msgstr "下一步，选择费用过账到的 :guilabel:`分析分配` 账户。如果需要，可以选择多个账户。"
 
 #: ../../content/applications/finance/expenses/reinvoice_expenses.rst:57
 msgid ""
@@ -18819,13 +18858,17 @@ msgid ""
 "default, both fields are populated with `100%`. Adjust the percentages for "
 "all the fields, so the total of all selected accounts equals `100%`."
 msgstr ""
+"要添加另一个 :guilabel:`分析分配`，请点击行以显示 :guilabel:`分析` 弹出窗口。点击 "
+":guilabel:`添加行`，然后从下拉菜单中选择所需的 :guilabel:`分析分配`。如果选择多个 :guilabel:`分析分配` "
+"字段，则必须修改 :guilabel:`百分比` 字段。默认情况下，这两个字段都填充为 `100%`。调整所有字段的百分比，使所有选定账户的总和等于 "
+"`100%`。"
 
 #: ../../content/applications/finance/expenses/reinvoice_expenses.rst:65
 msgid ""
 "A painting company agrees to paint an office building that houses two "
 "different companies. During the estimate, a meeting is held at the office "
 "location to discuss the project."
-msgstr ""
+msgstr "一家油漆公司同意为两家不同公司所在的办公楼进行油漆。在估价期间，公司在办公地点召开会议讨论项目。"
 
 #: ../../content/applications/finance/expenses/reinvoice_expenses.rst:68
 msgid ""
@@ -18834,6 +18877,7 @@ msgid ""
 "companies** are listed in the :guilabel:`Analytic Distribution` line, for "
 "50% each."
 msgstr ""
+"两家公司都同意支付油漆公司员工的差旅费。在创建里程和酒店费用时，**两家公司** 都列在 :guilabel:`分析分配` 一行，各占 50%。"
 
 #: ../../content/applications/finance/expenses/reinvoice_expenses.rst:75
 msgid "Create an expense report"
@@ -18845,6 +18889,8 @@ msgid ""
 "<expenses/create_report>` and :ref:`submitted <expenses/submit>`, in the "
 "same manner as all other expenses."
 msgstr ""
+"创建费用后，必须以与所有其他支出相同的方式 :ref:`创建 <expenses/create_report>` 和 :ref:`提交 "
+"<expenses/submit>` 创建支出报告。"
 
 #: ../../content/applications/finance/expenses/reinvoice_expenses.rst:80
 msgid ""
@@ -18852,10 +18898,12 @@ msgid ""
 "Orders` smart button appears at the top-center of both the expense report, "
 "and each individual expense record being reinvoiced."
 msgstr ""
+"提交费用报告后，费用报告的顶部中心会出现一个 :icon:`fa-money` :guilabel:`销售订单` "
+"智能按钮，并且每个单独的费用记录都会重新开具发票。"
 
 #: ../../content/applications/finance/expenses/reinvoice_expenses.rst-1
 msgid "Ensure the customer to be invoiced is called out on the expense."
-msgstr ""
+msgstr "确保在费用上注明要开具发票的客户。"
 
 #: ../../content/applications/finance/expenses/reinvoice_expenses.rst:89
 msgid ""
@@ -19412,29 +19460,29 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:41
 msgid "`l10n_ar_edi`"
-msgstr ""
+msgstr "`l10n_ar_edi`"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:42
 msgid ""
 "Includes all technical and functional requirements to generate electronic "
 "invoices via web service, based on the AFIP regulations."
-msgstr ""
+msgstr "包括根据 AFIP 规定，通过网络服务生成电子发票的所有技术和功能要求。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:44
 msgid ""
 ":ref:`Argentinean eCommerce <argentina/ecommerce-electronic-invoicing>`"
-msgstr ""
+msgstr ":ref:`阿根廷电子商务 <argentina/ecommerce-electronic-invoicing>`"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:45
 msgid "`l10n_ar_website_sale`"
-msgstr ""
+msgstr "`l10n_ar_website_sale`"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:46
 msgid ""
 "(optional) Allows the user to see Identification Type and AFIP "
 "Responsibility in the eCommerce checkout form in order to create electronic "
 "invoices."
-msgstr ""
+msgstr "（可选）允许用户在电子商务结账表单中查看标识类型和 AFIP 责任，以便创建电子发票。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:52
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:64
@@ -19451,11 +19499,12 @@ msgid ""
 "in is the :guilabel:`AFIP Responsibility Type`, which represents the fiscal "
 "obligation and structure of the company."
 msgstr ""
+"安装本地化模块后，第一步是设置公司数据。除基本信息外，需要填写的一个关键字段是 :guilabel:`AFIP 责任类型`，它代表公司的财政义务和结构。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst-1
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst-1
 msgid "Select AFIP Responsibility Type."
-msgstr ""
+msgstr "选择 AFIP 责任类型。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:63
 msgid "Chart of account"
@@ -19468,28 +19517,30 @@ msgid ""
 "type, and consider the difference between companies that do not require as "
 "many accounts as the companies that have more complex fiscal requirements:"
 msgstr ""
+"在会计中，有三种不同的 :guilabel:`会计账目总表` 软件套装可供选择。它们基于公司的 AFIP "
+"责任类型，并考虑到不需要大量账户及具有复杂财务要求的公司之间的差异："
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:70
 msgid "Monotributista (227 accounts);"
-msgstr ""
+msgstr "Monotributista (227 种账户)；"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:71
 msgid "IVA Exento (290 accounts);"
-msgstr ""
+msgstr "IVA Exento (290 种账户)；"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:72
 msgid "Responsable Inscripto (298 Accounts)."
-msgstr ""
+msgstr "Responsable Inscripto (298 种账户)."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst-1
 msgid "Select Fiscal Localization Package."
-msgstr ""
+msgstr "选择财务本地化套装。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:79
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:205
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:257
 msgid "Configure master data"
-msgstr ""
+msgstr "配置主数据"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:82
 msgid "Electronic Invoice Credentials"
@@ -19503,7 +19554,7 @@ msgstr "环境"
 msgid ""
 "The AFIP infrastructure is replicated in two separate environments, "
 "**testing** and **production**."
-msgstr ""
+msgstr "AFIP 基础设施复制在两个独立的环境中：**测试** 和 **正式运行**。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:89
 msgid ""
@@ -19512,6 +19563,7 @@ msgid ""
 "environments are completely isolated from each other, the digital "
 "certificates of one instance are not valid in the other one."
 msgstr ""
+"提供测试环境是为了让公司测试其数据库，直到他们准备好进入 **正式运行** 环境。由于这两个环境完全相互隔离，其中一个实例的数字证书在另一个实例中无效。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:93
 msgid ""
@@ -19519,26 +19571,28 @@ msgid ""
 "Settings --> Argentinean Localization` and choose either :guilabel:`Prueba "
 "(Testing)` or :guilabel:`Produccion (Production)`."
 msgstr ""
+"要选择数据库环境，请进入 :menuselection:`会计 --> 设置 --> 阿根廷本地化`，然后选择 "
+":guilabel:`Prueba（测试）` 或 :guilabel:`Produccion（正式运行）` 。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst-1
 msgid "Select AFIP database environment: Testing or Production."
-msgstr ""
+msgstr "选择 AFIP 数据库环境：测试或正式运行。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:101
 msgid "AFIP certificates"
-msgstr ""
+msgstr "AFIP 认证"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:103
 msgid ""
 "The electronic invoice and other AFIP services work with :guilabel:`Web "
 "Services (WS)` provided by the AFIP."
-msgstr ""
+msgstr "电子发票和其他 AFIP 服务，可与 AFIP 提供的 :guilabel:`网络服务（WS）` 协同工作。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:106
 msgid ""
 "In order to enable communication with the AFIP, the first step is to request"
 " a :guilabel:`Digital Certificate` if you do not have one already."
-msgstr ""
+msgstr "为了启用与 AFIP 的通信，第一步是要求 :guilabel:`数字证书` （如无）。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:109
 msgid ""
@@ -19546,10 +19600,12 @@ msgid ""
 "selected, a file with extension `.csr` (certificate signing request) is "
 "generated to be used in the AFIP portal to request the certificate."
 msgstr ""
+":guilabel:`生成证书签名请求（Odoo）`。选择此选项后，将生成一个扩展名为 `.csr`（证书签名请求）的文件，用于在 AFIP "
+"门户中请求证书。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:0
 msgid "Request a certificate."
-msgstr ""
+msgstr "请求证书。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:116
 msgid ""
@@ -19558,6 +19614,9 @@ msgid ""
 "<https://drive.google.com/file/d/17OKX2lNWd1bjUt3NxfqcCKBkBh-Xlpo-/ view>`_ "
 "to get a certificate."
 msgstr ""
+":guilabel:`生成证书（AFIP）`。访问 AFIP 门户网站，并按照`本文档 "
+"<https://drive.google.com/file/d/17OKX2lNWd1bjUt3NxfqcCKBkBh-Xlpo-/ view>`_ "
+"中描述的说明获取证书。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:120
 msgid ""
@@ -19565,6 +19624,8 @@ msgid ""
 "is generated, upload it to Odoo using the :guilabel:`Pencil` icon next to "
 "the field :guilabel:`Certificado` and select the corresponding file."
 msgstr ""
+":guilabel:`上传证书和私钥（Odoo）`。证书生成后，使用 :guilabel:`Certificado` 字段旁边的 "
+":guilabel:`铅笔` 图标将其上传到 Odoo，并选择相应文件。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:0
 msgid "Upload Certificate and Private Key."
@@ -21476,14 +21537,17 @@ msgid ""
 " are used to record amounts withheld from subcontractors without an **ABN** "
 "for the **ATO**."
 msgstr ""
+"提及 **TPAR** 的稅项，不仅影响 **BAS** 报告，也影响 **TPAR** "
+"报告。某些行业的企业需要报告在财政年度内，向相关服务的分包商支付的款项。Odoo 结合使用税收和财务规则，在 **TPAR** "
+"报告中汇报这些付款。至于提及 **没有 TPAR** 的税项，则用于记录为 **ATO** 预扣、没有 **ABN** 的分包商的金额。"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:91
 msgid ":ref:`TPAR <australia/tpar>`"
-msgstr ""
+msgstr ":ref:`TPAR <australia/tpar>`"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:93
 msgid "Here are the taxes for Australia in Odoo 17."
-msgstr ""
+msgstr "以下是 Odoo 17 中澳大利亚的税项。"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:99
 msgid "GST Name"
@@ -21557,7 +21621,7 @@ msgstr "10% INC"
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:172
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:176
 msgid "GST Inclusive Purchases"
-msgstr ""
+msgstr "GST 包括采购"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:111
 msgid "10% C"
@@ -21567,7 +21631,7 @@ msgstr "10% C"
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:180
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:184
 msgid "Capital Purchases"
-msgstr ""
+msgstr "资本采购"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:115
 msgid "0% C"
@@ -21575,17 +21639,17 @@ msgstr "0% C"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:116
 msgid "Zero Rated Purch"
-msgstr ""
+msgstr "零税率采购"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:119
 msgid "100% T EX"
-msgstr ""
+msgstr "100% T EX"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:120
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:196
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:200
 msgid "Purchase (Taxable Imports) - Tax Paid Separately"
-msgstr ""
+msgstr "采购（应税进口）- 单独缴税"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:123
 msgid "10% I"
@@ -21595,7 +21659,7 @@ msgstr "10% I"
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:204
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:208
 msgid "Purchases for Input Taxed Sales"
-msgstr ""
+msgstr "进项税额销售的采购"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:127
 msgid "10% P"
@@ -21605,7 +21669,7 @@ msgstr "10% P"
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:212
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:216
 msgid "Purchases for Private use or not deductible"
-msgstr ""
+msgstr "自用或不可抵扣的采购"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:131
 msgid "100% EX"
@@ -21615,26 +21679,26 @@ msgstr "100% EX"
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:220
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:224
 msgid "GST Only on Imports"
-msgstr ""
+msgstr "只对进口项目征收商品及服务税"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:135
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:159
 msgid "10% Adj"
-msgstr ""
+msgstr "10% Adj"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:136
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:228
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:232
 msgid "Tax Adjustments (Purchases)"
-msgstr ""
+msgstr "税务调整（采购）"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:140
 msgid "GST Sales"
-msgstr ""
+msgstr "GST 销售"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:144
 msgid "GST Inclusive Sales"
-msgstr ""
+msgstr "GST 包括销售"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:147
 msgid "0% EX"
@@ -21646,19 +21710,19 @@ msgstr "零税率（出口）销售"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:151
 msgid "0% EXEMPT"
-msgstr ""
+msgstr "0% EXEMPT"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:152
 msgid "Exempt Sales"
-msgstr ""
+msgstr "豁免销售"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:155
 msgid "0% I"
-msgstr ""
+msgstr "0% I"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:156
 msgid "Input Taxed Sales"
-msgstr ""
+msgstr "进项税额销售"
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:160
 msgid "Tax Adjustments (Sales)"
@@ -26388,6 +26452,8 @@ msgid ""
 "their related financial account and configuration. These taxes can be "
 "managed from :menuselection:`Accounting --> Configuration --> Taxes`."
 msgstr ""
+"作为本地化模块的一部分，税款会自动创建，并附带相关的财务账户和配置。可通过 :menuselection:`账户 --> 配置 --> 税务` "
+"管理这些税项。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:382
 msgid "Chile has several tax types, the most common ones are:"
@@ -26395,11 +26461,11 @@ msgstr "Chile has several tax types, the most common ones are:"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:384
 msgid "**VAT**: the regular VAT can have several rates."
-msgstr ""
+msgstr "**增值税**：常规增值税可以有多种税率。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:385
 msgid "**ILA**: the tax for alcoholic drinks."
-msgstr ""
+msgstr "**ILA**：酒精饮料税。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:388
 #: ../../content/applications/finance/fiscal_localizations/egypt.rst:125
@@ -26418,6 +26484,8 @@ msgid ""
 "explains how information is shared to the :abbr:`SII (Servicio de Impuestos "
 "Internos)`, customers, and vendors."
 msgstr ""
+"在智利本地化中，电子发票工作流程包括客户发票开具和供应商账单接收。下图解释了信息如何共享给 :abbr:`SII（Servicio de "
+"Impuestos Internos）`、客户和供应商。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Diagram with Electronic invoice transactions."
@@ -26435,10 +26503,12 @@ msgid ""
 "document type can be changed manually if needed on the invoice by navigating"
 " to :menuselection:`Accounting --> Customers --> Invoices`."
 msgstr ""
+"创建和配置合作伙伴和日记账后，发票将以标准方式创建。对于智利来说，不同之处在于根据纳税人自动选择的文档类型。如有需要，可通过导航至 "
+":menuselection:`会计 --> 客户 --> 发票` 手动更改发票上的文档类型。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Customer invoice document type selection."
-msgstr ""
+msgstr "客户发票文件类型选择。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:417
 msgid ""
@@ -26446,30 +26516,34 @@ msgid ""
 " with tax, otherwise the :abbr:`SII (Servicio de Impuestos Internos)` "
 "rejects the document validation."
 msgstr ""
+":guilabel:`文档类型 33` 电子发票必须至少有一项含税项目，否则 :abbr:`SII (Servicio de Impuestos "
+"Internos)` 会拒绝文档验证。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:423
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:923
 msgid "Validation and DTE status"
-msgstr ""
+msgstr "验证和 DTE 状态"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:425
 msgid ""
 "Once all invoice information is filled, either manually or automatically "
 "when generated from a sales order, validate the invoice. After the invoice "
 "is posted:"
-msgstr ""
+msgstr "填写了所有发票信息（手动填写或根据销售订单自动生成）后，即对发票进行验证。发票过账后："
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:428
 msgid ""
 "The :abbr:`DTE (Documentos Tributarios Electrónicos)` file is created "
 "automatically and recorded in the chatter."
-msgstr ""
+msgstr "自动创建并记录在聊天记录中的 :abbr:`DTE（电子税务文件）` 文件。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:430
 msgid ""
 "The :abbr:`DTE (Documentos Tributarios Electrónicos)` :abbr:`SII (Servicio "
 "de Impuestos Internos)` status is set as :guilabel:`Pending` to be sent."
 msgstr ""
+"The :abbr:`DTE (Documentos Tributarios Electrónicos)` :abbr:`SII (Servicio "
+"de Impuestos Internos)` status is set as :guilabel:`Pending` to be sent."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:0
 msgid "DTE XML File displayed in chatter."
@@ -26483,10 +26557,14 @@ msgid ""
 "needed immediately, you can do it manually as well by following the "
 ":abbr:`DTE (Documentos Tributarios Electrónicos)` status workflow:"
 msgstr ""
+":abbr:`DTE (Documentos Tributarios Electrónicos)` 状态是由 Odoo "
+"通过每天晚上运行的预定操作进行自动更新。若需要立即取得税务机关（:abbr:`SII (Servicio de Impuestos "
+"Internos)`）的回应，您也可以按照 :abbr:`DTE (Documentos Tributarios Electrónicos)` "
+"状态工作流程，手动执行："
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Transition of DTE status flow."
-msgstr ""
+msgstr "DTE 状态流的转换。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:446
 msgid ""
@@ -26725,12 +26803,14 @@ msgid ""
 "**Error:** `Element '{http://www.sii.cl/SiiDte%7DRutReceptor': This element "
 "is not expected. Expected is ( {http://www.sii.cl/SiiDte%7DRutEnvia ).`"
 msgstr ""
+"**错误：** `Element '{http://www.sii.cl/SiiDte%7DRutReceptor'： 此元素不是预期元素。预期元素为 "
+"（{http://www.sii.cl/SiiDte%7DRutEnvia ).`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:0
 msgid ""
 "**Hint:** Make sure the field :guilabel:`Document Type` and :guilabel:`VAT` "
 "are set in the customer and in the main company."
-msgstr ""
+msgstr "**提示：** 确保在客户和主公司中设置了 :guilabel:`文件类型` 和 :guilabel:`VAT` 字段。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:0
 msgid "**Error:** `Usuario sin permiso de envio.`"
@@ -26750,6 +26830,12 @@ msgid ""
 "Tributarios Electrónicos)` files to the :abbr:`SII (Servicio de Impuestos "
 "Internos)`."
 msgstr ""
+"**提示：**此错误表明贵公司很可能尚未通过 :abbr:`SII （Servicio de Impuestos Internos）` - "
+"Sistema de Facturación de Mercado中的 "
+"`认证程序<https://www.sii.cl/factura_electronica/factura_mercado/proceso_certificacion.htm>`_。如果是这种情况，请联系您的客户经理或客户支持，因为该认证不属于"
+" Odoo 服务的一部分，但我们可以为您提供一些替代方案。如果您已通过认证程序，当与证书所有者不同的用户试图发送 "
+":abbr:`DTE（Documentos Tributarios Electrónicos）` 文件到 :abbr:`SII（Servicio de "
+"Impuestos Internos）` 时，会出现此错误。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:0
 msgid "**Error:** `CARATULA`"
@@ -26771,7 +26857,7 @@ msgstr "公司的:abbr:`RUT（Rol Único Tributario）号码不正确或丢失�
 msgid ""
 "The certificate owner :abbr:`RUT (Rol Único Tributario)` number is incorrect"
 " or missing."
-msgstr ""
+msgstr "证书所有者 :abbr:`RUT (Rol Único Tributario) 号码不正确或丢失。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:586
 msgid ""
@@ -26779,14 +26865,16 @@ msgid ""
 "Tributario)` number (this should be correct by default) is incorrect or "
 "missing."
 msgstr ""
+":abbr:`SII's (Servicio de Impuestos Internos)` :abbr:`RUT (Rol Único "
+"Tributario)` 编号（默认情况下应正确）不正确或丢失。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:588
 msgid "The resolution date is incorrect or missing."
-msgstr ""
+msgstr "解决日期不正确或缺失。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:589
 msgid "The resolution number is incorrect or missing."
-msgstr ""
+msgstr "解决编号不正确或缺失。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:596
 msgid ""
@@ -26798,6 +26886,11 @@ msgid ""
 "<chile/caf-documentation>` for more information on the process to load the "
 ":abbr:`CAF (Folio Authorization Code)` on each document type."
 msgstr ""
+"当需要取消或更正已确认的发票时，必须生成信用证。需要注意的是，信用证需要一个 :abbr:`CAF (Folio Authorization "
+"Code)` 文件，该文件在 :abbr:`SII (Servicio de Impuestos Internos)` 中被识别为 "
+":guilabel:`文件类型` :guilabel:`61`。请参阅 :ref:`CAF 部分 <chile/caf-"
+"documentation>`，了解有关在每种单证类型上加载 :abbr:`CAF (Folio Authorization Code)` "
+"的过程的更多信息。"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Creation of CAF for Credit notes."
