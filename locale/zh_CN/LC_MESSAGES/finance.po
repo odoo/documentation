@@ -10716,6 +10716,11 @@ msgid ""
 " completely change the resulting hash. Consequently, the SHA-256 algorithm "
 "is often used, among others, for data integrity verification purposes."
 msgstr ""
+"为此，Odoo 可以使用 **SHA-256 算法** "
+"为每个发布的条目创建唯一指纹。该指纹称为哈希值。哈希值是通过获取记项的基本数据（`name`、`date`、`journal_id`、`company_id`、`debit`、`credit`、`account_id`"
+" 和 `partner_id` "
+"字段的值）生成散列，将数据串联起来，并输入SHA-256散列函数，函数输出固定大小（256位）的字符串。散列函数是确定性的（:dfn:`相同的输入必定会得到相同的输出`）：对原始数据的任何细微修改都会完全改变散列结果。因此，SHA-256"
+" 算法通常用于数据完整性验证等目的。"
 
 #: ../../content/applications/finance/accounting/reporting/data_inalterability.rst:17
 msgid ""
@@ -11657,6 +11662,8 @@ msgid ""
 "Install the :guilabel:`Irreversible Lock Date` (`account_lock`) module to "
 "make the :guilabel:`All Users Lock Date` *irreversible* once set."
 msgstr ""
+"安装 :guilabel:`不可逆转的锁定日期` (`account_lock`) 模块，使 :guilabel:`所有用户锁定日期` 设置为 "
+"*不可逆转*。"
 
 #: ../../content/applications/finance/accounting/reporting/year_end.rst:109
 msgid ""
@@ -13886,12 +13893,15 @@ msgid ""
 "<https://community.avalara.com/support/s/document-"
 "item?language=en_US&bundleId=hps1656397152776_hps1656397152776&topicId=Learn_about_Managed_Returns.html&_LANG=enus>`_."
 msgstr ""
+"点击 :guilabel:`开始` 开始退税流程。有关更多信息，请参阅 Avalara 文档：`有关托管退税 "
+"<https://community.avalara.com/support/s/document-"
+"item?language=en_US&bundleId=hps1656397152776_hps1656397152776&topicId=Learn_about_Managed_Returns.html&_LANG=enus>`_。"
 
 #: ../../content/applications/finance/accounting/taxes/avatax/avalara_portal.rst:252
 msgid ""
 "Alternatively, click on the :menuselection:`Returns` button in the top menu "
 "of the Avalara management console."
-msgstr ""
+msgstr "或者，点击 Avalara 管理控制台顶部菜单中的 :menuselection:`退货` 按钮。"
 
 #: ../../content/applications/finance/accounting/taxes/avatax/avalara_portal.rst:256
 #: ../../content/applications/finance/accounting/taxes/avatax/avatax_use.rst:159
@@ -13904,7 +13914,7 @@ msgstr ":doc:`avatax_use`"
 
 #: ../../content/applications/finance/accounting/taxes/avatax/avatax_use.rst:3
 msgid "AvaTax use"
-msgstr ""
+msgstr "使用 AvaTax"
 
 #: ../../content/applications/finance/accounting/taxes/avatax/avatax_use.rst:5
 msgid ""
@@ -13912,6 +13922,8 @@ msgid ""
 " United States and Canada. Once the :doc:`integration setup <../avatax>` is "
 "complete, the calculated tax is simple and automatic."
 msgstr ""
+"AvaTax 是一款税务计算软件，可以与美国和加拿大的 Odoo 集成。一旦 :doc:`整合设置 <../avatax>` "
+"完成，计算的税费就变得简单且自动。"
 
 #: ../../content/applications/finance/accounting/taxes/avatax/avatax_use.rst:10
 msgid "Tax calculation"
@@ -13943,10 +13955,12 @@ msgid ""
 "trigger <avatax/automatic-triggers>` and :ref:`manual trigger "
 "<avatax/manual-triggers>` circumstances."
 msgstr ""
+"在以下 :ref:`自动触发 <avatax/automatic-triggers>` 和 :ref:`手动触发 <avatax/manual-"
+"triggers>` 情况下触发税款计算。"
 
 #: ../../content/applications/finance/accounting/taxes/avatax/avatax_use.rst:30
 msgid "Automatic triggers"
-msgstr ""
+msgstr "自动触发"
 
 #: ../../content/applications/finance/accounting/taxes/avatax/avatax_use.rst:32
 msgid ""
@@ -17102,7 +17116,7 @@ msgstr ""
 
 #: ../../content/applications/finance/expenses.rst-1
 msgid "Ensure the customer to be invoiced is called out on the expense."
-msgstr ""
+msgstr "确保在费用上注明要开具发票的客户。"
 
 #: ../../content/applications/finance/expenses.rst:555
 msgid ""
@@ -17626,13 +17640,13 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:38
 msgid "`l10n_ar_edi`"
-msgstr ""
+msgstr "`l10n_ar_edi`"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:39
 msgid ""
 "Includes all technical and functional requirements to generate electronic "
 "invoices via web service, based on the AFIP regulations."
-msgstr ""
+msgstr "包括根据 AFIP 规定，通过网络服务生成电子发票的所有技术和功能要求。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:41
 msgid ":guilabel:`Argentinean eCommerce`"
@@ -17640,14 +17654,14 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:42
 msgid "`l10n_ar_website_sale`"
-msgstr ""
+msgstr "`l10n_ar_website_sale`"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:43
 msgid ""
 "(optional) Allows the user to see Identification Type and AFIP "
 "Responsibility in the eCommerce checkout form in order to create electronic "
 "invoices."
-msgstr ""
+msgstr "（可选）允许用户在电子商务结账表单中查看标识类型和 AFIP 责任，以便创建电子发票。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:47
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:137
@@ -17662,11 +17676,12 @@ msgid ""
 "in is the :guilabel:`AFIP Responsibility Type`, which represents the fiscal "
 "obligation and structure of the company."
 msgstr ""
+"安装本地化模块后，第一步是设置公司数据。除基本信息外，需要填写的一个关键字段是 :guilabel:`AFIP 责任类型`，它代表公司的财政义务和结构。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst-1
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst-1
 msgid "Select AFIP Responsibility Type."
-msgstr ""
+msgstr "选择 AFIP 责任类型。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:58
 msgid "Chart of account"
@@ -17682,23 +17697,23 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:65
 msgid "Monotributista (227 accounts);"
-msgstr ""
+msgstr "Monotributista (227 种账户)；"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:66
 msgid "IVA Exento (290 accounts);"
-msgstr ""
+msgstr "IVA Exento (290 种账户)；"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:67
 msgid "Responsable Inscripto (298 Accounts)."
-msgstr ""
+msgstr "Responsable Inscripto (298 种账户)."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst-1
 msgid "Select Fiscal Localization Package."
-msgstr ""
+msgstr "选择财务本地化套装。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:74
 msgid "Configure master data"
-msgstr ""
+msgstr "配置主数据"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:77
 msgid "Electronic Invoice Credentials"
@@ -17712,7 +17727,7 @@ msgstr "Environment"
 msgid ""
 "The AFIP infrastructure is replicated in two separate environments, "
 "**testing** and **production**."
-msgstr ""
+msgstr "AFIP 基础设施复制在两个独立的环境中：**测试** 和 **正式运行**。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:84
 msgid ""
@@ -17721,6 +17736,7 @@ msgid ""
 "environments are completely isolated from each other, the digital "
 "certificates of one instance are not valid in the other one."
 msgstr ""
+"提供测试环境是为了让公司测试其数据库，直到他们准备好进入 **正式运行** 环境。由于这两个环境完全相互隔离，其中一个实例的数字证书在另一个实例中无效。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:88
 msgid ""
@@ -17728,26 +17744,28 @@ msgid ""
 "Settings --> Argentinean Localization` and choose either :guilabel:`Prueba "
 "(Testing)` or :guilabel:`Produccion (Production)`."
 msgstr ""
+"要选择数据库环境，请进入 :menuselection:`会计 --> 设置 --> 阿根廷本地化`，然后选择 "
+":guilabel:`Prueba（测试）` 或 :guilabel:`Produccion（正式运行）` 。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst-1
 msgid "Select AFIP database environment: Testing or Production."
-msgstr ""
+msgstr "选择 AFIP 数据库环境：测试或正式运行。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:96
 msgid "AFIP certificates"
-msgstr ""
+msgstr "AFIP 认证"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:98
 msgid ""
 "The electronic invoice and other AFIP services work with :guilabel:`Web "
 "Services (WS)` provided by the AFIP."
-msgstr ""
+msgstr "电子发票和其他 AFIP 服务，可与 AFIP 提供的 :guilabel:`网络服务（WS）` 协同工作。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:101
 msgid ""
 "In order to enable communication with the AFIP, the first step is to request"
 " a :guilabel:`Digital Certificate` if you do not have one already."
-msgstr ""
+msgstr "为了启用与 AFIP 的通信，第一步是要求 :guilabel:`数字证书` （如无）。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:104
 msgid ""
@@ -17755,10 +17773,12 @@ msgid ""
 "selected, a file with extension `.csr` (certificate signing request) is "
 "generated to be used in the AFIP portal to request the certificate."
 msgstr ""
+":guilabel:`生成证书签名请求（Odoo）`。选择此选项后，将生成一个扩展名为 `.csr`（证书签名请求）的文件，用于在 AFIP "
+"门户中请求证书。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:0
 msgid "Request a certificate."
-msgstr ""
+msgstr "请求证书。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:111
 msgid ""
@@ -17767,6 +17787,9 @@ msgid ""
 "<https://drive.google.com/file/d/17OKX2lNWd1bjUt3NxfqcCKBkBh-Xlpo-/ view>`_ "
 "to get a certificate."
 msgstr ""
+":guilabel:`生成证书（AFIP）`。访问 AFIP 门户网站，并按照`本文档 "
+"<https://drive.google.com/file/d/17OKX2lNWd1bjUt3NxfqcCKBkBh-Xlpo-/ view>`_ "
+"中描述的说明获取证书。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:115
 msgid ""
@@ -17774,6 +17797,8 @@ msgid ""
 "is generated, upload it to Odoo using the :guilabel:`Pencil` icon next to "
 "the field :guilabel:`Certificado` and select the corresponding file."
 msgstr ""
+":guilabel:`上传证书和私钥（Odoo）`。证书生成后，使用 :guilabel:`Certificado` 字段旁边的 "
+":guilabel:`铅笔` 图标将其上传到 Odoo，并选择相应文件。"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:0
 msgid "Upload Certificate and Private Key."
