@@ -138,4 +138,4 @@ provide helpful context, and distinguish between internal and external locations
    inventory_management/count_products
    inventory_management/cycle_counts
    inventory_management/scrap_inventory
-
+   inventory_management/product_catalog
