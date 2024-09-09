@@ -382,6 +382,7 @@ the applicant. The email then appears in the chatter.
    - :doc:`recruitment/source_analysis`
    - :doc:`recruitment/recruitment_analysis`
    - :doc:`recruitment/time_in_stage`
+   - :doc:`recruitment/team_performance`
 
 .. toctree::
    :titlesonly:
@@ -395,3 +396,4 @@ the applicant. The email then appears in the chatter.
    recruitment/source_analysis
    recruitment/recruitment_analysis
    recruitment/time_in_stage
+   recruitment/team_performance
