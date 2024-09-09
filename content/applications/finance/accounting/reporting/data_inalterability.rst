@@ -24,14 +24,15 @@ would break the hash chain.
    bigger than the number of atoms in the known universe. This is why hashes are considered unique
    in practice.
 
-.. _data-inalterability/lock:
+.. _data-inalterability/restricted:
 
-Lock posted entries with hash
-=============================
+Secure posted entries with hash
+===============================
 
 To start using the hashing function, go to :menuselection:`Accounting --> Configuration > Journals`.
 Open the journal for which you want to activate the feature, go to the :guilabel:`Advanced Settings`
-tab, and enable :guilabel:`Lock Posted Invoices with Hash`.
+tab, and enable :guilabel:`Secure Posted Invoices with Hash`. We call journals for which the
+feature is activated "restricted".
 This feature is available for sale, purchase, and general journals.
 
 To compute the hash of an entry, Odoo retrieves the predecessor entries of the chain (i.e., the
@@ -39,8 +40,61 @@ entries with the same sequence prefix) and hashes them in a continuous way from 
 entry to the new entry to hash.
 
 .. warning::
-   Once you post an entry in a locked journal, you cannot disable the feature anymore, nor edit any
-   locked entry.
+   Once you post an entry in a restricted journal, you cannot disable the feature anymore, nor edit any
+   secured entry.
+
+.. _data-inalterability/inalterability_features:
+
+Inalterability Features
+=======================
+
+Some Inalterability Features are hidden by default.
+They can be shown by activating the :guilabel:`Secure Posted Invoices with Hash` option on
+any journal or using the :ref:`Secure Entries Wizard <data-inalterability/wizard>`.
+
+- Two indicators are added to the journal entry form view.
+  They show whether the entry is secured or not.
+
+  - A lock next to the "Posted" state.
+  - A "Secured" checkbox in the "Other info"
+
+- On journal entry list views a "Not Secured" filter is shown.
+  It can be used to find journal entries that are posted but not secured yet.
+- The menu to open the :ref:`Secure Entries Wizard <data-inalterability/wizard>` is visible.
+
+.. _data-inalterability/wizard:
+
+Secure Entries Wizard
+=====================
+
+To secure journal entries in all journals up to a selected date the :guilabel:`Secure Entries` Wizard
+can be used.
+
+.. note::
+   The wizard operates independently of the journal settings and journal types.
+   It secures all entries in all journals.
+
+To open it, activate the :ref:`developer mode <developer-mode>`,
+go to :menuselection:`Accounting --> Accounting` and click on :guilabel:`Secure Entries`.
+In case the :ref:`Inalterability Features <data-inalterability/inalterability_features>` are activated
+it is also visible outside the debug mode.
+
+To secure entries, select a date up to which all entries should be secured and press :guilabel:`Secure Entries`.
+
+.. warning::
+   After securing the entries you will not be able to edit them any more.
+
+.. note::
+   It can happen that entries are secured that are past the selected date.
+   This is possible since the hash chain corresponds to the sequence prefix, ordered by sequence number.
+   Thus it can be necessary to hash an entry with a lower sequence number (but later accounting date).
+
+.. note::
+   It can happen that some entries can not be secured with a hash.
+   This is possible since the hash chain corresponds to the sequence prefix, ordered by sequence number.
+   Thus we can only extend the hash chain with entries that have a higher sequence number than the current chain.
+   In previous versions it was for example possible to have unhashed entries at the start of a sequence prefix.
+   Such entries can be protected from modification by setting the Hard Lock Date.
 
 .. _data-inalterability/report:
 
@@ -50,15 +104,16 @@ Report download
 To download the data inalterability check report, go to :menuselection:`Accounting --> Configuration
 --> Settings --> Reporting` and click on :guilabel:`Download the Data Inalterability Check Report`.
 
-The report's first section is an overview of all your journals and their configuration. Under the
-inalterability check column, you can see whether or not a journal's entries are locked with a hash
-(V) or not (X). The coverage column tells you when a journal's entries started being locked.
+The report's first section is an overview of all journal sequence prefixes containing hashed entries.
+In the "Restricted" column, you can see whether or not a journal
+has the :guilabel:`Secure Posted Invoices with Hash` option (V) activated or not (X).
+The "Check" column tells you whether all entries are correctly hashed or not.
 
 .. image:: data_inalterability/journal-overview.png
    :align: center
    :alt: Configuration report for two journals
 
-The second section gives you the result of the data consistency check for each hashed journal. You
+The second section gives you a more detailed result of the data consistency check for each hashed journal sequence prefix. You
 can view the first hashed entry and its corresponding hash and the last hashed entry and its
 corresponding hash.
 
