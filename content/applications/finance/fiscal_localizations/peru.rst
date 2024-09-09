@@ -236,12 +236,12 @@ password.
 Multicurrency
 ~~~~~~~~~~~~~
 
-The official currency exchange rate in Peru is provided by the Bank of Peru. Odoo can connect
+The official currency exchange rate in Peru is provided by SUNAT. Odoo can connect
 directly to its services and get the currency rate either automatically or manually.
 
-.. image:: peru/peru-multicurrency.png
+.. image:: peru/l10n-pe-banksync-sunat.png
    :align: center
-   :alt: Bank of Peru is displayed in Multicurrency Service option
+   :alt: SUNAT is displayed in Multicurrency Service option
 
 Please refer to the next section in our documentation for more information about
 :doc:`multicurrencies <../accounting/get_started/multi_currency>`.
