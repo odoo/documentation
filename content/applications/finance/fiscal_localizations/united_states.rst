@@ -271,9 +271,9 @@ Reports
 A number of :doc:`report selections <../accounting/reporting>` are readily available for the US
 localization, under the :menuselection:`Accounting app --> Reporting` drop-down menu:
 
-- :ref:`Balance Sheet <reporting/balance-sheet>`: a "snapshot" of a company's financial position at
-  a specific point in time, which contains an overview of a company's assets, liabilities, and
-  equity.
+- :ref:`Balance Sheet <accounting/reporting/balance-sheet>`: a "snapshot" of a company's financial
+  position at a specific point in time, which contains an overview of a company's assets,
+  liabilities, and equity.
 - :ref:`Profit & Loss <accounting/reporting/balance-sheet>`: otherwise known as a *P&L statement* or
   *income statement*, provides a summary of a company's revenues, expenses, and profits/losses over
   a given period of time.
@@ -282,10 +282,10 @@ localization, under the :menuselection:`Accounting app --> Reporting` drop-down 
 - :ref:`Executive Summary <accounting/reporting/executive-summary>`: an overview report that covers
   the key performance indicators of a company's financial position, such as revenue, profit, and
   debt.
-- :ref:`Tax Report <reporting/tax-report>`: an official form filed for a tax authority that reports
-  income, expenses, and other pertinent tax information. Tax reports allow taxpayers to calculate
-  their tax liability, schedule tax payments, or request refunds for the overpayment of taxes. In
-  Odoo, the tax report can be made monthly, every two months, quarterly, every 4 months,
+- :ref:`Tax Report <accounting/reporting/tax-report>`: an official form filed for a tax authority
+  that reports income, expenses, and other pertinent tax information. Tax reports allow taxpayers to
+  calculate their tax liability, schedule tax payments, or request refunds for the overpayment of
+  taxes. In Odoo, the tax report can be made monthly, every two months, quarterly, every 4 months,
   semi-annually, and annually.
 - :guilabel:`Check Register`: a report that displays cash transactions (regardless of the journal)
   with their running balance after the transaction. Only visible with the *US - Accounting Reports*
