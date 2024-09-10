@@ -52,12 +52,14 @@ Closing a fiscal year
 
 Then, to close the fiscal year:
 
-- Run a :ref:`tax report <reporting/tax-report>`, and verify that all tax information is correct.
-- Reconcile all accounts on the :ref:`balance sheet <reporting/balance-sheet>`:
+- Run a :ref:`tax report <accounting/reporting/tax-report>`, and verify that all tax information is
+  correct.
+- Reconcile all accounts on the :ref:`balance sheet <accounting/reporting/balance-sheet>`:
 
   - Update the bank balances in Odoo according to the actual balances found on the bank statements.
   - Reconcile all transactions in the cash and bank accounts by running the :ref:`aged receivables
-    <reporting/aged-receivable>` and :ref:`aged payables <reporting/aged-payable>` reports.
+    <accounting/reporting/aged-receivable>` and :ref:`aged payables
+    <accounting/reporting/aged-payable>` reports.
   - Audit all accounts, being sure to fully understand all transactions and their nature, making
     sure to include loans and fixed assets.
   - Optionally, run :ref:`payments matching <payments/matching>` to validate any open vendor bills
