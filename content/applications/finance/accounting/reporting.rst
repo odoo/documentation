@@ -4,30 +4,31 @@
 Reporting
 =========
 
-Main reports available
-======================
-
 Odoo includes **generic** and **dynamic** reports available for all countries, regardless of the
 :doc:`localization package <../../finance/fiscal_localizations>` installed:
 
--  **Balance Sheet**
--  **Profit and Loss**
--  **Executive Summary**
--  **General Ledger**
--  **Aged Payable**
--  **Aged Receivable**
--  **Cash Flow Statement**
--  **Tax Report**
+-  :ref:`reporting/balance-sheet`
+-  :ref:`reporting/profit-and-loss`
+-  :ref:`reporting/executive-summary`
+-  :ref:`reporting/general-ledger`
+-  :ref:`reporting/aged-receivable`
+-  :ref:`reporting/aged-payable`
+-  :ref:`reporting/cash-flow-statement`
+-  :ref:`reporting/tax-report`
 
-Reports can be **annotated, printed, and drilled down** to see details (payments, invoices,
-journal items, etc.) by clicking the **down** arrow. Reports can also be exported to **PDF** or
-**XLSX** format by clicking :guilabel:`PDF` or :guilabel:`XLSX` at the top of the page.
+To expand the lines of a report and view its details, click the :icon:`fa-caret-right`
+(:guilabel:`right arrow`) on the left. Then click the :icon:`fa-caret-down` (:guilabel:`down arrow`)
+to the right of the account, journal entry, payment, invoice, etc. to :guilabel:`Annotate` and view
+the details.
 
 .. image:: reporting/reporting-annotate.png
    :alt: Annotate reports.
 
-You can compare values across periods by using the :guilabel:`Comparison` menu and selecting the
-periods you want to compare.
+To export reports in PDF or XLSX format, click :guilabel:`PDF` or :guilabel:`XLSX` at the top of the
+page.
+
+To compare values across periods, click the :guilabel:`Comparison` menu and select the periods you
+want to compare.
 
 .. image:: reporting/reporting-comparison.png
    :alt: Comparison menu to compare time periods.
@@ -35,119 +36,97 @@ periods you want to compare.
 .. _reporting/balance-sheet:
 
 Balance Sheet
--------------
+=============
 
-The **Balance Sheet** shows a snapshot of your organization's assets, liabilities, and equity at a
-particular date.
-
-.. image:: reporting/reporting-balance-sheet.png
-   :alt: Balance sheet report of Odoo.
+The :guilabel:`Balance Sheet` shows a snapshot of your organization's assets, liabilities, and
+equity at a particular date.
 
 .. _reporting/profit-and-loss:
 
 Profit and Loss
----------------
+===============
 
-The **Profit and Loss** report (or **Income Statement**) shows your company's net income by
+The :guilabel:`Profit and Loss` report (or **Income Statement**) shows your company's net income by
 deducting expenses from revenue for the reporting period.
-
-.. image:: reporting/reporting-profit-and-loss.png
-   :alt: Profit and Loss report of Odoo
 
 .. _reporting/executive-summary:
 
 Executive Summary
------------------
+=================
 
-The **Executive Summary** allows a quick look at all the important figures to run your company.
+The :guilabel:`Executive Summary` provides an overview of all the important figures for overseeing
+your company's performance.
 
-In basic terms, this is what each item in the following section reports:
+It includes the following items:
 
-- **Performance:**
-    - **Gross profit margin:**
-        The contribution of all sales made by your business **minus** any direct costs needed to
+- :guilabel:`Performance`:
+    - :guilabel:`Gross profit margin`:
+        The contribution of all sales your business makes **minus** any direct costs needed to
         make those sales (labor, materials, etc.).
-    - **Net profit margin:**
+    - :guilabel:`Net profit margin`:
         The contribution of all sales made by your business **minus** any direct costs needed to
         make those sales *and* fixed overheads your company has (electricity, rent, taxes
         to be paid as a result of those sales, etc.).
-    - **Return on investment (per annum):**
-        The ratio of net profit made to the amount of assets the company used to make those profits.
-- **Position:**
-    - **Average debtors days:**
+    - :guilabel:`Return on investment (per annum)`:
+        The ratio of the net profit to the amount of assets the company used to make those profits.
+- :guilabel:`Position`:
+    - :guilabel:`Average debtors days`:
         The average number of days it takes your customers to (fully) pay you across all your
         customer invoices.
-    - **Average creditors days:**
+    - :guilabel:`Average creditors days`:
         The average number of days it takes you to (fully) pay your suppliers across all your bills.
-    - **Short-term cash forecast:**
+    - :guilabel:`Short-term cash forecast`:
         How much cash is expected in or out of your business in the next month, i.e., the balance of
         your **Sales account** for the month **minus** the balance of your **Purchases account** for
         the month.
-    - **Current assets to liabilities:**
-        Also referred to as **current ratio**, this is the ratio of current assets (:dfn:`assets
+    - :guilabel:`Current assets to liabilities`:
+        Also referred to as the **current ratio**, this is the ratio of current assets (:dfn:`assets
         that could be turned into cash within a year`) to the current liabilities (:dfn:`liabilities
         that will be due in the next year`). It is typically used to measure a company's ability to
         service its debt.
 
-.. image:: reporting/reporting-executive-summary.png
-   :alt: Executive summary report in Odoo.
-
 .. _reporting/general-ledger:
 
 General Ledger
---------------
+==============
 
-The **General Ledger Report** shows all transactions from all accounts for a chosen date range. The
-initial summary report shows each account's totals; from here, you can view a detailed transaction
-report or any exceptions. This report helps check every transaction that occurred during a specific
-period.
-
-.. image:: reporting/reporting-general-ledger.png
-   :alt: General Ledger report in Odoo.
-
-.. _reporting/aged-payable:
-
-Aged Payable
-------------
-
-Run the **Aged Payable Details** report to display information on individual bills, credit notes,
-and overpayments you owe and how long these have gone unpaid.
-
-.. image:: reporting/reporting-aged-payable.png
-   :alt: Aged Payable report in Odoo.
+The :guilabel:`General Ledger` report shows all transactions from all accounts for a selected date
+range. The initial summary report shows the totals for each account. To expand an account and view
+its details, click the :icon:`fa-caret-right` (:guilabel:`right arrow`) on the left.
+This report is useful for reviewing each transaction that occurred during a specific period.
 
 .. _reporting/aged-receivable:
 
 Aged Receivable
----------------
+===============
 
-The **Aged Receivables** report shows the sales invoices awaiting payment during a selected month
-and several months prior.
+The :guilabel:`Aged Receivable` report shows the sales invoices awaiting payment during a selected
+month and several months prior.
 
-.. image:: reporting/reporting-aged-receivable.png
-   :alt: Aged Receivable report in Odoo.
+.. _reporting/aged-payable:
+
+Aged Payable
+============
+
+The :guilabel:`Aged Payable` report displays information on individual bills, credit notes, and
+overpayments you owe and how long these have gone unpaid.
 
 .. _reporting/cash-flow-statement:
 
 Cash Flow Statement
--------------------
+===================
 
-The **Cash Flow Statement** shows how changes in balance sheet accounts and income affect cash and
-cash equivalents and breaks the analysis down to operating, investing, and financing activities.
-
-.. image:: reporting/reporting-cash-flow-statement.png
-   :alt: Cash Flow Statement report in Odoo.
+The :guilabel:`Cash Flow Statement` shows how changes in balance sheet accounts and income affect
+cash and cash equivalents and breaks the analysis down to operating, investing, and financing
+activities.
 
 .. _reporting/tax-report:
 
 Tax Report
-----------
+==========
 
-This report allows you to see the **net** and **tax amounts** for all the taxes grouped by type
-(sale/purchase).
-
-.. image:: reporting/reporting-tax-report.png
-   :alt: Tax report in Odoo.
+The :guilabel:`Tax Report` shows the :guilabel:`NET` and :guilabel:`TAX` amounts for all the
+taxes grouped by type (:guilabel:`Sales`/:guilabel:`Purchases`).
 
 .. toctree::
    :titlesonly:
