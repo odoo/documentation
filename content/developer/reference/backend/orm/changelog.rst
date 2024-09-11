@@ -10,6 +10,9 @@ Odoo Online version 18.1
 - Declare constraints and indexes as model attributes with `#175783 <https://github.com/odoo/odoo/pull/175783>`_.
 - The `json` controllers have been renamed to `jsonrpc`. They are called the same, only the
   `type` in the python files changed. See `#183636 <https://github.com/odoo/odoo/pull/183636>`_.
+- Method :meth:`~odoo.api.Environment.ref` now accepts a variadic sequence of arguments `xml_ids`,
+  and argument `raise_if_not_found` now is a keyword-only argument. See `#179692 <https://github.com/odoo/odoo/pull/179692>`_.
+
 
 Odoo version 18.0
 =================
