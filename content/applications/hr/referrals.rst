@@ -18,7 +18,7 @@ related to the :doc:`rewards <referrals/rewards>`; everything else is pre-config
 Users with either :guilabel:`Referral User`, :guilabel:`Officer`, or :guilabel:`Administrator`
 access rights for the *Recruitment* application have access to the *Referrals* application. Only
 users with :guilabel:`Administrator` access rights for the *Recruitment* application have access to
-the :ref:`reporting <referrals/reporting>` and configurations menus. For more information on users
+the :doc:`reporting <referrals/reporting>` and configurations menus. For more information on users
 and access rights, refer to these documents: :doc:`../general/users` and
 :doc:`../general/users/access_rights`.
 
@@ -255,46 +255,16 @@ points required.
    can be redeemed for rewards, but they are no longer able to level up. The ring around their photo
    remains solid cyan.
 
-.. _referrals/reporting:
-
-Reporting
-=========
-
-Only users with :guilabel:`Administrator` rights for the *Recruitment* application have access to
-the Reporting feature in *Referrals*. To access the reports, click :menuselection:`Referrals
-application --> Reporting`. The main view is the Reporting Dashboard view, which contains three
-sections.
-
-In the top portion of the window, the report displays a bar chart of how many referred candidates
-are hired, and how many are still in the hiring pipeline. The candidates are further divided by
-channel, showing specifically where the referral came from, such as a direct referral, Facebook,
-etc. If a channel does not appear on the report, that indicates there are no referrals from that
-particular channel.
-
-The middle third provides all the specific data that has been tracked. This includes how many total
-points have been earned across all referrals, how many applicants were referred, hired, or refused,
-how many applicants the current logged-in user referred, how many total points were earned, and how
-many points were given for refused applicants.
-
-The bottom third displays a pivot table. This table can be inserted into a new or existing
-spreadsheet. To do so, click the :guilabel:`Insert in Spreadsheet` button right above the chart. A
-pop-up appears, asking which spreadsheet to insert the pivot chart into. Select the desired
-spreadsheet from the drop-down menu, or select :guilabel:`New Spreadsheet`. Click
-:guilabel:`Confirm` and the selected spreadsheet loads, with the new table in it.
-
-.. note::
-   The spreadsheet is stored in the *Documents* application. This application needs to be installed
-   to use the :guilabel:`Insert in Spreadsheet` option.
-
 .. seealso::
    - :doc:`referrals/share_jobs`
    - :doc:`referrals/points`
    - :doc:`referrals/rewards`
    - :doc:`referrals/alerts`
+   - :doc:`referrals/reporting`
 
 .. toctree::
-
    referrals/share_jobs
    referrals/points
    referrals/rewards
    referrals/alerts
+   referrals/reporting
