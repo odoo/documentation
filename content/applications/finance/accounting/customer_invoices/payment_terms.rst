@@ -116,7 +116,7 @@ for every computed *due date*.
 This makes for easier :doc:`follow-ups </applications/finance/accounting/payments/follow_up>` and
 :doc:`reconciliation </applications/finance/accounting/bank/reconciliation>` since Odoo takes each
 due date into account, rather than just the balance due date. It also helps to get an accurate
-:ref:`aged receivable report <customer-invoices/aging-report>`.
+:ref:`aged receivable report <accounting/invoices/aging-report>`.
 
 .. example::
    .. image:: payment_terms/journal-entry.png
