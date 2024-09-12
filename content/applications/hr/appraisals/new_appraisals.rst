@@ -24,13 +24,12 @@ Each appraisal card displays the following information:
 
 - **Name**: the employee's name.
 - **Department**: the department the employee is associated with.
-- **Company**: the company the employee works for. This only appears in a multi-company
-  database.
+- **Company**: the company the employee works for. This only appears in a multi-company database.
 - **Date**: the date the appraisal was requested, or is scheduled for in the future.
 - **Activities**: any :doc:`activities <../../essentials/activities>` that are scheduled for the
   appraisal, such as *Meetings* or *Phone Calls*.
-- **Manager**: the employee's manager, indicated by the profile icon in the bottom-right
-  corner of an appraisal card.
+- **Manager**: the employee's manager, indicated by the profile icon in the bottom-right corner of
+  an appraisal card.
 - **Status banner**: the status of the appraisal. A banner appears if an appraisal is marked as
   either *Canceled* or *Done*. If no banner is present, that means the appraisal has not happened,
   or has not been scheduled yet.
@@ -274,8 +273,9 @@ Once the appraisal is marked as *Done*, the :guilabel:`Mark as Done` button disa
    button.
 
    Then, click the :guilabel:`Confirm` button that appears, and make any modifications needed. Once
-   all modifications are complete, click the the :guilabel:`Mark as Done` button again.
+   all modifications are complete, click the :guilabel:`Mark as Done` button again.
 
 .. seealso::
    - :doc:`../appraisals/goals`
    - :doc:`../appraisals/appraisal_analysis`
+   - :doc:`../appraisals/skills_evolution`

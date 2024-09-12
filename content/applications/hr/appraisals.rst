@@ -174,6 +174,7 @@ document.
    - :doc:`appraisals/new_appraisals`
    - :doc:`appraisals/goals`
    - :doc:`appraisals/appraisal_analysis`
+   - :doc:`appraisals/skills_evolution`
 
 .. toctree::
    :titlesonly:
@@ -181,3 +182,4 @@ document.
    appraisals/new_appraisals
    appraisals/goals
    appraisals/appraisal_analysis
+   appraisals/skills_evolution
