@@ -7,8 +7,7 @@ Command-line interface (CLI)
 The CLI :dfn:`command-line interface` offers several functionalities related to Odoo. You can use it
 to :ref:`run the server <reference/cmdline/server>`, :ref:`launch Odoo as a Python console
 environment <reference/cmdline/shell>`, :ref:`scaffold an Odoo module <reference/cmdline/scaffold>`,
-:ref:`populate a database <reference/cmdline/populate>`, or :ref:`count the number of lines of code
-<reference/cmdline/cloc>`.
+or :ref:`count the number of lines of code <reference/cmdline/cloc>`.
 
 .. important::
    The command to use to call the CLI depends on how you installed Odoo. In the examples below, we
@@ -739,35 +738,6 @@ Scaffolding is available via the :command:`odoo-bin scaffold` subcommand.
 
 
 This will create module *my_module* in directory */addons/*.
-
-.. _reference/cmdline/populate:
-
-Database Population
-===================
-
-.. program:: odoo-bin populate
-
-Odoo CLI supports database population features. If the feature is
-:ref:`implemented on a given model <reference/performance/populate/methods>`, it allows automatic
-data generation of the model's records to test your modules in databases containing non-trivial
-amounts of records.
-
-.. code-block:: console
-
-    $ odoo-bin populate
-
-.. option:: --models
-
-    list of models for which the database should be filled
-
-.. option:: --size (small|medium|large)
-
-    population size, the actual records number depends on the model's `_populate_sizes` attribute.
-    The generated records content is specified by the :meth:`~odoo.models._populate_factories` method
-    of a given model (cf. the :file:`populate` folder of modules for further details).
-
-.. seealso::
-   :ref:`reference/performance/populate`
 
 .. _reference/cmdline/cloc:
 
