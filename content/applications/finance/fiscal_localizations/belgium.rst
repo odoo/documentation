@@ -461,13 +461,13 @@ The Odoo POS system is certified for the major versions of databases hosted on *
      - Odoo Online
      - Odoo.sh
      - On-Premise
+   * - Odoo 17.0
+     - Certified
+     - Certified
+     - Not certified
    * - Odoo 16.0
      - Certified
      - Certified
-     - Not certified
-   * - Odoo 15.2
-     - Not certified
-     - Not certified
      - Not certified
    * - Odoo 15.0
      - Certified
