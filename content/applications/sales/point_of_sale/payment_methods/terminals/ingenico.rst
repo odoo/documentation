@@ -50,33 +50,3 @@ Then, select your terminal device in the :guilabel:`Payment Terminal Device` fie
 Once the payment method is created, you can select it in your POS settings. To do so, go to the
 :ref:`POS' settings <configuration/settings>`, click :guilabel:`Edit`, and add the payment method
 under the :guilabel:`Payments` section.
-
-Pay with a payment terminal
-===========================
-
-In your *PoS interface*, when processing a payment, select a *Payment
-Method* using a payment terminal. Check that the amount in the tendered
-column is the one that has to be sent to the payment terminal and click
-on *Send*. When the payment is successful, the status will change to
-*Payment Successful*.
-
-.. image:: ingenico/payment_terminal_05.png
-   :align: center
-
-If you want to cancel the payment request, click on cancel. You can
-still retry to send the payment request.
-
-If there is any issue with the payment terminal, you can still force the
-payment using the *Force Done*. This will allow you to validate the
-order in Odoo even if the connection between the terminal and Odoo has
-issues.
-
-.. note::
-   This option will only be available if you received an error message
-   telling you the connection failed.
-
-Once your payment is processed, on the payment record, you’ll find the
-type of card that has been used and the transaction ID.
-
-.. image:: ingenico/payment_terminal_06.png
-   :align: center
