@@ -7,8 +7,8 @@ Configuration
 
 .. _configuration/settings:
 
-Access POS settings
-===================
+Access the POS settings
+=======================
 
 To access the general POS settings, go to :menuselection:`Point of Sale --> Configuration -->
 Settings`.
@@ -26,6 +26,36 @@ and select a product to open the product form. In the :guilabel:`Sales` tab, ena
 
 .. image:: configuration/pos-available.png
    :alt: Making a product available in your POS.
+
+PoS product categories
+======================
+
+Configuration
+-------------
+
+POS product categories allow users to categorize products and get a more structured and clean
+POS interface.
+
+To manage PoS categories, go to :menuselection:`Point of Sale --> Configuration --> PoS Product
+Categories`. To add a new category, click :guilabel:`Create`. Then, name it in the
+:guilabel:`Category Name` field.
+
+To associate a category with a parent category, fill in the :guilabel:`Parent Category` field. A
+parent category groups one or more child categories.
+
+.. example::
+   .. image:: configuration/parent-categories.png
+      :alt: The PoS product categories grouped by parent categories
+
+Assign PoS product categories
+-----------------------------
+
+Go to :menuselection:`Point of Sale --> Products --> Products` and open a product form. Then, go to
+the :guilabel:`Sales` tab and fill in the :guilabel:`Category` field under the :guilabel:`Point of
+Sale` section.
+
+.. image:: configuration/form-pos-category.png
+   :alt: Sales tab of a product form to add a PoS product category
 
 .. toctree::
    :titlesonly:
