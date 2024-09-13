@@ -84,17 +84,3 @@ Terminal Identifier <adyen/identifier>`, and :guilabel:`Adyen Merchant Account`.
 Once the payment method is created, you can select it in your POS settings. To do so, go to the
 :ref:`POS' settings <configuration/settings>`, click :guilabel:`Edit`, and add the payment method
 under the :guilabel:`Payments` section.
-
-Pay with a payment terminal
-===========================
-
-When processing a payment, select :guilabel:`Adyen` as the payment method. Check the amount and
-click on :guilabel:`Send`. Once the payment is successful, the status changes to :guilabel:`Payment
-Successful`.
-
-.. note::
-   - | In case of connection issues between Odoo and the payment terminal, force the payment by
-       clicking on :guilabel:`Force Done`, which allows you to validate the order.
-     | This option is only available after receiving an error message informing you that the
-       connection failed.
-   - To cancel the payment request, click on :guilabel:`cancel`.
