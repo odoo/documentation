@@ -89,21 +89,6 @@ To add a **payment method** to your point of sale, go to :menuselection:`Point o
 Configuration --> Settings`. Select the POS, scroll down to the :guilabel:`Payments` section, and
 add your payment method for **Stripe** in the :guilabel:`Payment Methods` field.
 
-Pay with a payment terminal
-===========================
-
-When processing a payment, select :guilabel:`Stripe` as the payment method. Check the amount and
-click :guilabel:`Send`. Once the payment is successful, the status changes to :guilabel:`Payment
-Successful`. To cancel the payment request, click :guilabel:`cancel`.
-
-.. note::
-   - | In case of connection issues between Odoo and the payment terminal, force the payment by
-       clicking on :guilabel:`Force Done`, which allows you to validate the order.
-     | This option is only available after receiving an error message informing you that the
-       connection failed.
-   - The terminal must have at least 10% battery level to use it.
-   - The device does not work for payments under €0.50.
-
 Troubleshooting
 ===============
 

@@ -95,21 +95,6 @@ Select the payment method by going to the :ref:`POS' settings <configuration/set
 it to the payment method under the :guilabel:`Payment Methods` field of the :guilabel:`Payment`
 section.
 
-.. _pos-mercado-pago-pay:
-
-Paying with a payment terminal
-==============================
-
-When processing a payment, select your Mercado Pago payment method, check the amount, and click
-:guilabel:`Send`. Once the payment is successful, the status changes to :guilabel:`Payment
-Successful`.
-
-.. note::
-   - In case of connection issues between Odoo and the payment terminal, force the payment by
-     clicking :guilabel:`Force Done`, which allows you to validate the order. This option is only
-     available after receiving an error message informing you that the connection failed.
-   - To cancel the payment request, click :guilabel:`Cancel`.
-
 .. important::
    Any action made on the terminal should trigger a notification on the POS interface. Ensure the
    :ref:`webhook secret key <pos-mercado-pago-credentials>` is correctly configured if you are not
