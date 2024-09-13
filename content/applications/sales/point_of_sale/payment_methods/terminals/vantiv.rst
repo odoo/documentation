@@ -36,10 +36,3 @@ and edit`. Enter your :guilabel:`Merchant ID` and :guilabel:`Merchant Password`,
 Once the payment method is created, you can select it in your POS settings. To do so, go to the
 :ref:`POS' settings <configuration/settings>`, click :guilabel:`Edit`, and add the payment method
 under the :guilabel:`Payments` section.
-
-Pay with a payment terminal
-===========================
-
-When processing a payment, select the related payment method. Check the amount and click on
-:guilabel:`Send`. Once the payment is successful, the status changes to :guilabel:`Payment
-Successful`.
