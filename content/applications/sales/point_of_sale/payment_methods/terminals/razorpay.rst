@@ -52,19 +52,5 @@ Configure the payment method
 Once the payment method is created, you can enable it for your POS. To do so, go to the :ref:`POS'
 settings <configuration/settings>` and add the payment method under the :guilabel:`Payment` section.
 
-Pay with a payment terminal
-===========================
-
-When processing a payment, select the Razorpay payment method. Check the amount and click
-:guilabel:`Send`. Once the payment is successful, the status changes to :guilabel:`Payment
-Successful`. To cancel the payment request, click :guilabel:`Cancel`.
-
-.. image:: razorpay/payment-screen.png
-   :alt: Razorpay connection form
-
 .. note::
-   - | In case of connection issues between Odoo and the payment terminal, force the payment by
-       clicking on :guilabel:`Force Done`, which allows you to validate the order.
-     | This option is only available after receiving an error message informing you that the
-       connection failed.
-   - The terminal must have at least a 10% battery level to use it.
+   The terminal must have at least a 10% battery level to use it.
