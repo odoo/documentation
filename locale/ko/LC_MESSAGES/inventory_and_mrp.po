@@ -417,6 +417,9 @@ msgid ""
 "<barcode/operations/product-weight>` where the barcode is written in the "
 "|EAN| format."
 msgstr ""
+"Odoo에서는 회사 고유의 바코드를 인식하도록 바코드 패턴을 사용자 지정할 수 있습니다. 바코드가 |EAN| 형식으로 만들어져 있는 "
+":ref:`예시 <barcode/operations/product-weight>` 와 같이 회사 내에서만 사용하려는 경우에는 바코드를 "
+"구입할 필요가 없습니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:38
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:52
@@ -500,6 +503,9 @@ msgid ""
 "nomenclature-list>`, are available for use. And, by default, Odoo "
 "automatically handles |UPC|/|EAN| conversion."
 msgstr ""
+"**바코드** 모듈이 설치되어 있는 상태에서 :guilabel:`기본 분류법`을 선택한 경우, :ref:`기본 분류법 목록 "
+"<barcode/operations/default-nomenclature-list>` 에 자세히 설명된 |UPC| 및 |EAN| 을 "
+"활용하여 바코드 작업을 할 수 있습니다. 또한 Odoo에서는 기본적으로 |UPC|/|EAN| 변환 작업이 자동으로 처리됩니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:59
 msgid "Example: product weight barcode"
@@ -513,6 +519,9 @@ msgid ""
 "automatically print barcodes, and calculate the price using the weight of "
 "the item."
 msgstr ""
+"Odoo에서 바코드 분류법을 통해 어떻게 품목을 식별하는지 파악하기 위하여, 이 예시에서는 |EAN| 형식의 품목 중량 바코드로 "
+":doc:`POS <../../../sales/point_of_sale>` 를 사용 중인 사업체에서 자동으로 바코드를 인쇄하고 품목의 "
+"중량를 이용하여 가격을 계산하고 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:66
 msgid "To set up barcodes for weighted products, the following rule is used:"
@@ -617,6 +626,8 @@ msgid ""
 "`211234501500`, which has a check digit of `2`. The new barcode is "
 "`2112345015002`."
 msgstr ""
+"다음으로, 고객의 파스타 그릇 한 개의 무게는 `1.5`kg으로 측정됩니다. 그러면 파스타에 대한 새로운 바코드가 무게에 따라 "
+"`211234501500` 로 생성되고, 체크용 숫자는 `2`입니다. 새 바코드는 `2112345015002`가 됩니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst-1
 msgid "Generated barcode that includes a weight of 1.5 kg."
@@ -668,7 +679,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:133
 msgid "On this page, configure the following optional fields:"
-msgstr ""
+msgstr "이 페이지에서 다음 선택 항목을 설정합니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:135
 msgid ""
@@ -684,6 +695,8 @@ msgid ""
 "the :guilabel:`Default Nomenclature` uses |UPC| and |EAN| encoding, *not* "
 "GS1 encoding."
 msgstr ""
+":guilabel:`GS1 분류법`: :guilabel:`기본 분류법` 에서는 GS1 인코딩 대신 |UPC| 및 |EAN| 인코딩 방식을"
+" 사용하므로 이 확인란에 표시하지 **않도록** 합니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst-1
 msgid "Default Nomenclature page setting fields."
@@ -695,6 +708,8 @@ msgid ""
 "at the bottom of the table, which opens a :guilabel:`Create Rules` pop-up "
 "window to create a new rule."
 msgstr ""
+":guilabel:`기본 분류법` 페이지에서 표 아래쪽에 있는 :guilabel:`줄 추가` 를 클릭하면 새로운 규칙을 만들 수 있는 "
+":guilabel:`규칙 만들기` 팝업 창이 열립니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:148
 msgid ""
@@ -724,6 +739,9 @@ msgid ""
 "available :guilabel:`Encoding` options are: :guilabel:`EAN-13`, "
 ":guilabel:`EAN-8`, :guilabel:`UPC-A`, and :guilabel:`GS1-28`."
 msgstr ""
+":guilabel:`인코딩` 항목에서는 바코드에서 사용되는 인코딩을 지정합니다. 이 규칙은 바코드에 해당 인코딩이 사용되는 경우에만 "
+"적용됩니다. 사용할 수 있는 :guilabel:`인코딩` 항목으로는 :guilabel:`EAN-13`, :guilabel:`EAN-8`,"
+" :guilabel:`UPC-A`, :guilabel:`GS1-28` 이 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:161
 msgid ""
@@ -733,12 +751,17 @@ msgid ""
 " of `.` is shown. `N` represents whole number digits, and `D` represent "
 "decimal digits."
 msgstr ""
+":guilabel:`바코드 패턴` 은 문자 또는 숫자 시퀀스를 시스템에서 인식하여 품목에 대한 정보를 보유하게 되는 방식을 나타냅니다. "
+"특정한 자릿수가 지정된 경우에 `.` 숫자가 표시되는 경우도 있습니다. `N` 은 정수 자릿수를 나타내고 `D` 는 소수 자릿수를 "
+"나타냅니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:167
 msgid ""
 "`1...` represents any 4-digit number that starts with 1. `NNDD` represents a"
 " two digit number with two decimal points. For example, `14.25` is 1425."
 msgstr ""
+"`1...` 은 1로 시작하는 4자리 숫자를 의미합니다. `NNDD` 는 소수점 이하 두 자리인 2자리 숫자를 의미합니다. 예를 들어 "
+"`14.25` 로 1425로 표시합니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:170
 msgid ""
@@ -935,7 +958,7 @@ msgstr ".*"
 msgid ""
 "When the :guilabel:`Barcode Pattern` contains `.*`, it means it can contain "
 "any number or type of characters."
-msgstr ""
+msgstr ":guilabel:`바코드 패턴` 에서 `.*` 는 어떤 숫자나 문자든 여기에 들어갈 수 있다는 의미입니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:240
 msgid ":doc:`gs1_nomenclature`"
@@ -3720,7 +3743,7 @@ msgstr "제품 관리"
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:51
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:53
 msgid "Configure product"
-msgstr ""
+msgstr "품목에 대한 환경 설정"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:3
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:189
@@ -3787,6 +3810,9 @@ msgid ""
 "(e.g. boxes, pallets, other shipping containers) in shipping cost "
 "calculations."
 msgstr ""
+"*패키지 유형* 은 선택 항목으로, 실제 배송 중량을 기준으로 :doc:`배송비 계산 "
+"<../../shipping_receiving/setup_configuration>` 을 할 때 사용하는 기능입니다. 배송비 계산을 할 "
+"때 패키지 자체의 무게 (예: 박스, 팔레트, 기타 배송 컨테이너)가 포함되도록 패키지 유형이 생성됩니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:31
 msgid ""
@@ -3895,6 +3921,8 @@ msgid ""
 ":doc:`Ship one order in multiple packages "
 "<../../shipping_receiving/setup_configuration/multipack>`"
 msgstr ""
+":doc:`단일 주문 건을 여러 개의 패키지로 배송하기 "
+"<../../shipping_receiving/setup_configuration/multipack>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:95
 msgid "Put in pack"
@@ -3950,7 +3978,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:123
 msgid ":doc:`../../shipping_receiving/setup_configuration`"
-msgstr ""
+msgstr ":doc:`../../shipping_receiving/setup_configuration`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:125
 msgid ""
@@ -4112,12 +4140,13 @@ msgid ""
 ":doc:`Using cluster packages "
 "<../../shipping_receiving/picking_methods/cluster>`"
 msgstr ""
+":doc:`패키지 클러스터 사용하기 <../../shipping_receiving/picking_methods/cluster>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:7
 msgid ""
 "In Odoo *Inventory*, *packaging* refers to disposable containers holding "
 "multiple units of a specific product."
-msgstr ""
+msgstr "Odoo *재고 관리 앱* 에서 *패키지* 란 특정 품목을 여러 가지 단위로 보관하는 일회성 저장소를 의미합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:10
 msgid ""
@@ -4125,6 +4154,8 @@ msgid ""
 "12-pack, or a case of 36, **must** be configured on the individual product "
 "form. This is because packagings are product specific, not generic."
 msgstr ""
+"예를 들어, 탄산음료 캔 패키지의 경우에는 6팩, 12팩 또는 36팩 세트와 같이 다양한 패키지를 **반드시** 개별 품목 양식에 맞게 "
+"설정해야 합니다. 일반적인 패키지가 아니라 품목별로 달라지기 때문입니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:15
 msgid ""
@@ -4219,6 +4250,8 @@ msgid ""
 ":guilabel:`Packaging` section, and selecting the desired options from the "
 "drop-down menu that appears."
 msgstr ""
+"아래 :guilabel:`패키지` 표에 있는 추가 항목에 액세스하려면, :guilabel:`패키지` 섹션에 있는 열 제목 맨 오른쪽 "
+"|조정| 아이콘을 클릭한 후 드롭다운 메뉴가 나타나면 원하는 항목을 선택합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:59
 msgid ""
@@ -4286,7 +4319,7 @@ msgstr "품목의 다양한 패키지 목록."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:91
 msgid "Partial reservation"
-msgstr ""
+msgstr "일부 예약하기"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:93
 msgid ""
@@ -4296,6 +4329,9 @@ msgid ""
 "flexibility expedites order fulfillment by allowing the immediate shipment "
 "of available items, while awaiting the rest."
 msgstr ""
+":ref:`패키지 설정 완료 <inventory/product_management/packaging-setup>` 후, 출고 배송용으로 "
+"전체 또는 일부 수량에 대해 패키지 예약을 할 수 있습니다. 탄력적으로 일부만 패키지를 할 수 있으므로 나머지 품목을 기다리는 동안 "
+"가능한 품목은 즉시 선적할 수 있으므로 신속하게 주문을 처리할 수 있게 됩니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:98
 msgid ""
@@ -4303,6 +4339,8 @@ msgid ""
 "app --> Configuration --> Product Categories`. Then, click :guilabel:`New`, "
 "or select the desired product category."
 msgstr ""
+"패키지 예약 방법을 설정하려면 :menuselection:`재고 관리 앱 --> 환경 설정 --> 품목 카테고리` 로 이동합니다. 그런 "
+"다음 :guilabel:`새로 만들기` 를 클릭하거나 원하는 품목 카테고리를 선택합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:101
 msgid ""
@@ -4310,6 +4348,8 @@ msgid ""
 ":guilabel:`Reserve Packagings` can be set to :guilabel:`Reserve Only Full "
 "Packagings` or :guilabel:`Reserve Partial Packagings`."
 msgstr ""
+"품목 카테고리 양식에 있는 :guilabel:`물류` 섹션의 :guilabel:`패키지 예약` 은 :guilabel:`전체 패키지만 "
+"예약` 또는 :guilabel:`일부 패키지 예약` 로 설정할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:105
 msgid ""
@@ -4319,6 +4359,9 @@ msgid ""
 " :guilabel:`Products` section, tick the :guilabel:`Product Packagings` "
 "checkbox, and click :guilabel:`Save`."
 msgstr ""
+":guilabel:`패키지 예약` 항목을 보려면 :guilabel:`품목 패키지` 기능을 **반드시** 활성화해야 합니다. 이 기능을 "
+"활성화하려면 :menuselection:`재고 관리 앱 --> 환경 설정 --> 설정` 으로 가서 :guilabel:`품목` 섹션으로 "
+"스크롤을 이동한 후 :guilabel:`품목 포장` 확인란을 선택한 다음 :guilabel:`저장` 을 클릭합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst-1
 msgid "Show Reserve Packagings field on the product categories page."
@@ -4441,6 +4484,9 @@ msgid ""
 "Tick the :guilabel:`Routes` checkbox to make the column visible in the "
 ":guilabel:`Packaging` table."
 msgstr ""
+"품목 양식에서 :guilabel:`재고 관리` 탭으로 전환합니다. :ref:`패키지 설정 완료 "
+"<inventory/product_management/packaging-setup>` 가 되어 있는 :guilabel:`패키지` 섹션에서"
+" |조정| 아이콘을 클릭합니다. :guilabel:`경로` 확인란을 선택하면 :guilabel:`패키지` 표에 해당 열이 표시됩니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:181
 msgid ""
@@ -4471,6 +4517,9 @@ msgid ""
 "purchase orders. *Consumable* products are assumed to always be in stock, "
 "and *service* products are performed and served by the business."
 msgstr ""
+"품목을 *저장 가능* 으로 분류하면 재고 수를 추적할 수 있으며, 구매발주서를 생성하도록 :doc:`재주문 규칙 "
+"<../../warehouses_storage/replenishment/reordering_rules>` 이 발동될 수 있도록 합니다. "
+"*소모품* 품목은 항상 재고가 있다고 가정하고 *서비스* 품목은 사업체에서 수행하여 서비스를 제공합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:15
 msgid ""
@@ -8069,6 +8118,9 @@ msgid ""
 " --> Settings --> Warehouse`. Note that activating :guilabel:`Multi-Step "
 "Routes` will also activate *Storage Locations*."
 msgstr ""
+":doc:`1단계 <receipts_delivery_one_step>` 에서 3단계로 배송 설정을 변경하려면 "
+":menuselection:`재고 앱 --> 환경 설정 --> 설정 --> 창고` 에서 *다단계 경로* 가 활성화되어 있는지 확인합니다."
+" :guilabel:`다단계 경로` 를 활성화하면 *저장 위치*도 같이 활성화됩니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/delivery_three_steps.rst-1
 msgid ""
@@ -10125,6 +10177,8 @@ msgid ""
 "evaluates these locations, based on defined capacity, and recommends the "
 "best one on the warehouse transfer form."
 msgstr ""
+"저장 위치에 카테고리를 지정하면 해당 위치가 온도나 접근성 등 특정 요건을 충족하는지 여부를 Odoo에서 확인할 수 있습니다. 그런 다음"
+" Odoo에서는 지정한 수용량을 기준으로 위치에 대해 평가하여 창고 이전 양식에서 가장 적합한 위치를 추천합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:28
 msgid ""
@@ -10187,6 +10241,8 @@ msgid ""
 "across various locations, as shown in this example of :ref:`capacity by "
 "package <inventory/routes/set-capacity-package>`."
 msgstr ""
+"동일한 위치에서 품목 및 패키지 유형별로 수용량을 제한할 수 있으나, :ref:`패키지별 수용량 <inventory/routes/set-"
+"capacity-package>` 의 예시와 같이 여러 위치에 다양한 수량으로 품목을 보관하는 것이 더 실용적일 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:62
 msgid ""
@@ -10246,6 +10302,8 @@ msgid ""
 "Sit` are stored at a single storage location, by specifying those amounts in"
 " the :guilabel:`Capacity by Product` tab of a storage category form."
 msgstr ""
+"단일 저장 위치에 최대 5개의 `대형 캐비닛`과 2개의 `코너 데스크 오른쪽 좌석` 만 보관할 수 있도록 저장 카테고리 양식의 "
+":guilabel:`품목별 수용량` 탭에 해당하는 수량을 지정합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
 msgid "Show storage category limiting by product count."
@@ -10298,6 +10356,8 @@ msgid ""
 " Locations`, and select the desired location. Then, select the created "
 "category in the :guilabel:`Storage Category` field."
 msgstr ""
+"저장소 카테고리가 생성되면 해당 위치에 배정을 시작합니다. :menuselection:`재고 관리 앱 --> 환경 설정 --> 위치` 를"
+" 통해 위치 메뉴로 가서 원하는 위치를 선택합니다. 그런 다음 :guilabel:`저장소 카테고리` 에서 생성된 카테고리를 선택합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:131
 msgid ""
@@ -10338,6 +10398,8 @@ msgid ""
 "locations with the `High Frequency Pallets` storage category :ref:`assigned "
 "to them <inventory/routes/assign-location>`."
 msgstr ""
+"위 예시에 이어서, `자주 사용하는 팔레트` 저장 카테고리를 통해 레모네이드 팔레트를 `자주 사용하는 팔레트` 저장 카테고리를 "
+":ref:`배정된 <inventory/routes/assign-location>` 위치로 보내는 풋어웨이 규칙에 배정합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
 msgid "Storage Categories used in a variety of putaway rules."
@@ -14955,6 +15017,9 @@ msgid ""
 "by enabling the FedEx *shipping connector*, then configuring at least one "
 "*shipping method*."
 msgstr ""
+"FedEx 계정을 Odoo의 **재고 관리** 앱과 연동시키면 :doc:`배송비 계산 <../setup_configuration>` 및 "
+":doc:`배송 라벨 생성 <labels>` 기능을 사용할 수 있습니다. 이와 같은 작업은 FedEx *배송 커넥터* 를 활성화한 후 "
+"*배송 방법* 을 최소 하나 이상 설정하면 진행할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:11
 msgid ""
@@ -14997,6 +15062,8 @@ msgid ""
 "included in sales orders (SOs), and used to compute shipping costs, and "
 "print shipping labels."
 msgstr ""
+"FedEx 배송 커넥터가 활성화되면 배송 방법을 최소한 하나 이상 설정해야 합니다. 이렇게 하면 배송 방법을 판매주문서 (SO)에 "
+"기재하여 배송비를 계산하고 배송용 라벨을 인쇄할 때 활용할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:36
 msgid ""
@@ -15005,6 +15072,9 @@ msgid ""
 "Methods` button below the :guilabel:`FedEx Connector` checkbox. Doing so "
 "opens a page that shows all existing FedEx shipping methods."
 msgstr ""
+"배송 방법을 활성화하려면 :menuselection:`재고 관리 앱 --> 환경 설정 --> 설정` 으로 이동하여 "
+":guilabel:`FedEx 커넥터` 확인란 아래에 있는 :guilabel:`FedEx 배송 방법` 버튼을 클릭합니다. 그러면 기존의 "
+"모든 FedEx 배송 방법이 별도의 페이지로 표시됩니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:41
 msgid ""
@@ -15047,6 +15117,8 @@ msgid ""
 "way the method operates in Odoo. In the :guilabel:`Provider` field, select "
 ":guilabel:`FedEx` from the drop-down menu, if it is not already selected."
 msgstr ""
+"배송 방법 양식의 맨 위에는 Odoo에서 방법을 운영할 수 있도록 하는 환경 설정 항목이 있습니다. 아직 선택하지 않은 경우에는 "
+":guilabel:`공급자` 항목에 있는 드롭다운 메뉴에서 :guilabel:`FedEx` 를 선택합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:66
 msgid ""
@@ -15066,6 +15138,8 @@ msgid ""
 " the shipping details associated with the method (drop-off type, package "
 "type, etc.)."
 msgstr ""
+"FedEx 배송 방법 양식의 :guilabel:`Fedex 환경 설정` 탭 항목에서는 해당 방법을 FedEx 계정에 연결하고 관련된 배송"
+" 세부 정보 (배송 유형, 패키지 유형 등)를 설정하는 데 사용됩니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:76
 msgid ""
@@ -15074,6 +15148,9 @@ msgid ""
 "FedEx's `Open Account <https://www.fedex.com/en-us/open-account.html>`_ "
 "page, click on :guilabel:`Create Account`, and follow the instructions."
 msgstr ""
+"이 탭에 있는 항목에 내용을 입력하려면 FedEx 비즈니스 계정이 있어야 합니다. 새로 계정을 생성하려면 FedEx의 `계정 생성 "
+"<https://www.fedex.com/en-us/open-account.html>`_ 페이지로 이동하여 :guilabel:`계정 "
+"만들기` 를 클릭한 후 안내대로 진행합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:82
 msgid "Developer Key and Meter Number fields"
@@ -15085,6 +15162,8 @@ msgid ""
 "service, like the Odoo **Inventory** app. A *meter number* is a unique ID "
 "number used by FedEx to identify negotiated shipping rates for each account."
 msgstr ""
+"*개발자 키* 는 Odoo **재고 관리** 앱과 같은 외부 서비스를 FedEx 계정과 통합하는 데 사용합니다. *미터 번호* 는 "
+"FedEx에서 각 계정에서 협상한 배송비를 식별하는 데 사용하는 고유 ID 번호입니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:88
 msgid ""
@@ -15139,6 +15218,8 @@ msgid ""
 "corner of the screen, and select :menuselection:`My Profile` from the drop-"
 "down menu."
 msgstr ""
+"FedEx 계정 번호를 확인하려면 https://www.fedex.com 에서 FedEx 계정에 로그인하세요. 화면 오른쪽 상단에 있는 "
+"계정 소유자 이름을 클릭한 후 드롭다운 메뉴에서 :menuselection:`내 프로필` 을 선택합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:115
 msgid ""
@@ -15266,6 +15347,8 @@ msgid ""
 "shipping method form. After doing so, the smart buttons changes to read "
 ":icon:`fa-play` :guilabel:`Production Environment`."
 msgstr ""
+"*생산 환경* 에서 배송 방법을 활성화하려면 배송 방법 양식의 상단에 있는 :icon:`fa-stop` :guilabel:`테스트 환경`"
+" 스마트 버튼을 클릭합니다. 그러면 스마트 버튼이 :icon:`fa-play` :guilabel:`생산 환경` 으로 변경됩니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:166
 msgid ""
@@ -20378,6 +20461,10 @@ msgid ""
 "*Manufacture*, or other procurement routes, ensuring products are correctly "
 "supplied to the warehouse."
 msgstr ""
+":guilabel:`보충 위치`: :doc:`경로 설정 "
+"<../../shipping_receiving/daily_operations/use_routes>` 을 할 때 적용하며, 확인란에 "
+"표시하면 *매입*, *제조 관리* 또는 기타 조달 경로에서 제품이 입고될 목적지로 위치를 설정하여 제품이 창고에 정확하게 입고되도록 할 "
+"수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst-1
 msgid "Additional Information section of new location creation form."
@@ -21217,6 +21304,8 @@ msgid ""
 " Even if the purchase price on a purchase order differs, the valuation is "
 "the cost defined on the product form."
 msgstr ""
+"Odoo의 기본적인 원가 계산 방법입니다. 품목 원가는 품목 양식에서 수동으로 지정되며, 이 원가는 가치 평가를 계산하는 데 사용됩니다."
+" 매입발주서의 구매 가격이 달라지더라도 가치 평가는 품목 양식에서 지정되어 있는 비용을 계속 사용합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:123
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:164
@@ -21359,6 +21448,8 @@ msgid ""
 "costing method, inventory valuation is *dynamic*, and constantly adjusts "
 "based on the purchase price of products."
 msgstr ""
+"해당 품목의 평균 원가를 전체 보유 재고 수량으로 나누어 품목의 가치를 계산합니다. 이 원가 계산 방법에서 재고 평가는 *동적*이며 품목"
+" 구매 가격에 따라 지속적으로 조정됩니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:180
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:185
@@ -21431,6 +21522,8 @@ msgid ""
 " inventory value, regardless of the purchase price of the product. "
 "Therefore, inventory value is :math:`$144 + (-10 * $12) = $24`."
 msgstr ""
+"품목 배송 수량이 10개인 경우, 품목의 구매가와 무관하게 평균 단가를 사용하여 재고 가치를 계산합니다. 따라서 재고 가치는 "
+":math:`$144 + (-10 * $12) = $24` 가 됩니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:208
 msgid "Receive two products for $6 each:"
@@ -31187,6 +31280,8 @@ msgid ""
 "specific to the :guilabel:`Production Analysis` report, along with a few use"
 " case examples."
 msgstr ""
+":guilabel:`생산 분석` 보고서는 Odoo 앱 제품군에서 사용할 수 있는 여러 가지 보고서 중 하나입니다. 이 문서에서는 "
+":guilabel:`생산 분석` 보고서와 연관된 측정값만 다루고 있으며, 몇 가지 사용 사례를 다룹니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_analysis.rst:20
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:21
@@ -31209,6 +31304,9 @@ msgid ""
 ":guilabel:`Measures` :icon:`fa-caret-down` button, and selecting one of the "
 "options from the drop-down menu:"
 msgstr ""
+"*측정값* 은 :guilabel:`생산 분석` 보고서에서 선택할 수 있는 데이터 세트입니다. 각 데이터 세트를 통해 데이터베이스의 "
+"|MO| 에 대한 특정한 통계를 확인할 수 있습니다. 측정값을 선택하려면 :guilabel:`측정값` :icon:`fa-caret-"
+"down` 버튼을 클릭한 후 드롭다운 메뉴에서 해당하는 항목을 선택합니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_analysis.rst:31
 msgid ""
@@ -31217,6 +31315,9 @@ msgid ""
 "filters, groupings, and comparisons enabled in the :guilabel:`Search...` "
 "bar. By default, the available measures appear as follows:"
 msgstr ""
+":guilabel:`측정값` :icon:`fa-caret-down` 드롭다운 메뉴에 나타나는 항목 및 표시 순서는 "
+":guilabel:`검색...` 표시줄에서 활성화되어 있는 필터, 그룹 기준 및 비교값에 따라 다릅니다. 기본적으로 사용할 수 있는 "
+"측정값은 다음과 같이 표시됩니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_analysis.rst:35
 msgid ""
@@ -31326,6 +31427,9 @@ msgid ""
 "measures, and varying group-by criteria (on the x and y axes), can be "
 "selected when using the :icon:`oi-view-pivot` :guilabel:`(pivot table)`."
 msgstr ""
+":icon:`fa-area-chart` :guilabel:`(그래프 보기)` 중에서 하나를 활성화하게 되면 한 번에 하나의 측정값만 "
+"선택할 수 있습니다. 다만 :icon:`oi-view-pivot` :guilabel:`(피벗 테이블)` 을 선택할 경우에는 여러 가지 "
+"측정값과 다양한 그룹 기준 (x축 및 y축)을 선택할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_analysis.rst:75
 msgid "Use case: compare products"
@@ -31338,6 +31442,8 @@ msgid ""
 "entering the products into the :guilabel:`Search...` bar, then selecting the"
 " necessary measure, filter, and grouping, to see the desired data."
 msgstr ""
+":guilabel:`생산 분석` 보고서를 활용할 수 있는 가장 좋은 방법은 두 개 이상의 품목에 대한 통계를 비교하는 것입니다. "
+":guilabel:`검색...` 표시줄에 품목을 입력한 다음 필요한 측정값, 필터 및 그룹 기준을 선택하여 데이터를 확인하면 됩니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_analysis.rst:82
 msgid ""
@@ -31353,6 +31459,8 @@ msgid ""
 "they can stop manufacturing one, without significantly impacting their "
 "product offering."
 msgstr ""
+"분석용으로 선정된 두 가지 장난감은 *스카이 콩콩* 과 *스프링 슈즈* 입니다. 장난감 업체 1에서는 이 두 가지 장난감이 매우 유사한 "
+"관계로 제조를 중단하더라도 제품을 제공하는 데 있어서 큰 어려움이 없을 것으로 판단하고 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_analysis.rst:90
 msgid ""
@@ -31363,6 +31471,10 @@ msgid ""
 "bar drop-down menu, and clicks :guilabel:`Product` in the :guilabel:`Group "
 "By` section."
 msgstr ""
+"비즈니스 분석가 홍길동 씨는 완구류 제품의 운영비를 비교하기 위해 :menuselection:`제조 관리` 앱을 열고 "
+":guilabel:`생산 분석` 페이지로 이동합니다. :guilabel:`검색...` 표시줄에 두 개의 제품명을 입력합니다. 그런 다음 "
+":guilabel:`검색...` 표시줄에 있는 드롭다운 메뉴를 열고 :guilabel:`그룹 기준` 섹션에서 :guilabel:`품목` "
+"을 클릭합니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_analysis.rst:96
 msgid ""
@@ -31386,6 +31498,8 @@ msgid ""
 "Tommy's Toys decides to cease production of moon shoes, thus lowering their "
 "average cost of manufacturing operations."
 msgstr ""
+"이 데이터를 통해 담당자는 스프링 슈즈의 평균 운영비가 스카이 콩콩 품목의 비용에 비해 거의 두 배에 달한다는 것을 알 수 있습니다. "
+"이와 같은 이해를 바탕으로 하여 장난감 업체 1은 스프링 슈즈 생산을 중단하여 제조 운영에 드는 평균 비용을 낮추기로 결정합니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_analysis.rst:0
 msgid ""
@@ -31418,6 +31532,9 @@ msgid ""
 ":guilabel:`Production Analysis` page. He begins by selecting the :icon:`fa-"
 "pie-chart` :guilabel:`(pie chart)` graph type option at the top of the page."
 msgstr ""
+"두 기간을 비교하기 위해 작업 현장 관리자 서준 씨는 :menuselection:`제조 관리` 앱을 열고 :guilabel:`생산 분석`"
+" 페이지로 이동합니다. 먼저 페이지 상단에 있는 :icon:`fa-pie-chart` :guilabel:`(원 그래프)` 를 그래프 "
+"유형으로 선택하는 것부터 시작합니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_analysis.rst:130
 msgid ""
@@ -31447,6 +31564,9 @@ msgid ""
 "enables the :guilabel:`Q2` filter as well. With both of these time periods "
 "selected, the pie chart shows data for the second quarter of 2024."
 msgstr ""
+":guilabel:`검색...` 표시줄 드롭다운 메뉴에 있는 :guilabel:`종료일` 섹션에서 :guilabel:`2024` 필터를 "
+"활성화되어 있는 상태로 두고, :guilabel:`Q2` 필터도 활성화합니다. 두 기간을 모두 선택하면, 2024년 2분기 데이터가 원 "
+"그래프로 표시됩니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_analysis.rst:144
 msgid ""
@@ -31454,6 +31574,8 @@ msgid ""
 "the :guilabel:`Comparison` section of the :guilabel:`Search...` bar. Doing "
 "so causes the pie chart to be split into an inner circle, and an outer ring."
 msgstr ""
+"마지막으로 진수 씨는 :guilabel:`검색...` 표시줄의 :guilabel:`비교` 섹션에 있는 :guilabel:`종료일: 이전 "
+"기간` 을 선택합니다. 그러면 원 그래프가 안쪽 원과 바깥쪽 링으로 분할됩니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_analysis.rst:148
 msgid ""
@@ -31480,6 +31602,8 @@ msgid ""
 "cost for quarter two are the *bicycle* and *tricycle*. On the other hand, in"
 " quarter one, the *roller skates* had the highest total cost."
 msgstr ""
+"이 보고서를 통해 진수 씨는 2분기에 총 비용이 가장 높은 품목이 *자전거* 와 *세발자전거* 라는 것을 확인할 수 있습니다. 반면, "
+"1분기에는 *롤러 스케이트* 의 총 비용이 가장 높았습니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_analysis.rst:0
 msgid ""
@@ -34852,6 +34976,9 @@ msgid ""
 "interventions allow service technicians (or other employees) to be sent to a"
 " customer's location to address an issue with a product."
 msgstr ""
+"이런 경우, *현장 서비스* 앱을 사용하여 :doc:`현장 개입 "
+"<../../../services/field_service/creating_tasks>` 예약을 할 수 있습니다. 이러한 개입을 통해 "
+"서비스 기술자 (또는 다른 직원)를 고객의 위치로 보내 제품 문제를 해결할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_improvement.rst:158
 msgid "Review actions"
@@ -38507,6 +38634,8 @@ msgid ""
 "specific to the :guilabel:`Purchase Analysis` report, along with a few use "
 "case examples."
 msgstr ""
+":guilabel:`매입 분석` 보고서는 Odoo 앱 제품군에서 사용할 수 있는 여러 가지 보고서 중 하나입니다. 이 문서에서는 "
+":guilabel:`매입 분석` 보고서와 연관된 측정값과 몇 가지 사용 사례만 다룹니다."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:27
 msgid ""
@@ -38516,6 +38645,9 @@ msgid ""
 ":guilabel:`Measures` :icon:`fa-caret-down` button, and select one of the "
 "options from the drop-down menu:"
 msgstr ""
+"*측정값* 은 :guilabel:`매입 분석` 보고서를 통해 나타낼 수 있는 다양한 데이터 세트를 의미하며, 각 데이터 세트를 통해 "
+"|PO| 또는 품목에 대한 주요 통계를 확인할 수 있습니다. 측정값을 선택하려면 :guilabel:`측정값` :icon:`fa-"
+"caret-down` 버튼을 클릭한 후 드롭다운 메뉴에서 해당하는 항목을 선택합니다."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:32
 msgid ""
@@ -38595,6 +38727,8 @@ msgid ""
 "allows companies to make better informed decisions about which vendors they "
 "want to purchase from."
 msgstr ""
+":guilabel:`매입 분석` 보고서는 공급업체별로 매입 품목을 배송하는 데 소요되는 시간을 확인하는 경우에도 활용할 수 있습니다. "
+"이를 통해 회사에서는 물품을 매입하려는 공급업체에 대해 정보에 입각하여 더 나은 의사결정을 할 수 있게 됩니다."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:66
 msgid ""
@@ -38603,6 +38737,8 @@ msgid ""
 "purchase their inventory from a few different vendors, and then sell those "
 "products on to customers through their storefront."
 msgstr ""
+"지역 자전거 매장인 *매장 A* 는 고품질의 외발자전거, 자전거, 세발자전거 및 자전거 탑승과 유지관리에 필요한 모든 액세서리를 판매하고"
+" 있습니다. 다양한 공급업체에서 재고를 구매한 후 매장을 통해 고객에게 자전거를 판매합니다."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:70
 msgid ""
@@ -38644,6 +38780,8 @@ msgid ""
 "shows a bar chart, with one bar for each vendor, representing the average "
 "number of days it takes to receive products purchased from the vendor."
 msgstr ""
+"해당하는 항목을 모두 활성화하면 :guilabel:`매입 분석` 보고서에 막대 그래프가 표시됩니다. 공급업체별로 막대가 표시되고 "
+"공급업체에서 매입한 품목이 입고되는데 걸리는 평균 날짜 수가 나타나 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:90
 msgid ""
@@ -38651,6 +38789,8 @@ msgid ""
 "average, to deliver purchased products. This is more than four times the "
 "amount of time it takes any other vendor."
 msgstr ""
+"이 데이터를 통해 지훈 씨는 자전거 관련 업체 2에서 매입한 품목을 배송하는 데 평균 4.5일이 걸린다는 것을 알 수 있습니다. 다른 "
+"공급업체보다 4배 이상의 기간이 소요되는 셈입니다."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:93
 msgid ""
@@ -38675,6 +38815,8 @@ msgid ""
 "vendor. By doing so, it is easy to understand how purchases from the vendor "
 "have increased or decreased."
 msgstr ""
+":guilabel:`매입 분석` 보고서는 다른 작업에도 활용할 수 있으며, 특정한 공급업체에 두 기간 동안 발행된 |PO| 에 대한 주요"
+" 수치를 비교합니다. 그렇게 하면 공급업체에서 매입한 수량의 증감에 대해 쉽게 파악할 수 있습니다. "
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:108
 msgid ""
@@ -38755,6 +38897,8 @@ msgid ""
 " see that Bike Haus has spent much less money on products purchased from "
 "Bike Friends, compared to the previous month."
 msgstr ""
+"피벗 테이블의 왼쪽에는 6월에 자전거 관련 업체 2에서 구매했던 품목이 하나씩 행으로 표시됩니다. 이 보고서를 통해 지훈 씨는 매장 "
+"A에서 자전거 관련 업체 2에서 구매한 품목에 지출한 비용이 지난 달에 비해 훨씬 낮아졌다는 것을 알 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:0
 msgid "The Purchase report, comparing the amount spent at a vendor."
@@ -40885,6 +41029,9 @@ msgid ""
 ":guilabel:`New`. Doing so opens the product form, where various sales and "
 "purchasing data can be configured."
 msgstr ""
+"|RFQ| 에 품목 정보와 가격이 자동 입력되게 하려면 :menuselection:`구매 앱 --> 품목 --> 품목` 으로 이동하여 "
+"품목에 대한 환경 설정을 합니다. 기존 품목을 선택하거나 :guilabel:`새로 만들기` 를 선택하여 새 품목을 만듭니다. 이렇게 하면"
+" 다양한 판매 및 매입 데이터를 설정할 수 있는 품목 양식이 열립니다."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:29
 msgid ""
@@ -40922,6 +41069,8 @@ msgid ""
 " reveal a drop-down menu of additional columns that can be added (or "
 "removed) from the :guilabel:`Purchase` tab."
 msgstr ""
+"열을 활성화하거나 혹은 비활성화하려면 헤더 행의 오른쪽에 있는 :icon:`oi-settings-adjust` :guilabel:`(추가"
+" 항목)` 아이콘을 클릭합니다. :guilabel:`매입` 탭에서 추가 (또는 제거)할 수 있는 추가 열의 드롭다운 메뉴가 표시됩니다."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:50
 msgid ""
@@ -40962,6 +41111,8 @@ msgid ""
 "down all |RFQs| in the company, as well as individual ones (where the user "
 "is the buyer) with a summary of their status."
 msgstr ""
+":guilabel:`견적요청서` 현황판에서 회사의 |RFQ|, |PO| 및 해당 상태에 대한 전체보기를 확인할 수 있습니다. 화면 "
+"상단에는 회사의 모든 |RFQ|와 개별 견적요청서 (사용자가 구매자인 경우)가 요약되어 함께 표시됩니다."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:70
 msgid ""
@@ -41027,6 +41178,8 @@ msgid ""
 "order numbers sent by the vendor. This comes in handy once products are "
 "received, and the |PO| needs to be matched to the delivery order."
 msgstr ""
+":guilabel:`공급업체 참조` 항목에는 공급업체에서 전송한 판매 및 배송 주문 번호가 나타나 있습니다. 이 번호는 품목이 입고된 "
+"후에 |PO| 를 배송주문서에 매칭시켜야 할 때 유용하게 쓸 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:101
 msgid ""
@@ -41076,6 +41229,9 @@ msgid ""
 "field is enabled. Contact names auto-populate here from the **Contacts** "
 "app."
 msgstr ""
+"여기에서 입고지 창고 주소를 선택하거나 :guilabel:`직배송` 을 선택하여 주문이 최종 고객에게 직접 배송되도록 지정합니다. "
+":guilabel:`직배송` 을 선택하면 :guilabel:`직배송 주소` 항목이 활성화됩니다. **연락처** 앱에서 연락처 이름이 "
+"여기에 자동으로 입력됩니다."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:128
 msgid "Products tab"
@@ -41096,6 +41252,9 @@ msgid ""
 ":guilabel:`Create and edit...` to be taken to the product form for that new "
 "item."
 msgstr ""
+"새로운 품목을 생성하여 추가하려면 :guilabel:`품목` 열에 품목명을 새로 입력한 후, 드롭다운 메뉴가 나타나면 "
+":guilabel:`[품목명] 만들기` 를 선택하고 수동으로 단가를 추가합니다. 또는 :guilabel:`만들기 및 편집...` 을 "
+"선택하여 해당하는 새로운 품목의 품목 양식으로 이동합니다."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:138
 msgid ""
@@ -41149,6 +41308,8 @@ msgid ""
 "as any internal notes and activities. Messages, notes, and activities can "
 "also be logged on the chatter."
 msgstr ""
+"Odoo는 |PO| 양식에 있는 메시지창을 통해 각 주문과 관련된 커뮤니케이션을 추적합니다. 여기에는 사용자와 연락 상대 간에 전송된 "
+"이메일과 내부 메모 및 활동 내역이 표시됩니다. 메시지, 메모 및 활동도 메시지창에 기록할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:168
 msgid "Once an |RFQ| is confirmed, it creates a |PO|."
@@ -41168,6 +41329,8 @@ msgid ""
 "received. For more information, refer to the documentation on :doc:`managing"
 " vendor bills <manage>`."
 msgstr ""
+"**매입** 앱 설정에서 환경 설정한 내용에 따라 *공급업체 청구서* 는 품목을 주문하거나 수령할 때 생성됩니다. 자세한 내용은 "
+":doc:`공급업체 청구서 관리 <manage>` 관련 문서를 참조하세요."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:178
 msgid ""

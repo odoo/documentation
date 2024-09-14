@@ -6039,7 +6039,7 @@ msgid ""
 "The multi-processing server is opt-in. It is selected by setting the "
 ":option:`--workers <odoo-bin --workers>` option to a non-null integer."
 msgstr ""
-"Máy chủ đa luồng là máy chủ tuỳ chọn. Bạn có thể chọn nó bằng cách đặt tùy "
+"Máy chủ đa xử lý là máy chủ tuỳ chọn. Bạn có thể chọn nó bằng cách đặt tùy "
 "chọn :option:`--workers <odoo-bin --workers>` thành số nguyên không null."
 
 #: ../../content/administration/on_premise/deploy.rst:205
@@ -6118,11 +6118,11 @@ msgid ""
 " --proxy-mode>` so it uses the real client headers (such as hostname, "
 "scheme, and IP) instead of the proxy ones."
 msgstr ""
-"Trong xử lý đa luồng, một worker LiveChat riêng sẽ tự động được khởi động và"
-" nghe trên :option:`--gevent-port <odoo-bin --gevent-port>`. Theo mặc định, "
-"các yêu cầu HTTP sẽ tiếp tục truy cập vào các worker HTTP thông thường thay "
-"vì worker LiveChat. Bạn phải triển khai một proxy trước Odoo và chuyển hướng"
-" các yêu cầu đến có đường dẫn bắt đầu bằng ``/websocket/`` đến worker "
+"Trong đa xử lý, một worker LiveChat riêng sẽ tự động được khởi động và nghe "
+"trên :option:`--gevent-port <odoo-bin --gevent-port>`. Theo mặc định, các "
+"yêu cầu HTTP sẽ tiếp tục truy cập vào các worker HTTP thông thường thay vì "
+"worker LiveChat. Bạn phải triển khai một proxy trước Odoo và chuyển hướng "
+"các yêu cầu đến có đường dẫn bắt đầu bằng ``/websocket/`` đến worker "
 "LiveChat. Bạn cũng phải khởi động Odoo trong :option:`--proxy-mode <odoo-bin"
 " --proxy-mode>` để nó sử dụng các header máy khách thực (như tên máy chủ, "
 "lược đồ và IP) thay vì các header proxy."
@@ -6174,8 +6174,8 @@ msgstr ""
 "Cho dù được truy cập thông qua trang web/máy khách web hay dịch vụ web, Odoo"
 " đều truyền thông tin xác thực dưới dạng văn bản thuần túy. Điều này có "
 "nghĩa là việc triển khai Odoo an toàn phải sử dụng HTTPS\\ [#switching]_. Có"
-" thể triển khai chấm dứt SSL thông qua hầu hết mọi proxy chấm dứt SSL, nhưng"
-" yêu cầu thiết lập sau:"
+" thể triển khai SSL termination thông qua hầu hết mọi proxy SSL termination,"
+" nhưng yêu cầu thiết lập sau:"
 
 #: ../../content/administration/on_premise/deploy.rst:268
 msgid ""
@@ -6261,6 +6261,11 @@ msgid ""
 ":mod:`odoo.tools.config` rather than through the command-line or a "
 "configuration file."
 msgstr ""
+"Cũng có thể coi Odoo như một ứng dụng WSGI_ chuẩn. Odoo cung cấp cơ sở cho "
+"một tập lệnh khởi chạy WSGI là ``odoo-wsgi.example.py``. Tập lệnh đó phải "
+"được tùy chỉnh (có thể sau khi sao chép từ thư mục thiết lập) để thiết lập "
+"cấu hình chính xác ngay trong :mod:`odoo.tools.config` thay vì thông qua "
+"dòng lệnh hoặc tệp cấu hình."
 
 #: ../../content/administration/on_premise/deploy.rst:395
 msgid ""
@@ -6268,6 +6273,9 @@ msgid ""
 "client, website and webservice API. Because Odoo does not control the "
 "creation of workers anymore it can not setup cron or livechat workers"
 msgstr ""
+"Tuy nhiên, máy chủ WSGI sẽ chỉ hiển thị endpoint HTTP chính cho máy khách "
+"web, trang web và API dịch vụ web. Vì Odoo không còn kiểm soát việc tạo "
+"worker, nên không thể thiết lập worker cron hoặc livechat"
 
 #: ../../content/administration/on_premise/deploy.rst:400
 msgid "Cron Workers"
@@ -6281,6 +6289,11 @@ msgid ""
 "--no-http>` cli option or the ``http_enable = False`` configuration file "
 "setting."
 msgstr ""
+"Việc khởi chạy một trong các máy chủ Odoo tích hợp cạnh máy chủ WSGI là điều"
+" kiện bắt buộc để xử lý các tác vụ cron. Máy chủ đó phải được cấu hình để "
+"chỉ xử lý cron mà không phải các yêu cầu HTTP bằng tùy chọn cli "
+":option:`--no-http <odoo-bin --no-http>` hoặc cài đặt tệp cấu hình "
+"``http_enable = False``."
 
 #: ../../content/administration/on_premise/deploy.rst:407
 msgid ""
@@ -6290,6 +6303,10 @@ msgid ""
 "--workers>` and :option:`--max-cron-threads=n <odoo-bin --max-cron-threads>`"
 " cli options."
 msgstr ""
+"Trên các hệ thống giống Linux, bạn nên sử dụng máy chủ đa xử lý thay vì máy "
+"chủ đa luồng để tận dụng tối đa phần cứng và tăng tính ổn định. Điều này có "
+"nghĩa là sử dụng các tùy chọn cli :option:`--workers=-1 <odoo-bin "
+"--workers>` và :option:`--max-cron-threads=n <odoo-bin --max-cron-threads>`."
 
 #: ../../content/administration/on_premise/deploy.rst:415
 msgid ""
@@ -6300,6 +6317,12 @@ msgid ""
 "directed to that server. A regular (thread/process-based) WSGI server should"
 " be used for all other requests."
 msgstr ""
+"Phải sử dụng máy chủ WSGI tương thích với gevent để tính năng live chat hoạt"
+" động chính xác. Máy chủ đó phải có khả năng xử lý nhiều kết nối dài và đồng"
+" thời nhưng không cần nhiều sức mạnh xử lý. Tất cả các yêu cầu có đường dẫn "
+"bắt đầu bằng ``/websocket/`` phải được chuyển hướng đến máy chủ đó. Một máy "
+"chủ WSGI thông thường (dựa trên luồng/quy trình) phải được sử dụng cho tất "
+"cả các yêu cầu khác."
 
 #: ../../content/administration/on_premise/deploy.rst:421
 msgid ""
@@ -6310,10 +6333,16 @@ msgid ""
 "--http-port>` (multi-threading server) or on the :option:`--gevent-port "
 "<odoo-bin --gevent-port>` (multi-processing server)."
 msgstr ""
+"Máy chủ cron Odoo cũng có thể được sử dụng để phục vụ các yêu cầu live chat."
+" Chỉ cần thả tùy chọn cli :option:`--no-http <odoo-bin --no-http>` từ máy "
+"chủ cron và đảm bảo các yêu cầu có đường dẫn bắt đầu bằng ``/websocket/`` "
+"được chuyển hướng đến máy chủ này, trên :option:`--http-port <odoo-bin "
+"--http-port>` (máy chủ đa luồng) hoặc trên :option:`--gevent-port <odoo-bin "
+"--gevent-port>` (máy chủ đa xử lý)."
 
 #: ../../content/administration/on_premise/deploy.rst:430
 msgid "Serving static files and attachments"
-msgstr "Cung cấp tệp tĩnh và tệp đính kèm"
+msgstr "Phục vụ tệp tĩnh và tệp đính kèm"
 
 #: ../../content/administration/on_premise/deploy.rst:432
 msgid ""
@@ -6322,10 +6351,14 @@ msgid ""
 "performances, and static files should generally be served by a static HTTP "
 "server."
 msgstr ""
+"Để thuận tiện cho việc phát triển, Odoo trực tiếp phục vụ tất cả các tệp "
+"tĩnh và tệp đính kèm trong các phân hệ. Điều này có thể không lý tưởng về "
+"hiệu suất, và các tệp tĩnh thường phải được phục vụ bởi một máy chủ HTTP "
+"tĩnh."
 
 #: ../../content/administration/on_premise/deploy.rst:437
 msgid "Serving static files"
-msgstr ""
+msgstr "Phục vụ tệp tĩnh"
 
 #: ../../content/administration/on_premise/deploy.rst:439
 msgid ""
@@ -6334,6 +6367,10 @@ msgid ""
 ":samp:`/{MODULE}/static/{FILE}`, and looking up the right module (and file) "
 "in the various addons paths."
 msgstr ""
+"Các tệp tĩnh của Odoo nằm trong thư mục :file:`static/` của mỗi phân hệ. Do "
+"đó, các tệp tĩnh có thể được phục vụ bằng cách chặn tất cả yêu cầu tới "
+":samp:`/{MODULE}/static/{FILE}` và tìm đúng phân hệ (và tệp) trong các đường"
+" dẫn addon khác nhau."
 
 #: ../../content/administration/on_premise/deploy.rst:443
 msgid ""
@@ -6343,12 +6380,19 @@ msgid ""
 ":file:`static/` folder and existing images are final (they do not fetch new "
 "resources by themselves). However, it is good practice."
 msgstr ""
+"Bạn nên thiết lập header ``Content-Security-Policy: default-src 'none'`` "
+"trên tất cả hình ảnh được máy chủ web phân phối. Dù không hoàn toàn bắt buộc"
+" vì người dùng không thể sửa đổi/chèn nội dung bên trong thư mục "
+":file:`static/` của phân hệ và hình ảnh hiện có là hình ảnh cuối cùng (chúng"
+" không tự tìm nạp tài nguyên mới), nhưng đây là một thiết lập hữu ích."
 
 #: ../../content/administration/on_premise/deploy.rst:448
 msgid ""
 "Using the above NGINX (https) configuration, the following ``map`` and "
 "``location`` blocks should be added to serve static files via NGINX."
 msgstr ""
+"Khi sử dụng cấu hình NGINX (https) ở trên, các khối ``map`` và ``location`` "
+"sau đây sẽ được thêm vào để phục vụ các tệp tĩnh thông qua NGINX."
 
 #: ../../content/administration/on_premise/deploy.rst:475
 msgid ""
@@ -6356,10 +6400,12 @@ msgid ""
 "installation, specifically on your :option:`--addons-path <odoo-bin "
 "--addons-path>`."
 msgstr ""
+"Các lệnh ``root`` và ``try_files`` thực tế phụ thuộc vào cài đặt của bạn, cụ"
+" thể là trên :option:`--addons-path <odoo-bin --addons-path>`."
 
 #: ../../content/administration/on_premise/deploy.rst:482
 msgid "Debian package"
-msgstr ""
+msgstr "Gói Debian"
 
 #: ../../content/administration/on_premise/deploy.rst:484
 msgid ""
@@ -6367,11 +6413,14 @@ msgid ""
 "Enterprise, and that the :option:`--addons-path <odoo-bin --addons-path>` is"
 " ``'/usr/lib/python3/dist-packages/odoo/addons'``."
 msgstr ""
+"Giả sử Odoo được cài đặt thông qua **gói debian** dành cho Community và "
+"Enterprise và :option:`--addons-path <odoo-bin --addons-path>` là "
+"``'/usr/lib/python3/dist-packages/odoo/addons'``."
 
 #: ../../content/administration/on_premise/deploy.rst:488
 #: ../../content/administration/on_premise/deploy.rst:502
 msgid "The ``root`` and ``try_files`` should be:"
-msgstr ""
+msgstr "Thì ``root`` and ``try_files`` như sau:"
 
 #: ../../content/administration/on_premise/deploy.rst:495
 msgid "Git sources"
@@ -6385,10 +6434,15 @@ msgid ""
 "path <odoo-bin --addons-path>` is "
 "``'/opt/odoo/community/odoo/addons,/opt/odoo/community/addons,/opt/odoo/enterprise'``."
 msgstr ""
+"Giả sử Odoo được cài đặt thông qua **nguồn**, cả kho lưu trữ git Community "
+"và Enterprise đều được sao chép trong :file:`/opt/odoo/community` và "
+":file:`/opt/odoo/enterprise` tương ứng, và  :option:`--addons-path <odoo-bin"
+" --addons-path>` là "
+"``'/opt/odoo/community/odoo/addons,/opt/odoo/community/addons,/opt/odoo/enterprise'``."
 
 #: ../../content/administration/on_premise/deploy.rst:510
 msgid "Serving attachments"
-msgstr ""
+msgstr "Phục vụ tệp đính kèm"
 
 #: ../../content/administration/on_premise/deploy.rst:512
 msgid ""
@@ -6397,6 +6451,10 @@ msgid ""
 "them requires multiple lookups in the database to determine where the files "
 "are stored and whether the current user can access them or not."
 msgstr ""
+"Tệp đính kèm là các tệp được lưu trữ trong filestore mà Odoo quy định quyền "
+"truy cập. Không thể truy cập trực tiếp qua máy chủ web tĩnh vì việc truy cập"
+" chúng đòi hỏi nhiều lần tra cứu trong cơ sở dữ liệu để xác định nơi lưu trữ"
+" tệp và liệu người dùng hiện tại có thể truy cập chúng hay không."
 
 #: ../../content/administration/on_premise/deploy.rst:517
 msgid ""
@@ -6411,18 +6469,28 @@ msgid ""
 "--x-sendfile>` CLI flag (this unique flag is used for both X-Sendfile and "
 "X-Accel)."
 msgstr ""
+"Tuy nhiên, sau khi tệp đã được định vị và quyền truy cập đã được Odoo xác "
+"minh, bạn nên phục vụ tệp bằng máy chủ web tĩnh thay vì Odoo. Để Odoo ủy "
+"quyền phục vụ tệp cho máy chủ web tĩnh, tiện ích mở rộng X-Sendfile "
+"<https://tn123.org/mod_xsendfile/>`_ (apache) hoặc `X-Accel "
+"<https://www.nginx.com/resources/wiki/start/topics/examples/x-accel/>`_ "
+"(nginx) phải được bật và cấu hình trên máy chủ web tĩnh. Sau khi thiết lập "
+"xong, hãy khởi động Odoo bằng cờ CLI :option:`--x-sendfile <odoo-bin "
+"--x-sendfile>` (cờ duy nhất này được sử dụng cho cả X-Sendfile và X-Accel)."
 
 #: ../../content/administration/on_premise/deploy.rst:527
 msgid ""
 "The X-Sendfile extension for apache (and compatible web servers) does not "
 "require any supplementary configuration."
 msgstr ""
+"Tiện ích mở rộng X-Sendfile dành cho apache (và các máy chủ web tương thích)"
+" không yêu cầu bất kỳ cấu hình bổ sung nào."
 
 #: ../../content/administration/on_premise/deploy.rst:529
 msgid ""
 "The X-Accel extension for NGINX **does** require the following additionnal "
 "configuration:"
-msgstr ""
+msgstr "Tiện ích mở rộng X-Accel cho NGINX **yêu cầu** cấu hình bổ sung sau:"
 
 #: ../../content/administration/on_premise/deploy.rst:538
 msgid ""
@@ -6432,6 +6500,11 @@ msgid ""
 "NGINX). This logs a warnings, the message contains the configuration you "
 "need."
 msgstr ""
+"Nếu bạn không biết đường dẫn đến filestore của mình là gì, hãy khởi động "
+"Odoo với tùy chọn :option:`--x-sendfile <odoo-bin --x-sendfile>` và điều "
+"hướng đến URL ``/web/filestore`` trực tiếp qua Odoo (không điều hướng đến "
+"URL qua NGINX). Thao tác này sẽ tạo ra cảnh báo với thông báo chứa cấu hình "
+"bạn cần."
 
 #: ../../content/administration/on_premise/deploy.rst:547
 msgid "Security"
@@ -6443,6 +6516,9 @@ msgid ""
 "continuous process, not a one-shot operation. At any moment, you will only "
 "be as secure as the weakest link in your environment."
 msgstr ""
+"Trước hết, bạn nên nhớ rằng bảo mật hệ thống thông tin là một quá trình liên"
+" tục, không phải là một thao tác diễn ra một lần. Hãy luôn đảm bảo tính bảo "
+"mật của từng chi tiết nhỏ trong hệ thống của bạn."
 
 #: ../../content/administration/on_premise/deploy.rst:553
 msgid ""
@@ -6453,12 +6529,20 @@ msgid ""
 "system and distribution, best practices in terms of users, passwords, and "
 "access control management, etc."
 msgstr ""
+"Vì vậy, mong rằng bạn không coi phần này là danh sách cuối cùng về các biện "
+"pháp sẽ ngăn ngừa mọi vấn đề bảo mật. Nó chỉ có mục đích tóm tắt những điều "
+"quan trọng hàng đầu mà bạn nên đưa vào kế hoạch bảo mật của mình. Phần còn "
+"lại sẽ đến từ các biện pháp bảo mật tốt nhất cho hệ điều hành và bản phân "
+"phối của bạn, các biện pháp tốt nhất về người dùng, mật khẩu và quản lý kiểm"
+" soát truy cập,..."
 
 #: ../../content/administration/on_premise/deploy.rst:559
 msgid ""
 "When deploying an internet-facing server, please be sure to consider the "
 "following security-related topics:"
 msgstr ""
+"Khi triển khai máy chủ kết nối Internet, hãy nhớ cân nhắc các chủ đề liên "
+"quan đến bảo mật sau:"
 
 #: ../../content/administration/on_premise/deploy.rst:562
 msgid ""
@@ -6466,6 +6550,9 @@ msgid ""
 "database management pages as soon as the system is set up. See "
 ":ref:`db_manager_security`."
 msgstr ""
+"Luôn đặt mật khẩu quản trị viên mạnh và hạn chế quyền truy cập vào các trang"
+" quản lý cơ sở dữ liệu ngay khi hệ thống được thiết lập. Tham khảo "
+":ref:`db_manager_security`."
 
 #: ../../content/administration/on_premise/deploy.rst:565
 msgid ""
@@ -6475,6 +6562,12 @@ msgid ""
 "*Never* use any default passwords like admin/admin, even for test/staging "
 "databases."
 msgstr ""
+"Chọn tên đăng nhập duy nhất và mật khẩu mạnh cho tất cả tài khoản quản trị "
+"viên trên tất cả cơ sở dữ liệu. Không sử dụng 'admin' làm tên đăng nhập. "
+"Không sử dụng những tên đăng nhập đó cho các hoạt động thường xuyên mà chỉ "
+"sử dụng để kiểm soát/quản lý cài đặt. *Không bao giờ* sử dụng bất kỳ mật "
+"khẩu mặc định nào như admin/admin, ngay cả đối với cơ sở dữ liệu kiểm "
+"thử/staging."
 
 #: ../../content/administration/on_premise/deploy.rst:570
 msgid ""
@@ -6482,6 +6575,10 @@ msgid ""
 " data contain default logins and passwords that can be used to get into your"
 " systems and cause significant trouble, even on staging/dev systems."
 msgstr ""
+"**Không** cài đặt dữ liệu demo trên các máy chủ kết nối internet. Cơ sở dữ "
+"liệu có dữ liệu demo chứa tên đăng nhập và mật khẩu mặc định có thể được sử "
+"dụng để xâm nhập vào hệ thống của bạn và gây ra sự cố nghiêm trọng, ngay cả "
+"trên hệ thống staging/phát triển."
 
 #: ../../content/administration/on_premise/deploy.rst:574
 msgid ""
@@ -6492,6 +6589,12 @@ msgid ""
 "from, instead of letting the system fetch them all from the database "
 "backend."
 msgstr ""
+"Sử dụng bộ lọc cơ sở dữ liệu phù hợp ( :option:`--db-filter <odoo-bin --db-"
+"filter>`) để giới hạn chế độ hiển thị cơ sở dữ liệu của bạn theo tên máy "
+"chủ. Tham khảo :ref:`dbfilter`. Bạn cũng có thể sử dụng :option:`-d <odoo-"
+"bin -d>` để cung cấp danh sách (được phân tách bằng dấu phẩy) các cơ sở dữ "
+"liệu có sẵn để lọc, thay vì để hệ thống lấy tất cả chúng từ cơ sở dữ liệu "
+"backend."
 
 #: ../../content/administration/on_premise/deploy.rst:581
 msgid ""
@@ -6502,6 +6605,12 @@ msgid ""
 ":option:`--no-database-list <odoo-bin --no-database-list>` command-line "
 "option)"
 msgstr ""
+"Sau khi ``db_name`` và ``dbfilter`` của bạn được cấu hình và chỉ khớp với "
+"một cơ sở dữ liệu duy nhất cho mỗi tên máy chủ, bạn nên đặt tùy chọn cấu "
+"hình ``list_db`` thành ``False`` để ngăn chặn việc công khai toàn bộ cơ sở "
+"dữ liệu và chặn quyền truy cập vào màn hình quản lý cơ sở dữ liệu (điều này "
+"cũng được hiển thị dưới dạng tùy chọn dòng lệnh :option:`--no-database-list "
+"<odoo-bin --no-database-list>`)"
 
 #: ../../content/administration/on_premise/deploy.rst:587
 msgid ""
@@ -6511,6 +6620,11 @@ msgid ""
 "using a dedicated non-privileged ``db_user``. See also "
 ":ref:`setup/deploy/odoo`."
 msgstr ""
+"Đảm bảo người dùng PostgreSQL (:option:`--db_user <odoo-bin --db_user>`) "
+"*không* phải là siêu người dùng và cơ sở dữ liệu của bạn thuộc sở hữu của "
+"một người dùng khác. Ví dụ, chúng có thể thuộc sở hữu của siêu người dùng "
+"``postgres`` nếu bạn đang sử dụng ``db_user`` chuyên dụng không có đặc "
+"quyền. Tham khảo thêm :ref:`setup/deploy/odoo`."
 
 #: ../../content/administration/on_premise/deploy.rst:592
 msgid ""
@@ -6518,12 +6632,18 @@ msgid ""
 " via GitHub or by downloading the latest version from "
 "https://www.odoo.com/page/download or http://nightly.odoo.com"
 msgstr ""
+"Luôn cập nhật các cài đặt bằng cách thường xuyên cài đặt các bản dựng mới "
+"nhất, thông qua GitHub hoặc bằng cách tải xuống phiên bản mới nhất từ "
+"​​https://www.odoo.com/page/download hoặc http://nightly.odoo.com"
 
 #: ../../content/administration/on_premise/deploy.rst:596
 msgid ""
 "Configure your server in multi-process mode with proper limits matching your"
 " typical usage (memory/CPU/timeouts). See also :ref:`builtin_server`."
 msgstr ""
+"Cấu hình máy chủ của bạn ở chế độ đa xử lý với các giới hạn phù hợp với mức "
+"sử dụng thông thường của bạn (bộ nhớ/CPU/thời gian chờ). Tham khảo thêm "
+":ref:`builtin_server`."
 
 #: ../../content/administration/on_premise/deploy.rst:599
 msgid ""
@@ -6534,6 +6654,12 @@ msgid ""
 "enable the :option:`proxy mode <odoo-bin --proxy-mode>` option. See also "
 ":ref:`https_proxy`."
 msgstr ""
+"Chạy Odoo sau máy chủ web cung cấp HTTPS termination với chứng chỉ SSL hợp "
+"lệ, để ngăn chặn việc nghe lén các liên lạc bằng văn bản thuần tuý. Chứng "
+"chỉ SSL không tốn kém và có nhiều tùy chọn miễn phí. Cấu hình proxy web để "
+"giới hạn kích thước yêu cầu, cài đặt thời gian chờ thích hợp, sau đó bật tùy"
+" chọn :option:`proxy mode <odoo-bin --proxy-mode>`. Tham khảo thêm "
+":ref:`https_proxy`."
 
 #: ../../content/administration/on_premise/deploy.rst:606
 msgid ""
@@ -6544,6 +6670,12 @@ msgid ""
 " allowing only trusted IPs in the firewall, and/or running a brute-force "
 "detection system such as `fail2ban` or equivalent."
 msgstr ""
+"Nếu bạn cần cho phép truy cập SSH từ xa vào máy chủ của mình, hãy đảm bảo "
+"đặt mật khẩu mạnh cho **tất cả** tài khoản, không chỉ `root`. Chúng tôi "
+"khuyến khích tắt hoàn toàn xác thực bằng mật khẩu và chỉ cho phép xác thực "
+"bằng mã khóa công khai. Ngoài ra, hãy cân nhắc hạn chế quyền truy cập qua "
+"VPN, chỉ cho phép các IP đáng tin cậy trong tường lửa và/hoặc chạy hệ thống "
+"phát hiện tấn công brute-force như `fail2ban` hoặc tương đương."
 
 #: ../../content/administration/on_premise/deploy.rst:612
 msgid ""
@@ -6551,6 +6683,9 @@ msgid ""
 "prevent brute-force attacks and denial of service attacks. See also "
 ":ref:`login_brute_force` for specific measures."
 msgstr ""
+"Hãy cân nhắc cài đặt giới hạn tốc độ phù hợp trên proxy hoặc tường lửa của "
+"bạn để ngăn chặn các cuộc tấn công brute-force và tấn công từ chối dịch vụ. "
+"Tham khảo thêm :ref:`login_brute_force` để biết các biện pháp cụ thể."
 
 #: ../../content/administration/on_premise/deploy.rst:616
 msgid ""
@@ -6558,6 +6693,9 @@ msgid ""
 "of Service attacks (DDOS), but this is often an optional service, so you "
 "should consult with them."
 msgstr ""
+"Nhiều nhà cung cấp mạng cung cấp dịch vụ giảm thiểu tự động cho các cuộc Tấn"
+" công Từ chối Dịch vụ Phân tán (DDOS), nhưng đây thường là dịch vụ tùy chọn,"
+" vì vậy bạn nên tham khảo với nhà cung cấp của mình."
 
 #: ../../content/administration/on_premise/deploy.rst:620
 msgid ""
@@ -6565,6 +6703,9 @@ msgid ""
 "different machines than the production ones. And apply the same security "
 "precautions as for production."
 msgstr ""
+"Nếu có thể, hãy luôn lưu trữ các phiên bản demo/kiểm thử/staging công khai "
+"của bạn trên các máy khác với máy production. Và áp dụng các biện pháp phòng"
+" ngừa bảo mật tương tự như đối với production."
 
 #: ../../content/administration/on_premise/deploy.rst:624
 msgid ""
@@ -6624,12 +6765,18 @@ msgid ""
 "If you are hosting multiple customers, isolate customer data and files from "
 "each other using containers or appropriate \"jail\" techniques."
 msgstr ""
+"Nếu bạn đang lưu trữ nhiều khách hàng, hãy cô lập dữ liệu và tệp khách hàng "
+"khỏi nhau bằng cách sử dụng container hoặc các kỹ thuật \"rào chắn\" thích "
+"hợp."
 
 #: ../../content/administration/on_premise/deploy.rst:649
 msgid ""
 "Setup daily backups of your databases and filestore data, and copy them to a"
 " remote archiving server that is not accessible from the server itself."
 msgstr ""
+"Tạo sao lưu hàng ngày cho cơ sở dữ liệu và dữ liệu filestore của bạn và sao "
+"chép chúng vào một máy chủ lưu trữ từ xa mà chính máy chủ đó không thể truy "
+"cập được."
 
 #: ../../content/administration/on_premise/deploy.rst:652
 msgid ""
@@ -6638,6 +6785,10 @@ msgid ""
 "hardening review of the server should be conducted and is outside of the "
 "scope of this guide."
 msgstr ""
+"Triển khai Odoo trên Linux được khuyến khích hơn là Windows. Tuy nhiên, nếu "
+"bạn vẫn chọn triển khai trên nền tảng Windows, bạn nên tiến hành đánh giá "
+"bảo mật toàn diện cho máy chủ và phạm vi hướng dẫn này không bao gồm hoạt "
+"động đó."
 
 #: ../../content/administration/on_premise/deploy.rst:660
 msgid "Blocking Brute Force Attacks"
@@ -6650,10 +6801,15 @@ msgid ""
 "emits a log entry whenever a login attempt is performed, and reports the "
 "result: success or failure, along with the target login and source IP."
 msgstr ""
+"Với các triển khai kết nối internet, những cuộc tấn công brute force vào mật"
+" khẩu người dùng rất phổ biến và không nên bỏ qua mối đe dọa này đối với các"
+" máy chủ Odoo. Odoo tạo một mục nhật ký bất cứ khi nào một nỗ lực đăng nhập "
+"được thực hiện và báo cáo kết quả (thành công hay không thành công) cùng với"
+" mục tiêu đăng nhập và IP nguồn."
 
 #: ../../content/administration/on_premise/deploy.rst:666
 msgid "The log entries will have the following form."
-msgstr ""
+msgstr "Mục nhật ký có dạng như sau."
 
 #: ../../content/administration/on_premise/deploy.rst:668
 msgid "Failed login::"
@@ -6668,28 +6824,35 @@ msgid ""
 "These logs can be easily analyzed by an intrusion prevention system such as "
 "`fail2ban`."
 msgstr ""
+"Các nhật ký này có thể dễ dàng được phân tích bởi hệ thống phòng chống xâm "
+"nhập như `fail2ban`."
 
 #: ../../content/administration/on_premise/deploy.rst:679
 msgid ""
 "For example, the following fail2ban filter definition should match a failed "
 "login::"
 msgstr ""
+"Ví dụ: định nghĩa bộ lọc fail2ban sau đây phải khớp với đăng nhập không "
+"thành công::"
 
 #: ../../content/administration/on_premise/deploy.rst:686
 msgid ""
 "This could be used with a jail definition to block the attacking IP on "
 "HTTP(S)."
 msgstr ""
+"Bạn có thể sử dụng với định nghĩa rào chắn để chặn IP tấn công trên HTTP(S)."
 
 #: ../../content/administration/on_premise/deploy.rst:688
 msgid ""
 "Here is what it could look like for blocking the IP for 15 minutes when 10 "
 "failed login attempts are detected from the same IP within 1 minute::"
 msgstr ""
+"Sau đây là những gì có thể xảy ra khi chặn IP trong 15 phút khi phát hiện 10"
+" lần đăng nhập không thành công từ cùng một IP trong vòng 1 phút::"
 
 #: ../../content/administration/on_premise/deploy.rst:702
 msgid "Database Manager Security"
-msgstr ""
+msgstr "Bảo mật Trình Quản lý Cơ sở Dữ liệu"
 
 #: ../../content/administration/on_premise/deploy.rst:704
 msgid ":ref:`setup/deploy/odoo` mentioned ``admin_passwd`` in passing."
@@ -6700,6 +6863,8 @@ msgid ""
 "This setting is used on all database management screens (to create, delete, "
 "dump or restore databases)."
 msgstr ""
+"Thiết lập này được sử dụng trên tất cả các màn hình quản lý cơ sở dữ liệu "
+"(để tạo, xóa, kết xuất hoặc khôi phục cơ sở dữ liệu)."
 
 #: ../../content/administration/on_premise/deploy.rst:709
 msgid ""
@@ -6707,6 +6872,9 @@ msgid ""
 "``list_db`` configuration option to ``False``, to block access to all the "
 "database selection and management screens."
 msgstr ""
+"Nếu không muốn truy cập vào màn hình quản lý, bạn nên đặt tùy chọn cấu hình "
+"``list_db`` thành ``False`` để chặn quyền truy cập vào tất cả các màn hình "
+"quản lý và lựa chọn cơ sở dữ liệu."
 
 #: ../../content/administration/on_premise/deploy.rst:715
 msgid ""
@@ -6716,6 +6884,12 @@ msgid ""
 "production, and may even expose dangerous features to attackers. It is also "
 "not designed to handle large databases, and may trigger memory limits."
 msgstr ""
+"Chúng tôi khuyến nghị bạn tắt Trình quản lý cơ sở dữ liệu cho mọi hệ thống "
+"có kết nối internet! Nó được dùng làm công cụ phát triển/demo để bạn có thể "
+"dễ dàng tạo và quản lý cơ sở dữ liệu nhanh chóng; nhưng không được thiết kế "
+"để sử dụng trong production và thậm chí có thể làm lộ các tính năng nguy "
+"hiểm cho kẻ tấn công. Nó cũng không có khả năng xử lý cơ sở dữ liệu lớn và "
+"có thể kích hoạt giới hạn bộ nhớ."
 
 #: ../../content/administration/on_premise/deploy.rst:721
 msgid ""
@@ -6723,6 +6897,9 @@ msgid ""
 "performed by the system administrator, including provisioning of new "
 "databases and automated backups."
 msgstr ""
+"Trên các hệ thống production, quản trị viên hệ thống luôn là người thực hiện"
+" hoạt động quản lý cơ sở dữ liệu, bao gồm việc cung cấp cơ sở dữ liệu mới và"
+" sao lưu tự động."
 
 #: ../../content/administration/on_premise/deploy.rst:724
 msgid ""
@@ -6731,6 +6908,9 @@ msgid ""
 "each request, otherwise users will be blocked as they won't be allowed to "
 "choose the database themselves."
 msgstr ""
+"Hãy nhớ thiết lập tham số ``db_name`` phù hợp (và ``dbfilter``, nếu muốn) để"
+" hệ thống có thể xác định cơ sở dữ liệu đích cho mỗi yêu cầu. Nếu không, "
+"người dùng sẽ bị chặn vì họ không được phép tự chọn cơ sở dữ liệu."
 
 #: ../../content/administration/on_premise/deploy.rst:729
 msgid ""
@@ -6739,6 +6919,10 @@ msgid ""
 "starting with ``/web/database`` except (maybe) ``/web/database/selector`` "
 "which displays the database-selection screen."
 msgstr ""
+"Nếu màn hình quản lý chỉ có thể truy cập từ một nhóm máy được chọn, hãy sử "
+"dụng các tính năng của máy chủ proxy để chặn quyền truy cập vào tất cả tuyến"
+" bắt đầu bằng ``/web/database`` ngoại trừ (có thể) "
+"``/web/database/selector`` hiển thị màn hình chọn cơ sở dữ liệu."
 
 #: ../../content/administration/on_premise/deploy.rst:733
 msgid ""
@@ -6746,18 +6930,22 @@ msgid ""
 "``admin_passwd`` setting must be changed from its ``admin`` default: this "
 "password is checked before allowing database-alteration operations."
 msgstr ""
+"Nếu bạn muốn để màn hình quản lý cơ sở dữ liệu ở chế độ có thể truy cập "
+"được, cài đặt ``admin_passwd`` phải được thay đổi từ cài đặt mặc định "
+"``admin``: mật khẩu này được kiểm tra trước khi cho phép các thao tác thay "
+"đổi cơ sở dữ liệu."
 
 #: ../../content/administration/on_premise/deploy.rst:737
 msgid "It should be stored securely, and should be generated randomly e.g."
-msgstr ""
+msgstr "Nó phải được lưu trữ an toàn và phải được tạo ngẫu nhiên, ví dụ:"
 
 #: ../../content/administration/on_premise/deploy.rst:743
 msgid "which generates a 32-character pseudorandom printable string."
-msgstr ""
+msgstr "tạo ra một chuỗi ký tự giả ngẫu nhiên có thể in được gồm 32 ký tự."
 
 #: ../../content/administration/on_premise/deploy.rst:746
 msgid "Reset the master password"
-msgstr "Đặt lại mật khẩu chính"
+msgstr "Đặt lại Mật khẩu Chính"
 
 #: ../../content/administration/on_premise/deploy.rst:748
 msgid ""
@@ -6766,12 +6954,18 @@ msgid ""
 "administrators of an Odoo on-premise database detailing how to manually "
 "reset and re-encrypt the master password."
 msgstr ""
+"Có thể xảy ra trường hợp mật khẩu chính bị thất lạc hoặc bị xâm phạm và cần "
+"phải đặt lại. Quy trình sau đây dành cho quản trị viên hệ thống của cơ sở dữ"
+" liệu Odoo on-premise, nêu chi tiết cách đặt lại và mã hóa lại mật khẩu "
+"chính theo cách thủ công."
 
 #: ../../content/administration/on_premise/deploy.rst:753
 msgid ""
 "For more information about changing an Odoo.com account password, see this "
 "documentation: :ref:`odoocom/change_password`."
 msgstr ""
+"Để biết thêm thông tin về cách thay đổi mật khẩu tài khoản Odoo.com, vui "
+"lòng tham khảo tài liệu này: :ref:`odoocom/change_password`."
 
 #: ../../content/administration/on_premise/deploy.rst:756
 msgid ""
@@ -6780,12 +6974,18 @@ msgid ""
 "password is implemented by default, so there is a secure master password for"
 " any Odoo on-premise deployment."
 msgstr ""
+"Khi tạo cơ sở dữ liệu on-premise mới, một mật khẩu chính ngẫu nhiên sẽ được "
+"tạo. Odoo khuyến khích sử dụng mật khẩu này để bảo mật cơ sở dữ liệu. Mật "
+"khẩu này được triển khai theo mặc định, do đó bất kỳ triển khai Odoo on-"
+"premise nào đều có một mật khẩu chính an toàn."
 
 #: ../../content/administration/on_premise/deploy.rst:761
 msgid ""
 "When creating an Odoo on-premise database the installation is accessible to "
 "anyone on the internet, until this password is set to secure the database."
 msgstr ""
+"Khi tạo cơ sở dữ liệu Odoo on-premise và chưa đặt mật khẩu này để bảo mật cơ"
+" sở dữ liệu, thì bất kỳ ai trên internet cũng có thể truy cập cài đặt."
 
 #: ../../content/administration/on_premise/deploy.rst:764
 msgid ""
@@ -6793,6 +6993,9 @@ msgid ""
 " or `odoorc` (hidden file)). The Odoo master password is needed to modify, "
 "create, or delete a database through the graphical user interface (GUI)."
 msgstr ""
+"Mật khẩu chính được xác định trong tệp cấu hình Odoo (`odoo.conf` hoặc "
+"`odoorc` (tệp ẩn)). Cần có mật khẩu chính Odoo để sửa đổi, tạo hoặc xóa cơ "
+"sở dữ liệu thông qua giao diện người dùng đồ họa (GUI)."
 
 #: ../../content/administration/on_premise/deploy.rst:769
 msgid "Locate configuration file"
@@ -6802,7 +7005,7 @@ msgstr "Xác định vị trí tệp cấu hình"
 msgid ""
 "First, open the Odoo configuration file (`odoo.conf` or `odoorc` (hidden "
 "file))."
-msgstr ""
+msgstr "Đầu tiên, mở tệp cấu hình Odoo (`odoo.conf` hoặc `odoorc` (tệp ẩn))."
 
 #: ../../content/administration/on_premise/deploy.rst:775
 #: ../../content/administration/on_premise/packages.rst:148
@@ -6822,7 +7025,7 @@ msgstr "Windows"
 msgid ""
 "The configuration file is located at: "
 "`c:\\\\ProgramFiles\\\\Odoo{VERSION}\\\\server\\\\odoo.conf`"
-msgstr ""
+msgstr "Tệp cấu hình nằm tại: `c:\\\\ProgramFiles\\\\Odoo{VERSION}\\\\server\\\\odoo.conf`"
 
 #: ../../content/administration/on_premise/deploy.rst:779
 #: ../../content/administration/on_premise/packages.rst:25
@@ -6843,6 +7046,8 @@ msgid ""
 "Depending on how Odoo is installed on the Linux machine, the configuration "
 "file is located in one of two different places:"
 msgstr ""
+"Tùy thuộc vào cách Odoo được cài đặt trên máy Linux, tệp cấu hình sẽ nằm ở "
+"một trong hai vị trí khác nhau:"
 
 #: ../../content/administration/on_premise/deploy.rst:784
 msgid "Package installation: `/etc/odoo.conf`"
@@ -6861,6 +7066,8 @@ msgid ""
 "Once the appropriate file has been opened, proceed to modify the old "
 "password in the configuration file to a temporary password."
 msgstr ""
+"Sau khi mở tệp thích hợp, hãy tiến hành sửa đổi mật khẩu cũ trong tệp cấu "
+"hình thành mật khẩu tạm thời."
 
 #: ../../content/administration/on_premise/deploy.rst:795
 #: ../../content/administration/on_premise/deploy.rst:843
@@ -6874,6 +7081,10 @@ msgid ""
 " on the file. Then, the device should have a default :abbr:`GUI (graphical "
 "user interface)` to open the file with."
 msgstr ""
+"Sau khi định vị được tệp cấu hình, hãy mở tệp đó bằng (:abbr:`GUI (giao diện"
+" người dùng đồ họa)`). Bạn có thể thực hiện việc này chỉ bằng cách nhấp đúp "
+"vào tệp. Sau đó, :abbr:`GUI (giao diện người dùng đồ họa)` mặc định trên "
+"thiết bị sẽ mở tệp."
 
 #: ../../content/administration/on_premise/deploy.rst:801
 msgid ""
@@ -6882,6 +7093,9 @@ msgid ""
 "anything, as long as it is saved temporarily. Make sure to modify all "
 "characters after the `=`."
 msgstr ""
+"Tiếp theo, sửa đổi dòng mật khẩu chính, ví dụ `admin_passwd = $pbkdf2-sha…` "
+"thành `admin_passwd = newpassword1234`. Mật khẩu này có thể được đặt bất kỳ,"
+" miễn là nó được lưu tạm thời. Hãy nhớ sửa đổi tất cả ký tự sau dấu `=`."
 
 #: ../../content/administration/on_premise/deploy.rst:806
 #: ../../content/administration/on_premise/deploy.rst:825
@@ -6889,11 +7103,13 @@ msgid ""
 "The line appears like this: `admin_passwd = "
 "$pbkdf2-sh39dji295.59mptrfW.9z6HkA$w9j9AMVmKAP17OosCqDxDv2hjsvzlLpF8Rra8I7p/b573hji540mk/.3ek0lg%kvkol6k983mkf/40fjki79m`"
 msgstr ""
+"Dòng mật khẩu chính như sau: `admin_passwd = "
+"$pbkdf2-sh39dji295.59mptrfW.9z6HkA$w9j9AMVmKAP17OosCqDxDv2hjsvzlLpF8Rra8I7p/b573hji540mk/.3ek0lg%kvkol6k983mkf/40fjki79m`"
 
 #: ../../content/administration/on_premise/deploy.rst:810
 #: ../../content/administration/on_premise/deploy.rst:829
 msgid "The modified line appears like this: `admin_passwd = newpassword1234`"
-msgstr ""
+msgstr "Dòng được sửa đổi sẽ có dạng: `admin_passwd = newpassword1234`"
 
 #: ../../content/administration/on_premise/deploy.rst:812
 #: ../../content/administration/on_premise/deploy.rst:852
@@ -6905,6 +7121,7 @@ msgid ""
 "Modify the master password line using the following Unix command detailed "
 "below."
 msgstr ""
+"Sửa đổi dòng mật khẩu chính bằng lệnh Unix được trình bày chi tiết dưới đây."
 
 #: ../../content/administration/on_premise/deploy.rst:816
 msgid ""
@@ -6912,6 +7129,9 @@ msgid ""
 "edit the configuration file. To modify the configuration file, enter the "
 "following command: :command:`sudo nano /etc/odoo.conf`"
 msgstr ""
+"Kết nối với thiết bị đầu cuối của máy chủ Odoo qua giao thức Secure Shell "
+"(SSH) và chỉnh sửa tệp cấu hình. Để chỉnh sửa tệp cấu hình, hãy nhập lệnh "
+"sau: :command:`sudo nano /etc/odoo.conf`"
 
 #: ../../content/administration/on_premise/deploy.rst:820
 msgid ""
@@ -6920,6 +7140,10 @@ msgid ""
 "password can be anything, as long as it is saved temporarily. Make sure to "
 "modify all characters after the `=`."
 msgstr ""
+"Sau khi mở tệp cấu hình, sửa đổi dòng mật khẩu chính `admin_passwd = "
+"$pbkdf2-sha…` thành `admin_passwd = newpassword1234`. Mật khẩu này có thể "
+"được đặt bất kỳ, miễn là nó được lưu tạm thời. Hãy nhớ sửa đổi tất cả ký tự "
+"sau dấu `=`."
 
 #: ../../content/administration/on_premise/deploy.rst:832
 msgid ""
@@ -6928,6 +7152,9 @@ msgid ""
 "of the line. This ensures the database is secure throughout the entire "
 "password reset process."
 msgstr ""
+"Điều quan trọng là phải đổi mật khẩu thành mật khẩu khác, thay vì kích hoạt "
+"đặt lại mật khẩu mới bằng cách thêm dấu chấm phẩy `;` vào đầu dòng. Điều này"
+" đảm bảo cơ sở dữ liệu được bảo mật trong suốt quá trình đặt lại mật khẩu."
 
 #: ../../content/administration/on_premise/deploy.rst:837
 msgid "Restart Odoo server"
@@ -6938,6 +7165,7 @@ msgid ""
 "After setting the temporary password, a restart of the Odoo server is "
 "**required**."
 msgstr ""
+"Sau khi đặt mật khẩu tạm thời, bạn **phải** khởi động lại máy chủ Odoo."
 
 #: ../../content/administration/on_premise/deploy.rst:845
 msgid ""
@@ -6945,40 +7173,53 @@ msgid ""
 ":guilabel:`Search` bar. Then, select the :guilabel:`Services` application, "
 "and scroll down to the :guilabel:`Odoo` service."
 msgstr ""
+"Để khởi động lại máy chủ Odoo, trước tiên, hãy nhập `services` vào thanh "
+":guilabel:`Tìm kiếm` của Windows. Sau đó, chọn ứng dụng :guilabel:`Dịch vụ` "
+"và cuộn xuống dịch vụ :guilabel:`Odoo`."
 
 #: ../../content/administration/on_premise/deploy.rst:849
 msgid ""
 "Next, right click on :guilabel:`Odoo`, and select :guilabel:`Start` or "
 ":guilabel:`Restart`. This action manually restarts the Odoo server."
 msgstr ""
+"Tiếp theo, nhấp chuột phải vào :guilabel:`Odoo` và chọn :guilabel:`Khởi "
+"động` hoặc :guilabel:`Khởi động lại`. Hành động này sẽ khởi động lại máy chủ"
+" Odoo theo cách thủ công."
 
 #: ../../content/administration/on_premise/deploy.rst:854
 msgid ""
 "Restart the Odoo server by typing the command: :command:`sudo service odoo15"
 " restart`"
 msgstr ""
+"Khởi động lại máy chủ Odoo bằng cách nhập lệnh: :command:`sudo service "
+"odoo15 restart`"
 
 #: ../../content/administration/on_premise/deploy.rst:857
 msgid ""
 "Change the number after `odoo` to fit the specific version the server is "
 "running on."
 msgstr ""
+"Thay đổi số sau `odoo` cho phù hợp với phiên bản mà máy chủ đang chạy."
 
 #: ../../content/administration/on_premise/deploy.rst:860
 msgid "Use web interface to re-encrypt password"
-msgstr ""
+msgstr "Sử dụng giao diện web để mã hóa lại mật khẩu"
 
 #: ../../content/administration/on_premise/deploy.rst:862
 msgid ""
 "First, navigate to `/web/database/manager` or "
 "`http://server_ip:port/web/database/manager` in a browser."
 msgstr ""
+"Đầu tiên, đi đến `/web/database/manager` hoặc "
+"`http://server_ip:port/web/database/manager` trong trình duyệt."
 
 #: ../../content/administration/on_premise/deploy.rst:866
 msgid ""
 "Replace `server_ip` with the IP address of the database. Replace `port` with"
 " the numbered port the database is accessible from."
 msgstr ""
+"Thay thế `server_ip` bằng địa chỉ IP của cơ sở dữ liệu. Thay thế `port` bằng"
+" cổng được đánh số mà cơ sở dữ liệu có thể truy cập được."
 
 #: ../../content/administration/on_premise/deploy.rst:869
 msgid ""
@@ -6988,18 +7229,26 @@ msgid ""
 ":guilabel:`New Master Password` is hashed (or encrypted), once the "
 ":guilabel:`Continue` button is clicked."
 msgstr ""
+"Tiếp theo, nhấp vào :guilabel:`Đặt mật khẩu chính` và nhập mật khẩu tạm thời"
+" đã chọn trước đó vào trường :guilabel:`Mật khẩu chính`. Sau bước này, nhập "
+":guilabel:`Mật khẩu chính mới`. :guilabel:`Mật khẩu chính mới` sẽ được hash "
+"(hoặc mã hóa) sau khi nhấp vào nút :guilabel:`Tiếp tục`."
 
 #: ../../content/administration/on_premise/deploy.rst:874
 msgid ""
 "At this point, the password has been successfully reset, and a hashed "
 "version of the new password now appears in the configuration file."
 msgstr ""
+"Đến đây thì mật khẩu đã được đặt lại thành công và phiên bản hash của mật "
+"khẩu mới sẽ xuất hiện trong tệp cấu hình."
 
 #: ../../content/administration/on_premise/deploy.rst:878
 msgid ""
 "For more information on Odoo database security, see this documentation: "
 ":ref:`db_manager_security`."
 msgstr ""
+"Để biết thêm thông tin về bảo mật cơ sở dữ liệu Odoo, vui lòng tham khảo tài"
+" liệu này: :ref:`db_manager_security`."
 
 #: ../../content/administration/on_premise/deploy.rst:882
 msgid "Supported Browsers"
@@ -7010,6 +7259,8 @@ msgid ""
 "Odoo supports all the major desktop and mobile browsers available on the "
 "market, as long as they are supported by their publishers."
 msgstr ""
+"Odoo hỗ trợ tất cả trình duyệt máy tính để bàn và thiết bị di động phổ biến "
+"hiện có trên thị trường, miễn là chúng được nhà phát hành hỗ trợ."
 
 #: ../../content/administration/on_premise/deploy.rst:887
 msgid "Here are the supported browsers:"
@@ -7036,16 +7287,20 @@ msgid ""
 "Please make sure your browser is up-to-date and still supported by its "
 "publisher before filing a bug report."
 msgstr ""
+"Hãy đảm bảo trình duyệt của bạn là phiên bản mới và vẫn được nhà phát hành "
+"hỗ trợ trước khi gửi báo cáo lỗi."
 
 #: ../../content/administration/on_premise/deploy.rst:899
 msgid "Since Odoo 13.0, ES6 is supported.  Therefore, IE support is dropped."
-msgstr ""
+msgstr "Kể từ Odoo 13.0, ES6 được hỗ trợ. Do đó, hỗ trợ IE bị loại bỏ."
 
 #: ../../content/administration/on_premise/deploy.rst:902
 msgid ""
 "to have multiple Odoo installations use the same PostgreSQL database, or to "
 "provide more computing resources to both software."
 msgstr ""
+"để nhiều cài đặt Odoo sử dụng cùng một cơ sở dữ liệu PostgreSQL hoặc cung "
+"cấp nhiều tài nguyên điện toán hơn cho cả hai phần mềm."
 
 #: ../../content/administration/on_premise/deploy.rst:905
 msgid ""
@@ -7053,6 +7308,9 @@ msgid ""
 "networks, but that is mostly for software which can only be used over UNIX "
 "sockets"
 msgstr ""
+"về mặt kỹ thuật, một công cụ như socat_ có thể được sử dụng để ủy quyền các "
+"UNIX socket trên các mạng, nhưng chủ yếu dành cho phần mềm chỉ có thể được "
+"sử dụng trên các UNIX socket"
 
 #: ../../content/administration/on_premise/deploy.rst:909
 msgid ""
@@ -7063,6 +7321,12 @@ msgid ""
 "certificates are easier to deploy on a controlled environment than over the "
 "internet."
 msgstr ""
+"hoặc chỉ có thể truy cập qua mạng chuyển mạch gói nội bộ, nhưng điều đó đòi "
+"hỏi phải có các công tắc được bảo mật, bảo vệ chống lại `ARP spoofing`_ và "
+"ngăn chặn việc sử dụng WiFi. Ngay cả trên các mạng chuyển mạch gói an toàn, "
+"chúng tôi khuyến khích triển khai qua HTTPS, và các khoản chi phí có thể "
+"phát sinh sẽ giảm bớt vì chứng chỉ \"tự ký\" dễ triển khai hơn trên môi "
+"trường được kiểm soát so với qua internet."
 
 #: ../../content/administration/on_premise/email_gateway.rst:3
 msgid "Email gateway"

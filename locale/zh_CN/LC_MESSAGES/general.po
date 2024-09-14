@@ -11,12 +11,12 @@
 # Rhea Xiao, 2024
 # Raymond Yu <cl_yu@hotmail.com>, 2024
 # Martin Trigaux, 2024
-# Chloe Wang, 2024
 # Jeffery CHEN <jeffery9@gmail.com>, 2024
 # diaojiaolou <124412206@qq.com>, 2024
 # Wil Odoo, 2024
 # Datasource International <Hennessy@datasourcegroup.com>, 2024
 # Emily Jia <eji@odoo.com>, 2024
+# Chloe Wang, 2024
 # 
 #, fuzzy
 msgid ""
@@ -25,7 +25,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-08-21 11:43+0000\n"
 "PO-Revision-Date: 2023-11-08 08:57+0000\n"
-"Last-Translator: Emily Jia <eji@odoo.com>, 2024\n"
+"Last-Translator: Chloe Wang, 2024\n"
 "Language-Team: Chinese (China) (https://app.transifex.com/odoo/teams/41243/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2803,7 +2803,7 @@ msgid ""
 "If choosing to use a **custom domain** instead, **configuring SPF and DKIM "
 "records correctly is essential** to prevent emails from being quarantined as"
 " spam or not being delivered to recipients."
-msgstr ""
+msgstr "如果选择使用 **自定义域**，则必须 **正确配置 SPF 和 DKIM 记录**，以防止电子邮件被当作垃圾邮件隔离或无法投递给收件人。"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:16
 msgid ""
@@ -2813,16 +2813,19 @@ msgid ""
 "it is required to use the SPF and DKIM records specific to that email "
 "service and a custom domain."
 msgstr ""
+"如果使用 :ref:`默认 Odoo 电子邮件服务器从自定义域发送电子邮件<email-outbound-custom-domain-odoo-"
+"server>`，则必须如下所示配置 SPF 和 DKIM 记录。如果使用外发电子邮件服务器，则必须使用该电子邮件服务和自定义域专用的 SPF 和 "
+"DKIM 记录。"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:22
 msgid ""
 "Email service providers apply different rules to incoming emails. An email "
 "may be classified as spam even if it passes the SPF and DKIM checks."
-msgstr ""
+msgstr "电子邮件服务提供商对收到的电子邮件采用不同的规则。即使邮件通过了 SPF 和 DKIM 检查，也可能被归类为垃圾邮件。"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:28
 msgid "SPF (Sender Policy Framework)"
-msgstr ""
+msgstr "SPF（发送方策略框架）"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:30
 msgid ""
@@ -2842,26 +2845,28 @@ msgid ""
 ":guilabel:`General Settings`. If using a custom domain as :guilabel:`Alias "
 "Domain`, it is necessary to configure it to be SPF-compliant."
 msgstr ""
+"在 Odoo 中，**SPF 测试在数据库的 :guilabel:`常规设置` 下的 :guilabel:`别名域` "
+"字段中定义的反弹地址**上执行。如果使用自定义域作为 :guilabel:`别名域`，则必须将其配置为符合 SPF 标准。"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:39
 msgid ""
 "The SPF policy of a domain is set using a TXT record. The way to create or "
 "modify this record depends on the provider hosting the :abbr:`DNS (Domain "
 "Name System)` zone of the domain name."
-msgstr ""
+msgstr "域名的 SPF 策略是通过 TXT 记录设置的。创建或修改此记录的方法取决于托管域名的 :abbr:`DNS（域名系统）` 区域的提供商。"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:42
 msgid ""
 "If the domain name does not yet have an SPF record, create one using the "
 "following input:"
-msgstr ""
+msgstr "如果域名还没有 SPF 记录，请使用以下输入创建一个："
 
 #: ../../content/applications/general/email_communication/email_domain.rst:48
 msgid ""
 "If the domain name **already has an SPF record, the record must be "
 "updated**. Do not create a new one, as a domain must have only one SPF "
 "record."
-msgstr ""
+msgstr "如果域名**已经有 SPF 记录，则必须更新该记录**。请勿创建新记录，因为一个域名只能有一条 SPF 记录。"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:52
 msgid ""
@@ -2881,10 +2886,13 @@ msgid ""
 ":ref:`most common providers <email-domain-providers-documentation>` and "
 "their documentation are listed below."
 msgstr ""
+"使用 `MXToolbox SPF Record Check <https://mxtoolbox.com/spf.aspx>`_ 等工具检查 SPF "
+"记录。创建或修改 SPF 记录的过程取决于托管域名 DNS 区域的提供商。下面列出了 :ref:`最常见的提供商<email-domain-"
+"providers-documentation>` 及其说明文档。"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:63
 msgid "DKIM (DomainKeys Identified Mail)"
-msgstr ""
+msgstr "DKIM（域名密钥识别邮件标准）"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:65
 msgid ""
@@ -2900,18 +2908,20 @@ msgid ""
 "domain name. If the signature and the key contained in the record match, it "
 "proves the message is authentic and has not been altered during transport."
 msgstr ""
+"发送电子邮件时，Odoo 电子邮件服务器会在标题中包含一个唯一的 :abbr:`DKIM（域名密钥识别邮件）` 签名。收件人的服务器会使用数据库域名中的"
+" DKIM 记录解密该签名。如果签名和记录中包含的密钥匹配，则证明邮件是真实的，在传输过程中未被篡改。"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:72
 msgid ""
 "Enabling DKIM is **required** when sending emails **from a custom domain** "
 "using the Odoo email server."
-msgstr ""
+msgstr "使用 Odoo 电子邮件服务器 **从自定义域** 发送电子邮件时，**必须** 启用 DKIM。"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:75
 msgid ""
 "To enable DKIM, add a :abbr:`CNAME (Canonical Name)` record to the "
 ":abbr:`DNS (Domain Name System)` zone of the domain name:"
-msgstr ""
+msgstr "要启用 DKIM，请在域名的 :abbr:`DNS（域名系统）` 区域添加一条 :abbr:`CNAME（规范名称）` 记录："
 
 #: ../../content/applications/general/email_communication/email_domain.rst:83
 msgid ""
@@ -2919,6 +2929,8 @@ msgid ""
 "`odoo._domainkey.company-name.com` whose canonical name is "
 "`odoo._domainkey.odoo.com.`."
 msgstr ""
+"如果域名是 `company-name.com`，请确保创建一个子域`odoo._domainkey.company-"
+"name.com`，其规范名称为`odoo._domainkey.odoo.com.`。"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:86
 msgid ""
@@ -2926,6 +2938,8 @@ msgid ""
 "the DNS zone of the domain name. The :ref:`most common providers <email-"
 "domain-providers-documentation>` and their documentation are listed below."
 msgstr ""
+"创建或修改 CNAME 记录的方法取决于托管域名 DNS 区域的提供商。下面列出了 :ref:`最常见的提供商<email-domain-"
+"providers-documentation>` 及其说明文档。"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:90
 msgid ""
@@ -2934,10 +2948,13 @@ msgid ""
 "DKIM lookup tool, specifying that the selector being tested is `odoo` for "
 "the custom domain `example.com`."
 msgstr ""
+"使用 `MXToolbox DKIM Record Lookup <https://mxtoolbox.com/dkim.aspx>`_ 等工具检查 "
+"DKIM 记录是否有效。在 DKIM 查找工具中输入 `example.com:odoo`，指定正在测试的选择器是自定义域 `example.com` "
+"的 `odoo`。"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:97
 msgid "DMARC (Domain-based Message Authentication, Reporting and Conformance)"
-msgstr ""
+msgstr "DMARC（基于域的消息验证、报告和一致性）"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:99
 msgid ""
@@ -2947,6 +2964,8 @@ msgid ""
 "contained in the DMARC record of a domain name tell the destination server "
 "what to do with an incoming email that fails the SPF and/or DKIM check."
 msgstr ""
+"DMARC（基于域的消息验证、报告和一致性）记录是一个统一了 :abbr:`SPF（发件人政策框架）` 和 :abbr:`DKIM "
+"（域名密钥识别邮件）` 的协议。域名 DMARC 记录中包含的指令告诉目标服务器如何处理未通过 SPF 和/或 DKIM 检查的传入电子邮件。"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:105
 msgid ""
@@ -2955,10 +2974,12 @@ msgid ""
 " creating a DMARC record. Refer to a resource like `DMARC.org "
 "<https://dmarc.org/>`_ to set the DMARC record."
 msgstr ""
+"本文档的目的是帮助 **理解 DMARC 对电子邮件可送达性的影响**，而不是提供创建 DMARC 记录的精确说明。请参考 `DMARC.org "
+"<https://dmarc.org/>`_ 等资源来设置 DMARC 记录。"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:109
 msgid "There are three DMARC policies:"
-msgstr ""
+msgstr "有三种 DMARC 策略："
 
 #: ../../content/applications/general/email_communication/email_domain.rst:111
 msgid "`p=none`"
@@ -3122,6 +3143,9 @@ msgid ""
 "name.odoo.com`. The reply will be posted in the right chatter, according to "
 "the *message-id* header."
 msgstr ""
+"在上面显示的示例中，向 `info@company-name.odoo.com` "
+"发送电子邮件，将创建一个新机会或自动分配给相应销售团队的新线索。如果从现有机会的聊天室发送电子邮件，*回复至* 将是 `info@company-"
+"name.odoo.com`。回复将根据 *message-id* 标头发布到正确的聊天室。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:39
 msgid "Catchall"
@@ -3134,6 +3158,8 @@ msgid ""
 "catchall alias. A reply sent to the catchall is posted to the right chatter "
 "thanks to the *message-id* header."
 msgstr ""
+"如果应用程序没有别名，则会使用通用的备用别名： catchall。从沟通栏发送的电子邮件的回复地址会设置为这个 catchall 别名。发送到 "
+"catchall 的回复会根据 *message-id* 头信息发布到正确的沟通栏。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:45
 msgid ""
@@ -3141,18 +3167,20 @@ msgid ""
 "mode` and go to :menuselection:`Settings --> Technical --> Emails: Alias "
 "Domains` to access the configuration."
 msgstr ""
+"默认情况下，将使用本地部分 *catchall*。启用 :ref:`developer-mode` 并进入 :menuselection:`设置 -->"
+" 技术 --> 电子邮件：别名域` 访问配置。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:48
 msgid ""
 "An email to the catchall always needs to be a reply to a previous email sent"
 " from the database. If an email is sent directly to the catchall, the sender"
 " will receive the following message:"
-msgstr ""
+msgstr "发送到主机的电子邮件必须是对数据库中之前发送的电子邮件的回复。如果直接发送电子邮件到主机，发件人将收到以下信息："
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst-1
 msgid ""
 "Bounce email from \"MAILER-DEAMON\" explaining how to contact the database."
-msgstr ""
+msgstr "来自 “MAILER-DEAMON” 的退件邮件，说明如何联系数据库。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:55
 msgid ""
@@ -3164,6 +3192,9 @@ msgid ""
 "options unless specific needs dictate, as it will affect all replies to "
 "previously sent emails."
 msgstr ""
+"上面截图中显示的电子邮件地址 `info@company-name.com` 是公司设置的电子邮件地址。进入公司简介的开发者模式后，其他配置选项（如 "
+"catchall 和 "
+"bounce）将变得可读。可以通过点击电子邮件域的内部链接进行修改。除非有特殊需要，否则一般不建议修改这些选项，因为这将影响对以前发送的电子邮件的所有回复。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:63
 msgid ""
@@ -3171,6 +3202,8 @@ msgid ""
 "replies to an email coming from the CRM app, the *reply-to* is "
 "`info@company-name.odoo.com`."
 msgstr ""
+"可以在客户关系管理应用程序中，为销售团队配置别名。当客户回复来自客户关系管理应用程序的电子邮件时，*回复至* 为`info@company-"
+"name.odoo.com`。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:66
 msgid ""
@@ -3178,6 +3211,7 @@ msgid ""
 "`catchall@company-name.odoo.com` because there is no alias on the contact "
 "model."
 msgstr ""
+"从联系人应用程序发送电子邮件时，由于联系人模型上没有别名，所以回复地址是 `catchall@company-name.odoo.com`。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:70
 msgid ""
@@ -3186,6 +3220,7 @@ msgid ""
 " will still have the previous local-part values. This could lead to replies "
 "not being correctly received in the database."
 msgstr ""
+"建议保持 catchall 和退回的本地部分不变。如果修改了该值，以前从数据库发送的邮件仍将使用以前的本地部分值。这可能导致数据库无法正确接收回复。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:77
 msgid "Bounce"
@@ -3198,6 +3233,8 @@ msgid ""
 "path* is used when emails cannot be delivered to the recipient and an error "
 "is returned to the sender."
 msgstr ""
+"与 catchall 别名用于创建回复地址的方式相同，退回别名也用于创建电子邮件的 *返回路径*。当邮件无法送达收件人并向发件人返回错误信息时，就会使用"
+" *返回路径*。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:83
 msgid ""
@@ -3205,6 +3242,8 @@ msgid ""
 "go to :menuselection:`Settings --> Technical --> Emails: Alias Domains` to "
 "access the configuration."
 msgstr ""
+"默认情况下将使用 *bounce* 名称。启用 :ref:`developer-mode` 并进入 :menuselection:`设置 --> 技术 "
+"--> 电子邮件： 别名域` 访问配置。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:87
 msgid ""
@@ -3212,6 +3251,8 @@ msgid ""
 "path address is forced to the value `bounce@company-name.odoo.com` "
 "independently of the value set as bounce alias."
 msgstr ""
+"在 Odoo 云端版上，当使用默认的外发邮件服务器时，返回路径地址会被强制设置为 `bounce@company-"
+"name.odoo.com`，与设置为退回别名的值无关。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:90
 msgid ""
@@ -3443,7 +3484,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:212
 msgid "`info@company-name.com` → `info@company-name.odoo.com`"
-msgstr ""
+msgstr "`info@company-name.com` → `info@company-name.odoo.com`"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:215
 msgid ""
@@ -3451,6 +3492,7 @@ msgid ""
 "target email address. This procedure is an issue for catchall and bounce "
 "since they are not used to create records."
 msgstr ""
+"有些提供商要求通过向目标电子邮件地址发送链接来验证重定向。由于 catchall 和 bounce 不用于创建记录，因此该程序对它们来说是个问题。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:218
 msgid ""
@@ -3459,12 +3501,14 @@ msgid ""
 "`catchall` to `temp-catchall`. This will allow to use `catchall` as the "
 "local-part of another alias."
 msgstr ""
+"修改邮件别名域的 catchall 值。必须启用 :ref:`developer-mode` 才能访问此菜单。例如，可以将 `catchall` 改为 "
+"`temp-catchall`。这将允许使用 `catchall` 作为另一个别名的本地部分。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:221
 msgid ""
 "Open an app that uses an alias. For example, CRM contains aliases for each "
 "sales team. Set `catchall` as the local-part of the alias of a sales team."
-msgstr ""
+msgstr "打开使用别名的应用程序。例如，CRM 包含每个销售团队的别名。将 `catchall` 设置为销售团队别名的本地部分。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:223
 msgid ""
@@ -3691,36 +3735,41 @@ msgid ""
 "domain can be utilized when sending emails either with Odoo’s email servers "
 "or an external one."
 msgstr ""
+"数据库可配置为使用自定义域，在这种情况下，所有默认电子邮件地址都将使用自定义域建立。如果自定义域为 `company-name.com`，则发件人地址为"
+" `notifications@company-name.com`，*回复至* 地址为 `catchall@company-name.com`，*弹回*"
+" 地址为 `bounce@company-name.com`。在使用 Odoo 电子邮件服务器或外部服务器发送电子邮件时，可使用自定义域。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:42
 msgid ""
 "This section assumes ownership of a custom domain. If not, a custom domain "
 "must be purchased from a domain registrar such as GoDaddy, Namecheap, or any"
 " alternative provider."
-msgstr ""
+msgstr "本节假定您拥有自定义域名。如果没有，则必须从 GoDaddy、Namecheap 等域名注册商或任何其他供应商处购买自定义域名。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:48
 msgid "Using a custom domain with Odoo’s email server"
-msgstr ""
+msgstr "在 Odoo 电子邮件服务器上使用自定义域名"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:50
 msgid ""
 "On **Odoo Online** or **Odoo.sh**, some configurations are mandatory in the "
 "custom domain's DNS to ensure good deliverability."
-msgstr ""
+msgstr "在 **Odoo 云端版** 或 **Odoo.sh** 上，自定义域名的 DNS 中必须进行一些配置，以确保发送顺利。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:54
 msgid ""
 "Most of the configuration will be done on the domain provider’s side, and it"
 " might require some configuration on the mail server itself. **Some "
 "technical knowledge is required.**"
-msgstr ""
+msgstr "大部分配置将在域名提供商方面完成，可能需要对邮件服务器本身进行一些配置。**需要一定的技术知识。**"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:57
 msgid ""
 "The first step is to configure the :ref:`SPF <email-domain-spf>` and "
 ":ref:`DKIM <email-domain-dkim>` to be compliant with Odoo’s mail server."
 msgstr ""
+"第一步是配置 :ref:`SPF<email-domain-spf>` 和 :ref:`DKIM<email-domain-dkim>` 与 Odoo "
+"的邮件服务器兼容。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:60
 msgid ""
@@ -3728,6 +3777,7 @@ msgid ""
 " the company, open the :guilabel:`Settings`, and add the custom domain under"
 " the :guilabel:`Alias Domain` field."
 msgstr ""
+"接下来，必须将自定义域设置为公司的别名域。选择公司，打开 :guilabel:`设置`，并在 :guilabel:`别名域` 字段下添加自定义域。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:63
 msgid ""
@@ -3736,6 +3786,8 @@ msgid ""
 "domain if needed. Enable the :ref:`developer-mode` mode to modify the "
 "default aliases if desired:"
 msgstr ""
+"添加别名域后，点击 :icon:`oi-arrow-right`（:guilabel:`internal "
+"link`）图标，根据需要为自定义域分配更多公司。启用 :ref:`developer-mode` 模式，以便根据需要修改默认别名："
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:67
 msgid ""
@@ -3743,12 +3795,14 @@ msgid ""
 "populate the :ref:`red envelope <email-issues-outgoing-delivery-failure>` on"
 " the corresponding message."
 msgstr ""
+":guilabel:`弹回别名`：用于捕捉发送错误并在相应邮件上填充 :ref:`红色信封<email-issues-outgoing-"
+"delivery-failure>` 的邮箱。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:69
 msgid ""
 ":guilabel:`Catchall Alias`: the default mailbox used to centralize all "
 "replies."
-msgstr ""
+msgstr "guilabel:`Catchall 别名`：用于集中处理所有回复的默认邮箱。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:70
 msgid ":guilabel:`Default From Alias`: the default sender address."
@@ -3887,7 +3941,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:140
 msgid "Personalized mail servers"
-msgstr ""
+msgstr "个性化邮件服务器"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:142
 msgid ""
@@ -3897,12 +3951,16 @@ msgid ""
 "emails*, including the sending of batches of invoices or quotations, will be"
 " managed by the Marketing Automation or Email Marketing application."
 msgstr ""
+"可在 Odoo 中使用单独的电子邮件服务器发送交易电子邮件和群发邮件。这样做意味着发送给客户的日常电子邮件、报价单或发票将作为 *交易电子邮件* "
+"处理。*群发邮件*，包括批量发送发票或报价单，将由营销自动化或电子邮件营销应用程序管理。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:148
 msgid ""
 "You can use services like Gmail, Amazon SES, or Brevo for transactional "
 "emails, and services like Mailgun, Sendgrid, or Mailjet for mass mailings."
 msgstr ""
+"您可以使用 Gmail、Amazon SES 或 Brevo 等服务发送事务性电子邮件，也可以使用 Mailgun、Sendgrid 或 Mailjet"
+" 等服务群发电子邮件。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:151
 msgid ""
@@ -3913,6 +3971,9 @@ msgid ""
 "transactional server (e.g., `1`) over the mass mailings server (e.g., `2`) "
 "so transactional emails are given priority."
 msgstr ""
+"首先，激活 :ref:`developer-mode` 并进入 :menuselection:`设置 --> 技术 --> "
+"电子邮件：外发邮件服务器`。在此添加两个外发邮件服务器记录，一个用于事务邮件服务器，另一个用于邮件群发服务器。输入较低的 :guilabel:`优先` "
+"值（例如，`1`），使事务性邮件服务器优先于邮件群发服务器（例如，`2`）。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst-1
 msgid "Example of split between transaction and mass mailing mail servers."
@@ -4023,7 +4084,7 @@ msgstr ""
 msgid ""
 "Adding a mail server using the Odoo's mail server with the CLI "
 "authentication."
-msgstr ""
+msgstr "通过 CLI 身份验证使用 Odoo 的邮件服务器添加邮件服务器。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:222
 msgid ""
@@ -4033,32 +4094,34 @@ msgid ""
 "there is no FROM filtering, the email will go out using the notification "
 "address."
 msgstr ""
+"如果外发邮件服务器与 Odoo 的默认服务器（CLI）同时使用，则外发邮件服务器的 FROM 筛选器必须包含自定义域，而 CLI 的 FROM "
+"筛选器必须包含 Odoo 的子域。如果没有 FROM 筛选，电子邮件将使用通知地址发送。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst-1
 msgid ""
 "Splitting of Odoo mail server for transactional emails and Mail server for "
 "Mass mailing."
-msgstr ""
+msgstr "将 Odoo 邮件服务器分为事务邮件服务器和群发邮件服务器。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:231
 msgid ""
 "On Odoo Online, the command line interface is equivalent to the default Odoo"
 " mail server, using the same limit as if there was no outgoing mail server "
 "in place."
-msgstr ""
+msgstr "在 Odoo 云端版上，命令行界面相当于默认的 Odoo 邮件服务器，使用的限制与没有外发邮件服务器时相同。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:235
 msgid ""
 "On Odoo Online, the page also shows your daily email usage and your daily "
 "limit. On Odoo.sh, you need to check on the monitor page the number of "
 "outgoing emails that were sent."
-msgstr ""
+msgstr "在 Odoo 云端版上，该页面还会显示您的每日电子邮件使用量和每日限额。在 Odoo.sh，您需要在监控页面上查看已发送的外发邮件数量。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:239
 msgid ""
 "On Odoo.sh, to use the command-line interface, an outgoing mail server can "
 "be configured on the configuration file."
-msgstr ""
+msgstr "在 Odoo.sh 上，要使用命令行界面，可在配置文件中配置外发邮件服务器。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:243
 msgid ""
@@ -4067,10 +4130,12 @@ msgid ""
 "failure-messages-limit>` depends on the database type and the applications "
 "used."
 msgstr ""
+"Odoo 的邮件服务器适用于事务性电子邮件和小规模营销活动。:ref:`每日限额<email-issues-outgoing-delivery-"
+"failure-messages-limit>` 取决于数据库类型和使用的应用程序。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:250
 msgid "Using a custom domain with an external email server"
-msgstr ""
+msgstr "使用自定义域和外部电子邮件服务器"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:252
 msgid ""
@@ -4081,6 +4146,9 @@ msgid ""
 "records (SPF, DKIM, and DMARC). A list of the :ref:`most common providers is"
 " available <email-domain-providers-documentation>`."
 msgstr ""
+"与 :ref:`前一章<email-outbound-different-servers-external-odoo>` "
+"类似，可能需要进行适当配置，以确保允许外部电子邮件服务器使用您的自定义域发送电子邮件。请参阅提供商的说明文档，正确设置相关记录（SPF、DKIM 和 "
+"DMARC）。可查看 :ref:`最常见提供商的列表<email-domain-providers-documentation>`。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:259
 msgid ""
@@ -4091,6 +4159,9 @@ msgid ""
 "of Odoo when using a custom email server. Odoo does not allow the "
 "configuration of Odoo's subdomain."
 msgstr ""
+"使用自己的域名时，需要进行 DNS 配置。如果使用外部外发邮件服务器，按照 :doc:`Odoo DNS "
+"配置我们的邮件服务器文档<email_domain>` 中的描述配置记录**将无法达到预期效果**，因为在使用自定义邮件服务器时，它与 Odoo "
+"无关。Odoo 不允许配置 Odoo 的子域。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:268
 msgid "Port restriction"
@@ -4100,7 +4171,7 @@ msgstr "端口限制"
 msgid ""
 "Port 25 is blocked for security reasons on Odoo Online and Odoo.sh. Try "
 "using port 465, 587, or 2525 instead."
-msgstr ""
+msgstr "出于安全原因，Odoo 云端版和 Odoo.sh 屏蔽了端口 25。请尝试使用端口 465、587 或 2525。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:276
 msgid "Alias domain"
@@ -4112,6 +4183,8 @@ msgid ""
 "Odoo’s subdomain (e.g., `company-name.odoo.com`), but each company may have "
 "its own custom email domain."
 msgstr ""
+"catchall 是针对特定公司的。默认情况下，所有公司共享 Odoo 子域（例如，`company-"
+"name.odoo.com`），但每个公司都可以有自己的自定义电子邮件域。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:281
 msgid ""
@@ -4119,6 +4192,8 @@ msgid ""
 "available by going to :menuselection:`Settings --> Technical --> Email: "
 "Alias Domains`."
 msgstr ""
+"激活 :ref:`developer-mode` 时，可通过 :menuselection:`设置 --> 技术 --> 电子邮件：别名域` "
+"访问别名域选项。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:285
 msgid ""
@@ -4126,6 +4201,8 @@ msgid ""
 "the aliases (bounce, catchall, default from) is changed, all previous emails"
 " that are not properly redirected to the new aliases will be lost."
 msgstr ""
+"对别名域的任何修改都必须非常谨慎。如果更改了其中一个别名（bounce、catchall、default "
+"from），则之前所有未正确重定向到新别名的邮件都将丢失。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:289
 msgid ""
@@ -4134,24 +4211,26 @@ msgid ""
 "Configure it to determine the `FROM` header of your emails. If a full email "
 "address is used, all outgoing emails will be overwritten with this address."
 msgstr ""
+"在 :guilabel:`默认发件人别名` 字段中，可以填写电子邮件地址的本地部分（默认为 `通知`）或完整的电子邮件地址。配置它可确定电子邮件的 "
+"`FROM` 标头。如果使用完整的电子邮件地址，所有发出的电子邮件都将覆盖该地址。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:297
 msgid "Notification system"
-msgstr ""
+msgstr "通知系统"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:299
 msgid ""
 "When an email is sent from the chatter, customers can reply directly to it. "
 "If a customer replies directly to an email, the answer is logged in the same"
 " chatter, thus functioning as a message thread related to the record."
-msgstr ""
+msgstr "从沟通栏发送电子邮件时，客户可以直接回复。如果客户直接回复了电子邮件，回复会记录在同一沟通栏中，从而成为与记录相关的信息串。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:303
 msgid ""
 "Upon receiving the reply, Odoo then uses the subscribed followers (based on "
 "the subscribed subtypes) to send them a notification by email, or in the "
 "Odoo inbox, depending on the user’s preferences."
-msgstr ""
+msgstr "收到回复后，Odoo 会根据用户的偏好，使用订阅的关注者（基于订阅子类型）通过电子邮件或在 Odoo 收件箱中向他们发送通知。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:307
 msgid ""
@@ -4160,6 +4239,8 @@ msgid ""
 "default behavior is to redistribute the email's content to all other "
 "followers within the thread."
 msgstr ""
+"如果电子邮件地址为 `“Mary” <mary@customer.example.com>` 的客户直接回复来自 Odoo 数据库的电子邮件，Odoo "
+"的默认行为是将电子邮件内容重新分配给信息串内的所有其他关注者。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:311
 msgid ""
@@ -4170,6 +4251,9 @@ msgid ""
 "overridden with the value `notifications@company-name.odoo.com` instead of "
 "`mary@customer.example.com`."
 msgstr ""
+"由于玛丽的域不属于别名域，Odoo 会覆盖电子邮件地址，并使用通知电子邮件地址来通知追随者。这种覆盖取决于数据库中的配置。默认情况下，在 Odoo "
+"云端版和 Odoo.sh， `FROM` 电子邮件地址将被覆盖为 `notifications@company-name.odoo.com`，而不是 "
+"`mary@customer.example.com`。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:317
 msgid ""
@@ -4235,6 +4319,7 @@ msgid ""
 "content of the same email (when sent to multiple recipients) if the content "
 "is already present in the chatter."
 msgstr ""
+"默认情况下，一旦通知或事务邮件（报价、发票、给联系人的直接信息）发送成功，邮件对象就会被删除。电子邮件内容会保存在相关记录的沟通栏记录中。如果同一邮件的内容已存在于聊天记录中，则可避免因同一邮件内容的多个副本（发送给多个收件人时）而造成数据库混乱。"
 
 #: ../../content/applications/general/email_communication/faq.rst:25
 msgid ""
@@ -4600,6 +4685,8 @@ msgid ""
 "To edit crons, enable the :ref:`developer mode <developer-mode>` and go to "
 ":menuselection:`Settings --> Technical --> Automation: Scheduled Actions`."
 msgstr ""
+"要编辑 crons，请启用 :ref:`开发者模式<developer-mode>` 并转到 :menuselection:`设置 --> 技术 -->"
+" 自动化：计划的操作`。"
 
 #: ../../content/applications/general/email_communication/faq.rst:253
 msgid ""
@@ -4607,16 +4694,18 @@ msgid ""
 " frequent technical questions "
 "<../../../administration/odoo_sh/advanced/frequent_technical_questions>`."
 msgstr ""
+"有关使用 Odoo.sh 时 crons 的更多信息，请查阅 :doc:`Odoo.sh 常见技术问题 "
+"<.../../../administration/odoo_sh/advanced/frequent_technical_questions>` 。"
 
 #: ../../content/applications/general/email_communication/faq.rst:259
 msgid "Email Marketing campaigns stuck in the queue"
-msgstr ""
+msgstr "电子邮件营销活动卡在队列中"
 
 #: ../../content/applications/general/email_communication/faq.rst:261
 msgid ""
 "If multiple Email Marketing campaigns are put in the queue, they are "
 "processed in chronological order based on their creation date."
-msgstr ""
+msgstr "如果多个电子邮件营销活动被放入队列，则会根据创建日期按时间顺序进行处理。"
 
 #: ../../content/applications/general/email_communication/faq.rst:265
 msgid ""
@@ -4719,7 +4808,7 @@ msgstr ""
 msgid ""
 "Here is a list of helpful information to include when reaching out to `Odoo "
 "Support <https://www.odoo.com/help>`_:"
-msgstr ""
+msgstr "以下是联系 `Odoo 支持 <https://www.odoo.com/help>`_ 时应包含的有用信息列表："
 
 #: ../../content/applications/general/email_communication/faq.rst:335
 msgid ""
@@ -7682,7 +7771,7 @@ msgstr ""
 
 #: ../../content/applications/general/iot/config/ssh_connect.rst:31
 msgid "Click :guilabel:`Generate password`."
-msgstr ""
+msgstr "点击 :guilabel:`生成密码`。"
 
 #: ../../content/applications/general/iot/config/ssh_connect.rst:34
 msgid ""
@@ -7690,7 +7779,7 @@ msgid ""
 "pop-up window, the information **must** be recorded immediately. Once this "
 "window is closed, there is no current method for looking up this "
 "information."
-msgstr ""
+msgstr "从 :guilabel:`远程调试` 弹出窗口生成密码后，**必须** 立即记录信息。该窗口关闭后，目前没有任何方法可以查询该信息。"
 
 #: ../../content/applications/general/iot/config/ssh_connect.rst:38
 msgid ""
@@ -9814,6 +9903,7 @@ msgstr ""
 msgid ""
 ":doc:`../../../sales/point_of_sale/payment_methods/terminals/worldline`"
 msgstr ""
+":doc:`../../../sales/point_of_sale/payment_methods/terminals/worldline`"
 
 #: ../../content/applications/general/iot/config/windows_iot.rst:215
 msgid ""
@@ -10601,7 +10691,7 @@ msgstr ""
 
 #: ../../content/applications/general/iot/devices/printer.rst:110
 msgid "Clear device printer cache"
-msgstr ""
+msgstr "清除设备打印机缓存"
 
 #: ../../content/applications/general/iot/devices/printer.rst:112
 msgid ""
@@ -10611,6 +10701,8 @@ msgid ""
 "It also means different users can have a report automatically printed from "
 "different printers, based on their preferences."
 msgstr ""
+"连接打印机打印报告后，设置会保存在浏览器的缓存中。这意味着用户可以根据访问 Odoo "
+"的设备，在缓存中为不同的报告保存不同的设备。这也意味着不同的用户可以根据自己的偏好，让不同的打印机自动打印报告。"
 
 #: ../../content/applications/general/iot/devices/printer.rst:117
 msgid ""
@@ -10619,6 +10711,8 @@ msgid ""
 " a printer on the current device. Click the :guilabel:`Unlink` button next "
 "to each report to remove the link."
 msgstr ""
+"要解除报告与打印机的链接，请导航至 :menuselection:`物联网应用程序 --> "
+"清除所选设备`。这将生成与当前设备上的打印机链接的报告列表。点击每个报告旁边的 :guilabel:`取消链接` 按钮以移除链接。"
 
 #: ../../content/applications/general/iot/devices/printer.rst:122
 msgid ""
@@ -10627,10 +10721,12 @@ msgid ""
 "<iot/link-printer>` on the device, under the :guilabel:`Printer Reports` "
 "tab."
 msgstr ""
+"此步骤 **仅** 防止报告从当前浏览器自动打印到列出的打印机。报告仍在设备上的 :ref:`已链接 <iot/link-printer>` 页面的 "
+":guilabel:`打印机报告` 标签下。"
 
 #: ../../content/applications/general/iot/devices/printer.rst-1
 msgid "A list of reports currently linked to a printer in the IoT app."
-msgstr ""
+msgstr "物联网应用程序中当前与打印机链接的报告列表。"
 
 #: ../../content/applications/general/iot/devices/printer.rst:131
 msgid ""
