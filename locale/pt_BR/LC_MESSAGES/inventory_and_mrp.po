@@ -12,8 +12,8 @@
 # a75f12d3d37ea5bf159c4b3e85eb30e7_0fa6927, 2023
 # braydon ehnes, 2024
 # Luis Felipe Miléo <mileo@kmee.com.br>, 2024
-# Maitê Dietze, 2024
 # Wil Odoo, 2024
+# Maitê Dietze, 2024
 # 
 #, fuzzy
 msgid ""
@@ -22,7 +22,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-08-21 07:41+0000\n"
 "PO-Revision-Date: 2022-10-04 12:53+0000\n"
-"Last-Translator: Wil Odoo, 2024\n"
+"Last-Translator: Maitê Dietze, 2024\n"
 "Language-Team: Portuguese (Brazil) (https://app.transifex.com/odoo/teams/41243/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -457,12 +457,21 @@ msgid ""
 "identify the barcode and can be customized to ensure Odoo correctly "
 "interprets all barcodes for the business."
 msgstr ""
+"For instance, at a :doc:`Point of Sale <../../../sales/point_of_sale>` "
+"station, product weight barcodes in the European Article Number (EAN) "
+"format, which begin with `21` and have five digits specifying the weight, "
+"are used to weigh products and generate a barcode depicting the weight and "
+"price. The `21` and five-digit weight is the barcode pattern used to "
+"identify the barcode and can be customized to ensure Odoo correctly "
+"interprets all barcodes for the business."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:21
 msgid ""
 "Barcodes are also commonly used with Odoo's **Inventory** and **Barcode** "
 "apps."
 msgstr ""
+"Barcodes are also commonly used with Odoo's **Inventory** and **Barcode** "
+"apps."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:23
 msgid ""
@@ -471,6 +480,10 @@ msgid ""
 ":ref:`default rules and patterns in Odoo <barcode/operations/default-"
 "nomenclature-list>`, which use |UPC| and |EAN| encoding."
 msgstr ""
+"Odoo **Barcode** supports |EAN|, Universal Product Code (UPC), and :doc:`GS1"
+" <gs1_nomenclature>` formats. This document exclusively focuses on "
+":ref:`default rules and patterns in Odoo <barcode/operations/default-"
+"nomenclature-list>`, which use |UPC| and |EAN| encoding."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:29
 msgid ""
@@ -478,6 +491,9 @@ msgid ""
 " entire supply chain, they **must** be `purchased from GS1 "
 "<https://www.gs1.org/standards/get-barcodes>`_."
 msgstr ""
+"To use |UPC| and |EAN| barcodes for uniquely identifying products across the"
+" entire supply chain, they **must** be `purchased from GS1 "
+"<https://www.gs1.org/standards/get-barcodes>`_."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:32
 msgid ""
@@ -487,6 +503,11 @@ msgid ""
 "<barcode/operations/product-weight>` where the barcode is written in the "
 "|EAN| format."
 msgstr ""
+"In Odoo, custom barcode patterns can be defined to recognize barcodes "
+"specific to the company. Barcodes do not need to be purchased if used only "
+"within the company, such as in the :ref:`example "
+"<barcode/operations/product-weight>` where the barcode is written in the "
+"|EAN| format."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:38
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:52
@@ -531,12 +552,18 @@ msgid ""
 " :guilabel:`Barcode Scanner` checkbox. Doing so installs the **Barcode** app"
 " in the database."
 msgstr ""
+"To use default nomenclature, navigate to :menuselection:`Inventory app --> "
+"Configuration --> Settings`. Under the :guilabel:`Barcode` section, tick the"
+" :guilabel:`Barcode Scanner` checkbox. Doing so installs the **Barcode** app"
+" in the database."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:44
 msgid ""
 "Next, in the :guilabel:`Barcode Nomenclature` field, ensure "
 ":guilabel:`Default Nomenclature` is selected. Then, click :guilabel:`Save`."
 msgstr ""
+"Next, in the :guilabel:`Barcode Nomenclature` field, ensure "
+":guilabel:`Default Nomenclature` is selected. Then, click :guilabel:`Save`."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst-1
 msgid "Enabled barcode setting with Default Nomenclature selected."
@@ -552,10 +579,15 @@ msgid ""
 "nomenclature-list>`, are available for use. And, by default, Odoo "
 "automatically handles |UPC|/|EAN| conversion."
 msgstr ""
+"With the **Barcode** module installed, and the :guilabel:`Default "
+"Nomenclature` selected, the barcode actions using |UPC| and |EAN|, detailed "
+"in the :ref:`default nomenclature list <barcode/operations/default-"
+"nomenclature-list>`, are available for use. And, by default, Odoo "
+"automatically handles |UPC|/|EAN| conversion."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:59
 msgid "Example: product weight barcode"
-msgstr ""
+msgstr "Example: product weight barcode"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:61
 msgid ""
@@ -565,10 +597,15 @@ msgid ""
 "automatically print barcodes, and calculate the price using the weight of "
 "the item."
 msgstr ""
+"To better understand how barcode nomenclature is used to identify products "
+"in Odoo, this example where product weight barcodes in |EAN| format are used"
+" to allow a :doc:`Point of Sale <../../../sales/point_of_sale>` business to "
+"automatically print barcodes, and calculate the price using the weight of "
+"the item."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:66
 msgid "To set up barcodes for weighted products, the following rule is used:"
-msgstr ""
+msgstr "To set up barcodes for weighted products, the following rule is used:"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:71
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:186
@@ -594,11 +631,11 @@ msgstr "Campo no Odoo"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:74
 msgid "Weighted Barcodes 3 Decimals"
-msgstr ""
+msgstr "Weighted Barcodes 3 Decimals"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:75
 msgid "(21)....{NNDDD}"
-msgstr ""
+msgstr "(21)....{NNDDD}"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:76
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:177
@@ -612,16 +649,20 @@ msgid ""
 "To better understand the barcode pattern for weighted products, consider the"
 " barcode, `2112345000008`:"
 msgstr ""
+"To better understand the barcode pattern for weighted products, consider the"
+" barcode, `2112345000008`:"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:82
 msgid "`21`: code that identifies this a barcode for weighted products."
-msgstr ""
+msgstr "`21`: code that identifies this a barcode for weighted products."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:83
 msgid ""
 "`12345`: five digits (denoted by `.....` in the table above) that identify "
 "the product."
 msgstr ""
+"`12345`: five digits (denoted by `.....` in the table above) that identify "
+"the product."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:84
 msgid ""
@@ -631,16 +672,23 @@ msgid ""
 " digits are decimal values. For example, \"13.5 grams\" in the `{NNDDD}` "
 "format is `13500`."
 msgstr ""
+"`00000`: five digits (denoted by `{NNDDD}` in the table) representing the "
+"weight of the product. On the product form, the five weight values **must** "
+"be `00000`. The first two digits are whole number values, and the last three"
+" digits are decimal values. For example, \"13.5 grams\" in the `{NNDDD}` "
+"format is `13500`."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:88
 msgid ""
 "`8`: `check digit <https://www.gs1.org/services/check-digit-calculator>`_ "
 "for `211234500000`."
 msgstr ""
+"`8`: `check digit <https://www.gs1.org/services/check-digit-calculator>`_ "
+"for `211234500000`."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:90
 msgid "Together, these components make up a 13-character |EAN| - 13 barcode."
-msgstr ""
+msgstr "Together, these components make up a 13-character |EAN| - 13 barcode."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:92
 msgid ""
@@ -651,10 +699,16 @@ msgid ""
 "desired product). In addition, the :guilabel:`Unit of Measure` is set to "
 ":guilabel:`kg`."
 msgstr ""
+"To configure the product barcode for `Pasta Bolognese`, the |EAN| barcode "
+"for weighted products, `2112345000008`, is entered in the "
+":guilabel:`Barcode` field on the product form (accessible by going to "
+":menuselection:`Inventory app --> Products --> Products`, and selecting the "
+"desired product). In addition, the :guilabel:`Unit of Measure` is set to "
+":guilabel:`kg`."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst-1
 msgid "Barcode field on the product form."
-msgstr ""
+msgstr "Barcode field on the product form."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:101
 msgid ""
@@ -663,10 +717,14 @@ msgid ""
 "`211234501500`, which has a check digit of `2`. The new barcode is "
 "`2112345015002`."
 msgstr ""
+"Next, a customer's bowl of pasta is weighed to be `1.5` kilograms. This "
+"generates a new barcode for the pasta, according to the weight: "
+"`211234501500`, which has a check digit of `2`. The new barcode is "
+"`2112345015002`."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst-1
 msgid "Generated barcode that includes a weight of 1.5 kg."
-msgstr ""
+msgstr "Generated barcode that includes a weight of 1.5 kg."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:109
 msgid ""
@@ -677,10 +735,16 @@ msgid ""
 "`2112345015002`, and if the intended product appears, the barcode setup is "
 "correct."
 msgstr ""
+"Ensure the products scan properly, by navigating to the "
+":menuselection:`Barcode app --> Operations`. Next, click any operation type,"
+" such as :guilabel:`Receipts`. Then, click the :guilabel:`New` button to "
+"create a draft stock move. Scan the product weight barcode, such as "
+"`2112345015002`, and if the intended product appears, the barcode setup is "
+"correct."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst-1
 msgid "Show successfully scanned barcode."
-msgstr ""
+msgstr "Show successfully scanned barcode."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:119
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:96
@@ -693,6 +757,9 @@ msgid ""
 "in Odoo's default list, since barcodes cannot be read successfully if there "
 "are unknown fields."
 msgstr ""
+"Adding new rules is necessary for |UPC| and |EAN| formats that are **not** "
+"in Odoo's default list, since barcodes cannot be read successfully if there "
+"are unknown fields."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:125
 msgid ""
@@ -700,6 +767,9 @@ msgid ""
 "information from these rules. `Custom development "
 "<https://www.odoo.com/appointment/132>`_ is required for this functionality."
 msgstr ""
+"While new rules can be created, Odoo fields do **not** auto-populate with "
+"information from these rules. `Custom development "
+"<https://www.odoo.com/appointment/132>`_ is required for this functionality."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:129
 msgid ""
@@ -707,10 +777,13 @@ msgid ""
 " navigate to :menuselection:`Inventory app --> Configuration --> Barcode "
 "Nomenclatures`, and select :guilabel:`Default Nomenclature`."
 msgstr ""
+"To create a rule, first enable :ref:`developer mode <developer-mode>`. Then,"
+" navigate to :menuselection:`Inventory app --> Configuration --> Barcode "
+"Nomenclatures`, and select :guilabel:`Default Nomenclature`."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:133
 msgid "On this page, configure the following optional fields:"
-msgstr ""
+msgstr "On this page, configure the following optional fields:"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:135
 msgid ""
@@ -719,6 +792,10 @@ msgid ""
 "Options include :guilabel:`Always` (the default option), :guilabel:`Never`, "
 ":guilabel:`EAN-13 to UPC-A`, and :guilabel:`UPC-A to EAN-13`."
 msgstr ""
+":guilabel:`UPC/EAN Conversion`: determines if a |UPC|/|EAN| barcode should "
+"be automatically converted when matching a rule with another encoding. "
+"Options include :guilabel:`Always` (the default option), :guilabel:`Never`, "
+":guilabel:`EAN-13 to UPC-A`, and :guilabel:`UPC-A to EAN-13`."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:138
 msgid ""
@@ -726,6 +803,9 @@ msgid ""
 "the :guilabel:`Default Nomenclature` uses |UPC| and |EAN| encoding, *not* "
 "GS1 encoding."
 msgstr ""
+":guilabel:`Is GS1 Nomenclature`: ensure this checkbox is **not** ticked, as "
+"the :guilabel:`Default Nomenclature` uses |UPC| and |EAN| encoding, *not* "
+"GS1 encoding."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst-1
 msgid "Default Nomenclature page setting fields."
@@ -737,6 +817,9 @@ msgid ""
 "at the bottom of the table, which opens a :guilabel:`Create Rules` pop-up "
 "window to create a new rule."
 msgstr ""
+"On the :guilabel:`Default Nomenclature` page, click :guilabel:`Add a line` "
+"at the bottom of the table, which opens a :guilabel:`Create Rules` pop-up "
+"window to create a new rule."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:148
 msgid ""
@@ -772,6 +855,10 @@ msgid ""
 "available :guilabel:`Encoding` options are: :guilabel:`EAN-13`, "
 ":guilabel:`EAN-8`, :guilabel:`UPC-A`, and :guilabel:`GS1-28`."
 msgstr ""
+"The :guilabel:`Encoding` field specifies which encoding the barcode uses. "
+"This rule **only** applies if the barcode uses this specific encoding. The "
+"available :guilabel:`Encoding` options are: :guilabel:`EAN-13`, "
+":guilabel:`EAN-8`, :guilabel:`UPC-A`, and :guilabel:`GS1-28`."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:161
 msgid ""
@@ -781,12 +868,19 @@ msgid ""
 " of `.` is shown. `N` represents whole number digits, and `D` represent "
 "decimal digits."
 msgstr ""
+"The :guilabel:`Barcode Pattern` field represents how the sequence of letters"
+" or numbers is recognized by the system to contain information about the "
+"product. Sometimes, when a certain amount of digits are required, the number"
+" of `.` is shown. `N` represents whole number digits, and `D` represent "
+"decimal digits."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:167
 msgid ""
 "`1...` represents any 4-digit number that starts with 1. `NNDD` represents a"
 " two digit number with two decimal points. For example, `14.25` is 1425."
 msgstr ""
+"`1...` represents any 4-digit number that starts with 1. `NNDD` represents a"
+" two digit number with two decimal points. For example, `14.25` is 1425."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:170
 msgid ""
@@ -984,6 +1078,8 @@ msgid ""
 "When the :guilabel:`Barcode Pattern` contains `.*`, it means it can contain "
 "any number or type of characters."
 msgstr ""
+"When the :guilabel:`Barcode Pattern` contains `.*`, it means it can contain "
+"any number or type of characters."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:240
 msgid ":doc:`gs1_nomenclature`"
@@ -3633,6 +3729,11 @@ msgid ""
 "(e.g. boxes, pallets, other shipping containers) in shipping cost "
 "calculations."
 msgstr ""
+"*Package type* is an optional feature used for :doc:`calculating shipping "
+"cost <../../shipping_receiving/setup_configuration>`, based on real shipping"
+" weight. Create package types to include the weight of the package itself "
+"(e.g. boxes, pallets, other shipping containers) in shipping cost "
+"calculations."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:31
 msgid ""
@@ -3752,6 +3853,8 @@ msgid ""
 ":doc:`Ship one order in multiple packages "
 "<../../shipping_receiving/setup_configuration/multipack>`"
 msgstr ""
+":doc:`Ship one order in multiple packages "
+"<../../shipping_receiving/setup_configuration/multipack>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:95
 msgid "Put in pack"
@@ -3813,7 +3916,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:123
 msgid ":doc:`../../shipping_receiving/setup_configuration`"
-msgstr ""
+msgstr ":doc:`../../shipping_receiving/setup_configuration`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:125
 msgid ""
@@ -4000,12 +4103,16 @@ msgid ""
 ":doc:`Using cluster packages "
 "<../../shipping_receiving/picking_methods/cluster>`"
 msgstr ""
+":doc:`Using cluster packages "
+"<../../shipping_receiving/picking_methods/cluster>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:5
 msgid ""
 "In Odoo *Inventory*, *packaging* refers to disposable containers holding "
 "multiple units of a specific product."
 msgstr ""
+"In Odoo *Inventory*, *packaging* refers to disposable containers holding "
+"multiple units of a specific product."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:8
 msgid ""
@@ -4013,6 +4120,9 @@ msgid ""
 "12-pack, or a case of 36, **must** be configured on the individual product "
 "form. This is because packagings are product specific, not generic."
 msgstr ""
+"For example, different packages for cans of soda, such as a 6-pack, a "
+"12-pack, or a case of 36, **must** be configured on the individual product "
+"form. This is because packagings are product specific, not generic."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:13
 msgid ""
@@ -4205,7 +4315,7 @@ msgstr "Lista de embalagens diferentes para produtos."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:93
 msgid "Partial reservation"
-msgstr ""
+msgstr "Partial reservation"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:95
 msgid ""
@@ -4215,6 +4325,11 @@ msgid ""
 "flexibility expedites order fulfillment by allowing the immediate shipment "
 "of available items, while awaiting the rest."
 msgstr ""
+"After :ref:`completing the packaging setup "
+"<inventory/product_management/packaging-setup>`, packagings can be reserved "
+"in full or partial quantities for outgoing shipments. Partial packaging "
+"flexibility expedites order fulfillment by allowing the immediate shipment "
+"of available items, while awaiting the rest."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:100
 msgid ""
@@ -4222,6 +4337,9 @@ msgid ""
 "app --> Configuration --> Product Categories`. Then, click :guilabel:`New`, "
 "or select the desired product category."
 msgstr ""
+"To configure packaging reservation methods, go to :menuselection:`Inventory "
+"app --> Configuration --> Product Categories`. Then, click :guilabel:`New`, "
+"or select the desired product category."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:103
 msgid ""
@@ -4229,6 +4347,9 @@ msgid ""
 ":guilabel:`Reserve Packagings` can be set to :guilabel:`Reserve Only Full "
 "Packagings` or :guilabel:`Reserve Partial Packagings`."
 msgstr ""
+"On the product category's form, in the :guilabel:`Logistics` section, "
+":guilabel:`Reserve Packagings` can be set to :guilabel:`Reserve Only Full "
+"Packagings` or :guilabel:`Reserve Partial Packagings`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:107
 msgid ""
@@ -4238,40 +4359,51 @@ msgid ""
 " :guilabel:`Products` section, tick the :guilabel:`Product Packagings` "
 "checkbox, and click :guilabel:`Save`."
 msgstr ""
+"To see the :guilabel:`Reserve Packaging` field, the :guilabel:`Product "
+"Packaging` feature **must** be enabled. To enable this feature, go to "
+":menuselection:`Inventory app --> Configuration --> Settings`, scroll to the"
+" :guilabel:`Products` section, tick the :guilabel:`Product Packagings` "
+"checkbox, and click :guilabel:`Save`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst-1
 msgid "Show Reserve Packagings field on the product categories page."
-msgstr ""
+msgstr "Show Reserve Packagings field on the product categories page."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:117
 msgid ""
 "To better evaluate the options based on business needs, consider the "
 "following example:"
 msgstr ""
+"To better evaluate the options based on business needs, consider the "
+"following example:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:119
 msgid "a product is sold in twelve units per packaging."
-msgstr ""
+msgstr "a product is sold in twelve units per packaging."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:120
 msgid "an order demands two packagings."
-msgstr ""
+msgstr "an order demands two packagings."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:121
 msgid "there are only twenty-two units in stock."
-msgstr ""
+msgstr "there are only twenty-two units in stock."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:123
 msgid ""
 "When :guilabel:`Reserve Only Full Packagings` is selected, only twelve units"
 " are reserved for the order."
 msgstr ""
+"When :guilabel:`Reserve Only Full Packagings` is selected, only twelve units"
+" are reserved for the order."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:126
 msgid ""
 "Conversely, when :guilabel:`Reserve Partial Packagings` is selected, twenty-"
 "two units are reserved for the order."
 msgstr ""
+"Conversely, when :guilabel:`Reserve Partial Packagings` is selected, twenty-"
+"two units are reserved for the order."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:130
 msgid "Apply packagings"
@@ -4710,11 +4842,11 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking.rst:20
 msgid ":doc:`product_tracking/lots`"
-msgstr ""
+msgstr ":doc:`product_tracking/lots`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking.rst:21
 msgid ":doc:`product_tracking/serial_numbers`"
-msgstr ""
+msgstr ":doc:`product_tracking/serial_numbers`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking.rst:24
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:28
@@ -5462,7 +5594,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:190
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:105
 msgid ":doc:`../../shipping_receiving/removal_strategies`"
-msgstr ""
+msgstr ":doc:`../../shipping_receiving/removal_strategies`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:229
 msgid "View expiration dates for lots & serial numbers"
@@ -6259,7 +6391,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:356
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:319
 msgid ":doc:`../product_tracking`"
-msgstr ""
+msgstr ":doc:`../product_tracking`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:3
 msgid "Use serial numbers to track products"
@@ -7053,7 +7185,7 @@ msgstr "Envios e recebimentos"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:6
 msgid "Inbound and outbound flows"
-msgstr ""
+msgstr "Inbound and outbound flows"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:8
 msgid ""
@@ -7176,7 +7308,7 @@ msgstr "Os itens são recebidos ou enviados diretamente no ou do estoque."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:45
 msgid ":doc:`daily_operations/receipts_delivery_one_step`"
-msgstr ""
+msgstr ":doc:`daily_operations/receipts_delivery_one_step`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:48
 msgid "Two-step flow"
@@ -7242,7 +7374,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:66
 msgid ":doc:`daily_operations/receipts_delivery_two_steps`"
-msgstr ""
+msgstr ":doc:`daily_operations/receipts_delivery_two_steps`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:69
 msgid "Three-step flow"
@@ -7302,11 +7434,11 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:87
 msgid ":doc:`daily_operations/receipts_three_steps`"
-msgstr ""
+msgstr ":doc:`daily_operations/receipts_three_steps`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:88
 msgid ":doc:`daily_operations/delivery_three_steps`"
-msgstr ""
+msgstr ":doc:`daily_operations/delivery_three_steps`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/cross_dock.rst:3
 msgid "Organize a cross-dock in a warehouse"
@@ -7430,7 +7562,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/delivery_three_steps.rst:3
 msgid "Three-step delivery"
-msgstr ""
+msgstr "Three-step delivery"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/delivery_three_steps.rst:5
 msgid ""
@@ -7469,6 +7601,11 @@ msgid ""
 " --> Settings --> Warehouse`. Note that activating :guilabel:`Multi-Step "
 "Routes` will also activate *Storage Locations*."
 msgstr ""
+"To change delivery settings from :doc:`one step "
+"<receipts_delivery_one_step>` to three steps, make sure the *Multi-Step "
+"Routes* option is enabled in :menuselection:`Inventory app --> Configuration"
+" --> Settings --> Warehouse`. Note that activating :guilabel:`Multi-Step "
+"Routes` will also activate *Storage Locations*."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/delivery_three_steps.rst-1
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst-1
@@ -8195,23 +8332,24 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:3
 msgid "Putaway rules"
-msgstr "Regras de armazenamento"
+msgstr "Regras de entrada em depósito"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:5
 msgid ""
 "Putaway is the process of routing products to appropriate storage locations "
 "upon shipment arrival."
 msgstr ""
-"\"Putaway\" é o processo de encaminhamento de produtos para locais de "
-"armazenamento apropriados na chegada da remessa."
+"\"Entrada em depósito\" é o processo de encaminhamento de produtos para "
+"locais de armazenamento apropriados na chegada da remessa."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:7
 msgid ""
 "Odoo can accomplish this seamlessly using *putaway rules*, which dictate how"
 " products move through specified warehouse locations."
 msgstr ""
-"O Odoo pode fazer isso tranquilamente usando *regras de putaway*, que "
-"determinam como os produtos passam por locais específicos do armazém."
+"O Odoo pode fazer isso tranquilamente usando *regras de entrada em "
+"depósito*, que determinam como os produtos passam por locais específicos do "
+"armazém."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:10
 msgid ""
@@ -8220,8 +8358,8 @@ msgid ""
 "for future delivery orders."
 msgstr ""
 "Após a chegada da remessa, as operações são geradas com base em regras de "
-"putaway para mover os produtos com eficiência para locais especificados e "
-"garantir a fácil retirada para futuros pedidos de entrega."
+"entrada em depósito para mover os produtos com eficiência para locais "
+"especificados e garantir a fácil retirada para futuros pedidos de entrega."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:13
 msgid ""
@@ -8230,16 +8368,16 @@ msgid ""
 "directing them to different locations determined by the warehouse manager."
 msgstr ""
 "Em armazéns que processam tipos específicos de produtos, as regras de "
-"putaway também podem impedir que substâncias voláteis sejam armazenadas "
-"próximas umas das outras, direcionando-as para locais diferentes "
-"determinados pelo gerente do armazém."
+"entrada em depósito também podem impedir que substâncias voláteis sejam "
+"armazenadas próximas umas das outras, direcionando-as para locais diferentes"
+" determinados pelo gerente do armazém."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:18
 msgid ""
 "`Odoo Tutorials: Putaway Rules "
 "<https://www.youtube.com/watch?v=nCQMf6sj_w8>`_"
 msgstr ""
-"Tutoriais do Odoo: Regras de putaway "
+"Tutoriais do Odoo: Regras de entrada em depósito "
 "<https://www.youtube.com/watch?v=nCQMf6sj_w8>`_"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:23
@@ -8267,7 +8405,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:36
 msgid "Define putaway rule"
-msgstr "Definir regra de putaway"
+msgstr "Definir regra de entrada em depósito"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:38
 msgid ""
@@ -8278,9 +8416,9 @@ msgid ""
 msgstr ""
 "Para gerenciar para onde produtos específicos são encaminhados para "
 "armazenamento, navegue até :menuselection:`app Inventário --> Configuração "
-"--> Regras de putaway`. Use o botão :guilabel:`Criar` para configurar uma "
-"nova regra de entrada em armazém em um :guilabel:`Produto` ou "
-":guilabel:`Categoria de produto` que a regra afeta."
+"--> Regras de entrada em depósito`. Use o botão :guilabel:`Criar` para "
+"configurar uma nova regra de entrada em armazém em um :guilabel:`Produto` ou"
+" :guilabel:`Categoria de produto` que a regra afeta."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:43
 msgid ""
@@ -8299,8 +8437,8 @@ msgid ""
 "the :guilabel:`Store to` location."
 msgstr ""
 "Na mesma linha, o local :guilabel:`Quando o produto chega em` é onde a regra"
-" de putaway é acionada para criar uma operação para mover o produto para o "
-"local :guilabel:`Armazenar em`."
+" de entrada em depósito é acionada para criar uma operação para mover o "
+"produto para o local :guilabel:`Armazenar em`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:50
 msgid ""
@@ -8343,19 +8481,19 @@ msgstr "Repita isso para todos os produtos e pressione :guilabel:`Salvar`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:0
 msgid "Create putaway rules for apples and carrots."
-msgstr "Crie regras de putaway para maçãs e cenouras."
+msgstr "Criar regras de entrada em depósito para maçãs e cenouras."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:70
 msgid "Putaway rule priority"
-msgstr "Prioridade da regra de putaway"
+msgstr "Prioridade da regra de entrada em depósito"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:72
 msgid ""
 "Odoo selects a putaway rule based on the following priority list (from "
 "highest to lowest) until a match is found:"
 msgstr ""
-"O Odoo seleciona uma regra de putaway com base na seguinte lista de "
-"prioridades (da maior para a menor) até que uma correspondência seja "
+"O Odoo seleciona uma regra de entrada em depósito com base na seguinte lista"
+" de prioridades (da maior para a menor) até que uma correspondência seja "
 "encontrada:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:75
@@ -8412,11 +8550,11 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:0
 msgid "Some examples of putaway rules."
-msgstr "Alguns exemplos de regras de armazenamento."
+msgstr "Alguns exemplos de entrada em depósito."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:3
 msgid "One-step receipt and delivery"
-msgstr ""
+msgstr "One-step receipt and delivery"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:5
 msgid ""
@@ -8675,7 +8813,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:3
 msgid "Two-step receipt and delivery"
-msgstr ""
+msgstr "Two-step receipt and delivery"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:5
 msgid ""
@@ -9094,7 +9232,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_three_steps.rst:3
 msgid "Three-step receipt"
-msgstr ""
+msgstr "Three-step receipt"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_three_steps.rst:5
 msgid ""
@@ -9129,6 +9267,12 @@ msgid ""
 "Settings --> Warehouse`. Note that activating :guilabel:`Multi-Step Routes` "
 "will also activate *Storage Locations*."
 msgstr ""
+"Odoo is configured by default to :doc:`receive and deliver goods in one step"
+" <receipts_delivery_one_step>`, so the settings need to be changed in order "
+"to utilize three-step receipts. First, make sure the *Multi-Step Routes* "
+"option is enabled in :menuselection:`Inventory --> Configuration --> "
+"Settings --> Warehouse`. Note that activating :guilabel:`Multi-Step Routes` "
+"will also activate *Storage Locations*."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_three_steps.rst-1
 msgid ""
@@ -9548,6 +9692,8 @@ msgid ""
 ":doc:`Warehouse configurations "
 "<../../warehouses_storage/inventory_management/warehouses>`"
 msgstr ""
+":doc:`Warehouse configurations "
+"<../../warehouses_storage/inventory_management/warehouses>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:77
 msgid ""
@@ -9559,7 +9705,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:78
 msgid ":doc:`../../warehouses_storage/replenishment/resupply_warehouses`"
-msgstr ""
+msgstr ":doc:`../../warehouses_storage/replenishment/resupply_warehouses`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:83
 msgid "Create child warehouses"
@@ -9941,38 +10087,49 @@ msgid ""
 "extra location attribute to automatically propose optimal storage locations "
 "for products."
 msgstr ""
+"A *storage category* is used with :doc:`putaway rules <putaway>`, as an "
+"extra location attribute to automatically propose optimal storage locations "
+"for products."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:8
 msgid "Follow these steps to complete the setup:"
-msgstr ""
+msgstr "Follow these steps to complete the setup:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:10
 msgid ""
 ":ref:`Enable the Storage Category feature <inventory/routes/enable-storage-"
 "categories>`"
 msgstr ""
+":ref:`Enable the Storage Category feature <inventory/routes/enable-storage-"
+"categories>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:11
 msgid ""
 ":ref:`Define a storage category <inventory/routes/define-storage>` with "
 "specific limitations"
 msgstr ""
+":ref:`Define a storage category <inventory/routes/define-storage>` with "
+"specific limitations"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:12
 msgid ""
 "Assign a :ref:`category to storage locations <inventory/routes/assign-"
 "location>`"
 msgstr ""
+"Assign a :ref:`category to storage locations <inventory/routes/assign-"
+"location>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:13
 msgid ""
 "Add the storage category as an attribute to a :ref:`putaway rule "
 "<inventory/routes/set-putaway-attribute>`"
 msgstr ""
+"Add the storage category as an attribute to a :ref:`putaway rule "
+"<inventory/routes/set-putaway-attribute>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:17
 msgid ":doc:`putaway`"
-msgstr ""
+msgstr ":doc:`putaway`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:20
 msgid ""
@@ -9981,6 +10138,10 @@ msgid ""
 "evaluates these locations, based on defined capacity, and recommends the "
 "best one on the warehouse transfer form."
 msgstr ""
+"Assigning categories to storage locations tells Odoo these locations meet "
+"specific requirements, such as temperature or accessibility. Odoo then "
+"evaluates these locations, based on defined capacity, and recommends the "
+"best one on the warehouse transfer form."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:28
 msgid ""
@@ -9989,16 +10150,22 @@ msgid ""
 "ensure the :guilabel:`Storage Locations` and :guilabel:`Multi-Step Routes` "
 "features are enabled."
 msgstr ""
+"To enable storage categories, go to :menuselection:`Inventory app --> "
+"Configuration --> Settings`. Then, in the :guilabel:`Warehouse` section, "
+"ensure the :guilabel:`Storage Locations` and :guilabel:`Multi-Step Routes` "
+"features are enabled."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:32
 msgid ""
 "Next, activate the :guilabel:`Storage Categories` feature. Finally, click "
 ":guilabel:`Save`."
 msgstr ""
+"Next, activate the :guilabel:`Storage Categories` feature. Finally, click "
+":guilabel:`Save`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst-1
 msgid "Show the Storage Categories feature."
-msgstr ""
+msgstr "Show the Storage Categories feature."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:41
 msgid "Define storage category"
@@ -10010,24 +10177,33 @@ msgid ""
 "before it is applied to locations, in order to decide the optimal storage "
 "location."
 msgstr ""
+"A storage category with specific limitations **must** be created first, "
+"before it is applied to locations, in order to decide the optimal storage "
+"location."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:46
 msgid ""
 "To create a storage category, go to :menuselection:`Inventory app --> "
 "Configuration --> Storage Categories`, and click :guilabel:`Create`."
 msgstr ""
+"To create a storage category, go to :menuselection:`Inventory app --> "
+"Configuration --> Storage Categories`, and click :guilabel:`Create`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:49
 msgid ""
 "On the storage category form, type a name for the category in the "
 ":guilabel:`Storage Category` field."
 msgstr ""
+"On the storage category form, type a name for the category in the "
+":guilabel:`Storage Category` field."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:52
 msgid ""
 "Options are available to limit capacity by weight, product, and package "
 "type."
 msgstr ""
+"Options are available to limit capacity by weight, product, and package "
+"type."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:55
 msgid ""
@@ -10035,6 +10211,9 @@ msgid ""
 "maximum of one hundred products with a total weight of two hundred "
 "kilograms)."
 msgstr ""
+"Weight limits can be combined with capacity by package or product (e.g. a "
+"maximum of one hundred products with a total weight of two hundred "
+"kilograms)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:58
 msgid ""
@@ -10043,12 +10222,18 @@ msgid ""
 "across various locations, as shown in this example of :ref:`capacity by "
 "package <inventory/routes/set-capacity-package>`."
 msgstr ""
+"While it is possible to limit capacity by product and package type at the "
+"same location, it may be more practical to store items in different amounts "
+"across various locations, as shown in this example of :ref:`capacity by "
+"package <inventory/routes/set-capacity-package>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:62
 msgid ""
 "The :guilabel:`Allow New Product` field defines when the location is "
 "considered available to store a product:"
 msgstr ""
+"The :guilabel:`Allow New Product` field defines when the location is "
+"considered available to store a product:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:65
 msgid ""
@@ -10079,10 +10264,12 @@ msgid ""
 "When clicked, the :guilabel:`Location` smart button shows which storage "
 "locations the category has been assigned to."
 msgstr ""
+"When clicked, the :guilabel:`Location` smart button shows which storage "
+"locations the category has been assigned to."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:76
 msgid "Capacity by weight"
-msgstr ""
+msgstr "Capacity by weight"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:78
 msgid ""
@@ -10091,16 +10278,22 @@ msgid ""
 " Weight` field. This limit applies to each location assigned this storage "
 "category."
 msgstr ""
+"On a storage category form (:menuselection:`Inventory app --> Configuration "
+"--> Storage Categories`), set a maximum product weight in the :guilabel:`Max"
+" Weight` field. This limit applies to each location assigned this storage "
+"category."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:83
 msgid "Capacity by product"
-msgstr ""
+msgstr "Capacity by product"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:85
 msgid ""
 "In the :guilabel:`Capacity by Product` tab, click :guilabel:`Add a Line` to "
 "input items, and enter their capacities in the :guilabel:`Quantity` field."
 msgstr ""
+"In the :guilabel:`Capacity by Product` tab, click :guilabel:`Add a Line` to "
+"input items, and enter their capacities in the :guilabel:`Quantity` field."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:89
 msgid ""
@@ -10108,14 +10301,17 @@ msgid ""
 "Sit` are stored at a single storage location, by specifying those amounts in"
 " the :guilabel:`Capacity by Product` tab of a storage category form."
 msgstr ""
+"Ensure only a maximum of five `Large Cabinets` and two `Corner Desk Right "
+"Sit` are stored at a single storage location, by specifying those amounts in"
+" the :guilabel:`Capacity by Product` tab of a storage category form."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
 msgid "Show storage category limiting by product count."
-msgstr ""
+msgstr "Show storage category limiting by product count."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:100
 msgid "Capacity by package"
-msgstr ""
+msgstr "Capacity by package"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:102
 msgid ""
@@ -10124,6 +10320,10 @@ msgid ""
 " real-time storage capacity checks, based on package types (e.g., crates, "
 "bins, boxes, etc.)."
 msgstr ""
+"For companies using :doc:`packages "
+"<../../product_management/configure/package>`, it becomes possible to ensure"
+" real-time storage capacity checks, based on package types (e.g., crates, "
+"bins, boxes, etc.)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:107
 msgid ""
@@ -10131,12 +10331,17 @@ msgid ""
 " Configuration --> Settings` to show the :guilabel:`Capacity by Package` "
 "tab."
 msgstr ""
+"Enable the :guilabel:`Packages` feature in :menuselection:`Inventory app -->"
+" Configuration --> Settings` to show the :guilabel:`Capacity by Package` "
+"tab."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:111
 msgid ""
 "Create putaway rules for pallet-stored items, by creating the `High "
 "Frequency pallets` storage category."
 msgstr ""
+"Create putaway rules for pallet-stored items, by creating the `High "
+"Frequency pallets` storage category."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:114
 msgid ""
@@ -10144,6 +10349,9 @@ msgid ""
 "for the designated :guilabel:`Package Type`, and set a maximum of `2.00` "
 "`Pallets` for a specific location."
 msgstr ""
+"In the :guilabel:`Capacity by Package` tab, specify the number of packages "
+"for the designated :guilabel:`Package Type`, and set a maximum of `2.00` "
+"`Pallets` for a specific location."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
 msgid "Create a storage category on the page."
@@ -10151,7 +10359,7 @@ msgstr "Criar uma categoria de armazenamento na página."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:124
 msgid "Assign to location"
-msgstr ""
+msgstr "Assign to location"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:126
 msgid ""
@@ -10160,6 +10368,10 @@ msgid ""
 " Locations`, and select the desired location. Then, select the created "
 "category in the :guilabel:`Storage Category` field."
 msgstr ""
+"Once the storage category is created, assign it to a location. Navigate to "
+"the location by going to :menuselection:`Inventory app --> Configuration -->"
+" Locations`, and select the desired location. Then, select the created "
+"category in the :guilabel:`Storage Category` field."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:131
 msgid ""
@@ -10167,6 +10379,9 @@ msgid ""
 "stored at any location to two pallets) to the `WH/Stock/pallets/PAL 1` sub-"
 "location."
 msgstr ""
+"Assign the `High Frequency pallets` storage category (which limits pallets "
+"stored at any location to two pallets) to the `WH/Stock/pallets/PAL 1` sub-"
+"location."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
 msgid ""
@@ -10178,7 +10393,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:141
 msgid "Putaway rule"
-msgstr ""
+msgstr "Putaway rule"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:143
 msgid ""
@@ -10187,6 +10402,10 @@ msgid ""
 ":doc:`putaway rule <putaway>` by navigating to :menuselection:`Inventory app"
 " --> Configuration --> Putaway Rules`."
 msgstr ""
+"With the :ref:`storage category <inventory/routes/define-storage>` and "
+":ref:`location <inventory/routes/assign-location>` set up, create the "
+":doc:`putaway rule <putaway>` by navigating to :menuselection:`Inventory app"
+" --> Configuration --> Putaway Rules`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:147
 msgid ""
@@ -10194,6 +10413,9 @@ msgid ""
 ":guilabel:`Having Category` field of the new putaway rule form, select the "
 "storage category."
 msgstr ""
+"Click the :guilabel:`Create` button to create the putaway rule. In the "
+":guilabel:`Having Category` field of the new putaway rule form, select the "
+"storage category."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:151
 msgid ""
@@ -10202,6 +10424,10 @@ msgid ""
 "locations with the `High Frequency Pallets` storage category :ref:`assigned "
 "to them <inventory/routes/assign-location>`."
 msgstr ""
+"Continuing the example from above, the `High Frequency Pallets` storage "
+"category is assigned to the putaway rule directing pallets of lemonade to "
+"locations with the `High Frequency Pallets` storage category :ref:`assigned "
+"to them <inventory/routes/assign-location>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
 msgid "Storage Categories used in a variety of putaway rules."
@@ -10211,7 +10437,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:160
 msgid "Use case: limit capacity by package"
-msgstr ""
+msgstr "Use case: limit capacity by package"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:162
 msgid ""
@@ -10219,12 +10445,17 @@ msgid ""
 "packages, :ref:`create a storage category with a Capacity By Package "
 "<inventory/routes/set-capacity-package>`."
 msgstr ""
+"To limit the capacity of a storage location by a specific number of "
+"packages, :ref:`create a storage category with a Capacity By Package "
+"<inventory/routes/set-capacity-package>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:165
 msgid ""
 "Continuing the example from above, the `High Frequency Pallets` storage "
 "category is assigned to the `PAL1` and `PAL2` locations."
 msgstr ""
+"Continuing the example from above, the `High Frequency Pallets` storage "
+"category is assigned to the `PAL1` and `PAL2` locations."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:168
 msgid ""
@@ -10232,6 +10463,9 @@ msgid ""
 "any pallets received in the warehouse are directed to be stored in `PAL1` "
 "and `PAL2` locations."
 msgstr ""
+"Then, :ref:`putaway rules <inventory/routes/putaway-rule>` are set, so that "
+"any pallets received in the warehouse are directed to be stored in `PAL1` "
+"and `PAL2` locations."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:171
 msgid ""
@@ -10239,23 +10473,31 @@ msgid ""
 " when one pallet of lemonade cans is received, the following scenarios "
 "happen:"
 msgstr ""
+"Depending on the number of pallets on-hand at each of the storage locations,"
+" when one pallet of lemonade cans is received, the following scenarios "
+"happen:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:174
 msgid ""
 "If `PAL1` and `PAL2` are empty, the pallet is redirected to "
 "`WH/Stock/Pallets/PAL1`."
 msgstr ""
+"If `PAL1` and `PAL2` are empty, the pallet is redirected to "
+"`WH/Stock/Pallets/PAL1`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:175
 msgid ""
 "If `PAL1` is full, the pallet is redirected to `WH/Stock/Pallets/PAL2`."
 msgstr ""
+"If `PAL1` is full, the pallet is redirected to `WH/Stock/Pallets/PAL2`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:176
 msgid ""
 "If `PAL1` and `PAL2` are full, the pallet is redirected to "
 "`WH/Stock/Pallets`."
 msgstr ""
+"If `PAL1` and `PAL2` are full, the pallet is redirected to "
+"`WH/Stock/Pallets`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:5
 msgid "Routes and push/pull rules"
@@ -11060,7 +11302,7 @@ msgstr "Visualização dos status das transferências quando a rota é concluíd
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods.rst:5
 msgid "Picking methods"
-msgstr ""
+msgstr "Picking methods"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:3
 msgid "Batch picking"
@@ -11172,10 +11414,12 @@ msgid ""
 ":doc:`Delivery in two steps "
 "<../daily_operations/receipts_delivery_two_steps>`"
 msgstr ""
+":doc:`Delivery in two steps "
+"<../daily_operations/receipts_delivery_two_steps>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:49
 msgid ":doc:`../daily_operations/delivery_three_steps`"
-msgstr ""
+msgstr ":doc:`../daily_operations/delivery_three_steps`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst-1
 msgid "Set up 2-step or 3-step outgoing shipments."
@@ -11789,7 +12033,7 @@ msgstr "Set the :guilabel:`Package Use` field to :guilabel:`Reusable Box`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.rst:86
 msgid ":doc:`Packages <../../product_management/configure/package>`"
-msgstr ""
+msgstr ":doc:`Packages <../../product_management/configure/package>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.rst:89
 msgid ""
@@ -11881,11 +12125,13 @@ msgstr ""
 msgid ""
 ":doc:`Delivery in one step <../daily_operations/receipts_delivery_one_step>`"
 msgstr ""
+":doc:`Delivery in one step <../daily_operations/receipts_delivery_one_step>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.rst:129
 msgid ""
 ":doc:`Delivery in three steps <../daily_operations/delivery_three_steps>`"
 msgstr ""
+":doc:`Delivery in three steps <../daily_operations/delivery_three_steps>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.rst:131
 msgid ""
@@ -13035,7 +13281,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst-1
 msgid "Install the Delivery Costs module."
-msgstr ""
+msgstr "Install the Delivery Costs module."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:33
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:28
@@ -13403,7 +13649,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:175
 msgid ":doc:`Invoice cost of shipping <setup_configuration/invoicing>`"
-msgstr ""
+msgstr ":doc:`Invoice cost of shipping <setup_configuration/invoicing>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:180
 msgid "Add shipping"
@@ -13536,7 +13782,7 @@ msgstr ":doc:`third_party_shipper`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:18
 msgid ":doc:`../setup_configuration`"
-msgstr ""
+msgstr ":doc:`../setup_configuration`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:19
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:19
@@ -14772,7 +15018,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:3
 msgid "Sendcloud integration"
-msgstr ""
+msgstr "Sendcloud integration"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:5
 msgid ""
@@ -15340,6 +15586,9 @@ msgid ""
 "<inventory/shipping_receiving/third-party-rate>`, and are only used to "
 "improve the process of :doc:`generating shipping labels <labels>`."
 msgstr ""
+"Shipping rules do **not** affect :ref:`shipping rate calculations "
+"<inventory/shipping_receiving/third-party-rate>`, and are only used to "
+"improve the process of :doc:`generating shipping labels <labels>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:232
 msgid ""
@@ -15556,6 +15805,10 @@ msgid ""
 "calculate shipping costs <../setup_configuration>`, and :doc:`generate "
 "shipping labels <labels>`."
 msgstr ""
+"Users can link third-party shipping carriers to Odoo databases, in order to "
+"verify carriers' delivery to specific addresses, :doc:`automatically "
+"calculate shipping costs <../setup_configuration>`, and :doc:`generate "
+"shipping labels <labels>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:14
 msgid ""
@@ -15617,7 +15870,7 @@ msgstr ":doc:`Sendcloud <sendcloud_shipping>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:40
 msgid ":ref:`EU* <inventory/shipping_receiving/sendcloud-eu>`"
-msgstr ""
+msgstr ":ref:`EU* <inventory/shipping_receiving/sendcloud-eu>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:41
 msgid "Bpost"
@@ -15649,6 +15902,9 @@ msgid ""
 " Germany, Italy, the Netherlands, Spain, and the United Kingdom, and **to** "
 "any European country."
 msgstr ""
+"\\* Sendcloud currently supports shipping **from** Austria, Belgium, France,"
+" Germany, Italy, the Netherlands, Spain, and the United Kingdom, and **to** "
+"any European country."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:58
 msgid ""
@@ -15728,6 +15984,10 @@ msgid ""
 "refer to the :ref:`install apps and modules <general/install>` "
 "documentation."
 msgstr ""
+":doc:`Delivery methods <../setup_configuration>` can also be integrated with"
+" operations in the *Sales*, *eCommerce*, and *Website* apps. To install, "
+"refer to the :ref:`install apps and modules <general/install>` "
+"documentation."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst-1
 msgid "Options of available shipping connectors in Odoo."
@@ -15762,10 +16022,12 @@ msgid ""
 "Additional delivery methods can be created for specific purposes, such as "
 ":doc:`packaging <../../product_management/configure/packaging>`."
 msgstr ""
+"Additional delivery methods can be created for specific purposes, such as "
+":doc:`packaging <../../product_management/configure/packaging>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:103
 msgid ":doc:`Configure delivery methods <../setup_configuration>`"
-msgstr ""
+msgstr ":doc:`Configure delivery methods <../setup_configuration>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:106
 msgid ""
@@ -15853,6 +16115,10 @@ msgid ""
 " cost` of shipping is wanted instead, refer to :doc:`Invoice real shipping "
 "costs <invoicing>` document."
 msgstr ""
+":guilabel:`Invoicing Policy`: select and calculate an :guilabel:`Estimated "
+"cost` of shipping directly from the shipping carrier. If the :guilabel:`Real"
+" cost` of shipping is wanted instead, refer to :doc:`Invoice real shipping "
+"costs <invoicing>` document."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:135
 msgid ""
@@ -16110,6 +16376,7 @@ msgstr ""
 msgid ""
 ":doc:`Charge customers for shipping after product delivery <invoicing>`"
 msgstr ""
+":doc:`Charge customers for shipping after product delivery <invoicing>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:262
 msgid ""
@@ -16514,6 +16781,10 @@ msgid ""
 "within the warehouse, or :doc:`between warehouses "
 "<replenishment/resupply_warehouses>`."
 msgstr ""
+"Configure :doc:`routes <../shipping_receiving/daily_operations/use_routes>` "
+"in a warehouse to control how products move to customers, from vendors, "
+"within the warehouse, or :doc:`between warehouses "
+"<replenishment/resupply_warehouses>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:31
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:3
@@ -17924,6 +18195,10 @@ msgid ""
 "<../../shipping_receiving/daily_operations/use_routes>`, which controls how "
 "products move between locations."
 msgstr ""
+"Typically, the :guilabel:`Storage Locations` feature is used with "
+":doc:`Multi-Step Routes "
+"<../../shipping_receiving/daily_operations/use_routes>`, which controls how "
+"products move between locations."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst-1
 msgid "Show Storage Locations feature."
@@ -18014,6 +18289,10 @@ msgid ""
 "feature enabled in :menuselection:`Inventory app --> Configuration --> "
 "Settings`."
 msgstr ""
+":guilabel:`Storage Category`: only available with the :doc:`Storage "
+"Categories <../../shipping_receiving/daily_operations/storage_category>` "
+"feature enabled in :menuselection:`Inventory app --> Configuration --> "
+"Settings`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:59
 msgid ":guilabel:`Company`: the company the location belongs to."
@@ -18054,6 +18333,11 @@ msgid ""
 "*Manufacture*, or other procurement routes, ensuring products are correctly "
 "supplied to the warehouse."
 msgstr ""
+":guilabel:`Replenish Location`: used for :doc:`configuring routes "
+"<../../shipping_receiving/daily_operations/use_routes>`, tick this checkbox "
+"to set the location as a destination for receiving products from *Buy*, "
+"*Manufacture*, or other procurement routes, ensuring products are correctly "
+"supplied to the warehouse."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst-1
 msgid "The form for creating a new location."
@@ -18177,6 +18461,9 @@ msgid ""
 "Users can set up multiple warehouses, and :doc:`create stock moves "
 "<../../shipping_receiving/daily_operations/use_routes>` between them."
 msgstr ""
+"Each database has a pre-configured warehouse with the company's address. "
+"Users can set up multiple warehouses, and :doc:`create stock moves "
+"<../../shipping_receiving/daily_operations/use_routes>` between them."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:15
 msgid ""
@@ -18735,6 +19022,10 @@ msgid ""
 " Even if the purchase price on a purchase order differs, the valuation is "
 "the cost defined on the product form."
 msgstr ""
+"The default costing method in Odoo. The cost of the product is manually "
+"defined on the product form, and this cost is used to compute the valuation."
+" Even if the purchase price on a purchase order differs, the valuation is "
+"the cost defined on the product form."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:98
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:139
@@ -18752,13 +19043,13 @@ msgstr "Custo unitário"
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:141
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:212
 msgid "Qty On Hand"
-msgstr ""
+msgstr "Qty On Hand"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:101
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:142
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:213
 msgid "Incoming Value"
-msgstr ""
+msgstr "Incoming Value"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:102
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:143
@@ -18780,7 +19071,7 @@ msgstr "R$10"
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:146
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:217
 msgid "0"
-msgstr ""
+msgstr "0"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:107
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:145
@@ -18788,13 +19079,13 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:216
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:219
 msgid "$0"
-msgstr ""
+msgstr "$0"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:108
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:149
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:220
 msgid "Receive 8 products for $10/unit"
-msgstr ""
+msgstr "Receive 8 products for $10/unit"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:110
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:151
@@ -18806,7 +19097,7 @@ msgstr "8"
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:152
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:223
 msgid "8 * $10"
-msgstr ""
+msgstr "8 * $10"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:112
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:153
@@ -18818,7 +19109,7 @@ msgstr "R$ 80"
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:154
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:225
 msgid "Receive 4 products for $16/unit"
-msgstr ""
+msgstr "Receive 4 products for $16/unit"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:115
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:156
@@ -18828,17 +19119,17 @@ msgstr "12"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:116
 msgid "4 * $10"
-msgstr ""
+msgstr "4 * $10"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:117
 msgid "$120"
-msgstr ""
+msgstr "$120"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:118
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:159
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:230
 msgid "Deliver 10 products"
-msgstr ""
+msgstr "Deliver 10 products"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:120
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:161
@@ -18848,7 +19139,7 @@ msgstr "2"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:121
 msgid "-10 * $10"
-msgstr ""
+msgstr "-10 * $10"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:122
 msgid "$20"
@@ -18856,7 +19147,7 @@ msgstr "R$ 20"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:123
 msgid "Receive 2 products for $9/unit"
-msgstr ""
+msgstr "Receive 2 products for $9/unit"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:125
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:166
@@ -18866,11 +19157,11 @@ msgstr "4"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:126
 msgid "2 * $10"
-msgstr ""
+msgstr "2 * $10"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:127
 msgid "$40"
-msgstr ""
+msgstr "$40"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:129
 msgid "Average Cost (AVCO)"
@@ -18883,6 +19174,10 @@ msgid ""
 "costing method, inventory valuation is *dynamic*, and constantly adjusts "
 "based on the purchase price of products."
 msgstr ""
+"Calculates the valuation of a product based on the average cost of that "
+"product, divided by the total number of available stock on-hand. With this "
+"costing method, inventory valuation is *dynamic*, and constantly adjusts "
+"based on the purchase price of products."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:155
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:160
@@ -18893,16 +19188,16 @@ msgstr "$12"
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:157
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:228
 msgid "4 * $16"
-msgstr ""
+msgstr "4 * $16"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:158
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:229
 msgid "$144"
-msgstr ""
+msgstr "$144"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:162
 msgid "-10 * $12"
-msgstr ""
+msgstr "-10 * $12"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:163
 msgid "$24"
@@ -18911,36 +19206,38 @@ msgstr "$24"
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:164
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:236
 msgid "Receive 2 products for $6/unit"
-msgstr ""
+msgstr "Receive 2 products for $6/unit"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:165
 msgid "$9"
-msgstr ""
+msgstr "$9"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:167
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:239
 msgid "2 * $6"
-msgstr ""
+msgstr "2 * $6"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:168
 msgid "$36"
-msgstr ""
+msgstr "$36"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:170
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:242
 msgid "How are unit cost and inventory value calculated at each step?"
-msgstr ""
+msgstr "How are unit cost and inventory value calculated at each step?"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:172
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:244
 msgid "When receiving four products for $16 each:"
-msgstr ""
+msgstr "When receiving four products for $16 each:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:174
 msgid ""
 "Inventory value is calculated by adding the previous inventory value with "
 "the incoming value: :math:`$80 + (4 * $16) = $144`."
 msgstr ""
+"Inventory value is calculated by adding the previous inventory value with "
+"the incoming value: :math:`$80 + (4 * $16) = $144`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:176
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:248
@@ -18948,6 +19245,8 @@ msgid ""
 "Unit cost is calculated by dividing the inventory value by the quantity on-"
 "hand: :math:`$144 / 12 = $12`."
 msgstr ""
+"Unit cost is calculated by dividing the inventory value by the quantity on-"
+"hand: :math:`$144 / 12 = $12`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:179
 msgid ""
@@ -18955,18 +19254,21 @@ msgid ""
 " inventory value, regardless of the purchase price of the product. "
 "Therefore, inventory value is :math:`$144 + (-10 * $12) = $24`."
 msgstr ""
+"When delivering ten products, the average unit cost is used to calculate the"
+" inventory value, regardless of the purchase price of the product. "
+"Therefore, inventory value is :math:`$144 + (-10 * $12) = $24`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:183
 msgid "Receive two products for $6 each:"
-msgstr ""
+msgstr "Receive two products for $6 each:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:185
 msgid "Inventory value: :math:`$24 + (2 * $6) = $36`"
-msgstr ""
+msgstr "Inventory value: :math:`$24 + (2 * $6) = $36`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:186
 msgid "Unit cost: :math:`$36 / 4 = $9`"
-msgstr ""
+msgstr "Unit cost: :math:`$36 / 4 = $9`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:189
 msgid ""
@@ -18977,6 +19279,12 @@ msgid ""
 "then automatically updated, based on the average purchase price of both the "
 "inventory on-hand and the costs accumulated from validated purchase orders."
 msgstr ""
+"When choosing :guilabel:`Average Cost (AVCO)` as the :guilabel:`Costing "
+"Method`, changing the numerical value in the *Cost* field for products in "
+"the respective product category creates a new record in the *Inventory "
+"Valuation* report to adjust the value of the product. The *Cost* amount is "
+"then automatically updated, based on the average purchase price of both the "
+"inventory on-hand and the costs accumulated from validated purchase orders."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:196
 msgid "First In First Out (FIFO)"
@@ -18990,6 +19298,11 @@ msgid ""
 "that product is sold. When the next inventory lot moves up in the queue, an "
 "updated product cost is used based on the valuation of that specific lot."
 msgstr ""
+"Tracks the costs of incoming and outgoing items in real-time, and uses the "
+"real price of the products to change the valuation. The oldest purchase "
+"price is used as the cost for the next good sold, until an entire lot of "
+"that product is sold. When the next inventory lot moves up in the queue, an "
+"updated product cost is used based on the valuation of that specific lot."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:203
 msgid ""
@@ -18997,66 +19310,81 @@ msgid ""
 "variety of reasons, but it is highly sensitive to input data and human "
 "error."
 msgstr ""
+"This method is arguably the most accurate inventory valuation method for a "
+"variety of reasons, but it is highly sensitive to input data and human "
+"error."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:231
 msgid "$16"
-msgstr ""
+msgstr "$16"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:0
 msgid "-8 * $10"
-msgstr ""
+msgstr "-8 * $10"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:0
 msgid "-2 * $16"
-msgstr ""
+msgstr "-2 * $16"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:235
 msgid "$32"
-msgstr ""
+msgstr "$32"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:237
 msgid "$11"
-msgstr ""
+msgstr "$11"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:240
 msgid "$44"
-msgstr ""
+msgstr "$44"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:246
 msgid ""
 "Inventory value is calculated by adding the previous inventory value to the "
 "incoming value: :math:`$80 + (4 * $16) = $144`."
 msgstr ""
+"Inventory value is calculated by adding the previous inventory value to the "
+"incoming value: :math:`$80 + (4 * $16) = $144`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:251
 msgid ""
 "When delivering ten products, eight units were purchased for $10, and two "
 "units were purchased for $16."
 msgstr ""
+"When delivering ten products, eight units were purchased for $10, and two "
+"units were purchased for $16."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:254
 msgid ""
 "First, the incoming value is calculated by multiplying the on-hand quantity "
 "by the purchased price: :math:`(-8 * $10) + (-2 * $16) = -112`."
 msgstr ""
+"First, the incoming value is calculated by multiplying the on-hand quantity "
+"by the purchased price: :math:`(-8 * $10) + (-2 * $16) = -112`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:256
 msgid ""
 "The inventory value is calculated by subtracting the incoming value from the"
 " previous inventory value: :math:`$144 - $112 = $32`."
 msgstr ""
+"The inventory value is calculated by subtracting the incoming value from the"
+" previous inventory value: :math:`$144 - $112 = $32`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:258
 msgid ""
 "Unit cost is calculated by dividing the inventory value by the remaining "
 "quantity: :math:`$32 / 2 = $16`."
 msgstr ""
+"Unit cost is calculated by dividing the inventory value by the remaining "
+"quantity: :math:`$32 / 2 = $16`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:261
 msgid ""
 "When receiving two products for $6, inventory value is :math:`$32 + $12 = "
 "$44`. Unit cost is :math:`$44 / 4 = $11`."
 msgstr ""
+"When receiving two products for $6, inventory value is :math:`$32 + $12 = "
+"$44`. Unit cost is :math:`$44 / 4 = $11`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:265
 msgid ""
@@ -19537,6 +19865,10 @@ msgid ""
 "ownership to items in stock. Thus, products owned by other companies are not"
 " accounted for in the host company's inventory valuation."
 msgstr ""
+"The :doc:`consignment "
+"<../../shipping_receiving/daily_operations/owned_stock>` feature allows "
+"ownership to items in stock. Thus, products owned by other companies are not"
+" accounted for in the host company's inventory valuation."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst-1
 msgid "See Valuation smart button on a receipt, with Developer mode enabled."
@@ -20320,7 +20652,7 @@ msgstr "\"Reposição sob demanda\" selecionada no formulário do produto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:3
 msgid "Lead times"
-msgstr ""
+msgstr "Lead times"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:5
 msgid ""
@@ -21703,7 +22035,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:114
 msgid ":doc:`../replenishment`"
-msgstr ""
+msgstr ":doc:`../replenishment`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:117
 msgid ""
@@ -21894,6 +22226,8 @@ msgid ""
 "Ensure :doc:`lead times <lead_times>` are understood before proceeding with "
 "this section."
 msgstr ""
+"Ensure :doc:`lead times <lead_times>` are understood before proceeding with "
+"this section."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:202
 msgid ""
@@ -29775,7 +30109,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase.rst:8
 msgid "Purchase"
-msgstr "Compra"
+msgstr "Compras"
 
 #: ../../content/applications/inventory_and_mrp/purchase.rst:10
 msgid ""

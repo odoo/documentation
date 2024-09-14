@@ -413,6 +413,9 @@ msgid ""
 "<barcode/operations/product-weight>` where the barcode is written in the "
 "|EAN| format."
 msgstr ""
+"Odoo에서는 회사 고유의 바코드를 인식하도록 바코드 패턴을 사용자 지정할 수 있습니다. 바코드가 |EAN| 형식으로 만들어져 있는 "
+":ref:`예시 <barcode/operations/product-weight>` 와 같이 회사 내에서만 사용하려는 경우에는 바코드를 "
+"구입할 필요가 없습니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:38
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:52
@@ -476,6 +479,9 @@ msgid ""
 "nomenclature-list>`, are available for use. And, by default, Odoo "
 "automatically handles |UPC|/|EAN| conversion."
 msgstr ""
+"**바코드** 모듈이 설치되어 있는 상태에서 :guilabel:`기본 분류법`을 선택한 경우, :ref:`기본 분류법 목록 "
+"<barcode/operations/default-nomenclature-list>` 에 자세히 설명된 |UPC| 및 |EAN| 을 "
+"활용하여 바코드 작업을 할 수 있습니다. 또한 Odoo에서는 기본적으로 |UPC|/|EAN| 변환 작업이 자동으로 처리됩니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:59
 msgid "Example: product weight barcode"
@@ -489,6 +495,9 @@ msgid ""
 "automatically print barcodes, and calculate the price using the weight of "
 "the item."
 msgstr ""
+"Odoo에서 바코드 분류법을 통해 어떻게 품목을 식별하는지 파악하기 위하여, 이 예시에서는 |EAN| 형식의 품목 중량 바코드로 "
+":doc:`POS <../../../sales/point_of_sale>` 를 사용 중인 사업체에서 자동으로 바코드를 인쇄하고 품목의 "
+"중량를 이용하여 가격을 계산하고 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:66
 msgid "To set up barcodes for weighted products, the following rule is used:"
@@ -593,6 +602,8 @@ msgid ""
 "`211234501500`, which has a check digit of `2`. The new barcode is "
 "`2112345015002`."
 msgstr ""
+"다음으로, 고객의 파스타 그릇 한 개의 무게는 `1.5`kg으로 측정됩니다. 그러면 파스타에 대한 새로운 바코드가 무게에 따라 "
+"`211234501500` 로 생성되고, 체크용 숫자는 `2`입니다. 새 바코드는 `2112345015002`가 됩니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst-1
 msgid "Generated barcode that includes a weight of 1.5 kg."
@@ -644,7 +655,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:133
 msgid "On this page, configure the following optional fields:"
-msgstr ""
+msgstr "이 페이지에서 다음 선택 항목을 설정합니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:135
 msgid ""
@@ -660,6 +671,8 @@ msgid ""
 "the :guilabel:`Default Nomenclature` uses |UPC| and |EAN| encoding, *not* "
 "GS1 encoding."
 msgstr ""
+":guilabel:`GS1 분류법`: :guilabel:`기본 분류법` 에서는 GS1 인코딩 대신 |UPC| 및 |EAN| 인코딩 방식을"
+" 사용하므로 이 확인란에 표시하지 **않도록** 합니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst-1
 msgid "Default Nomenclature page setting fields."
@@ -671,6 +684,8 @@ msgid ""
 "at the bottom of the table, which opens a :guilabel:`Create Rules` pop-up "
 "window to create a new rule."
 msgstr ""
+":guilabel:`기본 분류법` 페이지에서 표 아래쪽에 있는 :guilabel:`줄 추가` 를 클릭하면 새로운 규칙을 만들 수 있는 "
+":guilabel:`규칙 만들기` 팝업 창이 열립니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:148
 msgid ""
@@ -700,6 +715,9 @@ msgid ""
 "available :guilabel:`Encoding` options are: :guilabel:`EAN-13`, "
 ":guilabel:`EAN-8`, :guilabel:`UPC-A`, and :guilabel:`GS1-28`."
 msgstr ""
+":guilabel:`인코딩` 항목에서는 바코드에서 사용되는 인코딩을 지정합니다. 이 규칙은 바코드에 해당 인코딩이 사용되는 경우에만 "
+"적용됩니다. 사용할 수 있는 :guilabel:`인코딩` 항목으로는 :guilabel:`EAN-13`, :guilabel:`EAN-8`,"
+" :guilabel:`UPC-A`, :guilabel:`GS1-28` 이 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:161
 msgid ""
@@ -709,12 +727,17 @@ msgid ""
 " of `.` is shown. `N` represents whole number digits, and `D` represent "
 "decimal digits."
 msgstr ""
+":guilabel:`바코드 패턴` 은 문자 또는 숫자 시퀀스를 시스템에서 인식하여 품목에 대한 정보를 보유하게 되는 방식을 나타냅니다. "
+"특정한 자릿수가 지정된 경우에 `.` 숫자가 표시되는 경우도 있습니다. `N` 은 정수 자릿수를 나타내고 `D` 는 소수 자릿수를 "
+"나타냅니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:167
 msgid ""
 "`1...` represents any 4-digit number that starts with 1. `NNDD` represents a"
 " two digit number with two decimal points. For example, `14.25` is 1425."
 msgstr ""
+"`1...` 은 1로 시작하는 4자리 숫자를 의미합니다. `NNDD` 는 소수점 이하 두 자리인 2자리 숫자를 의미합니다. 예를 들어 "
+"`14.25` 로 1425로 표시합니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:170
 msgid ""
@@ -908,7 +931,7 @@ msgstr ".*"
 msgid ""
 "When the :guilabel:`Barcode Pattern` contains `.*`, it means it can contain "
 "any number or type of characters."
-msgstr ""
+msgstr ":guilabel:`바코드 패턴` 에서 `.*` 는 어떤 숫자나 문자든 여기에 들어갈 수 있다는 의미입니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:240
 msgid ":doc:`gs1_nomenclature`"
@@ -3137,7 +3160,7 @@ msgstr "제품 관리"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:5
 msgid "Configure product"
-msgstr ""
+msgstr "품목에 대한 환경 설정"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:3
 msgid "Packages"
@@ -3201,6 +3224,9 @@ msgid ""
 "(e.g. boxes, pallets, other shipping containers) in shipping cost "
 "calculations."
 msgstr ""
+"*패키지 유형* 은 선택 항목으로, 실제 배송 중량을 기준으로 :doc:`배송비 계산 "
+"<../../shipping_receiving/setup_configuration>` 을 할 때 사용하는 기능입니다. 배송비 계산을 할 "
+"때 패키지 자체의 무게 (예: 박스, 팔레트, 기타 배송 컨테이너)가 포함되도록 패키지 유형이 생성됩니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:31
 msgid ""
@@ -3309,6 +3335,8 @@ msgid ""
 ":doc:`Ship one order in multiple packages "
 "<../../shipping_receiving/setup_configuration/multipack>`"
 msgstr ""
+":doc:`단일 주문 건을 여러 개의 패키지로 배송하기 "
+"<../../shipping_receiving/setup_configuration/multipack>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:95
 msgid "Put in pack"
@@ -3364,7 +3392,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:123
 msgid ":doc:`../../shipping_receiving/setup_configuration`"
-msgstr ""
+msgstr ":doc:`../../shipping_receiving/setup_configuration`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:125
 msgid ""
@@ -3526,12 +3554,13 @@ msgid ""
 ":doc:`Using cluster packages "
 "<../../shipping_receiving/picking_methods/cluster>`"
 msgstr ""
+":doc:`패키지 클러스터 사용하기 <../../shipping_receiving/picking_methods/cluster>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:5
 msgid ""
 "In Odoo *Inventory*, *packaging* refers to disposable containers holding "
 "multiple units of a specific product."
-msgstr ""
+msgstr "Odoo *재고 관리 앱* 에서 *패키지* 란 특정 품목을 여러 가지 단위로 보관하는 일회성 저장소를 의미합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:8
 msgid ""
@@ -3539,6 +3568,8 @@ msgid ""
 "12-pack, or a case of 36, **must** be configured on the individual product "
 "form. This is because packagings are product specific, not generic."
 msgstr ""
+"예를 들어, 탄산음료 캔 패키지의 경우에는 6팩, 12팩 또는 36팩 세트와 같이 다양한 패키지를 **반드시** 개별 품목 양식에 맞게 "
+"설정해야 합니다. 일반적인 패키지가 아니라 품목별로 달라지기 때문입니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:13
 msgid ""
@@ -3706,7 +3737,7 @@ msgstr "품목의 다양한 패키지 목록."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:93
 msgid "Partial reservation"
-msgstr ""
+msgstr "일부 예약하기"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:95
 msgid ""
@@ -3716,6 +3747,9 @@ msgid ""
 "flexibility expedites order fulfillment by allowing the immediate shipment "
 "of available items, while awaiting the rest."
 msgstr ""
+":ref:`패키지 설정 완료 <inventory/product_management/packaging-setup>` 후, 출고 배송용으로 "
+"전체 또는 일부 수량에 대해 패키지 예약을 할 수 있습니다. 탄력적으로 일부만 패키지를 할 수 있으므로 나머지 품목을 기다리는 동안 "
+"가능한 품목은 즉시 선적할 수 있으므로 신속하게 주문을 처리할 수 있게 됩니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:100
 msgid ""
@@ -3723,6 +3757,8 @@ msgid ""
 "app --> Configuration --> Product Categories`. Then, click :guilabel:`New`, "
 "or select the desired product category."
 msgstr ""
+"패키지 예약 방법을 설정하려면 :menuselection:`재고 관리 앱 --> 환경 설정 --> 품목 카테고리` 로 이동합니다. 그런 "
+"다음 :guilabel:`새로 만들기` 를 클릭하거나 원하는 품목 카테고리를 선택합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:103
 msgid ""
@@ -3730,6 +3766,8 @@ msgid ""
 ":guilabel:`Reserve Packagings` can be set to :guilabel:`Reserve Only Full "
 "Packagings` or :guilabel:`Reserve Partial Packagings`."
 msgstr ""
+"품목 카테고리 양식에 있는 :guilabel:`물류` 섹션의 :guilabel:`패키지 예약` 은 :guilabel:`전체 패키지만 "
+"예약` 또는 :guilabel:`일부 패키지 예약` 로 설정할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:107
 msgid ""
@@ -3739,6 +3777,9 @@ msgid ""
 " :guilabel:`Products` section, tick the :guilabel:`Product Packagings` "
 "checkbox, and click :guilabel:`Save`."
 msgstr ""
+":guilabel:`패키지 예약` 항목을 보려면 :guilabel:`품목 패키지` 기능을 **반드시** 활성화해야 합니다. 이 기능을 "
+"활성화하려면 :menuselection:`재고 관리 앱 --> 환경 설정 --> 설정` 으로 가서 :guilabel:`품목` 섹션으로 "
+"스크롤을 이동한 후 :guilabel:`품목 포장` 확인란을 선택한 다음 :guilabel:`저장` 을 클릭합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst-1
 msgid "Show Reserve Packagings field on the product categories page."
@@ -6495,6 +6536,9 @@ msgid ""
 " --> Settings --> Warehouse`. Note that activating :guilabel:`Multi-Step "
 "Routes` will also activate *Storage Locations*."
 msgstr ""
+":doc:`1단계 <receipts_delivery_one_step>` 에서 3단계로 배송 설정을 변경하려면 "
+":menuselection:`재고 앱 --> 환경 설정 --> 설정 --> 창고` 에서 *다단계 경로* 가 활성화되어 있는지 확인합니다."
+" :guilabel:`다단계 경로` 를 활성화하면 *저장 위치*도 같이 활성화됩니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/delivery_three_steps.rst-1
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst-1
@@ -8625,6 +8669,8 @@ msgid ""
 "evaluates these locations, based on defined capacity, and recommends the "
 "best one on the warehouse transfer form."
 msgstr ""
+"저장 위치에 카테고리를 지정하면 해당 위치가 온도나 접근성 등 특정 요건을 충족하는지 여부를 Odoo에서 확인할 수 있습니다. 그런 다음"
+" Odoo에서는 지정한 수용량을 기준으로 위치에 대해 평가하여 창고 이전 양식에서 가장 적합한 위치를 추천합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:28
 msgid ""
@@ -8687,6 +8733,8 @@ msgid ""
 "across various locations, as shown in this example of :ref:`capacity by "
 "package <inventory/routes/set-capacity-package>`."
 msgstr ""
+"동일한 위치에서 품목 및 패키지 유형별로 수용량을 제한할 수 있으나, :ref:`패키지별 수용량 <inventory/routes/set-"
+"capacity-package>` 의 예시와 같이 여러 위치에 다양한 수량으로 품목을 보관하는 것이 더 실용적일 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:62
 msgid ""
@@ -8746,6 +8794,8 @@ msgid ""
 "Sit` are stored at a single storage location, by specifying those amounts in"
 " the :guilabel:`Capacity by Product` tab of a storage category form."
 msgstr ""
+"단일 저장 위치에 최대 5개의 `대형 캐비닛`과 2개의 `코너 데스크 오른쪽 좌석` 만 보관할 수 있도록 저장 카테고리 양식의 "
+":guilabel:`품목별 수용량` 탭에 해당하는 수량을 지정합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
 msgid "Show storage category limiting by product count."
@@ -8798,6 +8848,8 @@ msgid ""
 " Locations`, and select the desired location. Then, select the created "
 "category in the :guilabel:`Storage Category` field."
 msgstr ""
+"저장소 카테고리가 생성되면 해당 위치에 배정을 시작합니다. :menuselection:`재고 관리 앱 --> 환경 설정 --> 위치` 를"
+" 통해 위치 메뉴로 가서 원하는 위치를 선택합니다. 그런 다음 :guilabel:`저장소 카테고리` 에서 생성된 카테고리를 선택합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:131
 msgid ""
@@ -8838,6 +8890,8 @@ msgid ""
 "locations with the `High Frequency Pallets` storage category :ref:`assigned "
 "to them <inventory/routes/assign-location>`."
 msgstr ""
+"위 예시에 이어서, `자주 사용하는 팔레트` 저장 카테고리를 통해 레모네이드 팔레트를 `자주 사용하는 팔레트` 저장 카테고리를 "
+":ref:`배정된 <inventory/routes/assign-location>` 위치로 보내는 풋어웨이 규칙에 배정합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:0
 msgid "Storage Categories used in a variety of putaway rules."
@@ -15704,6 +15758,10 @@ msgid ""
 "*Manufacture*, or other procurement routes, ensuring products are correctly "
 "supplied to the warehouse."
 msgstr ""
+":guilabel:`보충 위치`: :doc:`경로 설정 "
+"<../../shipping_receiving/daily_operations/use_routes>` 을 할 때 적용하며, 확인란에 "
+"표시하면 *매입*, *제조 관리* 또는 기타 조달 경로에서 제품이 입고될 목적지로 위치를 설정하여 제품이 창고에 정확하게 입고되도록 할 "
+"수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst-1
 msgid "The form for creating a new location."
@@ -16239,6 +16297,8 @@ msgid ""
 " Even if the purchase price on a purchase order differs, the valuation is "
 "the cost defined on the product form."
 msgstr ""
+"Odoo의 기본적인 원가 계산 방법입니다. 품목 원가는 품목 양식에서 수동으로 지정되며, 이 원가는 가치 평가를 계산하는 데 사용됩니다."
+" 매입발주서의 구매 가격이 달라지더라도 가치 평가는 품목 양식에서 지정되어 있는 비용을 계속 사용합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:98
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:139
@@ -16387,6 +16447,8 @@ msgid ""
 "costing method, inventory valuation is *dynamic*, and constantly adjusts "
 "based on the purchase price of products."
 msgstr ""
+"해당 품목의 평균 원가를 전체 보유 재고 수량으로 나누어 품목의 가치를 계산합니다. 이 원가 계산 방법에서 재고 평가는 *동적*이며 품목"
+" 구매 가격에 따라 지속적으로 조정됩니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:155
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:160
@@ -16459,6 +16521,8 @@ msgid ""
 " inventory value, regardless of the purchase price of the product. "
 "Therefore, inventory value is :math:`$144 + (-10 * $12) = $24`."
 msgstr ""
+"품목 배송 수량이 10개인 경우, 품목의 구매가와 무관하게 평균 단가를 사용하여 재고 가치를 계산합니다. 따라서 재고 가치는 "
+":math:`$144 + (-10 * $12) = $24` 가 됩니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:183
 msgid "Receive two products for $6 each:"
