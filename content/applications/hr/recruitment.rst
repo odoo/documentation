@@ -320,7 +320,7 @@ The pre-configured email templates and when to use them are as follows:
   application caught the recruiter's attention, and they have been shortlisted for either a phone
   call or an interview.
 - :guilabel:`Recruitment: Schedule Interview`: this template is used to let the applicant know that
-  they have passed the :guilabel:`Initial Qualification` stage and they will be contacted to set up
+  they have passed the :guilabel:`Initial Qualification` stage, and they will be contacted to set up
   an interview with the recruiter. This email is automatically sent out once the applicant is in the
   :guilabel:`Initial Qualification` stage.
 - :guilabel:`Recruitment: Not interested anymore`: this template is used when an applicant
@@ -382,6 +382,7 @@ the applicant. The email then appears in the chatter.
    - :doc:`recruitment/source_analysis`
    - :doc:`recruitment/recruitment_analysis`
    - :doc:`recruitment/time_in_stage`
+   - :doc:`recruitment/team_performance`
 
 .. toctree::
    :titlesonly:
@@ -395,3 +396,4 @@ the applicant. The email then appears in the chatter.
    recruitment/source_analysis
    recruitment/recruitment_analysis
    recruitment/time_in_stage
+   recruitment/team_performance
