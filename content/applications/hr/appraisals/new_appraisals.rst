@@ -278,4 +278,4 @@ Once the appraisal is marked as *Done*, the :guilabel:`Mark as Done` button disa
 
 .. seealso::
    - :doc:`../appraisals/goals`
-   - :doc:`../appraisals/reporting`
+   - :doc:`../appraisals/appraisal_analysis`
