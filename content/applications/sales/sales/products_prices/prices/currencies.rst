@@ -69,8 +69,6 @@ based).
 
 To the far right, there are two columns, which can be toggled on or off:
 
-- :guilabel:`Use on eBay`: this currency can be used with the connected eBay account (if
-  applicable).
 - :guilabel:`Active`: this currency is activated, which means it can be added to a pricelist, or
   used as the main currency of the company, if desired (via :menuselection:`Accounting app -->
   Configuration --> Settings --> Currencies section`).
@@ -103,9 +101,6 @@ a green switch, and *off* is indicated with a grey switch.
 
 On the right of the currency detail form, the appropriate :guilabel:`Currency Unit` (e.g. `Dollars`)
 and :guilabel:`Currency Subunit` (e.g. `Cents`) can be found.
-
-If the currency is meant to be used for eBay purposes, toggle the :guilabel:`Use on eBay` option to
-the desired activation.
 
 Next, under the :guilabel:`Rates` tab, the various conversion rates can be viewed, added, or
 deleted. Each row shows the :guilabel:`Date` of that specific rate, the :guilabel:`Company` to which
@@ -154,9 +149,6 @@ Then, toggle the currency's availability with the :guilabel:`Active` toggle swit
 
 On the right of the currency detail form, enter the appropriate :guilabel:`Currency Unit` (e.g.
 `Dollars`) and appropriate :guilabel:`Currency Subunit` (e.g. `Cents`).
-
-If the currency is meant to be used for eBay purposes, toggle the :guilabel:`Use on eBay` to the
-desired activation.
 
 Next, under the :guilabel:`Rates` tab, add a new rate by clicking :guilabel:`Add a line`. Then,
 proceed to confirm and adjust the :guilabel:`Date`, :guilabel:`Company`, :guilabel:`Unit per...`,
