@@ -9,7 +9,6 @@ Online payments
 
    payment_providers/wire_transfer
    payment_providers/adyen
-   payment_providers/alipay
    payment_providers/amazon_payment_services
    payment_providers/asiapay
    payment_providers/authorize
@@ -452,7 +451,6 @@ other payments.
 .. seealso::
    - :doc:`payment_providers/wire_transfer`
    - :doc:`payment_providers/adyen`
-   - :doc:`payment_providers/alipay`
    - :doc:`payment_providers/authorize`
    - :doc:`payment_providers/asiapay`
    - :doc:`payment_providers/buckaroo`
