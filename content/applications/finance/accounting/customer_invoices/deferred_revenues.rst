@@ -33,18 +33,16 @@ Make sure the default settings are correctly configured for your business. To do
 
 Journal
   The deferral entries are posted in this journal.
-Deferred Expense Account
-  Expenses are deferred on this Current Asset account until they are recognized.
-Deferred Revenue Account
+Deferred Revenue
   Revenues are deferred on this Current Liability account until they are recognized.
 Generate Entries
   By default, Odoo :ref:`automatically generates <customer_invoices/deferred/generate_on_validation>`
   the deferral entries when you post a customer invoice. However, you can also choose to
   :ref:`generate them manually <customer_invoices/deferred/generate_manually>` by selecting the
   :guilabel:`Manually & Grouped` option instead.
-Amount Computation
-  Suppose an invoice of $1200 must be deferred over 12 months. The :guilabel:`Equal per month`
-  computation accounts for $100 each month, while the :guilabel:`Based on days` computation
+Based on
+  Suppose an invoice of $1200 must be deferred over 12 months. The :guilabel:`Months`
+  computation accounts for $100 each month, while the :guilabel:`Days` computation
   accounts for different amounts depending on the number of days in each month.
 
 .. _customer_invoices/deferred/generate_on_validation:
