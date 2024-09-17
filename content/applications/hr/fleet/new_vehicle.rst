@@ -43,6 +43,8 @@ Vehicle form fields
    fields that apply to the model. If some of the fields do not appear, this may indicate there is
    no model selected.
 
+.. _fleet/new_vehicle/new-driver:
+
 Driver section
 --------------
 
