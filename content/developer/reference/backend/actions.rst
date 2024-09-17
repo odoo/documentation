@@ -407,13 +407,13 @@ how the POS interface works.
 
 .. _reference/actions/cron:
 
-Automated Actions (``ir.cron``)
+Scheduled Actions (``ir.cron``)
 ===============================
 
 Actions triggered automatically on a predefined frequency.
 
 ``name``
-    Name of the automated action (Mainly used in log display)
+    Name of the scheduled action (Mainly used in log display)
 
 ``interval_number``
     Number of *interval_type* uom between two executions of the action
