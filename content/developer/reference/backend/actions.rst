@@ -410,27 +410,19 @@ how the POS interface works.
 
 .. _reference/actions/cron:
 
-Automated Actions (``ir.cron``)
+Scheduled Actions (``ir.cron``)
 ===============================
 
 Actions triggered automatically on a predefined frequency.
 
 ``name``
-    Name of the automated action (Mainly used in log display)
+    Name of the scheduled action (Mainly used in log display)
 
 ``interval_number``
     Number of *interval_type* uom between two executions of the action
 
 ``interval_type``
     Unit of measure of frequency interval (``minutes``, ``hours``, ``days``, ``weeks``, ``months``)
-
-``numbercall``
-    Number of times this action has to be run.
-    If the action is expected to run indefinitely, set to ``-1``.
-
-``doall``
-    Boolean precising whether the missed actions have to be executed in case of
-    server restarts.
 
 ``model_id``
     Model on which this action will be called
@@ -445,3 +437,47 @@ Actions triggered automatically on a predefined frequency.
 
 ``nextcall``
     Next planned execution date of this action (date/time format)
+
+``priority``
+    Priority of the action when executing multiple actions at the same time
+
+
+Advanced use: Batching
+----------------------
+
+When executing a scheduled action, it's recommended to try batching progress in order
+to avoid hogging a worker for a long period of time and possibly running into timeout exceptions.
+
+Odoo provides a simple API for scheduled action batching;
+
+.. code-block:: python
+
+      self.env['ir.cron']._notify_progress(done=XX:int, remaining=XX:int)
+
+This method allows the scheduler to know if progress was made and whether there is
+still remaining work that must be done.
+
+By default, if the API is used, the scheduler tries to process 10 batches in one sitting.
+If there are still remaining tasks after those 10 batches, a new cron call will be executed as
+soon as possible.
+
+Advanced use: Triggers
+----------------------
+
+For more complex use cases, Odoo provides a more advanced way to trigger
+scheduled actions directly from business code.
+
+.. code-block:: python
+
+      action_record._trigger(at=XX:date)
+
+Security
+--------
+
+To avoid a fair usage of resources among scheduled actions, some security measures ensure the
+correct functioning of your scheduled actions.
+
+- If a scheduled action encounters an error or a timeout three consecutive times,
+  it will skip its current execution and be considered as failed.
+- If a scheduled action fails its execution five consecutive times over a period of at least
+  seven days, it will be deactivated and will notify the DB admin.
