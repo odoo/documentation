@@ -33,11 +33,16 @@ name. Then, go to the :guilabel:`Inventory` tab, and enable the :guilabel:`Buy` 
    :align: center
    :alt: Required configuration for purchasable products.
 
+.. _purchase/manage_deals/vendor-pricelist:
+
 Vendor pricelist
 ----------------
 
 In the :guilabel:`Purchase` tab of the product form, input the vendor and their price, to have this
 information auto-populate on an |RFQ| each time the product is listed.
+
+.. seealso::
+   :doc:`../products/pricelist`
 
 Default columns include :guilabel:`Quantity`, :guilabel:`Price`, and :guilabel:`Delivery Lead Time`,
 but other columns like, :guilabel:`Product Variant` or :guilabel:`Discounts`, can also be enabled.
