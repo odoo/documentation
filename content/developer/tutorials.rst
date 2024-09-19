@@ -13,6 +13,7 @@ Tutorials
    tutorials/define_module_data
    tutorials/restrict_data_access
    tutorials/unit_tests
+   tutorials/importable_modules
    tutorials/mixins
    tutorials/pdf_reports
 
@@ -73,6 +74,11 @@ Expand your knowledge on the server framework
 
       Write effective unit tests in Python to ensure the resilience of your code and safeguard it
       against unexpected behaviors and regressions.
+
+   .. card:: Write importable modules
+      :target: tutorials/importable_modules
+
+      Write modules that define new models, fields and logic using only data files.
 
    .. card:: Reuse code with mixins
       :target: tutorials/mixins
