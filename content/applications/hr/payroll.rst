@@ -963,6 +963,7 @@ form.
    - :doc:`payroll/payslips`
    - :doc:`payroll/work_entries`
    - :doc:`payroll/reporting`
+   - :doc:`payroll/payroll_analysis`
 
 .. toctree::
    :titlesonly:
@@ -971,3 +972,4 @@ form.
    payroll/work_entries
    payroll/payslips
    payroll/reporting
+   payroll/payroll_analysis
