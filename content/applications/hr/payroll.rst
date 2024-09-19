@@ -964,6 +964,7 @@ form.
    - :doc:`payroll/work_entries`
    - :doc:`payroll/reporting`
    - :doc:`payroll/work_entry_analysis`
+   - :doc:`payroll/salary_attachment`
 
 .. toctree::
    :titlesonly:
@@ -973,3 +974,4 @@ form.
    payroll/payslips
    payroll/reporting
    payroll/work_entry_analysis
+   payroll/salary_attachment
