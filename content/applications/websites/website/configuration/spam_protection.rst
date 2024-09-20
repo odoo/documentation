@@ -121,10 +121,14 @@ On Odoo
   :guilabel:`Site Key` field in Odoo.
 - Open the Google reCAPTCHA page, copy the :guilabel:`Secret key`, and paste it into the
   :guilabel:`Secret Key` field in Odoo.
-- Change the default :guilabel:`Minimum score` (`0.50`) if necessary, using a value between `1.00`
+- Change the default :guilabel:`Minimum score` (`0.70`) if necessary, using a value between `1.00`
   and `0.00`. The higher the threshold is, the more difficult it is to pass the reCAPTCHA, and vice
-  versa.
+  versa.  Out of the 11 levels, only the following four score levels are available by default:
+  `0.1`, `0.3`, `0.7` and `0.9`.
 - Click :guilabel:`Save`.
+
+.. seealso::
+   `Interpret reCAPTCHA scores - Google documentation <https://cloud.google.com/recaptcha/docs/interpret-assessment-website#interpret_scores>`_
 
 You can notify visitors that reCAPTCHA protects a form. To do so, open the website editor and
 navigate to the form. Then, click somewhere on the form, and on the right sidebar's
