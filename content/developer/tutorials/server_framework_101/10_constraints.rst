@@ -9,7 +9,7 @@ users from setting a negative expected price.
 
 Odoo provides two ways to set up automatically verified invariants:
 :func:`Python constraints <odoo.api.constrains>` and
-:attr:`SQL constraints <odoo.models.Model._sql_constraints>`.
+:attr:`SQL constraints <odoo.models.Constraint>`.
 
 SQL
 ===
@@ -33,14 +33,16 @@ SQL
         :align: center
         :alt: Constraints on names
 
-SQL constraints are defined through the model attribute
-:attr:`~odoo.models.Model._sql_constraints`. This attribute is assigned a list
-of triples containing strings ``(name, sql_definition, message)``, where ``name`` is a
-valid SQL constraint name, ``sql_definition`` is a table_constraint_ expression
-and ``message`` is the error message.
+SQL objects are defined through :attr:`~odoo.models.Constraint` attributes.
 
-You can find a simple example
-`here <https://github.com/odoo/odoo/blob/24b0b6f07f65b6151d1d06150e376320a44fd20a/addons/analytic/models/analytic_account.py#L20-L23>`__.
+Simple example:
+
+.. code-block:: python
+
+    _check_percentage = models.Constraint(
+        'CHECK(percentage >= 0 AND percentage <= 100)',
+        'The percentage of an analytic distribution should be between 0 and 100.',
+    )
 
 .. exercise:: Add SQL constraints.
 
