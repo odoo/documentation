@@ -854,9 +854,10 @@ Symbols and Conventions
       at the beginning of the method.
 
 - In a Model attribute order should be
-    #. Private attributes (``_name``, ``_description``, ``_inherit``, ``_sql_constraints``, ...)
+    #. Private attributes (``_name``, ``_description``, ``_inherit``, ...)
     #. Default method and ``default_get``
     #. Field declarations
+    #. SQL constraints and indexes
     #. Compute, inverse and search methods in the same order as field declaration
     #. Selection method (methods used to return computed values for selection fields)
     #. Constrains methods (``@api.constrains``) and onchange methods (``@api.onchange``)

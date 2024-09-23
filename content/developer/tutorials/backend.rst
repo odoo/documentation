@@ -797,7 +797,9 @@ Model constraints
 
 Odoo provides two ways to set up automatically verified invariants:
 :func:`Python constraints <odoo.api.constrains>` and
-:attr:`SQL constraints <odoo.models.Model._sql_constraints>`.
+:attr:`SQL constraints <odoo.models.Constraint>`.
+In a similar way, you can add more complex
+:attr:`SQL indexes <odoo.models.Index>`.
 
 A Python constraint is defined as a method decorated with
 :func:`~odoo.api.constrains`, and invoked on a recordset. The decorator
@@ -819,11 +821,9 @@ raise an exception if its invariant is not satisfied::
    Add a constraint that checks that the instructor is not present in the
    attendees of his/her own session.
 
-SQL constraints are defined through the model attribute
-:attr:`~odoo.models.Model._sql_constraints`. The latter is assigned to a list
-of triples of strings ``(name, sql_definition, message)``, where ``name`` is a
-valid SQL constraint name, ``sql_definition`` is a table_constraint_ expression,
-and ``message`` is the error message.
+Constraints and indexes are defined using:
+:attr:`~odoo.models.Constraint`,
+:attr:`~odoo.models.Index` and :attr:`~odoo.models.UniqueIndex`.
 
 .. exercise:: Add SQL constraints
 

@@ -63,8 +63,6 @@ Odoo automatically exports translatable strings from "data"-type content:
   * if ``selection`` is present and a list (or tuple), it's exported
   * if their ``translate`` attribute is set to ``True``, all of their existing
     values (across all records) are exported
-* help/error messages of :attr:`~odoo.models.Model._constraints` and
-  :attr:`~odoo.models.Model._sql_constraints` are exported
 
 Explicit exports
 ================

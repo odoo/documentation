@@ -7,6 +7,7 @@ Changelog
 Odoo Online version 18.1
 ========================
 
+- Declare constraints and indexes as model attributes with `#175783 <https://github.com/odoo/odoo/pull/175783>`_.
 - The `json` controllers have been renamed to `jsonrpc`. They are called the same, only the
   `type` in the python files changed. See `#183636 <https://github.com/odoo/odoo/pull/183636>`_.
 
