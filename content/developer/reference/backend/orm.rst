@@ -63,7 +63,6 @@ value::
         Defaults to whatever value was set for :attr:`~._auto`.
 
     .. autoattribute:: _table
-    .. autoattribute:: _sql_constraints
 
     .. autoattribute:: _register
     .. autoattribute:: _abstract
@@ -509,6 +508,26 @@ behavior is desired:
 
   :class:`~odoo.fields.Many2one`
   :type: :class:`~odoo.addons.base.models.res_company`
+
+Constraints and Indexes
+=======================
+
+Similarly to fields, you can declare
+:attr:`~odoo.models.Constraint`,
+:attr:`~odoo.models.Index` and :attr:`~odoo.models.UniqueIndex`.
+The name of the attribute must begin with `_` to avoid name clashes with field
+names.
+
+You can customize error messages.
+It can either be a string and its translation will be provided in the internal
+reflected constraint table.
+Otherwise it can be a function that takes as parameter `(env, diag)`
+where, respectively, they denote the environment and psycopg diagnostics.
+
+    class AModel(models.Model):
+        _name = 'a.model'
+        _my_check = models.Constraint("CHECK (x > y)", "x > y is not true")
+        _name_idx = models.Index("(last_name, first_name)")
 
 Recordsets
 ==========
