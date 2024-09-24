@@ -1306,8 +1306,24 @@ Reference (`reference`)
     - `model_field`: name of an `ir.model` containing the model of the records that can be selected.
       When this option is set, the select part of the `reference` field isn't displayed.
 
+.. _reference/javascript_reference/view_widgets:
+
 Widgets
 -------
+
+Ribbon (`web_ribbon`)
+    This widget displays a ribbon at the top right corner of the kanban card or the form view sheet,
+    for instance, to indicate archived records.
+
+    .. code-block:: xml
+
+        <widget name="web_ribbon" title="Archived" bg_color="text-bg-danger"/>
+
+    Attributes:
+
+    - `title`: text displayed in the ribbon.
+    - `tooltip`: text displayed in the ribbon's tooltip.
+    - `bg-class`: classname to set on the ribbon, typically to define the ribbon's color.
 
 Week Days (`week_days`)
     This widget displays a list of checkboxes for week days, 1 checkbox for each day
