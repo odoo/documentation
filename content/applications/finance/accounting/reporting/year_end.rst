@@ -62,10 +62,10 @@ Then, to close the fiscal year:
     <accounting/reporting/aged-payable>` reports.
   - Audit all accounts, being sure to fully understand all transactions and their nature, making
     sure to include loans and fixed assets.
-  - Optionally, run :ref:`payments matching <payments/matching>` to validate any open vendor bills
-    and customer invoices with their payments. While this step is optional, it could assist the
-    year-end closing process if all outstanding payments and invoices are reconciled, potentially
-    finding errors or mistakes in the system.
+  - Optionally, run :ref:`payments matching <accounting/payments/matching>` to validate any open
+    vendor bills and customer invoices with their payments. While this step is optional, it could
+    assist the year-end closing process if all outstanding payments and invoices are reconciled,
+    potentially finding errors or mistakes in the system.
 
 Next, the accountant likely verifies balance sheet items and book entries for:
 
