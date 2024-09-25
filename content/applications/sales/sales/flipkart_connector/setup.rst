@@ -41,17 +41,22 @@ Now copy the **API key** and **Secret**. It will be needed to configure Flipkart
 Configure Flipkart Connector in Odoo
 ====================================
 
-In Odoo you can find the Flipkart Configuration under :menuselection:`Settings --> Sale --> Flipkart Connector`
+In Odoo you can find the Flipkart Configuration under :menuselection:`Settings --> Sale --> Flipkart Connector`,
+and click on Flipkart Accounts
 
 .. image:: setup/setup06.png
   :align: center
 
-Enter the **API key** and **Secret** generated from Flipkart Seller Dashboard as **Client Id** and **Client Secret** and save it.
-Now you have succesfully configured your credentials in Odoo. Now you just need to :ref:`verify your Flipkart credentials<flipkart/verify_credential>`
+Create a new account, and configure the **API key** and **Secret** generated from Flipkart Seller Dashboard
+as **Client Id** and **Client Secret** and save. You are good to go Flipkart Connector will start fetching
+new order.
+
+.. image:: setup/setup07.png
 
 .. note::
-  Odoo will setup a default Sale Team and Flipkart Location for Flipkart Connector. If not selected by the user.
+  Odoo will setup a default Sale Team and Flipkart Location for Flipkart Connector.
+
+.. image:: setup/setup08.png
 
 .. seealso::
    - :doc:`features`
-   - :doc:`verify`

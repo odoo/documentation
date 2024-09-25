@@ -50,4 +50,4 @@ The connector is able to:
 
 .. seealso::
    - :doc:`setup`
-   - :doc:`verify`
+
