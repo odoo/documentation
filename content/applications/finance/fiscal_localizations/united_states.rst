@@ -717,7 +717,7 @@ Create batch payment
 Now, record each payment in Odoo using the |NACHA| payment method.
 
 .. seealso::
-   :ref:`Register Payments in Odoo <payments/register>`
+   :ref:`Register Payments in Odoo <accounting/payments/from-invoice-bill>`
 
 .. important::
    Be aware of the cut-off time for same-day payments. Either the file needs to have a future date
