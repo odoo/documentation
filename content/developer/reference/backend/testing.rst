@@ -609,8 +609,9 @@ Here are some example of steps:
       tour.stepUtils.showAppsMenuItem(),
       // Second step
       {
-          trigger: '.o_app[data-menu-xmlid="your_module.maybe_your_module_menu_root"]',
-          edition: 'community'  // Optional
+         trigger: '.o_app[data-menu-xmlid="your_module.maybe_your_module_menu_root"]',
+         isActive: ['community'],  // Optional
+         run: "click",
       }, {
           // Third step
       },
@@ -621,7 +622,7 @@ Here are some example of steps:
 
       {
           trigger: '.js_product:has(strong:contains(Chair floor protection)) .js_add',
-          extra_trigger: '.oe_advanced_configurator_modal',  // This ensure we are in the wizard
+          run: "click",
       },
 
 .. example::
@@ -629,74 +630,83 @@ Here are some example of steps:
    .. code-block:: javascript
 
       {
+          isActive: ["mobile", "enterprise"],
+          content: "Click on Add a product link",
           trigger: 'a:contains("Add a product")',
-          // Extra-trigger to make sure a line is added before trying to add another one
-          extra_trigger: '.o_field_many2one[name="product_template_id"] .o_external_button',
+          tooltipPosition: "bottom",
+          async run(helpers) { //Exactly the same as run: "click"
+            helpers.click();
+          }
       },
 
 Here are some possible arguments for your personalized steps:
 
-- **trigger**: Selector/element to ``run`` an action on. The tour will
+- **trigger**: Required, Selector/element to ``run`` an action on. The tour will
   wait until the element exists and is visible before ``run``-ing the
   action *on it*.
-- **extra_trigger**: Optional secondary condition for the step to
-  ``run``. Will be waited for like the **trigger** element but the
-  action will not run on the extra trigger.
+- **run**: Optional, Action to perform on the *trigger* element. If no ``run``,
+  no action.
 
-  Useful to have a precondition, or two different and unrelated
-  conditions.
-- **run**: Action to perform on the *trigger* element.
+  The action can be:
 
-  By default, tries to set the **trigger**'s content to ``Text`` if
-  it's an ``input``, otherwise ``click`` it.
-
-  The action can also be:
-
-  - A function, synchronous, executed with the trigger's ``Tip`` as
+  - A function, asynchronous, executed with the trigger's ``Tip`` as
     context (``this``) and the action helpers as parameter.
   - The name of one of the action helpers, which will be run on the
     trigger element:
 
     .. rst-class::  o-definition-list
 
+    ``check``
+        Ensures that the **trigger** element is checked. This helper is intended
+        for `<input[type=checkbox]>` elements only.
+    ``clear``
+        Clears the value of the **trigger** element. This helper is
+        intended for `<input>` or `<textarea>` elements only.
     ``click``
-        Clicks the element, performing all the relevant intermediate
+        Clicks the **trigger** element, performing all the relevant intermediate
         events.
-    :samp:`text {content}`
-        Clicks (focuses) the element then sets ``content`` as the
-        element's value (if an input), option (if a select), or
-        content.
-    ``dblclick``, ``tripleclick``
-        Same as ``click`` with multiple repetitions.
-    ``clicknoleave``
-        By default, ``click`` (and variants) will trigger "exit"
-        events on the trigger element (mouseout, mouseleave). This
-        helper suppresses those (note: further clicks on other
-        elements will not trigger those events implicitly).
-    ``text_blur``
-        Similar to ``text`` but follows the edition with ``focusout``
-        and ``blur`` events.
+    ``dblclick``,
+        Same as ``click`` with two repetitions.
     :samp:`drag_and_drop {target}`
-       Simulates the dragging of the **trigger** element over to the
-       ``target``.
-- **edition**: Optional,
+        Simulates the dragging of the **trigger** element over to the ``target``.
+    :samp:`edit {content}`
+        ``clear`` the element and then ``fill`` the ``content``.
+    :samp:`editor {content}`
+        Focus the **trigger** element (wysiwyg) and then ``press`` the ``content``.
+    :samp:`fill {content}`
+        Focus the **trigger** element and then ``press`` the ``content``. This helper is
+        intended for `<input>` or `<textarea>` elements only.
+    ``hover``
+        Performs a hover sequence on the **trigger** element.
+    :samp:`press {content}`
+        Performs a keyboard event sequence.
+    :samp:`range {content}`
+        Focus the **trigger** element and set ``content`` as value. This helper is intended
+        for `<input[type=range]>` elements only.
+    :samp:`select {value}`
+        Performs a selection event sequence on **trigger** element. Select the option by its
+        ``value``. This helper is intended for `<select>` elements only.
+    :samp:`selectByIndex {index}`
+        Same as ``select`` but select the option by its ``index``. Note that first option has
+        index 0.
+    :samp:`selectByLabel {label}`
+        Same as ``select`` but select the option by its ``label``.
+    ``uncheck``
+        Ensures that the **trigger** element is unchecked. This helper is intended
+        for `<input[type=checkbox]>` elements only.
 
-  - If you don't specify an edition, the step will be active in both community and enterprise.
-  - Sometimes, a step will be different in enterprise or in community. You can then write two
-    steps, one for the enterprise edition and one for the community one.
-  - Generally, you want to specify an edition for steps that use the main menu as the main
-    menus are different in community and enterprise.
-- **position**: Optional, ``"top"``, ``"right"``, ``"bottom"``, or
+
+- **isActive**: Optional,
+  Activates the step only if all conditions of isActive array are met.
+  - Browser is in either **desktop** or **mobile** mode.
+  - The tour concerns either **community** or **enterprise** edition.
+  - The tour is run in either **auto** (runbot) or **manual** (onboarding) mode.
+- **tooltipPosition**: Optional, ``"top"``, ``"right"``, ``"bottom"``, or
   ``"left"``. Where to position the tooltip relative to the **target**
   when running interactive tours.
 - **content**: Optional but recommended, the content of the tooltip in
   interactive tours, also logged to the console so very useful to
   trace and debug automated tours.
-- **auto**: Whether the tour manager should wait for the user to
-  perform the action if the tour is interactive, defaults to
-  ``false``.
-- **in_modal**: If set the **trigger** element will be searched only
-  in the top modal window, defaults to ``false``.
 - **timeout**: How long to wait until the step can ``run``, in
   milliseconds, 10000 (10 seconds).
 
@@ -850,7 +860,7 @@ case there are two main tricks:
     - the tour continues as soon as you resume execution
   **Drawbacks**
     - page interaction is limited as all javascript is blocked
-    
+
 - A step property ``pause: true,`` in debug mode (debug=True).
 
   The tour will stop at the end of the step. This allows inspecting
