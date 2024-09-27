@@ -134,7 +134,7 @@ existing model, which means we will use the first mechanism. For example::
     from odoo import fields, models
 
     class InheritedModel(models.Model):
-        _inherit = "inherited.model"
+        _inherit = ["inherited.model"]
 
         new_field = fields.Char(string="New Field")
 

@@ -3251,7 +3251,7 @@ Model Commons
 -------------
 
 .. currentmodule:: odoo.addons.base.models.ir_ui_view
-.. autoattribute:: Model._date_name
+.. autoattribute:: Base._date_name
     :noindex:
 
 .. _reference/view_architectures/activity:
