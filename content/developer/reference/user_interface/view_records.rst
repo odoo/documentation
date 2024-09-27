@@ -69,7 +69,7 @@ Fields
 
 View records expose a number of fields.
 
-.. autoclass:: odoo.addons.base.models.ir_ui_view.View()
+.. autoclass:: odoo.addons.base.models.ir_ui_view.IrUiView()
 
    .. attribute:: name
 
@@ -363,8 +363,8 @@ specifies how the matched node should be modified.
 Model commons
 =============
 
-.. autoclass:: odoo.addons.base.models.ir_ui_view.View()
+.. autoclass:: odoo.addons.base.models.ir_ui_view.Base()
    :noindex:
 
-   .. automethod:: Model.get_views
-   .. automethod:: Model.get_view
+   .. automethod:: Base.get_views
+   .. automethod:: Base.get_view

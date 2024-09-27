@@ -1123,7 +1123,7 @@ fields, methods and meta-information (defaults & al) from its base.
 
     class Inheritance1(models.Model):
         _name = 'inheritance.1'
-        _inherit = 'inheritance.0'
+        _inherit = ['inheritance.0']
         _description = 'Inheritance One'
 
         def call(self):
@@ -1161,8 +1161,8 @@ them (e.g. to change their default sort order)::
 
     name = fields.Char(default="A")
 
-    class Extension1(models.Model):
-    _inherit = 'extension.0'
+    class Extension0(models.Model):
+    _inherit = ['extension.0']
 
     description = fields.Char(default="Extended")
 
@@ -1263,12 +1263,16 @@ and overridden by the ones given in subclasses.
 For instance, the second class below only adds a tooltip on the field
 ``state``::
 
-    class First(models.Model):
-        _name = 'foo'
+    class FirstFoo(models.Model):
         state = fields.Selection([...], required=True)
 
-    class Second(models.Model):
-        _inherit = 'foo'
+    class FirstFoo(models.Model):
+        _inherit = ['first.foo']
+        state = fields.Selection(help="Blah blah blah")
+
+    class WrongFirstFooClassName(models.Model):
+        _name = 'first.foo'  # force the model name
+        _inherit = ['first.foo']
         state = fields.Selection(help="Blah blah blah")
 
 .. _reference/exceptions:
