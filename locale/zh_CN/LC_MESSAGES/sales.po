@@ -21,17 +21,17 @@
 # Jeffery CHEN <jeffery9@gmail.com>, 2024
 # Mandy Choy <mnc@odoo.com>, 2024
 # diaojiaolou <124412206@qq.com>, 2024
-# Wil Odoo, 2024
 # Chloe Wang, 2024
+# Wil Odoo, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-21 11:43+0000\n"
+"POT-Creation-Date: 2024-09-24 10:43+0000\n"
 "PO-Revision-Date: 2023-11-08 08:57+0000\n"
-"Last-Translator: Chloe Wang, 2024\n"
+"Last-Translator: Wil Odoo, 2024\n"
 "Language-Team: Chinese (China) (https://app.transifex.com/odoo/teams/41243/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -84,11 +84,13 @@ msgstr "在创建商机之前，*潜在客户*可作为资格审查步骤。这�
 #: ../../content/applications/sales/crm/track_leads/resellers.rst:9
 #: ../../content/applications/sales/point_of_sale/combos.rst:16
 #: ../../content/applications/sales/point_of_sale/configuration.rst:6
+#: ../../content/applications/sales/point_of_sale/configuration.rst:52
 #: ../../content/applications/sales/point_of_sale/employee_login.rst:13
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:13
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:20
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:15
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:20
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:12
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:14
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:19
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/vantiv.rst:17
@@ -114,6 +116,7 @@ msgstr "在创建商机之前，*潜在客户*可作为资格审查步骤。这�
 #: ../../content/applications/sales/sales/send_quotations/pdf_quote_builder.rst:24
 #: ../../content/applications/sales/sales/send_quotations/quote_template.rst:14
 #: ../../content/applications/sales/subscriptions/closing.rst:9
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:21
 #: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:17
 msgid "Configuration"
 msgstr "配置"
@@ -1469,11 +1472,9 @@ msgstr ""
 #: ../../content/applications/sales/crm/acquire_leads/send_quotes.rst:201
 msgid ""
 "To set up new values for this field, navigate to :menuselection:`CRM --> "
-"Configuration --> Lost Reasons`, and click both :guilabel:`New`and "
+"Configuration --> Lost Reasons`, and click both :guilabel:`New` and "
 ":guilabel:`Save` for each new entry added to the list."
 msgstr ""
-"要为该字段设置新值，请导航至 :menuselection:`CRM --> 配置 --> 丢失原因`，并为添加到列表的每个新条目同时点击 "
-":guilabel:`新建` 和 :guilabel:`保存`。"
 
 #: ../../content/applications/sales/crm/acquire_leads/send_quotes.rst:205
 msgid ""
@@ -2863,7 +2864,7 @@ msgstr ""
 "查看预期收入报告得益于多种视图的使用。默认图表视图可用于确定哪些销售人员有望带来最多收入，而列表视图和透视视图则可提供有关具体交易的更多细节。"
 
 #: ../../content/applications/sales/crm/performance/expected_revenue_report.rst:140
-#: ../../content/applications/sales/subscriptions/reports.rst:97
+#: ../../content/applications/sales/subscriptions/reports.rst:92
 msgid "Graph view"
 msgstr "图形视图"
 
@@ -2911,7 +2912,7 @@ msgid "Graph view icons in order: bar chart, line chart, pie chart, stacked."
 msgstr "图表视图图标依次为：条形图、折线图、饼状图、堆叠图。"
 
 #: ../../content/applications/sales/crm/performance/expected_revenue_report.rst:164
-#: ../../content/applications/sales/subscriptions/reports.rst:158
+#: ../../content/applications/sales/subscriptions/reports.rst:131
 msgid "List view"
 msgstr "列表视图"
 
@@ -2955,7 +2956,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/crm/performance/expected_revenue_report.rst:189
-#: ../../content/applications/sales/subscriptions/reports.rst:135
+#: ../../content/applications/sales/subscriptions/reports.rst:143
 msgid "Pivot view"
 msgstr "数据透视视图"
 
@@ -3038,14 +3039,16 @@ msgid ""
 "opportunities are grouped by month in a :icon:`oi-view-kanban` "
 ":guilabel:`(Kanban)` view."
 msgstr ""
+"默认 :guilabel:`预测` 报告包括分配给当前用户管道的商机，预计将在四个月内完成。它还显示未分配预期结束日期的商机。在 :icon:`oi-"
+"view-kanban`（看板）` 视图中，商机按月份分组。"
 
 #: ../../content/applications/sales/crm/performance/forecast_report.rst-1
 msgid "A sample version of the Forecast report in the CRM app."
-msgstr ""
+msgstr "CRM 应用程序中的预测报告示例版本。"
 
 #: ../../content/applications/sales/crm/performance/forecast_report.rst:28
 msgid "Expected closing date"
-msgstr ""
+msgstr "预期成交日期"
 
 #: ../../content/applications/sales/crm/performance/forecast_report.rst:30
 msgid ""
@@ -3054,6 +3057,8 @@ msgid ""
 ":guilabel:`Forecast` page, select the Kanban card for the desired "
 "opportunity, then click and drag the card to the desired column."
 msgstr ""
+"商机按机会表单中 *预计成交* 字段指定的日期分组。要直接从 :guilabel:`预测` "
+"页面更改该日期，请选择所需机会的看板卡，然后点击并拖动该卡到所需列。"
 
 #: ../../content/applications/sales/crm/performance/forecast_report.rst:35
 msgid ""
@@ -3063,12 +3068,14 @@ msgid ""
 "menu, click :guilabel:`Expected Closing` to expand the list of available "
 "options, and select a desired amount of time from the list."
 msgstr ""
+"预测的默认时间范围是*月*。可以通过点击报告顶部 :guilabel:`搜索...` 栏旁边的 |caret| 来更改。在下拉菜单中的 "
+":guilabel:`分组方式` 标题下，点击 :guilabel:`预计成交` 以展开可用选项列表，并从列表中选择所需的时间。"
 
 #: ../../content/applications/sales/crm/performance/forecast_report.rst:40
 msgid ""
 "After an opportunity is added to a new month, the *Expected Closing* field "
 "on the opportunity form is updated to the *last* date of the new month."
-msgstr ""
+msgstr "商机添加到新月份后，机会表单上的 *预计成交* 字段会更新为新月份的 *最后* 日期。"
 
 #: ../../content/applications/sales/crm/performance/forecast_report.rst:44
 msgid ""
@@ -3078,68 +3085,72 @@ msgid ""
 "the :guilabel:`Expected Closing` field, and use the calendar popover to "
 "select a new closing date."
 msgstr ""
+"*预期成交* 字段也可在机会卡上手动更新。要执行此操作，请点击 :guilabel:`预测` 页面上某个机会的看板卡，以打开该机会的详细表单。点击 "
+":guilabel:`预期成交` 字段，并使用日历弹出窗口选择新的成交日期。"
 
 #: ../../content/applications/sales/crm/performance/forecast_report.rst:50
 msgid "Prorated revenue"
-msgstr ""
+msgstr "按比例分配的收入"
 
 #: ../../content/applications/sales/crm/performance/forecast_report.rst:52
 msgid ""
 "At the top of the column for each month on the :guilabel:`Forecast` "
 "reporting page, to the right of the progress bar, is a sum of the prorated "
 "revenue for that time frame."
-msgstr ""
+msgstr "在 :guilabel:`预测` 报告页面每个月的列顶部，进度条右侧是该时间段按比例计算的收入总和。"
 
 #: ../../content/applications/sales/crm/performance/forecast_report.rst:55
 msgid "The prorated revenue is calculated using the formula below:"
-msgstr ""
+msgstr "按比例计算的收入按以下公式计算："
 
 #: ../../content/applications/sales/crm/performance/forecast_report.rst:57
 msgid ""
 "\\text{Expected Revenue} \\times \\text{Probability} = \\text{Prorated "
 "Revenue}"
 msgstr ""
+"\\text{Expected Revenue} \\times \\text{Probability} = \\text{Prorated "
+"Revenue}"
 
 #: ../../content/applications/sales/crm/performance/forecast_report.rst:61
 msgid ""
 "As opportunities are moved from one column to another, the column's revenue "
 "is automatically updated to reflect the change."
-msgstr ""
+msgstr "当机会从一列移到另一列时，该列的收入会自动更新以反映变化。"
 
 #: ../../content/applications/sales/crm/performance/forecast_report.rst:65
 msgid "A forecast report for June includes two opportunities:"
-msgstr ""
+msgstr "六月份的预测报告包括两个商机："
 
 #: ../../content/applications/sales/crm/performance/forecast_report.rst:67
 msgid ""
 "The first opportunity, `Global Solutions`, has an expected revenue of "
 "`$3,800`, and a probability of `90%`. This results in a prorated revenue of "
 "`$3,420`."
-msgstr ""
+msgstr "第一个商机 `全球解决方案` 的预期收入为 `$3,800`，概率为 `90%`。因此，按比例计算的收入为 `$3,420`。"
 
 #: ../../content/applications/sales/crm/performance/forecast_report.rst:70
 msgid ""
 "The second opportunity, `Quote for 600 Chairs`, has an expected revenue of "
 "`$22,500`, and a probability of `20%`. This results in a prorated revenue of"
 " `$4,500`."
-msgstr ""
+msgstr "第二个商机 `600 把椅子的报价` 的预期收入为 `$22,500`，概率为`20%`。因此，按比例计算的收入为 `$4,500`。"
 
 #: ../../content/applications/sales/crm/performance/forecast_report.rst:73
 msgid ""
 "The combined prorated revenue of the opportunities is `$7,920`, which is "
 "listed at the top of the column for the month."
-msgstr ""
+msgstr "这些机会按比例计算的总收入为 `$7,920`，列在当月一栏的最上方。"
 
 #: ../../content/applications/sales/crm/performance/forecast_report.rst:0
 msgid ""
 "An example of the prorated revenue for one month of the forecast report."
-msgstr ""
+msgstr "预测报告中按比例计算的一个月收入示例。"
 
 #: ../../content/applications/sales/crm/performance/forecast_report.rst:81
 msgid ""
 "For more information on how probability is assigned to opportunities, see "
 ":doc:`../track_leads/lead_scoring`"
-msgstr ""
+msgstr "有关如何为机会分配概率的更多信息，请参阅 :doc:`../track_leads/lead_scoring` 。"
 
 #: ../../content/applications/sales/crm/performance/forecast_report.rst:87
 msgid ""
@@ -3149,6 +3160,9 @@ msgid ""
 "chart` :guilabel:`(line chart)`, or :icon:`fa-pie-chart` :guilabel:`(pie "
 "chart)`."
 msgstr ""
+"点击 :icon:`fa-area-chart` :guilabel:`（区域图）` 图标切换到图表视图。然后，点击报告顶部的相应图标，切换到 "
+":icon:`fa-bar-chart`（条形图）`、:icon:`fa-line-chart`（折线图）` 或 :icon:`fa-pie-"
+"chart`（饼状图）`。"
 
 #: ../../content/applications/sales/crm/performance/forecast_report.rst-1
 msgid "A pie chart view of the Forecast report."
@@ -4400,10 +4414,12 @@ msgid ""
 "ones. To re-order the nesting, remove all :guilabel:`Group By` options and "
 "re-add them in the desired order."
 msgstr ""
+"要更好地整理列表，请点击搜索栏旁边的 :guilabel:`⬇️（向下箭头）`，然后添加更多相关分组，或重新整理现有分组。要重新排列巢状结构，请删除所有"
+" :guilabel:`分组方式` 选项，然后按所需顺序重新添加。"
 
 #: ../../content/applications/sales/crm/performance/win_loss.rst:545
 msgid "To add more columns to the list:"
-msgstr ""
+msgstr "要将更多列添加到列表中："
 
 #: ../../content/applications/sales/crm/performance/win_loss.rst:547
 msgid "Click the :guilabel:`Filters` icon in the top-right of the page."
@@ -4654,10 +4670,11 @@ msgid ""
 "opportunity was lost provides additional insight that can prove useful for "
 "future opportunities."
 msgstr ""
+"并不是每个商机都能带来成功销售。为了保持管道的最新状态，需要识别 *已丢失* 商机。明确失去商机的原因可以提供更多见解，对未来抓住商机很有帮助。"
 
 #: ../../content/applications/sales/crm/pipeline/lost_opportunities.rst:10
 msgid "Mark an opportunity as lost"
-msgstr ""
+msgstr "将商机标记为丢失"
 
 #: ../../content/applications/sales/crm/pipeline/lost_opportunities.rst:12
 msgid ""
@@ -4665,12 +4682,14 @@ msgid ""
 " select an opportunity from the pipeline, by clicking on its corresponding "
 "Kanban card. Doing so reveals that opportunity's detail form."
 msgstr ""
+"要将商机标记为已丢失，首先要打开 :menuselection:`CRM "
+"应用程序`，然后从管道中选择一个机会，点击其对应的看板卡。这样就会显示该商机的详细表单。"
 
 #: ../../content/applications/sales/crm/pipeline/lost_opportunities.rst:16
 msgid ""
 "Then, click :guilabel:`Lost`, located at the top of the opportunity's detail"
 " form."
-msgstr ""
+msgstr "然后，点击商机详情表顶部的 :guilabel:`已丢失`。"
 
 #: ../../content/applications/sales/crm/pipeline/lost_opportunities.rst-1
 msgid ""
@@ -4819,6 +4838,9 @@ msgid ""
 ":guilabel:`Add Custom Filter`, which opens an :guilabel:`Add Custom Filter` "
 "pop-up window."
 msgstr ""
+"要根据特定的丢失原因筛选机会，请再次点击 :guilabel:`搜索...` 栏右侧的 :guilabel:`🔻（三角形朝下）` 图标，打开下拉菜单。除"
+" :guilabel:`已丢失` 筛选项外，在 :guilabel:`筛选` 栏下点击 :guilabel:`添加自定义筛选项`，弹出 "
+":guilabel:`添加自定义筛选项` 窗口。"
 
 #: ../../content/applications/sales/crm/pipeline/lost_opportunities.rst:99
 msgid ""
@@ -4829,6 +4851,9 @@ msgid ""
 "and select a lost reason from the drop-down menu. Finally, click "
 ":guilabel:`Add`."
 msgstr ""
+"在 :guilabel:`添加自定义筛选器` 弹出窗口中，点击第一个字段，在:guilabel:`搜索...` 栏中输入 "
+"`丢失原因`，或滚动到列表中搜索查找。然后，点击下一个字段，从下拉菜单中选择 "
+":guilabel:`=`。点击第三个字段，从下拉菜单中选择丢失原因。最后，点击 :guilabel:`添加`。"
 
 #: ../../content/applications/sales/crm/pipeline/lost_opportunities.rst-1
 msgid "Search bar with custom filter added for lost reason."
@@ -4841,10 +4866,12 @@ msgid ""
 ":guilabel:`Add Custom Filter` pop-up window. Choosing this operator makes it"
 " possible to choose multiple lost reasons in the third field."
 msgstr ""
+"要查看多个丢失原因的结果，请在弹出的 :guilabel:`添加自定义筛选器` 窗口中的自定义筛选器第二个字段中选择操作符 :guilabel:`is "
+"in`。选择该运算符后，就可以在第三个字段中选择多个丢失原因。"
 
 #: ../../content/applications/sales/crm/pipeline/lost_opportunities.rst:0
 msgid "Add Custom Filter pop-up with multiple lost reasons selected."
-msgstr ""
+msgstr "添加自定义筛选器弹出窗口，可选择多个丢失原因。"
 
 #: ../../content/applications/sales/crm/pipeline/lost_opportunities.rst:118
 msgid "Restore lost opportunities"
@@ -4859,24 +4886,29 @@ msgid ""
 "the drop-down menu that contains :guilabel:`Filters`, :guilabel:`Group By`, "
 "and :guilabel:`Favorites` columns."
 msgstr ""
+"要恢复丢失的机会，请打开 :menuselection:`CRM 应用程序与` 以显示 :guilabel:`管道` 面板。或者，导航至 "
+":menuselection:`CRM 应用程序 --> 销售 --> 我的管道`。从这里，点击 :guilabel:`搜索...` 栏右侧的 "
+":guilabel:`🔻（三角形朝下）` 图标，打开包含 :guilabel:`筛选器`、:guilabel:`分组方式` 和 "
+":guilabel:`收藏` 列的下拉菜单。"
 
 #: ../../content/applications/sales/crm/pipeline/lost_opportunities.rst:126
 msgid ""
 "Under the :guilabel:`Filters` column, select :guilabel:`Lost`. Doing so "
 "reveals all the lost opportunities on the :guilabel:`Pipeline` page."
 msgstr ""
+"在 :guilabel:`筛选` 列下，选择 :guilabel:`丢失`。这样就会显示 :guilabel:`管道` 页面上所有丢失的商机。"
 
 #: ../../content/applications/sales/crm/pipeline/lost_opportunities.rst:130
 msgid ""
 "To see all opportunities in the database, remove the default :guilabel:`My "
 "Pipeline` filter from the :guilabel:`Search...` bar."
-msgstr ""
+msgstr "要查看数据库中的所有机会，请从 :guilabel:`搜索...` 栏移除默认的 :guilabel:`我的管道` 筛选器。"
 
 #: ../../content/applications/sales/crm/pipeline/lost_opportunities.rst:133
 msgid ""
 "Then, click on the Kanban card of the desired lost opportunity to restore, "
 "which opens that opportunity's detail form."
-msgstr ""
+msgstr "然后，点击要恢复的商机的看板卡，打开该商机的详细表格。"
 
 #: ../../content/applications/sales/crm/pipeline/lost_opportunities.rst:136
 msgid ""
@@ -4884,6 +4916,8 @@ msgid ""
 "upper-left corner. Doing so removes the red :guilabel:`Lost` banner from the"
 " opportunity form, signifying the opportunity has been restored."
 msgstr ""
+"在已丢失商机的详细信息表单中，点击左上角的 :guilabel:`恢复`。这样，商机表单上的红色 :guilabel:`已丢失` "
+"条幅就会消失，表明商机已恢复。"
 
 #: ../../content/applications/sales/crm/pipeline/lost_opportunities.rst-1
 msgid "Lost opportunity with emphasis on the Restore button."
@@ -4909,6 +4943,8 @@ msgid ""
 "the :guilabel:`Pipeline` page in a list view. With the list view chosen, "
 "select the checkbox to the left of each opportunity to be restored."
 msgstr ""
+"接下来，选择列表视图选项，右上角的 :guilabel:`≣（列表）` 图标表示该选项。这样，:guilabel:`管道` "
+"页面中的所有机会就会出现在列表视图中。选择列表视图后，选择要恢复的每个商机左侧的复选框。"
 
 #: ../../content/applications/sales/crm/pipeline/lost_opportunities.rst:154
 msgid ""
@@ -4916,6 +4952,8 @@ msgid ""
 "Actions` drop-down menu at the top of the :guilabel:`Pipeline` page. From "
 "the :guilabel:`⚙️ Actions` drop-down menu, select :guilabel:`Unarchive`."
 msgstr ""
+"选择所需商机后，点击 :guilabel:`⚙️ 操作` 页面顶部的 :guilabel:`管道` 下拉菜单。从 :guilabel:`⚙️操作` "
+"下拉菜单中选择 :guilabel:`取消存档`。"
 
 #: ../../content/applications/sales/crm/pipeline/lost_opportunities.rst:158
 msgid ""
@@ -4924,6 +4962,8 @@ msgid ""
 " the :guilabel:`Lost` filter from the search bar to reveal these newly-"
 "restored opportunities."
 msgstr ""
+"这样做将从 :guilabel:`管道` 页面移除这些选定的机会，因为它们不再符合 :guilabel:`已丢失` 筛选条件。从搜索栏中删除 "
+":guilabel:`已丢失` 筛选器，以显示这些新恢复的商机。"
 
 #: ../../content/applications/sales/crm/pipeline/lost_opportunities.rst-1
 msgid "Action button from list view with the Unarchive option emphasized."
@@ -4931,7 +4971,7 @@ msgstr "列表视图模式下的操作按钮，强调“取消存档”选项。
 
 #: ../../content/applications/sales/crm/pipeline/lost_opportunities.rst:167
 msgid "Manage lost leads"
-msgstr ""
+msgstr "管理丢失的潜在客户"
 
 #: ../../content/applications/sales/crm/pipeline/lost_opportunities.rst:169
 msgid ""
@@ -4939,6 +4979,8 @@ msgid ""
 "same manner as opportunities. Leads use the same :ref:`lost reasons "
 "<crm/lost-reasons>` as opportunities."
 msgstr ""
+"如果在数据库中启用了 *潜在客户*，则可以与商机相同的方式将其标记为 *已丢失*。潜在客户使用与商机相同的 :ref:`已丢失原因 <crm/lost-"
+"reasons>`。"
 
 #: ../../content/applications/sales/crm/pipeline/lost_opportunities.rst:173
 msgid ""
@@ -4947,6 +4989,8 @@ msgid ""
 ":guilabel:`Save`. This adds a new :guilabel:`Leads` menu to the header menu "
 "bar at the top of the page."
 msgstr ""
+"要激活潜在客户，请导航至 :menuselection:`CRM 应用程序 --> 配置 --> 设置` 并选中 :guilabel:`潜在客户` "
+"复选框。然后，点击 :guilabel:`保存`。这将在页面顶部的标题菜单栏中添加一个新的 :guilabel:`潜在客户` 菜单。"
 
 #: ../../content/applications/sales/crm/pipeline/lost_opportunities.rst:178
 msgid "Mark a lead as lost"
@@ -4957,6 +5001,8 @@ msgid ""
 "To mark a lead as lost, navigate to :menuselection:`CRM app --> Leads`, and "
 "select a lead from the list. Doing so reveals that lead's detail form."
 msgstr ""
+"要将潜在客户标记为已丢失，请导航至 :menuselection:`CRM 应用程序 --> "
+"潜在客户`，然后从列表中选择潜在客户。这样就会显示该潜在客户的详细表单。"
 
 #: ../../content/applications/sales/crm/pipeline/lost_opportunities.rst:183
 msgid ""
@@ -4967,11 +5013,11 @@ msgstr "然后，点击潜在客户详情表顶部的 :guilabel:`丢失`。"
 msgid ""
 "Additional notes and comments can be added below the lost reason designated "
 "in the :guilabel:`Closing Note` field."
-msgstr ""
+msgstr "可在 :guilabel:`关闭注释 ` 字段指定的丢失原因下方，添加其他注释和评论。"
 
 #: ../../content/applications/sales/crm/pipeline/lost_opportunities.rst:196
 msgid "Restore lost leads"
-msgstr ""
+msgstr "恢复丢失的潜在客户"
 
 #: ../../content/applications/sales/crm/pipeline/lost_opportunities.rst:198
 msgid ""
@@ -4981,18 +5027,22 @@ msgid ""
 ":guilabel:`Filters`, :guilabel:`Group By`, and :guilabel:`Favorites` "
 "columns."
 msgstr ""
+"要恢复丢失的潜在客户，请导航至 :menuselection:`CRM 应用 --> 潜在客户`，然后点击 :guilabel:`搜索...` 栏右侧的"
+" :guilabel:`🔻（向下的三角形）` 图标，打开包含:guilabel:`筛选器`、:guilabel:`分组方式` "
+"和:guilabel:`收藏夹` 的下拉菜单。"
 
 #: ../../content/applications/sales/crm/pipeline/lost_opportunities.rst:202
 msgid ""
 "Under the :guilabel:`Filters` column, select :guilabel:`Lost`. Doing so "
 "reveals all the lost leads on the :guilabel:`Leads` page."
 msgstr ""
+"在 :guilabel:`筛选` 栏下，选择 :guilabel:`已丢失`。这样就会显示 :guilabel:`潜在客户` 页面上所有丢失的潜在客户。"
 
 #: ../../content/applications/sales/crm/pipeline/lost_opportunities.rst:205
 msgid ""
 "Then, click on the desired lost lead to restore, which opens that lead's "
 "detail form."
-msgstr ""
+msgstr "然后，点击需要恢复的已丢失潜在客户，打开该潜在客户的详细信息表。"
 
 #: ../../content/applications/sales/crm/pipeline/lost_opportunities.rst:207
 msgid ""
@@ -5005,7 +5055,7 @@ msgstr ""
 
 #: ../../content/applications/sales/crm/pipeline/lost_opportunities.rst:211
 msgid "Restore multiple leads at once"
-msgstr ""
+msgstr "一次恢复多个潜在客户"
 
 #: ../../content/applications/sales/crm/pipeline/lost_opportunities.rst:213
 msgid ""
@@ -5014,6 +5064,8 @@ msgid ""
 ":guilabel:`Lost` option. Select the checkbox to the left of each lead to be "
 "restored."
 msgstr ""
+"要一次恢复多个潜在客户，请导航至 :menuselection:`CRM 应用程序 --> 潜在客户`，打开 :guilabel:`筛选器` "
+"下拉菜单，并选择 :guilabel:`已丢失` 选项。选择要恢复的每条信息左边的复选框。"
 
 #: ../../content/applications/sales/crm/pipeline/lost_opportunities.rst:217
 msgid ""
@@ -5021,6 +5073,8 @@ msgid ""
 "drop-down menu at the top of the :guilabel:`Leads` page. From the "
 ":guilabel:`⚙️ Actions` drop-down menu, select :guilabel:`Unarchive`."
 msgstr ""
+"选择所需潜在客户后，点击 :guilabel:`⚙️操作` 页面顶部的 :guilabel:`潜在客户` 下拉菜单。从 :guilabel:`⚙️操作`"
+" 下拉菜单中选择 :guilabel:`取消存档`。"
 
 #: ../../content/applications/sales/crm/pipeline/lost_opportunities.rst:221
 msgid ""
@@ -5029,6 +5083,8 @@ msgid ""
 ":guilabel:`Lost` filter from the :guilabel:`Search...` bar to reveal these "
 "newly-restored leads."
 msgstr ""
+"这样做将从 :guilabel:`潜在客户` 页面移除这些已选定的潜在客户，因为它们不再符合 :guilabel:`已丢失` 筛选条件。从 "
+":guilabel:`搜索...` 栏中删除 :guilabel:`已丢失` 筛选项，以显示这些新恢复的潜在客户。"
 
 #: ../../content/applications/sales/crm/pipeline/lost_opportunities.rst:226
 msgid ":doc:`../performance/win_loss`"
@@ -5036,34 +5092,36 @@ msgstr ":doc:`../performance/win_loss`"
 
 #: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:3
 msgid "Manage sales teams"
-msgstr ""
+msgstr "管理销售团队"
 
 #: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:5
 msgid ""
 "The *Sales Teams* feature within Odoo's *CRM* app allows for the creation "
 "and management of multiple sales teams, each with their own assignment "
 "rules, invoicing targets, and roster of salespeople."
-msgstr ""
+msgstr "Odoo *CRM* 应用程序的 *销售团队* 功能允许创建和管理多个销售团队，每个团队都有自己的分配规则、开票目标和销售人员名册。"
 
 #: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:9
 msgid "Create a sales team"
-msgstr ""
+msgstr "创建一个销售团队"
 
 #: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:11
 msgid ""
 "To create a new sales team, go to :menuselection:`CRM app --> Configuration "
 "--> Sales Teams`, then click :guilabel:`New`."
 msgstr ""
+":menuselection:要创建新的销售团队，请前往 :menuselection:`客户关系管理应用程序 --> 配置 --> "
+"销售团队`，然后点击 :guilabel:`新建`。"
 
 #: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:14
 msgid ""
 "On the blank sales team form, enter a name in the :guilabel:`Sales Team` "
 "field."
-msgstr ""
+msgstr "在空白的销售团队表单中，在 :guilabel:`销售团队` 字段中输入名称。"
 
 #: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:16
 msgid "Next, select a :guilabel:`Team Leader` from the drop-down list."
-msgstr ""
+msgstr "接下来，从下拉列表中选择 :guilabel:`团队领导` 。"
 
 #: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:18
 msgid ""
@@ -5073,21 +5131,24 @@ msgid ""
 ":guilabel:`Authenticated Partners`, :guilabel:`Followers Only`, or "
 ":guilabel:`Authenticated Employees`."
 msgstr ""
+"设置 :guilabel:`电子邮件别名`，每当有信息发送到该特定的电子邮件地址时，就会自动为该销售团队生成一个销售线索/商机。选择是否接受来自 "
+":guilabel:`所有人`、 :guilabel:`认证合作伙伴`、:guilabel:`仅限关注者` 或 :guilabel:`认证员工` "
+"的电子邮件。"
 
 #: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:23
 msgid ""
 "Select a :guilabel:`Company` from the drop-down menu to assign this team to."
-msgstr ""
+msgstr "从下拉菜单中选择一个 :guilabel:`公司` 团队。"
 
 #: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:26
 msgid ""
 "The :guilabel:`Company` field is only visible in multi-company databases, "
 "and is not required."
-msgstr ""
+msgstr ":guilabel:`公司` 字段仅在多公司数据库中可见，并非必需。"
 
 #: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst-1
 msgid "The settings page for a new sales team."
-msgstr ""
+msgstr "新销售团队的设置页面。"
 
 #: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:33
 msgid ""
@@ -5097,10 +5158,13 @@ msgid ""
 " invoicing progress bar on the :ref:`sales team dashboard <crm/sales-team-"
 "dashboard>`."
 msgstr ""
+"如果数据库中安装了 *销售* 应用程序，销售团队表单上就会出现 :guilabel:`开票目标` "
+"字段。这是当前月份的收入目标。在此字段中输入的金额将用于填充 :ref:`销售团队仪表板 <crm/sales-team-dashboard>` "
+"上的开票进度条。"
 
 #: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:39
 msgid "Add sales team members"
-msgstr ""
+msgstr "添加销售团队成员"
 
 #: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:41
 msgid ""
@@ -5108,6 +5172,8 @@ msgid ""
 " when editing the sales team's configuration page. This opens a "
 ":guilabel:`Create Sales Team Members` pop-up window."
 msgstr ""
+"要添加团队成员，请在编辑销售团队配置页面时点击 :guilabel:`成员` 选项卡下的 :guilabel:`添加`。这将打开一个 "
+":guilabel:`创建销售团队成员` 弹出窗口。"
 
 #: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:45
 msgid ""
@@ -5117,10 +5183,13 @@ msgid ""
 "window. Tick the checkbox to the far-left of the salesperson to be added to "
 "the team, then click :guilabel:`Select`."
 msgstr ""
+"如果 :guilabel:`基于规则的分配` 功能尚未在 *CRM* 应用程序的 *设置* 页面上启用，点击 :guilabel:`成员`  选项卡下的"
+" :guilabel:`添加`  将打开一个:guilabel:`添加：销售人员` 弹出窗口。勾选要添加到团队的销售人员最左侧的复选框，然后点击 "
+":guilabel:`选择`。"
 
 #: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:0
 msgid "The Add: Salespersons pop-up window on a new sales team."
-msgstr ""
+msgstr "添加：新销售团队的销售人员弹出窗口。"
 
 #: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:54
 msgid ""
@@ -5129,10 +5198,12 @@ msgid ""
 "leads, tick the :guilabel:`Skip auto assignment` checkbox. If this feature "
 "is activated, the salesperson can still be assigned leads manually."
 msgstr ""
+"从 :guilabel:`销售人员` 下拉列表中选择一个用户，将其添加到团队中。要阻止自动分配潜在客户，请勾选 :guilabel:`跳过自动分配` "
+"复选框。如果激活此功能，销售人员仍可手动分配潜在客户。"
 
 #: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst-1
 msgid "The Create Sales Team Members pop-up window."
-msgstr ""
+msgstr "创建销售团队成员弹出窗口。"
 
 #: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:62
 msgid ""
@@ -5142,22 +5213,26 @@ msgid ""
 " this salesperson can be assigned, enter that amount in the :guilabel:`Leads"
 " (30 days)` field."
 msgstr ""
+":guilabel:`潜在客户（30 天）` 字段追踪销售人员在过去 30 "
+"天内为该团队分配了多少潜在客户，以及他们应分配的最大潜在客户数量。要编辑该销售人员可分配的最大潜在客户数量，请在 :guilabel:`潜在客户（30 "
+"天）` 字段中输入该数量。"
 
 #: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:68
 msgid ""
 ":doc:`Assignment rules <../track_leads/lead_scoring>` can be configured for "
 "individual salespeople using the :guilabel:`Domain` section."
 msgstr ""
+":doc:`分配规则 <../track_leads/lead_scoring>` 可以使用 :guilabel:`域名` 部分为单个销售人员配置。"
 
 #: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:71
 msgid ""
 "Click :guilabel:`Save & Close` when finished, or :guilabel:`Save & New` to "
 "add additional members."
-msgstr ""
+msgstr "完成后点击 :guilabel:`保存并关闭` 或 :guilabel:`保存并新建` 添加其他成员。"
 
 #: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:74
 msgid "Enable multi teams"
-msgstr ""
+msgstr "启用多团队"
 
 #: ../../content/applications/sales/crm/pipeline/manage_sales_teams.rst:76
 msgid ""
@@ -5373,10 +5448,11 @@ msgid ""
 "separately, it is recommended that any affected salespeople be tagged in an "
 "internal note for visibility."
 msgstr ""
+"如果数据库中存在一个以上的潜在客户/商机，则可能有多个销售人员被分配到这些潜在客户/商机中，而这些销售人员正在独立积极地处理这些潜在客户/商机。虽然这些潜在客户/商机可能需要单独管理，但建议在内部备注中标记任何受影响的销售人员，以便查看。"
 
 #: ../../content/applications/sales/crm/pipeline/merge_similar.rst:98
 msgid "Contact information is similar but not exact"
-msgstr ""
+msgstr "联系方式相似但不完全相同"
 
 #: ../../content/applications/sales/crm/pipeline/merge_similar.rst:100
 msgid ""
@@ -5384,33 +5460,33 @@ msgid ""
 "addresses and phone numbers of the associated contacts. However, if the "
 "email address is *similar*, but not *exact*, they may need to remain "
 "independent."
-msgstr ""
+msgstr "通过比较相关联系人的电子邮件地址和电话号码，可以识别类似的潜在客户和商机。如果电子邮件地址*相似*，但不 *精确*，它们可能需要保持独立。"
 
 #: ../../content/applications/sales/crm/pipeline/merge_similar.rst:105
 msgid ""
 "Three different leads were added to the pipeline and assigned to different "
 "salespeople. They were identified as *Similar Leads* due to the email "
 "addresses of the contacts."
-msgstr ""
+msgstr "三个不同的潜在客户被添加到管道中，并分配给不同的销售人员。由于联系人的电子邮件地址不同，它们被识别为*相似潜在客户*。"
 
 #: ../../content/applications/sales/crm/pipeline/merge_similar.rst:108
 msgid ""
 "Two of the leads appear to come from the same individual, `Robin`, and have "
 "identical email addresses. These leads should be merged."
-msgstr ""
+msgstr "其中两条销售线索似乎来自同一个人 “Robin”，而且电子邮件地址完全相同。这些销售线索应该合并。"
 
 #: ../../content/applications/sales/crm/pipeline/merge_similar.rst:111
 msgid ""
 "The third lead has the same email domain, but the address is different, as "
 "is the contact name. While this lead is most likely from the same "
 "organization, it is from a different contact, and should **not** be merged."
-msgstr ""
+msgstr "第三条销售线索的电子邮件域名相同，但地址不同，联系人姓名也不同。虽然这条销售线索很可能来自同一组织，但属于不同的联系人，**不应**合并。"
 
 #: ../../content/applications/sales/crm/pipeline/merge_similar.rst:0
 msgid ""
 "List of similar leads with emphasis on the contact information in the CRM "
 "app."
-msgstr ""
+msgstr "类似销售线索列表，重点是 CRM 应用程序中的联系人信息。"
 
 #: ../../content/applications/sales/crm/track_leads.rst:5
 msgid "Assign and track leads"
@@ -5418,7 +5494,7 @@ msgstr "分配和跟踪销售线索"
 
 #: ../../content/applications/sales/crm/track_leads/lead_distribution_report.rst:3
 msgid "Lead distribution report"
-msgstr ""
+msgstr "销售线索分配报告"
 
 #: ../../content/applications/sales/crm/track_leads/lead_distribution_report.rst:5
 msgid ""
@@ -5427,6 +5503,8 @@ msgid ""
 "distribution of good or :doc:`quality leads <quality_leads_report>`, and see"
 " how frequently each salesperson is receiving (and keeping) leads."
 msgstr ""
+"*销售线索分配报告* 可用于查看活跃销售线索是否在各销售成员之间公平分配。它还可用于查看良好或 "
+":doc:`优质线索<quality_leads_report>` 的分布情况，以及每位销售人员接收（和保留）线索的频率。"
 
 #: ../../content/applications/sales/crm/track_leads/lead_distribution_report.rst:9
 msgid ""
@@ -5436,10 +5514,11 @@ msgid ""
 " being lost too often by one salesperson, and what percentage of good leads "
 "are being retained overall."
 msgstr ""
+"可以每周运行销售线索分配报告，帮助销售人员保持正常工作，同时为他们提供充足的优质销售线索。这些报告还可用于了解销售人员是否保持高效率，某个销售人员是否经常丢失优质销售线索，以及优质销售线索总体保留比例。"
 
 #: ../../content/applications/sales/crm/track_leads/lead_distribution_report.rst:15
 msgid "Create lead distribution reports"
-msgstr ""
+msgstr "创建潜在客户分配报告"
 
 #: ../../content/applications/sales/crm/track_leads/lead_distribution_report.rst:17
 msgid ""
@@ -5447,12 +5526,14 @@ msgid ""
 "app --> Reporting --> Pipeline`, which reveals the :guilabel:`Pipeline "
 "Analysis` dashboard."
 msgstr ""
+"要创建潜在客户分布报告，首先导航至 :menuselection:`CRM 应用程序 --> 报告 --> 管道`，显示 "
+":guilabel:`管道分析` 仪表板。"
 
 #: ../../content/applications/sales/crm/track_leads/lead_distribution_report.rst:20
 msgid ""
 "Remove all the default filters in the search bar at the top of the page. "
 "Doing so displays data related to *all* leads."
-msgstr ""
+msgstr "删除页面顶部搜索栏中的所有默认筛选器。这样做会显示与 *所有* 潜在客户相关的数据。"
 
 #: ../../content/applications/sales/crm/track_leads/lead_distribution_report.rst:23
 msgid ""
@@ -5460,6 +5541,8 @@ msgid ""
 "the :icon:`fa-caret-down` :guilabel:`(down caret)` icon, to the right of the"
 " search bar, to reveal a drop-down menu of search and filter options."
 msgstr ""
+":ref:`自定义筛选项 <search/custom-filters>` 现在可以通过点击搜索栏右侧的 :icon:`fa-caret-down` "
+":guilabel:`(down caret)`图标来添加，以显示搜索和筛选选项的下拉菜单。"
 
 #: ../../content/applications/sales/crm/track_leads/lead_distribution_report.rst:27
 msgid ""
@@ -5469,10 +5552,13 @@ msgid ""
 ":guilabel:`Add Custom Filter`. This opens an :guilabel:`Add Custom Filter` "
 "pop-up window, where the essential filters can be added one at a time."
 msgstr ""
+"将显示三列：:ref:`筛选项 <search/filters>`、:ref:`分组方式 <search/group>` 和 :ref:`收藏 "
+"<search/favorites>`。首先，导航至 :guilabel:`筛选项` 列的底部，然后点击 "
+":guilabel:`添加自定义筛选项`。这将打开一个 :guilabel:`添加自定义筛选项` 弹出窗口，可在此逐个添加基本筛选项。"
 
 #: ../../content/applications/sales/crm/track_leads/lead_distribution_report.rst:35
 msgid "Essential filters"
-msgstr ""
+msgstr "基本筛选项"
 
 #: ../../content/applications/sales/crm/track_leads/lead_distribution_report.rst:37
 msgid ""
@@ -5481,10 +5567,11 @@ msgid ""
 "that have an associated contact method and have been assigned to a sales "
 "team."
 msgstr ""
+"以下筛选条件用于创建基本的销售线索分布报告。它们一起收集了在一定时间范围内创建的所有销售线索，这些销售线索都有相关的联系方法，并已分配给某个销售团队。"
 
 #: ../../content/applications/sales/crm/track_leads/lead_distribution_report.rst:42
 msgid "Lead creation date"
-msgstr ""
+msgstr "销售线索创建日期"
 
 #: ../../content/applications/sales/crm/track_leads/lead_distribution_report.rst:44
 msgid ""
@@ -5493,6 +5580,8 @@ msgid ""
 "type `Created on` in the search bar, or scroll to search through the list to"
 " locate and select it."
 msgstr ""
+"点击 :guilabel:`符合以下任一规则：` 下的第一个字段，其中包含 :guilabel:`国家/地区` 值。在出现的弹出窗口中，在搜索栏中输入 "
+"`创建于`，或滚动到列表中搜索，找到并选择它。"
 
 #: ../../content/applications/sales/crm/track_leads/lead_distribution_report.rst:48
 msgid ""
@@ -5500,6 +5589,7 @@ msgid ""
 "down menu. This operator **only** includes values greater than (or equal to)"
 " the value in the third, rightmost field."
 msgstr ""
+"然后，在该行的第二个字段中，从下拉菜单中选择 :guilabel:`>=`。该运算符 **只** 包括大于（或等于）最右边第三个字段中的值。"
 
 #: ../../content/applications/sales/crm/track_leads/lead_distribution_report.rst:51
 msgid ""
@@ -8074,8 +8164,8 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/configuration.rst:11
-msgid "Access POS settings"
-msgstr "访问 POS 设置"
+msgid "Access the POS settings"
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/configuration.rst:13
 msgid ""
@@ -8138,6 +8228,86 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/configuration.rst-1
 msgid "Making a product available in your POS."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration.rst:49
+msgid "PoS product categories"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration.rst:54
+msgid ""
+"POS product categories allow users to categorize products and get a more "
+"structured and clean POS interface."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration.rst:57
+msgid ""
+"To manage PoS categories, go to :menuselection:`Point of Sale --> "
+"Configuration --> PoS Product Categories`. To add a new category, click "
+":guilabel:`Create`. Then, name it in the :guilabel:`Category Name` field."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration.rst:61
+msgid ""
+"To associate a category with a parent category, fill in the "
+":guilabel:`Parent Category` field. A parent category groups one or more "
+"child categories."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration.rst:0
+msgid "The PoS product categories grouped by parent categories"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration.rst:69
+msgid "Assign PoS product categories"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration.rst:71
+msgid ""
+"Go to :menuselection:`Point of Sale --> Products --> Products` and open a "
+"product form. Then, go to the :guilabel:`Sales` tab and fill in the "
+":guilabel:`Category` field under the :guilabel:`Point of Sale` section."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration.rst-1
+msgid "Sales tab of a product form to add a PoS product category"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration.rst:79
+msgid "Adapt the POS interface"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration.rst:82
+msgid "Start category"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration.rst:84
+msgid ""
+"You can select one product category to display when :ref:`opening a POS "
+"session <pos/session-start>`. To configure it, go to your :ref:`POS settings"
+" <configuration/settings>` and select a PoS category from the dropdown menu "
+"of the :guilabel:`Start Category` field within the :guilabel:`PoS Interface`"
+" section."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration.rst-1
+msgid "Setting to set up the start category feature"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration.rst:93
+msgid "Restrict categories"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration.rst:95
+msgid ""
+"You can also limit the categories displayed on your POS interface. To "
+"achieve this, go to your :ref:`POS settings <configuration/settings>` and "
+"choose the specific categories to display in the :guilabel:`Restrict "
+"Categories` field within the :guilabel:`PoS Interface` section."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration.rst-1
+msgid "Setting to set up the restrict category feature"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:3
@@ -8985,26 +9155,30 @@ msgid ":doc:`Mercado Pago configuration <terminals/mercado_pago>`"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:26
-msgid ":doc:`SIX configuration <terminals/six>`"
+msgid ":doc:`Razorpay configuration <terminals/razorpay>`"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:27
-msgid ":doc:`Stripe configuration <terminals/stripe>`"
+msgid ":doc:`SIX configuration <terminals/six>`"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:28
-msgid ":doc:`Vantiv configuration <terminals/vantiv>`"
+msgid ":doc:`Stripe configuration <terminals/stripe>`"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:29
-msgid ":doc:`Viva Wallet configuration <terminals/viva_wallet>`"
+msgid ":doc:`Vantiv configuration <terminals/vantiv>`"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:30
+msgid ":doc:`Viva Wallet configuration <terminals/viva_wallet>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:31
 msgid ":doc:`Worldline configuration <terminals/worldline>`"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:32
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:33
 msgid ""
 "Once the terminal is configured, you can :doc:`create the corresponding "
 "payment method and add it to the POS <../payment_methods>`."
@@ -9154,6 +9328,7 @@ msgstr "点击屏幕底部的 :guilabel:`保存`，以保存更改。"
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:73
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:41
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:30
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:53
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:22
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/vantiv.rst:20
@@ -9179,6 +9354,7 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:89
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:55
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:56
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:68
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:93
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/vantiv.rst:41
@@ -9196,6 +9372,7 @@ msgstr ""
 "处理付款时，选择：guilabel：`Adyen`作为付款方式。检查金额，单击：guilabel：`发送`。付款成功后，状态变为：guilabel：`付款成功`。"
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:0
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:0
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:0
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_wallet.rst:0
 msgid ""
@@ -9205,6 +9382,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:0
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:0
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:0
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_wallet.rst:0
 msgid ""
@@ -9473,6 +9651,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:78
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:34
 msgid ""
 ":doc:`Create the related payment method <../../payment_methods>` by going to"
 " :menuselection:`Point of Sale --> Configuration --> Payment Methods`."
@@ -9555,6 +9734,115 @@ msgid ""
 "Any action made on the terminal should trigger a notification on the POS "
 "interface. Ensure the :ref:`webhook secret key <pos-mercado-pago-"
 "credentials>` is correctly configured if you are not notified."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:3
+msgid "Razorpay"
+msgstr "Razorpay"
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:5
+msgid ""
+"Connecting a Razorpay payment terminal allows you to offer a fluid payment "
+"flow to your customers and ease the work of your cashiers."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:9
+msgid ""
+":doc:`Use Razorpay as apayment provider. "
+"<../../../../finance/payment_providers/razorpay>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:17
+msgid "Locate your Razorpay credentials"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:19
+msgid ""
+"`Create a Razorpay account <https://razorpay.com/docs/payments/easy-create-"
+"account/>`_ and set it up on their website."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:22
+msgid ""
+"You need the following credentials to set up the payment method in Odoo:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:24
+msgid ""
+"`API key <https://razorpay.com/docs/payments/dashboard/account-settings/api-"
+"keys/>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:25
+msgid "Razorpay username"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:26
+msgid ""
+"Razorpay device serial number, which can be found underneath the device or "
+"on `Razorpay's dashboard <https://dashboard.razorpay.com/>`_."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:32
+msgid ""
+":doc:`Activate the POS Razorpay module <../../../../general/apps_modules>` "
+"to enable the payment terminal."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:37
+msgid "Set the :guilabel:`Journal` type as :guilabel:`Bank`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:38
+msgid ""
+"Select :guilabel:`Razorpay` in the :guilabel:`Use a Payment Terminal` field."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:39
+msgid ""
+"Enter your username in the :guilabel:`Razorpay Username` field and your "
+"device's serial number in the :guilabel:`Razorpay Device Serial No` field."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:41
+msgid ""
+"Fill in the :guilabel:`Razorpay API Key` field with the :ref:`Razorpay API "
+"key <razorpay/credentials>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:43
+msgid ""
+"Set the :guilabel:`Razorpay Allowed Payment Modes` according to your needs."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:0
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst-1
+msgid "Razorpay connection form"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:49
+msgid ""
+"You can enable the :guilabel:`Razorpay Test Mode` field while testing or "
+"keep it unchecked for production."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:52
+msgid ""
+"Once the payment method is created, you can enable it for your POS. To do "
+"so, go to the :ref:`POS' settings <configuration/settings>` and add the "
+"payment method under the :guilabel:`Payment` section."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:58
+msgid ""
+"When processing a payment, select the Razorpay payment method. Check the "
+"amount and click :guilabel:`Send`. Once the payment is successful, the "
+"status changes to :guilabel:`Payment Successful`. To cancel the payment "
+"request, click :guilabel:`Cancel`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:70
+msgid "The terminal must have at least a 10% battery level to use it."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:3
@@ -9835,12 +10123,12 @@ msgid ""
 msgstr "在支付终端上向右滑动，点击 :guilabel:`设置`，输入管理 PIN 码，验证并选择网络。"
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:80
-msgid "The device must be connected to a secured WI-FI network."
-msgstr "设备必须连接到安全的 WI-FI 网络。"
+msgid "The user's device and the terminal must share the same network."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:81
-msgid "Your Odoo database and payment terminal must share the same network."
-msgstr "您的 Odoo 数据库和支付终端必须共享同一个网络。"
+msgid "In case of a Wi-Fi connection, the network must be secured."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:82
 msgid ""
@@ -11535,7 +11823,7 @@ msgid ""
 msgstr ":doc:`管理楼层和桌台，以反映内部设计<restaurant/floors_tables>`；"
 
 #: ../../content/applications/sales/point_of_sale/restaurant.rst:13
-msgid ":ref:`take orders <floors_tables/orders>`;"
+msgid ":ref:`take orders <restaurant/orders>`;"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/restaurant.rst:14
@@ -11575,6 +11863,32 @@ msgstr "这些功能显示在:guilabel:`餐厅与酒吧`部分。"
 #: ../../content/applications/sales/point_of_sale/restaurant.rst-1
 msgid "restaurant and bar-specific features"
 msgstr "餐厅和酒吧专用功能"
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:36
+msgid "Take orders"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:38
+msgid ""
+"Click a table to access the POS interface and start taking your customer's "
+"order. The system automatically associates the orders and the table, "
+"allowing you to add more items later and generate a bill specifically for "
+"that table's orders."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:42
+msgid ""
+"Once you have taken an order, click :guilabel:`Change table` to return to "
+"the floor plan view."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:45
+msgid ""
+"As soon as you click a table, the number of guests is automatically set to "
+"one. If you mistakenly select a table, click :guilabel:`Release table` to "
+"free it or :ref:`transfer the customer <floors_tables/transfer>` to another "
+"table."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/restaurant/bill_printing.rst:3
 msgid "Bills"
@@ -11777,36 +12091,10 @@ msgid "Removing a table or a floor cannot be undone."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:82
-msgid "Take orders"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:84
-msgid ""
-"Click a table to access the POS interface and start taking your customer's "
-"order. The system automatically associates the orders and the table, "
-"allowing you to add more items later and generate a bill specifically for "
-"that table's orders."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:88
-msgid ""
-"Once you have taken an order, click :guilabel:`Change table` to return to "
-"the floor plan view."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:91
-msgid ""
-"As soon as you click a table, the number of guests is automatically set to "
-"one. If you mistakenly select a table, click :guilabel:`Release table` to "
-"free it or :ref:`transfer the customer <floors_tables/transfer>` to another "
-"table."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:98
 msgid "Table transfer"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:100
+#: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:84
 msgid ""
 "To move customers from one table to another, select a table and click "
 ":guilabel:`→ Transfer` on the POS interface. This redirects you to the floor"
@@ -11814,7 +12102,7 @@ msgid ""
 " the customers."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:104
+#: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:88
 msgid ""
 "When you transfer customers, all of the orders they have placed and that are"
 " linked to the original table are also transferred."
@@ -18243,17 +18531,17 @@ msgstr ""
 
 #: ../../content/applications/sales/sales/products_prices/ewallets_giftcards.rst:44
 msgid ":guilabel:`Program Name`: enter a name for the eWallet program"
-msgstr ""
+msgstr ":guilabel:`项目名称`：输入电子钱包程序的名称"
 
 #: ../../content/applications/sales/sales/products_prices/ewallets_giftcards.rst:45
 msgid ":guilabel:`Program Type`: select :guilabel:`eWallet`"
-msgstr ""
+msgstr ":guilabel:`程序类型`：选择 :guilabel:`电子钱包`"
 
 #: ../../content/applications/sales/sales/products_prices/ewallets_giftcards.rst:46
 msgid ""
 ":guilabel:`eWallet Products`: select the eWallet top-up created earlier. "
 "Repeat the process if you created top-ups of different amounts."
-msgstr ""
+msgstr ":guilabel:`电子钱包产品`：选择之前创建的电子钱包充值。如果创建了不同金额的充值，请重复此过程。"
 
 #: ../../content/applications/sales/sales/products_prices/ewallets_giftcards.rst:48
 msgid ""
@@ -18261,32 +18549,34 @@ msgid ""
 "sent to the customer. To create a new template, click on the field, select "
 ":guilabel:`Search More`, and then click :guilabel:`Create`."
 msgstr ""
+":guilabel:`电子邮件模板`：选择用于向客户发送电子邮件的电子邮件模板。要创建新模板，请点击该字段，选择 "
+":guilabel:`搜索更多`，然后点击 :guilabel:`创建`。"
 
 #: ../../content/applications/sales/sales/products_prices/ewallets_giftcards.rst:51
 msgid ""
 ":guilabel:`Currency`: select the currency to use for the eWallet program"
-msgstr ""
+msgstr ":guilabel:`货币`：选择电子钱包程序使用的货币"
 
 #: ../../content/applications/sales/sales/products_prices/ewallets_giftcards.rst:52
 #: ../../content/applications/sales/sales/products_prices/ewallets_giftcards.rst:115
 msgid ""
 ":guilabel:`Company`: select the company for which the program is valid and "
 "available"
-msgstr ""
+msgstr ":guilabel:`公司`：选择计划有效且可用的公司"
 
 #: ../../content/applications/sales/sales/products_prices/ewallets_giftcards.rst:53
 #: ../../content/applications/sales/sales/products_prices/ewallets_giftcards.rst:116
 msgid ""
 ":guilabel:`Available On`: select the applications on which the program is "
 "valid and available"
-msgstr ""
+msgstr ":guilabel:`可用`：选择程序有效且可用的应用程序。"
 
 #: ../../content/applications/sales/sales/products_prices/ewallets_giftcards.rst:54
 #: ../../content/applications/sales/sales/products_prices/ewallets_giftcards.rst:117
 msgid ""
 ":guilabel:`Website`: select the website on which the program is valid and "
 "available. Leave this field empty to include all websites."
-msgstr ""
+msgstr ":guilabel:`网站`：选择该程序有效且可用的网站。将此字段留空以包含所有网站。"
 
 #: ../../content/applications/sales/sales/products_prices/ewallets_giftcards.rst:56
 #: ../../content/applications/sales/sales/products_prices/ewallets_giftcards.rst:119
@@ -18295,10 +18585,11 @@ msgid ""
 "the program is valid and available. Leave this field empty to include all "
 ":abbr:`PoS (Point of Sale)`."
 msgstr ""
+":guilabel:`销售点`：选择程序有效且可用的 :abbr:`PoS（销售点）`。如果此字段为空，则包括所有 :abbr:`PoS（销售点）`。"
 
 #: ../../content/applications/sales/sales/products_prices/ewallets_giftcards.rst-1
 msgid "eWallet program configuration page"
-msgstr ""
+msgstr "电子钱包程序配置页面"
 
 #: ../../content/applications/sales/sales/products_prices/ewallets_giftcards.rst:63
 msgid ""
@@ -18380,18 +18671,18 @@ msgstr ""
 
 #: ../../content/applications/sales/sales/products_prices/ewallets_giftcards.rst:106
 msgid ":guilabel:`Program Name`: enter a name for the gift card program"
-msgstr ""
+msgstr ":guilabel:`计划名称`：输入礼品卡计划的名称"
 
 #: ../../content/applications/sales/sales/products_prices/ewallets_giftcards.rst:107
 msgid ":guilabel:`Program Type`: select :guilabel:`Gift Card`"
-msgstr ""
+msgstr ":guilabel:`计划类型`: 选择 :guilabel:`礼品卡` 。"
 
 #: ../../content/applications/sales/sales/products_prices/ewallets_giftcards.rst:108
 msgid ""
 ":guilabel:`Gift Card Products`: select the gift card product created "
 "earlier. Repeat the process if you created gift card products of different "
 "amounts."
-msgstr ""
+msgstr ":guilabel:`礼品卡产品`：选择之前创建的礼品卡产品。如果创建了不同金额的礼品卡产品，请重复此过程。"
 
 #: ../../content/applications/sales/sales/products_prices/ewallets_giftcards.rst:110
 msgid ""
@@ -18400,19 +18691,21 @@ msgid ""
 "field, selecting :guilabel:`Search More`, and then clicking "
 ":guilabel:`Create`."
 msgstr ""
+":guilabel:`电子邮件模板`：选择默认的 :guilabel:`礼品卡：礼品卡信息` 模板，或点击该字段，选择 "
+":guilabel:`搜索更多`，然后点击 :guilabel:`创建`，创建一个新模板。"
 
 #: ../../content/applications/sales/sales/products_prices/ewallets_giftcards.rst:113
 msgid ":guilabel:`Print Report`: select :guilabel:`Gift Card`"
-msgstr ""
+msgstr ":guilabel:`打印报告`: 选择 :guilabel:`礼品卡` 。"
 
 #: ../../content/applications/sales/sales/products_prices/ewallets_giftcards.rst:114
 msgid ""
 ":guilabel:`Currency`: select the currency to use for the gift card program"
-msgstr ""
+msgstr ":guilabel:`货币`：选择礼品卡计划使用的货币"
 
 #: ../../content/applications/sales/sales/products_prices/ewallets_giftcards.rst-1
 msgid "Gift card program configuration page"
-msgstr ""
+msgstr "礼品卡计划配置页面"
 
 #: ../../content/applications/sales/sales/products_prices/ewallets_giftcards.rst:126
 msgid ""
@@ -18770,20 +19063,20 @@ msgstr ""
 msgid ""
 ":guilabel:`Products`: Select the specific product(s) for which the program "
 "applies. Leave this field blank to apply it to all products."
-msgstr ""
+msgstr ":guilabel:`产品`：选择程序适用的特定产品。如果此字段留空，则适用于所有产品。"
 
 #: ../../content/applications/sales/sales/products_prices/loyalty_discount.rst:147
 msgid ""
 ":guilabel:`Categories`: Select the category of products for which the "
 "program applies. Choose :guilabel:`All` to apply it to all product "
 "categories."
-msgstr ""
+msgstr ":guilabel:`类别`：选择程序适用的产品类别。选择 :guilabel:`全部` 则适用于所有产品类别。"
 
 #: ../../content/applications/sales/sales/products_prices/loyalty_discount.rst:149
 msgid ""
 ":guilabel:`Product Tag:` Select a tag to apply the program to products with "
 "that specific tag."
-msgstr ""
+msgstr ":guilabel:`产品标签：` 选择一个标签，将程序应用于带有该特定标签的产品。"
 
 #: ../../content/applications/sales/sales/products_prices/loyalty_discount.rst:150
 msgid ""
@@ -18792,18 +19085,20 @@ msgid ""
 "unit paid` (for the :guilabel:`Loyalty Cards` and :guilabel:`Buy X Get Y` "
 "programs)."
 msgstr ""
+":guilabel:`赠予`：输入客户在:guilabel:`每笔订单`、:guilabel:`每笔货币消费` "
+"或:guilabel:`每单位支付`（适用于:guilabel:`会员卡` 和:guilabel:`买 X 送 Y` 计划）中获得的积分数。"
 
 #: ../../content/applications/sales/sales/products_prices/loyalty_discount.rst-1
 msgid ""
 "Conditional rules configuration window for a discount or loyalty program."
-msgstr ""
+msgstr "折扣或忠诚度计划的条件规则配置窗口。"
 
 #: ../../content/applications/sales/sales/products_prices/loyalty_discount.rst:158
 msgid ""
 "Click :guilabel:`Save & Close` to save the rule and close the pop-up window,"
 " or click :guilabel:`Save & New` to save the rule and immediately create a "
 "new one."
-msgstr ""
+msgstr "点击 :guilabel:`保存并关闭` 保存规则并关闭弹出窗口，或点击 :guilabel:`保存并新建` 保存规则并立即创建新规则。"
 
 #: ../../content/applications/sales/sales/products_prices/loyalty_discount.rst:162
 msgid "Rewards"
@@ -18815,16 +19110,20 @@ msgid ""
 ":guilabel:`Add` next to :guilabel:`Rewards` to add *rewards* to the program."
 " This reveals a :guilabel:`Create Rewards` pop-up window."
 msgstr ""
+"在程序表格的 :guilabel:`规则与奖励` 选项卡中，点击 :guilabel:`奖励` 旁边的 :guilabel:`添加` 来为程序添加 "
+"*奖励*。这时会弹出一个 :guilabel:`创建奖励` 窗口。"
 
 #: ../../content/applications/sales/sales/products_prices/loyalty_discount.rst:169
 msgid ""
 "The options for :guilabel:`Rewards` vary depending on the selected "
 ":ref:`Program Type <sales/pricing_management/program-types>`."
 msgstr ""
+"根据所选的 :ref:`计划类型<sales/pricing_management/program-types>` 选项，:guilabel:`奖励` "
+"的选项会有所不同。"
 
 #: ../../content/applications/sales/sales/products_prices/loyalty_discount.rst:172
 msgid "The following options are available for configuring rewards:"
-msgstr ""
+msgstr "下列选项可用于配置奖励："
 
 #: ../../content/applications/sales/sales/products_prices/loyalty_discount.rst:174
 msgid ""
@@ -18833,32 +19132,34 @@ msgid ""
 "options for reward configuration depend on the :guilabel:`Reward Type` "
 "selected."
 msgstr ""
+":guilabel:`奖励类型`：从 :guilabel:`免费产品`、:guilabel:`折扣`和 :guilabel:`免运费` "
+"中选择奖励类型。其他奖励配置选项取决于所选的 :guilabel:`奖励类型`。"
 
 #: ../../content/applications/sales/sales/products_prices/loyalty_discount.rst:178
 msgid ":guilabel:`Free Product`:"
-msgstr ""
+msgstr ":guilabel:`免费产品`:"
 
 #: ../../content/applications/sales/sales/products_prices/loyalty_discount.rst:180
 msgid ""
 ":guilabel:`Quantity Rewarded`: Select the number of free products rewarded "
 "to the customer."
-msgstr ""
+msgstr ":guilabel:`奖励数量`：选择奖励给顾客的免费产品数量。"
 
 #: ../../content/applications/sales/sales/products_prices/loyalty_discount.rst:181
 msgid ""
 ":guilabel:`Product`: Select the product given for free as a reward. Only one"
 " product can be selected."
-msgstr ""
+msgstr ":guilabel:`产品`：选择作为奖励免费赠送的产品。只能选择一种产品。"
 
 #: ../../content/applications/sales/sales/products_prices/loyalty_discount.rst:183
 msgid ""
 ":guilabel:`Product Tag`: Select a tag to further specify the free product "
 "eligible for the reward."
-msgstr ""
+msgstr ":guilabel:`产品标签`：选择一个标签，进一步指定符合奖励条件的免费产品。"
 
 #: ../../content/applications/sales/sales/products_prices/loyalty_discount.rst:186
 msgid ":guilabel:`Discount`:"
-msgstr ""
+msgstr ":guilabel:`折扣`:"
 
 #: ../../content/applications/sales/sales/products_prices/loyalty_discount.rst:188
 msgid ""
@@ -18868,17 +19169,20 @@ msgid ""
 " the entire :guilabel:`Order`, only the :guilabel:`Cheapest Product` on the "
 "order, or only :guilabel:`Specific Products`."
 msgstr ""
+":guilabel:`折扣`：输入折扣金额，可以是 :guilabel:`百分比`、:guilabel:`每点货币` 或 "
+":guilabel:`每订单货币`。然后，选择折扣是否适用于整个 :guilabel:` 订单`，或仅适用于订单中的 :guilabel:` "
+"最便宜产品`，或仅适用于 :guilabel:` 特定产品`。"
 
 #: ../../content/applications/sales/sales/products_prices/loyalty_discount.rst:192
 #: ../../content/applications/sales/sales/products_prices/loyalty_discount.rst:197
 msgid ""
 ":guilabel:`Max Discount`: Enter the maximum amount (in currency) that this "
 "reward may grant as a discount. Leave this field at `0` for no limit."
-msgstr ""
+msgstr ":guilabel:`最大折扣`：输入此奖励可给予折扣的最大金额（货币）。此字段为 `0` 表示无限制。"
 
 #: ../../content/applications/sales/sales/products_prices/loyalty_discount.rst:195
 msgid ":guilabel:`Free Shipping`:"
-msgstr ""
+msgstr ":guilabel:`免费送货`："
 
 #: ../../content/applications/sales/sales/products_prices/loyalty_discount.rst:200
 msgid ""
@@ -18983,7 +19287,7 @@ msgstr ""
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:53
 msgid "View, edit, and add currencies"
-msgstr ""
+msgstr "查看、编辑和添加货币"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:55
 msgid ""
@@ -18992,16 +19296,18 @@ msgid ""
 ":guilabel:`Currencies` link, located beneath the :guilabel:`Currency` field "
 "on the :menuselection:`Accounting app --> Settings` page."
 msgstr ""
+"要查看、编辑和添加货币到数据库，使其在价目表和 :guilabel:`主要货币` 下拉菜单中可用，请点击位于 "
+":menuselection:`会计应用程序 --> 设置` 页面 :guilabel:`货币` 字段下方的 :guilabel:`货币` 链接。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:59
 msgid ""
 "When the :guilabel:`Currencies` link is clicked, a separate "
 ":guilabel:`Currencies` page is revealed."
-msgstr ""
+msgstr "点击 :guilabel:`货币` 链接后，将显示单独的 :guilabel:`货币` 页面。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst-1
 msgid "How the main currencies page appears in Odoo Accounting."
-msgstr ""
+msgstr "货币主页面在 Odoo 会计中的显示方式。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:65
 msgid ""
@@ -19011,17 +19317,20 @@ msgid ""
 ":guilabel:`Current Rate` (compared to the default currency of the country in"
 " which the company is based)."
 msgstr ""
+"在本页中，Odoo 提供了 167 种全球货币的主列表。每行显示相应的 "
+":guilabel:`货币`、:guilabel:`符号`、:guilabel:`名称`、:guilabel:`上次更新日期` 和 "
+":guilabel:`当前汇率`（与公司所在国家/地区的默认货币相比）。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:70
 msgid ""
 "To the far right, there are two columns, which can be toggled on or off:"
-msgstr ""
+msgstr "最右边有两栏，可以打开或关闭："
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:72
 msgid ""
 ":guilabel:`Use on eBay`: this currency can be used with the connected eBay "
 "account (if applicable)."
-msgstr ""
+msgstr ":guilabel:`在 eBay 上使用`：该货币可用于已连接的 eBay 账户（如适用）。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:74
 msgid ""
@@ -19030,12 +19339,14 @@ msgid ""
 " :menuselection:`Accounting app --> Configuration --> Settings --> "
 "Currencies section`)."
 msgstr ""
+":guilabel:`生效`：该货币已生效，这意味着可以添加到价目表中，或根据需要用作公司的主要货币（通过 :menuselection:`会计应用程序"
+" --> 配置 --> 设置 --> 货币部分`）。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:79
 msgid ""
 "By default, all the :guilabel:`Active` currency options are at the top of "
 "the list."
-msgstr ""
+msgstr "默认情况下，所有 :guilabel:`生效` 货币选项都位于列表顶部。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:82
 msgid ""
@@ -19043,42 +19354,43 @@ msgid ""
 ":guilabel:`Active` currency. See :doc:`./pricing` to learn more about "
 "pricelist configuration."
 msgstr ""
+"建议 * 每个 :guilabel:`生效` 货币至少 * 创建一个价格表。请参阅 :doc:`./pricing` 了解有关价格表配置的更多信息。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:85
 msgid ""
 "To toggle options on/off, click the toggle switch in the row for the "
 "corresponding column. When *on* the color of the switch is green. When "
 "*off*, the color of the switch is grey."
-msgstr ""
+msgstr "要打开/关闭选项，请点击相应列行中的切换开关。*打开*时，开关颜色为绿色。*关闭* 时，开关颜色为灰色。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:89
 msgid "Currency detail form"
-msgstr ""
+msgstr "货币明细表"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:91
 msgid ""
 "To edit any currency on the :guilabel:`Currencies` page, click the desired "
 "currency to reveal the detail form for that specific currency, and proceed "
 "to make any necessary changes."
-msgstr ""
+msgstr "要编辑 :guilabel:`货币` 页面上的任何货币，请点击所需的货币，以显示该特定货币的详细表单，然后进行任何必要的更改。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst-1
 msgid "How a currency detail form looks in Odoo Accounting."
-msgstr ""
+msgstr "货币明细表在 Odoo 会计中的外观。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:98
 msgid ""
 "On the currency detail form, the relevant currency code appears in the "
 ":guilabel:`Currency` field. Beneath that, the name for the currency is in "
 "the :guilabel:`Name` field."
-msgstr ""
+msgstr "在货币明细表单中，相关货币代码显示在 :guilabel:`货币` 字段中。下面的 :guilabel:`名称` 字段中是货币名称。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:101
 msgid ""
 "Then, toggle the currency's availability with the :guilabel:`Active` toggle:"
 " *on* is indicated with a green switch, and *off* is indicated with a grey "
 "switch."
-msgstr ""
+msgstr "然后，使用 :guilabel:`生效` 开关切换货币的可用性： *打开*用绿色开关表示，*关闭* 用灰色开关表示。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:104
 msgid ""
@@ -19086,12 +19398,13 @@ msgid ""
 ":guilabel:`Currency Unit` (e.g. `Dollars`) and :guilabel:`Currency Subunit` "
 "(e.g. `Cents`) can be found."
 msgstr ""
+"在货币明细表的右侧，可以找到相应的 :guilabel:`货币单位` （例如，`美元`）和 :guilabel:`货币子单位` （例如，`美分`）。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:107
 msgid ""
 "If the currency is meant to be used for eBay purposes, toggle the "
 ":guilabel:`Use on eBay` option to the desired activation."
-msgstr ""
+msgstr "如果货币用于 eBay，请将 :guilabel:`在 eBay 上使用` 选项切换为所需的生效状态。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:110
 msgid ""
@@ -19100,6 +19413,8 @@ msgid ""
 "specific rate, the :guilabel:`Company` to which it is connected, followed by"
 " the :guilabel:`Unit per...` and :guilabel:`...per Unit`."
 msgstr ""
+"接下来，在 :guilabel:`汇率` 标签下，可以查看、添加或删除各种转换率。每行显示特定汇率的 :guilabel:`日期` 、与之相连的 "
+":guilabel:`公司`，然后是 :guilabel:`单位/...` 和 :guilabel:`...每单位`。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:115
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:166
@@ -19108,55 +19423,57 @@ msgid ""
 "for the company. For example, if the main currency is set to `USD`, the "
 "columns are titled :guilabel:`Unit per USD` and :guilabel:`USD per Unit`."
 msgstr ""
+"最后两列中的 *...* 代表公司设置的主要货币。例如，如果主要货币设置为 `美元`，则这两列的标题分别为 :guilabel:`美元：单位` 和 "
+":guilabel:`单位：美元`。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:119
 msgid ""
 "To add a new rate, click :guilabel:`Add a line` in the :guilabel:`Rates` "
 "tab, and proceed to fill in the necessary information in the aforementioned "
 "columns."
-msgstr ""
+msgstr "要添加新汇率，请点击 :guilabel:`汇率` 标签中的 :guilabel:`添加一行`，然后在上述各栏填写必要信息。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:123
 msgid "Main currency detail form"
-msgstr ""
+msgstr "主要货币明细表"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:125
 msgid ""
 "If the selected currency is the main currency of the company, a blue banner "
 "appears at the top of the currency detail form with the message: "
 ":guilabel:`This is your company's currency.`."
-msgstr ""
+msgstr "如果所选货币是公司的主要货币，则货币详情表单顶部会出现蓝色横幅，并显示 :guilabel:`这是您公司的货币`。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst-1
 msgid "How a main currency detail form looks in Odoo Accounting."
-msgstr ""
+msgstr "Odoo 会计中主要货币明细表的外观。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:132
 msgid ""
 "All the fields are the same as a typical currency detail form, but there "
 "will **not** be a :guilabel:`Rates` tab because all other currency rates are"
 " based off the main currency of the company."
-msgstr ""
+msgstr "所有字段都与典型的货币明细表相同，但不会有 :guilabel:`汇率` 选项卡，因为所有其他货币汇率都是基于公司的主要货币。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:137
 msgid "Create new currency"
-msgstr ""
+msgstr "创建新汇率"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:139
 msgid ""
 "If a desired currency isn't on the :guilabel:`Currencies` page, click the "
 ":guilabel:`New` button to open a blank currency template form."
-msgstr ""
+msgstr "如果所需货币不在 :guilabel:`货币` 页面上，请点击 :guilabel:`新建` 按钮打开空白货币模板表单。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:143
 msgid ""
 "The same :guilabel:`New` button is located in the upper-right corner of any "
 "currency detail form."
-msgstr ""
+msgstr "任何货币明细表的右上角都有同样的 :guilabel:`新建` 按钮。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst-1
 msgid "How a blank currency detail form looks in Odoo Accounting."
-msgstr ""
+msgstr "在 Odoo 会计中空白货币明细表的外观。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:149
 msgid ""
@@ -19164,12 +19481,13 @@ msgid ""
 "code in the :guilabel:`Currency` field. Beneath that, enter the name for the"
 " currency in the :guilabel:`Name` field."
 msgstr ""
+"在空白的货币详情表中，在 :guilabel:`货币` 字段中输入所需的货币代码。在下面的 :guilabel:`名称` 字段中输入货币名称。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:153
 msgid ""
 "Then, toggle the currency's availability with the :guilabel:`Active` toggle "
 "switch."
-msgstr ""
+msgstr "然后，使用 :guilabel:`激活` 切换开关切换货币的可用性。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:155
 msgid ""
@@ -19177,12 +19495,13 @@ msgid ""
 ":guilabel:`Currency Unit` (e.g. `Dollars`) and appropriate "
 ":guilabel:`Currency Subunit` (e.g. `Cents`)."
 msgstr ""
+"在货币详情表的右侧，输入适当的 :guilabel:`货币单位` （例如，`美元`）和适当的 :guilabel:`货币子单位` （例如，`美分`）。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:158
 msgid ""
 "If the currency is meant to be used for eBay purposes, toggle the "
 ":guilabel:`Use on eBay` to the desired activation."
-msgstr ""
+msgstr "如果货币用于 eBay，请将 :guilabel:`在 eBay 上使用` 切换为所需的生效状态。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:161
 msgid ""
@@ -19192,10 +19511,13 @@ msgid ""
 ":guilabel:`...per Unit` fields to ensure all the auto-populated information "
 "is accurate."
 msgstr ""
+"接下来，在 :guilabel:`汇率` 标签下，点击 :guilabel:`添加一行` 添加新的汇率。然后，确认并调整 "
+":guilabel:`日期`、:guilabel:`公司`、:guilabel:`单位/...` 和 :guilabel:`...每单位` "
+"字段，确保所有自动填充的信息准确无误。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:171
 msgid "Currency-specific pricelists"
-msgstr ""
+msgstr "特定货币价目表"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:173
 msgid ""
@@ -19204,26 +19526,28 @@ msgid ""
 "currency, start by navigating to :menuselection:`Sales app --> Products --> "
 "Pricelists`."
 msgstr ""
+"建议数据库中的每种有效货币 *至少* 创建一个价目表。要为特定货币创建（或分配）价格表，首先要导航到 :menuselection:`销售应用程序 "
+"--> 产品 --> 价目表`。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:177
 msgid ""
 "From the :guilabel:`Pricelists` page, either select an existing pricelist to"
 " edit, or click :guilabel:`New` to create a new pricelist."
-msgstr ""
+msgstr "在 :guilabel:`价目表` 页面，选择要编辑的现有价目表，或点击 :guilabel:`新建` 创建新价目表。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:180
 msgid ""
 "On the pricelist detail form, for either a new or existing pricelist, adjust"
 " the :guilabel:`Currency` field as desired."
-msgstr ""
+msgstr "在新的或现有的价目表详细表单中，根据需要调整 :guilabel:`货币` 字段。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:184
 msgid ":doc:`./pricing` to learn more about pricelist configuration."
-msgstr ""
+msgstr ":doc:`./pricing` 了解有关价目表配置的更多信息。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:187
 msgid "Auto-conversion from public price"
-msgstr ""
+msgstr "自动转换公共价格"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:189
 msgid ""
@@ -19232,6 +19556,8 @@ msgid ""
 "navigating to :menuselection:`Accounting app --> Configuration --> Settings "
 "--> Currencies section --> Main Currency --> Currency drop-down menu`."
 msgstr ""
+"应该注意的是，产品上的公开价格与公司设置的主要货币直接相关，可通过导航至 :menuselection:`会计应用程序 --> 配置 --> 设置 "
+"--> 货币部分 --> 主要货币 --> 货币下拉菜单` 进行配置。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:193
 msgid ""
@@ -19239,24 +19565,24 @@ msgid ""
 "different pricelist that has a different currency than the company's main "
 "currency. The change in price is directly related to the updated conversion "
 "rate for that currency."
-msgstr ""
+msgstr "如果将价格表更改为货币与公司主要货币不同的不同价格表，销售价格会自动更新。价格的变化与该货币的最新换算率直接相关。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:198
 msgid "Set product prices"
-msgstr ""
+msgstr "设定产品价格"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:200
 msgid ""
 "In order to have product prices set in place to avoid any changes in "
 "currency rates, start by navigating to :menuselection:`Sales app --> "
 "Products --> Products`."
-msgstr ""
+msgstr "为了将产品价格设置到位以避免任何汇率变动，请首先导航至 :menuselection:`销售应用程序 --> 产品 --> 产品`。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:203
 msgid ""
 "From the :guilabel:`Products` page, select the desired product to modify. "
 "Or, create a new product by clicking the :guilabel:`New` button."
-msgstr ""
+msgstr "从 :guilabel:`产品` 页面选择要修改的产品。或点击 :guilabel:`新建` 按钮创建新产品。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:206
 msgid ""
@@ -19264,18 +19590,20 @@ msgid ""
 "button, located in the upper-left corner. Doing so reveals a separate "
 ":guilabel:`Price Rules` page, specific to that particular product."
 msgstr ""
+"然后，在产品详细信息表单中，点击左上角的 :guilabel:`额外价格` 智能按钮。这样就会显示一个单独的 :guilabel:`价格规则` "
+"页面，专门针对该特定产品。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst-1
 msgid ""
 "How to set product prices based on foreign currency pricelists in Odoo "
 "Sales."
-msgstr ""
+msgstr "如何在 Odoo 销售中根据外币价目表设置产品价格。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:214
 msgid ""
 "Click :guilabel:`New`, and select the desired pricelist from the drop-down "
 "menu in the :guilabel:`Pricelist` column."
-msgstr ""
+msgstr "点击 :guilabel:`新建`，然后从 :guilabel:`价目表` 列的下拉菜单中选择所需的价目表。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:217
 msgid ""
@@ -19351,6 +19679,8 @@ msgid ""
 "--> Configuration --> Settings`. In the :guilabel:`Pricing` section, click "
 "the checkbox next to the :guilabel:`Pricelists` feature."
 msgstr ""
+"要选择定价策略，首先导航至 :menuselection:`销售应用程序 --> 配置 --> 设置`。在 :guilabel:`价目表` 部分，点击 "
+":guilabel:`价目表` 功能旁边的复选框。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:20
 msgid ""
@@ -24755,8 +25085,8 @@ msgstr ""
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:166
 #: ../../content/applications/sales/subscriptions/closing.rst:105
-#: ../../content/applications/sales/subscriptions/renewals.rst:85
-#: ../../content/applications/sales/subscriptions/reports.rst:406
+#: ../../content/applications/sales/subscriptions/renewals.rst:128
+#: ../../content/applications/sales/subscriptions/reports.rst:403
 #: ../../content/applications/sales/subscriptions/scheduled_actions.rst:186
 #: ../../content/applications/sales/subscriptions/upselling.rst:107
 msgid ":doc:`../subscriptions`"
@@ -24764,8 +25094,8 @@ msgstr ""
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:167
 #: ../../content/applications/sales/subscriptions/closing.rst:106
-#: ../../content/applications/sales/subscriptions/renewals.rst:86
-#: ../../content/applications/sales/subscriptions/reports.rst:407
+#: ../../content/applications/sales/subscriptions/renewals.rst:129
+#: ../../content/applications/sales/subscriptions/reports.rst:404
 #: ../../content/applications/sales/subscriptions/scheduled_actions.rst:187
 #: ../../content/applications/sales/subscriptions/upselling.rst:108
 msgid ":doc:`plans`"
@@ -24773,8 +25103,8 @@ msgstr ""
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:168
 #: ../../content/applications/sales/subscriptions/closing.rst:107
-#: ../../content/applications/sales/subscriptions/renewals.rst:87
-#: ../../content/applications/sales/subscriptions/reports.rst:408
+#: ../../content/applications/sales/subscriptions/renewals.rst:130
+#: ../../content/applications/sales/subscriptions/reports.rst:405
 #: ../../content/applications/sales/subscriptions/scheduled_actions.rst:188
 #: ../../content/applications/sales/subscriptions/upselling.rst:109
 msgid ":doc:`products`"
@@ -25068,6 +25398,403 @@ msgid ""
 "page."
 msgstr ""
 
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:3
+msgid "SEPA Direct Debit"
+msgstr "SEPA 直接借记"
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:7
+msgid ""
+"*SEPA*, or Single Euro Payments Area, is a payment-integration initiative of"
+" the European Union for simplifying bank transfers denominated in euros."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:10
+msgid ""
+"*SEPA Direct Debit (|sdd|)* is a payment provider that allows future "
+"payments to be collected from customers' bank accounts by signing a mandate."
+" This allows recurring payments to be automatically gathered and processed "
+"using |sdd|."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:15
+msgid ""
+"To create :ref:`direct debit mandates <subscriptions/sepa-sdd-payment>`, the"
+" **Accounting** app **must** be installed."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:24
+msgid ""
+"Before using |sdd|, the database must be configured to allow the use of "
+"Euros on sales orders. To do so, a :doc:`pricelist "
+"<../../point_of_sale/pricing/pricelists>` must be created for Euros."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:27
+msgid ""
+"This can be done using the **Sales** or **Point of Sales** apps. From either"
+" app, navigate to :menuselection:`Configuration --> Settings`."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:30
+msgid ""
+"In the :guilabel:`Pricing` section, underneath the :guilabel:`Pricelists` "
+"feature, click :icon:`fa-arrow-right` :guilabel:`Pricelists`. Then, click "
+"the :guilabel:`New` button to open a new pricelist form. Add a name for the "
+"pricelist in the top field, then set the drop-down menu next to "
+":guilabel:`Currency` to :guilabel:`EUR`."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:35
+msgid ""
+"To use the wire transfer payment method, first ensure the |sdd| payment "
+"method is enabled. To do so, navigate to :menuselection:`Accounting app --> "
+"Configuration --> Settings`, scroll to the :guilabel:`Customer Payments` "
+"section, and tick the :guilabel:`SEPA Direct Deposit (SDD)` checkbox. Then, "
+"set a creditor identifier number in the field labeled, :guilabel:`Creditor "
+"Identifier`. Then, click :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:42
+msgid ""
+"The company using |sdd| must have a creditor identifier to issue a SEPA "
+"Direct Debit payment request. If using :ref:`test mode <subscriptions/sepa-"
+"sdd-test-mode>`, use the test creditor identifier number: "
+"`DE98ZZZ09999999999`, and click :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:46
+msgid ""
+"Next, enable SEPA Direct Debit from the *Payment Providers* page in either "
+"the **Accounting**, **Website**, or **Sales** apps."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:49
+msgid ""
+"For example, navigate to :menuselection:`Accounting app --> Configuration "
+"--> Payment Providers`, then click the :guilabel:`SEPA Direct Debit` card."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:53
+msgid ""
+"The *SEPA Direct Debit* form can also be reached by navigating to "
+":menuselection:`Website app --> Configuration --> Payment Providers`, or "
+":menuselection:`Sales app --> Configuration --> Payment Providers`."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:57
+msgid ""
+"Next, set the :guilabel:`State` to :guilabel:`Enabled` to enable |sdd|. Use "
+"the drop-down menus next to the :guilabel:`Company` and :guilabel:`Website` "
+"fields to set where |sdd| can be used."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:60
+msgid ""
+"The options in the :guilabel:`Configuration` tab can be configured to "
+"customize how |sdd| is used. Optionally, tick the checkbox next to "
+":guilabel:`Enable QR Codes` to enable the use of QR codes when paying by "
+"|sdd|, if desired."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:64
+msgid ""
+"Use the drop-down menu next to the :guilabel:`Communication` field to select"
+" the communication type used on sales orders. Choose :guilabel:`Based on "
+"Document Reference` to use the sales order (or invoice number), or "
+":guilabel:`Based on Customer ID` to use the customer identifier. With either"
+" method selected, communication is given to the customer, once they choose "
+"the |sdd| payment method."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:69
+msgid ""
+"The configuration options listed under the :guilabel:`Availability` section "
+"are used to set payment restrictions, and are optional. Use the "
+":guilabel:`Maximum Amount` field to set a maximum payment value, and the "
+":guilabel:`Countries` field to restrict payment from any particular "
+"countries, if desired."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:75
+msgid ""
+"The :guilabel:`Currencies` field should be left with the default "
+":guilabel:`EUR` tag to ensure |sdd| is only accessible when customers pay "
+"with Euros."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:78
+msgid ""
+"The :guilabel:`Payment Journal` field in the :guilabel:`Payment followup` "
+"section can be used to select the journal in which the successful "
+"transactions are posted."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:81
+msgid ""
+"In the :guilabel:`Messages` tab, the :guilabel:`Pending Message` field can "
+"be used to add a message that is displayed, if the order remains pending "
+"after the payment is processed. By default, this field contains the message:"
+" :guilabel:`Please make an unique payment transfer to confirm the SEPA "
+"mandate.`"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst-1
+msgid "The SEPA Direct Debit Payment Provider form."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:90
+msgid ""
+"Once all necessary configuration settings are complete, the :icon:`fa-eye-"
+"slash` :guilabel:`Unpublished` smart button, located at the top of the page "
+"automatically changes to :icon:`fa-globe` :guilabel:`Published` to show the "
+"|sdd| payment option is now visible to customers. Only keep the payment "
+"method published if payments are ready to be received."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:96
+msgid ""
+"It is possible to keep the payment method enabled, but **not** visible to "
+"customers, until payments are ready to be received. To do this, set the "
+"smart button to :icon:`fa-eye-slash` :guilabel:`Unpublished` after setting "
+"the :guilabel:`State` to :guilabel:`Enabled`."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:101
+msgid ""
+"The |sdd| configuration menu can also be accessed by navigating to "
+":menuselection:`Settings app --> Website`, and in the :guilabel:`Shop - "
+"Payment` section, click the :icon:`fa-arrow-right` :guilabel:`View other "
+"providers` button. Then, click the |sdd| card. Alternatively, navigate to "
+":menuselection:`Website app --> Configuration --> Settings` to access the "
+"same button."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:109
+#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:75
+msgid "Test mode"
+msgstr "测试模式"
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:111
+msgid ""
+"The |sdd| payment method can be tested before it is accessed by customers. "
+"First, ensure the test creditor identifier is :ref:`configured "
+"<subscriptions/sepa-sdd-configuration>` before continuing."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:115
+#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:91
+msgid ""
+"It is recommended to use the :guilabel:`Test Mode` setting on a duplicate "
+"(or test) database to avoid potential issues with invoice numbering."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:118
+msgid ""
+"Next, select the :guilabel:`Test Mode` option in the :guilabel:`State` field"
+" on the form. Upon selecting :guilabel:`Test Mode`, an orange "
+":guilabel:`Test mode` banner appears in the upper-right corner of the form."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:123
+#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:87
+msgid ""
+"By default, the payment provider remains :guilabel:`Unpublished` in "
+":guilabel:`Test Mode`, so it is not visible to visitors."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:126
+msgid ""
+"Navigate to :menuselection:`Sales app --> Orders --> Quotations`, and click "
+"the :guilabel:`New` button to create a new sales order."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:129
+msgid ""
+"Select a :guilabel:`Customer`. Select any pay period in the drop-down menu "
+"next to :guilabel:`Recurring Plan` and select the pricelist using EUR in the"
+" drop-down menu next to :guilabel:`Pricelist`."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:133
+msgid ""
+"Finally, select a subscription product in the :guilabel:`Order Lines` tab of"
+" the sales order."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:135
+msgid ""
+"Next, confirm the sales order by clicking the :guilabel:`Confirm` button, "
+"then click the :guilabel:`Preview` button to open a preview of the customer "
+"invoice. Scroll down to the :guilabel:`Anticipate payment` section to find "
+"the SEPA Direct Debit payment method."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:140
+msgid ""
+"It can be confirmed that test mode is still enabled if the :icon:`fa-eye-"
+"slash` (unpublished) and :icon:`fa-exclamation-triangle` (test mode) icons "
+"are present next to SEPA Direct Debit."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:0
+msgid ""
+"The view of the SEPA Direct Debit payment method presented to customers at "
+"checkout."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:147
+msgid ""
+"Next, enter a test IBAN number, such as `GB33BUKB20201555555555`, and click "
+":guilabel:`Pay`. Return to the sales order in the **Sales** app, and confirm"
+" the :guilabel:`In Progress` tag is present on the sales order form. At this"
+" point, the flow is complete."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:151
+msgid ""
+"To re-enable normal function after testing, navigate back to the *SEPA "
+"Direct Debit* form, and change the *State* setting to :guilabel:`Enabled`."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:157
+msgid "Pay by SEPA Direct Debit"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:159
+msgid ""
+"Once |sdd| has been :ref:`configured <subscriptions/sepa-sdd-configuration>`"
+" and enabled, |sdd| appears as a payment method during checkout in "
+"**eCommerce**, and as a payment method on invoices in the **Sales** app. The"
+" option is presented to customers, and prompts them to enter their IBAN "
+"number."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:164
+msgid ""
+"Once a customer clicks *Pay*, the sales order is marked with a *In Progress*"
+" tag until the mandate has been closed."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:167
+msgid ""
+"Mandates automatically close after the end date is reached. If the *End "
+"date* field is not set, the mandate remains in an *Active* state until it is"
+" *Closed* or *Revoked*."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:170
+msgid ""
+"|sdd| payments can also be registered manually by navigating to the desired "
+"invoice and clicking the :guilabel:`Register Payment` button. Next, select "
+":guilabel:`SEPA Direct Debit` as the :guilabel:`Payment Method` and click "
+"the :guilabel:`Create Payment` button. The invoice now displays a green "
+":guilabel:`In Payment` banner."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:176
+msgid ""
+"To validate a successful |sdd| payment, navigate to "
+":menuselection:`Accounting app --> Customers --> Payments`, and look for the"
+" entry in the list, along with a :guilabel:`Posted` tag in the "
+":guilabel:`Status` column."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:181
+msgid "Submit payments"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:183
+msgid ""
+"All |sdd| payments can be processed at once by uploading an `.xml` file "
+"containing a batch of all posted |sdd| payments to an online banking "
+"interface. To generate this file, navigate to :menuselection:`Accounting app"
+" --> Customers --> Batch Payments`. A list of all posted |sdd| payments "
+"appears. Tick the checkbox next to every payment to be included in the "
+"batch, or tick the checkbox at the top of the list to select all entries at "
+"once."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:189
+msgid ""
+"Next, click :guilabel:`Create Batch`. A new batch payment form appears with "
+"the selected payments added to the list in the :guilabel:`Batch Content` "
+"tab."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst-1
+msgid "The batch payment form containing the selected payments."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:196
+msgid ""
+"This form also contains optional fields to customize the batch payment:"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:198
+msgid ":guilabel:`Bank`: Select the bank the payment is sent to."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:199
+msgid ":guilabel:`Date`: Set the current date."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:200
+msgid ":guilabel:`Reference`: Set a custom reference number for the payment."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:201
+msgid ""
+":guilabel:`Required collection date`: Set a date when the company expects to"
+" receive the payment of this batch."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:203
+msgid ""
+":guilabel:`Batch Booking`: Request batch booking from the bank for the "
+"related bank statements."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:204
+msgid ""
+":guilabel:`SDD Scheme`: The B2B scheme is an optional scheme, offered "
+"exclusively to business payers. Some banks/businesses might not accept B2B "
+"|sdd|."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:207
+msgid ""
+"Once the payment is configured, click :guilabel:`Validate` to generate the "
+"`.xml` file, which appears in the chatter. Finally, click the :icon:`fa-"
+"download` :guilabel:`(download)` icon next to the file in the chatter to "
+"download the file."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:211
+msgid ""
+"This file can now be uploaded to the desired online banking interface to "
+"process the payments."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:214
+msgid ""
+"The files generated by Odoo follow the SEPA Direct Debit **PAIN.008.001.02**"
+" specifications, as required by the SEPA customer-to-bank `implementation "
+"guidelines <https://www.europeanpaymentscouncil.eu/document-"
+"library/implementation-guidelines/sepa-credit-transfer-customer-psp-"
+"implementation>`_, which ensures compatibility with the banks."
+msgstr ""
+"Odoo 生成的文件遵循 SEPA 直接付款 PAIN.008.001.02 规范，符合 SEPA 客户到银行的实施指南要求，详情请参阅实施指南 "
+"<https://www.europeanpaymentscouncil.eu/document-library/implementation-"
+"guidelines/sepa-credit-transfer-customer-psp-implementation>_，以确保与银行的兼容性。"
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:220
+msgid ":doc:`../../../finance/accounting/payments/batch_sdd`"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:221
+msgid ":doc:`../../../finance/accounting/payments/online`"
+msgstr ""
+
 #: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:3
 msgid "Wire transfer"
 msgstr ""
@@ -25187,10 +25914,6 @@ msgstr ""
 msgid "The wire transfer card enabled and published."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:75
-msgid "Test mode"
-msgstr "测试模式"
-
 #: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:77
 msgid ""
 "The wire transfer payment method can be tested before it is accessed by "
@@ -25205,18 +25928,6 @@ msgid ""
 "Next, enter the credentials for a bank account with accessible transactions "
 "in the :guilabel:`Messages` tab. To re-enable normal function after testing,"
 " change the :guilabel:`State` setting to :guilabel:`Enabled`."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:87
-msgid ""
-"By default, the payment provider remains :guilabel:`Unpublished` in "
-":guilabel:`Test Mode`, so it is not visible to visitors."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:91
-msgid ""
-"It is recommended to use the :guilabel:`Test Mode` setting on a duplicate "
-"(or test) database to avoid potential issues with invoice numbering."
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:97
@@ -25871,16 +26582,16 @@ msgstr "续订"
 #: ../../content/applications/sales/subscriptions/renewals.rst:5
 msgid ""
 "The foundation of any subscription business model is recurring payments. "
-"That's when customers reliably pay a regular amount at specific intervals, "
+"This is when customers reliably pay a regular amount at specific intervals, "
 "in exchange for access to a subscription product or service."
-msgstr "任何订阅业务模式的基础都是定期付款。这是指客户在特定时间间隔内定期支付一定金额，以换取订阅产品或服务的使用权。"
+msgstr ""
 
 #: ../../content/applications/sales/subscriptions/renewals.rst:9
 msgid ""
-"The renewal of a subscription is the process followed by customers when they"
-" willingly choose to continue their participation (and payment) for a "
-"subscription product or service."
-msgstr "续订是指客户自愿选择继续参与（并支付）订阅产品或服务的过程。"
+"Subscription renewal is the process customers follow when they willingly "
+"choose to continue participating in, and paying for, a subscription product "
+"or service."
+msgstr ""
 
 #: ../../content/applications/sales/subscriptions/renewals.rst:12
 msgid ""
@@ -25891,21 +26602,19 @@ msgstr "用户会根据约定的合同期限，在不同的时间间隔（每周
 
 #: ../../content/applications/sales/subscriptions/renewals.rst:15
 msgid ""
-"Most companies that offer subscriptions prefer to automate the renewals "
-"process for customers, but, in some cases, manual subscription renewals are "
-"still used."
-msgstr "大多数提供订阅服务的公司都倾向于为客户自动执行续订流程，但在某些情况下，手动续订仍在使用。"
+"Most companies that offer subscriptions prefer to automate the renewal "
+"process for customers. However, manual subscription renewals are still used "
+"in some cases."
+msgstr ""
 
 #: ../../content/applications/sales/subscriptions/renewals.rst:18
 msgid ""
-"With the Odoo *Subscriptions* application, a company can manage all of their"
-" subscriptions in one place. Renewals can be processed automatically or "
+"With the Odoo **Subscriptions** application, a company can manage all of its"
+" subscriptions in one place. Renewals can be processed automatically, or "
 "manually, include additional products or upsells per renewal order, and be "
 "filtered in batch views to quickly locate customers who need to renew their "
 "subscriptions."
 msgstr ""
-"有了 Odoo *订阅* "
-"应用程序，公司可以在一个地方管理其所有订阅。续订可自动或手动处理，包括每个续订订单的附加产品或追加销售，并可在批量视图中进行筛选，以快速找到需要续订的客户。"
 
 #: ../../content/applications/sales/subscriptions/renewals.rst:24
 msgid "Subscription renewals"
@@ -25914,39 +26623,54 @@ msgstr "续订"
 #: ../../content/applications/sales/subscriptions/renewals.rst:26
 msgid ""
 "In order to renew a subscription, a quotation with a subscription product "
-"**must** be confirmed, with a configured :guilabel:`Recurring Plan` "
-"selected, which turns it into a sales order."
-msgstr "要续订，**必须**确认包含订阅产品的报价单，并选择已配置的 :guilabel:`续订计划`，这样报价单就会变成销售订单。"
+"**must** be confirmed, with a configured *Recurring Plan* selected."
+msgstr ""
 
-#: ../../content/applications/sales/subscriptions/renewals.rst:30
+#: ../../content/applications/sales/subscriptions/renewals.rst:29
+msgid ""
+"To open a subscription quotation, navigate to :menuselection:`Subscriptions "
+"app --> Subscriptions --> Quotations`, and select the desired quotation from"
+" the list. Or, create a new one by clicking :guilabel:`New` to open a new "
+"quotation form."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/renewals.rst:34
 msgid "Only a singular product is required."
 msgstr "只需要一个单一产品。"
 
-#: ../../content/applications/sales/subscriptions/renewals.rst:31
+#: ../../content/applications/sales/subscriptions/renewals.rst:35
 msgid ""
-"A subscription service is still a product (albeit a digital, recurring one)"
-msgstr "订阅服务仍然是一个产品（尽管是一个数字化的、周期性重复的产品）。"
-
-#: ../../content/applications/sales/subscriptions/renewals.rst:33
-msgid ""
-"Then, that sales order needs to be confirmed, and payment from the customer "
-"for the initial subscription has to be invoiced and registered."
-msgstr "然后，需要确认销售订单，并开具发票和登记客户的首次订阅付款。"
-
-#: ../../content/applications/sales/subscriptions/renewals.rst:36
-msgid ""
-"When those steps are complete, an :guilabel:`In Progress` tag is applied to "
-"the sales order form, and a series of buttons appear at the top of the sales"
-" order -- including a button titled, :guilabel:`Renew`."
+"A subscription service counts as a product, as it is considered a recurring "
+"product."
 msgstr ""
-"当这些步骤完成后，一个 :guilabel:`进行中` 标签就会应用到销售订单表单，一系列按钮就会出现在销售订单的顶部，包括一个名为 "
-":guilabel:`续订` 的按钮。"
+
+#: ../../content/applications/sales/subscriptions/renewals.rst:37
+msgid ""
+"Subscription quotations **must** be confirmed, and payment from the customer"
+" for the initial subscription **must** be invoiced and registered in order "
+"to successfully open a *Renewal Quotation*."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/renewals.rst:42
+msgid ""
+"For more information on the above process of confirming quotations and "
+"invoicing payments, see: - :doc:`../sales/send_quotations/create_quotations`"
+" - :doc:`../sales/send_quotations/get_paid_to_validate`"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/renewals.rst:47
+msgid ""
+"Once the payment from the subscription quotation is confirmed, the quotation"
+" turns into a sales order. An :guilabel:`In Progress` tag is applied to the "
+"sales order form, and a series of buttons also appear at the top of the "
+"sales order, including a :guilabel:`Renew` button."
+msgstr ""
 
 #: ../../content/applications/sales/subscriptions/renewals.rst-1
 msgid "Renew button on subscription sales order with Odoo Subscriptions."
 msgstr "使用 Odoo 订阅应用程序，在订阅销售订单上添加续订按钮。"
 
-#: ../../content/applications/sales/subscriptions/renewals.rst:44
+#: ../../content/applications/sales/subscriptions/renewals.rst:55
 msgid ""
 "When the :guilabel:`Renew` button is clicked, Odoo instantly presents a new "
 "renewal quotation, complete with a :guilabel:`Renewal Quotation` tag."
@@ -25957,24 +26681,22 @@ msgstr "点击 :guilabel:`续订` 按钮后，Odoo 会立即显示新的续订�
 msgid "Renewal quotation in the Odoo Subscriptions application."
 msgstr "Odoo 订阅应用程序中的续订报价。"
 
-#: ../../content/applications/sales/subscriptions/renewals.rst:51
+#: ../../content/applications/sales/subscriptions/renewals.rst:62
 msgid ""
-"From here, a standard sales flow can occur in order to confirm the "
-"quotation. This typically begins by clicking :guilabel:`Send by Email`. This"
-" sends a copy of the quotation to the customer, by email, for them to "
-"confirm, and eventually, pay for."
+"From here, a standard sales flow can occur to confirm the quotation. This "
+"typically begins by clicking :guilabel:`Send by Email`, which sends a copy "
+"of the quotation to the customer, by email, for them to confirm, and "
+"eventually, pay for."
 msgstr ""
-"从这里开始，就可以进行标准的销售流程，以确认报价。通常首先点击 "
-":guilabel:`通过电子邮件发送`。这将通过电子邮件向客户发送报价单副本，供客户确认并最终付款。"
 
-#: ../../content/applications/sales/subscriptions/renewals.rst:56
+#: ../../content/applications/sales/subscriptions/renewals.rst:67
 msgid ""
-"In the *Chatter* of the :guilabel:`Renewal Quotation`, it is mentioned that "
+"In the chatter of the :guilabel:`Renewal Quotation`, it is mentioned that "
 "this subscription is the renewal of the subscription from the original sales"
 " order."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/renewals.rst:59
+#: ../../content/applications/sales/subscriptions/renewals.rst:70
 msgid ""
 "Once the :guilabel:`Renewal Quotation` is confirmed, it becomes a sales "
 "order, and a :guilabel:`Sales History` smart button appears at the top of "
@@ -25985,7 +26707,7 @@ msgstr ""
 msgid "Sales History smart button in the Odoo Subscriptions application."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/renewals.rst:66
+#: ../../content/applications/sales/subscriptions/renewals.rst:77
 msgid ""
 "When that :guilabel:`Sales History` smart button is clicked, Odoo reveals a "
 "separate page, showcasing the different sales orders attached to this "
@@ -25994,7 +26716,7 @@ msgstr ""
 "当点击 :guilabel:`销售历史` 智能按钮时，Odoo 会显示一个单独的页面，展示该订阅附加的不同销售订单，以及它们各自的 "
 ":guilabel:`订阅状态`。"
 
-#: ../../content/applications/sales/subscriptions/renewals.rst:74
+#: ../../content/applications/sales/subscriptions/renewals.rst:85
 msgid ""
 "Additionally, once the :guilabel:`Renewal Quotation` is confirmed, an "
 ":guilabel:`MRR` smart button also appears at the top of the sales order."
@@ -26004,177 +26726,225 @@ msgstr "此外，一旦确认了 :guilabel:` 续订报价单'，销售订单顶�
 msgid "MRR smart button in the Odoo Subscriptions application."
 msgstr "Odoo 订阅应用程序中的 MRR 智能按钮。"
 
-#: ../../content/applications/sales/subscriptions/renewals.rst:81
+#: ../../content/applications/sales/subscriptions/renewals.rst:92
 msgid ""
 "When clicked, Odoo reveals an :guilabel:`MRR Analysis` page, detailing the "
 "monthly recurring revenue related to this specific subscription."
 msgstr "点击后，Odoo 会显示一个 :guilabel:`MRR 分析` 页面，详细说明与此特定订阅相关的每月经常性收入。"
 
+#: ../../content/applications/sales/subscriptions/renewals.rst:96
+msgid ""
+"On rare occasions, automatic payment can fail, which results in a *Payment "
+"Failure* tag on the top-right of the sales order, if there is an error in "
+"the payment method."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/renewals.rst:99
+msgid ""
+"This is done to prevent the system from charging the customer again the next"
+" time a scheduled action is run. Because the status of the payment is "
+"unknown, Odoo requests a manual operation to check if the payment has been "
+"made, before the payment can be used again."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/renewals.rst:103
+msgid ""
+"To do this, navigate to :menuselection:`Subscriptions app --> Subscriptions "
+"--> Quotations`. Click into the desired subscription, then check the "
+"*Chatter* to see if the payment was made."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/renewals.rst:106
+msgid ""
+"If the payment was **not** made, first enter :doc:`debug mode "
+"<../../general/developer_mode>`. Then, click the :guilabel:`Other Info` tab,"
+" and untick the checkbox next to :guilabel:`Contract in exception`. Reload "
+"the sales order, and the :guilabel:`Payment Failure` tag is gone."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/renewals.rst:110
+msgid ""
+"If the payment **was** made, a new invoice must be made and posted manually."
+" This automatically updates the next invoice date of the subscription. Once "
+"created, enter :doc:`debug mode <../../general/developer_mode>`, and "
+"navigate to the new sales order. Click the :guilabel:`Other Info` tab, and "
+"untick the checkbox next to :guilabel:`Contract in exception`. Reload the "
+"sales order, and the :guilabel:`Payment Failure` tag is gone."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/renewals.rst:0
+msgid ""
+"The \"contract in exception\" option selected with the \"payment failure\" "
+"tag shown."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/renewals.rst:120
+msgid ""
+"The :guilabel:`contract in exception`` option selected with the "
+":guilabel:`payment failure` tag shown."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/renewals.rst:123
+msgid ""
+"In both cases, once the :guilabel:`Contract in exception` option is no "
+"longer selected, Odoo handles renewals automatically again. If the "
+"subscription remains in *payment failure*, it is skipped by Odoo until the "
+"sales order is closed."
+msgstr ""
+
 #: ../../content/applications/sales/subscriptions/reports.rst:3
 msgid "Subscription reports"
 msgstr "订阅报告"
 
-#: ../../content/applications/sales/subscriptions/reports.rst:5
-msgid ""
-"The Odoo *Subscriptions* application provides a series of reporting pages to"
-" help companies analyze how subscriptions are performing."
-msgstr "Odoo *订阅*应用程序提供一系列报告页面，帮助企业分析订阅的执行情况。"
-
 #: ../../content/applications/sales/subscriptions/reports.rst:8
 msgid ""
-"On the *Subscriptions Analysis* reporting page, users can view specific data"
-" related to recurring subscriptions, quantity of subscriptions, how many "
-"subscriptions are in progress or paused, and so much more."
-msgstr "在*订阅分析*报告页面，用户可以查看与经常性订阅、订阅数量、正在进行或暂停的订阅数量等相关的具体数据。"
+"The Odoo **Subscriptions** app provides a series of reporting pages to help "
+"companies analyze how subscriptions are performing."
+msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:12
+#: ../../content/applications/sales/subscriptions/reports.rst:11
+msgid ""
+"On the *Subscriptions Analysis* reporting page, users can view specific data"
+" related to recurring subscriptions, quantity of subscriptions, in-progress "
+"or paused subscriptions, and more."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/reports.rst:14
 msgid ""
 "The *Retention Analysis* reporting page provides an organized table of "
 "subscription retention percentages over any period of time."
 msgstr "*留存率分析*报告页面提供了一个详尽表格，显示任意时间段内的订阅留存率。"
 
-#: ../../content/applications/sales/subscriptions/reports.rst:15
+#: ../../content/applications/sales/subscriptions/reports.rst:17
 msgid ""
-"The *MRR Breakdown* reporting page clearly divides MRR (Monthly Recurring "
-"Revenue) and ARR (Annual Recurring Revenue) metrics for subscriptions into "
-"various graphs, lists, and charts."
+"The *MRR Breakdown* reporting page clearly divides |MRR| and |ARR| metrics "
+"for subscriptions into various graphs, lists, and charts."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:18
+#: ../../content/applications/sales/subscriptions/reports.rst:20
 msgid ""
 "And the *MRR Analysis* reporting page offers a time-based collection of "
-"analytics showcasing how subscription MRR and ARR has changed over the "
+"analytics showcasing how subscription |MRR| and |ARR| have changed over the "
 "course of any given period of time."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:22
+#: ../../content/applications/sales/subscriptions/reports.rst:24
 msgid "Reporting page elements"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:24
+#: ../../content/applications/sales/subscriptions/reports.rst:26
 msgid ""
-"All subscription-based reporting pages can be accessed via the "
-":guilabel:`Reporting` header menu in the *Subscriptions* application."
+"All subscriptions-based reporting pages can be accessed via the "
+":guilabel:`Reporting` header menu in the **Subscriptions** app."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:27
-msgid "The following describes elements found on each reporting page."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/reports.rst:30
-msgid "Filters and Group By"
+#: ../../content/applications/sales/subscriptions/reports.rst:29
+msgid "The following sections describe elements found on each reporting page."
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/reports.rst:32
-msgid ""
-"Filters are used to narrow down metrics to show specific analytics, whereas "
-"groupings (via the :guilabel:`Group By` option) are used to gather specific "
-"sections' data into groups for more organized analysis."
+msgid "Filters and Group By"
 msgstr ""
-"筛选器用于缩小指标范围，以显示特定的分析结果，而分组（通过 :guilabel:`分许方式` "
-"选项）则用于将特定部分的数据归为一组，以便进行更有条理的分析。"
 
-#: ../../content/applications/sales/subscriptions/reports.rst:36
+#: ../../content/applications/sales/subscriptions/reports.rst:34
+msgid ""
+"*Filters* are used to narrow down metrics to show specific analytics, "
+"whereas groupings (via the *Group By* option) are used to gather the data "
+"from specific sections into groups for more organized analysis."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/reports.rst:38
 msgid ""
 "This section refers to both filters and groupings, as a combination of the "
-"two can be saved in the :guilabel:`Favorites` section."
+"two can be saved in the *Favorites* section."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:39
+#: ../../content/applications/sales/subscriptions/reports.rst:41
 msgid ""
 "To modify the results being shown on any reporting page, click the "
-":guilabel:`▼ (downward facing arrow)` icon to the right of the search bar. "
-"Doing so reveals a drop-down menu of detailed filter and grouping options."
+":icon:`fa-caret-down` :guilabel:`(down arrow)` icon to the right of the "
+"search bar. Doing so reveals a drop-down menu of detailed filter and "
+"grouping options."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:44
-msgid "Multiple filter options and grouping options can be selected at once."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/reports.rst-1
+#: ../../content/applications/sales/subscriptions/reports.rst:45
 msgid ""
-"The reporting filter drop-down menu of options in the Odoo Subscriptions "
-"application."
+"If desired, a filter or grouping (or combination of filters and/or "
+"groupings) can be saved in the :guilabel:`Favorites` section of that drop-"
+"down menu. To do so, click the :icon:`fa-caret-down` :guilabel:`(down "
+"arrow)` icon beside :guilabel:`Save current search`, located beneath the "
+":guilabel:`Favorites` section."
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/reports.rst:50
 msgid ""
-"If desired, a filter or grouping (or combination of filters and/or "
-"groupings) can be saved in the :guilabel:`Favorites` section of that drop-"
-"down menu. To do that, click the :guilabel:`▼ (downward facing arrow)` icon "
-"beside :guilabel:`Save current search`, located beneath the "
-":guilabel:`Favorites` section."
+"This reveals a field to assign a title to the favorite filter. Two options "
+"are also found beneath the title field: :guilabel:`Default filter` and "
+":guilabel:`Shared`."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:55
+#: ../../content/applications/sales/subscriptions/reports.rst:53
 msgid ""
-"That reveals a field to assign a title to the favorite filter. There are "
-"also two options beneath the title field, as well: :guilabel:`Default "
-"filter` and :guilabel:`Shared`."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/reports.rst:58
-msgid ""
-"Ticking the check box beside :guilabel:`Default filter` makes the newly-"
+"Ticking the checkbox beside :guilabel:`Default filter` makes the newly-"
 "favorited filter the default option for that reporting page."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:61
+#: ../../content/applications/sales/subscriptions/reports.rst:56
 msgid ""
-"Ticking the box beside :guilabel:`Shared` makes the newly-favorited filter "
-"available to other users in the database."
+"Ticking the checkbox beside :guilabel:`Shared` makes the newly-favorited "
+"filter available to other users in the database."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:65
+#: ../../content/applications/sales/subscriptions/reports.rst:60
 msgid ""
 "The :guilabel:`Default filter` and :guilabel:`Shared` options are **not** "
-"required. Only *one* of those options can be selected at a time."
+"required, and only *one* of these options can be selected at a time."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:68
+#: ../../content/applications/sales/subscriptions/reports.rst:63
 msgid ""
-"To save that filter(s), click :guilabel:`Save` in the :guilabel:`Favorites` "
+"To save the filter, click :guilabel:`Save` in the :guilabel:`Favorites` "
 "section of the drop-down filter menu."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:71
+#: ../../content/applications/sales/subscriptions/reports.rst:66
 msgid ""
 "When clicked, that saved filter appears beneath the :guilabel:`Favorites` "
-"column of the drop-down filter menu, and a :guilabel:`⭐ (gold star)` icon "
-"appears beside the favorite filter's name in the search bar."
+"column of the drop-down filter menu, and a :icon:`fa-star` :guilabel:`(gold "
+"star)` icon appears beside the favorite filter's name in the search bar."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:76
+#: ../../content/applications/sales/subscriptions/reports.rst:71
 msgid "Views"
 msgstr "查看"
 
-#: ../../content/applications/sales/subscriptions/reports.rst:78
+#: ../../content/applications/sales/subscriptions/reports.rst:73
 msgid ""
 "On the :guilabel:`Subscription Analysis`, :guilabel:`MRR Breakdown`, and "
 ":guilabel:`MRR Analysis` reporting pages, three different view options are "
 "located in the upper-right corner."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:82
+#: ../../content/applications/sales/subscriptions/reports.rst:77
 msgid ""
 "There are *no* other view options available on the :guilabel:`Retention "
 "Analysis` reporting page."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:84
+#: ../../content/applications/sales/subscriptions/reports.rst:79
 msgid "The available view options, from left to right, are:"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:86
+#: ../../content/applications/sales/subscriptions/reports.rst:81
 msgid ":guilabel:`Graph`"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:87
-msgid ":guilabel:`Pivot`"
+#: ../../content/applications/sales/subscriptions/reports.rst:82
+msgid ":guilabel:`List`"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:88
-msgid ":guilabel:`List`"
+#: ../../content/applications/sales/subscriptions/reports.rst:83
+msgid ":guilabel:`Pivot`"
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/reports.rst-1
@@ -26182,11 +26952,11 @@ msgid ""
 "The different view options available on the Subscriptions Analysis page."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:94
+#: ../../content/applications/sales/subscriptions/reports.rst:89
 msgid "Each view has its own series of related view-specific visual options."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:99
+#: ../../content/applications/sales/subscriptions/reports.rst:94
 msgid ""
 "With the graph view selected, the following options appear between the "
 "search bar and visual representation of the data. These graph-specific "
@@ -26197,144 +26967,152 @@ msgstr ""
 ":guilabel:`插入电子表格` 按钮的右侧。"
 
 #: ../../content/applications/sales/subscriptions/reports.rst-1
-msgid ""
-"The different graph view options in the Odoo Subscriptions application."
-msgstr "Odoo 订阅应用程序中的不同图表视图选项。"
+msgid "The different graph view options in the Odoo Subscriptions app."
+msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:107
+#: ../../content/applications/sales/subscriptions/reports.rst:102
 msgid ""
 "The first three options, from left to right, represent different graph-"
 "related views. The remaining options represent different ways to organize "
 "and visualize that specific graph-related data."
 msgstr "前三个选项（从左到右）代表不同的图表相关视图。其余选项表示组织和可视化特定图表相关数据的不同方法。"
 
-#: ../../content/applications/sales/subscriptions/reports.rst:110
+#: ../../content/applications/sales/subscriptions/reports.rst:105
 msgid "From left to right, the specific graph-related view options are:"
 msgstr "从左到右，与图表相关的具体视图选项为："
 
-#: ../../content/applications/sales/subscriptions/reports.rst:112
-msgid ":guilabel:`Bar Chart`: showcases the data in a bar chart format."
-msgstr ":guilabel:`柱状图`：以柱状图格式显示数据。"
+#: ../../content/applications/sales/subscriptions/reports.rst:107
+msgid ""
+":icon:`fa-bar-chart` :guilabel:`Bar Chart`: showcases the data in a bar "
+"chart format."
+msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:113
-msgid ":guilabel:`Line Chart`: showcases the data in a line chart format."
-msgstr ":guilabel:`折线图`：以折线图格式显示数据。"
+#: ../../content/applications/sales/subscriptions/reports.rst:108
+msgid ""
+":icon:`fa-line-chart` :guilabel:`Line Chart`: showcases the data in a line "
+"chart format."
+msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:114
-msgid ":guilabel:`Pie Chart`: showcases the data in a pie chart format."
-msgstr ":guilabel:`饼状图`：以饼图格式展示数据。"
+#: ../../content/applications/sales/subscriptions/reports.rst:109
+msgid ""
+":icon:`fa-pie-chart` :guilabel:`Pie Chart`: showcases the data in a pie "
+"chart format."
+msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:116
+#: ../../content/applications/sales/subscriptions/reports.rst:111
 msgid ""
 "Each graph view option has its own series of specific visual options, which "
 "are represented by the available buttons that appear to the right of the "
 "selected graph-related view option."
 msgstr "每个图表视图选项都有自己的一系列特定可视化选项，这些选项由所选图表相关视图选项右侧的可用按钮表示。"
 
-#: ../../content/applications/sales/subscriptions/reports.rst:119
+#: ../../content/applications/sales/subscriptions/reports.rst:114
 msgid ""
-"When the :guilabel:`Bar Chart` graph view is selected, the following visual "
-"options are available:"
-msgstr "选择 :guilabel:`柱状图` 图形视图时，可使用以下可视化选项："
+"When the :icon:`fa-bar-chart` :guilabel:`Bar Chart` graph view is selected, "
+"the following visual options are available:"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/reports.rst:117
+#: ../../content/applications/sales/subscriptions/reports.rst:123
+msgid ""
+":icon:`fa-database` :guilabel:`Stacked`: showcases the data in a stacked "
+"visual format."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/reports.rst:118
+#: ../../content/applications/sales/subscriptions/reports.rst:125
+msgid ""
+":icon:`fa-sort-amount-desc` :guilabel:`Descending`: showcases the data in "
+"descending order."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/reports.rst:119
+#: ../../content/applications/sales/subscriptions/reports.rst:126
+msgid ""
+":icon:`fa-sort-amount-asc` :guilabel:`Ascending`: showcases the data in "
+"ascending order."
+msgstr ""
 
 #: ../../content/applications/sales/subscriptions/reports.rst:121
-#: ../../content/applications/sales/subscriptions/reports.rst:127
-msgid ":guilabel:`Stacked`: showcases the data in a stacked visual format."
-msgstr ":guilabel:`堆叠图`：以堆叠可视化格式展示数据。"
-
-#: ../../content/applications/sales/subscriptions/reports.rst:122
-#: ../../content/applications/sales/subscriptions/reports.rst:129
-msgid ":guilabel:`Descending`: showcases the data in descending order."
-msgstr ":guilabel:`降序`：以降序显示数据。"
-
-#: ../../content/applications/sales/subscriptions/reports.rst:123
-#: ../../content/applications/sales/subscriptions/reports.rst:130
-msgid ":guilabel:`Ascending`: showcases the data in ascending order."
-msgstr ":guilabel:`升序`：以升序显示数据。"
-
-#: ../../content/applications/sales/subscriptions/reports.rst:125
 msgid ""
 "When the :guilabel:`Line Chart` graph view is selected, the following visual"
 " options are available:"
 msgstr "选择 :guilabel:`折线图` 图形视图时，可使用以下可视化选项："
 
-#: ../../content/applications/sales/subscriptions/reports.rst:128
+#: ../../content/applications/sales/subscriptions/reports.rst:124
 msgid ""
-":guilabel:`Cumulative`: showcases the data in accumulated, increasing "
-"format."
-msgstr ":guilabel:`累积`：以累积、递增的格式显示数据。"
+":icon:`fa-signal` :guilabel:`Cumulative`: showcases the data in accumulated,"
+" increasing format."
+msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:132
+#: ../../content/applications/sales/subscriptions/reports.rst:128
 msgid ""
 "When the :guilabel:`Pie Chart` graph view is selected, there are no "
 "additional visual options."
 msgstr "选择 :guilabel:`饼状图` 图表视图时，没有其他可视化选项。"
 
-#: ../../content/applications/sales/subscriptions/reports.rst:137
+#: ../../content/applications/sales/subscriptions/reports.rst:133
+msgid ""
+"With the list view selected, the subscription metrics being analyzed are "
+"displayed in a simple list, which can be fully customized by using any of "
+"the available filters or groupings in the drop-down filter menu (accessible "
+"via the :icon:`fa-caret-down` :guilabel:`(down arrow)` icon to the right of "
+"the search bar)."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/reports.rst:139
+msgid ""
+"With list view selected, the :guilabel:`Measures` drop-down menu and "
+":guilabel:`Insert in Spreadsheet` button are *not* available."
+msgstr "选择列表视图后，:guilabel:`计量` 下拉菜单和 :guilabel:`插入电子表格` 按钮**不**可用。"
+
+#: ../../content/applications/sales/subscriptions/reports.rst:145
 msgid ""
 "With the pivot view selected, the subscription metrics are displayed in a "
 "data table, which can be fully customized."
 msgstr "选择数据透视后，订阅指标将显示在一个数据表中，该表可以完全自定义。"
 
-#: ../../content/applications/sales/subscriptions/reports.rst:140
+#: ../../content/applications/sales/subscriptions/reports.rst:148
 msgid ""
 "The pivot data table can be customized using the options available in the "
-":guilabel:`Measures` drop-down menu and/or the filter options available in "
-"the filter drop-down menu (accessible via the :guilabel:`▼ (downward facing "
-"arrow)` icon to the right of the search bar)."
+":guilabel:`Measures` drop-down menu, and/or the filter grouping options "
+"available in the filter drop-down menu (accessible via the :icon:`fa-caret-"
+"down` :guilabel:`(down arrow)` icon to the right of the search bar)."
 msgstr ""
-"可以使用 :guilabel:`衡量标准` 下拉菜单中的选项和/或筛选器下拉菜单中的筛选器选项（可通过搜索栏右侧的 "
-":guilabel:`▼（向下箭头）` 图标访问）自定义透视数据表。"
-
-#: ../../content/applications/sales/subscriptions/reports.rst:144
-msgid ""
-"There are three pivot-specific options available, located to the right of "
-"the :guilabel:`Measures` drop-down menu and :guilabel:`Insert in "
-"Spreadsheet` button."
-msgstr "在 :guilabel:`衡量标准` 下拉菜单和 :guilabel:`插入电子表格` 按钮的右侧有三个透视特定选项。"
-
-#: ../../content/applications/sales/subscriptions/reports.rst-1
-msgid ""
-"The pivot-specific view options available in the Odoo Subscriptions "
-"application."
-msgstr "Odoo 订阅应用程序中提供的透视特定视图选项。"
-
-#: ../../content/applications/sales/subscriptions/reports.rst:151
-msgid "From left to right, those pivot-specific view options are:"
-msgstr "从左到右，这些与数据透视图相关的视图选项是："
 
 #: ../../content/applications/sales/subscriptions/reports.rst:153
 msgid ""
-":guilabel:`Flip axis`: the `x` and `y` axis of the pivot data table flip."
-msgstr ":guilabel:`翻转轴`：翻转数据透视表的 `x` 和 `y` 轴。"
+"Three pivot-specific options are available, located to the right of the "
+":guilabel:`Measures` drop-down menu and :guilabel:`Insert in Spreadsheet` "
+"button."
+msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:154
+#: ../../content/applications/sales/subscriptions/reports.rst-1
 msgid ""
-":guilabel:`Expand all`: all the available rows and columns of the pivot data"
-" table expand fully."
-msgstr ":guilabel:`全部展开`：透视数据表的所有可用行和列全部展开。"
-
-#: ../../content/applications/sales/subscriptions/reports.rst:155
-msgid ""
-":guilabel:`Download xlsx`: the pivot data table is downloaded as an .xlsx "
-"file."
-msgstr ":guilabel:`下载 xlsx`：数据透视表将下载为 .xlsx 文件。"
+"The pivot-specific view options available in the Odoo Subscriptions app."
+msgstr ""
 
 #: ../../content/applications/sales/subscriptions/reports.rst:160
+msgid "From left to right, those pivot-specific view options are:"
+msgstr "从左到右，这些与数据透视图相关的视图选项是："
+
+#: ../../content/applications/sales/subscriptions/reports.rst:162
 msgid ""
-"With the list view selected, the subscription metrics being analyzed are "
-"displayed in a simple list, which can be fully customized by using any of "
-"the available filters in the drop-down filter menu (accessible via the "
-":guilabel:`▼ (downward facing arrow)` icon to the right of the search bar)."
+":icon:`fa-exchange` :guilabel:`Flip axis`: the `x` and `y` axis of the pivot"
+" data table flip."
 msgstr ""
-"选择列表视图后，正在分析的订阅指标将显示在一个简单的列表中，可使用下拉筛选菜单中的任何可用筛选器（可通过搜索栏右侧的 "
-":guilabel:`▼（向下箭头）` 图标访问）进行完全自定义。"
+
+#: ../../content/applications/sales/subscriptions/reports.rst:163
+msgid ""
+":icon:`fa-arrows` :guilabel:`Expand all`: all the available rows and columns"
+" of the pivot data table expand fully."
+msgstr ""
 
 #: ../../content/applications/sales/subscriptions/reports.rst:165
 msgid ""
-"With list view selected, the :guilabel:`Measures` drop-down menu and "
-":guilabel:`Insert in Spreadsheet` button are *not* available."
-msgstr "选择列表视图后，:guilabel:`计量` 下拉菜单和 :guilabel:`插入电子表格` 按钮**不**可用。"
+":icon:`fa-download` :guilabel:`Download .xlsx`: the pivot data table is "
+"downloaded as an :file:`.xlsx` file."
+msgstr ""
 
 #: ../../content/applications/sales/subscriptions/reports.rst:169
 msgid "Measures"
@@ -26342,24 +27120,23 @@ msgstr "计量"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:171
 msgid ""
-"Each reporting page has its own metric-specific :guilabel:`Measures` drop-"
-"down menu of data-related options to choose from, located in the upper-left "
-"corner, above the visual representation of metrics."
+"The graph and pivot reporting pages have their own metric-specific "
+":guilabel:`Measures` drop-down menu of data-related options to choose from, "
+"located in the upper-left corner, above the visual representation of "
+"metrics."
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/reports.rst-1
-msgid ""
-"The standard measures drop-down menu in the Odoo Subscriptions application."
+msgid "The standard measures drop-down menu in the Odoo Subscriptions app."
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/reports.rst:179
 msgid ""
-"When clicked, a series of selectable measures become available, via a drop-"
-"down menu. When any of the options are selected from a :guilabel:`Measures` "
-"drop-down menu, the chosen metrics related to that specific measure appear "
-"on the reporting page."
+"When the :guilabel:`Measures` button is clicked, a series of selectable "
+"measures becomes available, via a drop-down menu. When any of the options "
+"are selected from the :guilabel:`Measures` drop-down menu, the chosen "
+"metrics related to that specific measure appear on the reporting page."
 msgstr ""
-"点击后，可通过下拉菜单选择一系列可选指标。从 :guilabel:`衡量` 下拉菜单中选择任一选项后，与该特定指标相关的选定指标就会出现在报告页面上。"
 
 #: ../../content/applications/sales/subscriptions/reports.rst:184
 msgid ""
@@ -26403,66 +27180,61 @@ msgstr ""
 
 #: ../../content/applications/sales/subscriptions/reports.rst:208
 msgid ""
-"In the Odoo *Subscriptions* application, there are four different reporting "
-"pages available."
+"In the Odoo **Subscriptions** app, there are four different reporting pages "
+"available."
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/reports.rst:210
 msgid ""
 "To access, analyze, and customize various reports related to subscriptions, "
 "navigate to :menuselection:`Subscriptions app`, and click the "
-":guilabel:`Reporting` drop-down menu in the header."
+":guilabel:`Reporting` drop-down menu in the header to reveal the following "
+"reporting pages:"
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/reports.rst:214
-msgid ""
-"Clicking :guilabel:`Reporting` in the header menu reveals a drop-down menu "
-"of the following reporting pages:"
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/reports.rst:217
 msgid ":guilabel:`Subscriptions`"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:218
+#: ../../content/applications/sales/subscriptions/reports.rst:215
 msgid ":guilabel:`Retention`"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:219
+#: ../../content/applications/sales/subscriptions/reports.rst:216
 msgid ":guilabel:`MRR Breakdown`"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:220
+#: ../../content/applications/sales/subscriptions/reports.rst:217
 msgid ":guilabel:`MRR Timeline`"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:222
+#: ../../content/applications/sales/subscriptions/reports.rst:219
 msgid ""
 "Clicking any of those options reveals a separate, fully-customizable "
 "reporting page focusing on that particular aspect of subscription data."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:225
+#: ../../content/applications/sales/subscriptions/reports.rst:222
 msgid "The following is a breakdown of those four specific reporting pages."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:228
+#: ../../content/applications/sales/subscriptions/reports.rst:225
 msgid "Subscriptions analysis"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:230
+#: ../../content/applications/sales/subscriptions/reports.rst:227
 msgid ""
 "To access the :guilabel:`Subscriptions Analysis` reporting page, navigate to"
 " :menuselection:`Subscriptions app --> Reporting --> Subscriptions`."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:233
+#: ../../content/applications/sales/subscriptions/reports.rst:230
 msgid ""
 "By default, the :guilabel:`Bar Chart` option, in the :guilabel:`Graph` view,"
 " is selected on the :guilabel:`Subscriptions Analysis` reporting page."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:236
+#: ../../content/applications/sales/subscriptions/reports.rst:233
 msgid ""
 "The following filters are also present in the search bar: :guilabel:`In "
 "Progress or Paused` and :guilabel:`Recurring`."
@@ -26474,75 +27246,75 @@ msgid ""
 "Subscriptions."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:243
+#: ../../content/applications/sales/subscriptions/reports.rst:240
 msgid ""
-"When the :guilabel:`Measures` drop-down menu on the :guilabel:`Subscriptions"
-" Analysis` page is clicked, a series of metric-related options become "
-"available."
+"When the :guilabel:`Measures` button on the :guilabel:`Subscriptions "
+"Analysis` page is clicked, a series of metric-related options becomes "
+"available as a drop-down menu."
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/reports.rst-1
 msgid "The measures drop-down menu of the Subscriptions Analysis page."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:250
+#: ../../content/applications/sales/subscriptions/reports.rst:247
 msgid ""
 "The metric-related options in the :guilabel:`Measures` drop-down menu on the"
 " :guilabel:`Subscriptions Analysis` page are:"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:253
+#: ../../content/applications/sales/subscriptions/reports.rst:250
 msgid ":guilabel:`Monthly Recurring`"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:254
+#: ../../content/applications/sales/subscriptions/reports.rst:251
 msgid ":guilabel:`Quantity`"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:255
+#: ../../content/applications/sales/subscriptions/reports.rst:252
 msgid ":guilabel:`Recurring Revenue`"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:256
+#: ../../content/applications/sales/subscriptions/reports.rst:253
 msgid ":guilabel:`Untaxed Total`"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:257
+#: ../../content/applications/sales/subscriptions/reports.rst:254
 msgid ":guilabel:`Yearly Recurring`"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:258
-#: ../../content/applications/sales/subscriptions/reports.rst:296
-#: ../../content/applications/sales/subscriptions/reports.rst:352
-#: ../../content/applications/sales/subscriptions/reports.rst:400
+#: ../../content/applications/sales/subscriptions/reports.rst:255
+#: ../../content/applications/sales/subscriptions/reports.rst:293
+#: ../../content/applications/sales/subscriptions/reports.rst:349
+#: ../../content/applications/sales/subscriptions/reports.rst:397
 msgid ":guilabel:`Count`"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:261
+#: ../../content/applications/sales/subscriptions/reports.rst:258
 msgid ""
 "The :guilabel:`Monthly Recurring` measure option is selected by default."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:263
+#: ../../content/applications/sales/subscriptions/reports.rst:260
 msgid ""
 "When any of those available measures are clicked, Odoo displays that "
 "selected data on the reporting page for further analysis."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:267
+#: ../../content/applications/sales/subscriptions/reports.rst:264
 msgid "Retention analysis"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:269
+#: ../../content/applications/sales/subscriptions/reports.rst:266
 msgid ""
 "To access the :guilabel:`Retention Analysis` reporting page, navigate to "
 ":menuselection:`Subscriptions app --> Reporting --> Retention`."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:272
+#: ../../content/applications/sales/subscriptions/reports.rst:269
 msgid ""
 "The :guilabel:`Retention Analysis` reporting page differs from the other "
-"*Subscriptions* app reporting pages, in that it does *not* provide any "
+"**Subscriptions** app reporting pages, in that it does **not** provide any "
 "additional view options. The data on this page is only presented in a "
 "customizable data chart."
 msgstr ""
@@ -26553,7 +27325,7 @@ msgid ""
 "Subscriptions."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:280
+#: ../../content/applications/sales/subscriptions/reports.rst:277
 msgid ""
 "When the :guilabel:`Measures` drop-down menu on the :guilabel:`Retention "
 "Analysis` reporting page is clicked, a series of metric-related options "
@@ -26564,41 +27336,41 @@ msgstr ""
 msgid "The measures drop-down menu of the Retention Analysis page."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:287
+#: ../../content/applications/sales/subscriptions/reports.rst:284
 msgid ""
 "The metric-related options in the :guilabel:`Measures` drop-down menu on the"
 " :guilabel:`Retention Analysis` reporting page are:"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:290
+#: ../../content/applications/sales/subscriptions/reports.rst:287
 msgid ":guilabel:`Amount to invoice`"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:291
+#: ../../content/applications/sales/subscriptions/reports.rst:288
 msgid ":guilabel:`Margin`"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:292
+#: ../../content/applications/sales/subscriptions/reports.rst:289
 msgid ":guilabel:`Margin (%)`"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:293
+#: ../../content/applications/sales/subscriptions/reports.rst:290
 msgid ":guilabel:`Prepayment percentage`"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:294
+#: ../../content/applications/sales/subscriptions/reports.rst:291
 msgid ":guilabel:`Shipping Weight`"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:295
+#: ../../content/applications/sales/subscriptions/reports.rst:292
 msgid ":guilabel:`Unpaid Amount`"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:299
+#: ../../content/applications/sales/subscriptions/reports.rst:296
 msgid "The :guilabel:`Count` measure option is selected by default."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:301
+#: ../../content/applications/sales/subscriptions/reports.rst:298
 msgid ""
 "To the right of the :guilabel:`Measures` drop-down menu on the "
 ":guilabel:`Retention Analysis` page is an additional drop-down menu "
@@ -26606,7 +27378,7 @@ msgid ""
 ":guilabel:`Month`."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:305
+#: ../../content/applications/sales/subscriptions/reports.rst:302
 msgid ""
 "When clicked, a drop-down menu of various time period options become "
 "available."
@@ -26616,61 +27388,61 @@ msgstr ""
 msgid "The time period drop-down menu of the Retention Analysis page."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:311
+#: ../../content/applications/sales/subscriptions/reports.rst:308
 msgid "The time period options are:"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:313
+#: ../../content/applications/sales/subscriptions/reports.rst:310
 msgid ":guilabel:`Day`"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:314
+#: ../../content/applications/sales/subscriptions/reports.rst:311
 msgid ":guilabel:`Week`"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:315
+#: ../../content/applications/sales/subscriptions/reports.rst:312
 msgid ":guilabel:`Month`"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:316
+#: ../../content/applications/sales/subscriptions/reports.rst:313
 msgid ":guilabel:`Year`"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:318
+#: ../../content/applications/sales/subscriptions/reports.rst:315
 msgid ""
 "When a time period option from this drop-down menu is selected, the "
 ":guilabel:`Retention Analysis` reporting page showcases data for the "
 "configured measures and filters within that time period."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:321
+#: ../../content/applications/sales/subscriptions/reports.rst:318
 msgid ""
 "To the right of the time period drop-down menu, there is a download button, "
 "which allows the user to download the data presented on the "
 ":guilabel:`Retention Analysis` page as an Excel file."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:325
+#: ../../content/applications/sales/subscriptions/reports.rst:322
 msgid "MRR breakdown"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:327
+#: ../../content/applications/sales/subscriptions/reports.rst:324
 msgid ""
 "To access the :guilabel:`MRR Breakdown` reporting page, navigate to "
 ":menuselection:`Subscriptions app --> Reporting --> MRR Breakdown`."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:330
+#: ../../content/applications/sales/subscriptions/reports.rst:327
 msgid ""
 "By default, the data displayed on the :guilabel:`MRR Breakdown` reporting "
-"page is in graph view, with the :guilabel:`Bar Chart` option and the "
+"page is in graph view, with the :guilabel:`Bar Chart` option and "
 ":guilabel:`Stacked` option selected."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:333
+#: ../../content/applications/sales/subscriptions/reports.rst:330
 msgid ""
-"There is also a default filter in the search bar for :guilabel:`Event Date: "
-"Month > Event Type`."
+"A default filter is also available in the search bar for :guilabel:`Event "
+"Date: Month > Event Type`."
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/reports.rst-1
@@ -26680,86 +27452,87 @@ msgid ""
 "Subscriptions."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:339
+#: ../../content/applications/sales/subscriptions/reports.rst:336
 msgid ""
 "When the :guilabel:`Measures` drop-down menu on the :guilabel:`MRR "
 "Breakdown` reporting page is clicked, a series of metric-related options "
 "become available."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:346
+#: ../../content/applications/sales/subscriptions/reports.rst:343
 msgid ""
 "The metric-related options in the :guilabel:`Measures` drop-down menu on the"
 " :guilabel:`MRR Breakdown` reporting page are:"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:349
-#: ../../content/applications/sales/subscriptions/reports.rst:397
+#: ../../content/applications/sales/subscriptions/reports.rst:346
+#: ../../content/applications/sales/subscriptions/reports.rst:394
 msgid ":guilabel:`Active Subscriptions Change`"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:350
-#: ../../content/applications/sales/subscriptions/reports.rst:398
+#: ../../content/applications/sales/subscriptions/reports.rst:347
+#: ../../content/applications/sales/subscriptions/reports.rst:395
 msgid ":guilabel:`ARR Change`"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:351
-#: ../../content/applications/sales/subscriptions/reports.rst:399
+#: ../../content/applications/sales/subscriptions/reports.rst:348
+#: ../../content/applications/sales/subscriptions/reports.rst:396
 msgid ":guilabel:`MRR Change`"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:355
-#: ../../content/applications/sales/subscriptions/reports.rst:403
+#: ../../content/applications/sales/subscriptions/reports.rst:352
+#: ../../content/applications/sales/subscriptions/reports.rst:400
 msgid "The :guilabel:`MRR Change` measure option is selected by default."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:358
+#: ../../content/applications/sales/subscriptions/reports.rst:355
 msgid ""
 "To make a different measure option the default, first, select the desired "
 "measure from the :guilabel:`Measures` drop-down menu. Then, click the "
-":guilabel:`(downward facing arrow)` icon in the search bar to open the mega "
-"menu of filters and groupings."
+":icon:`fa-caret-down` :guilabel:`(down arrow)` icon in the search bar to "
+"open the mega menu of filters and groupings."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:362
+#: ../../content/applications/sales/subscriptions/reports.rst:359
 msgid ""
-"In the :guilabel:`Favorites` column, click the :guilabel:`(downward facing "
-"arrow)` icon beside :guilabel:`Save current search` to reveal a field, where"
-" a title can be entered, along with two checkboxes::guilabel:`Default "
-"filter` and :guilabel:`Shared`."
+"In the :guilabel:`Favorites` column, click the :icon:`fa-caret-down` "
+":guilabel:`(down arrow)` icon beside :guilabel:`Save current search` to "
+"reveal a field, where a title can be entered, along with two "
+"checkboxes::guilabel:`Default filter` and :guilabel:`Shared`."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:366
+#: ../../content/applications/sales/subscriptions/reports.rst:363
 msgid ""
-"Tick the box for :guilabel:`Default filter`, and click :guilabel:`Save`."
+"Tick the checkbox for :guilabel:`Default filter`, and click "
+":guilabel:`Save`."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:368
+#: ../../content/applications/sales/subscriptions/reports.rst:365
 msgid ""
 "That newly-chosen measure option is now the default option that appears when"
 " this reporting page is accessed."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:372
+#: ../../content/applications/sales/subscriptions/reports.rst:369
 msgid "MRR analysis"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:374
+#: ../../content/applications/sales/subscriptions/reports.rst:371
 msgid ""
 "To access the :guilabel:`MRR Analysis` reporting page, navigate to "
 ":menuselection:`Subscriptions app --> Reporting --> MRR Timeline`."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:377
+#: ../../content/applications/sales/subscriptions/reports.rst:374
 msgid ""
 "By default, the data displayed on the :guilabel:`MRR Analysis` reporting "
 "page is in graph view, with the :guilabel:`Line Chart` option, "
 ":guilabel:`Stacked` option, and :guilabel:`Cumulative` option selected."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:381
+#: ../../content/applications/sales/subscriptions/reports.rst:378
 msgid ""
-"There is also a default filter in the search bar for :guilabel:`Event Date: "
+"A default filter is also found in the search bar for :guilabel:`Event Date: "
 "Month`."
 msgstr ""
 
@@ -26770,14 +27543,14 @@ msgid ""
 "Subscriptions."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:387
+#: ../../content/applications/sales/subscriptions/reports.rst:384
 msgid ""
 "When the :guilabel:`Measures` drop-down menu on the :guilabel:`MRR Analysis`"
 " reporting page is clicked, a series of metric-related options become "
 "available."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/reports.rst:394
+#: ../../content/applications/sales/subscriptions/reports.rst:391
 msgid ""
 "The metric-related options in the :guilabel:`Measures` drop-down menu on the"
 " :guilabel:`MRR Analysis` reporting page are:"
