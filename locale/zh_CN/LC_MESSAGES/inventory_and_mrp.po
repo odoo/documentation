@@ -29,7 +29,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-21 07:41+0000\n"
+"POT-Creation-Date: 2024-09-24 08:53+0000\n"
 "PO-Revision-Date: 2022-10-04 12:53+0000\n"
 "Last-Translator: Chloe Wang, 2024\n"
 "Language-Team: Chinese (China) (https://app.transifex.com/odoo/teams/41243/zh_CN/)\n"
@@ -423,6 +423,8 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:38
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:18
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/uom.rst:21
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:11
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:65
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:22
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/cross_dock.rst:18
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/delivery_three_steps.rst:16
@@ -437,11 +439,9 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/label_type.rst:13
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels.rst:12
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:11
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:56
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:58
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:8
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:13
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/integrating_landed_costs.rst:11
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:65
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:56
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:11
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:23
@@ -3986,6 +3986,1190 @@ msgid ""
 msgstr ""
 "例如，如果产品在 |SO| 上的 |UOM| 更改为`每盒 6 个`，但其库存计量单位是 `单位`，则 |SO| 显示的是以 6 "
 "盒为单位的数量，而送货显示的数量以“单个单位”为单位。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation.rst:5
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:280
+msgid "Inventory valuation"
+msgstr "库存计价"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:3
+msgid "Integrating additional costs to products (landed costs)"
+msgstr "将额外成本整合到产品中（到岸成本） "
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:7
+msgid ""
+"The landed cost feature in Odoo allows the user to include additional costs "
+"(shipment, insurance, customs duties, etc.) into the cost of the product."
+msgstr "Odoo 到岸成本功能允许用户将额外费用（运费、保险、关税等）计入产品成本。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:13
+msgid ""
+"First, go to :menuselection:`Inventory --> Configuration --> Settings --> "
+"Valuation` and activate the :guilabel:`Landed Costs` feature. Odoo also "
+"gives the option to set a :guilabel:`Default Journal` in which the landed "
+"costs accounting entries will be recorded."
+msgstr ""
+"首先，进入 :menuselection:`库存 --> 配置 --> 设置 --> 估值` 并激活 :guilabel:`到岸成本` 功能。Odoo "
+"还提供设置 :guilabel:`默认日记账` 选项，落地成本的会计分录将记录在其中。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst-1
+msgid "Activate the landed cost feature in Inventory settings."
+msgstr "在库存设置中激活到岸成本功能。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:22
+msgid "Add costs to products"
+msgstr "向产品添加成本"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:25
+msgid "Receive the vendor bill"
+msgstr "接收供应商账单"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:27
+msgid ""
+"After a vendor fulfills a purchase order and sends a bill, click "
+":guilabel:`Create Bill` on the purchase order to create a vendor bill in "
+"Odoo. If the vendor bill includes landed costs, such as custom duties, tick "
+"the box in the :guilabel:`Landed Costs` column on the vendor bill invoice "
+"line."
+msgstr ""
+"供应商完成采购订单并发送账单后，单击采购订单上的 :guilabel:`创建账单` 在 Odoo "
+"中创建供应商账单。如果供应商账单包括到岸成本（如关税），请勾选供应商账单发票行中 :guilabel:`到岸成本` 列的复选框。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst-1
+msgid "Enable Landed Costs option on vendor bill line."
+msgstr "启用供应商账单项目中的到岸成本选项。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:35
+msgid ""
+"For charges that are always landed costs, create a landed cost product in "
+"Odoo. That way, the landed cost product can be quickly added to the vendor "
+"bill as an invoice line instead of manually entering the landed cost "
+"information every time a vendor bill comes in."
+msgstr ""
+"对于始终是到岸成本的费用，可在 Odoo "
+"中创建到岸成本产品。这样，就可以将到岸成本产品作为发票项目快速添加到供应商账单中，而不用每次收到供应商账单时都手动输入到岸成本信息。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:39
+msgid ""
+"First, create a new product in :menuselection:`Inventory --> Products --> "
+"Products --> Create`. Next, name the landed cost product. Then, set the "
+":guilabel:`Product Type` to :guilabel:`Service`. A landed cost product must "
+"always be a service product type. After that, go to the :guilabel:`Purchase`"
+" tab and check the box next to :guilabel:`Is a Landed Cost`. Finally, click "
+":guilabel:`Save` to finish creating the landed cost product."
+msgstr ""
+"首先，在 :menuselection:`库存 --> 产品 --> 产品 --> 创建` 中创建一个新产品。接下来，命名到岸成本产品。然后，将 "
+":guilabel:`产品类型` 设为 :guilabel:`服务`。到岸成本产品必须始终是服务产品类型。然后，转到 :guilabel:`采购` "
+"选项卡，选中 :guilabel:`是到岸成本` 旁边的复选框。最后，点击 :guilabel:`保存` 完成创建到岸成本产品。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:45
+msgid ""
+"If this product is always a landed cost, you can also define it on the "
+"product and avoid having to tick the box on each vendor bill."
+msgstr "如果该产品始终为到岸成本，你可在产品上进行定义，避免在每张供应商账单上都要打勾。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst-1
+msgid "Option to define a product as a landed cost."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:52
+msgid ""
+"Once the landed cost is added to the vendor bill (either by checking the "
+":guilabel:`Landed Cost` option on the invoice line or adding a landed cost "
+"product to the bill), click the :guilabel:`Create Landed Costs` button at "
+"the top of the bill. Odoo automatically creates a landed cost record with "
+"the set landed cost pre-filled in the :guilabel:`Additional Costs` product "
+"lines. From here, decide which picking the additional costs apply to by "
+"clicking :guilabel:`Edit` and selecting the picking reference number from "
+"the :guilabel:`Transfers` drop-down menu. Finally, click :guilabel:`Save`."
+msgstr ""
+"将到岸成本添加到供应商账单后（通过勾选发票行的 :guilabel:`到岸成本` 选项或在账单中添加到岸成本产品），单击账单顶部的 "
+":guilabel:`创建到岸成本` 按钮。Odoo 会自动在 :guilabel:`附加费用` 产品行中创建已设定的到岸成本记录。在此，单击 "
+":guilabel:`编辑` 并从 :guilabel:`调拨` 下拉菜单中选择分拣参考编号，以决定额外成本适用于哪个分拣。最后，点击 "
+":guilabel:`保存`。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst-1
+msgid ""
+"Use a warehouse transfer to cover a landed cost in the accounting journal."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:64
+msgid ""
+"After setting the picking, click :guilabel:`Compute` on the landed cost "
+"record. Then, go to the :guilabel:`Valuation Adjustments` tab to see the "
+"impact of the landed costs. Finally, click :guilabel:`Validate` to post the "
+"landed cost entry to the accounting journal."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:68
+msgid ""
+"The user can access the journal entry that has been created by the landed "
+"cost by clicking on the :guilabel:`Journal Entry`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:72
+msgid ""
+"The product that the landed cost is applied to must have a product category "
+"set to a :abbr:`FIFO (First In, First Out)` or an :abbr:`AVCO (Average "
+"Costing)` method."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst-1
+msgid "Landed cost journal entry"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:80
+msgid ""
+"Landed cost records can also be directly created in "
+":menuselection:`Inventory --> Operations --> Landed Costs`, it is not "
+"necessary to create a landed cost record from the vendor bill."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:3
+msgid "Inventory valuation configuration"
+msgstr "库存计价配置"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:7
+msgid ""
+"All of a company's stock on-hand contributes to the valuation of its "
+"inventory. That value should be reflected in the company's accounting "
+"records to accurately show the value of the company and all of its assets."
+msgstr "公司的所有库存都会影响其存货的价值。这一价值应反映在公司的会计记录中，以准确显示公司及其所有资产的价值。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:11
+msgid ""
+"By default, Odoo uses a periodic inventory valuation (also known as manual "
+"inventory valuation). This method implies that the accounting team posts "
+"journal entries based on the physical inventory of the company, and that "
+"warehouse employees take the time to count the stock. In Odoo, this method "
+"is reflected inside each product category, where the :guilabel:`Costing "
+"Method` field will be set to `Standard Price` by default, and the "
+":guilabel:`Inventory Valuation` field will be set to `Manual`."
+msgstr ""
+"默认情况下，Odoo 使用定期库存估价（也称为手动库存估价）。这种方法意味着会计团队会根据公司的实际库存，记录日记账分录，仓库员工也会花时间清点库存。在"
+" Odoo 中，这种方法反映在每个产品类别中，其中 :guilabel:`成本计算方法` 字段将默认设置为`标准价格`，而 "
+":guilabel:`库存估值` 字段将设置为`手动`。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst-1
+msgid ""
+"The Inventory Valuation fields are located on the Product Categories form."
+msgstr "库存估价字段位于产品类别表单中。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:21
+msgid ""
+"Alternatively, automated inventory valuation is an integrated valuation "
+"method that updates the inventory value in real-time by creating journal "
+"entries whenever there are stock moves initiated between locations in a "
+"company's inventory."
+msgstr "另外，自动存货估价是一种综合估价方法，每当公司存货在不同地点之间发生存货移动时，就会创建日记账分录，从而实时更新存货价值。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:26
+msgid ""
+"Automated inventory valuation is a method recommended for expert "
+"accountants, given the extra steps involved in journal entry configuration. "
+"Even after the initial setup, the method will need to be periodically "
+"checked to ensure accuracy, and adjustments may be needed on an ongoing "
+"basis depending on the needs and priorities of the business."
+msgstr ""
+"鉴于日记账分录配置涉及额外步骤，建议专业会计师采用自动存货估价方法。即使在初始设置之后，也需要定期检查该方法，以确保准确性，并根据企业需求和优先事项不断进行调整。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:34
+msgid "Types of accounting"
+msgstr "会计类型"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:36
+msgid ""
+"Accounting entries will depend on the accounting mode: *Continental* or "
+"*Anglo-Saxon*."
+msgstr "会计分录取决于会计模式：*大陆*或*盎格鲁-撒克逊*。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:39
+msgid ""
+"Verify the accounting mode by activating the :ref:`developer-mode` and "
+"navigating to :menuselection:`Accounting app --> Configuration --> "
+"Settings`."
+msgstr "激活 :ref:`开发者模式` 并导航至 :menuselection:`会计应用程序 --> 配置 --> 设置` 以验证会计模式。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:42
+msgid ""
+"Then, in the search bar, look for :guilabel:`Anglo-Saxon Accounting`, to see"
+" if the feature is enabled. If it is **not** enabled, Continental accounting"
+" mode is in use."
+msgstr "然后，在搜索栏中查找 :guilabel:`盎格鲁-撒克逊会计`，查看该功能是否启用。如果**未**启用，则使用的是大陆会计模式。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:0
+msgid "Show the Anglo-Saxon accounting mode feature."
+msgstr "显示盎格鲁-撒克逊会计模式功能。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:49
+msgid ""
+"In *Anglo-Saxon* accounting, the costs of goods sold (COGS) are reported "
+"when products are sold or delivered. This means that the cost of a good is "
+"only recorded as an expense when a customer is invoiced for a product. So "
+"for **manual** valuation method, set the :guilabel:`Expense Account` to "
+"`Stock Valuation` for the current asset type; for **automatic** valuation "
+"method, set the the :guilabel:`Expense Account` to an *Expenses* or a *Cost "
+"of Revenue* type (e.g. `Cost of Production`, `Cost of Goods Sold`, etc.)."
+msgstr ""
+"在*盎格鲁-"
+"撒克逊*会计中，销售成本（COGS）是在产品售出或交付时报告的。这意味着，只有在向客户开具产品发票时，才会将货物成本记为开支。因此，对于**手动**估值方法，请将当前资产类型的"
+" :guilabel:`开支账户` 设置为 `股票估值`；对于**自动**估值方法，请将 :guilabel:`开支账户` "
+"设置为*开支*或*收入成本*类型（如 `生产成本`、`销售成本`等）。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:56
+msgid ""
+"In *Continental* accounting, the cost of a good is reported as soon as a "
+"product is received into stock. Because of this, the :guilabel:`Expense "
+"Account` can be set to **either** *Expenses* or a *Cost of Revenue* type, "
+"however, it is more commonly set to an *Expenses* account."
+msgstr ""
+"在*大陆*会计中，产品入库后立即报告货物成本。因此，:guilabel:`开支账户`可设置为*开支*或*收入成本*类型，但更常见的是设置为*开支*账户。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:61
+msgid ""
+":ref:`Details about configuring Expense and Stock accounts "
+"<inventory/management/config-inventory-valuation>`"
+msgstr ""
+":ref:` 配置开支和库存账户的详细信息 <inventory/management/config-inventory-valuation>`"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:67
+msgid ""
+"Make changes to inventory valuation options by navigating to "
+":menuselection:`Inventory app --> Configuration --> Product Categories`. In "
+"the :guilabel:`Inventory Valuation` section, select the desired "
+":guilabel:`Costing Method` and :guilabel:`Inventory Valuation` options."
+msgstr ""
+"通过导航至 :menuselection:`库存应用程序 --> 配置 --> "
+"产品类别`，更改库存估价选项。在:guilabel:`库存估价`部分，选择所需的:guilabel:`成本计算方法`和:guilabel:`库存估价`选项。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:72
+msgid ""
+"It is possible to use different valuation settings for different product "
+"categories."
+msgstr "不同的产品类别可以使用不同的估值设置。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst-1
+msgid "Show inventory valuation configuration options."
+msgstr "显示库存估价配置选项。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:81
+msgid "Costing method"
+msgstr "成本方法"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:83
+msgid ""
+"From the product category's configuration page, choose the desired "
+":guilabel:`Costing Method`:"
+msgstr "在产品类别的配置页面，选择所需的 :guilabel:`成本计算方法`："
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:88
+msgid "Standard Price"
+msgstr "标准价格"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:90
+msgid ""
+"The default costing method in Odoo. The cost of the product is manually "
+"defined on the product form, and this cost is used to compute the valuation."
+" Even if the purchase price on a purchase order differs, the valuation is "
+"the cost defined on the product form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:98
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:139
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:210
+msgid "Operation"
+msgstr "作业"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:99
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:140
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:211
+msgid "Unit Cost"
+msgstr "单位成本"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:100
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:141
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:212
+msgid "Qty On Hand"
+msgstr "在手数量"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:101
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:142
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:213
+msgid "Incoming Value"
+msgstr "入库价值"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:102
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:143
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:214
+msgid "Inventory Value"
+msgstr "库存价值"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:104
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:109
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:114
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:119
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:124
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:150
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:221
+msgid "$10"
+msgstr "$10"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:105
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:146
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:217
+msgid "0"
+msgstr "0"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:107
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:145
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:148
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:216
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:219
+msgid "$0"
+msgstr "$0"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:108
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:149
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:220
+msgid "Receive 8 products for $10/unit"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:110
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:151
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:222
+msgid "8"
+msgstr "8"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:111
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:152
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:223
+msgid "8 * $10"
+msgstr "8 * $10"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:112
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:153
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:224
+msgid "$80"
+msgstr "$80"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:113
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:154
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:225
+msgid "Receive 4 products for $16/unit"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:115
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:156
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:227
+msgid "12"
+msgstr "12"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:116
+msgid "4 * $10"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:117
+msgid "$120"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:118
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:159
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:230
+msgid "Deliver 10 products"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:120
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:161
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:232
+msgid "2"
+msgstr "2"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:121
+msgid "-10 * $10"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:122
+msgid "$20"
+msgstr "$20"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:123
+msgid "Receive 2 products for $9/unit"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:125
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:166
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:238
+msgid "4"
+msgstr "4"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:126
+msgid "2 * $10"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:127
+msgid "$40"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:129
+msgid "Average Cost (AVCO)"
+msgstr "平均成本(AVCO)"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:131
+msgid ""
+"Calculates the valuation of a product based on the average cost of that "
+"product, divided by the total number of available stock on-hand. With this "
+"costing method, inventory valuation is *dynamic*, and constantly adjusts "
+"based on the purchase price of products."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:155
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:160
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:226
+msgid "$12"
+msgstr "$12"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:157
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:228
+msgid "4 * $16"
+msgstr "4 * $16"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:158
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:229
+msgid "$144"
+msgstr "$144"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:162
+msgid "-10 * $12"
+msgstr "-10 * $12"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:163
+msgid "$24"
+msgstr "$24"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:164
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:236
+msgid "Receive 2 products for $6/unit"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:165
+msgid "$9"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:167
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:239
+msgid "2 * $6"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:168
+msgid "$36"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:170
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:242
+msgid "How are unit cost and inventory value calculated at each step?"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:172
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:244
+msgid "When receiving four products for $16 each:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:174
+msgid ""
+"Inventory value is calculated by adding the previous inventory value with "
+"the incoming value: :math:`$80 + (4 * $16) = $144`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:176
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:248
+msgid ""
+"Unit cost is calculated by dividing the inventory value by the quantity on-"
+"hand: :math:`$144 / 12 = $12`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:179
+msgid ""
+"When delivering ten products, the average unit cost is used to calculate the"
+" inventory value, regardless of the purchase price of the product. "
+"Therefore, inventory value is :math:`$144 + (-10 * $12) = $24`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:183
+msgid "Receive two products for $6 each:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:185
+msgid "Inventory value: :math:`$24 + (2 * $6) = $36`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:186
+msgid "Unit cost: :math:`$36 / 4 = $9`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:189
+msgid ""
+"When choosing :guilabel:`Average Cost (AVCO)` as the :guilabel:`Costing "
+"Method`, changing the numerical value in the *Cost* field for products in "
+"the respective product category creates a new record in the *Inventory "
+"Valuation* report to adjust the value of the product. The *Cost* amount is "
+"then automatically updated, based on the average purchase price of both the "
+"inventory on-hand and the costs accumulated from validated purchase orders."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:196
+msgid "First In First Out (FIFO)"
+msgstr "先进先出(FIFO)"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:198
+msgid ""
+"Tracks the costs of incoming and outgoing items in real-time, and uses the "
+"real price of the products to change the valuation. The oldest purchase "
+"price is used as the cost for the next good sold, until an entire lot of "
+"that product is sold. When the next inventory lot moves up in the queue, an "
+"updated product cost is used based on the valuation of that specific lot."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:203
+msgid ""
+"This method is arguably the most accurate inventory valuation method for a "
+"variety of reasons, but it is highly sensitive to input data and human "
+"error."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:231
+msgid "$16"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:0
+msgid "-8 * $10"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:0
+msgid "-2 * $16"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:235
+msgid "$32"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:237
+msgid "$11"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:240
+msgid "$44"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:246
+msgid ""
+"Inventory value is calculated by adding the previous inventory value to the "
+"incoming value: :math:`$80 + (4 * $16) = $144`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:251
+msgid ""
+"When delivering ten products, eight units were purchased for $10, and two "
+"units were purchased for $16."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:254
+msgid ""
+"First, the incoming value is calculated by multiplying the on-hand quantity "
+"by the purchased price: :math:`(-8 * $10) + (-2 * $16) = -112`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:256
+msgid ""
+"The inventory value is calculated by subtracting the incoming value from the"
+" previous inventory value: :math:`$144 - $112 = $32`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:258
+msgid ""
+"Unit cost is calculated by dividing the inventory value by the remaining "
+"quantity: :math:`$32 / 2 = $16`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:261
+msgid ""
+"When receiving two products for $6, inventory value is :math:`$32 + $12 = "
+"$44`. Unit cost is :math:`$44 / 4 = $11`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:265
+msgid ""
+"Changing the costing method greatly impacts inventory valuation. It is "
+"highly recommended to consult an accountant first before making any "
+"adjustments here."
+msgstr "改变成本计算方法会对存货估值产生很大影响。强烈建议在进行任何调整之前先咨询会计师。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:269
+msgid ":doc:`using_inventory_valuation`"
+msgstr ":doc:`using_inventory_valuation`"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:271
+msgid ""
+"When the :guilabel:`Costing Method` is changed, products already in stock "
+"that were using the :guilabel:`Standard` costing method **do not** change "
+"value; rather, the existing units keep their value, and any product moves "
+"from then on affect the average cost, and the cost of the product will "
+"change. If the value in the :guilabel:`Cost` field on a product form is "
+"changed manually, Odoo will generate a corresponding record in the "
+"*Inventory Valuation* report."
+msgstr ""
+"当更改 :guilabel:`成本计算方法` 时，使用 :guilabel:`标准` "
+"成本计算方法的库存产品**不会**改变价值；相反，现有单位保持其价值，此后任何产品移动都会影响平均成本，产品的成本也会改变。如果手动更改产品表单中 "
+":guilabel:`成本` 字段的值，Odoo 将在 *存货估价* 报告中生成相应记录。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:282
+msgid ""
+"Inventory valuation in Odoo can be set to be updated manually or "
+"automatically. While *Expense* accounts apply to both, the *Stock Input* and"
+" *Stock Output* accounts are only used for automated valuation."
+msgstr "Odoo 中的库存估价可设置为手动或自动更新。虽然*开支*账户对两者都适用，但*库存输入*和*库存输出*账户仅用于自动估值。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:286
+msgid ""
+"Refer to the :ref:`Expense <inventory/management/expense-account>` and "
+":ref:`Stock input/output <inventory/management/stock-account>` sections for "
+"details on configuring each account type."
+msgstr ""
+"有关配置每种账户类型的详情，请参阅 :ref:`开支 <inventory/management/expense-account>` 和 "
+":ref:`库存输入/输出 <inventory/management/stock-account>` 章节。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:292
+msgid "Expense account"
+msgstr "支出科目"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:294
+msgid ""
+"To configure the *expense account*, go to the :guilabel:`Account Properties`"
+" section of the intended product category (:menuselection:`Inventory app -->"
+" Configuration --> Product Categories`). Then, choose an existing account "
+"from the :guilabel:`Expense Account` drop-down menu."
+msgstr ""
+"要配置*开支账户*，请访问目标产品类别的 :guilabel:`账户属性`部分（:menuselection:`库存应用程序 --> 配置 --> "
+"产品类别`）。然后，从 :guilabel:`开支帐户` 下拉菜单中选择一个现有账户。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:298
+msgid ""
+"To ensure the chosen account is the correct :guilabel:`Type,` click the "
+"|right arrow| icon to the right of the account. Then, set the account type "
+"based on the information below."
+msgstr "为确保所选账户为正确的 :guilabel:`类型`，请点击账户右侧的 |右箭头| 图标。然后根据以下信息设置账户类型。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:303
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:371
+msgid "Anglo-Saxon"
+msgstr "盎格鲁萨克逊"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:307
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:334
+msgid "Automated"
+msgstr "自动"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:309
+msgid ""
+"In Anglo-Saxon accounting for automated inventory valuation, set the "
+":guilabel:`Expense Account` to the `Expenses` account. Then, click the "
+"|right arrow| icon to the right of the account."
+msgstr "在盎格鲁-撒克逊会计自动库存估价中，将 :guilabel:`开支帐户` 设置为 `开支` 账户。然后，点击账户右侧的 |右箭头| 图标。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:313
+msgid ""
+"In the pop-up window, choose :guilabel:`Expenses` or :guilabel:`Cost of "
+"Revenue` from the :guilabel:`Type` drop-down menu."
+msgstr "在弹出窗口中，从 :guilabel:`类型` 下拉菜单中选择 :guilabel:`开支` 或 :guilabel:`收入成本`。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:0
+msgid "Show **Expense Account** field, and external link icon."
+msgstr "显示**开支账户**字段和外部链接图标。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:320
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:339
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:174
+msgid "Manual"
+msgstr "手动"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:322
+msgid ""
+"To configure the :guilabel:`Expense Account`, choose :guilabel:`Stock "
+"Valuation` from the field's drop-down menu. Verify the account's type by "
+"clicking the |right arrow| icon, and then ensure the :guilabel:`Type` is "
+":guilabel:`Current Assets`."
+msgstr ""
+"要配置 :guilabel:`开支账户`，请从字段的下拉菜单中选择 :guilabel:`库存估值`。点击 |右箭头| "
+"图标确认账户类型，然后确保:guilabel:`类型`为:guilabel:`流动资产`。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:0
+msgid "Show the **Expense Account** field."
+msgstr "显示**开支账户**字段。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:330
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:389
+msgid "Continental"
+msgstr "欧洲大陆"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:336
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:341
+msgid ""
+"Set the :guilabel:`Expense Account` to the :guilabel:`Expenses` or "
+":guilabel:`Cost of Revenue` account type."
+msgstr "将 :guilabel:`开支帐户` 设置为 :guilabel:`开支` 或 :guilabel:`收入成本` 帐户类型。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:347
+msgid "Stock input/output (automated only)"
+msgstr "库存输入/输出（仅限自动操作）"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:349
+msgid ""
+"To configure the :guilabel:`Stock Input Account` and :guilabel:`Stock Output"
+" Account`, go to :menuselection:`Inventory app --> Configuration --> Product"
+" Categories` and select the desired product category."
+msgstr ""
+"要配置 :guilabel:`库存输入账户` 和 :guilabel:`库存输出账户`，请进入 :menuselection:`库存应用程序 --> "
+"配置 --> 产品类别` 并选择所需的产品类别。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:353
+msgid ""
+"In the :guilabel:`Inventory Valuation` field, select :guilabel:`Automated`. "
+"Doing so makes the :guilabel:`Account Stock Properties` section appear. "
+"These accounts are defined as follows:"
+msgstr ""
+"在 :guilabel:`库存估值` 字段中，选择 :guilabel:`自动化`。这样就会出现 :guilabel:`账户库存属性` "
+"部分。这些账户定义如下："
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:356
+msgid ""
+":guilabel:`Stock Valuation Account`: when automated inventory valuation is "
+"enabled on a product, this account will hold the current value of the "
+"products."
+msgstr ":guilabel:`库存估价账户`：当产品启用自动库存估价时，此账户将保存产品的当前价值。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:358
+msgid ""
+":guilabel:`Stock Journal`: accounting journal where entries are "
+"automatically posted when a product's inventory valuation changes."
+msgstr ":guilabel:`库存日记账`：当产品的库存估价发生变化时自动记账的会计分录。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:360
+msgid ""
+":guilabel:`Stock Input Account`: counterpart journal items for all incoming "
+"stock moves will be posted in this account, unless there is a specific "
+"valuation account set on the source location. This is the default value for "
+"all products in a given category, and can also be set directly on each "
+"product."
+msgstr ""
+":guilabel:`库存输入账户`：除非源位置设置了特定的估价账户，否则所有入库库存移动的对应日记账项目都将记入此账户。这是特定类别中所有产品的默认值，也可直接在每个产品上设置。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:364
+msgid ""
+":guilabel:`Stock Output Account`: counterpart journal items for all outgoing"
+" stock moves will be posted in this account, unless there is a specific "
+"valuation account set on the destination location. This is the default value"
+" for all products in a given category, and can also be set directly on each "
+"product."
+msgstr ""
+":guilabel:`库存输出账户`：除非目的地设置了特定的估价账户，否则所有出库库存移动的对应日记账项目都将记入此账户。这是指定类别中所有产品的默认值，也可直接在每个产品上设置。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:373
+msgid ""
+"In Anglo-Saxon accounting, the :guilabel:`Stock Input Account` and "
+":guilabel:`Stock Output Account` are set to *different* :guilabel:`Current "
+"Assets` accounts. This way, delivering products and invoicing the customer "
+"balance the *Stock Output* account, while receiving products and billing "
+"vendors balance the *Stock Input* account."
+msgstr ""
+"在盎格鲁-"
+"撒克逊会计中，:guilabel:`库存输入账户`和:guilabel:`库存输出账户`被设置为*不同*的:guilabel:`流动资产`账户。这样，交付产品和向客户开具发票会平衡*库存输出*账户，而接收产品和向供应商开具账单会平衡*库存输入*账户。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:378
+msgid ""
+"To modify the account type, go to the click the |right arrow| icon to the "
+"right of the stock input/output account. In the pop-up window, choose "
+":guilabel:`Current Assets` from the :guilabel:`Type` drop-down menu."
+msgstr ""
+"要修改账户类型，请点击股票输入/输出账户右侧的 |右箭头|图标。在弹出的窗口中，从 :guilabel:`类型` 下拉菜单中选择 "
+":guilabel:`流动资产`。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:0
+msgid "Display account setup page, highlighting the **Type** field."
+msgstr "显示账户设置页面，突出显示**类型**字段。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:386
+msgid ""
+"The *Stock Input* account is set to `Stock Interim (Received)`, a *Current "
+"Asset* account type."
+msgstr "*库存输入*账户设置为`库存中期（收到）`，即*流动资产*账户类型。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:391
+msgid ""
+"In Continental accounting, the :guilabel:`Stock Input Account` and "
+":guilabel:`Stock Output Account` are set to **the same** :guilabel:`Current "
+"Assets` account. That way, one account can be balanced when items are bought"
+" and sold."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:396
+msgid ""
+"The stock input and output accounts are both set to `Stock Interim "
+"(Received)`, a :guilabel:`Current Assets` account type. They can also be set"
+" to the `Stock Interim (Delivered)`, as long as the input and output "
+"accounts are assigned to the **same** account."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:0
+msgid "Show the Stock Input and Output accounts."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:406
+msgid "Inventory valuation reporting"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:408
+msgid ""
+"To start, go to :menuselection:`Accounting --> Reporting --> Balance Sheet`."
+" At the top of the dashboard, change the :guilabel:`As of` field value to "
+":guilabel:`Today`, and adjust the filtering :guilabel:`Options` to "
+":guilabel:`Unfold All` in order to see all of the latest data displayed, all"
+" at once."
+msgstr ""
+"开始时，进入 :menuselection:`会计 --> 报告 --> 资产负债表`。在仪表盘顶部，将 :guilabel:`截至` 字段值更改为 "
+":guilabel:`今日`，并将 :guilabel:`选项` 筛选调整为 :guilabel:`展开全部`，以便一次性显示所有最新数据。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:414
+msgid ":doc:`../../../../finance/accounting/get_started/cheat_sheet`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:416
+msgid ""
+"Under the parent :guilabel:`Current Assets` line item, look for the nested "
+":guilabel:`Stock Valuation Account` line item, where the total valuation of "
+"all of the inventory on hand is displayed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:420
+msgid ""
+"Access more specific information with the :guilabel:`Stock Valuation "
+"Account` drop-down menu, by selecting either the :guilabel:`General Ledger` "
+"to see an itemized view of all of the journal entries, or by selecting "
+":guilabel:`Journal Items` to review all of the individualized journal "
+"entries that were submitted to the account. As well, annotations to the "
+":guilabel:`Balance Sheet` can be added by choosing :guilabel:`Annotate`, "
+"filling in the text box, and clicking :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst-1
+msgid "See the full inventory valuation breakdown in Odoo Accounting app."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:3
+msgid "Using inventory valuation"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:7
+msgid ""
+"*Inventory valuation* is a quintessential accounting procedure that "
+"calculates the value of on-hand stock. Once determined, the inventory "
+"valuation amount is then incorporated into a company's overall value."
+msgstr "*存货估价*是计算手头存货价值的重要会计程序。一旦确定，存货估价金额就会被纳入公司的整体价值中。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:11
+msgid ""
+"In Odoo, this process can be conducted manually— by warehouse employees "
+"physically counting the products— or automatically through the database."
+msgstr "在 Odoo 中，这一过程可以由仓库员工手动清点产品，也可以通过数据库自动完成。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:15
+msgid "Automatic inventory valuation"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:17
+msgid ""
+"To use Odoo to automatically generate a trail of inventory valuation "
+"entries, first navigate to the :menuselection:`Product Categories` list by "
+"going to :menuselection:`Inventory app --> Configuration --> Product "
+"Categories` and select the desired product category. On the form, set the "
+":guilabel:`Inventory Valuation` as :guilabel:`Automated` and the "
+":guilabel:`Costing Method` to any of the three options."
+msgstr ""
+"要使用 Odoo 自动生成库存估价条目跟踪，首先通过 :menuselection:`库存应用程序 --> 配置 --> 产品类别` 导航至 "
+":menuselection:`产品类别` 列表，并选择所需的产品类别。在表单中，将 :guilabel:`库存估值` 设置为 "
+":guilabel:`自动化`，将 :guilabel:`成本计算方法` 设置为三个选项中的任意一个。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:24
+msgid ":doc:`Set up inventory valuation <inventory_valuation_config>`"
+msgstr ":doc:`设置库存估值 <inventory_valuation_config>`"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:26
+msgid ""
+"In order to understand how moving products in and out of stock affects the "
+"company's overall value, consider the following product and stock moves "
+"scenario below."
+msgstr "为了了解产品进出库存对公司整体价值的影响，请考虑以下产品和库存移动的情景。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:30
+msgid "Receive a product"
+msgstr "接收产品"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:32
+msgid ""
+"To track the value of incoming products, such as a simple *table*, configure"
+" the product category on the the product itself. To get there, navigate to "
+":menuselection:`Inventory app --> Products --> Products` and click the "
+"desired product. On the product form, click the :guilabel:`➡️ (right arrow)`"
+" icon beside the :guilabel:`Product Category` field, which opens an internal"
+" link to edit the product category. Next, set the :guilabel:`Costing Method`"
+" as :guilabel:`First In First Out (FIFO)` and :guilabel:`Inventory "
+"Valuation` as :guilabel:`Automated`."
+msgstr ""
+"要追踪入库产品（如简单的*表格*）的价值，请在产品本身配置产品类别。要执行此操作，请导航至 :menuselection:`库存应用程序 --> 产品 "
+"--> 产品` 并点击所需的产品。在产品表单中，点击 :guilabel:`➡️（右箭头）` 图标旁边的 :guilabel:` 产品类别` "
+"字段，打开编辑产品类别的内部链接。然后，将 :guilabel:`成本计算方法` 设置为 :guilabel:`先进先出（FIFO）`，将 "
+":guilabel:`存货估值` 设置为 :guilabel:`自动化`。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:40
+msgid ""
+"Alternatively access the :guilabel:`Product Categories` dashboard by "
+"navigating to :menuselection:`Inventory app --> Configuration --> Product "
+"Categories` and select the desired product category."
+msgstr ""
+"也可访问 :guilabel:`产品类别` 面板，方法是导航至 :menuselection:`库存应用程序 --> 配置 --> 产品类别` "
+"并选择所需的产品类别。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:44
+msgid ""
+"Next, assume 10 tables are purchased at a price of $10.00, each. The "
+":abbr:`PO (Purchase Order)` for those tables will show the subtotal of the "
+"purchase as $100, plus any additional costs or taxes."
+msgstr ""
+"接下来，假设以每张 $10 的价格购买了 10 张桌子。这些桌子的 :abbr:`采购订单（PO）`将显示采购小计 $100，外加附加费用或税金。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst-1
+msgid "Purchase order with 10 tables products valued at $10.00 each."
+msgstr "采购订单包含 10 张桌子，每桌价值 $10.00。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:51
+msgid ""
+"After selecting :guilabel:`Validate` on the :abbr:`PO (Purchase Order)`, the"
+" :guilabel:`Valuation` smart button is enabled. Clicking on this button "
+"displays a report showing how the inventory valuation for the table was "
+"affected by this purchase."
+msgstr ""
+"选择 :guilabel:`验证`采购订单 \"后，:guilabel:`估值` "
+"智能按钮将启用。点击此按钮将显示一份报告，说明该采购如何影响表格的库存估值。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:56
+msgid ""
+":ref:`Developer mode <developer-mode>` **must** be turned on to see the "
+":guilabel:`Valuation` smart button."
+msgstr ":ref:`开发者模式<developer-mode>` **必须**打开，才能看到 :guilabel:`验证` 智能按钮。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:60
+msgid ""
+"The :doc:`consignment "
+"<../../shipping_receiving/daily_operations/owned_stock>` feature allows "
+"ownership to items in stock. Thus, products owned by other companies are not"
+" accounted for in the host company's inventory valuation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst-1
+msgid "See Valuation smart button on a receipt, with Developer mode enabled."
+msgstr "请参阅启用开发模式后收据上的估价智能按钮。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:68
+msgid ""
+"For a comprehensive dashboard that includes the inventory valuation of all "
+"product shipments, inventory adjustments, and warehouse operations, refer to"
+" the :ref:`stock valuation report <inventory/management/reporting/valuation-"
+"report>`."
+msgstr ""
+"有关包括所有产品装运、库存调整和仓库操作的库存估值的综合仪表板，请参阅 :ref:`库存估值报告 "
+"<inventory/management/reporting/valuation-report>`。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:73
+msgid "Deliver a product"
+msgstr "产品发货"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:75
+msgid ""
+"In the same logic, when a table is shipped to a customer and leaves the "
+"warehouse, the stock valuation decreases. The :guilabel:`Valuation` smart "
+"button on the :abbr:`DO (Delivery Order)`, likewise, displays the stock "
+"valuation record as it does on a :abbr:`PO (Purchase Order)`."
+msgstr ""
+"按照同样的逻辑，当一个表格运送给客户并离开仓库时，库存估价就会降低。同样， :abbr:`交货单（DO）`上的“估值” "
+"智能按钮也会像:abbr:`采购单（PO）` 一样显示库存估值记录。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst-1
+msgid "Decreased stock valuation after a product is shipped."
+msgstr "产品发货后库存估值降低。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:86
+msgid "Inventory valuation report"
+msgstr "库存估值报告"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:88
+msgid ""
+"To view the current value of all products in the warehouse, first turn on "
+":ref:`Developer mode <developer-mode>` and navigate to "
+":menuselection:`Inventory app --> Reporting --> Valuation`. The "
+":guilabel:`Stock Valuation` dashboard displays detailed records of products "
+"with the :guilabel:`Date`, :guilabel:`Quantity`, :guilabel:`Unit Value`, and"
+" :guilabel:`Total Value` of the inventory."
+msgstr ""
+"要查看仓库中所有产品的当前价值，首先打开 :ref:`开发者模式<developer-mode>` 并导航至 "
+":menuselection:`库存应用程序 --> 报告 --> 估值`。在 :guilabel:`库存估值` 仪表板上显示产品的详细记录，包括库存的"
+" :guilabel:`日期`、:guilabel:`数量`、 :guilabel:`单位价值` 和 :guilabel:`总价值`。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:95
+msgid ""
+":ref:`Developer mode <developer-mode>` **must** be enabled to see the "
+":guilabel:`Valuation` option under :guilabel:`Reporting`."
+msgstr ""
+":ref:`开发者模式<developer-mode>` **必须**启用，才能看到 :guilabel:`报告` 下的 :guilabel:`估值` "
+"选项。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst-1
+msgid "Inventory valuation report showing multiple products."
+msgstr "显示多种产品的库存评估报告。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:102
+msgid ""
+"The :guilabel:`Valuation At Date` button, located in the top-left corner of "
+"the :guilabel:`Stock Valuation` page, reveals a pop-up window. In this pop-"
+"up, the inventory valuation of products available during a prior specified "
+"date can be seen and selected."
+msgstr ""
+"位于 :guilabel:`库存估值` 页面左上角的 :guilabel:`位于 :guilabel:`库存估值` 页面左上角的 "
+":guilabel:`库存估值` 按钮会弹出一个窗口。在该弹出窗口中，可查看和选择上一指定日期的产品库存估值。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:107
+msgid ""
+"View a detailed record of a product's inventory value, stock move, and on-"
+"hand stock by selecting the teal :guilabel:`➡️ (right arrow)` button to the "
+"right of the :guilabel:`Reference` column value."
+msgstr ""
+"选择 :guilabel:`参考资料` 列值右侧的茶色 :guilabel:`➡️（右箭头）`按钮，查看产品库存值、库存移动和在手库存的详细记录。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:112
+msgid "Update product unit price"
+msgstr "更新产品单价"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:114
+msgid ""
+"For any company: lead times, supply chain failures, and other risk factors "
+"can contribute to invisible costs. Although Odoo attempts to accurately "
+"represent the stock value, *manual valuation* serves as an additional tool "
+"to update the unit price of products."
+msgstr ""
+"对任何公司而言，交货时间、供应链故障和其他风险因素都可能导致隐形成本。虽然 Odoo "
+"试图准确反映库存估值，但*手动估值*可以作为更新产品单价的额外工具。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:119
+msgid ""
+"Manual valuation is intended for products that can be purchased and received"
+" for a cost greater than 0, or have product categories set with "
+":guilabel:`Costing Method` set as either :guilabel:`Average Cost (AVCO)` or "
+":guilabel:`First In First Out (FIFO)`."
+msgstr ""
+"手动估值适用于购买和接收成本大于 0 的产品，或产品类别设置为 :guilabel:`成本计算方法` 的 :guilabel:`平均成本 （AVCO）`"
+" 或 :guilabel:`先进先出（FIFO）`。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst-1
+msgid "Add manual valuation of stock value to a product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:127
+msgid ""
+"Create manual valuation entries on the :guilabel:`Stock Valuation` dashboard"
+" by first navigating to :menuselection:`Inventory app --> Reporting --> "
+"Valuation`. Next, to enable the *product revaluation* feature, select "
+":menuselection:`Group by --> Product` to organize all the records by "
+"product. Click on the gray :guilabel:`▶️ (drop-down triangle)` icon to "
+"reveal stock valuation line items below, as well as a teal :guilabel:`➕ "
+"(plus)` button on the right."
+msgstr ""
+"在 :guilabel:`库存估值` 仪表板上创建手动估值条目，首先导航到 :menuselection:`库存应用程序 --> 报告 --> "
+"估值`。接下来，要启用*产品重估*功能，选择 :menuselection:`分组方式 --> 产品` 按产品组织所有记录。点击灰色的 "
+":guilabel:`▶️（下拉三角形）`图标，显示下面的库存估价行项目，以及右边的茶色 :guilabel:`➕ (加号)`按钮。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:133
+msgid ""
+"Click the teal :guilabel:`+ (plus)` button to open up the :guilabel:`Product"
+" Revaluation` form. Here, the inventory valuation for a product can be "
+"recalculated, by increasing or decreasing the unit price of each product."
+msgstr ""
+"点击茶色的 :guilabel:`+ (加号)` 按钮，打开 "
+":guilabel:`产品价格重估`表格。在这里，可以通过增加或减少每个产品的单价，重新计算产品的库存估值。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:138
+msgid ""
+"The :guilabel:`▶️ (drop-down triangle)` and :guilabel:`➕ (plus)` buttons are"
+" only visible after grouping entries by product."
+msgstr ":guilabel:`▶️（下拉三角形）` 和 :guilabel:`➕（加号）` 按钮只有在按产品分组后才可见。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst-1
+msgid ""
+"Product revaluation form adding a value of $1.00 with the reason being "
+"inflation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:146
+msgid "Inventory valuation journal entries"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:148
+msgid ""
+"In Odoo, automatic inventory valuation records are also recorded in the "
+":menuselection:`Accounting app --> Accounting --> Journal Entries` "
+"dashboard. On this comprehensive list of accounting entries, inventory "
+"valuation records are identified by checking values in the "
+":guilabel:`Journal` column, or looking for the :guilabel:`Reference` column "
+"value which matches the warehouse operation reference (e.g. `WH/IN/00014` "
+"for receipts)."
+msgstr ""
+"在 Odoo 中，自动库存估价记录也记录在 :menuselection:`会计应用程序 --> 会计 --> 日记账分录` "
+"仪表板中。在这个全面的会计分录列表中，库存估价记录是通过检查 :guilabel:`日记账` "
+"列中的值或查找与仓库操作参考（如收据的`WH/IN/00014`）相匹配的 :guilabel:`参考` 列值来识别的。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:154
+msgid ""
+"Clicking on an inventory valuation journal entry opens a *double-entry "
+"accounting* record. These records are generated by Odoo to track the change "
+"of value in inventory valuation as products are moved in and out of the "
+"warehouse."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:159
+msgid ""
+"To view the inventory valuation of 10 *tables*, costing $10.00 each, upon "
+"reception from the vendor, go to the :menuselection:`Journal Entries` page "
+"found in :menuselection:`Accounting app --> Accounting --> Journal Entries`."
+" Here, click the journal line where the :guilabel:`Reference` column value "
+"matches the reference on the receipt, `WH/IN/00014`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:0
+msgid "Stock valuation page depicting the products within a shipment."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:168
+msgid ""
+"`Stock interim` is a holding account for money intended to pay vendors for "
+"the product. The `stock valuation` account stores the value of all on-hand "
+"stock."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:0
+msgid "Accounting entry for the inventory valuation of 10 tables."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:176
+msgid ""
+"`Odoo Tutorial: Inventory Valuation "
+"<https://www.odoo.com/slides/slide/2795/share>`_"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking.rst:6
 msgid "Product tracking"
@@ -10750,7 +11934,7 @@ msgstr ":guilabel:`网站`：为电子商务页面配置送货方法。从下拉
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:64
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:43
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:128
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:130
 msgid ""
 ":guilabel:`Company`: if the shipping method should apply to a specific "
 "company, select it from the drop-down menu. Leave the field blank to apply "
@@ -10790,13 +11974,16 @@ msgid ""
 "option makes the :guilabel:`Fixed Price` field become available, which is "
 "where the fixed rate shipping amount is defined."
 msgstr ""
+"要为所有订单配置相同的运费价格，请转至 :menuselection:` 库存应用程序 --> 配置 --> 发货方式`。然后，点击 "
+":guilabel:`新建`，并在发货方式表单中将 :guilabel:`提供商` 设为 :guilabel:`固定价格` "
+"选项。选择该选项后，:guilabel:`固定价格` 字段就可用了，固定费率运费金额就是在此定义的。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:87
 msgid ""
 "To enable free shipping if the amount of the order exceeds a specified "
 "amount, check the box :guilabel:`Free if order amount is above` and fill in "
 "the amount."
-msgstr ""
+msgstr "要在订单金额超过指定金额时启用免运费，请选中 :guilabel:`订单金额超过则免费` 复选框并填写金额。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:91
 msgid ""
@@ -11002,7 +12189,7 @@ msgid "Show delivery order on the sales order line."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:209
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:260
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:262
 msgid "Delivery order"
 msgstr ""
 
@@ -12112,7 +13299,7 @@ msgstr ""
 "不会免费发货。要使用发货规则或个人定制的承运商联系人，**必须**使用 Sendcloud 的付费计划。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:37
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:180
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:182
 msgid "Warehouse configuration"
 msgstr "仓库配置"
 
@@ -12766,8 +13953,8 @@ msgid "All"
 msgstr "所有"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:33
-msgid ":doc:`DHL <dhl_credentials>`"
-msgstr ":doc:`DHL <dhl_credentials>`"
+msgid ":doc:`DHL Express* <dhl_credentials>`"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:35
 msgid ":doc:`UPS <ups_credentials>`"
@@ -12786,7 +13973,7 @@ msgid ":doc:`Sendcloud <sendcloud_shipping>`"
 msgstr ":doc:`Sendcloud <sendcloud_shipping>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:40
-msgid ":ref:`EU* <inventory/shipping_receiving/sendcloud-eu>`"
+msgid ":ref:`EU** <inventory/shipping_receiving/sendcloud-eu>`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:41
@@ -12814,60 +14001,64 @@ msgid "India"
 msgstr "印度"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:52
+msgid "\\* Other services from DHL are **not** supported."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:54
 msgid ""
-"\\* Sendcloud currently supports shipping **from** Austria, Belgium, France,"
-" Germany, Italy, the Netherlands, Spain, and the United Kingdom, and **to** "
+"** Sendcloud currently supports shipping **from** Austria, Belgium, France, "
+"Germany, Italy, the Netherlands, Spain, and the United Kingdom, and **to** "
 "any European country."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:58
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:60
 msgid ""
 "To ensure proper setup of a third-party shipping carrier with Odoo, follow "
 "these steps:"
 msgstr "为确保在 Odoo 中正确设置第三方运输承运人，请遵循以下步骤："
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:60
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:62
 msgid ""
 ":ref:`Install the shipping connector <inventory/shipping_receiving/shipping-"
 "connector>`."
 msgstr ":ref:`安装运输连接器 <inventory/shipping_receiving/shipping-connector>`。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:61
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:63
 msgid ""
 ":ref:`Set up delivery method <inventory/shipping_receiving/configure-"
 "delivery-method>`."
 msgstr ""
 ":ref:`设置交付方式 <inventory/shipping_receiving/configure-delivery-method>`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:62
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:64
 msgid ""
 ":ref:`Activate production environment "
 "<inventory/shipping_receiving/production-env>`."
 msgstr ":ref:`激活正式运行环境 <inventory/shipping_receiving/production-env>`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:63
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:65
 msgid ""
 ":ref:`Configure warehouse <inventory/shipping_receiving/configure-source-"
 "address>`."
 msgstr ":ref:`配置仓库 <inventory/shipping_receiving/configure-source-address>`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:64
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:66
 msgid ""
 ":ref:`Specify weight of products <inventory/shipping_receiving/configure-"
 "weight>`."
 msgstr ":ref:`指定产品重量 <inventory/shipping_receiving/configure-weight>`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:69
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:71
 msgid "Install shipping connector"
 msgstr "安装运输连接器"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:71
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:73
 msgid ""
 "To install shipping connectors, go to :menuselection:`Inventory app --> "
 "Configuration --> Settings`."
 msgstr "要安装送货连接器，请转到 :menuselection:`库存应用程序 --> 配置 --> 设置`。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:73
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:75
 msgid ""
 "Under the :guilabel:`Shipping Connectors` section, tick the third-party "
 "shipping carrier's checkbox to install it. Multiple third-party shipping "
@@ -12876,7 +14067,7 @@ msgstr ""
 "在:guilabel:`送货连接器`部分，勾选第三方货运承运商复选框以进行安装。可同时选择多个第三方运输连接器。然后，点击 "
 ":guilabel:`保存`。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:78
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:80
 msgid ""
 ":doc:`Delivery methods <../setup_configuration>` can also be integrated with"
 " operations in the *Sales*, *eCommerce*, and *Website* apps. To install, "
@@ -12888,35 +14079,35 @@ msgstr ""
 msgid "Options of available shipping connectors in Odoo."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:89
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:91
 msgid "Delivery method"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:91
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:93
 msgid ""
 "To configure the API credentials, and activate the shipping carrier, begin "
 "by going to :menuselection:`Inventory app --> Configuration --> Shipping "
 "Methods`, and select the desired delivery method."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:96
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:98
 msgid ""
 "The list often includes **two** delivery methods from the same "
 ":guilabel:`Provider`: one for international shipping and one for domestic "
 "shipping."
 msgstr "该列表通常包括来自同一 :guilabel:`提供商` 的**两种**送货方式：一种用于国际送货，一种用于国内送货。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:99
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:101
 msgid ""
 "Additional delivery methods can be created for specific purposes, such as "
 ":doc:`packaging <../../product_management/configure/packaging>`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:103
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:105
 msgid ":doc:`Configure delivery methods <../setup_configuration>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:106
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:108
 msgid ""
 "Ensure the delivery method is published when it should be available on the "
 "*Website* app. To publish a delivery method on the website, click the "
@@ -12926,19 +14117,19 @@ msgstr ""
 "确保在 *网站* 应用程序上发布应可用的交付方式。要在网站上发布交付方式，请点击所需的交付方式，然后点击 :guilabel:`未发布` "
 "智能按钮。这样会将该智能按钮更改为：:guilabel:`已发布`。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:111
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:113
 msgid ""
 "The :guilabel:`Shipping Method` page contains details about the provider, "
 "including:"
 msgstr "在 :guilabel:`送货方式` 页面中包含有关提供商的详细信息，包括："
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:113
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:115
 msgid ""
 ":guilabel:`Shipping Method` (*Required field*): the name of the delivery "
 "method (e.g. `FedEx US`, `FedEx EU`, etc.)."
 msgstr ":guilabel:`送货方式`（*必填字段*）：送货方式名称（例如， `FedEx US`、`FedEx EU`等）。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:115
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:117
 msgid ""
 ":guilabel:`Website`: configure shipping methods for an *eCommerce* page that"
 " is connected to a specific website in the database. Select the applicable "
@@ -12947,7 +14138,7 @@ msgid ""
 msgstr ""
 ":guilabel:`网站`：为连接到数据库中特定网站的*电子商务*页面配置发货方法。从下拉菜单中选择适用的网站，或留空将方法应用于所有网页。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:118
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:120
 msgid ""
 ":guilabel:`Provider` (*Required field*): choose the third-party delivery "
 "service, like FedEx. Upon choosing a provider, the :guilabel:`Integration "
@@ -12956,7 +14147,7 @@ msgid ""
 msgstr ""
 ":guilabel:`提供商`（*必填字段*）：选择第三方快递服务，如FedEx。选择供应商后，:guilabel:`整合级别`、:guilabel:`发票政策`和:guilabel:`保险百分比`字段可用。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:121
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:123
 msgid ""
 ":guilabel:`Integration Level`: choose :guilabel:`Get Rate` to simply get an "
 ":ref:`estimated shipment cost <inventory/shipping_receiving/third-party-so>`"
@@ -12965,19 +14156,19 @@ msgstr ""
 ":guilabel:`整合级别`：选择 :guilabel:`获取费率`，只需在 |销售订单| 或发票上获取 :ref:`预计运费 "
 "<inventory/shipping_receiving/third-party-so>` 即可。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:125
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:127
 msgid ""
 "Select :guilabel:`Get Rate and Create Shipment` to also :doc:`generate "
 "shipping labels <labels>`."
 msgstr "选择 :guilabel:`获取费率并创建货件` 也 :doc:`生成运输标签<labels>`。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:130
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:132
 msgid ""
 ":guilabel:`Delivery Product` (*Required field*): the delivery charge name "
 "that is added to the |SO| or invoice."
 msgstr ":guilabel:`交付产品`（*必填字段*）：添加到 |销售订单| 或发票中的交货费用名称。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:132
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:134
 msgid ""
 ":guilabel:`Invoicing Policy`: select and calculate an :guilabel:`Estimated "
 "cost` of shipping directly from the shipping carrier. If the :guilabel:`Real"
@@ -12985,36 +14176,36 @@ msgid ""
 "costs <invoicing>` document."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:135
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:137
 msgid ""
 ":guilabel:`Margin on Rate`: specify an additional percentage amount added to"
 " the base shipping rate to cover extra costs, such as handling fees, "
 "packaging materials, exchange rates, etc."
 msgstr ":guilabel:`运费保证金`：指定在基本运费基础上增加的额外百分比，以支付额外费用，如手续费、包装材料、汇率等。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:137
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:139
 msgid ""
 ":guilabel:`Free if order amount is above`: enables free shipping for orders "
 "surpassing a specified amount entered in the corresponding "
 ":guilabel:`Amount` field."
 msgstr ":guilabel:`如果订单金额高于则免费`：对于超过相应 :guilabel:`金额` 字段中输入的指定金额的订单，可以免费送货。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:139
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:141
 msgid ""
 ":guilabel:`Insurance Percentage`: specify a percentage amount of the "
 "shipping costs reimbursed to the senders if the package is lost or stolen in"
 " transit."
 msgstr ":guilabel:`保险百分比`：指定如果包裹在运输过程中丢失或被盗，向发件人报销的运费百分比金额。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:146
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:148
 msgid "Screenshot of a FedEx shipping method."
 msgstr "FedEx 运输方式的屏幕截图。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:146
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:148
 msgid "**Shipping Method** configuration page for `FedEx US`."
 msgstr " `FedEx US` 的 **运送方式** 配置页面。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:148
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:150
 msgid ""
 "In the :guilabel:`Configuration` tab, fill out the API credential fields "
 "(e.g. API key, password, account number, etc.). Depending on the third-party"
@@ -13026,29 +14217,29 @@ msgstr ""
 "在 :guilabel:`配置` 选项卡中，填写 API 凭据字段（如 API 密钥、密码、帐号等）。根据在 :guilabel:`提供商` "
 "字段中选择的第三方运送承运商，:guilabel:`配置`选项卡将包含不同的必填字段。有关配置特定承运商凭证的更多详情，请参阅以下文档："
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:155
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:157
 msgid ":doc:`DHL credentials <dhl_credentials>`"
 msgstr ":doc:`DHL 凭证<dhl_credentials>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:156
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:158
 msgid ":doc:`Sendcloud credentials <sendcloud_shipping>`"
 msgstr ":doc:`Sendcloud 凭证<sendcloud_shipping>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:157
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:159
 msgid ":doc:`UPS credentials <ups_credentials>`"
 msgstr ":doc:`UPS 凭证<ups_credentials>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:162
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:164
 msgid "Production environment"
 msgstr "正式运行环境"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:164
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:166
 msgid ""
 "With the delivery method details configured, click the :guilabel:`Test "
 "Environment` smart button to set it to :guilabel:`Production Environment`."
 msgstr "配置好交付方式详细信息后，点击 :guilabel:`测试环境`智能 按钮将其设置为 :guilabel:`正式运行环境`。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:168
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:170
 msgid ""
 "Setting the delivery method to :guilabel:`Production` creates **real** "
 "shipping labels, and users are at risk of being charged through their "
@@ -13063,7 +14254,7 @@ msgstr ""
 msgid "Show the \"Test Environment\" smart button."
 msgstr "显示 “测试环境” 智能按钮。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:182
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:184
 msgid ""
 "Ensure the warehouse's :guilabel:`Address` (including ZIP code) and "
 ":guilabel:`Phone` number are entered accurately. To do that, go to "
@@ -13073,7 +14264,7 @@ msgstr ""
 "确保准确输入仓库的 :guilabel:`地址`（包括邮政编码）和 :guilabel:`电话号码。要执行此操作，进入 "
 ":menuselection:`库存应用程序 --> 配置 --> 仓库`，选择所需的仓库。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:186
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:188
 msgid ""
 "On the warehouse configuration page, open the warehouse contact page by "
 "clicking the :guilabel:`Company` field."
@@ -13083,7 +14274,7 @@ msgstr "在仓库配置页面，点击 :guilabel:`公司` 字段，打开仓库�
 msgid "Highlight the \"Company\" field."
 msgstr "突出显示 “公司” 字段。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:193
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:195
 msgid ""
 "Verify that the :guilabel:`Address` and :guilabel:`Phone` number are "
 "correct, as they are required for the shipping connector to work properly."
@@ -13093,18 +14284,18 @@ msgstr "验证 :guilabel:`地址` 和 :guilabel:`手机` 号码是否正确，�
 msgid "Show company address and phone number."
 msgstr "显示公司地址和电话号码。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:203
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:205
 msgid "Product weight"
 msgstr "产品重量"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:205
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:207
 msgid ""
 "For the carrier integration to work properly, specify the weight of products"
 " by going to :menuselection:`Inventory app --> Products --> Products`, and "
 "selecting the desired product."
 msgstr "要使承运商整合正常工作，请转到:menuselection:`库存应用 --> 产品 --> 产品`，然后选择所需的产品来指定产品的重量。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:208
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:210
 msgid ""
 "Then, switch to the :guilabel:`Inventory` tab, and define the "
 ":guilabel:`Weight` of the product in the :guilabel:`Logistics` section."
@@ -13114,17 +14305,17 @@ msgstr "然后，切换到 :guilabel:`库存` 选项卡，在 :guilabel:`物流`
 msgid "Display the \"Weight\" field in the Inventory tab of the product form."
 msgstr "在产品表单的 “库存” 选项卡中显示 “重量” 字段。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:216
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:218
 msgid "Apply third-party shipping carrier"
 msgstr "申请第三方运输承运商"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:218
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:220
 msgid ""
 "Shipping carriers can be applied on a :abbr:`SO (Sales Order)`, invoice, or "
 "delivery order."
 msgstr "运输工具可应用于 :abbr:`SO（销售订单）`、发票或送货单。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:220
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:222
 msgid ""
 "After configuring the third-party carrier's :ref:`delivery method "
 "<inventory/shipping_receiving/configure-delivery-method>` in Odoo, create or"
@@ -13134,11 +14325,11 @@ msgstr ""
 "在 Odoo 中配置第三方承运商的 :ref:`送货方式 <inventory/shipping_receiving/configure-"
 "delivery-method>` 后，通过 :menuselection:`销售应用程序 --> 订单 --> 报价单` 创建或浏览报价单。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:227
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:229
 msgid "Sales order"
 msgstr "销售订单"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:229
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:231
 msgid ""
 "To assign a third-party shipping carrier, and get an estimated cost of "
 "shipping, begin by going to :menuselection:`Sales app --> Orders --> "
@@ -13154,7 +14345,7 @@ msgstr ""
 msgid "Show the \"Add shipping\" button at the bottom of a quotation."
 msgstr "在报价单底部显示 “添加运费” 按钮。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:238
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:240
 msgid ""
 "In the resulting :guilabel:`Add a shipping method` pop-up window, select the"
 " intended carrier from the :guilabel:`Shipping Method` drop-down menu. The "
@@ -13163,7 +14354,7 @@ msgstr ""
 "在弹出的 :guilabel:`添加送货方式` 窗口中，从 :guilabel:`送货方式` 下拉菜单中选择目标承运商。:guilabel:`成本` "
 "字段将根据以下因素自动填写："
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:242
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:244
 msgid ""
 "the amount specified in the :guilabel:`Total Order Weight` field (if it is "
 "not provided, the sum of :ref:`product weights "
@@ -13172,7 +14363,7 @@ msgstr ""
 "在 :guilabel:`订单总重量` 字段中指定的金额（如果未提供，则使用订单中 "
 ":ref:`产品重量<inventory/shipping_receiving/configure-weight>` 的总和）。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:244
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:246
 msgid ""
 "the distance between the warehouse's :ref:`source address "
 "<inventory/shipping_receiving/configure-source-address>` and the customer's "
@@ -13181,7 +14372,7 @@ msgstr ""
 "仓库的 :ref:`源地址 <inventory/shipping_receiving/configure-source-address>` "
 "与客户地址之间的距离。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:249
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:251
 msgid ""
 "After selecting a third-party provider in the :guilabel:`Shipping Method` "
 "field, click :guilabel:`Get Rate` in the :guilabel:`Add a shipping method` "
@@ -13192,12 +14383,12 @@ msgstr ""
 "在 :guilabel:`送货方式` 字段中选择第三方供应商后，点击 :guilabel:`添加送货方式` 弹出窗口中的 "
 ":guilabel:`获取费率`，通过送货连接器获取估计费用。然后，点击 :guilabel:`添加` 按钮，将运费添加到 |SO| 或发票中。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:255
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:257
 msgid ""
 ":doc:`Charge customers for shipping after product delivery <invoicing>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:262
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:264
 msgid ""
 "For users making shipments without installing the *Sales* app, assign the "
 "shipping carrier to the delivery order, by first going to the "
@@ -13210,7 +14401,7 @@ msgstr ""
 ":guilabel:`库存概览` 面板选择 :guilabel:`送货订单` 操作类型，并选择尚未标记为 :guilabel:`已完成` 或 "
 ":guilabel:`已取消` 的所需交货单。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:268
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:270
 msgid ""
 "In the :guilabel:`Additional info` tab, set the :guilabel:`Carrier` field to"
 " the desired third-party shipping carrier. When the delivery method is set "
@@ -13221,7 +14412,7 @@ msgstr ""
 ":ref:`生产模式 <inventory/shipping_receiving/configure-delivery-method>` 时，将提供 "
 ":guilabel:`追踪参考`。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:274
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:276
 msgid ":doc:`Generate shipping labels <labels>`"
 msgstr ":doc:`生成运输标签 <labels>`"
 
@@ -13229,17 +14420,17 @@ msgstr ":doc:`生成运输标签 <labels>`"
 msgid "Show the delivery order's \"Additional info\" tab."
 msgstr "显示配送单的 “附加信息” 选项卡。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:283
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:285
 msgid "Troubleshooting"
 msgstr "故障排除"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:285
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:287
 msgid ""
 "Since shipping connectors can sometimes be complex to set up, here are some "
 "checks to try when things are not working as expected:"
 msgstr "由于送货连接器的设置有时可能比较复杂，因此当出现问题时，可以尝试进行以下检查："
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:288
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:290
 msgid ""
 "Ensure the :ref:`warehouse information "
 "<inventory/shipping_receiving/configure-source-address>` (e.g., address and "
@@ -13249,7 +14440,7 @@ msgstr ""
 "确保 Odoo 中的 :ref:`仓库信息 <inventory/shipping_receiving/configure-source-"
 "address>`（例如地址和电话号码）正确，**并且**与运输提供商网站中保存的记录相匹配。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:291
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:293
 msgid ""
 "Verify that the :ref:`package type <inventory/warehouses_storage/package-"
 "type>` and parameters are valid for the shipping carrier. To check, ensure "
@@ -13258,7 +14449,7 @@ msgstr ""
 "验证 :ref:`包裹类型<inventory/warehouses_storage/package-type>` "
 "和参数对货运承运人有效。要进行检查，请确保可以在运输承运商的网站上直接创建货件。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:294
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:296
 msgid ""
 "When encountering a price mismatch between Odoo's estimated cost and the "
 "provider's charge, first ensure the delivery method is set to "
@@ -13267,14 +14458,14 @@ msgstr ""
 "当遇到 Odoo 估算成本与提供商收费之间的价格不匹配时，首先确保送货方式设置为 :ref:`正式运行环境 "
 "<inventory/shipping_receiving/production-env>`。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:298
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:300
 msgid ""
 "Then, create the shipment in both the carrier's website and Odoo, and verify"
 " the prices are the same across Odoo, the shipping provider, and in the "
 "*debug logs*."
 msgstr "然后，在承运商网站和 Odoo 中创建运送，并验证 Odoo、送货提供商和*调试日志*中的价格是否相同。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:302
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:304
 msgid ""
 "When checking for a price mismatch in the debug logs, if the request says "
 "the package weighs six kilograms, but the response from FedEx says the "
@@ -13283,11 +14474,11 @@ msgid ""
 msgstr ""
 "在调试日志中检查价格不匹配时，如果请求说包裹重 6 千克，但 FedEx 回复却说包裹重 7 千克，那么就会得出结论，问题出在 FedEx 方面。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:307
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:309
 msgid "Debug log"
 msgstr "调试区"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:309
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:311
 msgid ""
 "Track shipping data inconsistencies by activating debug logging. To do that,"
 " go to the delivery method's configuration page (:menuselection:`Inventory "
@@ -13302,7 +14493,7 @@ msgstr ""
 msgid "Show the \"No Debug\" smart button."
 msgstr "显示 “无调试” 智能按钮。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:318
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:320
 msgid ""
 "With :guilabel:`Debug Requests` activated, each time the shipping connector "
 "is used to estimate the cost of shipping, records are saved in the "
@@ -13314,7 +14505,7 @@ msgstr ""
 " :ref:`开发者模式<developer-mode>`，并进入 :menuselection:`设置应用程序 --> 技术 --> 数据库结构部分 "
 "--> 记录`。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:324
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:326
 msgid ""
 "Logs are created for a shipping method each time the :ref:`Get Rate "
 "<inventory/shipping_receiving/third-party-rate>` button is clicked on "
@@ -13328,7 +14519,7 @@ msgstr ""
 msgid "Show how to find the \"Logging\" option from the \"Technical\" menu."
 msgstr "演示如何从 “技术” 菜单中找到 “日志记录” 选项。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:333
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:335
 msgid ""
 "Click the *HTTP request* line item to open a detailed page, and verify the "
 "correct information is sent from Odoo to the shipping carrier. In the *HTTP "
@@ -13603,7 +14794,7 @@ msgstr ""
 msgid ""
 ":guilabel:`Internal Location`: storage locations within the warehouse. Items"
 " stored in these locations are accounted for in :doc:`inventory valuation "
-"<inventory_valuation/using_inventory_valuation>`."
+"<../product_management/inventory_valuation/using_inventory_valuation>`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:70
@@ -14927,1190 +16118,6 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst-1
 msgid "Example warehouse form."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation.rst:5
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:280
-msgid "Inventory valuation"
-msgstr "库存计价"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/integrating_landed_costs.rst:3
-msgid "Integrating additional costs to products (landed costs)"
-msgstr "将额外成本整合到产品中（到岸成本） "
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/integrating_landed_costs.rst:7
-msgid ""
-"The landed cost feature in Odoo allows the user to include additional costs "
-"(shipment, insurance, customs duties, etc.) into the cost of the product."
-msgstr "Odoo 到岸成本功能允许用户将额外费用（运费、保险、关税等）计入产品成本。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/integrating_landed_costs.rst:13
-msgid ""
-"First, go to :menuselection:`Inventory --> Configuration --> Settings --> "
-"Valuation` and activate the :guilabel:`Landed Costs` feature. Odoo also "
-"gives the option to set a :guilabel:`Default Journal` in which the landed "
-"costs accounting entries will be recorded."
-msgstr ""
-"首先，进入 :menuselection:`库存 --> 配置 --> 设置 --> 估值` 并激活 :guilabel:`到岸成本` 功能。Odoo "
-"还提供设置 :guilabel:`默认日记账` 选项，落地成本的会计分录将记录在其中。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/integrating_landed_costs.rst-1
-msgid "Activate the landed cost feature in Inventory settings."
-msgstr "在库存设置中激活到岸成本功能。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/integrating_landed_costs.rst:22
-msgid "Add costs to products"
-msgstr "向产品添加成本"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/integrating_landed_costs.rst:25
-msgid "Receive the vendor bill"
-msgstr "接收供应商账单"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/integrating_landed_costs.rst:27
-msgid ""
-"After a vendor fulfills a purchase order and sends a bill, click "
-":guilabel:`Create Bill` on the purchase order to create a vendor bill in "
-"Odoo. If the vendor bill includes landed costs, such as custom duties, tick "
-"the box in the :guilabel:`Landed Costs` column on the vendor bill invoice "
-"line."
-msgstr ""
-"供应商完成采购订单并发送账单后，单击采购订单上的 :guilabel:`创建账单` 在 Odoo "
-"中创建供应商账单。如果供应商账单包括到岸成本（如关税），请勾选供应商账单发票行中 :guilabel:`到岸成本` 列的复选框。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/integrating_landed_costs.rst-1
-msgid "Enable Landed Costs option on vendor bill line."
-msgstr "启用供应商账单项目中的到岸成本选项。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/integrating_landed_costs.rst:35
-msgid ""
-"For charges that are always landed costs, create a landed cost product in "
-"Odoo. That way, the landed cost product can be quickly added to the vendor "
-"bill as an invoice line instead of manually entering the landed cost "
-"information every time a vendor bill comes in."
-msgstr ""
-"对于始终是到岸成本的费用，可在 Odoo "
-"中创建到岸成本产品。这样，就可以将到岸成本产品作为发票项目快速添加到供应商账单中，而不用每次收到供应商账单时都手动输入到岸成本信息。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/integrating_landed_costs.rst:39
-msgid ""
-"First, create a new product in :menuselection:`Inventory --> Products --> "
-"Products --> Create`. Next, name the landed cost product. Then, set the "
-":guilabel:`Product Type` to :guilabel:`Service`. A landed cost product must "
-"always be a service product type. After that, go to the :guilabel:`Purchase`"
-" tab and check the box next to :guilabel:`Is a Landed Cost`. Finally, click "
-":guilabel:`Save` to finish creating the landed cost product."
-msgstr ""
-"首先，在 :menuselection:`库存 --> 产品 --> 产品 --> 创建` 中创建一个新产品。接下来，命名到岸成本产品。然后，将 "
-":guilabel:`产品类型` 设为 :guilabel:`服务`。到岸成本产品必须始终是服务产品类型。然后，转到 :guilabel:`采购` "
-"选项卡，选中 :guilabel:`是到岸成本` 旁边的复选框。最后，点击 :guilabel:`保存` 完成创建到岸成本产品。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/integrating_landed_costs.rst:45
-msgid ""
-"If this product is always a landed cost, you can also define it on the "
-"product and avoid having to tick the box on each vendor bill."
-msgstr "如果该产品始终为到岸成本，你可在产品上进行定义，避免在每张供应商账单上都要打勾。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/integrating_landed_costs.rst-1
-msgid "Option to define a product as a landed cost."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/integrating_landed_costs.rst:52
-msgid ""
-"Once the landed cost is added to the vendor bill (either by checking the "
-":guilabel:`Landed Cost` option on the invoice line or adding a landed cost "
-"product to the bill), click the :guilabel:`Create Landed Costs` button at "
-"the top of the bill. Odoo automatically creates a landed cost record with "
-"the set landed cost pre-filled in the :guilabel:`Additional Costs` product "
-"lines. From here, decide which picking the additional costs apply to by "
-"clicking :guilabel:`Edit` and selecting the picking reference number from "
-"the :guilabel:`Transfers` drop-down menu. Finally, click :guilabel:`Save`."
-msgstr ""
-"将到岸成本添加到供应商账单后（通过勾选发票行的 :guilabel:`到岸成本` 选项或在账单中添加到岸成本产品），单击账单顶部的 "
-":guilabel:`创建到岸成本` 按钮。Odoo 会自动在 :guilabel:`附加费用` 产品行中创建已设定的到岸成本记录。在此，单击 "
-":guilabel:`编辑` 并从 :guilabel:`调拨` 下拉菜单中选择分拣参考编号，以决定额外成本适用于哪个分拣。最后，点击 "
-":guilabel:`保存`。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/integrating_landed_costs.rst-1
-msgid ""
-"Use a warehouse transfer to cover a landed cost in the accounting journal."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/integrating_landed_costs.rst:64
-msgid ""
-"After setting the picking, click :guilabel:`Compute` on the landed cost "
-"record. Then, go to the :guilabel:`Valuation Adjustments` tab to see the "
-"impact of the landed costs. Finally, click :guilabel:`Validate` to post the "
-"landed cost entry to the accounting journal."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/integrating_landed_costs.rst:68
-msgid ""
-"The user can access the journal entry that has been created by the landed "
-"cost by clicking on the :guilabel:`Journal Entry`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/integrating_landed_costs.rst:72
-msgid ""
-"The product that the landed cost is applied to must have a product category "
-"set to a :abbr:`FIFO (First In, First Out)` or an :abbr:`AVCO (Average "
-"Costing)` method."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/integrating_landed_costs.rst-1
-msgid "Landed cost journal entry"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/integrating_landed_costs.rst:80
-msgid ""
-"Landed cost records can also be directly created in "
-":menuselection:`Inventory --> Operations --> Landed Costs`, it is not "
-"necessary to create a landed cost record from the vendor bill."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:3
-msgid "Inventory valuation configuration"
-msgstr "库存计价配置"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:7
-msgid ""
-"All of a company's stock on-hand contributes to the valuation of its "
-"inventory. That value should be reflected in the company's accounting "
-"records to accurately show the value of the company and all of its assets."
-msgstr "公司的所有库存都会影响其存货的价值。这一价值应反映在公司的会计记录中，以准确显示公司及其所有资产的价值。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:11
-msgid ""
-"By default, Odoo uses a periodic inventory valuation (also known as manual "
-"inventory valuation). This method implies that the accounting team posts "
-"journal entries based on the physical inventory of the company, and that "
-"warehouse employees take the time to count the stock. In Odoo, this method "
-"is reflected inside each product category, where the :guilabel:`Costing "
-"Method` field will be set to `Standard Price` by default, and the "
-":guilabel:`Inventory Valuation` field will be set to `Manual`."
-msgstr ""
-"默认情况下，Odoo 使用定期库存估价（也称为手动库存估价）。这种方法意味着会计团队会根据公司的实际库存，记录日记账分录，仓库员工也会花时间清点库存。在"
-" Odoo 中，这种方法反映在每个产品类别中，其中 :guilabel:`成本计算方法` 字段将默认设置为`标准价格`，而 "
-":guilabel:`库存估值` 字段将设置为`手动`。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst-1
-msgid ""
-"The Inventory Valuation fields are located on the Product Categories form."
-msgstr "库存估价字段位于产品类别表单中。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:21
-msgid ""
-"Alternatively, automated inventory valuation is an integrated valuation "
-"method that updates the inventory value in real-time by creating journal "
-"entries whenever there are stock moves initiated between locations in a "
-"company's inventory."
-msgstr "另外，自动存货估价是一种综合估价方法，每当公司存货在不同地点之间发生存货移动时，就会创建日记账分录，从而实时更新存货价值。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:26
-msgid ""
-"Automated inventory valuation is a method recommended for expert "
-"accountants, given the extra steps involved in journal entry configuration. "
-"Even after the initial setup, the method will need to be periodically "
-"checked to ensure accuracy, and adjustments may be needed on an ongoing "
-"basis depending on the needs and priorities of the business."
-msgstr ""
-"鉴于日记账分录配置涉及额外步骤，建议专业会计师采用自动存货估价方法。即使在初始设置之后，也需要定期检查该方法，以确保准确性，并根据企业需求和优先事项不断进行调整。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:34
-msgid "Types of accounting"
-msgstr "会计类型"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:36
-msgid ""
-"Accounting entries will depend on the accounting mode: *Continental* or "
-"*Anglo-Saxon*."
-msgstr "会计分录取决于会计模式：*大陆*或*盎格鲁-撒克逊*。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:39
-msgid ""
-"Verify the accounting mode by activating the :ref:`developer-mode` and "
-"navigating to :menuselection:`Accounting app --> Configuration --> "
-"Settings`."
-msgstr "激活 :ref:`开发者模式` 并导航至 :menuselection:`会计应用程序 --> 配置 --> 设置` 以验证会计模式。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:42
-msgid ""
-"Then, in the search bar, look for :guilabel:`Anglo-Saxon Accounting`, to see"
-" if the feature is enabled. If it is **not** enabled, Continental accounting"
-" mode is in use."
-msgstr "然后，在搜索栏中查找 :guilabel:`盎格鲁-撒克逊会计`，查看该功能是否启用。如果**未**启用，则使用的是大陆会计模式。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:0
-msgid "Show the Anglo-Saxon accounting mode feature."
-msgstr "显示盎格鲁-撒克逊会计模式功能。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:49
-msgid ""
-"In *Anglo-Saxon* accounting, the costs of goods sold (COGS) are reported "
-"when products are sold or delivered. This means that the cost of a good is "
-"only recorded as an expense when a customer is invoiced for a product. So "
-"for **manual** valuation method, set the :guilabel:`Expense Account` to "
-"`Stock Valuation` for the current asset type; for **automatic** valuation "
-"method, set the the :guilabel:`Expense Account` to an *Expenses* or a *Cost "
-"of Revenue* type (e.g. `Cost of Production`, `Cost of Goods Sold`, etc.)."
-msgstr ""
-"在*盎格鲁-"
-"撒克逊*会计中，销售成本（COGS）是在产品售出或交付时报告的。这意味着，只有在向客户开具产品发票时，才会将货物成本记为开支。因此，对于**手动**估值方法，请将当前资产类型的"
-" :guilabel:`开支账户` 设置为 `股票估值`；对于**自动**估值方法，请将 :guilabel:`开支账户` "
-"设置为*开支*或*收入成本*类型（如 `生产成本`、`销售成本`等）。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:56
-msgid ""
-"In *Continental* accounting, the cost of a good is reported as soon as a "
-"product is received into stock. Because of this, the :guilabel:`Expense "
-"Account` can be set to **either** *Expenses* or a *Cost of Revenue* type, "
-"however, it is more commonly set to an *Expenses* account."
-msgstr ""
-"在*大陆*会计中，产品入库后立即报告货物成本。因此，:guilabel:`开支账户`可设置为*开支*或*收入成本*类型，但更常见的是设置为*开支*账户。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:61
-msgid ""
-":ref:`Details about configuring Expense and Stock accounts "
-"<inventory/management/config-inventory-valuation>`"
-msgstr ""
-":ref:` 配置开支和库存账户的详细信息 <inventory/management/config-inventory-valuation>`"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:67
-msgid ""
-"Make changes to inventory valuation options by navigating to "
-":menuselection:`Inventory app --> Configuration --> Product Categories`. In "
-"the :guilabel:`Inventory Valuation` section, select the desired "
-":guilabel:`Costing Method` and :guilabel:`Inventory Valuation` options."
-msgstr ""
-"通过导航至 :menuselection:`库存应用程序 --> 配置 --> "
-"产品类别`，更改库存估价选项。在:guilabel:`库存估价`部分，选择所需的:guilabel:`成本计算方法`和:guilabel:`库存估价`选项。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:72
-msgid ""
-"It is possible to use different valuation settings for different product "
-"categories."
-msgstr "不同的产品类别可以使用不同的估值设置。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst-1
-msgid "Show inventory valuation configuration options."
-msgstr "显示库存估价配置选项。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:81
-msgid "Costing method"
-msgstr "成本方法"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:83
-msgid ""
-"From the product category's configuration page, choose the desired "
-":guilabel:`Costing Method`:"
-msgstr "在产品类别的配置页面，选择所需的 :guilabel:`成本计算方法`："
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:88
-msgid "Standard Price"
-msgstr "标准价格"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:90
-msgid ""
-"The default costing method in Odoo. The cost of the product is manually "
-"defined on the product form, and this cost is used to compute the valuation."
-" Even if the purchase price on a purchase order differs, the valuation is "
-"the cost defined on the product form."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:98
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:139
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:210
-msgid "Operation"
-msgstr "作业"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:99
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:140
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:211
-msgid "Unit Cost"
-msgstr "单位成本"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:100
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:141
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:212
-msgid "Qty On Hand"
-msgstr "在手数量"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:101
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:142
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:213
-msgid "Incoming Value"
-msgstr "入库价值"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:102
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:143
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:214
-msgid "Inventory Value"
-msgstr "库存价值"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:104
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:109
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:114
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:119
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:124
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:150
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:221
-msgid "$10"
-msgstr "$10"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:105
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:146
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:217
-msgid "0"
-msgstr "0"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:107
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:145
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:148
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:216
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:219
-msgid "$0"
-msgstr "$0"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:108
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:149
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:220
-msgid "Receive 8 products for $10/unit"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:110
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:151
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:222
-msgid "8"
-msgstr "8"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:111
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:152
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:223
-msgid "8 * $10"
-msgstr "8 * $10"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:112
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:153
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:224
-msgid "$80"
-msgstr "$80"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:113
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:154
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:225
-msgid "Receive 4 products for $16/unit"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:115
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:156
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:227
-msgid "12"
-msgstr "12"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:116
-msgid "4 * $10"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:117
-msgid "$120"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:118
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:159
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:230
-msgid "Deliver 10 products"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:120
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:161
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:232
-msgid "2"
-msgstr "2"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:121
-msgid "-10 * $10"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:122
-msgid "$20"
-msgstr "$20"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:123
-msgid "Receive 2 products for $9/unit"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:125
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:166
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:238
-msgid "4"
-msgstr "4"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:126
-msgid "2 * $10"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:127
-msgid "$40"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:129
-msgid "Average Cost (AVCO)"
-msgstr "平均成本(AVCO)"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:131
-msgid ""
-"Calculates the valuation of a product based on the average cost of that "
-"product, divided by the total number of available stock on-hand. With this "
-"costing method, inventory valuation is *dynamic*, and constantly adjusts "
-"based on the purchase price of products."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:155
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:160
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:226
-msgid "$12"
-msgstr "$12"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:157
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:228
-msgid "4 * $16"
-msgstr "4 * $16"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:158
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:229
-msgid "$144"
-msgstr "$144"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:162
-msgid "-10 * $12"
-msgstr "-10 * $12"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:163
-msgid "$24"
-msgstr "$24"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:164
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:236
-msgid "Receive 2 products for $6/unit"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:165
-msgid "$9"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:167
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:239
-msgid "2 * $6"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:168
-msgid "$36"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:170
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:242
-msgid "How are unit cost and inventory value calculated at each step?"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:172
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:244
-msgid "When receiving four products for $16 each:"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:174
-msgid ""
-"Inventory value is calculated by adding the previous inventory value with "
-"the incoming value: :math:`$80 + (4 * $16) = $144`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:176
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:248
-msgid ""
-"Unit cost is calculated by dividing the inventory value by the quantity on-"
-"hand: :math:`$144 / 12 = $12`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:179
-msgid ""
-"When delivering ten products, the average unit cost is used to calculate the"
-" inventory value, regardless of the purchase price of the product. "
-"Therefore, inventory value is :math:`$144 + (-10 * $12) = $24`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:183
-msgid "Receive two products for $6 each:"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:185
-msgid "Inventory value: :math:`$24 + (2 * $6) = $36`"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:186
-msgid "Unit cost: :math:`$36 / 4 = $9`"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:189
-msgid ""
-"When choosing :guilabel:`Average Cost (AVCO)` as the :guilabel:`Costing "
-"Method`, changing the numerical value in the *Cost* field for products in "
-"the respective product category creates a new record in the *Inventory "
-"Valuation* report to adjust the value of the product. The *Cost* amount is "
-"then automatically updated, based on the average purchase price of both the "
-"inventory on-hand and the costs accumulated from validated purchase orders."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:196
-msgid "First In First Out (FIFO)"
-msgstr "先进先出(FIFO)"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:198
-msgid ""
-"Tracks the costs of incoming and outgoing items in real-time, and uses the "
-"real price of the products to change the valuation. The oldest purchase "
-"price is used as the cost for the next good sold, until an entire lot of "
-"that product is sold. When the next inventory lot moves up in the queue, an "
-"updated product cost is used based on the valuation of that specific lot."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:203
-msgid ""
-"This method is arguably the most accurate inventory valuation method for a "
-"variety of reasons, but it is highly sensitive to input data and human "
-"error."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:231
-msgid "$16"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:0
-msgid "-8 * $10"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:0
-msgid "-2 * $16"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:235
-msgid "$32"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:237
-msgid "$11"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:240
-msgid "$44"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:246
-msgid ""
-"Inventory value is calculated by adding the previous inventory value to the "
-"incoming value: :math:`$80 + (4 * $16) = $144`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:251
-msgid ""
-"When delivering ten products, eight units were purchased for $10, and two "
-"units were purchased for $16."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:254
-msgid ""
-"First, the incoming value is calculated by multiplying the on-hand quantity "
-"by the purchased price: :math:`(-8 * $10) + (-2 * $16) = -112`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:256
-msgid ""
-"The inventory value is calculated by subtracting the incoming value from the"
-" previous inventory value: :math:`$144 - $112 = $32`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:258
-msgid ""
-"Unit cost is calculated by dividing the inventory value by the remaining "
-"quantity: :math:`$32 / 2 = $16`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:261
-msgid ""
-"When receiving two products for $6, inventory value is :math:`$32 + $12 = "
-"$44`. Unit cost is :math:`$44 / 4 = $11`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:265
-msgid ""
-"Changing the costing method greatly impacts inventory valuation. It is "
-"highly recommended to consult an accountant first before making any "
-"adjustments here."
-msgstr "改变成本计算方法会对存货估值产生很大影响。强烈建议在进行任何调整之前先咨询会计师。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:269
-msgid ":doc:`using_inventory_valuation`"
-msgstr ":doc:`using_inventory_valuation`"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:271
-msgid ""
-"When the :guilabel:`Costing Method` is changed, products already in stock "
-"that were using the :guilabel:`Standard` costing method **do not** change "
-"value; rather, the existing units keep their value, and any product moves "
-"from then on affect the average cost, and the cost of the product will "
-"change. If the value in the :guilabel:`Cost` field on a product form is "
-"changed manually, Odoo will generate a corresponding record in the "
-"*Inventory Valuation* report."
-msgstr ""
-"当更改 :guilabel:`成本计算方法` 时，使用 :guilabel:`标准` "
-"成本计算方法的库存产品**不会**改变价值；相反，现有单位保持其价值，此后任何产品移动都会影响平均成本，产品的成本也会改变。如果手动更改产品表单中 "
-":guilabel:`成本` 字段的值，Odoo 将在 *存货估价* 报告中生成相应记录。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:282
-msgid ""
-"Inventory valuation in Odoo can be set to be updated manually or "
-"automatically. While *Expense* accounts apply to both, the *Stock Input* and"
-" *Stock Output* accounts are only used for automated valuation."
-msgstr "Odoo 中的库存估价可设置为手动或自动更新。虽然*开支*账户对两者都适用，但*库存输入*和*库存输出*账户仅用于自动估值。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:286
-msgid ""
-"Refer to the :ref:`Expense <inventory/management/expense-account>` and "
-":ref:`Stock input/output <inventory/management/stock-account>` sections for "
-"details on configuring each account type."
-msgstr ""
-"有关配置每种账户类型的详情，请参阅 :ref:`开支 <inventory/management/expense-account>` 和 "
-":ref:`库存输入/输出 <inventory/management/stock-account>` 章节。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:292
-msgid "Expense account"
-msgstr "支出科目"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:294
-msgid ""
-"To configure the *expense account*, go to the :guilabel:`Account Properties`"
-" section of the intended product category (:menuselection:`Inventory app -->"
-" Configuration --> Product Categories`). Then, choose an existing account "
-"from the :guilabel:`Expense Account` drop-down menu."
-msgstr ""
-"要配置*开支账户*，请访问目标产品类别的 :guilabel:`账户属性`部分（:menuselection:`库存应用程序 --> 配置 --> "
-"产品类别`）。然后，从 :guilabel:`开支帐户` 下拉菜单中选择一个现有账户。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:298
-msgid ""
-"To ensure the chosen account is the correct :guilabel:`Type,` click the "
-"|right arrow| icon to the right of the account. Then, set the account type "
-"based on the information below."
-msgstr "为确保所选账户为正确的 :guilabel:`类型`，请点击账户右侧的 |右箭头| 图标。然后根据以下信息设置账户类型。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:303
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:371
-msgid "Anglo-Saxon"
-msgstr "盎格鲁萨克逊"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:307
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:334
-msgid "Automated"
-msgstr "自动"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:309
-msgid ""
-"In Anglo-Saxon accounting for automated inventory valuation, set the "
-":guilabel:`Expense Account` to the `Expenses` account. Then, click the "
-"|right arrow| icon to the right of the account."
-msgstr "在盎格鲁-撒克逊会计自动库存估价中，将 :guilabel:`开支帐户` 设置为 `开支` 账户。然后，点击账户右侧的 |右箭头| 图标。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:313
-msgid ""
-"In the pop-up window, choose :guilabel:`Expenses` or :guilabel:`Cost of "
-"Revenue` from the :guilabel:`Type` drop-down menu."
-msgstr "在弹出窗口中，从 :guilabel:`类型` 下拉菜单中选择 :guilabel:`开支` 或 :guilabel:`收入成本`。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:0
-msgid "Show **Expense Account** field, and external link icon."
-msgstr "显示**开支账户**字段和外部链接图标。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:320
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:339
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:174
-msgid "Manual"
-msgstr "手动"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:322
-msgid ""
-"To configure the :guilabel:`Expense Account`, choose :guilabel:`Stock "
-"Valuation` from the field's drop-down menu. Verify the account's type by "
-"clicking the |right arrow| icon, and then ensure the :guilabel:`Type` is "
-":guilabel:`Current Assets`."
-msgstr ""
-"要配置 :guilabel:`开支账户`，请从字段的下拉菜单中选择 :guilabel:`库存估值`。点击 |右箭头| "
-"图标确认账户类型，然后确保:guilabel:`类型`为:guilabel:`流动资产`。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:0
-msgid "Show the **Expense Account** field."
-msgstr "显示**开支账户**字段。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:330
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:389
-msgid "Continental"
-msgstr "欧洲大陆"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:336
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:341
-msgid ""
-"Set the :guilabel:`Expense Account` to the :guilabel:`Expenses` or "
-":guilabel:`Cost of Revenue` account type."
-msgstr "将 :guilabel:`开支帐户` 设置为 :guilabel:`开支` 或 :guilabel:`收入成本` 帐户类型。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:347
-msgid "Stock input/output (automated only)"
-msgstr "库存输入/输出（仅限自动操作）"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:349
-msgid ""
-"To configure the :guilabel:`Stock Input Account` and :guilabel:`Stock Output"
-" Account`, go to :menuselection:`Inventory app --> Configuration --> Product"
-" Categories` and select the desired product category."
-msgstr ""
-"要配置 :guilabel:`库存输入账户` 和 :guilabel:`库存输出账户`，请进入 :menuselection:`库存应用程序 --> "
-"配置 --> 产品类别` 并选择所需的产品类别。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:353
-msgid ""
-"In the :guilabel:`Inventory Valuation` field, select :guilabel:`Automated`. "
-"Doing so makes the :guilabel:`Account Stock Properties` section appear. "
-"These accounts are defined as follows:"
-msgstr ""
-"在 :guilabel:`库存估值` 字段中，选择 :guilabel:`自动化`。这样就会出现 :guilabel:`账户库存属性` "
-"部分。这些账户定义如下："
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:356
-msgid ""
-":guilabel:`Stock Valuation Account`: when automated inventory valuation is "
-"enabled on a product, this account will hold the current value of the "
-"products."
-msgstr ":guilabel:`库存估价账户`：当产品启用自动库存估价时，此账户将保存产品的当前价值。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:358
-msgid ""
-":guilabel:`Stock Journal`: accounting journal where entries are "
-"automatically posted when a product's inventory valuation changes."
-msgstr ":guilabel:`库存日记账`：当产品的库存估价发生变化时自动记账的会计分录。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:360
-msgid ""
-":guilabel:`Stock Input Account`: counterpart journal items for all incoming "
-"stock moves will be posted in this account, unless there is a specific "
-"valuation account set on the source location. This is the default value for "
-"all products in a given category, and can also be set directly on each "
-"product."
-msgstr ""
-":guilabel:`库存输入账户`：除非源位置设置了特定的估价账户，否则所有入库库存移动的对应日记账项目都将记入此账户。这是特定类别中所有产品的默认值，也可直接在每个产品上设置。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:364
-msgid ""
-":guilabel:`Stock Output Account`: counterpart journal items for all outgoing"
-" stock moves will be posted in this account, unless there is a specific "
-"valuation account set on the destination location. This is the default value"
-" for all products in a given category, and can also be set directly on each "
-"product."
-msgstr ""
-":guilabel:`库存输出账户`：除非目的地设置了特定的估价账户，否则所有出库库存移动的对应日记账项目都将记入此账户。这是指定类别中所有产品的默认值，也可直接在每个产品上设置。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:373
-msgid ""
-"In Anglo-Saxon accounting, the :guilabel:`Stock Input Account` and "
-":guilabel:`Stock Output Account` are set to *different* :guilabel:`Current "
-"Assets` accounts. This way, delivering products and invoicing the customer "
-"balance the *Stock Output* account, while receiving products and billing "
-"vendors balance the *Stock Input* account."
-msgstr ""
-"在盎格鲁-"
-"撒克逊会计中，:guilabel:`库存输入账户`和:guilabel:`库存输出账户`被设置为*不同*的:guilabel:`流动资产`账户。这样，交付产品和向客户开具发票会平衡*库存输出*账户，而接收产品和向供应商开具账单会平衡*库存输入*账户。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:378
-msgid ""
-"To modify the account type, go to the click the |right arrow| icon to the "
-"right of the stock input/output account. In the pop-up window, choose "
-":guilabel:`Current Assets` from the :guilabel:`Type` drop-down menu."
-msgstr ""
-"要修改账户类型，请点击股票输入/输出账户右侧的 |右箭头|图标。在弹出的窗口中，从 :guilabel:`类型` 下拉菜单中选择 "
-":guilabel:`流动资产`。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:0
-msgid "Display account setup page, highlighting the **Type** field."
-msgstr "显示账户设置页面，突出显示**类型**字段。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:386
-msgid ""
-"The *Stock Input* account is set to `Stock Interim (Received)`, a *Current "
-"Asset* account type."
-msgstr "*库存输入*账户设置为`库存中期（收到）`，即*流动资产*账户类型。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:391
-msgid ""
-"In Continental accounting, the :guilabel:`Stock Input Account` and "
-":guilabel:`Stock Output Account` are set to **the same** :guilabel:`Current "
-"Assets` account. That way, one account can be balanced when items are bought"
-" and sold."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:396
-msgid ""
-"The stock input and output accounts are both set to `Stock Interim "
-"(Received)`, a :guilabel:`Current Assets` account type. They can also be set"
-" to the `Stock Interim (Delivered)`, as long as the input and output "
-"accounts are assigned to the **same** account."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:0
-msgid "Show the Stock Input and Output accounts."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:406
-msgid "Inventory valuation reporting"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:408
-msgid ""
-"To start, go to :menuselection:`Accounting --> Reporting --> Balance Sheet`."
-" At the top of the dashboard, change the :guilabel:`As of` field value to "
-":guilabel:`Today`, and adjust the filtering :guilabel:`Options` to "
-":guilabel:`Unfold All` in order to see all of the latest data displayed, all"
-" at once."
-msgstr ""
-"开始时，进入 :menuselection:`会计 --> 报告 --> 资产负债表`。在仪表盘顶部，将 :guilabel:`截至` 字段值更改为 "
-":guilabel:`今日`，并将 :guilabel:`选项` 筛选调整为 :guilabel:`展开全部`，以便一次性显示所有最新数据。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:414
-msgid ":doc:`../../../../finance/accounting/get_started/cheat_sheet`"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:416
-msgid ""
-"Under the parent :guilabel:`Current Assets` line item, look for the nested "
-":guilabel:`Stock Valuation Account` line item, where the total valuation of "
-"all of the inventory on hand is displayed."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst:420
-msgid ""
-"Access more specific information with the :guilabel:`Stock Valuation "
-"Account` drop-down menu, by selecting either the :guilabel:`General Ledger` "
-"to see an itemized view of all of the journal entries, or by selecting "
-":guilabel:`Journal Items` to review all of the individualized journal "
-"entries that were submitted to the account. As well, annotations to the "
-":guilabel:`Balance Sheet` can be added by choosing :guilabel:`Annotate`, "
-"filling in the text box, and clicking :guilabel:`Save`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/inventory_valuation_config.rst-1
-msgid "See the full inventory valuation breakdown in Odoo Accounting app."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst:3
-msgid "Using inventory valuation"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst:7
-msgid ""
-"*Inventory valuation* is a quintessential accounting procedure that "
-"calculates the value of on-hand stock. Once determined, the inventory "
-"valuation amount is then incorporated into a company's overall value."
-msgstr "*存货估价*是计算手头存货价值的重要会计程序。一旦确定，存货估价金额就会被纳入公司的整体价值中。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst:11
-msgid ""
-"In Odoo, this process can be conducted manually— by warehouse employees "
-"physically counting the products— or automatically through the database."
-msgstr "在 Odoo 中，这一过程可以由仓库员工手动清点产品，也可以通过数据库自动完成。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst:15
-msgid "Automatic inventory valuation"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst:17
-msgid ""
-"To use Odoo to automatically generate a trail of inventory valuation "
-"entries, first navigate to the :menuselection:`Product Categories` list by "
-"going to :menuselection:`Inventory app --> Configuration --> Product "
-"Categories` and select the desired product category. On the form, set the "
-":guilabel:`Inventory Valuation` as :guilabel:`Automated` and the "
-":guilabel:`Costing Method` to any of the three options."
-msgstr ""
-"要使用 Odoo 自动生成库存估价条目跟踪，首先通过 :menuselection:`库存应用程序 --> 配置 --> 产品类别` 导航至 "
-":menuselection:`产品类别` 列表，并选择所需的产品类别。在表单中，将 :guilabel:`库存估值` 设置为 "
-":guilabel:`自动化`，将 :guilabel:`成本计算方法` 设置为三个选项中的任意一个。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst:24
-msgid ":doc:`Set up inventory valuation <inventory_valuation_config>`"
-msgstr ":doc:`设置库存估值 <inventory_valuation_config>`"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst:26
-msgid ""
-"In order to understand how moving products in and out of stock affects the "
-"company's overall value, consider the following product and stock moves "
-"scenario below."
-msgstr "为了了解产品进出库存对公司整体价值的影响，请考虑以下产品和库存移动的情景。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst:30
-msgid "Receive a product"
-msgstr "接收产品"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst:32
-msgid ""
-"To track the value of incoming products, such as a simple *table*, configure"
-" the product category on the the product itself. To get there, navigate to "
-":menuselection:`Inventory app --> Products --> Products` and click the "
-"desired product. On the product form, click the :guilabel:`➡️ (right arrow)`"
-" icon beside the :guilabel:`Product Category` field, which opens an internal"
-" link to edit the product category. Next, set the :guilabel:`Costing Method`"
-" as :guilabel:`First In First Out (FIFO)` and :guilabel:`Inventory "
-"Valuation` as :guilabel:`Automated`."
-msgstr ""
-"要追踪入库产品（如简单的*表格*）的价值，请在产品本身配置产品类别。要执行此操作，请导航至 :menuselection:`库存应用程序 --> 产品 "
-"--> 产品` 并点击所需的产品。在产品表单中，点击 :guilabel:`➡️（右箭头）` 图标旁边的 :guilabel:` 产品类别` "
-"字段，打开编辑产品类别的内部链接。然后，将 :guilabel:`成本计算方法` 设置为 :guilabel:`先进先出（FIFO）`，将 "
-":guilabel:`存货估值` 设置为 :guilabel:`自动化`。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst:40
-msgid ""
-"Alternatively access the :guilabel:`Product Categories` dashboard by "
-"navigating to :menuselection:`Inventory app --> Configuration --> Product "
-"Categories` and select the desired product category."
-msgstr ""
-"也可访问 :guilabel:`产品类别` 面板，方法是导航至 :menuselection:`库存应用程序 --> 配置 --> 产品类别` "
-"并选择所需的产品类别。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst:44
-msgid ""
-"Next, assume 10 tables are purchased at a price of $10.00, each. The "
-":abbr:`PO (Purchase Order)` for those tables will show the subtotal of the "
-"purchase as $100, plus any additional costs or taxes."
-msgstr ""
-"接下来，假设以每张 $10 的价格购买了 10 张桌子。这些桌子的 :abbr:`采购订单（PO）`将显示采购小计 $100，外加附加费用或税金。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst-1
-msgid "Purchase order with 10 tables products valued at $10.00 each."
-msgstr "采购订单包含 10 张桌子，每桌价值 $10.00。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst:51
-msgid ""
-"After selecting :guilabel:`Validate` on the :abbr:`PO (Purchase Order)`, the"
-" :guilabel:`Valuation` smart button is enabled. Clicking on this button "
-"displays a report showing how the inventory valuation for the table was "
-"affected by this purchase."
-msgstr ""
-"选择 :guilabel:`验证`采购订单 \"后，:guilabel:`估值` "
-"智能按钮将启用。点击此按钮将显示一份报告，说明该采购如何影响表格的库存估值。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst:56
-msgid ""
-":ref:`Developer mode <developer-mode>` **must** be turned on to see the "
-":guilabel:`Valuation` smart button."
-msgstr ":ref:`开发者模式<developer-mode>` **必须**打开，才能看到 :guilabel:`验证` 智能按钮。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst:60
-msgid ""
-"The :doc:`consignment "
-"<../../shipping_receiving/daily_operations/owned_stock>` feature allows "
-"ownership to items in stock. Thus, products owned by other companies are not"
-" accounted for in the host company's inventory valuation."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst-1
-msgid "See Valuation smart button on a receipt, with Developer mode enabled."
-msgstr "请参阅启用开发模式后收据上的估价智能按钮。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst:68
-msgid ""
-"For a comprehensive dashboard that includes the inventory valuation of all "
-"product shipments, inventory adjustments, and warehouse operations, refer to"
-" the :ref:`stock valuation report <inventory/management/reporting/valuation-"
-"report>`."
-msgstr ""
-"有关包括所有产品装运、库存调整和仓库操作的库存估值的综合仪表板，请参阅 :ref:`库存估值报告 "
-"<inventory/management/reporting/valuation-report>`。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst:73
-msgid "Deliver a product"
-msgstr "产品发货"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst:75
-msgid ""
-"In the same logic, when a table is shipped to a customer and leaves the "
-"warehouse, the stock valuation decreases. The :guilabel:`Valuation` smart "
-"button on the :abbr:`DO (Delivery Order)`, likewise, displays the stock "
-"valuation record as it does on a :abbr:`PO (Purchase Order)`."
-msgstr ""
-"按照同样的逻辑，当一个表格运送给客户并离开仓库时，库存估价就会降低。同样， :abbr:`交货单（DO）`上的“估值” "
-"智能按钮也会像:abbr:`采购单（PO）` 一样显示库存估值记录。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst-1
-msgid "Decreased stock valuation after a product is shipped."
-msgstr "产品发货后库存估值降低。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst:86
-msgid "Inventory valuation report"
-msgstr "库存估值报告"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst:88
-msgid ""
-"To view the current value of all products in the warehouse, first turn on "
-":ref:`Developer mode <developer-mode>` and navigate to "
-":menuselection:`Inventory app --> Reporting --> Valuation`. The "
-":guilabel:`Stock Valuation` dashboard displays detailed records of products "
-"with the :guilabel:`Date`, :guilabel:`Quantity`, :guilabel:`Unit Value`, and"
-" :guilabel:`Total Value` of the inventory."
-msgstr ""
-"要查看仓库中所有产品的当前价值，首先打开 :ref:`开发者模式<developer-mode>` 并导航至 "
-":menuselection:`库存应用程序 --> 报告 --> 估值`。在 :guilabel:`库存估值` 仪表板上显示产品的详细记录，包括库存的"
-" :guilabel:`日期`、:guilabel:`数量`、 :guilabel:`单位价值` 和 :guilabel:`总价值`。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst:95
-msgid ""
-":ref:`Developer mode <developer-mode>` **must** be enabled to see the "
-":guilabel:`Valuation` option under :guilabel:`Reporting`."
-msgstr ""
-":ref:`开发者模式<developer-mode>` **必须**启用，才能看到 :guilabel:`报告` 下的 :guilabel:`估值` "
-"选项。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst-1
-msgid "Inventory valuation report showing multiple products."
-msgstr "显示多种产品的库存评估报告。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst:102
-msgid ""
-"The :guilabel:`Valuation At Date` button, located in the top-left corner of "
-"the :guilabel:`Stock Valuation` page, reveals a pop-up window. In this pop-"
-"up, the inventory valuation of products available during a prior specified "
-"date can be seen and selected."
-msgstr ""
-"位于 :guilabel:`库存估值` 页面左上角的 :guilabel:`位于 :guilabel:`库存估值` 页面左上角的 "
-":guilabel:`库存估值` 按钮会弹出一个窗口。在该弹出窗口中，可查看和选择上一指定日期的产品库存估值。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst:107
-msgid ""
-"View a detailed record of a product's inventory value, stock move, and on-"
-"hand stock by selecting the teal :guilabel:`➡️ (right arrow)` button to the "
-"right of the :guilabel:`Reference` column value."
-msgstr ""
-"选择 :guilabel:`参考资料` 列值右侧的茶色 :guilabel:`➡️（右箭头）`按钮，查看产品库存值、库存移动和在手库存的详细记录。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst:112
-msgid "Update product unit price"
-msgstr "更新产品单价"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst:114
-msgid ""
-"For any company: lead times, supply chain failures, and other risk factors "
-"can contribute to invisible costs. Although Odoo attempts to accurately "
-"represent the stock value, *manual valuation* serves as an additional tool "
-"to update the unit price of products."
-msgstr ""
-"对任何公司而言，交货时间、供应链故障和其他风险因素都可能导致隐形成本。虽然 Odoo "
-"试图准确反映库存估值，但*手动估值*可以作为更新产品单价的额外工具。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst:119
-msgid ""
-"Manual valuation is intended for products that can be purchased and received"
-" for a cost greater than 0, or have product categories set with "
-":guilabel:`Costing Method` set as either :guilabel:`Average Cost (AVCO)` or "
-":guilabel:`First In First Out (FIFO)`."
-msgstr ""
-"手动估值适用于购买和接收成本大于 0 的产品，或产品类别设置为 :guilabel:`成本计算方法` 的 :guilabel:`平均成本 （AVCO）`"
-" 或 :guilabel:`先进先出（FIFO）`。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst-1
-msgid "Add manual valuation of stock value to a product."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst:127
-msgid ""
-"Create manual valuation entries on the :guilabel:`Stock Valuation` dashboard"
-" by first navigating to :menuselection:`Inventory app --> Reporting --> "
-"Valuation`. Next, to enable the *product revaluation* feature, select "
-":menuselection:`Group by --> Product` to organize all the records by "
-"product. Click on the gray :guilabel:`▶️ (drop-down triangle)` icon to "
-"reveal stock valuation line items below, as well as a teal :guilabel:`➕ "
-"(plus)` button on the right."
-msgstr ""
-"在 :guilabel:`库存估值` 仪表板上创建手动估值条目，首先导航到 :menuselection:`库存应用程序 --> 报告 --> "
-"估值`。接下来，要启用*产品重估*功能，选择 :menuselection:`分组方式 --> 产品` 按产品组织所有记录。点击灰色的 "
-":guilabel:`▶️（下拉三角形）`图标，显示下面的库存估价行项目，以及右边的茶色 :guilabel:`➕ (加号)`按钮。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst:133
-msgid ""
-"Click the teal :guilabel:`+ (plus)` button to open up the :guilabel:`Product"
-" Revaluation` form. Here, the inventory valuation for a product can be "
-"recalculated, by increasing or decreasing the unit price of each product."
-msgstr ""
-"点击茶色的 :guilabel:`+ (加号)` 按钮，打开 "
-":guilabel:`产品价格重估`表格。在这里，可以通过增加或减少每个产品的单价，重新计算产品的库存估值。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst:138
-msgid ""
-"The :guilabel:`▶️ (drop-down triangle)` and :guilabel:`➕ (plus)` buttons are"
-" only visible after grouping entries by product."
-msgstr ":guilabel:`▶️（下拉三角形）` 和 :guilabel:`➕（加号）` 按钮只有在按产品分组后才可见。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst-1
-msgid ""
-"Product revaluation form adding a value of $1.00 with the reason being "
-"inflation."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst:146
-msgid "Inventory valuation journal entries"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst:148
-msgid ""
-"In Odoo, automatic inventory valuation records are also recorded in the "
-":menuselection:`Accounting app --> Accounting --> Journal Entries` "
-"dashboard. On this comprehensive list of accounting entries, inventory "
-"valuation records are identified by checking values in the "
-":guilabel:`Journal` column, or looking for the :guilabel:`Reference` column "
-"value which matches the warehouse operation reference (e.g. `WH/IN/00014` "
-"for receipts)."
-msgstr ""
-"在 Odoo 中，自动库存估价记录也记录在 :menuselection:`会计应用程序 --> 会计 --> 日记账分录` "
-"仪表板中。在这个全面的会计分录列表中，库存估价记录是通过检查 :guilabel:`日记账` "
-"列中的值或查找与仓库操作参考（如收据的`WH/IN/00014`）相匹配的 :guilabel:`参考` 列值来识别的。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst:154
-msgid ""
-"Clicking on an inventory valuation journal entry opens a *double-entry "
-"accounting* record. These records are generated by Odoo to track the change "
-"of value in inventory valuation as products are moved in and out of the "
-"warehouse."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst:159
-msgid ""
-"To view the inventory valuation of 10 *tables*, costing $10.00 each, upon "
-"reception from the vendor, go to the :menuselection:`Journal Entries` page "
-"found in :menuselection:`Accounting app --> Accounting --> Journal Entries`."
-" Here, click the journal line where the :guilabel:`Reference` column value "
-"matches the reference on the receipt, `WH/IN/00014`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst:0
-msgid "Stock valuation page depicting the products within a shipment."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst:168
-msgid ""
-"`Stock interim` is a holding account for money intended to pay vendors for "
-"the product. The `stock valuation` account stores the value of all on-hand "
-"stock."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst:0
-msgid "Accounting entry for the inventory valuation of 10 tables."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.rst:176
-msgid ""
-"`Odoo Tutorial: Inventory Valuation "
-"<https://www.odoo.com/slides/slide/2795/share>`_"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:13
