@@ -268,7 +268,8 @@ creating a number of simple records of the same model in bulk.
 For this case, data files can also use csv_, this is often the case for
 :ref:`access rights <reference/security/acl>`:
 
-* the file name is :file:`{model_name}.csv`
+* the file name is :file:`{model.name}.csv` (use the exact content of
+  the variable ``_name``)
 * the first row lists the fields to write, with the special field ``id``
   for :term:`external identifiers` (used for creation or update)
 * each row thereafter creates a new record
