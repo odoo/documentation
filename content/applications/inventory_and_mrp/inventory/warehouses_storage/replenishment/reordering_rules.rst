@@ -95,6 +95,8 @@ For advanced usage of reordering rules, learn about the following reordering rul
 - :ref:`Visibility days <inventory/product_management/visibility-days>`
 - :ref:`Route <inventory/product_management/route>`
 
+.. _inventory/warehouses_storage/zero-zero:
+
 0/0/1 reordering rule
 ---------------------
 
