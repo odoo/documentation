@@ -228,7 +228,7 @@ quantities for the picking.
 
    `1/2` units of the `Cabinet with Doors` has already been picked, and after scanning the product
    barcode for the second cabinet, Odoo prompts the user to `Scan a serial number` to record the
-   unique serial number for :ref:`product tracking <inventory/product_management/configure-lots>`.
+   unique serial number for :ref:`product tracking <inventory/product_management/enable-lots>`.
 
    .. image:: batch/barcode-products.png
       :align: center
