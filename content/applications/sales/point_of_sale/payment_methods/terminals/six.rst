@@ -58,6 +58,7 @@ Enable the payment terminal :ref:`in the application settings <configuration/set
 Then, select your terminal device in the :guilabel:`Payment Terminal Device` field.
 
 .. image:: six/new-payment-method.png
+<<<<<<< 16.0
    :alt: Creating a new payment method for the SIX payment terminal
 
 Once the payment method is created, you can select it in your POS settings. To do so, go to the
@@ -85,3 +86,33 @@ Successful`.
 .. tip::
    If there are connection issues between the payment terminal and Odoo, you can still force the
    payment validation in Odoo using the :guilabel:`Force Done` button.
+||||||| c6af8e28fd97efb2c5e054b53df44f8c24f4fd07
+   :align: center
+   :alt: Create a new payment method for the SIX payment terminal.
+
+Pay with a Payment Terminal
+===========================
+
+In the :abbr:`PoS (Point of Sale)` interface, at the moment of the payment, select a payment method
+using a payment terminal. Verify that the amount in the tendered column is the one that has to be
+sent to the payment terminal and click on :guilabel:`Send`. To cancel the payment request, click on
+:guilabel:`Cancel`.
+
+.. image:: six/pos-send-payment.png
+   :align: center
+   :alt: The PoS interface.
+
+When the payment is done, the status will change to :guilabel:`Payment Successful`. If needed,
+reverse the last transaction by clicking on :guilabel:`Reverse`.
+
+.. image:: six/pos-reverse-payment.png
+   :align: center
+   :alt: The Reverse button on the PoS interface.
+
+If there is any issue with the payment terminal, you can still force the payment using the
+:guilabel:`Force Done` button. This will allow you to validate the order in Odoo even if there are
+connection issues between the payment terminal and Odoo.
+=======
+   :align: center
+   :alt: Create a new payment method for the SIX payment terminal.
+>>>>>>> dd45d40df51b12b8b47692704a344aed49bdf441

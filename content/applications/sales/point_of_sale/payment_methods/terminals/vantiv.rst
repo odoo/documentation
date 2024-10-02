@@ -34,6 +34,7 @@ and edit`. Enter your :guilabel:`Merchant ID` and :guilabel:`Merchant Password`,
    :alt: Vantiv payment method
 
 Once the payment method is created, you can select it in your POS settings. To do so, go to the
+<<<<<<< 16.0
 :ref:`POS' settings <configuration/settings>` and add the payment method under the
 :guilabel:`Payment` section.
 
@@ -43,3 +44,17 @@ Pay with a payment terminal
 When processing a payment, select the related payment method. Check the amount and click on
 :guilabel:`Send`. Once the payment is successful, the status changes to :guilabel:`Payment
 Successful`.
+||||||| c6af8e28fd97efb2c5e054b53df44f8c24f4fd07
+:ref:`POS' settings <configuration/settings>`, click :guilabel:`Edit`, and add the payment method
+under the :guilabel:`Payments` section.
+
+Pay with a payment terminal
+===========================
+
+When processing a payment, select the related payment method. Check the amount and click on
+:guilabel:`Send`. Once the payment is successful, the status changes to :guilabel:`Payment
+Successful`.
+=======
+:ref:`POS' settings <configuration/settings>`, click :guilabel:`Edit`, and add the payment method
+under the :guilabel:`Payments` section.
+>>>>>>> dd45d40df51b12b8b47692704a344aed49bdf441
