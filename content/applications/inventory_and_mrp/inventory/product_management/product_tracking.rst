@@ -106,7 +106,6 @@ quantities with that assigned number. For unique serial numbers that are *not* r
    :titlesonly:
 
    product_tracking/serial_numbers
-   product_tracking/create_sn
    product_tracking/lots
    product_tracking/reassign
    product_tracking/expiration_dates

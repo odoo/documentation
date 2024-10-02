@@ -30,7 +30,7 @@ Lot/serial number tracking
 --------------------------
 
 The assignment of lots or serial numbers to newly manufactured products is optional. To optionally
-:doc:`assign lots or serial numbers <../../inventory/product_management/product_tracking/create_sn>`
+:doc:`assign lots or serial numbers <../../inventory/product_management/product_tracking>`
 to newly manufactured products, go to the :guilabel:`Traceability` section in the
 :guilabel:`Inventory` tab. In the :guilabel:`Tracking` field, select :guilabel:`By Unique Serial
 Number` or :guilabel:`By Lots`.
