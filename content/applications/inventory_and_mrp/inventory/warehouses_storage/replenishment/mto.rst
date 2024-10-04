@@ -26,6 +26,8 @@ current stock level of the product being ordered.
 
    Finally, click :guilabel:`Save` to save the change.
 
+.. _inventory/warehouses_storage/unarchive-mto:
+
 Unarchive MTO route
 ===================
 
