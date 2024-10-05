@@ -13,3 +13,6 @@ Odoo *Employees* organizes a company's employee records, contracts, and departme
 
    employees/new_employee
    employees/departments
+   employees/certifications
+   employees/offboarding
+   employees/retention_report

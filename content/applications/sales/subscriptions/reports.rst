@@ -2,75 +2,70 @@
 Subscription reports
 ====================
 
-The Odoo *Subscriptions* application provides a series of reporting pages to help companies analyze
-how subscriptions are performing.
+.. |MRR| replace:: :abbr:`MRR (Monthly Recurring Revenue)`
+.. |ARR| replace:: :abbr:`ARR (Annual Recurring Revenue)`
+
+The Odoo **Subscriptions** app provides a series of reporting pages to help companies analyze how
+subscriptions are performing.
 
 On the *Subscriptions Analysis* reporting page, users can view specific data related to recurring
-subscriptions, quantity of subscriptions, how many subscriptions are in progress or paused, and so
-much more.
+subscriptions, quantity of subscriptions, in-progress or paused subscriptions, and more.
 
 The *Retention Analysis* reporting page provides an organized table of subscription retention
 percentages over any period of time.
 
-The *MRR Breakdown* reporting page clearly divides MRR (Monthly Recurring Revenue) and ARR (Annual
-Recurring Revenue) metrics for subscriptions into various graphs, lists, and charts.
+The *MRR Breakdown* reporting page clearly divides |MRR| and |ARR| metrics for subscriptions into
+various graphs, lists, and charts.
 
 And the *MRR Analysis* reporting page offers a time-based collection of analytics showcasing how
-subscription MRR and ARR has changed over the course of any given period of time.
+subscription |MRR| and |ARR| have changed over the course of any given period of time.
 
 Reporting page elements
 =======================
 
-All subscription-based reporting pages can be accessed via the :guilabel:`Reporting` header menu in
-the *Subscriptions* application.
+All subscriptions-based reporting pages can be accessed via the :guilabel:`Reporting` header menu in
+the **Subscriptions** app.
 
-The following describes elements found on each reporting page.
+The following sections describe elements found on each reporting page.
 
 Filters and Group By
 --------------------
 
-Filters are used to narrow down metrics to show specific analytics, whereas groupings (via the
-:guilabel:`Group By` option) are used to gather specific sections' data into groups for more
+*Filters* are used to narrow down metrics to show specific analytics, whereas groupings (via the
+*Group By* option) are used to gather the data from specific sections into groups for more
 organized analysis.
 
 This section refers to both filters and groupings, as a combination of the two can be saved in the
-:guilabel:`Favorites` section.
+*Favorites* section.
 
-To modify the results being shown on any reporting page, click the :guilabel:`▼ (downward facing
-arrow)` icon to the right of the search bar. Doing so reveals a drop-down menu of detailed filter
-and grouping options.
-
-.. note::
-   Multiple filter options and grouping options can be selected at once.
-
-.. image:: reports/reporting-filter-options-dropdown.png
-   :align: center
-   :alt: The reporting filter drop-down menu of options in the Odoo Subscriptions application.
+To modify the results being shown on any reporting page, click the :icon:`fa-caret-down`
+:guilabel:`(down arrow)` icon to the right of the search bar. Doing so reveals a drop-down menu of
+detailed filter and grouping options.
 
 If desired, a filter or grouping (or combination of filters and/or groupings) can be saved in the
-:guilabel:`Favorites` section of that drop-down menu. To do that, click the :guilabel:`▼ (downward
-facing arrow)` icon beside :guilabel:`Save current search`, located beneath the
+:guilabel:`Favorites` section of that drop-down menu. To do so, click the :icon:`fa-caret-down`
+:guilabel:`(down arrow)` icon beside :guilabel:`Save current search`, located beneath the
 :guilabel:`Favorites` section.
 
-That reveals a field to assign a title to the favorite filter. There are also two options beneath
-the title field, as well: :guilabel:`Default filter` and :guilabel:`Shared`.
+This reveals a field to assign a title to the favorite filter. Two options are also found beneath
+the title field: :guilabel:`Default filter` and :guilabel:`Shared`.
 
-Ticking the check box beside :guilabel:`Default filter` makes the newly-favorited filter the default
+Ticking the checkbox beside :guilabel:`Default filter` makes the newly-favorited filter the default
 option for that reporting page.
 
-Ticking the box beside :guilabel:`Shared` makes the newly-favorited filter available to other users
-in the database.
+Ticking the checkbox beside :guilabel:`Shared` makes the newly-favorited filter available to other
+users in the database.
 
 .. note::
-   The :guilabel:`Default filter` and :guilabel:`Shared` options are **not** required. Only *one* of
-   those options can be selected at a time.
+   The :guilabel:`Default filter` and :guilabel:`Shared` options are **not** required, and only
+   *one* of these options can be selected at a time.
 
-To save that filter(s), click :guilabel:`Save` in the :guilabel:`Favorites` section of the drop-down
+To save the filter, click :guilabel:`Save` in the :guilabel:`Favorites` section of the drop-down
 filter menu.
 
 When clicked, that saved filter appears beneath the :guilabel:`Favorites` column of the drop-down
-filter menu, and a :guilabel:`⭐ (gold star)` icon appears beside the favorite filter's name in the
-search bar.
+filter menu, and a :icon:`fa-star` :guilabel:`(gold star)` icon appears beside the favorite filter's
+name in the search bar.
 
 Views
 -----
@@ -84,8 +79,8 @@ reporting pages, three different view options are located in the upper-right cor
 The available view options, from left to right, are:
 
 - :guilabel:`Graph`
-- :guilabel:`Pivot`
 - :guilabel:`List`
+- :guilabel:`Pivot`
 
 .. image:: reports/subscriptions-analysis-page-view-options.png
    :align: center
@@ -102,34 +97,47 @@ representation of the data. These graph-specific options are located to the righ
 
 .. image:: reports/subscriptions-graph-specific-options.png
    :align: center
-   :alt: The different graph view options in the Odoo Subscriptions application.
+   :alt: The different graph view options in the Odoo Subscriptions app.
 
 The first three options, from left to right, represent different graph-related views. The remaining
 options represent different ways to organize and visualize that specific graph-related data.
 
 From left to right, the specific graph-related view options are:
 
-- :guilabel:`Bar Chart`: showcases the data in a bar chart format.
-- :guilabel:`Line Chart`: showcases the data in a line chart format.
-- :guilabel:`Pie Chart`: showcases the data in a pie chart format.
+- :icon:`fa-bar-chart` :guilabel:`Bar Chart`: showcases the data in a bar chart format.
+- :icon:`fa-line-chart` :guilabel:`Line Chart`: showcases the data in a line chart format.
+- :icon:`fa-pie-chart` :guilabel:`Pie Chart`: showcases the data in a pie chart format.
 
 Each graph view option has its own series of specific visual options, which are represented by the
 available buttons that appear to the right of the selected graph-related view option.
 
-When the :guilabel:`Bar Chart` graph view is selected, the following visual options are available:
+When the :icon:`fa-bar-chart` :guilabel:`Bar Chart` graph view is selected, the following visual
+options are available:
 
-- :guilabel:`Stacked`: showcases the data in a stacked visual format.
-- :guilabel:`Descending`: showcases the data in descending order.
-- :guilabel:`Ascending`: showcases the data in ascending order.
+- :icon:`fa-database` :guilabel:`Stacked`: showcases the data in a stacked visual format.
+- :icon:`fa-sort-amount-desc` :guilabel:`Descending`: showcases the data in descending order.
+- :icon:`fa-sort-amount-asc` :guilabel:`Ascending`: showcases the data in ascending order.
 
 When the :guilabel:`Line Chart` graph view is selected, the following visual options are available:
 
-- :guilabel:`Stacked`: showcases the data in a stacked visual format.
-- :guilabel:`Cumulative`: showcases the data in accumulated, increasing format.
-- :guilabel:`Descending`: showcases the data in descending order.
-- :guilabel:`Ascending`: showcases the data in ascending order.
+- :icon:`fa-database` :guilabel:`Stacked`: showcases the data in a stacked visual format.
+- :icon:`fa-signal` :guilabel:`Cumulative`: showcases the data in accumulated, increasing format.
+- :icon:`fa-sort-amount-desc` :guilabel:`Descending`: showcases the data in descending order.
+- :icon:`fa-sort-amount-asc` :guilabel:`Ascending`: showcases the data in ascending order.
 
 When the :guilabel:`Pie Chart` graph view is selected, there are no additional visual options.
+
+List view
+~~~~~~~~~
+
+With the list view selected, the subscription metrics being analyzed are displayed in a simple list,
+which can be fully customized by using any of the available filters or groupings in the drop-down
+filter menu (accessible via the :icon:`fa-caret-down` :guilabel:`(down arrow)` icon to the right of
+the search bar).
+
+.. note::
+   With list view selected, the :guilabel:`Measures` drop-down menu and :guilabel:`Insert in
+   Spreadsheet` button are *not* available.
 
 Pivot view
 ~~~~~~~~~~
@@ -138,47 +146,39 @@ With the pivot view selected, the subscription metrics are displayed in a data t
 fully customized.
 
 The pivot data table can be customized using the options available in the :guilabel:`Measures`
-drop-down menu and/or the filter options available in the filter drop-down menu (accessible via the
-:guilabel:`▼ (downward facing arrow)` icon to the right of the search bar).
+drop-down menu, and/or the filter grouping options available in the filter drop-down menu
+(accessible via the :icon:`fa-caret-down` :guilabel:`(down arrow)` icon to the right of the search
+bar).
 
-There are three pivot-specific options available, located to the right of the :guilabel:`Measures`
+Three pivot-specific options are available, located to the right of the :guilabel:`Measures`
 drop-down menu and :guilabel:`Insert in Spreadsheet` button.
 
 .. image:: reports/subscriptions-pivot-view-options.png
    :align: center
-   :alt: The pivot-specific view options available in the Odoo Subscriptions application.
+   :alt: The pivot-specific view options available in the Odoo Subscriptions app.
 
 From left to right, those pivot-specific view options are:
 
-- :guilabel:`Flip axis`: the `x` and `y` axis of the pivot data table flip.
-- :guilabel:`Expand all`: all the available rows and columns of the pivot data table expand fully.
-- :guilabel:`Download xlsx`: the pivot data table is downloaded as an .xlsx file.
-
-List view
-~~~~~~~~~
-
-With the list view selected, the subscription metrics being analyzed are displayed in a simple list,
-which can be fully customized by using any of the available filters in the drop-down filter menu
-(accessible via the :guilabel:`▼ (downward facing arrow)` icon to the right of the search bar).
-
-.. note::
-   With list view selected, the :guilabel:`Measures` drop-down menu and :guilabel:`Insert in
-   Spreadsheet` button are *not* available.
+- :icon:`fa-exchange` :guilabel:`Flip axis`: the `x` and `y` axis of the pivot data table flip.
+- :icon:`fa-arrows` :guilabel:`Expand all`: all the available rows and columns of the pivot data
+  table expand fully.
+- :icon:`fa-download` :guilabel:`Download .xlsx`: the pivot data table is downloaded as an
+  :file:`.xlsx` file.
 
 Measures
 --------
 
-Each reporting page has its own metric-specific :guilabel:`Measures` drop-down menu of data-related
-options to choose from, located in the upper-left corner, above the visual representation of
-metrics.
+The graph and pivot reporting pages have their own metric-specific :guilabel:`Measures` drop-down
+menu of data-related options to choose from, located in the upper-left corner, above the visual
+representation of metrics.
 
 .. image:: reports/subscriptions-measures-drop-down.png
    :align: center
-   :alt: The standard measures drop-down menu in the Odoo Subscriptions application.
+   :alt: The standard measures drop-down menu in the Odoo Subscriptions app.
 
-When clicked, a series of selectable measures become available, via a drop-down menu. When any of
-the options are selected from a :guilabel:`Measures` drop-down menu, the chosen metrics related to
-that specific measure appear on the reporting page.
+When the :guilabel:`Measures` button is clicked, a series of selectable measures becomes available,
+via a drop-down menu. When any of the options are selected from the :guilabel:`Measures` drop-down
+menu, the chosen metrics related to that specific measure appear on the reporting page.
 
 .. note::
    For more information on the different measures that can be utilized on each reporting page, refer
@@ -205,14 +205,11 @@ Select the desired option from this pop-up window, then click :guilabel:`Confirm
 Reporting pages
 ===============
 
-In the Odoo *Subscriptions* application, there are four different reporting pages available.
+In the Odoo **Subscriptions** app, there are four different reporting pages available.
 
 To access, analyze, and customize various reports related to subscriptions, navigate to
 :menuselection:`Subscriptions app`, and click the :guilabel:`Reporting` drop-down menu in the
-header.
-
-Clicking :guilabel:`Reporting` in the header menu reveals a drop-down menu of the following
-reporting pages:
+header to reveal the following reporting pages:
 
 - :guilabel:`Subscriptions`
 - :guilabel:`Retention`
@@ -240,8 +237,8 @@ The following filters are also present in the search bar: :guilabel:`In Progress
    :align: center
    :alt: The default view of the Subscriptions Analysis reporting page in Odoo Subscriptions.
 
-When the :guilabel:`Measures` drop-down menu on the :guilabel:`Subscriptions Analysis` page is
-clicked, a series of metric-related options become available.
+When the :guilabel:`Measures` button on the :guilabel:`Subscriptions Analysis` page is
+clicked, a series of metric-related options becomes available as a drop-down menu.
 
 .. image:: reports/subscriptions-analysis-measures.png
    :align: center
@@ -269,9 +266,9 @@ Retention analysis
 To access the :guilabel:`Retention Analysis` reporting page, navigate to
 :menuselection:`Subscriptions app --> Reporting --> Retention`.
 
-The :guilabel:`Retention Analysis` reporting page differs from the other *Subscriptions* app
-reporting pages, in that it does *not* provide any additional view options. The data on this page is
-only presented in a customizable data chart.
+The :guilabel:`Retention Analysis` reporting page differs from the other **Subscriptions** app
+reporting pages, in that it does **not** provide any additional view options. The data on this page
+is only presented in a customizable data chart.
 
 .. image:: reports/subscriptions-retention-analysis-page-default.png
    :align: center
@@ -328,9 +325,9 @@ To access the :guilabel:`MRR Breakdown` reporting page, navigate to :menuselecti
 app --> Reporting --> MRR Breakdown`.
 
 By default, the data displayed on the :guilabel:`MRR Breakdown` reporting page is in graph view,
-with the :guilabel:`Bar Chart` option and the :guilabel:`Stacked` option selected.
+with the :guilabel:`Bar Chart` option and :guilabel:`Stacked` option selected.
 
-There is also a default filter in the search bar for :guilabel:`Event Date: Month > Event Type`.
+A default filter is also available in the search bar for :guilabel:`Event Date: Month > Event Type`.
 
 .. image:: reports/subscriptions-mrr-breakdown-default.png
    :align: center
@@ -356,14 +353,14 @@ Breakdown` reporting page are:
 
 .. tip::
    To make a different measure option the default, first, select the desired measure from the
-   :guilabel:`Measures` drop-down menu. Then, click the :guilabel:`(downward facing arrow)` icon in
-   the search bar to open the mega menu of filters and groupings.
+   :guilabel:`Measures` drop-down menu. Then, click the :icon:`fa-caret-down` :guilabel:`(down
+   arrow)` icon in the search bar to open the mega menu of filters and groupings.
 
-   In the :guilabel:`Favorites` column, click the :guilabel:`(downward facing arrow)` icon beside
-   :guilabel:`Save current search` to reveal a field, where a title can be entered, along with two
-   checkboxes::guilabel:`Default filter` and :guilabel:`Shared`.
+   In the :guilabel:`Favorites` column, click the :icon:`fa-caret-down` :guilabel:`(down arrow)`
+   icon beside :guilabel:`Save current search` to reveal a field, where a title can be entered,
+   along with two checkboxes::guilabel:`Default filter` and :guilabel:`Shared`.
 
-   Tick the box for :guilabel:`Default filter`, and click :guilabel:`Save`.
+   Tick the checkbox for :guilabel:`Default filter`, and click :guilabel:`Save`.
 
    That newly-chosen measure option is now the default option that appears when this reporting page
    is accessed.
@@ -378,7 +375,7 @@ By default, the data displayed on the :guilabel:`MRR Analysis` reporting page is
 the :guilabel:`Line Chart` option, :guilabel:`Stacked` option, and :guilabel:`Cumulative` option
 selected.
 
-There is also a default filter in the search bar for :guilabel:`Event Date: Month`.
+A default filter is also found in the search bar for :guilabel:`Event Date: Month`.
 
 .. image:: reports/subscriptions-mrr-analysis-default.png
    :align: center

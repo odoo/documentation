@@ -23,7 +23,8 @@ bank. Then set the :guilabel:`Proxy Type` and fill in the :guilabel:`Proxy Value
 the type you chose.
 
 .. important::
-   - The account holder's country must be set to Vietnam on its contact form.
+   - The account holder's country must be set to `Vietnam` on its contact form.
+   - The account holder's city is mandatory.
    - You could also include the invoice number in the QR code by checking the :guilabel:`Include
      Reference` checkbox.
 

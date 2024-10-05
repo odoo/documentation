@@ -251,8 +251,8 @@ Upload by email
 
 Select the :guilabel:`Download and Upload` option to enable users to upload their files to your
 workspace using an :guilabel:`Email Alias`. To create the email alias, enter its name in the
-:guilabel:`Email Alias` field. The :doc:`domain name <../general/email_communication/email_servers>`
-should be set by default, but you can modify it by clicking it.
+:guilabel:`Email Alias` field. The :doc:`domain name <../general/email_communication>` should be set
+by default, but you can modify it by clicking it.
 
 The documents sent to this email alias are uploaded to the workspace using the chosen
 :ref:`tags <documents/tags>`.

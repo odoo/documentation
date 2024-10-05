@@ -245,6 +245,39 @@ There is also a blue banner at the top of the quotation template design with a l
 return :guilabel:`Back to edit mode`. When clicked, Odoo returns to the quotation form in the
 back-end of the *Sales* application.
 
+Mass cancel quotations/sales orders
+===================================
+
+Cancel multiple quotations (or sales orders) by navigating to the :menuselection:`Sales app -->
+Orders --> Quotations` dashboard, landing, by default, in the list view. Then, on the left side of
+the table, tick the preferred checkboxes for removal.
+
+.. tip::
+   Select all records in the table by selecting the checkbox column header at the top-left of the
+   table; the total number of selected items are displayed at the top of the page.
+
+Then, with the desired quotations (or sales orders) selected from the list view on the
+:guilabel:`Quotations` page, click the :icon:`fa-cog` :guilabel:`Actions` button to reveal a
+drop-down menu.
+
+From this drop-down menu, select :guilabel:`Cancel quotations`.
+
+.. image:: quote_template/cancel-quotations.png
+   :align: center
+   :alt: The Cancel quotations option on the Actions drop-down menu in the Odoo Sales application.
+
+.. note::
+   This action can be performed for quotations in *any* stage, even if it is confirmed as a sales
+   order.
+
+Upon selecting the :guilabel:`Cancel quotations` option, a :guilabel:`Cancel quotations`
+confirmation pop-up window appears. To complete the cancellation, click the :guilabel:`Cancel
+quotations` button.
+
+.. note::
+   An error pop-up message appears when attempting to cancel an order for an ongoing subscription
+   that has an invoice.
+
 .. seealso::
    - :doc:`get_signature_to_validate`
    - :doc:`get_paid_to_validate`

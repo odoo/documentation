@@ -348,5 +348,5 @@ appropriate number of stars on the Kanban card, or on the ticket.
 
 .. seealso::
    - :doc:`/applications/services/helpdesk/advanced/close_tickets`
-   - :doc:`/applications/general/email_communication/email_servers`
+   - :doc:`../../../general/email_communication`
    - :doc:`/applications/websites/livechat`

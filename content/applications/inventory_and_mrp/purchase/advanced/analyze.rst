@@ -1,122 +1,146 @@
-=========================================
-Analyze the performance of your purchases
-=========================================
+========================
+Purchase Analysis report
+========================
 
-If your company regularly purchases products, you have several reasons to track and analyze your
-performance. The insights gathered can help you to better forecast and plan your future orders. For
-example, you can assess if your business is dependent on particular vendors, and the data can help
-you negotiate discounts on prices.
+.. |PO| replace:: :abbr:`PO (purchase order)`
+.. |POs| replace:: :abbr:`POs (purchase orders)`
 
-Generate customized reports
-===========================
+The *Purchase Analysis* report provides statistics about products purchased using Odoo's
+**Purchase** app. This data is useful for gaining a deeper understanding of key metrics related to
+purchase orders (POs), including the quantity of products ordered and received, the amount of time
+it takes to receive purchased products, and more.
 
-Go to *Reporting* to access the purchase analysis. Simply by accessing the reporting dashboard, you
-can get a quick overview of your actual performance. By default, the reporting dashboard displays a
-line chart presenting the untaxed amount of your purchase orders per day, and below it, key metrics
-and a pivot table.
+To open the Purchase Analysis report, navigate to :menuselection:`Purchase app --> Reporting -->
+Purchase`.
 
-.. image:: analyze/analyze-reporting-dashboard.png
-   :align: center
-   :alt: Reporting dashboard in Odoo Purchase
+.. important::
+   The :guilabel:`Purchase Analysis` report is one of many reports available across the Odoo app
+   suite. This documentation only covers the measures specific to the :guilabel:`Purchase Analysis`
+   report, along with a few use case examples.
 
-While the data initially presented is useful, there are several tools and features you can use to
-get even more insights on your purchases.
+   For a full overview of the basic features available in most Odoo reports, see the documentation
+   on :doc:`reporting essentials <../../../essentials/reporting>`.
 
-Use filters to select the data you need
----------------------------------------
+Measures
+========
 
-Odoo offers several default filters you can use and combine by clicking on *Filters*. When you
-select one or several filters, Odoo looks for all the orders that match at least one of the filters
-you have chosen and populates the chart, key metrics, and pivot table with the data. The
-pre-configured filters are:
+*Measures* refer to the various datasets that can be displayed on the :guilabel:`Purchase Analysis`
+report, with each dataset representing a key statistic about |POs| or products. To choose a measure,
+click the :guilabel:`Measures` :icon:`fa-caret-down` button, and select one of the options from the
+drop-down menu:
 
-#. All *Requests for Quotation*
-
-#. All *Purchase Orders*, except canceled ones
-
-#. *Confirmation Date Last Year* includes all orders that were confirmed the previous year,
-   canceled purchase orders included
-
-#. *Order Date* includes all orders - request for quotations and purchases orders (canceled ones
-   included) - depending on their date of creation
-
-#. *Confirmation Date* includes all confirmed orders, canceled ones included, depending on their
-   date of confirmation
-
-.. note::
-   When you have to select a period, you can use multiple years, and, with at least one year
-   selected, multiple quarters and the three most recent months.
-
-.. tip::
-   If you use the *Order Date* or *Confirmation Date* filters, the *Comparison* feature appears next
-   to *Filters*. It enables you to compare the period you filtered with the previous one.
-
-.. image:: analyze/analyze-filters.png
-   :align: center
-   :alt: Reporting filters in Odoo Purchase
-
-Add custom filters
-~~~~~~~~~~~~~~~~~~
-
-Thanks to the 31 filtering options to choose from, the possibilities of your customizing your
-dataset are almost limitless. Go to :menuselection:`Filters --> Add Custom Filter`, specify the
-condition the filtering option should meet (e.g. *is equal to*, *contains*, etc.), and click on
-*Apply*. If you want to select orders matching several conditions simultaneously (*and* operator),
-repeat the process to add another custom filter. If you want to use the *or* operator, don't
-click on *Apply*, and click on *Add a condition* instead. Once you have added all the desired
-filtering options, click on *Apply*.
-
-.. image:: analyze/analyze-custom-filter.png
-   :align: center
-   :alt: Custom reporting filter in Odoo Purchase
+- :guilabel:`# of Lines`: The number of |PO| order lines, across all |POs|.
+- :guilabel:`Average Cost`: The average cost of |POs|.
+- :guilabel:`Days to Confirm`: The number of days it takes to confirm a |PO|.
+- :guilabel:`Days to Receive`: The number of days it takes to receive the products in a |PO|.
+- :guilabel:`Gross Weight`: The total weight of purchased products.
+- :guilabel:`Qty Billed`: The quantity of a product (or products) for which the vendor has already
+  been billed.
+- :guilabel:`Qty Ordered`: The quantity of a product (or products) ordered.
+- :guilabel:`Qty Received`: The quantity of an ordered product (or products) received.
+- :guilabel:`Qty to be Billed`: The quantity of an ordered product (or products) for which the
+  vendor has yet to be billed.
+- :guilabel:`Total`: The total amount spent, including tax.
+- :guilabel:`Untaxed Total`: The total amount spent, excluding tax. This measure is selected by
+  default.
+- :guilabel:`Volume`: The total volume of ordered products, for products which are measured by
+  volume.
+- :guilabel:`Count`: The total count of |POs|.
 
 .. tip::
-   To avoid having to recreate custom filters every time, save them by clicking on
-   :menuselection:`Favorites --> Save current search --> Save`. The customized search filter can
-   then be accessed by clicking on *Favorites* or can even be set as the default filter when you
-   open the reporting dashboard.
+   Only one measure can be selected at a time when one of the :icon:`fa-area-chart`
+   :guilabel:`(graph view)` options is enabled. However, multiple measures, and varying group-by
+   criteria (on the x and y axes), can be selected when using the :icon:`oi-view-pivot`
+   :guilabel:`(pivot table)`.
 
-Measure exactly what you need
------------------------------
+.. _purchase/purchase-analysis-example:
 
-Before selecting what you want to measure, you need to decide whether you prefer using the graph
-view or the pivot view. By default, the dashboard presents both views. However, the measures you
-select won't be applied to both views. You can access each view separately by clicking on the icons
-at the top right of the dashboard.
+Use case: determine days to receive products from each vendor
+=============================================================
 
-.. image:: analyze/analyze-switch-view.png
-   :align: center
-   :alt: Switch reporting view in Odoo Purchase
+One possible use case for the :guilabel:`Purchase Analysis` report is determining how long each
+vendor takes to deliver purchased items. This allows companies to make better informed decisions
+about which vendors they want to purchase from.
 
-Visualize your data
-~~~~~~~~~~~~~~~~~~~
+.. example::
+   A local bike shop, *Bike Haus*, sells high-quality unicycles, bicycles, tricycles, and all the
+   accessories needed to ride and maintain them. They purchase their inventory from a few different
+   vendors, and then sell those products on to customers through their storefront.
 
-You can transform the main graph in just a click by selecting one of the three charts: bar, line or
-pie. Fourteen different measures are available, but you can only use one at a time. However, you can
-group the measure using one or several of the 19 *Groups*.
+   Recently, Bike Haus has decided to have their purchasing manager, David, look into how long it
+   has taken each of their vendors to deliver the items they've purchased during the current year,
+   2024.
 
-.. image:: analyze/analyze-graph-view.png
-   :align: center
-   :alt: Reporting graph view in Odoo Purchase
+   David starts by navigating to :menuselection:`Purchase app --> Reporting --> Purchase`, and
+   selecting the :icon:`fa-bar-chart` (bar chart) graph type at the top of the report.
 
-For bar and line charts, the selected measure is your y-axis, and the first group you select is used
-to create the x-axis. Adding more group adds additional lines (line chart) or transforms your bar
-chart into a stacked bar chart. For pie charts, the more groups you select, the more slices are
-displayed.
+   Next, he clicks the :icon:`fa-caret-down` :guilabel:`(toggle)` button on the right of the search
+   bar to open its drop-down menu. In the :guilabel:`Confirmation Date` filter section, he makes
+   sure that **only** the :guilabel:`2024` filter is enabled. Then, he selects the
+   :guilabel:`Vendor` option in the :guilabel:`Group By` section, before clicking away from the
+   drop-down menu to close it.
 
-Explore your data
-~~~~~~~~~~~~~~~~~
+   Finally, David clicks on the :guilabel:`Measures` :icon:`fa-caret-down` drop-down menu, and
+   selects the :guilabel:`Days to Receive` option.
 
-The pivot table view enables you to explore your data in great detail. Unlike the graph view, the
-pivot table enables you to add several measures at the same time. By clicking on *Measures* or on
-the **+** sign in the *Total* column, you can add as many as you want, each assigned to a new
-column. By clicking on the **+** sign in the *Total* row, you can add *Groups*. If you click on a
-group's **+** sign, you can add a sub-group, and so on.
+   With all of these options enabled, the :guilabel:`Purchase Analysis` report shows a bar chart,
+   with one bar for each vendor, representing the average number of days it takes to receive
+   products purchased from the vendor.
 
-.. image:: analyze/analyze-pivot-view.png
-   :align: center
-   :alt: Pivot table view in Odoo Purchase
+   Using this data, David can see that it takes Bike Friends over 4.5 days, on average, to deliver
+   purchased products. This is more than four times the amount of time it takes any other vendor.
 
-.. tip::
-   You can insert your pivot table's data directly in the Spreadsheet app or export it as an Excel
-   file.
+   Based on these findings, David makes the decision to reduce the quantity of products purchased
+   from Bike Friends.
+
+   .. image:: analyze/dtr.png
+      :align: center
+      :alt: The Purchase report, showing the average days to receive products from vendors.
+
+Use case: compare vendor POs for two time periods
+=================================================
+
+Another use for the :guilabel:`Purchase Analysis` report is to compare key statistics about |POs|
+for two different time periods, for a specific vendor. By doing so, it is easy to understand how
+purchases from the vendor have increased or decreased.
+
+.. example::
+   Following the :ref:`previous example <purchase/purchase-analysis-example>`, it has been one month
+   since Bike Haus decided to reduce the quantity of products purchased from Bike Friends, one of
+   their retailers. Bike Haus' purchasing manager, David, wants to understand the impact this
+   decision has had on the amount of money they have spent on Bike Friends products.
+
+   David starts by navigating to :menuselection:`Purchase app --> Reporting --> Purchase`. Then, he
+   selects the :icon:`oi-view-pivot` :guilabel:`(pivot table)` option at the top of the screen.
+
+   In the search bar, he types `Bike Friends`, and clicks :guilabel:`Enter`, so the report only
+   shows data for purchases from Bike Friends.
+
+   Then, David clicks the :icon:`fa-caret-down` :guilabel:`(toggle)` button on the right of the
+   search bar to open its drop-down menu. In the :guilabel:`Confirmation Date` field, he leaves the
+   :guilabel:`June` and :guilabel:`2024` filters enabled. He also selects :guilabel:`Confirmation
+   Date: Previous Period` in the :guilabel:`Comparison` section, before clicking away from the
+   drop-down menu to close it.
+
+   Next, David clicks on the :guilabel:`Measures` :icon:`fa-caret-down` drop-down menu. He leaves
+   the :guilabel:`Total` and :guilabel:`Untaxed Total` datasets enabled, and disables the
+   :guilabel:`Order` and :guilabel:`Count` datasets.
+
+   Finally, David clicks the :icon:`fa-minus-square-o` :guilabel:`Total` button above the rows on
+   the pivot table, and selects the :guilabel:`Product` option.
+
+   With all of these options configured, the :guilabel:`Purchase Analysis` report shows a pivot
+   table comparing purchase data for the current month, June, with the previous month, May.
+
+   The pivot table is broken down into two main columns: one for the untaxed total spent, and one
+   for the taxed total spent. These columns are further broken down into three smaller columns: the
+   amount spent in May, the amount spent in June, and the variation between the two months,
+   represented as a percentage.
+
+   On the left side of the pivot table, one row is shown for each product purchased from Bike
+   Friends during June. Using this report, David is able to see that Bike Haus has spent much less
+   money on products purchased from Bike Friends, compared to the previous month.
+
+   .. image:: analyze/comparison.png
+      :align: center
+      :alt: The Purchase report, comparing the amount spent at a vendor.

@@ -12,3 +12,4 @@ Assign and track leads
    track_leads/quality_leads_report
    track_leads/resellers
    track_leads/marketing_attribution
+   track_leads/lead_distribution_report

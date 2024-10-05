@@ -10,6 +10,13 @@ labels, orders, or even reports from the different Odoo apps. In addition, print
 assigned as an *action on a trigger* during the manufacturing process, or added onto a quality
 control point or a quality check.
 
+.. warning::
+   The **only** way to connect a printer directly to an Odoo database is through the use of an |iot|
+   box.
+
+   Without an |iot| box, printing can still occur, but it is managed through the printer itself,
+   which is not the recommended process.
+
 Connection
 ==========
 
@@ -72,30 +79,6 @@ specific product.
 .. seealso::
    - :doc:`../../../inventory_and_mrp/quality/quality_management/quality_control_points`
    - :doc:`../../../inventory_and_mrp/quality/quality_management/quality_alerts`
-
-Link a printer to a work center
--------------------------------
-
-To link a printer to an action, it first needs to be configured on a work center. To do that,
-navigate to :menuselection:`Manufacturing app --> Configuration --> Work Centers`. From here, select
-the desired work center in which the printer will be used. Next, add the device in the
-:guilabel:`IoT Triggers` tab, under the :guilabel:`Device` column, by selecting :guilabel:`Add a
-Line`.
-
-Then, the printer can be linked to either of the following options in the :guilabel:`Actions`
-drop-down menu: :guilabel:`Print Labels`, :guilabel:`Print Operation`, or :guilabel:`Print Delivery
-Slip`. A key can also be added to trigger the action.
-
-.. important::
-   The first listed trigger on the form will be chosen first. So, the order matters, and these
-   triggers can be dragged into any order.
-
-.. note::
-   On the :guilabel:`Work Order` screen, a status graphic indicates whether the database is
-   correctly connected to the printer.
-
-.. seealso::
-   :ref:`workcenter_iot`
 
 .. _iot/link-printer:
 

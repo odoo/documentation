@@ -1,8 +1,6 @@
-===============================
-Process receipts in three steps
-===============================
-
-.. _inventory/receipts_three_steps:
+==================
+Three-step receipt
+==================
 
 Some companies require a quality control process before receiving goods from suppliers. To
 accomplish this, Odoo has a three-step process for receiving goods.
@@ -15,11 +13,11 @@ quality area and into stock.
 Configuration
 =============
 
-Odoo is configured by default to :ref:`receive and deliver goods in one step
-<inventory/receipts_delivery_one_step>`, so the settings need to be changed in order to utilize
-three-step receipts. First, make sure the *Multi-Step Routes* option is enabled in
-:menuselection:`Inventory --> Configuration --> Settings --> Warehouse`. Note that activating
-:guilabel:`Multi-Step Routes` will also activate *Storage Locations*.
+Odoo is configured by default to :doc:`receive and deliver goods in one step
+<receipts_delivery_one_step>`, so the settings need to be changed in order to utilize three-step
+receipts. First, make sure the *Multi-Step Routes* option is enabled in :menuselection:`Inventory
+--> Configuration --> Settings --> Warehouse`. Note that activating :guilabel:`Multi-Step Routes`
+will also activate *Storage Locations*.
 
 .. image:: receipts_three_steps/receipts-three-steps-multi-step-routes.png
    :align: center

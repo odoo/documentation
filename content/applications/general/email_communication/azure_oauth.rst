@@ -34,14 +34,14 @@ registration`. On the :guilabel:`Register an application` screen, rename the :gu
 and personal Microsoft accounts (e.g. Skype, Xbox)`.
 
 Under the :guilabel:`Redirect URL` section, select :guilabel:`Web` as the platform, and then input
-`https://<odoo base url>/microsoft_outlook/confirm` in the :guilabel:`URL` field. The Odoo base URL
-is the canonical domain at which your Odoo instance can be reached in the URL field.
+`https://<web base url>/microsoft_outlook/confirm` in the :guilabel:`URL` field. The `web.base.url`
+is subject to change depending on the URL used to log in to the database.
 
-.. example::
-   *mydatabase.odoo.com*, where *mydatabase* is the actual prefix of the database's subdomain,
-   assuming it's hosted on Odoo.com
+.. note::
+   The documentation about the :ref:`web.base.url <domain-name/web-base-url>` explains how to freeze
+   a unique URL. It is also possible to add different redirect URLs on the Microsoft app.
 
-After the URL has been added to the field, :guilabel:`Register` the application so it is created.
+After the URL has been added to the field, :guilabel:`Register` the application, so it is created.
 
 API permissions
 ---------------
@@ -165,7 +165,7 @@ Then, create a new email server and check the box for :guilabel:`Outlook`. Next,
 :guilabel:`Name` (it can be anything) and the Microsoft Outlook email :guilabel:`Username`.
 
 If the :guilabel:`From Filter` field is empty, enter either a :ref:`domain or email address
-<email_communication/default>`.
+<email-outbound-unique-address>`.
 
 Then, click on :guilabel:`Connect your Outlook account`.
 
@@ -203,7 +203,8 @@ This address must also match the `{mail.default.from}@{mail.catchall.domain}` ke
 system parameters.
 
 .. seealso::
-   For more information on the from filter visit: :ref:`email_communication/default`.
+   Visit the :ref:`From Filtering documentation <email-outbound-different-servers-personalized-from-filtering>` for more
+   information.
 
 .. note::
    The :guilabel:`System Parameters` can be accessed by activating :ref:`developer-mode` in the
@@ -244,7 +245,8 @@ so that only the user's email is sent from that server. In other words, only a u
 address that matches the set :guilabel:`FROM Filtering` is able to use this server.
 
 .. seealso::
-   For more information on the from filter visit: :ref:`email_communication/default`.
+   Visit the :ref:`From Filtering documentation <email-outbound-different-servers-personalized-from-filtering>` for more
+   information.
 
 A :ref:`fallback server <azure_oauth/notifications>` must be setup to allow for the sending of
 :guilabel:`notifications`. The :guilabel:`FROM Filtering` for this server should have the value of
@@ -261,7 +263,7 @@ the `{mail.default.from}@{mail.catchall.domain}`.
 
    .. seealso::
       For more information on setting the mass-mailing email server visit
-      :ref:`email_communication/mass_mails`.
+      :ref:`email-outbound-custom-domain-smtp-server`.
 
 .. example::
    Multiple user outgoing mail server configuration:
@@ -288,6 +290,3 @@ new configuration. Check or Select the button next to :guilabel:`Outlook Oauth A
 enter the :guilabel:`Microsoft Outlook username`.  Click on :guilabel:`Connect your Outlook
 account`. Odoo will state: :guilabel:`Outlook Token Valid` Now :guilabel:`Test and Confirm` the
 account. The account should be ready to receive email to the Odoo database.
-
-.. seealso::
-   :doc:`email_servers`

@@ -19,6 +19,8 @@ following:
 Fill in the :guilabel:`Task Title` and add one or more :guilabel:`Assignees`, then click
 :guilabel:`Add`.
 
+.. _task_creation/task-configuration:
+
 Task configuration
 ------------------
 
@@ -66,6 +68,8 @@ Click the task to open it. The task form includes the following fields that you 
      .. image:: task_creation/task-shortcuts.png
         :alt: Using keyboard shortcuts to create a task in Project.
 
+.. _task_creation/email_alias:
+
 Creating tasks from an email alias
 ==================================
 
@@ -80,8 +84,8 @@ Fill in the :guilabel:`Create tasks by sending an email to` field as follows:
 
  - **Section of the alias before the @ symbol**: type the name of the email alias, e.g. `contact`,
    `help`, `jobs`.
- - **Domain**: in most cases, this is filled in by default with your
-   :doc:`domain <../../../general/email_communication/email_servers>`.
+ - **Domain**: in most cases, this is filled in by default with your :doc:`domain
+   <../../../general/email_communication>`.
  - **Accept Emails From**: refine the senders whose emails will create tasks in the project.
 
 .. image:: task_creation/email-configuration.png

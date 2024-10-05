@@ -36,6 +36,8 @@ follow the instructions.
 .. seealso::
    :doc:`bank/bank_synchronization`
 
+.. _bank_accounts/create:
+
 Create a bank account
 ---------------------
 
@@ -191,4 +193,3 @@ Payments` tab. To display the outstanding accounts column, click on the toggle b
    bank/reconciliation
    bank/reconciliation_models
    bank/foreign_currency
-   bank/cash_register

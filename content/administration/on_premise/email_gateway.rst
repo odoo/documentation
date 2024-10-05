@@ -33,7 +33,6 @@ In you alias config (:file:`/etc/aliases`):
    - `Postfix aliases <http://www.postfix.org/aliases.5.html>`_
    - `Postfix virtual <http://www.postfix.org/virtual.8.html>`_
 
-
 For Exim
 --------
 
@@ -47,5 +46,5 @@ For Exim
    - `Exim <https://www.exim.org/docs.html>`_
 
 .. tip::
-   If you don't have access/manage your email server, use :ref:`inbound messages
-   <email_communication/inbound_messages>`.
+   If you do not have access/manage your email server, use :ref:`incoming mail servers
+   <email-inbound-custom-domain-incoming-server>`.

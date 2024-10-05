@@ -2,8 +2,8 @@
 Commands and canned responses
 =============================
 
-In the Odoo *Live Chat* application, *commands* allow the user to perform specific actions both
-inside the chat window, and through other Odoo applications. The *Live Chat* app also includes
+In the Odoo **Live Chat** application, *commands* allow the user to perform specific actions both
+inside the chat window, and through other Odoo applications. The **Live Chat** app also includes
 *canned responses*. These are customized, preconfigured substitutions that allow users to replace
 shortcut entries in place of longer, well-thought out responses to some of the most common questions
 and comments.
@@ -42,13 +42,8 @@ entry types an operator can make is displayed.
 
 - Type `@username` to mention a user in the conversation. A notification will be sent to that user's
   inbox or email, depending on their notification settings.
-- Type `#channel` to mention a *Discuss* channel.
 - Type `/command` to execute a command.
 - Type `:shortcut` to insert a :ref:`canned response <live-chat/canned-responses>`.
-
-.. image:: responses/responses-help.png
-   :align: center
-   :alt: View of the message generated from using the /help command in Odoo Live Chat.
 
 .. seealso::
    - :doc:`/applications/productivity/discuss`
@@ -61,10 +56,10 @@ The `/ticket` and `/search_tickets` commands allow operators to create helpdesk 
 from a conversation, and search through existing tickets by keyword or ticket number.
 
 .. important::
-   The `/ticket` and `/search_tickets` commands can **only** be used if the *Helpdesk* app has been
-   installed, and *Live Chat* has been activated on a *Helpdesk* team. To activate *Live Chat*, go
-   to :menuselection:`Helpdesk app --> Configuration --> Helpdesk Teams`, and select a team. Scroll
-   to the :guilabel:`Channels` section, and check the box labeled, :guilabel:`Live Chat`.
+   The `/ticket` and `/search_tickets` commands can **only** be used if the **Helpdesk** app has
+   been installed, and *Live Chat* has been activated on a *Helpdesk* team. To activate *Live Chat*,
+   go to :menuselection:`Helpdesk app --> Configuration --> Helpdesk Teams`, and select a team.
+   Scroll to the :guilabel:`Channels` section, and check the box labeled, :guilabel:`Live Chat`.
 
 .. _live-chat/ticket:
 
@@ -89,7 +84,7 @@ The transcript from the conversation will be added to the new ticket, under the
 :guilabel:`Description` tab.
 
 To access the new ticket, click on the link in the chat window, or go to the
-:menuselection:`Helpdesk app`, and click the :guilabel:`Tickets` button on the Kanban card for the
+:menuselection:`Helpdesk app` and click the :guilabel:`Tickets` button on the Kanban card for the
 appropriate team.
 
 Search for a ticket from a live chat
@@ -112,8 +107,8 @@ conversation window.
 History
 -------
 
-Typing `/history` in the chat window generates a list of the most recent pages the visitor has
-viewed on the website (up to fifteen pages).
+If an operator types `/history` in the chat window, it generates a list of the most recent pages the
+visitor has viewed on the website (up to 15).
 
 .. image:: responses/responses-history.png
    :align: center
@@ -122,14 +117,14 @@ viewed on the website (up to fifteen pages).
 Lead
 ----
 
-By typing `/lead` in the chat window, an operator can create a *lead* in the *CRM* application.
+By typing `/lead` in the chat window, an operator can create a *lead* in the **CRM** application.
 
 .. image:: responses/responses-lead.png
    :align: center
    :alt: View of the results from a /lead command in a Live Chat conversation.
 
 .. important::
-   The `/lead` command can only be used if the *CRM* app has been installed.
+   The `/lead` command can only be used if the **CRM** app has been installed.
 
 After typing `/lead`, create a title for this new lead, then press `Enter`. A link with the lead
 title appears. Click the link, or navigate to the :menuselection:`CRM` app to view the
@@ -160,12 +155,9 @@ end the conversation.
 Canned responses
 ================
 
-*Canned responses* are customizable inputs, where a typed shortcut populates a longer response. A
-user enters a keyword *shortcut*, which is then automatically replaced by the expanded
-*substitution* response. The shortcut is the keyword or key phrase that is to be replaced. The
-substitution is the longer message that replaces the shortcut.
-
-.. _livechat/created-canned-response:
+*Canned responses* are customizable inputs where a *shortcut* stands in for a longer response. An
+operator will enter the shortcut, and it is automatically replaced by the expanded *substitution*
+response in the conversation.
 
 Create canned responses
 -----------------------
@@ -177,15 +169,8 @@ Type a shortcut command in the :guilabel:`Shortcut` field. Next, click the :guil
 field, and type the message that should replace the shortcut.
 
 .. tip::
-   Try to connect the shortcut to the topic of the substitution. Not only does this make it easier
-   to use the responses, it prevents the list of responses from becoming disorganized and
-   overwhelming.
-
-In the :guilabel:`Description` field, add any information that provides context for this response,
-such as guidelines for when it should or should not be used.
-
-The :guilabel:`Last Used` field keeps track of the date and time each response was most recently
-used. This field **cannot** be edited.
+   Try to connect the shortcut to the topic of the substitution. The easier it is for the operators
+   to remember, the easier it is to use the canned responses in conversations.
 
 Use canned responses in a live chat conversation
 ------------------------------------------------

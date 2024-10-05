@@ -85,16 +85,56 @@ Overall, to be recognized as valid, electronic signatures have to meet five crit
 Other countries
 ---------------
 
+- :doc:`Algeria <sign/algeria>`
+- :doc:`Angola <sign/angola>`
+- :doc:`Argentina <sign/argentina>`
 - :doc:`Australia <sign/australia>`
+- :doc:`Azerbaijan <sign/azerbaijan>`
+- :doc:`Bangladesh <sign/bangladesh>`
 - :doc:`Brazil <sign/brazil>`
 - :doc:`Canada <sign/canada>`
+- :doc:`Chile <sign/chile>`
 - :doc:`China <sign/china>`
+- :doc:`Colombia <sign/colombia>`
+- :doc:`Dominican Republic <sign/dominican_republic>`
+- :doc:`Ecuador <sign/ecuador>`
+- :doc:`Egypt <sign/egypt>`
+- :doc:`Ethiopia <sign/ethiopia>`
+- :doc:`Guatemala <sign/guatemala>`
+- :doc:`Hong Kong <sign/hong_kong>`
 - :doc:`India <sign/india>`
+- :doc:`Indonesia <sign/indonesia>`
+- :doc:`Iran <sign/iran>`
+- :doc:`Iraq <sign/iraq>`
+- :doc:`Israel <sign/israel>`
 - :doc:`Japan <sign/japan>`
+- :doc:`Kazakhstan <sign/kazakhstan>`
+- :doc:`Kenya <sign/kenya>`
+- :doc:`Kuwait <sign/kuwait>`
+- :doc:`Malaysia <sign/malaysia>`
 - :doc:`Mexico <sign/mexico>`
+- :doc:`Morocco <sign/morocco>`
+- :doc:`New Zealand <sign/new_zealand>`
+- :doc:`Nigeria <sign/nigeria>`
+- :doc:`Norway <sign/norway>`
+- :doc:`Oman <sign/oman>`
+- :doc:`Pakistan <sign/pakistan>`
+- :doc:`Peru <sign/peru>`
+- :doc:`Philippines <sign/philippines>`
+- :doc:`Qatar <sign/qatar>`
 - :doc:`Russia <sign/russia>`
+- :doc:`Saudi Arabia <sign/saudi_arabia>`
+- :doc:`Singapore <sign/singapore>`
+- :doc:`South Africa <sign/south_africa>`
 - :doc:`South Korea <sign/south_korea>`
+- :doc:`Switzerland <sign/switzerland>`
+- :doc:`Thailand <sign/thailand>`
+- :doc:`Turkey <sign/turkey>`
+- :doc:`Ukraine <sign/ukraine>`
+- :doc:`United Arab Emirates <sign/united_arab_emirates>`
 - :doc:`United Kingdom <sign/united_kingdom>`
+- :doc:`Uzbekistan <sign/uzbekistan>`
+- :doc:`Vietnam <sign/vietnam>`
 
 Send a document to sign
 =======================
@@ -175,7 +215,7 @@ have any credits left, the authentication steps will be skipped.
 
 .. seealso::
    - :doc:`In-App Purchase (IAP) <../essentials/in_app_purchase>`
-   - :doc:`SMS pricing and FAQ <../marketing/sms_marketing/pricing/pricing_and_faq>`
+   - :doc:`SMS pricing and FAQ <../marketing/sms_marketing/pricing_and_faq>`
 
 .. _sign/sms:
 
@@ -270,15 +310,15 @@ When a document needs to be signed by different parties, the signing order lets 
 order in which your recipients receive it for signature.
 
 After uploading a PDF with at least two signature fields with two different roles and clicking
-:guilabel:`Send`, toggle the :guilabel:`Specify Signing Order` button and search for the signer's
+:guilabel:`Send`, toggle the :guilabel:`Specify Signing Order` switch and search for the signer's
 name or email information to add them. You can decide on the signing order by typing **1** or **2**
 in the first column.
 
+.. image:: sign/specify-signing-order.png
+   :alt: Toggle the switch to specify the signing order.
+
 Each recipient receives the signature request notification only once the previous recipient has
 completed their action.
-
-.. seealso::
-   `Odoo Quick Tips: Sign order [video] <https://www.youtube.com/watch?v=2KUq7RPt1cU/>`_
 
 .. _sign/fields:
 

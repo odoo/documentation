@@ -146,6 +146,8 @@ banner appears in the top-right of the applicant's card and form.
    :align: center
    :alt: Hired banner in the top right corner of applicant card.
 
+.. _recruitment/new-employee:
+
 Create employee
 ===============
 

@@ -4,12 +4,11 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# marcescu, 2023
 # Lucia Pacheco, 2023
 # Iran Villalobos López, 2023
+# Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2024
 # Wil Odoo, 2024
 # Braulio D. López Vázquez <bdl@odoo.com>, 2024
-# Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2024
 # Fernanda Alvarez, 2024
 # 
 #, fuzzy
@@ -17,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-24 07:08+0000\n"
+"POT-Creation-Date: 2024-08-21 11:43+0000\n"
 "PO-Revision-Date: 2023-11-08 08:57+0000\n"
 "Last-Translator: Fernanda Alvarez, 2024\n"
 "Language-Team: Spanish (https://app.transifex.com/odoo/teams/41243/es/)\n"
@@ -43,268 +42,80 @@ msgstr ""
 "`Tutoriales de Odoo: Servicio externo <https://www.odoo.com/slides/field-"
 "service-49>`_"
 
-#: ../../content/applications/services/field_service/default_warehouse.rst:3
-msgid "User default warehouse"
-msgstr "Almacén predeterminado del usuario"
+#: ../../content/applications/services/field_service/creating_tasks.rst:3
+msgid "Creating field service tasks"
+msgstr "Crear tareas de servicio externo"
 
-#: ../../content/applications/services/field_service/default_warehouse.rst:5
+#: ../../content/applications/services/field_service/creating_tasks.rst:5
 msgid ""
-"Setting up a **default warehouse** can be useful for field technicians who "
-"keep a supply in their van or those who always resupply from the same "
-"warehouse. It also allows field workers to switch between warehouses from "
-"their profiles."
+"Tasks in Odoo Field Service can be created manually or automatically, "
+"including from sales orders or helpdesk tickets."
 msgstr ""
-"Puede que configurar un **almacén predeterminado** sea útil para los "
-"técnicos de campo que mantienen sus suministros en su camioneta o aquellos "
-"que siempre se reabastecen desde el mismo almacén. También permite a los "
-"trabajadores de campo cambiar entre almacenes desde sus perfiles."
+"Puede crear tareas en la aplicación Servicio externo de Odoo de forma manual"
+" o automática, incluso desde órdenes de ventas o tickets de soporte al "
+"cliente. "
 
-#: ../../content/applications/services/field_service/default_warehouse.rst:9
+#: ../../content/applications/services/field_service/creating_tasks.rst:9
+#: ../../content/applications/services/project/tasks/task_creation.rst:9
+msgid "Manual task creation"
+msgstr "Creación manual de tareas"
+
+#: ../../content/applications/services/field_service/creating_tasks.rst:11
+msgid "To create a new field service task:"
+msgstr "Para crear una nueva tarea de servicio externo:"
+
+#: ../../content/applications/services/field_service/creating_tasks.rst:13
 msgid ""
-"Products in sales orders created during field interventions are always "
-"pulled from the default warehouse, keeping the inventory accurate."
+"Open the Field service app and go to :menuselection:`Field Service --> All "
+"Tasks --> All Tasks`."
 msgstr ""
-"Los productos en las órdenes de venta creadas durante las intervenciones in "
-"situ siempre se extraen del almacén predeterminado, de esta forma el "
-"inventario se mantiene exacto."
+"Abra la aplicación Servicio externo y vaya a :menuselection:`Servicio "
+"externo --> Todas las tareas --> Todas las tareas`."
 
-#: ../../content/applications/services/field_service/default_warehouse.rst:13
-msgid ":doc:`../../inventory_and_mrp/inventory`"
-msgstr ":doc:`../../inventory_and_mrp/inventory`"
+#: ../../content/applications/services/field_service/creating_tasks.rst:14
+msgid "Click :guilabel:`New`."
+msgstr "Haga clic en :guilabel:`Nuevo`."
 
-#: ../../content/applications/services/field_service/default_warehouse.rst:16
-#: ../../content/applications/services/helpdesk/overview/help_center.rst:14
-#: ../../content/applications/services/planning.rst:29
-#: ../../content/applications/services/project/project_management.rst:17
-#: ../../content/applications/services/project/tasks/recurring_tasks.rst:13
-msgid "Configuration"
-msgstr "Configuración"
-
-#: ../../content/applications/services/field_service/default_warehouse.rst:18
+#: ../../content/applications/services/field_service/creating_tasks.rst:15
 msgid ""
-"To set up a user default warehouse, the :doc:`storage locations "
-"</applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations>`"
-" feature needs to be activated in the **Inventory** app. It is also "
-"necessary to have more than one warehouse in your database."
+"Fill in the task title, :guilabel:`Customer` and any other :ref:`optional "
+"field <task_creation/task-configuration>`, then save manually."
 msgstr ""
-"Para configurar el almacén predeterminado de un usuario debe activar la "
-"función :doc:`ubicaciones de almacenamiento "
-"</applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations>`"
-" en la aplicación **Inventario** y también debe tener más de un almacén en "
-"su base de datos."
+"Complete el título de la tarea, el :guilabel:`cliente` y cualquier otro "
+":ref:`campo opcional <task_creation/task-configuration>`, después guárdela "
+"de forma manual. "
 
-#: ../../content/applications/services/field_service/default_warehouse.rst:23
+#: ../../content/applications/services/field_service/creating_tasks.rst:19
+msgid "Task creation from a sales order"
+msgstr "Creación de tareas desde una orden de venta"
+
+#: ../../content/applications/services/field_service/creating_tasks.rst:21
 msgid ""
-"You can either set it up :ref:`for your profile <default-warehouse/my-"
-"profile>`, or :ref:`for all users <default-warehouse/all-users>`."
+"This feature allows for field service tasks to be automatically created from"
+" a sales order. When you create a quotation with the :ref:`service product "
+"<sales/invoicing/configured-service-product>` and confirm it, a task is "
+"automatically created in your Field Service project. Click the "
+":guilabel:`Tasks` smart button to access it from the sales order."
 msgstr ""
-"Puede configurarlo :ref:`para su perfil <default-warehouse/my-profile>` or "
-":ref:`para todos los usuarios <default-warehouse/all-users>`."
+"Esta función permite crear tareas de servicio externo de forma automática "
+"con una orden de venta. Luego de crear una cotización con el :ref:`producto "
+"de servicio <sales/invoicing/configured-service-product>` y confirmarla,  "
+"generará una tarea en su proyecto de servicio externo. Haga clic en el botón"
+" inteligente :guilabel:`Tareas` para acceder a ella desde la orden de venta."
+" "
 
-#: ../../content/applications/services/field_service/default_warehouse.rst:27
+#: ../../content/applications/services/field_service/creating_tasks.rst:27
+msgid "Task creation from a helpdesk ticket"
+msgstr "Creación de tareas desde un ticket de soporte al cliente"
+
+#: ../../content/applications/services/field_service/creating_tasks.rst:29
 msgid ""
-":doc:`/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations`"
+"If you have the Helpdesk app installed, you can :ref:`create field service "
+"tasks from a helpdesk ticket <helpdesk/field>`."
 msgstr ""
-":doc:`/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses_locations`"
-
-#: ../../content/applications/services/field_service/default_warehouse.rst:32
-msgid "For your profile"
-msgstr "Para su perfil"
-
-#: ../../content/applications/services/field_service/default_warehouse.rst:34
-msgid ""
-"To set up a default warehouse for yourself, click your **profile icon** in "
-"the upper right corner of the screen, then, go to :menuselection:`My Profile"
-" --> Preferences --> Default Warehouse`. Select the default warehouse from "
-"the drop-down menu."
-msgstr ""
-"Para configurar su almacén predeterminado, haga clic en su **icono de "
-"perfil** en la esquina superior derecha de la pantalla, luego vaya a "
-":menuselection:`Mi perfil --> Preferencias --> Almacén predeterminado`, "
-"después seleccione uno del menú desplegable."
-
-#: ../../content/applications/services/field_service/default_warehouse.rst:41
-msgid "For all users"
-msgstr "Para todos los usuarios"
-
-#: ../../content/applications/services/field_service/default_warehouse.rst:43
-msgid ""
-"To set up a default warehouse for a specific user, go to "
-":menuselection:`Settings --> Users --> Manage users`, select a user, then go"
-" to the :guilabel:`Preferences` tab. Scroll down to :guilabel:`Inventory`, "
-"and select the default warehouse from the drop-down menu."
-msgstr ""
-"Para configurar un almacén automático para un usuario en específico, vaya a "
-":menuselection:`Ajustes --> Usuarios --> Gestionar usuarios`, seleccione a "
-"un usuario, después vaya a la pestaña :guilabel:`Preferencias`. Baje a la "
-"sección :guilabel:`Inventario` y seleccione un almacén predeterminado del "
-"menú desplegable."
-
-#: ../../content/applications/services/field_service/default_warehouse.rst-1
-msgid "Selection of a default warehouse on a user profile."
-msgstr "Selección de un almacén predeterminado en el perfil de un usuario."
-
-#: ../../content/applications/services/field_service/default_warehouse.rst:51
-msgid "Use in field service tasks"
-msgstr "Uso en las tareas de servicio externo"
-
-#: ../../content/applications/services/field_service/default_warehouse.rst:53
-msgid ""
-"Once a default warehouse has been configured for a user, the materials used "
-"for a sales order related to a Field Service task are pulled from that "
-"specific warehouse. Open the related sales order, go to the :guilabel:`Other"
-" Info` tab, then scroll down to :guilabel:`Delivery`. The default warehouse "
-"is applied correctly."
-msgstr ""
-"Ya que configuró un almacén predeterminado para un usuario, los materiales "
-"que se usen para una orden de venta que esté relacionada con una tarea de "
-"trabajo de campo saldrán de ese almacén en específico. Abra la orden de "
-"venta relacionada, vaya a la pestaña :guilabel:`Más información`, luego baje"
-" a :guilabel:`Entrega`, aquí podrá revisar que el almacén automático sea el "
-"correcto."
-
-#: ../../content/applications/services/field_service/default_warehouse.rst:58
-msgid ""
-"Once the Field Service task is marked as done, the stock of the default "
-"warehouse is automatically updated."
-msgstr ""
-"Ya que la tarea de trabajo de campo se marque como hecha, las existencias "
-"del almacén se actualizarán de manera automática."
-
-#: ../../content/applications/services/field_service/onsite_interventions.rst:3
-msgid "Onsite interventions planning"
-msgstr "Planificación de intervenciones in situ"
-
-#: ../../content/applications/services/field_service/onsite_interventions.rst:6
-msgid "From a sales order"
-msgstr "Desde una orden de ventas"
-
-#: ../../content/applications/services/field_service/onsite_interventions.rst:8
-msgid ""
-"Allowing your sales team to open onsite interventions creates a seamless "
-"experience for your customers. They can receive a quotation they first have "
-"to approve before the work even starts."
-msgstr ""
-"El permitir a su equipo de ventas que abre intervenciones in situ hace que "
-"la experiencia del usuario no tenga contratiempos. Los clientes recibirán "
-"una cotización que tendrán que aprobar antes de que el trabajo inicie."
-
-#: ../../content/applications/services/field_service/onsite_interventions.rst:11
-msgid ""
-"Go to :menuselection:`Field Service --> Configuration --> Products` and "
-"create or edit a product."
-msgstr ""
-"Vaya a: menuselection:`Servicio externo -> Configuración -> Productos` y "
-"cree o edite un producto."
-
-#: ../../content/applications/services/field_service/onsite_interventions.rst:13
-msgid ""
-"Under the :guilabel:`General Information` tab, select :guilabel:`Service` as"
-" :guilabel:`Product Type`."
-msgstr ""
-"En la pestaña :guilabel:`Información general` seleccione "
-":guilabel:`Servicio` como :guilabel:`Tipo de producto`."
-
-#: ../../content/applications/services/field_service/onsite_interventions.rst:15
-msgid ""
-"Under the :guilabel:`Sales` tab, select :guilabel:`Timesheets on tasks` as "
-":guilabel:`Service Invoicing Policy`."
-msgstr ""
-"En la pestaña :guilabel:`Ventas` para :guilabel:`Política de facturación de "
-"servicios` seleccione :guilabel:`Hojas de horas`."
-
-#: ../../content/applications/services/field_service/onsite_interventions.rst:17
-msgid ""
-"Select :guilabel:`Create a task in an existing project` as "
-":guilabel:`Service Tracking`."
-msgstr ""
-"Para :guilabel:`dar seguimiento al servicio` seleccione :guilabel:`Crear una"
-" tarea en un proyecto existente`."
-
-#: ../../content/applications/services/field_service/onsite_interventions.rst:18
-msgid "Select your :guilabel:`Project`."
-msgstr "Seleccione su :guilabel:`Proyecto`."
-
-#: ../../content/applications/services/field_service/onsite_interventions.rst:19
-msgid "If you use them, select your :guilabel:`Worksheet Template`, and save."
-msgstr ""
-"Seleccione la :guilabel:`Plantilla de hoja de trabajo` si la usa y después "
-"guarde sus cambios."
-
-#: ../../content/applications/services/field_service/onsite_interventions.rst-1
-msgid ""
-"Product configuration to create tasks from sales orders in Odoo Field "
-"Service"
-msgstr ""
-"Configuración del producto para crear tareas desde las órdenes de ventas en "
-"el Servicio de externo de Odoo"
-
-#: ../../content/applications/services/field_service/onsite_interventions.rst:25
-msgid ""
-"From the :doc:`Sales <../../sales/sales>` app, create a quotation with the "
-"product and confirm it. A task is automatically set up under your Field "
-"Service project. It is directly accessible from the sales order."
-msgstr ""
-"Desde la aplicación :doc:`Ventas <../../sales/sales>` cree una cotización "
-"con el producto y después confírmela. Verá que se creará una tarea de manera"
-" automática en el proyecto de Servicio externo. Puede acceder a esta tarea "
-"de manera automática desde la orden de ventas."
-
-#: ../../content/applications/services/field_service/onsite_interventions.rst-1
-msgid "Field Service task on a sales order in Odoo Sales"
-msgstr ""
-"Tarea de servicio externo en una orden de venta en la aplicación Ventas de "
-"Odoo."
-
-#: ../../content/applications/services/field_service/onsite_interventions.rst:34
-msgid "From helpdesk tickets"
-msgstr "Desde los tickets del servicio de asistencia"
-
-#: ../../content/applications/services/field_service/onsite_interventions.rst:36
-msgid ""
-"The integration with the :doc:`Helpdesk <../helpdesk>` app lets your "
-"helpdesk team manage intervention requests directly. Planning field service "
-"tasks from tickets speeds up your processes."
-msgstr ""
-"La integración con la aplicación :doc:`Servicio de asistencia <../helpdesk>`"
-" su equipo de soporte podrá gestionar solicitudes de intervención "
-"directamente. Además, el que pueda planear tareas del servicio externo "
-"agilizará su proceso."
-
-#: ../../content/applications/services/field_service/onsite_interventions.rst:40
-msgid "Configure the helpdesk team"
-msgstr "Configurar el equipo de servicio de asistencia"
-
-#: ../../content/applications/services/field_service/onsite_interventions.rst:42
-msgid ""
-"Go to :menuselection:`Helpdesk --> Configuration --> Helpdesk Teams`. Select"
-" a team and enable :guilabel:`Onsite Interventions`."
-msgstr ""
-"Vaya a :menuselection:`Servicio de asistencia --> Configuración --> Equipos "
-"de servicio de asistencia`. Seleccione un equipo y elija "
-":guilabel:`Intervenciones in situ`."
-
-#: ../../content/applications/services/field_service/onsite_interventions.rst-1
-msgid "Onsite interventions settings in Odoo Helpdesk"
-msgstr ""
-"Ajustes de las intervenciones in situ dentro del servicio de asistencia de "
-"Odoo."
-
-#: ../../content/applications/services/field_service/onsite_interventions.rst:49
-msgid ""
-"The helpdesk tickets of the team now display the :guilabel:`Plan "
-"Intervention` button. Click on it to create a new task under your field "
-"service project."
-msgstr ""
-"Los tickets del servicio de asistencia ahora vienen con un botón para "
-":guilabel:`Planear intervención`. Haga cic aquí para crear una nueva tarea "
-"en el proyecto de servicio externo."
-
-#: ../../content/applications/services/field_service/onsite_interventions.rst-1
-msgid "Plan intervention from helpdesk tickets in Odoo Helpdesk"
-msgstr ""
-"Planeación de intervención desde los tickets del servicio de asistencia de "
-"Odoo."
+"Si tiene la aplicación Soporte al cliente instalada en su base de datos "
+"podrá :ref:`crear tareas de servicio externo desde un ticket de soporte al "
+"cliente<helpdesk/field>`."
 
 #: ../../content/applications/services/field_service/planning_itinerary.rst:3
 msgid "Planning an itinerary"
@@ -364,20 +175,14 @@ msgid "Displaying your itinerary on a map"
 msgstr "Mostrar la ruta en el mapa"
 
 #: ../../content/applications/services/field_service/planning_itinerary.rst:21
-msgid "For a field service task to be featured on the map, it needs:"
+msgid ""
+"For a field service task to be featured on the map, a **valid address** must"
+" be provided for the customer."
 msgstr ""
-"Lo siguiente es necesario para que una tarea de servicio externo aparezca en"
-" el mapa:"
-
-#: ../../content/applications/services/field_service/planning_itinerary.rst:23
-msgid "a :guilabel:`Planned Date`;"
-msgstr "una :guilabel:`fecha planeada`"
+"El cliente debe tener una **dirección válida** para que una tarea de "
+"servicio externo aparezca en el mapa."
 
 #: ../../content/applications/services/field_service/planning_itinerary.rst:24
-msgid "a valid address linked to the customer’s profile."
-msgstr "una dirección válida vinculada al perfil del cliente."
-
-#: ../../content/applications/services/field_service/planning_itinerary.rst:26
 msgid ""
 "To display your tasks on a map, go to :menuselection:`Field Service --> My "
 "Tasks --> Map`. To create your itinerary, Odoo sorts out your field service "
@@ -388,7 +193,7 @@ msgstr ""
 "sus tareas en un mapa. Para crear su itinerario, Odoo las ordena por "
 ":guilabel:`fecha planeada` para mostrar la ruta de una ubicación a otra."
 
-#: ../../content/applications/services/field_service/planning_itinerary.rst:30
+#: ../../content/applications/services/field_service/planning_itinerary.rst:28
 msgid ""
 "To open your itinerary on the Google Maps website or app, click "
 ":guilabel:`View in Google Maps`. Google Maps includes your current location "
@@ -398,7 +203,7 @@ msgstr ""
 " sitio web o su respectiva aplicación. Google Maps incluye su ubicación "
 "actual como punto de partida de su ruta."
 
-#: ../../content/applications/services/field_service/planning_itinerary.rst:34
+#: ../../content/applications/services/field_service/planning_itinerary.rst:32
 msgid ""
 "By default, the map shows today’s tasks. Remove the :guilabel:`Today` filter"
 " in the search bar to display all tasks. Your tasks are then sorted by date "
@@ -408,7 +213,7 @@ msgstr ""
 "filtro :guilabel:`Hoy` en la barra de búsqueda para visualizar todas las "
 "tareas y estas se ordenan por fecha en la columna izquierda."
 
-#: ../../content/applications/services/field_service/planning_itinerary.rst:36
+#: ../../content/applications/services/field_service/planning_itinerary.rst:34
 msgid ""
 "Click your task in the left column or the map pin to display the task's "
 "details. From there, you can :guilabel:`Open` the task or click "
@@ -420,11 +225,392 @@ msgstr ""
 "puede :guilabel:`abrir` la tarea o hacer clic en :guilabel:`Ir a` para "
 "obtener la ruta desde su ubicación actual hasta la ubicación específica."
 
-#: ../../content/applications/services/helpdesk.rst:7
-msgid "Helpdesk"
-msgstr "Servicio de asistencia"
+#: ../../content/applications/services/field_service/product_management.rst:3
+msgid "Product management"
+msgstr "Gestión de productos"
 
-#: ../../content/applications/services/helpdesk.rst:9
+#: ../../content/applications/services/field_service/product_management.rst:5
+msgid ""
+"When field service workers perform tasks on-site, they commonly use products"
+" to complete their work. Odoo Field Service allows them to record these "
+"products using the **product catalog** and **default warehouse** features. "
+"Doing so keeps your inventory up-to-date in real-time and automatically adds"
+" the products to the invoice."
+msgstr ""
+"Los trabajadores de servicio suelen utilizar productos para completar su "
+"trabajo cuando realizan tareas presenciales. La aplicación Servicio externo "
+"de Odoo les permite registrar estos productos con las funciones de "
+"**catálogo de productos** y **almacén predeterminado**, estas mantienen el "
+"inventario actualizado en tiempo real y agrega los productos a la factura de"
+" forma automática."
+
+#: ../../content/applications/services/field_service/product_management.rst:11
+msgid "Product catalog"
+msgstr "Catálogo del producto"
+
+#: ../../content/applications/services/field_service/product_management.rst:13
+msgid ""
+"To activate the product catalog for Field Service, go to "
+":menuselection:`Field Service --> Configuration --> Settings` and enable the"
+" :guilabel:`Time and Material Invoicing` feature."
+msgstr ""
+"Para habilitar el catálogo de productos para servicio externo, vaya a "
+":menuselection:`Servicio externo --> Configuración --> Ajustes` y active la "
+"función :guilabel:`Facturación de tiempo y materiales`."
+
+#: ../../content/applications/services/field_service/product_management.rst:16
+msgid "To add products to a task, proceed as follows:"
+msgstr "Siga estos pasos para agregar productos a una tarea:"
+
+#: ../../content/applications/services/field_service/product_management.rst:18
+msgid "Go to Field Service and open a task."
+msgstr "Vaya a Servicio externo y abra una tarea. "
+
+#: ../../content/applications/services/field_service/product_management.rst:19
+msgid "Click the :guilabel:`Products` smart button."
+msgstr "Haga clic en el botón inteligente :guilabel:`Productos`."
+
+#: ../../content/applications/services/field_service/product_management.rst:20
+msgid "Click :guilabel:`Add` on a product card to add it to your task."
+msgstr ""
+"Haga clic en :guilabel:`Agregar` en la tarjeta de un producto para añadirla "
+"a su tarea."
+
+#: ../../content/applications/services/field_service/product_management.rst:21
+msgid ""
+"If needed, adjust the number of products using the :guilabel:`-` and "
+":guilabel:`+` buttons."
+msgstr ""
+"En caso de que sea necesario, ajuste la cantidad de los productos con los "
+"botones :guilabel:`-` y :guilabel:`+`."
+
+#: ../../content/applications/services/field_service/product_management.rst:23
+msgid ""
+"Going back to your task, the smart button now displays the amount of "
+"products you added and the price. You can return to the product catalog at "
+"any time to edit the product selection."
+msgstr ""
+"El botón inteligente de la tarea ahora mostrará la cantidad de productos que"
+" agregó y su precio. Regrese al catálogo en cualquier momento para editar "
+"los productos que seleccionó. "
+
+#: ../../content/applications/services/field_service/product_management.rst:27
+msgid ""
+"To create and edit products from Field Service, go to :menuselection:`Field "
+"Service --> Configuration --> Products`."
+msgstr ""
+"Vaya a :menuselection:`Servicio externo --> Configuración --> Productos` "
+"para crear y editar productos. "
+
+#: ../../content/applications/services/field_service/product_management.rst:29
+msgid ""
+"To find your products more easily, use the search bar and filter your "
+"products by :guilabel:`Product Category` and :guilabel:`Attributes`."
+msgstr ""
+"Use la barra de búsqueda y filtre sus productos por :guilabel:`categoría de "
+"producto` y :guilabel:`atributos` Para encontrar sus productos con mayor "
+"facilidad. "
+
+#: ../../content/applications/services/field_service/product_management.rst:33
+msgid "User default warehouse"
+msgstr "Almacén predeterminado del usuario"
+
+#: ../../content/applications/services/field_service/product_management.rst:35
+msgid ""
+"Setting up a **default warehouse** can be useful for field technicians who "
+"keep a supply on the go in their van or those who always resupply from the "
+"same warehouse. It also allows field workers to switch between warehouses "
+"from their profiles."
+msgstr ""
+"Configurar un **almacén predeterminado** puede ser útil para los técnicos de"
+" campo que llevan los productos en su camioneta o para aquellos que siempre "
+"se reabastecen en el mismo almacén. También permite que los trabajadores de "
+"campo cambien de almacenes desde sus perfiles."
+
+#: ../../content/applications/services/field_service/product_management.rst:39
+msgid ""
+"Products in sales orders created during field interventions are always "
+"pulled from the default warehouse, keeping the inventory accurate."
+msgstr ""
+"Los productos en las órdenes de venta creadas durante las intervenciones in "
+"situ siempre se extraen del almacén predeterminado, de esta forma el "
+"inventario se mantiene exacto."
+
+#: ../../content/applications/services/field_service/product_management.rst:43
+msgid ":doc:`../../inventory_and_mrp/inventory`"
+msgstr ":doc:`../../inventory_and_mrp/inventory`"
+
+#: ../../content/applications/services/field_service/product_management.rst:46
+#: ../../content/applications/services/field_service/worksheets.rst:15
+#: ../../content/applications/services/helpdesk/overview/help_center.rst:14
+#: ../../content/applications/services/planning.rst:29
+#: ../../content/applications/services/project/project_management.rst:19
+#: ../../content/applications/services/project/tasks/recurring_tasks.rst:13
+msgid "Configuration"
+msgstr "Configuración"
+
+#: ../../content/applications/services/field_service/product_management.rst:48
+msgid ""
+"To set up a user default warehouse, the :doc:`storage locations "
+"<../../inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations>`"
+" feature needs to be activated in the **Inventory** app. It is also "
+"necessary to have more than one warehouse in your database."
+msgstr ""
+"Para configurar el almacén predeterminado de un usuario debe activar la "
+"función :doc:`ubicaciones de almacenamiento "
+"<../../inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations>`"
+" en la aplicación **Inventario** y también debe tener más de un almacén en "
+"su base de datos."
+
+#: ../../content/applications/services/field_service/product_management.rst:53
+msgid ""
+"You can either set it up :ref:`for your profile <default-warehouse/my-"
+"profile>`, or :ref:`for all users <default-warehouse/all-users>`."
+msgstr ""
+"Puede configurarlo :ref:`para su perfil <default-warehouse/my-profile>` or "
+":ref:`para todos los usuarios <default-warehouse/all-users>`."
+
+#: ../../content/applications/services/field_service/product_management.rst:57
+msgid ""
+":doc:`../../inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations`"
+msgstr ""
+":doc:`../../inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations`"
+
+#: ../../content/applications/services/field_service/product_management.rst:62
+msgid "For your profile"
+msgstr "Para su perfil"
+
+#: ../../content/applications/services/field_service/product_management.rst:64
+msgid ""
+"To set up a default warehouse for yourself, click your **profile icon** in "
+"the upper right corner of the screen, then, go to :menuselection:`My Profile"
+" --> Preferences --> Default Warehouse`. Select the default warehouse from "
+"the drop-down menu."
+msgstr ""
+"Para configurar su almacén predeterminado, haga clic en su **icono de "
+"perfil** en la esquina superior derecha de la pantalla, luego vaya a "
+":menuselection:`Mi perfil --> Preferencias --> Almacén predeterminado`, "
+"después seleccione uno del menú desplegable."
+
+#: ../../content/applications/services/field_service/product_management.rst:71
+msgid "For all users"
+msgstr "Para todos los usuarios"
+
+#: ../../content/applications/services/field_service/product_management.rst:73
+msgid ""
+"To set up a default warehouse for a specific user, go to "
+":menuselection:`Settings --> Users --> Manage users`, select a user, then go"
+" to the :guilabel:`Preferences` tab. Scroll down to :guilabel:`Inventory`, "
+"and select the default warehouse from the drop-down menu."
+msgstr ""
+"Para configurar un almacén automático para un usuario en específico, vaya a "
+":menuselection:`Ajustes --> Usuarios --> Gestionar usuarios`, seleccione a "
+"un usuario, después vaya a la pestaña :guilabel:`Preferencias`. Baje a la "
+"sección :guilabel:`Inventario` y seleccione un almacén predeterminado del "
+"menú desplegable."
+
+#: ../../content/applications/services/field_service/product_management.rst-1
+msgid "Selection of a default warehouse on a user profile."
+msgstr "Selección de un almacén predeterminado en el perfil de un usuario."
+
+#: ../../content/applications/services/field_service/product_management.rst:81
+msgid "Use in field service tasks"
+msgstr "Uso en las tareas de servicio externo"
+
+#: ../../content/applications/services/field_service/product_management.rst:83
+msgid ""
+"Once a default warehouse has been configured for a user, the materials used "
+"for a sales order related to a Field Service task are pulled from that "
+"specific warehouse. Open the related sales order, go to the :guilabel:`Other"
+" Info` tab, then scroll down to :guilabel:`Delivery`. The default warehouse "
+"is applied correctly."
+msgstr ""
+"Ya que configuró un almacén predeterminado para un usuario, los materiales "
+"que se usen para una orden de venta que esté relacionada con una tarea de "
+"trabajo de campo saldrán de ese almacén en específico. Abra la orden de "
+"venta relacionada, vaya a la pestaña :guilabel:`Más información`, luego baje"
+" a :guilabel:`Entrega`, aquí podrá revisar que el almacén automático sea el "
+"correcto."
+
+#: ../../content/applications/services/field_service/product_management.rst:88
+msgid ""
+"Once the Field Service task is marked as done, the stock of the default "
+"warehouse is automatically updated."
+msgstr ""
+"Ya que la tarea de trabajo de campo se marque como hecha, las existencias "
+"del almacén se actualizarán de manera automática."
+
+#: ../../content/applications/services/field_service/worksheets.rst:3
+msgid "Worksheets"
+msgstr "Hojas de trabajo"
+
+#: ../../content/applications/services/field_service/worksheets.rst:5
+msgid ""
+"**Worksheets** help your field service workers perform and report their on-"
+"site tasks. They can feature various information, such as instructions, to-"
+"do lists, etc. You can also format your worksheet using checkboxes, bullet "
+"points, blank fields to fill in, HTML, and add files, images, links, and "
+"more."
+msgstr ""
+"Las **hojas de trabajo** le ayudan a sus trabajadores de servicio externo a "
+"realizar y reportar sus tareas presenciales. Estas hojas incluyen "
+"información como instrucciones, listas de actividades pendientes, entre "
+"otras cosas. El formato de la lista puede incluir casillas, viñetas, campos "
+"vacíos para completar, HTML y también puede solicitar que adjunten archivos,"
+" imágenes, enlaces y mucho más."
+
+#: ../../content/applications/services/field_service/worksheets.rst:10
+msgid ""
+"It is common for businesses to have their workers perform the same type of "
+"field service repeatedly. Making custom **worksheet templates** eliminates "
+"the need to recreate the same worksheet each time you plan a similar field "
+"service task."
+msgstr ""
+"Es normal que las empresas le pidan a sus empleados que realicen el mismo "
+"tipo de servicio externo varias veces. Crear **hojas de trabajo** "
+"personalizadas elimina la necesidad de recrear la misma hoja de trabajo cada"
+" vez que planea una tarea de servicio externo similar."
+
+#: ../../content/applications/services/field_service/worksheets.rst:17
+msgid ""
+"To use worksheets in Field Service, go to :menuselection:`Field Service --> "
+"Configuration --> Settings`, enable the :guilabel:`Worksheets` feature, and "
+"click :guilabel:`Save`."
+msgstr ""
+"Para usar las hojas de trabajo en el Servicio externo, vaya a "
+":menuselection:`Servicio externo --> Configuración --> Ajustes`, active la "
+"función :guilabel:`Hojas de trabajo` y haga clic en :guilabel:`Guardar`."
+
+#: ../../content/applications/services/field_service/worksheets.rst:21
+msgid ""
+"Worksheet templates are designed using **Studio**. Enabling the "
+":guilabel:`Worksheets` feature automatically installs the **Studio** app, "
+"which may impact your price plan."
+msgstr ""
+"Las plantillas de hoja de trabajo se diseñan con **Studio**. Al activar la "
+"función :guilabel:`Hojas de trabajo` se instalará de forma automática la "
+"aplicación **Studio**, lo que puede afectar su plan de pago."
+
+#: ../../content/applications/services/field_service/worksheets.rst:25
+msgid "Create a worksheet template"
+msgstr "Crear una plantilla de hoja de trabajo"
+
+#: ../../content/applications/services/field_service/worksheets.rst:27
+msgid ""
+"To create your **worksheet templates**, go to :menuselection:`Field Service "
+"--> Configuration --> Worksheet Templates`. Click :guilabel:`New` and give "
+"your worksheet template a name. Manually save, then click :guilabel:`Design "
+"Template` to open **Studio** and customize your worksheet template."
+msgstr ""
+"Para crear una **plantilla de hoja de trabajo** vaya a "
+":menuselection:`Servicio externo --> Configuración --> Plantillas de hoja de"
+" trabajo`. Haga clic en :guilabel:`Nuevo`, ponga un nombre para su hoja de "
+"trabajo, guarde de forma manual y después haga clic en :guilabel:`Diseñar "
+"plantilla` para abrir **Studio** y personalizar su hoja de trabajo."
+
+#: ../../content/applications/services/field_service/worksheets.rst:31
+msgid ""
+"In Studio, drag and drop the desired fields from the left column into your "
+"worksheet on the right. To rearrange the fields on the worksheet, drag and "
+"drop them in the desired order. Click a field to customize its "
+":ref:`properties <studio/fields/properties>`."
+msgstr ""
+"En Studio, arrastre y suelte los campos deseados desde la columna izquierda "
+"hacia la hoja de trabajo en la derecha. Para acomodar los campos en la hoja "
+"de trabajo solo tiene que arrastrarlos y soltarlos al lugar que quiere. Haga"
+" clic en un campo para personalizar sus :ref:`propiedades "
+"<studio/fields/properties>`."
+
+#: ../../content/applications/services/field_service/worksheets.rst:35
+msgid ""
+"When your worksheet template is complete, click :guilabel:`Close` in the top"
+" right corner of the page to leave **Studio**."
+msgstr ""
+"Cuando termine su plantilla de hoja de trabajo, haga clic en "
+":guilabel:`Cerrar` en la esquina superior derecha de la pantalla para salir "
+"de **Studio**."
+
+#: ../../content/applications/services/field_service/worksheets.rst:39
+msgid ":doc:`Fields and widgets in Studio <../../studio/fields>`"
+msgstr ":doc:`Campos y widgets en Studio <../../studio/fields>`"
+
+#: ../../content/applications/services/field_service/worksheets.rst:42
+msgid "Add a worksheet template to a field service task"
+msgstr "Agregar una hoja de trabajo a una tarea de servicio externo"
+
+#: ../../content/applications/services/field_service/worksheets.rst:44
+msgid ""
+"Go to your field service task, select a :guilabel:`Worksheet Template`, and "
+"click :guilabel:`Save`."
+msgstr ""
+"Vaya a su tarea de servicio externo, seleccione una :guilabel:`Plantilla de "
+"hoja de trabajo` y haga clic en :guilabel:`Guardar`."
+
+#: ../../content/applications/services/field_service/worksheets.rst:46
+msgid ""
+"By default, the :guilabel:`Default Worksheet` template is selected. To "
+"define another default worksheet template, click the :guilabel:`➔` "
+"(:guilabel:`Internal link`) icon that appears when you hover your mouse over"
+" the :guilabel:`Project` field on the task form."
+msgstr ""
+"La plantilla seleccionada por defecto es la :guilabel:`Hoja de trabajo "
+"predeterminada`. Para definir otra plantilla predeterminada para la hoja de "
+"trabajo, haga clic en el icono  :guilabel:`➔` (:guilabel:`Enlace interno`) "
+"que aparece cuando pasa el cursos por encima del campo :guilabel:`Proyecto` "
+"en el formulario de la tarea."
+
+#: ../../content/applications/services/field_service/worksheets.rst-1
+msgid "Mouse on project name to setup default worksheet template"
+msgstr ""
+"Cursor sobre el nombre del proyecto para configurar la hoja de trabajo "
+"predeterminada."
+
+#: ../../content/applications/services/field_service/worksheets.rst:54
+msgid ""
+"Then, in the :guilabel:`Settings` tab,  scroll down to the :guilabel:`Field "
+"service` section and select the :guilabel:`Worksheet Template` you want to "
+"set up as default."
+msgstr ""
+"Después, en la pestaña :guilabel:`Ajustes` deslícese hacia abajo hasta la "
+"sección :guilabel:`Servicio externo` y seleccione la :guilabel:`Plantilla de"
+" trabajo` que quiere configurar como predeterminada."
+
+#: ../../content/applications/services/field_service/worksheets.rst:58
+msgid "Use worksheets on site"
+msgstr "Usar la hoja de trabajo in situ"
+
+#: ../../content/applications/services/field_service/worksheets.rst:60
+msgid ""
+"To complete the worksheet on site, access the task and click the "
+":guilabel:`Worksheet` smart button."
+msgstr ""
+"Para completar la hoja de trabajo in situ, acceda a la tarea y después haga "
+"clic en el botón inteligente :guilabel:`Hoja de trabajo`."
+
+#: ../../content/applications/services/field_service/worksheets.rst:63
+msgid ""
+"As soon as you save a worksheet, the label of the :guilabel:`Worksheet` "
+"smart button on the task changes to :guilabel:`Worksheet Complete` instead, "
+"even if some fields are left blank."
+msgstr ""
+"Tan pronto como guarde una hoja de trabajo, la etiqueta del botón "
+"inteligente :guilabel:`Hoja de trabajo` en la tarea cambiará a "
+":guilabel:`Hoja de trabajo completa`, incluso si algunos campos se dejan en "
+"blanco."
+
+#: ../../content/applications/services/field_service/worksheets.rst:66
+msgid ""
+"Any field defined as :guilabel:`Required` has to be filled for a worksheet "
+"to be saved."
+msgstr ""
+"Cualquier campo que esté definido como :guilabel:`Obligatorio` debe llenarse"
+" para que una hoja de trabajo se pueda guardar."
+
+#: ../../content/applications/services/helpdesk.rst:6
+msgid "Helpdesk"
+msgstr "Soporte al cliente"
+
+#: ../../content/applications/services/helpdesk.rst:8
 msgid ""
 "Odoo *Helpdesk* is a ticketing-based customer support application. Multiple "
 "teams can be configured and managed in one dashboard, each with their own "
@@ -432,49 +618,48 @@ msgid ""
 "customizable stages that enable teams to track, prioritize, and solve "
 "customer issues quickly and efficiently."
 msgstr ""
-"*Servicio de asistencia* de Odoo es una aplicación de servicio al cliente "
-"que trabaja con tickets. Puede configurar y gestionar varios equipos en un "
+"*Soporte al cliente* de Odoo es una aplicación de servicio al cliente que "
+"trabaja con tickets. Puede configurar y gestionar varios equipos en un "
 "tablero, cada uno con su propio flujo para tickets que suben los clientes. "
 "Los flujos se organizan según etapas que se pueden personalizar y permite "
 "que los equipos monitoreen, den prioridad y solucionen los problemas de los "
 "clientes de manera rápida y eficiente."
 
-#: ../../content/applications/services/helpdesk.rst:15
+#: ../../content/applications/services/helpdesk.rst:14
 msgid "Create a Helpdesk team"
-msgstr "Crear un equipo del servicio de asistencia"
+msgstr "Crear un equipo de soporte al cliente"
 
-#: ../../content/applications/services/helpdesk.rst:17
+#: ../../content/applications/services/helpdesk.rst:16
 msgid ""
 "To view or modify *Helpdesk* teams, go to :menuselection:`Helpdesk app --> "
 "Configuration --> Helpdesk Teams`. To create a new team, click the "
 ":guilabel:`New` button in the top-left of the dashboard."
 msgstr ""
-"Para ver o modificar equipos del *Servicio de asistencia* vaya a "
-":menuselection:`la aplicación del Servicio de asistencia --> Configuración "
-"--> Equipos del servicio de asistencia`. Para crear un nuevo equipo, haga "
-"clic en el botón :guilabel:`Nuevo` en la parte superior izquierda del "
-"tablero."
+"Vaya a :menuselection:`Soporte al cliente --> Configuración --> Equipos de "
+"soporte al cliente` para ver o modificar equipos de *soporte al cliente*. "
+"Para crear uno, haga clic en el botón :guilabel:`Nuevo` que está ubicado en "
+"la parte superior izquierda del tablero."
 
 #: ../../content/applications/services/helpdesk.rst-1
 msgid "View of the Helpdesk teams page in Odoo Helpdesk."
 msgstr ""
-"Vista de la página de los equipos del servicio de asistencia en la "
-"aplicación Servicio de asistencia de Odoo."
+"Vista de la página de los equipos de soporte al cliente en la aplicación "
+"Soporte al cliente de Odoo."
 
-#: ../../content/applications/services/helpdesk.rst:25
+#: ../../content/applications/services/helpdesk.rst:24
 msgid ""
 "On the blank Helpdesk team form, enter a :guilabel:`Name` for the new team. "
 "Then, enter a description of the team in the field below the team name, if "
 "desired. To change the company this team is assigned to, select it from the "
 ":guilabel:`Company` drop-down menu."
 msgstr ""
-"En el formulario en blanco del servicio de asistencia ingrese un "
-":guilabel:`Nombre` para el equipo nuevo. Después, ingrese una descripción "
-"para el equipo en el campo debajo del título del equipo si lo desea. Para "
-"cambiar la empresa a la que pertenece este equipo, selecciónela desde el "
-"menú desplegable :guilabel:`Empresa`."
+"Ingrese un :guilabel:`nombre` para el equipo nuevo en el formulario vacío "
+"del equipo de soporte al cliente y, si lo desea, después escriba una "
+"descripción para el equipo en el campo que se encuentra abajo del título del"
+" equipo. Para cambiar la empresa a la que pertenece este equipo, "
+"selecciónela con el menú desplegable :guilabel:`Empresa`."
 
-#: ../../content/applications/services/helpdesk.rst:30
+#: ../../content/applications/services/helpdesk.rst:29
 msgid ""
 "The team description is published on the public facing :doc:`website form "
 "<helpdesk/overview/receiving_tickets>`, where customers and portal users "
@@ -493,11 +678,11 @@ msgstr ""
 "Vista del formulario de sitio web de un equipo de Mesa de asistencia donde "
 "se muestra la descripción del equipo."
 
-#: ../../content/applications/services/helpdesk.rst:40
+#: ../../content/applications/services/helpdesk.rst:39
 msgid "Visibility & Assignment"
 msgstr "Visibilidad y asignaciones"
 
-#: ../../content/applications/services/helpdesk.rst:42
+#: ../../content/applications/services/helpdesk.rst:41
 msgid ""
 "The *Visibility* settings alter which internal users and portal users have "
 "access to this team and its tickets. The *Assignment* settings alter how "
@@ -507,11 +692,11 @@ msgstr ""
 "tienen acceso a este equipo y a sus tickets. Los ajustes de *Asignación* "
 "cambian cómo se les asignan los tickets a los usuarios."
 
-#: ../../content/applications/services/helpdesk.rst:46
+#: ../../content/applications/services/helpdesk.rst:45
 msgid "Determine team visibility"
 msgstr "Determinar la visibilidad del equipo"
 
-#: ../../content/applications/services/helpdesk.rst:48
+#: ../../content/applications/services/helpdesk.rst:47
 msgid ""
 "Under the :guilabel:`Visibility` section, select one of the following "
 "options to determine who can view this team and its tickets:"
@@ -519,7 +704,7 @@ msgstr ""
 "En la sección :guilabel:`Visibilidad` seleccione una de las siguientes "
 "opciones para determinar quién puede ver este equipo y sus tickets:"
 
-#: ../../content/applications/services/helpdesk.rst:51
+#: ../../content/applications/services/helpdesk.rst:50
 msgid ""
 ":guilabel:`Invited internal users (private)`: internal users can access the "
 "team and the tickets they are following. This access can be modified on each"
@@ -534,7 +719,7 @@ msgstr ""
 "de agregarlos como seguidores a un ticket o :ref:`al equipo "
 "<helpdesk/follow>`."
 
-#: ../../content/applications/services/helpdesk.rst:55
+#: ../../content/applications/services/helpdesk.rst:54
 msgid ""
 ":guilabel:`All internal users (company)`: all internal users can access the "
 "team and all of its tickets."
@@ -542,7 +727,7 @@ msgstr ""
 ":guilabel:`Todos los usuarios internos (empresa)`: todos los usuarios "
 "internos pueden acceder al equipo y a todos sus tickets."
 
-#: ../../content/applications/services/helpdesk.rst:57
+#: ../../content/applications/services/helpdesk.rst:56
 msgid ""
 ":guilabel:`Invited portal users and all internal users (public)`: all "
 "internal users can access the team and all of its tickets. Portal users can "
@@ -553,7 +738,7 @@ msgstr ""
 "sus tickets. Los usuarios del portal solo pueden acceder a los tickets que "
 "están siguiendo."
 
-#: ../../content/applications/services/helpdesk.rst:61
+#: ../../content/applications/services/helpdesk.rst:60
 msgid ""
 "A `Customer Support` team, meant to handle general shipping and product "
 "issues, would have the visibility set on :guilabel:`Invited portal users and"
@@ -563,7 +748,7 @@ msgstr ""
 " los problemas de los productos tendrá a visibilidad configurada como "
 ":guilabel:`Usuarios del portal invitados y todos los usuarios internos`."
 
-#: ../../content/applications/services/helpdesk.rst:64
+#: ../../content/applications/services/helpdesk.rst:63
 msgid ""
 "At the same time, a `Financial Services` team handling tickets related to "
 "accounting or tax information would only need to be visible to "
@@ -573,7 +758,7 @@ msgstr ""
 "tickets relacionados a la contabilidad o información de impuestos solo debe "
 "ser visible para :guilabel:`Usuarios internos invitados`."
 
-#: ../../content/applications/services/helpdesk.rst:68
+#: ../../content/applications/services/helpdesk.rst:67
 msgid ""
 "A team's visibility can be altered after the initial configuration. However,"
 " if the team changes from public access to either private or company-only "
@@ -585,11 +770,11 @@ msgstr ""
 "privado o solo para empresa, los usuarios del portal se quitarán de los "
 "seguidores tanto del equipo como de los tickets individuales."
 
-#: ../../content/applications/services/helpdesk.rst:75
+#: ../../content/applications/services/helpdesk.rst:74
 msgid "Follow all team's tickets"
 msgstr "Seguir todos los tickets del equipo"
 
-#: ../../content/applications/services/helpdesk.rst:77
+#: ../../content/applications/services/helpdesk.rst:76
 msgid ""
 "If a user should be notified about any updates regarding tickets for this "
 "team, select their name from the :guilabel:`Followers` drop-down menu, "
@@ -602,7 +787,7 @@ msgstr ""
 "todos los tickets del equipo`. Puede seleccionar varios usuarios para seguir"
 " a un solo equipo."
 
-#: ../../content/applications/services/helpdesk.rst:82
+#: ../../content/applications/services/helpdesk.rst:81
 msgid ""
 "External contacts can be selected in the :guilabel:`Followers` field. If the"
 " team's visibility is set to :guilabel:`Invited internal users (private)`, "
@@ -615,11 +800,11 @@ msgstr ""
 "una notificación sobre las actualizaciones de los tickets del equipo, pero "
 "**no** podrán verlos en el portal."
 
-#: ../../content/applications/services/helpdesk.rst:87
+#: ../../content/applications/services/helpdesk.rst:86
 msgid "Automatically assign new tickets"
 msgstr "Asignar nuevos tickets de forma automática"
 
-#: ../../content/applications/services/helpdesk.rst:89
+#: ../../content/applications/services/helpdesk.rst:88
 msgid ""
 "When tickets are received, they need to be assigned to a member of the team."
 " This is done either manually on each ticket individually, or through "
@@ -637,10 +822,10 @@ msgid ""
 "View of a Helpdesk team settings page emphasizing the automatic assignment features in Odoo\n"
 "Helpdesk."
 msgstr ""
-"Vista de la página de ajustes de un equipo de Servicio de asistencia donde se destacan las funciones de asignación automática en la aplicación\n"
-"Servicio de asistencia de Odoo."
+"Vista de la página de ajustes de un equipo de soporte al cliente donde se destacan las funciones de asignación automática en la aplicación\n"
+"Soporte al cliente de Odoo."
 
-#: ../../content/applications/services/helpdesk.rst:98
+#: ../../content/applications/services/helpdesk.rst:97
 msgid ""
 "As soon as :guilabel:`Automatic Assignment` has been enabled, additional "
 "fields appear."
@@ -648,7 +833,7 @@ msgstr ""
 "Tan pronto como se active la :guilabel:`asignación automática` aparecerán "
 "campos adicionales."
 
-#: ../../content/applications/services/helpdesk.rst:100
+#: ../../content/applications/services/helpdesk.rst:99
 msgid ""
 "Select one of the following assignment methods, based on how the workload "
 "should be allocated across the team:"
@@ -656,7 +841,7 @@ msgstr ""
 "Seleccione uno de los siguientes métodos de asignación según la manera en "
 "que se debe asignar la carga de trabajo para todo el equipo:"
 
-#: ../../content/applications/services/helpdesk.rst:103
+#: ../../content/applications/services/helpdesk.rst:102
 msgid ""
 ":guilabel:`Each user is assigned an equal number of tickets`: tickets are "
 "assigned to team members based on total ticket count, regardless of the "
@@ -667,7 +852,7 @@ msgstr ""
 "ticket, sin importar el número de tickets abiertos o cerrados que están "
 "asignados."
 
-#: ../../content/applications/services/helpdesk.rst:106
+#: ../../content/applications/services/helpdesk.rst:105
 msgid ""
 ":guilabel:`Each user has an equal number of open tickets`: tickets are "
 "assigned to team members based on how many open tickets they are currently "
@@ -677,7 +862,7 @@ msgstr ""
 "tickets se asignan a los miembros del equipo según cuántos tickets abiertos "
 "tienen asignados."
 
-#: ../../content/applications/services/helpdesk.rst:110
+#: ../../content/applications/services/helpdesk.rst:109
 msgid ""
 "When :guilabel:`Each user is assigned an equal number of tickets` is "
 "selected, the overall number of tickets assigned to team members is the "
@@ -687,7 +872,7 @@ msgstr ""
 "de tickets` el número total de tickets asignados a los miembros del equipo "
 "es el mismo, pero *no* toma en cuenta la carga de trabajo actual."
 
-#: ../../content/applications/services/helpdesk.rst:114
+#: ../../content/applications/services/helpdesk.rst:113
 msgid ""
 "When :guilabel:`Each user has an equal number of open tickets` is selected, "
 "it ensures a balanced workload among team members, as it takes the current "
@@ -697,7 +882,7 @@ msgstr ""
 "tickets abiertos` todos los miembros del equipo tendrán una carga de trabajo"
 " balanceada, ya que toma en cuenta el número de tickets activos actual."
 
-#: ../../content/applications/services/helpdesk.rst:117
+#: ../../content/applications/services/helpdesk.rst:116
 msgid ""
 "Finally, add the :guilabel:`Team Members` who are to be assigned tickets for"
 " this team. Leave the field empty to include all employees who have the "
@@ -709,7 +894,7 @@ msgstr ""
 "que tengan las asignaciones adecuadas y los permisos de acceso configurados "
 "en los ajustes de su cuenta de usuario."
 
-#: ../../content/applications/services/helpdesk.rst:122
+#: ../../content/applications/services/helpdesk.rst:121
 msgid ""
 "If an employee has time off scheduled in the *Time Off* application, they "
 "are **not** assigned tickets during that time. If no employees are "
@@ -720,30 +905,30 @@ msgstr ""
 " hay empleados disponibles, el sistema buscará hasta que haya una "
 "coincidencia."
 
-#: ../../content/applications/services/helpdesk.rst:127
+#: ../../content/applications/services/helpdesk.rst:126
 msgid ":ref:`Manage users <users/add-individual>`"
 msgstr ":ref:`Administrar usuarios <users/add-individual>`"
 
-#: ../../content/applications/services/helpdesk.rst:128
+#: ../../content/applications/services/helpdesk.rst:127
 msgid ":doc:`Access rights <../general/users/access_rights>`"
 msgstr ":doc:`Permisos de acceso <../general/users/access_rights>`"
 
-#: ../../content/applications/services/helpdesk.rst:131
+#: ../../content/applications/services/helpdesk.rst:130
 msgid "Create or modify stages"
 msgstr "Crear o modificar etapas"
 
-#: ../../content/applications/services/helpdesk.rst:133
+#: ../../content/applications/services/helpdesk.rst:132
 msgid ""
 "*Stages* are used to organize the *Helpdesk* pipeline and track the progress"
 " of tickets. Stages are customizable, and can be renamed to fit the needs of"
 " each team."
 msgstr ""
-"Las *etapas* se utilizan para organizar el flujo del *Servicio de "
-"asistencia* y llevar seguimiento del progreso de los tickets. Las etapas son"
-" personalizables y puede modificar sus nombres para que se adapten a las "
+"Las *etapas* se utilizan para organizar el flujo de *soporte al cliente* y "
+"llevar seguimiento del progreso de los tickets. Las etapas son "
+"personalizables y puede modificar sus nombres para que se adapten a las "
 "necesidades de cada equipo."
 
-#: ../../content/applications/services/helpdesk.rst:137
+#: ../../content/applications/services/helpdesk.rst:136
 msgid ""
 ":ref:`Developer mode <developer-mode>` **must** be activated to access the "
 "stages menu. To activate developer mode, go to :menuselection:`Settings app "
@@ -755,33 +940,33 @@ msgstr ""
 ":menuselection:`Ajustes --> Ajustes generales --> Herramientas de "
 "desarrollador` y haga clic en :guilabel:`Activar modo de desarrollador`."
 
-#: ../../content/applications/services/helpdesk.rst:141
+#: ../../content/applications/services/helpdesk.rst:140
 msgid ""
 "To view or modify *Helpdesk* stages, go to :menuselection:`Helpdesk app --> "
 "Configuration --> Stages`."
 msgstr ""
-"Para ver o modificar etapas del *Servicio de asistencia*, vaya a "
-":menuselection:`la aplicación de Servicio de asistencia --> Configuración "
-"--> Etapas`."
+"Para ver o modificar las etapas de *soporte al cliente*, vaya a "
+":menuselection:`Soporte al cliente --> Configuración --> Etapas`."
 
-#: ../../content/applications/services/helpdesk.rst:144
+#: ../../content/applications/services/helpdesk.rst:143
 msgid ""
 "The default list view on the :guilabel:`Stages` page displays the stages "
 "currently available in *Helpdesk*. They are listed in the order they appear "
 "in the pipeline."
 msgstr ""
 "La vista de lista predeterminada en la página :guilabel:`Etapas` muestra las"
-" etapas que están disponibles en el *Servicio de asistencia*. Se enlistan en"
-" el orden que aparecen en el flujo."
+" etapas que están disponibles en *soporte al cliente* y aparecen en el orden"
+" que tienen en el flujo."
 
-#: ../../content/applications/services/helpdesk.rst:147
+#: ../../content/applications/services/helpdesk.rst:146
 msgid ""
-"To change the order of the stages, click the :guilabel:`(six square)` icon, "
-"to the left of the stage name, and drag it to the desired place on the list."
+"To change the order of the stages, click the :icon:`oi-draggable` "
+":guilabel:`(drag)` icon, to the left of the stage name, and drag it to the "
+"desired place on the list."
 msgstr ""
-"Para cambiar el orden de las etapas, haga clic en el icono :guilabel:`(seis "
-"cuadros)` a la izquierda del nombre de la etapa y arrástrelas al lugar "
-"deseado de la lista."
+"Para cambiar el orden de las etapas, haga clic en el icono:icon:`oi-"
+"draggable` :guilabel:`(arrastrar)` a la izquierda del nombre de la etapa y "
+"arrástrelas al lugar deseado de la lista."
 
 #: ../../content/applications/services/helpdesk.rst-1
 msgid ""
@@ -791,15 +976,15 @@ msgstr ""
 "Vista de la página de lista de etapas donde se destacan los botones que se usan para cambiar el orden en el que aparecen\n"
 "las etapas de la lista."
 
-#: ../../content/applications/services/helpdesk.rst:156
+#: ../../content/applications/services/helpdesk.rst:155
 msgid ""
 "Change the stage order on the Kanban view of a *Helpdesk* team's pipeline by"
 " dragging and dropping individual columns."
 msgstr ""
-"Para cambiar el orden en la vista de kanban del flujo de un equipo del "
-"*Servicio de asistencia* solo arrastre y suelte las columnas individuales."
+"Arrastre las columnas para cambiar el orden del flujo de un equipo de "
+"*soporte al cliente* en la vista de kanban. "
 
-#: ../../content/applications/services/helpdesk.rst:159
+#: ../../content/applications/services/helpdesk.rst:158
 msgid ""
 "To create a new stage, click the :guilabel:`New` button at the top-left of "
 "the stage list. Doing so reveals a blank stage form."
@@ -808,7 +993,7 @@ msgstr ""
 "parte superior izquierda de la lista de etapas. Así se mostrará un "
 "formulario de etapa en blanco."
 
-#: ../../content/applications/services/helpdesk.rst:162
+#: ../../content/applications/services/helpdesk.rst:161
 msgid ""
 "Choose a :guilabel:`Name` for the new stage, and add a description, if "
 "desired. Then, proceed to fill out the remaining fields following the steps "
@@ -821,14 +1006,14 @@ msgstr ""
 #: ../../content/applications/services/helpdesk.rst-1
 msgid "View of a stage's settings page in Odoo Helpdesk."
 msgstr ""
-"Vista de la página de ajustes de una etapa en la aplicación Servicio de "
-"asistencia de Odoo."
+"Vista de la página de ajustes de una etapa en la aplicación Soporte al "
+"cliente de Odoo."
 
-#: ../../content/applications/services/helpdesk.rst:170
+#: ../../content/applications/services/helpdesk.rst:169
 msgid "Add email and SMS templates to stages"
 msgstr "Agregar plantillas de correo electrónico y SMS a las etapas"
 
-#: ../../content/applications/services/helpdesk.rst:172
+#: ../../content/applications/services/helpdesk.rst:171
 msgid ""
 "When an :guilabel:`Email Template` is added to a stage, an email is "
 "automatically sent to the customer when a ticket reaches that specific stage"
@@ -841,7 +1026,7 @@ msgstr ""
 ":guilabel:`plantilla SMS`, se activará el envío de un mensaje de texto al "
 "cliente."
 
-#: ../../content/applications/services/helpdesk.rst:177
+#: ../../content/applications/services/helpdesk.rst:176
 msgid ""
 "SMS Text Messaging is an :doc:`In-App Purchase (IAP) "
 "</applications/essentials/in_app_purchase/>` service that requires prepaid "
@@ -854,16 +1039,16 @@ msgstr ""
 "`preguntas frecuentes sobre SMS <https://iap-"
 "services.odoo.com/iap/sms/pricing>`_ para obtener más información."
 
-#: ../../content/applications/services/helpdesk.rst:181
+#: ../../content/applications/services/helpdesk.rst:180
 msgid ""
 "To select an existing email template, select it from the :guilabel:`Email "
-"Template` field. Click on the :guilabel:`→ (Internal Link)` icon to the "
-"right of the field to edit the chosen template."
+"Template` field. Click on the :icon:`oi-arrow-right` :guilabel:`(right "
+"arrow)` icon to the right of the field to edit the chosen template."
 msgstr ""
 "Para elegir una plantilla de correo electrónico existente, selecciónela en "
 "el campo :guilabel:`Plantilla de correo electrónico`. Haga clic en el icono "
-":guilabel:`→ (enlace interno)` a la derecha del campo para editar la "
-"plantilla seleccionada."
+":icon:`oi-arrow-right` :guilabel:`(flecha a la derecha)` a la derecha del "
+"campo para editar la plantilla seleccionada."
 
 #: ../../content/applications/services/helpdesk.rst:184
 msgid ""
@@ -887,7 +1072,7 @@ msgstr ""
 msgid "View of an SMS template setup page in Odoo Helpdesk"
 msgstr ""
 "Vista de una página de ajustes de plantilla para SMS en la aplicación "
-"Servicio de asistencia de Odoo."
+"Soporte al cliente de Odoo."
 
 #: ../../content/applications/services/helpdesk.rst:194
 msgid ":doc:`/applications/general/companies/email_template`"
@@ -903,9 +1088,9 @@ msgid ""
 ":guilabel:`Stages` form. More than one team may be selected, since the same "
 "stage can be assigned to multiple teams."
 msgstr ""
-"Elija un :guilabel:`equipo del Servicio de asistencia` en el campo "
-"correspondiente en el formulario de :guilabel:`etapas`. Puede seleccionar "
-"más de un equipo, ya que puede asignar las mismas etapas a varios equipos."
+"Elija un :guilabel:`equipo de soporte al cliente` en el campo  "
+"correspondiente del formulario de :guilabel:`etapas`. Puede seleccionar más "
+"de un equipo, ya que puede asignar las mismas etapas a varios equipos."
 
 #: ../../content/applications/services/helpdesk.rst:203
 msgid "Fold a stage"
@@ -920,8 +1105,8 @@ msgid ""
 msgstr ""
 "Las etapas están abiertas de forma predeterminada en la vista de kanban del "
 "tablero de cualquiera de los tickets: :guilabel:`Mis tickets` "
-"(:menuselection:`Servicio de asistencia --> Tickets --> Mis tickets`) o "
-":guilabel:`Todos los tickets` (:menuselection:`Servicio de asistencia --> "
+"(:menuselection:`Soporte al cliente --> Tickets --> Mis tickets`) o "
+":guilabel:`Todos los tickets` (:menuselection:`Soporte al cliente --> "
 "Tickets --> Todos los tickets`)."
 
 #: ../../content/applications/services/helpdesk.rst:209
@@ -974,31 +1159,32 @@ msgid ""
 "Stages can be temporarily folded in the Kanban view of the tickets pipeline,"
 " as well."
 msgstr ""
-"También es posible plegar etapas temporalmente en la vista kanban del flujo "
-"de tickets."
+"También es posible plegar etapas temporalmente en la vista de kanban del "
+"flujo de tickets."
 
 #: ../../content/applications/services/helpdesk.rst:227
 msgid ""
 "View a specific team's pipeline by navigating to :menuselection:`Helpdesk "
 "app`, and clicking the team's Kanban card."
 msgstr ""
-"Para ver el flujo de un equipo en específico vaya a la "
-":menuselection:`aplicación del Servicio de asistencia` y haga clic en la "
-"tarjeta de kanban de ese equipo."
+"Vaya a :menuselection:`Soporte al cliente` para ver el flujo de un equipo en"
+" específico y haga clic en su tarjeta de kanban."
 
 #: ../../content/applications/services/helpdesk.rst:230
 msgid ""
-"Select a stage to fold temporarily, then click the :guilabel:`⚙️ (gear)` "
-"icon, and select :guilabel:`Fold`."
+"Select a stage to fold temporarily, then click the :icon:`fa-gear` "
+":guilabel:`(gear)` icon, and select :guilabel:`Fold` from the drop-down "
+"menu."
 msgstr ""
-"Seleccione la etapa que quiera plegar de forma temporal y después haga clic "
-"en el icono de  :guilabel:`⚙️ (engranaje)` y seleccione :guilabel:`Plegar`."
+"Seleccione la etapa que quiera plegar por ahora, después haga clic en el "
+"icono :icon:`fa-gear` :guilabel:`(engranaje)` y seleccione "
+":guilabel:`Plegar` del menú desplegable."
 
 #: ../../content/applications/services/helpdesk.rst-1
 msgid ""
 "Kanban view of a Helpdesk stage, with the temporary fold option emphasized."
 msgstr ""
-"Vista kanban de una etapa del Servicio de asistencia donde se destaca la "
+"Vista de kanban de una etapa de Soporte al cliente donde se destaca la "
 "opción para plegar la etapa de forma temporal."
 
 #: ../../content/applications/services/helpdesk.rst:238
@@ -1010,9 +1196,51 @@ msgstr ""
 "temporal y **no** hará que se cierren los tickets en esta etapa."
 
 #: ../../content/applications/services/helpdesk.rst:242
+msgid "Merge tickets"
+msgstr "Fusionar tickets"
+
+#: ../../content/applications/services/helpdesk.rst:244
+msgid ""
+"If duplicate tickets are found in *Helpdesk*, they can be combined into a "
+"single ticket using the *merge* feature."
+msgstr ""
+"Si encuentra tickets duplicados en *Soporte al cliente* puede combinarlos en"
+" uno solo con la función *fusionar*."
+
+#: ../../content/applications/services/helpdesk.rst:248
+msgid ""
+"The *merge* feature is **only** accessible if the :doc:`Data Cleaning "
+"<../productivity/data_cleaning>` application is installed on the database."
+msgstr ""
+"La función *fusionar* **solo** está accesible si tiene instalada la "
+"aplicación :doc:`Limpieza de datos <../productivity/data_cleaning> en la "
+"base de datos."
+
+#: ../../content/applications/services/helpdesk.rst:251
+msgid ""
+"To merge two or more tickets, navigate to :menuselection:`Helpdesk app --> "
+"Tickets --> All Tickets`. Identify the tickets to be merged, and tick the "
+"checkbox at the far-left of each ticket to select them. Then, click the "
+":icon:`fa-cog` :guilabel:`Actions` icon, and select :guilabel:`Merge` from "
+"the drop-down menu. Doing so opens a new page where the selected tickets are"
+" listed with their :guilabel:`Similarity` rating. From here, click either "
+":ref:`Merge <data_cleaning/merge-records>` to combine the tickets, or "
+":guilabel:`DISCARD`."
+msgstr ""
+"Vaya a :menuselection:`Soporte al cliente --> Tickets --> Todos los tickets`"
+" para fusionar dos o más tickets. Una vez allí, busque los que quiere "
+"fusionar y seleccione la casilla que se encuentra a la izquierda de cada uno"
+" de ellos para elegirlos. Haga clic en el icono :icon:`fa-cog` "
+":guilabel:`Acciones` y seleccione :guilabel:`Fusionar` en menú desplegable, "
+"esta acción abrirá una nueva página donde aparecerán los tickets "
+"seleccionados con su puntuación de :guilabel:`similitud`. Desde aquí, haga "
+"clic en :ref:`Fusionar <data_cleaning/merge-records>` para unir los tickets "
+"o en :guilabel:`DESCARTAR`."
+
+#: ../../content/applications/services/helpdesk.rst:259
 msgid "`Odoo Tutorials: Helpdesk <https://www.odoo.com/slides/helpdesk-51>`_"
 msgstr ""
-"`Tutoriales de Odoo: Servicio de asistencia "
+"`Tutoriales de Odoo: Soporte al cliente "
 "<https://www.odoo.com/slides/helpdesk-51>`_"
 
 #: ../../content/applications/services/helpdesk/advanced.rst:5
@@ -1032,12 +1260,12 @@ msgid ""
 "<helpdesk/repairs>` or :ref:`field service interventions <helpdesk/field>` "
 "directly from a ticket."
 msgstr ""
-"Los servicios *posventa* pueden configurarse en la aplicación *Servicio de "
-"asistencia* para equipos individuales. Una vez activados, los usuarios "
-"pueden :ref:`emitir reembolsos <helpdesk/refunds>`, :ref:`generar cupones "
-"<helpdesk/coupons>`, :ref:`procesar devoluciones <helpdesk/returns>`, y "
+"Puede configurar los servicios *posventa* de cada equipo desde la aplicación"
+" *Soporte al cliente*. Una vez que los haya habilitado, los usuarios pueden "
+":ref:`emitir reembolsos <helpdesk/refunds>`, :ref:`generar cupones "
+"<helpdesk/coupons>`, :ref:`procesar devoluciones <helpdesk/returns>` y "
 ":ref:`programar reparaciones <helpdesk/repairs>` o :ref:`intervenciones de "
-"servicio de campo <helpdesk/field>` directamente desde un ticket."
+"servicio externo <helpdesk/field>` desde un ticket."
 
 #: ../../content/applications/services/helpdesk/advanced/after_sales.rst:11
 msgid "Set up after-sales services"
@@ -1051,12 +1279,11 @@ msgid ""
 "the :guilabel:`After-Sales` section on the team's settings page, and choose "
 "which of the following options to enable:"
 msgstr ""
-"Lo primero que tiene que hacer es activar los servicios posventa en un (o "
-"unos) equipo del *servicio de asistencia*. Para hacer esto debe ir a "
-":menuselection:`Servicio de asistencia --> Configuración --> Equipos de "
-"servicio de asistencia` y seleccione en qué equipos debe estar activo este "
-"servicio. Después, baje a la sección :guilabel:`Posventas` dentro de los "
-"ajustes del equipo y seleccione qué opciones activar:"
+"Primero habilite los servicios posventa de un equipo específico de *soporte "
+"al cliente* específico. Vaya a :menuselection:`Soporte al cliente --> "
+"Configuración --> Equipos de soporte al cliente`, haga clic en el equipo en "
+"el que deben estar activos, vaya a la sección :guilabel:`Posventa` en la "
+"página de ajustes del equipo y elija las opciones a activar:"
 
 #: ../../content/applications/services/helpdesk/advanced/after_sales.rst:18
 msgid ""
@@ -1133,12 +1360,12 @@ msgid ""
 " are usually created through the *Accounting* or *Invoicing* applications, "
 "they can be created through a *Helpdesk* ticket, as well."
 msgstr ""
-"Una *nota de crédito* es un documento que se le brinda a un cliente para "
-"informales que se les ha acreditado cierta cantidad de dinero. Este "
-"documento se puede usar para otorgarle un reembolso completo al cliente o "
-"solo para ajustar la cantidad que se debe. Usualmente estas notas se crear "
-"desde las aplicaciones *Contabilidad* o *Facturación*, pero también es "
-"posible hacerlo desde un ticket del *Servicio de asistencia*."
+"Una *nota de crédito* es un documento emitido a los clientes para informales"
+" que se les acreditó cierta cantidad de dinero. Este documento se puede usar"
+" para proporcionarle un reembolso completo al cliente o para ajustar la "
+"cantidad que se debe. Por lo general estas notas se crean desde las "
+"aplicaciones *Contabilidad* o *Facturación*, pero también es posible hacerlo"
+" desde un ticket de *soporte al cliente*."
 
 #: ../../content/applications/services/helpdesk/advanced/after_sales.rst:46
 msgid "Invoices **must** be posted before a credit note can be generated."
@@ -1153,11 +1380,10 @@ msgid ""
 "the top-left corner of the ticket form. This opens a :guilabel:`Refund` pop-"
 "up window."
 msgstr ""
-"Para crear una nota de crédito, vaya al ticket en la aplicación "
-":menuselection:`Servicio de asistencia` y haga clic en el botón "
-":guilabel:`Reembolso` que se encuentra en la esquina superior izquierda del "
-"tablero del ticket. Esto hará que se abra una ventana emergente "
-":guilabel:`Reembolso`."
+"Para crear una nota de crédito vaya a un ticket en :menuselection:`Soporte "
+"al cliente` y haga clic en el botón :guilabel:`Reembolso` ubicado en la "
+"esquina superior izquierda del formulario del ticket. Esta acción abre la "
+"ventana emergente :guilabel:`Reembolso`."
 
 #: ../../content/applications/services/helpdesk/advanced/after_sales.rst-1
 msgid "View of a refund creation page."
@@ -1271,8 +1497,8 @@ msgid ""
 "Once the credit note has been posted, a :guilabel:`Credit Notes` smart "
 "button is added to the *Helpdesk* ticket."
 msgstr ""
-"Ya que se publicó la nota de crédito, aparecerá un botón inteligente "
-":guilabel:`Notas de crédito` en el ticket del *Servicio de asistencia*."
+"Una vez que registró la nota de crédito aparecerá el botón inteligente "
+":guilabel:`Notas de crédito` en el ticket de *soporte al cliente*."
 
 #: ../../content/applications/services/helpdesk/advanced/after_sales.rst-1
 msgid "View of smart buttons on a ticket focusing on the credit note button."
@@ -1314,8 +1540,8 @@ msgid ""
 ":guilabel:`Coupon Program` drop-down menu in the :guilabel:`Generate a "
 "Coupon` pop-up window that appears."
 msgstr ""
-"Para generar un cupón, abra un ticket en *Servicio de asistencia* y haga "
-"clic en el botón :guilabel:`Cupón` ubicado la esquina superior izquierda. "
+"Para generar un cupón, abra un ticket en *Soporte al cliente* y haga clic en"
+" el botón :guilabel:`Cupón` ubicado la esquina superior izquierda. "
 "Seleccione una opción del menú desplegable :guilabel:`Programa de cupones` "
 "en la ventana emergente que aparece llamada :guilabel:`Generar un cupón`."
 
@@ -1332,13 +1558,12 @@ msgid ""
 ":guilabel:`Coupons`. This generates single-use coupon codes that grant "
 "immediate access to rewards and discounts."
 msgstr ""
-"Para crear un nuevo :guilabel:`Programa de cupones`, vaya a la "
-":menuselection:`aplicación de Ventas --> Productos --> Descuentos y lealtad`"
-" y haga clic en :guilabel:`Nuevo`. Para que el programa pueda compartirse "
-"con los clientes de *Servicio de asistencia*, el :guilabel:`Tipo de "
-"programa` **debe** establecerse en :guilabel:`Cupones`. Esto genera códigos "
-"de cupón de un solo uso que conceden acceso inmediato a recompensas y "
-"descuentos."
+"Para crear un nuevo :guilabel:`programa de cupones` vaya a "
+":menuselection:`Ventas --> Productos --> Descuentos y lealtad` y haga clic "
+"en :guilabel:`Nuevo`. El :guilabel:`tipo de programa` **debe** estar "
+"configurado con :guilabel:`cupones` para que pueda compartirlo con los "
+"clientes de *soporte al cliente*. Esto genera códigos de cupón de un solo "
+"uso que les proporcionan acceso inmediato a recompensas y descuentos."
 
 #: ../../content/applications/services/helpdesk/advanced/after_sales.rst:121
 msgid ""
@@ -1454,8 +1679,8 @@ msgstr ""
 #: ../../content/applications/services/helpdesk/advanced/after_sales.rst-1
 msgid "View of a Helpdesk ticket with the return button highlighted."
 msgstr ""
-"Imagen de un ticket del servicio de asistencia en el que resalta el botón "
-"para devoluciones."
+"Vista de un ticket de soporte al cliente, aparece el botón para "
+"devoluciones."
 
 #: ../../content/applications/services/helpdesk/advanced/after_sales.rst:171
 msgid ""
@@ -1511,15 +1736,15 @@ msgid ""
 ":guilabel:`Return` smart button can now be accessed at the top of the "
 "ticket."
 msgstr ""
-"Use las migas de pan para regresar al ticket del servicio de asistencia. "
-"Ahora podrá acceder a un nuevo botón inteligente :guilabel:`Regresar` en la "
-"parte superior del ticket."
+"Use las migas de pan para regresar al ticket de soporte al cliente. En la "
+"parte superior del mismo aparecerá el nuevo botón inteligente "
+":guilabel:`Devolución`."
 
 #: ../../content/applications/services/helpdesk/advanced/after_sales.rst-1
 msgid "View of the return smart button on a helpdesk ticket."
 msgstr ""
-"Imagen del botón inteligente de devolución en un ticket del servicio de "
-"asistencia."
+"Imagen del botón inteligente de devolución en un ticket de soporte al "
+"cliente."
 
 #: ../../content/applications/services/helpdesk/advanced/after_sales.rst:199
 msgid ":doc:`../../../sales/sales/products_prices/returns`"
@@ -1535,9 +1760,9 @@ msgid ""
 "*repair order* can be created from the *Helpdesk* ticket, and managed "
 "through the *Repairs* application."
 msgstr ""
-"Si el ticket se debe a un problema con un producto defectuoso o roto, se "
-"puede crear una *orden de reparación* desde el ticket del *Servicio de "
-"asistencia* y se puede gestionar desde la aplicación *Reparaciones*. "
+"Si el ticket está relacionado con un problema con un producto defectuoso o "
+"roto es posible crear una *orden de reparación* desde el ticket de *soporte "
+"al cliente* y gestionarla desde la aplicación *Reparación*."
 
 #: ../../content/applications/services/helpdesk/advanced/after_sales.rst:209
 msgid ""
@@ -1545,10 +1770,10 @@ msgid ""
 "click on the :guilabel:`Repair` button in the top-left corner. This opens a "
 ":guilabel:`Repair Reference` form."
 msgstr ""
-"Para crea una nueva orden de reparación, abra un ticket en el "
-":menuselection:`Servicio de asistencia` y haga clic en el botón "
-":guilabel:`Reparar` que se encuentra en la esquina superior izquierda del "
-"ticket. Esto abrirá un formulario de :guilabel:`Referencia de reparación`."
+"Para crear una nueva orden de reparación abra un ticket de "
+":menuselection:`soporte al cliente` y haga clic en el botón "
+":guilabel:`Reparar` que se encuentra en la esquina superior izquierda. Esta "
+"acción abrirá un formulario de :guilabel:`Referencia de reparación`."
 
 #: ../../content/applications/services/helpdesk/advanced/after_sales.rst-1
 msgid "View of a repair reference page."
@@ -1664,9 +1889,9 @@ msgid ""
 "application."
 msgstr ""
 "Una vez que un usuario crea una orden de reparación desde un ticket de "
-"*Servicio de asistencia*, podrá acceder a ella a través del botón "
-"inteligente :guilabel:`Reparar` del ticket, o desde un enlace en el chatter,"
-" aunque no tenga acceso a la aplicación *Reparación*."
+"*soporte al cliente* podrá acceder a ella con el botón inteligente "
+":guilabel:`Reparar` del ticket o desde un enlace en el chatter, incluso si "
+"no tiene permisos de acceso en la aplicación *Reparación*."
 
 #: ../../content/applications/services/helpdesk/advanced/after_sales.rst:254
 msgid "Create field service task from a ticket"
@@ -1679,11 +1904,11 @@ msgid ""
 "<../../../general/users/portal>` are able to track the progress of a *Field "
 "Service* task just as they would a *Helpdesk* ticket."
 msgstr ""
-"Puede planificar las intervenciones presenciales desde un ticket y "
-"gestionarlas a través de la aplicación *Servicio externo*. Los clientes con "
-":doc:`acceso al portal <../../../general/users/portal>` podrán seguir el "
-"progreso de una tarea de :guilabel:`Servicio externo` del mismo modo que lo "
-"harían con un ticket de *Servicio de asistencia*."
+"Es posible planificar intervenciones presenciales desde un ticket y "
+"gestionarlas con la aplicación *Servicio externo*. Los clientes con "
+":doc:`acceso al portal <../../../general/users/portal>` podrán monitorear el"
+" progreso de una tarea de *servicio externo* del mismo modo que lo harían "
+"con un ticket de *soporte al cliente*."
 
 #: ../../content/applications/services/helpdesk/advanced/after_sales.rst:261
 msgid ""
@@ -1692,11 +1917,11 @@ msgid ""
 " a :guilabel:`Team`. Scroll to the :guilabel:`After-Sales` section, and "
 "choose a project under :guilabel:`Field Service`."
 msgstr ""
-"Para cambiar el proyecto de *Servicio externo* predeterminado para el "
-"equipo, vaya a :menuselection:`la aplicación de Servicio de asistencia --> "
-"Configuración --> Servicio de asistencia` para seleccionar un "
-":guilabel:`Equipo`. Vaya a la sección :guilabel:`Posventa` y seleccione un "
-"nuevo proyecto en :guilabel:`Servicio externo`."
+"Para cambiar el proyecto de *servicio externo* predeterminado para el "
+"equipo, vaya a :menuselection:`Soporte al cliente --> Configuración --> "
+"Equipos de soporte al cliente`. Seleccione un :guilabel:`equipo`, busque la "
+"sección :guilabel:`Posventa` y elija un proyecto en :guilabel:`Servicio "
+"externo`."
 
 #: ../../content/applications/services/helpdesk/advanced/after_sales.rst:265
 msgid ""
@@ -1704,10 +1929,10 @@ msgid ""
 ":menuselection:`Helpdesk` ticket. Click :guilabel:`Plan Intervention` to "
 "open the :guilabel:`Create a Field Service task` pop-up window."
 msgstr ""
-"Para crear una nueva tarea de *Servicio externo* vaya al ticket del "
-":menuselection:`Servicio de asistencia`. Haga clic en :guilabel:`Planear "
-"intervención` para abrir la ventana emergente :guilabel:`Crear una tarea del"
-" servicio de asistencia`."
+"Vaya al ticket de :menuselection:`soporte al cliente` para crear una nueva "
+"tarea de *servicio externo*. Haga clic en :guilabel:`Planear intervención` "
+"para abrir la ventana emergente :guilabel:`Crear una tarea de servicio "
+"externo`."
 
 #: ../../content/applications/services/helpdesk/advanced/after_sales.rst-1
 msgid "View of a Field Service task creation page."
@@ -1756,10 +1981,11 @@ msgid ""
 "automatically appears in the :guilabel:`Worksheet Template` drop-down field."
 " Even so, the field can be edited, and another template can be selected."
 msgstr ""
-"Si el proyecto *Servicio de campo* que se le asignó al equipo de *Servicio "
-"de asistencia* tiene las hojas de horas activada y una plantilla "
-"predeterminada asignada, esa plantilla aparece de manera automática en el "
-"campo desplegable :guilabel:`Plantilla de hoja de trabajo` ."
+"Si el proyecto de *servicio externo* asignado al equipo de *soporte al "
+"cliente* tiene las hojas de trabajo habilitadas y también tiene una "
+"plantilla predeterminada asignada, esa plantilla completa el campo "
+"desplegable :guilabel:`Plantilla de hoja de trabajo` en automático. También "
+"puede editar el campo y seleccionar otra plantilla."
 
 #: ../../content/applications/services/helpdesk/advanced/after_sales.rst:290
 msgid ""
@@ -1805,8 +2031,8 @@ msgid ""
 "Once work has been completed on a *Helpdesk* ticket in Odoo, there are "
 "several ways it can be closed."
 msgstr ""
-"Hay muchas formas de cerrar un ticket del *Servicio de asistencia* una vez "
-"que se haya terminado de trabajar en él."
+"Hay varias formas de cerrar un ticket de *soporte al cliente* una vez que "
+"haya completado el trabajo necesario."
 
 #: ../../content/applications/services/helpdesk/advanced/close_tickets.rst:8
 msgid ""
@@ -1844,8 +2070,8 @@ msgid ""
 " page."
 msgstr ""
 "Para plegar una etapa, vaya al tablero de la aplicación "
-":menuselection:`Servicio de asistencia` y haga clic en un equipo para abrir "
-"su flujo en otra página."
+":menuselection:`Soporte al cliente` y haga clic en un equipo para abrir su "
+"flujo en otra página."
 
 #: ../../content/applications/services/helpdesk/advanced/close_tickets.rst:22
 msgid ""
@@ -1853,17 +2079,17 @@ msgid ""
 ":guilabel:`⚙️ (gear)` icon that appears in the top-right corner of that "
 "stage's Kanban column."
 msgstr ""
-"Desde la página del flujo, pase el ratón por el encabezado de la etapa y "
+"Pase el cursor sobre el encabezado de una etapa en la página del flujo y "
 "haga clic en el icono :guilabel:`⚙️ (engranaje)` que aparece en la esquina "
-"superior derecha de la columna en la vista Kanban en esa etapa. "
+"superior derecha de la columna de la vista de kanban de esa etapa."
 
 #: ../../content/applications/services/helpdesk/advanced/close_tickets.rst-1
 msgid ""
 "View of stage on Helpdesk pipeline with emphasis on gear icon and edit stage"
 " option."
 msgstr ""
-"Vista de la etapa en el flujo de ventas de Servicio de asistencia con "
-"énfasis en el icono de engranaje y la opción de edición de la etapa."
+"Vista de la etapa en el flujo de soporte al cliente, destaca el icono de "
+"engranaje y la opción de edición de la etapa."
 
 #: ../../content/applications/services/helpdesk/advanced/close_tickets.rst:29
 msgid ""
@@ -1901,12 +2127,13 @@ msgid ""
 "folded, so the tickets can be marked as *closed*, the :guilabel:`Folded in "
 "Kanban` checkbox **must** be checked on the stage's settings."
 msgstr ""
-"Si hace clic en el icono de :guilabel:`⚙️ (engranaje)` aparecerá la opción "
-"de :guilabel:`Plegar` la etapa. Este ajuste plegará la etapa *temporalmente*"
-" para simplificar la vista kanban. Esto **no** cierra los tickets en esta "
-"etapa, tampoco pliega la etapa de forma permanente. Si desea plegar una "
-"etapa para poder marcar los tickets como cerrados **debe** marcar la casilla"
-" :guilabel:`Plegado en kanban` en los ajustes de la etapa."
+"Al hacer clic en el icono :guilabel:`⚙️ (engranaje)` aparecerá la opción de "
+":guilabel:`plegar` la etapa. Este ajuste plegará la etapa de manera "
+"*temporal* para simplificar la vista de kanban. Esto **no** cierra los "
+"tickets en esta etapa y tampoco pliega la etapa de forma permanente. Si "
+"desea plegar una etapa para poder marcar los tickets como cerrados **debe** "
+"seleccionar la casilla :guilabel:`Plegada en kanban` en los ajustes de la "
+"etapa."
 
 #: ../../content/applications/services/helpdesk/advanced/close_tickets.rst:49
 msgid "Automatically close inactive tickets"
@@ -1928,12 +2155,11 @@ msgid ""
 "configure. Under the :guilabel:`Self-Service` section, enable "
 ":guilabel:`Automatic Closing`."
 msgstr ""
-"Para que Odoo cierre de forma automática los tickets inactivos, vaya a la "
-"página de ajustes del equipo que quiera siguiendo el siguiente flujo: "
-":menuselection:`aplicación del Servicio de asistencia--> Configuración --> "
-"Equipos de servicio de asistencia`. Aquí seleccione el equipo que desea "
-"configurar y en la sección :guilabel:`Autoservicio` active :guilabel:`Cierre"
-" automático`."
+"Para que Odoo cierre los tickets inactivos de forma automática, vaya a la "
+"página de ajustes del equipo deseado. Vaya a :menuselection:`Soporte al "
+"cliente --> Configuración --> Equipos de soporte al cliente`, seleccione el "
+"equipo que desea configurar y en la sección :guilabel:`Autoservicio` active "
+"la función :guilabel:`Cierre automático`."
 
 #: ../../content/applications/services/helpdesk/advanced/close_tickets.rst:59
 msgid ""
@@ -2089,16 +2315,17 @@ msgid ""
 ":guilabel:`Self-Service` section, and check the box for :guilabel:`Closure "
 "by Customers`."
 msgstr ""
-"Para permitir que los clientes cierren sus propios tickets primero vaya a "
-":menuselection:`la aplicación Servicio de asistencia --> Configuración --> "
-"Equipos del servicio de asistencia` y seleccione un equipo para abrir la "
-"página de configuración del equipo. Ahí, vaya a la sección "
+"Vaya a :menuselection:`Soporte al cliente --> Configuración --> Equipos de "
+"soporte al cliente` para que los clientes puedan cerrar sus propios tickets."
+" Haga clic en un equipo para abrir su página de ajustes, busque la sección "
 ":guilabel:`Autoservicio` y seleccione la casilla :guilabel:`Cierre por "
 "clientes`."
 
 #: ../../content/applications/services/helpdesk/advanced/close_tickets.rst-1
 msgid "Customer closing setting in Odoo Helpdesk."
-msgstr "Botón de cancelación por clientes en Servicio de asistencia."
+msgstr ""
+"Botón de Cancelación por clientes en la aplicación Soporte al cliente de "
+"Odoo."
 
 #: ../../content/applications/services/helpdesk/advanced/close_tickets.rst:123
 msgid ""
@@ -2112,7 +2339,9 @@ msgstr ""
 
 #: ../../content/applications/services/helpdesk/advanced/close_tickets.rst-1
 msgid "Customer view of ticket closing in Odoo Helpdesk."
-msgstr "Vista de cierre de ticket en Servicio de asistencia"
+msgstr ""
+"Vista del cliente al cerrar un ticket en la aplicación Soporte al cliente de"
+" Odoo."
 
 #: ../../content/applications/services/helpdesk/advanced/close_tickets.rst:131
 msgid ""
@@ -2122,12 +2351,12 @@ msgid ""
 "stage of a team by default. This link does **not** require a customer to "
 "have access to the portal to view or respond to their ticket."
 msgstr ""
-"Los clientes pueden ver sus tickets al hacer clic en el enlace "
-":guilabel:`Ver el ticket` que reciben por correo electrónico. El enlace se "
-"incluye en la plantilla :guilabel:`Servicio de asistencia: Ticket recibido` "
-"de forma predeterminada a la primera etapa de un equipo. Este enlace **no** "
-"requiere que el cliente tenga acceso al portal para ver o responder su "
-"ticket."
+"Los clientes pueden ver sus tickets si hacen clic en el enlace "
+":guilabel:`Ver el ticket` que reciben por correo electrónico. El enlace está"
+" incluido en la plantilla :guilabel:`Soporte al cliente: Ticket recibido` "
+"que forma parte de la primera etapa de un equipo de forma predeterminada. "
+"Este enlace **no** requiere que el cliente tenga acceso al portal para ver o"
+" responder a su ticket."
 
 #: ../../content/applications/services/helpdesk/advanced/close_tickets.rst:136
 msgid ""
@@ -2149,12 +2378,12 @@ msgid ""
 "applications, customers can be charged once the work is completed, or before"
 " it has even begun."
 msgstr ""
-"La aplicación *Servicio de asistencia* permite que los equipos puedan llevar"
-" seguimiento de la cantidad de horas que usan para trabajar en un ticket y "
+"La aplicación *Soporte al cliente* permite que los equipos puedan llevar "
+"seguimiento de la cantidad de horas que usan para trabajar en un ticket y "
 "que puedan facturar ese tiempo al cliente. A través de integraciones con las"
-" aplicaciones *Ventas*, *Hojas de horas*, *Proyecto* y *Contabilidad* es "
-"posible cobrarle a los clientes una vez que el trabajo se ha completado, o "
-"incluso antes de que haya comenzado."
+" aplicaciones *Ventas*, *Hojas de horas*, *Proyecto* y *Contabilidad* podrá "
+"cobrarle a los clientes una vez que haya realizado el trabajo o incluso "
+"antes de que haya comenzado."
 
 #: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:11
 msgid ""
@@ -2186,15 +2415,15 @@ msgid ""
 "Before a customer can be invoiced for support services, the *Track & Bill "
 "Time* features **must** be enabled on each *Helpdesk* team individually."
 msgstr ""
-"Antes de que pueda facturar a un cliente por los servicios de soporte, las "
-"funciones de *Seguimiento y facturación del tiempo* se **deben** activar en "
-"cada equipo del *Servicio de asistencia* de forma adicional."
+"Antes de que se pueda facturar a un cliente por los servicios de soporte, la"
+" función *Seguimiento y facturación del tiempo* **debe** estar habilitada en"
+" cada equipo de *servicio al cliente*."
 
 #: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:25
 msgid "Enable track and bill time on a helpdesk team"
 msgstr ""
-"Habilitar el seguimiento y facturación del tiempo en un equipo de Servicio "
-"de asistencia"
+"Habilitar el seguimiento y facturación del tiempo en un equipo de Soporte al"
+" cliente"
 
 #: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:27
 msgid ""
@@ -2204,9 +2433,9 @@ msgid ""
 "one <../../helpdesk>`. This reveals a team's settings page."
 msgstr ""
 "Para ver y habilitar las funciones de *seguimiento y facturación del tiempo*"
-" en un equipo de *Servicio de asistencia*, primero vaya a "
-":menuselection:`Servicio de asistencia --> Configuración --> Equipos de "
-"servicio de asistencia`. Seleccione un equipo de la lista o :doc:`new one "
+" en un equipo de *soporte al cliente*, primero vaya a "
+":menuselection:`Soporte al cliente --> Configuración --> Equipos de soporte "
+"al cliente`. Seleccione un equipo de la lista o :doc:`cree uno "
 "<../../helpdesk>`. Esta acción abrirá la página de ajustes de un equipo."
 
 #: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:31
@@ -2263,8 +2492,8 @@ msgid ""
 "View of a helpdesk team settings page emphasizing the track and bill time "
 "settings."
 msgstr ""
-"Vista de la página de ajustes de un equipo de Servicio de asistencia en la "
-"que se destacan los ajustes de seguimiento y facturación del tiempo."
+"Vista de la página de ajustes de un equipo de soporte al cliente, destacan "
+"los ajustes de seguimiento y facturación del tiempo."
 
 #: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:54
 msgid "Configure service products"
@@ -2463,7 +2692,7 @@ msgstr "Ahora podrá enviar la factura al cliente para que realice su pago."
 
 #: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:129
 msgid "Create helpdesk ticket for prepaid services"
-msgstr "Crear un ticket de servicio de asistencia para servicios prepagados"
+msgstr "Crear un ticket de soporte al cliente para servicios prepagados"
 
 #: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:131
 msgid ""
@@ -2472,7 +2701,7 @@ msgid ""
 " a specific team's pipeline. Click :guilabel:`New` to create a new ticket."
 msgstr ""
 "Para crear un ticket para servicios prepagados, vaya a la aplicación "
-":menuselection:`Servicio de asistencia` y haga clic en el botón "
+":menuselection:`Soporte al cliente` y haga clic en el botón "
 ":menuselection:`Tickets` para abrir el flujo de un equipo específico. Haga "
 "clic en :guilabel:`Nuevo` para crear un ticket."
 
@@ -2496,16 +2725,15 @@ msgstr ""
 
 #: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:142
 msgid "Track hours on helpdesk ticket"
-msgstr "Registrar horas en un ticket de servicio de asistencia"
+msgstr "Registrar horas en un ticket de soporte al cliente"
 
 #: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:144
 msgid ""
 "Time spent working on a *Helpdesk* ticket is tracked on the *Timesheets* tab"
 " on the specific ticket."
 msgstr ""
-"El tiempo que se utiliza en trabajar en un ticket de *Servicio de "
-"asistencia* se registra en la pestaña *Hojas de horas* del ticket "
-"específico."
+"El tiempo que se utiliza en trabajar en un ticket de *soporte al cliente* se"
+" registra en la pestaña *Hojas de horas* del ticket específico."
 
 #: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:146
 msgid ""
@@ -2625,7 +2853,7 @@ msgstr ""
 #: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:192
 msgid "Create a helpdesk ticket for time-tracked services"
 msgstr ""
-"Crear un ticket de servicio de asistencia para servicios de los que lleva "
+"Crear un ticket de soporte al cliente para servicios de los que lleva "
 "registro del tiempo"
 
 #: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:194
@@ -2634,10 +2862,9 @@ msgid ""
 ":menuselection:`Helpdesk` app, and select the appropriate team for which "
 "these services apply."
 msgstr ""
-"Para registrar una entrada en las *hojas de horas* para servicios de los que"
-" lleva registro del tiempo, vaya a :menuselection:`la aplicación Servicio de"
-" asistencia` y seleccione el equipo apropiado para el que se aplican estos "
-"servicios."
+"Para registrar una entrada en las *hojas de horas* para los servicios de los"
+" que lleva registro del tiempo vaya a :menuselection:`Soporte al cliente` y "
+"seleccione el equipo apropiado para el que aplican estos servicios."
 
 #: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:197
 msgid ""
@@ -2700,8 +2927,7 @@ msgstr ""
 #: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst-1
 msgid "View of the timesheets tab on a helpdesk ticket."
 msgstr ""
-"Vista de la pestaña de hojas de horas en un ticket de servicio de "
-"asistencia."
+"Vista de la pestaña de hojas de horas en un ticket de soporte al cliente."
 
 #: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:222
 msgid "Create an invoice for hours tracked on a ticket"
@@ -2788,9 +3014,9 @@ msgstr ""
 
 #: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:256
 msgid ""
-":doc:`../../../inventory_and_mrp/inventory/product_management/product_replenishment/uom`"
+":doc:`../../../inventory_and_mrp/inventory/product_management/configure/uom`"
 msgstr ""
-":doc:`../../../inventory_and_mrp/inventory/product_management/product_replenishment/uom`"
+":doc:`../../../inventory_and_mrp/inventory/product_management/configure/uom`"
 
 #: ../../content/applications/services/helpdesk/advanced/track_and_bill.rst:257
 msgid ":doc:`../../../sales/sales/invoicing/down_payment`"
@@ -2812,10 +3038,10 @@ msgid ""
 "location where teams and customers can search for and share detailed "
 "information about products and services."
 msgstr ""
-"El *Servicio de asistencia* de Odoo se integra con las aplicaciones *Foro*, "
-"*eLearning* e *Información* para crear un *Centro de ayuda*. El *centro de "
-"ayuda* es una ubicación centralizada donde los equipos y los clientes pueden"
-" buscar y compartir información detallada sobre productos y servicios."
+"La aplicación *Soporte al cliente* de Odoo se integra con *Foro*, "
+"*eLearning* e *Información* para crear un *centro de ayuda*. El *centro de "
+"ayuda* centraliza la información relacionada con los productos y servicios "
+"para que los equipos y los clientes puedan buscarla y compartir más."
 
 #: ../../content/applications/services/helpdesk/overview/help_center.rst-1
 msgid ""
@@ -2835,13 +3061,12 @@ msgid ""
 ":guilabel:`Visibility & Assignment` section."
 msgstr ""
 "Para activar las funciones del *centro de ayuda* (*Foros*, *eLearning* o "
-"*Información*) en un equipo de *Servicio de asistencia* vaya a "
-":menuselection:`Servicio de asistencia --> Configuración --> Equipos de "
-"servicio de asistencia` y seleccione un equipo o cree :doc:`uno nuevo "
-"<../../helpdesk>`. Verifique que la :guilabel:`visibilidad` del equipo esté "
-"configurada con :guilabel:`Usuarios del portal invitados y todos los "
-"usuarios internos (público)` en la sección :guilabel:`Visibilidad y "
-"asignación`."
+"*Información*) en un equipo de *soporte al cliente* vaya a "
+":menuselection:`Soporte al cliente --> Configuración --> Equipos de soporte "
+"al cliente` y seleccione un equipo o cree :doc:`uno nuevo <../../helpdesk>`."
+" Verifique que la :guilabel:`visibilidad` del equipo esté configurada con "
+":guilabel:`Usuarios del portal invitados y todos los usuarios internos "
+"(público)` en la sección :guilabel:`Visibilidad y asignación`."
 
 #: ../../content/applications/services/helpdesk/overview/help_center.rst:22
 msgid ""
@@ -2850,11 +3075,11 @@ msgid ""
 " one or more of the *Help Center* features is enabled, the "
 ":guilabel:`Website Form` is automatically enabled, as well."
 msgstr ""
-"Además, la opción :guilabel:`formulario de sitio web` **debe** activarse en "
-"la página del equipo del *Servicio de asistencia* para poder activar "
-"cualquiera de las funciones del *Servicio de asistencia*. Cuando una o más "
-"de las funciones del *servicio de asistencia* se activa, también lo hace el "
-":guilabel:`formulario de sitio web` de forma automática."
+"Además, la opción :guilabel:`Formulario de sitio web` en la página del "
+"equipo de *soporte al cliente* **debe** estar habilitada para poder activar "
+"cualquiera de las funciones del *centro de ayuda*. Cuando una o más de estas"
+" están habilitadas, el :guilabel:`formulario de sitio web` también se "
+"habilita en automático."
 
 #: ../../content/applications/services/helpdesk/overview/help_center.rst:27
 msgid ""
@@ -2879,7 +3104,7 @@ msgstr ""
 
 #: ../../content/applications/services/helpdesk/overview/help_center.rst:35
 msgid ":doc:`Helpdesk Overview <../../helpdesk>`"
-msgstr ":doc:`Información general de Servicio de asistencia <../../helpdesk>`"
+msgstr ":doc:`Información general de Soporte al cliente <../../helpdesk>`"
 
 #: ../../content/applications/services/helpdesk/overview/help_center.rst:38
 msgid "Knowledge"
@@ -2900,12 +3125,12 @@ msgstr ""
 #: ../../content/applications/services/helpdesk/overview/help_center.rst-1
 msgid "View of a message in Helpdesk focusing on the Knowledge bookmark icon."
 msgstr ""
-"Vista de un mensaje en Servicio de Asistencia haciendo énfasis en el icono "
-"de marcapáginas de Información. "
+"Vista de un mensaje en Soporte al cliente, destaca el icono de marcador de "
+"Información. "
 
 #: ../../content/applications/services/helpdesk/overview/help_center.rst:49
 msgid "Enable Knowledge on a Helpdesk team"
-msgstr "Habilitar Información para un equipo de Servicio de asistencia"
+msgstr "Habilitar Información para un equipo de Soporte al cliente"
 
 #: ../../content/applications/services/helpdesk/overview/help_center.rst:51
 msgid ""
@@ -2913,10 +3138,10 @@ msgid ""
 ":menuselection:`Helpdesk app --> Configuration --> Helpdesk Teams` and "
 "select a team, or create a :doc:`new one <../../helpdesk>`."
 msgstr ""
-"Para activar la función de *Información* en un equipo del *Servicio de "
-"asistencia* vaya a :menuselection:`Servicio de asistencia--> Configuración "
-"--> Equipos del servicio de asistencia` y seleccione uno o cree :doc:`uno "
-"nuevo <../../helpdesk>`."
+"Para activar la función de *Información* en un equipo de *Soporte al "
+"cliente* vaya a :menuselection:`Soporte al cliente --> Configuración --> "
+"Equipos de soporte al cliente` y seleccione uno o cree :doc:`uno nuevo "
+"<../../helpdesk>`."
 
 #: ../../content/applications/services/helpdesk/overview/help_center.rst:54
 msgid ""
@@ -2972,20 +3197,19 @@ msgid ""
 " a *Helpdesk* team."
 msgstr ""
 "Haga clic en el icono :guilabel:`➕ (signo de más)` para crear un nuevo "
-"artículo en el :guilabel:`Espacio de trabajo`. En la esquina superior "
-"derecha, haga clic en el botón de :guilabel:`Compartir` y deslice el "
-"interruptor de :guilabel:`Compartir en la web` hasta que aparezca como "
-":guilabel:`Artículo publicado`. Ahora podrá agregarlo al equipo  de "
-"*Servicio de Asistencia*.         "
+"artículo en el :guilabel:`espacio de trabajo`. Haga clic en el botón "
+":guilabel:`Compartir` que se encuentra en la esquina superior derecha de la "
+"página, presione el botón :guilabel:`Compartir en la web` para que cambie a "
+":guilabel:`Artículo publicado` y después podrá agregarlo a un equipo de "
+"*soporte al cliente*."
 
 #: ../../content/applications/services/helpdesk/overview/help_center.rst:74
 msgid ""
 "Once an article has been created and assigned to a *Helpdesk* team, content "
 "can be added and organized through the *Knowledge* app."
 msgstr ""
-"Una vez que creó el artículo y lo asignó a un equipo de *Servicio de "
-"Asistencia*, puede agregar y organizar el contenido a través de la "
-"aplicación *Información*.  "
+"Una vez que creó el artículo y lo asignó a un equipo de *soporte al cliente*"
+" puede agregar y organizar su contenido con la aplicación *Información*.  "
 
 #: ../../content/applications/services/helpdesk/overview/help_center.rst:78
 msgid ""
@@ -2997,7 +3221,7 @@ msgstr ""
 
 #: ../../content/applications/services/helpdesk/overview/help_center.rst:81
 msgid "Search articles from a Helpdesk ticket"
-msgstr "Buscar artículos desde un ticket de Servicio de Asistencia"
+msgstr "Buscar artículos desde un ticket de Soporte al cliente"
 
 #: ../../content/applications/services/helpdesk/overview/help_center.rst:83
 msgid ""
@@ -3005,9 +3229,9 @@ msgid ""
 "search through the content in the *Knowledge* app for more information on "
 "the issue."
 msgstr ""
-"Cuando los miembros de un equipo de *Servicio de Asistencia* están "
-"resolviendo un ticket, pueden buscar en el contenido de la aplicación "
-"*Información* para obtener más datos acerca del problema. "
+"Cuando los miembros de un equipo de *soporte al cliente* están resolviendo "
+"un ticket pueden buscar en el contenido de la aplicación *Información* para "
+"obtener más datos acerca del problema."
 
 #: ../../content/applications/services/helpdesk/overview/help_center.rst:86
 msgid ""
@@ -3015,10 +3239,10 @@ msgid ""
 "app dashboard, or by going to :menuselection:`Helpdesk app --> Tickets --> "
 "All Tickets`, then select a ticket from the list."
 msgstr ""
-"Para buscar artículos en *Información*, abra un ticket, ya sea desde el "
-"tablero de la aplicación *Servicio de Asistencia* o en "
-":menuselection:`Servicio de Asistencia --> Tickets --> Todos los tickets` y "
-"seleccione un ticket de la lista."
+"Para buscar artículos de la aplicación *Información*, abra un ticket desde "
+"el tablero de *Soporte al cliente* o desde :menuselection:`Soporte al "
+"cliente --> Tickets --> Todos los tickets` y luego seleccione uno de la "
+"lista."
 
 #: ../../content/applications/services/helpdesk/overview/help_center.rst:90
 msgid "When a ticket is selected, Odoo reveals that ticket's detail form."
@@ -3038,8 +3262,8 @@ msgstr ""
 #: ../../content/applications/services/helpdesk/overview/help_center.rst-1
 msgid "View of knowledge search window from a helpdesk ticket."
 msgstr ""
-"Vista de la ventana de búsqueda en Información desde un ticket de servicio "
-"de asistencia. "
+"Vista de la ventana de búsqueda en Información desde un ticket de soporte al"
+" cliente. "
 
 #: ../../content/applications/services/helpdesk/overview/help_center.rst:100
 msgid ""
@@ -3138,7 +3362,7 @@ msgstr ""
 
 #: ../../content/applications/services/helpdesk/overview/help_center.rst:138
 msgid "Add clipboard boxes to articles"
-msgstr "Agregar casillas de portapapeles a los artículos"
+msgstr "Agregar cajas de portapapeles a los artículos"
 
 #: ../../content/applications/services/helpdesk/overview/help_center.rst:140
 msgid ""
@@ -3175,22 +3399,22 @@ msgid ""
 ":guilabel:`Send as Message` options if they are accessed directly from the "
 "*Helpdesk*."
 msgstr ""
-"Las cajas de portapapeles solo mostrarán las opciones de :guilabel:`Usar "
-"como descripción` o :guilabel:`Enviar como mensaje` si accede a ellas "
-"directamente desde el *Servicio de Asistencia*.    "
+"Las cajas de portapapeles solo muestran las opciones :guilabel:`Usar como "
+"descripción` y :guilabel:`Enviar como mensaje` si accede a ellas desde "
+"*Soporte al cliente*."
 
 #: ../../content/applications/services/helpdesk/overview/help_center.rst:156
 msgid "Use clipboard boxes in tickets"
-msgstr "Use cajas de portapapeles en los tickets"
+msgstr "Usar cajas de portapapeles en los tickets"
 
 #: ../../content/applications/services/helpdesk/overview/help_center.rst:158
 msgid ""
 "Clipboard boxes can be used to respond directly to a *Helpdesk* ticket as a "
 "message, or to add information to the ticket's description."
 msgstr ""
-"Puede usar las cajas de portapapeles para responder directamente a un ticket"
-" de *Servicio de Asistencia* como un mensaje o para añadir información a la "
-"descripción del ticket. "
+"Puede usar las cajas de portapapeles para responder a un ticket de *soporte "
+"al cliente* como un mensaje o para agregar información a la descripción del "
+"ticket. "
 
 #: ../../content/applications/services/helpdesk/overview/help_center.rst:161
 msgid ""
@@ -3199,11 +3423,10 @@ msgid ""
 ":menuselection:`Helpdesk app --> Tickets --> All Tickets` and selecting a "
 "ticket from the list."
 msgstr ""
-"Para usar las cajas de portapapeles en un ticket de *Servicio de "
-"Asistencia*, abra un ticket, ya sea desde el tablero de :guilabel:`Servicio "
-"de Asistencia` o en :menuselection:`la aplicación de Servicio de Asistencia "
-"--> Tickets --> Todos los tickets` y seleccionando un ticket de la lista."
-"    "
+"Para usar las cajas de portapapeles en un ticket de *soporte al cliente*, "
+"primero abra uno desde el tablero de :guilabel:`soporte al cliente` o vaya a"
+" :menuselection:`Soporte al cliente --> Tickets --> Todos los tickets` y "
+"seleccione uno de la lista."
 
 #: ../../content/applications/services/helpdesk/overview/help_center.rst:165
 msgid ""
@@ -3212,10 +3435,10 @@ msgid ""
 "the desired article. Doing so reveals that article page in the Odoo "
 "*Knowledge* application."
 msgstr ""
-"Haga clic en el icono de :guilabel:`Información (marcapáginas)` ubicado en "
-"la esquina superior derecha. Esto abrirá una ventana de búsqueda, en donde "
-"podrá seleccionar o buscar el artículo que desee. De esta manera, se abrirá "
-"la página del artículo en la aplicación *Información* de Odoo. "
+"Haga clic en el icono :guilabel:`Información (marcador)` que se encuentra en"
+" la esquina superior derecha. Esta acción abre una ventana de búsqueda, allí"
+" seleccione o busque el artículo deseado y esto abrirá  la página de ese "
+"artículo en la aplicación *Información* de Odoo."
 
 #: ../../content/applications/services/helpdesk/overview/help_center.rst:169
 msgid ""
@@ -3262,14 +3485,14 @@ msgid ""
 "questions and share information. By integrating a forum with a *Helpdesk* "
 "team, tickets submitted by customers can be converted to posts and shared."
 msgstr ""
-"Un *Foro de la comunidad* le proporciona a los clientes un espacio para "
-"responder a las preguntas de los demás y compartir información. Al integrar "
-"un foro con un equipo de *Servicio de Asistencia*, los tickets que suban los"
-" clientes pueden convertirse en publicaciones y compartirse. "
+"Un *foro de la comunidad* le brinda un espacio a los clientes para que "
+"respondan las preguntas de otras personas y compartan información. Al "
+"integrar un foro con un equipo de *soporte al cliente* es posible convertir "
+"los tickets enviados por los clientes en publicaciones y compartirlas."
 
 #: ../../content/applications/services/helpdesk/overview/help_center.rst:191
 msgid "Enable forums on a Helpdesk team"
-msgstr "Active los foros en un equipo de Servicio de Asistencia "
+msgstr "Habilitar los foros en un equipo de Soporte al cliente"
 
 #: ../../content/applications/services/helpdesk/overview/help_center.rst:193
 msgid ""
@@ -3277,10 +3500,10 @@ msgid ""
 "navigating to :menuselection:`Helpdesk app --> Configuration --> Helpdesk "
 "Teams` and select a team, or create a :doc:`new one <../../helpdesk>`."
 msgstr ""
-"Para activar los :guilabel:`foros de la comunidad` en un equipo del "
-"*Servicio de asistencia* vaya a :menuselection:`Servicio de asistencia--> "
-"Configuración --> Equipos del servicio de asistencia` y seleccione uno o "
-"cree :doc:`uno nuevo <../../helpdesk>`."
+"Para activar los :guilabel:`foros de la comunidad` en un equipo de *Soporte "
+"al cliente* vaya a :menuselection:`Soporte al cliente --> Configuración --> "
+"Equipos de soporte al cliente` y seleccione uno o cree :doc:`uno nuevo "
+"<../../helpdesk>`."
 
 #: ../../content/applications/services/helpdesk/overview/help_center.rst:197
 msgid ""
@@ -3329,15 +3552,15 @@ msgstr ":doc:`Documentación del foro <../../../websites/forum>`"
 #: ../../content/applications/services/helpdesk/overview/help_center.rst:214
 msgid "Create a forum post from a Helpdesk ticket"
 msgstr ""
-"Cree una publicación en el foro desde un ticket de Servicio de Asistencia. "
+"Crear una publicación en un foro desde un ticket de soporte al cliente"
 
 #: ../../content/applications/services/helpdesk/overview/help_center.rst:216
 msgid ""
 "When a *Helpdesk* team has a *Forum* enabled, tickets submitted to that team"
 " can be converted to forum posts."
 msgstr ""
-"Cuando se activa un equipo de *Servicio de Asistencia* en un *Foro*, los "
-"tickets que reciba ese equipo se pueden convertir a publicaciones del foro."
+"Cuando un equipo de *soporte al cliente* tiene un *foro* habilitado, los "
+"tickets que reciba ese equipo pueden convertirse en publicaciones del foro."
 
 #: ../../content/applications/services/helpdesk/overview/help_center.rst:219
 msgid ""
@@ -3345,9 +3568,9 @@ msgid ""
 ":menuselection:`Tickets --> All Tickets` in the :guilabel:`Helpdesk` "
 "application."
 msgstr ""
-"Para hacerlo, seleccione un ticket, ya sea desde el flujo de un equipo o "
-"desde :menuselection:`Tickets --> Todos los tickets` en la aplicación "
-":guilabel:`Servicio de Asistencia`. "
+"Para ello seleccione un ticket desde el flujo de un equipo o desde "
+":menuselection:`Tickets --> Todos los tickets` en :guilabel:`Soporte al "
+"cliente`. "
 
 #: ../../content/applications/services/helpdesk/overview/help_center.rst:222
 msgid ""
@@ -3363,7 +3586,7 @@ msgid ""
 "Helpdesk."
 msgstr ""
 "Vista general de la página de foros de un sitio web para mostrar los que "
-"están disponibles en el Servicio de asistencia de Odoo."
+"están disponibles en el soporte al cliente de Odoo."
 
 #: ../../content/applications/services/helpdesk/overview/help_center.rst:228
 msgid ""
@@ -3407,8 +3630,7 @@ msgstr ""
 
 #: ../../content/applications/services/helpdesk/overview/help_center.rst:244
 msgid "Enable eLearning courses on a Helpdesk team"
-msgstr ""
-"Habilitar cursos de eLearning para un equipo de Servicio de asistencia"
+msgstr "Habilitar cursos de eLearning para un equipo de Soporte al cliente"
 
 #: ../../content/applications/services/helpdesk/overview/help_center.rst:246
 msgid ""
@@ -3416,10 +3638,10 @@ msgid ""
 ":menuselection:`Helpdesk app --> Configuration --> Helpdesk Teams` and "
 "select a team, or create a :doc:`new one <../../helpdesk>`."
 msgstr ""
-"Para activar los cursos de *eLearning* en un equipo del *Servicio de "
-"asistencia* vaya a :menuselection:`Servicio de asistencia --> Configuración "
-"--> Equipos del servicio de asistencia` y seleccione un equipo o cree "
-":doc:`uno nuevo <../../helpdesk>`."
+"Para activar los cursos de *eLearning* en un equipo del *soporte al cliente*"
+" vaya a :menuselection:`Soporte al cliente --> Configuración --> Equipos de "
+"soporte al cliente` y seleccione un equipo o cree :doc:`uno nuevo "
+"<../../helpdesk>`."
 
 #: ../../content/applications/services/helpdesk/overview/help_center.rst:249
 msgid ""
@@ -3455,8 +3677,8 @@ msgid ""
 " settings page, as in the step above, or from the *eLearning* app."
 msgstr ""
 "Puede crear un nuevo curso de *eLearning* desde la página de ajustes del "
-"equipo de :guilabel:`Servicio de asistencia` como se describió antes o desde"
-" la aplicación *eLearning*."
+"equipo de :guilabel:`Soporte al cliente` como se describió antes o desde la "
+"aplicación *eLearning*."
 
 #: ../../content/applications/services/helpdesk/overview/help_center.rst:263
 msgid ""
@@ -3526,7 +3748,7 @@ msgstr ""
 #: ../../content/applications/services/helpdesk/overview/help_center.rst-1
 msgid "View of a course being published for Odoo Helpdesk."
 msgstr ""
-"Vista la publicación de un curso desde la aplicación Servicio de asistencia "
+"Vista de la publicación de un curso desde la aplicación Soporte al cliente "
 "de Odoo."
 
 #: ../../content/applications/services/helpdesk/overview/help_center.rst:291
@@ -3639,10 +3861,10 @@ msgid ""
 " the listed courses, to the left of the :guilabel:`Title` column title. When"
 " that checkbox is clicked, all the course contents are selected at once."
 msgstr ""
-"Desde la vista de lista podrá observar una casilla de verificación en el "
-"extremo izquierdo de la pantalla, arriba de los cursos, a la izquierda de la"
-" columna de :guilabel:`título`. Si hace clic en esa casilla, se "
-"seleccionarán todos los contenidos del curso."
+"En la vista de lista podrá observar una casilla ubicada en el extremo "
+"izquierdo de la pantalla, arriba de los cursos, a la izquierda de la columna"
+" :guilabel:`Título`. Al seleccionar esa casilla se seleccionarán todos los "
+"contenidos del curso."
 
 #: ../../content/applications/services/helpdesk/overview/help_center.rst:335
 msgid ""
@@ -3661,7 +3883,7 @@ msgstr ""
 msgid "View of a course contents being published in Odoo Helpdesk back-end."
 msgstr ""
 "Vista del contenido de un curso que se está publicando desde el backend de "
-"la aplicación Servicio de asistencia de Odoo."
+"la aplicación Soporte al cliente de Odoo."
 
 #: ../../content/applications/services/helpdesk/overview/ratings.rst:3
 msgid "Customer ratings"
@@ -3674,17 +3896,16 @@ msgid ""
 "satisfaction. Ratings can be published on the portal, providing customers "
 "with a general overview of the team's performance."
 msgstr ""
-"Si sus clientes califican la ayuda que recibieron de un equipo de *Servicio "
-"de asistencia*, podrá medir el rendimiento de su equipo y llevar seguimiento"
-" de la satisfacción del cliente. Puede publicar estas calificaciones en el "
+"Si sus clientes califican la ayuda que recibieron de un equipo de *soporte "
+"al cliente* podrá medir el rendimiento de su equipo y llevar seguimiento de "
+"la satisfacción del cliente. Puede publicar estas calificaciones en el "
 "portal, así sus clientes tendrán una visión general del rendimiento del "
 "equipo."
 
 #: ../../content/applications/services/helpdesk/overview/ratings.rst:12
 msgid "Enable customer ratings on Helpdesk teams"
 msgstr ""
-"Habilitar calificaciones de clientes en los equipos del Servicio de "
-"asistencia"
+"Habilitar calificaciones de clientes en los equipos de Soporte al cliente"
 
 #: ../../content/applications/services/helpdesk/overview/ratings.rst:14
 msgid ""
@@ -3694,20 +3915,19 @@ msgid ""
 " :guilabel:`Performance` section, and tick the :guilabel:`Customer Ratings` "
 "checkbox."
 msgstr ""
-"Para habilitar las *calificaciones de los clientes* en un equipo de Servicio"
-" de asistencia, vaya a :menuselection:`Servicio de asistencia --> "
-"Configuración --> Equipos de servicio de asistencia`, seleccione uno de la "
-"lista y haga clic en él para abrir la página de ajustes. Vaya a la sección "
-":guilabel:`Rendimiento` y seleccione la casilla :guilabel:`Calificación de "
-"clientes`."
+"Para habilitar las *calificaciones de los clientes* en un equipo de soporte "
+"al cliente, vaya a :menuselection:`Soporte al cliente --> Configuración --> "
+"Equipos de soporte al cliente`, seleccione uno de la lista y haga clic en él"
+" para abrir la página de ajustes. Vaya a la sección :guilabel:`Rendimiento` "
+"y seleccione la casilla :guilabel:`Calificación de clientes`."
 
 #: ../../content/applications/services/helpdesk/overview/ratings.rst-1
 msgid ""
 "Overview of the settings page of a helpdesk team emphasizing the rating on ticket feature\n"
 "in Odoo Helpdesk."
 msgstr ""
-"Vista general de la página de ajustes de un equipo de servicio de asistencia,se resalta en un recuadro rojo la función de calificación de tickets\n"
-"en la aplicación Servicio de asistencia de Odoo"
+"Vista general de la página de ajustes de un equipo de soporte al cliente, la función de calificación de tickets aparece en un recuadro rojo\n"
+"en la aplicación Soporte al cliente de Odoo"
 
 #: ../../content/applications/services/helpdesk/overview/ratings.rst:25
 msgid "Set a ratings request email template on a stage"
@@ -3757,7 +3977,7 @@ msgid ""
 "preconfigured with ratings customers can use to provide feedback. To view "
 "the template, click the arrow button to the right of the field."
 msgstr ""
-"En la página de ajustes de la etapa, seleccione `Servicio de asistencia: "
+"En la página de ajustes de la etapa, seleccione `Soporte al cliente: "
 "solicitud de calificación de ticket` en el campo :guilabel:`Plantilla de "
 "correo electrónico`. Esta plantilla se encuentra preconfigurada con "
 "calificaciones que los clientes pueden usar para proporcionar "
@@ -3805,8 +4025,8 @@ msgid ""
 "Reporting --> Customer Ratings`."
 msgstr ""
 "También puede visualizar las calificaciones de los clientes en un reporte "
-"especializado. Para verlo, vaya a :menuselection:`Servicio de asistencia -->"
-" Reportes --> Calificación de clientes`."
+"especializado. Para verlo, vaya a :menuselection:`Soporte al cliente --> "
+"Reportes --> Calificación de clientes`."
 
 #: ../../content/applications/services/helpdesk/overview/ratings.rst:59
 msgid ":doc:`../../../general/companies/email_template`"
@@ -3844,9 +4064,9 @@ msgstr ""
 "El equipo **debe** tener la visibilidad establecida en :guilabel:`Usuarios "
 "del portal invitados y todos los usuarios internos (público)` para mostrar "
 "las calificaciones en el portal del cliente. Para habilitar esta función "
-"vaya a :menuselection:`Servicio de asistencia --> Configuración --> Equipos "
-"de servicio de asistencia`. Seleccione uno de la lista y haga clic en él "
-"para abrir la página de ajustes, vaya a la sección :guilabel:`Visibilidad y "
+"vaya a :menuselection:`Soporte al cliente --> Configuración --> Equipos de "
+"soporte al cliente`. Seleccione uno de la lista y haga clic en él para abrir"
+" la página de ajustes, vaya a la sección :guilabel:`Visibilidad y "
 "asignación` y seleccione la casilla de :guilabel:`Usuarios del portal "
 "invitados y todos los usuarios internos (público)`."
 
@@ -3858,10 +4078,10 @@ msgid ""
 "team's ratings on your website`."
 msgstr ""
 "A continuación, para publicar las calificaciones, vaya a "
-":menuselection:`Servicio de asistencia --> Configuración --> Equipos del "
-"servicio de asistencia` y seleccione uno. Diríjase a la sección "
-":guilabel:`Rendimiento` y habilite :guilabel:`Publique la calificación de "
-"este equipo en su sitio web`."
+":menuselection:`Soporte al cliente --> Configuración --> Equipos de soporte "
+"al cliente` y seleccione uno. Diríjase a la sección :guilabel:`Rendimiento` "
+"y habilite :guilabel:`Publique la calificación de este equipo en su sitio "
+"web`."
 
 #: ../../content/applications/services/helpdesk/overview/ratings.rst:81
 msgid ""
@@ -3913,8 +4133,8 @@ msgid ""
 "Go to :menuselection:`Helpdesk app --> Reporting --> Customer Ratings` and "
 "click on one of the Kanban cards for an individual rating."
 msgstr ""
-"Vaya a :menuselection:`Servicio de asistencia --> Reportes --> Calificación "
-"de clientes` y haga clic en una de las tarjetas de kanban para consultar su "
+"Vaya a :menuselection:`Soporte al cliente --> Reportes --> Calificación de "
+"clientes` y haga clic en una de las tarjetas de kanban para consultar su "
 "calificación."
 
 #: ../../content/applications/services/helpdesk/overview/ratings.rst:103
@@ -3924,9 +4144,9 @@ msgid ""
 ":guilabel:`Satisfied`, :guilabel:`Okay` and/or :guilabel:`Dissatisfied`. "
 "Select a ticket from the results. Click the :guilabel:`Rating` smart button."
 msgstr ""
-"Vaya a :menuselection:`Servicio de asistencia --> Tickets --> Todos los "
-"tickets` y elimine el filtro :guilabel:`Abierto` de la barra de búsqueda. "
-"Luego filtre por :guilabel:`Satisfecho`, :guilabel:`Regular` o "
+"Vaya a :menuselection:`Soporte al cliente --> Tickets --> Todos los tickets`"
+" y elimine el filtro :guilabel:`Abierto` de la barra de búsqueda. Luego "
+"filtre por :guilabel:`Satisfecho`, :guilabel:`Regular` o "
 ":guilabel:`Inconforme`. Seleccione un ticket de entre los resultados. Haga "
 "clic en el botón inteligente :guilabel:`Calificación`."
 
@@ -3958,12 +4178,12 @@ msgid ""
 "opportunities to receive support quickly while also allowing the support "
 "team to manage multi-channel support tickets from one central location."
 msgstr ""
-"La aplicación *Servicio de asistencia* de Odoo proporciona varios canales "
-"que los clientes pueden contactar para recibir ayuda, como correos "
-"electrónicos, chat en vivo o un formulario de envío en el sitio web. Todas "
-"estas opciones de contacto proporcionan varias oportunidades a los clientes "
-"para que reciban soporte con rapidez, además de que hace que el equipo de "
-"soporte pueda gestionar tickets multicanal desde un solo lugar."
+"La aplicación *Soporte al cliente* de Odoo proporciona varios canales que "
+"los clientes pueden contactar para recibir ayuda, como correos electrónicos,"
+" chat en vivo o un formulario de envío en el sitio web. Todas estas opciones"
+" de contacto proporcionan varias oportunidades a los clientes para que "
+"reciban soporte con rapidez, además de que hace que el equipo de soporte "
+"pueda gestionar tickets multicanal desde un solo lugar."
 
 #: ../../content/applications/services/helpdesk/overview/receiving_tickets.rst:11
 msgid "Enable channel options to submit tickets"
@@ -3975,8 +4195,8 @@ msgid ""
 "and choose an existing team, or click :guilabel:`New` to :doc:`create a new "
 "team <../../helpdesk>`."
 msgstr ""
-"Vaya a :menuselection:`Servicio de asistencia --> Configuración --> Equipos "
-"del servicio de asistencia` y elija un equipo existente o haga clic en "
+"Vaya a :menuselection:`Soporte al cliente --> Configuración --> Equipos de "
+"soporte al cliente` y elija un equipo existente o haga clic en "
 ":guilabel:`Nuevo` para :doc:`crear un nuevo equipo <../../helpdesk>`."
 
 #: ../../content/applications/services/helpdesk/overview/receiving_tickets.rst:16
@@ -4029,9 +4249,9 @@ msgid ""
 "When a new *Helpdesk* team is created, an email alias is created for it. "
 "This alias can be changed on the team's settings page."
 msgstr ""
-"Cuando se crea un nuevo equipo de *servicio de asistencia* también se crea "
-"un seudónimo de correo electrónico, que se puede cambiar en la página de "
-"ajustes del equipo."
+"Al crear un nuevo equipo de *soporte al cliente* se crea un seudónimo de "
+"correo electrónico para el mismo y puede cambiarlo en la página de ajustes "
+"del equipo."
 
 #: ../../content/applications/services/helpdesk/overview/receiving_tickets.rst:37
 msgid ""
@@ -4039,10 +4259,10 @@ msgid ""
 ":menuselection:`Helpdesk app --> Configuration --> Helpdesk Teams`, and "
 "click on a team name to open its settings page."
 msgstr ""
-"Para cambiar el seudónimo de correo electrónico de un equipo de *servicio de"
-" asistencia* vaya a :menuselection:`la aplicación Servicio de asistencia -->"
-" Configuración --> Equipos de Servicio de asistencia` y haga clic en el "
-"nombre de un equipo para abrir la página de ajustes."
+"Vaya a :menuselection:`Soporte al cliente --> Configuración --> Equipos de "
+"soporte al cliente` para cambiar el seudónimo de correo electrónico de un "
+"equipo de *soporte al cliente* y haga clic en el nombre de uno para abrir su"
+" página de ajustes."
 
 #: ../../content/applications/services/helpdesk/overview/receiving_tickets.rst:40
 msgid ""
@@ -4058,8 +4278,8 @@ msgid ""
 "View of the settings page of a Helpdesk team emphasizing the email alias feature in Odoo\n"
 "Helpdesk."
 msgstr ""
-"Vista de la página de ajustes de un equipo de Servicio de asistencia en la que se resalta la función de seudónimo de correo electrónico en la aplicación\n"
-"Servicio de asistencia de Odoo."
+"Vista de la página de ajustes de un equipo de soporte al cliente  en la que se resalta la función de seudónimo de correo electrónico en la aplicación\n"
+"Soporte al cliente de Odoo."
 
 #: ../../content/applications/services/helpdesk/overview/receiving_tickets.rst:49
 msgid ""
@@ -4088,7 +4308,7 @@ msgid ""
 "the :guilabel:`Description` tab, and in the ticket's chatter."
 msgstr ""
 "Cuando recibe un correo electrónico, la línea de asunto del mensaje se "
-"convierte en el título del nuevo ticket de *Servicio de asistencia* y el "
+"convierte en el título del nuevo ticket de *soporte al cliente* y el "
 "contenido se agrega al ticket en la pestaña :guilabel:`Descripción` y al "
 "chatter del ticket."
 
@@ -4103,11 +4323,10 @@ msgid ""
 " these conversations using the :doc:`response command "
 "</applications/websites/livechat/responses>` `/ticket`."
 msgstr ""
-"La función *chat en vivo* permite que los visitantes del sitio web contacten"
-" directamente a un agente de soporte o a un bot de chat. Durante estas "
-"conversaciones se pueden crear tickets de *Servicio de asistencia* de forma "
-"instantánea mediante el :doc:`comando de respuesta "
-"</applications/websites/livechat/responses>` `/ticket`."
+"La función *Chat en vivo* permite que los visitantes del sitio web contacten"
+" a un operador o a un bot de chat. En estas conversaciones es posible crear "
+"*tickets de soporte al cliente* de manera instantánea con el :doc:`comando "
+"de respuesta </applications/websites/livechat/responses>` `/ticket`."
 
 #: ../../content/applications/services/helpdesk/overview/receiving_tickets.rst:69
 msgid ""
@@ -4116,11 +4335,11 @@ msgid ""
 "team's settings page, click the checkbox next to :guilabel:`Live Chat`, "
 "under the :guilabel:`Channels` section."
 msgstr ""
-"Para habilitar el *chat en vivo*, vaya a :menuselection:`la aplicación "
-"Servicio de asistencia --> Configuración --> Equipos` y, en la vista de "
-"lista, seleccione un equipo. En la página de ajustes de equipos y en la "
-"sección :guilabel:`canales` haga clic en la casilla junto a :guilabel:`chat "
-"en vivo`."
+"Para habilitar el *chat en vivo* vaya a la vista de lista en "
+":menuselection:`Soporte al cliente --> Configuración --> Equipos de soporte "
+"al cliente` y seleccione uno. En la página de ajustes del equipo seleccione "
+"la casilla junto a :guilabel:`Chat en vivo` en la sección "
+":guilabel:`Canales`."
 
 #: ../../content/applications/services/helpdesk/overview/receiving_tickets.rst:74
 msgid ""
@@ -4139,10 +4358,10 @@ msgid ""
 "new *Live Chat* channel is created. Click on :guilabel:`Configure Live Chat "
 "Channel` to update the channel's settings."
 msgstr ""
-"Después de activar el ajuste :guilabel:`chat en vivo` en un equipo de "
-"*Servicio de asistencia* se creará un nuevo canal de *chat en vivo*. Haga "
-"clic en :guilabel:`Configurar canal de chat en vivo` para actualizar los "
-"ajustes del canal."
+"Luego de habilitar la función :guilabel:`Chat en vivo` en un equipo de "
+"*soporte al cliente*, se creará un nuevo canal de *chat en vivo*. Haga clic "
+"en :guilabel:`Configurar canal de chat en vivo` para actualizar los ajustes "
+"del canal."
 
 #: ../../content/applications/services/helpdesk/overview/receiving_tickets.rst:82
 msgid "Live Chat channel configuration"
@@ -4154,18 +4373,18 @@ msgid ""
 "though, Odoo names the channel to match the *Helpdesk* team name, by "
 "default."
 msgstr ""
-"En la página de ajustes del canal puede editar el :guilabel:`Nombre del "
-"canal`, aunque Odoo nombra los canales para que sea el mismo que el equipo "
-"del *Servicio de asistencia* de manera automática. "
+"En la página de ajustes del canal puede editar el :guilabel:`nombre del "
+"canal`, aunque Odoo le proporciona el mismo nombre que tiene el equipo de "
+"*soporte al cliente* de manera automática. "
 
 #: ../../content/applications/services/helpdesk/overview/receiving_tickets.rst:88
 msgid ""
 "If a *Helpdesk* team is named `Customer Care`, a *Live Chat* channel is "
 "created called `Customer Care`."
 msgstr ""
-"Si un equipo de *Servicio de asistencia* tiene el nombre `atención al "
-"cliente`, el canal de *chat en vivo* que se cree también se llamará "
-"`atención al cliente`."
+"Si un equipo de *soporte al cliente* tiene el nombre `Atención al cliente`, "
+"el canal de *chat en vivo* que se cree también se llamará `Atención al "
+"cliente`."
 
 #: ../../content/applications/services/helpdesk/overview/receiving_tickets.rst:0
 #: ../../content/applications/services/helpdesk/overview/receiving_tickets.rst-1
@@ -4207,9 +4426,9 @@ msgid ""
 "Click the checkbox next to the users to be added on the :guilabel:`Add: "
 "Operators` pop-up window that appears, then click :guilabel:`Select`."
 msgstr ""
-"Haga clic en la casilla de verificación a un lado de los usuarios para "
-"agregarlos en la ventana emergente que aparece, :guilabel:`Agregar: "
-"operadores`, después haga clic en :guilabel:`Seleccionar`."
+"Haga clic en la casilla ubicada junto a los usuarios para agregarlos en la "
+"ventana emergente :guilabel:`Agregar: operadores`, después haga clic en "
+":guilabel:`Seleccionar`."
 
 #: ../../content/applications/services/helpdesk/overview/receiving_tickets.rst:109
 msgid "Click :guilabel:`New` to create new operators, if needed."
@@ -4233,11 +4452,11 @@ msgid ""
 "them as an operator will **not** alter the subscription or billing rate for "
 "a database."
 msgstr ""
-"Crear un nuevo usuario puede cambiar el estado de una suscripción de Odoo, "
-"ya que el número total de usuarios en una base de datos se toma en cuenta "
-"para calcular el precio; piénselo bien antes de crear un usuario nuevo. Si "
-"el usuario ya existe y lo agrega como operador **no** afectará la "
-"suscripción ni el precio de la base de datos."
+"Antes de crear un nuevo usuario piense si de verdad es necesario, pues crear"
+" uno puede cambiar el estado de una suscripción de Odoo porque el número "
+"total de usuarios en una base de datos se toma en cuenta para calcular el "
+"precio que pagará. Si el usuario ya existe y lo agrega como operador **no** "
+"modificará su suscripción ni el importe que paga por su base de datos."
 
 #: ../../content/applications/services/helpdesk/overview/receiving_tickets.rst:120
 msgid ""
@@ -4410,9 +4629,9 @@ msgid ""
 "available, check the box labeled :guilabel:`Enabled only if no operator`."
 msgstr ""
 "Para incluir un :guilabel:`bot de chat` en este canal selecciónelo desde el "
-"menú desplegable. Si el bot de chat solo estará activo cuando no haya "
-"operadores disponibles, seleccione la casilla denominada "
-":guilabel:`habilitado solo si no hay un operador`."
+"menú desplegable. Seleccione la casilla :guilabel:`Habilitado solo si no hay"
+" un operador` si el bot de chat solo estará activo cuando no haya operadores"
+" activos."
 
 #: ../../content/applications/services/helpdesk/overview/receiving_tickets.rst:197
 msgid ""
@@ -4543,9 +4762,9 @@ msgid ""
 "*Helpdesk* tickets can also be created through the :doc:`WhatsApp "
 "</applications/productivity/whatsapp>` app using the same `/ticket` command."
 msgstr ""
-"Los tickets del *Servicio de asistencia* también se pueden crear a través de"
-" la aplicación :doc:`WhatsApp </applications/productivity/whatsapp>` usando "
-"el mismo comando `/ticket`."
+"También es posible crear tickets de *soporte al cliente* con la aplicación "
+":doc:`WhatsApp </applications/productivity/whatsapp>` mediante el mismo "
+"comando `/ticket`."
 
 #: ../../content/applications/services/helpdesk/overview/receiving_tickets.rst:255
 msgid "Website Form"
@@ -4568,9 +4787,8 @@ msgid ""
 "selecting the desired team from the list."
 msgstr ""
 "Para activar el formulario de sitio web, vaya a la página de ajustes de un "
-"equipo en :menuselection:`la aplicación Servicio de asistencia --> "
-"Configuración --> Equipos de servicio de asistencia` y seleccione el equipo "
-"deseado de la lista."
+"equipo desde :menuselection:`Soporte al cliente --> Configuración --> "
+"Equipos de soporte al cliente` y seleccione el equipo deseado de la lista."
 
 #: ../../content/applications/services/helpdesk/overview/receiving_tickets.rst:263
 msgid ""
@@ -4627,7 +4845,7 @@ msgid ""
 "Odoo Helpdesk."
 msgstr ""
 "Vista de la página de ajustes de un equipo de servicio en la que se hace énfasis en el botón \"Ir al sitio web\" en la aplicación\n"
-"Servicio de asistencia de Odoo."
+"Soporte al cliente de Odoo."
 
 #: ../../content/applications/services/helpdesk/overview/receiving_tickets.rst:287
 msgid "Website ticket form customization"
@@ -4752,7 +4970,7 @@ msgid ""
 "View of the unpublished website form to submit a ticket for Odoo Helpdesk."
 msgstr ""
 "Vista del formulario de sitio web sin publicar para enviar un ticket a la "
-"aplicación Servicio de asistencia de Odoo."
+"aplicación Soporte al cliente de Odoo."
 
 #: ../../content/applications/services/helpdesk/overview/receiving_tickets.rst:321
 msgid ""
@@ -4783,8 +5001,8 @@ msgstr ""
 msgid ""
 "View of a team's Kanban view and the prioritized tasks in Odoo Helpdesk."
 msgstr ""
-"Imagen de la vista kanban de un equipo y las tareas con prioridad en la "
-"aplicación Servicio de asistencia de Odoo."
+"Imagen de la vista de kanban de un equipo y las tareas con prioridad en la "
+"aplicación Soporte al cliente de Odoo."
 
 #: ../../content/applications/services/helpdesk/overview/receiving_tickets.rst:335
 msgid "The priority levels are represented by stars:"
@@ -4832,8 +5050,8 @@ msgid ":doc:`/applications/services/helpdesk/advanced/close_tickets`"
 msgstr ":doc:`/applications/services/helpdesk/advanced/close_tickets`"
 
 #: ../../content/applications/services/helpdesk/overview/receiving_tickets.rst:351
-msgid ":doc:`/applications/general/email_communication/email_servers`"
-msgstr ":doc:`/applications/general/email_communication/email_servers`"
+msgid ":doc:`../../../general/email_communication`"
+msgstr ":doc:`../../../general/email_communication`"
 
 #: ../../content/applications/services/helpdesk/overview/receiving_tickets.rst:352
 msgid ":doc:`/applications/websites/livechat`"
@@ -4849,7 +5067,7 @@ msgid ""
 "workloads, identify areas for improvement, and confirm if customer "
 "expectations are being met."
 msgstr ""
-"Los reportes en la aplicación *Servicio de asistencia* de Odoo ofrecen la "
+"Los reportes en la aplicación *Soporte al cliente* de Odoo ofrecen la "
 "oportunidad de gestionar las cargas de trabajo de los empleados, identificar"
 " áreas de mejora y confirmar si está cumpliendo las expectativas de los "
 "clientes."
@@ -4866,8 +5084,8 @@ msgid ""
 ":guilabel:`SLA Status Analysis`, or :guilabel:`Customer Ratings`."
 msgstr ""
 "A continuación encontrará detalles relacionados con los reportes disponibles"
-" en la aplicación *Servicio de asistencia* de Odoo. Para verlos, vaya a "
-":menuselection:`Servicio de asistencia --> Reportes` y seleccione entre "
+" en la aplicación *Soporte al cliente* de Odoo. Para verlos, vaya a "
+":menuselection:`Soporte al cliente --> Reportes` y seleccione entre "
 ":guilabel:`Análisis de tickets`, :guilabel:`Análisis del estado del SLA` o "
 ":guilabel:`Calificación de clientes`."
 
@@ -4881,9 +5099,9 @@ msgid ""
 "--> Tickets Analysis`) provides an overview of every customer support ticket"
 " in the database."
 msgstr ""
-"El reporte de *Análisis de tickets* (:menuselection:`Servicio de asistencia "
-"--> Reportes --> Análisis de tickets`) proporciona información general sobre"
-" cada ticket de soporte al cliente en la base de datos."
+"El reporte de *Análisis de tickets* (:menuselection:`Soporte al cliente --> "
+"Reportes --> Análisis de tickets`) proporciona información general sobre "
+"cada ticket de soporte al cliente en la base de datos."
 
 #: ../../content/applications/services/helpdesk/overview/reports.rst:24
 msgid ""
@@ -5028,8 +5246,8 @@ msgid ""
 " --> SLA Status Analysis`) :ref:`analyzes the performance <helpdesk/analyze-"
 "sla-performance>` of individual SLA (Service Level Agreement) policies."
 msgstr ""
-"El reporte de *análisis del estado del SLA* (:menuselection:`Servicio de "
-"asistencia --> Reportes --> Análisis del estado del SLA`) :ref:`analiza el "
+"El reporte de *análisis del estado del SLA* (:menuselection:`Soporte al "
+"cliente --> Reportes --> Análisis del estado del SLA`) :ref:`analiza el "
 "rendimiento <helpdesk/analyze-sla-performance>` de cada política del SLA "
 "(acuerdo de nivel de servicio)."
 
@@ -5115,9 +5333,9 @@ msgid ""
 "individual support tickets, as well as any additional comments submitted "
 "with the rating."
 msgstr ""
-"El reporte de *calificación de clientes* (:menuselection:`Servicio de "
-"asistencia --> Reportes --> Calificación de clientes`) muestra un resumen de"
-" las calificaciones recibidas en cada ticket de soporte, así como cualquier "
+"El reporte de *calificación de clientes* (:menuselection:`Soporte al cliente"
+" --> Reportes --> Calificación de clientes`) muestra un resumen de las "
+"calificaciones recibidas en cada ticket de soporte, así como cualquier "
 "comentario adicional enviado con la calificación."
 
 #: ../../content/applications/services/helpdesk/overview/reports.rst-1
@@ -5143,18 +5361,18 @@ msgid ""
 "On the rating's details page, tick the :guilabel:`Visible Internally Only` "
 "checkbox to hide the rating from the customer portal."
 msgstr ""
-"En la página de detalles de la calificación, seleccione la casilla de "
-"verificación :guilabel:`Visible solo de forma interna` para ocultar la "
-"calificación en el portal de clientes."
+"En la página de detalles de la calificación, seleccione la casilla "
+":guilabel:`Visible solo de forma interna` para ocultar la calificación en el"
+" portal de clientes."
 
 #: ../../content/applications/services/helpdesk/overview/reports.rst:119
 msgid ""
 "The *Customer Ratings* report is displayed in a Kanban view by default, but "
 "can also be displayed in graph, list, or pivot view."
 msgstr ""
-"El reporte *Calificación de clientes* se muestra en la vista kanban de forma"
-" predeterminada, pero también se puede mostrar en la vista de gráfico, lista"
-" o tabla dinámica."
+"El reporte *Calificación de clientes* aparece en la vista de kanban de forma"
+" predeterminada, pero también puede consultarlo en la vista de gráfico, "
+"lista o tabla dinámica."
 
 #: ../../content/applications/services/helpdesk/overview/reports.rst:123
 msgid ":doc:`Ratings <ratings>`"
@@ -5173,7 +5391,7 @@ msgstr ""
 "En cualquier reporte de Odoo, las opciones de visualización y filtrado "
 "varían según los datos que se están analizando, midiendo y agrupando. A "
 "continuación encontrará más información sobre las vistas disponibles para "
-"los reportes del *Servicio de asistencia*."
+"los reportes de *Soporte al cliente*."
 
 #: ../../content/applications/services/helpdesk/overview/reports.rst:133
 msgid ""
@@ -5194,7 +5412,7 @@ msgid ""
 "*Helpdesk* reports are available in pivot view."
 msgstr ""
 "La vista de *tabla dinámica* presenta los datos de forma interactiva y los "
-"tres reportes de *Servicio de asistencia* están disponibles en ella."
+"tres reportes de *Soporte al cliente* están disponibles allí. "
 
 #: ../../content/applications/services/helpdesk/overview/reports.rst:142
 msgid ""
@@ -5209,8 +5427,8 @@ msgstr ""
 #: ../../content/applications/services/helpdesk/overview/sla.rst:151
 msgid "View of the SLA status analysis report in Odoo Helpdesk."
 msgstr ""
-"Vista del reporte de análisis de estado del SLA en el Servicio de asistencia"
-" de Odoo."
+"Vista del reporte de análisis de estado del SLA en la aplicación Soporte al "
+"cliente de Odoo."
 
 #: ../../content/applications/services/helpdesk/overview/reports.rst:149
 msgid ""
@@ -5301,9 +5519,9 @@ msgid ""
 "their most commonly used filters, without having to reconstruct them every "
 "time they are needed."
 msgstr ""
-"La función de *Favoritos* en los reportes del *Servicio de asistencia* "
-"permite que los usuarios guarden sus filtros más utilizados sin tener que "
-"reconstruirlos cada vez que los necesitan."
+"La función *Favoritos* de los reportes de *soporte al cliente* permite que "
+"los usuarios guarden los filtros usan con más frecuencia para que no vuelvan"
+" a crearlos cada que los necesitan. "
 
 #: ../../content/applications/services/helpdesk/overview/reports.rst:194
 msgid ""
@@ -5347,9 +5565,9 @@ msgid ""
 "automatically displayed when the report is opened. Otherwise, leave it "
 "blank."
 msgstr ""
-"Marque la casilla de verificación :guilabel:`Filtro predeterminado` para que"
-" estos ajustes de filtro se muestren de forma automática cuando se abra el "
-"reporte. De lo contrario, no seleccione la casilla."
+"Seleccione la casilla :guilabel:`Filtro predeterminado` para que estos "
+"ajustes de filtro aparezcan de forma automática al abrir el reporte. De lo "
+"contrario, no seleccione la casilla."
 
 #: ../../content/applications/services/helpdesk/overview/reports.rst:204
 msgid ""
@@ -5357,10 +5575,9 @@ msgid ""
 "available to all other database users. If this checkbox is not ticked, only "
 "the user who creates the filter can access it."
 msgstr ""
-"Marque la casilla de verificación :guilabel:`Compartido` para que la "
-"configuración de este filtro esté disponible para los demás usuarios de la "
-"base de datos. Si no marca esta casilla de verificación, el filtro solo "
-"estará disponible para el usuario que lo creó."
+"Seleccione la casilla :guilabel:`Compartido` para que la configuración de "
+"este filtro esté disponible para los demás usuarios de la base de datos; de "
+"lo contrario, el filtro solo estará disponible para el usuario que lo creó."
 
 #: ../../content/applications/services/helpdesk/overview/reports.rst:207
 msgid "Click :guilabel:`Save` to preserve the configuration for future use."
@@ -5371,8 +5588,8 @@ msgstr ""
 #: ../../content/applications/services/helpdesk/overview/reports.rst-1
 msgid "View of the save favorites option in Odoo Helpdesk."
 msgstr ""
-"Vista de la opción guardar favoritos en la aplicación Servicio de asistencia"
-" de Odoo."
+"Vista de la opción guardar favoritos en la aplicación Soporte al cliente de "
+"Odoo."
 
 #: ../../content/applications/services/helpdesk/overview/reports.rst:214
 msgid ":doc:`Start receiving tickets <receiving_tickets>`"
@@ -5404,8 +5621,8 @@ msgid ""
 "The *SLA Policies* feature is enabled by default on newly created *Helpdesk*"
 " teams."
 msgstr ""
-"La función *Políticas de SLA* se activa de forma predeterminada en los "
-"equipos nuevos del *Servicio de asistencia*."
+"La función *Políticas de SLA* **debe** estar habilitada de forma "
+"predeterminada en los equipos de *soporte al cliente* recién creados."
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:12
 msgid ""
@@ -5413,10 +5630,10 @@ msgid ""
 ":menuselection:`Helpdesk app --> Configuration --> Helpdesk Teams`. Click on"
 " a team to open that team's configuration page."
 msgstr ""
-"Para desactivar esta función o para editar las horas de trabajo, vaya a "
-":menuselection:`la aplicación de Servicio de asistencia --> Configuración "
-"--> Equipos de servicio de asistencia`. Haga clic en un equipo para abrir la"
-" página de configuración del mismo."
+"Para deshabilitar la función o para editar las horas de trabajo, vaya a "
+":menuselection:`Soporte al cliente --> Configuración --> Equipos de soporte "
+"al cliente` y haga clic en uno para abrir la página de configuración de ese "
+"equipo."
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:15
 msgid ""
@@ -5431,8 +5648,8 @@ msgstr ""
 #: ../../content/applications/services/helpdesk/overview/sla.rst:0
 msgid "View of a team page in Helpdesk focusing on the SLA Policies setting."
 msgstr ""
-"Imagen de una página de equipo en el Servicio de asistencia que se enfoca en"
-" el ajuste de Políticas SLA."
+"Vista de una página de equipo en Soporte al cliente que destaca la función "
+"Políticas SLA."
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:23
 msgid "Create a new SLA policy"
@@ -5443,8 +5660,8 @@ msgid ""
 "To create a new policy, go to :menuselection:`Helpdesk app --> Configuration"
 " --> SLA Policies`, and click :guilabel:`New`."
 msgstr ""
-"Para crear una nueva política vaya a :menuselection:`Servicio de asistencia "
-"--> Configuración --> Políticas SLA` y haga clic en :guilabel:`Nuevo`."
+"Para crear una nueva política vaya a :menuselection:`Soporte al cliente --> "
+"Configuración --> Políticas SLA` y haga clic en :guilabel:`Nuevo`."
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:28
 msgid ""
@@ -5453,8 +5670,8 @@ msgid ""
 "Policies` smart button at the top of the team's settings page, and click "
 ":guilabel:`New`."
 msgstr ""
-"Otra forma de hacerlo es ir a :menuselection:`Servicio de asistencia --> "
-"Configuración --> Equipos de servicio de asistencia` y hacer clic en uno. "
+"Otra forma de hacerlo es ir a :menuselection:`Soporte al cliente --> "
+"Configuración --> Equipos de soporte al cliente` y hacer clic en uno. "
 "Después haga clic en el botón inteligente :guilabel:`Políticas SLA` ubicado "
 "en la parte superior de la página de ajustes del equipo y haga clic en "
 ":guilabel:`Nuevo`."
@@ -5498,8 +5715,8 @@ msgid ""
 ":guilabel:`Helpdesk Team`: a policy can only be applied to one team. *This "
 "field is required.*"
 msgstr ""
-":guilabel:`Equipo de servicio de asistencia`: la política solo se puede "
-"aplicar a un equipo. *Este campo es obligatorio*."
+":guilabel:`Equipo de soporte al cliente`: La política solo se puede aplicar "
+"a un equipo. *Este campo es obligatorio.*"
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:46
 msgid ""
@@ -5673,8 +5890,8 @@ msgid ""
 "View of a ticket's form emphasizing an open SLA deadline on a ticket in Odoo"
 " Helpdesk."
 msgstr ""
-"Imagen del formulario de un ticket donde se resalta la fecha límite de un "
-"acuerdo de nivel de servicio en la aplicación Servicio de asistencia de "
+"Vista de un formulario de ticket que muestra  la fecha límite de un acuerdo "
+"de nivel de servicio en un ticket de la aplicación Soporte al cliente de "
 "Odoo."
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:109
@@ -5691,8 +5908,8 @@ msgstr ""
 #: ../../content/applications/services/helpdesk/overview/sla.rst-1
 msgid "View of a ticket's form emphasizing a satisfied SLA in Odoo Helpdesk."
 msgstr ""
-"Imagen de un formulario de ticket que muestra un SLA cumplido en la "
-"aplicación Servicio de asistencia de Odoo"
+"Vista de un formulario de ticket que muestra un SLA cumplido en la "
+"aplicación Soporte al cliente de Odoo."
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:117
 msgid ""
@@ -5723,8 +5940,8 @@ msgstr ""
 msgid ""
 "View of a ticket's form with a failing and passing SLA in Odoo Helpdesk."
 msgstr ""
-"Imagen de un formulario de ticket con un SLA fallido y un cumplido en la "
-"aplicación Servicio de asistencia de Odoo"
+"Vista de un formulario de ticket con un SLA fallido y uno cumplido en la "
+"aplicación Soporte al cliente de Odoo."
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:133
 msgid "Analyze SLA performance"
@@ -5741,8 +5958,8 @@ msgstr ""
 "El reporte de :guilabel:`análisis del estado del SLA` lleva el registro de "
 "qué tan rápido se cumple un :abbr:`SLA (Acuerdo de nivel de servicio)`, así "
 "como el rendimiento de cada miembro del equipo. Puede acceder al reporte y a"
-" su respectiva tabla dinámica desde :menuselection:`Servicio de asistencia "
-"--> Reportes --> Análisis del estado del SLA`."
+" su respectiva tabla dinámica desde :menuselection:`Soporte al cliente --> "
+"Reportes --> Análisis del estado del SLA`."
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:143
 msgid ""
@@ -6848,7 +7065,7 @@ msgstr ""
 "`Tutoriales de Odoo: Gestión de proyectos Kanban "
 "<https://www.odoo.com/slides/slide/kanban-project-management-1664>`_"
 
-#: ../../content/applications/services/project/project_management.rst:19
+#: ../../content/applications/services/project/project_management.rst:21
 msgid ""
 "Open the **Project** app and click :guilabel:`Create` to start a new "
 "project. Enter a :guilabel:`Name` for your project and click "
@@ -6858,7 +7075,7 @@ msgstr ""
 "comenzar un nuevo proyecto. Introduzca un :guilabel:`Nombre` para su "
 "proyecto y haga clic en :guilabel:`Crear proyecto`.   "
 
-#: ../../content/applications/services/project/project_management.rst:22
+#: ../../content/applications/services/project/project_management.rst:24
 msgid ""
 "You can customize your existing **projects** from the dashboard by clicking "
 "the drop-down toggle button (:guilabel:`⋮`) on your project's **card**."
@@ -6871,11 +7088,11 @@ msgstr ""
 msgid "Project card"
 msgstr "Tarjeta del proyecto "
 
-#: ../../content/applications/services/project/project_management.rst:29
+#: ../../content/applications/services/project/project_management.rst:31
 msgid "This enables a new menu divided into four parts:"
 msgstr "Esto activa un nuevo menú que se divide en cuatro partes:"
 
-#: ../../content/applications/services/project/project_management.rst:31
+#: ../../content/applications/services/project/project_management.rst:33
 msgid ""
 ":guilabel:`View`: see an overview of your project's components, such as its "
 ":guilabel:`Tasks`, :guilabel:`Milestones` and :guilabel:`Project Updates`. "
@@ -6890,7 +7107,7 @@ msgstr ""
 ":guilabel:`Documentos`. Puede encontrar todos los archivos subidos en este "
 "menú, así como en la aplicación **Documentos**, en :guilabel:`Proyectos`;"
 
-#: ../../content/applications/services/project/project_management.rst:35
+#: ../../content/applications/services/project/project_management.rst:37
 msgid ""
 ":guilabel:`Reporting`: analyze your project's progress and profitability "
 "through graphics and statistics;"
@@ -6898,7 +7115,7 @@ msgstr ""
 ":guilabel:`Reportes`: analice el progreso y rendimiento de su proyecto con "
 "gráficos y estadísticas;"
 
-#: ../../content/applications/services/project/project_management.rst:37
+#: ../../content/applications/services/project/project_management.rst:39
 msgid ""
 "**Color**: make a line of color appear on the left side of the card so that "
 "your project is more recognizable;"
@@ -6906,44 +7123,44 @@ msgstr ""
 "**Color**: ponga una línea de color del lado izquierdo de la tarjeta para "
 "reconocer fácilmente su proyecto;"
 
-#: ../../content/applications/services/project/project_management.rst:39
+#: ../../content/applications/services/project/project_management.rst:41
 msgid ":guilabel:`Settings`: you can change the following:"
 msgstr ":guilabel:`Ajustes`: puede cambiar lo siguiente:"
 
-#: ../../content/applications/services/project/project_management.rst:41
+#: ../../content/applications/services/project/project_management.rst:43
 msgid "the :guilabel:`Name` of the project;"
 msgstr "el :guilabel:`Nombre` del proyecto;"
 
-#: ../../content/applications/services/project/project_management.rst:42
+#: ../../content/applications/services/project/project_management.rst:44
 msgid "the :guilabel:`Name of the tasks` found under that project;"
 msgstr ""
 "el :guilabel:`Nombre de las tareas` que le pertenecen a ese proyecto; "
 
-#: ../../content/applications/services/project/project_management.rst:43
+#: ../../content/applications/services/project/project_management.rst:45
 msgid "the :guilabel:`Customer` for whom the project is intended;"
 msgstr "el :guilabel:`Cliente` para quién es el proyecto; "
 
-#: ../../content/applications/services/project/project_management.rst:44
+#: ../../content/applications/services/project/project_management.rst:46
 msgid "the :guilabel:`Tags` used for filtering;"
 msgstr "las :guilabel:`Etiquetas` que usa para los filtros;"
 
-#: ../../content/applications/services/project/project_management.rst:45
+#: ../../content/applications/services/project/project_management.rst:47
 msgid "the :guilabel:`Company` responsible for the project;"
 msgstr "la :guilabel:`Empresa` responsable del proyecto;"
 
-#: ../../content/applications/services/project/project_management.rst:46
+#: ../../content/applications/services/project/project_management.rst:48
 msgid "the employee designated as :guilabel:`Project Manager`;"
 msgstr "el empleado asignado como :guilabel:`Gerente del proyecto`;"
 
-#: ../../content/applications/services/project/project_management.rst:47
+#: ../../content/applications/services/project/project_management.rst:49
 msgid "the :guilabel:`Planned Date` of the project;"
 msgstr "la :guilabel:`Fecha planeada` del proyecto;"
 
-#: ../../content/applications/services/project/project_management.rst:48
+#: ../../content/applications/services/project/project_management.rst:50
 msgid "the total :guilabel:`Allocated Hours` for that project."
 msgstr "las :guilabel:`Horas asignadas` totales para ese proyecto."
 
-#: ../../content/applications/services/project/project_management.rst:50
+#: ../../content/applications/services/project/project_management.rst:52
 msgid ""
 "Additionally, you can mark the project as :guilabel:`Favorite`, allowing you"
 " to find it using the :guilabel:`My Favorites` filter on the Kanban view;"
@@ -6956,7 +7173,7 @@ msgstr ""
 msgid "Project settings"
 msgstr "Ajustes del proyecto"
 
-#: ../../content/applications/services/project/project_management.rst:58
+#: ../../content/applications/services/project/project_management.rst:60
 msgid ""
 "`Odoo Tutorials: Customize projects "
 "<https://www.odoo.com/slides/slide/customize-projects-3615?fullscreen=1>`_"
@@ -6964,7 +7181,7 @@ msgstr ""
 "`Tutoriales de Odoo: personalice sus proyectos "
 "<https://www.odoo.com/slides/slide/customize-projects-3615?fullscreen=1>`_"
 
-#: ../../content/applications/services/project/project_management.rst:61
+#: ../../content/applications/services/project/project_management.rst:63
 msgid ""
 "Further settings are available under the :guilabel:`Settings` tab. Most of "
 "them are *only* available depending on the activated apps."
@@ -6972,11 +7189,11 @@ msgstr ""
 "Más ajustes están disponibles en la pestaña :guilabel:`Ajustes`. La mayoría "
 "están *solo* disponibles dependiendo de las aplicaciones activadas.  "
 
-#: ../../content/applications/services/project/project_management.rst:65
+#: ../../content/applications/services/project/project_management.rst:67
 msgid "Scheduling activities"
 msgstr "Planificar actividades"
 
-#: ../../content/applications/services/project/project_management.rst:67
+#: ../../content/applications/services/project/project_management.rst:69
 msgid ""
 "You can schedule **activities** (ex. :guilabel:`Call`, :guilabel:`Meeting`, "
 "etc.) per project by clicking on the **clock** icon on a project. Doing so "
@@ -6997,7 +7214,7 @@ msgstr ""
 "acuerdo con el :guilabel:`Tipo de actividad`, puede tener disponibles "
 "**opciones adicionales**."
 
-#: ../../content/applications/services/project/project_management.rst:75
+#: ../../content/applications/services/project/project_management.rst:77
 msgid ""
 "If an activity is **already** scheduled, the icon may change to a **phone**,"
 " **group of people**, or other."
@@ -7006,97 +7223,8 @@ msgstr ""
 "**teléfono**, un **grupo de personas** u otro. "
 
 #: ../../content/applications/services/project/tasks.rst:5
-msgid "Tasks"
-msgstr "Tareas"
-
-#: ../../content/applications/services/project/tasks/email_alias.rst:3
-msgid "Create Project's Tasks from an Email Alias"
-msgstr ""
-"Crear tareas del proyecto a partir de un seudónimo de correo electrónico"
-
-#: ../../content/applications/services/project/tasks/email_alias.rst:5
-msgid ""
-"When you already have an email address that customers know from the top of "
-"their heads, changing it is the last thing you want to do. Instead, link "
-"that address to your project and transform those conversations into "
-"structured work. It automatically creates a task in the first stage of a "
-"project."
-msgstr ""
-"Cuando cuenta con una dirección de correo electrónico que sus clientes "
-"conocen de inicio a fin, lo último que querrá hacer es cambiarla. En su "
-"lugar, vincule esa dirección a su proyecto y transforme esas conversaciones "
-"en trabajo estructurado. De esta manera se creará automáticamente una tarea "
-"en la primera etapa de un proyecto."
-
-#: ../../content/applications/services/project/tasks/email_alias.rst:11
-msgid "Set up an incoming email server"
-msgstr "Configurar un servidor de correo electrónico entrante"
-
-#: ../../content/applications/services/project/tasks/email_alias.rst:14
-msgid ""
-"On the *Settings* application, enable *External Email Servers* and define "
-"the incoming email alias you would like to use."
-msgstr ""
-"En la aplicación *Configuración*, active *Servidores de correo electrónico "
-"externos* y defina el seudónimo de correo electrónico entrante que desee "
-"utilizar."
-
-#: ../../content/applications/services/project/tasks/email_alias.rst:15
-msgid ""
-"**For more information**: "
-":doc:`/applications/general/email_communication/email_servers`"
-msgstr ""
-"**Para más información**: "
-":doc:`/applications/general/email_communication/email_servers`"
-
-#: ../../content/applications/services/project/tasks/email_alias.rst:18
-msgid "Configure the email alias in your project"
-msgstr "Configure el seudónimo de correo electrónico en su proyecto"
-
-#: ../../content/applications/services/project/tasks/email_alias.rst:22
-msgid ""
-"Now that you have the incoming email server set up, go to "
-":menuselection:`Project --> Configuration --> Projects --> Edit`. Under the "
-"*Emails* tab, define the wanted email alias and choose the policy to receive"
-" a message."
-msgstr ""
-"Después de configurar su servidor de correo electrónico entrante, vaya a "
-":menuselection:`Proyecto --> Configuración --> Proyecto --> Editar`. En la "
-"pestaña de *correos electrónicos* puede definir su seudónimo de correo "
-"electrónico y elegir la política para recibir un mensaje."
-
-#: ../../content/applications/services/project/tasks/email_alias.rst:23
-msgid "In addition, you can now directly set it when creating a new project."
-msgstr ""
-"Además, ahora se puede establecer directamente al crear un nuevo proyecto."
-
-#: ../../content/applications/services/project/tasks/email_alias.rst-1
-msgid ""
-"In the settings of your project, define the emails alias under the tab email"
-" in Odoo Project"
-msgstr ""
-"En los ajustes de su proyecto, defina los seudónimos de los correos "
-"electrónicos debajo de la pestaña de correo electrónico."
-
-#: ../../content/applications/services/project/tasks/email_alias.rst:30
-msgid ""
-"All the recipients of the email (To/Cc/Bcc) are automatically added as "
-"followers of the task."
-msgstr ""
-"Todos los destinatarios del correo electrónico (Para/Cc/Cco) se añaden "
-"automáticamente como seguidores de la tarea."
-
-#: ../../content/applications/services/project/tasks/email_alias.rst:32
-msgid "The email can be seen under the name of your project on the dashboard."
-msgstr ""
-"El correo electrónico puede verse bajo el nombre de su proyecto en el "
-"tablero."
-
-#: ../../content/applications/services/project/tasks/email_alias.rst-1
-msgid "View of the email alias chosen on the dashboard view in Odoo Project"
-msgstr ""
-"Vista del seudónimo del correo electrónico elegido en el tablero del "
-"proyecto."
+msgid "Task management"
+msgstr "Gestión de tareas"
 
 #: ../../content/applications/services/project/tasks/recurring_tasks.rst:3
 msgid "Recurring tasks"
@@ -7221,6 +7349,760 @@ msgstr ""
 "presione el botón :guilabel:`Recurrente` que se encuentra junto a la "
 ":guilabel:`fecha planeada`."
 
+#: ../../content/applications/services/project/tasks/sub-tasks.rst:3
+msgid "Sub-tasks"
+msgstr "Subtareas"
+
+#: ../../content/applications/services/project/tasks/sub-tasks.rst:5
+msgid ""
+"When handling project tasks, you can often benefit from splitting the "
+"workload into smaller **sub-tasks**, making it easier to track progress and "
+"manage the work."
+msgstr ""
+"Dividir la carga de trabajo en **subtareas** más pequeñas puede ser muy útil"
+" si necesita gestionar las tareas de un proyecto, esto facilita llevar "
+"seguimiento del progreso y poder realizar el trabajo."
+
+#: ../../content/applications/services/project/tasks/sub-tasks.rst:8
+msgid ""
+"Odoo’s sub-task feature is particularly useful in some of the following "
+"cases:"
+msgstr ""
+"La función de subtarea de Odoo es bastante útil en los siguientes casos:"
+
+#: ../../content/applications/services/project/tasks/sub-tasks.rst:10
+msgid "The task workload is too big to handle in one record."
+msgstr ""
+"Si la carga de trabajo de la tarea es demasiado grande para gestionarla con "
+"un solo registro."
+
+#: ../../content/applications/services/project/tasks/sub-tasks.rst:11
+msgid "There’s a clear sequence of steps to follow."
+msgstr "Si hay una secuencia clara de pasos a seguir."
+
+#: ../../content/applications/services/project/tasks/sub-tasks.rst:12
+msgid ""
+"Some parts of the workload fall under the scope of different projects and/or"
+" assignees."
+msgstr ""
+"Si algunas partes de la carga de trabajo corresponden a otros proyectos o "
+"personas. "
+
+#: ../../content/applications/services/project/tasks/sub-tasks.rst:14
+msgid ""
+"The original task to which sub-tasks are linked is referred to as the "
+"**parent task**. The sub-tasks of the parent task are known as **child "
+"tasks**."
+msgstr ""
+"La tarea original a la que están vinculadas las subtareas es la **tarea "
+"principal** y las subtareas de la tarea principal son las **tareas "
+"secundarias**."
+
+#: ../../content/applications/services/project/tasks/sub-tasks.rst:18
+msgid "Creating sub-tasks"
+msgstr "Crear subtareas"
+
+#: ../../content/applications/services/project/tasks/sub-tasks.rst:20
+msgid "To create a sub-task:"
+msgstr "Para crear una subtarea:"
+
+#: ../../content/applications/services/project/tasks/sub-tasks.rst:22
+msgid "Open the Project app, then go into your desired project."
+msgstr "Abra la aplicación Proyecto y después vaya al proyecto deseado."
+
+#: ../../content/applications/services/project/tasks/sub-tasks.rst:23
+msgid ""
+"Click the task where you want to add the sub-task, then click the "
+":guilabel:`Sub-tasks` tab."
+msgstr ""
+"Haga clic en la tarea en la que desea agregar la subtarea y luego haga clic "
+"en la pestaña :guilabel:`Sub-tareas`."
+
+#: ../../content/applications/services/project/tasks/sub-tasks.rst:24
+msgid "Click :guilabel:`Add a line`, then fill in the :guilabel:`Title`."
+msgstr ""
+"Haga clic en :guilabel:`Agregar una línea` y luego complete el "
+":guilabel:`título`."
+
+#: ../../content/applications/services/project/tasks/sub-tasks.rst:25
+msgid ""
+"Click the :icon:`fa-cloud-upload` (:guilabel:`save`) icon to save the task "
+"manually."
+msgstr ""
+"Haga clic en el icono :icon:`fa-cloud-upload` (:guilabel:`Guardar`) para "
+"guardar la tarea de forma manual. "
+
+#: ../../content/applications/services/project/tasks/sub-tasks.rst:28
+msgid ""
+"You can edit several fields of a sub-task directly from the parent task’s "
+"sub-task tab without opening the individual sub-task. By default, those are:"
+" :guilabel:`Title`, :guilabel:`Priority`, :guilabel:`Status`, and "
+":guilabel:`Assignees`. Use the :icon:`fa-sliders` (:guilabel:`sliders`) icon"
+" to add or remove fields."
+msgstr ""
+"Puede editar varios campos de una subtarea desde la pestaña de subtarea de "
+"la tarea principal sin abrir la subtarea. De forma predeterminada, los "
+"campos son: :guilabel:`Título`, :guilabel:`Prioridad`, :guilabel:`Estado` y "
+":guilabel:`Personas asignadas`. Utilice el icono :icon:`fa-sliders` "
+"(:guilabel:`controles deslizantes`) para agregar o eliminar campos."
+
+#: ../../content/applications/services/project/tasks/sub-tasks.rst:33
+msgid ""
+"Once the new sub-task is created, the following changes occur in the parent "
+"task:"
+msgstr ""
+"Los siguientes cambios ocurren en la tarea principal luego de crear la nueva"
+" subtarea:"
+
+#: ../../content/applications/services/project/tasks/sub-tasks.rst:35
+msgid ""
+"A **smart button** displays the total number of sub-tasks, as well as the "
+"number of closed (**done** or **canceled**) sub-tasks. Click the smart "
+"button to access the list of the sub-tasks."
+msgstr ""
+"Un **botón inteligente** muestra el número total de subtareas, incluyendo "
+"las que están cerradas (**hechas** o **canceladas**). Haga clic en el él "
+"para acceder a la lista de las subtareas."
+
+#: ../../content/applications/services/project/tasks/sub-tasks.rst:37
+msgid ""
+"The :guilabel:`Allocated time` displays the amount of time allocated to the "
+"parent task, as well as time allocated to the sub-tasks. This can be used to"
+" ensure that the time allocated to sub-tasks does not exceed time allocated "
+"to the parent task."
+msgstr ""
+"El :guilabel:`tiempo asignado` muestra la cantidad de tiempo asignado a la "
+"tarea principal y a las subtareas. Este es útil para asegurarse de que el "
+"tiempo asignado a las subtareas no exceda el tiempo asignado a la tarea "
+"principal."
+
+#: ../../content/applications/services/project/tasks/sub-tasks.rst:40
+msgid ""
+"The :guilabel:`Timesheets` tab includes a breakdown of time spent on the "
+"parent task as well as sub-tasks."
+msgstr ""
+"La pestaña :guilabel:`Hojas de horas` incluye un desglose del tiempo "
+"utilizado en la tarea principal y sus subtareas."
+
+#: ../../content/applications/services/project/tasks/sub-tasks.rst:43
+msgid ""
+"Click :guilabel:`View` to open the sub-task you created. The sub-task form "
+"is identical to the :ref:`task form <task_creation/task-configuration>`."
+msgstr ""
+"Haga clic en :guilabel:`Ver` para abrir la subtarea que creó. Este "
+"formulario es idéntico al :ref:`formulario de la tarea <task_creation/task-"
+"configuration>`."
+
+#: ../../content/applications/services/project/tasks/sub-tasks.rst:48
+msgid ""
+"A **smart button** allows to navigate back to the :guilabel:`Parent task`."
+msgstr ""
+"Hay un **botón inteligente** que le permitirá regresar a la :guilabel:`tarea"
+" principal`."
+
+#: ../../content/applications/services/project/tasks/sub-tasks.rst:49
+msgid ""
+"The :guilabel:`Sub-tasks` tab allows for further creation of sub-tasks."
+msgstr "La pestaña :guilabel:`Subtareas` le permite crear otras subtareas. "
+
+#: ../../content/applications/services/project/tasks/sub-tasks.rst:50
+msgid ""
+"Selecting a :guilabel:`Project` will trigger this sub-task to be displayed "
+"in the Kanban view of the selected project."
+msgstr ""
+"Si selecciona un :guilabel:`proyecto`, la subtarea aparecerá en la vista de "
+"kanban del proyecto que haya elegido."
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:3
+msgid "Task creation"
+msgstr "Creación de tareas"
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:5
+msgid ""
+"Tasks in Odoo Project can be created manually or automatically, including "
+"from emails or website forms."
+msgstr ""
+"Puede crear tareas en Proyecto de Odoo de forma manual o automática, incluso"
+" desde correos electrónicos o formularios de sitio web."
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:11
+msgid ""
+"Open the Project app and choose the desired project. Create a new task by "
+"doing one of the following:"
+msgstr ""
+"Abra la aplicación Proyecto y seleccione el proyecto que quiera. Para crear "
+"una tarea nueva, siga los siguientes pasos:"
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:14
+msgid ""
+"Clicking the :icon:`fa-plus` (:guilabel:`plus`) button in the upper left "
+"corner. This creates a new task in the first stage of your Kanban view."
+msgstr ""
+"Haga clic en el botón :icon:`fa-plus` (:guilabel:`más`) en la esquina "
+"superior izquierda. Esto creará una nueva tarea en la primera etapa de su "
+"vista Kanban."
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:16
+msgid ""
+"Pressing the :icon:`fa-plus` (:guilabel:`plus`) button next to the Kanban "
+"stage name. This creates a new task in this Kanban stage."
+msgstr ""
+"Presione el botón :icon:`fa-plus` (:guilabel:`más`) a un lado del nombre de "
+"la etapa kanban. Esto creará una nueva tarea en esa etapa de kanban."
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:19
+msgid ""
+"Fill in the :guilabel:`Task Title` and add one or more "
+":guilabel:`Assignees`, then click :guilabel:`Add`."
+msgstr ""
+"Llene el :guilabel:`Título de la tarea`, agregue una o más "
+":guilabel:`Personas asignadas` y haga clic en :guilabel:`Agregar`."
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:25
+msgid "Task configuration"
+msgstr "Configuración de la tarea"
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:27
+msgid ""
+"Click the task to open it. The task form includes the following fields that "
+"you can fill in:"
+msgstr ""
+"Haga clic en la tarea para abrirla. El formulario de la tarea incluye los "
+"siguientes campos que puede llenar:"
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:29
+msgid ":guilabel:`Task Title`: title of the task."
+msgstr ":guilabel:`Nombre de la tarea`: título de la tarea."
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:30
+msgid ""
+":icon:`fa-star-o` (:guilabel:`Star`): click the :icon:`fa-star-o` "
+"(:guilabel:`star`) icon to mark the task as high priority. The icon will "
+"turn yellow. Click it again to remove the high priority."
+msgstr ""
+":icon:`fa-star-o` (:guilabel:`Estrella`): haga clic en el icono :icon:`fa-"
+"star-o` (:guilabel:`estrella`) para marcar la tarea como de alta prioridad. "
+"El icono se tornará amarillo. Haga clid de nuevo para quitarle prioridad a "
+"la tarea."
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:32
+msgid ":guilabel:`Project`: the project that this task belongs to."
+msgstr ":guilabel:`Proyecto`: el proyecto al que pertenece esta tarea."
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:33
+msgid ""
+":guilabel:`Assignees`: the person(s) in charge of handling the work on this "
+"task."
+msgstr ""
+":guilabel:`Personas asignadas`: la persona a cargo de realizar la tarea."
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:34
+msgid ""
+":guilabel:`Tags`: custom labels allowing to categorize and filter your "
+"tasks."
+msgstr ""
+":guilabel:`Etiquetas`: etiquetas personalizadas con las que puede "
+"categorizar y filtrar sus tareas."
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:35
+msgid ""
+":guilabel:`Customer`: the person or company that will be billed for this "
+"task. This field only appears in tasks that belong to billable projects."
+msgstr ""
+":guilabel:`Cliente`: la persona o empresa a la que se le facturará esta "
+"tarea. Este campo solo aparece en tareas que pertenecen a proyectos "
+"facturables."
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:37
+msgid ""
+":guilabel:`Sales Order Item`: this can be either the sales order that was "
+"used to create this task, or a sales order that was linked to this task "
+"manually. This field only appears in tasks linked to billable projects."
+msgstr ""
+":guilabel:`Artículo en la orden de venta`: esto puede ser la orden de venta "
+"que se usó para crear esta tarea, o una orden de venta que se vinculó a esta"
+" tarea de forma manual. Este campo solo aparece en tareas vinculadas a "
+"proyectos facturables."
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:40
+msgid ""
+":guilabel:`Allocated Time`: the amount of time that the work on this task is"
+" expected to last, tracked by timesheets."
+msgstr ""
+":guilabel:`Tiempo asignado`: la cantidad de tiempo que se espera se invierta"
+" en esta tarea. Se monitorea con hojas de horas."
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:42
+msgid ""
+":guilabel:`Deadline`: the expected end date of the task. Once this field is "
+"filled in, you can also add a start date to designate the entire time frame "
+"of the tasks' duration."
+msgstr ""
+":guilabel:`Fecha límite`: la fecha en la que se espera que se termine la "
+"tarea. Una vez que se llene esta campo también puede agregar una fecha de "
+"inicio para designar el periodo completo que se espera que dure la tarea."
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:47
+msgid ""
+"You can also create new tasks by switching to the list or Gantt view and "
+"clicking :guilabel:`New`."
+msgstr ""
+"También puede cambiar a la vista de lista o Gantt y hacer clic en "
+":guilabel:`Nuevo` y crear nuevas tareas."
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:49
+msgid ""
+"The following fields can also be edited directly from the Kanban view "
+"without opening the individual task: :icon:`fa-star-o` (**priority**), "
+":guilabel:`Allocated hours`, :guilabel:`Assignees`, and **task status**. You"
+" can also **color code** or :guilabel:`Set a Cover image` to your task by "
+"clicking the :icon:`fa-ellipsis-v` (**vertical ellipsis**)."
+msgstr ""
+"Los siguientes campos también se pueden editar directamente dese la vista "
+"Kanban sin abrir la tarea individual: :icon:`fa-star-o` (**prioridad**), "
+":guilabel:`Horas asignadas`, :guilabel:`Personas asignadas` y **estado de la"
+" tarea*. También puede usar **código de colores** o :guilabel:`Establecer "
+"imagen de portada` en su tarea si hace clic en :icon:`fa-ellipsis-v` (**tres"
+" puntos verticales**)"
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:53
+msgid ""
+"You can use the following keyboard shortcuts in the task title to configure "
+"new tasks (modify the values in the examples below according to your needs):"
+msgstr ""
+"Puede usar los siguientes atajos de teclado en el título de la tarea para "
+"configurar nuevas tareas (modifique los valores en los ejemplos de abajo "
+"según sus necesidades):"
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:56
+msgid "**30h**: to allocate 30 hours to the task."
+msgstr "**30h**: para asignarle 30 horas a la tarea."
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:57
+msgid "**#tags**: to add tags to the task."
+msgstr "**#etiquetas**: para agregar etiquetas en la tarea."
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:58
+msgid "**@user**: to assign the task to a user."
+msgstr "**@usuario**: para asignar la tarea al usuario."
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:59
+msgid "**!**: to star the task as high priority."
+msgstr "**!**: para marcar la tarea como de alta prioridad."
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:61
+msgid ""
+"Along with using the correct format, follow this order: the task's name, "
+"followed by the allocated time, the tags, the assignee, and then the "
+"priority."
+msgstr ""
+"Además de usar el formato correcto, siga esta orden: el nombre de la tarea, "
+"después el tiempo asignado, las etiquetas, la persona asignada y después la "
+"prioridad."
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:64
+msgid ""
+"For example, if you want to create a task named \"Prepare workshop\", "
+"allocate 5h hours to it, add the \"School\" tag, assign it to Audrey and set"
+" its priority to :guilabel:`High`, enter the following task title: Prepare "
+"workshop 5h #school @Audrey !"
+msgstr ""
+"Por ejemplo, si quiere crear una tarea llamada \"Preparar taller\" a la que "
+"le asignará 5 horas, agregará la etiqueta \"Escuela\", asignará a Audrey y "
+"configurará su prioridad como :guilabel:`Alta`, ingrese el siguiente título "
+"de tarea: Preparar taller 5h #escuela @Audrey."
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:0
+msgid "Using keyboard shortcuts to create a task in Project."
+msgstr "Uso de atajos del teclado para crear una tarea en Proyecto."
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:74
+msgid "Creating tasks from an email alias"
+msgstr "Crear tareas desde un seudónimo de correo electrónico"
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:76
+msgid ""
+"This feature allows for project tasks to be automatically created once an "
+"email is delivered to a designated email address."
+msgstr ""
+"Esta función permite que se creen tareas de proyecto de forma automática una"
+" vez que llegue un correo a la dirección de correo designada."
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:79
+msgid ""
+"To configure it, open the Project app, then click the :icon:`fa-ellipsis-v` "
+"(:guilabel:`vertical ellipsis`) icon next to the desired project's name. "
+"Select :guilabel:`Settings`, then open the :guilabel:`Settings` tab."
+msgstr ""
+"Para configurar esto, abra la aplicación Proyecto y después haga clic en el "
+"icono :icon:`fa-ellipsis-v` (:guilabel:`tres puntos verticales`) a un lado "
+"del nombre del proyecto. Seleccione :guilabel:`Ajustes` y después abra la "
+"pestaña :guilabel:`Ajustes`."
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:83
+msgid ""
+"Fill in the :guilabel:`Create tasks by sending an email to` field as "
+"follows:"
+msgstr ""
+"Llene el campo :guilabel:`Cree tareas al enviar un correo electrónico a` "
+"como se indica a continuación:"
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:85
+msgid ""
+"**Section of the alias before the @ symbol**: type the name of the email "
+"alias, e.g. `contact`, `help`, `jobs`."
+msgstr ""
+"**Sección del seudónimo antes del símbolo @**: escriba el nombre del "
+"seudónimo de correo electrónico, por ejemplo, `contacto`, `ayuda`, "
+"`trabajos`."
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:87
+msgid ""
+"**Domain**: in most cases, this is filled in by default with your "
+":doc:`domain <../../../general/email_communication>`."
+msgstr ""
+"**Dominio**: En la mayoría de los casos incluye su :doc:`dominio "
+"<../../../general/email_communication>` de forma predeterminada."
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:89
+msgid ""
+"**Accept Emails From**: refine the senders whose emails will create tasks in"
+" the project."
+msgstr ""
+"**Aceptar correos electrónicos de**: defina los remitentes cuyos correos "
+"harán que se creen tareas en este proyecto."
+
+#: ../../content/applications/services/project/tasks/task_creation.rst-1
+msgid "View of the email alias chosen on the dashboard view in Odoo Project"
+msgstr ""
+"Vista del seudónimo del correo electrónico elegido en el tablero del "
+"proyecto."
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:94
+msgid ""
+"Once configured, the email alias can be seen under the name of your project "
+"on the Kanban dashboard."
+msgstr ""
+"Una vez configurado, el seudónimo de correo electrónico puede verse en el "
+"nombre de su proyecto en el tablero kanban."
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:96
+msgid ""
+"When an email is sent to the alias, the email is automatically converted "
+"into a project task. The following rules apply:"
+msgstr ""
+"Cuando se envía un correo al seudónimo, el correo se convierte de inmediato "
+"en una tarea del proyecto. Las reglas que aplican son:"
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:99
+msgid "The email sender is displayed in the :guilabel:`Customer` field."
+msgstr "El remitente se muestra en el campo :guilabel:`Cliente`."
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:100
+msgid "The email subject is displayed in the :guilabel:`Task Title` field."
+msgstr ""
+"El asunto del correo electrónico se muestra en el campo :guilabel:`Título de"
+" la tarea`."
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:101
+msgid "The email body is displayed in the :guilabel:`Description` field."
+msgstr ""
+"El cuerpo del correo electrónico se muestra en el campo "
+":guilabel:`Descripción`.q"
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:102
+msgid ""
+"The whole content of the email is additionally displayed in the **chatter**."
+msgstr ""
+"El contenido completo del correo electrónico también se muestra en el "
+"**chatter**."
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:103
+msgid ""
+"All the recipients of the email (To/Cc/Bcc) that are Odoo users are "
+"automatically added as **followers** of the task."
+msgstr ""
+"Todos los destinatarios del correo electrónico (Para/Cc/Cco) que son "
+"usuarios de Odoo se agregan de manera automática como **seguidores** de la "
+"tarea."
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:107
+msgid "Creating tasks from a website form"
+msgstr "Crear tareas desde un formulario de sitio web"
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:109
+msgid ""
+"If you have the Website app installed in your database, you can configure "
+"any form on your website to trigger the creation of tasks in a project."
+msgstr ""
+"Si tiene la aplicación Sitio web instalada en su base de datos, puede "
+"configurar cualquier formulario en su sitio web para activar la creación de "
+"tareas en un proyecto."
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:112
+msgid ""
+"Go to the website page where you wish to add the the form and :ref:`add the "
+"Form building block <websites/website/web_design/building_blocks>`."
+msgstr ""
+"Vaya a la página de sitio web donde quiere agregar el formulario y "
+":ref:`agregue el bloque de creación de Formulario "
+"<websites/website/web_design/building_blocks>`."
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:114
+msgid "In the website editor, edit the following fields:"
+msgstr "En el editor de sitio web, edite los siguientes campos:"
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:116
+msgid ":guilabel:`Action`: select :guilabel:`Create a Task`."
+msgstr ":guilabel:`Acción`: seleccione :guilabel:`Crear una tarea`."
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:117
+msgid ""
+":guilabel:`Project`: choose the project that you want the new tasks to be "
+"created in."
+msgstr ""
+":guilabel:`Proyecto`: seleccione el proyecto en el que quiere que se creen "
+"nuevas tareas."
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:119
+msgid ":ref:`Customize the form <dynamic_content/form>`."
+msgstr ":ref:`Personalizar el formulario <dynamic_content/form>`."
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:121
+msgid ""
+"When the form is submitted, it automatically creates a project task. The "
+"task's content is defined by the form's corresponding fields."
+msgstr ""
+"Cuando se envía un formulario se crea una tarea en el proyecto de forma "
+"automática. El contenido de la tarea se define en los campos "
+"correspondientes del formulario."
+
+#: ../../content/applications/services/project/tasks/task_creation.rst:125
+msgid ""
+":doc:`Dynamic website content "
+"<../../../websites/website/web_design/building_blocks/dynamic_content>`"
+msgstr ""
+":doc:`Contenido dinámico del sitio web "
+"<../../../websites/website/web_design/building_blocks/dynamic_content>`"
+
+#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:3
+msgid "Task stages and statuses"
+msgstr "Etapas y estados de tareas"
+
+#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:6
+msgid "Task stages"
+msgstr "Etapas de tareas"
+
+#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:8
+msgid ""
+"Task stages are displayed as columns in the project's Kanban view, and allow"
+" you to update the progress of its tasks with a drag-and-drop. In most "
+"projects, the stages will be akin to **New**, **In progress**, **Backlog**, "
+"etc."
+msgstr ""
+"Las etapas de tareas se muestran como columnas en la vista kanban del "
+"proyecto, así solo tiene que arrastrar y soltar las tareas para actualizar "
+"su progreso. En la mayoría de los proyectos, las tareas serán similares a "
+"**Nuevo**, **En progreso**, **Pendiente**, etc."
+
+#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:12
+msgid ""
+"By default, task stages are project-specific but can be shared across "
+"multiple projects that follow the same workflow."
+msgstr ""
+"Las etapas de las tareas son específicas para cada proyecto de forma "
+"predeterminada, pero varios proyectos pueden compartirlas para que sigan el "
+"mismo flujo de trabajo."
+
+#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:16
+msgid "Creating task stages"
+msgstr "Crear etapas de tareas"
+
+#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:18
+msgid ""
+"Odoo Project doesn’t provide default stages but instead allows you to create"
+" custom stages tailored to your specific business needs. You are prompted to"
+" do so immediately after :ref:`creating a new project "
+"<project_management/configuration>`."
+msgstr ""
+"La aplicación Proyecto de Odoo no viene con etapas predeterminadas, en su "
+"lugar, le permite crear etapas que se acoplen perfectamente a sus "
+"necesidades empresariales. Se le pedirá que cree etapas inmediatamente "
+"después de :ref:`crear un proyecto nuevo "
+"<project_management/configuration>`."
+
+#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:22
+msgid ""
+"To create a stage, type its name into the :guilabel:`Stage...` field, then "
+"click :guilabel:`Add`."
+msgstr ""
+"Para crear una etapa, escriba el nombre en el campo :guilabel:`Etapa...` y "
+"después haga clic en :guilabel:`Agregar`."
+
+#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:25
+msgid ""
+"Click :guilabel:`See examples` to find ideas for stage names applicable to "
+"your line of business."
+msgstr ""
+"Haga clic en :guilabel:`Ver ejemplos` para encontrar ideas de nombres que "
+"pueda aplicar a su línea de negocio."
+
+#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:28
+msgid "Editing task stages"
+msgstr "Editar etapas de la tarea"
+
+#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:30
+msgid ""
+"To edit the task stage, click the :icon:`fa-cog` (:guilabel:`cog`) icon next"
+" to its name. From there, click one of the following:"
+msgstr ""
+"Para editar etapas de la tarea, haga clic en el icono :icon:`fa-cog` "
+"(:guilabel:`engranaje`) a un lado de su nombre. Desde ahí, haga clic en una "
+"de las siguientes opciones:"
+
+#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:33
+msgid ""
+":guilabel:`Fold`: to hide the task stage and all of the tasks in this stage "
+"from the Kanban view."
+msgstr ""
+":guilabel:`Plegar`: para ocultar la etapa de la tarea y todas las tareas en "
+"esta etapa de la vista kanban."
+
+#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:34
+msgid ":guilabel:`Edit`:"
+msgstr ":guilabel:`Editar`:"
+
+#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:36
+msgid ":guilabel:`Name`: to change the name of the stage."
+msgstr ":guilabel:`Nombre`: para cambiar el nombre de la etapa."
+
+#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:37
+msgid ""
+":guilabel:`SMS/Email Template`: to automatically send an email or SMS "
+"notification to the customer when a task reaches this stage."
+msgstr ""
+":guilabel:`Plantilla de SMS o correo electrónico`: para enviar un correo o "
+"notificación de SMS al cliente cuando una tarea llegue a esta etapa."
+
+#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:39
+msgid ""
+":guilabel:`Folded in Kanban`: to hide the task stage and all of the tasks in"
+" this stage from the Kanban view."
+msgstr ""
+":guilabel:`Plegado en kanban`: para ocultar la etapa de la tarea y todas las"
+" tareas en esta etapa de la vista kanban-"
+
+#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:41
+msgid ""
+":guilabel:`Projects`: to share this task stage between several projects."
+msgstr ""
+":guilabel:`Proyectos`: para que la etapa de esta tarea se comparta entre "
+"varios proyectos."
+
+#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:42
+msgid ""
+":guilabel:`Automations`: to create :doc:`custom rules that trigger automatic"
+" actions <../../../studio/automated_actions>` (e.g., creating activities, "
+"adding followers, or sending webhook notifications). Note that this will "
+"activate Studio in your database, which may impact your pricing plan."
+msgstr ""
+":guilabel:`Automatizaciones`: para crear :doc:`reglas personalizadas que "
+"activan tareas automáticas <../../../studio/automated_actions>` (por "
+"ejemplo, crear actividades, agregar seguidores, o enviar notificaciones de "
+"webhook). Tome en cuenta que esto activará Studio en su base de datos, lo "
+"que podría afectar su plan de pago."
+
+#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:47
+msgid ":guilabel:`Delete`: to delete this stage."
+msgstr ":guilabel:`Borrar`: para borrar esta etapa."
+
+#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:48
+msgid ""
+":guilabel:`Archive/Unarchive all`: to archive or unarchive all of the tasks "
+"in this stage."
+msgstr ""
+":guilabel:`Archivar o desarchivar todo`: para archivar o desarchivar todas "
+"las tareas de esta etapa."
+
+#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:51
+msgid "Task statuses"
+msgstr "Estados de la tarea"
+
+#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:53
+msgid ""
+"Task statuses are used to track the status of tasks within the Kanban stage,"
+" as well as to close the task when it’s done or canceled. Unlike Kanban "
+"stages, they cannot be customized; five task statuses exist in Odoo and are "
+"used as follows:"
+msgstr ""
+"Los estados de las tareas se usan para monitorear el estado de la tarea "
+"dentro de la etapa kanban, así como para cerrar la tarea cuando se terminó o"
+" se canceló. Contrario a las etapas kanban, estos no se pueden personalizar."
+" Existen cinco estados de tarea en Odoo y se usan como se describe a "
+"continuación:"
+
+#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:57
+msgid ""
+":guilabel:`In Progress`: this is the default state of all tasks, meaning "
+"that work required for the task to move to the next Kanban stage is ongoing."
+msgstr ""
+":guilabel:`En progreso`: esta es la etapa predeterminada de todas las tareas"
+" y significa que se está realizando trabajo para que la tarea se pueda mover"
+" a la siguiente etapa."
+
+#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:59
+msgid ""
+":guilabel:`Changes Requested`: to highlight that changes, either requested "
+"by the customer or internally, are needed before the task is moved to the "
+"next Kanban stage."
+msgstr ""
+":guilabel:`Cambios solicitados`: para remarcar que los cambios, ya sea "
+"solicitados por un cliente o de manera interna, se necesitan antes de que la"
+" tarea se pueda mover a la siguiente etapa de kanban."
+
+#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:61
+msgid ""
+":guilabel:`Approved`: to highlight that the task is ready to be moved to the"
+" next stage."
+msgstr ""
+":guilabel:`Aprobado`: para mostrar que la tarea ya se puede mover a la "
+"siguiente etapa."
+
+#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:62
+msgid ":guilabel:`Canceled`: to cancel the task."
+msgstr ":guilabel:`Cancelado`: para cancelar la tarea."
+
+#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:63
+msgid ":guilabel:`Done`: to close the task once it's been completed."
+msgstr ""
+":guilabel:`Listo`: para cerrar la tarea una vez que se haya completado."
+
+#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:67
+msgid ""
+"The :guilabel:`Changes Requested` and :guilabel:`Approved` task statuses are"
+" cleared as soon as the task is moved to another Kanban stage. The task "
+"status reverts to the default :guilabel:`In Progress` status so that "
+":guilabel:`Changes Requested` or :guilabel:`Approved` status can be applied "
+"again once the necessary work has been completed in this Kanban stage."
+msgstr ""
+"Los estados de tareas :guilabel:`Cambios solicitados` y :guilabel:`Aprobado`"
+" se vacían tan pronto como una tarea se mueve a otra etapa de Kanban. La "
+"tarea regresará al estado predeterminado :guilabel:`En progreso` para que "
+"los estados :guilabel:`Cambios solicitados` o :guilabel:`Aprobado` se puedan"
+" aplicar otra vez cuando se completen en la etapa kanban."
+
+#: ../../content/applications/services/project/tasks/task_stages_statuses.rst:71
+msgid ""
+"The :guilabel:`Done` and :guilabel:`Canceled` statuses are independent from "
+"the Kanban stage. Once a task is marked as :guilabel:`Done` or "
+":guilabel:`Canceled`, it is closed. If needed, it can be reopened by "
+"changing its status."
+msgstr ""
+"Los estados :guilabel:`Listo` y :guilabel:`Cancelado` son independientes de "
+"la etapa de Kanban. Una tarea se cierra una vez que se marca como "
+":guilabel:`Lista` o :guilabel:`Cancelada`. Si necesita abrirla de nuevo solo"
+" tiene que cambiar el estado."
+
 #: ../../content/applications/services/timesheets.rst:8
 msgid "Timesheets"
 msgstr "Hojas de horas"
@@ -7246,9 +8128,9 @@ msgid ""
 "Activate the :ref:`developer mode <developer-mode>`, go to *Timesheets*, and"
 " change the *Project* and *Task* set by default, if you like."
 msgstr ""
-"Active el :ref:` modo desarrollador <developer-mode>`, vaya a *Hojas de "
-"horas*, y cambie el *Proyecto* y la *Tarea* establecidos de manera "
-"predeterminada, si así lo desea."
+"Active el :ref:`modo de desarrollador <developer-mode>`, vaya a *Hojas de "
+"horas* y cambie el *proyecto* y la *tarea* establecidos de manera "
+"predeterminada si lo desea."
 
 #: ../../content/applications/services/timesheets/overview/time_off.rst-1
 msgid ""
@@ -7264,8 +8146,8 @@ msgid ""
 " or create the needed type, and decide if you would like the requests to be "
 "validated or not."
 msgstr ""
-"Vaya a :menuselection:`Tiempo personal -> Configuración -> Tipos de tiempo "
-"personal`. Seleccione o cree el tipo necesario y decida si desea que las "
+"Vaya a :menuselection:`Tiempo personal --> Configuración --> Tipos de tiempo"
+" personal`. Seleccione o cree el tipo necesario y decida si desea que las "
 "solicitudes se validen o no."
 
 #: ../../content/applications/services/timesheets/overview/time_off.rst-1

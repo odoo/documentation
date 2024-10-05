@@ -253,5 +253,5 @@ When the necessary information has been entered, click :guilabel:`Create Draft`.
 then be reviewed, edited, and sent to the customer for payment.
 
 .. seealso::
-   - :doc:`../../../inventory_and_mrp/inventory/product_management/product_replenishment/uom`
+   - :doc:`../../../inventory_and_mrp/inventory/product_management/configure/uom`
    - :doc:`../../../sales/sales/invoicing/down_payment`

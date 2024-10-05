@@ -166,7 +166,7 @@ to the :guilabel:`Create Activities` pop-up window, in order to configure the :r
 <marketing_automation/trigger>`.
 
 .. seealso::
-   :doc:`Creating and configuring SMS templates <../sms_marketing/essentials/sms_essentials>`
+   :doc:`Creating and configuring SMS templates <../sms_marketing>`
 
 .. _marketing_automation/trigger:
 
@@ -191,7 +191,7 @@ options are: :guilabel:`Hours`, :guilabel:`Days`, :guilabel:`Weeks`, and :guilab
 .. example::
    If the interval number is set to `0` and the interval type is set to :guilabel:`Hours`, the
    activity will be executed immediately after the trigger type occurs (at the next scheduled run of
-   the :ref:`Mail: Email Queue Manager cron <email_communication/email-sent-late>`).
+   the :ref:`Mail: Email Queue Manager cron <email-issues-outgoing-execution-time>`).
 
 .. _marketing_automation/trigger-type:
 

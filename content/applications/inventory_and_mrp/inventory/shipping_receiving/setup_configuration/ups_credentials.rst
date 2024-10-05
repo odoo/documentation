@@ -181,7 +181,7 @@ In the :guilabel:`UPS Configuration` tab, complete the following fields:
   <inventory/shipping_receiving/ups-client-id>` key from the UPS developer website.
 - :guilabel:`UPS Service Type`: Select from the drop-down menu the type of shipping service.
 - :guilabel:`UPS Package Type`: (*required*) Select from the drop-down menu the :doc:`package type
-  <../../product_management/product_tracking/package>` that is supported for the shipping service.
+  <../../product_management/configure/package>` that is supported for the shipping service.
 - :guilabel:`Package Weight Unit`: The unit of measure for the package weight.
 - :guilabel:`Package Size Unit`: The unit of measure for the package dimensions.
 - :guilabel:`Label Format`: Choose the label format shipping labels: :guilabel:`PDF`,

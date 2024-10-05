@@ -103,8 +103,7 @@ The following are fields found on an event form:
 
      This :guilabel:`Twitter Wall` field **only** appears on the event form if the *Social
      Marketing* app is installed, and an X account has been added as a stream on the application. To
-     learn more, check out the :doc:`Social marketing essentials
-     <../social_marketing/essentials/social_essentials>` documentation.
+     learn more, check out the :doc:`Social Marketing <../social_marketing>` documentation.
 
 - :guilabel:`Template`: choose a pre-configured event template from the resulting drop-down menu.
 
@@ -425,7 +424,7 @@ recipients to quickly register.
 
 .. tip::
    Sending emails from Odoo is subject to a daily limit, which, by default, is 200. To learn more
-   about daily limits, visit the :ref:`email_communication/daily_limit_mail` documentation.
+   about daily limits, visit the :ref:`email-issues-outgoing-delivery-failure-messages-limit` documentation.
 
 .. seealso::
    :doc:`track_manage_talks`

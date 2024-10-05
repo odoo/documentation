@@ -132,7 +132,7 @@ In the :guilabel:`Trigger On` field, decide whether the automated rule should be
    Sending a SMS text message in Odoo requires In-App Purchase (IAP) credit or tokens. For more
    information on :abbr:`IAP (In-App Purchase)`, visit :doc:`../../essentials/in_app_purchase`.
    For more information on sending SMS messages, visit
-   :doc:`../../marketing/sms_marketing/essentials/sms_essentials`.
+   :doc:`../../marketing/sms_marketing`.
 
 If :guilabel:`Timed Condition` is selected in the :guilabel:`Trigger On` field, the following fields
 appear:

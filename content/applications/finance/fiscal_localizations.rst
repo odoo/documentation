@@ -59,7 +59,7 @@ available on Odoo.
 - :doc:`Belgium - Accounting <fiscal_localizations/belgium>`
 - Bolivia - Accounting
 - :doc:`Brazilian - Accounting <fiscal_localizations/brazil>`
-- Canada - Accounting
+- :doc:`Canada - Accounting <fiscal_localizations/canada>`
 - :doc:`Chile - Accounting <fiscal_localizations/chile>`
 - China - Accounting
 - :doc:`Colombia - Accounting <fiscal_localizations/colombia>`
@@ -122,7 +122,7 @@ available on Odoo.
 - :doc:`UK - Accounting <fiscal_localizations/united_kingdom>`
 - Ukraine - Accounting
 - :doc:`United States - Accounting <fiscal_localizations/united_states>`
-- Uruguay - Accounting
+- :doc:`Uruguay - Accounting <fiscal_localizations/uruguay>`
 - Venezuela - Accounting
 - :doc:`Vietnam - Accounting <fiscal_localizations/vietnam>`
 
@@ -134,6 +134,7 @@ available on Odoo.
    fiscal_localizations/austria
    fiscal_localizations/belgium
    fiscal_localizations/brazil
+   fiscal_localizations/canada
    fiscal_localizations/chile
    fiscal_localizations/colombia
    fiscal_localizations/ecuador
@@ -160,3 +161,4 @@ available on Odoo.
    fiscal_localizations/united_arab_emirates
    fiscal_localizations/united_kingdom
    fiscal_localizations/united_states
+   fiscal_localizations/uruguay

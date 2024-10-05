@@ -186,7 +186,7 @@ should be taken from multiple lots, change the :guilabel:`Quantity` directly.
    on-hand quantity is enough to fulfill the order.
 
 .. seealso::
-   :doc:`../../warehouses_storage/removal_strategies`
+   :doc:`../../shipping_receiving/removal_strategies`
 
 Repeat the above steps to select enough lots to fulfill the :guilabel:`Demand`, and click
 :guilabel:`Save` to close the pop-up window. Lastly, click the :guilabel:`Validate` button on the
@@ -377,4 +377,4 @@ smart button.
    :alt: Show the Traceability Report for a lot, that displays the stock moves.
 
 .. seealso::
-   :doc:`differences`
+   :doc:`../product_tracking`

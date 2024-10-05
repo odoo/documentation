@@ -26,6 +26,10 @@ At the top-left of the form, click the :guilabel:`New Quotation` button.
    :alt: Qualified lead form with New Quotation button emphasized.
 
 .. important::
+   The **Sales** application **must** be installed for the :guilabel:`New Quotation` button to
+   appear.
+
+.. important::
    The :guilabel:`Customer` field is **not** required on the opportunity form.
 
    However, customer information must be added or linked before a quotation can be sent. If the
@@ -195,7 +199,7 @@ clicking :guilabel:`Create`.
    :guilabel:`Lost Reason` parameter.
 
    To set up new values for this field, navigate to :menuselection:`CRM --> Configuration --> Lost
-   Reasons`, and click both :guilabel:`New`and :guilabel:`Save` for each new entry added to the
+   Reasons`, and click both :guilabel:`New` and :guilabel:`Save` for each new entry added to the
    list.
 
 Additional notes and comments can be added in the :guilabel:`Closing Note` field.

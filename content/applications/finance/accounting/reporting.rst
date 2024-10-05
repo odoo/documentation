@@ -4,157 +4,130 @@
 Reporting
 =========
 
-Main reports available
-======================
+Odoo includes **generic** and **dynamic** reports available for all countries, regardless of the
+:doc:`localization package <../../finance/fiscal_localizations>` installed:
 
-Besides the reports created specifically in each localisation module, a
-few very useful **generic** and **dynamic reports** are available for all
-countries :
+-  :ref:`accounting/reporting/balance-sheet`
+-  :ref:`accounting/reporting/profit-and-loss`
+-  :ref:`accounting/reporting/executive-summary`
+-  :ref:`accounting/reporting/general-ledger`
+-  :ref:`accounting/reporting/aged-receivable`
+-  :ref:`accounting/reporting/aged-payable`
+-  :ref:`accounting/reporting/cash-flow-statement`
+-  :ref:`accounting/reporting/tax-report`
 
--  **Balance Sheet**
--  **Profit and Loss**
--  **Executive Summary**
--  **General Ledger**
--  **Aged Payable**
--  **Aged Receivable**
--  **Cash Flow Statement**
--  **Tax Report**
--  **Bank Reconciliation**
+To expand the lines of a report and view its details, click the :icon:`fa-caret-right`
+(:guilabel:`right arrow`) on the left. Then click the :icon:`fa-caret-down` (:guilabel:`down arrow`)
+to the right of the account, journal entry, payment, invoice, etc. to :guilabel:`Annotate` and view
+the details.
 
-You can annotate every reports to print them and report to your adviser.
-Export to xls to manage extra analysis. Drill down in the reports to see
-more details (payments, invoices, journal items, etc.).
+.. image:: reporting/reporting-annotate.png
+   :alt: Annotate reports.
 
-You can also compare values with another period. Choose how many periods
-you want to compare the chosen time period with. You can choose up to 12
-periods back from the date of the report if you don't want to use the
-default **Previous 1 Period** option.
+To export reports in PDF or XLSX format, click :guilabel:`PDF` at the top or click the
+:icon:`fa-caret-down` (:guilabel:`down arrow`) icon next to the :guilabel:`PDF` button and
+select :guilabel:`XLSX`.
 
-.. _reporting/balance-sheet:
+To compare values across periods, click the :guilabel:`Comparison` menu and select the periods you
+want to compare.
 
-Balance Sheet
--------------
-
-The **Balance Sheet** shows a snapshot of the assets, liabilities and equity
-of your organisation as at a particular date.
-
-.. image:: reporting/main_reports09.png
+.. image:: reporting/reporting-comparison.png
+   :alt: Comparison menu to compare time periods.
 
 .. _accounting/reporting/balance-sheet:
 
+Balance Sheet
+=============
+
+The :guilabel:`Balance Sheet` shows a snapshot of your organization's assets, liabilities, and
+equity at a particular date.
+
+.. _accounting/reporting/profit-and-loss:
+
 Profit and Loss
----------------
+===============
 
-The **Profit and Loss** report (or **Income Statement**) shows your
-organisation's net income, by deducting expenses from revenue for the
-report period.
-
-.. image:: reporting/main_reports10.png
+The :guilabel:`Profit and Loss` report (or **Income Statement**) shows your company's net income by
+deducting expenses from revenue for the reporting period.
 
 .. _accounting/reporting/executive-summary:
 
 Executive Summary
------------------
+=================
 
-The **Executive Summary** allows for a quick look at all the important
-figures you need to run your company.
+The :guilabel:`Executive Summary` provides an overview of all the important figures for overseeing
+your company's performance.
 
-In very basic terms, this is what each of the items in this section is
-reporting :
+It includes the following items:
 
-- **Performance:**
-    - **Gross profit margin:**
-        The contribution each individual sale made
-        by your business less any direct costs needed to make those sales
-        (things like labour, materials, etc).
-    - **Net profit margin:**
-        The contribution each individual sale made by
-        your business less any direct costs needed to make those sales,
-        as well as any fixed overheads your company has (things like
-        rent, electricity, taxes you need to pay as a result of those
-        sales).
-    - **Return on investment (p.a.):**
-        The ratio of net profit made, to the
-        amount of assets the company used to make those profits.
-- **Position:**
-    - **Average debtor days:**
-        The average number of days it takes your
-        customers to pay you (fully), across all your customer invoices.
-    - **Average creditor days:**
-        The average number of days it takes you to
-        pay your suppliers (fully) across all your bills.
-    - **Short term cash forecast:**
-        How much cash is expected in or out of
-        your organisation in the next month i.e. balance of your **Sales
-        account** for the month less the balance of your **Purchases account**
-        for the month.
-    - **Current assets to liabilities:**
-        Also referred to as **current ratio**, this is the ratio
-        of current assets (assets that could be
-        turned into cash within a year) to the current liabilities
-        (liabilities which will be due in the next year). This is
-        typically used as as a measure of a company's ability to service
-        its debt.
+- :guilabel:`Performance`:
+    - :guilabel:`Gross profit margin`:
+        The contribution of all sales your business makes **minus** any direct costs needed to
+        make those sales (labor, materials, etc.).
+    - :guilabel:`Net profit margin`:
+        The contribution of all sales made by your business **minus** any direct costs needed to
+        make those sales *and* fixed overheads your company has (electricity, rent, taxes
+        to be paid as a result of those sales, etc.).
+    - :guilabel:`Return on investment (per annum)`:
+        The ratio of the net profit to the amount of assets the company used to make those profits.
+- :guilabel:`Position`:
+    - :guilabel:`Average debtors days`:
+        The average number of days it takes your customers to (fully) pay you across all your
+        customer invoices.
+    - :guilabel:`Average creditors days`:
+        The average number of days it takes you to (fully) pay your suppliers across all your bills.
+    - :guilabel:`Short-term cash forecast`:
+        How much cash is expected in or out of your business in the next month, i.e., the balance of
+        your **Sales account** for the month **minus** the balance of your **Purchases account** for
+        the month.
+    - :guilabel:`Current assets to liabilities`:
+        Also referred to as the **current ratio**, this is the ratio of current assets (:dfn:`assets
+        that could be turned into cash within a year`) to the current liabilities (:dfn:`liabilities
+        that will be due in the next year`). It is typically used to measure a company's ability to
+        service its debt.
 
-.. image:: reporting/main_reports01.png
+.. _accounting/reporting/general-ledger:
 
 General Ledger
---------------
+==============
 
-The **General Ledger Report** shows all transactions from all accounts for a
-chosen date range. The initial summary report shows the totals for each
-account and from there you can view a detailed transaction report or any
-exceptions. This report is useful for checking every transaction that
-occurred during a certain period of time.
+The :guilabel:`General Ledger` report shows all transactions from all accounts for a selected date
+range. The initial summary report shows the totals for each account. To expand an account and view
+its details, click the :icon:`fa-caret-right` (:guilabel:`right arrow`) on the left.
+This report is useful for reviewing each transaction that occurred during a specific period.
 
-.. image:: reporting/main_reports05.png
-
-.. _reporting/aged-payable:
-
-Aged Payable
-------------
-
-Run the **Aged Payable Details** report to display information on individual
-bills, credit notes and overpayments owed by you, and how long these
-have gone unpaid.
-
-.. image:: reporting/main_reports02.png
-
-.. _reporting/aged-receivable:
+.. _accounting/reporting/aged-receivable:
 
 Aged Receivable
----------------
+===============
 
-The **Aged Receivables** report shows the sales invoices that were awaiting
-payment during a selected month and several months prior.
+The :guilabel:`Aged Receivable` report shows the sales invoices awaiting payment during a selected
+month and several months prior.
 
-.. image:: reporting/main_reports07.png
+.. _accounting/reporting/aged-payable:
+
+Aged Payable
+============
+
+The :guilabel:`Aged Payable` report displays information on individual bills, credit notes, and
+overpayments you owe and how long these have gone unpaid.
 
 .. _accounting/reporting/cash-flow-statement:
 
 Cash Flow Statement
--------------------
+===================
 
-The **Cash Flow Statement** shows how changes in balance sheet accounts and
-income affect cash and cash equivalents, and breaks the analysis down to
-operating, investing and financing activities.
+The :guilabel:`Cash Flow Statement` shows how changes in balance sheet accounts and income affect
+cash and cash equivalents and breaks the analysis down to operating, investing, and financing
+activities.
 
-.. image:: reporting/main_reports03.png
-
-.. _reporting/tax-report:
+.. _accounting/reporting/tax-report:
 
 Tax Report
-----------
+==========
 
-This report allows you to see the **net** and **tax amounts** for all the taxes
-grouped by type (sale/purchase).
-
-.. image:: reporting/main_reports04.png
-
-Bank Reconciliation
--------------------
-
-.. image:: reporting/main_reports06.png
+The :guilabel:`Tax Report` shows the :guilabel:`NET` and :guilabel:`TAX` amounts for all the
+taxes grouped by type (:guilabel:`Sales`/:guilabel:`Purchases`).
 
 .. toctree::
    :titlesonly:

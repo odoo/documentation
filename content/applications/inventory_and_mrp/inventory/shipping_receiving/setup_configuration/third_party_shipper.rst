@@ -8,8 +8,8 @@ Third-party shipping carriers
 .. _inventory/shipping/third_party:
 
 Users can link third-party shipping carriers to Odoo databases, in order to verify carriers'
-delivery to specific addresses, :doc:`automatically calculate shipping costs <delivery_method>`, and
-:doc:`generate shipping labels <labels>`.
+delivery to specific addresses, :doc:`automatically calculate shipping costs
+<../setup_configuration>`, and :doc:`generate shipping labels <labels>`.
 
 In Odoo, shipping carriers can be applied to a sales order (SO), invoice, or delivery order. For
 tips on resolving common issues when configuring shipping connectors, skip to the
@@ -28,22 +28,33 @@ The following is a list of available shipping connectors in Odoo:
 
    * - Carrier
      - Region availability
-   * - FedEx
+   * - :doc:`FedEx <fedex>`
      - All
-   * - :doc:`DHL <dhl_credentials>`
+   * - :doc:`DHL Express* <dhl_credentials>`
      - All
    * - :doc:`UPS <ups_credentials>`
      - All
    * - US Postal Service
      - United States of America
    * - :doc:`Sendcloud <sendcloud_shipping>`
-     - EU
-   * - Bpost
+     - :ref:`EU** <inventory/shipping_receiving/sendcloud-eu>`
+   * - :doc:`Bpost <bpost>`
      - Belgium
    * - Easypost
      - North America
    * - Shiprocket
      - India
+   * - :doc:`Starshipit <starshipit_shipping>`
+     - Australasia
+
+.. _inventory/shipping_receiving/sendcloud-eu:
+
+.. important::
+
+   \* Other services from DHL are **not** supported.
+
+   ** Sendcloud currently supports shipping **from** Austria, Belgium, France, Germany, Italy, the
+   Netherlands, Spain, and the United Kingdom, and **to** any European country.
 
 Configuration
 =============
@@ -68,8 +79,8 @@ to install it. Multiple third-party shipping connectors can be selected at once.
 :guilabel:`Save`.
 
 .. note::
-   :doc:`Delivery methods <delivery_method>` can also be integrated with operations in the *Sales*,
-   *eCommerce*, and *Website* apps. To install, refer to the :ref:`install apps and modules
+   :doc:`Delivery methods <../setup_configuration>` can also be integrated with operations in the
+   *Sales*, *eCommerce*, and *Website* apps. To install, refer to the :ref:`install apps and modules
    <general/install>` documentation.
 
 .. image:: third_party_shipper/shipping-connectors.png
@@ -90,10 +101,10 @@ delivery method.
    international shipping and one for domestic shipping.
 
    Additional delivery methods can be created for specific purposes, such as :doc:`packaging
-   <../../product_management/product_tracking/packaging>`.
+   <../../product_management/configure/packaging>`.
 
 .. seealso::
-   :doc:`Configure delivery methods <delivery_method>`
+   :doc:`Configure delivery methods <../setup_configuration>`
 
 .. note::
    Ensure the delivery method is published when it should be available on the *Website* app. To
@@ -124,8 +135,7 @@ The :guilabel:`Shipping Method` page contains details about the provider, includ
   |SO| or invoice.
 - :guilabel:`Invoicing Policy`: select and calculate an :guilabel:`Estimated cost` of shipping
   directly from the shipping carrier. If the :guilabel:`Real cost` of shipping is wanted instead,
-  refer to this :doc:`doc about invoicing real shipping costs
-  <../advanced_operations_shipping/invoicing>`.
+  refer to :doc:`Invoice real shipping costs <invoicing>` document.
 - :guilabel:`Margin on Rate`: specify an additional percentage amount added to the base shipping
   rate to cover extra costs, such as handling fees, packaging materials, exchange rates, etc.
 - :guilabel:`Free if order amount is above`: enables free shipping for orders surpassing a specified
@@ -246,8 +256,7 @@ cost through the shipping connector. Then, click the :guilabel:`Add` button to a
 charge to the |SO| or invoice.
 
 .. seealso::
-   :doc:`Charge customers for shipping after product delivery
-   <../advanced_operations_shipping/invoicing>`
+   :doc:`Charge customers for shipping after product delivery <invoicing>`
 
 .. _inventory/shipping_receiving/third-party-do:
 

@@ -175,7 +175,7 @@ values).
 
     <odoo>
         <data noupdate="1">
-            <record name="partner_1" model="res.partner">
+            <record id="partner_1" model="res.partner">
                 <field name="name">Odude</field>
             </record>
 

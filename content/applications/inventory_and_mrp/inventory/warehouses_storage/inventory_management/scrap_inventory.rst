@@ -21,21 +21,7 @@ from physical inventory, and placing it in a virtual scrap location (*Virtual Lo
    physical inventory.
 
    For more information about virtual locations, see the documentation about the different types of
-   :ref:`locations <inventory/warehouses_storage/difference-warehouse-location>`.
-
-Configuration
-=============
-
-To use locations in warehouse, including a virtual scrap location, the *Storage Locations* feature
-must first be enabled.
-
-To do so, navigate to :menuselection:`Inventory app --> Configuration --> Settings`, and scroll down
-to the :guilabel:`Warehouse` section. Tick the checkbox next to :guilabel:`Storage Locations` to
-enable the feature, and click :guilabel:`Save`.
-
-.. image:: scrap_inventory/scrap-inventory-enabled-setting.png
-   :align: center
-   :alt: Enabled Storage Locations setting in Inventory app settings.
+   :ref:`location types <inventory/warehouses_storage/location-type>`.
 
 Scrap from stock
 ================

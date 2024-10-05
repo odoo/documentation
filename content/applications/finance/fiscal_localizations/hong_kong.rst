@@ -58,7 +58,10 @@ checkbox.
    :alt: FPS bank account configuration.
 
 .. important::
-   The account holder's country **must** be set to `Hong Kong` on their contact form.
+   - The account holder's country must be set to `Hong Kong` on its contact form.
+   - The account holder's city is mandatory.
+   - You could also include the invoice number in the QR code by checking the :guilabel:`Include
+     Reference` checkbox.
 
 .. seealso::
    :doc:`../accounting/bank`

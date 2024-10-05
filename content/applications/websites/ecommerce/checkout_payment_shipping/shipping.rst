@@ -17,10 +17,8 @@ Own shipping methods
 You can create your own custom shipping methods and define rules to compute shipping costs. To do
 so, go to :menuselection:`Website --> Configuration --> Shipping Methods`, and either select an
 **existing** shipping method, or :guilabel:`Create` one. When creating a shipping method, you can
-choose between
-:doc:`Fixed Price </applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/delivery_method>`,
-:doc:`Based on Rules </applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/delivery_method>`,
-and :guilabel:`Pickup in store`.
+choose between :ref:`Fixed Price <inventory/shipping/fixed>`, :ref:`Based on Rules
+<inventory/shipping/rules>`, and :guilabel:`Pickup in store`.
 
 Pickup in store
 ---------------
@@ -31,10 +29,10 @@ Picking`. Once enabled, you can select and :guilabel:`Customize Pickup Sites`. :
 sites` can be made **website-specific**, but are by default available for *all* websites.
 
 .. seealso::
-   - :doc:`/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/delivery_method`
-   - :doc:`/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/invoicing`
-   - :doc:`/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/multipack`
-   - :doc:`/applications/inventory_and_mrp/inventory/shipping_receiving/advanced_operations_shipping/cancel`
+   - :doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration`
+   - :doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing`
+   - :doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack`
+   - :doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/cancel`
 
 .. _ecommerce-shipping-providers:
 

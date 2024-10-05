@@ -32,47 +32,65 @@ Or, if there are already existing programs, select an existing program to edit i
    :alt: Discount and loyalty program template cards.
 
 .. note::
-   Templates only appear when no programs have been created, and they disappear once the first
+   Templates **only** appear when no programs have been created, and they disappear once the first
    program is created.
 
 Creating or editing a program opens the program form.
 
-The program form contains the following options:
-
-- :guilabel:`Program Name`: Enter the name of the program. The program name is *not* visible to the
-  customer.
-- :guilabel:`Program Type`: Select the desired :ref:`program type
-  <sales/pricing_management/program-types>`.
-- :guilabel:`Currency`: Select the currency used for the program.
-- :guilabel:`Points Unit`: Enter the name of the points used for the :guilabel:`Loyalty Cards`
-  program (e.g. `Loyalty Points`). The points unit name *is* visible to the customer. This field is
-  only available when the :guilabel:`Program Type` is set to :guilabel:`Loyalty Cards`.
-- :guilabel:`Validity`: Select the date until which the program is valid. Leave this field blank for
-  no end date, meaning the program is always valid and does not expire.
-- :guilabel:`Limit Usage`: Check this box and enter a number to limit the number of times the
-  program can be used during the :guilabel:`Validity` period.
-- :guilabel:`Company`: In the case of multiple companies, choose the company for which the program
-  is available.
-- :guilabel:`Available On`: Select the app(s) on which the program is available.
-- :guilabel:`Website`: Select the website(s) on which the program is available. Leave this field
-  blank to make it available on all websites.
-- :guilabel:`Point of Sale`: Select the point(s) of sale at which the program is available. Leave
-  this field blank to make it available at all :abbr:`PoS (Point of Sale)`.
-
 .. image:: loyalty_discount/price-programs.png
    :align: center
    :alt: Program options on the loyalty program form.
+
+The program form contains the following fields:
+
+- :guilabel:`Program Name`: Enter the name of the program in this field. The program name is **not**
+  visible to the customer.
+- :guilabel:`Program Type`: Select the desired :ref:`program type
+  <sales/pricing_management/program-types>` from the drop-down menu.
+- :guilabel:`Currency`: Select the currency used for the program.
+- :guilabel:`Pricelist`: If desired, select a pricelist from the drop-down menu to have this loyalty
+  program applied to a specific pricelist (and customers attached to the pricelist). More than one
+  pricelist can be selected in this field. When a single loyalty program is linked to several
+  pricelists, it makes it viable for different customer segments to have different pricelists, but
+  the *same* loyalty programs. If this field is left blank, the program applies to everyone,
+  regardless of pricelist.
+- :guilabel:`Points Unit`: Enter the name of the points used for the :guilabel:`Loyalty Cards`
+  program (e.g. `Loyalty Points`). The points unit name *is* visible to the customer. This field is
+  **only** available when the :guilabel:`Program Type` is set to :guilabel:`Loyalty Cards`.
+- :guilabel:`Start Date`: Select the date on which the program becomes valid. Leave this field blank
+  if the program should always be valid and not expire.
+- :guilabel:`End Date`: Select the date on which the program stops being valid. Leave this field
+  blank if the program should always be valid and not expire.
+- :guilabel:`Limit Usage`: If desired, tick this checkbox, and enter a number of :guilabel:`usages`
+  to limit the number of times the program can be used during the validity period.
+- :guilabel:`Company`: If working in a multi-company database, choose the one company for which the
+  program is available. If left blank, the program is available to all companies in the database.
+- :guilabel:`Available On`: Select the apps on which the program is available.
+- :guilabel:`Website`: Select a website on which the program is available. Leave this field blank to
+  make it available on all websites.
+- :guilabel:`Point of Sale`: Select the point(s) of sale at which the program is available. Leave
+  this field blank to make it available at all :abbr:`PoS (Point of Sale)`.
 
 .. note::
    The options available on the program form vary depending on the :ref:`Program Type
    <sales/pricing_management/program-types>` selected.
 
 All of the existing cards, codes, coupons, etc. that have been generated for the program are
-accessible through the smart button located in the upper-right corner of the form.
+accessible through the smart button located at the top of the form.
 
 .. image:: loyalty_discount/price-programs-items.png
    :align: center
    :alt: Program items smart button on the loyalty program form.
+
+.. note::
+   In Odoo 17 (and later), when a loyalty card or coupon is associated with a contact in the
+   database, a :guilabel:`Loyalty Cards` smart button conditionally appears on the contact form.
+
+   .. image:: loyalty_discount/loyalty-cards-smart-button.png
+      :align: center
+      :alt: The Loyalty Card smart button as it appears on a contact form in Odoo 17.
+
+   This smart button **only** appears if a loyalty card or coupon is associated with the contact.
 
 .. _sales/pricing_management/program-types:
 
@@ -83,16 +101,16 @@ The different :guilabel:`Program Types` available on the program form are:
 
 - :guilabel:`Coupons`: Generate and share single-use coupon codes that grant immediate access to
   rewards.
-- :guilabel:`Next Order Coupons`: Generate and share single-use coupon codes that grant access to
-  rewards on the customer's next order.
 - :guilabel:`Loyalty Cards`: When making purchases, the customer accumulates points to exchange for
   rewards on current and/or future orders.
 - :guilabel:`Promotions`: Set conditional rules for ordering products, which, when fulfilled, grant
   access to rewards for the customer.
 - :guilabel:`Discount Code`: Set codes which, when entered upon checkout, grant discounts to the
   customer.
-- :guilabel:`Buy X Get Y`: For every X item bought, the customer is granted 1 credit. After
-  accumulating a specified amount of credits, the customer can trade them in to receive Y item.
+- :guilabel:`Buy X Get Y`: for every (X) item bought, the customer is granted 1 credit. After
+  accumulating a specified amount of credits, the customer can trade them in to receive (Y) item.
+- :guilabel:`Next Order Coupons`: Generate and share single-use coupon codes that grant access to
+  rewards on the customer's next order.
 
 Conditional rules
 -----------------

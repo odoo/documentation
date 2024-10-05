@@ -22,7 +22,8 @@ which you want to activate PayNow. Set the :guilabel:`Proxy Type` and fill in th
 Value` field depending on the type you chose.
 
 .. important::
-   - The account holder's country must be set to Singapore on its contact form.
+   - The account holder's country must be set to `Singapore` on its contact form.
+   - The account holder's city is mandatory.
    - You could also include the invoice number in the QR code by checking the :guilabel:`Include
      Reference` checkbox.
 

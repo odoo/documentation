@@ -13,6 +13,8 @@ First, ensure the *Leads* feature is enabled in the database by navigating to :m
 app --> Configuration --> Settings`. Tick the :guilabel:`Leads` checkbox, then click
 :guilabel:`Save`.
 
+.. _crm/configure_email_alias:
+
 Configure email aliases
 =======================
 
@@ -58,7 +60,7 @@ contact's email address.
    to the database as opportunities.
 
 .. seealso::
-   :doc:`../../../general/email_communication/email_servers`
+   :doc:`../../../general/email_communication`
 
 Manually create leads
 =====================

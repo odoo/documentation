@@ -1018,69 +1018,37 @@ specific product.
 Reports
 =======
 
-As part of the localization installation, financial reporting for Argentina was added to the
-:guilabel:`Accounting` dashboard. Access these reports by navigating to :menuselection:`Accounting
---> Reporting --> Argentinean Reports`
+As part of the localization installation, financial reporting for Argentina is available in the
+:guilabel:`Accounting` dashboard. To access these reports, navigate to :menuselection:`Accounting
+--> Reporting --> Argentinean Statements`.
 
-.. image:: argentina/argentinian-reports.png
-   :align: center
-   :alt: Argentinean reports.
+To access the VAT book report, go to :menuselection:`Accounting --> Reporting --> Tax Report`, click
+the :icon:`fa-book` (:guilabel:`book`), and select :guilabel:`Argentinean VAT book (AR)`.
 
-VAT reports
------------
-
-Sales VAT book
-~~~~~~~~~~~~~~
-
-This report records all the sales, which are taken as the basis for the accounting records
-to determine the VAT (Tax Debit). The :guilabel:`Sales VAT` book report can be exported as a `.zip`
-file using the :guilabel:`VAT BOOK (ZIP)` button at the top left, containing `.txt` files to upload
-to the AFIP portal.
-
-.. image:: argentina/sales-vat-book.png
-   :align: center
-   :alt: Sales VAT book.
-
-Purchases VAT book
-~~~~~~~~~~~~~~~~~~
-
-The :guilabel:`Purchases VAT` book report can be exported as a `.zip` file using the
-:guilabel:`VAT BOOK (ZIP)` button at the top left, which contains `.txt` files to upload to the AFIP
-portal.
-
-.. image:: argentina/purchases-vat-book.png
-   :align: center
-   :alt: Purchases VAT book.
+.. note::
+   The VAT book report can be exported as a `.zip` file by selecting it in the dropdown menu in the
+   top-left corner.
 
 VAT summary
-~~~~~~~~~~~
+-----------
 
-Pivot table designed to check the monthly VAT totals. This report is for internal use and is not
-sent to the AFIP.
-
-.. image:: argentina/vat-summary.png
-   :align: center
-   :alt: VAT Summary.
-
-IIBB - Reports
---------------
+This pivot table is designed to check the monthly VAT totals. This report is for internal use and is
+not sent to the AFIP.
 
 IIBB - Sales by jurisdiction
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------
 
-Pivot table where you can validate the gross income in each jurisdiction. Affidavit for the
-corresponding taxes to pay; and therefore, it is not sent to the AFIP.
+This pivot table allows you to validate the gross income in each jurisdiction. It serves as an
+affidavit for the corresponding taxes due but is not submitted to the AFIP.
 
 .. image:: argentina/iibb-sales-jurisdiction.png
-   :align: center
    :alt: IIBB Sales by jurisdiction.
 
 IIBB - Purchases by jurisdiction
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------
 
-Pivot table where you can validate the gross purchases in each jurisdiction. Affidavit for the
-corresponding taxes to pay; and therefore, it is not sent to the AFIP.
+This pivot table allows you to validate the gross purchases in each jurisdiction. It serves as an
+affidavit for the corresponding taxes due but is not submitted to the AFIP.
 
 .. image:: argentina/iibb-purchases-jurisdiction.png
-   :align: center
    :alt: IIBB Purchases by jurisdiction.

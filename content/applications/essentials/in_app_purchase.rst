@@ -89,7 +89,7 @@ settings. To use a service, simply interact with it wherever it appears in the d
    - :doc:`Lead mining <../sales/crm/acquire_leads/lead_mining>`
    - :doc:`Enrich your contacts base with Partner Autocomplete
      <../sales/crm/optimize/partner_autocomplete>`
-   - :doc:`SMS essentials <../marketing/sms_marketing/essentials/sms_essentials>`
+   - :doc:`SMS Marketing <../marketing/sms_marketing>`
 
 .. _in_app_purchase/credits:
 
@@ -119,7 +119,7 @@ Credits are purchased in *Packs* from the `Odoo IAP Catalog
    The number of credits consumed depends on the length of the SMS and the country of destination.
 
    For more information, refer to the :doc:`SMS Pricing and FAQ
-   <../marketing/sms_marketing/pricing/pricing_and_faq>` documentation.
+   <../marketing/sms_marketing/pricing_and_faq>` documentation.
 
 .. _iap/buying_credits:
 

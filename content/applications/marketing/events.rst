@@ -4,7 +4,7 @@
 Events
 ======
 
-Explore the various aspects of the Odoo *Events* detailed dashboard, and useful settings, that can
+Explore the various aspects of the Odoo **Events** detailed dashboard, and useful settings, that can
 be utilized to generate and gather valuable data about events (and their attendees), which can then
 be used to improve decision-making and event-planning.
 
@@ -29,24 +29,34 @@ be used to improve decision-making and event-planning.
       See how to create, track, and manage event tracks with Odoo.
 
    .. card:: Event templates
-      :target: events/track_manage_talks
+      :target: events/event_templates
 
       Expedite the event-creation process with event templates.
 
-   .. card:: Talks, proposals, and agenda
-      :target: events/track_manage_talks
-
-      View talks, agendas, and propose a talk.
-
-   .. card:: Event Tracks
+   .. card:: Event tracks
       :target: events/event_tracks
 
       Learn how to create, track, and manage event tracks with Odoo.
 
+   .. card:: Event booths
+      :target: events/event_booths
+
+      Create, manage, and sell event booths.
+
+   .. card:: Registration Desk
+      :target: events/registration_desk
+
+      Instantly grant access to event attendees with Odoo's Registration Desk feature.
+
+   .. card:: Revenues report
+      :target: events/revenues_report
+
+      Analyze the financial success of events with Odoo.
+
 Events dashboard
 ================
 
-When the *Events* application is opened, Odoo reveals the main :guilabel:`Events` dashboard, which
+When the **Events** application is opened, Odoo reveals the main :guilabel:`Events` dashboard, which
 can be viewed in a number of different ways. Those different view options are accessible from the
 :guilabel:`Events` dashboard in the upper-right corner, via a series of view-related icon buttons.
 
@@ -88,7 +98,7 @@ organizational access.
 Settings
 ========
 
-To access the event settings and feature options in Odoo *Events*, navigate to
+To access the event settings and feature options in Odoo **Events**, navigate to
 :menuselection:`Events app --> Configuration --> Settings`. From here, tick the checkboxes beside
 the desired settings and/or features, and click :guilabel:`Save` to activate them.
 
@@ -96,7 +106,7 @@ Events section
 --------------
 
 In the :guilabel:`Events` section of the :guilabel:`Settings` page, there are selectable features
-that can be enabled to add various elements to events created with the Odoo *Events* application.
+that can be enabled to add various elements to events created with the Odoo **Events** application.
 
 .. image:: events/settings-events-section.png
    :align: center
@@ -168,10 +178,12 @@ set to :guilabel:`Default Nomenclature`, by default, but can be changed at any t
 Create events
 =============
 
-With Odoo *Events*, events can be manually created from scratch or built off of pre-made templates.
-Once launched, the *Events* application then integrates with the *Website* app for the front-end
-promotion and registration of the event for attendees, the *Sales* app for the purchasing ability of
-paid tickets, and the *CRM* application through customizable lead generation rules.
+With Odoo **Events**, events can be manually created from scratch or built off of pre-made
+templates.
+
+Once launched, the **Events** application then integrates with the **Website** app for the front-end
+promotion and registration of the event for attendees, the **Sales** app for the purchasing ability
+of paid tickets, and the **CRM** application through customizable lead generation rules.
 
 .. seealso::
    :doc:`events/create_events`
@@ -200,11 +212,46 @@ learn how attendees can propose talks for the event.
 Event templates
 ===============
 
-Discover the process to customize and configure event templates, which can be used to expedite the
+Learn the process to customize and configure event templates, which can be used to expedite the
 event-creation process.
 
 .. seealso::
    :doc:`events/event_templates`
+
+Event booths
+============
+
+Explore the various ways to create, manage, and sell event booths with the Odoo **Events**
+application.
+
+.. seealso::
+   :doc:`events/event_booths`
+
+Event tracks
+============
+
+Find out how to create, manage, and schedule different experiences (aka *Tracks*) for events with
+Odoo.
+
+.. seealso::
+   :doc:`events/event_tracks`
+
+Registration desk
+=================
+
+Grant access to event attendees quickly and easily with the Odoo **Events** *Registration Desk*
+feature.
+
+.. seealso::
+   :doc:`events/registration_desk`
+
+Revenues report
+===============
+
+Gain invaluable insight into event-related revenues with customizable reports and metrics.
+
+.. seealso::
+   :doc:`events/revenues_report`
 
 .. toctree::
 
@@ -214,3 +261,5 @@ event-creation process.
    events/event_templates
    events/event_booths
    events/event_tracks
+   events/registration_desk
+   events/revenues_report

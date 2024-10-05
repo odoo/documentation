@@ -1,8 +1,6 @@
-============================================
-Process receipts and deliveries in two steps
-============================================
-
-.. _inventory/receipts_delivery_two_steps:
+=============================
+Two-step receipt and delivery
+=============================
 
 .. |PO| replace:: :abbr:`PO (Purchase Order)`
 .. |SO| replace:: :abbr:`SO (Sales Order)`
@@ -226,4 +224,4 @@ Once ready, click :guilabel:`Validate`. Once validated, the delivery order moves
 :guilabel:`Done` stage.
 
 .. seealso::
-   :doc:`shipments_deliveries`
+   :doc:`../daily_operations`

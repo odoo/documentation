@@ -87,3 +87,4 @@ invoice manually.
    subscriptions/automatic_alerts
    subscriptions/scheduled_actions
    subscriptions/reports
+   subscriptions/payment_providers

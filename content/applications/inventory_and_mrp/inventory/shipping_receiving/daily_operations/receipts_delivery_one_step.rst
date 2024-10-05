@@ -1,8 +1,6 @@
-===========================================
-Process receipts and deliveries in one step
-===========================================
-
-.. _inventory/receipts_delivery_one_step:
+=============================
+One-step receipt and delivery
+=============================
 
 .. |PO| replace:: :abbr:`PO (Purchase Order)`
 .. |SO| replace:: :abbr:`SO (Sales Order)`
@@ -146,4 +144,4 @@ product line, the quantity in the :guilabel:`Delivered` column now matches the o
 :guilabel:`Quantity`.
 
 .. seealso::
-   :doc:`shipments_deliveries`
+   :doc:`../daily_operations`

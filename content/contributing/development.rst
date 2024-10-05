@@ -28,15 +28,25 @@ The instructions below help you prepare your environment for making local change
 and then push them to GitHub. Skip this section and go to
 :ref:`contributing/development/first-contribution` if you have already completed this step.
 
-#. .. include:: create_github_account.rst
-#. .. include:: configure_github_account.rst
+#. First, you need to `create a GitHub account <https://github.com/join>`_. Odoo uses GitHub to
+   manage the source code of its products, and this is where you will make your changes and submit
+   them for review.
+#. `Generate a new SSH key and register it on your GitHub account
+   <https://docs.github.com/en/authentication/connecting-to-github-with-ssh>`_.
 #. Go to `github.com/odoo/odoo <https://github.com/odoo/odoo>`_ and click on the :guilabel:`Fork`
    button in the top right corner to create a fork (:dfn:`your own copy`) of the repository on your
    account. Do the same with `github.com/odoo/enterprise <https://github.com/odoo/enterprise>`_ if
    you have access to it. This creates a copy of the codebase to which you can make changes without
    affecting the main codebase. Skip this step if you work at Odoo.
 #. .. include:: install_git.rst
-#. .. include:: configure_git_authorship.rst
+#. Configure Git to identify yourself as the author of your future contributions. Enter the same
+   email address you used to register on GitHub.
+
+   .. code-block:: console
+
+      $ git config --global user.name "Your Name"
+      $ git config --global user.email "youremail@example.com"
+
 #. :doc:`Install Odoo from the sources <../administration/on_premise/source>`. Make sure to fetch
    the sources through Git with SSH.
 #. Configure Git to push changes to your fork(s) rather than to the main codebase. If you work at
@@ -84,7 +94,7 @@ Make your first contribution
 .. important::
    - Odoo development can be challenging for beginners. We recommend you to be knowledgeable enough
      to code a small module before contributing. If that is not the case, take some time to go
-     through the :doc:`developer tutorials </developer/howtos>` to fill in the gaps.
+     through the :doc:`developer tutorials </developer/tutorials>` to fill in the gaps.
    - Some steps of this guide require to be comfortable with Git. Here are some `tutorials
      <https://www.atlassian.com/git/tutorials>`_ and an `interactive training
      <https://learngitbranching.js.org/>`_ if you are stuck at some point.
@@ -155,7 +165,10 @@ navigate to the directory where you installed Odoo from sources and follow the g
    #. Tick the :guilabel:`Allow edits from maintainer` checkbox. Skip this step if you work at Odoo.
    #. Complete the description and click on the :guilabel:`Create pull request` button again.
 
-#. .. include:: check_mergeability_status.rst
-#. .. include:: handle_reviews.rst
+#. At the bottom of the page, check the mergeability status and address any issues.
+#. As soon as your :abbr:`PR (Pull Request)` is ready for merging, a member of the Odoo team
+   is automatically assigned for review. If the reviewer has questions or remarks, they will
+   post them as comments and you will be notified by email. Those comments must be resolved
+   for the contribution to go forward.
 #. Once your changes are approved, the review merges them and they become available for all Odoo
    users after the next code update!

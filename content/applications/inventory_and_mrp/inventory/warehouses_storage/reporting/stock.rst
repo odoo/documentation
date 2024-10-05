@@ -24,8 +24,7 @@ and :guilabel:`Category`, which shows products within a selected product categor
 
 .. note::
    The :guilabel:`Warehouse` grouping is only available when there are multiple warehouses in the
-   database. Refer to the :doc:`../inventory_management/create_a_second_warehouse` documentation for
-   more details.
+   database. Refer to the :doc:`../inventory_management/warehouses` documentation for more details.
 
 In the report itself, the columns represent:
 
@@ -37,7 +36,8 @@ In the report itself, the columns represent:
 
   .. seealso::
      - :ref:`Compute average cost inventory valuation per unit <inventory/avg_cost/formula>`
-     - :doc:`Inventory valuation methods <../inventory_valuation/inventory_valuation_config>`
+     - :doc:`Inventory valuation methods
+       <../../product_management/inventory_valuation/inventory_valuation_config>`
 
 - :guilabel:`On Hand`: current quantity of products. Click the :icon:`fa-pencil`
   :guilabel:`(pencil)` icon to :doc:`modify the on-hand quantity
@@ -54,8 +54,8 @@ Click the buttons to the right of each row item to access additional information
 - :guilabel:`History`: access the stock move history of the product, displaying information about
   the quantity and description of why the product was moved from one location to another.
 - :guilabel:`Replenishment`: access the :doc:`reordering rules
-  <../../product_management/product_replenishment/reordering_rules>` page for the product to create
-  or manage methods of procuring the product.
+  <../replenishment/reordering_rules>` page for the product to create or manage methods of procuring
+  the product.
 - :guilabel:`Locations`: break down of on-hand quantity at multiple storage locations. Only
   available when the product is stored in multiple locations.
 - :guilabel:`Forecast`: access the forecasted report to view on-hand, incoming, and outgoing
@@ -108,7 +108,7 @@ Search options
         *Expenses* app installed.
 
       .. seealso::
-         :doc:`../../product_management/product_tracking/type`
+         :doc:`../../product_management/configure/type`
 
    .. tab:: Group By
 
@@ -116,7 +116,7 @@ Search options
       search results.
 
       - :guilabel:`Product Type`: group items by :doc:`product type
-        <../../product_management/product_tracking/type>`.
+        <../../product_management/configure/type>`.
       - :guilabel:`Product Category`: group items by product category. To configure these, go to
         :menuselection:`Inventory app --> Configuration --> Products: Product Categories`.
       - :guilabel:`POS Product Category`: group items by :doc:`point of sale product categories

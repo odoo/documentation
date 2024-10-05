@@ -147,7 +147,6 @@ According to the requirements of the CFDI 4.0, the name of the main company cont
 coincide with your business name registered in the |SAT|, without the legal entity abbreviation.
 
 .. image:: mexico/mx-company-info.png
-   :align: center
    :alt: Main company contact requirements for a correct invoicing.
 
 .. important::
@@ -161,7 +160,6 @@ Regime`, then select the regime that applies to your company from the drop-down 
 :guilabel:`Save`.
 
 .. image:: mexico/mx-fiscal-regime.png
-   :align: center
    :alt: Fiscal regime configuration in the Accounting settings.
 
 .. tip::
@@ -197,7 +195,6 @@ Taxes`, then enable the :guilabel:`Factor Type` field in the :guilabel:`Advanced
 all records, with the :guilabel:`Tax Type` set as :guilabel:`Sales`.
 
 .. image:: mexico/mx-factor-type.png
-   :align: center
    :alt: Factor Type Sales tax type configuration.
 
 .. tip::
@@ -223,7 +220,6 @@ To use the `03` value, navigate to :menuselection:`Contacts --> your customer's 
 tab`, and activate the :guilabel:`No Tax Breakdown` checkbox.
 
 .. image:: mexico/mx-tax-breakdown.png
-   :align: center
    :alt: No Tax Breakdown option on the MX EDI tab of the customer's invoice.
 
 .. important::
@@ -244,7 +240,6 @@ the correct :guilabel:`Tax Grids` for it (`IVA`, `ISR` or `IEPS`). Odoo **only**
 three groups of taxes.
 
 .. image:: mexico/mx-taxes-config.png
-   :align: center
    :alt: Tax accounts available for Odoo.
 
 Products
@@ -275,7 +270,6 @@ Accounting --> Electronic Invoicing (MX)`. Under the :guilabel:`MX PAC` section,
 your |PAC| with your credentials (:guilabel:`PAC username` and :guilabel:`PAC password`).
 
 .. image:: mexico/mx-pac-account.png
-   :align: center
    :alt: Configuring PAC credentials from the Accounting settings.
 
 .. tip::
@@ -296,7 +290,6 @@ your digital :guilabel:`Certificate` (:file:`.cer` file), your :guilabel:`Certif
 & Close`.
 
 .. image:: mexico/mx-certificates.png
-   :align: center
    :alt: Certificate and key upload inputs.
 
 .. tip::
@@ -357,7 +350,6 @@ Because of this requirement, the field :guilabel:`CFDI Origin` adds this relatio
 followed by the fiscal folio of the original invoice.
 
 .. image:: mexico/mx-creating-credit-note.png
-   :align: center
    :alt: Example CFDI Origin number.
 
 .. tip::
@@ -370,25 +362,23 @@ Payment complements
 Payment policy
 **************
 
-One  addition of the Mexican localization is the :guilabel:`Payment Policy` field . `According to
-the SAT documentation <https://www.sat.gob.mx/consultas/92764/comprobante-de-recepcion-de-pagos>`_,
-there may be 2 types of payments:
+One addition of the Mexican localization is the :guilabel:`Payment Policy` field. According to
+the SAT documentation, there are two types of payments:
 
 - `PUE` (Pago en una Sola Exhibición/Payment in a Single Exhibition)
 - `PPD` (Pago en Parcialidades o Diferido/Payment in Installements or Deferred)
 
    .. seealso::
-      :doc:`../../inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/integrating_landed_costs`
+      :doc:`../../inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs`
 
 The difference lies in the *Due Date* or *Payment Terms* of the invoice.
 
-To configure |PUE| invoices, navigatge to :menuselection:`Accounting --> Customers --> Invoices`,
+To configure |PUE| invoices, navigate to :menuselection:`Accounting --> Customers --> Invoices`,
 and either select an invoice :guilabel:`Due Date` within the same month, or choose a payment term
 that does not imply changing the due month (immediate payment, 15 days, 21 days, all falling within
 the current month).
 
 .. image:: mexico/mx-pue-payment.png
-   :align: center
    :alt: Example of an invoice with the PUE requirements.
 
 .. tip::
@@ -400,7 +390,6 @@ select an invoice with a :guilabel:`Due Date` after the first day of the followi
 applies if your :guilabel:`Payment Term` is due in the following month.
 
 .. image:: mexico/mx-ppd-payment.png
-   :align: center
    :alt: Example of an invoice with the PPD requirements.
 
 .. important::
@@ -445,7 +434,6 @@ generates the corresponding payment complement automatically, once you click :gu
 Now`.
 
 .. image:: mexico/mx-signed-complement.png
-   :align: center
    :alt: CFDI (4.0) E-invoicing service process payment now message.
 
 .. warning::
@@ -504,11 +492,9 @@ to accept the cancellation in their “Buzón Tributario” directly from the `S
    method 04 reason for cancellation.
 
 .. image:: mexico/mx-01-invoice-cancellation-substitute.png
-   :align: center
    :alt: Old invoice with CFDI Origin.
 
 .. image:: mexico/mx-01-invoice-cancellation.png
-   :align: center
    :alt: Invoice with the Substituted By field referencing the CFDI Origin invoice.
 
 02 - invoices sent with errors without a relation
@@ -558,7 +544,6 @@ generic |RFC| is set as `XAXX010101000`, and the :guilabel:`Fiscal Regime` of yo
 set as: `Sin obligaciones fiscales`.
 
 .. image:: mexico/mx-cfdi-to-public.png
-   :align: center
    :alt: CFDI to Public Customer field configuration.
 
 Multicurrency
@@ -582,7 +567,6 @@ It is highly recommended to use :doc:`a bank account for each currency
    JPY.
 
 .. image:: mexico/mx-multicurrency-1.png
-   :align: center
    :alt: Multi-currency configuration in the Accounting settings.
 
 Down payments
@@ -671,7 +655,6 @@ company directly in :menuselection:`Settings --> General Settings --> Companies`
 have to coincide with the data in the |SAT|.
 
 .. image:: mexico/mx-external-trade-rescompany.png
-   :align: center
    :alt: Optional external trade company fields.
 
 To configure the contact data for a foreign receiving client, navigate to :menuselection:`Accounting
@@ -692,7 +675,6 @@ following fields completed to avoid errors:
    are required for external trade contact configuration.
 
 .. image:: mexico/mx-external-trade-customer-contact.png
-   :align: center
    :alt: Required external trade customer fields.
 
 .. note::
@@ -712,7 +694,6 @@ to external trade.
 #. The :guilabel:`UMT Aduana` corresponds to the :guilabel:`Tariff Fraction`.
 
 .. image:: mexico/mx-external-trade-product.png
-   :align: center
    :alt: Required external trade product fields.
 
 .. tip::
@@ -735,7 +716,6 @@ Currency`, the only fields left are :guilabel:`Incoterm` and the optional :guila
 Source` in the :guilabel:`Other Info` tab.
 
 .. image:: mexico/mx-external-trade-other-info.png
-   :align: center
    :alt: External trade Other Info tab of a product.
 
 Finally, sign the invoice with the same process as a regular invoice, and click the
@@ -791,7 +771,6 @@ with the `Official SAT Catalog for Carta Porte <sat-catalog_>_`.
    The field, :guilabel:`Locality`, is optional for both addresses.
 
 .. image:: mexico/mx-delivery-guide-contacts.png
-   :align: center
    :alt: Delivery guide contact configuration.
 
 .. important::
@@ -813,7 +792,6 @@ In the :guilabel:`Intermediaries` section, you must add the operator of the vehi
 mandatory fields for this contact are the :guilabel:`VAT` and :guilabel:`Operator Licence`.
 
 .. image:: mexico/mx-delivery-guide-vehicle.png
-   :align: center
    :alt: Delivery guide vehicle configuration.
 
 Products
@@ -832,7 +810,6 @@ this, there are two extra configurations for products involved in delivery guide
    products, and create the delivery order (and delivery guide) again with the correct amounts.
 
 .. image:: mexico/mx-delivery-guide-products.png
-   :align: center
    :alt: Delivery guide product configuration.
 
 Sales and inventory flow
@@ -858,7 +835,6 @@ appears. There, enter a value in :guilabel:`Distance to Destination (KM)` bigger
 select the :guilabel:`Vehicle Setup` used for this delivery.
 
 .. image:: mexico/mx-delivery-guide-federal-transport.png
-   :align: center
    :alt: Delivery guide MX EDI tab configuration.
 
 Dangerous hazards
@@ -874,7 +850,6 @@ First, select your product from :menuselection:`Inventory --> Products --> Produ
 :guilabel:`Hazardous Packaging (MX)` must be filled with the correct code from the |SAT| catalog.
 
 .. image:: mexico/mx-delivery-guide-hazards-designation.png
-   :align: center
    :alt: Delivery guide hazardous material product required fields.
 
 In :menuselection:`Inventory --> Settings --> Mexico --> Vehicle Setup`, the data from the
@@ -882,7 +857,6 @@ In :menuselection:`Inventory --> Settings --> Mexico --> Vehicle Setup`, the dat
 well. After this, continue with the regular process to create a delivery guide.
 
 .. image:: mexico/mx-delivery-guide-hazards-environment.png
-   :align: center
    :alt: Delivery Guide environment insurer required fields.
 
 Customs numbers
@@ -909,7 +883,7 @@ Configuration
 ~~~~~~~~~~~~~
 
 In order to track the correct customs number for a specific invoice, Odoo uses :doc:`landed costs
-<../../inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/integrating_landed_costs>`.
+<../../inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs>`.
 Go to :menuselection:`Inventory --> Configuration --> Settings --> Valuation`. Make sure that
 :guilabel:`Landed Costs` is activated.
 
@@ -927,11 +901,9 @@ products, and make sure the :guilabel:`Product Category` has the following confi
 - :guilabel:`Stock Output Account`: :guilabel:`115.05.01 Mercancías en tránsito`
 
 .. image:: mexico/mx-landing-configuration.png
-   :align: center
    :alt: Storable products general configuration.
 
 .. image:: mexico/mx-landing-configuration-category.png
-   :align: center
    :alt: Storable product category configuration.
 
 Purchase and sales flow
@@ -955,7 +927,6 @@ Optionally, you can add a cost amount. After this, validate the landed cost. Onc
    number with the transfer(s).
 
 .. image:: mexico/mx-landing-inventory.png
-   :align: center
    :alt: Customs number on a landed costs Inventory record.
 
 Now, create a sales order, and confirm it. This should trigger a :guilabel:`Delivery` smart button.
@@ -966,7 +937,6 @@ product has a customs number in it. This number should match the customs number 
 *Landed Costs* record you created earlier.
 
 .. image:: mexico/mx-landing-invoice.png
-   :align: center
    :alt: Customs number on confirmed sales order product.
 
 Electronic accounting
@@ -996,9 +966,6 @@ In order to use these reports, the modules :guilabel:`l10n_mx_reports`,
 :guilabel:`l10n_mx_reports_closing`, :guilabel:`l10n_mx_xml_polizas` and
 :guilabel:`l10n_mx_xml_polizas_edi` have to be installed, as well as the :doc:`Accounting
 <../accounting/get_started>`.
-
-You can find the *Chart of accounts*, *Trial Balance Month 13*, and *DIOT* reports in
-:menuselection:`Accounting --> Reporting --> Mexico`.
 
 .. important::
    The specific characteristics and obligations of the reports that you send might change according
@@ -1030,9 +997,10 @@ Once you create all your accounts, make sure the correct :guilabel:`Tags` are ad
    You cannot use any pattern that ends a section with a 0 (such as `100.01.01`, `301.00.003` or
    `604.77.00`). This triggers errors in the report.
 
-Once everything is set up, you can go to :menuselection:`Accounting --> Reporting --> Mexico -->
-COA`, and click the :guilabel:`SAT (XML)` button to generate an XML file containing all of your
-accounts, which will be ready to upload to the |SAT| website.
+Once everything is set up, go to :menuselection:`Accounting --> Reporting --> Trial Balance`,
+click the :icon:`fa-caret-down` (:guilabel:`down arrow`) next to the :guilabel:`PDF` button, and
+select :guilabel:`COA SAT (XML)`. This generates an XML file with your accounts, which you can
+upload directly to the |SAT| website.
 
 Trial balance
 ~~~~~~~~~~~~~
@@ -1040,36 +1008,34 @@ Trial balance
 The trial balance reports the initial balance, credit, and total balance of your accounts, provided
 that you added their correct :ref:`encoding group <l10n_mx/chart-of-accounts>`.
 
-This report can be generated monthly, and a corresponding XML file is created, if you go to
-:menuselection:`Accounting --> Reporting --> Mexico --> Trial Balance`, and click the
-:guilabel:`SAT (XML)` button. Select the month you want to download beforehand.
+To generate this report in an XML format, go to :menuselection:`Accounting --> Reporting -->
+Trial Balance`. Select the month you want to download in the calendar, then click the
+:icon:`fa-caret-down` (:guilabel:`down arrow`) next to the :guilabel:`PDF` button, and select
+:guilabel:`SAT (XML)`.
 
 .. image:: mexico/mx-reports-trial-balance.png
-   :align: center
    :alt: Trial balance report.
 
 .. note::
    Odoo does not generate the *Balanza de Comprobación Complementaria*.
 
-An additional report is the *Month 13*: a closing balance sheet that shows any adjustments or
-movements made in the accounting to close the year.
+Month 13 trial balance
+**********************
 
-To generate this XML document, navigate to :menuselection:`Accounting --> Accounting -->
-Miscellaneous --> Journal Entries`, and create a new document. Here, add all amounts to modify, and
-balance the debit and/or credit of each one.
+The *Month 13* report is a closing balance sheet that shows any adjustments or movements made in the
+accounting to close the year.
 
-After this is done, click :guilabel:`Mark as Closing Entry`, and the report found in
-:menuselection:`Accounting --> Reporting --> Mexico --> Trial Balance Month 13`, contains the total
-amount of the year, plus all the additions of the journal entry.
+To generate it, proceed as follows:
 
-The XML file is generated by pressing the :guilabel:`SAT (XML)` button.
-
-.. image:: mexico/mx-reports-trial-balance-13.png
-   :align: center
-   :alt: Trial Balance Month 13 setup.
+#. Go to :menuselection:`Accounting --> Accounting --> Journal Entries` and create a new entry for
+   all the amounts to be changed, balancing the debit and/or credit of each one.
+#. In the :guilabel:`Other Info` tab, enable the :guilabel:`Month 13 Closing` option.
+#. Go to :menuselection:`Accounting --> Reporting --> Trial Balance`, click the calendar, and select
+   :guilabel:`Month 13`.
+#. Click the :icon:`fa-caret-down` (:guilabel:`down arrow`) next to the :guilabel:`PDF` button, and
+   select :guilabel:`SAT (XML)`.
 
 .. image:: mexico/mx-reports-trial-balance-13-report.png
-   :align: center
    :alt: Trial Balance Month 13 report.
 
 General ledger
@@ -1082,16 +1048,17 @@ to comply with |SAT|'s audits and/or tax refunds.
 .. tip::
    You can filter by period, or by journal, according to your current needs.
 
-To create the XML, go to :menuselection:`Accounting --> Reporting --> Audit Reports --> General
-Ledger`, and click :guilabel:`XML (Polizas)`. Here, you can select between four types of
-:guilabel:`Export` types:
+To create the XML, go to :menuselection:`Accounting --> Reporting --> General Ledger`, click the
+:icon:`fa-caret-down` (:guilabel:`down arrow`) next to the :guilabel:`PDF` button, and select
+:guilabel:`XML (Polizas)`. In the :guilabel:`XML Polizas Export Options` window, choose between four
+different :guilabel:`Export` types:
 
 - :guilabel:`Tax audit`
 - :guilabel:`Audit certification`
 - :guilabel:`Return of goods`
 - :guilabel:`Compensation`
 
-For :guilabel:`Tax audit`, or :guilabel:`Audit certification`, you need to write the
+For :guilabel:`Tax audit` or :guilabel:`Audit certification`, you need to write the
 :guilabel:`Order Number` provided by the |SAT|. For :guilabel:`Return of goods`, or
 :guilabel:`Compensation`, you need to write your :guilabel:`Process Number`, also provided by the
 |SAT|.
@@ -1116,23 +1083,18 @@ The transactions file contains the total amount of your payments registered in v
 down into the corresponding types of IVA. The :guilabel:`VAT` and :guilabel:`Country` is mandatory
 for all vendors.
 
-To get the |DIOT| report, go to :menuselection:`Accounting --> Reports --> Mexico --> Transactions
-with third parties [DIOT]`. Select the month that suits you, and click :guilabel:`DIOT (TXT)` to
-download the :file:`.txt` file.
+To generate the |DIOT| report, go to :menuselection:`Accounting --> Reporting --> Tax Reports`.
+Select the month you want to download in the calendar, then click the :icon:`fa-caret-down`
+(:guilabel:`down arrow`) next to the :guilabel:`PDF` button to select :guilabel:`Report: DIOT (MX)`
+and download the :file:`.txt` file.
 
 .. image:: mexico/mx-reports-diot-example.png
-   :align: center
    :alt: A Vendor Bill that is In Payment.
 
-.. image:: mexico/mx-reports-diot-example-download.png
-   :align: center
-   :alt: DIOT (TXT) download button.
-
 .. important::
-   You need to fill the field, :guilabel:`L10N Mx Type of Operation`, in the :guilabel:`Accounting`
+   You need to fill the :guilabel:`L10N Mx Type of Operation` field in the :guilabel:`Accounting`
    tab of each one of your vendors to prevent validation errors. Make sure that your foreign
    customers have their country set up for :guilabel:`L10N Mx Nationality` to appear automatically.
 
    .. image:: mexico/mx-reports-diot-contact.png
-      :align: center
       :alt: DIOT information on a vendor contact.

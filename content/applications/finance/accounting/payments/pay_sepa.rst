@@ -30,8 +30,9 @@ Non-EEA territories:
 - Jersey;
 - Isle of Man.
 
-When paying a bill in Odoo, you can select SEPA mandates as a payment option. At the day's end,
-you can generate the SEPA file containing all bank wire transfers and send it to the bank.
+When paying a bill in Odoo, you can select SEPA mandates as a payment option. At the end of the day,
+you can generate the SEPA file containing all bank wire transfers and upload it to your online
+banking interface to process the payments.
 
 By default, the file follows the SEPA Credit Transfer **'pain.001.001.03'** specifications. This is
 a well-defined standard among banks. However, for Swiss and German companies, other formats are used
@@ -69,7 +70,7 @@ the BIC (bank identifier code) in the :guilabel:`Journal Entries` tab.
 Registering payments
 --------------------
 
-You can register and vendor payments made with SEPA. To do so, go to :menuselection:`Accounting -->
+You can register any vendor payments made with SEPA. To do so, go to :menuselection:`Accounting -->
 Vendors --> Payments`. When creating your payment, select :guilabel:`SEPA Credit Transfer` as the
 :guilabel:`Payment Method`.
 

@@ -231,17 +231,12 @@ sphinx.transforms.i18n.docname_to_domain = (
 # is populated. If a version is passed to `versions` but is not listed here, it will not be shown.
 versions_names = {
     'master': "Master",
+    '18.0': "Odoo 18",
+    'saas-17.4': "Odoo Online",
     'saas-17.2': "Odoo Online",
-    'saas-17.1': "Odoo Online",
     '17.0': "Odoo 17",
-    'saas-16.4': "Odoo Online",
-    'saas-16.3': "Odoo Online",
-    'saas-16.2': "Odoo Online",
-    'saas-16.1': "Odoo Online",
     '16.0': "Odoo 16",
-    'saas-15.2': "Odoo Online",
     '15.0': "Odoo 15",
-    '14.0': "Odoo 14",
 }
 
 # The language names that should be shown in the language switcher, if the config option `languages`
@@ -252,11 +247,13 @@ languages_names = {
     'es': 'ES',
     'fr': 'FR',
     'it': 'IT',
-    'ko': 'KO',
+    'ja': 'JA',
+    'ko': 'KR',
     'nl': 'NL',
     'pt_BR': 'PT',
     'ro': 'RO',
     'sv': 'SV',
+    'th': 'TH',
     'uk': 'UA',
     'zh_CN': 'ZH (CN)',
     'zh_TW': 'ZH (TW)'
@@ -391,6 +388,9 @@ def setup(app):
     app.add_config_value('is_remote_build', None, 'env')  # Whether the build is remotely deployed
     app.add_config_value('source_read_replace_vals', {}, 'env')
     app.connect('source-read', source_read_replace)
+    # TODO uncomment after moving to >= v7.2.5 to also substitute placeholders in included  files.
+    #  See https://github.com/sphinx-doc/sphinx/commit/ff1831
+    #  app.connect('include-read', source_read_replace)
 
     app.add_lexer('json', JsonLexer)
     app.add_lexer('xml', XmlLexer)

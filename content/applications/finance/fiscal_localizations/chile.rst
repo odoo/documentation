@@ -152,7 +152,7 @@ Electrónicos)` incoming email server.
 .. important::
    In order to receive your SII documents, it's necessary to set up your own email server. More
    information on how to do this can be found in this documentation:
-   :doc:`../../general/email_communication/email_servers`
+   :doc:`../../general/email_communication`
 
 Begin by clicking :guilabel:`Configure DTE Incoming Email`, then click :guilabel:`New` to add a
 server and fill in the following fields:
@@ -511,9 +511,8 @@ Once the invoice is accepted and validated by the :abbr:`SII (Servicio de Impues
 the PDF is printed, it includes the fiscal elements that indicate that the document is fiscally
 valid.
 
-.. image:: chile/sii-validation-elements.png
-   :alt: SII Validation fiscal elements.
-   :align: center
+.. image:: chile/accepted-invoice-fiscal-information.png
+   :alt: Fiscal elements and barcode printed in accepted invoices.
 
 .. important::
    If you are hosted in Odoo SH or On-Premise, you should manually install the `pdf417gen
@@ -1231,6 +1230,10 @@ The form *F29* is a new system that the :abbr:`SII (Servicio de Impuestos Intern
 taxpayers, and that replaces the *Purchase and Sales Books*. This report is integrated by Purchase
 Register (CR) and the Sales Register (RV). Its purpose is to support the transactions related to
 VAT, improving its control and declaration.
+
+.. important::
+   The *Propuesta F29 (CL)* report in Odoo covers the basic legal requirements as a first proposal
+   for your final tax declaration.
 
 This record is supplied by the electronic tax documents (DTE's) that have been received by the
 :abbr:`SII (Servicio de Impuestos Internos)`.

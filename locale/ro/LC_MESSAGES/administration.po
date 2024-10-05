@@ -13,15 +13,17 @@
 # Dorin Hongu <dhongu@gmail.com>, 2024
 # Foldi Robert <foldirobert@nexterp.ro>, 2024
 # Larisa_nexterp, 2024
+# Simonel Criste <info@erpsystems.solutions>, 2024
+# Wil Odoo, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-24 07:08+0000\n"
+"POT-Creation-Date: 2024-09-24 10:43+0000\n"
 "PO-Revision-Date: 2023-11-08 08:55+0000\n"
-"Last-Translator: Larisa_nexterp, 2024\n"
+"Last-Translator: Wil Odoo, 2024\n"
 "Language-Team: Romanian (https://app.transifex.com/odoo/teams/41243/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -642,7 +644,7 @@ msgstr "Funcții dezactivate"
 
 #: ../../content/administration/neutralized_database.rst:24
 msgid "Here is a non-exhaustive list of the deactivated features:"
-msgstr ""
+msgstr "Iată o listă neexhaustivă a parametrilor dezactivați:"
 
 #: ../../content/administration/neutralized_database.rst:26
 msgid ""
@@ -675,6 +677,8 @@ msgstr ":abbr:`jetoane IAP (Achiziție în aplicație)`"
 #: ../../content/administration/neutralized_database.rst:32
 msgid "website visibility (prevent search engines from indexing your site)"
 msgstr ""
+"vizibilitatea site-ului (împiedică motoarele de căutare să vă indexeze site-"
+"ul)"
 
 #: ../../content/administration/neutralized_database.rst:35
 msgid ""
@@ -888,8 +892,9 @@ msgstr ":guilabel:`Tabloul de bord aplicațiile mele`"
 
 #: ../../content/administration/odoo_online.rst:3
 #: ../../content/administration/supported_versions.rst:29
-#: ../../content/administration/upgrade.rst:81
-#: ../../content/administration/upgrade.rst:299
+#: ../../content/administration/upgrade.rst:14
+#: ../../content/administration/upgrade.rst:109
+#: ../../content/administration/upgrade.rst:337
 msgid "Odoo Online"
 msgstr "Odoo Online"
 
@@ -994,8 +999,8 @@ msgstr ":ref:`odoo_online/users`"
 
 #: ../../content/administration/odoo_online.rst:43
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:293
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:77
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:113
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:123
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:168
 #: ../../content/administration/upgrade.rst:3
 msgid "Upgrade"
 msgstr "Actualizează"
@@ -1007,11 +1012,8 @@ msgstr "Declanșați o actualizare a bazei de date."
 #: ../../content/administration/odoo_online.rst:48
 msgid ""
 "For more information about the upgrade process, check out the :ref:`Odoo "
-"Online upgrade documentation <upgrade/request-test-database>`."
+"Online upgrade documentation <upgrade-request-test>`."
 msgstr ""
-"Pentru mai multe informații despre procesul de actualizare, consultați "
-":ref:`documentația de actualizare Odoo Online <upgrade/request-test-"
-"database>`."
 
 #: ../../content/administration/odoo_online.rst:54
 msgid "Duplicate"
@@ -1201,8 +1203,9 @@ msgstr ":doc:`conturi odoo`"
 
 #: ../../content/administration/odoo_sh.rst:5
 #: ../../content/administration/supported_versions.rst:30
-#: ../../content/administration/upgrade.rst:111
-#: ../../content/administration/upgrade.rst:310
+#: ../../content/administration/upgrade.rst:22
+#: ../../content/administration/upgrade.rst:139
+#: ../../content/administration/upgrade.rst:348
 msgid "Odoo.sh"
 msgstr "Odoo.sh"
 
@@ -1638,8 +1641,51 @@ msgstr ""
 "<https://stackoverflow.com/a/1077421/3332416>`_: nu trebuie să cauzeze "
 "efecte secundare dacă sunt lansate mai des decât este așteptat."
 
+#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:36
+msgid "How can I automate tasks when an IP address change occurs?"
+msgstr ""
+"Cum pot automatiza sarcinile atunci când are loc o schimbare a adresei IP?"
+
+#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:38
+msgid ""
+"**Odoo.sh notifies project administrators of IP address changes.** "
+"Additionally, when the IP address of a production instance changes, an HTTP "
+"`GET` request is made to the path `/_odoo.sh/ip-change` with the new IP "
+"address included as a query string parameter (`new`), along with the "
+"previous IP address as an additional parameter (`old`)."
+msgstr ""
+"**Odoo.sh notifică administratorii de proiect cu privire la modificările "
+"adresei IP.** În plus, atunci când adresa IP a unei instanțe de producție se"
+" modifică, se face o cerere HTTP `GET` către calea `/_odoo.sh/ip-change` cu "
+"noua adresă IP inclusă ca parametru al șirului de interogări (`new`), "
+"împreună cu adresa IP anterioară ca parametru suplimentar (`old`)."
+
+#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:43
+msgid ""
+"This mechanism allows custom actions to be applied in response to the IP "
+"address change (e.g., sending an email, contacting a firewall API, "
+"configuring database objects, etc.)"
+msgstr ""
+"Acest mecanism permite aplicarea unor acțiuni personalizate ca răspuns la "
+"schimbarea adresei IP (de exemplu, trimiterea unui e-mail, contactarea unui "
+"API firewall, configurarea obiectelor bazei de date etc.)"
+
+#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:46
+msgid ""
+"For security reasons, the `/_odoo.sh/ip-change` route is accessible only "
+"internally by the platform itself and returns a `403` response if accessed "
+"through any other means."
+msgstr ""
+"Din motive de securitate, ruta `/_odoo.sh/ip-change` este accesibilă doar "
+"intern de către platformă și returnează un răspuns `403` dacă este accesată "
+"prin orice alte mijloace."
+
+#: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:49
+msgid "Here is a pseudo-implementation example:"
+msgstr "Iată un exemplu de pseudoimplementare:"
+
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:6
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:170
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:229
 msgid "Submodules"
 msgstr "Submodule"
 
@@ -1902,6 +1948,7 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:28
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:44
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:132
 msgid "Production"
 msgstr "Producție"
 
@@ -1982,6 +2029,7 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:61
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:63
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:87
 msgid "Staging"
 msgstr "Stagiu"
 
@@ -2065,7 +2113,7 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:88
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:81
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:56
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:57
 msgid "Development"
 msgstr "Dezvoltare"
 
@@ -2244,8 +2292,9 @@ msgid "Tabs"
 msgstr "Tab-uri"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:155
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:57
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:85
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:58
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:88
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:133
 msgid "History"
 msgstr "Istoric"
 
@@ -2281,8 +2330,9 @@ msgstr ""
 "prin butonul *connect*."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:173
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:73
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:101
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:78
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:108
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:153
 msgid "Mails"
 msgstr "Mail-uri"
 
@@ -2344,7 +2394,8 @@ msgstr ""
 "Shell."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:212
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:105
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:113
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:158
 msgid "Monitoring"
 msgstr "Monitorizare"
 
@@ -2364,8 +2415,9 @@ msgstr ""
 "modificările construcției (importul bazei de date, git push, etc...)."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:225
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:65
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:93
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:68
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:98
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:143
 msgid "Logs"
 msgstr "Jurnale"
 
@@ -2426,7 +2478,8 @@ msgstr ""
 "după 5 minute. Puteți reporni utilizând butonul de redare."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:249
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:109
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:118
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:163
 msgid "Backups"
 msgstr "Copii de rezervă"
 
@@ -2565,9 +2618,10 @@ msgstr ":doc:`Actualizați documentația <../../upgrade>`"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:303
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:3
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:81
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:117
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:124
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:83
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:128
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:173
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:182
 msgid "Settings"
 msgstr "Setări"
 
@@ -2858,17 +2912,15 @@ msgid ""
 "Framework) or DKIM (DomainKeys Identified Mail), don't forget to authorize "
 "Odoo as a sending host in your domain name settings to increase the "
 "deliverability of your outgoing emails. The configuration steps are "
-"explained in the documentation about :ref:`SPF "
-"<email_communication/spf_compliant>` and :ref:`DKIM "
-"<email_communication/dkim_compliant>`."
+"explained in the documentation about :ref:`SPF <email-domain-spf>` and "
+":ref:`DKIM <email-domain-dkim>`."
 msgstr ""
-"Dacă domeniul adresei de e-mail a utilizatorilor dvs. utilizează SPF (Sender"
-" Policy Framework) sau DKIM (DomainKeys Identified Mail), nu uitați să "
-"autorizați Odoo ca un host de trimitere în setările numelui de domeniu "
-"pentru a crește livrabilitatea e-mailurilor dvs. de ieșire. Pașii de "
-"configurare sunt explicați în documentația despre :ref:`SPF "
-"<email_communication/spf_compliant>` și :ref:`DKIM "
-"<email_communication/dkim_compliant>`."
+"În cazul în care domeniul adreselor de e-mail ale utilizatorilor dvs. "
+"utilizează SPF (Sender Policy Framework) sau DKIM (DomainKeys Identified "
+"Mail), nu uitați să autorizați Odoo ca gazdă de expediere în setările "
+"numelui de domeniu pentru a crește capacitatea de livrare a e-mailurilor "
+"trimise. Pașii de configurare sunt explicați în documentația despre "
+":ref:`SPF <email-domain-spf>` and :ref:`DKIM <email-domain-dkim>`."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:410
 msgid ""
@@ -4931,145 +4983,149 @@ msgid "Manage the Github users who can access your project."
 msgstr "Gestionați utilizatorii Github care pot accesa proiectul dvs."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:36
-msgid "There are two levels of users:"
-msgstr "Există două niveluri de utilizatori:"
+msgid "There are three levels of users:"
+msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:38
-msgid "Admin: has access to all features of Odoo.sh."
-msgstr "Admin: are acces la toate caracteristicile Odoo.sh."
-
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:39
-msgid ""
-"User: does not have access to the project settings nor to the production and"
-" staging databases."
+msgid ":guilabel:`Admin`: has access to all features of an Odoo.sh project."
 msgstr ""
-"Utilizator: nu are acces la setările proiectului sau la bazele de date de "
-"producție și de stagiu."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:41
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:40
 msgid ""
-"The user group is meant for developers who can make modifications in your "
-"code but are not allowed to access the production data. Users of this group "
-"cannot connect to the production and staging databases using the *1-click "
-"connect* feature, but they can of course use their regular account on these "
-"databases if they have one, using their regular credentials."
+":guilabel:`Tester`: has access to the *Staging* and *Development* databases "
+"and their tooling. This role is for users conducting User Acceptance Tests. "
+"Testers can work with copies of production data but cannot access the "
+"production database through the Odoo.sh tooling."
 msgstr ""
-"Grupul de utilizatori este destinat dezvoltatorilor care pot face modificări"
-" în codul dvs., dar nu au voie să acceseze datele de producție. Utilizatorii"
-" acestui grup nu pot conecta la bazele de date de producție și de stagiu "
-"folosind funcția *1-click connect*, dar pot, desigur, utiliza contul lor "
-"obisnuit pe aceste baze de date, dacă au unul, utilizând credențialele lor "
-"obișnuite."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:46
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:44
 msgid ""
-"In addition, they cannot use the webshell nor have access to the server "
-"logs."
+":guilabel:`Developer`: has access only to the *Development* databases and "
+"their tooling. This role is for developers who propose code modifications "
+"but are not allowed to access production and staging databases through the "
+"Odoo.sh tooling."
 msgstr ""
-"În plus, ei nu pot utiliza webshell-ul și nu au acces la jurnalele "
-"serverului."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:54
-msgid "User"
-msgstr "Utilizator"
+msgid "Developer"
+msgstr "Dezvoltator"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:55
+msgid "Tester"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:56
 msgid "Admin"
 msgstr "Admin"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:58
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:59
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:62
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:63
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:60
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:61
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:64
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:65
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:66
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:67
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:69
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:70
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:71
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:74
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:75
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:78
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:76
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:79
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:82
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:83
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:80
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:81
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:84
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:85
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:86
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:87
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:89
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:90
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:91
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:95
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:99
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:103
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:107
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:96
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:100
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:101
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:105
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:106
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:110
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:111
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:115
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:119
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:122
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:123
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:127
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:116
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:121
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:125
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:126
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:130
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:131
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:134
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:135
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:136
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:141
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:146
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:151
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:156
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:161
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:166
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:171
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:176
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:179
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:180
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:181
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:186
 #: ../../content/administration/supported_versions.rst:35
 #: ../../content/administration/supported_versions.rst:41
 #: ../../content/administration/supported_versions.rst:47
-#: ../../content/administration/supported_versions.rst:48
-#: ../../content/administration/supported_versions.rst:49
-#: ../../content/administration/supported_versions.rst:77
-#: ../../content/administration/supported_versions.rst:78
-#: ../../content/administration/supported_versions.rst:79
-#: ../../content/administration/supported_versions.rst:95
-#: ../../content/administration/supported_versions.rst:96
-#: ../../content/administration/supported_versions.rst:97
+#: ../../content/administration/supported_versions.rst:53
+#: ../../content/administration/supported_versions.rst:54
+#: ../../content/administration/supported_versions.rst:55
+#: ../../content/administration/supported_versions.rst:59
+#: ../../content/administration/supported_versions.rst:60
+#: ../../content/administration/supported_versions.rst:61
+#: ../../content/administration/supported_versions.rst:65
+#: ../../content/administration/supported_versions.rst:66
+#: ../../content/administration/supported_versions.rst:67
 msgid "|green|"
 msgstr "|green|"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:61
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:89
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:63
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:93
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:138
 msgid "1-click connect"
 msgstr "conectare 1-clic"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:69
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:97
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:73
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:103
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:148
 msgid "Shell/SSH"
 msgstr "Shell/SSH"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:84
-msgid "Production & Staging"
-msgstr "Producție și stagiu"
-
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:118
-msgid "|green|\\*"
-msgstr "|green|"
-
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:120
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:177
 #: ../../content/administration/odoo_sh/getting_started/status.rst:3
 msgid "Status"
 msgstr "Stare"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:130
-msgid "\\* Only in staging branches"
-msgstr "\\* Numai în staging branches"
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:189
+msgid ""
+"Those roles only apply to the usage of Odoo.sh. It is important to reflect "
+"the user roles attribution within the repository on GitHub.  Please refer to"
+" the GitHub documentation section on `Managing a branch protection rule "
+"<https://docs.github.com/en/repositories/configuring-branches-and-merges-in-"
+"your-repository/managing-protected-branches/managing-a-branch-protection-"
+"rule>`_ for detailed guidance."
+msgstr ""
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:145
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:207
 msgid "Public Access"
 msgstr "Acces public"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:147
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:209
 msgid "Allow public access to your development builds."
 msgstr "Permite accesul public la construcțiile de dezvoltare."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:152
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:214
 msgid ""
 "If activated, this option exposes the Builds page publicly, allowing "
-"visitors to connect to your development builds."
+"visitors to view logs of development builds."
 msgstr ""
-"Dacă este activată, această opțiune expune pagina Construcții public, "
-"permitând vizitatorilor să se conecteze la build-urile de dezvoltare."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:155
-msgid ""
-"In addition, visitors have access to the logs, shell and mails of your "
-"development builds."
-msgstr ""
-"În plus, vizitatorii au acces la jurnale, shell și e-mail-uri ale build-"
-"urilor de dezvoltare."
-
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:157
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:216
 msgid ""
 "Production and staging builds are excluded, visitors can only see their "
 "status."
@@ -5077,11 +5133,11 @@ msgstr ""
 "Build-urile de producție și stagiu sunt excluse, vizitatorii pot vedea doar "
 "starea lor."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:162
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:221
 msgid "Custom domains"
 msgstr "Domenii personalizate"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:164
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:223
 msgid ""
 "To configure additional domains please refer to the corresponding branch's "
 ":ref:`settings tab <odoosh-gettingstarted-branches-tabs-settings>`."
@@ -5090,7 +5146,7 @@ msgstr ""
 "de setări <odoosh-gettingstarted-branches-tabs-settings>` al ramurii "
 "corespunzătoare."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:172
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:231
 msgid ""
 "Configure the deploy keys for the private repositories you use as submodules"
 " in your branches to allow Odoo.sh to download them."
@@ -5099,7 +5155,7 @@ msgstr ""
 "folosiți ca submodule în ramurile dvs. pentru a permite Odoo.sh să le "
 "descarce."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:176
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:235
 msgid ""
 "These settings are required for **private repositories** only. If you are "
 "looking on how to set up your submodules, instructions are available in the "
@@ -5111,7 +5167,7 @@ msgstr ""
 "disponibile în capitolul :ref:`Submodule <odoosh-advanced-submodules>` din "
 "această documentație."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:183
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:242
 msgid ""
 "When a repository is private, it is not possible to publicly download its "
 "branches and revisions. For that reason, you need to configure a deploy key "
@@ -5123,14 +5179,14 @@ msgstr ""
 "implementare pentru Odoo.sh, astfel încât serverul Git la distanță să "
 "permită platformei noastre să descarce reviziile acestui depozit privat."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:188
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:247
 msgid ""
 "To configure the deploy key for a private repository, proceed as follows:"
 msgstr ""
 "Pentru a configura cheia de implementare pentru un depozit privat, "
 "procedeziți astfel:"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:190
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:249
 msgid ""
 "in the input, paste the SSH URL of your private sub-repository and click on "
 "*Add*,"
@@ -5138,11 +5194,11 @@ msgstr ""
 "în intrare, lipiți URL-ul SSH al sub-repozitorului privat și faceți clic pe "
 "*Adăugare*,"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:192
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:251
 msgid "e.g. *git@github.com:USERNAME/REPOSITORY.git*"
 msgstr "e.g. *git@github.com:USERNAME/REPOSITORY.git*"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:193
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:252
 msgid ""
 "it can be another Git server than Github, such as Bitbucket, Gitlab or even "
 "your own self-hosted server"
@@ -5150,16 +5206,16 @@ msgstr ""
 "poate fi un alt server Git decât Github, cum ar fi Bitbucket, Gitlab sau "
 "chiar serverul propriu de găzduire"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:196
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:255
 msgid "copy the public key,"
 msgstr "copiați cheia publică,"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:198
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:257
 msgid "it should look like *ssh-rsa some...random...characters...here...==*"
 msgstr ""
 "ar trebui să arate ca *ssh-rsa some...random...characters...here...==*"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:200
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:259
 msgid ""
 "in the settings of the private sub-repository, add the public key amongst "
 "the deploy keys."
@@ -5167,24 +5223,24 @@ msgstr ""
 "în setările sub-repozitorului privat, adăugați cheia publică printre cheile "
 "de implementare."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:202
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:261
 msgid ""
 "Github.com: :menuselection:`Settings --> Deploy keys --> Add deploy key`"
 msgstr ""
 "Github.com: :menuselection:`Setări --> Chei de implementare --> Adăugare "
 "cheie de implementare`"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:203
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:262
 msgid "Bitbucket.com: :menuselection:`Settings --> Access keys --> Add key`"
 msgstr ""
 "Bitbucket.com: :menuselection:`Setări --> Chei de acces --> Adăugare cheie`"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:204
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:263
 msgid "Gitlab.com: :menuselection:`Settings --> Repository --> Deploy Keys`"
 msgstr ""
 "Gitlab.com: :menuselection:`Setări --> Depozit --> Chei de implementare`"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:205
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:264
 msgid ""
 "Self-hosted: append the key to the git user’s authorized_keys file in its "
 ".ssh directory"
@@ -5192,25 +5248,25 @@ msgstr ""
 "Auto-găzduit: adăugați cheia la fișierul authorized_keysutilizatorului git "
 "în directorul său .ssh"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:208
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:267
 msgid "Storage Size"
 msgstr "Dimensiunea spațiului de stocare"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:210
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:269
 msgid "This section shows the storage size used by your project."
 msgstr ""
 "Această secțiune arată dimensiunea spațiului de stocare utilizat de "
 "proiectul dvs."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:215
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:274
 msgid "Storage size is computed as follows:"
 msgstr "Dimensiunea spațiului de stocare se calculează astfel:"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:217
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:276
 msgid "the size of the PostgreSQL database"
 msgstr "dimensiunea bazei de date PostgreSQL"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:219
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:278
 msgid ""
 "the size of the disk files available in your container: database filestore, "
 "sessions storage directory..."
@@ -5218,7 +5274,7 @@ msgstr ""
 "dimensiunea fișierelor de disc disponibile în containerul dvs.: fișierul "
 "bazei de date, directorul de stocare sesiuni..."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:222
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:281
 msgid ""
 "In case you want to analyze disk usage, you can run the tool `ncdu "
 "<https://dev.yorhel.nl/ncdu/man>`_ in your Web Shell."
@@ -5226,7 +5282,7 @@ msgstr ""
 "Dacă doriți să analizați utilizarea spațiului de disc, puteți rula "
 "instrumentul `ncdu <https://dev.yorhel.nl/ncdu/man>`_ în Web Shell."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:225
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:284
 msgid ""
 "Should your production database size grow to exceed what's provisioned in "
 "your subscription, it will automatically be synchronized with it."
@@ -5234,11 +5290,11 @@ msgstr ""
 "Dacă dimensiunea bazei de date de producție crește pentru a depăși ceea ce "
 "este provisionat în abonamentul dvs., va fi automat sincronizat cu ea."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:229
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:288
 msgid "Database Workers"
 msgstr "Database Workers"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:231
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:290
 msgid ""
 "Additional database workers can be configured here. More workers help "
 "increase the load your production database is able to handle. If you add "
@@ -5249,7 +5305,7 @@ msgstr ""
 "poate gestiona. Dacă adăugați mai multe, vor fi automat sincronizate cu "
 "abonamentul dvs."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:239
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:298
 msgid ""
 "Adding more workers will not magically solve all performance issues. It only"
 " allows the server to handle more connections at the same time. If some "
@@ -5264,11 +5320,11 @@ msgstr ""
 "personalizărilor dvs. puteți deschide un ticket `aici "
 "<https://www.odoo.com/help>`_."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:245
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:304
 msgid "Staging Branches"
 msgstr "Staging Branches"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:247
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:306
 msgid ""
 "Additional staging branches allow you to develop and test more features at "
 "the same time. If you add more, it will automatically be synchronized with "
@@ -5278,11 +5334,11 @@ msgstr ""
 "mai multe funcții în același timp. Dacă adăugați mai multe, vor fi automat "
 "sincronizate cu abonamentul dvs."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:254
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:313
 msgid "Activation"
 msgstr "Activare"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:256
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:315
 msgid ""
 "Shows the status of the project's activation. You can change the project's "
 "activation code if needed."
@@ -5310,8 +5366,9 @@ msgstr ""
 "Documentația vă va ajuta să vă lansați proiectul Odoo.sh în niciun timp."
 
 #: ../../content/administration/on_premise.rst:5
-#: ../../content/administration/upgrade.rst:136
-#: ../../content/administration/upgrade.rst:333
+#: ../../content/administration/upgrade.rst:30
+#: ../../content/administration/upgrade.rst:163
+#: ../../content/administration/upgrade.rst:371
 msgid "On-premise"
 msgstr "On-Premise"
 
@@ -7502,7 +7559,7 @@ msgid "In you alias config (:file:`/etc/aliases`):"
 msgstr "În configurația alias-ului (:file:`/etc/aliases`):"
 
 #: ../../content/administration/on_premise/email_gateway.rst:30
-#: ../../content/administration/on_premise/email_gateway.rst:45
+#: ../../content/administration/on_premise/email_gateway.rst:44
 msgid "Resources"
 msgstr "Resurse"
 
@@ -7518,21 +7575,21 @@ msgstr "`Postfix aliases <http://www.postfix.org/aliases.5.html>`_"
 msgid "`Postfix virtual <http://www.postfix.org/virtual.8.html>`_"
 msgstr "`Postfix virtual <http://www.postfix.org/virtual.8.html>`_"
 
-#: ../../content/administration/on_premise/email_gateway.rst:38
+#: ../../content/administration/on_premise/email_gateway.rst:37
 msgid "For Exim"
 msgstr "Pentru Exim"
 
-#: ../../content/administration/on_premise/email_gateway.rst:47
+#: ../../content/administration/on_premise/email_gateway.rst:46
 msgid "`Exim <https://www.exim.org/docs.html>`_"
 msgstr "`Exim <https://www.exim.org/docs.html>`_"
 
-#: ../../content/administration/on_premise/email_gateway.rst:50
+#: ../../content/administration/on_premise/email_gateway.rst:49
 msgid ""
-"If you don't have access/manage your email server, use :ref:`inbound "
-"messages <email_communication/inbound_messages>`."
+"If you do not have access/manage your email server, use :ref:`incoming mail "
+"servers <email-inbound-custom-domain-incoming-server>`."
 msgstr ""
-"Dacă nu aveți acces/administrați serverul de email, utilizați :ref:`mesaje "
-"de intrare <email_communication/inbound_messages>`."
+"Dacă nu aveți acces/gestionați serverul dvs. de e-mail, utilizați "
+":ref:`incoming mail servers <email-inbound-custom-domain-incoming-server>`."
 
 #: ../../content/administration/on_premise/geo_ip.rst:3
 msgid "Geo IP"
@@ -8928,197 +8985,133 @@ msgid "End of support"
 msgstr "Sfârșitul suportului"
 
 #: ../../content/administration/supported_versions.rst:34
-msgid "Odoo saas~17.2"
-msgstr "Odoo saas~17.2"
+msgid "Odoo saas~17.4"
+msgstr "Odoo saas~17.4"
 
 #: ../../content/administration/supported_versions.rst:36
 #: ../../content/administration/supported_versions.rst:37
 #: ../../content/administration/supported_versions.rst:42
 #: ../../content/administration/supported_versions.rst:43
-#: ../../content/administration/supported_versions.rst:54
-#: ../../content/administration/supported_versions.rst:55
-#: ../../content/administration/supported_versions.rst:60
-#: ../../content/administration/supported_versions.rst:61
-#: ../../content/administration/supported_versions.rst:66
-#: ../../content/administration/supported_versions.rst:67
-#: ../../content/administration/supported_versions.rst:72
-#: ../../content/administration/supported_versions.rst:73
-#: ../../content/administration/supported_versions.rst:84
-#: ../../content/administration/supported_versions.rst:85
-#: ../../content/administration/supported_versions.rst:90
-#: ../../content/administration/supported_versions.rst:91
+#: ../../content/administration/supported_versions.rst:48
+#: ../../content/administration/supported_versions.rst:49
 msgid "N/A"
 msgstr "N/A"
 
 #: ../../content/administration/supported_versions.rst:38
+msgid "July 2024"
+msgstr "Junie 2024"
+
+#: ../../content/administration/supported_versions.rst:40
+msgid "Odoo saas~17.2"
+msgstr "Odoo saas~17.2"
+
+#: ../../content/administration/supported_versions.rst:44
 msgid "April 2024"
 msgstr "Aprilie 2024"
 
-#: ../../content/administration/supported_versions.rst:40
+#: ../../content/administration/supported_versions.rst:46
 msgid "Odoo saas~17.1"
 msgstr "Odoo saas~17.1"
 
-#: ../../content/administration/supported_versions.rst:44
+#: ../../content/administration/supported_versions.rst:50
 msgid "January 2024"
 msgstr "Ianuarie 2024"
 
-#: ../../content/administration/supported_versions.rst:46
+#: ../../content/administration/supported_versions.rst:52
 msgid "**Odoo 17.0**"
 msgstr "**Odoo 17.0**"
 
-#: ../../content/administration/supported_versions.rst:50
-#: ../../content/administration/supported_versions.rst:105
+#: ../../content/administration/supported_versions.rst:56
+#: ../../content/administration/supported_versions.rst:75
 msgid "November 2023"
 msgstr "Noiembrie 2023"
 
-#: ../../content/administration/supported_versions.rst:51
+#: ../../content/administration/supported_versions.rst:57
 msgid "October 2026 (planned)"
 msgstr "Octombrie 2026 (planificat)"
 
-#: ../../content/administration/supported_versions.rst:52
-msgid "Odoo saas~16.4"
-msgstr "Odoo saas~16.4"
-
-#: ../../content/administration/supported_versions.rst:53
-#: ../../content/administration/supported_versions.rst:59
-#: ../../content/administration/supported_versions.rst:65
-#: ../../content/administration/supported_versions.rst:71
-#: ../../content/administration/supported_versions.rst:83
-#: ../../content/administration/supported_versions.rst:89
-#: ../../content/administration/supported_versions.rst:101
-#: ../../content/administration/supported_versions.rst:102
-#: ../../content/administration/supported_versions.rst:103
-#: ../../content/administration/supported_versions.rst:107
-#: ../../content/administration/supported_versions.rst:108
-#: ../../content/administration/supported_versions.rst:109
-#: ../../content/administration/supported_versions.rst:113
-#: ../../content/administration/supported_versions.rst:114
-#: ../../content/administration/supported_versions.rst:115
-msgid "|red|"
-msgstr "|red|"
-
-#: ../../content/administration/supported_versions.rst:56
-msgid "August 2023"
-msgstr "August 2023"
-
 #: ../../content/administration/supported_versions.rst:58
-msgid "Odoo saas~16.3"
-msgstr "Odoo saas~16.3"
-
-#: ../../content/administration/supported_versions.rst:62
-msgid "June 2023"
-msgstr "Iunie 2023"
-
-#: ../../content/administration/supported_versions.rst:64
-msgid "Odoo saas~16.2"
-msgstr "Odoo saas~16.2"
-
-#: ../../content/administration/supported_versions.rst:68
-msgid "March 2023"
-msgstr "Martie 2023"
-
-#: ../../content/administration/supported_versions.rst:70
-msgid "Odoo saas~16.1"
-msgstr "Odoo saas~16.1"
-
-#: ../../content/administration/supported_versions.rst:74
-msgid "February 2023"
-msgstr "Februarie 2023"
-
-#: ../../content/administration/supported_versions.rst:76
 msgid "**Odoo 16.0**"
 msgstr "**Odoo 16.0**"
 
-#: ../../content/administration/supported_versions.rst:80
-#: ../../content/administration/supported_versions.rst:111
+#: ../../content/administration/supported_versions.rst:62
+#: ../../content/administration/supported_versions.rst:81
 msgid "October 2022"
 msgstr "Octombrie 2022"
 
-#: ../../content/administration/supported_versions.rst:81
+#: ../../content/administration/supported_versions.rst:63
 msgid "November 2025 (planned)"
 msgstr "Noiembrie 2025 (planificat)"
 
-#: ../../content/administration/supported_versions.rst:82
-msgid "Odoo saas~15.2"
-msgstr "Odoo saas~15.2"
-
-#: ../../content/administration/supported_versions.rst:86
-msgid "March 2022"
-msgstr "Martie 2022"
-
-#: ../../content/administration/supported_versions.rst:87
-msgid "January 2023"
-msgstr "Ianuarie 2023"
-
-#: ../../content/administration/supported_versions.rst:88
-msgid "Odoo saas~15.1"
-msgstr "Odoo saas~15.1"
-
-#: ../../content/administration/supported_versions.rst:92
-msgid "February 2022"
-msgstr "Februarie 2022"
-
-#: ../../content/administration/supported_versions.rst:93
-msgid "July 2022"
-msgstr "Iulie 2022"
-
-#: ../../content/administration/supported_versions.rst:94
+#: ../../content/administration/supported_versions.rst:64
 msgid "**Odoo 15.0**"
 msgstr "**Odoo 15.0**"
 
-#: ../../content/administration/supported_versions.rst:98
+#: ../../content/administration/supported_versions.rst:68
 msgid "October 2021"
 msgstr "Octombrie 2021"
 
-#: ../../content/administration/supported_versions.rst:99
+#: ../../content/administration/supported_versions.rst:69
 msgid "November 2024 (planned)"
 msgstr "Noiembrie 2024 (planificat)"
 
-#: ../../content/administration/supported_versions.rst:100
+#: ../../content/administration/supported_versions.rst:70
 msgid "**Odoo 14.0**"
 msgstr "**Odoo 14.0**"
 
-#: ../../content/administration/supported_versions.rst:104
+#: ../../content/administration/supported_versions.rst:71
+#: ../../content/administration/supported_versions.rst:72
+#: ../../content/administration/supported_versions.rst:73
+#: ../../content/administration/supported_versions.rst:77
+#: ../../content/administration/supported_versions.rst:78
+#: ../../content/administration/supported_versions.rst:79
+#: ../../content/administration/supported_versions.rst:83
+#: ../../content/administration/supported_versions.rst:84
+#: ../../content/administration/supported_versions.rst:85
+msgid "|red|"
+msgstr "|red|"
+
+#: ../../content/administration/supported_versions.rst:74
 msgid "October 2020"
 msgstr "Octombrie 2020"
 
-#: ../../content/administration/supported_versions.rst:106
+#: ../../content/administration/supported_versions.rst:76
 msgid "**Odoo 13.0**"
 msgstr "**Odoo 13.0**"
 
-#: ../../content/administration/supported_versions.rst:110
+#: ../../content/administration/supported_versions.rst:80
 msgid "October 2019"
 msgstr "Octombrie 2019"
 
-#: ../../content/administration/supported_versions.rst:112
+#: ../../content/administration/supported_versions.rst:82
 msgid "Older versions"
 msgstr "Versiuni mai vechi"
 
-#: ../../content/administration/supported_versions.rst:116
+#: ../../content/administration/supported_versions.rst:86
 msgid "Before 2019"
 msgstr "Înainte de 2019"
 
-#: ../../content/administration/supported_versions.rst:117
+#: ../../content/administration/supported_versions.rst:87
 msgid "Before 2022"
 msgstr "Înainte de 2022"
 
-#: ../../content/administration/supported_versions.rst:119
+#: ../../content/administration/supported_versions.rst:89
 msgid "Legend"
 msgstr "Legendă"
 
-#: ../../content/administration/supported_versions.rst:121
+#: ../../content/administration/supported_versions.rst:91
 msgid "|green| Supported version"
 msgstr "|green| Versiune suportată"
 
-#: ../../content/administration/supported_versions.rst:123
+#: ../../content/administration/supported_versions.rst:93
 msgid "|red| End-of-support"
 msgstr "|red| Sfârșitul suportului"
 
-#: ../../content/administration/supported_versions.rst:125
+#: ../../content/administration/supported_versions.rst:95
 msgid "N/A Never released for this platform"
 msgstr "N/A Nu a fost niciodată lansat pentru această platformă"
 
-#: ../../content/administration/supported_versions.rst:128
+#: ../../content/administration/supported_versions.rst:98
 msgid ""
 "Even though we don't support older versions, you can always `upgrade from "
 "any version <https://upgrade.odoo.com/>`_."
@@ -9128,74 +9121,92 @@ msgstr ""
 
 #: ../../content/administration/upgrade.rst:5
 msgid ""
-"An upgrade is the process of moving your database from an older version to a"
-" newer :doc:`supported version <supported_versions>` (e.g., Odoo 14.0 to "
-"Odoo 16.0). Frequently upgrading is essential as each version comes with new"
-" and improved features, bug fixes, and security patches."
+"An upgrade involves moving a database from an older version to a newer "
+"supported version (e.g., from Odoo 15.0 to Odoo 17.0). Regular upgrades are "
+"crucial as each version offers new features, bug fixes, and security "
+"patches. Using a :doc:`supported version <supported_versions>` is strongly "
+"recommended. Each major version is supported for three years."
 msgstr ""
-"O actualizare este procesul de mutare a bazei de date de la o versiune mai "
-"veche la o versiune mai nouă :doc:`acceptată <supported_versions>` (de "
-"exemplu, Odoo 14.0 la Odoo 16.0). Actualizarea frecventă este esențială, "
-"deoarece fiecare versiune vine cu caracteristici noi și îmbunătățite, "
-"remedieri de erori și corecții de securitate."
 
-#: ../../content/administration/upgrade.rst:13
+#: ../../content/administration/upgrade.rst:10
 msgid ""
-"The Rolling Release process allows Odoo Online customers to upgrade their "
-"database directly from a message prompt sent to the database administrator "
-"as soon as a new version is released. The invitation to upgrade is only sent"
-" if no issues are detected during the automatic tests."
+"Depending on the hosting type and Odoo version used, a database upgrade can "
+"be **mandatory**."
 msgstr ""
-"Procesul Rolling Release permite clienților Odoo Online să-și actualizeze "
-"baza de date direct dintr-un mesaj trimis administratorului bazei de date de"
-" îndată ce o nouă versiune este lansată. Invitația de actualizare este "
-"trimisă numai dacă nu sunt detectate probleme în timpul testelor automate."
+
+#: ../../content/administration/upgrade.rst:16
+msgid ""
+"If a database is on a **major version** (e.g., 15.0, 16.0, 17.0), an upgrade"
+" is mandatory every two years."
+msgstr ""
+
+#: ../../content/administration/upgrade.rst:18
+msgid ""
+"If a database is on a **minor version** (e.g., 17.1, 17.2, 17.4), an upgrade"
+" is mandatory a few weeks after the next version is released. Minor versions"
+" are usually released every three months."
+msgstr ""
+
+#: ../../content/administration/upgrade.rst:24
+msgid ""
+"After the initial three years of support, you will have another two years to"
+" complete the upgrade. You will be notified when an upgrade is required."
+msgstr ""
+
+#: ../../content/administration/upgrade.rst:0
+msgid "The \"unsupported version\" popup on Odoo.sh."
+msgstr ""
+
+#: ../../content/administration/upgrade.rst:32
+msgid ""
+"You can stay on the same version indefinitely, even if it is not "
+"recommended. Note that the smaller the version gap, the easier the upgrade "
+"should be."
+msgstr ""
+
+#: ../../content/administration/upgrade.rst:37
+msgid ""
+"You will receive a notification in your database a few weeks before a "
+"mandatory upgrade will be automatically carried out. You are in control of "
+"the process as long as the deadline is not reached."
+msgstr ""
 
 #: ../../content/administration/upgrade.rst:0
 msgid "The upgrade message prompt on the top right of the database"
 msgstr ""
 "Solicitarea mesajului de actualizare din partea dreaptă sus a bazei de date"
 
-#: ../../content/administration/upgrade.rst:20
+#: ../../content/administration/upgrade.rst:44
 msgid ""
-"It is strongly recommended to manually :ref:`test the upgrade first "
-"<upgrade/test_your_db>`. Clicking :guilabel:`I want to test first` redirects"
-" to `the database manager <https://www.odoo.com/my/databases/>`_, where it "
-"is possible to request an upgraded test database and check it for any "
-"discrepancies."
+"Concretely, Odoo’s Upgrade Team performs a silent test upgrade of every "
+"database that should be upgraded. If the test is successful and lasts less "
+"than 20 minutes, you can directly trigger the upgrade from the database. If "
+"the test fails, you can test an upgrade using the `database manager "
+"<https://www.odoo.com/my/databases>`_."
 msgstr ""
-"Este recomandat să testați manual :ref:`mai întâi actualizarea "
-"<upgrade/test_your_db>`. Făcând clic pe :guilabel:`Vreau să testez mai "
-"întâi`, redirecționează către `managerul bazei de date "
-"<https://www.odoo.com/my/databases/>`_, unde este posibil să solicitați o "
-"bază de date de testare actualizată și să o verificați orice discrepanțe."
 
-#: ../../content/administration/upgrade.rst:25
+#: ../../content/administration/upgrade.rst:49
 msgid ""
-"It is **not** recommended to click :guilabel:`Upgrade Now` without testing "
-"first, as it immediately triggers the live production database upgrade."
+"When you are invited to upgrade, it is strongly recommended to :ref:`request"
+" an upgraded test database <upgrade-request-test>` first and spend time "
+":ref:`testing <upgrade-testing>` it."
 msgstr ""
-"Este **nu** recomandat să faceți clic pe :guilabel:`Actualizați acum` fără a"
-" testa mai întâi, deoarece declanșează imediat actualizarea bazei de date de"
-" producție live."
 
-#: ../../content/administration/upgrade.rst:28
+#: ../../content/administration/upgrade.rst:52
 msgid ""
-"If the Rolling Release process detects an issue with the upgrade, it will be"
-" deactivated until the issue is resolved."
+"An automatic upgrade to the next version will be triggered if no action is "
+"taken before the specified due date."
 msgstr ""
-"Dacă procesul Rolling Release detectează o problemă cu upgrade-ul, acesta va"
-" fi dezactivat până când problema este rezolvată."
 
-#: ../../content/administration/upgrade.rst:31
+#: ../../content/administration/upgrade.rst:55
 msgid "An upgrade does not cover:"
 msgstr "O actualizare nu acoperă:"
 
-#: ../../content/administration/upgrade.rst:33
+#: ../../content/administration/upgrade.rst:57
 msgid "Downgrading to a previous version of Odoo"
 msgstr "Trecerea la o versiune anterioară a Odoo"
 
-#: ../../content/administration/upgrade.rst:34
+#: ../../content/administration/upgrade.rst:58
 msgid ""
 ":doc:`Switching editions <on_premise/community_to_enterprise>` (e.g., from "
 "Community to Enterprise)"
@@ -9203,7 +9214,7 @@ msgstr ""
 ":doc:`Comutarea edițiilor <on_premise/community_to_enterprise>` (de exemplu,"
 " de la Community la Enterprise)"
 
-#: ../../content/administration/upgrade.rst:36
+#: ../../content/administration/upgrade.rst:60
 msgid ""
 ":ref:`Changing hosting type <hosting/change-solution>` (e.g., from on-"
 "premise to Odoo Online)"
@@ -9211,40 +9222,31 @@ msgstr ""
 ":ref:`Schimbarea tipului de găzduire <hosting/change-solution>` (de exemplu,"
 " de la on-premise la Odoo Online)"
 
-#: ../../content/administration/upgrade.rst:37
+#: ../../content/administration/upgrade.rst:61
 msgid "Migrating from another ERP to Odoo"
 msgstr "Migrarea de la un alt ERP la Odoo"
 
-#: ../../content/administration/upgrade.rst:40
+#: ../../content/administration/upgrade.rst:64
 msgid ""
 "If your database contains custom modules, it cannot be upgraded until a "
 "version of your custom modules is available for the target version of Odoo. "
 "For customers maintaining their own custom modules, we recommend to "
-"parallelize the process by :ref:`requesting an upgraded database "
-"<upgrade/request-test-database>` while also :doc:`upgrading the source code "
-"of your custom modules </developer/howtos/upgrade_custom_db>`."
+"parallelize the process by :ref:`requesting an upgraded database <upgrade-"
+"request-test>` while also :doc:`upgrading the source code of your custom "
+"modules </developer/howtos/upgrade_custom_db>`."
 msgstr ""
-"Dacă baza de date conține module personalizate, nu poate fi actualizată până"
-" când o versiune a modulelor personalizate nu este disponibilă pentru "
-"versiunea țintă a Odoo. Pentru clienții care își mențin propriile module "
-"personalizate, recomandăm să paralelizeze procesul prin :ref:`solicitarea "
-"unei baze de date actualizate <upgrade/request-test-database>` și, de "
-"asemenea, :doc:`actualizarea codului sursă al modulelor dvs. personalizate "
-"</developer /howtos/upgrade_custom_db>`."
 
-#: ../../content/administration/upgrade.rst:47
+#: ../../content/administration/upgrade.rst:73
 msgid "Upgrading in a nutshell"
 msgstr "Actualizarea pe scurt"
 
-#: ../../content/administration/upgrade.rst:49
+#: ../../content/administration/upgrade.rst:75
 msgid ""
 "Request an upgraded test database (see :ref:`obtaining an upgraded test "
-"database <upgrade/request-test-database>`)."
+"database <upgrade-request-test>`)."
 msgstr ""
-"Solicitați o bază de date de testare actualizată (vezi :ref:`obținerea unei "
-"baze de date de testare actualizate <upgrade/request-test-database>`)."
 
-#: ../../content/administration/upgrade.rst:51
+#: ../../content/administration/upgrade.rst:77
 msgid ""
 "If applicable, upgrade the source code of your custom module to be "
 "compatible with the new version of Odoo (see "
@@ -9254,25 +9256,20 @@ msgstr ""
 "fi compatibil cu noua versiune de Odoo (consultați "
 ":doc:`/developer/howtos/upgrade_custom_db`)."
 
-#: ../../content/administration/upgrade.rst:53
+#: ../../content/administration/upgrade.rst:79
 msgid ""
 "Thoroughly test the upgraded database (see :ref:`testing the new version of "
-"the database <upgrade/test_your_db>`)."
+"the database <upgrade-testing>`)."
 msgstr ""
-"Testați cu atenție baza de date actualizată (vezi :ref:`testarea noii "
-"versiuni a bazei de date <upgrade/test_your_db>`)."
 
-#: ../../content/administration/upgrade.rst:55
+#: ../../content/administration/upgrade.rst:81
 msgid ""
-"Report any issue encountered during the testing to Odoo by `submitting a "
-"ticket for an issue related to my future upgrade (I am testing an upgrade) "
-"<https://odoo.com/help?stage=migration>`_."
+"Report any issue encountered during the testing to Odoo by going to the "
+"`Support page and selecting \"An issue related to my future upgrade (I am "
+"testing an upgrade)\" <https://www.odoo.com/help?stage=migration>`_."
 msgstr ""
-"Raportați orice problemă întâlnită în timpul testării către Odoo „trimițând "
-"un bilet pentru o problemă legată de upgrade-ul meu viitor (testez un "
-"upgrade) <https://odoo.com/help?stage=migration>`_."
 
-#: ../../content/administration/upgrade.rst:57
+#: ../../content/administration/upgrade.rst:84
 msgid ""
 "Once all issues are resolved and you are confident that the upgraded "
 "database can be used as your main database without any issues, plan the "
@@ -9282,46 +9279,34 @@ msgstr ""
 "actualizată poate fi utilizată ca bază de date principală fără probleme, "
 "planificați actualizarea bazei de date de producție."
 
-#: ../../content/administration/upgrade.rst:59
+#: ../../content/administration/upgrade.rst:86
 msgid ""
 "Request the upgrade for the production database, rendering it unavailable "
 "for the time it takes to complete the process (see :ref:`upgrading the "
-"production database <upgrade/upgrade-prod>`)."
+"production database <upgrade-production>`)."
 msgstr ""
-"Solicitați actualizarea pentru baza de date de producție, făcând-o "
-"indisponibilă pentru timpul necesar pentru finalizarea procesului (vezi "
-":ref:`actualizarea bazei de date de producție <upgrade/upgrade-prod>`)."
 
-#: ../../content/administration/upgrade.rst:61
+#: ../../content/administration/upgrade.rst:88
 msgid ""
-"Report any issue encountered during the upgrade to Odoo by `submitting a "
-"ticket for an issue related to my upgrade (production) "
-"<https://odoo.com/help?stage=post_upgrade>`_."
+"Report any issue encountered during the upgrade to Odoo by going to the "
+"`Support page and selecting \"An issue related to my upgrade (production)\" "
+"<https://www.odoo.com/help?stage=post_upgrade>`_."
 msgstr ""
-"Raportați orice problemă întâlnită în timpul upgrade-ului la Odoo „trimițând"
-" un bilet pentru o problemă legată de upgrade-ul meu (producție) "
-"<https://odoo.com/help?stage=post_upgrade>`_."
 
-#: ../../content/administration/upgrade.rst:67
+#: ../../content/administration/upgrade.rst:95
 msgid "Obtaining an upgraded test database"
 msgstr "Obținerea unei baze de date de testare actualizate"
 
-#: ../../content/administration/upgrade.rst:69
+#: ../../content/administration/upgrade.rst:97
 msgid ""
-"The `Upgrade page <https://upgrade.odoo.com/>`_ is the main platform for "
+"The `Upgrade page <https://upgrade.odoo.com>`_ is the main platform for "
 "requesting an upgraded database. However, depending on the hosting type, you"
-" can upgrade from the command line (on-premise), the `Odoo Online database "
-"manager <https://odoo.com/my/databases>`_, or your `Odoo.sh project "
-"<https://odoo.sh/project>`_."
+" can upgrade from the command line (on-premise), the Odoo Online `database "
+"manager <https://www.odoo.com/my/databases>`_, or your `Odoo.sh project "
+"<https://www.odoo.sh/project>`_."
 msgstr ""
-"`Pagina Upgrade <https://upgrade.odoo.com/>`_ este platforma principală "
-"pentru solicitarea unei baze de date actualizate. Cu toate acestea, în "
-"funcție de tipul de găzduire, puteți face upgrade din linia de comandă (on-"
-"premise), `Managerul bazei de date Odoo Online "
-"<https://odoo.com/my/databases>`_ sau proiectul dvs. `Odoo.sh "
-"<https://odoo.sh/project>`_."
 
-#: ../../content/administration/upgrade.rst:75
+#: ../../content/administration/upgrade.rst:103
 msgid ""
 "The Upgrade platform follows the same `Privacy Policy "
 "<https://www.odoo.com/privacy>`_ as the other Odoo.com services. Visit the "
@@ -9334,15 +9319,13 @@ msgstr ""
 "<https://www.odoo.com/gdpr>`_ pentru a afla mai multe despre modul în care "
 "Odoo vă gestionează datele și confidențialitatea."
 
-#: ../../content/administration/upgrade.rst:83
+#: ../../content/administration/upgrade.rst:111
 msgid ""
 "Odoo Online databases can be manually upgraded via the `database manager "
-"<https://odoo.com/my/databases>`_."
+"<https://www.odoo.com/my/databases>`_."
 msgstr ""
-"Bazele de date Odoo Online pot fi actualizate manual prin `managerul bazei "
-"de date <https://odoo.com/my/databases>`_."
 
-#: ../../content/administration/upgrade.rst:86
+#: ../../content/administration/upgrade.rst:114
 msgid ""
 "The database manager displays all databases associated with the user's "
 "account. Databases not on the most recent version of Odoo display an arrow "
@@ -9360,7 +9343,7 @@ msgstr ""
 "Managerul bazei de date cu un buton de actualizare lângă numele unei baze de"
 " date."
 
-#: ../../content/administration/upgrade.rst:93
+#: ../../content/administration/upgrade.rst:121
 msgid ""
 "Click the **arrow in a circle** icon to start the upgrade process. In the "
 "popup, fill in:"
@@ -9368,21 +9351,21 @@ msgstr ""
 "Faceți clic pe pictograma **săgeată într-un cerc** pentru a începe procesul "
 "de actualizare. În fereastra pop-up, completați:"
 
-#: ../../content/administration/upgrade.rst:95
+#: ../../content/administration/upgrade.rst:123
 msgid ""
 "The **version** of Odoo you want to upgrade to, usually the latest version"
 msgstr ""
 "**Versiunea** de Odoo la care doriți să faceți upgrade, de obicei cea mai "
 "recentă versiune"
 
-#: ../../content/administration/upgrade.rst:96
+#: ../../content/administration/upgrade.rst:124
 msgid ""
 "The **email** address that should receive the link to the upgraded database"
 msgstr ""
 "Adresa **e-mail** care ar trebui să primească linkul către baza de date "
 "actualizată"
 
-#: ../../content/administration/upgrade.rst:97
+#: ../../content/administration/upgrade.rst:125
 msgid ""
 "The :guilabel:`Purpose` of the upgrade, which is automatically set to "
 ":guilabel:`Test` for your first upgrade request"
@@ -9394,7 +9377,7 @@ msgstr ""
 msgid "The \"Upgrade your database\" popup."
 msgstr "Fereastra pop-up „Actualizează-ți baza de date”."
 
-#: ../../content/administration/upgrade.rst:103
+#: ../../content/administration/upgrade.rst:131
 msgid ""
 "The :guilabel:`Upgrade in progress` tag is displayed next to the database "
 "name until completion. Once the process succeeds, an email containing a link"
@@ -9414,7 +9397,7 @@ msgstr ""
 "Făcând clic pe săgeata meniu, se afișează baza de date de testare "
 "actualizată."
 
-#: ../../content/administration/upgrade.rst:113
+#: ../../content/administration/upgrade.rst:141
 msgid ""
 "Odoo.sh is integrated with the upgrade platform to simplify the upgrade "
 "process."
@@ -9426,15 +9409,13 @@ msgstr ""
 msgid "Odoo.sh project and tabs"
 msgstr "Proiectul Odoo.sh și filele"
 
-#: ../../content/administration/upgrade.rst:118
+#: ../../content/administration/upgrade.rst:146
 msgid ""
-"The **latest production daily automatic backup** is then sent to the "
-"`upgrade platform <https://upgrade.odoo.com>`_."
+"The **latest production daily automatic backup** is then sent to the Upgrade"
+" platform."
 msgstr ""
-"**Cea mai recentă copie de rezervă automată zilnică de producție** este apoi"
-" trimisă către `platforma de upgrade <https://upgrade.odoo.com>`_."
 
-#: ../../content/administration/upgrade.rst:121
+#: ../../content/administration/upgrade.rst:148
 msgid ""
 "Once the upgrade platform is done upgrading the backup and uploading it on "
 "the branch, it is put in a **special mode**: each time a **commit is "
@@ -9453,7 +9434,7 @@ msgstr ""
 "jurnal al procesului de actualizare poate fi găsit în noua versiune a "
 "procesului de actualizare, accesând :file:`~/logs/upgrade.log`."
 
-#: ../../content/administration/upgrade.rst:129
+#: ../../content/administration/upgrade.rst:156
 msgid ""
 "In databases where custom modules are installed, their source code must be "
 "up-to-date with the target version of Odoo before the upgrade can be "
@@ -9467,7 +9448,7 @@ msgstr ""
 " este omis, baza de date actualizată este construită de îndată ce este "
 "transferată de pe platforma de upgrade și se iese din modul de actualizare."
 
-#: ../../content/administration/upgrade.rst:134
+#: ../../content/administration/upgrade.rst:161
 msgid ""
 "Check out the :doc:`/developer/howtos/upgrade_custom_db` page for more "
 "information."
@@ -9475,7 +9456,7 @@ msgstr ""
 "Consultați pagina :doc:`/developer/howtos/upgrade_custom_db` pentru mai "
 "multe informații."
 
-#: ../../content/administration/upgrade.rst:138
+#: ../../content/administration/upgrade.rst:165
 msgid ""
 "The standard upgrade process can be initiated by entering the following "
 "command line on the machine where the database is hosted:"
@@ -9483,7 +9464,36 @@ msgstr ""
 "Procesul standard de actualizare poate fi inițiat introducând următoarea "
 "linie de comandă pe mașina pe care este găzduită baza de date:"
 
-#: ../../content/administration/upgrade.rst:145
+#: ../../content/administration/upgrade.rst:173
+msgid "This command has some requirements on the environment it runs in:"
+msgstr ""
+
+#: ../../content/administration/upgrade.rst:175
+msgid ""
+"Some external commands that must be provided by the operating system, "
+"normally found in any Linux distribution (including WSL). An error will be "
+"displayed if one or several of them are missing."
+msgstr ""
+
+#: ../../content/administration/upgrade.rst:178
+msgid ""
+"The system user that executes the command needs to be configured with access"
+" to the database. Please refer to the PostgreSQL documentation of the "
+"`client environment <https://www.postgresql.org/docs/current/libpq-"
+"envars.html>`_ or the `client password file "
+"<https://www.postgresql.org/docs/current/libpq-pgpass.html>`_ for this "
+"requirement."
+msgstr ""
+
+#: ../../content/administration/upgrade.rst:182
+msgid ""
+"The script needs to be able to reach one or multiple servers of the upgrade "
+"platform both on TCP port 443 and to any random TCP port in the range "
+"between 32768 and 60999. This can be in conflict with your restrictive "
+"firewall and may need an exception added to the firewall configuration."
+msgstr ""
+
+#: ../../content/administration/upgrade.rst:187
 msgid ""
 "The following command can be used to display the general help and the main "
 "commands:"
@@ -9491,15 +9501,13 @@ msgstr ""
 "Următoarea comandă poate fi utilizată pentru a afișa ajutorul general și "
 "comenzile principale:"
 
-#: ../../content/administration/upgrade.rst:151
+#: ../../content/administration/upgrade.rst:193
 msgid ""
 "An upgraded test database can also be requested via the `Upgrade page "
-"<https://upgrade.odoo.com/>`_."
+"<https://upgrade.odoo.com>`_."
 msgstr ""
-"O bază de date de testare actualizată poate fi solicitată și prin „pagina "
-"Upgrade <https://upgrade.odoo.com/>`_."
 
-#: ../../content/administration/upgrade.rst:155
+#: ../../content/administration/upgrade.rst:197
 msgid ""
 "In databases where custom modules are installed, their source code must be "
 "up-to-date with the target version of Odoo before the upgrade can be "
@@ -9511,7 +9519,7 @@ msgstr ""
 "actualizarea să poată fi efectuată. Consultați pagina "
 ":doc:`/developer/howtos/upgrade_custom_db` pentru mai multe informații."
 
-#: ../../content/administration/upgrade.rst:160
+#: ../../content/administration/upgrade.rst:202
 msgid ""
 "For security reasons, only the person who submitted the upgrade request can "
 "download it."
@@ -9519,7 +9527,7 @@ msgstr ""
 "Din motive de securitate, doar persoana care a depus cererea de upgrade o "
 "poate descărca."
 
-#: ../../content/administration/upgrade.rst:161
+#: ../../content/administration/upgrade.rst:203
 msgid ""
 "For storage reasons, the database's copy is submitted without a filestore to"
 " the upgrade server. Therefore, the upgraded database does not contain the "
@@ -9529,7 +9537,7 @@ msgstr ""
 "fișiere la serverul de upgrade. Prin urmare, baza de date actualizată nu "
 "conține depozitul de fișiere de producție."
 
-#: ../../content/administration/upgrade.rst:163
+#: ../../content/administration/upgrade.rst:205
 msgid ""
 "Before restoring the upgraded database, its filestore must be merged with "
 "the production filestore to be able to perform tests in the same conditions "
@@ -9539,15 +9547,15 @@ msgstr ""
 "acesteia trebuie îmbinat cu depozitul de fișiere de producție pentru a putea"
 " efectua teste în aceleași condiții ca și în noua versiune."
 
-#: ../../content/administration/upgrade.rst:166
+#: ../../content/administration/upgrade.rst:208
 msgid "The upgraded database contains:"
 msgstr "Baza de date actualizată conține:"
 
-#: ../../content/administration/upgrade.rst:168
+#: ../../content/administration/upgrade.rst:210
 msgid "A `dump.sql` file containing the upgraded database"
 msgstr "Un fișier `dump.sql` care conține baza de date actualizată"
 
-#: ../../content/administration/upgrade.rst:169
+#: ../../content/administration/upgrade.rst:211
 msgid ""
 "A `filestore` folder containing files extracted from in-database records "
 "into attachments (if there are any) and new standard Odoo files from the "
@@ -9562,7 +9570,7 @@ msgstr ""
 " ar trebui îmbinat cu depozitul de fișiere de producție pentru a obține "
 "depozitul de fișiere actualizat complet."
 
-#: ../../content/administration/upgrade.rst:176
+#: ../../content/administration/upgrade.rst:218
 msgid ""
 "You can request multiple test databases if you wish to test an upgrade more "
 "than once."
@@ -9570,7 +9578,7 @@ msgstr ""
 "Puteți solicita mai multe baze de date de testare dacă doriți să testați o "
 "actualizare de mai multe ori."
 
-#: ../../content/administration/upgrade.rst:181
+#: ../../content/administration/upgrade.rst:221
 msgid ""
 "When an upgrade request is completed, an upgrade report is attached to the "
 "successful upgrade email, and it becomes available in the Discuss app for "
@@ -9584,22 +9592,18 @@ msgstr ""
 "„Administrare / Setări”. Acest raport oferă informații importante despre "
 "modificările introduse de noua versiune."
 
-#: ../../content/administration/upgrade.rst:189
+#: ../../content/administration/upgrade.rst:229
 msgid "Testing the new version of the database"
 msgstr "Testarea noii versiuni a bazei de date"
 
-#: ../../content/administration/upgrade.rst:191
+#: ../../content/administration/upgrade.rst:231
 msgid ""
-"It is essential to spend some time testing the upgraded test database to "
-"ensure that you are not stuck in your day-to-day activities by a change in "
-"views, behavior, or an error message once the upgrade goes live."
+"It is essential to test the upgraded test database to ensure that you are "
+"not stuck in your day-to-day activities by a change in views, behavior, or "
+"an error message once the upgrade goes live."
 msgstr ""
-"Este esențial să petreceți ceva timp testând baza de date de testare "
-"actualizată pentru a vă asigura că nu sunteți blocat în activitățile dvs. de"
-" zi cu zi de o schimbare a vizualizărilor, comportamentului sau a unui mesaj"
-" de eroare odată ce actualizarea este disponibilă."
 
-#: ../../content/administration/upgrade.rst:196
+#: ../../content/administration/upgrade.rst:236
 msgid ""
 "Test databases are neutralized, and some features are disabled to prevent "
 "them from impacting the production database:"
@@ -9607,11 +9611,11 @@ msgstr ""
 "Bazele de date de testare sunt neutralizate, iar unele caracteristici sunt "
 "dezactivate pentru a preveni impactul asupra bazei de date de producție:"
 
-#: ../../content/administration/upgrade.rst:199
+#: ../../content/administration/upgrade.rst:239
 msgid "Scheduled actions are disabled."
 msgstr "Acțiunile programate sunt dezactivate."
 
-#: ../../content/administration/upgrade.rst:200
+#: ../../content/administration/upgrade.rst:240
 msgid ""
 "Outgoing mail servers are disabled by archiving the existing ones and adding"
 " a fake one."
@@ -9619,14 +9623,14 @@ msgstr ""
 "Serverele de e-mail de ieșire sunt dezactivate prin arhivarea celor "
 "existente și adăugarea unuia fals."
 
-#: ../../content/administration/upgrade.rst:201
+#: ../../content/administration/upgrade.rst:241
 msgid ""
 "Payment providers and delivery carriers are reset to the test environment."
 msgstr ""
 "Furnizorii de plăți și transportatorii de livrare sunt resetați la mediul de"
 " testare."
 
-#: ../../content/administration/upgrade.rst:202
+#: ../../content/administration/upgrade.rst:242
 msgid ""
 "Bank synchronization is disabled. Should you want to test the "
 "synchronization, contact your bank synchronization provider to get sandbox "
@@ -9636,7 +9640,7 @@ msgstr ""
 "sincronizarea, contactați furnizorul de sincronizare bancară pentru a obține"
 " acreditările sandbox."
 
-#: ../../content/administration/upgrade.rst:205
+#: ../../content/administration/upgrade.rst:245
 msgid ""
 "Testing as many of your business flows as possible is strongly recommended "
 "to ensure they are working correctly and to get more familiar with the new "
@@ -9646,11 +9650,11 @@ msgstr ""
 "pentru a vă asigura că funcționează corect și pentru a vă familiariza mai "
 "bine cu noua versiune."
 
-#: ../../content/administration/upgrade.rst:208
+#: ../../content/administration/upgrade.rst:248
 msgid "Basic test checklist"
 msgstr "Lista de verificare a testului de bază"
 
-#: ../../content/administration/upgrade.rst:210
+#: ../../content/administration/upgrade.rst:250
 msgid ""
 "Are there views that are deactivated in your test database but active in "
 "your production database?"
@@ -9658,20 +9662,20 @@ msgstr ""
 "Există vizualizări care sunt dezactivate în baza de date de testare, dar "
 "active în baza de date de producție?"
 
-#: ../../content/administration/upgrade.rst:212
+#: ../../content/administration/upgrade.rst:252
 msgid "Are your usual views still displayed correctly?"
 msgstr "Vizualizările dvs. obișnuite sunt încă afișate corect?"
 
-#: ../../content/administration/upgrade.rst:213
+#: ../../content/administration/upgrade.rst:253
 msgid "Are your reports (invoice, sales order, etc.) correctly generated?"
 msgstr ""
 "Rapoartele dvs. (factură, comandă de vânzare etc.) sunt generate corect?"
 
-#: ../../content/administration/upgrade.rst:214
+#: ../../content/administration/upgrade.rst:254
 msgid "Are your website pages working correctly?"
 msgstr "Paginile site-ului dvs. funcționează corect?"
 
-#: ../../content/administration/upgrade.rst:215
+#: ../../content/administration/upgrade.rst:255
 msgid ""
 "Are you able to create and modify records? (sales orders, invoices, "
 "purchases, users, contacts, companies, etc.)"
@@ -9679,23 +9683,23 @@ msgstr ""
 "Sunteți capabil să creați și să modificați înregistrări? (comenzi de "
 "vânzare, facturi, achiziții, utilizatori, contacte, companii etc.)"
 
-#: ../../content/administration/upgrade.rst:217
+#: ../../content/administration/upgrade.rst:257
 msgid "Are there any issues with your mail templates?"
 msgstr "Există probleme cu șabloanele dvs. de e-mail?"
 
-#: ../../content/administration/upgrade.rst:218
+#: ../../content/administration/upgrade.rst:258
 msgid "Are there any issues with saved translations?"
 msgstr "Există probleme cu traducerile salvate?"
 
-#: ../../content/administration/upgrade.rst:219
+#: ../../content/administration/upgrade.rst:259
 msgid "Are your search filters still present?"
 msgstr "Filtrele dvs. de căutare sunt încă prezente?"
 
-#: ../../content/administration/upgrade.rst:220
+#: ../../content/administration/upgrade.rst:260
 msgid "Can you export your data?"
 msgstr "Vă puteți exporta datele?"
 
-#: ../../content/administration/upgrade.rst:224
+#: ../../content/administration/upgrade.rst:264
 msgid ""
 "Checking a random product in your product catalog and comparing its test and"
 " production data to verify everything is the same (product category, selling"
@@ -9706,15 +9710,15 @@ msgstr ""
 "este același (categoria de produs, prețul de vânzare, prețul de cost, "
 "furnizorul, conturile, rutele etc.)."
 
-#: ../../content/administration/upgrade.rst:227
+#: ../../content/administration/upgrade.rst:267
 msgid "Buying this product (Purchase app)."
 msgstr "Cumpărarea acestui produs (aplicația Cumpărați)."
 
-#: ../../content/administration/upgrade.rst:228
+#: ../../content/administration/upgrade.rst:268
 msgid "Confirming the reception of this product (Inventory app)."
 msgstr "Confirmarea primirii acestui produs (aplicația Inventory)."
 
-#: ../../content/administration/upgrade.rst:229
+#: ../../content/administration/upgrade.rst:269
 msgid ""
 "Checking if the route to receive this product is the same in your production"
 " database (Inventory app)."
@@ -9722,11 +9726,11 @@ msgstr ""
 "Verificați dacă ruta pentru a primi acest produs este aceeași în baza de "
 "date de producție (aplicația Inventory)."
 
-#: ../../content/administration/upgrade.rst:231
+#: ../../content/administration/upgrade.rst:271
 msgid "Selling this product (Sales app) to a random customer."
 msgstr "Vând acest produs (aplicația de vânzări) unui client aleatoriu."
 
-#: ../../content/administration/upgrade.rst:232
+#: ../../content/administration/upgrade.rst:272
 msgid ""
 "Opening your customer database (Contacts app), selecting a customer (or "
 "company), and checking its data."
@@ -9734,11 +9738,11 @@ msgstr ""
 "Deschiderea bazei de date de clienți (aplicația Contacte), selectarea unui "
 "client (sau companie) și verificarea datelor acestuia."
 
-#: ../../content/administration/upgrade.rst:234
+#: ../../content/administration/upgrade.rst:274
 msgid "Shipping this product (Inventory app)."
 msgstr "Livrarea acestui produs (aplicația de inventar)."
 
-#: ../../content/administration/upgrade.rst:235
+#: ../../content/administration/upgrade.rst:275
 msgid ""
 "Checking if the route to ship this product is the same as in your production"
 " database (Inventory app)."
@@ -9746,12 +9750,12 @@ msgstr ""
 "Verificați dacă ruta de livrare a acestui produs este aceeași cu cea din "
 "baza de date de producție (aplicația Inventory)."
 
-#: ../../content/administration/upgrade.rst:237
+#: ../../content/administration/upgrade.rst:277
 msgid "Validating a customer invoice (Invoicing or Accounting app)."
 msgstr ""
 "Validarea unei facturi de client (aplicația de facturare sau contabilitate)."
 
-#: ../../content/administration/upgrade.rst:238
+#: ../../content/administration/upgrade.rst:278
 msgid ""
 "Crediting the invoice (issuing a credit note) and checking if it behaves as "
 "in your production database."
@@ -9759,12 +9763,12 @@ msgstr ""
 "Creditarea facturii (emiterea notei de credit) și verificarea dacă se "
 "comportă ca în baza de date de producție."
 
-#: ../../content/administration/upgrade.rst:240
+#: ../../content/administration/upgrade.rst:280
 msgid "Checking your reports' results (Accounting app)."
 msgstr ""
 "Verificarea rezultatelor rapoartelor dvs. (aplicația de contabilitate)."
 
-#: ../../content/administration/upgrade.rst:241
+#: ../../content/administration/upgrade.rst:281
 msgid ""
 "Randomly checking your taxes, currencies, bank accounts, and fiscal year "
 "(Accounting app)."
@@ -9772,7 +9776,7 @@ msgstr ""
 "Verificați aleatoriu impozitele, valutele, conturile bancare și anul fiscal "
 "(aplicația de contabilitate)."
 
-#: ../../content/administration/upgrade.rst:242
+#: ../../content/administration/upgrade.rst:282
 msgid ""
 "Making an online order (Website apps) from the product selection in your "
 "shop until the checkout process and checking if everything behaves as in "
@@ -9782,7 +9786,7 @@ msgstr ""
 " din magazinul dvs. până la procesul de finalizare a comenzii și verificarea"
 " dacă totul se comportă ca în baza de date de producție."
 
-#: ../../content/administration/upgrade.rst:245
+#: ../../content/administration/upgrade.rst:285
 msgid ""
 "This list is **not** exhaustive. Extend the example to your other apps based"
 " on your use of Odoo."
@@ -9790,23 +9794,17 @@ msgstr ""
 "Această listă **nu** este exhaustivă. Extindeți exemplul la celelalte "
 "aplicații pe baza utilizării Odoo."
 
-#: ../../content/administration/upgrade.rst:247
+#: ../../content/administration/upgrade.rst:287
 msgid ""
 "If you face an issue while testing your upgraded test database, you can "
-"request the assistance of Odoo by `submitting a ticket for an issue related "
-"to my future upgrade (I am testing an upgrade) "
-"<https://odoo.com/help?stage=migration>`_. In any case, it is essential to "
-"report any problem encountered during the testing to fix it before upgrading"
-" your production database."
+"request the assistance of Odoo by going to the `Support page and selecting "
+"\"An issue related to my future upgrade (I am testing an upgrade)\" "
+"<https://www.odoo.com/help?stage=migration>`_. In any case, it is essential "
+"to report any problem encountered during the testing to fix it before "
+"upgrading your production database."
 msgstr ""
-"Dacă întâmpinați o problemă în timp ce testați baza de date de testare "
-"actualizată, puteți solicita asistența Odoo „trimițând un bilet pentru o "
-"problemă legată de upgrade-ul meu viitor (testez un upgrade) "
-"<https://odoo.com/help? stadiu=migration>`_. În orice caz, este esențial să "
-"raportați orice problemă întâlnită în timpul testării pentru a o remedia "
-"înainte de a actualiza baza de date de producție."
 
-#: ../../content/administration/upgrade.rst:252
+#: ../../content/administration/upgrade.rst:293
 msgid ""
 "You might encounter significant differences with standard views, features, "
 "fields, and models during testing. Those changes cannot be reverted on a "
@@ -9821,15 +9819,15 @@ msgstr ""
 "responsabilitatea întreținătorului modulului personalizat să îl facă "
 "compatibil cu noua versiune de Odoo."
 
-#: ../../content/administration/upgrade.rst:258
+#: ../../content/administration/upgrade.rst:299
 msgid "Do not forget to test:"
 msgstr "Nu uitați să testați:"
 
-#: ../../content/administration/upgrade.rst:260
+#: ../../content/administration/upgrade.rst:301
 msgid "Integrations with external software (EDI, APIs, etc.)"
 msgstr "Integrari cu software extern (EDI, API-uri etc.)"
 
-#: ../../content/administration/upgrade.rst:261
+#: ../../content/administration/upgrade.rst:302
 msgid ""
 "Workflows between different apps (online sales with eCommerce, converting a "
 "lead all the way to a sales order, delivery of products, etc.)"
@@ -9838,15 +9836,15 @@ msgstr ""
 "electronic, conversia unui client potențial până la o comandă de vânzare, "
 "livrarea produselor etc.)"
 
-#: ../../content/administration/upgrade.rst:263
+#: ../../content/administration/upgrade.rst:304
 msgid "Data exports"
 msgstr "Exporturi de date"
 
-#: ../../content/administration/upgrade.rst:264
+#: ../../content/administration/upgrade.rst:305
 msgid "Automated actions"
 msgstr "Acțiuni automate"
 
-#: ../../content/administration/upgrade.rst:265
+#: ../../content/administration/upgrade.rst:306
 msgid ""
 "Server actions in the action menu on form views, as well as by selecting "
 "multiple records on list views"
@@ -9854,27 +9852,18 @@ msgstr ""
 "Acțiunile serverului din meniul de acțiuni din vizualizările formularului, "
 "precum și prin selectarea mai multor înregistrări din vizualizările de listă"
 
-#: ../../content/administration/upgrade.rst:271
+#: ../../content/administration/upgrade.rst:312
 msgid "Upgrading the production database"
 msgstr "Actualizarea bazei de date de producție"
 
-#: ../../content/administration/upgrade.rst:273
+#: ../../content/administration/upgrade.rst:314
 msgid ""
-"Once the :ref:`tests <upgrade/test_your_db>` are completed and you are "
-"confident that the upgraded database can be used as your main database "
-"without any issues, it is time to plan the go-live day. It can be planned in"
-" coordination with Odoo's upgrade support analysts by `submitting a ticket "
-"for an issue related to my future upgrade (I am testing an upgrade) "
-"<https://odoo.com/help?stage=migration>`_."
+"Once the :ref:`tests <upgrade-testing>` are completed and you are confident "
+"that the upgraded database can be used as your main database without any "
+"issues, it is time to plan the go-live day."
 msgstr ""
-"Odată ce :ref:`testele <upgrade/test_your_db>` sunt finalizate și sunteți "
-"sigur că baza de date actualizată poate fi utilizată ca bază de date "
-"principală fără probleme, este timpul să planificați ziua de lansare. Poate "
-"fi planificat în coordonare cu analiștii de asistență pentru upgrade de la "
-"Odoo prin „trimiterea unui bilet pentru o problemă legată de upgrade-ul meu "
-"viitor (testez un upgrade) <https://odoo.com/help?stage=migration>`_."
 
-#: ../../content/administration/upgrade.rst:279
+#: ../../content/administration/upgrade.rst:317
 msgid ""
 "Your production database will be unavailable during its upgrade. Therefore, "
 "we recommend planning the upgrade at a time when the use of the database is "
@@ -9884,7 +9873,7 @@ msgstr ""
 "urmare, vă recomandăm să planificați upgrade-ul într-un moment în care "
 "utilizarea bazei de date este minimă."
 
-#: ../../content/administration/upgrade.rst:282
+#: ../../content/administration/upgrade.rst:320
 msgid ""
 "As the standard upgrade scripts and your database are constantly evolving, "
 "it is also recommended to frequently request another upgraded test database "
@@ -9900,15 +9889,15 @@ msgstr ""
 "procesului de actualizare cu o zi înainte de actualizarea bazei de date de "
 "producție.**"
 
-#: ../../content/administration/upgrade.rst:288
+#: ../../content/administration/upgrade.rst:326
 msgid "Going into production without first testing may lead to:"
 msgstr "Trecerea în producție fără testare în prealabil poate duce la:"
 
-#: ../../content/administration/upgrade.rst:290
+#: ../../content/administration/upgrade.rst:328
 msgid "Users failing to adjust to the changes and new features"
 msgstr "Utilizatorii nu se adaptează la modificări și la noile funcții"
 
-#: ../../content/administration/upgrade.rst:291
+#: ../../content/administration/upgrade.rst:329
 msgid ""
 "Business interruptions (e.g., no longer having the possibility to validate "
 "an action)"
@@ -9916,7 +9905,7 @@ msgstr ""
 "Întreruperi în afaceri (de exemplu, nemaiavând posibilitatea de a valida o "
 "acțiune)"
 
-#: ../../content/administration/upgrade.rst:292
+#: ../../content/administration/upgrade.rst:330
 msgid ""
 "Poor customer experience (e.g., an eCommerce website that does not work "
 "correctly)"
@@ -9924,25 +9913,20 @@ msgstr ""
 "Experiență slabă a clienților (de exemplu, un site de comerț electronic care"
 " nu funcționează corect)"
 
-#: ../../content/administration/upgrade.rst:294
+#: ../../content/administration/upgrade.rst:332
 msgid ""
 "The process of upgrading a production database is similar to upgrading a "
-"test database with a few exceptions."
+"test database, but with a few exceptions."
 msgstr ""
-"Procesul de actualizare a unei baze de date de producție este similar cu "
-"actualizarea unei baze de date de testare, cu câteva excepții."
 
-#: ../../content/administration/upgrade.rst:301
+#: ../../content/administration/upgrade.rst:339
 msgid ""
 "The process is similar to :ref:`obtaining an upgraded test database "
-"<upgrade/request-test-database>`, except for the purpose option, which must "
-"be set to :guilabel:`Production` instead of :guilabel:`Test`."
+"<upgrade-request-test>`, except for the purpose option, which must be set to"
+" :guilabel:`Production` instead of :guilabel:`Test`."
 msgstr ""
-"Procesul este similar cu :ref:`obținerea unei baze de date de testare "
-"actualizate <upgrade/request-test-database>`, cu excepția opțiunii scop, "
-"care trebuie setată la :guilabel:`Producție` în loc de :guilabel:`Test` ."
 
-#: ../../content/administration/upgrade.rst:306
+#: ../../content/administration/upgrade.rst:344
 msgid ""
 "Once the upgrade is requested, the database will be unavailable until the "
 "upgrade is finished. Once the process is completed, it is impossible to "
@@ -9952,20 +9936,17 @@ msgstr ""
 " la finalizarea upgrade-ului. Odată ce procesul este finalizat, este "
 "imposibil să reveniți la versiunea anterioară."
 
-#: ../../content/administration/upgrade.rst:312
+#: ../../content/administration/upgrade.rst:350
 msgid ""
 "The process is similar to :ref:`obtaining an upgraded test database "
-"<upgrade/request-test-database>` on the :guilabel:`Production` branch."
+"<upgrade-request-test>` on the :guilabel:`Production` branch."
 msgstr ""
-"Procesul este similar cu :ref:`obținerea unei baze de date de testare "
-"actualizate <upgrade/request-test-database>` pe ramura "
-":guilabel:`Producție`."
 
 #: ../../content/administration/upgrade.rst:0
 msgid "View from the upgrade tab"
 msgstr "Afișare din fila de actualizare"
 
-#: ../../content/administration/upgrade.rst:318
+#: ../../content/administration/upgrade.rst:356
 msgid ""
 "The process is **triggered as soon as a new commit is made** on the branch. "
 "This allows the upgrade process to be synchronized with the deployment of "
@@ -9977,7 +9958,7 @@ msgstr ""
 "implementarea codului sursă actualizat al modulelor personalizate. Dacă nu "
 "există module personalizate, procesul de actualizare este declanșat imediat."
 
-#: ../../content/administration/upgrade.rst:324
+#: ../../content/administration/upgrade.rst:362
 msgid ""
 "The database is unavailable throughout the process. If anything goes wrong, "
 "the platform automatically reverts the upgrade, as it would be for a regular"
@@ -9989,7 +9970,7 @@ msgstr ""
 "actualizare regulată. În caz de succes, se creează o copie de rezervă a "
 "bazei de date înainte de actualizare."
 
-#: ../../content/administration/upgrade.rst:328
+#: ../../content/administration/upgrade.rst:366
 msgid ""
 "The update of your custom modules must be successful to complete the entire "
 "upgrade process. Make sure the status of your staging upgrade is "
@@ -10003,7 +9984,7 @@ msgstr ""
 "producție. Mai multe informații despre cum să actualizați modulele "
 "personalizate pot fi găsite pe :doc:`/developer/howtos/upgrade_custom_db`."
 
-#: ../../content/administration/upgrade.rst:335
+#: ../../content/administration/upgrade.rst:373
 msgid ""
 "The command to upgrade a database to production is similar to the one of "
 "upgrading a test database except for the argument `test`, which must be "
@@ -10013,21 +9994,20 @@ msgstr ""
 "actualizare a unei baze de date de testare, cu excepția argumentului `test`,"
 " care trebuie înlocuit cu `production`:"
 
-#: ../../content/administration/upgrade.rst:342
+#: ../../content/administration/upgrade.rst:380
 msgid ""
 "An upgraded production database can also be requested via the `Upgrade page "
-"<https://upgrade.odoo.com/>`_. Once the database is uploaded, any "
-"modification to your production database will **not** be present on your "
-"upgraded database. This is why we recommend not using it during the upgrade "
-"process."
+"<https://upgrade.odoo.com>`_."
 msgstr ""
-"O bază de date de producție actualizată poate fi solicitată și prin „pagina "
-"Upgrade <https://upgrade.odoo.com/>`_. Odată ce baza de date este încărcată,"
-" orice modificare adusă bazei de date de producție **nu** va fi prezentă în "
-"baza de date actualizată. Acesta este motivul pentru care vă recomandăm să "
-"nu îl utilizați în timpul procesului de actualizare."
 
-#: ../../content/administration/upgrade.rst:349
+#: ../../content/administration/upgrade.rst:383
+msgid ""
+"Once the database is uploaded, any modification to your production database "
+"will **not** be present on your upgraded database. This is why we recommend "
+"not using it during the upgrade process."
+msgstr ""
+
+#: ../../content/administration/upgrade.rst:388
 msgid ""
 "When requesting an upgraded database for production purposes, the copy is "
 "submitted without a filestore. Therefore, the upgraded database filestore "
@@ -10039,21 +10019,19 @@ msgstr ""
 "al bazei de date actualizat trebuie îmbinat cu depozitul de fișiere de "
 "producție înainte de implementarea noii versiuni."
 
-#: ../../content/administration/upgrade.rst:353
+#: ../../content/administration/upgrade.rst:392
 msgid ""
 "In case of an issue with your production database, you can request the "
-"assistance of Odoo by `submitting a ticket for an issue related to my "
-"upgrade (production) <https://odoo.com/help?stage=post_upgrade>`_."
+"assistance of Odoo by going to the `Support page and selecting \"An issue "
+"related to my future upgrade (I am testing an upgrade)\" "
+"<https://www.odoo.com/help?stage=migration>`_."
 msgstr ""
-"În cazul unei probleme cu baza de date de producție, puteți solicita "
-"asistența Odoo prin „trimițând un bilet pentru o problemă legată de upgrade-"
-"ul (producția) meu <https://odoo.com/help?stage=post_upgrade>`_."
 
-#: ../../content/administration/upgrade.rst:360
+#: ../../content/administration/upgrade.rst:399
 msgid "Service-level agreement (SLA)"
 msgstr "Acord de nivel de serviciu (SLA)"
 
-#: ../../content/administration/upgrade.rst:362
+#: ../../content/administration/upgrade.rst:401
 msgid ""
 "With Odoo Enterprise, upgrading a database to the most recent version of "
 "Odoo is **free**, including any support required to rectify potential "
@@ -10063,7 +10041,7 @@ msgstr ""
 "versiune de Odoo este **gratuită**, inclusiv orice suport necesar pentru a "
 "remedia eventualele discrepanțe din baza de date actualizată."
 
-#: ../../content/administration/upgrade.rst:365
+#: ../../content/administration/upgrade.rst:404
 msgid ""
 "Information about the upgrade services included in the Enterprise Licence is"
 " available in the :ref:`Odoo Enterprise Subscription Agreement <upgrade>`. "
@@ -10074,11 +10052,11 @@ msgstr ""
 "toate acestea, această secțiune clarifică la ce servicii de upgrade vă "
 "puteți aștepta."
 
-#: ../../content/administration/upgrade.rst:370
+#: ../../content/administration/upgrade.rst:411
 msgid "Upgrade services covered by the SLA"
 msgstr "Servicii de upgrade acoperite de SLA"
 
-#: ../../content/administration/upgrade.rst:372
+#: ../../content/administration/upgrade.rst:413
 msgid ""
 "Databases hosted on Odoo's cloud platforms (Odoo Online and Odoo.sh) or "
 "self-hosted (On-Premise) can benefit from upgrade services at all times for:"
@@ -10087,11 +10065,11 @@ msgstr ""
 "sau auto-găzduite (On-Premise) pot beneficia în orice moment de servicii de "
 "upgrade pentru:"
 
-#: ../../content/administration/upgrade.rst:375
+#: ../../content/administration/upgrade.rst:416
 msgid "the upgrade of all **standard applications**;"
 msgstr "upgrade-ul tuturor **aplicațiilor standard**;"
 
-#: ../../content/administration/upgrade.rst:376
+#: ../../content/administration/upgrade.rst:417
 msgid ""
 "the upgrade of all **customizations created with the Studio app**, as long "
 "as Studio is still installed and the respective subscription is still "
@@ -10101,7 +10079,7 @@ msgstr ""
 "timp cât Studio este încă instalat și abonamentul respectiv este încă activ;"
 " și"
 
-#: ../../content/administration/upgrade.rst:378
+#: ../../content/administration/upgrade.rst:419
 msgid ""
 "the upgrade of all **developments and customizations covered by a "
 "maintenance of customizations subscription**."
@@ -10109,7 +10087,7 @@ msgstr ""
 "upgrade-ul tuturor **dezvoltărilor și personalizărilor acoperite de un "
 "abonament de întreținere a personalizărilor**."
 
-#: ../../content/administration/upgrade.rst:381
+#: ../../content/administration/upgrade.rst:422
 msgid ""
 "Upgrade services are limited to the technical conversion and adaptation of a"
 " database (standard modules and data) to make it compatible with the version"
@@ -10119,21 +10097,21 @@ msgstr ""
 "baze de date (module standard și date) pentru a o face compatibilă cu "
 "versiunea vizată de upgrade."
 
-#: ../../content/administration/upgrade.rst:385
+#: ../../content/administration/upgrade.rst:428
 msgid "Upgrade services not covered by the SLA"
 msgstr "Servicii de upgrade care nu sunt acoperite de SLA"
 
-#: ../../content/administration/upgrade.rst:387
+#: ../../content/administration/upgrade.rst:430
 msgid "The following upgrade-related services are **not** included:"
 msgstr "Următoarele servicii legate de upgrade sunt **nu** incluse:"
 
-#: ../../content/administration/upgrade.rst:389
+#: ../../content/administration/upgrade.rst:432
 msgid ""
 "the **cleaning** of pre-existing data and configurations while upgrading;"
 msgstr ""
 "**curățarea** de date și configurații preexistente în timpul actualizării;"
 
-#: ../../content/administration/upgrade.rst:390
+#: ../../content/administration/upgrade.rst:433
 msgid ""
 "the upgrade of **custom modules created in-house or by third parties**, "
 "including Odoo partners;"
@@ -10141,7 +10119,7 @@ msgstr ""
 "upgrade-ul **modulelor personalizate create intern sau de către terți**, "
 "inclusiv partenerii Odoo;"
 
-#: ../../content/administration/upgrade.rst:391
+#: ../../content/administration/upgrade.rst:434
 msgid ""
 "lines of **code added to standard modules**, i.e., customizations created "
 "outside the Studio app, code entered manually, and :ref:`automated actions "
@@ -10151,16 +10129,16 @@ msgstr ""
 "în afara aplicației Studio, cod introdus manual și :ref:`acțiuni automate "
 "folosind codul Python <studio/automated-actions/action>`; și"
 
-#: ../../content/administration/upgrade.rst:394
+#: ../../content/administration/upgrade.rst:437
 msgid "**training** on using the upgraded version's features and workflows."
 msgstr ""
 "**instruire** cu privire la utilizarea funcțiilor și fluxurilor de lucru ale"
 " versiunii actualizate."
 
-#: ../../content/administration/upgrade.rst:397
+#: ../../content/administration/upgrade.rst:440
 msgid ":doc:`Odoo.sh documentation <odoo_sh>`"
 msgstr ":doc:`Documentația Odoo.sh <odoo_sh>`"
 
-#: ../../content/administration/upgrade.rst:398
+#: ../../content/administration/upgrade.rst:441
 msgid ":doc:`Supported Odoo versions <supported_versions>`"
 msgstr ":doc:`Versiuni Odoo acceptate <supported_versions>`"

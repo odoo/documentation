@@ -183,23 +183,23 @@ seven main categories, with corresponding numeric values that prefix individual 
 View, edit, and sort accounts
 -----------------------------
 
-Access the *Chart of Accounts* dashboard in Odoo  by navigating to :menuselection:`Accounting app
+Access the *Chart of Accounts* dashboard in Odoo by navigating to :menuselection:`Accounting app
 --> Configuration --> Accounting: Chart of Accounts`.
 
-From the :guilabel:`Chart of Accounts` dashboard, create new accounts by clicking the purple
+From the :guilabel:`Chart of Accounts` dashboard, create new accounts by clicking the
 :guilabel:`New` button in the top-left corner of the dashboard and :ref:`filling in the
 corresponding form <chart-of-account/create>`. Search and sort through existing accounts by using
-specific :guilabel:`Filters` and :guilabel:`Group By` criteria, which are available in the mega menu
-under the :guilabel:`Search...` bar.
+specific :guilabel:`Filters` and :guilabel:`Group By` criteria, which are available in the search
+drop-down menu.
 
 To filter accounts by category, click the :icon:`fa-caret-down` :guilabel:`(caret down)` icon to
-access the mega menu and look under the :guilabel:`Filters` column for individual selections.
+access the drop-down menu and look under the :guilabel:`Filters` column for individual selections.
 Clicking on a specific category will only show accounts that match that particular filter.
 
-To view all the available account types, remove all of the filters in the :guilabel:`Search...` bar,
-and then click the :icon:`fa-caret-down` :guilabel:`(caret down)` icon to access the mega menu. From
-there, select :guilabel:`Account Type` under the :guilabel:`Group By` column heading to list all of
-the account types in the table.
+To view all the available account types, remove all of the filters in the search bar, and then click
+the :icon:`fa-caret-down` :guilabel:`(caret down)` icon to access the drop-down menu. From there,
+select :guilabel:`Account Type` under the :guilabel:`Group By` column heading to list all of the
+account types in the table.
 
 .. image:: united_states/us-l10n-coa-account-types.png
    :align: center
@@ -244,15 +244,12 @@ AvaTax
 ------
 
 **Avalara AvaTax** is a cloud-based tax calculation and compliance software that integrates with
-Odoo for the United States and Canadian accounting localizations. Integrating AvaTax with Odoo
-provides real-time and region-specific tax calculations when items are sold, purchased, and invoiced
-in the database.
+Odoo for several localizations. Integrating AvaTax with Odoo provides real-time and region-specific
+tax calculations when items are sold, purchased, and invoiced in the database.
 
 .. important::
-   AvaTax is only available for integration with databases/companies that have locations in the
-   United States and Canada. This means the fiscal position/country of a database can only be set to
-   the United States or Canada. Reference this documentation for more information:
-   :ref:`avatax/fiscal_country`.
+   AvaTax is available for integration with databases/companies that have locations in the United
+   States and Canada. Reference the :ref:`avatax/fiscal_country` documentation for more information.
 
 .. seealso::
    Refer to the documentation articles below to integrate and configure an AvaTax account with an
@@ -274,9 +271,9 @@ Reports
 A number of :doc:`report selections <../accounting/reporting>` are readily available for the US
 localization, under the :menuselection:`Accounting app --> Reporting` drop-down menu:
 
-- :ref:`Balance Sheet <reporting/balance-sheet>`: a "snapshot" of a company's financial position at
-  a specific point in time, which contains an overview of a company's assets, liabilities, and
-  equity.
+- :ref:`Balance Sheet <accounting/reporting/balance-sheet>`: a "snapshot" of a company's financial
+  position at a specific point in time, which contains an overview of a company's assets,
+  liabilities, and equity.
 - :ref:`Profit & Loss <accounting/reporting/balance-sheet>`: otherwise known as a *P&L statement* or
   *income statement*, provides a summary of a company's revenues, expenses, and profits/losses over
   a given period of time.
@@ -285,10 +282,10 @@ localization, under the :menuselection:`Accounting app --> Reporting` drop-down 
 - :ref:`Executive Summary <accounting/reporting/executive-summary>`: an overview report that covers
   the key performance indicators of a company's financial position, such as revenue, profit, and
   debt.
-- :ref:`Tax Report <reporting/tax-report>`: an official form filed for a tax authority that reports
-  income, expenses, and other pertinent tax information. Tax reports allow taxpayers to calculate
-  their tax liability, schedule tax payments, or request refunds for the overpayment of taxes. In
-  Odoo, the tax report can be made monthly, every two months, quarterly, every 4 months,
+- :ref:`Tax Report <accounting/reporting/tax-report>`: an official form filed for a tax authority
+  that reports income, expenses, and other pertinent tax information. Tax reports allow taxpayers to
+  calculate their tax liability, schedule tax payments, or request refunds for the overpayment of
+  taxes. In Odoo, the tax report can be made monthly, every two months, quarterly, every 4 months,
   semi-annually, and annually.
 - :guilabel:`Check Register`: a report that displays cash transactions (regardless of the journal)
   with their running balance after the transaction. Only visible with the *US - Accounting Reports*
@@ -354,7 +351,7 @@ items that are missing. Be sure to remove any items that should not be included 
 clicking :icon:`fa-times` :guilabel:`(delete)` on the row.
 
 Finally, once all necessary items are included in the 1099 report, click on the :guilabel:`Generate`
-button. Doing so, downloads a CSV file that groups transactions by the partner that received the
+button. Doing so downloads a CSV file that groups transactions by the partner that received the
 payments.
 
 .. _l10n_us/cash-flow-statement:
@@ -728,8 +725,8 @@ file, by ticking the checkboxes to the far-left of the rows.
    :alt: On the payments screen, the action menu is highlighted with create a batch payment
          selected.
 
-.. warning::
-   All payments in the batch must share the same payment method.
+.. important::
+   All payments in the batch **must** share the same |NACHA| payment method.
 
 Next, navigate to the batched payment (:menuselection:`Accounting --> Vendors --> Batch Payments`).
 Click into the payment just created and then click into the :guilabel:`Exported File` tab. The

@@ -2,6 +2,9 @@
 Export and import data
 ======================
 
+.. |list| replace:: :icon:`oi-view-list` :guilabel:`(list)` icon
+.. |actions| replace:: :icon:`fa-cog` :guilabel:`Actions`
+
 In Odoo, it is sometimes necessary to export or import data for running reports, or for data
 modification. This document covers the export and import of data into and out of Odoo.
 
@@ -20,9 +23,9 @@ can aid in reporting on activities, although, Odoo provides a precise and easy r
 each available application.
 
 With Odoo, the values can be exported from any field in any record. To do so, activate the list view
-(:guilabel:`≣ (four horizontal lines)` icon), on the items that need to be exported, and then
-select the records that should be exported. To select a record, tick the checkbox next to the
-corresponding record. Finally, click on :guilabel:`⚙️ Action`, and then :guilabel:`Export`.
+(|list|), on the items that need to be exported, then select the records that should be exported. To
+select a record, tick the checkbox next to the corresponding record. Finally, click on |actions|,
+then :guilabel:`Export`.
 
 .. image:: export_import_data/list-view-export.png
    :align: center
@@ -36,9 +39,10 @@ several options for the data to export:
    :alt: Overview of options to consider when exporting data in Odoo..
 
 #. With the :guilabel:`I want to update data (import-compatable export)` option ticked, the system
-   only shows the fields that can be imported. This is helpful in the case where the existing
-   records need to be updated. This works like a filter. Leaving the box unticked, gives many more
-   field options because it shows all the fields, not just the ones that can be imported.
+   only shows the fields that can be imported. This is helpful in the case where the :ref:`existing
+   records need to be updated <essentials/update-data>`. This works like a filter. Leaving the box
+   unticked, gives many more field options because it shows all the fields, not just the ones that
+   can be imported.
 #. When exporting, there is the option to export in two formats: `.csv` and `.xls`. With `.csv`,
    items are separated by a comma, while `.xls` holds information about all the worksheets in a
    file, including both content and formatting.
@@ -70,7 +74,8 @@ Import data into Odoo
 =====================
 
 Importing data into Odoo is extremely helpful during implementation, or in times where data needs to
-be updated in bulk. The following documentation covers how to import data into an Odoo database.
+be :ref:`updated in bulk <essentials/update-data>`. The following documentation covers how to import
+data into an Odoo database.
 
 .. warning::
    Imports are permanent and **cannot** be undone. However, it is possible to use filters (`created
@@ -158,6 +163,9 @@ Once the template is downloaded, proceed to follow these steps:
    using the fields that should be imported. This way, if there is not a sample import template,
    the names are accurate.
 
+
+.. _essentials/external-id:
+
 Import from another application
 -------------------------------
 
@@ -166,7 +174,8 @@ from previous software to facilitate the transition to Odoo.
 
 Setting an ID is not mandatory when importing, but it helps in many cases:
 
-- Update imports: import the same file several times without creating duplicates.
+- :ref:`Update imports <essentials/update-data>`: import the same file several times without
+  creating duplicates.
 - :ref:`Import relation fields <export_import_data/relation-fields>`.
 
 To recreate relationships between different records, the unique identifier from the original
@@ -176,10 +185,7 @@ When another record is imported that links to the first one, use **XXX/ID** (XXX
 the original unique identifier. This record can also be found using its name.
 
 .. warning::
-   It should be noted that there will be a conflict if two or more records have the same name.
-
-The :guilabel:`External ID` (ID) can also be used to update the original import, if modified data
-needs to be re-imported later, therefore, it is a good practice to specify it whenever possible.
+   It should be noted that conflicts occur if two (or more) records have the same *External ID*.
 
 Field missing to map column
 ---------------------------
@@ -476,3 +482,43 @@ The two files produced are ready to be imported in Odoo without any modification
 imported these two :abbr:`CSV (Comma-separated Values)` files, there are four contacts and three
 companies (the first two contacts are linked to the first company). Keep in mind to first import
 the companies, and then the people.
+
+.. _essentials/update-data:
+
+Update data in Odoo
+===================
+
+Existing data can be updated in bulk through a data import, as long as the :ref:`External ID
+<essentials/external-id>` remains consistent.
+
+Prepare data export
+-------------------
+
+To update data through an import, first navigate to the data to be updated, and select the |list| to
+activate list view. On the far-left side of the list, tick the checkbox for any record to be
+updated. Then, click |actions|, and select :icon:`fa-upload` :guilabel:`Export` from the drop-down
+menu.
+
+On the resulting :guilabel:`Export Data` pop-up window, tick the checkbox labeled, :guilabel:`I want
+to update data (import-compatible export)`. This automatically includes the *External ID* in the
+export. Additionally, it limits the :guilabel:`Fields to export` list to **only** include fields
+that are able to be imported.
+
+.. note::
+   The :guilabel:`External ID` field does **not** appear in the :guilabel:`Fields to export` list
+   unless it is manually added, but it is still included in the export. However, if the :guilabel:`I
+   want to update data (import-compatible export)` checkbox is ticked, it is included in the export.
+
+Select the required fields to be included in the export using the :ref:`options <export-data>` on
+the pop-up window, then click :guilabel:`Export`.
+
+Import updated data
+-------------------
+
+After exporting, make any necessary changes to the data file. When the file is ready, it can be
+:ref:`imported <import-data>` by following the same process as a normal data import.
+
+.. danger::
+   When updating data, it is extremely important that the *External ID* remain consistent, as
+   this is how the system identifies a record. If an ID is altered, or removed, the system may add a
+   duplicate record, instead of updating the existing one.
