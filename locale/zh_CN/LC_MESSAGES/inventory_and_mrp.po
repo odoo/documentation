@@ -9682,7 +9682,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:46
 msgid "Pull rules"
-msgstr ""
+msgstr "拉动规则"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:48
 msgid ""
@@ -9697,13 +9697,15 @@ msgid ""
 "triggered by a need, Odoo looks for a pull rule defined on the *Customer "
 "Location*."
 msgstr ""
+"拉取规则用于履行销售订单。 Odoo 在*客户位置*为订单中的每个产品生成需求。由于拉取规则是由需求触发的，因此 Odoo 会查找在 *客户位置* "
+"上定义的拉取规则。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:55
 msgid ""
 "In this case, a \"delivery order\" pull rule that transfers products from "
 "the *Shipping Area* to the *Customer Location* is found, and a transfer "
 "between the two locations is created."
-msgstr ""
+msgstr "在本例中，找到将产品从 *发货区域* 转移到 *客户位置* 的“交货订单” 拉取规则，并创建两个位置之间的转移。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:58
 msgid ""
@@ -9713,6 +9715,8 @@ msgid ""
 "triggered until a transfer between the *Stock* and the *Picking Area* is "
 "created."
 msgstr ""
+"然后，Odoo 找到了另一个试图满足 *运输区域* 需求的拉动规则：将产品从 *包装区域* 转移到 *运输区域* 的 “包装” "
+"规则。最后，触发其他拉动规则，直到创建 *库存* 和 *提货区域* 之间的转移。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:64
 msgid ""
@@ -9722,10 +9726,12 @@ msgid ""
 "transfers in the opposite order: first the picking, then the packing, and "
 "finally the delivery order."
 msgstr ""
+"所有这些产品转移都是由 Odoo "
+"根据拉动规则自动生成的，从末端（客户位置）开始向后（库存仓库）。工作时，操作员以相反的顺序处理这些转移：首先是拣货，然后是包装，最后是交货单。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:70
 msgid "Push rules"
-msgstr ""
+msgstr "拉取规则"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:72
 msgid ""
@@ -9734,6 +9740,8 @@ msgid ""
 "products arrive in a specific location. Push rules basically say: \"when a "
 "product arrives at a specific location, move it to another location.\""
 msgstr ""
+"另一方面，*拉动规则* "
+"更容易理解。它们不是根据需求生成文档，而是在产品到达特定位置时实时触发。拉动规则基本上为：“当产品到达特定位置时，将其移动到另一个位置。”"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:76
 msgid ""
@@ -9742,19 +9750,20 @@ msgid ""
 "applied to different products, the user can assign different storage "
 "locations for different products."
 msgstr ""
+"拉动规则的一个示例是：当产品到达*收货区域*时，将其移动到*存储位置*。由于不同的产品可以应用不同的推送规则，因此用户可以为不同的产品分配不同的存储位置。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:80
 msgid ""
 "Another push rule could be: when products arrive at a location, move them to"
 " the *Quality Control Area*. Then, once the quality check is done, move them"
 " to their *Storage Location*."
-msgstr ""
+msgstr "另一个拉动规则可能是：当产品到达某个位置时，将它们移动到*质量控制区*。然后，质量检查完成后，将它们移至*存储位置*。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:84
 msgid ""
 "Push rules can only be triggered if there are no pull rules that have "
 "already generated the product transfers."
-msgstr ""
+msgstr "仅当没有已生成产品转移的拉动规则时，才能触发推送规则。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:88
 msgid ""
@@ -9764,30 +9773,31 @@ msgid ""
 "grouped in one transfer, whereas the packing operation respects the grouping"
 " per customer order."
 msgstr ""
+"像这样的推/拉规则集称为*路线*。规则的分组决定产品是否分组在同一传输中。例如，在拣货操作期间，所有订单及其产品都在一次传输中分组，而包装操作则按照每个客户订单的分组。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:96
 msgid "Use routes and rules"
-msgstr ""
+msgstr "使用路线和规则"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:98
 msgid ""
 "Since *Routes* are a collection of *Push and Pull Rules*, Odoo helps you "
 "manage advanced route configurations such as:"
-msgstr ""
+msgstr "由于 *路线* 是 *推拉规则* 的集合，因此 Odoo 可帮助您管理高级路线配置，例如："
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:101
 msgid "Manage product manufacturing chains."
-msgstr ""
+msgstr "管理产品的制造链。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:102
 msgid "Manage default locations per product."
-msgstr ""
+msgstr "管理每个产品的默认位置。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:103
 msgid ""
 "Define routes within the stock warehouse according to business needs, such "
 "as quality control, after-sales services, or supplier returns."
-msgstr ""
+msgstr "根据业务需求定义仓库内的路线，例如品控、售后服务或供应商退货。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:105
 msgid ""
@@ -9802,6 +9812,8 @@ msgid ""
 "the :guilabel:`Warehouse` section, enable the :guilabel:`Multi-Step Routes` "
 "feature and click :guilabel:`Save`."
 msgstr ""
+"要配置产品的路线，首先，打开 :guilabel:`库存` 应用程序并转到 :guilabel:`配置 --> 设置`。然后，在 "
+":guilabel:`仓库` 部分中，启用 :guilabel:`多步路线` 功能并点击 :guilabel:`保存`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst-1
 msgid "Activate the Multi-Step Routes feature in Odoo Inventory."
@@ -9831,10 +9843,12 @@ msgid ""
 "pre-configured routes for :guilabel:`Incoming Shipments` and "
 ":guilabel:`Outgoing Shipments`."
 msgstr ""
+"要访问 Odoo 的预配置路线，请转到 :menuselection:`库存 --> 配置 --> "
+"仓库`。然后，打开仓库表单。在仓库配置选项卡中，用户可以查看仓库预配置的进货路线和出货路线。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst-1
 msgid "A pre-configured warehouse in Odoo Inventory."
-msgstr ""
+msgstr "Odoo 库存中预配置的仓库。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:134
 msgid ""
@@ -9844,10 +9858,12 @@ msgid ""
 " set, head to :menuselection:`Inventory --> Configuration --> Routes` to see"
 " the specific routes that Odoo generated."
 msgstr ""
+"还提供一些更高级的路线，例如提货-包装-运输。用户可以选择最适合其业务需求的路线。设置 :guilabel:`进货` 和 :guilabel:`出货` "
+"路线后，前往 :menuselection:`库存 --> 配置 --> 路线` 查看 Odoo 生成的具体路线。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst-1
 msgid "View of all the preconfigured routes Odoo offers."
-msgstr ""
+msgstr "查看 Odoo 提供的所有预配置路线。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:143
 msgid ""
@@ -9858,6 +9874,9 @@ msgid ""
 "environments; for example, a user can have a company and warehouse in "
 "Country A and a second company and warehouse in Country B."
 msgstr ""
+"在 :guilabel:`路线` "
+"页面上，点击一条路线以打开路线表单。在路线表单中，用户可以查看该路线适用于哪些地点。用户还可以将路由设置为仅适用于特定的 "
+":guilabel:`公司`。这对于多公司环境很有用；例如，用户可以在 A 国/地区拥有一家公司和仓库，在 B 国/地区拥有第二家公司和仓库。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst-1
 msgid ""
@@ -9949,14 +9968,14 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst-1
 msgid "View of the menu allowing to add new lines to sales orders."
-msgstr ""
+msgstr "允许向销售订单添加新行的菜单视图。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:207
 msgid ""
 "Finally, there are routes that can be applied to products. Those work more "
 "or less like the product categories: once selected, the route must be "
 "manually set on the product form."
-msgstr ""
+msgstr "最后，还有一些可以应用于产品的路线。这些工作或多或少类似于产品类别：一旦选择，必须在产品表单上手动设置路线。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:210
 msgid ""
@@ -10145,7 +10164,7 @@ msgstr ""
 msgid ""
 "To prepare the delivery order, packed products are needed at the output "
 "area, so an internal transfer is requested from the packing zone."
-msgstr ""
+msgstr "为了准备交货单，输出区域需要包装产品，因此需要从包装区域进行内部转移。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst-1
 msgid ""
@@ -10566,12 +10585,14 @@ msgid ""
 "the :guilabel:`✏️ (pencil)` icon, and enter the required quantities for the "
 "picking."
 msgstr ""
+"对于所选的批量传输，请按照页面顶部黑色背景的说明进行操作。首先扫描产品的条形码以记录单个产品以供拣选。要记录多个数量，请点击 "
+":guilabel:`✏️（铅笔）` 图标，然后输入提货所需的数量。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:221
 msgid ""
 "Products from the same order are labeled with the same color on the left. "
 "Completed pickings are highlighted in green."
-msgstr ""
+msgstr "同一订单的产品在左侧标有相同颜色。已完成的拣货以绿色突出显示。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:225
 msgid ""
@@ -10621,14 +10642,14 @@ msgid ""
 "This method is most efficient for medium-sized companies, with high order "
 "volumes, and relatively few unique products, since the method eliminates the"
 " need for sorting products into packages for customers after picking."
-msgstr ""
+msgstr "这种方法对于订单量大、独特产品相对较少的中型公司来说最为有效，因为该方法无需在拣货后将产品分类到包装中供客户使用。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.rst:21
 msgid ""
 "However, cluster picking does have some disadvantages. For instance, urgent "
 "orders cannot be prioritized, and optimized batches must be manually created"
 " beforehand. As a result, the picking process can lead to bottlenecks."
-msgstr ""
+msgstr "然而，集群拣货确实有一些缺点。例如，紧急订单无法区分优先级，必须事先手动创建优化批次。因此，拣货过程可能会出现瓶颈。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.rst:28
 msgid "|SO| 1 calls for one apple and orange"
@@ -10697,7 +10718,7 @@ msgid ""
 "*Storage locations* allow products to be stored in specific locations they "
 "can be picked from, while *multi-step routes* enable the picking operation "
 "itself."
-msgstr ""
+msgstr "*存储位置* 允许将产品存储在可以从中拣选的特定位置，而 *多步骤路线* 可以实现拣选操作本身。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.rst:65
 msgid "When finished, click :guilabel:`Save`."
@@ -10979,11 +11000,11 @@ msgid ""
 "After creating a batch transfer and assigning a package to a picking, Odoo "
 "suggests the specified package by displaying the name *in italics* under the"
 " product name, ensuring pickers place products into the correct boxes."
-msgstr ""
+msgstr "创建批量转移并将包裹分配给拣货后，Odoo 通过在产品名称下显示 *斜体* 名称来建议指定的包裹，确保拣货员将产品放入正确的盒子中。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst:3
 msgid "Process wave transfers"
-msgstr ""
+msgstr "处理波次转移"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst:5
 msgid ""
@@ -11106,7 +11127,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:3
 msgid "Removal strategies"
-msgstr ""
+msgstr "下架策略"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:5
 msgid ""
