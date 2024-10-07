@@ -258,7 +258,8 @@ it uses the values of other *fields*, it should specify those fields using
 
 * computed fields are not stored by default, they are computed and
   returned when requested. Setting ``store=True`` will store them in the
-  database and automatically enable searching.
+  database and automatically enable searching and grouping.
+  Note that by default, ``compute_sudo=True`` is set on the field.
 * searching on a computed field can also be enabled by setting the ``search``
   parameter. The value is a method name returning a
   :ref:`reference/orm/domains`. ::
@@ -268,7 +269,7 @@ it uses the values of other *fields*, it should specify those fields using
     def _search_upper(self, operator, value):
         if operator == 'like':
             operator = 'ilike'
-        return [('name', operator, value)]
+        return Domain('name', operator, value)
 
   The search method is invoked when processing domains before doing an
   actual search on the model. It must return a domain equivalent to the
@@ -276,8 +277,9 @@ it uses the values of other *fields*, it should specify those fields using
 
 .. TODO and/or by setting the store to True for search domains ?
 
-* Computed fields are readonly by default. To allow *setting* values on a computed field, use the ``inverse``
-  parameter. It is the name of a function reversing the computation and
+* computed fields are readonly by default. To allow *setting* values on a
+  computed field, use the ``inverse`` parameter.
+  It is the name of a function reversing the computation and
   setting the relevant fields::
 
     document = fields.Char(compute='_get_document', inverse='_set_document')
@@ -832,7 +834,7 @@ Common ORM methods
 
 .. currentmodule:: odoo.models
 
-Create/update
+Create/Update
 -------------
 
 .. todo:: api.model_create_multi information
@@ -878,10 +880,11 @@ Fields
 Search domains
 ~~~~~~~~~~~~~~
 
-A domain is a list of criteria, each criterion being a triple (either a
-``list`` or a ``tuple``) of ``(field_name, operator, value)`` where:
+A :class:`~odoo.domains.Domain` is a first-order logical expression used for
+filtering and searching recordsets.
+A domain can be a simple condition ``(field_expr, operator, value)`` where:
 
-* ``field_name`` (``str``)
+* ``field_expr`` (``str``)
     a field name of the current model, or a relationship traversal through
     a :class:`~odoo.fields.Many2one` using dot-notation e.g. ``'street'``
     or ``'partner_id.country'``. If the field is a date(time) field, you can also
@@ -892,7 +895,7 @@ A domain is a list of criteria, each criterion being a triple (either a
     They all use an integer as value.
 
 * ``operator`` (``str``)
-    an operator used to compare the ``field_name`` with the ``value``. Valid
+    an operator used to compare the ``field_expr`` with the ``value``. Valid
     operators are:
 
     ``=``
@@ -911,11 +914,11 @@ A domain is a list of criteria, each criterion being a triple (either a
         unset or equals to (returns true if ``value`` is either ``None`` or
         ``False``, otherwise behaves like ``=``)
     ``=like``
-        matches ``field_name`` against the ``value`` pattern. An underscore
+        matches ``field_expr`` against the ``value`` pattern. An underscore
         ``_`` in the pattern stands for (matches) any single character; a
         percent sign ``%`` matches any string of zero or more characters.
     ``like``
-        matches ``field_name`` against the ``%value%`` pattern. Similar to
+        matches ``field_expr`` against the ``%value%`` pattern. Similar to
         ``=like`` but wraps ``value`` with '%' before matching
     ``not like``
         doesn't match against the ``%value%`` pattern
@@ -927,7 +930,7 @@ A domain is a list of criteria, each criterion being a triple (either a
         case insensitive ``=like``
     ``in``
         is equal to any of the items from ``value``, ``value`` should be a
-        list of items
+        collection of items
     ``not in``
         is unequal to all of the items from ``value``
     ``child_of``
@@ -946,12 +949,13 @@ A domain is a list of criteria, each criterion being a triple (either a
         :attr:`~odoo.models.Model._parent_name`).
     ``any``
         matches if any record in the relationship traversal through
-        ``field_name`` (:class:`~odoo.fields.Many2one`,
+        ``field_expr`` (:class:`~odoo.fields.Many2one`,
         :class:`~odoo.fields.One2many`, or :class:`~odoo.fields.Many2many`)
         satisfies the provided domain ``value``.
+        The ``field_expr`` should be a field name.
     ``not any``
         matches if no record in the relationship traversal through
-        ``field_name`` (:class:`~odoo.fields.Many2one`,
+        ``field_expr`` (:class:`~odoo.fields.Many2one`,
         :class:`~odoo.fields.One2many`, or :class:`~odoo.fields.Many2many`)
         satisfies the provided domain ``value``.
 
@@ -959,19 +963,39 @@ A domain is a list of criteria, each criterion being a triple (either a
     variable type, must be comparable (through ``operator``) to the named
     field.
 
-Domain criteria can be combined using logical operators in *prefix* form:
+The :class:`~odoo.domains.Domain` can be used as a builder for domains.
 
-``'&'``
-    logical *AND*, default operation to combine criteria following one
-    another. Arity 2 (uses the next 2 criteria or combinations).
-``'|'``
-    logical *OR*, arity 2.
-``'!'``
-    logical *NOT*, arity 1.
+.. code-block:: python
 
-    .. note:: Mostly to negate combinations of criteria
-        Individual criterion generally have a negative form (e.g. ``=`` ->
-        ``!=``, ``<`` -> ``>=``) which is simpler than negating the positive.
+    # parse a domain (from list to Domain)
+    domain = Domain([('name', '=', 'abc'), ('phone', 'like', '7620')])
+
+    # simple domains
+    d1 = Domain('name', '=', 'abc')
+    d2 = Domain('phone', 'like', '7620')
+
+    # combine domains
+    d3 = d1 & d2  # and
+    d4 = d1 | d2  # or
+    d5 = ~d1      # not
+
+    # combine and parse multiple domains
+    Domain.AND(d1, d2, d3, ...)
+    Domain.OR(d4, d5, ...)
+
+    # constants
+    Domain.TRUE   # true domain
+    Domain.FALSE  # false domain
+
+.. automethod:: odoo.domains.Domain.iter_conditions
+
+.. automethod:: odoo.domains.Domain.map_conditions
+
+A domain is serialized as a ``list`` of criteria, each criterion being a triple
+(either a ``list`` or a ``tuple``) representing a simple condition.
+Domain criteria can be combined using logical operators in a *prefix* notation.
+You can combine 2 domains using ``'&'`` (AND), ``'|'`` (OR)
+and you can negate 1 using ``'!'`` (NOT).
 
 .. example::
 
@@ -990,6 +1014,7 @@ Domain criteria can be combined using logical operators in *prefix* form:
     To search for all partners born in the month of February::
 
         [('birthday.month_number', '=', 2)]
+
 
 Unlink
 ------
