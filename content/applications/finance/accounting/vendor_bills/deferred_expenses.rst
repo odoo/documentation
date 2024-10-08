@@ -41,9 +41,20 @@ Generate Entries
   :ref:`generate them manually <vendor_bills/deferred/generate_manually>` by selecting the
   :guilabel:`Manually & Grouped` option instead.
 Based on
-  Suppose a bill of $1200 must be deferred over 12 months. The :guilabel:`Months`
-  computation recognizes $100 each month, while the :guilabel:`Days` computation recognizes
-  different amounts depending on the number of days in each month.
+  Suppose a bill of $1200 must be deferred over 12 months.
+
+  - The :guilabel:`Months` option accounts for $100 each month prorated to the number of days in
+    that month (e.g., $50 for the first month if the :guilabel:`Start Date` is set to the 15th of
+    the month).
+
+  - The :guilabel:`Full Months` option considers each month started to be full (e.g., $100 for the
+    first month even if the :guilabel:`Start Date` is set to the 15th of the month); this means that
+    with the :guilabel:`Full Months` option, a full $100 is recognized in the first partial month,
+    eliminating the need for a 13th month to recognize any remainder as would be the case when using
+    the :guilabel:`Months` option.
+
+  - The :guilabel:`Days` option accounts for different amounts depending on the number of days in
+    each month (e.g., ~$102 for January and ~$92 for February).
 
 .. _vendor_bills/deferred/generate_on_validation:
 
