@@ -217,6 +217,27 @@ Production and staging builds are excluded, visitors can only see their status.
 
 .. _odoosh-gettingstarted-settings-modules-installation:
 
+Github Commit statues
+=====================
+
+If used this option allows to push the build status to your github repository.
+It requires an access token that is allowed to push a commit status on the repository.
+Refer to `Github documentation <https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens>`_
+to create your token.
+Token have an expiration date and will be disabled when failing to update the commit status.
+
+The context of the status can be:
+
+- :guilabel:`ci/odoo.sh (dev)`: status of a dev build.
+
+- :guilabel:`ci/odoo.sh (staging)`: status of a staging build.
+
+- :guilabel:`ci/odoo.sh (production)`: status of a production build.
+
+- :guilabel:`ci/odoo.sh (test_ci)`: testing the token will push a test status on the last commit of your repository
+
+Keep in mind the result status may depend on your branch setting. It will reflect the status of the builds on Odoo.sh
+
 Custom domains
 ==============
 
