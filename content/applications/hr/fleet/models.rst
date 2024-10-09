@@ -192,6 +192,12 @@ The order of the list does not affect the database in any way. However, it may b
 the vehicle categories in a specific order, for example, by size, or the numbers of passengers the
 vehicle can carry.
 
+.. note::
+   When used with the **Inventory** app, the :guilabel:`Max Weight` and :guilabel:`Max Volume`
+   fields track a vehicle's capacity. This helps manage in-house deliveries by :doc:`showing how
+   much space and weight remain for loading products
+   <../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch>`.
+
 .. image:: models/categories.png
    :align: center
    :alt: List view of the models in the fleet.
