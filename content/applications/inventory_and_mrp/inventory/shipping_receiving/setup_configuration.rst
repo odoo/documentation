@@ -285,3 +285,4 @@ delivery order. To add or change the delivery method on the delivery itself, go 
    setup_configuration/label_type
    setup_configuration/multipack
    setup_configuration/print_on_validation
+   setup_configuration/dispatch
