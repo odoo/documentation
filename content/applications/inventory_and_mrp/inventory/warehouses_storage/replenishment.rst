@@ -206,4 +206,3 @@ on the product form.
    replenishment/reordering_rules
    replenishment/lead_times
    replenishment/resupply_warehouses
-   replenishment/warehouse_replenishment_transfer
