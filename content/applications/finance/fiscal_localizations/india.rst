@@ -567,3 +567,122 @@ goods (i.e :guilabel:`Opening Stock` + purchases during the period - :guilabel:`
 
    .. image:: india/profit-and-loss-report.png
       :alt: Profit and Loss report
+
+.. _india/tds-tcs-threshold:
+
+TDS/TCS Threshold alert
+=======================
+
+.. note::
+   If you want the system to advise you on when to apply TDS/TCS, simply configure the correct **TDS/TCS**
+   section in the Chart of Accounts. The system will then prompt you when recording a bill or invoice.
+
+Configuration
+-------------
+
+Navigate to **Accounting --> Configuration --> Settings --> Indian Integration** and enable **TDS and TCS**.
+
+   .. image:: india/tds-tcs-settings.png
+      :alt: TDS/TCS Settings
+
+#. **How to configure TDS/TCS Section on COA?**
+
+.. tabs::
+
+   .. tab:: TDS
+
+      - Navigate to **Accounting --> Configuration --> Chart of Accounts**. open the desired account, and configure the TDS/TCS section.
+         .. image:: india/tds-194c-coa.png
+            :alt: TDS 194C configuration with CoA
+         .. image:: india/tds-194J-coa.png
+            :alt: TDS 194J configuration with CoA
+
+      - Based on the COA used during the recording of the vendor bill, the TDS threshold limit will be checked.
+         .. image:: india/tds-coa-vendor-bill-config.png
+            :alt: configuration CoA with Vendor Bill
+
+      - At the time of recording a Vendor Bill, if the limit specified in the TDS section configured in COA is exceeded, the system will advise you to apply TDS.
+         .. image:: india/tds-alert.gif
+            :alt: TDS Alert
+      - The advice will disappear once you apply TDS.
+
+      **TDS Advise**
+
+      - The TDS advice will be visible on the Vendor Bill, indicating the applicable section under which TDS may be applied.
+         .. image:: india/tds-warning.png
+            :alt: TDS Advise
+
+      **How to apply TDS?**
+
+      - To apply TDS, click on the **"TDS Entry"** button available on the Vendor Bill / Payment. A popup window will appear where you can specify the TDS details. Confirm the entry to apply the TDS.
+         .. image:: india/tds-apply.png
+            :alt: TDS Apply
+
+   .. tab:: TCS
+
+      - Navigate to **Accounting --> Configuration --> Chart of Accounts**. open the desired account, and configure the TDS/TCS section.
+         .. image:: india/tcs-2061h-coa1.png
+            :alt: TCS 206(1H) configuration with CoA
+         .. image:: india/tcs-2061h-coa2.png
+            :alt: TCS 206(1H) configuration with CoA
+      - Based on the COA used during the recording of the Customer Invoice, the TCS threshold limit will be checked.
+         .. image:: india/tcs-coa-invoice-config.png
+            :alt: configuration CoA with Vendor Bill
+      - At the time of recording a Customer Invoice, if the limit specified in the TCS section configured in COA is exceeded, the system will advise you to apply TCS.
+         .. image:: india/tcs-alert.gif
+            :alt: TCS Alert
+      - The advice will disappear once you apply TCS.
+
+      **TCS Advise**
+
+      - The TCS advice will be visible on the Customer Invoice, indicating the applicable section under which TCS may be applied.
+         .. image:: india/tcs-warning.png
+            :alt: TCS Advise
+
+      **How to apply TCS?**
+
+      - TCS is directly applicable in the tax on invoice lines.
+
+.. note::
+   - In Odoo, the aggregate total is calculated for partners sharing the same PAN number, across all branches of the company.
+   - **Example:**
+      .. list-table::
+         :header-rows: 1
+         :widths: 10 20 10 20 15
+
+         * - **Branch**
+           - **Customer**
+           - **Invoice**
+           - **Transaction Amount (₹)**
+           - **PAN Number**
+         * - IN - MH
+           - XYZ Enterprise - GJ
+           - Invoice 1
+           - ₹50,000
+           - ABCPX1234E
+         * - IN - MH
+           - XYZ Enterprise - GJ
+           - Invoice 2
+           - ₹30,000
+           - ABCPX1234E
+         * - IN - MH
+           - XYZ Enterprise - MH
+           - Invoice 3
+           - ₹40,000
+           - ABCPX1234E
+         * - IN - DL
+           - XYZ Enterprise - GJ
+           - Invoice 4
+           - ₹20,000
+           - ABCPX1234E
+         * - IN - GJ
+           - XYZ Enterprise - MH
+           - Invoice 5
+           - ₹60,000
+           - ABCPX1234E
+
+      - **Aggregate Total** = 50,000 + 30,000 + 40,000 + 20,000 + 60,000 = ₹200,000
+      - The aggregate total for all customers (XYZ Enterprise - GJ, MH, DL) sharing the PAN number ABCPX1234E across all branches is ₹200,000.
+   - The TDS/TCS sections are pre-configured with threshold limits. If you need to modify these limits, go to **Accounting --> Configuration --> Taxes** Advance options Tab and Sections.
+      .. image:: india/tds-tcs-section-modifiy.png
+         :alt: TDS/TCS section modify
