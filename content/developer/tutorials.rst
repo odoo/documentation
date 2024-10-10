@@ -15,6 +15,7 @@ Tutorials
    tutorials/unit_tests
    tutorials/mixins
    tutorials/pdf_reports
+   tutorials/data_modules
 
 .. tip::
    If you are new to Odoo development, we recommend starting with the :doc:`setup guide
@@ -83,3 +84,8 @@ Expand your knowledge on the server framework
       :target: tutorials/pdf_reports
 
       Use QWeb, Odoo's powerful templating engine, to create custom PDF reports for your documents.
+
+   .. card:: Write Data Modules
+      :target: tutorials/data_modules
+
+      Write modules that define new models, fields and logic using only data files.
