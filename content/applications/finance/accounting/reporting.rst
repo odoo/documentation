@@ -24,8 +24,9 @@ the details.
 .. image:: reporting/reporting-annotate.png
    :alt: Annotate reports.
 
-To export reports in PDF or XLSX format, click :guilabel:`PDF` or :guilabel:`XLSX` at the top of the
-page.
+To export reports in PDF or XLSX format, click :guilabel:`PDF` at the top or click the
+:icon:`fa-caret-down` (:guilabel:`down arrow`) icon next to the :guilabel:`PDF` button and
+select :guilabel:`XLSX`.
 
 To compare values across periods, click the :guilabel:`Comparison` menu and select the periods you
 want to compare.
