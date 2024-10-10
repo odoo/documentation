@@ -59,8 +59,8 @@ Enter the following information on the form:
   this field is left blank, it automatically populates once an employee is selected. The default
   entry is `Attendance: (Employee)`.
 - :guilabel:`Employee`: select the employee the work entry is for, using the drop-down menu.
-- :guilabel:`Work Entry Type`: select the :ref:`work entry type <payroll/work-entries-config>` using
-  the drop-down menu.
+- :guilabel:`Work Entry Type`: select the :ref:`work entry type <payroll/work-entries>` using the
+  drop-down menu.
 - :guilabel:`From` and :guilabel:`To`: enter the start (:guilabel:`From`) and end (:guilabel:`To`)
   dates and times for the work entry.
 
