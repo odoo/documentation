@@ -801,9 +801,8 @@ scheduling changes or discussions between teachers and assistants:
 .. code-block:: python
     :caption: ``academy/models.py``
 
-    class Courses(models.Model):
-        _name = 'academy.courses'
-        _inherit = 'mail.thread'
+    class AcademyCourses(models.Model):
+        _inherit = ['mail.thread']
 
         name = fields.Char()
         teacher_id = fields.Many2one('academy.teachers', string="Teacher")

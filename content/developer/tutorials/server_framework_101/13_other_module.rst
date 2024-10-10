@@ -67,7 +67,7 @@ module for the ``estate.property`` model. For now, the overridden action will si
     from odoo import models
 
     class InheritedModel(models.Model):
-        _inherit = "inherited.model"
+        _inherit = ["inherited.model"]
 
         def inherited_action(self):
             return super().inherited_action()
