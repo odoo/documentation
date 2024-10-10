@@ -217,28 +217,25 @@ Production and staging builds are excluded, visitors can only see their status.
 
 .. _odoosh-gettingstarted-settings-modules-installation:
 
-Github commit statuses
+GitHub commit statuses
 ======================
 
 This option enables Odoo.sh to push commit statuses to your GitHub repository when a build is
 created or updated. It requires a GitHub token with permissions to push commit statuses to the
-repository. Please refer to the `Github documentation <https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens>`_
-for instructions on creating your token.
+repository. Refer to `GitHub's documentation on personal access tokens <https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens>`_
+for instructions to create yours.
 
 .. note::
-    GitHub's *fine-grained personal tokens* have an expiration date and will be disabled if they
+    GitHub's **fine-grained personal tokens** have an expiration date and will be disabled if they
     fail to update the commit status. You can replace the token at any time on Odoo.sh.
 
 The commit statuses pushed to GitHub can have the following contexts:
 
-- :guilabel:`ci/odoo.sh (dev)`: Status of a development build.
-- :guilabel:`ci/odoo.sh (staging)`: Status of a staging build.
-- :guilabel:`ci/odoo.sh (production)`: status of a production build.
-- :guilabel:`ci/odoo.sh (test_ci)`: Testing the token from the Settings page will push a test
-  status on the last commit of your repository.
-
-Keep in mind that the result status being pushed depends on your Odoo.sh branch settings and will
-accurately reflect the status of the builds on Odoo.sh.
+- :guilabel:`ci/odoo.sh (dev)`: status of a development build
+- :guilabel:`ci/odoo.sh (staging)`: status of a staging build
+- :guilabel:`ci/odoo.sh (production)`: status of a production build
+- :guilabel:`ci/odoo.sh (test_ci)`: testing the token from the Settings page will push a test
+  status on the last commit of your repository
 
 Custom domains
 ==============
