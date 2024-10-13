@@ -4,8 +4,9 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Norimichi Sugimoto <norimichi.sugimoto@tls-ltd.co.jp>, 2023
-# Noma Yuki, 2023
+# Norimichi Sugimoto <norimichi.sugimoto@tls-ltd.co.jp>, 2024
+# Tiffany Chang, 2024
+# Noma Yuki, 2024
 # Ryoko Tsuda <ryoko@quartile.co>, 2024
 # Wil Odoo, 2024
 # Junko Augias, 2024
@@ -13,10 +14,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 17.0\n"
+"Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-24 10:43+0000\n"
-"PO-Revision-Date: 2023-11-08 08:57+0000\n"
+"POT-Creation-Date: 2024-10-07 14:21+0000\n"
+"PO-Revision-Date: 2024-10-08 06:34+0000\n"
 "Last-Translator: Junko Augias, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/odoo/teams/41243/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -71,8 +72,9 @@ msgstr ""
 #: ../../content/applications/sales/crm/track_leads/resellers.rst:9
 #: ../../content/applications/sales/point_of_sale/combos.rst:16
 #: ../../content/applications/sales/point_of_sale/configuration.rst:6
-#: ../../content/applications/sales/point_of_sale/configuration.rst:52
+#: ../../content/applications/sales/point_of_sale/configuration.rst:54
 #: ../../content/applications/sales/point_of_sale/employee_login.rst:13
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:9
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:13
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:20
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:15
@@ -80,7 +82,6 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:12
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:14
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:19
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/vantiv.rst:17
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_wallet.rst:13
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:16
 #: ../../content/applications/sales/point_of_sale/pricing/cash_rounding.rst:17
@@ -103,7 +104,6 @@ msgstr ""
 #: ../../content/applications/sales/sales/send_quotations/pdf_quote_builder.rst:24
 #: ../../content/applications/sales/sales/send_quotations/quote_template.rst:14
 #: ../../content/applications/sales/subscriptions/closing.rst:9
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:21
 #: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:17
 msgid "Configuration"
 msgstr "設定"
@@ -511,7 +511,7 @@ msgstr "Odoo CRMの設定でリードマイニングを有効にします。"
 
 #: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:23
 msgid "Generate leads"
-msgstr "リードを生成"
+msgstr "リード生成"
 
 #: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:25
 msgid ""
@@ -8116,7 +8116,7 @@ msgid ""
 "popup window, from which you can:"
 msgstr ""
 "ダッシュボードからPOSカードの縦三点リードボタン (:guilabel:`⋮`) "
-"をクリックして、設定を行うこともできます。ポップアップウィンドウが開き、以下を行えます:"
+"をクリックして、いくつかの設定を行うこともできます。そうするとポップアップウィンドウが開き、以下のことができます:"
 
 #: ../../content/applications/sales/point_of_sale/configuration.rst:27
 msgid ":doc:`Enable multiple employees to log in. <employee_login>`"
@@ -8146,37 +8146,43 @@ msgid "Make products available"
 msgstr "プロダクトを利用可能にする"
 
 #: ../../content/applications/sales/point_of_sale/configuration.rst:41
-msgid ""
-"To make products available for sale, go to :menuselection:`Point of Sale -->"
-" Products --> Products`, and select a product to open the product form. In "
-"the :guilabel:`Sales` tab, enable :guilabel:`Available in POS`."
+msgid "To make products available for sale,"
 msgstr ""
-"プロダクトを販売可能にするには、 :menuselection:`POS --> プロダクト --> プロダクト` "
-"に進み、プロダクトを選択してプロダクトフォームを開きます。:guilabel:`販売` タブで :guilabel:`POSで利用可能` "
-"を有効にします。"
+
+#: ../../content/applications/sales/point_of_sale/configuration.rst:43
+msgid "Go to :menuselection:`Point of Sale --> Products --> Products`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration.rst:44
+msgid "Select a product to open the product form."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration.rst:45
+msgid "Tick the :guilabel:`Point of Sale` checkbox at the top of the form."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/configuration.rst-1
 msgid "Making a product available in your POS."
 msgstr "POSでプロダクトを利用可能にします。"
 
-#: ../../content/applications/sales/point_of_sale/configuration.rst:49
+#: ../../content/applications/sales/point_of_sale/configuration.rst:51
 msgid "PoS product categories"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/configuration.rst:54
+#: ../../content/applications/sales/point_of_sale/configuration.rst:56
 msgid ""
 "POS product categories allow users to categorize products and get a more "
 "structured and clean POS interface."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/configuration.rst:57
+#: ../../content/applications/sales/point_of_sale/configuration.rst:59
 msgid ""
 "To manage PoS categories, go to :menuselection:`Point of Sale --> "
 "Configuration --> PoS Product Categories`. To add a new category, click "
 ":guilabel:`Create`. Then, name it in the :guilabel:`Category Name` field."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/configuration.rst:61
+#: ../../content/applications/sales/point_of_sale/configuration.rst:63
 msgid ""
 "To associate a category with a parent category, fill in the "
 ":guilabel:`Parent Category` field. A parent category groups one or more "
@@ -8187,52 +8193,53 @@ msgstr ""
 msgid "The PoS product categories grouped by parent categories"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/configuration.rst:69
+#: ../../content/applications/sales/point_of_sale/configuration.rst:71
 msgid "Assign PoS product categories"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/configuration.rst:71
+#: ../../content/applications/sales/point_of_sale/configuration.rst:73
 msgid ""
 "Go to :menuselection:`Point of Sale --> Products --> Products` and open a "
-"product form. Then, go to the :guilabel:`Sales` tab and fill in the "
-":guilabel:`Category` field under the :guilabel:`Point of Sale` section."
+"product form. Then, go to the :guilabel:`Point of Sale` tab and fill in the "
+":guilabel:`Category` field under the :guilabel:`Point of Sale` section with "
+"one or multiple PoS categories."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/configuration.rst-1
-msgid "Sales tab of a product form to add a PoS product category"
+msgid "Point of Sale tab of a product form to add a PoS product category"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/configuration.rst:79
+#: ../../content/applications/sales/point_of_sale/configuration.rst:81
 msgid "Adapt the POS interface"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/configuration.rst:82
+#: ../../content/applications/sales/point_of_sale/configuration.rst:84
 msgid "Start category"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/configuration.rst:84
+#: ../../content/applications/sales/point_of_sale/configuration.rst:86
 msgid ""
 "You can select one product category to display when :ref:`opening a POS "
 "session <pos/session-start>`. To configure it, go to your :ref:`POS settings"
 " <configuration/settings>` and select a PoS category from the dropdown menu "
-"of the :guilabel:`Start Category` field within the :guilabel:`PoS Interface`"
-" section."
+"of the :guilabel:`Start Category` field within the :guilabel:`Product & PoS "
+"categories` section."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/configuration.rst-1
 msgid "Setting to set up the start category feature"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/configuration.rst:93
+#: ../../content/applications/sales/point_of_sale/configuration.rst:95
 msgid "Restrict categories"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/configuration.rst:95
+#: ../../content/applications/sales/point_of_sale/configuration.rst:97
 msgid ""
 "You can also limit the categories displayed on your POS interface. To "
 "achieve this, go to your :ref:`POS settings <configuration/settings>` and "
 "choose the specific categories to display in the :guilabel:`Restrict "
-"Categories` field within the :guilabel:`PoS Interface` section."
+"Categories` field within the :guilabel:`Product & PoS categories` section."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/configuration.rst-1
@@ -9035,7 +9042,7 @@ msgid ""
 ":guilabel:`Orders` button to view a list of all orders placed during that "
 "session."
 msgstr ""
-"POSセッションを閉じて登録したら、総合レポートにアクセスして、誰がセッションを開始し、誰が特定のオーダを処理したかなど、全てのセッションアクティビティを確認します。セッションのレポートにアクセスするには、POSカードの縦三点リーダボタン"
+"POSセッションを閉じて記帳したら、総合レポートにアクセスして、誰がセッションを開始し、誰が特定のオーダを処理したかなど、全てのセッションアクティビティを確認します。セッションのレポートにアクセスするには、POSカードの縦三点リーダボタン"
 " (:guilabel:`⋮`) をクリックし、 :guilabel:`表示` セクションから :guilabel:`セッション` "
 "を選択します。次に、より詳細な情報を見るために特定のセッションを選択し、 "
 ":guilabel:`オーダ`ボタンをクリックすると、そのセッション中に発注された全てのオーダのリストが表示されます。"
@@ -9046,7 +9053,7 @@ msgid ""
 "vertical ellipsis button (:guilabel:`⋮`) on the POS card and select "
 ":guilabel:`Orders` from the :guilabel:`View` section."
 msgstr ""
-"セッションに関係なく、全てのオーダの概要を見るには、POSカードの縦三点リーダボタン (:guilabel:`⋮`) をクリックし、 "
+"セッションに関係なく、全てのオーダの概要を見るには、POSカードの縦三点リードボタン (:guilabel:`⋮`) をクリックし、 "
 ":guilabel:`表示` セクションから :guilabel:`オーダ` を選択します。"
 
 #: ../../content/applications/sales/point_of_sale/payment_methods.rst:5
@@ -9104,6 +9111,297 @@ msgstr ""
 "<configuration/settings>` に行き、 :guilabel:`編集` をクリックし、 :guilabel:`支払` "
 "セクションの下に支払方法を追加します。"
 
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:3
+msgid "QR code payments"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:5
+msgid ""
+"QR code payments allow users to generate a code that customers can scan with"
+" their mobile banking app to initiate a bank transfer or pay instantly."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:12
+msgid "Activate and set up QR code payments"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:14
+msgid "Go to :menuselection:`Accounting --> Configuration --> Settings`, and"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:16
+msgid ""
+"Activate or upgrade your country's fiscal localization package under the "
+":guilabel:`Fiscal Localization` section to access all country-specific "
+"accounting features."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:18
+msgid ""
+"Activate :guilabel:`QR codes` under the :guilabel:`Customer Payments` "
+"section."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:20
+msgid ""
+"Then, as the QR code type differs depending on your country, follow the "
+"corresponding documentation page from the following table to set them up."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:26
+msgid "QR code types"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:27
+msgid "Module name"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:28
+msgid "Technical name"
+msgstr "技術名"
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:29
+msgid "Description"
+msgstr "説明"
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:30
+msgid "Pix"
+msgstr "Pix"
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:31
+msgid ""
+":doc:`Brazilian - Accounting<../../../finance/fiscal_localizations/brazil>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:32
+msgid "`l10n_br`"
+msgstr "`l10n_br`"
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:33
+msgid ""
+"The base module to manage the accounting chart and localization for Brazil."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:34
+msgid "FPS"
+msgstr "FPS"
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:35
+msgid ""
+":doc:`Hong Kong - "
+"Accounting<../../../finance/fiscal_localizations/hong_kong>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:36
+msgid "`l10n_hk`"
+msgstr "`l10n_hk`"
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:37
+msgid ""
+"The base module to manage the accounting chart and localization for Hong "
+"Kong."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:38
+msgid "QRIS"
+msgstr "QRIS"
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:39
+msgid ""
+":doc:`Indonesian - "
+"Accounting<../../../finance/fiscal_localizations/indonesia>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:40
+msgid "`l10n_id`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:41
+msgid ""
+"The base module to manage the accounting chart and localization for "
+"Indonesia."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:42
+msgid "PayNow"
+msgstr "PayNow"
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:43
+msgid ""
+":doc:`Singapore - "
+"Accounting<../../../finance/fiscal_localizations/singapore>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:44
+msgid "`l10n_sg`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:45
+msgid ""
+"The base module to manage the accounting chart and localization for "
+"Singapore."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:46
+msgid "QR-bill"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:47
+msgid ""
+":doc:`Switzerland - "
+"Accounting<../../../finance/fiscal_localizations/switzerland>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:48
+msgid "`l10n_ch`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:49
+msgid ""
+"The base module to manage the accounting chart and localization for "
+"Switzerland."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:50
+msgid "PromptPay"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:51
+msgid ""
+":doc:`Thailand - Accounting<../../../finance/fiscal_localizations/thailand>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:52
+msgid "`l10n_th`"
+msgstr "`l10n_th`"
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:53
+msgid ""
+"The base module to manage the accounting chart and localization for "
+"Thailand."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:54
+msgid "VietQR"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:55
+msgid ""
+":doc:`Vietnam - Accounting<../../../finance/fiscal_localizations/vietnam>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:56
+msgid "`l10n_vn`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:57
+msgid ""
+"The base module to manage the accounting chart and localization for Vietnam."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:58
+msgid "EPC"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:59
+msgid ""
+":doc:`Account SEPA QR "
+"Code<../../../finance/accounting/customer_invoices/epc_qr_code>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:60
+msgid "`account_qr_code_sepa`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:61
+msgid "This module adds support for SEPA Credit Transfer QR-code generation."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:64
+msgid "Create the payment method"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:66
+msgid "Open the Point of Sale application."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:67
+msgid ""
+"Go to :menuselection:`Configuration --> Payment Methods` and create a "
+"payment method."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:68
+msgid "Set a bank-type journal."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:69
+msgid ""
+"Select :guilabel:`Bank App (QR Code)` under the :guilabel:`Integration` "
+"section."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:70
+msgid "Select the :guilabel:`QR Code Format` from the dropdown menu."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:72
+msgid ""
+"Select :guilabel:`SEPA Credit Transfer QR` if you are part of the Single "
+"Euro Payments Area (SEPA)."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:74
+msgid ""
+"Select :guilabel:`EMV Merchant-Presented QR-code` for other QR code types."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst-1
+msgid "QR code payment method configuration"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:80
+msgid ""
+"At least one bank account must be defined in the journal to allow QR code "
+"payments to be registered with bank apps."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:83
+msgid ""
+"Once the payment method is created, go to the :ref:`POS' settings "
+"<configuration/settings>` and add the payment method to your POS under the "
+":guilabel:`Payment` section."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst-1
+msgid "Enable QR code payment method"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:90
+msgid "Register payments using QR codes"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:92
+msgid ""
+"When processing a payment, select the payment method for QR code payments. A"
+" QR code is generated and displayed on the screen for the customer to scan "
+"and pay with their mobile banking app."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst-1
+msgid "QR code payment example"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:98
+msgid "Hit :guilabel:`Confirm Payment` to validate the transaction."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:101
+msgid ""
+"Odoo does **not** check the bank payment. It is recommended that users "
+"verify payments for validity before confirming them on the POS register."
+msgstr ""
+
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:5
 msgid "Payment terminals"
 msgstr "決済端末"
@@ -9158,18 +9456,14 @@ msgid ":doc:`Stripe configuration <terminals/stripe>`"
 msgstr ":doc:`Stripe設定 <terminals/stripe>`"
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:29
-msgid ":doc:`Vantiv configuration <terminals/vantiv>`"
-msgstr ":doc:`Vantiv設定<terminals/vantiv>`"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:30
 msgid ":doc:`Viva Wallet configuration <terminals/viva_wallet>`"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:31
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:30
 msgid ":doc:`Worldline configuration <terminals/worldline>`"
 msgstr ":doc:`Worldline設定 <terminals/worldline>`"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:33
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:32
 msgid ""
 "Once the terminal is configured, you can :doc:`create the corresponding "
 "payment method and add it to the POS <../payment_methods>`."
@@ -9328,7 +9622,6 @@ msgstr "画面下の :guilabel:`保存` をクリックして変更を保存し�
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:30
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:53
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:22
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/vantiv.rst:20
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_wallet.rst:81
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:72
 msgid "Configure the payment method"
@@ -9359,7 +9652,6 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:56
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:68
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:93
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/vantiv.rst:41
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_wallet.rst:123
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:96
 msgid "Pay with a payment terminal"
@@ -9657,8 +9949,9 @@ msgstr "支払方法"
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:76
 msgid ""
-":doc:`Activate the POS Mercado Pago module "
-"<../../../../general/apps_modules>` to enable the payment terminal."
+"Go to :menuselection:`Point of Sale --> Configuration --> Settings` and "
+"enable :guilabel:`Mercado Pago` under the :guilabel:`Payment Terminals` "
+"section."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:78
@@ -10157,7 +10450,7 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:74
 msgid "Configure the payment terminal"
-msgstr "決済端末の設定"
+msgstr "決済端末を設定する"
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:76
 msgid ""
@@ -10257,70 +10550,6 @@ msgstr ""
 "**登録コード** "
 "を入力する必要があります。そのコードを取得するには、デバイスを右にスワイプし、管理者用PINコード(デフォルト：`07139`)を入力し、有効にして "
 ":guilabel:`登録コードを生成` をクリックします。"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/vantiv.rst:3
-msgid "Vantiv"
-msgstr "Vantiv"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/vantiv.rst:5
-msgid ""
-"Connecting a Vantiv payment terminal allows you to offer a fluid payment "
-"flow to your customers and ease the work of your cashiers."
-msgstr "Vantivの決済端末を接続することで、顧客はスムーズな支払フローを利用でき、レジ係の作業を軽減することができます。"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/vantiv.rst:9
-msgid ""
-"Please note MercuryPay only operates with US and Canadian banks, making this"
-" procedure only suitable for North American businesses."
-msgstr "MercuryPayは米国およびカナダの銀行のみと提携しているため、この手続きは北米の企業のみに適しています。"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/vantiv.rst:13
-msgid ""
-"Vantiv card readers should be purchased exclusively from Vantiv, as certain "
-"Vantiv terminals bought on Amazon do not include the correct encryption "
-"needed to be used with an Odoo database."
-msgstr ""
-"VantivカードリーダーはVantiv社から購入する必要があります。Amazonで購入したVantiv端末の中には、Odooデータベースで使用するために必要な正しい暗号化が含まれていないものがあるからです。"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/vantiv.rst:22
-msgid ""
-"Enable the payment terminal in the :guilabel:`Payment Terminals` section "
-":ref:`of the application settings <configuration/settings>`."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/vantiv.rst:25
-msgid ""
-"Then, go to :menuselection:`Point of Sale --> Configuration --> Payment "
-"Methods`, and :doc:`create the related payment method "
-"<../../payment_methods>`. Set the journal type as :guilabel:`Bank` and "
-"select :guilabel:`Vantiv` in the :guilabel:`Use a Payment Terminal` field."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/vantiv.rst:29
-msgid ""
-"Type the name you want to give to your :guilabel:`Vantiv Credentials` and "
-"click :guilabel:`Create and edit`. Enter your :guilabel:`Merchant ID` and "
-":guilabel:`Merchant Password`, then click :guilabel:`Save & Close`."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/vantiv.rst-1
-msgid "Vantiv payment method"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/vantiv.rst:36
-msgid ""
-"Once the payment method is created, you can select it in your POS settings. "
-"To do so, go to the :ref:`POS' settings <configuration/settings>` and add "
-"the payment method under the :guilabel:`Payment` section."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/vantiv.rst:43
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_wallet.rst:125
-msgid ""
-"When processing a payment, select the related payment method. Check the "
-"amount and click on :guilabel:`Send`. Once the payment is successful, the "
-"status changes to :guilabel:`Payment Successful`."
-msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_wallet.rst:3
 msgid "Viva Wallet"
@@ -10508,6 +10737,13 @@ msgid ""
 "method is created. To do so, go to the :ref:`POS' settings "
 "<configuration/settings>` and add the payment method under the "
 ":guilabel:`Payment methods` field of the :guilabel:`Payment` section."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_wallet.rst:125
+msgid ""
+"When processing a payment, select the related payment method. Check the "
+"amount and click on :guilabel:`Send`. Once the payment is successful, the "
+"status changes to :guilabel:`Payment Successful`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_wallet.rst:134
@@ -10717,7 +10953,7 @@ msgstr "現金丸め"
 msgid ""
 "**Cash rounding** is required when the lowest physical denomination of "
 "currency, or the smallest coin, is higher than the minimum unit of account."
-msgstr "**現金丸め** は、通貨の最小額面または最小硬貨が勘定科目の最小単位より高い場合に必要となります。"
+msgstr "**現金端数処理** は、通貨の最小額面または最小硬貨が口座の最小単位より高い場合に必要となります。"
 
 #: ../../content/applications/sales/point_of_sale/pricing/cash_rounding.rst:9
 msgid ""
@@ -11496,7 +11732,7 @@ msgstr ""
 #: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:98
 #: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:255
 msgid "Multiple prices per product"
-msgstr "プロダクトごとに複数価格"
+msgstr "プロダクト毎に複数価格"
 
 #: ../../content/applications/sales/point_of_sale/pricing/pricelists.rst:44
 msgid ""
@@ -11717,7 +11953,7 @@ msgstr "領収書と請求書"
 
 #: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:6
 msgid "Receipts"
-msgstr "領収書"
+msgstr "入荷"
 
 #: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:8
 msgid ""
@@ -11780,7 +12016,7 @@ msgid ""
 "reference and click :guilabel:`Receipt Number`, :guilabel:`Date`, or "
 ":guilabel:`Customer`."
 msgstr ""
-"検索バーを使ってオーダのリストを絞込むことができます。参照先を入力し、 :guilabel:`領収書番号`、 :guilabel:`日付`、 "
+"検索バーを使ってオーダのリストを絞込むことができます。参照番号を入力し、 :guilabel:`領収書番号`、 :guilabel:`日付`、 "
 ":guilabel:`顧客` をクリックして下さい。"
 
 #: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:42
@@ -12394,7 +12630,7 @@ msgstr "印刷能なプロダクトは、カート内に緑色で表示され、
 
 #: ../../content/applications/sales/point_of_sale/restaurant/tips.rst:3
 msgid "Tips"
-msgstr "チップ"
+msgstr "ヒント"
 
 #: ../../content/applications/sales/point_of_sale/restaurant/tips.rst:5
 msgid ""
@@ -12655,7 +12891,7 @@ msgstr "バーコード使用"
 
 #: ../../content/applications/sales/point_of_sale/shop/barcode.rst:48
 msgid "Scan products"
-msgstr "製品をスキャンする"
+msgstr "プロダクトをスキャンする"
 
 #: ../../content/applications/sales/point_of_sale/shop/barcode.rst:50
 msgid ""
@@ -12704,8 +12940,9 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/shop/customer_display.rst:14
 msgid ""
 "Depending on your POS setup, the feature can be displayed :ref:`locally on a"
-" secondary screen <customer_display/local>` or on :ref:`another monitor "
-"connected to an IoT Box <customer_display/iot>`."
+" secondary screen <customer_display/local>`, :ref:`remotely on another "
+"device <customer_display/remote>`, or :ref:`another monitor connected to an "
+"IoT Box <customer_display/iot>`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/shop/customer_display.rst:18
@@ -12731,10 +12968,26 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/shop/customer_display.rst:35
+msgid "Remote"
+msgstr "リモート"
+
+#: ../../content/applications/sales/point_of_sale/shop/customer_display.rst:37
+msgid ""
+"Access your database from another device (any computer, tablet, or "
+"smartphone), go to the POS application, click the vertical ellipsis button "
+"(:guilabel:`⋮`) on a POS card, and then :guilabel:`Customer Display` to open"
+" the display remotely."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/shop/customer_display.rst:42
+msgid "The two devices are not required to share the same network."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/shop/customer_display.rst:47
 msgid "IoT box"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/shop/customer_display.rst:37
+#: ../../content/applications/sales/point_of_sale/shop/customer_display.rst:49
 msgid ""
 "Connect an IoT box to your database and the second screen to the IoT box. "
 "Then, go to :menuselection:`Point of Sale --> Configuration --> Settings`, "
@@ -12747,11 +13000,11 @@ msgstr ""
 msgid "iot setting to connect a customer display"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/shop/customer_display.rst:46
+#: ../../content/applications/sales/point_of_sale/shop/customer_display.rst:58
 msgid "Both devices need to be connected to the same local network."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/shop/customer_display.rst:49
+#: ../../content/applications/sales/point_of_sale/shop/customer_display.rst:61
 msgid ":doc:`../../../general/iot/config/pos`"
 msgstr ""
 
@@ -13728,12 +13981,12 @@ msgid "**Orders**"
 msgstr "**オーダ**"
 
 #: ../../content/applications/sales/sales/amazon_connector/features.rst:37
-msgid "Synchronize shipped and canceled orders."
-msgstr "配送済オーダと取消済オーダを同期します。"
+msgid "Synchronize shipped and cancelled orders."
+msgstr ""
 
 #: ../../content/applications/sales/sales/amazon_connector/features.rst:37
-msgid "Synchronize unshipped and canceled orders."
-msgstr "未配送のオーダと取消済オーダを同期させます。"
+msgid "Synchronize unshipped and cancelled orders."
+msgstr ""
 
 #: ../../content/applications/sales/sales/amazon_connector/features.rst:40
 msgid "**Shipping**"
@@ -13936,18 +14189,12 @@ msgid "Amazon.nl"
 msgstr "Amazon.nl"
 
 #: ../../content/applications/sales/sales/amazon_connector/features.rst:124
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:208
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:16
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:30
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:8
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:200
 msgid ":doc:`setup`"
 msgstr ":doc:`セットアップ`"
 
 #: ../../content/applications/sales/sales/amazon_connector/features.rst:125
 #: ../../content/applications/sales/sales/amazon_connector/setup.rst:155
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:17
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:17
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:9
 msgid ":doc:`manage`"
 msgstr ":doc:`管理`"
 
@@ -13976,25 +14223,23 @@ msgstr ""
 
 #: ../../content/applications/sales/sales/amazon_connector/manage.rst:13
 msgid ""
-"For *FBA* (Fulfilled by Amazon), only *Shipped* and *Canceled* orders are "
+"For *FBA* (Fulfilled by Amazon), only *Shipped* and *Cancelled* orders are "
 "fetched."
-msgstr "*FBA* (Amazonによりフルフィルメントが行われる)の場合、*配送済* と *取消済* オーダのみがフェッチされます。"
+msgstr ""
 
 #: ../../content/applications/sales/sales/amazon_connector/manage.rst:15
 msgid ""
 "For *FBM* (Fulfilled by Merchant), the same is done for *Unshipped* and "
-"*Canceled* orders. For each synchronized order, a sales order and customer "
+"*Cancelled* orders. For each synchronized order, a sales order and customer "
 "are created in Odoo (if the customer is not already registered in the "
 "database)."
 msgstr ""
-"*FBM* (販売者によりフルフィルメントが行われる)の場合、*未配送* と *取消済* "
-"オーダも同様に行われます。同期されたオーダごとに、Odooに販売オーダと顧客が作成されます(顧客がデータベースに登録されていない場合)。"
 
 #: ../../content/applications/sales/sales/amazon_connector/manage.rst:32
 msgid ""
-"When an order is canceled in Amazon, and was already synchronized in Odoo, "
-"the corresponding sales order is automatically canceled in Odoo."
-msgstr "Amazonでオーダが取消され、Odooで既に同期されている場合、対応する販売オーダはOdooで自動的に取消されます。"
+"When an order is cancelled in Amazon, and was already synchronized in Odoo, "
+"the corresponding sales order is automatically cancelled in Odoo."
+msgstr ""
 
 #: ../../content/applications/sales/sales/amazon_connector/manage.rst:36
 msgid "Force synchronization"
@@ -14242,25 +14487,10 @@ msgstr ""
 "さらに、B2Bのクライアントの場合、Odooで請求書を作成する **前** に、AmazonのバックエンドからVAT番号を手動で取得する必要があります。"
 
 #: ../../content/applications/sales/sales/amazon_connector/manage.rst:153
-msgid ""
-"For :doc:`TaxCloud <../../../finance/accounting/taxes/taxcloud>` users: "
-"invoices created from Amazon sales orders are **not** synchronized with "
-"TaxCloud, since Amazon already includes them in its own tax report to "
-"TaxCloud."
-msgstr ""
-":doc:`TaxCloud<../../../finance/accounting/taxes/taxcloud>` ユーザについて: "
-"Amazonの販売オーダから作成された請求書は、AmazonがすでにTaxCloudへの独自の税レポートに含んでいるため、TaxCloudと同期 "
-"**されません**。"
-
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:158
-msgid "TaxCloud integration will be decommissioned in Odoo 17+."
-msgstr "TaxCloudの統合はOdoo 17+で廃止されます。"
-
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:161
 msgid "Register payments"
 msgstr "支払登録"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:163
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:155
 msgid ""
 "Since customers pay Amazon as an intermediary, creating a dedicated *Bank* "
 "journal (e.g. named `Amazon Payments`), with a dedicated *Bank and Cash* "
@@ -14269,13 +14499,13 @@ msgstr ""
 "顧客はAmazonを仲介して支払を行うので、専用の *銀行* 仕訳帳(例: `Amazon支払` という名前)を作成し、専用の *銀行と現金* "
 "仲介勘定科目を持つことをお勧めします。"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:166
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:158
 msgid ""
 "Additionally, as Amazon makes a single monthly payment, selecting all the "
 "invoices linked to a single payment is necessary when registering payments."
 msgstr "またAmazonは毎月の支払を1回にしているため、支払を登録する際には、1回の支払にリンクしている全ての請求書を選択する必要があります。"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:169
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:161
 msgid ""
 "To do that, use the appropriate :guilabel:`Journal` dedicated to Amazon "
 "payments, and select :guilabel:`Batch Deposit` as the :guilabel:`Payment "
@@ -14284,37 +14514,37 @@ msgstr ""
 "そのためには、Amazonの支払いに特化した適切な :guilabel:`仕訳帳` を使用し、 :guilabel:`支払方法` として "
 ":guilabel:`バッチ入金` を選択します。"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:172
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:164
 msgid ""
 "Then, select all the generated payments, and click :menuselection:`Actions "
 "--> Create batch payment --> Validate`."
 msgstr ""
 "次に、生成された支払いを全て選択し、 :menuselection:`アクション --> バッチ支払を作成 --> 検証` をクリックします。"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:176
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:168
 msgid ""
 "This same action can be performed with vendor bills from Amazon dedicated to"
 " commissions."
 msgstr "これと同じアクションは、手数料専用のAmazonからの仕入先請求書でも実行できます。"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:178
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:170
 msgid ""
 "When the balance is received in the bank account at the end of the month, "
 "and the bank statements are recorded, credit the Amazon intermediary account"
 " by the amount received."
 msgstr "月末に銀行口座に残高が入金され、銀行明細が記録されたら、入金額をAmazon仲介勘定科目に貸方記入します。"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:182
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:174
 msgid "Follow Amazon sales in sales reporting"
 msgstr "販売レポーティングでAmazonの販売をフォローする"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:184
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:176
 msgid ""
 "On the Amazon account profile in Odoo, a sales team is set under the "
 ":guilabel:`Order Follow-up` tab."
 msgstr "OdooのAmazonアカウントプロファイルの :guilabel:`オーダフォローアップ` タブに販売チームが設定されています。"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:187
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:179
 msgid ""
 "This gives quick access to important metrics related to sales reporting. By "
 "default, the Amazon account's sales team is shared between all of the "
@@ -14322,23 +14552,23 @@ msgid ""
 msgstr ""
 "これにより、販売レポート作成に関連する重要な指標に素早くアクセスできるようになります。デフォルトでは、Amazonアカウントの販売チームは、会社の全てのアカウントで共有されています。"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:190
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:182
 msgid ""
 "If desired, the sales team on the account can be changed for another, in "
 "order to perform a separate reporting for the sales of this account."
 msgstr "必要に応じて、そのアカウントの販売チームを別のチームに変更して、このアカウントの販売内容を別途報告することができます。"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:194
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:186
 msgid "It is also possible to perform reporting on a per-marketplace basis."
 msgstr "また、マーケットプレイスごとにレポートを作成することも可能です。"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:196
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:188
 msgid ""
 "First, remove the desired marketplace from the list of synchronized "
 "marketplaces."
 msgstr "まず、同期されたマーケットプレイスのリストから目的のマーケットプレイスを削除します。"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:198
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:190
 msgid ""
 "To access the list of synchronized marketplaces in Odoo, navigate to "
 ":menuselection:`Sales app --> Configuration --> Settings --> Connectors --> "
@@ -14347,19 +14577,19 @@ msgstr ""
 "Odooで同期されたマーケットプレイスのリストにアクセスするには :menuselection:`販売アプリ --> 設定 --> 管理設定 --> "
 "コネクタ --> Amazon同期 --> Amazonアカウント` に移動します。"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:201
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:193
 msgid ""
 "Then, create another registration for this account, and remove all other "
 "marketplaces **except** the one to isolate."
 msgstr "次に、このアカウントで別の登録を作成し、隔離するマーケットプレイス **以外** を全て削除します。"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:204
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:196
 msgid ""
 "Lastly, assign another sales team to one of the two registrations of the "
 "account."
 msgstr "最後に、そのアカウントの2つの登録のうちの1つに、別の販売チームを割当てます。"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:207
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:199
 #: ../../content/applications/sales/sales/amazon_connector/setup.rst:154
 msgid ":doc:`features`"
 msgstr ":doc:`機能`"
@@ -14689,1716 +14919,6 @@ msgstr ""
 "タブに移動し、:guilabel:`利用可能なマーケットプレイスを更新` "
 "をクリックします。操作が成功するとアニメーションが表示されます。新しく追加されたマーケットプレイスは自動的に同期化されたマーケットプレイスリストに追加されます。新しいマーケットプレイスがリストに追加されない場合、セラーアカウントと互換性がないか、利用できないことを意味します。"
 
-#: ../../content/applications/sales/sales/ebay_connector.rst:5
-msgid "eBay Connector"
-msgstr "eBayコネクター"
-
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:3
-msgid "Linking existing listings"
-msgstr "既存のリスティングをリンクする"
-
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:5
-msgid ""
-"Once the eBay account is linked existing listings from within the eBay "
-"seller account need to be added manually to the Odoo product listings."
-msgstr "eBayアカウントがリンクされると、eBayセラーアカウント内の既存のリストをOdooプロダクトリストに手動で追加する必要があります。"
-
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:8
-msgid ""
-"The process will be as follows: - Turn off eBay scheduled actions - Add "
-"products and link listings - Turn on eBay scheduled actions"
-msgstr ""
-"手順は以下の通りです: - eBayのスケジュールされたアクションをオフにします - プロダクトを追加し、リスティングをリンクします - "
-"eBayのスケジュールされたアクションをオンにします"
-
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:14
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:28
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:15
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:6
-msgid "To learn more about the eBay connector visit these pages as well:"
-msgstr "eBayコネクタの詳細については、以下のページもご覧下さい:"
-
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:18
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:32
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:19
-msgid ":doc:`troubleshooting`"
-msgstr ":doc:`トラブルシューティング`"
-
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:21
-msgid "Turn off eBay scheduled actions"
-msgstr "eBayのスケジュールされたアクションをオフにします"
-
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:23
-msgid ""
-"To start linking existing listings in eBay, first turn off the eBay "
-"notifications in the scheduled actions in Odoo. The reason for this is so "
-"that no orders or eBay data syncs during this process. The "
-":guilabel:`Scheduled Actions` can be accessed by first activating "
-":ref:`developer mode <developer-mode>`. After doing so, go to "
-":menuselection:`Settings --> Technical --> Automation --> Scheduled "
-"Actions`."
-msgstr ""
-"eBayの既存リストのリンクを開始するには、まずOdooのスケジュールされたアクションでeBay通知をオフにします。これはこのプロセス中にオーダやeBayのデータが同期されないようにするためです。まず"
-" :ref:`開発者モード<developer-mode>` を有効にすることで :guilabel:`スケジュールされたアクション` "
-"にアクセスできます。その後、 :menuselection:`管理設定 --> 技術設定 --> 自動化 --> スケジュールされたアクション` "
-"に進みます。"
-
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:30
-msgid ""
-":doc:`../../../general/developer_mode` must be activated to ensure the "
-"technical menu appears for the user."
-msgstr ""
-"技術設定メニューがユーザに表示されるようにするには、:doc:`../../../general/developer_mode` "
-"を有効にする必要があります。"
-
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:33
-msgid ""
-"Disabling scheduled actions enables users to sync and validate eBay data "
-"before receiving orders. The following are descriptions of scheduled actions"
-" that need to be temporarily deactivated:"
-msgstr ""
-"スケジュールされたアクションを無効にすると、ユーザはオーダを受け取る前にeBayデータを同期し、検証することができます。以下は、一時的に無効にする必要があるスケジュールされたアクションの説明です:"
-
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:36
-msgid ""
-":guilabel:`eBay: get new orders`: eBay pushes new orders not already in Odoo"
-" (based on :guilabel:`client_order_reference`, or :guilabel:`sales order "
-"reference` field). This command also updates existing orders, where changes "
-"we made in eBay. New and updated orders are then placed in draft mode. "
-"Customers will be created if they are not already in Odoo."
-msgstr ""
-":guilabel:`eBay: 新規オーダを獲得`: "
-"eBayはOdooにまだない新しいオーダをプッシュします（:guilabel:`client_order_reference`または:guilabel:`販売オーダ参照`"
-" "
-"フィールドに基づいて）。このコマンドはeBayで変更した既存のオーダも更新します。新しいオーダや更新されたオーダはドラフトモードになります。顧客はOdooにまだ登録されていなければ作成されます。"
-
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:40
-msgid ""
-":guilabel:`eBay: synchronize stock`: eBay displays Odoo's stock on hand."
-msgstr ":guilabel:`eBay: 在庫を同期`: eBayはOdooの手持ち在庫を表示します。"
-
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:41
-msgid ""
-":guilabel:`eBay: update categories`: eBay will push updated monthly "
-"categories (only up to fourth layer; a manual update required for the rest)."
-msgstr ""
-":guilabel:`eBay: カテゴリを更新`: eBayは毎月更新されるカテゴリをプッシュします(第4層まで。残りは手動更新が必要です)。"
-
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:44
-msgid ""
-"To toggle off the eBay notification, select the entry from the "
-":guilabel:`Scheduled Actions` list. Then, on the page, click the "
-":guilabel:`Active` toggle button to turn it off."
-msgstr ""
-"eBay通知をオフに切り替えるには、 :guilabel:`スケジュールされたアクション` リストからエントリを選択します。そして、そのページで "
-":guilabel:`有効` トグルボタンをクリックしてオフにします。"
-
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:48
-msgid "Sync eBay categories"
-msgstr "eBayカテゴリを同期する"
-
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:50
-msgid ""
-"To ensure that Odoo's eBay products have all the categories available on "
-"eBay, the eBay categories should be synced to Odoo next."
-msgstr ""
-"OdooのeBayプロダクトがeBayで利用可能な全てのカテゴリを持つようにするために、eBayカテゴリを次にOdooに同期する必要があります。"
-
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:53
-msgid ""
-"Navigate to :menuselection:`Settings --> Technical --> Automation --> "
-"Scheduled Actions`. Click into the scheduled action labeled: "
-":guilabel:`Ebay: update categories` and then click :guilabel:`Run Manually`."
-msgstr ""
-":menuselection:`管理設定 --> 技術設定 --> 自動化 --> "
-"スケジュール済アクション`に移動します。guilabel:`Ebay:カテゴリを更新` "
-"と書かれたスケジュールされたアクションをクリックし、:guilabel:`手動で実行` をクリックします。"
-
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:58
-msgid ""
-"Odoo only recognizes eBay category paths up to four layers deep. If a "
-"product has a listing of more than four, the category field will only "
-"populate up to the fourth layer."
-msgstr ""
-"OdooはeBayカテゴリパスを4階層までしか認識しません。プロダクトに4つ以上のリストがある場合、カテゴリフィールドは第4階層までしか追加されません。"
-
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:61
-msgid ""
-"If product categories beyond four paths are required, users need to manually"
-" add those paths. This has historically been done by getting a list of all "
-"product categories beyond 4 paths, manually importing them into the Product "
-"Category model in Odoo, then linking them individually to the product."
-msgstr ""
-"4パスを超えるプロダクトカテゴリが必要な場合、ユーザが手動でパスを追加する必要があります。これまでは、4パスを超えるプロダクトカテゴリのリストを全て取得し、Odooのプロダクトカテゴリモデルに手動でインポートし、個別にプロダクトにリンクしていました。"
-
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:66
-msgid ""
-"Users can import the remaining product categories into the eBay product "
-"categories manually using using the :guilabel:`Action` menu and "
-":guilabel:`Import` feature."
-msgstr ""
-"ユーザは、:guilabel:`アクション` メニューと:guilabel:`インポート` "
-"機能を使用して、残りのプロダクトカテゴリをeBayプロダクトカテゴリに手動でインポートすることができます。"
-
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:70
-msgid "Link eBay listings"
-msgstr "eBayリスティングをリンクする"
-
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:72
-msgid ""
-"To add eBay listings in Odoo, either manually add products, using a listing "
-"ID, or establish an automatic listing link between Odoo and eBay."
-msgstr ""
-"OdooでeBayのリスティングを追加するには、リスティングIDを使用して手動でプロダクトを追加するか、OdooとeBay間の自動リスティングリンクを確立します。"
-
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:76
-msgid ""
-"For more information on listing a product from scratch visit: :ref:`How to "
-"list a product? <ebay-connector/listing>`"
-msgstr ""
-"ゼロからプロダクトをリスティングする方法については、こちらをご覧下さい: :ref:`プロダクトを出品するには？<ebay-"
-"connector/listing>`"
-
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:80
-msgid "Manual listing link"
-msgstr "手動リスティングリンク"
-
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:82
-msgid ""
-"To add an eBay listing to products in Odoo, begin by going to "
-":menuselection:`Sales app --> Products --> Products` and selecting the "
-"desired product. Click on :guilabel:`Sell on eBay` (either in the "
-":guilabel:`eBay` tab or under the :guilabel:`Product name`). Select "
-":guilabel:`Save` if necessary."
-msgstr ""
-"Odoo内のプロダクトにeBayリスティングを追加するには、まず :menuselection:`販売アプリ --> プロダクト --> プロダクト` "
-"にアクセスし、希望のプロダクトを選択します。:guilabel:`eBayで販売` をクリックします(:guilabel:`eBay` タブまたは "
-":guilabel:`プロダクト名` の下にあります)。必要に応じて :guilabel:`保存` を選択します。"
-
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:86
-msgid ""
-"Still the product form, click :guilabel:`link to listing` in the top menu "
-"and enter in listing ID from eBay in the pop up (the listing ID is in the "
-"eBay product URL)."
-msgstr ""
-"プロダクトフォームで、トップメニューの:guilabel:`リスティングにリンク` "
-"をクリックし、ポップアップにeBayのリスティングIDを入力します(リスティングIDはeBayのプロダクトURLにあります)"
-
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:90
-msgid ""
-"An example URL would be as such: "
-"`www.ebay.com/itm/272222656444?hash=item3f61bc17bb:g:vJ0AAOSwslJizv8u`. The "
-"listing ID is `272222656444` in this case. Once the listing ID has been "
-"entered the eBay listing information will sync into Odoo."
-msgstr ""
-"URLの例は以下のようになります: "
-"`www.ebay.com/itm/272222656444?hash=item3f61bc17bb:g:vJ0AAOSwslJizv8u`  "
-"この場合、リスティングIDは `272222656444` です。リスティングIDが入力されると、eBayのリスティング情報がOdooに同期されます。"
-
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:96
-msgid "Turn on eBay scheduled Actions"
-msgstr "eBayのスケジュールされたアクションをオンにする"
-
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:98
-msgid ""
-"The next step is to turn on the eBay notifications in the scheduled actions "
-"in Odoo so that orders and data are exchanged. The :guilabel:`Scheduled "
-"Actions` can be accessed by first activating :ref:`developer mode "
-"<developer-mode>` and go to :menuselection:`Settings --> Technical --> "
-"Automation --> Scheduled Actions`."
-msgstr ""
-"次のステップは、OdooのスケジュールされたアクションでeBayの通知をオンにして、オーダとデータを交換することです。まず :ref:`開発者モード "
-"<developer-mode> ` を有効にして :menuselection:`管理設定 --> 技術設定 --> 自動化 --> "
-"スケジュールされたアクション` に行き、 :guilabel:`スケジュールされたアクション` にアクセスします。"
-
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:103
-msgid ""
-"Turning on the following scheduled actions allows users to sync and validate"
-" eBay data automatically."
-msgstr "以下のスケジュールアクションをオンにすると、ユーザはeBayデータを自動的に同期し、検証することができます。"
-
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:106
-msgid ""
-":guilabel:`eBay: get new orders`: eBay will push all new orders not already "
-"in Odoo (based on client_order_reference, or sales order reference field), "
-"and will update orders if there has been a change from eBay. Orders will be "
-"put in draft mode. Customers will be created if they are not already in "
-"Odoo."
-msgstr ""
-":guilabel:`eBay: 新規オーダを獲得`: "
-"eBayはOdooにまだない(client_order_referenceまたは販売オーダ参照フィールドに基づく)新規オーダを全てプッシュし、eBayから変更があった場合はオーダを更新します。オーダはドラフトモードになります。顧客はOdooに登録されていない場合、作成されます。"
-
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:110
-msgid ""
-":guilabel:`eBay: synchronize stock`: eBay will display the stock on hand in "
-"Odoo."
-msgstr ":guilabel:`eBay: 在庫の同期`: eBayはOdooの手元にある在庫を表示します。"
-
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:111
-msgid ""
-":guilabel:`eBay: update categories`: eBay will push updated monthly "
-"categories (only up to fourth layer, will need to manually update the rest)."
-msgstr ""
-":guilabel:`eBay: カテゴリを更新`: "
-"eBayは毎月更新されるカテゴリをプッシュします(4階層目までで、残りは手動で更新する必要があります)。"
-
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:115
-msgid ""
-"If an order comes in and the listing from the order is not linked to a "
-"product, eBay will create a consumable product.product in its place. These "
-"consumables should be altered on the *Sales Order* while in draft state to "
-"represent a storable product, and then the user can link to the listing as "
-"they come in."
-msgstr ""
-"オーダが入り、オーダのリスティングがプロダクトにリンクされていない場合、eBayはその代わりに消耗品アイテムを作成します。このような消耗品は、*販売オーダ*"
-" で変更する必要があり、保管可能なプロダクトであることを示すためにドラフト状態になります。 "
-"これにより、ユーザは、オーダが入った場合にリストにリンクさせることができます。"
-
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:121
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:127
-msgid ":doc:`/applications/sales/sales/ebay_connector/manage`"
-msgstr ":doc:`/applications/sales/sales/ebay_connector/manage`"
-
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:122
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:160
-msgid ":doc:`/applications/sales/sales/ebay_connector/troubleshooting`"
-msgstr ":doc:`/applications/sales/sales/ebay_connector/troubleshooting`"
-
-#: ../../content/applications/sales/sales/ebay_connector/linking_listings.rst:123
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:162
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:129
-msgid ":doc:`/applications/sales/sales/ebay_connector/setup`"
-msgstr ":doc:`/applications/sales/sales/ebay_connector/setup`"
-
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:3
-msgid "How to list a product?"
-msgstr "プロダクトを出品するには？"
-
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:7
-msgid ""
-"In order to list a product on eBay and Odoo there are two methods in Odoo to"
-" do so:"
-msgstr "eBayとOdooにプロダクトを出品するために、Odooには2つの方法があります:"
-
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:9
-msgid "(*Preferred method*) Make a product in Odoo and list the item eBay."
-msgstr "(*望ましい方法*) Odooでプロダクトを作成し、eBayにリスティングします。"
-
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:11
-msgid ""
-"Click :guilabel:`List Item on eBay` in the top menu of the product template."
-" The product template can be accessed by navigating to :menuselection:`Sales"
-" app --> Products --> Product` and selecting the individual product."
-msgstr ""
-"プロダクトテンプレートのトップメニューにある :guilabel:`eBayに出品する` をクリックします。プロダクトテンプレートは "
-":menuselection:`販売アプリ --> プロダクト --> プロダクト` に移動し、個々のプロダクトを選択することでアクセスできます。"
-
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:14
-msgid ""
-"(*Less preferred method*) List the item on eBay, then create the product in "
-"Odoo, and finally link product to the item on eBay."
-msgstr ""
-"(*あまり好ましくない方法*) eBayに商品をリスティングし、Odooでプロダクトを作成し、最後にeBayの商品にプロダクトをリンクします。"
-
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:17
-msgid ""
-"Click :guilabel:`Link With Existing eBay Listing` in the top menu on the "
-"product template.The product template can be accessed by navigating to "
-":menuselection:`Sales app --> Product --> Product` and selecting the "
-"individual product."
-msgstr ""
-"プロダクトテンプレートのトップメニューにある :guilabel:`既存のeBayリスティングとリンク` をクリックします。プロダクトテンプレートは、 "
-":menuselection:`販売アプリ --> プロダクト --> プロダクト` に移動し、個々のプロダクトを選択することでアクセスできます。"
-
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:22
-msgid ""
-"If an order comes in and the listing from the order is not linked to a "
-"product, eBay will create a consumable product.product in its place. These "
-"consumables should be altered on the *sales order* while in draft state to "
-"represent a storable product, and then the user can link to the listing as "
-"they come in."
-msgstr ""
-"オーダが来て、オーダからのリストがプロダクトにリンクされていない場合、eBayはその代わりに消耗品のプロダクトを作成します。これらの消耗品は、保管可能なプロダクトを表すために、ドラフト状態の間に"
-" *販売オーダ* を変更する必要があります。"
-
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:31
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:18
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:10
-msgid ":doc:`linking_listings`"
-msgstr ":doc:`linking_listings`"
-
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:35
-msgid "Listing without variation"
-msgstr "バリエーションなし"
-
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:37
-msgid ""
-"Access the product template by navigating to :menuselection:`Sales app --> "
-"Products --> Product` and selecting the individual product."
-msgstr ""
-":menuselection:`販売アプリ --> プロダクト --> プロダクト` "
-"に移動し、個々のプロダクトを選択してプロダクトテンプレートにアクセスします。"
-
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:40
-msgid ""
-"In order to list a product, select the :guilabel:`Sell on eBay` field on a "
-"product template. :guilabel:`Sell on eBay` is either in an :guilabel:`eBay` "
-"tab or under the :guilabel:`Product name`. Click :guilabel:`Save` if "
-"necessary."
-msgstr ""
-"プロダクトを出品するには、プロダクトテンプレートの :guilabel:`eBayで販売` フィールドを選択します。 "
-":guilabel:`eBayで販売` は :guilabel:`eBay` タブの中か、 :guilabel:`プロダクト名` "
-"の下にあります。必要に応じて :guilabel:`保存` をクリックします。"
-
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst-1
-msgid "The eBay template form listed in the product template in Odoo."
-msgstr "eBayテンプレートフォームはOdooのプロダクトテンプレートにリストされています。"
-
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:48
-msgid ""
-"When the :guilabel:`Use Stock Quantity` field is checked, the quantity set "
-"on eBay is the Odoo *Forecast Quantity* (Odoo *Inventory* app)."
-msgstr ""
-
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:51
-msgid ""
-"The policies need to be set in order to be able to list on eBay. A value "
-"must be selected for the following fields :guilabel:`Payment Policy`, "
-":guilabel:`Return Policy`, and :guilabel:`Shipping Policy`. The options are "
-"imported from the eBay database. If no option appears, they can be imported "
-"by navigating to :menuselection:`Sales app --> Configuration --> Settings "
-"--> eBay`, and clicking on the :guilabel:`Policies` button in the "
-":guilabel:`Synchronization` field. This button **only** appears once the "
-"production and sandbox credentials have been set."
-msgstr ""
-
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:58
-msgid ""
-"The :guilabel:`Description Template` allows the administrator to use "
-"templates in listings. The default template only uses the :guilabel:`eBay "
-"Description` field of the product. HTML can be used inside the "
-":guilabel:`Description Template`, and in the :guilabel:`eBay Description` in"
-" Odoo 14. Starting in Odoo 15, the powerbox feature is available to use in "
-"the template and description. Simply type a forward slash `/` to reveal a "
-"menu with formatting, layout, and text options. To add an image, type "
-"`/image`."
-msgstr ""
-
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:65
-msgid ""
-"To use images in the listing, an image needs to be added as one of the "
-"*Attachments* on the product template."
-msgstr ""
-
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:69
-msgid ""
-"For more information on template configuration in Odoo visit: "
-":doc:`../../../general/companies/email_template`."
-msgstr ""
-
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:73
-msgid "Listing with variations"
-msgstr "バリエーションのあるリスティング"
-
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:75
-msgid ""
-"When the :guilabel:`Sell on eBay` is checked on a product containing "
-"variations with :guilabel:`Fixed Price` as :guilabel:`Listing Type`, the "
-"eBay form is slightly different. Go to the :guilabel:`Variants` tab to or "
-"click :guilabel:`Configure Variants` in the top menu to configure the "
-"variant settings. Pricing can be configured for each variation."
-msgstr ""
-":guilabel:`出品タイプ` に :固定価格` を指定したバリエーションを含むプロダクトで :guilabel:`eBayで販売` "
-"をチェックした場合、eBay のフォームが少し異なります。guilabel:`バリアント` "
-"タブに移動するか、トップメニューの:guilabel:`バリアントの設定` "
-"をクリックしてバリアントの設定を行います。価格設定は各バリエーションごとに設定することができます。"
-
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:80
-msgid ""
-"When the :guilabel:`Listing Type` is changed to :guilabel:`Fixed Price`, "
-"Odoo presents a variant table at the bottom of the :guilabel:`eBay` tab, in "
-"which the :guilabel:`Fixed Price` can be entered, and the decision to "
-":guilabel:`Publish on eBay` can be made for specific variants, along with "
-"other options."
-msgstr ""
-":guilabel:`出品タイプ` が :guilabel:`固定価格` に変更されると、Odooは :guilabel:`eBay` "
-"タブの下部にバリアントテーブルを表示し、そこに :guilabel:`固定価格` を入力し、特定のバリアントに対して他のオプションと共に "
-":guilabel:`eBayに公開` するかどうかを決定することができます。"
-
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst-1
-msgid ""
-"The fixed price listing type in the eBay tab on a product form in Odoo "
-"sales."
-msgstr "Odoo販売のプロダクトフォームのeBayタブに固定価格リストタイプがあります。"
-
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:90
-msgid "Product identifiers"
-msgstr "プロダクト識別子"
-
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:92
-msgid ""
-"Products identifiers such as EAN, UPC, Brand or MPN are required in most of "
-"the eBay categories."
-msgstr "EAN、UPC、ブランド、MPNなどのプロダクト識別子は、ほとんどのeBayカテゴリで必要とされています。"
-
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:95
-msgid "EAN and UPC identifiers"
-msgstr "EANおよびUPC識別子"
-
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:97
-msgid ""
-"The module manages the EAN and UPC identifiers with the :guilabel:`Barcode` "
-"field of the product variant. If the :guilabel:`Barcode` field is empty or "
-"is value is not valid, the EAN and UPC values will be set as 'Does not "
-"apply' as recommended by eBay."
-msgstr ""
-"このモジュールはプロダクトバリアントの :guilabel:`バーコード` フィールドで EAN と UPC 識別子を管理します。もし "
-":guilabel:`バーコード` フィールドが空であるか、値が有効でない場合、EAN と UPC の値は eBay が推奨するように '適用しない' "
-"として設定されます。"
-
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:101
-msgid ""
-"Barcodes can be found on the product template, under the the "
-":guilabel:`General Information` tab. Access the product template, first, by "
-"navigating to :menuselection:`Sales app --> Products --> Product` and "
-"selecting the individual product."
-msgstr ""
-"バーコードはプロダクトテンプレートの :guilabel:`一般情報` タブの下にあります。まず、 :menuselection:`販売アプリ --> "
-"プロダクト --> プロダクト` に移動し、個々のプロダクトを選択してプロダクトテンプレートにアクセスします。"
-
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:106
-msgid "Listing with item specifics"
-msgstr "商品明細の掲載"
-
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:108
-msgid ""
-"In order to add item specifics, one should create a product attribute with a"
-" single value in the :guilabel:`Attributes & Variants` tab on the product "
-"form. Examples of item specifics include: `MPN` or `Brand`. The Brand and "
-"MPN values are working as item specifics and should be defined in the "
-":guilabel:`Attributes & Variants` tab on the product form. If these values "
-"are not set, 'Does not apply' will be used for the eBay listing."
-msgstr ""
-"商品明細を追加するには、プロダクトフォームの :guilabel:`属性とバリエーション` "
-"タブに単一の値を持つプロダクト属性を作成する必要があります。アイテムの詳細の例としては  `MPN`  や `ブランド` "
-"などです。ブランドとMPNの値はアイテムの仕様として機能するため、プロダクトフォームの :guilabel:`属性とバリエーション` "
-"タブで定義する必要があります。これらの値が設定されていない場合、'適用しない' がeBay出品に使用されます。"
-
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:115
-msgid "Process invoices and payments"
-msgstr "請求書と支払処理"
-
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:118
-msgid "Posting payment"
-msgstr "支払記帳"
-
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:120
-msgid ""
-"When eBay orders are placed they are always paid for up front, via the eBay "
-"site. At no point will users pay for items on eBay through Odoo. Therefore, "
-"once orders are synced into Odoo from eBay they are already paid for. Odoo's"
-" invoicing and payment functionalities are not utilized. However, invoices "
-"need to be created and marked as Paid to “close” the *Sales Order*."
-msgstr ""
-"eBayのオーダは常にeBayサイトを通して前払いされます。ユーザがOdooを通してeBayの商品代金を支払うことはありません。そのため、一旦eBayからOdooに同期されたオーダは既に支払われています。Odooの請求書発行と支払機能は利用されません。しかし、販売オーダを"
-" “クローズ”するために請求書を作成し、支払い済みとマークする必要があります。"
-
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:125
-msgid ""
-"Users can opt to mass create and post invoices in batches. To do so, "
-"navigate to Quotations in the list view by going to :menuselection:`Sales "
-"app --> Orders --> Quotations`. In the upper right corner, select the list "
-"view icon. Hover over the icons to reveal the name of each. Then check the "
-"boxes on the left that invoices should be made for and go to the "
-":guilabel:`Action` menu or ⚙️ [Gear icon] . Click on :guilabel:`Create "
-"Invoices`."
-msgstr ""
-"ユーザは一括で請求書を作成し、記帳することができます。そのためには、 :menuselection:`販売アプリ --> オーダ --> 見積` "
-"と進み、リストビューの見積に移動します。右上のリストビューアイコンを選択します。アイコンにカーソルを合わせると、それぞれの名前が表示されます。次に、請求書を作成する左側のボックスにチェックを入れ、:guilabel:`アクション`"
-" メニューまたは⚙️ [歯車アイコン] をクリックします。guilabel:`請求書の作成` をクリックして下さい。"
-
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:131
-msgid ""
-"A pop-up will appear and click on the :guilabel:`Create and view invoice` "
-"button. A new screen will populate with the newly created invoices. Next, "
-"select all of them by clicking on the box icon next to :guilabel:`Number` in"
-" the header row of the list, this will select all the records. Then navigate"
-" to the :guilabel:`Action` menu and click :guilabel:`Post entries`. "
-"Following this step, a pop-up will appear and click on :guilabel:`Post "
-"journal entries`. This will take the invoices out of *draft* and set them to"
-" *posted*."
-msgstr ""
-"ポップアップが表示されますので、:guilabel:`請求書を作成して表示` "
-"ボタンをクリックして下さい。新しい画面に新しく作成された請求書が表示されます。次に、リストのヘッダー行にある :guilabel:`番号` "
-"の隣にあるボックスアイコンをクリックして全てを選択します。次に :guilabel:`アクション` メニューに移動し、 :guilabel:`記帳` "
-"をクリックします。この後、ポップアップが表示されるので、:guilabel:`仕訳を記帳` をクリックします。これで請求書が *ドラフト* から "
-"*記帳済* になります。"
-
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:139
-msgid "Reconciling payments"
-msgstr "支払消込"
-
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:141
-msgid ""
-"Users typically utilize PayPal to receive payment from eBay, and then send "
-"lump sums from PayPal into their bank account. To reconcile this income, "
-"users can reconcile the one PayPal transfer with all related invoices."
-msgstr ""
-"ユーザは通常、PayPalを利用してeBayから支払いを受け取り、PayPalから銀行口座に一括送金します。この収入を消込するために、ユーザは1つのPayPal送金と関連する全ての請求書を消込することができます。"
-
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:145
-msgid ""
-"First navigate to the :guilabel:`Accounting Dashboard` by going to the "
-":menuselection:`Accounting app --> Dashboard --> Bank`. :guilabel:`Create` a"
-" new transaction and enter the :guilabel:`Label` as `eBay Sales`. Fill out "
-"the :guilabel:`Amount` and enter a :guilabel:`Statement` date in. Click on "
-":guilabel:`Create and edit`."
-msgstr ""
-"まず、 :menuselection:`会計アプリ --> ダッシュボード --> 銀行` で :guilabel:`会計ダッシュボード` "
-"に移動します。新しい取引を :guilabel:`作成` し、:guilabel:`ラベル` を `eBay販売` "
-"と入力します。:guilabel:`合計` を入力し、 :guilabel:`明細書` の日付を入力します。guilabel:`作成と編集` "
-"をクリックします。"
-
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:150
-msgid ""
-"For the :guilabel:`Ending Balance` field, enter the same account that was "
-"entered for the :guilabel:`Amount` above. Click on :guilabel:`Save`. Next, "
-"open the new balance that needs to be reconciled. Under the tab marked: "
-":guilabel:`Match Existing Entries` select the entries that are included in "
-"this balance."
-msgstr ""
-":guilabel:`終了残高` フィールドには、上記の :guilabel:`金額` "
-"に入力したのと同じ勘定科目を入力します。:guilabel:`保存` "
-"をクリックします。次に、消込が必要な新しい残高を開きます。:guilabel:`既存の仕訳を突合` "
-"と書かれたタブで、この残高に含まれる項目を選択します。"
-
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:155
-msgid ""
-"After adding all the necessary entries, click :guilabel:`Validate` to "
-"complete the reconciliation. To verify the payment, navigate to "
-":menuselection:`Customers --> Invoices` and select the desired customer "
-"invoice. The *Paid* label should appear under the :guilabel:`Payment Status`"
-" column."
-msgstr ""
-"必要な項目を全て追加したら、 :guilabel:`検証` をクリックして消込を完了します。支払を確認するには、:menuselection:`顧客 "
-"--> 請求書` に移動し、希望する顧客の請求書を選択します。:guilabel:`支払ステータス` 列の下に *支払済* ラベルが表示されるはずです。"
-
-#: ../../content/applications/sales/sales/ebay_connector/manage.rst:161
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:128
-msgid ":doc:`/applications/sales/sales/ebay_connector/linking_listings`"
-msgstr ":doc:`/applications/sales/sales/ebay_connector/linking_listings`"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:3
-msgid "eBay connector setup"
-msgstr "eBayコネクタのセットアップ"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:6
-msgid "Overview"
-msgstr "概要"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:8
-msgid ""
-"Odoo's eBay connector allows eBay listings to connect with Odoo products. "
-"Once connected, :doc:`updates to the listings <linking_listings>` can be "
-"made in Odoo or in eBay. When an item sells on eBay, draft *sales orders* "
-"are created in Odoo for the user to review and confirm. Once the sales order"
-" is confirmed, Odoo *Inventory* and *Sales* apps function standard to pull "
-"products out of inventory, and allow the user to create invoices."
-msgstr ""
-"OdooのeBayコネクタはeBayのリストとOdooプロダクトを接続することができます。一旦接続されると、:doc:`リスティングの更新` "
-"はOdooでもeBayでも行うことができます。商品がeBayで販売されると、ユーザが確認できるように販売オーダのドラフトがOdooに作成されます。販売オーダが確認されると、Odooの"
-" *在庫* アプリと *販売* アプリが標準機能として機能し、在庫からプロダクトを引出し、ユーザが請求書を作成することができます。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:22
-msgid "eBay - Odoo linked fields"
-msgstr "eBay - Odooリンク済フィールド"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:24
-msgid ""
-"The following are eBay product details. Each of these eBay fields update "
-"corresponding fields in Odoo."
-msgstr "以下はeBayプロダクトの詳細です。これらのeBayの各フィールドはOdooの対応するフィールドを更新します。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:27
-msgid "eBay URL"
-msgstr "eBay URL"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:28
-msgid "eBay status"
-msgstr "eBayステータス"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:29
-msgid "Quantity sold"
-msgstr "販売済数量"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:30
-msgid "Start date"
-msgstr "開始日"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:31
-msgid "Title"
-msgstr "タイトル"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:32
-msgid "Subtitle"
-msgstr "サブタイトル"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:33
-msgid "Item condition"
-msgstr "商品コンディション"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:34
-msgid "Category"
-msgstr "カテゴリー"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:35
-msgid "Category 2"
-msgstr "カテゴリ2"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:36
-msgid "Store category"
-msgstr "店舗カテゴリ"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:37
-msgid "Store category 2"
-msgstr "店舗カテゴリ2"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:38
-msgid "Payment policy"
-msgstr "支払ポリシー"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:39
-msgid "Seller profiles"
-msgstr "販売者プロフィール"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:40
-msgid "Postal code"
-msgstr "郵便番号"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:41
-msgid "Shipping policy"
-msgstr "配送ポリシー"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:42
-msgid "Listing type (fixed price or auction)"
-msgstr "リスティングタイプ(定額またはオークション)"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:44
-msgid "Starting price for Auction"
-msgstr "オークション用開始価格"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:45
-msgid "Buy it now price"
-msgstr "今すぐ購入価格"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:46
-msgid "Fixed Price amount"
-msgstr "定額金額"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:48
-msgid "Use stock quantity"
-msgstr "在庫数量を使用"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:49
-msgid "Quantity on eBay"
-msgstr "eBay上の数量"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:50
-msgid "Duration"
-msgstr "期間"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:51
-msgid "Allow best offer"
-msgstr "ベストオファーを許可"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:52
-msgid "Private listing"
-msgstr "プライベートリスティング"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:53
-msgid "eBay description"
-msgstr "eBay説明"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:54
-msgid "eBay product image"
-msgstr "eBayプロダクト画像"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:55
-msgid "Country"
-msgstr "国"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:58
-msgid "eBay terms"
-msgstr "eBay条件"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:60
-msgid ""
-"*Variations* group multiple products into one, with variation (or variant) "
-"options. Variations can sync to Odoo's attributes and values. Variations "
-"will appear in drop down menus near the top of the page when viewing an eBay"
-" listing. These are comparable to product variants in Odoo."
-msgstr ""
-"*バリエーション* "
-"は複数のプロダクトをバリエーション(またはバリアント)オプションで1つにグループ化します。バリエーションはOdooの属性と値に同期することができます。バリエーションはeBayのリスティングを閲覧する際、ページ上部付近のドロップダウンメニューに表示されます。これらはOdooのプロダクトバリアントに相当します。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst-1
-msgid "An example on eBay of the variations that can be added to a product."
-msgstr "プロダクトに追加できるバリエーションのeBayでの例。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:68
-msgid ""
-"*Item specifics*, located at the bottom of the listing, detail product-"
-"specific information. These specifics don't sync with Odoo fields by "
-"default; a development is required to link these fields."
-msgstr ""
-"*商品詳細* "
-"はリストの下部にあり、プロダクト固有の情報を詳細に表示します。これらの明細はデフォルトではOdooのフィールドと同期されません。これらのフィールドをリンクするには開発が必要です。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst-1
-msgid "Item specifics listed on an eBay product."
-msgstr "eBayプロダクトに記載されている商品詳細。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:75
-msgid ""
-"*Sandbox* and *Production* are terms that are used to categorize the eBay "
-"environments as either still in development/testing (*Sandbox*) or for use "
-"in the real instance of the database with real customer information/dataset "
-"(*Production*). It is recommended to start first in the *Sandbox* to test, "
-"and then following the processes below, create a *Production* instance."
-msgstr ""
-"*Sandbox* と *Production* は、eBayの環境を、まだ開発/テスト中 (*Sandbox*)か、実際の顧客情報/データセット "
-"(*Production*) を持つデータベースの実際のインスタンスで使用するかのどちらかに分類するために使用される用語です。まず *Sandbox* "
-"でテストを開始し、以下のプロセスに従って *Production* インスタンスを作成することをお勧めします。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:81
-msgid ""
-"eBay's sandbox environment can be accessed by navigating to `eBay's sandbox "
-"portal <https://sandbox.ebay.com/>`_ at `https://sandbox.ebay.com/`. eBay's "
-"production environment can be accessed by navigating to `eBay.com portal "
-"<https://www.ebay.com/>`_ or `https://www.ebay.com/`."
-msgstr ""
-"eBayのsandbox環境には、`eBay sandboxポータル <https://sandbox.ebay.com/>`_ at "
-"`https://sandbox.ebay.com/` からアクセスできます。eBayのproduction環境には、`eBay.com ポータル "
-"<https://www.ebay.com/>`_ or `https://www.ebay.com/` からアクセスできます。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:87
-msgid ""
-"The environment selection **must** remain the same for all environment "
-"settings on eBay and on Odoo throughout this setup."
-msgstr "この設定について、eBayとOdooの環境設定は全て同じである *必要があります* 。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:91
-msgid "eBay actions available on Odoo"
-msgstr "Odooで使用可能なeBayアクション"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:93
-msgid ""
-"The following are built-in actions in Odoo that add or update eBay listings:"
-msgstr "以下はeBay出品を追加または更新するOdooのビルトインアクションです:"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:95
-msgid ""
-"**List**/ **Link**: generate a new eBay listing with an Odoo product by "
-"clicking :guilabel:`List Item on eBay` or :guilabel:`Link With Existing eBay"
-" Listing`."
-msgstr ""
-"**リスト**/ **リンク**: :guilabel:`eBayに商品を出品する` または :guilabel:`既存のeBay出品とリンクする` "
-"をクリックして、Odooプロダクトで新しいeBayリスティングを生成します。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:97
-msgid ""
-":guilabel:`Revise item` button: after making changes to an eBay listing in "
-"Odoo, save the record, and then click the :guilabel:`Revise Item` in Odoo to"
-" update the eBay listing."
-msgstr ""
-":guilabel:`項目を修正` ボタン:OdooでeBayリスティングに変更を加えた後、レコードを保存し、Odooの "
-":guilabel:`項目を修正` をクリックしてeBayリスティングを更新します。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:99
-msgid ""
-"**Relist**: if an item's listing was ended early or :guilabel:`auto-relist` "
-"was not selected, a user can relist the item from Odoo. The start date will "
-"reset."
-msgstr ""
-"**再リスティング**: が早期に終了したアイテムや、:guilabel:`自動再リスティング` "
-"が選択されていないアイテムは、ユーザがOdooから再リスティングすることができます。リスティング開始日はリセットされます。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:101
-msgid ""
-":guilabel:`End item's listing` button: end a listing on eBay directly from "
-"Odoo."
-msgstr ":guilabel:`項目のリスティングを終了`ボタン：Odooから直接eBayへのリスティングを終了します。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:102
-msgid ""
-"**Unlink product listings**: users can unlink a product from the eBay "
-"listing; the listing will stay intact on eBay."
-msgstr "**プロダクトリスティングのリンク解除**:ユーザはeBayのリストからプロダクトのリンクを解除することができます。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:106
-msgid "Setup required on Odoo prior to eBay setup"
-msgstr "eBayの設定の前にOdooの設定が必要です。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:108
-msgid ""
-"To link eBay with Odoo, install the eBay module by navigating to the Odoo "
-"dashboard and clicking into the :guilabel:`Apps` application. Search the "
-"term `eBay` and install the `eBay Connector` module."
-msgstr ""
-"eBayとOdooをリンクするには、Odooのダッシュボードに移動し、:guilabel:`アプリ` "
-"利用をクリックしてeBayモジュールをインストールします。 `eBay` を検索し、`eBayコネクタ` 　モジュールをインストールします。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:112
-msgid "The following items must be configured before eBay is set up:"
-msgstr "eBayを設定する前に、以下の項目を設定する必要があります:"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:114
-msgid ""
-"In Odoo, create and configure products that are intended to be listed in "
-"eBay. eBay does not import new products into Odoo. All products must first "
-"be created in Odoo, and then linked to listings."
-msgstr ""
-"OdooでeBayにリスティングするプロダクトを作成・設定します。 "
-"eBayは新しいプロダクトをOdooにインポートしません。全てのプロダクトをまずOdooで作成し、それからリスティングにリンクされる必要があります。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:118
-msgid ""
-"Odoo does not allow multiple eBay listings to be linked per product in Odoo."
-" If the company sells the same product for multiple listings, follow these "
-"instructions:"
-msgstr ""
-"Odooではプロダクトごとに複数のeBayリストをリンクすることができません。同じプロダクトを複数のリスティングで販売している場合は、以下の手順に従って下さい:"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:121
-msgid ""
-"Set up one *base* product (noted in the :guilabel:`Component` field of the "
-":abbr:`BoM (Bill of Materials)`) from which all eBay listings will pull "
-"from. This will be a storable product so stock can be kept. Highlighted in "
-"green below, this product will be included in the kit on each subsequent "
-"“linked” product below."
-msgstr ""
-"*ベース* プロダクトを1つ設定します(:abbr:`部品表)` の:guilabel:`構成品` "
-"フィールドに記載)。これは保管可能なプロダクトになるため、在庫を確保することができます。下記の緑色でハイライトされているプロダクトは、その後に続く“リンクされた”"
-" 各プロダクトのキットに含まれます。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:126
-msgid ""
-"Set up 2+ *linked* products (noted in the :guilabel:`Product` field of the "
-":abbr:`BoM (Bill of Materials)`, one for each eBay listing. The product type"
-" will be determined by the company's accounting settings, as explained in "
-"the Odoo documentation. Highlighted in yellow below, each product should "
-"have a :guilabel:`BoM type` equal to :guilabel:`Kit` and have the base "
-"product as a :guilabel:`Component` of the kit. When this linked eBay product"
-" is sold, the delivery order created will have the base product listed in "
-"lieu of the linked product."
-msgstr ""
-"2つ以上の *リンクされた* プロダクトを設定します(:abbr:`部品表)`の :guilabel:`プロダクト` "
-"フィールドに記載されており、eBayの各リスティングに対して1つずつ設定します。プロダクトタイプはOdooのドキュメントで説明されているように、会社の会計設定によって決定されます。各プロダクトは"
-" :guilabel:`部品表タイプ` が :guilabel:`キット` で、ベースプロダクトがキットの :guilabel:`構成品` "
-"である必要があります。このリンクされたeBayプロダクトが販売されると、作成される配送オーダにはリンクされたプロダクトの代わりにベースプロダクトがリストされます。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:0
-msgid "Setting up bill of materials with base product and linked products."
-msgstr "ベースプロダクトとリンクプロダクトによる部品表の設定。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:138
-msgid ""
-":doc:`../../../inventory_and_mrp/manufacturing/basic_setup/bill_configuration/`"
-msgstr ""
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:140
-msgid ""
-"eBay does not automatically create invoices for eBay orders that get pushed "
-"into Odoo. Set invoicing policy on eBay products: invoicing policy will "
-"dictate when the product can be invoiced. Since most eBay users collect "
-"payment before the product is shipped, “invoice on ordered” will allow users"
-" to mass create invoices for eBay orders every day."
-msgstr ""
-"eBayでは、eBayのオーダに対する請求書は自動的に生成されず、Odooにプッシュ通知が送信されます。eBayアイテムの請求書ポリシーを設定して下さい。請求書ポリシーによって、アイテムの請求書を発行できる時期が決まります。eBayユーザーは、ほとんどの場合、商品が発送される前に支払いを受けるため、“オーダ時に請求”に設定すると、eBayオーダの請求書を毎日大量に生成することができます。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:144
-msgid ""
-"Set the :guilabel:`Outgoing Shipments` route for the warehouse to "
-":guilabel:`Deliver goods directly (1 step)`."
-msgstr "倉庫の :guilabel:`出荷配送` ルートを :guilabel:`商品を直接配送 (1ステップ)` に設定します。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:148
-msgid ""
-"When the :guilabel:`Outgoing Shipments` route is set to two or three steps, "
-"a known bug occurs: eBay wrongly marks orders as delivered when the pick "
-"operation in Odoo is confirmed. The expected behavior is to mark orders as "
-"delivered **after** the *delivery order* is confirmed. This mislabeling "
-"prevents tracking numbers in eBay from being imported onto the delivery "
-"order."
-msgstr ""
-":guilabel:`出荷配送` "
-"のルートが2ステップまたは3ステップに設定されている場合、既知のバグが発生します:Odooのピッキング操作が確認されると、eBayはオーダを配送済として誤ってマークします。期待される動作は、**配送オーダ**"
-" が確認された **後** に配送済みと表示されることです。この誤った表示により、eBayの追跡番号は配送オーダにインポートされません。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:152
-msgid ""
-"If the Accounting/Invoicing apps are installed, practice registering payment"
-" and reconciling invoices created from eBay orders with incoming eBay money."
-msgstr "会計/請求書作成アプリがインストールされている場合は、支払登録と、eBayのオーダから作成された請求書とeBayの入金を消込を実施します。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:156
-msgid ":doc:`../../..//finance/accounting/bank/reconciliation`"
-msgstr ":doc:`../../..//finance/accounting/bank/reconciliation`"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:158
-msgid ""
-"Generate a marketplace account deletion/closure notification token. To "
-"begin, navigate to :menuselection:`Sales app --> Configuration --> "
-"Settings`. Under the :guilabel:`eBay` heading, change the mode to "
-":guilabel:`Production`, and input random text values for the "
-":guilabel:`Production Cert Key`. Then click the :guilabel:`Generate Token` "
-"button under the :guilabel:`eBay Marketplace Account Deletion/Closure "
-"Notifications` section. This token will be used during the setup on eBay for"
-" the deletion/closure notifications configuration."
-msgstr ""
-"マーケットプレイスアカウントの削除/閉鎖通知トークンを生成します。まず、 :menuselection:`販売アプリ --> 設定 --> 管理設定` "
-"に移動します。:guilabel:`eBay` 見出しの下で、モードを :guilabel:`本番` に変更し、 :guilabel:`本番認証キー` "
-"にランダムなテキスト値を入力します。そして :guilabel:`eBayマーケットプレイスアカウントの削除/閉鎖通知` セクションの下にある "
-":guilabel:`トークンを生成` ボタンをクリックします。このトークンは、eBayでの削除/閉鎖通知の設定時に使用されます。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst-1
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst-1
-msgid "Generate a verification token in Odoo."
-msgstr "Odooで認証トークンを生成します。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:170
-msgid "Set up on eBay"
-msgstr "eBayの設定"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:173
-msgid "Set up eBay developer account"
-msgstr "eBayデベロッパーアカウントの設定"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:175
-msgid ""
-"To start, create an eBay developer account via `eBay's developer portal "
-"<https://go.developer.ebay.com/>`_. This site requires a different login and"
-" password than the eBay account, though the same email address can be used "
-"to register. The verification to create a developer account is around 24 "
-"hours."
-msgstr ""
-"まず、 `eBayデベロッパーポータル<https://go.developer.ebay.com/>`_ からeBayのeBay "
-"デベロッパーアカウントを作成します。このサイトでは eBay "
-"アカウントとは別のログイン名とパスワードが必要ですが、同じメールアドレスで登録できます。eBayデベロッパーアカウントを作成するための認証は約24時間です。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:181
-msgid "Set up eBay keyset"
-msgstr "eBayキーセットの設定"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:183
-msgid ""
-"Once the eBay developer account is created, set up an application on `eBay's"
-" developer portal <https://go.developer.ebay.com/>`_. Next, navigate to the "
-":guilabel:`Hi [username]` heading at top right of screen, then from the "
-"drop-down menu options, click :guilabel:`Application Keysets`. Doing so "
-"opens a pop-up that prompts the user to :guilabel:`Enter Application Title` "
-"(up to fifty characters), and choose a development environment "
-"(:guilabel:`Sandbox` or :guilabel:`Production`). These two fields generate "
-"first keyset. This application title is not saved until the keyset is "
-"generated. Click on :guilabel:`Create a keyset` to generate the keyset."
-msgstr ""
-"eBayデベロッパーアカウントを作成したら、`eBayデベロッパーアカウントポータル　<https://go.developer.ebay.com/>`_"
-" でアプリケーションをセットアップします。次に、画面右上の :guilabel:`こんにちは [ユーザ名]` "
-"の見出しに移動し、ドロップダウンメニューのオプションから :guilabel:`アプリケーションキーセッツ` をクリックします。そうすると、ユーザに "
-":guilabel:`アプリケーションタイトルを入力` (50文字以内)と開発環境(:guilabel:`Sandbox` または "
-":guilabel:`Production`)の選択を促すポップアップが開きます。この2つのフィールドが最初のキーセットを生成します。このアプリケーションタイトルはキーセットが生成されるまで保存されません。キーセットを生成するには"
-" :guilabel:`キーセットを生成` をクリックして下さい。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:192
-msgid ""
-"The newly created *production keyset* is disabled by default. Activate it by"
-" subscribing to the eBay Marketplace 'account deletion or closure "
-"notifications' or by applying to eBay for an exemption. Once enabled, the "
-"database can make 5000 calls per day using this keyset."
-msgstr ""
-"新しく作成された *productionキーセット* は、デフォルトでは無効になっています。eBayマーケットプレイスの "
-"'アカウント削除または閉鎖通知' "
-"に登録するか、eBayに免除を申請することで有効化できます。有効化されると、データベースはこのキーセットを使って1日あたり5000回電話をかけることができます。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst-1
-msgid "Disabled keyset present after creating a keyset."
-msgstr "キーセットを作成した後、無効なキーセットが存在します。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:201
-msgid "Configure account deletion / notification settings (Production)"
-msgstr "アカウント削除/通知設定(プロダクト)"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:203
-msgid ""
-"To configure notifications or delete the database on a production "
-"environment, navigate to the `eBay developer portal "
-"<https://go.developer.ebay.com/>`_. Configure the account "
-"deletion/notification settings in eBay by navigating to the `Hi [username]` "
-"at top right of screen, then :guilabel:`Application Keysets`."
-msgstr ""
-"プロダクト環境で通知を設定したりデータベースを削除するには、`eBayでベロロッパーポータル "
-"<https://go.developer.ebay.com/>`_ に移動します。eBay のアカウント削除/通知設定を行うには、画面右上の "
-"[ユーザー名]`から :guilabel:`アプリケーションキーセッツ` に移動して下さい。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:208
-msgid ""
-"Next, click the :guilabel:`marketplace deletion/account closure "
-"notification` option under the :guilabel:`Production` keyset column. Enter "
-"an email under :guilabel:`Email to notify if marketplace account deletion "
-"notification endpoint is down`. Click :guilabel:`Save` to enable the email."
-msgstr ""
-"次に、 :guilabel:`Production` キーセット列の下にある :guilabel:`マーケットプレイス削除/アカウント閉鎖通知` "
-"オプションをクリックします。:guilabel:`マーケットプレイスアカウント削除通知エンドポイントがダウンした場合に通知するEメール` "
-"の下にEメールを入力します。guilabel:`保存` をクリックしてメールを有効にします。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:212
-msgid ""
-"Following this action, enter the :guilabel:`Marketplace account deletion "
-"notification endpoint` URL provided by Odoo. This HTTPs endpoint is found in"
-" Odoo by navigating to :menuselection:`Sales app --> Configuration --> "
-"Settings`, in the :guilabel:`eBay Marketplace Account Deletion/Closure "
-"Notifications` field."
-msgstr ""
-"このアクションに続いて、Odooが提供する :guilabel:`マーケットプレイスアカウント削除通知エンドポイント` "
-"URLを入力します。このHTTPsエンドポイントはOdooの :menuselection:`販売アプリ --> 設定 --> 管理設定` の "
-":guilabel:`eBayマーケットプレイスアカウントの削除/閉鎖通知` フィールドにあります。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:217
-msgid ""
-"Clicking the :guilabel:`Generate Token` button in Odoo below this field "
-"creates a verification token for the eBay production environment. In Odoo, "
-":guilabel:`Copy` the newly created token and navigate to eBay to fill in the"
-" :guilabel:`Verification token` field. Click :guilabel:`Save` to enable the "
-":guilabel:`Event Notification Delivery Method`."
-msgstr ""
-"このフィールドの下にあるOdooの :guilabel:`トークンを生成` "
-"ボタンをクリックすると、eBay本番環境用の検証トークンが作成されます。Odooで新しく作成されたトークンを :guilabel:`コピー` "
-"し、eBayに移動して :guilabel:`認証トークン` フィールドに入力します。guilabel:`保存` をクリックして "
-":guilabel:`イベント通知配送方法` を有効にします。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst-1
-msgid "Configuring account deletion / notification settings in eBay."
-msgstr "eBayのアカウント削除/通知設定。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:226
-msgid ""
-"After completing the above fields, click :guilabel:`Send Test Notification` "
-"to test the new notifications. Proceed to the next step when the green check"
-" mark appears. Revisit the above settings if the test post is not as "
-"expected."
-msgstr ""
-"上記のフィールドが完了したら、新しい通知をテストするために :guilabel:`テスト通知を送信` "
-"をクリックします。緑色のチェックマークが表示されたら次のステップに進んで下さい。テスト投稿が期待通りでない場合は、上記の設定を再確認して下さい。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:230
-msgid ""
-"After configuring notification settings, go back to the "
-":menuselection:`Application Keys` page to generate production keysets."
-msgstr "通知設定を構成した後、 :menuselection:`アプリケーションキー` ページに戻って本番用キーセットを生成して下さい。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:234
-msgid "Creating the keyset"
-msgstr "キーセットを作成"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:236
-msgid ""
-"A successful setup of the notifications enables the ability to create "
-"Production Keysets which are needed in the remainder of the Odoo "
-"configuration. Navigate back to the :menuselection:`Application Keys` page "
-"generate a production keyset."
-msgstr ""
-"通知のセットアップに成功すると、残りのOdoo設定で必要となる本番キーセットを作成することができます。:menuselection:`アプリケーションキー`"
-" ページに戻り、本番キーセットを作成します。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:240
-msgid ""
-"The administrator is prompted to :menuselection:`Confirm the Primary "
-"Contact`. Enter or confirm the account owner (the person legally responsible"
-" for the eBay API License Agreement). Fill out :guilabel:`First Name`, "
-":guilabel:`Last Name`, :guilabel:`Email`, :guilabel:`Phone`. Then, select "
-"either the :guilabel:`Individual` or :guilabel:`Business` options."
-msgstr ""
-"管理者は :menuselection:`主な連絡先を確認する` を求められます。アカウント所有者(eBay "
-"APIライセンス契約の法的責任者)を入力または確認します。:guilabel:`名前`、 :guilabel:`苗字`、 "
-":guilabel:`Eメール`、 :guilabel:`電話` を入力します。次に、 :guilabel:`個人`  または "
-":guilabel:`ビジネス` オプションを選択します。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:246
-msgid ""
-"The provided email address or phone number does **not** have to match the "
-"account's. eBay uses this information to contacting the business or "
-"individual in case of issues with user tokens. Additional contacts can be "
-"added from the :guilabel:`Profile & Contacts` page on eBay."
-msgstr ""
-"提供されたEメールアドレスまたは電話番号は、アカウントと一致する必要はありません。eBayは、ユーザトークンに問題が発生した場合に企業や個人に連絡するためにこの情報を使用します。連絡先の追加は、eBayの"
-" :guilabel:`プロフィール & 連絡先` ページから行うことができます。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:250
-msgid ""
-"Click on :guilabel:`Continue to Create Keys` to confirm the primary contact."
-" The :guilabel:`Application Keys` populates in a new screen and an email is "
-"also sent to the developer account. An :guilabel:`App ID (Client ID)`, "
-":guilabel:`Dev ID`, and :guilabel:`Cert ID (Client Secret)` all populate."
-msgstr ""
-":guilabel:`キーの作成に進む` をクリックし、主連絡先を確認します。新しい画面に :guilabel:`アプリケーションキー` "
-"が入力され、開発者アカウントにメールが送信されます。guilabel:`App ID (Client ID)`、:guilabel:`Dev "
-"ID`、:guilabel:`Cert ID (Client Secret)` が全て入力されます。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst-1
-msgid "Application keys are populated after creating the app in eBay."
-msgstr "アプリケーションキーはeBayでアプリを作成した後に入力されます。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:259
-msgid ""
-"Copy these values down as they will be input into Odoo later in the process."
-msgstr "これらの値は後でOdooに入力するため、コピーして下さい。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:262
-msgid "Create eBay user token"
-msgstr "eBayユーザトークンを作成する"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:264
-msgid ""
-"Now, create a *user token* in eBay by navigating to the `Hi [username]` at "
-"top right of screen, then :guilabel:`User Access Tokens`."
-msgstr ""
-"画面右上の`こんにちは [ユーザ名]` → :guilabel:`ユーザアクセストークン` に移動して、eBayで *ユーザトークン* を作成します。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst-1
-msgid "Generate user token s on the eBay developer console."
-msgstr "eBayディベロッパーコンソールでユーザトークンを生成します。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:271
-msgid ""
-"Select the correct :guilabel:`Environment`: :guilabel:`Sandbox` for testing "
-"or :guilabel:`Production` for the live database. Maintain the same selection"
-" for all environment settings on both eBay and Odoo."
-msgstr ""
-"適正な :guilabel:`環境`: :guilabel:`Sandbox` (テスト用) または :guilabel:`Production` "
-"(本番データベース用) を選択して下さい。eBayとOdooの全ての環境設定で同じ選択を維持して下さい。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:275
-msgid "Next, select the radio button labeled :guilabel:`Auth'n'Auth`."
-msgstr "次に、:guilabel:`Auth'n'Auth` と書かれたラジオボタンを選択します。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:277
-msgid ""
-"Choose :guilabel:`Sign in to Production` or :guilabel:`Sign in to Sandbox` "
-"to get a user token in the chosen environment. This button varies based on "
-"the selection made above for either :guilabel:`Sandbox` or "
-":guilabel:`Production`."
-msgstr ""
-":guilabel:`Productionにサインイン` または :guilabel:`Sandboxにサインイン` "
-"を選択して、選択した環境のユーザトークンを取得します。このボタンは上記の :guilabel:`Sandbox` または "
-":guilabel:`Production` の選択によって変わります。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:281
-msgid ""
-"Doing so triggers a a pop-up window to :guilabel:`Confirm your Legal "
-"Address`. Complete the required fields, which are :guilabel:`First Name`, "
-":guilabel:`Last Name`, :guilabel:`Primary Email`, :guilabel:`Legal Address`,"
-" and :guilabel:`Account Type`. For :guilabel:`Account Type`, select either "
-":guilabel:`Individual` or :guilabel:`Business`. To complete the "
-"confirmation, click :guilabel:`Sign into eBay to get a Token`."
-msgstr ""
-"そうすると :guilabel:`法的住所の確認` "
-"というポップアップウィンドウが表示されます。:guilabel:`姓`、:guilabel:`名`、:guilabel:`主なEメール`、:guilabel:`法的住所`、:guilabel:`アカウントタイプ`"
-" の必須項目を入力します。:guilabel:`アカウントタイプ` では、 :guilabel:`個人` または :guilabel:`ビジネス` "
-"のいずれかを選択します。確認を完了するには、 :guilabel:`eBayにサインインしてトークンを入手` をクリックします。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:288
-msgid ""
-"eBay will contact this individual or business should there be any issues "
-"with the application keys. Other contacts can be added on the "
-":menuselection:`Profile & Contacts` eBay page."
-msgstr ""
-"アプリケーションキーに問題がある場合は、eBayがこの個人またはビジネスに連絡します。その他の連絡先は :menuselection:`プロフィール &"
-" 連絡先` eBayページで追加できます。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:291
-msgid ""
-"The administrator will be redirected to either a sandbox or production sign-"
-"in page for eBay. This login is different than the eBay developer's console,"
-" it is the eBay account where the items will be sold on. This email and/or "
-"login can differ from the eBay developer account."
-msgstr ""
-"管理者はeBayのsandboxまたはproductionサインインページにリダイレクトされます。このログインはeBayデベロッパーコンソールとは異なり、アイテムが販売されるeBayアカウントです。このメールおよび/またはログインは、eBayデベロッパーアカウントとは異なる場合があります。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:295
-msgid ""
-"Enter the :guilabel:`Email` or :guilabel:`Username` for the eBay account and"
-" sign into the eBay account."
-msgstr ""
-"eBayアカウントの :guilabel:`Eメール` または :guilabel:`ユーザ名` を入力し、eBayアカウントにサインインします。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:299
-msgid ""
-"Should an additional user be needed for the sandbox simulation, a test user "
-"needs to be created. Visit `eBay's Register for Sandbox form "
-"<https://developer.ebay.com/sandbox/register>`_. Detailed instructions can "
-"be found on eBay's help pages: `Create a test Sandbox user "
-"<https://developer.ebay.com/api-docs/static/gs_create-a-test-sandbox-"
-"user.html>`_."
-msgstr ""
-"Sandboxのシミュレーションに追加ユーザが必要な場合は、テストユーザを作成する必要があります。 "
-"`eBayのSandboxフォーム登録<https://developer.ebay.com/sandbox/register>`_ "
-"にアクセスして下さい。詳しい手順はeBayのヘルプページにあります: `Sandboxのテストユーザを作成する "
-"<https://developer.ebay.com/api-docs/static/gs_create-a-test-sandbox-"
-"user.html>`_."
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:305
-msgid "Grant application access"
-msgstr "アプリケーションへのアクセスを許可する"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:307
-msgid ""
-"After signing into the production or sandbox environment, eBay presents the "
-"administrator with an *agreement* to grant access to the user's eBay data."
-msgstr "本番環境またはSandobox環境にサインインした後、eBayは管理者にユーザのeBayデータへのアクセスを許可する*同意*を提示します。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:310
-msgid ""
-"Clicking :guilabel:`Agree` allows eBay to link the eBay account with the "
-"*application programming interface* (API). This agreement can be changed at "
-"any time by visiting eBay's account preferences."
-msgstr ""
-":guilabel:`同意` をクリックすると、eBayはeBayアカウントと *アプリケーションプログラミングインターフェース* "
-"(API)をリンクさせます。この同意はeBayのアカウント設定からいつでも変更することができます。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:314
-msgid ""
-"eBay has a timed sequence between signing in and agreeing to the terms for "
-"the :abbr:`API (Application Programming Interface)` linkage to the account. "
-"Once complete a :guilabel:`User Token` will populate on the "
-":menuselection:`User Tokens` page."
-msgstr ""
-"eBayでは、サインインしてからアカウントへの :abbr:`API "
-"(アプリケーションプログラミングインターフェイス):`リンクの条件に同意するまでの間に、時間的な順序があります。完了すると、 "
-":menuselection:`ユーザトークン` ページに :guilabel:`ユーザトークン` が入力されます。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:318
-msgid ""
-"A :guilabel:`User Token` will populate on the screen. Make sure to copy this"
-" token down as it will be used in the next steps along with the "
-":guilabel:`Application Keyset`."
-msgstr ""
-"画面に :guilabel:`ユーザトークン` が表示されます。このトークンは次のステップで :guilabel:`アプリケーションキーセット` "
-"と共に使用されるので、必ずコピーしておいて下さい。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst-1
-msgid ""
-"Generated user token and API explorer link on the eBay developer console."
-msgstr "eBay開発者コンソールでユーザトークンとAPIエクスプローラリンクを生成しました。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:326
-msgid ""
-"Signing in to the eBay account is necessary to create to the token. The eBay"
-" developer can also revoke the token by clicking on the :guilabel:`Revoke a "
-"Token` link."
-msgstr ""
-"トークンを作成するには、eBayアカウントにサインインする必要があります。eBay デベロッパーは :guilabel:`トークンを取消` "
-"リンクをクリックしてトークンを取消すこともできます。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:330
-msgid "API explorer"
-msgstr "APIエクスプローラ"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:332
-msgid ""
-"Now that the :guilabel:`Application Keyset` and :guilabel:`User Token` have "
-"been created, a test can be executed via the `API Explorer "
-"<https://developer.ebay.com/DevZone/build-test/test-tool/default.aspx>`_ to "
-"ensure that the :abbr:`API (Application Programming Interface)` is "
-"configured correctly. This test will execute a simple search using the "
-":abbr:`API (Application Programming Interface)`."
-msgstr ""
-"これで :guilabel:`アプリケーションキーセット` と :guilabel:`ユーザトークン` が作成されたので、`APIエクスプローラ "
-"<https://developer.ebay.com/DevZone/build-test/test-tool/default.aspx>`_ "
-"を使ってテストを実行し、 :abbr:`API (アプリケーションプログラミングインターフェイス)` "
-"が正しく設定されていることを確認することができます。このテストでは :abbr:`API (アプリケーションプログラミングインターフェイス)` "
-"を使って簡単な検索を行います。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:338
-msgid ""
-"To begin the :abbr:`API (Application Programming Interface)` test, click on "
-":guilabel:`Get OAuth Application Token`. This will populate the key into the"
-" :guilabel:`Token` field."
-msgstr ""
-"abbr:`API (アプリケーションプログラミングインターフェイス)` テストを開始するには、 "
-":guilabel:`OAuthアプリケーション・トークンの取得` をクリックします。これで :guilabel:`Token` "
-"フィールドにキーが入力されます。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:341
-msgid ""
-"A basic search function is set to execute. Click on :guilabel:`Execute` to "
-"complete the test. A successful test will respond with a :guilabel:`Call "
-"Response` of `200 OK` with a corresponding :guilabel:`Time`."
-msgstr ""
-"基本的な検索機能が実行されるように設定されています。guilabel:`実行` をクリックしてテストを完了します。テストが成功すると "
-":guilabel:`コールレスポンス` に `200 OK` と :guilabel:`時間` が応答します。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:346
-msgid "Entering credentials into Odoo"
-msgstr "Odooに認証情報を入力する"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:348
-msgid ""
-"The previously copied :guilabel:`User Token` and :guilabel:`Application "
-"Keyset` are now ready to be entered into the Odoo database."
-msgstr ""
-"先にコピーした :guilabel:`ユーザトークン` と :guilabel:`アプリケーションキーセット` "
-"をOdooデータベースに入力する準備ができました。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:351
-msgid ""
-"Navigate back the eBay settings in Odoo (:menuselection:`Sales app --> "
-"Configuration --> Settings --> eBay`) and paste the following credentials "
-"from eBay into the corresponding fields in Odoo."
-msgstr ""
-"OdooのeBay設定（:menuselection:`販売アプリ --> 設定 --> 管理設定 "
-"-->eBay`）に戻り、eBayの以下の認証情報をOdooの対応するフィールドに貼り付けます。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:358
-msgid "Platform"
-msgstr "プラットフォーム"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:359
-msgid "Dev Key/ID"
-msgstr "ディベロッパーキー/ID"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:360
-msgid "Token"
-msgstr "トークン"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:361
-msgid "App Key/ID"
-msgstr "アプリキー/ID"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:362
-msgid "Cert Key/ID"
-msgstr "認証キー/ID"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:363
-msgid "eBay"
-msgstr "eBay"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:364
-msgid "Dev ID"
-msgstr "ディベロッパーID"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:365
-msgid "User Token"
-msgstr "トークンを使用"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:366
-msgid "App ID (Client ID)"
-msgstr "アプリID (顧客ID)"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:367
-msgid "Cert ID (Client Secret)"
-msgstr "認証ID (クライアントシークレット)"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:368
-#: ../../content/applications/sales/sales/products_prices/products/product_images.rst:102
-msgid "Odoo"
-msgstr "Odoo"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:369
-msgid "Developer Key"
-msgstr "開発者キー"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:370
-msgid "Production/Sandbox Token"
-msgstr "Production/Sandboxトークン"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:371
-msgid "Production/Sandbox App Key"
-msgstr "Production/Sandboxアプリキー"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:372
-msgid "Production/Sandbox Cert Key"
-msgstr "Production/Sandbox認証キー"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:375
-msgid ""
-"The :guilabel:`Application Keyset` can be accessed by going to `eBay's "
-"developer portal <https://go.developer.ebay.com/>`_ and navigate to the `Hi "
-"[username]` at top right of screen, then click on :guilabel:`Application "
-"Keysets`. Get to the *User Token* in eBay by navigating to the `Hi "
-"[username]` at top right of screen, then :guilabel:`User Access Tokens` and "
-"click on :guilabel:`Sign in to Sandbox`. The :guilabel:`User Token` can also"
-" be accessed by clicking on :guilabel:`User Tokens` from the "
-":menuselection:`Application Keys` page."
-msgstr ""
-"eBayのデベロッパーポータル <https://go.developer.ebay.com/>`_にアクセスし、画面右上の `こんにちは[ユーザ名]`"
-" に移動し、:guilabel:`アプリケーションキーセット` をクリックすると、:guilabel:`アプリケーションキーセット` "
-"にアクセスできます。eBay の *ユーザトークン* にアクセスするには、画面右上の `こんにちは [ユーザ名]` に移動し、 "
-":guilabel:`ユーザアクセストークン` をクリックし、 :guilabel:`Sandboxにサインイン` "
-"をクリックします。guilabel:`ユーザトークン` は :menuselection:`アプリケーションキー` ページから "
-":guilabel:`ユーザトークン` をクリックしてもアクセスできます。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:382
-msgid ""
-"Confirm that the setup is correct by saving the credentials in Odoo. Once "
-"the initial setup is complete, a new menu tab in products will appear called"
-" `eBay` with the option to :guilabel:`Sell on eBay`. See the :doc:`manage` "
-"documentation on how to list products."
-msgstr ""
-"Odooで認証情報を保存し、設定が正しいことを確認します。初期設定が完了すると、プロダクトに `eBay` "
-"という新しいメニュータブが表示され、:guilabel:`eBayで販売する` というオプションが表示されます。プロダクトのリスティング方法については "
-":doc:`管理` ドキュメンテーションを参照して下さい。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:387
-msgid ""
-"Sync product categories by clicking :guilabel:`Product Categories`. After "
-"syncing, a new menu item, `eBay Category`, appears available for products to"
-" be configured with. These eBay categories are imported from the Odoo "
-"database and are available when listing an item on eBay through Odoo."
-msgstr ""
-":guilabel:`プロダクトカテゴリ` "
-"をクリックしてプロダクトカテゴリを同期します。同期後、新しいメニュー項目`eBayカテゴリ`が表示され、プロダクトを設定することができます。これらのeBayカテゴリはOdooデータベースからインポートされ、Odooを通してeBayに商品をリスティングする際に利用できます。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:393
-msgid ""
-"If Product Categories beyond four paths are required, users will need to "
-"manually add those paths. This has historically been done by getting a list "
-"of all product categories beyond four paths, manually importing them into "
-"the Product Category model in Odoo, and then linking them individually to "
-"the product."
-msgstr ""
-"4パスを超えるプロダクトカテゴリが必要な場合、ユーザが手動でパスを追加する必要があります。これまでは、4パスを超えるプロダクトカテゴリのリストを全て取得し、Odooのプロダクトカテゴリモデルに手動でインポートし、プロダクトに個別にリンクしていました。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:399
-msgid "Now that the setup is complete, proceed to either:"
-msgstr "セットアップが完了したら、次のいずれかに進みます:"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:401
-msgid ":doc:`Create listings <manage>`"
-msgstr ":doc:`リスティングを作成する <manage>`"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:402
-msgid ":doc:`Link existing listings <linking_listings>`"
-msgstr ":doc:`既存のリスティングをリンク <linking_listings>`"
-
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:3
-msgid "Troubleshooting eBay connector"
-msgstr "トラブルシューティング eBayコネクタ"
-
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:13
-msgid "Accept account deletion notifications"
-msgstr "アカウント削除通知を受取る"
-
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:15
-msgid ""
-"Since September 2021, **eBay requires supporting customer account "
-"deletion/closure notifications**. As such, when eBay receives an account "
-"request for deletion, all eBay partners must confirm the reception of the "
-"request and take further action if necessary."
-msgstr ""
-"2021年9月以降、**eBayは顧客アカウント削除/閉鎖通知をサポートすることを義務付けています** "
-"。そのため、eBayがアカウント削除の要求を受信した場合、全てのeBay取引パートナーは要求の受信を確認し、必要に応じてさらなる対応を行う必要があります。"
-
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:19
-msgid ""
-"Odoo has a notification endpoint to receive those notifications, confirm the"
-" reception of the request, and handle the first set of actions to anonymize "
-"the account details in *Contacts* and remove the customer's access to the "
-"portal."
-msgstr ""
-"Odooはこれらの通知を受信する通知エンドポイントを持ち、要求の受信を確認し、*連絡先* "
-"のアカウント詳細を匿名化し、ポータルへの顧客のアクセスを削除する最初のアクションを処理します。"
-
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:24
-msgid ""
-"Make sure to correctly :ref:`set up the subscription to the marketplace "
-"account deletion notifications <ebay/subscribe-account-deletion-"
-"notifications>` as eBay may temporarily disable the related eBay account "
-"until the subscription is completed."
-msgstr ""
-":ref:`マーケットプレイスアカウント削除通知の購読設定  <ebay/subscribe-account-deletion-"
-"notifications>` "
-"を正しく行って下さい。eBayは、購読手続きが完了するまで、関連するeBayアカウントを一時的に無効にする場合があります。"
-
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:29
-msgid "Verify the installation of Odoo is up to date"
-msgstr "Odooインストールが最新であることを確認"
-
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:31
-msgid ""
-"In order to activate the endpoint, the module *eBay Connector - Account "
-"Deletion* must be installed. If the Odoo database was first created after "
-"September 2021, the module is installed automatically and the administrator "
-"can proceed to the :ref:`next step <ebay/retrieve-endpoint-details>`."
-msgstr ""
-"エンドポイントを有効化するには、モジュール *eBayコネクタ - アカウント削除* "
-"をインストールする必要があります。Odooデータベースが2021年9月以降に作成された場合、モジュールは自動的にインストールされ、管理者は "
-":ref:`次のステップ <ebay/retrieve-endpoint-details>` に進むことができます。"
-
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:36
-msgid "Update Odoo to the latest release"
-msgstr "Odooを最新リリースにアップデートする"
-
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:38
-msgid ""
-"The notification endpoint is made available through a new Odoo module; to be"
-" able to install it, the administrator must make sure that the Odoo source "
-"code is up-to-date."
-msgstr ""
-"通知エンドポイントは新しいOdooモジュールで利用できるようになります。それをインストールできるようにするには、管理者がOdooのソースコードが最新であることを確認する必要があります。"
-
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:41
-msgid ""
-"If the company uses Odoo on Odoo.com or Odoo.sh platform, the code is "
-"already up-to-date, so proceed to the next step."
-msgstr ""
-"その会社がOdoo.comまたはOdoo.shプラットフォームでOdooを使用している場合、コードはすでに最新の状態ですので、次のステップに進んで下さい。"
-
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:43
-msgid ""
-"If the company uses Odoo with an on-premise setup or through a partner, then"
-" the administrator must update the installation as detailed in :doc:`this "
-"documentation page </administration/on_premise/update>` or by contacting an "
-"integrating partner."
-msgstr ""
-
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:48
-msgid "Update the list of available modules"
-msgstr "利用可能なモジュールのリストを更新する"
-
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:50
-msgid ""
-"New modules must be *discovered* by the Odoo instance to be available in the"
-" :menuselection:`Apps` menu."
-msgstr ""
-"新しいモジュールを :menuselection:`アプリ` メニューで利用できるようにするには、Odooインスタンスによって *検出* "
-"される必要があります。"
-
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:53
-msgid ""
-"To do so, activate the :ref:`developer mode <developer-mode>`, and go to "
-":menuselection:`Apps -> Update Apps List`. A wizard will ask for "
-"confirmation."
-msgstr ""
-"これを行うには、 :ref:`開発者モード<developer-mode>` を有効にして、 :menuselection:`アプリ -> "
-"アプリリストを更新` に進みます。ウィザードが確認を求めてきます。"
-
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:57
-msgid "Install the eBay Connector - Account Deletion update"
-msgstr "eBayコネクタ - アカウント削除更新をインストールします"
-
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:60
-msgid ""
-"**Never** install new modules in the production database without testing "
-"them in a duplicate or staging environment. For Odoo.com customers, a "
-"duplicate database can be created from the database management page. For "
-"Odoo.sh users, the administrator should use a staging or duplicate database."
-" For on-premise users, the administrator should use a staging environment - "
-"contact the integrating partner for more information regarding how to test a"
-" new module in a particular setup."
-msgstr ""
-"新しいモジュールを、複製またはステージング環境でテストすることなく、本番データベースにインストールすることは **絶対にしない** "
-"で下さい。Odoo.comをご利用の場合、データベース管理ページから複製データベースを作成することができます。Odoo.shユーザの場合、管理者はステージングまたは複製データベースを使用する必要があります。オンプレミスユーザの場合、管理者はステージング環境を使用する必要があります。特定のセットアップで新しいモジュールをテストする方法の詳細については、統合パートナーにお問い合わせ下さい。"
-
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:67
-msgid ""
-"To install the module, go to the :menuselection:`Apps` menu, remove the "
-"`Apps` search facet and search for `eBay`. If the module *eBay Connector - "
-"Account Deletion* is present and marked as installed, the Odoo database is "
-"already up-to-date and the administrator can proceed with the next step. If "
-"it is not yet installed, install it now."
-msgstr ""
-"モジュールをインストールするには、 :menuselection:`アプリ` メニューから `アプリ` 検索ファセットを削除し、`eBay` "
-"を検索します。モジュール *eBayコネクタ - アカウント削除* "
-"が存在し、インストール済と表示されている場合、Odooデータベースはすでに最新であり、管理者は次のステップに進むことができます。まだインストールされていない場合は、今すぐインストールして下さい。"
-
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:75
-msgid "Retrieve endpoint details from Odoo"
-msgstr "Odooからエンドポイントの詳細を取得する"
-
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:77
-msgid ""
-"The endpoint details can be found in :menuselection:`Sales --> Configuration"
-" --> Settings --> eBay`. First, input random text values for the "
-":guilabel:`Production App Key` and for the :guilabel:`Production Cert Key`. "
-"Click on :guilabel:`Generate Token` to retrieve the :guilabel:`Verification "
-"Token`."
-msgstr ""
-"エンドポイントの詳細は :menuselection:`販売 --> 設定 --> 管理設定 --> eBay` にあります。まず、 "
-":guilabel:`Productionアプリキー` と :guilabel:`Production認証キー` "
-"にランダムなテキスト値を入力します。:guilabel:`トークンを生成` をクリックして、 :guilabel:`認証トークン` を取得します。"
-
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:89
-msgid "Subscribe to account deletion notifications"
-msgstr "アカウント削除通知に登録する"
-
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:91
-msgid ""
-"Navigate to the `eBay developer portal <https://go.developer.ebay.com/>`_. "
-"Configure the account deletion/notification settings in eBay by navigating "
-"to the `Hi [username]` at the top right of screen, then go to "
-":guilabel:`Alerts & Notifications`."
-msgstr ""
-"eBayデベロッパーポータル<https://go.developer.ebay.com/>`_ に移動します。画面右上の`こんにちは [ユーザ名]` "
-"に移動し、:guilabel:`警告 & 通知` のアカウント削除/通知設定を行います。"
-
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst-1
-msgid "Overview of the Alerts & Notifications dashboard of eBay"
-msgstr "eBayの警告＆通知ダッシュボードの概要"
-
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:99
-msgid ""
-"To subscribe to deletion/closure notifications, eBay needs a few details:"
-msgstr "削除/閉鎖通知を登録するには、eBayでいくつかの詳細が必要です:"
-
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:101
-msgid ""
-"An *email address* to send notifications to if the endpoint is unreachable."
-msgstr "エンドポイントに到達できない場合に通知を送るための *Eメールアドレス*。"
-
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:102
-msgid "The *endpoint details*:"
-msgstr "*エンドポイント詳細*:"
-
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:104
-msgid "The URL to Odoo's account deletion notification endpoint"
-msgstr "Odooのアカウント削除通知エンドポイントのURL"
-
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:105
-msgid "A verification token"
-msgstr "認証トークン"
-
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst-1
-msgid "Dedicated fields to enter the endpoint details"
-msgstr "エンドポイントの詳細を入力する専用フィールド"
-
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:112
-msgid ""
-"The administrator can edit the last two fields once the email address field "
-"is filled out."
-msgstr "メールアドレスが入力されると、管理者は最後の2つのフィールドを編集することができます。"
-
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:115
-msgid "Verify the connectivity with the endpoint"
-msgstr "エンドポイントとの接続性を確認する"
-
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:117
-msgid ""
-"After setting the retrieved endpoint details in eBay's dashboard, consider "
-"testing the connectivity with the :guilabel:`Send Test Notification` button."
-msgstr ""
-"eBayのダッシュボードで取得したエンドポイントの詳細を設定した後、:guilabel:`テスト通知送信` "
-"ボタンで接続性をテストすることを検討して下さい。"
-
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst:120
-msgid ""
-"The following confirmation message should be received: \"A test notification"
-" was sent successfully!\""
-msgstr "次のような確認メッセージが届くはずです: \"テスト通知が正常に送信されました!\""
-
-#: ../../content/applications/sales/sales/ebay_connector/troubleshooting.rst-1
-msgid "Button to send test notification"
-msgstr "テスト通知送信ボタン"
-
 #: ../../content/applications/sales/sales/invoicing.rst:5
 msgid "Invoicing Method"
 msgstr "請求方法"
@@ -16514,8 +15034,8 @@ msgid ""
 ":guilabel:`Create Draft Invoice` button. Upon clicking this button, Odoo "
 "reveals the :guilabel:`Customer Invoice Draft`."
 msgstr ""
-"全てのフィールドに必要な情報を入力し、:guilabel:`ドラフト請求書作成` ボタンをクリックすると :guilabel:`顧客請求書ドラフト` "
-"が表示されます。"
+"全てのフィールドに必要な情報を入力したら、:guilabel:`ドラフト請求書作成`ボタンをクリックします。このボタンをクリックすると、Odooは "
+":guilabel:`顧客請求書ドラフト` を表示します。"
 
 #: ../../content/applications/sales/sales/invoicing/down_payment.rst:59
 msgid ""
@@ -17250,8 +15770,7 @@ msgid ""
 " sales order to which this expense should be attached. This field **must** "
 "be filled, in order to reinvoice a customer for an expense."
 msgstr ""
-"次に、:guilabel:`再請求先顧客` "
-"フィールドで、空白のフィールドをクリックしてドロップダウンメニューを表示します。このドロップダウンメニューから、この経費を請求する販売オーダを選択します。経費の再請求を行うには、このフィールドに入力する必要があります。"
+"次に、:guilabel:`再請求先顧客`フィールドで、空白のフィールドをクリックしてドロップダウンメニューを表示します。このドロップダウンメニューから、この経費を請求する販売オーダを選択します。経費の再請求を行うには、このフィールドに入力する必要があります。"
 
 #: ../../content/applications/sales/sales/invoicing/expense.rst:100
 msgid ""
@@ -17371,8 +15890,7 @@ msgid ""
 "is filled with the sales order that was initially configured to the expense "
 "in the :guilabel:`Customer to Reinvoice` field."
 msgstr ""
-":guilabel:`仕訳を入力` をクリックすると、そのボタンは消え、:guilabel:`経費` タブの :guilabel:`分析分配` "
-"列には、最初に :guilabel:`再請求先顧客` フィールドで費用に設定された販売オーダが入力されます。"
+"guilabel:`仕訳を入力`をクリックすると、そのボタンは消え、:guilabel:`経費`タブの:guilabel:`分析分配`カラムには、最初に:guilabel:`再請求先顧客`フィールドで費用に設定された販売オーダが入力されます。"
 
 #: ../../content/applications/sales/sales/invoicing/expense.rst:159
 msgid ""
@@ -17617,9 +16135,9 @@ msgid ""
 ":guilabel:`Invoice what is ordered` or :guilabel:`Invoice what is "
 "delivered`."
 msgstr ""
-"必要な請求方針の機能を有効にするには、 :menuselection:`販売アプリ --> 設定 --> 管理設定` に進み、 "
-":guilabel:`請求` の見出しの下にある :guilabel:`請求方針` の規則を選択します: :guilabel:`オーダ済数量を請求` "
-"または :guilabel:`配送済数量を請求`。"
+"必要な請求書方針機能を有効にするには、 :menuselection:`販売アプリ --> 設定 --> 管理設定` に進み、 "
+":guilabel:`請求` の見出しの下にある :guilabel:`請求方針` の規則を選択します： "
+":guilabel:`オーダされたものを請求する` または :guilabel:`配送されたものを請求する`。"
 
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst-1
 msgid "Choosing an invoicing policy on Odoo Sales."
@@ -17636,7 +16154,7 @@ msgstr ""
 
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:34
 msgid "Invoicing policy on product form"
-msgstr "プロダクトフォームの請求方針"
+msgstr "プロダクトフォームの請求書方針"
 
 #: ../../content/applications/sales/sales/invoicing/invoicing_policy.rst:36
 msgid ""
@@ -18719,7 +17237,7 @@ msgid ""
 "other time/material invoicing tasks are completed properly and accurately."
 msgstr ""
 ":guilabel:`顧客請求書` の :guilabel:`分析分配` "
-"列に注意して下さい。この情報は、他の時間/材料請求書作成作業が適切かつ正確に完了するために必要です。"
+"列に注意して下さい。この情報は、他のタイム/マテリアル請求書作成作業が適切かつ正確に完了するために必要です。"
 
 #: ../../content/applications/sales/sales/invoicing/time_materials.rst:0
 msgid "Invoice draft showing time spent on sales order in Odoo Sales."
@@ -19748,7 +18266,7 @@ msgstr ":guilabel:`次回オーダクーポン`: 次回のオーダで特典を�
 
 #: ../../content/applications/sales/sales/products_prices/loyalty_discount.rst:116
 msgid "Conditional rules"
-msgstr "条件ルール"
+msgstr "条件規則"
 
 #: ../../content/applications/sales/sales/products_prices/loyalty_discount.rst:118
 msgid ""
@@ -20103,12 +18621,6 @@ msgstr "右端には2つの列があり、オン・オフを切り替えるこ�
 
 #: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:72
 msgid ""
-":guilabel:`Use on eBay`: this currency can be used with the connected eBay "
-"account (if applicable)."
-msgstr ":guilabel:`eBayで使用`: この通貨は、接続されたeBayアカウント(該当する場合)で使用できます。"
-
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:74
-msgid ""
 ":guilabel:`Active`: this currency is activated, which means it can be added "
 "to a pricelist, or used as the main currency of the company, if desired (via"
 " :menuselection:`Accounting app --> Configuration --> Settings --> "
@@ -20118,13 +18630,13 @@ msgstr ""
 "この通貨は有効です。つまり、価格リストに追加したり、会社のメイン通貨として使用することができます(:menuselection:`会計アプリ --> "
 "設定 --> 管理設定 --> 通貨セクション` 経由)。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:79
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:77
 msgid ""
 "By default, all the :guilabel:`Active` currency options are at the top of "
 "the list."
 msgstr "デフォルトでは、全ての :guilabel:`有効` 通貨オプションがリストの一番上に表示されます。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:82
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:80
 msgid ""
 "It is recommended that *at least* one pricelist is created per "
 ":guilabel:`Active` currency. See :doc:`./pricing` to learn more about "
@@ -20133,7 +18645,7 @@ msgstr ""
 ":guilabel:`有効` 通貨ごとに *最低* 1つの価格表を作成することを推奨します。価格表の設定については :doc:`./価格` "
 "を参照して下さい。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:85
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:83
 msgid ""
 "To toggle options on/off, click the toggle switch in the row for the "
 "corresponding column. When *on* the color of the switch is green. When "
@@ -20141,11 +18653,11 @@ msgid ""
 msgstr ""
 "オプションのオン/オフを切り替えるには、対応する列の行にあるトグルスイッチをクリックします。*オン*の場合、スイッチの色は緑になります。*オフ*の場合、スイッチの色はグ灰色です。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:89
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:87
 msgid "Currency detail form"
 msgstr "通貨詳細フォーム"
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:91
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:89
 msgid ""
 "To edit any currency on the :guilabel:`Currencies` page, click the desired "
 "currency to reveal the detail form for that specific currency, and proceed "
@@ -20157,7 +18669,7 @@ msgstr ""
 msgid "How a currency detail form looks in Odoo Accounting."
 msgstr "Odoo会計での通貨詳細フォームの見え方。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:98
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:96
 msgid ""
 "On the currency detail form, the relevant currency code appears in the "
 ":guilabel:`Currency` field. Beneath that, the name for the currency is in "
@@ -20166,7 +18678,7 @@ msgstr ""
 "通貨詳細フォームでは、関連する通貨コードが :guilabel:`通貨` フィールドに表示されます。その下の :guilabel:`名前` "
 "フィールドには通貨の名前が表示されます。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:101
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:99
 msgid ""
 "Then, toggle the currency's availability with the :guilabel:`Active` toggle:"
 " *on* is indicated with a green switch, and *off* is indicated with a grey "
@@ -20174,7 +18686,7 @@ msgid ""
 msgstr ""
 "次に、 :guilabel:`有効` トグルで通貨の使用可否を切り替えます： *オン* は緑色のスイッチ、*オフ* は灰色のスイッチで表示されます。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:104
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:102
 msgid ""
 "On the right of the currency detail form, the appropriate "
 ":guilabel:`Currency Unit` (e.g. `Dollars`) and :guilabel:`Currency Subunit` "
@@ -20183,13 +18695,7 @@ msgstr ""
 "通貨詳細フォームの右側には、適切な :guilabel:`通貨単位` (例: `ドル`) と :guilabel:`通貨サブユニット` (例: "
 "`セント`) が表示されます。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:107
-msgid ""
-"If the currency is meant to be used for eBay purposes, toggle the "
-":guilabel:`Use on eBay` option to the desired activation."
-msgstr "通貨をeBayで使用する場合は、:guilabel:`eBayで使用` オプションを有効にして下さい。"
-
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:110
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:105
 msgid ""
 "Next, under the :guilabel:`Rates` tab, the various conversion rates can be "
 "viewed, added, or deleted. Each row shows the :guilabel:`Date` of that "
@@ -20200,8 +18706,8 @@ msgstr ""
 ":guilabel:`日付`、接続先の :guilabel:`会社`、そして :guilabel:`...ごとの単位` と "
 ":guilabel:`...単位ごと`が表示されます。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:115
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:166
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:110
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:158
 msgid ""
 "The *...* in each of the last two columns represents the main currency set "
 "for the company. For example, if the main currency is set to `USD`, the "
@@ -20210,7 +18716,7 @@ msgstr ""
 "最後の2つの列のそれぞれ *...* は、会社に設定されているメイン通貨を表します。例えば、メイン通貨が `USD` "
 "に設定されている場合、列のタイトルは :guilabel:`USDごとの単位` と :guilabel:`単位ごとのUSD` になります。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:119
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:114
 msgid ""
 "To add a new rate, click :guilabel:`Add a line` in the :guilabel:`Rates` "
 "tab, and proceed to fill in the necessary information in the aforementioned "
@@ -20219,11 +18725,11 @@ msgstr ""
 "新しい料金を追加するには、 :guilabel:`料金` タブの :guilabel:`明細の追加` "
 "をクリックし、前述の欄に必要な情報を記入していきます。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:123
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:118
 msgid "Main currency detail form"
 msgstr "主要通貨詳細フォーム"
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:125
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:120
 msgid ""
 "If the selected currency is the main currency of the company, a blue banner "
 "appears at the top of the currency detail form with the message: "
@@ -20236,7 +18742,7 @@ msgstr ""
 msgid "How a main currency detail form looks in Odoo Accounting."
 msgstr "Odoo会計の主要通貨詳細フォームの見え方"
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:132
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:127
 msgid ""
 "All the fields are the same as a typical currency detail form, but there "
 "will **not** be a :guilabel:`Rates` tab because all other currency rates are"
@@ -20245,11 +18751,11 @@ msgstr ""
 "全てのフィールドは一般的な通貨詳細フォームと同じですが、他の全ての通貨レートは会社のメイン通貨に基づいているため、:guilabel:`レート` タブは"
 " **ありません** 。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:137
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:132
 msgid "Create new currency"
 msgstr "新規通貨を作成する"
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:139
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:134
 msgid ""
 "If a desired currency isn't on the :guilabel:`Currencies` page, click the "
 ":guilabel:`New` button to open a blank currency template form."
@@ -20257,7 +18763,7 @@ msgstr ""
 "希望する通貨が :guilabel:`通貨` ページにない場合は、 :guilabel:`新規` "
 "ボタンをクリックして空白の通貨テンプレートフォームを開きます。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:143
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:138
 msgid ""
 "The same :guilabel:`New` button is located in the upper-right corner of any "
 "currency detail form."
@@ -20267,7 +18773,7 @@ msgstr "同じ :guilabel:`新規` ボタンが、どの通貨詳細フォーム�
 msgid "How a blank currency detail form looks in Odoo Accounting."
 msgstr "Odoo会計での空白の通貨詳細フォームの見え方。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:149
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:144
 msgid ""
 "On the blank currency detail form, proceed to enter the desired currency "
 "code in the :guilabel:`Currency` field. Beneath that, enter the name for the"
@@ -20276,13 +18782,13 @@ msgstr ""
 "空白の通貨詳細フォームで、希望の通貨コードを :guilabel:`通貨` フィールドに入力します。その下の :guilabel:`名前` "
 "フィールドに通貨名を入力します。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:153
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:148
 msgid ""
 "Then, toggle the currency's availability with the :guilabel:`Active` toggle "
 "switch."
 msgstr "次に、 :guilabel:`有効` トグルスイッチで通貨の使用可否を切替えます。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:155
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:150
 msgid ""
 "On the right of the currency detail form, enter the appropriate "
 ":guilabel:`Currency Unit` (e.g. `Dollars`) and appropriate "
@@ -20291,13 +18797,7 @@ msgstr ""
 "通貨詳細フォームの右側に、適切な :guilabel:`通貨ユニット` (例：`ドル`)と適切な :guilabel:`通貨サブ単位` "
 "(例：`セント`)を入力します。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:158
-msgid ""
-"If the currency is meant to be used for eBay purposes, toggle the "
-":guilabel:`Use on eBay` to the desired activation."
-msgstr "通貨をeBayで使用する場合は、:guilabel:`eBaydで使用`を有効にして下さい。"
-
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:161
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:153
 msgid ""
 "Next, under the :guilabel:`Rates` tab, add a new rate by clicking "
 ":guilabel:`Add a line`. Then, proceed to confirm and adjust the "
@@ -20309,11 +18809,11 @@ msgstr ""
 ":guilabel:`日付`、 :guilabel:`会社`、 :guilabel:`単位あたり...`、 :guilabel:`...単位あたり` "
 "フィールドの確認と調整を行い、自動入力された情報が全て正確であることを確認します。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:171
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:163
 msgid "Currency-specific pricelists"
 msgstr "特定別価格表"
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:173
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:165
 msgid ""
 "It is recommended that *at least* one pricelist is created per active "
 "currency in the database. To create (or assign) a pricelist to a specific "
@@ -20323,28 +18823,28 @@ msgstr ""
 "データベースの有効な通貨ごとに少なくとも1つの価格表を作成することをお勧めします。特定の通貨に価格表を作成(または割当て)するには、 "
 ":menuselection:`販売アプリ --> プロダクト --> 価格表` に移動します。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:177
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:169
 msgid ""
 "From the :guilabel:`Pricelists` page, either select an existing pricelist to"
 " edit, or click :guilabel:`New` to create a new pricelist."
 msgstr ""
 ":guilabel:`価格表` ページから、既存の価格表を選択して編集するか、 :guilabel:`新規` をクリックして新しい価格表を作成します。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:180
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:172
 msgid ""
 "On the pricelist detail form, for either a new or existing pricelist, adjust"
 " the :guilabel:`Currency` field as desired."
 msgstr "価格表詳細フォームで、新規または既存の価格表の :guilabel:`通貨` フィールドを希望に応じて調整します。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:184
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:176
 msgid ":doc:`./pricing` to learn more about pricelist configuration."
 msgstr "価格表設定について更に詳しく知るための:doc:`./pricing` "
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:187
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:179
 msgid "Auto-conversion from public price"
 msgstr "公開価格からの自動変換"
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:189
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:181
 msgid ""
 "It should be noted that the public price seen on products is directly "
 "related to the main currency the company has set, which is configured by "
@@ -20354,7 +18854,7 @@ msgstr ""
 "プロダクトに表示される公開価格は、その会社が設定した主要通貨に直接関連していることに留意して下さい。これは、 :menuselection:`会計アプリ"
 " --> 設定 --> 管理設定 --> 通貨セクション --> 主要通貨 --> 通貨ドロップダウンメニュー` で設定できます。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:193
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:185
 msgid ""
 "The sales price automatically updates if the pricelist is changed to a "
 "different pricelist that has a different currency than the company's main "
@@ -20363,11 +18863,11 @@ msgid ""
 msgstr ""
 "販売価格は、価格表が会社の主要通貨と異なる通貨を持つ別の価格表に変更された場合、自動的に更新されます。価格の変更は、更新されたその通貨の換算レートに直接関係します。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:198
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:190
 msgid "Set product prices"
 msgstr "プロダクト価格を設定する"
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:200
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:192
 msgid ""
 "In order to have product prices set in place to avoid any changes in "
 "currency rates, start by navigating to :menuselection:`Sales app --> "
@@ -20376,7 +18876,7 @@ msgstr ""
 "為替レートの変動を避けるためにプロダクト価格を設定するには、まず :menuselection:`販売アプリ --> プロダクト --> プロダクト` "
 "に移動します。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:203
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:195
 msgid ""
 "From the :guilabel:`Products` page, select the desired product to modify. "
 "Or, create a new product by clicking the :guilabel:`New` button."
@@ -20384,7 +18884,7 @@ msgstr ""
 ":guilabel:`プロダクト` ページから、修正したいプロダクトを選択します。または、 :guilabel:`新規` "
 "ボタンをクリックして新しいプロダクトを作成します。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:206
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:198
 msgid ""
 "Then, on the product detail form, click the :guilabel:`Extra Prices` smart "
 "button, located in the upper-left corner. Doing so reveals a separate "
@@ -20399,13 +18899,13 @@ msgid ""
 "Sales."
 msgstr "Odoo販売で外貨価格表に基づいてプロダクト価格を設定する方法。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:214
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:206
 msgid ""
 "Click :guilabel:`New`, and select the desired pricelist from the drop-down "
 "menu in the :guilabel:`Pricelist` column."
 msgstr ":guilabel:`新規`をクリックし、 :guilabel:`価格表` 列のドロップダウンメニューから希望する価格リストを選択します。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:217
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:209
 msgid ""
 "The :guilabel:`Applied On` field is auto-populated with the product, so "
 "proceed to enter in the desired figures in the :guilabel:`Min. Quantity` and"
@@ -20414,7 +18914,7 @@ msgstr ""
 ":guilabel:`適用対象` フィールドにはプロダクトが自動入力されるので、 :guilabel:`最小数量`  と :guilabel:`価格` "
 "フィールドに希望の数値を入力して下さい。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:221
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:213
 msgid ""
 "The figure in the :guilabel:`Min. Quantity` field means the "
 ":guilabel:`Price` being set will **only** trigger if at least that amount of"
@@ -20423,7 +18923,7 @@ msgstr ""
 "この :guilabel:`最小数量` フィールドの数字は、設定される :guilabel:`価格` が、少なくともその量のプロダクトが購入された場合に"
 " **のみ** トリガされることを意味します。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:224
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:216
 msgid ""
 "If necessary, configure a :guilabel:`Start Date` and :guilabel:`End Date` "
 "for the set prices. Leaving those columns blank ensures the set price will "
@@ -20432,7 +18932,7 @@ msgstr ""
 "必要であれば、設定価格に :guilabel:`開始日` と :guilabel:`終了日` "
 "を設定して下さい。これらの列を空白にすることで、販売日に関係なく設定価格が有効であることを保証します。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:227
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:219
 msgid ""
 "If working in a multi-company environment, designate to which company this "
 "price rule should be applied in the :guilabel:`Company` field. Leaving that "
@@ -20441,7 +18941,7 @@ msgstr ""
 "複数の会社が存在する環境で作業する場合は、 :guilabel:`会社` "
 "フィールドでこの価格ルールを適用する会社を指定します。このフィールドを空白にすると、価格ルールがデータベース内の全ての会社に適用されます。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:231
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:223
 msgid ""
 "With those configurations complete, regardless of any changes/updates in "
 "conversion, whenever those designated pricelists are applied to a customer "
@@ -20450,7 +18950,7 @@ msgid ""
 msgstr ""
 "このように設定が完了すると、切替時の変更/更新に関係なく、特定のプロダクトを購入する顧客に指定された価格表が適用されるたびに、あらかじめ設定された価格が表示されます。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:236
+#: ../../content/applications/sales/sales/products_prices/prices/currencies.rst:228
 msgid ":doc:`./pricing`"
 msgstr ":doc:`./pricing`"
 
@@ -20719,7 +19219,7 @@ msgid ""
 "<sales/advanced-price-rules>` section for detailed steps on how to add "
 "advanced price rules to a pricelist."
 msgstr ""
-"価格リストに詳細な価格ルールを追加する方法については、 :ref:`高度な価格ルール (値引き、計算式) <sales/advanced-price-"
+"価格リストに詳細な価格規則を追加する方法については、 :ref:`高度な価格規則 (値引き、計算式) <sales/advanced-price-"
 "rules>` セクションを参照して下さい。"
 
 #: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:136
@@ -22245,6 +20745,10 @@ msgstr ""
 #: ../../content/applications/sales/sales/products_prices/products/product_images.rst:0
 msgid "Basic overview page with search engine ID field."
 msgstr "基本的な概要ページと検索エンジンIDフィールド。"
+
+#: ../../content/applications/sales/sales/products_prices/products/product_images.rst:102
+msgid "Odoo"
+msgstr "Odoo"
 
 #: ../../content/applications/sales/sales/products_prices/products/product_images.rst:104
 msgid ""
@@ -23989,7 +22493,7 @@ msgstr ""
 "その特定の見積テンプレートが見積に使用されるたびに、上記で指定された日数に基づいて、有効期限が自動的に計算されます。この有効期限は見積を顧客に送信する前に上書きすることができます。"
 
 #: ../../content/applications/sales/sales/send_quotations/deadline.rst:56
-#: ../../content/applications/sales/sales/send_quotations/pdf_quote_builder.rst:227
+#: ../../content/applications/sales/sales/send_quotations/pdf_quote_builder.rst:230
 msgid ":doc:`/applications/sales/sales/send_quotations/quote_template`"
 msgstr ":doc:`/applications/sales/sales/send_quotations/quote_template`"
 
@@ -24260,7 +22764,7 @@ msgstr ":doc:`../../../finance/payment_providers`"
 
 #: ../../content/applications/sales/sales/send_quotations/get_paid_to_validate.rst:59
 msgid "Register a payment"
-msgstr "支払を登録する"
+msgstr "支払登録して下さい"
 
 #: ../../content/applications/sales/sales/send_quotations/get_paid_to_validate.rst:61
 msgid ""
@@ -25390,10 +23894,10 @@ msgstr ""
 #: ../../content/applications/sales/sales/send_quotations/pdf_quote_builder.rst:223
 msgid ""
 "Download these :download:`PDF quote builder examples "
-"<pdf_quote_builder/pdfquotebuilderexamples.zip>` for added reference."
+"<pdf_quote_builder/pdfquotebuilderexamples.zip>` or download "
+":download:`sample quotation <pdf_quote_builder/sample_quotation.pdf>` for "
+"added reference."
 msgstr ""
-"追加参照用に :download:`PDF見積ビルダ例 <pdf_quote_builder/pdfquotebuilderexamples.zip>`"
-" をダウンロードして下さい。"
 
 #: ../../content/applications/sales/sales/send_quotations/quote_template.rst:3
 msgid "Quotation templates"
@@ -26840,405 +25344,6 @@ msgid ""
 "page."
 msgstr "eコマースプロダクトページのプロダクトバリアントとして設定された繰返期間。"
 
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:3
-msgid "SEPA Direct Debit"
-msgstr "SEPA Direct Debit"
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:7
-msgid ""
-"*SEPA*, or Single Euro Payments Area, is a payment-integration initiative of"
-" the European Union for simplifying bank transfers denominated in euros."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:10
-msgid ""
-"*SEPA Direct Debit (|sdd|)* is a payment provider that allows future "
-"payments to be collected from customers' bank accounts by signing a mandate."
-" This allows recurring payments to be automatically gathered and processed "
-"using |sdd|."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:15
-msgid ""
-"To create :ref:`direct debit mandates <subscriptions/sepa-sdd-payment>`, the"
-" **Accounting** app **must** be installed."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:24
-msgid ""
-"Before using |sdd|, the database must be configured to allow the use of "
-"Euros on sales orders. To do so, a :doc:`pricelist "
-"<../../point_of_sale/pricing/pricelists>` must be created for Euros."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:27
-msgid ""
-"This can be done using the **Sales** or **Point of Sales** apps. From either"
-" app, navigate to :menuselection:`Configuration --> Settings`."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:30
-msgid ""
-"In the :guilabel:`Pricing` section, underneath the :guilabel:`Pricelists` "
-"feature, click :icon:`fa-arrow-right` :guilabel:`Pricelists`. Then, click "
-"the :guilabel:`New` button to open a new pricelist form. Add a name for the "
-"pricelist in the top field, then set the drop-down menu next to "
-":guilabel:`Currency` to :guilabel:`EUR`."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:35
-msgid ""
-"To use the wire transfer payment method, first ensure the |sdd| payment "
-"method is enabled. To do so, navigate to :menuselection:`Accounting app --> "
-"Configuration --> Settings`, scroll to the :guilabel:`Customer Payments` "
-"section, and tick the :guilabel:`SEPA Direct Deposit (SDD)` checkbox. Then, "
-"set a creditor identifier number in the field labeled, :guilabel:`Creditor "
-"Identifier`. Then, click :guilabel:`Save`."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:42
-msgid ""
-"The company using |sdd| must have a creditor identifier to issue a SEPA "
-"Direct Debit payment request. If using :ref:`test mode <subscriptions/sepa-"
-"sdd-test-mode>`, use the test creditor identifier number: "
-"`DE98ZZZ09999999999`, and click :guilabel:`Save`."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:46
-msgid ""
-"Next, enable SEPA Direct Debit from the *Payment Providers* page in either "
-"the **Accounting**, **Website**, or **Sales** apps."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:49
-msgid ""
-"For example, navigate to :menuselection:`Accounting app --> Configuration "
-"--> Payment Providers`, then click the :guilabel:`SEPA Direct Debit` card."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:53
-msgid ""
-"The *SEPA Direct Debit* form can also be reached by navigating to "
-":menuselection:`Website app --> Configuration --> Payment Providers`, or "
-":menuselection:`Sales app --> Configuration --> Payment Providers`."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:57
-msgid ""
-"Next, set the :guilabel:`State` to :guilabel:`Enabled` to enable |sdd|. Use "
-"the drop-down menus next to the :guilabel:`Company` and :guilabel:`Website` "
-"fields to set where |sdd| can be used."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:60
-msgid ""
-"The options in the :guilabel:`Configuration` tab can be configured to "
-"customize how |sdd| is used. Optionally, tick the checkbox next to "
-":guilabel:`Enable QR Codes` to enable the use of QR codes when paying by "
-"|sdd|, if desired."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:64
-msgid ""
-"Use the drop-down menu next to the :guilabel:`Communication` field to select"
-" the communication type used on sales orders. Choose :guilabel:`Based on "
-"Document Reference` to use the sales order (or invoice number), or "
-":guilabel:`Based on Customer ID` to use the customer identifier. With either"
-" method selected, communication is given to the customer, once they choose "
-"the |sdd| payment method."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:69
-msgid ""
-"The configuration options listed under the :guilabel:`Availability` section "
-"are used to set payment restrictions, and are optional. Use the "
-":guilabel:`Maximum Amount` field to set a maximum payment value, and the "
-":guilabel:`Countries` field to restrict payment from any particular "
-"countries, if desired."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:75
-msgid ""
-"The :guilabel:`Currencies` field should be left with the default "
-":guilabel:`EUR` tag to ensure |sdd| is only accessible when customers pay "
-"with Euros."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:78
-msgid ""
-"The :guilabel:`Payment Journal` field in the :guilabel:`Payment followup` "
-"section can be used to select the journal in which the successful "
-"transactions are posted."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:81
-msgid ""
-"In the :guilabel:`Messages` tab, the :guilabel:`Pending Message` field can "
-"be used to add a message that is displayed, if the order remains pending "
-"after the payment is processed. By default, this field contains the message:"
-" :guilabel:`Please make an unique payment transfer to confirm the SEPA "
-"mandate.`"
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst-1
-msgid "The SEPA Direct Debit Payment Provider form."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:90
-msgid ""
-"Once all necessary configuration settings are complete, the :icon:`fa-eye-"
-"slash` :guilabel:`Unpublished` smart button, located at the top of the page "
-"automatically changes to :icon:`fa-globe` :guilabel:`Published` to show the "
-"|sdd| payment option is now visible to customers. Only keep the payment "
-"method published if payments are ready to be received."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:96
-msgid ""
-"It is possible to keep the payment method enabled, but **not** visible to "
-"customers, until payments are ready to be received. To do this, set the "
-"smart button to :icon:`fa-eye-slash` :guilabel:`Unpublished` after setting "
-"the :guilabel:`State` to :guilabel:`Enabled`."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:101
-msgid ""
-"The |sdd| configuration menu can also be accessed by navigating to "
-":menuselection:`Settings app --> Website`, and in the :guilabel:`Shop - "
-"Payment` section, click the :icon:`fa-arrow-right` :guilabel:`View other "
-"providers` button. Then, click the |sdd| card. Alternatively, navigate to "
-":menuselection:`Website app --> Configuration --> Settings` to access the "
-"same button."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:109
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:75
-msgid "Test mode"
-msgstr "テストモード"
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:111
-msgid ""
-"The |sdd| payment method can be tested before it is accessed by customers. "
-"First, ensure the test creditor identifier is :ref:`configured "
-"<subscriptions/sepa-sdd-configuration>` before continuing."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:115
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:91
-msgid ""
-"It is recommended to use the :guilabel:`Test Mode` setting on a duplicate "
-"(or test) database to avoid potential issues with invoice numbering."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:118
-msgid ""
-"Next, select the :guilabel:`Test Mode` option in the :guilabel:`State` field"
-" on the form. Upon selecting :guilabel:`Test Mode`, an orange "
-":guilabel:`Test mode` banner appears in the upper-right corner of the form."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:123
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:87
-msgid ""
-"By default, the payment provider remains :guilabel:`Unpublished` in "
-":guilabel:`Test Mode`, so it is not visible to visitors."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:126
-msgid ""
-"Navigate to :menuselection:`Sales app --> Orders --> Quotations`, and click "
-"the :guilabel:`New` button to create a new sales order."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:129
-msgid ""
-"Select a :guilabel:`Customer`. Select any pay period in the drop-down menu "
-"next to :guilabel:`Recurring Plan` and select the pricelist using EUR in the"
-" drop-down menu next to :guilabel:`Pricelist`."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:133
-msgid ""
-"Finally, select a subscription product in the :guilabel:`Order Lines` tab of"
-" the sales order."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:135
-msgid ""
-"Next, confirm the sales order by clicking the :guilabel:`Confirm` button, "
-"then click the :guilabel:`Preview` button to open a preview of the customer "
-"invoice. Scroll down to the :guilabel:`Anticipate payment` section to find "
-"the SEPA Direct Debit payment method."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:140
-msgid ""
-"It can be confirmed that test mode is still enabled if the :icon:`fa-eye-"
-"slash` (unpublished) and :icon:`fa-exclamation-triangle` (test mode) icons "
-"are present next to SEPA Direct Debit."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:0
-msgid ""
-"The view of the SEPA Direct Debit payment method presented to customers at "
-"checkout."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:147
-msgid ""
-"Next, enter a test IBAN number, such as `GB33BUKB20201555555555`, and click "
-":guilabel:`Pay`. Return to the sales order in the **Sales** app, and confirm"
-" the :guilabel:`In Progress` tag is present on the sales order form. At this"
-" point, the flow is complete."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:151
-msgid ""
-"To re-enable normal function after testing, navigate back to the *SEPA "
-"Direct Debit* form, and change the *State* setting to :guilabel:`Enabled`."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:157
-msgid "Pay by SEPA Direct Debit"
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:159
-msgid ""
-"Once |sdd| has been :ref:`configured <subscriptions/sepa-sdd-configuration>`"
-" and enabled, |sdd| appears as a payment method during checkout in "
-"**eCommerce**, and as a payment method on invoices in the **Sales** app. The"
-" option is presented to customers, and prompts them to enter their IBAN "
-"number."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:164
-msgid ""
-"Once a customer clicks *Pay*, the sales order is marked with a *In Progress*"
-" tag until the mandate has been closed."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:167
-msgid ""
-"Mandates automatically close after the end date is reached. If the *End "
-"date* field is not set, the mandate remains in an *Active* state until it is"
-" *Closed* or *Revoked*."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:170
-msgid ""
-"|sdd| payments can also be registered manually by navigating to the desired "
-"invoice and clicking the :guilabel:`Register Payment` button. Next, select "
-":guilabel:`SEPA Direct Debit` as the :guilabel:`Payment Method` and click "
-"the :guilabel:`Create Payment` button. The invoice now displays a green "
-":guilabel:`In Payment` banner."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:176
-msgid ""
-"To validate a successful |sdd| payment, navigate to "
-":menuselection:`Accounting app --> Customers --> Payments`, and look for the"
-" entry in the list, along with a :guilabel:`Posted` tag in the "
-":guilabel:`Status` column."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:181
-msgid "Submit payments"
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:183
-msgid ""
-"All |sdd| payments can be processed at once by uploading an `.xml` file "
-"containing a batch of all posted |sdd| payments to an online banking "
-"interface. To generate this file, navigate to :menuselection:`Accounting app"
-" --> Customers --> Batch Payments`. A list of all posted |sdd| payments "
-"appears. Tick the checkbox next to every payment to be included in the "
-"batch, or tick the checkbox at the top of the list to select all entries at "
-"once."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:189
-msgid ""
-"Next, click :guilabel:`Create Batch`. A new batch payment form appears with "
-"the selected payments added to the list in the :guilabel:`Batch Content` "
-"tab."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst-1
-msgid "The batch payment form containing the selected payments."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:196
-msgid ""
-"This form also contains optional fields to customize the batch payment:"
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:198
-msgid ":guilabel:`Bank`: Select the bank the payment is sent to."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:199
-msgid ":guilabel:`Date`: Set the current date."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:200
-msgid ":guilabel:`Reference`: Set a custom reference number for the payment."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:201
-msgid ""
-":guilabel:`Required collection date`: Set a date when the company expects to"
-" receive the payment of this batch."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:203
-msgid ""
-":guilabel:`Batch Booking`: Request batch booking from the bank for the "
-"related bank statements."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:204
-msgid ""
-":guilabel:`SDD Scheme`: The B2B scheme is an optional scheme, offered "
-"exclusively to business payers. Some banks/businesses might not accept B2B "
-"|sdd|."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:207
-msgid ""
-"Once the payment is configured, click :guilabel:`Validate` to generate the "
-"`.xml` file, which appears in the chatter. Finally, click the :icon:`fa-"
-"download` :guilabel:`(download)` icon next to the file in the chatter to "
-"download the file."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:211
-msgid ""
-"This file can now be uploaded to the desired online banking interface to "
-"process the payments."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:214
-msgid ""
-"The files generated by Odoo follow the SEPA Direct Debit **PAIN.008.001.02**"
-" specifications, as required by the SEPA customer-to-bank `implementation "
-"guidelines <https://www.europeanpaymentscouncil.eu/document-"
-"library/implementation-guidelines/sepa-credit-transfer-customer-psp-"
-"implementation>`_, which ensures compatibility with the banks."
-msgstr ""
-"Odooによって生成されたファイルは、SEPA顧客銀行間取引 "
-"`導入ガイドライン<https://www.europeanpaymentscouncil.eu/document-"
-"library/implementation-guidelines/sepa-credit-transfer-customer-psp-"
-"implementation>`_  によって要求されるSEPA口座振替 **PAIN.008.001.02** "
-"の仕様に従っており、銀行との互換性が保証されています。"
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:220
-msgid ":doc:`../../../finance/accounting/payments/batch_sdd`"
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/sdd.rst:221
-msgid ":doc:`../../../finance/accounting/payments/online`"
-msgstr ""
-
 #: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:3
 msgid "Wire transfer"
 msgstr ""
@@ -27358,6 +25463,10 @@ msgstr ""
 msgid "The wire transfer card enabled and published."
 msgstr ""
 
+#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:75
+msgid "Test mode"
+msgstr "テストモード"
+
 #: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:77
 msgid ""
 "The wire transfer payment method can be tested before it is accessed by "
@@ -27372,6 +25481,18 @@ msgid ""
 "Next, enter the credentials for a bank account with accessible transactions "
 "in the :guilabel:`Messages` tab. To re-enable normal function after testing,"
 " change the :guilabel:`State` setting to :guilabel:`Enabled`."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:87
+msgid ""
+"By default, the payment provider remains :guilabel:`Unpublished` in "
+":guilabel:`Test Mode`, so it is not visible to visitors."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:91
+msgid ""
+"It is recommended to use the :guilabel:`Test Mode` setting on a duplicate "
+"(or test) database to avoid potential issues with invoice numbering."
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:97
