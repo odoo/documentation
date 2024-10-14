@@ -141,7 +141,7 @@ SPF, DKIM and DMARC documentation of common providers
 - `GoDaddy CNAME record <https://www.godaddy.com/help/add-a-cname-record-19236>`_
 - `NameCheap <https://www.namecheap.com/support/knowledgebase/article.aspx/317/2237/how-do-i-add-txtspfdkimdmarc-records-for-my-domain/>`_
 - `CloudFlare DNS <https://support.cloudflare.com/hc/en-us/articles/360019093151>`_
-- `Google Domains <https://support.google.com/domains/answer/3290350?hl=en>`_
+- `Squarespace DNS records <https://support.squarespace.com/hc/en-us/articles/360002101888-Adding-custom-DNS-records-to-your-Squarespace-managed-domain>`_
 - `Azure DNS <https://docs.microsoft.com/en-us/azure/dns/dns-getstarted-portal>`_
 
 To fully test the configuration, use the `Mail-Tester <https://www.mail-tester.com/>`_ tool, which
