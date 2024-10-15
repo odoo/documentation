@@ -186,4 +186,5 @@ the **POS dashboard**.
    point_of_sale/restaurant
    point_of_sale/pricing
    point_of_sale/payment_methods
+   point_of_sale/online_food_delivery
    point_of_sale/reporting
