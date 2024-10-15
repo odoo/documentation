@@ -835,7 +835,7 @@ Common errors
   At the moment, Odoo does not support the automation of prefixes for products. This can be done
   manually for each product output. This can also be done for non-storable products. However, keep
   in mind that there will be no traceability.
-- `2325 - GrossWeightMeasure - El dato no cumple con el formato establecido "Hace falta el campo"
+- `2523 - GrossWeightMeasure - El dato no cumple con el formato establecido "Hace falta el campo"
   "Peso"" en el producto`
 
   This error occurs when the weight on the product is set as `0.00`. To fix this, you need to cancel
