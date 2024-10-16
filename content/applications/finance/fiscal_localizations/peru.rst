@@ -7,6 +7,7 @@ Peru
 .. |GRE| replace:: :abbr:`GRE (Guía de Remisión Electrónica)`
 .. |RUS| replace:: :abbr:`RUS (Régimen Único Simplificado)`
 .. |EDI| replace:: :abbr:`EDI (Electronic Data Interchange)`
+.. |PLE| replace:: :abbr:`PLE (Programa de Libros Electrónico)`
 
 Modules
 =======
@@ -57,6 +58,10 @@ Peruvian localization.
      - Adds the delivery guide (Guía de Remisión), which is needed as proof that you are sending
        goods between A and B. It is only when a delivery order is validated that the delivery guide
        can be created.
+   * - :guilabel:`Peru - Stock Reports`
+     - `l10n_pe_reports_stock`
+     - Enables the :ref:`PLE reports <peru/reports-ple>` for permanent inventory record in physical
+       units and permanent valued inventory records.
    * - :guilabel:`Peruvian eCommerce`
      - `l10n_pe_website_sale`
      - Enables the identification type in eCommerce checkout forms and the ability to generate
@@ -948,5 +953,100 @@ based on their tax ID (RUC/DNI). The invoice must then :ref:`be sent to the OSE 
 <peru-electronic-invoice-status>`. By default, all published invoices are sent once a day through
 a scheduled action, but you can also send each invoice manually if needed.
 
-Once the invoice is validated with |SUNAT|, customers can download the :file:`.zip` with the CDR,
-XML, and PDF files directly from the customer portal by clicking the :guilabel:`Download` button.
+Once the invoice is validated with |SUNAT|, customers can download the .zip file with the CDR, XML,
+and PDF files directly from the customer portal by clicking the :guilabel:`Download` button.
+
+Reports
+=======
+
+.. _peru/reports-ple:
+
+Permanent inventory reports: |PLE| 12.1 and |PLE| 13.1
+------------------------------------------------------
+
+Odoo can produce two permanent inventory reports as `.txt` files for Peruvian accounting: |PLE| 12.1
+and |PLE| 13.1. All inventory transactions made need to be reported.
+
+- |PLE| 12.1 **only tracks inventory in physical units**, focusing on the inflow and outflow of
+  goods for effective management and planning.
+
+- |PLE| 13.1 tracks **both physical quantities and monetary values of inventory**, providing a
+  comprehensive view for tax and management purposes.
+
+Both reports must be maintained semi-annually (January-June and July-December), with monthly
+transaction details reported within these periods. The submission deadlines are October 1st for the
+first semester and April 1st for the second semester, in accordance with the *Resolución de
+Superintendencia N° 169-2015*.
+
+Configuration
+~~~~~~~~~~~~~
+
+Before generating the |PLE| 12.1 or |PLE| 13.1 reports, make sure the :guilabel:`Peru - Stock
+Reports` (`l10n_pe_reports_stock`) module is installed, then update the fields for:
+
+- :ref:`Products <peru/reports-ple-products>`
+- :ref:`Warehouses <peru/reports-ple-warehouses>`
+- :ref:`Inventory transfers <peru/reports-ple-transfers>`
+
+.. _peru/reports-ple-products:
+
+Products
+********
+
+Several configurations related to the product or product category are necessary for |PLE| reporting:
+
+- **Type of existence**: For all products needing |PLE| reporting, go to the product record's
+  :guilabel:`Accounting` tab and select the :guilabel:`Type of Existence` according to |SUNAT|'s
+  table 5 for inventory reporting.
+
+- **Automatic inventory valuation**: For storable goods (:dfn:`products with tracked inventory`),
+  use :doc:`automatic inventory valuation
+  <../../inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config>`.
+  Once automatic inventory valuation is enabled, this valuation method can be enabled for
+  a product's :ref:`product category <inventory/warehouses_storage/valuation-on-product-category>`.
+
+- **Costing method:** Storable goods must use a :doc:`costing method
+  <../../inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config>`
+  **other** than :guilabel:`Standard Price`, as the journal entries generated from stock moves are
+  used to populate the |PLE| reports.
+
+.. _peru/reports-ple-warehouses:
+
+Warehouses
+**********
+
+When :doc:`setting up a warehouse
+<../../inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses>`, the
+:guilabel:`Annex Establishment Code` field must be filled. This code acts as a unique ID for each
+warehouse and should only be a numeric combination, containing between 4 to 7 digits.
+
+.. _peru/reports-ple-transfers:
+
+Inventory transfers
+*******************
+
+Transferring inventory is a key process captured in the |PLE| 12.1 and |PLE| 13.1 reports.
+:doc:`Inventory transfers <../../inventory_and_mrp/inventory/shipping_receiving/daily_operations>`
+include both incoming and outgoing shipments.
+
+When validating an inventory transfer (either on a warehouse receipt or delivery order), select the
+:guilabel:`Type of Operation (PE)` performed according to |SUNAT|'s table 12 for permanent inventory
+reporting.
+
+Generate a .txt file for permanent inventory Kardex reports
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+|PLE| 12.1 and 13.1 come as two separate books. The books need to be downloaded in `.txt` file
+format from Odoo, and then they should be submitted to the |SUNAT| |PLE| software.
+
+On the :ref:`Inventory Valuation Report <inventory/management/reporting/valuation-report>`, click
+the :guilabel:`PLE Reports` button. Then, select the :guilabel:`Period` and choose a report to
+export: either the :guilabel:`PLE 12.1` or :guilabel:`PLE 13.1`. Odoo generates a `.txt` file
+for the chosen report.
+
+.. image:: peru/l10n-ple-export-button.png
+   :alt: Export Buttons selection
+
+.. note::
+   Only a download of the report in `.txt` format is available. There is no preview or visualization
+   available within Odoo.
