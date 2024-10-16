@@ -15,6 +15,7 @@ Tutorials
    tutorials/unit_tests
    tutorials/mixins
    tutorials/pdf_reports
+   tutorials/importable_modules
 
 .. tip::
    If you are new to Odoo development, we recommend starting with the :doc:`setup guide
@@ -73,6 +74,11 @@ Expand your knowledge on the server framework
 
       Write effective unit tests in Python to ensure the resilience of your code and safeguard it
       against unexpected behaviors and regressions.
+
+   .. card:: Importable Modules
+      :target: tutorials/importable_modules
+
+      Write modules that define new models, fields and logic using only data files.
 
    .. card:: Reuse code with mixins
       :target: tutorials/mixins
