@@ -453,6 +453,10 @@ API
       * - `buttons`
         - button[] (see below)
         - list of button to display in the notification
+      * - `autocloseDelay`
+        - number
+        - duration in milliseconds before the notification is closed automatically
+
 
     The buttons are defined by:
 
