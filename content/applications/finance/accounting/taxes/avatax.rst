@@ -24,10 +24,8 @@ programming interface)` integration.
 .. important::
    Some limitations exist in Odoo while using AvaTax for tax calculation:
 
-   - AvaTax is **not** supported in Odoo's **Point of Sale** app, because a dynamic tax
-     calculation model is excessive for transactions within a single delivery address, such as
-     stores or restaurants.
-   - AvaTax and Odoo use the company address, **not** the warehouse address.
+   - AvaTax uses the company address by default. To use the warehouse address, enable :doc:`Allow
+     Ship Later <../../../sales/point_of_sale/shop/ship_later>` in the **POS** app settings.
    - Excise tax is **not** supported. This includes tobacco/vape taxes, fuel taxes, and other
      specific industries.
 
