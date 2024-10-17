@@ -4,9 +4,9 @@
 Contacts
 ========
 
-The *Contacts* application comes installed on all Odoo databases. Contacts are created for customers
-the company does business with through Odoo. A contact is a repository of vital business
-information, facilitating communication and business transactions.
+Contacts are created in the **Contacts** application for customers the company does business with
+through Odoo. A contact is a repository of vital business information, facilitating communication
+and business transactions.
 
 Contact form
 ============
