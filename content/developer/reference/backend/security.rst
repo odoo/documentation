@@ -245,6 +245,12 @@ less secure.
                'AND state=%s AND obj_price > 0', (tuple(ids), 'draft',))
     auction_lots_ids = [x[0] for x in self.env.cr.fetchall()]
 
+    # nearly there
+    auction_lots_ids = [x[x] for x in self.env.execute_query(SQL("""
+        SELECT id FROM auction_lots
+        WHERE auction_id IN %s AND state = %s AND obj_price > 0
+    """, tuple(ids), 'draft'))
+
     # better
     auction_lots_ids = self.search([('auction_id','in',ids), ('state','=','draft'), ('obj_price','>',0)])
 
@@ -266,6 +272,10 @@ database abstraction layer (psycopg2) to decide how to format query parameters,
 not your job! For example psycopg2 knows that when you pass a list of values
 it needs to format them as a comma-separated list, enclosed in parentheses !
 
+Even better, there exists a :class:`~odoo.tools.SQL` wrapper to build queries
+using templates that handles the formatting of inputs.
+Check :ref:`SQL execution <reference/orm/sql>` for detailed usage.
+
 .. code-block:: python
 
     # the following is very bad:
@@ -281,6 +291,13 @@ it needs to format them as a comma-separated list, enclosed in parentheses !
                'WHERE parent_id IN %s',
                (tuple(ids),))
 
+    # more readable
+    self.env.cr.execute(SQL("""
+        SELECT DISTINCT child_id
+        FROM account_account_consol_rel
+        WHERE parent_id IN %s
+    """, tuple(ids)))
+
 This is very important, so please be careful also when refactoring, and most
 importantly do not copy these patterns!
 
@@ -292,6 +309,30 @@ online documentation of pyscopg2 to learn of to use it properly:
 - `How to pass parameters with psycopg2 <http://initd.org/psycopg/docs/usage.html#passing-parameters-to-sql-queries>`_
 - `Advanced parameter types <http://initd.org/psycopg/docs/usage.html#adaptation-of-python-values-to-sql-types>`_
 - `Psycopg documentation <https://www.psycopg.org/docs/sql.html>`_
+
+Building the domains
+--------------------
+
+Domains are represented as lists and are serializable.
+You would be tented to manipulate these lists directly, however it can
+introduce subtle issues where the user could inject a domain if the input is
+not normalized.
+We introduce :class:`~odoo.domains.Domain` to handle safely the manipulation
+of domains.
+
+.. code-block:: python
+
+    # bad
+    # the user can just pass ['|', ('id', '>', 0)] to access all
+    domain = ...  # passed by the user
+    security_domain = [('user_id', '=', self.env.uid)]
+    domain += security_domain  # can have a side-effect if this is a function argument
+    self.search(domain)
+
+    # better
+    domain = Domain(...)
+    domain &= Domain('user_id', '=', self.env.uid)
+    self.search(domain)
 
 Unescaped field content
 -----------------------
