@@ -105,4 +105,3 @@ You can also limit the categories displayed on your POS interface. To achieve th
    configuration/epos_printers
    configuration/https
    configuration/epos_ssc
-
