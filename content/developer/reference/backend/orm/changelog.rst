@@ -4,6 +4,11 @@
 Changelog
 =========
 
+Odoo Online version 18.1
+========================
+
+- Declare constraints and indexes as model attributes with `#175783 <https://github.com/odoo/odoo/pull/175783>`_.
+
 Odoo version 18.0
 =================
 
