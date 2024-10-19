@@ -1128,6 +1128,9 @@ msgid ""
 " Online Synchronization`). It is not possible to resynchronize these "
 "connections; you have to make new ones."
 msgstr ""
+"설치 중에는 이전에 연결되어 있는 동기화가 모두 해제되고 더 이상 작동하지 않습니다. 내용을 확인하려면 :ref:`개발자 모드 "
+"<developer-mode>` 를 활성화하고 :menuselection:`회계 --> 환경 설정 --> 온라인 동기화` 로 이동합니다."
+" 이전 연결은 다시 동기화할 수 없으므로 새로 연결해야 합니다."
 
 #: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:136
 msgid ""
@@ -1254,6 +1257,9 @@ msgid ""
 ":menuselection:`Accounting --> Configuration --> Online Synchronization`, "
 "and click the :guilabel:`Fetch Account` button on the connection."
 msgstr ""
+"처음으로 동기화를 실행할 때 Odoo와 동기화할 은행 계좌가 선택되었습니다. 계좌를 동기화하지 않은 경우에는 :ref:`개발자 모드 "
+"<developer-mode>` 를 활성화하고 :menuselection:`회계 --> 환경 설정 --> 온라인 동기화` 로 이동한 다음"
+" 연결되면 :guilabel:`계좌 가져오기` 버튼을 클릭합니다."
 
 #: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:194
 msgid "There may also be no new transactions."
@@ -1622,6 +1628,9 @@ msgid ""
 "and select the institution you want to update credentials. Click "
 ":guilabel:`Update Credentials` to start the flow and follow the steps."
 msgstr ""
+"Salt Edge 자격 증명을 업데이트하거나 동기화 설정 내용을 수정하려면 :ref:`개발자 모드 <developer-mode>` 를 "
+"활성화하고 :menuselection:`회계 --> 환경 설정 --> 온라인 동기화` 로 이동한 다음 자격 증명을 업데이트하려는 기관을 "
+"선택합니다. :guilabel:`자격 증명 업데이트` 를 클릭하여 흐름이 시작되면 단계에 따라 진행합니다."
 
 #: ../../content/applications/finance/accounting/bank/bank_synchronization/saltedge.rst:56
 #: ../../content/applications/finance/accounting/bank/bank_synchronization/saltedge.rst:68
@@ -1689,6 +1698,9 @@ msgid ""
 ":menuselection:`Accounting --> Configuration --> Online Synchronization`, "
 "and click :guilabel:`Update Credentials` to reactivate the connection."
 msgstr ""
+"이미 Salt Edge 현황판에 동일한 자격 증명으로 연결이 되어 있고 Odoo에서 해당 동기화 작업을 생성한 경우에는, "
+":ref:`개발자 모드 <developer-mode>` 를 활성화하고 :menuselection:`회계 --> 환경 설정 --> 온라인 "
+"동기화` 로 이동한 다음 :guilabel:`자격 증명 업데이트` 를 클릭하여 연결 상태를 다시 활성화합니다."
 
 #: ../../content/applications/finance/accounting/bank/foreign_currency.rst:3
 msgid "Manage a bank account in a foreign currency"
@@ -7085,8 +7097,8 @@ msgid ""
 msgstr ""
 "**영미식 회계 (Anglo-Saxon accounting)** 방식을 채택한 회사에서는, |AVCO| 방법을 적용하는 것 외에도 "
 "공급업체에 지급할 금액을 추적하는 유보 계정을 두고 있습니다. 공급업체에서 주문한 항목을 납품하면 재고 내역에 입력된 품목의 공급업체 "
-"가격을 기준으로 **재고 가치 평가** 가 증가합니다. 유보 계정 (**재고 투입** 으로 지칭)은 대변에 기재하고 공급업체 청구서 수령"
-" 이후에만 조정을 할 수 있습니다."
+"가격을 기준으로 **재고 가치 평가** 가 증가합니다. 유보 계정 (**재고 입고** 로 지칭)은 대변에 기재하고 공급업체 청구서 수령 "
+"이후에만 조정을 할 수 있습니다."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:266
 msgid ""
@@ -7102,13 +7114,13 @@ msgid ""
 " a price difference between the price the product is **valued at** and the "
 "price it was bought for, a *price difference* account is created."
 msgstr ""
-"아래의 표에는 전표 항목과 계정이 반영되어 있습니다. *재고 투입* 계정에는 공급업체 청구서를 아직 수령하지 않은 경우 공급업체에 지불할"
+"아래의 표에는 전표 항목과 계정이 반영되어 있습니다. *재고 입고* 계정에는 공급업체 청구서를 아직 수령하지 않은 경우 공급업체에 지불할"
 " 금액을 입력합니다. 품목의 **가치 평가** 금액과 구매 가격 사이에 차이가 있는 품목을 반품할 때 계정의 잔액을 맞추기 위해 *가격 "
 "차이* 계정이 생성됩니다."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:276
 msgid "Stock Input"
-msgstr "재고 투입"
+msgstr "재고 입고"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:276
 msgid "Price Diff"
@@ -7181,10 +7193,10 @@ msgid ""
 "means the bill has been paid. **Stock Input** is reconciled once the vendor "
 "bill is received."
 msgstr ""
-"Odoo에서는 품목이 입고되면 회사에서 구매 대금을 결제할 수 있도록 입고된 품목가에 상응하는 금액을 사전에 :doc:`부채 계정 "
-"</applications/finance/accounting/get_started/cheat_sheet>` 인 **재고 투입** 계정으로"
+"Odoo에서는 품목이 입고되면 회사에서 구매 대금을 결제할 수 있도록 입고된 품목 가격에 상응하는 금액을 사전에 :doc:`부채 계정 "
+"</applications/finance/accounting/get_started/cheat_sheet>` 인 **재고 입고** 계정으로"
 " 이동해 놓습니다. 그런 다음, 청구서를 수령하게 되면 유보 계정에 있는 금액이 *미지급금 계정* 으로 전기됩니다. 해당 계정으로 "
-"전기되었다는 것은 청구서 결제가 완료되었음을 의미합니다. 공급업체 청구서를 수령하면 **재고 투입** 내역이 조정됩니다."
+"전기되었다는 것은 청구서 결제가 완료되었음을 의미합니다. 공급업체 청구서를 수령하면 **재고 입고** 내역이 조정됩니다."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:308
 msgid ""
@@ -7195,15 +7207,15 @@ msgid ""
 "crediting and debiting operations of the **Stock Input** account."
 msgstr ""
 "재고 가치 평가는 재고로 보유 중인 각 품목에 대한 가치를 내부적으로 계산하는 방법입니다. 품목의 **평가 가격** 과 실제 품목의 "
-"**구매 가격** 사이에는 차이가 있으므로 **재고 가치 평가** 계정은 **재고 투입** 계정의 차대 작업과는 관련이 없습니다."
+"**매입 가격** 사이에는 차이가 있으므로 **재고 가치 평가** 계정은 **재고 입고** 계정의 차대 작업과는 관련이 없습니다."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:313
 msgid "To conceptualize all this, follow the breakdown below."
-msgstr "자세히 살펴보려면 다음의 세부 내용을 확인해 보세요."
+msgstr "자세한 내용은 다음의 세부 내용을 확인해 보세요."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:316
 msgid "Accounts balanced at received products"
-msgstr "입고 품목의 계정 잔액 균형"
+msgstr "입고 품목의 계정 잔액이 균형을 맞춘 모습"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:318
 msgid ""
@@ -7217,19 +7229,19 @@ msgid ""
 "The **Stock Input** account stores `$80` of credit owed to the vendor. The "
 "amount in this account is unrelated to the inventory value."
 msgstr ""
-"**재고 입력** 계정의 대변에 공급업체에 지불해야 할 미수금 `$80`이 기록됩니다. 이 계정의 금액은 재고 가치와 관련이 없습니다."
+"**재고 입력** 계정의 대변에 공급업체에 결제해야 할 미수금 `$80`이 기록됩니다. 이 계정에 있는 금액은 재고 가치와는 무관합니다."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:323
 msgid ""
 "`$80` worth of tables came **in** (**debit** the *Inventory Value* account "
 "`$80`), and"
-msgstr "`$80` 상당의 테이블이 **입고** (*재고 가치* 계정 `$80`에서 **차변** 입력)되었습니다."
+msgstr "`$80` 금액에 상당하는 테이블이 **입고** (*재고 가치* 계정 `$80`의 **차변** 에 입력)되었습니다."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:324
 msgid ""
 "`$80` must be paid **out** for received goods (**credit** the *Stock Input* "
 "account `$80`)."
-msgstr "입고된 상품에 대해 `$80`을 **지급**해야 합니다 (*재고 입력* 계정 `$80`에 **대변** 입력)."
+msgstr "입고된 상품에 대해 `$80`을 **지급** 해야 합니다 (*재고 입력* 계정 `$80`의 **대변** 에 입력)."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:327
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:370
@@ -7243,8 +7255,8 @@ msgid ""
 "Account` by selecting the :guilabel:`➡️ (arrow)` icon next to the "
 ":guilabel:`Product Category` field on the product page."
 msgstr ""
-"Odoo는 |AVCO| 원가 계산법으로 배송을 받으면 회계 전표를 생성합니다. 품목 페이지에서 :guilabel:`➡️ (화살표)` "
-"아이콘 옆에 있는 :guilabel:`품목 카테고리` 필드를 선택하여 :guilabel:`가격 차이 계정`을 설정합니다."
+"|AVCO| 계산법으로 원가를 계산하는 물품이 입고되면 Odoo에서 회계 전표가 생성됩니다. 품목 페이지에서 :guilabel:`➡️ "
+"(화살표)` 아이콘 옆에 있는 :guilabel:`품목 카테고리` 를 선택하여 :guilabel:`가격 차이 계정` 을 설정합니다."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:333
 msgid ""
@@ -7253,8 +7265,8 @@ msgid ""
 ":guilabel:`Create and Edit`. Then set the account :guilabel:`Type` as "
 "`Expenses`, and click :guilabel:`Save`."
 msgstr ""
-"guilabel:`계정 속성`에서 계정 이름을 입력하고 :guilabel:`생성 및 편집`을 클릭하여 새 :guilabel:`가격 차이 "
-"계정`을 생성합니다. 그런 다음 계정의 `유형`을 `비용`으로 설정하고 `저장`을 클릭합니다."
+"guilabel:`계정 속성` 에서 계정명을 입력하고 :guilabel:`만들기 및 편집` 을 클릭하여 새 :guilabel:`가격 차이"
+" 계정` 을 생성합니다. 그런 다음 계정 `유형` 을 `비용` 으로 설정하고 `저장` 을 클릭합니다."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst-1
 msgid "Create price difference account."
@@ -7267,12 +7279,12 @@ msgid ""
 "Entries`. In the list, find the :guilabel:`Reference` that matches the "
 "warehouse reception operation for the relevant product."
 msgstr ""
-"그런 다음, *매입* 앱 또는 *재고 관리* 앱에서 배송을 받은 후 :menuselection:`회계 앱 --> 회계 --> 전표 "
-"항목`으로 이동합니다. 목록에서 해당 품목의 창고 입고 작업과 일치하는 :guilabel:`참조`를 찾습니다."
+"그런 다음, *매입* 앱 또는 *재고 관리* 앱에서 입고 처리를 한 후 :menuselection:`회계 앱 --> 회계 --> 전표 "
+"항목` 으로 이동합니다. 목록에서 해당 품목의 창고 입고 작업에 해당하는 :guilabel:`참조` 를 찾습니다."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst-1
 msgid "Show accounting entry of 8 tables from the list."
-msgstr "목록에서 테이블의 8개에 대한 회계 항목을 표시합니다."
+msgstr "목록에서 테이블 8개에 대한 회계 항목을 표시합니다."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:349
 msgid ""
@@ -7281,17 +7293,17 @@ msgid ""
 "`$80`. Conversely, the **Stock Input** account (set as `Stock Interim "
 "(Received)` account by default) is credited `$80`."
 msgstr ""
-"테이블 8개 에 대한 내역을 클릭합니다. 이 회계 전표 항목은 테이블 8개가 입고되었을 때 `재고 가치 평가` 계정이 `$80` "
-"증가했음을 보여줍니다. 반대로 **재고 입력** 계정 (기본적으로 `중간 재고 (입고)` 계정으로 설정)에는 `$80`이 대변에 "
-"기록됩니다."
+"테이블 8개에 대한 내역을 클릭합니다. 해당 회계 전표 항목에서 테이블 8개가 입고되었을 때 `재고 가치 평가` 계정이 `$80` "
+"증가했음을 확인할 수 있습니다. 반대로 **재고 입력** 계정 (기본적으로 `중간 재고 (입고)` 계정으로 설정)에는 `$80`이 대변에"
+" 기록됩니다."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst-1
 msgid "Debit stock valuation and credit stock input 80 dollars."
-msgstr "재고 가치 평가의 차변 및 재고 입력 대변에 80달러를 기록합니다."
+msgstr "재고 가치 평가 계정의 차변 및 재고 입력 계정의 대변에 $80를 기록합니다."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:358
 msgid "Accounts balanced at received vendor bill"
-msgstr "공급업체 청구서 수령 시 계정 잔액"
+msgstr "수령한 공급업체 청구서의 계정 잔액이 균형을 맞춘 모습"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:360
 msgid ""
@@ -7299,19 +7311,18 @@ msgid ""
 "stock. Then, 8 tables are received from the vendor. When the bill is "
 "received from vendor for 8 tables:"
 msgstr ""
-"이 예제에서, 회사는 테이블 품목의 재고를 0개에서 시작합니다. 그런 다음 공급업체로부터 테이블 8개를 수령합니다. 공급업체로부터 테이블"
-" 8개에 대한 청구서를 수령한 경우:"
+"이 예시에서, 회사에서 테이블 품목의 최초 재고는 0개입니다. 그런 다음 공급업체로부터 테이블 8개가 입고됩니다. 공급업체에서 테이블 "
+"8개에 대한 청구서를 받게 되면:"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:363
 msgid ""
 "Use `$80` in the **Stock Input** account to pay the bill. This cancels out "
 "and the account now holds `$0`."
-msgstr ""
-"**재고 입력** 계정에 있는 `$80`에 대해 청구서를 결제합니다. 이 금액은 차감되고 이제 계좌에 남은 금액은 `$0`입니다."
+msgstr "**재고 입고** 계정에 있는 `$80`에 대해 청구서를 결제합니다. 이 금액은 차감되고 이제 계정 잔액은 `$0`입니다."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:365
 msgid "Debit **Stock Input** `$80` (to reconcile this account)."
-msgstr "**재고 입력** 차변에 `$80`를 기록합니다 (이 계정을 조정하기 위해)."
+msgstr "**재고 입고** 차변에 `$80`를 기록합니다 (계정 조정 목적)."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:366
 msgid ""
@@ -7319,8 +7330,8 @@ msgid ""
 "company owes others, so accountants use the amount to write checks to "
 "vendors."
 msgstr ""
-"**미지급금** 대변에 `$80`를 기록합니다. 이 계정에는 회사가 다른 사람에게 갚아야 하는 금액이 저장되므로 회계 담당자는 이 "
-"금액으로 공급업체에 수표를 작성합니다."
+"**미지급금** 대변에 `$80`를 기록합니다. 이 계정에는 회사가 다른 사람에게 갚아야 하는 금액이 기록되므로 회계 담당자는 이 금액에"
+" 해당하는 수표를 공급업체에 발행합니다."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:372
 msgid ""
@@ -7329,8 +7340,9 @@ msgid ""
 "8 tables. Inside the :abbr:`PO (Purchase Order)`, select :guilabel:`Create "
 "Bill`."
 msgstr ""
-"공급업체가 결제를 요청하면 :menuselection:`구매 앱 --> 주문서 --> 구매`로 이동하여 테이블 8개에 대해 "
-":abbr:`PO (구매발주서)`를 선택합니다. :abbr:`PO (구매발주서)`에서 :guilabel:`청구서 생성`을 선택하세요."
+"공급업체에서 결제 요청이 들어오면 :menuselection:`매입 앱 --> 주문서 --> 매입` 으로 이동하여 테이블 8개에 대한 "
+":abbr:`PO (매입발주서)` 를 선택합니다. :abbr:`PO (매입발주서)` 에서 :guilabel:`청구서 만들기` 를 "
+"선택하세요."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:376
 msgid ""
@@ -7338,16 +7350,16 @@ msgid ""
 " from the holding account, `Stock Interim (Received)` to `Accounts Payable`."
 " :guilabel:`Confirm` the bill to record the payment to the vendor."
 msgstr ""
-":guilabel:`전표 항목` 탭으로 전환하여 `$80`이 보유 계정인 `중간 재고 (입고)`에서 `미지급금`으로 이체되는 과정을 "
-"확인합니다. 청구서를 :guilabel:`승인`하여 공급업체에 대한 결제 항목을 기록합니다."
+":guilabel:`전표 항목` 탭으로 전환하여 유보 계정인 `중간 재고 (입고)` 에서 `미지급금`으로 `$80`이 이전되는 과정을 "
+"확인합니다. 청구서를 :guilabel:`승인` 하면 공급업체에 대한 결제 항목이 기록됩니다."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst-1
 msgid "Show bill linked to the purchase order for 8 tables."
-msgstr "테이블 8개에 대해 구매발주서에 연결된 청구서를 표시합니다."
+msgstr "테이블 8개의 매입발주서에 연결되어 있는 청구서를 표시합니다."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:385
 msgid "On product delivery"
-msgstr "품목 배송의 경우"
+msgstr "품목 인도 시"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:387
 msgid ""
@@ -7355,24 +7367,24 @@ msgid ""
 " products are delivered to a customer, the **Stock Input** account is "
 "untouched because there are no new products coming in. To put it simply:"
 msgstr ""
-":ref:`위의 예시 테이블 <inventory/avg_price/price-table>`에서 10개 품목을 고객에게 배송한 경우, "
-"**재고 입력** 계정은 새로 입고되는 품목이 없으므로 그대로 유지됩니다. 간단히 설명하면,"
+":ref:`위의 테이블 예시 <inventory/avg_price/price-table>` 에서 10개 품목을 고객에게 인도하는 경우, "
+"새로 입고된 품목이 없으므로 **재고 입고** 계정에는 변동이 없습니다. 간단히 설명하면,"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:391
 msgid ""
 "**Inventory valuation** is credited `$120`. Subtracting from inventory "
 "valuation represents `$120` worth of products exiting the company."
 msgstr ""
-"**재고 가치 평가**로 대변에 '$120'를 기록합니다. 재고 평가액에서 빼게 되면 '$120' 상당의 품목이 회사에서 빠져나가는 "
-"것입니다."
+"**재고 가치 평가** 로 대변에 '$120'가 기록됩니다. 재고 평가액에서 차감 금액이 발생한다는 것은 '$120' 상당의 품목이 "
+"회사에서 빠져나가는 것을 의미합니다."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:393
 msgid "Debit **Accounts Receivable** to record revenue from the sale."
-msgstr "**미수금**을 대변에 기록하여 판매 수익을 기록합니다."
+msgstr "판매 수익을 기록하려면 대변에 **미수금** 을 기록합니다."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst-1
 msgid "Show journal items linked to sale order."
-msgstr "판매주문서에 연결된 전표 항목을 표시합니다."
+msgstr "판매주문서에 연결된 전표 항목이 표시됩니다."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:401
 msgid ""
@@ -7381,8 +7393,8 @@ msgid ""
 "all pertain to the sale of the product. **Accounts Receivable** is the "
 "account where the customer payment will be received."
 msgstr ""
-"테이블 10개에 대하여 고객에게 청구서를 발행하는 회계 전표에서, **품목 판매**, **세금 수취** 및 **미수금** 계정은 모두 "
-"품목의 판매와 관련된 계정입니다. **미수금**은 고객으로부터 대금을 받을 계정입니다."
+"고객에게 테이블 10개에 대한 청구서를 발행하는 회계 전표에 있는 **품목 판매**, **세금 수취** 및 **미수금** 계정은 모두 "
+"품목의 판매와 관련된 계정입니다. 고객으로부터 대금을 수령하면 **미수금** 계정에 기재합니다."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:405
 msgid ""
@@ -7392,13 +7404,13 @@ msgid ""
 "account is debited `$120` to log the costs of storing 10 tables during this "
 "period of time."
 msgstr ""
-"영미식 회계에서는 판매 시 매출원가 (COGS)를 인식합니다. 따라서 판매, 폐기 또는 반품될 때까지 재고로 보유하는 데 드는 비용은 "
-"회계 처리되지 않습니다. 이 기간 동안 테이블 10개를 보관하는 데 드는 비용을 기록하기 위해 **비용** 계정의 차변에 '$120'을 "
-"기록합니다."
+"영미식 회계에서는 판매가 이루어질 때 매출원가 (COGS)를 인식합니다. 따라서 품목이 판매, 폐기 또는 반품될 때까지는 재고로 보유하는"
+" 데 드는 비용을 회계 처리하지 않습니다. 이 기간 동안 테이블 10개를 보관하는 데 드는 비용을 기록하기 위해 **비용** 계정 차변에"
+" '$120'을 기록합니다."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:411
 msgid "On product return"
-msgstr "반품할 경우"
+msgstr "품목 반품 시"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:413
 msgid ""
@@ -7410,10 +7422,10 @@ msgid ""
 ":guilabel:`Price Difference Account`, which is set up in the product's "
 ":guilabel:`Product Category`."
 msgstr ""
-":ref:`위의 테이블 예시 <inventory/avg_price/price-table>`에서 공급업체로부터 `$10`에 구매한 1개 "
-"품목을 반품하는 경우, 회사는 **미지급금** 계정에 `$10`를 기록할 것입니다. 그러나 반품 시점의 평균 원가는 `$12`이므로 "
-"**재고 입력** 계정의 차변에 `$12`를 기록해야 합니다. 모자란 `$2`는 제품의 :guilabel:`가격 차이 계정`에 설정되어 "
-"있는 :guilabel:`제품 카테고리`를 통해서 설명할 수 있습니다."
+":ref:`위의 테이블 예시 <inventory/avg_price/price-table>` 에서 공급업체로부터 `$10`에 구매한 1개 "
+"품목을 반품하는 경우, 회사는 **미지급금** 계정에 `$10`를 기록하게 됩니다. 그러나 반품 당시의 평균 원가는 `$12`이므로 "
+"**재고 입고** 계정의 차변에 `$12`를 기록해야 합니다. 차액인 `$2`는 품목의 :guilabel:`품목 카테고리` 에 설정되어 "
+"있는 :guilabel:`가격 차이 계정` 을 통해서 처리할 수 있습니다."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:420
 msgid ""
@@ -7421,8 +7433,8 @@ msgid ""
 "case, the account is intended to store differences between vendor price and "
 "*automated* inventory valuation methods."
 msgstr ""
-"*가격 차이 계정*의 쓰임은 현지화에 따라 다릅니다. 이 경우, 공급업체 가격과 *자동* 재고 가치 평가 방법 간의 차액을 기록하기 위해"
-" 해당 계정을 사용하고 있습니다."
+"*가격 차이 계정* 의 사용 방식은 현지화에 따라 달라집니다. 여기에서는 공급업체 가격과 *자동화된* 재고 가치 평가 방법 간의 차액을 "
+"기록하기 위해 해당 계정을 사용하고 있습니다."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:423
 msgid "Summary:"
@@ -7434,14 +7446,14 @@ msgid ""
 "input. This move is to indicate that the table is to be processed for an "
 "outgoing shipment."
 msgstr ""
-"재고에서 재고 입력으로 테이블을 이동하려면 **재고 입력** 대변에 `$10`을 기록합니다. 해당 작업은 테이블이 출고 배송 작업이 될 "
-"예정이라는 것을 나타냅니다."
+"**재고 입고** 대변에 `$10`을 기록하여 재고에서 재고 입고 상태로 테이블 항목을 이동합니다. 해당 작업을 통해 테이블에 대한 출고"
+" 배송 작업이 진행될 예정이라는 것을 알 수 있습니다."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:427
 msgid ""
 "Debit **Stock Input** an additional `$2` to account for the **Price "
 "Difference**."
-msgstr "**가격 차이**를 설명하기 위해, **재고 입력** 계정의 차변에 추가로 `$2`를 기록합니다."
+msgstr "**가격 차이** 를 나타낼 수 있도록 **재고 입고** 계정의 차변에 추가로 `$2`를 기록합니다."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:428
 msgid ""
@@ -7450,26 +7462,26 @@ msgstr "품목이 재고에서 빠져나가는 것이므로, **재고 평가액*
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst-1
 msgid "2 dollar difference expensed in Price Difference account."
-msgstr "가격 차이 계정에서 차액 2달러를 비용 처리합니다."
+msgstr "가격 차이 계정에서 차액 $2를 비용 처리합니다."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:434
 msgid "Once the vendor's refund is received,"
-msgstr "공급업체로부터 환불을 받게 되면,"
+msgstr "공급업체로부터 환불을 받으면,"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:436
 msgid ""
 "Credit **Stock Input** account `$10` to reconcile the price of the table."
-msgstr "`$10`을 대변에 **재고 입력**하여 표에서 가격을 조정합니다."
+msgstr "**재고 입고** 계정의 대변에 `$10`을 입력하여 표에 있는 가격을 조정합니다."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:437
 msgid ""
 "Debit **Accounts Payable** `$10` to have the accountants collect and "
 "register the payment in their journal."
-msgstr "`$10`을 차변에 **미지급금** 처리하여 회계 담당자가 대금을 수금하고 전표에 결제를 등록하도록 합니다."
+msgstr "**미지급금** 계정의 차변에 `$10`을 기입하여 회계 담당자가 대금을 수금하고 전표에 결제를 등록하도록 합니다."
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst-1
 msgid "Return to get 10 dollars back."
-msgstr "10달러를 되돌려 놓습니다."
+msgstr "반품 후 $10가 환불됩니다."
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:3
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:79
@@ -7497,8 +7509,8 @@ msgid ""
 "chart of accounts can be found under :menuselection:`Accounting --> "
 "Configuration --> Chart of Accounts`."
 msgstr ""
-"**계정과목표 (COA)**는 회사의 총계정원장에 금융 거래를 기록하는 데 사용되는 전체 계좌 목록입니다. 계정과목표는 "
-":menuselection:`회계 --> 환경 설정 --> 계정과목표`에서 확인할 수 있습니다."
+"**계정과목표 (COA)** 는 조직의 총계정원장에 금융 거래를 기록하는 데 사용되는 전체 계정 목록입니다. 계정과목표는 "
+":menuselection:`회계 --> 환경 설정 --> 계정과목표` 에서 확인할 수 있습니다."
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:9
 msgid ""
@@ -7506,8 +7518,8 @@ msgid ""
 ":guilabel:`Code`, :guilabel:`Account Name`, or :guilabel:`Type`, but other "
 "options are available in the drop-down menu"
 msgstr ""
-"계정과목표를 검색할 때 :guilabel:`코드`, :guilabel:`계정 이름` 또는 :guilabel:`유형`을 기준으로 계정을 "
-"정렬할 수 있지만, 드롭다운 메뉴에서 다른 옵션도 사용할 수 있습니다."
+"계정과목표를 검색할 때 :guilabel:`코드`, :guilabel:`계정명` 또는 :guilabel:`유형` 을 기준으로 계정을 "
+"정렬할 수 있으며, 드롭다운 메뉴에서 선택할 수 있는 다른 항목도 있습니다."
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst-1
 msgid "Drop-down toggle button"
@@ -7530,9 +7542,9 @@ msgid ""
 "country's regulations. You can use it directly or set it according to your "
 "company's needs."
 msgstr ""
-"데이터베이스를 생성할 때 선택한 국가 (또는 데이터베이스에 추가된 회사)에 따라 기본적으로 설치되는 :doc:`재정 현지화 패키지 "
-"<../../fiscal_localizations>`가 결정됩니다. 이 패키지에는 해당 국가의 규정에 따라 이미 표준 계정과목표가 "
-"설정되어 있습니다. 즉시 사용하거나 회사에서 필요에 따라 설정할 수 있습니다."
+"기본값으로 설치되는 :doc:`재정 현지화 패키지 <../../fiscal_localizations>` 는 데이터베이스를 생성할 때 "
+"선택한 국가 (또는 데이터베이스에 추가된 회사)에 따라 지정됩니다. 이 패키지에는 해당 국가의 규정에 따라 표준 계정과목표가 사전에 "
+"설정되어 있습니다. 바로 사용할 수 있으며 회사의 요구 사항에 맞추어 설정하는 것도 가능합니다."
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:28
 msgid ""
@@ -7540,14 +7552,14 @@ msgid ""
 "--> Chart of Accounts`, click :guilabel:`Create`, and fill in (at the "
 "minimum) the required fields (:guilabel:`Code, Account Name, Type`)."
 msgstr ""
-"새로 계정을 만들려면 :menuselection:`회계 --> 환경 설정 --> 계정과목표`로 이동하여 :guilabel:`만들기`를 "
-"클릭하고 필수 필드 (:guilabel:`코드, 계정명, 유형`)를 (최소) 입력합니다."
+"새로 계정을 생성하려면 :menuselection:`회계 --> 환경 설정 --> 계정과목표` 로 이동하여 :guilabel:`만들기` "
+"를 클릭하고 (최소한의) 필수 항목 (:guilabel:`코드, 계정명, 유형`)을 입력합니다."
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:33
 msgid ""
 "It is not possible to modify the **fiscal localization** of a company once a"
 " journal entry has been posted."
-msgstr "일단 전표가 발행된 후에는 회사의 **재정 현지화** 내용을 수정할 수 없습니다."
+msgstr "일단 전표가 발행이 된 후에는 회사 **재정 현지화** 내용은 수정할 수 없습니다."
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:37
 msgid "Code and name"
@@ -7557,7 +7569,8 @@ msgstr "코드 및 이름"
 msgid ""
 "Each account is identified by its :guilabel:`Code` and :guilabel:`Name`, "
 "which also indicate the account's purpose."
-msgstr "각 계정은 :guilabel:`코드`와 :guilabel:`이름`으로 식별할 수 있으며, 계정의 용도를 나타냅니다."
+msgstr ""
+"각각의 계정은 :guilabel:`코드`와 :guilabel:`이름` 으로 구분할 수 있으며, 이를 통해 계정의 용도를 나타내게 됩니다."
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:45
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:56
@@ -7568,11 +7581,11 @@ msgstr "유형"
 msgid ""
 "Correctly configuring the **account type** is critical as it serves multiple"
 " purposes:"
-msgstr "다양한 용도로 사용하게 되므로 **계정 유형**을 올바르게 설정하는 것이 중요합니다:"
+msgstr "다양한 목적으로 사용하게 되므로 **계정 유형** 을 정확히 설정하는 것이 무엇보다 중요합니다:"
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:49
 msgid "Information on the account's purpose and behavior"
-msgstr "계정의 목적 및 작동과 관련된 정보"
+msgstr "계정의 목적 및 사용 방식과 관련된 정보"
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:50
 msgid "Generate country-specific legal and financial reports"
@@ -7584,7 +7597,7 @@ msgstr "회계 연도 마감 규칙 설정"
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:52
 msgid "Generate opening entries"
-msgstr "개시 기입 항목 생성"
+msgstr "개시 항목 생성"
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:54
 msgid ""
@@ -7687,7 +7700,7 @@ msgstr "당기순이익"
 #: ../../content/applications/finance/fiscal_localizations/germany.rst:24
 #: ../../content/applications/finance/fiscal_localizations/netherlands.rst:20
 msgid "Profit & Loss"
-msgstr "이익 & 손실"
+msgstr "손익"
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:84
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:84
@@ -7718,7 +7731,7 @@ msgstr "기타"
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:94
 msgid "Off-Balance Sheet"
-msgstr "부외금융"
+msgstr "부외항목"
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:100
 msgid ""
@@ -7726,16 +7739,16 @@ msgid ""
 "automation>` entries. To **automate** entries, click :guilabel:`View` on an "
 "account line and go to the :guilabel:`Automation` tab."
 msgstr ""
-"일부 **계정 유형**에서는 :ref:`자산 <assets-automation>` 항목을 **자동으로** 생성할 수 있습니다. "
-"**자동으로** 입력되게 하려면 계정 내역에서 :guilabel:`보기`를 클릭하고 :guilabel:`자동화` 탭으로 이동합니다."
+"일부 **계정 유형** 에서는 :ref:`자산 <assets-automation>` 항목 생성 작업을 **자동화** 할 수 있습니다. "
+"**자동으로** 입력되게 하려면 계정 내역에서 :guilabel:`보기` 를 클릭하고 :guilabel:`자동화` 탭으로 이동합니다."
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:104
 msgid "You have three choices for the :guilabel:`Automation` tab:"
-msgstr ":guilabel:`자동화` 탭에는 세 가지의 선택 사항이 있습니다:"
+msgstr ":guilabel:`자동화` 탭에서 선택할 수 있는 세 가지 항목은 다음과 같습니다:"
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:106
 msgid ":guilabel:`No`: this is the default value. Nothing happens."
-msgstr ":guilabel:`아니오`: 기본값입니다. 특별한 내용이 없습니다."
+msgstr ":guilabel:`아니요`: 기본값입니다. 변동되는 내용이 없습니다."
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:107
 msgid ""
@@ -7743,8 +7756,8 @@ msgid ""
 "account, a draft entry is created but not validated. You must first fill out"
 " the corresponding form."
 msgstr ""
-":guilabel:`초안으로 작성`: 계정에 거래가 발행될 때마다 초안 항목이 생성되지만 승인되지는 않습니다. 먼저 해당 양식을 작성해야"
-" 합니다."
+":guilabel:`초안 만들기`: 계정에 거래가 발행될 때마다 초안 항목이 생성되지만 승인되지는 않습니다. 먼저 해당 양식을 작성해야 "
+"합니다."
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:109
 msgid ""
@@ -7752,8 +7765,8 @@ msgid ""
 "Expense Model`. Whenever a transaction is posted on the account, an entry is"
 " created and immediately validated."
 msgstr ""
-":guilabel:`생성 및 승인`: 반드시 :guilabel:`이연 비용 모델`도 선택해야 합니다. 계정에 거래가 발행될 때마다 항목이"
-" 생성되고 즉시 승인됩니다."
+":guilabel:`만들기 후 승인`: 반드시 :guilabel:`이연 비용 모델` 도 함께 선택해야 합니다. 계정에 거래가 발행될 "
+"때마다 항목이 생성되고 즉시 승인됩니다."
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:113
 #: ../../content/applications/finance/accounting/taxes.rst:14
@@ -7765,7 +7778,7 @@ msgid ""
 "In the :guilabel:`View` menu of an account, select a **default tax** to be "
 "applied when this account is chosen for a product sale or purchase."
 msgstr ""
-"계정의 :guilabel:`보기` 메뉴에서 해당 계정이 품목 판매 또는 구매를 할 경우 선택될 때 적용할 **기본 세금**을 선택합니다."
+"계정에 있는 :guilabel:`보기` 메뉴에서 해당 계정을 통해 품목이 판매되거나 매입될 경우 적용할 **기본 세금** 을 선택합니다."
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:119
 msgid "Tags"
@@ -7777,8 +7790,8 @@ msgid ""
 " To add a tag, under :guilabel:`View`, click the :guilabel:`Tags` field and "
 "select an existing tag or :guilabel:`Create` a new one."
 msgstr ""
-"일부 회계 보고서는 관련 계정에 **태그**를 설정해야 합니다. 태그를 추가하려면, :guilabel:`보기`에서 "
-":guilabel:`태그` 필드를 클릭하고 기존 태그를 선택하거나 :guilabel:`만들기`를 클릭합니다."
+"일부 회계 보고서에서는 관련 계정에 **태그** 를 설정해야 합니다. 태그를 추가하려면, :guilabel:`보기` 에서 "
+":guilabel:`태그` 를 클릭한 후 기존 태그를 선택하거나 :guilabel:`만들기` 를 클릭합니다."
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:126
 msgid "Account groups"
@@ -7793,22 +7806,22 @@ msgid ""
 "group `131000`. You can attribute a specific group to an account in the "
 ":guilabel:`Group` field under :guilabel:`View`."
 msgstr ""
-"**계정 그룹**은 여러 개 계정을 더 큰 계정의 *하위 계정*로 나열하여 **시산표**와 같은 보고서로 통합하는 데 유용합니다. "
-"기본값으로, 그룹은 그룹 코드에 따라 자동으로 처리됩니다. 예를 들어, 새로운 `131200` 계정은 `131000` 그룹에 속하게 "
-"됩니다. 계정에 특정 그룹을 속성으로 지정하려면 :guilabel:`보기` 아래에 있는 :guilabel:`그룹` 필드에 특정 그룹을 "
-"지정할 수 있습니다."
+"**계정 그룹** 은 여러 개의 계정을 더 큰 계정의 *하위 계정* 으로 분류하여 **시산표** 등의 보고서에 통합하여 활용할 수 "
+"있습니다. 기본적으로 그룹은 그룹 코드에 따라 자동으로 처리됩니다. 예를 들어, 새로 `131200` 계정을 생성할 경우 이 계정은 "
+"`131000` 그룹에 속하게 됩니다. :guilabel:`보기` 아래에 있는 :guilabel:`그룹` 항목에서 특정 그룹을 계정에 "
+"귀속시키는 것도 가능합니다."
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:135
 msgid "Create account groups manually"
-msgstr "직접 계정 그룹 만들기"
+msgstr "수동으로 계정 그룹 만들기"
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:138
 msgid ""
 "Regular users should not need to create account groups manually. The "
 "following section is only intended for rare and advanced use cases."
 msgstr ""
-"일반 사용자의 경우에는 계정 그룹을 직접 만들 필요가 없습니다. 거의 드문 경우로 전문적인 사용 사례인 경우에만 다음 섹션을 참고하시기 "
-"바랍니다."
+"일반 사용자의 경우에는 계정 그룹을 수동으로 생성할 필요가 없습니다. 다음 섹션의 경우에는 아주 드물게 전문적으로 사용하는 사례임을 "
+"참고하시기 바랍니다."
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:141
 msgid ""
@@ -7819,10 +7832,10 @@ msgid ""
 "that you must enter the same code prefix in both :guilabel:`From` and "
 ":guilabel:`to` fields."
 msgstr ""
-"새로운 계정 그룹을 생성하려면 :ref:`개발자 모드 <developer-mode>`를 활성화하고 :menuselection:`회계 "
-"--> 환경 설정 --> 계정 그룹`으로 이동합니다. 여기에서 새로운 그룹을 생성하여 해당 그룹 계정에서 사용할 "
-":guilabel:`이름, 코드 접두사 및 회사`를 입력합니다. :guilabel:`보낸 사람` 및 :guilabel:``받는 사람` "
-"필드 모두에 동일한 코드 접두사를 입력해야 합니다."
+"새로 계정 그룹을 생성하려면 :ref:`개발자 모드 <developer-mode>` 를 활성화한 후 :menuselection:`회계 "
+"--> 환경 설정 --> 계정 그룹` 으로 이동합니다. 여기에서 새로운 그룹을 생성하여 해당 계정 그룹에 사용할 "
+":guilabel:`이름, 코드 접두사 및 회사` 를 입력합니다. :guilabel:`발신자` 및 :guilabel:``수신자` 항목 "
+"모두 동일한 코드 접두사를 입력해야 합니다."
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst-1
 msgid "Account groups creation."
@@ -7834,8 +7847,8 @@ msgid ""
 ":menuselection:`Accounting --> Reporting --> Trial Balance`, then open the "
 ":guilabel:`Options` menu and select :guilabel:`Hierarchy and Subtotals`."
 msgstr ""
-"계정 그룹을 **시산표** 보고서와 함께 표시하려면 :menuselection:`회계 --> 보고 --> 시산표`로 이동한 다음 "
-":guilabel:`옵션` 메뉴에서 :guilabel:`계층 구조 및 소계`를 선택하세요."
+"**시산표** 보고서에 계정 그룹을 함께 나타나게 하려면 :menuselection:`회계 --> 보고 --> 시산표` 로 이동한 다음 "
+":guilabel:`옵션` 메뉴에서 :guilabel:`계층 구조 및 소계` 를 선택하세요."
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst-1
 msgid "Account Groups in the Trial Balance in Odoo Accounting"
@@ -7849,7 +7862,7 @@ msgstr "조정 허용"
 msgid ""
 "Some accounts, such as accounts made to record the transactions of a payment"
 " method, can be used for the reconciliation of journal entries."
-msgstr "일부 계정은 결제 방법과 관련된 거래를 기록하기 위해 만들어진 계정으로 전표를 조정하는 데 사용할 수 있습니다."
+msgstr "일부 계정은 결제 방법과 관련된 거래를 기록하기 위해 만들어진 계정으로, 전표를 조정하는 데 사용할 수 있습니다."
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:162
 msgid ""
@@ -7858,8 +7871,8 @@ msgid ""
 " to record credit card payments needs to be configured as **allowing "
 "reconciliation**."
 msgstr ""
-"예를 들어, 청구서를 신용카드로 결제한 경우 결제 내용이 조정되면 :guilabel:`결제 완료`로 표시될 수 있습니다. 따라서 신용카드"
-" 결제를 기록하는 데 사용되는 계정은 **조정 허용**으로 설정해야 합니다."
+"예를 들어, 신용카드로 청구서를 결제한 경우 결제 내용이 조정되면 :guilabel:`결제 완료` 로 표시할 수 있습니다. 따라서 "
+"신용카드 결제를 기록하는 데 사용하는 계정은 **조정 허용** 으로 설정해야 합니다."
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:166
 msgid ""
@@ -7867,8 +7880,8 @@ msgid ""
 "settings, and :guilabel:`Save`; or enable the button from the chart of "
 "accounts view."
 msgstr ""
-"그렇게 하려면, 계정 설정에서 :guilabel:`조정 허용` 확인란을 선택한 후 :guilabel:`저장`을 선택하세요. 또는 "
-"계정과목표 화면에서 버튼을 활성화하세요."
+"설정하려면, 계정 설정 메뉴에서 :guilabel:`조정 허용` 확인란에 표시한 후 :guilabel:`저장` 을 선택하세요. 또는 "
+"계정과목표 보기에서 버튼을 활성화하세요."
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst-1
 msgid "Allow reconciliation for accounts in Odoo Accounting"
@@ -7876,7 +7889,7 @@ msgstr "Odoo 회계에서 계정 조정 허용하기"
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:173
 msgid "Deprecated"
-msgstr "감가상각 완료"
+msgstr "사용 종료"
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:175
 msgid ""
@@ -7885,8 +7898,8 @@ msgid ""
 "check the :guilabel:`Deprecated` box in the account's settings, and "
 ":guilabel:`Save`."
 msgstr ""
-"거래가 기록된 후에는 계정을 삭제할 수 없습니다. **사용 종료** 기능을 사용하여 해당 항목을 사용할 수 없도록 만들 수 있습니다. "
-"계정 설정에서 :guilabel:`사용 종료` 확인란에 표시한 후 :guilabel:`저장`을 클릭하세요."
+"거래가 기록된 후에는 계정을 삭제할 수 없습니다. **사용 종료** 기능을 활용하여 해당 항목을 사용할 수 없게 설정할 수 있습니다. "
+"계정 설정에서 :guilabel:`사용 종료` 확인란에 표시한 후 :guilabel:`저장` 을 클릭하세요."
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:180
 msgid ":doc:`cheat_sheet`"
@@ -8040,8 +8053,8 @@ msgid ""
 "and crediting multiple accounts in a journal entry. In a way, a chart of "
 "accounts is like a company's DNA!"
 msgstr ""
-"**계정과목표** 에는 회사에서 사용 중인 대차대조표와 손익계산서에 있는 전체 계정이 종합적으로 나타나 있습니다. 모든 거래는 다양한 "
-"계정을 전표로 입력하여 차변과 대변으로 기록됩니다. 따라서 계정과목표는 회사에 대해 보여주는 DNA와 같다고 할 수 있겠습니다."
+"**계정과목표** 에는 회사의 재무상태표와 손익계산서에 있는 전체 계정이 종합적으로 나타나 있습니다. 모든 거래는 다양한 계정을 통해 "
+"전표로 입력되여 차변과 대변으로 기록됩니다. 따라서 계정과목표는 회사의 DNA와 같다고 할 수 있겠습니다."
 
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:85
 msgid ""
@@ -8283,15 +8296,15 @@ msgid ""
 "your bank) with transactions recorded internally (payments to suppliers or "
 "from customers). For each line in a bank statement, it can be:"
 msgstr ""
-"은행 조정은 은행 명세서 항목 (은행에서 제공)과 내부적으로 기록된 거래 (공급업체 또는 고객으로부터의 결제)를 일치시키는 작업입니다. "
-"은행 명세서 각 내역에 대해 이루어질 수 있습니다:"
+"은행 조정은 은행 명세서 항목 (은행에서 제공)과 내부적인 거래 기록 (공급업체 또는 고객으로부터의 결제)을 매칭시키는 작업입니다. "
+"다음과 같이 은행 명세서 각 내역에 대해 진행할 수 있습니다:"
 
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:196
 msgid ""
 "**matched with a previously recorded payment**: a payment is registered when"
 " a check is received from a customer, then matched when checking the bank "
 "statement."
-msgstr "**이전에 기록한 결제와 일치**: 고객에게서 수표를 받을 때 결제를 등록하고 은행 명세서를 확인하면 일치시킵니다."
+msgstr "**이전 결제 기록과 매칭**: 고객에게서 수표를 받을 때 결제를 등록하고 은행 명세서를 확인하여 매칭시킵니다."
 
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:198
 msgid ""
@@ -8302,7 +8315,7 @@ msgstr "**새로운 결제로 기록**: 은행 명세서를 처리할 때 관련
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:200
 msgid ""
 "**recorded as another transaction**: bank transfer, direct charge, etc."
-msgstr "**다른 거래로 기록**: 은행 이체, 직접 청구 등."
+msgstr "**다른 거래로 기록**: 은행 이체, 직접 청구 등이 있습니다."
 
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:202
 msgid ""
@@ -8311,8 +8324,8 @@ msgid ""
 "balance on the bank account in Odoo should match the bank statement's "
 "balance."
 msgstr ""
-"Odoo는 대부분의 거래를 자동으로 조정하며, 직접 검토해야 하는 거래는 일부의 거래 뿐입니다. 은행 조정 프로세스가 완료되면 Odoo의"
-" 은행 계좌 잔액이 은행 명세서 잔액과 일치해야 합니다."
+"Odoo에서는 대부분의 거래가 자동으로 조정되며, 직접 검토해야 하는 거래는 몇 가지밖에 없습니다. 은행 조정 프로세스가 완료되면 "
+"Odoo에 있는 은행 계좌 잔액이 은행 명세서 잔액과 일치해야 합니다."
 
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:209
 msgid "Checks Handling"
@@ -8335,12 +8348,12 @@ msgstr "하나의 전표를 은행 조정하기"
 msgid ""
 "The first journal entry is created by registering the payment on the "
 "invoice. The second one is created when registering the bank statement."
-msgstr "첫 번째 전표 항목은 청구서에 결제 등록으로 생성됩니다. 두 번째 전표는 은행 명세서를 등록할 때 생성됩니다."
+msgstr "첫 번째 전표 항목은 청구서에 결제를 등록하면 생성됩니다. 두 번째 전표는 은행 명세서를 등록하면 생성됩니다."
 
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:226
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:252
 msgid "Invoice ABC"
-msgstr "청구서 ABC"
+msgstr "ABC 청구서 "
 
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:228
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:236
@@ -8350,7 +8363,7 @@ msgstr "미입금 자금"
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:228
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:236
 msgid "Check 0123"
-msgstr "수표 0123"
+msgstr "0123 수표"
 
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:243
 msgid ""
@@ -8396,12 +8409,12 @@ msgid ""
 "Configuration --> Settings --> Currencies` and changing the currency in the "
 ":guilabel:`Main Currency` setting."
 msgstr ""
-"**주요 통화**는 회사가 위치하고 있는 국가에 따라 기본 지정됩니다. :menuselection:`계정 --> 환경 설정 --> 설정 "
-"--> 통화`로 이동하여 :guilabel:`주요 통화` 설정에서 통화를 바꾸면 변경할 수 있게 됩니다."
+"**주요 통화** 는 회사의 소재지 국가에 따라 기본값으로 지정됩니다. 변경하려면 :menuselection:`계정 --> 환경 설정 "
+"--> 설정 --> 통화` 로 이동하여 :guilabel:`주요 통화` 설정에서 통화를 변경하세요."
 
 #: ../../content/applications/finance/accounting/get_started/multi_currency.rst:29
 msgid "Enable foreign currencies"
-msgstr "외환 활성화하기"
+msgstr "외환 기능 활성화하기"
 
 #: ../../content/applications/finance/accounting/get_started/multi_currency.rst:31
 msgid ""
@@ -8422,7 +8435,7 @@ msgstr "환율"
 
 #: ../../content/applications/finance/accounting/get_started/multi_currency.rst:44
 msgid "Manual update"
-msgstr "메뉴얼 업데이트"
+msgstr "수동으로 변경하기"
 
 #: ../../content/applications/finance/accounting/get_started/multi_currency.rst:46
 msgid ""
@@ -8431,12 +8444,12 @@ msgid ""
 " the rate of, and under the :guilabel:`Rates` tab, click :guilabel:`Add a "
 "line` to create a new rate."
 msgstr ""
-"직접 환율을 생성 및 설정하려면 :menuselection:`회계 --> 환경 설정 --> 통화`로 이동하여 환율을 변경하려는 통화를 "
-"클릭한 다음 :guilabel:`환율` 탭 아래에 있는 :guilabel:`줄 추가`를 클릭하여 새로운 환율을 생성합니다."
+"환율을 수동으로 생성하여 설정하려면 :menuselection:`회계 --> 환경 설정 --> 통화` 로 이동하여 환율을 변경하려는 "
+"통화를 클릭한 다음 :guilabel:`환율` 탭 아래에 있는 :guilabel:`줄 추가` 를 클릭하여 새로 환율을 생성합니다."
 
 #: ../../content/applications/finance/accounting/get_started/multi_currency.rst-1
 msgid "Create or modify the currency rate."
-msgstr "환율 항목을 생성하거나 수정하세요."
+msgstr "환율을 생성하거나 수정합니다."
 
 #: ../../content/applications/finance/accounting/get_started/multi_currency.rst:55
 msgid "Automatic update"
@@ -8449,9 +8462,9 @@ msgid ""
 "Configuration --> Settings --> Currencies`. By default, you have to click on"
 " the **Update now** button (:guilabel:`🗘`) to update the rates."
 msgstr ""
-"두 번째 통화를 최초로 활성화하게 되면 :guilabel:`자동 환율`이 :menuselection:`회계 현황판 --> 환경 설정 "
-"--> 설정 --> 통화` 아래에 나타납니다. 기본적으로, 환율을 업데이트하려면 **지금 업데이트** 버튼 (:guilabel:`🗘`)을"
-" 클릭해야 합니다."
+"두 번째 통화를 최초로 활성화하게 되면 :guilabel:`자동 환율` 이 :menuselection:`회계 현황판 --> 환경 설정 "
+"--> 설정 --> 통화` 아래에 나타납니다. 기본적으로,**지금 업데이트** 버튼 (:guilabel:`🗘`)을 클릭해야 환율이 "
+"업데이트됩니다."
 
 #: ../../content/applications/finance/accounting/get_started/multi_currency.rst:61
 msgid ""
@@ -8461,9 +8474,9 @@ msgid ""
 "service from which you want to retrieve the latest currency rates by "
 "clicking on the :guilabel:`Service` field."
 msgstr ""
-"Odoo에서는 정기적으로 환율을 업데이트할 수 있습니다. 그러려면 :guilabel:`간격`을 :guilabel:`수기`에서 "
-":guilabel:`매일`, :guilabel:`매주` 또는 :guilabel:`매월`로 변경하세요. 또한 :guilabel:`서비스` "
-"필드를 클릭하여 최신 환율을 검색할 웹 서비스를 선택할 수도 있습니다."
+"Odoo에서는 정기적으로 환율을 업데이트할 수 있습니다. 업데이트하려면 :guilabel:`간격` 을 :guilabel:`수동` 에서 "
+":guilabel:`매일`, :guilabel:`매주` 또는 :guilabel:`매월` 로 변경하세요. 또한 :guilabel:`서비스`"
+" 항목을 클릭하면 최신 환율을 검색할 웹 서비스를 선택할 수도 있습니다."
 
 #: ../../content/applications/finance/accounting/get_started/multi_currency.rst:69
 msgid "Exchange difference entries"
@@ -8473,7 +8486,7 @@ msgstr "외환 차액 입력"
 msgid ""
 "Odoo automatically records exchange differences entries on dedicated "
 "accounts, in a dedicated journal."
-msgstr "Odoo는 전용 계정에 있는 전용 전표에서 외환 차액 항목을 자동으로 기록합니다."
+msgstr "Odoo에서 외환 차액 항목은 전용 계정에 있는 전용 전표에 자동으로 기록됩니다."
 
 #: ../../content/applications/finance/accounting/get_started/multi_currency.rst:74
 msgid ""
@@ -8482,9 +8495,9 @@ msgid ""
 "Configuration --> Settings --> Default Accounts` and editing the "
 ":guilabel:`Journal`, :guilabel:`Gain Account`, and :guilabel:`Loss Account`."
 msgstr ""
-":menuselection:`회계 --> 환경 설정 --> 설정 --> 기본 계정`으로 이동하여 :guilabel:`전표`, "
-":guilabel:`수익 계정` 및 :guilabel:`손실 계정`을 편집하여 **외환 차액 항목을 발행**하는 데 사용할 전표와 계정을"
-" 정의할 수 있습니다."
+":menuselection:`회계 --> 환경 설정 --> 설정 --> 기본 계정` 으로 이동하여 :guilabel:`전표`, "
+":guilabel:`수익 계정` 및 :guilabel:`손실 계정` 을 수정하여 **외환 차액 항목을 발행** 하는 데 사용할 전표와 "
+"계정을 지정할 수 있습니다."
 
 #: ../../content/applications/finance/accounting/get_started/multi_currency.rst:79
 msgid ""
@@ -8494,15 +8507,15 @@ msgid ""
 "which Odoo automatically records in the default **Exchange Difference** "
 "journal."
 msgstr ""
-"고객 청구서가 발행된 지 한 달 후에 대금을 받은 경우 이후 기간 동안 환율이 변동되었을 가능성이 높습니다. 이와 같이 변동됨으로써 "
-"Odoo에서 자동 기록되는 기본 **외환 차액** 전표에 환율 차이로 인해 일부 손익이 발생하게 됩니다."
+"고객 청구서가 발행된 지 한 달 후에 대금을 받는 경우 발행 이후 기간 동안 환율이 변동되었을 가능성이 높습니다. 이와 같은 변동 "
+"상황에서는 환율 차이로 인해 일부 손익이 발생되며 Odoo에서는 기본 **외환 차액** 전표에 손익을 자동으로 기록합니다."
 
 #: ../../content/applications/finance/accounting/get_started/multi_currency.rst:89
 msgid ""
 "Each account can have a set currency. By doing so, all moves relevant to the"
 " account are forced to have that account's currency."
 msgstr ""
-"계정마다 설정되어 있는 통화가 있을 수 있습니다. 통화를 설정하면, 해당 계정과 관련된 작업에는 계정 통화가 강제 적용됩니다."
+"각 계정마다 통화를 설정할 수 있습니다. 통화를 설정하면, 해당 계정과 관련된 작업에는 계정에 설정된 통화가 강제 적용됩니다."
 
 #: ../../content/applications/finance/accounting/get_started/multi_currency.rst:92
 msgid ""
@@ -8527,7 +8540,7 @@ msgstr "전표"
 msgid ""
 "If a currency is set on a **journal**, that journal only handles "
 "transactions in that currency."
-msgstr "**전표**에 설정된 통화가 있는 경우, 전표는 해당 통화로 이루어진 거래만 처리합니다."
+msgstr "**전표** 에 설정된 통화가 있는 경우, 전표에서 거래는 해당 통화로만 처리됩니다."
 
 #: ../../content/applications/finance/accounting/get_started/multi_currency.rst:103
 msgid ""
@@ -8535,12 +8548,12 @@ msgid ""
 "open the journal you want to edit, and select a currency in the field "
 ":guilabel:`Currency`."
 msgstr ""
-"설정하려면, :menuselection:`회계 --> 환경 설정 --> 전표`로 이동하여 수정하려는 전표을 연 다음 "
-":guilabel:`통화` 필드에서 통화를 선택합니다."
+"설정하려면, :menuselection:`회계 --> 환경 설정 --> 전표` 로 이동하여 수정하려는 전표을 연 다음 "
+":guilabel:`통화` 항목에서 통화를 선택합니다."
 
 #: ../../content/applications/finance/accounting/get_started/multi_currency.rst-1
 msgid "Select the currency for the journal to handle."
-msgstr "처리할 전표의 통화를 선택합니다."
+msgstr "전표에서 설정하려는 통화를 선택합니다."
 
 #: ../../content/applications/finance/accounting/get_started/multi_currency.rst:113
 msgid "Multi-currency accounting"
@@ -8554,7 +8567,7 @@ msgstr "청구서, 업체 청구서 및 기타 문서"
 msgid ""
 "For all documents, you can select the currency and journal to use for the "
 "transaction on the document itself."
-msgstr "모든 문서에서는, 문서 자체의 거래용 통화와 전표를 선택할 수 있습니다."
+msgstr "모든 문서에서는 문서 자체에서 거래에 활용할 통화와 전표를 선택할 수 있습니다."
 
 #: ../../content/applications/finance/accounting/get_started/multi_currency.rst-1
 msgid "Select the currency and journal to use."
@@ -8572,8 +8585,8 @@ msgid ""
 "and, in the pop-up window, select a **currency** in the :guilabel:`Amount` "
 "field."
 msgstr ""
-"회사의 주요 통화가 아니라 다른 통화로 결제를 등록하려면 문서에 있는 :guilabel:`결제 등록`이라는 결제 버튼을 클릭하고 "
-"팝업창에서 :guilabel:`금액` 필드에 있는 :guilabel:에서 **통화**를 선택합니다."
+"회사에서 사용 중인 주요 통화가 아닌 다른 통화로 결제를 등록하려면 문서에 있는 :guilabel:`결제 등록` 이라는 결제 버튼을 "
+"클릭한 후 팝업창의 :guilabel:`금액` 항목에 있는 :guilabel:에서 **통화** 를 선택합니다."
 
 #: ../../content/applications/finance/accounting/get_started/multi_currency.rst-1
 msgid "Select the currency and journal to use before registering the payment."
@@ -8591,12 +8604,12 @@ msgid ""
 " your main currency for it to automatically get converted in the foreign "
 "currency in the :guilabel:`Amount in Currency field`."
 msgstr ""
-"은행 거래를 생성하거나 가져올 때 금액은 회사의 기본 통화로 표시됩니다. **외화**를 입력하려면 :guilabel:`외화`에서 통화를 "
-"선택합니다. 선택하면 :guilabel:`통화 금액 필드`에서 외화로 자동 변환됩니다."
+"은행 거래를 생성하거나 가져오기를 할 때 해당 금액은 회사의 기본 통화로 표시됩니다. **외화** 를 입력하려면 "
+":guilabel:`외화` 에서 통화를 선택합니다. 선택하면 :guilabel:`통화 금액 항목` 에서 외화로 자동 변환됩니다."
 
 #: ../../content/applications/finance/accounting/get_started/multi_currency.rst-1
 msgid "The extra fields related to foreign currencies."
-msgstr "외환과 관련된 추가 필드입니다."
+msgstr "외환과 관련된 추가 항목입니다."
 
 #: ../../content/applications/finance/accounting/get_started/multi_currency.rst:154
 msgid ""
@@ -8614,7 +8627,7 @@ msgid ""
 ":menuselection:`Accounting Dashboard --> Accounting --> Journals: "
 "Miscellaneous`."
 msgstr ""
-"**외환 차액 전표 항목**을 보려면 :menuselection:`회계 현황판 --> 회계 --> 전표: 기타`로 이동합니다."
+"**외환 차액 전표 항목** 을 보려면 :menuselection:`회계 현황판 --> 회계 --> 전표: 기타` 로 이동합니다."
 
 #: ../../content/applications/finance/accounting/get_started/multi_currency.rst-1
 msgid "Exchange rate journal entry."
@@ -8626,7 +8639,7 @@ msgstr "과세 단위"
 
 #: ../../content/applications/finance/accounting/get_started/tax_units.rst:6
 msgid "This is only applicable to multi-company environments."
-msgstr "회사가 여러 개인 환경에서만 적용될 수 있습니다."
+msgstr "다중 회사 환경에서만 적용할 수 있습니다."
 
 #: ../../content/applications/finance/accounting/get_started/tax_units.rst:8
 msgid ""
@@ -8640,11 +8653,11 @@ msgid ""
 "specific **tax ID** intended only for **tax returns**. **Constituent** "
 "companies keep their **tax ID** used for **commercial purposes**."
 msgstr ""
-"**세금 단위** 란 부가가치세 과세 대상이 되는 기업 그룹으로, 법적으로는 서로 독립되어 있지만 재정적, 조직적, 경제적으로 밀접하게 "
-"연결되어 있는 관계이기 때문에 동일한 부가가치세 과세 대상 기업으로 간주됩니다. **세금 단위** 는 필수 항목은 아니지만, 항목을 "
-"생성한 경우에는 단위를 구성하는 회사는 동일한 **국가** 에 속해야 하고 동일한 **통화** 를 사용하며**세금 단위** 회사 중에서 "
-"한 회사를 **대표** 회사로 지정해야 합니다. **세금 단위** 는 **세금 신고** 용으로만 사용하는 특정 **세금 ID** 가 "
-"부여됩니다. **구성** 회사는 **상업적 목적** 으로 사용하는 **세금 ID** 를 보유합니다."
+"**세금 단위** 란 부가가치세 과세 대상이 되는 기업 그룹을 지칭하며, 법적으로는 서로 독립되어 있지만 재정적, 조직적, 경제적으로 "
+"밀접하게 연결되어 있는 관계이기 때문에 동일한 부가가치세 과세 대상 기업으로 간주됩니다. **세금 단위** 가 필수 항목인 것은 "
+"아니지만, 항목을 생성한 경우에는 단위를 구성하는 회사는 동일한 **국가** 에 속해 있어야 하고 동일한 **통화** 를 사용하며 "
+"**세금 단위** 회사 중에서 한 회사를 **대표** 회사로 지정해야 합니다. **세금 단위** 에는 **세금 신고** 전용으로 특정 "
+"**세금 ID** 가 부여됩니다. **구성원** 회사는 **상업적 목적** 으로 사용하는 **세금 ID** 를 보유합니다."
 
 #: ../../content/applications/finance/accounting/get_started/tax_units.rst:17
 msgid ""
@@ -8653,8 +8666,9 @@ msgid ""
 " two amounts balance out and must conjointly only pay €20.000,00 of VAT "
 "taxes."
 msgstr ""
-"기업 **A**의 부가가치세 납부 금액은 €300.000,00이고, 기업 **B**의 부가가치세 환급 금액은 €280.000,00입니다."
-" 두 금액이 균형을 이루도록 **과세 단위** 로 구성되며 부가가치세 중 €20,000,00만 연대 납부해야 합니다."
+"기업 **A** 의 부가가치세 납부 금액은 €300.000,00이고, 기업 **B** 의 부가가치세 환급 금액은 "
+"€280.000,00입니다. 두 기업은 **과세 단위** 를 구성하고 있으며 이에 따라 두 금액이 균형을 이루도록 부가가치세 중 "
+"€20,000,00만 연대 납부하면 됩니다."
 
 #: ../../content/applications/finance/accounting/get_started/tax_units.rst:24
 msgid ""
@@ -8681,8 +8695,8 @@ msgid ""
 "position) <../taxes/fiscal_positions>` to avoid the application of VAT on "
 "inter-constituent transactions."
 msgstr ""
-"동일한 **과세 단위** 의 구성원 간 거래에는 부가가치세가 적용되지 않으므로 구성원 내부 거래에 부가가치세가 적용되지 않도록 "
-":doc:`세금 매핑 (재정 위치) <../taxes/fiscal_positions>` 항목을 생성할 수 있습니다."
+"동일한 **과세 단위** 인 구성원 간 거래에는 부가가치세가 적용되지 않으므로 :doc:`세금 매핑 (재정 위치) "
+"<../taxes/fiscal_positions>` 항목을 생성하여 구성원 내부 거래에 부가가치세가 적용되지 않도록 할 수 있습니다."
 
 #: ../../content/applications/finance/accounting/get_started/tax_units.rst:36
 msgid ""
@@ -8693,18 +8707,18 @@ msgid ""
 "**non-constituent** transactions, and in :guilabel:`Tax to Apply`, select "
 "the 0% tax to apply for **constituent** transactions."
 msgstr ""
-"이전에 구성 회사를 선택했는지 확인한 다음 :menuselection:`회계 --> 환경 설정 --> 재정 위치`에 있는 새로운 **회계"
-" 위치**를 :guilabel:`만들기`를 클릭합니다. :guilabel:`세금 매핑` 탭을 클릭하고, 일반적으로 **비구성원**간 "
-"거래에 적용하는 :guilabel:`품목에 대한 세금`을 선택한 다음 :guilabel:`적용할 세금`에서 **구성원**간의 거래에 "
-"적용할 세금으로 0%을 선택합니다."
+"이전에 구성원 회사를 선택한 적이 있는지 확인한 다음 :menuselection:`회계 --> 환경 설정 --> 재정 위치`에 있는 "
+"새로운 **회계 위치** :guilabel:`만들기` 를 클릭합니다. :guilabel:`세금 매핑` 탭을 클릭한 후, 일반적으로 "
+"**비구성원** 간 거래에 적용되는 :guilabel:`품목에 대한 세금` 을 선택한 다음 :guilabel:`적용할 세금` 에서 "
+"**구성원** 간의 거래에 적용할 세금으로 0%을 선택합니다."
 
 #: ../../content/applications/finance/accounting/get_started/tax_units.rst:42
 msgid ""
 "Do the same for the :guilabel:`Account Mapping` tab if required, and repeat "
 "this process for **each** constituent company on your database."
 msgstr ""
-"필요한 경우 :guilabel:`계정 매핑` 탭에서 동일한 작업을 수행하고 데이터베이스에서 **각각의** 구성 회사에 대해 이 과정을 "
-"반복하세요."
+"필요할 경우 :guilabel:`계정 매핑` 탭에서도 동일한 작업을 수행한 후 데이터베이스에서 **각각의** 구성원 회사에 대해 이 "
+"과정을 반복하세요."
 
 #: ../../content/applications/finance/accounting/get_started/tax_units.rst:46
 msgid ""
@@ -8712,8 +8726,8 @@ msgid ""
 "</applications/finance/fiscal_localizations>`, taxes may vary from the "
 "screenshot displayed."
 msgstr ""
-":doc:`현지화 패키지 </applications/finance/fiscal_localizations>`에 따라, 세금이 스크린샷 표시"
-" 내용과 다를 수 있습니다."
+":doc:`현지화 패키지 </applications/finance/fiscal_localizations>` 에 따라, 세금이 스크린샷에 "
+"있는 내용과 차이가 있을 수 있습니다."
 
 #: ../../content/applications/finance/accounting/get_started/tax_units.rst:0
 msgid "Tax mapping of fiscal position for tax unit"
@@ -10929,6 +10943,8 @@ msgid ""
 "current liabilities (:dfn:`liabilities that will be due in the next year`). "
 "It is typically used to measure a company's ability to service its debt."
 msgstr ""
+"**유동 비율** 이라고도 하며, 유동 자산 (:dfn:`1년 내에 현금으로 전환될 수 있는 자산`)과 유동 부채 (:dfn:`다음 해에"
+" 만기가 도래하는 부채`)의 비율입니다. 일반적으로 회사의 부채 상환 능력을 측정하는 데 사용합니다."
 
 #: ../../content/applications/finance/accounting/reporting.rst:92
 msgid "General Ledger"
@@ -17152,6 +17168,9 @@ msgid ""
 "vendor bill), the :guilabel:`Payment Difference` field displays the "
 "outstanding balance. You have two options:"
 msgstr ""
+":guilabel:`전표`, :guilabel:`지급 수단`, 결제 :guilabel:`금액` (전액 또는 부분 결제) 및 "
+":guilabel:`통화` 를 선택합니다. 부분 결제의 경우 (결제 :guilabel:`금액` 이 공급업체 청구서의 총 잔액보다 적은 "
+"경우) :guilabel:`결제 차액` 항목에 미지급 잔액이 표시됩니다. 두 가지 중에서 선택할 수 있습니다."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:82
 msgid ""
@@ -27425,6 +27444,9 @@ msgid ""
 "recommended to **not** delete these accounts; however, if changes are "
 "needed, rename the accounts instead."
 msgstr ""
+"Odoo에서는 |COA| 의 일부로 미리 계정이 지정되어 있으며, 캐나다 현지화 패키지와 함께 설치됩니다. 아래에 있는 계정은 Odoo "
+"내에서 특정 작업을 수행하도록 사전에 설정되어 있습니다. 이러한 계정은 삭제하지 **않는** 것이 좋으며, 변경해야 할 경우 대신 "
+"계정명을 변경하도록 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:99
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:153
@@ -30583,7 +30605,7 @@ msgid ""
 "document type."
 msgstr ""
 ":ref:`재정 현지화 패키지 <fiscal_localizations/packages>` 기본값입니다. 이 모듈은 콜롬비아 현지화를 위한"
-" 기본적인 회계 기능 (계정과목표, 세금, 원천징수 및 식별 문서 유형)을 추가합니다."
+" 기본적인 회계 기능인 계정과목표, 세금, 원천징수 및 식별 문서 유형이 추가되어 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/colombia.rst:41
 msgid ":guilabel:`Colombian - Accounting Reports`"
@@ -41162,6 +41184,9 @@ msgid ""
 " the due month (immediate payment, 15 days, 21 days, all falling within the "
 "current month)."
 msgstr ""
+"|PUE| 청구서에 대한 환경 설정을 하려면 :menuselection:`회계 --> 고객 --> 청구서` 로 이동하여 "
+":guilabel:`마감일` 이 같은 달에 있는 청구서를 선택하거나 월 기한이 변경되지 않는 결제 기간 (즉시 결제, 15일, 21일, "
+"모두 이번 달에 해당)을 선택합니다"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst-1
 msgid "Example of an invoice with the PUE requirements."
@@ -42503,6 +42528,9 @@ msgid ""
 "This generates an XML file with your accounts, which you can upload directly"
 " to the |SAT| website."
 msgstr ""
+"모든 설정을 완료한 후 :menuselection:`회계 --> 보고 --> 시산표` 로 이동하여 :guilabel:`PDF` 버튼 옆에"
+" 있는 :icon:`fa-caret-down` (:guilabel:`아래쪽 화살표`)을 클릭한 후 :guilabel:`COA SAT "
+"(XML)` 를 선택합니다. 이렇게 하면 계정 내역을 XML 파일로 생성되어 |SAT| 웹사이트에 직접 업로드할 수 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:1008
 msgid ""
@@ -48866,6 +48894,9 @@ msgid ""
 "installation automatically loads: chart of accounts, taxes, documents types,"
 " and tax supported types."
 msgstr ""
+"기본값인 :doc:`재정 현지화 패키지 <../fiscal_localizations>` 입니다. 우루과이 현지화에 대한 회계적인 특성이 "
+"추가되었으며, |DGI| 에서 제시한 가이드라인에 따라 우루과이에서 회사를 운영하는 데 필요한 최소한의 환경 설정이 되어 있습니다. "
+"모듈을 설치하면 계정과목표, 세금, 문서 유형 및 세금 지원 유형이 자동으로 로드됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:64
 msgid ":guilabel:`Uruguay Accounting EDI`"
@@ -49068,6 +49099,9 @@ msgid ""
 "not appear in this mode. Every internal validation can be tested in demo "
 "mode. Avoid selecting this option in a production database."
 msgstr ""
+":guilabel:`데모`: 데모 모드에서는 파일이 자동으로 생성 후 수락되지만 |DGI| 로 전송되지는 **않습니다**. 이러한 이유로"
+" 이 모드에서는 거부 오류가 표시되지 않습니다. 내부 검증은 모두 데모 모드에서 테스트할 수 있습니다. 프로덕션 데이터베이스에서는 이 "
+"항목을 선택하지 마세요."
 
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:159
 msgid "Then, enter the :guilabel:`Uruware Data`:"
@@ -49246,6 +49280,9 @@ msgid ""
 "click the :guilabel:`Credit note` button to access the :guilabel:`Create "
 "credit note` form, then complete the following information:"
 msgstr ""
+":doc:`고객 대변전표 <../accounting/customer_invoices/credit_notes>` 는 검증이 완료되면 "
+"Uruware를 통해 |DGI| 로 전송되는 전자 문서입니다. 대변전표를 등록하려면 청구서를 검증(게시)해야 합니다. 청구서에서 "
+":guilabel:`대변전표` 버튼을 클릭하여 :guilabel:`대변전표 만들기` 양식에 액세스한 후 다음 정보를 입력하세요."
 
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:286
 msgid ""
@@ -49296,6 +49333,9 @@ msgid ""
 "(number) is brought from Uruware once the document has been processed. Make "
 "sure you have |CAEs| available in Uruware."
 msgstr ""
+"청구서를 확정하여 내부 참조 항목을 생성합니다. Uruware를 통해 |DGI| 로 문서를 전송하려면 :guilabel:`보내기 및 "
+"인쇄` 를 클릭하고 :guilabel:`CFE 만들기` 확인란에 표시합니다. 문서 처리가 완료되면 Uruware에서 법적인 문서 연번 "
+"(번호)을 가져옵니다. Uruware에서 |CAE| 를 사용할 수 있는지 확인하세요."
 
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:313
 msgid ""
@@ -49364,6 +49404,9 @@ msgid ""
 "addenda and disclosures added here will appear in the XML and visibly in the"
 " PDF document."
 msgstr ""
+"전자 청구서 및 XML에 *부록* 또는 별도 정보를 추가하려면 청구서에 액세스하고 :guilabel:`기타 정보` 탭으로 이동한 다음 "
+":guilabel:`추가 정보 및 공시` 항목에서 추가하려는 내용을 선택합니다. 여기에 선택된 추가 정보와 공시 내용은 XML에 표시되고"
+" PDF 문서에서 확인이 가능합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:346
 msgid "This applies to the following types of *addendas*:"
