@@ -2,66 +2,6 @@
 Troubleshooting
 ===============
 
-IoT box connection
-==================
-
-Unable to locate the pairing code to connect the IoT box
---------------------------------------------------------
-
-The pairing code should be printed on receipt printers connected to the :abbr:`IoT (Internet of
-Things)` box and should also be displayed on connected monitors.
-
-The pairing code does not show under the following circumstances:
-
-- The :abbr:`IoT (Internet of Things)` box is already connected to an Odoo database.
-- The :abbr:`IoT (Internet of Things)` box is not connected to the Internet.
-- The code is only valid for 5 minutes after the :abbr:`IoT (Internet of Things)` box has started.
-  It is automatically removed from connected displays when this time has expired.
-- The version of the :abbr:`IoT (Internet of Things)` box image is too old. If the :abbr:`IoT
-  (Internet of Things)` box image is from an earlier version, then the SD card of the :abbr:`IoT
-  (Internet of Things)` box needs to be re-flashed to update the image (see :ref:`Flashing the SD
-  Card <iot/config/flash>`).
-
-If none of the cases listed above correct the issue, then make sure the :abbr:`IoT (Internet of
-Things)` box has correctly started, by checking that a fixed green LED is showing next to the power
-port.
-
-IoT box is connected but it is not showing in the database
-----------------------------------------------------------
-
-When an :abbr:`IoT (Internet of Things)` box connects to a database, it may restart. If so, it can
-take up to five minutes before appearing in the database. If the :abbr:`IoT (Internet of Things)`
-box is still not showing after five minutes, make sure that the :abbr:`IoT (Internet of Things)` box
-can reach the database and that the server does not use a multi-database environment.
-
-To access the database from the :abbr:`IoT (Internet of Things)` box, open a browser and type in the
-database address.
-
-The IoT box is connected to the Odoo database, but cannot be reached
---------------------------------------------------------------------
-
-Make sure that the :abbr:`IoT (Internet of Things)` box and the computer running the browser are
-located on the same network, as the :abbr:`IoT (Internet of Things)` box cannot be reached from
-outside the local network.
-
-The HTTPS certificate does not generate
----------------------------------------
-
-In order to generate a :abbr:`HTTPS (Hypertext Transfer Protocol Secure)` certificate, an IoT box
-subscription is required for the :abbr:`IoT (Internet of Things)` box. Connecting the :abbr:`IoT
-(Internet of Things)` box prior to configuring an :abbr:`IoT (Internet of Things)` subscription for
-the database and :abbr:`IoT (Internet of Things)` box with the Account Manager will result in an
-unsecured connection.
-
-In addition, a firewall can also prevent the :abbr:`HTTPS (Hypertext Transfer Protocol Secure)`
-certificate from generating correctly. In this case, deactivate the firewall until the certificate
-is successfully generated. It should also be noted that certain devices, such as a router that has
-a built-in firewall, can prevent the :abbr:`HTTPS (Hypertext Transfer Protocol Secure)` certificate
-from generating.
-
-.. seealso::
-   :doc:`HTTPS certificate (IoT) <https_certificate_iot>`
-
 Printer
 =======
 
