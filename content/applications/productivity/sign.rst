@@ -57,6 +57,9 @@ as:
 #. Document traceability and inalterability (any alteration made to a signed document is detected by
    Odoo with the use of cryptographic proofs)
 
+.. note::
+   :doc:`Documentation for Germany <sign/germany>`
+
 United States of America
 ------------------------
 
