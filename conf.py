@@ -245,6 +245,7 @@ languages_names = {
     'de': 'DE',
     'en': 'EN',
     'es': 'ES',
+    'es_419': 'ES (LATAM)',
     'fr': 'FR',
     'it': 'IT',
     'ko': 'KR',
