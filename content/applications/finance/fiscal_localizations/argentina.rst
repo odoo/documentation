@@ -619,9 +619,9 @@ document, an automatic validation can be set in :menuselection:`Accounting --> S
 Argentinean Localization --> Validate document in the AFIP`, considering the following levels:
 
 - :guilabel:`Not available:` the verification is not done (this is the default value);
-- :guilabel:`Available:` the verification is done. In case the number is not valid it, only displays
+- :guilabel:`Available:` the verification is done. In case the number is not valid, it only displays
   a warning but still allows the vendor bill to be posted;
-- :guilabel:`Required:` the verification is done and it does not allow the user to post the vendor
+- :guilabel:`Required:` the verification is done, and it does not allow the user to post the vendor
   bill if the document number is not valid.
 
 .. image:: argentina/verify-vendor-bills.png
