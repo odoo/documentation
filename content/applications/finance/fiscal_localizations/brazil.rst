@@ -136,6 +136,7 @@ Correction letter, Invalidate invoice number range), an API call is made using c
 .. note::
    - Odoo is a certified partner of Avalara Brazil.
    - You can `buy IAP credit on odoo.com <https://iap.odoo.com/iap/in-app-services/819>`_.
+   - On creation, new databases receive 500 free credits.
 
 Credential configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~
