@@ -930,3 +930,104 @@ a scheduled action, but you can also send each invoice manually if needed.
 
 Once the invoice is validated with |SUNAT|, customers can download the :file:`.zip` with the CDR,
 XML, and PDF files directly from the customer portal by clicking the :guilabel:`Download` button.
+
+Reports
+=================
+
+Permanent Inventory Reports: PLE 12.1 and PLE 13.1
+--------------------------------
+
+Modules installation
+************************
+It is recommended to have installed and updated all Peruvian Modules (l10n_pe), 
+this feature is available in Odoo17+.
+
+:ref:`Install <general/install>` the following he following module: **l10n_pe_reports_stock**
+
+.. image:: peru/l10n-pe-report-stock-module.png
+   :align: center
+   :alt: Install l10n_pe_reports_stock on your database
+
+Once installed, consider updating and completing the fields for:
+- Product
+- Warehouses
+- Transfers
+
+Update fields and configurations for: 
+- :guilabel:`Products`: Go to the tab :menuselection:`Accounting --> PE --> Type of Existence`. 
+ Select the type of existence according to SUNAT’s Table 5 for inventory reporting.
+
+.. image:: peru/l10n-pe-type-of-existence.png
+   :align: center
+   :alt: Select type of existence for that product
+
+- :guilabel:`Product Category`: For goods, or storable products, it’s important to use 
+`Automatic Inventory Valuation
+<https://www.odoo.com/documentation/18.0/applications/inventory_and_mrp/inventory/
+product_management/inventory_valuation/inventory_valuation_config.html#accounting-setup>`__ 
+and also a `Costing Method 
+<https://www.odoo.com/documentation/18.0/applications/inventory_and_mrp/inventory/product_management/
+inventory_valuation/inventory_valuation_config.html#costing-method>`__  that is not set as Standard Price. 
+This is important as the Journal Entries generated from stock moves, will feed these reports.
+
+- :guilabel:`Annex Establishment Code`: This needs to be unique per Warehouse, and it should 
+only be a numeric combination of at least 4 digits, max 7 digits. It works as an ID for each warehouse.
+
+.. image:: peru/l10n-pe-annex-establishment-code.png
+   :align: center
+   :alt: Choose between 4-7 numeric digits 
+
+- :guilabel:`Type of Operation (PE)`: When validating an `Inventory Transfer 
+<https://www.odoo.com/documentation/18.0/applications/inventory_and_mrp/inventory/
+shipping_receiving/daily_operations/receipts_delivery_one_step.html#receive-goods-directly-1-step>`__ 
+(Receipts or Deliveries), select the Type of Operation performed according to 
+SUNAT’s Table 12 for permanent inventory reporting.
+
+.. image:: peru/l10n-pe-type-of-operation-pe.png
+   :align: center
+   :alt: Select between the listed options of SUNAT’S Table 12 
+
+
+Context: 
+~~~~~~~~~~~~~~
+This set of reports has 2 books that need to be downloaded in a `.txt` file format 
+from Odoo and then submitted to the SUNAT PLE software. All transactions made in the 
+inventory are to be reported, in one of the reports only transactions by units, 
+and in the second, transactions and monetary value.
+
+
+
+PLE 12.1: Permanent Inventory Record in Physical Units
+~~~~~~~~~~~~~~
+This record only tracks inventory in physical units, focusing on the inflow and outflow
+of goods for effective management and planning. It must be maintained semi-annually 
+(January-June and July-December) with monthly transaction details reported within these periods. 
+The submission deadlines are October 1st for the first semester and April 1st for the 
+second semester, as per Superintendent Resolution 169-2015.
+
+
+PLE 13.1: Permanent Valued Inventory Record
+~~~~~~~~~~~~~~
+This record tracks both physical quantities and monetary values of inventory, providing a 
+comprehensive view for tax and management purposes. It follows a semi-annual schedule with 
+updates required for January-June and July-December periods. Detailed monthly transactions 
+must be reported within these semesters. Submission deadlines are October 1st for the 
+first semester and April 1st for the second semester, 
+in accordance with Superintendent Resolution 169-2015.
+
+TXT generation for PLE for Permanent Inventory Kardex Reports
+----------------------------
+On the `Inventory Valuation Report <https://www.odoo.com/documentation/18.0/applications/inventory_and_mrp/inventory/
+product_management/inventory_valuation/using_inventory_valuation.html#inventory-valuation-report>`__ 
+you will find the PLE REPORT button to select the period and then define if you want 
+to export the PLE 12.1 or PLE 13.1, Odoo will generate a `.txt`  file.
+
+.. image:: peru/l10n-ple-export-button.png
+   :align: center
+   :alt: Export Buttons selection 
+
+
+.. note::
+The functionality allows you to download the report in `.txt` format, 
+there is no preview or visualization like other Odoo Inventory Reports.
+
