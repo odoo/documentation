@@ -139,7 +139,7 @@ Positions`.
 The following fiscal positions are available by default:
 
 - :guilabel:`Alberta (AB)`
-- :guilabel:`British Colombia (BC)`
+- :guilabel:`British Columbia (BC)`
 - :guilabel:`Manitoba (MB)`
 - :guilabel:`New Brunswick (NB)`
 - :guilabel:`Newfoundland and Labrador (NL)`
