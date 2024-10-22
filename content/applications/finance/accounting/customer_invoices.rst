@@ -4,225 +4,221 @@
 Customer invoices
 =================
 
-From Customer Invoice to Payments Collection
-============================================
+A customer invoice is a document issued by a company for products and/or services sold to a
+customer. It records receivables as they are sent to customers. Customer invoices can include
+amounts due for the goods and/or services provided, applicable sales taxes, shipping and handling
+fees, and other charges.
+Odoo supports multiple invoicing and payment workflows.
 
-Odoo supports multiple invoicing and payment workflows, so you can
-choose and use the ones that match your business needs. Whether you want
-to accept a single payment for a single invoice, or process a payment
-spanning multiple invoices and taking discounts for early payments, you
-can do so efficiently and accurately.
+.. seealso::
+   - :doc:`/applications/finance/accounting/customer_invoices/overview`
 
-From Draft Invoice to Profit and Loss
--------------------------------------
+From draft invoice to profit and loss report, the process involves several steps once the goods are
+shipped to a customer:
 
-If we pick up at the end of a typical 'order to cash' scenario, after
-the goods have been shipped, you will: issue an invoice; receive
-payment; deposit that payment at the bank; make sure the Customer
-Invoice is closed; follow up if Customers are late; and finally present
-your Income on the Profit and Loss report and show the decrease in
-Assets on the Balance Sheet report.
+- :ref:`accounting/invoice/creation`
+- :ref:`accounting/invoice/confirmation`
+- :ref:`accounting/invoice/sending`
+- :ref:`accounting/invoice/paymentandreconciliation`
+- :ref:`accounting/invoice/followup`
+- :ref:`accounting/invoice/reporting`
 
-Invoicing in most countries occurs when a contractual obligation is met.
-If you ship a box to a customer, you have met the terms of the contract
-and can bill them. If your supplier sends you a shipment, they have met
-the terms of that contract and can bill you. Therefore, the terms of the
-contract is fulfilled when the box moves to or from the truck. At this
-point, Odoo supports the creation of what is called a Draft Invoice by
-Warehouse staff.
+.. note::
+   Odoo :guilabel:`Invoicing` is a standalone app designed to create invoices, send them to
+   customers, and manage payments. On the other hand, the :guilabel:`Accounting` app is a
+   comprehensive accounting solution that allows the same actions to be performed.
+
+.. _accounting/invoice/creation:
 
 Invoice creation
-----------------
+================
 
-Draft invoices can be manually generated from other documents such as
-Sales Orders, Purchase Orders,etc. Although you can create a draft
-invoice directly if you would like.
+Draft invoices can be manually created from documents like sales orders or purchase orders or
+directly from the :guilabel:`Customer Invoices` journal in the :guilabel:`Accounting Dashboard`.
 
-An invoice must be provided to the customer with the necessary
-information in order for them to pay for the goods and services ordered
-and delivered. It must also include other information needed to pay the
-invoice in a timely and precise manner.
+An invoice must include the required information to enable the customer to pay promptly for the
+goods and services ordered and delivered. Make sure the following fields are appropriately
+completed:
 
-Draft invoices
---------------
+- :guilabel:`Customer`: Odoo automatically fills in some information based on the customer’s
+  registered information and previous invoices.
+- :guilabel:`Invoice Date`: is automatically filled in when the invoice is confirmed.
+- :guilabel:`Payment Reference`: is the reference to be set as the payment reference to facilitate
+  reconciliation. It's automatically filled in when the invoice is confirmed.
+- :guilabel:`Due Date` or :guilabel:`Payment terms`: to specify when the customer has to pay the
+  invoice.
+- :guilabel:`Journal`: is automatically set and can be changed if needed.
+- :doc:`Currency <get_started/multi_currency>`
+- :guilabel:`Product`
+- :guilabel:`Quantity`
+- :guilabel:`Price`
+- :guilabel:`Taxes` (if applicable).
 
-The system generates invoice which are initially set to the Draft state.
-While these invoices remain unvalidated, they have no accounting impact within the system.
-There is nothing to stop users from creating their own draft invoices.
+To display the total amount of the invoice in words, go to :menuselection:`Accounting -->
+Configuration --> Settings` and activate the :guilabel:`Total amount of invoice in letters` option.
 
-Let's create a customer invoice with following information:
+The :guilabel:`Journal Items` tab displays the accounting entries created.
+To add specific invoice/accounting information, fill in the :guilabel:`Other Info` tab.
 
-- Customer: Agrolait
-- Product: iMac
-- Quantity: 1
-- Unit Price: 100
-- Taxes: Tax 15%
+The system initially creates invoices in :guilabel:`Draft` status. While they remain unvalidated,
+draft invoices have no accounting impact within the system. When previewing a draft invoice,
+:guilabel:`Proforma` is added before the invoice reference, as proforma invoices are issued to
+request payment from the buyer before the goods or services are provided.
 
-.. image:: customer_invoices/invoice01.png
+.. _accounting/invoice/confirmation:
 
-.. image:: customer_invoices/invoice02.png
+Invoice confirmation
+====================
 
-The document is composed of three parts:
+Click :guilabel:`Confirm` when the document is completed. The document's status changes to
+:guilabel:`Posted`, and a journal entry is generated based on the invoice configuration. The
+:guilabel:`Journal Items` tab is then filled.
 
--  the top of the invoice, with customer information,
--  the main body of the invoice, with detailed invoice lines,
--  the bottom of the page, with detail about the taxes, and the totals.
+.. image:: customer_invoices/invoice-confirmation.png
+   :alt: invoice confirmation journal entries
 
-Open or Pro-forma invoices
---------------------------
+On confirmation, Odoo assigns each document a unique number from a defined sequence consisting of a
+prefix and a number. The prefix combines the journal code and the entry date. It is used to classify
+entries by period. The number is unique for each period and is used to identify the entry. The
+default sequence on customer invoices is INV/YYYY/number. In some specific cases,
+:ref:`resequencing <accounting/invoice/resequencing>` might be necessary.
 
-An invoice will usually include the quantity and the price of goods
-and/or services, the date, any parties involved, the unique invoice
-number, and any tax information.
+When previewing a confirmed invoice, :guilabel:`Proforma` is added before the invoice reference, as
+proforma invoices are issued to request payment from the buyer before the goods or services are
+provided.
 
-"Validate" the invoice when you are ready to approve it. The invoice
-then moves from the Draft state to the Open state.
+.. note::
+   Once confirmed, an invoice can no longer be updated. Click :guilabel:`Reset to draft` if
+   changes are required.
 
-When you have validated an invoice, Odoo gives it a unique number from a
-defined, and modifiable, sequence.
+.. _accounting/invoice/sending:
 
-.. image:: customer_invoices/invoice03.png
+Invoice sending
+===============
 
-Accounting entries corresponding to this invoice are automatically
-generated when you validate the invoice. You can see the details by
-clicking on the entry in the Journal Entry field in the "Other Info"
-tab.
+To send the invoice to the customer, click :guilabel:`Send & Print`. A :guilabel:`Configure your
+document layout` pop-up window will appear if a :ref:`default invoice layout
+<studio/pdf-reports/default-layout>` hasn't been customized.
+To send it to the customer's email address and download a PDF of the document, click
+:guilabel:`Send & Print` (enable the :guilabel:`By Post` option if needed).
 
-.. image:: customer_invoices/invoice04.png
+.. image:: customer_invoices/invoice-sending.png
+   :alt: invoice sending window
 
-Send the invoice to customer
-----------------------------
+To send and print multiple invoices, go to the list view and select them. In the :icon:`fa-cog`
+:guilabel:`Actions` menu, select the :guilabel:`Send & Print` option. A banner will appear on the
+selected invoices to indicate they are part of an ongoing send and print batch. This helps prevent
+the process from being triggered manually again, as it may take some time to complete.
 
-After validating the customer invoice, you can directly send it to the
-customer via the 'Send by email' functionality.
+.. _accounting/invoice/paymentandreconciliation:
 
-.. image:: customer_invoices/invoice05.png
+Payment and reconciliation
+==========================
 
-A typical journal entry generated from a validated invoice will look
-like as follows:
+In Odoo, an invoice is considered :guilabel:`Paid` when the associated accounting entry has been
+reconciled with the payment entries.
 
-+-----------------------+---------------+----------------+-------------+--------------+
-| **Account**           | **Partner**   | **Due date**   | **Debit**   | **Credit**   |
-+=======================+===============+================+=============+==============+
-| Accounts Receivable   | Agrolait      | 01/07/2015     | 115         |              |
-+-----------------------+---------------+----------------+-------------+--------------+
-| Taxes                 | Agrolait      |                |             | 15           |
-+-----------------------+---------------+----------------+-------------+--------------+
-| Sales                 |               |                |             | 100          |
-+-----------------------+---------------+----------------+-------------+--------------+
+.. seealso::
+   - :doc:`payments`
+   - :doc:`bank/reconciliation`
 
-Payment
--------
+.. _accounting/invoice/followup:
 
-In Odoo, an invoice is considered to be paid when the associated
-accounting entry has been reconciled with the payment entries. If there
-has not been a reconciliation, the invoice will remain in the Open state
-until you have entered the payment.
+Payment follow-up
+=================
 
-A typical journal entry generated from a payment will look like as
-follows:
+Odoo helps define a follow-up strategy. Different actions can be set up to remind customers to pay
+their outstanding invoices, depending on how much the customer is overdue. The system
+bundles these actions into follow-up levels that trigger when an invoice is overdue by a certain
+number of days. If there are other overdue invoices for the same customer, the actions are performed
+on the most overdue invoice.
 
-+-----------------------+---------------+----------------+-------------+--------------+
-| **Account**           | **Partner**   | **Due date**   | **Debit**   | **Credit**   |
-+=======================+===============+================+=============+==============+
-| Bank                  | Agrolait      |                | 115         |              |
-+-----------------------+---------------+----------------+-------------+--------------+
-| Accounts Receivable   | Agrolait      |                |             | 115          |
-+-----------------------+---------------+----------------+-------------+--------------+
+.. _accounting/invoice/followup-reports:
 
-Receive a partial payment through the bank statement
-----------------------------------------------------
+Follow-up Reports
+-----------------
 
-You can manually enter your bank statements in Odoo, or you can import
-them in from a csv file or from several other predefined formats
-according to your accounting localisation.
+To set the different follow-up levels, go to
+:menuselection:`Accounting --> Configuration --> Follow-up Levels`. All actions triggered after a
+specified number of days can be viewed. To manage the various options, such as the number of days,
+the type of reminder sent, or whether the action is automated, click on the specific line that needs
+to be updated.
 
-Create a bank statement from the accounting dashboard with the related
-journal and enter an amount of $100 .
+Then, follow these steps to take the appropriate action:
 
-.. image:: customer_invoices/invoice06.png
+- To access the list of customers requiring action along with the :guilabel:`Total Due` and
+  :guilabel:`Total Overdue` amounts, go to
+  :menuselection:`Accounting --> Customers --> Follow-up Reports`.
+- To get a full overview of the customer's open invoices, click on its line.
+- To open a payment reminder to be sent to the customer, click the :guilabel:`Follow up` button.
+- To exclude any invoices from the follow-up, enable the option :guilabel:`Exclude from Follow-ups`
+  for the selected ones.
 
-Reconcile
----------
+.. _accounting/invoices/aging-report:
 
-Now let's reconcile!
-
-.. image:: customer_invoices/invoice07.png
-
-You can now go through every transaction and reconcile them or you can mass reconcile with instructions at the bottom.
-
-After reconciling the items in the sheet, the related invoice will now
-display "You have outstanding payments for this customer. You can
-reconcile them to pay this invoice. "
-
-.. image:: customer_invoices/invoice08.png
-
-.. image:: customer_invoices/invoice09.png
-
-Apply the payment. Below, you can see that the payment has been added to
-the invoice.
-
-.. image:: customer_invoices/invoice10.png
-
-Payment Followup
-----------------
-
-There's a growing trend of customers paying bills later and later.
-Therefore, collectors must make every effort to collect money and
-collect it faster.
-
-Odoo will help you define your follow-up strategy. To remind customers
-to pay their outstanding invoices, you can define different actions
-depending on how severely overdue the customer is. These actions are
-bundled into follow-up levels that are triggered when the due date of an
-invoice has passed a certain number of days. If there are other overdue
-invoices for the same customer, the actions of the most overdue invoice
-will be executed.
-
-By going to the customer record and diving into the "Overdue Payments"
-you will see the follow-up message and all overdue invoices.
-
-.. image:: customer_invoices/invoice11.png
-
-.. image:: customer_invoices/invoice12.png
-
-.. _customer-invoices/aging-report:
-
-Customer aging report:
-~~~~~~~~~~~~~~~~~~~~~~
-
-The customer aging report will be an additional key tool for the
-collector to understand the customer credit issues, and to prioritize
-their work.
-
-Use the aging report to determine which customers are overdue and begin
-your collection efforts.
-
-.. image:: customer_invoices/invoice13.png
-
-Profit and loss
+Aged Receivable
 ---------------
 
-The Profit and Loss statement displays your revenue and expense details.
-Ultimately, this gives you a clear image of your Net Profit and Loss. It
-is sometimes referred to as the "Income Statement" or "Statement of
-Revenues and Expenses."
+To review outstanding customer invoices and their related due dates, use the
+:ref:`Aged Receivable <accounting/reporting/aged-receivable>` report. To access it, go to
+:menuselection:`Accounting --> Reporting --> Aged Receivable`.
 
-.. image:: customer_invoices/invoice14.png
+.. _accounting/invoice/reporting:
+
+Reporting
+=========
+
+Profit and Loss
+---------------
+
+The :ref:`Profit and Loss <accounting/reporting/profit-and-loss>` statement shows details of income
+and expenses.
 
 Balance sheet
 -------------
 
-The balance sheet summarizes your company's liabilities,
-assets and equity at a specific moment in time.
+The :ref:`Balance Sheet <accounting/reporting/balance-sheet>` summarizes the company's liabilities,
+assets, and equity at a specific time.
 
-.. image:: customer_invoices/invoice15.png
+.. _accounting/invoice/resequencing:
 
-.. image:: customer_invoices/invoice16.png
+Resequencing
+============
 
-For example, if you manage your inventory using the perpetual accounting
-method, you should expect a decrease in account "Current Assets" once
-the material has been shipped to the customer.
+:guilabel:`Resequence` is a technical feature used to change the sequence of documents. It can be
+helpful to resequence invoice numbers when importing invoices from another invoicing or accounting
+system, mainly if the reference originates from the previous software and continuity for the current
+year must be maintained without restarting from the beginning.
+
+The sequence can be modified once an invoice is in the system.
+
+.. note::
+
+   - This feature is only available to users with administrator or advisor access.
+   - All sequence changes are logged in the chatter to keep the information.
+
+Here are the different steps to resequence invoice numbers:
+
+#. Activate the :ref:`developer mode <developer-mode>`.
+#. From the :guilabel:`Accounting Dashboard`, open the :guilabel:`Customer Invoices` journal.
+#. Select the documents that need a new sequence.
+#. In the :icon:`fa-cog` :guilabel:`Actions` menu, click :guilabel:`Resequence`.
+#. In the :guilabel:`Ordering` field, choose to
+
+   - :guilabel:`Keep current order`: the order of the numbers remains the same
+   - :guilabel:`Reorder by accounting date`: the number is reordered by accounting date.
+#. Set the :guilabel:`First New Sequence`.
+#. :guilabel:`Preview Modifications` and click :guilabel:`Confirm`.
+
+.. image:: customer_invoices/invoice-sequencing.png
+   :alt: Resequence options window
+
+In some cases, resequencing is not possible:
+
+- When entries are previous to a lock date.
+- When changing the date of a previously posted invoice from another period, the sequence is not
+  aligned with the existing sequence used for the new date set.
+- When the sequence leads to a duplicate.
 
 .. toctree::
    :titlesonly:
