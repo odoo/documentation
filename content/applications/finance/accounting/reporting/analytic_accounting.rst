@@ -6,11 +6,15 @@ Analytic accounting helps you track costs and revenues, as well as analyze the p
 project or service. When creating your journal entries, the analytic widget allows the distribution
 of costs in one or more analytic accounts.
 
+.. _accounting/analytic_accounting/configuration:
+
 Configuration
 =============
 
 Enable the :guilabel:`Analytic Accounting` feature by going to :menuselection:`Accounting -->
 Configuration --> Settings --> Analytics`.
+
+.. _accounting/analytic_accounting/analytic_accounts:
 
 Analytic accounts
 =================
@@ -25,14 +29,14 @@ and fill in the required information:
 - :guilabel:`Customer`: select the customer related to your project;
 - :guilabel:`Reference`: add a reference to make it easier to find the account when you are on your
   bill;
-- :guilabel:`Plan`: add an :ref:`analytic plan <analytic_accounting/analytic_plans>`;
+- :guilabel:`Plan`: add an :ref:`analytic plan <accounting/analytic_accounting/analytic_plans>`;
 - :guilabel:`Company`: if you are managing multiple companies, select the company for which the
   analytic account will be used;
 - :guilabel:`Currency`: select the currency of the analytic account;
 
 Then, fill in your :doc:`budget <budget>` information.
 
-.. _analytic_accounting/analytic_plans:
+.. _accounting/analytic_accounting/analytic_plans:
 
 Analytic plans
 ==============
@@ -83,6 +87,8 @@ Two smart buttons are available in the top-right corner:
      :ref:`Analytic Distribution Models <analytic_distribution_models>`;
    - Each analytic plan must have at least one analytic account.
 
+.. _accounting/analytic_accounting/analytic-distribution:
+
 Analytic distribution
 =====================
 
@@ -97,6 +103,8 @@ accounts by modifying the percentage.
    :alt: create a distribution template
 
 .. _analytic_distribution_models:
+
+.. _accounting/analytic_accounting/analytic-distribution-models:
 
 Analytic distribution models
 ----------------------------
