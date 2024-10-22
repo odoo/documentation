@@ -39,12 +39,9 @@ localization.
      - Adds the *Propuesta F29* and *Balance Tributario (8 columnas)* reports.
    * - :guilabel:`Chile - E-invoicing`
      - `l10n_cl_edi`
-     - Includes all technical and functional requirements to generate and receive electronic
-       invoices online based on the :abbr:`SII (Servicio de Impuestos Internos)` regulations.
-   * - :guilabel:`Chile - Electronic Receipt`
-     - `l10n_cl_boletas`
-     - Includes all technical and functional requirements to generate and receive electronic
-       invoices digitally based on the :abbr:`SII (Servicio de Impuestos Internos)` regulations.
+     - Includes all technical and functional requirements to receive and generate **electronic
+       receipts** and **invoices** online based on the :abbr:`SII (Servicio de Impuestos Internos)`
+       regulations.
    * - :guilabel:`Electronic Exports of Goods for Chile`
      - `l10n_cl_edi_exports`
      - Includes technical and functional requirements to generate electronic invoices for exporting
