@@ -2,13 +2,15 @@
 SIX
 ===
 
-Connecting a **SIX payment terminal** allows you to offer a fluid payment flow to your customers and
+Connecting a SIX payment terminal allows you to offer a fluid payment flow to your customers and
 ease the work of your cashiers.
 
 .. warning::
-   Even though Worldline has acquired SIX Payment Services and both companies use Yomani payment
-   terminals, the firmware they run is different. Terminals received from Worldline are, therefore,
-   not compatible with this integration.
+   - Starting in July 2022, it will **not** be possible anymore to connect and use a Six payment
+     terminal in PoS.
+   - Even though Worldline has recently acquired SIX Payment Services and both companies use Yomani
+     payment terminals, the firmware they run is different. Terminals received from Worldline are
+     therefore not compatible with this integration.
 
 Configuration
 =============
@@ -59,29 +61,3 @@ Then, select your terminal device in the :guilabel:`Payment Terminal Device` fie
 
 .. image:: six/new-payment-method.png
    :alt: Creating a new payment method for the SIX payment terminal
-
-Once the payment method is created, you can select it in your POS settings. To do so, go to the
-:ref:`POS' settings <configuration/settings>`, click :guilabel:`Edit`, and add the payment method
-under the :guilabel:`Payments` section.
-
-Pay with a payment terminal
-===========================
-
-When processing a payment, select :ref:`your Six payment method <six/configure>` in the
-:guilabel:`Payment Method` section and click :guilabel:`Send`. To cancel the payment request, click
-:guilabel:`Cancel`. Once the payment is successful, the status switches to :guilabel:`Payment
-Successful`.
-
-.. image:: six/payment.png
-   :alt: Paying with Six
-
-.. note::
-   - Once your payment is processed, the type of card used and the transaction ID appear on the
-     payment record.
-   - The language used for error messages is the same as the Six terminal. Configure the terminal to
-     change the language or contact Six.
-   - By default, the port used by the Six terminal is `7784`.
-
-.. tip::
-   If there are connection issues between the payment terminal and Odoo, you can still force the
-   payment validation in Odoo using the :guilabel:`Force Done` button.
