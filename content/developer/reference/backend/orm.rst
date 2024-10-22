@@ -471,7 +471,6 @@ behavior is desired:
 
   Special methods:
 
-  .. automethod:: Model.toggle_active
   .. automethod:: Model.action_archive
   .. automethod:: Model.action_unarchive
 
