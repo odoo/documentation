@@ -170,9 +170,8 @@ triggered and is being processed. You have to click on *Refresh State* to check 
 German Tax Accounting Standards: Odoo's guide to GoBD Compliance
 ================================================================
 
-**GoBD** stands for `Grundsätze zur ordnungsmäßigen Führung und Aufbewahrung von Büchern,
-Aufzeichnungen und Unterlagen in elektronischer Form sowie zum Datenzugriff
-<https://ao.bundesfinanzministerium.de/ao/2021/Anhaenge/BMF-Schreiben-und-gleichlautende-Laendererlasse/Anhang-64/anhang-64.html>`_.
+**GoBD** stands for *Grundsätze zur ordnungsmäßigen Führung und Aufbewahrung von Büchern,
+Aufzeichnungen und Unterlagen in elektronischer Form sowie zum Datenzugriff*.
 In short, it is a **guideline for the proper management and storage of books, records, and documents
 in electronic form, as well as for data access**, that is relevant for the German tax authority, tax
 declaration, and balance sheet.
@@ -191,7 +190,7 @@ What do you need to know about GoBD when relying on accounting software?
 
 .. note::
    If you can, the best way to understand GoBD is to Read the `Official GoBD text
-   <https://www.bundesfinanzministerium.de/Content/DE/Downloads/BMF_Schreiben/Weitere_Steuerthemen/Abgabenordnung/2019-11-28-GoBD.pdf>`_.
+   <https://ao.bundesfinanzministerium.de/ao/2021/Anhaenge/BMF-Schreiben-und-gleichlautende-Laendererlasse/Anhang-64/anhang-64.html>`_.
    It is a bit long but quite readable for non-experts. But in short, here is what to expect:
 
 The **GoBD is binding for companies that have to present accounts, which includes SMEs, freelancers,
@@ -312,7 +311,7 @@ offer our customer any legal certainty.
 
 .. important::
    The BMF actually states the following in the `Official GoBD text
-   <https://www.bundesfinanzministerium.de/Content/DE/Downloads/BMF_Schreiben/Weitere_Steuerthemen/Abgabenordnung/2019-11-28-GoBD.pdf>`_:
+   <https://ao.bundesfinanzministerium.de/ao/2021/Anhaenge/BMF-Schreiben-und-gleichlautende-Laendererlasse/Anhang-64/anhang-64.html>`_:
 
    - 180. Positive attestations on the correctness of the bookkeeping - and thus on the correctness
      of IT-based bookkeeping systems - are not issued either in the context of a tax field audit or
