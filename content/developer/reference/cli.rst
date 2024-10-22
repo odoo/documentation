@@ -7,7 +7,7 @@ Command-line interface (CLI)
 The CLI :dfn:`command-line interface` offers several functionalities related to Odoo. You can use it
 to :ref:`run the server <reference/cmdline/server>`, :ref:`launch Odoo as a Python console
 environment <reference/cmdline/shell>`, :ref:`scaffold an Odoo module <reference/cmdline/scaffold>`,
-or :ref:`count the number of lines of code <reference/cmdline/cloc>`.
+:ref:`populate a database <reference/cmdline/populate>` or :ref:`count the number of lines of code <reference/cmdline/cloc>`.
 
 .. important::
    The command to use to call the CLI depends on how you installed Odoo. In the examples below, we
@@ -738,6 +738,39 @@ Scaffolding is available via the :command:`odoo-bin scaffold` subcommand.
 
 
 This will create module *my_module* in directory */addons/*.
+
+.. _reference/cmdline/populate:
+
+Database population
+===================
+
+.. program:: odoo-bin populate
+
+Odoo Populate allows to duplicate existing data in a given database. This can be used
+for testing and benchmarking when large tables are needed. The duplication process
+introduces variation for some fields to respect `UNIQUE` constraints, among other things.
+It also follows x2Many relationships.
+
+.. code-block:: console
+
+    $ odoo-bin populate -d  my_database --models res.partner,account.move --factors 1000
+
+.. option:: -d <database>
+
+    name of the database to populate
+
+.. option:: --models
+
+    list of models to populate. Models appearing twice will only be populated once.
+
+.. option:: --factors
+
+    list of populate factors. In case a factor is missing for a model, the last factor in
+    the list will be used.
+
+.. option:: --sep
+
+    separator used to generate record names
 
 .. _reference/cmdline/cloc:
 
