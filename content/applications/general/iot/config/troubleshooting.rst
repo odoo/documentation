@@ -97,8 +97,8 @@ printer.
    :alt: Edit the printer connected to the IoT box.
 
 .. note::
-   Epson and Star receipt printers and Zebra label printers do not need a driver to work. Make sure
-   that no driver is selected for those printers.
+   Epson receipt printers and Zebra label printers do not need a driver to work. Make sure that no
+   driver is selected for those printers.
 
 The printer is detected but is not recognized correctly
 -------------------------------------------------------
