@@ -12,7 +12,7 @@ Inventory Adjustments page
 ==========================
 
 To view the *Inventory Adjustments* page, navigate to :menuselection:`Inventory app --> Operations
---> Inventory Adjustments`.
+--> Physical Inventory`.
 
 .. image:: count_products/inventory-adjustments-page.png
    :align: center
@@ -43,7 +43,7 @@ with each product line containing the following information:
   :guilabel:`Counted Quantity`, once an inventory adjustment is made. The difference is
   automatically calculated after every inventory adjustment.
 - :guilabel:`Scheduled Date`: the date at which a count should be made. If not otherwise specified,
-  this date will default to the 31st of December of the current year.
+  this date defaults to the 31st of December of the current year.
 - :guilabel:`User`: the person assigned to the count in the database. This can either be the person
   physically counting the inventory, or applying the count in the database.
 - :guilabel:`Product Category`: the category assigned internally to a specific product. Unless
@@ -129,12 +129,16 @@ Count products
 ==============
 
 Counting products is a recurring activity in a warehouse. Once a count is complete, go to
-:menuselection:`Inventory app --> Operations --> Inventory Adjustments` to update the
+:menuselection:`Inventory app --> Operations --> Physical Inventory` to update the
 :guilabel:`Counted Quantity` column for each product line.
+
+To print a PDF of a count sheet, add products to the count sheet by ticking their checkboxes. Click
+:guilabel:`Count sheet` to download a PDF that contains the selected products.
 
 On each product line, identify whether the value in the :guilabel:`On Hand Quantity` column recorded
 in the database matches the newly-counted value. If the recorded value and the counted value do
-match, click the :guilabel:`Set` button (target icon) at the far right of the product line.
+match, select the product using the checkbox, and then select
+the :guilabel:`Actions` button, then :guilabel:`Set to quantity on hand`.
 
 Doing so copies the value from the :guilabel:`On Hand Quantity` column over to the
 :guilabel:`Counted Quantity` column, and sets the value of the :guilabel:`Difference` column to
@@ -157,18 +161,21 @@ To change this value, type in a new value that matches the real, newly-counted v
 away from the line. Doing so saves the adjustment, and automatically adjusts the value in the
 :guilabel:`Difference` column.
 
-If the :guilabel:`Counted Quantity` is greater than the :guilabel:`On Hand Quantity`, the value in
-the :guilabel:`Difference` column is **green**. If the :guilabel:`Counted Quantity` is less than the
-:guilabel:`On Hand Quantity`, the value in the :guilabel:`Difference` column is **red**. If the
-quantities match, and haven't been changed at all, no value appears in the :guilabel:`Difference`
-column.
-
 Subsequently, once applied, a move with the difference between the :guilabel:`On Hand Quantity` and
 the :guilabel:`Counted Quantity` is recorded in the product's inventory adjustment history.
 
 .. image:: count_products/history-inventory-adjustments.png
    :align: center
    :alt: Inventory Adjustments History dashboard detailing a list of prior product moves.
+
+The :guilabel:`Actions` menu appears when one or more products' checkboxes are selected. The
+:guilabel:`Actions` menu includes the option to :guilabel:`Set to quantity on hand`, which sets the
+selected products' :guilabel:`Counted Quantity` to the :guilabel:`On Hand Quantity`, and
+:guilabel:`Set to 0`, which sets the selected products' :guilabel:`Counted Quantity` to zero.
+
+.. image:: count_products/inventory-adjustment-actions.png
+   :align: center
+   :alt: Inventory Adjustments Actions menu.
 
 .. important::
    Sometimes a count occurs, but cannot be applied in the database right away. In the time between
@@ -177,37 +184,17 @@ the :guilabel:`Counted Quantity` is recorded in the product's inventory adjustme
    quantity. As an extra precaution, Odoo asks for confirmation before applying the inventory
    adjustment.
 
-Change inventory count frequency
-================================
+Plan inventory counts
+---------------------
 
-By default, the *scheduled date* for inventory adjustments are always scheduled for the 31st of
-December of the current year. However, for some companies, it is crucial that they have an accurate
-inventory count at all times. In such cases, the default scheduled date can be modified.
-
-To modify the default scheduled date, go to :menuselection:`Inventory app --> Configuration -->
-Settings`. Then, in the :guilabel:`Operations` section, locate the :guilabel:`Annual Inventory Day
-and Month` setting, which includes a drop-down menu that is set to `31 December` by default.
-
-.. image:: count_products/annual-inventory.png
-   :align: center
-   :alt: Adjust the next inventory count date with the Annual Inventory Day and Month setting.
-
-To change the day, click the :guilabel:`31`, and change it to a day within the range `1-31`,
-depending on the desired month of the year.
-
-Then, to change the month, click :guilabel:`December` to reveal the drop-down menu, and select the
-desired month.
-
-Once all desired changes have been made, click :guilabel:`Save` to save all changes.
-
-Plan big inventory counts
--------------------------
-
-To plan big inventory counts, such as a full count of everything currently in stock, first navigate
-to :menuselection:`Inventory app --> Operations --> Inventory Adjustments`.
+To plan inventory counts, such as a full count of everything currently in stock, first navigate
+to :menuselection:`Inventory app --> Operations --> Physical Inventory`.
 
 Then, select the desired products to be counted by clicking the checkbox on the far left of each
 product line.
+
+Once all desired products have been selected, click the :guilabel:`Request a Count` button at the
+top of the page. Doing so opens the :guilabel:`Request a Count` pop-up window, where the following information can be filled:
 
 .. tip::
    To request a count of **all** products currently in stock, click the checkbox at the very top of
@@ -217,10 +204,6 @@ product line.
 .. image:: count_products/count-popup.png
    :align: center
    :alt: Request a count popup on inventory adjustments page.
-
-Once all desired products have been selected, click the :guilabel:`Request a Count` button at the
-top of the page. This causes a :guilabel:`Request a Count` pop-up window to appear. From this
-pop-up, fill in the following information:
 
 - :guilabel:`Inventory Date`: the planned date of the count.
 - :guilabel:`User`: the user responsible for the count.
