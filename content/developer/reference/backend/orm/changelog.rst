@@ -4,6 +4,12 @@
 Changelog
 =========
 
+Odoo Online version 18.1
+========================
+
+- New `odoo.domain` and `odoo.Domain` API for domain manipulation.
+  See `#170009 <https://github.com/odoo/odoo/pull/170009>`_.
+
 Odoo version 18.0
 =================
 
@@ -13,7 +19,6 @@ Odoo version 18.0
   and rules: `check_access`, `has_access` and `_filtered_access`.
   See `#179148 <https://github.com/odoo/odoo/pull/179148>`_.
 - Translations are made available from the `Environment` with `#174844 <https://github.com/odoo/odoo/pull/174844>`_.
-
 
 Odoo Online version 17.4
 ========================
