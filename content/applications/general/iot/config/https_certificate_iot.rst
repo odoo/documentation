@@ -235,6 +235,7 @@ These :abbr:`DNS (Domain Name System)` issues may appear as the following in dif
 
          DNS issue on Edge browser on Windows 10.
 
+.. _iot/dns-issue-solution:
 
 Domain Name System (DNS) issue solution
 ---------------------------------------
