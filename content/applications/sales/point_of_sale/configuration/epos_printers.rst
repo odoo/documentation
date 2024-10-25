@@ -6,20 +6,20 @@ ePOS printers are designed to work seamlessly with Point of Sale systems. Once c
 devices automatically share information, allowing for direct printing of tickets from the POS system
 to the ePOS printer.
 
-.. important::
-   - Epson printers using Wi-Fi/Ethernet connections and following the `EPOS SDK Javascript protocol
-     <https://download4.epson.biz/sec_pubs/pos/reference_en/technology/epson_epos_sdk.html>`_ are
-     compatible with Odoo **without** needing an :doc:`IoT Box
-     </applications/general/iot/devices/printer>`.
-   - Thermal printers using ESC/POS or StarPRNT protocol are compatible **with** an :doc:`IoT Box
-     </applications/general/iot/devices/printer>`.
-   - Epson printers using only USB connections are compatible **with** an :doc:`IoT Box
-     </applications/general/iot/devices/printer>`.
-   - Epson printers that connect via Bluetooth are **not compatible**.
+Configuration
+=============
 
-.. seealso::
-   - :doc:`https`
-   - :doc:`epos_ssc`
+To use an ePos printer in Point of Sale:
+
+#. :ref:`Access the POS settings <configuration/settings>`.
+#. Activate the :guilabel:`ePos Printer` feature.
+#. Fill in the field with your ePos IP address.
+
+.. image:: epos_printers/setting.png
+   :alt: setting to enable the ePos printer feature
+
+.. note::
+   When the printer connects to a network, it automatically prints a ticket with its IP address.
 
 Directly supported ePOS printers
 ================================
@@ -51,3 +51,18 @@ compatible with Odoo:
 - Epson TM-T20 family (incompatible ePOS software)
 - Epson TM-T88 family (incompatible ePOS software)
 - Epson TM-U220 family (incompatible ePOS software)
+
+.. important::
+   - Epson printers using Wi-Fi/Ethernet connections and following the `EPOS SDK Javascript protocol
+     <https://download4.epson.biz/sec_pubs/pos/reference_en/technology/epson_epos_sdk.html>`_ are
+     compatible with Odoo **without** needing an :doc:`IoT Box
+     </applications/general/iot/devices/printer>`.
+   - Thermal printers using ESC/POS or StarPRNT protocol are compatible **with** an :doc:`IoT Box
+     </applications/general/iot/devices/printer>`.
+   - Epson printers using only USB connections are compatible **with** an :doc:`IoT Box
+     </applications/general/iot/devices/printer>`.
+   - Epson printers that connect via Bluetooth are **not compatible**.
+
+.. seealso::
+   - :doc:`https`
+   - :doc:`epos_ssc`
