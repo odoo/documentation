@@ -65,6 +65,7 @@ Tags are used to prefix your commit. They should be one of the following
   main commit for feature involving several separated commits;
 - **[CLA]** for signing the Odoo Individual Contributor License;
 - **[I18N]** for changes in translation files;
+- **[PERF]** for performance patches;
 
 After tag comes the modified module name. Use the technical name as functional
 name may change with time. If several modules are modified, list them or use
