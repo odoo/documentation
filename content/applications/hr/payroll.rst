@@ -665,25 +665,6 @@ field.
 
 .. _payroll/salary-attachment-types:
 
-Salary attachment types
------------------------
-
-Salary attachments, also thought of as "wage garnishments", are portions of earnings taken out of a
-payslip for something specific. Much like all other aspects of payroll configurations, the types of
-salary attachments **must** be defined.
-
-To view the currently configured salary attachments, navigate to :menuselection:`Payroll app -->
-Configuration --> Salary --> Salary Attachment Types`. The default salary attachment types are
-:guilabel:`Attachment of Salary`, :guilabel:`Assignment of Salary`, and :guilabel:`Child Support`.
-
-To make a new type of salary attachment, click the :guilabel:`New` button. Then, enter the
-:guilabel:`Name`, the :guilabel:`Code` (used in the salary rules to compute payslips), and decide if
-it should have :guilabel:`No End Date`.
-
-.. image:: payroll/new-attachment.png
-   :align: center
-   :alt: A new salary attachment form filled in.
-
 Salary package configurator
 ===========================
 
@@ -960,8 +941,9 @@ form.
 
 .. seealso::
    - :doc:`payroll/contracts`
-   - :doc:`payroll/payslips`
    - :doc:`payroll/work_entries`
+   - :doc:`payroll/salary_attachments`
+   - :doc:`payroll/payslips`
    - :doc:`payroll/reporting`
    - :doc:`payroll/work_entry_analysis`
    - :doc:`payroll/salary_attachment`
@@ -971,6 +953,7 @@ form.
 
    payroll/contracts
    payroll/work_entries
+   payroll/salary_attachments
    payroll/payslips
    payroll/reporting
    payroll/work_entry_analysis
