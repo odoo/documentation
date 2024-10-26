@@ -9,7 +9,6 @@
 # Mandy Choy <mnc@odoo.com>, 2024
 # John An <johnxan@163.com>, 2024
 # Rhea Xiao, 2024
-# Raymond Yu <cl_yu@hotmail.com>, 2024
 # Martin Trigaux, 2024
 # Jeffery CHEN <jeffery9@gmail.com>, 2024
 # diaojiaolou <124412206@qq.com>, 2024
@@ -17,6 +16,7 @@
 # Datasource International <Hennessy@datasourcegroup.com>, 2024
 # Emily Jia <eji@odoo.com>, 2024
 # Chloe Wang, 2024
+# Raymond Yu <cl_yu@hotmail.com>, 2024
 # 
 #, fuzzy
 msgid ""
@@ -25,7 +25,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-24 10:43+0000\n"
 "PO-Revision-Date: 2023-11-08 08:57+0000\n"
-"Last-Translator: Chloe Wang, 2024\n"
+"Last-Translator: Raymond Yu <cl_yu@hotmail.com>, 2024\n"
 "Language-Team: Chinese (China) (https://app.transifex.com/odoo/teams/41243/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1007,7 +1007,7 @@ msgstr ""
 
 #: ../../content/applications/general/companies/digest_emails.rst:141
 msgid ":guilabel:`Revenue`"
-msgstr ""
+msgstr ":guilabel:`收入`"
 
 #: ../../content/applications/general/companies/digest_emails.rst:142
 msgid ":guilabel:`Banks and Cash Moves`"
@@ -2012,7 +2012,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication.rst:20
 msgid "Odoo Online and Odoo.sh users"
-msgstr ""
+msgstr "Odoo 在线或 Odoo.sh 用户"
 
 #: ../../content/applications/general/email_communication.rst:22
 msgid ""
@@ -2114,7 +2114,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication.rst:74
 msgid "Using a third-party provider's mail server"
-msgstr ""
+msgstr "使用第三方提供商的邮件服务器"
 
 #: ../../content/applications/general/email_communication.rst:76
 msgid ""
@@ -4083,20 +4083,22 @@ msgid ""
 "server. Odoo uses the server with the lowest priority value for "
 "transactional emails, and the server selected here for mass mailings."
 msgstr ""
+"现在，进入 :menuselection:`电子邮件营销 --> 配置 --> 设置`，启用 "
+":guilabel:`专用服务器`，并选择适当的电子邮件服务器。Odoo 会使用优先级值最低的服务器发送交易邮件，并使用此处选定的服务器发送群发邮件。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst-1
 msgid "Dedicated mail server on Email Marketing app settings."
-msgstr ""
+msgstr "电子邮件营销应用程序设置中的专用邮件服务器。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:171
 msgid "FROM filtering"
-msgstr ""
+msgstr "FROM 筛选"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:174
 msgid ""
 "It’s **highly recommended** to configure the FROM Filtering on the outgoing "
 "mail servers as per the instructions of your provider."
-msgstr ""
+msgstr "**强烈建议**按照提供商的说明在外发邮件服务器上配置 FROM 筛选。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:177
 msgid ""
@@ -4106,24 +4108,26 @@ msgid ""
 "address** that matches the sender’s email address and is trusted on the "
 "outgoing mail server provider's side."
 msgstr ""
+":guilabel:`FROM 筛选` 字段允许根据 Odoo 代表发送的*From* 电子邮件地址或域使用特定的外发电子邮件服务器。该 "
+"**值必须是与发件人电子邮件地址相匹配的域或完整地址**，并在外寄邮件服务器提供商方面受到信任。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:182
 msgid ""
 "If FROM filtering is not used, emails will go out using the notification "
 "address."
-msgstr ""
+msgstr "如果不使用 FROM 筛选，电子邮件将使用通知地址发出。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:185
 msgid ""
 "Some outgoing mail servers require a specific configuration of the FROM "
 "filter."
-msgstr ""
+msgstr "某些外发邮件服务器需要对 FROM 筛选器进行特定配置。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:187
 msgid ""
 "When an email is sent from Odoo, the following sequence is used to choose "
 "the outgoing email server:"
-msgstr ""
+msgstr "从 Odoo 发送电子邮件时，将使用以下序列选择外发电子邮件服务器："
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:189
 msgid ""
@@ -4132,6 +4136,8 @@ msgid ""
 "configuration is ideal if all users of a company share the same domain but "
 "have different local-parts."
 msgstr ""
+"首先，Odoo 会搜索与外发邮件中定义的发件人值（即电子邮件地址）具有相同 FROM "
+"筛选值的服务器。如果一个公司的所有用户共享同一个域，但拥有不同的本地部分，那么这种配置是最理想的。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:194
 msgid ""
@@ -4139,36 +4145,38 @@ msgid ""
 "having a FROM filtering value equal to `test@example.com` or `example.com` "
 "can be used."
 msgstr ""
+"如果发件人的电子邮件地址是 “test@example.com”，则只能使用 FROM 筛选值等于 “test@example.com” 或 "
+"“example.com” 的电子邮件服务器。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:197
 msgid ""
 "If no server is found based on the first criteria, Odoo looks for the first "
 "server without a FROM filtering value set. The email will be overridden with"
 " the notification address."
-msgstr ""
+msgstr "如果根据第一条标准找不到服务器，Odoo 会查找第一个未设置 FROM 筛选值的服务器。电子邮件将以通知地址覆盖。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:200
 msgid ""
 "If no server is found based on the second criteria, Odoo uses the first "
 "server, and the email will be overridden with the notification address."
-msgstr ""
+msgstr "如果根据第二个条件找不到服务器，Odoo 将使用第一个服务器，并且电子邮件将被通知地址覆盖。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:204
 msgid ""
 "To determine which server is first, Odoo uses the priority value (the lower "
 "the value is, the higher the priority is). Failing to do so, the first "
 "server is determined by the servers' names, using alphabetical order."
-msgstr ""
+msgstr "要确定哪个服务器优先，Odoo 会使用优先级值（值越小，优先级越高）。如果没有这样做，则按照服务器名称的字母顺序来确定第一台服务器。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:208
 msgid ""
 "It is also possible to use Odoo's mail server for transactional emails in "
 "addition to mass mailings."
-msgstr ""
+msgstr "除了群发邮件之外，还可以使用 Odoo 的邮件服务器发送交易电子邮件。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:213
 msgid "Using an external email server and Odoo’s default server"
-msgstr ""
+msgstr "使用外部电子邮件服务器和 Odoo 的默认服务器"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:215
 msgid ""
@@ -4176,6 +4184,8 @@ msgid ""
 "If no outgoing mail server is set, the default Odoo's SMTP server will be "
 "used."
 msgstr ""
+"在 Odoo Online 和 Odoo.sh，数据库使用 Odoo 的 SMTP 服务器启动。如果未设置外发邮件服务器，则将使用默认的 Odoo "
+"SMTP 服务器。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst-1
 msgid ""
@@ -4358,10 +4368,12 @@ msgid ""
 "default from alias}`@`{alias domain, domain name}`, by default, "
 "`notifications@company-name.odoo.com`."
 msgstr ""
+"地址使用发件人名称和`{别名域，默认来自别名}`@`{别名域，域名}`（默认为`notifications@company-"
+"name.odoo.com`）构建。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:324
 msgid "Using a unique email address for all outgoing emails"
-msgstr ""
+msgstr "对所有外发电子邮件使用唯一的电子邮件地址"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:326
 msgid ""
@@ -4370,30 +4382,32 @@ msgid ""
 "Email: Alias Domains`. On the :guilabel:`Default From Alias`, use the the "
 "local-part or a complete email address as the value."
 msgstr ""
+"要强制发送电子邮件的电子邮件地址，请激活开发者模式，然后转到 :menuselection:`设置 --> 技术 --> 电子邮件：别名域`。在 "
+":guilabel:`Default From Alias` 上，使用本地部分或完整的电子邮件地址作为值。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:331
 msgid ""
 "If a **complete address** is used as the :guilabel:`Default From Alias` "
 "value, **all** outgoing emails will be overwritten by this address."
-msgstr ""
+msgstr "如果使用 **完整地址** 作为 :guilabel:`默认发件人别名`值，**所有**发出的邮件都将被此地址覆盖。"
 
 #: ../../content/applications/general/email_communication/faq.rst:3
 msgid "Common emailing issues and solutions"
-msgstr ""
+msgstr "常见电子邮件问题和解决方案"
 
 #: ../../content/applications/general/email_communication/faq.rst:5
 msgid "This page lists the most common emailing issues and their solutions."
-msgstr ""
+msgstr "本页列出了最常见的电子邮件问题及其解决方案。"
 
 #: ../../content/applications/general/email_communication/faq.rst:10
 msgid "Odoo is not an email provider"
-msgstr ""
+msgstr "Odoo 不是电子邮件提供商"
 
 #: ../../content/applications/general/email_communication/faq.rst:12
 msgid ""
 "Odoo does not function like a classic email inbox, such as Gmail, Outlook, "
 "Yahoo, etc."
-msgstr ""
+msgstr "Odoo 的功能与传统电子邮件收件箱不同，例如 Gmail、Outlook、Yahoo 等。"
 
 #: ../../content/applications/general/email_communication/faq.rst:14
 msgid ""
@@ -4402,10 +4416,12 @@ msgid ""
 "server. Therefore, it might not behave in the expected way when compared to "
 "a traditional email inbox."
 msgstr ""
+"虽然 Odoo "
+"使用电子邮件作为通知用户/客户并与之沟通的方式，但从设计上讲，它并不能取代专用电子邮件服务器。因此，与传统的电子邮件收件箱相比，它的行为可能与预期的不同。"
 
 #: ../../content/applications/general/email_communication/faq.rst:18
 msgid "The main differences are the following:"
-msgstr ""
+msgstr "主要区别如下："
 
 #: ../../content/applications/general/email_communication/faq.rst:20
 msgid ""
@@ -4425,6 +4441,8 @@ msgid ""
 " contact is notified <email-outbound-notifications>` or receives a copy of "
 "an email."
 msgstr ""
+"没有（密件）抄送（[B]CC）的概念。Odoo 使用添加到聊天工具的 *关注者* 概念来自动决定何时以及如何 :ref:`通知联系人<email-"
+"outbound-notifications>` 或接收电子邮件副本。"
 
 #: ../../content/applications/general/email_communication/faq.rst:28
 msgid ""
@@ -4435,6 +4453,9 @@ msgid ""
 "in a spam or quarantine folder. In other words, any email unrelated to an "
 "Odoo database is lost."
 msgstr ""
+"处理传入电子邮件时，会检查*TO*电子邮件地址是否是 Odoo 数据库中的有效电子邮件地址，如果是回复电子邮件，则检查电子邮件标题中是否有与 Odoo "
+"数据库发送的邮件相匹配的引用。所有其他电子邮件都将被退回，**不会** 被暂时存放在垃圾邮件或隔离文件夹中。换言之，任何与 Odoo "
+"数据库无关的电子邮件都会丢失。"
 
 #: ../../content/applications/general/email_communication/faq.rst:37
 msgid "Outgoing emails"
@@ -4442,7 +4463,7 @@ msgstr "传出电子邮件"
 
 #: ../../content/applications/general/email_communication/faq.rst:42
 msgid "Changing the email address of the admin user account"
-msgstr ""
+msgstr "更改管理员用户账户的电子邮件地址"
 
 #: ../../content/applications/general/email_communication/faq.rst:44
 msgid ""
@@ -4450,6 +4471,8 @@ msgid ""
 "placeholder email address. It is recommended to **replace the admin email "
 "address** with a valid email address to prevent outgoing email issues."
 msgstr ""
+"创建 Odoo 数据库时，会为主要管理员账户分配一个占位符电子邮件地址。建议用有效的电子邮件地址 "
+"**替换管理员电子邮件地址**，以防止出现外发电子邮件问题。"
 
 #: ../../content/applications/general/email_communication/faq.rst:48
 msgid ""
@@ -4459,6 +4482,10 @@ msgid ""
 "email address or use your Odoo subdomain (e.g., `company-name.odoo.com`) and"
 " `admin` for the local-part (e.g., `admin@company-name.odoo.com`)."
 msgstr ""
+"要执行此操作，请在管理员账户上点击用户图标，点击 :guilabel:`我的个人资料` （或 :guilabel:`偏好`），并更新 "
+":guilabel:`偏好` 选项卡下的 :guilabel:`电子邮件` 字段。请使用任何其他电子邮件地址，或使用您的 Odoo "
+"子域（例如，`company-name.odoo.com`）和本地部分的 `admin`（例如，`admin@company-"
+"name.odoo.com`）。"
 
 #: ../../content/applications/general/email_communication/faq.rst:56
 msgid "Delivery failure"
@@ -4470,10 +4497,12 @@ msgid ""
 " is displayed in the chatter. The icon turns red when delivery has failed "
 "for at least one recipient."
 msgstr ""
+"发送信息时，聊天窗口中会显示 :icon:`fa-envelope-o` :guilabel:`(信封)` "
+"图标。当有一个收件人发送失败时，图标会变成红色。"
 
 #: ../../content/applications/general/email_communication/faq.rst-1
 msgid "Red envelope icon displayed in the chatter."
-msgstr ""
+msgstr "聊天中显示红色信封图标。"
 
 #: ../../content/applications/general/email_communication/faq.rst:64
 msgid ""
@@ -4481,16 +4510,18 @@ msgid ""
 "possible, the relevant :ref:`error messages <email-issues-outgoing-delivery-"
 "failure-messages>`."
 msgstr ""
+"左键点击信封，显示有关递送的信息，如有可能，还可显示相关的 :ref:`错误信息<email-issues-outgoing-delivery-"
+"failure-messages>`。"
 
 #: ../../content/applications/general/email_communication/faq.rst-1
 msgid "Example of a sending failure."
-msgstr ""
+msgstr "发送失败示例"
 
 #: ../../content/applications/general/email_communication/faq.rst:70
 msgid ""
 "Click :guilabel:`See Error Details` to get extra information for the fail "
 "reason, **if** Odoo was able to process the original error or bounce email."
-msgstr ""
+msgstr "点击 :guilabel:`查看错误详情` 获取有关失败原因的额外信息，**如果** Odoo 能够处理原始错误或退回邮件。"
 
 #: ../../content/applications/general/email_communication/faq.rst:73
 msgid ""
@@ -4499,12 +4530,14 @@ msgid ""
 "column. All **toggled-off** (:icon:`fa-toggle-off`) recipients will be "
 "ignored."
 msgstr ""
+"点击 :guilabel:`发送并关闭` 重新发送电子邮件给 :guilabel:`再试一次` 栏下所有**已触发的**（:icon:`fa-"
+"toggle-on`）收件人。所有**已关闭的**（:icon:`fa-toggle-off`）收件人将被忽略。"
 
 #: ../../content/applications/general/email_communication/faq.rst:77
 msgid ""
 "Click :guilabel:`Ignore all` to ignore all currently failing emails and turn"
 " the envelope icon from red to white."
-msgstr ""
+msgstr "点击 :guilabel:`全部忽略` 忽略所有当前失败的电子邮件，并将信封图标从红色变为白色。"
 
 #: ../../content/applications/general/email_communication/faq.rst:80
 msgid ""
@@ -4512,10 +4545,12 @@ msgid ""
 "the :ref:`developer mode <developer-mode>` and go to "
 ":menuselection:`Settings --> Technical --> Email: Emails`."
 msgstr ""
+"未发送的电子邮件也会出现在 Odoo 电子邮件队列中。要访问它，请激活 :ref:`开发者模式<developer-mode>` 并转到 "
+":menuselection:`设置 --> 技术 --> 电子邮件：电子邮件`。"
 
 #: ../../content/applications/general/email_communication/faq.rst-1
 msgid "Example of the technical email queue view."
-msgstr ""
+msgstr "技术电子邮件队列视图示例。"
 
 #: ../../content/applications/general/email_communication/faq.rst:86
 msgid ""
@@ -4524,6 +4559,8 @@ msgid ""
 "then appear with the :guilabel:`Outgoing` status. The email will be sent "
 "again the next time the scheduled action for the email queue runs."
 msgstr ""
+"失败的邮件会显示 :guilabel:`发送失败` 状态。点击 :guilabel:`重试` 可将失败的邮件再次放入邮件队列。然后它将显示 "
+":guilabel:`外发` 状态。下次运行电子邮件队列的预定操作时，将再次发送该电子邮件。"
 
 #: ../../content/applications/general/email_communication/faq.rst:90
 msgid ""
@@ -4531,13 +4568,14 @@ msgid ""
 ":guilabel:`Send Now`. Click :guilabel:`Cancel Email` to remove it from the "
 "email queue."
 msgstr ""
+"或者，可以通过点击立即发送排队的电子邮件 :guilabel:`立即发送`。点击 :guilabel:`取消电子邮件` 将其从电子邮件队列中删除。"
 
 #: ../../content/applications/general/email_communication/faq.rst:94
 msgid ""
 "Sent emails are periodically cleaned from the queue. This is controlled by "
 "the *Auto-Vacuum* scheduled action that cleans redundant data on your Odoo "
 "database."
-msgstr ""
+msgstr "已发送的电子邮件会定期从队列中清除。这是由 *Auto-Vacuum* 计划动作控制的，该操作可清理 Odoo 数据库中的冗余数据。"
 
 #: ../../content/applications/general/email_communication/faq.rst:100
 msgid "Common error messages"
@@ -4549,7 +4587,7 @@ msgstr "已达每日限额"
 
 #: ../../content/applications/general/email_communication/faq.rst-1
 msgid "Email limit reached warning."
-msgstr ""
+msgstr "电子邮件已达上限警告。"
 
 #: ../../content/applications/general/email_communication/faq.rst:110
 msgid ""
@@ -4559,17 +4597,20 @@ msgid ""
 " to addresses that do not exist or are no longer valid. It also applies to "
 "unsolicited spam emails sent through an Odoo database."
 msgstr ""
+"Odoo 限制从 Odoo 在线数据库发送电子邮件的数量。如果Odoo "
+"的电子邮件服务器向不存在，或不再有效的地址发送过多电子邮件，大多数电子邮件服务提供商（如谷歌、雅虎等）会将 Odoo 服务器 IP "
+"列入黑名单。这也适用于通过Odoo 数据库发送的未经请求的垃圾邮件。"
 
 #: ../../content/applications/general/email_communication/faq.rst:115
 msgid ""
 "The default daily email limit varies between **5 and 200 emails**. The exact"
 " limit is depends on several factors (subject to change):"
-msgstr ""
+msgstr "默认的每日电子邮件限制为 **5 到 200 封**。具体限制取决于多个因素（可能会发生变化）："
 
 #: ../../content/applications/general/email_communication/faq.rst:118
 msgid ""
 "Type of database subscription (one app free, trial, paying subscription)"
-msgstr ""
+msgstr "数据库订阅类型（单一应用程序免费、试用版、付费订阅）"
 
 #: ../../content/applications/general/email_communication/faq.rst:119
 msgid "Apps installed (i.e., Email Marketing, Marketing Automation)"
