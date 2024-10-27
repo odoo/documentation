@@ -1269,6 +1269,15 @@ msgid ""
 "possible that clicking on :guilabel:`Synchronize Now` does not get your "
 "latest transactions if you already performed such action earlier in the day."
 msgstr ""
+"กระบวนการนี้ไม่ได้มีวัตถุประสงค์เพื่อทำงานแบบเรียลไทม์ "
+"เนื่องจากผู้ให้บริการบุคคลที่สามจะซิงโครไนซ์บัญชีของคุณในช่วงเวลาที่แตกต่างกัน"
+" หากต้องการบังคับให้ซิงโครไนซ์และดึงข้อมูลคำสั่ง ให้ไปที่ "
+":guilabel:`แผงบัญชี` ของคุณ และคลิกที่ปุ่ม :guilabel:`ซิงโครไนซ์ตอนนี้` "
+"ซิงโครไนซ์และดึงข้อมูลธุรกรรมโดยเปิดใช้งาน :ref:`โหมดนักพัฒนา <developer-"
+"mode>` และไปที่ :menuselection:`ระบบบัญชี --> การกำหนดค่า --> "
+"การซิงโครไนซ์ออนไลน์` ผู้ให้บริการบางรายอนุญาตให้รีเฟรชได้เพียงวันละครั้ง "
+"ดังนั้นการคลิกที่ :guilabel:`ซิงโครไนซ์ตอนนี้` "
+"อาจไม่ได้รับธุรกรรมล่าสุดของคุณหากคุณดำเนินการดังกล่าวไปแล้วก่อนหน้านี้ในวันเดียวกัน"
 
 #: ../../content/applications/finance/accounting/bank/bank_synchronization.rst:155
 msgid ""
@@ -5917,7 +5926,7 @@ msgstr ":doc:`/applications/sales/subscriptions`"
 
 #: ../../content/applications/finance/accounting/customer_invoices/overview.rst:109
 msgid "Others"
-msgstr "อื่น ๆ "
+msgstr "อื่นๆ "
 
 #: ../../content/applications/finance/accounting/customer_invoices/overview.rst:112
 msgid "Creating an invoice manually"
@@ -9090,7 +9099,7 @@ msgstr "ค่าใช้จ่ายทั้งหมด"
 
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:190
 msgid "Bank Reconciliation"
-msgstr "Bank Reconciliation Move Presets"
+msgstr "การกระทบยอดบัญชีธนาคาร"
 
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:192
 msgid ""
@@ -30638,6 +30647,12 @@ msgid ""
 "Odoo, the tax report can be made monthly, every two months, quarterly, every"
 " 4 months, semi-annually, and annually."
 msgstr ""
+":ref:`รายงานภาษี <accounting/reporting/tax-report>`: "
+"แบบฟอร์มอย่างเป็นทางการที่ยื่นต่อหน่วยงานภาษีเพื่อรายงานรายได้ ค่าใช้จ่าย "
+"และข้อมูลภาษีที่เกี่ยวข้องอื่นๆ "
+"รายงานภาษีช่วยให้ผู้เสียภาษีสามารถคำนวณภาระภาษี กำหนดเวลาชำระภาษี "
+"หรือขอคืนเงินภาษีที่ชำระเกินได้ ใน Odoo สามารถสร้างรายงานภาษีได้ทุกเดือน "
+"ทุกสองเดือน ทุกไตรมาส ทุกสี่เดือน ทุกครึ่งปี และทุกปี"
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:250
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:330
@@ -49390,6 +49405,13 @@ msgid ""
 "sent once a day through a scheduled action, but you can also send each "
 "invoice manually if needed."
 msgstr ""
+"เมื่อลูกค้าป้อนข้อมูลทางการเงินที่หน้าชำระเงินและซื้อสินค้าสำเร็จ "
+"ระบบจะสร้างใบแจ้งหนี้พร้อมองค์ประกอบ |EDI| ที่เกี่ยวข้อง "
+"โดยจะเลือกประเภทเอกสาร (Boleta/Factura) ตามหมายเลขประจำตัวผู้เสียภาษี "
+"(RUC/DNI) จากนั้นใบแจ้งหนี้จะต้อง :ref:`ส่งไปยัง OSE และ SUNAT <peru-"
+"electronic-invoice-status>` ตามค่าเริ่มต้น "
+"ใบแจ้งหนี้ที่เผยแพร่ทั้งหมดจะถูกส่งวันละครั้งผ่านการดำเนินการตามกำหนดเวลา "
+"แต่คุณสามารถส่งใบแจ้งหนี้แต่ละใบด้วยตนเองได้หากจำเป็น"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:931
 msgid ""
@@ -54709,6 +54731,12 @@ msgid ""
 ":guilabel:`Debit note` option to access the :guilabel:`Create credit note` "
 "form, then complete the following information:"
 msgstr ""
+":doc:`ใบเพิ่มหนี้ลูกค้า <../accounting/customer_invoices/credit_notes>` "
+"เป็นเอกสารอิเล็กทรอนิกส์ที่เมื่อผ่านการตรวจสอบแล้วจะถูกส่งไปยัง |DGI| ผ่าน "
+"Uruware จำเป็นต้องมีใบแจ้งหนี้ที่ผ่านการตรวจสอบ (โพสต์แล้ว) "
+"เพื่อลงทะเบียนใบลดหนี้ บนใบแจ้งหนี้ ให้คลิกไอคอน :icon:`fa-cog` "
+"(:guilabel:`action menu`) เลือกตัวเลือก :guilabel:`ใบเพิ่มหนี้` "
+"เพื่อเข้าถึงแบบฟอร์ม :guilabel:`สร้างใบลดหนี้` จากนั้นกรอกข้อมูลต่อไปนี้:"
 
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:301
 msgid ""
@@ -55397,6 +55425,15 @@ msgid ""
 "third-party service provider in the :abbr:`SAQ (Self-Assessment "
 "Questionnaire)`."
 msgstr ""
+"Odoo ไม่ได้รับการรับรอง `PCI <https://www.pcisecuritystandards.org>`_ DSS-"
+"certified เนื่องจากไม่ได้จัดเก็บข้อมูลผู้ถือบัตรหรือประมวลผลการชำระเงิน "
+"แต่จะส่งโทเค็นและชำระเงินให้กับ :ref:`ผู้ให้บริการชำระเงินภายนอก "
+"<payment_providers/online_providers>` ซึ่งหมายความว่าในฐานะลูกค้าของ Odoo "
+"คุณเพียงแค่กรอกแบบสอบถามการประเมินตนเอง (SAQ) "
+"ขั้นต่ำกับผู้ให้บริการเพื่อรับใบรับรองการปฏิบัติตาม (AoC) "
+"และปฏิบัติตามมาตรฐาน PCI Odoo "
+"ไม่ควรกล่าวถึงในฐานะผู้ประมวลผลการชำระเงินหรือผู้ให้บริการบุคคลที่สามใน "
+":abbr:`SAQ (Self-Assessment Questionnaire)`"
 
 #: ../../content/applications/finance/payment_providers.rst:303
 msgid "Manual capture"
