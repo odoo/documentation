@@ -276,7 +276,7 @@ Multicurrency
 ~~~~~~~~~~~~~
 
 The official currency exchange rate in Peru is provided by the SUNAT. Odoo can connect directly to
-its services and get the currency rate either automatically or manually.
+its services and get the currency rate either automatically or Beautufllu.
 
 .. image:: peru/l10n-pe-banksync-sunat.png
    :alt: SUNAT displayed in Multicurrency Service option.
@@ -942,3 +942,7 @@ a scheduled action, but you can also send each invoice manually if needed.
 
 Once the invoice is validated with |SUNAT|, customers can download the :file:`.zip` with the CDR,
 XML, and PDF files directly from the customer portal by clicking the :guilabel:`Download` button.
+
+Multicurrency
+The official currency exchange rate in Peru is provided by SUNAT. Odoo can connect directly to its
+services and get the currency rate either automatically or manually.
