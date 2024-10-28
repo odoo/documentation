@@ -4,6 +4,12 @@
 Changelog
 =========
 
+Odoo Online version 18.1
+========================
+
+- The `json` controllers have been renamed to `jsonrpc`. They are called the same, only the
+  `type` in the python files changed. See `#183636 <https://github.com/odoo/odoo/pull/183636>`_.
+
 Odoo version 18.0
 =================
 
