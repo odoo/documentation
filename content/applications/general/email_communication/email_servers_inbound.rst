@@ -317,3 +317,43 @@ To change the default behavior, enable :ref:`developer-mode`, then go to :menuse
 .. important::
    These parameters are only used to prevent the creation of new records. They **do not prevent
    replies** from being added to the chatter.
+
+Allow alias domain system parameter
+===================================
+
+Incoming aliases are set in the Odoo database to create records by receiving incoming emails. To
+view aliases set in the Odoo database, first activate the :ref:`developer mode <developer-mode>`.
+Then, go to :menuselection:`Settings app --> Technical --> Aliases`.
+
+The following system parameter, `mail.catchall.domain.allowed`, set with allowed alias domain
+values, separated by commas, filters out correctly addressed emails to aliases. Setting the domains
+for which the alias can create a ticket, lead, opportunity, etc., eliminates false positives where
+email addresses with only the prefix alias, not the domain, are present.
+
+In some instances, matches have been made in the Odoo database when an email is received with the
+same alias prefix and a different domain on the incoming email address. This is true in the sender,
+recipient, and :abbr:`CC (Carbon Copy)` email addresses of an incoming email.
+
+.. example::
+   When Odoo receives emails with the `commercial` prefix alias in the sender, recipient, or
+   :abbr:`CC (Carbon Copy)` email addresses (e.g. commercial\@example.com), the database falsely
+   treats the email as the full `commercial` alias, with a different domain, and therefore, creates
+   a ticket/lead/opportunity/etc.
+
+To add the `mail.catchall.domain.allowed` system parameter, first, activate the :ref:`developer mode
+<developer-mode>`. Then, go to :menuselection:`Settings app --> Technical --> System Parameters`.
+Click :guilabel:`New`. Then, type in `mail.catchall.domain.allowed` for the :guilabel:`Key` field.
+
+Next, for the :guilabel:`Value` field, add the domains separated by commas. Manually
+:icon:`fa-cloud-upload` :guilabel:`(Save)`, and the system parameter takes immediate effect.
+
+.. image:: email_servers_inbound/allowed-domain.png
+   :alt: mail.catchall.domain.allowed system parameter set.
+
+Local-part based incoming detection
+===================================
+
+When creating a new alias, there is an option to enable :guilabel:`Local-part based incoming
+detection`. If enabled, Odoo only requires the local-part to match for routing an incoming email. If
+this feature is turned off, Odoo requires the whole email address to match for routing an incoming
+email.
