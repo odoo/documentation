@@ -29,6 +29,8 @@ The accounting section of the configuration menu relates to three options:
   created from all the accounting entries from the same period. This disables the generation of
   single payments.
 
+.. _payroll-localizations:
+
 Localizations
 -------------
 
