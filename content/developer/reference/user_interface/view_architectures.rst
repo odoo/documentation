@@ -2392,7 +2392,7 @@ Optional attributes can be added to the root element `kanban` to customize the v
 .. attribute:: examples
    :noindex:
 
-   The key in the `KanbanExamplesRegistry` of the examples than can be browsed when creating a new
+   The key in the `KanbanExamplesRegistry` of the examples that can be browsed when creating a new
    column in the grouped kanban view.
 
    .. seealso::
