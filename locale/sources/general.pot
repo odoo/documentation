@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-24 10:43+0000\n"
+"POT-Creation-Date: 2024-11-04 11:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1972,7 +1972,7 @@ msgid "`CloudFlare DNS <https://support.cloudflare.com/hc/en-us/articles/3600190
 msgstr ""
 
 #: ../../content/applications/general/email_communication/email_domain.rst:144
-msgid "`Google Domains <https://support.google.com/domains/answer/3290350?hl=en>`_"
+msgid "`Squarespace DNS records <https://support.squarespace.com/hc/en-us/articles/360002101888-Adding-custom-DNS-records-to-your-Squarespace-managed-domain>`_"
 msgstr ""
 
 #: ../../content/applications/general/email_communication/email_domain.rst:145
@@ -2364,6 +2364,46 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:318
 msgid "These parameters are only used to prevent the creation of new records. They **do not prevent replies** from being added to the chatter."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:322
+msgid "Allow alias domain system parameter"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:324
+msgid "Incoming aliases are set in the Odoo database to create records by receiving incoming emails. To view aliases set in the Odoo database, first activate the :ref:`developer mode <developer-mode>`. Then, go to :menuselection:`Settings app --> Technical --> Aliases`."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:328
+msgid "The following system parameter, `mail.catchall.domain.allowed`, set with allowed alias domain values, separated by commas, filters out correctly addressed emails to aliases. Setting the domains for which the alias can create a ticket, lead, opportunity, etc., eliminates false positives where email addresses with only the prefix alias, not the domain, are present."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:333
+msgid "In some instances, matches have been made in the Odoo database when an email is received with the same alias prefix and a different domain on the incoming email address. This is true in the sender, recipient, and :abbr:`CC (Carbon Copy)` email addresses of an incoming email."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:338
+msgid "When Odoo receives emails with the `commercial` prefix alias in the sender, recipient, or :abbr:`CC (Carbon Copy)` email addresses (e.g. commercial\\@example.com), the database falsely treats the email as the full `commercial` alias, with a different domain, and therefore, creates a ticket/lead/opportunity/etc."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:343
+msgid "To add the `mail.catchall.domain.allowed` system parameter, first, activate the :ref:`developer mode <developer-mode>`. Then, go to :menuselection:`Settings app --> Technical --> System Parameters`. Click :guilabel:`New`. Then, type in `mail.catchall.domain.allowed` for the :guilabel:`Key` field."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:347
+msgid "Next, for the :guilabel:`Value` field, add the domains separated by commas. Manually :icon:`fa-cloud-upload` :guilabel:`(Save)`, and the system parameter takes immediate effect."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:-1
+msgid "mail.catchall.domain.allowed system parameter set."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:354
+msgid "Local-part based incoming detection"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:356
+msgid "When creating a new alias, there is an option to enable :guilabel:`Local-part based incoming detection`. If enabled, Odoo only requires the local-part to match for routing an incoming email. If this feature is turned off, Odoo requires the whole email address to match for routing an incoming email."
 msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:3
@@ -4985,7 +5025,7 @@ msgid "Edit the printer connected to the IoT box."
 msgstr ""
 
 #: ../../content/applications/general/iot/config/troubleshooting.rst:100
-msgid "Epson and Star receipt printers and Zebra label printers do not need a driver to work. Make sure that no driver is selected for those printers."
+msgid "Epson receipt printers and Zebra label printers do not need a driver to work. Make sure that no driver is selected for those printers."
 msgstr ""
 
 #: ../../content/applications/general/iot/config/troubleshooting.rst:104
