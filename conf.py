@@ -246,6 +246,7 @@ languages_names = {
     'en': 'EN',
     'es': 'ES',
     'fr': 'FR',
+    'id': 'ID',
     'it': 'IT',
     'ja': 'JA',
     'ko': 'KR',
@@ -255,6 +256,7 @@ languages_names = {
     'sv': 'SV',
     'th': 'TH',
     'uk': 'UA',
+    'vi': 'VI',
     'zh_CN': 'ZH (CN)',
     'zh_TW': 'ZH (TW)'
 }
