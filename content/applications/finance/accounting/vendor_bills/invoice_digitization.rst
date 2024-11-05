@@ -12,7 +12,7 @@ created and populated based on the scanned invoices.
 .. seealso::
    - `Test Odoo's invoice digitization <https://www.odoo.com/app/invoice-automation>`_
    - `Odoo Tutorials: Invoice Digitization with OCR
-     <https://www.odoo.com/slides/slide/digitize-bills-with-ocr-1712>`_
+     <ttps://www.odoo.com/slides/slide/vendor-bill-digitization-7065>`_
 
 Configuration
 =============
