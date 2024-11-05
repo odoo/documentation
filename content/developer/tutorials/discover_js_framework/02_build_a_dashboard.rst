@@ -460,8 +460,8 @@ Here is a list of some small improvements you could try to do if you have the ti
 
 .. seealso::
    - `Example: use of env._t function
-     <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
-     addons/account/static/src/components/bills_upload/bills_upload.js#L64>`_
+     <https://github.com/odoo/odoo/blob/457836d19b865fc2f6b9dc3216c1de715e0d7c31/
+     addons/account/static/src/components/bills_upload/bills_upload.js#L116>`_
    - `Code: translation code in web/
-     <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
-     addons/web/static/src/core/l10n/translation.js#L16>`_
+     <https://github.com/odoo/odoo/blob/457836d19b865fc2f6b9dc3216c1de715e0d7c31/
+     addons/web/static/src/core/l10n/translation.js#L22>`_
