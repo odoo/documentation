@@ -17,6 +17,13 @@ To set up the UPS shipping connector in Odoo, complete these steps:
    <inventory/shipping_receiving/ups-client-id>`
 #. Set up shipping method in Odoo
 
+.. warning::
+   When configuring a shipping method to use UPS, make sure the :guilabel:`Provider` is set to
+   :guilabel:`UPS`, **NOT** :guilabel:`UPS Legacy`.
+
+   If shipping methods currently exist with the :guilabel:`Provider` set to :guilabel:`UPS Legacy`,
+   archive them, and create new shipping methods using :guilabel:`UPS`, instead.
+
 UPS account setup
 =================
 
