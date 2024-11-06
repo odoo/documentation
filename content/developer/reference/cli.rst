@@ -695,10 +695,16 @@ interaction with the :ref:`orm <reference/orm>` and its functionalities.
       By default, the shell is running in transaction mode. This means that any change made to the
       database is rolled back when exiting the shell. To commit changes, use `env.cr.commit()`.
 
+
+.. option:: --shell-file <init_script.py>
+
+   Specify a Python script to be run after the start of the shell. Overrides the environment
+   variable `PYTHONSTARTUP`.
+
 .. option:: --shell-interface (ipython|ptpython|bpython|python)
 
-   Specify a preferred REPL to use in shell mode. This shell is started with the `env` variable
-   already initialized to be able to access the ORM and other Odoo modules.
+   Specify a preferred `REPL` to use in shell mode. This shell is started with the `env` variable
+   already initialized to be able to access the `ORM` and other Odoo modules.
 
 .. seealso::
    :ref:`reference/orm/environment`
