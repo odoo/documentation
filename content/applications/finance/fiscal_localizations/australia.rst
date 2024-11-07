@@ -2,534 +2,517 @@
 Australia
 =========
 
-.. _australia/configuration:
-
-Configuration
-=============
+Modules
+=======
 
 .. list-table::
    :widths: 25 25 50
    :header-rows: 1
 
-   * - Module Name
-     - Module Key
+   * - Name
+     - Technical name
      - Description
    * - :guilabel:`Australia - Accounting`
      - `l10n_au`
-     - Installed by default when the Accounting :guilabel:`Fiscal Localization` package is set to
-       :guilabel:`Australia`. This module also installs the :guilabel:`ABA credit transfer` and the
-       :guilabel:`Remittance Advice report` module.
+     - The base :ref:`accounting <australia/accounting>` module for the Australian localization. It
+       is installed automatically when the :guilabel:`Australia` :ref:`fiscal localization package
+       <fiscal_localizations/packages>` is selected. This module also installs the :ref:`ABA Credit
+       Transfer <australia/aba>` module.
    * - :guilabel:`Australian Reports - Accounting`
      - `l10n_au_reports`
-     - Includes the :guilabel:`Taxable Payments Annual Reports (TPAR)` and the
-       :guilabel:`BAS report`.
+     - Adds the :ref:`Taxable Payments Annual Report (TPAR) <australia/tpar>` and the :ref:`Business
+       Activity Statement (BAS) <australia/bas>` report. It is installed automatically when the
+       :guilabel:`Australia` :ref:`fiscal localization package <fiscal_localizations/packages>` is
+       selected.
    * - :guilabel:`Australia - Payroll`
      - `l10n_au_hr_payroll`
-     - Payroll localisation for Australia.
+     - The base :ref:`payroll <australia/payroll>` module for the Australian localization.
    * - :guilabel:`Australia - Payroll with Accounting`
      - `l10n_au_hr_payroll_account`
-     - Installs the link between Australian payroll and accounting. The module also installs the
-       modules: :guilabel:`Australian - Accounting`; :guilabel:`Australian Reports - Accounting`;
-       and :guilabel:`Australia - Payroll`.
-   * - :guilabel:`Accounting Customer Statements`
-     - `l10n_account_customer_statements`
-     - Allows the management and sending of monthly customer statements from the partner ledger and
-       the contact form. Also used in New Zealand.
+     - Contains the necessary accounting data for the Australian payroll rules. It is installed
+       automatically when the :ref:`Payroll Entries option <payroll-accounting>` is enabled.
+   * - :guilabel:`Employment Hero Payroll`
+     - `l10n_employment_hero`
+     - Synchronizes all pay runs from :ref:`Employment Hero <australia/payroll/employment-hero>`
+       with Odoo's journal entries.
 
-.. _australia/coa:
+.. _australia/accounting:
 
-Chart of Accounts
-=================
-
-The Australian chart of accounts is included in the **Australia - Accounting** module. Go to
-:menuselection:`Accounting --> Configuration --> Chart of Accounts` to access it.
-
-.. seealso::
-   :doc:`../accounting/get_started/chart_of_accounts`
-
-.. _australia/taxes:
+Accounting
+==========
 
 Taxes and GST
-=============
+-------------
 
-The default Australian taxes impact the :ref:`BAS Report <australia/bas>`, which can be accessed
-through :menuselection:`Accounting --> Reporting --> BAS Report`.
-
-In Australia, the standard **Goods and Services Tax** (GST) rate is 10%, but different rates and
+In Australia, the standard **Goods and Services Tax (GST)** rate is 10%, but different rates and
 exemptions exist for specific categories of goods and services.
 
-.. image:: australia/default-gst.png
-   :alt: Default GST of Australia
+.. image:: australia/default-taxes.png
+   :alt: Default GST rates
 
-Tax Mapping
------------
+.. note::
+   The taxes impact the :ref:`BAS report <australia/bas>`.
 
-Within the Australian localisation package, tax names encompass the tax rate as an integral part of
-their naming convention.
+Tax mapping
+~~~~~~~~~~~
 
-Despite the high amount of taxes in Odoo, these taxes are pretty similar (mostly 0% and 10%), with
-different tax grid variations for:
+Within the Australian localization, tax names encompass the tax rate as an integral part of their
+naming convention. Despite the high number of :doc:`taxes <../accounting/taxes>` configured in Odoo,
+their rates are often similar (0% or 10%).
 
-- Goods
-- Services
-- TPAR
-- TPAR without ABN
+GST sales taxes
+***************
 
-.. seealso::
-   :doc:`Taxes <../accounting/taxes>`
-
-Taxes including a **TPAR** mention impact not only the **BAS** report but also the **TPAR** report.
-Businesses from certain industries need to report payments made to subcontractors from relevant
-services during the financial year. Odoo combines the use of taxes and fiscal positions to report
-these payments on the **TPAR** report. Taxes with the mention **TPAR without ABN** are used to
-record amounts withheld from subcontractors without an **ABN** for the **ATO**.
-
-.. seealso::
-   :ref:`TPAR <australia/tpar>`
-
-Here are the taxes for Australia in Odoo 17.
+The **GST sales** taxes available in Odoo are listed below.
 
 .. list-table::
-   :widths: 20 40 20 20
+   :widths: 20 50 30
    :header-rows: 1
 
-   * - GST Name
+   * - GST name
      - Description
-     - GST Scope
-     - GST Type
-   * - 10%
+     - Label on invoices
+   * - 10% GST
+     - GST Sales
+     - 10% GST
+   * - 0% EX
+     - GST Free on Export Sales
+     - 0% GST Free
+   * - 0% F
+     - GST Free Sales
+     - 0% Exempt
+   * - 0% INP
+     - Input Taxed Sales
+     - 0% Input Taxed Sales
+   * - 100% Adj
+     - This is for adjustment, amounts can be modified to fit your needs
+     - Tax Adjustments (Sales)
+
+GST purchase taxes
+******************
+
+The **GST purchase** taxes available in Odoo are listed below.
+
+.. list-table::
+   :widths: 20 50 30
+   :header-rows: 1
+
+   * - GST name
+     - Description
+     - Label on invoices
+   * - 10% GST
      - GST Purchases
-     - -
-     - Purchases
-   * - 10% INC
-     - GST Inclusive Purchases
-     - -
-     - Purchases
+     - 10% GST
    * - 10% C
      - Capital Purchases
-     - -
-     - Purchases
-   * - 0% C
-     - Zero Rated Purch
-     - -
-     - Purchases
-   * - 100% T EX
-     - Purchase (Taxable Imports) - Tax Paid Separately
-     - -
-     - Purchases
-   * - 10% I
+     - 10% Capital Purchases
+   * - 10% INP
      - Purchases for Input Taxed Sales
-     - -
-     - Purchases
-   * - 10% P
-     - Purchases for Private use or not deductible
-     - -
-     - Purchases
-   * - 100% EX
-     - GST Only on Imports
-     - -
-     - Purchases
-   * - 10% Adj
-     - Tax Adjustments (Purchases)
-     - -
-     - Purchases
-   * - 10%
-     - GST Sales
-     - -
-     - Sales
-   * - 10% INC
-     - GST Inclusive Sales
-     - -
-     - Sales
-   * - 0% EX
-     - Zero Rated (Export) Sales
-     - -
-     - Sales
-   * - 0% EXEMPT
-     - Exempt Sales
-     - -
-     - Sales
-   * - 0% I
-     - Input Taxed Sales
-     - -
-     - Sales
-   * - 10% Adj
-     - Tax Adjustments (Sales)
-     - -
-     - Sales
-   * - 10% TPAR
-     - GST Purchases
-     - Services
-     - Purchases
-   * - 10% TPAR NO ABN
-     - GST Purchases
-     - Services
-     - Purchases
-   * - 10% INC TPAR
-     - GST Inclusive Purchases
-     - Services
-     - Purchases
-   * - 10% INC TPAR N ABN
-     - GST Inclusive Purchases
-     - Services
-     - Purchases
-   * - 10% C TPAR
-     - Capital Purchases
-     - Services
-     - Purchases
-   * - 10% C TPAR N ABN
-     - Capital Purchases
-     - Services
-     - Purchases
-   * - 0% C TPAR
-     - Zero Rated Purch TPAR
-     - Services
-     - Purchases
-   * - 0% C TPAR N ABN
-     - Zero Rated Purch TPAR without ABN
-     - Services
-     - Purchases
-   * - 100% T EX TPAR
+     - 10% Purchases for Input Taxed Sales
+   * - 10% PRIV
+     - Purchases for private use or not deductible
+     - 10% Purchases for Private Use
+   * - 0% F
+     - GST Free Purchases
+     - 0% GST Free
+   * - 0% TPS
      - Purchase (Taxable Imports) - Tax Paid Separately
-     - Services
-     - Purchases
-   * - 100% T EX TPAR N ABN
-     - Purchase (Taxable Imports) - Tax Paid Separately
-     - Services
-     - Purchases
-   * - 10% I TPAR
-     - Purchases for Input Taxed Sales
-     - Services
-     - Purchases
-   * - 100% I TPAR N ABN
-     - Purchases for Input Taxed Sales
-     - Services
-     - Purchases
-   * - 10% P TPAR
-     - Purchases for Private use or not deductible
-     - Services
-     - Purchases
-   * - 10% P TPAR N ABN
-     - Purchases for Private use or not deductible
-     - Services
-     - Purchases
-   * - 100% EX TPAR
+     - 0% GST Paid Separately
+   * - 100% ONLY
      - GST Only on Imports
-     - Services
-     - Purchases
-   * - 100% EX TPAR N ABN
      - GST Only on Imports
-     - Services
-     - Purchases
-   * - 10% Adj TPAR
+   * - 100% Adj
      - Tax Adjustments (Purchases)
-     - Services
-     - Purchases
-   * - 10% Adj TPAR N ABN
      - Tax Adjustments (Purchases)
-     - Services
-     - Purchases
-   * - 47% WH
+   * - 100% DGST
+     - Deferred GST Liability
+     - 100% DGST
+   * - No ABN
      - Tax Withheld for Partners without ABN
-     - Services
-     - Purchases
+     - Withholding Tax for No ABN
+   * - PAYGW - W3
+     - Other amounts withheld (excluding any amount shown at W2 or W4)
+     - Other Amounts Withheld (W3)
+
+Variants
+^^^^^^^^
+
+Businesses from certain industries need to report payments made to subcontractors from relevant
+services during the financial year. Odoo combines the use of taxes and fiscal positions to report
+these payments on the :ref:`TPAR <australia/tpar>`. In order to be compliant with the TPAR's
+obligations, two variants of the main purchase taxes are available in Odoo, but they are inactive by
+default.
+
+.. example::
+
+   For the *10% GST* tax, the variants are:
+
+   .. list-table::
+      :widths: 20 40 20 20
+      :header-rows: 1
+
+      * - Tax name
+        - Description
+        - Reports impacted
+        - Default status
+      * - 10% GST
+        - Default 10% GST tax
+        - BAS
+        - Active
+      * - 10% GST TPAR
+        - TPAR variant of the tax, if the contractor provided an ABN
+        - | BAS
+          | TPAR
+        - Inactive
+      * - 10% GST TPAR NO ABN
+        - TPAR variant of the tax, if the contractor did not provide an ABN
+        - | BAS
+          | TPAR
+        - Inactive
+
+Deferred GST
+~~~~~~~~~~~~
+
+Odoo allows companies under the `Deferred Goods and Services Tax (DGST) scheme <https://www.ato.gov.au/businesses-and-organisations/gst-excise-and-indirect-taxes/gst/in-detail/rules-for-specific-transactions/international-transactions/deferred-gst?=redirected_deferredGSTscheme>`_
+to automate their deferred GST flows.
+
+Configuration
+*************
+
+It is recommended to:
+
+- go to :menuselection:`Accounting --> Configuration --> Settings` and set the :guilabel:`Tax Return
+  Periodicity` to :guilabel:`monthly` (= monthly BAS); and
+- create a new journal to store all deferred GST entries by going to :menuselection:`Accounting
+  --> Configuration --> Journals --> New`, and selecting :guilabel:`Miscellaneous` as its
+  :guilabel:`Type` when configuring it.
+
+By default, a tax (*100% DGST*, inactive by default) and an account (*21340 Deferred GST Liability*)
+are available for Australian companies. Activate the tax by going to :menuselection:`Accounting -->
+Configuration --> Taxes`. Search for the :guilabel:`Name` `100% DGST` (remove the default filter if
+necessary), and click the :guilabel:`Activate` toggle switch.
+
+Flow
+****
+
+1. Importing goods: purchase order and vendor bill
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+When importing goods from abroad, the GST liability can now be deferred for companies under the DGST
+scheme. On the purchase order, select the :guilabel:`0% TPS` tax (tax paid separately) for the
+relevant order lines.
+
+.. image:: australia/dgst-po-tax.png
+   :alt: Setting the 0% TPS tax on a purchase order
+
+2. Recording the DGST balance on the BAS report
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+When the Australian Taxation Office (ATO) is advised electronically of the aggregated liability for
+the company by the Integrated Cargo System (ICS), the GST balance deferred during the previous month
+becomes available on the ATO's BAS portal.
+
+.. important::
+   Odoo does not yet fetch the DGST balance automatically from the ATO. A manual entry with the
+   liability amount needs to be created in Odoo. We recommend using a new journal for this purpose
+   since deferrals will be recurring.
+
+Go to :menuselection:`Accounting --> Journal Entries --> New`. On the first journal item line, add
+the :guilabel:`Account` `21340 Deferred GST Liability` and the deferred GST balance as a
+:guilabel:`Credit`. To resume the example shown above, we credit $2,000 and save.
+
+.. image:: australia/dgst-balance-credit.png
+   :alt: Creating a journal entry with the DGST account
+
+An auto-balancing line is created, along with journal items correctly assigning the right values in
+the BAS :guilabel:`Tax Grids`. Sections *G11*, *G18*, *7A*, and *ONLY* are updated correctly.
+
+.. image:: australia/dgst-tax-grids.png
+   :alt: The journal entry with the auto-balancing line and BAS tax grids
+
+After posting the journal entry, the BAS report displays the correct values for each section, along
+with the DGST offset.
+
+Reports
+-------
 
 .. _australia/bas:
 
-BAS report
-==========
+Business Activity Statement (BAS)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The **Business Activity Statement (BAS)** report is a critical tax reporting requirement for
-businesses registered for **Goods and Services Tax (GST)** in Australia. The **BAS** is used to
-report and remit various taxes to the **Australian Taxation Office (ATO)**. With the Odoo **BAS**
-feature, businesses can report on the following:
+The **BAS report** is a critical tax reporting requirement for businesses registered for GST in
+Australia. The BAS is used to report and remit various taxes to the ATO. With the Odoo BAS feature,
+businesses can report on the following:
 
-- Goods and Services Tax (GST)
+- GST
 - PAYG tax withheld
+- DGST
+
+Access the report from the Accounting dashboard by clicking :guilabel:`BAS Report (AU)` under the
+:guilabel:`Miscellaneous Operations` section.
 
 .. image:: australia/bas-report.png
-   :alt: BAS report in Odoo
+   :alt: BAS report example
 
-The taxes for GST are collected from the **tax grid**, which is pre-configured in the system. The
-**tax grid** can also be manually set up for any additional special GST. Once the tax for each
-account is set up, the system automatically slots journal items into the correct tax category. This
-ensures the **BAS** report is accurate and reflective of the business's financial activities.
+The base and tax amounts are collected from the **tax grid**, which is pre-configured in the system.
+The tax grid can also be manually set up for any additional special use-case of GST (e.g., wine
+equalization tax). Once the tax for each account is set up, the system automatically slots journal
+items into the correct tax category. This ensures the BAS report is accurate and reflective of the
+business's financial activities.
 
 .. image:: australia/gst-grids.png
-   :alt: GST grids in Odoo
+   :alt: GST grids example
 
-In addition, the **BAS** report includes the **PAYG** tax withheld components (**W1** to **W5**,
-then **summary, section 4**). This integration ensures that all payroll-related withholding taxes
-are accurately captured and reflected within the report.
+Besides the GST sections, the BAS report also includes the **PAYG** tax withheld components (*W1* to
+*W5*, then *summary, section 4*). This integration ensures that all payroll-related withholding
+taxes are accurately captured and reflected within the report.
 
 .. image:: australia/payg.png
-   :alt: PAYG Tax Withheld and Summary of BAS report in Odoo
+   :alt: PAYG tax withheld and summary of BAS report example
 
 The module incorporates built-in rules that facilitate the automatic calculation of taxes for types
-**W1** to **W5**. For a detailed walkthrough and more information on the calculation process for
-these taxes, please refer to the Payroll app documentation.
+W1 to W5. For a detailed walkthrough and more information on the calculation process for these
+taxes, refer to the :ref:`Payroll section <australia/payroll>`.
 
-.. seealso::
-   :ref:`Payroll <australia/payroll>`
+Closing
+*******
 
-Closing the BAS report
-----------------------
-
-When it is time to file the tax return with the **ATO**, click :guilabel:`Closing entry`. The tax
-return period can be configured in :menuselection:`configuration --> Settings --> Tax Return
-Periodicity`. Also, the start date of the tax return period can be defined through the **period
-button** (marked by a calendar icon 📅).
+When it is time to file the tax return with the ATO, click :guilabel:`Closing Entry`. The tax return
+period can be configured under :menuselection:`Accounting --> Configuration --> Settings --> Tax
+Return Periodicity`. The start date of the tax return period can also be defined on the report
+itself through the period button (:icon:`fa-calendar` *period* *year*).
 
 .. seealso::
    :doc:`Year-end closing <../accounting/reporting/year_end>`
 
 .. note::
-   Odoo uses the *calendar quarter* rather than the Australian FY quarter, which means **July to
-   September is Q3 in Odoo**.
+   Odoo uses calendar quarters rather than the Australian FY quarters, which means *July to
+   September* is *Q3* in Odoo.
 
 Before closing the entry for the first time, the default **GST payable account** and **GST
-receivable account** need to be set. A notification pops up and redirects the user to tax group
-configurations.
+receivable account** need to be set. A notification pops up and redirects the user to the tax groups
+configuration.
 
-Once the **GST payable** and **GST receivable** accounts are set up, the **BAS** report generates an
-accurate journal closing entry automatically, which balances out the GST balance with the GST
-clearing account.
+.. image:: australia/bas-accounts.png
+   :alt: BAS report tax groups
 
-.. image:: australia/bas-report-accounts.png
-   :alt: GST accounts for the BAS report in Odoo.
+Once the GST payable and GST receivable accounts are set up, the BAS report generates an accurate
+journal closing entry automatically, which balances out the GST balance with the GST clearing
+account.
 
-The balance between **GST receivable** and **payable** is set against the tax clearing account
-defined on the tax group. The amount to be paid to or received from the **ATO** can be reconciled
-against a bank statement.
+The balance between GST receivable and payable is set against the tax clearing account defined on
+the tax group. The amount to be paid to or received from the ATO can be reconciled against a bank
+statement.
 
 .. image:: australia/bas-taxes.png
-   :alt: BAS tax payment.
+   :alt: BAS report tax payment
 
 .. important::
-   The **BAS** report is not directly submitted to the **ATO**. Odoo helps you automatically compute
-   the necessary values in each section, with the possibility to audit them to better understand the
-   history behind these numbers. Businesses can copy these values and enter them on the `ATO’s
-   portal <https://www.ato.gov.au/newsrooms/small-business-newsroom/lodging-your-next-bas>`_.
+   The BAS report is not directly submitted to the ATO. Odoo helps you automatically compute the
+   necessary values in each section, with the possibility to audit them to better understand the
+   history behind these numbers. Businesses can copy these values and enter them on the `ATO portal
+   <https://www.ato.gov.au/businesses-and-organisations/preparing-lodging-and-paying/business-activity-statements-bas/how-to-lodge-your-bas>`_.
 
 .. _australia/tpar:
 
-TPAR report
-===========
+Taxable Payments Annual Report (TPAR)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Odoo allows businesses to report payments made to contractors or subcontractors during the financial
-year. This is done by generating a :abbr:`TPAR (Taxable Payments Annual Report)`. If you are unsure
-your business needs this report, refer to the documentation provided by the `ATO <https://www.ato.gov.au/businesses-and-organisations/preparing-lodging-and-paying/reports-and-returns/taxable-payments-annual-report>`_.
-You can find this report in :menuselection:`Accounting --> Reporting --> Taxable Payments Annual
-Reports (TPAR)`.
+year. This is done by generating a **TPAR**. If you are unsure your business needs this report,
+refer to the `ATO's TPAR web page <https://www.ato.gov.au/businesses-and-organisations/preparing-lodging-and-paying/reports-and-returns/taxable-payments-annual-report>`_.
+
+Access the TPAR in Odoo by going to :menuselection:`Accounting --> Reporting --> Taxable Payments
+Annual Reports (TPAR)`.
 
 Configuration
--------------
+*************
 
-Under :menuselection:`Accounting --> Customers` or :menuselection:`Accounting --> Vendors`, select a
-your contractor and set a :guilabel:`Fiscal Position` under the :guilabel:`Sales & Purchase` tab.
+First, it is required to assign fiscal positions to your contractors before billing them to update
+the TPAR. To do so, go to :menuselection:`Accounting --> Vendors --> Vendors`, select a contractor,
+and set a :guilabel:`Fiscal Position` under the :guilabel:`Sales & Purchase` tab.
 
-.. image:: australia/tpar.png
-   :alt: TPAR fiscal position
+.. image:: australia/tpar-fiscal-positions.png
+   :alt: TPAR fiscal position on a vendor
 
-Upon billing a contact with a fiscal position set to :guilabel:`TPAR` or
-:guilabel:`TPAR without ABN`, the report is automatically generated in :menuselection:`Accounting
---> Reporting --> Taxable Payments Annual Reports (TPAR)`.
+Based on the chosen fiscal position, the correct tax mapping will apply to the contractor's vendor
+bills.
 
-The report includes the **ABN**, **Total GST**, **Gross Paid**, and **Tax Withheld** from their
-**TPAR** subcontractors.
+.. image:: australia/tpar-vendor-bill-tax.png
+   :alt: TPAR vendor bill tax mapping
 
-- **Total GST**: the total tax paid
-- **Gross Paid amounts**: shows after registering a payment for those bills
-- **Tax Withheld**: shown if the subcontractor is registered with a fiscal position set to
-  :guilabel:`TPAR without ABN`
+The TPAR includes the following information from contractors:
 
-The **TPAR** report can be exported to PDF, XLSX, and TPAR formats.
+- :guilabel:`ABN`
+- :guilabel:`Total GST` (the total tax paid)
+- :guilabel:`Gross Paid` (the amounts are displayed after a vendor bill has been marked as paid)
+- :guilabel:`Tax Withheld` (displayed if the contractor is registered with a fiscal position set to
+  :guilabel:`TPAR without ABN`)
 
-.. _australia/customer-statement:
-
-Customer statements
-===================
-
-Customer statements allow customers to see their financial transactions with the company over a
-certain period, and overdue statement details. These statements can be sent out to customers
-by email.
-
-.. image:: australia/customer-statement.png
-   :alt: Customer statement in Odoo.
-
-There are **two** ways for customers to download these statements.
-
-#. **From the contact form:** Customer statements are under :menuselection:`Customers -->
-   Customers`. Select a customer, click the **gear icon (⚙)**, and then
-   :guilabel:`Print Customer Statements`. This prints out the statement from the beginning of the
-   month to today's date.
-
-#. **From the partner ledger:** This option allows for more flexibility in selecting a statement's
-   start and end date. You can access it by going to :menuselection:`Accounting --> Reporting -->
-   Partner Ledger`. From here, specify a date range in the **calendar menu (📅)** for the statement,
-   hover over a partner, and click the :guilabel:`Customer Statements` tab.
-
-.. image:: australia/partner-ledger-statements.png
-   :alt: Customer statement from partner ledger report in Odoo.
+The TPAR can be exported to multiple formats: PDF, XLSX, and TPAR.
 
 .. _australia/remittance:
 
 Remittance advice
-=================
+-----------------
 
 A remittance advice is a document used as proof of payment to a business. In Odoo, it can be
-accessed by going to :menuselection:`Accounting ‣ Vendors ‣ Payments`, selecting the payment(s), and
-clicking :menuselection:`Print --> Payment Receipt`.
+accessed by going to :menuselection:`Accounting --> Vendors --> Payments`, selecting the payment(s),
+and clicking :menuselection:`Print --> Payment Receipt`.
 
-.. image:: australia/remitence.png
-   :alt: Remittance advice in Odoo.
+.. image:: australia/remittance.png
+   :alt: Remittance advice example
 
 .. _australia/peppol:
 
-E-Invoicing via Peppol
-======================
+E-invoicing
+-----------
 
-Odoo is compliant with Australia's and New Zealand's `PEPPOL requirements <https://peppol.org/learn-more/country-profiles/australia/>`_.
-You can find and set up **electronic invoicing** settings per partner under
-:menuselection:`Accounting --> Customers` or :menuselection:`Accounting --> Vendors`, select a
-partner, and click the :guilabel:`Accounting` tab.
+Peppol
+~~~~~~
 
-.. image:: australia/peppol.png
-   :alt: Peppol settings from a partner in Odoo.
+Odoo is compliant with Australia's `Peppol requirements
+<https://peppol.org/learn-more/country-profiles/australia/>`_. Set up your customers and vendors
+by going to :menuselection:`Accounting --> Customers --> Customers` or :menuselection:`Vendors -->
+Vendors`, selecting one, clicking the :guilabel:`Accounting` tab, and configuring the
+:guilabel:`Electronic Invoicing` section as needed.
+
+.. image:: australia/partner-einvoicing.png
+   :alt: Electronic invoicing settings for a partner
 
 .. important::
-   Validating an invoice or credit note for a partner on the PEPPOL network will download a
-   compliant XML file that can be manually uploaded to your PEPPOL network.
+   Validating an invoice or credit note for a partner on the Peppol network will download a
+   compliant XML file that can be manually uploaded to your Peppol network. Odoo is currently in the
+   process of becoming an access point for the ANZ region.
 
 .. _australia/aba:
 
 ABA files for batch payments
-============================
+----------------------------
 
-Introduction
-------------
-
-An ABA file is a digital format developed by the `Australian Bankers' Association <https://www.ausbanking.org.au/>`_.
-It is designed for business customers to facilitate bulk payment processing by uploading a single
-file from their business management software.
+An ABA file is a digital format developed by the `Australian Banking Association
+<https://www.ausbanking.org.au/>`_. It is designed for business customers to facilitate bulk payment
+processing by uploading a single file from their business management software.
 
 The main advantage of using ABA files is to improve payment and matching efficiency. This is
 achieved by consolidating numerous payments into one file for batch processing, which can be
 submitted to all Australian banks.
 
 Configuration
--------------
+~~~~~~~~~~~~~
 
-Settings
-~~~~~~~~
+Batch payments
+**************
 
-To enable **batch payments**, go to :menuselection:`Accounting --> Configuration --> Setting -->
-Batch Payment` and enable :guilabel:`Allow Batch Payments`.
+Go to :menuselection:`Accounting --> Configuration --> Settings` and enable :guilabel:`Batch
+Payments`.
 
 Bank journal
-~~~~~~~~~~~~
+************
 
-Then, go to :menuselection:`Accounting --> Configuration --> Journals` and select the
-:guilabel:`Bank` journal type. In the :guilabel:`Journal Entries` tab, enter the
-:guilabel:`Account Number` and click :guilabel:`Create and edit`. In the pop-up window, fill in the
+Go to :menuselection:`Accounting --> Configuration --> Journals` and select the :guilabel:`Bank`
+journal. Enter the :guilabel:`Account Number`, click :guilabel:`Create and edit...`, and fill in the
 following fields:
 
 - :guilabel:`Bank`
-- :guilabel:`Account Holder Name`
 - :guilabel:`BSB`
 - :guilabel:`Account Holder`
 
-.. image:: australia/aba.png
-   :alt: Account Number settings for ABA in Odoo.
-
-.. important::
-   The :guilabel:`Send Money` field must be **enabled**.
+Then, toggle on the :guilabel:`Send Money` switch and click :guilabel:`Save & Close`.
 
 .. note::
-   The :guilabel:`Currency` field is optional.
+   Using the :guilabel:`Currency` field is optional.
 
-Go back to the :guilabel:`Journal Entries` tab and fill in the following fields related to the ABA:
+Back on the :guilabel:`Journal Entries` tab, fill in the following fields under the :guilabel:`ABA`
+section:
 
-- :guilabel:`BSB`: This field is auto-formatted from the bank account
-- :guilabel:`Financial Institution Code`: The official 3-letter abbreviation of the financial
-  institution (e.g., WBC for Westpac)
-- :guilabel:`Supplying User Name`: 6-digit number provided by your bank. Contact or check your bank
-  website if you need to know.
-- :guilabel:`Include Self-Balancing Transactions`: Selecting this option adds an additional
-   "self-balancing" transaction to the end of the ABA file, which some financial institutions
-   require when generating ABA files. Check with your bank to see if you need this option.
+- :guilabel:`BSB`: the BSB code from the bank account is used to fill in this field.
+- :guilabel:`Financial Institution Code`: the official 3-letter abbreviation of the bank (e.g.,
+  `WBC` for Westpac)
+- :guilabel:`Supplying User Name`: 6-digit number provided by the bank. Contact your bank or check
+  its website if you do not know it.
+- :guilabel:`APCA Identification Number`: 6-digit number provided by the bank. Contact your bank or
+  check its website if you do not know it.
+- :guilabel:`Include Self Balancing Transaction`: selecting this option adds an additional
+   "self-balancing" transaction to the end of the ABA file, which is required by some banks.
 
-Then, go to the :guilabel:`Outgoing Payments` tab on the same :guilabel:`Bank` type journal. Click
-:guilabel:`Add a line` and select :guilabel:`ABA Credit Transfer` as the **payment method**.
-
-Partners’ bank accounts
-~~~~~~~~~~~~~~~~~~~~~~~
+Customers' and vendors' bank accounts
+*************************************
 
 Go to :menuselection:`Accounting --> Customers --> Customers` or :menuselection:`Accounting -->
-Vendors --> Vendors` and select a partner for whom you want to add banking information. Once
-selected, click the :guilabel:`Accounting` tab, and under the :guilabel:`Bank Accounts` section,
-click :guilabel:`Add a line` to fill in:
+Vendors --> Vendors` and select a customer or vendor. Open the :guilabel:`Accounting` tab, and,
+under the :guilabel:`Bank Accounts` section, click :guilabel:`Add a line` to fill in their:
 
-- :guilabel:`Account Number` of that partner
+- :guilabel:`Account Number`
 - :guilabel:`Bank`
-- :guilabel:`Account Holder Name`
 - :guilabel:`BSB`
-- :guilabel:`Accounter Holder`
-- :guilabel:`Send Money` defines the bank account as *trusted*, which is essential for ABA files and
-  must be enabled if to be used.
+- :guilabel:`Account Holder`
 
-Generate an ABA file
---------------------
+Then, toggle on the :guilabel:`Send Money` switch and click :guilabel:`Save & Close`.
 
-To generate an **ABA** file, :guilabel:`Create` a vendor bill (manually or from a purchase order).
-:guilabel:`Confirm` the bill and ensure the vendor’s banking information is set up correctly before
-registering a payment..
+Generating an ABA file
+~~~~~~~~~~~~~~~~~~~~~~
 
-Next, click :guilabel:`Register Payment` in the pop-up window: select the :guilabel:`Bank` journal,
-select :guilabel:`ABA Credit Transfer` as :guilabel:`Payment Method`, and select the right
-:guilabel:`Recipient Bank Account`.
+To generate an ABA file, create a vendor bill, confirm it, and ensure the vendor's banking
+information is set up correctly.
 
-Once payments are confirmed, they appear in :menuselection:`Accounting --> Vendors --> Payments`.
-Tick the box of the payments to be included in the batch, then click :guilabel:`Create Batch`.
-Verify all information is correct and finally :guilabel:`Validate`. Once validated, the ABA file
-becomes available in the **chatter** on the right.
+Next, click :guilabel:`Pay` on the vendor bill, and select, for the following fields:
 
-After uploading it to your bank’s portal, an ABA transaction line will appear in your bank feed at
-the following bank feed iteration. You will need to reconcile it against the **batch payment** made
-in Odoo.
+- :guilabel:`Journal`: :guilabel:`Bank`
+- :guilabel:`Payment Method`: :guilabel:`ABA Credit Transfer`
+- :guilabel:`Recipient Bank Account`: the vendor's account number
+
+Once payments are created, go to :menuselection:`Accounting --> Vendors --> Payments`, select the
+payments to be included in the batch, and click :guilabel:`Create Batch`. Verify all information is
+correct and click :guilabel:`Validate`. Once validated, the ABA file is available in the **chatter**
+on the right.
+
+After uploading the file to your bank's portal, an ABA transaction line will appear in your bank
+feed at the following bank feed iteration. You will need to reconcile it against the **batch
+payment** made in Odoo.
+
+Industry-specific features
+==========================
+
+Starshipit shipping
+-------------------
+
+Starshipit is a shipping service operator that facilitates the integration of Australasian shipping
+couriers with Odoo. Refer to the :doc:`Starshipit documentation
+<../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping>` for
+detailed information.
 
 .. seealso::
-   :doc:`Batch Payment <../accounting/payments/batch>`
+   `Starshipit Odoo webinar recording <https://www.youtube.com/watch?v=TcDWnoYLXWg>`_
 
 .. _australia/buynow_paylater:
 
 Buy Now, Pay Later solutions
-============================
+----------------------------
 
-Buy Now, Pay Later solutions are popular payment methods for eShops in Australia. Some of these
-solutions are available via the `Stripe <https://stripe.com/en-au/payments/payment-methods>`_ and
-`AsiaPay <https://www.asiapay.com.au/payment.html#option>`_ payment providers.
+*Buy Now, Pay Later* solutions are popular payment methods for eShops in Australia. Some of these
+solutions are available via `Stripe <https://stripe.com/en-au/payments/payment-methods>`_ and
+`AsiaPay <https://www.asiapay.com.au/payment.html#option>`_.
 
 .. seealso::
-   - :doc:`AsiaPay Payment Provider <../payment_providers/asiapay>`
-   - :doc:`Stripe Payment Provider <../payment_providers/stripe>`
+   - :doc:`Stripe payment provider <../payment_providers/stripe>`
+   - :doc:`AsiaPay payment provider <../payment_providers/asiapay>`
 
-POS terminals for Australia
-===========================
+POS terminals
+-------------
 
-If you wish to have a direct connection between Odoo and your PoS terminal in Australia, you *must*
-have a **Stripe** terminal. Odoo supports the **EFTPOS** payment solution in Australia.
+To establish a direct connection between Odoo and a POS terminal in Australia, a **Stripe** payment
+terminal is required. Odoo supports the **EFTPOS** payment solution in Australia.
 
 .. note::
-   You do not need a Stripe payment terminal to use Odoo as your main PoS system. The only drawback
-   of not using Stripe is that cashiers must manually enter the final payment amount on the
-   terminal.
+   A Stripe payment terminal is not required to use Odoo as the main POS system. However, without
+   one, cashiers must manually enter the final payment amount on the terminal.
 
 .. seealso::
-   - :doc:`Stripe Odoo Payment Provider <../payment_providers/stripe>`
-   - :doc:`Stripe Odoo Payment Terminal </applications/sales/point_of_sale/payment_methods/terminals/stripe>`
-   - `Stripe Dashboard <https://dashboard.stripe.com/dashboard>`_
-   - `Stripe Terminal <https://stripe.com/docs/terminal>`_
+   - :doc:`Stripe payment provider <../payment_providers/stripe>`
+   - :doc:`Stripe payment terminal <../../sales/point_of_sale/payment_methods/terminals/stripe>`
+   - `Stripe.com terminal documentation <https://stripe.com/docs/terminal>`_
 
 .. _australia/payroll:
 
@@ -537,333 +520,890 @@ Payroll
 =======
 
 .. important::
-   Odoo is currently not compliant with STP Phase 2.
+   Odoo is currently in the process of becoming compliant with STP Phase 2 and SuperStream. An
+   announcement will be made as soon as companies can use Odoo for payroll as a one-stop platform.
 
-Create your employees
----------------------
+Setting up employees
+--------------------
 
-To create an **employee form** and fill in mandatory information, go to the **Employees** app and
-click :guilabel:`Create`. In the :guilabel:`HR Settings` tab, you can input the mandatory
-information:
+Employee settings
+~~~~~~~~~~~~~~~~~
 
-#. :guilabel:`TFN Status`: if the employee provides a TFN, make sure to add it to the “TFN” field
-#. :guilabel:`Non-resident`: if the employee is a foreign resident
-#. :guilabel:`Tax-free Threshold`: if the employee is below or above the threshold
-#. :guilabel:`HELP / STSL`: for all types of study and training support loans (e.g. HELP, VSL, SSL…)
-#. :guilabel:`Medicare levy Deduction`
-#. :guilabel:`Medicare levy Exemption`
-#. :guilabel:`Withholding for Extra Pay`
-#. ...
+Create an employee by going to :menuselection:`Employees --> New`. Go to the :guilabel:`Settings`
+tab, and configure the :guilabel:`Australian Payroll` section, for example checking if they are
+:guilabel:`Non-resident`, if they benefit from the :guilabel:`Tax-free Threshold`, their
+:guilabel:`TFN Status`, :guilabel:`Employee Type`, etc.
 
-Manage Australian contracts
----------------------------
+.. image:: australia/payroll-employee-settings.png
+   :alt: Employee settings tab for the Australian payroll localization
 
-Once the employee form has been created, ensure the contract is enabled by clicking the
-:guilabel:`Contracts` smart button or by going to :menuselection:`Employees --> Employees -->
+Employee private information
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In addition, some personal employee information is required for payroll compliance with Single Touch
+Payroll, and to process superannuation payments. Open the employee's :guilabel:`Private Information`
+tab and fill in the following fields:
+
+- :guilabel:`Private Address`
+- :guilabel:`Private Email`
+- :guilabel:`Private Phone`
+- :guilabel:`Date of Birth`
+
+.. image:: australia/payroll-employee-private.png
+   :alt: Employee private information tab for the Australian payroll localization
+
+.. note::
+   Odoo will remind you to complete the required data at different stages of the process.
+
+Super accounts and funds
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can add the superannuation details of new employees under the employee's :guilabel:`Super
+Accounts` tab. Click :guilabel:`Add a line` and make sure to include the :guilabel:`Member Since`
+date, :guilabel:`Member Number`, and :guilabel:`Super Fund`.
+
+..  tip::
+    Use the :guilabel:`Proportion` field if an employee's contributions should sent to multiple
+    funds at a time.
+
+.. image:: australia/payroll-super-account.png
+   :alt: Configuring a super fund and super account for the Australian payroll localization
+
+To create a new :guilabel:`Super Fund`, start typing its name and click :guilabel:`Create and
+edit...`. Fill in its:
+
+- :guilabel:`Address`
+- :guilabel:`ABN`
+- :guilabel:`Type` (APRA / SMSF)
+- unique identifier (:guilabel:`USI` for APRA, :guilabel:`ESA` for SMSF)
+- (for SMFS only) :guilabel:`Bank Account`
+
+.. image:: australia/payroll-super-fund.png
+   :alt: Configuring a super fund for the Australian payroll localization
+
+..  tip::
+    Manage all super accounts and funds by going to :menuselection:`Payroll --> Configuration -->
+    Super Funds` or :menuselection:`Super Accounts`.
+
+.. important::
+   Odoo is currently in the process of becoming SuperStream-compliant.
+
+Contracts
+~~~~~~~~~
+
+Once the employee has been created, create their employment contract by clicking the :icon:`fa-book`
+:guilabel:`Contracts` smart button, or by going to :menuselection:`Employees --> Employees -->
 Contracts`.
 
 .. note::
-   Only one contract can be active simultaneously per employee, but an employee can be assigned
+   Only one contract can be active per employee at a time. However, an employee can be assigned
    consecutive contracts during their employment.
 
-Contractual information related to Australia can be found in the following **three** places:
+Employment contract creation: recommended steps
+***********************************************
 
-#. Before assigning a salary amount, pay frequency, and other important details to a contract,
-   defining the **salary structure**, **start date**, and **work entry** source is important. In
-   Australia, a "Salary Structure" is employed to specify the tax schedule applicable to that
-   contract, as defined by the Australian Taxation Office (ATO). Most contracts will fall under the
-   following **three structures**:
+.. image:: australia/payroll-contract-flow.png
+   :alt: Recommended steps to create an employment contract
 
-    - **Regular (Schedule 1)**: the great majority of Australian employees will fall in this
-      category; hence, this structure is assigned by default to all contracts.
-    - **Working holiday makers (Schedule 15)**. When employing working holiday makers (WHMs), other
-      taxes apply. For detailed information on these specific tax implications, refer to the
-      documentation provided by the **ATO**.
-    - **No TFN**. Choose this structure if the employee hasn’t provided a **TFN** for over **28**
-      days.
+1. Basic contractual information
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. image:: australia/employee.png
-   :alt: Employees form in Odoo Payroll.
+- Select the :guilabel:`Contract Start Date` and :guilabel:`Working Schedule` (set, or flexible for
+  casual workers).
+- Keep the :guilabel:`Salary Structure Type` set to :guilabel:`Australian Employee`. This structure
+  covers all of the ATO's tax schedules.
 
-.. important::
-   The structures **Horticulture/Shearing (Schedule 2)** and **Artists and Performers (Schedule 3)**
-   are only partially complete, and proper tests should be performed before using them to pay
-   employees in your production database. Send your feedback to au-feedback@mail.odoo.com.
+.. _australia/payroll/work-entry-source:
 
-The field :guilabel:`Work Entry Source` is also significant and defines how **working hours** and
-**days** are accounted for in the employee’s payslip.
+- (if using the Attendances or Planning app) Select the :guilabel:`Work Entry Source` to define how
+  working hours and days are accounted for on the employee's payslip.
 
-- :guilabel:`Working Schedule`: work entries are automatically generated based on the employee’s
-  working schedule, starting from the contract's start date.. For example, let’s assume that an
-  employee works 38 hours a week, and their contract’s begins on January 1st. Today is January 16th,
-  and the user generates a pay run from January 14th to 20th. The working hours on the payslip will
-  be automatically calculated to be 38 hours (5 * 7.36 hours) if no leave is taken.
-- :guilabel:`Attendances`: The default working schedule is ignored, and work entries are only
-  generated after clocking in and out of the attendance app.
-- :guilabel:`Planning`: The default working schedule is ignored, and work entries are generated from
-  planning shifts only.
+  - :guilabel:`Working Schedule`: work entries are automatically generated based on the employee's
+    working schedule, starting from the contract's start date.
+
+    .. example::
+       An employee works 38 hours a week, their contract begins on 01/01, today's date is 16/01, and
+       the user generates a pay run from 14/01 to 20/01. The working hours on the payslip will be
+       automatically calculated to be 38 hours (5 * 7.36 hours) if no unpaid leave is taken.
+
+  - :guilabel:`Attendances`: the working schedule is ignored, and work entries are only generated
+    after clocking in and out of the Attendances app. Note that attendances can be imported.
+  - :guilabel:`Planning`: the working schedule is ignored, and work entries are generated from
+    planning shifts in the Planning app.
 
   .. important::
-     Additional configurations are necessary to ensure that Odoo’s payslips automatically compute
-     various **penalty rates** as defined by an **award (overtime rate, public holiday rate, etc)**.
-     To create these configurations, create new work-entry types for each penalty rate and then
-     assign a penalty rate in % to each. Once this one-time configuration is done, work entries can
-     be manually imported for each period, and Odoo will separate the pay items and rates on the
-     employee’s payslip.
+     Timesheets do not impact work entries in Odoo. If you need to import your timesheets in Odoo,
+     import them by going to :menuselection:`Payroll --> Work Entries --> Work Entries` instead.
 
-  .. important::
-     Timesheets do not impact work entries in Odoo.
+2. Salary Information tab
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
-- The :guilabel:`Salary Information` tab contains a few essential fields impacting the frequency of
-  pay runs and the management of payslip rules in Odoo.
-
-    - :guilabel:`Wage Type`: Select the :guilabel:`Fixed Wage` pay type for full-time and part-time
-      employees. For casual workers and other :guilabel:`Hourly Wage` type. For employees being paid
-      hourly, make sure to define the correct **casual loading**.
-    - :guilabel:`Schedule Pay`: In Australia, only the following pay run frequencies are accepted:
-      **daily, weekly, bi-weekly (or fortnightly), monthly, and quarterly**.
-    - :guilabel:`Wage` (/period): Assign a wage to the contract according to their pay frequency.
-      On payslips, the corresponding annual and hourly rates will be automatically computed.
+- :guilabel:`Wage Type`: select :guilabel:`Fixed Wage` for full-time and part-time employees, and
+  :guilabel:`Hourly Wage` for casual workers. The latter allows you to add a :guilabel:`Casual
+  Loading` percentage.
 
   .. note::
-     For hourly workers, please note that the hourly wage should exclude casual loading.
+     For hourly workers, the :guilabel:`Hourly Wage` field should exclude casual loading.
 
-- The :guilabel:`Australia` tab. Most of the fields in this tab are used for **Single Touch
-  Payroll** (or **STP**) reporting, which requires a thorough understanding of several details from
-  an employee’s contract. Review the information on this tab before moving forward with pay runs.
-  This includes the following **four** fields which impact payslip computations:
+- :guilabel:`Schedule Pay`: in Australia, only the following pay run frequencies are accepted:
+  :guilabel:`Daily`, :guilabel:`Weekly`, :guilabel:`Bi-weekly` (or fortnightly),
+  :guilabel:`Monthly`, and :guilabel:`Quarterly`.
+- :guilabel:`Wage` /*period*: assign a wage to the contract according to their pay frequency. On
+  payslips, the corresponding annual and hourly rates will be computed automatically.
 
-    - :guilabel:`Withholding Variation`: use this field in case the employee’s withholding must be
-      varied upward or downward according to their circumstances. E.g., if employee X benefits from a
-      25% withholding variation, their percentage of tax withheld will vary from whatever amount
-      they were supposed to pay according to their salary structure and situation to a fixed 25%.
-    - :guilabel:`Leave Loading`: if the employee benefits from a regular leave loading, the value
-      set in the field :guilabel:`Leave Loading Rate` (e.g., 17.5%) is added to any amount earned
-      when taking annual or long service leaves.
-    - :guilabel:`Salary Sacrifice Superannuation`: any amount added to this field is deducted, per
-      pay frequency, from the employee’s basic salary before the computation of the gross salary.
-      Then, this amount is added to the super guarantee line of their payslip. E.g., if employee Y
-      earns 5,000 AUD per month and sacrifices 300 AUD to superannuation, their gross salary will be
-      4,700 AUD, and 300 AUD will be added on top of their normal super contributions.
-    - :guilabel:`Salary Sacrifice Other`: any amount added to this field is deducted, per pay
-      frequency, from the employee’s basic salary before the computation of the gross salary.
+3. Australia tab
+^^^^^^^^^^^^^^^^
 
-Once all important information has been entered, ensure the transition of the contract's status from
-"New" to "Running" to facilitate its use in pay runs.
+.. image:: australia/payroll-contract-australia.png
+   :alt: Australia tab of a contract
 
-.. image:: australia/employee-au.png
-   :alt: "Australia" payroll tab in Odoo.
+- :guilabel:`General`
 
-Assign superannuation accounts
-------------------------------
+  - Add the :guilabel:`Regular Pay Day` if relevant.
+  - Enable :guilabel:`Report in BAS - W3` if you choose to add PAYG withholding amounts in BAS
+    section W3 instead of W2 (refer to the `ATO's web page on PAYG withholding
+    <https://www.ato.gov.au/businesses-and-organisations/preparing-lodging-and-paying/business-activity-statements-bas/in-detail/instructions/payg-withholding-how-to-complete-your-activity-statement-labels#W3Otheramountswithheldexcludinganyamount>`_
+    for more information).
 
-Upon receipt of superannuation details from a new employee, ensure the creation of a new account in
-:menuselection:`Payroll --> Configuration --> Super Accounts` to link it to the employee. Input the
-:guilabel:`Super Fund`, :guilabel:`Member Since` date, and :guilabel:`TFN` number of the employee.
+- :guilabel:`Leave loading / workplace giving`
 
-Suppose the employee uses a superannuation fund that does not exist in the database yet. In that
-case Odoo creates a new one and centralises basic information about this fund, such as its **ABN**,
-**address**, type (**APRA** or **SMSF**), **USI**, and **ESA**. Super funds can be created or
-imported in :menuselection:`Payroll --> Configuration --> Super Funds`.
+  - Define whether your employees are :guilabel:`Eligible for Leave Loading`.
+  - Set the :guilabel:`Workplace Giving Employee` amount in exchange for deductions.
+  - Set the :guilabel:`Salary Sacrificed Workplace Giving` amount (e.g., receiving a benefit instead
+    of a deduction).
 
-.. important::
-   Odoo is currently not **SuperStream-compliant**.
+- :guilabel:`Super contributions`
 
-Create pay runs with payslips
------------------------------
+  - Add the :guilabel:`Extra Negotiated Super %` on top of the *super guarantee*.
+  - Add the :guilabel:`Extra Compulsory Super %` as per industrial agreements or awards obligations.
 
-Odoo can create pay runs in **two** ways: via **batch** or via **individual** payslips.
+- :guilabel:`Salary sacrifice`
 
-Create a batch of payslips
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+  - :guilabel:`Salary Sacrifice Superannuation` allows employees to sacrifice part of their salary
+    in favor of reportable employer superannuation contributions (RESC).
+  - :guilabel:`Salary Sacrifice Other Benefits` allows them to sacrifice part of their salary
+    towards some other form of benefit (refer to the `ATO's web page on Salary sacrificing for
+    employees <https://www.ato.gov.au/individuals-and-families/jobs-and-employment-types/working-as-an-employee/salary-sacrificing-for-employees>`_
+    for more information).
 
-When preparing to generate employees’ draft payslips (e.g., at the end of every week, fortnight, or
-month), navigate to :menuselection:`Payroll --> Payslips --> Batches` and click :guilabel:`New`.
-Fill in the necessary info, click :guilabel:`Generate Payslips`, select the
-:guilabel:`Salary Structure`, :guilabel:`Department`, :guilabel:`Employees`, and
-:guilabel:`Generate`. This method allows the creation of multiple payslips corresponding to each
-employee in a single batch.
+    .. note::
+       As of Odoo 18, salary sacrificing for other benefits currently does not impact fringe
+       benefits tax (FBT) reporting.
 
-#. Give the batch a name. (E.g., `2024 – Weekly W1`)
-#. Choose the pay run's start and end date. (E.g., 01/01/2024 to 07/01/2024)
-#. Click on :guilabel:`Generate`. A pop-up window asks to confirm which employees should be included
-   in the batch. By default, all active employees are included. You can leave
-   :guilabel:`Salary Structure` field blank as Odoo automatically selects the structure linked to
-   each employee’s contract.
-#. The batch creates as many payslips as there are employees. There is no limit to the number of
-   payslips created in a batch.
-#. Verify important information on each payslip. After payslips from a batch have been generated,
-   there is no need to manually compute payslip lines; Odoo does it for you.
+.. _australia/payroll/salary-attachments:
 
-Create an individual payslip
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+4. Salary attachments
+^^^^^^^^^^^^^^^^^^^^^
 
-In cases where the pay run does not fall into the category of regular payslips, the option exists to
-create a pay run dedicated to a single employee. Go to :menuselection:`Payroll --> Payslips --> All
-Payslips` and click :guilabel:`New`. Employ this method when processing **one-time payments** for
-employees, including **return-to-work** payments (**ATO Schedule 4**), **employment termination**
-payments (**ATO Schedule 7 and 11**), and **commissions and bonuses** (**ATO Schedule 5**). When
-generating an individual payslip, make sure to proceed with the following steps:
-
-#. Select an :guilabel:`Employee`; their :guilabel:`Contract` will be filled out automatically
-#. Add a pay :guilabel:`Period`
-#. Select a salary :guilabel:`Structure` (e.g., return-to-work payment)
-#. Unlike payslips generated from a batch, the payroll user must click the :guilabel:`Compute Sheet`
-   button to generate payslip lines
-
-.. image:: australia/worked-days-input.png
-   :alt: One-time payments in Odoo Payroll.
-
-Understand payslip features
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The same features apply no matter how payslips are created (individually or via batch).
-
-Depending on how work entries are created, the :guilabel:`Worked Days & Inputs` table
-automatically shows the number of days and hours the employee worked during the payslip period next
-to the corresponding total gross amount.
+If the employee is to receive additional recurring payments every pay run, whether indefinitely or
+for a set number of periods, click the :icon:`fa-book` :guilabel:`Salary Attachments` smart button
+on the contract. Choose a :guilabel:`Type` and a :guilabel:`Description`.
 
 .. note::
-   There is one line per work entry type, meaning **paid** and **unpaid time-off**, in addition to
-   custom **hourly penalty rates** (overtime, public holidays, etc.) which are automatically added
-   to the table.
+   Around 32 recurring salary attachment types exist for Australia. These are mostly related to
+   allowances and child support. `Contact us <https://www.odoo.com/help>`_ for more information as
+   to whether allowances from your industry can be covered.
 
-.. image:: australia/worked-days-compute.png
-   :alt: Worked days and hours in Payroll
+5. Run the contract
+^^^^^^^^^^^^^^^^^^^
 
-In the :guilabel:`Other Inputs` section, You can add entries such as **allowances** and **extra
-pay** items in the :guilabel:`Other Inputs` section.
+.. image:: australia/payroll-contract-run.png
+   :alt: Example of a running contract
 
-- To incorporate various **allowances** into an employee's payslip, create **allowances** in
-  :menuselection:`Payroll --> Configuration --> Other Input Types`. Once created, tick the
-  :guilabel:`Is an Allowance` checkbox for the involved allowances.
+Once all the information has been completed, change the contract stage from :guilabel:`New` to
+:guilabel:`Running`.
 
-  .. important::
-     Withholding for allowances is not computed automatically. The payroll user has to use the field
-     :guilabel:`Withholding for allowance` under the other inputs table to manually add the total
-     amount to be withheld across all allowances on that payslip.
+Prepare pay runs
+----------------
 
-- **Extra pay** items are other inputs added to the **payslip’s gross** and, as a result, to the
-  **withholding amount**. An example lies in regular sales commissions, taxed at the same rate as
-  the regular salary (unlike discretionary bonuses, which fall under the ATO’s Schedule 5 and its
-  corresponding salary structure). To configure such a custom pay item, go to
-  :menuselection:`Payroll --> Configuration --> Other Input Types` and create a new entry with the
-  code **EXTRA**.
+Regular
+~~~~~~~
 
-.. image:: australia/extra-pay-item.png
-   :alt: Extra pay item input type
+Pay runs are created by going to :menuselection:`Payroll --> Payslips --> Batches`. After clicking
+:guilabel:`New`, enter a :guilabel:`Batch Name`, select a :guilabel:`Period`, and click
+:guilabel:`Generate Payslips`.
 
-In the :guilabel:`Salary Computation` tab, the payroll user can verify whether all the pay rules
-have been computed correctly as per employee, contract and salary structure. Here are a few
-guidelines to better understand the data.
+.. image:: australia/payroll-payslips-generation.png
+   :alt: Steps to generate payslips
 
-.. image:: australia/salary-computation.png
-   :alt: Salary computation in Odoo Payroll.
+Employees on a pay run can be filtered down by :guilabel:`Department` and :guilabel:`Job Position`.
+There is no limit to the amount of payslips that can be created in one batch. After clicking
+:guilabel:`Generate`, one payslip is created per employee in the :guilabel:`Waiting` stage, in which
+they can be reviewed and amended before validation.
 
-#. **Basic salary:** amount from which tax-deductible lines can be subtracted
-#. **Gross salary:** amount subject to the taxes defined by the salary structure
-#. **Withholding:** tax amount to be paid to the **ATO**
-#. **Net salary:** amount to be paid to the employee’s bank account
-#. **Superannuation Guarantee:** amount to be provisioned for quarterly payments to the employee’s
-   super account
-#. **Allowances & Extra pay items:** these lines will show if other inputs are added to the payslip.
-#. **Other lines:** depending on the employee and contract specifics (Medicare, child support,
-   salary, sacrifice, etc.)
+.. image:: australia/payroll-waiting-payslips.png
+   :alt: Generated payslips in the waiting stage
 
-When satisfied with the payslip, click :guilabel:`Create Draft entry` to generate a draft accounting
-journal entry that the accountant can review. Note that in the case of a payslip batch, this
-accounting entry will sum up balances from all payslips.
+On the payslip form view, there are two types of inputs:
 
-Pay employees
--------------
+- :guilabel:`Worked days` are computed based on the :ref:`work entry source set on the employee's
+  contract <australia/payroll/work-entry-source>`. :ref:`Work entries can be configured
+  <australia/payroll/work-entry-types>` according to different types: attendance, overtime,
+  Saturday rate, Sunday rate, public holiday rate, etc.
+- :guilabel:`Other inputs` are individual payments or amounts of :ref:`different types
+  <australia/payroll/other-input-types>` (allowances, lump sums, deductions, termination payments,
+  leaves, etc.) that have little to do with the hours worked during the current pay period. The
+  :ref:`previously configured salary attachments <australia/payroll/salary-attachments>` are simply
+  recurring other inputs attached to a contract.
 
-After a batch or a payslip’s journal entry has been posted, the company can pay their employees. The
-user can choose between **two** different **payment methods**.
+.. image:: australia/payroll-payslips-inputs.png
+   :alt: Worked days and other inputs of a payslip
 
-- Pay the employee in batch via **ABA** files. This is **only** possible from the **payslip batch**
-  level. Ensure the batch’s journal entry has been posted to generate the **ABA** file. From the
-  batch form view, click :guilabel:`Create ABA File` and choose the desired bank journal. The newly
-  generated **ABA** file becomes available for download in the field :guilabel:`ABA File`. It is
-  possible to re-generate the ABA file after applying corrections to existing payslips.
+Under the :guilabel:`Salary Computation` tab, Odoo automatically computes payslip rules based on
+employees, contracts, worked hours, other input types, and salary attachments.
 
-  .. note::
-     It is always possible to include an individual payslip into an existing batch in an **ABA**
-     file.
+The salary structure *Australian Employee* has 35 payslip rules that automatically compute and
+dynamically display according to the payslip inputs.
 
-  .. important::
-     An ABA file can only be generated if both the company’s bank account and each employee’s bank
-     account have been properly :ref:`configured <australia/aba>`.
+.. example::
 
-- From the employee's payslip (:menuselection:`Payroll --> Payslips`), once the payslip's journal
-  entry has been posted, click :guilabel:`Register Payment`. The process is the same as
-  :doc:`paying vendor bills <../accounting/payments>`: select the desired bank journal and payment
-  method, then later reconcile the payment with the corresponding bank statement.
+   .. image:: australia/payroll-payslip-salary.png
+      :alt: Salary computation tab of a payslip
 
-One-time payments
-~~~~~~~~~~~~~~~~~
+   The following rules apply for that pay period in the above example:
 
-Certain payments, such as **Return-to-Work** payments and **Employment Termination Payments**
-**(ETP)**, are processed only once and require a slightly different approach.
+   - :guilabel:`Basic Salary`: pre-sacrifice gross salary
+   - :guilabel:`Ordinary Time Earnings`: amount to which the super guarantee percentage needs to be
+     applied
+   - :guilabel:`Salary Sacrifice Total`: includes the $150 sacrificed to superannuation
+   - :guilabel:`Taxable Allowance Payments`: includes the $10 allowance (*cents per KM* in this
+     case)
+   - :guilabel:`Taxable Salary`: gross salary amount minus non-taxable amounts
+   - :guilabel:`Salary Withholding` and :guilabel:`Total Withholding`: amounts to be withheld from
+     the taxable salary
+   - :guilabel:`Net Salary`: the employee's net wage
+   - :guilabel:`Concessional Super Contribution`: in this scenario, the amount sacrificed to
+     superannuation, payable to the employee's super fund in addition to the super guarantee
+   - :guilabel:`Super Guarantee`: as of 01 July 2024, it is computed as 11.5% of the ordinary time
+     earnings amount
 
-Return-to-Work payments
-***********************
+.. note::
+   As of Odoo 18, the most recent tax schedule rates (2024-2025) have been updated for all salary
+   rules and computations.
 
-A **Return-to-Work** payment is a payment made to an employee to resume working. To process one,
-create an individual payslip, select the employee, and modify its **regular structure** to
-:guilabel:`Australia: Return to work`. Then, add the **gross amount** of that payment in the
-:guilabel:`Other Inputs` section and compute the payslip. Odoo automatically computes the **PAYG
-withholding**, the **net amount**, and the **super guarantee** corresponding to that payment.
+Out-of-cycle
+~~~~~~~~~~~~
 
-.. image:: australia/return-to-work.png
-   :alt: Return-to-work payment
-
-Termination payments
-********************
-
-Before proceeding with the employee’s ETP, make sure that a **Contract End Date** has been set on
-that employee’s contract so that Odoo can automatically compute the final prorated salary of that
-employee for the current month.
-
-First, create the final salary for that employee this month. To do so, create an individual payslip.
-If the contract end date is set correctly, Odoo will automatically compute the prorated salary up to
-the final payslip date.
-
-.. image:: australia/attendance.png
-   :alt: Termination payment worked days computation in Odoo.
-
-.. tip::
-   We recommend creating a batch on the fly for that payslip, in which the ETP is added as a second
-   payslip of that same batch.
-
-Create a second individual payslip and include it in the same batch. Change the salary structure on
-that payslip to :guilabel:`Australia: Termination Payments`. Before computing the sheet, it is
-important to provide the payslip with termination details .
-
-.. image:: australia/termination-payment.png
-   :alt: Termination payment
-
-- :guilabel:`Genuine` or :guilabel:`Non-Genuine Redundancy`. This choice impacts the amounts and
-  caps defined per **ETP** type.
-- **ETP types**: see the full list of termination payment types in
-  :guilabel:`Other Input Types` by filtering by `ETP Type is Set`.
-
-.. image:: australia/payslip-other-inputs.png
-   :alt: Payslip other inputs
-
-Add the relevant **ETP type** in the :guilabel:`Other Inputs` table of the payslip, then compute the
-payslip. Odoo computes the **gross ETP**, the **withholding**, the **unused leaves**, and the **net
-salary** according to the rules defined on the **ETP**, the **employee**, and their **contract**.
-Once payment for both payslips is ready to be processed, an **ABA** file can be created directly
-from the batch.
-
-.. _australia/employment-hero:
-
-Employment Hero payroll
-=======================
-
-If your business is already up and running with :doc:`Employment Hero <employment_hero>`, you can
-use our connector as an alternative payroll solution.
+In Australia, payslips created without a batch are considered to be *out-of-cycle* runs. Create them
+by going to :menuselection:`Payroll --> Payslips --> Individual Payslips`. The same payslip rules
+apply, but the way these payslips are submitted to the ATO in the frame of Single Touch Payroll
+(STP) is slightly different.
 
 .. important::
-   To :ref:`configure the Employment Hero API <employment_hero/configuration>` for **Australia**,
-   use the following value as :guilabel:`Payroll URL`: `https://api.yourpayroll.com.au/`.
+   As of Odoo 18, adding an out-of-cycle payslip to an existing batch is **not** recommended.
+
+Finalise pay runs
+-----------------
+
+Validate payslips
+~~~~~~~~~~~~~~~~~
+
+Once all payslip data is deemed correct, click :guilabel:`Create Draft Entry` on the payslip batch.
+This can also be done payslip by payslip for control reasons.
+
+This has several impacts:
+
+- Marking the batch and its payslips as :guilabel:`Done`.
+- Creating a draft accounting entry per payslip or one entry for the whole batch, depending on your
+  payroll settings. At this stage, accountants can post entries to affect the balance sheet, P&L
+  report, and BAS report.
+- Preparing the STP submission (or payroll data to be filed to the ATO as part of STP compliance).
+  This needs to be performed by the :guilabel:`STP Responsible` user, defined under
+  :menuselection:`Payroll --> Configuration --> Settings`.
+- Preparing super contribution lines as part of SuperStream compliance. This needs to be done by the
+  :guilabel:`HR Super Send` user selected under :menuselection:`Payroll --> Configuration -->
+  Settings`.
+
+.. image:: australia/payroll-stp-record.png
+   :alt: Example of a draft payslip
+
+Submit payroll data to the ATO
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. important::
+   Odoo is currently in the process of becoming compliant with STP Phase 2, and this step described
+   above does not submit data yet to the ATO.
+
+As per ATO requirements, STP submission for a pay run needs to be done on or before the payday. For
+this reason, submit your STP data to the ATO first before proceeding with payment. To do so, click
+:guilabel:`Submit to ATO` on the payslip batch.
+
+On the STP record for this pay run, a few useful information is displayed:
+
+- a warning message if important information is missing,
+- an automatically generated activity for the STP responsible user, and
+- a summary of payslips contained in this pay run, auditable from this view.
+
+.. image:: australia/payroll-stp-record.png
+   :alt: Example of an STP record
+
+Once the STP record is ready to go, click :guilabel:`Submit to ATO`, then read and accept the
+related terms and conditions.
+
+Pay employees
+~~~~~~~~~~~~~
+
+Once the ATO submission is complete, you can proceed to pay your employees. To facilitate the
+payment matching process, remember to post the payslip-related journal entries prior to validating a
+payment.
+
+Although you may decide to pay your employees individually, we recommend creating a batch payment
+from your payslip batch. To do so, click :guilabel:`Pay` on the payslip batch, and select
+:guilabel:`ABA Credit Transfer` as the :guilabel:`Payment Method`.
+
+.. image:: australia/payroll-payment-method.png
+   :alt: Selecting the payment method for a payslip batch
+
+This has two impacts:
+
+- Marking the batch and its payslips as :guilabel:`Paid`.
+- Creating a :guilabel:`Payment Batch` linked to the payslip batch.
+
+.. image:: australia/payroll-paid-batch.png
+   :alt: Example of a paid batch of payslips
+
+When receiving the bank statement in Odoo, you can now match the statement line with the batch
+payment in one click. The payment is not reconciled against the payslip batch, and all individual
+payslips.
+
+.. image:: australia/payroll-reconciliation.png
+   :alt: Steps to reconcile a bank statement with a batch payment.
+
+Impact on accounting
+~~~~~~~~~~~~~~~~~~~~
+
+Depending on the employee and contract configuration, the journal entry linked to a payslip will be
+more or less exhaustive.
+
+.. example::
+   For instance, here is the journal entry generated by the employee Marcus Cook configured above.
+
+   .. image:: australia/payroll-accounting-entry.png
+      :alt: Example of a journal entry for a payslip
+
+Once posted, predefined accounts will impact the company's balance sheet (PAYGW, wages, and
+superannuation liabilities) and profit & loss report (wages and superannuation expenses). In
+addition, the employee's gross wage and PAYG withholding will update the BAS report for the relevant
+period (see Tax Grid: W1 and W2). Accounts can be adjusted to the company's chart of accounts.
+
+.. image:: australia/payroll-bas.png
+   :alt: Example of a BAS report PAYG tax witheld section
+
+Other payroll flows
+-------------------
+
+Paying super contributions
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. important::
+   Odoo has a partnership with a clearing house to process both superannuation payments and data to
+   the right funds in one click, via direct debit. Odoo is currently in the process of becoming
+   compliant with SuperStream, and an announcement will be made as soon as superannuation
+   contributions can be processed via Odoo's payroll solution.
+
+Once a quarter (or more frequently, in preparation for `Payday Super
+<https://www.ato.gov.au/about-ato/new-legislation/in-detail/superannuation/payday-superannuation>`_),
+you have to process superannuation payments to your employees' super funds. To do so, go to
+:menuselection:`Payroll --> Reporting --> Super Contributions`.
+
+.. image:: australia/payroll-superfile.png
+   :alt: Example of a super file
+
+When ready to pay, add the :guilabel:`Bank Journal` that will be used to pay the super from, then
+click :guilabel:`Lock` to prevent the contributions from subsequent payslips from being added to
+that file. Instead, a new Super file will be created.
+
+Once the payment has been processed, it can be traced back to the Super file and matched with a bank
+statement.
+
+.. image:: australia/payroll-superfile-payment.png
+   :alt: Example of a super file payment
+
+Terminating employees
+~~~~~~~~~~~~~~~~~~~~~
+
+Employees can be terminated by going to :menuselection:`Payroll --> Reporting --> Terminate
+Employee`.
+
+The following fields must be completed:
+
+- :guilabel:`Contract End Date`: once the termination is validated, this date will be added to the
+  contract automatically, and mark the contract as :guilabel:`Expired` when the date has been
+  reached.
+- :guilabel:`Cessation Type Code`: a mandatory field for the ATO's STP reporting.
+- :guilabel:`Termination Type`: the type of redundancy (genuine or non-genuine) affects the
+  computation of unused annual and long service leave withholding.
+
+.. image:: australia/payroll-termination.png
+   :alt: Terminating the contract of an employee
+
+The balance of unused annual leaves and long service leaves is displayed for reference.
+
+Confirming the termination creates an out-of-cycle payslip with the tag :guilabel:`final pay`. It
+computes the worked days until the contract end date, in addition to the employee's unused annual
+and long service leave entitlements.
+
+.. image:: australia/payroll-termination-payslip.png
+   :alt: Example of an out-of-cycle payslip of a terminated employee
+
+Odoo automatically computes unused leave entitlements based on the employee's current hourly rate
+leave loading (for annual leaves only), and the remaining leave balance. However, these amounts can
+be manually edited in the :guilabel:`Other Inputs` table if necessary.
+
+Employment Termination Payments (ETP) can also be added to the :guilabel:`Other Inputs` table. Odoo
+has a comprehensive list of excluded and non-excluded ETPs for companies to select from.
+
+.. image:: australia/payroll-termination-etp.png
+   :alt: Adding employment termination payments
+
+.. note::
+   Withholding for unused leaves and ETPs is computed according to the ATO's `Schedule 7
+   <https://www.ato.gov.au/tax-rates-and-codes/payg-withholding-schedule-7-tax-table-for-unused-leave-payments-on-termination-of-employment>`_
+   and `Schedule 11 <https://www.ato.gov.au/tax-rates-and-codes/payg-withholding-schedule-11-tax-table-for-employment-termination-payments>`_
+   and updated as of 01 July 2024.
+
+.. tip::
+   Once an employee has been terminated and the last detailed of their employment resolved, you can
+   archive the employee by clicking the :icon:`fa-cog` (:guilabel:`Actions`) icon, then
+   :icon:`oi-archive` :guilabel:`Archive` on the employee's form view.
+
+Switching from another STP software to Odoo
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When switching from another STP-enabled software to Odoo, you might need to maintain the continuity
+in the YTD values of your employees. Odoo allows importing employees' YTD values by going to
+:menuselection:`Payroll --> Configuration --> Settings` and clicking :guilabel:`Import YTD
+Balances`.
+
+.. image:: australia/payroll-ytd-button.png
+   :alt: Import YTD balances button
+
+For the ATO to recognize the employee records of your previous software and keep a continuity in
+Odoo, you must enter the:
+
+- :guilabel:`Previous BMS ID` (one per database)
+- :guilabel:`Previous Payroll ID` (one per employee)
+
+Ask your previous software provider if you cannot find its BMS ID or your employees' payroll IDs.
+
+.. image:: australia/payroll-ytd-import.png
+   :alt: Importing YTD balances
+
+This will give you the opportunity to add your employees' YTD opening balances in the current
+fiscal year. The ATO reports on a lot of different types of YTD. These are represented by the 13
+following :guilabel:`Salary Rules` in Odoo.
+
+.. image:: australia/payroll-ytd-salary-rules.png
+   :alt: Salary rules for an employee
+
+.. example::
+   Let us say that the employee Marcus Cook has been transitioned from another STP-enabled software
+   on September 1. Marcus has received two monthly payslips in his previous software (for July and
+   August). Here are the YTD balances Marcus's company needs to transfer to Odoo:
+
+   .. list-table::
+      :header-rows: 1
+
+      * - YTD category
+        - YTD balance to transfer
+      * - Gross (normal attendance)
+        - $13,045.45
+      * - Gross (overtime)
+        - $1,000
+      * - Paid leave
+        - $954.55
+      * - Laundry allowance
+        - $200
+      * - Total withholding
+        - $2,956
+      * - Super Guarantee
+        - $1,610
+
+If some YTD balances need to be reported with more granularity to the ATO, you can use the salary
+rule's inputs.
+
+.. example::
+   For instance, the *Basic Salary* rule can contain six inputs, and three are necessary in our
+   example: regular gross amounts, overtime, and paid leaves. These are all reported differently in
+   terms of YTD amounts.
+
+   .. image:: australia/payroll-ytd-basic-rule.png
+      :alt: Adding YTD inputs
+
+   The finalized YTD opening balances for Marcus Cook look like the following.
+
+   .. image:: australia/payroll-ytd-final.png
+      :alt: Example of finalized YTD opening balances
+
+As a result, YTD computations on payslips are based on the employee's opening balances instead of
+starting from zero.
+
+STP finalisation
+~~~~~~~~~~~~~~~~
+
+.. important::
+   Odoo is currently in the process of becoming compliant with STP Phase 2, and the finalisation
+   flows described below do not yet submit data to the ATO.
+
+EOFY finalisation
+*****************
+
+Employers reporting through STP must make a finalization declaration by 14 July each year. To do so,
+go to :menuselection:`Payroll --> Reporting --> STP Finalisation`.
+
+.. image:: australia/payroll-stp-eofy-finalisation.png
+   :alt: EOFY finalisation of an employee
+
+Both active and terminated employees to finalise are displayed.
+
+.. image:: australia/payroll-stp-eofy-list.png
+   :alt: List of employees to finalise
+
+From the finalisation form view, you can proceed with a final audit of all employees' payslips
+during the relevant financial year. Once ready, click :guilabel:`Submit to ATO`. When you have made
+the finalisation declaration, employees will see the status of their payment information change to
+:guilabel:`Tax ready` on their online income statement after the end of the financial year.
+
+Individual finalisation
+***********************
+
+Odoo also allows you to finalise employees individually during the year. This can be useful when:
+
+- one-off payments are made after a first finalisation; and
+- finalisation after termination of employment during the year.
+
+To proceed with an individual finalisation, go to :menuselection:`Payroll --> Reporting --> STP
+Finalisation`, leave the :guilabel:`EOFY Declaration` checkbox unticked, and manually add employees
+to be finalised.
+
+.. image:: australia/payroll-stp-individual.png
+   :alt: Individual EOFY finalisation
+
+Even if you finalise an employee record partway through the financial year, the ATO will not
+pre-fill the information into the employee's tax return until after the end of the financial year.
+
+Adjustments
+~~~~~~~~~~~
+
+.. important::
+   Odoo is currently in the process of becoming compliant with STP Phase 2, and the adjustment flows
+   described below do not yet submit data to the ATO.
+
+Amend finalisation
+******************
+
+If you need to amend YTD amounts for an employee after a finalisation declaration was made, it is
+still possible to remove the finalisation indicator for that employee. To do so, go to
+:menuselection:`Payroll --> Reporting --> STP Finalisation`, select the employee, and leave the
+:guilabel:`Finalisation` checkbox unticked.
+
+.. image:: australia/payroll-stp-amend.png
+   :alt: Amending YTD amounts for an employee
+
+When ready, click :guilabel:`Submit to ATO` to file the finalisation update to the ATO.
+
+Once the correct YTD details are ready for that employee after amendment, finalise that employee
+again.
+
+.. note::
+   The ATO expects employers to correct errors within 14 days of detection or, if your pay cycle is
+   longer than 14 days (e.g., monthly), by the date you would be due to lodge the next regular pay
+   event. Finalisation amendments can be done through STP up to five years after the end of the
+   financial year.
+
+Finalising and amending finalisation for a single employee can also be useful when rehiring an
+employee within the same financial year.
+
+Full file replacements
+**********************
+
+An employer can make full file replacements of pay runs to replace the last lodgement sent to the
+ATO if it turns out to contain significantly inaccurate data.
+
+To do so, open the last STP submission and click :guilabel:`Replace File`. Then, select which
+payslips need to be reset by ticking the :guilabel:`Reset Payslip` checkbox.
+
+.. image:: australia/payroll-stp-reset-payslips.png
+   :alt: Replace file button
+
+Resetting payslips does not create new payslips or a new pay run, but instead:
+
+- The payslips batch is reset from :guilabel:`Paid` or :guilabel:`Done` to :guilabel:`Confirmed`.
+- The status of the reset payslips revert back to :guilabel:`Draft`.
+- The correct payslips remain paid and matched against the original payment.
+- A new STP submission is created to replace the former one. For traceability purposes, the former
+  STP submission is not deleted but marked as replaced.
+
+First, correct the reset payslips and create their draft entry. Once done, the :guilabel:`Submit to
+ATO` reappears on the payslip batch to process the full file replacement.
+
+.. image:: australia/payroll-stp-resubmit.png
+   :alt: Resubmitting a payslip batch
+
+When ready, submit the pay run to the ATO once again. Please note that full file replacements are
+only meant as a last resort to amend a substantial amount of erroneous data. When possible, the ATO
+recommends correcting an incorrect payslips by submitting a correction as part of the next pay run
+or via update event.
+
+Moreover, it is not possible to submit a second full file replacement of the same submission, and a
+full file replacement can only be done once every 24 hours.
+
+Zero out YTD values
+*******************
+
+In case of a mid-year change of several key identifiers, YTD values need to be zeroed out, and then
+re-posted with the updated key identifier.
+
+For the following **company identifiers**, all employees need to be zeroed out:
+
+- ABN
+- Branch Code
+- BMS ID
+
+For the following **employee identifiers**, only individual employees can be zeroed out:
+
+- TFN
+- Payroll ID
+
+#. Before updating any key identifiers, create a new STP submission by going to
+   :menuselection:`Payroll --> Reporting --> Single Touch Payroll` and:
+
+   - Change the :guilabel:`Submission Type` to :guilabel:`Update`.
+   - Tick the :guilabel:`Zero Out YTD` checkbox.
+   - Click :guilabel:`Add a line` to specify which employees.
+   - Click :guilabel:`Submit to ATO`.
+
+   .. image:: australia/payroll-stp-zero-out.png
+      :alt: Creating a new STP submission to zero out YTD values
+
+#. Once that is done, modify the key identifier(s) to amend.
+
+#. Finally, go back to :menuselection:`Payroll --> Reporting --> Single Touch Payroll` to create and
+   submit a new :guilabel:`Update`, this time without ticking the :guilabel:`Zero Out YTD` checkbox.
+   This will notify the ATO that the previously recorded YTD balances are to be adjusted to the new
+   key identifiers.
+
+Payroll links to other apps
+---------------------------
+
+Time Off
+~~~~~~~~
+
+The :doc:`Time Off app <../../hr/time_off>` is natively integrated with the Payroll app in Odoo.
+Different types of leaves will populate payslips based on the concept of *work entries*.
+
+Go to :menuselection:`Time Off --> Configuration --> Time Off Types`, and for each type, configure
+the following two fields under the :guilabel:`Payroll` section:
+
+- :guilabel:`Work Entry Type`: defines which work entry should be selected on the :guilabel:`Worked
+  Days` table of the payslip.
+- :guilabel:`Unused Leave Type`: choose between :guilabel:`Annual`, :guilabel:`Long Service`, or
+  :guilabel:`Personal Leave`. If :guilabel:`Personal Leave` is selected, the remaining leave balance
+  for this time off type will not show up as an entitlement at the time of termination. Unused
+  leaves of the type :guilabel:`Annual` will include leave loading if the employee is eligible for
+  it.
+
+.. image:: australia/payroll-time-off.png
+   :alt: Configuring time off types
+
+Expenses
+~~~~~~~~
+
+The :doc:`Expenses app <../expenses>` is also natively integrated with the Payroll app in Odoo.
+First of all, go to :menuselection:`Expenses --> Configuration --> Settings` and enable
+:guilabel:`Reimburse in Payslip`.
+
+When an employee on your payroll submits an approved expense to be reimbursed, you can reimburse
+them using two ways:
+
+- If the expense is to be reimbursed outside of a pay run, click :guilabel:`Post Journal Entries`.
+  The payment must be made manually.
+- If the expense is to be reimbursed as part of the next pay run, click :guilabel:`Report in Next
+  Payslip` instead.
+
+.. image:: australia/payroll-expenses-reimburse.png
+   :alt: Two ways of reimbursing an expense
+
+After an expense has been added to the next payslip, you can find it in the :guilabel:`Other Inputs`
+table. This input type is then computed as an addition to the net salary.
+
+.. image:: australia/payroll-expenses-payslip.png
+   :alt: The expense reimbursement on a payslip
+
+After paying the employee, the payslip's journal item related to the employee's reimbursement is
+automatically matched against the expense's vendor bill.
+
+.. image:: australia/payroll-expenses-journal.png
+   :alt: The payslip's journal item related to the employee's expense reimbursement
+
+Advanced configurations
+-----------------------
+
+.. _australia/payroll/other-input-types:
+
+Other input types
+~~~~~~~~~~~~~~~~~
+
+You can access other input types by going to :menuselection:`Payroll --> Configuration --> Other
+Input Types`. There are 63 other input types related to Australia. We do not recommend using the
+other ones as part of your payroll solution, since they cannot be used in the frame of STP. You can
+archive or delete them.
+
+On each input type, the following fields are important:
+
+- :guilabel:`Payment Type` classifies input types in six categories:
+
+  #. :guilabel:`Allowance`: a separate amount you pay to your employees in addition to salary and
+     wages. Some of these allowances are mandated by modern awards: laundry, transport, etc.
+
+     .. important::
+        `Contact us <https://www.odoo.com/help>`_ if you plan to use allowances subject to varied
+        rates of withholding (such as *cents per KM* or *travel allowances*) to see whether Odoo
+        currently covers your business case.
+
+     .. note::
+        - As of Odoo 18, some allowances such as :guilabel:`Laundry: Allowance for approved
+          uniforms` are managed by two other inputs: one to lodge the amount paid up to the ATO
+          limit, and the other one to lodge the amount exceeding the ATO limit. This is necessary
+          for Odoo to compute PAYGW correctly.
+        - Some businesses may require to shift the reporting of an allowance from :guilabel:`OTE` to
+          :guilabel:`Salary & Wages` depending on the employee. In this case, you must duplicate and
+          re-configure an existing other input type. For example, :guilabel:`Work-Related
+          Non-Expense` allowance is :guilabel:`OTE` by default.
+
+  #. :guilabel:`Deduction`: union fees and child support deductions are considered deductions.
+  #. :guilabel:`ETP`: employment termination payments. These are either considered excluded or
+     non-excluded (see `ATO's web page on ETP components taxation <https://www.ato.gov.au/individuals-and-families/jobs-and-employment-types/working-as-an-employee/leaving-your-job/employment-termination-payments-for-employees/how-etp-components-are-taxed>`_).
+  #. :guilabel:`Leave`: leave-related other inputs that are not pertaining to a single pay period
+     (lump sum, cashing out leaves while in service, unused leaves, etc.).
+  #. :guilabel:`Lump Sum`: return to work and lump sum E (for back payments) fall under this
+     category.
+  #. :guilabel:`Other`: other payments with their own specific logic.
+
+- :guilabel:`PAYGW Treatment` affects how Odoo withholds tax for this input type:
+  :guilabel:`Regular`, :guilabel:`No PAYG Withholding`, and :guilabel:`Excess Only` (for
+  allowances).
+- :guilabel:`Superannuation Treatment`: :guilabel:`OTE`, :guilabel:`Salary & Wages`, and
+  :guilabel:`Not Salary & Wages`.
+- :guilabel:`STP Code`: only visible in :ref:`developer mode <developer-mode>`, this field tells
+  Odoo how to report the gross value of this payment to the ATO. We do not recommend changing the
+  value of this field if it was already set by default.
+
+Grouping other input types by :guilabel:`Payment Type` can help you understand the different
+scenarios in which these inputs can be used.
+
+.. image:: australia/payroll-other-input-types.png
+   :alt: Other input types grouped by payment type
+
+.. _australia/payroll/work-entry-types:
+
+Work entry types
+~~~~~~~~~~~~~~~~
+
+A *work entry type* is a type of attendance for employees (e.g., attendance, paid leave, overtime,
+etc.). A few work entry types are created by default in every Australian database.
+
+.. image:: australia/payroll-work-entry-types.png
+   :alt: Default work entry types for the Australian localization
+
+Before using Odoo's payroll solution for Australia, it is recommended you trim work entry types to
+keep the ones you need only by going to :menuselection:`Payroll --> Configuration --> Work Entry
+Types`
+
+For each type, make sure to configure the following fields for Australia:
+
+- :guilabel:`Is OTE`: determines whether time spent in this category can be considered ordinary time
+  earnings, meaning that the superannuation guarantee rate will apply (e.g., regular attendance,
+  paid leave, etc.).
+- :guilabel:`Penalty Rate`: used to determine the percentage of penalty that applies to time spent
+  in this category. It is important that you configure the penalty rate that applies in your state
+  or industry according to the type of work (e.g., Saturday rate, Sunday rate, overtime rate, etc.).
+- :guilabel:`STP Code`: only visible in :ref:`developer mode <developer-mode>`, this field tells
+  Odoo how to report the time spent in this category to the ATO. We do not recommend changing the
+  value of this field if it was already set by default.
+
+.. image:: australia/payroll-work-entry-types-configuration.png
+   :alt: Configuring a work entry type
+
+Current limitations
+-------------------
+
+As of Odoo 18, we do not recommend companies to use the Payroll app for the following business
+flows:
+
+- Income stream types: Foreign Employment Income
+- Tax treatment category: actors & performers
+- Death benefits reporting
+- Reporting obligations for WPN (instead of ABN)
+- Allowances subject to a varied rate of withholding (such as *cents per kilometer* allowance and
+  *travel allowances*)
+
+`Contact us <https://www.odoo.com/help>`_ if you would like to make sure whether Odoo fits your
+payroll requirements in Australia.
+
+.. _australia/payroll/employment-hero:
+
+Employment Hero integration
+---------------------------
+
+If your business is already up and running with Employment Hero, you can use the connector as an
+alternative payroll solution. The Employment Hero module synchronizes payslip accounting entries
+(e.g., expenses, social charges, liabilities, taxes) automatically from Employment Hero to Odoo.
+Payroll administration is still done in Employment Hero; Odoo only records the journal entries.
+
+Configuration
+~~~~~~~~~~~~~
+
+#. :ref:`Install <general/install>` the Employment Hero Payroll module (`l10n_employment_hero`).
+#. Configure the Employment Hero API by going to :menuselection:`Accounting --> Configuration -->
+   Settings`. More fields become visible after ticking the :guilabel:`Enable Employment Hero
+   Integration` checkbox.
+
+   .. image:: australia/payroll-employment-hero-settings.png
+      :alt: Enabling the Employment Hero integration
+
+   - Find the :guilabel:`API Key` in the :guilabel:`My Account` section of the Employment Hero
+     platform.
+
+     .. image:: australia/payroll-employment-hero-api-key.png
+        :alt: Finding the Employment Hero API key under the My Account section
+
+   - The :guilabel:`Payroll URL` is pre-filled with `https://keypay.yourpayroll.com.au`.
+
+     .. warning::
+        Do not change the pre-filled :guilabel:`Payroll URL`.
+
+   - Find the :guilabel:`Business Id` in the Employment Hero URL (e.g., `189241`).
+
+     .. image:: australia/payroll-employment-hero-business-id.png
+        :alt: Finding the Employment Hero Business ID in the URL
+
+   - Select any Odoo journal as the :guilabel:`Payroll Journal` to post the payslip entries.
+
+#. Configure the tax by going to :menuselection:`Accounting --> Configuration --> Taxes`. Create the
+   necessary taxes for the Employment Hero payslip entries. Fill in the tax code from Employment
+   Hero in the :menuselection:`Matching Employment Hero Tax` field.
+
+The API explained
+~~~~~~~~~~~~~~~~~
+
+The API syncs the journal entries from Employment Hero to Odoo and leaves them in draft mode. The
+reference includes the Employment Hero payslip entry ID in brackets for the user to easily retrieve
+the same record in Employment Hero and Odoo.
+
+.. image:: australia/payroll-employment-hero-journal.png
+   :alt: Employment Hero journal entries in Odoo
+
+By default, the synchronization happens once per week. It is possible to fetch the records manually
+by going to :menuselection:`Accounting --> Configuration --> Settings` and, in the
+:guilabel:`Employment Hero`, clicking :guilabel:`Fetch Payruns Manually`.
+
+Employment Hero payslip entries also work based on double-entry bookkeeping. The accounts used by
+Employment Hero are defined in the Payroll settings section.
+
+.. image:: australia/payroll-employment-hero-accounts.png
+   :alt: Finding the Employment Hero accounts
+
+For the API to work, you must create the same accounts as the default accounts of your Employment
+Hero business (same name and same code) in Odoo. You also need to choose the correct account types
+in Odoo to generate accurate financial reports.
