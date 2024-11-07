@@ -5,6 +5,8 @@ Canada
 .. |COA| replace:: :abbr:`CoA (Chart of Accounts)`
 .. |AR| replace:: :abbr:`AR (Accounts Receivable)`
 .. |AP| replace:: :abbr:`AP (Accounts Payable)`
+.. |CPA| replace:: :abbr:`CPA (Chartered Professional Accountant)`
+.. |FCN| replace:: :abbr:`FCN (Next File Creation Number)`
 
 The Odoo Canada localization package provides tailored features and configurations for Canadian
 businesses.
@@ -42,6 +44,9 @@ localization:
    * - :guilabel:`Canada - Accounting Reports`
      - `l10n_ca_reports`
      - Adds Canadian accounting reports.
+   * - :guilabel:`CPA005 Payments`
+     - `l10n_ca_payment_cpa005`
+     - Enables the export of payments as :ref:`CPA 005 files <l10n_ca/cpa005>` for use in Canada.
    * - :guilabel:`Canadian Checks Layout`
      - `l10n_ca_check_printing`
      - Enables the printing of payments on pre-printed check paper. Supports the three most common
@@ -54,6 +59,25 @@ localization:
          <https://checkdepot.net/collections/computer-checks/odoo+middle-check>`_
        - `Check on bottom: ADP standard
          <https://checkdepot.net/collections/computer-checks/odoo+Bottom-Check>`_
+
+
+Company
+-------
+
+Configure the company record by navigating to :menuselection:`Settings --> General Settings` and
+find the :guilabel:`Companies` section. From here, select the :icon:`oi-arrow-right`
+:guilabel:`Update Info` button to modify the following company fields:
+
+- :guilabel:`Company Name`: name of the company.
+- :guilabel:`Address`: the complete address of the company, be sure the :guilabel:`Country` is set
+  as :guilabel:`Canada`.
+- :guilabel:`Short Name used in Canadian EFT`: 15 character field used to represent a short version
+  of the *Originator's name* in Canadian EFT files. It is typically used for bank statements. Most
+  banks **require** this value to be all uppercase.
+
+.. note::
+   Both the :guilabel:`Company Name` and the :guilabel:`Short Name used in Canadian EFT` appear in
+   the :ref:`CPA 005 file <l10n_ca/cpa005>`.
 
 .. _l10n_ca/coa:
 
@@ -309,3 +333,114 @@ In the Odoo Canadian localization, pre-authorized debits are facilitated through
    - :doc:`Setting up payment providers <../payment_providers>`
    - `Stripe's pre-authorized debit payments documentation
      <https://docs.stripe.com/payments/acss-debit>`_
+
+.. _l10n_ca/cpa005:
+
+|CPA| 005 file to pay vendors
+=============================
+
+To use the |CPA| 005 file, a type of electronic funds transfer (EFT) document, to pay vendors, first
+configure the :ref:`Bank journal <l10n_ca/cpa005/bank-journal>` and
+:ref:`Vendor <l10n_ca/cpa005/vendor>`. Then, follow the :ref:`workflow <l10n_ca/cpa005/workflow>`.
+
+.. _l10n_ca/cpa005/bank-journal:
+
+Configuration
+-------------
+
+Bank journal
+~~~~~~~~~~~~
+
+Navigate to :menuselection:`Accounting --> Configuration --> Journals` and then select the
+:guilabel:`Bank` journal.
+
+In the :guilabel:`Bank` journal record, select the :guilabel:`Outgoing Payments` tab.
+
+Be sure :guilabel:`Canadian EFT` is listed under the :guilabel:`Payment Method`.
+
+In the :guilabel:`Canadian EFT/CPA configuration`, configure the fields that where provided by the
+bank and are needed for generating the EFT file:
+
+- :guilabel:`Destination Data Center`: 5-digit ID.
+- :guilabel:`Originator ID`: 10-digit code.
+
+  .. important::
+     Some banks require the :guilabel:`Originator ID` to combine the :guilabel:`Destination Data
+     Center` ID with the routing number. Please check with the bank for the expected format.
+
+- :guilabel:`Next File Creation Number (FCN)`: used when validating a Canadian EFT batch payment and
+  is printed in the XML file. The |FCN| is a 4-digit sequence from `0001` to `9999`.
+
+  .. important::
+     Some banks require a specific |FCN| number, please check with the bank.
+
+  .. tip::
+     If any details of the |FCN| need to be adjusted, go to :menuselection:`Settings --> Technical
+     --> Sequences` and search for `FCN`.
+
+Next, select the :guilabel:`Journal Entries` tab and configure the following fields:
+
+- :guilabel:`Account Number`: Select an existing bank account number or :ref:`create a new one
+  <bank_accounts/number>` by selecting the :icon:`oi-arrow-right` :guilabel:`(Internal link)` icon.
+
+  Be sure to select a :guilabel:`Bank`, set a :guilabel:`Financial Institution ID Number`, and to
+  enable :guilabel:`Send Money`.
+- :guilabel:`Bank`: Automatically selected depending on the :guilabel:`Account Number`.
+
+.. important::
+   To validate the bank account, the user **must** have the permission to do so. To confirm,
+   navigate to :menuselection:`Settings --> Users & Companies --> Users`, select the user, and in
+   the :guilabel:`Access Rights` tab find the :guilabel:`Accounting` section.
+
+   From here, make sure the :guilabel:`Bank` field is set to :guilabel:`Validate bank account`.
+
+.. _l10n_ca/cpa005/vendor:
+
+Vendor
+~~~~~~
+
+Navigate to :menuselection:`Accounting --> Vendors --> Vendors` and choose a vendor to set up their
+bank account information.
+
+In the :guilabel:`Accounting` tab, be sure to configure :guilabel:`Bank Accounts`.
+
+.. _l10n_ca/cpa005/workflow:
+
+Workflow
+--------
+
+First, :ref:`create the vendor bills <vendor_bills/create>`  and :ref:`register the payments
+<vendor_bills/payment>`.
+
+- :guilabel:`Payment Type`: select :guilabel:`Send`.
+- :guilabel:`Vendor`: select the vendor to assign to this payment.
+- :guilabel:`Ammount`: set a payment amount.
+- :guilabel:`Date`: select the date of the payment.
+- :guilabel:`Memo`: write in a memo description.
+- :guilabel:`Journal`: select :guilabel:`Bank`.
+- :guilabel:`Payment Method`: select :guilabel:`Canadian EFT`.
+- :guilabel:`EFT/CPA transaction code`: select the desired transaction code.
+- :guilabel:`Vendor Bank Account`: select the vendor's bank account.
+
+.. note::
+   Alternativly, a :doc:`payment can be created independently <../accounting/payments>`. Be sure to
+   select :guilabel:`Canadian EFT` as the :guilabel:`Payment Method`.
+
+Finally, create a batch payment by navigating to :menuselection:`Accounting --> Vendors -->
+Payments`. Select the checkboxes for each of the vendor payments to include in the batch, then
+select the :guilabel:`Create Batch` button to create a new batch payment.
+
+.. tip::
+   The payments included in a batch are not restricted by the same vendor.
+
+Existing batch payments can be managed from :menuselection:`Accounting --> Vendors --> Batch
+Payments`. The export :file:`.txt` file displays in the chatter of the batch payment.
+
+.. note::
+   Please be aware that after importing the :file:`.txt` file to the bank, it may take up to 48
+   hours to process the payment. Plan ahead if a deadline exists, such as payroll, to avoid legal
+   issues.
+
+.. important::
+   Please validate the batch payment only once the date is confirmed. It is difficult to modify a
+   validated batch payment.
