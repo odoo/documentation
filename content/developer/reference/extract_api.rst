@@ -2,13 +2,13 @@
 Extract API
 ===========
 
-Odoo provides a service to automate the processing of documents of type **invoices**, **expenses**
-or **resumes**.
+Odoo provides a service to automate the processing of documents of type **invoices**, **bank statements**,
+**expenses** or **resumes**.
 
 The service scans documents using an :abbr:`OCR (Optical Character Recognition)` engine and then
 uses :abbr:`AI(Artificial Intelligence)`-based algorithms to extract fields of interest such as the
-total, due date, or invoice lines for *invoices*, the total, date for *expenses*,
-or the name, email, phone number for *resumes*.
+total, due date, or invoice lines for *invoices*, the initial and final balances, the date for
+*bank statements*, the total, date for *expenses*, or the name, email, phone number for *resumes*.
 
 This service is a paid service. Each document processing will cost you one credit.
 Credits can be bought on `iap.odoo.com <https://iap.odoo.com/iap/in-app-services/259?sortby=date>`_.
@@ -32,7 +32,8 @@ Version
 The version of the Extract API is specified in the route.
 
 The latest versions are:
-    - invoices: 122
+    - invoices: 123
+    - bank statements: 100
     - expenses: 132
     - applicant: 102
 
@@ -67,6 +68,7 @@ Routes
 ------
 
     - /api/extract/invoice/2/parse
+    - /api/extract/bank_statement/1/parse
     - /api/extract/expense/2/parse
     - /api/extract/applicant/2/parse
 
@@ -213,6 +215,7 @@ Routes
 ------
 
     - /api/extract/invoice/2/get_result
+    - /api/extract/bank_statement/1/get_result
     - /api/extract/expense/2/get_result
     - /api/extract/applicant/2/get_result
 
@@ -382,7 +385,7 @@ Invoices are complex and can have a lot of different fields. The following table
 list of all the fields we can extract from an invoice.
 
 +-------------------------+------------------------------------------------------------------------+
-| Feature name            | Specifities                                                            |
+| Feature name            | Specificities                                                          |
 +=========================+========================================================================+
 | ``SWIFT_code``          | ``content`` is a dictionary encoded as a string.                       |
 |                         |                                                                        |
@@ -453,31 +456,56 @@ list of all the fields we can extract from an invoice.
 +-------------------------+------------------------------------------------------------------------+
 
 
-``feature_result`` for the ``invoice_lines`` feature
-****************************************************
+``invoice_lines`` feature
+*************************
 
-It follows a more specific structure. It is basically a list of dictionaries where each dictionary
-represents an invoice line. Each value follows a
-:ref:`latestextract_api/get_result/feature_result` structure.
+It is returned as a list of dictionaries where each dictionary represents an invoice line.
 
 .. code-block:: js
 
     "invoice_lines": [
         {
-            "description": feature_result,
-            "discount": feature_result,
-            "product": feature_result,
-            "quantity": feature_result,
-            "subtotal": feature_result,
-            "total": feature_result,
-            "taxes": feature_result,
-            "total": feature_result,
-            "unit": feature_result,
-            "unit_price": feature_result
+            "description": string,
+            "quantity": float,
+            "subtotal": float,
+            "total": float,
+            "taxes": list[float],
+            "total": float,
+            "unit_price": float
         },
         ...
     ]
 
+Bank statements
+~~~~~~~~~~~~~~~
+
+The following table gives a list of all the fields that are extracted from bank statements.
+
++-------------------------+------------------------------------------------------------------------+
+| Feature name            | Specificities                                                          |
++=========================+========================================================================+
+| ``balance_start``       | ``content`` is a float                                                 |
++-------------------------+------------------------------------------------------------------------+
+| ``balance_end``         | ``content`` is a float                                                 |
++-------------------------+------------------------------------------------------------------------+
+| ``date``                | ``content`` is a string                                                |
++-------------------------+------------------------------------------------------------------------+
+
+``bank_statement_lines`` feature
+********************************
+
+It is returned as a list of dictionaries where each dictionary represents a bank statement line.
+
+.. code-block:: js
+
+    "bank_statement_lines": [
+        {
+            "amount": float,
+            "description": string,
+            "date": string,
+        },
+        ...
+    ]
 
 Expense
 ~~~~~~~
@@ -486,7 +514,7 @@ The expenses are less complex than invoices. The following table gives an exhaus
 fields we can extract from an expense report.
 
 +-------------------------+------------------------------------------------------------------------+
-| Feature name            | Specifities                                                            |
+| Feature name            | Specificities                                                          |
 +=========================+========================================================================+
 | ``description``         | ``content`` is a string                                                |
 +-------------------------+------------------------------------------------------------------------+
@@ -506,7 +534,7 @@ This third type of document is meant for processing resumes. The following table
 list of all the fields we can extract from a resume.
 
 +-------------------------+------------------------------------------------------------------------+
-| Feature name            | Specifities                                                            |
+| Feature name            | Specificities                                                          |
 +=========================+========================================================================+
 | ``name``                | ``content`` is a string                                                |
 +-------------------------+------------------------------------------------------------------------+
