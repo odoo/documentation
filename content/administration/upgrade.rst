@@ -430,10 +430,8 @@ Upgrade services not covered by the SLA
 The following upgrade-related services are **not** included:
 
 - the **cleaning** of pre-existing data and configurations while upgrading;
-- the upgrade of **custom modules created in-house or by third parties**, including Odoo partners;
-- lines of **code added to standard modules**, i.e., customizations created outside the Studio app,
-  code entered manually, and :ref:`automated actions using Python code
-  <studio/automated-actions/action>`; and
+- the upgrade of **additional modules not covered by a maintenance contract** that are created
+  in-house or by third parties, including Odoo partners; and
 - **training** on using the upgraded version's features and workflows.
 
 .. seealso::
