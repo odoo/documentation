@@ -18,6 +18,8 @@ Configure the *Payroll* app by navigating to :menuselection:`Payroll app --> Con
 Settings`. The various settings for accounting, localizations, time off, alerts, and payslips are
 specified here.
 
+.. _payroll-accounting:
+
 Accounting
 ----------
 

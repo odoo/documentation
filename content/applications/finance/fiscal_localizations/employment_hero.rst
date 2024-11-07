@@ -34,7 +34,7 @@ Configuration
      to the documentation specific to your localization.
 
      .. note::
-        Employment hero is available for :ref:`Australia <australia/employment-hero>`,
+        Employment hero is available for :ref:`Australia <australia/payroll/employment-hero>`,
         :ref:`Malaysia <malaysia/employment-hero>`,
         :ref:`New Zealand <new-zealand/employment-hero>`,
         :ref:`Singapore <singapore/employment-hero>`,
