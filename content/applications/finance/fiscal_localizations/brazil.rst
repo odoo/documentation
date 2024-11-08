@@ -24,6 +24,17 @@ with AvaTax.
 The localization also includes taxes and a chart of accounts template that can be modified if
 needed.
 
+.. seealso::
+   Links to helpful resources for the Brazilian localization, including onboarding materials and
+   videos:
+
+   - `Onboarding checklist for new users
+     <https://docs.google.com/document/d/e/2PACX-1vSNYTYVnR_BzvQKL3kn5YdVzPjjHc-WHw_U3udk5tz_dJXo69woj9QrTMinH_siyOX2rLGjvspvc8AF/pub>`_.
+   - `YouTube playlist - Brazil (Localization)
+     <https://youtube.com/playlist?list=PL1-aSABtP6ADqexw4YNCbKPmpFggajxlX&si=RgmZR3Jco3223Np4>`_.
+   - `YouTube playlist - Tutoriais Odoo em Português
+     <https://youtube.com/playlist?list=PL1-aSABtP6ACGOW2UREePGjHQ2Bgdy-UZ&si=j6tiI36eB7BoKVQB>`_.
+
 Configuration
 =============
 
