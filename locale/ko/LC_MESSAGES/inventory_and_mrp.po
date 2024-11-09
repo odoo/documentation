@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-07 08:27+0000\n"
+"POT-Creation-Date: 2024-11-04 11:48+0000\n"
 "PO-Revision-Date: 2023-11-08 08:57+0000\n"
 "Last-Translator: Sarah Park, 2024\n"
 "Language-Team: Korean (https://app.transifex.com/odoo/teams/41243/ko/)\n"
@@ -441,6 +441,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:34
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_three_steps.rst:14
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/storage_category.rst:26
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:96
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:22
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.rst:48
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst:16
@@ -455,12 +456,12 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels.rst:16
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack.rst:11
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:104
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:60
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:57
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:15
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:8
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:13
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:56
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:11
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:22
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/work_order_dependencies.rst:13
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:21
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting.rst:52
@@ -4478,17 +4479,17 @@ msgid ""
 " selected."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:171
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:173
 msgid "Apply route on packaging"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:173
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:175
 msgid ""
 "Then, to apply the route, go to :menuselection:`Inventory app --> Products "
 "--> Products`, and select the product that uses packaging."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:176
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:178
 msgid ""
 "In the product form, switch to the :guilabel:`Inventory` tab. In the "
 ":guilabel:`Packaging` section that contains :ref:`configured packagings "
@@ -4500,7 +4501,7 @@ msgstr ""
 "<inventory/product_management/packaging-setup>` 가 되어 있는 :guilabel:`패키지` 섹션에서"
 " |조정| 아이콘을 클릭합니다. :guilabel:`경로` 확인란을 선택하면 :guilabel:`패키지` 표에 해당 열이 표시됩니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:181
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:183
 msgid ""
 "In the :guilabel:`Routes` field, select the packaging-specific route. Repeat"
 " these steps for all packaging intended to use the route."
@@ -6311,7 +6312,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:372
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:391
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:233
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:235
 msgid "Manual"
 msgstr "수동"
 
@@ -8005,7 +8006,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:42
 msgid "Track by lots"
-msgstr ""
+msgstr "로트 기준으로 추적하기"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:44
 msgid ""
@@ -8674,22 +8675,24 @@ msgid ""
 ":guilabel:`Update Quantity` page. In the :guilabel:`On Hand Quantity` "
 "column, change the value to zero."
 msgstr ""
+"다음으로, 품목에 있는 :guilabel:`보유 중` 스마트 버튼을 클릭하여 :guilabel:`수령 업데이트` 페이지를 엽니다. "
+":guilabel:`보유 수량` 열에서, 값을 0으로 변경합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:33
 msgid ""
 "If the product is stored in multiple locations, make sure the **total** on "
 "hand quantity at **all** locations is zero."
-msgstr ""
+msgstr "품목이 여러 개의 위치에 보관되어 있는 경우에는, 반드시 **전체** 위치에 대해 **총** 보유 수량이 0인지 확인하세요."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst-1
 msgid ""
 "Show the Inventory Adjustments model, highlighting the \"On Hand Quantity\" "
 "field."
-msgstr ""
+msgstr "재고 조정 모델을 표시한 다음, \"보유 수량\" 필드를 강조 표시합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:41
 msgid "Change traceability setting"
-msgstr ""
+msgstr "추적 설정 변경하기"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:43
 msgid ""
@@ -8710,7 +8713,7 @@ msgstr "로트 및 일련번호를 활성화합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:56
 msgid "Restore on-hand quantity"
-msgstr ""
+msgstr "보유 수량 복원"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:58
 msgid ""
@@ -8759,21 +8762,21 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst-1
 msgid "Show the \"History\" button on the Inventory Adjustments page."
-msgstr ""
+msgstr "재고 조정 페이지에 있는 \"내역\" 버튼을 표시합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:85
 msgid ""
 "The inventory adjustment that changed the on-hand quantity to zero is "
 "displayed in the :guilabel:`Quantity` field."
-msgstr ""
+msgstr "재고 조정에서 보유 수량이 0으로 변경되어 :guilabel:`수량` 필드에 표시됩니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:0
 msgid "Show the history entry."
-msgstr ""
+msgstr "내역 항목이 표시됩니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:3
 msgid "Use serial numbers to track products"
-msgstr "일련번호를 사용하여 제품 추적"
+msgstr "일련번호로 품목 추적하기"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:5
 msgid ""
@@ -8969,7 +8972,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:104
 msgid "Assign serial numbers to newly received products"
-msgstr ""
+msgstr "신규 입고 품목에 일련번호 지정하기"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:106
 msgid ""
@@ -8984,11 +8987,11 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:111
 msgid ":doc:`create_sn`"
-msgstr ""
+msgstr ":doc:`create_sn`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst-1
 msgid "Display the bulleted list icon and Detailed Operations smart buttons."
-msgstr ""
+msgstr "글머리 기호 목록 아이콘과 세부 작업 스마트 버튼을 표시합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:118
 msgid ""
@@ -9012,6 +9015,8 @@ msgid ""
 "automatically assigning serial numbers, and copy/pasting serial numbers from"
 " a spreadsheet."
 msgstr ""
+"일련번호는 여러 가지 방법으로 지정할 수 있습니다. 수동으로 일련번호를 지정하거나, 자동으로 지정할 수도 있으며, 스프레드시트에서 "
+"복사하여 붙여넣을 수도 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:131
 msgid "Assign serial numbers automatically"
@@ -10654,19 +10659,19 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:103
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:154
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:156
 msgid "Create sales order"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:105
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:156
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:158
 msgid ""
 "To create a |SO|, navigate to the :menuselection:`Sales app`, and click "
 ":guilabel:`New`. This opens a blank sales quotation form."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:108
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:159
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:161
 msgid ""
 "Add a customer in the :guilabel:`Customer` field. Then, fill out the various"
 " fields on the sales quotation form, as necessary."
@@ -10683,14 +10688,14 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:118
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:169
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:171
 msgid ""
 "Once ready, click :guilabel:`Confirm`. This moves the quotation to the "
 ":guilabel:`Sales Order` stage."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:121
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:172
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:174
 msgid ""
 "Once the |SO| is confirmed, a :guilabel:`Delivery` smart button appears at "
 "the top of the form. Clicking the smart button opens the warehouse delivery "
@@ -10702,7 +10707,7 @@ msgid "Delivery smart button on confirmed sales order form."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:129
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:205
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:207
 msgid "Process delivery"
 msgstr ""
 
@@ -10717,7 +10722,7 @@ msgstr ""
 ":guilabel:`수요` 필드의 주문 수량과 일치하도록 변경합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:135
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:223
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:225
 msgid ""
 "Once ready, click :guilabel:`Validate`. Once validated, the delivery order "
 "moves to the :guilabel:`Done` stage."
@@ -10737,7 +10742,7 @@ msgstr ""
 ":guilabel:`입고 완료` 열에 있는 수량은 주문 :guilabel:`수량` 과 일치합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:147
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:227
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:229
 msgid ":doc:`../daily_operations`"
 msgstr ""
 
@@ -10944,11 +10949,11 @@ msgstr ""
 msgid "Internal transfer form for products ordered from vendor."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:147
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:149
 msgid "Process delivery order in two steps (pick + ship)"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:149
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:151
 msgid ""
 "When products are delivered in two steps, they move from warehouse stock to "
 "an output location. Then, they move from the output location to a customer "
@@ -10962,7 +10967,7 @@ msgstr ""
 msgid "Filled out new sales order form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:166
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:168
 msgid ""
 "Under the :guilabel:`Order Lines` tab, click :guilabel:`Add a product`, and "
 "select a product to add to the sales order quotation."
@@ -10972,17 +10977,17 @@ msgstr ""
 msgid "Delivery smart button on validated sales order form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:180
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:182
 msgid "Process picking"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:182
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:184
 msgid ""
 "Once the sales order is confirmed, a picking order is generated and ready to"
 " process."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:184
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:186
 msgid ""
 "To complete the picking, navigate to the :guilabel:`Inventory app`, and "
 "locate the :guilabel:`Pick` task card on the :guilabel:`Inventory Overview` "
@@ -10993,14 +10998,14 @@ msgstr ""
 ":guilabel:`피킹` 작업 카드를 찾습니다. 또는 판매주문서 양식 상단에 있는 :guilabel:`배송` 스마트 버튼을 통해 피킹 "
 "주문서에 액세스할 수도 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:188
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:190
 msgid ""
 "From the :guilabel:`Inventory Overview` page, click the :guilabel:`# To "
 "Process` button on the :guilabel:`Pick` task card. This reveals a list of "
 "all pickings to process."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:191
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:193
 msgid ""
 "Click on the picking (WH/PICK) operation associated with the sales order to "
 "reveal the picking order."
@@ -11010,19 +11015,19 @@ msgstr ""
 msgid "Picking order form for products included in sales order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:198
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:200
 msgid ""
 "Manually set the quantity by changing the value in the :guilabel:`Quantity` "
 "column, to match the value in the :guilabel:`Demand` column."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:201
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:203
 msgid ""
 "Once ready, click :guilabel:`Validate` to complete the picking, and move the"
 " product from :guilabel:`WH/Stock` to :guilabel:`WH/Output.`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:207
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:209
 msgid ""
 "Once the picking is validated, a delivery order is created, and ready to "
 "process. Clicking the :guilabel:`Delivery` smart button on the sales order "
@@ -11031,14 +11036,14 @@ msgstr ""
 "피킹이 승인되면 배송주문서가 생성되고 처리할 준비가 완료됩니다. 판매주문서 양식에서 :guilabel:`배송` 스마트 버튼을 클릭하면 "
 "새로 생성한 배송주문서가 나타납니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:210
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:212
 msgid ""
 "Alternatively, to view the delivery order, navigate back to the "
 ":guilabel:`Inventory Overview` page, via the breadcrumbs, and locate the "
 ":guilabel:`Delivery Orders` task card."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:213
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:215
 msgid ""
 "Click the :guilabel:`# To Process` button on the task card to reveal a list "
 "of all delivery orders to process, and select the order associated with the "
@@ -11051,7 +11056,7 @@ msgstr ""
 msgid "Delivery order form for products ordered by customer."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:220
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:222
 msgid ""
 "To deliver the products, change the value in the :guilabel:`Quantity` field "
 "to match the ordered quantity in the :guilabel:`Demand` field."
@@ -12060,34 +12065,39 @@ msgid ""
 "`WH/Stock/Pallets`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:5
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:3
 msgid "Routes and push/pull rules"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:7
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:5
 msgid ""
-"In inventory management, the supply chain strategy determines when products "
-"should be purchased/manufactured, delivered to distribution centers, and "
-"made available to the retail channel."
+"*Routes* in Odoo control the movement of products between different "
+"locations, whether internal or external, using push and pull rules. Once set"
+" up, these rules help automate the logistics of product movement based on "
+"specific conditions."
 msgstr ""
-"재고 관리 영역에서 공급망 전략은 제품을 구매 또는 제조하여 유통 센터로 배송하고 소매 채널에서 사용할 수 있도록 하는 최적의 시기를 "
-"결정하는 데 중요한 역할을 합니다."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:10
+msgid ""
+"`Odoo Tutorials: Routes <https://www.youtube.com/watch?v=qkhDUezyZuc>`_"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:11
-msgid ""
-"In Odoo, a product's supply chain strategy can be configured using *Routes*,"
-" which feature *Pull and Push Rules*. Once everything is properly "
-"configured, the Inventory app can automatically generate transfers following"
-" the configured push/pull rules."
+msgid ":doc:`Standard routes in Odoo <../daily_operations>`"
 msgstr ""
-"Odoo 내에서 *풀 및 푸시 규칙*이 통합된 *경로*를 활용하여 제품에 대한 공급망 전략을 설정할 수 있습니다. 적절하게 구성하면 "
-"Odoo의 재고 앱은 지정된 푸시/풀 규칙에 따라 자동으로 이송을 생성할 수 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:16
-msgid "Inside the warehouse"
-msgstr "물류창고 내부"
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:14
+msgid ""
+"Routes are applicable on products, product categories, shipping methods, "
+":ref:`packagings <inventory/product_management/route-on-packaging>`, and on "
+"the sales order line."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:18
+msgid "About routes and terminology"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:20
 msgid ""
 "In a generic warehouse, there are receiving docks, a quality control area, "
 "storage locations, picking and packing areas, and shipping docks. All "
@@ -12102,7 +12112,7 @@ msgstr ""
 msgid "View of a generic warehouse with stock and quality control area."
 msgstr "재고 및 품질 관리 구역이 있는 일반 창고 전경."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:27
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:29
 msgid ""
 "In this example, vendor trucks unload pallets of ordered products at the "
 "receiving docks. Operators then scan the products in the receiving area. "
@@ -12119,7 +12129,7 @@ msgstr ""
 msgid "View of a generic push to rule when receiving products."
 msgstr "제품 입고 시 규칙에 대한 일반 푸시 보기."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:36
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:38
 msgid ""
 "Here is an example of a fulfillment route. In the morning, items are picked "
 "for all the orders that need to be prepared during the day. These items are "
@@ -12136,111 +12146,75 @@ msgstr ""
 msgid "View of a generic pull from rule when preparing deliveries."
 msgstr "배달을 준비할 때 규칙에서 일반 풀을 가져오는 보기입니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:46
-msgid "Pull rules"
-msgstr "풀 전략"
-
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:48
-msgid ""
-"With *Pull Rules*, a demand for some products triggers procurements, while "
-"*Push Rules* are triggered by products arriving in a specific location."
-msgstr ""
-"*풀 규칙*은 특정 제품에 대한 수요가 있을 때 활성화되어 해당 수요를 충족하기 위한 조달이 시작됩니다. *푸시 규칙*은 제품이 특정 "
-"위치에 도착하면 트리거됩니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:51
-msgid ""
-"Pull Rules are used to fulfill a sales order. Odoo generates a need at the "
-"*Customer Location* for each product in the order. Because pull rules are "
-"triggered by a need, Odoo looks for a pull rule defined on the *Customer "
-"Location*."
-msgstr ""
-"풀 규칙은 판매 주문을 처리하는 데 사용됩니다. Odoo는 주문에 포함된 각 제품에 대해 *고객 위치*에서 수요를 생성합니다. 이 수요에"
-" 의해 풀 규칙이 활성화되면 Odoo는 *고객 위치*에 구성된 해당 풀 규칙을 검색합니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:55
-msgid ""
-"In this case, a \"delivery order\" pull rule that transfers products from "
-"the *Shipping Area* to the *Customer Location* is found, and a transfer "
-"between the two locations is created."
-msgstr "이 경우 *배송 지역*에서 *고객 위치*로 제품을 전송하는 \"배송 주문\" 풀 규칙이 발견되고 두 위치 간에 이동이 생성됩니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:58
-msgid ""
-"Then, Odoo finds another pull rule that tries to fulfill the need for the "
-"*Shipping Area*: the \"packing\" rule that transfers products from the "
-"*Packing Area* to the *Shipping Area*. Finally, other pull rules are "
-"triggered until a transfer between the *Stock* and the *Picking Area* is "
-"created."
-msgstr ""
-"그 후, Odoo는 *배송 영역*에 대한 수요를 충족하기 위해 *포장 영역*에서 *배송 영역*으로의 제품 전송을 조율하는 \"포장\" "
-"규칙과 같은 추가 풀 규칙을 식별합니다. 마지막으로, *재고*와 *피킹 영역* 간의 전송이 생성될 때까지 다른 풀 규칙이 트리거됩니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:64
-msgid ""
-"All these product transfers are automatically generated by Odoo based on the"
-" pull rules, starting from the end (the customer location) and going "
-"backward (the stock warehouse). While working, the operator processes these "
-"transfers in the opposite order: first the picking, then the packing, and "
-"finally the delivery order."
-msgstr ""
-"Odoo는 엔드포인트 (고객 위치)에서 시작하여 역순으로 (재고 창고) 진행되는 풀 룰에 따라 이러한 모든 제품 이송을 자동으로 "
-"생성합니다. 작업자는 작업하는 동안 피킹부터 시작하여 포장, 배송 주문으로 마무리하는 역순을 따릅니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:70
 msgid "Push rules"
 msgstr "푸시 전략"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:72
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:50
 msgid ""
-"On the other hand, *Push Rules* are much easier to understand. Instead of "
-"generating documents based on needs, they are triggered in real time when "
-"products arrive in a specific location. Push rules basically say: \"when a "
-"product arrives at a specific location, move it to another location.\""
+"Push rules are used to *supply products into a storage locations* as soon as"
+" they arrive at a specific receiving location."
 msgstr ""
-"반면에 *푸시 규칙*은 훨씬 더 간단합니다. 필요에 따라 문서를 생성하는 것이 아니라 제품이 지정된 위치에 도착하면 즉시 트리거됩니다. "
-"기본적으로 푸시 규칙은 \"제품이 특정 위치에 도착하면 다른 위치로 옮기세요.\"라고 지시합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:76
-msgid ""
-"An example of a push rule would be: when a product arrives in the *Receipt "
-"Area*, move it to the *Storage Location*. As different push rules can be "
-"applied to different products, the user can assign different storage "
-"locations for different products."
-msgstr ""
-"푸시 규칙의 예는 제품이 *입고 구역*에 도착하면 *보관 위치*로 옮기는 것입니다. 제품마다 다른 푸시 규칙을 적용할 수 있으므로 "
-"사용자는 제품마다 서로 다른 보관 위치를 지정할 수 있습니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:80
-msgid ""
-"Another push rule could be: when products arrive at a location, move them to"
-" the *Quality Control Area*. Then, once the quality check is done, move them"
-" to their *Storage Location*."
-msgstr ""
-"또 다른 푸시 규칙은 제품이 특정 위치에 도착하면 *품질 관리 영역*으로 옮기는 것입니다. 그 후 품질 검사가 완료되면 지정된 *보관 "
-"위치*로 이동합니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:84
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:54
 msgid ""
 "Push rules can only be triggered if there are no pull rules that have "
 "already generated the product transfers."
 msgstr "푸시 규칙은 이미 제품 이송을 생성한 풀 규칙이 없는 경우에만 작동합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:88
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:57
 msgid ""
-"Sets of push/pull rules like those are called *Routes*. The grouping on the "
-"rule decides if products are grouped in the same transfer or not. For "
-"example, during the picking operation, all orders and their products are "
-"grouped in one transfer, whereas the packing operation respects the grouping"
-" per customer order."
+"In a :doc:`one-step receipt route <receipts_delivery_one_step>`, which uses "
+"one push rule, when a product arrives in the warehouse, a push rule can "
+"automatically transfer it to the *Storage Location*. Different push rules "
+"can be applied to different products, allowing for customized storage "
+"locations."
 msgstr ""
-"이와 같은 푸시/풀 규칙의 모음을 *경로*라고 합니다. 규칙 내의 그룹화에 따라 제품이 동일한 전송에 그룹화되는지 여부가 결정됩니다. "
-"예를 들어, 피킹 작업 중에는 모든 주문 및 관련 제품이 하나의 이송으로 그룹화되는 반면, 포장 작업에서는 고객 주문별 그룹화가 "
-"유지됩니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:96
-msgid "Use routes and rules"
-msgstr "경로 및 규칙 사용"
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:66
+msgid "Rule for a Receive in one step route."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:66
+msgid "Push rule for the 'Receive in one step' route."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:68
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:90
+msgid ""
+"For more information about configuring rules, skip to the :ref:`Configure "
+"rules section <inventory/shipping_receiving/configure-rules>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:72
+msgid "Pull rules"
+msgstr "풀 전략"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:74
+msgid ""
+"Pull rules trigger product moves on demand, such as a sales order or a "
+":doc:`need to restock "
+"<../../warehouses_storage/replenishment/reordering_rules>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:77
+msgid ""
+"Pull rules work backward from the demand location. For example, in a "
+":ref:`two-step delivery <inventory/shipping_receiving/two-step-delivery>` "
+"route, where items move from *Stock* to *Output* before being delivered to "
+"the *Customer Location*, the pull rule first creates a transfer from "
+"*Output* to the customer. If the product is not at *Output*, another pull "
+"rule creates a transfer from *Stock* to *Output*. The warehouse workers then"
+" process these transfers in the reverse order: picking, then shipping."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:88
+msgid "Example pull rule."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:88
+msgid "Pull rules for the 'Deliver in two steps' route."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:98
 msgid ""
@@ -12489,11 +12463,11 @@ msgstr "경로를 선택해야 하는 품목 양식 보기."
 msgid "Rules must be set on the route in order for the route to work."
 msgstr "경로가 작동하려면 경로에 규칙이 설정되어 있어야 합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:225
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:227
 msgid "Rules"
 msgstr "규칙"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:227
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:229
 msgid ""
 "The rules are defined on the route form. First, go to "
 ":menuselection:`Inventory --> Configuration --> Routes` and open the desired"
@@ -12508,7 +12482,7 @@ msgstr ""
 msgid "View of the rules menu, where it is possible to add new rules."
 msgstr "새 규칙을 추가할 수 있는 규칙 메뉴 보기입니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:235
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:237
 msgid ""
 "The available rules trigger various actions. If Odoo offers *Push* and "
 "*Pull* rules, others are also available. Each rule has an "
@@ -12517,7 +12491,7 @@ msgstr ""
 "사용 가능한 규칙은 다양한 동작을 트리거합니다. Odoo에서 *푸시* 및 *풀* 규칙을 제공하는 경우 다른 규칙도 사용할 수 있습니다. "
 "각 규칙에는 :guilabel:`추가 작업`이 있습니다:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:238
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:240
 msgid ""
 ":guilabel:`Pull From`: this rule is triggered by a need for the product in a"
 " specific location. The need can come from a sales order being validated or "
@@ -12528,7 +12502,7 @@ msgstr ""
 ":guilabel:`풀 방식`: 이 규칙은 특정 위치에서 제품이 필요할 때 트리거됩니다. 이러한 요구는 검증된 판매 주문 또는 특정 구성"
 " 요소가 필요한 제조 주문에서 발생할 수 있습니다. 대상 위치에 니즈가 나타나면 Odoo는 이 요건을 충족하기 위해 피킹을 생성합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:242
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:244
 msgid ""
 ":guilabel:`Push To`: this rule is triggered by the arrival of some products "
 "in the defined source location. In the case of the user moving products to "
@@ -12538,7 +12512,7 @@ msgstr ""
 "guilabel:`푸시 방식`: 이 규칙은 정의된 소스 위치에 일부 제품이 도착하면 트리거됩니다. 사용자가 제품을 소스 위치로 이동하면 "
 "Odoo는 해당 제품을 목적지 위치로 이동하는 피킹을 생성합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:245
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:247
 msgid ""
 ":guilabel:`Pull & Push`: this rule allows the generation of pickings in the "
 "two situations explained above. This means that when products are required "
@@ -12551,13 +12525,13 @@ msgstr ""
 " 필요한 경우 이 요구 사항을 충족하기 위해 이전 위치에서 이송이 시작됩니다. 그 후, 이 작업은 초기 위치에서 요구 사항을 생성하고 "
 "이를 충족하기 위한 규칙을 트리거합니다. 두 번째 요구 사항이 충족되면 제품이 목적지 위치로 푸시되어 모든 요구 사항이 충족됩니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:250
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:252
 msgid ""
 ":guilabel:`Buy`: when products are needed at the destination location, a "
 "request for quotation is created to fulfill the need."
 msgstr ":guilabel:`구매`: 목적지 위치에 제품이 필요한 경우, 필요를 충족하기 위해 견적 요청이 생성됩니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:252
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:254
 msgid ""
 ":guilabel:`Manufacture`: when products are needed in the source location, a "
 "manufacturing order is created to fulfill the need."
@@ -12571,13 +12545,13 @@ msgstr ""
 "재고와 패킹 영역 간에 이동을 생성하는 \"풀 방식\" 규칙 \n"
 "개요입니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:260
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:262
 msgid ""
 "The :guilabel:`Operation Type` must also be defined on the rule. This "
 "defines which kind of picking is created from the rule."
 msgstr "규칙에 :guilabel:`작업 유형`도 정의해야 합니다. 이것은 규칙에서 생성되는 선택의 종류를 정의합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:263
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:265
 msgid ""
 "If the rule's :guilabel:`Action` is set to :guilabel:`Pull From` or "
 ":guilabel:`Pull & Push`, a :guilabel:`Supply Method` must be set. The "
@@ -12586,13 +12560,13 @@ msgstr ""
 "규칙의 :guilabel:`추가 작업`이 :guilabel:`풀 방식` 또는 :guilabel:`풀 & 푸시`로 설정된 경우, "
 ":guilabel:`공급 방법`을 설정해야 합니다. :guilabel:`공급 방법`은 원 위치에서 일어나는 일을 정의합니다:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:267
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:269
 msgid ""
 ":guilabel:`Take From Stock`: the products are taken from the available stock"
 " of the source location."
 msgstr ":guilabel:`재고에서 가져옴`: 원본 위치의 사용 가능한 재고에서 제품을 가져옵니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:269
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:271
 msgid ""
 ":guilabel:`Trigger Another Rule`: the system tries to find a stock rule to "
 "bring the products to the source location. The available stock is ignored."
@@ -12600,7 +12574,7 @@ msgstr ""
 ":guilabel:`다른 규칙 트리거`: 시스템이 제품을 원 위치로 가져올 재고 규칙을 찾으려고 시도합니다. 사용 가능한 재고는 "
 "무시됩니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:271
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:273
 msgid ""
 ":guilabel:`Take From Stock, if Unavailable, Trigger Another Rule`: the "
 "products are taken from the available stock of the source location. If there"
@@ -12610,18 +12584,18 @@ msgstr ""
 ":guilabel:`재고에서 가져오기, 재고가 없는 경우 다른 규칙 트리거`: 원 위치의 사용 가능한 재고에서 제품을 가져옵니다. 사용 "
 "가능한 재고가 없는 경우 시스템은 제품을 소스 위치로 가져오는 규칙을 찾으려고 시도합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:276
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:278
 msgid "Example flow"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:278
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:280
 msgid ""
 "In this example, let's use a custom *Pick - Pack - Ship* route to try a full"
 " flow with an advanced custom route."
 msgstr ""
 "이 예제에서는 사용자 지정 *픽업 - 포장 - 배송* 경로를 활용하여 고급 사용자 지정 경로를 사용한 전체 플로우를 시도해 보겠습니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:281
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:283
 msgid ""
 "First, a quick look at the route's rules and their supply methods. There are"
 " three rules, all :guilabel:`Pull From` rules. The :guilabel:`Supply "
@@ -12630,7 +12604,7 @@ msgstr ""
 "먼저 경로의 규칙과 그 공급 방법을 간단히 살펴보겠습니다. 세 가지 규칙이 있으며, 모두 :guilabel:`풀 방식` 규칙입니다. 각 "
 "규칙의 :guilabel:`공급 방법`은 다음과 같습니다:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:284
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:286
 msgid ""
 ":guilabel:`Take From Stock`: When products are needed in the "
 ":guilabel:`WH/Packing Zone`, *picks* (internal transfers from "
@@ -12640,7 +12614,7 @@ msgstr ""
 ":guilabel:`재고에서 가져오기`: 제품이 :guilabel:`WH/포장 구역`에 필요한 경우 :guilabel:`WH/재고`에서 "
 "*피킹*(내부 전송)이 생성되어 필요 사항을 충족합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:287
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:289
 msgid ""
 ":guilabel:`Trigger Another Rule`: When products are needed in "
 ":guilabel:`WH/Output`, *packs* (internal transfers from "
@@ -12650,7 +12624,7 @@ msgstr ""
 ":guilabel:`다른 규칙 트리거`: 제품이 :guilabel:`WH/출고`에 필요한 경우 :guilabel:`WH/포장 구역`에서 "
 ":guilabel:`WH/출고`로 *포장* (내부 이송)이 생성되어 필요를 충족합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:290
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:292
 msgid ""
 ":guilabel:`Trigger Another Rule`: When products are needed in "
 ":guilabel:`Partner Locations/Customers`, *delivery orders* are created from "
@@ -12663,7 +12637,7 @@ msgstr ""
 msgid "Overview of all the transfers created by the pick - pack - ship route."
 msgstr "픽업 - 포장 - 배송 경로에 의해 생성된 모든 운송에 대한 개요입니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:298
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:300
 msgid ""
 "This means that, when a customer orders products that have a *pick - pack - "
 "ship* route set on it, a delivery order is created to fulfill the order."
@@ -12673,7 +12647,7 @@ msgstr "즉, 고객이 *픽업 - 포장 - 배송* 경로가 할당된 제품을 
 msgid "View of the operations created by a pull from transfer."
 msgstr "이송에서 가져오기로 생성된 작업 보기."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:306
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:308
 msgid ""
 "If the source document for multiple tranfers is the same sales order, the "
 "status is not the same. The status will be :guilabel:`Waiting Another "
@@ -12687,7 +12661,7 @@ msgid ""
 "View of the transfers' various statuses at the beginning of the process."
 msgstr "프로세스 시작 시 이송의 다양한 상태를 볼 수 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:314
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:316
 msgid ""
 "To prepare the delivery order, packed products are needed at the output "
 "area, so an internal transfer is requested from the packing zone."
@@ -12699,7 +12673,7 @@ msgid ""
 "output zones."
 msgstr "포장 구역과 출력 구역 간의 이송에 대한 세부 작업 보기."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:321
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:323
 msgid ""
 "Obviously, the packing zone needs products ready to be packed. So, an "
 "internal transfer is requested to the stock and employees can gather the "
@@ -12714,7 +12688,7 @@ msgid ""
 " zones."
 msgstr "재고 구역과 포장 구역 간 이동에 대한 세부 작업 보기."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:328
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:330
 msgid ""
 "As explained in the introduction of the documentation, the last step in the "
 "process (for this route, the delivery order) is the first to be triggered, "
@@ -12727,7 +12701,7 @@ msgstr ""
 "(여기서는 재고에서 포장 영역으로 내부 이송)에 도달할 때까지 다른 규칙이 활성화됩니다. 이 시점에서 고객이 주문한 상품을 받을 수 있는"
 " 모든 준비가 완료됩니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:333
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:335
 msgid ""
 "In this example, the product is delivered to the customer when all the rules"
 " have been triggered and the transfers are done."
@@ -16325,7 +16299,7 @@ msgid "Show delivery order on the sales order line."
 msgstr "판매 주문 항목에 배송 주문을 표시합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:261
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:264
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:261
 msgid "Delivery order"
 msgstr "배송 주문"
 
@@ -16679,6 +16653,9 @@ msgid ""
 "common to all shippers, see the documentation on :doc:`third-party shippers "
 "<third_party_shipper>`."
 msgstr ""
+"다양한 배송 커넥터를 배송업체마다 사용할 수 있지만, 이 문서에서는 자세한 환경 설정과 관련하여 DHL를 통합하는 경우로 특정하여 "
+"설명합니다. 공통적으로 모든 배송업체에 대해 적용되는 통합 환경 설정에 대한 설정 방법에 대한 안내는 :doc:`타사 배송업체 "
+"<third_party_shipper>` 문서를 참조하세요."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:17
 msgid "Enable DHL shipping connector"
@@ -16716,6 +16693,8 @@ msgid ""
 "as a line item to sales orders (SOs), which allows for automatic computation"
 " of shipping rates, and generation of shipping labels."
 msgstr ""
+"DHL 배송 커넥터를 활성화한 후, 배송업체에 대한 배송 방법을 설정할 수 있습니다. 설정이 완료되면 판매주문서 (SO)에 배송 방법을 "
+"아이템 내역으로 추가하여 배송 요금을 자동으로 계산하고 배송 라벨을 생성할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:35
 msgid ""
@@ -16790,6 +16769,8 @@ msgid ""
 "password are different credentials than the ones used to log in to a DHL "
 "account."
 msgstr ""
+"DHL 사이트 ID, 비밀번호, 계정 번호는 DHL 계정을 Odoo **재고 관리** 앱과 같은 타사 서비스와 연결하는 데 사용됩니다. "
+"사이트 ID와 비밀번호는 DHL 계정에 로그인할 때 사용하는 것과는 다른 자격 증명입니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:76
 msgid ""
@@ -17377,7 +17358,7 @@ msgid ":doc:`../setup_configuration/third_party_shipper`"
 msgstr ":doc:`../setup_configuration/third_party_shipper`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:43
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:132
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:129
 msgid ""
 ":guilabel:`Company`: if the shipping method should apply to a specific "
 "company, select it from the drop-down menu. Leave the field blank to apply "
@@ -18725,7 +18706,7 @@ msgstr ""
 " 유료 요금제 가입이 **필수** 입니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:37
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:184
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:181
 msgid "Warehouse configuration"
 msgstr "창고 환경 설정"
 
@@ -19815,7 +19796,7 @@ msgid "All"
 msgstr "모두"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:33
-msgid ":doc:`DHL Express* <dhl_credentials>`"
+msgid ":doc:`DHL Express <dhl_credentials>`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:35
@@ -19835,12 +19816,12 @@ msgid ":doc:`Sendcloud <sendcloud_shipping>`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:40
-msgid ":ref:`EU** <inventory/shipping_receiving/sendcloud-eu>`"
+msgid "Some European countries (see details below)"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:41
-msgid ":doc:`Bpost <bpost>`"
-msgstr ""
+msgid "Bpost"
+msgstr "Bpost"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:42
 msgid "Belgium"
@@ -19867,74 +19848,74 @@ msgid ":doc:`Starshipit <starshipit_shipping>`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:48
-msgid "Australasia"
+msgid "Australia and New Zealand"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:54
-msgid "\\* Other services from DHL are **not** supported."
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:51
+msgid "Other services from DHL are **not** supported."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:56
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:53
 msgid ""
-"** Sendcloud currently supports shipping **from** Austria, Belgium, France, "
+"Sendcloud currently supports shipping **from** Austria, Belgium, France, "
 "Germany, Italy, the Netherlands, Spain, and the United Kingdom, and **to** "
 "any European country."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:62
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:59
 msgid ""
 "To ensure proper setup of a third-party shipping carrier with Odoo, follow "
 "these steps:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:64
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:61
 msgid ""
 ":ref:`Install the shipping connector <inventory/shipping_receiving/shipping-"
 "connector>`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:65
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:62
 msgid ""
 ":ref:`Set up delivery method <inventory/shipping_receiving/configure-"
 "delivery-method>`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:66
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:63
 msgid ""
 ":ref:`Activate production environment "
 "<inventory/shipping_receiving/production-env>`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:67
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:64
 msgid ""
 ":ref:`Configure warehouse <inventory/shipping_receiving/configure-source-"
 "address>`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:68
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:65
 msgid ""
 ":ref:`Specify weight of products <inventory/shipping_receiving/configure-"
 "weight>`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:73
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:70
 msgid "Install shipping connector"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:75
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:72
 msgid ""
 "To install shipping connectors, go to :menuselection:`Inventory app --> "
 "Configuration --> Settings`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:77
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:74
 msgid ""
 "Under the :guilabel:`Shipping Connectors` section, tick the third-party "
 "shipping carrier's checkbox to install it. Multiple third-party shipping "
 "connectors can be selected at once. Then, click :guilabel:`Save`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:82
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:79
 msgid ""
 ":doc:`Delivery methods <../setup_configuration>` can also be integrated with"
 " operations in the *Sales*, *eCommerce*, and *Website* apps. To install, "
@@ -19946,35 +19927,35 @@ msgstr ""
 msgid "Options of available shipping connectors in Odoo."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:93
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:90
 msgid "Delivery method"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:95
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:92
 msgid ""
 "To configure the API credentials, and activate the shipping carrier, begin "
 "by going to :menuselection:`Inventory app --> Configuration --> Shipping "
 "Methods`, and select the desired delivery method."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:100
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:97
 msgid ""
 "The list often includes **two** delivery methods from the same "
 ":guilabel:`Provider`: one for international shipping and one for domestic "
 "shipping."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:103
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:100
 msgid ""
 "Additional delivery methods can be created for specific purposes, such as "
 ":doc:`packaging <../../product_management/configure/packaging>`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:107
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:104
 msgid ":doc:`Configure delivery methods <../setup_configuration>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:110
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:107
 msgid ""
 "Ensure the delivery method is published when it should be available on the "
 "*Website* app. To publish a delivery method on the website, click the "
@@ -19985,19 +19966,19 @@ msgstr ""
 "방법을 클릭한 다음 :guilabel:`게시되지 않음` 스마트 버튼을 클릭합니다. 그렇게 하면 스마트 버튼이 :guilabel:`게시됨`"
 " 으로 변경됩니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:115
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:112
 msgid ""
 "The :guilabel:`Shipping Method` page contains details about the provider, "
 "including:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:117
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:114
 msgid ""
 ":guilabel:`Shipping Method` (*Required field*): the name of the delivery "
 "method (e.g. `FedEx US`, `FedEx EU`, etc.)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:119
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:116
 msgid ""
 ":guilabel:`Website`: configure shipping methods for an *eCommerce* page that"
 " is connected to a specific website in the database. Select the applicable "
@@ -20007,7 +19988,7 @@ msgstr ""
 ":guilabel:`웹사이트`: 데이터베이스의 특정 웹사이트에 연결되어 있는 *이커머스* 페이지에 대한 배송 방법을 설정합니다. 드롭다운"
 " 메뉴에서 해당 웹사이트를 선택하거나, 모든 웹페이지에 적용되게 하려면 비워둡니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:122
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:119
 msgid ""
 ":guilabel:`Provider` (*Required field*): choose the third-party delivery "
 "service, like FedEx. Upon choosing a provider, the :guilabel:`Integration "
@@ -20015,26 +19996,26 @@ msgid ""
 "fields become available."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:125
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:122
 msgid ""
 ":guilabel:`Integration Level`: choose :guilabel:`Get Rate` to simply get an "
 ":ref:`estimated shipment cost <inventory/shipping_receiving/third-party-so>`"
 " on an |SO| or invoice."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:129
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:126
 msgid ""
 "Select :guilabel:`Get Rate and Create Shipment` to also :doc:`generate "
 "shipping labels <labels>`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:134
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:131
 msgid ""
 ":guilabel:`Delivery Product` (*Required field*): the delivery charge name "
 "that is added to the |SO| or invoice."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:136
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:133
 msgid ""
 ":guilabel:`Invoicing Policy`: select and calculate an :guilabel:`Estimated "
 "cost` of shipping directly from the shipping carrier. If the :guilabel:`Real"
@@ -20044,36 +20025,36 @@ msgstr ""
 ":guilabel:`청구서 발행 정책`: 배정업체에서 직배송하는 경우의 :guilabel:`예상 비용` 을 선택하여 계산합니다. 해당 "
 "내용 대신 :guilabel:`실제 배송비` 를 선택하려면 :doc:`실제 배송비 청구 <invoicing>` 문서를 참조하세요."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:139
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:136
 msgid ""
 ":guilabel:`Margin on Rate`: specify an additional percentage amount added to"
 " the base shipping rate to cover extra costs, such as handling fees, "
 "packaging materials, exchange rates, etc."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:141
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:138
 msgid ""
 ":guilabel:`Free if order amount is above`: enables free shipping for orders "
 "surpassing a specified amount entered in the corresponding "
 ":guilabel:`Amount` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:143
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:140
 msgid ""
 ":guilabel:`Insurance Percentage`: specify a percentage amount of the "
 "shipping costs reimbursed to the senders if the package is lost or stolen in"
 " transit."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:150
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:147
 msgid "Screenshot of a FedEx shipping method."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:150
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:147
 msgid "**Shipping Method** configuration page for `FedEx US`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:152
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:149
 msgid ""
 "In the :guilabel:`Configuration` tab, fill out the API credential fields "
 "(e.g. API key, password, account number, etc.). Depending on the third-party"
@@ -20086,29 +20067,29 @@ msgstr ""
 ":guilabel:`제공업체` 에서 선택한 타사 운송업체에 따라 :guilabel:`환경 설정` 탭의 필수 입력 항목이 달라집니다. 특정"
 " 운송업체용 자격 증명을 환경 설정하는 자세한 내용에 대해서는 다음 문서를 참조하세요."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:159
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:156
 msgid ":doc:`DHL credentials <dhl_credentials>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:160
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:157
 msgid ":doc:`Sendcloud credentials <sendcloud_shipping>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:161
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:158
 msgid ":doc:`UPS credentials <ups_credentials>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:166
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:163
 msgid "Production environment"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:168
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:165
 msgid ""
 "With the delivery method details configured, click the :guilabel:`Test "
 "Environment` smart button to set it to :guilabel:`Production Environment`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:172
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:169
 msgid ""
 "Setting the delivery method to :guilabel:`Production` creates **real** "
 "shipping labels, and users are at risk of being charged through their "
@@ -20124,7 +20105,7 @@ msgstr ""
 msgid "Show the \"Test Environment\" smart button."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:186
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:183
 msgid ""
 "Ensure the warehouse's :guilabel:`Address` (including ZIP code) and "
 ":guilabel:`Phone` number are entered accurately. To do that, go to "
@@ -20132,7 +20113,7 @@ msgid ""
 "the desired warehouse."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:190
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:187
 msgid ""
 "On the warehouse configuration page, open the warehouse contact page by "
 "clicking the :guilabel:`Company` field."
@@ -20142,7 +20123,7 @@ msgstr ""
 msgid "Highlight the \"Company\" field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:197
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:194
 msgid ""
 "Verify that the :guilabel:`Address` and :guilabel:`Phone` number are "
 "correct, as they are required for the shipping connector to work properly."
@@ -20152,18 +20133,18 @@ msgstr ""
 msgid "Show company address and phone number."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:207
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:204
 msgid "Product weight"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:209
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:206
 msgid ""
 "For the carrier integration to work properly, specify the weight of products"
 " by going to :menuselection:`Inventory app --> Products --> Products`, and "
 "selecting the desired product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:212
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:209
 msgid ""
 "Then, switch to the :guilabel:`Inventory` tab, and define the "
 ":guilabel:`Weight` of the product in the :guilabel:`Logistics` section."
@@ -20173,17 +20154,17 @@ msgstr ""
 msgid "Display the \"Weight\" field in the Inventory tab of the product form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:220
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:217
 msgid "Apply third-party shipping carrier"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:222
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:219
 msgid ""
 "Shipping carriers can be applied on a :abbr:`SO (Sales Order)`, invoice, or "
 "delivery order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:224
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:221
 msgid ""
 "After configuring the third-party carrier's :ref:`delivery method "
 "<inventory/shipping_receiving/configure-delivery-method>` in Odoo, create or"
@@ -20191,11 +20172,11 @@ msgid ""
 "--> Quotations`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:231
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:228
 msgid "Sales order"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:233
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:230
 msgid ""
 "To assign a third-party shipping carrier, and get an estimated cost of "
 "shipping, begin by going to :menuselection:`Sales app --> Orders --> "
@@ -20212,28 +20193,28 @@ msgstr ""
 msgid "Show the \"Add shipping\" button at the bottom of a quotation."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:242
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:239
 msgid ""
 "In the resulting :guilabel:`Add a shipping method` pop-up window, select the"
 " intended carrier from the :guilabel:`Shipping Method` drop-down menu. The "
 ":guilabel:`Cost` field is automatically filled based on:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:246
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:243
 msgid ""
 "the amount specified in the :guilabel:`Total Order Weight` field (if it is "
 "not provided, the sum of :ref:`product weights "
 "<inventory/shipping_receiving/configure-weight>` in the order is used)"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:248
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:245
 msgid ""
 "the distance between the warehouse's :ref:`source address "
 "<inventory/shipping_receiving/configure-source-address>` and the customer's "
 "address."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:253
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:250
 msgid ""
 "After selecting a third-party provider in the :guilabel:`Shipping Method` "
 "field, click :guilabel:`Get Rate` in the :guilabel:`Add a shipping method` "
@@ -20245,12 +20226,12 @@ msgstr ""
 ":guilabel:`요금 받기` 를 클릭하여 배송 커넥터를 통한 예상 비용을 확인합니다. 그런 다음 :guilabel:`추가` 버튼을 "
 "클릭하여 배송료를 |SO| 또는 청구서에 추가합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:259
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:256
 msgid ""
 ":doc:`Charge customers for shipping after product delivery <invoicing>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:266
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:263
 msgid ""
 "For users making shipments without installing the *Sales* app, assign the "
 "shipping carrier to the delivery order, by first going to the "
@@ -20263,7 +20244,7 @@ msgstr ""
 "지정합니다. 그런 다음 :guilabel:`재고 개요` 현황판에서 :guilabel:`배송주문서` 작업 유형을 선택하고 아직 "
 ":guilabel:`완료` 또는 :guilabel:`취소됨` 으로 표시되지 않은 배송주문서를 선택합니다. ."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:272
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:269
 msgid ""
 "In the :guilabel:`Additional info` tab, set the :guilabel:`Carrier` field to"
 " the desired third-party shipping carrier. When the delivery method is set "
@@ -20274,7 +20255,7 @@ msgstr ""
 ":ref:`프로덕션 모드 <inventory/shipping_receive/configure-delivery-method>` 로 설정하면"
 " :guilabel:`조회 참조` 를 사용할 수 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:278
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:275
 msgid ":doc:`Generate shipping labels <labels>`"
 msgstr ""
 
@@ -20282,17 +20263,17 @@ msgstr ""
 msgid "Show the delivery order's \"Additional info\" tab."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:287
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:284
 msgid "Troubleshooting"
 msgstr "문제 해결"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:289
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:286
 msgid ""
 "Since shipping connectors can sometimes be complex to set up, here are some "
 "checks to try when things are not working as expected:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:292
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:289
 msgid ""
 "Ensure the :ref:`warehouse information "
 "<inventory/shipping_receiving/configure-source-address>` (e.g., address and "
@@ -20300,28 +20281,28 @@ msgid ""
 "shipping provider's website."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:295
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:292
 msgid ""
 "Verify that the :ref:`package type <inventory/warehouses_storage/package-"
 "type>` and parameters are valid for the shipping carrier. To check, ensure "
 "the shipment can be directly created on the shipping carrier's website."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:298
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:295
 msgid ""
 "When encountering a price mismatch between Odoo's estimated cost and the "
 "provider's charge, first ensure the delivery method is set to "
 ":ref:`production environment <inventory/shipping_receiving/production-env>`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:302
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:299
 msgid ""
 "Then, create the shipment in both the carrier's website and Odoo, and verify"
 " the prices are the same across Odoo, the shipping provider, and in the "
 "*debug logs*."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:306
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:303
 msgid ""
 "When checking for a price mismatch in the debug logs, if the request says "
 "the package weighs six kilograms, but the response from FedEx says the "
@@ -20331,11 +20312,11 @@ msgstr ""
 "디버그 로그에서 가격 불일치 내용을 확인할 때 요청 사항에는 패키지 무게가 6kg이라고 되어 있으나 FedEx에서 확인 시 패키지 무게가"
 " 7kg인 경우에는 FedEx 측에 문제가 있는 것으로 결론을 내립니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:311
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:308
 msgid "Debug log"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:313
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:310
 msgid ""
 "Track shipping data inconsistencies by activating debug logging. To do that,"
 " go to the delivery method's configuration page (:menuselection:`Inventory "
@@ -20351,7 +20332,7 @@ msgstr ""
 msgid "Show the \"No Debug\" smart button."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:322
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:319
 msgid ""
 "With :guilabel:`Debug Requests` activated, each time the shipping connector "
 "is used to estimate the cost of shipping, records are saved in the "
@@ -20363,7 +20344,7 @@ msgstr ""
 "보고서에 레코드가 저장됩니다. 보고서에 액세스하려면 :ref:`개발자 모드 <developer-mode>` 를 켜고 "
 ":menuselection:`설정 앱 --> 기술 --> 데이터베이스 구조 섹션 --> 로깅` 으로 이동합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:328
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:325
 msgid ""
 "Logs are created for a shipping method each time the :ref:`Get Rate "
 "<inventory/shipping_receiving/third-party-rate>` button is clicked on "
@@ -20378,7 +20359,7 @@ msgstr ""
 msgid "Show how to find the \"Logging\" option from the \"Technical\" menu."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:337
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:334
 msgid ""
 "Click the *HTTP request* line item to open a detailed page, and verify the "
 "correct information is sent from Odoo to the shipping carrier. In the *HTTP "
@@ -21122,6 +21103,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:21
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:3
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:33
 msgid "Warehouses"
 msgstr "창고"
 
@@ -24024,11 +24006,11 @@ msgstr ""
 msgid "Finally, click :guilabel:`Save` to save the change."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:30
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:32
 msgid "Unarchive MTO route"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:32
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:34
 msgid ""
 "By default, Odoo sets the |MTO| route as *archived*. This is because |MTO| "
 "is a somewhat niche workflow that is only used by certain companies. "
@@ -24037,19 +24019,22 @@ msgstr ""
 "기본적으로 Odoo는 |MTO| 경로를 *보관됨*으로 설정합니다. 이는 |MTO|가 특정 회사에서만 사용하는 다소 전문화 된 워크플로우로"
 " 간주되기 때문입니다. 그러나 몇 가지 간단한 단계만 거치면 경로의 보관을 해제할 수 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:36
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:38
 msgid ""
 "To do so, begin by navigating to :menuselection:`Inventory app --> "
 "Configuration --> Routes`. On the :guilabel:`Routes` page, click the "
 ":icon:`fa-caret-down` :guilabel:`(down arrow)` icon on the right side of the"
 " search bar, and click the :guilabel:`Archived` filter to enable it."
 msgstr ""
+"활성화하려면 먼저 :menuselection:`재고 관리 앱 --> 환경 설정 --> 경로` 로 이동합니다. :guilabel:`경로` "
+"페이지에서 검색 창 오른쪽에 있는 :icon:`fa-caret-down` :guilabel:`(아래쪽 화살표)` 아이콘을 클릭하고 "
+":guilabel:`보관됨` 필터를 클릭하여 활성화합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst-1
 msgid "The archived filter on the Routes page."
 msgstr "경로 페이지의 보관된 필터입니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:44
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:46
 msgid ""
 "After enabling the :guilabel:`Archived` filter, the :guilabel:`Routes` page "
 "shows all routes which are currently archived. Tick the checkbox next to "
@@ -24057,12 +24042,15 @@ msgid ""
 ":guilabel:`Actions` button to reveal a drop-down menu. From the drop-down "
 "menu, select :guilabel:`Unarchive`."
 msgstr ""
+":guilabel:`보관됨` 필터를 활성화하면 :guilabel:`경로` 페이지에 현재 보관된 모든 경로가 표시됩니다. "
+":guilabel:`주문 시 보충 (MTO)` 항목 옆 확인란에 표시한 다음 :icon:`fa-cog` :guilabel:`활동` 버튼을"
+" 클릭하여 드롭다운 메뉴를 표시합니다. 드롭다운 메뉴에서 :guilabel:`보관 취소` 를 선택합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst-1
 msgid "The unarchive action on the Routes page."
 msgstr "경로 페이지의 보관 취소 작업입니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:53
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:55
 msgid ""
 "Finally, remove the :guilabel:`Archived` filter from the search bar. The "
 ":guilabel:`Routes` page now shows all unarchived routes, including "
@@ -24070,57 +24058,62 @@ msgid ""
 " tab of each product page."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:58
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:60
 msgid "Configure product for MTO"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:60
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:62
 msgid ""
 "With the |MTO| route unarchived, products can now be properly configured to "
 "use replenish on order. To do so, begin by going to "
 ":menuselection:`Inventory app --> Products --> Products`, then select an "
 "existing product, or click :guilabel:`New` to configure a new one."
 msgstr ""
+"|MTO| 경로가 보관 취소되었으므로, 이제 품목을 적절히 설정하여 주문 시 보충 전략을 활용할 수 있습니다. 진행하려면 먼저 "
+":menuselection:`재고 관리 앱 --> 품목 --> 품목` 으로 이동한 후 기존 품목을 선택하거나 :guilabel:`새로 "
+"만들기` 를 클릭하여 새로 품목을 설정합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:64
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:66
 msgid ""
 "On the product page, select the :guilabel:`Inventory` tab and enable the "
 ":guilabel:`Replenish on Order (MTO)` route in the :guilabel:`Routes` "
 "section, along with the :guilabel:`Buy` or :guilabel:`Manufacture` route."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:69
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:71
 msgid ""
 "The :guilabel:`Replenish on Order (MTO)` route **does not** work unless "
 "another route is selected as well. This is because Odoo needs to know how to"
 " replenish the product when an order is placed for it (buy or manufacture "
 "it)."
 msgstr ""
+":guilabel:`주문 시 보충 (MTO)` 경로는 추가 경로를 선택하지 않을 경우 작동하지 **않습니다**. 이는 Odoo에서 품목 "
+"보충 방법에 대해 정보가 주문을 받는 시점에 있어야 하기 때문입니다 (매입 또는 제조)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst-1
 msgid "Select the MTO route and a second route on the Inventory tab."
 msgstr "재고 탭에서 MTO 경로와 두 번째 경로를 선택합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:77
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:79
 msgid ""
 "If the product is purchased from a vendor to fulfill |SOs|, enable the "
 ":guilabel:`Can be Purchased` checkbox under the product name. Doing so makes"
 " the :guilabel:`Purchase` tab appear alongside the other tabs below."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:81
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:83
 msgid ""
 "Click the :guilabel:`Purchase` tab and specify a :guilabel:`Vendor` and the "
 ":guilabel:`Price` they sell the product for."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:85
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:87
 msgid ""
 "Specifying a vendor is essential for this workflow, because Odoo cannot "
 "generate an |RFQ| without knowing who the product is purchased from."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:88
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:90
 msgid ""
 "If the product is manufactured, make sure it has a bill of materials (BOM) "
 "configured for it. To do so, click the :guilabel:`Bill of Materials` smart "
@@ -24131,31 +24124,33 @@ msgstr ""
 ":guilabel:`자재명세서` 스마트 버튼을 클릭한 다음, :guilabel:`자재명세서` 페이지에서 :guilabel:`새로 만들기`"
 " 를 클릭하여 품목에 대한 새 |BOM| 을 설정합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:93
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:95
 msgid ""
 "For a full overview of |BOM| creation, see the documentation on :doc:`bills "
 "of materials <../../../manufacturing/basic_setup/bill_configuration>`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:97
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:99
 msgid "Replenish using MTO"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:99
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:101
 msgid ""
 "After configuring a product to use the |MTO| route, a replenishment order is"
 " created for it every time an |SO| or |MO| including the product is "
 "confirmed. The type of order created depends on the second route selected in"
 " addition to |MTO|."
 msgstr ""
+"|MTO| 경로를 사용하도록 품목 설정을 하면 품목이 포함된 |SO| 또는 |MO| 를 확정할 때마다 해당 품목에 대한 보충 주문이 "
+"생성됩니다. 주문 생성 유형은 |MTO| 외에도 두 번째 경로 선택에 따라 달라집니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:103
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:105
 msgid ""
 "For example, if *Buy* was the second route selected, then a |PO| is created "
 "upon confirmation of an |SO|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:107
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:109
 msgid ""
 "When the |MTO| route is enabled for a product, a replenishment order is "
 "always created upon confirmation of an |SO| or |MO|. This is the case, even "
@@ -24165,29 +24160,34 @@ msgstr ""
 "제품에 대해 |MTO| 경로를 활성화하면 |SO| 또는 |MO| 가 확정될 때마다 보충 주문이 생성됩니다. 이 경우에는 제품을 추가로 "
 "구매하거나 제조하지 않더라도, |SO| 처리하기에 충분히 재고가 있는지 여부에 관계없이 주문을 생성하게 됩니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:111
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:113
 msgid ""
 "While the |MTO| route can be used in unison with the *Buy* or *Manufacture* "
 "routes, the *Buy* route is used as the example for this workflow. Begin by "
 "navigating to the :menuselection:`Sales` app, then click :guilabel:`New`, "
 "which opens a blank quotation form."
 msgstr ""
+"|MTO| 경로는 *매입* 또는 *제조* 경로와 함께 사용할 수 있으며, 이 워크플로우에서는 *구매* 경로를 예시로 사용합니다. 먼저 "
+":menuselection:`판매` 앱으로 이동한 다음 :guilabel:`새로 만들기` 를 클릭하면 견적서 양식이 새로 열립니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:115
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:117
 msgid ""
 "On the blank quotation form, add a :guilabel:`Customer`. Then, click "
 ":guilabel:`Add a product` under the :guilabel:`Order Lines` tab, and enter a"
 " product configured to use the *MTO* and *Buy* routes. Click "
 ":guilabel:`Confirm`, and the quotation is turned into an |SO|."
 msgstr ""
+"빈 견적서 양식에 :guilabel:`고객` 을 추가합니다. 그런 다음 :guilabel:`주문 내역` 탭에서 :guilabel:`품목 "
+"추가` 를 클릭하고 *MTO* 및 *매입* 경로를 활용하도록 설정한 품목을 입력합니다. :guilabel:`확인` 을 클릭하면 견적서가 "
+"|SO| 로 전환됩니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:119
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:121
 msgid ""
 "A :guilabel:`Purchase` smart button now appears at the top of the page. "
 "Clicking it opens the |RFQ| associated with the |SO|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:122
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:124
 msgid ""
 "Click :guilabel:`Confirm Order` to confirm the |RFQ|, and turn it into a "
 "|PO|. A purple :guilabel:`Receive Products` button now appears above the "
@@ -24199,35 +24199,35 @@ msgstr ""
 " 버튼이 |PO| 위에 표시됩니다. 품목이 입고되면 :guilabel:`품목 수령` 을 클릭하여 입고 주문을 열고 "
 ":guilabel:`승인` 을 클릭하여 품목을 재고로 입고 처리합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:127
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:129
 msgid ""
 "Return to the |SO| by clicking the :guilabel:`SO` breadcrumb, or by "
 "navigating to :menuselection:`Sales app --> Orders --> Orders`, and "
 "selecting the|SO|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:130
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:132
 msgid ""
 "Finally, click the :guilabel:`Delivery` smart button at the top of the order"
 " to open the delivery order. Once the products have been shipped to the "
 "customer, click :guilabel:`Validate` to confirm the delivery."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:135
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:137
 msgid ""
 "For information on workflows that include the |MTO| route, see the following"
 " documentation:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:137
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:139
 msgid ":doc:`resupply_warehouses`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:138
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:140
 msgid ":doc:`../../../manufacturing/subcontracting/subcontracting_basic`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:139
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:141
 msgid ":doc:`../../../manufacturing/advanced_configuration/sub_assemblies`"
 msgstr ""
 
@@ -24442,11 +24442,11 @@ msgstr ":ref:`확인 기간 <inventory/product_management/visibility-days>`"
 msgid ":ref:`Route <inventory/product_management/route>`"
 msgstr ":ref:`경로 <inventory/product_management/route>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:99
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:101
 msgid "0/0/1 reordering rule"
 msgstr "0/0/1 재주문 규칙"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:101
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:103
 msgid ""
 "The *0/0/1* reordering rule is a specialty rule used to replenish a product "
 "that is not kept on-hand, each time a sales order (SO) is confirmed for that"
@@ -24455,7 +24455,7 @@ msgstr ""
 "*0/0/1* 재주문 규칙은 재고가 없는 품목을 보충할 때 사용하는 특수 규칙으로, 품목에 대한 판매주문서 (SO)를 확인할 때마다 해당"
 " 품목을 보충합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:105
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:107
 msgid ""
 "The 0/0/1 reordering rule is similar to the *Replenish on Order (MTO)* "
 "route, in that both workflows are used to replenish a product upon "
@@ -24464,7 +24464,7 @@ msgstr ""
 "두 가지 워크플로우 모두 |SO| 를 확인할 경우 품목이 재주문된다는 점에서, 0/0/1 재주문 규칙은 *주문 시 보충 (MTO)* "
 "경로와 유사합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:108
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:110
 msgid ""
 "The main difference between the two methods is that the *Replenish on Order*"
 " route automatically reserves the product for the |SO| that caused it to be "
@@ -24473,7 +24473,7 @@ msgstr ""
 "두 가지 방법 사이에 가장 큰 차이점은 *주문 시 보충* 경로의 경우에는 품목 보충의 근거가 된 |SO|에 대해 품목을 자동으로 "
 "예약한다는 점입니다. 즉, 해당 품목은 다른 |SO|에 대해서는 사용할 수 **없습니다**."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:112
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:114
 msgid ""
 "The 0/0/1 reordering rule does not have this limitation. A product "
 "replenished using the rule is not reserved for any specific |SO|, and can be"
@@ -24482,7 +24482,7 @@ msgstr ""
 "0/0/1 재주문 규칙에는 이러한 제한이 없습니다. 이 규칙을 통해 재주문된 제품은 특정 |SO| 에 예약이 되지 않으며 필요에 따라 "
 "사용할 수 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:115
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:117
 msgid ""
 "Another key difference is that replenishment orders created by the "
 "*Replenish on Order* route are linked to the original |SO| by a smart button"
@@ -24492,13 +24492,13 @@ msgstr ""
 "또 다른 주요 차이점으로는 *주문 시 보충* 경로로 생성된 보충 주문이 주문서 상단에 있는 스마트 버튼을 통해 원래의 |SO|로 "
 "연결된다는 점입니다. 0/0/1 재정렬 규칙을 사용하면 보충 주문이 생성되지만 원래 |SO|에 연결되지 않습니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:119
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:121
 msgid ""
 "See the :doc:`Replenish on Order (MTO) <mto>` documentation for a full "
 "overview of the MTO route."
 msgstr "MTO 경로에 대한 전체보기의 전문은 :doc:`주문 시 보충 (MTO) <mto>` 문서를 참조하세요."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:121
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:123
 msgid ""
 "To create a 0/0/1 reordering rule, navigate to :menuselection:`Inventory app"
 " --> Products --> Products`, and select a product."
@@ -24506,7 +24506,7 @@ msgstr ""
 "0/0/1 재주문 규칙을 생성하려면 :menuselection:`재고 관리 앱 --> 품목 --> 품목` 으로 이동하여 품목을 "
 "선택합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:124
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:126
 msgid ""
 "At the top of the product's page, click the :icon:`fa-refresh` "
 ":guilabel:`Reordering Rules` smart button to open the :guilabel:`Reordering "
@@ -24517,7 +24517,7 @@ msgstr ""
 ":guilabel:`재주문 규칙` 페이지를 엽니다. 페이지 결과에서 :guilabel:`새로 만들기` 를 클릭하여 새로운 재정렬 규칙에 "
 "대한 환경 설정을 시작합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:128
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:130
 msgid ""
 "In the :guilabel:`Location` field of the new reordering rule, select the "
 "location in which replenished products should be stored. By default, this "
@@ -24526,7 +24526,7 @@ msgstr ""
 "새 재주문 규칙의 :guilabel:`위치` 에서 재주문된 품목을 보관할 위치를 선택합니다. 기본값으로 이 위치는 "
 ":guilabel:`WH/재고` 로 설정되어 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:131
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:133
 msgid ""
 "In the :guilabel:`Route` field, select the route the rule should use to "
 "replenish the item. For example, if the product should be purchased from a "
@@ -24535,7 +24535,7 @@ msgstr ""
 ":guilabel:`경로` 에 규칙에서 항목을 보충하는 데 사용할 경로를 선택합니다. 예를 들어, 공급업체에서 품목을 매입하는 경우 "
 ":guilabel:`구매` 경로를 선택합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:134
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:136
 msgid ""
 "In the :guilabel:`Min Quantity` field and :guilabel:`Max Quantity` field, "
 "leave the values set to `0.00`. In the :guilabel:`To Order` field, enter a "
@@ -24548,7 +24548,7 @@ msgstr ""
 msgid "A 0/0/1 reordering rule."
 msgstr "0/0/1 재주문 규칙"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:141
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:143
 msgid ""
 "With the reordering rule configured using these values, each time an |SO| "
 "causes the forecasted quantity of the product to fall below the "
@@ -24560,7 +24560,7 @@ msgstr ""
 "떨어지게 되면 선택한 :guilabel:`경로` 를 사용하여 1단위 증분으로 품목을 보충하고:guilabel:`최대 수량`인 "
 "`0.00`까지 다시 보충하는 데 사용됩니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:147
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:149
 msgid ""
 "A picture frame is configured with a 0/0/1 reordering rule that uses the "
 "*Buy* route. Zero units of the picture frame are kept on-hand at any given "
@@ -24568,7 +24568,7 @@ msgid ""
 msgstr ""
 "액자에 대한 0/0/1 재주문 규칙을 *구매* 경로를 사용하도록 설정했습니다. 액자의 재고 보유 수량은 0개로 계속 유지합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:150
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:152
 msgid ""
 "An |SO| is confirmed for one unit of the picture frame, which causes the "
 "forecasted quantity to drop to `-1.00`. This triggers the reordering rule, "
@@ -24577,7 +24577,7 @@ msgstr ""
 "액자 한 개에 대해 |SO|를 확인하면 예상 수량이 `-1.00`으로 떨어집니다. 그러면 재주문 규칙을 트리거해서 액자 한 단위에 대해 "
 "|PO|가 자동으로 생성됩니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:154
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:156
 msgid ""
 "Once the product is received from the vendor, the forecasted quantity of the"
 " picture frame returns to `0.00`. There is now one picture frame on-hand, "
@@ -24587,11 +24587,11 @@ msgstr ""
 "공급업체에서 품목을 수령하면 액자의 예상 수량은 '0.00'으로 돌아갑니다. 현재 액자를 한 개 보유 중이나 매입 작업을 트리거한 "
 "|SO|용으로는 예약되어 있지 않습니다. 해당 품목은 |SO|용으로 사용하거나 다른 주문서에 사용하도록 예약할 수 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:162
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:164
 msgid "Trigger"
 msgstr "트리거"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:164
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:166
 msgid ""
 "When stock falls below the reordering rule's minimum, set the reordering "
 "rule's *trigger* to *automatic* to automatically create purchase or "
@@ -24600,7 +24600,7 @@ msgstr ""
 "재고가 재주문 규칙의 최소값 아래로 떨어질 경우, 재주문 규칙이 *자동*으로 *트리거*되도록 설정하여 재고 보충을 위해 구매발주서나 "
 "제조주문서를 자동으로 생성합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:167
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:169
 msgid ""
 "Alternatively, setting the reordering rule's trigger to *manual* displays "
 "the product and forecasted stock on the *replenishment dashboard*, where the"
@@ -24610,17 +24610,17 @@ msgstr ""
 "또는 재주문 규칙이 트리거되는 방식을 *수동*으로 설정해 놓으면, 조달 관리자가 재고 수준, 리드 타임 및 예상 도착 날짜를 검토할 수 "
 "있도록 *재고 보충 현황판*에 품목과 예상 재고가 표시됩니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:172
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:174
 msgid ":doc:`../replenishment`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:175
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:177
 msgid ""
 "The replenishment dashboard is accessible by going to "
 ":menuselection:`Inventory app --> Operations --> Replenishment`."
 msgstr "재고 보충 현황판은 :menuselection:`재고 앱 --> 작업 --> 보충`에서 확인할 수 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:178
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:180
 msgid ""
 "To enable the :guilabel:`Trigger` field, go to :menuselection:`Inventory app"
 " --> Configuration --> Reordering Rules`. Then, click the "
@@ -24636,7 +24636,7 @@ msgstr ""
 msgid "Enable the Trigger field by toggling it in the additional options menu"
 msgstr "추가 선택 메뉴에서 트리거 항목에 있는 토글 스위치를 전환하여 사용 설정"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:187
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:189
 msgid ""
 "In the :guilabel:`Trigger` column, select :guilabel:`Auto` or "
 ":guilabel:`Manual`. Refer to the sections below to learn about the different"
@@ -24645,11 +24645,11 @@ msgstr ""
 ":guilabel:`트리거` 열에 :guilabel:`자동`이나 :guilabel:`수동`을 선택합니다. 다양한 재주문 규칙 유형에 대해"
 " 알아보려면 아래 섹션을 참조하세요."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:191
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:193
 msgid "Auto"
 msgstr "자동"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:193
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:195
 msgid ""
 "Automatic reordering rules, configured by setting the reordering rule's "
 ":guilabel:`Trigger` field to :guilabel:`Auto`, generates purchase or "
@@ -24658,21 +24658,21 @@ msgstr ""
 "자동 재주문 규칙은 재주문 규칙에서 :guilabel:`트리거` 필드를 :guilabel:`자동`으로 설정하여 환경 설정하며, 다음과 "
 "같은 경우 구매발주서나 제조주문서가 생성됩니다. "
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:196
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:198
 msgid "the scheduler runs, and the *On Hand* quantity is below the minimum"
 msgstr "스케줄러가 실행되고, *보유* 수량이 최소 수량 미만인 경우"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:197
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:199
 msgid ""
 "a sales order is confirmed, and lowers the *Forecasted* quantity of the "
 "product below the minimum"
 msgstr "판매주문서가 승인되고, 품목의 *예상* 수량이 최소 수량보다 낮아지는 경우"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:201
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:203
 msgid "The scheduler is set to run once a day, by default."
 msgstr "스케줄러는 하루에 한 번 실행되도록 기본 설정되어 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:203
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:205
 msgid ""
 "To manually trigger a reordering rule before the scheduler runs, ensure "
 ":ref:`developer mode <developer-mode>` is enabled, and select "
@@ -24684,11 +24684,11 @@ msgstr ""
 "확인하고 :menuselection:`재고 관리 앱 --> 작업 --> 스케줄러 실행`을 선택합니다. 그런 다음, 팝업 창이 나타나면 "
 "보라색 :guilabel:`스케줄러 실행` 버튼을 클릭합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:208
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:210
 msgid "Be aware that this also triggers any other scheduled actions."
 msgstr "이렇게 할 경우 예약되어 있는 다른 작업도 트리거가 된다는 점에 유의하시기 바랍니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:211
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:213
 msgid ""
 "The product, `Office Lamp`, has an automatic reordering rule set to trigger "
 "when the forecasted quantity falls below the :guilabel:`Min Quantity` of "
@@ -24702,7 +24702,7 @@ msgstr ""
 msgid "Show automatic reordering rule from the Reordering Rule page."
 msgstr "재주문 규칙 페이지에서 자동 재주문 규칙을 표시합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:219
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:221
 msgid ""
 "If the :guilabel:`Buy` route is selected, then an :abbr:`RFQ (Request for "
 "Quotation)` is generated. To view and manage :abbr:`RFQs (Requests for "
@@ -24712,7 +24712,7 @@ msgstr ""
 ":guilabel:`구매` 경로를 선택하면 :abbr:`견적 요청서 (RFQ)`가 생성됩니다. :abbr:`견적 요청서 (RFQ)`를 "
 "확인하고 관리하려면 :menuselection:`앱 구매 --> 주문 --> 견적 요청`으로 이동합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:223
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:225
 msgid ""
 "If the :guilabel:`Manufacture` route is selected, then an :abbr:`MO "
 "(Manufacturing Order)` is generated. To view and manage :abbr:`MOs "
@@ -24722,7 +24722,7 @@ msgstr ""
 ":guilabel:`제조` 경로를 선택하면 :abbr:`MO (제조주문서)`가 생성됩니다. :abbr:`MO (제조주문서)`를 확인하고 "
 "관리하려면 :menuselection:`제조 관리 앱 --> 작업 --> 제조 주문`으로 이동합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:227
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:229
 msgid ""
 "When no route is selected, Odoo selects the :guilabel:`Route` specified in "
 "the :guilabel:`Inventory` tab of the product form."
@@ -24730,7 +24730,7 @@ msgstr ""
 "선택된 경로가 없는 경우에는, Odoo에서는 품목 양식 :guilabel:`재고 관리` 탭에 지정된 :guilabel:`경로`가 "
 "선택됩니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:235
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:237
 msgid ""
 "Manual reordering rules, configured by setting the reordering rule's "
 ":guilabel:`Trigger` field to :guilabel:`Manual`, lists a product on the "
@@ -24743,7 +24743,7 @@ msgstr ""
 "수량이 지정된 최소값 아래로 떨어지면 보충 현황판에 품목이 표시됩니다. 이 현황판에 표시되는 품목을 *필요* 항목이라고 하며, 예정된 "
 "판매주문서 작업에 필요하나 예상 수량이 충분하지 않기 때문입니다. "
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:240
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:242
 msgid ""
 "The replenishment dashboard, accessible by navigating to "
 ":menuselection:`Inventory app --> Operations --> Replenishment`, considers "
@@ -24753,7 +24753,7 @@ msgstr ""
 ":menuselection:`재고 앱 --> 운영 --> 보충`으로 이동하면 보충 현황판을 확인할 수 있으며, 판매주문서 마감일, 예상 "
 "재고 수준 및 공급업체 리드 타임을 고려합니다. 품목을 다시 주문할 시기가 되면 필요한 항목에 **한해서만** 표시됩니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:245
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:247
 msgid ""
 "If the one-day window for ordering products is too short, skip to the "
 ":ref:`visibility days <inventory/product_management/visibility-days>` "
@@ -24764,7 +24764,7 @@ msgstr ""
 "<inventory/product_management/visibility-days>` 섹션으로 건너뛰면 지정된 일수 전에 보충 현황판에 "
 "필요 항목이 표시되도록 설정할 수 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:249
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:251
 msgid ""
 "When a product appears on the replenishment dashboard, clicking the "
 ":guilabel:`Order Once` button generates the purchase or manufacturing order "
@@ -24779,17 +24779,17 @@ msgid ""
 "stock."
 msgstr "재고를 보충하려면 보충 현황판에서 한 번만 주문 버튼을 클릭합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:259
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:261
 msgid "Visibility days"
 msgstr "표시 일자"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:262
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:264
 msgid ""
 "Ensure :doc:`lead times <lead_times>` are understood before proceeding with "
 "this section."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:264
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:266
 msgid ""
 "When :ref:`manual reordering rules <inventory/product_management/manual-rr>`"
 " are assigned to a product, *visibility days* make the product appear on the"
@@ -24799,13 +24799,13 @@ msgstr ""
 "품목에 :ref:`수동 재주문 규칙 <inventory/product_management/manual-rr>`이 적용되면 일정한 기간 "
 "전에 보충 현황판 (:menuselection:`재고 관리 앱 --> 운영 --> 보충`)에 품목의 *표시 일수*가 표시됩니다. "
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:270
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:272
 msgid ""
 "A product has a manual reordering rule set to trigger when the stock level "
 "falls below four units. The current on-hand quantity is ten units."
 msgstr "품목에 수동 재주문 규칙이 재고 수준이 4개 미만이 되면 실행되도록 설정되어 있습니다. 현재 보유 중인 수량은 10개입니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:273
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:275
 msgid ""
 "The current date is February 20th, and the *delivery date* on a sales order "
 "(in the :guilabel:`Other Info` tab) is March 3rd — twelve days from the "
@@ -24814,7 +24814,7 @@ msgstr ""
 "현재 날짜는 2월 20일이고 판매주문서 상의 *배송 날짜* (:guilabel:`기타 정보` 탭)는 현재 날짜로부터 12일 후인 3월 "
 "3일입니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:276
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:278
 msgid ""
 "The :ref:`vendor lead time <inventory/shipping_receiving/purchase-lt>` is "
 "four days, and the :ref:`purchase security lead time "
@@ -24823,7 +24823,7 @@ msgstr ""
 ":ref:`공급업체 리드 타임 <inventory/shipping_receiving/purchase-lt>` 은 4일이고 :ref:`매입"
 " 보안 리드 타임 <inventory/shipping_receiving/purchase-security-lt>` 은 1일입니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:280
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:282
 msgid ""
 "When the :guilabel:`Visibility Days` field of the reordering rule is set to "
 "zero, the product appears on the replenishment dashboard five days before "
@@ -24838,13 +24838,13 @@ msgid ""
 "Feb 27th."
 msgstr "보충 현황판에 필요 항목이 생기는 시기를 나타내는 그래픽: 2월 27일 자"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:288
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:290
 msgid ""
 "To see the product on the replenishment dashboard for the current date, "
 "February 20, set the :guilabel:`Visibility Days` to `7.00`."
 msgstr "현재 날짜인 2월 20일로 보충 현황판에서 품목을 확인하려면 :guilabel:`표시 일자`를 `7.00`로 설정합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:291
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:293
 msgid ""
 "To determine the amount of visibility days needed to see a product on the "
 "replenishment dashboard, subtract *today's date* from the *date the need "
@@ -24853,21 +24853,21 @@ msgstr ""
 "보충 현황판에서 품목을 확인하는 데 필요한 표시 일자를 계산하려면 보충 현황판의 *필요 항목이 표시되는 날짜*에서 *당일 날짜*를 "
 "뺍니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:294
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:296
 msgid "Visibility~days = Need~appears~date - Today's~date"
 msgstr "표시 일자 = 필요 항목이 표시되는 날짜 - 당일 날짜"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:299
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:301
 msgid ""
 "Referring to the example above, today's date is February 20th, and the need "
 "for the product appears on February 27th."
 msgstr "위의 예시를 참고할 경우, 오늘 날짜가 2월 20일이고 해당 품목에 대한 필요 표시가 2월 27일에 나타납니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:302
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:304
 msgid "(February 27 - February 20 = 7 days)"
 msgstr "(2월 27일 - 2월 20일 = 7일)"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:304
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:306
 msgid ""
 "Incorrectly setting the :guilabel:`Visibility Days` fewer than seven days in"
 " this case results in the need **not** appearing on the replenishment "
@@ -24881,11 +24881,11 @@ msgid ""
 "days set."
 msgstr "잘못되게 표시된 표시 일자와 정확한 표시 일자를 보충 현황판에서 같이 보여 줍니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:314
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:316
 msgid "Route"
 msgstr "경로"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:316
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:318
 msgid ""
 "Odoo allows for multiple routes to be selected under the "
 ":guilabel:`Inventory` tab on each product form. For instance, it is possible"
@@ -24895,7 +24895,7 @@ msgstr ""
 "Odoo에서는 각 품목 양식의 :guilabel:`재고` 탭에서 여러 경로를 선택할 수 있습니다. 즉, 단일 제품에 대해 두 경로의 "
 "기능을 모두 사용할 수 있도록 :guilabel:`구매`와 :guilabel:`제조`를 모두 선택할 수 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:320
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:322
 msgid ""
 "Odoo also enables users to set a preferred route for a product's reordering "
 "rule. This is the route that the rule defaults to, if multiple are selected."
@@ -24906,13 +24906,13 @@ msgstr ""
 " 설정되는 경로입니다. 기본 경로를 지정하려면 :menuselection:`재고 관리 앱 --> 환경 설정 --> 재주문 규칙`으로 "
 "이동합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:324
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:326
 msgid ""
 "By default, the :guilabel:`Route` column is hidden on the "
 ":guilabel:`Reordering Rules` page."
 msgstr "기본값으로, :guilabel:`경로` 열은 :guilabel:`재주문 규칙` 페이지에 숨겨져 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:326
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:328
 msgid ""
 "Reveal the :guilabel:`Route` column by selecting the :guilabel:`(slider)` "
 "icon to the far-right of the column titles, and checking the "
@@ -24921,7 +24921,7 @@ msgstr ""
 ":guilabel:`경로` 열을 표시하려면 제목 열의 맨 오른쪽에 있는 :guilabel:`(슬라이더)` 아이콘을 선택하여 드롭다운 "
 "메뉴가 나타나면 :guilabel:`경로` 항목을 선택합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:329
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:331
 msgid ""
 "Click inside of the column on the row of a reordering rule, and a drop-down "
 "menu shows all available routes for that rule. Select one to set it as the "
@@ -24934,7 +24934,7 @@ msgstr ""
 msgid "Select a preferred route from the drop-down."
 msgstr "드롭다운에서 선호하는 경로를 선택합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:337
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:339
 msgid ""
 "If multiple routes are enabled for a product but no preferred route is set "
 "for its reordering rule, the product is reordered using the selected route "
@@ -24944,441 +24944,289 @@ msgstr ""
 ":guilabel:`재고` 탭에 가장 먼저 나열된 경로를 사용하여 품목을 재주문합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:3
-msgid "Resupply from another warehouse"
-msgstr "다른 창고에서 재공급"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:5
-msgid ""
-"A common use case for multiple warehouses is to have one central warehouse "
-"that resupplies multiple shops, and in this case, each shop is considered a "
-"local warehouse. When a shop wants to replenish a product, the product is "
-"ordered to the central warehouse. Odoo allows the user to easily set which "
-"warehouse(s) can resupply another warehouse."
+msgid "Inter-warehouse replenishment"
 msgstr ""
-"여러 창고를 사용하는 일반적인 경우는 중앙 창고에서 여러 매장을 보충하는 것입니다. 이 설정에서는 각 상점이 로컬 창고로 간주됩니다. "
-"매장에서 제품을 재입고하고자 할 때 중앙 창고에서 제품을 주문합니다. Odoo를 사용하면 사용자가 다른 창고에 재공급할 수 있는 창고를 "
-"쉽게 설정할 수 있습니다."
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:7
+msgid ""
+"When a business operates multiple locations, such as warehouses, retail "
+"shops, or manufacturing facilities, resupplying stock from a central "
+"warehouse is sometimes necessary. Odoo uses a *Route* configuration that "
+"enables locations to replenish from a central distribution center, "
+"automatically generating *inter-warehouse transfers*. Odoo "
+":guilabel:`Inventory` manages these transfers to keep stores in stock."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:13
 msgid ""
-"To resupply from another warehouse, first go to :menuselection:`Inventory "
-"--> Configuration --> Settings --> Warehouse` and activate :guilabel:`Multi-"
-"Step Routes`. Then, click :guilabel:`Save` to apply the setting."
+"This guide explains how to conduct inter-warehouse transfers using two "
+"replenishment strategies:"
 msgstr ""
-"다른 창고에서 재공급을 활성화하려면 먼저 :menuselection:`재고 관리 --> 환경설정 --> 설정 --> 창고`로 이동합니다."
-" 다음으로 :guilabel:`다중 단계 경로` 옵션을 활성화한 다음 :guilabel:`저장`을 클릭하여 설정을 구현합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst-1
-msgid "Enable Multi-Step Routes in Inventory settings."
-msgstr "재고 관리 설정에서 다중 단계 경로를 활성화합니다."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:15
+msgid ":ref:`Make to order (MTO) <inventory/warehouses_storage/MTO>`"
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:21
-msgid ""
-"View all the configured warehouses by going to :menuselection:`Inventory -->"
-" Configuration --> Warehouses`."
-msgstr ":menuselection:`재고 관리 --> 환경설정 --> 창고`로 이동하여 구성된 모든 창고를 볼 수 있습니다."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:16
+msgid ":ref:`Reordering rule <inventory/warehouses_storage/reordering-rule>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:19
+msgid ":doc:`Difference between MTO and reordering rules <../replenishment>`"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:24
 msgid ""
-"Create a new warehouse by clicking :guilabel:`Create`. Then, give the "
-"warehouse a name and a :guilabel:`Short Name`. Finally, click "
-":guilabel:`Save` to finish creating the warehouse."
+"The initial configuration for both replenishment strategies is the same. "
+"First go to :menuselection:`Inventory app --> Configuration --> Settings`. "
+"In the :guilabel:`Warehouse` section, activate :guilabel:`Storage "
+"Locations`. Then, click :guilabel:`Save` to apply the setting."
 msgstr ""
-":guilabel:`생성`를 선택하여 새 창고를 설정합니다. 그런 다음 창고에 이름과 :guilabel:`별칭`을 입력합니다. 마지막으로"
-" :guilabel:`저장`을 클릭하여 창고 생성 프로세스를 완료합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:27
-msgid ""
-"After that, go back to the :guilabel:`Warehouses` page and open the "
-"warehouse that will be resupplied by the second warehouse. Then, click "
-":guilabel:`Edit`. In the :guilabel:`Warehouse Configuration` tab, locate the"
-" :guilabel:`Resupply From` field, and check the box next to the second "
-"warehouse's name. If the warehouse can be resupplied by more than one "
-"warehouse, make sure to check those warehouses' boxes too. Finally, click "
-":guilabel:`Save` to apply the setting. Now, Odoo knows which warehouses can "
-"resupply this warehouse."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst-1
+msgid "Enable Storage Locations in Inventory settings."
 msgstr ""
-"그런 다음 :guilabel:`창고` 페이지로 돌아가서 두 번째 창고에서 보충할 창고를 엽니다. 그런 다음 :guilabel:`편집`을 "
-"클릭합니다. :guilabel:`창고 구성` 탭에서 :guilabel:`공급처` 필드를 찾아 두 번째 창고 이름 옆에 있는 확인란을 "
-"선택합니다. 창고를 여러 창고에서 보충할 수 있는 경우 해당 창고의 확인란도 선택해야 합니다. 마지막으로 :guilabel:`저장`을 "
-"클릭하여 설정을 적용합니다. 이제 Odoo가 이 특정 창고를 재공급할 수 있는 창고에 대한 정보를 얻었습니다."
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:35
+msgid ""
+"Configure the settings for the central warehouse and connecting storage "
+"locations by going to :menuselection:`Inventory app --> Configuration --> "
+"Warehouses`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:39
+msgid ""
+"Each central warehouse and other locations *must* have its own warehouse. "
+"For example, each shop is considered a local warehouse."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:42
+msgid ""
+"Select an existing warehouse, or create a new one to be resupplied from the "
+"central warehouse, by clicking :guilabel:`New`. Then, give the warehouse a "
+"name and a :guilabel:`Short Name`, which will appear on that warehouse's "
+"transfers."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:46
+msgid ""
+"In the :guilabel:`Warehouse Configuration` tab, locate the "
+":guilabel:`Resupply From` field. Check the box next to the central "
+"warehouse's name. If the warehouse can be resupplied by more than one "
+"warehouse, make sure to check those warehouses' boxes too. Now, Odoo knows "
+"which warehouses can resupply this warehouse."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:52
+msgid ""
+"The central warehouse that will supply the shops is called `Central "
+"warehouse`. The :guilabel:`Resupply From` field is set to this warehouse on "
+"the shop's warehouse configuration page."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:57
+msgid ":doc:`../inventory_management/warehouses`"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst-1
 msgid "Supply one warehouse with another in the Warehouse Configuration tab."
 msgstr "창고 설정 탭에서 한 창고를 다른 창고에 공급합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:39
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:64
 msgid "Set route on a product"
 msgstr "품목 경로 설정"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:41
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:66
 msgid ""
-"After configuring which warehouse(s) to resupply from, a new route is now "
-"available on all product forms. The new route appears as :guilabel:`Supply "
-"Product from [Warehouse Name]` under the :guilabel:`Inventory` tab on a "
-"product form. Use the :guilabel:`Supply Product from [Warehouse Name]` route"
-" with a reordering rule or the make to order (MTO) route to replenish stock "
-"by moving the product from one warehouse to another."
+"Products must also be configured properly in order for them to be "
+"transferred between warehouses."
 msgstr ""
-"재공급할 창고에 대한 설정이 완료되면 모든 제품 양식에서 새 경로에 액세스할 수 있습니다. 새 경로는 제품 양식의 "
-":guilabel:`재고` 탭 아래에 :guilabel:`[창고 이름]에서 제품 공급`으로 표시됩니다. 재주문 규칙 또는 주문 "
-"제작(MTO) 경로와 함께 :guilabel:`[창고 이름]에서 제품 공급` 경로를 활용하여 한 창고에서 다른 창고로 제품을 전송하여 "
-"재고를 보충할 수 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst-1
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:68
+msgid ""
+"Go to :menuselection:`Inventory app --> Products --> Products` and select "
+"the desired product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:70
+msgid ""
+"In the :guilabel:`Inventory` tab, the new route appears as :guilabel:`X: "
+"Supply Product from Y` in the :guilabel:`Routes` section, where 'X' is the "
+"store's warehouse that receives products, and 'Y' is the warehouse that "
+"sends products."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:74
+msgid ""
+"Tick the :guilabel:`X: Supply Product from Y` checkbox, which is intended to"
+" be used with the |MTO| route or a reordering rule to replenish stock by "
+"moving the product from one warehouse to another. Proceed to the dedicated "
+"sections below to continue the process."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:81
+msgid "MTO"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:83
+msgid ""
+"To replenish products using the make-to-order method, go to the product form"
+" and ensure the :ref:`MTO route is unarchived "
+"<inventory/warehouses_storage/unarchive-mto>`, so it appears in the "
+":guilabel:`Routes` section of the :guilabel:`Inventory` tab."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:87
+msgid ""
+"With the resupply and |MTO| routes ticked, jump to the section titled: "
+":ref:`Replenish from another warehouse "
+"<inventory/warehouses_storage/resupply-workflow>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:91
+msgid ""
+"The product, sold at the warehouse, `Store`, is resupplied from the central "
+"warehouse, named `YourCompany`. To replenish the product using |MTO|, the "
+"following routes are selected:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:94
+msgid ":guilabel:`Store: Supply Product from YourCompany`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:95
+msgid ":guilabel:`Replenish on Order (MTO)`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:0
 msgid ""
 "Route setting which enables a product to resupplied from a second warehouse."
 msgstr "두 번째 창고에서 제품을 재공급할 수 있도록 경로 설정을 구성합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:51
-msgid ""
-"When a product's reordering rule is triggered and the product has the "
-":guilabel:`Supply Product from [Warehouse Name]` route set, Odoo "
-"automatically creates two pickings. One picking is a *delivery order* from "
-"the second warehouse, which contains all the necessary products, and the "
-"second picking is a *receipt* with the same products for the main warehouse."
-" The product move from the second warehouse to the main warehouse is fully "
-"tracked in Odoo."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:104
+msgid "Reordering rule"
 msgstr ""
-"제품의 재주문 규칙이 트리거되고 제품에 :guilabel:`[창고 이름]에서 제품 공급` 경로가 설정되어 있으면 Odoo는 자동으로 두 "
-"번의 피킹을 생성합니다. 한 피킹은 필요한 모든 제품을 포함하는 두 번째 창고로부터의 *배송 주문*이며, 두 번째 피킹은 주 창고에 대한"
-" 동일한 제품이 포함된 *입고*입니다. 두 번째 창고에서 메인 창고로의 제품 이동은 Odoo에서 완전히 추적됩니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:57
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:106
 msgid ""
-"On the picking/transfer records created by Odoo, the :guilabel:`Source "
-"Document` is the product's reordering rule. The location between the "
-"delivery order and the receipt is a transit location."
+"To replenish products using reordering rules, first ensure the :guilabel:`X:"
+" Supply Product from Y` route is selected in the :guilabel:`Inventory` tab "
+"of the product form."
 msgstr ""
-"Odoo에서 생성한 피킹/이송 기록에서 :guilabel:`원본 문서`는 제품의 재주문 규칙입니다. 배송 주문과 입고 내역 사이에 위치한"
-" 위치가 운송 위치로 지정됩니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst-1
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:109
 msgid ""
-"A reordering rule automatically creates two receipts for stock between "
-"warehouses."
-msgstr "재주문 규칙은 창고 간 재고에 대한 두 개의 입고를 자동으로 생성합니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst-1
-msgid "A warehouse order for resupplying one warehouse's stock with another."
-msgstr "한 창고의 재고를 다른 창고로 보충하기 위한 창고 주문입니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst-1
-msgid "A receipt for stock received to one warehouse from another."
-msgstr "한 창고에서 다른 창고로 입고된 재고에 대한 입고 내역입니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst:3
-msgid "Transfer products between warehouses using replenishment"
-msgstr "보충을 사용하여 창고 간 제품 이동하기"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst:5
-msgid ""
-"For companies that use multiple warehouses, it is often necessary to "
-"transfer items between them. This is referred to as an *inter-warehouse "
-"transfer*. Odoo *Inventory* handles the administrative process of inter-"
-"warehouse transfers to ensure that inventory counts remain accurate during "
-"and after the transfer. This document will detail the method for conducting "
-"an inter-warehouse transfer using replenishment."
+"Then, create a reordering rule to automate replenishment by clicking the "
+":guilabel:`Reordering Rules` smart button."
 msgstr ""
-"여러 창고를 사용하는 기업의 경우 창고 간에 품목을 이전해야 하는 경우가 종종 발생합니다. 이를 *창고 간 이전*이라고 합니다. "
-"Odoo의 *재고 관리* 앱은 창고 간 이동의 관리 프로세스를 처리하여 이동 과정과 이동 후 정확한 재고 계산을 보장합니다. 이 "
-"문서에서는 보충을 활용하여 창고 간 이전을 수행하는 절차에 대해 자세히 설명합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst:12
-msgid "Configure warehouses for inter-warehouse replenishment"
-msgstr "물류창고 간 보충을 위한 구성"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst:14
-msgid ""
-"First, ensure the :guilabel:`Multi-Step Routes` setting is enabled by "
-"navigating to :menuselection:`Inventory --> Configuration --> Settings`, and"
-" then check the box under the :guilabel:`Warehouse` tab. This will provide "
-"additional configuration options when creating a second warehouse that are "
-"needed for inter-warehouse replenishment."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:112
+msgid "Click :guilabel:`New`, and set:"
 msgstr ""
-"먼저 :menuselection:`재고 관리 --> 환경설정 --> 설정`으로 이동하여 :guilabel:`다중 단계 경로` 설정이 "
-"활성화되어 있는지 확인한 다음 :guilabel:`창고` 탭 아래의 확인란을 선택합니다. 이렇게 하면 창고 간 보충에 필요한 두 번째 "
-"창고를 생성할 때 추가 구성 옵션이 제공됩니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst:19
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:114
 msgid ""
-"By default, Odoo comes with a main warehouse already configured. If an "
-"additional warehouse has not already been created, do so now from the "
-":guilabel:`Inventory` module by selecting :menuselection:`Configuration --> "
-"Warehouses --> Create`. Otherwise, select the warehouse that products will "
-"be transferred to from the :guilabel:`Warehouses` page and then click "
-":guilabel:`Edit` to change its settings. Configure the warehouse as follows:"
+":guilabel:`Location`: the stock location of the retail store. For example, "
+"`SHOP/Stock`."
 msgstr ""
-"Odoo는 처음에 구성에 기본 웨어하우스를 포함합니다. 추가 창고가 아직 설정되지 않은 경우, :menuselection:`환경설정 "
-"--> 창고 --> 생성`을 선택하여 :guilabel:`재고 관리` 모듈에서 창고를 생성합니다. 창고가 이미 설정되어 있는 경우 "
-":guilabel:`창고` 페이지에서 제품 전송 대상 창고를 선택하고 :guilabel:`편집`을 클릭하여 설정을 변경합니다. 다음과 "
-"같이 창고를 구성합니다:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst:25
-msgid ""
-":guilabel:`Warehouse`: choose a name that is not already being used for "
-"another warehouse (e.g. `Alternative Warehouse`)"
-msgstr ":guilabel:`창고`: 현재 다른 창고에 사용되지 않는 이름을 선택합니다(예: `대체 창고`)."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst:27
-msgid ""
-":guilabel:`Short Name`: choose a short name by which the warehouse will be "
-"identified (e.g. `ALT_WH`)"
-msgstr ":guilabel:`단축 이름`: 창고에 대한 간단한 식별자 (예: `ALT_WH`)를 선택합니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst:30
-msgid ""
-"Click :guilabel:`Save` and the new warehouse will be created. In addition, a"
-" new :guilabel:`Resupply From` field will appear on the warehouse's form. "
-"Click :guilabel:`Edit` and then check the box next to the warehouse that "
-"will be used to resupply the warehouse that is currently being configured."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:115
+msgid ":guilabel:`Route`: :guilabel:`X: Supply Product from Y`."
 msgstr ""
-":guilabel:`저장`을 클릭하면 새 창고 생성이 시작됩니다. 동시에 창고 양식에 새 :guilabel:`재공급처` 필드가 "
-"나타납니다. 이어서 :guilabel:`편집`을 클릭하고 현재 구성 중인 창고에 재공급하는 데 사용할 창고 옆의 확인란을 선택합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst-1
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:116
 msgid ""
-"A warehouse settings form configured to allow resupplying between "
-"warehouses."
-msgstr "창고 간 재공급을 허용하도록 구성된 창고 설정 양식입니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst:39
-msgid ""
-"For the purposes of this demonstration, the warehouse that products are "
-"transferred from (outgoing) will be titled \"San Francisco\", and the "
-"warehouse that products are transferred to (incoming) will be titled \"San "
-"Francisco 2\"."
+":guilabel:`Min Quantity` and :guilabel:`Max Quantity` to trigger automatic "
+"stock transfers when inventory falls below the set threshold."
 msgstr ""
-"이 데모를 위해 제품을 이송하는 창고 (출고)는 \"샌프란시스코\"로, 이송된 제품을 받는 창고 (입고)는 \"샌프란시스코 2\"로 "
-"라벨을 지정합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst:44
-msgid "Configure products for inter-warehouse replenishment"
-msgstr "물류창고 간 보충을 위한 품목 구성"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst:46
-msgid ""
-"Products must also be configured properly in order for them to be "
-"transferred between warehouses. Navigate to :menuselection:`Inventory --> "
-"Products --> Products` and select an existing product or :guilabel:`Create` "
-"a new one, if necessary."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:120
+msgid ":doc:`reordering_rules`"
 msgstr ""
-"창고 간에 제품을 이송하려면 제품도 올바르게 구성해야 합니다. :menuselection:`재고 관리 --> 품목 --> 품목`으로 "
-"이동하여 기존 제품을 선택하거나, 필요한 경우 :guilabel:`새 품목 생성`을 선택합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst:50
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:123
 msgid ""
-"Then, on the product form, go to the :guilabel:`Inventory` tab and enable "
-"the checkbox for :guilabel:`X: Supply Product from Y`, with *X* being the "
-"warehouse receiving the transferred products and *Y* being the warehouse "
-"that products are transferred from."
+"A :ref:`0/0 reordering rule <inventory/warehouses_storage/zero-zero>` to "
+"replenish the shop's warehouse is created, with the :guilabel:`Location` set"
+" to `SHOP/Stock`, and the :guilabel:`Route` set to :guilabel:`Store: "
+"Resupply from YourCompany`."
 msgstr ""
-"그런 다음 품목 양식 내에서 :guilabel:`재고` 탭으로 이동하여 :guilabel:`X: Y에서 제품 공급` 확인란을 "
-"활성화합니다. 여기서 *X*는 이전된 제품을 받는 창고이고 *Y*는 제품을 이전하는 창고입니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst-1
-msgid "Enable the checkbox to resupply one warehouse from another."
-msgstr "한 창고에서 다른 창고로 재공급하려면 확인란을 활성화합니다."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:0
+msgid "Show reordering rule configurations."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst:59
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:134
 msgid "Replenish one warehouse from another"
 msgstr "한 창고에서 다른 창고로 보충"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst:61
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:136
 msgid ""
-"Starting in the :menuselection:`Inventory` module, select "
-":menuselection:`Products --> Products` and then choose the product that will"
-" be replenished. Click the :guilabel:`Replenish` button on the top left of "
-"the product page and fill out the pop-up form as follows:"
+"After completing the setup, trigger replenishment using one of several "
+"methods, such as:"
 msgstr ""
-":menuselection:`재고 관리` 모듈에서 시작하여 :menuselection:`품목 --> 품목`을 선택한 다음 보충할 제품을 "
-"선택합니다. 제품 페이지 왼쪽 상단에 있는 :guilabel:`보충` 버튼을 클릭하고 다음과 같이 팝업 양식을 작성합니다:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst:65
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:138
 msgid ""
-":guilabel:`Quantity`: the number of units that will be sent to the warehouse"
-" being replenished"
-msgstr ":guilabel:`수량`: 보충할 창고로 보낼 단위의 수량입니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst:66
-msgid ""
-":guilabel:`Scheduled Date`: the date that the replenishment is scheduled to "
-"take place"
-msgstr ":guilabel:`예정일`: 보충 작업이 수행되도록 예약된 날짜입니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst:67
-msgid ":guilabel:`Warehouse`: the warehouse that will be replenished"
-msgstr ":guilabel:`창고`: 보충할 창고입니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst:68
-msgid ""
-":guilabel:`Preferred Routes`: select `X: Supply Product from Y`, with *X* "
-"being the warehouse to be replenished and *Y* being the warehouse that the "
-"product will be transferred from"
+"Navigate to the product form of the product that is resupplied from another "
+"warehouse."
 msgstr ""
-":guilabel:`선호 경로`: `X: Y에서 제품 공급`을 선택합니다. 여기서 *X*는 보충 예정 창고를 나타내고 *Y*는 제품을 "
-"전송할 창고를 나타냅니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst-1
-msgid "The form for replenishing a product."
-msgstr "제품 보충 양식입니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst:75
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:140
 msgid ""
-"Click :guilabel:`Confirm` and a delivery order will be created for the "
-"outgoing warehouse along with a receipt for the warehouse that will receive "
-"the product. Depending on the configuration settings for the outgoing and "
-"incoming warehouses, processing delivery orders and receipts will require "
-"between one and three steps. This document will detail how to process one-"
-"step deliveries and receipts."
+"Click the :guilabel:`Replenish` button on the top-left of the product page. "
+"In the pop-up window, set the warehouse to the retail shop, (e.g. `Store`), "
+"and click :guilabel:`Confirm`."
 msgstr ""
-":guilabel:`확인`을 클릭하면 제품을 받을 창고에 대한 입고 내역과 함께 나가는 창고에 대한 배송 주문이 생성됩니다. 배송 주문 "
-"및 입고 처리와 관련된 단계는 출고 및 입고 창고의 구성 설정에 따라 1단계에서 3단계까지 다양합니다. 이 문서에서는 1단계 배송 및 "
-"입고 처리 프로세스에 대해 자세히 설명합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst:82
-msgid "Process the delivery order"
-msgstr "배송 주문 처리"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst:84
-msgid ""
-"The first stage of a replenishment order is processing the delivery from the"
-" warehouse that the product is being transferred from. On the "
-":menuselection:`Inventory` dashboard, select the :guilabel:`X to Process` "
-"button on the :guilabel:`Delivery Orders` card for the outgoing warehouse, "
-"then the delivery order created for the replenishment. On the delivery order"
-" page, click the :guilabel:`Check Availability` button in the top left to "
-"reserve the quantity of the product to be transferred. Once the delivery has"
-" been dispatched, click the :guilabel:`Validate` button to register the "
-"quantities shipped."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:0
+msgid "Replenish pop-up window on the product form."
 msgstr ""
-"보충 주문은 제품이 전송되는 창고에서 배송을 처리하는 것으로 시작됩니다. :menuselection:`재고 관리` 대시보드에서 출고 "
-"창고와 연결된 :guilabel:`배송 주문` 카드 내의 :guilabel:`진행 대기` 버튼을 찾아 선택합니다. 그런 다음 보충을 위해"
-" 생성된 배송 주문을 선택합니다. 배송 주문 페이지에서 왼쪽 상단에 있는 :guilabel:`주문 가능 여부 확인` 버튼을 클릭하여 "
-"지정된 수량의 제품을 배송 예약합니다. 배송이 완료되면 :guilabel:`승인` 버튼을 클릭하여 배송된 수량을 공식적으로 기록합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst-1
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst-1
-msgid "The delivery orders card for the outgoing warehouse."
-msgstr "출고 창고에 대한 배송 주문을 표시하는 카드입니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst:97
-msgid "Process the receipt"
-msgstr "입고 처리"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst:99
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:147
 msgid ""
-"Once the goods arrive at the incoming warehouse, the receipt created for "
-"that warehouse must be processed as well. Return to the "
-":menuselection:`Inventory` dashboard and select the :guilabel:`X to Process`"
-" button on the :guilabel:`Receipts` card for the incoming warehouse, then "
-"the receipt created for the replenishment. On the receipt page, click the "
-":guilabel:`Validate` button in the top left of the page to register the "
-"quantities received."
+"Create a quotation, and in the :guilabel:`Other Info` tab, set the "
+":guilabel:`Warehouse` to the retail shop (e.g. `Store`), when selling the "
+"product makes the on-hand quantity of the product go below the minimum set "
+"on the reordering rule."
 msgstr ""
-"상품이 입고 창고에 도착하면 해당 특정 창고에 대해 생성된 입고 내역을 처리해야 합니다. :menuselection:`재고 관리` "
-"대시보드로 돌아와 입고 창고에 해당하는 :guilabel:`입고` 카드의 :guilabel:`진행 대기` 버튼을 선택합니다. 그런 다음 "
-"보충에 대해 생성된 입고를 선택합니다. 입고 페이지에서 왼쪽 상단에 있는 :guilabel:`승인` 버튼을 클릭하여 입고 수량을 "
-"기록합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst:109
-msgid ""
-"After processing the receipt, the products transferred will now appear in "
-"the inventory of the incoming warehouse. The stock numbers for both "
-"warehouses can be viewed by returning to the product page and selecting the "
-":guilabel:`X Units On Hand` button at the top of the screen."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:0
+msgid "Create a quote at the store."
 msgstr ""
-"입고 처리 후 이전된 제품은 입고 창고의 재고에 표시됩니다. 두 물류창고의 재고 번호를 확인하려면 제품 페이지를 다시 방문하여 화면 "
-"상단에 있는 :guilabel:`현 재고 수량` 버튼을 클릭합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst:114
-msgid "Automate inter-warehouse replenishment"
-msgstr "물류창고 간 보충 자동화"
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst:116
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:155
 msgid ""
-"Using reordering rules, it is possible to automate the process of "
-"replenishing one warehouse from another."
-msgstr "재주문 규칙을 사용하면 한 창고에서 다른 창고로 재보충하는 프로세스를 자동화할 수 있습니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst:119
-msgid ""
-"To get started, navigate to :menuselection:`Inventory --> Products --> "
-"Products`, and then choose the product that will be replenished. From the "
-"product page, select the :guilabel:`Reordering Rules` smart button at the "
-"top of the form, and then on the next page, click :guilabel:`Create` to "
-"configure the form as follows:"
+"Once triggered, Odoo creates two transfers: One is a *delivery order* from "
+"the central, supplying warehouse, which contains all the necessary products "
+"to the store, and the second is a *receipt* at the shop, from the main "
+"warehouse."
 msgstr ""
-"시작하려면 :menuselection:`재고 --> 품목 --> 품목`으로 이동하여, 보충할 품목을 선택합니다. 품목 페이지에서 양식의 "
-"가장 상단에 위치한 :guilabel:`재주문 규칙` 버튼을 누르면 나타나는 다음 페이지에서 :guilabel:`만들기` 버튼을 누르면 "
-"다음과 같은 구성 양식이 표시됩니다:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst:124
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:159
 msgid ""
-":guilabel:`Location`: the location that the reordering rule will replenish "
-"when triggered, in this case, the incoming warehouse"
-msgstr ":guilabel:`위치`: 재정렬 규칙이 트리거될 때 보충할 위치(이 경우 들어오는 창고)입니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst:126
-msgid ""
-":guilabel:`Min Quantity`: when the quantity on hand at the incoming "
-"warehouse falls below this number, the reordering rule will be triggered"
-msgstr ":guilabel:`최소 수량`: 입고 창고에 입고된 수량이 이 지정된 숫자 아래로 내려가면 재주문 규칙이 트리거됩니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst:128
-msgid ""
-":guilabel:`Max Quantity`: when the reordering rule is triggered, the product"
-" will be replenished at the incoming warehouse up to this quantity"
-msgstr ":guilabel:`최대 수량`: 재주문 규칙이 트리거되면 입고 창고에서 지정된 수량까지 제품이 보충됩니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst:130
-msgid ""
-":guilabel:`Multiple Quantity`: specify if the product should be replenished "
-"in batches of a certain quantity; for example, a product could be "
-"replenished in batches of 20"
+"While in transit, the product is located at `Physical Locations/Inter-"
+"warehouse transit`."
 msgstr ""
-":guilabel:`다중 수량`: 제품을 특정 수량 단위로 보충할지 지정합니다. (예: 제품을 20개 단위로 보충할 수 있음)"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst:132
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:162
 msgid ""
-":guilabel:`UoM`: the unit of measure used for reordering the product; this "
-"value can simply be `Units`, or a specific unit of measurement for weight, "
-"length, etc."
+"A sales order for the product at the shop is created. To replenish the "
+"product at the shop and ship it from there, Odoo generates a delivery order "
+"from the central warehouse's stock, `WH/Stock` to the shop's warehouse "
+"`SHOP/Stock`. While the products are traveling between warehouses, they are "
+"in `Physical Locations/Inter-warehouse transit`."
 msgstr ""
-":guilabel:`UoM`: 제품 재주문에 사용되는 측정 단위로, 이 값은 단순히 `단위`이거나 무게, 길이 등의 특정 측정 단위일 수"
-" 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst-1
-msgid "A fully configured reordering rule."
-msgstr "완벽하게 설정된 재주문 규칙."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst:139
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:167
 msgid ""
-"Finish by clicking :guilabel:`Save` and the reordering rule will be created."
-" Now, when the scheduler runs automatically each day, a transfer will be "
-"created for each reordering rule that has been triggered."
+"The final delivery order is from the shop to the customer's delivery "
+"address, and is not pertinent to the workflow in this guide."
 msgstr ""
-":guilabel:`저장`을 클릭하여 프로세스를 완료하면 재정렬 규칙이 설정됩니다. 그 후 스케줄러가 매일 자동으로 실행되므로 활성화된 "
-"모든 재정렬 규칙에 대해 전송이 생성됩니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst:144
-msgid ""
-"To manually trigger reordering rules, start from the "
-":menuselection:`Inventory` module and select :menuselection:`Operation --> "
-"Run Scheduler`, then click the green :guilabel:`Run Scheduler` button in the"
-" pop-up that appears."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:0
+msgid "Show shipments from warehouse to store."
 msgstr ""
-"재정렬 규칙을 수동으로 시작하려면 :menuselection:`재고 관리` 모듈에서 시작하여 :menuselection:`작업 --> "
-"스케줄러 실행`을 선택합니다. 그런 다음 표시되는 팝업에서 녹색 :guilabel:`스케줄러 실행` 버튼을 클릭합니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/warehouse_replenishment_transfer.rst:148
-msgid ""
-"After the scheduler runs, a delivery order and receipt will be created for "
-"the outgoing and incoming warehouses, respectively. Both the delivery order "
-"and receipt should be processed using the same method as detailed above."
-msgstr ""
-"스케줄러가 실행되면 나가는 창고와 들어오는 창고에 대해 각각 배송 주문과 입고 내역이 생성됩니다. 배송 주문과 입고는 모두 위에서 설명한"
-" 것과 동일한 방법으로 처리해야 합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting.rst:5
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting.rst:3
@@ -32595,6 +32443,8 @@ msgid ""
 " and minute at which processing should begin, using the 24-hour clock "
 "format."
 msgstr ""
+"캘린더를 활용하여 |MO| 작업을 시작할 날짜를 선택합니다. 팝오버 창 하단에-있는 두 항목에 24시간 기준 시계 형식을 사용하여 작업을"
+" 시작할 시와 분을 입력합니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:228
 msgid ""
@@ -37264,6 +37114,8 @@ msgid ""
 ":ref:`developer mode <developer-mode>`. This allows the *Time Off* smart "
 "button to appear on each work center's *Working Hours* page."
 msgstr ""
+"작업장을 사용 불가로 지정하기 전에 먼저 Odoo 플랫폼을 반드시 올바르게 설정해야 합니다. 먼저 :ref:`개발자 모드 ` 를 "
+"활성화합니다. 활성화하면 각 작업장의 *운영 시간* 페이지에 *휴무* 스마트 버튼이 나타납니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:23
 msgid ""
@@ -37278,6 +37130,8 @@ msgid ""
 "only one that appears on the page. Click the :guilabel:`Install` button on "
 "the card to install the app."
 msgstr ""
+"설치하려면 :menuselection:`앱` 앱으로 이동한 다음 검색 창에서 `휴가` 를 검색합니다. :guilabel:`휴가` 앱 "
+"카드만 페이지에 표시됩니다. 카드에 있는 :guilabel:`설치` 버튼을 클릭하여 앱을 설치합니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:30
 msgid ""
@@ -37318,6 +37172,8 @@ msgid ""
 " to send work orders to the second work center when the first is unavailable"
 " for any reason."
 msgstr ""
+"사용 불가 중인 작업장의 경우, :guilabel:`대체 작업장` 드롭다운 메뉴에서 두 번째 작업장을 선택합니다. 이제 어떤 이유로든 "
+"Odoo에서 첫 번째 작업장을 사용할 수 없을 때는 두 번째 작업장으로 작업지시서가 전송되어야 한다는 정보가 생성됩니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst-1
 msgid "A work center form configured with an alternative work center."
@@ -37351,6 +37207,8 @@ msgid ""
 "Off` smart button appears at the top of the page. Click it to open the "
 ":guilabel:`Resource Time Off` page."
 msgstr ""
+"근무 시간 페이지에 작업장의 표준 근무 시간이 표시됩니다. 개발자 모드가 활성화되어 있으면, :icon:`fa-plane` "
+":guilabel:`휴무` 스마트 버튼이 페이지 상단에 나타납니다. 버튼을 클릭하면 :guilabel:`리소스 휴무` 페이지가 열립니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:69
 msgid ""
@@ -37388,6 +37246,9 @@ msgid ""
 "unavailable work center for one of its operations. Click :guilabel:`Confirm`"
 " to confirm the |MO|."
 msgstr ""
+"먼저 :menuselection:`제조 관리 앱 --> 운영 --> 제조지시서 --> 새로 만들기` 로 이동하여 새로운 제조지시서 "
+"(MO)를 생성합니다. |MO| 양식에서, 사용 불가인 작업장을 운영 과정에서 사용하게 되는 :guilabel:`품목` 을 지정합니다. "
+":guilabel:`확인` 을 클릭하여 |MO| 를 확정합니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:89
 msgid ""
@@ -37434,6 +37295,8 @@ msgid ""
 ":guilabel:`Plan` button does not route work orders to an alternative work "
 "center unless the first one is at capacity."
 msgstr ""
+"사용 불가 중인 작업장의 휴무 기간이 끝나면 Odoo에서 작업장을 다시 사용할 수 있게 됩니다. 이 시점에서는 :guilabel:`계획`"
+" 버튼을 클릭해도 첫 번째 작업장의 수용량에 도달하지 않는 한 다른 작업장으로 작업주문서가 라우팅되지 않습니다."
 
 #: ../../content/applications/inventory_and_mrp/plm.rst:8
 msgid "Product lifecycle management"
@@ -41919,6 +41782,9 @@ msgid ""
 "product names, references, and vendor details, is to first :ref:`export a "
 "pricelist <purchase/products/export-price>` from the database."
 msgstr ""
+"공급업체 가격표를 가져오려면, XLSX 또는 CSV 파일이 정확하게 작성되어 있는지 확인하세요. 정확한 형식으로 된 템플릿을 품목명, "
+"참조, 공급업체 세부 정보를 포함하여 받으려면, 먼저 데이터베이스에서 :ref:`가격표 내보내기 "
+"<purchase/products/export-price>` 를 실행합니다."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:46
 msgid ""
@@ -41957,6 +41823,9 @@ msgid ""
 " the desired field in the :guilabel:`Available fields` section, and click "
 "the :icon:`fa-plus` :guilabel:`(plus)` icon to the right of the field."
 msgstr ""
+"이후 나타나는 팝업 창에서, :guilabel:`내보내기할 항목` 섹션에 있는 항목이 내보내기 파일에 포함되어 있는 것을 볼 수 "
+"있습니다. 항목을 더 추가하려면 :guilabel:`사용 가능한 항목` 섹션에서 원하는 항목을 찾아서 항목 오른쪽에 있는 "
+":icon:`fa-plus` :guilabel:`(더하기)` 아이콘을 클릭합니다."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:69
 msgid ""
@@ -42021,6 +41890,9 @@ msgid ""
 "updating existing ones. Including this field in the XLSX or CSV, indicates "
 "the line replaces an existing vendor pricelist in the Odoo database."
 msgstr ""
+"*외부 ID* 는 기존 공급업체 가격표를 업데이트하는 데 사용되는 고유 식별 기호입니다. 해당 ID가 없을 경우 가져온 레코드로 기존 "
+"항목이 업데이트 되지 않고 대신 새로운 항목이 생성됩니다. 이 항목이 XLSX 또는 CSV에 포함되어 있으면 Odoo 데이터베이스에 있는"
+" 기존 공급업체 가격표가 해당 줄로 대체됩니다."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:0
 msgid "Show 'Ready Mat' appear twice."

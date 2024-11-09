@@ -33,7 +33,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-07 08:27+0000\n"
+"POT-Creation-Date: 2024-11-04 11:48+0000\n"
 "PO-Revision-Date: 2023-11-08 08:57+0000\n"
 "Last-Translator: Ossi Mantylahti <ossi.mantylahti@obs-solutions.fi>, 2024\n"
 "Language-Team: Finnish (https://app.transifex.com/odoo/teams/41243/fi/)\n"
@@ -191,9 +191,9 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/accounting.rst:129
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:79
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:90
 #: ../../content/applications/finance/accounting/reporting.rst:5
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:79
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:90
 msgid "Reporting"
 msgstr "Raportointi"
 
@@ -270,7 +270,7 @@ msgstr ""
 #: ../../content/applications/finance/accounting.rst:157
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:140
 #: ../../content/applications/finance/fiscal_localizations/colombia.rst:138
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:334
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:367
 msgid "Partner"
 msgstr "Kumppani"
 
@@ -612,9 +612,9 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:637
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:749
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:883
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:34
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:701
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:894
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:81
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:713
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:906
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst:6
 #: ../../content/applications/finance/fiscal_localizations/romania.rst:6
 #: ../../content/applications/finance/fiscal_localizations/romania.rst:42
@@ -2378,7 +2378,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:5
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:90
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:432
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:433
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:365
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:314
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:260
@@ -2606,14 +2606,14 @@ msgstr ""
 #: ../../content/applications/finance/accounting/taxes.rst:5
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:169
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:32
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:242
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:243
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:180
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:366
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:376
 #: ../../content/applications/finance/fiscal_localizations/colombia.rst:192
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:184
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:78
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:255
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:121
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:293
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:121
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:33
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:116
@@ -3528,25 +3528,48 @@ msgid ""
 " by selecting the :guilabel:`Manually & Grouped` option instead."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:48
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:48
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:59
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:59
 msgid "Amount Computation"
 msgstr "Määrän laskelma"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:46
-msgid ""
-"Suppose an invoice of $1200 must be deferred over 12 months. The "
-":guilabel:`Equal per month` computation accounts for $100 each month, while "
-"the :guilabel:`Based on days` computation accounts for different amounts "
-"depending on the number of days in each month."
+msgid "Suppose an invoice of $1200 must be deferred over 12 months."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:53
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:53
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:48
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:48
+msgid ""
+"The :guilabel:`Months` option accounts for $100 each month prorated to the "
+"number of days in that month (e.g., $50 for the first month if the "
+":guilabel:`Start Date` is set to the 15th of the month)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:52
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:52
+msgid ""
+"The :guilabel:`Full Months` option considers each month started to be full "
+"(e.g., $100 for the first month even if the :guilabel:`Start Date` is set to"
+" the 15th of the month); this means that with the :guilabel:`Full Months` "
+"option, a full $100 is recognized in the first partial month, eliminating "
+"the need for a 13th month to recognize any remainder as would be the case "
+"when using the :guilabel:`Months` option."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:58
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:58
+msgid ""
+"The :guilabel:`Days` option accounts for different amounts depending on the "
+"number of days in each month (e.g., ~$102 for January and ~$92 for "
+"February)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:64
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:64
 msgid "Generate deferral entries on validation"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:56
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:67
 msgid ""
 "Make sure the :guilabel:`Start Date` and :guilabel:`End Date` fields are "
 "visible in the :guilabel:`Invoice Lines` tab. In most cases, the "
@@ -3555,13 +3578,13 @@ msgid ""
 "displayed in the report accordingly."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:61
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:72
 msgid ""
 "For each line of the invoice that should be deferred, specify the start and "
 "end dates of the deferral period."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:64
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:75
 msgid ""
 "If the :guilabel:`Generate Entries` field in the **Settings** is set to "
 ":guilabel:`On invoice/bill validation`, Odoo automatically generates the "
@@ -3569,7 +3592,7 @@ msgid ""
 ":guilabel:`Deferred Entries` smart button to see them."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:68
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:79
 msgid ""
 "One entry, dated on the same day as the invoice's accounting date, moves the"
 " invoice amounts from the income account to the deferred account. The other "
@@ -3578,7 +3601,7 @@ msgid ""
 "revenue."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:74
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:85
 msgid ""
 "You can defer a January invoice of $1200 over 12 months by specifying a "
 "start date of 01/01/2023 and an end date of 12/31/2023. At the end of "
@@ -3586,15 +3609,15 @@ msgid ""
 "deferred account."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:81
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:92
 msgid ""
 "The deferred revenue report computes an overview of the necessary deferral "
 "entries for each account. To access it, go to :menuselection:`Accounting -->"
 " Reporting --> Deferred Revenue`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:84
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:84
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:95
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:95
 msgid ""
 "To view the journal items of each account, click on the account name and "
 "then :guilabel:`Journal Items`."
@@ -3604,19 +3627,19 @@ msgstr ""
 msgid "Deferred revenue report"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:91
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:102
 msgid ""
 "Only invoices whose accounting date is before the end of the period of the "
 "report are taken into account."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:97
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:97
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:108
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:108
 msgid "Generate grouped deferral entries manually"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:99
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:99
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:110
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:110
 msgid ""
 "If you have a lot of deferred revenues and wish to reduce the number of "
 "journal entries created, you can generate deferral entries manually. To do "
@@ -3625,210 +3648,210 @@ msgid ""
 " a single entry."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:104
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:115
 msgid ""
 "At the end of each month, go to :menuselection:`Accounting --> Reporting -->"
 " Deferred Revenue` and click the :guilabel:`Generate Entries` button. This "
 "generates two deferral entries:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:107
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:118
 msgid ""
 "One dated at the end of the month which aggregates, for each account, all "
 "the deferred amounts of that month. This means that a part of the deferred "
 "revenue is recognized at the end of that period."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:110
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:110
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:121
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:121
 msgid ""
 "The reversal of this created entry, dated on the following day (i.e., the "
 "first day of the next month) to cancel the previous entry."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:114
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:125
 msgid "There are two invoices:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:116
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:127
 msgid "Invoice A: $1200 to be deferred from 01/01/2023 to 12/31/2023"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:117
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:128
 msgid "Invoice B: $600 to be deferred from 01/01/2023 to 12/31/2023"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:134
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:135
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:145
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:146
 msgid "In January"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:120
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:121
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:131
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:132
 msgid ""
 "At the end of January, after clicking the :guilabel:`Generate Entries` "
 "button, there are the following entries:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:123
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:124
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:134
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:135
 msgid "Entry 1 dated on the 31st January:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:125
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:142
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:158
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:136
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:153
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:169
 msgid ""
 "Line 1: Expense account -1200 -600 = **-1800** (cancelling the total of both"
 " invoices)"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:126
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:137
 msgid ""
 "Line 2: Expense account 100 + 50 = **150** (recognizing 1/12 of invoice A "
 "and invoice B)"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:127
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:128
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:138
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:139
 msgid ""
 "Line 3: Deferred account 1800 - 150 = **1650** (amount that has yet to be "
 "deferred later on)"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:130
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:131
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:141
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:142
 msgid "Entry 2 dated on the 1st February, the reversal of the previous entry:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:132
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:133
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:143
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:144
 msgid "Line 1: Expense account **1800**"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:133
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:134
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:144
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:145
 msgid "Line 2: Deferred account **-150**"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:134
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:135
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:145
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:146
 msgid "Line 3: Expense account **-1650**"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:147
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:148
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:158
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:159
 msgid "In February"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:137
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:138
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:148
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:149
 msgid ""
 "At the end of February, after clicking the :guilabel:`Generate Entries` "
 "button, there are the following entries:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:140
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:141
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:151
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:152
 msgid "Entry 1 dated on the 28th February:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:143
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:154
 msgid ""
 "Line 2: Expense account 200 + 100 = **300** (recognizing 2/12 of invoice A "
 "and invoice B)"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:144
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:145
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:155
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:156
 msgid ""
 "Line 3: Deferred account 1800 - 300 = **1500** (amount that has yet to be "
 "deferred later on)"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:147
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:148
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:158
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:159
 msgid "Entry 2 dated on the 1st March, the reversal of the previous entry."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:150
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:151
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:161
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:162
 msgid "From March to October"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:150
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:151
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:161
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:162
 msgid "The same computation is done for each month until October."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:164
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:164
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:175
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:175
 msgid "In November"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:153
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:154
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:164
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:165
 msgid ""
 "At the end of November, after clicking the :guilabel:`Generate Entries` "
 "button, there are the following entries:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:156
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:157
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:167
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:168
 msgid "Entry 1 dated on the 30th November:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:159
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:170
 msgid ""
 "Line 2: Expense account 1100 + 550 = **1650** (recognizing 11/12 of invoice "
 "A and invoice B)"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:161
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:161
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:172
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:172
 msgid ""
 "Line 3: Deferred account 1800 - 1650 = **150** (amount that has yet to be "
 "deferred later on)"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:164
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:164
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:175
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:175
 msgid "Entry 2 dated on the 1st December, the reversal of the previous entry."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:168
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:168
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:179
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:179
 msgid "In December"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:167
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:178
 msgid ""
 "There is no need to generate entries in December. Indeed, if we do the "
 "computation for December, we have an amount of 0 to be deferred."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:177
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:177
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:188
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:188
 msgid "In total"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:171
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:171
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:182
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:182
 msgid "If we aggregate everything, we would have:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:173
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:184
 msgid "invoice A and invoice B"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:174
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:174
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:185
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:185
 msgid ""
 "two entries (one for the deferral and one for the reversal) for each month "
 "from January to November"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:177
+#: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:188
 msgid ""
 "Therefore, at the end of December, invoices A and B are fully recognized as "
 "income only once in spite of all the created entries thanks to the reversal "
@@ -5220,7 +5243,7 @@ msgid "Product Sales"
 msgstr "Tuotteen myynti"
 
 #: ../../content/applications/finance/accounting/customer_invoices/payment_terms.rst:136
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:151
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:192
 msgid "1000"
 msgstr "1000"
 
@@ -6656,7 +6679,7 @@ msgstr ""
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:79
 #: ../../content/applications/finance/accounting/get_started/multi_currency.rst:87
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:17
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:208
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:209
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:61
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:361
 #: ../../content/applications/finance/fiscal_localizations/colombia.rst:247
@@ -7589,11 +7612,11 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/get_started/multi_currency.rst:99
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:254
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:221
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:222
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:278
 #: ../../content/applications/finance/fiscal_localizations/france.rst:199
 #: ../../content/applications/finance/fiscal_localizations/india.rst:101
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:308
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:342
 msgid "Journals"
 msgstr "Päiväkirjat"
 
@@ -11919,7 +11942,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/accounting/taxes.rst:73
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:386
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:387
 msgid "Tax computation"
 msgstr ""
 
@@ -12490,7 +12513,6 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:10
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:6
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:27
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:11
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:12
 msgid "Introduction"
 msgstr "Esittely"
@@ -12962,6 +12984,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:14
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:71
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:115
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:20
 #: ../../content/applications/finance/fiscal_localizations/romania.rst:14
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:15
 #: ../../content/applications/finance/fiscal_localizations/thailand.rst:14
@@ -12987,6 +13010,7 @@ msgstr "Nimi"
 #: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:15
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:72
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:116
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:21
 #: ../../content/applications/finance/fiscal_localizations/romania.rst:15
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:16
 #: ../../content/applications/finance/fiscal_localizations/thailand.rst:15
@@ -13015,6 +13039,7 @@ msgstr "Tekninen nimi"
 #: ../../content/applications/finance/fiscal_localizations/luxembourg.rst:16
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:73
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:117
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:22
 #: ../../content/applications/finance/fiscal_localizations/romania.rst:16
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:17
 #: ../../content/applications/finance/fiscal_localizations/thailand.rst:16
@@ -14952,7 +14977,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:5
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:592
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:570
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:571
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:699
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:768
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:119
@@ -15654,14 +15679,10 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:46
-msgid ""
-"Suppose a bill of $1200 must be deferred over 12 months. The "
-":guilabel:`Equal per month` computation recognizes $100 each month, while "
-"the :guilabel:`Based on days` computation recognizes different amounts "
-"depending on the number of days in each month."
+msgid "Suppose a bill of $1200 must be deferred over 12 months."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:56
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:67
 msgid ""
 "Make sure the :guilabel:`Start Date` and :guilabel:`End Date` fields are "
 "visible in the :guilabel:`Invoice Lines` tab. In most cases, the "
@@ -15670,13 +15691,13 @@ msgid ""
 "displayed in the report accordingly."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:61
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:72
 msgid ""
 "For each line of the bill that should be deferred, specify the start and end"
 " dates of the deferral period."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:64
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:75
 msgid ""
 "If the :guilabel:`Generate Entries` field is set to :guilabel:`On "
 "invoice/bill validation`, Odoo automatically generates the deferral entries "
@@ -15684,7 +15705,7 @@ msgid ""
 "button to see them."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:68
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:79
 msgid ""
 "One entry, dated on the same day as the bill's accounting date, moves the "
 "bill amounts from the expense account to the deferred account. The other "
@@ -15693,14 +15714,14 @@ msgid ""
 "expense."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:74
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:85
 msgid ""
 "You can defer a January bill of $1200 over 12 months by specifying a start "
 "date of 01/01/2023 and an end date of 12/31/2023. At the end of August, $800"
 " is recognized as an expense, whereas $400 remains on the deferred account."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:81
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:92
 msgid ""
 "The deferred expense report computes an overview of the necessary deferral "
 "entries for each account. To access it, go to :menuselection:`Accounting -->"
@@ -15711,74 +15732,74 @@ msgstr ""
 msgid "Deferred expense report"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:91
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:102
 msgid ""
 "Only bills whose accounting date is before the end of the period of the "
 "report are taken into account."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:104
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:115
 msgid ""
 "At the end of each month, go to the Deferred Expenses report and click the "
 ":guilabel:`Generate Entries` button. This generates two deferral entries:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:107
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:118
 msgid ""
 "One dated at the end of the month which aggregates, for each account, all "
 "the deferred amounts of that month. This means that at the end of that "
 "period, a part of the deferred expense is recognized."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:115
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:126
 msgid "There are two bills:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:117
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:128
 msgid "Bill A: $1200 to be deferred from 01/01/2023 to 12/31/2023"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:118
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:129
 msgid "Bill B: $600 to be deferred from 01/01/2023 to 12/31/2023"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:126
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:143
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:159
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:137
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:154
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:170
 msgid ""
 "Line 1: Expense account -1200 -600 = **-1800** (cancelling the total of both"
 " bills)"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:127
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:138
 msgid ""
 "Line 2: Expense account 100 + 50 = **150** (recognizing 1/12 of bill A and "
 "bill B)"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:144
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:155
 msgid ""
 "Line 2: Expense account 200 + 100 = **300** (recognizing 2/12 of bill A and "
 "bill B)"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:160
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:171
 msgid ""
 "Line 2: Expense account 1100 + 550 = **1650** (recognizing 11/12 of bill A "
 "and bill B)"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:167
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:178
 msgid ""
 "There is no need to generate entries in December. Indeed, if we do the "
 "computation for December, we will have an amount of 0 to be deferred."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:173
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:184
 msgid "bill A and bill B"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:177
+#: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:188
 msgid ""
 "Therefore, at the end of December, bills A and B are fully recognized as "
 "expense only once in spite of all the created entries thanks to the reversal"
@@ -18054,7 +18075,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:64
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:89
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:137
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:52
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:98
 msgid "Configure your company"
 msgstr ""
 
@@ -18100,7 +18121,7 @@ msgid "Select Fiscal Localization Package."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:79
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:205
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:206
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:257
 msgid "Configure master data"
 msgstr ""
@@ -18541,7 +18562,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:332
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:391
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:360
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:389
 msgid "Usage and testing"
 msgstr ""
 
@@ -19063,13 +19084,13 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:622
 msgid ""
 ":guilabel:`Available:` the verification is done. In case the number is not "
-"valid it, only displays a warning but still allows the vendor bill to be "
+"valid, it only displays a warning but still allows the vendor bill to be "
 "posted;"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:624
 msgid ""
-":guilabel:`Required:` the verification is done and it does not allow the "
+":guilabel:`Required:` the verification is done, and it does not allow the "
 "user to post the vendor bill if the document number is not valid."
 msgstr ""
 
@@ -19572,14 +19593,14 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:923
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:267
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:268
 #: ../../content/applications/finance/fiscal_localizations/colombia.rst:181
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:272
 #: ../../content/applications/finance/fiscal_localizations/egypt.rst:172
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:246
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:685
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:798
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:796
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:808
 msgid "Products"
 msgstr "Tuotteet"
 
@@ -19593,7 +19614,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:931
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:920
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:932
 msgid "Invoicing flow for eCommerce"
 msgstr ""
 
@@ -21698,7 +21719,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/austria.rst:64
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:85
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:325
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:326
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:101
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:294
 msgid ":guilabel:`Phone`"
@@ -22965,7 +22986,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:72
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:313
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:314
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:232
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:1095
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:97
@@ -22974,7 +22995,7 @@ msgid ":guilabel:`Name`"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:73
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:314
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:315
 msgid ""
 ":guilabel:`Address`: add :guilabel:`City`, :guilabel:`State`, :guilabel:`Zip"
 " Code`, :guilabel:`Country`"
@@ -22987,17 +23008,17 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:78
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:318
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:319
 msgid "In the :guilabel:`Street 2` field, enter the neighborhood."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:80
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:320
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:321
 msgid ":guilabel:`Identification Number`: :guilabel:`CNPJ` or :guilabel:`CPF`"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:81
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:321
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:322
 msgid ":guilabel:`Tax ID`: associated with the identification type"
 msgstr ""
 
@@ -23016,7 +23037,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:86
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:326
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:327
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:233
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:1096
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:102
@@ -23060,14 +23081,14 @@ msgid "Company fiscal configuration."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:102
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:347
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:348
 msgid ""
 "Configure the following extra :guilabel:`Fiscal Information` if you are "
 "going to issue NFS-e:"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:105
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:350
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:351
 msgid ""
 ":guilabel:`COFINS Details`: :guilabel:`Taxable, Not Taxable, Taxable with "
 "rate 0%, Exempt, Suspended`"
@@ -23132,11 +23153,15 @@ msgid ""
 "services/819>`_."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:141
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:139
+msgid "On creation, new databases receive 500 free credits."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:142
 msgid "Credential configuration"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:143
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:144
 msgid ""
 "To activate AvaTax in Odoo, you need to create an account. To do so, go to "
 ":menuselection:`Accounting --> Configuration --> Settings --> Taxes`, and in"
@@ -23145,7 +23170,7 @@ msgid ""
 "and then click on :guilabel:`Create account`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:149
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:150
 msgid ""
 "When **testing** or **creating a production** :guilabel:`AvaTax Portal "
 "Email` integration in a sandbox or production database, use a real email "
@@ -23153,21 +23178,21 @@ msgid ""
 "certificates, whether you want to test or use it on production."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:153
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:154
 msgid ""
 "There are two different Avalara Portals, one for testing and one for "
 "production:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:155
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:156
 msgid "Sandbox: https://portal.sandbox.avalarabrasil.com.br/"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:156
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:157
 msgid "Production: https://portal.avalarabrasil.com.br/"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:158
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:159
 msgid ""
 "When you create the account from Odoo, be sure to select the right "
 "environment. Moreover, the email used to open the account cannot be used to "
@@ -23179,35 +23204,35 @@ msgstr ""
 msgid "Transfer API Credentials."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:165
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:166
 msgid ""
 "After you create the account from Odoo, you need to go to the Avalara Portal"
 " to set up your password:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:168
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:169
 msgid ""
 "Access the `Avalara portal <https://portal.avalarabrasil.com.br/Login>`_."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:169
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:170
 msgid "Click on :guilabel:`Meu primeiro acesso`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:170
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:171
 msgid ""
 "Add the email address you used in Odoo to create the Avalara/AvaTax account,"
 " and then click :guilabel:`Solicitar Senha`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:172
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:173
 msgid ""
 "You will receive an email with a token and a link to create your password. "
 "Click on this link and copy-paste the token to allocate your desired "
 "password."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:176
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:177
 msgid ""
 "You can start using AvaTax in Odoo for tax computation **only** without "
 "creating a password and accessing the Avalara portal in the Odoo database. "
@@ -23219,23 +23244,23 @@ msgstr ""
 msgid "AvaTax account configuration."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:184
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:185
 msgid ""
 "You can transfer |API| credentials. Use this only when you have already "
 "created an account in another Odoo instance and wish to reuse it."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:188
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:189
 msgid "A1 certificate upload"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:190
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:191
 msgid ""
 "In order to issue electronic invoices, a certificate needs to be uploaded to"
 " the `AvaTax portal <https://portal.avalarabrasil.com.br/Login>`_."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:193
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:194
 msgid ""
 "The certificate will be synchronized with Odoo, as long as the external "
 "identifier number in the AvaTax portal matches - without special characters "
@@ -23243,20 +23268,20 @@ msgid ""
 " with the CNPJ in AvaTax."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:198
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:199
 msgid ""
 "To issue NFS-e, some cities require that you link the certificate within the"
 " City Portal system before issuing NFS-e from Odoo."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:201
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:202
 msgid ""
 "If you receive an error message from the city that says :guilabel:`Your "
 "certificate is not linked to the user`, that means this process needs to be "
 "done in the city portal."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:210
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:211
 msgid ""
 "The :doc:`chart of accounts <../accounting/get_started/chart_of_accounts>` "
 "is installed by default as part of the data set included in the localization"
@@ -23264,18 +23289,18 @@ msgid ""
 " and the default account payable and account receivable fields."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:215
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:216
 msgid ""
 "The chart of accounts for Brazil is based on the SPED CoA, which gives a "
 "baseline of the accounts needed in Brazil."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:218
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:219
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:269
 msgid "You can add or delete accounts according to the company's needs."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:223
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:224
 msgid ""
 "In Brazil, a *series* number is linked to a sequence number range for "
 "electronic invoices. The series number can be configured in Odoo on a sales "
@@ -23284,7 +23309,7 @@ msgid ""
 "number assigned to it for each series needed."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:228
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:229
 msgid ""
 "The :guilabel:`Use Documents` field needs to be selected. When issuing "
 "electronic and non-electronic invoices, the :guilabel:`Type` field selects "
@@ -23297,7 +23322,7 @@ msgstr ""
 msgid "Journal configuration with the Use Documents? field checked."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:237
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:238
 msgid ""
 "When creating the journal, ensure the field :guilabel:`Dedicated Credit Note"
 " Sequence` is unchecked, as in Brazil, sequences between invoices, credit "
@@ -23305,28 +23330,28 @@ msgid ""
 "journal."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:244
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:245
 msgid ""
 "Taxes are automatically created when installing the Brazilian localization. "
 "Taxes are already configured, and some of them are used by Avalara when "
 "computing taxes on the sales order or invoice."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:247
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:248
 msgid ""
 "Taxes can be edited, or more taxes can be added. For example, some taxes "
 "used for services need to be manually added and configured, as the rate may "
 "differ depending on the city where you are offering the service."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:252
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:253
 msgid ""
 "If you decide to do service taxes manually, you won't be able to issue an "
 "NFS-e. To electronically send an NFS-e, you need to compute taxes using "
 "Avalara."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:256
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:257
 msgid ""
 "Do not delete taxes, as they are used for the AvaTax tax computation. If "
 "deleted, Odoo creates them again when used in an |SO| or invoice and "
@@ -23336,46 +23361,46 @@ msgid ""
 "refunds` sections."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:262
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:263
 msgid ":doc:`Taxes functional documentation <../accounting/taxes>`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:269
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:270
 msgid ""
 "To use the AvaTax integration on sale orders and invoices, first specify the"
 " following information on the product depending on its intended use:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:273
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:274
 msgid "E-Invoice for goods (NF-e)"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:275
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:276
 msgid ""
 ":guilabel:`CEST Code`: Code for products subject to ICMS tax substitution"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:276
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:295
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:277
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:296
 msgid ""
 ":guilabel:`Mercosul NCM Code`: Mercosur Common Nomenclature Product Code"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:277
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:278
 msgid ""
 ":guilabel:`Source of Origin`: Indicates the origin of the product, which can"
 " be foreign or domestic, among other possible options depending on the "
 "specific use case"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:279
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:280
 msgid ""
 ":guilabel:`SPED Fiscal Product Type`: Fiscal product type according to SPED "
 "list table"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:280
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:296
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:281
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:297
 msgid ""
 ":guilabel:`Purpose of Use`: Specify the intended purpose of use for this "
 "product"
@@ -23385,7 +23410,7 @@ msgstr ""
 msgid "Product configuration."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:286
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:287
 msgid ""
 "Odoo automatically creates three products to be used for transportation "
 "costs associated with sales. These are named `Freight`, `Insurance`, and "
@@ -23395,27 +23420,27 @@ msgid ""
 "`Insurance`, `Freight`, or `Other Costs`)."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:293
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:294
 msgid "E-Invoice for services (NFS-e)"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:297
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:298
 msgid ""
 ":guilabel:`Service Code Origin`: City Service Code where the provider is "
 "registered"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:298
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:299
 msgid ""
 ":guilabel:`Service Codes`: City Service Code where the service will be "
 "provided, if no code is added, the Origin City Code will be used"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:300
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:301
 msgid ":guilabel:`Labor Assignment`: Defines if your services includes labor"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:305
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:306
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:284
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:172
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:640
@@ -23424,37 +23449,37 @@ msgstr ""
 msgid "Contacts"
 msgstr "Yhteystiedot"
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:307
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:308
 msgid ""
 "Before using the integration, specify the following information on the "
 "contact:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:309
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:310
 msgid "General information about the contact:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:311
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:312
 msgid ""
 "Select the :guilabel:`Company` option for a contact with a tax ID (CNPJ), or"
 " check :guilabel:`Individual` for a contact with a CPF."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:317
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:318
 msgid ""
 "In the :guilabel:`Street` field, enter the street, number, and any extra "
 "address information."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:322
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:323
 msgid ":guilabel:`IE`: state tax identification number"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:323
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:324
 msgid ":guilabel:`IM`: municipal tax identification number"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:324
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:325
 msgid ":guilabel:`SUFRAMA code`: SUFRAMA registration number"
 msgstr ""
 
@@ -23462,37 +23487,37 @@ msgstr ""
 msgid "Contact configuration."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:332
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:333
 msgid ""
 "The :guilabel:`CPF`, :guilabel:`IE`, :guilabel:`IM`, and :guilabel:`SUFRAMA "
 "code` fields are are hidden until the :guilabel:`Country` is set to "
 "`Brazil`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:335
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:336
 msgid ""
 "Fiscal information about the contact under the :guilabel:`Sales \\& "
 "Purchase` tab:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:337
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:338
 msgid ""
 ":guilabel:`Fiscal Position`: add the AvaTax fiscal position to automatically"
 " compute taxes on sale orders and invoices automatically"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:339
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:340
 msgid ":guilabel:`Tax Regime`: federal tax regime"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:340
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:341
 msgid ""
 ":guilabel:`ICMS Taxpayer Type`: taxpayer type determines if the contact is "
 "within the :guilabel:`ICMS regime`, :guilabel:`Exempt status`, or "
 ":guilabel:`Non-taxpayer`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:342
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:343
 msgid ""
 ":guilabel:`Main Activity Sector`: list of main activity sectors of the "
 "contact"
@@ -23502,19 +23527,19 @@ msgstr ""
 msgid "Contact fiscal configuration."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:349
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:350
 msgid ""
 "Add the :guilabel:`Fiscal Position` for :ref:`AvaTax Brazil <brazil/fiscal-"
 "positions>`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:352
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:353
 msgid ""
 ":guilabel:`PIS Details`: :guilabel:`Taxable, Not Taxable, Taxable with rate "
 "0%, Exempt, Suspended`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:354
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:355
 msgid ":guilabel:`CSLL Taxable`: If the company is subject to CSLL or not"
 msgstr ""
 
@@ -23522,19 +23547,19 @@ msgstr ""
 msgid "Contact fiscal configuration for NFSe."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:362
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:363
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:132
 msgid "Fiscal positions"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:364
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:365
 msgid ""
 "To compute taxes and send electronic invoices on sale orders and invoices, "
 "both the :guilabel:`Detect Automatically` and the :guilabel:`Use AvaTax API`"
 " options need to be enabled in the :guilabel:`Fiscal Position`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:368
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:369
 msgid ""
 "The :guilabel:`Fiscal Position` can be configured on the :ref:`contact "
 "<brazil/contacts>` or selected when creating a sales order or an invoice."
@@ -23544,14 +23569,14 @@ msgstr ""
 msgid "Fiscal position configuration"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:375
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:376
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:357
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:304
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:252
 msgid "Workflows"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:377
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:378
 msgid ""
 "This section provides an overview of the actions that trigger `API calls "
 "<https://en.wikipedia.org/wiki/API>`_ for tax computation, along with "
@@ -23559,106 +23584,106 @@ msgid ""
 "services (NFS-e) for government validation."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:382
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:383
 msgid ""
 "Please note that each |API| call incurs a cost. Be mindful of the actions "
 "that trigger these calls to manage costs effectively."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:389
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:390
 msgid "Tax calculations on quotations and sales orders"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:391
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:392
 msgid ""
 "Trigger an |API| call to calculate taxes on a quotation or sales order "
 "automatically with AvaTax in any of the following ways:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:394
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:395
 msgid "**Quotation confirmation**"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:395
-msgid "Confirm a quotation into a sales order."
-msgstr ""
-
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:396
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:412
-msgid "**Manual trigger**"
+msgid "Confirm a quotation into a sales order."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:397
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:413
-msgid "Click on :guilabel:`Compute Taxes Using AvaTax`."
+msgid "**Manual trigger**"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:398
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:414
-msgid "**Preview**"
+msgid "Click on :guilabel:`Compute Taxes Using AvaTax`."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:399
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:415
-msgid "Click on the :guilabel:`Preview` button."
+msgid "**Preview**"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:400
-msgid "**Email a quotation / sales order**"
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:416
+msgid "Click on the :guilabel:`Preview` button."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:401
+msgid "**Email a quotation / sales order**"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:402
 msgid "Send a quotation or sales order to a customer via email."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:404
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:405
 msgid "**Online quotation access**"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:403
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:404
 msgid ""
 "When a customer accesses the quotation online (via the portal view), the "
 "|API| call is triggered."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:407
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:408
 msgid "Tax calculations on invoices"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:409
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:410
 msgid ""
 "Trigger an |API| call to calculate taxes on a customer invoice automatically"
 " with AvaTax in any of the following ways:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:417
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:418
 msgid "**Online invoice access**"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:417
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:418
 msgid ""
 "When a customer accesses the invoice online (via the portal view), the |API|"
 " call is triggered."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:420
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:421
 msgid ""
 "The :guilabel:`Fiscal Position` must be set to `Automatic Tax Mapping "
 "(Avalara Brazil)` for any of these actions to compute taxes automatically."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:424
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:425
 msgid ""
 ":doc:`Fiscal positions (tax and account mapping) "
 "<../accounting/taxes/fiscal_positions>`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:429
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:430
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:111
 msgid "Electronic documents"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:434
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:435
 msgid ""
 "To process an electronic invoice for goods (NF-e) or services (NFS-e), the "
 "invoice needs to be confirmed and taxes need to be computed by Avalara. Once"
@@ -23669,48 +23694,48 @@ msgid ""
 " invoice with the government."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:441
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:442
 msgid ""
 "Before sending the electronic invoice for goods (NF-e) or services (NFS-e), "
 "some fields need to be filled out on the invoice:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:444
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:445
 msgid ":guilabel:`Customer`, with all the customer information"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:445
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:578
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:446
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:579
 msgid ""
 ":guilabel:`Payment Method: Brazil`: how the invoice is planned to be paid"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:446
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:447
 msgid ""
 ":guilabel:`Fiscal Position` set as the :guilabel:`Automatic Tax Mapping "
 "(Avalara Brazil)`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:447
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:448
 msgid ""
 ":guilabel:`Document Type` set as :guilabel:`(55) Electronic Invoice (NF-e)` "
 "or :guilabel:`(SE) Electronic Service Invoice (NFS-e)`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:450
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:451
 msgid ""
 "There are some other optional fields that depend on the nature of the "
 "transaction. These fields are not required, so no errors will appear from "
 "the government if these optional fields are not populated for most cases:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:454
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:455
 msgid ""
 ":guilabel:`Freight Model` determines how the goods are planned to be "
 "transported - domestic"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:455
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:456
 msgid ""
 ":guilabel:`Transporter Brazil` determines who is doing the transportation"
 msgstr ""
@@ -23723,7 +23748,7 @@ msgstr ""
 msgid "Process electronic invoice pop-up in Odoo."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:464
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:465
 msgid ""
 "All of the fields available on the invoice used to issue an electronic "
 "invoice are also available on the sales order, if needed. When creating the "
@@ -23731,7 +23756,7 @@ msgid ""
 " as the first number to be used sequentially for subsequent invoices."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:470
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:471
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:594
 #: ../../content/applications/finance/fiscal_localizations/colombia.rst:344
 #: ../../content/applications/finance/fiscal_localizations/kenya.rst:370
@@ -23739,39 +23764,39 @@ msgstr ""
 msgid "Credit notes"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:472
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:473
 msgid ""
 "If a sales return needs to be registered, then a credit note can be created "
 "in Odoo to be sent to the government for validation."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:476
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:477
 msgid ""
 "Credit notes are only available for electronic invoices for goods (NF-e)."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:479
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:480
 msgid ":ref:`Issue a credit note <accounting/issue-credit-note>`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:482
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:595
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:483
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:607
 msgid "Debit Notes"
 msgstr "Veloituslaskut"
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:484
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:485
 msgid ""
 "If additional information needs to be included, or values need to be "
 "corrected that were not accurately provided in the original invoice, a debit"
 " note can be issued."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:488
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:489
 msgid ""
 "Debit notes are only available for electronic invoices for goods (NF-e)."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:490
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:491
 msgid ""
 "Only the products included in the original invoice can be part of the debit "
 "note. While changes can be made to the product's unit price or quantity, "
@@ -23780,31 +23805,31 @@ msgid ""
 "for the same or fewer products."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:496
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:497
 msgid ":ref:`Issue a debit note <accounting/issue-debit-note>`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:499
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:500
 msgid "Invoice cancellation"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:501
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:502
 msgid ""
 "It is possible to cancel an electronic invoice that was validated by the "
 "government."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:504
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:505
 msgid ""
 "Check whether the electronic invoice is still within the cancellation "
 "deadline, which may vary according to the legislation of each state."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:508
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:509
 msgid "E-invoices for goods (NF-e)"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:510
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:511
 msgid ""
 "Cancel an e-invoice for goods (NF-e) in Odoo by clicking :guilabel:`Request "
 "Cancel` and adding a cancellation :guilabel:`Reason` on the pop-up that "
@@ -23816,18 +23841,18 @@ msgstr ""
 msgid "Invoice cancellation reason in Odoo."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:518
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:519
 msgid ""
 "This is an electronic cancellation, which means that Odoo will send a "
 "request to the government to cancel the NF-e, and it will then consume one "
 "|IAP| credit, as an |API| call occurs."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:522
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:523
 msgid "E-invoices for services (NFS-e)"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:524
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:525
 msgid ""
 "Cancel an e-invoice for services (NFS-e) in Odoo by clicking "
 ":guilabel:`Request Cancel`. In this case, there is no electronic "
@@ -23837,17 +23862,17 @@ msgid ""
 "invoice."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:530
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:531
 msgid "Correction letter"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:532
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:533
 msgid ""
 "A correction letter can be created and linked to an electronic invoice for "
 "goods (NF-e) that was validated by the government."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:535
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:536
 msgid ""
 "This can be done in Odoo by clicking :guilabel:`Correction Letter` and "
 "adding a correction :guilabel:`Reason` on the pop-up that appears. To send "
@@ -23859,17 +23884,17 @@ msgstr ""
 msgid "Correction letter reason in Odoo."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:543
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:544
 msgid ""
 "Correction letters are only available for electronic invoices for goods "
 "(NF-e)."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:546
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:547
 msgid "Invalidate invoice number range"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:548
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:549
 msgid ""
 "A range of sequences that are assigned to sales journals can be invalidated "
 "with the government if they are not currently used, **and** will not be used"
@@ -23888,19 +23913,19 @@ msgstr ""
 msgid "Number range invalidation wizard in Odoo."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:562
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:563
 msgid ""
 "Invalidate invoice number range documents are only available for electronic "
 "invoices for goods (NF-e)."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:566
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:567
 msgid ""
 "The log of the canceled numbers along with the XML file are recorded in the "
 "chatter of the journal."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:572
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:573
 msgid ""
 "On the vendor bills side, when receiving an invoice from a supplier, you can"
 " encode the bill in Odoo by adding all the commercial information together "
@@ -23908,25 +23933,25 @@ msgid ""
 ":ref:`customer invoices <brazil/electronic-documents>`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:576
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:577
 msgid "These Brazilian specific fields are:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:579
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:580
 msgid ":guilabel:`Document Type`: used by your vendor"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:580
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:581
 msgid ":guilabel:`Document Number`: the invoice number from your supplier"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:581
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:582
 msgid ""
 ":guilabel:`Freight Model`: **NF-e specific** how goods are planned to be "
 "transported - domestic"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/brazil.rst:582
+#: ../../content/applications/finance/fiscal_localizations/brazil.rst:583
 msgid ""
 ":guilabel:`Transporter Brazil`: **NF-e specific** who is doing the "
 "transportation."
@@ -24259,7 +24284,7 @@ msgid ":guilabel:`Alberta (AB)`"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:142
-msgid ":guilabel:`British Colombia (BC)`"
+msgid ":guilabel:`British Columbia (BC)`"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:143
@@ -24651,6 +24676,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:22
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:12
 msgid "Modules"
 msgstr "Moduulit"
 
@@ -24749,6 +24775,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:58
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:70
 msgid ""
 "Odoo automatically installs the appropriate package for the company "
 "according to the country selected at the creation of the database."
@@ -25020,7 +25047,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:197
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:226
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:266
 msgid "Certificate"
 msgstr "Todistus"
 
@@ -25062,7 +25089,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:216
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:550
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:237
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:276
 msgid "Multicurrency"
 msgstr ""
 
@@ -25330,7 +25357,7 @@ msgid "Default Account Payable"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:368
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:80
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:123
 msgid "Default Account Receivable"
 msgstr ""
 
@@ -25554,7 +25581,6 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:508
 #: ../../content/applications/finance/fiscal_localizations/india.rst:133
 #: ../../content/applications/finance/fiscal_localizations/india.rst:271
-#: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Invoice PDF report"
 msgstr ""
 
@@ -25625,7 +25651,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:550
 #: ../../content/applications/finance/fiscal_localizations/colombia.rst:403
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:831
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:843
 msgid "Common errors"
 msgstr ""
 
@@ -26408,7 +26434,7 @@ msgid "PDF report section for the Electronic Exports of Goods PDF Report."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:997
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:876
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:888
 msgid "eCommerce electronic invoicing"
 msgstr ""
 
@@ -27412,7 +27438,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/colombia.rst:306
 #: ../../content/applications/finance/fiscal_localizations/india.rst:116
 #: ../../content/applications/finance/fiscal_localizations/india.rst:257
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:398
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:424
 msgid "Invoice validation"
 msgstr ""
 
@@ -31064,17 +31090,15 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/germany.rst:173
 msgid ""
-"**GoBD** stands for `Grundsätze zur ordnungsmäßigen Führung und Aufbewahrung"
+"**GoBD** stands for *Grundsätze zur ordnungsmäßigen Führung und Aufbewahrung"
 " von Büchern, Aufzeichnungen und Unterlagen in elektronischer Form sowie zum"
-" Datenzugriff <https://ao.bundesfinanzministerium.de/ao/2021/Anhaenge/BMF-"
-"Schreiben-und-gleichlautende-Laendererlasse/Anhang-64/anhang-64.html>`_. In "
-"short, it is a **guideline for the proper management and storage of books, "
-"records, and documents in electronic form, as well as for data access**, "
-"that is relevant for the German tax authority, tax declaration, and balance "
-"sheet."
+" Datenzugriff*. In short, it is a **guideline for the proper management and "
+"storage of books, records, and documents in electronic form, as well as for "
+"data access**, that is relevant for the German tax authority, tax "
+"declaration, and balance sheet."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:180
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:179
 msgid ""
 "These principles have been written and published by the Federal Ministry of "
 "Finance (BMF) in November 2014. Since January 2015, **they have become the "
@@ -31084,25 +31108,25 @@ msgid ""
 "solutions (cloud hosting, paperless companies, etc.)."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:187
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:186
 msgid "Odoo gives you **the means to be compliant with GoBD**."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:190
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:189
 msgid ""
 "What do you need to know about GoBD when relying on accounting software?"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:193
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:192
 msgid ""
 "If you can, the best way to understand GoBD is to Read the `Official GoBD "
-"text "
-"<https://www.bundesfinanzministerium.de/Content/DE/Downloads/BMF_Schreiben/Weitere_Steuerthemen/Abgabenordnung/2019-11-28-GoBD.pdf>`_."
-" It is a bit long but quite readable for non-experts. But in short, here is "
-"what to expect:"
+"text <https://ao.bundesfinanzministerium.de/ao/2021/Anhaenge/BMF-Schreiben-"
+"und-gleichlautende-Laendererlasse/Anhang-64/anhang-64.html>`_. It is a bit "
+"long but quite readable for non-experts. But in short, here is what to "
+"expect:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:197
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:196
 msgid ""
 "The **GoBD is binding for companies that have to present accounts, which "
 "includes SMEs, freelancers, and entrepreneurs, to the financial "
@@ -31111,39 +31135,39 @@ msgid ""
 "mentioned financial and related data)."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:202
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:201
 msgid ""
 "Apart from software requirements, the user is required to ensure Internal "
 "control systems (*in accordance with sec. 146 of the Fiscal Code*):"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:205
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:204
 msgid "Access rights control;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:206
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:205
 msgid "Segregation of Duties, Functional separating;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:207
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:206
 msgid "Entry controls (error notifications, plausibility checks);"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:208
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:207
 msgid "Reconciliation checks at data entry;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:209
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:208
 msgid "Processing controls;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:210
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:209
 msgid ""
 "Measures to prevent intentional or unintentional manipulation of software, "
 "data, or documents."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:212
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:211
 msgid ""
 "The user must distribute tasks within its organization to the relevant "
 "positions (*control*) and verify that the tasks are properly and completely "
@@ -31153,11 +31177,11 @@ msgid ""
 "(*prevention*)."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:218
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:217
 msgid "What about data security?"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:220
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:219
 msgid ""
 "**The taxpayer must secure the system against any data loss due to  "
 "deletion, removal, or theft of any data**. If the  entries are not "
@@ -31165,43 +31189,43 @@ msgid ""
 "with the GoBD guidelines."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:224
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:223
 msgid ""
 "Once bookings have been finally posted, they can no longer be changed or "
 "deleted via the application."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:227
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:226
 msgid ""
 "If Odoo is used in the cloud, regular backups are part of the Odoo Online "
 "service. In addition, regular backups can be downloaded and backed up on "
 "external systems."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:231
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:230
 msgid ""
 "`Odoo Cloud Hosting - Service Level Agreement <https://www.odooo.com/cloud-"
 "sla>`_"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:233
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:232
 msgid ""
 "If the server is operated locally, it is the responsibility of the user to "
 "create the necessary backup infrastructure."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:237
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:236
 msgid ""
 "In some cases, data has to be kept for ten years or more, so always have "
 "backups saved. It is even more important if you decide to change software "
 "provider."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:241
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:240
 msgid "Responsibility of the software editor"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:243
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:242
 msgid ""
 "Considering GoBD only applies between the taxpayer and the financial "
 "authority, **the software editor can by no means be held responsible for the"
@@ -31210,11 +31234,11 @@ msgid ""
 "respect the software related guidelines described in the GoBD."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:249
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:248
 msgid "How can Odoo help you achieve Compliance?"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:251
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:250
 msgid ""
 "The key words, when it comes to GoBD, are: **traceable, verifiable, true, "
 "clear, and continuous**. In short, you need to have audit-proof archiving in"
@@ -31299,11 +31323,11 @@ msgid ""
 "customization."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:286
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:285
 msgid "Do you need a GoBD-Export?"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:288
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:287
 msgid ""
 "In the case of fiscal control, the fiscal authority can request three levels"
 " of access to the accounting system (Z1, Z2, Z3). These levels vary from "
@@ -31311,7 +31335,7 @@ msgid ""
 "storage device."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:292
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:291
 msgid ""
 "In case of a handover of the financial data on a storage device, the format "
 "is **not** enforced by the GoBD. It can be, for example, in XLS, CSV, XML, "
@@ -31321,11 +31345,11 @@ msgid ""
 "zur Datenntträgerüberlassung\" §3) but it is not binding."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:299
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:298
 msgid "What is the role and meaning of the compliance certification?"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:301
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:300
 msgid ""
 "The GoBD clearly states that due to the nature of a state of the art "
 "accounting software, their configuration possibilities, changing nature, and"
@@ -31336,7 +31360,7 @@ msgid ""
 "other legal value (A. 12, § 181)."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:307
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:306
 msgid ""
 "A GoBD certificate states nothing more than that if you use the software "
 "according to its guidelines, the software will not refrain you from "
@@ -31346,13 +31370,14 @@ msgid ""
 "not, however, offer our customer any legal certainty."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:314
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:313
 msgid ""
 "The BMF actually states the following in the `Official GoBD text "
-"<https://www.bundesfinanzministerium.de/Content/DE/Downloads/BMF_Schreiben/Weitere_Steuerthemen/Abgabenordnung/2019-11-28-GoBD.pdf>`_:"
+"<https://ao.bundesfinanzministerium.de/ao/2021/Anhaenge/BMF-Schreiben-und-"
+"gleichlautende-Laendererlasse/Anhang-64/anhang-64.html>`_:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:317
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:316
 msgid ""
 "180. Positive attestations on the correctness of the bookkeeping - and thus "
 "on the correctness of IT-based bookkeeping systems - are not issued either "
@@ -31360,14 +31385,14 @@ msgid ""
 "information."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:320
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:319
 msgid ""
 "181. \"Certificates\" or \"attestations\" from third parties can serve as a "
 "decision criterion for the company when selecting a software product, but "
 "develop from the in margin no. 179 is not binding on the tax authorities."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:325
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:324
 msgid ""
 "The previous content was `automatically translated from German with Google "
 "Translate "
@@ -31375,11 +31400,11 @@ msgid ""
 "gest%C3%BCtzter%20Buchf%C3%BChrungssysteme%20-%20werden%20weder%20im%20Rahmen%20einer%20steuerlichen%20Au%C3%9Fenpr%C3%BCfung%20noch%20im%20Rahmen%20einer%20verbindlichen%20Auskunft%20erteilt.%0A%0A181.%0A%E2%80%9EZertifikate%E2%80%9C%20oder%20%E2%80%9ETestate%E2%80%9C%20Dritter%20k%C3%B6nnen%20bei%20der%20Auswahl%20eines%20Softwareproduktes%20dem%20Unternehmen%20als%20Entscheidungskriterium%20dienen%2C%20entfalten%20jedoch%20aus%20den%20in%20Rz.%20179%20genannten%20Gr%C3%BCnden%20gegen%C3%BCber%20der%20Finanzbeh%C3%B6rde%20keine%20Bindungswirkung.%20&op=translate>`_."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:330
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:329
 msgid "What happens if you are not compliant?"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/germany.rst:332
+#: ../../content/applications/finance/fiscal_localizations/germany.rst:331
 msgid ""
 "In the event of an infringement, you can expect a fine but also a court "
 "order demanding the implementation of specific measures."
@@ -34140,7 +34165,7 @@ msgid "EDI Send Tax Integration button"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:353
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:286
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:321
 msgid "Document Types"
 msgstr ""
 
@@ -37581,47 +37606,165 @@ msgstr ""
 msgid "Peru"
 msgstr "Peru"
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:13
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:14
 msgid ""
-"The Peruvian localization has been improved and extended, in this version "
-"the next modules are available:"
+":ref:`Install <general/install>` the following modules to utilize all the "
+"current features of the Peruvian localization."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:16
-msgid ""
-"**l10n_pe**: Adds accounting features for the Peruvian localization, which "
-"represent the minimal configuration required for a company to operate in "
-"Peru and under the SUNAT regulations and guidelines. The main elements "
-"included in this module are: Chart of account, taxes, document types."
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:23
+msgid ":guilabel:`Peru - Accounting`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:21
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:24
+msgid "`l10n_pe`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:25
 msgid ""
-"**l10n_pe_edi**: includes all technical and functional requirements to "
-"generate and validate Electronic Invoice, based on the SUNAT specification "
-"to create and process valid electronic documents, for more technical detail "
-"you can access the `SUNAT EDI specifications "
-"<https://cpe.sunat.gob.pe/node/88/>`_, that keeps track of new changes and "
-"updates. The features of this module are based on the resolutions published "
-"on the `SUNAT Legislation "
-"<https://www.sunat.gob.pe/legislacion/general/index.html/>`_."
+"Adds accounting features for the Peruvian localization, which represent the "
+"minimal configuration required for a company to operate in Peru and under "
+"the SUNAT regulations and guidelines. The main elements included in this "
+"module are the chart of accounts, taxes, document types."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:29
+msgid ":guilabel:`Peru - E-invoicing`"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:30
-msgid "`App Tour - Localización de Peru <https://youtu.be/Ic3mGovkf8Y>`_"
+msgid "`l10n_pe_edi`"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:31
 msgid ""
-"`Smart Tutorial - Localización de Peru <https://www.odoo.com/slides/smart-"
-"tutorial-localizacion-de-peru-133>`_"
+"Includes all technical and functional requirements to generate and receive "
+"electronic invoices online based on the SUNAT regulations."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:33
+msgid ":guilabel:`Peru - Accounting Reports`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:34
+msgid "`l10n_pe_reports`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:35
+msgid "Includes the following financial reports:"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:37
-msgid "Install the Peruvian localization modules"
+msgid "1st set of main financial reports:"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:39
+msgid "Registro de Ventas e Ingresos (RVIE) - 14.4"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:40
+msgid "Registro de Compras Electrónico (RCE) - 8.4"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:41
+msgid ""
+"Registro de Compras Electrónico - Información de Operaciones con Sujetos no "
+"Domiciliados (RCE) - 8.5"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:44
+msgid "2nd set of financial reports:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:46
+msgid "PLE 5.1 General Journal"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:47
+msgid "PLE 5.3 Chart of Accounts"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:48
+msgid "PLE 6.1 General Ledger"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:50
+msgid "3rd set of financial reports:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:52
+msgid "PLE 1.1 Libro de Caja"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:53
+msgid "PLE 1.2 Libro de Bancos"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:55
+msgid ":guilabel:`Peruvian - Electronic Delivery Note`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:56
+msgid "`l10n_pe_edi_stock`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:57
+msgid ""
+"Adds the delivery guide (Guía de Remisión), which is needed as proof that "
+"you are sending goods between A and B. It is only when a delivery order is "
+"validated that the delivery guide can be created."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:60
+msgid ":guilabel:`Peruvian eCommerce`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:61
+msgid "`l10n_pe_website_sale`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:62
+msgid ""
+"Enables the identification type in eCommerce checkout forms and the ability "
+"to generate electronic invoices."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:64
+msgid ":guilabel:`Peruvian - Point of Sale with PE Doc`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:65
+msgid "`l10n_pe_pos`"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:66
+msgid ""
+"Enables contact fiscal information to be editable from a PoS Session to "
+"generate electronic invoices and refunds."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:72
+msgid ""
+"The *Peruvian - Electronic Delivery Guide* module depends on the *Inventory*"
+" application to be installed."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:76
+msgid "`App Tour - Localización de Peru <https://youtu.be/Ic3mGovkf8Y>`_"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:77
+msgid ""
+"`Smart Tutorial - Localización de Peru (videos for workflows and "
+"configurations) <https://www.odoo.com/slides/smart-tutorial-localizacion-de-"
+"peru-133>`_"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:84
+msgid "Install the Peruvian localization modules"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:86
 msgid ""
 "Go to *Apps* and search for Peru, then click Install in the module Peru EDI."
 " This module has a dependency with *Peru - Accounting*. In case this last "
@@ -37632,13 +37775,13 @@ msgstr ""
 msgid "The \"Module\" filter is set on \"Peru\""
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:48
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:94
 msgid ""
 "When you install a database from scratch selecting Peru as country, Odoo "
 "automatically installs the base module: Peru - Accounting."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:54
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:100
 msgid ""
 "In addition to the basic information in the Company, we need to set Peru as "
 "the Country, this is essential for the Electronic Invoice to work properly. "
@@ -37648,47 +37791,47 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
-msgid "Company data for Peru including RUC and Address type code"
+msgid "Company data for Peru including RUC and Address type code."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:65
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:109
 msgid ""
 "In case the Address type code is unknown,  you can set it as the default "
 "value: 0000. Be aware that if an incorrect value is entered, the Electronic "
 "invoice validation might have errors."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:69
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:113
 msgid "The NIF should be set following the RUC format."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:73
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:116
 msgid "Chart of Account"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:75
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:118
 msgid ""
 "The chart of accounts is installed by default as part of the set of data "
 "included in the localization module, the accounts are mapped automatically "
 "in:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:79
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:122
 msgid "Default Account Payable."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:82
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:125
 msgid ""
 "The chart of accounts for Peru is based on the most updated version of the "
 ":abbr:`PCGE (Plan Contable General Empresarial)`, which is grouped in "
 "several categories and is compatible with NIIF accounting."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:89
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:132
 msgid "Accounting Settings"
 msgstr "Kirjanpidon asetukset"
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:91
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:134
 msgid ""
 "Once the modules are installed and the basic information of your company is "
 "set, you need to configure the elements required for Electronic Invoice. For"
@@ -37696,46 +37839,46 @@ msgid ""
 "Localization`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:96
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:139
 msgid "Basic Concepts"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:98
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:141
 msgid "Here are some terms that are essential on the Peruvian localization:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:100
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:143
 msgid ""
 "**EDI**: Electronic Data Interchange, which in this refers to the Electronic"
 " Invoice."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:101
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:144
 msgid ""
 "**SUNAT**: is the organization that enforces customs and taxation in Peru."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:102
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:145
 msgid ""
 "**OSE**: Electronic Service Operator, `OSE SUNAT's definition "
 "<https://cpe.sunat.gob.pe/aliados/ose#:~:text=El%20Operador%20de%20Servicios%20Electr%C3%B3nicos%20(OSE)%20es%20qui%C3%A9n%20se%20encarga,otro%20documento%20que%20se%20emita>`_."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:104
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:147
 msgid "**CDR**: Receipt certificate (Constancia de Recepción)."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:105
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:148
 msgid ""
 "**SOL Credentials**: Sunat Operaciones en Línea. User and password are "
 "provided by the SUNAT and grant access to Online Operations systems."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:110
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:152
 msgid "Signature Provider"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:112
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:154
 msgid ""
 "As part of  the requirements for Electronic Invoice in Peru, your company "
 "needs to select a Signature Provider that will take care of the document "
@@ -37743,114 +37886,113 @@ msgid ""
 "options:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:116
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:123
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:158
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:165
 msgid "IAP (Odoo In-App Purchase)"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:117
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:181
-#: ../../content/applications/finance/fiscal_localizations/peru.rst-1
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:159
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:222
 msgid "Digiflow"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:118
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:197
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:160
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:237
 msgid "SUNAT"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:120
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:162
 msgid ""
 "Please refer to the sections below to check the details and considerations "
 "for each option."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:125
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:167
 msgid ""
 "This is the default and the suggested option, considering the digital "
 "ceritificate is included as part of the service."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
-msgid "IAP option as signature providers"
+msgid "IAP option as signature providers."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:133
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:174
 msgid "What is the IAP?"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:135
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:176
 msgid ""
 "This is a signature service offered directly by Odoo, the service takes care"
 " of the next process:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:137
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:178
 msgid ""
 "Provides the Electronic invoice Certificate, so you do not need to acquire "
 "one by yourself."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:138
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:179
 msgid "Send the document to the OSE, in this case, Digiflow."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:139
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:180
 msgid "Receive the OSE validation and CDR."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:142
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:183
 msgid "How does it work?"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:144
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:185
 msgid ""
 "The service requires Credits in order to process your electronic documents. "
 "Odoo provides 1000 credits for free in new databases. After these credits "
 "are consumed, you need to buy a Credit Package."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:149
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:190
 msgid "Credits"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:149
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:190
 msgid "EUR"
 msgstr "EUR"
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:151
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:192
 msgid "22"
 msgstr "22"
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:153
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:194
 msgid "5000"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:153
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:194
 msgid "110"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:155
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:196
 msgid "10,000"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:155
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:196
 msgid "220"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:157
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:198
 msgid "20,000"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:157
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:198
 msgid "440"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:160
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:201
 msgid "The credits are consumed per each document that is sent to the OSE."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:163
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:204
 msgid ""
 "If you have a validation error and the document needs to be sent one more "
 "time, one additional credit will be charged. Therefore, it is paramount that"
@@ -37858,17 +38000,17 @@ msgid ""
 "OSE."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:168
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:209
 msgid "What do you need to do?"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:170
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:211
 msgid ""
 "In Odoo, once your enterprise contract is activated and you start working in"
 " Production, you need to buy credits once the first 1000 are consumed."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:172
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:213
 msgid ""
 "As Digiflow is the OSE used in the IAP, you need to affiliate it as the "
 "official OSE for your company on the SUNAT website. This is a simple "
@@ -37876,22 +38018,22 @@ msgid ""
 "<https://drive.google.com/file/d/1BkrMTZIiJyi5XI0lGMi3rbMzHddOL1pa/view?usp=sharing>`_."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:176
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:217
 msgid ""
 "Register Digiflow as the authorized PSE, please check `PSE Affiliation guide"
 " "
 "<https://drive.google.com/file/d/1QZoqWvtQERpS0pqp6LcKmw7EBlm9EroU/view?usp=sharing>`_."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:183
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:224
 msgid ""
 "This option can be used as an alternative, instead of using the IAP services"
 " you can send your document validation directly to Digiflow. In this case "
 "you need to consider:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:186
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:203
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:227
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:243
 msgid ""
 "Buy your own digital Certificate: For more detail regarding the official "
 "vendor list, and the process to acquire it, please refer to `SUNAT Digital "
@@ -37899,57 +38041,61 @@ msgid ""
 "<https://cpe.sunat.gob.pe/informacion_general/certificados_digitales/>`_."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:189
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:230
 msgid ""
 "Sign a service agreement directly with `Digiflow "
 "<https://www.digiflow.pe/>`_."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:190
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:231
 msgid "Provide your SOL credentials."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:199
+#: ../../content/applications/finance/fiscal_localizations/peru.rst-1
+msgid "Digiflow."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:239
 msgid ""
 "In case your company wants to sign directly with the SUNAT, it is possible "
 "to select this option in your configuration. In this case you need to "
 "consider: - Get the SUNAT Certification process accepted."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:207
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:247
 msgid "Provide you SOL credentials."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:210
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:250
 msgid ""
 "When using direct connection with the SUNAT, the SOL User must be set with "
 "the Company RUT + User Id. Example: ``20121888549JOHNSMITH``"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:214
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:254
 msgid "Testing environment"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:216
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:256
 msgid ""
 "Odoo provides a testing environment that can be activated before your "
 "company goes into production."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:218
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:258
 msgid ""
 "When using the testing environment and the IAP signature, you don’t need to "
 "buy testing credits for your transactions as all of them are validated by "
 "default."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:222
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:262
 msgid ""
 "By default the databases are set to work on production, make sure to enable "
 "the testing mode if needed."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:228
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:268
 msgid ""
 "In case you don’t use Odoo IAP, in order to generate the electronic invoice "
 "signature, a digital certificate with the extension ``.pfx`` is required. "
@@ -37957,45 +38103,45 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
-msgid "EDI Certificate wizard"
+msgid "EDI Certificate wizard."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:239
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:278
 msgid ""
-"The official currency exchange rate in Peru is provided by the Bank of Peru."
-" Odoo can connect directly to its services and get the currency rate either "
+"The official currency exchange rate in Peru is provided by the SUNAT. Odoo "
+"can connect directly to its services and get the currency rate either "
 "automatically or manually."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
-msgid "Bank of Peru is displayed in Multicurrency Service option"
+msgid "SUNAT displayed in Multicurrency Service option."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:246
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:284
 msgid ""
 "Please refer to the next section in our documentation for more information "
 "about :doc:`multicurrencies <../accounting/get_started/multi_currency>`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:252
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:290
 msgid "Configure Master data"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:257
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:295
 msgid ""
 "As part of the localization module the taxes are created automatically with "
 "their related financial account and electronic invoice configuration."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
-msgid "List of default taxes"
+msgid "List of default taxes."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:265
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:302
 msgid "EDI Configuration"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:267
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:304
 msgid ""
 "As part of the taxes configuration, there are three new fields required for "
 "electronic invoice, the taxes created by default have this data included, "
@@ -38003,30 +38149,30 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
-msgid "Taxes EDI data for Peru"
+msgid "Taxes EDI data for Peru."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:277
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:312
 msgid "Fiscal Positions"
 msgstr "Verokannat"
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:279
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:314
 msgid ""
 "There are two main fiscal positions included by default when you install the"
 " Peruvian localization."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:281
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:316
 msgid ""
 "**Extranjero - Exportación**: Set this fiscal position on customers for "
 "Exportation transactions."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:283
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:318
 msgid "**Local Peru**: Set this fiscal position on local customers."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:288
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:323
 msgid ""
 "In some Latin American countries, including Peru, some accounting "
 "transactions like invoices and vendor bills are classified by document "
@@ -38034,7 +38180,7 @@ msgid ""
 "SUNAT."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:292
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:327
 msgid ""
 "Each document type can have a unique sequence per journal where it is "
 "assigned. As part of the localization, the Document Type includes the "
@@ -38042,33 +38188,33 @@ msgid ""
 "automatically when the localization module is installed."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:296
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:331
 msgid ""
 "The information required for the document types is included by default so "
 "the user does not need to fill anything on this view:"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
-msgid "Document Type list"
+msgid "Document Type list."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:304
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:338
 msgid ""
 "Currently the documents supported on customer invoices are: Invoice, Boleta,"
 " Debit Note and Credit Note."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:310
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:344
 msgid ""
 "When creating Sales Journals, the following information must be filled, in "
 "addition to the standard fields on the Journals:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:314
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:348
 msgid "Use Documents"
 msgstr "Käytä asiakirjoja"
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:316
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:350
 msgid ""
 "This field is used to define if the journal uses Document Types. It is only "
 "applicable to Purchase and Sales journals, which are the ones that can be "
@@ -38076,31 +38222,31 @@ msgid ""
 "default, all the sales journals created use documents."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:321
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:355
 msgid "Electronic Data Interchange"
 msgstr "Electronic Data Interchange"
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:323
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:357
 msgid ""
 "This section indicates which EDI workflow is used in the invoice, for Peru "
 "we must select “Peru UBL 2.1”."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
-msgid "Journal EDI field"
+msgid "Journal EDI field."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:331
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:364
 msgid ""
 "By default, the value Factur-X (FR) is always displayed, make sure you can "
 "uncheck it manually."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:337
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:370
 msgid "Identification Type and VAT"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:339
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:372
 msgid ""
 "As part of the Peruvian localization, the identification types defined by "
 "the SUNAT are now available on the Partner form, this information is "
@@ -38109,15 +38255,15 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
-msgid "Partner identification type"
+msgid "Partner identification type."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:349
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:380
 #: ../../content/applications/finance/fiscal_localizations/romania.rst:109
 msgid "Product"
 msgstr "Tuote"
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:351
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:382
 msgid ""
 "Additional to the basic information in your products, for the Peruvian "
 "localization, the UNSPC Code on the product is a required value to be "
@@ -38125,18 +38271,18 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
-msgid "UNSPC Code on products"
+msgid "UNSPC Code on products."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:363
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:392
 msgid "Customer invoice"
 msgstr "Asiakaslasku"
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:366
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:395
 msgid "EDI Elements"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:368
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:397
 msgid ""
 "Once you have configured your master data, the invoices can be created from "
 "your sales order or manually. Additional to the basic invoice information "
@@ -38145,17 +38291,17 @@ msgid ""
 "required as part of the Peru EDI:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:373
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:402
 msgid ""
 "**Document type**: The default value is “Factura Electronica” but  you can "
 "manually change the document type if needed and select Boleta for example."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:0
-msgid "Invoice document type field on invoices"
+msgid "Invoice document type field on invoices."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:380
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:408
 msgid ""
 "**Operation type**: This value is required for Electronic Invoice and "
 "indicates the transaction type, the default value is “Internal Sale” but "
@@ -38164,10 +38310,10 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:0
-msgid "Invoice operation type field on invoices"
+msgid "Invoice operation type field on invoices."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:388
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:415
 msgid ""
 "**EDI Affectation Reason**: In the invoice lines, additional to the Tax "
 "there is a field “EDI Affectation Reason” that determines the tax scope "
@@ -38177,10 +38323,10 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:0
-msgid "Tax affectation reason in invoice line"
+msgid "Tax affectation reason in invoice line."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:400
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:426
 msgid ""
 "Once you check all the information in your invoice is correct, you can "
 "proceed to validate it. This action registers the account move and triggers "
@@ -38189,21 +38335,21 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
-msgid "Sending of EDI Invoice in blue"
+msgid "Sending of EDI Invoice in blue."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:408
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:433
 msgid ""
 "Asynchronous means that the document is not sent automatically after the "
 "invoice has been posted."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:413
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:506
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:438
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:525
 msgid "Electronic Invoice Status"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:415
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:440
 msgid ""
 "**To be Sent**: Indicates the document is ready to be sent to the OSE, this "
 "can be done either automatically by Odoo with a *cron* that runs every hour,"
@@ -38211,10 +38357,10 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
-msgid "Send EDI manually"
+msgid "Send EDI manually."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:423
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:447
 msgid ""
 "**Sent**: Indicates the document was sent to the OSE and was successfully "
 "validated. As part of the validation a ZIP file is downloaded and a message "
@@ -38222,46 +38368,46 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
-msgid "Message on chatter when the invoice is valid"
+msgid "Message on chatter when the invoice is valid."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:431
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:454
 msgid ""
 "In case there is a validation error the Electronic Invoice status remains in"
 " “To be sent” so the corrections can be made and the invoice can be sent "
 "again."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:435
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:458
 msgid ""
 "One credit is consumed each time that you send a document for validation, in"
 " this sense if an error is detected on an invoice and you send it one more "
 "time, two credits are consumed in total."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:440
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:463
 msgid "Common Errors"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:442
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:465
 msgid ""
 "There are multiple reasons behind a rejection from the OSE or the SUNAT, "
 "when this happens Odoo sends a message at the top of the invoice indicating "
 "the error details and in the most common cases a hint to fix the issue."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:446
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:469
 msgid "If a validation error is received, you have two options:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:448
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:471
 msgid ""
 "In case the error is related to master data on the partner, customer or "
 "taxes, you can simply apply the change on the record (example customer "
 "identification type) and once it is done click on the Retry button."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:451
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:474
 msgid ""
 "If the error is related to some data recorded on the invoice directly "
 "(Operation type, missing data on the invoice lines), the correct solution is"
@@ -38270,38 +38416,42 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:0
-msgid "List of common errors on invoices"
+msgid "List of common errors on invoices."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:459
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:481
 msgid ""
 "For more detail please refert to `Common errors in SUNAT "
 "<https://www.nubefact.com/codigos-error-sunat/>`_."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:463
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:485
 msgid "Invoice PDF Report"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:465
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:487
 msgid ""
 "After the invoice is accepted and validated by the SUNAT, the invoice PDF "
 "report can be printed. The report includes a QR code, indicating the invoice"
 " is a valid fiscal document."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:473
+#: ../../content/applications/finance/fiscal_localizations/peru.rst-1
+msgid "Invoice PDF report."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:494
 msgid "IAP Credits"
 msgstr "Sovelluksen sisältä ostettavat krediitit"
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:475
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:496
 msgid ""
 "Odoo’s Electronic IAP offers 1000 credits for free, after these credits are "
 "consumed in your production database, your company must buy new credits in "
 "order to process your transactions."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:478
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:499
 msgid ""
 "Once you run out of credits a red label is displayed at the top of the "
 "invoice indicating that additional credits are required, you can easily buy "
@@ -38309,25 +38459,24 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
-msgid "Buying credits in the IAP"
+msgid "Buying credits in the IAP."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:486
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:506
 msgid ""
 "In the IAP service includes packages with different pricing based on the "
 "number of credits. The price list in the IAP is always displayed in EUR."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:490
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:510
 msgid "Special Use cases"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:493
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:529
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:513
 msgid "Cancellation process"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:495
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:515
 msgid ""
 "Some scenarios require an invoice cancellation, for example, when an invoice"
 " was created by mistake. If the invoice was already sent and validated by "
@@ -38336,14 +38485,14 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
-msgid "Request invoice cancellation button"
+msgid "Request invoice cancellation button."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:503
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:522
 msgid "In order to cancel an invoice, please provide a cancellation Reason."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:508
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:527
 msgid ""
 "**To Cancel**:  Indicates the cancellation request is ready to be sent to "
 "the OSE, this can be done either automatically by Odoo with a *cron* that "
@@ -38353,10 +38502,10 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
-msgid "Cancellation CDR sent by the SUNAT"
+msgid "Cancellation CDR sent by the SUNAT."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:517
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:535
 msgid ""
 "**Cancelled**: Indicates the cancellation request was sent to the OSE and "
 "was successfully validated. As part of the validation a ZIP file is "
@@ -38365,82 +38514,86 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
-msgid "nvoice after cancellation"
+msgid "Invoice after cancellation."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:526
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:543
 msgid "One credit is consumed on each cancellation request."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:531
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:546
+msgid "Export invoices"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:548
 msgid ""
 "When creating exportation invoices, take into account the next "
 "considerations:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:533
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:550
 msgid "The Identification type on your customer must be Foreign ID."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:534
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:551
 msgid "Operation type in your invoice must be an Exportation one."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:535
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:552
 msgid "The taxes included in the invoice lines should be EXP taxes."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
-msgid "Exportation invoices main data"
+msgid "Exportation invoices main data."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:542
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:558
 msgid "Advance Payments"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:544
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:560
 msgid "Create the advance payment Invoice and apply its related payment."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:545
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:561
 msgid "Create the final invoice without considering the advance payment."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:546
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:562
 msgid ""
 "Create a credit note for the Final invoice with the advance payment amount."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:547
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:563
 msgid "Reconcile the Credit note with the final invoice."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:548
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:564
 msgid ""
 "The remaining balance on the final invoice should be paid with a regular "
 "payment transaction."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:551
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:567
 msgid "Detraction Invoices"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:553
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:569
 msgid ""
 "When creating invoices that is subject to Detractions, take into account the"
 " next considerations:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:555
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:571
 msgid ""
 "All the products included in the invoice must have these fields configured:"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:0
-msgid "Detraction fields on products"
+msgid "Detraction fields on products."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:561
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:576
 msgid "Operation type in your invoice must be ``1001``"
 msgstr ""
 
@@ -38448,11 +38601,11 @@ msgstr ""
 msgid "Detraction code on invoices."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:568
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:582
 msgid "Credit Notes"
 msgstr "Hyvityslaskut"
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:570
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:584
 msgid ""
 "When a correction or refund is needed over a validated invoice, a credit "
 "note must be generated, for this just click on the button “Add Credit Note”,"
@@ -38461,50 +38614,50 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
-msgid "Add Credit Note from invoice"
+msgid "Add Credit Note from invoice."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:579
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:592
 msgid ""
 "When creating your first credit Note, select the Credit Method: Partial "
 "Refund, this allows you to define the credit note sequence."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:582
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:595
 msgid "By default the Credit Note is set in the document type:"
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
-msgid "Credit Note document type"
+msgid "Credit Note document type."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:588
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:600
 msgid ""
 "To finish the workflow please follow the instructions on :doc:`our page "
 "about Credit Notes <../accounting/customer_invoices/credit_notes>`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:592
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:604
 msgid ""
 "The EDI workflow for the Credit notes works in the same way as the invoices."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:597
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:609
 msgid ""
 "As part of the Peruvian localization, besides creating credit notes from an "
 "existing document you can also create debit Notes. For this just use the "
 "button “Add Debit Note”."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:600
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:612
 msgid "By default the Debit Note is set in the document type."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:605
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:617
 msgid "Electronic delivery guide 2.0"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:607
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:619
 msgid ""
 "The *Guía de Remisión Electrónica* (GRE) is an electronic document generated"
 " by the shipper to support the transportation or transfer of goods from one "
@@ -38513,7 +38666,7 @@ msgid ""
 "feature."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:612
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:624
 msgid ""
 "The use of the *guía de remisión electrónica* electronic document is "
 "mandatory and required by |SUNAT| for taxpayers who need to transfer their "
@@ -38521,102 +38674,102 @@ msgid ""
 "simplificado or RUS)."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:617
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:629
 msgid "Delivery guide types"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:620
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:632
 msgid "Sender"
 msgstr "Lähettäjä"
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:622
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:634
 msgid ""
 "The *Sender* delivery guide type is issued when a sale is made, a service is"
 " rendered (including processing), goods are assigned for use, or goods are "
 "transferred between premises of the same company and others."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:626
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:638
 msgid ""
 "This delivery guide is issued by the owner of the goods (i.e., the sender) "
 "at the beginning of the shipment. The sender delivery guide is supported in "
 "Odoo."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:630
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:642
 msgid "`SUNAT guía de remisión <https://www.gob.pe/7899-guia-de-remision>`_"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:633
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:754
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:645
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:766
 msgid "Carrier"
 msgstr "Huolitsija"
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:635
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:647
 msgid ""
 "The *Carrier* delivery guide type justifies the transportation service the "
 "driver (or carrier) performs."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:638
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:650
 msgid ""
 "This delivery guide is issued by the carrier and must be issued to each "
 "shipper when the shipment goes through public transport."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:642
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:654
 msgid "The carrier delivery guide is **not** supported in Odoo."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:645
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:657
 msgid ""
 "`SUNAT guía de remisión transportista <https://tefacturo.pe/blog/sunat/guia-"
 "de-remision-electronica/guia-de-remision-transportista/>`_"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:649
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:661
 msgid "Transportation types"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:652
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:664
 msgid "Private"
 msgstr "Yksityinen"
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:654
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:666
 msgid ""
 "The *Private* transportation type option is used when the owner transfers "
 "goods using their own vehicles. In this case, a sender's delivery guide must"
 " be issued."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:658
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:670
 msgid "Public"
 msgstr "Julkinen"
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:660
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:672
 msgid ""
 "The *Public* transportation type option is used when an external carrier "
 "moves the goods. In this case, two delivery guides must be issued: the "
 "sender's delivery guide and the carrier's delivery guide."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:665
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:677
 msgid "Direct submission to SUNAT"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:667
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:679
 msgid ""
 "The creation of the |GRE| delivery guide in Odoo **must** be sent directly "
 "to the |SUNAT|, regardless of the electronic document provider: IAP, "
 "Digiflow, or |SUNAT|."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:671
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:683
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:463
 msgid "Required information"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:673
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:685
 msgid ""
 "Version 2.0 of the electronic delivery guide requires additional information"
 " on the general configuration, vehicles, contacts, and products. In the "
@@ -38624,68 +38777,68 @@ msgid ""
 "retrieve from the |SUNAT| portal."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:678
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:690
 msgid "Cancellations"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:680
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:692
 msgid ""
 "**Both** the sender and the carrier can cancel the electronic waybill as "
 "long as the following conditions are met:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:683
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:695
 msgid "The shipment has not been initiated."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:684
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:696
 msgid ""
 "If the shipment has been initiated, the receiver **must** be changed before "
 "reaching the final destination."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:688
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:700
 msgid ""
 "The |SUNAT| no longer uses the term \"Anula\", but now uses the term \"Dar "
 "de baja\" for cancellations."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:692
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:704
 #: ../../content/applications/finance/fiscal_localizations/saudi_arabia.rst:107
 msgid "Testing"
 msgstr "Testaus"
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:694
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:706
 msgid ""
 "The |SUNAT| does not support a test environment. This means that any "
 "delivery guides that were generated by mistake **will** be sent to the "
 "|SUNAT|."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:697
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:709
 msgid ""
 "If, by mistake, the waybill was created in this environment, it is necessary"
 " to delete it from the |SUNAT| portal."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:704
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:716
 msgid ""
 "Electronic sender's |GRE| is currently the only supported type of waybill in"
 " Odoo."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:705
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:717
 msgid ""
 "The delivery guide is dependent on the Odoo *Inventory* app, the "
 ":guilabel:`l10n_pe_edi` and :guilabel:`l10n_pe` modules."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:707
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:719
 msgid ""
 "A second user **must** be added for the creation of electronic documents."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:709
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:721
 msgid ""
 "After following the steps to configure the :ref:`electronic invoicing <peru-"
 "accounting-settings>` and the :ref:`master data <peru-master_data>`, "
@@ -38693,7 +38846,7 @@ msgid ""
 "Delivery Note 2.0` module (`l10n_pe_edi_stock_20`)."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:713
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:725
 msgid ""
 "Next, you need to retrieve the *client ID* and *client secret* from |SUNAT|."
 " To do so, follow the `manual de servicios web plataforma nueva GRE "
@@ -38701,13 +38854,13 @@ msgid ""
 "files/Manual_Servicios_GRE.pdf>`_."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:718
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:730
 msgid ""
 "In the |SUNAT| portal, it is important to have the correct access rights "
 "enabled, as they may differ from the user set for electronic invoicing."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:721
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:733
 msgid ""
 "These credentials should be used to configure the delivery guide general "
 "settings from :menuselection:`Accounting --> Configuration --> Settings --> "
@@ -38718,7 +38871,7 @@ msgstr ""
 msgid "Example for the SUNAT Delivery Guide API section configuration."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:728
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:740
 msgid ""
 "It is required to follow the format `RUC + UsuarioSol` (e.g., "
 "`20557912879SOLUSER`) for the :guilabel:`Guide SOL User` field, depending on"
@@ -38726,45 +38879,45 @@ msgid ""
 "portal."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:733
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:745
 msgid "Operator"
 msgstr "Operaattori"
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:735
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:747
 msgid ""
 "The *operator* is the vehicle's driver in cases where the delivery guide is "
 "through *private* transport."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:738
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:750
 msgid ""
 "To create a new operator, navigate to :menuselection:`Contacts --> Create` "
 "and fill out the contact information."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:741
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:753
 msgid ""
 "First, select :guilabel:`Individual` as the :guilabel:`Company Type`. Then, "
 "add the :guilabel:`Operator License` in the :guilabel:`Accounting` tab of "
 "the contact form."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:744
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:756
 msgid "For the customer address, make sure the following fields are complete:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:746
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:767
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:758
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:779
 msgid ":guilabel:`District`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:747
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:768
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:759
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:780
 msgid ":guilabel:`Tax ID` (:guilabel:`DNI`/:guilabel:`RUC`)"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:748
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:769
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:760
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:781
 msgid ":guilabel:`Tax ID Number`"
 msgstr ""
 
@@ -38772,25 +38925,25 @@ msgstr ""
 msgid "Individual type operator configurations in the Contact form."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:756
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:768
 msgid ""
 "The *carrier* is used when the delivery guide is through *public* transport."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:758
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:770
 msgid ""
 "To create a new carrier, navigate to :menuselection:`Contacts --> Create` "
 "and fill out the contact information."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:761
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:773
 msgid ""
 "First, select :guilabel:`Company` as the :guilabel:`Company Type`. Then, add"
 " the :guilabel:`MTC Registration Number`, :guilabel:`Authorization Issuing "
 "Entity`, and the :guilabel:`Authorization Number`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:765
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:777
 msgid "For the company address, make sure the following fields are complete:"
 msgstr ""
 
@@ -38798,46 +38951,46 @@ msgstr ""
 msgid "Company type operator configurations in the Contact form."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:775
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:787
 msgid "Vehicles"
 msgstr "Ajoneuvot"
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:777
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:789
 msgid ""
 "To configure the available vehicles, navigate to :menuselection:`Inventory "
 "--> Configuration --> Vehicles` and fill in the vehicle form with the "
 "information needed for the vehicle:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:780
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:792
 msgid ":guilabel:`Vehicle Name`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:781
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:793
 msgid ":guilabel:`License Plate`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:782
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:794
 msgid ":guilabel:`Is M1 or L?`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:783
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:795
 msgid ":guilabel:`Special Authorization Issuing Entity`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:784
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:796
 msgid ":guilabel:`Authorization Number`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:785
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:797
 msgid ":guilabel:`Default Operator`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:786
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:798
 msgid ":guilabel:`Company`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:789
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:801
 msgid ""
 "It is important to check the :guilabel:`Is M1 or L?` checkbox if the vehicle"
 " has fewer than four wheels or fewer than eight seats."
@@ -38847,49 +39000,49 @@ msgstr ""
 msgid "Vehicle not selected as an M1 or L type with extra fields shown."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:798
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:810
 msgid ""
 "To configure the available products, navigate to :menuselection:`Inventory "
 "--> Products` and open the product to be configured."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:801
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:813
 msgid ""
 "Make sure that the applicable information in the product form is fully "
 "configured. The :guilabel:`Partida Arancelaria` (Tariff Item) field needs to"
 " be completed."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:805
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:817
 msgid "Generating a GRE"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:807
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:819
 msgid ""
 "Once the delivery from inventory is created during the sales workflow, make "
 "sure you complete the |GRE| fields on the top-right section of the transfer "
 "form for the fields:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:810
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:822
 msgid ":guilabel:`Transport Type`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:811
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:823
 msgid ":guilabel:`Reason for Transfer`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:812
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:824
 msgid ":guilabel:`Departure start date`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:814
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:826
 msgid ""
 "It is also required to complete the :guilabel:`Vehicle` and "
 ":guilabel:`Operator` fields under the :guilabel:`Guia de Remision PE` tab."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:817
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:829
 msgid ""
 "The delivery transfer has to be marked as *Done* for the :guilabel:`Generar "
 "Guia de Remision` button to appear on the left menu of the transfer form."
@@ -38899,7 +39052,7 @@ msgstr ""
 msgid "Generar Guia de Remision button on a transfer form in the Done stage."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:823
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:835
 msgid ""
 "Once the transfer form is correctly validated by |SUNAT|, the generated XML "
 "file becomes available in the chatter. You can now print the delivery slip "
@@ -38910,11 +39063,11 @@ msgstr ""
 msgid "Transfer details and QR code on generated delivery slip."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:833
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:845
 msgid "`Diferente prefijo para productos (T001 en algunos, T002 en otros)`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:835
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:847
 msgid ""
 "At the moment, Odoo does not support the automation of prefixes for "
 "products. This can be done manually for each product output. This can also "
@@ -38922,13 +39075,13 @@ msgid ""
 "no traceability."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:838
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:850
 msgid ""
 "`2325 - GrossWeightMeasure - El dato no cumple con el formato establecido "
 "\"Hace falta el campo\" \"Peso\"\" en el producto`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:841
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:853
 msgid ""
 "This error occurs when the weight on the product is set as `0.00`. To fix "
 "this, you need to cancel the waybill and recreate it. Make sure that you fix"
@@ -38936,47 +39089,47 @@ msgid ""
 "result in the same error."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:844
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:856
 msgid ""
 "`JSONDecodeError: Expecting value: line 1 column 1 (char 0) when creating a "
 "Delivery Guide`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:846
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:858
 msgid ""
 "This error is typically generated due to SOL user issues. Verify the user's "
 "connection with the |SUNAT|; the SOL user must be established with the "
 "company RUT + user ID. For example `2012188549JOHNSMITH`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:849
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:861
 msgid ""
 "`El número de documento relacionado al traslado de mercancía no cumple con "
 "el formato establecido: error: documento relacionado`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:852
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:864
 msgid ""
 "The *Related Document Type* and *Related Document Number* fields only apply "
 "to invoices and receipts."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:854
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:866
 msgid "`400 Client error: Bad Request for URL`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:856
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:868
 msgid ""
 "This error is not solvable from Odoo; it is advised you reach out to the "
 "|SUNAT| and verify the user. It may be necessary to create a new user."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:859
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:871
 msgid ""
 "`Invalid content was found starting with element 'cac:BuyerCustomerParty'`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:861
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:873
 msgid ""
 "This error occurs when the transfer reason is set as *other*. Please select "
 "another option. Following to the official documentation of the |SUNAT|'s "
@@ -38985,89 +39138,89 @@ msgid ""
 "or blank customer."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:865
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:877
 msgid "`Duda cliente: consumo de créditos IAP al usar GRE 2.0`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:867
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:879
 msgid ""
 "For live clients using IAP, no credit is consumed (in theory) because it "
 "does not go through the OSE, i.e., these documents are directly sent to the "
 "|SUNAT|."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:869
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:881
 msgid "`Errores con formato credenciales GRE 2.0 (traceback error)`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:871
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:883
 msgid ""
 "Odoo currently throws an error with a traceback instead of a message that "
 "the credentials are not correctly configured in the database. If this occurs"
 " on your database, please verify your credentials."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:878
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:890
 msgid ""
 "First, :ref:`install <general/install>` the **Peruvian eCommerce** "
 "(`l10n_pe_website_sale`) module."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:880
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:892
 msgid ""
 "The **Peruvian eCommerce** module enables the features and configurations "
 "to:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:882
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:894
 msgid "allow clients to create online accounts for **eCommerce** purposes;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:883
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:895
 msgid "support required fiscal fields in the **eCommerce** application;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:884
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:896
 msgid "receive payments for sales orders online;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:885
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:897
 msgid "generate electronic documents from the **eCommerce** application."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:888
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:900
 msgid ""
 "The **Peruvian eCommerce** module is dependent on the previous installation "
 "of the **Invoicing** or **Accounting** app, as well as the **Website** app."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:896
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:908
 msgid ""
 "After configuring the Peruvian :ref:`electronic invoicing <peru-accounting-"
 "settings>` flow, complete the following configurations for the **eCommerce**"
 " flow:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:899
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:911
 msgid ":ref:`Client account registration <checkout-sign>`;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:900
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:912
 msgid ":ref:`Automatic invoice <handling/legal>`;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:901
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:913
 msgid ""
 ":doc:`../../websites/ecommerce/products`: Set the :guilabel:`Invoicing "
 "Policy` to :guilabel:`Ordered quantities` and define the desired "
 ":guilabel:`Customer taxes`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:903
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:915
 msgid ":doc:`../payment_providers`;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:904
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:916
 msgid ""
 ":doc:`../../websites/ecommerce/checkout_payment_shipping/shipping`: For each"
 " shipping method, set the :guilabel:`Provider` field to :guilabel:`Fixed "
@@ -39075,40 +39228,40 @@ msgid ""
 "zero), as the shipping method price is added to the invoice line."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:909
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:921
 msgid ""
 "`Mercado Pago <https://www.mercadopago.com/>`_ is an online payment provider"
 " supported in Odoo that covers several countries, currencies, and payment "
 "methods in Latin America."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:911
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:923
 msgid ""
 "Make sure to define a :guilabel:`Sales Price` on the :guilabel:`Delivery "
 "Product` of the shipping method to prevent errors when validating the "
 "invoice with |SUNAT|."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:913
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:925
 msgid ""
 "To offer free delivery, manually remove the :guilabel:`Delivery Product`, or"
 " at least use `$0.01` (one cent) for the invoice to be validated with SUNAT."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:917
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:929
 msgid ""
 ":doc:`Set up the Mercado Pago payment provider. "
 "<../payment_providers/mercado_pago>`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:922
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:934
 msgid ""
 "Once the :ref:`configurations <peru-ecommerce-configuration>` are all set, "
 "fiscal input fields will be available during the checkout process for "
 "signed-in customers."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:925
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:937
 msgid ""
 "When customers enter their fiscal data at checkout and complete a successful"
 " purchase, the invoice is generated with the corresponding |EDI| elements. "
@@ -39119,7 +39272,7 @@ msgid ""
 "invoice manually if needed."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/peru.rst:931
+#: ../../content/applications/finance/fiscal_localizations/peru.rst:943
 msgid ""
 "Once the invoice is validated with |SUNAT|, customers can download the "
 ":file:`.zip` with the CDR, XML, and PDF files directly from the customer "
