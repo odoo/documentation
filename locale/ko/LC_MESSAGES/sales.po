@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-07 14:21+0000\n"
+"POT-Creation-Date: 2024-11-05 09:20+0000\n"
 "PO-Revision-Date: 2024-10-08 06:34+0000\n"
 "Last-Translator: Sarah Park, 2024\n"
 "Language-Team: Korean (https://app.transifex.com/odoo/teams/41243/ko/)\n"
@@ -75,6 +75,7 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/combos.rst:16
 #: ../../content/applications/sales/point_of_sale/configuration.rst:6
 #: ../../content/applications/sales/point_of_sale/configuration.rst:54
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:10
 #: ../../content/applications/sales/point_of_sale/employee_login.rst:13
 #: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:9
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:13
@@ -82,7 +83,7 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:15
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:20
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:12
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:14
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:16
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:19
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_wallet.rst:13
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:16
@@ -145,8 +146,8 @@ msgid ""
 "field, then click :guilabel:`Save`."
 msgstr ""
 "*영업제안* 설정을 활성화하면 모든 영업팀에 기본값으로 적용됩니다. 특정 팀에 대해서 영업제안을 해제하려면 "
-":menuselection:`CRM 앱 --> 환경 설정 --> 영업팀` 으로 이동합니다. 그런 다음 목록에서 팀을 선택하여 팀에 대한 "
-"환경 설정 페이지를 엽니다. :guilabel:`영업 팀` 아래에 있는 :guilabel:`영업제안` 확인란을 선택 해제한 다음 "
+":menuselection:`CRM 앱 --> 환경설정 --> 영업팀` 으로 이동합니다. 그런 다음 목록에서 팀을 선택하여 팀에 대한 "
+"환경설정 페이지를 엽니다. :guilabel:`영업 팀` 아래에 있는 :guilabel:`영업제안` 확인란을 선택 해제한 다음 "
 ":guilabel:`저장` 을 클릭합니다."
 
 #: ../../content/applications/sales/crm/acquire_leads/convert.rst:36
@@ -894,7 +895,7 @@ msgid ""
 "sidebar. The following options are available to customize a field:"
 msgstr ""
 "양식에 대한 설정 외에도 각 필드에 대해서도 설정을 사용자 지정할 수 있습니다. 웹 편집기 메뉴가 열려 있는 상태에서 필드를 클릭하면 "
-"사이드바에 있는 :guilabel:`필드` 환경 설정 메뉴 섹션이 열립니다. 다음 항목을 통해 필드를 사용자 지정할 수 있습니다."
+"사이드바에 있는 :guilabel:`필드` 환경설정 메뉴 섹션이 열립니다. 다음 항목을 통해 필드를 사용자 지정할 수 있습니다."
 
 #: ../../content/applications/sales/crm/acquire_leads/opportunities_form.rst:63
 msgid ""
@@ -1224,7 +1225,7 @@ msgid ""
 ":guilabel:`Default Quotation Validity` field. To disable automatic "
 "expiration, enter `0` in this field."
 msgstr ""
-"기본 유효 기간을 업데이트하려면 :menuselection:`판매 앱 --> 환경 설정 --> 설정 --> 견적 및 주문`으로 이동하여 "
+"기본 유효 기간을 업데이트하려면 :menuselection:`판매 앱 --> 환경설정 --> 설정 --> 견적 및 주문`으로 이동하여 "
 ":guilabel:`기본 견적 유효 기간` 필드를 업데이트합니다. 자동 만료 기능을 해제하려면 이 필드에 '0'을 입력하세요."
 
 #: ../../content/applications/sales/crm/acquire_leads/send_quotes.rst:77
@@ -1239,8 +1240,7 @@ msgid ""
 "Configuration --> Sales Orders --> Quotation Templates`."
 msgstr ""
 "견적서 서식을 사용하는 경우, 만료일은 서식에 있는 :guilabel:`견적 유효 기간` 필드를 기준으로 결정됩니다. 서식에 있는 유효 "
-"기간 계산 내용을 변경하려면 :menuselection:`판매 앱 --> 환경 설정 --> 판매주문서 --> 견적서 서식`으로 "
-"이동합니다."
+"기간 계산 내용을 변경하려면 :menuselection:`판매 앱 --> 환경설정 --> 판매주문서 --> 견적서 서식`으로 이동합니다."
 
 #: ../../content/applications/sales/crm/acquire_leads/send_quotes.rst:83
 msgid ""
@@ -2548,6 +2548,8 @@ msgid ""
 "--> Activity Plan`. Click :guilabel:`New` at the top-left of the page to "
 "open a blank :guilabel:`Lead Plans` form."
 msgstr ""
+"새 계획을 생성하려면 :menuselection:`CRM 앱 --> 환경 설정 --> 활동 계획` 으로 이동합니다. 페이지 왼쪽 상단에 "
+"있는 :guilabel:`새로 만들기` 를 클릭하면 새로운 :guilabel:`영업제안 계획` 양식이 열립니다."
 
 #: ../../content/applications/sales/crm/optimize/utilize_activities.rst:175
 msgid ""
@@ -4999,8 +5001,8 @@ msgid ""
 "is recommended to include this information for the sake of traceability, "
 "accountability, and reporting purposes."
 msgstr ""
-":guilabel:`실패로 표시` 팝업 창에 있는 :guilabel:`실패 사유` 나 :guilabel:`마감 메모` 는 필수 입력 "
-"항목이 아닙니다. 그러나 추적 가능성이나, 신뢰 가능성 및 보고를 위해서 이 내용을 기재하는 것이 좋습니다."
+":guilabel:`실패로 표시` 팝업창에 있는 :guilabel:`실패 사유` 나 :guilabel:`마감 메모` 필드는 필수 입력 "
+"항목이 아닙니다. 그러나 이 내용을 기재하는 것을 추적 가능성이나, 신뢰 가능성 및 보고 목적이라는 면에서 추천합니다."
 
 #: ../../content/applications/sales/crm/pipeline/lost_opportunities.rst-1
 msgid "Lost reasons popup with sample reasons."
@@ -5138,9 +5140,10 @@ msgid ""
 "and select a lost reason from the drop-down menu. Finally, click "
 ":guilabel:`Add`."
 msgstr ""
-":guilabel:`사용자 지정 필터 추가` 팝업 창에서 첫 번째 항목을 클릭하여 :guilabel:`검색...` 탐색창에 `실패 사유`"
-" 를 입력하거나 목록을 스크롤로 검색하여 찾습니다. 그런 다음, 다음 항목을 클릭하고 드롭다운 메뉴에서 :guilabel:`=` 를 "
-"선택합니다. 세 번째 항목을 클릭하고 드롭다운 메뉴에서 실패 사유를 선택합니다. 마지막으로 :guilabel:`추가` 를 클릭합니다."
+":guilabel:`사용자 지정 필터 추가` 팝업창에서, 첫 번째 필드를 클릭하여 :guilabel:`검색...` 탐색창에 `실패 사유`"
+" 를 입력하거나 스크롤로 목록을 검색하여 해당하는 필드를 찾습니다. 그 후, 다음 필드를 클릭하고 드롭다운 메뉴에서 "
+":guilabel:`=` 를 선택합니다. 세 번째 필드를 클릭하고 드롭다운 메뉴에서 실패 사유를 선택합니다. 마지막으로 "
+":guilabel:`추가` 를 클릭합니다."
 
 #: ../../content/applications/sales/crm/pipeline/lost_opportunities.rst-1
 msgid "Search bar with custom filter added for lost reason."
@@ -5849,7 +5852,7 @@ msgid ""
 " search bar, to reveal a drop-down menu of search and filter options."
 msgstr ""
 "이제 :ref:`사용자 지정 필터 <search/custom-filters>` 를 추가할 수 있습니다. 검색 창 오른쪽에 있는 "
-":icon:`fa-caret-down` :guilabel:`(아래쪽 캐럿)` 아이콘을 클릭하면 나타나는 검색 및 필터 옵션의 드롭다운 "
+":icon:`fa-caret-down` :guilabel:`(아래쪽 표시)` 아이콘을 클릭하면 나타나는 검색 및 필터 옵션의 드롭다운 "
 "메뉴를 통해 추가합니다."
 
 #: ../../content/applications/sales/crm/track_leads/lead_distribution_report.rst:27
@@ -8515,7 +8518,7 @@ msgid ""
 "Details` are specified in the **Notes** section."
 msgstr ""
 "창을 닫기 전에 계산기 아이콘을 사용하여 현금을 계산해 보세요. 이렇게 하면 직접 계산하고 추가한 동전과 지폐에 따라 금전함 총액을 "
-"계산하는 팝업 창이 열립니다. 그런 다음 :guilabel:`확인` 또는 :guilabel:`삭제` 를 클릭하여 창을 닫습니다. 계산 "
+"계산하는 팝업창이 열립니다. 그런 다음 :guilabel:`확인` 또는 :guilabel:`삭제` 를 클릭하여 창을 닫습니다. 계산 "
 "금액은 :guilabel:`계산` 열에 설정되고 :guilabel:`금액 세부 정보` 는 **메모** 섹션에 지정됩니다."
 
 #: ../../content/applications/sales/point_of_sale.rst-1
@@ -8789,6 +8792,9 @@ msgid ""
 ":guilabel:`Category` field under the :guilabel:`Point of Sale` section with "
 "one or multiple PoS categories."
 msgstr ""
+":menuselection:`POS --> 품목 --> 품목` 으로 이동하여 품목 양식을 엽니다. 그런 다음 :guilabel:`POS`"
+" 탭으로 이동하여 :guilabel:`POS` 섹션에 있는 :guilabel:`카테고리` 필드에 하나 혹은 여러 개의 POS 카테고리를 "
+"입력합니다."
 
 #: ../../content/applications/sales/point_of_sale/configuration.rst-1
 msgid "Point of Sale tab of a product form to add a PoS product category"
@@ -8810,6 +8816,9 @@ msgid ""
 "of the :guilabel:`Start Category` field within the :guilabel:`Product & PoS "
 "categories` section."
 msgstr ""
+"품목 카테고리를 하나 선택하여 :ref:`POS 세션 열기 <pos/session-start>` 를 할 때 표시되도록 할 수 있습니다. "
+"이렇게 설정하려면 :ref:`POS 설정 <configuration/settings>` 으로 이동하여 :guilabel:`품목 및 POS"
+" 카테고리` 섹션에 있는 :guilabel:`시작 카테고리` 필드의 드롭다운 메뉴에서 POS 카테고리를 선택합니다."
 
 #: ../../content/applications/sales/point_of_sale/configuration.rst-1
 msgid "Setting to set up the start category feature"
@@ -8826,6 +8835,9 @@ msgid ""
 "choose the specific categories to display in the :guilabel:`Restrict "
 "Categories` field within the :guilabel:`Product & PoS categories` section."
 msgstr ""
+"POS 인터페이스에서 제한된 카테고리만 표시되게 하는 것도 가능합니다. 표시를 제한하려면 :ref:`POS 설정 "
+"<configuration/settings>` 으로 이동하여 표시되게 할 특정한 카테고리를 :guilabel:`품목 및 POS 카테고리`"
+" 섹션 내에 있는 :guilabel:`카테고리 제한` 필드에서 선택합니다."
 
 #: ../../content/applications/sales/point_of_sale/configuration.rst-1
 msgid "Setting to set up the restrict category feature"
@@ -8844,39 +8856,31 @@ msgstr ""
 "ePOS 프린터는 POS (POS) 시스템과 원활하게 작동하도록 설계되었습니다. 장치가 연결되면 자동으로 정보를 공유하여 POS "
 "시스템에서 ePOS 프린터로 티켓을 직접 인쇄할 수 있습니다."
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:10
-msgid ""
-"Epson printers using Wi-Fi/Ethernet connections and following the `EPOS SDK "
-"Javascript protocol "
-"<https://download4.epson.biz/sec_pubs/pos/reference_en/technology/epson_epos_sdk.html>`_"
-" are compatible with Odoo **without** needing an :doc:`IoT Box "
-"</applications/general/iot/devices/printer>`."
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:12
+msgid "To use an ePos printer in Point of Sale:"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:14
-msgid ""
-"Thermal printers using ESC/POS or StarPRNT protocol are compatible **with** "
-"an :doc:`IoT Box </applications/general/iot/devices/printer>`."
+msgid ":ref:`Access the POS settings <configuration/settings>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:15
+msgid "Activate the :guilabel:`ePos Printer` feature."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:16
-msgid ""
-"Epson printers using only USB connections are compatible **with** an "
-":doc:`IoT Box </applications/general/iot/devices/printer>`."
+msgid "Fill in the field with your ePos IP address."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:18
-msgid "Epson printers that connect via Bluetooth are **not compatible**."
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst-1
+msgid "setting to enable the ePos printer feature"
 msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:21
-msgid ":doc:`https`"
-msgstr ":doc:`https`"
 
 #: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:22
-#: ../../content/applications/sales/point_of_sale/configuration/https.rst:22
-msgid ":doc:`epos_ssc`"
-msgstr ":doc:`epos_ssc`"
+msgid ""
+"When the printer connects to a network, it automatically prints a ticket "
+"with its IP address."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:25
 msgid "Directly supported ePOS printers"
@@ -8965,6 +8969,40 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:53
 msgid "Epson TM-U220 family (incompatible ePOS software)"
 msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:56
+msgid ""
+"Epson printers using Wi-Fi/Ethernet connections and following the `EPOS SDK "
+"Javascript protocol "
+"<https://download4.epson.biz/sec_pubs/pos/reference_en/technology/epson_epos_sdk.html>`_"
+" are compatible with Odoo **without** needing an :doc:`IoT Box "
+"</applications/general/iot/devices/printer>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:60
+msgid ""
+"Thermal printers using ESC/POS or StarPRNT protocol are compatible **with** "
+"an :doc:`IoT Box </applications/general/iot/devices/printer>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:62
+msgid ""
+"Epson printers using only USB connections are compatible **with** an "
+":doc:`IoT Box </applications/general/iot/devices/printer>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:64
+msgid "Epson printers that connect via Bluetooth are **not compatible**."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:67
+msgid ":doc:`https`"
+msgstr ":doc:`https`"
+
+#: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:68
+#: ../../content/applications/sales/point_of_sale/configuration/https.rst:22
+msgid ":doc:`epos_ssc`"
+msgstr ":doc:`epos_ssc`"
 
 #: ../../content/applications/sales/point_of_sale/configuration/epos_ssc.rst:5
 msgid "Self-signed certificate for ePOS printers"
@@ -9693,7 +9731,6 @@ msgstr ":doc:`payment_methods/terminals`."
 #: ../../content/applications/sales/point_of_sale/payment_methods.rst:25
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:84
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:50
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:63
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:81
 msgid ""
 "Once the payment method is created, you can select it in your POS settings. "
@@ -10062,6 +10099,36 @@ msgid ""
 "payment method and add it to the POS <../payment_methods>`."
 msgstr "단말기가 구성되면 :doc:`해당 결제 방법을 생성하고 POS에 추가 <../payment_methods>`할 수 있습니다."
 
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:36
+msgid "Pay with a payment terminal"
+msgstr "결제 단말기로 결제하기"
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:38
+msgid ""
+"When processing a payment, select the terminal's payment method. Check the "
+"amount and click on :guilabel:`Send`. Once the payment is successful, the "
+"status changes to :guilabel:`Payment Successful`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:0
+msgid ""
+"In case of connection issues between Odoo and the payment terminal, force "
+"the payment by clicking on :guilabel:`Force Done`, which allows you to "
+"validate the order."
+msgstr ""
+"Odoo와 결제 단말기 사이에 연결 문제가 있는 경우, 주문을 강제로 승인할 수 있는 guilabel:`강제 완료`를 클릭하여 결제를 "
+"진행할 수 있습니다."
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:0
+msgid ""
+"This option is only available after receiving an error message informing you"
+" that the connection failed."
+msgstr "이 옵션은 연결에 실패했다는 오류 메시지를 받은 후에만 사용할 수 있습니다."
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:47
+msgid "To cancel the payment request, click on :guilabel:`Cancel`."
+msgstr ""
+
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:3
 msgid "Adyen"
 msgstr "Adyen"
@@ -10210,7 +10277,7 @@ msgstr " 화면 하단의 :guilabel:`저장`을 클릭하여 변경 사항을 �
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:73
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:41
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:30
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:53
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:55
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:22
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_wallet.rst:81
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:72
@@ -10236,50 +10303,6 @@ msgid ""
 msgstr ""
 "마지막으로 필수 입력 필드에 :ref:`Adyen API 키 <adyen/api>`, :ref:`Adyen 단말기 ID "
 "<adyen/identifier>`, :guilabel:`Adyen 판매자 계정`을 입력합니다."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:89
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:55
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:56
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:68
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:93
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_wallet.rst:123
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:96
-msgid "Pay with a payment terminal"
-msgstr "결제 단말기로 결제하기"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:91
-msgid ""
-"When processing a payment, select :guilabel:`Adyen` as the payment method. "
-"Check the amount and click on :guilabel:`Send`. Once the payment is "
-"successful, the status changes to :guilabel:`Payment Successful`."
-msgstr ""
-"결제를 처리할 때 결제 수단으로 :guilabel:`Adyen`을 선택합니다. 금액을 확인하고 :guilabel:`송금`을 클릭합니다. "
-"결제가 완료되면 상태가 :guilabel:`결제 완료`로 변경됩니다."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:0
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:0
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:0
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_wallet.rst:0
-msgid ""
-"In case of connection issues between Odoo and the payment terminal, force "
-"the payment by clicking on :guilabel:`Force Done`, which allows you to "
-"validate the order."
-msgstr ""
-"Odoo와 결제 단말기 사이에 연결 문제가 있는 경우, 주문을 강제로 승인할 수 있는 guilabel:`강제 완료`를 클릭하여 결제를 "
-"진행할 수 있습니다."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:0
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:0
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:0
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_wallet.rst:0
-msgid ""
-"This option is only available after receiving an error message informing you"
-" that the connection failed."
-msgstr "이 옵션은 연결에 실패했다는 오류 메시지를 받은 후에만 사용할 수 있습니다."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:100
-msgid "To cancel the payment request, click on :guilabel:`cancel`."
-msgstr "결제 요청을 취소하려면 :guilabel:`취소`를 선택합니다."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:3
 msgid "Ingenico"
@@ -10381,44 +10404,6 @@ msgstr ""
 "<../../payment_methods>`에서 결제 단말기를 활성화합니다. 전표 유형을 :guilabel:`은행`으로 설정하고 "
 ":guilabel:`결제 단말기 사용` 필드에서 :guilabel:`Ingenico`를 선택합니다. 그런 다음 :guilabel:`결제 "
 "단말기 장치` 필드에서 단말기 장치를 지정합니다."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:57
-msgid ""
-"In your *PoS interface*, when processing a payment, select a *Payment "
-"Method* using a payment terminal. Check that the amount in the tendered "
-"column is the one that has to be sent to the payment terminal and click on "
-"*Send*. When the payment is successful, the status will change to *Payment "
-"Successful*."
-msgstr ""
-"결제 처리 시 *POS 인터페이스*에서 결제 단말기를 사용하여 *결제 방법*을 선택합니다. 입찰 열의 금액이 결제 단말기로 송금해야 하는"
-" 금액인지 확인한 후 *송금*을 클릭합니다. 결제가 성공하면 상태가 *결제 완료*로 변경됩니다."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:66
-msgid ""
-"If you want to cancel the payment request, click on cancel. You can still "
-"retry to send the payment request."
-msgstr "결제 요청을 취소하려면 취소를 클릭합니다. 결제 요청을 다시 시도할 수 있습니다."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:69
-msgid ""
-"If there is any issue with the payment terminal, you can still force the "
-"payment using the *Force Done*. This will allow you to validate the order in"
-" Odoo even if the connection between the terminal and Odoo has issues."
-msgstr ""
-"결제 단말기에 문제가 있는 경우에도 *강제 완료*를 사용하여 결제를 강제로 진행할 수 있습니다. 이렇게 하면 단말기와 Odoo 간의 "
-"연결에 문제가 있어도 Odoo에서 주문을 확인할 수 있습니다."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:75
-msgid ""
-"This option will only be available if you received an error message telling "
-"you the connection failed."
-msgstr "이 옵션은 연결에 실패했다는 오류 메시지가 표시된 경우에만 사용할 수 있습니다."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/ingenico.rst:78
-msgid ""
-"Once your payment is processed, on the payment record, you’ll find the type "
-"of card that has been used and the transaction ID."
-msgstr "결제가 처리되면 결제 기록에서 사용된 카드 유형과 거래 ID가 표시됩니다."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:3
 msgid "Mercado Pago"
@@ -10625,34 +10610,7 @@ msgstr ""
 ":ref:`POS' 설정 <configuration/settings>` 으로 이동하여 결제 수단을 선택한 후 :guilabel:`결제` "
 "섹션에서 :guilabel:`결제 방법` 항목에 있는 결제 수단에 추가합니다."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:101
-msgid "Paying with a payment terminal"
-msgstr "결제 단말기로 결제하기"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:103
-msgid ""
-"When processing a payment, select your Mercado Pago payment method, check "
-"the amount, and click :guilabel:`Send`. Once the payment is successful, the "
-"status changes to :guilabel:`Payment Successful`."
-msgstr ""
-"결제 단계에서 결제 수단을 Mercado Pago로 선택하고 금액을 확인한 다음 :guilabel:`보내기` 를 클릭합니다. 결제에 "
-"성공하면 상태가 :guilabel:`결제 성공` 으로 변경됩니다."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:108
-msgid ""
-"In case of connection issues between Odoo and the payment terminal, force "
-"the payment by clicking :guilabel:`Force Done`, which allows you to validate"
-" the order. This option is only available after receiving an error message "
-"informing you that the connection failed."
-msgstr ""
-"Odoo와 결제 단말기를 연결할 때 문제가 발생한 경우에는 :guilabel:`강제 완료` 를 클릭하면 결제를 강제로 실행해서 주문을 "
-"확정할 수 있습니다. 이 항목은 연결 실패 오류 메시지가 표시된 후에만 사용할 수 있습니다."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:111
-msgid "To cancel the payment request, click :guilabel:`Cancel`."
-msgstr "결제 요청을 취소하려면 :guilabel:`취소` 를 클릭합니다."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:114
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:99
 msgid ""
 "Any action made on the terminal should trigger a notification on the POS "
 "interface. Ensure the :ref:`webhook secret key <pos-mercado-pago-"
@@ -10739,7 +10697,6 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:0
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst-1
 msgid "Razorpay connection form"
 msgstr ""
 
@@ -10756,15 +10713,7 @@ msgid ""
 "payment method under the :guilabel:`Payment` section."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:58
-msgid ""
-"When processing a payment, select the Razorpay payment method. Check the "
-"amount and click :guilabel:`Send`. Once the payment is successful, the "
-"status changes to :guilabel:`Payment Successful`. To cancel the payment "
-"request, click :guilabel:`Cancel`."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:70
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/razorpay.rst:56
 msgid "The terminal must have at least a 10% battery level to use it."
 msgstr ""
 
@@ -10774,25 +10723,29 @@ msgstr "SIX"
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:5
 msgid ""
-"Connecting a **SIX payment terminal** allows you to offer a fluid payment "
-"flow to your customers and ease the work of your cashiers."
-msgstr "**SIX 결제 단말기**를 연결하면 고객에게 원활한 결제 흐름을 제공하고 계산원의 업무를 더 쉽게 처리할 수 있습니다."
+"Connecting a SIX payment terminal allows you to offer a fluid payment flow "
+"to your customers and ease the work of your cashiers."
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:9
 msgid ""
-"Even though Worldline has acquired SIX Payment Services and both companies "
-"use Yomani payment terminals, the firmware they run is different. Terminals "
-"received from Worldline are, therefore, not compatible with this "
+"Starting in July 2022, it will **not** be possible anymore to connect and "
+"use a Six payment terminal in PoS."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:11
+msgid ""
+"Even though Worldline has recently acquired SIX Payment Services and both "
+"companies use Yomani payment terminals, the firmware they run is different. "
+"Terminals received from Worldline are therefore not compatible with this "
 "integration."
 msgstr ""
-"Worldline이 SIX 결제 서비스를 인수하고 두 회사 모두 Yomani 결제 단말기를 사용하지만 실행하는 펌웨어는 다를 수 "
-"있습니다. 따라서 Worldline에서 받은 단말기는 이 통합과 호환되지 않습니다."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:17
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:19
 msgid "Install the POS IoT Six module"
 msgstr "POS IoT Six 모듈 설치"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:19
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:21
 msgid ""
 "To activate the POS IoT Six module, go to :guilabel:`Apps`, remove the "
 ":guilabel:`Apps` filter, and search for **POS IoT Six**. This module adds "
@@ -10801,26 +10754,26 @@ msgstr ""
 "POS IoT Six 모듈을 활성화하려면 :guilabel:`앱`으로 이동하여 :guilabel:`앱` 필터를 제거한 다음 **POS "
 "IoT Six**를 검색합니다. 이 모듈은 Six 단말기를 인식하는 데 필요한 드라이버와 인터페이스를 데이터베이스에 추가합니다."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:24
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:26
 msgid "This module replaces the **POS Six** module."
 msgstr "이 모듈은 **POS Six** 모듈을 대체합니다."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:27
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:29
 msgid "Connect an IoT box"
 msgstr "IoT box 연결"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:29
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:31
 msgid ""
 "Connecting a Six payment terminal to Odoo is requires :doc:`using a "
 "Raspberry Pi or virtual (for Windows OS only) IoT box "
 "</applications/general/iot/config/connect>`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:33
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:35
 msgid "Configure the terminal ID"
 msgstr "터미널 ID 구성"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:35
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:37
 msgid ""
 "Navigate to your IoT Box homepage, where you can find the  :guilabel:`Six "
 "payment terminal` field once your database server is connected to the IoT "
@@ -10836,7 +10789,7 @@ msgstr ""
 msgid "Setting the Six terminal ID"
 msgstr "Six 단말기 ID 설정"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:43
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:45
 msgid ""
 "Odoo automatically restarts the IoT box when the Six terminal ID is "
 "configured. If your Six terminal is online, it will be automatically "
@@ -10850,7 +10803,7 @@ msgstr ""
 msgid "Confirming the connection to the Six payment terminal"
 msgstr "Six 결제 단말기 연결 확인"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:55
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:57
 msgid ""
 "Enable the payment terminal :ref:`in the application settings "
 "<configuration/settings>` and :doc:`create the related payment method "
@@ -10867,50 +10820,6 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst-1
 msgid "Creating a new payment method for the SIX payment terminal"
 msgstr "SIX 결제 단말기에 사용할 새 결제 방법 생성하기"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:70
-msgid ""
-"When processing a payment, select :ref:`your Six payment method "
-"<six/configure>` in the :guilabel:`Payment Method` section and click "
-":guilabel:`Send`. To cancel the payment request, click :guilabel:`Cancel`. "
-"Once the payment is successful, the status switches to :guilabel:`Payment "
-"Successful`."
-msgstr ""
-"결제를 처리할 때는 :guilabel:`결제 방법` 섹션에서 :ref:`Six 결제 방법 <six/configure>`을 선택하고 "
-":guilabel:`송금`을 클릭합니다. 결제 요청을 취소하려면 :guilabel:`취소`를 클릭합니다. 결제가 성공하면 상태가 "
-":guilabel:`결제 완료`로 전환됩니다."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst-1
-msgid "Paying with Six"
-msgstr "Six로 결제하기"
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:79
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:101
-msgid ""
-"Once your payment is processed, the type of card used and the transaction ID"
-" appear on the payment record."
-msgstr "결제가 처리되면 사용된 카드 유형 및 거래 ID와 같은 세부 정보가 결제 기록에 표시됩니다."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:81
-msgid ""
-"The language used for error messages is the same as the Six terminal. "
-"Configure the terminal to change the language or contact Six."
-msgstr ""
-"오류 메시지에 사용되는 언어는 Six 단말기의 언어와 일치합니다. 언어를 변경하거나 지원을 요청하려면 단말기를 새로 설정하거나 Six에 "
-"문의하세요."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:83
-msgid "By default, the port used by the Six terminal is `7784`."
-msgstr "Six 단말기에서 사용하는 기본 포트는 `7784`입니다."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/six.rst:86
-msgid ""
-"If there are connection issues between the payment terminal and Odoo, you "
-"can still force the payment validation in Odoo using the :guilabel:`Force "
-"Done` button."
-msgstr ""
-"결제 단말기와 Odoo 간에 연결 문제가 있는 경우에도 :guilabel:`강제 완료` 버튼을 사용하여 Odoo에서 결제를 강제로 실행할"
-" 수 있습니다."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:3
 msgid "Stripe"
@@ -11112,39 +11021,21 @@ msgstr ""
 "선택하고 :guilabel:`결제` 섹션으로 스크롤한 다음 :guilabel:`결제 방법` 필드에 **Stripe** 결제 방법을 "
 "추가합니다."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:95
-msgid ""
-"When processing a payment, select :guilabel:`Stripe` as the payment method. "
-"Check the amount and click :guilabel:`Send`. Once the payment is successful,"
-" the status changes to :guilabel:`Payment Successful`. To cancel the payment"
-" request, click :guilabel:`cancel`."
-msgstr ""
-"결제 처리 중에 결제 수단으로 :guilabel:`Stripe`을 선택합니다. 금액을 확인하고 :guilabel:`송금`을 클릭합니다. "
-"결제에 성공하면 상태가 :guilabel:`결제 완료`로 변경됩니다. 결제 요청을 취소하려면 :guilabel:`취소`를 선택합니다."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:104
-msgid "The terminal must have at least 10% battery level to use it."
-msgstr "단말기를 사용하려면 배터리 잔량이 최소 10% 이상 있어야 합니다."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:105
-msgid "The device does not work for payments under €0.50."
-msgstr "이 단말기는 €0.50 미만의 결제를 지원하지 않습니다."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:108
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:93
 msgid "Troubleshooting"
 msgstr "문제 해결"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:111
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:96
 msgid "Payment terminal unavailable in your Stripe account"
 msgstr "Stripe 계정에서 결제 단말기를 사용할 수 없음"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:113
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:98
 msgid ""
 "If the payment terminal is unavailable in your Stripe account, you must add "
 "it manually:"
 msgstr "Stripe 계정에서 결제 단말기를 사용할 수 없는 경우 수동으로 추가합니다:"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:115
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:100
 msgid ""
 "Log into your `Stripe's dashboard <https://dashboard.stripe.com>`_ and go to"
 " :menuselection:`Stripe dashboard --> Payments --> Readers --> Locations`;"
@@ -11152,19 +11043,19 @@ msgstr ""
 "`Stripe 대시보드 <https://dashboard.stripe.com>`_에 로그인하고 :menuselection: 'Stripe"
 " 대시보드 --> 결제 --> 리더기 --> 위치'로 이동합니다;"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:117
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:102
 msgid ""
 "Add a location by clicking the :guilabel:`+ New` button or selecting an "
 "already created location;"
 msgstr ":guilabel:`+ 신규` 버튼을 클릭하거나 기존 위치를 선택하여 새 위치를 생성합니다;"
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:118
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:103
 msgid ""
 "Click the :guilabel:`+ New` button in the :guilabel:`Readers` box and fill "
 "in the required information."
 msgstr ":guilabel:`리더기` 섹션에서 :guilabel:`+ 신규` 버튼을 클릭하고 필요한 세부 정보를 입력합니다."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:122
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:107
 msgid ""
 "You must provide a **registration code**. To retrieve that code, swipe right"
 " on your device, enter the admin PIN code (by default: `07139`), validate, "
@@ -11376,17 +11267,6 @@ msgstr ""
 "<configuration/settings>` 으로 이동하여 :guilabel:`결제` 섹션에 있는 :guilabel:`결제 수단` "
 "아래에 결제 수단을 추가합니다."
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_wallet.rst:125
-msgid ""
-"When processing a payment, select the related payment method. Check the "
-"amount and click on :guilabel:`Send`. Once the payment is successful, the "
-"status changes to :guilabel:`Payment Successful`."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_wallet.rst:134
-msgid "To cancel the payment request, click :guilabel:`cancel`."
-msgstr "결제 요청을 취소하려면 :guilabel:`취소` 를 클릭합니다."
-
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:3
 msgid "Worldline"
 msgstr "Worldline"
@@ -11516,6 +11396,8 @@ msgid ""
 "Follow the :ref:`additional instructions in the Windows IoT documentation "
 "<iot/windows/wordline>` to add the exception to Windows Firewall."
 msgstr ""
+"**Windows** IoT 장치의 경우에는 방화벽에 예외 사항을 추가해야 합니다. :ref:`Windows IoT 문서 추가 지침 "
+"<iot/windows/wordline>` 에 따라 Windows 방화벽에 예외 사항을 추가합니다."
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:74
 msgid ""
@@ -11558,29 +11440,6 @@ msgstr " 단말기 차단을 방지하려면 초기 구성을 미리 검토하�
 msgid ""
 "Set a fixed IP to your IoT Box’s router to prevent losing the connexion."
 msgstr "연결이 끊어지지 않도록 IoT Box의 라우터에 고정 IP를 설정하세요."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:98
-msgid ""
-"When processing a payment, select *Worldline* as payment method. Check the "
-"amount and click on *Send*. Once the payment is successful, the status "
-"changes to *Payment Successful*."
-msgstr ""
-"결제 시 결제 수단으로 *Worldline*을 지정합니다. 금액을 확인한 후 *송금*을 선택합니다. 결제가 성공하면 상태가 *결제 "
-"완료*로 변경됩니다."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:108
-msgid ""
-"In case of connexion issues between Odoo and the payment terminal, force the"
-" payment by clicking on *Force Done*, which allows you to validate the "
-"order. This option is only available after receiving an error message "
-"informing you that the connection failed."
-msgstr ""
-"Odoo와 결제 단말기 사이에 연결 문제가 발생한 경우 *강제 완료*를 클릭하여 결제를 강제로 진행합니다. 이 옵션은 연결 실패를 "
-"나타내는 오류 메시지가 표시된 후에만 표시된 후에만 사용할 수 있습니다."
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:111
-msgid "To cancel the payment request, click on **cancel**."
-msgstr "결제 요청을 취소하려면 **취소**를 클릭합니다."
 
 #: ../../content/applications/sales/point_of_sale/pricing.rst:5
 msgid "Pricing features"
@@ -12798,7 +12657,7 @@ msgid ""
 ":guilabel:`Bills & Receipts` section and enable :guilabel:`Use QR code on "
 "ticket`."
 msgstr ""
-"이 기능을 사용하려면 :menuselection:`POS --> 환경 설정 --> 설정`으로 이동하여 영수증에서 QR 코드를 사용하도록 "
+"이 기능을 사용하려면 :menuselection:`POS --> 환경설정 --> 설정`으로 이동하여 영수증에서 QR 코드를 사용하도록 "
 "설정해야 합니다. 그런 다음 :guilabel:`POS` 필드에서 POS를 선택하고 :guilabel:`계산서 및 영수증` 섹션까지 "
 "아래로 스크롤하여 :guilabel:`티켓에 QR 코드 사용` 기능을 사용하도록 설정합니다."
 
@@ -13300,7 +13159,7 @@ msgid ""
 "enabled, add a :guilabel:`Tip Product` in the corresponding field, and save."
 " The designated product will be used as a reference on customers' receipts."
 msgstr ""
-"POS에서 팁 기능을 사용할 수 있게 하려면 :menuselection:`POS --> 환경 설정 --> 설정`에서 "
+"POS에서 팁 기능을 사용할 수 있게 하려면 :menuselection:`POS --> 환경설정 --> 설정`에서 "
 ":guilabel:`팁` 기능을 사용할 수 있게 설정합니다. 페이지 상단에서 **팁** 기능을 사용할 POS를 선택하고 "
 ":guilabel:`결제` 섹션으로 스크롤을 이동하여 :guilabel:`팁`을 확인합니다. 사용 설정을 한 후에는 해당 필드에 "
 ":guilabel:`팀 품목`를 추가하고 저장합니다. 지정된 품목은 고객 영수증의 참고 자료로 사용합니다."
@@ -13643,7 +13502,7 @@ msgid ""
 ":guilabel:`Customer Display` field."
 msgstr ""
 "IoT 박스를 데이터베이스에 연결한 후 두 번째 화면을 IoT 박스에 연결합니다. 그런 다음 :menuselection:`POS --> "
-"환경 설정 --> 설정` 으로 이동하여 :guilabel:`연결된 장치` 섹션까지 아래로 스크롤을 이동하여 :guilabel:`IoT "
+"환경설정 --> 설정` 으로 이동하여 :guilabel:`연결된 장치` 섹션까지 아래로 스크롤을 이동하여 :guilabel:`IoT "
 "박스` 확인란을 선택한 다음 :guilabel:`고객 디스플레이` 필드에 있는 두 번째 모니터를 선택합니다."
 
 #: ../../content/applications/sales/point_of_sale/shop/customer_display.rst-1
@@ -13759,8 +13618,9 @@ msgid ""
 "Unique Serial Number` or the :guilabel:`Tracking By Lots` box in the "
 ":guilabel:`Inventory` tab."
 msgstr ""
-"추적 기능을 사용하려면 :menuselection:`POS --> 품목 --> 품목`으로 이동합니다. 그런 다음 품목을 선택하고 "
-":guilabel:`재고 관리` 탭에서 :guilabel:`고유 일련 번호로 추적` 또는 :guilabel:`로트별 추적`을 선택합니다."
+"추적 기능을 활성화하려면 :menuselection:`POS --> 품목 --> 품목` 으로 이동합니다. 그런 다음 품목을 선택하고 "
+":guilabel:`재고 관리` 탭에서 :guilabel:`고유 일련번호 기준 추적` 또는 :guilabel:`로트 기준 추적` 을 "
+"선택합니다."
 
 #: ../../content/applications/sales/point_of_sale/shop/serial_numbers.rst-1
 msgid "Enable traceability settings"
@@ -19919,7 +19779,7 @@ msgid ""
 "to a specific website, if working in a multi-website environment. If left "
 "blank, the pricelist is applied to all websites in the database."
 msgstr ""
-":guilabel:`웹사이트` 섹션에서 여러 가지 환경 설정을 선택할 수 있습니다. 다중 웹사이트 환경에서 작업하는 경우 "
+":guilabel:`웹사이트` 섹션에서 여러 가지 환경설정을 선택할 수 있습니다. 다중 웹사이트 환경에서 작업하는 경우 "
 ":guilabel:`웹사이트` 항목을 통해 특정 웹사이트에 해당 가격표를 적용할 수 있습니다. 비워둘 경우에는 가격표가 데이터베이스에 "
 "있는 모든 웹사이트에 적용됩니다."
 
@@ -21322,7 +21182,7 @@ msgid ""
 "configuration."
 msgstr ""
 "이 페이지에서 :guilabel:`사용자 지정` 을 클릭하여 :menuselection:`전체보기 --> 기본` 페이지를 엽니다. 그런 "
-"다음 :guilabel:`검색 엔진 ID` 항목에 ID를 복사합니다. 해당 ID는 Odoo 환경 설정을 할 때 필요합니다."
+"다음 :guilabel:`검색 엔진 ID` 항목에 ID를 복사합니다. 해당 ID는 Odoo 환경설정을 할 때 필요합니다."
 
 #: ../../content/applications/sales/sales/products_prices/products/product_images.rst:0
 msgid "Basic overview page with search engine ID field."
@@ -21350,6 +21210,9 @@ msgid ""
 ":guilabel:`Search Engine ID` in the fields beneath the :guilabel:`Google "
 "Images` feature."
 msgstr ""
+"다음으로 :menuselection:`설정 앱` 으로 돌아가서 :guilabel:`통합` 섹션으로 스크롤을 내립니다. 그런 다음 "
+":guilabel:`Google 이미지` 기능 아래에 있는 항목에 :guilabel:`API 키` 및 :guilabel:`검색 엔진 "
+"ID` 를 입력합니다."
 
 #: ../../content/applications/sales/sales/products_prices/products/product_images.rst:115
 msgid "Click :guilabel:`Save`."
@@ -21508,8 +21371,8 @@ msgstr ""
 "세부 옵션별로 Odoo의 자체 재고 수, 판매 총액 및 기타 이와 유사한 레코드가 보유되어 있습니다."
 
 #: ../../content/applications/sales/sales/products_prices/products/variants.rst:31
-msgid ":doc:`/applications/websites/ecommerce/products/variants`"
-msgstr ":doc:`/applications/websites/ecommerce/products/variants`"
+msgid ":ref:`ecommerce/products/product-variants`"
+msgstr ""
 
 #: ../../content/applications/sales/sales/products_prices/products/variants.rst:36
 msgid ""
@@ -22876,7 +22739,7 @@ msgid ""
 "send the quotation to the customer for confirmation. Upon confirmation, the "
 "quotation turns into an official sales order."
 msgstr ""
-"필수적인 항목과 탭에 대해 환경 설정이 모두 끝났으면, 견적서를 고객에게 보내서 확인을 받을 차례입니다. 확인이 완료되면 견적서는 공식 "
+"필수적인 항목과 탭에 대해 환경설정이 모두 끝났으면, 견적서를 고객에게 보내서 확인을 받을 차례입니다. 확인이 완료되면 견적서는 공식 "
 "판매주문서로 전환됩니다."
 
 #: ../../content/applications/sales/sales/send_quotations/create_quotations.rst:291
@@ -25954,9 +25817,9 @@ msgid ""
 "payment, and the :guilabel:`Countries` field to restrict payment from any "
 "particular countries, if desired."
 msgstr ""
-":guilabel:`가능 여부` 섹션에 있는 환경 설정 메뉴는 결제에 제한을 설정할 때 사용하며 선택 사항입니다. "
-":guilabel:`최대 금액` 항목을 사용하여 최대 결제 금액을 설정하고, :guilabel:`통화` 항목으로 결제에 사용되는 통화에 "
-"제한을 설정하며, :guilabel:`국가` 항목을 통해 지정된 국가에서 결제를 하지 못하도록 제한할 수 있습니다."
+":guilabel:`가능 여부` 섹션에 있는 환경설정 메뉴는 결제에 제한을 설정할 때 사용하며 선택 사항입니다. :guilabel:`최대"
+" 금액` 항목을 사용하여 최대 결제 금액을 설정하고, :guilabel:`통화` 항목으로 결제에 사용되는 통화에 제한을 설정하며, "
+":guilabel:`국가` 항목을 통해 지정된 국가에서 결제를 하지 못하도록 제한할 수 있습니다."
 
 #: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:51
 msgid ""
@@ -26793,6 +26656,8 @@ msgid ""
 "of the quotation to the customer, by email, for them to confirm, and "
 "eventually, pay for."
 msgstr ""
+"여기에서 견적서를 확정하는 일반적인 판매 흐름이 발생할 수 있습니다. 보통 :guilabel:`이메일로 보내기` 를 클릭하는 것으로 "
+"시작하여 견적서 사본이 고객에게 이메일로 전송되어 고객이 확인한 후 최종적으로 결제할 수 있도록 합니다."
 
 #: ../../content/applications/sales/subscriptions/renewals.rst:67
 msgid ""
@@ -26984,6 +26849,9 @@ msgid ""
 "arrow)` icon beside :guilabel:`Save current search`, located beneath the "
 ":guilabel:`Favorites` section."
 msgstr ""
+"원하는 경우, 필터나 그룹 (또는 필터와 그룹의 조합)을 드롭다운 메뉴의 :guilabel:`즐겨찾기` 섹션에 저장할 수 있습니다. "
+"저장하려면 :guilabel:`즐겨찾기` 섹션 아래에 있는 :guilabel:`현재 검색 저장` 옆에 있는 :icon:`fa-caret-"
+"down` :guilabel:`(아래쪽 화살표)` 아이콘을 클릭합니다."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:50
 msgid ""
@@ -27193,6 +27061,9 @@ msgid ""
 "available in the filter drop-down menu (accessible via the :icon:`fa-caret-"
 "down` :guilabel:`(down arrow)` icon to the right of the search bar)."
 msgstr ""
+"피벗 데이터 표는 :guilabel:`측정값` 드롭다운 메뉴에 있는 선택 항목이나 필터 드롭다운 메뉴에서 선택할 수 있는 필터 그룹 지정"
+" 항목으로 사용자 지정할 수 있습니다 (검색 창 오른쪽에 있는 :icon:`fa-caret-down` :guilabel:`(아래쪽 "
+"화살표)` 아이콘을 통해 액세스 가능)."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:153
 msgid ""
@@ -27251,6 +27122,8 @@ msgid ""
 "are selected from the :guilabel:`Measures` drop-down menu, the chosen "
 "metrics related to that specific measure appear on the reporting page."
 msgstr ""
+":guilabel:`측정값` 버튼을 클릭하면 드롭다운 메뉴에서 측정값 모음을 선택할 수 있게 됩니다.:guilabel:`측정값` 드롭다운"
+" 메뉴에 있는 항목 중에서 하나를 선택하면 해당하는 측정값 항목과 관련하여 선택한 지표가 보고 페이지에 나타납니다."
 
 #: ../../content/applications/sales/subscriptions/reports.rst:184
 msgid ""
@@ -28044,6 +27917,8 @@ msgid ""
 ":guilabel:`Automatic Closing` is set to '30 Days', the scheduled action "
 "would close the subscription on August 1st."
 msgstr ""
+"예를 들어 다음 청구서 날짜가 7월 1일이고 :guilabel:`자동 종료` 가 '30일'로 설정되어 있는 경우에는 예약된 작업을 통해 "
+"8월 1일에 구독이 종료됩니다."
 
 #: ../../content/applications/sales/subscriptions/scheduled_actions.rst:189
 msgid ":doc:`automatic_alerts`"

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-07 14:21+0000\n"
+"POT-Creation-Date: 2024-11-05 09:20+0000\n"
 "PO-Revision-Date: 2024-10-08 06:34+0000\n"
 "Last-Translator: Sarah Park, 2024\n"
 "Language-Team: Korean (https://app.transifex.com/odoo/teams/41243/ko/)\n"
@@ -85,19 +85,16 @@ msgstr "승인 규칙"
 
 #: ../../content/applications/studio/approval_rules.rst:5
 msgid ""
-"Studio approval rules are used to automate approval processes for actions. "
-"They allow you to define the criteria for when an approval is required "
-"before an action can be performed using a button."
+"Studio approval rules allow you to require the approval of one or several "
+"users before an action can be performed using a button."
 msgstr ""
-"스튜디오 승인 규칙은 작업에 대한 승인 프로세스를 자동화하는 데 사용합니다. 버튼을 눌러서 작업을 수행하도록 승인하는 시점에 대한 기준을"
-" 지정할 수 있습니다."
 
 #: ../../content/applications/studio/approval_rules.rst:9
 msgid "Configuration"
 msgstr "환경 설정"
 
 #: ../../content/applications/studio/approval_rules.rst:11
-msgid "To add approval rules, proceed as follows:"
+msgid "To add an approval rule:"
 msgstr ""
 
 #: ../../content/applications/studio/approval_rules.rst:13
@@ -107,157 +104,171 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/studio/approval_rules.rst:14
-msgid "Select the button for which you want to add approval rules."
+msgid "Select the button to which the rule should be applied."
 msgstr ""
 
 #: ../../content/applications/studio/approval_rules.rst:15
 msgid ""
-"In the :guilabel:`Properties` tab on the left, enable the :guilabel:`Set "
-"approval rules` feature."
+"Click :icon:`fa-plus` :guilabel:`Add an approval step` in the :icon:`fa-"
+"server` :guilabel:`Properties` tab."
 msgstr ""
 
 #: ../../content/applications/studio/approval_rules.rst:17
 msgid ""
-"Specify the :guilabel:`Allowed Group` to limit the approval permission to a "
-"specific user group."
+"Specify which users are responsible for approving the action by using one of"
+" the following fields or both:"
 msgstr ""
 
-#: ../../content/applications/studio/approval_rules.rst:19
-msgid ""
-"Select the :guilabel:`Responsible` user to create an activity for a specific"
-" user when approval is requested from them."
+#: ../../content/applications/studio/approval_rules.rst:20
+msgid ":guilabel:`Approvers` to specify one or several users;"
 msgstr ""
 
 #: ../../content/applications/studio/approval_rules.rst:21
-msgid "Select the :guilabel:`Users to notify` via internal note."
-msgstr ""
-
-#: ../../content/applications/studio/approval_rules.rst:22
-msgid ""
-"Add a :guilabel:`Description` to be displayed in the :ref:`Approval dialog "
-"<approval-rules/use>`."
+msgid ":guilabel:`Approver Group` to specify one user group."
 msgstr ""
 
 #: ../../content/applications/studio/approval_rules.rst:24
 msgid ""
-"Optionally, you can also add conditions for the approval rule to be applied "
-"by clicking the :icon:`fa-filter` (:guilabel:`filter`) icon next to the "
-":guilabel:`Allowed Group` field."
+"An activity is created for all users set as :guilabel:`Approvers` when their"
+" approval is requested."
 msgstr ""
 
 #: ../../content/applications/studio/approval_rules.rst:27
 msgid ""
-"To add another rule, click :guilabel:`Add an approval rule`. When there are "
-"multiple approval rules, you can:"
+"(*optional*) Select the :guilabel:`Users to Notify` via an internal note "
+"when the action is approved or rejected."
 msgstr ""
 
-#: ../../content/applications/studio/approval_rules.rst:30
+#: ../../content/applications/studio/approval_rules.rst:29
 msgid ""
-"enable :guilabel:`Exclusive Approval` to require approvers to be different "
-"users;"
+"(*optional*) Add a :guilabel:`Description` to be displayed on the button."
 msgstr ""
 
-#: ../../content/applications/studio/approval_rules.rst:31
+#: ../../content/applications/studio/approval_rules.rst:32
 msgid ""
-"change the :guilabel:`Notification Order` of the approval rule so that the "
-":guilabel:`Responsible` and :guilabel:`Users to notify` are only notified "
-"when the previous rule has been approved, and their approval is required. If"
-" the approval rules have the same :guilabel:`Notification Order`, all users "
-"are notified at the same time when the first approval is requested."
+"You can specify under which condition(s) an approval step should be applied "
+"by clicking the :icon:`fa-filter` (:guilabel:`filter`) icon next to the "
+":guilabel:`Approvers` field."
 msgstr ""
-"승인 규칙의 :guilabel:`알림 순서` 를 변경하여 이전 규칙이 승인되고 해당 규칙에 대한 승인이 필요한 경우에만 "
-":guilabel:`책임자` 및 :guilabel:`알림 대상자` 가 알림을 받도록 합니다. 승인 규칙에 있는 :guilabel:`알림 "
-"순서` 가 동일한 경우에는 첫 번째 승인 요청을 할 때 모든 사용자에게 동시에 알림이 전송됩니다."
 
-#: ../../content/applications/studio/approval_rules.rst:36
+#: ../../content/applications/studio/approval_rules.rst:35
 msgid ""
-"Click the :icon:`fa-trash` (:guilabel:`trash`) icon next to the "
-":guilabel:`Allowed Group` field to delete the approval rule."
+"To add another approval step, click :icon:`fa-plus` :guilabel:`Add an "
+"approval step`. When there are multiple steps, you can:"
+msgstr ""
+
+#: ../../content/applications/studio/approval_rules.rst:38
+msgid ""
+"Enable :guilabel:`Exclusive Approval` on any step so that a user who "
+"approves a step cannot approve another step for the same record."
 msgstr ""
 
 #: ../../content/applications/studio/approval_rules.rst:40
+msgid ""
+"Change the :guilabel:`Approval Order` of the steps by selecting a number, "
+"`1` being the first step, `2` the second step, and so on. A user responsible"
+" for a higher step can approve/reject previous step(s) unless "
+":guilabel:`Exclusive Approval` is selected."
+msgstr ""
+
+#: ../../content/applications/studio/approval_rules.rst:44
+msgid ""
+"Click the :icon:`fa-trash` (:guilabel:`trash`) icon next to the "
+":guilabel:`Approvers` field to remove an approval step."
+msgstr ""
+
+#: ../../content/applications/studio/approval_rules.rst:48
 msgid ""
 "You can create :ref:`user groups <access-rights/groups>` specifically for "
 "approvals."
 msgstr ""
 
-#: ../../content/applications/studio/approval_rules.rst:45
+#: ../../content/applications/studio/approval_rules.rst:53
 msgid "Use"
 msgstr "사용"
 
-#: ../../content/applications/studio/approval_rules.rst:47
-msgid "Once approval rules have been defined for a button:"
-msgstr ""
-
-#: ../../content/applications/studio/approval_rules.rst:49
-msgid ""
-"A **user avatar** icon is displayed next to the button's label for each "
-"approval rule that has been defined."
-msgstr ""
-
-#: ../../content/applications/studio/approval_rules.rst:0
-msgid "Confirm button with approval for purchase orders"
-msgstr ""
-
 #: ../../content/applications/studio/approval_rules.rst:55
 msgid ""
-"When an unauthorized user clicks the button, an error message is displayed "
-"in the top-right corner and an activity is created for the user specified in"
-" the :guilabel:`Responsible` field."
-msgstr ""
-
-#: ../../content/applications/studio/approval_rules.rst:57
-msgid ""
-"Only users from the group defined in the :guilabel:`Allowed Group` field are"
-" authorized to approve or reject the action."
-msgstr ""
-
-#: ../../content/applications/studio/approval_rules.rst:60
-msgid "Authorized users can:"
-msgstr ""
-
-#: ../../content/applications/studio/approval_rules.rst:62
-msgid "approve and perform the action by clicking the button;"
-msgstr ""
-
-#: ../../content/applications/studio/approval_rules.rst:63
-msgid ""
-"approve the action and allow another user to perform it by clicking the "
-"**user avatar** icon next to the button's label, then clicking the "
-":icon:`fa-check` (:guilabel:`Approve`) button in the dialog that opens;"
-msgstr ""
-"작업을 승인하고 다른 사용자가 작업할 수 있게 하려면 버튼 라벨 옆에 있는 **사용자 아바타** 아이콘을 클릭한 다음 대화 상자가 열리면"
-" :icon:`fa-check` (:guilabel:`승인`) 버튼을 클릭합니다."
-
-#: ../../content/applications/studio/approval_rules.rst:66
-msgid ""
-"reject the action by clicking the **user avatar** icon next to the button's "
-"label, then clicking the :icon:`fa-times` (:guilabel:`Reject`) button in the"
-" dialog that opens."
+"Once an approval rule has been defined for a button, a **user avatar** icon "
+"is displayed next to the button's label for each approval step. Clicking an "
+"icon reveals the step(s)."
 msgstr ""
 
 #: ../../content/applications/studio/approval_rules.rst-1
-msgid "Approval dialog"
+msgid "Confirm button with two approval steps"
+msgstr ""
+
+#: ../../content/applications/studio/approval_rules.rst:62
+msgid ""
+"If an unauthorized user clicks the button, an error message is displayed and"
+" an activity is created for the users specified in the :guilabel:`Approvers`"
+" field, if any."
+msgstr ""
+
+#: ../../content/applications/studio/approval_rules.rst:65
+msgid "Authorized users can:"
+msgstr ""
+
+#: ../../content/applications/studio/approval_rules.rst:67
+msgid ""
+"Perform the action directly by clicking the button if it is the last/only "
+"approval step."
+msgstr ""
+
+#: ../../content/applications/studio/approval_rules.rst:68
+msgid ""
+"Approve the action and let another user perform it - or move it to the next "
+"approval step - by clicking the **user avatar** icon next to the button's "
+"label, then clicking the :icon:`fa-check` (:guilabel:`approve`)."
+msgstr ""
+
+#: ../../content/applications/studio/approval_rules.rst:71
+msgid ""
+"Reject the action by clicking the **user avatar** icon next to the button's "
+"label and then the :icon:`fa-times` (:guilabel:`reject`) button."
 msgstr ""
 
 #: ../../content/applications/studio/approval_rules.rst:73
 msgid ""
-"The user who approved/rejected the action can revoke their decision by "
-"clicking the **user avatar** icon next to the button's label, then clicking "
-"the :icon:`fa-undo` (:guilabel:`Revoke`) button."
+"(only for users selected under the :guilabel:`Approvers` field) Delegate "
+"their approval rights to one or several users for **all records** by:"
 msgstr ""
 
 #: ../../content/applications/studio/approval_rules.rst:76
 msgid ""
+"Clicking the :icon:`oi-view-kanban` (:guilabel:`kanban view`) icon and then "
+":guilabel:`Delegate`."
+msgstr ""
+
+#: ../../content/applications/studio/approval_rules.rst:78
+msgid ""
+"Selecting one or several :guilabel:`Approvers`, :guilabel:`Until` when they "
+"will have approval rights (forever if left empty), and, optionally, the "
+"user(s) who should be notified via an internal note using the "
+":guilabel:`Notify to` field."
+msgstr ""
+
+#: ../../content/applications/studio/approval_rules.rst:0
+msgid "Delegate to dialog"
+msgstr ""
+
+#: ../../content/applications/studio/approval_rules.rst:86
+msgid ""
+"A user who approves/rejects an action can revoke their decision by clicking "
+"the **user avatar** icon next to the button's label and then the :icon:`fa-"
+"undo` (:guilabel:`revoke`) button. They can also revoke the decision of "
+"other users for steps with a lower :guilabel:`Approval Order` unless "
+":guilabel:`Exclusive Approval` is enabled."
+msgstr ""
+
+#: ../../content/applications/studio/approval_rules.rst:90
+msgid ""
 "Approvals are tracked in the record's chatter. An approval entry is also "
 "created every time a Studio approval-related action is performed. To access "
-"the approval entries, :doc:`activate the developer mode "
+"approval entries, :doc:`activate the developer mode "
 "</applications/general/developer_mode>` and go to :menuselection:`Settings "
 "--> Technical --> Studio Approval Entries`."
 msgstr ""
-"레코드의 메시지창에서 승인 여부를 조회합니다. 또한 스튜디오 승인 관련 작업이 진행될 때마다 승인 항목도 생성됩니다. 승인 항목에 "
-"액세스하려면 :doc:`개발자 모드 `를 활성화한 후 :menuselection:`설정 --> 기술 --> 스튜디오 승인 항목` 으로 "
-"이동합니다."
 
 #: ../../content/applications/studio/automated_actions.rst:3
 msgid "Automation rules"
@@ -286,8 +297,8 @@ msgid ""
 "Select the :ref:`studio/automated-actions/trigger` and, if necessary, fill "
 "in the fields that appear on the screen based on the chosen trigger."
 msgstr ""
-":ref:`studio/automated-actions/trigger` 를 선택한 후 필요한 경우 선택한 트리거 항목에 따라 화면에 "
-"나타나는 항목에 입력합니다."
+":ref:`studio/automated-actions/trigger` 를 선택한 다음, 필요한 경우 선택한 트리거에 따라 화면에 "
+"표시되는 항목을 입력합니다."
 
 #: ../../content/applications/studio/automated_actions.rst:14
 msgid ""
@@ -296,7 +307,7 @@ msgid ""
 "appear on the screen based on your selected action."
 msgstr ""
 ":guilabel:`활동 추가` 를 클릭한 다음 :ref:`활동 <studio/automated-actions/action>` "
-":guilabel:`유형` 을 선택하고 선택한 활동에 따라 화면에 나타나는 항목을 입력합니다."
+":guilabel:`유형` 을 선택하고 선택한 활동에 따라 화면에 표시되는 필드에 입력합니다."
 
 #: ../../content/applications/studio/automated_actions.rst:17
 msgid "Click :guilabel:`Save & Close` or :guilabel:`Save & New`."
@@ -852,8 +863,8 @@ msgid ""
 "on the current model that are linked to a :ref:`many2one field "
 "<studio/fields/relational-fields/many2one>` on the target model."
 msgstr ""
-":guilabel:`항목 연결` 과 관련된 드롭다운 목록에는 현재 사용 중인 모델에 대한 :ref:`일대다 항목 "
-"<studio/fields/relational-fields/one2many>` 만 있게 되며, 대상 모델의 :ref:`다대일 항목 "
+":guilabel:`필드 연결` 필드와 관련된 드롭다운 목록에는 :ref:`일대다 필드 <studio/fields/relational-"
+"fields/one2many>` 만 있으며, 이 필드는 현재 사용 중인 모델에 대한 것으로 대상 모델의 :ref:`다대일 항목 "
 "<studio/fields/relational-fields/many2one>` 에 연결되어 있습니다."
 
 #: ../../content/applications/studio/automated_actions.rst:297
@@ -1348,11 +1359,11 @@ msgid ""
 "have the same effects as described under :ref:`Selection "
 "<studio/fields/simple-fields/selection>`."
 msgstr ""
-":guilabel:`우선순위` 필드는 별 3개로 등급 시스템을 표시하여 중요도나 만족도 수준을 나타내는 데 사용할 수 있습니다. 이 필드"
-" 유형은 :ref:`선택 필드 <studio/fields/simple-fields/selection>`로, 기본값을 "
+":guilabel:`우선순위` 필드는 별 3개를 이용한 등급 시스템을 표시하여 중요도나 만족도 수준을 나타내는 데 사용할 수 있습니다. "
+"이 필드 유형은 :ref:`선택 필드 <studio/fields/simple-fields/selection>` 로, 기본값을 "
 ":guilabel:`우선순위` 위젯으로 하여 우선순위 값 4개가 사전 지정되어 있습니다. 따라서, :guilabel:`배지`, "
 ":guilabel:`배지들`, :guilabel:`라디오` 및 :guilabel:`선택` 위젯은 :ref:`선택 "
-"<studio/fields/simple-fields/selection>` 항목에서 설명한 것과 같은 효과를 가져오게 됩니다."
+"<studio/fields/simple-fields/selection>` 에서 설명한 것과 동일하게 작동합니다."
 
 #: ../../content/applications/studio/fields.rst:253
 msgid ""
@@ -1630,11 +1641,11 @@ msgid ""
 "effects as described under :ref:`Many2Many <studio/fields/relational-"
 "fields/many2many>`."
 msgstr ""
-":guilabel:`태그` 필드는 다른 모델에 있는 여러 가지의 값을 나타내기 위해 사용하며, 원 모양으로 표시하여 *태그*라고 "
+":guilabel:`태그` 필드는 다른 모델에 있는 여러 가지의 값을 나타내기 위해 사용하며, 원 모양으로 표시하여 *태그* 라고 "
 "지칭합니다. 이 필드 유형의 기본값은 :guilabel:`태그` 위젯이 기본적으로 선택되어 있는 :ref:`다대다 필드 "
-"<studio/fields/relational-fields/many2many>`입니다. 따라서, :guilabel:`체크박스` 및 "
+"<studio/fields/relational-fields/many2many>` 입니다. 따라서, :guilabel:`확인란` 및 "
 ":guilabel:`다대다` 위젯은 :ref:`다대다 <studio/fields/relational-fields/many2many>` "
-"항목에서 설명된 것과 동일한 효과를 가져오게 됩니다."
+"항목에서 설명된 것과 동일하게 작동합니다."
 
 #: ../../content/applications/studio/fields.rst:430
 msgid ""
@@ -1727,8 +1738,8 @@ msgid ""
 "description under :guilabel:`Help Tooltip`. It is displayed inside a tooltip"
 " box when hovering with your mouse over the field's label."
 msgstr ""
-":guilabel:`도움말 도구 설명`: 이 항목의 목적에 대해 기재하려면 :guilabel:`도움말 도구 설명` 아래에 설명 내용을 "
-"작성합니다. 제목 위에 마우스를 가져가면 도구 설명 상자 안에 표시됩니다."
+":guilabel:`도움말 도구 설명`: 이 필드의 목적에 대해 기재하려면 :guilabel:`도움말 도구 설명` 아래에 설명 내용을 "
+"작성합니다. 제목 필드 위에 마우스를 가져가면 도구 설명 상자 안에 표시됩니다."
 
 #: ../../content/applications/studio/fields.rst:486
 msgid ""
@@ -2522,7 +2533,7 @@ msgid ""
 "the :guilabel:`Dynamic Table` command, and select the relation to be "
 "displayed in the table."
 msgstr ""
-"데이터 표는 :ref:`관계형 항목 <studio/fields/relational-fields>` 을 나타낼 때 사용합니다. 데이터 표를"
+"데이터 표는 :ref:`관계형 필드 <studio/fields/relational-fields>` 를 나타낼 때 사용합니다. 데이터 표를"
 " 추가하려면 `/` 를 입력하고 :guilabel:`동적 표` 명령을 선택한 다음 표에 표시할 관계를 선택합니다."
 
 #: ../../content/applications/studio/pdf_reports.rst:243
@@ -2946,8 +2957,8 @@ msgid ""
 "<studio/fields/relational-fields/related-field>`."
 msgstr ""
 "스마트 버튼을 추가하려면 양식 오른쪽 상단에 있는 :icon:`fa-plus-square` (:guilabel:`더하기`) 아이콘을 "
-"클릭합니다. :guilabel:`라벨` 을 입력하고 :guilabel:`아이콘` 을 선택한 다음 :ref:`관련된 항목 "
-"<studio/fields/relational-fields/related-field>` 을 선택합니다."
+"클릭합니다. :guilabel:`라벨` 을 입력하고 :guilabel:`아이콘` 을 선택한 다음 :ref:`관련된 필드 "
+"<studio/fields/relational-fields/related-field>` 를 선택합니다."
 
 #: ../../content/applications/studio/views.rst:0
 msgid "Sales order model's Form view"
@@ -2997,7 +3008,7 @@ msgid ""
 ":guilabel:`+ Add` tab and drag and drop it under :guilabel:`Autocompletion "
 "Fields`."
 msgstr ""
-"검색용 드롭다운 메뉴에 기존 항목을 추가하려면 :guilabel:`+ 추가` 탭으로 이동하여 :guilabel:`자동 완성 항목` 아래로"
+"검색용 드롭다운 메뉴에 기존 필드를 추가하려면 :guilabel:`+ 추가` 탭으로 이동하여 :guilabel:`자동 완성 필드` 아래로"
 " 끌어다 놓습니다."
 
 #: ../../content/applications/studio/views.rst:0
@@ -3044,7 +3055,7 @@ msgstr ""
 msgid ""
 "To set a default grouping for records, select a field under "
 ":guilabel:`Default Group By`."
-msgstr "레코드에 대한 기본 그룹을 설정하려면 :guilabel:`기본 그룹 기준` 에서 해당 항목을 선택합니다."
+msgstr "레코드에 대한 기본 그룹을 설정하려면 :guilabel:`기본 그룹 기준` 에서 해당 필드를 선택합니다."
 
 #: ../../content/applications/studio/views.rst:0
 msgid "Project model's Kanban view"
@@ -3101,9 +3112,9 @@ msgid ""
 "records manually, add an :ref:`Integer field <studio/fields/simple-"
 "fields/integer>` with the :guilabel:`Handle` widget."
 msgstr ""
-"레코드를 수동으로 다시 정렬할 수 있도록 :icon:`oi-draggable` (:guilabel:`드래그 핸들`) 아이콘을 추가하려면 "
-":guilabel:`핸들` 위젯을 사용하여 :ref:`정수 항목 <studio/fields/simple-fields/integer>` 을"
-" 추가합니다."
+" :icon:`oi-draggable` (:guilabel:`드래그 핸들`) 아이콘을 추가하여 레코드를 수동으로 재정렬할 수 있게 하려면"
+" :guilabel:`핸들` 위젯을 사용하여 :ref:`정수 필드 <studio/fields/simple-fields/integer>` "
+"를 추가합니다."
 
 #: ../../content/applications/studio/views.rst:0
 msgid "Drag handle icon enabling to sort records manually in List view"
@@ -3243,10 +3254,10 @@ msgid ""
 "you set an :guilabel:`End Date Field`, the :guilabel:`Delay Field` will not "
 "be taken into account."
 msgstr ""
-":guilabel:`지연 항목` 를 사용하여 행사 기간을 시간 단위로 표시할 수도 있습니다. 행사 기간을 지정하는 모델에서 "
+":guilabel:`지연 필드` 를 사용하여 행사 기간을 시간 단위로 표시할 수도 있습니다. 행사 기간을 지정하는 모델에서 "
 ":ref:`소수 <studio/fields/simple-fields/decimal>` 또는 :ref:`정수 "
 "<studio/fields/simple-fields/integer>` 중에서 선택하여 행사 기간을 지정합니다. 다만 "
-":guilabel:`종료일 항목` 를 설정할 경우 :guilabel:`지연 항목` 은 반영되지 않습니다."
+":guilabel:`종료일 필드` 를 설정할 경우 :guilabel:`지연 필드` 는 반영되지 않습니다."
 
 #: ../../content/applications/studio/views.rst:0
 msgid "Calendar Event model's Calendar view"

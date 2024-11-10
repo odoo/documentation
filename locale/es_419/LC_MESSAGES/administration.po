@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-07 14:21+0000\n"
+"POT-Creation-Date: 2024-11-05 09:20+0000\n"
 "PO-Revision-Date: 2024-10-08 06:34+0000\n"
 "Last-Translator: Fernanda Alvarez, 2024\n"
 "Language-Team: Spanish (Latin America) (https://app.transifex.com/odoo/teams/41243/es_419/)\n"
@@ -1708,7 +1708,7 @@ msgid "Here is a pseudo-implementation example:"
 msgstr "Este es un ejemplo de pseudo-implementación:"
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:6
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:229
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:249
 msgid "Submodules"
 msgstr "Submódulos"
 
@@ -5197,10 +5197,73 @@ msgstr ""
 " pueden ver sus estados. "
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:221
+msgid "GitHub commit statuses"
+msgstr "Estados de confirmaciones en GitHub"
+
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:223
+msgid ""
+"This option enables Odoo.sh to push commit statuses to your GitHub "
+"repository when a build is created or updated. It requires a GitHub token "
+"with permissions to push commit statuses to the repository. Refer to "
+"`GitHub's documentation on personal access tokens "
+"<https://docs.github.com/en/authentication/keeping-your-account-and-data-"
+"secure/managing-your-personal-access-tokens>`_ for instructions to create "
+"yours."
+msgstr ""
+"Esta opción permite que Odoo.sh envíe estados de confirmación a su "
+"repositorio de GitHub cuando crea o actualiza una compilación. Es necesario "
+"que cuente con un token de GitHub con permisos para enviar estados de "
+"confirmación al repositorio. Consulte la `documentación relacionada con los "
+"tokens de acceso personal "
+"<https://docs.github.com/es/authentication/keeping-your-account-and-data-"
+"secure/managing-your-personal-access-tokens>`_ para obtener instrucciones "
+"para crear los suyos."
+
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:229
+msgid ""
+"GitHub's **fine-grained personal tokens** have an expiration date and will "
+"be disabled if they fail to update the commit status. You can replace the "
+"token at any time on Odoo.sh."
+msgstr ""
+"Los **tokens personales detallados** de GitHub tienen una fecha de "
+"vencimiento y se desactivarán si no actualiza el estado de la confirmación. "
+"Puede reemplazar el token en cualquier momento en Odoo.sh."
+
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:232
+msgid "The commit statuses pushed to GitHub can have the following contexts:"
+msgstr ""
+"Los estados de confirmación enviados a GitHub pueden tener los siguientes "
+"contextos:"
+
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:234
+msgid ":guilabel:`ci/odoo.sh (dev)`: status of a development build"
+msgstr ""
+":guilabel:`ci/odoo.sh (dev)`: Estado de una compilación de desarrollo."
+
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:235
+msgid ":guilabel:`ci/odoo.sh (staging)`: status of a staging build"
+msgstr ""
+":guilabel:`ci/odoo.sh (staging)`: Estado de una compilación de despliegue. "
+
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:236
+msgid ":guilabel:`ci/odoo.sh (production)`: status of a production build"
+msgstr ""
+":guilabel:`ci/odoo.sh (production)`:  Estado de una compilación de "
+"producción."
+
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:237
+msgid ""
+":guilabel:`ci/odoo.sh (test_ci)`: testing the token from the Settings page "
+"will push a test status on the last commit of your repository"
+msgstr ""
+":guilabel:`ci/odoo.sh (test_ci)`: Probar el token desde la página de ajustes"
+" enviará un estado de prueba a la última confirmación de su repositorio."
+
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:241
 msgid "Custom domains"
 msgstr "Dominios personalizados"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:223
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:243
 msgid ""
 "To configure additional domains please refer to the corresponding branch's "
 ":ref:`settings tab <odoosh-gettingstarted-branches-tabs-settings>`."
@@ -5209,7 +5272,7 @@ msgstr ""
 "configuraciones <odoosh-gettingstarted-branches-tabs-settings>` de las ramas"
 " correspondientes."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:231
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:251
 msgid ""
 "Configure the deploy keys for the private repositories you use as submodules"
 " in your branches to allow Odoo.sh to download them."
@@ -5217,7 +5280,7 @@ msgstr ""
 "Configure el despliegue de claves para los repositorios privados que usa "
 "como submódulos en sus ramas para permitirle a Odoo.sh descargarlos. "
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:235
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:255
 msgid ""
 "These settings are required for **private repositories** only. If you are "
 "looking on how to set up your submodules, instructions are available in the "
@@ -5229,7 +5292,7 @@ msgstr ""
 " el capítulo :ref:`Submódulos <odoosh-advanced-submodules>` de esta "
 "documentación. "
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:242
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:262
 msgid ""
 "When a repository is private, it is not possible to publicly download its "
 "branches and revisions. For that reason, you need to configure a deploy key "
@@ -5241,14 +5304,14 @@ msgstr ""
 "implementación para Odoo.sh y así el servidor Git le permita a nuestra "
 "platafroma descargar las revisiones de este repositorio privado. "
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:247
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:267
 msgid ""
 "To configure the deploy key for a private repository, proceed as follows:"
 msgstr ""
 "Para configurar la clave de implementación para el repositorio privado, siga"
 " las siguientes instrucciones: "
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:249
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:269
 msgid ""
 "in the input, paste the SSH URL of your private sub-repository and click on "
 "*Add*,"
@@ -5256,11 +5319,11 @@ msgstr ""
 "en el campo de entrada, pegue la URL SSH de su sub-repositorio privado y "
 "haga clic en *Agregar*, "
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:251
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:271
 msgid "e.g. *git@github.com:USERNAME/REPOSITORY.git*"
 msgstr "Por ejemplo, *git@github.com:USERNAME/REPOSITORY.git*"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:252
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:272
 msgid ""
 "it can be another Git server than Github, such as Bitbucket, Gitlab or even "
 "your own self-hosted server"
@@ -5268,15 +5331,15 @@ msgstr ""
 "puede ser otro servidor Git que no sea Github como Bitbucket, Gitlab o "
 "inlcuso un servidor que usted mismo aloje"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:255
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:275
 msgid "copy the public key,"
 msgstr "copie la clave pública, "
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:257
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:277
 msgid "it should look like *ssh-rsa some...random...characters...here...==*"
 msgstr "debe verse como *ssh-rsa caracteres...más...caracteres...aquí...==*"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:259
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:279
 msgid ""
 "in the settings of the private sub-repository, add the public key amongst "
 "the deploy keys."
@@ -5284,26 +5347,26 @@ msgstr ""
 "en los ajustes del sub-repositorio privado, agregue la clave pública entre "
 "las claves de implementación"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:261
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:281
 msgid ""
 "Github.com: :menuselection:`Settings --> Deploy keys --> Add deploy key`"
 msgstr ""
 "Github.com: :menuselection:`Ajustes --> Claves de implementación --> "
 "Agrergar clave de implementación`"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:262
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:282
 msgid "Bitbucket.com: :menuselection:`Settings --> Access keys --> Add key`"
 msgstr ""
 "Bitbucket.com: :menuselection:`Ajustes --> Claves de acceso --> Agregar "
 "clave`"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:263
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:283
 msgid "Gitlab.com: :menuselection:`Settings --> Repository --> Deploy Keys`"
 msgstr ""
 "Gitlab.com: :menuselection:`Ajustes --> Repositorio--> Claves de "
 "implementación`"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:264
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:284
 msgid ""
 "Self-hosted: append the key to the git user’s authorized_keys file in its "
 ".ssh directory"
@@ -5311,23 +5374,23 @@ msgstr ""
 "Alojamiento propio: adjunte la clave al archivo del usuario git "
 "authorized_keys file en su directorio .ssh"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:267
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:287
 msgid "Storage Size"
 msgstr "Tamaño de almacenaje "
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:269
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:289
 msgid "This section shows the storage size used by your project."
 msgstr "Esta sección muestra el tamaño de almacenaje que utiliza su proyecto."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:274
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:294
 msgid "Storage size is computed as follows:"
 msgstr "El tamaño de almacenaje se calcula de la siguiente manera: "
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:276
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:296
 msgid "the size of the PostgreSQL database"
 msgstr "el tamaño de la base de datos de PostgreSQL"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:278
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:298
 msgid ""
 "the size of the disk files available in your container: database filestore, "
 "sessions storage directory..."
@@ -5336,7 +5399,7 @@ msgstr ""
 "datos del repositorio de archivos, directorio del almacenaje de las "
 "sesiones... "
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:281
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:301
 msgid ""
 "In case you want to analyze disk usage, you can run the tool `ncdu "
 "<https://dev.yorhel.nl/ncdu/man>`_ in your Web Shell."
@@ -5344,7 +5407,7 @@ msgstr ""
 "En caso de que quiera analizar el uso del disco, puede activar la "
 "herramienta `ncdu <https://dev.yorhel.nl/ncdu/man>`_ en su Web Shell."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:284
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:304
 msgid ""
 "Should your production database size grow to exceed what's provisioned in "
 "your subscription, it will automatically be synchronized with it."
@@ -5352,11 +5415,11 @@ msgstr ""
 "Si el tamaño de su base de datos de producción excede lo que cubre su "
 "suscripción, esta se sincronizará automáticamente con el nuevo tamaño. "
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:288
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:308
 msgid "Database Workers"
 msgstr "Workers de la base de datos"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:290
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:310
 msgid ""
 "Additional database workers can be configured here. More workers help "
 "increase the load your production database is able to handle. If you add "
@@ -5367,7 +5430,7 @@ msgstr ""
 "de datos es capaz de manejar. Si quiere agregar más, se sincronizará "
 "automáticamente con su suscripción. "
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:298
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:318
 msgid ""
 "Adding more workers will not magically solve all performance issues. It only"
 " allows the server to handle more connections at the same time. If some "
@@ -5382,11 +5445,11 @@ msgstr ""
 "personalización de este, puede abrir un ticket `aquí "
 "<https://www.odoo.com/help>`_."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:304
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:324
 msgid "Staging Branches"
 msgstr "Ramas de prueba "
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:306
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:326
 msgid ""
 "Additional staging branches allow you to develop and test more features at "
 "the same time. If you add more, it will automatically be synchronized with "
@@ -5396,11 +5459,11 @@ msgstr ""
 "características al mismo tiempo. Si agrega más, se sincronizará "
 "automáticamente con su suscripción. "
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:313
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:333
 msgid "Activation"
 msgstr "Activación"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:315
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:335
 msgid ""
 "Shows the status of the project's activation. You can change the project's "
 "activation code if needed."
@@ -5564,14 +5627,14 @@ msgstr ""
 "hacia:"
 
 #: ../../content/administration/on_premise.rst:64
-msgid "`services.odoo.com` on port `443` (or `80`)"
-msgstr "`services.odoo.com` en el puerto `443` (u `80`)."
+msgid "Odoo 18.0 and above: `services.odoo.com` on port `443` (or `80`)"
+msgstr ""
+"Odoo 18.0 y superiores: `services.odoo.com` en el puerto `443` (u `80`)"
 
 #: ../../content/administration/on_premise.rst:65
-msgid "for older deployments, `services.openerp.com` on port `443` (or `80`)"
+msgid "Odoo 17.0 and below: `services.openerp.com` on port `443` (or `80`)"
 msgstr ""
-"Para despliegues anteriores, `services.openerp.com` en el puerto `443` (o "
-"`80`)."
+"Odoo 17.0 e inferiores: `services.openerp.com` en el puerto `443` (u `80`)"
 
 #: ../../content/administration/on_premise.rst:67
 msgid ""
