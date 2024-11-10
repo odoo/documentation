@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-24 08:53+0000\n"
+"POT-Creation-Date: 2024-11-04 08:54+0000\n"
 "PO-Revision-Date: 2023-01-13 14:30+0000\n"
 "Last-Translator: Jakob Krabbe <jakob.krabbe@vertel.se>, 2024\n"
 "Language-Team: Swedish (https://app.transifex.com/odoo/teams/41243/sv/)\n"
@@ -1647,7 +1647,7 @@ msgid "Here is a pseudo-implementation example:"
 msgstr "Här är ett exempel på en pseudo-implementering:"
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:6
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:229
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:249
 msgid "Submodules"
 msgstr "Undermoduler"
 
@@ -4999,6 +4999,8 @@ msgstr "Admin"
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:181
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:186
 #: ../../content/administration/supported_versions.rst:35
+#: ../../content/administration/supported_versions.rst:36
+#: ../../content/administration/supported_versions.rst:37
 #: ../../content/administration/supported_versions.rst:41
 #: ../../content/administration/supported_versions.rst:47
 #: ../../content/administration/supported_versions.rst:53
@@ -5007,9 +5009,6 @@ msgstr "Admin"
 #: ../../content/administration/supported_versions.rst:59
 #: ../../content/administration/supported_versions.rst:60
 #: ../../content/administration/supported_versions.rst:61
-#: ../../content/administration/supported_versions.rst:65
-#: ../../content/administration/supported_versions.rst:66
-#: ../../content/administration/supported_versions.rst:67
 msgid "|green|"
 msgstr "|grönt"
 
@@ -5071,10 +5070,54 @@ msgstr ""
 "status."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:221
+msgid "GitHub commit statuses"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:223
+msgid ""
+"This option enables Odoo.sh to push commit statuses to your GitHub "
+"repository when a build is created or updated. It requires a GitHub token "
+"with permissions to push commit statuses to the repository. Refer to "
+"`GitHub's documentation on personal access tokens "
+"<https://docs.github.com/en/authentication/keeping-your-account-and-data-"
+"secure/managing-your-personal-access-tokens>`_ for instructions to create "
+"yours."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:229
+msgid ""
+"GitHub's **fine-grained personal tokens** have an expiration date and will "
+"be disabled if they fail to update the commit status. You can replace the "
+"token at any time on Odoo.sh."
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:232
+msgid "The commit statuses pushed to GitHub can have the following contexts:"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:234
+msgid ":guilabel:`ci/odoo.sh (dev)`: status of a development build"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:235
+msgid ":guilabel:`ci/odoo.sh (staging)`: status of a staging build"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:236
+msgid ":guilabel:`ci/odoo.sh (production)`: status of a production build"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:237
+msgid ""
+":guilabel:`ci/odoo.sh (test_ci)`: testing the token from the Settings page "
+"will push a test status on the last commit of your repository"
+msgstr ""
+
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:241
 msgid "Custom domains"
 msgstr "Anpassade domäner"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:223
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:243
 msgid ""
 "To configure additional domains please refer to the corresponding branch's "
 ":ref:`settings tab <odoosh-gettingstarted-branches-tabs-settings>`."
@@ -5082,7 +5125,7 @@ msgstr ""
 "För att konfigurera ytterligare domäner, se motsvarande grens :ref:`settings"
 " tab <odoosh-gettingstarted-branches-tabs-settings>`."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:231
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:251
 msgid ""
 "Configure the deploy keys for the private repositories you use as submodules"
 " in your branches to allow Odoo.sh to download them."
@@ -5090,7 +5133,7 @@ msgstr ""
 "Konfigurera distributionsnycklarna för de privata arkiv som du använder som "
 "undermoduler i dina grenar så att Odoo.sh kan hämta dem."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:235
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:255
 msgid ""
 "These settings are required for **private repositories** only. If you are "
 "looking on how to set up your submodules, instructions are available in the "
@@ -5101,7 +5144,7 @@ msgstr ""
 "du ställer in dina undermoduler finns instruktioner i kapitlet "
 ":ref:`Submodules <odoosh-advanced-submodules>` i den här dokumentationen."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:242
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:262
 msgid ""
 "When a repository is private, it is not possible to publicly download its "
 "branches and revisions. For that reason, you need to configure a deploy key "
@@ -5113,13 +5156,13 @@ msgstr ""
 " för Odoo.sh, så att Git-servern på distans tillåter vår plattform att ladda"
 " ner revisionerna från det privata arkivet."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:247
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:267
 msgid ""
 "To configure the deploy key for a private repository, proceed as follows:"
 msgstr ""
 "Gör så här för att konfigurera deployeringsnyckeln för ett privat arkiv:"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:249
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:269
 msgid ""
 "in the input, paste the SSH URL of your private sub-repository and click on "
 "*Add*,"
@@ -5127,11 +5170,11 @@ msgstr ""
 "i inmatningen klistrar du in SSH-URL:en till ditt privata underarkiv och "
 "klickar på *Add*,"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:251
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:271
 msgid "e.g. *git@github.com:USERNAME/REPOSITORY.git*"
 msgstr "t.ex. *git@github.com:USERNAME/REPOSITORY.git*"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:252
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:272
 msgid ""
 "it can be another Git server than Github, such as Bitbucket, Gitlab or even "
 "your own self-hosted server"
@@ -5139,15 +5182,15 @@ msgstr ""
 "det kan vara en annan Git-server än Github, t.ex. Bitbucket, Gitlab eller "
 "till och med din egen server som är värd"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:255
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:275
 msgid "copy the public key,"
 msgstr "kopiera den offentliga nyckeln,"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:257
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:277
 msgid "it should look like *ssh-rsa some...random...characters...here...==*"
 msgstr "det ska se ut som *ssh-rsa några...slumpmässiga...tecken...här...==*"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:259
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:279
 msgid ""
 "in the settings of the private sub-repository, add the public key amongst "
 "the deploy keys."
@@ -5155,26 +5198,26 @@ msgstr ""
 "i inställningarna för det privata underarkivet lägger du till den offentliga"
 " nyckeln bland deployeringsnycklarna."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:261
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:281
 msgid ""
 "Github.com: :menuselection:`Settings --> Deploy keys --> Add deploy key`"
 msgstr ""
 "Github.com: :menuselection:`Inställningar --> Distributionsnycklar --> Lägg "
 "till distributionsnyckel`"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:262
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:282
 msgid "Bitbucket.com: :menuselection:`Settings --> Access keys --> Add key`"
 msgstr ""
 "Bitbucket.com: :menuselection:`Inställningar --> Åtkomstnycklar --> Lägg "
 "till nyckel`"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:263
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:283
 msgid "Gitlab.com: :menuselection:`Settings --> Repository --> Deploy Keys`"
 msgstr ""
 "Gitlab.com: :menuselection:`Inställningar --> Repository --> Distribuera "
 "nycklar`"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:264
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:284
 msgid ""
 "Self-hosted: append the key to the git user’s authorized_keys file in its "
 ".ssh directory"
@@ -5182,23 +5225,23 @@ msgstr ""
 "Egen värd: bifoga nyckeln till git-användarens authorized_keys-fil i dess "
 ".ssh-katalog"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:267
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:287
 msgid "Storage Size"
 msgstr "Storlek på lager"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:269
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:289
 msgid "This section shows the storage size used by your project."
 msgstr "Detta avsnitt visar den lagringsstorlek som används av ditt projekt."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:274
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:294
 msgid "Storage size is computed as follows:"
 msgstr "Lagringsstorleken beräknas enligt följande:"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:276
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:296
 msgid "the size of the PostgreSQL database"
 msgstr "storleken på PostgreSQL-databasen"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:278
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:298
 msgid ""
 "the size of the disk files available in your container: database filestore, "
 "sessions storage directory..."
@@ -5206,7 +5249,7 @@ msgstr ""
 "storleken på de diskfiler som finns tillgängliga i behållaren: databasens "
 "filarkiv, sessionernas lagringskatalog..."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:281
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:301
 msgid ""
 "In case you want to analyze disk usage, you can run the tool `ncdu "
 "<https://dev.yorhel.nl/ncdu/man>`_ in your Web Shell."
@@ -5214,7 +5257,7 @@ msgstr ""
 "Om du vill analysera diskanvändningen kan du köra verktyget `ncdu "
 "<https://dev.yorhel.nl/ncdu/man>`_ i ditt webbshell."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:284
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:304
 msgid ""
 "Should your production database size grow to exceed what's provisioned in "
 "your subscription, it will automatically be synchronized with it."
@@ -5222,11 +5265,11 @@ msgstr ""
 "Om din produktionsdatabas blir större än vad som anges i din prenumeration "
 "kommer den automatiskt att synkroniseras med den."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:288
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:308
 msgid "Database Workers"
 msgstr "Databasarbetare"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:290
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:310
 msgid ""
 "Additional database workers can be configured here. More workers help "
 "increase the load your production database is able to handle. If you add "
@@ -5237,7 +5280,7 @@ msgstr ""
 "Om du lägger till fler kommer de automatiskt att synkroniseras med din "
 "prenumeration."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:298
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:318
 msgid ""
 "Adding more workers will not magically solve all performance issues. It only"
 " allows the server to handle more connections at the same time. If some "
@@ -5251,11 +5294,11 @@ msgstr ""
 "problem med koden, om det inte beror på dina egna anpassningar kan du öppna "
 "ett ärende `här <https://www.odoo.com/help>`_."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:304
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:324
 msgid "Staging Branches"
 msgstr "Brancher för iscensättning"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:306
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:326
 msgid ""
 "Additional staging branches allow you to develop and test more features at "
 "the same time. If you add more, it will automatically be synchronized with "
@@ -5265,11 +5308,11 @@ msgstr ""
 "samtidigt. Om du lägger till fler kommer de automatiskt att synkroniseras "
 "med din prenumeration."
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:313
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:333
 msgid "Activation"
 msgstr "Aktivering"
 
-#: ../../content/administration/odoo_sh/getting_started/settings.rst:315
+#: ../../content/administration/odoo_sh/getting_started/settings.rst:335
 msgid ""
 "Shows the status of the project's activation. You can change the project's "
 "activation code if needed."
@@ -5426,13 +5469,12 @@ msgstr ""
 "anslutningar mot:"
 
 #: ../../content/administration/on_premise.rst:64
-msgid "`services.odoo.com` on port `443` (or `80`)"
-msgstr "`services.odoo.com` på port `443` (eller `80`)"
+msgid "Odoo 18.0 and above: `services.odoo.com` on port `443` (or `80`)"
+msgstr ""
 
 #: ../../content/administration/on_premise.rst:65
-msgid "for older deployments, `services.openerp.com` on port `443` (or `80`)"
+msgid "Odoo 17.0 and below: `services.openerp.com` on port `443` (or `80`)"
 msgstr ""
-"för äldre driftsättningar, `services.openerp.com` på port `443` (eller `80`)"
 
 #: ../../content/administration/on_premise.rst:67
 msgid ""
@@ -8854,11 +8896,22 @@ msgid "End of support"
 msgstr "Slut på stöd"
 
 #: ../../content/administration/supported_versions.rst:34
-msgid "Odoo saas~17.4"
-msgstr ""
+msgid "**Odoo 18.0**"
+msgstr "**Odoo 18.0**"
 
-#: ../../content/administration/supported_versions.rst:36
-#: ../../content/administration/supported_versions.rst:37
+#: ../../content/administration/supported_versions.rst:38
+#: ../../content/administration/supported_versions.rst:69
+msgid "October 2024"
+msgstr "oktober 2024"
+
+#: ../../content/administration/supported_versions.rst:39
+msgid "October 2027 (planned)"
+msgstr "Oktober 2027 (planerat)"
+
+#: ../../content/administration/supported_versions.rst:40
+msgid "Odoo SaaS 17.4"
+msgstr "Odoo SaaS 17,4"
+
 #: ../../content/administration/supported_versions.rst:42
 #: ../../content/administration/supported_versions.rst:43
 #: ../../content/administration/supported_versions.rst:48
@@ -8866,25 +8919,17 @@ msgstr ""
 msgid "N/A"
 msgstr "N/A"
 
-#: ../../content/administration/supported_versions.rst:38
+#: ../../content/administration/supported_versions.rst:44
 msgid "July 2024"
 msgstr "juli 2024"
 
-#: ../../content/administration/supported_versions.rst:40
-msgid "Odoo saas~17.2"
-msgstr ""
-
-#: ../../content/administration/supported_versions.rst:44
-msgid "April 2024"
-msgstr "april 2024"
-
 #: ../../content/administration/supported_versions.rst:46
-msgid "Odoo saas~17.1"
-msgstr "Odoo saas~17.1"
+msgid "Odoo SaaS 17.2"
+msgstr "Odoo SaaS 17.2"
 
 #: ../../content/administration/supported_versions.rst:50
-msgid "January 2024"
-msgstr "januari 2024"
+msgid "April 2024"
+msgstr "april 2024"
 
 #: ../../content/administration/supported_versions.rst:52
 msgid "**Odoo 17.0**"
@@ -8904,83 +8949,70 @@ msgid "**Odoo 16.0**"
 msgstr "**Odoo 16.0"
 
 #: ../../content/administration/supported_versions.rst:62
-#: ../../content/administration/supported_versions.rst:81
 msgid "October 2022"
 msgstr "Oktober 2022"
 
 #: ../../content/administration/supported_versions.rst:63
-msgid "November 2025 (planned)"
-msgstr "November 2025 (planerat)"
+msgid "October 2025 (planned)"
+msgstr "Oktober 2025 (planerat)"
 
 #: ../../content/administration/supported_versions.rst:64
 msgid "**Odoo 15.0**"
 msgstr "**Odoo 15.0**"
 
-#: ../../content/administration/supported_versions.rst:68
-msgid "October 2021"
-msgstr "Oktober 2021"
-
-#: ../../content/administration/supported_versions.rst:69
-msgid "November 2024 (planned)"
-msgstr "November 2024 (planerat)"
-
-#: ../../content/administration/supported_versions.rst:70
-msgid "**Odoo 14.0**"
-msgstr "**Odoo 14.0"
-
+#: ../../content/administration/supported_versions.rst:65
+#: ../../content/administration/supported_versions.rst:66
+#: ../../content/administration/supported_versions.rst:67
 #: ../../content/administration/supported_versions.rst:71
 #: ../../content/administration/supported_versions.rst:72
 #: ../../content/administration/supported_versions.rst:73
 #: ../../content/administration/supported_versions.rst:77
 #: ../../content/administration/supported_versions.rst:78
 #: ../../content/administration/supported_versions.rst:79
-#: ../../content/administration/supported_versions.rst:83
-#: ../../content/administration/supported_versions.rst:84
-#: ../../content/administration/supported_versions.rst:85
 msgid "|red|"
 msgstr "|röd"
+
+#: ../../content/administration/supported_versions.rst:68
+msgid "October 2021"
+msgstr "Oktober 2021"
+
+#: ../../content/administration/supported_versions.rst:70
+msgid "**Odoo 14.0**"
+msgstr "**Odoo 14.0"
 
 #: ../../content/administration/supported_versions.rst:74
 msgid "October 2020"
 msgstr "Oktober 2020"
 
 #: ../../content/administration/supported_versions.rst:76
-msgid "**Odoo 13.0**"
-msgstr "**Odoo 13.0"
-
-#: ../../content/administration/supported_versions.rst:80
-msgid "October 2019"
-msgstr "Oktober 2019"
-
-#: ../../content/administration/supported_versions.rst:82
 msgid "Older versions"
 msgstr "Äldre versioner"
 
-#: ../../content/administration/supported_versions.rst:86
-msgid "Before 2019"
-msgstr "Före 2019"
+#: ../../content/administration/supported_versions.rst:80
+msgid "Before 2020"
+msgstr "Före 2020"
 
-#: ../../content/administration/supported_versions.rst:87
-msgid "Before 2022"
-msgstr "Före 2022"
+#: ../../content/administration/supported_versions.rst:81
+msgid "Before 2023"
+msgstr "Före 2023"
 
-#: ../../content/administration/supported_versions.rst:89
+#: ../../content/administration/supported_versions.rst:83
 msgid "Legend"
 msgstr "Legend"
 
-#: ../../content/administration/supported_versions.rst:91
+#: ../../content/administration/supported_versions.rst:85
 msgid "|green| Supported version"
 msgstr "|Grön version som stöds"
 
-#: ../../content/administration/supported_versions.rst:93
+#: ../../content/administration/supported_versions.rst:87
 msgid "|red| End-of-support"
 msgstr "|Slut på stöd"
 
-#: ../../content/administration/supported_versions.rst:95
+#: ../../content/administration/supported_versions.rst:89
 msgid "N/A Never released for this platform"
 msgstr "N/A Har aldrig släppts för denna plattform"
 
-#: ../../content/administration/supported_versions.rst:98
+#: ../../content/administration/supported_versions.rst:92
 msgid ""
 "Even though we don't support older versions, you can always `upgrade from "
 "any version <https://upgrade.odoo.com/>`_."
