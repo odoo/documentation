@@ -57,7 +57,7 @@ Basic Report
 
 .. note::
 
-    **Goal**: at the end of this section, we will can print a report that displays all offers for a
+    **Goal**: at the end of this section, we will be able to print a report that displays all offers for a
     property.
 
     .. image:: pdf_reports/simple_report.png
