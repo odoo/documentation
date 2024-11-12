@@ -4,6 +4,12 @@
 Changelog
 =========
 
+Odoo Online version 18.2
+========================
+
+- `read_group` has been deprecated in favor of `_read_group` for backend usage and of
+  `formatted_read_group` as formatted public API. See `#163300 <https://github.com/odoo/odoo/pull/163300>`_.
+
 Odoo Online version 18.1
 ========================
 
