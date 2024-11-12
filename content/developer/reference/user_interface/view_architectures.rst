@@ -2084,9 +2084,7 @@ The `filter` element can have the following attributes:
    the :guilabel:`Group By` menu. When the field is of type `date` or `datetime`, the filter
    generates a submenu of the :guilabel:`Group By` menu with the following interval options
    available: :guilabel:`Year`, :guilabel:`Quarter`, :guilabel:`Month`, :guilabel:`Week`, and
-   :guilabel:`Day`. When the filter is in the default set of filters activated at the view
-   initialization, the records are grouped by month by default. This can be changed by using the
-   syntax `date_field:interval`.
+   :guilabel:`Day`.
 
    .. example::
       .. code-block:: xml
@@ -2095,7 +2093,7 @@ The `filter` element can have the following attributes:
          <filter string="Creation Date" name="groupby_create_date" context="{'group_by': 'create_date:week'}"/>
 
    .. note::
-      The results of `read_groups` grouped on a field may be influenced by its `group_expand`
+      The results of `formatted_read_group` grouped on a field may be influenced by its `group_expand`
       attribute, allowing to display empty groups when needed. For more information, please refer to
       :class:`~odoo.fields.Field`.
 
