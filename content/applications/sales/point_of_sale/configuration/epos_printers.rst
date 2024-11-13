@@ -57,7 +57,7 @@ compatible with Odoo:
      <https://download4.epson.biz/sec_pubs/pos/reference_en/technology/epson_epos_sdk.html>`_ are
      compatible with Odoo **without** needing an :doc:`IoT Box
      </applications/general/iot/devices/printer>`.
-   - Thermal printers using ESC/POS or StarPRNT protocol are compatible **with** an :doc:`IoT Box
+   - Thermal printers using ESC/POS are compatible **with** an :doc:`IoT Box
      </applications/general/iot/devices/printer>`.
    - Epson printers using only USB connections are compatible **with** an :doc:`IoT Box
      </applications/general/iot/devices/printer>`.
