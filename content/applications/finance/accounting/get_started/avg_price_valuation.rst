@@ -69,8 +69,9 @@ When new products arrive, the new average cost for each product is recomputed us
 - **Incoming Qty**: count of products arriving in the new shipment;
 - **Purchase Price**: estimated price of products at the reception of products (since vendor bills
   may arrive later). The amount includes not only the price for the products, but also added costs,
-  such as shipping, taxes, and :ref:`landed costs <inventory/reporting/landed_costs>`. At reception
-  of the vendor bill, this price is adjusted;
+  such as shipping, taxes, and :doc:`landed costs
+  <../../../inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs>`. At
+  reception of the vendor bill, this price is adjusted;
 - **Final Qty**: quantity of on-hand stock after the stock move.
 
 .. _inventory/avg_cost/definite_rule:
