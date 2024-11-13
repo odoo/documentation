@@ -2,8 +2,6 @@
 Landed costs
 ============
 
-.. _inventory/reporting/landed_costs:
-
 .. |RfQ| replace:: :abbr:`RfQ (Request for Quotation)`
 .. |PO| replace:: :abbr:`PO (Purchase Order)`
 .. |FIFO| replace:: :abbr:`FIFO (First In First Out)`
@@ -32,8 +30,7 @@ Costs` feature in the :guilabel:`Valuation` section.
 Click the :guilabel:`Default Journal` drop-down menu to reveal a list of accounting journals. Select
 a journal for which all accounting entries related to landed costs should be recorded.
 
-.. image:: integrating_landed_costs/integrating-landed-costs-enabled-setting.png
-   :align: center
+.. image:: landed_costs/integrating-landed-costs-enabled-setting.png
    :alt: Landed Costs feature and resulting Default Journal field in the Inventory settings.
 
 Create landed cost product
@@ -65,17 +62,16 @@ appears below it, prompting a selection. Clicking that drop-down menu reveals th
 - :guilabel:`By Weight`: splits the cost, according to the weight of the products in the receipt.
 - :guilabel:`By Volume`: splits the cost, according to the volume of the products in the receipt.
 
-.. image:: integrating_landed_costs/integrating-landed-costs-landed-cost-product.png
-   :align: center
+.. image:: landed_costs/integrating-landed-costs-landed-cost-product.png
    :alt: Is a Landed Cost checkbox and Default Split Method on service type product form.
 
 When creating new vendor bills, this product can be added as an invoice line as a landed cost.
 
 .. important::
-   To apply a landed cost on a vendor bill, the products included in the original |PO| **must**
-   belong to a *Product Category* with its *Force Removal Strategy* set to |FIFO|. The *Costing
-   Method* can be set to either |AVCO| or |FIFO|, and the valuation method can be :doc:`manual
-   <using_inventory_valuation>` or :doc:`automatic <inventory_valuation_config>`.
+   To apply a landed cost on a vendor bill, products in the original |PO| **must** belong to a
+   *Product Category* with a *Costing Method* of either |AVCO| or |FIFO|, and the valuation method
+   can be :doc:`manual <using_inventory_valuation>` or :doc:`automatic
+   <inventory_valuation_config>`.
 
 Create purchase order
 =====================
@@ -105,8 +101,7 @@ menu in the :guilabel:`Product` column to select the previously-created landed c
 the :icon:`fa-cloud-upload` :guilabel:`(cloud with arrow)` icon to manually save and update the
 draft bill.
 
-.. image:: integrating_landed_costs/integrating-landed-costs-checkboxes.png
-   :align: center
+.. image:: landed_costs/integrating-landed-costs-checkboxes.png
    :alt: Landed Costs column checkboxes for product and landed cost.
 
 In the :guilabel:`Landed Costs` column, the product ordered from the vendor does **not** have its
@@ -115,8 +110,7 @@ costs from all other costs displayed on the bill.
 
 Additionally, at the top of the form, a :guilabel:`Create Landed Costs` button appears.
 
-.. image:: integrating_landed_costs/integrating-landed-costs-create-button.png
-   :align: center
+.. image:: landed_costs/integrating-landed-costs-create-button.png
    :alt: Create Landed Costs button on vendor bill.
 
 Add landed cost
@@ -131,8 +125,7 @@ product line in the :guilabel:`Additional Costs` tab.
 From the :guilabel:`Landed Cost` form, click the :guilabel:`Transfers` drop-down menu, and select
 which transfer the landed cost belongs to.
 
-.. image:: integrating_landed_costs/integrating-landed-costs-transfers-menu.png
-   :align: center
+.. image:: landed_costs/integrating-landed-costs-transfers-menu.png
    :alt: Landed cost form with selected receipt transfer.
 
 .. tip::
@@ -171,6 +164,5 @@ To view the valuation of *every* product, including landed costs, navigate to
    Click into the journal entry to view the :guilabel:`Journal Items`, and other information about
    the entry.
 
-   .. image:: integrating_landed_costs/integrating-landed-costs-journal-entry.png
-      :align: center
+   .. image:: landed_costs/integrating-landed-costs-journal-entry.png
       :alt: Journal Entry form for landed cost created from vendor bill.
