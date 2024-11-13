@@ -369,7 +369,7 @@ the SAT documentation, there are two types of payments:
 - `PPD` (Pago en Parcialidades o Diferido/Payment in Installements or Deferred)
 
    .. seealso::
-      :doc:`../../inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs`
+      :doc:`../../inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs`
 
 The difference lies in the *Due Date* or *Payment Terms* of the invoice.
 
@@ -883,8 +883,8 @@ Configuration
 ~~~~~~~~~~~~~
 
 In order to track the correct customs number for a specific invoice, Odoo uses :doc:`landed costs
-<../../inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs>`.
-Go to :menuselection:`Inventory --> Configuration --> Settings --> Valuation`. Make sure that
+<../../inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs>`. Go to
+:menuselection:`Inventory --> Configuration --> Settings --> Valuation`. Make sure that
 :guilabel:`Landed Costs` is activated.
 
 Begin by creating a *service*-type product called, `Pedimento`. In the :guilabel:`Purchase` tab,
