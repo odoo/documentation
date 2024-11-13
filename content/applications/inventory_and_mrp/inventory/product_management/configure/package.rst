@@ -45,6 +45,17 @@ the :guilabel:`Operations` heading, activate the :guilabel:`Packages` feature. T
    :align: center
    :alt: Activate the *Packages* setting in Inventory > Configuration > Settings.
 
+.. _inventory/product_management/move-entire-pack:
+
+When moving packages internally, the *Move Entire Packages* feature can be enabled on an operation
+type to update a package's contained item's location upon updating the package's location.
+
+To do that, go to :menuselection:`Inventory app --> Configuration --> Operations Types` and select
+the desired operation this feature will apply to (may have to set it for multiple).
+
+On the operation type page, in the :guilabel:`Packages` section, tick the :guilabel:`Move Entire
+Packages` checkbox.
+
 .. _inventory/warehouses_storage/pack:
 
 Pack items
