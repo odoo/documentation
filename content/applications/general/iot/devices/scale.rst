@@ -2,69 +2,75 @@
 Connect a scale
 ===============
 
-A scale can be connected to the :abbr:`IoT (Internet of Things)` box on an Odoo database in a few
-easy steps. After setup, the *Point of Sale* app can be used to weigh products, which is helpful if
-their prices are calculated based on weight.
-
 .. important::
-   - In EU member states, `certification is legally required <https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2014.096.01.0107.01.ENG>`_
+   - In EU member states, `certification is legally required
+     <https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2014.096.01.0107.01.ENG>`_
      to use a scale as an integrated device.
    - Odoo is not certified in several countries, including France, Germany, and Switzerland. If you
-     reside in one of these countries, you can still use a scale but without integration to your
-     Odoo database.
-   - Alternatively, you have the option to acquire a *non-integrated* certified scale that prints
+     reside in one of these countries, you can still use a scale but without integration into your
+     Odoo database. Alternatively, you can acquire a *non-integrated* certified scale that prints
      certified labels, which can then be scanned into your Odoo database.
 
-.. seealso::
-   `Directive 2014/31/EU of the European Parliament <https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2014.096.01.0107.01.ENG>`_
-
-Connection
-==========
-
-To link the scale to the :abbr:`IoT (Internet of Things)` box, connect it with a :abbr:`USB
-(Universal Serial Bus)` cable.
+To connect a scale to the IoT system, use a USB cable. In some cases, you may need a serial-to-US
+adapter to complete the connection. If the scale is `compatible with an IoT system
+<https://www.odoo.com/page/iot-hardware>`_, no additional setup is required; the scale is
+automatically detected as soon as it is connected. If the scale is not detected, reboot the IoT box
+or :ref:`restart the Windows virtual IoT service <iot/windows_iot/restart>` and :ref:`update the
+scale's drivers <iot_updating_iot/handlers>`.
 
 .. note::
-   In some cases, a serial port to :abbr:`USB (Universal Serial Bus)` adapter may be needed.
+   If the scale still does not function after updating the drivers, it might not be `compatible with
+   the Odoo IoT system <https://www.odoo.com/page/iot-hardware>`_. In such cases, a different scale
+   must be used.
 
-If the scale is `compatible with Odoo IoT Box <https://www.odoo.com/page/iot-hardware>`_, there is
-no need to set up anything because it will be automatically detected as soon as it is connected.
+Once the scale is connected to the IoT system, follow these steps to configure it in the POS
+settings:
 
-.. image:: scale/iot-choice.png
-   :align: center
-   :alt: IOT box auto detection.
+#. :ref:`Access the POS settings <configuration/settings>` and select your POS, or click the
+   vertical ellipsis button (:guilabel:`⋮`) on a POS card and click :guilabel:`Edit`.
+#. Scroll down to the :guilabel:`Connected Devices` section and enable :guilabel:`IoT Box`.
+#. Select the scale in the :guilabel:`Electronic Scale` field.
+#. Click :guilabel:`Save`.
 
-The :abbr:`IoT (Internet of Things)` box may need to be restarted and the scale's drivers may need
-to be downloaded to the box in some cases. To update the drivers, go to the :abbr:`IoT (Internet of
-Things)` box homepage and click on :guilabel:`Drivers List`. Then, click on :guilabel:`Load
-Drivers`.
+.. seealso::
+   :doc:`Connect an IoT system to a POS </applications/sales/point_of_sale/configuration/pos_iot>`
 
-.. image:: scale/driver-list.png
-   :align: center
-   :alt: View of the IoT box settings and driver list.
-
-If loading the drivers still doesn't allow for the scale to function, it may be that the scale is
-not compatible with the Odoo :abbr:`IoT (Internet of Things)` box. In this case, a different scale
-will need to be used.
-
-Use a scale in a point of sale (POS) system
-===========================================
-
-To use the scale in the *Point of Sale app*, go to :menuselection:`PoS app --> 3-Dot Menu on the PoS
---> Settings`, then enable the :abbr:`IoT (Internet of Things)` box feature. After this is complete,
-the scale device can be set.
-
-Select the scale from the :guilabel:`Electronic Scale` drop-down menu. Then click :guilabel:`Save`
-to save the changes, if required.
-
-.. image:: scale/electronic-scale-feature.png
-   :align: center
-   :alt: List of the external tools that can be used with PoS and the IoT box.
-
-The scale is now available in all the :abbr:`PoS (Point of Sale)` sessions. Now, if a product has a
-price per weight set, clicking on it on the :guilabel:`PoS` screen opens the scale screen, where the
-cashier can weigh the product and add the correct price to the cart.
+The scale is then available in all the :doc:`POS's sessions </applications/sales/point_of_sale>`.
+If a product is configured with a price per weight, selecting it on the :guilabel:`PoS screen` opens
+the scale popup. The cashier can then weigh the product to automatically add the correct price to
+the cart.
 
 .. image:: scale/scale-view.png
-   :align: center
+   :scale: 80%
    :alt: Electronic Scale dashboard view when no items are being weighed.
+
+Ariva S scales
+==============
+
+For Ariva S series scales (manufactured by Mettler-Toledo, LLC.) to function with IoT systems, a
+specific setting must be modified, and a dedicated Mettler USB-to-proprietary RJ45 cable is required.
+
+.. important::
+   The official Mettler USB-to-RJ45 cable (Mettler part number 72256236) must be used. Contact
+   Mettler or a partner to purchase an authentic cable. **No other** cable works for this
+   configuration.
+
+To configure the Ariva S scale for IoT system recognition, refer to page 17 of `Mettler's Setup
+Guide for Ariva S series scales <https://www.mt.com/dam/RET_DOCS/Ariv.pdf>`_ and follow these steps:
+
+#. Hold the **>T<** button for eight seconds, or until :guilabel:`CONF` appears.
+#. Press **>T<** until :guilabel:`GRP 3` appears, then press **>0<** to confirm.
+#. Under :guilabel:`3.1`, ensure the setting is set to :guilabel:`1` (USB Virtual COM ports) and
+   press **>T<** to cycle through the options under group 3.1.
+#. Once :guilabel:`3.1` is set to :guilabel:`1`, press **>0<** to confirm the selection.
+#. Continue to press **>0<** until :guilabel:`GRP 4` appears.
+#. Press **>T<** until :guilabel:`EXIT` appears.
+
+   .. important::
+      Do **not** make any other changes unless otherwise needed.
+
+#. Press **>0<**.
+#. Press **>0<** again to :guilabel:`SAVE`; the scale restarts.
+#. Reboot the IoT box or :ref:`restart the Windows virtual IoT service <iot/windows_iot/restart>`.
+   The scale should then appear as `Toledo 8217`, as opposed to the previous display, where it
+   appeared as `Adam Equipment Serial`.
