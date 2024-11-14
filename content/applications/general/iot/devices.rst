@@ -6,6 +6,12 @@
 Devices
 =======
 
+.. seealso::
+   - :doc:`Connect a Worldline payment terminal
+     <../../sales/point_of_sale/payment_methods/terminals/worldline>`
+   - :doc:`Connect an Ingenico payment terminal
+     <../../sales/point_of_sale/payment_methods/terminals/ingenico>`
+
 .. toctree::
    :titlesonly:
    :glob:
@@ -16,8 +22,3 @@ Devices
    devices/footswitch
    devices/printer
    devices/scale
-
-.. seealso::
-   - :doc:`Worldline payment terminal
-     <../../sales/point_of_sale/payment_methods/terminals/worldline>`
-   - :doc:`Ingenico payment terminal <../../sales/point_of_sale/payment_methods/terminals/ingenico>`
