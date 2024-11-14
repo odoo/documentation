@@ -15,12 +15,12 @@ the work of your cashiers.
 Configuration
 =============
 
-Connect an IoT Box
-------------------
+Connect an IoT system
+---------------------
 
-Connecting a Worldline Payment Terminal to Odoo is a feature that requires an IoT Box. For more
+Connecting a Worldline Payment Terminal to Odoo is a feature that requires an IoT system. For more
 information on how to connect one to your database, please refer to the
-:doc:`IoT documentation </applications/general/iot/config/connect>`.
+:doc:`IoT documentation </applications/general/iot>`.
 
 Configure the protocol
 ----------------------
@@ -44,8 +44,8 @@ Finally, set up the hostname and port number.
 Hostname
 ~~~~~~~~
 
-| To set up the hostname, enter your IoT box's IP address' sequence numbers and press **OK** at each
-  "." until you reach the colon symbol.
+| To set up the hostname, enter your IoT system's IP address' sequence numbers and press **OK** at
+  each "." until you reach the colon symbol.
 | Then, press **OK** twice.
 
 .. example::
@@ -53,8 +53,9 @@ Hostname
    | On the *Hostname screen*, type :menuselection:`10 --> OK --> 30 --> OK --> 19 --> OK --> 4
      --> OK --> OK`.
 
-.. note::
-   Your IoT box's IP address is available in your IoT Box application's database.
+.. tip::
+   Your IoT system's IP address is available on the :ref:`IoT system's card in the IoT app
+   <iot/connect/IoT-form>`.
 
 Port number
 ~~~~~~~~~~~
@@ -64,9 +65,8 @@ On the *Port number* screen, enter **9001** (or **9050** for Windows) and click 
 the terminal automatically restarts.
 
 .. warning::
-   For **Windows** IoT devices, it is necessary to add a firewall exception. Follow the
-   :ref:`additional instructions in the Windows IoT documentation <iot/windows/wordline>` to add the
-   exception to Windows Firewall.
+   For the :doc:`Windows virtual IoT </applications/general/iot>`, the `9050` port must be added
+   as a :ref:`Windows Firewall exception <iot/windows-iot/firewall>`.
 
 Configure the payment method
 ----------------------------

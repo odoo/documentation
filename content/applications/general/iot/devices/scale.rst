@@ -27,12 +27,11 @@ To link the scale to the :abbr:`IoT (Internet of Things)` box, connect it with a
 .. note::
    In some cases, a serial port to :abbr:`USB (Universal Serial Bus)` adapter may be needed.
 
-If the scale is `compatible with Odoo IoT Box <https://www.odoo.com/page/iot-hardware>`_, there is
+If the scale is `compatible with an IoT system <https://www.odoo.com/page/iot-hardware>`_, there is
 no need to set up anything because it will be automatically detected as soon as it is connected.
 
 .. image:: scale/iot-choice.png
-   :align: center
-   :alt: IOT box auto detection.
+    :alt: IOT system auto detection.
 
 The :abbr:`IoT (Internet of Things)` box may need to be restarted and the scale's drivers may need
 to be downloaded to the box in some cases. To update the drivers, go to the :abbr:`IoT (Internet of
@@ -40,8 +39,7 @@ Things)` box homepage and click on :guilabel:`Drivers List`. Then, click on :gui
 Drivers`.
 
 .. image:: scale/driver-list.png
-   :align: center
-   :alt: View of the IoT box settings and driver list.
+   :alt: View of the IoT system's settings and driver list.
 
 If loading the drivers still doesn't allow for the scale to function, it may be that the scale is
 not compatible with the Odoo :abbr:`IoT (Internet of Things)` box. In this case, a different scale
@@ -58,8 +56,7 @@ Select the scale from the :guilabel:`Electronic Scale` drop-down menu. Then clic
 to save the changes, if required.
 
 .. image:: scale/electronic-scale-feature.png
-   :align: center
-   :alt: List of the external tools that can be used with PoS and the IoT box.
+   :alt: List of the external tools that can be used with PoS and the IoT system.
 
 The scale is now available in all the :abbr:`PoS (Point of Sale)` sessions. Now, if a product has a
 price per weight set, clicking on it on the :guilabel:`PoS` screen opens the scale screen, where the
@@ -68,3 +65,66 @@ cashier can weigh the product and add the correct price to the cart.
 .. image:: scale/scale-view.png
    :align: center
    :alt: Electronic Scale dashboard view when no items are being weighed.
+
+Troubleshooting
+===============
+
+Set up Ariva S scales
+---------------------
+
+Odoo has determined that a specific setting in Ariva S series scales (manufactured by
+Mettler-Toledo, LLC.) needs modification, and a dedicated Mettler :abbr:`USB (Universal Serial
+Bus)`-to-proprietary RJ45 cable is required for the scale to function with Odoo's :abbr:`IoT
+(Internet of Things)` box.
+
+To correctly configure the scale for recognition by the :abbr:`IoT (Internet of Things)` box, follow
+this setup process for the Ariva S series scales.
+
+.. important::
+   It is crucial to use the official Mettler :abbr:`USB (Universal Serial Bus)`-to-RJ45 cable during
+   this process.
+
+Cable
+~~~~~
+
+The Mettler part number is 72256236 - :abbr:`USB (Universal Serial Bus)`-to-:abbr:`POS (Point of
+Sale)` cable. Contact Mettler, or a partner, to purchase an authentic cable. Note that **no other**
+cable outside of this Mettler cable works for this configuration. Using a serial-only cable attached
+to a serial-to-:abbr:`USB (Universal Serial Bus)` adapter is **not** effective.
+
+.. image:: printer/cable-mettler.png
+   :align: center
+   :alt: Authentic Mettler USB to POS cable, part number 72256236.
+
+Setup
+~~~~~
+
+Refer to Mettler's Setup Guide for Ariva S series scales during the following configuration: `Ariva
+Checkout Scale User's Guide <https://www.mt.com/dam/RET_DOCS/Ariv.pdf>`_.
+
+To begin, go to page 17 in the above manual for *Setup*. This guide lists potential settings for the
+Ariva S series scales.
+
+Follow the instructions, along with the following process, to set the scale to setup mode. First,
+hold the **>T<** button for eight seconds, or until :guilabel:`CONF` appears.
+
+Next, press **>T<** until :guilabel:`GRP 3` appears, then press **>0<** to confirm.
+
+Under :guilabel:`3.1`, ensure the setting is set to :guilabel:`1` (USB Virtual COM ports). Press
+**>T<** to cycle through the options under group 3.1.
+
+Once :guilabel:`3.1` is set to :guilabel:`1`, press **>0<** to confirm the selection. Continue to
+press **>0<** until :guilabel:`GRP 4` appears.
+
+Now, press **>T<** until :guilabel:`EXIT` appears.
+
+.. important::
+   Do **not** make any other changes unless otherwise needed.
+
+Once :guilabel:`EXIT` appears, press **>0<**. Following this, press **>0<** again to
+:guilabel:`SAVE`. Now the scale restarts.
+
+Finally, restart the :abbr:`IoT (Internet of Things)` box to recognize the changes made on the
+scale's configuration. After restarting, the scale appears as `Toledo 8217`, as opposed to the
+previous display, where it appeared as `Adam Equipment Serial`.
+
