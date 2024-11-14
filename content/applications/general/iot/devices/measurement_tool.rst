@@ -28,7 +28,7 @@ Connect with bluetooth
 Activate the Bluetooth functionality on the device (see the device manual for further explanation),
 and the :abbr:`IoT (Internet of Things)` box automatically connects to the device.
 
-.. image:: measurement_tool/measurement-tool.jpeg
+.. image:: measurement_tool/measurement-tool.png
    :align: center
    :alt: Bluetooth indicator on measurement tool.
 
