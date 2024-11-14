@@ -23,26 +23,26 @@ detect Six terminals.
 .. note::
    This module replaces the **POS Six** module.
 
-Connect an IoT box
-------------------
+Connect an IoT system
+---------------------
 
-Connecting a Six payment terminal to Odoo is requires :doc:`using a Raspberry Pi or virtual (for
-Windows OS only) IoT box </applications/general/iot/config/connect>`.
+Connecting a Six payment terminal to Odoo is requires :doc:`using an IoT system
+</applications/general/iot>`.
 
 Configure the terminal ID
 -------------------------
 
-Navigate to your IoT Box homepage, where you can find the  :guilabel:`Six payment terminal` field
-once your database server is connected to the IoT box. Click :guilabel:`Configure`, fill in the
-:guilabel:`Terminal ID` field with the ID received from Six, and click :guilabel:`Connect`. Your
-Six terminal ID should appear in the :guilabel:`Current Terminal Id` section.
+Navigate to the IoT system's homepage, where you can find the  :guilabel:`Six payment terminal`
+field once your database server is connected to the IoT system. Click :guilabel:`Configure`, fill
+in the :guilabel:`Terminal ID` field with the ID received from Six, and click :guilabel:`Connect`.
+Your Six terminal ID should appear in the :guilabel:`Current Terminal Id` section.
 
 .. image:: six/terminal-id.png
    :alt: Setting the Six terminal ID
 
-Odoo automatically restarts the IoT box when the Six terminal ID is configured. If your Six terminal
-is online, it will be automatically detected and connected to the database. Check the IoT box
-homepage under the :guilabel:`Payments` section to confirm the connection.
+Odoo automatically restarts the IoT system when the Six terminal ID is configured. If your Six
+terminal is online, it will be automatically detected and connected to the database. Check the IoT
+system's homepage under the :guilabel:`Payments` section to confirm the connection.
 
 .. image:: six/id-configured.png
    :alt: Confirming the connection to the Six payment terminal
