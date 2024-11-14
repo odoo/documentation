@@ -256,3 +256,21 @@ Domain Name System (DNS) issue solution
    .. warning::
       Consult with your system or network administrator should this issue arise. This error code
       depends on the network infrastructure, and it goes beyond Odoo support's service scope.
+
+Potential issues
+================
+
+The HTTPS certificate does not generate
+---------------------------------------
+
+In order to generate a :abbr:`HTTPS (Hypertext Transfer Protocol Secure)` certificate, an IoT box
+subscription is required for the :abbr:`IoT (Internet of Things)` box. Connecting the :abbr:`IoT
+(Internet of Things)` box prior to configuring an :abbr:`IoT (Internet of Things)` subscription for
+the database and :abbr:`IoT (Internet of Things)` box with the Account Manager will result in an
+unsecured connection.
+
+In addition, a firewall can also prevent the :abbr:`HTTPS (Hypertext Transfer Protocol Secure)`
+certificate from generating correctly. In this case, deactivate the firewall until the certificate
+is successfully generated. It should also be noted that certain devices, such as a router that has
+a built-in firewall, can prevent the :abbr:`HTTPS (Hypertext Transfer Protocol Secure)` certificate
+from generating.

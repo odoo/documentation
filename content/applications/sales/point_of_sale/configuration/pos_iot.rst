@@ -1,6 +1,11 @@
-=========================
-Use an IoT box with a PoS
-=========================
+==========
+IoT system
+==========
+
+XXX change:
+
+- iot box --> iot system
+- check all references
 
 Prerequisites
 =============
