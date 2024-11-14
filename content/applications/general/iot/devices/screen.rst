@@ -33,7 +33,7 @@ on the model.
       Connect the screen with an HDMI cable on the side of the :abbr:`IoT (Internet of Things)` box.
 
 .. seealso::
-   :ref:`See the Raspberry Pi Schema <iot/connect_schema>`.
+   :ref:`See the Raspberry Pi Schema <pos/pos_iot/connect_schema>`.
 
 .. important::
    Screen(s) should be connected before the :abbr:`IoT (Internet of Things)` box is switched on. If
