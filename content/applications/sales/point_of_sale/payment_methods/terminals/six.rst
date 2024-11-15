@@ -6,11 +6,9 @@ Connecting a SIX payment terminal allows you to offer a fluid payment flow to yo
 ease the work of your cashiers.
 
 .. warning::
-   - Starting in July 2022, it will **not** be possible anymore to connect and use a Six payment
-     terminal in PoS.
-   - Even though Worldline has recently acquired SIX Payment Services and both companies use Yomani
-     payment terminals, the firmware they run is different. Terminals received from Worldline are
-     therefore not compatible with this integration.
+   Even though Worldline has recently acquired SIX Payment Services and both companies use Yomani
+   payment terminals, the firmware they run is different. Terminals received from Worldline are
+   therefore not compatible with this integration.
 
 Configuration
 =============
