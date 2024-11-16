@@ -4,8 +4,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Fernanda Alvarez, 2024
 # Wil Odoo, 2024
+# Fernanda Alvarez, 2024
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-11-04 11:48+0000\n"
 "PO-Revision-Date: 2023-11-08 08:57+0000\n"
-"Last-Translator: Wil Odoo, 2024\n"
+"Last-Translator: Fernanda Alvarez, 2024\n"
 "Language-Team: Spanish (Latin America) (https://app.transifex.com/odoo/teams/41243/es_419/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -643,7 +643,7 @@ msgstr ""
 #: ../../content/applications/general/companies.rst:198
 #: ../../content/applications/general/multi_company.rst:79
 msgid "Inter-company transactions"
-msgstr "Transacciones dentro de la empresa"
+msgstr "Transacciones entre empresas"
 
 #: ../../content/applications/general/companies.rst:200
 msgid ""
@@ -3164,14 +3164,14 @@ msgid ""
 "`{mail.default.from}@{mail.catchall.domain}` key combination in the system "
 "parameters."
 msgstr ""
-"Debe usar una dirección de correo electrónico para enviar correos a todos "
-"los usuarios dentro de la base de datos. Por ejemplo, se puede estructurar "
-"con un alias de `notificaciones` (`notificaciones@ejemplo.com`) o un alias "
-"de `contacto` alias (`contacot@ejemplo.com`). Esta dirección debe estar "
-"establecida como :guilabel:`Filtrado DESDE` en el servidor. También debe "
-"coincidir con la combinación clave "
-"`{mail.default.from}@{mail.catchall.domain}` en los parámetros del sistema."
-"        "
+"Se utilizará una dirección de correo electrónico genérica para enviar "
+"correos de todos los usuarios dentro de la base de datos. Por ejemplo, se "
+"puede estructurar con el seudónimo `notificaciones` "
+"(`notificaciones@ejemplo.com`) o un seudónimo `contacto` "
+"(`contacto@ejemplo.com`). En el servidor debe configurar esta dirección en "
+":guilabel:`Filtrado DESDE`. Además, debe coincidir con la combinación de "
+"claves `{mail.default.from}@{mail.catchall.domain}` en los parámetros del "
+"sistema."
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:206
 #: ../../content/applications/general/email_communication/azure_oauth.rst:248
@@ -3782,6 +3782,9 @@ msgid ""
 "us/articles/360002101888-Adding-custom-DNS-records-to-your-Squarespace-"
 "managed-domain>`_"
 msgstr ""
+"`Registros de DNS de Squarespace "
+"<https://support.squarespace.com/hc/es/articles/360002101888-Agregar-"
+"registros-de-DNS-a-tu-dominio>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:145
 msgid ""
@@ -4605,6 +4608,11 @@ msgid ""
 "the :ref:`developer mode <developer-mode>`. Then, go to "
 ":menuselection:`Settings app --> Technical --> Aliases`."
 msgstr ""
+"Los seudónimos entrantes se configuran en la base de datos de Odoo para "
+"crear registros al recibir correos electrónicos. Para ver los seudónimos "
+"configurados en la base de datos de Odoo, primero active el :ref:`modo de "
+"desarrollador <developer-mode>` y luego vaya a :menuselection:`Ajustes --> "
+"Técnico --> Seudónimos`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:328
 msgid ""
@@ -4614,6 +4622,12 @@ msgid ""
 "create a ticket, lead, opportunity, etc., eliminates false positives where "
 "email addresses with only the prefix alias, not the domain, are present."
 msgstr ""
+"El parámetro `mail.catchall.domain.allowed` del sistema configurado con los "
+"valores de dominio de seudónimo permitidos, separados por comas, filtra de "
+"forma correcta los correos enviados a cada seudónimo. Configurar los "
+"dominios  en los que los seudónimos pueden crear un ticket, lead, "
+"oportunidad y otras cosas elimina los falsos positivos donde solo está "
+"presente el prefijo del seudónimo, pero no el dominio."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:333
 msgid ""
@@ -4636,6 +4650,12 @@ msgid ""
 " `commercial` alias, with a different domain, and therefore, creates a "
 "ticket/lead/opportunity/etc."
 msgstr ""
+"Cuando Odoo recibe correos electrónicos con el prefijo de seudónimo "
+"`comercial` en las direcciones de correo electrónico del remitente, "
+"destinatario o :abbr:`CC (Con copia)` (por ejemplo, "
+"comercial\\@ejemplo.com), la base de datos trata de forma errónea el correo "
+"como si fuera el seudónimo completo `comercial` con un dominio distinto y, "
+"por lo tanto, crea un ticket, lead, oportunidad u otra cosa."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:343
 msgid ""
@@ -4645,6 +4665,11 @@ msgid ""
 ":guilabel:`New`. Then, type in `mail.catchall.domain.allowed` for the "
 ":guilabel:`Key` field."
 msgstr ""
+"Para agregar el parámetro del sistema `mail.catchall.domain.allowed` primero"
+" debe activar el :ref:`modo de desarrollador <developer-mode>`. Después vaya"
+" a :menuselection:`Ajustes --> Técnico --> Parámetros del sistema` y haga "
+"clic en :guilabel:`Nuevo`. Después escriba `mail.catchall.domain.allowed` en"
+" el campo :guilabel:`Clave`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:347
 msgid ""
@@ -4652,14 +4677,17 @@ msgid ""
 "Manually :icon:`fa-cloud-upload` :guilabel:`(Save)`, and the system "
 "parameter takes immediate effect."
 msgstr ""
+"Después, para el campo :guilabel:`Valor`, agregue los dominios separados por"
+" comas. Luego, haga clic en :icon:`fa-cloud-upload` :guilabel:`(Guardar)` y "
+"el parámetro del sistema se activará de inmediato."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst-1
 msgid "mail.catchall.domain.allowed system parameter set."
-msgstr ""
+msgstr "Parámetro mail.catchall.domain.allowed del sistema configurado."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:354
 msgid "Local-part based incoming detection"
-msgstr "Detección de entradas según las partes locales"
+msgstr "Detección entrante basada en la parte local"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:356
 msgid ""
@@ -4669,6 +4697,11 @@ msgid ""
 "Odoo requires the whole email address to match for routing an incoming "
 "email."
 msgstr ""
+"Al crear un nuevo seudónimo hay una opción para habilitar la "
+":guilabel:`detección entrante basada en la parte local`. Si la habilita, "
+"Odoo solo necesitará que la parte local coincida para enrutar un correo "
+"entrante. Si esta función está desactivada, Odoo requiere que la dirección "
+"de correo completa coincida para enrutar un correo entrante."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:3
 msgid "Manage outbound messages"
@@ -10075,6 +10108,9 @@ msgid ""
 "Epson receipt printers and Zebra label printers do not need a driver to "
 "work. Make sure that no driver is selected for those printers."
 msgstr ""
+"Las impresoras de recibos Epson y las impresoras de etiquetas Zebra no "
+"necesitan un controlador para funcionar.  Asegúrese de que no se seleccionó "
+"ningún controlador para esas impresoras."
 
 #: ../../content/applications/general/iot/config/troubleshooting.rst:104
 msgid "Epson configuration special case"
