@@ -10,8 +10,8 @@
 # Tiffany Chang, 2024
 # 江口和志 <sandwhale1010@gmail.com>, 2024
 # Noma Yuki, 2024
-# Junko Augias, 2024
 # Wil Odoo, 2024
+# Junko Augias, 2024
 # 
 #, fuzzy
 msgid ""
@@ -20,7 +20,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-11-05 09:20+0000\n"
 "PO-Revision-Date: 2024-10-08 06:34+0000\n"
-"Last-Translator: Wil Odoo, 2024\n"
+"Last-Translator: Junko Augias, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/odoo/teams/41243/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1508,6 +1508,8 @@ msgid ""
 "<https://myponto.com>`_. If you do not do this, the synchronization will "
 "stop for these accounts."
 msgstr ""
+"**6か月** (180日)ごとに、銀行口座とPonto間の接続を再承認する必要があります。これは、`Pontoウェブサイト "
+"<https://myponto.com>`_ から行う必要があります。これを行わない場合、これらの口座の同期は停止します。"
 
 #: ../../content/applications/finance/accounting/bank/bank_synchronization/ponto.rst:101
 msgid "I have some errors with my beta institution"
@@ -1611,6 +1613,9 @@ msgid ""
 "and select the institution you want to update credentials. Click "
 ":guilabel:`Update Credentials` to start the flow and follow the steps."
 msgstr ""
+"Salt Edgeの認証情報を更新したり、同期設定を変更するには、:ref:`開発者モード <developer-mode>` "
+"を有効化し、:menuselection:`会計 --> 設定 --> オンライン同期` "
+"に移動し、認証情報を更新したい機関を選択します。:guilabel:`認証情報の更新` をクリックしてフローを開始し、手順に従います。"
 
 #: ../../content/applications/finance/accounting/bank/bank_synchronization/saltedge.rst:56
 #: ../../content/applications/finance/accounting/bank/bank_synchronization/saltedge.rst:68
@@ -1627,6 +1632,9 @@ msgid ""
 "accounts. Click :guilabel:`Fetch Accounts` to start the flow and follow the "
 "steps."
 msgstr ""
+"新しいオンライン口座を接続に追加するには、:ref:`開発者モード <developer-mode>` を有効化し、:menuselection:`会計"
+" --> 設定 --> オンライン同期` に移動して、新しい口座を取得する機関を選択します。:guilabel:`口座を取得` "
+"をクリックしてフローを開始し、手順に従います。"
 
 #: ../../content/applications/finance/accounting/bank/bank_synchronization/saltedge.rst:75
 msgid "I have an error when I try to delete my synchronization within Odoo"
@@ -1668,6 +1676,8 @@ msgid ""
 "your Salt Edge dashboard and this synchronization has not been created with "
 "Odoo, delete it and create it from your Odoo database."
 msgstr ""
+"すでに同じ認証情報がSalt "
+"Edgeダッシュボードに存在し、同期がOdooで作成されていない場合は、同期を削除し、Odooデータベースから同期を作成して下さい。"
 
 #: ../../content/applications/finance/accounting/bank/bank_synchronization/saltedge.rst:96
 msgid ""
@@ -1677,6 +1687,9 @@ msgid ""
 ":menuselection:`Accounting --> Configuration --> Online Synchronization`, "
 "and click :guilabel:`Update Credentials` to reactivate the connection."
 msgstr ""
+"すでに同じ認証情報を使用してSalt Edgeダッシュボードに接続しており、この同期がOdooで作成された場合は、 :ref:`開発者モード "
+"<developer-mode>`を有効化し、メニューから :menuselection:`会計 --> 設定 --> オンライン同期` "
+"に進み、:guilabel:`認証情報の更新` をクリックして接続を再有効化します。"
 
 #: ../../content/applications/finance/accounting/bank/foreign_currency.rst:3
 msgid "Manage a bank account in a foreign currency"
@@ -1903,7 +1916,7 @@ msgstr "未実現為替差損益は一旦調整されると報告されます。
 
 #: ../../content/applications/finance/accounting/bank/loans.rst:3
 msgid "Loans management"
-msgstr ""
+msgstr "ローン管理"
 
 #: ../../content/applications/finance/accounting/bank/loans.rst:5
 msgid ""
@@ -1914,10 +1927,11 @@ msgid ""
 " adjustments so that your financial reports are always accurate with minimal"
 " effort."
 msgstr ""
+"Odooのローン管理機能では、会社のすべてのローンのリストを包括的に提供し、将来の満期日を全体的に予測することができます(例：現金予測)。償却スケジュールを設定またはインポートすると、Odooは毎月の利息と元本の調整を自動的に処理し、最小限の作業で常に正確な財務レポートを作成することができます。"
 
 #: ../../content/applications/finance/accounting/bank/loans.rst:11
 msgid "Create a new loan"
-msgstr ""
+msgstr "新規ローンを作成"
 
 #: ../../content/applications/finance/accounting/bank/loans.rst:13
 msgid ""
@@ -1925,10 +1939,12 @@ msgid ""
 "Loans`. When creating a new loan, there are three options for how to create "
 "amortization schedules:"
 msgstr ""
+"新しいローンを作成するには、:menuselection:`会計 --> 会計 --> ローン` "
+"に移動します。新しいローンを作成する際、償却スケジュールを作成する方法として3つのオプションがあります: "
 
 #: ../../content/applications/finance/accounting/bank/loans.rst:16
 msgid "importing it from a supported file;"
-msgstr ""
+msgstr "サポート済ファイルからインポートする"
 
 #: ../../content/applications/finance/accounting/bank/loans.rst:17
 msgid ""
@@ -1936,10 +1952,12 @@ msgid ""
 "Borrowed`, the :guilabel:`Duration`, etc.) using the :guilabel:`Compute` "
 "button;"
 msgstr ""
+"複数の入力値(例えば、:guilabel:`借入額`、:guilabel:`期間` など) から、:guilabel:`計算` "
+"ボタンを使用して計算する、"
 
 #: ../../content/applications/finance/accounting/bank/loans.rst:19
 msgid "manually filling in the lines of the schedule."
-msgstr ""
+msgstr "スケジュール明細を手動で入力する。"
 
 #: ../../content/applications/finance/accounting/bank/loans.rst:21
 msgid ""
@@ -1947,6 +1965,8 @@ msgid ""
 "amortization schedule: the :guilabel:`Date`, the :guilabel:`Principal`, and "
 "the :guilabel:`Interest`."
 msgstr ""
+"いずれの場合も、償却スケジュールの各明細には、:guilabel:`日付`、:guilabel:`元本`、:guilabel:`利息` "
+"の3つの異なるフィールドが必要です。"
 
 #: ../../content/applications/finance/accounting/bank/loans.rst:24
 msgid ""
@@ -1954,10 +1974,12 @@ msgid ""
 ":guilabel:`Duration` fields will be red if the sum of the lines does not "
 "match the total of the amortization schedule lines."
 msgstr ""
+"明細の合計が償却スケジュール明細の合計と一致しない場合、:guilabel:`借入金額`、:guilabel:`利息`、および "
+":guilabel:`期間` のフィールドは赤色表示されます。"
 
 #: ../../content/applications/finance/accounting/bank/loans.rst:28
 msgid "Loan entries mechanism"
-msgstr ""
+msgstr "ローン仕訳のメカニズム"
 
 #: ../../content/applications/finance/accounting/bank/loans.rst:30
 msgid ""
@@ -1968,12 +1990,15 @@ msgid ""
 "upcoming due dates. The entire process is completely automated with a long-"
 "term and short-term principal reclassification mechanism."
 msgstr ""
+"借入金額が銀行口座に入金されたら、長期口座 (:guilabel:`ローン管理設定` タブで定義) に転送します。 "
+"その後、ローンが検証されると、常に全体的な見通しと今後の期日を予測できるように、Odooは必要な仕訳を作成します。 "
+"長期および短期元本の再分類メカニズムによって、このプロセス全体が完全に自動化されます。"
 
 #: ../../content/applications/finance/accounting/bank/loans.rst:36
 msgid ""
 "For each line of the amortization schedule, Odoo creates the following "
 "entries:"
-msgstr ""
+msgstr "償却スケジュール上の各明細について、Odooは以下の仕訳を作成します: "
 
 #: ../../content/applications/finance/accounting/bank/loans.rst:42
 msgid "A payment entry on the same date that"

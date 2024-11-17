@@ -5,9 +5,9 @@
 # 
 # Translators:
 # Tiffany Chang, 2024
+# Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2024
 # Wil Odoo, 2024
 # Fernanda Alvarez, 2024
-# Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-11-05 09:20+0000\n"
 "PO-Revision-Date: 2024-10-08 06:34+0000\n"
-"Last-Translator: Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2024\n"
+"Last-Translator: Fernanda Alvarez, 2024\n"
 "Language-Team: Spanish (Latin America) (https://app.transifex.com/odoo/teams/41243/es_419/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2255,7 +2255,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/loans.rst:3
 msgid "Loans management"
-msgstr ""
+msgstr "Gestión de préstamos"
 
 #: ../../content/applications/finance/accounting/bank/loans.rst:5
 msgid ""
@@ -2266,10 +2266,18 @@ msgid ""
 " adjustments so that your financial reports are always accurate with minimal"
 " effort."
 msgstr ""
+"La gestión de préstamos de Odoo le proporciona una lista completa con todos "
+"los préstamos que ha realizado su empresa con el fin de mantener una visión "
+"holística y pronosticada de las fechas de vencimiento (por ejemplo, "
+"previsión de efectivo). Configure los planes de amortización (o impórtelos) "
+"para que Odoo se encargue de gestionar los intereses mensuales y los ajustes"
+" principales de manera automática para que sus reportes financieros siempre "
+"sean precisos sin necesidad de que usted tenga que poner un gran empeño en "
+"ellos."
 
 #: ../../content/applications/finance/accounting/bank/loans.rst:11
 msgid "Create a new loan"
-msgstr ""
+msgstr "Crear un nuevo préstamo"
 
 #: ../../content/applications/finance/accounting/bank/loans.rst:13
 msgid ""
@@ -2277,10 +2285,13 @@ msgid ""
 "Loans`. When creating a new loan, there are three options for how to create "
 "amortization schedules:"
 msgstr ""
+"Vaya a :menuselection:`Contabilidad --> Contabilidad --> Préstamos` para "
+"crear un nuevo préstamo. Al crearlo, también tendrá tres opciones para crear"
+" las tablas de amortización:"
 
 #: ../../content/applications/finance/accounting/bank/loans.rst:16
 msgid "importing it from a supported file;"
-msgstr ""
+msgstr "Importar un archivo compatible."
 
 #: ../../content/applications/finance/accounting/bank/loans.rst:17
 msgid ""
@@ -2288,10 +2299,13 @@ msgid ""
 "Borrowed`, the :guilabel:`Duration`, etc.) using the :guilabel:`Compute` "
 "button;"
 msgstr ""
+"Calcular la tabla a partir de varios valores de entrada (como la "
+":guilabel:`cantidad prestada`, la :guilabel:`duración`, entre otras cosas) "
+"con el botón :guilabel:`Calcular`."
 
 #: ../../content/applications/finance/accounting/bank/loans.rst:19
 msgid "manually filling in the lines of the schedule."
-msgstr ""
+msgstr "Completar de forma manual las líneas de la tabla."
 
 #: ../../content/applications/finance/accounting/bank/loans.rst:21
 msgid ""
@@ -2299,6 +2313,9 @@ msgid ""
 "amortization schedule: the :guilabel:`Date`, the :guilabel:`Principal`, and "
 "the :guilabel:`Interest`."
 msgstr ""
+"En cada caso, es necesario que complete tres campos diferentes para cada "
+"línea de la tabla de amortización, estos son la :guilabel:`fecha`, el "
+":guilabel:`principal` y el :guilabel:`interés`."
 
 #: ../../content/applications/finance/accounting/bank/loans.rst:24
 msgid ""
@@ -2306,10 +2323,13 @@ msgid ""
 ":guilabel:`Duration` fields will be red if the sum of the lines does not "
 "match the total of the amortization schedule lines."
 msgstr ""
+"Los campos :guilabel:`Cantidad prestada`, :guilabel:`Interés` y "
+":guilabel:`Duración` aparecerán en rojo si la suma de las líneas no coincide"
+" con el total de las líneas de la tabla de amortización."
 
 #: ../../content/applications/finance/accounting/bank/loans.rst:28
 msgid "Loan entries mechanism"
-msgstr ""
+msgstr "Mecanismo de asientos del préstamo"
 
 #: ../../content/applications/finance/accounting/bank/loans.rst:30
 msgid ""
@@ -2320,62 +2340,81 @@ msgid ""
 "upcoming due dates. The entire process is completely automated with a long-"
 "term and short-term principal reclassification mechanism."
 msgstr ""
+"Al acreditar el importe prestado a una cuenta bancaria, este debe ser "
+"transferido a una cuenta a largo plazo (deberá definirla en la pestaña "
+":guilabel:`Ajustes para préstamos`). Luego, al validar el préstamo, Odoo "
+"crea los asientos contables necesarios para que siempre haya una vista "
+"holística y pronosticada de las siguientes fechas de vencimiento. El proceso"
+" completo está automatizado con un mecanismo de reclasificación principal a "
+"largo y corto plazo."
 
 #: ../../content/applications/finance/accounting/bank/loans.rst:36
 msgid ""
 "For each line of the amortization schedule, Odoo creates the following "
 "entries:"
 msgstr ""
+"Odoo crea los siguientes asientos para cada línea de la tabla de "
+"amortización:"
 
 #: ../../content/applications/finance/accounting/bank/loans.rst:42
 msgid "A payment entry on the same date that"
-msgstr ""
+msgstr "Un asiento de pago en la misma fecha que"
 
 #: ../../content/applications/finance/accounting/bank/loans.rst:39
 msgid "debits the principal amount to the long-term account;"
-msgstr ""
+msgstr "carga el importe principal a la cuenta a largo plazo."
 
 #: ../../content/applications/finance/accounting/bank/loans.rst:40
 msgid "debits the interest amount to the expense account;"
-msgstr ""
+msgstr "carga el importe de los intereses a la cuenta de gastos."
 
 #: ../../content/applications/finance/accounting/bank/loans.rst:41
 msgid ""
 "credits the payment amount to the short-term account: this is the amount "
 "that will be withdrawn by the bank."
 msgstr ""
+"abona el monto del pago a la cuenta a corto plazo, este es el monto que "
+"retirará el banco."
 
 #: ../../content/applications/finance/accounting/bank/loans.rst:46
 msgid "A reclassification entry on the same date that"
-msgstr ""
+msgstr "Un asiento de reclasificación en la misma fecha que"
 
 #: ../../content/applications/finance/accounting/bank/loans.rst:45
 msgid ""
 "debits the sum of the principal amounts of the next 12 months to the long-"
 "term account;"
 msgstr ""
+"carga la suma de los importes principales de los siguientes 12 meses a la "
+"cuenta a largo plazo."
 
 #: ../../content/applications/finance/accounting/bank/loans.rst:46
 msgid ""
 "credits the sum of the principal amounts of the next 12 months to the short-"
 "term account."
 msgstr ""
+"acredita la suma del monto de los principales de los siguientes 12 meses a "
+"la cuenta a corto plazo."
 
 #: ../../content/applications/finance/accounting/bank/loans.rst:48
 msgid ""
 "A reversed entry of the reclassification entry on *the next day* that simply"
 " reverses the previous one."
 msgstr ""
+"Un asiento de cancelación del asiento de reclasificación *al día siguiente* "
+"que cancela el anterior."
 
 #: ../../content/applications/finance/accounting/bank/loans.rst:51
 msgid ""
 "With this mechanism, month after month, the short-term account is always up "
 "to date with the current short-term due amounts."
 msgstr ""
+"Con este mecanismo, la cuenta a corto plazo está actualizada todos los meses"
+" con los importes pendientes de pago a corto plazo."
 
 #: ../../content/applications/finance/accounting/bank/loans.rst:55
 msgid "Closing a loan"
-msgstr ""
+msgstr "Cerrar un préstamo"
 
 #: ../../content/applications/finance/accounting/bank/loans.rst:57
 msgid ""
@@ -2385,16 +2424,24 @@ msgid ""
 "asking from which date the loan should be closed. All draft entries after "
 "this date will be deleted too."
 msgstr ""
+"Los préstamos se cierran de forma preterminada al registrar su último "
+"asiento de pago, pero también puede cerrarlos manualmente (por ejemplo, "
+"porque la deuda se liquidó antes) si hace clic en el botón "
+":guilabel:`Cerrar`. Aparecerá un asistente que le preguntará a partir de qué"
+" fecha el préstamo debería estar cerrado. Todos los asientos en borrador "
+"después de esta fecha también serán eliminados."
 
 #: ../../content/applications/finance/accounting/bank/loans.rst:62
 msgid ""
 "A loan can also be cancelled. In that case, all entries will be deleted even"
 " if they were already posted."
 msgstr ""
+"También es posible cancelar un préstamo. En ese caso, todos los asientos "
+"serán eliminados incluso si están registrados."
 
 #: ../../content/applications/finance/accounting/bank/loans.rst:66
 msgid "Loans Analysis Report"
-msgstr ""
+msgstr "Reporte de análisis de préstamos"
 
 #: ../../content/applications/finance/accounting/bank/loans.rst:68
 msgid ""
@@ -2403,6 +2450,10 @@ msgid ""
 " the report shows the principal, interest, and total payment for each year "
 "for the loan duration."
 msgstr ""
+"Desde :menuselection:`Contabilidad --> Reportes --> Análisis de préstamos` "
+"puede acceder al reporte de sus préstamos en curso. Este aparece en una "
+"vista de tabla dinámica y de forma predeterminada aparece el principal, los "
+"intereses y el pago total para cada año para la duración del préstamo."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:3
 #: ../../content/applications/finance/accounting/payments/batch.rst:54
@@ -4741,7 +4792,7 @@ msgstr "Basado en"
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:44
 msgid "Suppose an invoice of $1200 must be deferred over 12 months."
-msgstr ""
+msgstr "Supongamos que debe diferir una factura de $1200 a 12 meses."
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:46
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:46
@@ -4750,6 +4801,9 @@ msgid ""
 "number of days in that month (e.g., $50 for the first month if the "
 ":guilabel:`Start Date` is set to the 15th of the month)."
 msgstr ""
+"La opción :guilabel:`Meses` corresponde a $100 cada mes, prorrateados al "
+"número de días de ese mes (por ejemplo, $50 para el primer mes si la "
+":guilabel:`fecha de inicio` es el día 15 del mes)."
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:50
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:50
@@ -4761,6 +4815,12 @@ msgid ""
 "the need for a 13th month to recognize any remainder as would be the case "
 "when using the :guilabel:`Months` option."
 msgstr ""
+"La opción :guilabel:`Meses completos` considera que cada mes iniciado está "
+"completo (por ejemplo, $100 para el primer mes incluso si la "
+":guilabel:`fecha de inicio` es el día 15 del mes). Esto significa que con la"
+" opción :guilabel:`Meses completos` se acredita un total de $100 en el "
+"primer mes parcial y no es necesario el mes 13 para reconocer cualquier "
+"remanente, como sería el caso al utilizar la opción :guilabel:`Meses`."
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:56
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:56
@@ -4769,6 +4829,8 @@ msgid ""
 "number of days in each month (e.g., ~$102 for January and ~$92 for "
 "February)."
 msgstr ""
+"La opción :guilabel:`Días` considera una cantidad distinta según el número "
+"de días en cada mes (por ejemplo, $102 para enero y $92 para febrero)."
 
 #: ../../content/applications/finance/accounting/customer_invoices/deferred_revenues.rst:62
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:62
@@ -6007,14 +6069,14 @@ msgid ""
 "open your bank journal, then fill out the :guilabel:`Account Number` and "
 ":guilabel:`Bank` under the :guilabel:`Bank Account Number` column."
 msgstr ""
-"Para hacerlo, vaya a :menuselection:`Contabiliad --> Configuración --> "
-"Diarios`, abra su diario de banco, y llene los campos :guilabel:`Número de "
-"cuenta` y el :guilabel:`Banco` que se encuentran en la columna "
-":guilabel:`Número de cuenta bancaria`."
+"Para ello, vaya a :menuselection:`Contabilidad --> Configuración --> "
+"Diarios`, abra su diario bancario y complete los campos :guilabel:`Número de"
+" cuenta` y :guilabel:`Banco` de la columna :guilabel:`Número de cuenta "
+"bancaria`."
 
 #: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst-1
 msgid "Bank account number column in the bank journal"
-msgstr "Columna de número de cuenta bancaria en el diario de banco"
+msgstr "Columna de número de cuenta bancaria en el diario bancario"
 
 #: ../../content/applications/finance/accounting/customer_invoices/epc_qr_code.rst:39
 msgid "Issue invoices with EPC QR codes"
@@ -20942,7 +21004,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:44
 msgid "Suppose a bill of $1200 must be deferred over 12 months."
-msgstr ""
+msgstr "Supongamos que debe diferir una factura de $1200 a 12 meses."
 
 #: ../../content/applications/finance/accounting/vendor_bills/deferred_expenses.rst:65
 msgid ""
@@ -23961,7 +24023,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations.rst:112
 msgid ":doc:`Singapore - Accounting <fiscal_localizations/singapore>`"
-msgstr ":doc:`Singapur - Contabiliad <fiscal_localizations/singapore>`"
+msgstr ":doc:`Singapur - Contabilidad <fiscal_localizations/singapore>`"
 
 #: ../../content/applications/finance/fiscal_localizations.rst:113
 msgid "Slovak - Accounting"
@@ -25461,9 +25523,9 @@ msgid ""
 "valid, it only displays a warning but still allows the vendor bill to be "
 "posted;"
 msgstr ""
-":guilabel:`Disponible:` se realiza la verificación. En caso de que el número"
-" no sea válido, solo muestra una advertencia pero permite registrar la "
-"factura de proveedor."
+":guilabel:`Disponible:` se realiza la verificación. Si el número no es "
+"válido aparecerá una advertencia, pero podrá registrar la factura de "
+"proveedor."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:624
 msgid ""
@@ -30582,7 +30644,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:139
 msgid "On creation, new databases receive 500 free credits."
-msgstr ""
+msgstr "Al crear su base de datos recibe 500 créditos sin costo."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:142
 msgid "Credential configuration"
@@ -32033,7 +32095,7 @@ msgstr ":guilabel:`Alberta (AB)`"
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:142
 msgid ":guilabel:`British Columbia (BC)`"
-msgstr ""
+msgstr ":guilabel:`Columbia Británica (BC)`"
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:143
 msgid ":guilabel:`Manitoba (MB)`"
@@ -32493,18 +32555,19 @@ msgid ""
 "localization, and search the playlist for tutorials to discover practical "
 "workflows while using Odoo in Chile."
 msgstr ""
-"Vea las dos grabaciones webinar a continuación, que son una presentación "
-"general de la localización y busque la lista de videos para ver flujos de "
-"trabajo prácticos usando Odoo en Chile. "
+"Vea los dos webinarios que incluimos en la siguiente lista, incluye una "
+"presentación general de la localización. Busque más videos en la lista de "
+"reproducción para ver algunos flujos de trabajo prácticos si utiliza Odoo en"
+" Chile."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:9
 msgid "`Webinar: intro and demo <https://youtu.be/BHnByZiyYcM>`_."
 msgstr ""
-"`Webinario: introducción y demostración <https://youtu.be/BHnByZiyYcM>`_."
+"`Webinario: Introducción y demostración <https://youtu.be/BHnByZiyYcM>`_."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:10
 msgid "`Webinar: delivery guide <https://youtu.be/X7i4PftnEdU>`_."
-msgstr "`Webinario: guía de envíos <https://youtu.be/X7i4PftnEdU>`_. "
+msgstr "`Webinario: Guía de despacho <https://youtu.be/X7i4PftnEdU>`_. "
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:11
 msgid ""
@@ -32519,7 +32582,7 @@ msgid ""
 "`Chilean localization app tour "
 "<https://www.youtube.com/watch?v=3qYkgbmBYHw>`_"
 msgstr ""
-"`Tour por la aplicación de localización para Chile "
+"`Recorrido por las aplicaciones para la localización chilena "
 "<https://www.youtube.com/watch?v=3qYkgbmBYHw>`_"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:16
@@ -32558,8 +32621,8 @@ msgid ""
 " guidelines."
 msgstr ""
 "Agrega las funciones mínimas de contabilidad que requiere una empresa para "
-"operar en Chile según las normas y regulaciones del Servicio de Impuestos "
-"Internos. "
+"operar en Chile según las normas y leyes del :abbr:`SII (Servicio de "
+"Impuestos Internos)`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:37
 msgid ":guilabel:`Chile - Accounting Reports`"
@@ -32577,7 +32640,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:40
 msgid ":guilabel:`Chile - E-invoicing`"
-msgstr ":guilabel:`Chile - Factura electrónica`"
+msgstr ":guilabel:`Chile - Facturación electrónica`"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:41
 msgid "`l10n_cl_edi`"
@@ -32590,12 +32653,12 @@ msgid ""
 "Internos)` regulations."
 msgstr ""
 "Incluye todos los requisitos técnicos y funcionales para generar y recibir "
-"facturas electrónicas en línea según las normas del Servicio de Impuestos "
-"Internos. "
+"facturas electrónicas en línea según las normas del :abbr:`SII (Servicio de "
+"Impuestos Internos)`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:44
 msgid ":guilabel:`Chile - Electronic Receipt`"
-msgstr ":guilabel:`Chile - Recibos electrónicos`"
+msgstr ":guilabel:`Chile - Boletas electrónicas`"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:45
 msgid "`l10n_cl_boletas`"
@@ -32608,12 +32671,12 @@ msgid ""
 " Internos)` regulations."
 msgstr ""
 "Incluye todos los requisitos técnicos y funcionales para generar y recibir "
-"facturas electrónicas digitalmente según las normas de Servicios de "
-"Impuestos Internos.  "
+"facturas electrónicas digitales según las normas del :abbr:`SII (Servicio de"
+" Impuestos Internos)`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:48
 msgid ":guilabel:`Electronic Exports of Goods for Chile`"
-msgstr ":guilabel:`Exportación electrónica para Chile`"
+msgstr ":guilabel:`Exportación de bienes electrónica para Chile`"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:49
 msgid "`l10n_cl_edi_exports`"
@@ -32626,12 +32689,12 @@ msgid ""
 "Internos)` and customs regulations."
 msgstr ""
 "Incluye todos los requisitos técnicos y funcionales para generar facturas "
-"electrónicas para la exportación de bienes según el Servicio de Impuestos "
-"Internos y las normas aduaneras. "
+"electrónicas para la exportación de bienes según el :abbr:`SII (Servicio de "
+"Impuestos Internos)` y las normas aduaneras."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:52
 msgid ":guilabel:`Chile - E-Invoicing Delivery Guide`"
-msgstr ":guilabel:`Chile - Guía de envío facturación electrónica`"
+msgstr ":guilabel:`Chile - Guía de despacho de facturación electrónica`"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:53
 msgid "`l10n_cl_edi_stock`"
@@ -32643,9 +32706,9 @@ msgid ""
 "guides via web service based on the :abbr:`SII (Servicio de Impuestos "
 "Internos)` regulations."
 msgstr ""
-"Incluye todos los requerimientos técnicos y funcionales para generar guías "
-"de envío a través del servicio web según las normas del Servicio de "
-"Impuestos Internos.  "
+"Incluye todos los requisitos técnicos y funcionales para generar guías de "
+"despacho a través del servicio web según las normas del :abbr:`SII (Servicio"
+" de Impuestos Internos)`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:58
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:70
@@ -32653,16 +32716,16 @@ msgid ""
 "Odoo automatically installs the appropriate package for the company "
 "according to the country selected at the creation of the database."
 msgstr ""
-"Odoo instala automáticamente el paquete adecuado para la empresa de acuerdo "
-"al país seleccionado cuando se creó la base de datos. "
+"De forma automática, Odoo instala el paquete adecuado para la empresa de "
+"acuerdo al país que seleccionó al crear la base de datos."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:60
 msgid ""
 "The *Chile - E-Invoicing Delivery Guide* module depends on the *Inventory* "
 "application."
 msgstr ""
-"El módulo *Chile - Guía de envío facturación electrónica* depende de la "
-"aplicación *Inventario*."
+"El módulo *Chile - Guía de despacho de facturación electrónica* necesita que"
+" tenga la aplicación *Inventario* instalada."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:63
 msgid ""
@@ -32671,9 +32734,9 @@ msgid ""
 "<https://www.sii.cl/factura_electronica/factura_mercado/proceso_certificacion.htm>`_"
 " certification process."
 msgstr ""
-"Todas las funciones están solamente disponibles si la empresa ya completó el"
-" proceso de certificación del `SII Sistema de Facturación de Mercado "
-"<https://www.sii.cl/factura_electronica/factura_mercado/proceso_certificacion.htm>`_."
+"Todas las funciones solo están disponibles si la empresa ya completó el "
+"proceso de certificación del `SII Sistema de Facturación de Mercado "
+"<https://www.sii.cl/factura_electronica/factura_mercado/proceso_certificacion.htm>`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:70
 msgid ""
@@ -32682,7 +32745,7 @@ msgid ""
 msgstr ""
 "Vaya a :menuselection:`Ajustes --> Empresas: Actualizar información` y "
 "asegúrese de que la siguiente información de la empresa esté actualizada y "
-"correctamente escrita: "
+"completa:"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:73
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:82
@@ -32705,13 +32768,13 @@ msgid ""
 ":guilabel:`Tax ID`: enter the identification number for the selected "
 ":ref:`Taxpayer Type <chile/fiscal-info>`."
 msgstr ""
-":guilabel:`NIF`: escriba el número de identificación fiscal para el "
-":ref:`Tipo de contribuyente <chile/fiscal-info>`."
+":guilabel:`NIF`: Escriba el número de identificación fiscal del :ref:`tipo "
+"de contribuyente <chile/fiscal-info>`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:84
 msgid ":guilabel:`Activity Names`: select up to four activity codes."
 msgstr ""
-":guilabel:`Nombres de las actividades`: seleccione hasta cuatro códigos de "
+":guilabel:`Nombres de las actividades`: Seleccione hasta cuatro códigos de "
 "actividad."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:85
@@ -32719,16 +32782,17 @@ msgid ""
 ":guilabel:`Company Activity Description`: enter a short description of the "
 "company's activity."
 msgstr ""
-":guilabel:`Descripción de la actividad de la empresa`: escriba una corta "
-"descripción acerca de la actividad de la empresa. "
+":guilabel:`Descripción de la actividad de la empresa`: Escriba una breve "
+"descripción acerca de la actividad de la empresa."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:90
 msgid ""
 "Next, navigate to :menuselection:`Accounting --> Configuration --> Settings "
 "--> Chilean Localization` and follow the instructions to configure the:"
 msgstr ""
-"Luego, vaya a :menuselection:`Contabilidad --> Configuración --> Ajustes -->"
-" Localización de Chile` y siga las instrucciones de configuración:"
+"Vaya a :menuselection:`Contabilidad --> Configuración --> Ajustes --> "
+"Localización de Chile` y siga las instrucciones para configurar la siguiente"
+" información:"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:93
 msgid ":ref:`Fiscal information <chile/fiscal-info>`"
@@ -32754,12 +32818,13 @@ msgstr "Información fiscal"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:103
 msgid "Configure the following :guilabel:`Tax payer information`:"
-msgstr "Configure los siguientes datos del :guilabel:`Contribuyente`:"
+msgstr ""
+"Configure la siguiente información relacionada al :guilabel:`contribuyente`:"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:105
 msgid ":guilabel:`Taxpayer Type` by selecting the taxpayer type that applies:"
 msgstr ""
-":guilabel:`Tipo de contribuyente` seleccionando el tipo que corresponda:"
+":guilabel:`Tipo de contribuyente`: Seleccione el tipo que corresponda."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:107
 msgid ""
@@ -32767,7 +32832,7 @@ msgid ""
 "customers"
 msgstr ""
 ":guilabel:`IVA afectado (1° categoría)`: para las facturas que cobran "
-"impuestos a sus clientes"
+"impuestos a sus clientes."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:108
 msgid ""
@@ -32775,11 +32840,11 @@ msgid ""
 " receipt (Boleta)"
 msgstr ""
 ":guilabel:`Emisor de boletas (2° categoría)`: para los proveedores que "
-"emiten boletas"
+"emiten boletas."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:109
 msgid ":guilabel:`End consumer`: only issues receipts"
-msgstr ":guilabel:`Cliente final`: solo emite recibos"
+msgstr ":guilabel:`Cliente final`: solo emite recibos."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:110
 msgid ":guilabel:`Foreigner`"
@@ -32790,7 +32855,8 @@ msgid ""
 ":guilabel:`SII Office`: select your company's :abbr:`SII (Servicio de "
 "Impuestos Internos)` regional office"
 msgstr ""
-":guilabel:`Oficina SII`: seleccione la oficina regional SII de su empresa"
+":guilabel:`Oficina SII`: Seleccione la oficina regional del :abbr:`SII "
+"(Servicio de Impuestos Internos)` de su empresa."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:118
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:143
@@ -32799,7 +32865,7 @@ msgstr "Datos de facturación electrónica"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:120
 msgid "Select your :guilabel:`SII Web Services` environment:"
-msgstr "Seleccione su entorno de :guilabel:`Servicios web SII`:"
+msgstr "Seleccione su entorno de :guilabel:`servicios web SII`:"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:122
 msgid ""
@@ -32808,14 +32874,17 @@ msgid ""
 "Internos)`. In this mode, the direct connection flows can be tested, with "
 "the files being sent to the :abbr:`SII (Servicio de Impuestos Internos)`."
 msgstr ""
-":guilabel:`SII - Prueba`: para bases de datos de prueba que utilizan los "
-":abbr:`CAF (Código de Autorización de Folios)` del Servicio de Impuesto "
-"Internos. En este caso, puede probar los flujos de conexión directa, "
-"enviando los archivos al SII. "
+":guilabel:`SII - Prueba`: Este entorno es para las bases de datos de prueba "
+"que utilizan los :abbr:`CAF (Códigos de autorización de folios)` del "
+":abbr:`SII (Servicio de Impuestos Internos)`. Con este modo puede probar los"
+" flujos de conexión directa y enviar los archivos al :abbr:`SII (Servicio de"
+" Impuestos Internos)`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:126
 msgid ":guilabel:`SII - Production`: for production databases."
-msgstr ":guilabel:`SII - Producción`: para las bases de datos de producción."
+msgstr ""
+":guilabel:`SII - Producción`: Este entorno es para las bases de datos de "
+"producción."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:127
 msgid ""
@@ -32825,21 +32894,21 @@ msgid ""
 "will not appear in this mode. Every internal validation can be tested in "
 "demo mode. Avoid selecting this option in a production database."
 msgstr ""
-":guilabel:`SII - Modo demostración`: los archivos se crean y se aceptan "
-"automáticamente en el modo demostración pero **no** se envían al SII. Por "
-"este motivo, no aparecerán errores de rechazo o *Aceptado con objeciones*. "
-"Cada validación interna debe probarse primero en el modo demostración. No le"
-" recomendamos que seleccione esta opción en una base de datos de producción."
-" "
+":guilabel:`SII - Modo DEMO`: Los archivos se crean y se aceptan de forma "
+"automática en el modo demo, pero **no** se envían al :abbr:`SII (Servicio de"
+" Impuestos Internos)` y por ese motivo no aparecerán errores de rechazo ni "
+"de tipo *Aceptado con reparos*. Puede probar todas las validaciones internas"
+" en el modo de demostración. Evite seleccionar esta opción si utiliza una "
+"base de datos de producción."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:132
 msgid "Then, enter the :guilabel:`Legal Electronic Invoicing Data`:"
 msgstr ""
-"Luego, ingrese los :guilabel:`Datos de facturación electrónica legal`:"
+"Después proporcione los :guilabel:`datos de facturación electrónica legal`:"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:134
 msgid ":guilabel:`SII Resolution N°`"
-msgstr ":guilabel:`Resolución N° SII`"
+msgstr ":guilabel:`Resolución SII N°`"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:135
 msgid ":guilabel:`SII Resolution Date`"
@@ -32863,13 +32932,13 @@ msgid ""
 "want to use *Email Box Electronic Invoicing* as the :abbr:`DTE (Documentos "
 "Tributarios Electrónicos)` incoming email server."
 msgstr ""
-"Puede definir una :guilabel:`Bandeja de entrada de correo de  facturación "
-"electrónica` de los  :abbr:`DTE (Documentos Tributarios Electrónicos)` para "
-"recibir los correos de declaración y validación de sus clientes. Activar "
-"está función en :menuselection:`Contabilidad --> Configuración --> Ajustes "
-"--> Localización chilena` es necesario si desea usar la *Bandeja de entrada "
-"de correo de facturación electrónica* como el servidor de correo entrante de"
-" los  :abbr:`DTE (Documentos Tributarios Electrónicos)`. "
+"Puede definir una :guilabel:`bandeja de entrada de correo de facturación "
+"electrónica` de los :abbr:`DTE (Documentos Tributarios Electrónicos)` para "
+"recibir los correos de declaración y validación de sus clientes. Es "
+"necesario que active esta función en :menuselection:`Contabilidad --> "
+"Configuración --> Ajustes --> Localización chilena` si desea usar la "
+"*bandeja de entrada de correo de facturación electrónica* como el servidor "
+"de correo entrante de los :abbr:`DTE (Documentos Tributarios Electrónicos)`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:153
 msgid ""
@@ -32878,26 +32947,25 @@ msgid ""
 "documentation: :doc:`../../general/email_communication`"
 msgstr ""
 "Para recibir sus documentos del SII es necesario que configure su propio "
-"servidor de correo. Puede encontrar más información relacionada con cómo "
-"hacerlo en la siguiente página: :doc:`../../general/email_communication`."
+"servidor de correo. En :doc:`../../general/email_communication` podrá "
+"encontrar más información sobre cómo hacerlo."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:157
 msgid ""
 "Begin by clicking :guilabel:`Configure DTE Incoming Email`, then click "
 ":guilabel:`New` to add a server and fill in the following fields:"
 msgstr ""
-"Comience haciendo clic en  :guilabel:`Configurar correo entrante para los "
-"DTE`, luego haga clic en :guilabel:`Nuevo` para agregar un servidor y "
-"completar los siguientes campos:   "
+"Primero haga clic en :guilabel:`Configurar correo entrante para los DTE` y "
+"después en :guilabel:`Nuevo` para agregar un servidor y completar los "
+"siguientes campos:"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:160
 msgid ":guilabel:`Name`: give the server a name."
-msgstr ":guilabel:`Nombre`: proporciónele un nombre al servidor."
+msgstr ":guilabel:`Nombre`: Proporciónele un nombre al servidor."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:161
 msgid ":guilabel:`Server Type`: select the server type used."
-msgstr ""
-":guilabel:`Tipo de servidor`: seleccione el tipo de servidor que usó.  "
+msgstr ":guilabel:`Tipo de servidor`: Seleccione el tipo de servidor que usó."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:163
 msgid ":guilabel:`IMAP Server`"
@@ -32913,8 +32981,8 @@ msgid ""
 " records. The script can be found in the :guilabel:`Configuration` section "
 "with this option selected."
 msgstr ""
-":guilabel:`Servidor local`: usa un script local para recuperar los correos y"
-" crear nuevos registros. Puede encontrar el script en la sección de "
+":guilabel:`Servidor local`: Usa un script local para recuperar los correos y"
+" crear nuevos registros. Puede encontrar el script en la sección "
 ":guilabel:`Configuración` si selecciona esta opción."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:167
@@ -32923,10 +32991,10 @@ msgid ""
 "to be configured in the general settings. A direct link to the configuration"
 " can be found in the :guilabel:`Login Information` section."
 msgstr ""
-":guilabel:`Autenticación Gmail OAuth`: requiere que configure sus "
-"credenciales API de Gmail en los ajustes generales. Puede encontrar un "
-"enlace directo para las configuración en la sección :guilabel:`Información "
-"de inicio de sesión`."
+":guilabel:`Autenticación OAuth de Gmail`: Es necesario que configure sus "
+"credenciales de la API de Gmail en los ajustes generales. Puede encontrar un"
+" enlace directo a la configuración en la sección :guilabel:`Información de "
+"inicio de sesión`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:171
 msgid ""
@@ -32938,47 +33006,50 @@ msgid ""
 "Impuestos Internos)` site in the section: *ACTUALIZACION DE DATOS DEL "
 "CONTRIBUYENTE*, *Mail Contacto SII* and *Mail Contacto Empresas*."
 msgstr ""
-":guilabel:`Servidor DTE`: active esta opción y al hacerlo, esta cuenta de "
+":guilabel:`Servidor DTE`: Active esta opción y al hacerlo, esta cuenta de "
 "correo se usará para recibir las facturas electrónicas de los proveedores y "
-"toda la comunicación de parte de SII que tenga que ver con las facturas "
-"electrónicas emitidas. En este caso, este correo debe coincidir con los dos "
-"correros declarados en el sitio del SII en la sección: *ACTUALIZACIÓN DE "
-"DATOS DEL CONTRIBUYENTE*, *Correo de contacto SII* y *Correo de contacto de "
-"empresas*. "
+"toda la comunicación de parte del :abbr:`SII (Servicio de Impuestos "
+"Internos)` que esté relacionada con las facturas electrónicas emitidas. En "
+"este caso, este correo debe coincidir con los dos correros declarados en la "
+"sección: *ACTUALIZACIÓN DE DATOS DEL CONTRIBUYENTE*, *Correo de contacto "
+"SII* y *Correo de contacto de empresas* del sitio del :abbr:`SII (Servicio "
+"de Impuestos Internos)`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:178
 msgid "In the :guilabel:`Server & Login` tab (for IMAP and POP servers):"
 msgstr ""
-"En la pesataña :guilabel:`Servidor e inicio de sesión` (para los servidores "
-"IMAP and POP):"
+"En la pestaña :guilabel:`Servidor e inicio de sesión` (para los servidores "
+"IMAP y POP):"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:180
 msgid ":guilabel:`Server Name`: enter the hostname or IP of the server."
 msgstr ""
-":guilabel:`Nombre del servidor`: escriba el nombre del alojamiento o el "
-"servidor IP."
+":guilabel:`Nombre del servidor`: Escriba el nombre del host o la dirección "
+"IP del servidor."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:181
 msgid ":guilabel:`Port`: enter the server port."
-msgstr ":guilabel:`Puerto`: escriba el puerto del servidor."
+msgstr ":guilabel:`Puerto`: Escriba el puerto del servidor."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:182
 msgid ""
 ":guilabel:`SSL/TLS`: enable this option if connections are encrypted using "
 "the SSL/TLS protocol."
 msgstr ""
-":guilabel:`SSL/TLS`: active está opción si las conexiones están encriptadas "
-"usando el protocolo SSL/TLS."
+":guilabel:`SSL/TLS`: Active esta opción si las conexiones están encriptadas "
+"con el protocolo SSL/TLS."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:183
 msgid ":guilabel:`Username`: enter the server login username."
 msgstr ""
-":guilabel:`Nombre de usuario`: escriba el nombre de usuario de inicio de "
+":guilabel:`Nombre de usuario`: Escriba el nombre de usuario de inicio de "
 "sesión del servidor."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:184
 msgid ":guilabel:`Password`: enter the server login password."
-msgstr ":guilabel:`Contraseña`: escriba la contraseña para inicio de sesión."
+msgstr ""
+":guilabel:`Contraseña`: Escriba la contraseña para iniciar sesión en el "
+"servidor."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Incoming email server configuration for Chilean DTE."
@@ -32992,9 +33063,9 @@ msgid ""
 " to vendor bills that are not required to be processed in Odoo from your "
 "inbox."
 msgstr ""
-"Antes de usarlo, le recomendamos que archive o elimine de su bandeja de "
-"entrada todos los correos relacionados con las facturas de proveedor que no "
-"requieren procesamiento en Odoo."
+"Antes de usar el servidor, le recomendamos que archive o elimine todos los "
+"correos electrónicos relacionados con las facturas de proveedores que no "
+"debe procesar en Odoo."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:197
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:266
@@ -33008,23 +33079,24 @@ msgid ""
 "Signature Certificates` under the :guilabel:`Signature Certificates` "
 "section. Then, click :guilabel:`New` to configure the certificate:"
 msgstr ""
-"Requiere un certificado digital en formato `.pfx` para generar la firma de "
-"la factura electrónica. Para agregar una, haga clic en :guilabel:`Configurar"
-" certificados de la firma` en la sección :guilabel:`Certificados de firma`. "
-"Luego, haga clic en :guilabel:`Nuevo` para configurar el certificado:    "
+"Es necesario que cuente con un certificado digital en formato `.pfx` para "
+"generar la firma de la factura electrónica. Para agregar una, haga clic en "
+":guilabel:`Configurar certificados de firma` en la sección "
+":guilabel:`Certificados de firma` y luego haga clic en :guilabel:`Nuevo` "
+"para configurar el certificado:"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:203
 msgid ""
 ":guilabel:`Certificate Key`: click :guilabel:`Upload your file` and select "
 "the `.pfx` file."
 msgstr ""
-":guilabel:`Clave del certificado`: haga clic en :guilabel:`Subir archivo` y "
+":guilabel:`Clave del certificado`: Haga clic en :guilabel:`Subir archivo` y "
 "seleccione el archivo `.pfx`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:204
 msgid ":guilabel:`Certificate Passkey`: enter the file's passphrase."
 msgstr ""
-":guilabel:`Llave maestra del certificado`: escriba la llave maestra del "
+":guilabel:`Llave maestra del certificado`: Escriba la contraseña del "
 "archivo."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:205
@@ -33033,9 +33105,10 @@ msgid ""
 "field might not be automatically populated. In that case, enter the "
 "certificate's legal representative :abbr:`RUT (Rol Único Tributario)`."
 msgstr ""
-":guilabel:`Número de serie`: dependiendo del formato del certificado, puede "
-"que el campo no se complete automáticamente. En ese caso, escribe el "
-":abbr:`RUT (Rol Único Tributario)` del representante legal del certificado. "
+":guilabel:`Número de serie del sujeto`: Es posible que el campo no se "
+"complete de forma automática, esto depende del formato del certificado. En "
+"ese caso, escriba el :abbr:`RUT (Rol Único Tributario)` del representante "
+"legal del certificado."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:208
 msgid ""
@@ -33043,9 +33116,9 @@ msgid ""
 "certificate for a specific user. Leave the field empty to share it with all "
 "billing users."
 msgstr ""
-":guilabel:`Propietario del certificado`: seleccione uno si necesita "
-"restringir el certificado para un usuario en específico. Para compartirlo "
-"con todos los usuarios que facturan, deje el campo vacío."
+":guilabel:`Propietario del certificado`: Seleccione uno si necesita "
+"restringir el certificado a un usuario en específico. Deje el campo vacío "
+"para compartirlo con todos los usuarios que facturan."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Digital certificate configuration."
@@ -33055,7 +33128,7 @@ msgstr "Configuración del certificado digital."
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:550
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:276
 msgid "Multicurrency"
-msgstr "Multidivisa"
+msgstr "Multimoneda"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:218
 msgid ""
@@ -33065,11 +33138,11 @@ msgid ""
 "an :guilabel:`Interval` for when the rate is automatically updated, or to "
 "select another :guilabel:`Service`."
 msgstr ""
-"La divisa oficial la proporciona `el sitio chileno mindicador.cl "
-"<https://mindicador.cl>`_. Vaya a  :menuselection:`Contabilidad --> "
-"Configuración --> Ajustes --> Divisas: Tasa de cambio automática` para "
-"establecer un :guilabel:`Intervalo` para cuando la tasa de cambio se "
-"actualice automáticamente o seleccionar otro :guilabel:`Servicio`.   "
+"La tasa de cambio oficial la proporciona el servicio `mindicador.cl de Chile"
+" <https://mindicador.cl>`_. Vaya a :menuselection:`Contabilidad --> "
+"Configuración --> Ajustes --> Monedas: Tasas de cambio automáticas` para "
+"establecer un :guilabel:`intervalo` de actualización automática de la tasa o"
+" seleccionar otro :guilabel:`servicio`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:226
 #: ../../content/applications/finance/fiscal_localizations/france.rst:306
@@ -33083,10 +33156,10 @@ msgid ""
 ":menuselection:`Contacts` app to do so and fill in the following fields on a"
 " new or existing contact form."
 msgstr ""
-"También es necesario que configure los contactos para enviarle al SII las "
-"facturas electrónicas. Para hacerlo, abra la aplicación "
-":menuselection:`Contactos` y complete los siguientes campos en un formulario"
-" de contacto nuevo o ya existente.   "
+"También es necesario que configure los contactos para enviar las facturas "
+"electrónicas al :abbr:`SII (Servicio de Impuestos Internos)`. Abra la "
+"aplicación :menuselection:`Contactos` y complete los siguientes campos en un"
+" formulario de contacto nuevo o existente."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:234
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:99
@@ -33110,25 +33183,25 @@ msgstr "En la pestaña :guilabel:`Facturación electrónica`:"
 msgid ""
 ":guilabel:`DTE Email`: enter the sender's email address for the partner."
 msgstr ""
-":guilabel:`Correo electrónico de los DTE`: escriba la dirección de correo "
-"del remitente para el contacto. "
+":guilabel:`Correo electrónico de los DTE`: Escriba la dirección de correo "
+"electrónico del remitente para el contacto."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:241
 msgid ""
 ":guilabel:`Delivery Guide Price`: select which price the delivery guide "
 "displays, if any."
 msgstr ""
-":guilabel:`Precio de la guía de envío`: si lo tiene, seleccione cuál precio "
-"se mostrará para la guía de envío."
+":guilabel:`Precio de la guía de despacho`: Seleccione el precio que mostrará"
+" la guía de despacho en caso de que corresponda."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:244
 msgid ""
 "The :guilabel:`DTE Email` is the email used for sending electronic documents"
 " and must be set in the contact that will be part of an electronic document."
 msgstr ""
-"El :guilabel:`Correo de los DTE` es aquel que usará para enviar los "
-"documentos electrónicos y debe configurarse en el contacto que será parte de"
-" un documento electrónico.  "
+"El :guilabel:`correo electrónico de los DTE` es el que se usa para los "
+"enviar documentos electrónicos y es necesario que lo configure en el "
+"contacto que formará parte de un documento electrónico."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Chilean electronic invoice data for partners."
@@ -33139,8 +33212,8 @@ msgid ""
 "Accounting documents are categorized by :abbr:`SII (Servicio de Impuestos "
 "Internos)`-defined document types."
 msgstr ""
-"Los documentos contables están categorizados de acuerdo con los tipos de "
-"documentos que define el SII. "
+"Los documentos contables están categorizados según los tipos de documentos "
+"definidos por el :abbr:`SII (Servicio de Impuestos Internos)`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:257
 msgid ""
@@ -33148,8 +33221,8 @@ msgid ""
 "localization module, and can be managed by navigating to "
 ":menuselection:`Accounting --> Configuration --> Document Types`."
 msgstr ""
-"Los tipos de documentos se crean automáticamente después de la instalación "
-"del modulo de localización y se pueden gestionar en "
+"Los tipos de documentos se crean de forma automática después de instalar el "
+"modulo de localización y puede gestionarlos desde "
 ":menuselection:`Contabilidad --> Configuración --> Tipos de documento`. "
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
@@ -33161,19 +33234,20 @@ msgid ""
 "Several document types are inactive by default but can be activated by "
 "toggling the :guilabel:`Active` option."
 msgstr ""
-"Varios tipos de documentos estarán desactivados de manera predeterminada, "
-"pero los puede activar deslizando la opción :guilabel:`Activar`.  "
+"Hay varios tipos de documentos inactivos de forma predeterminada, pero puede"
+" activarlos con el botón :guilabel:`Activo`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:271
 msgid "The document type on each transaction is determined by:"
-msgstr "El tipo de documento en cada transacción se define por:"
+msgstr "El tipo de documento en cada transacción se determina por:"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:273
 msgid ""
 "The journal related to the invoice, identifying if the journal uses "
 "documents."
 msgstr ""
-"El diario relacionado a la factura identifica si el diario usa documentos."
+"El diario relacionado con la factura, que identifica si el diario utiliza "
+"documentos."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:274
 msgid ""
@@ -33181,14 +33255,14 @@ msgid ""
 "buyer or vendor's fiscal regime)."
 msgstr ""
 "La condición aplicada según el tipo de emisor y destinatario (por ejemplo, "
-"el vendedor o el régimen fiscal del proveedor). "
+"el vendedor o el régimen fiscal del proveedor)."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:280
 msgid ""
 "*Sales journals* in Odoo usually represent a business unit or location."
 msgstr ""
-"Generalmente los *diarios contables* en Odoo representan una unidad de "
-"negocio o ubicación. "
+"Por lo general, los *diarios de ventas* en Odoo representan una unidad de "
+"negocio o una ubicación."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:283
 msgid "Ventas Santiago."
@@ -33203,8 +33277,8 @@ msgid ""
 "For retail stores it is common to have one journal per :abbr:`POS (Point of "
 "Sale)`."
 msgstr ""
-"Para la tiendas al por menor, es común tener un diario por :abbr:`PdV (Punto"
-" de Venta)`."
+"Para las tiendas de venta al por menor es común tener un diario por "
+":abbr:`PdV (Punto de Venta)`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:289
 msgid "Cashier 1."
@@ -33221,10 +33295,10 @@ msgid ""
 "accounting transactions that are not related to vendor bills. This "
 "configuration can easily be set by using the following model."
 msgstr ""
-"Las transacciones de *compra* se pueden manejar con un solo diario, pero a "
-"veces las empresas usan más de uno para administrar algunas transacciones "
-"contables que no están relacionadas con las facturas de proveedor. Puede "
-"configurar esto fácilmente usando el siguiente modelo. "
+"Es posible gestionar las transacciones de *compras* con un solo diario, pero"
+" algunas empresas utilizan más de uno para administrar las transacciones "
+"contables que no están relacionadas con las facturas de proveedores. Puede "
+"configurar esto con facilidad usando el siguiente modelo."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:297
 msgid "Tax payments to the government."
@@ -33245,16 +33319,16 @@ msgid ""
 "fill in the following required information:"
 msgstr ""
 "Para crear un diario de ventas, vaya a :menuselection:`Contabilidad --> "
-"Configuración --> Diarios`. Luego, haga clic en el botón de "
-":guilabel:`Nuevo` y complete la siguiente información:   "
+"Configuración --> Diarios`. Luego, haga clic en el botón :guilabel:`Nuevo` y"
+" complete la siguiente información necesaria:"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:306
 msgid ""
 ":guilabel:`Type`: select :guilabel:`Sale` from the drop-down menu for "
 "customer invoice journals."
 msgstr ""
-":guilabel:`Tipo`: seleccione :guilabel:`Venta` desde el menú desplegable "
-"para los diarios de facturas de los clientes. "
+":guilabel:`Tipo`: Seleccione :guilabel:`Venta` en el menú desplegable para "
+"los diarios de facturas de clientes."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:307
 msgid ""
@@ -33264,11 +33338,11 @@ msgid ""
 "system or if you are using the :abbr:`SII (Servicio de Impuestos Internos)` "
 "portal *Facturación MiPyme*, you can use the option :guilabel:`Manual`."
 msgstr ""
-":guilabel:`Tipo de punto de venta`: seleccione la opción :guilabel:`En "
+":guilabel:`Tipo de punto de venta`: Seleccione la opción :guilabel:`En "
 "línea` si usará el diario de ventas para los documentos electrónicos. De lo "
-"contrario, si el diario se usa para facturas importadas de otro sistema o si"
-" está usando el portal *Facturación MiPyme* del :abbr:`SII (Servicio de "
-"Impuestos Internos)`, puede usar la opción :guilabel:`Manual`."
+"contrario, puede usar la opción :guilabel:`Manual` si usará el diario "
+"facturas importadas de otro sistema o si usa el portal *Facturación MiPyme* "
+"del :abbr:`SII (Servicio de Impuestos Internos)`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:311
 msgid ""
@@ -33277,11 +33351,11 @@ msgid ""
 "can be related to the different sets of document types available in Chile. "
 "By default, all the sales journals created will use documents."
 msgstr ""
-":guilabel:`Usar documentos`: seleccione esta casilla si el diario usará "
-"tipos de documentos. Este diario solo aplica para los diarios de compra y "
-"ventas que pueden estar relacionado a diferentes colecciones de tipos de "
-"documentos disponibles en Chile. De manera predeterminada, todos los diarios"
-" de ventas creados usarán documentos. "
+":guilabel:`Usar documentos`: Seleccione esta casilla si el diario usará "
+"tipos de documentos. Este campo solo aplica a los diarios de compras y "
+"ventas que pueden estar relacionados con los diferentes tipos de documentos "
+"disponibles en Chile. Todos los diarios de ventas creados utilizarán "
+"documentos de forma predeterminada."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:315
 msgid ""
@@ -33290,11 +33364,11 @@ msgid ""
 ":guilabel:`Accounting Information` section. Configuring these fields is "
 "required for one of the debit notes :ref:`use cases <chile/use-cases>`."
 msgstr ""
-"Luego, desde la pestaña :guilabel:`Asientos de diario`, defina una "
-":guilabel:`Cuenta predeterminada de ingresos` y una :guilabel:`Secuencia de "
-"nota de crédito dedicada` en la sección de :guilabel:`Información contable`."
-" Configurar estos campos es necesario para uno de los :ref:`casos de uso "
-"<chile/use-cases>` de las notas de débito.       "
+"Después, en la pestaña :guilabel:`Asientos contables`, defina la "
+":guilabel:`cuenta de ingresos predeterminada` y la :guilabel:`secuencia de "
+"nota de crédito dedicada` en la sección :guilabel:`Información contable`. Es"
+" necesario que configure estos campos para uno de los :ref:`casos de uso "
+"<chile/use-cases>` de las notas de débito."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:322
 msgid "CAF"
@@ -33308,11 +33382,11 @@ msgid ""
 "issuer with the folios/sequences authorized for the electronic invoice "
 "documents."
 msgstr ""
-"Necesita un *código de asignación de folios* (CAF) para cada tipo de "
-"documento que emita de forma electrónica. El :abbr:`CAF (código de "
-"asignación de folios)` es un archivo que emite el :abbr:`SII (servicio de "
-"impuestos internos)` al emisor con el folio o secuencia autorizados para "
-"documentos de facturación electrónica."
+"Es necesario que cuente con un *código de autorización de folios* (CAF) para"
+" cada tipo de documento que emitirá de forma electrónica. El :abbr:`CAF "
+"(Código de autorización de folios)` es un archivo que el :abbr:`SII "
+"(servicio de impuestos internos)` le proporciona al emisor con el folio o "
+"secuencia autorizados para los documentos de factura electrónica."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:329
 msgid ""
@@ -33323,9 +33397,11 @@ msgid ""
 " type, and it will be applied to all journals."
 msgstr ""
 "Su empresa puede solicitar varios folios para obtener varios :abbr:`CAFs "
-"(códigos de asignación de folios)` vinculados a diferentes rangos de folio. "
-"Estos CAFs se comparten en todos los diarios, por lo que solo necesita "
-"activar uno por tipo de documento."
+"(Códigos de autorización de folio)` vinculados a diferentes rangos de "
+"folios. Estos :abbr:`CAF (Códigos de autorización de folio)` se comparten "
+"entre todos los diarios, por lo que solo necesita un :abbr:`CAF (Código de "
+"autorización de folio)` activo por tipo de documento y este se aplicará a "
+"todos los diarios."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:334
 msgid ""
@@ -33335,7 +33411,8 @@ msgid ""
 msgstr ""
 "Consulte la `documentación del SII "
 "<https://palena.sii.cl/dte/mn_timbraje.html>`_ para obtener más información "
-"sobre cómo conseguir los archivos CAF."
+"sobre cómo obtener los archivos :abbr:`CAF (Códigos de autorización de "
+"folios)`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:338
 msgid ""
@@ -33344,9 +33421,11 @@ msgid ""
 "(certification mode). Make sure you have the correct :abbr:`CAF (Folio "
 "Authorization Code)` set depending on your environment."
 msgstr ""
-"El CAF requerido por el SII son diferentes en la etapa de producción y en la"
-" de pruebas (modo de certificación). Asegúrese de tener el CAF correcto en "
-"su entorno."
+"Los :abbr:`CAF (Códigos de autorización de folios)` solicitados por el "
+":abbr:`SII (Servicio de Impuestos Internos)` son diferentes en el entorno de"
+" producción y en el de prueba (modo de certificación). Asegúrese de tener "
+"configurado el :abbr:`CAF (Código de autorización de folios)` correcto en su"
+" entorno."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:343
 msgid "Upload CAF files"
@@ -33362,11 +33441,14 @@ msgid ""
 "upload your :abbr:`CAF (Folio Authorization Code)` file by clicking the "
 ":guilabel:`Upload your file` button and then click :guilabel:`Save`."
 msgstr ""
-"Una vez que los archivos CAF se han adquirido a través del portal SII, los "
-"debe subir a la base de datos en :menuselection:`Contabilidad --> "
-"Configuración: SII chileno --> CAFs`. Después, haga clic en "
-":guilabel:`Nuevo` para empezar a configurar. Una vez en el formulario, suba "
-"su archivo CAF y después haga clic en :guilabel:`guardar`."
+"Una vez que haya obtenido los archivos :abbr:`CAF (Códigos de autorización "
+"de folios)` en el portal del :abbr:`SII (Servicio de Impuestos Internos)`, "
+"deberá subirlos a la base de datos desde :menuselection:`Contabilidad --> "
+"Configuración: SII chileno --> CAFs`. Haga clic en :guilabel:`Nuevo` para "
+"iniciar con la configuración. En el formulario :abbr:`CAF (Código de "
+"autorización de folios)` suba su archivo :abbr:`CAF (Código de Autorización "
+"de Folio)`, solo haga clic en el botón :guilabel:`Suba su archivo` y luego "
+"haga clic en :guilabel:`Guardar`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:352
 msgid ""
@@ -33374,9 +33456,9 @@ msgid ""
 "when a transaction is used for this document type, the invoice number takes "
 "the first folio in the sequence."
 msgstr ""
-"Una vez que se haya subido, el estado cambiará a :guilabel:`en uso`. En este"
-" momento, cuando la transacción se utilice para este tipo de documento, el "
-"número de factura tomará el primer folio en la secuencia."
+"Una vez que lo haya subido, el estado cambiará a :guilabel:`En uso`. En este"
+" momento, si utiliza una transacción para este tipo de documento, el número "
+"de la factura tomará el primer folio de la secuencia."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:356
 msgid ""
@@ -33385,9 +33467,10 @@ msgid ""
 "previous system, the next valid folio has to be set when the first "
 "transaction is created."
 msgstr ""
-"Debe activar los tipos de documento antes de cargar los archivos CAF. En "
-"caso de que se hayan utilizado algunos folios en el sistema anterior, debe "
-"establecer el siguiente folio válido cuando se cree la primera transacción."
+"Los tipos de documentos deben estar habilitados antes de subir los archivos "
+":abbr:`CAF (Códigos de autorización de folios)`. En caso de que el sistema "
+"anterior haya utilizado algunos folios, deberá establecer el siguiente folio"
+" válido al crear la primera transacción."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:363
 msgid ""
@@ -33401,7 +33484,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:367
 msgid "Default Account Payable"
-msgstr "Cuentas por pagar predeterminadas."
+msgstr "Cuentas por pagar predeterminadas"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:368
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:123
@@ -33422,10 +33505,10 @@ msgid ""
 "their related financial account and configuration. These taxes can be "
 "managed from :menuselection:`Accounting --> Configuration --> Taxes`."
 msgstr ""
-"Como parte del módulo de localización se crean los impuestos de forma "
-"automática con su cuenta financiera y configuración. Puede gestionar estos "
-"impuestos desde :menuselection:`Contabilidad --> Configuración --> "
-"Impuestos`."
+"Como parte del módulo de localización, los impuestos se crean de forma "
+"automática con su cuenta financiera relacionada y su configuración. Puede "
+"gestionar estos impuestos desde :menuselection:`Contabilidad --> "
+"Configuración --> Impuestos`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:382
 msgid "Chile has several tax types, the most common ones are:"
@@ -33433,11 +33516,11 @@ msgstr "Chile tiene varios tipos de impuestos, los más comunes son:"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:384
 msgid "**VAT**: the regular VAT can have several rates."
-msgstr "**IVA**: el IVA normal que puede tener varias tasas."
+msgstr "**IVA**: El IVA normal que puede tener varias tasas."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:385
 msgid "**ILA**: the tax for alcoholic drinks."
-msgstr "**ILA**: el impuesto a las bebidas alcohólicas."
+msgstr "**ILA**: El impuesto a las bebidas alcohólicas."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:388
 #: ../../content/applications/finance/fiscal_localizations/egypt.rst:125
@@ -33457,9 +33540,10 @@ msgid ""
 "Internos)`, customers, and vendors."
 msgstr ""
 "En la localización chilena, el flujo de trabajo de la factura electrónica "
-"incluye la emisión de la factura del cliente y la recepción de la factura "
-"del proveedor. El siguiente diagrama explica cómo se comparte la información"
-" con el SII, los clientes y los proveedores."
+"incluye la emisión de facturas a clientes y la recepción de facturas de "
+"proveedores. El siguiente diagrama explica cómo se comparte la información "
+"con el :abbr:`SII (Servicio de Impuestos Internos)`, los clientes y los "
+"proveedores."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Diagram with Electronic invoice transactions."
@@ -33479,9 +33563,10 @@ msgid ""
 msgstr ""
 "Una vez que haya creado y configurado los contactos y diarios, las facturas "
 "se crearán de manera estándar. Para Chile, una de las diferencias es el tipo"
-" de documento que se selecciona automáticamente en función del "
-"contribuyente. Si desea cambiar de forma manual el tipo de documento en la "
-"factura, vaya a :menuselection:`Contabilidad --> Clientes --> Facturas`."
+" de documento que se selecciona de forma automática en función del "
+"contribuyente. Si necesita cambiar el tipo de documento en la factura de "
+"forma manual, vaya a :menuselection:`Contabilidad --> Clientes --> "
+"Facturas`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Customer invoice document type selection."
@@ -33493,9 +33578,9 @@ msgid ""
 " with tax, otherwise the :abbr:`SII (Servicio de Impuestos Internos)` "
 "rejects the document validation."
 msgstr ""
-":guilabel:`Documentos tipo 33`: debe haber al menos un producto con impuesto"
-" en las facturas electrónicas, de lo contrario el SII rechazará la "
-"validación del documento."
+"El :guilabel:`tipo de documento 33`, que es la factura electrónica, debe "
+"tener al menos un artículo con impuesto o el :abbr:`SII (Servicio de "
+"Impuestos Internos)` rechazará la validación del documento."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:423
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:923
@@ -33508,9 +33593,9 @@ msgid ""
 "when generated from a sales order, validate the invoice. After the invoice "
 "is posted:"
 msgstr ""
-"Cuando complete toda la información de la factura, ya sea de forma manual o "
-"automática cuando se crea desde una orden de venta, proceda a validar la "
-"factura. Después del registro de la factura:"
+"Una vez que complete toda la información de la factura, ya sea de forma "
+"manual o automática al generarla desde una orden de venta, valídela. Después"
+" de registrar la factura:"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:428
 msgid ""
@@ -33525,7 +33610,7 @@ msgid ""
 "The :abbr:`DTE (Documentos Tributarios Electrónicos)` :abbr:`SII (Servicio "
 "de Impuestos Internos)` status is set as :guilabel:`Pending` to be sent."
 msgstr ""
-"El estado de los :abbr:`DTE (Documentos Tributarios Electrónicos)` y "
+"El estado de los :abbr:`DTE (Documentos Tributarios Electrónicos)` del "
 ":abbr:`SII (Servicio de Impuestos Internos)` se estableció como "
 ":guilabel:`pendiente` a enviar."
 
@@ -33541,12 +33626,12 @@ msgid ""
 "needed immediately, you can do it manually as well by following the "
 ":abbr:`DTE (Documentos Tributarios Electrónicos)` status workflow:"
 msgstr ""
-"Odoo actualiza automáticamente el estado :abbr:`DTE (Documentos Tributarios "
-"Electrónicos)` con una acción programada que se ejecuta todos los días por "
-"la noche. Si necesita obtener la respuesta del :abbr:`SII (Servicio de "
-"Impuestos Internos)` de inmediato, puede hacerlo de forma manual siguiendo "
-"el flujo de trabajo del estado :abbr:`DTE (Documentos Tributarios "
-"Electrónicos)`:"
+"Odoo actualiza automáticamente el estado de los :abbr:`DTE (Documentos "
+"Tributarios Electrónicos)` con una acción programada que se ejecuta a diario"
+" por las noches. Si necesita obtener la respuesta del :abbr:`SII (Servicio "
+"de Impuestos Internos)` de inmediato, puede hacerlo de forma manual "
+"siguiendo el flujo de trabajo del estado del :abbr:`DTE (Documento "
+"Tributario Electrónico)`:"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Transition of DTE status flow."
@@ -33562,11 +33647,13 @@ msgid ""
 "via email. Then, the :guilabel:`DTE status` is updated to :guilabel:`Ask for"
 " Status`."
 msgstr ""
-"El primer paso es enviar los DTE al SII. Los puede enviar de forma manual "
-"haciendo clic en el botón :guilabel:`enviar ahora`. Esto generará un "
-":guilabel:`número de rastreo del SII` para la factura, que se utiliza para "
-"comprobar los detalles enviados por el SII por correo electrónico. El "
-":guilabel:`estado de la DTE` se actualizará a :guilabel:`solicitar estado`."
+"El primer paso es enviar el :abbr:`DTE (Documento Tributario Electrónico)` "
+"al :abbr:`SII (Servicio de Impuestos Internos)`. Puede hacerlo de forma "
+"manual si hace clic en el botón :guilabel:`Enviar ahora`. Esto generará un "
+":guilabel:`número de seguimiento del SII` para la factura, que se utiliza "
+"para verificar los detalles enviados por el :abbr:`SII (Servicio de "
+"Impuestos Internos)` mediante correo electrónico. Luego, el "
+":guilabel:`estado del DTE` cambia a :guilabel:`Solicitar estado`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:451
 msgid ""
@@ -33576,10 +33663,11 @@ msgid ""
 ":guilabel:`Accepted`, :guilabel:`Accepted With Objection` or "
 ":guilabel:`Rejected`."
 msgstr ""
-"Una vez que se recibe la respuesta del SII, Odoo actualiza el "
-":guilabel:`estado DTE`. Para hacerlo de forma manual haga clic en el botón "
-":guilabel:`Verificar en SII`. El resultado puede ser :guilabel:`aceptado`, "
-":guilabel:`aceptado con objeción` o :guilabel:`rechazado`."
+"Al recibir la respuesta del :abbr:`SII (Servicio de Impuestos Internos)`, "
+"Odoo actualiza el :guilabel:`estado del DTE`. Para hacerlo de forma manual, "
+"haga clic en el botón :guilabel:`Verificar en SII`. El resultado puede ser "
+":guilabel:`Aceptado`, :guilabel:`Aceptado con reparos` o "
+":guilabel:`Rechazado`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:0
 msgid "Identification transaction for invoice and Status update."
@@ -33593,9 +33681,10 @@ msgid ""
 "Internos)` before acceptance or rejection. It's recommended to **NOT** "
 "continuously click :guilabel:`Verify in SII` for smooth processing."
 msgstr ""
-"Existen estados intermedios en el SII antes de la aceptación o rechazo. Se "
-"recomienda **NO** hacer clic continuamente en :guilabel:`Verificar en SII` "
-"para un trámite sin problemas."
+"En el :abbr:`SII (Servicio de Impuestos Internos)` existen estados "
+"intermedios antes de la aceptación o rechazo. Le recomendamos que **NO** "
+"haga clic constantemente en :guilabel:`Verificar en SII` para que el "
+"procesamiento sea fluido."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:0
 msgid "Electronic invoice data statuses."
@@ -33605,7 +33694,9 @@ msgstr "Estados de los datos de las facturas electrónicas."
 msgid ""
 "The final response from the :abbr:`SII (Servicio de Impuestos Internos)` can"
 " take on one of these values:"
-msgstr "La respuesta final del SII puede tener uno de estos valores:"
+msgstr ""
+"La respuesta final del :abbr:`SII (Servicio de Impuestos Internos)` puede "
+"ser una de las siguientes:"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:472
 msgid ""
@@ -33622,9 +33713,9 @@ msgid ""
 "correct, but a minor issue was identified, nevertheless the document is now "
 "fiscally valid and it's automatically sent to the customer."
 msgstr ""
-":guilabel:`Aceptado con objeción`: indica que la información de la factura "
-"es correcta pero se identificó un problema menor, sin embargo, nuestro "
-"documento ahora es fiscalmente válido y se envía automáticamente al cliente."
+":guilabel:`Aceptado con reparos`: indica que la información de la factura es"
+" correcta, pero se identificó un problema menor. Aún así, el documento ahora"
+" es válido fiscalmente y se envía al cliente de forma automática."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:477
 msgid ""
@@ -33634,15 +33725,16 @@ msgid ""
 "in Odoo, the details are also retrieved in the chatter once the email server"
 " is processed."
 msgstr ""
-":guilabel:`Rechazado`: indica que la información en la factura no es "
-"correcta y se debe corregir. Recibirá los detalles del error en los correos "
-"electrónicos que registró en el SII. Si está configurado de forma correcta "
-"en Odoo, los detalles también aparecerán en el chatter una vez que se "
-"procese el servidor de correo electrónico."
+":guilabel:`Rechazado`: indica que la información de la factura es incorrecta"
+" y debe corregirla. Recibirá los detalles del error en los correos "
+"electrónicos que registró en el :abbr:`SII (Servicio de Impuestos "
+"Internos)`. Si está configurado de forma correcta en Odoo, los detalles "
+"también aparecerán en el chatter después de que el servidor de correo los "
+"procese."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:482
 msgid "If the invoice is rejected please follow these steps:"
-msgstr "En caso de que su factura sea rechazada, siga estos pasos:"
+msgstr "Siga estos pasos en caso de que su factura haya sido rechazada:"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:484
 msgid "Change the document to :guilabel:`Draft`."
@@ -33653,16 +33745,16 @@ msgid ""
 "Make the required corrections based on the message received from the "
 ":abbr:`SII (Servicio de Impuestos Internos)` in the chatter."
 msgstr ""
-"Realice las correcciones necesarias en función del mensaje recibido del SII "
-"en el chatter."
+"Realice las correcciones necesarias de acuerdo al mensaje del :abbr:`SII "
+"(Servicio de Impuestos Internos)` que aparece en el chatter."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:487
 msgid "Post the invoice again."
-msgstr "Registre la factura otra vez."
+msgstr "Vuelva a registrar la factura."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:0
 msgid "Message when an invoice is rejected."
-msgstr "Mensaje cuando se rechaza una factura."
+msgstr "Mensaje que aparece si una factura fue rechazada."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:494
 msgid "Crossed references"
@@ -33677,15 +33769,15 @@ msgid ""
 " well. In the case of the credit and debit notes, they are set automatically"
 " by Odoo."
 msgstr ""
-"Cuando la factura se crea como resultado de otro documento fiscal, la "
-"información relacionada con el documento de origen debe registrarse en la "
-"pestaña :guilabel:`referencias cruzadas`, la cual normalmente se utiliza "
-"para notas de crédito o débito, sin embargo también se puede usar en "
-"facturas. Odoo configura las notas de crédito o débito de forma automática."
+"Cuando la factura se crea como resultado de otro documento fiscal, es "
+"necesario que registre la información relacionada con el documento origen en"
+" la pestaña :guilabel:`Referencia cruzada`. Esta pestaña se suele utilizar "
+"para notas de crédito o débito, pero en algunos casos también para facturas."
+" Odoo configura las notas de crédito o débito de forma automática."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Crossed referenced document(s)."
-msgstr "Documentos de referencias cruzadas"
+msgstr "Documentos de referencias cruzadas."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:508
 #: ../../content/applications/finance/fiscal_localizations/india.rst:140
@@ -33699,9 +33791,9 @@ msgid ""
 "Impuestos Internos)` and the PDF is printed, it includes the fiscal elements"
 " that indicate that the document is fiscally valid."
 msgstr ""
-"Se crea una vez que el SII haya aceptado y validado la factura, después de "
-"que se haya impreso el PDF. El reporte incluye los elementos fiscales que "
-"indican que el documento ya es válido."
+"Una vez que el :abbr:`SII (Servicio de Impuestos Internos)` haya aceptado y "
+"validado la factura y haya impreso el PDF, el reporte incluye los elementos "
+"fiscales que indican que el documento es fiscalmente válido."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Fiscal elements and barcode printed in accepted invoices."
@@ -33714,9 +33806,10 @@ msgid ""
 "`pdf417gen <https://pypi.org/project/pdf417gen/>`_ library. Use the "
 "following command to install it: :command:`pip install pdf417gen`."
 msgstr ""
-"Si su alojamiento se encuentra en Odoo.sh o local deberá instalar de forma "
-"manual la biblioteca `pdf417gen <https://pypi.org/project/pdf417gen/>`_. "
-"Para instalarla utilice el comando :command:`pip install pdf417gen`."
+"Si está alojado en Odoo.sh o en una instalación local deberá instalar de "
+"forma manual la biblioteca `pdf417gen "
+"<https://pypi.org/project/pdf417gen/>`_. Use el comando :command:`pip "
+"install pdf417gen` para instalarla."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:523
 msgid "Commercial validation"
@@ -33728,26 +33821,27 @@ msgstr "Una vez que la factura se envió al cliente:"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:527
 msgid ":guilabel:`DTE Partner Status` changes to :guilabel:`Sent`."
-msgstr "El :guilabel:`estado del contacto DTE` cambia a :guilabel:`enviado`."
+msgstr "El :guilabel:`estado del contacto DTE` cambia a :guilabel:`Enviado`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:528
 msgid "The customer must send a reception confirmation email."
 msgstr ""
-"El cliente debe enviar un correo electrónico donde confirme su recepción."
+"El cliente debe enviar un correo electrónico en el que confirme su "
+"recepción."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:529
 msgid ""
 "Subsequently, if commercial terms and invoice data are correct, an "
 "acceptance confirmation is sent; otherwise, a claim is sent."
 msgstr ""
-"Posteriormente, si los términos y datos de la factura son correctos, se "
-"envía una confirmación de aceptación; en caso contrario, se envía una "
-"reclamación."
+"Después, si los términos comerciales y los datos de la factura son "
+"correctos, se envía una confirmación de aceptación. En caso contrario, se "
+"envía una reclamación."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:531
 msgid "The field :guilabel:`DTE Acceptance Status` is updated automatically."
 msgstr ""
-"El campo :guilabel:`estado de aceptación de DTE` se actualiza de forma "
+"El campo :guilabel:`Estado de aceptación del DTE` se actualiza de forma "
 "automática."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
@@ -33766,10 +33860,11 @@ msgid ""
 "cancel the invoice or correct it. Please refer to the :ref:`chile/credit-"
 "notes` section for more details."
 msgstr ""
-"Una vez que el SII haya aceptado la factura **no se puede cancelar en "
-"Odoo**. Si recibe un reclamo de su cliente, la forma correcta de proceder es"
-" crear una nota de crédito para cancelar o corregir la factura. Consulte la "
-"sección :ref:`chile/credit-notes` para obtener más información."
+"Una vez que el :abbr:`SII (Servicio de Impuestos Internos)` haya aceptado la"
+" factura, **no podrá cancelarla en Odoo**. Si recibe un reclamo de su "
+"cliente, la forma correcta de proceder es crear una nota de crédito para "
+"cancelar o corregir la factura. Consulte la sección :ref:`chile/credit-"
+"notes` para obtener más información."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Invoice Commercial status updated to claimed."
@@ -33787,8 +33882,9 @@ msgid ""
 "de Impuestos Internos)`, but these are some of the common errors you might "
 "have and how to solve them:"
 msgstr ""
-"El SII puede rechazar facturas por varios motivos, pero estos son algunos de"
-" los errores más comunes que podrían ocurrir y su solución correspondiente:"
+"El :abbr:`SII (Servicio de Impuestos Internos)` puede rechazar facturas por "
+"varios motivos, pero estos son algunos de los errores más comunes y cómo "
+"solucionarlos:"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:0
 msgid "**Error:** `RECHAZO- DTE Sin Comuna Origen`"
@@ -33799,8 +33895,8 @@ msgid ""
 "**Hint:** make sure the company address is properly filled including the "
 "state and city."
 msgstr ""
-"**Consejo:** asegúrese de que la dirección de la empresa sea correcta y esté"
-" completa, incluyendo el estado y la ciudad."
+"**Consejo:** Asegúrese de que la dirección de la empresa sea correcta y esté"
+" completa, debe incluir el estado y la ciudad."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:0
 msgid "**Error:** `en Monto - IVA debe declararse`"
@@ -33811,7 +33907,7 @@ msgid ""
 "**Hint:** the invoice lines should include one VAT tax, make sure you add "
 "one on each invoice line."
 msgstr ""
-"**Consejo:** las líneas de la factura deben incluir IVA, asegúrese de "
+"**Consejo:** Las líneas de la factura deben incluir el IVA. Asegúrese de "
 "agregar uno en cada línea de la factura."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:0
@@ -33825,9 +33921,11 @@ msgid ""
 "Tributario)` is correct and is valid in the :abbr:`SII (Servicio de "
 "Impuestos Internos)` to invoice electronically."
 msgstr ""
-"**Consejo:** el :abbr:`RUT (Rol Único Tributario)` introducido no está "
-"autorizado para facturar electrónicamente, asegúrese de que el RUT de la "
-"empresa sea correcto y válido en el SII para facturar electrónicamente."
+"**Consejo:** El :abbr:`RUT (Rol Único Tributario)` que proporcionó no está "
+"autorizado para facturar de forma electrónica. Asegúrese de que el "
+":abbr:`RUT (Rol Único Tributario)` de la empresa sea correcto y válido en el"
+" :abbr:`SII (Servicio de Impuestos Internos)` para facturar "
+"electrónicamente."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:0
 msgid ""
@@ -33842,7 +33940,7 @@ msgid ""
 "**Hint:** try to add a new CAF related to this document as the one you're "
 "using is expired."
 msgstr ""
-"**Consejo**: trate de agregar un nuevo CAF relacionado con este documento, "
+"**Consejo**: Trate de agregar un nuevo CAF relacionado con este documento, "
 "ya que el que está utilizando expiró."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:0
@@ -33859,8 +33957,8 @@ msgid ""
 "**Hint:** Make sure the field :guilabel:`Document Type` and :guilabel:`VAT` "
 "are set in the customer and in the main company."
 msgstr ""
-"**Consejo:** asegúrese de que los campos :guilabel:`tipo de documento` e "
-":guilabel:`IVA` estén configurados en el cliente y en la empresa principal."
+"**Consejo:** Asegúrese de que los campos :guilabel:`Tipo de documento` e "
+":guilabel:`IVA` del cliente y de la empresa principal estén configurados."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:0
 msgid "**Error:** `Usuario sin permiso de envio.`"
@@ -33880,17 +33978,17 @@ msgid ""
 "Tributarios Electrónicos)` files to the :abbr:`SII (Servicio de Impuestos "
 "Internos)`."
 msgstr ""
-"**Consejo:** este error indica que lo más probable es que su empresa no haya"
+"**Consejo:** Este error indica que lo más probable es que su empresa no haya"
 " pasado el `proceso de certificación "
 "<https://www.sii.cl/factura_electronica/factura_mercado/proceso_certificacion.htm>`_"
 " del :abbr:`SII (Servicio de Impuestos Internos)` en el Sistema de "
 "Facturación de Mercado. Si este es el caso, contacte a su gerente de cuenta "
-"o al soporte al cliente, tome en cuenta que esta certificación no es parte "
-"de los servicios de Odoo, pero podemos ofrecerle algunas alternativas. Si ya"
-" pasó el proceso de certificación, este error aparece cuando un usuario que "
-"no es el propietario del certificado está intentando enviar archivos "
-":abbr:`DTE (Documentos tributarios electrónicos)` al :abbr:`SII (Servicio de"
-" Impuestos Internos)`."
+"o a soporte al cliente, ya que esta certificación no es parte de los "
+"servicios de Odoo, pero podemos ofrecerle algunas alternativas. Si ya pasó "
+"el proceso de certificación, este error aparece cuando un usuario que no es "
+"el propietario del certificado intenta enviar los archivos :abbr:`DTE "
+"(Documentos tributarios electrónicos)` al :abbr:`SII (Servicio de Impuestos "
+"Internos)`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:0
 msgid "**Error:** `CARATULA`"
@@ -33901,22 +33999,24 @@ msgid ""
 "**Hint:** there are just five reasons why this error could show up and all "
 "of them are related to the *Caratula* section of the XML:"
 msgstr ""
-"**Consejo:** solo hay cinco razones por las que puede aparecer este error y "
-"todas ellas están relacionadas con la sección *Carátula* del XML:"
+"**Consejo:** Solo hay cinco razones por las que puede aparecer este error y "
+"todas están relacionadas con la sección *Carátula* del XML:"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:584
 msgid ""
 "The company's :abbr:`RUT (Rol Único Tributario)` number is incorrect or "
 "missing."
-msgstr "El número RUT de la empresa es incorrecto o hace falta."
+msgstr ""
+"El número de :abbr:`RUT (Rol Único Tributario)` de la empresa es incorrecto "
+"o hace falta."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:585
 msgid ""
 "The certificate owner :abbr:`RUT (Rol Único Tributario)` number is incorrect"
 " or missing."
 msgstr ""
-"El número RUT del propietario de la certificación es incorrecto o hace "
-"falta."
+"El número de :abbr:`RUT (Rol Único Tributario)` del propietario de la "
+"certificación es incorrecto o hace falta."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:586
 msgid ""
@@ -33924,7 +34024,8 @@ msgid ""
 "Tributario)` number (this should be correct by default) is incorrect or "
 "missing."
 msgstr ""
-"El número RUT del SII es incorrecto (debería ser correcto de forma "
+"El número de :abbr:`RUT (Rol Único Tributario)` del :abbr:`SII (Servicio de "
+"Impuestos Internos)` es incorrecto (debería ser correcto de forma "
 "predeterminada) o hace falta."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:588
@@ -33945,12 +34046,14 @@ msgid ""
 "<chile/caf-documentation>` for more information on the process to load the "
 ":abbr:`CAF (Folio Authorization Code)` on each document type."
 msgstr ""
-"Cuando se necesita una anulación o rectificación de una factura validada, se"
-" debe generar una nota de crédito. Es importante tener en cuenta que para la"
-" nota de crédito se requiere un archivo CAF, el cuál se identifica como "
-":guilabel:`tipo de documento` :guilabel:`61` en el SII. Consulte la sección "
-":ref:`CAF <chile/caf-documentation>` para obtener más información sobre el "
-"proceso para subir el CAF en cada tipo de documento."
+"Si es necesario anular o rectificar una factura validada, debe generar una "
+"nota de crédito. Es importante que tome en cuenta que necesita un archivo "
+":abbr:`CAF (Código de autorización de folios)` para la nota de crédito, que "
+"se identifica como el :guilabel:`tipo de documento` :guilabel:`61` en el "
+":abbr:`SII (Servicio de Impuestos Internos)`. Consulte la sección :ref:`CAF "
+"<chile/caf-documentation>` para obtener más información sobre el proceso "
+"para subir el :abbr:`CAF (Código de autorización de folios)` en cada tipo de"
+" documento."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Creation of CAF for Credit notes."
@@ -33963,7 +34066,7 @@ msgstr "Casos de uso"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:611
 msgid "Cancel referenced document"
-msgstr "Cancelar el documento de referencia"
+msgstr "Anular el documento de referencia"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:613
 msgid ""
@@ -33974,12 +34077,12 @@ msgid ""
 " Internos)` reference code is automatically set to :guilabel:`Anula "
 "Documento de referencia`."
 msgstr ""
-"En caso de que necesite cancelar o invalidar una factura, vaya a "
+"En caso de que necesite anular o invalidar una factura, vaya a "
 ":menuselection:`Contabilidad --> Clientes --> Facturas` y seleccione la "
-"factura deseada. Después utilice el botón :guilabel:`Agregar nota de "
-"crédito` y seleccione :guilabel:`reembolso completo`, en este caso el código"
-" de referencia SII se establece automáticamente en :guilabel:`Anular "
-"documento de referencia`."
+"factura correspondiente. Después utilice el botón :guilabel:`Agregar nota de"
+" crédito` y seleccione :guilabel:`Reembolso completo`, en este caso el "
+"código de referencia del :abbr:`SII (Servicio de Impuestos Internos)` se "
+"establece de forma automática en :guilabel:`Anula documento de referencia`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Credit note cancelling the referenced document."
@@ -33998,12 +34101,12 @@ msgid ""
 " Reference Code` field is automatically set to :guilabel:`Corrects "
 "Referenced Document Text`."
 msgstr ""
-"Si se requiere una corrección en la información de la factura, por ejemplo, "
-"el nombre de la calle en la factura original es incorrecto, utilice el botón"
-" :guilabel:`Agregar nota de crédito`, seleccione :guilabel:`reembolso "
-"parcial` y la opción :guilabel:`Corrección de únicamente el texto`. En este "
-"caso, el campo :guilabel:`Código de referencia SII` se establece "
-"automáticamente en :guilabel:`Corregir texto de documento de referencia`."
+"Si necesita corregir la información de la factura, por ejemplo, si el nombre"
+" de la calle en la factura original es incorrecto, use el botón "
+":guilabel:`Agregar nota de crédito`, seleccione :guilabel:`Reembolso "
+"parcial` y luego seleccione la opción :guilabel:`Solo corrección de texto`. "
+"En este caso, el campo :guilabel:`Código de referencia SII` se establece en "
+":guilabel:`Corrige Texto en Documento de Referencia` de forma automática."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Credit note correcting referenced document text."
@@ -34026,9 +34129,8 @@ msgid ""
 "Make sure to define the :guilabel:`Default Credit Account` in the sales "
 "journal specifically for this use case."
 msgstr ""
-"Asegúrese de definir la etiqueta :guilabel:`cuenta de crédito "
-"predeterminada` en el diario de ventas específicamente para este caso de "
-"uso."
+"Asegúrese de definir la :guilabel:`cuenta de crédito predeterminada` en el "
+"diario de ventas para este caso de uso en específico."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:645
 msgid "Corrects referenced document amount"
@@ -34041,10 +34143,10 @@ msgid ""
 ":guilabel:`SII Reference Code` is automatically set to :guilabel:`Corrige el"
 " monto del Documento de Referencia`."
 msgstr ""
-"Cuando necesite corregir los montos, use el botón :guilabel:`agregar nota de"
-" crédito` y seleccione :guilabel:`reembolso parcial`. En este caso, el "
-":guilabel:`código de referencia del SII` se establece de forma automática a "
-":guilabel:`corrige el monto del documento de referencia`."
+"Si necesita corregir los montos, use el botón :guilabel:`Agregar nota de "
+"crédito` y seleccione :guilabel:`Reembolso parcial`. En este caso, el "
+":guilabel:`código de referencia SII` se establece de forma automática a "
+":guilabel:`Corrige el monto del documento de referencia`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid ""
@@ -34066,11 +34168,11 @@ msgid ""
 "cases."
 msgstr ""
 "En la localización chilena puede crear notas de débito y crédito con el "
-"botón :guilabel:`agregar nota de débito` para dos casos de uso principales."
+"botón :guilabel:`Agregar nota de débito` para dos casos de uso principales."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:667
 msgid "Add debt on invoices"
-msgstr "Agrega un cargo adicional a las facturas"
+msgstr "Agregar un cargo adicional a las facturas"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:669
 msgid ""
@@ -34080,7 +34182,7 @@ msgid ""
 msgstr ""
 "El caso de uso principal de las notas de débito es aumentar el valor de una "
 "factura existente. Para ello, seleccione la opción :guilabel:`3. Corrige el "
-"monto del documento de referencia` para el campo :guilabel:`Código de "
+"monto del documento de referencia` en el campo :guilabel:`Código de "
 "referencia SII`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
@@ -34092,8 +34194,8 @@ msgid ""
 "In this case Odoo automatically includes the :guilabel:`Source Invoice` in "
 "the :guilabel:`Cross Reference` tab."
 msgstr ""
-"En este caso Odoo incluye de forma automática la :guilabel:`factura de "
-"origen` en la pestaña :guilabel:`referencia cruzada`"
+"En este caso, Odoo incluye la :guilabel:`factura de origen` de forma "
+"automática en la pestaña :guilabel:`Referencia cruzada`"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Automatic reference to invoice in a debit note."
@@ -34103,11 +34205,11 @@ msgstr "Referencia automática a la factura en una nota de débito."
 msgid ""
 "You can only add debit notes to an invoice already accepted by the SII."
 msgstr ""
-"Solo puede agregar notas de débito en una factura que el SII ya ha aceptado."
+"Solo puede agregar notas de débito a las facturas aceptadas por el SII."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:688
 msgid "Cancel credit notes"
-msgstr "Cancelar notas de crédito"
+msgstr "Anular notas de crédito"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:690
 msgid ""
@@ -34116,15 +34218,15 @@ msgid ""
 "Anula Documentos de referencia` option for the :guilabel:`Reference Code "
 "SII` field."
 msgstr ""
-"En Chile, las notas de débito se utilizan para cancelar una nota de crédito "
-"válida. Si desea hacer esto, haga clic en el botón :guilabel:`Añadir nota de"
-" débito` y seleccione la opción :guilabel:`1: anula documentos de "
-"referencia` para el campo :guilabel:`Código SII de referencia`."
+"En Chile, las notas de débito se utilizan para anular una nota de crédito "
+"válida. Para ello, haga clic en el botón :guilabel:`Agregar nota de débito` "
+"y seleccione la opción :guilabel:`1. Anula documentos de referencia` en el "
+"campo :guilabel:`Código de referencia SII`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Debit note to cancel the referenced document (credit note)."
 msgstr ""
-"Nota de débito cancelando el documento de referencia (nota de crédito)."
+"Nota de débito que anula el documento de referencia (nota de crédito)."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:701
 msgid ""
@@ -34133,20 +34235,21 @@ msgid ""
 "Impuestos Internos)` in order to:"
 msgstr ""
 "Como parte de la localización chilena, puede configurar su servidor de "
-"correo electrónico entrante para que coincida con el que tiene registrado en"
-" el SII para:"
+"correo entrante para que coincida con el que tiene registrado en el "
+":abbr:`SII (Servicio de Impuestos Internos)` para:"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:704
 msgid ""
 "Automatically receive the vendor bills :abbr:`DTE (Documentos Tributarios "
 "Electrónicos)` and create the vendor bill based on this information."
 msgstr ""
-"Recibir los DTE de facturas del proveedor de forma automática y crear la "
-"factura de proveedor según esta información."
+"Recibir las facturas de proveedor :abbr:`DTE (Documentos Tributarios "
+"Electrónicos)` de forma automática y crear la factura de proveedor con esta "
+"información."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:706
 msgid "Automatically send the reception acknowledgement to your vendor."
-msgstr "Envíe de forma automática el acuse de recibo a su proveedor."
+msgstr "Envíar de forma automática el acuse de recibo a su proveedor."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:707
 msgid "Accept or claim the document and send this status to your vendor."
@@ -34161,7 +34264,8 @@ msgid ""
 "As soon as the vendor email with the attached :abbr:`DTE (Documentos "
 "Tributarios Electrónicos)` is received:"
 msgstr ""
-"En cuanto reciba el correo electrónico del proveedor con el DTE adjunto:"
+"En cuanto reciba el correo electrónico del proveedor con el :abbr:`DTE "
+"(Documento Tributario Electrónico)` adjunto:"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:715
 msgid "The vendor bill maps all the information included in the XML."
@@ -34170,15 +34274,13 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:716
 msgid "An email is sent to the vendor with the reception acknowledgement."
-msgstr ""
-"Se le enviará un correo electrónico al proveedor con el acuse de recibo."
+msgstr "El proveedor recibirá un correo electrónico con el acuse de recibo."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:717
 msgid ""
 "The :guilabel:`DTE Status` is set as :guilabel:`Acuse de Recibido Enviado`."
 msgstr ""
-"Se establecerá el :guilabel:`estado del DTE` como :guilabel:`acuse de "
-"recibido enviado`."
+"El :guilabel:`estado del DTE` será :guilabel:`Acuse de recibo enviado`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:720
 msgid "Acceptation"
@@ -34192,9 +34294,9 @@ msgid ""
 ":guilabel:`Accepted` and an email of acceptance is sent to the vendor."
 msgstr ""
 "Si toda la información comercial en su factura de proveedor es correcta, "
-"puede aceptar el documento mediante el botón :guilabel:`aceptar documento`. "
-"Una vez hecho esto, el :guilabel:`estado de aceptación de DTE` cambia a "
-":guilabel:`aceptado` y se envía un correo electrónico de aceptación al "
+"puede aceptar el documento con el botón :guilabel:`Aceptar documento`. Una "
+"vez hecho esto, el :guilabel:`estado de aceptación de DTE` cambia a "
+":guilabel:`Aceptado` y se envía un correo electrónico de aceptación al "
 "proveedor."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
@@ -34213,11 +34315,11 @@ msgid ""
 " Status` changes to :guilabel:`Claim` and a rejection email is sent to the "
 "vendor."
 msgstr ""
-"En caso de que haya un problema comercial o la información no sea correcta "
-"en la factura del proveedor, puede hacer una reclamación en el documento "
-"antes de validarlo, haga clic en el botón :guilabel:`reclamar`. Una vez "
-"hecho esto, la etiqueta :guilabel:`estado de aceptación de la DTE` cambia a "
-":guilabel:`reclamación` y se envía un correo electrónico de rechazo al "
+"En caso de que haya un problema comercial o la información de la factura del"
+" proveedor sea incorrecta, puede hacer clic en el botón :guilabel:`Reclamar`"
+" para hacer una reclamación en el documento antes de validarlo. Una vez "
+"hecho esto, el :guilabel:`estado de aceptación de DTE` cambia a "
+":guilabel:`Reclamación` y se envía un correo electrónico de rechazo al "
 "proveedor."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
@@ -34235,22 +34337,22 @@ msgid ""
 " claimed documents should be cancelled as they won't be valid for your "
 "accounting records."
 msgstr ""
-"Si realiza un reclamo en una factura de proveedor, el estado cambia de "
+"Si reclama una factura de proveedor, el estado cambia de "
 ":guilabel:`Borrador` a :guilabel:`Cancelado` en automático. Es una buena "
-"práctica cancelar todos los documentos con reclamo, pues no son válidos para"
-" sus registros contables."
+"práctica anular todos los documentos con reclamo, pues no son válidos para "
+"sus registros contables."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:748
 msgid "Electronic purchase invoice"
-msgstr "Boletas electrónicas de compra"
+msgstr "Facturas de compra electrónicas"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:750
 msgid ""
 "The *electronic purchase invoice* is a feature included in the `l10n_cl_edi`"
 " module."
 msgstr ""
-"La *factura de compras electrónicas* es una función que se incluye en el "
-"módulo `l10n_cl_edi`."
+"La *factura de compra electrónica* es una función incluída en el módulo "
+"`l10n_cl_edi`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:752
 msgid ""
@@ -34262,12 +34364,14 @@ msgid ""
 "acquire the :abbr:`CAFs (Folio Authorization Code)` for electronic purchase "
 "invoices."
 msgstr ""
-"Una vez que completó toda la configuración para :ref:`facturas electrónicas`"
-" (por ejemplo, subir un certificado de empresa válido, configurar los datos "
-"maestros, etc.), las boletas electrónicas necesitan su propio :abbr:`CAF "
-"(Código de Autorización del Folio)`. Consulte la :ref:`documentación sobre "
-"CAF <chile/caf-documentation>` para saber cómo obtener los :abbr:`CAF "
-"(Código de Autorización del Folio)` para las boletas electrónicas."
+"Una vez que haya completado la configuración de las :ref:`facturas "
+"electrónicas <chile/electronic-invoice>` (por ejemplo, subir un certificado "
+"válido de la empresa, configurar los datos maestros, etc.), las facturas de "
+"compra electrónicas de bienes necesitan sus propios :abbr:`CAF (Códigos de "
+"autorización de folios)`. Consulte la :ref:`documentación sobre CAF "
+"<chile/caf-documentation>` para obtener detalles sobre cómo adquirir los "
+":abbr:`CAF (Códigos de autorización de folio)` para las facturas de compra "
+"electrónicas."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:758
 msgid ""
@@ -34276,10 +34380,10 @@ msgid ""
 "obligations require a document to be sent to the :abbr:`SII (Servicio de "
 "Impuestos Internos)` as proof of purchase."
 msgstr ""
-"Las boletas de compra electrónica son útiles cuando los proveedores no están"
-" obligados a expedir una factura de proveedor electrónica por su compra. "
-"Usted sigue obligado a enviar un documento al :abbr:`SII (Servicio de "
-"Impuestos Internos)` como prueba de compra."
+"Las facturas de compra electrónicas son útiles cuando los proveedores no "
+"están obligados a emitir una factura electrónica por su compra. Sin embargo,"
+" sus obligaciones requieren que envíe un documento al :abbr:`SII (Servicio "
+"de Impuestos Internos)` como comprobante de compra."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:765
 msgid ""
@@ -34288,10 +34392,10 @@ msgid ""
 "It is possible to modify an existing purchase journal or create a new one in"
 " the following process."
 msgstr ""
-"Para generar una boleta electrónica de compra desde una factura de "
-"proveedor, debe crear la boleta en el diario de compra con la función *Usar "
-"documentos* activada. Es posible modificar un diario de compras existente o "
-"crear uno nuevo con el proceso a continuación."
+"Para generar una factura de compra electrónica con una factura de proveedor,"
+" debe crear la factura en un diario de compras que tenga la opción *Usar "
+"documentos* habilitada. Es posible modificar un diario de compras existente "
+"o crear uno nuevo con el siguiente proceso."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:769
 msgid ""
@@ -34300,31 +34404,30 @@ msgid ""
 "Then, click the :guilabel:`New` button, and fill in the following required "
 "information:"
 msgstr ""
-"Para modificar un diario de compras existente, o crear uno nuevo, vaya a "
+"Para modificar un diario de compras existente o crear uno nuevo, vaya a "
 ":menuselection:`Contabilidad --> Configuración --> Diarios`. Luego, haga "
-"clic en el botón de :guilabel:`Nuevo` y complete la siguiente información:"
-"   "
+"clic en el botón :guilabel:`Nuevo` y complete la siguiente información:"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:773
 msgid ""
 ":guilabel:`Type`: select :guilabel:`Purchase` from the drop-down menu for "
 "vendor bill journals."
 msgstr ""
-":guilabel:`Tipo`: seleccione :guilabel:`Compra` desde el menú desplegable "
-"para los diarios de facturas de proveedores. "
+":guilabel:`Tipo`: Seleccione :guilabel:`Compra` en el menú desplegable para "
+"los diarios de facturas de proveedores."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:774
 msgid ""
 ":guilabel:`Use Documents`: check this field so the journal can generate "
 "electronic documents (in this case the electronic purchase invoice)."
 msgstr ""
-":guilabel:`Usar documentos`: marque esta casilla para que el diario pueda "
-"generar documentos electrónicos (en este caso, una boleta electrónica de "
-"compra)."
+":guilabel:`Usar documentos`: Seleccione esta casilla para que el diario "
+"pueda generar documentos electrónicos (en este caso, una factura de compra "
+"electrónica)."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:778
 msgid "Generate an electronic purchase invoice"
-msgstr "Generar una boleta electrónica de compra"
+msgstr "Generar una factura de compra electrónica"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:780
 msgid ""
@@ -34342,21 +34445,21 @@ msgid ""
 "the option :guilabel:`(46) Electronic Purchase Invoice` in the "
 ":guilabel:`Document Type` field:"
 msgstr ""
-"Cuando haya llenado toda la información de compra de la factura, seleccione "
-"la opción :guilabel:`(46) Boleta electrónica de compra` en el campo "
-":guilabel:`Tipo de documento`:"
+"Cuando haya completado toda la información de la factura de compra "
+"electrónica, seleccione la opción :guilabel:`(46) Factura de compra "
+"electrónica` en el campo :guilabel:`Tipo de documento`:"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:786
 msgid "After the vendor bill is posted:"
-msgstr "Después de que se haya publicado la boleta:"
+msgstr "Después de registrar la factura:"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:788
 msgid ""
 "The :abbr:`DTE (Documentos Tributarios Electrónicos)` file (Electronic Tax "
 "Document) is automatically created and added to the chatter."
 msgstr ""
-"El archivo :abbr:`DTE (Documentos Tributarios Electrónicos)` se crea en "
-"automático y se agrega al chatter."
+"El archivo :abbr:`DTE (Documentos Tributarios Electrónicos)` (documento "
+"tributario electrónico) se crea de forma automática y se agrega al chatter."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:790
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:864
@@ -34364,8 +34467,8 @@ msgstr ""
 msgid ""
 "The :guilabel:`DTE SII Status` is set as :guilabel:`Pending to be sent`."
 msgstr ""
-"El :guilabel:`estado del DTE de SII` se establece como: :guilabel:`envío "
-"pendiente`."
+"El :guilabel:`estado del DTE de SII` se establece como :guilabel:`pendiente "
+"de envío`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:792
 msgid ""
@@ -34373,15 +34476,15 @@ msgid ""
 "action. To get a response from the :abbr:`SII (Servicio de Impuestos "
 "Internos)` immediately, click the :guilabel:`Send now to SII` button."
 msgstr ""
-"Odoo actualiza de forma automática el *estado del DTE* mediante una acción "
-"programada que se ejecuta cada noche. Si necesita que el :abbr:`SII "
-"(Servicio de Impuestos Internos)` le responda de forma inmediata, haga clic "
-"en el botón :guilabel:`enviar ahora al SII`."
+"Odoo actualiza de forma automática el *estado del DTE* todas las noches "
+"mediante una acción programada. Si necesita que el :abbr:`SII (Servicio de "
+"Impuestos Internos)` le responda de forma inmediata, haga clic en el botón "
+":guilabel:`Enviar ahora al SII`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:797
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:725
 msgid "Delivery guide"
-msgstr "Guía de entrega"
+msgstr "Guía de despacho"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:799
 msgid ""
@@ -34390,10 +34493,10 @@ msgid ""
 ":guilabel:`Install` on the module :guilabel:`Chile - E-Invoicing Delivery "
 "Guide`."
 msgstr ""
-"Para instalar el módulo :guilabel:`guía de entrega`, vaya a "
-":menuselection:`Aplicaciones` y busque :guilabel:`Chile (l10n_cl)`. Luego, "
-"haga clic en :guilabel:`instalar` en el módulo :guilabel:`Chile - Guía de "
-"entrega de factura electrónica`."
+"Para instalar el módulo de :guilabel:`guía de despacho`, vaya a "
+":menuselection:`Aplicaciones` y busque :guilabel:`Chile (l10n_cl)`. Después "
+"haga clic en :guilabel:`Instalar` en el módulo :guilabel:`Chile - Guía de "
+"despacho de facturación electrónica`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:804
 msgid ""
@@ -34402,10 +34505,10 @@ msgid ""
 "dependency automatically when the :guilabel:`Delivery Guide` module is "
 "installed."
 msgstr ""
-"El módulo :guilabel:`Chile - Guía de entrega de factura electrónica` depende"
-" del módulo :guilabel:`Chile - Facturación electrónica`. Odoo instalará la "
-"dependencia de forma automática cuando instale el módulo :guilabel:`guía de "
-"entrega`."
+"El módulo :guilabel:`Chile - Guía de despacho de facturación electrónica` "
+"necesita el módulo :guilabel:`Chile - Facturación electrónica`. Odoo "
+"instalará la dependencia de forma automática cuando instale el módulo "
+":guilabel:`Guía de despacho`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:808
 msgid ""
@@ -34413,8 +34516,9 @@ msgid ""
 "(Documentos Tributarios Electrónicos)` to :abbr:`SII (Servicio de Impuestos "
 "Internos)` and the stamp in PDF reports for deliveries."
 msgstr ""
-"El módulo *Guía de entrega* permite enviar los DTE al SII y el sello en los "
-"reportes PDF de las entregas."
+"El módulo *Guía de despacho* le permite enviar los :abbr:`DTE (Documentos "
+"Tributarios Electrónicos)` al :abbr:`SII (Servicio de Impuestos Internos)` y"
+" el timbraje en los reportes PDF de las entregas."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:812
 msgid ""
@@ -34425,26 +34529,28 @@ msgid ""
 "<chile/caf-documentation>` to check the details on how to acquire the "
 ":abbr:`CAF (Folio Authorization Code)` for electronic Delivery Guides."
 msgstr ""
-"Una vez que completó toda la configuración para las :ref:`facturas "
-"electrónicas` (por ejemplo, subir un certificado de empresa válido, "
-"configurar los datos maestros, etc.), las guías de entrega necesitan sus "
-"propios CAF. Consulte la :ref:`documentación sobre el CAF <chile/caf-"
-"documentation>` para saber cómo obtener los CAF para las guías de entrega."
+"Una vez que haya completado la configuración de las :ref:`facturas "
+"electrónicas <chile/electronic-invoice>` (por ejemplo, subir un certificado "
+"válido de la empresa, configurar los datos maestros, etc.), las guías de "
+"despacho necesitan sus propios :abbr:`CAF (Códigos de autorización de "
+"folios)`. Consulte la :ref:`documentación sobre CAF <chile/caf-"
+"documentation>` para obtener detalles sobre cómo adquirir los :abbr:`CAF "
+"(Códigos de autorización de folio)` para las guías."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:818
 msgid ""
 "Verify the following important information in the :guilabel:`Price for the "
 "Delivery Guide` configuration:"
 msgstr ""
-"Verifique la siguiente información importante en la configuración de "
-":guilabel:`precio de la guía de entrega`:"
+"Verifique la siguiente información importante en la configuración del "
+":guilabel:`precio de la guía de despacho`:"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:821
 msgid ""
 ":guilabel:`From Sales Order`: delivery guide takes the product price from "
 "the sales order and shows it on the document."
 msgstr ""
-":guilabel:`De la orden de venta`: la guía de entrega toma el precio del "
+":guilabel:`De la orden de venta`: La guía de despacho toma el precio del "
 "producto de la orden de venta y lo muestra en el documento."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:823
@@ -34458,8 +34564,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:825
 msgid ":guilabel:`No show price`: no price is shown in the delivery guide."
 msgstr ""
-":guilabel:`No mostrar precio`: no se muestra ningún precio en la guía de "
-"entrega."
+":guilabel:`No mostrar precio`: El precio no aparece en la guía de despacho."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:827
 msgid ""
@@ -34467,21 +34572,21 @@ msgid ""
 "and they can represent sales, sampling, consignment, internal transfers, and"
 " basically any product move."
 msgstr ""
-"Las guías de entrega electrónicas se utilizan para mover existencias de un "
+"Las guías de despacho electrónicas se utilizan para mover inventario de un "
 "lugar a otro y pueden representar ventas, muestras, consignas, traslados "
-"internos y prácticamente cualquier movimiento de producto."
+"internos y, básicamente, cualquier movimiento de productos."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:831
 msgid "Delivery guide from a sales process"
-msgstr "Guía de entrega a partir de un proceso de venta"
+msgstr "Guía de despacho a partir de un proceso de venta"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:834
 msgid ""
 "A delivery guide should **not** be longer than one page or contain more than"
 " 60 product lines."
 msgstr ""
-"Una guía de envío **no** debe tener más de una página o más de 60 líneas de "
-"productos."
+"Una guía de despacho **no** debe tener más de una página ni más de 60 líneas"
+" de productos."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:836
 msgid ""
@@ -34489,21 +34594,21 @@ msgid ""
 "After validating the delivery order, the option to create a delivery guide "
 "is activated."
 msgstr ""
-"Al crear y confirmar una orden de venta, se genera una orden de entrega. "
-"Después de validar la orden de entrega, se activa la opción para crear una "
-"guía de entrega."
+"La orden de entrega se genera luego de crear y confirmar una orden de venta."
+" Después de validar la orden de entrega, se activa la opción para crear una "
+"guía de despacho."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Create Delivery Guide button on a sales process."
-msgstr "Botón de creación de guía de entrega en un proceso de venta"
+msgstr "Botón para crear una guía de despacho en un proceso de venta."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:844
 msgid ""
 "When clicking on :guilabel:`Create Delivery Guide` for the first time, a "
 "warning message pops up, stating the following:"
 msgstr ""
-"La primera vez que hace clic en :guilabel:`crear guía de entrega` aparece un"
-" mensaje de advertencia con el siguiente texto:"
+"La primera vez que hace clic en :guilabel:`Crear guía de despacho` aparece "
+"un mensaje de advertencia con el siguiente texto:"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:847
 msgid ""
@@ -34513,11 +34618,11 @@ msgid ""
 msgstr ""
 "`No se encontró una secuencia para la guía de despacho. Por favor, "
 "establezca el primer número dentro del campo número para la guía de "
-"despacho`"
+"despacho.`"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:0
 msgid "First Delivery Guide number warning message."
-msgstr "Mensaje de advertencia de la primera entrega."
+msgstr "Mensaje de advertencia de la primera guía de despacho."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:854
 msgid ""
@@ -34528,30 +34633,31 @@ msgid ""
 "correctly generated, Odoo takes the next available number in the :abbr:`CAF "
 "(Folio Authorization Code)` file to generate the following delivery guide."
 msgstr ""
-"Este mensaje de advertencia significa que el usuario debe indicar el "
-"siguiente número en la secuencia que Odoo debe utilizar para generar la guía"
-" de entrega (por ejemplo, el siguiente número :abbr:`CAF (Código de "
-"autorización de folio)`). Esto solo sucede la primera vez que crea una guía "
-"de entrega en Odoo. Después de que el primer documento se genera de forma "
-"correcta, Odoo utiliza el siguiente número de :abbr:`CAF (Código de "
-"autorización de folio) disponible para generar la siguiente guía de entrega,"
-" y así sucesivamente."
+"Este mensaje de advertencia señala que el usuario debe indicar el siguiente "
+"número de secuencia que Odoo debe utilizar para generar la guía de despacho "
+"(por ejemplo, el siguiente número disponible del :abbr:`CAF (Códigos de "
+"autorización de folio)`) y solo ocurre la primera vez que se crea una guía "
+"de despacho en Odoo. Después de generar el primer documento de forma "
+"correcta, Odoo utiliza el siguiente número disponible en el archivo "
+":abbr:`CAF (Códigos de autorización de folio)` para generar la siguiente "
+"guía de despacho."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:860
 msgid "After the delivery guide is created:"
-msgstr "Después de crear la guía de envío:"
+msgstr "Después de crear la guía de despacho:"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:862
 msgid ""
 "The :abbr:`DTE (Documentos Tributarios Electrónicos)` file (Electronic Tax "
 "Document) is automatically created and added to the :guilabel:`chatter`."
 msgstr ""
-"El archivo :abbr:`DTE (Documentos Tributarios Electrónicos)` se crea de "
-"forma automática y se agrega al chatter."
+"El archivo :abbr:`DTE (Documentos Tributarios Electrónicos)` (documento "
+"tributario electrónico) se crea de forma automática y se agrega al "
+":guilabel:`chatter`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Chatter notes of Delivery Guide creation."
-msgstr "Notas que se agregan al chatter al crear una guía de envío."
+msgstr "Notas del chatter al crear una guía de despacho."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:870
 msgid ""
@@ -34560,22 +34666,22 @@ msgid ""
 "(Servicio de Impuestos Internos)` immediately, press the :guilabel:`Send now"
 " to SII` button."
 msgstr ""
-"Odoo actualiza de forma automática el :guilabel:`estado del DTE` mediante "
-"una acción programada que se ejecuta cada noche. Si necesita que el "
-":abbr:`SII (Servicio de Impuestos Internos)` le responda de forma inmediata,"
-" haga clic en el botón :guilabel:`enviar ahora al SII`."
+"Odoo actualiza de forma automática el :guilabel:`estado del DTE` todas las "
+"noches mediante una acción programada. Si necesita que el :abbr:`SII "
+"(Servicio de Impuestos Internos)` le responda de forma inmediata, haga clic "
+"en el botón :guilabel:`Enviar ahora al SII`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:874
 msgid ""
 "Once the delivery guide is sent, it may then be printed by clicking on the "
 ":guilabel:`Print Delivery Guide` button."
 msgstr ""
-"Una vez que se mande la guía de envío, puede hacer clic en el botón "
-":guilabel:`Imprimir guía de envío` para imprimirla."
+"Luego de enviar la guía de despacho puede hacer clic en el botón "
+":guilabel:`Imprimir guía de despacho` para imprimirla."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Printing Delivery Guide PDF."
-msgstr "Impresión del PDF de la guía de envío."
+msgstr "Impresión del PDF de la guía de despacho."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:881
 msgid ""
@@ -34584,11 +34690,11 @@ msgid ""
 "remember to manually add the :guilabel:`pdf417gen` library mentioned in the "
 ":ref:`Invoice PDF report section <chile/electronic-invoice-pdf-report>`)."
 msgstr ""
-"La guía de envío tendrá elementos fiscales que indicarán que el documento "
-"tiene validez fiscal al imprimirlo. Si su alojamiento es *Odoo SH* o "
-"*local*, recuerde agregar de manera manual la biblioteca "
-":guilabel:`pdf417gen`, mencionada en :ref:`la sección de reportes PDF de "
-"facturas <chile/electronic-invoice-pdf-report>`."
+"La guía de despacho tendrá elementos fiscales que indican que el documento "
+"tiene validez fiscal al imprimirlo (si está alojado en *Odoo.sh* o *local*, "
+"recuerde agregar de forma manual la biblioteca :guilabel:`pdf417gen` "
+"mencionada en la sección :ref:`Reporte PDF de la factura <chile/electronic-"
+"invoice-pdf-report>`)."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:887
 msgid "Electronic receipt"
@@ -34600,9 +34706,10 @@ msgid ""
 ":menuselection:`Apps` and search for `Chile (l10n_cl)`. Then click "
 ":guilabel:`Install` on the module :guilabel:`Chile - Electronic Receipt`."
 msgstr ""
-"Para instalar el módulo de :guilabel:`Boleta electrónica` vaya a "
+"Para instalar el módulo de :guilabel:`boletas electrónicas` vaya a "
 ":menuselection:`Aplicaciones` y busque `Chile (l10n_cl)`. Después haga clic "
-"en :guilabel:`Instalar` en el módulo :guilabel:`Chile - Boleta electrónica`."
+"en :guilabel:`Instalar` en el módulo :guilabel:`Chile - Boletas "
+"electrónicas`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:894
 msgid ""
@@ -34611,9 +34718,9 @@ msgid ""
 "dependency automatically when the :guilabel:`E-invoicing Delivery Guide` "
 "module is installed."
 msgstr ""
-"El módulo :guilabel:`Chile - Boleta electrónica` necesita el módulo "
+"El módulo :guilabel:`Chile - Boletas electrónicas` necesita el módulo "
 ":guilabel:`Chile - Facturación electrónica`. Odoo instalará la dependencia "
-"de forma automática cuando instale el módulo :guilabel:`Guía de entrega de "
+"de forma automática cuando instale el módulo :guilabel:`Guía de despacho de "
 "factura electrónica`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:898
@@ -34625,12 +34732,13 @@ msgid ""
 "documentation <chile/caf-documentation>` to check the details on how to "
 "acquire the :abbr:`CAFs (Folio Authorization Code)` for electronic receipts."
 msgstr ""
-"Una vez que completó toda la configuración para :ref:`facturas electrónicas`"
-" (por ejemplo, subir un certificado de empresa válido, configurar los datos "
-"maestros, etc.), las boletas electrónicas necesitan sus propios :abbr:`CAF "
-"(Código de Autorización del Folio)`. Consulte la :ref:`documentación sobre "
-"CAF <chile/caf-documentation>` para saber cómo obtener los :abbr:`CAF "
-"(Código de Autorización del Folio)` para las boletas electrónicas."
+"Una vez que haya completado la configuración de las :ref:`facturas "
+"electrónicas <chile/electronic-invoice>` (por ejemplo, subir un certificado "
+"válido de la empresa, configurar los datos maestros, etc.), las boletas "
+"electrónicas necesitan sus propios :abbr:`CAF (Códigos de autorización de "
+"folios)`. Consulte la :ref:`documentación sobre CAF <chile/caf-"
+"documentation>` para obtener detalles sobre cómo adquirir los :abbr:`CAF "
+"(Códigos de autorización de folio)` para las boletas."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:904
 msgid ""
@@ -34643,14 +34751,14 @@ msgid ""
 msgstr ""
 "Las boletas electrónicas son útiles cuando los clientes no necesitan una "
 "factura electrónica. De forma predeterminada, en la base de datos hay un "
-"contacto denominado :guilabel:`consumidor final anónimo` con el :abbr:`RUT "
+"contacto denominado :guilabel:`Consumidor final anónimo` con el :abbr:`RUT "
 "(Rol Único Tributario)` genérico `66666666-6` y cuyo tipo de contribuyente "
-"es :guilabel:`Consumidor final`. Puede utilizar este contacto para boletas "
-"electrónicas o puede crear un nuevo registro con el mismo propósito."
+"es :guilabel:`Consumidor final`. Puede utilizar este contacto para emitir "
+"boletas electrónicas o puede crear un nuevo registro con el mismo propósito."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Electronic Receipt module."
-msgstr "Módulo de boleta electrónica."
+msgstr "Módulo de boletas electrónicas."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:913
 msgid ""
@@ -34661,16 +34769,17 @@ msgid ""
 "but the type of document :guilabel:`(39) Electronic Receipt` should be "
 "selected in the invoice form:"
 msgstr ""
-"Aunque las boletas electrónicas se deberían utilizar con consumidores "
-"finales con :abbr:`RUT (Rol Único Tributario)` genéricos, también se pueden "
-"utilizar con contactos específicos. Después de crear los contactos y "
-"diarios, se crean las boletas electrónicas de forma estándar como facturas "
-"electrónicas, pero como tipo de documento debe seleccionar :guilabel:`(39) "
-"Boleta electrónica` en el formulario de factura:"
+"Aunque las boletas electrónicas se deben utilizar con consumidores finales "
+"con un :abbr:`RUT (Rol Único Tributario)` genérico, también puede "
+"utilizarlas con contactos específicos. Después de crear y configurar los "
+"contactos y diarios, las boletas electrónicas se crean de forma estándar al "
+"igual que las facturas electrónicas, pero como tipo de documento debe "
+"seleccionar :guilabel:`(39) Boleta electrónica` en el formulario de la "
+"factura:"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Document type 39 for Electronic Receipts."
-msgstr "Tipo de documento 39 para boletas electrónicas."
+msgstr "Tipo de documento 39 para las boletas electrónicas."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:925
 msgid ""
@@ -34681,12 +34790,12 @@ msgid ""
 "correctly, make sure to edit the :guilabel:`Document Type` and change to "
 ":guilabel:`Electronic Receipt`."
 msgstr ""
-"Luego de completar toda la información de la boleta electrónica (de forma "
-"manual o automática) a partir de una orden de venta deberá validarla. El "
-":guilabel:`tipo de documento` seleccionado de forma predeterminada es "
-":guilabel:`Factura electrónica`, pero para validar la boleta de forma "
-"correcta asegúrese de editar el :guilabel:`tipo de documento` y cámbielo a "
-":guilabel:`Boleta electrónica`."
+"Luego de completar toda la información de la boleta electrónica, valídela de"
+" forma manual (o automática) desde la orden de venta. El :guilabel:`tipo de "
+"documento` seleccionado de forma predeterminada es :guilabel:`Factura "
+"electrónica`, pero para validar la boleta de forma correcta asegúrese de "
+"editar el :guilabel:`tipo de documento` y cámbielo a :guilabel:`Boleta "
+"electrónica`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:930
 msgid "After the receipt is posted:"
@@ -34697,12 +34806,13 @@ msgid ""
 "The :abbr:`DTE (Documentos Tributarios Electrónicos)` file (Electronic Tax "
 "Document) is created automatically and added to the :guilabel:`chatter`."
 msgstr ""
-"El archivo :abbr:`DTE (Documentos Tributarios Electrónicos)` se crea de "
-"forma automática y se agrega al :guilabel:`chatter`."
+"El archivo :abbr:`DTE (Documentos Tributarios Electrónicos)` (documento "
+"tributario electrónico) se crea de forma automática y se agrega al "
+":guilabel:`chatter`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Electronic Receipts STE creation status."
-msgstr "Estado de creación de boletas electrónicas STE."
+msgstr "Estado de creación STE de las boletas electrónicas."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:940
 msgid ""
@@ -34711,10 +34821,10 @@ msgid ""
 "(Servicio de Impuestos Internos)` immediately, press the :guilabel:`Send now"
 " to SII` button."
 msgstr ""
-"Odoo actualiza de forma automática el :guilabel:`estado del DTE` mediante "
-"una acción programada que se ejecuta cada noche. Si necesita que el "
-":abbr:`SII (Servicio de Impuestos Internos)` le responda de forma inmediata,"
-" haga clic en el botón :guilabel:`enviar ahora al SII`."
+"Odoo actualiza de forma automática el :guilabel:`estado del DTE` todas las "
+"noches mediante una acción programada. Si necesita que el :abbr:`SII "
+"(Servicio de Impuestos Internos)` le responda de forma inmediata, haga clic "
+"en el botón :guilabel:`Enviar ahora al SII`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:944
 msgid ""
@@ -34723,8 +34833,8 @@ msgid ""
 "follows the same process."
 msgstr ""
 "Consulte el :ref:`flujo de trabajo DTE <chile/electronic-invoice-"
-"validation>` para facturas electrónicas. El flujo de trabajo para boletas "
-"electrónicas sigue el mismo proceso."
+"validation>` de las facturas electrónicas. El flujo de trabajo de las "
+"boletas electrónicas sigue el mismo proceso."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:948
 msgid "Electronic export of goods"
@@ -34737,18 +34847,18 @@ msgid ""
 ":guilabel:`Install` on the module :guilabel:`Electronic Exports of Goods for"
 " Chile`."
 msgstr ""
-"Para instalar el módulo :guilabel:`Exportaciones electrónicas de bienes` "
-"vaya a :menuselection:`Aplicaciones` y busque `Chile (l10n_cl)`. Después, "
-"haga clic en :guilabel:`Instalar` en el módulo :guilabel:`Exportaciones "
-"electrónicas para bienes en Chile`."
+"Para instalar el módulo :guilabel:`Exportación de bienes electrónica` vaya a"
+" :menuselection:`Aplicaciones` y busque `Chile (l10n_cl)`. Después, haga "
+"clic en :guilabel:`Instalar` en el módulo :guilabel:`Exportación de bienes "
+"electrónica para Chile`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:955
 msgid ""
 ":guilabel:`Chile - Electronic Exports of Goods for Chile` has a dependency "
 "with :guilabel:`Chile - Facturación Electrónica`."
 msgstr ""
-"Para el módulo :guilabel:`Chile - Exportaciones electrónicas para bienes en "
-"Chile` debe instalar :guilabel:`Chile - Facturación Electrónica`."
+"Para el módulo :guilabel:`Chile - Exportación de bienes electrónica para "
+"Chile` debe instalar :guilabel:`Chile - Facturación electrónica`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:958
 msgid ""
@@ -34759,13 +34869,13 @@ msgid ""
 "documentation <chile/caf-documentation>` to check the details on how to "
 "acquire the :abbr:`CAFs (Folio Authorization Code)` for electronic receipts."
 msgstr ""
-"Una vez que completó toda la configuración para :ref:`facturas electrónicas`"
-" (por ejemplo, subir un certificado de empresa válido, configurar los datos "
-"maestros, etc.), las exportaciones electrónicas de bienes necesitan sus "
-"propios :abbr:`CAF (Código de Autorización del Folio)`. Consulte la "
-":ref:`documentación sobre CAF <chile/caf-documentation>` para saber cómo "
-"obtener los :abbr:`CAF (Código de Autorización del Folio)` para las boletas "
-"electrónicas."
+"Una vez que haya completado la configuración de las :ref:`facturas "
+"electrónicas <chile/electronic-invoice>` (por ejemplo, subir un certificado "
+"válido de la empresa, configurar los datos maestros, etc.), las "
+"exportaciones electrónicas de bienes necesitan sus propios :abbr:`CAF "
+"(Códigos de autorización de folios)`. Consulte la :ref:`documentación sobre "
+"CAF <chile/caf-documentation>` para obtener detalles sobre cómo adquirir los"
+" :abbr:`CAF (Códigos de autorización de folio)` para las boletas."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:964
 msgid ""
@@ -34775,8 +34885,8 @@ msgid ""
 msgstr ""
 "Las facturas electrónicas para la exportación de bienes son documentos "
 "fiscales que se usan no solo para el :abbr:`SII (Servicio de Impuestos "
-"Internos)`, si no también para guardar la información que se requiere para "
-"los aranceles."
+"Internos)`, sino también con la aduana e incluyen la información requerida "
+"por esta."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:969
 msgid "Contact configurations"
@@ -34785,8 +34895,8 @@ msgstr "Configuraciones de contacto"
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Taxpayer Type needed for the Electronic Exports of Goods module."
 msgstr ""
-"Tipo de contribuyente que se necesita para el módulo Exportaciones "
-"electrónicas para bienes."
+"Tipo de contribuyente necesario para el módulo Exportación de bienes "
+"electrónica."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:976
 msgid "Chilean customs"
@@ -34798,9 +34908,9 @@ msgid ""
 "the :guilabel:`Other Info` tab are required to comply with Chilean "
 "regulations."
 msgstr ""
-"Al crear facturas de exportaciones electrónicas de bienes necesitará llenar "
-"estos nuevos campos en la pestaña :guilabel:`Otra información` para cumplir "
-"con las regulaciones chilenas."
+"Al crear facturas de exportaciones electrónicas de bienes necesitará "
+"completar estos nuevos campos en la pestaña :guilabel:`Otra información` "
+"para cumplir con las regulaciones chilenas."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Chilean customs fields."
@@ -34817,10 +34927,10 @@ msgid ""
 " that indicate that the document is fiscally valid and a new section needed "
 "for customs."
 msgstr ""
-"Se crea una vez que el :abbr:`SII (Servicio de Impuestos Internos)` haya "
-"aceptado y validado la factura y después de que se haya impreso el PDF. El "
-"reporte incluye los elementos fiscales que indican que el documento ya es "
-"válido, además de una nueva sección necesaria para aduanas."
+"Una vez que el :abbr:`SII (Servicio de Impuestos Internos)` haya aceptado y "
+"validado la factura y haya impreso el PDF, el reporte incluye los elementos "
+"fiscales que indican que el documento es fiscalmente válido e incluye una "
+"nueva sección necesaria para aduanas."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "PDF report section for the Electronic Exports of Goods PDF Report."
@@ -34837,9 +34947,9 @@ msgid ""
 ":menuselection:`Apps, search for the module by its technical name "
 "`l10n_cl_edi_website_sale`, and click the :guilabel:`Activate` button."
 msgstr ""
-"Para instalar el módulo :guilabel:`Comercio electrónico chileno`, vaya a "
+"Para instalar el módulo :guilabel:`Comercio electrónico de Chile`, vaya a "
 ":menuselection:`Aplicaciones, busque el modulo por su nombre técnico "
-"`l10n_cl_edi_website_sale` y haga clic en :guilabel:`Activar`.  "
+"`l10n_cl_edi_website_sale` y haga clic en el botón :guilabel:`Activar`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "l10n_cl eCommerce module."
@@ -34852,21 +34962,21 @@ msgstr "Este módulo activa las funciones y configuraciones para:"
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:1008
 msgid "Generate electronic documents from the *eCommerce* application"
 msgstr ""
-"Generar documentos electrónicos desde la aplicación *Comercio electrónico*"
+"Generar documentos electrónicos desde la aplicación *Comercio electrónico*."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:1009
 msgid "Support for required fiscal fields in the *eCommerce* application"
 msgstr ""
 "Aportar compatibilidad con los campos fiscales en la aplicación *Comercio "
-"electrónico* "
+"electrónico*."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:1010
 msgid ""
 "Effectively let the final client decide the electronic document to be "
 "generated for their purchase"
 msgstr ""
-"Permitir de manera eficiente que el cliente decida el documento electrónico "
-"a generar para su compra"
+"Permitir de manera eficiente que el cliente elija el documento electrónico "
+"que generará para su compra."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:1013
 msgid ""
@@ -34877,7 +34987,7 @@ msgstr ""
 "Una vez realizadas todas las configuraciones para el flujo de "
 ":ref:`facturación electrónica <chile/electronic-invoice>` de Chile, necesita"
 " realizar los siguientes ajustes para integrar el flujo de Comercio "
-"electrónico.  "
+"electrónico."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:1017
 msgid ""
@@ -34887,11 +34997,11 @@ msgid ""
 "Activating this feature allows electronic documents to be automatically "
 "generated when an online payment is confirmed."
 msgstr ""
-"Para configurar su sitio web y pueda generar documentos electrónicos durante"
-" el proceso de ventas, vaya a  :menuselection:`Sitio web --> Configuración "
-"--> Ajustes--> Facturación` y active la función :guilabel:`Facturación "
-"automática`. Al hacerlo, se generarán los documentos electrónicos de manera "
-"automática cuando se confirme un pago en línea."
+"Para configurar su sitio web para generar documentos electrónicos durante el"
+" proceso de venta, vaya a :menuselection:`Sitio web --> Configuración --> "
+"Ajustes --> Facturación` y active la función :guilabel:`Facturación "
+"automática`. Al hacerlo, los documentos electrónicos se generarán de manera "
+"automática al confirmar un pago en línea."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Invoice Policy and Automatic Invoice configurations."
@@ -34904,8 +35014,8 @@ msgid ""
 "feature to generate the document, a payment provider must be configured for "
 "the related website."
 msgstr ""
-"Ya que necesita confirmar un pago en línea para que la función *factura "
-"automática* genere el documento, debe configurar un proveedor de pago para "
+"Como es necesario confirmar un pago en línea para que la función de *factura"
+" automática* genere el documento, debe configurar un proveedor de pago para "
 "el sitio web correspondiente."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:1030
@@ -34915,7 +35025,7 @@ msgid ""
 msgstr ""
 "Consulte la documentación sobre :doc:`../payment_providers` para obtener más"
 " información acerca de los proveedores de pago compatibles con Odoo y cómo "
-"configurarlos. "
+"configurarlos."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:1033
 msgid ""
@@ -34926,10 +35036,10 @@ msgid ""
 "to :guilabel:`Ordered quantities`."
 msgstr ""
 "También le recomendamos configurar sus productos para que pueda facturarlos "
-"a la confirmación de un pago en línea. Para hacerlo, vaya a "
-":menuselection:`Sitio web --> Comercio electrónico --> Productos` y "
-"seleccione la plantilla del producto del que desee. Luego, establezca la "
-":guilabel:`Política de facturación` como :guilabel:`Cantidades ordenadas`."
+"al confirmar un pago en línea. Para hacerlo, vaya a :menuselection:`Sitio "
+"web --> Comercio electrónico --> Productos` y seleccione la plantilla del "
+"producto correspondiente. Luego, establezca la :guilabel:`política de "
+"facturación` como :guilabel:`Cantidades ordenadas`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Invoice Policy configuration in Products."
@@ -34948,12 +35058,11 @@ msgid ""
 "process."
 msgstr ""
 "Los clientes de Chile podrán seleccionar si necesitan una **factura** o una "
-"**boleta** para su compra con un paso adicional que se agrega durante el "
-"proceso de la finalización de la compra."
+"**boleta** para su compra con un paso adicional durante el proceso de pago."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Option for EDI Documents for clients."
-msgstr "Opción para documentos EDI para clientes. "
+msgstr "Opción para documentos EDI para clientes."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:1052
 msgid ""
@@ -34963,8 +35072,8 @@ msgid ""
 " Email`."
 msgstr ""
 "Si el cliente selecciona la opción :guilabel:`Factura electrónica`, deberá "
-"llenar los campos fiscales, los cuales incluyen :guilabel:`Descripción de la"
-" actividad`, el :guilabel:`Número de identificación` y su :guilabel:`Correo "
+"completar los campos fiscales que incluyen la :guilabel:`descripción de la "
+"actividad`, el :guilabel:`número de identificación` y su :guilabel:`correo "
 "electrónico DTE`. "
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
@@ -34977,9 +35086,9 @@ msgid ""
 "be directed to the next step, and the electronic document will be generated "
 "for the *Consumidor Final Anónimo* contact."
 msgstr ""
-"Si el cliente selecciona la opción :guilabel:`Recibos electrónicos`, se "
-"dirigirán al siguiente paso y se generará el documento electrónico para el "
-"contacto *Consumidor Final Anónimo*. "
+"Si el cliente selecciona la opción :guilabel:`Boletas electrónicas` será "
+"redirigido al siguiente paso y se generará el documento electrónico para el "
+"contacto *Consumidor final anónimo*. "
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:1063
 msgid ""
@@ -34987,7 +35096,7 @@ msgid ""
 " automatically generated for them by Odoo."
 msgstr ""
 "Los clientes de otros países que no son Chile obtendrán de manera automática"
-" sus recibos electrónicos que generará Odoo. "
+" sus boletas electrónicas, las generará Odoo. "
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:1067
 msgid ""
@@ -34997,13 +35106,13 @@ msgid ""
 msgstr ""
 "Si una compra hecha a través del comercio electrónico requiere una "
 "exportación, el cliente deberá contactar a su empresa para generar la "
-"factura electrónica de exportación (*documento tipo 110*), lo cual se puede "
-"hacer desde la aplicación *Contabilidad*."
+"factura electrónica de exportación (*documento tipo 110*). Podrá hacer esto "
+"con la aplicación *Contabilidad*."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:1072
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:655
 msgid "Point of Sale electronic invoicing"
-msgstr "Facturación electrónica para el Punto de venta."
+msgstr "Facturación electrónica en punto de venta"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:1074
 msgid ""
@@ -35012,14 +35121,14 @@ msgid ""
 " module by its technical name `l10n_cl_edi_pos`, and click the "
 ":guilabel:`Activate` button."
 msgstr ""
-"Para instalar el módulo :guilabel:`Punto de venta chileno`, vaya a "
-":menuselection:`Aplicaciones` en el tablero principal de Odoo, busque el "
-"módulo por su nombre técnico `l10n_cl_edi_pos` y haga clic en "
+"Para instalar el módulo :guilabel:`Punto de venta para Chile`, vaya a "
+":menuselection:`Aplicaciones` desde el tablero principal de Odoo, busque el "
+"módulo por su nombre técnico `l10n_cl_edi_pos` y haga clic en el botón "
 ":guilabel:`Activar`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "l10n_cl POS EDI module."
-msgstr "Módulo l10n_cl POS EDI."
+msgstr "Módulo l10n_cl PdV EDI."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:1082
 msgid "This module enables the following features and configurations to:"
@@ -35027,7 +35136,7 @@ msgstr "Este módulo activa las funciones y configuraciones para:"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:1084
 msgid "Generate electronic documents from the *Point of Sale* application"
-msgstr "Generar documentos electrónicos desde la aplicación *Punto de venta*"
+msgstr "Generar documentos electrónicos desde la aplicación *Punto de venta*."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:1085
 msgid ""
@@ -35035,21 +35144,21 @@ msgid ""
 "Sale* application"
 msgstr ""
 "Aportar compatibilidad con los campos fiscales en la aplicación *Punto de "
-"venta* "
+"venta*."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:1086
 msgid ""
 "Effectively lets the final client decide the type of electronic document to "
 "be generated for their purchase"
 msgstr ""
-"Permitir de manera eficiente que el cliente decida el documento electrónico "
-"a generar para su compra"
+"Permitir de manera eficiente que el cliente elija el tipo de documento "
+"electrónico que generará para su compra."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:1088
 msgid "Print QR or 5-digit codes in tickets to access to electronic invoices"
 msgstr ""
-"Imprimir QR o códigos de 5 dígitos en los tickets para acceder a las "
-"facturas electrónicas"
+"Imprimir códigos QR o de 5 dígitos en los tickets para acceder a las "
+"facturas electrónicas."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:1090
 msgid ""
@@ -35058,11 +35167,11 @@ msgid ""
 "modify a contact. Navigate to :menuselection:`Point of Sale --> Session --> "
 "Customers --> Details`, and edit any of the following fields:"
 msgstr ""
-"Para configurar contactos con la información fiscal requerida, consulte la "
-"sección :ref:`información del partner <chile/partner-information>`, o "
-"modifique directamente un contacto. Vaya a  :menuselection:`Punto de venta "
-"--> Sesión --> Clientes --> Detalles` y edite cualquiera de los siguientes "
-"campos: "
+"Consulte la sección :ref:`Información del contacto <chile/partner-"
+"information>` para obtener más información sobre cómo configurar o modificar"
+" contactos con la información fiscal correspondiente. Vaya a "
+":menuselection:`Punto de venta --> Sesión --> Clientes --> Detalles` y edite"
+" los siguientes campos en caso de que sea necesario:"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:1097
 msgid ":guilabel:`Identification Type`"
@@ -35074,7 +35183,7 @@ msgstr ":guilabel:`Tipo de contribuyente`"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:1099
 msgid ":guilabel:`Type Giro`"
-msgstr ":guilabel:`Tipo de Giro`"
+msgstr ":guilabel:`Tipo de giro`"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:1100
 msgid ":guilabel:`DTE Email`"
@@ -35098,9 +35207,9 @@ msgid ""
 msgstr ""
 "Para configurar productos, vaya a :menuselection:`Punto de venta --> "
 "Productos --> Productos` y seleccione el registro de un producto. En la "
-"pestaña :guilabel:`Ventas` en el formulario del producto, debe marcar el "
-"producto como :guilabel:`Disponible para PdV`, esto mostrará el producto "
-"como disponible para venta en la aplicación *Punto de venta*.  "
+"pestaña :guilabel:`Ventas` del formulario del producto debe marcar el "
+"producto como :guilabel:`Disponible para PdV`. Así, el producto aparecerá "
+"como disponible para venta en la aplicación *Punto de venta*."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Product with fiscal information created from POS."
@@ -35122,9 +35231,9 @@ msgid ""
 "printed on the user's receipt so they can easily request an invoice after "
 "their purchase"
 msgstr ""
-":guilabel:`Usar código QR en ticket`: esta función activa un código QR para "
-"imprimirlo en el recibo del usuario y así solicitar una factura después de "
-"su compra. "
+":guilabel:`Usar código QR en ticket`: Esta función activa un código QR que "
+"se imprimirá en el recibo del usuario para que pueda solicitar una factura "
+"después de realizar su compra."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:1121
 msgid ""
@@ -35132,26 +35241,26 @@ msgid ""
 "to be generated on the receipt, allowing the user to request an invoice "
 "through the customer portal"
 msgstr ""
-":guilabel:`Generar un código en un ticket`: esta función activa un código de"
-" 5 dígitos que se genera en el recibo, lo que le permite al usuario "
-"solicitar una factura a través del portal del cliente."
+":guilabel:`Generar un código en un ticket`: Esta función activa un código de"
+" 5 dígitos que se genera en el recibo del usuario para que pueda solicitar "
+"una factura desde el portal del cliente."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Configuration to generate QR or 5 digit codes on tickets."
 msgstr ""
-"Configuración para generar un QR o un código de 5 dígitos en los tickets. "
+"Configuración para generar un QR o un código de 5 dígitos en los tickets."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:1131
 msgid ""
 "The following sections cover the invoicing flows for the *Point of Sale* "
 "application."
 msgstr ""
-"Las siguientes secciones describen los flujos de facturación para la "
-"aplicación *Punto de venta*. "
+"Las siguientes secciones describen los flujos de facturación de la "
+"aplicación *Punto de venta*."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:1134
 msgid "Electronic receipts: anonymous end user"
-msgstr "Recibos electrónicos: cliente final anónimo"
+msgstr "Boletas electrónicas: cliente final anónimo"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:1136
 msgid ""
@@ -35160,9 +35269,8 @@ msgid ""
 "Anónimo` as the contact for the order and generates the electronic receipt."
 msgstr ""
 "Al realizar una compra como cliente anónimo que no solicita una factura "
-"electrónica, Odoo selecciona de manera automática :guilabel:`Consumidor "
-"Final Anónimo` como el contacto para la orden y genera el recibo "
-"electrónico. "
+"electrónica, Odoo selecciona de manera automática al :guilabel:`consumidor "
+"final anónimo` como el contacto de la orden y genera la boleta electrónica."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Automatic contact selection of an anonymous end consumer."
@@ -35176,14 +35284,14 @@ msgid ""
 "documentation for detailed instructions."
 msgstr ""
 "Si el cliente solicita una nota de crédito debido a la devolución de su "
-"compra, la nota de crédito debe hacerse desde la aplicación *Contabilidad*. "
-"Consulte la documentación sobre :doc:`notas de crédito y devoluciones "
-"<../accounting/customer_invoices/credit_notes>` para obtener instrucciones "
-"más detalladas. "
+"compra, es necesario que elabore la nota de crédito con la aplicación "
+"*Contabilidad*. Consulte la documentación sobre :doc:`notas de crédito y "
+"devoluciones <../accounting/customer_invoices/credit_notes>` para obtener "
+"instrucciones más detalladas."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:1150
 msgid "Electronic receipts: specific customer"
-msgstr "Recibos electrónicos: cliente específico"
+msgstr "Boletas electrónicas: cliente específico"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:1152
 msgid ""
@@ -35193,9 +35301,9 @@ msgid ""
 " required customer contact with their fiscal information for the receipt."
 msgstr ""
 "Cuando un cliente específico realiza una compra y no solicita una factura "
-"electrónica, Odoo selecciona de manera automática el contacto para la orden "
-"como :guilabel:`Consumidor Final Anónimo`, y le permite seleccionar o crear "
-"el contacto requerido del cliente con su información fiscal para el recibo. "
+"electrónica, Odoo selecciona en automático al :guilabel:`consumidor final "
+"anónimo` como el contacto de la orden y le permite seleccionar o crear el "
+"contacto del cliente necesario con su información fiscal para la boleta."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Selection of contact for the receipt."
@@ -35208,8 +35316,8 @@ msgid ""
 "the :abbr:`POS (Point of Sale)` session."
 msgstr ""
 "Si el cliente solicita una nota de crédito debido a la devolución de este "
-"tipo de compra, la nota de crédito y el proceso de devolución se pueden "
-"gestionar directamente desde la sesión del :abbr:`PdV (Punto de venta)`."
+"tipo de compra, podrá gestionar la nota de crédito y el proceso de "
+"devolución desde la sesión del :abbr:`PdV (Punto de venta)`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:1165
 #: ../../content/applications/finance/fiscal_localizations/colombia.rst:260
@@ -35224,8 +35332,8 @@ msgid ""
 "document."
 msgstr ""
 "Cuando los clientes solicitan una factura electrónica, podrá seleccionar o "
-"crear el contacto requerido con su información fiscal. Cuando se realiza el "
-"pago, seleccione la opción :guilabel:`Factura` para generar el documento. "
+"crear el contacto necesario con su información fiscal. Seleccione la opción "
+":guilabel:`Factura` para generar el documento al realizar el pago."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Selection of invoice option at payment."
@@ -35237,9 +35345,9 @@ msgid ""
 "affected by taxes, Odoo detects this and generates the correct type of "
 "document for tax-exempt sales."
 msgstr ""
-"Si el impuesto no afecta los productos, Odoo lo detectará y generará el tipo"
-" de documento correcto para las ventas exentas de impuestos. Esto aplica "
-"tanto para los recibos electrónicos como para las facturas electrónicas. "
+"Tanto para las boletas electrónicas como para las facturas electrónicas, si "
+"el producto no está gravado, Odoo lo detectará y generará el tipo de "
+"documento correcto para ventas exentas de impuestos."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:1180
 msgid "Returns"
@@ -35252,10 +35360,10 @@ msgid ""
 "products sold in a :abbr:`POS (Point of Sale)` order by selecting the "
 ":guilabel:`Refund` button."
 msgstr ""
-"Para recibos electrónicos (no generados para el *Consumidor Final Anónimo*) "
-"y las facturas electrónicas, puede gestionar el proceso para realizar la "
-"devolución de un producto que se vendió a través de una orden del :abbr:`PdV"
-" (Punto de venta)` al hacer clic en :guilabel:`Reembolso`. "
+"Para las boletas electrónicas (que no fueron generadas para el *consumidor "
+"final anónimo*) y las facturas electrónicas, puede gestionar el proceso de "
+"devolución de productos vendidos en una orden de :abbr:`PdV (Punto de "
+"venta)` si hace clic en el botón :guilabel:`Reembolso`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Refund option in the POS application."
@@ -35266,8 +35374,8 @@ msgid ""
 "Orders can be searched by the order status or by contact, and be selected "
 "for the refund to be based on the client's original order."
 msgstr ""
-"Puede buscar órdenes por su estado o por contacto y las puede seleccionar "
-"para realizar reembolsos que se basen en la orden original del cliente. "
+"Puede buscar órdenes por su estado o por contacto y puede seleccionarlas "
+"para realizar reembolsos basados en la orden original del cliente."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Selection of order for the refund process."
@@ -35280,15 +35388,15 @@ msgid ""
 "cancelling the document."
 msgstr ""
 "Odoo genera la nota de crédito correspondiente al validar el pago del "
-"reembolso, este hace referencia al recibo o factura original y cancela de "
-"manera parcial o completa el documento. "
+"reembolso, este hace referencia al recibo o factura original y anula de "
+"manera parcial o completa el documento."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:1201
 msgid ""
 "`Smart tutorial - Electronic invoicing for point of sale "
 "<https://www.youtube.com/watch?v=B2XuWmtlmno&t=360s>`_."
 msgstr ""
-"`Tutorial inteligente - Facturación electrónica para el punto de venta "
+"`Tutorial inteligente - Facturación electrónica para Punto de venta "
 "<https://www.youtube.com/watch?v=B2XuWmtlmno&t=360s>`_."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:1208
@@ -35302,9 +35410,9 @@ msgid ""
 "level of profit or loss that the business had within the evaluated period of"
 " time."
 msgstr ""
-"En este reporte podrá ver las cuentas a detalle (con su respectivo balance)."
-" Las cuentas están clasificadas según su origen y dependiendo el nivel de "
-"ganancias o pérdidas que ese negocio tubo dentro del periodo evaluado."
+"Este reporte muestra las cuentas a detalle (con su respectivo balance) y las"
+" clasifica de acuerdo a su origen, además determina el nivel de ganancias o "
+"pérdidas de la empresa durante el periodo evaluado."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:1214
 msgid ""
@@ -35312,13 +35420,13 @@ msgid ""
 "Balance Sheet` and selecting in the :guilabel:`Report` field the option "
 ":guilabel:`Chilean Fiscal Balance (8 Columns) (CL)`."
 msgstr ""
-"Para acceder a este reporte vaya a :menuselection:`Contabiliad --> Reportes "
-"--> Hoja de balance` y en el campo :guilabel:`Reporte` seleccione la opción "
-":guilabel:`Balance tributario (8 Columnas) (CL)`. "
+"Para acceder a este reporte, vaya a :menuselection:`Contabilidad --> "
+"Reportes --> Balance general` y seleccione la opción :guilabel:`Balance "
+"tributario (8 Columnas) (CL)` en el campo :guilabel:`Reporte`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Location of the Reporte Balance Tributario de 8 Columnas."
-msgstr "Ubicación del reporte del Balance tributario de 8 columnas. "
+msgstr "Ubicación del reporte de balance tributario de 8 columnas."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Chilean Fiscal Balance (8 Columns)."
@@ -35336,10 +35444,10 @@ msgid ""
 "Register (RV). Its purpose is to support the transactions related to VAT, "
 "improving its control and declaration."
 msgstr ""
-"El *formulario 29* es un nuevo sistema que el :abbr:`SII (Servicio de "
-"Impuestos Internos)` habilitó para los contribuyentes y reemplaza los "
+"El *formulario 29*, o F29, es un nuevo sistema que el :abbr:`SII (Servicio "
+"de Impuestos Internos)` habilitó para los contribuyentes y reemplaza los "
 "*libros de compras y ventas*. Este reporte esta compuesto por el registro de"
-" compras (CR) y el registro de ventas (RV). Su finalidad es apoyar las "
+" compras (RC) y el registro de ventas (RV). Su finalidad es apoyar las "
 "transacciones relacionadas con el IVA para mejorar su control y declaración."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:1235
@@ -35378,20 +35486,20 @@ msgid ""
 "and the :guilabel:`Proportional Factor for the fiscal year` from the "
 ":menuselection:`Accounting --> Configuration --> Settings`."
 msgstr ""
-"Para configurar los :abbr:`PPM (Pagos Provisionales Mensuales)` y el "
-":guilabel:`factor de proporcionalidad para el año fiscal` vaya a "
-":menuselection:`Contabilidad --> Configuración --> Ajustes`."
+"Vaya a :menuselection:`Contabilidad --> Configuración --> Ajustes` para "
+"configurar los :abbr:`PPM (Pagos Provisionales Mensuales)` y el "
+":guilabel:`factor de proporcionalidad para el año fiscal`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
 msgid "Default PPM and Proportional Factor for the Propuesta F29 Report."
 msgstr ""
-"PPM y Factor de Proporcionalidad automático para el reporte Propuesta F39."
+"PPM y Factor de Proporcionalidad automático para el reporte Propuesta F29."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:1256
 msgid ""
 "Or manually in the reports by clicking on the :guilabel:`✏️ (pencil)` icon."
 msgstr ""
-"También lo puedes hacer de manera manual si haces clic en el icono "
+"También lo puede hacer de forma manual al hacer clic en el icono "
 ":guilabel:`✏️ (lápiz)`."
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst-1
@@ -40982,14 +41090,12 @@ msgid ""
 "data access**, that is relevant for the German tax authority, tax "
 "declaration, and balance sheet."
 msgstr ""
-"**GoBD** significa `Grundsätze zur ordnungsmäßigen Führung und Aufbewahrung "
+"**GoBD** significa *Grundsätze zur ordnungsmäßigen Führung und Aufbewahrung "
 "von Büchern, Aufzeichnungen und Unterlagen in elektronischer Form sowie zum "
-"Datenzugriff <https://ao.bundesfinanzministerium.de/ao/2021/Anhaenge/BMF-"
-"Schreiben-und-gleichlautende-Laendererlasse/Anhang-64/anhang-64.html>`_. En "
-"resumen, es una **guía para la gestión y almacenamiento adecuados de libros,"
-" registros y documentos en formato electrónico, así como para el acceso a "
-"datos**, que es relevante para las autoridades tributarias alemanas, las "
-"declaraciones de impuestos y el balance general."
+"Datenzugriff*. En resumen, es una **guía para la gestión y almacenamiento "
+"adecuados de libros, registros y documentos en formato electrónico, así como"
+" para el acceso a datos**, que es relevante para las autoridades fiscales "
+"alemanas, la declaración de impuestos y el balance general."
 
 #: ../../content/applications/finance/fiscal_localizations/germany.rst:179
 msgid ""
@@ -41026,11 +41132,11 @@ msgid ""
 "long but quite readable for non-experts. But in short, here is what to "
 "expect:"
 msgstr ""
-"Si puede, la mejor forma de comprender el GoBD es leer el `Texto oficial del"
-" GoBD <https://ao.bundesfinanzministerium.de/ao/2021/Anhaenge/BMF-Schreiben-"
-"und-gleichlautende-Laendererlasse/Anhang-64/anhang-64.html>`_. Es un poco "
-"largo, pero fácil de leer para quienes no son expertos. En resumen, esto es "
-"lo que debe esperar:"
+"Si tiene la posibilidad de leer el `texto oficial del GoBD "
+"<https://ao.bundesfinanzministerium.de/ao/2021/Anhaenge/BMF-Schreiben-und-"
+"gleichlautende-Laendererlasse/Anhang-64/anhang-64.html>`_, hágalo. Esta es "
+"la mejor forma de comprender el GoBD. Es un poco largo, pero es fácil de "
+"leer para quienes no son expertos. En resumen, esto es lo que puede esperar:"
 
 #: ../../content/applications/finance/fiscal_localizations/germany.rst:196
 msgid ""
@@ -49950,14 +50056,16 @@ msgid ""
 ":ref:`Install <general/install>` the following modules to utilize all the "
 "current features of the Peruvian localization."
 msgstr ""
+":ref:`Instale <general/install>` los siguientes módulos para que pueda "
+"utilizar todas las funciones actuales de la localización peruana."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:23
 msgid ":guilabel:`Peru - Accounting`"
-msgstr ""
+msgstr ":guilabel:`Perú - Contabilidad`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:24
 msgid "`l10n_pe`"
-msgstr ""
+msgstr "`l10n_pe`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:25
 msgid ""
@@ -49966,86 +50074,95 @@ msgid ""
 "the SUNAT regulations and guidelines. The main elements included in this "
 "module are the chart of accounts, taxes, document types."
 msgstr ""
+"Agrega las funciones de contabilidad para la localización peruana, que "
+"representan la configuración mínima requerida para que una empresa opere en "
+"Perú bajo las regulaciones y lineamientos de la SUNAT. Los principales "
+"elementos incluidos en este módulo son el plan de cuentas, impuestos y tipos"
+" de documentos."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:29
 msgid ":guilabel:`Peru - E-invoicing`"
-msgstr ""
+msgstr ":guilabel:`Perú - Facturación electrónica`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:30
 msgid "`l10n_pe_edi`"
-msgstr ""
+msgstr "`l10n_pe_edi`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:31
 msgid ""
 "Includes all technical and functional requirements to generate and receive "
 "electronic invoices online based on the SUNAT regulations."
 msgstr ""
+"Incluye todos los requisitos técnicos y funcionales para generar y recibir "
+"facturas electrónicas en línea según las regulaciones de la SUNAT."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:33
 msgid ":guilabel:`Peru - Accounting Reports`"
-msgstr ""
+msgstr ":guilabel:`Perú - Reportes contables`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:34
 msgid "`l10n_pe_reports`"
-msgstr ""
+msgstr "`l10n_pe_reports`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:35
 msgid "Includes the following financial reports:"
-msgstr ""
+msgstr "Incluye los siguientes reportes financieros:"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:37
 msgid "1st set of main financial reports:"
-msgstr ""
+msgstr "Primer conjunto de principales reportes financieros:"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:39
 msgid "Registro de Ventas e Ingresos (RVIE) - 14.4"
-msgstr ""
+msgstr "Registro de Ventas e Ingresos (RVIE) - 14.4"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:40
 msgid "Registro de Compras Electrónico (RCE) - 8.4"
-msgstr ""
+msgstr "Registro de Compras Electrónico (RCE) - 8.4"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:41
 msgid ""
 "Registro de Compras Electrónico - Información de Operaciones con Sujetos no "
 "Domiciliados (RCE) - 8.5"
 msgstr ""
+"Registro de Compras Electrónico - Información de Operaciones con Sujetos no "
+"Domiciliados (RCE) - 8.5"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:44
 msgid "2nd set of financial reports:"
-msgstr ""
+msgstr "Segundo conjunto de reportes financieros:"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:46
 msgid "PLE 5.1 General Journal"
-msgstr ""
+msgstr "PLE 5.1 Libro diario"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:47
 msgid "PLE 5.3 Chart of Accounts"
-msgstr ""
+msgstr "PLE 5.3 Plan contable"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:48
 msgid "PLE 6.1 General Ledger"
-msgstr ""
+msgstr "PLE 6.1 Libro mayor"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:50
 msgid "3rd set of financial reports:"
-msgstr ""
+msgstr "Tercer conjunto de reportes financieros:"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:52
 msgid "PLE 1.1 Libro de Caja"
-msgstr ""
+msgstr "PLE 1.1 Libro de Caja"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:53
 msgid "PLE 1.2 Libro de Bancos"
-msgstr ""
+msgstr "PLE 1.2 Libro de Bancos"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:55
 msgid ":guilabel:`Peruvian - Electronic Delivery Note`"
-msgstr ""
+msgstr ":guilabel:`Perú - Nota de entrega electrónica`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:56
 msgid "`l10n_pe_edi_stock`"
-msgstr ""
+msgstr "`l10n_pe_edi_stock`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:57
 msgid ""
@@ -50053,40 +50170,49 @@ msgid ""
 "you are sending goods between A and B. It is only when a delivery order is "
 "validated that the delivery guide can be created."
 msgstr ""
+"Agrega la guía de remisión. Esta es necesaria como prueba de que está "
+"enviando bienes entre A y B. Solo puede crear la guía de remisión al validar"
+" una orden de entrega."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:60
 msgid ":guilabel:`Peruvian eCommerce`"
-msgstr ""
+msgstr ":guilabel:`Perú - Comercio electrónico`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:61
 msgid "`l10n_pe_website_sale`"
-msgstr ""
+msgstr "`l10n_pe_website_sale`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:62
 msgid ""
 "Enables the identification type in eCommerce checkout forms and the ability "
 "to generate electronic invoices."
 msgstr ""
+"Habilita el tipo de identificación en los formularios de pago de Comercio "
+"electrónico y permite generar facturas electrónicas."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:64
 msgid ":guilabel:`Peruvian - Point of Sale with PE Doc`"
-msgstr ""
+msgstr ":guilabel:`Perú - Punto de venta con documentos peruanos`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:65
 msgid "`l10n_pe_pos`"
-msgstr ""
+msgstr "`l10n_pe_pos`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:66
 msgid ""
 "Enables contact fiscal information to be editable from a PoS Session to "
 "generate electronic invoices and refunds."
 msgstr ""
+"Habilita la edición de la información fiscal de los contactos desde una "
+"sesión de punto de venta para generar facturas electrónicas y reembolsos."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:72
 msgid ""
 "The *Peruvian - Electronic Delivery Guide* module depends on the *Inventory*"
 " application to be installed."
 msgstr ""
+"El módulo *Perú - Guía de remisión electrónica* necesita que tenga la "
+"aplicación *Inventario* instalada."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:76
 msgid "`App Tour - Localización de Peru <https://youtu.be/Ic3mGovkf8Y>`_"
@@ -50098,6 +50224,9 @@ msgid ""
 "configurations) <https://www.odoo.com/slides/smart-tutorial-localizacion-de-"
 "peru-133>`_"
 msgstr ""
+"`Smart Tutorial - Localización de Perú (vídeos para flujos de trabajo y "
+"configuraciones) <https://www.odoo.com/slides/smart-tutorial-localizacion-"
+"de-peru-133>`_"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:84
 msgid "Install the Peruvian localization modules"
@@ -50143,6 +50272,8 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Company data for Peru including RUC and Address type code."
 msgstr ""
+"Datos de la empresa para Perú, incluyendo el RUC y el código de tipo de "
+"dirección."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:109
 msgid ""
@@ -50161,7 +50292,7 @@ msgstr "El NIF debe configurarse siguiendo el formato del RUC."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:116
 msgid "Chart of Account"
-msgstr "Plan de cuentas "
+msgstr "Plan de cuentas"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:118
 msgid ""
@@ -50189,7 +50320,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:132
 msgid "Accounting Settings"
-msgstr "Opciones de contabilidad"
+msgstr "Ajustes de contabilidad"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:134
 msgid ""
@@ -50302,7 +50433,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "IAP option as signature providers."
-msgstr ""
+msgstr "Opción de IAP como proveedor de firmas."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:174
 msgid "What is the IAP?"
@@ -50471,7 +50602,7 @@ msgstr "Proporcionar sus credenciales SOL."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Digiflow."
-msgstr ""
+msgstr "Digiflow."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:239
 msgid ""
@@ -50538,7 +50669,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "EDI Certificate wizard."
-msgstr ""
+msgstr "Asistente de certificado EDI."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:278
 msgid ""
@@ -50546,10 +50677,13 @@ msgid ""
 "can connect directly to its services and get the currency rate either "
 "automatically or manually."
 msgstr ""
+"En Perú, la SUNAT proporciona el tipo de cambio oficial. Odoo puede "
+"conectarse directamente a sus servicios y obtener el tipo de cambio de forma"
+" automática o manual."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "SUNAT displayed in Multicurrency Service option."
-msgstr ""
+msgstr "La SUNAT aparece en la opción de servicios multimoneda."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:284
 msgid ""
@@ -50575,7 +50709,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "List of default taxes."
-msgstr ""
+msgstr "Lista de impuestos predeterminados."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:302
 msgid "EDI Configuration"
@@ -50594,7 +50728,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Taxes EDI data for Peru."
-msgstr ""
+msgstr "Datos de EDI de impuestos para Perú."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:312
 msgid "Fiscal Positions"
@@ -50656,7 +50790,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Document Type list."
-msgstr ""
+msgstr "Lista de tipos de documento."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:338
 msgid ""
@@ -50704,7 +50838,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Journal EDI field."
-msgstr ""
+msgstr "Campo de EDI de diario."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:364
 msgid ""
@@ -50733,7 +50867,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Partner identification type."
-msgstr ""
+msgstr "Tipo de identificación del contacto."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:380
 #: ../../content/applications/finance/fiscal_localizations/romania.rst:109
@@ -50752,7 +50886,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "UNSPC Code on products."
-msgstr ""
+msgstr "Código UNSPC en productos."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:392
 msgid "Customer invoice"
@@ -50787,7 +50921,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:0
 msgid "Invoice document type field on invoices."
-msgstr ""
+msgstr "Campo de tipo de documento de factura."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:408
 msgid ""
@@ -50803,7 +50937,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:0
 msgid "Invoice operation type field on invoices."
-msgstr ""
+msgstr "Campo de tipo de operación de factura."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:415
 msgid ""
@@ -50822,7 +50956,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:0
 msgid "Tax affectation reason in invoice line."
-msgstr ""
+msgstr "Motivo de afectación de impuestos en la línea de la factura."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:426
 msgid ""
@@ -50838,7 +50972,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Sending of EDI Invoice in blue."
-msgstr ""
+msgstr "Envío de la factura EDI en azul."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:433
 msgid ""
@@ -50866,7 +51000,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Send EDI manually."
-msgstr ""
+msgstr "Envío manual del EDI."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:447
 msgid ""
@@ -50881,7 +51015,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Message on chatter when the invoice is valid."
-msgstr ""
+msgstr "Mensaje en el chatter cuando la factura es válida."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:454
 msgid ""
@@ -50948,7 +51082,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:0
 msgid "List of common errors on invoices."
-msgstr ""
+msgstr "Lista de los errores más comunes en las facturas."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:481
 msgid ""
@@ -50974,7 +51108,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Invoice PDF report."
-msgstr ""
+msgstr "Reporte de factura en PDF"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:494
 msgid "IAP Credits"
@@ -51003,7 +51137,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Buying credits in the IAP."
-msgstr ""
+msgstr "Compra de créditos en IAP."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:506
 msgid ""
@@ -51036,7 +51170,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Request invoice cancellation button."
-msgstr ""
+msgstr "Botón para solicitar la cancelación de la factura."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:522
 msgid "In order to cancel an invoice, please provide a cancellation Reason."
@@ -51059,7 +51193,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Cancellation CDR sent by the SUNAT."
-msgstr ""
+msgstr "Cancelación de la CDR enviada por la SUNAT."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:535
 msgid ""
@@ -51075,7 +51209,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Invoice after cancellation."
-msgstr ""
+msgstr "Factura después de la cancelación."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:543
 msgid "One credit is consumed on each cancellation request."
@@ -51083,7 +51217,7 @@ msgstr "Se consume un crédito en cada solicitud de cancelación."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:546
 msgid "Export invoices"
-msgstr ""
+msgstr "Facturas de exportación"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:548
 msgid ""
@@ -51110,7 +51244,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Exportation invoices main data."
-msgstr ""
+msgstr "Datos principales de las facturas de exportación."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:558
 msgid "Advance Payments"
@@ -51163,7 +51297,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:0
 msgid "Detraction fields on products."
-msgstr ""
+msgstr "Campos de detracción en los productos."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:576
 msgid "Operation type in your invoice must be ``1001``"
@@ -51192,7 +51326,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Add Credit Note from invoice."
-msgstr ""
+msgstr "Agregar nota de crédito desde la factura."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:592
 msgid ""
@@ -51211,7 +51345,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst-1
 msgid "Credit Note document type."
-msgstr ""
+msgstr "Tipo de documento de nota de crédito."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:600
 msgid ""
@@ -58140,7 +58274,7 @@ msgstr ":doc:`Stripe <payment_providers/stripe>`"
 
 #: ../../content/applications/finance/payment_providers.rst:134
 msgid ":doc:`Worldline <payment_providers/worldline>`"
-msgstr ""
+msgstr ":doc:`Worldline <payment_providers/worldline>`"
 
 #: ../../content/applications/finance/payment_providers.rst:140
 msgid ":doc:`Xendit <payment_providers/xendit>`"
@@ -58923,7 +59057,7 @@ msgstr ":doc:`payment_providers/stripe`"
 
 #: ../../content/applications/finance/payment_providers.rst:462
 msgid ":doc:`payment_providers/worldline`"
-msgstr ""
+msgstr ":doc:`payment_providers/worldline`"
 
 #: ../../content/applications/finance/payment_providers.rst:463
 msgid ":doc:`payment_providers/xendit`"
@@ -60244,9 +60378,9 @@ msgid ""
 ":guilabel:`Secret Key`, and :guilabel:`Webhook Secret` with the values you "
 "saved at the step :ref:`payment_providers/flutterwave/configure_dashboard`."
 msgstr ""
-"En la pestaña :guilabel:`Credenciales`, llene los campos :guilabel:`Clave "
+"En la pestaña :guilabel:`Credenciales` complete los campos :guilabel:`Clave "
 "pública`, :guilabel:`Clave secreta` y :guilabel:`Webhook secreto` con los "
-"valores que guardo en el paso "
+"valores que guardó en el paso "
 ":ref:`payment_providers/flutterwave/configure_dashboard`."
 
 #: ../../content/applications/finance/payment_providers/flutterwave.rst:39
@@ -61237,10 +61371,12 @@ msgid ""
 "`Worldline <https://worldline.com/>`_ is a France-based company and the "
 "world's fourth largest payment provider."
 msgstr ""
+"`Worldline <https://worldline.com/>`_ es una empresa francesa y el cuarto "
+"proveedor de pagos más grande del mundo."
 
 #: ../../content/applications/finance/payment_providers/worldline.rst:9
 msgid "Settings in Worldline"
-msgstr ""
+msgstr "Configuración en Worldline"
 
 #: ../../content/applications/finance/payment_providers/worldline.rst:14
 msgid "Create an API user"
@@ -61253,10 +61389,15 @@ msgid ""
 "credentials are compromised. Additionally, API users do not require frequent"
 " password updates like regular accounts."
 msgstr ""
+"Le recomendamos que configure un **usuario API** para crear transacciones "
+"desde Odoo, esto garantizará que su configuración de Worldline permanezca "
+"segura incluso si sus credenciales están comprometidas. Además, no es "
+"necesario que los usuarios API actualicen sus contraseñas con tanta "
+"frecuencia como las cuentas regulares."
 
 #: ../../content/applications/finance/payment_providers/worldline.rst:20
 msgid "To create an **API user**, proceed as follows:"
-msgstr ""
+msgstr "Siga estas instrucciones para crear un **usuario API**:"
 
 #: ../../content/applications/finance/payment_providers/worldline.rst:22
 msgid ""
@@ -61264,44 +61405,53 @@ msgid ""
 "portal.preprod.worldline-solutions.com/dashboard>`_, click the :icon:`fa-th`"
 " (:guilabel:`menu`) icon, and select :guilabel:`Back Office`."
 msgstr ""
+"Inicie sesión en su `Merchant Portal de Worldline <https://merchant-"
+"portal.preprod.worldline-solutions.com/dashboard>`_, haga clic en el icono "
+":icon:`fa-th` (:guilabel:`menú`) y seleccione :guilabel:`Administración`."
 
 #: ../../content/applications/finance/payment_providers/worldline.rst:24
 msgid ""
 "Go to :menuselection:`Configuration --> Users` and click on :guilabel:`New "
 "User`."
 msgstr ""
+"Vaya a :menuselection:`Configuración --> Usuarios` y haga clic en "
+":guilabel:`Nuevo usuario`."
 
 #: ../../content/applications/finance/payment_providers/worldline.rst:25
 msgid "Configure the following fields:"
-msgstr ""
+msgstr "Configure los siguientes campos:"
 
 #: ../../content/applications/finance/payment_providers/worldline.rst:27
 msgid ""
 "Specify a :guilabel:`UserID`, :guilabel:`User's name`, :guilabel:`E-mail "
 "address`, and :guilabel:`Timezone` of your choice."
 msgstr ""
+"Especifique un :guilabel:`ID de usuario`, :guilabel:`nombre de usuario`, "
+":guilabel:`dirección de correo electrónico` y :guilabel:`zona horaria` de su"
+" elección."
 
 #: ../../content/applications/finance/payment_providers/worldline.rst:29
 msgid "Set the :guilabel:`Profile` field to :guilabel:`Admin`."
-msgstr ""
+msgstr "El campo :guilabel:`Perfil` debe ser :guilabel:`Admin`."
 
 #: ../../content/applications/finance/payment_providers/worldline.rst:30
 msgid "Enable :guilabel:`Special user for API`."
-msgstr ""
+msgstr "Seleccione la opción :guilabel:`Usuario especial para API`."
 
 #: ../../content/applications/finance/payment_providers/worldline.rst:33
 msgid ""
 "If you have already set up a user, make sure it is activated without any "
 "error."
 msgstr ""
+"Si ya configuró un usuario, asegúrese de que está activado sin errores."
 
 #: ../../content/applications/finance/payment_providers/worldline.rst:38
 msgid "Set up Worldline for Odoo"
-msgstr ""
+msgstr "Configurar Worldline para Odoo"
 
 #: ../../content/applications/finance/payment_providers/worldline.rst:40
 msgid "Worldline must now be configured to accept payments from Odoo."
-msgstr ""
+msgstr "Worldline debe estar configurado para aceptar pagos de Odoo."
 
 #: ../../content/applications/finance/payment_providers/worldline.rst:42
 msgid ""
@@ -61310,6 +61460,10 @@ msgid ""
 "and the :guilabel:`Secret API key` and save them for :ref:`later "
 "<wordline/odoo-configuration>`."
 msgstr ""
+"Desde su merchant portal vaya a :menuselection:`Desarrollador --> API de "
+"pagos` y haga clic en :guilabel:`Generar clave API`. Copie el :guilabel:`ID "
+"de la clave API` y el :guilabel:`secreto de la clave API`, guárdelos para "
+":ref:`después <wordline/odoo-configuration>`."
 
 #: ../../content/applications/finance/payment_providers/worldline.rst:45
 msgid ""
@@ -61318,6 +61472,10 @@ msgid ""
 "associated :guilabel:`Secret webhook key` and save them for :ref:`later "
 "<wordline/odoo-configuration>`."
 msgstr ""
+"Vaya a :menuselection:`Desarrollador --> Webhooks` y haga clic en "
+":guilabel:`Generar claves de webhook`. Copie el :guilabel:`ID del webhook` y"
+" la :guilabel:`clave de secreto del webhook` y guárdelos para :ref:`después "
+"<wordline/odoo-configuration>`."
 
 #: ../../content/applications/finance/payment_providers/worldline.rst:0
 msgid ""
@@ -61325,20 +61483,26 @@ msgid ""
 "followed by `/payment/worldline/webhook` in the :guilabel:`Endpoint url` "
 "field, and :guilabel:`Confirm`."
 msgstr ""
+"Haga clic en :guilabel:`Agregar punto de conexión del webhook`, en el campo "
+":guilabel:`URL del punto de conexión` escriba la URL de su base de datos de "
+"Odoo y agregue `/payment/worldline/webhook`, después haga clic en. "
+":guilabel:`Confirmar`."
 
 #: ../../content/applications/finance/payment_providers/worldline.rst:0
 msgid "For example: `https://example.odoo.com/payment/worldline/webhook`."
-msgstr ""
+msgstr "Por ejemplo: `https://ejemplo.odoo.com/payment/worldline/webhook`."
 
 #: ../../content/applications/finance/payment_providers/worldline.rst:57
 msgid "To set up Worldline in Odoo:"
-msgstr ""
+msgstr "Para configurar Worldline en Odoo:"
 
 #: ../../content/applications/finance/payment_providers/worldline.rst:59
 msgid ""
 ":ref:`Navigate to the payment provider Worldline "
 "<payment_providers/add_new>` and change its state to :guilabel:`Enabled`."
 msgstr ""
+":ref:`Vaya al proveedor de pago Worldline <payment_providers/add_new>` y "
+"cambie su estado a :guilabel:`Habilitado`."
 
 #: ../../content/applications/finance/payment_providers/worldline.rst:61
 msgid ""
@@ -61348,6 +61512,11 @@ msgid ""
 "values you saved at the step :ref:`Set up Worldline for Odoo <worldline/set-"
 "up>`."
 msgstr ""
+"En la pestaña :guilabel:`Credenciales`, escriba el :guilabel:`PSPID` de su "
+"cuenta de Worldline y complete los campos :guilabel:`Clave API`, "
+":guilabel:`Secreto API`, :guilabel:`Clave del webhook` y :guilabel:`Secreto "
+"del webhook` con los valores que guardó en el paso :ref:`anterior "
+"<worldline/set-up>`."
 
 #: ../../content/applications/finance/payment_providers/xendit.rst:3
 msgid "Xendit"

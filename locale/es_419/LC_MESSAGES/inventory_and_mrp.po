@@ -5,9 +5,9 @@
 # 
 # Translators:
 # Tiffany Chang, 2024
-# Fernanda Alvarez, 2024
-# Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2024
 # Wil Odoo, 2024
+# Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2024
+# Fernanda Alvarez, 2024
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-11-05 09:20+0000\n"
 "PO-Revision-Date: 2024-10-08 06:34+0000\n"
-"Last-Translator: Wil Odoo, 2024\n"
+"Last-Translator: Fernanda Alvarez, 2024\n"
 "Language-Team: Spanish (Latin America) (https://app.transifex.com/odoo/teams/41243/es_419/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -8856,13 +8856,12 @@ msgid ""
 " buttons to see all stock on-hand using that serial number. Any operations "
 "made using that lot or serial number can be found here, as well."
 msgstr ""
-"Para más información sobre números de lote (o de serie) individuales, haga "
-"clic en la línea de artículo para el lote o número de serie para mostrar el "
-"formulario de ese :guilabel:`número de lote` en específico. Cuando esté en "
-"el formulario haga clic en los botones inteligentes :guilabel:`Ubicación` y "
+"Para obtener más información sobre un número de serie o de lote, haga clic "
+"en la línea del número para abrir el formulario de ese :guilabel:`número de "
+"serie` o :guilabel:`lote` en específico. Una vez en ese formulario, haga "
+"clic en los botones inteligentes :guilabel:`Ubicación` y "
 ":guilabel:`Trazabilidad` para ver todas las existencias a la mano que usan "
-"ese número de serie y todas las operaciones que se hacen con es número de "
-"serie."
+"ese número, así como las operaciones realizadas con el mismo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:3
 msgid "Expiration dates"
@@ -10574,6 +10573,12 @@ msgid ""
 "numbers, letters, other typographical characters, or any mix of these "
 "character types."
 msgstr ""
+"Los *números de serie* son una de las dos formas de identificar y rastrear "
+"productos en Odoo junto con los :doc:`lotes <lots>`. Un número de serie es "
+"el identificador único que se le asigna a un producto para distinguirlo de "
+"otros productos en una serie. Los números de serie pueden incluir varios "
+"tipos de caracteres como números, letras, otros caracteres tipográficos o la"
+" combinación de estos tipos de caracteres."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:10
 msgid ""
@@ -10583,6 +10588,11 @@ msgid ""
 "manufacturers locate products to provide after-sales services or in the "
 "event of a recall."
 msgstr ""
+"El objetivo de asignar números de serie es poder llevar seguimiento de todos"
+" los productos y sus :doc:`fechas de vencimiento <expiration_dates>` y "
+"ubicación a lo largo de la cadena de suministro. Por ejemplo, los números de"
+" serie ayudan a los fabricantes a localizar productos para ofrecer servicios"
+" posventa o en caso de una retirada del mercado."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:16
 msgid ""
@@ -10600,10 +10610,15 @@ msgid ""
 "number usage by operation type <inventory/product_management/operation-type-"
 "setting>`."
 msgstr ""
+"Para rastrear productos con números de serie es necesario que habilite dos "
+"funciones: :ref:`Trazabilidad de números de serie y lotes "
+"<inventory/product_management/traceability-setting>` y el :ref:`uso de "
+"números de serie por tipo de operación "
+"<inventory/product_management/operation-type-setting>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:30
 msgid "Traceability setting"
-msgstr ""
+msgstr "Ajustes de trazabilidad"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:32
 msgid ""
@@ -10613,14 +10628,19 @@ msgid ""
 "section, and tick the :guilabel:`Lots & Serial Numbers` checkbox. Remember "
 "to click the :guilabel:`Save` button to save changes."
 msgstr ""
+"Primero *debe* habilitar la función de rastreo de *números de serie y lotes*"
+" para poder rastrear productos. Para ello, vaya a :menuselection:`Inventario"
+" --> Configuración --> Ajustes`, busque la sección :guilabel:`Trazabilidad` "
+"y seleccione la casilla :guilabel:`Números de serie y lote`. Recuerde hacer "
+"clic en el botón :guilabel:`Guardar`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst-1
 msgid "Enabled Lots & Serial Numbers setting."
-msgstr ""
+msgstr "Función de números de serie y lotes hablilitado."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:44
 msgid "By operation type"
-msgstr ""
+msgstr "Por tipo de operación"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:46
 msgid ""
@@ -10629,6 +10649,10 @@ msgid ""
 " or receiving goods). In other words, this setting allows for serial number "
 "tracking on warehouse receipts and delivery orders."
 msgstr ""
+"Después especifique si será posible crear nuevos números de serie o utilizar"
+" los existentes en ciertos tipos de operación (como el envío o la recepción "
+"de productos). Esta función permite rastrear números de serie en recepciones"
+" de almacén y órdenes de entrega."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:51
 msgid ""
@@ -10637,12 +10661,20 @@ msgid ""
 " disabled to prevent workers from accidentally assigning serial numbers that"
 " do not exist in inventory."
 msgstr ""
+"Habilitar la opción *Crear nuevos* en las recepciones permite asignar nuevos"
+" números de serie al recibir los artículos. Sin embargo, cuando se trata de "
+"las órdenes de entrega, es compún desactivar esta función para evitar que "
+"los trabajadores asignen números de serie que no existen en el inventario "
+"por accidente."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:55
 msgid ""
 "To enable the creation of new serial numbers on an operation, navigate to "
 ":menuselection:`Inventory app --> Configuration --> Operations Types`."
 msgstr ""
+"Vaya a :menuselection:`Inventario --> Configuración --> Tipos de "
+"operaciones` para habilitar la creación de nuevos números de serie desde una"
+" operación."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:58
 msgid ""
@@ -10666,7 +10698,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:69
 msgid "Configure serial number tracking on individual products"
-msgstr ""
+msgstr "Configurar seguimiento por número de serie en cada producto"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:71
 msgid ""
@@ -10676,6 +10708,11 @@ msgid ""
 "product, go to :menuselection:`Inventory app --> Products --> Products`, and"
 " select the desired product."
 msgstr ""
+"Una vez que haya activado los :guilabel:`números de serie y lote "
+"<inventory/product_management/traceability-setting>` podrá rastrear los "
+"productos con sus números de serie. Para rastrear un producto vaya a "
+":menuselection:`Inventario --> Productos --> Productos` y seleccione el "
+"producto correspondiente."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:75
 msgid ""
@@ -10685,6 +10722,12 @@ msgid ""
 "changes. Now, existing or new serial numbers can now be selected and "
 "assigned to newly-received or manufactured batches of this product."
 msgstr ""
+"Vaya a la pestaña :guilabel:`Información general` del formulario del "
+"producto y asegúrese de que la casilla junto a :guilabel:`Rastrear "
+"tnventario` esté seleccionada. Después, seleccione :guilabel:`Por número de "
+"serie único` y haga clic en :guilabel:`Guardar`. Ahora podrá seleccionar los"
+" números de serie existentes o nuevos a lotes de este producto que reciba o "
+"fabrique."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst-1
 msgid "Enabled serial number tracking on product form."
@@ -10697,24 +10740,31 @@ msgstr "Asignar números de serie"
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:88
 msgid "In Odoo, serial numbers can be assigned at several times and places:"
 msgstr ""
+"En Odoo puede asignar números de serie en distintos momentos y lugares:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:90
 msgid ""
 "When a product is :ref:`already in stock "
 "<inventory/product_management/already-in-stock>`"
 msgstr ""
+"Cuando el producto :ref:`ya está en stock "
+"<inventory/product_management/already-in-stock>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:91
 msgid ""
 "Via the :ref:`Moves smart button <inventory/product_management/moves-"
 "button>` on a receipt"
 msgstr ""
+"Con el :ref:`botón inteligente \"Movimientos\" "
+"<inventory/product_management/moves-button>` de una recepción."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:92
 msgid ""
 "Via the :ref:`Open: Stock move window <inventory/product_management/stock-"
 "move>` on a receipt"
 msgstr ""
+"Desde la :ref:`ventana Abrir: movimiento de existencias "
+"<inventory/product_management/stock-move>` de una recepción."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:93
 msgid ""
@@ -10722,12 +10772,17 @@ msgid ""
 "<../../../manufacturing/basic_setup/configure_manufacturing_product>` for a "
 "product tracked by lots/serial numbers"
 msgstr ""
+":doc:`Durante la orden de fabricación "
+"<../../../manufacturing/basic_setup/configure_manufacturing_product>` de un "
+"producto rastreado mediante números de serie o lote."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:96
 msgid ""
 "When :doc:`making an inventory adjustment "
 "<../../warehouses_storage/inventory_management/count_products>`"
 msgstr ""
+"Al :doc:`realizar un ajuste de inventario "
+"<../../warehouses_storage/inventory_management/count_products>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:102
 msgid "Create new serial numbers for products already in stock"
@@ -10742,6 +10797,12 @@ msgid ""
 "reveals a blank lot/serial number form. On this form, a new "
 ":guilabel:`Lot/Serial Number` is generated automatically."
 msgstr ""
+"Puede crear nuevos números de serie para productos que ya están en stock y "
+"no tienen un número de serie asignado. Para esto, vaya a "
+":menuselection:`Inventario --> Productos --> Números de serie/lote` y haga "
+"clic en :guilabel:`Nuevo`. Al hacerlo aparecerá un formulario vacío de "
+"número de serie o lote en el que se generará un nuevo :guilabel:`número de "
+"serie o lote` de manera automática."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:110
 msgid ""
@@ -10774,6 +10835,12 @@ msgid ""
 "detailed description of this specific lot/serial number can also be added in"
 " the :guilabel:`Description` tab below."
 msgstr ""
+"En este formulario también puede ajustar la :guilabel:`cantidad a la mano`, "
+"asignar un número único de :guilabel:`referencia interna` (para mayor "
+"trazabilidad) y vincular el número de lote o serie específico a una "
+":guilabel:`empresa` en el campo correspondiente. Además, puede agregar una "
+"descripción detallada en la pestaña :guilabel:`Descripción` que se encuentra"
+" abajo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:125
 msgid ""
@@ -10781,6 +10848,9 @@ msgid ""
 " to input an additional unique number to allow for easier tracking. For "
 "instance, SKU values may be used here."
 msgstr ""
+"El campo :guilabel:`Referencia interna` es un espacio para que los "
+"fabricantes proporcionen un número único adicional que facilite el rastreo. "
+"Por ejemplo, aquí podrá utilizar los valores de SKU."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:129
 msgid ""
@@ -10801,6 +10871,11 @@ msgid ""
 ":menuselection:`Inventory app --> Products --> Products`, and selecting the "
 "product that this newly-created serial number was just assigned to."
 msgstr ""
+"Luego de crear un nuevo número de serie, se lo podrá asignar al producto que"
+" quiera. Una vez que haya guardado los cambios, regrese al formulario de "
+"producto desde :menuselection:`Inventario --> Productos --> Productos` y "
+"seleccione el producto al que le asignó el número de serie que acaba de "
+"crear."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:138
 msgid ""
@@ -10812,7 +10887,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:144
 msgid "Create serial numbers to incoming or outgoing products"
-msgstr ""
+msgstr "Crear números de serie para productos entrantes o salientes"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:146
 msgid ""
@@ -10820,6 +10895,10 @@ msgid ""
 "receipt and delivery order forms mirror one another; the instructions below "
 "can be followed to assign serial numbers in either form."
 msgstr ""
+"Es posible asignar números de serie a productos entrantes y salientes. Los "
+"formularios de recepción y orden de entrega son parecidos, las siguientes "
+"instrucciones le serán útiles para asignar números de serie en ambos "
+"formularios."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:150
 msgid ""
@@ -10827,6 +10906,9 @@ msgid ""
 "Receipts can be accessed by navigating to :menuselection:`Inventory app --> "
 "Operations --> Receipts`."
 msgstr ""
+"**Productos entrantes:** Asigne números de serie desde las **recepciones**. "
+"Puede acceder a ellas desde :menuselection:`Inventario --> Operaciones --> "
+"Recibidos`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:152
 msgid ""
@@ -10834,6 +10916,9 @@ msgid ""
 "order**. Receipts can be accessed by navigating to :menuselection:`Inventory"
 " app --> Operations --> Deliveries`."
 msgstr ""
+"**Productos salientes:** Asigne números de serie desde las **órdenes de "
+"entrega**. Puede acceder a ellas desde :menuselection:`Inventario --> "
+"Operaciones --> Entregas`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:156
 msgid ""
@@ -10841,20 +10926,26 @@ msgid ""
 " the ability to :ref:`create new serial numbers by operations type "
 "<inventory/product_management/operation-type-setting>` is enabled."
 msgstr ""
+"Asegúrese de que la función para :ref:`crear nuevos números de serie por "
+"tipo de operación <inventory/product_management/operation-type-setting>` "
+"esté habilitada antes de asignar números de serie en recepciones u órdenes "
+"de entrega."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:161
 msgid "Lots/serial number field"
-msgstr ""
+msgstr "Campo de número de serie o lote"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:163
 msgid ""
 "Serial numbers can be entered directly into the :guilabel:`Serial Numbers` "
 "field on a receipt or delivery order."
 msgstr ""
+"En el campo :guilabel:`Números de serie` de una recepción o una orden de "
+"entrega podrá agregar los números de serie."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst-1
 msgid "Select value for Serial Number field on receipt."
-msgstr ""
+msgstr "Seleccionar un valor en el campo Número de serie de una recepción."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:170
 msgid ""
@@ -10863,14 +10954,20 @@ msgid ""
 "Settings)` icon, and in the drop-down menu, tick the :guilabel:`Serial "
 "Numbers` checkbox."
 msgstr ""
+"Para que el campo :guilabel:`Números de serie` aparezca en una recepción o "
+"una orden de entrega, haga clic en el icono :icon:`oi-settings-adjust` "
+":guilabel:`(ajustar)`, esta acción abrirá un menú desplegable en el que "
+"deberá seleccionar la casilla :guilabel:`Números de serie`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:0
 msgid "Allow Serial Numbers field to show on a receipt or delivery order."
 msgstr ""
+"Permitir que el campo Números de serie aparezca en una orden de recepción o "
+"de entrega."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:177
 msgid "Example **Serial Numbers** field on a delivery order."
-msgstr ""
+msgstr "Ejemplo del campo **Número de serie** en una orden de entrega."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:182
 msgid "Stock move pop-up window"
@@ -10882,6 +10979,10 @@ msgid ""
 "click the :icon:`fa-list` :guilabel:`(list)` icon in the product line of a "
 "receipt."
 msgstr ""
+"Para utilizar distintos métodos de asignación de números de serie de forma "
+"individual o masiva, haga clic en el icono :icon:`fa-list` "
+":guilabel:`(lista)` que se encuentra en la línea de producto de una "
+"recepción."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:188
 msgid "Add a line"
@@ -10893,10 +10994,15 @@ msgid ""
 "numbers in the :guilabel:`Lot/Serial Number` column. This method is best "
 "reserved for adding only one or a few serial numbers."
 msgstr ""
+"En la ventana emergente :guilabel:`Abrir: Movimiento de existencias` escriba"
+" manualmente los números de serie en la columna :guilabel:`Número de "
+"serie/lote`. Este método es más útil si desea agregar solo uno o unos "
+"cuantos números de serie."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst-1
 msgid "Add a line on the stock move pop-up."
 msgstr ""
+"Agregar una línea en la ventana emergente de movimiento de existencias."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:200
 msgid "Generate Serials/Lots"
@@ -10913,13 +11019,15 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst-1
 msgid "Show generate serials pop-up."
-msgstr ""
+msgstr "Visualización de la ventana emergente para generar números de serie."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:208
 msgid ""
 "Doing so opens a new popup, :guilabel:`Generate Serial numbers`, which "
 "contains a few fields:"
 msgstr ""
+"Esta acción abre la ventana emergente :guilabel:`Generar números de serie` e"
+" incluye algunos campos:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:210
 msgid ""
@@ -10927,12 +11035,17 @@ msgid ""
 "sequence. From there, Odoo automatically detects what pattern should be "
 "followed to generate more serial numbers."
 msgstr ""
+":guilabel:`Primer número de serie`: Ingrese el número de serie que debe "
+"iniciar la secuencia. Con este, Odoo detectará en automático el patrón que "
+"debe seguir para generar más números de serie."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:212
 msgid ""
 ":guilabel:`Number of SN`: Specify the desired number of serial numbers to "
 "generate."
 msgstr ""
+":guilabel:`Cantidad de números de serie`: Especifique cuántos números de "
+"serie desea generar. "
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:215
 msgid ""
@@ -10942,11 +11055,18 @@ msgid ""
 "Odoo still allows the quantity (based on the serial numbers) to be delivered"
 " or received."
 msgstr ""
+"La cantidad de números de serie generados estará indicada en el campo "
+":guilabel:`Cantidad` en una recepción o una orden de entrega. Incluso si la "
+"cantidad de números de serie generados es mayor al valor de "
+":guilabel:`demanda`, Odoo aún permite que la cantidad (basada en los números"
+" de serie) sea entregada o recibida."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:0
 msgid ""
 "Show how the quantity of serial numbers alters the delivery order quantity."
 msgstr ""
+"Visualización de la cantidad de números de serie que influye en la cantidad "
+"de la orden de entrega."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:223
 msgid ""
@@ -10954,6 +11074,10 @@ msgid ""
 "serial numbers that may have been previously added. To replace existing "
 "serial numbers in the list, leave the box unchecked."
 msgstr ""
+"Casilla :guilabel:`Mantener las líneas actuales`: Seleccione esta casilla "
+"para conservar los números de serie existentes que haya agregado con "
+"anterioridad. No la seleccione si desea remplazar los números de serie "
+"existentes en la lista."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:227
 msgid ""
@@ -10963,6 +11087,12 @@ msgid ""
 ":guilabel:`Quantity` and the :guilabel:`Serial Numbers` fields on the "
 "delivery order or receipt update automatically."
 msgstr ""
+"Haga clic en el botón :guilabel:`Generar` después de completar estos campos."
+" Los números de serie recién generados aparecerán en la ventana "
+":guilabel:`Abrir: Movimiento de existencias`. Los campos "
+":guilabel:`Cantidad` y :guilabel:`Números de Serie` de la orden de entrega o"
+" recepción se actualizarán en automático al hacer clic en :icon:`fa-cloud-"
+"upload` :guilabel:`(Guardar)`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:233
 msgid "Import Serials/Lots"
@@ -10974,6 +11104,9 @@ msgid ""
 " :guilabel:`Import Serials/Lots` button in the :guilabel:`Open: Stock move` "
 "pop-up window."
 msgstr ""
+"Otra opción para asignar varios números de serie al mismo tiempo es hacer "
+"clic en el botón :guilabel:`Importar números de serie o lotes` en la ventana"
+" emergente :guilabel:`Abrir: Movimiento de existencias`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:239
 msgid ""
@@ -10981,6 +11114,10 @@ msgid ""
 "is checked in the :ref:`receipt's configuration page "
 "<inventory/product_management/operation-type-setting>`."
 msgstr ""
+"Si el botón para importarlos no es visible, asegúrese de que la opción "
+":guilabel:`Crear nuevo` esté seleccionada en la :ref:`página de "
+"configuración de las recepciones <inventory/product_management/operation-"
+"type-setting>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:242
 msgid ""
@@ -10988,6 +11125,9 @@ msgid ""
 "serial number on a separate line in the :guilabel:`Lots/Serial numbers` text"
 " field."
 msgstr ""
+"Esta acción abre la ventana emergente :guilabel:`Importar números de serie`,"
+" allí escriba cada número de serie en una línea distinta en el campo de "
+"texto :guilabel:`Números de serie o lote`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:245
 msgid ""
@@ -10995,16 +11135,23 @@ msgid ""
 "serials>`, check the :guilabel:`Keep current lines` box to keep existing "
 "serial numbers, or leave it unchecked to overwrite them."
 msgstr ""
+"Al igual que al :ref:`generar números de serie "
+"<inventory/product_management/generate-serials>`, seleccione la casilla "
+":guilabel:`Mantener las líneas actuales` para conservar los números de serie"
+" existentes o déjela desmarcada para sobrescribirlos."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:250
 msgid ""
 "To expedite this process, copy/paste serial numbers from an existing "
 "spreadsheet and add them to the :guilabel:`Lots/Serial numbers` text field."
 msgstr ""
+"Para agilizar este proceso, copie y pegue los números de serie de una hoja "
+"de cálculo existente, después agréguelos al campo de texto "
+":guilabel:`Números de serie/lote`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst-1
 msgid "Show import serials pop-up."
-msgstr ""
+msgstr "Visualización de la ventana emergente para importar números de serie."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:259
 msgid ""
@@ -11050,6 +11197,12 @@ msgid ""
 "This level of detail permits more precise tracking, for example, when "
 "handling perishable or regulated goods."
 msgstr ""
+"La página *Operaciones detalladas*, a la que puede acceder desde los "
+"formularios de recepción y orden de entrega, muestra una vista detallada de "
+"los movimientos de los productos e incluye información sobre los números de "
+"serie, las ubicaciones exactas, las fechas de caducidad, entre otras cosas. "
+"Este nivel de detalle permite llevar un rastreo más preciso, por ejemplo, al"
+" trabajar con productos perecederos o regulados."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:287
 msgid ""
@@ -11058,26 +11211,34 @@ msgid ""
 "click on the :icon:`fa-bars` :guilabel:`Moves` smart button at the top of "
 "the page."
 msgstr ""
+"Para entrar a esta página, primero :ref:`seleccione una recepción de almacén"
+" o una orden de entrega <inventory/product_management/incoming-outgoing-"
+"products>` y después haga clic en el botón inteligente :icon:`fa-bars` "
+":guilabel:`Movimientos` que se encuentra en la parte superior de la página."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:291
 msgid ""
 "In the :guilabel:`Lot/Serial Number` column, manually type (or select from "
 "the drop-down menu) the desired serial numbers for each individual product."
 msgstr ""
+"En la columna :guilabel:`Número de serie o lote` escriba (o seleccione con "
+"el menú desplegable) los números de serie deseados para cada producto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst-1
 msgid "Show the detailed Moves page."
-msgstr ""
+msgstr "Visualización de la página de movimientos detallados."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:297
 msgid ""
 "When finished, click the receipt/delivery order's breadcrumbs, and the "
 "assigned serial numbers are automatically saved."
 msgstr ""
+"Al finalizar haga clic en las migas de pan de la recepción o la orden de "
+"entrega. Los números de serie asignados se guardan de forma automática."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:301
 msgid "Traceability & reporting"
-msgstr ""
+msgstr "Trazabilidad y reportes"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:303
 msgid ""
@@ -11085,10 +11246,14 @@ msgid ""
 " and traceability reports to see the entire lifecycle of a product: when and"
 " where it originated, where it was stored, and who it was shipped to."
 msgstr ""
+"Los fabricantes y las empresas pueden consultar el tablero de *números de "
+"serie y lotes*, así como los reportes de trazabilidad, para ver el ciclo de "
+"vida completo de un producto: cuándo y dónde se originó, dónde se almacenó y"
+" a quién se envió."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:308
 msgid "Lots/Serial Numbers dashboard"
-msgstr ""
+msgstr "Tablero de números de serie y lotes"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:310
 msgid ""
@@ -11114,6 +11279,10 @@ msgid ""
 "right` :guilabel:`(expand)` icon to show which serial numbers are assigned "
 "to the chosen product."
 msgstr ""
+"En el tablero de :guilabel:`números de serie o lote` aparecerán de forma "
+"predeterminada los productos que tienen un número de serie asignado. Haga "
+"clic en el icono :icon:`fa-caret-right` :guilabel:`(expandir)` para ver qué "
+"números de serie están asignados al producto seleccionado."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:321
 msgid ""
@@ -11123,6 +11292,13 @@ msgid ""
 " which reveals a mini drop-down menu. From this mini drop-down menu, select "
 ":guilabel:`Lot/Serial Number`, and click :guilabel:`Apply`."
 msgstr ""
+"Para agrupar por números de serie (o lotes), primero elimine todos los "
+"filtros predeterminados de la barra de búsqueda en la esquina superior "
+"derecha. Después, haga clic en el icono :icon:`fa-caret-down` "
+":guilabel:`(flecha hacia abajo)` y seleccione :guilabel:`Agregar grupo "
+"personalizado`, esta acción abrirá un menú desplegable con el que podrá "
+"seleccionar un :guilabel:`número de serie o lote`. Por último, haga clic en "
+":guilabel:`Aplicar`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:326
 msgid ""
@@ -11131,6 +11307,10 @@ msgid ""
 "number. For unique serial numbers that are not reused, there should be just "
 "one product per serial number."
 msgstr ""
+"Al hacer esto aparecerán todos los números de serie y lotes existentes. "
+"Puede abrir las filas para visualizar todas las cantidades de producto que "
+"tienen ese número de serie o lote asignado. Para los números de serie únicos"
+" que no se volverán a usar solo debe haber un producto por número de serie."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst-1
 msgid "Serial numbers reporting page with drop-down lists."
@@ -11145,10 +11325,16 @@ msgid ""
 "stock on-hand using that serial number, and any operations made using that "
 "serial number."
 msgstr ""
+"Para obtener más información sobre un número de serie (o lote), haga clic en"
+" la línea del número para abrir el formulario de ese :guilabel:`número de "
+"serie` en específico. Una vez en ese formulario, haga clic en los botones "
+"inteligentes :guilabel:`Ubicación` y :guilabel:`Trazabilidad` para ver todas"
+" las existencias a la mano que usan ese número de serie, así como las "
+"operaciones realizadas con el mismo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:340
 msgid ":doc:`Reassign <reassign>`"
-msgstr ""
+msgstr ":doc:`Reasignar <reassign>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:342
 msgid ""
@@ -11157,18 +11343,22 @@ msgid ""
 " Number` field or the ability to filter by serial number. Go to "
 ":menuselection:`Inventory app --> Reporting` to access:"
 msgstr ""
+"Además de usar el tablero de :guilabel:`números de serie o lote`, hay varias"
+" plantillas de reportes que muestran el campo :guilabel:`Número de serie o "
+"lote` y que permiten filtrar por número de serie. Vaya a "
+":menuselection:`Inventario --> Reportes` para acceder a:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:346
 msgid ":guilabel:`Locations` report"
-msgstr ""
+msgstr "Reporte de :guilabel:`ubicaciones`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:347
 msgid ":guilabel:`Moves History` report"
-msgstr ""
+msgstr "Reporte de :guilabel:`historial de movimientos`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:348
 msgid ":guilabel:`Moves Analysis` report"
-msgstr ""
+msgstr "Reporte de :guilabel:`análisis de movimientos`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving.rst:5
 msgid "Shipping and receiving"
@@ -14551,15 +14741,20 @@ msgid ""
 " up, these rules help automate the logistics of product movement based on "
 "specific conditions."
 msgstr ""
+"En Odoo, las *rutas* controlan el movimiento de los productos entre "
+"distintos lugares, ya sea interno o externo, mediante reglas push y pull. "
+"Luego de configurar estas reglas, podrá automatizar la logística del "
+"movimiento de sus productos gracias a condiciones específicas."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:10
 msgid ""
 "`Odoo Tutorials: Routes <https://www.youtube.com/watch?v=qkhDUezyZuc>`_"
 msgstr ""
+"`Tutoriales de Odoo: Rutas <https://www.youtube.com/watch?v=qkhDUezyZuc>`_"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:11
 msgid ":doc:`Standard routes in Odoo <../daily_operations>`"
-msgstr ""
+msgstr ":doc:`Rutas estandar en Odoo <../daily_operations>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:14
 msgid ""
@@ -14567,10 +14762,13 @@ msgid ""
 ":ref:`packagings <inventory/product_management/route-on-packaging>`, and on "
 "the sales order line."
 msgstr ""
+"Las rutas son aplicables a productos, categorías de productos, métodos de "
+"envío, :ref:`embalajes <inventory/product_management/route-on-packaging>` y "
+"a las líneas de las órdenes de venta."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:18
 msgid "About routes and terminology"
-msgstr ""
+msgstr "Acerca de las rutas y terminología"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:20
 msgid ""
@@ -14640,6 +14838,8 @@ msgid ""
 "Push rules are used to *supply products into a storage locations* as soon as"
 " they arrive at a specific receiving location."
 msgstr ""
+"Las reglas push se utilizan para *suministrar productos a las ubicaciones de"
+" almacenamiento* en cuanto lleguen a una ubicación de recepción específica."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:54
 msgid ""
@@ -14657,14 +14857,19 @@ msgid ""
 "can be applied to different products, allowing for customized storage "
 "locations."
 msgstr ""
+"En una :doc:`ruta de recepción de un solo paso <receipts_delivery_one_step>`"
+" que utiliza una regla push, esta podrá trasladar un producto de manera "
+"automática a la *ubicación de almacenamiento* cuando un producto llega al "
+"almacén. Es posible aplicar distintas reglas push a diferentes productos y "
+"esto permite personalizar las ubicaciones de almacenamiento personalizadas."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:66
 msgid "Rule for a Receive in one step route."
-msgstr ""
+msgstr "Regla para la ruta \"Recibir en un paso\"."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:66
 msgid "Push rule for the 'Receive in one step' route."
-msgstr ""
+msgstr "Regla push para la ruta \"Recibir en un paso\"."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:68
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:90
@@ -14672,6 +14877,9 @@ msgid ""
 "For more information about configuring rules, skip to the :ref:`Configure "
 "rules section <inventory/shipping_receiving/configure-rules>`."
 msgstr ""
+"Vaya a la :ref:`sección sobre cómo configurar reglas "
+"<inventory/shipping_receiving/configure-rules>` para obtener más "
+"información."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:72
 msgid "Pull rules"
@@ -14683,6 +14891,9 @@ msgid ""
 ":doc:`need to restock "
 "<../../warehouses_storage/replenishment/reordering_rules>`."
 msgstr ""
+"Las reglas pull activan el movimientos de los productos bajo pedido, como "
+"una orden de venta o una :doc:`solicitud de reabastecimiento "
+"<../../warehouses_storage/replenishment/reordering_rules>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:77
 msgid ""
@@ -14694,14 +14905,22 @@ msgid ""
 "rule creates a transfer from *Stock* to *Output*. The warehouse workers then"
 " process these transfers in the reverse order: picking, then shipping."
 msgstr ""
+"Las reglas pull funcionan hacia atrás desde la ubicación de demanda. Por "
+"ejemplo, en una ruta de :ref:`entrega en dos pasos "
+"<inventory/shipping_receiving/two-step-delivery>`, donde los artículos pasan"
+" de *Stock* a *Salida* antes de ser entregados en la *ubicación del "
+"cliente*, la regla pull primero crea un traslado de *Salida* hacia el "
+"cliente. Si el producto no está en *Salida*, otra regla pull crea un "
+"traslado de *Stock* a *Salida*. Después, los trabajadores del almacén "
+"procesan estos traslados en orden inverso: preparación y luego envío."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:88
 msgid "Example pull rule."
-msgstr ""
+msgstr "Regla pull de ejemplo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:88
 msgid "Pull rules for the 'Deliver in two steps' route."
-msgstr ""
+msgstr "Reglas pull para la ruta \"Entrega en dos pasos\"."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:98
 msgid ""
@@ -15840,6 +16059,11 @@ msgid ""
 "to `Scan a serial number` to record the unique serial number for "
 ":ref:`product tracking <inventory/product_management/enable-lots>`."
 msgstr ""
+"Ya se recolectaron `1/2` unidades del `gabinete con puertas`, y después de "
+"escanear el código de barras del producto del segundo gabinete, Odoo le pide"
+" al usuario que `escanee un número de serie` para registrar el número de "
+"serie único para el :ref:`seguimiento del producto "
+"<inventory/product_management/enable-lots>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:0
 msgid "Display products to be picked in barcode view."
@@ -20444,13 +20668,15 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:3
 msgid "Dispatch management system"
-msgstr ""
+msgstr "Sistema de gestión de despacho"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:5
 msgid ""
 "The *dispatch management system* feature in Odoo is used to plan and build "
 "shipments. Key features include:"
 msgstr ""
+"La función de *sistema de gestión de despachos* en Odoo se utiliza para "
+"planificar y crear envíos. Sus funciones clave incluyen:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:8
 msgid ""
@@ -20459,58 +20685,77 @@ msgid ""
 "vehicle assignments based on fleet capacity. This ensures the right products"
 " are packed into the appropriate trucks for delivery."
 msgstr ""
+"**Edificio de carga**: Agrupar productos para transportistas específicos, "
+"asignar esos :doc:`lotes <../picking_methods/batch>` a los muelles de carga "
+"y gestionar asignaciones de vehículos según la capacidad de la flota. Así "
+"nos aseguramos de empacar los productos correctos en los camiones correctos "
+"para la entrega."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:11
 msgid ""
 ":doc:`Fleet management <../../../../hr/fleet>`: Track and manage the "
 "capacity of in-house delivery vehicles."
 msgstr ""
+":doc:`Gestión de flota <../../../../hr/fleet>`: Monitoree y gestione la "
+"capacidad de vehículos internos para entrega."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:17
 msgid ""
 "To use the dispatch management system, the following setup must be "
 "completed:"
 msgstr ""
+"Para usar el sistema de gestión de expedción, debe seguir los siguientes "
+"pasos:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:19
 msgid ":ref:`Install <general/install>` the **Fleet** application."
-msgstr ""
+msgstr ":ref:`Instale <general/install>` la aplicación **Flota**."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:20
 msgid ""
 "Configure vehicle :ref:`capacity (volume and weight) "
 "<inventory/shipping_receiving/vehicle-capacity>`."
 msgstr ""
+"Configure la :ref:`capacidad (volumen y peso) "
+"<inventory/shipping_receiving/vehicle-capacity>` del vehículo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:22
 msgid "Enter vehicle :doc:`car model(s) <../../../../hr/fleet/models>`."
-msgstr ""
+msgstr "Ingrese el :doc:`modelo <../../../../hr/fleet/models>` del vehículo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:23
 msgid ""
 "Enable :ref:`necessary features <inventory/shipping_receiving/inventory-"
 "features>` in the **Inventory** app."
 msgstr ""
+"Active todas las :ref:`funciones necesarias "
+"<inventory/shipping_receiving/inventory-features>` en la alicación "
+"**Inventario**."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:25
 msgid ""
 "Set up :ref:`vehicles as delivery methods "
 "<inventory/shipping_receiving/delivery-method-for-carrier>`."
 msgstr ""
+"Configure :ref:`vehículos como métodos de entrega "
+"<inventory/shipping_receiving/delivery-method-for-carrier>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:27
 msgid "Create :ref:`dock locations <inventory/shipping_receiving/docks>`."
 msgstr ""
+"Cree :ref:`ubicaciones de carga <inventory/shipping_receiving/docks>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:32
 msgid "Vehicle capacity"
-msgstr ""
+msgstr "Capacidad del vehículo"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:34
 msgid ""
 "To configure the vehicle capacity, go to :menuselection:`Fleet app --> "
 "Configuration --> Categories`."
 msgstr ""
+"Para configurar la capacidad el vehículo vaya a  :menuselection:`la "
+"aplicación Flota --> Configuración--> Categorías`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:37
 msgid ""
@@ -20520,28 +20765,37 @@ msgid ""
 "vehicle capacity in the :guilabel:`Max Weight` (in kilograms) and "
 ":guilabel:`Max Volume` (in cubic meters) fields."
 msgstr ""
+"Después, haga clic en :guilabel:`Nuevo` para agregar una nueva categoría o "
+"haga clic en una existente para modificarla. En el campo :guilabel:`Nombre` "
+"ingrese el tipo de vehículo (e.g., `camioneta`, `furgón`, o `camión de "
+"carga`). Después, ingrese la capacidad del vehículo en los campos "
+":guilabel:`Peso máximo` (en kilogramos) y :guilabel:`Volumen máximo` (en "
+"metros cúbicos)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst-1
 msgid "Vehicle categories with defined weight and volume."
-msgstr ""
+msgstr "Categorías del vehículo con peso y volumen definido."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:47
 msgid ""
 "The units of measurement for vehicle capacity are assigned at the global "
 "level in the **Settings** app, in the :guilabel:`Units of Measure` section."
 msgstr ""
+"Las unidades de medida para la capacidad del vehículo se asignan de manera "
+"genera en la aplicación **Ajustes**, en la sección :guilabel:`Unidades de "
+"medida`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:0
 msgid "Show units of measure settings."
-msgstr ""
+msgstr "Imagen de los ajustes de las unidades de medida."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:54
 msgid ":ref:`Vehicle category <fleet/categories>`"
-msgstr ""
+msgstr ":ref:`Categoría del vehículo <fleet/categories>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:58
 msgid "Car model"
-msgstr ""
+msgstr "Modelo del vehículo"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:60
 msgid ""
@@ -20550,12 +20804,18 @@ msgid ""
 "automatically applies weight and volume capacities to all vehicles of that "
 "type."
 msgstr ""
+"Configurar el modelo de un vehículo es necesario para agregarlos a Odoo. "
+"Asegúrese de que seleccione la *Categoría* correcta para un modelo. Así se "
+"aplicará de forma automática las capacidades de peso y volumen de todos los "
+"vehículos de esa categoría."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:64
 msgid ""
 "To configure, navigate to :menuselection:`Fleet app --> Configuration --> "
 "Models`."
 msgstr ""
+"Para configurarlo, vaya a :menuselection:`la aplicación Flota --> "
+"Configuración --> Modelos`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:66
 msgid ""
@@ -20563,26 +20823,35 @@ msgid ""
 ":guilabel:`New` in the top-left corner to create a new model. Then, set the "
 "relevant :guilabel:`Category` field to the relevant vehicle category."
 msgstr ""
+"Desde la lista de  :guilabel:`Modelos` seleccione uno existente o haga clic "
+"en :guilabel:`Nuevo` en la esquina superior izquierda para crear uno nuevo. "
+"Después, configure el campo :guilabel:`Categoría` en la categoría de "
+"vehículo relevante."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:71
 msgid ":doc:`Create car model <../../../../hr/fleet/models>`"
-msgstr ""
+msgstr ":doc:`Crear un modelo de vehículo <../../../../hr/fleet/models>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:77
 msgid "Inventory settings"
-msgstr ""
+msgstr "Ajustes de Inventario"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:79
 msgid ""
 "Next, go to :menuselection:`Inventory app --> Configuration --> Settings`, "
 "and enable the required features for dispatch management."
 msgstr ""
+"Después vaya a :menuselection:`la aplicación Inventario --> Configuración "
+"--> Ajustes` y active las funciones requeridas para la gestión de envío."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:82
 msgid ""
 "In the :guilabel:`Operations` section, tick the :guilabel:`Batch, Wave & "
 "Cluster Transfers` checkbox to prepare batches of orders for delivery."
 msgstr ""
+"En la sección :guilabel:`Operaciones` marque la casilla de verificación "
+":guilabel:`Traslados por lote, olas y por preparación de varias órdenes` "
+"para preparar los lotes de órdenes para entrega."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:85
 msgid ""
@@ -20591,6 +20860,10 @@ msgid ""
 "specific vehicles to be :ref:`set as carriers "
 "<inventory/shipping_receiving/delivery-method-for-carrier>`."
 msgstr ""
+"En la sección :guilabel:`Envío` marque las casillas :guilabel:`Métodos de "
+"entrega`  y :guilabel:`Sistema de gestión de despacho`. Así habrá vehículos "
+"específicos que se podrán :ref:`configurar como transportistas "
+"<inventory/shipping_receiving/delivery-method-for-carrier>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:89
 msgid ""
@@ -20598,12 +20871,16 @@ msgid ""
 " checkbox to assign specific locations in the warehouse as loading zones for"
 " delivery trucks."
 msgstr ""
+"En la sección :guilabel:`Almacén` marque la casilla de verificación "
+":guilabel:`Ubicaciones de almacenamiento` para asignar ubicaciones "
+"específicas en el almacén como zonas de carga o camiones de entrega."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:92
 msgid ""
 "Then, once all the configurations are complete, be sure to click "
 ":guilabel:`Save`."
 msgstr ""
+"Al completar todas las configuraciones, haga clic en :guilabel:`Guardar`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:97
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:90
@@ -20615,6 +20892,8 @@ msgid ""
 "Next, assign each delivery vehicle as a *Carrier* by configuring a delivery "
 "method."
 msgstr ""
+"Después, configure un método de envío para asignar cada vehículo de entrega "
+"como un *Transportista*."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:101
 msgid ""
@@ -20622,10 +20901,13 @@ msgid ""
 "Configuration --> Delivery Methods`. Select an existing delivery method, or "
 "click :guilabel:`New`."
 msgstr ""
+"Para configurar los métodos de envío, vaya a :menuselection:`la aplicación "
+"Inventario --> Configuración --> Métodos de envío`. Seleccione un método de "
+"envío o haga clic en :guilabel:`Nuevo`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:105
 msgid ":doc:`Configure delivery method <../setup_configuration>`"
-msgstr ""
+msgstr ":doc:`Configurar método de entrega <../setup_configuration>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:107
 msgid ""
@@ -20633,6 +20915,10 @@ msgid ""
 "method. It is recommended to use identifying information, such as the "
 "vehicle description and license plate number (e.g. `Truck 123-ABCD`)."
 msgstr ""
+"En el formulario :guilabel:`Método de entrega` ingrese un nombre para el "
+"método de entrega. Lo recomendable es usar información de identificación, "
+"como la descripción del vehículo y número de la placa (por ejemplo, "
+"`Camioneta 123-ABCD`)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:111
 msgid ""
@@ -20641,6 +20927,10 @@ msgid ""
 "on Rules`. For more information about how shipping prices are calculated, "
 "refer to the :doc:`Delivery method <../setup_configuration>` article."
 msgstr ""
+"Como los métodos de entrega se gestionan de forma interna, configure el "
+":guilabel:`Proveedor` ya sea como :guilabel:`Precio fijo` o :guilabel:`Por "
+"reglas`. Para más información sobre cómo se calculan los precios de envío, "
+"vaya al artículo :doc:`Método de entrega <../setup_configuration>` ."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:115
 msgid ""
@@ -20649,6 +20939,10 @@ msgid ""
 "<inventory/shipping_receiving/delivery-product>` on the sales order or "
 "invoice."
 msgstr ""
+"Después, configure un :guilabel:`Producto de entrega`, que es el producto "
+"que se muestra como el :ref:`cargo de entrega "
+"<inventory/shipping_receiving/delivery-product>` del cliente en la orden de "
+"venta o la factura."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:119
 msgid ""
@@ -20656,20 +20950,25 @@ msgid ""
 ":guilabel:`Countries`, :guilabel:`States`, or :guilabel:`Zip Prefixes` to "
 "limit the range of local delivery."
 msgstr ""
+"También, en la pestaña :guilabel:`Availability` configure el "
+":guilabel:`País`, :guilabel:`Estados`, o :guilabel:`Prefijos de C.P.` para "
+"limitar el rango de entrega local."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:125
 msgid "Delivery method form."
-msgstr ""
+msgstr "Formulario de método de envío."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:125
 msgid ""
 "Example delivery method, with the :guilabel:`Zip Prefixes` set to San "
 "Francisco's zip code."
 msgstr ""
+"Método de entrega de ejemplo, con los :guilabel:`Prefijos de C.P.` "
+"configurados al código ZIP de San Francisco."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:130
 msgid "Dock locations"
-msgstr ""
+msgstr "Ubicaciones del muelle de carga"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:132
 msgid ""
@@ -20677,6 +20976,9 @@ msgid ""
 "dock locations, go to :menuselection:`Inventory app --> Configuration --> "
 "Locations`."
 msgstr ""
+"Cada muelle de carga debe tener una ubicación específica. Para crear o "
+"configurar ubicaciones de muelle, vaya a :menuselection:`la aplicación "
+"Inventario --> Configuración --> Ubicaciones`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:135
 msgid ""
@@ -20684,20 +20986,25 @@ msgid ""
 "the :guilabel:`Additional Information` section, tick the :guilabel:`Is a "
 "Dock Location` checkbox."
 msgstr ""
+"Haga clic en la ubicación deseada, que abrirá un formulario de "
+":guilabel:`Ubicación`. En la sección :guilabel:`Información adicional` "
+"marque la casilla :guilabel:`Es una ubicación del muelle`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:141
 msgid "Location configuration."
-msgstr ""
+msgstr "Configuración de ubicación."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:141
 msgid ""
 "Location configuration page with :guilabel:`Is a Dock Location` checkbox "
 "ticked."
 msgstr ""
+"La página de configuración de ubicación con la casilla :guilabel:`Es una "
+"ubicación del muelle` marcada."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:144
 msgid "Build loads"
-msgstr ""
+msgstr "Construir cargas"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:146
 msgid ""
@@ -20706,34 +21013,43 @@ msgid ""
 "batches <inventory/shipping_receiving/create-batch>`. Then, :ref:`configure "
 "the batch form <inventory/shipping_receiving/batch-form>`, as needed."
 msgstr ""
+"Una vez que termine la configuración :ref:`asigne las órdenes a un "
+"transportista <inventory/shipping_receiving/assign-carrier>` y "
+":ref:`agúpelas en lotes <inventory/shipping_receiving/create-batch>`. "
+"Después, :ref:`configure el el formulario de lote "
+"<inventory/shipping_receiving/batch-form>`, como lo necesite."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:151
 msgid ""
 "To group products, go to the :menuselection:`Inventory app --> Operations "
 "--> Deliveries`, which reveals a list of outgoing deliveries."
 msgstr ""
+"Para agrupar productos vaya a  :menuselection:`la aplicación Inventario --> "
+"Operaciones --> Entregas`, para mostrar una lista de entregas salientes."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:155
 msgid ""
 "Since this article is about a specific use case, explore details about each "
 "picking method in their dedicated articles."
 msgstr ""
+"Como el artículo es de un caso de uso específico, identifique los detalles "
+"sobre cada método de recolección en sus artículos específicos."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:158
 msgid ":doc:`../picking_methods/batch`"
-msgstr ""
+msgstr ":doc:`../picking_methods/batch`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:159
 msgid ":doc:`Wave picking <../picking_methods/wave>`"
-msgstr ""
+msgstr ":doc:`Recolección por olas (Wave picking) <../picking_methods/wave>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:160
 msgid ":doc:`../picking_methods/cluster`"
-msgstr ""
+msgstr ":doc:`../picking_methods/cluster`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:166
 msgid "Carrier assignment"
-msgstr ""
+msgstr "Asignación de transportista"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:168
 msgid ""
@@ -20741,12 +21057,18 @@ msgid ""
 "the :icon:`oi-settings-adjust` :guilabel:`(settings)` icon in the top-right "
 "corner, and ticking the :guilabel:`Carrier` checkbox."
 msgstr ""
+"Muestre la columna *Transportista*, si no se muestra de forma "
+"predeterminada, haga clic en el icono :icon:`oi-settings-adjust` "
+":guilabel:`(ajustes)` y marque la casilla de verificación "
+":guilabel:`Transportista` ."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:173
 msgid ""
 "Other useful columns to enable can be :guilabel:`Zip` code, "
 ":guilabel:`Shipping Weight`, and :guilabel:`Shipping Volume`."
 msgstr ""
+"Otras columnas que sería util activar pueden ser el código :guilabel:`Zip`, "
+":guilabel:`Peso de envío`, y :guilabel:`Volumen del envío`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:176
 msgid ""
@@ -20758,32 +21080,47 @@ msgid ""
 "orders being added to the batch. Click :guilabel:`Confirm`, and the carrier "
 "is updated for all the selected records."
 msgstr ""
+"Para seleccionar las órdenes de entrega para el lote, debe marcar las "
+"casillas de verificación a la izquierda. Después, haga clic en la línea del "
+"campo :guilabel:`Transportista`. En la ventana emergente resultante debe "
+"seleccionar el :ref:`método de "
+"entrega<inventory/shipping_receiving/delivery-method-for-carrier>` del "
+"vehículo deseado. Aparecerá una ventana emergente de "
+":guilabel:`Confirmación` en la que se indicará el número de órdenes que se "
+"está agregando al lote. Haga clic en :guilabel:`Confirmar` y el "
+"transportista se actualizará para todos los registros seleccionados."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:185
 msgid "Set carrier."
-msgstr ""
+msgstr "Configurar transportista."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:185
 msgid ""
 "The delivery method `Truck 1-MER-001` is set as the :guilabel:`Carrier` for "
 "two delivery orders."
 msgstr ""
+"El método de entrega `Camión 1-MER-001` está configurado como el "
+":guilabel:`Transportista` de dos órdenes de entrega."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:190
 msgid "Create batch"
-msgstr ""
+msgstr "Crear lote"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:192
 msgid ""
 "With the carrier set, begin adding orders to a batch or wave transfer by "
 "ticking the checkbox."
 msgstr ""
+"Ya que haya configurado el transportista, primero marque la casilla para "
+"agregar órdenes a un lote o transferencia por olas."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:195
 msgid ""
 "If a delivery order is already assigned to a batch transfer, assigning a "
 "batch transfer here does **not** update it."
 msgstr ""
+"Si una orden de entrega ya se asignó a una transferencia por lote, asignar "
+"una transferencia por lote aquí **no** la actualizará."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:198
 msgid ""
@@ -20792,18 +21129,23 @@ msgid ""
 "ensure :guilabel:`Add to` is set to :guilabel:`a new [batch/wave] transfer`,"
 " then click :guilabel:`Confirm`."
 msgstr ""
+"Después, haga clic en el botón :icon:`fa-cog` :guilabel:`Acciones` y haga "
+"clic ya sea en :guilabel:`Agregar a lote` o :guilabel:`Agregar a "
+"preparaciones de pedidos por olas`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:205
 msgid "Example wave."
-msgstr ""
+msgstr "Ola de ejemplo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:205
 msgid "Delivery orders are selected to be grouped into a wave transfer."
 msgstr ""
+"Las órdenes de entrega se seleccionan para agruparlas en una transferencia "
+"por ola."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:208
 msgid "Alternative batch creation method"
-msgstr ""
+msgstr "Método alternativo de creación por lote"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:210
 msgid ""
@@ -20812,82 +21154,107 @@ msgid ""
 " click the :icon:`fa-ellipsis-v` :guilabel:`(three dots)` icon. In the "
 "resulting drop-down menu, click :guilabel:`Prepare batch`."
 msgstr ""
+"También puede crear lotes en la aplicación :menuselection:`Inventario` y en "
+"la tarjeta :guilabel:`Órdenes de entrega`, haga clic en el icono :icon:`fa-"
+"ellipsis-v` :guilabel:`(tres puntos)`. En el menú resultante, haga clic en "
+":guilabel:`Preparar lote`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:215
 msgid ""
 "The :guilabel:`Transport Management` drop-down menu contains other tools for"
 " fleet management:"
 msgstr ""
+"El menú desplegable :guilabel:`Gestión de transporte` contiene otras "
+"herramientas para gestionar su flota."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:217
 msgid ":guilabel:`Manage Batches`: open list of batches"
-msgstr ""
+msgstr ":guilabel:`Gestionar lotes`: abrir la lista de lotes"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:218
 msgid ""
 ":guilabel:`Dock Dispatching`: open weekly calendar view of scheduled batch "
 "operations"
 msgstr ""
+":guilabel:`Envío en muelle`: abrir la vista semanal del calendario de "
+"operaciones en lote programadas"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:219
 msgid ""
 ":guilabel:`Batches by Route`: Kanban view of batches grouped by fulfillment "
 "route"
 msgstr ""
+":guilabel:`Lotes por ruta`: vista kanban de lotes agrupados por ruta de "
+"logística"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:220
 msgid ""
 ":guilabel:`Calendar`: open hourly calendar view of scheduled operations"
 msgstr ""
+":guilabel:`Calendario`: abrir la vista por hora del calendario para "
+"operaciones programadas"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:221
 msgid ":guilabel:`Statistics`: open pivot table of the batch transfers"
 msgstr ""
+":guilabel:`Estadísticas`: abrir la tabla dinámica de las transferencias por "
+"lote"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst-1
 msgid ""
 "Show prepare batch option from the Transport Management drop-down menu."
 msgstr ""
+"Mostrar la opción para preparar el lote en el menú desplegable Gestión de "
+"transporte."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:229
 msgid "Batch form"
-msgstr ""
+msgstr "Formulario de lote"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:233
 msgid ""
 ":guilabel:`Responsible`: employee assigned to the picking. Leave blank if "
 "*any* worker can fulfill this picking."
 msgstr ""
+":guilabel:`Responsable`: empleado asignado a la recolección. Déjelo en "
+"blanco si *ningún* empleado puede hacer la recolección."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:239
 msgid ":guilabel:`Dock Location`: select the loading location."
-msgstr ""
+msgstr ":guilabel:`Ubicación del muelle`: seleccione la ubicación de carga"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:240
 msgid ""
 ":guilabel:`Vehicle`: select the vehicle, which will auto-fill "
 ":guilabel:`Vehicle Category`."
 msgstr ""
+":guilabel:`Vehículo`: seleccione el vehículo que llenará la "
+":guilabel:`Categoría del vehículo` en automático."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:241
 msgid ""
 ":guilabel:`Vehicle Category`: show if the order exceeds the :ref:`vehicle's "
 "capacity limits <inventory/shipping_receiving/vehicle-capacity>`"
 msgstr ""
+":guilabel:`Categoría del vehículo`: muestra si la orden excede :ref:`los "
+"límites de capacidad del vehículo <inventory/shipping_receiving/vehicle-"
+"capacity>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:245
 msgid ""
 "The :guilabel:`Volume` bar is grayed out because the capacity has been "
 "reached."
 msgstr ""
+"La barra de :guilabel:`Volumen` estará opac porque la capacidad se habrá "
+"alcanzado."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:0
 msgid "Show batch form."
-msgstr ""
+msgstr "Imagen del formulario del lote"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:251
 msgid "Prepare delivery route"
-msgstr ""
+msgstr "Preparar la ruta de entrega"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:253
 msgid ""
@@ -20895,26 +21262,35 @@ msgid ""
 "the batch or wave form to view delivery destinations on a map. Selecting an "
 "individual delivery order pinpoints its location."
 msgstr ""
+"Para ayudar a preparar al conductor, haga clic en el botón "
+":guilabel:`Mapa`en la parte superior del lote o formulario de hola para ver "
+"los destinos de entrega en el mapa. Seleccionar una entrega individual hará "
+"que se resalte su ubicación."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:257
 msgid ""
 "The :guilabel:`Map` button is only visible for transfers with the "
 ":guilabel:`In progress` status."
 msgstr ""
+"El botón :guilabel:`Mapa` solo está disponible para transferencias con el "
+"estado :guilabel:`En progreso`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst-1
 msgid "Show map in Odoo, with information of the delivery orders."
 msgstr ""
+"Imagen del mapa en Odoo, con la información de las órdenes de entrega."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:262
 msgid ""
 "Additionally, use the :guilabel:`View in Google Maps` button to generate a "
 "route from the warehouse to the delivery points."
 msgstr ""
+"Además, puede usar el botón :guilabel:`Ver en Google Maps` para generar una "
+"ruta desde el almacén hasta los puntos de entrega."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst-1
 msgid "Show Google Map route."
-msgstr ""
+msgstr "Imagen de la ruta de Google Maps"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:3
 msgid "FedEx integration"
@@ -24527,7 +24903,7 @@ msgstr ":doc:`Starshipit <starshipit_shipping>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:48
 msgid "Australia and New Zealand"
-msgstr ""
+msgstr "Australia y Nueva Zelanda"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:51
 msgid "Other services from DHL are **not** supported."
@@ -31136,7 +31512,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:3
 msgid "Inter-warehouse replenishment"
-msgstr ""
+msgstr "Reabastecimiento entre almacenes"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:7
 msgid ""
@@ -31147,24 +31523,37 @@ msgid ""
 "automatically generating *inter-warehouse transfers*. Odoo "
 ":guilabel:`Inventory` manages these transfers to keep stores in stock."
 msgstr ""
+"Cuando una empresa opera en varias ubicaciones, como almacenes, tiendas "
+"minoristas, o centros de fabricación, a veces es necesario reabastecer desde"
+" el almacén central. Odoo ysa una configuración de *Ruta* que activa las "
+"ubicaciones para reabastecer desde el centro central de distribución, así se"
+" generará en automático una *transferencia entre almacenes*. La aplicación "
+":guilabel:`Inventario` gestiona estas transferencias para mantener las "
+"existencias de las tiendas."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:13
 msgid ""
 "This guide explains how to conduct inter-warehouse transfers using two "
 "replenishment strategies:"
 msgstr ""
+"Esta guía explica cómo realizar transferencias entre almacenes usando dos "
+"estrategias de reabastecimiento:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:15
 msgid ":ref:`Make to order (MTO) <inventory/warehouses_storage/MTO>`"
-msgstr ""
+msgstr ":ref:`Fabricación sobre pedido <inventory/warehouses_storage/MTO>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:16
 msgid ":ref:`Reordering rule <inventory/warehouses_storage/reordering-rule>`"
 msgstr ""
+":ref:`Regla de reordenamiento <inventory/warehouses_storage/reordering-"
+"rule>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:19
 msgid ":doc:`Difference between MTO and reordering rules <../replenishment>`"
 msgstr ""
+":doc:`Diferencia entre fabricación sobre pedido y reglas de reordenamiento "
+"<../replenishment>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:24
 msgid ""
@@ -31173,10 +31562,15 @@ msgid ""
 "In the :guilabel:`Warehouse` section, activate :guilabel:`Storage "
 "Locations`. Then, click :guilabel:`Save` to apply the setting."
 msgstr ""
+"La configuración inicial de ambas estrategias de reabastecimiento es la "
+"misma. Primero vaya a :menuselection:`la aplicación Inventario--> "
+"Configuración --> Ajustes`. En la sección :guilabel:`Almacén` active las "
+":guilabel:`Ubicaciones de almacenamiento` y después haga clic en "
+":guilabel:`Guardar` para aplicar el ajuste."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst-1
 msgid "Enable Storage Locations in Inventory settings."
-msgstr ""
+msgstr "Active las ubicaciones de almacenamiento en los ajustes de Inventario"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:35
 msgid ""
@@ -31184,12 +31578,17 @@ msgid ""
 "locations by going to :menuselection:`Inventory app --> Configuration --> "
 "Warehouses`."
 msgstr ""
+"Configure los ajustes para el almacén central y conecte las ubicaciones de "
+"almacenamiento en :menuselection:`Inventario --> Configuración --> "
+"Almacenes`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:39
 msgid ""
 "Each central warehouse and other locations *must* have its own warehouse. "
 "For example, each shop is considered a local warehouse."
 msgstr ""
+"Cada almacén central y otras ubicaciones *deben* tener su propio almacén. "
+"Por ejemplo, cada tienda se considera un almacén local."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:42
 msgid ""
@@ -31198,6 +31597,10 @@ msgid ""
 "name and a :guilabel:`Short Name`, which will appear on that warehouse's "
 "transfers."
 msgstr ""
+"Seleccione un almacén existente o cree uno nuevo para reabastecerlo desde el"
+" alamacén central, solo debe hacer clic en :guilabel:`Nuevo`. Después, "
+"póngale un nombre y un :guilabel:`Nombre corto` al almacén, que aparecerá en"
+" las transferencias del almacén."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:46
 msgid ""
@@ -31207,6 +31610,11 @@ msgid ""
 "warehouse, make sure to check those warehouses' boxes too. Now, Odoo knows "
 "which warehouses can resupply this warehouse."
 msgstr ""
+"En la pestaña de :guilabel:`Configuración del almacén` vaya al campo "
+":guilabel:`Reabastecer de`. Marque la casilla a un lado del nombre del "
+"almacén central. Si más de un almacén puede reabastecer a este, asegpurese "
+"de marcar las casillas de estos almacenes también. Ahora Odoo sabe qué "
+"almacenes pueden reabastecer este almacén."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:52
 msgid ""
@@ -31214,10 +31622,13 @@ msgid ""
 "warehouse`. The :guilabel:`Resupply From` field is set to this warehouse on "
 "the shop's warehouse configuration page."
 msgstr ""
+"El almacén central que reabastecerá a las tiendas se llama `Almacén "
+"central`. El campo :guilabel:`Reabastecer de` está configurado a este "
+"almacén en la página de configuración del almacén de la tienda."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:57
 msgid ":doc:`../inventory_management/warehouses`"
-msgstr ""
+msgstr ":doc:`../inventory_management/warehouses`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst-1
 msgid "Supply one warehouse with another in the Warehouse Configuration tab."
@@ -31233,12 +31644,16 @@ msgid ""
 "Products must also be configured properly in order for them to be "
 "transferred between warehouses."
 msgstr ""
+"También debe configurar bien los productos para que se puedan transferir "
+"entre almacenes."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:68
 msgid ""
 "Go to :menuselection:`Inventory app --> Products --> Products` and select "
 "the desired product."
 msgstr ""
+"Vaya a :menuselection:`la aplicación Inventario --> Productos --> Productos`"
+"  y seleccione el producto que quiere configurar."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:70
 msgid ""
@@ -31247,6 +31662,10 @@ msgid ""
 "store's warehouse that receives products, and 'Y' is the warehouse that "
 "sends products."
 msgstr ""
+"En la pestaña :guilabel:`Inventario` la nueva ruta aparecerá como "
+":guilabel:`X: Suminustrar producto de Y` en la sección :guilabel:`Rutas` "
+"donde 'X' es el almacén de la tienda que recibe los productos e 'Y' es el "
+"almacén que envía los productos"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:74
 msgid ""
@@ -31255,10 +31674,15 @@ msgid ""
 "moving the product from one warehouse to another. Proceed to the dedicated "
 "sections below to continue the process."
 msgstr ""
+"Seleccione la casilla :guilabel:`X: Suministrar producto desde Y`, que se "
+"debe usar con la ruta Fabricación sobre pedido o una regla de reordenamiento"
+" para reabastecer el stock al mover el producto de un almacén a otro. "
+"Después, vaya a las secciones específicas que se encuentran abajo para "
+"continuar con el proceso."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:81
 msgid "MTO"
-msgstr ""
+msgstr "Fabricación sobre pedido"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:83
 msgid ""
@@ -31267,6 +31691,11 @@ msgid ""
 "<inventory/warehouses_storage/unarchive-mto>`, so it appears in the "
 ":guilabel:`Routes` section of the :guilabel:`Inventory` tab."
 msgstr ""
+"Para reabastecer productos usando el método Fabricación sobre pedido vaya al"
+" formulario del producto y asegúrese de que :ref:`la ruta Fabricación sobre "
+"pedido no esté archivada <inventory/warehouses_storage/unarchive-mto>`, para"
+" que aparezca en la sección :guilabel:`Rutas` de la pestaña "
+":guilabel:`Inventario`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:87
 msgid ""
@@ -31274,6 +31703,9 @@ msgid ""
 ":ref:`Replenish from another warehouse "
 "<inventory/warehouses_storage/resupply-workflow>`."
 msgstr ""
+"Con las rutas de reabastecimiento y fabricación sobre pedido seleccionadas, "
+"vaya a la sección :ref:`Reabastecer desde otro almacén "
+"<inventory/warehouses_storage/resupply-workflow>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:91
 msgid ""
@@ -31281,14 +31713,17 @@ msgid ""
 "warehouse, named `YourCompany`. To replenish the product using |MTO|, the "
 "following routes are selected:"
 msgstr ""
+"El producto, que se vende en el almacén `Tienda`, se rebastece desde el "
+"almacén central llamado `Su empresa`. Para reabastecer el producto con "
+"Fabricación sobre pedido, debe seleccionar las siguientes rutas:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:94
 msgid ":guilabel:`Store: Supply Product from YourCompany`"
-msgstr ""
+msgstr ":guilabel:`Tienda: suministrar producto desde SuEmpresa`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:95
 msgid ":guilabel:`Replenish on Order (MTO)`"
-msgstr ""
+msgstr ":guilabel:`Reabastecer sobre pedido`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:0
 msgid ""
@@ -31299,7 +31734,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:104
 msgid "Reordering rule"
-msgstr ""
+msgstr "Regla de reordenamiento"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:106
 msgid ""
@@ -31307,36 +31742,47 @@ msgid ""
 " Supply Product from Y` route is selected in the :guilabel:`Inventory` tab "
 "of the product form."
 msgstr ""
+"Para reabastecer sobre pedido con reglas de reordenamiento, primero "
+"asegúrese de seleccionar la ruta :guilabel:`X: suministrar productos desde "
+"Y` en la pestaña :guilabel:`Inventario` del formulario del producto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:109
 msgid ""
 "Then, create a reordering rule to automate replenishment by clicking the "
 ":guilabel:`Reordering Rules` smart button."
 msgstr ""
+"Después, cree una regla de reordenamiento para automatizar el "
+"rebastecimiento haciendo clic en el botón inteligente :guilabel:`Reglas de "
+"reordenamiento`. "
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:112
 msgid "Click :guilabel:`New`, and set:"
-msgstr ""
+msgstr "Haga clic en :guilabel:`Nuevo` y configure:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:114
 msgid ""
 ":guilabel:`Location`: the stock location of the retail store. For example, "
 "`SHOP/Stock`."
 msgstr ""
+":guilabel:`Ubicación`: la ubicación de los productos de la tienda. Por "
+"ejemplo, `TIENDA/Stock`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:115
 msgid ":guilabel:`Route`: :guilabel:`X: Supply Product from Y`."
-msgstr ""
+msgstr ":guilabel:`Ruta`: :guilabel:`X: suministrar producto desde Y`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:116
 msgid ""
 ":guilabel:`Min Quantity` and :guilabel:`Max Quantity` to trigger automatic "
 "stock transfers when inventory falls below the set threshold."
 msgstr ""
+":guilabel:`Cantidad mínima` y :guilabel:`Cantidad máxima` para activar las "
+"transferencias de inventario automático cuando las existencias bajen del "
+"umbral configurado."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:120
 msgid ":doc:`reordering_rules`"
-msgstr ""
+msgstr ":doc:`reordering_rules`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:123
 msgid ""
@@ -31345,10 +31791,14 @@ msgid ""
 " to `SHOP/Stock`, and the :guilabel:`Route` set to :guilabel:`Store: "
 "Resupply from YourCompany`."
 msgstr ""
+"Se crea una :ref:`regla de reabastecimiento 0/0 "
+"<inventory/warehouses_storage/zero-zero>` para volver a abastecer el "
+"almacén, con la :guilabel:`ubicación` `TIENDA/Stock` y la ruta "
+":guilabel:`Tienda: suministrar desde SuEmpresa`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:0
 msgid "Show reordering rule configurations."
-msgstr ""
+msgstr "Imagen de la configuración de regla de reabastecimiento."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:134
 msgid "Replenish one warehouse from another"
@@ -31359,12 +31809,15 @@ msgid ""
 "After completing the setup, trigger replenishment using one of several "
 "methods, such as:"
 msgstr ""
+"Después de completar la configuración, active el rebastecimiento con uno de "
+"los siguientes métodos, como:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:138
 msgid ""
 "Navigate to the product form of the product that is resupplied from another "
 "warehouse."
 msgstr ""
+"Ir al formulario del producto que necesita reabastecerse desde otro almacén."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:140
 msgid ""
@@ -31372,10 +31825,14 @@ msgid ""
 "In the pop-up window, set the warehouse to the retail shop, (e.g. `Store`), "
 "and click :guilabel:`Confirm`."
 msgstr ""
+"Haga clic en el botón :guilabel:`Reabastecer` en la parte superior izquierda"
+" de la página del producto. En la ventana emergente configure el almacén a "
+"una tienda minorista (por ejemplo, Tienda) y haga clic en "
+":guilabel:`Confirmar`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:0
 msgid "Replenish pop-up window on the product form."
-msgstr ""
+msgstr "Ventana emergente para reabastecer desde el formulario del producto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:147
 msgid ""
@@ -31384,10 +31841,14 @@ msgid ""
 "product makes the on-hand quantity of the product go below the minimum set "
 "on the reordering rule."
 msgstr ""
+"Crear una cotización y, en la pestaña :guilabel:`Otra información` configure"
+" el :guilabel:`Almacén` a la tienda minorista (por ejemplo, `Tienda`) si al "
+"vender un producto hace que la cantidad disponible del producto baje más del"
+" mínimo configurdo en la regla de reordenamiento."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:0
 msgid "Create a quote at the store."
-msgstr ""
+msgstr "Cree una cotización en la tienda."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:155
 msgid ""
@@ -31396,12 +31857,18 @@ msgid ""
 "to the store, and the second is a *receipt* at the shop, from the main "
 "warehouse."
 msgstr ""
+"Una vez que se active, Odoo creará dos transferencias: una es una *orden de "
+"entrega* desde el almacén central, que contiene todos los productos que se "
+"necesitan en la tienda, y la segunda es una *recepción* en la tienda, desde "
+"el almacén central."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:159
 msgid ""
 "While in transit, the product is located at `Physical Locations/Inter-"
 "warehouse transit`."
 msgstr ""
+"Mientras esté en tránsito, el producto estará en `Ubicaciones "
+"físicas/Traslado entre almacenes`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:162
 msgid ""
@@ -31411,16 +31878,23 @@ msgid ""
 "`SHOP/Stock`. While the products are traveling between warehouses, they are "
 "in `Physical Locations/Inter-warehouse transit`."
 msgstr ""
+"Se crea una orden de venta para el producto en la tienda. Para rebastecer el"
+" producto en le tienda y enviarlo desde ahí, Odoo genera una orden de "
+"entrega desde las existencias del almacén central, `WH/Stock`, hasta el "
+"almacén de la tienda, `TIENDA/Stock`. Mientras los productos viajen entre "
+"almacenes, se encontrarán en `Ubicaciones físicas/Traslado entre almacenes`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:167
 msgid ""
 "The final delivery order is from the shop to the customer's delivery "
 "address, and is not pertinent to the workflow in this guide."
 msgstr ""
+"La orden de entrega final es de la tienda a la dirección de envío del "
+"cliente y no es pertinente para el flujo de trabajo de esta guía."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:0
 msgid "Show shipments from warehouse to store."
-msgstr ""
+msgstr "Imagen de envíos del almacén a la tienda."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/aging.rst:3
 msgid "Inventory aging report"
@@ -37212,6 +37686,12 @@ msgid ""
 ":guilabel:`Inventory` tab. In the :guilabel:`Tracking` field, select "
 ":guilabel:`By Unique Serial Number` or :guilabel:`By Lots`."
 msgstr ""
+"No es obligatorio asignar números de serie o lotes a los productos recién "
+"fabricados. Para :doc:`asignar estos números "
+"<../../inventory/product_management/product_tracking>` de forma opcional, "
+"vaya a la sección :guilabel:`Trazabilidad` en la pestaña "
+":guilabel:`Inventario`. En el campo :guilabel:`Seguimiento`, seleccione "
+":guilabel:`Por número de serie único` o :guilabel:`Por lotes`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:38
 msgid ""
