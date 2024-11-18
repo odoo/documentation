@@ -61,8 +61,8 @@ To resolve the issue:
   your **network and firewall settings** allow the Odoo server to open outgoing connections
   towards:
 
-  - Odoo 18.0 and above: `services.odoo.com` on port `443` (or `80`)
-  - Odoo 17.0 and below: `services.openerp.com` on port `443` (or `80`)
+  - Odoo 18.0 and above: `services.odoo.com` on port `80`
+  - Odoo 17.0 and below: `services.openerp.com` on port `80`
 
   These ports must be kept open even after registering a database, as the update notification runs
   once a week.
