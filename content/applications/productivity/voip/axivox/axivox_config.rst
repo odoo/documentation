@@ -6,7 +6,7 @@ Introduction
 ============
 
 Odoo VoIP (Voice over Internet Protocol) can be set up to work together with `Axivox
-<https://www.axivox.com/>`_. In that case, an Asterisk server is **not** necessary, as the
+<https://www.axivox.com/>`_. In that case, a VoIP server is **not** necessary, as the
 infrastructure is hosted and managed by Axivox.
 
 To use this service, `contact Axivox <https://www.axivox.com/en/contact>`_ to open an account.
@@ -20,7 +20,7 @@ To configure Axivox in Odoo, go to the :menuselection:`Apps` application, and se
 Then, install the :guilabel:`VoIP` module.
 
 Next, go to :menuselection:`Settings app --> General Settings --> Integrations section`, and fill
-out the :guilabel:`Asterisk (VoIP)` field:
+out the :guilabel:`VoIP` field:
 
 - :guilabel:`OnSIP Domain`: set the domain created by Axivox for the account (e.g.,
   `yourcompany.axivox.com`)
