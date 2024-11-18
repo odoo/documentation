@@ -46,15 +46,15 @@ Odoo VoIP setting
 -----------------
 
 After installing the *VOIP OnSIP* module, go to the :menuselection:`Settings app`, scroll down to
-the :guilabel:`Integrations` section, and locate the :guilabel:`Asterisk (VoIP)` fields. Then,
-proceed to fill in those three fields with the following information:
+the :guilabel:`Integrations` section, and locate the :guilabel:`VoIP` fields. Then, proceed to fill
+in those three fields with the following information:
 
 - :guilabel:`OnSIP Domain`: the domain that was assigned when creating an account on `OnSIP
   <https://www.onsip.com/>`_.
 - :guilabel:`WebSocket`: `wss://edge.sip.onsip.com`
 - :guilabel:`VoIP Environment`: :guilabel:`Production`
 
-.. image:: onsip/asterisk-setting.png
+.. image:: onsip/voip-setting.png
    :align: center
    :alt: VoIP configuration settings in Odoo Settings app.
 
