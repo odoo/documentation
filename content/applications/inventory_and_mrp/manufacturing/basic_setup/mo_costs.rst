@@ -9,13 +9,12 @@ Manufacturing order costs
 .. |BoMs| replace:: :abbr:`BoMs (Bills of Materials)`
 
 The ability to accurately calculate the cost of manufacturing a product is critical when determining
-product profitability. Odoo's *Manufacturing* app simplifies this calculation by automatically
+product profitability. Odoo's **Manufacturing** app simplifies this calculation by automatically
 calculating the cost to complete each manufacturing order (MO), as well as the average production
 cost of a product, based on all completed |MOs|.
 
 .. important::
-   Odoo's Manufacturing app distinguishes between the *manufacturing order cost* and the *real cost*
-   of an |MO|.
+   Odoo's Manufacturing app distinguishes between the *MO cost* and the *real cost* of an |MO|.
 
    The |MO| cost represents how much it *should* cost to complete an |MO|, based on the
    configuration of the product's bill of materials (BoM). This takes into account the cost and
@@ -30,8 +29,9 @@ Cost configuration
 ==================
 
 Odoo computes |MO| costs based on the configuration of the |BoM| used to manufacture a product. This
-includes the cost and quantity of components and operations listed on the |BoM|, in addition to the
-operating costs of the work centers where those operations are carried out.
+calculation includes the cost and quantity of components and operations listed on the |BoM|, in
+addition to the operating costs of the work centers where those operations are carried out, and the
+amount paid to each employee who works on an operation.
 
 Component cost
 --------------
@@ -42,9 +42,11 @@ Products --> Products`, and select a component product. The cost is displayed in
 :guilabel:`Cost` field of the :guilabel:`General Information` tab, on the component's product form.
 
 It is possible to set the cost of a component manually, by clicking the :guilabel:`Cost` field on
-the component's product form, and entering a value. However, any future |POs| for the component
-override a value entered manually, resetting the :guilabel:`Cost` field back to an automatically
+the component's product form and entering a value. However, any future |POs| for the component
+override a manually entered value, resetting the :guilabel:`Cost` field back to an automatically
 computed value.
+
+.. _manufacturing/mo-costs/work-center-cost:
 
 Work center cost
 ----------------
@@ -52,34 +54,49 @@ Work center cost
 To set the operating cost for a specific work center, navigate to :menuselection:`Manufacturing app
 --> Configuration --> Work Centers`, and select a work center.
 
-To set the operating cost for the work center, as a whole, enter a value in the :guilabel:`per
+To set the cost of operating the work center for one hour, enter a value in the :guilabel:`per
 workcenter` field, located beside the :guilabel:`Cost per hour` section on the work center's
-:guilabel:`General Information` tab. This operating cost is used regardless of how many employees
-are working at the work center at any given time.
+:guilabel:`General Information` tab.
 
-To set the operating cost for the work center based on the number of employees working there at a
-given time, enter a value in the :guilabel:`per employee` field, located beside the :guilabel:`Cost
-per hour` section on the work center's :guilabel:`General Information` tab. For example, if `25.00`
-is entered in the :guilabel:`per employee` field, it costs $25.00 per hour for *each* employee
-working at the work center.
-
-Note that, if values are entered in both the :guilabel:`per workcenter` *and* :guilabel:`per
-employee` fields, the value in the :guilabel:`per workcenter` field takes precedence, and the value
-in the :guilabel:`per employee` field is ignored.
+To set the hourly cost of each employee that operates the work center, enter a value in the
+:guilabel:`per employee` field, located beside the :guilabel:`Cost per hour` section on the work
+center's :guilabel:`General Information` tab. For example, if `25.00` is entered in the
+:guilabel:`per employee` field, it costs $25.00 per hour for *each* employee working at the work
+center.
 
 .. important::
-   It is also possible to set a per hour cost for specific employees, by navigating to the
-   :menuselection:`Employees` app, selecting an employee, clicking the :guilabel:`HR Settings` tab
-   on their employee form, and entering a value in the :guilabel:`Hourly Cost` field.
+   The value entered in the :guilabel:`per employee` field is only used to calculate the |MO| cost,
+   which is the estimated cost of completing the |MO|.
 
-   Just like the *per workcenter* field on a work center form, the :guilabel:`Hourly Cost` field on
-   an employee's form overrides the *per employee* field on a work center form.
+   The actual cost of completing the |MO| is represented by the real cost. Instead of using the
+   value entered in the :guilabel:`per employee` field, the real cost is calculated using the hourly
+   cost specific to each employee.
 
-   However, the *per workcenter* field takes precedence over both the *per employee* field on the
-   workcenter form *and* the :guilabel:`Hourly Cost` field on the employee form.
+   For example, if the :guilabel:`per employee` cost of a work center is '$50.00', and an employee
+   with an hourly cost of '$60.00' completes a work order there, the |MO| cost (estimated) is
+   calculated using the $50/hr cost, while the real cost is calculated using the $60/hr cost.
 
-|BoM| cost
-----------
+   See the :ref:`employee cost section <manufacturing/mo-costs/employee-cost>` below for information
+   on how to set the cost for specific employees.
+
+.. _manufacturing/mo-costs/employee-cost:
+
+Employee cost
+-------------
+
+To set the hourly cost for a specific employee, navigate to the :menuselection:`Employees` app, and
+select an employee. On the employee's form, select the :guilabel:`Settings` tab, and enter the
+employee's rate in the :guilabel:`Hourly Cost` field of the :guilabel:`Application Settings`
+section.
+
+.. important::
+   As detailed in the :ref:`work center cost section <manufacturing/mo-costs/work-center-cost>`
+   above, the value entered in the :guilabel:`Hourly Cost` field on the employee's form is used to
+   calculate the real cost of an |MO|. The estimated cost of an |MO|, referred to as the |MO| cost,
+   uses the per employee cost set on each work center's form.
+
+|BoM| configuration
+-------------------
 
 Configuring a |BoM| so Odoo can accurately calculate the cost of |MOs| that use it requires two
 steps. First, components **must** be added, and the required quantity specified. Second, operations
@@ -103,10 +120,10 @@ By default, the :guilabel:`Duration Computation` field is set to :guilabel:`Set 
 which means that the number entered in :guilabel:`Default Duration` field is always used as the
 expected duration of the operation.
 
-Selecting :guilabel:`Compute based on tracked time` causes Odoo to automatically compute the default
-duration based on a certain number of work orders, which is set in the :guilabel:`Based on` field.
-Before there are work orders to compute this duration, the value in the :guilabel:`Default Duration`
-field is used instead.
+Selecting :guilabel:`Compute based on tracked time` causes Odoo to automatically compute the
+:guilabel:`Default Duration` based on a certain number of work orders, which is set in the
+:guilabel:`Based on` field. Before there are work orders to compute this duration, the value in the
+:guilabel:`Default Duration` field is used instead.
 
 The hourly cost of operating the work center, and the duration of the operation, are used to
 calculate the operation's cost.
@@ -137,7 +154,9 @@ same costs. This is the *estimated* cost of completing the |MO|.
 
 However, once work commences, the values in the :guilabel:`Real Cost` column may begin to diverge
 from the values in the :guilabel:`MO Cost` column. This happens if a different component quantity is
-used than was listed on the |MO|, or if the duration of a work order is different than expected.
+used than was listed on the |MO|, the duration of a work order is different than expected, or the
+hourly cost of the employee performing a work order differs from the employee cost set on the work
+center.
 
 Once the |MO| has been completed by clicking :guilabel:`Produce All`, the values in the
 :guilabel:`MO Cost` column update to match those displayed in the :guilabel:`Real Cost` column.
