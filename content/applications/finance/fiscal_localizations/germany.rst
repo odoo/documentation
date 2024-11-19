@@ -5,33 +5,31 @@ Germany
 German Chart of Accounts
 ========================
 
-The chart of accounts SKR03 and SKR04 are both supported in Odoo. You can choose the
-one you want by going in :menuselection:`Accounting --> Configuration` then choose the
-package you want in the Fiscal Localization section.
-
-Be careful, you can only change the accounting package as long as you have not created any accounting entry.
+Both the SKR03 and SKR04 charts of accounts are supported in Odoo. You can select your
+preferred option by navigating to :menuselection:`Accounting --> Configuration` and then
+choosing the desired package in the Fiscal Localization section. Please note that you can
+only change the accounting package if you have not yet created any accounting entries.
 
 .. tip::
 
-    When you create a new Odoo Online database, the SKR03 is installed by default.
+    The SKR03 chart of accounts is installed by default.
 
 German Accounting Reports
 =========================
 
-Here is the list of German-specific reports available on Odoo Enterprise:
+These German-specific reports are available on Odoo Enterprise:
 
 - Balance Sheet
 - Profit & Loss
 - Tax Report (Umsatzsteuervoranmeldung)
-- Partner VAT Intra
+- EC Sales List
+- Intrastat
 
-Export from Odoo to Datev
+Export from Odoo to DATEV
 =========================
 
-It is possible to export your accounting entries from Odoo to Datev. To be able to use this
-feature, the german accounting localization needs to be installed on your Odoo Enterprise database.
-Then you can go in :menuselection:`Accounting --> Reporting --> General Ledger` then click on the
-**Export Datev (csv)** button.
+Provided that the German localization is installed, you can export your accounting entries
+from Odoo to DATEV from the General Ledger.
 
 .. _germany/pos:
 
@@ -167,8 +165,8 @@ triggered and is being processed. You have to click on *Refresh State* to check 
 
 .. _germany/gobd:
 
-German Tax Accounting Standards: Odoo's guide to GoBD Compliance
-================================================================
+Odoo is GoBD compliant
+======================
 
 **GoBD** stands for *Grundsätze zur ordnungsmäßigen Führung und Aufbewahrung von Büchern,
 Aufzeichnungen und Unterlagen in elektronischer Form sowie zum Datenzugriff*.
@@ -183,13 +181,13 @@ January 2020 to specify some of the content and due to the development of digita
 hosting, paperless companies, etc.).
 
 .. important::
-   Odoo gives you **the means to be compliant with GoBD**.
+   Odoo is certified **GoBD-compliant**.
 
 What do you need to know about GoBD when relying on accounting software?
 ------------------------------------------------------------------------
 
 .. note::
-   If you can, the best way to understand GoBD is to Read the `Official GoBD text
+   If you can, the best way to understand GoBD is to read the `official GoBD text
    <https://ao.bundesfinanzministerium.de/ao/2021/Anhaenge/BMF-Schreiben-und-gleichlautende-Laendererlasse/Anhang-64/anhang-64.html>`_.
    It is a bit long but quite readable for non-experts. But in short, here is what to expect:
 
@@ -292,7 +290,7 @@ In case of a handover of the financial data on a storage device, the format is *
 the GoBD. It can be, for example, in XLS, CSV, XML, Lotus 123, SAP-format, AS/400-format, or else.
 Odoo supports the CSV and XLS-export of financial data out-of-the-box. The GoBD **recommends** the
 export in a specific XML-based GoBD-format (see "Ergänzende Informationen zur
-Datenntträgerüberlassung" §3) but it is not binding.
+Datenträgerüberlassung" §3) but it is not binding.
 
 What is the role and meaning of the compliance certification?
 -------------------------------------------------------------
