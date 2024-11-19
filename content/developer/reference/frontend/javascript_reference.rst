@@ -1200,7 +1200,7 @@ Many2many (`many2many`)
     - `unlink`: domain determining whether records can be removed from the relation (default: `true`).
 
 Many2many Binary File (`many2many_binary`)
-    This widget helps the user to upload or delete one or more files at the same time.
+    This widget helps the user to upload or delete one or more files at the same time. An image preview is available for files with the MIME type "image".
 
     Note that this widget is specific to the model `ir.attachment`.
 
@@ -1211,6 +1211,8 @@ Many2many Binary File (`many2many_binary`)
     - `accepted_file_extensions`: the file extension the user can pick from the file input dialog box
 
         (cf: ``accept`` attribute on `<input type="file" />`)
+
+    - `reverse_order`: set to `true` to add new files at the top of the list (default: `false`, new files are added at the bottom).
 
 Many2many Tags (`many2many_tags`)
     Display a `many2many` field as a list of tags.
