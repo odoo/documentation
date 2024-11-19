@@ -396,7 +396,7 @@ def setup(app):
 
     app.connect('html-page-context', _generate_alternate_urls)
     # sitemap related:
-    if not app.config.language or app.config.language == 'en':
+    if not app.config.language or app.config.language == 'en' and app.config.is_remote_build:
         # As the URLs are the same for all languages except for the language code,
         # we will only generate for the english (default) language and assume only the language code change
         app.connect("builder-inited", _create_sitemap_queue)
@@ -548,11 +548,11 @@ def _create_sitemap_queue(app):
 def _add_html_url(app, pagename: str, templatename, context, doctree):
     app.builder.env.app.sitemap_urls.put(pagename + '.html')
 
-def _create_sitemap(app, exception):
-    if app.env.app.sitemap_urls.empty():  # type: ignore
+def _create_sitemap(app, _exception):
+    if app.env.app.sitemap_urls.empty():
         _logger.info("No pages generated for sitemap.xml")
         return
-    
+
     site_url = _get_root(app)
 
     ElementTree.register_namespace("xhtml", "http://www.w3.org/1999/xhtml")
@@ -561,9 +561,8 @@ def _create_sitemap(app, exception):
         "urlset", xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     )
 
-    locales = languages_names.keys()
     version_= app.builder.config.version
-    odoo_url_scheme = "/{version}{lang}/{url}"
+    odoo_url_scheme = "/{version}/{url}"
 
     while True:
         try:
@@ -572,18 +571,7 @@ def _create_sitemap(app, exception):
             break
 
         url_xml = ElementTree.SubElement(root, "url")
-        ElementTree.SubElement(url_xml, "loc").text = site_url + odoo_url_scheme.format(version=version_, url=url, lang='')
-
-        for lang in locales:
-            # A .../en/... URL will not work in odoo's documentation, so we use .../... for the english language
-            lang_in_url = '' if lang == 'en' else '/' + lang
-            ElementTree.SubElement(
-                url_xml,
-                "{http://www.w3.org/1999/xhtml}link",
-                rel="alternate",
-                hreflang=lang.replace('_', '-'),
-                href=site_url + odoo_url_scheme.format(version=version_, url=url, lang=lang_in_url),
-            )
+        ElementTree.SubElement(url_xml, "loc").text = site_url + odoo_url_scheme.format(version=version_, url=url)
 
     filename = Path(app.outdir) / 'sitemap.xml'
     ElementTree.ElementTree(root).write(
