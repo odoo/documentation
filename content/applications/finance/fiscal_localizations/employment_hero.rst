@@ -38,7 +38,7 @@ Configuration
         :ref:`Malaysia <malaysia/employment-hero>`,
         :ref:`New Zealand <new-zealand/employment-hero>`,
         :ref:`Singapore <singapore/employment-hero>`,
-        and the :ref:`United Kingdom <united-kingdom/employment-hero>`.
+        and the :ref:`United Kingdom <localization/united-kingdom/employment-hero>`.
 
    - You can find the **Business ID** in the Employment Hero URL. (i.e., `189241`)
 
