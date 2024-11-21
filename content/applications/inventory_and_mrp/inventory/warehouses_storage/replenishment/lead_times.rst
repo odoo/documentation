@@ -2,9 +2,11 @@
 Lead times
 ==========
 
+.. |RFQ| replace:: :abbr:`RFQ (Request for Quotation)`
+
 Accurately forecasting delivery dates is vital for fulfilling customer expectations. In Odoo, the
-*Inventory* app allows for comprehensive lead time configuration, allowing coordination and planning
-of manufacturing orders, deliveries, and receptions.
+**Inventory** app allows for comprehensive lead time configuration, allowing coordination and planning
+of manufacturing orders, deliveries, and receipts.
 
 Lead time types
 ===============
@@ -36,6 +38,10 @@ process. Here's a summary of the types of lead times in Odoo:
   of placing orders earlier mitigates the risk of vendor or shipping delays. Thus, for products that
   are set to replenish to order, the need appears on the *Replenishment report* earlier, according
   to the specified number of days.
+
+- :ref:`Days to Purchase lead time <inventory/warehouses_storage/days-to-purchase>`: days needed for
+  the vendor to receive a request for quotation (RFQ) and confirm it. It advances the deadline to
+  schedule a |RFQ| by a specified number of days.
 
 - :ref:`Manufacturing lead time <inventory/management/manuf-lt>`: the number of days needed to
   complete a manufacturing order (MO) from the date of confirmation. This lead time includes
@@ -226,6 +232,15 @@ set to account for potential delays in supplier deliveries.
    .. image:: lead_times/vendor-security.png
       :align: center
       :alt: Set security lead time for purchase from the Inventory > Configuration > Settings.
+
+.. _inventory/warehouses_storage/days-to-purchase:
+
+Days to purchase lead time
+--------------------------
+
+To set it up, go to :menuselection:`Inventory app --> Configuration --> Settings`. Under the
+:guilabel:`Advanced Scheduling` section, in the :guilabel:`Days to Purchase` field, specify the
+number of days required for the vendor to confirm a |RFQ| after receiving it from the company.
 
 .. _inventory/management/manuf-lt:
 
