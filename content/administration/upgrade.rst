@@ -3,7 +3,7 @@ Upgrade
 =======
 
 An upgrade involves moving a database from an older version to a newer supported version (e.g., from
-Odoo 15.0 to Odoo 17.0). Regular upgrades are crucial as each version offers new features, bug
+Odoo 16.0 to Odoo 18.0). Regular upgrades are crucial as each version offers new features, bug
 fixes, and security patches. Using a :doc:`supported version <supported_versions>` is strongly
 recommended. Each major version is supported for three years.
 
@@ -13,11 +13,11 @@ Depending on the hosting type and Odoo version used, a database upgrade can be *
 
    .. group-tab:: Odoo Online
 
-      - If a database is on a **major version** (e.g., 15.0, 16.0, 17.0), an upgrade is mandatory
+      - If a database is on a **major version** (e.g., 16.0, 17.0, 18.0), an upgrade is mandatory
         every two years.
       - If a database is on a **minor version** (e.g., 17.1, 17.2, 17.4), an upgrade is mandatory
         a few weeks after the next version is released. Minor versions are usually released every
-        three months.
+        two months.
 
    .. group-tab:: Odoo.sh
 
