@@ -13,6 +13,8 @@ manufactured in-house triggers the creation of a manufacturing order. The creati
 manufacturing order occurs every time a sales order is created, regardless of the current stock
 level of the product being ordered.
 
+.. _inventory/warehouse_storage/mto-route:
+
 Unarchive the Replenish on Order (MTO) route
 ============================================
 
