@@ -85,12 +85,6 @@ To resolve the issue, either:
   displayed in the message to validate the upsell quotation and pay for the extra users.
 - :ref:`Deactivate users <users/deactivate>` and **reject** the upsell quotation.
 
-.. important::
-   If you are on a monthly subscription plan, the database will automatically update to reflect the
-   added user(s). If you are on a yearly or multi-year plan, an expiration banner will appear in the
-   database. You can create the upsell quotation by clicking the banner to update the subscription
-   or `send a support ticket <https://www.odoo.com/help>`_ to resolve the issue.
-
 Once your database has the correct number of users, the expiration message disappears automatically
 after a few days, when the next verification occurs.
 
