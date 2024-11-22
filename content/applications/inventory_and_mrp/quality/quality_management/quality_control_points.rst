@@ -41,21 +41,22 @@ quality check to be created for new manufacturing orders (MOs).
 
 If the :guilabel:`Manufacturing` operation is selected in the :guilabel:`Operations` field, a new
 field appears below it, titled :guilabel:`Work Order Operation`. From this field, select a specific
-work order to generate quality checks for that operation, rather than the manufacturing operation in
-general.
+work order to generate quality checks for that operation, rather than the manufacturing operation,
+in general.
 
-For example, a |QCP| could be configured to create quality checks for the `Assembly` work order of
-the `Coffee Table` product. Then, if a new |MO| is confirmed for a `Coffee Table`, the |QCP| creates
-a quality check specifically for the `Assembly` operation.
+.. example::
+   A |QCP| could be configured to create quality checks for the `Assembly` work order of the `Coffee
+   Table` product. Then, if a new |MO| is confirmed for a `Coffee Table`, the |QCP| creates a
+   quality check specifically for the `Assembly` operation.
 
 The :guilabel:`Control Per` field is set to one of three options that determine *when* a new quality
 check is created:
 
-- :guilabel:`Operation`: one check is requested for the specified operation, as a whole.
-- :guilabel:`Product`: one check is requested for each *unique* product included in the specified
+- :guilabel:`Operation`: One check is requested for the specified operation, as a whole.
+- :guilabel:`Product`: One check is requested for each *unique* product included in the specified
   operation. For example, a delivery operation for one table and four chairs would generate two
   checks, since two *unique* products are included in the operation.
-- :guilabel:`Quantity`: a check is requested for a certain percentage of items within the specified
+- :guilabel:`Quantity`: A check is requested for a certain percentage of items within the specified
   operation. This percentage is set by enabling the :guilabel:`Partial Transfer Test` checkbox, and
   then entering a numerical value in the :guilabel:`Percentage` field that appears below. If the
   checkbox is not enabled, one quality check is created for the full quantity.
@@ -63,11 +64,11 @@ check is created:
 The :guilabel:`Control Frequency` field is set to one of three options that determine *how often* a
 new quality check is created:
 
-- :guilabel:`All`: a quality check is requested every time the conditions of the |QCP| are met.
-- :guilabel:`Randomly`: a quality check is randomly requested for a certain percentage of
-  operations, which can be specified in the :guilabel:`Every #% of Transfers` field that appears
+- :guilabel:`All`: A quality check is requested every time the conditions of the |QCP| are met.
+- :guilabel:`Randomly`: A quality check is randomly requested for a certain percentage of
+  operations, which can be specified in the :guilabel:`Every #% of Operations` field that appears
   below.
-- :guilabel:`Periodically`: a quality check is requested once every set period of time, which is
+- :guilabel:`Periodically`: A quality check is requested once every set period of time, which is
   specified by entering a numerical value in the field below, and choosing either :guilabel:`Days`,
   :guilabel:`Weeks`, or :guilabel:`Months` as the desired time interval.
 
@@ -84,8 +85,10 @@ selected:
 - :guilabel:`Pass - Fail` checks specify a criterion that products must meet for the check to pass.
 - :guilabel:`Measure` checks prompt employees to record a measurement of the product that must be
   within a tolerance of a norm value for the check to pass.
-- :guilabel:`Worksheet` checks provide an interactive worksheet that must be filled out by the
-  employee processing the check.
+- :guilabel:`Worksheet` checks require the employee processing the check to fill out an interactive
+  worksheet.
+- :guilabel:`Spreadsheet` checks require the employee processing the check to fill out an
+  interactive spreadsheet.
 
 .. important::
    An *Instructions* check is the same as a step on a work order for an MO.
@@ -96,6 +99,17 @@ selected:
 
    However, when creating a control point specifically for quality control purposes, using a
    different check type is probably more effective.
+
+.. note::
+   When creating a |QCP| with the :guilabel:`Worksheet` or :guilabel:`Spreadsheet` check types, it
+   is necessary to specify a *Quality Worksheet Template* or *Quality Spreadsheet Template* in the
+   :guilabel:`Template` field that appears below the :guilabel:`Type` field.
+
+   The selected template is duplicated for each quality check created by the |QCP|, and **must** be
+   filled out to complete the quality check.
+
+   To create a new template, navigate to :menuselection:`Quality app --> Configuration --> Quality
+   Worksheet/Spreadsheet Templates`, and click :guilabel:`New`.
 
 In the :guilabel:`Team` field, specify the quality team that is responsible for managing the |QCP|,
 and the quality checks it creates. If a specific quality team member is responsible for the |QCP|,
