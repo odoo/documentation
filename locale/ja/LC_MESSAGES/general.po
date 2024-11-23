@@ -4235,41 +4235,41 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:116
 msgid "Local-part values"
-msgstr ""
+msgstr "ローカルパート値"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:118
 msgid ""
 "Below are presented the different local-part values that can be used by Odoo"
 " to send emails. It might be required to whitelist them in your mail server:"
-msgstr ""
+msgstr "以下は、OdooがEメール送信に使用するさまざまなローカルパート値です。メールサーバでホワイトリストに登録する必要がある場合があります。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:121
 msgid "The Alias Domain Bounce Alias (default value = `bounce`),"
-msgstr ""
+msgstr "エイリアス ドメイン バウンス エイリアス (デフォルト値 = `バウンス`)、"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:122
 msgid "The Alias Domain Default From (default value = `notifications`),"
-msgstr ""
+msgstr "エイリアスドメインのデフォルト(デフォルト値 = `通知`)"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:123
 msgid ""
 "The default admin address `admin@company-name.odoo.com` or, if changed, the "
 "new value),"
-msgstr ""
+msgstr "デフォルトドメインアドレス `admin@company-name.odoo.com` または、変更された場合、新しい値),"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:124
 msgid ""
 "The default Odoobot address `odoobot@company-name.odoo.com` or, if changed, "
 "the new value),"
-msgstr ""
+msgstr "デフォルトOdoobotアドレス `odoobot@company-name.odoo.com` または、変更された場合、新しい値),"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:125
 msgid "The specific FROM defined on an email marketing campaign,"
-msgstr ""
+msgstr "Eメールマーケティングキャンペーンで定義された特定のFROM、"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:126
 msgid "The specific FROM that can be defined in an email template."
-msgstr ""
+msgstr "Eメールテンプレートで定義できる特定の送信元。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:129
 msgid ":doc:`google_oauth`"
@@ -4281,11 +4281,11 @@ msgstr ":doc:`azure_oauth`"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:135
 msgid "Setting up different servers for transactional and mass emails"
-msgstr ""
+msgstr "トランザクションメールと大量メール用に異なるサーバを設定する"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:140
 msgid "Personalized mail servers"
-msgstr ""
+msgstr "パーソナライズされたメールサーバ"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:142
 msgid ""
@@ -4295,12 +4295,17 @@ msgid ""
 "emails*, including the sending of batches of invoices or quotations, will be"
 " managed by the Marketing Automation or Email Marketing application."
 msgstr ""
+"Odooの個別のEメールサーバを使用して、取引メールやメール一括配信を行うことができます。 "
+"そうすることで、顧客に送信される日常的なEメール、見積書、請求書は、*トランザクションメール* として処理されます。 請求書や見積書のバッチ送信を含む "
+"*メール一括配信* は、マーケティングオートメーションまたはEメールマーケティングアプリケーションによって管理されます。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:148
 msgid ""
 "You can use services like Gmail, Amazon SES, or Brevo for transactional "
 "emails, and services like Mailgun, Sendgrid, or Mailjet for mass mailings."
 msgstr ""
+"ランザクションメールには、Gmail、Amazon "
+"SES、Brevoなどのサービスを利用できます。また、メール一括配信には、Mailgun、Sendgrid、Mailjetなどのサービスを利用できます。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:151
 msgid ""
@@ -4311,10 +4316,14 @@ msgid ""
 "transactional server (e.g., `1`) over the mass mailings server (e.g., `2`) "
 "so transactional emails are given priority."
 msgstr ""
+"まず :ref:`開発者モード` を有効化し、:menuselection:`管理設定 --> 技術設定 --> Eメール: 送信メールサーバ` "
+"に行きます。そこで2つの送信メールサーバ記録を追加します。1つはトランザクションメールサーバ、もう1つはメール一括配信サーバです。トランザクションサーバの"
+" :guilabel:`優先` 値の数字(例 `1`) をメール一括配信サーバの数字 (例 `2`) "
+"より小さく設定することで、トランザクションメールが優先されます。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst-1
 msgid "Example of split between transaction and mass mailing mail servers."
-msgstr ""
+msgstr "取引とメール一括配信サーバ間の分割の例。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:160
 msgid ""
@@ -4323,20 +4332,22 @@ msgid ""
 "server. Odoo uses the server with the lowest priority value for "
 "transactional emails, and the server selected here for mass mailings."
 msgstr ""
+"次に、:menuselection:`Eメールマーケティング --> 設定 --> 管理設定` に移動し、:guilabel:`専用サーバ` "
+"を有効にして、適切なメールサーバを選択します。Odooは、トランザクションメールには優先値が最も小さな数字のサーバを使用し、メール一括配信にはここで選択したサーバを使用します。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst-1
 msgid "Dedicated mail server on Email Marketing app settings."
-msgstr ""
+msgstr "Eメールマーケティングアプリの設定の専用メールサーバ。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:171
 msgid "FROM filtering"
-msgstr ""
+msgstr "送信元フィルター"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:174
 msgid ""
 "It’s **highly recommended** to configure the FROM Filtering on the outgoing "
 "mail servers as per the instructions of your provider."
-msgstr ""
+msgstr "プロバイダーの指示に従って、送信メールサーバで送信元フィルタリングを設定することを **強くお勧め** します。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:177
 msgid ""
@@ -4346,24 +4357,27 @@ msgid ""
 "address** that matches the sender’s email address and is trusted on the "
 "outgoing mail server provider's side."
 msgstr ""
+":guilabel:`送信元フィルタリング` フィールドでは、Odooが代理で送信するEメールの *送信元* "
+"アドレスまたはドメインに応じて、特定の送信メールサーバを使用することができます。**値は、送信者のEメールアドレスと一致し、送信メールサーバプロバイダ側で信頼されているドメインまたは完全なアドレス**"
+" でなければなりません。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:182
 msgid ""
 "If FROM filtering is not used, emails will go out using the notification "
 "address."
-msgstr ""
+msgstr "フィルタリングから使用されていない場合、通知アドレスを使用してEメールが送信されます。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:185
 msgid ""
 "Some outgoing mail servers require a specific configuration of the FROM "
 "filter."
-msgstr ""
+msgstr "一部の送信メールサーバでは、送信元フィルタの特定の設定が必要です。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:187
 msgid ""
 "When an email is sent from Odoo, the following sequence is used to choose "
 "the outgoing email server:"
-msgstr ""
+msgstr "OdooからEメールが送信される際には、送信メールサーバを選択するために以下の手順が使用されます。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:189
 msgid ""
@@ -4372,6 +4386,7 @@ msgid ""
 "configuration is ideal if all users of a company share the same domain but "
 "have different local-parts."
 msgstr ""
+"まず、Odooは送信メールで定義された送信元フィルタリング値(すなわち、Eメールアドレス)と同じフィルタリングから値を持つサーバを検索します。この設定は、会社の全てのユーザが同じドメインを共有しているがローカルパートが異なる場合に理想的です。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:194
 msgid ""
@@ -4379,6 +4394,7 @@ msgid ""
 "having a FROM filtering value equal to `test@example.com` or `example.com` "
 "can be used."
 msgstr ""
+"送信者のメールアドレスがtest@example.comの場合、test@example.comまたはexample.comと一致する送信元フィルタリング値を持つEメールサーバのみが使用できます。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:197
 msgid ""
@@ -4386,12 +4402,13 @@ msgid ""
 "server without a FROM filtering value set. The email will be overridden with"
 " the notification address."
 msgstr ""
+"最初の基準に基づいてサーバが見つからない場合、Odooは送信元フィルタリングから値を設定せずに最初のサーバを探します。Eメールは通知アドレスで上書きされます。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:200
 msgid ""
 "If no server is found based on the second criteria, Odoo uses the first "
 "server, and the email will be overridden with the notification address."
-msgstr ""
+msgstr "2番目の基準に基づいてサーバが見つからない場合、Odooは最初のサーバを使用し、Eメールは通知アドレスに上書きされます。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:204
 msgid ""
@@ -4399,16 +4416,17 @@ msgid ""
 "the value is, the higher the priority is). Failing to do so, the first "
 "server is determined by the servers' names, using alphabetical order."
 msgstr ""
+"どのサーバが優先されるかを決定するために、Odooは優先順位値を使用します(値が小さいほど優先順位が高くなります)。そうでない場合、最初のサーバはサーバ名によって決定され、アルファベット順で並べられます。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:208
 msgid ""
 "It is also possible to use Odoo's mail server for transactional emails in "
 "addition to mass mailings."
-msgstr ""
+msgstr "また、メール一括配信に加えて、Odooのメールサーバをトランザクションメールにも使用できます。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:213
 msgid "Using an external email server and Odoo’s default server"
-msgstr ""
+msgstr "外部のEメールサーバとOdooのデフォルトサーバを使用"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:215
 msgid ""
@@ -4416,12 +4434,13 @@ msgid ""
 "If no outgoing mail server is set, the default Odoo's SMTP server will be "
 "used."
 msgstr ""
+"OdooオンラインおよびOdoo.shでは、データベースはOdooのSMTPサーバで開始されます。送信メールサーバが設定されていない場合は、デフォルトのOdooのSMTPサーバが使用されます。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst-1
 msgid ""
 "Adding a mail server using the Odoo's mail server with the CLI "
 "authentication."
-msgstr ""
+msgstr "Odooのメールサーバを使用して、CLI認証でメールサーバを追加します。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:222
 msgid ""
@@ -4431,12 +4450,13 @@ msgid ""
 "there is no FROM filtering, the email will go out using the notification "
 "address."
 msgstr ""
+"送信メールサーバがOdooのデフォルトサーバ(CLI)と同時に使用される場合、送信メールサーバの送信元フィルタにはカスタムドメインを含める必要があり、CLIの送信元フィルタにはOdooのサブドメインを含める必要があります。送信元フィルタリングがない場合、通知アドレスを使用してEメールが送信されます。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst-1
 msgid ""
 "Splitting of Odoo mail server for transactional emails and Mail server for "
 "Mass mailing."
-msgstr ""
+msgstr "Odooメールサーバをトランザクションメール用とメール一括配信用に分割します。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:231
 msgid ""
@@ -4444,6 +4464,7 @@ msgid ""
 " mail server, using the same limit as if there was no outgoing mail server "
 "in place."
 msgstr ""
+"Odooオンラインでは、コマンドラインインターフェースはデフォルトのOdooメールサーバと同等であり、外部へのメールサーバが存在しない場合と同じ制限が適用されます。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:235
 msgid ""
@@ -4451,12 +4472,13 @@ msgid ""
 "limit. On Odoo.sh, you need to check on the monitor page the number of "
 "outgoing emails that were sent."
 msgstr ""
+"Odooオンラインでは、ページには日次Eメール使用量と日次上限も表示されます。Odoo.shでは、送信されたEメールの数はモニターページで確認する必要があります。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:239
 msgid ""
 "On Odoo.sh, to use the command-line interface, an outgoing mail server can "
 "be configured on the configuration file."
-msgstr ""
+msgstr "Odoo.shでは、コマンドラインインターフェースを使用するために、送信メールサーバを設定ファイルで設定することができます。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:243
 msgid ""
@@ -4465,10 +4487,12 @@ msgid ""
 "failure-messages-limit>` depends on the database type and the applications "
 "used."
 msgstr ""
+"Odooのメールサーバは、トランザクションメールと小規模なマーケティングキャンペーン用です。:ref:`日次上限` "
+"は、データベースの種類と使用するアプリケーションに依存します。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:250
 msgid "Using a custom domain with an external email server"
-msgstr ""
+msgstr "外部Eメールサーバとカスタムドメインの使用"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:252
 msgid ""
@@ -4479,6 +4503,10 @@ msgid ""
 "records (SPF, DKIM, and DMARC). A list of the :ref:`most common providers is"
 " available <email-domain-providers-documentation>`."
 msgstr ""
+":ref:`前の章 <email-outbound-different-servers-external-"
+"odoo>`と同様に、外部のEメールサーバがカスタムドメインを使用してEメールを送信できるように、適切な設定が必要になる場合があります。関連レコード(SPF、DKIM、DMARC)"
+" を適切に設定するには、プロバイダのドキュメントを参照して下さい。:ref:`ごく般的なプロバイダのリストが利用可能です <email-domain-"
+"providers-documentation>`。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:259
 msgid ""
@@ -4489,6 +4517,9 @@ msgid ""
 "of Odoo when using a custom email server. Odoo does not allow the "
 "configuration of Odoo's subdomain."
 msgstr ""
+"独自ドメインを使用する場合は、DNS設定が必要です。外部送信メールサーバを使用している場合、:doc:`Odoo DNS 当社メールサーバ用 "
+"設定ドキュメンテーション <email_domain>` "
+"に記載されているレコードの設定を行っても、**期待通りの効果は得られません**。カスタムEメールサーバを使用している場合、Odooとは独立しているためです。Odooでは、Odooのサブドメインの設定は許可されていません。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:268
 msgid "Port restriction"
@@ -4499,6 +4530,7 @@ msgid ""
 "Port 25 is blocked for security reasons on Odoo Online and Odoo.sh. Try "
 "using port 465, 587, or 2525 instead."
 msgstr ""
+"OdooオンラインおよびOdoo.shでは、セキュリティ上の理由によりポート25がブロックされています。代わりにポート465、587、または2525をお試し下さい。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:276
 msgid "Alias domain"
@@ -4510,6 +4542,8 @@ msgid ""
 "Odoo’s subdomain (e.g., `company-name.odoo.com`), but each company may have "
 "its own custom email domain."
 msgstr ""
+"キャッチオールドメインは会社ごとに固有です。デフォルトでは、全ての会社はOdooのサブドメイン(例：`company-name.odoo.com`) "
+"を共有しますが、各会社は独自のカスタムEメールドメインを持つことができます。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:281
 msgid ""
@@ -4517,6 +4551,8 @@ msgid ""
 "available by going to :menuselection:`Settings --> Technical --> Email: "
 "Alias Domains`."
 msgstr ""
+":ref:`開発者モード` が有効化されている場合、エイリアスドメインのオプションは、:menuselection:`設定 --> 技術設定 --> "
+"Eメール: エイリアスドメイン` から利用できます。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:285
 msgid ""
@@ -4524,6 +4560,8 @@ msgid ""
 "the aliases (bounce, catchall, default from) is changed, all previous emails"
 " that are not properly redirected to the new aliases will be lost."
 msgstr ""
+"エイリアスドメインの変更は、慎重に行う必要があります。 エイリアス(バウンス、キャッチオール、デフォルト) "
+"のいずれかが変更されると、新しいエイリアスに適切にリダイレクトされていない以前のEメールは全て失われます。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:289
 msgid ""
@@ -4532,10 +4570,13 @@ msgid ""
 "Configure it to determine the `FROM` header of your emails. If a full email "
 "address is used, all outgoing emails will be overwritten with this address."
 msgstr ""
+":guilabel:`デフォルトの送信元エイリアス` フィールドには、ローカルパートのメールアドレス(デフォルトでは `notifications`) "
+"または完全なメールアドレスを入力できます。 これを設定することで、Eメールの `送信元` ヘッダーを決定します。 "
+"完全なメールアドレスが使用された場合、送信されるEメールは全てこのアドレスで上書きされます。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:297
 msgid "Notification system"
-msgstr ""
+msgstr "通知システム"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:299
 msgid ""
@@ -4543,6 +4584,7 @@ msgid ""
 "If a customer replies directly to an email, the answer is logged in the same"
 " chatter, thus functioning as a message thread related to the record."
 msgstr ""
+"チャターからEメールが送信されると、顧客は直接そのEメールに返信することができます。顧客が直接Eメールに返信すると、その回答は同じチャターに記録され、レコードに関連するメッセージスレッドとして機能します。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:303
 msgid ""
@@ -4550,6 +4592,7 @@ msgid ""
 "the subscribed subtypes) to send them a notification by email, or in the "
 "Odoo inbox, depending on the user’s preferences."
 msgstr ""
+"返信を受け取ると、Odooは購読しているフォロワー(購読しているサブタイプに基づく)を使用して、ユーザの優先順位に応じて、EメールまたはOdooの受信トレイで通知を送信します。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:307
 msgid ""
@@ -4558,6 +4601,8 @@ msgid ""
 "default behavior is to redistribute the email's content to all other "
 "followers within the thread."
 msgstr ""
+"もし `“Mary” <mary@customer.example.com>` "
+"というEメールアドレスを持つ顧客がOdooデータベースから送信されたメールに直接返信するとOdooのデフォルトの動作では、スレッド内の他のフォロワー全員にEメールの内容を再配信されます。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:311
 msgid ""
@@ -4568,6 +4613,9 @@ msgid ""
 "overridden with the value `notifications@company-name.odoo.com` instead of "
 "`mary@customer.example.com`."
 msgstr ""
+"Maryのドメインはエイリアスドメインに属さないため、Odooはメールアドレスを上書きし、フォロワーに通知する通知用メールアドレスとして使用します。この上書きはデータベースで行った設定に依存します。デフォルトでは、OdooオンラインとOdoo.shでは、Eメールの`送信元`"
+" アドレスは、`mary@customer.example.com` ではなく、`notifications@company-"
+"name.odoo.com` という値で上書きされます。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:317
 msgid ""
@@ -4575,10 +4623,12 @@ msgid ""
 "default from alias}`@`{alias domain, domain name}`, by default, "
 "`notifications@company-name.odoo.com`."
 msgstr ""
+"アドレスは、送信者の名前と `{alias domain, default from alias}`@`{alias domain, domain "
+"name}` を使用して作成され、デフォルトでは `notifications@company-name.odoo.com` となります。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:324
 msgid "Using a unique email address for all outgoing emails"
-msgstr ""
+msgstr "全ての送信メールに固有のメールアドレスを使用します"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:326
 msgid ""
@@ -4587,30 +4637,35 @@ msgid ""
 "Email: Alias Domains`. On the :guilabel:`Default From Alias`, use the the "
 "local-part or a complete email address as the value."
 msgstr ""
+"送信元メールアドレスを強制するには、:ref:`開発者モード` を有効化し、:menuselection:`設定 --> 技術設定 --> Eメール: "
+"エイリアスドメイン` に移動します。 :guilabel:`デフォルトの送信元エイリアス` "
+"で、ローカルパートまたは完全なメールアドレスを値として使用します。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:331
 msgid ""
 "If a **complete address** is used as the :guilabel:`Default From Alias` "
 "value, **all** outgoing emails will be overwritten by this address."
 msgstr ""
+"**完全なアドレス** が:guilabel:`デフォルト送信元エイリアス` の値として使用されている場合、**全て** "
+"の送信Eメールがこのアドレスで上書きされます。"
 
 #: ../../content/applications/general/email_communication/faq.rst:3
 msgid "Common emailing issues and solutions"
-msgstr ""
+msgstr "よくあるEメールの問題と解決策"
 
 #: ../../content/applications/general/email_communication/faq.rst:5
 msgid "This page lists the most common emailing issues and their solutions."
-msgstr ""
+msgstr "このページでは、Eメールに関するよくある問題と解決策を記載しています。"
 
 #: ../../content/applications/general/email_communication/faq.rst:10
 msgid "Odoo is not an email provider"
-msgstr ""
+msgstr "OdooはEメールプロバイダーではありません"
 
 #: ../../content/applications/general/email_communication/faq.rst:12
 msgid ""
 "Odoo does not function like a classic email inbox, such as Gmail, Outlook, "
 "Yahoo, etc."
-msgstr ""
+msgstr "Odooは、Gmail、Outlook、Yahooなどのような、一般的なEメールの受信トレイのようには機能しません。"
 
 #: ../../content/applications/general/email_communication/faq.rst:14
 msgid ""
@@ -4619,10 +4674,11 @@ msgid ""
 "server. Therefore, it might not behave in the expected way when compared to "
 "a traditional email inbox."
 msgstr ""
+"Odooはユーザ/顧客への通知や連絡にEメールを使用しますが、これは設計上、専用Eメールサーバの代替ではありません。そのため、従来のEメールの受信トレイと比較すると、期待通りに動作しない場合があります。"
 
 #: ../../content/applications/general/email_communication/faq.rst:18
 msgid "The main differences are the following:"
-msgstr ""
+msgstr "主な違いは以下です:"
 
 #: ../../content/applications/general/email_communication/faq.rst:20
 msgid ""
@@ -4633,6 +4689,7 @@ msgid ""
 "content of the same email (when sent to multiple recipients) if the content "
 "is already present in the chatter."
 msgstr ""
+"デフォルトでは、通知またはトランザクションメール(見積書、顧客請求書、連絡先への直接メッセージ)が正常に送信されると、Eメールオブジェクトは削除されます。Eメールメッセージのコンテンツは、関連レコードのチャターに保存されます。コンテンツがチャターにすでに存在する場合、同じEメールの複数のコピーがデータベースに保存されるのを防ぎます(複数の宛先に送信された場合)。"
 
 #: ../../content/applications/general/email_communication/faq.rst:25
 msgid ""
@@ -4641,6 +4698,9 @@ msgid ""
 " contact is notified <email-outbound-notifications>` or receives a copy of "
 "an email."
 msgstr ""
+"(ブラインド)カーボンコピー([B]CC)の概念はありません。Odooでは、チャターに追加された *フォロワー* "
+"の概念を使用して、自動的に決定します。:ref:`連絡先が通知されるタイミングと方法 <email-outbound-"
+"notifications>`、またはEメールのコピーを受信する方法です。"
 
 #: ../../content/applications/general/email_communication/faq.rst:28
 msgid ""
@@ -4651,6 +4711,10 @@ msgid ""
 "in a spam or quarantine folder. In other words, any email unrelated to an "
 "Odoo database is lost."
 msgstr ""
+"受信メールは、*送信先* "
+"のメールアドレスがOdooデータベース内の有効なメールアドレスであるか、返信メールの場合は、Odooデータベースから送信されたメッセージと一致する参照がメールヘッダーにあるかを確認することで処理されます。"
+" それ以外のメールは全てバウンスされ、スパムまたは隔離フォルダに一時的に保存されることはありません。 "
+"言い換えれば、Odooデータベースに関係のないメールはすべて失われます。"
 
 #: ../../content/applications/general/email_communication/faq.rst:37
 msgid "Outgoing emails"
@@ -4658,7 +4722,7 @@ msgstr "送信メール"
 
 #: ../../content/applications/general/email_communication/faq.rst:42
 msgid "Changing the email address of the admin user account"
-msgstr ""
+msgstr "管理ユーザアカウントのEメールアドレスを変更する"
 
 #: ../../content/applications/general/email_communication/faq.rst:44
 msgid ""
@@ -4666,6 +4730,8 @@ msgid ""
 "placeholder email address. It is recommended to **replace the admin email "
 "address** with a valid email address to prevent outgoing email issues."
 msgstr ""
+"Odooデータベースが作成されると、メインの管理者アカウントにプレースホルダーのEメールアドレスが割当てられます。 "
+"送信メールの問題を防ぐため、**管理者Eメールアドレス** を検証済のEメールアドレスに置き換えることをお勧めします。"
 
 #: ../../content/applications/general/email_communication/faq.rst:48
 msgid ""
@@ -4675,6 +4741,10 @@ msgid ""
 "email address or use your Odoo subdomain (e.g., `company-name.odoo.com`) and"
 " `admin` for the local-part (e.g., `admin@company-name.odoo.com`)."
 msgstr ""
+"これを行うには、管理アカウントでユーザアイコンをクリックし、:guilabel:`自分のプロフィール` (または "
+":guilabel:`Preferences`) をクリックし、:guilabel:`個人設定` タブの下にある :guilabel:`Eメール` "
+"フィールドを更新します。他のメールアドレスを使用するか、Odooサブドメイン(例:  `company-"
+"name.odoo.com`)とローカルパート(例:`admin@company-name.odoo.com`) に `admin` を使用します。"
 
 #: ../../content/applications/general/email_communication/faq.rst:56
 msgid "Delivery failure"
@@ -4686,10 +4756,12 @@ msgid ""
 " is displayed in the chatter. The icon turns red when delivery has failed "
 "for at least one recipient."
 msgstr ""
+"メッセージが送信されると、チャターに :icon:`fa-envelope-o` :guilabel:`(封筒)` アイコンが表示されます。 "
+"宛先の1人でも配信に失敗した場合、アイコンが赤くなります。"
 
 #: ../../content/applications/general/email_communication/faq.rst-1
 msgid "Red envelope icon displayed in the chatter."
-msgstr ""
+msgstr "チャター上に表示された赤色の封筒アイコン。"
 
 #: ../../content/applications/general/email_communication/faq.rst:64
 msgid ""
@@ -4697,16 +4769,20 @@ msgid ""
 "possible, the relevant :ref:`error messages <email-issues-outgoing-delivery-"
 "failure-messages>`."
 msgstr ""
+"封筒を左クリックすると、配送に関する情報と、可能であれば関連するエラーメッセージが表示されます <email-issues-outgoing-"
+"delivery-failure-messages>` 。"
 
 #: ../../content/applications/general/email_communication/faq.rst-1
 msgid "Example of a sending failure."
-msgstr ""
+msgstr "送信エラーの例。"
 
 #: ../../content/applications/general/email_communication/faq.rst:70
 msgid ""
 "Click :guilabel:`See Error Details` to get extra information for the fail "
 "reason, **if** Odoo was able to process the original error or bounce email."
 msgstr ""
+"Odooが元のエラーまたはバウンスEメールを処理できた **場合**、失敗の理由に関する追加情報を取得するには、:guilabel:`エラー詳細を見る`"
+" をクリックします。"
 
 #: ../../content/applications/general/email_communication/faq.rst:73
 msgid ""
@@ -4715,12 +4791,15 @@ msgid ""
 "column. All **toggled-off** (:icon:`fa-toggle-off`) recipients will be "
 "ignored."
 msgstr ""
+" :guilabel:`もう一度試す` 列で **オンになっている** (:icon:`fa-toggle-on`) "
+"宛先全てにEメールを再送するには、:guilabel:`送信して閉じる` をクリックします。**オフになっている** (:icon:`fa-"
+"toggle-off) 宛先は全て無視されます。"
 
 #: ../../content/applications/general/email_communication/faq.rst:77
 msgid ""
 "Click :guilabel:`Ignore all` to ignore all currently failing emails and turn"
 " the envelope icon from red to white."
-msgstr ""
+msgstr ":guilabel:`全てを無視`をクリックすると、現在エラーとなっているEメールを全て無視し、封筒アイコンが赤から白に変わります。"
 
 #: ../../content/applications/general/email_communication/faq.rst:80
 msgid ""
@@ -4728,10 +4807,12 @@ msgid ""
 "the :ref:`developer mode <developer-mode>` and go to "
 ":menuselection:`Settings --> Technical --> Email: Emails`."
 msgstr ""
+"送信されていないメールもOdooのメールキューに表示されます。アクセスするには、:ref:`開発者モード <developer-mode>` "
+"を有効化し、:menuselection:`設定 --> 技術設定 --> Eメール:` に進みます。"
 
 #: ../../content/applications/general/email_communication/faq.rst-1
 msgid "Example of the technical email queue view."
-msgstr ""
+msgstr "技術設定Eメールのキューの表示例。"
 
 #: ../../content/applications/general/email_communication/faq.rst:86
 msgid ""
@@ -4740,6 +4821,9 @@ msgid ""
 "then appear with the :guilabel:`Outgoing` status. The email will be sent "
 "again the next time the scheduled action for the email queue runs."
 msgstr ""
+"失敗したEメールには :guilabel:`配信失敗` ステータスが表示されます。 :guilabel:`再試行` "
+"をクリックすると、失敗したEメールがEメールキューに再度追加されます。 その際には :guilabel:`送信済` ステータスが表示されます。 "
+"Eメールは、Eメールキューのスケジュールされたアクションが次に実行された際に、再度送信されます。"
 
 #: ../../content/applications/general/email_communication/faq.rst:90
 msgid ""
@@ -4747,6 +4831,8 @@ msgid ""
 ":guilabel:`Send Now`. Click :guilabel:`Cancel Email` to remove it from the "
 "email queue."
 msgstr ""
+"オプションとして、キューに入れられたEメールは、:guilabel:`今すぐ送信`をクリックすることで即時に送信することができます。Eメールをキューから削除するには、:guilabel:`Eメールの取消`"
+" をクリックします。"
 
 #: ../../content/applications/general/email_communication/faq.rst:94
 msgid ""
@@ -4754,6 +4840,8 @@ msgid ""
 "the *Auto-Vacuum* scheduled action that cleans redundant data on your Odoo "
 "database."
 msgstr ""
+"送信済みのEメールは、キューから定期的に削除されます。これは、Odooデータベース上の冗長データを削除する *自動バキューム* "
+"というスケジュールされたアクションによって制御されます。"
 
 #: ../../content/applications/general/email_communication/faq.rst:100
 msgid "Common error messages"
@@ -4765,7 +4853,7 @@ msgstr "日次上限に到達しました"
 
 #: ../../content/applications/general/email_communication/faq.rst-1
 msgid "Email limit reached warning."
-msgstr ""
+msgstr "Eメール上限達成警告。"
 
 #: ../../content/applications/general/email_communication/faq.rst:110
 msgid ""
@@ -4775,56 +4863,59 @@ msgid ""
 " to addresses that do not exist or are no longer valid. It also applies to "
 "unsolicited spam emails sent through an Odoo database."
 msgstr ""
+"Odooは、Odooオンラインデータベースから送信できるEメールの数を制限しています。OdooのEメールサーバが存在しないアドレスや無効なアドレスに大量のEメールを送信している場合、ほとんどのEメールサービスプロバイダ(Google、Yahooなど)はOdooのサーバIPをブラックリストに登録します。これは、Odooデータベースを通じて送信される迷惑なスパムEメールにも適用されます。"
 
 #: ../../content/applications/general/email_communication/faq.rst:115
 msgid ""
 "The default daily email limit varies between **5 and 200 emails**. The exact"
 " limit is depends on several factors (subject to change):"
 msgstr ""
+"日次Eメール配信のデフォルトの上限は、**5～200通** の間で異なります。正確な上限は、いくつかの要因によって異なります(変更される場合あり)。"
 
 #: ../../content/applications/general/email_communication/faq.rst:118
 msgid ""
 "Type of database subscription (one app free, trial, paying subscription)"
-msgstr ""
+msgstr "データベースサブスクリプションの種類(シングルアプリ無料プラン、トライアル、有料サブスクリプション)"
 
 #: ../../content/applications/general/email_communication/faq.rst:119
 msgid "Apps installed (i.e., Email Marketing, Marketing Automation)"
-msgstr ""
+msgstr "インストール済アプリ(例: Eメールマーケティング、マーケティング自動化)"
 
 #: ../../content/applications/general/email_communication/faq.rst:120
 msgid "If a database migration is ongoing"
-msgstr ""
+msgstr "データベースの移行が現在進行中の場合"
 
 #: ../../content/applications/general/email_communication/faq.rst:122
 msgid "If the daily limit is reached, you can:"
-msgstr ""
+msgstr "日次上限に達した場合、下記が可能です:"
 
 #: ../../content/applications/general/email_communication/faq.rst:124
 msgid ""
 "Contact :ref:`Odoo Support <email-issues-support>` to increase your email "
 "quota. The following factors will be taken into account:"
 msgstr ""
+":ref:`Odooサポート <email-issues-support>` に連絡してEメールの容量を追加します。以下の要因が考慮されます:"
 
 #: ../../content/applications/general/email_communication/faq.rst:127
 msgid "Numbers of users on the database"
-msgstr ""
+msgstr "データベースのユーザ数"
 
 #: ../../content/applications/general/email_communication/faq.rst:128
 msgid "Apps installed"
-msgstr ""
+msgstr "インストール済アプリ"
 
 #: ../../content/applications/general/email_communication/faq.rst:129
 msgid ""
 "Bounce rate (the percentage of email addresses that did not receive emails "
 "because they were returned by an email server on their way to the final "
 "recipient)."
-msgstr ""
+msgstr "バウンス率(最終送信先への送信途中でメールサーバによって返送されたため、Eメールを受信できなかったメールアドレスの割合)"
 
 #: ../../content/applications/general/email_communication/faq.rst:131
 msgid ""
 "Whether your :ref:`email aliases are correctly set up and use the "
 "appropriate custom domains <email-outbound-alias-domain>`."
-msgstr ""
+msgstr "エイリアスが正しく設定され、適切なカスタムドメインを使用しているかどうか <email-outbound-alias-domain>`"
 
 #: ../../content/applications/general/email_communication/faq.rst:135
 msgid ""
@@ -4834,12 +4925,17 @@ msgid ""
 "emails on your custom domain's behalf <email-outbound-custom-domain-odoo-"
 "server>`."
 msgstr ""
+"カスタムドメインを使用する際は、:ref:`SPF <email-domain-spf>`, :ref:`DKIM <email-domain-"
+"dkim>`, :ref:`DMARC <email-domain-dmarc>` "
+"が正しく設定されていることを確認して下さい。これにより、:ref:`OdooのEメールサーバがカスタムドメインの代理としてEメールを送信できるようになります"
+" <email-outbound-custom-domain-odoo-server>`。"
 
 #: ../../content/applications/general/email_communication/faq.rst:140
 msgid ""
 ":doc:`Use an external outgoing email server <../email_communication>` to be "
 "independent of Odoo's email limit."
 msgstr ""
+"Odooのメール上限に制限されないようにするには、:doc:`外部送信メールサーバを使用 <../email_communication>` します。 "
 
 #: ../../content/applications/general/email_communication/faq.rst:142
 msgid ""
@@ -4848,6 +4944,9 @@ msgid ""
 "Technical --> Email: Emails`, and click :guilabel:`Retry` next to the unsent"
 " email."
 msgstr ""
+"翌日まで待ってから、再度メールを送信してみて下さい。 そのために、:ref:`開発者モード <developer-mode>` "
+"を有効化し、:menuselection:`設定 --> 技術設定 --> Eメール:` に移動し、未送信のメールの横にある "
+":guilabel:`再試行` をクリックします。"
 
 #: ../../content/applications/general/email_communication/faq.rst:147
 msgid ""
@@ -4857,6 +4956,8 @@ msgid ""
 "someone via email. This can be mitigated by receiving :ref:`notifications in"
 " Odoo <discuss_app/notification_preferences>` instead of by email."
 msgstr ""
+"日次Eメールの制限は、手動または自動でトリガされ、Odooデータベースから送信されるすべてのEメールをカウントします。デフォルトでは、社内メッセージ、通知、ログノートなど、Eメールで誰かに通知するものはすべてEメールとしてカウントされます。Eメールの代わりに、:ref:`Odoo内の通知"
+" <discuss_app/notification_preferences>` を受信することで数を抑えることができます。"
 
 #: ../../content/applications/general/email_communication/faq.rst:155
 msgid "SMTP error"
@@ -4868,6 +4969,9 @@ msgid ""
 "<https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol>`_ is a "
 "standard used to transmit emails between email servers and/or email clients."
 msgstr ""
+"`Simple Mail Transport Protocol (SMTP) "
+"<https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol>`_ "
+"は、Eメールサーバおよび/またはEメールクライアント間でEメールを送信するために使用される標準規格です。"
 
 #: ../../content/applications/general/email_communication/faq.rst:161
 msgid ""
@@ -4877,10 +4981,13 @@ msgid ""
 " While the code numbers are not specific to Odoo, the exact content of the "
 "error message might vary from email server to email server."
 msgstr ""
+":ref:`外部のSTMPサーバを使用してEメールを送信する <email-outbound-custom-domain-smtp-server>` "
+"場合、標準的な `SMTPエラーコードが存在します "
+"<https://en.wikipedia.org/wiki/List_of_SMTP_server_return_codes#Common_status_codes>`_。コード番号はOdooに固有のものではありませんが、エラーメッセージの正確な内容は、メールサーバによって異なる場合があります。"
 
 #: ../../content/applications/general/email_communication/faq.rst:168
 msgid "A 550 SMTP permanent delivery error from sendgrid.com:"
-msgstr ""
+msgstr "sendgrid.comからの550 SMTP恒久的な配信エラー:"
 
 #: ../../content/applications/general/email_communication/faq.rst:179
 msgid ""
@@ -4890,18 +4997,22 @@ msgid ""
 "starting point to troubleshoot the issue, and verify that you whitelisted "
 "the email address on the side of sendgrid.com."
 msgstr ""
+"エラーメッセージは、未確認のメールアドレスからEメールを送信しようとしたことを示しています。送信メールサーバの設定や、データベースのデフォルトの "
+"*送信元* "
+"アドレスを調査することは、問題のトラブルシューティングの第一歩として有効であり、sendgrid.com側でメールアドレスをホワイトリストに登録したことを確認する手段でもあります。"
 
 #: ../../content/applications/general/email_communication/faq.rst:184
 msgid ""
 "Usually, inputting the error message content in a Google search can yield "
 "information on what the root cause might be and how to correct the issue."
-msgstr ""
+msgstr "通常、Google検索にエラーメッセージの内容を入力すると、根本原因と問題の修正方法に関する情報が得られる可能性があります。"
 
 #: ../../content/applications/general/email_communication/faq.rst:187
 msgid ""
 "If the issue cannot be resolved and keeps occurring, contact :ref:`Odoo "
 "Support <email-issues-support>`."
 msgstr ""
+"問題が解決できず、引き続き発生する場合は、連絡先までご連絡下さい :ref:`Odooサポート <email-issues-support>`。"
 
 #: ../../content/applications/general/email_communication/faq.rst:193
 msgid "No error populated"
@@ -4913,12 +5024,15 @@ msgid ""
 " failed. The different email providers implement their own policy on bounced"
 " emails, and it is not always possible for Odoo to interpret it correctly."
 msgstr ""
+"Odooは、配信が失敗した理由に関する情報を常に提供できるとは限りません。さまざまなEメールプロバイダーが独自のバウンスメールポリシーを実装しており、Odooがそれを常に正確に解釈できるとは限りません。"
 
 #: ../../content/applications/general/email_communication/faq.rst:199
 msgid ""
 "If there is a recurring problem with the same customer or the same domain, "
 "contact :ref:`Odoo Support <email-issues-support>`."
 msgstr ""
+"同じ顧客または同じドメインで繰返し問題が発生している場合は、 :ref:`Odooサポート <email-issues-support>` "
+"にご連絡下さい。"
 
 #: ../../content/applications/general/email_communication/faq.rst:203
 msgid ""
@@ -4929,10 +5043,14 @@ msgid ""
 ":doc:`Communication in Odoo by email documentation <../email_communication>`"
 " for more information."
 msgstr ""
+"エラーメッセージが表示されずにEメールが送信されない最も一般的な理由の1つは、:ref:`SPF <email-domain-spf>` または "
+":ref:`DKIM <email-domain-dkim>` "
+"の設定に関連しています。また、実装されたEメール通知の設定がビジネスニーズに適合しているかを確認してください。詳細は、:doc:`OdooでのEメールによるコミュニケーションに関するドキュメント"
+" <../email_communication>` を参照して下さい。"
 
 #: ../../content/applications/general/email_communication/faq.rst:212
 msgid "Execution time"
-msgstr ""
+msgstr "実施時間"
 
 #: ../../content/applications/general/email_communication/faq.rst:214
 msgid ""
@@ -4943,6 +5061,11 @@ msgid ""
 "marketing automation, and events). This avoids cluttering the mail servers "
 "and, instead, prioritizes individual communication."
 msgstr ""
+" Eメールの送信時刻は、システムユーティリティ *cron* (スケジュールされたアクション) "
+"によって管理されており、この機能を使用して、あらかじめ設定した間隔で自動的に実行するタスクをスケジュールすることができます。 "
+"Odooでは、このアプローチを使用して、\"緊急ではない\" "
+"とみなされるEメール(例えば、ニュースレター形式のメール一括配信、マーケティングオートメーション、イベントなど)を送信しています。 "
+"これにより、メールサーバが混雑するのを回避し、代わりに個々のコミュニケーションを優先することができます。"
 
 #: ../../content/applications/general/email_communication/faq.rst:222
 msgid ""
@@ -4953,6 +5076,8 @@ msgid ""
 "generally not recommended, as it might create errors or break specific "
 "workflows."
 msgstr ""
+" "
+"crunはタスクを完了するために特定のコードを実行するのにOdooがバックグラウンドで行うアクションです。Odooは、特定のワークフローで、予定日よりも早く予定されたアクションをトリガできるcronトリガも作成します。手動で予定されたアクションを実行したり、その頻度を変更することは、エラーが発生したり特定のワークフローが中断されたりする可能性があるため、一般的に推奨されません。"
 
 #: ../../content/applications/general/email_communication/faq.rst:227
 msgid ""
@@ -4962,6 +5087,9 @@ msgid ""
 "operation. If the interval is too short, not all emails may be processed, "
 "which may cause the cron to timeout."
 msgstr ""
+"デフォルトでは、通常のEメールキューに対して、:guilabel:`メール: Eメールキューマネジャー` クロンは60分ごとに実行されます。 "
+"クロンの最短実行間隔は5分です。 Odooは適切なオペレーションを確保するために15分間隔を推奨しています。 "
+"間隔が短すぎると、全てのEメールが処理されず、クロンがタイムアウトする可能性があります。"
 
 #: ../../content/applications/general/email_communication/faq.rst:232
 msgid ""
@@ -4970,11 +5098,13 @@ msgid ""
 "show up under :menuselection:`Settings --> Technical --> Email: Emails`, "
 "unless their delivery fails."
 msgstr ""
+"緊急とみなされるEメール(販売オーダ、顧客請求書、購買オーダなど、個人から個人宛て)は即時に送信されます。 配送に失敗した場合を除き、それらのEメールは"
+" :menuselection:`管理設定 --> 技術設定 --> Eメール: Eメール` には表示されません。"
 
 #: ../../content/applications/general/email_communication/faq.rst-1
 msgid ""
 "Example of sending information header when a mailing campaign is queued."
-msgstr ""
+msgstr "メール配信キャンペーンがキューに入れられた際に送信される情報ヘッダーの例。"
 
 #: ../../content/applications/general/email_communication/faq.rst:239
 msgid ""
@@ -4982,6 +5112,8 @@ msgid ""
 ":guilabel:`Send` button) or at a scheduled time (after clicking the "
 ":guilabel:`Schedule` button)."
 msgstr ""
+"Eメールキャンペーンは、(:guilabel:`送信` ボタンをクリック後) できるだけ早く、または (:guilabel:`スケジュール` "
+"ボタンをクリック後) スケジュールされた時刻に送信されます。"
 
 #: ../../content/applications/general/email_communication/faq.rst:242
 msgid ""
@@ -4992,12 +5124,18 @@ msgid ""
 " times is **not recommended**, as it will not accelerate the processing time"
 " and might create errors."
 msgstr ""
+"Eメールマーケティングキューの場合、:guilabel:`メールマーケティング: 処理キュー` "
+"という名前のクロンは1日1回実行されますが、キャンペーンがデフォルトの頻度以外でスケジュールされている場合は、**自動的に早期に** トリガされます。 "
+"宛先が多数含まれるメーリングリストの場合、処理時間を短縮できない上、エラーが発生する可能性もあるため、手動でクロンを複数回トリガさせることは  "
+"**お勧めできません**。"
 
 #: ../../content/applications/general/email_communication/faq.rst:249
 msgid ""
 "To edit crons, enable the :ref:`developer mode <developer-mode>` and go to "
 ":menuselection:`Settings --> Technical --> Automation: Scheduled Actions`."
 msgstr ""
+"クロンを編集するには、:ref:`開発者モード <developer-mode>` を有効化して :menuselection:`管理設定 --> "
+"技術設定 --> 自動化: スケジュール済アクション` に行きます。"
 
 #: ../../content/applications/general/email_communication/faq.rst:253
 msgid ""
@@ -5005,16 +5143,19 @@ msgid ""
 " frequent technical questions "
 "<../../../administration/odoo_sh/advanced/frequent_technical_questions>`."
 msgstr ""
+"Odoo.shを使用する際のクロンの情報について詳しくは :doc:`Odoo.shよくある技術的な質問 "
+"<../../../administration/odoo_sh/advanced/frequent_technical_questions>` "
+"をご覧下さい。"
 
 #: ../../content/applications/general/email_communication/faq.rst:259
 msgid "Email Marketing campaigns stuck in the queue"
-msgstr ""
+msgstr "Eメールマーケティングのキャンペーンがキューに滞留している"
 
 #: ../../content/applications/general/email_communication/faq.rst:261
 msgid ""
 "If multiple Email Marketing campaigns are put in the queue, they are "
 "processed in chronological order based on their creation date."
-msgstr ""
+msgstr "複数のEメールマーケティングキャンペーンがキューに入れられた場合、それらは作成日を基に時系列順に処理されます。"
 
 #: ../../content/applications/general/email_communication/faq.rst:265
 msgid ""
@@ -5023,10 +5164,12 @@ msgid ""
 "January), they are put in the queue by clicking :guilabel:`Send` on all "
 "three of them."
 msgstr ""
+"Campaign_1 (1月1日作成)、Campaign_2 (1月2日作成)、Campaign_3 (1月3日作成) "
+"という3つのキャンペーンがある場合、それら全てで :guilabel:`送信` をクリックすると、それらがキューに入れられます。"
 
 #: ../../content/applications/general/email_communication/faq.rst-1
 msgid "Example of three email marketing campaigns."
-msgstr ""
+msgstr "3つのマーケティングキャンペーンの例。"
 
 #: ../../content/applications/general/email_communication/faq.rst:272
 msgid ""
@@ -5034,6 +5177,8 @@ msgid ""
 "Campaign_3. It will not start processing Campaign_2 until it finishes "
 "processing Campaign_1."
 msgstr ""
+"クローンは、Campaign_1、次にCampaign_2、最後にCampaign_3 の順に処理を試みます。Campaign_1 "
+"の処理が完了するまで、Campaign_2 の処理は開始されません。"
 
 #: ../../content/applications/general/email_communication/faq.rst:275
 msgid ""
@@ -5043,10 +5188,13 @@ msgid ""
 " if the two other campaigns are sent. Then we could try to fix Campaign_1 or"
 " contact :ref:`Odoo Support <email-issues-support>`."
 msgstr ""
+"Eメールキャンペーンがキューから削除されない場合は、キューの先頭にあるキャンペーンに問題がある可能性があります。トラブルシューティングを行うには、:guilabel:`取消`"
+" ボタンをクリックしてキューからCampaign_1を削除し、他の2つのキャンペーンが送信されるかどうかを確認します。その後、Campaign_1 "
+"を修正するか、:ref:`Odooサポート <email-issues-support>` に連絡して下さい。"
 
 #: ../../content/applications/general/email_communication/faq.rst:283
 msgid "Incoming emails"
-msgstr ""
+msgstr "受信Eメール"
 
 #: ../../content/applications/general/email_communication/faq.rst:285
 msgid ""
@@ -5055,16 +5203,19 @@ msgid ""
 "contact a database, that will get a bounce message (most of the time a "
 ":guilabel:`550: mailbox unavailable` error message)."
 msgstr ""
+"受信メールに問題がある場合、Odoo自体には特に表示されないことがあります。バウンスメッセージ (ほとんどの場合、:guilabel:`550: "
+"mailbox unavailable` エラーメッセージ) を受け取るのは、データベースに連絡しようとする送信メールクライアントです。"
 
 #: ../../content/applications/general/email_communication/faq.rst:292
 msgid "Email is not received"
-msgstr ""
+msgstr "Eメールが受信されない"
 
 #: ../../content/applications/general/email_communication/faq.rst:298
 msgid ""
 "Contact :ref:`Odoo Support <email-issues-support>` if there is a recurring "
 "issue with the same client or domain."
 msgstr ""
+"同じ顧客またはドメインで繰返し問題が起こる場合は、 :ref:`Odooサポート <email-issues-support>` に連絡して下さい。"
 
 #: ../../content/applications/general/email_communication/faq.rst:303
 msgid ""
@@ -5076,6 +5227,7 @@ msgid ""
 "to send repeatedly. Logs show every action to the email servers from the "
 "database."
 msgstr ""
+"データベースログを使用して問題を把握し、修正することができます。ログはデータベースで完了した全てのタスクが保存されているものです。これらはテキストのみの表現で、Odooデータベースで実行された全てのアクションのタイムスタンプが含まれています。これはデータベースから送信されるEメールを追跡するのに役立ちます。メッセージが繰返し送信されたことを示す送信エラーもログで確認できます。ログはデータベースからEメールサーバへの全てのアクションを示します。"
 
 #: ../../content/applications/general/email_communication/faq.rst:310
 msgid ""
@@ -5083,12 +5235,15 @@ msgid ""
 " line or on the Odoo.sh dashboard). Log files are created everyday at 5:00 "
 "AM (UTC)."
 msgstr ""
+"ライブログは、:file:`~/logs/`フォルダ (コマンドラインまたは Odoo.sh "
+"ダッシュボードからアクセス)に保存されています。ログファイルは毎日5:00 AM(UTC)に作成されます。"
 
 #: ../../content/applications/general/email_communication/faq.rst:314
 msgid ""
 "The two most recent files, for the current day and the previous one, are "
 "named :file:`odoo.log` and :file:`odoo.log.1`."
 msgstr ""
+"最新2つのファイル、すなわち当日と前日のものは、:file:`odoo.log` および :file:`odoo.log.1` という名前です。"
 
 #: ../../content/applications/general/email_communication/faq.rst:317
 msgid ""
@@ -5096,28 +5251,34 @@ msgid ""
 "Use the commands :command:`grep` and :command:`zgrep` (for the compressed "
 "ones) to search through the files."
 msgstr ""
+"古い日付のログファイルは、日付がファイル名として使用され、圧縮されています。ファイルを検索するには、:command:`grep` および "
+":command:`zgrep` (圧縮されたファイル用) コマンドを使用します。"
 
 #: ../../content/applications/general/email_communication/faq.rst:321
 msgid ""
 "For more information on logs and how to access them via the Odoo.sh "
 "dashboard, refer to the :ref:`Odoo.sh logs documentation <odoosh/logs>`."
 msgstr ""
+"ログの詳細および Odoo.sh ダッシュボードからのアクセス方法については、:ref:`Odoo.sh ログのドキュメント "
+"<odoosh/logs>` を参照して下さい。"
 
 #: ../../content/applications/general/email_communication/faq.rst:324
 msgid ""
 "For more information on accessing logs via the command line, refer to the "
 ":ref:`developer logging documentation <reference/cmdline/server/logging>`."
 msgstr ""
+"コマンドライン経由でのアクセスログの詳細については、:ref:`開発者ロギングドキュメンテーション "
+"<reference/cmdline/server/logging>` を参照して下さい。"
 
 #: ../../content/applications/general/email_communication/faq.rst:330
 msgid "Information for Odoo Support"
-msgstr ""
+msgstr "Odooサポート用の情報"
 
 #: ../../content/applications/general/email_communication/faq.rst:332
 msgid ""
 "Here is a list of helpful information to include when reaching out to `Odoo "
 "Support <https://www.odoo.com/help>`_:"
-msgstr ""
+msgstr "`Odooサポート <https://www.odoo.com/help>`_ に連絡する際に役立つ情報のリストです:"
 
 #: ../../content/applications/general/email_communication/faq.rst:335
 msgid ""
@@ -5126,12 +5287,16 @@ msgid ""
 "investigation. The exact process to download the file depends on your third-"
 "party email provider."
 msgstr ""
+"受信トレイからEメール全体をエクスポートします。これらは通常、調査に必要な技術設定情報を含む `.eml` または `.msg` "
+"ファイル形式です。ファイルをダウンロードする正確な手順は、お客様のサードパーティEメールプロバイダーによって異なります。"
 
 #: ../../content/applications/general/email_communication/faq.rst:340
 msgid ""
 "`Gmail Help Center: Trace an email with its full header "
 "<https://support.google.com/mail/answer/29436>`_"
 msgstr ""
+"`Gmail ヘルプセンター: Eメールのヘッダー全体をトレース "
+"<https://support.google.com/mail/answer/29436>`_"
 
 #: ../../content/applications/general/email_communication/faq.rst:342
 msgid ""
@@ -5139,6 +5304,9 @@ msgid ""
 "<https://support.microsoft.com/en-us/office/view-internet-message-headers-"
 "in-outlook-cd039382-dc6e-4264-ac74-c048563d212c#tab=Web>`_"
 msgstr ""
+"`Microsoftサポート: Outlookでインターネットメッセージヘッダを見る "
+"<https://support.microsoft.com/en-us/office/view-internet-message-headers-"
+"in-outlook-cd039382-dc6e-4264-ac74-c048563d212c#tab=Web>`_"
 
 #: ../../content/applications/general/email_communication/faq.rst:344
 msgid ""
@@ -5147,12 +5315,15 @@ msgid ""
 "copies of emails as EML/MSG files. Refer to the documentation of the "
 "software used for more information."
 msgstr ""
+"ローカルEメールソフトウェア (例: Thunderbird, Apple Mail, Outlookなど) "
+"を使用してEメールを同期する場合には、通常EメールのローカルコピーをEML/MSGファイルとしてエクスポートすることが可能です。詳細は、使用しているソフトウェアのドキュメントを参照して下さい。"
 
 #: ../../content/applications/general/email_communication/faq.rst:349
 msgid ""
 "If possible, the EML/MSG file should be based on the original email that was"
 " sent and is failing or is causing issues."
 msgstr ""
+"可能であれば、EML/MSGファイルは、送信されたものの、失敗している、または問題を引き起こしている元のEメールに基づいている必要があります。"
 
 #: ../../content/applications/general/email_communication/faq.rst:352
 msgid ""
@@ -5161,6 +5332,8 @@ msgid ""
 "original email (forwarded) only contains partial information related to the "
 "troubleshooting."
 msgstr ""
+" **受信メール** の場合: "
+"可能であれば、元のEメールの送信者に連絡し、元のEメールのEML/MSGコピーを要求して下さい。元のEメールのコピー(転送)を送信しても、トラブルシューティングに関連する情報は一部しか含まれません。"
 
 #: ../../content/applications/general/email_communication/faq.rst:356
 msgid ""
@@ -5169,46 +5342,49 @@ msgid ""
 "name, invoice number) and the date/time when the email was sent (e.g., email"
 " sent on the 10th January 2024 11:45 AM Central European Time)."
 msgstr ""
+"**送信済みEメール** の場合: "
+"EメールのEML/MSGを提供するか、データベース内のどのレコードが影響を受けるか(例：販売オーダ番号、連絡先名、顧客請求書番号)と、Eメールが送信された日時(例：2024年1月10日11:45"
+" AM(中央ヨーロッパ時間)に送信されたEメール)を指定して下さい。"
 
 #: ../../content/applications/general/email_communication/faq.rst:361
 msgid ""
 "An explanation of the exact flow that is being followed to normally receive "
 "those emails in Odoo. Try to answer the following questions:"
-msgstr ""
+msgstr "通常、OdooでそれらのEメールを受信するために従っている正確な流れを説明します。以下の質問に答えてみて下さい。"
 
 #: ../../content/applications/general/email_communication/faq.rst:364
 msgid "Is this a notification message from a reply being received in Odoo?"
-msgstr ""
+msgstr "これはOdooで受信した返信の通知メッセージですか？"
 
 #: ../../content/applications/general/email_communication/faq.rst:365
 msgid "Is this a message being sent from the Odoo database?"
-msgstr ""
+msgstr "これはOdooデータベースから送信されているメッセージですか？"
 
 #: ../../content/applications/general/email_communication/faq.rst:366
 msgid ""
 "Is there an incoming email server being used, or is the email being "
 "redirected/forwarded through a custom email server or provider?"
-msgstr ""
+msgstr "受信メールサーバは使用されていますか？それとも、カスタムメールサーバまたはプロバイダ経由でEメールがリダイレクトまたは転送されていますか？"
 
 #: ../../content/applications/general/email_communication/faq.rst:368
 msgid "Is there an example of an email that has been correctly forwarded?"
-msgstr ""
+msgstr "正しく転送されたEメールの例はありますか？"
 
 #: ../../content/applications/general/email_communication/faq.rst:369
 msgid ""
 "Have you changed any email-related settings recently? Did it stop working "
 "after those changes?"
-msgstr ""
+msgstr "最近、Eメール関連の設定を変更しましたか？その変更後に動作しなくなったのですか？"
 
 #: ../../content/applications/general/email_communication/faq.rst:371
 msgid "An answer to the following questions:"
-msgstr ""
+msgstr "以下の質問への回答:"
 
 #: ../../content/applications/general/email_communication/faq.rst:373
 msgid ""
 "Is it a generic issue or is it specific to a use case? If specific to a use "
 "case, which one?"
-msgstr ""
+msgstr "一般的な問題ですか、それとも特定のユースケースに固有の問題ですか？特定のユースケースに固有の問題である場合、それはどのユースケースですか？"
 
 #: ../../content/applications/general/email_communication/faq.rst:374
 msgid ""
@@ -5216,10 +5392,12 @@ msgid ""
 "email should reach the Odoo database and display the :ref:`red envelope "
 "<email-issues-outgoing-delivery-failure>`."
 msgstr ""
+"期待通りに動作していますか？Odooを使用してEメールが送信された場合、バウンスメールはOdooデータベースに届き:ref:`赤い封筒<email-"
+"issues-outgoing-delivery-failure>`  を表示するはずです。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:3
 msgid "Connect Gmail to Odoo using Google OAuth"
-msgstr ""
+msgstr "Connect Gmail to Odoo using Google OAuthを使用してGmail"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:5
 msgid ""
@@ -5229,30 +5407,35 @@ msgid ""
 " Odoo database. This configuration works by using either a personal email "
 "address or an address created by a custom domain."
 msgstr ""
+"Odooは、GoogleのGmail用OAuthと互換性があります。カスタムドメインから安全なEメールを送信するには、Googleの "
+"*Workspace* "
+"プラットフォームとOdooデータベースのバックエンドで、いくつかの設定を行うだけで済みます。この設定は、個人用メールアドレスまたはカスタムドメインで作成されたアドレスを使用して機能します。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:11
 msgid ""
 "For more information, visit `Google's documentation "
 "<https://support.google.com/cloud/answer/6158849>`_ on setting up OAuth."
 msgstr ""
+"さらに詳しくはOAuthセットアップの `Googleドキュメンテーション "
+"<https://support.google.com/cloud/answer/6158849>`_ をご覧下さい。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:15
 msgid ":doc:`/applications/general/users/google`"
-msgstr ""
+msgstr ":doc:`/applications/general/users/google`"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:16
 #: ../../content/applications/general/users/google.rst:18
 msgid ":doc:`/applications/productivity/calendar/google`"
-msgstr ""
+msgstr ":doc:`/applications/productivity/calendar/google`"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:19
 msgid "Setup in Google"
-msgstr ""
+msgstr "Googleでの設定"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:22
 #: ../../content/applications/general/integrations/google_translate.rst:17
 msgid "Create a new project"
-msgstr ""
+msgstr "新規プロジェクトを作成"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:24
 msgid ""
@@ -5262,6 +5445,9 @@ msgid ""
 "Gmail account (this should match the email address you want to configure in "
 "Odoo)."
 msgstr ""
+"まず、`Google APIコンソール "
+"<https://console.developers.google.com>`_にアクセスします。*Google Workspace* "
+"アカウントをお持ちの場合は、そのアカウントでログインして下さい。お持ちでない場合は、個人用Gmailアカウントでログインして下さい(これは、Odooで設定するEメールアドレスと一致している必要があります)。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:28
 msgid ""
@@ -5270,6 +5456,9 @@ msgid ""
 " in this account, then the :guilabel:`New Project` option will be located on"
 " the top right under the :guilabel:`Select a project` drop-down menu."
 msgstr ""
+"その後、:guilabel:`OAuth 同意画面` の右端にある :guilabel:`プロジェクト作成` "
+"をクリックします。このアカウントでプロジェクトがすでに作成されている場合は、:guilabel:`新規プロジェクト` オプションが "
+":guilabel:`プロジェクトを選択` ドロップダウンメニューの下の右上に表示されます。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:33
 msgid ""
@@ -5279,27 +5468,33 @@ msgid ""
 "using a personal Gmail account, then leave the :guilabel:`Location` as "
 ":guilabel:`No Organization`."
 msgstr ""
+":menuselection:`新規プロジェクト` 画面で、:guilabel:`プロジェクト名` を `Odoo` "
+"に変更し、:guilabel:`ロケーション` を参照します。:guilabel:`ロケーション` を *Google Workspace 組織* "
+"に設定します。個人用 Gmail アカウントを使用している場合は、:guilabel:`ロケーション` を :guilabel:`組織なし` "
+"のままにしておきます。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst-1
 #: ../../content/applications/general/integrations/google_translate.rst-1
 msgid "Project Name and Location for Google OAuth."
-msgstr ""
+msgstr "Google OAuth用プロジェクト名とロケーション"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:42
 #: ../../content/applications/general/integrations/google_translate.rst:39
 msgid "Click on :guilabel:`Create` to finish this step."
-msgstr ""
+msgstr "このステップを完了するには、:guilabel:`作成` をクリックします。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:45
 #: ../../content/applications/general/users/google.rst:48
 msgid "OAuth consent screen"
-msgstr ""
+msgstr "OAuth同意スクリーン"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:47
 msgid ""
 "If the page doesn't redirect to the :menuselection:`User Type` options, "
 "click on :guilabel:`OAuth consent screen` in the left menu."
 msgstr ""
+"ページが :menuselection:`ユーザタイプ` オプションにリダイレクトされない場合は、左側のメニューにある :guilabel:`OAuth"
+" 同意画面` をクリックします。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:50
 msgid ""
@@ -5307,6 +5502,8 @@ msgid ""
 "Type`, and then click on :guilabel:`Create` again, which will finally "
 "navigate to the :menuselection:`Edit app registration` page."
 msgstr ""
+":guilabel:`ユーザータイプ` のオプションから適切な :guilabel:`ユーザータイプ` を選択し、再度 :guilabel:`作成` "
+"をクリックすると、最終的に :menuselection:`アプリ登録の編集` ページに移動します。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:55
 #: ../../content/applications/general/users/google.rst:64
@@ -5316,6 +5513,9 @@ msgid ""
 "However, using a *Google WorkSpace* account allows for **Internal** User "
 "Type to be used."
 msgstr ""
+"*個人用* のGmailアカウントは、**外部** ユーザタイプのみ許可されており、Googleによる承認が必要になる場合や、*スコープ* "
+"を追加する必要がある場合があります。しかし、*Google WorkSpace* アカウントを使用すると、**内部** "
+"ユーザタイプを使用することができます。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:59
 #: ../../content/applications/general/users/google.rst:68
@@ -5324,14 +5524,16 @@ msgid ""
 "mode, then no approval is necessary from Google. User limits in this testing"
 " mode is set to 100 users."
 msgstr ""
+"また、API接続が *外部* "
+"テストモードにある間は、Googleからの承認は必要ありません。このテストモードにおけるユーザの制限は100ユーザに設定されています。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:63
 msgid "Edit app registration"
-msgstr ""
+msgstr "アプリ登録を編集"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:65
 msgid "Next we will configure the app registration of the project."
-msgstr ""
+msgstr "次に、プロジェクトのアプリ登録を設定します。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:67
 msgid ""
@@ -5340,12 +5542,16 @@ msgid ""
 " the organization's email address under the :guilabel:`User support` email "
 "field."
 msgstr ""
+":guilabel:`OAuth 同意画面` の手順で、:guilabel:`アプリ情報` セクションの :guilabel:`アプリ名` フィールドに"
+" `Odoo` と入力します。:guilabel:`ユーザサポート` のEメールフィールドで、組織のEメールアドレスを選択します。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:71
 msgid ""
 "Next, under :menuselection:`App Domain --> Authorized domains`, click on "
 ":guilabel:`Add Domain` and enter `odoo.com`."
 msgstr ""
+"次に、:menuselection:`アプリドメイン --> 承認済ドメイン` で、 :guilabel:`ドメイン追加` をクリックし "
+"`odoo.com` を入力します。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:74
 msgid ""
@@ -5353,6 +5559,8 @@ msgid ""
 "enter the organization's email address. Google uses this email address to "
 "notify the organization about any changes to your project."
 msgstr ""
+"その後、:guilabel:`開発者連絡先情報` "
+"セクションで、組織のEメールアドレスを入力します。Googleは、このEメールアドレスを使用して、プロジェクトに変更があったことを組織に通知します。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:78
 msgid ""
@@ -5360,6 +5568,8 @@ msgid ""
 ":menuselection:`Scopes` page by scrolling to the bottom and clicking on "
 ":guilabel:`Save and Continue`."
 msgstr ""
+"次に、:guilabel:`保存して続行` ボタンをクリックします。次に、:menuselection:`スコープ` "
+"ページをスクロールして一番下まで移動し、:guilabel:`保存して続行` をクリックしてスキップします。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:81
 msgid ""
@@ -5368,16 +5578,18 @@ msgid ""
 ":guilabel:`Add Users`, and then the :guilabel:`Save and Continue` button. A "
 "summary of the app registration appears."
 msgstr ""
+"テストモード (外部) を継続する場合は、:guilabel:`テストユーザ` の段階で設定したEメールアドレスを、:guilabel:`ユーザを追加`"
+" をクリックし、:guilabel:`保存して続行` ボタンをクリックして追加します。アプリ登録の概要が表示されます。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:85
 msgid ""
 "Finally, scroll to the bottom and click on :guilabel:`Back to Dashboard` to "
 "finish setting up the project."
-msgstr ""
+msgstr "最後に、一番下までスクロールし、:guilabel:`ダッシュボードに戻る` をクリックしてプロジェクトの設定を完了します。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:89
 msgid "Create Credentials"
-msgstr ""
+msgstr "認証情報の作成"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:91
 msgid ""
@@ -5385,22 +5597,27 @@ msgid ""
 "includes the *Client ID* and *Client Secret*. First, click on "
 ":guilabel:`Credentials` in the left sidebar menu."
 msgstr ""
+"プロジェクトの設定が完了したので、*クライアントID* と *クライアントシークレット* "
+"を含む認証情報を作成します。まず、左サイドバーメニューの:guilabel:`認証情報` をクリックします。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:94
 msgid ""
 "Then, click on :guilabel:`Create Credentials` in the top menu and select "
 ":guilabel:`OAuth client ID` from the dropdown menu."
 msgstr ""
+"次に、トップメニューの :guilabel:`認証情報の作成` をクリックし、ドロップダウンメニューから "
+":guilabel:`OAuthクライアントID` を選択します。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:97
 msgid ""
 "Under :guilabel:`Application Type`, select :guilabel:`Web Application` from "
 "the dropdown menu."
 msgstr ""
+":guilabel:`アプリケーションタイプ` の下にあるドロップダウンメニューから、:guilabel:`ウェブアプリケーション` を選択します。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:98
 msgid "In the :guilabel:`Name` field, enter `Odoo`."
-msgstr ""
+msgstr ":guilabel:`名前` フィールドで `Odoo` を入力します。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:99
 msgid ""
@@ -5410,6 +5627,10 @@ msgid ""
 " field. Be sure to replace the *yourdbname* part of the URL with the actual "
 "Odoo database name."
 msgstr ""
+":guilabel:`承認済みのリダイレクトURI` のラベルの下にある :guilabel:`URIを追加` "
+"ボタンをクリックし、:guilabel:`URIs 1` フィールドに "
+"`https://yourdbname.odoo.com/google_gmail/confirm` と入力します。 URL の "
+"*yourdbname* 部分は、実際の Odoo データベース名に置き換えてください。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:102
 msgid ""
@@ -5417,14 +5638,17 @@ msgid ""
 " and :guilabel:`Client Secret`. Finally, copy each generated value for later"
 " use when configuring in Odoo, and then navigate to the Odoo database."
 msgstr ""
+"次に、:guilabel:`作成` をクリックして、OAuth の :guilabel:`クライアントID` と "
+":guilabel:`クライアントシークレット` を生成します。最後に、Odoo の設定時に使用するために、生成された各値をコピーし、Odoo "
+"データベースに移動します。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst-1
 msgid "Client ID and Client Secret for Google OAuth."
-msgstr ""
+msgstr "Google OAuth用のクライアントIDとクライアントシークレット"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:114
 msgid "Enter Google Credentials"
-msgstr ""
+msgstr "Google認証情報を入力する"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:116
 msgid ""
@@ -5432,6 +5656,8 @@ msgid ""
 "the :guilabel:`Apps` filter from the search bar and type in `Google`. "
 "Install the module called :guilabel:`Google Gmail`."
 msgstr ""
+"まず、Odooを開き、:guilabel:`アプリ` モジュールに移動します。次に、検索バーから :guilabel:`アプリ` "
+"フィルタを削除し、`Google`と入力します。:guilabel:`Google Gmail` モジュールをインストールします。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:120
 msgid ""
@@ -5443,6 +5669,11 @@ msgid ""
 "into the :guilabel:`Client ID` and :guilabel:`Client Secret` fields and "
 ":guilabel:`Save` the settings."
 msgstr ""
+"次に、:menuselection:`管理設定 --> 一般設定` に移動し、 :guilabel:`ディスカス` "
+"セクションで、:guilabel:`カスタムEメールサーバ` または :guilabel:`外部メールサーバ` "
+"のチェックボックスがオンになっていることを確認します。これにより、:guilabel:`Gmail認証情報` または "
+":guilabel:`Gmailサーバを使用` の新しいオプションが有効になります。次に、それぞれの値を :guilabel:`クライアントID` "
+"および :guilabel:`クライアントシークレット` フィールドにコピー&ペーストし、設定を :guilabel:`保存` します。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:129
 msgid ""
@@ -5450,11 +5681,13 @@ msgid ""
 ":guilabel:`Custom Email Servers` setting and then click the "
 ":guilabel:`Outgoing Email Servers` link."
 msgstr ""
+"外部Gmailアカウントを設定するには、:guilabel:`カスタムEメールサーバ`設定の一番上に戻り、:guilabel:`送信メールサーバ` "
+"リンクをクリックします。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst-1
 #: ../../content/applications/general/email_communication/google_oauth.rst-1
 msgid "Configure Outgoing Email Servers in Odoo."
-msgstr ""
+msgstr "Odooで送信Eメールサーバを設定します。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:136
 msgid ""
@@ -5462,6 +5695,9 @@ msgid ""
 "server, and fill in the :guilabel:`Name`, :guilabel:`Description`, and the "
 "email :guilabel:`Username` (if required)."
 msgstr ""
+"次に、:guilabel:`新規作成` または:guilabel:`作成` "
+"をクリックして新しいEメールサーバを作成し、:guilabel:`名前`、:guilabel:`説明`、Eメールの:guilabel:`ユーザ名` "
+"(必要な場合)を入力します。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:139
 msgid ""
@@ -5469,6 +5705,8 @@ msgid ""
 "(under the :guilabel:`Authenticate with` or :guilabel:`Connection` section)."
 " Finally, click on :guilabel:`Connect your Gmail Account`."
 msgstr ""
+"次に、:guilabel:`Gmail OAuth認証` または :guilabel:`Gmail`（:guilabel:`認証` または "
+":guilabel:`接続` セクションの下) をクリックします。最後に、:guilabel:`Gmailアカウントを接続` をクリックします。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:143
 msgid ""
@@ -5476,6 +5714,7 @@ msgid ""
 "process. Select the appropriate email address that is being configured in "
 "Odoo."
 msgstr ""
+":guilabel:`Google`とラベル付けされた新しいウィンドウが開き、認証プロセスが完了します。Odooで設定されている適切なEメールアドレスを選択します。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:146
 msgid ""
@@ -5483,6 +5722,7 @@ msgid ""
 "click :guilabel:`Continue` to allow the verification and connect the Gmail "
 "account to Odoo."
 msgstr ""
+"メールアドレスが個人アカウントの場合、追加のステップがポップアップ表示されます。:guilabel:`続行`をクリックして、検証を許可し、GmailアカウントをOdooに接続します。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:149
 msgid ""
@@ -5492,6 +5732,9 @@ msgid ""
 "configuration automatically loads the token in Odoo, and a tag stating "
 ":guilabel:`Gmail Token Valid` appears in green."
 msgstr ""
+"次に、:guilabel:`続行` または :guilabel:`許可` "
+"をクリックして、OdooにGoogleアカウントへのアクセスを許可します。その後、ページはOdooで新たに設定された送信メールサーバに移動します。設定によりOdooにトークンが自動的に読み込まれ、:guilabel:`Gmail"
+" トークン有効`というタグが緑色で表示されます。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:158
 msgid ""
@@ -5499,24 +5742,27 @@ msgid ""
 "appear. The Odoo database can now send safe, secure emails through Google "
 "using OAuth authentication."
 msgstr ""
+"最後に、:guilabel:`接続テスト` "
+"をクリックします。確認メッセージが表示されます。これで、OdooデータベースはOAuth認証を使用してGoogleを通じて安全なEメールを送信できるようになりました。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:162
 msgid "Google OAuth FAQ"
-msgstr ""
+msgstr "Google OAuth FAQ"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:165
 msgid "Production VS Testing Publishing Status"
-msgstr ""
+msgstr "本番 VS 公開ステータステスト"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:167
 msgid ""
 "Choosing :guilabel:`Production` as the :guilabel:`Publishing Status` "
 "(instead of :guilabel:`Testing`) will display the following warning message:"
 msgstr ""
+":guilabel:`本番` を :guilabel:`公開ステータス` (:guilabel:`テスト`) として選択すると以下の警告が表示されます:"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst-1
 msgid "OAuth is Limited to 100 Sensitive Scope Logins."
-msgstr ""
+msgstr "OAuthは、機密性の高いスコープのログインを100件に制限しています。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:174
 msgid ""
@@ -5525,20 +5771,24 @@ msgid ""
 ":guilabel:`Publishing status` is :guilabel:`In Production`, click "
 ":guilabel:`Back to Testing` to correct the issue."
 msgstr ""
+" この警告を修正するには、`Google APIプラットフォーム "
+"<https://console.cloud.google.com/apis/credentials/consent>`_  "
+"に移動します。:guilabel:`公開ステータス` が :guilabel:`本番環境` になっている場合は、:guilabel:`テスト環境に戻る`"
+" をクリックして問題を修正します。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:179
 msgid "No Test Users Added"
-msgstr ""
+msgstr "テストユーザが追加されていません"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:181
 msgid ""
 "If no test users are added to the OAuth consent screen, then a 403 access "
 "denied error will populate."
-msgstr ""
+msgstr "OAuthの同意画面にテストユーザが追加されていない場合、403アクセス拒否エラーが表示されます。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst-1
 msgid "403 Access Denied Error."
-msgstr ""
+msgstr "403アクセス拒否エラー。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:188
 msgid ""
@@ -5546,21 +5796,25 @@ msgid ""
 ":guilabel:`APIs & Services` and add test user(s) to the app. Add the email "
 "that you are configuring in Odoo."
 msgstr ""
+"このエラーを修正するには、:guilabel:`API & サービス` の :guilabel:`OAuth 同意画面` "
+"に戻り、テストユーザをアプリに追加します。Odooで設定しているEメールを追加します。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:192
 msgid "Gmail Module not updated"
-msgstr ""
+msgstr "Gmailモジュールが更新されていません"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:194
 msgid ""
 "If the *Google Gmail* module in Odoo has not been updated to the latest "
 "version, then a :guilabel:`Forbidden` error message populates."
 msgstr ""
+"Odooの *Google Gmail* "
+"モジュールが最新バージョンに更新されていない場合、:guilabel:`Forbidden`エラーメッセージが表示されます。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst-1
 msgid ""
 "Forbidden you don't have the permission to access the requested resource."
-msgstr ""
+msgstr "Forbidden アクセス許可がないため、要求されたリソースにアクセスできません。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:201
 msgid ""
@@ -5569,10 +5823,13 @@ msgid ""
 ":guilabel:`Google Gmail` module. Finally, click on the three dots on the "
 "upper right of the module and select :guilabel:`Upgrade`."
 msgstr ""
+"このエラーを修正するには、:menuselection:`アプリ` モジュールに移動して検索語句を消去します。次に、`Gmail` または "
+"`Google` を検索し、:guilabel:`Google Gmail` "
+"モジュールを更新します。最後に、モジュール右上の3つの点をクリックし、:guilabel:`更新` を選択します。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:206
 msgid "Application Type"
-msgstr ""
+msgstr "アプリケーションタイプ"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:208
 msgid ""
@@ -5580,10 +5837,12 @@ msgid ""
 ":guilabel:`Desktop App` is selected for the :guilabel:`Application Type`, an"
 " :guilabel:`Authorization Error` appears."
 msgstr ""
+" 認証情報 (OAuthの *クライアントID* および *クライアントシークレット*）を作成する際、:guilabel:`アプリケーションタイプ` "
+"に:guilabel:`デスクトップアプリ` を選択すると、:guilabel:`認証エラー` が表示されます。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst-1
 msgid "Error 400 Redirect URI Mismatch."
-msgstr ""
+msgstr "エラー400 リダイレクトURI不一致。"
 
 #: ../../content/applications/general/email_communication/google_oauth.rst:215
 msgid ""
@@ -5594,10 +5853,14 @@ msgid ""
 "`https://yourdbname.odoo.com/google_gmail/confirm` in the field, being sure "
 "to replace *yourdbname* in the URL with the Odoo database name."
 msgstr ""
+"このエラーを修正するには、すでに作成済みの認証情報を削除し、新しい認証情報を作成します。:guilabel:`アプリケーションタイプ`として:guilabel:`ウェブアプリケーション`"
+" を選択します。次に :guilabel:`認証済のリダイレクトURI` の下で :guilabel:`URI追加` をクリックし、: "
+"`https://yourdbname.odoo.com/google_gmail/confirm` と入力します。URL内の *yourdbname*"
+" をOdooデータベース名に置換えることを忘れないで下さい。。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:3
 msgid "Mailjet API"
-msgstr ""
+msgstr "Mailjet API"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:5
 msgid ""
@@ -5607,14 +5870,17 @@ msgid ""
 "database. In some circumstances, settings need to be configured on the "
 "custom domain's :abbr:`DNS (Domain Name System)` settings as well."
 msgstr ""
+"OdooはMailjetのメール一括配信用 :abbr:`API (アプリケーションプログラミングインターフェイス)` "
+"と互換性があります。MailjetアカウントとOdooデータベースの設定を行うことで、Mailjet経由でメール一括配信専用のサーバをセットアップします。状況によっては、カスタムドメインの"
+" :abbr:`DNS (ドメインネームシステム)` 設定にも設定を行う必要があります。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:11
 msgid "Set up in Mailjet"
-msgstr ""
+msgstr "Mailjetのセットアップ"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:14
 msgid "Create API credentials"
-msgstr ""
+msgstr "API認証作成"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:16
 msgid ""
@@ -5623,11 +5889,14 @@ msgid ""
 ":guilabel:`Senders & Domains` section and click on :guilabel:`SMTP and SEND "
 "API Settings`."
 msgstr ""
+"まず、`Mailjetアカウント情報 <https://app.mailjet.com/account>`_  "
+"ページにサインインします。次に、:guilabel:`送信者とドメイン` セクションに移動し、:guilabel:`SMTPと送信API設定` "
+"をクリックします。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst-1
 msgid ""
 "SMTP and Send API Settings link in the Senders & Domains section of Mailjet."
-msgstr ""
+msgstr "Mailjetの送信者とドメインセクションにあるSMTPと送信API設定へのリンク。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:24
 msgid ""
@@ -5640,28 +5909,38 @@ msgid ""
 "to configure Mailjet in Odoo, which is covered in the :ref:`last section "
 "<maintain/mailjet-api/odoo-setup>`."
 msgstr ""
+"次に、:abbr:`SMTP (Simple Mail Transfer Protocol)` の設定をメモ帳にコピーします。これらは "
+":guilabel:`設定(SMTPのみ)` セクションにあります。 :abbr:`SMTP (Simple Mail Transfer "
+"Protocol)` の設定には、サーバアドレス、必要なセキュリティオプション (:abbr:`SSL (Secure Sockets "
+"Layer)`/:abbr:`TLS (Transport Layer Security)` "
+"の使用)、およびポート番号が含まれます。MailjetをOdooで設定するには、これらの設定が必要です。これについては、:ref:`最後のセクション "
+"<maintain/mailjet-api/odoo-setup>` で説明しています。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:32
 msgid ""
 "`Mailjet: How can I configure my SMTP parameters? "
 "<https://documentation.mailjet.com/hc/articles/360043229473>`_"
 msgstr ""
+"`Mailjet: SMTPパラメータの設定方法 "
+"<https://documentation.mailjet.com/hc/articles/360043229473>`_"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:36
 msgid ""
 "Odoo :ref:`blocks port 25 <email-outbound-port-restriction>` on Odoo Online "
 "and Odoo.sh databases."
 msgstr ""
+"OdooオンラインとOdoo.shデータベース上で、Odooは :ref:`ポート25をブロック <email-outbound-port-"
+"restriction>` します。 "
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst-1
 msgid "SMTP configuration from Mailjet."
-msgstr ""
+msgstr "MailjetからのSMTP設定。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:43
 msgid ""
 "Next, click on the button labeled :guilabel:`Retrieve your API credentials` "
 "to retrieve the Mailjet API credentials."
-msgstr ""
+msgstr "次に、:guilabel:`API認証情報の取得` と表示されたボタンをクリックして、Mailjet API認証情報を取得します。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:46
 msgid ""
@@ -5671,10 +5950,14 @@ msgid ""
 "generate the :guilabel:`Secret Key`. Copy this key to a notepad, as this "
 "serves as the :guilabel:`Password` in the Odoo configuration."
 msgstr ""
+"次に、目のアイコンをクリックして :guilabel:`APIキー` を表示します。このキーをメモ帳にコピーして下さい。これはOdooの設定における "
+":guilabel:`ユーザ名` として使用されます。次に、:guilabel:`シークレットキーを生成` "
+"ボタンをクリックして、:guilabel:`シークレットキー` を生成します。このキーをメモ帳にコピーして下さい。これはOdooの設定における "
+":guilabel:`パスワード` として使用されます。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:52
 msgid "Add verified sender address(es)"
-msgstr ""
+msgstr "検証済の送信アドレスを追加する"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:54
 msgid ""
@@ -5685,10 +5968,13 @@ msgid ""
 " a Sender Domain or Address` link under the :guilabel:`Senders & Domains` "
 "section."
 msgstr ""
+"次のステップは、Mailjetアカウントの設定に送信者アドレスまたはドメインを追加し、Mailjetのサーバを使用してEメールを送信できるように承認することです。まず、`Mailjetアカウント情報"
+" <https://app.mailjet.com/account>`_ ページに移動します。次に、:guilabel:`送信者とドメイン` "
+"セクションの下にある :guilabel:`送信者ドメインまたはアドレスを追加` リンクをクリックします。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst-1
 msgid "Add a sender domain or address in the Mailjet interface."
-msgstr ""
+msgstr "Mailjetのインターフェースで送信者ドメインまたはアドレスを追加します。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:63
 msgid ""
@@ -5698,6 +5984,10 @@ msgid ""
 ":ref:`Add a domain <maintain/mailjet-api/add-domain>` section for steps on "
 "adding the domain."
 msgstr ""
+"送信者のEメールアドレスまたはドメイン全体をMailjetの設定に追加する必要があるかどうかを判断します。 :abbr:`DNS (Domain "
+"Name System)` へのアクセスが可能な場合は、ドメイン全体を設定する方が簡単かもしれません。 "
+"ドメインの追加手順については、:ref:`ドメインの追加 <maintain/mailjet-api/add-domain>` "
+"セクションを参照して下さい。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:69
 msgid ""
@@ -5705,6 +5995,7 @@ msgid ""
 " using Mailjet's servers need to be configured or the domain(s) of the "
 "users' email addresses can be configured."
 msgstr ""
+"Mailjetのサーバを使用してEメールを送信しているOdooデータベースユーザのEメールアドレスを全て設定するか、ユーザのEメールアドレスのドメインを設定する必要があります。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:72
 msgid ""
@@ -5713,30 +6004,34 @@ msgid ""
 " labeled :guilabel:`Add a sender address`. Then, add the email address that "
 "is configured to send from the custom domain."
 msgstr ""
+"デフォルトでは、Mailjetアカウントで最初に設定したEメールアドレスが信頼できる送信者として追加されています。別のEメールアドレスを追加するには、:guilabel:`送信者アドレスを追加`と書かれたボタンをクリックします。次に、カスタムドメインから送信するように設定したEメールアドレスを追加します。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:76
 msgid ""
 "At minimum the following email addresses should be set up in the provider "
 "and verified in Mailjet:"
-msgstr ""
+msgstr "最低限、以下のEメールアドレスはプロバイダーで設定し、Mailjetで確認する必要があります。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:78
 msgid "notifications\\@yourdomain.com"
-msgstr ""
+msgstr "notifications\\@yourdomain.com"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:79
 msgid "bounce\\@yourdomain.com"
-msgstr ""
+msgstr "bounce\\@yourdomain.com"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:80
 msgid "catchall\\@yourdomain.com"
-msgstr ""
+msgstr "catchall\\@yourdomain.com"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:83
 msgid ""
 "Replace `yourdomain` with the custom domain for the Odoo database. If there "
 "isn't one, then use the :guilabel:`mail.catchall.domain` system parameter."
 msgstr ""
+"Odooデータベース用に`yourdomain` with the custom domain for the Odoo database. If "
+"there isn't one, then use the :guilabel:`mail.catchall.domain` system "
+"parameter."
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:86
 msgid ""
@@ -5745,6 +6040,8 @@ msgid ""
 " completing the form, an activation email is sent to the email address and "
 "the trusted sender can be activated."
 msgstr ""
+"その後、:guilabel:`Eメール情報` "
+"フォームに必要事項を入力し、トランザクションメールまたは大量メールの適切なメールタイプを選択して下さい。フォームの入力が完了すると、入力したメールアドレス宛に有効化メールが送信され、信頼できる送信者の有効化が行われます。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:90
 msgid ""
@@ -5753,6 +6050,9 @@ msgid ""
 "based Message Authentication, Reporting, and Conformance)` settings on the "
 "domain of the sender."
 msgstr ""
+"送信者のドメインで、:abbr:`SPF (Sender Policy Framework)`/:abbr:`DKIM (DomainKeys "
+"Identified Mail)`/:abbr:`DMARC (Domain-based Message Authentication, "
+"Reporting, and Conformance)` の設定を行うことをお勧めします。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:95
 #: ../../content/applications/general/email_communication/mailjet_api.rst:162
@@ -5761,6 +6061,9 @@ msgid ""
 "<https://documentation.mailjet.com/hc/articles/ 360042412734-Authenticating-"
 "Domains-with-SPF-DKIM>`_"
 msgstr ""
+"`Mailjet SPF/DKIM/DMARC ドキュメンテーション "
+"<https://documentation.mailjet.com/hc/articles/ 360042412734-Authenticating-"
+"Domains-with-SPF-DKIM>`_"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:99
 msgid ""
@@ -5769,10 +6072,13 @@ msgid ""
 "above) should be set up in Odoo CRM to create a lead. Then, the database is "
 "able to receive the verification email and verify the accounts."
 msgstr ""
+"データベースがカスタムドメインを使用していない場合、送信者のアドレスを確認するには、Odoo "
+"CRMに一時的なエイリアス(上記の3つのEメールアドレスのうちの1つ)を設定してリードを作成する必要があります。 "
+"その後、データベースは確認Eメールを受信し、アカウントを確認することができます。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:107
 msgid "Add a domain"
-msgstr ""
+msgstr "ドメインを追加する"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:109
 msgid ""
@@ -5783,18 +6089,23 @@ msgid ""
 "Sender Domain or Address` link under the :guilabel:`Senders & Domains` "
 "section. Then, click on :guilabel:`Add domain` to add the custom domain."
 msgstr ""
+"Mailjetアカウントにドメイン全体を追加すると、そのドメインに関連する全ての送信者アドレスがMailjetサーバを使用してEメールを送信するため自動的に検証されます。まず、`Mailjet"
+" アカウント情報 <https://app.mailjet.com/account>`_ "
+"ページに移動します。次に、:guilabel:`送信者とドメイン` セクションの下にある:guilabel:`送信者ドメインまたはアドレスの追加` "
+"リンクをクリックします。次に、カスタムドメインを追加するには、:guilabel:`ドメインの追加` をクリックします。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:116
 msgid ""
 "The domain needs to be added to the Mailjet account and then validated "
 "through the :abbr:`DNS (Domain Name System)`."
 msgstr ""
+"ドメインはMailjetアカウントに追加し、 :abbr:`DNS (Domain Name System)` で検証済である必要があります。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:119
 msgid ""
 "After that, fill out the :guilabel:`Add a new Domain` page on Mailjet and "
 "click :guilabel:`Continue`."
-msgstr ""
+msgstr "その後、Mailjetの :guilabel:`新規ドメインを追加` ページで :guilabel:`続行` をクリックします。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:122
 msgid ""
@@ -5804,14 +6115,17 @@ msgid ""
 "to a notepad and then navigate to the domain's :abbr:`DNS (Domain Name "
 "System)` provider to complete validation."
 msgstr ""
+"ドメインを追加すると、検証ページが表示されます。Odooデータベースがオンプレミス環境(その場合は :guilabel:`オプション1` "
+"を選択)でない場合は、:guilabel:`オプション2: DNSレコードの作成` を選択します。TXTレコードの情報をメモ帳にコピーし、ドメインの "
+":abbr:`DNS (Domain Name System)` プロバイダーに移動して検証を完了します。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst-1
 msgid "The TXT record information to input on the domain's DNS."
-msgstr ""
+msgstr "TXTレコードは、ドメインのDNSに入力する情報です。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:132
 msgid "Setup in the domain's DNS"
-msgstr ""
+msgstr "ドメインのDNSでの設定"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:134
 msgid ""
@@ -5822,10 +6136,13 @@ msgid ""
 "information consists of the :guilabel:`Host` and :guilabel:`Value`. Paste "
 "these into the corresponding fields in the TXT record."
 msgstr ""
+"MailjetアカウントからTXTレコード情報を取得したら、ドメインの :abbr:`DNS (Domain Name System)` "
+"にTXTレコードを追加します。このプロセスは、:abbr:`DNS (Domain Name System)` "
+"プロバイダーによって異なります。具体的な設定プロセスについては、プロバイダーにお問い合わせ下さい。TXTレコード情報は、:guilabel:`ホスト`と:guilabel:`値`で構成されています。これらの情報をTXTレコードの対応するフィールドに貼付けます。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:141
 msgid "Return to Mailjet account information"
-msgstr ""
+msgstr "Return to Mailjetアカウント情報に戻る"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:143
 msgid ""
@@ -5835,6 +6152,9 @@ msgid ""
 "click the gear icon next to :guilabel:`Domain`, and select "
 ":guilabel:`Validate`."
 msgstr ""
+"TXTレコードをドメインの:abbr:`DNS(Domain Name System)` "
+"に追加した後、Mailjetアカウントに戻ります。次に、:menuselection:`アカウント情報 --> 送信者ドメインまたはアドレスの追加` "
+"に移動し、:guilabel:`ドメイン` の隣にある歯車アイコンをクリックし、:guilabel:`検証` を選択します。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:147
 msgid ""
@@ -5842,6 +6162,8 @@ msgid ""
 "<https://app.mailjet.com/ account/sender>`_ page on the Mailjet account "
 "information and clicking on :guilabel:`Manage`."
 msgstr ""
+"この操作は、Mailjetのアカウント情報の `送信者ドメイン & アドレス <https://app.mailjet.com/ "
+"account/sender>`_ ページで、:guilabel:`管理` をクリックすることでも行えます。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:150
 msgid ""
@@ -5849,10 +6171,12 @@ msgid ""
 "on the domain. A success screen will appear if the domain is configured "
 "correctly."
 msgstr ""
+"次に、:guilabel:`今すぐ確認` "
+"をクリックして、ドメインに追加されたTXTレコードを検証します。ドメインが正しく設定されていれば、成功画面が表示されます。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst-1
 msgid "Check DNS record in Mailjet."
-msgstr ""
+msgstr "MailjetでDNSレコードを確認します。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:157
 msgid ""
@@ -5861,14 +6185,18 @@ msgid ""
 ":abbr:`SPF (Sender Policy Framework)` & :abbr:`DKIM (DomainKeys Identified "
 "Mail) records to input into the :abbr:`DNS (Domain Name System)` provider."
 msgstr ""
+"ドメインの設定が完了すると、:guilabel:`このドメインを認証する(SPF/DKIM)` "
+"というオプションが表示されます。このボタンをクリックすると、:abbr:`SPF(Sender Policy Framework)` および "
+":abbr:`DKIM(DomainKeys Identified Mail)レコードが入力され、:abbr:`DNS (Domain Name "
+"System)` プロバイダーに送信されます。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst-1
 msgid "Authenticate the domain with SPF/DKIM records in Mailjet."
-msgstr ""
+msgstr "MailjetのSPF/DKIMレコードでドメインを認証します。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:172
 msgid "Set up in Odoo"
-msgstr ""
+msgstr "Odooでの設定"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:174
 msgid ""
@@ -5878,6 +6206,9 @@ msgid ""
 "create a new outgoing server configuration by clicking on the "
 ":guilabel:`Create` button."
 msgstr ""
+"設定を完了するには、Odooデータベースに移動し、:guilabel:`管理設定` に進みます。:ref:`開発者モード` "
+"をオンにして、:menuselection:`技術設定メニュー --> Eメール --> 送信メールサーバ` "
+"に進みます。次に、:guilabel:`作成` ボタンをクリックして、新しい送信サーバ設定を作成します。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:179
 msgid ""
@@ -5888,6 +6219,11 @@ msgid ""
 ":abbr:`SSL (Secure Sockets Layer)`/:abbr:`TLS (Transport Layer Security)` "
 "even though Mailjet may not require it."
 msgstr ""
+"次に、Mailjetアカウントからコピーした `SMTPサーバ` (in-v3.mailjet.com), `ポート番号` (587 または 465),"
+" および `セキュリティ (SSL/TLS)` を入力します。それらは `ここ "
+"<https://app.mailjet.com/account/setup>`_ "
+"でも見つけることができます。Mailjetが要求しない場合でも、:abbr:`SSL (Secure Sockets "
+"Layer)`/:abbr:`TLS (Transport Layer Security)` を使用することを推奨します。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:184
 msgid ""
@@ -5897,6 +6233,10 @@ msgid ""
 ":menuselection:`Mailjet -->  Account Settings --> SMTP and SEND API "
 "Settings`."
 msgstr ""
+":guilabel:`ユーザ名` には、:guilabel:`APIキー` を入力します。:guilabel:`パスワード` "
+"には、Mailjetアカウントからメモ帳にコピーした :guilabel:`シークレットキー` "
+"を入力します。これらの設定は、:menuselection:`Mailjet --> アカウント設定 --> SMTP およびAPI送信設定` "
+"(Mailjet --> アカウント設定 --> SMTPおよびSEND API設定)で確認できます。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:189
 msgid ""
@@ -5904,16 +6244,18 @@ msgid ""
 ":guilabel:`Priority` value higher than that of any transactional email "
 "server(s). Finally, save the settings and :guilabel:`Test the Connection`."
 msgstr ""
+"次に、Mailjetサーバをメール一括配信に使用している場合は、トランザクションメールサーバの :guilabel:`優先` "
+"値よりも高い値を設定します。最後に、設定を保存し、:guilabel:`接続テスト`を実行します。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst-1
 msgid "Odoo outgoing email server settings."
-msgstr ""
+msgstr "Odoo送信メールサーバ設定。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:197
 msgid ""
 "In order for the notifications feature to work using Mailjet, there are "
 "three settings that need to be set in Odoo."
-msgstr ""
+msgstr "Mailjetを使用して通知機能を有効にするには、Odooで3つの設定を行う必要があります。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:200
 msgid ""
@@ -5923,12 +6265,18 @@ msgid ""
 "out the :ref:`FROM filtering documentation <email-outbound-different-"
 "servers-personalized-from-filtering>`."
 msgstr ""
+" :guilabel:`送信元フィルタ` "
+"はサーバ設定で設定する必要があります。ドメインとして設定し、完全なEメールアドレスとして設定しないことをお勧めします。 "
+"これは、前の2つの手順で設定したドメインと一致している必要があります。 詳細については、:ref:`送信元フィルタリングドキュメンテーション "
+"<email-outbound-different-servers-personalized-from-filtering>` を確認して下さい。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:204
 msgid ""
 "The :guilabel:`mail.default.from` system parameter must have the value "
 "`notifications\\@yourdomain.com`."
 msgstr ""
+":guilabel:`mail.default.from` システムパラメータは `notifications\\@yourdomain.com` "
+"を値として持つ必要があります。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:206
 msgid ""
@@ -5937,24 +6285,30 @@ msgid ""
 "Odoo database. If there isn't one, then use the "
 ":guilabel:`mail.catchall.domain` system parameter."
 msgstr ""
+":guilabel:`mail.default.from_filter`システムパラメータは `yourdomain.com`. Replace "
+"`yourdomain` をOdooデータベース用のカスタムドメインとして持つ必要があります。ない場合には "
+":guilabel:`mail.catchall.domain` システムパラメータを使用して下さい。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:210
 msgid ""
 "For more information, check out the :ref:`\"Using a unique email address\" "
 "documentation <email-outbound-unique-address>`."
 msgstr ""
+"詳細については、:ref:`\"一意なEメールを使用する\" ドキュメンテーション <email-outbound-unique-address> ` "
+"ドキュメントを参照して下さい。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:213
 msgid ""
 "The :guilabel:`System Parameters` can be accessed by activating the "
 ":ref:`developer-mode`."
-msgstr ""
+msgstr ":guilabel:`システムパラメータ` は、:ref:`開発者モード` を有効化することでアクセスできます。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:215
 msgid ""
 "Once the setup is complete, the Odoo database is ready to use the Mailjet "
 "email server for mass mailing or transactional emails."
 msgstr ""
+"セットアップが完了すると、OdooデータベースはMailjetメールサーバを使用してメール一括配信やトランザクションメールを送信できるようになります。"
 
 #: ../../content/applications/general/integrations.rst:3
 msgid "Integrations"
@@ -5967,11 +6321,11 @@ msgstr "ジオロケーション"
 #: ../../content/applications/general/integrations/geolocation.rst:5
 msgid ""
 "You can locate contacts or places and generate routes on a map in Odoo."
-msgstr ""
+msgstr "Odooでは、連絡先や場所を検索し、地図上にルートを表示することができます。"
 
 #: ../../content/applications/general/integrations/geolocation.rst-1
 msgid "Map displaying a contact's location."
-msgstr ""
+msgstr "連絡先の位置を表示する地図。"
 
 #: ../../content/applications/general/integrations/geolocation.rst:10
 msgid ""
@@ -5979,16 +6333,21 @@ msgid ""
 ":guilabel:`Integrations`, section, activate :guilabel:`Geo Localization`. "
 "Then, choose between using the OpenStreetMap or Google Places API."
 msgstr ""
+"この機能を使用するには、:guilabel:`設定` アプリを開き、:guilabel:`統合` "
+"セクションで:guilabel:`ジオロカリゼーション` "
+"を有効化します。次に、OpenStreetMapまたはGoogleプレイスAPIの使用を選択します。"
 
 #: ../../content/applications/general/integrations/geolocation.rst:14
 msgid "**OpenStreetMap**"
-msgstr ""
+msgstr "**OpenStreetMap**"
 
 #: ../../content/applications/general/integrations/geolocation.rst:16
 msgid ""
 "OpenStreetMap is a free, open geographic database updated and maintained by "
 "volunteers. To use it, select :guilabel:`Open Street Map`."
 msgstr ""
+"OpenStreetMapは、ボランティアによって更新・管理されている無料かつオープンな地理データベースです。これを使用するには、:guilabel:`Open"
+" Street Map`を選択します。"
 
 #: ../../content/applications/general/integrations/geolocation.rst:20
 msgid ""
@@ -5996,10 +6355,12 @@ msgid ""
 "community <https://www.openstreetmap.org/fixthemap>`_ to fix any issues "
 "encountered."
 msgstr ""
+"OpenStreetMapは常に正確であるとは限りません。 `OpenStreetMapコミュニティに参加 "
+"<https://www.openstreetmap.org/fixthemap>`_ して、発生した問題を修正することができます。"
 
 #: ../../content/applications/general/integrations/geolocation.rst:23
 msgid "**Google Places API map**"
-msgstr ""
+msgstr "**Google Places API マップ**"
 
 #: ../../content/applications/general/integrations/geolocation.rst:25
 msgid ""
@@ -6007,41 +6368,48 @@ msgid ""
 "points of interest. It supports location-based features like search, "
 "navigation, and recommendations."
 msgstr ""
+"Google Places API "
+"マップは、場所、ビジネス、興味深い場所の詳細な情報を提供します。検索、ナビゲーション、推奨などの位置情報に基づく機能に対応しています。"
 
 #: ../../content/applications/general/integrations/geolocation.rst:29
 msgid ""
 "Using the Google Places API could require `payment to Google "
 "<https://mapsplatform.google.com/pricing/>`_."
 msgstr ""
+"Google Places API は `Googleへの支払 <https://mapsplatform.google.com/pricing/>`_"
+" を要求することができます。"
 
 #: ../../content/applications/general/integrations/geolocation.rst:32
 msgid ""
 "To use it, select :guilabel:`Google Place Map` and enter your :ref:`API Key "
 "<address_autocomplete/generate_api_key>`."
 msgstr ""
+"これを使用するには :guilabel:`Google Place Map` を選択して :ref:`APIキー "
+"<address_autocomplete/generate_api_key>` を入力して下さい。"
 
 #: ../../content/applications/general/integrations/geolocation.rst-1
 msgid "Google Places API key"
-msgstr ""
+msgstr "Google Places API キー"
 
 #: ../../content/applications/general/integrations/geolocation.rst:39
 msgid ""
 ":doc:`/applications/websites/website/configuration/address_autocomplete`"
 msgstr ""
+":doc:`/applications/websites/website/configuration/address_autocomplete`"
 
 #: ../../content/applications/general/integrations/google_translate.rst:3
 msgid "Google Translate"
-msgstr ""
+msgstr "Google 翻訳"
 
 #: ../../content/applications/general/integrations/google_translate.rst:5
 msgid ""
 "*Google Translate* can be used to translate user generated text in the Odoo "
 "chatter."
-msgstr ""
+msgstr "*Google 翻訳* はOdooチャターのユーザ生成テキストの翻訳に使用できます。"
 
 #: ../../content/applications/general/integrations/google_translate.rst:8
 msgid "Google API console"
-msgstr ""
+msgstr "Google APIコンソール"
 
 #: ../../content/applications/general/integrations/google_translate.rst:10
 msgid ""
@@ -6049,12 +6417,15 @@ msgid ""
 " with the *Google API console*. Once the following processes are complete, "
 "an *API key* is created to input in Odoo."
 msgstr ""
+"*Google翻訳* をOdooに統合するためのセットアップの大半は、*Google APIコンソール* "
+"で行います。以下の処理が完了すると、Odooに入力するための *APIキー* が作成されます。"
 
 #: ../../content/applications/general/integrations/google_translate.rst:14
 msgid ""
 "`Google Translate setup on Google "
 "<https://cloud.google.com/translate/docs/setup>`_"
 msgstr ""
+"`GoogleでのGoogle翻訳設定  <https://cloud.google.com/translate/docs/setup>`_"
 
 #: ../../content/applications/general/integrations/google_translate.rst:19
 msgid ""
@@ -6064,12 +6435,15 @@ msgid ""
 "account (this should match the email address that has billing attached to "
 "it)."
 msgstr ""
+"始めるには、`Google APIコンソール <https://console.developers.google.com>`_ "
+"に行きます。そして、*Google Workspace* アカウントがある場合には、ログインします。 if there is one. "
+"そうでない場合は、個人用Gmailアカウントでログインして下さい(これは仕入先請求書に記載されているEメールアドレスと一致している必要があります)。"
 
 #: ../../content/applications/general/integrations/google_translate.rst:23
 msgid ""
 "Next, click :guilabel:`Create Project` on the far-right of the "
 ":guilabel:`OAuth consent screen`."
-msgstr ""
+msgstr "つぎに、:guilabel:`OAuth同意画面` の右端の :guilabel:`プロジェクト作成` をクリックします。"
 
 #: ../../content/applications/general/integrations/google_translate.rst:26
 msgid ""
@@ -6077,6 +6451,9 @@ msgid ""
 "next to the :guilabel:`Google Cloud` icon, and a pop-over window appears. "
 "Next, click :guilabel:`New Project` top-right of the pop-over window."
 msgstr ""
+"*Google APIコンソール* に既存のプロジェクトがある場合は、:guilabel:`Google Cloud` "
+"アイコンの隣にあるドロップダウンメニューをクリックすると、ポップオーバーウィンドウが表示されます。次に、ポップオーバーウィンドウの右上にある "
+":guilabel:`新規プロジェクト` をクリックします。"
 
 #: ../../content/applications/general/integrations/google_translate.rst:30
 msgid ""
@@ -6086,10 +6463,14 @@ msgid ""
 "Gmail account is being used, leave the :guilabel:`Location` as :guilabel:`No"
 " Organization`."
 msgstr ""
+":guilabel:`新規プロジェクト` 画面で、:guilabel:`プロジェクト名` を `Odoo翻訳` "
+"に変更し、:guilabel:`ロケーション` を参照します。 :guilabel:`ロケーション` を *Google Workspace 組織* "
+"に設定します。 個人用 Gmail アカウントを使用している場合は、:guilabel:`ロケーション` を :guilabel:`組織なし` "
+"のままにしておきます。"
 
 #: ../../content/applications/general/integrations/google_translate.rst:42
 msgid "API library"
-msgstr ""
+msgstr "APIライブリー"
 
 #: ../../content/applications/general/integrations/google_translate.rst:44
 msgid ""
@@ -6099,52 +6480,62 @@ msgid ""
 "result. This should be a *Google Enterprise API* labeled :guilabel:`Cloud "
 "Translation API`."
 msgstr ""
+"次に、この新しく作成したプロジェクトに *クラウド翻訳 API* をインストールする必要があります。 左メニューで "
+":menuselection:`ライブラリ` をクリックします。 そして、`クラウド翻訳 API` という用語を検索し、結果をクリックします。 "
+":guilabel:`クラウド翻訳 API` とラベル付けされた *Google エンタープライズ API* であるはずです。"
 
 #: ../../content/applications/general/integrations/google_translate.rst:49
 msgid "Click :guilabel:`Enable` to install the library on this project."
-msgstr ""
+msgstr "このプロジェクトにライブラリをインストールするには、:guilabel:`有効にする` をクリックします。"
 
 #: ../../content/applications/general/integrations/google_translate.rst:52
 msgid ""
 "Using the *Google Translate* API **requires** a current billing account with"
 " `Google <https://myaccount.google.com/>`_."
 msgstr ""
+"*Google 翻訳* API ** を使用するには **  `Google <https://myaccount.google.com/>`_ "
+"の現在の請求アカウントが必要です。"
 
 #: ../../content/applications/general/integrations/google_translate.rst:55
 msgid ""
 "Once a billing account is setup with *Google* and the library is enabled, "
 "click :guilabel:`Manage` to finish configuration on the API."
 msgstr ""
+"*Google* で会計請求先のアカウントが設定され、ライブラリが有効化されたら、:guilabel:`管理` をクリックして API "
+"の設定を完了します。"
 
 #: ../../content/applications/general/integrations/google_translate.rst:61
 msgid ""
 "Now that the project is set up, and the *Cloud Translation API* is enabled, "
 "credentials **must** be created. This includes the *API key*."
 msgstr ""
+"プロジェクトが設定され、*クラウド翻訳API* が有効化されたので、認証情報を作成する必要があります。これには*APIキー* も含まれます。"
 
 #: ../../content/applications/general/integrations/google_translate.rst:64
 msgid ""
 "To begin this process, click :menuselection:`Credentials` in the left "
 "sidebar menu."
-msgstr ""
+msgstr "このプロセスを開始するには、左サイドバーメニューの :menuselection:`認証情報` をクリックします。"
 
 #: ../../content/applications/general/integrations/google_translate.rst:66
 msgid ""
 "Then, click :guilabel:`Create Credentials` in the top menu, and select "
 ":guilabel:`API key` from the drop-down menu."
 msgstr ""
+"次に、トップメニューの :guilabel:`認証情報の作成`をクリックし、ドロップダウンメニューから :guilabel:`APIキー` "
+"を選択します。"
 
 #: ../../content/applications/general/integrations/google_translate.rst-1
 msgid "Create an API key in the Google API console."
-msgstr ""
+msgstr "Google APIコンソールAPIキーを作成します。"
 
 #: ../../content/applications/general/integrations/google_translate.rst:73
 msgid "Copy the :guilabel:`API key` for use in the next section."
-msgstr ""
+msgstr "次のセクションで使用するために、:guilabel:`APIキー` をコピーして下さい。"
 
 #: ../../content/applications/general/integrations/google_translate.rst:76
 msgid "For security purposes, the usage of the *API key* can be restricted."
-msgstr ""
+msgstr "セキュリティ上の理由から、*APIキー* の使用を制限することができます。"
 
 #: ../../content/applications/general/integrations/google_translate.rst:78
 msgid ""
@@ -6154,6 +6545,9 @@ msgid ""
 "includes setting an application to restrict the use of the API key, and "
 "whether this API key can call any API."
 msgstr ""
+"これを行うには、ポップアップウィンドウで :guilabel:`API キーの編集` をクリックするか、:guilabel:`資格情報` "
+"ページに表示されている API キーをクリックして *API 制限* "
+"に移動します。ここでキー制限を設定することができます。これには、APIキーの使用を制限するようにアプリケーションを設定する内容と、このAPIキーがAPIを呼び出すことができるかどうかが含まれます。"
 
 #: ../../content/applications/general/integrations/google_translate.rst:83
 msgid ""
@@ -6161,6 +6555,8 @@ msgid ""
 "allow requests from the configured Odoo database and to the *Cloud "
 "Translation API*."
 msgstr ""
+"Odooの *翻訳 API* は、設定済みのOdooデータベースからのリクエストと *クラウド翻訳API* "
+"からのリクエストのみ許可するように制限することをお勧めします。"
 
 #: ../../content/applications/general/integrations/google_translate.rst:86
 msgid ""
@@ -6170,6 +6566,10 @@ msgid ""
 ":guilabel:`Add`. Lastly, add the :abbr:`URL (Uniform Resource Locator)`, and"
 " click :guilabel:`Done`."
 msgstr ""
+"ウェブサイト制限を追加するには、:guilabel:`アプリケーション制限の設定` の下にある :guilabel:`ウェブサイト` "
+"をクリックします。次に、:guilabel:`追加`をクリックして、*Google翻訳* "
+"で使用されているデータベースのアドレスを入力します。最後に、:abbr:`URL(Uniform Resource Locator)` "
+"を追加し、:guilabel:`完了` をクリックします。"
 
 #: ../../content/applications/general/integrations/google_translate.rst:91
 msgid ""
@@ -6178,15 +6578,17 @@ msgid ""
 "Then use the drop-down menu to choose the API being configured (*Cloud "
 "Translation API*)."
 msgstr ""
+"キーの使用を特定の API に制限するには、まず、:guilabel:`API 制限` セクションの :guilabel:`キーを制限` "
+"を選択します。次に、ドロップダウンメニューを使用して、設定するAIP (*Cloud Translation API*) を選択します。"
 
 #: ../../content/applications/general/integrations/google_translate.rst:96
 msgid "Save the API key: copy the API key and store it somewhere secure."
-msgstr ""
+msgstr "APIキーを保存する: APIキーをコピーして、安全な場所に保管して下さい。"
 
 #: ../../content/applications/general/integrations/google_translate.rst:97
 msgid ""
 "Do **not** share the API key publicly or expose it in client-side code."
-msgstr ""
+msgstr "APIキーを公開したり、クライアントサイドのコードで使用したり **しない** で下さい。"
 
 #: ../../content/applications/general/integrations/google_translate.rst:100
 msgid "Odoo configuration"
@@ -6199,14 +6601,17 @@ msgid ""
 ":guilabel:`Message Translation`. Then, :guilabel:`Save` the settings, and "
 "*Google Translate* can be used in any chatter throughout the database."
 msgstr ""
+"Odooの統合機能にアクセスするには、:menuselection:`設定アプリ --> ディスカッションセクション` に移動します。 "
+":guilabel:`メッセージ翻訳` とラベル付けされたフィールドにAPIキーを入力します。次に、:guilabel:`保存` "
+"して設定すると、データベース内のすべてのチャターで *Google翻訳* を使用できるようになります。"
 
 #: ../../content/applications/general/integrations/google_translate.rst-1
 msgid "Odoo configuration of the API key from the *Google API Console*."
-msgstr ""
+msgstr "*Google APIコンソール* からOdooのAPIキーを設定します。"
 
 #: ../../content/applications/general/integrations/google_translate.rst:112
 msgid "Translate chatter"
-msgstr ""
+msgstr "チャターを翻訳する"
 
 #: ../../content/applications/general/integrations/google_translate.rst:114
 msgid ""
@@ -6215,18 +6620,20 @@ msgid ""
 ":guilabel:`Translate`. The content translates to the *language* set on the "
 "user's preferences."
 msgstr ""
+"ユーザのテキストを他の言語に翻訳するには、チャターの右側にある :guilabel:`... (3つのドット)` "
+"アイコンメニューをクリックします。次に、:guilabel:`翻訳` を選択します。 ユーザの優先設定で指定されている言語に翻訳されます。"
 
 #: ../../content/applications/general/integrations/google_translate.rst-1
 msgid "Google Translate present in an Odoo database's chatter."
-msgstr ""
+msgstr "OdooデータベースのチャターのGoogle翻訳。"
 
 #: ../../content/applications/general/integrations/google_translate.rst:123
 msgid ":ref:`language/install`"
-msgstr ""
+msgstr ":ref:`言語/インストール`"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:5
 msgid "Mail Plugins"
-msgstr ""
+msgstr "メールプラグイン"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:13
 msgid ""
@@ -6234,28 +6641,31 @@ msgid ""
 "database. With them, you can interact with your Odoo database directly from "
 "your mailbox by:"
 msgstr ""
+"メールプラグインは、お客様のメールボックスとOdooデータベースを接続するコネクタです。これを使用すると、メールボックスから直接Odooデータベースとやりとりすることができます。"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:16
 msgid "Creating leads and centralizing prospects' emails into the CRM app."
-msgstr ""
+msgstr "見込客の情報を集め、見込客のEメールをCRMアプリに一元管理します。"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:17
 msgid "Generating tasks in any Odoo project."
-msgstr ""
+msgstr "Odooプロジェクトでタスクを作成します。"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:18
 msgid "Creating tickets in the Helpdesk app."
-msgstr ""
+msgstr "ヘルプデスクアプリでチケットを作成します。"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:19
 msgid "Searching and storing insights on your contacts."
-msgstr ""
+msgstr "連絡先に関するインサイトを検索し、保存します。"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:21
 msgid ""
 "Mail Plugins are available for :doc:`Outlook <mail_plugins/outlook>` and "
 ":doc:`Gmail <mail_plugins/gmail>`."
 msgstr ""
+"メールプラグインは :doc:`Outlook <mail_plugins/outlook>` および :doc:`Gmail "
+"<mail_plugins/gmail>` で利用できます。"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:27
 msgid "Pricing"
@@ -6263,13 +6673,13 @@ msgstr "価格設定"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:29
 msgid "Mail Plugins are **free** to install and use."
-msgstr ""
+msgstr "メールプラグインはインストールも利用も **無料** です。"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:31
 msgid ""
 "However, they can provide **Lead Enrichment**, which is part of a paid "
 "service known as **Lead Generation**."
-msgstr ""
+msgstr "しかし、**リードエンリッチメント** を提供することもでき、これは **リード生成** として知られる有料サービスの一部です。"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:34
 msgid ""
@@ -6278,46 +6688,51 @@ msgid ""
 " :doc:`../../essentials/in_app_purchase` credits if you would like to keep "
 "using this service."
 msgstr ""
+"メールプラグインを使用すると、プラグインをデータベースに接続しているかどうかに関わらず、無料でリードエンリッチメントをテストすることができます。しばらくすると、このサービスを継続して使用する場合は、プラグインが"
+" :doc:`../../essentials/in_app_purchase` クレジットの購入を促します。"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:41
 msgid "Lead Generation IAP service"
-msgstr ""
+msgstr "リード生成IAPサービス"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:43
 msgid ""
 "Lead Enrichment uses the *Lead Generation IAP service*. Each request "
 "consumes one *Lead Generation credit*."
-msgstr ""
+msgstr "リードエンリッチメントは、*リード生成IAPサービス* を使用します。リクエストごとに、*リード生成クレジット* が1つ必要です。"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:46
 msgid ""
 "To buy credits, go to :menuselection:`Settings --> CRM --> Lead Enrichment "
 "--> Buy credits` and select a package."
 msgstr ""
+"クレジットを購入するには :menuselection:` --> CRM --> Lead Enrichment --> Buy credits` "
+"and select a package."
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:50
 msgid ""
 "If you are out of credits, the only information populated when clicking on "
 "the suggested company is its website link and logo."
-msgstr ""
+msgstr "クレジットが不足している場合、提案された会社をクリックすると、表示される情報はその会社のウェブサイトリンクとロゴのみです。"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:52
 msgid ""
 "Check out the `Lead Generation IAP service Privacy Policy "
 "<https://iap.odoo.com/privacy#header_3>`_."
 msgstr ""
+"`リード生成IAPサービスプライバシーポリシー <https://iap.odoo.com/privacy#header_3>`_ をご確認下さい。"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:56
 msgid ":doc:`../../essentials/in_app_purchase`"
-msgstr ""
+msgstr ":doc:`../../essentials/in_app_purchase`"
 
 #: ../../content/applications/general/integrations/mail_plugins.rst:57
 msgid "`Odoo Tutorials: Lead Enrichment <https://www.odoo.com/r/p73>`_"
-msgstr ""
+msgstr "`Odoo Tutorials: Lead Enrichment <https://www.odoo.com/r/p73>`_"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:3
 msgid "Gmail Plugin"
-msgstr ""
+msgstr "Gmailプラグイン"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:5
 msgid ""
@@ -6325,26 +6740,28 @@ msgid ""
 "can keep track of all their work between Gmail and Odoo, without losing any "
 "information."
 msgstr ""
+"*Gmailプラグイン* "
+"は、OdooデータベースをGmailの受信トレイと統合し、ユーザはGmailとOdooの間で全ての作業を追跡し、情報を失うことなく管理することができます。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:9
 msgid "Odoo Online users"
-msgstr ""
+msgstr "Odooオンラインユーザ"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:11
 msgid ""
 "For databases hosted on Odoo Online (or Odoo.sh), follow the steps below to "
 "configure the Gmail Plugin."
-msgstr ""
+msgstr "Odooオンライン(またはOdoo.sh)でホストされているデータベースの場合は、以下の手順に従ってGmailプラグインを設定して下さい。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:15
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:94
 msgid "Install the Gmail Plugin"
-msgstr ""
+msgstr "Gmailプラグインをインストールする"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:17
 msgid ""
 "First, log in to the Gmail account that the user wishes to connect to Odoo."
-msgstr ""
+msgstr "まず、Odooに接続したいユーザのGmailアカウントにログインします。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:19
 msgid ""
@@ -6352,20 +6769,21 @@ msgid ""
 "get add-ons. If the side panel is not visible, click on the arrow icon at "
 "the bottom right corner of the inbox to reveal it."
 msgstr ""
+"Gmail受信トレイから、右側のサイドパネルにあるプラス記号のアイコンをクリックしてアドオンを表示します。サイドパネルが表示されていない場合は、受信トレイの右下にある矢印アイコンをクリックしてサイドパネルを表示します。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst-1
 msgid "Plus sign icon on the Gmail inbox side panel."
-msgstr ""
+msgstr "Gmailの受信トレイサイドバーにあるプラス記号のアイコン。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:26
 msgid ""
 "Then, use the search bar to search for `Odoo` and locate the :guilabel:`Odoo"
 " Inbox Addin`."
-msgstr ""
+msgstr "次に検索バーで `Odoo` を入力し :guilabel:`Odoo Inboxアドイン` を検索します。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst-1
 msgid "Odoo Inbox Addin on Google Workspace Marketplace."
-msgstr ""
+msgstr "Google WorkspaceマーケットプレースでのOdoo Inboxアドイン。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:32
 msgid ""
@@ -6373,12 +6791,17 @@ msgid ""
 "Workspace Marketplace "
 "<https://workspace.google.com/marketplace/app/odoo_inbox_addin/873497133275>`_."
 msgstr ""
+"または `Google Workspace Marketplace "
+"<https://workspace.google.com/marketplace/app/odoo_inbox_addin/873497133275>`_"
+" ページの :guilabel:`Odoo Inbox アドイン` に直接移動します。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:35
 msgid ""
 "Once the plugin is located, click :guilabel:`Install`. Then, click "
 ":guilabel:`Continue` to start the installation."
 msgstr ""
+"プラグインが見つかったら、:guilabel:`インストール` をクリックします。次に、:guilabel:`続行` "
+"をクリックしてインストールを開始します。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:38
 msgid ""
@@ -6386,11 +6809,13 @@ msgid ""
 "click :guilabel:`Allow` to let Odoo access the Google account. Google will "
 "then show a pop-up window confirming that the installation was successful."
 msgstr ""
+"次に、Odooに接続するGmailアカウントを選択します。そして、:guilabel:`許可` "
+"をクリックして、OdooにGoogleアカウントへのアクセスを許可します。Googleがポップアップウィンドウを表示し、インストールが成功したことを確認します。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:43
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:134
 msgid "Configure the Odoo database"
-msgstr ""
+msgstr "Odooデータベースを設定する"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:45
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:136
@@ -6401,16 +6826,20 @@ msgid ""
 ":guilabel:`Integrations` section, activate :guilabel:`Mail Plugin`, and then"
 " click :guilabel:`Save`."
 msgstr ""
+"Gmailプラグインを使用するには、Odooデータベースで :guilabel:`メールプラグイン` "
+"機能を有効にする必要があります。この機能を有効にするには、:menuselection:`管理設定 --> "
+"一般設定`に移動します。:guilabel:`統合`セクションで、:guilabel:`メールプラグイン`を有効化し、:guilabel:`保存` "
+"をクリックします。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst-1
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst-1
 msgid "The Mail Plugin feature in the Settings."
-msgstr ""
+msgstr "管理設定のメールプラグイン機能。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:55
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:145
 msgid "Configure the Gmail inbox"
-msgstr ""
+msgstr "Gmail inboxを設定する"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:57
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:147
@@ -6420,12 +6849,15 @@ msgid ""
 " on any email in the inbox. Click :guilabel:`Authorize Access` in the plugin"
 " window to grant Odoo access to the Gmail inbox."
 msgstr ""
+"Gmail "
+"inboxで、右側のサイドパネルに紫色のOdooアイコンが表示されます。Odooアイコンをクリックして、Odooプラグインウィンドウを開きます。次に、受信トレイ内の任意のEメールをクリックします。プラグインウィンドウで"
+" :guilabel:`アクセスを許可する`をクリックして、OdooにGmail受信トレイへのアクセス権限を与えます。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst-1
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst-1
 msgid ""
 "The Authorize Access button in the right sidebar of the Odoo plugin panel."
-msgstr ""
+msgstr "Odooプラグインパネルの右サイドバーにあるアクセス承認ボタン。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:65
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:155
@@ -6433,6 +6865,7 @@ msgid ""
 "Next, click :guilabel:`Login`. Then, enter the URL of the Odoo database that"
 " the user wishes to connect to the Gmail inbox, and log in to the database."
 msgstr ""
+"次に、:guilabel:`ログイン`をクリックします。次に、Gmail受信トレイに接続したいOdooデータベースのURLを入力し、データベースにログインします。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:69
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:159
@@ -6441,6 +6874,7 @@ msgid ""
 "database. For example, use `https://mycompany.odoo.com`, not "
 "`https://mycompany.odoo.com/web#cids=1&action=menu`."
 msgstr ""
+"データベースの特定のページのURLではなく、データベースの一般的なURLを使用してください。例えば、`https://mycompany.odoo.com/web#cids=1&action=menu`ではなく、`https://mycompany.odoo.com`を使用して下さい。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:73
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:163
@@ -6449,16 +6883,20 @@ msgid ""
 "browser will then show a :guilabel:`Success!` message. After that, close the"
 " window. The Gmail inbox and Odoo database are now connected."
 msgstr ""
+"最後に、GmailがOdoo データベースにアクセスできるように :guilabel:`許可` をクリックします。 ブラウザに "
+":guilabel:`成功しました!` というメッセージが表示されます。 その後、ウィンドウを閉じます。 Gmail の受信トレイと Odoo "
+"データベースが接続されました。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:78
 msgid "Odoo On-Premise users"
-msgstr ""
+msgstr "Odooオンプレミスユーザ"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:80
 msgid ""
 "For databases hosted on servers other than Odoo Online (or Odoo.sh), follow "
 "the steps below to configure the Gmail Plugin."
 msgstr ""
+" Odooオンライン(またはOdoo.sh)以外のサーバでホストされているデータベースの場合は、以下の手順に従ってGmailプラグインを設定して下さい。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:84
 msgid ""
@@ -6469,6 +6907,9 @@ msgid ""
 "Script <https://developers.google.com/apps-script/manifest/allowlist-"
 "url>`_.)"
 msgstr ""
+"セキュリティガイドラインの一環として、Googleはアドオン作成者に、アドオンによって起動されるアクションやリダイレクトで使用できるURLのリストを提供することを求めています。これにより、例えば、アドオンがユーザを悪意のあるウェブサイトにリダイレクトしないようにするなど、ユーザを保護することができます。(詳しくは"
+" Google Apps Script <https://developers.google.com/apps-"
+"script/manifest/allowlist-url>`_ を参照して下さい。)"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:89
 msgid ""
@@ -6476,6 +6917,9 @@ msgid ""
 "customer's unique server domain, on-premise customers cannot install the "
 "Gmail Plugin from the Google Workspace Marketplace."
 msgstr ""
+"Odooでは `odoo.com` "
+"ドメインのみがリストアップされ、オンプレミス顧客の固有のサーバドメインはすべてリストアップされないため、オンプレミス顧客はGoogle "
+"Workspace MarketplaceからGmailプラグインをインストールできません。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:96
 msgid ""
@@ -6484,11 +6928,15 @@ msgid ""
 ":guilabel:`Code` button. Then, click :guilabel:`Download ZIP` to download "
 "the Mail Plugin files onto the user's computer."
 msgstr ""
+"まず、Odooメールプラグインの `GitHubリポジトリ <https://github.com/odoo/mail-client-"
+"extensions>`_ にアクセスします。次に、緑色の :guilabel:`コード` "
+"ボタンをクリックします。次に、:guilabel:`ZIPをダウンロード` "
+"をクリックして、メールプラグインファイルをユーザのコンピュータにダウンロードします。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst-1
 msgid ""
 "Download the ZIP file from the Odoo GitHub repository for Mail Plugins."
-msgstr ""
+msgstr "OdooのGitHubリポジトリからメールプラグイン用のZIPファイルをダウンロードします。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:104
 msgid ""
@@ -6497,16 +6945,20 @@ msgid ""
 ":file:`login.ts` file using any text editor software, such as Notepad "
 "(Windows), TextEdit (Mac), or Visual Studio Code."
 msgstr ""
+"コンピュータ上でZIPファイルを開きます。次に、:menuselection:`mail-client-extensions-master --> "
+"gmail --> src --> ビュー` "
+"に移動し、:file:`login.ts`ファイルをメモ帳(Windows)、TextEdit(Mac)、またはVisual Studio "
+"Codeなどのテキストエディタソフトウェアで開きます。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:108
 msgid ""
 "Delete the following three lines of text from the :file:`login.ts` file:"
-msgstr ""
+msgstr ":file:`login.ts` ファイルから以下の3行のテキストを削除します。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:116
 msgid ""
 "This removes the `odoo.com` domain constraint from the Gmail Plugin program."
-msgstr ""
+msgstr "これにより、Gmail プラグインプログラムから `odoo.com` ドメインの制約が削除されます。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:118
 msgid ""
@@ -6515,6 +6967,10 @@ msgid ""
 ":guilabel:`urlFetchWhitelist` section, replace all the references to "
 "`odoo.com` with the Odoo customer's unique server domain."
 msgstr ""
+"次に、ZIPファイル内の:menuselection:`mail-client-extensions-master --> gmail` "
+"に移動し、:guilabel:`appsscript.json` "
+"というファイルを開きます。:guilabel:`urlFetchWhitelist`セクション内の `odoo.com` "
+"の参照を全て、Odoo顧客の固有のサーバドメインに置き換えます。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:122
 msgid ""
@@ -6522,12 +6978,14 @@ msgid ""
 ":guilabel:`README.md`. Follow the instructions in the :guilabel:`README.md` "
 "file to push the Gmail Plugin files as a Google Project."
 msgstr ""
+"次に、同じ :guilabel:`gmail` フォルダで、:guilabel:`README.md` というファイルを開きます。 "
+":guilabel:`README.md` ファイルの指示に従って、Gmail プラグインのファイルを Google プロジェクトとしてプッシュします。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:126
 msgid ""
 "The computer must be able to run Linux commands in order to follow the "
 "instructions on the :guilabel:`README.md` file."
-msgstr ""
+msgstr ":guilabel:`README.md` ファイルの指示に従うには、コンピュータで Linux コマンドを実行できる必要があります。"
 
 #: ../../content/applications/general/integrations/mail_plugins/gmail.rst:129
 msgid ""
@@ -6536,10 +6994,14 @@ msgid ""
 ":guilabel:`Deploy from manifest`. Lastly, click :guilabel:`Install the add-"
 "on` to install the Gmail Plugin."
 msgstr ""
+"その後、Odooに接続したいGmailアカウントでGoogleプロジェクトを共有します。次に、:guilabel:`公開` "
+"と:guilabel:`Deploy from manifest` (マニフェストからデプロイ) "
+"をクリックします。最後に、:guilabel:`Install the add-on` "
+"(アドオンのインストール)をクリックしてGmailプラグインをインストールします。"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:3
 msgid "Outlook Plugin"
-msgstr ""
+msgstr "Outlookプラグイン"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:5
 msgid ""
@@ -6547,6 +7009,7 @@ msgid ""
 "database actions from emails. Odoo has a plugin for Outlook that allows for "
 "the creation of an opportunity from the email panel."
 msgstr ""
+"Outlookでは、Eメールからデータベース操作を実行するためにサードパーティアプリケーションを接続することができます。Odooには、Eメールパネルから案件を作成できるOutlook用プラグインがあります。"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:10
 #: ../../content/applications/general/iot/config.rst:5
@@ -6559,11 +7022,11 @@ msgstr "設定"
 msgid ""
 "The Outlook :doc:`Mail Plugin <../mail_plugins>` needs to be configured both"
 " on Odoo and Outlook."
-msgstr ""
+msgstr "Outlook :doc:`メールプラグイン <../mail_plugins>` はOdooとOutlookの両方で設定が必要です。"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:17
 msgid "Enable Mail Plugin"
-msgstr ""
+msgstr "メールプラグインを有効化する"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:19
 msgid ""
@@ -6571,10 +7034,12 @@ msgid ""
 ":menuselection:`Settings --> General Settings --> Integrations`, enable "
 ":guilabel:`Mail Plugin`, and :guilabel:`Save` the configuration."
 msgstr ""
+"まず、データベースで *メールプラグイン* 機能を有効にします。:menuselection:`管理設定 --> 一般設定 --> 統合` に行き、 "
+":guilabel:`メールプラグイン` を有効化し設定を :guilabel:`保存` します。"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:25
 msgid "Install the Outlook Plugin"
-msgstr ""
+msgstr "Outlookプラグインをインストールする"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:27
 msgid ""
@@ -6583,6 +7048,10 @@ msgid ""
 "`https://download.odoocdn.com/plugins/outlook/manifest.xml "
 "<https://download.odoocdn.com/plugins/outlook/manifest.xml>`_."
 msgstr ""
+"以下のXMLファイルを後でアップロードするために、ダウンロード(:menuselection:`ページを名前を付けて保存 --> "
+"ウェブページXMLのみ`) します: "
+"`https://download.odoocdn.com/plugins/outlook/manifest.xml "
+"<https://download.odoocdn.com/plugins/outlook/manifest.xml>`_"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:31
 msgid ""
@@ -6590,6 +7059,8 @@ msgid ""
 " click on the :guilabel:`More actions` button in the upper right-side and "
 "select :guilabel:`Get Add-ins`."
 msgstr ""
+" 次に、Outlookのメールボックスを開き、任意のEメールを選択します。この操作が完了したら、右上の:guilabel:`他のアクション` "
+"ボタンで:guilabel:`アドインを入手` をクリックします。"
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst-1
 msgid "More actions button in Outlook"
