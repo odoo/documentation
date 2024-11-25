@@ -2,7 +2,7 @@
 France
 ======
 
-.. _france/fec:
+.. _localization/france/fec:
 
 FEC - Fichier des Écritures Comptables
 ======================================
@@ -14,7 +14,9 @@ arranged in chronological order.
 Since January 1st, 2014, every French company is required to produce and transmit this file upon
 request by the tax authorities for audit purposes.
 
-FEC Import
+.. _localization/france/fec-import:
+
+FEC import
 ----------
 
 To make the onboarding of new users easier, Odoo Enterprise's French :ref:`fiscal localization
@@ -34,6 +36,8 @@ click on *Import*.
       year, you might need to cancel those entries in the User Interface. Odoo makes those entries
       (RAN) useless.
 
+.. _localization/france/fec-file:
+
 File formats
 ~~~~~~~~~~~~
 
@@ -51,6 +55,8 @@ Our module expects the files to meet the following technical specifications:
 - **Separator**: any of these: `;` or `|` or `,` or `TAB`.
 - **Line terminators**: both CR+LF (`\\r\\n`) and LF (`\\n`) character groups are supported.
 - **Date format**: `%Y%m%d`
+
+.. _localization/france/fec-fields:
 
 Fields description and use
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -115,6 +121,8 @@ These two fields can be found in place of the others in the sence above.
 |    |               | or "D" for Debit                     | or `move_line.credit`             |                 |
 +----+---------------+--------------------------------------+-----------------------------------+-----------------+
 
+.. _localization/france/fec-implementation:
+
 Implementation details
 ~~~~~~~~~~~~~~~~~~~~~~
 
@@ -130,11 +138,15 @@ header.
 If the check passes, then the file is read in full, kept in memory, and scanned. Accounting entities
 are imported one type at a time, in the following order.
 
+.. _localization/france/fec-accounts:
+
 Accounts
 ********
 
 Every accounting entry is related to an account, which should be determined by the field
 `CompteNum`.
+
+.. _localization/france/fec-code-matching:
 
 Code matching
 *************
@@ -153,6 +165,8 @@ the first six digits of the codes.
    The account code `65800000` in the file is matched against an existing `658000` account in Odoo,
    and that account is used instead of creating a new one.
 
+.. _localization/france/fec-reconcilable-flag:
+
 Reconcilable flag
 *****************
 
@@ -166,7 +180,9 @@ reconciled with another one.
     with a payment that hasn't yet been recorded, this isn't a problem anyway; the account is
     flagged as reconcilable as soon as the import of the move lines requires it.
 
-Account type and Templates matching
+.. _localization/france/fec-account-type-template-matching:
+
+Account type and templates matching
 ***********************************
 
 As the **type** of the account is not specified in the FEC format, **new** accounts are created
@@ -190,6 +206,8 @@ The match is done with the left-most digits, starting by using all digits, then 
 
 The type of the account is then flagged as *payable* and *reconcilable* as per the account template.
 
+.. _localization/france/fec-journals:
+
 Journals
 ********
 
@@ -205,6 +223,8 @@ New journals have their name prefixed by the string ``FEC-``.
    `ACHATS` -> `FEC-ACHATS`
 
 The journals are *not* archived, the user is entitled to handle them as he wishes.
+
+.. _localization/france/fec-journal-type:
 
 Journal type determination
 **************************
@@ -249,6 +269,8 @@ moves and accounts:
    The journal `type` would be `bank`, because the bank moves percentage (75%) exceeds the threshold
    (70%).
 
+.. _localization/france/fec-partners:
+
 Partners
 ********
 
@@ -265,6 +287,8 @@ Each partner keeps its `Reference` from the field `CompAuxNum`.
     partner entries may be merged by the user, with assistance from the system that groups them by
     similar entries.
 
+.. _localization/france/fec-moves:
+
 Moves
 *****
 
@@ -273,6 +297,8 @@ do the matching between the entries themselves.
 
 The `EcritureNum` field represents the name of the moves. We noticed that sometimes it may not be
 filled out. In this case, the field `PieceRef` is used.
+
+.. _localization/france/fec-rounding:
 
 Rounding issues
 ***************
@@ -283,6 +309,8 @@ targeting the accounts:
 
 - `658000` Charges diverses de gestion courante, for added debits
 - `758000` Produits divers de gestion courante, for added credits
+
+.. _localization/france/fec-missing-move-name:
 
 Missing move name
 *****************
@@ -302,11 +330,15 @@ each different combination of journal and date creates a new move.
 Should this attempt fail, the user is prompted an error message with all the move lines that are
 supposedly unbalanced.
 
+.. _localization/france/fec-partner-info:
+
 Partner information
 *******************
 
 If a line has the partner information specified, the information is copied to the accounting move
 itself if the targeted Journal is of type *payable* or *receivable*.
+
+.. _localization/france/fec-partner-info-export:
 
 Export
 ------
@@ -327,7 +359,9 @@ France --> FEC`.
     - `Test-Compta-Demat (Official FEC Testing tool)
       <https://github.com/DGFiP/Test-Compta-Demat>`_
 
-French Accounting Reports
+.. _localization/france/accounting-reports:
+
+French accounting reports
 =========================
 
 If you have installed the French Accounting, you will have access to some accounting reports
@@ -337,6 +371,103 @@ specific to France:
 - Compte de résultats
 - Plan de Taxes France
 
+.. _localization/france/liasse-fiscale:
+
+Liasse fiscale
+==============
+
+The *liasse fiscale* (tax returns) is a collection of standardized financial documents that
+businesses must submit annually to the tax authorities. It comprehensively summarizes the company’s
+financial activities and determines corporate taxes.
+
+`Teledec <https://www.teledec.fr>`_ is a platform used to prepare and submit tax returns using data
+from accounting records. To synchronize your accounting data stored in Odoo with Teledec and
+electronically send your company's *liasse fiscale* to the DGFiP (Direction Générale des Finances
+Publiques), follow these steps:
+
+#. :ref:`localization/france/teledec-account`
+#. :ref:`localization/france/teledec-registration`
+#. :ref:`localization/france/teledec-synchronization`
+
+.. _localization/france/teledec-account:
+
+Teledec account creation
+------------------------
+
+To create a Teledec account, access the `Teledec account creation page <https://www.teledec.fr/s-enregistrer>`_
+and fill in the :guilabel:`Adresse e-mail` field with an email address. Choose a secure password,
+accept the general terms and conditions by checking the box, and click :guilabel:`S'enregistrer` to
+save. Then, enter the :abbr:`SIREN (Système d'identification du répertoire des entreprises,
+Business Directory Identification System)` number of the company.
+
+.. note::
+   If the account has already been created, click :guilabel:`Déjà enregistré?` (Already registered).
+
+.. _localization/france/teledec-registration:
+
+Company registration and fiscal year information
+------------------------------------------------
+
+To register the company on Teledec, go to :guilabel:`Vos entreprises` (Your companies) and click
+:guilabel:`Enregistrer votre entreprise` (Register your company). Make sure to fill in the following
+company information in the :guilabel:`Coordonnées de l'entreprise` (Company's details) and
+:guilabel:`Représentant légal` (Legal representative) sections:
+
+- :guilabel:`Nom de l'entreprise`: Company's name.
+- :guilabel:`Forme juridique`: Select the company's legal form.
+- :guilabel:`Les comptes sont clôturés le`: Closing date.
+- :guilabel:`Régime d'imposition, choix de la liasse`: Select the Tax scheme and tax return option.
+- :guilabel:`Adresse du siège social`: Head office address.
+- :guilabel:`Nom du représentant légal`: Legal representative's name.
+- :guilabel:`Agissant en qualité de`: Legal representative's function.
+- :guilabel:`Numéro de téléphone`: Phone number.
+
+Click :guilabel:`Sauvegarder` (Save) to display the next step
+:guilabel:`Informations générales sur l'exercice déclaré` (General information about the declared
+fiscal year). Then, fill in information on the financial year, such as the fiscal year start and end
+dates or the closing date and duration of the previous fiscal period. After saving, the list of
+documents included in the *liasse fiscale* is displayed, including both standard tax forms and
+those customized for the company’s tax return.
+
+.. tip::
+   - The :guilabel:`Etat` (Status) column shows the progress of the document filing.
+   - Click :guilabel:`Compléter` to fill out a document, then :guilabel:`Sauvegarder` to save.
+   - To print a blank version of the declaration, click :guilabel:`Imprimer la déclaration` and
+     select the :guilabel:`Imprimer la déclaration avec les notices` option.
+
+.. _localization/france/teledec-synchronization:
+
+Odoo synchronization
+--------------------
+
+To enable Odoo to automatically fill in the data for the :guilabel:`Liasse fiscale`, click
+:guilabel:`Autres actions` (Other actions) in the top-right corner and select
+:guilabel:`Synchroniser avec un logiciel tiers` (Synchronize with third-party software), then
+:guilabel:`Synchroniser cette liasse avec Odoo` (Synchronize this *liasse* with Odoo).
+
+In the :guilabel:`Synchroniser cette liasse avec Odoo` window, fill in the following
+information to complete the synchronization:
+
+- :guilabel:`Nom / URL complète de la base de données ODOO`: Odoo database name or URL. To provide
+  the full URL of the database, enable :guilabel:`Je voudrais donner une url complète hors .odoo.com`
+  option.
+- :guilabel:`Nom de l'utilisateur`: User name associated with the Odoo account.
+- :guilabel:`Clé API`: :ref:`API key <api/external_api/keys>` generated by the Odoo instance.
+
+Next, click :guilabel:`Importer` to synch data from Odoo. In the
+:guilabel:`Confirmation de la synchronisation de liasse avec Odoo` window, review the amounts and
+make any necessary changes. Then click :guilabel:`Importer la balance` to confirm the
+synchronization of the *liasse fiscale* with Odoo and import the balance.
+
+.. important::
+   Clicking :guilabel:`Importer la balance` may overwrite or alter any manual updates made
+   previously.
+
+To make payment and send the declaration to the tax authorities, click :guilabel:`Paiement & envoi
+de la déclaration`.
+
+.. _localization/france/anti-fraud:
+
 Get the VAT anti-fraud certification with Odoo
 ==============================================
 
@@ -345,6 +476,8 @@ in France and DOM-TOM. This new legislation stipulates certain criteria
 concerning the inalterability, security, storage and archiving of sales data.
 These legal requirements are implemented in Odoo, version 9 onward,
 through a module and a certificate of conformity to download.
+
+.. _localization/france/anti-fraud-software:
 
 Is my company required to use anti-fraud software?
 --------------------------------------------------
@@ -357,6 +490,8 @@ Odoo (CGI art. 286, I. 3° bis) if:
 
 This rule applies to any company size. Auto-entrepreneurs are exempted from
 VAT and therefore are not affected.
+
+.. _localization/france/anti-fraud-odoo-certification:
 
 Get certified with Odoo
 -----------------------
@@ -400,6 +535,8 @@ To get the certification, just follow the following steps:
       Finally, make sure the following module *l10n_fr_sale_closing*
       is installed.
 
+.. _localization/france/anti-fraud-features:
+
 Anti-fraud features
 -------------------
 
@@ -411,6 +548,8 @@ The anti-fraud module introduces the following features:
 - **Storage**: automatic sales closings with computation of both period
   and cumulative totals (daily, monthly, annually).
 
+.. _localization/france/anti-fraud-inalterability:
+
 Inalterability
 ~~~~~~~~~~~~~~
 
@@ -421,6 +560,8 @@ if the company is located in France or in any DOM-TOM.
 .. note::
 
     If you run a multi-companies environment, only the documents of such companies are impacted.
+
+.. _localization/france/anti-fraud-security:
 
 Security
 ~~~~~~~~
@@ -441,6 +582,8 @@ For POS orders, go to
 :menuselection:`Point of Sales --> Reporting --> French Statements`.
 For invoices or journal entries,
 go to :menuselection:`Invoicing/Accounting --> Reporting --> French Statements`.
+
+.. _localization/france/anti-fraud-storage:
 
 Storage
 ~~~~~~~
@@ -477,6 +620,8 @@ Invoicing and Accounting apps.
       :ref:`developer mode <developer-mode>`.
     - Then go to :menuselection:`Settings --> Technical --> Automation --> Scheduled Actions`.
 
+.. _localization/france/anti-fraud-responsibilities:
+
 Responsibilities
 ----------------
 
@@ -490,7 +635,9 @@ the inalterability of data.
 Odoo absolves itself of all and any responsibility in case of changes
 in the module’s functions caused by 3rd party applications not certified by Odoo.
 
-More Information
+.. _localization/france/anti-fraud-more-info:
+
+More information
 ----------------
 
 You can find more information about this legislation in the following official documents.
