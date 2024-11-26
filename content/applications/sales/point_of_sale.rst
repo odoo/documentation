@@ -118,6 +118,9 @@ To return and refund a product,
      setting a negative quantity that equals the number of returned products. To do so, click
      :guilabel:`Qty` and :guilabel:`+/-`, followed by the quantity of returned products.
 
+Once the return payment is validated, Odoo generates the required credit note, referencing the
+original receipt or invoice and partially or fully canceling the document.
+
 .. _pos/cash-register:
 
 Manage the cash register
