@@ -1,70 +1,107 @@
-================
-Shipping methods
-================
+========
+Shipping
+========
 
-Depending on your shipping strategy, you have the choice to either use your :ref:`own shipping
-methods <ecommerce-own-shipping>`, or use an integration with an :ref:`existing shipping provider
-<ecommerce-shipping-providers>`.
+Odoo eCommerce allows you to configure various shipping methods, enabling customers to choose
+their preferred option at checkout. These methods include :ref:`external providers
+<ecommerce/shipping/external-provider>`, :ref:`custom options <ecommerce/shipping/custom-method>`
+such as flat-rate or free shipping, local carriers via
+:doc:`Sendcloud <../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping>`
+or :ref:`Based on Rules <inventory/shipping/rules>`, and :ref:`in-store pickup
+<ecommerce/shipping/instore-pickup>`.
 
-.. _ecommerce-own-shipping:
+.. _ecommerce/shipping/external-provider:
 
-.. seealso::
-   :doc:`../checkout_payment_shipping/checkout`
+External provider integration
+=============================
 
-Own shipping methods
-====================
+To handle product delivery, you can connect your database to :doc:`third-party shipping carriers
+<../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper>`
+like :doc:`FedEx <../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex>`,
+:doc:`UPS <../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials>`,
+or :doc:`DHL <../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials>`.
+A shipping connector links to these providers, automating :doc:`tracking labels
+<../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels>` and shipping
+processes.
 
-You can create your own custom shipping methods and define rules to compute shipping costs. To do
-so, go to :menuselection:`Website --> Configuration --> Shipping Methods`, and either select an
-**existing** shipping method, or :guilabel:`Create` one. When creating a shipping method, you can
-choose between :ref:`Fixed Price <inventory/shipping/fixed>`, :ref:`Based on Rules
-<inventory/shipping/rules>`, and :guilabel:`Pickup in store`.
+To enable a third-party shipping provider, go to :menuselection:`Website --> Configuration -->
+Settings`, scroll to the :guilabel:`Shipping` section, select the desired shipping provider(s),
+and :guilabel:`Save`.
 
-Pickup in store
----------------
-
-:guilabel:`Pickup in store` must first be **enabled** in the settings (:menuselection:`Website -->
-Configuration --> Settings --> Shipping section)` by checking :guilabel:`On Site Payments &
-Picking`. Once enabled, you can select and :guilabel:`Customize Pickup Sites`. :guilabel:`Picking
-sites` can be made **website-specific**, but are by default available for *all* websites.
-
-.. seealso::
-   - :doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration`
-   - :doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing`
-   - :doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack`
-   - :doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/cancel`
-
-.. _ecommerce-shipping-providers:
-
-Shipping providers
-==================
-
-Another solution is to use one of the integrations with an existing shipping provider. The advantage
-of using an integration is that delivery costs are automatically computed based on each order as
-well as generating shipping labels.
-
-
+Go to :menuselection:`Website --> Configuration --> Shipping Methods` and select the shipping method
+in the list to :ref:`configure it <inventory/shipping_receiving/configure-delivery-method>`.
 
 .. seealso::
-   - :doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper`
-   - :doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials`
-   - :doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials`
-   - :doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels`
+   :doc:`Third-party shipping carriers
+   <../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper>`
 
-Website availability
-====================
+.. important::
+   The field used to define additional fees **must** be filled **in your third-party shipping
+   provider account**, even if you do not plan to charge customers any additional fee. If you do not
+   want to apply a fee, enter `0`. If the field is left empty, the delivery price cannot be
+   calculated, and an error message prompts the customer to select an alternative shipping method.
 
-Shipping methods can be made available on **specific** websites *only*, if desired. To do so, go to
-:menuselection:`Website --> Configuration --> Settings --> Shipping Methods`, and select the desired
-**shipping method**. In the :guilabel:`Website` field, set the website you want the shipping method
-to be restrained to. Leave the field **empty** for the method to be available on *all* websites.
+Margin on delivery rate
+-----------------------
 
-Delivery method at checkout
-===========================
+To add an additional fee to the base shipping rate (e.g., to cover extra costs), log into your
+carrier account and set the desired fee in the related field. The shipping connector retrieves this
+fee and includes it in the final price at checkout. Contact your carrier for further assistance
+with this configuration.
 
-Customers can choose the shipping method at the end of the checkout process, at the
-:guilabel:`Confirm Order` step.
+Alternatively, enter `0` in your third-party shipping provider account, then set the fee in Odoo.
+To do so, access the desired :ref:`shipping method's form
+<inventory/shipping_receiving/configure-delivery-method>` and enter the fee in the :guilabel:`Margin
+on Rate` field to add a percentage to the shipping costs and/or the :guilabel:`Additional margin`
+field to add a fixed amount.
 
-.. image:: shipping/shipping-checkout.png
-   :align: center
-   :alt: Delivery method choice at checkout
+.. important::
+   The field used to define additional fees cannot be left empty in your third-party shipping
+   provider account.
+
+.. _ecommerce/shipping/custom-method:
+
+Custom shipping method
+======================
+
+Custom shipping methods must be created, for example:
+
+- to integrate shipping carriers through :doc:`Sendcloud
+  <../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping>`;
+- to configure specific rules (e.g., to offer free shipping for orders above a specific amount) for
+  a specific provider;
+- to configure :ref:`Fixed Price <inventory/shipping/fixed>` shipping or shipping
+  :ref:`Based on Rules <inventory/shipping/rules>`.
+
+To create a custom shipping method, go to :menuselection:`Website --> Configuration -->
+Shipping Methods`, click :guilabel:`New` and fill in the :ref:`fields
+<inventory/shipping_receiving/shipping-methods-details>`.
+
+In the :guilabel:`Provider` field, select :ref:`Based on Rules <inventory/shipping/rules>`,
+:ref:`Fixed Price <inventory/shipping/fixed>`, or :ref:`Pickup in store <inventory/shipping/pickup>`
+if the shiping method does not involve any specific provider.
+
+.. tip::
+   Upon :ref:`configuring <inventory/shipping_receiving/configure-delivery-method>` a shipping
+   method, you can:
+
+   - restrict it :doc:`to a specific website <../../website/configuration/multi_website>` by
+     selecting it in :guilabel:`Website` field;
+   - use the :guilabel:`Destination availability` tab to filter the delivery carriers displayed
+     based on the customer's area;
+   - click the :guilabel:`Test Environment` smart button to switch to
+     the :guilabel:`Production Environment`, then click :guilabel:`Unpublished` to
+     :guilabel:`Publish` the shipping method and make it available to website visitors.
+
+.. _ecommerce/shipping/instore-pickup:
+
+In-store pickup
+===============
+
+To allow customers to reserve products online and pay for/collect them in person at the store, go to
+:menuselection:`Website --> Configuration --> Settings`, scroll to the :guilabel:`Shipping` section,
+enable :guilabel:`On Site Payments & Picking`, and :guilabel:`Save`.
+
+Then, click :guilabel:`Customize Pickup Sites`, select the shipping method or click :guilabel:`New`
+to create a new one and :ref:`configure <inventory/shipping_receiving/configure-delivery-method>`
+the fields. Make sure the :guilabel:`Provider` field is set to :guilabel:`Pickup in store`.
