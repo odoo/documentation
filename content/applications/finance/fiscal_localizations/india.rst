@@ -244,9 +244,8 @@ Workflow
 Send an E-Way bill
 ~~~~~~~~~~~~~~~~~~
 
-You can manually send an E-Way bill by clicking :guilabel:`Send E-Way bill`. To send the E-Way bill
-automatically when an invoice or a bill is confirmed, enable :guilabel:`E-Way bill (IN)` in your
-:ref:`Sales or Purchase journal <india/e-invoicing-journals>`.
+To send an E-Way bill, confirm the customer invoice/vendor bill and click :guilabel:`Send E-Way
+bill`.
 
 .. image:: india/e-waybill-send-button.png
    :alt: Send E-waybill button on invoices
@@ -256,8 +255,8 @@ automatically when an invoice or a bill is confirmed, enable :guilabel:`E-Way bi
 Invoice validation
 ~~~~~~~~~~~~~~~~~~
 
-Once an invoice has been issued and sent via :guilabel:`Send E-Way bill`, a confirmation message is
-displayed.
+Once an invoice/bill has been issued and sent via :guilabel:`Send E-Way bill`, a confirmation
+message is displayed.
 
 .. image:: india/e-waybill-process.png
    :alt: Indian e-Way bill confirmation message
@@ -265,7 +264,7 @@ displayed.
 .. note::
    - You can find the JSON-signed file in the attached files in the chatter.
    - Odoo automatically uploads the JSON-signed file to the government portal after some time. Click
-     :guilabel:`Process now` if you want to process the invoice immediately.
+     :guilabel:`Process now` if you want to process the invoice/bill immediately.
 
 Invoice PDF report
 ~~~~~~~~~~~~~~~~~~
@@ -281,9 +280,9 @@ You can print the invoice PDF report once you have submitted the E-Way bill. The
 E-Way bill cancellation
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-If you want to cancel an E-Way bill, go to the :guilabel:`E-Way bill` tab of the related invoice and
-fill out the :guilabel:`Cancel reason` and :guilabel:`Cancel remarks` fields. Then, click
-:guilabel:`Request EDI Cancellation`.
+If you want to cancel an E-Way bill, go to the :guilabel:`E-Way bill` tab of the related
+invoice/bill and fill out the :guilabel:`Cancel reason` and :guilabel:`Cancel remarks` fields. Then,
+click :guilabel:`Request EDI Cancellation`.
 
 .. important::
    Doing so cancels both the :ref:`e-Invoice <india/e-invoicing>` (if applicable) and the
