@@ -720,6 +720,18 @@ Statements Reports --> Tax Report` and then filter by `Tax Report 103` or `Tax R
 Report 103
 ----------
 
+
+Expense Reimbursement
+============
+Expense reimbursements apply to the following cases:
+Individual: Reimbursement to an employee for miscellaneous expenses - Purchase Liquidations.
+Legal Entity: Reimbursement for incurred expenses, such as representation expenses (Lawyer) - ghhgfhfgfhgdhgdhghgdhghgdhd
+9Vendor Bills.
+.. image:: ecuador/contributor-type.png
+   :align: center
+   :alt: Taxpayer Type configuration for Ecuador.
+
+
 This report contains information of income tax withholdings in a given period, this can be reported
 monthly or semi-annually.
 
