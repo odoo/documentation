@@ -18,8 +18,9 @@ displaying "Late!" in red whenever the checkbox is checked.
       import { BooleanField } from "@web/views/fields/boolean/boolean_field";
       import { Component, xml } from "@odoo/owl";
 
-      class LateOrderBooleanField extends BooleanField {}
-      LateOrderBooleanField.template = "my_module.LateOrderBooleanField";
+      class LateOrderBooleanField extends BooleanField {
+         static template = "my_module.LateOrderBooleanField";
+      }
 
 #. Create the field template.
 
@@ -66,22 +67,19 @@ Assume that we want to create a field that displays a simple text in red.
       import { registry } from "@web/core/registry";
 
       export class MyTextField extends Component {
+         static template = xml`
+            <input t-att-id="props.id" class="text-danger" t-att-value="props.value" onChange.bind="onChange" />
+         `;
+         static props = { ...standardFieldProps };
+         static supportedTypes = ["char"];
 
-          /**
-          * @param {boolean} newValue
-          */
-          onChange(newValue) {
-              this.props.update(newValue);
-          }
+         /**
+         * @param {boolean} newValue
+         */
+         onChange(newValue) {
+            this.props.update(newValue);
+         }
       }
-
-      MyTextField.template = xml`
-          <input t-att-id="props.id" class="text-danger" t-att-value="props.value" onChange.bind="onChange" />
-      `;
-      MyTextField.props = {
-          ...standardFieldProps,
-      };
-      MyTextField.supportedTypes = ["char"];
 
    The imported `standardFieldProps` contains the standard props passed by the `View` such as
    the `update` function to update the value, the `type` of the field in the model, the

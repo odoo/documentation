@@ -51,8 +51,8 @@ class BootstrapTranslator(HTML5Translator):
 
         # Meta
         self.meta = ['', '']  # HTMLWriter strips out the first two items from Translator.meta
-        self.add_meta('<meta http-equiv="X-UA-Compatible" content="IE=edge">')
-        self.add_meta('<meta name="viewport" content="width=device-width, initial-scale=1">')
+        # self.add_meta('<meta http-equiv="X-UA-Compatible" content="IE=edge">')
+        # self.add_meta('<meta name="viewport" content="width=device-width, initial-scale=1">')
 
         # Body
         self.body = []
