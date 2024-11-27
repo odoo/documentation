@@ -578,6 +578,8 @@ You can then:
    - :ref:`Assets Bundle <reference/assets_bundle>`
    - :ref:`testing/python`
 
+.. _testing/javascript/test:
+
 Javascript
 ~~~~~~~~~~
 
@@ -588,7 +590,6 @@ Javascript
       import tour from 'web_tour.tour';
       tour.register('rental_product_configurator_tour', {
           url: '/web',  // Here, you can specify any other starting url
-          test: true,
       }, [
           // Your sequence of steps
       ]);
@@ -730,14 +731,108 @@ To start a tour from a python test, make the class inherit from
 
    def test_your_test(self):
        # Optional Setup
-       self.start_tour("/web", 'your_module.your_tour_name', login="admin")
+       self.start_tour("/web", 'your_tour_name', login="admin")
        # Optional verifications
+
+Writing an onboarding tour
+--------------------------
+
+The onboarding tour main purpose is to guide the user, so they can be run in the browser.
+There is a checkbox in the user menu that will run all the onboarding tours in their
+sequence order.
+
+.. image:: testing/tour_user_menu.png
+   :align: center
+
+Structure
+~~~~~~~~~
+
+To write an onboarding tour for `your_module`, start with creating the required files:
+
+.. code-block:: text
+
+    your_module
+    ├── ...
+    ├── data
+    |   └── your_tour.xml
+    ├── static
+    |   └── src
+    |       └── js
+    |           └── tours
+    |               └── your_tour.js
+    └── __manifest__.py
+
+You can then:
+
+- update :file:`__manifest__.py` to add :file:`your_tour.js` in the assets and :file:`your_tour.xml` in the data.
+
+  .. code-block:: python
+
+     'data': [
+        'data/your_tour.xml',
+     ],
+     'assets': {
+         'web.assets_backend': [
+             'your_module/static/src/js/tours/your_tour.js',
+         ],
+     },
+
+Javascript
+~~~~~~~~~~
+
+The javascript part is the same as for the test tour.
+
+.. seealso::
+   - :ref:`_testing/javascript/test`
+
+XML
+~~~
+
+When you have your tour in the javascript registry, you can create a record web_tour.tour in the xml, like that:
+
+  .. code-block:: xml
+
+      <?xml version="1.0" encoding="utf-8"?>
+      <odoo>
+          <record id="your_tour" model="web_tour.tour">
+              <field name="name">your_tour</field>
+              <field name="sequence">10</field>
+              <field name="rainbow_man_message">Congrats, that was a great tour</field>
+          </record>
+      </odoo>
+
+- **name**: Required, the name must be the same as the one in the
+  javascript registry.
+- **sequence**: Optional, will determine the order to execute the
+  onboarding tours, If no ``sequence``, has a default value of 1000.
+- **url**: Optional, the url where to start the tour. If no ``url``,
+  take the url from the registry.
+- **rainbow_man_message**: Optional, will show the message in the
+  rainbow man effect at the completion of the tour. If no ``rainbow_man_message``,
+  there is a default value. If you do not want a rainbow_man effect, then specify
+  the field and write nothing.
+
+
+Running onboarding tour
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Like said previously, you can activate the onboarding tour with the checkbox in user menu.
+But you can also run them one by one or specific one through the menu: ``Settings/Technical/User Interface/Tours``.
+Their you'll get all the onboarding tour and you can execute one by clicking on `onboarding` or `testing`.
+
+.. image:: testing/tours_view.png
+   :align: center
+
+`onboarding` will execute the tour in interactive mode. So the tour will show what to do and
+wait for interactions from the user.
+`testing` will execute the tour automatically. So the tour will be executing all the step in
+front of the user.
 
 Debugging tips
 --------------
 
-Observing tours in a browser
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Observing test tours in a browser
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 There are three ways with different tradeoffs:
 
@@ -785,7 +880,7 @@ debugger stops on the exception.
 Run via browser
 ***************
 
-Tours can also be launched via the browser UI, either by calling
+Test tours can also be launched via the browser UI by calling
 
 .. code-block:: javascript
 
@@ -793,11 +888,7 @@ Tours can also be launched via the browser UI, either by calling
 
 in the javascript console, or by enabling :ref:`tests mode
 <frontend/framework/tests_debug_mode>` by setting ``?debug=tests`` in
-the URL, then selecting **Start Tour** in the debug menu and picking a
-tour:
-
-.. image:: testing/tours.png
-   :align: center
+the URL.
 
 **Advantages**
   - easier to run
