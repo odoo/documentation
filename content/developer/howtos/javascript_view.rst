@@ -20,11 +20,11 @@ can be done in a few steps:
 
       // the controller usually contains the Layout and the renderer.
       class CustomKanbanController extends KanbanController {
+          static template = "my_module.CustomKanbanView";
+
           // Your logic here, override or insert new methods...
           // if you override setup(), don't forget to call super.setup()
       }
-
-      CustomKanbanController.template = "my_module.CustomKanbanView";
 
       export const customKanbanView = {
           ...kanbanView, // contains the default Renderer/Controller/Model
@@ -85,6 +85,9 @@ Creating a new view is an advanced topic. This guide highlight only the essentia
       import { Component, onWillStart, useState} from "@odoo/owl";
 
       export class BeautifulController extends Component {
+          static template = "my_module.View";
+          static components = { Layout };
+
           setup() {
               this.orm = useService("orm");
 
@@ -105,9 +108,6 @@ Creating a new view is an advanced topic. This guide highlight only the essentia
               });
           }
       }
-
-      BeautifulController.template = "my_module.View";
-      BeautifulController.components = { Layout };
 
    The template of the Controller displays the control panel with Layout and also the
    renderer.
@@ -133,9 +133,9 @@ Creating a new view is an advanced topic. This guide highlight only the essentia
       :caption: :file:`beautiful_renderer.js`
 
       import { Component } from "@odoo/owl";
-      export class BeautifulRenderer extends Component {}
-
-      BeautifulRenderer.template = "my_module.Renderer";
+      export class BeautifulRenderer extends Component {
+          static template = "my_module.Renderer";
+      }
 
    .. code-block:: xml
       :caption: :file:`beautiful_renderer.xml`
