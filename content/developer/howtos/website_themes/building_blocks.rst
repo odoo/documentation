@@ -380,8 +380,6 @@ The `data-js` attribute can be assigned to an options group in order to define a
 
 .. code-block:: javascript
 
-   /** @odoo-module */
-
    import options from 'web_editor.snippets.options';
 
    options.registry.CustomMethodName = options.Class.extend({

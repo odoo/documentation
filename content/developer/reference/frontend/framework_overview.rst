@@ -152,9 +152,10 @@ client can use it. For example, the field registry contains all field components
 
 .. code-block:: javascript
 
+    import { Component } from "@odoo/owl";
     import { registry } from "./core/registry";
 
-    class MyFieldChar extends owl.Component {
+    class MyFieldChar extends Component {
         // some code
     }
 

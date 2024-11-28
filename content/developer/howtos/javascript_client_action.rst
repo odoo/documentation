@@ -29,8 +29,9 @@ framework and use services, core components, hooks,...
 
       import { Component } from  "@odoo/owl";
 
-      class MyClientAction extends Component {}
-      MyClientAction.template = "my_module.clientaction";
+      class MyClientAction extends Component {
+          static template = "my_module.clientaction";
+      }
 
       // remember the tag name we put in the first step
       registry.category("actions").add("my_module.MyClientAction", MyClientAction);
