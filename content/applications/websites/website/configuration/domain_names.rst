@@ -174,7 +174,7 @@ The specific instructions depend on your DNS hosting service.
    - `Namecheap: How to create a CNAME record for your domain <https://www.namecheap.com/support/knowledgebase/article.aspx/9646/2237/how-to-create-a-cname-record-for-your-domain>`_
    - `OVHcloud: Add a new DNS record <https://docs.ovh.com/us/en/domains/web_hosting_how_to_edit_my_dns_zone/#add-a-new-dns-record>`_
    - `Cloudflare: Manage DNS records
-     <https://support.cloudflare.com/hc/en-us/articles/360019093151>`_
+     <https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-records/>`_
 
 .. important::
    Odoo only supports subdomains. To use your naked domain name :dfn:`(a domain name without any
@@ -189,6 +189,58 @@ The specific instructions depend on your DNS hosting service.
    To do so, create a CNAME record for the `www` subdomain, with `mycompany.odoo.com` as the target.
    Next, create a redirect (301 permanent or visible redirect) to redirect visitors from
    `yourdomain.com` to `wwww.yourdomain.com`.
+
+Using Cloudflare to secure and redirect a naked domain
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To redirect a naked domain with a secure HTTPS connection, we recommend using Cloudflare, as most
+DNS hosting services do not offer an easy way to do so.
+
+#. `Sign up and log in to Cloudflare <https://dash.cloudflare.com/sign-up>`_.
+#. Enter your domain name on `Cloudflare's dashboard <https://dash.cloudflare.com/login>`_ and
+   select :guilabel:`Quick scan for DNS records`.
+#. Choose a plan (the free plan is sufficient).
+#. Follow Cloudflare's instructions and recommendations to complete the activation.
+#. Add a CNAME record to redirect your naked domain (`yourdomain.com`) to the `www` subdomain
+   (e.g., `www.yourdomain.com`) by clicking :guilabel:`DNS` in the navigation menu, then clicking
+   the :guilabel:`Add record` button, and using the following configuration:
+
+   - :guilabel:`Type`: CNAME
+   - :guilabel:`Name`: `@` (or `yourdomain.com`)
+   - :guilabel:`Target`: e.g., `www.yourdomain.com`
+   - :guilabel:`Proxy status`: Proxied
+
+   .. image:: domain_names/cloudflare-cname-www.png
+      :alt: Adding a CNAME DNS record to Cloudflare to redirect a naked domain to a www subdomain
+
+#. Add another second CNAME record to redirect the `www` subdomain (e.g., `www.yourdomain.com`) to
+   your database address (e.g., `mycompany.odoo.com`) using the following configuration:
+
+   - :guilabel:`Type`: CNAME
+   - :guilabel:`Name`: e.g., `www.yourdomain.com`
+   - :guilabel:`Target`: e.g., `mycompany.odoo.com`
+   - :guilabel:`Proxy status`: DNS only
+
+   .. image:: domain_names/cloudflare-cname-db.png
+      :alt: Adding a CNAME DNS record to Cloudflare to redirect a www subdomain to an Odoo database
+
+#. Define a page rule to permanently (301) redirect your naked domain + `/*` (e.g.,
+   `yourdomain.com/*`) to `https://www.` + your naked domain + `/$1` (e.g.,
+   `https://www.yourdomain.com/$1`) by going to :menuselection:`Rules --> Page Rules --> Create Page
+   Rule`, and using the following configuration:
+
+   - :guilabel:`URL`: e.g., `yourdomain.com/*`
+   - :guilabel:`Pick a Setting`: Forwarding URL
+   - :guilabel:`Select status code`: 301 - Permanent Redirect
+   - :guilabel:`Enter destination URL`: e.g., `https://www.yourdomain.com/$1`
+
+   .. image:: domain_names/cloudflare-page-rule.png
+      :alt: Defining a Cloudflare page rule to create a permanent redirect (301)
+
+#. Go to :guilabel:`SSL/TLS` and set the encryption mode to :guilabel:`Full`.
+
+   .. image:: domain_names/cloudflare-encryption.png
+      :alt: Setting the encryption mode to full on Cloudflare
 
 .. _domain-name/db-map:
 
