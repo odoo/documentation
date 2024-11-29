@@ -628,3 +628,49 @@ If the :abbr:`PA (Public Administration)` business doesn't reply within 15 days,
 the :abbr:`PA (Public Administration)` business directly, sending them both the invoice and the
 received deadline notification by email. You can make an arrangement with them and manually set the
 correct :guilabel:`SdI State` on your invoice.
+
+Point of Sale fiscal printers
+=============================
+
+Fiscal regulations mandate using certified RT devices, such as RT printers or RT servers, to ensure
+compliant sales receipts and secure communication with the Tax Authority. These devices 
+automatically transmit fiscal data daily. RT printers, designed for individual POS terminals, handle
+transactions, print receipts, and report to the authorities, ensuring data integrity and compliance.
+Fiscal printers are typically configured to use HTTP by default. To ensure compatibility with Odoo,
+the settings must be updated to enable HTTPS support on the printer.
+
+EPSON FP90-III
+--------------
+
+To set up the printer, either the EpsonFPWizard configuration software or a keyboard connected to
+the printer is required.
+
+.. image:: italy/epson-90-keyboard.png
+   :alt: Fiscal printer keyboard
+
+-- image:: italy/epson-90-screen.png
+   :alt: Fiscal printer screen
+
+To set up the fiscal printer using the keyboard, follow these steps:
+#. Make sure that the fiscal printer is set to its default state.
+#. Type `3333`.
+#. Press :guilabel:`Chiave`. the screen will display "Scleta Funzione".
+#. Type `34`. The screen will display "Web Server"
+#. Press :guilabel:`Contante` until the screen displays "Web Server: SSL".
+#. To turn the value `0` into a `1`, press :guilabel:`X`.
+#. To confirm, press :guilabel:`Contante` 3 times.
+#. Press :guilabel:`Chiave`.
+
+Then, log in to the printer with the device that runs the :doc:`point of sale
+</applications/sales/point_of_sale>` so it recognizes the printer's certificate.
+
+To approve and install the printer's certificate, follow these steps:
+#. To access the printer, open a web browser and enter `https://<ip-of-your-printer>` in the address
+bar. A "Warning: Potential Security Risk Ahead" security message will then appear.
+#. To show the certificate approval options, click **advanced**
+#. To validate the certificate, click **proceed**
+
+Then, to ensure the :doc:`point of sale </applications/sales/point_of_sale>` is configured with the
+fiscal printer, go to :menuselection:`Point of Sale --> Configuration --> Settings`. In the
+:guilabel:`Connected Devices` section, add the IP address in the :guilabel:`Italian Fiscal Printer 
+IP address` and enable :guilabel:`Use HTTPS`.
