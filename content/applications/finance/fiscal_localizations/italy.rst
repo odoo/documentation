@@ -628,3 +628,76 @@ If the :abbr:`PA (Public Administration)` business doesn't reply within 15 days,
 the :abbr:`PA (Public Administration)` business directly, sending them both the invoice and the
 received deadline notification by email. You can make an arrangement with them and manually set the
 correct :guilabel:`SdI State` on your invoice.
+
+Point of Sale fiscal printers
+=============================
+
+Fiscal regulations mandate using certified RT devices, such as RT printers or RT servers, to ensure
+compliant sales receipts and secure communication with the Tax Authority. These devices
+automatically transmit fiscal data daily. RT printers, designed for individual POS terminals, handle
+transactions, print receipts, and report to the authorities, ensuring data integrity and compliance.
+
+Simulation mode
+---------------
+
+.. warning::
+   Since the simulation mode sends data to the authorities, it should only be enabled at the very
+   start of the printer's configuration process. Once the printer is switched to the production
+   mode, it cannot be reverted to the simulation mode.
+
+To test the fiscal printer setup with Odoo, configure the fiscal printer in the simulation mode
+as follows:
+
+#. Make sure the fiscal printer is set to its default state: printer on, start-up cycle complete,
+   and no transaction in progress.
+#. Type `3333`.
+#. Press :guilabel:`Chiave`. The screen displays :guilabel:`Scleta Funzione`.
+#. Type `14`. The screen displays :guilabel:`Apprendimento`.
+#. Type `62`. The screen displays :guilabel:`Simulazione`.
+#. To turn the :guilabel:`no` into a :guilabel:`si`, press :guilabel:`X`.
+#. To confirm, press :guilabel:`Contante`.
+#. Press :guilabel:`Chiave`.
+
+To configure the printer for production, repeat the steps above.
+
+.. note::
+   To test the printer configuration, the physical device must first be obtained and registered with
+   the relevant authorities.
+
+Setting up the printer to work with Odoo
+----------------------------------------
+
+Fiscal printers are meant to work only in the local network. This means the printer and the
+device running :doc:`Odoo Point of Sale </applications/sales/point_of_sale>` must be connected to
+the same network.
+
+Fiscal printers are typically configured to use HTTP by default. To ensure compatibility with Odoo,
+the settings must be updated to enable HTTPS support on the printer. This can be done using either
+the EpsonFPWizard configuration software or the keyboard connected to the printer.
+
+To set up the fiscal printer using the keyboard, follow these steps:
+
+#. Make sure the fiscal printer is set to its default state: printer on, start-up cycle complete,
+   and no transaction in progress.
+#. Type `3333`.
+#. Press :guilabel:`Chiave`. The screen displays :guilabel:`Scleta Funzione`.
+#. Type `34`. The screen displays :guilabel:`Web Server`.
+#. Press :guilabel:`Contante` 3 times until the screen displays :guilabel:`Web Server: SSL`.
+#. To turn the value `0` into a `1`, press :guilabel:`X`.
+#. To confirm, press :guilabel:`Contante` 3 times.
+#. Press :guilabel:`Chiave`.
+
+Then, log in to the printer with the device that runs :doc:`Odoo Point of Sale
+</applications/sales/point_of_sale>` so it recognizes the printer's certificate.
+
+To approve and install the printer's certificate, follow these steps:
+
+#. Access the printer by opening a web browser and entering `https://<ip-of-your-printer>` in the
+   address bar. A :guilabel:`Warning: Potential Security Risk Ahead` security message appears.
+#. Click :guilabel:`Advanced` to show the certificate approval options.
+#. Click :guilabel:`Proceed` to validate the certificate.
+
+Then, to ensure :doc:`Odoo Point of Sale </applications/sales/point_of_sale>` is configured with the
+fiscal printer, go to :menuselection:`Point of Sale --> Configuration --> Settings`. In the
+:guilabel:`Connected Devices` section, add the IP address in the :guilabel:`Italian Fiscal Printer
+IP address` and enable :guilabel:`Use HTTPS`.
