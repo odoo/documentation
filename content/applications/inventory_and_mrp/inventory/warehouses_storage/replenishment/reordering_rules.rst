@@ -2,6 +2,8 @@
 Reordering rules
 ================
 
+.. |SOs| replace:: :abbr:`SOs (Sales Orders)`
+
 .. _inventory/management/reordering_rules:
 
 Reordering rules are used to keep forecasted stock levels above a certain threshold without
@@ -59,6 +61,8 @@ If a :abbr:`BoM (Bill of Materials)` does not already exist for the product, sel
 .. image:: reordering_rules/bom-smart-button.png
    :align: center
    :alt: The Bill of Materials smart button on a product form.
+
+.. _inventory/warehouses_storage/rr-fields:
 
 Create new reordering rules
 ===========================
@@ -182,68 +186,9 @@ The replenishment dashboard, accessible by navigating to :menuselection:`Invento
 Operations --> Replenishment`, considers sales order deadlines, forecasted stock levels, and vendor
 lead times. It displays needs **only** when it is time to reorder items.
 
-.. note::
-   If the one-day window for ordering products is too short, skip to the :ref:`visibility days
-   <inventory/product_management/visibility-days>` section to make the need appear on the
-   replenishment dashboard a specified number of days in advance.
-
 .. image:: reordering_rules/manual.png
    :align: center
    :alt: Click the Order Once button on the replenishment dashboard to replenish stock.
-
-.. _inventory/product_management/visibility-days:
-
-Visibility days
-===============
-
-.. important::
-   Ensure :doc:`lead times <lead_times>` are understood before proceeding with this section.
-
-When :ref:`manual reordering rules <inventory/product_management/manual-rr>` are assigned to a
-product, *visibility days* make the product appear on the replenishment dashboard
-(:menuselection:`Inventory app --> Operations --> Replenishment`) a certain number of days in
-advance.
-
-.. example::
-   A product has a manual reordering rule set to trigger when the stock level falls below four
-   units. The current on-hand quantity is ten units.
-
-   The current date is February twentieth, and the *delivery date* on a sales order (in the
-   :guilabel:`Other Info` tab) is March third — twelve days from the current date.
-
-   The :ref:`vendor lead time <inventory/management/purchase-lt>` is four days, and the
-   :ref:`purchase security lead time <inventory/management/purchase-security-lt>` is one day.
-
-   When the :guilabel:`Visibility Days` field of the reordering rule is set to zero, the product
-   appears on the replenishment dashboard five days before the delivery date, which, in this case,
-   is February twenty-seventh.
-
-   .. image:: reordering_rules/need-dates.png
-      :align: center
-      :alt: Graphic representing when the need appears on the replenishment dashboard: Feb 27.
-
-   To see the product on the replenishment dashboard for the current date, February twentieth, set
-   the :guilabel:`Visibility Days` to `7.00`.
-
-To determine the number of visibility days needed to see a product on the replenishment dashboard,
-subtract *today's date* from the *date the need appears* on the replenishment dashboard.
-
-.. math::
-
-   Visibility~days = Need~appears~date - Today's~date
-
-.. example::
-   Referring to the example above, today's date is February twentieth, and the need for the product
-   appears on February twenty-seventh.
-
-   (February 27 - February 20 = 7 days)
-
-   Incorrectly setting the :guilabel:`Visibility Days` fewer than seven days in this case results in
-   the need **not** appearing on the replenishment dashboard.
-
-   .. image:: reordering_rules/visibility-days.png
-      :align: center
-      :alt: Show the replenishment dashboard with the correct and incorrect visibility days set.
 
 .. _inventory/product_management/route:
 
