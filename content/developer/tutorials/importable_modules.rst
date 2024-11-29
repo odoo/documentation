@@ -524,7 +524,8 @@ Python code).
 
 Unlike in Python modules, computed fields are stored by default. If you wish for a computed field to
 not be stored (e.g., for performance reasons or to avoid database bloat), you can set the ``store``
-attribute to ``False``.
+attribute to ``False``. The same applies to ``readonly``: if you want your computed field to not be
+editable, you need to set the ``readonly`` attribute to ``True``.
 
 The `CDATA` section is used to specify to XML parsers that the content is a string and not XML;
 this prevents the parser from trying to interpret the Python code as XML, or the addition of
@@ -594,11 +595,11 @@ sandboxed environment.
 
 This environment contains several utilities to help you interact with the Odoo database:
 
-- ``self``: the record on which the action is executed
 - ``env``: the environment of the record
 - ``model``: the model of the record
 - ``user`` and ``uid``: the current user and their id
-- ``datetime``, ``dateutil``, ``timezone`` and ``time``: libraries to help with date/time calculations
+- ``datetime``, ``dateutil``, ``timezone`` and ``time``: libraries to help with date/time
+  calculations
 - ``float_compare``: a utility function to compare two float values with a given precision
 - ``b64encode`` and ``b64decode``: utility functions to encode and decode values in base64
 - ``Command``: a utility class to help build complex expressions and commands (see the `Command`
