@@ -4467,6 +4467,9 @@ msgid ""
 "packaging-specific route, go to :menuselection:`Inventory app --> "
 "Configuration --> Routes`."
 msgstr ""
+"포장품을 입고 처리할 때 기본적으로 창고에 :doc:`설정된 입고 경로 "
+"<../../shipping_receiving/daily_operations>` 를 따릅니다. **선택적으로** 포장별 경로를 설정하려면"
+" :menuselection:`재고 관리 앱 --> 환경설정 --> 경로` 로 이동합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:151
 msgid ""
@@ -4541,7 +4544,7 @@ msgstr "품목 유형"
 msgid ""
 "Define *product types* in Odoo to track products in varying levels of "
 "detail."
-msgstr "Odoo의 *품목 유형* 에 대한 설명을 통해, 다양한 수준의 세부 정보를 활용하여 품목을 추적합니다."
+msgstr "Odoo에서 *품목 유형* 을 지정하면 다양한 품목을 세부적으로 추적할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:9
 msgid ""
@@ -4551,9 +4554,9 @@ msgid ""
 "purchase orders. *Consumable* products are assumed to always be in stock, "
 "and *service* products are performed and served by the business."
 msgstr ""
-"품목을 *저장 가능* 으로 분류하면 재고 수를 추적할 수 있으며, 구매발주서를 생성하도록 :doc:`재주문 규칙 "
-"<../../warehouses_storage/replenishment/reordering_rules>` 이 발동될 수 있도록 합니다. "
-"*소모품* 품목은 항상 재고가 있다고 가정하고 *서비스* 품목은 사업체에서 수행하여 서비스를 제공합니다."
+"*저장 가능* 으로 분류된 품목은 재고 수를 추적할 수 있으며, :doc:`재주문 규칙 "
+"<../../warehouses_storage/replenishment/reordering_rules>` 으로 구매발주서를 생성할 수 "
+"있습니다. *소모품* 품목은 항상 보유 중인 재고가 있다고 가정하며, *서비스* 품목을 진행하고 서비스하는 것은 사업체에서 담당합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:15
 msgid ""
@@ -4583,7 +4586,7 @@ msgid ""
 "storable products can trigger reordering rules for generating purchase "
 "orders;"
 msgstr ""
-":guilabel:`저장 가능한 품목` 는 재고 수를 기준으로 추적할 품목용입니다. 저장 가능한 품목에만 재주문 규칙을 적용하여 "
+":guilabel:`저장 가능한 품목` 은 재고 수를 기준으로 추적하는 품목입니다. 저장 가능한 품목에만 재주문 규칙을 적용하여 "
 "구매발주서를 생성할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:29
@@ -4593,7 +4596,7 @@ msgid ""
 " and/or serial numbers."
 msgstr ""
 "품목 재고를 추적할 위치가 여러 군데이거나, 재고 가치 평가 위치에서 제품 재고를 추적하거나, 재고 평가를 실시하는 경우, 혹은 품목에 "
-"로트번호/일련 번호가 있는 경우에는 :guilabel:`저장 가능한 품목` 을 선택하세요."
+"로트번호/일련번호가 있는 경우에는 :guilabel:`저장 가능한 품목` 을 선택하세요."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:32
 msgid ""
@@ -4602,8 +4605,8 @@ msgid ""
 "paper, coffee, etc.). Consumables are replaceable and essential, but exact "
 "counts are unnecessary; or"
 msgstr ""
-":guilabel:`소모품` 항상 재고가 있다고 가정하고 수량을 추적하거나 예측할 필요가 없는 품목 (예: 못, 화장지, 커피 등)에 "
-"사용됩니다. 소모품은 교체가 가능하고 필수적이지만 정확하게 수량을 파악할 필요는 없는 경우, 혹은"
+":guilabel:`소모품` 항상 재고가 있다는 가정 하에서, 수량을 추적하거나 예측할 필요가 없는 품목(예: 못, 화장지, 커피 등)에"
+" 사용합니다. 소모품은 교체가 가능하고 필수적이지만 정확하게 수량을 파악할 필요는 없습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:35
 msgid ""
@@ -4611,10 +4614,12 @@ msgid ""
 "not tracked with stock counts (i.e. maintenance, installation, or repair "
 "services)."
 msgstr ""
+":guilabel:`서비스` 는 서비스를 수행하여 판매하는 품목으로, 재고 수를 기준으로 추적하지 않습니다(예: 유지관리, 설치 또는 "
+"수리 서비스)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:0
 msgid "Set a product type on the product form."
-msgstr ""
+msgstr "품목 양식에서 품목 유형을 설정하는 모습"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:43
 msgid ""
@@ -4622,6 +4627,8 @@ msgid ""
 " access to the fields below, :ref:`install <general/install>` the "
 "corresponding apps **in addition** to *Inventory*."
 msgstr ""
+"위에 설명된 품목 유형은 표준 *재고 관리* 앱에 있는 내용 중 일부에 해당합니다. 아래 필드에 액세스하려면 *재고 관리* 외에 해당하는"
+" 앱을 **추가로** :ref:`설치 <general/install>` 하세요."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:46
 msgid ""
@@ -4629,34 +4636,37 @@ msgid ""
 "*Appointments* app. Requires the installation of the *Calendar* app and *Pay"
 " to Book* (`appointment_account_payment`) module"
 msgstr ""
+":guilabel:`예약 수수료`: *일정 예약* 앱을 통해 예약할 때 수수료를 부과합니다. *캘린더* 앱과 *예약 결제* "
+"(`appointment_account_payment`) 모듈을 설치해야 합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:49
 msgid ""
 ":guilabel:`Combo`: create discounted products sold in a bundle. Requires the"
 " installation of the *PoS* app."
-msgstr ""
+msgstr ":guilabel:`콤보`: 번들로 판매되는 할인 품목을 생성합니다. *PoS* 앱을 설치해야 합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:51
 msgid ""
 ":guilabel:`Event Ticket`: sold to attendees wanting to go to an event. "
 "Requires the installation of the *Events* app"
-msgstr ""
+msgstr ":guilabel:`행사 티켓`: 행사에 참석하고자 하는 참가자에게 판매합니다. *행사* 앱을 설치해야 합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:53
 msgid ""
 ":guilabel:`Event Booth`: sold to partners or sponsors to set up a booth at "
 "an event. Requires the installation of the *Events* app"
 msgstr ""
+":guilabel:`행사 부스`: 행사에서 부스를 설치하고자 하는 파트너나 스폰서에게 판매합니다. *행사* 앱을 설치해야 합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:55
 msgid ""
 ":guilabel:`Course`: sell access to an educational course. Requires the "
 "installation of the *eLearning* app"
-msgstr ""
+msgstr ":guilabel:`강좌`: 교육 강좌에 대한 액세스 권한을 판매합니다. *온라인 학습* 앱을 설치해야 합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:59
 msgid "Compare types"
-msgstr ""
+msgstr "유형 비교"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:61
 msgid ""
@@ -4669,7 +4679,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:70
 msgid "Storable"
-msgstr ""
+msgstr "저장 가능품"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:71
 msgid "Consumable"
@@ -4681,7 +4691,7 @@ msgstr "서비스"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:73
 msgid "Physical product"
-msgstr ""
+msgstr "실제 품목"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:74
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:75
@@ -4712,42 +4722,42 @@ msgstr "사용하지 않음"
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:77
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:117
 msgid "On-hand quantity"
-msgstr ""
+msgstr "보유 수량"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:78
 msgid ":ref:`Yes* <inventory/product_management/on-hand-store>`"
-msgstr ""
+msgstr ":ref:`예* <inventory/product_management/on-hand-store>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:79
 msgid ":ref:`Yes* <inventory/product_management/on-hand-con>`"
-msgstr ""
+msgstr ":ref:`예* <inventory/product_management/on-hand-con>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:81
 msgid ""
 ":doc:`Inventory valuation "
 "<../inventory_valuation/using_inventory_valuation>`"
-msgstr ""
+msgstr ":doc:`재고 가치 평가 <../inventory_valuation/using_inventory_valuation>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:85
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:138
 msgid "Create transfer"
-msgstr ""
+msgstr "이송 생성"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:86
 msgid ":ref:`Yes* <inventory/product_management/transfer-store>`"
-msgstr ""
+msgstr ":ref:`예* <inventory/product_management/transfer-store>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:87
 msgid ":ref:`Yes* <inventory/product_management/transfer-con>`"
-msgstr ""
+msgstr ":ref:`예* <inventory/product_management/transfer-con>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:88
 msgid ":ref:`No* <inventory/product_management/transfer-serv>`"
-msgstr ""
+msgstr ":ref:`아니요* <inventory/product_management/transfer-serv>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:89
 msgid ":doc:`Lot/serial number tracking <../product_tracking>`"
-msgstr ""
+msgstr ":doc:`로트/일련번호 추적 <../product_tracking>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:93
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:162
@@ -4755,40 +4765,40 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:54
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:77
 msgid "Create purchase order"
-msgstr ""
+msgstr "구매발주서 생성"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:95
 msgid ":ref:`Yes* <inventory/product_management/po>`"
-msgstr ""
+msgstr ":ref:`예* <inventory/product_management/po>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:97
 msgid "Can be manufactured or subcontracted"
-msgstr ""
+msgstr "제조 또는 하도급 가능 여부"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:98
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:99
 msgid ":ref:`Yes* <inventory/product_management/manufacture>`"
-msgstr ""
+msgstr ":ref:`예* <inventory/product_management/manufacture>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:101
 msgid "Can be in a kit"
-msgstr ""
+msgstr "키트에 포함 가능 여부"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:105
 msgid "Placed in package"
-msgstr ""
+msgstr "패키지 배치"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:107
 msgid ":ref:`Yes* <inventory/product_management/package>`"
-msgstr ""
+msgstr ":ref:`예* <inventory/product_management/package>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:109
 msgid "Appears on Inventory report"
-msgstr ""
+msgstr "재고 보고서에 표시"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:110
 msgid ":ref:`Yes <inventory/product_management/report>`"
-msgstr ""
+msgstr ":ref:`예 <inventory/product_management/report>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:119
 msgid ""
@@ -4802,31 +4812,31 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:127
 msgid "Show \"On Hand\" and \"Forecast\" smart buttons."
-msgstr ""
+msgstr "\"보유\" 및 \"예측\" 스마트 버튼이 표시된 모습"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:127
 msgid ""
 "Current and forecasted quantities are displayed in the **On Hand** and "
 "**Forecasted** smart buttons on the product form."
-msgstr ""
+msgstr "현재 수량 및 예측 수량은 품목 양식에 있는 **보유** 및 **예측** 스마트 버튼에 표시됩니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:132
 msgid ""
 "On the other hand, consumable products are regarded as always available, and"
 " they **cannot** be managed using reordering rules or lot/serial numbers."
-msgstr ""
+msgstr "반면 소모품은 항상 사용 가능한 것으로 간주되며 재주문 규칙이나 로트/일련번호를 통해 관리할 수 **없습니다.**"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:140
 msgid ""
 "*Transfers* are any warehouse operation, such as receipts, internal or batch"
 " transfers, or deliveries."
-msgstr ""
+msgstr "*이송* 은 모든 창고 작업을 의미하며, 입고, 내부 혹은 일괄 이송, 또는 배송과 같은 작업이 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:143
 msgid ""
 "When creating a transfer for storable products in the *Inventory* app, "
 "transfers modify the on-hand quantity at each location."
-msgstr ""
+msgstr "*재고 관리* 앱에서 저장 가능한 품목에 대한 이송 작업을 생성할 때, 이송을 통해 각 위치에 있는 보유 수량을 수정합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:146
 msgid ""
@@ -4834,12 +4844,14 @@ msgid ""
 "to `WH/Packing Zone` decreases the recorded quantity at `WH/Stock` and "
 "increases it at `WH/Packing Zone`."
 msgstr ""
+"예를 들어, 내부 위치 `창고/재고` 에서 `창고/패킹구역` 으로 5개 단위를 이송하는 경우 `창고/재고` 에 기록된 수량은 감소하고 "
+"`창고/패킹구역` 수량은 증가합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:151
 msgid ""
 "For consumable products, transfers can be created, but exact quantities at "
 "each storage location are not tracked."
-msgstr ""
+msgstr "소모품의 경우에는 이송을 생성할 수는 있으나 각 저장 위치에서 정확한 수량은 추적되지 않습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:156
 msgid ""
@@ -4847,32 +4859,34 @@ msgid ""
 "`linked to projects and tasks for deadline tracking "
 "<https://www.youtube.com/watch?v=fix2LGkv13c>`_."
 msgstr ""
+"서비스 품목은 이송 항목이 될 수 없으나, 해당 품목을 `마감일 추적을 위해 프로젝트 및 작업에 연결 "
+"<https://www.youtube.com/watch?v=fix2LGkv13c>`_ 할 수 있습니다 ."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:164
 msgid ""
 "Both storable and consumable products can be included in a request for "
 "quotation in the *Purchase* app."
-msgstr ""
+msgstr "저장 가능 품목과 소모품 모두 *매입* 앱을 통해 견적요청서에 포함시킬 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:167
 msgid ""
 "However, when receiving consumable products, their on-hand quantity does not"
 " change upon validating the receipt (e.g. `WH/IN`)."
-msgstr ""
+msgstr "단, 소모품 입고 시 입고 승인을 할 때 보유 수량은 변경되지 않습니다(예: `창고/입고`)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:173
 msgid "Manufacture or subcontract"
-msgstr ""
+msgstr "제조 및 하도급"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:175
 msgid ""
 "Storable and consumable products can be manufactured, subcontracted, or "
 "included in a bill of materials (BoM)."
-msgstr ""
+msgstr "저장 가능 품목과 소모품은 제조를 하거나 하도급을 줄 수 있으며 혹은 자재명세서(BOM)에 포함시킬 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:182
 msgid "Show \"Bill of Materials\" and \"Used In\" smart buttons."
-msgstr ""
+msgstr "\"자재명세서\" 및 \"사용처\" 스마트 버튼이 표시되어 있는 모습"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:182
 msgid ""
@@ -4887,7 +4901,7 @@ msgstr ""
 msgid ""
 "Both storable and consumable products can be placed in :doc:`packages "
 "<package>`."
-msgstr ""
+msgstr "저장 가능 품목과 소모품 모두 :doc:`패키지 <package>` 에 배치할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:192
 msgid ""
@@ -4901,13 +4915,13 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:200
 msgid "Show Packages page, containing the package contents list."
-msgstr ""
+msgstr "패키지 페이지에 패키지 내용물 목록이 포함되어 있는 모습"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:200
 msgid ""
 "A consumable product was placed in the package, but the **Content** section "
 "does not list it."
-msgstr ""
+msgstr "소모품이 패키지에 배치되었지만 **내용물** 섹션에는 표시되지 않았습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:202
 msgid ""
@@ -4915,14 +4929,16 @@ msgid ""
 "the location of the contained storable products. However, the location of "
 "consumable products are not updated."
 msgstr ""
+"*전체 패키지 이동* 기능이 활성화되어 있는 경우에는, 패키지를 이동하면 여기에 들어있는 저장 가능 품목의 위치가 업데이트됩니다. 다만 "
+"소모품의 위치는 업데이트되지 않습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:208
 msgid "Inventory report"
-msgstr ""
+msgstr "재고 보고서"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:210
 msgid "**Only** storable products appear on the following reports."
-msgstr ""
+msgstr "**저장 가능 품목만** 다음 보고서에 표시됩니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:212
 msgid ""
@@ -4932,13 +4948,13 @@ msgid ""
 "<../../../../general/users/access_rights>`, and is found by navigating to "
 ":menuselection:`Inventory app --> Reporting --> Stock`."
 msgstr ""
-"*재고 보고서* 는 모든 보유 품목이나 미예약 품목, 입고 및 출고되는 저장 품목에 대한 포괄적인 목록입니다. 보고서는 :doc:`관리자"
-" 액세스 <../../../../general/users/access_rights>` 가 있는 사용자만 사용할 수 있으며 "
-":menuselection:`재고 관리 앱 --> 보고 --> 재고` 로 이동하여 확인할 수 있습니다."
+"*재고 보고서* 는 보유인 품목이거나 예약되지 않은 품목, 입출고되는 저장 품목을 종합적인 목록으로 나타낸 보고서입니다. 이 보고서는 "
+":doc:`관리자 액세스 <../../../../general/users/access_rights>` 를 가진 사용자만 사용할 수 있으며"
+" :menuselection:`재고 관리 앱 --> 보고 --> 재고` 로 이동하면 확인할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst-1
 msgid "Show stock reporting list found in Inventory > Reporting > Stock."
-msgstr ""
+msgstr "재고 관리 > 보고 > 재고 에서 찾은 재고 보고 목록이 표시되어 있는 모습"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:221
 msgid ""
@@ -4949,21 +4965,21 @@ msgid ""
 "users with :doc:`administrator access "
 "<../../../../general/users/access_rights>`."
 msgstr ""
-"*위치 보고서* 에서는 각 위치 (내부, 외부 또는 가상) 및 저장 가능한 품목의 보유 수량 및 예약 수량에 대한 상세 분석을 하고 "
-"있습니다. 보고서에 *저장 위치* 기능이 활성화된 경우 (:menuselection:`재고 관리 앱 --> 환경 설정 --> 설정`)에 "
-":doc:`관리자 액세스 <../../../../general/users/access_rights>` 가 있는 사용자만 이용할 수 "
-"있습니다."
+"*위치 보고서* 는 각 위치(내부, 외부 또는 가상) 및 저장 가능한 품목의 보유 수량 및 예약 수량을 세분화하여 보여주는 보고서입니다."
+" 이 보고서를 사용하려면 *저장 위치* 기능을 활성화해야 하며(:menuselection:`재고 관리 앱 --> 환경설정 --> "
+"설정`), :doc:`관리자 액세스 <../../../../general/users/access_rights>` 가 있는 사용자만 이용할"
+" 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:226
 msgid ""
 "Navigate to the location report by going to :menuselection:`Inventory app "
 "--> Reporting --> Locations`."
-msgstr ""
+msgstr "위치 보고서를 확인하려면 :menuselection:`재고 관리 앱 --> 보고 --> 위치` 로 이동합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst-1
 msgid ""
 "Show location reporting list found in Inventory > Reporting > Locations."
-msgstr ""
+msgstr "재고 관리 > 보고 > 위치에서 찾은 위치 보고 목록이 표시되어 있는 모습"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/uom.rst:3
 msgid "Units of measure"
@@ -5341,6 +5357,8 @@ msgid ""
 "accounting journals. Select a journal for which all accounting entries "
 "related to landed costs should be recorded."
 msgstr ""
+":guilabel:`기본 전표` 드롭다운 메뉴를 클릭하여 회계 전표 목록을 표시합니다. 양륙 비용과 관련된 모든 회계 항목을 기록할 "
+"전표를 선택합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst-1
 msgid ""
@@ -5950,7 +5968,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:142
 msgid "$120"
-msgstr ""
+msgstr "$120"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:143
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:184
@@ -5993,7 +6011,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:152
 msgid "$40"
-msgstr ""
+msgstr "$40"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:154
 msgid "Average Cost (AVCO)"
@@ -6040,7 +6058,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:190
 msgid "$9"
-msgstr ""
+msgstr "$9"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:192
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:264
@@ -6049,7 +6067,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:193
 msgid "$36"
-msgstr ""
+msgstr "$36"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:195
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:267
@@ -6133,7 +6151,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:256
 msgid "$16"
-msgstr ""
+msgstr "$16"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:0
 msgid "-8 * $10"
@@ -6145,15 +6163,15 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:260
 msgid "$32"
-msgstr ""
+msgstr "$32"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:262
 msgid "$11"
-msgstr ""
+msgstr "$11"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:265
 msgid "$44"
-msgstr ""
+msgstr "$44"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:271
 msgid ""
@@ -6895,11 +6913,11 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking.rst:20
 msgid ":doc:`product_tracking/lots`"
-msgstr ""
+msgstr ":doc:`product_tracking/lots`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking.rst:21
 msgid ":doc:`product_tracking/serial_numbers`"
-msgstr ""
+msgstr ":doc:`product_tracking/serial_numbers`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking.rst:24
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:24
@@ -7896,7 +7914,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:189
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:133
 msgid ":doc:`../../shipping_receiving/removal_strategies`"
-msgstr ""
+msgstr ":doc:`../../shipping_receiving/removal_strategies`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:229
 msgid "View expiration dates for lots & serial numbers"
@@ -8013,6 +8031,8 @@ msgid ""
 "products, aiding in tracing items back to their group, particularly for "
 "product recalls or :doc:`expiration dates <expiration_dates>`."
 msgstr ""
+"로트는 대량으로 제조되거나 입고된 품목을 관리하는 데 유용하며 품목을 해당 그룹으로 역추적할 경우에 유용합니다. 특히 품목이 리콜되거나 "
+":doc:`유통기한 <expiration_dates>` 관련된 경우가 이에 해당합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:26
 msgid ""
@@ -8090,6 +8110,9 @@ msgid ""
 "delivery>`, select products with specific lot numbers on the delivery order "
 "form."
 msgstr ""
+"영수증 양식에서 새 로트 번호를 :ref:`입고 품목 <inventory/product_management/assign-lots>` 에 "
+"지정합니다. :ref:`출고 품목 <inventory/product_management/assign-lots-delivery>` 을 "
+"배송하는 경우에는 배송주문서 양식에서 특정 로트 번호가 있는 품목을 선택합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:75
 msgid "On receipts"
@@ -8136,6 +8159,8 @@ msgid ""
 "select the |list| icon to the right of the product that is tracked by lot "
 "numbers."
 msgstr ""
+"영수증 양식에 있는 :guilabel:`작업` 탭의 품목 줄에서 품목 오른쪽에 있는 |list| 아이콘을 선택하며 이 품목은 로트번호로 "
+"추적되는 품목입니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst-1
 msgid "Show the bulleted list icon on the product line."
@@ -8647,7 +8672,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:380
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:293
 msgid ":doc:`../product_tracking`"
-msgstr ""
+msgstr ":doc:`../product_tracking`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:3
 msgid "Reassign lot/serial numbers"
@@ -9505,7 +9530,7 @@ msgstr "품목은 창고로 직접 입고되거나 배송됩니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:45
 msgid ":doc:`daily_operations/receipts_delivery_one_step`"
-msgstr ""
+msgstr ":doc:`daily_operations/receipts_delivery_one_step`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:48
 msgid "Two-step flow"
@@ -9560,7 +9585,7 @@ msgstr "입고된 제품은 재고로 전환될 때까지 제조, 배송 등에 
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:66
 msgid ":doc:`daily_operations/receipts_delivery_two_steps`"
-msgstr ""
+msgstr ":doc:`daily_operations/receipts_delivery_two_steps`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:69
 msgid "Three-step flow"
@@ -9609,11 +9634,11 @@ msgstr "상품을 입고하기 전에 품질 관리 검사를 수행해야 하�
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:87
 msgid ":doc:`daily_operations/receipts_three_steps`"
-msgstr ""
+msgstr ":doc:`daily_operations/receipts_three_steps`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:88
 msgid ":doc:`daily_operations/delivery_three_steps`"
-msgstr ""
+msgstr ":doc:`daily_operations/delivery_three_steps`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/cross_dock.rst:3
 msgid "Organize a cross-dock in a warehouse"
@@ -10610,7 +10635,7 @@ msgid ""
 "When products are received in one step, they will move from the vendor "
 "location to warehouse stock in the database immediately upon validation of a"
 " purchase order (PO)."
-msgstr ""
+msgstr "품목을 1단계 방식으로 입고하면, 구매발주서(PO)가 승인되는 즉시 공급업체 위치에서 데이터베이스의 창고 재고로 이동합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:56
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:79
@@ -10695,7 +10720,7 @@ msgid ""
 "When products are delivered in one step, they will move from warehouse stock"
 " to the customer location in the database immediately upon validation of a "
 "sales order (SO)."
-msgstr ""
+msgstr "품목을 1단계 방식으로 출고하면, 판매주문서(SO)가 승인되는 즉시 창고 재고에서 데이터베이스의 고객 위치로 이동합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:103
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:156
@@ -10824,7 +10849,7 @@ msgid ""
 "In the two-step delivery process, products are first picked from their "
 "respective location in the warehouse, then transferred to an output location"
 " before being shipped to the customer."
-msgstr ""
+msgstr "2단계 배송 프로세스에서 품목은 먼저 창고의 해당 위치에서 피킹된 후 고객에게 배송되기 전에 출고 위치로 이송됩니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:24
 msgid ""
@@ -10848,6 +10873,8 @@ msgid ""
 "process in one step, by default. To change these settings, the *Multi-Step "
 "Routes* feature must be enabled."
 msgstr ""
+"Odoo *재고 관리* 에서는 기본적으로 입출고 배송이 모두 1단계로 처리되도록 설정되어 있습니다. 설정을 변경하려면 *다단계 경로* "
+"기능을 활성화해야 합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst-1
 msgid "Enabled Multi-Step Routes feature in Inventory app settings."
@@ -11232,6 +11259,8 @@ msgid ""
 "can be accessed by navigating to the :menuselection:`Inventory app`, and "
 "locating the :guilabel:`Receipts` task card."
 msgstr ""
+"영수증은 원래의 구매발주서 양식에서 확정하거나 :menuselection:`재고 관리 앱` 으로 이동하여 :guilabel:`영수증` "
+"작업 카드를 찾아서 액세스할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_three_steps.rst:69
 msgid ""
@@ -11292,6 +11321,7 @@ msgid ""
 "validated, another internal transfer operation to move the product into "
 "warehouse stock is ready to process."
 msgstr ""
+"내부 이송을 통해 품목을 품질 관리로 이동하도록 승인되면, 품목을 창고 재고로 이동하는 또 다른 내부 이송 작업을 처리하도록 준비합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_three_steps.rst:104
 msgid ""
@@ -11572,6 +11602,8 @@ msgid ""
 "`VWH/Stock`) **must**  have its :guilabel:`Location Type` set to "
 ":guilabel:`Internal Location`."
 msgstr ""
+"가상 창고의 재고 위치를 선택하려면 :guilabel:`상위 위치` 드롭다운 메뉴에서 상위 창고 재고 위치 (예: `VWH/재고`)을 "
+"**반드시** 해당 :guilabel:`위치 유형` 이 :guilabel:`내부 위치`로 설정되어 있어야 합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst-1
 msgid "Set the child warehouse's *Parent Location* to the virtual warehouse."
@@ -11587,6 +11619,8 @@ msgid ""
 "orders using stock from child warehouses (e.g. `WHA` and `WHB`), if there is"
 " insufficient stock in any one location."
 msgstr ""
+"완료되면 가상의 상위 창고(예: `VWH/Stock`)는 어느 한 위치에 재고가 부족한 경우 하위 창고(예: `WHA` 및 `WHB`)에"
+" 있는 재고를 사용하여 주문을 처리합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/stock_warehouses.rst:145
 msgid "Set virtual stock location as 'view'"
@@ -15238,6 +15272,8 @@ msgid ""
 "sales order (SO) is confirmed, **and** if enough stock of the products "
 "included in the |SO| is already available."
 msgstr ""
+"예약 방법 중 *확정 시* 방식은 판매주문서(SO)가 **확정된 경우에만** 품목을 예약할 수 있으며, **동시에** |SO| 에 있는 "
+"품목의 재고가 충분한 경우에 한해서만 예약을 할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst:13
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:14
@@ -15345,6 +15381,8 @@ msgid ""
 "of the page, by adding the :guilabel:`On Hand` and :guilabel:`Incoming` "
 "quantity, and subtracting the :guilabel:`Outgoing` quantity, as shown below:"
 msgstr ""
+"또한 :guilabel:`예상` 수량은 페이지 상단에서 계산되며, 아래와 같이 :guilabel:`보유` 및 :guilabel:`입고` "
+"수량을 더하고 :guilabel:`출고` 수량을 뺍니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/at_confirmation.rst-1
 msgid "Forecasted quantity equation from the Forecasted Report page."
@@ -15438,6 +15476,8 @@ msgid ""
 "number of days before a scheduled date that products should be reserved if "
 "the transfers are starred (favorited)."
 msgstr ""
+":guilabel:`별표 표시 전 날짜 수` 값을 변경하면 예약일 전 최대 날짜 수가 변경되며, 이 예약일은 이송에 별표(즐겨찾기) "
+"표시를 한 경우 품목을 예약해야 하는 날짜입니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:45
 msgid ""
@@ -15470,7 +15510,7 @@ msgid ""
 "Before the *Before scheduled date* reservation method can be used, ensure "
 "that a *customer lead time* is added to products that plan to be sold with "
 "this method."
-msgstr ""
+msgstr "*예약일 이전* 을 예약 방법으로 사용하기 전에, 이 방법으로 판매할 품목에 *고객 리드 타임* 을 추가해야 합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods/before_scheduled_date.rst:63
 msgid ""
@@ -15974,6 +16014,8 @@ msgid ""
 "company, select it from the drop-down menu. Leave the field blank to apply "
 "the method to all companies."
 msgstr ""
+":guilabel:`회사`: 배송 방법을 특정한 회사에 적용하려면 드롭다운 메뉴에서 회사를 선택합니다. 모든 회사에 배송 방법을 "
+"적용하려면 이 필드를 비워둡니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:66
 msgid ""
@@ -16445,6 +16487,7 @@ msgid ""
 "shipping services. Doing so submits a request to enter a contractual "
 "business relationship between the company and Bpost."
 msgstr ""
+"웹사이트의 단계에 따라 회원 등록을 하고 배송 서비스에 가입합니다. 그러면 회사와 Bpost 간의 법인 계약 체결을 신청하게 됩니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:33
 msgid ""
@@ -16465,6 +16508,8 @@ msgid ""
 "then the :guilabel:`General Settings` tab, to find the :guilabel:`Account "
 "ID` and :guilabel:`Passphrase` needed to configure Odoo's shipping method."
 msgstr ""
+":guilabel:`배송 관리자` 페이지에서 :guilabel:`관리자` 탭으로 이동한 다음 :guilabel:`일반 설정` 탭에서 "
+"Odoo의 배송 방법을 설정할 때 필요한 :guilabel:`계정 ID` 및 :guilabel:`암호` 를 확인합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst-1
 msgid "In the *Admin* tab, show the Account ID and Passphrase."
@@ -16602,6 +16647,8 @@ msgid ""
 "possible delivery dates. Depending on the :guilabel:`Bpost Package Type` "
 "selected, this option might incur additional costs to the company."
 msgstr ""
+":guilabel:`토요일 배송` 기능을 활성화하면 토요일이 배송 가능일에 포함됩니다. 선택한 :guilabel:`Bpost 패키지 "
+"유형` 에 따라서, 이 옵션을 사용할 경우 회사에 추가 비용이 발생할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:104
 msgid ""
@@ -16743,6 +16790,8 @@ msgid ""
 " Shipping Methods` link appears below. Click the link to open a page showing"
 " all shipping methods configured for DHL."
 msgstr ""
+"커넥터가 활성화되면 아래에 :icon:`oi-arrow-right` :guilabel:`DHL 배송 방법` 링크가 나타납니다. 링크를 "
+"클릭하면 다른 페이지로 DHL에 설정되어 있는 모든 배송 방법이 표시됩니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:29
 msgid "Configure DHL shipping method"
@@ -16877,6 +16926,8 @@ msgid ""
 "accept the terms of use and the privacy policy` checkbox, and click "
 ":guilabel:`Send` to register."
 msgstr ""
+"모든 필드에 입력을 완료한 후, :guilabel:`이용 약관 및 개인정보 처리방침을 읽었으며 동의합니다` 확인란을 선택한 후 "
+":guilabel:`보내기` 를 클릭하면 등록됩니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:90
 msgid ""
@@ -16907,6 +16958,8 @@ msgid ""
 "the :guilabel:`Credentials` section, click the :guilabel:`Show key` button "
 "below the :guilabel:`API Key` and :guilabel:`API Secret` fields."
 msgstr ""
+"현황판에서 :guilabel:`앱` 탭을 클릭하고 앱을 선택합니다. :guilabel:`자격 증명` 섹션에서 :guilabel:`키 "
+"표시` 버튼을 클릭합니다. 이 버튼은 :guilabel:`API 키` 및 :guilabel:`API 비밀번호` 필드 아래에 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:103
 msgid ""
@@ -16914,6 +16967,8 @@ msgid ""
 "Key* in the :guilabel:`DHL SiteID` field, and the *API Secret* in the "
 ":guilabel:`DHL Password` field."
 msgstr ""
+"Odoo 데이터베이스의 배송 방법 양식으로 돌아갑니다. :guilabel:`DHL 사이트 ID` 필드에 *DHL API 키* 를 입력하고"
+" :guilabel:`DHL 비밀번호` 필드에는 *API 비밀번호* 를 입력합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:107
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:123
@@ -16970,6 +17025,8 @@ msgid ""
 "services are actually available for the DHL account. Available services "
 "depend on the contract negotiated with DHL."
 msgstr ""
+"배송 방법에 대한 서비스 옵션을 선택하기 전에 해당 서비스를 실제로 DHL 계정에서 사용할 수 있는지 확인하세요. 사용 가능한 서비스는 "
+"DHL과 계약된 내용에 따라 달라집니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:125
 msgid "Options"
@@ -17116,6 +17173,8 @@ msgid ""
 "providers. For details on how to fill them out, see the documentation on "
 ":doc:`third-party shippers <third_party_shipper>`."
 msgstr ""
+"이 섹션의 나머지 필드는 모든 배송 서비스 공급업체에 공통으로 적용됩니다. 작성 방법에 대한 자세한 내용은 :doc:`외부 배송업체 "
+"<third_party_shipper>` 문서를 참조하세요."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:70
 msgid "Fedex Configuration tab"
@@ -17169,6 +17228,8 @@ msgid ""
 "key and meter number which can be used to configure a shipping method for "
 "testing purposes."
 msgstr ""
+":guilabel:`테스트 키 가져오기` 를 클릭하면 개발자 키와 미터 번호를 가져오는 프로세스를 시작되며, 이 키를 통해 테스트 "
+"목적으로 배송 방법에 대한 환경설정을 할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:95
 msgid ""
@@ -17192,6 +17253,8 @@ msgid ""
 ":guilabel:`Developer Key` and :guilabel:`Meter Number` fields on the "
 ":guilabel:`Fedex Configuration` tab of the shipping method form."
 msgstr ""
+"개발자 키와 미터 번호가 결정되면 이 내용을 배송 방법 양식의 :guilabel:`Fedex 환경설정` 탭에서 :guilabel:`개발자"
+" 키` 및 :guilabel:`미터 ​​번호` 필드에 입력합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:106
 msgid "Password and Account Number fields"
@@ -19138,6 +19201,8 @@ msgid ""
 " Here, add their shipping address in the :guilabel:`Contact` field, along "
 "with their :guilabel:`Mobile` number and :guilabel:`Email` address."
 msgstr ""
+"승인하려면 :guilabel:`고객` 필드를 선택하여 연락처 페이지를 엽니다. 이 페이지의 :guilabel:`연락처` 필드에 배송 "
+"주소와 :guilabel:`모바일` 번호, :guilabel:`이메일` 주소를 추가합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:193
 msgid ""
@@ -19765,6 +19830,8 @@ msgid ""
 "address or phone number. Please ensure that all necessary information are "
 "set upon sending a shipping order."
 msgstr ""
+"마지막으로, 일부 배송업체의 경우 이메일 주소나 전화번호와 같은 기타 정보를 요청할 수 있습니다. 배송주문서를 전송할 때 필수 정보가 "
+"모든 설정되어 있는지 확인하세요."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:224
 msgid "Returns"
@@ -19808,6 +19875,8 @@ msgid ""
 "intended delivery order. If the selected courier supports returns, the "
 ":guilabel:`Print Return Label` button will be available."
 msgstr ""
+"반품을 하려는 배송주문서에서 :guilabel:`반품` 스마트 버튼을 클릭하면 됩니다. 선택한 배송업체에서 반품을 지원하는 경우 "
+":guilabel:`반품 ​​라벨 인쇄` 버튼을 사용할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:240
 msgid "Cancellations"
@@ -19834,6 +19903,9 @@ msgid ""
 "calculate shipping costs <../setup_configuration>`, and :doc:`generate "
 "shipping labels <labels>`."
 msgstr ""
+"사용자는 외부 배송업체를 Odoo 데이터베이스에 연결할 수 있으며, 이를 통해 배송업체에서 지정된 주소로 배송하는지 여부를 확인할 수 "
+"있으며 :doc:`배송비를 자동으로 계산 <../setup_configuration>` 하거나 :doc:`배송 라벨을 생성 "
+"<labels>` 할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:14
 msgid ""
@@ -20189,6 +20261,8 @@ msgid ""
 ":menuselection:`Inventory app --> Configuration --> Warehouses`, and select "
 "the desired warehouse."
 msgstr ""
+"창고의 :guilabel:`주소`(우편번호 포함) 및 :guilabel:`전화` 번호가 정확하게 입력되어 있는지 확인합니다. 확인하려면 "
+":menuselection:`재고 관리 앱 --> 환경설정 --> 창고` 로 이동하여 원하는 창고를 선택합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:187
 msgid ""
@@ -20364,6 +20438,8 @@ msgid ""
 "type>` and parameters are valid for the shipping carrier. To check, ensure "
 "the shipment can be directly created on the shipping carrier's website."
 msgstr ""
+" :ref:`패키지 유형 <inventory/warehouses_storage/package-type>` 과 매개변수가 배송업체에 대한 "
+"유효한 내용인지 확인합니다. 확인하려면 배송업체 웹사이트에서 직접 배송을 생성할 수 있는지 확인해 보세요."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:295
 msgid ""
@@ -20378,6 +20454,8 @@ msgid ""
 " the prices are the same across Odoo, the shipping provider, and in the "
 "*debug logs*."
 msgstr ""
+"그런 다음 배송업체 웹사이트 및 Odoo 양쪽에서 배송을 생성한 후 요금이 Odoo와 배송업체에서 동일한지 *디버그 로그* 에서 "
+"확인합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:303
 msgid ""
@@ -21171,6 +21249,8 @@ msgid ""
 "necessary to master *Inventory*. For specific instructions and examples of "
 "how things work, refer to individual documentation pages."
 msgstr ""
+"이 문서에서 소개하고 있는 용어와 개념을 통해 *재고 관리* 에 대해 마스터할 수 있습니다. 작동 방식에 대한 구체적인 지침과 예시는 "
+"개별 문서 페이지를 참조하세요."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:18
 msgid ""
@@ -22037,6 +22117,8 @@ msgid ""
 "scheduled count date is automatically set, based on the value entered into "
 "the :guilabel:`Inventory Frequency (Days)` field."
 msgstr ""
+"이제 이 위치에 재고 조정이 적용되면 다음 예정 날짜가 계산되어 :guilabel:`재고 주기(일)` 필드에 입력된 값에 따라 자동으로 "
+"설정됩니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:57
 msgid "Count inventory by location"
@@ -22165,7 +22247,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/cycle_counts.rst:124
 msgid ":doc:`use_locations`"
-msgstr ""
+msgstr ":doc:`use_locations`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:3
 msgid "Scrap inventory"
@@ -22220,6 +22302,8 @@ msgid ""
 ":menuselection:`Inventory app --> Operations --> Scrap`, and click "
 ":guilabel:`New`. This opens a new |SP| form."
 msgstr ""
+"재고가 있는 품목을 대상으로 새로운 폐기주문서(SP)를 만들려면 :menuselection:`재고 관리 앱 --> 작업 --> 폐기` 로"
+" 이동한 다음 :guilabel:`새로 만들기` 를 클릭합니다. 그러면 새 |SP| 양식이 열립니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/scrap_inventory.rst:32
 msgid ""
@@ -22577,6 +22661,9 @@ msgid ""
 "<../../shipping_receiving/removal_strategies>` for how items should be "
 "removed from this location."
 msgstr ""
+":guilabel:`물류` 섹션의 :guilabel:`제거 전략` 필드에서 드롭다운 메뉴를 클릭하고, :doc:`제거 전략 "
+"<../../shipping_receiving/removal_strategies>` 을 선택하면 이 위치에서 항목을 제거하는 방법에 대해"
+" 설명되어 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:104
 msgid "Cyclic Counting section"
@@ -22588,6 +22675,8 @@ msgid ""
 ":guilabel:`Inventory Frequency (Days)` field to the desired interval. By "
 "default, it is set to `0` (no scheduled counts)."
 msgstr ""
+"이 위치에서 정기 재고 수량을 예약하려면 :guilabel:`재고 주기(일)` 필드에 원하는 간격으로 설정합니다. 기본값은 `0`(예약된"
+" 수량 없음)으로 설정되어 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:109
 msgid ""
@@ -22715,6 +22804,8 @@ msgid ""
 "over the field, and click the :icon:`fa-arrow-right` :guilabel:`(right "
 "arrow)`."
 msgstr ""
+":guilabel:`주소` (*필수 필드*): 창고의 주소입니다. 창고를 두 개 이상의 만들 때 창고 주소를 변경하려면 필드 위에 "
+"마우스를 가져간 다음 :icon:`fa-arrow-right` :guilabel:`(오른쪽 화살표)` 를 클릭합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:32
 msgid ""
@@ -22722,6 +22813,8 @@ msgid ""
 " this can be set as the company that owns the Odoo database, or the company "
 "of a customer or vendor."
 msgstr ""
+":guilabel:`회사`(*필수 필드*): 창고를 소유한 회사입니다. Odoo 데이터베이스를 소유하고 있는 회사, 혹은 고객이나 "
+"공급업체의 회사로 설정할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:34
 msgid ""
@@ -22766,6 +22859,8 @@ msgid ""
 "Settings`. Tick this checkbox to purchase components from vendors, and "
 "dropship them to subcontractors."
 msgstr ""
+":guilabel:`협력업체 직배송`: :menuselection:`제조 관리 앱 --> 환경설정 --> 설정` 에서 *하도급* 기능을 "
+"활성화한 상태에서 사용할 수 있습니다. 확인란에 표시하면 공급업체에서 구성품를 구매하여 협력업체에 직배송합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:55
 msgid ""
@@ -23263,7 +23358,7 @@ msgstr "품목 양식에서 주문 시 보충을 선택합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:3
 msgid "Lead times"
-msgstr ""
+msgstr "리드 타임"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:10
 msgid ""
@@ -23796,6 +23891,8 @@ msgid ""
 " (in days) in the :guilabel:`Manuf. Lead Time` field to specify the calendar"
 " days needed to manufacture the product."
 msgstr ""
+"|BoM| 양식에서 :guilabel:`기타` 탭을 클릭합니다. :guilabel:`제조 리드 타임` 필드에 있는 값(일)을 변경하여 "
+"제품을 제조하는 데 필요한 캘린더 기준 날짜 수를 지정합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst-1
 msgid "Manuf. Lead Time value specified on a product's Bill of Material form."
@@ -23925,6 +24022,8 @@ msgid ""
 " :guilabel:`Planning` heading, tick the checkbox for :guilabel:`Security "
 "Lead Time`."
 msgstr ""
+"*제조 보안 리드 타임* 은 전체 비즈니스에 대해 :menuselection:`제조 관리 앱 --> 환경설정 --> 설정` 에서 "
+"설정됩니다. :guilabel:`계획` 제목 아래에 있는 :guilabel:`보안 리드 타임` 확인란에 표시합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:355
 msgid ""
@@ -24311,15 +24410,15 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:139
 msgid ":doc:`resupply_warehouses`"
-msgstr ""
+msgstr ":doc:`resupply_warehouses`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:140
 msgid ":doc:`../../../manufacturing/subcontracting/subcontracting_basic`"
-msgstr ""
+msgstr ":doc:`../../../manufacturing/subcontracting/subcontracting_basic`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:141
 msgid ":doc:`../../../manufacturing/advanced_configuration/sub_assemblies`"
-msgstr ""
+msgstr ":doc:`../../../manufacturing/advanced_configuration/sub_assemblies`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:3
 msgid "Reordering rules"
@@ -24702,7 +24801,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:174
 msgid ":doc:`../replenishment`"
-msgstr ""
+msgstr ":doc:`../replenishment`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:177
 msgid ""
@@ -25035,7 +25134,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:3
 msgid "Inter-warehouse replenishment"
-msgstr ""
+msgstr "창고 간 보충"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:7
 msgid ""
@@ -25054,11 +25153,11 @@ msgstr ""
 msgid ""
 "This guide explains how to conduct inter-warehouse transfers using two "
 "replenishment strategies:"
-msgstr ""
+msgstr "이 가이드에서는 창고 간 이전을 할 때 활용할 수 있는 두 가지 보충 방법에 대해 설명합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:15
 msgid ":ref:`Make to order (MTO) <inventory/warehouses_storage/MTO>`"
-msgstr ""
+msgstr ":ref:`주문 생산 (MTO) <inventory/warehouses_storage/MTO>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:16
 msgid ":ref:`Reordering rule <inventory/warehouses_storage/reordering-rule>`"
@@ -25066,7 +25165,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:19
 msgid ":doc:`Difference between MTO and reordering rules <../replenishment>`"
-msgstr ""
+msgstr "MTO와 재주문 규칙의 차이점"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:24
 msgid ""
@@ -25127,7 +25226,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:57
 msgid ":doc:`../inventory_management/warehouses`"
-msgstr ""
+msgstr ":doc:`../inventory_management/warehouses`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst-1
 msgid "Supply one warehouse with another in the Warehouse Configuration tab."
@@ -25171,7 +25270,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:81
 msgid "MTO"
-msgstr ""
+msgstr "MTO"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:83
 msgid ""
@@ -25213,7 +25312,7 @@ msgstr "두 번째 창고에서 제품을 재공급할 수 있도록 경로 설�
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:104
 msgid "Reordering rule"
-msgstr ""
+msgstr "재주문 규칙"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:106
 msgid ""
@@ -25250,7 +25349,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:120
 msgid ":doc:`reordering_rules`"
-msgstr ""
+msgstr ":doc:`재주문 규칙`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:123
 msgid ""
@@ -25633,6 +25732,8 @@ msgid ""
 " product, displaying information about the quantity and description of why "
 "the product was moved from one location to another."
 msgstr ""
+":icon:`fa-history` :guilabel:`이력`: 품목의 재고 이동 내역에 액세스하여, 수량에 대한 정보와 품목이 한 "
+"위치에서 다른 위치로 이동된 사유에 대한 설명을 표시합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:47
 msgid ""
@@ -25670,6 +25771,9 @@ msgid ""
 "<../inventory_management/count_products>` to record quantities of a certain "
 "product at a specific :guilabel:`Location`."
 msgstr ""
+"페이지의 왼쪽 상단에 있는 :guilabel:`새로 만들기` 버튼을 클릭하면 :doc:`재고 조정 "
+"<../inventory_management/count_products>` 을 하여 특정 품목의 수량을 지정된 :guilabel:`위치`"
+" 에 기록할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:65
 msgid ""
@@ -26097,6 +26201,8 @@ msgid ""
 "products, including those reserved, purchased and in transit, as well as "
 "those delivered to customers."
 msgstr ""
+"Odoo *재고 관리* 의 재고 보고서를 사용하여 모든 저장 품목에 대한 자세한 목록을 확인할 수 있으며, 여기에는 예약, 구매 및 배송"
+" 중인 품목과 고객에게 배송된 품목 등이 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:12
 msgid ""
@@ -26306,7 +26412,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:111
 msgid ":doc:`../../product_management/configure/type`"
-msgstr ""
+msgstr ":doc:`../../product_management/configure/type`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:115
 msgid ""
@@ -26549,6 +26655,8 @@ msgid ""
 "equipment operates between failures. This number is calculated automatically"
 " based on previous failures, and cannot be configured manually."
 msgstr ""
+":guilabel:`평균 고장 간격`: 장비가 고장나기 전까지 작동하는 평균 날짜 수입니다. 이 수치는 이전에 발생한 장애를 기준으로 "
+"자동으로 계산되며, 수동 설정은 할 수 없습니다."
 
 #: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:75
 msgid ""
@@ -26613,6 +26721,8 @@ msgid ""
 "create, schedule, and edit both corrective and preventive maintenance "
 "requests, to stay on top of equipment and work centers."
 msgstr ""
+"Odoo *유지보수* 를 통해 *유지보수 일정* 에 액세스하여 시정 및 예방적 유지보수 요청에 대한 생성, 예약 및 편집을 할 수 있으며"
+" 항상 장비 및 작업 센터의 상태를 파악할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/maintenance/maintenance_calendar.rst:16
 #: ../../content/applications/inventory_and_mrp/maintenance/maintenance_requests.rst:16
@@ -26632,6 +26742,8 @@ msgid ""
 ":guilabel:`New Event` pop-up window. In the :guilabel:`Name:` field, assign "
 "a title to the new request."
 msgstr ""
+"새로운 요청을 만들려면 캘린더에서 아무 곳이나 클릭합니다. 그러면 :guilabel:`새 행사` 팝업창이 열립니다. "
+":guilabel:`이름:` 필드에 새 요청에 대한 제목을 지정합니다."
 
 #: ../../content/applications/inventory_and_mrp/maintenance/maintenance_calendar.rst-1
 msgid "New event creation pop-up window."
@@ -26758,6 +26870,8 @@ msgid ""
 ":guilabel:`Responsible` field, select the technician responsible for the "
 "request."
 msgstr ""
+":guilabel:`팀` 필드에 있는 드롭다운 메뉴에서 유지보수를 진행할 유지보수 팀을 선택합니다. :guilabel:`책임자` 필드에서"
+" 요청을 담당할 기술자를 선택합니다."
 
 #: ../../content/applications/inventory_and_mrp/maintenance/maintenance_calendar.rst-1
 msgid "Filled-out details of maintenance request form."
@@ -26870,6 +26984,8 @@ msgid ""
 ":guilabel:`Add Custom Filter`, under the :guilabel:`Filters` section of the "
 "drop-down menu. This opens an :guilabel:`Add Custom Filter` pop-up window."
 msgstr ""
+":guilabel:`유지보수 캘린더` 에 사용자 지정 필터를 추가하려면 드롭다운 메뉴에 있는 :guilabel:`필터` 섹션의 "
+":guilabel:`사용자 지정 필터 추가` 를 클릭합니다. 그러면 :guilabel:`사용자 지정 필터 추가` 팝업창이 열립니다."
 
 #: ../../content/applications/inventory_and_mrp/maintenance/maintenance_calendar.rst:142
 msgid ""
@@ -26895,6 +27011,9 @@ msgid ""
 "field directly below :guilabel:`Save current search`, assign a name to the "
 "search."
 msgstr ""
+"새로운 :guilabel:`즐겨찾기` 검색 내용을 저장하려면 원하는 :guilabel:`필터` 를 선택합니다. 그런 다음 "
+":guilabel:`현재 검색 저장` 을 클릭합니다. :guilabel:`현재 검색 저장` 바로 아래에 있는 필드에 있는 검색에 이름을 "
+"지정합니다."
 
 #: ../../content/applications/inventory_and_mrp/maintenance/maintenance_calendar.rst:156
 msgid ""
@@ -27183,6 +27302,8 @@ msgid ""
 "Spreadsheet` button. Clicking this button opens a pop-up window titled "
 ":guilabel:`Select a spreadsheet to insert your pivot.`."
 msgstr ""
+":guilabel:`측정값` 버튼 오른쪽에는 :guilabel:`스프레드시트에 삽입` 버튼이 있습니다. 이 버튼을 클릭하면 "
+":guilabel:`피벗을 삽입할 스프레드시트 선택`라는 제목의 팝업창이 열립니다."
 
 #: ../../content/applications/inventory_and_mrp/maintenance/maintenance_calendar.rst:289
 msgid ""
@@ -27338,6 +27459,8 @@ msgid ""
 "greyed-out :guilabel:`Log a note...` field. When clicked, this changes to "
 ":guilabel:`Type \"/\" for commands`."
 msgstr ""
+"새 활동에 대한 추가 메모를 :guilabel:`메모 로그...` 필드 아래에 회색으로 표시된 빈 공간에 입력합니다. 클릭하면 "
+":guilabel:`명령어는 \"/\"를 입력합니다` 로 변경됩니다."
 
 #: ../../content/applications/inventory_and_mrp/maintenance/maintenance_calendar.rst:361
 msgid ""
@@ -27379,12 +27502,12 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/maintenance/maintenance_calendar.rst:379
 msgid ":doc:`maintenance_requests`"
-msgstr ""
+msgstr ":doc:`maintenance_requests`"
 
 #: ../../content/applications/inventory_and_mrp/maintenance/maintenance_calendar.rst:380
 #: ../../content/applications/inventory_and_mrp/maintenance/maintenance_setup.rst:243
 msgid ":doc:`add_new_equipment`"
-msgstr ""
+msgstr ":doc:`add_new_equipment`"
 
 #: ../../content/applications/inventory_and_mrp/maintenance/maintenance_requests.rst:3
 msgid "Maintenance requests"
@@ -27498,6 +27621,8 @@ msgid ""
 "responsible for managing the request. If a specific team member is "
 "responsible, select them in the :guilabel:`Responsible` field."
 msgstr ""
+":guilabel:`팀` 필드에서 요청 관리 담당인 유지보수 팀을 선택합니다. 담당자로 지정된 팀원이 있는 경우에는 "
+":guilabel:`담당자` 항목에서 선택합니다."
 
 #: ../../content/applications/inventory_and_mrp/maintenance/maintenance_requests.rst:56
 msgid ""
@@ -27517,6 +27642,8 @@ msgid ""
 "complete the maintenance request. Use the text-entry field to enter the time"
 " in a `00:00` format."
 msgstr ""
+":guilabel:`소요 기간` 필드는 유지보수 요청을 완료하는 데 걸리는 기간을 지정할 때 사용합니다. 텍스트 입력 필드를 통해 시간을"
+" `00:00` 형식으로 입력합니다."
 
 #: ../../content/applications/inventory_and_mrp/maintenance/maintenance_requests.rst:64
 msgid ""
@@ -27556,6 +27683,8 @@ msgid ""
 "maintenance should be performed. Select one of the three options, and then "
 "include the instructions as detailed below:"
 msgstr ""
+":guilabel:`지침` 탭은 유지보수 수행 방법에 대한 지침을 기재할 때 사용합니다. 세 가지 옵션 중 하나를 선택한 다음 아래에 "
+"자세히 설명된 대로 지침을 기재합니다."
 
 #: ../../content/applications/inventory_and_mrp/maintenance/maintenance_requests.rst:80
 msgid ""
@@ -27616,6 +27745,8 @@ msgid ""
 "indicating the specified piece of equipment, or work center, could not be "
 "repaired, and must instead be scrapped."
 msgstr ""
+"유지보수 요청이 실패한 경우에는 :guilabel:`폐기` 단계로 이동하게 되며, 지정된 장비나 작업장을 수리할 수 없으므로 그 대신 "
+"반드시 폐기해야 한다는 의미입니다."
 
 #: ../../content/applications/inventory_and_mrp/maintenance/maintenance_setup.rst:3
 msgid "Maintenance setup"
@@ -27653,6 +27784,8 @@ msgid ""
 "any) is displayed, with the :guilabel:`Team Name`, :guilabel:`Team Members`,"
 " and :guilabel:`Company` listed in the columns, by default."
 msgstr ""
+"그러면 :guilabel:`팀` 페이지가 나타나서 모든 기존 팀목록이 표시되고(있는 경우) , 기본적으로 열에는 :guilabel:`팀 "
+"이름`, :guilabel:`팀 구성원`, :guilabel:`회사` 가 표시되어 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/maintenance/maintenance_setup.rst-1
 msgid "List of Teams on Maintenance Teams page."
@@ -27941,6 +28074,8 @@ msgid ""
 " purchased. In the :guilabel:`Vendor Reference` field, add the product "
 "reference number obtained from the vendor, if applicable."
 msgstr ""
+":guilabel:`공급업체` 필드에 공급업체를 추가하며 장비를 구매한 공급업체를 추가합니다. :guilabel:`공급업체 참조` 항목에"
+" 공급업체에서 받은 품목의 참조 번호를 추가합니다(해당되는 경우)."
 
 #: ../../content/applications/inventory_and_mrp/maintenance/maintenance_setup.rst:177
 msgid ""
@@ -28787,7 +28922,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:19
 msgid ":doc:`../basic_setup/bill_configuration`"
-msgstr ""
+msgstr ":doc:`../basic_setup/bill_configuration`"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst-1
 msgid "A bill of materials for a semi-finished product."
@@ -29526,6 +29661,9 @@ msgid ""
 ":guilabel:`Components` tab. Tick the checkboxes for the following features "
 "to enable these columns:"
 msgstr ""
+"선택 사항으로, :icon:`oi-settings-adjust` :guilabel:`(설정 조정)` 아이콘이 :guilabel:`환경 "
+"설정 요소` 탭의 맨 오른쪽에 있으며 클릭하면 추가 필드에 액세스할 수 있습니다. 다음 기능에 있는 확인란을 선택하면 이와 같은 열이 "
+"활성화됩니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:60
 msgid ""
@@ -29691,6 +29829,8 @@ msgid ""
 " more operations, click :guilabel:`Save & New` and repeat the same steps "
 "above to configure another operation."
 msgstr ""
+"마지막으로 :guilabel:`저장 후 닫기` 를 클릭하여 팝업창을 닫습니다. 작업을 더 추가하려면 :guilabel:`저장 후 새로 "
+"만들기` 를 클릭한 후 위의 단계와 동일하게 단계를 반복하여 다른 작업을 설정합니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:147
 msgid ""
@@ -30238,6 +30378,8 @@ msgid ""
 ":guilabel:`Hourly Cost` field on an employee's form overrides the *per "
 "employee* field on a work center form."
 msgstr ""
+"작업장 양식의 *작업 센터별* 필드와 마찬가지로, 직원 양식에 있는 :guilabel:`시간당 비용` 필드는 작업 센터 양식의 *직원별*"
+" 필드보다 우선적으로 적용됩니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:78
 msgid ""
@@ -30284,6 +30426,8 @@ msgid ""
 ":guilabel:`Add a line` to open the :guilabel:`Create Operations` pop-up "
 "window. Enter a title for the operation in the :guilabel:`Operation` field."
 msgstr ""
+":guilabel:`작업` 탭에서 작업을 추가하려면 :guilabel:`줄 추가` 를 클릭하여 :guilabel:`작업 만들기` 팝업 "
+"창을 엽니다. 작업의 제목을 :guilabel:`작업` 항목에 입력합니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:99
 msgid ""
@@ -30470,6 +30614,8 @@ msgid ""
 "*Assembly Station 1*, which has an hourly operating cost of $30.00. Those "
 "operations are as follows:"
 msgstr ""
+"|BoM| 에도 4가지 작업이 표시되어 있으며, 모든 작업은 *조립 스테이션 1* 에서 시간당 운영 비용 $30.00으로 진행됩니다. "
+"해당 작업은 다음과 같습니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:186
 msgid ""
@@ -30509,6 +30655,8 @@ msgid ""
 "starts, the |MO| overview lists a cost of `$65.00` in both the :guilabel:`MO"
 " Cost` and :guilabel:`Real Cost` fields."
 msgstr ""
+"Fairway Fields에서 |MO| 를 퍼팅 그린 1개에 대해 확정합니다. 제조를 시작하기 전에 |MO| 전체보기에 `$65.00` "
+"의 비용이 :guilabel:`MO 비용` 및 :guilabel:`실제 비용` 항목에 표시되어 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst-1
 msgid "The MO Overview page for one putting green, before production starts."
@@ -31185,6 +31333,8 @@ msgid ""
 "specify the quantity to be produced in the :guilabel:`Quantity` field. "
 "Finally, click :guilabel:`Confirm` to confirm the |MO|."
 msgstr ""
+"|MO| 양식에서 품목을 :guilabel:`품목` 항목에서 선택하고 생산할 수량을 :guilabel:`수량` 항목에 지정합니다. "
+"마지막으로 :guilabel:`확인` 을 클릭하여 |MO| 를 확정합니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/allocation.rst:43
 msgid ""
@@ -31496,6 +31646,8 @@ msgid ""
 "confirmed for 10 units of a *chair*, a product manufactured using the drill "
 "station."
 msgstr ""
+"*드릴 스테이션* 작업장의 수용 능력은 1 단위입니다. *의자* 10개에 대한 |MO| 가 확정되며, 이 품목은 드릴 스테이션에서 제조된"
+" 품목입니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/oee.rst:74
 msgid ""
@@ -31936,6 +32088,9 @@ msgid ""
 "Operation Cost/Unit` option. Finally, he selects the :icon:`fa-bar-chart` "
 ":guilabel:`(bar chart)` graph type."
 msgstr ""
+":guilabel:`검색...` 표시줄 아래에서 Mike는 :guilabel:`측정값` :icon:`fa-caret-down` 드롭다운 "
+"메뉴를 클릭한 후 :guilabel:`총 작업 비용/단위` 옵션을 선택합니다. 마지막으로 :icon:`fa-bar-chart` "
+":guilabel:`(막대그래프)` 를 그래프 유형으로 선택합니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_analysis.rst:100
 msgid ""
@@ -32041,7 +32196,7 @@ msgid ""
 "The outer ring shows data for the selected time period, quarter two of 2024."
 " The inner circle shows data for the previous time period, quarter one of "
 "2024."
-msgstr ""
+msgstr "바깥쪽 원은 선택한 기간인 2024년 2분기의 데이터를 나타냅니다. 안쪽 원은 이전 기간인 2024년 1분기의 데이터입니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/production_analysis.rst:152
 msgid ""
@@ -32558,6 +32713,8 @@ msgid ""
 "window. By default, the :guilabel:`Scheduled Date` field, and its "
 "corresponding pop-up window, show the current date and time."
 msgstr ""
+":guilabel:`예정일` 필드를 클릭하면 캘린더 팝업창이 열립니다. 기본적으로 :guilabel:`예정일` 필드 및 해당하는 "
+"팝업창에는 현재 날짜와 시간이 나타나 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:224
 msgid ""
@@ -32834,6 +32991,7 @@ msgid ""
 "below the employee's name on the operator panel, click the header a second "
 "time."
 msgstr ""
+"작업지시서 카드의 타이머를 일시 중지하고 작업지시서를 운영자 패널의 직원 이름 아래에서 제거하려면 헤더를 두 번째 클릭합니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:99
 msgid ""
@@ -32952,6 +33110,9 @@ msgid ""
 ":guilabel:`Subcontracting` setting, under the :guilabel:`Operations` "
 "heading. Then, click :guilabel:`Save`."
 msgstr ""
+"Odoo에서 하도급 기능을 활성화하려면 :menuselection:`제조 관리 앱 --> 환경설정 --> 설정` 으로 이동한 다음 "
+":guilabel:`운영` 제목 아래에서 있는 :guilabel:`하도급` 설정 옆 확인란에 표시합니다. 그런 다음 "
+":guilabel:`저장` 을 클릭합니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting.rst-1
 msgid "The Subcontracting setting in the manufacturing app."
@@ -33298,6 +33459,8 @@ msgid ""
 "tricycles manufactured by Bike Friends: three days for manufacturing, plus "
 "two days for delivery."
 msgstr ""
+"결과적으로 Mike's Bikes는 Bike Friends에서 제조한 세발 자전거에 배송 리드 타임을 5일로 설정하였으며, 제조에 3일,"
+" 배송에 2일이 더해진 기간입니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/basic_subcontracting_lead_times.rst:88
 msgid ""
@@ -33381,6 +33544,8 @@ msgid ""
 "the necessary components from a vendor, and having them dropshipped directly"
 " to the subcontractor."
 msgstr ""
+":doc:`주문 시 협력업체 직배송 <subcontracting_dropship>` 경로를 사용하는 경우, 회사는 공급업체로부터 필요한 "
+"구성품을 구매하고 협력업체에 직접 직배송할 책임이 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:44
 msgid ""
@@ -33422,6 +33587,8 @@ msgid ""
 "Materials` smart button at the top of the product's page. Then, select a BoM"
 " from the list."
 msgstr ""
+"다음으로, 품목의 |BoM| 으로 이동하며 품목 페이지 상단에 있는 :guilabel:`자재명세서` 스마트 버튼을 클릭하면 됩니다. 그런"
+" 다음, 목록에서 자재명세서를 선택합니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:76
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:66
@@ -33512,6 +33679,8 @@ msgid ""
 " time for the component vendor to dropship the components, and the "
 "subcontractor to manufacture and deliver the product."
 msgstr ""
+":guilabel:`예상 도착일` 필드에는 구성품 공급업체에서 구성품을 직배송하고 협력업체에서 제품을 제조하여 배송할 기간이 충분할 "
+"날짜를 입력합니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:117
 msgid ""
@@ -33539,6 +33708,7 @@ msgid ""
 "the date as is results in the finished product arriving *after* the date "
 "listed on the |RfQ|."
 msgstr ""
+"구성품을 받기 전까지는 생산이 시작되지 않으므로 날짜를 그대로 두면 완제품은 |RfQ| 에 기재된 날짜 * 이후* 에 도착하게 됩니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:128
 msgid ""
@@ -33590,6 +33760,8 @@ msgid ""
 " order can also be accessed from the :guilabel:`Resupply` smart button that "
 "now appears on the subcontractor |PO|."
 msgstr ""
+":guilabel:`직배송` 스마트 버튼을 클릭하면 직배송 주문서를 엽니다. 또한 이 주문서를 통해 협력업체 |PO| 에 현재 표시되는 "
+":guilabel:`재공급` 스마트 버튼에 액세스할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:149
 msgid ""
@@ -33631,6 +33803,8 @@ msgid ""
 " manufactured by Bike Friends: three days for manufacturing, plus two days "
 "for delivery."
 msgstr ""
+"결과적으로 Mike's Bikes는 Bike Friends에서 제조한 자전거에 배송 리드 타임을 5일로 설정하였으며, 제조에 3일, "
+"배송에 2일이 더해진 기간입니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:170
 msgid ""
@@ -33638,6 +33812,7 @@ msgid ""
 "well, to remind themselves of the date that components must be delivered to "
 "the subcontractor."
 msgstr ""
+"자전거에 대한 자재명세서에도 5일의 제조 리드 타임을 입력하며, 구성품이 반드시 협력업체에 배송되어야 하는 날짜를 리마인드합니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/dropship_subcontracting_lead_times.rst:173
 msgid ""
@@ -33733,6 +33908,8 @@ msgid ""
 "Materials` smart button at the top of the product's page. Then, select a "
 "|BoM| from the list."
 msgstr ""
+"다음으로, 품목의 |BoM| 로 이동할 수 있도록 품목 페이지 상단에 있는 :guilabel:`자재명세서` 스마트 버튼을 클릭합니다. "
+"그런 다음 목록에서 |BoM| 을 선택합니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:80
 msgid "Resupply subcontracting workflow"
@@ -33842,6 +34019,8 @@ msgid ""
 "unicycles manufactured by Bike Friends: three days for manufacturing, plus "
 "two days for delivery."
 msgstr ""
+"결과적으로 Mike's Bikes는 Bike Friends에서 제조한 외발 자전거에 배송 리드 타임을 5일로 설정하였으며, 제조에 3일,"
+" 배송에 2일이 더해진 기간입니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:143
 msgid ""
@@ -33849,6 +34028,7 @@ msgid ""
 "as well, to remind themselves of the date that components must be delivered "
 "to the subcontractor."
 msgstr ""
+"외발자전거의 |BoM| 에도 5일의 제조 리드 타임을 입력하고, .구성품이 반드시 협력업체에 배송되어야 하는 날짜를 리마인드합니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/resupply_subcontracting_lead_times.rst:146
 msgid ""
@@ -34910,6 +35090,8 @@ msgid ""
 "properly configure the subcontracted product, the product's bill of "
 "materials (BoM), and the components listed on the |BoM|."
 msgstr ""
+"*하도급* 설정이 활성화되면 환경설정에서 하도급 품목 및 품목에 대한 자재명세서(BoM), |BoM| 에 기재된 구성품을 알맞게 설정해야"
+" 합니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:55
 msgid ""
@@ -35050,6 +35232,8 @@ msgid ""
 ":guilabel:`Add a line`, selecting the component in the :guilabel:`Product` "
 "drop-down field, and specifying a quantity in the :guilabel:`Demand` field."
 msgstr ""
+"그런 다음 :guilabel:`작업` 탭에 모든 구성품을 추가하며 :guilabel:`줄 추가` 를 클릭하고, :guilabel:`품목`"
+" 드롭다운 필드에서 구성품을 선택하고, :guilabel:`수요` 필드에 수량을 지정하면 됩니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:165
 msgid ""
@@ -35057,6 +35241,8 @@ msgid ""
 "components have been sent to the subcontractor, click :guilabel:`Validate` "
 "to confirm that the order has been sent."
 msgstr ""
+"마지막으로 :guilabel:`할 일로 표시` 를 클릭하여 주문서를 등록합니다. 구성품이 협력업체로 보내지면 :guilabel:`승인` "
+"을 클릭하여 주문이 전송되었는지 확인합니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:187
 msgid ""
@@ -35082,6 +35268,8 @@ msgid ""
 "app --> Orders --> Purchase Orders`, and select the |PO|. Then, click "
 ":guilabel:`Confirm Order` to confirm it."
 msgstr ""
+"이전 단계에서 |PO| 를 생성한 경우, :guilabel:`매입 앱 --> 주문서 --> 구매발주서` 로 이동하여 |PO| 를 "
+"선택합니다. 그런 다음 :guilabel:`주문 확인` 을 클릭하여 확정합니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:210
 msgid ""
@@ -35589,6 +35777,9 @@ msgid ""
 "control <../../plm/manage_changes/version_control>` features of the |PLM| "
 "app allow for easy management of all versions of a given |BoM|."
 msgstr ""
+"품목 |BoM| 은 필요에 따라 계속 업데이트할 수 있습니다. |PLM| 앱의 :doc:`버전 제어 "
+"<../../plm/manage_changes/version_control>` 기능을 사용하면 해당하는 |BoM| 의 모든 버전을 쉽게 "
+"관리할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/continuous_improvement.rst:144
 msgid "Field Service"
@@ -36174,6 +36365,8 @@ msgid ""
 ":guilabel:`Scrap` pop-up window. The pop-up window can be accessed from an "
 "|MO| in the backend, or the *Shop Floor* module."
 msgstr ""
+"구성품 및 완제품을 폐기하려면 :guilabel:`폐기` 팝업 창에서 진행합니다. 팝업창은 백엔드에 있는 |MO| 또는 *작업 현장* "
+"모듈에서 액세스할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/scrap_manufacturing.rst:43
 msgid "Scrap component from Manufacturing"
@@ -36522,6 +36715,8 @@ msgid ""
 "Material` field before selecting a product, which causes the corresponding "
 "product to auto-populate in the :guilabel:`Product` field."
 msgstr ""
+"또는 품목을 선택하기 전에 :guilabel:`자재명세서` 항목에서 특정 |BoM| 을 선택할 수 있습니다. 그러면 해당 품목이 "
+":guilabel:`품목` 필드에 자동으로 입력됩니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/unbuild_orders.rst:31
 msgid ""
@@ -36661,6 +36856,8 @@ msgid ""
 "used to manually plan manufacturing orders (MOs) and purchase orders (POs), "
 "based on forecasted quantities of products and components."
 msgstr ""
+"Odoo의 *제조 관리* 앱에서 *마스터 생산 일정*(MPS)은 제조지시서(MO) 및 구매발주서(PO)를 품목 및 구성품의 예상 수량에 "
+"따라 수동으로 계획할 때 사용합니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:20
 msgid ""
@@ -37115,6 +37312,8 @@ msgid ""
 "field, and `100` was entered in the :guilabel:`Maximum to Replenish` field, "
 "the button appears as :guilabel:`5 ≤…≤ 100`."
 msgstr ""
+"예를 들어, :guilabel:`최소 보충 수량` 필드에 `5` 를 입력하고, :guilabel:`최대 보충 수량` 필드에 `100` 을"
+" 입력해 놓으면, 버튼에 :guilabel:`5 ≤…≤ 100` 이 표시됩니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:228
 msgid ""
@@ -37378,6 +37577,8 @@ msgid ""
 " to it can be automatically routed to an alternative work center using the "
 "*Plan* button."
 msgstr ""
+"작업장에서 지정된 휴무 기간 중인 경우에는, 해당 작업장으로 받은 작업주문서를 *계획* 버튼을 사용하여 자동으로 다른 작업장으로 라우팅할"
+" 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:84
 msgid ""
@@ -39614,6 +39815,8 @@ msgid ""
 "Quotation` or :guilabel:`Purchase Orders` under the :guilabel:`Filters` "
 "column."
 msgstr ""
+"달리 지정되지 않은 한, 보고서에는 |RFQ| 및 |PO| 의 데이터가 모두 나타나 있습니다. 변경하려면 :guilabel:`필터` "
+"열에서 :guilabel:`견적요청서` 또는 :guilabel:`구매발주서` 를 선택합니다."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/procurement_expenses_report.rst:46
 msgid ""
@@ -39695,6 +39898,9 @@ msgid ""
 ":guilabel:`Count`. Click :guilabel:`Measures` at the top-left to open the "
 "drop-down list of available measures."
 msgstr ""
+"기본적으로 보고서에 표시되는 데이터에는 :guilabel:`주문`, :guilabel:`총계`, :guilabel:`비과세 총계`, "
+":guilabel:`개수` 와 같은 측정값이 함께 표시됩니다. 왼쪽 상단에 있는 :guilabel:`측정값` 을 클릭하면 사용할 수 있는"
+" 측정값이 드롭다운 목록으로 나타납니다."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/procurement_expenses_report.rst:86
 msgid ""
@@ -39737,6 +39943,8 @@ msgid ""
 ":guilabel:`Volume` may be included for further logistics and management "
 "analysis."
 msgstr ""
+"필요한 경우에는 추가로 측정 항목을 보고서에 삽입하여 더욱 자세히 살펴볼 수 있습니다. 예를 들어, :guilabel:`총 중량` 및 "
+":guilabel:`부피` 를 추가하여 물류 및 관리 분석까지 진행할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/procurement_expenses_report.rst:101
 msgid ""
@@ -40488,6 +40696,8 @@ msgid ""
 ":guilabel:`Alternatives` tab, they can be individually removed by clicking "
 "on the :guilabel:`X (remove)` icon at the end of their row."
 msgstr ""
+"대체 견적서를 :guilabel:`대체` 탭에서 제거해야 하는 경우에는 행 끝에 있는 :guilabel:`X(제거)` 아이콘을 클릭하면 "
+"개별적으로 제거할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:100
 msgid ""
@@ -40620,6 +40830,8 @@ msgid ""
 " under the :guilabel:`Create Alternative` option, click :guilabel:`Compare "
 "Product Lines`. This navigates to the :guilabel:`Compare Order Lines` page."
 msgstr ""
+"그런 다음 :guilabel:`대체` 탭을 클릭하여 연결되어 있는 |RfQs| 를 모두 검토합니다. 다음으로 :guilabel:`대체 "
+"생성` 옵션에서 :guilabel:`품목 내역 비교` 를 클릭합니다. 그러면 :guilabel:`주문서 내역 비교` 페이지로 이동합니다."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst-1
 msgid "Compare Product Lines page for alternative RFQs."
@@ -40666,6 +40878,8 @@ msgid ""
 "Quotation` (in the breadcrumbs, at the top of the page) to navigate back to "
 "an overview of all |RfQs|."
 msgstr ""
+"원하는 품목이 모두 선택되었으면, :guilabel:`견적 요청`(페이지 상단의 네비게이션에 위치)을 클릭하면 모든 |RfQ| 전체보기로"
+" 돌아갑니다."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:197
 msgid "Cancel (or keep) alternatives"
@@ -40977,6 +41191,8 @@ msgid ""
 "accounting information is pre-populated based on the database's accounting "
 "settings. Click :guilabel:`Create Payment` to process the vendor bill."
 msgstr ""
+"그러면 :guilabel:`결제 등록` 팝업 창이 열립니다. 이 창에서 데이터베이스의 회계 설정에 따라 회계 정보가 미리 입력됩니다. "
+":guilabel:`결제 생성` 을 클릭하면 공급업체 청구서가 처리됩니다."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:114
 msgid ""
@@ -41265,6 +41481,7 @@ msgid ""
 " can be confirmed as soon as it is created, before any products have been "
 "received."
 msgstr ""
+"청구서 관리 정책은 *주문 수량* 기준으로 설정되어 있으므로 품목이 입고되기 전이라도 청구서 초안을 작성하는 즉시 승인할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:101
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:152
@@ -41516,7 +41733,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:240
 msgid ":doc:`control_bills`"
-msgstr ""
+msgstr ":doc:`control_bills`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:3
 msgid "Requests for quotation"
@@ -41571,10 +41788,12 @@ msgid ""
 "their price, to have this information auto-populate on an |RFQ| each time "
 "the product is listed."
 msgstr ""
+"품목 양식의 :guilabel:`매입` 탭에서 공급업체와 가격을 입력하면 품목이 표시될 때마다 |RFQ| 에 이 내용이 자동으로 "
+"입력됩니다."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:45
 msgid ":doc:`../products/pricelist`"
-msgstr ""
+msgstr ":doc:`../products/pricelist`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:47
 msgid ""
@@ -41766,6 +41985,8 @@ msgid ""
 ":guilabel:`Add a product`, and type in the product name, or select the item "
 "from the drop-down menu."
 msgstr ""
+":guilabel:`품목` 탭에 주문할 품목을 추가합니다. :guilabel:`품목 추가` 를 클릭하고 품목명을 입력하거나 드롭다운 "
+"메뉴에서 항목을 선택합니다."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:138
 msgid ""
@@ -41885,6 +42106,8 @@ msgid ""
 "purchase orders (POs) with the unit price, once the product is added, which "
 "reduces errors and saves time."
 msgstr ""
+"품목을 추가하면 단위 가격이 자동으로 견적요청서(RFQ) 또는 구매발주서(PO)에 공급업체 가격과 함께 입력되어 오류를 줄이고 시간을 "
+"절약할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:8
 msgid ""
@@ -42071,6 +42294,8 @@ msgid ""
 ":guilabel:`I want to update data (import-compatible export)` checkbox at the"
 " top of the :guilabel:`Export Data` pop-up window."
 msgstr ""
+"공급업체 가격표의 :guilabel:`외부 ID` 를 조회하려면 :guilabel:`데이터를 업데이트합니다(가져오기 및 내보내기 호환)`"
+" 확인란을 선택하며 :guilabel:`데이터 내보내기` 팝업창의 맨 위에서 확인할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:116
 msgid ""
@@ -42129,7 +42354,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:139
 msgid "`partner_id`"
-msgstr ""
+msgstr "`partner_id`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:140
 msgid "Product Template"
@@ -42145,7 +42370,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:143
 msgid "`product_tmpl_id`"
-msgstr ""
+msgstr "`product_tmpl_id`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:145
 msgid ""
@@ -42161,7 +42386,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:149
 msgid "`min_qty`"
-msgstr ""
+msgstr "`min_qty`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:150
 msgid "Unit Price"
@@ -42177,7 +42402,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:153
 msgid "`price`"
-msgstr ""
+msgstr "`price`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:154
 msgid "Delivery Lead Time"
@@ -42195,7 +42420,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:158
 msgid "`delay`"
-msgstr ""
+msgstr "`delay`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:159
 msgid "Sequence"
@@ -42217,7 +42442,7 @@ msgstr "해당 없음"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:164
 msgid "`sequence`"
-msgstr ""
+msgstr "`sequence`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:165
 msgid "Company"
@@ -42233,7 +42458,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:168
 msgid "`company_id`"
-msgstr ""
+msgstr "`company_id`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:169
 msgid ":ref:`External ID <purchase/products/external-id>`"
@@ -42245,7 +42470,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:172
 msgid "`id`"
-msgstr ""
+msgstr "`id`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:175
 msgid "Import records"
@@ -42278,7 +42503,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:188
 msgid ":doc:`../../../essentials/export_import_data`"
-msgstr ""
+msgstr ":doc:`../../../essentials/export_import_data`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:189
 msgid ":ref:`Common fields <purchase/products/common-fields>`"
@@ -42345,19 +42570,19 @@ msgstr "아이디"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:213
 msgid "company_id"
-msgstr ""
+msgstr "company_id"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:214
 msgid "delay"
-msgstr ""
+msgstr "지연"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:215
 msgid "price"
-msgstr ""
+msgstr "가격"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:216
 msgid "product_tmpl_id"
-msgstr ""
+msgstr "product_tmpl_id"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:217
 msgid "sequence"
@@ -42369,7 +42594,7 @@ msgstr "partner_id"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:219
 msgid "product.product_supplierinfo_3"
-msgstr ""
+msgstr "product.product_supplierinfo_3"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:220
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:227
@@ -42380,7 +42605,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:222
 msgid "13.00"
-msgstr ""
+msgstr "13.00"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:223
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:230
@@ -42394,7 +42619,7 @@ msgstr "Wood Corner"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:229
 msgid "14.00"
-msgstr ""
+msgstr "14.00"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:232
 msgid "Ready Mat"
@@ -42402,7 +42627,7 @@ msgstr "Ready Mat"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:236
 msgid "1299.00"
-msgstr ""
+msgstr "1299.00"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:237
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:244
@@ -42411,15 +42636,15 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:238
 msgid "6"
-msgstr ""
+msgstr "6"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:243
 msgid "1399.00"
-msgstr ""
+msgstr "1399.00"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:245
 msgid "7"
-msgstr ""
+msgstr "7"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:246
 msgid "Azure Interior"
@@ -42692,6 +42917,7 @@ msgstr ""
 msgid ""
 ":doc:`../../inventory/warehouses_storage/replenishment/reordering_rules`"
 msgstr ""
+":doc:`../../inventory/warehouses_storage/replenishment/reordering_rules`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/temporary_reordering.rst:33
 msgid ""
@@ -42834,6 +43060,8 @@ msgid ""
 "Once`, refresh the page. The temporary reordering rule for the product no "
 "longer appears in the :guilabel:`Replenishment` dashboard."
 msgstr ""
+":guilabel:`한 번 주문` 을 클릭하여 구매발주서가 생성되면 페이지를 새로고침합니다. 품목에 대한 임시 재주문 규칙이 더 이상 "
+":guilabel:`보충` 현황판에 나타나지 않습니다."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/temporary_reordering.rst:110
 msgid "Complete purchase order"
@@ -42846,6 +43074,8 @@ msgid ""
 "generated :abbr:`PO (purchase order)` from the :guilabel:`Requests for "
 "Quotation` overview."
 msgstr ""
+":guilabel:`보충` 현황판에서 생성된 구매발주서를 보려면 :menuselection:`매입 앱` 으로 이동한 후 "
+":guilabel:`견적요청서` 전체보기에서 생성된 :abbr:`PO(구매발주서)` 를 선택합니다."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/temporary_reordering.rst:116
 msgid ""
@@ -43744,6 +43974,8 @@ msgid ""
 "right corner of the work order card to open the :guilabel:`What do you want "
 "to do?` pop-up window."
 msgstr ""
+"그런 다음 :guilabel:`⋮(세 개의 수직 점)` 버튼을 작업지시서 카드의 오른쪽 하단에서 클릭하면 :guilabel:`무엇을 "
+"할까요?` 팝업 창이 열립니다."
 
 #: ../../content/applications/inventory_and_mrp/quality/quality_check_types/measure_check.rst:205
 #: ../../content/applications/inventory_and_mrp/quality/quality_check_types/picture_check.rst:164
@@ -44241,6 +44473,8 @@ msgid ""
 "complete the quality check. The pop-up window then moves on to the next step"
 " of the work order."
 msgstr ""
+"마지막으로 팝업창 하단에 있는 :guilabel:`승인` 을 클릭하면 품질 확인이 완료됩니다. 그러면 팝업창이 작업지시서의 다음 단계로 "
+"이동합니다."
 
 #: ../../content/applications/inventory_and_mrp/quality/quality_check_types/picture_check.rst-1
 msgid "A Take a Picture check in the Shop Floor module."
@@ -44321,6 +44555,9 @@ msgid ""
 "checkbox next to :guilabel:`Storage Locations`, under the "
 ":guilabel:`Warehouses` heading. Then, click :guilabel:`Save`."
 msgstr ""
+"*저장 위치* 설정을 활성화하려면 :menuselection:`재고 관리 앱 --> 환경 설정 --> 설정` 으로 이동하여 "
+":guilabel:`창고` 제목 아래 :guilabel:`저장 위치` 옆에 있는 확인란을 선택합니다. 그런 다음 "
+":guilabel:`저장` 을 클릭합니다."
 
 #: ../../content/applications/inventory_and_mrp/quality/quality_management/failure_locations.rst-1
 msgid "The Storage Locations setting on the Inventory app settings page."
@@ -44416,6 +44653,8 @@ msgid ""
 "products that fail a check created by the |QCP| can be routed to one of the "
 "locations."
 msgstr ""
+"|QCP| 가 하나 이상의 실패 위치로 설정되어 있는 경우에는, |QCP| 에서 생성된 후 검사에 실패한 제품을 해당하는 위치 중 하나로"
+" 라우팅할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/quality/quality_management/failure_locations.rst:78
 msgid ""
@@ -45026,6 +45265,7 @@ msgid ""
 "the right side of the step. Doing so automatically marks the check as "
 "*Passed*."
 msgstr ""
+"또한 단계 오른쪽에 있는 확인란을 클릭하는 방법으로도 품질 검사를 완료할 수 있습니다. 그러면 검사가 자동으로 *합격* 으로 표시됩니다."
 
 #: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:151
 msgid ""
@@ -45033,22 +45273,24 @@ msgid ""
 "check being conducted. For information about processing each type of quality"
 " check, see the associated documentation:"
 msgstr ""
+"구체적인 품질 검사 처리 단계는 수행 중인 검사 유형에 따라 달라집니다. 유형별 품질 검사 처리에 대한 자세한 내용은 관련 문서를 "
+"참조하세요."
 
 #: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:154
 msgid ":doc:`../quality_check_types/instructions_check`"
-msgstr ""
+msgstr ":doc:`../quality_check_types/instructions_check`"
 
 #: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:155
 msgid ":doc:`../quality_check_types/pass_fail_check`"
-msgstr ""
+msgstr ":doc:`../quality_check_types/pass_fail_check`"
 
 #: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:156
 msgid ":doc:`../quality_check_types/measure_check`"
-msgstr ""
+msgstr ":doc:`../quality_check_types/measure_check`"
 
 #: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:157
 msgid ":doc:`../quality_check_types/picture_check`"
-msgstr ""
+msgstr ":doc:`../quality_check_types/picture_check`"
 
 #: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:3
 msgid "Quality control points"
@@ -45653,6 +45895,8 @@ msgid ""
 "columns drop-down)` icon, at the far-right of the header row. Select the "
 "desired options to add to the line."
 msgstr ""
+"줄에 열을 추가하려면, 헤더 행 맨 오른쪽에 있는 :guilabel:`(선택적 열 드롭다운)` 아이콘을 클릭합니다. 원하는 옵션을 "
+"선택하여 줄에 추가합니다."
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst-1
 msgid "Optional additional options to add to new part line."
@@ -45834,4 +46078,4 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/repairs/repair_orders.rst:269
 msgid ":doc:`../../sales/sales/products_prices/returns`"
-msgstr ""
+msgstr ":doc:`../../sales/sales/products_prices/returns`"
