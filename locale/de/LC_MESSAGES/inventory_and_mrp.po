@@ -448,6 +448,15 @@ msgid ""
 "identify the barcode and can be customized to ensure Odoo correctly "
 "interprets all barcodes for the business."
 msgstr ""
+"An einer Station im :doc:`Kassensystem <../../../sales/point_of_sale>` "
+"werden beispielsweise Barcodes im EAN-Format (European Article Number) zum "
+"Wiegen von Produkten verwendet, die mit `21` beginnen und fünf Ziffern zur "
+"Angabe des Gewichts enthalten. Diese Codes werden dann zur Erstellung eines "
+"Barcodes verwendet, der das Gewicht und den Preis angibt. Die Ziffernfolge "
+"`21` und das fünfstellige Gewicht bilden das Barcode-Muster, das zur "
+"Identifizierung des Barcodes verwendet wird, und können angepasst werden, um"
+" sicherzustellen, dass Odoo alle Barcodes für das Unternehmen korrekt "
+"interpretiert."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:21
 msgid ""
@@ -476,6 +485,9 @@ msgid ""
 " entire supply chain, they **must** be `purchased from GS1 "
 "<https://www.gs1.org/standards/get-barcodes>`_."
 msgstr ""
+"Um die Barcodes |UPC| und |EAN| zur eindeutigen Identifizierung von "
+"Produkten in der gesamten Lieferkette zu verwenden, **müssen** sie `bei GS1 "
+"gekauft werden <https://www.gs1.org/standards/get-barcodes>`_."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:32
 msgid ""
@@ -485,6 +497,11 @@ msgid ""
 "<barcode/operations/product-weight>` where the barcode is written in the "
 "|EAN| format."
 msgstr ""
+"In Odoo können benutzerdefinierte Barcode-Muster definiert werden, um "
+"unternehmensspezifische Barcodes zu erkennen. Barcodes müssen nicht gekauft "
+"werden, wenn sie nur innerhalb des Unternehmens verwendet werden, wie im "
+":ref:`Beispiel <barcode/operations/product-weight>`, bei dem der Barcode im "
+"|EAN|-Format geschrieben ist."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:38
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_usage.rst:52
@@ -556,10 +573,15 @@ msgid ""
 "nomenclature-list>`, are available for use. And, by default, Odoo "
 "automatically handles |UPC|/|EAN| conversion."
 msgstr ""
+"Wenn das Modul **Barcode** installiert und die "
+":guilabel:`Standardnomenklatur` ausgewählt ist, stehen die in der "
+":ref:`Standardnomenklaturliste <barcode/operations/default-nomenclature-"
+"list>` beschriebenen Barcode-Aktionen mit |UPC| und |EAN| zur Verfügung. "
+"Standardmäßig übernimmt Odoo die |UPC|/|EAN|-Konvertierung automatisch."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:59
 msgid "Example: product weight barcode"
-msgstr ""
+msgstr "Beispiel: Barcode für Produktgewicht"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:61
 msgid ""
@@ -569,10 +591,18 @@ msgid ""
 "automatically print barcodes, and calculate the price using the weight of "
 "the item."
 msgstr ""
+"Um besser zu verstehen, wie die Barcode-Nomenklatur zur Identifizierung von "
+"Produkten in Odoo verwendet wird, dient dieses Beispiel, bei dem Barcodes "
+"für das Produktgewicht im |EAN|-Format verwendet werden, um es einem "
+"Unternehmen im :doc:`Kassensystem <../../../sales/point_of_sale>` zu "
+"ermöglichen, automatisch Barcodes zu drucken und den Preis anhand des "
+"Gewichts des Artikels zu berechnen."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:66
 msgid "To set up barcodes for weighted products, the following rule is used:"
 msgstr ""
+"Für die Einrichtung von Barcodes für gewichtete Produkte gilt folgende "
+"Regel:"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:71
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:186
@@ -616,16 +646,21 @@ msgid ""
 "To better understand the barcode pattern for weighted products, consider the"
 " barcode, `2112345000008`:"
 msgstr ""
+"Um das Barcode-Muster für gewichtete Produkte besser zu verstehen, "
+"betrachten Sie den Barcode  `2112345000008`:"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:82
 msgid "`21`: code that identifies this a barcode for weighted products."
 msgstr ""
+"`21`: Code, der dies als Barcode für gewichtete Produkte identifiziert."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:83
 msgid ""
 "`12345`: five digits (denoted by `.....` in the table above) that identify "
 "the product."
 msgstr ""
+"`12345`: fünf Ziffern (in der obigen Tabelle durch `.....` gekennzeichnet), "
+"die das Produkt identifizieren."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:84
 msgid ""
@@ -635,16 +670,23 @@ msgid ""
 " digits are decimal values. For example, \"13.5 grams\" in the `{NNDDD}` "
 "format is `13500`."
 msgstr ""
+"`00000`: fünf Zifferm (in der Tabelle als `{NNDDD}` gekennzeichnet), die das"
+" Gewicht des Produkt darstellt. Auf dem Produktformular **müssen** die fünf "
+"Gewichtswerte `00000`. Die ersten beiden Ziffern sind Ganzzahlenwerte und "
+"die letzten drei sind Dezimalstellen. Zum Beispiel sind „13,5 Gramm“ im "
+"Format `{NNDDD}` `13500`."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:88
 msgid ""
 "`8`: `check digit <https://www.gs1.org/services/check-digit-calculator>`_ "
 "for `211234500000`."
 msgstr ""
+"`8`: `Prüfziffer <https://www.gs1.org/services/check-digit-calculator>`_ für"
+" `211234500000`."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:90
 msgid "Together, these components make up a 13-character |EAN| - 13 barcode."
-msgstr ""
+msgstr "Zusammen bilden diese Komponenten einen 13-stelligen |EAN|-Barcode."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:92
 msgid ""
@@ -655,10 +697,16 @@ msgid ""
 "desired product). In addition, the :guilabel:`Unit of Measure` is set to "
 ":guilabel:`kg`."
 msgstr ""
+"Um den Produkt-Barcode für `Pasta Bolognese` zu konfigurieren, wird der "
+"|EAN|-Barcode für gewichtete Produkte, `2112345000008`, in das Feld "
+":guilabel:`Barcode` auf dem Produktformular eingegeben (zugänglich über "
+":menuselection:`Lagerapp --> Produkte --> Produkte` und Auswahl des "
+"gewünschten Produkts). Außerdem wird die :guilabel:`Maßeinheit` auf "
+":guilabel:`kg` festgelegt."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst-1
 msgid "Barcode field on the product form."
-msgstr ""
+msgstr "Barcodefeld auf dem Produktformular."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:101
 msgid ""
@@ -667,10 +715,14 @@ msgid ""
 "`211234501500`, which has a check digit of `2`. The new barcode is "
 "`2112345015002`."
 msgstr ""
+"Als Nächstes wird die Nudelschüssel eines Kunden gewogen und wiegt `1,5` "
+"Kilogramm. Dadurch wird ein neuer Barcode für die Nudeln generiert, der dem "
+"Gewicht entspricht: `211234501500`, mit einer Prüfziffer von `2`. Der neue "
+"Barcode lautet `2112345015002`."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst-1
 msgid "Generated barcode that includes a weight of 1.5 kg."
-msgstr ""
+msgstr "Generierter Barcode, der ein Gewicht von 1,5 kg enthält."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:109
 msgid ""
@@ -681,10 +733,17 @@ msgid ""
 "`2112345015002`, and if the intended product appears, the barcode setup is "
 "correct."
 msgstr ""
+"Stellen Sie sicher, dass die Produkte ordnungsgemäß gescannt werden, indem "
+"Sie zu :menuselection:`Barcode --> Vorgänge` navigieren. Klicken Sie "
+"anschließend auf eine beliebigen Vorgangsart, z. B. "
+":guilabel:`Wareneingänge`. Klicken Sie dann auf die Schaltfläche "
+":guilabel:`Neu`, um einen Entwurf für eine Bestandsbewegung zu erstellen. "
+"Scannen Sie den Barcode für das Produktgewicht, z. B. `2112345015002`. Wenn "
+"das gewünschte Produkt angezeigt wird, ist die Barcode-Einrichtung korrekt."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst-1
 msgid "Show successfully scanned barcode."
-msgstr ""
+msgstr "Anzeige erfolgreicher gescannte Barcodes."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:119
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:96
@@ -697,6 +756,10 @@ msgid ""
 "in Odoo's default list, since barcodes cannot be read successfully if there "
 "are unknown fields."
 msgstr ""
+"Das Hinzufügen neuer Regeln ist für die |UPC|- und |EAN|-Formate "
+"erforderlich, die **nicht** in der Standardliste von Odoo enthalten sind, da"
+" Barcodes nicht erfolgreich gelesen werden können, wenn unbekannte Felder "
+"vorhanden sind."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:125
 msgid ""
@@ -704,6 +767,10 @@ msgid ""
 "information from these rules. `Custom development "
 "<https://www.odoo.com/appointment/132>`_ is required for this functionality."
 msgstr ""
+"Neue Regeln können zwar erstellt werden, aber Odoo-Felder werden **nicht** "
+"automatisch mit Informationen aus diesen Regeln ausgefüllt. Für diese "
+"Funktionalität ist eine `benutzerdefinierte Entwicklung "
+"<https://www.odoo.com/appointment/132>` erforderlich."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:129
 msgid ""
@@ -718,7 +785,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:133
 msgid "On this page, configure the following optional fields:"
-msgstr ""
+msgstr "Konfigurieren Sie auf dieser Seite die folgenden optionalen Felder:"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:135
 msgid ""
@@ -727,6 +794,11 @@ msgid ""
 "Options include :guilabel:`Always` (the default option), :guilabel:`Never`, "
 ":guilabel:`EAN-13 to UPC-A`, and :guilabel:`UPC-A to EAN-13`."
 msgstr ""
+":guilabel:`UPC/EAN-Umwandlung`: legt fest, ob ein |UPC|/|EAN|-Barcode "
+"automatisch umgewandelt werden soll, wenn eine Regel mit einer anderen "
+"Codierung übereinstimmt. Zu den Optionen gehören: :guilabel:`Immer` "
+"(Standardoption), :guilabel:`Nie`, :guilabel:`EAN-13 zu UPC-A` und "
+":guilabel:`UPC-A zu EAN-13`."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:138
 msgid ""
@@ -734,6 +806,10 @@ msgid ""
 "the :guilabel:`Default Nomenclature` uses |UPC| and |EAN| encoding, *not* "
 "GS1 encoding."
 msgstr ""
+":guilabel:`Ist GS1-Nomenklatur`: Stellen Sie sicher, dass dieses "
+"Kontrollkästchen **nicht** aktiviert ist, da die "
+":guilabel:`Standardnomenklatur` die |UPC|- und |EAN|-Codierung verwendet, "
+"*nicht* die GS1-Kodierung."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst-1
 msgid "Default Nomenclature page setting fields."
@@ -797,12 +873,20 @@ msgid ""
 " of `.` is shown. `N` represents whole number digits, and `D` represent "
 "decimal digits."
 msgstr ""
+"Das Feld :guilabel:`Barcodemuster` gibt an, wie die Buchstaben- oder "
+"Zahlenfolge vom System erkannt wird, um Informationen über das Produkt zu "
+"enthalten. Manchmal, wenn eine bestimmte Anzahl von Ziffern erforderlich "
+"ist, wird die Anzahl der `.` angezeigt. `N` steht für ganze Ziffern und `D` "
+"für Dezimalstellen."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:167
 msgid ""
 "`1...` represents any 4-digit number that starts with 1. `NNDD` represents a"
 " two digit number with two decimal points. For example, `14.25` is 1425."
 msgstr ""
+"`1...` steht für eine beliebige vierstellige Zahl, die mit 1 beginnt. `NNDD`"
+" steht für eine zweistellige Zahl mit zwei Dezimalstellen. Zum Beispiel "
+"steht `14,25` für 1425."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/barcode_nomenclature.rst:170
 msgid ""
@@ -4039,6 +4123,8 @@ msgid ""
 "In Odoo *Inventory*, *packaging* refers to disposable containers holding "
 "multiple units of a specific product."
 msgstr ""
+"In Odoo *Lager* ist eine *Verpackung* ein Einwegbehälter, der mehrere "
+"Einheiten eines bestimmten Produkts enthält."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:8
 msgid ""
@@ -4046,6 +4132,10 @@ msgid ""
 "12-pack, or a case of 36, **must** be configured on the individual product "
 "form. This is because packagings are product specific, not generic."
 msgstr ""
+"Zum Beispiel **müssen** verschiedene Verpackungen für Dosenlimonade, wie ein"
+" 6er-Pack, ein 12er-Pack oder eine 36er-Kiste, auf dem individuellen "
+"Produktformular konfiguriert werden. Das liegt daran, dass Verpackungen "
+"produktspezifisch sind – nicht generisch."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:13
 msgid ""
@@ -4243,7 +4333,7 @@ msgstr "Lister unterschiedlicher Verpackungen für Produkte."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:93
 msgid "Partial reservation"
-msgstr ""
+msgstr "Teilreservierung"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:95
 msgid ""
@@ -4253,6 +4343,11 @@ msgid ""
 "flexibility expedites order fulfillment by allowing the immediate shipment "
 "of available items, while awaiting the rest."
 msgstr ""
+"Nach dem :ref:`Abschluss der Verpackungskonfiguration "
+"<inventory/product_management/packaging-setup>` können Verpackungen in "
+"Gesamt- oder Teilmenge für Warenausgänge reserviert werden. Die Flexibilität"
+" bei Teilverpackungen beschleunigt die Auftragsabwicklung, da verfügbare "
+"Artikel sofort versendet werden können, während auf den Rest gewartet wird."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:100
 msgid ""
@@ -4260,6 +4355,10 @@ msgid ""
 "app --> Configuration --> Product Categories`. Then, click :guilabel:`New`, "
 "or select the desired product category."
 msgstr ""
+"Um Reservierungsmethoden für Verpackungen zu konfigurieren, gehen Sie zu "
+":menuselection:`Lager --> Konfiguration --> Produktkategorien`. Klicken Sie "
+"dann auf :guilabel:`Neu` oder wählen Sie die gewünschte Produktkategorie "
+"aus."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:103
 msgid ""
@@ -4267,6 +4366,10 @@ msgid ""
 ":guilabel:`Reserve Packagings` can be set to :guilabel:`Reserve Only Full "
 "Packagings` or :guilabel:`Reserve Partial Packagings`."
 msgstr ""
+"Im Formular der Produktkategorie können im Abschnitt :guilabel:`Logistik`  "
+":guilabel:`Verpackungen reservieren` auf :guilabel:`Nur volle "
+"Verpackungseinheiten reservieren` oder :guilabel:`Teilverpackungen "
+"reservieren` eingestellt werden."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:107
 msgid ""
@@ -4276,40 +4379,54 @@ msgid ""
 " :guilabel:`Products` section, tick the :guilabel:`Product Packagings` "
 "checkbox, and click :guilabel:`Save`."
 msgstr ""
+"Um das Feld :guilabel:`Verpackung reservieren` anzuzeigen, **muss** die "
+"Funktion :guilabel:`Produktverpackungen` aktiviert ist. Navigieren Sie dazu "
+"zur :menuselection:`Lagerapp --> Konfiguration --> Einstellungen`. "
+"Aktivieren Sie dann im Abschnitt :guilabel:`Produkte` das Kontrollkästchen "
+"neben :guilabel:`Produktverpackungen` und klicken Sie auf "
+":guilabel:`Speichern`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst-1
 msgid "Show Reserve Packagings field on the product categories page."
 msgstr ""
+"Anzeige des Feldes „Verpackungen reservieren“ auf der Seite der "
+"Produktkategorien."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:117
 msgid ""
 "To better evaluate the options based on business needs, consider the "
 "following example:"
 msgstr ""
+"Um die Optionen basierend auf den geschäftlichen Anforderungen besser "
+"bewerten zu können, ziehen Sie das folgende Beispiel in Betracht:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:119
 msgid "a product is sold in twelve units per packaging."
-msgstr ""
+msgstr "Ein Produkt wird in zwölf Einheiten pro Verpackung verkauft."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:120
 msgid "an order demands two packagings."
-msgstr ""
+msgstr "Ein Auftrag fordert zwei Verpackungen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:121
 msgid "there are only twenty-two units in stock."
-msgstr ""
+msgstr "Es sind nur zweiundzwanzig Einheiten auf Lager."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:123
 msgid ""
 "When :guilabel:`Reserve Only Full Packagings` is selected, only twelve units"
 " are reserved for the order."
 msgstr ""
+"Wenn :guilabel:`Nur volle Verpackungseinheiten reservieren` ausgewählt ist, "
+"werden nur zwölf Einheiten für den Auftrag reserviert."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:126
 msgid ""
 "Conversely, when :guilabel:`Reserve Partial Packagings` is selected, twenty-"
 "two units are reserved for the order."
 msgstr ""
+"Wenn hingegen :guilabel:`Teilverpackungen reservieren` ausgewählt ist, "
+"werden zweiundzwanzig Einheiten für den Auftrag reserviert."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:130
 msgid "Apply packagings"
@@ -5069,6 +5186,11 @@ msgid ""
 " Even if the purchase price on a purchase order differs, the valuation is "
 "the cost defined on the product form."
 msgstr ""
+"Ist die Standardkalkulationsmethode in Odoo. Die Kosten des Produkts werden "
+"manuell auf dem Produktformular definiert, und diese Kosten werden für die "
+"Berechnung der Bewertung verwendet. Auch wenn der Einkaufspreis in einem "
+"Einkaufsauftrag abweicht, wird die Bewertung anhand der im Produktformular "
+"definierten Kosten vorgenommen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:98
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:139
@@ -5128,7 +5250,7 @@ msgstr "0 €"
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:149
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:220
 msgid "Receive 8 products for $10/unit"
-msgstr ""
+msgstr "8 Produkte zu je 10 €/Einheit erhalten"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:110
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:151
@@ -5152,7 +5274,7 @@ msgstr "80 $"
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:154
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:225
 msgid "Receive 4 products for $16/unit"
-msgstr ""
+msgstr "4 Produkte zu je 16 €/Einheit erhalten"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:115
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:156
@@ -5162,17 +5284,17 @@ msgstr "12"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:116
 msgid "4 * $10"
-msgstr ""
+msgstr "4 * 10 €"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:117
 msgid "$120"
-msgstr ""
+msgstr "120 €"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:118
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:159
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:230
 msgid "Deliver 10 products"
-msgstr ""
+msgstr "10 Produkte liefern"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:120
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:161
@@ -5182,7 +5304,7 @@ msgstr "2"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:121
 msgid "-10 * $10"
-msgstr ""
+msgstr "-10 * 10 €"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:122
 msgid "$20"
@@ -5190,7 +5312,7 @@ msgstr "20 $"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:123
 msgid "Receive 2 products for $9/unit"
-msgstr ""
+msgstr "2 Produkte zu je 9 €/Einheit erhalten"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:125
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:166
@@ -5200,11 +5322,11 @@ msgstr "4"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:126
 msgid "2 * $10"
-msgstr ""
+msgstr "2 * 10 €"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:127
 msgid "$40"
-msgstr ""
+msgstr "40 €"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:129
 msgid "Average Cost (AVCO)"
@@ -5217,6 +5339,11 @@ msgid ""
 "costing method, inventory valuation is *dynamic*, and constantly adjusts "
 "based on the purchase price of products."
 msgstr ""
+"Berechnet die Bewertung eines Produkts auf der Grundlage der "
+"durchschnittlichen Kosten dieses Produkts, geteilt durch die Gesamtzahl der "
+"verfügbaren Bestände im Lager. Bei dieser Kalkulationsmethode ist die "
+"Bestandsbewertung *dynamisch* und wird ständig auf der Grundlage des "
+"Einkaufspreises der Produkte angepasst."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:155
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:160
@@ -5245,36 +5372,39 @@ msgstr "24 €"
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:164
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:236
 msgid "Receive 2 products for $6/unit"
-msgstr ""
+msgstr "2 Produkte zu je 6 €/Einheit erhalten"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:165
 msgid "$9"
-msgstr ""
+msgstr "9 €"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:167
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:239
 msgid "2 * $6"
-msgstr ""
+msgstr "2 * 6 €"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:168
 msgid "$36"
-msgstr ""
+msgstr "36 €"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:170
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:242
 msgid "How are unit cost and inventory value calculated at each step?"
 msgstr ""
+"Wie werden die Stückkosten und der Bestandswert bei jedem Schritt berechnet?"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:172
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:244
 msgid "When receiving four products for $16 each:"
-msgstr ""
+msgstr "Beim Erhalt von vier Produkten für je 16 €:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:174
 msgid ""
 "Inventory value is calculated by adding the previous inventory value with "
 "the incoming value: :math:`$80 + (4 * $16) = $144`."
 msgstr ""
+"Der Bestandswert wird durch Addition des vorherigen Bestandswerts und des "
+"Eingangswerts berechnet: :math:`80 € + (4 * 16 €) = 144 €`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:176
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:248
@@ -5282,6 +5412,8 @@ msgid ""
 "Unit cost is calculated by dividing the inventory value by the quantity on-"
 "hand: :math:`$144 / 12 = $12`."
 msgstr ""
+"Die Stückkosten werden berechnet, indem der Bestandswert durch die vorrätige"
+" Menge geteilt wird: `144 € / 12 = 12 €`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:179
 msgid ""
@@ -5289,18 +5421,22 @@ msgid ""
 " inventory value, regardless of the purchase price of the product. "
 "Therefore, inventory value is :math:`$144 + (-10 * $12) = $24`."
 msgstr ""
+"Bei der Lieferung von zehn Produkten werden die durchschnittlichen "
+"Stückkosten zur Berechnung des Bestandswerts verwendet, unabhängig vom "
+"Einkaufspreis des Produkts. Der Bestandswert beträgt daher: :math:`144 € + "
+"(-10 * 12 €) = 24 €`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:183
 msgid "Receive two products for $6 each:"
-msgstr ""
+msgstr "2 Produkte zu je 6 € erhalten"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:185
 msgid "Inventory value: :math:`$24 + (2 * $6) = $36`"
-msgstr ""
+msgstr "Bestandswert: :math:`24 € + (2 * 6 €) = 36 €`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:186
 msgid "Unit cost: :math:`$36 / 4 = $9`"
-msgstr ""
+msgstr "Stückkosten: :math:`36 € / 4 = 9 €`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:189
 msgid ""
@@ -5311,6 +5447,14 @@ msgid ""
 "then automatically updated, based on the average purchase price of both the "
 "inventory on-hand and the costs accumulated from validated purchase orders."
 msgstr ""
+"Wenn Sie :guilabel:`Durchschnittskosten (AVCO)` als "
+":guilabel:`Kalkulationsverfahren` wählen, wird bei einer Änderung des "
+"numerischen Wertes im Feld *Kosten* für Produkte in der jeweiligen "
+"Produktkategorie ein neuer Datensatz im Bericht *Bestandsbewertung` "
+"erstellt, um den Wert des Produkts anzupassen. Der *Kosten*-Betrag wird dann"
+" automatisch auf der Grundlage des durchschnittlichen Einkaufspreises sowohl"
+" des Lagerbestands als auch der aus validierten Bestellungen kumulierten "
+"Kosten aktualisiert."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:196
 msgid "First In First Out (FIFO)"
@@ -5324,6 +5468,13 @@ msgid ""
 "that product is sold. When the next inventory lot moves up in the queue, an "
 "updated product cost is used based on the valuation of that specific lot."
 msgstr ""
+"Verfolgt die Kosten der ein- und ausgehenden Artikel in Echtzeit und "
+"verwendet den tatsächlichen Preis der Produkte, um die Bewertung zu ändern. "
+"Der älteste Einkaufspreis wird als Kosten für die nächste verkaufte Ware "
+"verwendet, bis ein ganzes Los dieses Produkts verkauft ist. Wenn das nächste"
+" Lagerlos in der Warteschlange nachrückt, werden die aktualisierten "
+"Produktkosten auf der Grundlage der Bewertung dieses spezifischen Loses "
+"verwendet."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:203
 msgid ""
@@ -5331,66 +5482,81 @@ msgid ""
 "variety of reasons, but it is highly sensitive to input data and human "
 "error."
 msgstr ""
+"Diese Methode ist aus einer Reihe von Gründen die wohl genaueste Methode zur"
+" Bestandsbewertung, allerdings ist sie sehr anfällig für Eingabedaten und "
+"menschliche Fehler."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:231
 msgid "$16"
-msgstr ""
+msgstr "16 €"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:0
 msgid "-8 * $10"
-msgstr ""
+msgstr "-8 * 10 €"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:0
 msgid "-2 * $16"
-msgstr ""
+msgstr "-2 * 16 €"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:235
 msgid "$32"
-msgstr ""
+msgstr "32 €"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:237
 msgid "$11"
-msgstr ""
+msgstr "11 €"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:240
 msgid "$44"
-msgstr ""
+msgstr "44 €"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:246
 msgid ""
 "Inventory value is calculated by adding the previous inventory value to the "
 "incoming value: :math:`$80 + (4 * $16) = $144`."
 msgstr ""
+"Der Bestandswert wird durch Addition des vorherigen Bestandswerts zum "
+"Eingangswert berechnet: :math:`80 € + (4 * 16 €) = 144 €`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:251
 msgid ""
 "When delivering ten products, eight units were purchased for $10, and two "
 "units were purchased for $16."
 msgstr ""
+"Bei der Lieferung von zehn Produkten wurden acht Einheiten für 10 € und zwei"
+" Einheiten für 16 € gekauft."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:254
 msgid ""
 "First, the incoming value is calculated by multiplying the on-hand quantity "
 "by the purchased price: :math:`(-8 * $10) + (-2 * $16) = -112`."
 msgstr ""
+"Zunächst wird der Eingangswert berechnet, indem die vorrätoge Menge mit dem "
+"Einkaufspreis multipliziert wird: :math:`(-8 * 10 €) + (-2 * 16 €) = -112`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:256
 msgid ""
 "The inventory value is calculated by subtracting the incoming value from the"
 " previous inventory value: :math:`$144 - $112 = $32`."
 msgstr ""
+"Der Bestandswert wird berechnet, indem der Eingangswert vom vorherigen "
+"Bestandswert abgezogen wird: :math:`144 € - 112 € = 32 €`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:258
 msgid ""
 "Unit cost is calculated by dividing the inventory value by the remaining "
 "quantity: :math:`$32 / 2 = $16`."
 msgstr ""
+"Die Stückkosten werden berechnet, indem der Bestandswert durch die Restmenge"
+" geteilt wird: :math:`32 € / 2 = 16 €`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:261
 msgid ""
 "When receiving two products for $6, inventory value is :math:`$32 + $12 = "
 "$44`. Unit cost is :math:`$44 / 4 = $11`."
 msgstr ""
+"Wenn Sie zwei Produkte für 6 € erhalten, beträgt der Bestandswert: :math:`32"
+" € + 12 € = 44 €`. Die Stückkosten betragen: :math:`44 € / 4 = 11 €`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:265
 msgid ""
@@ -5862,6 +6028,11 @@ msgid ""
 "ownership to items in stock. Thus, products owned by other companies are not"
 " accounted for in the host company's inventory valuation."
 msgstr ""
+"Die Funktion :doc:`Konsignation "
+"<../../shipping_receiving/daily_operations/owned_stock>`  erlaubt es, "
+"Artikel auf Lager zu besitzen. Daher werden Produkte, die anderen "
+"Unternehmen gehören, bei der Bestandsbewertung des Gastunternehmens nicht "
+"berücksichtigt."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst-1
 msgid "See Valuation smart button on a receipt, with Developer mode enabled."
@@ -12608,7 +12779,7 @@ msgstr "Ansicht des Status der Transfers nach Abschluss der Route."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods.rst:5
 msgid "Picking methods"
-msgstr ""
+msgstr "Kommissionierungsmethoden"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:3
 msgid "Batch picking"
@@ -12722,10 +12893,12 @@ msgid ""
 ":doc:`Delivery in two steps "
 "<../daily_operations/receipts_delivery_two_steps>`"
 msgstr ""
+":doc:`Lieferung in zwei Schritten "
+"<../daily_operations/receipts_delivery_two_steps>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:49
 msgid ":doc:`../daily_operations/delivery_three_steps`"
-msgstr ""
+msgstr ":doc:`../daily_operations/delivery_three_steps`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst-1
 msgid "Set up 2-step or 3-step outgoing shipments."
@@ -13356,7 +13529,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.rst:86
 msgid ":doc:`Packages <../../product_management/configure/package>`"
-msgstr ""
+msgstr ":doc:`Pakete <../../product_management/configure/package>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.rst:89
 msgid ""
@@ -13454,11 +13627,15 @@ msgstr ""
 msgid ""
 ":doc:`Delivery in one step <../daily_operations/receipts_delivery_one_step>`"
 msgstr ""
+":doc:`Lieferung in einem Schritt "
+"<../daily_operations/receipts_delivery_one_step>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.rst:129
 msgid ""
 ":doc:`Delivery in three steps <../daily_operations/delivery_three_steps>`"
 msgstr ""
+":doc:`Lieferung in drei Schritten "
+"<../daily_operations/delivery_three_steps>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.rst:131
 msgid ""
@@ -14655,7 +14832,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst-1
 msgid "Install the Delivery Costs module."
-msgstr ""
+msgstr "Installation des Moduls für Versandkosten."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:33
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:28
@@ -15035,7 +15212,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:175
 msgid ":doc:`Invoice cost of shipping <setup_configuration/invoicing>`"
-msgstr ""
+msgstr ":doc:`Versandkosten abrechnen <setup_configuration/invoicing>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:180
 msgid "Add shipping"
@@ -27996,6 +28173,13 @@ msgid ""
 "the 'New Product Introduction' and 'Product Improvement' projects, avoiding "
 "unrelated supplier change or firmware update |ECOs|."
 msgstr ""
+"Zum Beispiel: Ein Hersteller von elektronischen Chips verwendet "
+"möglicherweise die Änderungsauftragsarten „Neue Produkteinführung“, "
+"„Produktverbesserung“, „Komponentenänderung“ und „Firmware-Update“. Die "
+"Designer und Ingenieure können sich auf technische Änderungsaufträge in den "
+"Projekten „Neue Produkteinführung“ und „Produktverbesserung“ konzentrieren "
+"und technische Änderungsaufträge für nicht damit verbundene "
+"Lieferantenänderungen und Firmware-Updates  ignorieren."
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:23
 msgid "Create ECO type"

@@ -4275,6 +4275,7 @@ msgid ""
 " Even if the purchase price on a purchase order differs, the valuation is "
 "the cost defined on the product form."
 msgstr ""
+"Odoo 的默认成本计算方法。产品成本在产品表单中手动定义，并使用该成本计算估值。即使采购订单上的采购价格不同，估价也是产品表单上定义的成本。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:98
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:139
@@ -4517,6 +4518,9 @@ msgid ""
 "then automatically updated, based on the average purchase price of both the "
 "inventory on-hand and the costs accumulated from validated purchase orders."
 msgstr ""
+"当选择 :guilabel:`平均成本（AVCO）` 作为 :guilabel:`成本计算方法` 时，更改相应产品类别中产品的 *成本* "
+"字段中的数值，会在 *库存估价* 报告中创建一条新记录，以调整产品的价值。然后，*成本* "
+"金额会根据手头存货的平均采购价和有效采购订单累积的成本自动更新。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:196
 msgid "First In First Out (FIFO)"
@@ -4530,49 +4534,50 @@ msgid ""
 "that product is sold. When the next inventory lot moves up in the queue, an "
 "updated product cost is used based on the valuation of that specific lot."
 msgstr ""
+"实时追踪入库和出库物品的成本，并使用产品的实际价格来改变估价。最旧的采购价格被用作下一个售出货物的成本，直到该产品的整个批次售出。当下一个库存批次在队列中向上移动时，将根据该特定批次的估价使用更新的产品成本。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:203
 msgid ""
 "This method is arguably the most accurate inventory valuation method for a "
 "variety of reasons, but it is highly sensitive to input data and human "
 "error."
-msgstr ""
+msgstr "由于种种原因，这种方法可以说是最准确的存货估价方法，但它对输入数据和人为错误非常敏感。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:231
 msgid "$16"
-msgstr ""
+msgstr "$16"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:0
 msgid "-8 * $10"
-msgstr ""
+msgstr "-8 * $10"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:0
 msgid "-2 * $16"
-msgstr ""
+msgstr "-2 * $16"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:235
 msgid "$32"
-msgstr ""
+msgstr "$32"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:237
 msgid "$11"
-msgstr ""
+msgstr "$11"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:240
 msgid "$44"
-msgstr ""
+msgstr "$44"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:246
 msgid ""
 "Inventory value is calculated by adding the previous inventory value to the "
 "incoming value: :math:`$80 + (4 * $16) = $144`."
-msgstr ""
+msgstr "库存价值的计算方法是将先前的存货价值与输入的价值相加： :math:`$80 + (4 * $16) = $144`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:251
 msgid ""
 "When delivering ten products, eight units were purchased for $10, and two "
 "units were purchased for $16."
-msgstr ""
+msgstr "当交付十件产品时，八件产品的售价为 10 美元，两件产品的售价为 16 美元。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:254
 msgid ""
@@ -4826,7 +4831,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:406
 msgid "Inventory valuation reporting"
-msgstr ""
+msgstr "库存估值报告"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:408
 msgid ""
@@ -4841,7 +4846,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:414
 msgid ":doc:`../../../../finance/accounting/get_started/cheat_sheet`"
-msgstr ""
+msgstr ":doc:`../../../../finance/accounting/get_started/cheat_sheet`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:416
 msgid ""
@@ -4863,11 +4868,11 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst-1
 msgid "See the full inventory valuation breakdown in Odoo Accounting app."
-msgstr ""
+msgstr "查看 Odoo 会计应用程序中的完整库存估值明细。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:3
 msgid "Using inventory valuation"
-msgstr ""
+msgstr "使用库存估价"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:7
 msgid ""
@@ -5171,7 +5176,7 @@ msgstr ""
 msgid ""
 "`Odoo Tutorial: Inventory Valuation "
 "<https://www.odoo.com/slides/slide/2795/share>`_"
-msgstr ""
+msgstr "`Odoo 教程：库存估值<https://www.odoo.com/slides/slide/2795/share>`_"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking.rst:6
 msgid "Product tracking"
@@ -6142,7 +6147,7 @@ msgstr ""
 msgid ""
 "Odoo makes it possible to specify which lot numbers for a product are chosen"
 " for outgoing shipment on a delivery order form."
-msgstr ""
+msgstr "Odoo 可以在送货单上指定选择哪些产品批号进行外运。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:162
 msgid ""
@@ -7287,11 +7292,11 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:87
 msgid ":doc:`daily_operations/receipts_three_steps`"
-msgstr ""
+msgstr ":doc:`daily_operations/receipts_three_steps`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:88
 msgid ":doc:`daily_operations/delivery_three_steps`"
-msgstr ""
+msgstr ":doc:`daily_operations/delivery_three_steps`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/cross_dock.rst:3
 msgid "Organize a cross-dock in a warehouse"
@@ -7311,6 +7316,8 @@ msgid ""
 " is cross-docking and is it for me? <https://www.odoo.com/blog/business-"
 "hacks-1/post/what-is-cross-docking-and-is-it-for-me-270>`_"
 msgstr ""
+"有关如何组织仓库的更多信息，请阅读我们的博客： 什么是交叉转运？<https://www.odoo.com/blog/business-"
+"hacks-1/post/what-is-cross-docking-and-is-it-for-me-270>`_"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/cross_dock.rst:20
 msgid ""
@@ -7540,7 +7547,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/delivery_three_steps.rst:93
 msgid "Process a packing"
-msgstr ""
+msgstr "处理包装"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/delivery_three_steps.rst:95
 msgid ""
@@ -7558,7 +7565,7 @@ msgstr ""
 msgid ""
 "Click on the packing order associated with the sales order, then click on "
 ":guilabel:`Validate` to complete the packing."
-msgstr ""
+msgstr "点击与销售订单关联的包装单，然后点击 :guilabel:`验证` 以完成包装。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/delivery_three_steps.rst-1
 msgid ""
@@ -7572,6 +7579,8 @@ msgid ""
 ":guilabel:`WH/Packing Zone` location and moves to the :guilabel:`WH/Output` "
 "location. Then, the status of the document will change to :guilabel:`Done`."
 msgstr ""
+"包装订单通过验证，产品将离开 :guilabel:`WH/包装区` 位置并移动到 :guilabel:`WH/出库` 位置。然后，文件状态将变为 "
+":guilabel:`完成`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/delivery_three_steps.rst:116
 msgid "Process a delivery"
