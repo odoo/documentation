@@ -36,7 +36,6 @@ and add it to the `public_components` registry:
 
 .. code-block:: js
 
-    /** @odoo-module */
     import { Component } from "@odoo/owl";
     import { registry } from "@web/core/registry"
 
