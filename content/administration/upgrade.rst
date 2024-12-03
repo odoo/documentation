@@ -390,8 +390,8 @@ few exceptions.
          filestore before deploying the new version.
 
 In case of an issue with your production database, you can request the assistance of Odoo by going
-to the `Support page and selecting "An issue related to my future upgrade (I am testing an upgrade)"
-<https://www.odoo.com/help?stage=migration>`_.
+to the `Support page and selecting "An issue related to my upgrade (production)"
+<https://www.odoo.com/help?stage=post_upgrade>`_.
 
 .. _upgrade-sla:
 
