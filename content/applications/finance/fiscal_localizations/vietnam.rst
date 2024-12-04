@@ -40,8 +40,8 @@ localization:
 Company configuration
 ---------------------
 
-To configure your company information, go to the :guilabel:`Contacts` app, search for your company,
-and select it. Then configure the following fields:
+To configure your company information, go to the Contacts app, search for your company, and select
+it. Then configure the following fields:
 
 - :guilabel:`Name`
 - :guilabel:`Address`, including the :guilabel:`City`, :guilabel:`State`, :guilabel:`Zip Code`,
@@ -51,7 +51,7 @@ and select it. Then configure the following fields:
      information.
    - In the :guilabel:`Street 2` field, enter the neighborhood.
 
-- :guilabel:`Tax ID`: The tax identification number
+- :guilabel:`Tax ID`: The tax identification number.
 
 .. _vietnam/sinvoice:
 
@@ -59,8 +59,7 @@ E-invoice integration with SInvoice
 ===================================
 
 SInvoice_ is an e-invoice service platform provided by Viettel, one of the biggest e-invoice service
-providers in Vietnam. Odoo supports integration with SInvoice to submit the invoices generated in
-Odoo.
+providers in Vietnam. Odoo supports integration with SInvoice to submit invoices generated in Odoo.
 
 .. _vietnam/sinvoice/setup:
 
@@ -73,9 +72,9 @@ Configuration in SInvoice
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To send electronic invoices to SInvoice, :guilabel:`Invoice template` and
-:guilabel:`Invoice symbol` are required to be created in SInvoice followed by issuing a
-:guilabel:`Invoice issuance notice` for the invoice template created. Account manager assigned from
-SInvoice can guide the steps needed.
+:guilabel:`Invoice symbol` are required to be created in SInvoice followed by an
+:guilabel:`Invoice issuance notice` for the invoice template created. An account manager assigned
+by SInvoice can bring support for these steps.
 
 .. seealso::
    - `Invoice template <https://www.sinvoice.vn/2021/02/hdsd-tai-lieu-nghiep-vu-tao-mau-hoa-don-dien-tu.html?debug=1>`_
@@ -111,18 +110,18 @@ Invoice template creation
 
 #. In the :guilabel:`Look up digital certificate` step:
 
-   - To add a digital certificate, click :guilabel:`Add new`.
+   - Click :guilabel:`Add new` to add a digital certificate.
    - Select the :guilabel:`Branch/Enterprise` and the :guilabel:`Type of digital certificate`, then
      all the required fields for each type.
 
      - :guilabel:`Supplier`: CloudCA
      - :guilabel:`Signer ID`: CloudCA
      - :guilabel:`Digital Certificate`: CloudCA
-     - :guilabel:`How to downlaod file`: HSM
+     - :guilabel:`How to download file`: HSM
      - :guilabel:`File Upload`: HSM, USB-TOKEN
 
    - Click :guilabel:`Generate key pair` to generate encryption keys for authentication, then
-     :guilabel:`Save` to save.
+     :guilabel:`Save`.
 
 #. In the :guilabel:`Manage invoice templates` step:
 
@@ -139,11 +138,11 @@ Invoice symbol creation
 On the left side of the main screen, in the :guilabel:`Release management` menu, click
 :guilabel:`Invoice symbol` and follow these steps:
 
-  - Click :guilabel:`Add new`, select the :guilabel:`Invoice template`, set the :guilabel:`Status`
-    to :guilabel:`Active` to activate the symbol, and fill in the :guilabel:`Invoice symbol`.
-  - Check :guilabel:`Stop automatic sending to tax authorities` checkbox and
-    :guilabel:`Default for built-in API` checkbox based on preference.
-  - Click :guilabel:`Save` to save.
+- Click :guilabel:`Add new`, select the :guilabel:`Invoice template`, set the :guilabel:`Status`
+  to :guilabel:`Active` to activate the symbol, and fill in the :guilabel:`Invoice symbol`.
+- Enable :guilabel:`Stop automatic sending to tax authorities` and
+  :guilabel:`Default for built-in API` options based on preference.
+- Click :guilabel:`Save` to save.
 
 .. _vietnam/sinvoice/setup/sinvoice/notice:
 
@@ -153,27 +152,27 @@ Invoice issuance notice
 On the left side of the main screen, in the :guilabel:`Release management` menu, click
 :guilabel:`Create issuance notice` and follow these steps:
 
-  - Click :guilabel:`Add new`, select the
-    :guilabel:`Name of the business unit to issue an e-invoice` and the
-    :guilabel:`Tax agency name`. Based on the unit and tax agency selected, :guilabel:`Tax code`,
-    :guilabel:`Address`, :guilabel:`Phone number` and :guilabel:`Separator used` automatically fill
-    in and are ineditable.
-  - Click :guilabel:`Select the invoice type for issuance`, and then select and fill in the
-    required information below:
+- Click :guilabel:`Add new`, select the
+  :guilabel:`Name of the business unit to issue an e-invoice` and the
+  :guilabel:`Tax agency name`. Based on the business unit and tax agency selected,
+  :guilabel:`Tax code`, :guilabel:`Address`, :guilabel:`Phone number` and
+  :guilabel:`Separator used` automatically fill in and are uneditable.
+- Click :guilabel:`Select the invoice type for issuance`, and then select and fill in the
+  required information below:
 
-    - :guilabel:`Invoice type`: The invoice type to declare an issuance notice on
-    - :guilabel:`Invoice template`: Select from the list of items available based on the invoice
-      type
-    - :guilabel:`Symbol`: Select from the list of items available based on the invoice type
-    - :guilabel:`Quantity`: Total number of invoice to issue for the type selected. Based on the
-      type and template selected, the field is filled in automatically but manually adjustable
-    - :guilabel:`Start date of use`: The date from which the invoice template, range and quantity
-      are used with the notice issued in active status
+  - :guilabel:`Invoice type`: The invoice type on which to declare an issuance notice.
+  - :guilabel:`Invoice template`: Select from the list of items available based on the invoice
+    type.
+  - :guilabel:`Symbol`: Select from the list of items available based on the invoice type.
+  - :guilabel:`Quantity`: Total number of invoices to issue for the type selected. Based on the
+    type and template selected, the field is filled in automatically but manually adjustable.
+  - :guilabel:`Start date of use`: The date from which the invoice template, range, and quantity
+    are used with the notice issued in active status.
 
-  - Click :guilabel:`Save` and select more invoice type if necessary by repeating the step above.
-    Once all invoice types to declare are included, click :guilabel:`Save` to finish drafting of
-    the notice. Once ready, click :guilabel:`Send to tax authorities` for an approval. After the
-    approval, :guilabel:`Status` of the notice is changed to :guilabel:`Active`.
+- Click :guilabel:`Save` and select more invoice types if necessary by repeating the steps above.
+  Then click :guilabel:`Save` to finish drafting the notice.
+- Click :guilabel:`Send to tax authorities` for approval. When it's approved, the notice's
+  :guilabel:`Status` is changed to :guilabel:`Active`.
 
 .. _vietnam/sinvoice/setup/odoo:
 
@@ -189,8 +188,8 @@ To create SInvoice templates, go to :menuselection:`Accounting --> Configuration
 Click :guilabel:`New` and add a :guilabel:`Template code` and a :guilabel:`Template Invoice Type`.
 The :guilabel:`Template code` is the initial sequence of digits in the name assigned by SInvoice.
 For example, if the invoice template is `1/001 - Hóa đơn GTGT - ND123`, the
-:guilabel:`Template code` is `1/001`. The SInvoice templates in Odoo need to match with the ones
-in SInvoice.
+:guilabel:`Template code` is `1/001`. The SInvoice templates in Odoo must match the ones in
+SInvoice.
 
 To add an :guilabel:`Invoice Symbols`, click :guilabel:`Add a new line`.
 
@@ -274,6 +273,8 @@ QR codes activation
 
 Go to :menuselection:`Accounting --> Configuration --> Settings`. Under the
 :guilabel:`Customer Payments` section, activate the :guilabel:`QR Codes` feature.
+Go to :menuselection:`Accounting --> Configuration --> Settings`. Under the
+:guilabel:`Customer Payments` section, activate the :guilabel:`QR Codes` feature.
 
 .. _vietnam/qrcode/set-up/bank:
 
@@ -283,13 +284,13 @@ QR banking account configuration
 In the Contacts app, go to :menuselection:`Contacts --> Configuration --> Bank Accounts` and select
 the bank account to activate QR banking. Fill in the :guilabel:`Bank Identifier Code` specific to
 the bank. Set the :guilabel:`Proxy Type` and fill in the :guilabel:`Proxy Value` field depending on
-the type you chose. The :guilabel:`Proxy Type` depends on the information used to identify the
-:guilabel:`Merchant Account` such as card number and bank account number.
+your chosen type. The :guilabel:`Proxy Type` depends on the information used to identify the
+:guilabel:`Merchant Account`, such as the card number and bank account number.
 
 .. important::
    - The account holder's country must be set to `Vietnam` on its contact form.
    - The account holder's city is mandatory.
-   - You could also include the invoice number in the QR code by checking the
+   - The invoice number can be included in the QR code by enabling the
      :guilabel:`Include Reference` checkbox.
 
 .. seealso::
@@ -300,8 +301,9 @@ the type you chose. The :guilabel:`Proxy Type` depends on the information used t
 Bank journal configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Go to :menuselection:`Accounting --> Configuration --> Journals`, open the bank journal, then fill
-out the :guilabel:`Account Number` and :guilabel:`Bank` under the :guilabel:`Journal Entries` tab.
+Go to :menuselection:`Accounting --> Configuration --> Journals`, open the :guilabel:`Bank`
+journal, then fill out the :guilabel:`Account Number` and :guilabel:`Bank` under the
+:guilabel:`Journal Entries` tab.
 
 .. _vietnam/qrcode/workflow:
 
