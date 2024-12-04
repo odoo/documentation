@@ -194,18 +194,38 @@ than that of any transactional email server(s). Finally, save the settings and :
    :alt: Odoo outgoing email server settings.
 
 .. important::
-   In order for the notifications feature to work using Mailjet, there are three settings that need
-   to be set in Odoo.
+   For the notifications feature to work using Mailjet, with a custom domain, the following settings
+   need to be configured:
 
+<<<<<<< 17.0
    #. The :guilabel:`From Filter` needs to be set on the server configuration. It is recommended
       to set it as a domain and not a full email address. It should match the domain in the two
       proceeding steps. For more information, check out the :ref:`FROM filtering documentation
       <email-outbound-different-servers-personalized-from-filtering>`.
+||||||| b923389182b77fc6a861b51cf5689ccbbdb3e861
+   #. The :guilabel:`From Filter` needs to be set on the server configuration. It is recommended
+      to set it as a domain and not a full email address. It should match the domain in the two
+      proceeding steps. More information can be referenced :ref:`here
+      <email_communication/from_filter>`.
+=======
+   #. The :guilabel:`From Filter` needs to be set on the server configuration. It is recommended to
+      set it as a domain and not a full email address. It should match the domain in the two
+      proceeding steps. More information can be referenced :ref:`here
+      <email_communication/from_filter>`.
+>>>>>>> 5700d99e5042353b271d887d34c687fd00ec37e2
    #. The :guilabel:`mail.default.from` system parameter must have the value
       `notifications\@yourdomain.com`.
    #. The :guilabel:`mail.default.from_filter` system parameter must have the value
-      `yourdomain.com`. Replace `yourdomain` with the custom domain for the Odoo database. If there
-      isn't one, then use the :guilabel:`mail.catchall.domain` system parameter.
+      `yourdomain.com`. Replace `yourdomain` with the custom domain.
+
+   If utilizing a database domain, and **not** a custom domain, the following settings need to be
+   configured:
+
+   #. The :guilabel:`From Filter` needs to be set on the server configuration. It should match the
+      domain in the two proceeding steps.
+   #. The :guilabel:`mail.default.from` system parameter must have the value `notifications`.
+   #. The :guilabel:`mail.default.from_filter` system parameter must have the value
+      `yourdomain.odoo.com`.
 
    For more information, check out the :ref:`"Using a unique email address" documentation
    <email-outbound-unique-address>`.
