@@ -150,3 +150,37 @@ successfully sent to Pricer`. If there is any issue, the system displays an erro
 .. warning::
    If a request sent to Pricer fails, Odoo still considers that the product has been updated. In
    that case, we recommend forcing the update of all tags.
+
+Discount labels
+---------------
+
+To display a discount label on a Pricer Tag, you need to link a :doc:`pricelist <pricelists>` to the
+product variant associated with the tag.
+
+To do so, open the product variant form:
+
+#. Go to :menuselection:`Point of Sale --> Products --> Product Variants`.
+#. Select the product you want to apply a discount to.
+
+Then, set the desired pricelist:
+
+#. Go to the :guilabel:`General Information` tab.
+#. Select a pricelist in the :guilabel:`Pricer Sales Pricelist` field.
+
+Once a pricelist is set, the :guilabel:`On Sale Price` field appears, showing the :guilabel:`Sales
+Price` with the discount applied.
+
+.. image:: electronic_labels/pricer-sales-pricelist.png
+   :alt: Linking a pricelist to a product variant
+
+After updating your electronic labels, a `PROMO` tag should appear on the electronic label,
+displaying both the old, crossed-out price and the discounted price.
+
+.. note::
+   - Currently, pricelists that offer discounts for purchasing multiple units or derive their prices
+     from other pricelists are not supported.
+   - Assigning a pricelist to a product variant only affects the electronic label display. Scanning
+     the product at the point of sale does not automatically apply the discount.
+
+.. seealso::
+   :doc:`discounts`
