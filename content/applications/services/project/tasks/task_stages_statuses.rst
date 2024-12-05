@@ -47,6 +47,8 @@ there, click one of the following:
  - :guilabel:`Delete`: to delete this stage.
  - :guilabel:`Archive/Unarchive all`: to archive or unarchive all of the tasks in this stage.
 
+.. _project/tasks/task_stages_statuses/statuses:
+
 Task statuses
 =============
 
