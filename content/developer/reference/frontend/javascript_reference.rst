@@ -687,6 +687,13 @@ Date (`date`)
 
             <field name="datefield" options="{'warn_future': true}" />
 
+    - `placeholder_field`: uses the value of this field as a placeholder.
+
+        .. code-block:: xml
+
+            <field name="datefield_placeholder" column_invisible="1"/>   <!-- needed for options of datefield -->
+            <field name="datefield" options="{'placeholder_field': 'datefield_placeholder'}"/>
+
 .. _reference/javascript_reference/datetime_field:
 
 Date & Time (`datetime`)
