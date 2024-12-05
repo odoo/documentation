@@ -146,3 +146,4 @@ Examples can be easily adapted from XML-RPC to JSON-RPC.
     * https://github.com/nicolas-van/openerp-client-lib
     * http://pythonhosted.org/OdooRPC
     * https://github.com/abhishek-jaiswal/php-openerp-lib
+    * https://pub.dev/packages/json_rpc_2
