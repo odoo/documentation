@@ -687,6 +687,13 @@ Date (`date`)
 
             <field name="datefield" options="{'warn_future': true}" />
 
+    - `placeholder_field`: uses the value of this field as placeholder.
+
+        .. code-block:: xml
+
+            <field name="deferred_end_date_placeholder" column_invisible="1"/>   <!-- needed for options of deferred_end_date -->
+            <field name="deferred_end_date" options="{'placeholder_field': 'deferred_end_date_placeholder'}"/>
+
 .. _reference/javascript_reference/datetime_field:
 
 Date & Time (`datetime`)
