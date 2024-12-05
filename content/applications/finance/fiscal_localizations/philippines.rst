@@ -15,7 +15,6 @@ template to get started with using Philippine accounting.
      localization module **Philippines - Accounting** is automatically installed.
    - If the module is installed in an existing company, the **chart of accounts** and **taxes** will
      *not* be replaced if there are already posted journal entries.
-   - The BIR 2307 report is installed, but the withholding taxes may need to be manually created.
 
 Chart of accounts and taxes
 ---------------------------
@@ -26,7 +25,7 @@ installed and linked to the relevant account:
 - Sales and Purchase VAT 12%
 - Sales and Purchase VAT Exempt
 - Sales and Purchase VAT Zero-Rated
-- Purchase Withholding
+- Sales and Purchase Withholding
 
 For the withholding taxes (:menuselection:`Configuration --> Taxes`), there is an additional
 :guilabel:`Philippines ATC` field under the :guilabel:`Philippines` tab.
@@ -35,8 +34,8 @@ For the withholding taxes (:menuselection:`Configuration --> Taxes`), there is a
    :alt: Philippines ATC code field set on taxes.
 
 .. note::
-   Taxes' ATC codes are used for the BIR 2307 report. If a tax is created manually, its ATC code
-   must be added.
+   Taxes' ATC codes are used for the BIR 2307, SAWT and QAP reports. 
+   If a tax is created manually, its ATC code must be added.
 
 Contacts
 --------
@@ -61,9 +60,8 @@ For individuals not belonging to a company, identify them by using the following
 BIR 2307 report
 ===============
 
-**BIR 2307** report data, also known as `Certificate of Creditable Tax Withheld at Source
-<https://www.bir.gov.ph/index.php/bir-forms/certificates.html>`_, can be generated for purchase
-orders and vendor payments with the applicable withholding taxes.
+**BIR 2307** report data, also known as *Certificate of Creditable Tax Withheld at Source*, 
+can be generated for purchase orders and vendor payments with the applicable withholding taxes.
 
 To generate a BIR 2307 report, select one or multiple vendor bills from the list view, and click
 :menuselection:`Action --> Download BIR 2307 XLS`.
@@ -146,3 +144,43 @@ Return)* Jan. 2023 version.
 .. important::
    Odoo cannot generate the 2550Q BIR formatted PDF report directly. It should be used as a
    reference when externally filing the form manually or online.
+
+QAP & SAWT Report
+=================
+
+The **QAP**, also known as the *Quarterly Alphalist of Payees* report and the **SAWT**, also known
+as the *Summary Alphalist of Withholding Tax* report can be viewed and exported (in XLSX format).
+The report can be viewed from :menuselection:`Reporting --> Tax Return`. In the Tax Return,
+switch the report to select :menuselection:`Report: --> SAWT & QAP (PH)`.
+
+The report is split into two sections, which can be accessed from their respective buttons at the
+top:
+
+- | :guilabel:`SAWT` for :abbr:`SAWT (Summary Alphalist of Withholding Tax)` report
+  | All customer invoices with the associated sales witholding taxes applied are 
+   shown in this report.
+- | :guilabel:`QAP` for :abbr:`QAP (Quarterly Alphalist of Payees)` report
+  | All vendor bills with the associated purchase witholding taxes applied are shown in this report.
+
+.. image:: philippines/philippines-sawt.png
+   :alt: SAWT & QAP Report
+
+.. important::
+   Odoo cannot generate the DAT files directly. The :guilabel:`Export SAWT & QAP` and 
+   :guilabel:`XLSX` buttons export an XLSX file, which can be processed using an *external* tool to 
+   convert to the DAT format.
+
+Check Printing
+==============
+
+Philippines check print layout is following the latest 
+:abbr:`PCHC (Philippine Clearing House Corporation)` standardised printing format.
+For enabling check printing, under :menuselection:`Accounting --> Configuration --> Settings`, 
+ensure that the :guilabel:`Checks` setting is enabled and to choose the correct 
+:guilabel:`Check Layout` as `Print Check - PH`.
+
+.. image:: philippines/philippines-check-setup.png
+   :alt: Print Check - PH settings
+
+The workflow to print the check is following the standard workflow which can be followed here:
+:doc:`Pay by Checks <../accounting/payments/pay_checks>`.
