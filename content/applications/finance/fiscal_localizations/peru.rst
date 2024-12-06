@@ -909,7 +909,7 @@ After configuring the Peruvian :ref:`electronic invoicing <peru-accounting-setti
 the following configurations for the **eCommerce** flow:
 
 - :ref:`Client account registration <checkout-sign>`;
-- :ref:`Automatic invoice <handling/legal>`;
+- :ref:`Automatic invoice <ecommerce/handling/legal>`;
 - :doc:`../../websites/ecommerce/products`: Set the :guilabel:`Invoicing Policy` to
   :guilabel:`Ordered quantities` and define the desired :guilabel:`Customer taxes`.
 - :doc:`../payment_providers`;
