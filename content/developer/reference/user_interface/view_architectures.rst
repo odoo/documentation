@@ -1648,11 +1648,16 @@ The `header` element accepts the following children elements:
 
 .. _reference/view_architectures/list/control:
 
-`control` & `create`: add inline create buttons
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+`control`: customize create and delete actions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The `control` element defines a control row that accepts create buttons. Each create button is
-defined through a `create` element.
+The `control` element allows to customize the create and delete actions. In particular, it allows
+to add special create buttons with specific contexts, to use regular view buttons as create
+actions, and to make the create and delete actions available only under certain conditions.
+
+.. important::
+   The `control` element is only supported in list views inside :class:`~odoo.fields.One2many` or
+   :class:`~odoo.fields.Many2many` fields.
 
 .. code-block:: xml
 
@@ -1660,31 +1665,62 @@ defined through a `create` element.
       <control>
           <create string="LABEL"/>
           <BUTTONS/>
+          <delete invisible="parent.is_sent">
        </control>
        ...
    </list>
 
-The `control` element takes no attributes.
+The `control` element takes no attributes. It accepts the following children elements:
 
-The `create` element can have the following attributes:
-
-.. attribute:: string
+.. attribute:: create
    :noindex:
 
-   The button's text.
+   The given `create` elements replace the default :guilabel:`Add a line` button.
+   A `create` element can have the following attributes:
 
-   :requirement: Mandatory
-   :type: str
+   .. attribute:: string
+      :noindex:
 
-.. attribute:: context
+      The button's text.
+
+      :requirement: Mandatory
+      :type: str
+
+   .. attribute:: context
+      :noindex:
+
+      The context that is merged into the view's context when performing the button's call, as a Python
+      expression that evaluates to a dict.
+
+      :requirement: Optional
+      :type: :ref:`Python expression <reference/view_architectures/python_expression>`
+      :default: `{}`
+
+   .. attribute:: invisible
+      :noindex:
+
+      Whether the element is visible (`False`) or hidden (`True`), as a Python expression that evaluates to a
+      bool. The parent record and the context can be used in the expresion.
+
+      :requirement: Optional
+      :type: :ref:`Python expression <reference/view_architectures/python_expression>`
+      :default: `False`
+
+.. attribute:: button
    :noindex:
 
-   The context that is merged into the view's context when performing the button's call, as a Python
-   expression that evaluates to a dict.
+   Like :ref:`regular view buttons <reference/view_architectures/list/button>`
 
-   :requirement: Optional
-   :type: :ref:`Python expression <reference/view_architectures/python_expression>`
-   :default: `{}`
+.. attribute:: delete
+
+   The `delete` element allows to conditionnaly hide the delete icon, row by row. There can only be
+   one child of this type. It can have only one attribute:
+
+   .. attribute:: invisible
+      :noindex:
+
+      Same as for `create`, except that in this case the record itself can also be used in the
+      expresion.
 
 .. admonition:: Possible structure and representation of its rendering
 
@@ -1702,16 +1738,11 @@ The `create` element can have the following attributes:
                  <field name="currency"/>
                  <field name="tax_id"/>
                  <control>
-                     <create string="Add a item"/>
+                     <create string="Add an item"/>
                      <create string="Add a section" context="{'default_type': 'section'}"/>
                      <create string="Add a note" context="{'default_type': 'note'}"/>
                  </control>
              </list>
-
-.. note::
-   Using the `control` element makes sense only if the list view is inside a
-   :class:`~odoo.fields.One2many` or :class:`~odoo.fields.Many2many` field. If any `create` element
-   is defined, it overwrites the default :guilabel:`add a line` button.
 
 .. _reference/view_architectures/search:
 
@@ -2924,6 +2955,11 @@ The `progressbar` element can have the following attributes:
                      ...
                  </templates>
              </kanban>
+
+`control`: customize create and delete actions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Like for :ref:`list views <reference/view_architectures/list/control>`.
 
 .. todo::
   - kanban-specific CSS
