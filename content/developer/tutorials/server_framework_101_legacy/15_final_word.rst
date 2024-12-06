@@ -2,6 +2,12 @@
 Chapter 15: The final word
 ==========================
 
+.. danger::
+   This tutorial is outdated. We recommend reading :doc:`../server_framework_101` instead.
+
+.. seealso::
+   :doc:`Homepage of the tutorial <../server_framework_101_legacy>`
+
 Coding guidelines
 =================
 

@@ -2,6 +2,12 @@
 Chapter 6: Basic Views
 ======================
 
+.. danger::
+   This tutorial is outdated. We recommend reading :doc:`../server_framework_101` instead.
+
+.. seealso::
+   :doc:`Homepage of the tutorial <../server_framework_101_legacy>`
+
 We have seen in the :doc:`previous chapter <05_firstui>` that Odoo is able
 to generate default views for a given model. In practice, the default view is **never** acceptable
 for a business application. Instead, we should at least organize the various fields in a logical
