@@ -140,8 +140,8 @@ Online payment providers
      - Full and partial
      - |V|
    * - :doc:`Xendit <payment_providers/xendit>`
-     - The provider's website
-     -
+     - Odoo or the provider's website
+     - |V|
      -
      -
      -
@@ -156,6 +156,8 @@ Online payment providers
      providers. Payment providers allow customers to pay online, and bank accounts are added and
      configured in the Accounting app to do a :doc:`bank reconciliation
      <accounting/bank/reconciliation>`.
+   - On Xendit, credit card payments are done via Odoo while other payment methods are done via
+     Xendit's webiste.
 
 .. tip::
    In addition to the regular payment providers that integrate with an API, such as Stripe, PayPal,
