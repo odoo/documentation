@@ -34,7 +34,7 @@ For the withholding taxes (:menuselection:`Configuration --> Taxes`), there is a
    :alt: Philippines ATC code field set on taxes.
 
 .. note::
-   Taxes' ATC codes are used for the BIR 2307, SAWT and QAP reports. 
+   Taxes' ATC codes are used for the BIR 2307, SAWT and QAP reports.
    If a tax is created manually, its ATC code must be added.
 
 Contacts
@@ -60,7 +60,7 @@ For individuals not belonging to a company, identify them by using the following
 BIR 2307 report
 ===============
 
-**BIR 2307** report data, also known as *Certificate of Creditable Tax Withheld at Source*, 
+**BIR 2307** report data, also known as *Certificate of Creditable Tax Withheld at Source*,
 can be generated for purchase orders and vendor payments with the applicable withholding taxes.
 
 To generate a BIR 2307 report, select one or multiple vendor bills from the list view, and click
@@ -157,7 +157,7 @@ The report is split into two sections, which can be accessed from their respecti
 top:
 
 - | :guilabel:`SAWT` for :abbr:`SAWT (Summary Alphalist of Withholding Tax)` report
-  | All customer invoices with the associated sales witholding taxes applied are 
+  | All customer invoices with the associated sales witholding taxes applied are
    shown in this report.
 - | :guilabel:`QAP` for :abbr:`QAP (Quarterly Alphalist of Payees)` report
   | All vendor bills with the associated purchase witholding taxes applied are shown in this report.
@@ -166,17 +166,17 @@ top:
    :alt: SAWT & QAP Report
 
 .. important::
-   Odoo cannot generate the DAT files directly. The :guilabel:`Export SAWT & QAP` and 
-   :guilabel:`XLSX` buttons export an XLSX file, which can be processed using an *external* tool to 
+   Odoo cannot generate the DAT files directly. The :guilabel:`Export SAWT & QAP` and
+   :guilabel:`XLSX` buttons export an XLSX file, which can be processed using an *external* tool to
    convert to the DAT format.
 
 Check Printing
 ==============
 
-Philippines check print layout is following the latest 
+Philippines check print layout is following the latest
 :abbr:`PCHC (Philippine Clearing House Corporation)` standardised printing format.
-For enabling check printing, under :menuselection:`Accounting --> Configuration --> Settings`, 
-ensure that the :guilabel:`Checks` setting is enabled and to choose the correct 
+For enabling check printing, under :menuselection:`Accounting --> Configuration --> Settings`,
+ensure that the :guilabel:`Checks` setting is enabled and to choose the correct
 :guilabel:`Check Layout` as `Print Check - PH`.
 
 .. image:: philippines/philippines-check-setup.png
