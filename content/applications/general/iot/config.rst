@@ -13,5 +13,3 @@ Configuration
    config/https_certificate_iot
    config/updating_iot
    config/troubleshooting
-   config/windows_iot
-   config/ssh_connect
