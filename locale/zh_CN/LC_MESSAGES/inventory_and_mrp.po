@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-04 11:48+0000\n"
+"POT-Creation-Date: 2024-12-02 12:38+0000\n"
 "PO-Revision-Date: 2023-11-08 08:57+0000\n"
 "Last-Translator: Chloe Wang, 2024\n"
 "Language-Team: Chinese (China) (https://app.transifex.com/odoo/teams/41243/zh_CN/)\n"
@@ -429,8 +429,8 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:38
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:20
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/uom.rst:21
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:20
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:44
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:18
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/create_sn.rst:35
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/cross_dock.rst:18
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/delivery_three_steps.rst:16
@@ -4524,7 +4524,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:93
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:162
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:81
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:77
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:54
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:77
 msgid "Create purchase order"
@@ -5048,349 +5048,6 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation.rst:5
 msgid "Inventory valuation"
 msgstr "库存计价"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:3
-msgid "Landed costs"
-msgstr "落地成本"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:12
-msgid ""
-"When shipping products to customers, the landed cost is the total price of a"
-" product or shipment, including all expenses associated with shipping the "
-"product."
-msgstr "向客户运送产品时，落地成本是产品或货物的总价，包括与运送产品相关的所有费用。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:15
-msgid ""
-"In Odoo, the *Landed Costs* feature is used to take additional costs into "
-"account when calculating the valuation of a product. This includes the cost "
-"of shipment, insurance, customs duties, taxes, and other fees."
-msgstr "在 Odoo 中，*落地成本*功能用于在计算产品估值时考虑额外成本。这包括运输成本、保险、关税、税费和其他费用。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:22
-msgid ""
-"To add landed costs to products, the *Landed Costs* feature must first be "
-"enabled. To enable this feature, navigate to :menuselection:`Inventory app "
-"--> Configuration --> Settings`, and scroll to the :guilabel:`Valuation` "
-"section."
-msgstr ""
-"要在产品中添加落地成本，必须首先启用*落地成本*功能。要启用此功能，请导航至 :menuselection:`库存应用程序 --> 配置 --> "
-"设置`，然后滚动到 :guilabel:`估值` 部分。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:26
-msgid ""
-"Tick the checkbox next to the :guilabel:`Landed Costs` option, and click "
-":guilabel:`Save` to save changes."
-msgstr "勾选 :guilabel:`落地成本` 选项旁边的复选框，然后点击 :guilabel:`保存`，以保存更改。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:29
-msgid ""
-"Once the page refreshes, a new :guilabel:`Default Journal` field appears "
-"below the :guilabel:`Landed Costs` feature in the :guilabel:`Valuation` "
-"section."
-msgstr ""
-"页面刷新后，在 :guilabel:`估值` 部分的 :guilabel:`落地成本` 功能下方会出现一个新的 :guilabel:`默认日记账` "
-"字段。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:32
-msgid ""
-"Click the :guilabel:`Default Journal` drop-down menu to reveal a list of "
-"accounting journals. Select a journal for which all accounting entries "
-"related to landed costs should be recorded."
-msgstr "点击 :guilabel:`默认日记账` 下拉菜单，显示会计分录列表。选择要记录与落地成本相关的所有会计分录的日记账。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst-1
-msgid ""
-"Landed Costs feature and resulting Default Journal field in the Inventory "
-"settings."
-msgstr "库存设置中的落地成本功能和由此产生的默认日记账字段。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:40
-msgid "Create landed cost product"
-msgstr "创建落地成本产品"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:42
-msgid ""
-"For charges that are consistently added as landed costs, a landed cost "
-"product can be created in Odoo. This way, a landed cost product can be "
-"quickly added to a vendor bill as an invoice line, instead of having to be "
-"manually entered every time a new vendor bill is created."
-msgstr ""
-"对于持续添加为落地成本的费用，可在 Odoo "
-"中创建落地成本产品。这样，落地成本产品就可以作为发票项目快速添加到供应商账单中，而不必在每次创建新的供应商账单时手动输入。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:46
-msgid ""
-"To do this, create a new product by going to :menuselection:`Inventory app "
-"--> Products --> Products`, and clicking :guilabel:`New`."
-msgstr ""
-"要执行此操作，请进入 :menuselection:`库存应用程序 --> 产品 --> 产品`，然后点击 :guilabel:`新建`，创建新产品。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:49
-msgid ""
-"Assign a name to the landed cost product in the :guilabel:`Product Name` "
-"field (i.e. `International Shipping`). In the :guilabel:`Product Type` "
-"field, click the drop-down menu, and select :guilabel:`Service` as the "
-":guilabel:`Product Type`."
-msgstr ""
-"在 :guilabel:`产品名称` 字段中为落地成本产品指定一个名称（例如，`国际航运`）。在 :guilabel:`产品类型` "
-"字段，点击下拉菜单，选择 :guilabel:`服务` 作为 :guilabel:`产品类型`。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:54
-msgid ""
-"Landed cost products **must** have their :guilabel:`Product Type` set to "
-":guilabel:`Service`."
-msgstr "落地成本产品**必须**将其 :guilabel:`产品类型` 设置为 :guilabel:`服务`。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:56
-msgid ""
-"Click the :guilabel:`Purchase` tab, and tick the checkbox next to "
-":guilabel:`Is a Landed Cost` in the :guilabel:`Vendor Bills` section. Once "
-"ticked, a new :guilabel:`Default Split Method` field appears below it, "
-"prompting a selection. Clicking that drop-down menu reveals the following "
-"options:"
-msgstr ""
-"点击:guilabel:`采购`选项卡，在:guilabel:`供应商账单`部分勾选:guilabel:`是到岸成本`旁边的复选框。勾选后，下面会出现一个新的"
-" :guilabel:`默认拆分方法`字段，提示选择。点击该下拉菜单可显示以下选项："
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:60
-msgid ""
-":guilabel:`Equal`: splits the cost equally across each product included in "
-"the receipt, regardless of the quantity of each."
-msgstr ":guilabel:`平摊`：将成本平均分摊到收据中的每个产品上，与每个产品的数量无关。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:62
-msgid ""
-":guilabel:`By Quantity`: splits the cost across each unit of all products in"
-" the receipt."
-msgstr ":guilabel:`按数量`：将成本分摊到收据中所有产品的每个单位。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:63
-msgid ""
-":guilabel:`By Current Cost`: splits the cost according to the cost of each "
-"product unit, so a product with a higher cost receives a greater share of "
-"the landed cost."
-msgstr ":guilabel:`按当前成本`：根据每个产品单位的成本来分摊成本，因此成本较高的产品可获得较大份额的到岸成本。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:65
-msgid ""
-":guilabel:`By Weight`: splits the cost, according to the weight of the "
-"products in the receipt."
-msgstr ":guilabel:`按重量`：根据收据中产品的重量计算成本。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:66
-msgid ""
-":guilabel:`By Volume`: splits the cost, according to the volume of the "
-"products in the receipt."
-msgstr ":guilabel:`按体积`：根据收据中的产品体积分摊成本。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst-1
-msgid ""
-"Is a Landed Cost checkbox and Default Split Method on service type product "
-"form."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:72
-msgid ""
-"When creating new vendor bills, this product can be added as an invoice line"
-" as a landed cost."
-msgstr "在创建新的供应商账单时，该产品可作为落地成本添加到发票项目中。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:75
-msgid ""
-"To apply a landed cost on a vendor bill, the products included in the "
-"original |PO| **must** belong to a *Product Category* with its *Force "
-"Removal Strategy* set to |FIFO|. The *Costing Method* can be set to either "
-"|AVCO| or |FIFO|, and the valuation method can be :doc:`manual "
-"<using_inventory_valuation>` or :doc:`automatic "
-"<inventory_valuation_config>`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:83
-msgid ""
-"Navigate to :menuselection:`Purchase app --> New` to create a new request "
-"for quotation (RfQ). In the :guilabel:`Vendor` field, add a vendor to order "
-"products from. Then, click :guilabel:`Add a product`, under the "
-":guilabel:`Products` tab, to add products to the |RfQ|."
-msgstr ""
-"导航至 :menuselection:`采购应用程序 --> 新建` 以创建新的询价（RfQ）。在 :guilabel:`供应商` "
-"字段中，添加要订购产品的供应商。然后，点击 :guilabel:`产品` 标签下的 :guilabel:`添加产品`，将产品添加到询价单中。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:87
-msgid ""
-"Once ready, click :guilabel:`Confirm Order` to confirm the order. Then, "
-"click :guilabel:`Receive Products` once the products have been received, "
-"followed by :guilabel:`Validate`."
-msgstr ""
-"准备就绪后，点击 :guilabel:`确认订单`，以确认订单。收到产品后，点击 :guilabel:`接收产品`，然后点击 "
-":guilabel:`验证`。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:91
-msgid "Create vendor bill"
-msgstr "创建供应商账单"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:93
-msgid ""
-"Once the vendor fulfills the |PO| and sends a bill, a vendor bill can be "
-"created from the |PO| in Odoo."
-msgstr "一旦供应商完成 |PO| 并发送账单，就可以在 Odoo 中根据 |PO| 创建供应商账单。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:96
-msgid ""
-"Navigate to the :menuselection:`Purchase app`, and click into the |PO| for "
-"which a vendor bill should be created. Then, click :guilabel:`Create Bill`. "
-"This opens a new :guilabel:`Vendor Bill` in the :guilabel:`Draft` stage."
-msgstr ""
-"导航至 :menuselection:`采购应用程序` 并点击要为其创建供应商账单的 |PO|。然后点击 :guilabel:`创建账单`。这将在 "
-":guilabel:`草稿` 阶段打开一个新的 :guilabel:`供应商账单`。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:100
-msgid ""
-"In the :guilabel:`Bill Date` field, click the line to open a calendar "
-"popover menu, and select the date on which this draft bill should be billed."
-msgstr "在 :guilabel:`账单日期` 字段中，点击该行打开日历弹出式菜单，并选择此账单草稿的账单日期。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:103
-msgid ""
-"Then, under the :guilabel:`Invoice Lines` tab, click :guilabel:`Add a line`,"
-" and click the drop-down menu in the :guilabel:`Product` column to select "
-"the previously-created landed cost product. Click the :icon:`fa-cloud-"
-"upload` :guilabel:`(cloud with arrow)` icon to manually save and update the "
-"draft bill."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst-1
-msgid "Landed Costs column checkboxes for product and landed cost."
-msgstr "落地成本栏的产品和到岸成本复选框。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:112
-msgid ""
-"In the :guilabel:`Landed Costs` column, the product ordered from the vendor "
-"does **not** have its checkbox ticked, while the landed cost product's "
-"checkbox **is** ticked. This differentiates landed costs from all other "
-"costs displayed on the bill."
-msgstr ""
-"在 "
-":guilabel:`落地成本`列中，从供应商订购的产品的复选框**未**被勾选，而落地成本产品的复选框**已**被勾选。这将落地成本与账单上显示的所有其他成本区分开来。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:116
-msgid ""
-"Additionally, at the top of the form, a :guilabel:`Create Landed Costs` "
-"button appears."
-msgstr "此外，在表单顶部会出现一个 :guilabel:`创建落地成本` 按钮。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst-1
-msgid "Create Landed Costs button on vendor bill."
-msgstr "在供应商账单上创建落地成本按钮。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:123
-msgid "Add landed cost"
-msgstr "添加落地成本"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:125
-msgid ""
-"Once a landed cost is added to the vendor bill, click :guilabel:`Create "
-"Landed Costs` at the top of the vendor bill."
-msgstr "将落地成本添加到供应商账单后，点击供应商账单顶部的 :guilabel:`创建落地成本`。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:128
-msgid ""
-"Doing so automatically creates a landed cost record, with a set landed cost "
-"pre-filled in the product line in the :guilabel:`Additional Costs` tab."
-msgstr "这样做会自动创建一个落地成本记录，并在 :guilabel:`额外费用` 选项卡的产品行中预填设定的落地成本。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:131
-msgid ""
-"From the :guilabel:`Landed Cost` form, click the :guilabel:`Transfers` drop-"
-"down menu, and select which transfer the landed cost belongs to."
-msgstr "在 :guilabel:`落地成本` 表格中，点击 :guilabel:`转账` 下拉菜单，选择落地成本属于哪项转账。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst-1
-msgid "Landed cost form with selected receipt transfer."
-msgstr "带选定收据转账的落地成本表。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:139
-msgid ""
-"In addition to creating landed costs directly from a vendor bill, landed "
-"cost records can *also* be created by navigating to "
-":menuselection:`Inventory app --> Operations --> Landed Costs`, and clicking"
-" :guilabel:`New`."
-msgstr ""
-"除了直接从供应商账单创建落地成本外，*还可*通过导航至 :menuselection:`库存应用程序 --> 操作 --> 落地成本`，然后点击 "
-":guilabel:`新建`，创建落地成本记录。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:143
-msgid ""
-"After setting the picking from the :guilabel:`Transfers` drop-down menu, "
-"click :guilabel:`Compute` (at the bottom of the form, under the "
-":guilabel:`Total:` cost)."
-msgstr ""
-"从 :guilabel:`转账` 下拉菜单中设置选择后，点击 :guilabel:`计算`（位于表格底部，在 :guilabel:`总计：`成本下）。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:146
-msgid ""
-"Click the :guilabel:`Valuation Adjustments` tab to see the impact of the "
-"landed costs. The :guilabel:`Original Value` column lists the original price"
-" of the |PO|, the :guilabel:`Additional Landed Cost` column displays the "
-"landed cost, and the :guilabel:`New Value` displays the sum of the two, for "
-"the total cost of the |PO|."
-msgstr ""
-"点击 :guilabel:`估值调整` 选项卡，查看到岸成本的影响。:guilabel:`原始价值`栏列出了 |PO| "
-"的原始价格，:guilabel:`额外到岸成本` 栏显示了到岸成本，:guilabel:`新价值`显示了两者的总和，即 |PO| 的总成本。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:151
-msgid ""
-"Once ready, click :guilabel:`Validate` to post the landed cost entry to the "
-"accounting journal."
-msgstr "准备就绪后，点击 :guilabel:`验证`，将到岸成本分录记入会计日记账。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:153
-msgid ""
-"This causes a :guilabel:`Valuation` smart button to appear at the top of the"
-" form. Click the :guilabel:`Valuation` smart button to open a "
-":guilabel:`Stock Valuation` page, with the product's updated valuation "
-"listed."
-msgstr ""
-"这样，表单顶部就会出现一个 :guilabel:`估值` 智能按钮。点击 :guilabel:`估值` 智能按钮打开 :guilabel:`库存估值` "
-"页面，其中列出了产品的最新估值。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:158
-msgid ""
-"For a :guilabel:`Valuation` smart button to appear upon validation, the "
-"product's :guilabel:`Product Type` **must** be set to :guilabel:`Storable`."
-msgstr ""
-"要在验证时显示 :guilabel:`估值` 智能按钮，产品的 :guilabel:`产品类型` **必须**设置为 :guilabel:`可存储`。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:161
-msgid ""
-"To view the valuation of *every* product, including landed costs, navigate "
-"to :menuselection:`Inventory app --> Reporting --> Valuation`."
-msgstr "要查看 *每个* 产品的估价（包括落地成本），请导航至 :menuselection:`库存应用程序 --> 报告 --> 估价`。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:165
-msgid ""
-"Each journal entry created for a landed cost on a vendor bill can be viewed "
-"in the *Accounting* app."
-msgstr "可以在 *会计* 应用程序中查看为供应商账单上的落地成本创建的每一条日记账分录。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:168
-msgid ""
-"To locate these journal entries, navigate to :menuselection:`Accounting app "
-"--> Accounting --> Journal Entries`, and locate the correct entry, by number"
-" (i.e. `PBNK1/2024/XXXXX`)."
-msgstr ""
-"要查找这些日记账分录，请导航至 :menuselection:`会计应用程序 --> 会计 --> 日记账分录`，然后按编号（即 "
-"`PBNK1/2024/XXXXX`）查找正确的分录。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:171
-msgid ""
-"Click into the journal entry to view the :guilabel:`Journal Items`, and "
-"other information about the entry."
-msgstr "点击日记账条目，查看 :guilabel:`日记账条目` 和有关条目的其他信息。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:0
-msgid "Journal Entry form for landed cost created from vendor bill."
-msgstr "根据供应商账单创建的到岸成本日记账表格。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:3
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:15
@@ -6256,6 +5913,348 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst-1
 msgid "Show Stock Valuation journals in a list."
 msgstr "在列表中显示库存估值日记账。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:3
+msgid "Landed costs"
+msgstr "落地成本"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:10
+msgid ""
+"When shipping products to customers, the landed cost is the total price of a"
+" product or shipment, including all expenses associated with shipping the "
+"product."
+msgstr "向客户运送产品时，落地成本是产品或货物的总价，包括与运送产品相关的所有费用。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:13
+msgid ""
+"In Odoo, the *Landed Costs* feature is used to take additional costs into "
+"account when calculating the valuation of a product. This includes the cost "
+"of shipment, insurance, customs duties, taxes, and other fees."
+msgstr "在 Odoo 中，*落地成本*功能用于在计算产品估值时考虑额外成本。这包括运输成本、保险、关税、税费和其他费用。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:20
+msgid ""
+"To add landed costs to products, the *Landed Costs* feature must first be "
+"enabled. To enable this feature, navigate to :menuselection:`Inventory app "
+"--> Configuration --> Settings`, and scroll to the :guilabel:`Valuation` "
+"section."
+msgstr ""
+"要在产品中添加落地成本，必须首先启用*落地成本*功能。要启用此功能，请导航至 :menuselection:`库存应用程序 --> 配置 --> "
+"设置`，然后滚动到 :guilabel:`估值` 部分。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:24
+msgid ""
+"Tick the checkbox next to the :guilabel:`Landed Costs` option, and click "
+":guilabel:`Save` to save changes."
+msgstr "勾选 :guilabel:`落地成本` 选项旁边的复选框，然后点击 :guilabel:`保存`，以保存更改。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:27
+msgid ""
+"Once the page refreshes, a new :guilabel:`Default Journal` field appears "
+"below the :guilabel:`Landed Costs` feature in the :guilabel:`Valuation` "
+"section."
+msgstr ""
+"页面刷新后，在 :guilabel:`估值` 部分的 :guilabel:`落地成本` 功能下方会出现一个新的 :guilabel:`默认日记账` "
+"字段。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:30
+msgid ""
+"Click the :guilabel:`Default Journal` drop-down menu to reveal a list of "
+"accounting journals. Select a journal for which all accounting entries "
+"related to landed costs should be recorded."
+msgstr "点击 :guilabel:`默认日记账` 下拉菜单，显示会计分录列表。选择要记录与落地成本相关的所有会计分录的日记账。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst-1
+msgid ""
+"Landed Costs feature and resulting Default Journal field in the Inventory "
+"settings."
+msgstr "库存设置中的落地成本功能和由此产生的默认日记账字段。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:37
+msgid "Create landed cost product"
+msgstr "创建落地成本产品"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:39
+msgid ""
+"For charges that are consistently added as landed costs, a landed cost "
+"product can be created in Odoo. This way, a landed cost product can be "
+"quickly added to a vendor bill as an invoice line, instead of having to be "
+"manually entered every time a new vendor bill is created."
+msgstr ""
+"对于持续添加为落地成本的费用，可在 Odoo "
+"中创建落地成本产品。这样，落地成本产品就可以作为发票项目快速添加到供应商账单中，而不必在每次创建新的供应商账单时手动输入。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:43
+msgid ""
+"To do this, create a new product by going to :menuselection:`Inventory app "
+"--> Products --> Products`, and clicking :guilabel:`New`."
+msgstr ""
+"要执行此操作，请进入 :menuselection:`库存应用程序 --> 产品 --> 产品`，然后点击 :guilabel:`新建`，创建新产品。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:46
+msgid ""
+"Assign a name to the landed cost product in the :guilabel:`Product Name` "
+"field (i.e. `International Shipping`). In the :guilabel:`Product Type` "
+"field, click the drop-down menu, and select :guilabel:`Service` as the "
+":guilabel:`Product Type`."
+msgstr ""
+"在 :guilabel:`产品名称` 字段中为落地成本产品指定一个名称（例如，`国际航运`）。在 :guilabel:`产品类型` "
+"字段，点击下拉菜单，选择 :guilabel:`服务` 作为 :guilabel:`产品类型`。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:51
+msgid ""
+"Landed cost products **must** have their :guilabel:`Product Type` set to "
+":guilabel:`Service`."
+msgstr "落地成本产品**必须**将其 :guilabel:`产品类型` 设置为 :guilabel:`服务`。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:53
+msgid ""
+"Click the :guilabel:`Purchase` tab, and tick the checkbox next to "
+":guilabel:`Is a Landed Cost` in the :guilabel:`Vendor Bills` section. Once "
+"ticked, a new :guilabel:`Default Split Method` field appears below it, "
+"prompting a selection. Clicking that drop-down menu reveals the following "
+"options:"
+msgstr ""
+"点击:guilabel:`采购`选项卡，在:guilabel:`供应商账单`部分勾选:guilabel:`是到岸成本`旁边的复选框。勾选后，下面会出现一个新的"
+" :guilabel:`默认拆分方法`字段，提示选择。点击该下拉菜单可显示以下选项："
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:57
+msgid ""
+":guilabel:`Equal`: splits the cost equally across each product included in "
+"the receipt, regardless of the quantity of each."
+msgstr ":guilabel:`平摊`：将成本平均分摊到收据中的每个产品上，与每个产品的数量无关。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:59
+msgid ""
+":guilabel:`By Quantity`: splits the cost across each unit of all products in"
+" the receipt."
+msgstr ":guilabel:`按数量`：将成本分摊到收据中所有产品的每个单位。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:60
+msgid ""
+":guilabel:`By Current Cost`: splits the cost according to the cost of each "
+"product unit, so a product with a higher cost receives a greater share of "
+"the landed cost."
+msgstr ":guilabel:`按当前成本`：根据每个产品单位的成本来分摊成本，因此成本较高的产品可获得较大份额的到岸成本。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:62
+msgid ""
+":guilabel:`By Weight`: splits the cost, according to the weight of the "
+"products in the receipt."
+msgstr ":guilabel:`按重量`：根据收据中产品的重量计算成本。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:63
+msgid ""
+":guilabel:`By Volume`: splits the cost, according to the volume of the "
+"products in the receipt."
+msgstr ":guilabel:`按体积`：根据收据中的产品体积分摊成本。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst-1
+msgid ""
+"Is a Landed Cost checkbox and Default Split Method on service type product "
+"form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:68
+msgid ""
+"When creating new vendor bills, this product can be added as an invoice line"
+" as a landed cost."
+msgstr "在创建新的供应商账单时，该产品可作为落地成本添加到发票项目中。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:71
+msgid ""
+"To apply a landed cost on a vendor bill, products in the original |PO| "
+"**must** belong to a *Product Category* with a *Costing Method* of either "
+"|AVCO| or |FIFO|, and the valuation method can be :doc:`manual "
+"<using_inventory_valuation>` or :doc:`automatic "
+"<inventory_valuation_config>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:79
+msgid ""
+"Navigate to :menuselection:`Purchase app --> New` to create a new request "
+"for quotation (RfQ). In the :guilabel:`Vendor` field, add a vendor to order "
+"products from. Then, click :guilabel:`Add a product`, under the "
+":guilabel:`Products` tab, to add products to the |RfQ|."
+msgstr ""
+"导航至 :menuselection:`采购应用程序 --> 新建` 以创建新的询价（RfQ）。在 :guilabel:`供应商` "
+"字段中，添加要订购产品的供应商。然后，点击 :guilabel:`产品` 标签下的 :guilabel:`添加产品`，将产品添加到询价单中。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:83
+msgid ""
+"Once ready, click :guilabel:`Confirm Order` to confirm the order. Then, "
+"click :guilabel:`Receive Products` once the products have been received, "
+"followed by :guilabel:`Validate`."
+msgstr ""
+"准备就绪后，点击 :guilabel:`确认订单`，以确认订单。收到产品后，点击 :guilabel:`接收产品`，然后点击 "
+":guilabel:`验证`。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:87
+msgid "Create vendor bill"
+msgstr "创建供应商账单"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:89
+msgid ""
+"Once the vendor fulfills the |PO| and sends a bill, a vendor bill can be "
+"created from the |PO| in Odoo."
+msgstr "一旦供应商完成 |PO| 并发送账单，就可以在 Odoo 中根据 |PO| 创建供应商账单。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:92
+msgid ""
+"Navigate to the :menuselection:`Purchase app`, and click into the |PO| for "
+"which a vendor bill should be created. Then, click :guilabel:`Create Bill`. "
+"This opens a new :guilabel:`Vendor Bill` in the :guilabel:`Draft` stage."
+msgstr ""
+"导航至 :menuselection:`采购应用程序` 并点击要为其创建供应商账单的 |PO|。然后点击 :guilabel:`创建账单`。这将在 "
+":guilabel:`草稿` 阶段打开一个新的 :guilabel:`供应商账单`。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:96
+msgid ""
+"In the :guilabel:`Bill Date` field, click the line to open a calendar "
+"popover menu, and select the date on which this draft bill should be billed."
+msgstr "在 :guilabel:`账单日期` 字段中，点击该行打开日历弹出式菜单，并选择此账单草稿的账单日期。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:99
+msgid ""
+"Then, under the :guilabel:`Invoice Lines` tab, click :guilabel:`Add a line`,"
+" and click the drop-down menu in the :guilabel:`Product` column to select "
+"the previously-created landed cost product. Click the :icon:`fa-cloud-"
+"upload` :guilabel:`(cloud with arrow)` icon to manually save and update the "
+"draft bill."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst-1
+msgid "Landed Costs column checkboxes for product and landed cost."
+msgstr "落地成本栏的产品和到岸成本复选框。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:107
+msgid ""
+"In the :guilabel:`Landed Costs` column, the product ordered from the vendor "
+"does **not** have its checkbox ticked, while the landed cost product's "
+"checkbox **is** ticked. This differentiates landed costs from all other "
+"costs displayed on the bill."
+msgstr ""
+"在 "
+":guilabel:`落地成本`列中，从供应商订购的产品的复选框**未**被勾选，而落地成本产品的复选框**已**被勾选。这将落地成本与账单上显示的所有其他成本区分开来。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:111
+msgid ""
+"Additionally, at the top of the form, a :guilabel:`Create Landed Costs` "
+"button appears."
+msgstr "此外，在表单顶部会出现一个 :guilabel:`创建落地成本` 按钮。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst-1
+msgid "Create Landed Costs button on vendor bill."
+msgstr "在供应商账单上创建落地成本按钮。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:117
+msgid "Add landed cost"
+msgstr "添加落地成本"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:119
+msgid ""
+"Once a landed cost is added to the vendor bill, click :guilabel:`Create "
+"Landed Costs` at the top of the vendor bill."
+msgstr "将落地成本添加到供应商账单后，点击供应商账单顶部的 :guilabel:`创建落地成本`。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:122
+msgid ""
+"Doing so automatically creates a landed cost record, with a set landed cost "
+"pre-filled in the product line in the :guilabel:`Additional Costs` tab."
+msgstr "这样做会自动创建一个落地成本记录，并在 :guilabel:`额外费用` 选项卡的产品行中预填设定的落地成本。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:125
+msgid ""
+"From the :guilabel:`Landed Cost` form, click the :guilabel:`Transfers` drop-"
+"down menu, and select which transfer the landed cost belongs to."
+msgstr "在 :guilabel:`落地成本` 表格中，点击 :guilabel:`转账` 下拉菜单，选择落地成本属于哪项转账。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst-1
+msgid "Landed cost form with selected receipt transfer."
+msgstr "带选定收据转账的落地成本表。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:132
+msgid ""
+"In addition to creating landed costs directly from a vendor bill, landed "
+"cost records can *also* be created by navigating to "
+":menuselection:`Inventory app --> Operations --> Landed Costs`, and clicking"
+" :guilabel:`New`."
+msgstr ""
+"除了直接从供应商账单创建落地成本外，*还可*通过导航至 :menuselection:`库存应用程序 --> 操作 --> 落地成本`，然后点击 "
+":guilabel:`新建`，创建落地成本记录。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:136
+msgid ""
+"After setting the picking from the :guilabel:`Transfers` drop-down menu, "
+"click :guilabel:`Compute` (at the bottom of the form, under the "
+":guilabel:`Total:` cost)."
+msgstr ""
+"从 :guilabel:`转账` 下拉菜单中设置选择后，点击 :guilabel:`计算`（位于表格底部，在 :guilabel:`总计：`成本下）。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:139
+msgid ""
+"Click the :guilabel:`Valuation Adjustments` tab to see the impact of the "
+"landed costs. The :guilabel:`Original Value` column lists the original price"
+" of the |PO|, the :guilabel:`Additional Landed Cost` column displays the "
+"landed cost, and the :guilabel:`New Value` displays the sum of the two, for "
+"the total cost of the |PO|."
+msgstr ""
+"点击 :guilabel:`估值调整` 选项卡，查看到岸成本的影响。:guilabel:`原始价值`栏列出了 |PO| "
+"的原始价格，:guilabel:`额外到岸成本` 栏显示了到岸成本，:guilabel:`新价值`显示了两者的总和，即 |PO| 的总成本。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:144
+msgid ""
+"Once ready, click :guilabel:`Validate` to post the landed cost entry to the "
+"accounting journal."
+msgstr "准备就绪后，点击 :guilabel:`验证`，将到岸成本分录记入会计日记账。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:146
+msgid ""
+"This causes a :guilabel:`Valuation` smart button to appear at the top of the"
+" form. Click the :guilabel:`Valuation` smart button to open a "
+":guilabel:`Stock Valuation` page, with the product's updated valuation "
+"listed."
+msgstr ""
+"这样，表单顶部就会出现一个 :guilabel:`估值` 智能按钮。点击 :guilabel:`估值` 智能按钮打开 :guilabel:`库存估值` "
+"页面，其中列出了产品的最新估值。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:151
+msgid ""
+"For a :guilabel:`Valuation` smart button to appear upon validation, the "
+"product's :guilabel:`Product Type` **must** be set to :guilabel:`Storable`."
+msgstr ""
+"要在验证时显示 :guilabel:`估值` 智能按钮，产品的 :guilabel:`产品类型` **必须**设置为 :guilabel:`可存储`。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:154
+msgid ""
+"To view the valuation of *every* product, including landed costs, navigate "
+"to :menuselection:`Inventory app --> Reporting --> Valuation`."
+msgstr "要查看 *每个* 产品的估价（包括落地成本），请导航至 :menuselection:`库存应用程序 --> 报告 --> 估价`。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:158
+msgid ""
+"Each journal entry created for a landed cost on a vendor bill can be viewed "
+"in the *Accounting* app."
+msgstr "可以在 *会计* 应用程序中查看为供应商账单上的落地成本创建的每一条日记账分录。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:161
+msgid ""
+"To locate these journal entries, navigate to :menuselection:`Accounting app "
+"--> Accounting --> Journal Entries`, and locate the correct entry, by number"
+" (i.e. `PBNK1/2024/XXXXX`)."
+msgstr ""
+"要查找这些日记账分录，请导航至 :menuselection:`会计应用程序 --> 会计 --> 日记账分录`，然后按编号（即 "
+"`PBNK1/2024/XXXXX`）查找正确的分录。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:164
+msgid ""
+"Click into the journal entry to view the :guilabel:`Journal Items`, and "
+"other information about the entry."
+msgstr "点击日记账条目，查看 :guilabel:`日记账条目` 和有关条目的其他信息。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:0
+msgid "Journal Entry form for landed cost created from vendor bill."
+msgstr "根据供应商账单创建的到岸成本日记账表格。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:3
 msgid "Using inventory valuation"

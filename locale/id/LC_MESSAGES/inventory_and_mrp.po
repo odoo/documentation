@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-04 11:48+0000\n"
+"POT-Creation-Date: 2024-12-02 12:38+0000\n"
 "PO-Revision-Date: 2023-11-08 08:57+0000\n"
 "Last-Translator: Abe Manyo, 2024\n"
 "Language-Team: Indonesian (https://app.transifex.com/odoo/teams/41243/id/)\n"
@@ -375,8 +375,8 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:38
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:20
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/uom.rst:21
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:20
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:44
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:18
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/create_sn.rst:35
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/cross_dock.rst:18
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/delivery_three_steps.rst:16
@@ -4139,7 +4139,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:93
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:162
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:81
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:77
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:54
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:77
 msgid "Create purchase order"
@@ -4614,320 +4614,6 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation.rst:5
 msgid "Inventory valuation"
 msgstr "Nilai Stok Persediaan"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:3
-msgid "Landed costs"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:12
-msgid ""
-"When shipping products to customers, the landed cost is the total price of a"
-" product or shipment, including all expenses associated with shipping the "
-"product."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:15
-msgid ""
-"In Odoo, the *Landed Costs* feature is used to take additional costs into "
-"account when calculating the valuation of a product. This includes the cost "
-"of shipment, insurance, customs duties, taxes, and other fees."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:22
-msgid ""
-"To add landed costs to products, the *Landed Costs* feature must first be "
-"enabled. To enable this feature, navigate to :menuselection:`Inventory app "
-"--> Configuration --> Settings`, and scroll to the :guilabel:`Valuation` "
-"section."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:26
-msgid ""
-"Tick the checkbox next to the :guilabel:`Landed Costs` option, and click "
-":guilabel:`Save` to save changes."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:29
-msgid ""
-"Once the page refreshes, a new :guilabel:`Default Journal` field appears "
-"below the :guilabel:`Landed Costs` feature in the :guilabel:`Valuation` "
-"section."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:32
-msgid ""
-"Click the :guilabel:`Default Journal` drop-down menu to reveal a list of "
-"accounting journals. Select a journal for which all accounting entries "
-"related to landed costs should be recorded."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst-1
-msgid ""
-"Landed Costs feature and resulting Default Journal field in the Inventory "
-"settings."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:40
-msgid "Create landed cost product"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:42
-msgid ""
-"For charges that are consistently added as landed costs, a landed cost "
-"product can be created in Odoo. This way, a landed cost product can be "
-"quickly added to a vendor bill as an invoice line, instead of having to be "
-"manually entered every time a new vendor bill is created."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:46
-msgid ""
-"To do this, create a new product by going to :menuselection:`Inventory app "
-"--> Products --> Products`, and clicking :guilabel:`New`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:49
-msgid ""
-"Assign a name to the landed cost product in the :guilabel:`Product Name` "
-"field (i.e. `International Shipping`). In the :guilabel:`Product Type` "
-"field, click the drop-down menu, and select :guilabel:`Service` as the "
-":guilabel:`Product Type`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:54
-msgid ""
-"Landed cost products **must** have their :guilabel:`Product Type` set to "
-":guilabel:`Service`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:56
-msgid ""
-"Click the :guilabel:`Purchase` tab, and tick the checkbox next to "
-":guilabel:`Is a Landed Cost` in the :guilabel:`Vendor Bills` section. Once "
-"ticked, a new :guilabel:`Default Split Method` field appears below it, "
-"prompting a selection. Clicking that drop-down menu reveals the following "
-"options:"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:60
-msgid ""
-":guilabel:`Equal`: splits the cost equally across each product included in "
-"the receipt, regardless of the quantity of each."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:62
-msgid ""
-":guilabel:`By Quantity`: splits the cost across each unit of all products in"
-" the receipt."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:63
-msgid ""
-":guilabel:`By Current Cost`: splits the cost according to the cost of each "
-"product unit, so a product with a higher cost receives a greater share of "
-"the landed cost."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:65
-msgid ""
-":guilabel:`By Weight`: splits the cost, according to the weight of the "
-"products in the receipt."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:66
-msgid ""
-":guilabel:`By Volume`: splits the cost, according to the volume of the "
-"products in the receipt."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst-1
-msgid ""
-"Is a Landed Cost checkbox and Default Split Method on service type product "
-"form."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:72
-msgid ""
-"When creating new vendor bills, this product can be added as an invoice line"
-" as a landed cost."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:75
-msgid ""
-"To apply a landed cost on a vendor bill, the products included in the "
-"original |PO| **must** belong to a *Product Category* with its *Force "
-"Removal Strategy* set to |FIFO|. The *Costing Method* can be set to either "
-"|AVCO| or |FIFO|, and the valuation method can be :doc:`manual "
-"<using_inventory_valuation>` or :doc:`automatic "
-"<inventory_valuation_config>`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:83
-msgid ""
-"Navigate to :menuselection:`Purchase app --> New` to create a new request "
-"for quotation (RfQ). In the :guilabel:`Vendor` field, add a vendor to order "
-"products from. Then, click :guilabel:`Add a product`, under the "
-":guilabel:`Products` tab, to add products to the |RfQ|."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:87
-msgid ""
-"Once ready, click :guilabel:`Confirm Order` to confirm the order. Then, "
-"click :guilabel:`Receive Products` once the products have been received, "
-"followed by :guilabel:`Validate`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:91
-msgid "Create vendor bill"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:93
-msgid ""
-"Once the vendor fulfills the |PO| and sends a bill, a vendor bill can be "
-"created from the |PO| in Odoo."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:96
-msgid ""
-"Navigate to the :menuselection:`Purchase app`, and click into the |PO| for "
-"which a vendor bill should be created. Then, click :guilabel:`Create Bill`. "
-"This opens a new :guilabel:`Vendor Bill` in the :guilabel:`Draft` stage."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:100
-msgid ""
-"In the :guilabel:`Bill Date` field, click the line to open a calendar "
-"popover menu, and select the date on which this draft bill should be billed."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:103
-msgid ""
-"Then, under the :guilabel:`Invoice Lines` tab, click :guilabel:`Add a line`,"
-" and click the drop-down menu in the :guilabel:`Product` column to select "
-"the previously-created landed cost product. Click the :icon:`fa-cloud-"
-"upload` :guilabel:`(cloud with arrow)` icon to manually save and update the "
-"draft bill."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst-1
-msgid "Landed Costs column checkboxes for product and landed cost."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:112
-msgid ""
-"In the :guilabel:`Landed Costs` column, the product ordered from the vendor "
-"does **not** have its checkbox ticked, while the landed cost product's "
-"checkbox **is** ticked. This differentiates landed costs from all other "
-"costs displayed on the bill."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:116
-msgid ""
-"Additionally, at the top of the form, a :guilabel:`Create Landed Costs` "
-"button appears."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst-1
-msgid "Create Landed Costs button on vendor bill."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:123
-msgid "Add landed cost"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:125
-msgid ""
-"Once a landed cost is added to the vendor bill, click :guilabel:`Create "
-"Landed Costs` at the top of the vendor bill."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:128
-msgid ""
-"Doing so automatically creates a landed cost record, with a set landed cost "
-"pre-filled in the product line in the :guilabel:`Additional Costs` tab."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:131
-msgid ""
-"From the :guilabel:`Landed Cost` form, click the :guilabel:`Transfers` drop-"
-"down menu, and select which transfer the landed cost belongs to."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst-1
-msgid "Landed cost form with selected receipt transfer."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:139
-msgid ""
-"In addition to creating landed costs directly from a vendor bill, landed "
-"cost records can *also* be created by navigating to "
-":menuselection:`Inventory app --> Operations --> Landed Costs`, and clicking"
-" :guilabel:`New`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:143
-msgid ""
-"After setting the picking from the :guilabel:`Transfers` drop-down menu, "
-"click :guilabel:`Compute` (at the bottom of the form, under the "
-":guilabel:`Total:` cost)."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:146
-msgid ""
-"Click the :guilabel:`Valuation Adjustments` tab to see the impact of the "
-"landed costs. The :guilabel:`Original Value` column lists the original price"
-" of the |PO|, the :guilabel:`Additional Landed Cost` column displays the "
-"landed cost, and the :guilabel:`New Value` displays the sum of the two, for "
-"the total cost of the |PO|."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:151
-msgid ""
-"Once ready, click :guilabel:`Validate` to post the landed cost entry to the "
-"accounting journal."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:153
-msgid ""
-"This causes a :guilabel:`Valuation` smart button to appear at the top of the"
-" form. Click the :guilabel:`Valuation` smart button to open a "
-":guilabel:`Stock Valuation` page, with the product's updated valuation "
-"listed."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:158
-msgid ""
-"For a :guilabel:`Valuation` smart button to appear upon validation, the "
-"product's :guilabel:`Product Type` **must** be set to :guilabel:`Storable`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:161
-msgid ""
-"To view the valuation of *every* product, including landed costs, navigate "
-"to :menuselection:`Inventory app --> Reporting --> Valuation`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:165
-msgid ""
-"Each journal entry created for a landed cost on a vendor bill can be viewed "
-"in the *Accounting* app."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:168
-msgid ""
-"To locate these journal entries, navigate to :menuselection:`Accounting app "
-"--> Accounting --> Journal Entries`, and locate the correct entry, by number"
-" (i.e. `PBNK1/2024/XXXXX`)."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:171
-msgid ""
-"Click into the journal entry to view the :guilabel:`Journal Items`, and "
-"other information about the entry."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:0
-msgid "Journal Entry form for landed cost created from vendor bill."
-msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:3
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:15
@@ -5762,6 +5448,319 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst-1
 msgid "Show Stock Valuation journals in a list."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:3
+msgid "Landed costs"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:10
+msgid ""
+"When shipping products to customers, the landed cost is the total price of a"
+" product or shipment, including all expenses associated with shipping the "
+"product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:13
+msgid ""
+"In Odoo, the *Landed Costs* feature is used to take additional costs into "
+"account when calculating the valuation of a product. This includes the cost "
+"of shipment, insurance, customs duties, taxes, and other fees."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:20
+msgid ""
+"To add landed costs to products, the *Landed Costs* feature must first be "
+"enabled. To enable this feature, navigate to :menuselection:`Inventory app "
+"--> Configuration --> Settings`, and scroll to the :guilabel:`Valuation` "
+"section."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:24
+msgid ""
+"Tick the checkbox next to the :guilabel:`Landed Costs` option, and click "
+":guilabel:`Save` to save changes."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:27
+msgid ""
+"Once the page refreshes, a new :guilabel:`Default Journal` field appears "
+"below the :guilabel:`Landed Costs` feature in the :guilabel:`Valuation` "
+"section."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:30
+msgid ""
+"Click the :guilabel:`Default Journal` drop-down menu to reveal a list of "
+"accounting journals. Select a journal for which all accounting entries "
+"related to landed costs should be recorded."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst-1
+msgid ""
+"Landed Costs feature and resulting Default Journal field in the Inventory "
+"settings."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:37
+msgid "Create landed cost product"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:39
+msgid ""
+"For charges that are consistently added as landed costs, a landed cost "
+"product can be created in Odoo. This way, a landed cost product can be "
+"quickly added to a vendor bill as an invoice line, instead of having to be "
+"manually entered every time a new vendor bill is created."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:43
+msgid ""
+"To do this, create a new product by going to :menuselection:`Inventory app "
+"--> Products --> Products`, and clicking :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:46
+msgid ""
+"Assign a name to the landed cost product in the :guilabel:`Product Name` "
+"field (i.e. `International Shipping`). In the :guilabel:`Product Type` "
+"field, click the drop-down menu, and select :guilabel:`Service` as the "
+":guilabel:`Product Type`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:51
+msgid ""
+"Landed cost products **must** have their :guilabel:`Product Type` set to "
+":guilabel:`Service`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:53
+msgid ""
+"Click the :guilabel:`Purchase` tab, and tick the checkbox next to "
+":guilabel:`Is a Landed Cost` in the :guilabel:`Vendor Bills` section. Once "
+"ticked, a new :guilabel:`Default Split Method` field appears below it, "
+"prompting a selection. Clicking that drop-down menu reveals the following "
+"options:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:57
+msgid ""
+":guilabel:`Equal`: splits the cost equally across each product included in "
+"the receipt, regardless of the quantity of each."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:59
+msgid ""
+":guilabel:`By Quantity`: splits the cost across each unit of all products in"
+" the receipt."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:60
+msgid ""
+":guilabel:`By Current Cost`: splits the cost according to the cost of each "
+"product unit, so a product with a higher cost receives a greater share of "
+"the landed cost."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:62
+msgid ""
+":guilabel:`By Weight`: splits the cost, according to the weight of the "
+"products in the receipt."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:63
+msgid ""
+":guilabel:`By Volume`: splits the cost, according to the volume of the "
+"products in the receipt."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst-1
+msgid ""
+"Is a Landed Cost checkbox and Default Split Method on service type product "
+"form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:68
+msgid ""
+"When creating new vendor bills, this product can be added as an invoice line"
+" as a landed cost."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:71
+msgid ""
+"To apply a landed cost on a vendor bill, products in the original |PO| "
+"**must** belong to a *Product Category* with a *Costing Method* of either "
+"|AVCO| or |FIFO|, and the valuation method can be :doc:`manual "
+"<using_inventory_valuation>` or :doc:`automatic "
+"<inventory_valuation_config>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:79
+msgid ""
+"Navigate to :menuselection:`Purchase app --> New` to create a new request "
+"for quotation (RfQ). In the :guilabel:`Vendor` field, add a vendor to order "
+"products from. Then, click :guilabel:`Add a product`, under the "
+":guilabel:`Products` tab, to add products to the |RfQ|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:83
+msgid ""
+"Once ready, click :guilabel:`Confirm Order` to confirm the order. Then, "
+"click :guilabel:`Receive Products` once the products have been received, "
+"followed by :guilabel:`Validate`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:87
+msgid "Create vendor bill"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:89
+msgid ""
+"Once the vendor fulfills the |PO| and sends a bill, a vendor bill can be "
+"created from the |PO| in Odoo."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:92
+msgid ""
+"Navigate to the :menuselection:`Purchase app`, and click into the |PO| for "
+"which a vendor bill should be created. Then, click :guilabel:`Create Bill`. "
+"This opens a new :guilabel:`Vendor Bill` in the :guilabel:`Draft` stage."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:96
+msgid ""
+"In the :guilabel:`Bill Date` field, click the line to open a calendar "
+"popover menu, and select the date on which this draft bill should be billed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:99
+msgid ""
+"Then, under the :guilabel:`Invoice Lines` tab, click :guilabel:`Add a line`,"
+" and click the drop-down menu in the :guilabel:`Product` column to select "
+"the previously-created landed cost product. Click the :icon:`fa-cloud-"
+"upload` :guilabel:`(cloud with arrow)` icon to manually save and update the "
+"draft bill."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst-1
+msgid "Landed Costs column checkboxes for product and landed cost."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:107
+msgid ""
+"In the :guilabel:`Landed Costs` column, the product ordered from the vendor "
+"does **not** have its checkbox ticked, while the landed cost product's "
+"checkbox **is** ticked. This differentiates landed costs from all other "
+"costs displayed on the bill."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:111
+msgid ""
+"Additionally, at the top of the form, a :guilabel:`Create Landed Costs` "
+"button appears."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst-1
+msgid "Create Landed Costs button on vendor bill."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:117
+msgid "Add landed cost"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:119
+msgid ""
+"Once a landed cost is added to the vendor bill, click :guilabel:`Create "
+"Landed Costs` at the top of the vendor bill."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:122
+msgid ""
+"Doing so automatically creates a landed cost record, with a set landed cost "
+"pre-filled in the product line in the :guilabel:`Additional Costs` tab."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:125
+msgid ""
+"From the :guilabel:`Landed Cost` form, click the :guilabel:`Transfers` drop-"
+"down menu, and select which transfer the landed cost belongs to."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst-1
+msgid "Landed cost form with selected receipt transfer."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:132
+msgid ""
+"In addition to creating landed costs directly from a vendor bill, landed "
+"cost records can *also* be created by navigating to "
+":menuselection:`Inventory app --> Operations --> Landed Costs`, and clicking"
+" :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:136
+msgid ""
+"After setting the picking from the :guilabel:`Transfers` drop-down menu, "
+"click :guilabel:`Compute` (at the bottom of the form, under the "
+":guilabel:`Total:` cost)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:139
+msgid ""
+"Click the :guilabel:`Valuation Adjustments` tab to see the impact of the "
+"landed costs. The :guilabel:`Original Value` column lists the original price"
+" of the |PO|, the :guilabel:`Additional Landed Cost` column displays the "
+"landed cost, and the :guilabel:`New Value` displays the sum of the two, for "
+"the total cost of the |PO|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:144
+msgid ""
+"Once ready, click :guilabel:`Validate` to post the landed cost entry to the "
+"accounting journal."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:146
+msgid ""
+"This causes a :guilabel:`Valuation` smart button to appear at the top of the"
+" form. Click the :guilabel:`Valuation` smart button to open a "
+":guilabel:`Stock Valuation` page, with the product's updated valuation "
+"listed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:151
+msgid ""
+"For a :guilabel:`Valuation` smart button to appear upon validation, the "
+"product's :guilabel:`Product Type` **must** be set to :guilabel:`Storable`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:154
+msgid ""
+"To view the valuation of *every* product, including landed costs, navigate "
+"to :menuselection:`Inventory app --> Reporting --> Valuation`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:158
+msgid ""
+"Each journal entry created for a landed cost on a vendor bill can be viewed "
+"in the *Accounting* app."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:161
+msgid ""
+"To locate these journal entries, navigate to :menuselection:`Accounting app "
+"--> Accounting --> Journal Entries`, and locate the correct entry, by number"
+" (i.e. `PBNK1/2024/XXXXX`)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:164
+msgid ""
+"Click into the journal entry to view the :guilabel:`Journal Items`, and "
+"other information about the entry."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:0
+msgid "Journal Entry form for landed cost created from vendor bill."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:3

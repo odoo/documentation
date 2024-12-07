@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-04 11:48+0000\n"
+"POT-Creation-Date: 2024-12-02 12:38+0000\n"
 "PO-Revision-Date: 2023-11-08 08:57+0000\n"
 "Last-Translator: Maitê Dietze, 2024\n"
 "Language-Team: Portuguese (Brazil) (https://app.transifex.com/odoo/teams/41243/pt_BR/)\n"
@@ -527,8 +527,8 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:38
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:20
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/uom.rst:21
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:20
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:44
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:18
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/create_sn.rst:35
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/cross_dock.rst:18
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/delivery_three_steps.rst:16
@@ -5463,6 +5463,8 @@ msgid ""
 ":doc:`Inventory valuation "
 "<../inventory_valuation/using_inventory_valuation>`"
 msgstr ""
+":doc:`Valoração de inventário "
+"<../inventory_valuation/using_inventory_valuation>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:85
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:138
@@ -5487,7 +5489,7 @@ msgstr ":doc:`Rastreamento de número de lote/série <../product_tracking>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:93
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:162
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:81
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:77
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:54
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:77
 msgid "Create purchase order"
@@ -6128,452 +6130,6 @@ msgstr ""
 msgid "Inventory valuation"
 msgstr "Valoração de inventário"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:3
-msgid "Landed costs"
-msgstr "Custos adicionais"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:12
-msgid ""
-"When shipping products to customers, the landed cost is the total price of a"
-" product or shipment, including all expenses associated with shipping the "
-"product."
-msgstr ""
-"Ao enviar produtos para os clientes, o custo adicional é o preço total de um"
-" produto ou remessa, incluindo todas as despesas associadas ao envio do "
-"produto."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:15
-msgid ""
-"In Odoo, the *Landed Costs* feature is used to take additional costs into "
-"account when calculating the valuation of a product. This includes the cost "
-"of shipment, insurance, customs duties, taxes, and other fees."
-msgstr ""
-"No Odoo, o recurso *Custos adicionais* é usado para levar em conta os custos"
-" adicionais ao calcular a valoração de um produto. Isso inclui o custo de "
-"envio, seguro, taxas alfandegárias, impostos e outras taxas."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:22
-msgid ""
-"To add landed costs to products, the *Landed Costs* feature must first be "
-"enabled. To enable this feature, navigate to :menuselection:`Inventory app "
-"--> Configuration --> Settings`, and scroll to the :guilabel:`Valuation` "
-"section."
-msgstr ""
-"Para adicionar custos adicionais aos produtos, o recurso *Custos adicionais*"
-" deve ser ativado primeiro. Para ativar esse recurso, navegue até "
-":menuselection:`app Inventário --> Configuração --> Definições` e vá até a "
-"seção :guilabel:`Valoração`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:26
-msgid ""
-"Tick the checkbox next to the :guilabel:`Landed Costs` option, and click "
-":guilabel:`Save` to save changes."
-msgstr ""
-"Marque a caixa de seleção ao lado da opção :guilabel:`Custos adicionais` e "
-"clique em :guilabel:`Salvar` para salvar as alterações."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:29
-msgid ""
-"Once the page refreshes, a new :guilabel:`Default Journal` field appears "
-"below the :guilabel:`Landed Costs` feature in the :guilabel:`Valuation` "
-"section."
-msgstr ""
-"Quando a página for atualizada, um novo campo :guilabel:`Diário padrão` "
-"aparecerá abaixo do recurso :guilabel:`Custos adicionais` na seção "
-":guilabel:`Valoração`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:32
-msgid ""
-"Click the :guilabel:`Default Journal` drop-down menu to reveal a list of "
-"accounting journals. Select a journal for which all accounting entries "
-"related to landed costs should be recorded."
-msgstr ""
-"Clique no menu suspenso :guilabel:`Diário padrão` para exibir uma lista de "
-"diários contábeis. Selecione um diário para o qual todos os lançamentos "
-"contábeis relacionados aos custos de importação devem ser registrados."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst-1
-msgid ""
-"Landed Costs feature and resulting Default Journal field in the Inventory "
-"settings."
-msgstr ""
-"Recurso Custos adicionais e o campo Diário padrão resultante nas definições "
-"do Inventário."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:40
-msgid "Create landed cost product"
-msgstr "Criar produto de custo adicional"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:42
-msgid ""
-"For charges that are consistently added as landed costs, a landed cost "
-"product can be created in Odoo. This way, a landed cost product can be "
-"quickly added to a vendor bill as an invoice line, instead of having to be "
-"manually entered every time a new vendor bill is created."
-msgstr ""
-"Para cobranças que são consistentemente inseridas como custos adicionais, é "
-"possível criar um produto de custos adicionais no Odoo. Dessa forma, um "
-"produto de custos adicionais pode ser rapidamente incluído em uma fatura de "
-"fornecedor como uma linha de fatura, em vez de ter que ser inserido "
-"manualmente toda vez que uma nova fatura de fornecedor for criada."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:46
-msgid ""
-"To do this, create a new product by going to :menuselection:`Inventory app "
-"--> Products --> Products`, and clicking :guilabel:`New`."
-msgstr ""
-"Para fazer isso, crie um novo produto acessando :menuselection:`app "
-"Inventário --> Produtos --> Produtos` e clicando em :guilabel:`Novo`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:49
-msgid ""
-"Assign a name to the landed cost product in the :guilabel:`Product Name` "
-"field (i.e. `International Shipping`). In the :guilabel:`Product Type` "
-"field, click the drop-down menu, and select :guilabel:`Service` as the "
-":guilabel:`Product Type`."
-msgstr ""
-"Atribua um nome ao produto de custo de importação no campo :guilabel:`Nome "
-"do produto` (ou seja, `Remessa internacional`). No campo :guilabel:`Tipo de "
-"produto`, clique no menu suspenso e selecione :guilabel:`Serviço` como o "
-":guilabel:`Tipo de produto`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:54
-msgid ""
-"Landed cost products **must** have their :guilabel:`Product Type` set to "
-":guilabel:`Service`."
-msgstr ""
-"Os produtos de custo adicionais **devem** ter seu :guilabel:`Tipo de "
-"produto` definido como :guilabel:`Serviço`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:56
-msgid ""
-"Click the :guilabel:`Purchase` tab, and tick the checkbox next to "
-":guilabel:`Is a Landed Cost` in the :guilabel:`Vendor Bills` section. Once "
-"ticked, a new :guilabel:`Default Split Method` field appears below it, "
-"prompting a selection. Clicking that drop-down menu reveals the following "
-"options:"
-msgstr ""
-"Clique na aba :guilabel:`Compra` e marque a caixa de seleção ao lado de "
-":guilabel:`É um custo adicional` na seção :guilabel:`Contas do fornecedor`. "
-"Uma vez marcada, um novo campo :guilabel:`Método de divisão padrão` aparece "
-"abaixo dela, solicitando uma seleção. Clicar nesse menu suspenso revela as "
-"seguintes opções:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:60
-msgid ""
-":guilabel:`Equal`: splits the cost equally across each product included in "
-"the receipt, regardless of the quantity of each."
-msgstr ""
-":guilabel:`Igual`: divide o custo igualmente entre cada produto incluído no "
-"recebimento, independentemente da quantidade de cada um."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:62
-msgid ""
-":guilabel:`By Quantity`: splits the cost across each unit of all products in"
-" the receipt."
-msgstr ""
-":guilabel:`Por quantidade`: divide o custo entre cada unidade de todos os "
-"produtos no recebimento."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:63
-msgid ""
-":guilabel:`By Current Cost`: splits the cost according to the cost of each "
-"product unit, so a product with a higher cost receives a greater share of "
-"the landed cost."
-msgstr ""
-":guilabel:`Por custo atual`: divide o custo de acordo com o custo de cada "
-"unidade de produto, de modo que um produto com um custo mais alto recebe uma"
-" parcela maior do custo de importação."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:65
-msgid ""
-":guilabel:`By Weight`: splits the cost, according to the weight of the "
-"products in the receipt."
-msgstr ""
-":guilabel:`Por peso`: divide o custo de acordo com o peso dos produtos no "
-"recebimento."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:66
-msgid ""
-":guilabel:`By Volume`: splits the cost, according to the volume of the "
-"products in the receipt."
-msgstr ""
-":guilabel:`Por volume`: divide o custo de acordo com o volume dos produtos "
-"no recebimento."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst-1
-msgid ""
-"Is a Landed Cost checkbox and Default Split Method on service type product "
-"form."
-msgstr ""
-"É uma caixa de seleção Custo adicional e Método de divisão padrão no "
-"formulário de produto do tipo serviço."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:72
-msgid ""
-"When creating new vendor bills, this product can be added as an invoice line"
-" as a landed cost."
-msgstr ""
-"Ao criar novas contas de fornecedor, esse produto pode ser adicionado como "
-"uma linha de fatura como um custo adicional."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:75
-msgid ""
-"To apply a landed cost on a vendor bill, the products included in the "
-"original |PO| **must** belong to a *Product Category* with its *Force "
-"Removal Strategy* set to |FIFO|. The *Costing Method* can be set to either "
-"|AVCO| or |FIFO|, and the valuation method can be :doc:`manual "
-"<using_inventory_valuation>` or :doc:`automatic "
-"<inventory_valuation_config>`."
-msgstr ""
-"Para aplicar custos adicionais em uma conta de fornecedor, os produtos "
-"incluídos no |PO| original **devem** pertencer a uma *Categoria de produto* "
-"com sua *Estratégia de remoção de força* definida como |PEPS|. O *Método de "
-"custeio* pode ser definido como |AVCO| ou |PEPS|, e o método de valoração "
-"pode ser :doc:`manual <using_inventory_valuation>` ou :doc:`automático "
-"<inventory_valuation_config>`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:83
-msgid ""
-"Navigate to :menuselection:`Purchase app --> New` to create a new request "
-"for quotation (RfQ). In the :guilabel:`Vendor` field, add a vendor to order "
-"products from. Then, click :guilabel:`Add a product`, under the "
-":guilabel:`Products` tab, to add products to the |RfQ|."
-msgstr ""
-"Navegue até o :menuselection:`app Compras --> Novo` para criar uma nova "
-"solicitação de cotação (SDC). No campo :guilabel:`Fornecedor`, adicione um "
-"fornecedor para fazer o pedido de produtos. Em seguida, clique em "
-":guilabel:`Adicionar um produto`, na guiaba :guilabel:`Produtos`, para "
-"adicionar produtos à |SDC|."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:87
-msgid ""
-"Once ready, click :guilabel:`Confirm Order` to confirm the order. Then, "
-"click :guilabel:`Receive Products` once the products have been received, "
-"followed by :guilabel:`Validate`."
-msgstr ""
-"Quando estiver pronto, clique em :guilabel:`Confirmar pedido` para confirmar"
-" o pedido. Em seguida, clique em :guilabel:`Receber produtos` quando os "
-"produtos tiverem sido recebidos, seguido de :guilabel:`Validar`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:91
-msgid "Create vendor bill"
-msgstr "Criar fatura do fornecedor"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:93
-msgid ""
-"Once the vendor fulfills the |PO| and sends a bill, a vendor bill can be "
-"created from the |PO| in Odoo."
-msgstr ""
-"Quando o fornecedor preenche a |PO| e envia uma fatura, uma fatura de "
-"fornecedor pode ser criada a partir da |PO| no Odoo."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:96
-msgid ""
-"Navigate to the :menuselection:`Purchase app`, and click into the |PO| for "
-"which a vendor bill should be created. Then, click :guilabel:`Create Bill`. "
-"This opens a new :guilabel:`Vendor Bill` in the :guilabel:`Draft` stage."
-msgstr ""
-"Navegue até o :menuselection:`app Compras` e clique no |PO| para o qual uma "
-"fatura de fornecedor deve ser criada. Em seguida, clique em :guilabel:`Criar"
-" fatura`. Isso abre uma nova :guilabel:`Fatura do fornecedor` no estágio "
-":guilabel:`Rascunho`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:100
-msgid ""
-"In the :guilabel:`Bill Date` field, click the line to open a calendar "
-"popover menu, and select the date on which this draft bill should be billed."
-msgstr ""
-"No campo :guilabel:`Data da fatura`, clique na linha para abrir um menu pop-"
-"up de calendário e selecione a data em que essa fatura provisória deve ser "
-"cobrada."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:103
-msgid ""
-"Then, under the :guilabel:`Invoice Lines` tab, click :guilabel:`Add a line`,"
-" and click the drop-down menu in the :guilabel:`Product` column to select "
-"the previously-created landed cost product. Click the :icon:`fa-cloud-"
-"upload` :guilabel:`(cloud with arrow)` icon to manually save and update the "
-"draft bill."
-msgstr ""
-"Em seguida, na aba :guilabel:`Linhas de fatura`, clique em "
-":guilabel:`Adicionar uma linha` e clique no menu suspenso na coluna "
-":guilabel:`Produto` para selecionar o produto de custo de importação criado "
-"anteriormente. Clique no ícone :icon:`fa-cloud-upload` :guilabel:`(nuvem com"
-" seta)` para salvar e atualizar manualmente o rascunho da fatura."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst-1
-msgid "Landed Costs column checkboxes for product and landed cost."
-msgstr ""
-"Caixas de seleção da coluna Custos adicionais para o custo do produto e "
-"adicionais."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:112
-msgid ""
-"In the :guilabel:`Landed Costs` column, the product ordered from the vendor "
-"does **not** have its checkbox ticked, while the landed cost product's "
-"checkbox **is** ticked. This differentiates landed costs from all other "
-"costs displayed on the bill."
-msgstr ""
-"Na coluna :guilabel:`Custos adicionais`, o produto encomendado ao fornecedor"
-" **não** tem sua caixa de seleção marcada, enquanto a caixa de seleção do "
-"produto de custos adicionais **está** marcada. Isso diferencia os custos de "
-"importação de todos os outros custos exibidos na fatura."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:116
-msgid ""
-"Additionally, at the top of the form, a :guilabel:`Create Landed Costs` "
-"button appears."
-msgstr ""
-"Além disso, na parte superior do formulário, é exibido um botão "
-":guilabel:`Criar custos adicionais`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst-1
-msgid "Create Landed Costs button on vendor bill."
-msgstr "Botão Criar custos adicionais na fatura do fornecedor."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:123
-msgid "Add landed cost"
-msgstr "Incluir custo adicional"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:125
-msgid ""
-"Once a landed cost is added to the vendor bill, click :guilabel:`Create "
-"Landed Costs` at the top of the vendor bill."
-msgstr ""
-"Depois que um custo adicional for adicionado à fatura do fornecedor, clique "
-"em :guilabel:`Criar custos adicionais` na parte superior da fatura do "
-"fornecedor."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:128
-msgid ""
-"Doing so automatically creates a landed cost record, with a set landed cost "
-"pre-filled in the product line in the :guilabel:`Additional Costs` tab."
-msgstr ""
-"Isso cria automaticamente um registro de custos adicionai, com um custo "
-"adicional definido pré-preenchido na linha do produto na aba "
-":guilabel:`Custos adicionais`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:131
-msgid ""
-"From the :guilabel:`Landed Cost` form, click the :guilabel:`Transfers` drop-"
-"down menu, and select which transfer the landed cost belongs to."
-msgstr ""
-"No formulário :guilabel:`Custo adicional`, clique no menu suspenso "
-":guilabel:`Transferências` e selecione a qual transferência o landed cost "
-"pertence."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst-1
-msgid "Landed cost form with selected receipt transfer."
-msgstr ""
-"Formulário de custo adicional com transferência de recibo selecionada."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:139
-msgid ""
-"In addition to creating landed costs directly from a vendor bill, landed "
-"cost records can *also* be created by navigating to "
-":menuselection:`Inventory app --> Operations --> Landed Costs`, and clicking"
-" :guilabel:`New`."
-msgstr ""
-"Além de criar custos adicionais diretamente de uma fatura de fornecedor, os "
-"registros de custos de importação podem *também* ser criados navegando até "
-":menuselection:`app Inventário --> Operações --> Custos adicionais` e "
-"clicando em :guilabel:`Novo`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:143
-msgid ""
-"After setting the picking from the :guilabel:`Transfers` drop-down menu, "
-"click :guilabel:`Compute` (at the bottom of the form, under the "
-":guilabel:`Total:` cost)."
-msgstr ""
-"Depois de definir a seleção no menu suspenso :guilabel:`Transferências`, "
-"clique em :guilabel:`Calcular` (na parte inferior do formulário, sob o custo"
-" :guilabel:`Total:`)."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:146
-msgid ""
-"Click the :guilabel:`Valuation Adjustments` tab to see the impact of the "
-"landed costs. The :guilabel:`Original Value` column lists the original price"
-" of the |PO|, the :guilabel:`Additional Landed Cost` column displays the "
-"landed cost, and the :guilabel:`New Value` displays the sum of the two, for "
-"the total cost of the |PO|."
-msgstr ""
-"Clique na aba :guilabel:`Ajustes de valoração` para ver o impacto dos custos"
-" adicionais. A coluna :guilabel:`Valor original` lista o preço original da "
-"|PO|, a coluna :guilabel:`Custo adicional extra` exibe o custo de "
-"desembarque e a coluna :guilabel:`Novo valor` exibe a soma das duas, para o "
-"custo total da |PO|."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:151
-msgid ""
-"Once ready, click :guilabel:`Validate` to post the landed cost entry to the "
-"accounting journal."
-msgstr ""
-"Quando estiver pronto, clique em :guilabel:`Validar` para lançar o registro "
-"do custo adicional no diário contábil."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:153
-msgid ""
-"This causes a :guilabel:`Valuation` smart button to appear at the top of the"
-" form. Click the :guilabel:`Valuation` smart button to open a "
-":guilabel:`Stock Valuation` page, with the product's updated valuation "
-"listed."
-msgstr ""
-"Isso faz com que um botão inteligente :guilabel:`Valoração` apareça na parte"
-" superior do formulário. Clique no botão inteligente :guilabel:`Valoração` "
-"para abrir uma página :guilabel:`Valoração de estoque`, com a avaliação "
-"atualizada do produto listada."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:158
-msgid ""
-"For a :guilabel:`Valuation` smart button to appear upon validation, the "
-"product's :guilabel:`Product Type` **must** be set to :guilabel:`Storable`."
-msgstr ""
-"Para que um botão inteligente :guilabel:`Valoração` seja exibido na "
-"validação, o :guilabel:`Tipo de produto` **deve** ser definido como "
-":guilabel:`Armazenável`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:161
-msgid ""
-"To view the valuation of *every* product, including landed costs, navigate "
-"to :menuselection:`Inventory app --> Reporting --> Valuation`."
-msgstr ""
-"Para visualizar a avaliação de *cada* produto, incluindo os custos "
-"adicionais, navegue até :menuselection:`app Inventário --> Relatório --> "
-"Valoração`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:165
-msgid ""
-"Each journal entry created for a landed cost on a vendor bill can be viewed "
-"in the *Accounting* app."
-msgstr ""
-"Cada lançamento contábil manual criado para um custo adicional em uma fatura"
-" de fornecedor pode ser visualizado no aplicativo *Financeiro*."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:168
-msgid ""
-"To locate these journal entries, navigate to :menuselection:`Accounting app "
-"--> Accounting --> Journal Entries`, and locate the correct entry, by number"
-" (i.e. `PBNK1/2024/XXXXX`)."
-msgstr ""
-"Para localizar esses lançamentos contábeis, navegue até :menuselection:`app "
-"Financeiro --> Financeiro --> Lançamentos de diário` e localize o lançamento"
-" correto, por número (ou seja, `PBNK1/2024/XXXXX`)."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:171
-msgid ""
-"Click into the journal entry to view the :guilabel:`Journal Items`, and "
-"other information about the entry."
-msgstr ""
-"Clique no lançamento do diário para visualizar o :guilabel:`Lançamentos de "
-"diário` e outras informações sobre o registro."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:0
-msgid "Journal Entry form for landed cost created from vendor bill."
-msgstr ""
-"Formulário de lançamento contábil manual para custos adicionais criados a "
-"partir da fatura do fornecedor."
-
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:3
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:15
 msgid "Automatic inventory valuation"
@@ -6660,6 +6216,8 @@ msgid ""
 "Clear existing stock (possibly with an :doc:`inventory adjustment "
 "<../../warehouses_storage/inventory_management/count_products>`)"
 msgstr ""
+"Limpar o estoque existente (possivelmente com um :doc:`ajuste de estoque "
+"<../../warehouses_storage/inventory_management/count_products>`)"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:37
 msgid "Change the inventory valuation method to *Automatic*"
@@ -7647,6 +7205,445 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst-1
 msgid "Show Stock Valuation journals in a list."
 msgstr "Diários de valoração de estoque em uma lista."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:3
+msgid "Landed costs"
+msgstr "Custos adicionais"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:10
+msgid ""
+"When shipping products to customers, the landed cost is the total price of a"
+" product or shipment, including all expenses associated with shipping the "
+"product."
+msgstr ""
+"Ao enviar produtos para os clientes, o custo adicional é o preço total de um"
+" produto ou remessa, incluindo todas as despesas associadas ao envio do "
+"produto."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:13
+msgid ""
+"In Odoo, the *Landed Costs* feature is used to take additional costs into "
+"account when calculating the valuation of a product. This includes the cost "
+"of shipment, insurance, customs duties, taxes, and other fees."
+msgstr ""
+"No Odoo, o recurso *Custos adicionais* é usado para levar em conta os custos"
+" adicionais ao calcular a valoração de um produto. Isso inclui o custo de "
+"envio, seguro, taxas alfandegárias, impostos e outras taxas."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:20
+msgid ""
+"To add landed costs to products, the *Landed Costs* feature must first be "
+"enabled. To enable this feature, navigate to :menuselection:`Inventory app "
+"--> Configuration --> Settings`, and scroll to the :guilabel:`Valuation` "
+"section."
+msgstr ""
+"Para adicionar custos adicionais aos produtos, o recurso *Custos adicionais*"
+" deve ser ativado primeiro. Para ativar esse recurso, navegue até "
+":menuselection:`app Inventário --> Configuração --> Definições` e vá até a "
+"seção :guilabel:`Valoração`."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:24
+msgid ""
+"Tick the checkbox next to the :guilabel:`Landed Costs` option, and click "
+":guilabel:`Save` to save changes."
+msgstr ""
+"Marque a caixa de seleção ao lado da opção :guilabel:`Custos adicionais` e "
+"clique em :guilabel:`Salvar` para salvar as alterações."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:27
+msgid ""
+"Once the page refreshes, a new :guilabel:`Default Journal` field appears "
+"below the :guilabel:`Landed Costs` feature in the :guilabel:`Valuation` "
+"section."
+msgstr ""
+"Quando a página for atualizada, um novo campo :guilabel:`Diário padrão` "
+"aparecerá abaixo do recurso :guilabel:`Custos adicionais` na seção "
+":guilabel:`Valoração`."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:30
+msgid ""
+"Click the :guilabel:`Default Journal` drop-down menu to reveal a list of "
+"accounting journals. Select a journal for which all accounting entries "
+"related to landed costs should be recorded."
+msgstr ""
+"Clique no menu suspenso :guilabel:`Diário padrão` para exibir uma lista de "
+"diários contábeis. Selecione um diário para o qual todos os lançamentos "
+"contábeis relacionados aos custos de importação devem ser registrados."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst-1
+msgid ""
+"Landed Costs feature and resulting Default Journal field in the Inventory "
+"settings."
+msgstr ""
+"Recurso Custos adicionais e o campo Diário padrão resultante nas definições "
+"do Inventário."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:37
+msgid "Create landed cost product"
+msgstr "Criar produto de custo adicional"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:39
+msgid ""
+"For charges that are consistently added as landed costs, a landed cost "
+"product can be created in Odoo. This way, a landed cost product can be "
+"quickly added to a vendor bill as an invoice line, instead of having to be "
+"manually entered every time a new vendor bill is created."
+msgstr ""
+"Para cobranças que são consistentemente inseridas como custos adicionais, é "
+"possível criar um produto de custos adicionais no Odoo. Dessa forma, um "
+"produto de custos adicionais pode ser rapidamente incluído em uma fatura de "
+"fornecedor como uma linha de fatura, em vez de ter que ser inserido "
+"manualmente toda vez que uma nova fatura de fornecedor for criada."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:43
+msgid ""
+"To do this, create a new product by going to :menuselection:`Inventory app "
+"--> Products --> Products`, and clicking :guilabel:`New`."
+msgstr ""
+"Para fazer isso, crie um novo produto acessando :menuselection:`app "
+"Inventário --> Produtos --> Produtos` e clicando em :guilabel:`Novo`."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:46
+msgid ""
+"Assign a name to the landed cost product in the :guilabel:`Product Name` "
+"field (i.e. `International Shipping`). In the :guilabel:`Product Type` "
+"field, click the drop-down menu, and select :guilabel:`Service` as the "
+":guilabel:`Product Type`."
+msgstr ""
+"Atribua um nome ao produto de custo de importação no campo :guilabel:`Nome "
+"do produto` (ou seja, `Remessa internacional`). No campo :guilabel:`Tipo de "
+"produto`, clique no menu suspenso e selecione :guilabel:`Serviço` como o "
+":guilabel:`Tipo de produto`."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:51
+msgid ""
+"Landed cost products **must** have their :guilabel:`Product Type` set to "
+":guilabel:`Service`."
+msgstr ""
+"Os produtos de custo adicionais **devem** ter seu :guilabel:`Tipo de "
+"produto` definido como :guilabel:`Serviço`."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:53
+msgid ""
+"Click the :guilabel:`Purchase` tab, and tick the checkbox next to "
+":guilabel:`Is a Landed Cost` in the :guilabel:`Vendor Bills` section. Once "
+"ticked, a new :guilabel:`Default Split Method` field appears below it, "
+"prompting a selection. Clicking that drop-down menu reveals the following "
+"options:"
+msgstr ""
+"Clique na aba :guilabel:`Compra` e marque a caixa de seleção ao lado de "
+":guilabel:`É um custo adicional` na seção :guilabel:`Contas do fornecedor`. "
+"Uma vez marcada, um novo campo :guilabel:`Método de divisão padrão` aparece "
+"abaixo dela, solicitando uma seleção. Clicar nesse menu suspenso revela as "
+"seguintes opções:"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:57
+msgid ""
+":guilabel:`Equal`: splits the cost equally across each product included in "
+"the receipt, regardless of the quantity of each."
+msgstr ""
+":guilabel:`Igual`: divide o custo igualmente entre cada produto incluído no "
+"recebimento, independentemente da quantidade de cada um."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:59
+msgid ""
+":guilabel:`By Quantity`: splits the cost across each unit of all products in"
+" the receipt."
+msgstr ""
+":guilabel:`Por quantidade`: divide o custo entre cada unidade de todos os "
+"produtos no recebimento."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:60
+msgid ""
+":guilabel:`By Current Cost`: splits the cost according to the cost of each "
+"product unit, so a product with a higher cost receives a greater share of "
+"the landed cost."
+msgstr ""
+":guilabel:`Por custo atual`: divide o custo de acordo com o custo de cada "
+"unidade de produto, de modo que um produto com um custo mais alto recebe uma"
+" parcela maior do custo de importação."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:62
+msgid ""
+":guilabel:`By Weight`: splits the cost, according to the weight of the "
+"products in the receipt."
+msgstr ""
+":guilabel:`Por peso`: divide o custo de acordo com o peso dos produtos no "
+"recebimento."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:63
+msgid ""
+":guilabel:`By Volume`: splits the cost, according to the volume of the "
+"products in the receipt."
+msgstr ""
+":guilabel:`Por volume`: divide o custo de acordo com o volume dos produtos "
+"no recebimento."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst-1
+msgid ""
+"Is a Landed Cost checkbox and Default Split Method on service type product "
+"form."
+msgstr ""
+"É uma caixa de seleção Custo adicional e Método de divisão padrão no "
+"formulário de produto do tipo serviço."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:68
+msgid ""
+"When creating new vendor bills, this product can be added as an invoice line"
+" as a landed cost."
+msgstr ""
+"Ao criar novas contas de fornecedor, esse produto pode ser adicionado como "
+"uma linha de fatura como um custo adicional."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:71
+msgid ""
+"To apply a landed cost on a vendor bill, products in the original |PO| "
+"**must** belong to a *Product Category* with a *Costing Method* of either "
+"|AVCO| or |FIFO|, and the valuation method can be :doc:`manual "
+"<using_inventory_valuation>` or :doc:`automatic "
+"<inventory_valuation_config>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:79
+msgid ""
+"Navigate to :menuselection:`Purchase app --> New` to create a new request "
+"for quotation (RfQ). In the :guilabel:`Vendor` field, add a vendor to order "
+"products from. Then, click :guilabel:`Add a product`, under the "
+":guilabel:`Products` tab, to add products to the |RfQ|."
+msgstr ""
+"Navegue até o :menuselection:`app Compras --> Novo` para criar uma nova "
+"solicitação de cotação (SDC). No campo :guilabel:`Fornecedor`, adicione um "
+"fornecedor para fazer o pedido de produtos. Em seguida, clique em "
+":guilabel:`Adicionar um produto`, na guiaba :guilabel:`Produtos`, para "
+"adicionar produtos à |SDC|."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:83
+msgid ""
+"Once ready, click :guilabel:`Confirm Order` to confirm the order. Then, "
+"click :guilabel:`Receive Products` once the products have been received, "
+"followed by :guilabel:`Validate`."
+msgstr ""
+"Quando estiver pronto, clique em :guilabel:`Confirmar pedido` para confirmar"
+" o pedido. Em seguida, clique em :guilabel:`Receber produtos` quando os "
+"produtos tiverem sido recebidos, seguido de :guilabel:`Validar`."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:87
+msgid "Create vendor bill"
+msgstr "Criar fatura do fornecedor"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:89
+msgid ""
+"Once the vendor fulfills the |PO| and sends a bill, a vendor bill can be "
+"created from the |PO| in Odoo."
+msgstr ""
+"Quando o fornecedor preenche a |PO| e envia uma fatura, uma fatura de "
+"fornecedor pode ser criada a partir da |PO| no Odoo."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:92
+msgid ""
+"Navigate to the :menuselection:`Purchase app`, and click into the |PO| for "
+"which a vendor bill should be created. Then, click :guilabel:`Create Bill`. "
+"This opens a new :guilabel:`Vendor Bill` in the :guilabel:`Draft` stage."
+msgstr ""
+"Navegue até o :menuselection:`app Compras` e clique no |PO| para o qual uma "
+"fatura de fornecedor deve ser criada. Em seguida, clique em :guilabel:`Criar"
+" fatura`. Isso abre uma nova :guilabel:`Fatura do fornecedor` no estágio "
+":guilabel:`Rascunho`."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:96
+msgid ""
+"In the :guilabel:`Bill Date` field, click the line to open a calendar "
+"popover menu, and select the date on which this draft bill should be billed."
+msgstr ""
+"No campo :guilabel:`Data da fatura`, clique na linha para abrir um menu pop-"
+"up de calendário e selecione a data em que essa fatura provisória deve ser "
+"cobrada."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:99
+msgid ""
+"Then, under the :guilabel:`Invoice Lines` tab, click :guilabel:`Add a line`,"
+" and click the drop-down menu in the :guilabel:`Product` column to select "
+"the previously-created landed cost product. Click the :icon:`fa-cloud-"
+"upload` :guilabel:`(cloud with arrow)` icon to manually save and update the "
+"draft bill."
+msgstr ""
+"Em seguida, na aba :guilabel:`Linhas de fatura`, clique em "
+":guilabel:`Adicionar uma linha` e clique no menu suspenso na coluna "
+":guilabel:`Produto` para selecionar o produto de custo de importação criado "
+"anteriormente. Clique no ícone :icon:`fa-cloud-upload` :guilabel:`(nuvem com"
+" seta)` para salvar e atualizar manualmente o rascunho da fatura."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst-1
+msgid "Landed Costs column checkboxes for product and landed cost."
+msgstr ""
+"Caixas de seleção da coluna Custos adicionais para o custo do produto e "
+"adicionais."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:107
+msgid ""
+"In the :guilabel:`Landed Costs` column, the product ordered from the vendor "
+"does **not** have its checkbox ticked, while the landed cost product's "
+"checkbox **is** ticked. This differentiates landed costs from all other "
+"costs displayed on the bill."
+msgstr ""
+"Na coluna :guilabel:`Custos adicionais`, o produto encomendado ao fornecedor"
+" **não** tem sua caixa de seleção marcada, enquanto a caixa de seleção do "
+"produto de custos adicionais **está** marcada. Isso diferencia os custos de "
+"importação de todos os outros custos exibidos na fatura."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:111
+msgid ""
+"Additionally, at the top of the form, a :guilabel:`Create Landed Costs` "
+"button appears."
+msgstr ""
+"Além disso, na parte superior do formulário, é exibido um botão "
+":guilabel:`Criar custos adicionais`."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst-1
+msgid "Create Landed Costs button on vendor bill."
+msgstr "Botão Criar custos adicionais na fatura do fornecedor."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:117
+msgid "Add landed cost"
+msgstr "Incluir custo adicional"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:119
+msgid ""
+"Once a landed cost is added to the vendor bill, click :guilabel:`Create "
+"Landed Costs` at the top of the vendor bill."
+msgstr ""
+"Depois que um custo adicional for adicionado à fatura do fornecedor, clique "
+"em :guilabel:`Criar custos adicionais` na parte superior da fatura do "
+"fornecedor."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:122
+msgid ""
+"Doing so automatically creates a landed cost record, with a set landed cost "
+"pre-filled in the product line in the :guilabel:`Additional Costs` tab."
+msgstr ""
+"Isso cria automaticamente um registro de custos adicionai, com um custo "
+"adicional definido pré-preenchido na linha do produto na aba "
+":guilabel:`Custos adicionais`."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:125
+msgid ""
+"From the :guilabel:`Landed Cost` form, click the :guilabel:`Transfers` drop-"
+"down menu, and select which transfer the landed cost belongs to."
+msgstr ""
+"No formulário :guilabel:`Custo adicional`, clique no menu suspenso "
+":guilabel:`Transferências` e selecione a qual transferência o landed cost "
+"pertence."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst-1
+msgid "Landed cost form with selected receipt transfer."
+msgstr ""
+"Formulário de custo adicional com transferência de recibo selecionada."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:132
+msgid ""
+"In addition to creating landed costs directly from a vendor bill, landed "
+"cost records can *also* be created by navigating to "
+":menuselection:`Inventory app --> Operations --> Landed Costs`, and clicking"
+" :guilabel:`New`."
+msgstr ""
+"Além de criar custos adicionais diretamente de uma fatura de fornecedor, os "
+"registros de custos de importação podem *também* ser criados navegando até "
+":menuselection:`app Inventário --> Operações --> Custos adicionais` e "
+"clicando em :guilabel:`Novo`."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:136
+msgid ""
+"After setting the picking from the :guilabel:`Transfers` drop-down menu, "
+"click :guilabel:`Compute` (at the bottom of the form, under the "
+":guilabel:`Total:` cost)."
+msgstr ""
+"Depois de definir a seleção no menu suspenso :guilabel:`Transferências`, "
+"clique em :guilabel:`Calcular` (na parte inferior do formulário, sob o custo"
+" :guilabel:`Total:`)."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:139
+msgid ""
+"Click the :guilabel:`Valuation Adjustments` tab to see the impact of the "
+"landed costs. The :guilabel:`Original Value` column lists the original price"
+" of the |PO|, the :guilabel:`Additional Landed Cost` column displays the "
+"landed cost, and the :guilabel:`New Value` displays the sum of the two, for "
+"the total cost of the |PO|."
+msgstr ""
+"Clique na aba :guilabel:`Ajustes de valoração` para ver o impacto dos custos"
+" adicionais. A coluna :guilabel:`Valor original` lista o preço original da "
+"|PO|, a coluna :guilabel:`Custo adicional extra` exibe o custo de "
+"desembarque e a coluna :guilabel:`Novo valor` exibe a soma das duas, para o "
+"custo total da |PO|."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:144
+msgid ""
+"Once ready, click :guilabel:`Validate` to post the landed cost entry to the "
+"accounting journal."
+msgstr ""
+"Quando estiver pronto, clique em :guilabel:`Validar` para lançar o registro "
+"do custo adicional no diário contábil."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:146
+msgid ""
+"This causes a :guilabel:`Valuation` smart button to appear at the top of the"
+" form. Click the :guilabel:`Valuation` smart button to open a "
+":guilabel:`Stock Valuation` page, with the product's updated valuation "
+"listed."
+msgstr ""
+"Isso faz com que um botão inteligente :guilabel:`Valoração` apareça na parte"
+" superior do formulário. Clique no botão inteligente :guilabel:`Valoração` "
+"para abrir uma página :guilabel:`Valoração de estoque`, com a avaliação "
+"atualizada do produto listada."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:151
+msgid ""
+"For a :guilabel:`Valuation` smart button to appear upon validation, the "
+"product's :guilabel:`Product Type` **must** be set to :guilabel:`Storable`."
+msgstr ""
+"Para que um botão inteligente :guilabel:`Valoração` seja exibido na "
+"validação, o :guilabel:`Tipo de produto` **deve** ser definido como "
+":guilabel:`Armazenável`."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:154
+msgid ""
+"To view the valuation of *every* product, including landed costs, navigate "
+"to :menuselection:`Inventory app --> Reporting --> Valuation`."
+msgstr ""
+"Para visualizar a avaliação de *cada* produto, incluindo os custos "
+"adicionais, navegue até :menuselection:`app Inventário --> Relatório --> "
+"Valoração`."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:158
+msgid ""
+"Each journal entry created for a landed cost on a vendor bill can be viewed "
+"in the *Accounting* app."
+msgstr ""
+"Cada lançamento contábil manual criado para um custo adicional em uma fatura"
+" de fornecedor pode ser visualizado no aplicativo *Financeiro*."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:161
+msgid ""
+"To locate these journal entries, navigate to :menuselection:`Accounting app "
+"--> Accounting --> Journal Entries`, and locate the correct entry, by number"
+" (i.e. `PBNK1/2024/XXXXX`)."
+msgstr ""
+"Para localizar esses lançamentos contábeis, navegue até :menuselection:`app "
+"Financeiro --> Financeiro --> Lançamentos de diário` e localize o lançamento"
+" correto, por número (ou seja, `PBNK1/2024/XXXXX`)."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:164
+msgid ""
+"Click into the journal entry to view the :guilabel:`Journal Items`, and "
+"other information about the entry."
+msgstr ""
+"Clique no lançamento do diário para visualizar o :guilabel:`Lançamentos de "
+"diário` e outras informações sobre o registro."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:0
+msgid "Journal Entry form for landed cost created from vendor bill."
+msgstr ""
+"Formulário de lançamento contábil manual para custos adicionais criados a "
+"partir da fatura do fornecedor."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:3
 msgid "Using inventory valuation"
@@ -14413,15 +14410,20 @@ msgid ""
 " up, these rules help automate the logistics of product movement based on "
 "specific conditions."
 msgstr ""
+"No Odoo, as *rotas* controlam a movimentação de produtos entre diferentes "
+"locais, sejam eles internos ou externos, usando regras push e pull. Uma vez "
+"configuradas, essas regras ajudam a automatizar a logística da movimentação "
+"de produtos com base em condições específicas."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:10
 msgid ""
 "`Odoo Tutorials: Routes <https://www.youtube.com/watch?v=qkhDUezyZuc>`_"
 msgstr ""
+"`Tutoriais do Odoo: Rotas <https://www.youtube.com/watch?v=qkhDUezyZuc>`_"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:11
 msgid ":doc:`Standard routes in Odoo <../daily_operations>`"
-msgstr ""
+msgstr ":doc:`Rotas padrão no Odoo <../daily_operations>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:14
 msgid ""
@@ -14429,10 +14431,13 @@ msgid ""
 ":ref:`packagings <inventory/product_management/route-on-packaging>`, and on "
 "the sales order line."
 msgstr ""
+"As rotas são aplicáveis a produtos, categorias de produtos, métodos de "
+"envio, :ref:`embalagens <inventory/product_management/route-on-packaging>` e"
+" na linha do pedido de vendas."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:18
 msgid "About routes and terminology"
-msgstr ""
+msgstr "Sobre rotas e terminologia"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:20
 msgid ""
@@ -14503,6 +14508,8 @@ msgid ""
 "Push rules are used to *supply products into a storage locations* as soon as"
 " they arrive at a specific receiving location."
 msgstr ""
+"As regras de push são usadas para *fornecer produtos a um local de "
+"armazenamento* assim que eles chegam a um local de recebimento específico."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:54
 msgid ""
@@ -14520,14 +14527,19 @@ msgid ""
 "can be applied to different products, allowing for customized storage "
 "locations."
 msgstr ""
+"Em uma :doc:`rota de recebimento em uma única etapa "
+"<receipts_delivery_one_step>`, que usa uma regra de push, quando um produto "
+"chega ao armazém, a regra de push pode transferi-lo automaticamente para o "
+"*Local de armazenamento*. É possível aplicar diferentes regras de push a "
+"diferentes produtos, permitindo locais de armazenamento personalizados."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:66
 msgid "Rule for a Receive in one step route."
-msgstr ""
+msgstr "Regra para uma rota Receber em uma única etapa."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:66
 msgid "Push rule for the 'Receive in one step' route."
-msgstr ""
+msgstr "Regra de push para a rota \"Receber em uma etapa\"."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:68
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:90
@@ -14535,6 +14547,8 @@ msgid ""
 "For more information about configuring rules, skip to the :ref:`Configure "
 "rules section <inventory/shipping_receiving/configure-rules>`."
 msgstr ""
+"Para obter mais informações sobre a configuração de regras, vá para a seção "
+":ref:`Configurar regras <inventory/shipping_receiving/configure-rules>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:72
 msgid "Pull rules"
@@ -14546,6 +14560,9 @@ msgid ""
 ":doc:`need to restock "
 "<../../warehouses_storage/replenishment/reordering_rules>`."
 msgstr ""
+"As regras de pull acionam movimentações de produtos sob demanda, como "
+"pedidos de vendas ou :doc:`necessidades de reposição "
+"<../../warehouses_storage/replenishment/reordering_rules>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:77
 msgid ""
@@ -14557,14 +14574,23 @@ msgid ""
 "rule creates a transfer from *Stock* to *Output*. The warehouse workers then"
 " process these transfers in the reverse order: picking, then shipping."
 msgstr ""
+"As regras de pull funcionam de trás para frente, a partir do local da "
+"demanda. Por exemplo, em uma rota de :ref:`entrega em duas etapas "
+"<inventory/shipping_receiving/two-step-delivery>`, em que os itens são "
+"movidos de *Estoque* para *Envio* antes de serem entregues ao *Local do "
+"cliente*, a regra de pull cria primeiro uma transferência de *Envio* para o "
+"cliente. Se o produto não estiver em *Envio*, outra regra de pull cria uma "
+"transferência de *Estoque* para *Envio*. Os funcionários do armazém "
+"processam essas transferências na ordem inversa: separação e, em seguida, "
+"envio."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:88
 msgid "Example pull rule."
-msgstr ""
+msgstr "Exemplo de regra de pull."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:88
 msgid "Pull rules for the 'Deliver in two steps' route."
-msgstr ""
+msgstr "Regras de pull para rota \"Entregar em duas etapas\"."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:98
 msgid ""
@@ -18997,6 +19023,9 @@ msgid ""
 "company, select it from the drop-down menu. Leave the field blank to apply "
 "the method to all companies."
 msgstr ""
+":guilabel:`Empresa`: Se o método de envio for aplicável a uma empresa "
+"específica, selecione-a no menu suspenso. Deixe o campo em branco para "
+"aplicar o método a todas as empresas."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:66
 msgid ""
@@ -19005,6 +19034,11 @@ msgid ""
 "lead times. For more information, jump to the :ref:`Set routes on shipping "
 "method <inventory/shipping_receiving/shipping-route>` section."
 msgstr ""
+":guilabel:`Rotas`: selecione as rotas aplicáveis para definir diferentes "
+"métodos de entrega, como envio padrão ou expresso, com base em prazos de "
+"entrega variáveis. Para obter mais informações, vá para a seção "
+":ref:`Definir rotas no método de envio "
+"<inventory/shipping_receiving/shipping-route>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:72
 msgid ""
@@ -19264,7 +19298,7 @@ msgstr ":doc:`Faturar custo de envio <setup_configuration/invoicing>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:183
 msgid "Route on shipping method"
-msgstr ""
+msgstr "Rota no método de envio"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:185
 msgid ""
@@ -19272,12 +19306,17 @@ msgid ""
 " by configuring different :doc:`routes <daily_operations/use_routes>` for "
 "it."
 msgstr ""
+"Opcionalmente, defina diferentes processos de entrega um método de envio do "
+"armazém, configurando diferentes :doc:`rotas <daily_operations/use_routes>` "
+"para ele."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:189
 msgid ""
 "Configuring multiple routes per shipping method is helpful for adjusting "
 "warehouse delivery processes based on:"
 msgstr ""
+"A configuração de várias rotas por método de remessa é útil para ajustar os "
+"processos de entrega do armazém com base em:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:192
 msgid ""
@@ -19286,66 +19325,88 @@ msgid ""
 ":doc:`two-step <daily_operations/receipts_delivery_two_steps>` for standard "
 "shipping)."
 msgstr ""
+"velocidade (ex.: usar :doc:`entrega em uma etapa "
+"<daily_operations/receipts_delivery_one_step>` para remessa expressa ou em "
+":doc:`duas etapas <daily_operations/receipts_delivery_two_steps>` para "
+"remessa padrão)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:195
 msgid ""
 "international shipping (e.g. use :doc:`three-step delivery "
 "<daily_operations/delivery_three_steps>` to prepare documents for customs)"
 msgstr ""
+"remessa internacional (ex.: usar :doc:`entrega em três etapas "
+"<daily_operations/delivery_three_steps>` para preparar documentos da "
+"alfândega)"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:197
 msgid ""
 "in-store pickup or home delivery: ship from the central warehouse, or pick "
 "from the store's stock, depending on customer selection."
 msgstr ""
+"retirada na loja ou entrega a domicílio: envio do armazém central ou "
+"retirada do estoque da loja, dependendo da seleção do cliente."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:200
 msgid ""
 "To set up routes, go to :menuselection:`Inventory app --> Configuration --> "
 "Routes`. Click :guilabel:`New`, or select the desired route."
 msgstr ""
+"Para configurar rotas, vá para :menuselection:`app Inventário --> "
+"Configuração --> Rotas`. Clique em :guilabel:`Novo` ou selecione a rota "
+"desejada."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:203
 msgid ""
 "On the route form, in the :guilabel:`Applicable On` section, tick the "
 ":guilabel:`Shipping Methods` checkbox."
 msgstr ""
+"No formulário de rota, na seção :guilabel:`Aplicável em`, marque a caixa de "
+"seleção :guilabel:`Métodos de envio`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:210
 msgid "Routes form with the Shipping Methods checkbox selected."
-msgstr ""
+msgstr "Formulário Rotas com a caixa de seleção Métodos de envio marcada."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:210
 msgid "Routes form with the Shipping Methods checkbox ticked."
-msgstr ""
+msgstr "Formulário Rotas com a caixa de seleção Métodos de envio marcada."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:212
 msgid ""
 "Then, go to :menuselection:`Inventory app --> Configuration --> Shipping "
 "Methods`, and select the desired shipping method."
 msgstr ""
+"Em seguida, vá para :menuselection:`app Inventário --> Configuração --> "
+"Métodos de envio` e selecione o método de envio desejado."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:215
 msgid ""
 "On the shipping method form, in the :guilabel:`Routes` field, select the "
 "available fulfillment routes from the drop-down menu."
 msgstr ""
+"No formulário de método de envio, no campo :guilabel:`Rotas`, selecione as "
+"rotas de logística disponíveis no menu suspenso."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:219
 msgid ""
 "If the desired route is not selectable, check that the *Shipping Methods* "
 "option is enabled in the route's *Applicable On* section."
 msgstr ""
+"Se a rota desejada não puder ser selecionada, verifique se a opção *Métodos "
+"de envio* está ativada na seção *Aplicável em* da rota."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:226
 msgid "Show set routes on shipping method form."
-msgstr ""
+msgstr "Mostrar rotas definidas no formulário de método de envio."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:226
 msgid ""
 "By default, most shipping methods are created with two routes available for "
 "standard or express delivery."
 msgstr ""
+"Por padrão, a maioria dos métodos de envio é criada com duas rotas "
+"disponíveis, para entrega padrão ou expressa."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:232
 msgid "Add shipping"
@@ -19827,7 +19888,7 @@ msgstr ":doc:`multipack`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:3
 msgid "DHL integration"
-msgstr ""
+msgstr "Integração da DHL"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:5
 msgid ""
@@ -19837,6 +19898,11 @@ msgid ""
 "process of :doc:`calculating shipping rates <../setup_configuration>` and "
 ":doc:`generating shipping labels <labels>` is greatly simplified."
 msgstr ""
+"A DHL é uma das transportadoras para a qual um *conector de envio* está "
+"disponível no aplicativo Odoo **Inventário**. Ao ativar o conector de envio "
+"nas definições do aplicativo e configurar pelo menos um *método de envio*, o"
+" processo de :doc:`cálculo de taxas de frete <../setup_configuration>` e "
+":doc:`geração de etiquetas de remessa <labels>` é bastante simplificado."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:11
 msgid ""
@@ -19846,10 +19912,16 @@ msgid ""
 "common to all shippers, see the documentation on :doc:`third-party shippers "
 "<third_party_shipper>`."
 msgstr ""
+"Embora haja uma variedade de conectores de envio disponível para diferentes "
+"transportadoras, esta documentação detalha as definições de configuração "
+"específicas para a integração com DHL. Para obter instruções sobre como "
+"definir as configurações de integração comuns a todas as transportadoras, "
+"consulte a documentação sobre :doc:`transportadoras terceirizadas "
+"<third_party_shipper>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:17
 msgid "Enable DHL shipping connector"
-msgstr ""
+msgstr "Ativar o conector de envio DHL"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:19
 msgid ""
@@ -19857,6 +19929,9 @@ msgid ""
 "carrier's shipping connector. To do so, navigate to "
 ":menuselection:`Inventory app --> Configuration --> Settings`."
 msgstr ""
+"Antes de criar um método de envio da DHL, é necessário ativar o conector de "
+"envio da transportadora. Para fazer isso, navegue até :menuselection:`app "
+"Inventário --> Configuração --> Definições`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:22
 msgid ""
@@ -19864,6 +19939,9 @@ msgid ""
 "checkbox next to :guilabel:`DHL Express Connector`. Finally, click "
 ":guilabel:`Save` to apply the changes."
 msgstr ""
+"Role para baixo até a seção :guilabel:`Conectores de envio` e marque a caixa"
+" de seleção ao lado de :guilabel:`Conector DHL Express`. Por fim, clique em "
+":guilabel:`Salvar` para aplicar as alterações."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:25
 msgid ""
@@ -19871,10 +19949,14 @@ msgid ""
 " Shipping Methods` link appears below. Click the link to open a page showing"
 " all shipping methods configured for DHL."
 msgstr ""
+"Depois que o conector tiver sido ativado, um link :icon:`oi-arrow-right` "
+":guilabel:`Métodos de envio DHL` será exibido abaixo. Clique no link para "
+"abrir uma página que mostra todos os métodos de envio configurados para a "
+"DHL."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:29
 msgid "Configure DHL shipping method"
-msgstr ""
+msgstr "Configurar o método de envio DHL"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:31
 msgid ""
@@ -19883,6 +19965,11 @@ msgid ""
 "as a line item to sales orders (SOs), which allows for automatic computation"
 " of shipping rates, and generation of shipping labels."
 msgstr ""
+"Depois de ativar o conector de envio da DHL, é possível configurar métodos "
+"de envio para a transportadora. Uma vez configurado, um método de envio pode"
+" ser adicionado como um item de linha aos pedidos de vendas (SOs), o que "
+"permite o cálculo automático das taxas de frete e a geração de etiquetas de "
+"remessa."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:35
 msgid ""
@@ -19891,6 +19978,10 @@ msgid ""
 "section, select the :guilabel:`DHL Shipping Methods` link below the "
 ":guilabel:`DHL Express Connector` checkbox."
 msgstr ""
+"Para criar um novo método de envio DHL, navegue até :menuselection:`app "
+"Inventário --> Configuração --> Definições`. Na seção :guilabel:`Conectores "
+"de envio`, selecione o link :guilabel:`Métodos de envio DHL` abaixo da caixa"
+" de seleção :guilabel:`Conector DHL Express`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:40
 msgid ""
@@ -19898,16 +19989,22 @@ msgid ""
 "navigating to :menuselection:`Inventory app --> Configuration --> Shipping "
 "Methods`."
 msgstr ""
+"Também é possível ver os métodos de envio existentes para cada "
+"transportadora acessando :menuselection:`app Inventário --> Configuração -->"
+" Métodos de envio`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:43
 msgid ""
 "Click :guilabel:`New` to open a blank shipping method form. If a shipping "
 "method has already been created, it can be selected from this screen."
 msgstr ""
+"Clique em :guilabel:`Novo` para abrir um formulário de método de envio em "
+"branco. Se um método de envio já tiver sido criado, ele poderá ser "
+"selecionado nessa tela."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst-1
 msgid "The form for a DHL shipping method."
-msgstr ""
+msgstr "Formulário para um método de envio da DHL."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:51
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:60
@@ -19919,6 +20016,8 @@ msgid ""
 "Begin configuring the shipping method by entering its title in the "
 ":guilabel:`Shipping Method` field."
 msgstr ""
+"Comece a configurar o método de envio inserindo seu título no campo "
+":guilabel:`Método de envio`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:56
 msgid ""
@@ -19926,6 +20025,9 @@ msgid ""
 "option. After doing so, a new :guilabel:`DHL Configuration` tab appears at "
 "the bottom of the form."
 msgstr ""
+"No menu suspenso :guilabel:`Provedor`, selecione a opção :guilabel:`DHL`. "
+"Depois de fazer isso, será exibida uma nova aba :guilabel:`Configuração DHL`"
+" na parte inferior do formulário."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:59
 msgid ""
@@ -19934,6 +20036,10 @@ msgid ""
 "shippers <third_party_shipper>` for instructions on how to properly "
 "configure them."
 msgstr ""
+"Todos os outros campos desta seção são idênticos nos formulários de método "
+"de envio de cada transportadora. Consulte a documentação sobre "
+":doc:`transportadoras terceirizadas <third_party_shipper>` para obter "
+"instruções sobre como configurá-los corretamente."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:64
 msgid "DHL Configuration"
@@ -19945,10 +20051,13 @@ msgid ""
 " connect the user's DHL account to Odoo, and configure the shipping method's"
 " details."
 msgstr ""
+"A aba :guilabel:`Configuração DHL` no formulário do método de envio é usada "
+"para conectar a conta DHL do usuário ao Odoo e configurar os detalhes do "
+"método de envio."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:70
 msgid "DHL SiteID, password, and account number"
-msgstr ""
+msgstr "ID do site, senha e número da conta da DHL"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:72
 msgid ""
@@ -19957,6 +20066,10 @@ msgid ""
 "password are different credentials than the ones used to log in to a DHL "
 "account."
 msgstr ""
+"O ID do site, a senha e o número da conta da DHL são usados para vincular "
+"uma conta DHL a serviços de terceiros, como o aplicativo Odoo "
+"**Inventário**. O ID do site e a senha são credenciais diferentes daquelas "
+"usadas para fazer login em uma conta DHL."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:76
 msgid ""
@@ -19965,30 +20078,34 @@ msgid ""
 "<https://developer.dhl.com/user/register>`_, by filling out the following "
 "information:"
 msgstr ""
+"Para obter o ID do site, senha e número de conta da DHL, é necessário "
+"registrar-se no `Portal do desenvolvedor de API DHL  "
+"<https://developer.dhl.com/user/register>`_, preenchendo as seguintes "
+"informações:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:80
 msgid ":guilabel:`First name`"
-msgstr ""
+msgstr ":guilabel:`Nome`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:81
 msgid ":guilabel:`Last name`"
-msgstr ""
+msgstr ":guilabel:`Sobrenome`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:82
 msgid ":guilabel:`Email address`"
-msgstr ""
+msgstr ":guilabel:`Endereço de e-mail`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:83
 msgid ":guilabel:`Username`"
-msgstr ""
+msgstr ":guilabel:`Nome de usuário`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:84
 msgid ":guilabel:`Company Name`"
-msgstr ""
+msgstr ":guilabel:`Nome da empresa`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:85
 msgid ":guilabel:`Country`"
-msgstr ""
+msgstr ":guilabel:`País`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:87
 msgid ""
@@ -19996,6 +20113,9 @@ msgid ""
 "accept the terms of use and the privacy policy` checkbox, and click "
 ":guilabel:`Send` to register."
 msgstr ""
+"Depois de preencher todos os campos, marque a caixa de seleção :guilabel:`Li"
+" e aceito os termos de uso e a política de privacidade` e clique em "
+":guilabel:`Enviar` para se cadastrar."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:90
 msgid ""
@@ -20003,6 +20123,9 @@ msgid ""
 "Click the link inside the email to activate the developer portal account, "
 "and set a password."
 msgstr ""
+"Após o cadastro, um e-mail de confirmação é enviado para confirmar a "
+"inscrição. Clique no link do e-mail para ativar a conta do portal do "
+"desenvolvedor e definir uma senha."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:93
 msgid ""
@@ -20010,6 +20133,9 @@ msgid ""
 "account. Enter the number in the :guilabel:`DHL Account Number` field on the"
 " shipping method form."
 msgstr ""
+"Esse e-mail também inclui o número da conta do portal do desenvolvedor. "
+"Digite o número no campo :guilabel:`Número da conta DHL` no formulário de "
+"método de envio."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:96
 msgid ""
@@ -20017,6 +20143,9 @@ msgid ""
 "using the username and password. Click on the user avatar in the top-right "
 "corner of the screen to open the user dashboard."
 msgstr ""
+"Depois que a conta do portal do desenvolvedor tiver sido confirmada, faça "
+"login no portal usando o nome de usuário e a senha. Clique no avatar do "
+"usuário no canto superior direito da tela para abrir o painel do usuário."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:99
 msgid ""
@@ -20024,6 +20153,9 @@ msgid ""
 "the :guilabel:`Credentials` section, click the :guilabel:`Show key` button "
 "below the :guilabel:`API Key` and :guilabel:`API Secret` fields."
 msgstr ""
+"No painel, clique na aba :guilabel:`Aplicativos` e selecione um aplicativo. "
+"Na seção :guilabel:`Credenciais`, clique no botão :guilabel:`Mostrar chave` "
+"abaixo dos campos :guilabel:`Chave da API` e :guilabel:`Segredo da API`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:103
 msgid ""
@@ -20031,6 +20163,9 @@ msgid ""
 "Key* in the :guilabel:`DHL SiteID` field, and the *API Secret* in the "
 ":guilabel:`DHL Password` field."
 msgstr ""
+"Retorne ao formulário do método de envio no banco de dados do Odoo. Digite a"
+" *Chave da API da DHL* no campo :guilabel:`ID do site DHL` e o *Segredo da "
+"API* no campo :guilabel:`Senha DHL`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:107
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:123
@@ -20042,44 +20177,58 @@ msgid ""
 "The rest of the fields in the :guilabel:`DHL Configuration` tab are used to "
 "configure the shipping method itself:"
 msgstr ""
+"O restante dos campos na aba :guilabel:`Configuração DHL` é usado para "
+"configurar o próprio método de envio:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:112
 msgid ":guilabel:`Region`: the region in which the shipping method is used."
-msgstr ""
+msgstr ":guilabel:`Região`: a região na qual o método de envio é usado."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:113
 msgid ""
 ":guilabel:`DHL Product`: the shipping service purchased from DHL (e.g. "
 "Express Worldwide)."
 msgstr ""
+":guilabel:`Produto DHL`: o serviço de remessa adquirido da DHL (ex.: Express"
+" Worldwide)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:114
 msgid ""
 ":guilabel:`DHL Package Type`: the type of DHL package used for delivery "
 "(e.g. DHL Box)."
 msgstr ""
+":guilabel:`Tipo de pacote DHL`: o tipo de pacote DHL usado para entrega "
+"(ex.: DHL Box)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:115
 msgid ""
 ":guilabel:`Package Weight Unit`: the unit of measure used to display package"
 " weight."
 msgstr ""
+":guilabel:`Unidade de peso do pacote`: a unidade de medida usada para exibir"
+" o peso do pacote."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:116
 msgid ""
 ":guilabel:`Package Dimension Unit`: the unit of measure used to display "
 "package size."
 msgstr ""
+":guilabel:`Unidade de dimensão do pacote`: a unidade de medida usada para "
+"exibir o tamanho do pacote."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:117
 msgid ""
 ":guilabel:`Label Format`: the file format used to generate shipping labels."
 msgstr ""
+":guilabel:`Formato da etiqueta`: o formato de arquivo usado para gerar "
+"etiquetas de remessa."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:118
 msgid ""
 ":guilabel:`Label Template`: the paper size used to print shipping labels."
 msgstr ""
+":guilabel:`Modelo da etiqueta`: o tamanho do papel usado para imprimir "
+"etiquetas de remessa."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:121
 msgid ""
@@ -20087,6 +20236,9 @@ msgid ""
 "services are actually available for the DHL account. Available services "
 "depend on the contract negotiated with DHL."
 msgstr ""
+"Antes de selecionar as opções de serviço de um método de envio, certifique-"
+"se de que esses serviços estejam realmente disponíveis para a conta DHL. Os "
+"serviços disponíveis dependem do contrato negociado com a DHL."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:125
 msgid "Options"
@@ -20097,18 +20249,25 @@ msgid ""
 "Additional settings are available in the :guilabel:`Options` section at the "
 "bottom of the :guilabel:`DHL Configuration` tab:"
 msgstr ""
+"Há configurações adicionais disponíveis na seção :guilabel:`Opções` na parte"
+" inferior da aba :guilabel:`Configuração DHL`:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:130
 msgid ""
 ":guilabel:`Generate Return Label`: Enable this option to automatically "
 "generate a return label after validating a delivery order."
 msgstr ""
+":guilabel:`Gerar etiqueta de devolução`: Ative essa opção para gerar uma "
+"etiqueta de devolução automaticamente após a validação de um pedido de "
+"entrega."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:132
 msgid ""
 ":guilabel:`Dutiable Material`: Enable this option if the shipping method is "
 "liable to customs or other duties."
 msgstr ""
+":guilabel:`Material tributável`: Ative essa opção se o método de envio "
+"estiver sujeito a taxas alfandegárias ou outros impostos."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:3
 msgid "FedEx integration"
@@ -20670,7 +20829,7 @@ msgid ""
 "company, select it from the drop-down menu. Leave the field blank to apply "
 "the method to all companies."
 msgstr ""
-":guilabel:`Companhia`: se o método de envio for aplicável a uma empresa "
+":guilabel:`Empresa`: se o método de envio for aplicável a uma empresa "
 "específica, selecione-a no menu suspenso. Deixe o campo em branco para "
 "aplicar o método a todas as empresas."
 
@@ -23615,7 +23774,7 @@ msgstr "Disponibilidade da região"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:31
 msgid ":doc:`FedEx <fedex>`"
-msgstr ""
+msgstr ":doc:`FedEx <fedex>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:32
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:34
@@ -23625,7 +23784,7 @@ msgstr "Tudo"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:33
 msgid ":doc:`DHL Express <dhl_credentials>`"
-msgstr ""
+msgstr ":doc:`DHL Express <dhl_credentials>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:35
 msgid ":doc:`UPS <ups_credentials>`"
@@ -23645,7 +23804,7 @@ msgstr ":doc:`Sendcloud <sendcloud_shipping>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:40
 msgid "Some European countries (see details below)"
-msgstr ""
+msgstr "Alguns países europeus (veja detalhes abaixo)"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:41
 msgid "Bpost"
@@ -23673,15 +23832,15 @@ msgstr "Índia"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:47
 msgid ":doc:`Starshipit <starshipit_shipping>`"
-msgstr ""
+msgstr ":doc:`Starshipit <starshipit_shipping>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:48
 msgid "Australia and New Zealand"
-msgstr ""
+msgstr "Austrália e Nova Zelândia"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:51
 msgid "Other services from DHL are **not** supported."
-msgstr ""
+msgstr "Outros serviços da DHL **não** são suportados."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:53
 msgid ""
@@ -23689,6 +23848,9 @@ msgid ""
 "Germany, Italy, the Netherlands, Spain, and the United Kingdom, and **to** "
 "any European country."
 msgstr ""
+"Atualmente, a Sendcloud oferece suporte ao envio **da** Áustria, Bélgica, "
+"França, Alemanha, Itália, Holanda, Espanha e Reino Unido, e **para** "
+"qualquer país europeu."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:59
 msgid ""
@@ -25342,6 +25504,10 @@ msgid ""
 " stored in these locations are accounted for in :doc:`inventory valuation "
 "<../product_management/inventory_valuation/using_inventory_valuation>`."
 msgstr ""
+":guilabel:`Localização interna`: locais de armazenamento dentro do armazém. "
+"Os itens armazenados nesses locais são contabilizados em :doc:`valoração de "
+"estoque "
+"<../product_management/inventory_valuation/using_inventory_valuation>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:70
 msgid ""
@@ -28734,6 +28900,11 @@ msgid ""
 "it is required to fulfill a sales order (SO), or when it is needed as a "
 "component in a manufacturing order (MO)."
 msgstr ""
+"*Reposição por pedido (sob demanda)*, também conhecido como *MTO* (make to "
+"order), é uma estratégia de reposição que cria um rascunho de pedido para um"
+" produto sempre que ele for necessário para atender a um pedido de vendas "
+"(SO), ou quando é necessário como um componente em um pedido de fabricação "
+"(OP)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:17
 msgid ""
@@ -28743,6 +28914,11 @@ msgid ""
 " |SO| or |MO| that requires the product is confirmed, regardless of the "
 "current stock level of the product being ordered."
 msgstr ""
+"Uma solicitação de cotação (SDC) é criada para repor produtos comprados de "
+"um fornecedor, enquanto uma |OP| é criada para produtos fabricados. A "
+"criação de uma |SDC| ou |OP| ocorre toda vez que um |SO| ou |OP| que requer "
+"o produto é confirmada, independentemente do nível de estoque atual do "
+"produto que está sendo pedido."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:23
 msgid ""
@@ -28751,14 +28927,18 @@ msgid ""
 "Configuration --> Settings`, and tick the checkbox next to :guilabel:`Multi-"
 "Step Routes`, under the :guilabel:`Warehouse` heading."
 msgstr ""
+"Para usar a rota |MTO|, o recurso :guilabel:`Rotas com várias etapas` deve "
+"estar ativado. Para fazer isso, navegue até :menuselection:`app Inventário "
+"--> Configuração --> Definições` e marque a caixa de seleção ao lado de "
+":guilabel:`Rotas com várias etapas`, sob o título :guilabel:`Armazém`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:27
 msgid "Finally, click :guilabel:`Save` to save the change."
-msgstr ""
+msgstr "Por fim, clique em :guilabel:`Salvar` para salvar a alteração."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:32
 msgid "Unarchive MTO route"
-msgstr ""
+msgstr "Desarquivar rota MTO"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:34
 msgid ""
@@ -28778,6 +28958,10 @@ msgid ""
 ":icon:`fa-caret-down` :guilabel:`(down arrow)` icon on the right side of the"
 " search bar, and click the :guilabel:`Archived` filter to enable it."
 msgstr ""
+"Para isso, comece navegando até :menuselection:`app Inventário --> "
+"Configuração --> Rotas`. Na página :guilabel:`Rotas`, clique no ícone "
+":icon:`fa-caret-down` :guilabel:`(seta para baixo)` no lado direito da barra"
+" de pesquisa e clique no filtro :guilabel:`Arquivado` para ativá-lo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst-1
 msgid "The archived filter on the Routes page."
@@ -28791,6 +28975,11 @@ msgid ""
 ":guilabel:`Actions` button to reveal a drop-down menu. From the drop-down "
 "menu, select :guilabel:`Unarchive`."
 msgstr ""
+"Depois de ativar o filtro :guilabel:`Arquivado`, a página :guilabel:`Rotas` "
+"mostra todas as rotas atualmente arquivadas. Marque a caixa de seleção ao "
+"lado de :guilabel:`Reposição por pedido (sob demanda)` e, em seguida, clique"
+" no botão :icon:`fa-cog` :guilabel:`Ações` para exibir um menu suspenso. No "
+"menu suspenso, selecione :guilabel:`Desarquivar`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst-1
 msgid "The unarchive action on the Routes page."
@@ -28803,10 +28992,14 @@ msgid ""
 ":guilabel:`Replenish on Order (MTO)`, which is selectable on the *Inventory*"
 " tab of each product page."
 msgstr ""
+"Por fim, remova o filtro :guilabel:`Arquivado` da barra de pesquisa. A "
+"página :guilabel:`Rotas` agora mostra todas as rotas não arquivadas, "
+"incluindo :guilabel:`Reposição por pedido (sob demanda)`, que pode ser "
+"selecionada na aba *Inventário* de cada página de produto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:60
 msgid "Configure product for MTO"
-msgstr ""
+msgstr "Configurar produtos para Reposição por pedido"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:62
 msgid ""
@@ -28815,6 +29008,11 @@ msgid ""
 ":menuselection:`Inventory app --> Products --> Products`, then select an "
 "existing product, or click :guilabel:`New` to configure a new one."
 msgstr ""
+"Com a rota |MTO| desarquivada, os produtos agora podem ser configurados "
+"corretamente para usar a reposição sob demanda. Para isso, acesse "
+":menuselection:`app Inventário --> Produtos --> Produtos` e, em seguida, "
+"selecione um produto existente ou clique em :guilabel:`Novo` para configurar"
+" um novo produto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:66
 msgid ""
@@ -28822,6 +29020,9 @@ msgid ""
 ":guilabel:`Replenish on Order (MTO)` route in the :guilabel:`Routes` "
 "section, along with the :guilabel:`Buy` or :guilabel:`Manufacture` route."
 msgstr ""
+"Na página do produto, selecione a aba :guilabel:`Inventário` e ative a rota "
+":guilabel:`Reposição por pedido (sob demanda)` na seção :guilabel:`Rotas`, "
+"juntamente com a rota :guilabel:`Comprar` ou :guilabel:`Fabricar`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:71
 msgid ""
@@ -28830,6 +29031,10 @@ msgid ""
 " replenish the product when an order is placed for it (buy or manufacture "
 "it)."
 msgstr ""
+"A rota :guilabel:`Reposição por pedido (sob demanda)` **não funciona** sem "
+"que outra rota também esteja selecionada. Isso ocorre porque o Odoo precisa "
+"saber como reabastecer o produto quando um pedido é feito para ele (comprá-"
+"lo ou fabricá-lo)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst-1
 msgid "Select the MTO route and a second route on the Inventory tab."
@@ -28841,18 +29046,26 @@ msgid ""
 ":guilabel:`Can be Purchased` checkbox under the product name. Doing so makes"
 " the :guilabel:`Purchase` tab appear alongside the other tabs below."
 msgstr ""
+"Se o produto for comprado de um fornecedor para atender a |pedidos de "
+"vendas|, ative a caixa de seleção :guilabel:`Pode ser comprado` abaixo do "
+"nome do produto. Isso faz com que a aba :guilabel:`Compra` apareça junto com"
+" as outras abas de abaixo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:83
 msgid ""
 "Click the :guilabel:`Purchase` tab and specify a :guilabel:`Vendor` and the "
 ":guilabel:`Price` they sell the product for."
 msgstr ""
+"Clique na aba :guilabel:`Compra` e especifique um :guilabel:`Fornecedor` e o"
+" :guilabel:`Preço` pelo qual eles vendem o produto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:87
 msgid ""
 "Specifying a vendor is essential for this workflow, because Odoo cannot "
 "generate an |RFQ| without knowing who the product is purchased from."
 msgstr ""
+"A indicação de um fornecedor é essencial para esse fluxo de trabalho, pois o"
+" Odoo não pode gerar uma |SDC| sem saber de quem o produto foi comprado."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:90
 msgid ""
@@ -28861,16 +29074,24 @@ msgid ""
 "button at the top of the screen, then click :guilabel:`New` on the "
 ":guilabel:`Bill of Materials` page to configure a new |BOM| for the product."
 msgstr ""
+"Se o produto for fabricado, certifique-se de haver uma lista de materiais "
+"(LM) configurada para ele. Para fazer isso, clique no botão inteligente "
+":guilabel:`Lista de materuais` na parte superior da tela e, em seguida, "
+"clique em :guilabel:`Novo` na página :guilabel:`Lista de materiais` para "
+"configurar uma nova |LM| para o produto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:95
 msgid ""
 "For a full overview of |BOM| creation, see the documentation on :doc:`bills "
 "of materials <../../../manufacturing/basic_setup/bill_configuration>`."
 msgstr ""
+"Para obter uma visão geral completa da criação de |LM|, consulte a "
+"documentação sobre :doc:`listas de materiais "
+"<../../../manufacturing/basic_setup/bill_configuration>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:99
 msgid "Replenish using MTO"
-msgstr ""
+msgstr "Reabastecer usando Reposição por pedido"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:101
 msgid ""
@@ -28879,12 +29100,18 @@ msgid ""
 "confirmed. The type of order created depends on the second route selected in"
 " addition to |MTO|."
 msgstr ""
+"Depois de configurar um produto para usar a rota |MTO|, um pedido de "
+"reposição é criado para ele sempre que for confirmado um |pedido de vendas| "
+"ou |ordem de produção| que o inclua. O tipo de pedido criado depende da rota"
+" selecionada, além da |MTO|."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:105
 msgid ""
 "For example, if *Buy* was the second route selected, then a |PO| is created "
 "upon confirmation of an |SO|."
 msgstr ""
+"Por exemplo, se *Comprar* for a segunda rota selecionada, é então criado um "
+"|pedido de compra| após a confirmação de um |pedido de venda|."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:109
 msgid ""
@@ -28893,6 +29120,11 @@ msgid ""
 "if there is enough stock of the product on-hand to fulfill the |SO|, without"
 " buying or manufacturing additional units of it."
 msgstr ""
+"Quando a rota |MTO| está ativada para um produto, um pedido de reposição é "
+"sempre criado após a confirmação de um |pedido de venda| ou |ordem de "
+"produção|. Isso ocorre mesmo que haja estoque suficiente do produto "
+"disponível para atender ao pedido de vendas, sem comprar ou fabricar "
+"unidades adicionais dele."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:113
 msgid ""
@@ -28901,6 +29133,10 @@ msgid ""
 "navigating to the :menuselection:`Sales` app, then click :guilabel:`New`, "
 "which opens a blank quotation form."
 msgstr ""
+"Embora a rota |MTO| possa ser usada em conjunto com as rotas *Comprar* ou "
+"*Fabricar*, a rota *Comprar* foi usada como exemplo neste fluxo de trabalho."
+" Comece navegando até o aplicativo :menuselection:`Vendas` e, em seguida, "
+"clique em :guilabel:`Novo`, que abre um formulário de cotação em branco."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:117
 msgid ""
@@ -28909,12 +29145,19 @@ msgid ""
 " product configured to use the *MTO* and *Buy* routes. Click "
 ":guilabel:`Confirm`, and the quotation is turned into an |SO|."
 msgstr ""
+"No formulário de cotação em branco, adicione um :guilabel:`Cliente`. Depois,"
+" clique em :guilabel:`Adicionar um produto` na aba :guilabel:`Linhas do "
+"pedido` e insira um produto que tenha sido configurado para usar as rotas "
+"*MTO* e *Comprar*. Clique em :guilabel:`Confirmar` e a cotação será "
+"transformada em um |pedido de vendas|."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:121
 msgid ""
 "A :guilabel:`Purchase` smart button now appears at the top of the page. "
 "Clicking it opens the |RFQ| associated with the |SO|."
 msgstr ""
+"Um botão inteligente :guilabel:`Compra` agora aparece na parte superior da "
+"página. Ao clicar nele, é aberta a |SDC| associada ao |pedido de venda|."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:124
 msgid ""
@@ -28924,6 +29167,12 @@ msgid ""
 "open the receipt order, and click :guilabel:`Validate` to enter the products"
 " into inventory."
 msgstr ""
+"Clique em :guilabel:`Confirmar pedido` para confirmar a |SDC| e transformá-"
+"la em um |pedido de compra|. Um botão roxo :guilabel:`Receber produtos` "
+"aparecera acima do |pedido de compra|. Depois que os produtos forem "
+"recebidos, clique em :guilabel:`Receber produtos` para abrir o pedido de "
+"recebimento, e clique em :guilabel:`Validar` para inserir os produtos no "
+"inventário."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:129
 msgid ""
@@ -28931,6 +29180,9 @@ msgid ""
 "navigating to :menuselection:`Sales app --> Orders --> Orders`, and "
 "selecting the|SO|."
 msgstr ""
+"Retorne ao |pedido de venda| clicando na trilha de navegação :guilabel:`SO` "
+"ou navegando até :menuselection:`app Vendas --> Pedidos --> Pedidos` e "
+"selecionando o |pedido de venda|."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:132
 msgid ""
@@ -28938,24 +29190,30 @@ msgid ""
 " to open the delivery order. Once the products have been shipped to the "
 "customer, click :guilabel:`Validate` to confirm the delivery."
 msgstr ""
+"Por fim, clique no botão inteligente :guilabel:`Entrega` na parte superior "
+"do pedido para abrir o pedido de entrega. Depois que os produtos forem "
+"enviados para o cliente, clique em :guilabel:`Validar` para confirmar a "
+"entrega."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:137
 msgid ""
 "For information on workflows that include the |MTO| route, see the following"
 " documentation:"
 msgstr ""
+"Para obter informações sobre fluxos de trabalho que incluem a rota |MTO|, "
+"consulte a documentação a seguir:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:139
 msgid ":doc:`resupply_warehouses`"
-msgstr ""
+msgstr ":doc:`resupply_warehouses`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:140
 msgid ":doc:`../../../manufacturing/subcontracting/subcontracting_basic`"
-msgstr ""
+msgstr ":doc:`../../../manufacturing/subcontracting/subcontracting_basic`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:141
 msgid ":doc:`../../../manufacturing/advanced_configuration/sub_assemblies`"
-msgstr ""
+msgstr ":doc:`../../../manufacturing/advanced_configuration/sub_assemblies`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:3
 msgid "Reordering rules"
@@ -29784,7 +30042,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:3
 msgid "Inter-warehouse replenishment"
-msgstr ""
+msgstr "Reposição entre armazéns"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:7
 msgid ""
@@ -29795,24 +30053,37 @@ msgid ""
 "automatically generating *inter-warehouse transfers*. Odoo "
 ":guilabel:`Inventory` manages these transfers to keep stores in stock."
 msgstr ""
+"Quando uma empresa opera em vários locais, como armazéns, lojas de varejo ou"
+" fábricas, às vezes é necessário repor o estoque a partir de um armazém "
+"central. O Odoo usa uma configuração de *Rota* que permite que os locais "
+"sejam reabastecidos por um centro de distribuição central, gerando "
+"automaticamente *transferências entre armazéns*. O Odoo "
+":guilabel:`Inventárop` gerencia essas transferências para manter as lojas "
+"com estoque."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:13
 msgid ""
 "This guide explains how to conduct inter-warehouse transfers using two "
 "replenishment strategies:"
 msgstr ""
+"Este guia explica como realizar transferências entre armazéns usando duas "
+"estratégias de reposição:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:15
 msgid ":ref:`Make to order (MTO) <inventory/warehouses_storage/MTO>`"
 msgstr ""
+":ref:`Reposição por pedido (sob demanda) <inventory/warehouses_storage/MTO>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:16
 msgid ":ref:`Reordering rule <inventory/warehouses_storage/reordering-rule>`"
 msgstr ""
+":ref:`Regra de reposição <inventory/warehouses_storage/reordering-rule>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:19
 msgid ":doc:`Difference between MTO and reordering rules <../replenishment>`"
 msgstr ""
+":doc:`Diferença entre reposição por pedido e regras de reposição "
+"<../replenishment>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:24
 msgid ""
@@ -29821,10 +30092,15 @@ msgid ""
 "In the :guilabel:`Warehouse` section, activate :guilabel:`Storage "
 "Locations`. Then, click :guilabel:`Save` to apply the setting."
 msgstr ""
+"A configuração inicial de ambas as estratégias de reposição é a mesma. "
+"Primeiro, vá para :menuselection:`app Inventário --> Configuração --> "
+"Definições`. Na seção :guilabel:`Armazém`, ative :guilabel:`Locais de "
+"armazenamento`. Em seguida, clique em :guilabel:`Salvar` para aplicar a "
+"configuração."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst-1
 msgid "Enable Storage Locations in Inventory settings."
-msgstr ""
+msgstr "Habilitar os locais de armazenamento nas definições do Inventário."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:35
 msgid ""
@@ -29832,12 +30108,17 @@ msgid ""
 "locations by going to :menuselection:`Inventory app --> Configuration --> "
 "Warehouses`."
 msgstr ""
+"Defina as configurações do armazém central e dos locais de armazenamento "
+"vinculados acessando :menuselection:`app Inventário --> Configuração --> "
+"Armazéns`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:39
 msgid ""
 "Each central warehouse and other locations *must* have its own warehouse. "
 "For example, each shop is considered a local warehouse."
 msgstr ""
+"Cada armazém central e outros locais *devem* ter seu próprio armazém. Por "
+"exemplo, cada loja é considerada um armazém local."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:42
 msgid ""
@@ -29846,6 +30127,10 @@ msgid ""
 "name and a :guilabel:`Short Name`, which will appear on that warehouse's "
 "transfers."
 msgstr ""
+"Crie, clicando em :guilabel:`Novo`, ou selecione um armazém existente que "
+"será reabastecido a partir do armazém central. Em seguida, dê ao armazém um "
+"nome e um :guilabel:`Nome abreviado` , que aparecerá nas transferências "
+"desse armazém."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:46
 msgid ""
@@ -29855,6 +30140,11 @@ msgid ""
 "warehouse, make sure to check those warehouses' boxes too. Now, Odoo knows "
 "which warehouses can resupply this warehouse."
 msgstr ""
+"Na aba :guilabel:`Configuração do armazém`, localize o campo "
+":guilabel:`Reposição a partir de`. Marque a caixa ao lado do nome do armazém"
+" central. Se o armazém puder ser reabastecido por mais de um armazém, "
+"certifique-se de marcar as caixas deles também. Agora, o Odoo sabe quais "
+"armazéns podem reabastecer este."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:52
 msgid ""
@@ -29862,10 +30152,13 @@ msgid ""
 "warehouse`. The :guilabel:`Resupply From` field is set to this warehouse on "
 "the shop's warehouse configuration page."
 msgstr ""
+"O armazém central que abastecerá as lojas é chamado de `Armazém central`. O "
+"campo :guilabel:`Reposição a partir de` é definido como esse armazém na "
+"página de configuração do armazém da loja."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:57
 msgid ":doc:`../inventory_management/warehouses`"
-msgstr ""
+msgstr ":doc:`../inventory_management/warehouses`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst-1
 msgid "Supply one warehouse with another in the Warehouse Configuration tab."
@@ -29880,12 +30173,16 @@ msgid ""
 "Products must also be configured properly in order for them to be "
 "transferred between warehouses."
 msgstr ""
+"Os produtos também devem ser configurados adequadamente para que possam ser "
+"transferidos entre armazéns."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:68
 msgid ""
 "Go to :menuselection:`Inventory app --> Products --> Products` and select "
 "the desired product."
 msgstr ""
+"Vá para :menuselection:`app Inventário --> Produtos --> Produtos` e "
+"selecione o produto em questão."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:70
 msgid ""
@@ -29894,6 +30191,9 @@ msgid ""
 "store's warehouse that receives products, and 'Y' is the warehouse that "
 "sends products."
 msgstr ""
+"Na aba :guilabel:`Inventário`, a nova rota aparece como :guilabel:`X: "
+"fornecimento de produto de Y` na seção :guilabel:`Rotas`, em que 'X' é o "
+"armazém da loja que recebe produtos e 'Y' é o armazém que envia produtos."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:74
 msgid ""
@@ -29902,10 +30202,14 @@ msgid ""
 "moving the product from one warehouse to another. Proceed to the dedicated "
 "sections below to continue the process."
 msgstr ""
+"Marque a caixa de seleção :guilabel:`X: fornecimento de produto de Y`, que "
+"deve ser usada com a rota |MTO| ou com uma regra de reposição para "
+"reabastecer o estoque movendo o produto de um armazém para outro. Prossiga "
+"para as seções dedicadas abaixo para continuar o processo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:81
 msgid "MTO"
-msgstr ""
+msgstr "Reposição por pedido"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:83
 msgid ""
@@ -29914,6 +30218,10 @@ msgid ""
 "<inventory/warehouses_storage/unarchive-mto>`, so it appears in the "
 ":guilabel:`Routes` section of the :guilabel:`Inventory` tab."
 msgstr ""
+"Para repor produtos usando o método sob demanda, acesse o formulário do "
+"produto e verifique se a :ref:`Rota Reposição por pedido está desarquivada "
+"<inventory/warehouses_storage/unarchive-mto>`, para que ela apareça na seção"
+" :guilabel:`Rotas` da aba :guilabel:`Inventário`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:87
 msgid ""
@@ -29921,6 +30229,9 @@ msgid ""
 ":ref:`Replenish from another warehouse "
 "<inventory/warehouses_storage/resupply-workflow>`."
 msgstr ""
+"Com as rotas de reposição e |MTO| marcadas, vá para a seção intitulada: "
+":ref:`Reposição de outro armazém <inventory/warehouses_storage/resupply-"
+"workflow>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:91
 msgid ""
@@ -29928,14 +30239,17 @@ msgid ""
 "warehouse, named `YourCompany`. To replenish the product using |MTO|, the "
 "following routes are selected:"
 msgstr ""
+"O produto, vendido no armazém `Loja`, é reabastecido pelo armazém central, "
+"chamado `YourCompany`. Para reabastecer o produto usando |MTO|, as seguintes"
+" rotas são selecionadas:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:94
 msgid ":guilabel:`Store: Supply Product from YourCompany`"
-msgstr ""
+msgstr ":guilabel:`Loja: fornecimento de produto de YourCompany`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:95
 msgid ":guilabel:`Replenish on Order (MTO)`"
-msgstr ""
+msgstr ":guilabel:`Reposição por pedido (sob demanda)`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:0
 msgid ""
@@ -29946,7 +30260,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:104
 msgid "Reordering rule"
-msgstr ""
+msgstr "Regra de reposição"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:106
 msgid ""
@@ -29954,36 +30268,46 @@ msgid ""
 " Supply Product from Y` route is selected in the :guilabel:`Inventory` tab "
 "of the product form."
 msgstr ""
+"Para reabastecer produtos usando regras de reposição, primeiro certifique-se"
+" de que a rota :guilabel:`X: fornecimento de produto de Y` esteja "
+"selecionada na aba :guilabel:`Inventário` do formulário do produto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:109
 msgid ""
 "Then, create a reordering rule to automate replenishment by clicking the "
 ":guilabel:`Reordering Rules` smart button."
 msgstr ""
+"Em seguida, crie uma regra de reposição para automatizar o reabastecimento "
+"clicando no botão inteligente :guilabel:`Regras de reposição`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:112
 msgid "Click :guilabel:`New`, and set:"
-msgstr ""
+msgstr "Clique em :guilabel:`Novo` e defina:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:114
 msgid ""
 ":guilabel:`Location`: the stock location of the retail store. For example, "
 "`SHOP/Stock`."
 msgstr ""
+":guilabel:`Local`: a localização do estoque da loja de varejo. Por exemplo, "
+"`SHOP/Stock`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:115
 msgid ":guilabel:`Route`: :guilabel:`X: Supply Product from Y`."
-msgstr ""
+msgstr ":guilabel:`Rota`: :guilabel:`X: fornecimento de produto de Y`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:116
 msgid ""
 ":guilabel:`Min Quantity` and :guilabel:`Max Quantity` to trigger automatic "
 "stock transfers when inventory falls below the set threshold."
 msgstr ""
+":guilabel:`Quantidade mín.` e :guilabel:`Quantidade máx.` para acionar "
+"transferências automáticas de estoque quando o estoque ficar abaixo do "
+"limite definido."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:120
 msgid ":doc:`reordering_rules`"
-msgstr ""
+msgstr ":doc:`reordering_rules`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:123
 msgid ""
@@ -29992,10 +30316,15 @@ msgid ""
 " to `SHOP/Stock`, and the :guilabel:`Route` set to :guilabel:`Store: "
 "Resupply from YourCompany`."
 msgstr ""
+"É criada uma regra de reposição :ref:`0/0 "
+"<inventory/warehouses_storage/zero-zero>` para reabastecer o armazém da "
+"loja, com o :guilabel:`Local` definido como `SHOP/Stock` e o "
+":guilabel:`Rota` definido como :guilabel:`Loja: fornecimento de "
+"YourCompany\"."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:0
 msgid "Show reordering rule configurations."
-msgstr ""
+msgstr "Mostrar configurações de regras de reposição."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:134
 msgid "Replenish one warehouse from another"
@@ -30006,12 +30335,15 @@ msgid ""
 "After completing the setup, trigger replenishment using one of several "
 "methods, such as:"
 msgstr ""
+"Depois de concluir a configuração, acione a reposição usando um dos vários "
+"métodos, como:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:138
 msgid ""
 "Navigate to the product form of the product that is resupplied from another "
 "warehouse."
 msgstr ""
+"Navegar até o formulário do produto que será reposto de outro armazém."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:140
 msgid ""
@@ -30019,10 +30351,13 @@ msgid ""
 "In the pop-up window, set the warehouse to the retail shop, (e.g. `Store`), "
 "and click :guilabel:`Confirm`."
 msgstr ""
+"Clique no botão :guilabel:`Reposição` no canto superior esquerdo da página "
+"do produto. Na janela pop-up, defina o armazém como a loja de varejo (ex.: "
+"`Loja`) e clique em :guilabel:`Confirmar`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:0
 msgid "Replenish pop-up window on the product form."
-msgstr ""
+msgstr "Janela pop-up de reposição no formulário do produto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:147
 msgid ""
@@ -30031,10 +30366,14 @@ msgid ""
 "product makes the on-hand quantity of the product go below the minimum set "
 "on the reordering rule."
 msgstr ""
+"Crie uma cotação e, na aba :guilabel:`Outras informações`, defina o "
+":guilabel:`Armazém` como a loja de varejo (ex.: `Loja`), quando a venda do "
+"produto fizer com que a quantidade disponível do produto fique abaixo do "
+"mínimo definido na regra de reordenamento."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:0
 msgid "Create a quote at the store."
-msgstr ""
+msgstr "Crie uma cotação na loja."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:155
 msgid ""
@@ -30043,12 +30382,18 @@ msgid ""
 "to the store, and the second is a *receipt* at the shop, from the main "
 "warehouse."
 msgstr ""
+"Uma vez acionado, o Odoo cria duas transferências: Uma é um *pedido de "
+"entrega* do armazém central de fornecimento, que contém todos os produtos "
+"necessários para a loja, e a segunda é um *recebimento* na loja, do armazém "
+"principal."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:159
 msgid ""
 "While in transit, the product is located at `Physical Locations/Inter-"
 "warehouse transit`."
 msgstr ""
+"Enquanto estiver em trânsito, o produto estará localizado em `Locais "
+"físicas/Trânsito entre armazéns`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:162
 msgid ""
@@ -30058,16 +30403,23 @@ msgid ""
 "`SHOP/Stock`. While the products are traveling between warehouses, they are "
 "in `Physical Locations/Inter-warehouse transit`."
 msgstr ""
+"É criado um pedido de venda para o produto na loja. Para repor o produto na "
+"loja e enviá-lo de lá, o Odoo gera um pedido de entrega do estoque do "
+"armazém central, `WH/Stock`, para o armazém da loja `SHOP/Stock`. Enquanto "
+"os produtos estão viajando entre os depósitos, eles estão em `Locais "
+"físicas/Trânsito entre armazéns`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:167
 msgid ""
 "The final delivery order is from the shop to the customer's delivery "
 "address, and is not pertinent to the workflow in this guide."
 msgstr ""
+"O pedido de entrega final é da loja para o endereço de entrega do cliente e "
+"não é pertinente ao fluxo de trabalho deste guia."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:0
 msgid "Show shipments from warehouse to store."
-msgstr ""
+msgstr "Mostrar as remessas do armazém para a loja."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting.rst:5
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting.rst:3
@@ -31095,6 +31447,8 @@ msgid ""
 ":doc:`Inventory valuation methods "
 "<../../product_management/inventory_valuation/inventory_valuation_config>`"
 msgstr ""
+":doc:`Métodos de valoração de estoque "
+"<../../product_management/inventory_valuation/inventory_valuation_config>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:42
 msgid ""
@@ -38876,7 +39230,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:210
 msgid "MO/WO prioritization"
-msgstr ""
+msgstr "Priorização de ordem de produção/serviço"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:212
 msgid ""
@@ -38886,6 +39240,11 @@ msgid ""
 "highly prioritized, and appear before orders which are scheduled further "
 "out."
 msgstr ""
+"O módulo **Chão de Fábrica** usa a *data programada* inserida nas |OPs| para"
+" priorizar |OPs| e ordens de serviço que aparecem no painel do módulo e nas "
+"páginas do centro de trabalho. As |OPs| e as ordens de serviço programadas "
+"com antecedência são priorizadas e aparecem antes das ordens programadas com"
+" mais tarde."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:217
 msgid ""
@@ -38893,6 +39252,9 @@ msgid ""
 ":menuselection:`Manufacturing app --> Operations --> Manufacturing Orders`, "
 "and click :guilabel:`New` to create a new |MO|."
 msgstr ""
+"Para especificar a data programada em uma |OP|, comece navegando até "
+":menuselection:`app Fabricaçãi --> Operações --> Ordens de produção` e "
+"clique em :guilabel:`Novo` para criar uma nova |OP|."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:220
 msgid ""
@@ -38900,6 +39262,9 @@ msgid ""
 "window. By default, the :guilabel:`Scheduled Date` field, and its "
 "corresponding pop-up window, show the current date and time."
 msgstr ""
+"Clique no campo :guilabel:`Data programada` para abrir uma janela popover de"
+" calendário. Por padrão, o campo :guilabel:`Data programada` e sua janela "
+"pop-up correspondente mostram a data e a hora atuais."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:224
 msgid ""
@@ -38908,6 +39273,10 @@ msgid ""
 " and minute at which processing should begin, using the 24-hour clock "
 "format."
 msgstr ""
+"Use o calendário para selecionar a data em que o processamento da |OP| deve "
+"começar. Nos dois campos na parte inferior da janela pop-over, digite a hora"
+" e o minuto em que o processamento deve começar, usando o formato de relógio"
+" de 24 horas."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:228
 msgid ""
@@ -38915,6 +39284,10 @@ msgid ""
 "the date and time for the :guilabel:`Scheduled Date` field. Then, click the "
 ":guilabel:`Confirm` button at the top of the |MO| to confirm it."
 msgstr ""
+"Por fim, clique em :guilabel:`Aplicar` na parte inferior da janela pop-over "
+"para definir a data e a hora do campo :guilabel:`Data programada`. Em "
+"seguida, clique no botão :guilabel:`Confirmar` na parte superior da janela "
+"pop-over para confirmá-la."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:232
 msgid ""
@@ -38922,6 +39295,9 @@ msgid ""
 " is it has the :guilabel:`Ready` status, which means all components are "
 "available."
 msgstr ""
+"Após confirmar a |OP|, ela aparecerá no módulo **Chão de Fábrica**, contanto"
+" que tenha o status :guilabel:`Pronto`, o que significa que todos os "
+"componentes estão disponíveis."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:235
 msgid ""
@@ -38929,6 +39305,9 @@ msgid ""
 "open it. The :guilabel:`All MO #` page of the dashboard displays *Ready* "
 "|MOs|, organized in order of their scheduled dates."
 msgstr ""
+"No painel de controle do Odoo, clique no módulo :menuselection:`Chão de "
+"Fábrica` para abri-lo. A página :guilabel:`Nº Todas as OPs` do painel exibe "
+"as |OPs| *Prontas*, organizadas por ordem das datas agendadas."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:239
 msgid ""
@@ -38936,32 +39315,38 @@ msgid ""
 "assigned to it. The page for each work center organizes work orders, based "
 "on the scheduled dates of their corresponding |MOs|."
 msgstr ""
+"Na parte superior do módulo, selecione um centro de trabalho para ver as "
+"ordens de serviço atribuídas a ele. A página de cada centro de trabalho "
+"organiza as ordens de serviço com base nas datas programadas de suas "
+"respectivas |OPs|."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:243
 msgid "Three |MOs| are confirmed for a *Bookcase* product:"
-msgstr ""
+msgstr "Três |OPs| estão confirmados para o produto *Estante*:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:245
 msgid "WH/MO/00411 has a :guilabel:`Scheduled Date` of August 16th."
-msgstr ""
+msgstr "WH/MO/00411 tem :guilabel:`Data programada` para 16 de agosto."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:246
 msgid "WH/MO/00412 has a :guilabel:`Scheduled Date` of August 20th."
-msgstr ""
+msgstr "WH/MO/00412 tem :guilabel:`Data programada` para 20 de agosto."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:247
 msgid "WH/MO/00413 has a :guilabel:`Scheduled Date` of August 18th."
-msgstr ""
+msgstr "WH/MO/00413 tem :guilabel:`Data programada` para 18 de agosto."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:249
 msgid ""
 "On the :guilabel:`All MO #` page of the **Shop Floor** module, the cards for"
 " each |MO| appear in this order: WH/MO/00411, WH/MO/00413, WH/MO/00412."
 msgstr ""
+"Na página :guilabel:`Nº Todas OPs` do módulo **Chão de Fábrica**, os cartões"
+" de cada |OP| aparecem nesta ordem: WH/MO/00411, WH/MO/00413, WH/MO/00412."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst-1
 msgid "MOs in the Shop Floor module, ordered by their scheduled date."
-msgstr ""
+msgstr "OPs no módulo Chão de Fábrica, ordenados por sua data programada."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:256
 msgid ""
@@ -38971,6 +39356,10 @@ msgid ""
 "for each work order, appearing in the same order as their corresponding "
 "|MOs|."
 msgstr ""
+"Cada |OP| requer uma ordem de serviço, executada na :guilabel:`Estação de "
+"montagem 1`. Clicar no botão :guilabel:`Estação de montagem 1` na parte "
+"superior da tela abre a página do centro de trabalho, que exibe um cartão "
+"para cada ordem de serviço, na mesma ordem das respectivas |OPs|."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_tracking.rst:3
 msgid "Shop Floor time tracking"
@@ -44591,7 +44980,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:3
 msgid "Work center time off"
-msgstr ""
+msgstr "Tempo livre no centro de trabalho"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:7
 msgid ""
@@ -44613,6 +45002,13 @@ msgid ""
 " being unavailable for a set period of time. Doing so ensures manufacturing "
 "operations can continue until the impacted work center is available again."
 msgstr ""
+"Como resultado, é necessário indisponibilizar o centro de trabalho no Odoo "
+"para que novas ordens de trabalho sejam encaminhadas para centros de "
+"trabalho alternativos que estejam operacionais. Com o app Odoo **Folgas**, é"
+" possível indicar que um centro de trabalho está indisponível por "
+"determinado período de tempo. Isso garante que as operações de fabricação "
+"possam continuar até que o centro de trabalho afetado esteja disponível "
+"novamente."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:19
 msgid ""
@@ -44621,12 +45017,20 @@ msgid ""
 ":ref:`developer mode <developer-mode>`. This allows the *Time Off* smart "
 "button to appear on each work center's *Working Hours* page."
 msgstr ""
+"Antes que um centro de trabalho possa ser indisponibilizado, a plataforma "
+"Odoo deve ser configurada corretamente. Primeiro, é necessário habilitar o "
+":ref:`modo de desenvolvedor <developer-mode>`. Isso permite que o botão "
+"inteligente *Folgas* apareça na página :guilabel:`Horário de funcionamento` "
+"de cada centro de trabalho."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:23
 msgid ""
 "Next, install the **Time Off** app. This is the app used for managing time "
 "off for all resources within Odoo, including employees and work centers."
 msgstr ""
+"Em seguida, instale o aplicativo **Folgas**. Esse é o aplicativo usado para "
+"gerenciar o tempo livre de todos os recursos no Odoo, incluindo funcionários"
+" e centros de trabalho."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:26
 msgid ""
@@ -44635,6 +45039,10 @@ msgid ""
 "only one that appears on the page. Click the :guilabel:`Install` button on "
 "the card to install the app."
 msgstr ""
+"Para isso, navegue até o aplicativo :menuselection:`Aplicativos` e, em "
+"seguida, pesquise `Folga` na barra de pesquisa. O cartão do aplicativo "
+":guilabel:`Folga` será o único a aparecer na página. Clique no botão "
+":guilabel:`Instalar` no cartão para instalar o aplicativo."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:30
 msgid ""
@@ -44645,18 +45053,29 @@ msgid ""
 "work orders away from the unavailable work center, and they pile up in its "
 "queue."
 msgstr ""
+"A última etapa é configurar adequadamente os centros de trabalho. Para esse "
+"fluxo de trabalho, é necessário ter pelo menos dois centros de trabalho: um "
+"que fica indisponível e um segundo que recebe as ordens de trabalho que o "
+"outro não pode aceitar. Se não houver um segundo centro de trabalho "
+"configurado, o Odoo não poderá encaminhar as ordens de trabalho para fora do"
+" centro de trabalho indisponível e elas se acumularão na fila."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:35
 msgid ""
 "To create a work center, navigate to :menuselection:`Manufacturing app --> "
 "Configuration --> Work Centers --> New`."
 msgstr ""
+"Para criar um centro de trabalho, navegue até :menuselection:`app Fabricação"
+" --> Configuração --> Centros de trabalho --> Novo`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:39
 msgid ""
 "For a full guide to work center creation, refer to the documentation on "
 ":doc:`work centers <../advanced_configuration/using_work_centers>`."
 msgstr ""
+"Para obter um guia completo sobre a criação de centros de trabalho, consulte"
+" a documentação sobre :doc:`centros de trabalho "
+"<../advanced_configuration/using_work_centers>`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:42
 msgid ""
@@ -44664,6 +45083,10 @@ msgid ""
 ":guilabel:`Equipment` tab. This ensures operations carried out at one work "
 "center can also be performed at the other."
 msgstr ""
+"Certifique-se de que ambos os centros de trabalho tenham os mesmos "
+"equipamentos listados na aba :guilabel:`Equipamento`. Isso garante que as "
+"operações realizadas em um centro de trabalho também possam ser realizadas "
+"no outro."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:45
 msgid ""
@@ -44672,6 +45095,10 @@ msgid ""
 " to send work orders to the second work center when the first is unavailable"
 " for any reason."
 msgstr ""
+"No centro de trabalho que ficará indisponível, selecione o segundo centro de"
+" trabalho no menu suspenso :guilabel:`Centros de trabalho alternativos`. "
+"Agora, o Odoo sabe que deve enviar ordens de trabalho para o segundo centro "
+"de trabalho quando o primeiro estiver indisponível por qualquer motivo."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst-1
 msgid "A work center form configured with an alternative work center."
@@ -44692,6 +45119,12 @@ msgid ""
 "of the :guilabel:`Working Hours` drop-down menu, to open the working hours "
 "page for the work center."
 msgstr ""
+"Com a configuração concluída, o tempo livre pode agora ser atribuído a um "
+"centro de trabalho. Comece navegando até :menuselection:`app Fabricação --> "
+"Configuração --> Centros de trabalho` e selecione o centro de trabalho "
+"afetado. Clique no botão :icon:`oi-arrow-right` :guilabel:`(Link interno)` "
+"no lado direito do menu suspenso :guilabel:`Horário de trabalho` para abrir "
+"a página de horário de trabalho do centro de trabalho."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst-1
 msgid "The Working Hours \"External link\" button on the work center form."
@@ -44706,6 +45139,10 @@ msgid ""
 "Off` smart button appears at the top of the page. Click it to open the "
 ":guilabel:`Resource Time Off` page."
 msgstr ""
+"A página de horário de trabalho exibe o horário de funcionamento padrão para"
+" o centro de trabalho. Com o modo de desenvolvedor ativado, um botão "
+"inteligente :icon:`fa-plane` :guilabel:`Folga` aparece na parte superior da "
+"página. Clique nele para abrir a página :guilabel:`Folga do recurso`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:69
 msgid ""
@@ -44716,6 +45153,13 @@ msgid ""
 ":guilabel:`End Date` to specify the period during which the work center is "
 "unavailable."
 msgstr ""
+"Nessa página, clique em :guilabel:`Novo` para configurar um novo registro de"
+" folga. No formulário de folga, anote o :guilabel:`Motivo` para a interdição"
+" do centro de trabalho (ex.: equipamento quebrado, manutenção, etc.), "
+"selecione o centro de trabalho afetado como :guilabel:`Recurso` e escolha "
+"uma :guilabel:`Data de início` e :guilabel:`Data de término` para "
+"especificar o período durante o qual o centro de trabalho estará "
+"indisponível."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst-1
 msgid "The \"Resource Time Off\" form."
@@ -44723,7 +45167,7 @@ msgstr "O formulário \"Folga de recursos\"."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:79
 msgid "Alternative work center planning"
-msgstr ""
+msgstr "Planejamento de centros de trabalho alternativos"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:81
 msgid ""
@@ -44731,6 +45175,10 @@ msgid ""
 " to it can be automatically routed to an alternative work center using the "
 "*Plan* button."
 msgstr ""
+"Quando um centro de trabalho estiver dentro do período de folga "
+"especificado, as ordens de trabalho enviadas a ele poderão ser encaminhadas "
+"automaticamente para um centro de trabalho alternativo usando o botão "
+"*Planejar*."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:84
 msgid ""
@@ -44740,6 +45188,11 @@ msgid ""
 "unavailable work center for one of its operations. Click :guilabel:`Confirm`"
 " to confirm the |MO|."
 msgstr ""
+"Comece criando uma nova ordem de produção (OP), navegando até "
+":menuselection:`app Fabricação --> Operações --> Ordens de produção --> "
+"Novo`. No formulário |OP|, especifique um :guilabel:`Produto` que use o "
+"centro de trabalho indisponível para uma de suas operações. Clique em "
+":guilabel:`Confirmar` para confirmar a |OP|."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:89
 msgid ""
@@ -44747,6 +45200,10 @@ msgid ""
 "the unavailable work center is specified in the :guilabel:`Work Center` "
 "column. There is also a :guilabel:`Plan` button at the top left of the page."
 msgstr ""
+"Na |OP| confirmada, selecione a aba :guilabel:`Ordens de trabalho`. Por "
+"padrão, o centro de trabalho indisponível é especificado na coluna "
+":guilabel:`Centro de trabalho`. Há também um botão :guilabel:`Planejar` no "
+"canto superior esquerdo da página."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:93
 msgid ""
@@ -44754,30 +45211,41 @@ msgid ""
 "Center` column of the :guilabel:`Work Orders` tab is automatically changed "
 "to the alternative work center."
 msgstr ""
+"Clique em :guilabel:`Plano`, e o centro de trabalho listado na coluna "
+":guilabel:`Centro de trabalho` da aba :guilabel:`Ordens de trabalho` será "
+"automaticamente alterado para o centro de trabalho alternativo."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:100
 msgid ""
 "Before clicking \"Plan\", the work order is scheduled at \"Main Assembly "
 "Line\"."
 msgstr ""
+"Antes de clicar em \"Planejar\", a ordem de trabalho é programada na \"Linha"
+" de montagem principal\"."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:100
 msgid ""
 "Before clicking :guilabel:`Plan`, the work order is scheduled at "
 ":guilabel:`Main Assembly Line`."
 msgstr ""
+"Antes de clicar em :guilabel:`Planejar`, a ordem de trabalho é programada na"
+" :guilabel:`Linha de montagem principal`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:106
 msgid ""
 "After clicking \"Plan\", the work order is rescheduled at \"Alternative "
 "Assembly Line\"."
 msgstr ""
+"Após clicar em \"Planejar\", a ordem de trabalho é reprogramada na \"Linha "
+"de montagem alternativa\"."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:106
 msgid ""
 "After clicking :guilabel:`Plan`, the work order is rescheduled at "
 ":guilabel:`Alternative Assembly Line`."
 msgstr ""
+"Após clicar em :guilabel:`Planejar`, a ordem de trabalho é reprogramada na "
+":guilabel:`Linha de montagem alternativa`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:109
 msgid ""
@@ -44786,6 +45254,11 @@ msgid ""
 ":guilabel:`Plan` button does not route work orders to an alternative work "
 "center unless the first one is at capacity."
 msgstr ""
+"Quando o período de folga do centro de trabalho indisponível termina, o Odoo"
+" reconhece que o centro de trabalho está disponível novamente. Nesse "
+"momento, clicar no botão :guilabel:`Planejar` não encaminha as ordens de "
+"trabalho para um centro de trabalho alternativo, a menos que o primeiro "
+"esteja com a capacidade esgotada."
 
 #: ../../content/applications/inventory_and_mrp/plm.rst:8
 msgid "Product lifecycle management"
@@ -48214,7 +48687,7 @@ msgstr ":doc:`calls_for_tenders`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:3
 msgid "Call for tenders"
-msgstr ""
+msgstr "Chamadas para licitações"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:12
 msgid ""
@@ -48222,6 +48695,10 @@ msgid ""
 "similar goods or services all at once. This helps companies select the "
 "cheapest, fastest vendors for their specific business needs."
 msgstr ""
+"Às vezes, as empresas querem convidar fornecedores a enviar propostas de "
+"bens ou serviços semelhantes de uma só vez. Isso ajuda as empresas a "
+"selecionar os fornecedores mais baratos e mais rápidos para suas "
+"necessidades comerciais específicas."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:16
 msgid ""
@@ -48275,12 +48752,15 @@ msgid ""
 "To create a new |RfQ|, follow the instructions in the :doc:`rfq` "
 "documentation."
 msgstr ""
+"Para criar uma nova |SDC|, siga as instruções na documentação de :doc:`SDC`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:47
 msgid ""
 "`Odoo Tutorial: Purchase Basics and Your First Request for Quotation "
 "<https://www.youtube.com/watch?v=o_uI718P1Dc>`_"
 msgstr ""
+"`Tutoriais do Odoo: Noções básicas de compras e sua primeira solicitação de "
+"cotação <https://www.youtube.com/watch?v=o_uI718P1Dc>`_"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:53
 msgid "Create alternative |RfQs|"
@@ -48533,6 +49013,10 @@ msgid ""
 " be located, click the :icon:`fa-chevron-down` :guilabel:`(chevron)` icon to"
 " the right of the search bar, at the top of the pop-up window."
 msgstr ""
+"Se um grande número de |POs| estiver sendo processado e não for possível "
+"localizar os |POs| anteriores, clique no ícone :icon:`fa-chevron-down` "
+":guilabel:`(divisa)` à direita da barra de pesquisa, na parte superior da "
+"janela pop-up."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:151
 msgid ""
@@ -48681,12 +49165,16 @@ msgid ""
 "To confirm an |RfQ| for which products were selected, click into an |RfQ|, "
 "and click :guilabel:`Confirm Order`."
 msgstr ""
+"Para confirmar uma |SDC| para o qual foram selecionados produtos, clique em "
+"uma delas e clique em :guilabel:`Confirmar pedido`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:215
 msgid ""
 "This causes a :guilabel:`What about the alternative Requests for "
 "Quotations?` pop-up window to appear."
 msgstr ""
+"Isso faz com que seja exibida uma janela pop-up :guilabel:`E as solicitações"
+" de cotação alternativas?`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:218
 msgid ""
@@ -48711,6 +49199,9 @@ msgid ""
 "up window, two options are presented: :guilabel:`Cancel Alternatives` and "
 ":guilabel:`Keep Alternatives`."
 msgstr ""
+"Na janela pop-up :guilabel:`E as solicitações de cotação alternativas?`, são"
+" apresentadas duas opções: :guilabel:`Cancelar alternativas` e "
+":guilabel:`Manter alternativas`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:227
 msgid "If this |PO| should **not** be confirmed, click :guilabel:`Discard`."
@@ -48734,6 +49225,8 @@ msgid ""
 "Once all products are ordered, select :guilabel:`Cancel Alternatives` from "
 "whichever |PO| is open at that time."
 msgstr ""
+"Quando todos os produtos forem pedidos, selecione :guilabel:`Cancelar "
+"alternativas` em qualquer |PO| que esteja aberto no momento."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst-1
 msgid "Keep or cancel pop-up for alternative RFQs."
@@ -48745,6 +49238,9 @@ msgid ""
 ":guilabel:`Requests for Quotation` to navigate back to an overview of all "
 "|RfQs|."
 msgstr ""
+"Por fim, usando as trilhas de navegação na parte superior da página, clique "
+"em :guilabel:`Solicitações de cotação` para navegar de volta a uma visão "
+"geral de todos as |SDCs|."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:243
 msgid ""
@@ -49776,7 +50272,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:45
 msgid ":doc:`../products/pricelist`"
-msgstr ""
+msgstr ":doc:`../products/pricelist`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:47
 msgid ""
@@ -50158,7 +50654,7 @@ msgstr "Produtos"
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:3
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:40
 msgid "Import vendor pricelist"
-msgstr ""
+msgstr "Importar listas de preços de fornecedores"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:5
 msgid ""
@@ -50166,6 +50662,10 @@ msgid ""
 "purchase orders (POs) with the unit price, once the product is added, which "
 "reduces errors and saves time."
 msgstr ""
+"Defina os preços do fornecedor para preencher automaticamente as "
+"solicitações de cotação (SDCs) ou pedidos de compra (POs) com o preço "
+"unitário, assim que o produto for adicionado, o que reduz erros e economiza "
+"tempo."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:8
 msgid ""
@@ -50173,6 +50673,10 @@ msgid ""
 "<purchase/products/pricelist>` on the product form, or :ref:`imported in "
 "bulk <purchase/products/import-pricelist>`, via an XLSX or CSV file."
 msgstr ""
+"No Odoo, é possível ref:`adicionar individualmente "
+"<purchase/products/pricelist>` listas de preços de fornecedores no "
+"formulário do produto, ou :ref:`importá-las em massa "
+"<purchase/productsts/import-pricelist>` por meio de um arquivo XLSX ou CSV."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:13
 msgid ""
@@ -50180,10 +50684,13 @@ msgid ""
 "<../../../essentials/export_import_data>` before uploading vendor "
 "pricelists."
 msgstr ""
+"Consulte este :doc:`guia de importação "
+"<../../../essentials/export_import_data>` antes de carregar as listas de "
+"preços de fornecedores."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:19
 msgid "On product form"
-msgstr ""
+msgstr "No formulário do produto"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:21
 msgid ""
@@ -50191,12 +50698,17 @@ msgid ""
 ":menuselection:`Purchase app --> Products --> Products`, and click the "
 "desired product."
 msgstr ""
+"Para adicionar manualmente o preço do fornecedor no formulário do produto, "
+"vá para a seção :menuselection:`app Compras --> Produtos --> Produtos` e "
+"clique no produto desejado."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:25
 msgid ""
 "Product forms are accessible from multiple apps, such as **Sales**, "
 "**Inventory**, and **Manufacturing**."
 msgstr ""
+"Os formulários de produtos podem ser acessados em vários aplicativos, como "
+"**Vendas**, **Inventárop** e **Fabricação**."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:28
 msgid ""
@@ -50204,16 +50716,21 @@ msgid ""
 "their price, to have this information auto-populate on a request for "
 "quotation each time the product is listed."
 msgstr ""
+"Na aba :guilabel:`Compras` do formulário do produto, insira o fornecedor e o"
+" preço, para que essas informações sejam preenchidas automaticamente em uma "
+"solicitação de cotação sempre que o produto for listado."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:32
 msgid ""
 ":ref:`Vendor pricelist on product form <purchase/manage_deals/vendor-"
 "pricelist>`"
 msgstr ""
+":ref:`Lista de preços do fornecedor no formulário do produto "
+"<purchase/manage_deals/vendor-pricelist>`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst-1
 msgid "Vendor pricelist on product form."
-msgstr ""
+msgstr "Lista de preços do fornecedor no formulário do produto."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:42
 msgid ""
@@ -50222,36 +50739,49 @@ msgid ""
 "product names, references, and vendor details, is to first :ref:`export a "
 "pricelist <purchase/products/export-price>` from the database."
 msgstr ""
+"Para importar listas de preços de fornecedores, verifique se o arquivo XLSX "
+"ou CSV foi preenchido com precisão. A melhor maneira de obter um modelo "
+"formatado corretamente, incluindo nomes de produtos, referências e detalhes "
+"do fornecedor, é primeiro :ref:`exportar uma lista de preços "
+"<purchase/products/export-price>` da base de dados."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:46
 msgid ""
 "Modify the exported file, as needed, then import it back into the Odoo "
 "database."
 msgstr ""
+"Modifique o arquivo exportado, conforme necessário, e importe-o novamente "
+"para a base de dados do Odoo."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:51
 msgid "Export pricelist"
-msgstr ""
+msgstr "Exportar lista de preços"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:53
 msgid ""
 "To export a pricelist, go to :menuselection:`Purchase app --> Configuration "
 "--> Vendor Pricelists`."
 msgstr ""
+"Para exportar uma lista de preços, vá para :menuselection:`app Compras --> "
+"Configuração --> Lista de preços de fornecedores`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:55
 msgid "On the page, tick the checkbox(es) for the desired vendor pricelists."
 msgstr ""
+"Na página, marque a(s) caixa(s) de seleção das listas de preços de "
+"fornecedores desejadas."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:57
 msgid ""
 "Then, click the :icon:`fa-cog` :guilabel:`Actions` button that appears, and "
 "choose :icon:`fa-upload` :guilabel:`Export` from the drop-down menu."
 msgstr ""
+"Em seguida, clique no botão :icon:`fa-cog` :guilabel:`Ações` exibido e "
+"escolha :icon:`fa-upload` :guilabel:`Exportar` no menu suspenso."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst-1
 msgid "Show selected exported fields, with the Export button visible."
-msgstr ""
+msgstr "Os campos exportados selecionados, com o botão Exportar visível."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:63
 msgid ""
@@ -50260,6 +50790,10 @@ msgid ""
 " the desired field in the :guilabel:`Available fields` section, and click "
 "the :icon:`fa-plus` :guilabel:`(plus)` icon to the right of the field."
 msgstr ""
+"Na janela pop-up resultante, os campos listados na seção :guilabel:`Campos a"
+" exportar` são incluídos no arquivo exportado. Para adicionar mais campos, "
+"localize o campo em questão na seção :guilabel:`Campos disponíveis` e clique"
+" no ícone :icon:`fa-plus` :guilabel:`(adição)` à direita do campo."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:69
 msgid ""
@@ -50267,18 +50801,27 @@ msgid ""
 "(import-compatible export)` checkbox, and refer to the section on the "
 ":ref:`External ID <purchase/products/external-id>` field."
 msgstr ""
+"Para atualizar os registros existentes, marque a caixa de seleção "
+":guilabel:`Quero atualizar os dados (importação compatível com exportação)` "
+"e consulte a seção sobre o campo :ref:`ID externo "
+"<purchase/products/external-id>`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:73
 msgid ""
 "For details on commonly-used fields for importing vendor pricelists, see the"
 " :ref:`Common fields <purchase/products/common-fields>` section."
 msgstr ""
+"Para obter detalhes sobre os campos comumente usados para importar listas de"
+" preços de fornecedores, consulte a seção :ref:`Campos comuns "
+"<purchase/products/common-fields>`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:76
 msgid ""
 "Select the desired :guilabel:`Export Format`: :guilabel:`XLSX` or "
 ":guilabel:`CSV`."
 msgstr ""
+"Selecione o :guilabel:`Formato de exportação` em questão: :guilabel:`XLSX` "
+"ou :guilabel:`CSV`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:78
 msgid ""
@@ -50288,10 +50831,15 @@ msgid ""
 ":guilabel:`(save)` icon. After that, the template is a selectable option "
 "when clicking the :guilabel:`Template` field."
 msgstr ""
+"Para salvar os campos selecionados como um modelo, clique no campo "
+":guilabel:`Modelo` e selecione :guilabel:`Novo modelo` no menu suspenso. "
+"Digite o nome do novo modelo e clique no ícone :icon:`fa-floppy-o` "
+":guilabel:`(salvar)`. Depois disso, o modelo será uma opção selecionável ao "
+"clicar no campo :guilabel:`Modelo`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:83
 msgid "Finally, click :guilabel:`Export`."
-msgstr ""
+msgstr "Por fim, clique em :guilabel:`Exportar`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:86
 msgid ""
@@ -50299,16 +50847,22 @@ msgid ""
 "the exported file display the *field name* with the *technical name* in "
 "parenthesis."
 msgstr ""
+"Com o :ref:`modo de desenvolvedor <developer-mode>` ativado, os nomes das "
+"colunas do arquivo exportado exibem o *nome do campo* com o *nome técnico* "
+"entre parênteses."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:0
 msgid "Exporting vendor pricelist."
-msgstr ""
+msgstr "Exportação da lista de preços do fornecedor."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:93
 msgid ""
 "Export vendor pricelist in XLSX format. It includes :guilabel:`Product "
 "Template` and other fields in the :guilabel:`Fields to export` section."
 msgstr ""
+"Exportação da lista de preços do fornecedor no formato XLSX. Inclui "
+":guilabel:`Modelo de produto` e outros campos na seção :guilabel:`Campos a "
+"exportar`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:99
 msgid "External ID"
@@ -50321,16 +50875,23 @@ msgid ""
 "updating existing ones. Including this field in the XLSX or CSV, indicates "
 "the line replaces an existing vendor pricelist in the Odoo database."
 msgstr ""
+"O *ID externo* é um identificador exclusivo usado para atualizar as listas "
+"de preços de fornecedores existentes. Sem ele, os registros importados criam"
+" novas entradas, em vez de atualizar as existentes. A inclusão desse campo "
+"no XLSX ou CSV indica que a linha substitui uma lista de preços de "
+"fornecedor existente na base de dados do Odoo."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:0
 msgid "Show 'Ready Mat' appear twice."
-msgstr ""
+msgstr "Mostrar que \"Ready Mat\" aparece duas vezes."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:109
 msgid ""
 "`Ready Mat` appears twice because the external ID was omitted during the "
 "price update from `$790` to `$780`."
 msgstr ""
+"`Ready Mat` aparece duas vezes porque o ID externo foi omitido durante a "
+"atualização do preço de `$790` para `$780`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:112
 msgid ""
@@ -50338,6 +50899,10 @@ msgid ""
 ":guilabel:`I want to update data (import-compatible export)` checkbox at the"
 " top of the :guilabel:`Export Data` pop-up window."
 msgstr ""
+"Para procurar o :guilabel:`ID externo` de uma lista de preços de fornecedor,"
+" marque a caixa de seleção :guilabel:`Quero atualizar os dados (importação "
+"compatível com exportação)` na parte superior da janela pop-up "
+":guilabel:`Exportar dados`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:116
 msgid ""
@@ -50346,35 +50911,41 @@ msgid ""
 "export)` checkbox ticked results in an export file with two columns "
 "containing the external ID."
 msgstr ""
+"Selecionar :guilabel:`ID externo` na seção :guilabel:`Campos disponíveis` "
+"com a caixa de seleção :guilabel:`Quero atualizar os dados (importação "
+"compatível com exportação)` marcada resulta em um arquivo de exportação com "
+"duas colunas contendo o ID externo."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:123
 msgid "Common fields"
-msgstr ""
+msgstr "Campos comuns"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:125
 msgid ""
 "Below is a list of commonly-used fields when importing vendor pricelists:"
 msgstr ""
+"Abaixo, há uma lista de campos comumente usados na importação de listas de "
+"preços de fornecedores:"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:127
 msgid "Field name definitions"
-msgstr ""
+msgstr "Definições de nome de campo"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:130
 msgid "Field name"
-msgstr ""
+msgstr "Nome do campo"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:131
 msgid "Used for"
-msgstr ""
+msgstr "Usado para"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:132
 msgid "Field in Odoo database"
-msgstr ""
+msgstr "Campo na base de dados do Odoo"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:133
 msgid "Technical name of field"
-msgstr ""
+msgstr "Nome técnico do campo"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:134
 msgid "Vendor"
@@ -50385,16 +50956,20 @@ msgid ""
 "The only required field for creating a vendor pricelist record. This field "
 "specifies the vendor associated with the product."
 msgstr ""
+"O único campo obrigatório para a criação de um registro de lista de preços "
+"de fornecedor. Esse campo especifica o fornecedor associado ao produto."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:137
 msgid ""
 ":guilabel:`Vendor` field in the :ref:`vendor pricelist of the product form "
 "<purchase/products/pricelist>`."
 msgstr ""
+"Campo :guilabel:`Fornecedor` na :ref:`lista de preço de fornecedores do "
+"formulário de produto <purchase/products/pricelist>`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:139
 msgid "`partner_id`"
-msgstr ""
+msgstr "`partner_id`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:140
 msgid "Product Template"
@@ -50403,19 +50978,23 @@ msgstr "Modelo de produto"
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:141
 msgid "The Odoo product the vendor pricelist entry is related to."
 msgstr ""
+"O produto do Odoo ao qual o registro da lista de preços do fornecedor está "
+"relacionado."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:142
 msgid ":guilabel:`Product` field in the vendor pricelist."
-msgstr ""
+msgstr "Campo :guilabel:`Produto` na lista de preços do fornecedor."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:143
 msgid "`product_tmpl_id`"
-msgstr ""
+msgstr "`product_tmpl_id`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:145
 msgid ""
 "The minimum quantity required to receive the product at the specified price."
 msgstr ""
+"A quantidade mínima necessária para receber o produto pelo preço "
+"especificado."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:146
 msgid ""
@@ -50423,26 +51002,29 @@ msgid ""
 "it by clicking the :icon:`oi-settings-adjust` :guilabel:`(settings)` icon, "
 "and tick the :guilabel:`Quantity` checkbox)"
 msgstr ""
+"Campo :guilabel:`Quantidade` na lista de preços do fornecedor. (Se não "
+"estiver visível, ative-o clicando no ícone :icon:`oi-settings-adjust` "
+":guilabel:`(definições)` e marque a caixa de seleção :guilabel:`Quantidade`)"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:149
 msgid "`min_qty`"
-msgstr ""
+msgstr "`min_qty`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:150
 msgid "Unit Price"
-msgstr "Preço Unitário"
+msgstr "Preço unitário"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:151
 msgid "The purchase price for the product from the vendor."
-msgstr ""
+msgstr "O preço de compra do produto do fornecedor."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:152
 msgid ":guilabel:`Price` field in the vendor pricelist."
-msgstr ""
+msgstr "Campo :guilabel:`Preço` na lista de preços do fornecedor."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:153
 msgid "`price`"
-msgstr ""
+msgstr "`price`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:154
 msgid "Delivery Lead Time"
@@ -50453,14 +51035,16 @@ msgid ""
 ":ref:`Number of days <inventory/shipping_receiving/purchase-lt>` before "
 "receiving the product after confirming a purchase order."
 msgstr ""
+":ref:`Número de dias <inventory/shipping_receiving/purchase-lt> antes de "
+"receber o produto após a confirmação de um pedido de compra."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:157
 msgid ":guilabel:`Delivery Lead Time` field on the vendor pricelist."
-msgstr ""
+msgstr "Campo :guilabel:`Prazo de entrega` na lista de preços do fornecedor."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:158
 msgid "`delay`"
-msgstr ""
+msgstr "`delay`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:159
 msgid "Sequence"
@@ -50472,6 +51056,9 @@ msgid ""
 "available. For example, if `Azure Interior` is listed first and Wood Corner "
 "second, their sequences would be `1` and `2`."
 msgstr ""
+"Define a ordem dos fornecedores na lista de preços quando há vários "
+"fornecedores disponíveis. Por exemplo, se `Azure Interior` for listado em "
+"primeiro lugar e Wood Corner em segundo, suas sequências serão `1` e `2`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:163
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:171
@@ -50480,7 +51067,7 @@ msgstr "N/D"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:164
 msgid "`sequence`"
-msgstr ""
+msgstr "`sequence`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:165
 msgid "Company"
@@ -50488,27 +51075,29 @@ msgstr "Empresa"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:166
 msgid "Name of company the product belongs to."
-msgstr ""
+msgstr "Nome da empresa à qual o produto pertence."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:167
 msgid ":guilabel:`Company` field in the vendor pricelist."
-msgstr ""
+msgstr "Campo :guilabel:`Empresa` na lista de preços do fornecedor."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:168
 msgid "`company_id`"
-msgstr ""
+msgstr "`company_id`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:169
 msgid ":ref:`External ID <purchase/products/external-id>`"
-msgstr ""
+msgstr ":ref:`ID externo <purchase/products/external-id>`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:170
 msgid "Unique ID of a record used to update existing vendor pricelists."
 msgstr ""
+"ID exclusivo de um registro usado para atualizar as listas de preços de "
+"fornecedores existentes."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:172
 msgid "`id`"
-msgstr ""
+msgstr "`id`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:175
 msgid "Import records"
@@ -50521,6 +51110,10 @@ msgid ""
 " database, by going to :menuselection:`Purchase app --> Configuration --> "
 "Vendor Pricelists`."
 msgstr ""
+"Com um modelo baixado, preencha o arquivo XLSX ou CSV com as informações "
+"necessárias. Depois de inserir tudo, importe o arquivo de volta à base de "
+"dados do Odoo, acessando :menuselection:`app Compras --> Configuração --> "
+"Listas de preços de fornecedores`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:181
 msgid ""
@@ -50528,6 +51121,9 @@ msgid ""
 "left corner. In the drop-down menu that appears, click :guilabel:`Import "
 "records`."
 msgstr ""
+"Na página, clique no ícone :icon:`fa-cog` :guilabel:`(engrenagem)` no canto "
+"superior esquerdo. No menu suspenso que aparece, clique em "
+":guilabel:`Importar registros`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:184
 msgid ""
@@ -50535,69 +51131,84 @@ msgid ""
 "selecting the XLSX or CSV file, confirm the correct fields, and click "
 ":guilabel:`Import`."
 msgstr ""
+"Em seguida, clique em :guilabel:`Carregar arquivo` no canto superior "
+"esquerdo e, depois de selecionar o arquivo XLSX ou CSV, confirme os campos "
+"corretos e clique em :guilabel:`Importar`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:188
 msgid ":doc:`../../../essentials/export_import_data`"
-msgstr ""
+msgstr ":doc:`../../../essentials/export_import_data`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:189
 msgid ":ref:`Common fields <purchase/products/common-fields>`"
-msgstr ""
+msgstr ":ref:`Campos comuns <purchase/products/common-fields>`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst-1
 msgid "Upload file screen."
-msgstr ""
+msgstr "Tela Carregar arquivo."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:195
 msgid "Formatting import file"
-msgstr ""
+msgstr "Formatação do arquivo de importação"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:197
 msgid ""
 "To understand how to format import files for vendor pricelists, consider the"
 " following example."
 msgstr ""
+"Para entender como formatar arquivos para importação de listas de preços de "
+"fornecedores, considere o seguinte exemplo."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:199
 msgid ""
 "`Storage Box` (:guilabel:`Reference`: `E-COM08`) is sold by `Wood Corner` "
 "for `$10`."
 msgstr ""
+"`Caixa de armazenamento` (:guilabel:`Referência`: `E-COM08`) é vendida pela "
+"`Wood Corner` por `R$ 10`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:200
 msgid ""
 "`Large Desk` (:guilabel:`Reference`: `E-COM09`) has no records in the vendor"
 " pricelist."
 msgstr ""
+"`Escrivaninha` (:guilabel:`Referência`: `E-COM09`) não tem registros nas "
+"listas de preços de fornecedores."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:202
 msgid "An import file is created to do the following:"
-msgstr ""
+msgstr "Um arquivo de importação é criado para fazer o seguinte:"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:204
 msgid "Update the price for `Wood Corner` from `$10` to `$13`."
-msgstr ""
+msgstr "Atualizar o preço da `Wood Corner` de `R$ 10` para `R$ 13`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:205
 msgid ""
 "Add pricelist for `Storage Box`: the vendor, `Ready Mat` intends to sell the"
 " product for `$14`."
 msgstr ""
+"Adicionar lista de preços para `Caixa de armazenamento`: o fornecedor, "
+"`Ready Mat`, pretende vender o produto por `R$ 14`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:206
 msgid ""
 "Add pricelist for `Large Desk`: vendor is `Wood Corner`, price is `$1299`."
 msgstr ""
+"Adicionar lista de preços para `Escrivaninha grande`: o fornecedor é `Wood "
+"Corner`, o preço é `R$ 1.299`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:207
 msgid ""
 "Add pricelist for `Large Desk`: vendor is `Azure Interior`, price is "
 "`$1399`."
 msgstr ""
+"Adicionar lista de preços para `Escrivaninha Grande`: o fornecedor é `Azure "
+"Interior`, o preço é `R$ 1.399`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:209
 msgid "Vendor pricelist data"
-msgstr ""
+msgstr "Dados da lista de preços do fornecedor"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:212
 msgid "id"
@@ -50605,19 +51216,19 @@ msgstr "id"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:213
 msgid "company_id"
-msgstr ""
+msgstr "company_id"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:214
 msgid "delay"
-msgstr ""
+msgstr "delay"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:215
 msgid "price"
-msgstr ""
+msgstr "price"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:216
 msgid "product_tmpl_id"
-msgstr ""
+msgstr "product_tmpl_id"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:217
 msgid "sequence"
@@ -50629,23 +51240,23 @@ msgstr "partner_id"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:219
 msgid "product.product_supplierinfo_3"
-msgstr ""
+msgstr "product.product_supplierinfo_3"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:220
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:227
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:234
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:241
 msgid "My Company (San Francisco)"
-msgstr ""
+msgstr "My Company (San Francisco)"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:222
 msgid "13.00"
-msgstr ""
+msgstr "13,00"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:223
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:230
 msgid "[E-COM08] Storage Box"
-msgstr ""
+msgstr "[E-COM08] Caixa de armazenamento"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:225
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:239
@@ -50654,7 +51265,7 @@ msgstr "Wood Corner"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:229
 msgid "14.00"
-msgstr ""
+msgstr "14,00"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:232
 msgid "Ready Mat"
@@ -50662,24 +51273,24 @@ msgstr "Ready Mat"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:236
 msgid "1299.00"
-msgstr ""
+msgstr "1.299,00"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:237
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:244
 msgid "[E-COM09] Large Desk"
-msgstr ""
+msgstr "[E-COM09] Escrivaninha grande"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:238
 msgid "6"
-msgstr ""
+msgstr "6"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:243
 msgid "1399.00"
-msgstr ""
+msgstr "1.399,00"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:245
 msgid "7"
-msgstr ""
+msgstr "7"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:246
 msgid "Azure Interior"
@@ -50687,19 +51298,23 @@ msgstr "Azure Interior"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:249
 msgid "The *technical field name* was used to create this information."
-msgstr ""
+msgstr "O *nome técnico do campo* foi usado para criar essas informações."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:252
 msgid "Download the sample files for reference:"
-msgstr ""
+msgstr "Faça o download das amostras de arquivos para referência:"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:254
 msgid ":download:`Sample XLSX import file <pricelist/pricelist-example.xlsx>`"
 msgstr ""
+":download:`Amostra de arquivo de importação XLSX <pricelist/pricelist-"
+"example.xlsx>`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:255
 msgid ":download:`Sample CSV import file <pricelist/pricelist-example.csv>`"
 msgstr ""
+":download:`Amostra de arquivo de importação CSV <pricelist/pricelist-"
+"example.csv>`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:3
 msgid "Configure reordering rules"
