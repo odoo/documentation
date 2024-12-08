@@ -5,7 +5,6 @@
 # 
 # Translators:
 # Rhea Xiao, 2024
-# Odoo哥 <vnsoft.he@gmail.com>, 2024
 # John An <johnxan@163.com>, 2024
 # Mandy Choy <mnc@odoo.com>, 2024
 # Jeffery CHEN <jeffery9@gmail.com>, 2024
@@ -16,17 +15,18 @@
 # diaojiaolou <124412206@qq.com>, 2024
 # 山西清水欧度(QQ:54773801) <54773801@qq.com>, 2024
 # Wil Odoo, 2024
-# Chloe Wang, 2024
 # Raymond Yu <cl_yu@hotmail.com>, 2024
+# Odoo哥 <vnsoft.he@gmail.com>, 2024
+# Chloe Wang, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-05 09:20+0000\n"
+"POT-Creation-Date: 2024-12-02 16:24+0000\n"
 "PO-Revision-Date: 2024-10-08 06:34+0000\n"
-"Last-Translator: Raymond Yu <cl_yu@hotmail.com>, 2024\n"
+"Last-Translator: Chloe Wang, 2024\n"
 "Language-Team: Chinese (China) (https://app.transifex.com/odoo/teams/41243/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -3768,6 +3768,79 @@ msgid ""
 "These parameters are only used to prevent the creation of new records. They "
 "**do not prevent replies** from being added to the chatter."
 msgstr "这些参数仅用于阻止创建新记录。它们 **不会阻止回复** 添加到沟通栏中。"
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:322
+msgid "Allow alias domain system parameter"
+msgstr "允许别名域系统参数"
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:324
+msgid ""
+"Incoming aliases are set in the Odoo database to create records by receiving"
+" incoming emails. To view aliases set in the Odoo database, first activate "
+"the :ref:`developer mode <developer-mode>`. Then, go to "
+":menuselection:`Settings app --> Technical --> Aliases`."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:328
+msgid ""
+"The following system parameter, `mail.catchall.domain.allowed`, set with "
+"allowed alias domain values, separated by commas, filters out correctly "
+"addressed emails to aliases. Setting the domains for which the alias can "
+"create a ticket, lead, opportunity, etc., eliminates false positives where "
+"email addresses with only the prefix alias, not the domain, are present."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:333
+msgid ""
+"In some instances, matches have been made in the Odoo database when an email"
+" is received with the same alias prefix and a different domain on the "
+"incoming email address. This is true in the sender, recipient, and :abbr:`CC"
+" (Carbon Copy)` email addresses of an incoming email."
+msgstr ""
+"在某些情况下，如果收到的电子邮件具有相同的别名前缀，而收到的电子邮件地址具有不同的域，则会在 Odoo "
+"数据库中进行匹配。在收到的电子邮件的发件人、收件人和 :abbr:`抄送` 电子邮件地址中都存在这种情况。"
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:338
+msgid ""
+"When Odoo receives emails with the `commercial` prefix alias in the sender, "
+"recipient, or :abbr:`CC (Carbon Copy)` email addresses (e.g. "
+"commercial\\@example.com), the database falsely treats the email as the full"
+" `commercial` alias, with a different domain, and therefore, creates a "
+"ticket/lead/opportunity/etc."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:343
+msgid ""
+"To add the `mail.catchall.domain.allowed` system parameter, first, activate "
+"the :ref:`developer mode <developer-mode>`. Then, go to "
+":menuselection:`Settings app --> Technical --> System Parameters`. Click "
+":guilabel:`New`. Then, type in `mail.catchall.domain.allowed` for the "
+":guilabel:`Key` field."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:347
+msgid ""
+"Next, for the :guilabel:`Value` field, add the domains separated by commas. "
+"Manually :icon:`fa-cloud-upload` :guilabel:`(Save)`, and the system "
+"parameter takes immediate effect."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst-1
+msgid "mail.catchall.domain.allowed system parameter set."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:354
+msgid "Local-part based incoming detection"
+msgstr "收件时检测本地的别名域"
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:356
+msgid ""
+"When creating a new alias, there is an option to enable :guilabel:`Local-"
+"part based incoming detection`. If enabled, Odoo only requires the local-"
+"part to match for routing an incoming email. If this feature is turned off, "
+"Odoo requires the whole email address to match for routing an incoming "
+"email."
+msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:3
 msgid "Manage outbound messages"

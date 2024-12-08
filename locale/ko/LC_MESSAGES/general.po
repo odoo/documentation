@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-05 09:20+0000\n"
+"POT-Creation-Date: 2024-12-02 16:24+0000\n"
 "PO-Revision-Date: 2024-10-08 06:34+0000\n"
 "Last-Translator: Sarah Park, 2024\n"
 "Language-Team: Korean (https://app.transifex.com/odoo/teams/41243/ko/)\n"
@@ -2661,7 +2661,7 @@ msgstr "Odoo 일반 설정에 있는 Outlook 자격 증명"
 #: ../../content/applications/general/email_communication/azure_oauth.rst:159
 #: ../../content/applications/general/email_communication/google_oauth.rst:127
 msgid "Configure outgoing email server"
-msgstr "이메일 발신 서버 환경 설정"
+msgstr "이메일 발신 서버 환경설정"
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:161
 msgid ""
@@ -2733,7 +2733,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:194
 msgid "Configuration with a single outgoing mail server"
-msgstr "단일 발신 메일 서버에 대한 환경 설정"
+msgstr "단일 발신 메일 서버에 대한 환경설정"
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:196
 msgid ""
@@ -2794,7 +2794,7 @@ msgstr "정적 이메일을 사용할 경우의 실제 발신자 이름"
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:222
 msgid "Single outgoing mail server configuration:"
-msgstr "단일 발신 메일 서버에 대한 환경 설정:"
+msgstr "단일 발신 메일 서버에 대한 환경설정:"
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:224
 msgid ""
@@ -2819,7 +2819,7 @@ msgstr "시스템 매개변수의 `mail.default.from` = `notifications`"
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:230
 msgid "User-specific (multiple user) configuration"
-msgstr "사용자별 (다중 사용자) 환경 설정"
+msgstr "사용자별 (다중 사용자) 환경설정"
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:232
 msgid ""
@@ -2938,7 +2938,7 @@ msgstr "시스템 매개 변수"
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:285
 msgid "Configure incoming email server"
-msgstr "이메일 수신 서버 환경 설정"
+msgstr "이메일 수신 서버 환경설정"
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:287
 msgid ""
@@ -3525,7 +3525,7 @@ msgstr "잘못된 도메인으로 이메일을 보낼 경우 빨간색 봉투로
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:109
 msgid "Receive emails with Odoo's default configuration"
-msgstr "Odoo 이메일 수신 기본 환경 설정"
+msgstr "Odoo 이메일 수신 기본 환경설정"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:111
 msgid ""
@@ -3977,13 +3977,86 @@ msgstr ""
 "이러한 매개변수는 새 레코드가 생성되는 것을 방지하기 위한 목적으로만 사용됩니다. 메시지창에서 받을 추가 **답글을 방지하는 것이 "
 "아닙니다.**"
 
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:322
+msgid "Allow alias domain system parameter"
+msgstr "별칭 도메인 시스템 매개변수 허용하기"
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:324
+msgid ""
+"Incoming aliases are set in the Odoo database to create records by receiving"
+" incoming emails. To view aliases set in the Odoo database, first activate "
+"the :ref:`developer mode <developer-mode>`. Then, go to "
+":menuselection:`Settings app --> Technical --> Aliases`."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:328
+msgid ""
+"The following system parameter, `mail.catchall.domain.allowed`, set with "
+"allowed alias domain values, separated by commas, filters out correctly "
+"addressed emails to aliases. Setting the domains for which the alias can "
+"create a ticket, lead, opportunity, etc., eliminates false positives where "
+"email addresses with only the prefix alias, not the domain, are present."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:333
+msgid ""
+"In some instances, matches have been made in the Odoo database when an email"
+" is received with the same alias prefix and a different domain on the "
+"incoming email address. This is true in the sender, recipient, and :abbr:`CC"
+" (Carbon Copy)` email addresses of an incoming email."
+msgstr ""
+"어떤 경우에는 수신된 이메일 주소에 있는 별칭 접두사가 동일하고 도메인이 다른 경우에 Odoo데이터베이스에서 일치시키는 경우도 있습니다."
+" 수신 이메일의 보낸 사람, 받는 사람 및 이메일 :abbr:`CC (수신 참조)` 가 참인 경우입니다."
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:338
+msgid ""
+"When Odoo receives emails with the `commercial` prefix alias in the sender, "
+"recipient, or :abbr:`CC (Carbon Copy)` email addresses (e.g. "
+"commercial\\@example.com), the database falsely treats the email as the full"
+" `commercial` alias, with a different domain, and therefore, creates a "
+"ticket/lead/opportunity/etc."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:343
+msgid ""
+"To add the `mail.catchall.domain.allowed` system parameter, first, activate "
+"the :ref:`developer mode <developer-mode>`. Then, go to "
+":menuselection:`Settings app --> Technical --> System Parameters`. Click "
+":guilabel:`New`. Then, type in `mail.catchall.domain.allowed` for the "
+":guilabel:`Key` field."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:347
+msgid ""
+"Next, for the :guilabel:`Value` field, add the domains separated by commas. "
+"Manually :icon:`fa-cloud-upload` :guilabel:`(Save)`, and the system "
+"parameter takes immediate effect."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst-1
+msgid "mail.catchall.domain.allowed system parameter set."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:354
+msgid "Local-part based incoming detection"
+msgstr "로컬 부품 기반 입고 감지"
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:356
+msgid ""
+"When creating a new alias, there is an option to enable :guilabel:`Local-"
+"part based incoming detection`. If enabled, Odoo only requires the local-"
+"part to match for routing an incoming email. If this feature is turned off, "
+"Odoo requires the whole email address to match for routing an incoming "
+"email."
+msgstr ""
+
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:3
 msgid "Manage outbound messages"
 msgstr "외부 발송 메시지 관리"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:8
 msgid "Sending emails with Odoo's default configuration"
-msgstr "Odoo 기본 환경 설정으로 이메일 보내기"
+msgstr "Odoo 기본 환경설정 이메일 보내기"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:10
 msgid ""
@@ -5959,7 +6032,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst-1
 msgid "SMTP configuration from Mailjet."
-msgstr "Mailjet에서 SMTP 환경 설정하기"
+msgstr "Mailjet에서 SMTP 환경설정하기"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:43
 msgid ""
@@ -6609,7 +6682,7 @@ msgstr "API 키를 일반에 공유하거나 클라이언트 측 코드에 노�
 
 #: ../../content/applications/general/integrations/google_translate.rst:100
 msgid "Odoo configuration"
-msgstr "Odoo 환경 설정"
+msgstr "Odoo 환경설정"
 
 #: ../../content/applications/general/integrations/google_translate.rst:102
 msgid ""
@@ -7899,7 +7972,7 @@ msgstr "해결 방법:"
 
 #: ../../content/applications/general/iot/config/https_certificate_iot.rst:91
 msgid "Ensure that the server is configured."
-msgstr "서버에 환경 설정이 되어 있는지 확인하세요."
+msgstr "서버에 환경설정이 되어 있는지 확인하세요."
 
 #: ../../content/applications/general/iot/config/https_certificate_iot.rst:94
 #: ../../content/applications/general/iot/config/windows_iot.rst:121
@@ -8378,7 +8451,7 @@ msgstr ""
 
 #: ../../content/applications/general/iot/config/pos.rst-1
 msgid "Configuring the connected devices in the POS application."
-msgstr "POS 애플리케이션에 연결되어 있는 장치에 대한 환경 설정"
+msgstr "POS 애플리케이션에 연결되어 있는 장치에 대한 환경설정"
 
 #: ../../content/applications/general/iot/config/pos.rst:67
 msgid ""
@@ -8702,7 +8775,7 @@ msgstr "프린터 IoT 디바이스에서 하위 유형 선택"
 
 #: ../../content/applications/general/iot/config/troubleshooting.rst:116
 msgid "Epson configuration special case"
-msgstr "Epson 환경 설정의 특수 사례"
+msgstr "Epson 환경설정의 특수 사례"
 
 #: ../../content/applications/general/iot/config/troubleshooting.rst:118
 msgid ""
@@ -8779,7 +8852,7 @@ msgstr ""
 
 #: ../../content/applications/general/iot/config/troubleshooting.rst:148
 msgid "IoT box configuration for ESC *"
-msgstr "ESC *를 사용하도록 IoT 박스 환경 설정하기"
+msgstr "ESC *를 사용하도록 IoT 박스 환경설정하기"
 
 #: ../../content/applications/general/iot/config/troubleshooting.rst:150
 msgid ""
@@ -10674,7 +10747,7 @@ msgstr ""
 
 #: ../../content/applications/general/iot/config/windows_iot.rst:180
 msgid "Configure new rule"
-msgstr "새 규칙 환경 설정"
+msgstr "새 규칙 환경설정"
 
 #: ../../content/applications/general/iot/config/windows_iot.rst:182
 msgid ""
@@ -12828,7 +12901,7 @@ msgstr ""
 
 #: ../../content/applications/general/users/2fa.rst:42
 msgid "Two-factor authentication setup"
-msgstr ""
+msgstr "2단계 인증 설정"
 
 #: ../../content/applications/general/users/2fa.rst:44
 msgid ""
@@ -12836,12 +12909,14 @@ msgid ""
 "avatar in the upper-right corner, and select :guilabel:`My Profile` from the"
 " resulting drop-down menu."
 msgstr ""
+"인증자를 선택한 후 Odoo에 로그인한 다음, 오른쪽 상단에 있는 아바타를 클릭하고 드롭다운 메뉴에서 :guilabel:`내 프로필` 을"
+" 선택합니다."
 
 #: ../../content/applications/general/users/2fa.rst:47
 msgid ""
 "Click the :guilabel:`Account Security` tab, then slide the :guilabel:`Two-"
 "Factor Authentication` toggle to *active*."
-msgstr ""
+msgstr ":guilabel:`계정 보안` 탭을 클릭한 다음 :guilabel:`2단계 인증` 토글을 *활성화* 로 밀어서 전환합니다."
 
 #: ../../content/applications/general/users/2fa.rst:53
 msgid ""
@@ -12857,7 +12932,7 @@ msgstr ""
 #: ../../content/applications/general/users/2fa.rst:61
 msgid ""
 "Using the desired authenticator application, scan the |QR| when prompted."
-msgstr ""
+msgstr "원하는 인증자 애플리케이션을 사용하여, 메시지가 표시되면 |QR| 을 스캔합니다."
 
 #: ../../content/applications/general/users/2fa.rst:64
 msgid ""
@@ -12871,13 +12946,13 @@ msgstr ""
 
 #: ../../content/applications/general/users/2fa.rst:74
 msgid "Afterwards, the authenticator should display a *verification code*."
-msgstr ""
+msgstr "그러면 인증자에 *확인 코드* 가 표시됩니다."
 
 #: ../../content/applications/general/users/2fa.rst:79
 msgid ""
 "Enter the code into the :guilabel:`Verification Code` field, then click "
 ":guilabel:`Activate`."
-msgstr ""
+msgstr ":guilabel:`인증 코드` 필드에 코드를 입력한 다음 :guilabel:`활성화` 를 클릭합니다."
 
 #: ../../content/applications/general/users/2fa.rst:85
 msgid "Logging in"
@@ -12885,7 +12960,7 @@ msgstr "로그인하기"
 
 #: ../../content/applications/general/users/2fa.rst:87
 msgid "To confirm |2fa| setup is complete, log out of Odoo."
-msgstr ""
+msgstr "|2fa| 설정이 완료되었는지 확인하려면 Odoo에서 로그아웃합니다."
 
 #: ../../content/applications/general/users/2fa.rst:89
 msgid ""
@@ -12899,13 +12974,15 @@ msgstr ""
 
 #: ../../content/applications/general/users/2fa.rst-1
 msgid "The login page with 2fa enabled."
-msgstr ""
+msgstr "2단계 인증이 활성화되어 있는 로그인 페이지"
 
 #: ../../content/applications/general/users/2fa.rst:98
 msgid ""
 "If a user loses access to their authenticator, an administrator **must** "
 "deactivate |2fa| on the account before the user can log in."
 msgstr ""
+"사용자가 인증자 액세스 권한을 분실한 경우에는, 사용자가 로그인하기 전에 **반드시** 관리자 계정에서 |2fa| 를 비활성화해야 "
+"합니다."
 
 #: ../../content/applications/general/users/2fa.rst:102
 msgid "Enforce two-factor authentication"
@@ -12924,11 +13001,11 @@ msgstr ""
 msgid ""
 "Click :guilabel:`Install` on the Kanban card for the :guilabel:`2FA by mail`"
 " module."
-msgstr ""
+msgstr "칸반 카드에서 :guilabel:`이메일을 사용한 2단계 인증` 모듈 :guilabel:`설치` 를 클릭합니다."
 
 #: ../../content/applications/general/users/2fa.rst-1
 msgid "The 2FA by mail module in the Apps directory."
-msgstr ""
+msgstr "앱 디렉토리에 있는 이메일 2중 인증 모듈"
 
 #: ../../content/applications/general/users/2fa.rst:114
 msgid ""
@@ -13095,6 +13172,8 @@ msgid ""
 ":guilabel:`Create`. Then, from the blank group form, select an "
 ":guilabel:`Application`, and complete the group form (detailed below)."
 msgstr ""
+":guilabel:`그룹` 페이지에서 새 그룹을 만들려면 :guilabel:`만들기` 를 클릭합니다. 그런 다음 빈 그룹 양식에서 "
+":guilabel:`신청서` 를 선택하고 그룹 양식을 작성합니다(아래에 자세히 설명되어 있음)."
 
 #: ../../content/applications/general/users/access_rights.rst:76
 msgid ""
@@ -13268,6 +13347,8 @@ msgid ""
 "`[('mrp_production_ids', 'in', "
 "user.partner_id.commercial_partner_id.production_ids.ids)]`"
 msgstr ""
+"`[('mrp_production_ids', 'in', "
+"user.partner_id.commercial_partner_id.production_ids.ids)]`"
 
 #: ../../content/applications/general/users/access_rights.rst:149
 msgid ""
@@ -13338,6 +13419,8 @@ msgid ""
 "upper-right corner, and clicking on the :guilabel:`OdooBot` username. Then, "
 "select the :guilabel:`Log out` option."
 msgstr ""
+"*슈퍼유저 모드* 를 종료하려면 오른쪽 상단으로 이동하여 :guilabel:`OdooBot` 사용자 이름을 클릭합니다. 그런 다음 "
+":guilabel:` 로그아웃` 을 선택합니다."
 
 #: ../../content/applications/general/users/access_rights.rst:185
 msgid ""
@@ -13788,7 +13871,7 @@ msgstr ""
 
 #: ../../content/applications/general/users/facebook.rst:37
 msgid "Customize app"
-msgstr ""
+msgstr "사용자 지정 앱"
 
 #: ../../content/applications/general/users/facebook.rst:39
 msgid ""
@@ -13827,7 +13910,7 @@ msgstr ""
 
 #: ../../content/applications/general/users/facebook.rst:60
 msgid "Configure settings"
-msgstr ""
+msgstr "환경설정 메뉴"
 
 #: ../../content/applications/general/users/facebook.rst:62
 msgid ""
@@ -14284,6 +14367,8 @@ msgid ""
 "upper-right corner, go to :menuselection:`My profile`, and select a "
 ":guilabel:`Language` in the dropdown list."
 msgstr ""
+"사용 언어를 선택하려면 오른쪽 상단에 있는 프로필 아이콘을 클릭하여 :menuselection:`내 프로필` 로 이동한 다음 드롭다운 "
+"목록에서 :guilabel:`언어` 를 선택하면 됩니다."
 
 #: ../../content/applications/general/users/language.rst:36
 msgid "Change another user's language"

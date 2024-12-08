@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-05 09:20+0000\n"
+"POT-Creation-Date: 2024-12-02 16:24+0000\n"
 "PO-Revision-Date: 2024-10-08 06:34+0000\n"
 "Last-Translator: Larissa Manderfeld, 2024\n"
 "Language-Team: German (https://app.transifex.com/odoo/teams/41243/de/)\n"
@@ -4222,6 +4222,82 @@ msgid ""
 "**do not prevent replies** from being added to the chatter."
 msgstr ""
 
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:322
+msgid "Allow alias domain system parameter"
+msgstr "Systemparameter für Alias-Domain erlauben"
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:324
+msgid ""
+"Incoming aliases are set in the Odoo database to create records by receiving"
+" incoming emails. To view aliases set in the Odoo database, first activate "
+"the :ref:`developer mode <developer-mode>`. Then, go to "
+":menuselection:`Settings app --> Technical --> Aliases`."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:328
+msgid ""
+"The following system parameter, `mail.catchall.domain.allowed`, set with "
+"allowed alias domain values, separated by commas, filters out correctly "
+"addressed emails to aliases. Setting the domains for which the alias can "
+"create a ticket, lead, opportunity, etc., eliminates false positives where "
+"email addresses with only the prefix alias, not the domain, are present."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:333
+msgid ""
+"In some instances, matches have been made in the Odoo database when an email"
+" is received with the same alias prefix and a different domain on the "
+"incoming email address. This is true in the sender, recipient, and :abbr:`CC"
+" (Carbon Copy)` email addresses of an incoming email."
+msgstr ""
+"In einigen Fällen wurden in der Odoo-Datenbank Übereinstimmungen "
+"festgestellt, wenn eine E-Mail mit demselben Alias-Präfix und einer anderen "
+"Domain in der E-Mail-Adresse für eingehende Mails empfangen wurde. Dies "
+"trifft auf die Absender-, Empfänger- und :abbr:`CC (Carbon Copy)`-E-Mail-"
+"Adressen einer eingehenden E-Mail zu."
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:338
+msgid ""
+"When Odoo receives emails with the `commercial` prefix alias in the sender, "
+"recipient, or :abbr:`CC (Carbon Copy)` email addresses (e.g. "
+"commercial\\@example.com), the database falsely treats the email as the full"
+" `commercial` alias, with a different domain, and therefore, creates a "
+"ticket/lead/opportunity/etc."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:343
+msgid ""
+"To add the `mail.catchall.domain.allowed` system parameter, first, activate "
+"the :ref:`developer mode <developer-mode>`. Then, go to "
+":menuselection:`Settings app --> Technical --> System Parameters`. Click "
+":guilabel:`New`. Then, type in `mail.catchall.domain.allowed` for the "
+":guilabel:`Key` field."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:347
+msgid ""
+"Next, for the :guilabel:`Value` field, add the domains separated by commas. "
+"Manually :icon:`fa-cloud-upload` :guilabel:`(Save)`, and the system "
+"parameter takes immediate effect."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst-1
+msgid "mail.catchall.domain.allowed system parameter set."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:354
+msgid "Local-part based incoming detection"
+msgstr "Erkennung des Eingangs eines lokalen Elements"
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:356
+msgid ""
+"When creating a new alias, there is an option to enable :guilabel:`Local-"
+"part based incoming detection`. If enabled, Odoo only requires the local-"
+"part to match for routing an incoming email. If this feature is turned off, "
+"Odoo requires the whole email address to match for routing an incoming "
+"email."
+msgstr ""
+
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:3
 msgid "Manage outbound messages"
 msgstr "Ausgehende Nachrichten verwalten"
@@ -6707,7 +6783,7 @@ msgstr "Erstellung eines API-Schlüssels in der Google-API-Konsole."
 #: ../../content/applications/general/integrations/google_translate.rst:73
 msgid "Copy the :guilabel:`API key` for use in the next section."
 msgstr ""
-"Kopieren Sie den :guilabel:API key` (API-Schlüssel) zur Verwendung im "
+"Kopieren Sie den :guilabel:`API key` (API-Schlüssel) zur Verwendung im "
 "nächsten Abschnitt."
 
 #: ../../content/applications/general/integrations/google_translate.rst:76
@@ -7294,7 +7370,7 @@ msgid ""
 msgstr ""
 "Zuerst müssen Sie die Funktion *Mail-Plugin* in Ihrer Datenbank aktivieren. "
 "Gehen Sie zu :menuselection:`Einstellungen --> Allgemeine Einstellungen --> "
-"Integrationen`, aktivieren Sie :guilabel:`Mail-Pluginv, und "
+"Integrationen`, aktivieren Sie :guilabel:`Mail-Plugin`, und "
 ":guilabel:`Speichern` Sie die Konfiguration."
 
 #: ../../content/applications/general/integrations/mail_plugins/outlook.rst:25

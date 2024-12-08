@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-05 09:20+0000\n"
+"POT-Creation-Date: 2024-12-02 16:24+0000\n"
 "PO-Revision-Date: 2024-10-08 06:34+0000\n"
 "Last-Translator: Jakob Krabbe <jakob.krabbe@vertel.se>, 2024\n"
 "Language-Team: Swedish (https://app.transifex.com/odoo/teams/41243/sv/)\n"
@@ -511,8 +511,8 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:38
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:20
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/uom.rst:21
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:20
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:44
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:18
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/valuation_by_lots.rst:20
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/cross_dock.rst:18
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/delivery_three_steps.rst:16
@@ -5392,7 +5392,7 @@ msgstr ":doc:`Spårning av parti-/serienummer <../product_tracking>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:93
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:162
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:81
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:77
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:54
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:77
 msgid "Create purchase order"
@@ -6019,443 +6019,6 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation.rst:5
 msgid "Inventory valuation"
 msgstr "Lagervärdering"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:3
-msgid "Landed costs"
-msgstr "Kostnader för landning"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:12
-msgid ""
-"When shipping products to customers, the landed cost is the total price of a"
-" product or shipment, including all expenses associated with shipping the "
-"product."
-msgstr ""
-"Vid leverans av produkter till kunder är landningskostnaden det totala "
-"priset för en produkt eller försändelse, inklusive alla kostnader som är "
-"förknippade med leveransen av produkten."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:15
-msgid ""
-"In Odoo, the *Landed Costs* feature is used to take additional costs into "
-"account when calculating the valuation of a product. This includes the cost "
-"of shipment, insurance, customs duties, taxes, and other fees."
-msgstr ""
-"I Odoo används funktionen *Landed Costs* för att ta hänsyn till extra "
-"kostnader när man beräknar värderingen av en produkt. Detta inkluderar "
-"kostnader för frakt, försäkring, tullavgifter, skatter och andra avgifter."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:22
-msgid ""
-"To add landed costs to products, the *Landed Costs* feature must first be "
-"enabled. To enable this feature, navigate to :menuselection:`Inventory app "
-"--> Configuration --> Settings`, and scroll to the :guilabel:`Valuation` "
-"section."
-msgstr ""
-"För att lägga till landade kostnader för produkter måste funktionen *Landed "
-"Costs* först aktiveras. För att aktivera denna funktion, navigera till "
-":menuselection:`Inventory app --> Configuration --> Settings`, och bläddra "
-"till :guilabel:`Valuation` sektionen."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:26
-msgid ""
-"Tick the checkbox next to the :guilabel:`Landed Costs` option, and click "
-":guilabel:`Save` to save changes."
-msgstr ""
-"Markera kryssrutan bredvid alternativet :guilabel:`Landed Costs` och klicka "
-"på :guilabel:`Save` för att spara ändringarna."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:29
-msgid ""
-"Once the page refreshes, a new :guilabel:`Default Journal` field appears "
-"below the :guilabel:`Landed Costs` feature in the :guilabel:`Valuation` "
-"section."
-msgstr ""
-"När sidan har uppdaterats visas ett nytt fält för :guilabel:`Default "
-"Journal` under :guilabel:`Landed Costs` i avsnittet :guilabel:`Valuation`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:32
-msgid ""
-"Click the :guilabel:`Default Journal` drop-down menu to reveal a list of "
-"accounting journals. Select a journal for which all accounting entries "
-"related to landed costs should be recorded."
-msgstr ""
-"Klicka på rullgardinsmenyn :guilabel:`Default Journal` för att visa en lista"
-" med redovisningsjournaler. Välj en journal för vilken alla bokföringsposter"
-" som rör landningskostnader ska registreras."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst-1
-msgid ""
-"Landed Costs feature and resulting Default Journal field in the Inventory "
-"settings."
-msgstr ""
-"Landed Costs-funktionen och det resulterande fältet Standardjournal i "
-"lagerinställningarna."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:40
-msgid "Create landed cost product"
-msgstr "Skapa produkt med landad kostnad"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:42
-msgid ""
-"For charges that are consistently added as landed costs, a landed cost "
-"product can be created in Odoo. This way, a landed cost product can be "
-"quickly added to a vendor bill as an invoice line, instead of having to be "
-"manually entered every time a new vendor bill is created."
-msgstr ""
-"För avgifter som konsekvent läggs till som landade kostnader kan en landad "
-"kostnadsprodukt skapas i Odoo. På så sätt kan en landkostnadsprodukt snabbt "
-"läggas till på en leverantörsfaktura som en fakturarad, istället för att "
-"behöva anges manuellt varje gång en ny leverantörsfaktura skapas."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:46
-msgid ""
-"To do this, create a new product by going to :menuselection:`Inventory app "
-"--> Products --> Products`, and clicking :guilabel:`New`."
-msgstr ""
-"Detta gör du genom att skapa en ny produkt genom att gå till "
-":menuselection:`Inventory app --> Products --> Products` och klicka på "
-":guilabel:`New`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:49
-msgid ""
-"Assign a name to the landed cost product in the :guilabel:`Product Name` "
-"field (i.e. `International Shipping`). In the :guilabel:`Product Type` "
-"field, click the drop-down menu, and select :guilabel:`Service` as the "
-":guilabel:`Product Type`."
-msgstr ""
-"Tilldela ett namn till produkten med landningskostnad i fältet "
-":guilabel:`Product Name` (t.ex. `International Shipping`). I fältet "
-":guilabel:`Product Type` klickar du på rullgardinsmenyn och väljer "
-":guilabel:`Service` som :guilabel:`Product Type`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:54
-msgid ""
-"Landed cost products **must** have their :guilabel:`Product Type` set to "
-":guilabel:`Service`."
-msgstr ""
-"Produkter med landad kostnad **måste** ha sin :guilabel:`Product Type` "
-"inställd på :guilabel:`Service`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:56
-msgid ""
-"Click the :guilabel:`Purchase` tab, and tick the checkbox next to "
-":guilabel:`Is a Landed Cost` in the :guilabel:`Vendor Bills` section. Once "
-"ticked, a new :guilabel:`Default Split Method` field appears below it, "
-"prompting a selection. Clicking that drop-down menu reveals the following "
-"options:"
-msgstr ""
-"Klicka på fliken :guilabel:`Purchase` och markera kryssrutan bredvid "
-":guilabel:`Is a Landed Cost` i avsnittet :guilabel:`Vendor Bills`. När "
-"kryssrutan är markerad visas ett nytt fält :guilabel:`Default Split Method` "
-"nedanför, med en uppmaning att göra ett val. Om du klickar på "
-"rullgardinsmenyn visas följande alternativ:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:60
-msgid ""
-":guilabel:`Equal`: splits the cost equally across each product included in "
-"the receipt, regardless of the quantity of each."
-msgstr ""
-":guilabel:`Equal`: delar kostnaden lika mellan varje produkt som ingår i "
-"kvittot, oavsett kvantitet."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:62
-msgid ""
-":guilabel:`By Quantity`: splits the cost across each unit of all products in"
-" the receipt."
-msgstr ""
-":guilabel:`By Quantity`: delar upp kostnaden på varje enhet av alla "
-"produkter i kvittot."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:63
-msgid ""
-":guilabel:`By Current Cost`: splits the cost according to the cost of each "
-"product unit, so a product with a higher cost receives a greater share of "
-"the landed cost."
-msgstr ""
-":guilabel:`By Current Cost`: delar upp kostnaden enligt kostnaden för varje "
-"produktenhet, så att en produkt med högre kostnad får en större andel av "
-"landningskostnaden."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:65
-msgid ""
-":guilabel:`By Weight`: splits the cost, according to the weight of the "
-"products in the receipt."
-msgstr ""
-":guilabel:`By Weight`: delar upp kostnaden enligt vikten på produkterna i "
-"kvittot."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:66
-msgid ""
-":guilabel:`By Volume`: splits the cost, according to the volume of the "
-"products in the receipt."
-msgstr ""
-":guilabel:`By Volume`: delar upp kostnaden enligt volymen på produkterna i "
-"kvittot."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst-1
-msgid ""
-"Is a Landed Cost checkbox and Default Split Method on service type product "
-"form."
-msgstr ""
-"Är en kryssruta för landad kostnad och standarddelningsmetod på "
-"produktformuläret för tjänstetypen."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:72
-msgid ""
-"When creating new vendor bills, this product can be added as an invoice line"
-" as a landed cost."
-msgstr ""
-"När du skapar nya leverantörsfakturor kan denna produkt läggas till som en "
-"fakturarad som en landad kostnad."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:75
-msgid ""
-"To apply a landed cost on a vendor bill, the products included in the "
-"original |PO| **must** belong to a *Product Category* with its *Force "
-"Removal Strategy* set to |FIFO|. The *Costing Method* can be set to either "
-"|AVCO| or |FIFO|, and the valuation method can be :doc:`manual "
-"<using_inventory_valuation>` or :doc:`automatic "
-"<inventory_valuation_config>`."
-msgstr ""
-"För att tillämpa en landad kostnad på en leverantörsfaktura måste de "
-"produkter som ingår i den ursprungliga |PO| **tillhöra en *Produktkategori* "
-"med dess *Force Removal Strategy* inställd på |FIFO|. *Kostnadsmetoden* kan "
-"anges till antingen |AVCO| eller |FIFO| och värderingsmetoden kan vara "
-":doc:``manual <using_inventory_valuation>` eller :doc:``automatic "
-"<inventory_valuation_config>`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:83
-msgid ""
-"Navigate to :menuselection:`Purchase app --> New` to create a new request "
-"for quotation (RfQ). In the :guilabel:`Vendor` field, add a vendor to order "
-"products from. Then, click :guilabel:`Add a product`, under the "
-":guilabel:`Products` tab, to add products to the |RfQ|."
-msgstr ""
-"Navigera till :menyval:`Inköpsapp --> Ny` för att skapa en ny "
-"offertförfrågan (RfQ). I fältet :guilabel:`Vendor` lägger du till en "
-"leverantör att beställa produkter från. Klicka sedan på :guilabel:`Add a "
-"product`, under fliken :guilabel:`Products`, för att lägga till produkter i "
-"offertförfrågan."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:87
-msgid ""
-"Once ready, click :guilabel:`Confirm Order` to confirm the order. Then, "
-"click :guilabel:`Receive Products` once the products have been received, "
-"followed by :guilabel:`Validate`."
-msgstr ""
-"När du är klar klickar du på :guilabel:`Confirm Order` för att bekräfta "
-"beställningen. Klicka sedan på :guilabel:`Receive Products` när produkterna "
-"har tagits emot, följt av :guilabel:`Validate`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:91
-msgid "Create vendor bill"
-msgstr "Skapa leverantörsfaktura"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:93
-msgid ""
-"Once the vendor fulfills the |PO| and sends a bill, a vendor bill can be "
-"created from the |PO| in Odoo."
-msgstr ""
-"När säljaren har uppfyllt kraven och skickat en faktura kan en "
-"leverantörsfaktura skapas från kraven i Odoo."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:96
-msgid ""
-"Navigate to the :menuselection:`Purchase app`, and click into the |PO| for "
-"which a vendor bill should be created. Then, click :guilabel:`Create Bill`. "
-"This opens a new :guilabel:`Vendor Bill` in the :guilabel:`Draft` stage."
-msgstr ""
-"Navigera till :menuselection:`Purchase app`, och klicka in på det |PO| för "
-"vilket en leverantörsfaktura ska skapas. Klicka sedan på :guilabel:`Create "
-"Bill`. Detta öppnar en ny :guilabel:`Vendor Bill` i "
-":guilabel:`Draft`-stadiet."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:100
-msgid ""
-"In the :guilabel:`Bill Date` field, click the line to open a calendar "
-"popover menu, and select the date on which this draft bill should be billed."
-msgstr ""
-"I fältet :guilabel:`Bill Date` klickar du på raden för att öppna en popover-"
-"meny med en kalender och väljer det datum då fakturan ska faktureras."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:103
-msgid ""
-"Then, under the :guilabel:`Invoice Lines` tab, click :guilabel:`Add a line`,"
-" and click the drop-down menu in the :guilabel:`Product` column to select "
-"the previously-created landed cost product. Click the :icon:`fa-cloud-"
-"upload` :guilabel:`(cloud with arrow)` icon to manually save and update the "
-"draft bill."
-msgstr ""
-"Klicka sedan på :guilabel:`Linjer i fakturan` under fliken :guilabel:`Lägg "
-"till en rad` och klicka på rullgardinsmenyn i kolumnen :guilabel:`Produkt` "
-"för att välja den tidigare skapade produkten för landad kostnad. Klicka på "
-"ikonen :icon:`fa-cloud-upload` :guilabel:`(moln med pil)` för att spara och "
-"uppdatera fakturautkastet manuellt."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst-1
-msgid "Landed Costs column checkboxes for product and landed cost."
-msgstr "Kryssrutor i kolumnen Landed Costs för produkt och landad kostnad."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:112
-msgid ""
-"In the :guilabel:`Landed Costs` column, the product ordered from the vendor "
-"does **not** have its checkbox ticked, while the landed cost product's "
-"checkbox **is** ticked. This differentiates landed costs from all other "
-"costs displayed on the bill."
-msgstr ""
-"I kolumnen :guilabel:`Landed Costs` är kryssrutan för den produkt som "
-"beställts från leverantören **inte** ikryssad, medan kryssrutan för "
-"produkten med landad kostnad **är** ikryssad. Detta skiljer landade "
-"kostnader från alla andra kostnader som visas på fakturan."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:116
-msgid ""
-"Additionally, at the top of the form, a :guilabel:`Create Landed Costs` "
-"button appears."
-msgstr ""
-"Längst upp i formuläret visas dessutom en knapp :guilabel:`Create Landed "
-"Costs`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst-1
-msgid "Create Landed Costs button on vendor bill."
-msgstr "Knapp för att skapa landbaserade kostnader på leverantörsfakturan."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:123
-msgid "Add landed cost"
-msgstr "Lägg till landningskostnad"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:125
-msgid ""
-"Once a landed cost is added to the vendor bill, click :guilabel:`Create "
-"Landed Costs` at the top of the vendor bill."
-msgstr ""
-"När en landad kostnad har lagts till på leverantörsfakturan klickar du på "
-":guilabel:``Create Landed Costs`` högst upp på leverantörsfakturan."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:128
-msgid ""
-"Doing so automatically creates a landed cost record, with a set landed cost "
-"pre-filled in the product line in the :guilabel:`Additional Costs` tab."
-msgstr ""
-"Om du gör det skapas automatiskt en post för landad kostnad, med en "
-"förinställd landad kostnad förifylld i produktraden på fliken "
-":guilabel:``Additional Costs``."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:131
-msgid ""
-"From the :guilabel:`Landed Cost` form, click the :guilabel:`Transfers` drop-"
-"down menu, and select which transfer the landed cost belongs to."
-msgstr ""
-"I formuläret :guilabel:`Landed Cost` klickar du på rullgardinsmenyn "
-":guilabel:`Transfers` och väljer vilken transfer den landade kostnaden hör "
-"till."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst-1
-msgid "Landed cost form with selected receipt transfer."
-msgstr "Landade i kostnadsform med vald kvittoöverföring."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:139
-msgid ""
-"In addition to creating landed costs directly from a vendor bill, landed "
-"cost records can *also* be created by navigating to "
-":menuselection:`Inventory app --> Operations --> Landed Costs`, and clicking"
-" :guilabel:`New`."
-msgstr ""
-"Förutom att skapa landade kostnader direkt från en leverantörsfaktura, kan "
-"landade kostnadsposter *också* skapas genom att navigera till "
-":menuselection:`Inventory app --> Operations --> Landed Costs`, och klicka "
-"på :guilabel:`New`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:143
-msgid ""
-"After setting the picking from the :guilabel:`Transfers` drop-down menu, "
-"click :guilabel:`Compute` (at the bottom of the form, under the "
-":guilabel:`Total:` cost)."
-msgstr ""
-"När du har ställt in plockningen från rullgardinsmenyn :guilabel:`Transfers`"
-" klickar du på :guilabel:`Compute` (längst ner i formuläret, under "
-":guilabel:`Total:`-kostnaden)."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:146
-msgid ""
-"Click the :guilabel:`Valuation Adjustments` tab to see the impact of the "
-"landed costs. The :guilabel:`Original Value` column lists the original price"
-" of the |PO|, the :guilabel:`Additional Landed Cost` column displays the "
-"landed cost, and the :guilabel:`New Value` displays the sum of the two, for "
-"the total cost of the |PO|."
-msgstr ""
-"Klicka på fliken :guilabel:`Valuation Adjustments` för att se effekten av de"
-" landade kostnaderna. Kolumnen :guilabel:`Original Value` visar det "
-"ursprungliga priset för |PO|, kolumnen :guilabel:`Additional Landed Cost` "
-"visar landningskostnaden och :guilabel:`New Value` visar summan av de två, "
-"för den totala kostnaden för |PO|."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:151
-msgid ""
-"Once ready, click :guilabel:`Validate` to post the landed cost entry to the "
-"accounting journal."
-msgstr ""
-"När du är klar klickar du på :guilabel:`Validera` för att bokföra posten för"
-" den landade kostnaden i bokföringsjournalen."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:153
-msgid ""
-"This causes a :guilabel:`Valuation` smart button to appear at the top of the"
-" form. Click the :guilabel:`Valuation` smart button to open a "
-":guilabel:`Stock Valuation` page, with the product's updated valuation "
-"listed."
-msgstr ""
-"Detta gör att en :guilabel:`Valuation` smartknapp visas längst upp i "
-"formuläret. Klicka på smartknappen :guilabel:`Valuation` för att öppna en "
-":guilabel:`Stock Valuation`-sida, med produktens uppdaterade värdering "
-"listad."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:158
-msgid ""
-"For a :guilabel:`Valuation` smart button to appear upon validation, the "
-"product's :guilabel:`Product Type` **must** be set to :guilabel:`Storable`."
-msgstr ""
-"För att en smartknapp av typen :guilabel:`Valuation` ska visas vid "
-"validering måste produktens :guilabel:`Product Type` **vara** inställd på "
-":guilabel:`Storable`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:161
-msgid ""
-"To view the valuation of *every* product, including landed costs, navigate "
-"to :menuselection:`Inventory app --> Reporting --> Valuation`."
-msgstr ""
-"Om du vill se värderingen av *alla* produkter, inklusive landningskostnader,"
-" går du till :menuselection:`Inventory app --> Reporting --> Valuation`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:165
-msgid ""
-"Each journal entry created for a landed cost on a vendor bill can be viewed "
-"in the *Accounting* app."
-msgstr ""
-"Varje verifikat som skapats för en landad kostnad på en leverantörsfaktura "
-"kan visas i appen *Redovisning*."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:168
-msgid ""
-"To locate these journal entries, navigate to :menuselection:`Accounting app "
-"--> Accounting --> Journal Entries`, and locate the correct entry, by number"
-" (i.e. `PBNK1/2024/XXXXX`)."
-msgstr ""
-"För att hitta dessa journalposter, navigera till "
-":menuselection:`Redovisningsapp --> Redovisning --> Journalposter`, och leta"
-" upp rätt post med nummer (t.ex. `PBNK1/2024/XXXXX`)."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:171
-msgid ""
-"Click into the journal entry to view the :guilabel:`Journal Items`, and "
-"other information about the entry."
-msgstr ""
-"Klicka på verifikatet för att se :guilabel:`Journal Items` och annan "
-"information om posten."
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:0
-msgid "Journal Entry form for landed cost created from vendor bill."
-msgstr "Verifikatsformulär för landad kostnad skapad från leverantörsfaktura."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:3
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:15
@@ -7516,6 +7079,436 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst-1
 msgid "Show Stock Valuation journals in a list."
 msgstr "Visa aktievärderingsjournaler i en lista."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:3
+msgid "Landed costs"
+msgstr "Kostnader för landning"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:10
+msgid ""
+"When shipping products to customers, the landed cost is the total price of a"
+" product or shipment, including all expenses associated with shipping the "
+"product."
+msgstr ""
+"Vid leverans av produkter till kunder är landningskostnaden det totala "
+"priset för en produkt eller försändelse, inklusive alla kostnader som är "
+"förknippade med leveransen av produkten."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:13
+msgid ""
+"In Odoo, the *Landed Costs* feature is used to take additional costs into "
+"account when calculating the valuation of a product. This includes the cost "
+"of shipment, insurance, customs duties, taxes, and other fees."
+msgstr ""
+"I Odoo används funktionen *Landed Costs* för att ta hänsyn till extra "
+"kostnader när man beräknar värderingen av en produkt. Detta inkluderar "
+"kostnader för frakt, försäkring, tullavgifter, skatter och andra avgifter."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:20
+msgid ""
+"To add landed costs to products, the *Landed Costs* feature must first be "
+"enabled. To enable this feature, navigate to :menuselection:`Inventory app "
+"--> Configuration --> Settings`, and scroll to the :guilabel:`Valuation` "
+"section."
+msgstr ""
+"För att lägga till landade kostnader för produkter måste funktionen *Landed "
+"Costs* först aktiveras. För att aktivera denna funktion, navigera till "
+":menuselection:`Inventory app --> Configuration --> Settings`, och bläddra "
+"till :guilabel:`Valuation` sektionen."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:24
+msgid ""
+"Tick the checkbox next to the :guilabel:`Landed Costs` option, and click "
+":guilabel:`Save` to save changes."
+msgstr ""
+"Markera kryssrutan bredvid alternativet :guilabel:`Landed Costs` och klicka "
+"på :guilabel:`Save` för att spara ändringarna."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:27
+msgid ""
+"Once the page refreshes, a new :guilabel:`Default Journal` field appears "
+"below the :guilabel:`Landed Costs` feature in the :guilabel:`Valuation` "
+"section."
+msgstr ""
+"När sidan har uppdaterats visas ett nytt fält för :guilabel:`Default "
+"Journal` under :guilabel:`Landed Costs` i avsnittet :guilabel:`Valuation`."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:30
+msgid ""
+"Click the :guilabel:`Default Journal` drop-down menu to reveal a list of "
+"accounting journals. Select a journal for which all accounting entries "
+"related to landed costs should be recorded."
+msgstr ""
+"Klicka på rullgardinsmenyn :guilabel:`Default Journal` för att visa en lista"
+" med redovisningsjournaler. Välj en journal för vilken alla bokföringsposter"
+" som rör landningskostnader ska registreras."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst-1
+msgid ""
+"Landed Costs feature and resulting Default Journal field in the Inventory "
+"settings."
+msgstr ""
+"Landed Costs-funktionen och det resulterande fältet Standardjournal i "
+"lagerinställningarna."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:37
+msgid "Create landed cost product"
+msgstr "Skapa produkt med landad kostnad"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:39
+msgid ""
+"For charges that are consistently added as landed costs, a landed cost "
+"product can be created in Odoo. This way, a landed cost product can be "
+"quickly added to a vendor bill as an invoice line, instead of having to be "
+"manually entered every time a new vendor bill is created."
+msgstr ""
+"För avgifter som konsekvent läggs till som landade kostnader kan en landad "
+"kostnadsprodukt skapas i Odoo. På så sätt kan en landkostnadsprodukt snabbt "
+"läggas till på en leverantörsfaktura som en fakturarad, istället för att "
+"behöva anges manuellt varje gång en ny leverantörsfaktura skapas."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:43
+msgid ""
+"To do this, create a new product by going to :menuselection:`Inventory app "
+"--> Products --> Products`, and clicking :guilabel:`New`."
+msgstr ""
+"Detta gör du genom att skapa en ny produkt genom att gå till "
+":menuselection:`Inventory app --> Products --> Products` och klicka på "
+":guilabel:`New`."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:46
+msgid ""
+"Assign a name to the landed cost product in the :guilabel:`Product Name` "
+"field (i.e. `International Shipping`). In the :guilabel:`Product Type` "
+"field, click the drop-down menu, and select :guilabel:`Service` as the "
+":guilabel:`Product Type`."
+msgstr ""
+"Tilldela ett namn till produkten med landningskostnad i fältet "
+":guilabel:`Product Name` (t.ex. `International Shipping`). I fältet "
+":guilabel:`Product Type` klickar du på rullgardinsmenyn och väljer "
+":guilabel:`Service` som :guilabel:`Product Type`."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:51
+msgid ""
+"Landed cost products **must** have their :guilabel:`Product Type` set to "
+":guilabel:`Service`."
+msgstr ""
+"Produkter med landad kostnad **måste** ha sin :guilabel:`Product Type` "
+"inställd på :guilabel:`Service`."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:53
+msgid ""
+"Click the :guilabel:`Purchase` tab, and tick the checkbox next to "
+":guilabel:`Is a Landed Cost` in the :guilabel:`Vendor Bills` section. Once "
+"ticked, a new :guilabel:`Default Split Method` field appears below it, "
+"prompting a selection. Clicking that drop-down menu reveals the following "
+"options:"
+msgstr ""
+"Klicka på fliken :guilabel:`Purchase` och markera kryssrutan bredvid "
+":guilabel:`Is a Landed Cost` i avsnittet :guilabel:`Vendor Bills`. När "
+"kryssrutan är markerad visas ett nytt fält :guilabel:`Default Split Method` "
+"nedanför, med en uppmaning att göra ett val. Om du klickar på "
+"rullgardinsmenyn visas följande alternativ:"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:57
+msgid ""
+":guilabel:`Equal`: splits the cost equally across each product included in "
+"the receipt, regardless of the quantity of each."
+msgstr ""
+":guilabel:`Equal`: delar kostnaden lika mellan varje produkt som ingår i "
+"kvittot, oavsett kvantitet."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:59
+msgid ""
+":guilabel:`By Quantity`: splits the cost across each unit of all products in"
+" the receipt."
+msgstr ""
+":guilabel:`By Quantity`: delar upp kostnaden på varje enhet av alla "
+"produkter i kvittot."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:60
+msgid ""
+":guilabel:`By Current Cost`: splits the cost according to the cost of each "
+"product unit, so a product with a higher cost receives a greater share of "
+"the landed cost."
+msgstr ""
+":guilabel:`By Current Cost`: delar upp kostnaden enligt kostnaden för varje "
+"produktenhet, så att en produkt med högre kostnad får en större andel av "
+"landningskostnaden."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:62
+msgid ""
+":guilabel:`By Weight`: splits the cost, according to the weight of the "
+"products in the receipt."
+msgstr ""
+":guilabel:`By Weight`: delar upp kostnaden enligt vikten på produkterna i "
+"kvittot."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:63
+msgid ""
+":guilabel:`By Volume`: splits the cost, according to the volume of the "
+"products in the receipt."
+msgstr ""
+":guilabel:`By Volume`: delar upp kostnaden enligt volymen på produkterna i "
+"kvittot."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst-1
+msgid ""
+"Is a Landed Cost checkbox and Default Split Method on service type product "
+"form."
+msgstr ""
+"Är en kryssruta för landad kostnad och standarddelningsmetod på "
+"produktformuläret för tjänstetypen."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:68
+msgid ""
+"When creating new vendor bills, this product can be added as an invoice line"
+" as a landed cost."
+msgstr ""
+"När du skapar nya leverantörsfakturor kan denna produkt läggas till som en "
+"fakturarad som en landad kostnad."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:71
+msgid ""
+"To apply a landed cost on a vendor bill, products in the original |PO| "
+"**must** belong to a *Product Category* with a *Costing Method* of either "
+"|AVCO| or |FIFO|, and the valuation method can be :doc:`manual "
+"<using_inventory_valuation>` or :doc:`automatic "
+"<inventory_valuation_config>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:79
+msgid ""
+"Navigate to :menuselection:`Purchase app --> New` to create a new request "
+"for quotation (RfQ). In the :guilabel:`Vendor` field, add a vendor to order "
+"products from. Then, click :guilabel:`Add a product`, under the "
+":guilabel:`Products` tab, to add products to the |RfQ|."
+msgstr ""
+"Navigera till :menyval:`Inköpsapp --> Ny` för att skapa en ny "
+"offertförfrågan (RfQ). I fältet :guilabel:`Vendor` lägger du till en "
+"leverantör att beställa produkter från. Klicka sedan på :guilabel:`Add a "
+"product`, under fliken :guilabel:`Products`, för att lägga till produkter i "
+"offertförfrågan."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:83
+msgid ""
+"Once ready, click :guilabel:`Confirm Order` to confirm the order. Then, "
+"click :guilabel:`Receive Products` once the products have been received, "
+"followed by :guilabel:`Validate`."
+msgstr ""
+"När du är klar klickar du på :guilabel:`Confirm Order` för att bekräfta "
+"beställningen. Klicka sedan på :guilabel:`Receive Products` när produkterna "
+"har tagits emot, följt av :guilabel:`Validate`."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:87
+msgid "Create vendor bill"
+msgstr "Skapa leverantörsfaktura"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:89
+msgid ""
+"Once the vendor fulfills the |PO| and sends a bill, a vendor bill can be "
+"created from the |PO| in Odoo."
+msgstr ""
+"När säljaren har uppfyllt kraven och skickat en faktura kan en "
+"leverantörsfaktura skapas från kraven i Odoo."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:92
+msgid ""
+"Navigate to the :menuselection:`Purchase app`, and click into the |PO| for "
+"which a vendor bill should be created. Then, click :guilabel:`Create Bill`. "
+"This opens a new :guilabel:`Vendor Bill` in the :guilabel:`Draft` stage."
+msgstr ""
+"Navigera till :menuselection:`Purchase app`, och klicka in på det |PO| för "
+"vilket en leverantörsfaktura ska skapas. Klicka sedan på :guilabel:`Create "
+"Bill`. Detta öppnar en ny :guilabel:`Vendor Bill` i "
+":guilabel:`Draft`-stadiet."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:96
+msgid ""
+"In the :guilabel:`Bill Date` field, click the line to open a calendar "
+"popover menu, and select the date on which this draft bill should be billed."
+msgstr ""
+"I fältet :guilabel:`Bill Date` klickar du på raden för att öppna en popover-"
+"meny med en kalender och väljer det datum då fakturan ska faktureras."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:99
+msgid ""
+"Then, under the :guilabel:`Invoice Lines` tab, click :guilabel:`Add a line`,"
+" and click the drop-down menu in the :guilabel:`Product` column to select "
+"the previously-created landed cost product. Click the :icon:`fa-cloud-"
+"upload` :guilabel:`(cloud with arrow)` icon to manually save and update the "
+"draft bill."
+msgstr ""
+"Klicka sedan på :guilabel:`Linjer i fakturan` under fliken :guilabel:`Lägg "
+"till en rad` och klicka på rullgardinsmenyn i kolumnen :guilabel:`Produkt` "
+"för att välja den tidigare skapade produkten för landad kostnad. Klicka på "
+"ikonen :icon:`fa-cloud-upload` :guilabel:`(moln med pil)` för att spara och "
+"uppdatera fakturautkastet manuellt."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst-1
+msgid "Landed Costs column checkboxes for product and landed cost."
+msgstr "Kryssrutor i kolumnen Landed Costs för produkt och landad kostnad."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:107
+msgid ""
+"In the :guilabel:`Landed Costs` column, the product ordered from the vendor "
+"does **not** have its checkbox ticked, while the landed cost product's "
+"checkbox **is** ticked. This differentiates landed costs from all other "
+"costs displayed on the bill."
+msgstr ""
+"I kolumnen :guilabel:`Landed Costs` är kryssrutan för den produkt som "
+"beställts från leverantören **inte** ikryssad, medan kryssrutan för "
+"produkten med landad kostnad **är** ikryssad. Detta skiljer landade "
+"kostnader från alla andra kostnader som visas på fakturan."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:111
+msgid ""
+"Additionally, at the top of the form, a :guilabel:`Create Landed Costs` "
+"button appears."
+msgstr ""
+"Längst upp i formuläret visas dessutom en knapp :guilabel:`Create Landed "
+"Costs`."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst-1
+msgid "Create Landed Costs button on vendor bill."
+msgstr "Knapp för att skapa landbaserade kostnader på leverantörsfakturan."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:117
+msgid "Add landed cost"
+msgstr "Lägg till landningskostnad"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:119
+msgid ""
+"Once a landed cost is added to the vendor bill, click :guilabel:`Create "
+"Landed Costs` at the top of the vendor bill."
+msgstr ""
+"När en landad kostnad har lagts till på leverantörsfakturan klickar du på "
+":guilabel:``Create Landed Costs`` högst upp på leverantörsfakturan."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:122
+msgid ""
+"Doing so automatically creates a landed cost record, with a set landed cost "
+"pre-filled in the product line in the :guilabel:`Additional Costs` tab."
+msgstr ""
+"Om du gör det skapas automatiskt en post för landad kostnad, med en "
+"förinställd landad kostnad förifylld i produktraden på fliken "
+":guilabel:``Additional Costs``."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:125
+msgid ""
+"From the :guilabel:`Landed Cost` form, click the :guilabel:`Transfers` drop-"
+"down menu, and select which transfer the landed cost belongs to."
+msgstr ""
+"I formuläret :guilabel:`Landed Cost` klickar du på rullgardinsmenyn "
+":guilabel:`Transfers` och väljer vilken transfer den landade kostnaden hör "
+"till."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst-1
+msgid "Landed cost form with selected receipt transfer."
+msgstr "Landade i kostnadsform med vald kvittoöverföring."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:132
+msgid ""
+"In addition to creating landed costs directly from a vendor bill, landed "
+"cost records can *also* be created by navigating to "
+":menuselection:`Inventory app --> Operations --> Landed Costs`, and clicking"
+" :guilabel:`New`."
+msgstr ""
+"Förutom att skapa landade kostnader direkt från en leverantörsfaktura, kan "
+"landade kostnadsposter *också* skapas genom att navigera till "
+":menuselection:`Inventory app --> Operations --> Landed Costs`, och klicka "
+"på :guilabel:`New`."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:136
+msgid ""
+"After setting the picking from the :guilabel:`Transfers` drop-down menu, "
+"click :guilabel:`Compute` (at the bottom of the form, under the "
+":guilabel:`Total:` cost)."
+msgstr ""
+"När du har ställt in plockningen från rullgardinsmenyn :guilabel:`Transfers`"
+" klickar du på :guilabel:`Compute` (längst ner i formuläret, under "
+":guilabel:`Total:`-kostnaden)."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:139
+msgid ""
+"Click the :guilabel:`Valuation Adjustments` tab to see the impact of the "
+"landed costs. The :guilabel:`Original Value` column lists the original price"
+" of the |PO|, the :guilabel:`Additional Landed Cost` column displays the "
+"landed cost, and the :guilabel:`New Value` displays the sum of the two, for "
+"the total cost of the |PO|."
+msgstr ""
+"Klicka på fliken :guilabel:`Valuation Adjustments` för att se effekten av de"
+" landade kostnaderna. Kolumnen :guilabel:`Original Value` visar det "
+"ursprungliga priset för |PO|, kolumnen :guilabel:`Additional Landed Cost` "
+"visar landningskostnaden och :guilabel:`New Value` visar summan av de två, "
+"för den totala kostnaden för |PO|."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:144
+msgid ""
+"Once ready, click :guilabel:`Validate` to post the landed cost entry to the "
+"accounting journal."
+msgstr ""
+"När du är klar klickar du på :guilabel:`Validera` för att bokföra posten för"
+" den landade kostnaden i bokföringsjournalen."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:146
+msgid ""
+"This causes a :guilabel:`Valuation` smart button to appear at the top of the"
+" form. Click the :guilabel:`Valuation` smart button to open a "
+":guilabel:`Stock Valuation` page, with the product's updated valuation "
+"listed."
+msgstr ""
+"Detta gör att en :guilabel:`Valuation` smartknapp visas längst upp i "
+"formuläret. Klicka på smartknappen :guilabel:`Valuation` för att öppna en "
+":guilabel:`Stock Valuation`-sida, med produktens uppdaterade värdering "
+"listad."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:151
+msgid ""
+"For a :guilabel:`Valuation` smart button to appear upon validation, the "
+"product's :guilabel:`Product Type` **must** be set to :guilabel:`Storable`."
+msgstr ""
+"För att en smartknapp av typen :guilabel:`Valuation` ska visas vid "
+"validering måste produktens :guilabel:`Product Type` **vara** inställd på "
+":guilabel:`Storable`."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:154
+msgid ""
+"To view the valuation of *every* product, including landed costs, navigate "
+"to :menuselection:`Inventory app --> Reporting --> Valuation`."
+msgstr ""
+"Om du vill se värderingen av *alla* produkter, inklusive landningskostnader,"
+" går du till :menuselection:`Inventory app --> Reporting --> Valuation`."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:158
+msgid ""
+"Each journal entry created for a landed cost on a vendor bill can be viewed "
+"in the *Accounting* app."
+msgstr ""
+"Varje verifikat som skapats för en landad kostnad på en leverantörsfaktura "
+"kan visas i appen *Redovisning*."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:161
+msgid ""
+"To locate these journal entries, navigate to :menuselection:`Accounting app "
+"--> Accounting --> Journal Entries`, and locate the correct entry, by number"
+" (i.e. `PBNK1/2024/XXXXX`)."
+msgstr ""
+"För att hitta dessa journalposter, navigera till "
+":menuselection:`Redovisningsapp --> Redovisning --> Journalposter`, och leta"
+" upp rätt post med nummer (t.ex. `PBNK1/2024/XXXXX`)."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:164
+msgid ""
+"Click into the journal entry to view the :guilabel:`Journal Items`, and "
+"other information about the entry."
+msgstr ""
+"Klicka på verifikatet för att se :guilabel:`Journal Items` och annan "
+"information om posten."
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:0
+msgid "Journal Entry form for landed cost created from vendor bill."
+msgstr "Verifikatsformulär för landad kostnad skapad från leverantörsfaktura."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:3
 msgid "Using inventory valuation"
@@ -22589,7 +22582,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:85
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:90
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:158
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:165
 msgid "Setup in Odoo"
 msgstr "Installation i Odoo"
 
@@ -24493,10 +24486,24 @@ msgid "Set up shipping method in Odoo"
 msgstr "Ställ in leveransmetod i Odoo"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:21
+msgid ""
+"When configuring a shipping method to use UPS, make sure the "
+":guilabel:`Provider` is set to :guilabel:`UPS`, **NOT** :guilabel:`UPS "
+"Legacy`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:24
+msgid ""
+"If shipping methods currently exist with the :guilabel:`Provider` set to "
+":guilabel:`UPS Legacy`, archive them, and create new shipping methods using "
+":guilabel:`UPS`, instead."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:28
 msgid "UPS account setup"
 msgstr "Inställning av UPS-konto"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:23
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:30
 msgid ""
 "To get started, go to the `UPS website <https://www.ups.com>`_ and click the"
 " :guilabel:`Log In` button in the top-right corner to log in or create a UPS"
@@ -24506,7 +24513,7 @@ msgstr ""
 "klickar på :guilabel:`Logga in`-knappen i det övre högra hörnet för att "
 "logga in eller skapa ett UPS-konto."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:26
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:33
 msgid ""
 "After logging in, click the profile icon in the top-right corner, and select"
 " :guilabel:`Accounts and Payment` from the drop-down menu."
@@ -24522,7 +24529,7 @@ msgstr ""
 "Visa hur du navigerar till sidan \"Konton och betalningar\" från "
 "startskärmen."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:33
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:40
 msgid ""
 "On the :guilabel:`Accounts and Payment Options` page, two accounts must be "
 "configured: an Odoo shipment account and a payment card."
@@ -24530,11 +24537,11 @@ msgstr ""
 "På sidan :guilabel:`Accounts and Payment Options` måste två konton "
 "konfigureras: ett Odoo-leveranskonto och ett betalkort."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:37
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:44
 msgid "Shipping account"
 msgstr "Fraktkonto"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:39
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:46
 msgid ""
 "To add an Odoo shipment account, select :guilabel:`Add New Account` from the"
 " :guilabel:`Add a Payment Method` drop-down menu, and click :guilabel:`Add`."
@@ -24547,7 +24554,7 @@ msgstr ""
 msgid "Display \"Add an account\" option from the drop-down menu."
 msgstr "Visa alternativet \"Lägg till ett konto\" i rullgardinsmenyn."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:46
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:53
 msgid ""
 "On the next screen, labeled :guilabel:`Open a Shipping Account`, complete "
 "the forms to configure the shipping account type (e.g. :guilabel:`Business`)"
@@ -24563,7 +24570,7 @@ msgstr ""
 ":guilabel:`Verify Identity` och :guilabel:`Explore Discounts`, där det sista"
 " alternativet är valfritt."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:51
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:58
 msgid ""
 "When complete, submit the application on the last page of the wizard to "
 "finish setting up the shipping account."
@@ -24575,11 +24582,11 @@ msgstr ""
 msgid "Display UPS form to fill out company shipping information."
 msgstr "Visa UPS-formuläret för att fylla i företagets sändningsinformation."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:61
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:68
 msgid "Get account number"
 msgstr "Hämta kontonummer"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:63
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:70
 msgid ""
 "With the shipping account set up, the UPS :guilabel:`Account Number` becomes"
 " available. To access it, navigate to :menuselection:`Profile --> Accounts "
@@ -24594,11 +24601,11 @@ msgstr ""
 msgid "Show Account \"Number\" field for the shipping account."
 msgstr "Visa fältet Account \"Number\" för fraktkontot."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:72
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:79
 msgid "Payment card"
 msgstr "Betalningskort"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:74
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:81
 msgid ""
 "Navigate back to the :guilabel:`Accounts and Payments` page and select the "
 ":guilabel:`Add Payment Card` option from the :guilabel:`Add a Payment "
@@ -24614,11 +24621,11 @@ msgstr ""
 msgid "Show \"Add Payment Card\" option from the drop-down."
 msgstr "Visa alternativet \"Lägg till betalkort\" från rullgardinsmenyn."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:83
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:90
 msgid "UPS developer account setup"
 msgstr "Inställning av UPS-utvecklarkonto"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:85
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:92
 msgid ""
 "Next, log into the `UPS developer account <http://developer.ups.com/>`_ to "
 "generate the developer key. To begin, click the profile icon in the top-"
@@ -24635,11 +24642,11 @@ msgid ""
 "icon."
 msgstr "Visa rullgardinsmenyn \"Apps\" när du klickar på ikonen för profilbilden."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:94
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:101
 msgid "Add app"
 msgstr "Lägg till app"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:96
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:103
 msgid ""
 "Then, click the :guilabel:`Add Apps` button to begin filling out the form. "
 "In the :guilabel:`I need API credentials because \\*` field, select "
@@ -24649,7 +24656,7 @@ msgstr ""
 "formuläret. I fältet :guilabel:`Jag behöver API-inloggningsuppgifter för att"
 " \\*`, välj :guilabel:`Jag vill integrera UPS-teknik i mitt företag`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:100
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:107
 msgid ""
 "Under the next label, :guilabel:`Choose an account to associate with these "
 "credentials. \\*`, select :guilabel:`Add existing account` from the drop-"
@@ -24667,7 +24674,7 @@ msgstr ""
 msgid "Show form to fill in the UPS account number."
 msgstr "Visa formulär för att fylla i UPS-kontonumret."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:109
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:116
 msgid ""
 "Click :guilabel:`Next`, and proceed to the :guilabel:`Add App` form, and "
 "fill out the fields:"
@@ -24675,11 +24682,11 @@ msgstr ""
 "Klicka på :guilabel:`Next` och gå vidare till formuläret :guilabel:`Add App`"
 " och fyll i fälten:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:111
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:118
 msgid ":guilabel:`App Name`: Type the name to identify the app by."
 msgstr ":guilabel:`Appnamn`: Ange det namn som appen ska identifieras med."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:112
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:119
 msgid ""
 ":guilabel:`Callback URL`: Type the URL of the Odoo database, in the format: "
 "`https://databaseName.odoo.com`. Do **not** include `www` in the URL."
@@ -24687,7 +24694,7 @@ msgstr ""
 ":guilabel:`Callback URL`: Skriv in URL:en för Odoo-databasen, i formatet: "
 "`https://databaseName.odoo.com`. Inkludera **inte** `www` i URL:en."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:115
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:122
 msgid ""
 "In the :guilabel:`Add Products` section on the right, search for and click "
 "the :guilabel:`+ (plus)` icon to add the following products to the app:"
@@ -24696,7 +24703,7 @@ msgstr ""
 "på ikonen :guilabel:`+ (plus)` för att lägga till följande produkter i "
 "appen:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:118
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:125
 msgid ""
 ":guilabel:`Authorization (O Auth)`: Used to generate the authorization token"
 " to request information from the UPS API."
@@ -24704,7 +24711,7 @@ msgstr ""
 ":guilabel:`Auktorisering (O Auth)`: Används för att generera "
 "auktoriseringstoken för att begära information från UPS API."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:120
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:127
 msgid ""
 ":guilabel:`Address Validation`: Validates addresses at the street level in "
 "the United States and Puerto Rico."
@@ -24712,7 +24719,7 @@ msgstr ""
 ":guilabel:`Adressvalidering`: Validerar adresser på gatunivå i USA och "
 "Puerto Rico."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:122
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:129
 msgid ""
 ":guilabel:`Locator`: Enables search for UPS shipping locations based on type"
 " and available services."
@@ -24720,7 +24727,7 @@ msgstr ""
 ":guilabel:`Locator`: Möjliggör sökning efter UPS-sändningsplatser baserat på"
 " typ och tillgängliga tjänster."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:124
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:131
 msgid ""
 ":guilabel:`Paperless Documents`: Enables the upload of document images to "
 "link to shipments."
@@ -24728,7 +24735,7 @@ msgstr ""
 ":guilabel:`Papperslösa dokument`: Möjliggör uppladdning av dokumentbilder "
 "för att länka till försändelser."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:125
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:132
 msgid ""
 ":guilabel:`Shipping`: Enables UPS shipping services, such as preparing "
 "packages for shipment, managing returns, and cancelling scheduled shipments."
@@ -24736,17 +24743,17 @@ msgstr ""
 ":guilabel:`Sändning`: Aktiverar UPS sändningstjänster, som att förbereda "
 "paket för sändning, hantera returer och avbeställa schemalagda sändningar."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:127
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:134
 msgid ":guilabel:`Rating`: Compare delivery services and shipping rates."
 msgstr ":guilabel:`Betyg`: Jämför leveranstjänster och fraktpriser."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:129
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:136
 msgid "Finally, click :guilabel:`Save` and accept UPS's terms and conditions."
 msgstr ""
 "Klicka slutligen på :guilabel:`Spara` och godkänn UPS villkor och "
 "bestämmelser."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:132
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:139
 msgid "`UPS API Catalog <https://developer.ups.com/catalog?loc=en_US>`_"
 msgstr "UPS API-katalog <https://developer.ups.com/catalog?loc=en_US>`_"
 
@@ -24754,11 +24761,11 @@ msgstr "UPS API-katalog <https://developer.ups.com/catalog?loc=en_US>`_"
 msgid "Show \"Add Apps\" form, where the app details are configured."
 msgstr "Visa formuläret \"Add Apps\", där appdetaljerna konfigureras."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:141
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:148
 msgid "Client ID and Client Secret"
 msgstr "Klient-ID och klienthemlighet"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:143
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:150
 msgid ""
 "With the new app created, in the :menuselection:`Profile --> My Apps --> "
 "App` page, select the app from the :guilabel:`Credentials` section to view "
@@ -24772,7 +24779,7 @@ msgstr ""
 msgid "Show newly created app in the \"My Apps\" section."
 msgstr "Visa den nyskapade appen i avsnittet \"Mina appar\"."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:150
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:157
 msgid ""
 "In the :guilabel:`Credentials` section, copy the :guilabel:`Client ID` and "
 ":guilabel:`Client Secret` key."
@@ -24784,7 +24791,7 @@ msgstr ""
 msgid "Display the \"Client ID\" and \"Client Secret\" key."
 msgstr "Visa nycklarna \"Client ID\" och \"Client Secret\"."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:160
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:167
 msgid ""
 "With the credentials obtained, configure the UPS shipping method in Odoo by "
 "going to :menuselection:`Inventory app --> Configuration --> Shipping "
@@ -24794,13 +24801,13 @@ msgstr ""
 " Odoo genom att gå till :menyerelection:`Inventory app --> Configuration -->"
 " Shipping Methods`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:163
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:170
 msgid ""
 "On the :guilabel:`Shipping Methods` page, click the :guilabel:`New` button."
 msgstr ""
 "På sidan :guilabel:`Shipping Methods` klickar du på knappen :guilabel:`New`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:166
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:173
 msgid ""
 "For existing UPS shipping methods whose :guilabel:`Provider` is "
 ":guilabel:`UPS Legacy`, archive it and create a new shipping method using "
@@ -24810,7 +24817,7 @@ msgstr ""
 ":guilabel:`UPS Legacy`, arkivera den och skapa en ny sändningsmetod med "
 ":guilabel:`UPS`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:169
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:176
 msgid ""
 "In the :guilabel:`Provider` field, select :guilabel:`UPS`. Doing so reveals "
 "the :guilabel:`UPS Configuration` tab, where various fields must be entered."
@@ -24824,12 +24831,12 @@ msgstr ""
 " i dokumentationen :doc:`Configure third-party carrier "
 "<third_party_shipper>`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:174
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:181
 msgid ""
 "In the :guilabel:`UPS Configuration` tab, complete the following fields:"
 msgstr "Fyll i följande fält på fliken :guilabel:`UPS Configuration`:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:176
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:183
 msgid ""
 ":guilabel:`UPS Account Number`: (*required*) Get the :ref:`account number "
 "<inventory/shipping_receiving/ups-account-number>` from the UPS portal."
@@ -24837,7 +24844,7 @@ msgstr ""
 ":guilabel:`UPS-kontonummer`: (*krävs*) Hämta :ref:`kontonummer "
 "<inventory/shipping_receiving/ups-account-number>` från UPS-portalen."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:178
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:185
 msgid ""
 ":guilabel:`UPS Client ID`: (*required*) Get the :ref:`Client ID "
 "<inventory/shipping_receiving/ups-client-id>` from the UPS developer "
@@ -24847,7 +24854,7 @@ msgstr ""
 "<inventory/shipping_receiving/ups-client-id>` från UPS utvecklares "
 "webbplats."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:180
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:187
 msgid ""
 ":guilabel:`UPS Client Secret`: (*required*) Get the :ref:`Client Secret "
 "<inventory/shipping_receiving/ups-client-id>` key from the UPS developer "
@@ -24857,7 +24864,7 @@ msgstr ""
 "<inventory/shipping_receiving/ups-client-id>` från UPS utvecklares "
 "webbplats."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:182
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:189
 msgid ""
 ":guilabel:`UPS Service Type`: Select from the drop-down menu the type of "
 "shipping service."
@@ -24865,7 +24872,7 @@ msgstr ""
 ":guilabel:`UPS Service Type`: Välj i rullgardinsmenyn vilken typ av "
 "frakttjänst du vill använda."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:183
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:190
 msgid ""
 ":guilabel:`UPS Package Type`: (*required*) Select from the drop-down menu "
 "the :doc:`package type <../../product_management/configure/package>` that is"
@@ -24875,12 +24882,12 @@ msgstr ""
 ":doc:`package type <../../product_management/configure/package>` som stöds "
 "för frakttjänsten."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:185
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:192
 msgid ""
 ":guilabel:`Package Weight Unit`: The unit of measure for the package weight."
 msgstr ":guilabel:`Paketviktsenhet`: Måttenheten för paketets vikt."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:186
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:193
 msgid ""
 ":guilabel:`Package Size Unit`: The unit of measure for the package "
 "dimensions."
@@ -24888,7 +24895,7 @@ msgstr ""
 ":guilabel:`Enhet för förpackningsstorlek`: Måttenheten för förpackningens "
 "dimensioner."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:187
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:194
 msgid ""
 ":guilabel:`Label Format`: Choose the label format shipping labels: "
 ":guilabel:`PDF`, :guilabel:`ZPL`, :guilabel:`EPL`, or :guilabel:`SPL`."
@@ -24900,13 +24907,13 @@ msgstr ""
 msgid "Show the \"UPS Configuration\" tab on the Shipping Methods form."
 msgstr "Visa fliken \"UPS-konfiguration\" i formuläret för sändningsmetoder."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:194
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:201
 msgid ""
 "In the :guilabel:`Options` section, the following features are available:"
 msgstr ""
 "I avsnittet :guilabel:`Options` finns följande funktioner tillgängliga:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:196
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:203
 msgid ""
 ":guilabel:`Bill My Account`: Charge the user's UPS account for shipping in "
 "the *eCommerce* app."
@@ -24914,7 +24921,7 @@ msgstr ""
 ":guilabel:`Fakturera mitt konto`: Debitera användarens UPS-konto för frakt i"
 " *eCommerce*-appen."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:197
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:204
 msgid ""
 ":guilabel:`Collect on Delivery`: Collect payment from customers for shipping"
 " after the shipment is delivered."
@@ -24922,7 +24929,7 @@ msgstr ""
 ":guilabel:`Kollektera vid leverans`: Inkassera betalning från kunder för "
 "frakt efter att försändelsen har levererats."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:199
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:206
 msgid ""
 ":guilabel:`Generate Return Label`: Print the return label for the order "
 "after the delivery order is validated."
@@ -24930,7 +24937,7 @@ msgstr ""
 ":guilabel:`Generera returetikett`: Skriv ut returetiketten för ordern efter "
 "att leveransordern har validerats."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:201
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:208
 msgid ""
 ":guilabel:`Duties paid by`: Select whether duties or other fees are charged "
 "to the :guilabel:`Sender` or :guilabel:`Recipient` of the order."
@@ -36195,26 +36202,19 @@ msgstr "Kostnader för tillverkningsorder"
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:11
 msgid ""
 "The ability to accurately calculate the cost of manufacturing a product is "
-"critical when determining product profitability. Odoo's *Manufacturing* app "
-"simplifies this calculation by automatically calculating the cost to "
+"critical when determining product profitability. Odoo's **Manufacturing** "
+"app simplifies this calculation by automatically calculating the cost to "
 "complete each manufacturing order (MO), as well as the average production "
 "cost of a product, based on all completed |MOs|."
 msgstr ""
-"Möjligheten att exakt beräkna kostnaden för att tillverka en produkt är "
-"avgörande för att bestämma produktens lönsamhet. Odoos app *Manufacturing* "
-"förenklar denna beräkning genom att automatiskt beräkna kostnaden för att "
-"slutföra varje tillverkningsorder (MO), samt den genomsnittliga "
-"produktionskostnaden för en produkt, baserat på alla slutförda MO:er."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:17
 msgid ""
-"Odoo's Manufacturing app distinguishes between the *manufacturing order "
-"cost* and the *real cost* of an |MO|."
+"Odoo's Manufacturing app distinguishes between the *MO cost* and the *real "
+"cost* of an |MO|."
 msgstr ""
-"Odoo's Manufacturing app skiljer mellan *tillverkningsorderkostnaden* och "
-"den *verkliga kostnaden* för en tillverkningsorder."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:20
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:19
 msgid ""
 "The |MO| cost represents how much it *should* cost to complete an |MO|, "
 "based on the configuration of the product's bill of materials (BoM). This "
@@ -36226,7 +36226,7 @@ msgstr ""
 "tar hänsyn till komponenternas kostnad och kvantitet, samt kostnaden för att"
 " slutföra de nödvändiga operationerna."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:24
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:23
 msgid ""
 "The real cost represents how much it *actually* costs to complete the |MO|. "
 "A few factors can cause the real cost to differ from the |MO| cost. For "
@@ -36241,21 +36241,18 @@ msgstr ""
 "behövas än vad som specificerades på BoM eller priset på komponenter kan "
 "ändras under tillverkningen."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:30
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:29
 msgid "Cost configuration"
 msgstr "Kostnadskonfiguration"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:32
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:31
 msgid ""
 "Odoo computes |MO| costs based on the configuration of the |BoM| used to "
-"manufacture a product. This includes the cost and quantity of components and"
-" operations listed on the |BoM|, in addition to the operating costs of the "
-"work centers where those operations are carried out."
+"manufacture a product. This calculation includes the cost and quantity of "
+"components and operations listed on the |BoM|, in addition to the operating "
+"costs of the work centers where those operations are carried out, and the "
+"amount paid to each employee who works on an operation."
 msgstr ""
-"Odoo beräknar IMO-kostnader baserat på konfigurationen av den BoM som "
-"används för att tillverka en produkt. Detta inkluderar kostnaden och "
-"kvantiteten för komponenter och operationer som listas på BoM, utöver "
-"driftskostnaderna för de arbetscenter där dessa operationer utförs."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:37
 msgid "Component cost"
@@ -36280,22 +36277,17 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:44
 msgid ""
 "It is possible to set the cost of a component manually, by clicking the "
-":guilabel:`Cost` field on the component's product form, and entering a "
-"value. However, any future |POs| for the component override a value entered "
-"manually, resetting the :guilabel:`Cost` field back to an automatically "
+":guilabel:`Cost` field on the component's product form and entering a value."
+" However, any future |POs| for the component override a manually entered "
+"value, resetting the :guilabel:`Cost` field back to an automatically "
 "computed value."
 msgstr ""
-"Det är möjligt att ange kostnaden för en komponent manuellt genom att klicka"
-" på fältet :guilabel:`Cost` i komponentens produktformulär och ange ett "
-"värde. Alla framtida |POs| för komponenten åsidosätter dock ett värde som "
-"angetts manuellt och återställer fältet :guilabel:`Cost` till ett "
-"automatiskt beräknat värde."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:50
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:52
 msgid "Work center cost"
 msgstr "Kostnad för arbetscenter"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:52
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:54
 msgid ""
 "To set the operating cost for a specific work center, navigate to "
 ":menuselection:`Manufacturing app --> Configuration --> Work Centers`, and "
@@ -36305,84 +36297,77 @@ msgstr ""
 "till :menuselection:`Tillverkningsapp --> Konfiguration --> Arbetscenter`, "
 "och välj ett arbetscenter."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:55
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:57
 msgid ""
-"To set the operating cost for the work center, as a whole, enter a value in "
+"To set the cost of operating the work center for one hour, enter a value in "
 "the :guilabel:`per workcenter` field, located beside the :guilabel:`Cost per"
-" hour` section on the work center's :guilabel:`General Information` tab. "
-"This operating cost is used regardless of how many employees are working at "
-"the work center at any given time."
+" hour` section on the work center's :guilabel:`General Information` tab."
 msgstr ""
-"Om du vill ange driftskostnaden för hela arbetscentret anger du ett värde i "
-"fältet :guilabel:`per workcenter` som finns bredvid avsnittet "
-":guilabel:`Cost per hour` på fliken :guilabel:`General Information` för "
-"arbetscentret. Denna driftskostnad används oavsett hur många anställda som "
-"arbetar på arbetsstället vid en given tidpunkt."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:60
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:61
 msgid ""
-"To set the operating cost for the work center based on the number of "
-"employees working there at a given time, enter a value in the :guilabel:`per"
-" employee` field, located beside the :guilabel:`Cost per hour` section on "
-"the work center's :guilabel:`General Information` tab. For example, if "
-"`25.00` is entered in the :guilabel:`per employee` field, it costs $25.00 "
-"per hour for *each* employee working at the work center."
+"To set the hourly cost of each employee that operates the work center, enter"
+" a value in the :guilabel:`per employee` field, located beside the "
+":guilabel:`Cost per hour` section on the work center's :guilabel:`General "
+"Information` tab. For example, if `25.00` is entered in the :guilabel:`per "
+"employee` field, it costs $25.00 per hour for *each* employee working at the"
+" work center."
 msgstr ""
-"Om du vill ange driftskostnaden för arbetscentret baserat på antalet "
-"anställda som arbetar där vid en viss tidpunkt anger du ett värde i fältet "
-":guilabel:`per employee` som finns bredvid avsnittet :guilabel:`Cost per "
-"hour` på fliken :guilabel:`General Information` för arbetscentret. Om du "
-"t.ex. anger `25.00` i fältet :guilabel:`per employee` kostar det $25.00 per "
-"timme för *varje* anställd som arbetar på arbetscentret."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:66
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:68
 msgid ""
-"Note that, if values are entered in both the :guilabel:`per workcenter` "
-"*and* :guilabel:`per employee` fields, the value in the :guilabel:`per "
-"workcenter` field takes precedence, and the value in the :guilabel:`per "
-"employee` field is ignored."
+"The value entered in the :guilabel:`per employee` field is only used to "
+"calculate the |MO| cost, which is the estimated cost of completing the |MO|."
 msgstr ""
-"Observera att om värden anges i både fälten :guilabel:`per workcenter` *och*"
-" :guilabel:`per employee`, har värdet i fältet :guilabel:`per workcenter` "
-"företräde och värdet i fältet :guilabel:`per employee` ignoreras."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:71
 msgid ""
-"It is also possible to set a per hour cost for specific employees, by "
-"navigating to the :menuselection:`Employees` app, selecting an employee, "
-"clicking the :guilabel:`HR Settings` tab on their employee form, and "
-"entering a value in the :guilabel:`Hourly Cost` field."
+"The actual cost of completing the |MO| is represented by the real cost. "
+"Instead of using the value entered in the :guilabel:`per employee` field, "
+"the real cost is calculated using the hourly cost specific to each employee."
 msgstr ""
-"Det är också möjligt att ange en kostnad per timme för specifika anställda "
-"genom att navigera till appen :menuselection:`Employees`, välja en anställd,"
-" klicka på fliken :guilabel:`HR Settings` i den anställdes formulär och ange"
-" ett värde i fältet :guilabel:`Hourly Cost`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:75
 msgid ""
-"Just like the *per workcenter* field on a work center form, the "
-":guilabel:`Hourly Cost` field on an employee's form overrides the *per "
-"employee* field on a work center form."
+"For example, if the :guilabel:`per employee` cost of a work center is "
+"'$50.00', and an employee with an hourly cost of '$60.00' completes a work "
+"order there, the |MO| cost (estimated) is calculated using the $50/hr cost, "
+"while the real cost is calculated using the $60/hr cost."
 msgstr ""
-"Precis som fältet *per workcenter* på ett arbetscenterformulär åsidosätter "
-"fältet :guilabel:`Hourly Cost` på en anställds formulär fältet *per "
-"employee* på ett arbetscenterformulär."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:78
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:79
 msgid ""
-"However, the *per workcenter* field takes precedence over both the *per "
-"employee* field on the workcenter form *and* the :guilabel:`Hourly Cost` "
-"field on the employee form."
+"See the :ref:`employee cost section <manufacturing/mo-costs/employee-cost>` "
+"below for information on how to set the cost for specific employees."
 msgstr ""
-"Fältet *per workcenter* har dock företräde framför både fältet *per "
-"employee* på workcenterformuläret *och* fältet :guilabel:`Hourly Cost` på "
-"anställningsformuläret."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:82
-msgid "|BoM| cost"
-msgstr "|BoM-kostnad"
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:85
+msgid "Employee cost"
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:84
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:87
+msgid ""
+"To set the hourly cost for a specific employee, navigate to the "
+":menuselection:`Employees` app, and select an employee. On the employee's "
+"form, select the :guilabel:`Settings` tab, and enter the employee's rate in "
+"the :guilabel:`Hourly Cost` field of the :guilabel:`Application Settings` "
+"section."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:93
+msgid ""
+"As detailed in the :ref:`work center cost section <manufacturing/mo-"
+"costs/work-center-cost>` above, the value entered in the :guilabel:`Hourly "
+"Cost` field on the employee's form is used to calculate the real cost of an "
+"|MO|. The estimated cost of an |MO|, referred to as the |MO| cost, uses the "
+"per employee cost set on each work center's form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:99
+msgid "|BoM| configuration"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:101
 msgid ""
 "Configuring a |BoM| so Odoo can accurately calculate the cost of |MOs| that "
 "use it requires two steps. First, components **must** be added, and the "
@@ -36394,7 +36379,7 @@ msgstr ""
 "den erforderliga kvantiteten specificeras. För det andra måste operationer "
 "**läggas till**, tillsammans med de arbetscenter där de utförs."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:88
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:105
 msgid ""
 "Begin by navigating to :menuselection:`Manufacturing app --> Products --> "
 "Bills of Materials`. Select a |BoM|, or create a new one by clicking "
@@ -36404,7 +36389,7 @@ msgstr ""
 "--> Bills of Materials`. Välj en nomenklatur eller skapa en ny genom att "
 "klicka på :guilabel:`New`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:91
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:108
 msgid ""
 "In the :guilabel:`Components` tab of the |BoM| form, add each component by "
 "clicking :guilabel:`Add a line`, selecting the component from the drop-down "
@@ -36416,7 +36401,7 @@ msgstr ""
 "rullgardinsmenyn i kolumnen :guilabel:`Component` och ange kvantiteten i "
 "kolumnen :guilabel:`Quantity`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:95
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:112
 msgid ""
 "In the :guilabel:`Operations` tab, add an operation by clicking "
 ":guilabel:`Add a line` to open the :guilabel:`Create Operations` pop-up "
@@ -36427,7 +36412,7 @@ msgstr ""
 ":guilabel:`Create Operations`. Ange en titel för operationen i fältet "
 ":guilabel:`Operation`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:99
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:116
 msgid ""
 "Select the :guilabel:`Work Center` where the operation is carried out. Then,"
 " add a :guilabel:`Default Duration`, which is the estimated amount of time "
@@ -36437,7 +36422,7 @@ msgstr ""
 ":guilabel:`Default Duration`, som är den beräknade tid det tar för "
 "operationen att slutföras."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:102
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:119
 msgid ""
 "By default, the :guilabel:`Duration Computation` field is set to "
 ":guilabel:`Set duration manually`, which means that the number entered in "
@@ -36449,21 +36434,16 @@ msgstr ""
 "fältet :guilabel:`Default Duration` alltid används som förväntad varaktighet"
 " för operationen."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:106
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:123
 msgid ""
 "Selecting :guilabel:`Compute based on tracked time` causes Odoo to "
-"automatically compute the default duration based on a certain number of work"
-" orders, which is set in the :guilabel:`Based on` field. Before there are "
-"work orders to compute this duration, the value in the :guilabel:`Default "
-"Duration` field is used instead."
+"automatically compute the :guilabel:`Default Duration` based on a certain "
+"number of work orders, which is set in the :guilabel:`Based on` field. "
+"Before there are work orders to compute this duration, the value in the "
+":guilabel:`Default Duration` field is used instead."
 msgstr ""
-"Om du väljer :guilabel:`Beräkna baserat på registrerad tid` kommer Odoo "
-"automatiskt att beräkna standardtiden baserat på ett visst antal "
-"arbetsorder, vilket anges i fältet :guilabel:`Baserat på`. Innan det finns "
-"arbetsorder för att beräkna denna varaktighet används värdet i fältet "
-":guilabel:`Default Duration` istället."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:111
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:128
 msgid ""
 "The hourly cost of operating the work center, and the duration of the "
 "operation, are used to calculate the operation's cost."
@@ -36471,7 +36451,7 @@ msgstr ""
 "Timkostnaden för att driva arbetscentret och insatsens varaktighet används "
 "för att beräkna insatsens kostnad."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:114
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:131
 msgid ""
 "Finally, click :guilabel:`Save & Close` to add the operation to the |BoM|, "
 "and close the :guilabel:`Create Operations` pop-up window. Alternatively, "
@@ -36484,7 +36464,7 @@ msgstr ""
 " och öppna ett tomt popup-fönster :guilabel:`Create Operations` för att "
 "lägga till en annan åtgärd."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:120
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:137
 msgid ""
 "For a full overview of |BoM| configuration, see the documentation on "
 ":doc:`bills of materials <bill_configuration>`."
@@ -36492,11 +36472,11 @@ msgstr ""
 "För en fullständig översikt av |BoM|-konfigurationen, se dokumentationen om "
 ":doc:``Bills of materials <bill_configuration>``."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:124
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:141
 msgid "|MO| overview"
 msgstr "|MO| översikt"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:126
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:143
 msgid ""
 "Each |MO| has an *overview* page, which lists a variety of information about"
 " the |MO|, including |MO| cost and real cost. To view the overview for an "
@@ -36510,7 +36490,7 @@ msgstr ""
 "Operationer --> Tillverkningsorder`, och välj en |MO|. Klicka sedan på "
 ":icon:`fa-bars` :guilabel:`Overview` smartknappen högst upp på |MO|."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:131
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:148
 msgid ""
 "Both the |MO| cost and real cost take into account the cost and quantity of "
 "components, as well as the cost of completing each work order. The overview "
@@ -36523,7 +36503,7 @@ msgstr ""
 "dem visas längst ned i kolumnerna :guilabel:`MO Cost` och :guilabel:`Real "
 "Cost`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:135
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:152
 msgid ""
 "Before work begins on an |MO|, the :guilabel:`MO Cost` and :guilabel:`Real "
 "Cost` columns display the same costs. This is the *estimated* cost of "
@@ -36533,19 +36513,17 @@ msgstr ""
 ":guilabel:`Real Cost` samma kostnader. Detta är den *uppskattade* kostnaden "
 "för att slutföra |MO|."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:138
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:155
 msgid ""
 "However, once work commences, the values in the :guilabel:`Real Cost` column"
 " may begin to diverge from the values in the :guilabel:`MO Cost` column. "
 "This happens if a different component quantity is used than was listed on "
-"the |MO|, or if the duration of a work order is different than expected."
+"the |MO|, the duration of a work order is different than expected, or the "
+"hourly cost of the employee performing a work order differs from the "
+"employee cost set on the work center."
 msgstr ""
-"När arbetet påbörjas kan dock värdena i kolumnen :guilabel:`Real Cost` börja"
-" avvika från värdena i kolumnen :guilabel:`MO Cost`. Detta händer om en "
-"annan komponentkvantitet används än vad som anges på OMO eller om "
-"varaktigheten för en arbetsorder är annorlunda än förväntat."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:142
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:161
 msgid ""
 "Once the |MO| has been completed by clicking :guilabel:`Produce All`, the "
 "values in the :guilabel:`MO Cost` column update to match those displayed in "
@@ -36559,11 +36537,11 @@ msgstr ""
 msgid "The MO Overview page."
 msgstr "Sidan MO-översikt."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:150
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:169
 msgid "Average manufacturing cost"
 msgstr "Genomsnittlig tillverkningskostnad"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:152
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:171
 msgid ""
 "In addition to the cost of each individual |MO| for a product, Odoo also "
 "tracks the average cost of manufacturing the product, taking into account "
@@ -36577,7 +36555,7 @@ msgstr ""
 ":menuselection:`Inventory app --> Products --> Products`, och välj en "
 "produkt."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:156
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:175
 msgid ""
 "The manufacturing cost of the product is displayed per unit of measure in "
 "the :guilabel:`Cost` field, located in the :guilabel:`General Information` "
@@ -36589,7 +36567,7 @@ msgstr ""
 "Värdet fortsätter att uppdateras när kostnaderna för ytterligare |MOs| "
 "räknas in i genomsnittskostnaden."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:160
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:179
 msgid ""
 "To the right of the :guilabel:`Cost` field is a :guilabel:`Compute Price "
 "from BoM` button, which only appears for products with at least one |BoM|. "
@@ -36603,7 +36581,7 @@ msgstr ""
 "kostnaden, som endast tar hänsyn till de komponenter och operationer som "
 "anges i BoM."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:167
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:186
 msgid ""
 "Be aware that clicking :guilabel:`Compute Price from BoM` does not set the "
 "price permanently. The cost continues to update based on the average of the "
@@ -36614,11 +36592,11 @@ msgstr ""
 "baserat på genomsnittet av BoM-priset och den verkliga kostnaden för "
 "eventuella framtida BoMs."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:171
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:190
 msgid "Example workflow: manufacturing cost"
 msgstr "Exempel på arbetsflöde: tillverkningskostnad"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:174
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:193
 msgid ""
 "Golf product manufacturer *Fairway Fields* produces a variety of golf "
 "products, including an indoor *putting green*. They have configured a |BoM| "
@@ -36630,19 +36608,19 @@ msgstr ""
 "BoM för puttinggreen, så Odoo beräknar automatiskt tillverkningskostnaden "
 "för varje puttinggreen."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:178
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:197
 msgid "The |BoM| lists two components:"
 msgstr "BoM listar två komponenter:"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:180
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:199
 msgid "One unit of *green felt*, which costs $20.00."
 msgstr "En enhet av *grön filt*, som kostar 20,00 USD."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:181
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:200
 msgid "One unit of a *rubber pad*, which costs $30.00."
 msgstr "En enhet av en *gummikudde*, som kostar 30,00 USD."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:183
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:202
 msgid ""
 "The |BoM| also lists four operations, all of which are carried out at "
 "*Assembly Station 1*, which has an hourly operating cost of $30.00. Those "
@@ -36652,13 +36630,13 @@ msgstr ""
 "1*, som har en driftskostnad per timme på 30,00 USD. Dessa operationer är "
 "följande:"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:186
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:205
 msgid ""
 "*Cut felt*: default duration of seven minutes, for a total cost of $3.50."
 msgstr ""
 "*Cut felt*: standardtid på sju minuter, till en total kostnad av 3,50 USD."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:187
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:206
 msgid ""
 "*Cut rubber pad*: default duration of five minutes, for a total cost of "
 "$2.50."
@@ -36666,7 +36644,7 @@ msgstr ""
 "*Cut rubber pad*: standardtid på fem minuter, till en total kostnad av "
 "$2,50."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:188
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:207
 msgid ""
 "*Attach pad to felt*: default duration of 15 minutes, for a total cost of "
 "$7.50."
@@ -36674,13 +36652,13 @@ msgstr ""
 "*Attach pad to felt*: standardtid 15 minuter, till en total kostnad av 7,50 "
 "USD."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:189
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:208
 msgid ""
 "*Cut holes*: default duration of three minutes, for a total cost of $1.50."
 msgstr ""
 "*Cut holes*: standardtid på tre minuter, till en total kostnad av $1,50."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:191
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:210
 msgid ""
 "Altogether, the components required to produce one putting green cost "
 "$50.00, and the operations required cost $15.00, for a total manufacturing "
@@ -36692,7 +36670,7 @@ msgstr ""
 "total tillverkningskostnad på 65,00 USD. Denna kostnad återspeglas i fältet "
 ":guilabel:`Cost` på putting greenens produktformulär."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:195
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:214
 msgid ""
 "Fairway Fields confirms an |MO| for one putting green. Before manufacturing "
 "starts, the |MO| overview lists a cost of `$65.00` in both the :guilabel:`MO"
@@ -36706,7 +36684,7 @@ msgstr ""
 msgid "The MO Overview page for one putting green, before production starts."
 msgstr "MO:s översiktssida för en putting green, innan produktionen startar."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:203
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:222
 msgid ""
 "Manufacturing begins, and the operations take ten minutes longer than "
 "expected, for a total manufacturing time of 40 minutes. This deviation from "
@@ -36722,7 +36700,7 @@ msgstr ""
 msgid "The MO Overview page for one putting green, during production."
 msgstr "MO:s översiktssida för en putting green under produktion."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:211
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:230
 msgid ""
 "Once manufacturing is finished, and the |MO| is marked as *Done*, the |MO| "
 "overview updates again, so the values in the :guilabel:`MO Cost` and "
@@ -36733,7 +36711,7 @@ msgstr ""
 ":guilabel:`Real Cost` överensstämmer, var och en visar ett värde på "
 "`$70.00`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:215
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:234
 msgid ""
 "On the putting green's product page, the :guilabel:`Cost` field now displays"
 " a cost of `$67.50`, the average of the original cost of $65.00 and the real"
@@ -54195,27 +54173,18 @@ msgid ""
 ":guilabel:`Operations` field, a new field appears below it, titled "
 ":guilabel:`Work Order Operation`. From this field, select a specific work "
 "order to generate quality checks for that operation, rather than the "
-"manufacturing operation in general."
+"manufacturing operation, in general."
 msgstr ""
-"Om du har valt :guilabel:`Tillverkning` i fältet :guilabel:`Operationer`, "
-"visas ett nytt fält under det, med titeln :guilabel:`Arbetsorderoperation`. "
-"I detta fält kan du välja en specifik arbetsorder för att generera "
-"kvalitetskontroller för denna operation, snarare än för "
-"tillverkningsoperationen i allmänhet."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:47
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:48
 msgid ""
-"For example, a |QCP| could be configured to create quality checks for the "
-"`Assembly` work order of the `Coffee Table` product. Then, if a new |MO| is "
-"confirmed for a `Coffee Table`, the |QCP| creates a quality check "
-"specifically for the `Assembly` operation."
+"A |QCP| could be configured to create quality checks for the `Assembly` work"
+" order of the `Coffee Table` product. Then, if a new |MO| is confirmed for a"
+" `Coffee Table`, the |QCP| creates a quality check specifically for the "
+"`Assembly` operation."
 msgstr ""
-"Till exempel kan en |QCP| konfigureras för att skapa kvalitetskontroller för"
-" arbetsordern `Assembly` för produkten `Coffee Table`. Om sedan en ny |MO| "
-"bekräftas för en `Coffee Table`, skapar |QCP| en kvalitetskontroll specifikt"
-" för `Assembly`-operationen."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:51
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:52
 msgid ""
 "The :guilabel:`Control Per` field is set to one of three options that "
 "determine *when* a new quality check is created:"
@@ -54223,42 +54192,30 @@ msgstr ""
 "Fältet :guilabel:`Control Per` är inställt på ett av tre alternativ som "
 "avgör *när* en ny kvalitetskontroll skapas:"
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:54
-msgid ""
-":guilabel:`Operation`: one check is requested for the specified operation, "
-"as a whole."
-msgstr ""
-":guilabel:`Operation`: en kontroll begärs för den angivna operationen som "
-"helhet."
-
 #: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:55
 msgid ""
-":guilabel:`Product`: one check is requested for each *unique* product "
+":guilabel:`Operation`: One check is requested for the specified operation, "
+"as a whole."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:56
+msgid ""
+":guilabel:`Product`: One check is requested for each *unique* product "
 "included in the specified operation. For example, a delivery operation for "
 "one table and four chairs would generate two checks, since two *unique* "
 "products are included in the operation."
 msgstr ""
-":guilabel:`Produkt`: en kontroll begärs för varje *unik* produkt som ingår i"
-" den angivna åtgärden. Till exempel, en leverans av ett bord och fyra stolar"
-" skulle generera två kontroller, eftersom två *unika* produkter ingår i "
-"transaktionen."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:58
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:59
 msgid ""
-":guilabel:`Quantity`: a check is requested for a certain percentage of items"
+":guilabel:`Quantity`: A check is requested for a certain percentage of items"
 " within the specified operation. This percentage is set by enabling the "
 ":guilabel:`Partial Transfer Test` checkbox, and then entering a numerical "
 "value in the :guilabel:`Percentage` field that appears below. If the "
 "checkbox is not enabled, one quality check is created for the full quantity."
 msgstr ""
-":guilabel:`Quantity`: en kontroll begärs för en viss procentandel av "
-"objekten inom den angivna operationen. Denna procentsats anges genom att "
-"aktivera kryssrutan :guilabel:`Partial Transfer Test` och sedan ange ett "
-"numeriskt värde i fältet :guilabel:`Percentage` som visas nedan. Om "
-"kryssrutan inte är aktiverad skapas en kvalitetskontroll för hela "
-"kvantiteten."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:63
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:64
 msgid ""
 "The :guilabel:`Control Frequency` field is set to one of three options that "
 "determine *how often* a new quality check is created:"
@@ -54266,37 +54223,28 @@ msgstr ""
 "Fältet :guilabel:`Kontrollfrekvens` är inställt på ett av tre alternativ som"
 " bestämmer *hur ofta* en ny kvalitetskontroll skapas:"
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:66
-msgid ""
-":guilabel:`All`: a quality check is requested every time the conditions of "
-"the |QCP| are met."
-msgstr ""
-":guilabel:`All`: en kvalitetskontroll begärs varje gång villkoren i |QCP| är"
-" uppfyllda."
-
 #: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:67
 msgid ""
-":guilabel:`Randomly`: a quality check is randomly requested for a certain "
-"percentage of operations, which can be specified in the :guilabel:`Every #% "
-"of Transfers` field that appears below."
+":guilabel:`All`: A quality check is requested every time the conditions of "
+"the |QCP| are met."
 msgstr ""
-":guilabel:`Randomly`: en kvalitetskontroll begärs slumpmässigt för en viss "
-"procentandel av operationerna, som kan anges i fältet :guilabel:`Every #% of"
-" Transfers` som visas nedan."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:70
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:68
 msgid ""
-":guilabel:`Periodically`: a quality check is requested once every set period"
+":guilabel:`Randomly`: A quality check is randomly requested for a certain "
+"percentage of operations, which can be specified in the :guilabel:`Every #% "
+"of Operations` field that appears below."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:71
+msgid ""
+":guilabel:`Periodically`: A quality check is requested once every set period"
 " of time, which is specified by entering a numerical value in the field "
 "below, and choosing either :guilabel:`Days`, :guilabel:`Weeks`, or "
 ":guilabel:`Months` as the desired time interval."
 msgstr ""
-":guilabel:`Periodically`: en kvalitetskontroll begärs en gång per angiven "
-"tidsperiod, som anges genom att ange ett numeriskt värde i fältet nedan och "
-"välja antingen :guilabel:`Days`, :guilabel:`Weeks` eller :guilabel:`Monthhs`"
-" som önskat tidsintervall."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:74
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:75
 msgid ""
 "In the :guilabel:`Type` field, specify the type of quality check that should"
 " be performed. The method for processing quality checks created by the |QCP|"
@@ -54306,7 +54254,7 @@ msgstr ""
 "utföras. Metoden för att bearbeta kvalitetskontroller som skapats av |QCP| "
 "beror på vilken typ av kvalitetskontroll som valts:"
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:78
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:79
 msgid ""
 ":guilabel:`Instructions` checks provide specific instructions for how to "
 "complete the quality check."
@@ -54314,7 +54262,7 @@ msgstr ""
 ":guilabel:`Instruktioner` ger specifika instruktioner för hur "
 "kvalitetskontrollen ska utföras."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:80
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:81
 msgid ""
 ":guilabel:`Take a Picture` checks require a picture of the product be "
 "uploaded for later review by the assigned quality team."
@@ -54322,7 +54270,7 @@ msgstr ""
 ":guilabel:`Take a Picture` kräver att en bild av produkten laddas upp för "
 "senare granskning av det tilldelade kvalitetsteamet."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:82
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:83
 msgid ""
 ":guilabel:`Register Production` checks prompt manufacturing employees to "
 "confirm the quantity of the product that was produced during the "
@@ -54332,7 +54280,7 @@ msgstr ""
 " att bekräfta mängden av den produkt som tillverkades under "
 "tillverkningsprocessen."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:84
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:85
 msgid ""
 ":guilabel:`Pass - Fail` checks specify a criterion that products must meet "
 "for the check to pass."
@@ -54340,7 +54288,7 @@ msgstr ""
 ":guilabel:`Pass - Fail` kontroller anger ett kriterium som produkter måste "
 "uppfylla för att kontrollen ska godkännas."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:85
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:86
 msgid ""
 ":guilabel:`Measure` checks prompt employees to record a measurement of the "
 "product that must be within a tolerance of a norm value for the check to "
@@ -54350,22 +54298,26 @@ msgstr ""
 "av produkten som måste ligga inom en tolerans av ett normvärde för att "
 "kontrollen ska godkännas."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:87
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:88
 msgid ""
-":guilabel:`Worksheet` checks provide an interactive worksheet that must be "
-"filled out by the employee processing the check."
+":guilabel:`Worksheet` checks require the employee processing the check to "
+"fill out an interactive worksheet."
 msgstr ""
-":guilabel:`Worksheet` checkar innehåller ett interaktivt arbetsblad som "
-"måste fyllas i av den anställde som hanterar checken."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:91
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:90
+msgid ""
+":guilabel:`Spreadsheet` checks require the employee processing the check to "
+"fill out an interactive spreadsheet."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:94
 msgid ""
 "An *Instructions* check is the same as a step on a work order for an MO."
 msgstr ""
 "En *Instruktioner*-kontroll är samma sak som ett steg i en arbetsorder för "
 "en MO."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:93
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:96
 msgid ""
 "When a step is added to a work order, Odoo stores it in the Quality app as a"
 " |QCP|. It is possible to manually create a |QCP| with the *Instructions* "
@@ -54377,7 +54329,7 @@ msgstr ""
 "*Instruktioner* och till och med tilldela den till en annan operation än "
 "tillverkning, som kvitton."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:97
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:100
 msgid ""
 "However, when creating a control point specifically for quality control "
 "purposes, using a different check type is probably more effective."
@@ -54385,7 +54337,28 @@ msgstr ""
 "Men om du skapar en kontrollpunkt specifikt för kvalitetskontroll är det "
 "förmodligen mer effektivt att använda en annan kontrolltyp."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:100
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:104
+msgid ""
+"When creating a |QCP| with the :guilabel:`Worksheet` or "
+":guilabel:`Spreadsheet` check types, it is necessary to specify a *Quality "
+"Worksheet Template* or *Quality Spreadsheet Template* in the "
+":guilabel:`Template` field that appears below the :guilabel:`Type` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:108
+msgid ""
+"The selected template is duplicated for each quality check created by the "
+"|QCP|, and **must** be filled out to complete the quality check."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:111
+msgid ""
+"To create a new template, navigate to :menuselection:`Quality app --> "
+"Configuration --> Quality Worksheet/Spreadsheet Templates`, and click "
+":guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:114
 msgid ""
 "In the :guilabel:`Team` field, specify the quality team that is responsible "
 "for managing the |QCP|, and the quality checks it creates. If a specific "
@@ -54397,7 +54370,7 @@ msgstr ""
 " kvalitetsteamet är ansvarig för |QCP| väljer du denne i fältet "
 ":guilabel:`Responsible`."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:104
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:118
 msgid ""
 "The :guilabel:`Step Document` field has two options that specify the "
 "location of an instructional document detailing how to complete the quality "
@@ -54407,7 +54380,7 @@ msgstr ""
 "ett instruktionsdokument som beskriver hur man slutför de "
 "kvalitetskontroller som skapats av |QCP|."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:107
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:121
 msgid ""
 "Select :guilabel:`Specific Page of Operation Worksheet` if the document is "
 "included with the instructional worksheet for the work order, then enter the"
@@ -54417,7 +54390,7 @@ msgstr ""
 "instruktionsarbetsbladet för arbetsordern och ange sedan sidnumret i fältet "
 ":guilabel:`Sida i arbetsbladet` som visas nedan."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:111
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:125
 msgid ""
 "Select :guilabel:`Custom` if the document should be included in the "
 ":guilabel:`Instructions` tab at the bottom of the |QCP|."
@@ -54425,7 +54398,7 @@ msgstr ""
 "Välj :guilabel:`Custom` om dokumentet ska inkluderas i fliken "
 ":guilabel:`Instruktioner` längst ned i |QCP|."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:114
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:128
 msgid ""
 "In the :guilabel:`Instructions` tab at the bottom of the form, enter "
 "instructions for how to complete the quality checks created by the |QCP|."
@@ -54434,7 +54407,7 @@ msgstr ""
 "instruktioner för hur du ska genomföra de kvalitetskontroller som skapats av"
 " |QCP|."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:117
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:131
 msgid ""
 "If the :guilabel:`Custom` option was selected in the :guilabel:`Step "
 "Document` field above, a document can be attached in this tab. To do so, "
@@ -54448,7 +54421,7 @@ msgstr ""
 "och välj sedan en fil, eller lägg till en länk till ett Google Slides-"
 "dokument i fältet :guilabel:`Google Slide Link`."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:122
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:136
 msgid ""
 "In the :guilabel:`Message If Failure` tab, include instructions for what to "
 "do if the quality check fails. For example, instruct the employee processing"
@@ -54459,7 +54432,7 @@ msgstr ""
 "den medarbetare som hanterar kvalitetskontrollen att skapa en "
 ":doc:`kvalitetsvarning <quality_alerts>`."
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:126
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:140
 msgid ""
 "The :guilabel:`Notes` tab is used to provide additional information about "
 "the |QCP|, like the reason it was created. The information entered in this "

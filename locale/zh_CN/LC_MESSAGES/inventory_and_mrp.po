@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-05 09:20+0000\n"
+"POT-Creation-Date: 2024-12-02 16:24+0000\n"
 "PO-Revision-Date: 2024-10-08 06:34+0000\n"
 "Last-Translator: Chloe Wang, 2024\n"
 "Language-Team: Chinese (China) (https://app.transifex.com/odoo/teams/41243/zh_CN/)\n"
@@ -429,8 +429,8 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:38
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:20
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/uom.rst:21
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:20
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:44
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:18
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/valuation_by_lots.rst:20
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/cross_dock.rst:18
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/delivery_three_steps.rst:16
@@ -4547,7 +4547,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:93
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:162
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:81
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:77
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:54
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:77
 msgid "Create purchase order"
@@ -5071,349 +5071,6 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation.rst:5
 msgid "Inventory valuation"
 msgstr "库存计价"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:3
-msgid "Landed costs"
-msgstr "落地成本"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:12
-msgid ""
-"When shipping products to customers, the landed cost is the total price of a"
-" product or shipment, including all expenses associated with shipping the "
-"product."
-msgstr "向客户运送产品时，落地成本是产品或货物的总价，包括与运送产品相关的所有费用。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:15
-msgid ""
-"In Odoo, the *Landed Costs* feature is used to take additional costs into "
-"account when calculating the valuation of a product. This includes the cost "
-"of shipment, insurance, customs duties, taxes, and other fees."
-msgstr "在 Odoo 中，*落地成本*功能用于在计算产品估值时考虑额外成本。这包括运输成本、保险、关税、税费和其他费用。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:22
-msgid ""
-"To add landed costs to products, the *Landed Costs* feature must first be "
-"enabled. To enable this feature, navigate to :menuselection:`Inventory app "
-"--> Configuration --> Settings`, and scroll to the :guilabel:`Valuation` "
-"section."
-msgstr ""
-"要在产品中添加落地成本，必须首先启用*落地成本*功能。要启用此功能，请导航至 :menuselection:`库存应用程序 --> 配置 --> "
-"设置`，然后滚动到 :guilabel:`估值` 部分。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:26
-msgid ""
-"Tick the checkbox next to the :guilabel:`Landed Costs` option, and click "
-":guilabel:`Save` to save changes."
-msgstr "勾选 :guilabel:`落地成本` 选项旁边的复选框，然后点击 :guilabel:`保存`，以保存更改。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:29
-msgid ""
-"Once the page refreshes, a new :guilabel:`Default Journal` field appears "
-"below the :guilabel:`Landed Costs` feature in the :guilabel:`Valuation` "
-"section."
-msgstr ""
-"页面刷新后，在 :guilabel:`估值` 部分的 :guilabel:`落地成本` 功能下方会出现一个新的 :guilabel:`默认日记账` "
-"字段。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:32
-msgid ""
-"Click the :guilabel:`Default Journal` drop-down menu to reveal a list of "
-"accounting journals. Select a journal for which all accounting entries "
-"related to landed costs should be recorded."
-msgstr "点击 :guilabel:`默认日记账` 下拉菜单，显示会计分录列表。选择要记录与落地成本相关的所有会计分录的日记账。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst-1
-msgid ""
-"Landed Costs feature and resulting Default Journal field in the Inventory "
-"settings."
-msgstr "库存设置中的落地成本功能和由此产生的默认日记账字段。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:40
-msgid "Create landed cost product"
-msgstr "创建落地成本产品"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:42
-msgid ""
-"For charges that are consistently added as landed costs, a landed cost "
-"product can be created in Odoo. This way, a landed cost product can be "
-"quickly added to a vendor bill as an invoice line, instead of having to be "
-"manually entered every time a new vendor bill is created."
-msgstr ""
-"对于持续添加为落地成本的费用，可在 Odoo "
-"中创建落地成本产品。这样，落地成本产品就可以作为发票项目快速添加到供应商账单中，而不必在每次创建新的供应商账单时手动输入。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:46
-msgid ""
-"To do this, create a new product by going to :menuselection:`Inventory app "
-"--> Products --> Products`, and clicking :guilabel:`New`."
-msgstr ""
-"要执行此操作，请进入 :menuselection:`库存应用程序 --> 产品 --> 产品`，然后点击 :guilabel:`新建`，创建新产品。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:49
-msgid ""
-"Assign a name to the landed cost product in the :guilabel:`Product Name` "
-"field (i.e. `International Shipping`). In the :guilabel:`Product Type` "
-"field, click the drop-down menu, and select :guilabel:`Service` as the "
-":guilabel:`Product Type`."
-msgstr ""
-"在 :guilabel:`产品名称` 字段中为落地成本产品指定一个名称（例如，`国际航运`）。在 :guilabel:`产品类型` "
-"字段，点击下拉菜单，选择 :guilabel:`服务` 作为 :guilabel:`产品类型`。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:54
-msgid ""
-"Landed cost products **must** have their :guilabel:`Product Type` set to "
-":guilabel:`Service`."
-msgstr "落地成本产品**必须**将其 :guilabel:`产品类型` 设置为 :guilabel:`服务`。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:56
-msgid ""
-"Click the :guilabel:`Purchase` tab, and tick the checkbox next to "
-":guilabel:`Is a Landed Cost` in the :guilabel:`Vendor Bills` section. Once "
-"ticked, a new :guilabel:`Default Split Method` field appears below it, "
-"prompting a selection. Clicking that drop-down menu reveals the following "
-"options:"
-msgstr ""
-"点击:guilabel:`采购`选项卡，在:guilabel:`供应商账单`部分勾选:guilabel:`是到岸成本`旁边的复选框。勾选后，下面会出现一个新的"
-" :guilabel:`默认拆分方法`字段，提示选择。点击该下拉菜单可显示以下选项："
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:60
-msgid ""
-":guilabel:`Equal`: splits the cost equally across each product included in "
-"the receipt, regardless of the quantity of each."
-msgstr ":guilabel:`平摊`：将成本平均分摊到收据中的每个产品上，与每个产品的数量无关。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:62
-msgid ""
-":guilabel:`By Quantity`: splits the cost across each unit of all products in"
-" the receipt."
-msgstr ":guilabel:`按数量`：将成本分摊到收据中所有产品的每个单位。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:63
-msgid ""
-":guilabel:`By Current Cost`: splits the cost according to the cost of each "
-"product unit, so a product with a higher cost receives a greater share of "
-"the landed cost."
-msgstr ":guilabel:`按当前成本`：根据每个产品单位的成本来分摊成本，因此成本较高的产品可获得较大份额的到岸成本。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:65
-msgid ""
-":guilabel:`By Weight`: splits the cost, according to the weight of the "
-"products in the receipt."
-msgstr ":guilabel:`按重量`：根据收据中产品的重量计算成本。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:66
-msgid ""
-":guilabel:`By Volume`: splits the cost, according to the volume of the "
-"products in the receipt."
-msgstr ":guilabel:`按体积`：根据收据中的产品体积分摊成本。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst-1
-msgid ""
-"Is a Landed Cost checkbox and Default Split Method on service type product "
-"form."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:72
-msgid ""
-"When creating new vendor bills, this product can be added as an invoice line"
-" as a landed cost."
-msgstr "在创建新的供应商账单时，该产品可作为落地成本添加到发票项目中。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:75
-msgid ""
-"To apply a landed cost on a vendor bill, the products included in the "
-"original |PO| **must** belong to a *Product Category* with its *Force "
-"Removal Strategy* set to |FIFO|. The *Costing Method* can be set to either "
-"|AVCO| or |FIFO|, and the valuation method can be :doc:`manual "
-"<using_inventory_valuation>` or :doc:`automatic "
-"<inventory_valuation_config>`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:83
-msgid ""
-"Navigate to :menuselection:`Purchase app --> New` to create a new request "
-"for quotation (RfQ). In the :guilabel:`Vendor` field, add a vendor to order "
-"products from. Then, click :guilabel:`Add a product`, under the "
-":guilabel:`Products` tab, to add products to the |RfQ|."
-msgstr ""
-"导航至 :menuselection:`采购应用程序 --> 新建` 以创建新的询价（RfQ）。在 :guilabel:`供应商` "
-"字段中，添加要订购产品的供应商。然后，点击 :guilabel:`产品` 标签下的 :guilabel:`添加产品`，将产品添加到询价单中。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:87
-msgid ""
-"Once ready, click :guilabel:`Confirm Order` to confirm the order. Then, "
-"click :guilabel:`Receive Products` once the products have been received, "
-"followed by :guilabel:`Validate`."
-msgstr ""
-"准备就绪后，点击 :guilabel:`确认订单`，以确认订单。收到产品后，点击 :guilabel:`接收产品`，然后点击 "
-":guilabel:`验证`。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:91
-msgid "Create vendor bill"
-msgstr "创建供应商账单"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:93
-msgid ""
-"Once the vendor fulfills the |PO| and sends a bill, a vendor bill can be "
-"created from the |PO| in Odoo."
-msgstr "一旦供应商完成 |PO| 并发送账单，就可以在 Odoo 中根据 |PO| 创建供应商账单。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:96
-msgid ""
-"Navigate to the :menuselection:`Purchase app`, and click into the |PO| for "
-"which a vendor bill should be created. Then, click :guilabel:`Create Bill`. "
-"This opens a new :guilabel:`Vendor Bill` in the :guilabel:`Draft` stage."
-msgstr ""
-"导航至 :menuselection:`采购应用程序` 并点击要为其创建供应商账单的 |PO|。然后点击 :guilabel:`创建账单`。这将在 "
-":guilabel:`草稿` 阶段打开一个新的 :guilabel:`供应商账单`。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:100
-msgid ""
-"In the :guilabel:`Bill Date` field, click the line to open a calendar "
-"popover menu, and select the date on which this draft bill should be billed."
-msgstr "在 :guilabel:`账单日期` 字段中，点击该行打开日历弹出式菜单，并选择此账单草稿的账单日期。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:103
-msgid ""
-"Then, under the :guilabel:`Invoice Lines` tab, click :guilabel:`Add a line`,"
-" and click the drop-down menu in the :guilabel:`Product` column to select "
-"the previously-created landed cost product. Click the :icon:`fa-cloud-"
-"upload` :guilabel:`(cloud with arrow)` icon to manually save and update the "
-"draft bill."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst-1
-msgid "Landed Costs column checkboxes for product and landed cost."
-msgstr "落地成本栏的产品和到岸成本复选框。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:112
-msgid ""
-"In the :guilabel:`Landed Costs` column, the product ordered from the vendor "
-"does **not** have its checkbox ticked, while the landed cost product's "
-"checkbox **is** ticked. This differentiates landed costs from all other "
-"costs displayed on the bill."
-msgstr ""
-"在 "
-":guilabel:`落地成本`列中，从供应商订购的产品的复选框**未**被勾选，而落地成本产品的复选框**已**被勾选。这将落地成本与账单上显示的所有其他成本区分开来。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:116
-msgid ""
-"Additionally, at the top of the form, a :guilabel:`Create Landed Costs` "
-"button appears."
-msgstr "此外，在表单顶部会出现一个 :guilabel:`创建落地成本` 按钮。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst-1
-msgid "Create Landed Costs button on vendor bill."
-msgstr "在供应商账单上创建落地成本按钮。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:123
-msgid "Add landed cost"
-msgstr "添加落地成本"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:125
-msgid ""
-"Once a landed cost is added to the vendor bill, click :guilabel:`Create "
-"Landed Costs` at the top of the vendor bill."
-msgstr "将落地成本添加到供应商账单后，点击供应商账单顶部的 :guilabel:`创建落地成本`。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:128
-msgid ""
-"Doing so automatically creates a landed cost record, with a set landed cost "
-"pre-filled in the product line in the :guilabel:`Additional Costs` tab."
-msgstr "这样做会自动创建一个落地成本记录，并在 :guilabel:`额外费用` 选项卡的产品行中预填设定的落地成本。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:131
-msgid ""
-"From the :guilabel:`Landed Cost` form, click the :guilabel:`Transfers` drop-"
-"down menu, and select which transfer the landed cost belongs to."
-msgstr "在 :guilabel:`落地成本` 表格中，点击 :guilabel:`转账` 下拉菜单，选择落地成本属于哪项转账。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst-1
-msgid "Landed cost form with selected receipt transfer."
-msgstr "带选定收据转账的落地成本表。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:139
-msgid ""
-"In addition to creating landed costs directly from a vendor bill, landed "
-"cost records can *also* be created by navigating to "
-":menuselection:`Inventory app --> Operations --> Landed Costs`, and clicking"
-" :guilabel:`New`."
-msgstr ""
-"除了直接从供应商账单创建落地成本外，*还可*通过导航至 :menuselection:`库存应用程序 --> 操作 --> 落地成本`，然后点击 "
-":guilabel:`新建`，创建落地成本记录。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:143
-msgid ""
-"After setting the picking from the :guilabel:`Transfers` drop-down menu, "
-"click :guilabel:`Compute` (at the bottom of the form, under the "
-":guilabel:`Total:` cost)."
-msgstr ""
-"从 :guilabel:`转账` 下拉菜单中设置选择后，点击 :guilabel:`计算`（位于表格底部，在 :guilabel:`总计：`成本下）。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:146
-msgid ""
-"Click the :guilabel:`Valuation Adjustments` tab to see the impact of the "
-"landed costs. The :guilabel:`Original Value` column lists the original price"
-" of the |PO|, the :guilabel:`Additional Landed Cost` column displays the "
-"landed cost, and the :guilabel:`New Value` displays the sum of the two, for "
-"the total cost of the |PO|."
-msgstr ""
-"点击 :guilabel:`估值调整` 选项卡，查看到岸成本的影响。:guilabel:`原始价值`栏列出了 |PO| "
-"的原始价格，:guilabel:`额外到岸成本` 栏显示了到岸成本，:guilabel:`新价值`显示了两者的总和，即 |PO| 的总成本。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:151
-msgid ""
-"Once ready, click :guilabel:`Validate` to post the landed cost entry to the "
-"accounting journal."
-msgstr "准备就绪后，点击 :guilabel:`验证`，将到岸成本分录记入会计日记账。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:153
-msgid ""
-"This causes a :guilabel:`Valuation` smart button to appear at the top of the"
-" form. Click the :guilabel:`Valuation` smart button to open a "
-":guilabel:`Stock Valuation` page, with the product's updated valuation "
-"listed."
-msgstr ""
-"这样，表单顶部就会出现一个 :guilabel:`估值` 智能按钮。点击 :guilabel:`估值` 智能按钮打开 :guilabel:`库存估值` "
-"页面，其中列出了产品的最新估值。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:158
-msgid ""
-"For a :guilabel:`Valuation` smart button to appear upon validation, the "
-"product's :guilabel:`Product Type` **must** be set to :guilabel:`Storable`."
-msgstr ""
-"要在验证时显示 :guilabel:`估值` 智能按钮，产品的 :guilabel:`产品类型` **必须**设置为 :guilabel:`可存储`。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:161
-msgid ""
-"To view the valuation of *every* product, including landed costs, navigate "
-"to :menuselection:`Inventory app --> Reporting --> Valuation`."
-msgstr "要查看 *每个* 产品的估价（包括落地成本），请导航至 :menuselection:`库存应用程序 --> 报告 --> 估价`。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:165
-msgid ""
-"Each journal entry created for a landed cost on a vendor bill can be viewed "
-"in the *Accounting* app."
-msgstr "可以在 *会计* 应用程序中查看为供应商账单上的落地成本创建的每一条日记账分录。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:168
-msgid ""
-"To locate these journal entries, navigate to :menuselection:`Accounting app "
-"--> Accounting --> Journal Entries`, and locate the correct entry, by number"
-" (i.e. `PBNK1/2024/XXXXX`)."
-msgstr ""
-"要查找这些日记账分录，请导航至 :menuselection:`会计应用程序 --> 会计 --> 日记账分录`，然后按编号（即 "
-"`PBNK1/2024/XXXXX`）查找正确的分录。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:171
-msgid ""
-"Click into the journal entry to view the :guilabel:`Journal Items`, and "
-"other information about the entry."
-msgstr "点击日记账条目，查看 :guilabel:`日记账条目` 和有关条目的其他信息。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/integrating_landed_costs.rst:0
-msgid "Journal Entry form for landed cost created from vendor bill."
-msgstr "根据供应商账单创建的到岸成本日记账表格。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:3
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:15
@@ -6281,6 +5938,348 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst-1
 msgid "Show Stock Valuation journals in a list."
 msgstr "在列表中显示库存估值日记账。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:3
+msgid "Landed costs"
+msgstr "落地成本"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:10
+msgid ""
+"When shipping products to customers, the landed cost is the total price of a"
+" product or shipment, including all expenses associated with shipping the "
+"product."
+msgstr "向客户运送产品时，落地成本是产品或货物的总价，包括与运送产品相关的所有费用。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:13
+msgid ""
+"In Odoo, the *Landed Costs* feature is used to take additional costs into "
+"account when calculating the valuation of a product. This includes the cost "
+"of shipment, insurance, customs duties, taxes, and other fees."
+msgstr "在 Odoo 中，*落地成本*功能用于在计算产品估值时考虑额外成本。这包括运输成本、保险、关税、税费和其他费用。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:20
+msgid ""
+"To add landed costs to products, the *Landed Costs* feature must first be "
+"enabled. To enable this feature, navigate to :menuselection:`Inventory app "
+"--> Configuration --> Settings`, and scroll to the :guilabel:`Valuation` "
+"section."
+msgstr ""
+"要在产品中添加落地成本，必须首先启用*落地成本*功能。要启用此功能，请导航至 :menuselection:`库存应用程序 --> 配置 --> "
+"设置`，然后滚动到 :guilabel:`估值` 部分。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:24
+msgid ""
+"Tick the checkbox next to the :guilabel:`Landed Costs` option, and click "
+":guilabel:`Save` to save changes."
+msgstr "勾选 :guilabel:`落地成本` 选项旁边的复选框，然后点击 :guilabel:`保存`，以保存更改。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:27
+msgid ""
+"Once the page refreshes, a new :guilabel:`Default Journal` field appears "
+"below the :guilabel:`Landed Costs` feature in the :guilabel:`Valuation` "
+"section."
+msgstr ""
+"页面刷新后，在 :guilabel:`估值` 部分的 :guilabel:`落地成本` 功能下方会出现一个新的 :guilabel:`默认日记账` "
+"字段。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:30
+msgid ""
+"Click the :guilabel:`Default Journal` drop-down menu to reveal a list of "
+"accounting journals. Select a journal for which all accounting entries "
+"related to landed costs should be recorded."
+msgstr "点击 :guilabel:`默认日记账` 下拉菜单，显示会计分录列表。选择要记录与落地成本相关的所有会计分录的日记账。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst-1
+msgid ""
+"Landed Costs feature and resulting Default Journal field in the Inventory "
+"settings."
+msgstr "库存设置中的落地成本功能和由此产生的默认日记账字段。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:37
+msgid "Create landed cost product"
+msgstr "创建落地成本产品"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:39
+msgid ""
+"For charges that are consistently added as landed costs, a landed cost "
+"product can be created in Odoo. This way, a landed cost product can be "
+"quickly added to a vendor bill as an invoice line, instead of having to be "
+"manually entered every time a new vendor bill is created."
+msgstr ""
+"对于持续添加为落地成本的费用，可在 Odoo "
+"中创建落地成本产品。这样，落地成本产品就可以作为发票项目快速添加到供应商账单中，而不必在每次创建新的供应商账单时手动输入。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:43
+msgid ""
+"To do this, create a new product by going to :menuselection:`Inventory app "
+"--> Products --> Products`, and clicking :guilabel:`New`."
+msgstr ""
+"要执行此操作，请进入 :menuselection:`库存应用程序 --> 产品 --> 产品`，然后点击 :guilabel:`新建`，创建新产品。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:46
+msgid ""
+"Assign a name to the landed cost product in the :guilabel:`Product Name` "
+"field (i.e. `International Shipping`). In the :guilabel:`Product Type` "
+"field, click the drop-down menu, and select :guilabel:`Service` as the "
+":guilabel:`Product Type`."
+msgstr ""
+"在 :guilabel:`产品名称` 字段中为落地成本产品指定一个名称（例如，`国际航运`）。在 :guilabel:`产品类型` "
+"字段，点击下拉菜单，选择 :guilabel:`服务` 作为 :guilabel:`产品类型`。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:51
+msgid ""
+"Landed cost products **must** have their :guilabel:`Product Type` set to "
+":guilabel:`Service`."
+msgstr "落地成本产品**必须**将其 :guilabel:`产品类型` 设置为 :guilabel:`服务`。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:53
+msgid ""
+"Click the :guilabel:`Purchase` tab, and tick the checkbox next to "
+":guilabel:`Is a Landed Cost` in the :guilabel:`Vendor Bills` section. Once "
+"ticked, a new :guilabel:`Default Split Method` field appears below it, "
+"prompting a selection. Clicking that drop-down menu reveals the following "
+"options:"
+msgstr ""
+"点击:guilabel:`采购`选项卡，在:guilabel:`供应商账单`部分勾选:guilabel:`是到岸成本`旁边的复选框。勾选后，下面会出现一个新的"
+" :guilabel:`默认拆分方法`字段，提示选择。点击该下拉菜单可显示以下选项："
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:57
+msgid ""
+":guilabel:`Equal`: splits the cost equally across each product included in "
+"the receipt, regardless of the quantity of each."
+msgstr ":guilabel:`平摊`：将成本平均分摊到收据中的每个产品上，与每个产品的数量无关。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:59
+msgid ""
+":guilabel:`By Quantity`: splits the cost across each unit of all products in"
+" the receipt."
+msgstr ":guilabel:`按数量`：将成本分摊到收据中所有产品的每个单位。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:60
+msgid ""
+":guilabel:`By Current Cost`: splits the cost according to the cost of each "
+"product unit, so a product with a higher cost receives a greater share of "
+"the landed cost."
+msgstr ":guilabel:`按当前成本`：根据每个产品单位的成本来分摊成本，因此成本较高的产品可获得较大份额的到岸成本。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:62
+msgid ""
+":guilabel:`By Weight`: splits the cost, according to the weight of the "
+"products in the receipt."
+msgstr ":guilabel:`按重量`：根据收据中产品的重量计算成本。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:63
+msgid ""
+":guilabel:`By Volume`: splits the cost, according to the volume of the "
+"products in the receipt."
+msgstr ":guilabel:`按体积`：根据收据中的产品体积分摊成本。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst-1
+msgid ""
+"Is a Landed Cost checkbox and Default Split Method on service type product "
+"form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:68
+msgid ""
+"When creating new vendor bills, this product can be added as an invoice line"
+" as a landed cost."
+msgstr "在创建新的供应商账单时，该产品可作为落地成本添加到发票项目中。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:71
+msgid ""
+"To apply a landed cost on a vendor bill, products in the original |PO| "
+"**must** belong to a *Product Category* with a *Costing Method* of either "
+"|AVCO| or |FIFO|, and the valuation method can be :doc:`manual "
+"<using_inventory_valuation>` or :doc:`automatic "
+"<inventory_valuation_config>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:79
+msgid ""
+"Navigate to :menuselection:`Purchase app --> New` to create a new request "
+"for quotation (RfQ). In the :guilabel:`Vendor` field, add a vendor to order "
+"products from. Then, click :guilabel:`Add a product`, under the "
+":guilabel:`Products` tab, to add products to the |RfQ|."
+msgstr ""
+"导航至 :menuselection:`采购应用程序 --> 新建` 以创建新的询价（RfQ）。在 :guilabel:`供应商` "
+"字段中，添加要订购产品的供应商。然后，点击 :guilabel:`产品` 标签下的 :guilabel:`添加产品`，将产品添加到询价单中。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:83
+msgid ""
+"Once ready, click :guilabel:`Confirm Order` to confirm the order. Then, "
+"click :guilabel:`Receive Products` once the products have been received, "
+"followed by :guilabel:`Validate`."
+msgstr ""
+"准备就绪后，点击 :guilabel:`确认订单`，以确认订单。收到产品后，点击 :guilabel:`接收产品`，然后点击 "
+":guilabel:`验证`。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:87
+msgid "Create vendor bill"
+msgstr "创建供应商账单"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:89
+msgid ""
+"Once the vendor fulfills the |PO| and sends a bill, a vendor bill can be "
+"created from the |PO| in Odoo."
+msgstr "一旦供应商完成 |PO| 并发送账单，就可以在 Odoo 中根据 |PO| 创建供应商账单。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:92
+msgid ""
+"Navigate to the :menuselection:`Purchase app`, and click into the |PO| for "
+"which a vendor bill should be created. Then, click :guilabel:`Create Bill`. "
+"This opens a new :guilabel:`Vendor Bill` in the :guilabel:`Draft` stage."
+msgstr ""
+"导航至 :menuselection:`采购应用程序` 并点击要为其创建供应商账单的 |PO|。然后点击 :guilabel:`创建账单`。这将在 "
+":guilabel:`草稿` 阶段打开一个新的 :guilabel:`供应商账单`。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:96
+msgid ""
+"In the :guilabel:`Bill Date` field, click the line to open a calendar "
+"popover menu, and select the date on which this draft bill should be billed."
+msgstr "在 :guilabel:`账单日期` 字段中，点击该行打开日历弹出式菜单，并选择此账单草稿的账单日期。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:99
+msgid ""
+"Then, under the :guilabel:`Invoice Lines` tab, click :guilabel:`Add a line`,"
+" and click the drop-down menu in the :guilabel:`Product` column to select "
+"the previously-created landed cost product. Click the :icon:`fa-cloud-"
+"upload` :guilabel:`(cloud with arrow)` icon to manually save and update the "
+"draft bill."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst-1
+msgid "Landed Costs column checkboxes for product and landed cost."
+msgstr "落地成本栏的产品和到岸成本复选框。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:107
+msgid ""
+"In the :guilabel:`Landed Costs` column, the product ordered from the vendor "
+"does **not** have its checkbox ticked, while the landed cost product's "
+"checkbox **is** ticked. This differentiates landed costs from all other "
+"costs displayed on the bill."
+msgstr ""
+"在 "
+":guilabel:`落地成本`列中，从供应商订购的产品的复选框**未**被勾选，而落地成本产品的复选框**已**被勾选。这将落地成本与账单上显示的所有其他成本区分开来。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:111
+msgid ""
+"Additionally, at the top of the form, a :guilabel:`Create Landed Costs` "
+"button appears."
+msgstr "此外，在表单顶部会出现一个 :guilabel:`创建落地成本` 按钮。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst-1
+msgid "Create Landed Costs button on vendor bill."
+msgstr "在供应商账单上创建落地成本按钮。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:117
+msgid "Add landed cost"
+msgstr "添加落地成本"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:119
+msgid ""
+"Once a landed cost is added to the vendor bill, click :guilabel:`Create "
+"Landed Costs` at the top of the vendor bill."
+msgstr "将落地成本添加到供应商账单后，点击供应商账单顶部的 :guilabel:`创建落地成本`。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:122
+msgid ""
+"Doing so automatically creates a landed cost record, with a set landed cost "
+"pre-filled in the product line in the :guilabel:`Additional Costs` tab."
+msgstr "这样做会自动创建一个落地成本记录，并在 :guilabel:`额外费用` 选项卡的产品行中预填设定的落地成本。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:125
+msgid ""
+"From the :guilabel:`Landed Cost` form, click the :guilabel:`Transfers` drop-"
+"down menu, and select which transfer the landed cost belongs to."
+msgstr "在 :guilabel:`落地成本` 表格中，点击 :guilabel:`转账` 下拉菜单，选择落地成本属于哪项转账。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst-1
+msgid "Landed cost form with selected receipt transfer."
+msgstr "带选定收据转账的落地成本表。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:132
+msgid ""
+"In addition to creating landed costs directly from a vendor bill, landed "
+"cost records can *also* be created by navigating to "
+":menuselection:`Inventory app --> Operations --> Landed Costs`, and clicking"
+" :guilabel:`New`."
+msgstr ""
+"除了直接从供应商账单创建落地成本外，*还可*通过导航至 :menuselection:`库存应用程序 --> 操作 --> 落地成本`，然后点击 "
+":guilabel:`新建`，创建落地成本记录。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:136
+msgid ""
+"After setting the picking from the :guilabel:`Transfers` drop-down menu, "
+"click :guilabel:`Compute` (at the bottom of the form, under the "
+":guilabel:`Total:` cost)."
+msgstr ""
+"从 :guilabel:`转账` 下拉菜单中设置选择后，点击 :guilabel:`计算`（位于表格底部，在 :guilabel:`总计：`成本下）。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:139
+msgid ""
+"Click the :guilabel:`Valuation Adjustments` tab to see the impact of the "
+"landed costs. The :guilabel:`Original Value` column lists the original price"
+" of the |PO|, the :guilabel:`Additional Landed Cost` column displays the "
+"landed cost, and the :guilabel:`New Value` displays the sum of the two, for "
+"the total cost of the |PO|."
+msgstr ""
+"点击 :guilabel:`估值调整` 选项卡，查看到岸成本的影响。:guilabel:`原始价值`栏列出了 |PO| "
+"的原始价格，:guilabel:`额外到岸成本` 栏显示了到岸成本，:guilabel:`新价值`显示了两者的总和，即 |PO| 的总成本。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:144
+msgid ""
+"Once ready, click :guilabel:`Validate` to post the landed cost entry to the "
+"accounting journal."
+msgstr "准备就绪后，点击 :guilabel:`验证`，将到岸成本分录记入会计日记账。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:146
+msgid ""
+"This causes a :guilabel:`Valuation` smart button to appear at the top of the"
+" form. Click the :guilabel:`Valuation` smart button to open a "
+":guilabel:`Stock Valuation` page, with the product's updated valuation "
+"listed."
+msgstr ""
+"这样，表单顶部就会出现一个 :guilabel:`估值` 智能按钮。点击 :guilabel:`估值` 智能按钮打开 :guilabel:`库存估值` "
+"页面，其中列出了产品的最新估值。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:151
+msgid ""
+"For a :guilabel:`Valuation` smart button to appear upon validation, the "
+"product's :guilabel:`Product Type` **must** be set to :guilabel:`Storable`."
+msgstr ""
+"要在验证时显示 :guilabel:`估值` 智能按钮，产品的 :guilabel:`产品类型` **必须**设置为 :guilabel:`可存储`。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:154
+msgid ""
+"To view the valuation of *every* product, including landed costs, navigate "
+"to :menuselection:`Inventory app --> Reporting --> Valuation`."
+msgstr "要查看 *每个* 产品的估价（包括落地成本），请导航至 :menuselection:`库存应用程序 --> 报告 --> 估价`。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:158
+msgid ""
+"Each journal entry created for a landed cost on a vendor bill can be viewed "
+"in the *Accounting* app."
+msgstr "可以在 *会计* 应用程序中查看为供应商账单上的落地成本创建的每一条日记账分录。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:161
+msgid ""
+"To locate these journal entries, navigate to :menuselection:`Accounting app "
+"--> Accounting --> Journal Entries`, and locate the correct entry, by number"
+" (i.e. `PBNK1/2024/XXXXX`)."
+msgstr ""
+"要查找这些日记账分录，请导航至 :menuselection:`会计应用程序 --> 会计 --> 日记账分录`，然后按编号（即 "
+"`PBNK1/2024/XXXXX`）查找正确的分录。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:164
+msgid ""
+"Click into the journal entry to view the :guilabel:`Journal Items`, and "
+"other information about the entry."
+msgstr "点击日记账条目，查看 :guilabel:`日记账条目` 和有关条目的其他信息。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:0
+msgid "Journal Entry form for landed cost created from vendor bill."
+msgstr "根据供应商账单创建的到岸成本日记账表格。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation.rst:3
 msgid "Using inventory valuation"
@@ -18500,7 +18499,7 @@ msgstr "配置 Sendcloud 整合并接收证书。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:85
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:90
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:158
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:165
 msgid "Setup in Odoo"
 msgstr "设置Odoo"
 
@@ -20111,10 +20110,24 @@ msgid "Set up shipping method in Odoo"
 msgstr "在 Odoo 中设置运输方式"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:21
+msgid ""
+"When configuring a shipping method to use UPS, make sure the "
+":guilabel:`Provider` is set to :guilabel:`UPS`, **NOT** :guilabel:`UPS "
+"Legacy`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:24
+msgid ""
+"If shipping methods currently exist with the :guilabel:`Provider` set to "
+":guilabel:`UPS Legacy`, archive them, and create new shipping methods using "
+":guilabel:`UPS`, instead."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:28
 msgid "UPS account setup"
 msgstr "UPS 账户设置"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:23
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:30
 msgid ""
 "To get started, go to the `UPS website <https://www.ups.com>`_ and click the"
 " :guilabel:`Log In` button in the top-right corner to log in or create a UPS"
@@ -20123,7 +20136,7 @@ msgstr ""
 "要开始使用，请访问 UPS 网站 <https://www.ups.com>`_，点击右上角的 :guilabel:`登录` 按钮登录或创建 UPS "
 "帐户。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:26
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:33
 msgid ""
 "After logging in, click the profile icon in the top-right corner, and select"
 " :guilabel:`Accounts and Payment` from the drop-down menu."
@@ -20135,17 +20148,17 @@ msgid ""
 "screen."
 msgstr "演示如何从主屏幕导航到 “账户和付款” 页面。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:33
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:40
 msgid ""
 "On the :guilabel:`Accounts and Payment Options` page, two accounts must be "
 "configured: an Odoo shipment account and a payment card."
 msgstr "在 :guilabel:`账户和付款选项` 页面上，必须配置两个账户：Odoo 运输账户和付款卡。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:37
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:44
 msgid "Shipping account"
 msgstr "运输账户"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:39
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:46
 msgid ""
 "To add an Odoo shipment account, select :guilabel:`Add New Account` from the"
 " :guilabel:`Add a Payment Method` drop-down menu, and click :guilabel:`Add`."
@@ -20157,7 +20170,7 @@ msgstr ""
 msgid "Display \"Add an account\" option from the drop-down menu."
 msgstr "从下拉菜单中显示 “添加账户” 选项。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:46
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:53
 msgid ""
 "On the next screen, labeled :guilabel:`Open a Shipping Account`, complete "
 "the forms to configure the shipping account type (e.g. :guilabel:`Business`)"
@@ -20170,7 +20183,7 @@ msgstr ""
 ":guilabel:`商业`）以及是否要装运任何受管制物品。然后完成向导中剩余的三个步骤：:guilabel:`添加地址`、:guilabel:`验证身份`"
 " 和 :guilabel:`探索折扣`，最后一个选项为可选项。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:51
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:58
 msgid ""
 "When complete, submit the application on the last page of the wizard to "
 "finish setting up the shipping account."
@@ -20180,11 +20193,11 @@ msgstr "完成后，在向导的最后一页提交申请，以完成运输账户
 msgid "Display UPS form to fill out company shipping information."
 msgstr "显示 UPS 表格，填写公司运输信息。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:61
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:68
 msgid "Get account number"
 msgstr "获取账号"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:63
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:70
 msgid ""
 "With the shipping account set up, the UPS :guilabel:`Account Number` becomes"
 " available. To access it, navigate to :menuselection:`Profile --> Accounts "
@@ -20197,11 +20210,11 @@ msgstr ""
 msgid "Show Account \"Number\" field for the shipping account."
 msgstr "显示发货账户的账户 “编号” 字段。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:72
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:79
 msgid "Payment card"
 msgstr "支付卡"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:74
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:81
 msgid ""
 "Navigate back to the :guilabel:`Accounts and Payments` page and select the "
 ":guilabel:`Add Payment Card` option from the :guilabel:`Add a Payment "
@@ -20215,11 +20228,11 @@ msgstr ""
 msgid "Show \"Add Payment Card\" option from the drop-down."
 msgstr "从下拉菜单中显示 “添加支付卡” 选项。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:83
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:90
 msgid "UPS developer account setup"
 msgstr "UPS 开发者账户设置"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:85
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:92
 msgid ""
 "Next, log into the `UPS developer account <http://developer.ups.com/>`_ to "
 "generate the developer key. To begin, click the profile icon in the top-"
@@ -20235,11 +20248,11 @@ msgid ""
 "icon."
 msgstr "点击个人照片图标后，显示 “应用程序” 下拉选项。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:94
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:101
 msgid "Add app"
 msgstr "添加应用程序"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:96
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:103
 msgid ""
 "Then, click the :guilabel:`Add Apps` button to begin filling out the form. "
 "In the :guilabel:`I need API credentials because \\*` field, select "
@@ -20248,7 +20261,7 @@ msgstr ""
 "然后，点击 :guilabel:`添加应用程序` 按钮开始填写表格。在 :guilabel:`我需要 API 凭证，因为（*）` 字段，选择 "
 ":guilabel:`我想将 UPS 技术整合到我的业务中`。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:100
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:107
 msgid ""
 "Under the next label, :guilabel:`Choose an account to associate with these "
 "credentials. \\*`, select :guilabel:`Add existing account` from the drop-"
@@ -20264,17 +20277,17 @@ msgstr ""
 msgid "Show form to fill in the UPS account number."
 msgstr "显示填写 UPS 账号的表格。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:109
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:116
 msgid ""
 "Click :guilabel:`Next`, and proceed to the :guilabel:`Add App` form, and "
 "fill out the fields:"
 msgstr "点击 :guilabel:`下一步`，进入 :guilabel:`添加应用程序` 表单并填写字段："
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:111
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:118
 msgid ":guilabel:`App Name`: Type the name to identify the app by."
 msgstr ":guilabel:`应用程序名称`：键入用于标识应用程序的名称。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:112
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:119
 msgid ""
 ":guilabel:`Callback URL`: Type the URL of the Odoo database, in the format: "
 "`https://databaseName.odoo.com`. Do **not** include `www` in the URL."
@@ -20282,51 +20295,51 @@ msgstr ""
 ":guilabel:`回调 URL`：输入 Odoo 数据库的 URL，格式为 https://databaseName.odoo.com`。请勿在 "
 "URL 中包含 `www`。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:115
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:122
 msgid ""
 "In the :guilabel:`Add Products` section on the right, search for and click "
 "the :guilabel:`+ (plus)` icon to add the following products to the app:"
 msgstr "在右侧的 :guilabel:`添加产品` 部分，搜索并点击 :guilabel:`+ （加号）` 图标，将以下产品添加到应用程序中："
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:118
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:125
 msgid ""
 ":guilabel:`Authorization (O Auth)`: Used to generate the authorization token"
 " to request information from the UPS API."
 msgstr ":guilabel:`授权（O Auth）`：用于生成授权令牌，以便从 UPS API 请求信息。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:120
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:127
 msgid ""
 ":guilabel:`Address Validation`: Validates addresses at the street level in "
 "the United States and Puerto Rico."
 msgstr ":guilabel:`地址验证`：验证美国和波多黎各的街道地址。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:122
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:129
 msgid ""
 ":guilabel:`Locator`: Enables search for UPS shipping locations based on type"
 " and available services."
 msgstr ":guilabel:`定位器`：根据类型和可用服务搜索 UPS 运输地点。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:124
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:131
 msgid ""
 ":guilabel:`Paperless Documents`: Enables the upload of document images to "
 "link to shipments."
 msgstr ":guilabel:`无纸化文件`：允许上传文件图像以链接到货运。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:125
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:132
 msgid ""
 ":guilabel:`Shipping`: Enables UPS shipping services, such as preparing "
 "packages for shipment, managing returns, and cancelling scheduled shipments."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:127
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:134
 msgid ":guilabel:`Rating`: Compare delivery services and shipping rates."
 msgstr ":guilabel:`评级`：比较送货服务和运费。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:129
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:136
 msgid "Finally, click :guilabel:`Save` and accept UPS's terms and conditions."
 msgstr "最后，点击 :guilabel:`保存` 并接受 UPS 的条款和条件。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:132
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:139
 msgid "`UPS API Catalog <https://developer.ups.com/catalog?loc=en_US>`_"
 msgstr "`UPS API 目录 <https://developer.ups.com/catalog?loc=en_US>`_"
 
@@ -20334,11 +20347,11 @@ msgstr "`UPS API 目录 <https://developer.ups.com/catalog?loc=en_US>`_"
 msgid "Show \"Add Apps\" form, where the app details are configured."
 msgstr "显示 “添加应用程序” 表单，在此配置应用程序的详细信息。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:141
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:148
 msgid "Client ID and Client Secret"
 msgstr "客户端 ID 和客户端密钥"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:143
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:150
 msgid ""
 "With the new app created, in the :menuselection:`Profile --> My Apps --> "
 "App` page, select the app from the :guilabel:`Credentials` section to view "
@@ -20351,7 +20364,7 @@ msgstr ""
 msgid "Show newly created app in the \"My Apps\" section."
 msgstr "在 “我的应用程序” 部分显示新创建的应用程序。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:150
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:157
 msgid ""
 "In the :guilabel:`Credentials` section, copy the :guilabel:`Client ID` and "
 ":guilabel:`Client Secret` key."
@@ -20361,26 +20374,26 @@ msgstr "在 :guilabel:`凭证` 部分，复制 :guilabel:`客户 ID` 和 :guilab
 msgid "Display the \"Client ID\" and \"Client Secret\" key."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:160
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:167
 msgid ""
 "With the credentials obtained, configure the UPS shipping method in Odoo by "
 "going to :menuselection:`Inventory app --> Configuration --> Shipping "
 "Methods`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:163
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:170
 msgid ""
 "On the :guilabel:`Shipping Methods` page, click the :guilabel:`New` button."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:166
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:173
 msgid ""
 "For existing UPS shipping methods whose :guilabel:`Provider` is "
 ":guilabel:`UPS Legacy`, archive it and create a new shipping method using "
 ":guilabel:`UPS`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:169
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:176
 msgid ""
 "In the :guilabel:`Provider` field, select :guilabel:`UPS`. Doing so reveals "
 "the :guilabel:`UPS Configuration` tab, where various fields must be entered."
@@ -20389,56 +20402,56 @@ msgid ""
 "<third_party_shipper>` documentation."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:174
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:181
 msgid ""
 "In the :guilabel:`UPS Configuration` tab, complete the following fields:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:176
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:183
 msgid ""
 ":guilabel:`UPS Account Number`: (*required*) Get the :ref:`account number "
 "<inventory/shipping_receiving/ups-account-number>` from the UPS portal."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:178
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:185
 msgid ""
 ":guilabel:`UPS Client ID`: (*required*) Get the :ref:`Client ID "
 "<inventory/shipping_receiving/ups-client-id>` from the UPS developer "
 "website."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:180
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:187
 msgid ""
 ":guilabel:`UPS Client Secret`: (*required*) Get the :ref:`Client Secret "
 "<inventory/shipping_receiving/ups-client-id>` key from the UPS developer "
 "website."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:182
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:189
 msgid ""
 ":guilabel:`UPS Service Type`: Select from the drop-down menu the type of "
 "shipping service."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:183
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:190
 msgid ""
 ":guilabel:`UPS Package Type`: (*required*) Select from the drop-down menu "
 "the :doc:`package type <../../product_management/configure/package>` that is"
 " supported for the shipping service."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:185
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:192
 msgid ""
 ":guilabel:`Package Weight Unit`: The unit of measure for the package weight."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:186
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:193
 msgid ""
 ":guilabel:`Package Size Unit`: The unit of measure for the package "
 "dimensions."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:187
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:194
 msgid ""
 ":guilabel:`Label Format`: Choose the label format shipping labels: "
 ":guilabel:`PDF`, :guilabel:`ZPL`, :guilabel:`EPL`, or :guilabel:`SPL`."
@@ -20448,30 +20461,30 @@ msgstr ""
 msgid "Show the \"UPS Configuration\" tab on the Shipping Methods form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:194
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:201
 msgid ""
 "In the :guilabel:`Options` section, the following features are available:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:196
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:203
 msgid ""
 ":guilabel:`Bill My Account`: Charge the user's UPS account for shipping in "
 "the *eCommerce* app."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:197
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:204
 msgid ""
 ":guilabel:`Collect on Delivery`: Collect payment from customers for shipping"
 " after the shipment is delivered."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:199
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:206
 msgid ""
 ":guilabel:`Generate Return Label`: Print the return label for the order "
 "after the delivery order is validated."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:201
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:208
 msgid ""
 ":guilabel:`Duties paid by`: Select whether duties or other fees are charged "
 "to the :guilabel:`Sender` or :guilabel:`Recipient` of the order."
@@ -29434,19 +29447,19 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:11
 msgid ""
 "The ability to accurately calculate the cost of manufacturing a product is "
-"critical when determining product profitability. Odoo's *Manufacturing* app "
-"simplifies this calculation by automatically calculating the cost to "
+"critical when determining product profitability. Odoo's **Manufacturing** "
+"app simplifies this calculation by automatically calculating the cost to "
 "complete each manufacturing order (MO), as well as the average production "
 "cost of a product, based on all completed |MOs|."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:17
 msgid ""
-"Odoo's Manufacturing app distinguishes between the *manufacturing order "
-"cost* and the *real cost* of an |MO|."
+"Odoo's Manufacturing app distinguishes between the *MO cost* and the *real "
+"cost* of an |MO|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:20
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:19
 msgid ""
 "The |MO| cost represents how much it *should* cost to complete an |MO|, "
 "based on the configuration of the product's bill of materials (BoM). This "
@@ -29454,7 +29467,7 @@ msgid ""
 "of completing the necessary operations."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:24
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:23
 msgid ""
 "The real cost represents how much it *actually* costs to complete the |MO|. "
 "A few factors can cause the real cost to differ from the |MO| cost. For "
@@ -29463,16 +29476,17 @@ msgid ""
 "price of components may change during manufacturing."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:30
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:29
 msgid "Cost configuration"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:32
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:31
 msgid ""
 "Odoo computes |MO| costs based on the configuration of the |BoM| used to "
-"manufacture a product. This includes the cost and quantity of components and"
-" operations listed on the |BoM|, in addition to the operating costs of the "
-"work centers where those operations are carried out."
+"manufacture a product. This calculation includes the cost and quantity of "
+"components and operations listed on the |BoM|, in addition to the operating "
+"costs of the work centers where those operations are carried out, and the "
+"amount paid to each employee who works on an operation."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:37
@@ -29492,77 +29506,94 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:44
 msgid ""
 "It is possible to set the cost of a component manually, by clicking the "
-":guilabel:`Cost` field on the component's product form, and entering a "
-"value. However, any future |POs| for the component override a value entered "
-"manually, resetting the :guilabel:`Cost` field back to an automatically "
+":guilabel:`Cost` field on the component's product form and entering a value."
+" However, any future |POs| for the component override a manually entered "
+"value, resetting the :guilabel:`Cost` field back to an automatically "
 "computed value."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:50
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:52
 msgid "Work center cost"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:52
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:54
 msgid ""
 "To set the operating cost for a specific work center, navigate to "
 ":menuselection:`Manufacturing app --> Configuration --> Work Centers`, and "
 "select a work center."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:55
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:57
 msgid ""
-"To set the operating cost for the work center, as a whole, enter a value in "
+"To set the cost of operating the work center for one hour, enter a value in "
 "the :guilabel:`per workcenter` field, located beside the :guilabel:`Cost per"
-" hour` section on the work center's :guilabel:`General Information` tab. "
-"This operating cost is used regardless of how many employees are working at "
-"the work center at any given time."
+" hour` section on the work center's :guilabel:`General Information` tab."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:60
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:61
 msgid ""
-"To set the operating cost for the work center based on the number of "
-"employees working there at a given time, enter a value in the :guilabel:`per"
-" employee` field, located beside the :guilabel:`Cost per hour` section on "
-"the work center's :guilabel:`General Information` tab. For example, if "
-"`25.00` is entered in the :guilabel:`per employee` field, it costs $25.00 "
-"per hour for *each* employee working at the work center."
+"To set the hourly cost of each employee that operates the work center, enter"
+" a value in the :guilabel:`per employee` field, located beside the "
+":guilabel:`Cost per hour` section on the work center's :guilabel:`General "
+"Information` tab. For example, if `25.00` is entered in the :guilabel:`per "
+"employee` field, it costs $25.00 per hour for *each* employee working at the"
+" work center."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:66
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:68
 msgid ""
-"Note that, if values are entered in both the :guilabel:`per workcenter` "
-"*and* :guilabel:`per employee` fields, the value in the :guilabel:`per "
-"workcenter` field takes precedence, and the value in the :guilabel:`per "
-"employee` field is ignored."
+"The value entered in the :guilabel:`per employee` field is only used to "
+"calculate the |MO| cost, which is the estimated cost of completing the |MO|."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:71
 msgid ""
-"It is also possible to set a per hour cost for specific employees, by "
-"navigating to the :menuselection:`Employees` app, selecting an employee, "
-"clicking the :guilabel:`HR Settings` tab on their employee form, and "
-"entering a value in the :guilabel:`Hourly Cost` field."
+"The actual cost of completing the |MO| is represented by the real cost. "
+"Instead of using the value entered in the :guilabel:`per employee` field, "
+"the real cost is calculated using the hourly cost specific to each employee."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:75
 msgid ""
-"Just like the *per workcenter* field on a work center form, the "
-":guilabel:`Hourly Cost` field on an employee's form overrides the *per "
-"employee* field on a work center form."
+"For example, if the :guilabel:`per employee` cost of a work center is "
+"'$50.00', and an employee with an hourly cost of '$60.00' completes a work "
+"order there, the |MO| cost (estimated) is calculated using the $50/hr cost, "
+"while the real cost is calculated using the $60/hr cost."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:78
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:79
 msgid ""
-"However, the *per workcenter* field takes precedence over both the *per "
-"employee* field on the workcenter form *and* the :guilabel:`Hourly Cost` "
-"field on the employee form."
+"See the :ref:`employee cost section <manufacturing/mo-costs/employee-cost>` "
+"below for information on how to set the cost for specific employees."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:82
-msgid "|BoM| cost"
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:85
+msgid "Employee cost"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:84
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:87
+msgid ""
+"To set the hourly cost for a specific employee, navigate to the "
+":menuselection:`Employees` app, and select an employee. On the employee's "
+"form, select the :guilabel:`Settings` tab, and enter the employee's rate in "
+"the :guilabel:`Hourly Cost` field of the :guilabel:`Application Settings` "
+"section."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:93
+msgid ""
+"As detailed in the :ref:`work center cost section <manufacturing/mo-"
+"costs/work-center-cost>` above, the value entered in the :guilabel:`Hourly "
+"Cost` field on the employee's form is used to calculate the real cost of an "
+"|MO|. The estimated cost of an |MO|, referred to as the |MO| cost, uses the "
+"per employee cost set on each work center's form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:99
+msgid "|BoM| configuration"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:101
 msgid ""
 "Configuring a |BoM| so Odoo can accurately calculate the cost of |MOs| that "
 "use it requires two steps. First, components **must** be added, and the "
@@ -29570,14 +29601,14 @@ msgid ""
 "with the work centers where they are carried out."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:88
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:105
 msgid ""
 "Begin by navigating to :menuselection:`Manufacturing app --> Products --> "
 "Bills of Materials`. Select a |BoM|, or create a new one by clicking "
 ":guilabel:`New`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:91
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:108
 msgid ""
 "In the :guilabel:`Components` tab of the |BoM| form, add each component by "
 "clicking :guilabel:`Add a line`, selecting the component from the drop-down "
@@ -29585,21 +29616,21 @@ msgid ""
 ":guilabel:`Quantity` column."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:95
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:112
 msgid ""
 "In the :guilabel:`Operations` tab, add an operation by clicking "
 ":guilabel:`Add a line` to open the :guilabel:`Create Operations` pop-up "
 "window. Enter a title for the operation in the :guilabel:`Operation` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:99
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:116
 msgid ""
 "Select the :guilabel:`Work Center` where the operation is carried out. Then,"
 " add a :guilabel:`Default Duration`, which is the estimated amount of time "
 "the operation takes to complete."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:102
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:119
 msgid ""
 "By default, the :guilabel:`Duration Computation` field is set to "
 ":guilabel:`Set duration manually`, which means that the number entered in "
@@ -29607,22 +29638,22 @@ msgid ""
 "of the operation."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:106
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:123
 msgid ""
 "Selecting :guilabel:`Compute based on tracked time` causes Odoo to "
-"automatically compute the default duration based on a certain number of work"
-" orders, which is set in the :guilabel:`Based on` field. Before there are "
-"work orders to compute this duration, the value in the :guilabel:`Default "
-"Duration` field is used instead."
+"automatically compute the :guilabel:`Default Duration` based on a certain "
+"number of work orders, which is set in the :guilabel:`Based on` field. "
+"Before there are work orders to compute this duration, the value in the "
+":guilabel:`Default Duration` field is used instead."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:111
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:128
 msgid ""
 "The hourly cost of operating the work center, and the duration of the "
 "operation, are used to calculate the operation's cost."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:114
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:131
 msgid ""
 "Finally, click :guilabel:`Save & Close` to add the operation to the |BoM|, "
 "and close the :guilabel:`Create Operations` pop-up window. Alternatively, "
@@ -29630,17 +29661,17 @@ msgid ""
 "blank :guilabel:`Create Operations` pop-up window to add another operation."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:120
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:137
 msgid ""
 "For a full overview of |BoM| configuration, see the documentation on "
 ":doc:`bills of materials <bill_configuration>`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:124
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:141
 msgid "|MO| overview"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:126
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:143
 msgid ""
 "Each |MO| has an *overview* page, which lists a variety of information about"
 " the |MO|, including |MO| cost and real cost. To view the overview for an "
@@ -29649,7 +29680,7 @@ msgid ""
 ":guilabel:`Overview` smart button at the top of the |MO|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:131
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:148
 msgid ""
 "Both the |MO| cost and real cost take into account the cost and quantity of "
 "components, as well as the cost of completing each work order. The overview "
@@ -29657,22 +29688,24 @@ msgid ""
 "the bottom of the :guilabel:`MO Cost` and :guilabel:`Real Cost` columns."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:135
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:152
 msgid ""
 "Before work begins on an |MO|, the :guilabel:`MO Cost` and :guilabel:`Real "
 "Cost` columns display the same costs. This is the *estimated* cost of "
 "completing the |MO|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:138
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:155
 msgid ""
 "However, once work commences, the values in the :guilabel:`Real Cost` column"
 " may begin to diverge from the values in the :guilabel:`MO Cost` column. "
 "This happens if a different component quantity is used than was listed on "
-"the |MO|, or if the duration of a work order is different than expected."
+"the |MO|, the duration of a work order is different than expected, or the "
+"hourly cost of the employee performing a work order differs from the "
+"employee cost set on the work center."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:142
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:161
 msgid ""
 "Once the |MO| has been completed by clicking :guilabel:`Produce All`, the "
 "values in the :guilabel:`MO Cost` column update to match those displayed in "
@@ -29683,11 +29716,11 @@ msgstr ""
 msgid "The MO Overview page."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:150
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:169
 msgid "Average manufacturing cost"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:152
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:171
 msgid ""
 "In addition to the cost of each individual |MO| for a product, Odoo also "
 "tracks the average cost of manufacturing the product, taking into account "
@@ -29696,7 +29729,7 @@ msgid ""
 "product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:156
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:175
 msgid ""
 "The manufacturing cost of the product is displayed per unit of measure in "
 "the :guilabel:`Cost` field, located in the :guilabel:`General Information` "
@@ -29704,7 +29737,7 @@ msgid ""
 "factored into the average cost."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:160
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:179
 msgid ""
 "To the right of the :guilabel:`Cost` field is a :guilabel:`Compute Price "
 "from BoM` button, which only appears for products with at least one |BoM|. "
@@ -29713,18 +29746,18 @@ msgid ""
 "|BoM|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:167
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:186
 msgid ""
 "Be aware that clicking :guilabel:`Compute Price from BoM` does not set the "
 "price permanently. The cost continues to update based on the average of the "
 "|BoM| price and the real cost of any future |MOs|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:171
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:190
 msgid "Example workflow: manufacturing cost"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:174
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:193
 msgid ""
 "Golf product manufacturer *Fairway Fields* produces a variety of golf "
 "products, including an indoor *putting green*. They have configured a |BoM| "
@@ -29732,48 +29765,48 @@ msgid ""
 "cost of each putting green |MO|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:178
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:197
 msgid "The |BoM| lists two components:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:180
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:199
 msgid "One unit of *green felt*, which costs $20.00."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:181
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:200
 msgid "One unit of a *rubber pad*, which costs $30.00."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:183
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:202
 msgid ""
 "The |BoM| also lists four operations, all of which are carried out at "
 "*Assembly Station 1*, which has an hourly operating cost of $30.00. Those "
 "operations are as follows:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:186
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:205
 msgid ""
 "*Cut felt*: default duration of seven minutes, for a total cost of $3.50."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:187
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:206
 msgid ""
 "*Cut rubber pad*: default duration of five minutes, for a total cost of "
 "$2.50."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:188
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:207
 msgid ""
 "*Attach pad to felt*: default duration of 15 minutes, for a total cost of "
 "$7.50."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:189
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:208
 msgid ""
 "*Cut holes*: default duration of three minutes, for a total cost of $1.50."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:191
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:210
 msgid ""
 "Altogether, the components required to produce one putting green cost "
 "$50.00, and the operations required cost $15.00, for a total manufacturing "
@@ -29781,7 +29814,7 @@ msgid ""
 "putting green's product form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:195
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:214
 msgid ""
 "Fairway Fields confirms an |MO| for one putting green. Before manufacturing "
 "starts, the |MO| overview lists a cost of `$65.00` in both the :guilabel:`MO"
@@ -29792,7 +29825,7 @@ msgstr ""
 msgid "The MO Overview page for one putting green, before production starts."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:203
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:222
 msgid ""
 "Manufacturing begins, and the operations take ten minutes longer than "
 "expected, for a total manufacturing time of 40 minutes. This deviation from "
@@ -29804,14 +29837,14 @@ msgstr ""
 msgid "The MO Overview page for one putting green, during production."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:211
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:230
 msgid ""
 "Once manufacturing is finished, and the |MO| is marked as *Done*, the |MO| "
 "overview updates again, so the values in the :guilabel:`MO Cost` and "
 ":guilabel:`Real Cost` columns match, each displaying a value of `$70.00`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:215
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:234
 msgid ""
 "On the putting green's product page, the :guilabel:`Cost` field now displays"
 " a cost of `$67.50`, the average of the original cost of $65.00 and the real"
@@ -43364,130 +43397,130 @@ msgid ""
 ":guilabel:`Operations` field, a new field appears below it, titled "
 ":guilabel:`Work Order Operation`. From this field, select a specific work "
 "order to generate quality checks for that operation, rather than the "
-"manufacturing operation in general."
+"manufacturing operation, in general."
 msgstr ""
-"如果在 :guilabel:`操作` 字段中选择了 :guilabel:`制造`操作，则其下方会出现一个新字段，标题为 "
-":guilabel:`工单操作`。从该字段中选择特定工单，为该操作而非一般制造操作生成质量检查。"
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:47
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:48
 msgid ""
-"For example, a |QCP| could be configured to create quality checks for the "
-"`Assembly` work order of the `Coffee Table` product. Then, if a new |MO| is "
-"confirmed for a `Coffee Table`, the |QCP| creates a quality check "
-"specifically for the `Assembly` operation."
+"A |QCP| could be configured to create quality checks for the `Assembly` work"
+" order of the `Coffee Table` product. Then, if a new |MO| is confirmed for a"
+" `Coffee Table`, the |QCP| creates a quality check specifically for the "
+"`Assembly` operation."
 msgstr ""
-"例如，可以配置一个 "
-"|QCP|，用于为`咖啡桌`产品的`组装`工单创建质量检查。然后，如果为`咖啡桌`确认了一个新的制造订单，该质量控制点将专门为`组装`操作创建一个质量检查。"
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:51
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:52
 msgid ""
 "The :guilabel:`Control Per` field is set to one of three options that "
 "determine *when* a new quality check is created:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:54
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:55
 msgid ""
-":guilabel:`Operation`: one check is requested for the specified operation, "
+":guilabel:`Operation`: One check is requested for the specified operation, "
 "as a whole."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:55
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:56
 msgid ""
-":guilabel:`Product`: one check is requested for each *unique* product "
+":guilabel:`Product`: One check is requested for each *unique* product "
 "included in the specified operation. For example, a delivery operation for "
 "one table and four chairs would generate two checks, since two *unique* "
 "products are included in the operation."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:58
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:59
 msgid ""
-":guilabel:`Quantity`: a check is requested for a certain percentage of items"
+":guilabel:`Quantity`: A check is requested for a certain percentage of items"
 " within the specified operation. This percentage is set by enabling the "
 ":guilabel:`Partial Transfer Test` checkbox, and then entering a numerical "
 "value in the :guilabel:`Percentage` field that appears below. If the "
 "checkbox is not enabled, one quality check is created for the full quantity."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:63
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:64
 msgid ""
 "The :guilabel:`Control Frequency` field is set to one of three options that "
 "determine *how often* a new quality check is created:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:66
-msgid ""
-":guilabel:`All`: a quality check is requested every time the conditions of "
-"the |QCP| are met."
-msgstr ":guilabel:`全部`：每次满足 |QCP| 条件时都会请求质量检查。"
-
 #: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:67
 msgid ""
-":guilabel:`Randomly`: a quality check is randomly requested for a certain "
-"percentage of operations, which can be specified in the :guilabel:`Every #% "
-"of Transfers` field that appears below."
-msgstr ":guilabel:`随机`：对一定比例的操作随机请求质量检查，可在下面显示的 :guilabel:`每 #% 的转账` 字段中指定。"
+":guilabel:`All`: A quality check is requested every time the conditions of "
+"the |QCP| are met."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:70
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:68
 msgid ""
-":guilabel:`Periodically`: a quality check is requested once every set period"
+":guilabel:`Randomly`: A quality check is randomly requested for a certain "
+"percentage of operations, which can be specified in the :guilabel:`Every #% "
+"of Operations` field that appears below."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:71
+msgid ""
+":guilabel:`Periodically`: A quality check is requested once every set period"
 " of time, which is specified by entering a numerical value in the field "
 "below, and choosing either :guilabel:`Days`, :guilabel:`Weeks`, or "
 ":guilabel:`Months` as the desired time interval."
 msgstr ""
-":guilabel:`定期`：要求每隔一段时间进行一次质量检查，具体方法是在下面的字段中输入数值，并选择 "
-":guilabel:`日`、:guilabel:`周`或 :guilabel:` 月`作为所需的时间间隔。"
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:74
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:75
 msgid ""
 "In the :guilabel:`Type` field, specify the type of quality check that should"
 " be performed. The method for processing quality checks created by the |QCP|"
 " depends upon the type of quality check selected:"
 msgstr "在 :guilabel:`类型` 字段中，指定应执行的质量检查类型。处理由 |QCP| 创建的质量检查的方法，取决于所选的质量检查类型："
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:78
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:79
 msgid ""
 ":guilabel:`Instructions` checks provide specific instructions for how to "
 "complete the quality check."
 msgstr ":guilabel:`说明` 检查提供如何完成质量检查的具体说明。"
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:80
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:81
 msgid ""
 ":guilabel:`Take a Picture` checks require a picture of the product be "
 "uploaded for later review by the assigned quality team."
 msgstr ":guilabel:`拍照` 检查要求上传产品图片，供指定的品控小组稍后审查。"
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:82
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:83
 msgid ""
 ":guilabel:`Register Production` checks prompt manufacturing employees to "
 "confirm the quantity of the product that was produced during the "
 "manufacturing operation."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:84
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:85
 msgid ""
 ":guilabel:`Pass - Fail` checks specify a criterion that products must meet "
 "for the check to pass."
 msgstr ":guilabel:`通过 - 未通过` 检查指定一个标准，产品必须满足该标准才能通过检查。"
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:85
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:86
 msgid ""
 ":guilabel:`Measure` checks prompt employees to record a measurement of the "
 "product that must be within a tolerance of a norm value for the check to "
 "pass."
 msgstr ":guilabel:`测量`检查提示员工记录产品的测量值，测量值必须在标准值的公差范围内，检查才能通过。"
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:87
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:88
 msgid ""
-":guilabel:`Worksheet` checks provide an interactive worksheet that must be "
-"filled out by the employee processing the check."
-msgstr ":guilabel:`工作表` 支票提供一个交互式工作表，必须由处理支票的员工填写。"
+":guilabel:`Worksheet` checks require the employee processing the check to "
+"fill out an interactive worksheet."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:91
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:90
+msgid ""
+":guilabel:`Spreadsheet` checks require the employee processing the check to "
+"fill out an interactive spreadsheet."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:94
 msgid ""
 "An *Instructions* check is the same as a step on a work order for an MO."
 msgstr "*指令*检查与 MO 工单上的步骤相同。"
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:93
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:96
 msgid ""
 "When a step is added to a work order, Odoo stores it in the Quality app as a"
 " |QCP|. It is possible to manually create a |QCP| with the *Instructions* "
@@ -43497,13 +43530,34 @@ msgstr ""
 "当在工单中添加一个步骤时，Odoo 会将其作为 |QCP| "
 "储存在质量应用程序中。可以手动创建*说明*检查类型的|QCP|，甚至可以将其分配给制造以外的操作，如收据。"
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:97
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:100
 msgid ""
 "However, when creating a control point specifically for quality control "
 "purposes, using a different check type is probably more effective."
 msgstr "不过，在创建专门用于质量控制的控制点时，使用不同的检查类型可能更有效。"
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:100
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:104
+msgid ""
+"When creating a |QCP| with the :guilabel:`Worksheet` or "
+":guilabel:`Spreadsheet` check types, it is necessary to specify a *Quality "
+"Worksheet Template* or *Quality Spreadsheet Template* in the "
+":guilabel:`Template` field that appears below the :guilabel:`Type` field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:108
+msgid ""
+"The selected template is duplicated for each quality check created by the "
+"|QCP|, and **must** be filled out to complete the quality check."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:111
+msgid ""
+"To create a new template, navigate to :menuselection:`Quality app --> "
+"Configuration --> Quality Worksheet/Spreadsheet Templates`, and click "
+":guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:114
 msgid ""
 "In the :guilabel:`Team` field, specify the quality team that is responsible "
 "for managing the |QCP|, and the quality checks it creates. If a specific "
@@ -43513,14 +43567,14 @@ msgstr ""
 "在 :guilabel:`团队` 字段中，指定负责管理 |QCP| 及其创建的质量检查的质量团队。如果特定质量小组成员负责 |QCP| ，请在 "
 ":guilabel:`负责人` 字段中选择他们。"
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:104
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:118
 msgid ""
 "The :guilabel:`Step Document` field has two options that specify the "
 "location of an instructional document detailing how to complete the quality "
 "checks created by the |QCP|."
 msgstr "在 :guilabel:`步骤文档` 字段中有两个选项，用于指定指导文档的位置，详细说明如何完成由 |QCP| 创建的质量检查。"
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:107
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:121
 msgid ""
 "Select :guilabel:`Specific Page of Operation Worksheet` if the document is "
 "included with the instructional worksheet for the work order, then enter the"
@@ -43529,19 +43583,19 @@ msgstr ""
 "如果文档包含在工单的说明工作表中，请选择 :guilabel:`操作工作表的特定页码`，然后在下面显示的 "
 ":guilabel:`工作表页码`字段中输入页码。"
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:111
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:125
 msgid ""
 "Select :guilabel:`Custom` if the document should be included in the "
 ":guilabel:`Instructions` tab at the bottom of the |QCP|."
 msgstr "如果文件应包含在 |QCP| 底部的 :guilabel:`说明` 选项卡中，请选择 :guilabel:`定制`。"
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:114
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:128
 msgid ""
 "In the :guilabel:`Instructions` tab at the bottom of the form, enter "
 "instructions for how to complete the quality checks created by the |QCP|."
 msgstr "在表格底部的 :guilabel:`说明` 选项卡中，输入如何完成 |QCP| 创建的质量检查的说明。"
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:117
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:131
 msgid ""
 "If the :guilabel:`Custom` option was selected in the :guilabel:`Step "
 "Document` field above, a document can be attached in this tab. To do so, "
@@ -43553,14 +43607,14 @@ msgstr ""
 ":guilabel:`上传文件` 按钮打开设备的文件管理器，然后选择文件，或在 :guilabel:`Google 幻灯片链接` 字段中添加 "
 "Google 幻灯片文档的链接。"
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:122
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:136
 msgid ""
 "In the :guilabel:`Message If Failure` tab, include instructions for what to "
 "do if the quality check fails. For example, instruct the employee processing"
 " the quality check to create a :doc:`quality alert <quality_alerts>`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:126
+#: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_control_points.rst:140
 msgid ""
 "The :guilabel:`Notes` tab is used to provide additional information about "
 "the |QCP|, like the reason it was created. The information entered in this "
