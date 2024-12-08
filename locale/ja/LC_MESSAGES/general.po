@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-21 07:41+0000\n"
+"POT-Creation-Date: 2024-12-02 09:51+0000\n"
 "PO-Revision-Date: 2022-10-04 12:53+0000\n"
 "Last-Translator: Junko Augias, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/odoo/teams/41243/ja/)\n"
@@ -1842,9 +1842,9 @@ msgid ""
 "Xbox)`."
 msgstr ""
 "次に、トップメニューの :guilabel:`追加 (+)` をクリックし、:guilabel:`アプリ登録` "
-"を選択します。:guilabel:`アプリケーションの登録`画面で、 :guilabel:`名前` を `Odoo` "
-"などのわかりやすい名前に変更します。:guilabel:`サポートされるアカウントの種類`セクションで、:guilabel:`組織ディレクトリ(Microsoft"
-" Entra IDディレクトリ - マルチテナント)内のアカウント`とMicrosoft個人アカウント(例：Skype、Xbox)`を選択します。"
+"を選択します。:guilabel:`アプリケーションの登録` 画面で、 :guilabel:`名前` を `Odoo` "
+"などのわかりやすい名前に変更します。:guilabel:`サポートされているアカウントの種類`セクションで、:guilabel:`組織ディレクトリ(Microsoft"
+" Entra IDディレクトリ - マルチテナント)内のアカウント` とMicrosoft個人アカウント(例：Skype、Xbox)` を選択します。"
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:36
 msgid ""
@@ -1887,17 +1887,17 @@ msgid ""
 ":guilabel:`Commonly Used Microsoft APIs`. After, select the "
 ":guilabel:`Delegated Permissions` option."
 msgstr ""
-"次に :guilabel:`API許可` を設定します。Microsoft "
-"365のセットアップでEメールの読み込み(IMAP)と送信(SMTP)を行うには、Odooに特定のAPI許可が必要です。まず、左のメニューバーにある "
-":guilabel:`API許可` リンクをクリックします。次に、:guilabel:`(+)許可を追加` "
+"次に :guilabel:`API権限` を設定します。Microsoft "
+"365のセットアップでEメールの読み込み(IMAP)と送信(SMTP)を行うには、Odooに特定のAPI権限が必要です。まず、左のメニューバーにある "
+":guilabel:`API権限` リンクをクリックします。次に、:guilabel:`(+)権限を追加` "
 "ボタンをクリックし、:guilabel:`よく使われるMicrosoft API`の下にある :guilabel:`Microsoft Graph` "
-"を選択します。その後、 :guilabel:`委任されたアクセス許可` オプションを選択します。"
+"を選択します。その後、 :guilabel:`委任されたアクセス権限` オプションを選択します。"
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:55
 msgid ""
 "In the search bar, search for the following :guilabel:`Delegated "
 "permissions` and click :guilabel:`Add permissions` for each one:"
-msgstr "検索バーで以下の :guilabel:`委任アクセス許可` を検索し、それぞれ :guilabel:`許可を追加` をクリックします:"
+msgstr "検索バーで以下の :guilabel:`委任アクセス権限` を検索し、それぞれ :guilabel:`権限を追加` をクリックします:"
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:58
 msgid ":guilabel:`SMTP.Send`"
@@ -1915,7 +1915,7 @@ msgstr ":guilabel:`User.Read` 許可がデフォルトで追加されます。"
 msgid ""
 "API permissions needed for Odoo integration are listed under the Microsoft "
 "Graph."
-msgstr "Odooインテグレーションに必要なAPIパーミッションはMicrosoft Graphの下に記載されています。"
+msgstr "Odoo統合に必要なAPI権限はMicrosoft Graphの下に記載されています。"
 
 #: ../../content/applications/general/email_communication/azure_oauth.rst:69
 msgid "Assign users and groups"
@@ -4931,9 +4931,9 @@ msgstr "Odoo送信メールサーバ設定。"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:198
 msgid ""
-"In order for the notifications feature to work using Mailjet, there are "
-"three settings that need to be set in Odoo."
-msgstr "Mailjetを使用して通知機能を有効にするには、Odooで3つの設定を行う必要があります。"
+"For the notifications feature to work using Mailjet, with a custom domain, "
+"the following settings need to be configured:"
+msgstr ""
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:201
 msgid ""
@@ -4954,27 +4954,46 @@ msgstr ""
 #: ../../content/applications/general/email_communication/mailjet_api.rst:207
 msgid ""
 "The :guilabel:`mail.default.from_filter` system parameter must have the "
-"value `yourdomain.com`. Replace `yourdomain` with the custom domain for the "
-"Odoo database. If there isn't one, then use the "
-":guilabel:`mail.catchall.domain` system parameter."
+"value `yourdomain.com`. Replace `yourdomain` with the custom domain."
 msgstr ""
-":guilabel:`mail.default.from_filter`システムパラメータは `yourdomain.com`. Replace "
-"`yourdomain` をOdooデータベース用のカスタムドメインとして持つ必要があります。ない場合には "
-":guilabel:`mail.catchall.domain` システムパラメータを使用して下さい。"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:211
+#: ../../content/applications/general/email_communication/mailjet_api.rst:210
+msgid ""
+"If utilizing a database domain, and **not** a custom domain, the following "
+"settings need to be configured:"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/mailjet_api.rst:213
+msgid ""
+"The :guilabel:`From Filter` needs to be set on the server configuration. It "
+"should match the domain in the two proceeding steps."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/mailjet_api.rst:215
+msgid ""
+"The :guilabel:`mail.default.from` system parameter must have the value "
+"`notifications`."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/mailjet_api.rst:216
+msgid ""
+"The :guilabel:`mail.default.from_filter` system parameter must have the "
+"value `yourdomain.odoo.com`."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/mailjet_api.rst:219
 msgid ""
 "For more information see :ref:`Using a default email address "
 "<email_communication/default>`."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:213
+#: ../../content/applications/general/email_communication/mailjet_api.rst:221
 msgid ""
 "The :guilabel:`System Parameters` can be accessed by activating the "
 ":ref:`developer mode <developer-mode>`."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:216
+#: ../../content/applications/general/email_communication/mailjet_api.rst:224
 msgid ""
 "Once the setup is complete, the Odoo database is ready to use the Mailjet "
 "email server for mass mailing or transactional emails!"
@@ -9985,6 +10004,7 @@ msgid ""
 ":doc:`POS Order Printing "
 "<../../../sales/point_of_sale/restaurant/kitchen_printing>`"
 msgstr ""
+":doc:`POSオーダ印刷 <../../../sales/point_of_sale/restaurant/kitchen_printing>`"
 
 #: ../../content/applications/general/iot/devices/printer.rst:119
 msgid ""
@@ -9997,7 +10017,7 @@ msgstr ""
 
 #: ../../content/applications/general/iot/devices/scale.rst:3
 msgid "Connect a scale"
-msgstr ""
+msgstr "秤を接続する"
 
 #: ../../content/applications/general/iot/devices/scale.rst:5
 msgid ""
@@ -10006,6 +10026,8 @@ msgid ""
 "be used to weigh products, which is helpful if their prices are calculated "
 "based on weight."
 msgstr ""
+"秤は、Odooデータベース上の:abbr:`IoT (モノのインターネット)` Boxに、簡単なステップで接続できます。 セットアップ後、*POS* "
+"アプリはプロダクトの計量に使用でき、価格が重量に基づいて計算される場合に役立ちます。"
 
 #: ../../content/applications/general/iot/devices/scale.rst:10
 msgid ""
@@ -10014,6 +10036,8 @@ msgid ""
 "content/EN/TXT/?uri=uriserv%3AOJ.L_.2014.096.01.0107.01.ENG>`_ to use a "
 "scale as an integrated device."
 msgstr ""
+"EU加盟国においては、統合デバイスとして秤を使用するためには `法的に認証が必要です <https://eur-lex.europa.eu/legal-"
+"content/EN/TXT/?uri=uriserv%3AOJ.L_.2014.096.01.0107.01.ENG>`_ "
 
 #: ../../content/applications/general/iot/devices/scale.rst:12
 msgid ""
@@ -10021,6 +10045,7 @@ msgid ""
 "Switzerland. If you reside in one of these countries, you can still use a "
 "scale but without integration to your Odoo database."
 msgstr ""
+"Odooはフランス、ドイツ、スイスを含むいくつかの国では認証されていません。これらの国にお住まいの場合、Odooデータベースに統合せずに、秤を使用することができます。"
 
 #: ../../content/applications/general/iot/devices/scale.rst:15
 msgid ""
@@ -10028,6 +10053,8 @@ msgid ""
 "scale that prints certified labels, which can then be scanned into your Odoo"
 " database."
 msgstr ""
+"あるいは、認証ラベルを印刷できる*統合されていない* "
+"認証済の秤を入手し、そのラベルをスキャンしてOdooデータベースに取り込むというオプションもあります。"
 
 #: ../../content/applications/general/iot/devices/scale.rst:19
 msgid ""
@@ -10035,18 +10062,23 @@ msgid ""
 "lex.europa.eu/legal-"
 "content/EN/TXT/?uri=uriserv%3AOJ.L_.2014.096.01.0107.01.ENG>`_"
 msgstr ""
+"`欧州指令 2014/31/EU <https://eur-lex.europa.eu/legal-"
+"content/EN/TXT/?uri=uriserv%3AOJ.L_.2014.096.01.0107.01.ENG>`_"
 
 #: ../../content/applications/general/iot/devices/scale.rst:24
 msgid ""
 "To link the scale to the :abbr:`IoT (Internet of Things)` box, connect it "
 "with a :abbr:`USB (Universal Serial Bus)` cable."
 msgstr ""
+"秤を :abbr:`IoT (モノのインターネット)` Box に接続するには :abbr:`USB (Universal Serial Bus)` "
+"ケーブルを使用して接続します。"
 
 #: ../../content/applications/general/iot/devices/scale.rst:28
 msgid ""
 "In some cases, a serial port to :abbr:`USB (Universal Serial Bus)` adapter "
 "may be needed."
 msgstr ""
+"場合によっては、シリアルポートを :abbr:`USB (Universal Serial Bus)` アダプタに接続する必要があるかもしれません。"
 
 #: ../../content/applications/general/iot/devices/scale.rst:30
 msgid ""
@@ -10055,10 +10087,12 @@ msgid ""
 "anything because it will be automatically detected as soon as it is "
 "connected."
 msgstr ""
+"秤が `Odoo IoT Boxと互換性がある場合 <https://www.odoo.com/page/iot-hardware>`_, "
+"接続すると自動的に検出されるため、設定は不要です。"
 
 #: ../../content/applications/general/iot/devices/scale.rst-1
 msgid "IOT box auto detection."
-msgstr ""
+msgstr "IOT Box自動検知"
 
 #: ../../content/applications/general/iot/devices/scale.rst:37
 msgid ""
@@ -10068,10 +10102,14 @@ msgid ""
 "and click on :guilabel:`Drivers List`. Then, click on :guilabel:`Load "
 "Drivers`."
 msgstr ""
+"IoT (モノのインターネット) "
+"Boxを再起動する必要がある場合や、場合によっては、スケールのドライバをBoxにダウンロードする必要がある場合があります。ドライバを更新するには、IoT"
+" (モノのインターネット) Boxのホームページにアクセスし、:guilabel:`ドライバ一覧` "
+"をクリックします。次に、:guilabel:`ドライバをロード` をクリックします。"
 
 #: ../../content/applications/general/iot/devices/scale.rst-1
 msgid "View of the IoT box settings and driver list."
-msgstr ""
+msgstr "IoT Boxの設定とドライバーリストビュー"
 
 #: ../../content/applications/general/iot/devices/scale.rst:46
 msgid ""
@@ -10079,10 +10117,12 @@ msgid ""
 " be that the scale is not compatible with the Odoo :abbr:`IoT (Internet of "
 "Things)` box. In this case, a different scale will need to be used."
 msgstr ""
+"ドライバをロードしてもまだ秤が機能しない場合は、その秤が Odoo :abbr:`IoT (モノのインターネット)` "
+"Boxと互換性がない可能性があります。この場合、別の秤を使用する必要があります。"
 
 #: ../../content/applications/general/iot/devices/scale.rst:51
 msgid "Use a scale in a point of sale (POS) system"
-msgstr ""
+msgstr "POSシステムに秤を使用する"
 
 #: ../../content/applications/general/iot/devices/scale.rst:53
 msgid ""
@@ -10091,16 +10131,20 @@ msgid ""
 "(Internet of Things)` box feature. After this is complete, the scale device "
 "can be set."
 msgstr ""
+"To use the scale in the *POSアプリ* で秤を使用するには、 :menuselection:`POSアプリ --> "
+"PoSの３ドッドメニュー -->設定` に行き、:abbr:`IoT (モノのインターネット)` "
+"Box機能を有効にします。これが完了したら、秤デバイスを設定することができます。"
 
 #: ../../content/applications/general/iot/devices/scale.rst:57
 msgid ""
 "Select the scale from the :guilabel:`Electronic Scale` drop-down menu. Then "
 "click :guilabel:`Save` to save the changes, if required."
 msgstr ""
+":guilabel:`電子秤` ドロップダウンメニューから秤を選択します。必要に応じて、:guilabel:`保存` をクリックして変更を保存します。"
 
 #: ../../content/applications/general/iot/devices/scale.rst-1
 msgid "List of the external tools that can be used with PoS and the IoT box."
-msgstr ""
+msgstr "PoSとIoT Boxで使用できる外部ツールの一覧"
 
 #: ../../content/applications/general/iot/devices/scale.rst:64
 msgid ""
@@ -10109,14 +10153,17 @@ msgid ""
 ":guilabel:`PoS` screen opens the scale screen, where the cashier can weigh "
 "the product and add the correct price to the cart."
 msgstr ""
+"この秤は現在、全ての :abbr:`PoS (販売時点管理)` セッションで利用可能です。 "
+"プロダクトに重量ごとの価格が設定されている場合、:guilabel:`PoS` "
+"画面でそのプロダクトをクリックすると、秤の画面が開き、そこでレジ係がプロダクトの重量を量り、正しい価格をカートに追加することができます。"
 
 #: ../../content/applications/general/iot/devices/scale.rst-1
 msgid "Electronic Scale dashboard view when no items are being weighed."
-msgstr ""
+msgstr "電子秤のダッシュボードビュー(計量中のアイテムがない場合)"
 
 #: ../../content/applications/general/iot/devices/screen.rst:3
 msgid "Connect a screen"
-msgstr ""
+msgstr "画面を接続する"
 
 #: ../../content/applications/general/iot/devices/screen.rst:5
 msgid ""
@@ -10124,10 +10171,11 @@ msgid ""
 "screen display. After being configured, the screen can be used to display a "
 "Point of Sale (PoS) order to a client."
 msgstr ""
+"Odooでは、IoT(モノのインターネット)Boxをスクリーンに接続することができます。設定後、そのスクリーンは顧客へのPOS(販売時点情報管理)オーダの表示に使用することができます。"
 
 #: ../../content/applications/general/iot/devices/screen.rst:10
 msgid "An example of a PoS (point of sale) order on a screen display."
-msgstr ""
+msgstr "スクリーンディスプレイのPOS(販売時点情報管理)オーダの例。"
 
 #: ../../content/applications/general/iot/devices/screen.rst:12
 msgid ""
@@ -10137,16 +10185,20 @@ msgid ""
 ":menuselection:`IoT app --> IoT Boxes` and click on the :abbr:`IoT (Internet"
 " of Things)` box homepage link."
 msgstr ""
+"顧客ディスプレイにアクセスするには、:abbr:`IoT (モノのインターネット)` Box "
+"のホームページに移動し、:guilabel:`PoSディスプレイ` ボタンをクリックします。 :abbr:`IoT (モノのインターネット)` "
+"Boxのホームページに移動するには、:menuselection:`IoTアプリ --> IoT Box` に移動し、:abbr:`IoT "
+"(モノのインターネット)`  Boxのホームページのリンクをクリックします。"
 
 #: ../../content/applications/general/iot/devices/screen.rst:20
 msgid ""
 "The way to connect the screen display to the :abbr:`IoT (Internet of "
 "Things)` box differs depending on the model."
-msgstr ""
+msgstr "スクリーンディスプレイを :abbr:`IoT (モノのインターネット)` Boxに接続する方法は、機種によって異なります。"
 
 #: ../../content/applications/general/iot/devices/screen.rst:25
 msgid "IoT Box model 4"
-msgstr ""
+msgstr "IoT Box モデル 4"
 
 #: ../../content/applications/general/iot/devices/screen.rst:27
 msgid ""
@@ -10154,20 +10206,23 @@ msgid ""
 ":abbr:`IoT (Internet of Things)` box. If two screens are connected, they can"
 " display distinct content (see :ref:`Screen Usage <iot/usage_screen>`)."
 msgstr ""
+":abbr:`IoT (モノのインターネット)` Boxの側面にあるmicro-"
+"HDMIケーブルで、最大2つのスクリーンを接続できます。2つのスクリーンを接続した場合、それぞれ異なるコンテンツを表示できます "
+"(:ref:`スクリーン使用 <iot/usage_screen>`を参照して下さい)。"
 
 #: ../../content/applications/general/iot/devices/screen.rst:31
 msgid "IoT Box model 3"
-msgstr ""
+msgstr "IoT Box モデル 3"
 
 #: ../../content/applications/general/iot/devices/screen.rst:33
 msgid ""
 "Connect the screen with an HDMI cable on the side of the :abbr:`IoT "
 "(Internet of Things)` box."
-msgstr ""
+msgstr ":abbr:`IoT (モノのインターネット)` Boxの側面のHDMIケーブルでスクリーンを接続します。"
 
 #: ../../content/applications/general/iot/devices/screen.rst:36
 msgid ":ref:`See the Raspberry Pi Schema <iot/connect_schema>`."
-msgstr ""
+msgstr ":ref:`Raspberry Pi スキーマを見る <iot/connect_schema>`."
 
 #: ../../content/applications/general/iot/devices/screen.rst:39
 msgid ""
@@ -10176,6 +10231,9 @@ msgid ""
 "restart the :abbr:`IoT (Internet of Things)` box by unplugging it for ten "
 "seconds and plugging it back into its power source."
 msgstr ""
+" :abbr:`IoT (モノのインターネット)` "
+"Boxの電源を入れる前に、スクリーンを接続して下さい。すでに電源が入っている場合は、スクリーンを接続し、:abbr:`IoT (モノのインターネット)`"
+" ボックスの電源を切ってから10秒後に電源を入れ直して下さい。"
 
 #: ../../content/applications/general/iot/devices/screen.rst:44
 msgid ""
@@ -10183,18 +10241,23 @@ msgid ""
 "a blank, black screen on the screen display. Using the specific cable for "
 "the display connection is recommended."
 msgstr ""
+"HDMI/micro-"
+"HDMIアダプターを使用すると、画面表示が真っ黒または真っ白になる問題が発生する場合があります。ディスプレイの接続には、専用のケーブルを使用することをお勧めします。"
 
 #: ../../content/applications/general/iot/devices/screen.rst:47
 msgid ""
 "If the connection was successful, the screen should display the "
 ":guilabel:`POS Client display` screen."
-msgstr ""
+msgstr "接続に成功した場合、:guilabel:`POS顧客ディスプレイ` 画面が表示されます。"
 
 #: ../../content/applications/general/iot/devices/screen.rst-1
 msgid ""
 "The default \"POS Client Display\" screen that appears when a screen display is successfully\n"
 "connected to an IoT box."
 msgstr ""
+"スクリーンディスプレイが正常にIoT Boxに接続されると\n"
+"表示されるデフォルト \"POS顧客ディスプレイ\" \n"
+"スクリーン"
 
 #: ../../content/applications/general/iot/devices/screen.rst:55
 msgid ""
@@ -10202,10 +10265,12 @@ msgid ""
 ":abbr:`IoT (Internet of Things)` box homepage. Alternatively, the display "
 "can be seen by accessing :menuselection:`IoT app --> Devices`."
 msgstr ""
+"また、このスクリーンは、 :abbr:`IoT (モノのインターネット)` Boxのホームページの :guilabel:`ディスプレイ` "
+"のリストにも表示されます。 あるいは、:menuselection:`IoTアプリ --> デバイス` にアクセスしても表示できます。"
 
 #: ../../content/applications/general/iot/devices/screen.rst-1
 msgid "An example of a screen display name shown on the IoT Box Home Page."
-msgstr ""
+msgstr "IoT Box ホームページに表示されるスクリーンディスプレイ名の例"
 
 #: ../../content/applications/general/iot/devices/screen.rst:64
 msgid ""
@@ -10213,10 +10278,12 @@ msgid ""
 "Display` will be displayed instead. This indicates that there is no hardware"
 " screen connected."
 msgstr ""
+"スクリーンが検出されない場合は、代わりにデフォルトのディスプレイ :guilabel:`遠隔ディスプレイ` "
+"が表示されます。これは、ハードウェアスクリーンが接続されていないことを示しています。"
 
 #: ../../content/applications/general/iot/devices/screen.rst:0
 msgid "The \"Distant Display\" screen name will be used if no screen is detected."
-msgstr ""
+msgstr "画面が検出されない場合は、\"遠隔ディスプレイ\" という画面名が使用されます。"
 
 #: ../../content/applications/general/iot/devices/screen.rst:74
 msgid "Usage"
@@ -10224,7 +10291,7 @@ msgstr "用途"
 
 #: ../../content/applications/general/iot/devices/screen.rst:77
 msgid "Show Point of Sale orders to customers"
-msgstr ""
+msgstr "POSオーダを顧客に表示する"
 
 #: ../../content/applications/general/iot/devices/screen.rst:79
 msgid ""
@@ -10233,16 +10300,20 @@ msgid ""
 "Sale)`, click :guilabel:`Edit` if necessary, and enable the :guilabel:`IoT "
 "Box` feature."
 msgstr ""
+"*POSアプリ* のスクリーンを使用するには、次の手順に従います。:menuselection:`POS --> 設定 --> POS` "
+"を選択し、:abbr:`PoS (販売時点管理)` を選択し、必要に応じて :guilabel:`編集` をクリックし、:guilabel:`IoT "
+"Box` 機能を有効にします。"
 
 #: ../../content/applications/general/iot/devices/screen.rst:83
 msgid ""
 "Next, select the screen from the :guilabel:`Customer Display` drop-down "
 "menu. Then click :guilabel:`Save`, if required."
 msgstr ""
+"次に、:guilabel:`顧客ディスプレイ`ドロップダウンメニューから画面を選択します。必要に応じて、:guilabel:`保存`をクリックします。"
 
 #: ../../content/applications/general/iot/devices/screen.rst-1
 msgid "Connect the screen display to the Point of Sale app."
-msgstr ""
+msgstr "スクリーンディスプレイをPOSアプリに接続します。"
 
 #: ../../content/applications/general/iot/devices/screen.rst:90
 msgid ""
@@ -10250,26 +10321,30 @@ msgid ""
 "screen icon will appear in the menu at the top of the screen to indicate the"
 " screen's connection status."
 msgstr ""
+"このスクリーンが、:abbr:`PoS(販売時点管理)` "
+"セッションで利用できるようになりました。スクリーンの接続状態を示すアイコンが、画面上部のメニューに表示されます。"
 
 #: ../../content/applications/general/iot/devices/screen.rst-1
 msgid ""
 "The \"screen\" icon on the Point of Sale display shows the connection status with the\n"
 "screen."
 msgstr ""
+"POS ディスプレイの \"スクリーン\" アイコンは、スクリーンとの接続状態\n"
+"を示します。"
 
 #: ../../content/applications/general/iot/devices/screen.rst:98
 msgid ""
 "The screen will automatically show the :abbr:`PoS (Point of Sale)` orders "
 "and update when changes are made to the order."
-msgstr ""
+msgstr "画面には自動的に :abbr:`PoS (販売時点管理)` のオーダが表示され、オーダに変更が加えられると更新されます。"
 
 #: ../../content/applications/general/iot/devices/screen.rst-1
 msgid "An example of a PoS order on a screen display."
-msgstr ""
+msgstr "スクリーンディスプレイのPoSオーダの例"
 
 #: ../../content/applications/general/iot/devices/screen.rst:106
 msgid "Display a website on the screen"
-msgstr ""
+msgstr "ウェブサイトをスクリーンに表示する"
 
 #: ../../content/applications/general/iot/devices/screen.rst:108
 msgid ""
@@ -10277,6 +10352,9 @@ msgid ""
 "--> Customer Display`. This allows the user to choose a particular website "
 "URL to display on the screen using the :guilabel:`Display URL` field."
 msgstr ""
+":menuselection:`IoT アプリ --> デバイス --> 顧客ディスプレイ` "
+"にアクセスして、画面フォームを表示します。これにより、ユーザは :guilabel:`ディスプレイ URL` "
+"フィールドを使用して、画面に表示する特定のウェブサイト URL を選択できるようになります。"
 
 #: ../../content/applications/general/users.rst:5
 #: ../../content/applications/general/users/access_rights.rst:32
@@ -10290,26 +10368,28 @@ msgid ""
 "restrict the type of information each user can access, rules can be applied "
 "to each user. Users and access rights can be added and changed at any point."
 msgstr ""
+"Odooでは、データベースにアクセスできる人を *ユーザ* "
+"と定義しています。管理者は、会社が必要とする数のユーザを追加でき、各ユーザがアクセスできる情報の種類を制限するために、各ユーザに規則を適用することができます。ユーザとアクセス権はいつでも追加・変更が可能です。"
 
 #: ../../content/applications/general/users.rst:12
 msgid ":doc:`users/language`"
-msgstr ""
+msgstr ":doc:`users/language`"
 
 #: ../../content/applications/general/users.rst:13
 msgid ":doc:`users/access_rights`"
-msgstr ""
+msgstr ":doc:`users/access_rights`"
 
 #: ../../content/applications/general/users.rst:14
 msgid ":ref:`access-rights/superuser`"
-msgstr ""
+msgstr ":ref:`access-rights/superuser`"
 
 #: ../../content/applications/general/users.rst:15
 msgid ":ref:`access-rights/groups`"
-msgstr ""
+msgstr ":ref:`access-rights/groups`"
 
 #: ../../content/applications/general/users.rst:20
 msgid "Add individual users"
-msgstr ""
+msgstr "個別ユーザを追加する"
 
 #: ../../content/applications/general/users.rst:22
 msgid ""
@@ -10319,7 +10399,7 @@ msgstr ""
 
 #: ../../content/applications/general/users.rst-1
 msgid "View of the settings page emphasizing the manage users field in Odoo."
-msgstr ""
+msgstr "Odooのユーザ管理フィールドを強調した設定ページビュー"
 
 #: ../../content/applications/general/users.rst:29
 msgid ""
@@ -10327,16 +10407,18 @@ msgid ""
 "Rights <users/access_rights>` tab, choose the group within each application "
 "the user can have access to."
 msgstr ""
+"フォームに必要事項を全て入力します。 :doc:`アクセス権 <users/access_rights>` "
+"タブで、ユーザがアクセスできる各アプリケーション内のグループを選択します。"
 
 #: ../../content/applications/general/users.rst:32
 msgid ""
 "The list of applications shown is based on the applications installed on the"
 " database."
-msgstr ""
+msgstr "表示されるアプリケーションのリストは、データベースにインストールされているアプリケーションを基にしています。"
 
 #: ../../content/applications/general/users.rst-1
 msgid "View of a user's form emphasizing the access rights tab in Odoo."
-msgstr ""
+msgstr "Odooのアクセス権タブを強調したユーザフォームビュー"
 
 #: ../../content/applications/general/users.rst:38
 msgid ""
@@ -10351,7 +10433,7 @@ msgstr ""
 msgid ""
 "View of a user's form with a notification that the invitation email has been"
 " sent in Odoo."
-msgstr ""
+msgstr "Odooで招待メールが送信されたことを通知するユーザフォームビュー"
 
 #: ../../content/applications/general/users.rst:48
 msgid ""
@@ -10362,10 +10444,14 @@ msgid ""
 "Alternatively, `send a support ticket <https://www.odoo.com/help>`_ to "
 "resolve the issue."
 msgstr ""
+"会社が月次サブスクリプションプランを利用している場合、追加されたユーザを反映してデータベースが自動的に更新されます。 "
+"会社が年次または複数年プランを利用している場合、データベースに使用期限のバナーが表示されます。 "
+"サブスクリプションを更新するには、このバナーをクリックしてアップセルの見積を作成します。 または、`サポートチケットを送信 "
+"<https://www.odoo.com/help>`_ して問題を解決します。"
 
 #: ../../content/applications/general/users.rst:55
 msgid "User type"
-msgstr ""
+msgstr "ユーザタイプ"
 
 #: ../../content/applications/general/users.rst:57
 msgid ""
@@ -10379,13 +10465,13 @@ msgstr ""
 msgid ""
 "There are three types of users: :guilabel:`Internal User`, "
 ":guilabel:`Portal`, and :guilabel:`Public`."
-msgstr ""
+msgstr "ユーザには、:guilabel:`内部ユーザ`、:guilabel:`ポータル`、:guilabel:`パブリック` の3種類があります。"
 
 #: ../../content/applications/general/users.rst-1
 msgid ""
 "View of a user's form in developer mode emphasizing the user type field in "
 "Odoo."
-msgstr ""
+msgstr "Odooの開発者モードで、ユーザータイプフィールドを強調したユーザフォームの表示。"
 
 #: ../../content/applications/general/users.rst:69
 msgid ""
@@ -10393,10 +10479,12 @@ msgid ""
 "users, who only have access to the database portal to view records. See the "
 "documentation on :doc:`users/portal`."
 msgstr ""
+"ユーザは内部データベースユーザとみなされます。ポータルユーザは外部ユーザであり、レコードを表示するためにデータベースポータルにのみアクセスできます。:doc:`users/portal`"
+" のドキュメンテーションを参照して下さい。"
 
 #: ../../content/applications/general/users.rst:72
 msgid "Public users are those visiting websites, via the website's frontend."
-msgstr ""
+msgstr "パブリックユーザとは、ウェブサイトのフロントエンドを通じてウェブサイトを訪問するユーザを指します。"
 
 #: ../../content/applications/general/users.rst:74
 msgid ""
@@ -10405,10 +10493,13 @@ msgid ""
 "rights pre-set (such as, record rules and restricted menus), and usually do "
 "not belong to the usual Odoo groups."
 msgstr ""
+":guilabel:`ポータル` および :guilabel:`パブリック` ユーザオプションでは、管理者はアクセス権を選択 "
+"**できません**。これらのユーザには特定のアクセス権が事前に設定されており例えば、規則の記録や制限付きメニューなど）、通常は通常の Odoo "
+"グループには属していません。"
 
 #: ../../content/applications/general/users.rst:81
 msgid "Deactivate users"
-msgstr ""
+msgstr "ユーザを無効化する"
 
 #: ../../content/applications/general/users.rst:83
 msgid ""
@@ -10416,6 +10507,8 @@ msgid ""
 "app --> Users section --> Manage Users`. Then, tick the checkbox to the left"
 " of the user(s) to be deactivated."
 msgstr ""
+"ユーザを無効化(アーカイブ)するには、:menuselection:`設定アプリ --> ユーザセクション --> ユーザ管理` "
+"に移動します。次に、非アクティブ化するユーザの左にあるチェックボックスにチェックを入れます。"
 
 #: ../../content/applications/general/users.rst:86
 msgid ""
@@ -10424,6 +10517,9 @@ msgid ""
 "menu. Then, click :guilabel:`OK` from the :guilabel:`Confirmation` pop-up "
 "window that appears."
 msgstr ""
+"アーカイブする適切なユーザを選択した後、:guilabel:`⚙️ アクション` アイコンをクリックし、表示されるドロップダウンメニューから "
+":guilabel:`アーカイブ` を選択します。次に、表示される :guilabel:`確認` ポップアップウィンドウから "
+":guilabel:`OK` をクリックします。"
 
 #: ../../content/applications/general/users.rst:91
 msgid ""
@@ -10433,30 +10529,35 @@ msgid ""
 "to the access rights. For this reason, Odoo recommends contacting an Odoo "
 "Business Analyst, or our Support Team, before making changes."
 msgstr ""
+"メイン/管理者ユーザ(アドミン) を無効化することは、**絶対に** "
+"しないで下さい。管理者ユーザに変更を加えると、データベースに悪影響を及ぼす可能性があります。これには、*無効な管理者* "
+"(データベース内のどのユーザもアクセス権に変更を加えることができない状態) "
+"も含まれます。このため、Odooでは変更を加える前に、Odooビジネスアナリストまたはサポートチームに連絡先することを推奨しています。"
 
 #: ../../content/applications/general/users.rst:97
 msgid "Error: too many users"
-msgstr ""
+msgstr "エラー: ユーザが多すぎます"
 
 #: ../../content/applications/general/users.rst:99
 msgid ""
 "If there are more users in an Odoo database than provisioned in the Odoo "
 "Enterprise subscription, the following message is displayed."
-msgstr ""
+msgstr "Odooデータベース内のユーザ数がOdoo企業版サブスクリプションで規定された数を超える場合、次のメッセージが表示されます。"
 
 #: ../../content/applications/general/users.rst-1
 msgid "Too many users on a database error message."
-msgstr ""
+msgstr "データベース上のユーザーが多すぎる場合のエラーメッセージ"
 
 #: ../../content/applications/general/users.rst:106
 msgid ""
 "When the message appears, the database administrator has 30 days to act "
 "before the database expires. The countdown is updated every day."
 msgstr ""
+"このメッセージが表示された場合、データベース管理者はデータベースが期限切れになる前に30日以内に対策を講じる必要があります。カウントダウンは毎日更新されます。"
 
 #: ../../content/applications/general/users.rst:109
 msgid "To resolve the issue, either:"
-msgstr ""
+msgstr "問題を解決するには次から選択して下さい;"
 
 #: ../../content/applications/general/users.rst:111
 msgid ""
@@ -10464,11 +10565,13 @@ msgid ""
 "subscription` link displayed in the message to validate the upsell "
 "quotation, and pay for the extra users."
 msgstr ""
+"メッセージに表示されている :guilabel:`サブスクリプションをアップグレード` "
+"リンクをクリックして、アップセルの見積を検証し、追加ユーザ分の料金を支払い、サブスクリプションにユーザを追加します。"
 
 #: ../../content/applications/general/users.rst:113
 msgid ""
 ":ref:`Deactivate users <users/deactivate>`, and reject the upsell quotation."
-msgstr ""
+msgstr ":ref:`ユーザを無効化 <users/deactivate>` し、アップセル見積を却下します。"
 
 #: ../../content/applications/general/users.rst:116
 msgid ""
@@ -10479,17 +10582,21 @@ msgid ""
 "Alternatively, users can `send a support ticket "
 "<https://www.odoo.com/help>`_ to resolve the issue."
 msgstr ""
+"会社が月次サブスクリプションプランを利用している場合、追加されたユーザを反映してデータベースが自動的に更新されます。 "
+"会社が年次または複数年プランを利用している場合、データベースに使用期限のバナーが表示されます。 "
+"サブスクリプションを更新するには、このバナーをクリックしてアップセルの見積を作成します。 あるいは、ユーザは `サポートチケット "
+"<https://www.odoo.com/help>`_ を送信して問題を解決することもできます。"
 
 #: ../../content/applications/general/users.rst:122
 msgid ""
 "Once the database has the correct number of users, the expiration message "
 "disappears automatically after a few days, when the next verification "
 "occurs."
-msgstr ""
+msgstr "データベースに適切な数のユーザが登録されると、次の認証が行われる数日後に、使用期限切れメッセージは自動的に消えます。"
 
 #: ../../content/applications/general/users.rst:128
 msgid "Password management"
-msgstr ""
+msgstr "パスワード管理"
 
 #: ../../content/applications/general/users.rst:130
 msgid ""
@@ -10497,6 +10604,7 @@ msgid ""
 " to the database at all times. Odoo offers a few different methods to reset "
 "a user's password."
 msgstr ""
+"パスワード管理は、ユーザが常にデータベースに自律的にアクセスできるようにする上で重要な要素です。Odooでは、ユーザのパスワードをリセットするいくつかの異なる方法を提供しています。"
 
 #: ../../content/applications/general/users.rst:134
 msgid ""
@@ -10505,16 +10613,19 @@ msgid ""
 "Permissions` section, and entering the desired password length in the "
 ":guilabel:`Minimum Password Length` field. By default the value is `8`."
 msgstr ""
+"Odooには、パスワードに必要な長さを指定する設定があります。この設定は、:menuselection:`設定アプリ --> 権限` "
+"セクションに移動し、:guilabel:`パスワードの最小文字数`フィールドに希望するパスワードの長さを入力することでアクセスできます。デフォルトの値は"
+" `8` です。"
 
 #: ../../content/applications/general/users.rst-1
 msgid ""
 "Minimum Password Length highlighted in the Permissions section of General "
 "Settings."
-msgstr ""
+msgstr "一般設定の権限セクションでハイライト表示されるパスワードの最小文字数"
 
 #: ../../content/applications/general/users.rst:145
 msgid "Reset password"
-msgstr ""
+msgstr "パスワードのリセット"
 
 #: ../../content/applications/general/users.rst:147
 msgid ""
@@ -10523,10 +10634,11 @@ msgid ""
 " two different reset options: one initiated by the user to reset the "
 "password, and another where the administrator triggers a reset."
 msgstr ""
+"セキュリティ強化のため、ユーザが個人的なパスワードをリセットして、パスワードへのアクセスを自分だけに限定したい場合もあります。Odooでは、2つの異なるリセットオプションを提供しています。1つはユーザがパスワードをリセットするもので、もう1つは管理者がリセットをトリガするものです。"
 
 #: ../../content/applications/general/users.rst:154
 msgid "Enable password reset from login page"
-msgstr ""
+msgstr "ログインページからパスワードのリセットを可能にする"
 
 #: ../../content/applications/general/users.rst:156
 msgid ""
@@ -10534,6 +10646,7 @@ msgid ""
 "page. This action is completed by the individual user, and this setting is "
 "enabled by default."
 msgstr ""
+"ログインページから直接、パスワードのリセットを有効/無効にすることができます。この操作は個々のユーザによって行われ、この設定はデフォルトで有効になっています。"
 
 #: ../../content/applications/general/users.rst:159
 msgid ""
@@ -10541,24 +10654,28 @@ msgid ""
 "section, activate :guilabel:`Password Reset`, and then click "
 ":guilabel:`Save`."
 msgstr ""
+"この設定を変更するには :menuselection:`設定アプリ --> 権限` セクションから :guilabel:`パスワードリセット` "
+"に行き、:guilabel:`保存` をクリックして下さい。"
 
 #: ../../content/applications/general/users.rst-1
 msgid "Enabling Password Reset in Odoo Settings"
-msgstr ""
+msgstr "Odooの設定でパスワードのリセットを有効にする"
 
 #: ../../content/applications/general/users.rst:166
 msgid ""
 "On the login page, click :guilabel:`Reset Password` to initiate the password"
 " reset process, and have a reset-token sent to the email on file."
 msgstr ""
+"ログインページで、:guilabel:`パスワードのリセット` "
+"をクリックしてパスワードのリセットプロセスを開始し、登録済みのEメールにリセットトークンを送信します。"
 
 #: ../../content/applications/general/users.rst-1
 msgid "Login screen on Odoo.com with the password reset option highlighted."
-msgstr ""
+msgstr "Odoo.comのログイン画面でのパスワードのリセットオプションのハイライト表示"
 
 #: ../../content/applications/general/users.rst:176
 msgid "Send reset instructions"
-msgstr ""
+msgstr "リセット手順の送信"
 
 #: ../../content/applications/general/users.rst:178
 msgid ""
@@ -10567,6 +10684,8 @@ msgid ""
 "Instructions` on the user form. An email is automatically sent to them with "
 "password reset instructions."
 msgstr ""
+":menuselection:`設定アプリ --> ユーザと会社 --> ユーザ` に移動し、リストからユーザを選択し、ユーザフォームの "
+":guilabel:`パスワードリセット手順の送信` をクリックします。パスワードリセット手順が記載されたEメールが自動的に送信されます。"
 
 #: ../../content/applications/general/users.rst:183
 msgid ""
@@ -10574,20 +10693,23 @@ msgid ""
 "the Odoo invitation email has already been confirmed by the user. Otherwise,"
 " a :guilabel:`Re-send Invitation Email` button appears."
 msgstr ""
+"Odooからの招待Eメールがすでにユーザによって承認されている場合のみ、:guilabel:`パスワードリセット手順の送信` ボタンが表示されます。 "
+"それ以外の場合は、:guilabel:`招待Eメールの再送` ボタンが表示されます。"
 
 #: ../../content/applications/general/users.rst:187
 msgid ""
 "This email contains all the instructions needed to reset the password, along"
 " with a link redirecting the user to an Odoo login page."
 msgstr ""
+"このEメールには、パスワードをリセットするために必要な全ての指示と、Odooのログインページにユーザをリダイレクトするリンクが含まれています。"
 
 #: ../../content/applications/general/users.rst-1
 msgid "Example of an email with a password reset link for an Odoo account."
-msgstr ""
+msgstr "Odooアカウントのパスワードリセットリンク付きEメールの例"
 
 #: ../../content/applications/general/users.rst:197
 msgid "Change user password"
-msgstr ""
+msgstr "ユーザパスワード変更"
 
 #: ../../content/applications/general/users.rst:199
 msgid ""
@@ -10598,16 +10720,21 @@ msgid ""
 ":guilabel:`Change Password` pop-up window that appears, and confirm the "
 "change by clicking :guilabel:`Change Password`."
 msgstr ""
+" :menuselection:`設定アプリ --> ユーザ & 会社 --> "
+"ユーザ`に移動し、フォームにアクセスするユーザを選択します。:guilabel:`⚙️ アクション`  "
+"アイコンをクリックし、表示されるドロップダウンメニューから :guilabel:`パスワード変更` を選択します。表示される "
+":guilabel:`パスワード変更` ポップアップウィンドウの :guilabel:`新規パスワード` "
+"列に新しいパスワードを入力し、:guilabel:`パスワード変更` をクリックして変更を確定します。"
 
 #: ../../content/applications/general/users.rst-1
 msgid "Change a user's password on Odoo."
-msgstr ""
+msgstr "Odooでユーザのパスワードを変更します。"
 
 #: ../../content/applications/general/users.rst:210
 msgid ""
 "This operation only modifies the password of the users locally, and does "
 "**not** affect their odoo.com account."
-msgstr ""
+msgstr "このオペレーションはユーザのパスワードをローカルで変更するだけで、Odoo.comのアカウントには影響しません。"
 
 #: ../../content/applications/general/users.rst:213
 msgid ""
@@ -10616,6 +10743,8 @@ msgid ""
 "passwords grant access to the *My Databases* page, and other portal "
 "features."
 msgstr ""
+"Odoo.comのパスワードを変更する必要がある場合は、:ref:`パスワードリセット手順の送信 <users/reset-password-"
+"email>` を使用して下さい。 Odoo.comのパスワードは、*データベース*ページやその他のポータル機能へのアクセスを許可します。"
 
 #: ../../content/applications/general/users.rst:217
 msgid ""
@@ -10623,6 +10752,8 @@ msgid ""
 "Odoo login page where the database can be re-accessed using the new "
 "password."
 msgstr ""
+":guilabel:`パスワード変更` "
+"をクリックすると、ページはOdooのログインページにリダイレクトされ、新しいパスワードを使用してデータベースに再アクセスできるようになります。"
 
 #: ../../content/applications/general/users.rst:223
 msgid "Multi Companies"
@@ -10644,6 +10775,8 @@ msgid ""
 "the fields labeled :guilabel:`Allowed Companies` and :guilabel:`Default "
 "Company`."
 msgstr ""
+":guilabel:`アクセス権` タブの :guilabel:`複数会社` の下で、:guilabel:`許可された会社` および "
+":guilabel:`デフォルト会社` とラベル付けされたフィールドを設定します。"
 
 #: ../../content/applications/general/users.rst:233
 msgid ""
@@ -10653,6 +10786,9 @@ msgid ""
 "defaults to, upon logging in each time. This field can contain only **one** "
 "company."
 msgstr ""
+":guilabel:`許可された会社` フィールドには複数の会社名を記入できます。 "
+"これらは、設定されたアクセス権に従って、ユーザがアクセスおよび編集できる会社です。 :guilabel:`デフォルト会社` "
+"は、ユーザが毎回ログインした際にデフォルトで表示される会社です。 このフィールドには、1社のみ記入できます。"
 
 #: ../../content/applications/general/users.rst:239
 msgid ""
@@ -10662,14 +10798,16 @@ msgid ""
 "multi-company configuration. For technical explanations, refer to the "
 "developer documentation on :doc:`../../../developer/howtos/company`."
 msgstr ""
+"複数会社アクセスが正しく設定されていない場合、複数会社の動作に一貫性がなくなる可能性があります。このため、複数会社設定のデータベースのユーザのアクセス権を変更する場合は、Odooの経験豊富なユーザのみが行うべきです。技術設定については、:doc:`../../../developer/howtos/company`"
+" の開発者向けドキュメンテーションを参照して下さい。"
 
 #: ../../content/applications/general/users.rst-1
 msgid "View of a user's form emphasizing the multi companies field in Odoo."
-msgstr ""
+msgstr "Odooの複数会社フィールドを強調したユーザフォームビュー"
 
 #: ../../content/applications/general/users.rst:249
 msgid ":doc:`companies`"
-msgstr ""
+msgstr ":doc:`会社`"
 
 #: ../../content/applications/general/users/2fa.rst:3
 msgid "Two-factor Authentication"
@@ -10792,7 +10930,7 @@ msgstr ""
 
 #: ../../content/applications/general/users/2fa.rst:107
 msgid "Logging in"
-msgstr ""
+msgstr "ログイン"
 
 #: ../../content/applications/general/users/2fa.rst:109
 msgid "You should now :guilabel:`Log out` to follow along."
@@ -10837,10 +10975,12 @@ msgid ""
 "who need them ensures that users do not modify or delete anything they "
 "should not have access to."
 msgstr ""
+"*アクセス権* "
+"とは、ユーザがアクセスおよび編集できるコンテンツやアプリケーションを決定する権限です。Odooでは、これらの権限を個々のユーザまたはユーザグループに対して設定することができます。必要なユーザのみに権限を限定することで、アクセス権のないユーザが変更や削除を行わないようにすることができます。"
 
 #: ../../content/applications/general/users/access_rights.rst:10
 msgid "**Only** an *administrator* can change access rights."
-msgstr ""
+msgstr "アクセス権を変更できるのは、*管理者* だけです。"
 
 #: ../../content/applications/general/users/access_rights.rst:13
 msgid ""
@@ -10850,13 +10990,15 @@ msgid ""
 "recommends contacting an Odoo Business Analyst, or our Support Team, before "
 "making changes."
 msgstr ""
+"アクセス権の変更はデータベースに悪影響を及ぼす可能性があります。これには *無力な管理者* "
+"も含まれ、データベース内のどのユーザもアクセス権の変更ができなくなります。このため、Odooでは変更を行う前にOdooビジネスアナリストまたはサポートチームに連絡先することを推奨しています。"
 
 #: ../../content/applications/general/users/access_rights.rst:19
 msgid ""
 "A user **must** have the specific *Administration* access rights set on "
 "their user profile, in order to make changes on another user's settings for "
 "access rights."
-msgstr ""
+msgstr "他のユーザのアクセス権設定を変更するには、ユーザプロファイルに特定の *管理* アクセス権が設定されている必要があります。"
 
 #: ../../content/applications/general/users/access_rights.rst:22
 msgid ""
@@ -10864,6 +11006,8 @@ msgid ""
 "users --> select a user --> Access Rights tab --> Administration section -->"
 " Administration field`."
 msgstr ""
+"この設定にアクセスするには、:menuselection:`設定アプリ --> ユーザ管理 --> ユーザを選択 --> アクセス権タブ --> "
+"管理セクション --> 管理フィールド` に移動します。"
 
 #: ../../content/applications/general/users/access_rights.rst:25
 msgid ""
@@ -10871,12 +11015,14 @@ msgid ""
 "setting in the :guilabel:`Administration` field to :guilabel:`Access "
 "Rights`."
 msgstr ""
+"設定画面に移動したら、既存の管理者は、:guilabel:`管理` フィールドの設定を :guilabel:`アクセス権` に変更する "
+"**必要があります。** "
 
 #: ../../content/applications/general/users/access_rights.rst:28
 msgid ""
 "Once complete, click :guilabel:`Save` to save the changes, and implement the"
 " user as an administrator."
-msgstr ""
+msgstr "完了したら、:guilabel:`保存` をクリックして変更を保存し、ユーザを管理者として実行します。"
 
 #: ../../content/applications/general/users/access_rights.rst:34
 msgid ""
@@ -10884,23 +11030,25 @@ msgid ""
 " when the user is added to the database, but they can be adjusted at any "
 "point in the user's profile."
 msgstr ""
+":ref:`個々のユーザ <users/add-individual>` "
+"のアクセス権は、ユーザがデータベースに追加された際に設定されますが、ユーザプロフィールでいつでも変更することができます。"
 
 #: ../../content/applications/general/users/access_rights.rst:37
 msgid ""
 "To make changes to a user's rights, click on the desired user to edit their "
 "profile."
-msgstr ""
+msgstr "ユーザの権限を変更するには、編集したいユーザをクリックしてプロファイルを編集します。"
 
 #: ../../content/applications/general/users/access_rights.rst-1
 msgid ""
 "Users menu in the Users & Companies section of the Settings app of Odoo."
-msgstr ""
+msgstr "Odooの設定アプリのユーザ&会社セクションにあるユーザーメニュー"
 
 #: ../../content/applications/general/users/access_rights.rst:43
 msgid ""
 "On the user's profile page, in the :guilabel:`Access Rights` tab, scroll "
 "down to view the current permissions."
-msgstr ""
+msgstr "ユーザのプロフィールページで、:guilabel:`アクセス権` タブで、下にスクロールすると現在の権限が表示されます。"
 
 #: ../../content/applications/general/users/access_rights.rst:46
 msgid ""
@@ -10909,6 +11057,9 @@ msgid ""
 "are: :guilabel:`Blank/None`, :guilabel:`User: Own Documents`, "
 ":guilabel:`User: All Documents`, or :guilabel:`Administrator`."
 msgstr ""
+"各アプリについて、ドロップダウンメニューから、そのユーザに与える権限のレベルを選択して下さい。 "
+"選択肢は各セクションによって異なりますが、最も一般的なのは次の通りです。:guilabel:`空白/なし`, :guilabel:`ユーザ: "
+"自身のドキュメント`, :guilabel:`ユーザ: 全てのドキュメント`, または :guilabel:`管理者`。"
 
 #: ../../content/applications/general/users/access_rights.rst:50
 msgid ""
@@ -10916,14 +11067,16 @@ msgid ""
 "has the following options: :guilabel:`Settings` or :guilabel:`Access "
 "Rights`."
 msgstr ""
+":guilabel:`アクセス権` タブの :guilabel:`管理` フィールドには、次のオプションがあります。:guilabel:`設定` または"
+" :guilabel:`アクセス権`。"
 
 #: ../../content/applications/general/users/access_rights.rst-1
 msgid "The Sales apps drop-down menu to set the user's level of permissions."
-msgstr ""
+msgstr "販売アプリのドロップダウンメニューで、ユーザの権限レベルを設定します。"
 
 #: ../../content/applications/general/users/access_rights.rst:60
 msgid "Create and modify groups"
-msgstr ""
+msgstr "グループの作成と変更"
 
 #: ../../content/applications/general/users/access_rights.rst:62
 msgid ""
@@ -10932,6 +11085,8 @@ msgid ""
 "existing groups in Odoo, or create new ones to define rules for models "
 "within an application."
 msgstr ""
+"*グループ*とは、大量のユーザの共通アクセス権を管理するために使用される、アプリ固有の権限セットです。 "
+"管理者は、Odoo内の既存のグループを変更したり、アプリケーション内のモデルに対する規則を定義するために新しいグループを作成できます。"
 
 #: ../../content/applications/general/users/access_rights.rst:66
 msgid ""
@@ -10939,11 +11094,13 @@ msgid ""
 "mode>`, then go to :menuselection:`Settings app --> Users & Companies --> "
 "Groups`."
 msgstr ""
+"グループにアクセスするには、まずOdooの :ref:`開発者モード <developer-mode>` を有効化し、 "
+":menuselection:`設定アプリ --> ユーザ & 会社 --> グループ` に行きます。"
 
 #: ../../content/applications/general/users/access_rights.rst-1
 msgid ""
 "Groups menu in the Users & Companies section of the Settings app of Odoo."
-msgstr ""
+msgstr "Odooの設定アプリのユーザと会社セクションにあるグループメニュー"
 
 #: ../../content/applications/general/users/access_rights.rst:73
 msgid ""
@@ -10951,12 +11108,15 @@ msgid ""
 ":guilabel:`Create`. Then, from the blank group form, select an "
 ":guilabel:`Application`, and complete the group form (detailed below)."
 msgstr ""
+":guilabel:`グループ` ページから新しいグループを作成するには、:guilabel:`作成` をクリックします。次に、空のグループフォームから"
+" :guilabel:`アプリケーション` を選択し、グループフォームを完成させます(詳細は下記を参照して下さい)"
 
 #: ../../content/applications/general/users/access_rights.rst:76
 msgid ""
 "To modify existing groups, click on an existing group from the list "
 "displayed on the :guilabel:`Groups` page, and edit the contents of the form."
 msgstr ""
+"既存のグループを変更するには、:guilabel:`グループ` ページに表示されているリストから既存のグループをクリックし、フォームの内容を編集します。"
 
 #: ../../content/applications/general/users/access_rights.rst:79
 msgid ""
@@ -10964,12 +11124,14 @@ msgid ""
 ":guilabel:`Share Group`, if this group was created to set access rights for "
 "sharing data with some users."
 msgstr ""
+"このグループが、一部のユーザとのデータ共有のアクセス権を設定するために作成された場合は、グループの :guilabel:`名前` "
+"を入力し、:guilabel:`グループの共有` の横にあるチェックボックスにチェックを入れます。"
 
 #: ../../content/applications/general/users/access_rights.rst:83
 msgid ""
 "Always test the settings being changed to ensure they are being applied to "
 "the correct users."
-msgstr ""
+msgstr "変更する設定が正しいユーザに適用されていることを確認するために、常にテストを行って下さい。"
 
 #: ../../content/applications/general/users/access_rights.rst:85
 msgid ""
@@ -10977,10 +11139,12 @@ msgid ""
 "group. In each tab, click :guilabel:`Add a line` to add a new row for users "
 "or rules, and click the :guilabel:`❌ (remove)` icon to remove a row."
 msgstr ""
+"グループフォームには、グループの全ての要素を管理するための複数のタブが含まれています。各タブで、ユーザまたは規則の新しい行を追加するには、:guilabel:`明細追加`"
+" をクリックし、行を削除するには、:guilabel:`❌(削除)` アイコンをクリックします。"
 
 #: ../../content/applications/general/users/access_rights.rst-1
 msgid "Tabs in the Groups form to modify the settings of the group."
-msgstr ""
+msgstr "グループのフォームにあるタブで、グループの設定を変更します。"
 
 #: ../../content/applications/general/users/access_rights.rst:93
 msgid ""
@@ -10988,6 +11152,9 @@ msgid ""
 " black have administrative rights. Users without administrative access "
 "appear in blue. Click :guilabel:`Add a line` to add users to this group."
 msgstr ""
+":guilabel:`ユーザ` "
+"タブ：グループ内の現在のユーザの一覧を表示します。黒字で表示されているユーザは管理権限があります。管理アクセス権のないユーザは青字で表示されます。:guilabel:`明細追加`"
+" をクリックして、ユーザをこのグループに追加します。"
 
 #: ../../content/applications/general/users/access_rights.rst:96
 msgid ""
@@ -10995,6 +11162,9 @@ msgid ""
 "are automatically added to the groups listed on this tab. Click "
 ":guilabel:`Add a line` to add inherited groups."
 msgstr ""
+":guilabel:`継承` タブ: "
+"継承とは、このグループに追加されたユーザが、このタブに表示されているグループにも自動的に追加されることを意味します。 :guilabel:`明細追加` "
+"をクリックして、継承されたグループを追加します。"
 
 #: ../../content/applications/general/users/access_rights.rst:100
 msgid ""
@@ -11003,18 +11173,25 @@ msgid ""
 " added to the *Sales/Administrator* group automatically receive access to "
 "the *Website/Restricted Editor* group, as well."
 msgstr ""
+"例えば、*販売/管理者* グループが、その:guilabel:`継承` タブに *ウェブサイト/制限付き編集者* "
+"グループをリストした場合、*販売/管理者* グループに追加された全てのユーザは、自動的に *ウェブサイト/制限付き編集者* "
+"グループへのアクセス権も受け取ります。"
 
 #: ../../content/applications/general/users/access_rights.rst:104
 msgid ""
 ":guilabel:`Menus` tab: defines which menus/models the group can have access "
 "to. Click :guilabel:`Add a line` to add a specific menu."
 msgstr ""
+":guilabel:`メニュー` タブ: "
+"グループがアクセスできるメニュー/モデルを定義します。特定のメニューを追加するには、:guilabel:`明細追加` をクリックします。"
 
 #: ../../content/applications/general/users/access_rights.rst:106
 msgid ""
 ":guilabel:`Views` tab: lists which views in Odoo the group has access to. "
 "Click :guilabel:`Add a line` to add a view to the group."
 msgstr ""
+":guilabel:`ビュー` タブ: グループがアクセスできる Odoo のビューの一覧です。 :guilabel:`明細追加` "
+"をクリックして、グループにビューを追加します。"
 
 #: ../../content/applications/general/users/access_rights.rst:108
 msgid ""
@@ -11025,22 +11202,26 @@ msgid ""
 "column represents the technical name given to the model. For each model, "
 "enable the following options as appropriate:"
 msgstr ""
+":guilabel:`アクセス権` タブ: このグループがアクセス権を持つ最初のレベルの権限 (モデル) "
+"がリスト表示されます。このグループにアクセス権をリンクするには、:guilabel:`明細追加` "
+"をクリックします。このタブでは、:guilabel:`モデル` 列がメニュー/モデルの共通名を表し、:guilabel:`名前` "
+"列がモデルに割り当てられた技術設定名を表します。各モデルについて、必要に応じて以下のオプションを有効にします。"
 
 #: ../../content/applications/general/users/access_rights.rst:114
 msgid ":guilabel:`Read`: users can see the object's existing values."
-msgstr ""
+msgstr ":guilabel:`読取`: ユーザはオブジェクトの既存の値を確認できます。"
 
 #: ../../content/applications/general/users/access_rights.rst:115
 msgid ":guilabel:`Write`: users can edit the object's existing values."
-msgstr ""
+msgstr ":guilabel:`書込`: ユーザはオブジェクトの既存の値を編集することができます。"
 
 #: ../../content/applications/general/users/access_rights.rst:116
 msgid ":guilabel:`Create`: users can create new values for the object."
-msgstr ""
+msgstr ":guilabel:`作成`: ユーザはオブジェクトの新しい値を作成することができます。"
 
 #: ../../content/applications/general/users/access_rights.rst:117
 msgid ":guilabel:`Delete`: users can delete values for the object."
-msgstr ""
+msgstr ":guilabel:`削除`: ユーザはオブジェクトの値を削除できます。"
 
 #: ../../content/applications/general/users/access_rights.rst:120
 msgid ""
@@ -11049,12 +11230,15 @@ msgid ""
 " found by expanding the model common name, which can be done by clicking the"
 " :guilabel:`(external link)` icon."
 msgstr ""
+"まず、:guilabel:`モデル` 列のドロップダウンメニューでモデルの共通名を検索してみて下さい。:guilabel:`モデル` "
+"の技術設定名は、モデルの共通名を展開することで見つけることができます。これは、:guilabel:`(外部リンク)` "
+"アイコンをクリックすることで実行できます。"
 
 #: ../../content/applications/general/users/access_rights.rst:124
 msgid ""
 "The model technical name can also be accessed in :ref:`developer mode "
 "<developer-mode>`."
-msgstr ""
+msgstr "技術的なモデル名は、:ref:`開発者モード <developer-mode>` でもアクセスできます。"
 
 #: ../../content/applications/general/users/access_rights.rst:126
 msgid ""
@@ -11067,7 +11251,7 @@ msgstr ""
 #: ../../content/applications/general/users/access_rights.rst:0
 msgid ""
 "Technical information shown on a field of a model, with object highlighted."
-msgstr ""
+msgstr "モデルのフィールドに表示された技術設定情報、オブジェクトがハイライトされています。"
 
 #: ../../content/applications/general/users/access_rights.rst:134
 msgid ""
@@ -11076,39 +11260,45 @@ msgid ""
 "rights. Click :guilabel:`Add a line` to add a record rule to this group. For"
 " each rule, choose values for the following options:"
 msgstr ""
+":guilabel:`レコード規則`: 編集権限と表示権限の2番目の階層をリスト表示します。 :guilabel:`レコード規則` "
+"はグループのアクセス権を上書き、または修正します。 :guilabel:`明細追加` をクリックして、レコード規則をこのグループに追加します。 "
+"各規則について、以下のオプションの値を選択します。"
 
 #: ../../content/applications/general/users/access_rights.rst:138
 msgid ":guilabel:`Apply for Read`."
-msgstr ""
+msgstr ":guilabel:`読取に適用`."
 
 #: ../../content/applications/general/users/access_rights.rst:139
 msgid ":guilabel:`Apply for Write`."
-msgstr ""
+msgstr ":guilabel:`書込に適用` "
 
 #: ../../content/applications/general/users/access_rights.rst:140
 msgid ":guilabel:`Apply for Create`."
-msgstr ""
+msgstr ":guilabel:`作成に適用`"
 
 #: ../../content/applications/general/users/access_rights.rst:141
 msgid ":guilabel:`Apply for Delete`."
-msgstr ""
+msgstr ":guilabel:`削除に適用` "
 
 #: ../../content/applications/general/users/access_rights.rst:144
 msgid ""
 "Record rules are written using a *domain*, or conditions that filter data. A"
 " domain expression is a list of such conditions. For example:"
 msgstr ""
+"レコード規則は、*ドメイン*、つまりデータをフィルタリングする条件を使用して記述されます。ドメイン式は、そのような条件のリストです。例えば: "
 
 #: ../../content/applications/general/users/access_rights.rst:147
 msgid ""
 "`[('mrp_production_ids', 'in', "
 "user.partner_id.commercial_partner_id.production_ids.ids)]`"
 msgstr ""
+"`[('mrp_production_ids', 'in', "
+"user.partner_id.commercial_partner_id.production_ids.ids)]`"
 
 #: ../../content/applications/general/users/access_rights.rst:149
 msgid ""
 "This record rule is to enable MRP consumption warnings for subcontractors."
-msgstr ""
+msgstr "このレコード規則は、下請業者に対するMRP消費警告を有効にするためのものです。"
 
 #: ../../content/applications/general/users/access_rights.rst:151
 msgid ""
@@ -11116,10 +11306,11 @@ msgid ""
 "without knowledge of domains (and domain expressions) should consult an Odoo"
 " Business Analyst, or the Odoo Support Team, before making changes."
 msgstr ""
+"Odooには、使いやすさを考慮した事前設定されたレコード規則のライブラリがあります。ドメインやドメイン表現についての知識がないユーザーは、変更を行う前にOdooのビジネスアナリストやサポートチームに相談することをお勧めします。"
 
 #: ../../content/applications/general/users/access_rights.rst:158
 msgid "Superuser mode"
-msgstr ""
+msgstr "スーパーユーザモード"
 
 #: ../../content/applications/general/users/access_rights.rst:160
 msgid ""
@@ -11128,11 +11319,14 @@ msgid ""
 "<developer-mode>`. Then, navigate to the *debug* menu, represented by a "
 ":guilabel:`🪲 (bug)` icon, located in the top banner."
 msgstr ""
+"*スーパーユーザモード* では、ユーザはレコード規則やアクセス権による制限を回避することができます。 *スーパーユーザモード* を有効化するには、まず "
+":ref:`開発者モード <developer-mode>` を有効化します。 次に、トップバナーにある :guilabel:`🪲 (バグ)` "
+"アイコンで示される *デバッグ* メニューに移動します。"
 
 #: ../../content/applications/general/users/access_rights.rst:164
 msgid ""
 "Finally, towards the bottom of the menu, click :guilabel:`Become Superuser`."
-msgstr ""
+msgstr "最後に、メニューの下部にある :guilabel:`スーパーユーザになる` をクリックします。"
 
 #: ../../content/applications/general/users/access_rights.rst:167
 msgid ""
@@ -11140,12 +11334,14 @@ msgid ""
 "*Access Rights* (in their user profile) are allowed to log in to *Superuser "
 "mode*."
 msgstr ""
+"(ユーザプロファイル内の) *アクセス権* の *管理* セクションに *設定* アクセス権を持つユーザのみが、*スーパーユーザモード* "
+"にログインできます。"
 
 #: ../../content/applications/general/users/access_rights.rst:171
 msgid ""
 "*Superuser mode* allows for circumvention of record rules and access rights,"
 " and therefore, should be exercised with extreme caution."
-msgstr ""
+msgstr "スーパーユーザモードは、記録規則やアクセス権の回避を可能にするため、使用には細心の注意が必要です。"
 
 #: ../../content/applications/general/users/access_rights.rst:174
 msgid ""
@@ -11153,6 +11349,7 @@ msgid ""
 "to changes that were made. This can cause *impotent admin*, or an "
 "administrator without the ability to change access rights/settings."
 msgstr ""
+"スーパーユーザモードを終了すると、変更が加えられたためにユーザがデータベースから締め出されることがあります。これにより、無力な管理者、すなわちアクセス権や設定を変更できない管理者が発生する可能性があります。"
 
 #: ../../content/applications/general/users/access_rights.rst:178
 msgid ""
@@ -11160,6 +11357,8 @@ msgid ""
 "<https://www.odoo.com/help>`_. The support team is able to restore access "
 "using a support login."
 msgstr ""
+"その場合、ここからOdooサポートにご連絡下さい: `新規ヘルプチケット <https://www.odoo.com/help>`_ "
+"サポートチームは、サポートログインを使用してアクセスを復元することができます。"
 
 #: ../../content/applications/general/users/access_rights.rst:181
 msgid ""
@@ -11167,6 +11366,8 @@ msgid ""
 "upper-right corner, and clicking on the :guilabel:`OdooBot` username. Then, "
 "select the :guilabel:`Log out` option."
 msgstr ""
+"* スーパーユーザーモード* を終了するには、右上隅に移動し、:guilabel:`OdooBot` "
+"ユーザー名をクリックしてアカウントからログアウトします。次に、:guilabel:`ログアウト` オプションを選択します。"
 
 #: ../../content/applications/general/users/access_rights.rst:185
 msgid ""
@@ -11174,16 +11375,18 @@ msgid ""
 "To do that, navigate to the login screen, and enter the appropriate "
 ":guilabel:`Email` and :guilabel:`Password`."
 msgstr ""
+"*スーパーユーザモード* を有効化する別の方法として、スーパーユーザとしてログインする方法があります。 ログインするには、ログイン画面に移動し、適切な "
+":guilabel:`Eメール` と :guilabel:`パスワード` を入力します。"
 
 #: ../../content/applications/general/users/access_rights.rst:188
 msgid ""
 "Instead of clicking :guilabel:`Login`, click :guilabel:`Log in as "
 "superuser`."
-msgstr ""
+msgstr ":guilabel:`ログイン` をクリックする代わりに、:guilabel:`スーパーユーザとしてログイン` をクリックします。"
 
 #: ../../content/applications/general/users/azure.rst:3
 msgid "Microsoft Azure sign-in authentication"
-msgstr ""
+msgstr "Microsoft Azure サインイン認証"
 
 #: ../../content/applications/general/users/azure.rst:5
 msgid ""
@@ -11191,6 +11394,8 @@ msgid ""
 "allows Odoo users to sign in to their database with their Microsoft Azure "
 "account."
 msgstr ""
+"Microsoft Azure OAuth サインイン認証は、OdooユーザがMicrosoft "
+"Azureアカウントでデータベースにサインインできる便利な機能です。"
 
 #: ../../content/applications/general/users/azure.rst:8
 msgid ""
@@ -11198,6 +11403,8 @@ msgid ""
 "wants employees within the organization to connect to Odoo using their "
 "Microsoft Accounts."
 msgstr ""
+"これは、組織がAzure "
+"Workspaceを使用しており、組織内の従業員にMicrosoftアカウントを使用してOdooに接続させたい場合に特に役立ちます。"
 
 #: ../../content/applications/general/users/azure.rst:12
 msgid ""
@@ -11207,30 +11414,33 @@ msgid ""
 "longer be able to be duplicated, renamed, or otherwise managed from the "
 "Odoo.com portal."
 msgstr ""
+"Odoo.comでホストされているデータベースでは、データベースのオーナーまたはマネジャーのOAuthログインを使用しないで下さい。OAuthがそのユーザに対して設定されている場合、データベースはOdoo.comポータルから複製、名前の変更、またはその他の管理ができなくなります。"
 
 #: ../../content/applications/general/users/azure.rst:18
 msgid ":doc:`../../productivity/calendar/outlook`"
-msgstr ""
+msgstr ":doc:`../../productivity/calendar/outlook`"
 
 #: ../../content/applications/general/users/azure.rst:19
 msgid ":doc:`../email_communication/azure_oauth`"
-msgstr ""
+msgstr ":doc:`../email_communication/azure_oauth`"
 
 #: ../../content/applications/general/users/azure.rst:24
 msgid ""
 "Integrating the Microsoft sign-in function requires configuration on "
 "Microsoft and Odoo."
-msgstr ""
+msgstr "Microsoftのサインイン機能を統合するには、MicrosoftとOdooの両方で設定が必要です。"
 
 #: ../../content/applications/general/users/azure.rst:27
 msgid "Odoo System Parameter"
-msgstr ""
+msgstr "Odooシステムパラメータ"
 
 #: ../../content/applications/general/users/azure.rst:29
 msgid ""
 "First activate the :ref:`developer mode <developer-mode>`, and then go to "
 ":menuselection:`Settings --> Technical --> System Parameters`."
 msgstr ""
+"まず最初に :ref:`開発者モード <developer-mode>` を有効化し、次に :menuselection:`設定 --> 技術設定 "
+"--> システムパラメータ` に進みます。"
 
 #: ../../content/applications/general/users/azure.rst:32
 msgid ""
@@ -11239,10 +11449,13 @@ msgid ""
 ":guilabel:`Key` field, and set the :guilabel:`Value` to `1`. Then click "
 ":guilabel:`Save` to finish."
 msgstr ""
+":guilabel:`作成` をクリックし、表示された新しいフォームに以下のシステムパラメータ "
+"`auth_oauth.authorization_header` を :guilabel:`キー` フィールドに追加し、:guilabel:`値` を"
+" `1` に設定します。その後、:guilabel:`保存` をクリックして完了します。"
 
 #: ../../content/applications/general/users/azure.rst:37
 msgid "Microsoft Azure dashboard"
-msgstr ""
+msgstr "Microsoft Azure ダッシュボード"
 
 #: ../../content/applications/general/users/azure.rst:42
 msgid ""
@@ -11253,12 +11466,17 @@ msgid ""
 "Office 365` account if there is one, otherwise, log in with a personal "
 ":guilabel:`Microsoft account`."
 msgstr ""
+"Odooのシステムパラメータが設定されたので、Microsoft "
+"Azure内に該当するアプリケーションを作成できます。新しいアプリケーションの作成を開始するには、`Microsoft Azureポータル "
+"<https://portal.azure.com/>`_ にアクセスします。:guilabel:`Microsoft Outlook Office "
+"365` アカウントをお持ちの場合は、そのアカウントでログインして下さい。お持ちでない場合は、個人用の "
+":guilabel:`Microsoftアカウント` でログインして下さい。"
 
 #: ../../content/applications/general/users/azure.rst:49
 msgid ""
 "A user with administrative access to the *Azure Settings* must connect and "
 "perform the following configuration steps below."
-msgstr ""
+msgstr "*Azure 設定* に管理アクセス権を持つユーザは、接続し、以下の設定手順を実行する必要があります。"
 
 #: ../../content/applications/general/users/azure.rst:52
 msgid ""
@@ -11266,6 +11484,8 @@ msgid ""
 "(formally *Azure Active Directory*). The location of this link is usually in"
 " the center of the page."
 msgstr ""
+"次に、:guilabel:`Microsoft Entra ID`（旧称*Azure Active Directory*) "
+"の管理と書かれたセクションに移動します。このリンクは通常、ページの中央に表示されています。"
 
 #: ../../content/applications/general/users/azure.rst:55
 msgid ""
@@ -11277,6 +11497,11 @@ msgid ""
 ":guilabel:`Accounts in this organizational directory only (Default Directory"
 " only - Single tenant)`."
 msgstr ""
+"次に、トップメニューにある :guilabel:`追加 (+)` アイコンをクリックし、ドロップダウンメニューから :guilabel:`アプリ登録` "
+"を選択します。:guilabel:`Register an application` 画面で、 :guilabel:`Name` フィールドの名称を "
+"`OdooログインOAuth` または同様に認識できるタイトルに変更します。:guilabel:`サポートされるアカウントの種類` "
+"セクションで、:guilabel:`この組織ディレクトリ内のアカウントのみ(デフォルトのディレクトリのみ - シングルテナント)` "
+"オプションを選択します。"
 
 #: ../../content/applications/general/users/azure.rst:62
 msgid ""
@@ -11285,6 +11510,9 @@ msgid ""
 " within one organization or is it meant for customer portal access? The "
 "above configuration is used for internal users in an organization."
 msgstr ""
+":guilabel:`サポートされているアカウントの種類` "
+"は、Microsoftアカウントの種類やOAuthの用途によって異なります。例えば、ログインは組織内の内部ユーザ用ですか、それとも顧客ポータルへのアクセス用ですか?"
+" 上記の設定は、組織内の内部ユーザ用です。"
 
 #: ../../content/applications/general/users/azure.rst:67
 msgid ""
@@ -11293,6 +11521,9 @@ msgid ""
 " directory only (Default Directory only - Single tenant)` if the target "
 "audience is company users."
 msgstr ""
+"対象がポータルユーザの場合は、:guilabel:`Microsoft個人アカウントのみ` "
+"を選択します。対象が会社ユーザの場合は、:guilabel:`この組織ディレクトリのみに含まれるアカウント(デフォルトのディレクトリのみ - "
+"シングルテナント)` を選択します。"
 
 #: ../../content/applications/general/users/azure.rst:71
 msgid ""
@@ -11303,6 +11534,11 @@ msgid ""
 "*mydatabase.odoo.com* if you are hosted on Odoo.com) in the :guilabel:`URL` "
 "field. Then, click :guilabel:`Register`, and the application is created."
 msgstr ""
+":guilabel:`リダイレクトURL` セクションで、:guilabel:`ウェブ` をプラットフォームとして選択し、`https://<odoo "
+"base url>/auth_oauth/signin` を :guilabel:`URL` フィールドに入力して下さい。Odooベース "
+":abbr:`URL (Uniform Resource Locator)` は、Odoo インスタンスにアクセスできる正式なドメイン "
+"(例：Odoo.com でホストされている場合は *mydatabase.odoo.com*) であり、:guilabel:`URL` "
+"フィールドに入力します。次に、:guilabel:`登録` をクリックすると、アプリケーションが作成されます。"
 
 #: ../../content/applications/general/users/azure.rst:78
 msgid "Authentication"
@@ -11314,6 +11550,8 @@ msgid ""
 ":guilabel:`Authentication` menu item in the left menu after being redirected"
 " to the application's settings from the previous step."
 msgstr ""
+"前のステップからアプリケーションの設定にリダイレクトされた後、左側のメニューで :guilabel:`認証` "
+"メニュー項目をクリックして、新しいアプリの認証を編集します。"
 
 #: ../../content/applications/general/users/azure.rst:83
 msgid ""
@@ -11326,18 +11564,24 @@ msgid ""
 "and check the boxes labeled: :guilabel:`Access tokens (used for implicit "
 "flows)` and :guilabel:`ID tokens (used for implicit and hybrid flows)`."
 msgstr ""
+"次に、OAuth認証に必要な *トークン* "
+"の種類を選択します。これらは通貨トークンではなく、MicrosoftとOdooの間でやり取りされる認証トークンです。したがって、これらのトークンのコストはかかりません。これらは、2つの"
+" :abbr:`API(アプリケーションプログラミングインターフェース)` "
+"間の認証目的のみに使用されます。画面を下にスクロールして、認証エンドポイントから発行されるべきトークンを選択し、:guilabel:`アクセストークン "
+"(インプリシットフローに使用)` と :guilabel:`IDトークン (インプリシットフローとハイブリッドフローに使用)` "
+"とラベル付けされたBoxにチェックを入れます。"
 
 #: ../../content/applications/general/users/azure.rst-1
 msgid "Authentication settings and endpoint tokens."
-msgstr ""
+msgstr "認証設定とエンドポイントトークン"
 
 #: ../../content/applications/general/users/azure.rst:95
 msgid "Click :guilabel:`Save` to ensure these settings are saved."
-msgstr ""
+msgstr ":guilabel:`保存` をクリックして、これらの設定が保存されていることを確認して下さい。"
 
 #: ../../content/applications/general/users/azure.rst:98
 msgid "Gather credentials"
-msgstr ""
+msgstr "認証情報を収集する"
 
 #: ../../content/applications/general/users/azure.rst:100
 msgid ""
@@ -11348,6 +11592,9 @@ msgid ""
 "credential to a clipboard / notepad, as this credential will be used in the "
 "Odoo configuration later."
 msgstr ""
+"Microsoft Azure コンソールでアプリケーションを作成し認証したので、次に認証情報を収集します。 これを行うには、左側の列にある "
+":guilabel:`概要` メニュー項目をクリックします。 表示されるウィンドウで :guilabel:`アプリケーション (顧客) ID` "
+"を選択してコピーします。 この認証情報は後ほど Odoo の設定で使用するので、クリップボードまたはメモ帳に貼り付けます。"
 
 #: ../../content/applications/general/users/azure.rst:105
 msgid ""
@@ -11355,14 +11602,16 @@ msgid ""
 "and click the *copy icon* next to :guilabel:`OAuth 2.0 authorization "
 "endpoint (v2)` field. Paste this value in the clipboard / notepad."
 msgstr ""
+"このステップを完了したら、上部のメニューにある :guilabel:`エンドポイント` をクリックし、:guilabel:`OAuth 2.0 "
+"認証エンドポイント (v2)` フィールドの隣にある *コピーアイコン* をクリックします。この値をクリップボードまたはメモ帳に貼り付けます。"
 
 #: ../../content/applications/general/users/azure.rst-1
 msgid "Application ID and OAuth 2.0 authorization endpoint (v2) credentials."
-msgstr ""
+msgstr "アプリケーションIDとOAuth 2.0 認証エンドポイント (v2) 認証情報"
 
 #: ../../content/applications/general/users/azure.rst:114
 msgid "Odoo setup"
-msgstr ""
+msgstr "Odooセットアップ"
 
 #: ../../content/applications/general/users/azure.rst:116
 msgid ""
@@ -11372,6 +11621,10 @@ msgid ""
 "OAuth login feature. Click :guilabel:`Save` to ensure the progress is saved."
 " Then, sign in to the database once the login screen loads."
 msgstr ""
+"最後に、Microsoft Azure OAuth設定の最終ステップとして、Odooでいくつかの設定を行います。 "
+":menuselection:`管理設定 --> 統合 --> OAuth 認証` "
+"に移動し、OAuthログイン機能を有効化するBoxにチェックを入れます。 :guilabel:`保存` "
+"をクリックして、プロセスが保存されていることを確認します。 その後、ログイン画面がロードされたら、データベースにサインインします。"
 
 #: ../../content/applications/general/users/azure.rst:121
 msgid ""
@@ -11379,6 +11632,8 @@ msgid ""
 "Authentication` and click on :guilabel:`OAuth Providers`. Now, select "
 ":guilabel:`New` in the upper-left corner and name the provider `Azure`."
 msgstr ""
+"もう一度、:menuselection:`管理設定 --> 統合 --> OAuth認証` に移動し、:guilabel:`OAuthプロバイダー` "
+"をクリックします。次に、左上にある :guilabel:`新規` を選択し、プロバイダーの名前を `Azure` とします。"
 
 #: ../../content/applications/general/users/azure.rst:125
 msgid ""
@@ -11387,12 +11642,17 @@ msgid ""
 ":guilabel:`OAuth 2.0 authorization endpoint (v2)` value into the "
 ":guilabel:`Authorization URL` field."
 msgstr ""
+"前のセクションの :guilabel:`アプリケーション (顧客) ID` を :guilabel:`顧客 ID` フィールドに貼り付けます。 "
+"これを完了したら、新しい :guilabel:`OAuth 2.0 認証エンドポイント (v2)` の値を :guilabel:`認証URL` "
+"フィールドに貼り付けます。"
 
 #: ../../content/applications/general/users/azure.rst:129
 msgid ""
 "For the :guilabel:`UserInfo URL` field, paste the following :abbr:`URL "
 "(Uniform Resource Locator)`: `https://graph.microsoft.com/oidc/userinfo`"
 msgstr ""
+":guilabel:`ユーザ情報URL` フィールド用に、以下の :abbr:`URL (Uniform Resource Locator)`: "
+"`https://graph.microsoft.com/oidc/userinfo` を貼付けて下さい。"
 
 #: ../../content/applications/general/users/azure.rst:132
 msgid ""
@@ -11401,6 +11661,9 @@ msgid ""
 "screen by entering the following value: `fa fa-fw fa-windows`, in the "
 ":guilabel:`CSS class` field."
 msgstr ""
+":guilabel:`スコープ` フィールドに次の値を貼り付けます:  `openid profile email`。 "
+"次に、:guilabel:`CSS class` フィールドに次の値を入力します。 `fa fa-fw fa-"
+"windows`。これにより、ログイン画面でWindowsロゴをCSSクラスとして使用することができます。"
 
 #: ../../content/applications/general/users/azure.rst:136
 msgid ""
@@ -11409,20 +11672,23 @@ msgid ""
 "label` field. This text will appear next to the Windows logo on the login "
 "page."
 msgstr ""
+"OAuthプロバイダーを有効にするには、:guilabel:`許可済` "
+"フィールドの隣にあるボックスにチェックを入れます。最後に、:guilabel:`ログインボタンラベル` フィールドに `Microsoft Azure`"
+" を追加します。このテキストはログインページのWindowsロゴの隣に表示されます。"
 
 #: ../../content/applications/general/users/azure.rst-1
 msgid "Odoo provider setup in the Settings application."
-msgstr ""
+msgstr "設定アプリケーション内のOdooプロバイダーのセットアップ"
 
 #: ../../content/applications/general/users/azure.rst:144
 msgid ""
 ":guilabel:`Save` the changes to complete the OAuth authentication setup in "
 "Odoo."
-msgstr ""
+msgstr "変更を :guilabel:`保存` してOdooでのOAuth認証設定を完了します。"
 
 #: ../../content/applications/general/users/azure.rst:147
 msgid "User experience flows"
-msgstr ""
+msgstr "ユーザエクスピリエンスフロー"
 
 #: ../../content/applications/general/users/azure.rst:149
 msgid ""
@@ -11430,6 +11696,8 @@ msgid ""
 ":menuselection:`Odoo password reset page`. This is the only way that Odoo is"
 " able to link the Microsoft Azure account and allow the user to log in."
 msgstr ""
+"ユーザがMicrosoft Azureを介してOdooにログインするには、ユーザは :menuselection:`Odooパスワードリセットページ` "
+"にいる必要があります。 この方法でのみ、OdooでMicrosoft Azureアカウントを接続してユーザーがログインすることができます。"
 
 #: ../../content/applications/general/users/azure.rst:154
 msgid ""
@@ -11438,6 +11706,9 @@ msgid ""
 "click the new user invitation link that was sent via email, then click on "
 ":guilabel:`Microsoft Azure`. Users should not set a new password."
 msgstr ""
+"既存ユーザは、:ref:`パスワードをリセット <users/reset-password>` して、:menuselection:`Odoo "
+"パスワードリセットページ` にアクセスする必要があります。Odoo の新規ユーザは、Eメールで送信された新規ユーザ招待リンクをクリックし、次に "
+":guilabel:`Microsoft Azure` をクリックする必要があります。ユーザは新しいパスワードを設定しないで下さい。"
 
 #: ../../content/applications/general/users/azure.rst:159
 msgid ""
@@ -11447,10 +11718,14 @@ msgid ""
 "click on the option labeled :guilabel:`Microsoft Azure`. The page will "
 "redirect to the Microsoft login page."
 msgstr ""
+"Microsoft Azure OAuth プロバイダを使用して Odoo に初めてサインインするには、(新規ユーザ招待リンクを使用して) "
+":menuselection:`Odoo パスワードリセットページ` に移動します。 パスワードリセットページが表示されます。 "
+"次に、:guilabel:`Microsoft Azure` とラベル付けされたオプションをクリックします。 ページが Microsoft "
+"ログインページにリダイレクトされます。"
 
 #: ../../content/applications/general/users/azure.rst-1
 msgid "Microsoft Outlook login page."
-msgstr ""
+msgstr "Microsoft Outlookログインページ"
 
 #: ../../content/applications/general/users/azure.rst:168
 msgid ""
@@ -11458,10 +11733,13 @@ msgid ""
 "Follow the process to sign in to the account. Should :abbr:`2FA (Two Factor "
 "Authentication)` be turned on, then an extra step may be required."
 msgstr ""
+":guilabel:`Microsoft Eメール "
+"アドレス`を入力し、:guilabel:`次へ`をクリックします。手順に従ってアカウントにサインインします。:abbr:`2FA (2要素認証)` "
+"がオンになっている場合は、追加の手順が必要になる場合があります。"
 
 #: ../../content/applications/general/users/azure.rst-1
 msgid "Enter Microsoft login credentials."
-msgstr ""
+msgstr "Microsoftログイン認証情報を入力して下さい。"
 
 #: ../../content/applications/general/users/azure.rst:176
 msgid ""
@@ -11470,22 +11748,24 @@ msgid ""
 "conditions that the Odoo application will access their Microsoft "
 "information."
 msgstr ""
+"最後に、アカウントにログインすると、ページは権限ページにリダイレクトされ、ユーザはOdooアプリケーションがMicrosoft情報にアクセスすることを "
+":guilabel:`承認` するかどうかを尋ねられます。"
 
 #: ../../content/applications/general/users/azure.rst-1
 msgid ""
 "Accept Microsoft conditions for permission access to your account "
 "information."
-msgstr ""
+msgstr "Microsoftの条件に同意し、アカウント情報へのアクセスを許可します。"
 
 #: ../../content/applications/general/users/google.rst:3
 msgid "Google Sign-In Authentication"
-msgstr ""
+msgstr "Googleサインイン認証"
 
 #: ../../content/applications/general/users/google.rst:5
 msgid ""
 "The *Google Sign-In Authentication* is a useful function that allows Odoo "
 "users to sign in to their database with their Google account."
-msgstr ""
+msgstr "Googleサインイン認証は、OdooユーザがGoogleアカウントでデータベースにサインインできる便利な機能です。"
 
 #: ../../content/applications/general/users/google.rst:8
 msgid ""
@@ -11493,6 +11773,8 @@ msgid ""
 "wants employees within the organization to connect to Odoo using their "
 "Google Accounts."
 msgstr ""
+"これは、組織がGoogle "
+"Workspaceを使用しており、組織内の従業員にGoogleアカウントを使用してOdooに接続させたい場合に特に役立ちます。"
 
 #: ../../content/applications/general/users/google.rst:12
 msgid ""
@@ -11502,25 +11784,26 @@ msgid ""
 "longer be able to be duplicated, renamed or otherwise managed from the "
 "Odoo.com portal."
 msgstr ""
+"Odoo.comでホストされているデータベースでは、データベースのオーナーまたはマネジャーのOauthログインを使用しないでください。Oauthを使用すると、データベースがOdoo.comアカウントから切り離されてしまうためです。Oauthがそのユーザに対して設定されている場合、データベースはOdoo.comポータルから複製、名前の変更、またはその他の管理ができなくなります。"
 
 #: ../../content/applications/general/users/google.rst:19
 msgid ":doc:`../email_communication/google_oauth`"
-msgstr ""
+msgstr ":doc:`../email_communication/google_oauth`"
 
 #: ../../content/applications/general/users/google.rst:26
 msgid ""
 "The integration of the Google sign-in function requires configuration both "
 "on Google *and* Odoo."
-msgstr ""
+msgstr "Googleのサインイン機能の統合には、Google *と* Odooの両方で設定が必要です。"
 
 #: ../../content/applications/general/users/google.rst:31
 msgid "Google API Dashboard"
-msgstr ""
+msgstr "Google API ダッシュボード"
 
 #: ../../content/applications/general/users/google.rst:33
 msgid ""
 "Go to the `Google API Dashboard <https://console.developers.google.com/>`_."
-msgstr ""
+msgstr "`Google APIダッシュボードに行きます <https://console.developers.google.com/>`_ "
 
 #: ../../content/applications/general/users/google.rst:34
 msgid ""
@@ -11528,44 +11811,47 @@ msgid ""
 "on :guilabel:`Create Project`, fill out the project name and other details "
 "of the company, and click on :guilabel:`Create`."
 msgstr ""
+"正しいプロジェクトが開かれていることを確認して下さいい。まだプロジェクトがない場合は、:guilabel:`プロジェクトを作成` "
+"をクリックし、プロジェクト名と会社に関するその他の詳細情報を入力し、:guilabel:`作成` をクリックします。"
 
 #: ../../content/applications/general/users/google.rst:0
 msgid "Filling out the details of a new project."
-msgstr ""
+msgstr "新規プロジェクトの詳細を記入します。"
 
 #: ../../content/applications/general/users/google.rst:43
 msgid "Choose the name of the company from the drop-down menu."
-msgstr ""
+msgstr "ドロップダウンメニューから会社の名前を選択して下さい。"
 
 #: ../../content/applications/general/users/google.rst:50
 msgid "On the left side menu, click on :menuselection:`OAuth consent screen`."
-msgstr ""
+msgstr "左側のサイドメニューで、:menuselection:`OAuth 同意画面`をクリックします。"
 
 #: ../../content/applications/general/users/google.rst:0
 msgid "Google OAuth consent selection menu."
-msgstr ""
+msgstr "Google OAuth同意選択メニュー"
 
 #: ../../content/applications/general/users/google.rst:56
 msgid ""
 "Choose one of the options (:guilabel:`Internal` / :guilabel:`External`), and"
 " click on :guilabel:`Create`."
-msgstr ""
+msgstr "オプションの1つ (:guilabel:`内部` / :guilabel:`外部`) を選択して :guilabel:`作成` します。"
 
 #: ../../content/applications/general/users/google.rst:0
 msgid "Choice of a user type in OAuth consent."
-msgstr ""
+msgstr "OAuthの同意でのユーザタイプの選択"
 
 #: ../../content/applications/general/users/google.rst:71
 msgid ""
 "Fill out the required details and domain info, then click on :guilabel:`Save"
 " and Continue`."
-msgstr ""
+msgstr "必要な詳細とドメイン情報を入力し、:guilabel:`保存して続行` をクリックします。"
 
 #: ../../content/applications/general/users/google.rst:72
 msgid ""
 "On the :menuselection:`Scopes` page, leave all fields as is, and click on "
 ":guilabel:`Save and Continue`."
 msgstr ""
+":menuselection:`スコープ` ページでは、全てのフィールドをそのままにして、:guilabel:`保存して続行` をクリックします。"
 
 #: ../../content/applications/general/users/google.rst:74
 msgid ""
@@ -11574,11 +11860,14 @@ msgid ""
 ":guilabel:`Add Users`, and then the :guilabel:`Save and Continue` button. A "
 "summary of the app registration appears."
 msgstr ""
+"次に、テストモード (*外部*) を継続する場合は、:guilabel:`テストユーザ` "
+"の手順で設定するEメールアドレスを、:guilabel:`ユーザを追加` をクリックして追加し、:guilabel:`保存して続行` "
+"ボタンをクリックします。アプリ登録の概要が表示されます。"
 
 #: ../../content/applications/general/users/google.rst:77
 msgid ""
 "Finally, scroll to the bottom, and click on :guilabel:`Back to Dashboard`."
-msgstr ""
+msgstr "最後に、一番下までスクロールし、:guilabel:`ダッシュボードに戻る` をクリックします。"
 
 #: ../../content/applications/general/users/google.rst:82
 msgid "Credentials"
@@ -11586,27 +11875,29 @@ msgstr "認証情報"
 
 #: ../../content/applications/general/users/google.rst:84
 msgid "On the left side menu, click on :menuselection:`Credentials`."
-msgstr ""
+msgstr "左側のメニューで、:menuselection:`認証情報`をクリックします。"
 
 #: ../../content/applications/general/users/google.rst:0
 msgid "Credentials button menu."
-msgstr ""
+msgstr "認証ボタンメニュー"
 
 #: ../../content/applications/general/users/google.rst:90
 msgid ""
 "Click on :guilabel:`Create Credentials`, and select :guilabel:`OAuth client "
 "ID`."
-msgstr ""
+msgstr ":guilabel:`認証を作成` をクリックし、:guilabel:`OAuth顧客 ID` を選択します。"
 
 #: ../../content/applications/general/users/google.rst:0
 msgid "OAuth client id selection."
-msgstr ""
+msgstr "OAuth 顧客ID選択"
 
 #: ../../content/applications/general/users/google.rst:96
 msgid ""
 "Select :guilabel:`Web Application` as the :guilabel:`Application Type`. Now,"
 " configure the allowed pages on which Odoo will be redirected."
 msgstr ""
+":guilabel:`ウェブアプリケーション` を :guilabel:`アプリケーションタイプ` "
+"として選択します。次に、Odooがリダイレクトされる許可されたページを設定します。"
 
 #: ../../content/applications/general/users/google.rst:99
 msgid ""
@@ -11615,6 +11906,10 @@ msgid ""
 "For example: `https://mydomain.odoo.com/auth_oauth/signin`, then click on "
 ":guilabel:`Create`."
 msgstr ""
+"これを達成するには、:guilabel:`認証済リダイレクトURI` フィールドに、データベースのドメインの直後に "
+"`/auth_oauth/signin` を入力します。 "
+"例えば、`https://mydomain.odoo.com/auth_oauth/signin` と入力し、:guilabel:`作成` "
+"をクリックします。"
 
 #: ../../content/applications/general/users/google.rst:103
 msgid ""
@@ -11623,14 +11918,17 @@ msgid ""
 ":guilabel:`Client ID` for later, as it will be necessary for the "
 "configuration in Odoo, which will be covered in the following steps."
 msgstr ""
+"*OAuthクライアント* が作成されると、:guilabel:`クライアントID` と:guilabel:`クライアントシークレット` "
+"が表示されます。後ほど必要になるので、:guilabel:`クライアントID` "
+"をコピーしておいてください。このIDは、次のステップで説明するOdooの設定で必要になります。"
 
 #: ../../content/applications/general/users/google.rst:110
 msgid "Google Authentication on Odoo"
-msgstr ""
+msgstr "OdooでのGoogle認証"
 
 #: ../../content/applications/general/users/google.rst:115
 msgid "Retrieve the Client ID"
-msgstr ""
+msgstr "クライアントIDを取得する"
 
 #: ../../content/applications/general/users/google.rst:117
 msgid ""
@@ -11638,24 +11936,26 @@ msgid ""
 "API Dashboard: :guilabel:`Client ID` and :guilabel:`Client Secret`. Copy the"
 " :guilabel:`Client ID`."
 msgstr ""
+"以上の手順が完了すると、Google API ダッシュボード上に :guilabel:`クライアント ID` と "
+":guilabel:`クライアントシークレット` の2つのキーが生成されます。:guilabel:`クライアント ID` をコピーして下さい。"
 
 #: ../../content/applications/general/users/google.rst-1
 msgid "Google OAuth Client ID generated."
-msgstr ""
+msgstr "Google OAuthクライアントIDが生成されました。"
 
 #: ../../content/applications/general/users/google.rst:127
 msgid "Odoo activation"
-msgstr ""
+msgstr "Odoo有効化"
 
 #: ../../content/applications/general/users/google.rst:129
 msgid ""
 "Go to :menuselection:`Odoo General Settings --> Integrations` and activate "
 ":guilabel:`OAuth Authentication`."
-msgstr ""
+msgstr ":menuselection:`Odoo一般設定 --> 統合` に行き　 :guilabel:`OAuth認証` を有効化します。"
 
 #: ../../content/applications/general/users/google.rst:133
 msgid "Odoo may prompt the user to log-in again after this step."
-msgstr ""
+msgstr "このステップの後、Odooがユーザに再度ログインを促す場合があります。"
 
 #: ../../content/applications/general/users/google.rst:135
 msgid ""
@@ -11666,10 +11966,14 @@ msgid ""
 ":guilabel:`Client ID` with the key from the Google API Dashboard, and "
 ":guilabel:`Save`."
 msgstr ""
+":menuselection:`一般設定 --> 統合 --> OAuth認証` に戻り、選択を有効化して :guilabel:`保存` "
+"をクリックします。次に、:menuselection:`一般設定 --> 統合 --> Google 認証` "
+"に戻り、選択を有効化します。そして、：guilabel:`クライアントID` にGoogle "
+"APIダッシュボードから取得したキーを入力し、：guilabel:`保存` をクリックします。"
 
 #: ../../content/applications/general/users/google.rst:0
 msgid "Filling out the client id in Odoo settings."
-msgstr ""
+msgstr "Odoo設定でクライアントIDを入力します。"
 
 #: ../../content/applications/general/users/google.rst:145
 msgid ""
@@ -11677,20 +11981,24 @@ msgid ""
 ":guilabel:`OAuth Providers` under the :guilabel:`OAuth Authentication` "
 "heading in :menuselection:`Integrations`."
 msgstr ""
+"Google OAuth2の設定は、:menuselection:`統合`の :guilabel:`OAuth認証` の見出しの下にある "
+":guilabel:`OAuth プロバイダー` をクリックしてもアクセスできます。"
 
 #: ../../content/applications/general/users/google.rst:151
 msgid "Log in to Odoo with Google"
-msgstr ""
+msgstr "GoogleでOdooにログイン"
 
 #: ../../content/applications/general/users/google.rst:153
 msgid ""
 "To link the Google account to the Odoo profile, click on :guilabel:`Log in "
 "with Google` when first logging into Odoo."
 msgstr ""
+"Google アカウントをOdooプロファイルにリンクするには、Odooに初めてログインする際に :guilabel:`Google でログイン` "
+"をクリックします。"
 
 #: ../../content/applications/general/users/google.rst:0
 msgid "Reset password screen with \"Log in with Google\" button."
-msgstr ""
+msgstr "Googleでログインボタン付きのパスワード再設定画面。"
 
 #: ../../content/applications/general/users/google.rst:161
 msgid ""
@@ -11699,17 +12007,23 @@ msgid ""
 "directly click on :guilabel:`Log in with Google`, instead of choosing a new "
 "password."
 msgstr ""
+"既存のユーザは、パスワードをリセットする必要があります。パスワードリセットページにアクセスするには、:ref:`パスワードをリセット "
+"<users/reset-password>` "
+"する必要があります。一方、新規ユーザは、新しいパスワードを作成する代わりに、:guilabel:`Googleでログイン` "
+"をクリックすることができます。"
 
 #: ../../content/applications/general/users/google.rst:166
 msgid ""
 "`Google Cloud Platform Console Help - Setting up OAuth 2.0 "
 "<https://support.google.com/cloud/answer/6158849>`_"
 msgstr ""
+"`Google Cloud Platform Console ヘルプ - OAuth 2.0セットアップ "
+"<https://support.google.com/cloud/answer/6158849>`_"
 
 #: ../../content/applications/general/users/language.rst:3
 #: ../../content/applications/general/users/language.rst:30
 msgid "Change languages"
-msgstr ""
+msgstr "言語を変更する"
 
 #: ../../content/applications/general/users/language.rst:5
 msgid ""
@@ -11719,6 +12033,10 @@ msgid ""
 ":doc:`translate <../../websites/website/configuration/translate>` your "
 "website."
 msgstr ""
+"データベースの作成時に言語を選択しますが、:ref:`add <language/add>` および :ref:`install "
+"<language/install>` "
+"を使用して追加の言語を追加し、ユーザが別の言語でデータベースを管理できるようにしたり、:doc:`translate "
+"<../../websites/website/configuration/translate>` ウェブサイトを翻訳したりすることができます。"
 
 #: ../../content/applications/general/users/language.rst:13
 msgid "Add languages"
@@ -11726,7 +12044,7 @@ msgstr "言語を追加"
 
 #: ../../content/applications/general/users/language.rst:15
 msgid "To download additional languages:"
-msgstr ""
+msgstr "追加の言語をダウンロードするには:"
 
 #: ../../content/applications/general/users/language.rst:17
 msgid ""
@@ -11734,22 +12052,24 @@ msgid ""
 ":menuselection:`My profile`, and click the :icon:`fa-globe` "
 "(:guilabel:`globe`) icon next to the :guilabel:`Language` field;"
 msgstr ""
+"右上隅にあるプロフィールアイコンをクリックし、:menuselection:`自分のプロファイル` を選択し、:guilabel:`言語` "
+"フィールドの隣にある :icon:`fa-globe` (:guilabel:`地球`) アイコンをクリックします。"
 
 #: ../../content/applications/general/users/language.rst:19
 msgid ""
 "or go to the **Settings** app, and click :guilabel:`Add Languages` in the "
 ":guilabel:`Languages` section."
-msgstr ""
+msgstr "または **設定** アプリに行き、:guilabel:`言語` セクションの :guilabel:`言語を追加` をクリックします。"
 
 #: ../../content/applications/general/users/language.rst:22
 msgid ""
 "You can then select the languages you want from the dropdown menu and click "
 ":guilabel:`Add`."
-msgstr ""
+msgstr "ドロップダウンメニューから必要な言語を選択し、:guilabel:`追加` をクリックします。"
 
 #: ../../content/applications/general/users/language.rst:25
 msgid ":doc:`Translations <../../websites/website/configuration/translate>`"
-msgstr ""
+msgstr ":doc:`翻訳 <../../websites/website/configuration/translate>`"
 
 #: ../../content/applications/general/users/language.rst:32
 msgid ""
@@ -11757,24 +12077,27 @@ msgid ""
 "upper-right corner, go to :menuselection:`My profile`, and select a "
 ":guilabel:`Language` in the dropdown list."
 msgstr ""
+"ユーザは右上のプロファイルアイコンをクリックし、:menuselection:`自分のプロファイル` に移動し、ドロップダウンリストから "
+":guilabel:`言語` を選択して、優先する言語を選択します。"
 
 #: ../../content/applications/general/users/language.rst:36
 msgid "Change another user's language"
-msgstr ""
+msgstr "他のユーザの言語を変更する"
 
 #: ../../content/applications/general/users/language.rst:38
 msgid "To change the database language for a user:"
-msgstr ""
+msgstr "ユーザ用にデータベース言語を変更するには:"
 
 #: ../../content/applications/general/users/language.rst:40
 msgid ""
 "Go to the :guilabel:`Settings` app and click :guilabel:`Manage Users` in the"
 " :guilabel:`Users` section."
 msgstr ""
+":guilabel:`設定` アプリに行き :guilabel:`ユーザ` セクションで :guilabel:`ユーザ管理`  をクリックします。"
 
 #: ../../content/applications/general/users/language.rst:43
 msgid "Click on the user whose language you want to change."
-msgstr ""
+msgstr "言語を変更したいユーザをクリックします。"
 
 #: ../../content/applications/general/users/language.rst:45
 msgid ""
@@ -11782,69 +12105,74 @@ msgid ""
 ":ref:`installed language <language/add>` from the :guilabel:`Language` "
 "dropdown menu."
 msgstr ""
+":guilabel:`個人設定` タブに行き、以前に :ref:`インストール済の言語 <language/add>` を :guilabel:`言語`"
+" ドロップダウンメニューから選択します。"
 
 #: ../../content/applications/general/users/language.rst:49
 msgid ""
 "Emails and documents will be sent to the user in the selected language."
-msgstr ""
+msgstr "選択された言語で、Eメールとドキュメントがユーザに送信されます。"
 
 #: ../../content/applications/general/users/ldap.rst:3
 msgid "Sign in with LDAP"
-msgstr ""
+msgstr "LDAPでサインイン"
 
 #: ../../content/applications/general/users/ldap.rst:5
 msgid ""
 "Install the Lightweight Directory Access Protocol (LDAP) module in General "
 "Settings."
-msgstr ""
+msgstr "一般設定でLightweight Directory Access Protocol (LDAP) モジュールをインストールします。"
 
 #: ../../content/applications/general/users/ldap.rst:7
 msgid ""
 "Click on **Create** in Setup the :abbr:`LDAP (Lightweight Directory Access "
 "Protocol)` Server."
 msgstr ""
+":abbr:`LDAP(Lightweight Directory Access Protocol)` サーバの設定で **作成** をクリックします。"
 
 #: ../../content/applications/general/users/ldap.rst-1
 msgid ""
 "LDAP Authentication checkbox highlighted in the integrations settings on "
 "Odoo."
-msgstr ""
+msgstr "Odooの統合セッティングでハイライトされたLDAP Authenticationチェックボックス。"
 
 #: ../../content/applications/general/users/ldap.rst-1
 msgid "Create highlighted in the LDAP server settings."
-msgstr ""
+msgstr "LDAPサーバセッティングでハイライトされた作成"
 
 #: ../../content/applications/general/users/ldap.rst:17
 msgid "Choose the company using the LDAP."
-msgstr ""
+msgstr "LDAPを使用する会社を選択します。"
 
 #: ../../content/applications/general/users/ldap.rst-1
 msgid "Select the company drop-down menu highlighted in LDAP setup."
-msgstr ""
+msgstr "LDAPセットアップでドロップダウンメニューがハイライトされた会社を選択します。"
 
 #: ../../content/applications/general/users/ldap.rst:23
 msgid ""
 "In **Server Information**, enter the IP address of the server and the port "
 "it listens to."
-msgstr ""
+msgstr "**サーバ情報**に、サーバのIPアドレスと、そのサーバがリッスンするポートを入力します。"
 
 #: ../../content/applications/general/users/ldap.rst:25
 msgid "Tick **Use TLS** if the server is compatible."
-msgstr ""
+msgstr "サーバに互換性がある場合 **TLSを使用** をチェックして下さい。"
 
 #: ../../content/applications/general/users/ldap.rst-1
 msgid "LDAP server settings highlighted in LDAP server setup on Odoo."
-msgstr ""
+msgstr "OdooのLDAPサーバ設定でハイライトされているLDAPサーバ設定"
 
 #: ../../content/applications/general/users/ldap.rst:31
 msgid ""
 "In **Login Information**, enter ID and password of the account used to query"
 " the server. If left empty, the server queries anonymously."
 msgstr ""
+"**ログイン情報** には、サーバに問い合わせを行う際に使用するアカウントのIDとパスワードを入力します。 "
+"空欄のままにすると、サーバは匿名で問い合わせを行います。"
 
 #: ../../content/applications/general/users/ldap.rst-1
 msgid "Login information highlighted in LDAP server setup on Odoo."
-msgstr ""
+msgstr "OdooのLDAPサーバ設定でハイライトされたログイン情報"
 
 #: ../../content/applications/general/users/ldap.rst:38
 msgid ""
@@ -11852,14 +12180,16 @@ msgid ""
 ":abbr:`LDAP (Lightweight Directory Access Protocol)` nomenclature (e.g. "
 "``dc=example,dc=com``)."
 msgstr ""
+"**プロセスパラメータ** では、LDAPサーバのドメイン名を:abbr:`LDAP (Lightweight Directory Access "
+"Protocol)` の表現規則に従って入力します (例： ``dc=example,dc=com``)"
 
 #: ../../content/applications/general/users/ldap.rst:41
 msgid "In **LDAP filter**, enter ``uid=%s``"
-msgstr ""
+msgstr "**LDAPフィルタ** で ``uid=%s`` を入力します"
 
 #: ../../content/applications/general/users/ldap.rst-1
 msgid "Process parameter highlighted in LDAP server setup on Odoo."
-msgstr ""
+msgstr "OdooのLDAPサーバ設定で強調表示されたプロセスパラメータ"
 
 #: ../../content/applications/general/users/ldap.rst:47
 msgid ""
@@ -11867,60 +12197,64 @@ msgid ""
 "profile the first time someone logs in with :abbr:`LDAP (Lightweight "
 "Directory Access Protocol)`."
 msgstr ""
+"**ユーザ情報** で、:abbr:`LDAP (Lightweight Directory Access Protocol)` "
+"でログインした際にOdooがユーザプロファイルを初めて作成する場合は、*ユーザ作成* にチェックを入れます。"
 
 #: ../../content/applications/general/users/ldap.rst:50
 msgid ""
 "In **Template User**, indicate a template for the new profiles created. If "
 "left blanked, the admin profile will be used as template."
 msgstr ""
+"**テンプレートユーザ**では、作成する新しいプロフィールのテンプレートを指定します。空白のままにした場合、管理者プロファイルがテンプレートとして使用されます。"
 
 #: ../../content/applications/general/users/ldap.rst-1
 msgid "User information highlighted on LDAP server setup on Odoo."
-msgstr ""
+msgstr "OdooにLDAPサーバを設定した際のハイライトされたユーザ情報"
 
 #: ../../content/applications/general/users/portal.rst:3
 msgid "Portal access"
-msgstr ""
+msgstr "ポータルアクセス"
 
 #: ../../content/applications/general/users/portal.rst:7
 msgid ""
 "Portal access is given to users who need the ability to view certain "
 "documents or information within an Odoo database."
-msgstr ""
+msgstr "Odooデータベース内の特定のドキュメントや情報を閲覧する必要があるユーザには、ポータルへのアクセスが許可されます。"
 
 #: ../../content/applications/general/users/portal.rst:10
 msgid ""
 "Some common use cases for providing portal access include allowing customers"
 " to read/view any or all of the following in Odoo:"
 msgstr ""
+"ポータルへのアクセスを提供する一般的なユースケースとしては、顧客がOdoo内の以下のいずれかまたは全てを閲覧できるようにすることが挙げられます。"
 
 #: ../../content/applications/general/users/portal.rst:13
 msgid "leads/opportunities"
-msgstr ""
+msgstr "リード/案件"
 
 #: ../../content/applications/general/users/portal.rst:14
 msgid "quotations/sales orders"
-msgstr ""
+msgstr "見積/販売オーダ"
 
 #: ../../content/applications/general/users/portal.rst:15
 msgid "purchase orders"
-msgstr ""
+msgstr "購買オーダ"
 
 #: ../../content/applications/general/users/portal.rst:16
 msgid "invoices & bills"
-msgstr ""
+msgstr "顧客請求書と仕入先請求書"
 
 #: ../../content/applications/general/users/portal.rst:17
 msgid "projects"
-msgstr ""
+msgstr "プロジェクト"
 
 #: ../../content/applications/general/users/portal.rst:18
 msgid "tasks"
-msgstr ""
+msgstr "タスク"
 
 #: ../../content/applications/general/users/portal.rst:19
 msgid "timesheets"
-msgstr ""
+msgstr "タイムシート"
 
 #: ../../content/applications/general/users/portal.rst:20
 msgid "tickets"
@@ -11928,7 +12262,7 @@ msgstr "チケット"
 
 #: ../../content/applications/general/users/portal.rst:21
 msgid "signatures"
-msgstr ""
+msgstr "署名"
 
 #: ../../content/applications/general/users/portal.rst:22
 msgid "subscriptions"
@@ -11938,11 +12272,11 @@ msgstr "サブスクリプション"
 msgid ""
 "Portal users only have read/view access, and will not be able to edit any "
 "documents in the database."
-msgstr ""
+msgstr "ポータルユーザは閲覧のみ可能であり、データベース内のドキュメントを編集することはできません。"
 
 #: ../../content/applications/general/users/portal.rst:29
 msgid "Provide portal access to customers"
-msgstr ""
+msgstr "顧客にポータルへのアクセスを提供する"
 
 #: ../../content/applications/general/users/portal.rst:31
 msgid ""
@@ -11953,31 +12287,36 @@ msgid ""
 "the :guilabel:`Action` drop-down menu located at the top-center of the "
 "interface."
 msgstr ""
+"Odooのメインダッシュボードから、:guilabel:`連絡先` アプリケーションを選択します。 "
+"データベースに連絡先がまだ作成されていない場合は、:guilabel:`作成` ボタンをクリックし、連絡先の情報を入力して :guilabel:`保存`"
+" をクリックします。 それ以外の場合、既存の連絡先を選択し、インターフェースの上部中央にある :guilabel:`アクション` "
+"ドロップダウンメニューをクリックします。"
 
 #: ../../content/applications/general/users/portal.rst-1
 msgid "Use the Contacts application to give portal access to users."
-msgstr ""
+msgstr "連絡先アプリケーションを使用して、ポータルへのアクセスをユーザに許可します。"
 
 #: ../../content/applications/general/users/portal.rst:40
 msgid ""
 "Then select :guilabel:`Grant portal access`. A pop-up window appears, "
 "listing three fields:"
 msgstr ""
+"次に、:guilabel:`ポータルへのアクセス権限の付与` を選択します。ポップアップウィンドウが表示され、3つのフィールドがリスト表示されます。"
 
 #: ../../content/applications/general/users/portal.rst:42
 msgid ""
 ":guilabel:`Contact`: the recorded name of the contact in the Odoo database"
-msgstr ""
+msgstr ":guilabel:`連絡先`: Odooデータベース内の連絡先の記録名"
 
 #: ../../content/applications/general/users/portal.rst:43
 msgid ""
 ":guilabel:`Email`: the contact's email address that they will use to log "
 "into the portal"
-msgstr ""
+msgstr ":guilabel:`Eメール`: 連絡先がポータルにログインする際に使用するEメールアドレス"
 
 #: ../../content/applications/general/users/portal.rst:44
 msgid ":guilabel:`In Portal`: whether or not the user has portal access"
-msgstr ""
+msgstr ":guilabel:`ポータル内`: ユーザがポータルにアクセスできるかどうか"
 
 #: ../../content/applications/general/users/portal.rst:46
 msgid ""
@@ -11986,18 +12325,24 @@ msgid ""
 " Portal` column. Optionally, add text to the invitation message the contact "
 "will receive. Then click :guilabel:`Apply` to finish."
 msgstr ""
+"ポータルへのアクセスを許可するには、まず、ポータルへのログインに使用する連絡先の :guilabel:`Eメール` "
+"を入力します。次に、:guilabel:`ポータル内` "
+"列の下にあるボックスにチェックを入れます。必要に応じて、連絡先が受信する招待メッセージにテキストを追加します。最後に、:guilabel:`適用` "
+"をクリックして完了します。"
 
 #: ../../content/applications/general/users/portal.rst-1
 msgid ""
 "An email address and corresponding checkbox for the contact need to be filled in before\n"
 "sending a portal invitation."
 msgstr ""
+"ポータルへの招待状を送信する前に、連絡先のEメールアドレスと対応するチェックボックスを記入する\n"
+"必要があります。"
 
 #: ../../content/applications/general/users/portal.rst:55
 msgid ""
 "An email will be sent to the specified email address, indicating that the "
 "contact is now a portal user for that Odoo database."
-msgstr ""
+msgstr "指定のメールアドレスに、そのOdooデータベースのポータルユーザとして連絡先が登録されたことを示すEメールが送信されます。"
 
 #: ../../content/applications/general/users/portal.rst:59
 msgid ""
@@ -12007,6 +12352,9 @@ msgid ""
 ":guilabel:`In Portal` column for all the contacts that need portal access, "
 "then click :guilabel:`Apply`."
 msgstr ""
+"複数のユーザに一度にポータルへのアクセス権を付与するには、会社の連絡先に移動し、:menuselection:`アクション --> "
+"ポータルへのアクセス権付与` をクリックして、その会社に関連する連絡先のリストを表示します。ポータルへのアクセス権を必要とする全ての連絡先の "
+":guilabel:`ポータル内` 列の下にあるボックスにチェックを入れ、:guilabel:`適用` をクリックします。"
 
 #: ../../content/applications/general/users/portal.rst:65
 msgid ""
@@ -12015,10 +12363,13 @@ msgid ""
 "unselecting the checkbox under the :guilabel:`In Portal` column and clicking"
 " :guilabel:`Apply`."
 msgstr ""
+"いつでも、連絡先に移動し、:menuselection:`アクション --> ポータルへのアクセス権付与` "
+"をクリックし、:guilabel:`ポータル内` 列のチェックボックスの選択を解除し、:guilabel:`適用` "
+"をクリックすることで、ポータルへのアクセス権を取り消すことができます。"
 
 #: ../../content/applications/general/users/portal.rst:72
 msgid "Change portal username"
-msgstr ""
+msgstr "ポータルユーザ名を変更する"
 
 #: ../../content/applications/general/users/portal.rst:74
 msgid ""
@@ -12027,12 +12378,15 @@ msgid ""
 "The following process outlines the necessary steps to change the portal user"
 " login."
 msgstr ""
+"ポータルユーザがユーザログインを変更したい場合があるかもしれません。これは、データベース内の管理者アクセス権を持つユーザであれば誰でも行うことができます。以下のプロセスでは、ポータルユーザのログインを変更するために必要な手順を説明します。"
 
 #: ../../content/applications/general/users/portal.rst:79
 msgid ""
 ":doc:`See the documentation on setting access rights "
 "</applications/general/users/access_rights>`."
 msgstr ""
+":doc:`アクセス権を設定するドキュメンテーションをご覧下さい "
+"</applications/general/users/access_rights>` "
 
 #: ../../content/applications/general/users/portal.rst:82
 msgid ""
@@ -12042,6 +12396,10 @@ msgid ""
 ":guilabel:`Groups` > :guilabel:`contains` > `portal`. After making this "
 "selection, search for (and open) the portal user that needs to be edited."
 msgstr ""
+"まず、:menuselection:`設定アプリ --> ユーザ` に移動します。次に、:guilabel:`フィルタ` "
+"の下で、:guilabel:`ポータルユーザ` "
+"を選択するか、:guilabel:`カスタムフィルタの追加`を選択し、次の設定を行います。:guilabel:`グループ` > "
+":guilabel:`含む` > `ポータル`。この選択を行った後、編集が必要なポータルユーザを検索して(開いて)下さい。"
 
 #: ../../content/applications/general/users/portal.rst:87
 msgid ""
@@ -12049,12 +12407,15 @@ msgid ""
 " Address` field, and proceed to make any necessary changes to this field. "
 "The :guilabel:`Email Address` field is used to log into the Odoo portal."
 msgstr ""
+"次に、必要に応じて :guilabel:`編集` をクリックし、:guilabel:`Eメールアドレス` "
+"フィールドをクリックして、このフィールドに必要な変更を加えます。 :guilabel:`Eメールアドレス` "
+"フィールドは、Odooポータルへのログインに使用されます。"
 
 #: ../../content/applications/general/users/portal.rst:92
 msgid ""
 "Changing the :guilabel:`Email Address` (or login) only changes the "
 "*username* on the customer's portal login."
-msgstr ""
+msgstr ":guilabel:`Eメール アドレス`(またはログイン)を変更すると、顧客のポータルログインの *ユーザー名* のみが変更されます。"
 
 #: ../../content/applications/general/users/portal.rst:95
 msgid ""
@@ -12063,10 +12424,13 @@ msgid ""
 "change their email directly from the portal, but the login **cannot** be "
 "changed. :ref:`See change customer info <portal/custinfo>`."
 msgstr ""
+"連絡先Eメールを変更するには、*連絡先* アプリの連絡先テンプレートで変更を行う必要があります。 "
+"あるいは、顧客はポータルから直接Eメールを変更することができますが、ログインは変更 **できません**。 :ref:`顧客情報を変更するをご覧下さい "
+"<portal/custinfo>`。"
 
 #: ../../content/applications/general/users/portal.rst:100
 msgid "Customer portal changes"
-msgstr ""
+msgstr "顧客ポータル変更"
 
 #: ../../content/applications/general/users/portal.rst:102
 msgid ""
@@ -12076,10 +12440,12 @@ msgid ""
 " The following process is how a customer can change their contact "
 "information."
 msgstr ""
+"顧客がポータルアカウントに紐づく連絡先情報、パスワード/セキュリティ、支払情報などを変更したい場合があるかもしれません。 "
+"顧客は、ポータルからこれらの変更を行うことができます。 以下の手順は、顧客が連絡先情報を変更する方法です。"
 
 #: ../../content/applications/general/users/portal.rst:110
 msgid "Change customer info"
-msgstr ""
+msgstr "顧客情報を変更する"
 
 #: ../../content/applications/general/users/portal.rst:112
 msgid ""
@@ -12088,10 +12454,11 @@ msgid ""
 "successfully logging in. Portal documents from the various installed Odoo "
 "applications will appear with the number count of each."
 msgstr ""
+"まず、ポータルユーザアカウントにアクセスするために、データベースのログインページにユーザ名とパスワード(ログイン)を入力します。ログインに成功すると、ポータルダッシュボードが表示されます。インストールされたさまざまなOdooアプリケーションのポータルドキュメントが、それぞれの数とともに表示されます。"
 
 #: ../../content/applications/general/users/portal.rst:117
 msgid ":ref:`Portal access documentation <portal/main>`."
-msgstr ""
+msgstr ":ref:`ポータルアクセスドキュメンテーション <portal/main>`."
 
 #: ../../content/applications/general/users/portal.rst:119
 msgid ""
@@ -12099,6 +12466,8 @@ msgid ""
 ":guilabel:`Edit` button, next to the :guilabel:`Details` section. Then, "
 "change the pertinent information, and click :guilabel:`Confirm`."
 msgstr ""
+"次に、ポータル画面の右上隅に移動し、:guilabel:`詳細` セクションの隣にある :guilabel:`編集` "
+"ボタンをクリックします。次に、該当する情報を変更し、:guilabel:`確認` をクリックします。"
 
 #: ../../content/applications/general/users/portal.rst:124
 msgid "Change password"
@@ -12106,12 +12475,13 @@ msgstr "パスワード変更"
 
 #: ../../content/applications/general/users/portal.rst:126
 #: ../../content/applications/general/users/portal.rst:145
-#: ../../content/applications/general/users/portal.rst:162
+#: ../../content/applications/general/users/portal.rst:164
 msgid ""
 "First enter the username and password (login) into the database login page "
 "to access the portal user account. A portal dashboard will appear upon "
 "successfully logging in."
 msgstr ""
+"まず、ポータルユーザアカウントにアクセスするために、データベースのログインページにユーザ名とパスワード(ログイン)を入力します。ログインに成功すると、ポータルダッシュボードが表示されます。"
 
 #: ../../content/applications/general/users/portal.rst:129
 msgid ""
@@ -12122,6 +12492,11 @@ msgid ""
 "verify the new password. Lastly, click on :guilabel:`Change Password` to "
 "complete the password change."
 msgstr ""
+"顧客がポータルへのアクセス用パスワードを変更したい場合は、:guilabel:`アカウントセキュリティ` セクションの下にある "
+":guilabel:`セキュリティ設定の編集` リンクをクリックします。次に、現在の "
+":guilabel:`パスワード`、:guilabel:`新しいパスワード` "
+"を入力し、新しいパスワードを再入力して、必要な変更を行います。最後に、:guilabel:`パスワードの変更` "
+"をクリックして、パスワードの変更を完了します。"
 
 #: ../../content/applications/general/users/portal.rst:135
 msgid ""
@@ -12129,16 +12504,18 @@ msgid ""
 "the Odoo database point-of-contact. :ref:`See above documentation on "
 "changing the portal username <portal/login>`."
 msgstr ""
+"顧客がログインを変更したい場合は、上記のドキュメントに記載されているように、Odooデータベースの連絡先までご連絡ください。 "
+":ref:`ポータルユーザー名の変更に関する上記のドキュメントを参照して下さい。`"
 
 #: ../../content/applications/general/users/portal.rst:139
 msgid ""
 "Passwords for portal users and Odoo.com users remain separate, even if the "
 "same email address is used."
-msgstr ""
+msgstr "ポータルユーザとOdoo.comユーザのパスワードは、同じEメールアドレスを使用している場合でも、別々に管理されます。"
 
 #: ../../content/applications/general/users/portal.rst:143
 msgid "Add two-factor authentication"
-msgstr ""
+msgstr "2要素認証を追加する"
 
 #: ../../content/applications/general/users/portal.rst:148
 msgid ""
@@ -12146,6 +12523,8 @@ msgid ""
 "portal access, click on the :guilabel:`Edit Security Settings` link, below "
 "the :guilabel:`Account Security` section."
 msgstr ""
+"顧客がポータルへのアクセスに2要素認証(2FA)を有効にしたい場合は、:guilabel:`アカウントセキュリティ` "
+"セクションの下にある:guilabel:`セキュリティ設定の編集` リンクをクリックします。"
 
 #: ../../content/applications/general/users/portal.rst:151
 msgid ""
@@ -12156,20 +12535,26 @@ msgid ""
 "factor authentication)` app (Google Authenticator, Authy, etc.), by scanning"
 " the :guilabel:`QR code` or entering a :guilabel:`Verification Code`."
 msgstr ""
+":guilabel:`2要素認証を有効にする` をクリックして、:abbr:`2FA` をオンにします。 :guilabel:`パスワード` "
+"フィールドに現在のポータルパスワードを入力して確認します。 次に、:guilabel:`パスワードを確認` をクリックします。次に、:abbr:`2FA"
+" (2要素認証)`アプリ(Google認証、Authyなど)で、:guilabel:`QRコード` をスキャンするか、:guilabel:`認証コード`"
+" を入力して、:abbr:`2FA (2要素認証)` を有効化します。"
 
 #: ../../content/applications/general/users/portal.rst:157
 msgid ""
 "Finally, click :guilabel:`Enable two-factor authentication` to complete the "
 "setup."
-msgstr ""
+msgstr "最後に、:guilabel:`2要素認証を有効にする` をクリックして設定を完了します。"
 
-#: ../../content/applications/general/users/portal.rst:160
+#: ../../content/applications/general/users/portal.rst:162
 msgid "Change payment info"
-msgstr ""
+msgstr "支払情報を変更する"
 
-#: ../../content/applications/general/users/portal.rst:165
+#: ../../content/applications/general/users/portal.rst:167
 msgid ""
 "If the customer would like to manage payment options, navigate to the "
 ":guilabel:`Manage payment methods` in the menu on the right. Then, add the "
 "new payment information, and select :guilabel:`Add new card`."
 msgstr ""
+"顧客が支払オプションを管理したい場合は、右側のメニューにある "
+":guilabel:`支払方法を管理`に進みます。次に、新しい支払情報を追加し、:guilabel:`新しいカードを追加` をクリックします。"

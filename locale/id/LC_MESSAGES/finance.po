@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-04 08:54+0000\n"
+"POT-Creation-Date: 2024-12-02 09:51+0000\n"
 "PO-Revision-Date: 2022-10-04 12:53+0000\n"
 "Last-Translator: Abe Manyo, 2024\n"
 "Language-Team: Indonesian (https://app.transifex.com/odoo/teams/41243/id/)\n"
@@ -2409,6 +2409,7 @@ msgstr ""
 "memungkinkan Anda untuk mencari item jurnal tertentu."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:103
+#: ../../content/applications/finance/accounting/payments.rst:104
 msgid "Batch payments"
 msgstr "Pembayaran batch"
 
@@ -8990,25 +8991,17 @@ msgstr ""
 #: ../../content/applications/finance/accounting/payments.rst:10
 msgid ""
 "If a payment is **linked to an invoice or bill**, it reduces/settles the "
-"amount due of the invoice. You can have multiple payments related to the "
-"same invoice."
+"amount due on the invoice. Multiple payments on the same invoice are "
+"possible."
 msgstr ""
-"Bila pembayaran **terhubung ke faktur atau tagihan**, ini "
-"mengurangi/menulasi jumlah yang terutang di faktur. Anda dapat memiliki "
-"lebih dari satu pembayaran terkait faktur yang sama."
 
 #: ../../content/applications/finance/accounting/payments.rst:13
 msgid ""
 "If a payment is **not linked to an invoice or bill**, the customer has an "
-"outstanding credit with your company, or your company has an outstanding "
-"debit with a vendor. You can use those outstanding amounts to reduce/settle "
-"unpaid invoices/bills."
+"outstanding credit with the company, or the company has an outstanding debit"
+" with a vendor. Those outstanding amounts reduce/settle unpaid "
+"invoices/bills."
 msgstr ""
-"Bila pembayaran **tidak terhubung ke faktur atau tagihan**, pelanggan "
-"memiliki kredit yang terutang dengan perusahaan Anda, atau perusahaan Anda "
-"memiliki debit yang terutang dengan vendor. Anda dapat menggunakan jumlah "
-"yang terutang tersebut untuk mengurangi/melunasi faktur/tagihan yang belum "
-"lunas."
 
 #: ../../content/applications/finance/accounting/payments.rst:18
 msgid ":doc:`Internal transfers <payments/internal_transfers>`"
@@ -9021,16 +9014,14 @@ msgstr ":doc:`bank/reconciliation`"
 #: ../../content/applications/finance/accounting/payments.rst:20
 msgid ""
 "`Odoo Tutorials: Bank Configuration <https://www.odoo.com/slides/slide/bank-"
-"configuration-1880>`_"
+"configuration-6832>`_"
 msgstr ""
-"`Odoo Tutorials: Konfigurasi Bank <https://www.odoo.com/slides/slide/bank-"
-"configuration-1880>`_"
 
-#: ../../content/applications/finance/accounting/payments.rst:24
+#: ../../content/applications/finance/accounting/payments.rst:26
 msgid "Registering payment from an invoice or bill"
 msgstr "Mendaftarkan pembayaran dari faktur atau tagihan"
 
-#: ../../content/applications/finance/accounting/payments.rst:26
+#: ../../content/applications/finance/accounting/payments.rst:28
 msgid ""
 "When clicking :guilabel:`Register payment` in a customer invoice or vendor "
 "bill, it generates a new journal entry and changes the amount due according "
@@ -9038,33 +9029,22 @@ msgid ""
 "<bank/outstanding-accounts>` **receipts** or **payments** account. At this "
 "point, the customer invoice or vendor bill is marked as :guilabel:`In "
 "payment`. Then, when the outstanding account is reconciled with a bank "
-"statement line, the invoice or vendor bill changes to the :guilabel:`Paid` "
-"status."
+"transaction line, the invoice or vendor bill changes to the :guilabel:`Paid`"
+" status."
 msgstr ""
-"Saat mengeklik :guilabel:`Daftarkan pembayaran` di faktur pelanggan atau "
-"tagihan vendor, ini akan membuat entri jurnal baru dan mengubah jumlah yang "
-"perlu dinulasi menurut jumlah pembayaran. Counterpart akan dicerminkan di "
-"akun **receipt** atau **pembayaran** :ref:`outstanding <bank/outstanding-"
-"accounts>`. Di titik ini, faktur pelanggan atau tagihan vendor ditandai "
-"sebagai :guilabel:`Dalam pembayaran`. Lalu, saat akun outstanding "
-"direkonsiliasi dengan baris laporan bank, faktur atau tagihan vendor berubah"
-" menjadi status :guilabel:`Dibayar`."
 
-#: ../../content/applications/finance/accounting/payments.rst:33
+#: ../../content/applications/finance/accounting/payments.rst:35
 msgid ""
-"The information icon near the payment line displays more information about "
-"the payment. You can access additional information, such as the related "
-"journal, by clicking :guilabel:`View`."
+"The :icon:`fa-info-circle` information icon next to the payment line "
+"displays more information about the payment. To access additional "
+"information, such as the related journal, click :guilabel:`View`."
 msgstr ""
-"Ikon informasi dekat dengan baris pembayaran menampilkan lebih banyak "
-"informasi mengenai pembayaran. Anda dapat mengakses informasi tambahan, "
-"seperti jurnal terkait, dengan mengeklik :guilabel:`Lihat`."
 
 #: ../../content/applications/finance/accounting/payments.rst-1
 msgid "See detailed information of a payment."
 msgstr "Lihat informasi detil pembayaran."
 
-#: ../../content/applications/finance/accounting/payments.rst:40
+#: ../../content/applications/finance/accounting/payments.rst:43
 msgid ""
 "The customer invoice or vendor bill must be in the :guilabel:`Posted` status"
 " to register the payment."
@@ -9072,80 +9052,57 @@ msgstr ""
 "Faktur pelanggan atau tagihan vendor harus dalam status :guilabel:`Direkam` "
 "untuk mendaftarkan pembayaran."
 
-#: ../../content/applications/finance/accounting/payments.rst:42
+#: ../../content/applications/finance/accounting/payments.rst:45
 msgid ""
-"If you unreconcile a payment, it still appears in your books but is no "
-"longer linked to the invoice."
+"If a payment is unreconciled, it still appears in the books but is no longer"
+" linked to the invoice."
 msgstr ""
-"Bila Anda membatalkan rekonsiliasi pembayaran, pembayaran tetap akan muncul "
-"di buku Anda tapi tidak lagi terhubung ke faktur.l"
 
-#: ../../content/applications/finance/accounting/payments.rst:44
+#: ../../content/applications/finance/accounting/payments.rst:47
 msgid ""
-"If you (un)reconcile a payment in a different currency, a journal entry is "
+"If a payment is (un)reconciled in a different currency, a journal entry is "
 "automatically created to post the currency exchange gains/losses (reversal) "
 "amount."
 msgstr ""
-"Bila Anda membatalkan/melakukan pembayaran dalam mata uang yang berbeda, "
-"entri jurnal secara otomatis dibuat untuk merekam jumlah laba/rugi dari "
-"pertukaran mata uang."
 
-#: ../../content/applications/finance/accounting/payments.rst:46
+#: ../../content/applications/finance/accounting/payments.rst:49
 msgid ""
-"If you (un)reconcile a payment and an invoice having cash basis taxes, a "
-"journal entry is automatically created to post the cash basis tax (reversal)"
+"If a payment is (un)reconciled and an invoice with cash-basis taxes, a "
+"journal entry is automatically created to post the cash-basis tax (reversal)"
 " amount."
 msgstr ""
-"Bila Anda membatalkan/melakukan rekonsiliasi pembayaran dan faktur memiliki "
-"pajak basis kas, entri jurnal secara otomatis dibuat untuk merekam jumlah "
-"pajak basis kas (reversal)."
 
-#: ../../content/applications/finance/accounting/payments.rst:50
+#: ../../content/applications/finance/accounting/payments.rst:53
 msgid ""
-"If your main bank account is set as an :ref:`outstanding account "
+"If the main bank account is set as an :ref:`outstanding account "
 "<bank/outstanding-accounts>`, and the payment is registered in Odoo (not "
-"through a related bank statement), invoices and bills are directly "
+"through a related bank transaction), invoices and bills are directly "
 "registered as :guilabel:`Paid`."
 msgstr ""
-"Bila akun bank utama Anda ditetapkan sebagai :ref:`akun outstanding "
-"<bank/outstanding-accounts>`, dan pembayaran didaftarkan di Odoo (tidak "
-"melalui laporan bank terkait), faktur dan tagihan secara langsung "
-"didaftarkan sebagai :guilabel:`Dibayar`."
 
-#: ../../content/applications/finance/accounting/payments.rst:55
+#: ../../content/applications/finance/accounting/payments.rst:60
 msgid "Registering payments not tied to an invoice or bill"
 msgstr "Mendaftarkan pembayaran tidak terikat ke faktur atau tagihan"
 
-#: ../../content/applications/finance/accounting/payments.rst:57
+#: ../../content/applications/finance/accounting/payments.rst:62
 msgid ""
 "When a new payment is registered via :menuselection:`Customers / Vendors -->"
-" Payments` menu, it is not directly linked to an invoice or bill. Instead, "
-"the account receivable or the account payable is matched with the "
-"**outstanding account** until it is manually matched with its related "
-"invoice or bill."
+" Payments`, it is not directly linked to an invoice or bill. Instead, the "
+"account receivable or the account payable is matched with the **outstanding "
+"account** until it is manually matched with its related invoice or bill."
 msgstr ""
-"Saat pembayaran baru didaftarkan melalui menu :menuselection:`Pelanggan / "
-"Vendor --> Pembayaran`, ini tidak langsung terhubung ke faktur atau tagihan."
-" Alih-alih, akun piutang atau akun hutang dicocokkan dengan **akun "
-"outstanding** sampai secara manual dicocokkan dengan faktur atau tagihan "
-"terkait. "
 
-#: ../../content/applications/finance/accounting/payments.rst:63
+#: ../../content/applications/finance/accounting/payments.rst:70
 msgid "Matching invoices and bills with payments"
 msgstr "Mencocokkan faktur dan tagihan dengan pembayara"
 
-#: ../../content/applications/finance/accounting/payments.rst:65
+#: ../../content/applications/finance/accounting/payments.rst:72
 msgid ""
-"A blue banner appears when you validate a new invoice/bill and an "
-"**outstanding payment** exists for this specific customer or vendor. It can "
-"easily be matched from the invoice or bill by clicking :guilabel:`ADD` under"
-" :guilabel:`Outstanding Credits` or :guilabel:`Outstanding Debits`."
+"A blue banner appears when validating a new invoice/bill and an "
+"**outstanding payment** exists for this specific customer or vendor. To "
+"match it with the invoice or bill, click :guilabel:`ADD` under "
+":guilabel:`Outstanding Credits` or :guilabel:`Outstanding Debits`."
 msgstr ""
-"Spanduk biru muncul saat Anda memvalidasi faktur/tagihan baru dan "
-"**pembayaran terutang** tersedia untuk pelanggan atau vendor ini. Ini dapat "
-"dengan mudah dicocokkan dari faktur atau tagihan dengan mengeklik "
-":guilabel:`TAMBAH` di bawah :guilabel:`Kredit Terutang` atau "
-":guilabel:`Debit Terutang`."
 
 #: ../../content/applications/finance/accounting/payments.rst-1
 msgid "Shows the ADD option to reconcile an invoice or a bill with a payment."
@@ -9153,94 +9110,118 @@ msgstr ""
 "Menunjukkan opsi TAMBAH untuk merekonsiliasi faktur atau tagihan dengan "
 "pembayaran."
 
-#: ../../content/applications/finance/accounting/payments.rst:72
+#: ../../content/applications/finance/accounting/payments.rst:79
 msgid ""
 "The invoice or bill is now marked as :guilabel:`In payment` until it is "
-"reconciled with its corresponding bank statement."
+"reconciled with its corresponding bank transaction."
 msgstr ""
-"Faktur atau tagihan sekarang ditandai sebagai :guilabel:`Dalam pembayaran` "
-"sampai direkonsiliasi dengan laporan bank yang sesuai."
 
-#: ../../content/applications/finance/accounting/payments.rst:78
-msgid "Batch payment"
-msgstr "Pembayaran batch"
+#: ../../content/applications/finance/accounting/payments.rst:85
+msgid "Group payments"
+msgstr ""
 
-#: ../../content/applications/finance/accounting/payments.rst:80
+#: ../../content/applications/finance/accounting/payments.rst:87
 msgid ""
-"Batch payments allow you to group different payments to ease "
-":doc:`reconciliation <bank/reconciliation>`. They are also useful when you "
-"deposit :doc:`checks <payments/checks>` to the bank or for :doc:`SEPA "
-"payments <payments/pay_sepa>`. To do so, go to :menuselection:`Accounting "
-"--> Customers --> Batch Payments` or :menuselection:`Accounting --> Vendors "
-"--> Batch Payments`. In the list view of payments, you can select and group "
-"several payments in a batch by clicking :menuselection:`Action --> Create "
-"Batch Payment`."
+"Group payments allow combining outgoing and incoming payments from the same "
+"contact into a single payment to simplify the process and improve payment "
+"usability. To register a group payment:"
 msgstr ""
-"Pembayaran batch memungkinkan Anda untuk mengelompokkan pembayaran yang "
-"berbeda-beda untuk memudahkan :doc:`rekonsiliasi <bank/reconciliation>`. "
-"Mereka juga bergunal saat Anda mendepositkan :doc:`cek <payments/checks>` ke"
-" bank atau untuk :doc:`pembayaran SEPA <payments/pay_sepa>`. Untuk melakukan"
-" ini, kunjungi :menuselection:`Akuntansi --> Pelanggan --> Pembayaran Batch`"
-" atau :menuselection:`Akuntansi --> Vendor --> Pembayaran Batch`. Di "
-"tampilan list pembayaran, Anda dapat memilih dan mengelompokkan beberapa "
-"pembayaran dalam batch dengan mengeklik :menuselection:`Action --> Buat "
-"Pembayaran Batch`."
 
-#: ../../content/applications/finance/accounting/payments.rst:88
-msgid ":doc:`payments/batch`"
-msgstr ":doc:`payments/batch`"
+#: ../../content/applications/finance/accounting/payments.rst:90
+msgid ""
+"Go to :menuselection:`Accounting --> Customers --> Invoices/Credit Notes` or"
+" :menuselection:`Accounting --> Vendors --> Bills/Refunds`."
+msgstr ""
 
-#: ../../content/applications/finance/accounting/payments.rst:89
-msgid ":doc:`payments/batch_sdd`"
-msgstr ":doc:`payments/batch_sdd`"
+#: ../../content/applications/finance/accounting/payments.rst:92
+msgid ""
+"Select the relevant invoices/credit notes or bills/refunds linked to a "
+"specific contact."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments.rst:93
+msgid ""
+"Click the :icon:`fa-cog` (:guilabel:`Action menu`) icon and select "
+":guilabel:`Register Payment`."
+msgstr ""
 
 #: ../../content/applications/finance/accounting/payments.rst:94
-msgid "Payments matching"
-msgstr "Pencocokkan pembayaran"
+msgid ""
+"In the :guilabel:`Register Payment` window, select the :guilabel:`Journal`, "
+"the :guilabel:`Payment Method`, and the :guilabel:`Payment Date`."
+msgstr ""
 
 #: ../../content/applications/finance/accounting/payments.rst:96
 msgid ""
-"The :guilabel:`Payments matching` tool opens all unreconciled customer "
-"invoices or vendor bills and allows you to process them individually, "
-"matching all payments and invoices in one place. You can reach this tool "
-"from the :menuselection:`Accounting Dashboard --> Customer Invoices / Vendor"
-" Bills`, click the drop-down menu button (:guilabel:`⋮`), and select "
-":guilabel:`Payments Matching`, or go to :menuselection:`Accounting --> "
-"Accounting --> Reconciliation`."
+"Enable the :guilabel:`Group Payments` option and click :guilabel:`Create "
+"payment`."
 msgstr ""
-"Alat :guilabel:`pencocokkan pembayaran` membuka semua faktur pelanggan atau "
-"tagihan vendor yang belum direkonsiliasi dan memungkinkan Anda untuk "
-"memproses mereka secara individu, mencocokkan semua pembayaran dan faktur di"
-" satu tempat. Anda dapat mencapai alat ini dari :menuselection:`Dashboard "
-"Akuntansi --> Faktur Pelanggan / Tagihan Vendor`, klik tombol menu drop-down"
-" (:guilabel:`⋮`), dan pilih :guilabel:`Pencocokkan Pembayaran`, atau "
-"kunjungi :menuselection:`Akuntansi --> Akuntansi --> Rekonsiliasi`."
+
+#: ../../content/applications/finance/accounting/payments.rst:98
+msgid ""
+"The invoices or bills are now marked as :guilabel:`In payment` until they "
+"are reconciled with the corresponding bank transactions. The credit notes or"
+" refunds are marked as :guilabel:`Paid`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments.rst:106
+msgid ""
+"Batch payments allow grouping payments from multiple contacts to ease "
+":doc:`reconciliation <bank/reconciliation>`. They are also useful when "
+"depositing :doc:`checks <payments/checks>` to the bank or for :doc:`SEPA "
+"payments <payments/pay_sepa>`. To do so, go to :menuselection:`Accounting "
+"--> Customers --> Batch Payments` or :menuselection:`Accounting --> Vendors "
+"--> Batch Payments`. In the list view of payments, to group several payments"
+" in a batch, select them and click :menuselection:`Action --> Create Batch "
+"Payment`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments.rst:114
+msgid ":doc:`payments/batch`"
+msgstr ":doc:`payments/batch`"
+
+#: ../../content/applications/finance/accounting/payments.rst:115
+msgid ":doc:`payments/batch_sdd`"
+msgstr ":doc:`payments/batch_sdd`"
+
+#: ../../content/applications/finance/accounting/payments.rst:120
+msgid "Payments matching"
+msgstr "Pencocokkan pembayaran"
+
+#: ../../content/applications/finance/accounting/payments.rst:122
+msgid ""
+"The :guilabel:`Payments matching` tool opens all unreconciled customer "
+"invoices or vendor bills and allows them to be processed individually, "
+"matching all payments and invoices in one place. Go to the "
+":guilabel:`Accounting Dashboard`, click the :icon:`fa-ellipsis-v` "
+"(:guilabel:`dropdown menu`) button from the :guilabel:`Customer Invoices` or"
+" :guilabel:`Vendor Bills` journals, and select :guilabel:`Payments "
+"Matching`, or go to :menuselection:`Accounting --> Accounting --> "
+"Reconciliation`."
+msgstr ""
 
 #: ../../content/applications/finance/accounting/payments.rst-1
 msgid "Payments matching menu in the drop-down menu."
 msgstr "Menu pencocokkan pembayaran di menu drop-down."
 
-#: ../../content/applications/finance/accounting/payments.rst:106
+#: ../../content/applications/finance/accounting/payments.rst:133
 msgid ""
 "During the :doc:`reconciliation <bank/reconciliation>`, if the sum of the "
 "debits and credits does not match, there is a remaining balance. This either"
-" needs to be reconciled at a later date or needs to be written off directly."
+" needs to be reconciled at a later date or written off directly."
 msgstr ""
-"Selama :doc:`rekonsiliasi <bank/reconciliation>`, bila jumlah debit dan "
-"kredit tidak cocok, terdapat saldo tersisa. Ini harus direkonsiliasi di "
-"kemudian hari atau langsung di write-off."
 
-#: ../../content/applications/finance/accounting/payments.rst:111
+#: ../../content/applications/finance/accounting/payments.rst:140
 msgid "Batch payments matching"
 msgstr "Pencocokkan pembayaran batch"
 
-#: ../../content/applications/finance/accounting/payments.rst:113
+#: ../../content/applications/finance/accounting/payments.rst:142
 msgid ""
-"You can use the batch reconciliation feature to reconcile several "
-"outstanding payments or invoices simultaneously for a specific customer or "
-"vendor. Go to :menuselection:`Accounting --> Reporting --> Aged Receivable /"
-" Aged Payable`. You can see all transactions that have not been reconciled "
-"yet for that partner, and when you select a customer or vendor, the "
+"Use the batch reconciliation feature to reconcile several outstanding "
+"payments or invoices simultaneously for a specific customer or vendor. Go to"
+" :menuselection:`Accounting --> Reporting --> Aged Receivable / Aged "
+"Payable`. All transactions that have not yet been reconciled for that "
+"contact are visible, and when a customer or vendor is selected, the "
 ":guilabel:`Reconcile` option is displayed."
 msgstr ""
 
@@ -9248,51 +9229,49 @@ msgstr ""
 msgid "See the reconcile option."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments.rst:123
+#: ../../content/applications/finance/accounting/payments.rst:154
 msgid "Registering a partial payment"
 msgstr "Mendaftarkan pembayaran parsial"
 
-#: ../../content/applications/finance/accounting/payments.rst:125
+#: ../../content/applications/finance/accounting/payments.rst:156
 msgid ""
-"To register a **partial payment**, click :guilabel:`Register payment` from "
-"the related invoice or bill, and enter the amount received or paid. Upon "
-"entering the amount, a prompt appears to decide whether to :guilabel:`Keep "
-"open` the invoice or bill, or :guilabel:`Mark as fully paid`. Select "
-":guilabel:`Keep open` and click :guilabel:`Create payment`. The invoice or "
-"bill is now marked as :guilabel:`Partial`. Select :guilabel:`Mark as fully "
-"paid` if you wish to settle the invoice or bill with a difference in the "
-"amount."
+"To register a partial payment, click on :guilabel:`Register Payment` from "
+"the related invoice or bill. In the case of a partial payment (when the "
+":guilabel:`Amount` paid is less than the total remaining amount on the "
+"invoice or the bill), the :guilabel:`Payment Difference` field displays the "
+"outstanding balance. There are two options:"
 msgstr ""
-"Untuk mendaftarkan **pembayaran parsial**, klik :guilabel:`Daftarkan "
-"pembayaran` dari faktur atau tagihan terkait, dan masukkan jumlah yang "
-"diterima atau dibayar. Setelah memasuki jumlah, prompt muncul untuk "
-"menentukan apakah untuk :guilabel:`Biarkan terbuka` faktur atau tagihan, "
-"atau `guilabel:`Tandai sebagai dibayar penuh`. Pilih :guilabel:`Biarkan "
-"terbuka` dan klik :guilabel:`Buat pembayaran`. Faktur atau tagihan sekarang "
-"ditandai sebagai :guilabel:`Parsial`. Pilih :guilabel:`Tandai sebagai "
-"dibayar penuh` bila Anda ingin settle faktur atau tagihan dengan perbedaan "
-"di jumlah."
+
+#: ../../content/applications/finance/accounting/payments.rst:161
+msgid ""
+":guilabel:`Keep open`: Keep the invoice or the bill open and mark it with a "
+":guilabel:`Partial` banner;"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments.rst:163
+msgid ""
+":guilabel:`Mark as fully paid`: Select an account in the :guilabel:`Post "
+"Difference In` field and change the :guilabel:`Label` if needed. A journal "
+"entry will be created to balance the accounts payable or receivable with the"
+" selected account."
+msgstr ""
 
 #: ../../content/applications/finance/accounting/payments.rst-1
-msgid "Partial payment of an invoice or bill."
-msgstr "Pembayaran parsial faktur atau tagihan."
+#: ../../content/applications/finance/accounting/vendor_bills.rst-1
+msgid "register a partial payment"
+msgstr ""
 
-#: ../../content/applications/finance/accounting/payments.rst:136
-msgid "Reconciling payments with bank statements"
-msgstr "Merekonsiliasi pembayaran dengan laporan bank"
+#: ../../content/applications/finance/accounting/payments.rst:173
+msgid "Reconciling payments with bank transactions"
+msgstr ""
 
-#: ../../content/applications/finance/accounting/payments.rst:138
+#: ../../content/applications/finance/accounting/payments.rst:175
 msgid ""
 "Once a payment has been registered, the status of the invoice or bill is "
 ":guilabel:`In payment`. The next step is :doc:`reconciling "
-"<bank/reconciliation>` it with the related bank statement line to have the "
-"transaction finalized and the invoice or bill marked as :guilabel:`Paid`."
+"<bank/reconciliation>` it with the related bank transaction line to finalize"
+" the payment workflow and mark the invoice or bill as :guilabel:`Paid`."
 msgstr ""
-"Setelah pembayaran didaftarkan, status faktur atau tagihan adalah "
-":guilabel:`Dalam pembayaran`. Langkah berikutnya adalah untuk "
-":doc:`rekonsiliasi <bank/reconciliation>` dengan baris laporan bank terkait "
-"agar transaksi difinalisasi dan faktur atau tagihan ditandai sebagai "
-":guilabel:`Dibayar`."
 
 #: ../../content/applications/finance/accounting/payments/batch.rst:3
 msgid "Batch payments by bank deposit"
@@ -13590,11 +13569,11 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/reporting/year_end.rst:63
 msgid ""
-"Optionally, run :ref:`payments matching <payments/matching>` to validate any"
-" open vendor bills and customer invoices with their payments. While this "
-"step is optional, it could assist the year-end closing process if all "
-"outstanding payments and invoices are reconciled, potentially finding errors"
-" or mistakes in the system."
+"Optionally, run :ref:`payments matching <accounting/payments/matching>` to "
+"validate any open vendor bills and customer invoices with their payments. "
+"While this step is optional, it could assist the year-end closing process if"
+" all outstanding payments and invoices are reconciled, potentially finding "
+"errors or mistakes in the system."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/reporting/year_end.rst:68
@@ -16996,8 +16975,8 @@ msgstr ""
 #: ../../content/applications/finance/accounting/vendor_bills.rst:39
 msgid ""
 ":guilabel:`Bill Reference`: add the sales order reference provided by the "
-"vendor and is used to do the :ref:`matching <payments/matching>` when you "
-"receive the products."
+"vendor and is used to do the :ref:`matching <accounting/payments/matching>` "
+"when you receive the products."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:41
@@ -17104,10 +17083,6 @@ msgid ""
 ":guilabel:`Post Difference In` field and change the :guilabel:`Label` if "
 "needed. A journal entry will be created to balance the account receivable "
 "with the selected account."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/vendor_bills.rst-1
-msgid "register a partial payment"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:90
@@ -17802,8 +17777,8 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:14
 msgid ""
-"`Odoo Tutorials: Invoice Digitization with OCR "
-"<https://www.odoo.com/slides/slide/digitize-bills-with-ocr-1712>`_"
+"`Odoo Tutorials: Vendor Bill Digitization "
+"<https://www.odoo.com/slides/slide/vendor-bill-digitization-7065>`_"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:20

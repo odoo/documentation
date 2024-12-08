@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-04 08:54+0000\n"
+"POT-Creation-Date: 2024-12-02 09:51+0000\n"
 "PO-Revision-Date: 2022-10-04 12:53+0000\n"
 "Last-Translator: Jakob Krabbe <jakob.krabbe@vertel.se>, 2024\n"
 "Language-Team: Swedish (https://app.transifex.com/odoo/teams/41243/sv/)\n"
@@ -2414,6 +2414,7 @@ msgstr ""
 "efter specifika journalposter."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:103
+#: ../../content/applications/finance/accounting/payments.rst:104
 msgid "Batch payments"
 msgstr "Betalningar i batch"
 
@@ -9257,24 +9258,17 @@ msgstr ""
 #: ../../content/applications/finance/accounting/payments.rst:10
 msgid ""
 "If a payment is **linked to an invoice or bill**, it reduces/settles the "
-"amount due of the invoice. You can have multiple payments related to the "
-"same invoice."
+"amount due on the invoice. Multiple payments on the same invoice are "
+"possible."
 msgstr ""
-"Om en betalning är **länkad till en faktura eller räkning**, "
-"minskar/reglerar den fakturans förfallna belopp. Du kan ha flera betalningar"
-" relaterade till samma faktura."
 
 #: ../../content/applications/finance/accounting/payments.rst:13
 msgid ""
 "If a payment is **not linked to an invoice or bill**, the customer has an "
-"outstanding credit with your company, or your company has an outstanding "
-"debit with a vendor. You can use those outstanding amounts to reduce/settle "
-"unpaid invoices/bills."
+"outstanding credit with the company, or the company has an outstanding debit"
+" with a vendor. Those outstanding amounts reduce/settle unpaid "
+"invoices/bills."
 msgstr ""
-"Om en betalning **inte är kopplad till en faktura eller räkning** har kunden"
-" en utestående kredit hos ditt företag, eller ditt företag har en utestående"
-" debet hos en leverantör. Du kan använda dessa utestående belopp för att "
-"minska/reglera obetalda fakturor/räkningar."
 
 #: ../../content/applications/finance/accounting/payments.rst:18
 msgid ":doc:`Internal transfers <payments/internal_transfers>`"
@@ -9287,16 +9281,14 @@ msgstr ":doc:`bank/avstämning`"
 #: ../../content/applications/finance/accounting/payments.rst:20
 msgid ""
 "`Odoo Tutorials: Bank Configuration <https://www.odoo.com/slides/slide/bank-"
-"configuration-1880>`_"
+"configuration-6832>`_"
 msgstr ""
-"Handledning för `Odoo: Bankkonfiguration "
-"<https://www.odoo.com/slides/slide/bank-configuration-1880>`_"
 
-#: ../../content/applications/finance/accounting/payments.rst:24
+#: ../../content/applications/finance/accounting/payments.rst:26
 msgid "Registering payment from an invoice or bill"
 msgstr "Registrera betalning från en faktura eller räkning"
 
-#: ../../content/applications/finance/accounting/payments.rst:26
+#: ../../content/applications/finance/accounting/payments.rst:28
 msgid ""
 "When clicking :guilabel:`Register payment` in a customer invoice or vendor "
 "bill, it generates a new journal entry and changes the amount due according "
@@ -9304,33 +9296,22 @@ msgid ""
 "<bank/outstanding-accounts>` **receipts** or **payments** account. At this "
 "point, the customer invoice or vendor bill is marked as :guilabel:`In "
 "payment`. Then, when the outstanding account is reconciled with a bank "
-"statement line, the invoice or vendor bill changes to the :guilabel:`Paid` "
-"status."
+"transaction line, the invoice or vendor bill changes to the :guilabel:`Paid`"
+" status."
 msgstr ""
-"När du klickar på :guilabel:`Registrera betalning` i en kundfaktura eller "
-"leverantörsfaktura skapas en ny journalpost och det förfallna beloppet "
-"ändras i enlighet med betalningsbeloppet. Motposten återspeglas i ett "
-":ref:`utestående <bank/outstanding-account>` **kvitton** eller "
-"**betalningar** konto. Vid denna tidpunkt markeras kundfakturan eller "
-"leverantörsfakturan som :guilabel:`In payment`. När det utestående kontot "
-"sedan stäms av mot ett kontoutdrag ändras fakturan eller leverantörsfakturan"
-" till status :guilabel:`Paid`."
 
-#: ../../content/applications/finance/accounting/payments.rst:33
+#: ../../content/applications/finance/accounting/payments.rst:35
 msgid ""
-"The information icon near the payment line displays more information about "
-"the payment. You can access additional information, such as the related "
-"journal, by clicking :guilabel:`View`."
+"The :icon:`fa-info-circle` information icon next to the payment line "
+"displays more information about the payment. To access additional "
+"information, such as the related journal, click :guilabel:`View`."
 msgstr ""
-"Informationsikonen nära betalningsraden visar mer information om "
-"betalningen. Du kan få tillgång till ytterligare information, t.ex. den "
-"relaterade journalen, genom att klicka på :guilabel:`View`."
 
 #: ../../content/applications/finance/accounting/payments.rst-1
 msgid "See detailed information of a payment."
 msgstr "Se detaljerad information om en betalning."
 
-#: ../../content/applications/finance/accounting/payments.rst:40
+#: ../../content/applications/finance/accounting/payments.rst:43
 msgid ""
 "The customer invoice or vendor bill must be in the :guilabel:`Posted` status"
 " to register the payment."
@@ -9338,80 +9319,58 @@ msgstr ""
 "Kundfakturan eller leverantörsfakturan måste ha status :guilabel:`Posted` "
 "för att betalningen ska kunna registreras."
 
-#: ../../content/applications/finance/accounting/payments.rst:42
+#: ../../content/applications/finance/accounting/payments.rst:45
 msgid ""
-"If you unreconcile a payment, it still appears in your books but is no "
-"longer linked to the invoice."
+"If a payment is unreconciled, it still appears in the books but is no longer"
+" linked to the invoice."
 msgstr ""
-"Om du avkoncilierar en betalning visas den fortfarande i dina böcker men är "
-"inte längre kopplad till fakturan."
 
-#: ../../content/applications/finance/accounting/payments.rst:44
+#: ../../content/applications/finance/accounting/payments.rst:47
 msgid ""
-"If you (un)reconcile a payment in a different currency, a journal entry is "
+"If a payment is (un)reconciled in a different currency, a journal entry is "
 "automatically created to post the currency exchange gains/losses (reversal) "
 "amount."
 msgstr ""
-"Om du (av)stämmer en betalning i en annan valuta, skapas automatiskt en "
-"journalpost för att bokföra valutavinster/-förluster (återföring)."
 
-#: ../../content/applications/finance/accounting/payments.rst:46
+#: ../../content/applications/finance/accounting/payments.rst:49
 msgid ""
-"If you (un)reconcile a payment and an invoice having cash basis taxes, a "
-"journal entry is automatically created to post the cash basis tax (reversal)"
+"If a payment is (un)reconciled and an invoice with cash-basis taxes, a "
+"journal entry is automatically created to post the cash-basis tax (reversal)"
 " amount."
 msgstr ""
-"Om du (inte) stämmer av en betalning och en faktura som har kassamässiga "
-"skatter, skapas automatiskt en journalpost för att bokföra det kassamässiga "
-"skattebeloppet (återföring)."
 
-#: ../../content/applications/finance/accounting/payments.rst:50
+#: ../../content/applications/finance/accounting/payments.rst:53
 msgid ""
-"If your main bank account is set as an :ref:`outstanding account "
+"If the main bank account is set as an :ref:`outstanding account "
 "<bank/outstanding-accounts>`, and the payment is registered in Odoo (not "
-"through a related bank statement), invoices and bills are directly "
+"through a related bank transaction), invoices and bills are directly "
 "registered as :guilabel:`Paid`."
 msgstr ""
-"Om ditt huvudsakliga bankkonto är inställt som ett :ref:`utestående konto "
-"<bank/utestående-konton>`, och betalningen registreras i Odoo (inte via ett "
-"relaterat kontoutdrag), registreras fakturor och räkningar direkt som "
-":guilabel:`Paid`."
 
-#: ../../content/applications/finance/accounting/payments.rst:55
+#: ../../content/applications/finance/accounting/payments.rst:60
 msgid "Registering payments not tied to an invoice or bill"
 msgstr ""
 "Registrera betalningar som inte är knutna till en faktura eller räkning"
 
-#: ../../content/applications/finance/accounting/payments.rst:57
+#: ../../content/applications/finance/accounting/payments.rst:62
 msgid ""
 "When a new payment is registered via :menuselection:`Customers / Vendors -->"
-" Payments` menu, it is not directly linked to an invoice or bill. Instead, "
-"the account receivable or the account payable is matched with the "
-"**outstanding account** until it is manually matched with its related "
-"invoice or bill."
+" Payments`, it is not directly linked to an invoice or bill. Instead, the "
+"account receivable or the account payable is matched with the **outstanding "
+"account** until it is manually matched with its related invoice or bill."
 msgstr ""
-"När en ny betalning registreras via menyn :menuselection:`Kunder / "
-"Leverantörer --> Betalningar`, är den inte direkt kopplad till en faktura "
-"eller räkning. Istället matchas kundfordringen eller leverantörsskulden med "
-"det **utestående kontot** tills det manuellt matchas med den relaterade "
-"fakturan eller räkningen."
 
-#: ../../content/applications/finance/accounting/payments.rst:63
+#: ../../content/applications/finance/accounting/payments.rst:70
 msgid "Matching invoices and bills with payments"
 msgstr "Matcha fakturor och räkningar med betalningar"
 
-#: ../../content/applications/finance/accounting/payments.rst:65
+#: ../../content/applications/finance/accounting/payments.rst:72
 msgid ""
-"A blue banner appears when you validate a new invoice/bill and an "
-"**outstanding payment** exists for this specific customer or vendor. It can "
-"easily be matched from the invoice or bill by clicking :guilabel:`ADD` under"
-" :guilabel:`Outstanding Credits` or :guilabel:`Outstanding Debits`."
+"A blue banner appears when validating a new invoice/bill and an "
+"**outstanding payment** exists for this specific customer or vendor. To "
+"match it with the invoice or bill, click :guilabel:`ADD` under "
+":guilabel:`Outstanding Credits` or :guilabel:`Outstanding Debits`."
 msgstr ""
-"En blå banner visas när du validerar en ny faktura/räkning och det finns en "
-"**utestående betalning** för denna specifika kund eller leverantör. Den kan "
-"enkelt matchas från fakturan eller räkningen genom att klicka på "
-":guilabel:`ADD` under :guilabel:`Utestående krediter` eller "
-":guilabel:`Utestående debiteringar`."
 
 #: ../../content/applications/finance/accounting/payments.rst-1
 msgid "Shows the ADD option to reconcile an invoice or a bill with a payment."
@@ -9419,151 +9378,168 @@ msgstr ""
 "Visar ADD-alternativet för att stämma av en faktura eller en räkning med en "
 "betalning."
 
-#: ../../content/applications/finance/accounting/payments.rst:72
+#: ../../content/applications/finance/accounting/payments.rst:79
 msgid ""
 "The invoice or bill is now marked as :guilabel:`In payment` until it is "
-"reconciled with its corresponding bank statement."
+"reconciled with its corresponding bank transaction."
 msgstr ""
-"Fakturan eller räkningen är nu markerad som :guilabel:`In payment` tills den"
-" har stämts av mot motsvarande kontoutdrag."
 
-#: ../../content/applications/finance/accounting/payments.rst:78
-msgid "Batch payment"
-msgstr "Batch-betalning"
+#: ../../content/applications/finance/accounting/payments.rst:85
+msgid "Group payments"
+msgstr ""
 
-#: ../../content/applications/finance/accounting/payments.rst:80
+#: ../../content/applications/finance/accounting/payments.rst:87
 msgid ""
-"Batch payments allow you to group different payments to ease "
-":doc:`reconciliation <bank/reconciliation>`. They are also useful when you "
-"deposit :doc:`checks <payments/checks>` to the bank or for :doc:`SEPA "
-"payments <payments/pay_sepa>`. To do so, go to :menuselection:`Accounting "
-"--> Customers --> Batch Payments` or :menuselection:`Accounting --> Vendors "
-"--> Batch Payments`. In the list view of payments, you can select and group "
-"several payments in a batch by clicking :menuselection:`Action --> Create "
-"Batch Payment`."
+"Group payments allow combining outgoing and incoming payments from the same "
+"contact into a single payment to simplify the process and improve payment "
+"usability. To register a group payment:"
 msgstr ""
-"Med batchbetalningar kan du gruppera olika betalningar för att underlätta "
-":doc:`avstämning <bank/avstämning>`. De är också användbara när du sätter in"
-" :doc:`checkar <betalningar/checkar>` till banken eller för :doc:`SEPA-"
-"betalningar <betalningar/pay_sepa>`. För att göra detta, gå till "
-":menuselection:`Redovisning --> Kunder --> Batchbetalningar` eller "
-":menuselection:`Redovisning --> Leverantörer --> Batchbetalningar`. I "
-"listvyn över betalningar kan du välja och gruppera flera betalningar i en "
-"batch genom att klicka på :menuselection:`Aktion --> Skapa batchbetalning`."
 
-#: ../../content/applications/finance/accounting/payments.rst:88
-msgid ":doc:`payments/batch`"
-msgstr ":doc:`betalningar/batch`"
+#: ../../content/applications/finance/accounting/payments.rst:90
+msgid ""
+"Go to :menuselection:`Accounting --> Customers --> Invoices/Credit Notes` or"
+" :menuselection:`Accounting --> Vendors --> Bills/Refunds`."
+msgstr ""
 
-#: ../../content/applications/finance/accounting/payments.rst:89
-msgid ":doc:`payments/batch_sdd`"
-msgstr ":doc:`betalningar/batch_sdd`"
+#: ../../content/applications/finance/accounting/payments.rst:92
+msgid ""
+"Select the relevant invoices/credit notes or bills/refunds linked to a "
+"specific contact."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments.rst:93
+msgid ""
+"Click the :icon:`fa-cog` (:guilabel:`Action menu`) icon and select "
+":guilabel:`Register Payment`."
+msgstr ""
 
 #: ../../content/applications/finance/accounting/payments.rst:94
-msgid "Payments matching"
-msgstr "Matchning av betalningar"
+msgid ""
+"In the :guilabel:`Register Payment` window, select the :guilabel:`Journal`, "
+"the :guilabel:`Payment Method`, and the :guilabel:`Payment Date`."
+msgstr ""
 
 #: ../../content/applications/finance/accounting/payments.rst:96
 msgid ""
-"The :guilabel:`Payments matching` tool opens all unreconciled customer "
-"invoices or vendor bills and allows you to process them individually, "
-"matching all payments and invoices in one place. You can reach this tool "
-"from the :menuselection:`Accounting Dashboard --> Customer Invoices / Vendor"
-" Bills`, click the drop-down menu button (:guilabel:`⋮`), and select "
-":guilabel:`Payments Matching`, or go to :menuselection:`Accounting --> "
-"Accounting --> Reconciliation`."
+"Enable the :guilabel:`Group Payments` option and click :guilabel:`Create "
+"payment`."
 msgstr ""
-"Verktyget :guilabel:`Matchning av betalningar` öppnar alla icke-matchade "
-"kundfakturor eller leverantörsfakturor och låter dig behandla dem "
-"individuellt, matcha alla betalningar och fakturor på ett ställe. Du kan nå "
-"detta verktyg från :menuselection:`Redovisningspanelen --> Kundfakturor / "
-"Leverantörsfakturor`, klicka på rullgardinsmenyn (:guilabel:`⋮`) och välj "
-":guilabel:`Matcha betalningar`, eller gå till :menuselection:`Bokföring --> "
-"Bokföring --> Avstämning`."
+
+#: ../../content/applications/finance/accounting/payments.rst:98
+msgid ""
+"The invoices or bills are now marked as :guilabel:`In payment` until they "
+"are reconciled with the corresponding bank transactions. The credit notes or"
+" refunds are marked as :guilabel:`Paid`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments.rst:106
+msgid ""
+"Batch payments allow grouping payments from multiple contacts to ease "
+":doc:`reconciliation <bank/reconciliation>`. They are also useful when "
+"depositing :doc:`checks <payments/checks>` to the bank or for :doc:`SEPA "
+"payments <payments/pay_sepa>`. To do so, go to :menuselection:`Accounting "
+"--> Customers --> Batch Payments` or :menuselection:`Accounting --> Vendors "
+"--> Batch Payments`. In the list view of payments, to group several payments"
+" in a batch, select them and click :menuselection:`Action --> Create Batch "
+"Payment`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments.rst:114
+msgid ":doc:`payments/batch`"
+msgstr ":doc:`betalningar/batch`"
+
+#: ../../content/applications/finance/accounting/payments.rst:115
+msgid ":doc:`payments/batch_sdd`"
+msgstr ":doc:`betalningar/batch_sdd`"
+
+#: ../../content/applications/finance/accounting/payments.rst:120
+msgid "Payments matching"
+msgstr "Matchning av betalningar"
+
+#: ../../content/applications/finance/accounting/payments.rst:122
+msgid ""
+"The :guilabel:`Payments matching` tool opens all unreconciled customer "
+"invoices or vendor bills and allows them to be processed individually, "
+"matching all payments and invoices in one place. Go to the "
+":guilabel:`Accounting Dashboard`, click the :icon:`fa-ellipsis-v` "
+"(:guilabel:`dropdown menu`) button from the :guilabel:`Customer Invoices` or"
+" :guilabel:`Vendor Bills` journals, and select :guilabel:`Payments "
+"Matching`, or go to :menuselection:`Accounting --> Accounting --> "
+"Reconciliation`."
+msgstr ""
 
 #: ../../content/applications/finance/accounting/payments.rst-1
 msgid "Payments matching menu in the drop-down menu."
 msgstr "Betalningar matchande meny i rullgardinsmenyn."
 
-#: ../../content/applications/finance/accounting/payments.rst:106
+#: ../../content/applications/finance/accounting/payments.rst:133
 msgid ""
 "During the :doc:`reconciliation <bank/reconciliation>`, if the sum of the "
 "debits and credits does not match, there is a remaining balance. This either"
-" needs to be reconciled at a later date or needs to be written off directly."
+" needs to be reconciled at a later date or written off directly."
 msgstr ""
-"Under :doc:`avstämning <bank/avstämning>`, om summan av debet och kredit "
-"inte stämmer, finns det ett återstående saldo. Detta måste antingen stämmas "
-"av vid ett senare tillfälle eller skrivas av direkt."
 
-#: ../../content/applications/finance/accounting/payments.rst:111
+#: ../../content/applications/finance/accounting/payments.rst:140
 msgid "Batch payments matching"
 msgstr "Matchning av batchbetalningar"
 
-#: ../../content/applications/finance/accounting/payments.rst:113
+#: ../../content/applications/finance/accounting/payments.rst:142
 msgid ""
-"You can use the batch reconciliation feature to reconcile several "
-"outstanding payments or invoices simultaneously for a specific customer or "
-"vendor. Go to :menuselection:`Accounting --> Reporting --> Aged Receivable /"
-" Aged Payable`. You can see all transactions that have not been reconciled "
-"yet for that partner, and when you select a customer or vendor, the "
+"Use the batch reconciliation feature to reconcile several outstanding "
+"payments or invoices simultaneously for a specific customer or vendor. Go to"
+" :menuselection:`Accounting --> Reporting --> Aged Receivable / Aged "
+"Payable`. All transactions that have not yet been reconciled for that "
+"contact are visible, and when a customer or vendor is selected, the "
 ":guilabel:`Reconcile` option is displayed."
 msgstr ""
-"Du kan använda funktionen för batchavstämning för att stämma av flera "
-"utestående betalningar eller fakturor samtidigt för en viss kund eller "
-"leverantör. Gå till :menuselection:`Redovisning --> Rapportering --> Aged "
-"Receivable / Aged Payable`. Du kan se alla transaktioner som ännu inte har "
-"stämts av för den partnern, och när du väljer en kund eller leverantör visas"
-" alternativet :guilabel:`Avstäm`."
 
 #: ../../content/applications/finance/accounting/payments.rst-1
 msgid "See the reconcile option."
 msgstr "Se alternativet för avstämning."
 
-#: ../../content/applications/finance/accounting/payments.rst:123
+#: ../../content/applications/finance/accounting/payments.rst:154
 msgid "Registering a partial payment"
 msgstr "Registrera en delbetalning"
 
-#: ../../content/applications/finance/accounting/payments.rst:125
+#: ../../content/applications/finance/accounting/payments.rst:156
 msgid ""
-"To register a **partial payment**, click :guilabel:`Register payment` from "
-"the related invoice or bill, and enter the amount received or paid. Upon "
-"entering the amount, a prompt appears to decide whether to :guilabel:`Keep "
-"open` the invoice or bill, or :guilabel:`Mark as fully paid`. Select "
-":guilabel:`Keep open` and click :guilabel:`Create payment`. The invoice or "
-"bill is now marked as :guilabel:`Partial`. Select :guilabel:`Mark as fully "
-"paid` if you wish to settle the invoice or bill with a difference in the "
-"amount."
+"To register a partial payment, click on :guilabel:`Register Payment` from "
+"the related invoice or bill. In the case of a partial payment (when the "
+":guilabel:`Amount` paid is less than the total remaining amount on the "
+"invoice or the bill), the :guilabel:`Payment Difference` field displays the "
+"outstanding balance. There are two options:"
 msgstr ""
-"För att registrera en **delbetalning**, klicka på :guilabel:`Registrera "
-"betalning` från den relaterade fakturan eller räkningen, och ange det "
-"mottagna eller betalda beloppet. När du har angett beloppet visas en fråga "
-"om du vill :guilabel:`Behålla öppen` fakturan eller räkningen, eller "
-":guilabel:`Markera som helt betald`. Välj :guilabel:`Behåll öppen` och "
-"klicka på :guilabel:`Create payment`. Fakturan eller räkningen är nu "
-"markerad som :guilabel:`Delbetald`. Välj :guilabel:`Markera som fullt "
-"betald` om du vill reglera fakturan eller räkningen med en differens i "
-"beloppet."
+
+#: ../../content/applications/finance/accounting/payments.rst:161
+msgid ""
+":guilabel:`Keep open`: Keep the invoice or the bill open and mark it with a "
+":guilabel:`Partial` banner;"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments.rst:163
+msgid ""
+":guilabel:`Mark as fully paid`: Select an account in the :guilabel:`Post "
+"Difference In` field and change the :guilabel:`Label` if needed. A journal "
+"entry will be created to balance the accounts payable or receivable with the"
+" selected account."
+msgstr ""
 
 #: ../../content/applications/finance/accounting/payments.rst-1
-msgid "Partial payment of an invoice or bill."
-msgstr "Delbetalning av en faktura eller räkning."
+#: ../../content/applications/finance/accounting/vendor_bills.rst-1
+msgid "register a partial payment"
+msgstr "registrera en delbetalning"
 
-#: ../../content/applications/finance/accounting/payments.rst:136
-msgid "Reconciling payments with bank statements"
-msgstr "Stämma av betalningar mot kontoutdrag"
+#: ../../content/applications/finance/accounting/payments.rst:173
+msgid "Reconciling payments with bank transactions"
+msgstr ""
 
-#: ../../content/applications/finance/accounting/payments.rst:138
+#: ../../content/applications/finance/accounting/payments.rst:175
 msgid ""
 "Once a payment has been registered, the status of the invoice or bill is "
 ":guilabel:`In payment`. The next step is :doc:`reconciling "
-"<bank/reconciliation>` it with the related bank statement line to have the "
-"transaction finalized and the invoice or bill marked as :guilabel:`Paid`."
+"<bank/reconciliation>` it with the related bank transaction line to finalize"
+" the payment workflow and mark the invoice or bill as :guilabel:`Paid`."
 msgstr ""
-"När en betalning har registrerats är fakturans eller räkningens status "
-":guilabel:`In payment`. Nästa steg är att :doc:`avstämning "
-"<bank/avstämning>` den med den relaterade kontoutdragsraden för att få "
-"transaktionen slutförd och fakturan eller räkningen markerad som "
-":guilabel:`Paid`."
 
 #: ../../content/applications/finance/accounting/payments/batch.rst:3
 msgid "Batch payments by bank deposit"
@@ -14301,17 +14277,12 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/reporting/year_end.rst:63
 msgid ""
-"Optionally, run :ref:`payments matching <payments/matching>` to validate any"
-" open vendor bills and customer invoices with their payments. While this "
-"step is optional, it could assist the year-end closing process if all "
-"outstanding payments and invoices are reconciled, potentially finding errors"
-" or mistakes in the system."
+"Optionally, run :ref:`payments matching <accounting/payments/matching>` to "
+"validate any open vendor bills and customer invoices with their payments. "
+"While this step is optional, it could assist the year-end closing process if"
+" all outstanding payments and invoices are reconciled, potentially finding "
+"errors or mistakes in the system."
 msgstr ""
-"Alternativt kan du köra :ref:`betalningar som matchar "
-"<betalningar/matchning>` för att validera alla öppna leverantörsfakturor och"
-" kundfakturor med deras betalningar. Även om detta steg är valfritt kan det "
-"underlätta bokslutsprocessen om alla utestående betalningar och fakturor "
-"stäms av, vilket kan leda till att fel eller misstag upptäcks i systemet."
 
 #: ../../content/applications/finance/accounting/reporting/year_end.rst:68
 msgid ""
@@ -18705,12 +18676,9 @@ msgstr ""
 #: ../../content/applications/finance/accounting/vendor_bills.rst:39
 msgid ""
 ":guilabel:`Bill Reference`: add the sales order reference provided by the "
-"vendor and is used to do the :ref:`matching <payments/matching>` when you "
-"receive the products."
+"vendor and is used to do the :ref:`matching <accounting/payments/matching>` "
+"when you receive the products."
 msgstr ""
-":guilabel:`Bill Reference`: lägg till säljorderreferensen som tillhandahålls"
-" av säljaren och används för att göra :ref:`matchning "
-"<betalningar/matchning>` när du tar emot produkterna."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:41
 msgid ""
@@ -18852,10 +18820,6 @@ msgstr ""
 " fältet :guilabel:`Post Difference In` och ändrar :guilabel:`Label` om det "
 "behövs. En verifikat kommer att skapas för att balansera kundfordran med det"
 " valda kontot."
-
-#: ../../content/applications/finance/accounting/vendor_bills.rst-1
-msgid "register a partial payment"
-msgstr "registrera en delbetalning"
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:90
 msgid ""
@@ -19766,11 +19730,9 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:14
 msgid ""
-"`Odoo Tutorials: Invoice Digitization with OCR "
-"<https://www.odoo.com/slides/slide/digitize-bills-with-ocr-1712>`_"
+"`Odoo Tutorials: Vendor Bill Digitization "
+"<https://www.odoo.com/slides/slide/vendor-bill-digitization-7065>`_"
 msgstr ""
-"`Odoo handledning: Digitalisering av fakturor med OCR "
-"<https://www.odoo.com/slides/slide/digitize-bills-with-ocr-1712>`_"
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:20
 msgid ""

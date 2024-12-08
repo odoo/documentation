@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-21 07:41+0000\n"
+"POT-Creation-Date: 2024-12-02 09:51+0000\n"
 "PO-Revision-Date: 2022-10-04 12:53+0000\n"
 "Last-Translator: Sarah Park, 2024\n"
 "Language-Team: Korean (https://app.transifex.com/odoo/teams/41243/ko/)\n"
@@ -5086,9 +5086,9 @@ msgstr "Odoo 발신 이메일 서버 설정"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:198
 msgid ""
-"In order for the notifications feature to work using Mailjet, there are "
-"three settings that need to be set in Odoo."
-msgstr "Mailjet을 사용하여 알림 기능이 작동하게 하려면 Odoo에서 세 가지 설정을 완료해야 합니다."
+"For the notifications feature to work using Mailjet, with a custom domain, "
+"the following settings need to be configured:"
+msgstr ""
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:201
 msgid ""
@@ -5111,27 +5111,46 @@ msgstr ""
 #: ../../content/applications/general/email_communication/mailjet_api.rst:207
 msgid ""
 "The :guilabel:`mail.default.from_filter` system parameter must have the "
-"value `yourdomain.com`. Replace `yourdomain` with the custom domain for the "
-"Odoo database. If there isn't one, then use the "
-":guilabel:`mail.catchall.domain` system parameter."
+"value `yourdomain.com`. Replace `yourdomain` with the custom domain."
 msgstr ""
-":guilabel:`mail.default.from_filter` 시스템 매개변수 값은 `yourdomain.com` 이어야 합니다. "
-"Odoo 데이터베이스 도메인을 'yourdomain'을 사용자 지정 도메인으로 바꿉니다. 사용자 지정 도메인이 없는 경우 "
-":guilabel:`mail.catchall.domain` 시스템 매개변수를 사용합니다."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:211
+#: ../../content/applications/general/email_communication/mailjet_api.rst:210
+msgid ""
+"If utilizing a database domain, and **not** a custom domain, the following "
+"settings need to be configured:"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/mailjet_api.rst:213
+msgid ""
+"The :guilabel:`From Filter` needs to be set on the server configuration. It "
+"should match the domain in the two proceeding steps."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/mailjet_api.rst:215
+msgid ""
+"The :guilabel:`mail.default.from` system parameter must have the value "
+"`notifications`."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/mailjet_api.rst:216
+msgid ""
+"The :guilabel:`mail.default.from_filter` system parameter must have the "
+"value `yourdomain.odoo.com`."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/mailjet_api.rst:219
 msgid ""
 "For more information see :ref:`Using a default email address "
 "<email_communication/default>`."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:213
+#: ../../content/applications/general/email_communication/mailjet_api.rst:221
 msgid ""
 "The :guilabel:`System Parameters` can be accessed by activating the "
 ":ref:`developer mode <developer-mode>`."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:216
+#: ../../content/applications/general/email_communication/mailjet_api.rst:224
 msgid ""
 "Once the setup is complete, the Odoo database is ready to use the Mailjet "
 "email server for mass mailing or transactional emails!"
@@ -11246,6 +11265,8 @@ msgid ""
 ":guilabel:`Create`. Then, from the blank group form, select an "
 ":guilabel:`Application`, and complete the group form (detailed below)."
 msgstr ""
+":guilabel:`그룹` 페이지에서 새 그룹을 만들려면 :guilabel:`만들기` 를 클릭합니다. 그런 다음 빈 그룹 양식에서 "
+":guilabel:`신청서` 를 선택하고 그룹 양식을 작성합니다(아래에 자세히 설명되어 있음)."
 
 #: ../../content/applications/general/users/access_rights.rst:76
 msgid ""
@@ -11417,6 +11438,8 @@ msgid ""
 "`[('mrp_production_ids', 'in', "
 "user.partner_id.commercial_partner_id.production_ids.ids)]`"
 msgstr ""
+"`[('mrp_production_ids', 'in', "
+"user.partner_id.commercial_partner_id.production_ids.ids)]`"
 
 #: ../../content/applications/general/users/access_rights.rst:149
 msgid ""
@@ -11487,6 +11510,8 @@ msgid ""
 "upper-right corner, and clicking on the :guilabel:`OdooBot` username. Then, "
 "select the :guilabel:`Log out` option."
 msgstr ""
+"*슈퍼유저 모드* 를 종료하려면 오른쪽 상단으로 이동하여 :guilabel:`OdooBot` 사용자 이름을 클릭합니다. 그런 다음 "
+":guilabel:` 로그아웃` 을 선택합니다."
 
 #: ../../content/applications/general/users/access_rights.rst:185
 msgid ""
@@ -12193,6 +12218,8 @@ msgid ""
 "upper-right corner, go to :menuselection:`My profile`, and select a "
 ":guilabel:`Language` in the dropdown list."
 msgstr ""
+"사용 언어를 선택하려면 오른쪽 상단에 있는 프로필 아이콘을 클릭하여 :menuselection:`내 프로필` 로 이동한 다음 드롭다운 "
+"목록에서 :guilabel:`언어` 를 선택하면 됩니다."
 
 #: ../../content/applications/general/users/language.rst:36
 msgid "Change another user's language"
@@ -12581,7 +12608,7 @@ msgstr "비밀번호 변경"
 
 #: ../../content/applications/general/users/portal.rst:126
 #: ../../content/applications/general/users/portal.rst:145
-#: ../../content/applications/general/users/portal.rst:162
+#: ../../content/applications/general/users/portal.rst:164
 msgid ""
 "First enter the username and password (login) into the database login page "
 "to access the portal user account. A portal dashboard will appear upon "
@@ -12651,11 +12678,11 @@ msgid ""
 "setup."
 msgstr "마지막으로 :guilabel:`2단계 인증 사용`을 클릭하여 설정을 완료합니다."
 
-#: ../../content/applications/general/users/portal.rst:160
+#: ../../content/applications/general/users/portal.rst:162
 msgid "Change payment info"
 msgstr "결제 정보 변경하기"
 
-#: ../../content/applications/general/users/portal.rst:165
+#: ../../content/applications/general/users/portal.rst:167
 msgid ""
 "If the customer would like to manage payment options, navigate to the "
 ":guilabel:`Manage payment methods` in the menu on the right. Then, add the "

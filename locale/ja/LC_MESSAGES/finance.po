@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-04 08:54+0000\n"
+"POT-Creation-Date: 2024-12-02 09:51+0000\n"
 "PO-Revision-Date: 2022-10-04 12:53+0000\n"
 "Last-Translator: Junko Augias, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/odoo/teams/41243/ja/)\n"
@@ -2083,6 +2083,7 @@ msgid ""
 msgstr "guilabel:`既存の仕訳を照合` タブ内の検索バーでは、特定の仕訳帳項目を検索することができます。"
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:103
+#: ../../content/applications/finance/accounting/payments.rst:104
 msgid "Batch payments"
 msgstr "バッチ支払"
 
@@ -5705,6 +5706,9 @@ msgid ""
 "<../../../inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config>`"
 " doc."
 msgstr ""
+"このドキュメントでは、理論上の特定のユースケースを取り上げています。|AVCO| の設定および使用方法については、:doc:`在庫評価設定 "
+"<../../../inventory_and_mrp/inventory_/product_management/inventory_valuation/inventory_valuation_config>`"
+" を参照して下さい。"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:33
 msgid ""
@@ -7936,19 +7940,17 @@ msgstr "Odooでは、支払は請求書や請求書に自動的にリンクさ�
 #: ../../content/applications/finance/accounting/payments.rst:10
 msgid ""
 "If a payment is **linked to an invoice or bill**, it reduces/settles the "
-"amount due of the invoice. You can have multiple payments related to the "
-"same invoice."
+"amount due on the invoice. Multiple payments on the same invoice are "
+"possible."
 msgstr ""
-"支払が顧客請求書または仕入先請求書に**リンクされている場合**、顧客請求書の支払額が減額/決済されます。同じ顧客請求書に複数の支払を関連付けることができます。"
 
 #: ../../content/applications/finance/accounting/payments.rst:13
 msgid ""
 "If a payment is **not linked to an invoice or bill**, the customer has an "
-"outstanding credit with your company, or your company has an outstanding "
-"debit with a vendor. You can use those outstanding amounts to reduce/settle "
-"unpaid invoices/bills."
+"outstanding credit with the company, or the company has an outstanding debit"
+" with a vendor. Those outstanding amounts reduce/settle unpaid "
+"invoices/bills."
 msgstr ""
-"支払が**顧客請求書または仕入先請求書にリンクされていない**場合、顧客は貴社に対して貸方残高を持っているか、貴社が仕入先に対して借方残高を持っています。これらの未払金額は、未払顧客請求書/仕入先請求書を削減/決済するために使用することができます。"
 
 #: ../../content/applications/finance/accounting/payments.rst:18
 msgid ":doc:`Internal transfers <payments/internal_transfers>`"
@@ -7961,16 +7963,14 @@ msgstr ":doc:`bank/reconciliation`"
 #: ../../content/applications/finance/accounting/payments.rst:20
 msgid ""
 "`Odoo Tutorials: Bank Configuration <https://www.odoo.com/slides/slide/bank-"
-"configuration-1880>`_"
+"configuration-6832>`_"
 msgstr ""
-"`Odooチュートリアル: 銀行設定<https://www.odoo.com/slides/slide/bank-"
-"configuration-1880>`_"
 
-#: ../../content/applications/finance/accounting/payments.rst:24
+#: ../../content/applications/finance/accounting/payments.rst:26
 msgid "Registering payment from an invoice or bill"
 msgstr "顧客または仕入先請求書からの支払い登録"
 
-#: ../../content/applications/finance/accounting/payments.rst:26
+#: ../../content/applications/finance/accounting/payments.rst:28
 msgid ""
 "When clicking :guilabel:`Register payment` in a customer invoice or vendor "
 "bill, it generates a new journal entry and changes the amount due according "
@@ -7978,174 +7978,195 @@ msgid ""
 "<bank/outstanding-accounts>` **receipts** or **payments** account. At this "
 "point, the customer invoice or vendor bill is marked as :guilabel:`In "
 "payment`. Then, when the outstanding account is reconciled with a bank "
-"statement line, the invoice or vendor bill changes to the :guilabel:`Paid` "
-"status."
+"transaction line, the invoice or vendor bill changes to the :guilabel:`Paid`"
+" status."
 msgstr ""
-"顧客請求書または仕入先請求書の :guilabel:`支払登録` をクリックすると、新しい仕訳が生成され、支払額に応じて支払期日が変更されます。相手先は"
-" :ref:`outstanding <bank/outstanding-accounts>` の **入金** または **支払** "
-"勘定に反映されます。この時点で、顧客請求書または支払先請求書は :guilabel:`支払中` "
-"としてマークされます。その後、未払勘定が銀行明細行と消込されると、顧客請求書または仕入先請求書は :guilabel:`支払済` "
-"ステータスに変更されます。"
 
-#: ../../content/applications/finance/accounting/payments.rst:33
+#: ../../content/applications/finance/accounting/payments.rst:35
 msgid ""
-"The information icon near the payment line displays more information about "
-"the payment. You can access additional information, such as the related "
-"journal, by clicking :guilabel:`View`."
+"The :icon:`fa-info-circle` information icon next to the payment line "
+"displays more information about the payment. To access additional "
+"information, such as the related journal, click :guilabel:`View`."
 msgstr ""
-"支払明細行の近くにある情報アイコンは、支払に関する詳細情報を表示します。guilabel:`表示`をクリックすると、関連仕訳帳などの追加情報にアクセスできます。"
 
 #: ../../content/applications/finance/accounting/payments.rst-1
 msgid "See detailed information of a payment."
 msgstr "支払の詳細情報を見る"
 
-#: ../../content/applications/finance/accounting/payments.rst:40
+#: ../../content/applications/finance/accounting/payments.rst:43
 msgid ""
 "The customer invoice or vendor bill must be in the :guilabel:`Posted` status"
 " to register the payment."
 msgstr "支払登録するには、顧客請求書または仕入先請求書が :guilabel:`記帳済` ステータスでなければなりません。"
 
-#: ../../content/applications/finance/accounting/payments.rst:42
+#: ../../content/applications/finance/accounting/payments.rst:45
 msgid ""
-"If you unreconcile a payment, it still appears in your books but is no "
-"longer linked to the invoice."
-msgstr "支払照合を解除した場合、帳簿には表示されますが、請求書との関連はなくなります。"
+"If a payment is unreconciled, it still appears in the books but is no longer"
+" linked to the invoice."
+msgstr ""
 
-#: ../../content/applications/finance/accounting/payments.rst:44
+#: ../../content/applications/finance/accounting/payments.rst:47
 msgid ""
-"If you (un)reconcile a payment in a different currency, a journal entry is "
+"If a payment is (un)reconciled in a different currency, a journal entry is "
 "automatically created to post the currency exchange gains/losses (reversal) "
 "amount."
-msgstr "異なる通貨での支払を(未)消込する場合、為替差損益(戻入)額を計上するための仕訳が自動的に作成されます。"
+msgstr ""
 
-#: ../../content/applications/finance/accounting/payments.rst:46
+#: ../../content/applications/finance/accounting/payments.rst:49
 msgid ""
-"If you (un)reconcile a payment and an invoice having cash basis taxes, a "
-"journal entry is automatically created to post the cash basis tax (reversal)"
+"If a payment is (un)reconciled and an invoice with cash-basis taxes, a "
+"journal entry is automatically created to post the cash-basis tax (reversal)"
 " amount."
-msgstr "現金主義税額がある支払と請求書を(未)消込した場合、現金主義税(戻入)額を計上する仕訳が自動的に作成されます。"
+msgstr ""
 
-#: ../../content/applications/finance/accounting/payments.rst:50
+#: ../../content/applications/finance/accounting/payments.rst:53
 msgid ""
-"If your main bank account is set as an :ref:`outstanding account "
+"If the main bank account is set as an :ref:`outstanding account "
 "<bank/outstanding-accounts>`, and the payment is registered in Odoo (not "
-"through a related bank statement), invoices and bills are directly "
+"through a related bank transaction), invoices and bills are directly "
 "registered as :guilabel:`Paid`."
 msgstr ""
-"主要銀行の口座が :ref:`未払勘定 <bank/outstanding-accounts>` "
-"に設定されており、Odooに支払が登録されている場合(関連する銀行明細を経由していない場合)、請求書や請求書は :guilabel:`支払済` "
-"として直接登録されます。"
 
-#: ../../content/applications/finance/accounting/payments.rst:55
+#: ../../content/applications/finance/accounting/payments.rst:60
 msgid "Registering payments not tied to an invoice or bill"
 msgstr "請求書や請求書に紐づいていない支払いを登録"
 
-#: ../../content/applications/finance/accounting/payments.rst:57
+#: ../../content/applications/finance/accounting/payments.rst:62
 msgid ""
 "When a new payment is registered via :menuselection:`Customers / Vendors -->"
-" Payments` menu, it is not directly linked to an invoice or bill. Instead, "
-"the account receivable or the account payable is matched with the "
-"**outstanding account** until it is manually matched with its related "
-"invoice or bill."
+" Payments`, it is not directly linked to an invoice or bill. Instead, the "
+"account receivable or the account payable is matched with the **outstanding "
+"account** until it is manually matched with its related invoice or bill."
 msgstr ""
-"menuselection:`顧客 / 取引先 --> "
-"支払`メニューで新しい支払が登録されると、顧客請求書や仕入先請求書に直接リンクされません。代わりに、売掛金または買掛金は、関連する顧客請求書または仕入先請求書と手動で消込されるまで、**未払勘定**と照合されます。"
 
-#: ../../content/applications/finance/accounting/payments.rst:63
+#: ../../content/applications/finance/accounting/payments.rst:70
 msgid "Matching invoices and bills with payments"
 msgstr "顧客請求書や仕入先請求書と支払の照合"
 
-#: ../../content/applications/finance/accounting/payments.rst:65
+#: ../../content/applications/finance/accounting/payments.rst:72
 msgid ""
-"A blue banner appears when you validate a new invoice/bill and an "
-"**outstanding payment** exists for this specific customer or vendor. It can "
-"easily be matched from the invoice or bill by clicking :guilabel:`ADD` under"
-" :guilabel:`Outstanding Credits` or :guilabel:`Outstanding Debits`."
+"A blue banner appears when validating a new invoice/bill and an "
+"**outstanding payment** exists for this specific customer or vendor. To "
+"match it with the invoice or bill, click :guilabel:`ADD` under "
+":guilabel:`Outstanding Credits` or :guilabel:`Outstanding Debits`."
 msgstr ""
-"青いバナーは、新しい請求書を確認した際に、その特定の顧客または仕入先に対して**未消込支払**が存在する場合に表示されます。guilabel:`未消込クレジット`または:guilabel:`未消込支払`の下にある:guilabel:`追加`をクリックすることで、請求書または請求書から簡単に照合することができます。"
 
 #: ../../content/applications/finance/accounting/payments.rst-1
 msgid "Shows the ADD option to reconcile an invoice or a bill with a payment."
 msgstr "顧客請求書または仕入先請求書と支払を消込する追加オプションを表示します。"
 
-#: ../../content/applications/finance/accounting/payments.rst:72
+#: ../../content/applications/finance/accounting/payments.rst:79
 msgid ""
 "The invoice or bill is now marked as :guilabel:`In payment` until it is "
-"reconciled with its corresponding bank statement."
-msgstr "顧客請求書または仕入先請求書は、対応する銀行明細書と消込されるまで、:guilabel:`支払中`とマークされます。"
-
-#: ../../content/applications/finance/accounting/payments.rst:78
-msgid "Batch payment"
-msgstr "バッチ支払"
-
-#: ../../content/applications/finance/accounting/payments.rst:80
-msgid ""
-"Batch payments allow you to group different payments to ease "
-":doc:`reconciliation <bank/reconciliation>`. They are also useful when you "
-"deposit :doc:`checks <payments/checks>` to the bank or for :doc:`SEPA "
-"payments <payments/pay_sepa>`. To do so, go to :menuselection:`Accounting "
-"--> Customers --> Batch Payments` or :menuselection:`Accounting --> Vendors "
-"--> Batch Payments`. In the list view of payments, you can select and group "
-"several payments in a batch by clicking :menuselection:`Action --> Create "
-"Batch Payment`."
+"reconciled with its corresponding bank transaction."
 msgstr ""
-"バッチ支払は、 :doc:`消込<bank/reconciliation>`を容易にするために、異なる支払いをグループ化することができます。また、 "
-":doc:`小切手 <payments/checks>` を銀行に預ける時や、 :doc:`SEPA支払 <payments/pay_sepa>` "
-"にも便利です。これを行うには、 :menuselection:`会計 --> 顧客 --> バッチ支払` または :menuselection:`会計 "
-"--> 取引先 --> 撥支払` に進みます。支払のリストビューで :menuselection:`アクション --> バッチ支払作成` "
-"をクリックすると、複数の支払を一括で選択してグループ化することができます。"
 
-#: ../../content/applications/finance/accounting/payments.rst:88
-msgid ":doc:`payments/batch`"
-msgstr ":doc:`payments/batch`"
+#: ../../content/applications/finance/accounting/payments.rst:85
+msgid "Group payments"
+msgstr ""
 
-#: ../../content/applications/finance/accounting/payments.rst:89
-msgid ":doc:`payments/batch_sdd`"
-msgstr ":doc:`payments/batch_sdd`"
+#: ../../content/applications/finance/accounting/payments.rst:87
+msgid ""
+"Group payments allow combining outgoing and incoming payments from the same "
+"contact into a single payment to simplify the process and improve payment "
+"usability. To register a group payment:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments.rst:90
+msgid ""
+"Go to :menuselection:`Accounting --> Customers --> Invoices/Credit Notes` or"
+" :menuselection:`Accounting --> Vendors --> Bills/Refunds`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments.rst:92
+msgid ""
+"Select the relevant invoices/credit notes or bills/refunds linked to a "
+"specific contact."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments.rst:93
+msgid ""
+"Click the :icon:`fa-cog` (:guilabel:`Action menu`) icon and select "
+":guilabel:`Register Payment`."
+msgstr ""
 
 #: ../../content/applications/finance/accounting/payments.rst:94
-msgid "Payments matching"
-msgstr "支払照合"
+msgid ""
+"In the :guilabel:`Register Payment` window, select the :guilabel:`Journal`, "
+"the :guilabel:`Payment Method`, and the :guilabel:`Payment Date`."
+msgstr ""
 
 #: ../../content/applications/finance/accounting/payments.rst:96
 msgid ""
-"The :guilabel:`Payments matching` tool opens all unreconciled customer "
-"invoices or vendor bills and allows you to process them individually, "
-"matching all payments and invoices in one place. You can reach this tool "
-"from the :menuselection:`Accounting Dashboard --> Customer Invoices / Vendor"
-" Bills`, click the drop-down menu button (:guilabel:`⋮`), and select "
-":guilabel:`Payments Matching`, or go to :menuselection:`Accounting --> "
-"Accounting --> Reconciliation`."
+"Enable the :guilabel:`Group Payments` option and click :guilabel:`Create "
+"payment`."
 msgstr ""
-"guilabel:`支払照合`ツールは、未消込の全ての顧客請求書または仕入先請求書を開き、それらを個別に処理し、全ての支払と請求書を一箇所で照合することができます。このツールは、"
-" :menuselection:`会計ダッシュボード --> 顧客請求書 / "
-"仕入先請求書`のドロップダウンメニューボタン(:guilabel:`↪Sm_22EE`) をクリックし、 :guilabel:`支払照合`を選択するか、"
-" :menuselection:`会計 --> 会計 --> 消込`に進みます。"
+
+#: ../../content/applications/finance/accounting/payments.rst:98
+msgid ""
+"The invoices or bills are now marked as :guilabel:`In payment` until they "
+"are reconciled with the corresponding bank transactions. The credit notes or"
+" refunds are marked as :guilabel:`Paid`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments.rst:106
+msgid ""
+"Batch payments allow grouping payments from multiple contacts to ease "
+":doc:`reconciliation <bank/reconciliation>`. They are also useful when "
+"depositing :doc:`checks <payments/checks>` to the bank or for :doc:`SEPA "
+"payments <payments/pay_sepa>`. To do so, go to :menuselection:`Accounting "
+"--> Customers --> Batch Payments` or :menuselection:`Accounting --> Vendors "
+"--> Batch Payments`. In the list view of payments, to group several payments"
+" in a batch, select them and click :menuselection:`Action --> Create Batch "
+"Payment`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments.rst:114
+msgid ":doc:`payments/batch`"
+msgstr ":doc:`payments/batch`"
+
+#: ../../content/applications/finance/accounting/payments.rst:115
+msgid ":doc:`payments/batch_sdd`"
+msgstr ":doc:`payments/batch_sdd`"
+
+#: ../../content/applications/finance/accounting/payments.rst:120
+msgid "Payments matching"
+msgstr "支払照合"
+
+#: ../../content/applications/finance/accounting/payments.rst:122
+msgid ""
+"The :guilabel:`Payments matching` tool opens all unreconciled customer "
+"invoices or vendor bills and allows them to be processed individually, "
+"matching all payments and invoices in one place. Go to the "
+":guilabel:`Accounting Dashboard`, click the :icon:`fa-ellipsis-v` "
+"(:guilabel:`dropdown menu`) button from the :guilabel:`Customer Invoices` or"
+" :guilabel:`Vendor Bills` journals, and select :guilabel:`Payments "
+"Matching`, or go to :menuselection:`Accounting --> Accounting --> "
+"Reconciliation`."
+msgstr ""
 
 #: ../../content/applications/finance/accounting/payments.rst-1
 msgid "Payments matching menu in the drop-down menu."
 msgstr "ドロップダウン・メニューの支払照合メニュー。"
 
-#: ../../content/applications/finance/accounting/payments.rst:106
+#: ../../content/applications/finance/accounting/payments.rst:133
 msgid ""
 "During the :doc:`reconciliation <bank/reconciliation>`, if the sum of the "
 "debits and credits does not match, there is a remaining balance. This either"
-" needs to be reconciled at a later date or needs to be written off directly."
+" needs to be reconciled at a later date or written off directly."
 msgstr ""
-"doc:`消込 <bank/reconciliation>` "
-"の間、借方と貸方の合計が一致しない場合、残高があります。これは後日消込するか、直接償却する必要があります。"
 
-#: ../../content/applications/finance/accounting/payments.rst:111
+#: ../../content/applications/finance/accounting/payments.rst:140
 msgid "Batch payments matching"
 msgstr "バッチ支払照合"
 
-#: ../../content/applications/finance/accounting/payments.rst:113
+#: ../../content/applications/finance/accounting/payments.rst:142
 msgid ""
-"You can use the batch reconciliation feature to reconcile several "
-"outstanding payments or invoices simultaneously for a specific customer or "
-"vendor. Go to :menuselection:`Accounting --> Reporting --> Aged Receivable /"
-" Aged Payable`. You can see all transactions that have not been reconciled "
-"yet for that partner, and when you select a customer or vendor, the "
+"Use the batch reconciliation feature to reconcile several outstanding "
+"payments or invoices simultaneously for a specific customer or vendor. Go to"
+" :menuselection:`Accounting --> Reporting --> Aged Receivable / Aged "
+"Payable`. All transactions that have not yet been reconciled for that "
+"contact are visible, and when a customer or vendor is selected, the "
 ":guilabel:`Reconcile` option is displayed."
 msgstr ""
 
@@ -8153,44 +8174,49 @@ msgstr ""
 msgid "See the reconcile option."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/payments.rst:123
+#: ../../content/applications/finance/accounting/payments.rst:154
 msgid "Registering a partial payment"
 msgstr "部分支払を登録"
 
-#: ../../content/applications/finance/accounting/payments.rst:125
+#: ../../content/applications/finance/accounting/payments.rst:156
 msgid ""
-"To register a **partial payment**, click :guilabel:`Register payment` from "
-"the related invoice or bill, and enter the amount received or paid. Upon "
-"entering the amount, a prompt appears to decide whether to :guilabel:`Keep "
-"open` the invoice or bill, or :guilabel:`Mark as fully paid`. Select "
-":guilabel:`Keep open` and click :guilabel:`Create payment`. The invoice or "
-"bill is now marked as :guilabel:`Partial`. Select :guilabel:`Mark as fully "
-"paid` if you wish to settle the invoice or bill with a difference in the "
-"amount."
+"To register a partial payment, click on :guilabel:`Register Payment` from "
+"the related invoice or bill. In the case of a partial payment (when the "
+":guilabel:`Amount` paid is less than the total remaining amount on the "
+"invoice or the bill), the :guilabel:`Payment Difference` field displays the "
+"outstanding balance. There are two options:"
 msgstr ""
-"**部分支払**を登録するには、関連する顧客請求書または支払請求書から :guilabel:`支払を登録` "
-"をクリックし、受取金額または支払金額を入力します。金額を入力すると、顧客請求書または仕入先請求書を:guilabel:`オープンのまま残す`にするか、:guilabel:`全額支払い済とマーク`にするかを決定するプロンプトが表示されます。guilabel:`オープンのまま残す`を選択し、:guilabel:`支払を作成`をクリックします。顧客請求書または仕入先請求書に"
-" :guilabel:`部分` "
-"というマークが付けられます。差額がある顧客請求書や仕入先請求書を支払いたい場合、:guilabel:`全額支払済`を選択します。"
+
+#: ../../content/applications/finance/accounting/payments.rst:161
+msgid ""
+":guilabel:`Keep open`: Keep the invoice or the bill open and mark it with a "
+":guilabel:`Partial` banner;"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments.rst:163
+msgid ""
+":guilabel:`Mark as fully paid`: Select an account in the :guilabel:`Post "
+"Difference In` field and change the :guilabel:`Label` if needed. A journal "
+"entry will be created to balance the accounts payable or receivable with the"
+" selected account."
+msgstr ""
 
 #: ../../content/applications/finance/accounting/payments.rst-1
-msgid "Partial payment of an invoice or bill."
-msgstr "顧客請求書または仕入先請求書の部分支払"
+#: ../../content/applications/finance/accounting/vendor_bills.rst-1
+msgid "register a partial payment"
+msgstr ""
 
-#: ../../content/applications/finance/accounting/payments.rst:136
-msgid "Reconciling payments with bank statements"
-msgstr "銀行明細で支払消込"
+#: ../../content/applications/finance/accounting/payments.rst:173
+msgid "Reconciling payments with bank transactions"
+msgstr ""
 
-#: ../../content/applications/finance/accounting/payments.rst:138
+#: ../../content/applications/finance/accounting/payments.rst:175
 msgid ""
 "Once a payment has been registered, the status of the invoice or bill is "
 ":guilabel:`In payment`. The next step is :doc:`reconciling "
-"<bank/reconciliation>` it with the related bank statement line to have the "
-"transaction finalized and the invoice or bill marked as :guilabel:`Paid`."
+"<bank/reconciliation>` it with the related bank transaction line to finalize"
+" the payment workflow and mark the invoice or bill as :guilabel:`Paid`."
 msgstr ""
-"支払が登録されると、顧客請求書または仕入先請求書のステータスは :guilabel:`支払中` になります。次のステップは、:doc:`消込 "
-"<bank/reconciliation>` を関連する銀行明細行と消込し、取引を確定し、顧客請求書または仕入先請求書を :guilabel:`支払済`"
-" とマークすることです。"
 
 #: ../../content/applications/finance/accounting/payments/batch.rst:3
 msgid "Batch payments by bank deposit"
@@ -11780,9 +11806,10 @@ msgid ""
 "your password, give a descriptive name to your new key, and copy the API "
 "key."
 msgstr ""
-"APIキーを**単一の**データベースに追加するには、データベースに接続し、 :ref:`developer mode "
-"`を有効にして、ユーザメニューをクリックし、 :guilabel:`自分のプロフィール` / "
-":guilabel:`個人設定`をクリックします。guilabel:`アカウントセキュリティ`タブで、:guilabel:`新規APIキー`をクリックし、パスワードを確認し、新しいキーにわかりやすい名前を付け、APIキーをコピーします。"
+"APIキーを **単一の** データベースに追加するには、データベースに接続し、 :ref:`開発者モード <developer-"
+"mode>`を有効にして、ユーザメニューをクリックし、 :guilabel:`自分のプロファイル` / :guilabel:`個人設定` "
+"をクリックします。:guilabel:`アカウントセキュリティ` タブで、:guilabel:`新規APIキー` "
+"をクリックし、パスワードを確認し、新しいキーにわかりやすい名前を付け、APIキーをコピーします。"
 
 #: ../../content/applications/finance/accounting/reporting/silverfin.rst-1
 msgid "creation of an Odoo external API key for a database"
@@ -12241,14 +12268,12 @@ msgstr "全ての勘定科目を監査し、全ての取引とその性質を完
 
 #: ../../content/applications/finance/accounting/reporting/year_end.rst:63
 msgid ""
-"Optionally, run :ref:`payments matching <payments/matching>` to validate any"
-" open vendor bills and customer invoices with their payments. While this "
-"step is optional, it could assist the year-end closing process if all "
-"outstanding payments and invoices are reconciled, potentially finding errors"
-" or mistakes in the system."
+"Optionally, run :ref:`payments matching <accounting/payments/matching>` to "
+"validate any open vendor bills and customer invoices with their payments. "
+"While this step is optional, it could assist the year-end closing process if"
+" all outstanding payments and invoices are reconciled, potentially finding "
+"errors or mistakes in the system."
 msgstr ""
-"オプションとして、:ref:`支払照合 <payments/matching>` "
-"を実行し、未払いの仕入先請求書や顧客請求書とその支払を検証します。このステップはオプションですが、未払の支払いと請求書を全て消込することで、システムのエラーやミスを発見できる可能性があり、年末の決算作業をサポートします。"
 
 #: ../../content/applications/finance/accounting/reporting/year_end.rst:68
 msgid ""
@@ -16014,11 +16039,9 @@ msgstr ":guilabel:`仕入先`: Odooは仕入先の登録情報、過去の発注
 #: ../../content/applications/finance/accounting/vendor_bills.rst:39
 msgid ""
 ":guilabel:`Bill Reference`: add the sales order reference provided by the "
-"vendor and is used to do the :ref:`matching <payments/matching>` when you "
-"receive the products."
+"vendor and is used to do the :ref:`matching <accounting/payments/matching>` "
+"when you receive the products."
 msgstr ""
-":guilabel:`仕入先請求書参照`: 仕入先から提供された販売オーダ参照を追加し、プロダクトを受け取る際に :ref:`照合 "
-"<payments/matching>` を行うために使用します。"
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:41
 msgid ""
@@ -16132,10 +16155,6 @@ msgid ""
 ":guilabel:`Post Difference In` field and change the :guilabel:`Label` if "
 "needed. A journal entry will be created to balance the account receivable "
 "with the selected account."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/vendor_bills.rst-1
-msgid "register a partial payment"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:90
@@ -16869,11 +16888,9 @@ msgstr "`Odoo請求書デジタル化をテスト<https://www.odoo.com/app/invoi
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:14
 msgid ""
-"`Odoo Tutorials: Invoice Digitization with OCR "
-"<https://www.odoo.com/slides/slide/digitize-bills-with-ocr-1712>`_"
+"`Odoo Tutorials: Vendor Bill Digitization "
+"<https://www.odoo.com/slides/slide/vendor-bill-digitization-7065>`_"
 msgstr ""
-"`Odooチュートリアル: OCRでの請求書デジタル化 <https://www.odoo.com/slides/slide/digitize-"
-"bills-with-ocr-1712>`_"
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:20
 msgid ""
@@ -21579,7 +21596,7 @@ msgid ""
 "Profile --> Preference tab`, and enter your INSZ or BIS number in the "
 "designated field."
 msgstr ""
-"自分の情報を入力するには、自分のアバターをクリックし、:menuselection:`自分のプロフィール --> "
+"自分の情報を入力するには、自分のアバターをクリックし、:menuselection:`自分のプロファイル --> "
 "お気に入りタブ`に進み、指定されたフィールドにINSZ番号またはBIS番号を入力します。"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:450
@@ -29696,11 +29713,11 @@ msgid ""
 "entering your :guilabel:`Username` and :guilabel:`Password`, and go to "
 ":guilabel:`My Profile` on your **profile menu**;"
 msgstr ""
-":guilabel:`ユーザ名`と:guilabel:`パスワード`を入力して`GSTポータル<https://services.gst.gov.in/services/login>`_にログインし、**プロフィールメニュー**の:guilabel:`自分のプロフィール`にアクセスして下さい;"
+":guilabel:`ユーザ名`と:guilabel:`パスワード`を入力して`GSTポータル<https://services.gst.gov.in/services/login>`_にログインし、**プロフィールメニュー**の:guilabel:`自分のプロファイル`にアクセスして下さい;"
 
 #: ../../content/applications/finance/fiscal_localizations/india.rst:0
 msgid "Click On the My Profile from profile"
-msgstr "プロフィールから自分のプロフィールをクリック"
+msgstr "プロファイルから自分のプロファイルをクリック"
 
 #: ../../content/applications/finance/fiscal_localizations/india.rst:321
 msgid ""

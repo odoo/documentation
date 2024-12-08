@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-04 08:54+0000\n"
+"POT-Creation-Date: 2024-12-02 09:51+0000\n"
 "PO-Revision-Date: 2022-10-04 12:53+0000\n"
 "Last-Translator: Dorin Hongu <dhongu@gmail.com>, 2024\n"
 "Language-Team: Romanian (https://app.transifex.com/odoo/teams/41243/ro/)\n"
@@ -2454,6 +2454,7 @@ msgstr ""
 "permite să căutați articole specifice din jurnal."
 
 #: ../../content/applications/finance/accounting/bank/reconciliation.rst:103
+#: ../../content/applications/finance/accounting/payments.rst:104
 msgid "Batch payments"
 msgstr "Plăți lot"
 
@@ -9322,23 +9323,17 @@ msgstr ""
 #: ../../content/applications/finance/accounting/payments.rst:10
 msgid ""
 "If a payment is **linked to an invoice or bill**, it reduces/settles the "
-"amount due of the invoice. You can have multiple payments related to the "
-"same invoice."
+"amount due on the invoice. Multiple payments on the same invoice are "
+"possible."
 msgstr ""
-"Dacă o plată este **legată de o factură sau o factură**, aceasta reduce suma"
-" datorată a facturii. Puteți avea mai multe plăți legate de aceeași factură."
 
 #: ../../content/applications/finance/accounting/payments.rst:13
 msgid ""
 "If a payment is **not linked to an invoice or bill**, the customer has an "
-"outstanding credit with your company, or your company has an outstanding "
-"debit with a vendor. You can use those outstanding amounts to reduce/settle "
-"unpaid invoices/bills."
+"outstanding credit with the company, or the company has an outstanding debit"
+" with a vendor. Those outstanding amounts reduce/settle unpaid "
+"invoices/bills."
 msgstr ""
-"Dacă o plată **nu este legată de o factură client sau de factură furnizor**,"
-" clientul are un credit restant la compania dvs. sau compania dvs. are un "
-"debit restant la un furnizor. Puteți utiliza acele sume restante pentru a "
-"reduce/deconta facturile furnizor/facturile client neplătite."
 
 #: ../../content/applications/finance/accounting/payments.rst:18
 msgid ":doc:`Internal transfers <payments/internal_transfers>`"
@@ -9351,16 +9346,14 @@ msgstr ":doc:`bank/reconciliation`"
 #: ../../content/applications/finance/accounting/payments.rst:20
 msgid ""
 "`Odoo Tutorials: Bank Configuration <https://www.odoo.com/slides/slide/bank-"
-"configuration-1880>`_"
+"configuration-6832>`_"
 msgstr ""
-"`Odoo Tutorials: Configurare bancă <https://www.odoo.com/slides/slide/bank-"
-"configuration-1880>`_"
 
-#: ../../content/applications/finance/accounting/payments.rst:24
+#: ../../content/applications/finance/accounting/payments.rst:26
 msgid "Registering payment from an invoice or bill"
 msgstr "Înregistrarea plății dintr-o factură sau factură"
 
-#: ../../content/applications/finance/accounting/payments.rst:26
+#: ../../content/applications/finance/accounting/payments.rst:28
 msgid ""
 "When clicking :guilabel:`Register payment` in a customer invoice or vendor "
 "bill, it generates a new journal entry and changes the amount due according "
@@ -9368,33 +9361,22 @@ msgid ""
 "<bank/outstanding-accounts>` **receipts** or **payments** account. At this "
 "point, the customer invoice or vendor bill is marked as :guilabel:`In "
 "payment`. Then, when the outstanding account is reconciled with a bank "
-"statement line, the invoice or vendor bill changes to the :guilabel:`Paid` "
-"status."
+"transaction line, the invoice or vendor bill changes to the :guilabel:`Paid`"
+" status."
 msgstr ""
-"Când faceți clic pe :guilabel:`Înregistrați plata` într-o factură de client "
-"sau de furnizor, acesta generează o nouă înregistrare în jurnal și modifică "
-"suma datorată în funcție de suma plății. Omologul se reflectă într-un cont "
-"de :ref:`outstanding <bank/outstanding-accounts>`  **încasări** sau "
-"**plăți** restante. În acest moment, factura clientului sau factura "
-"furnizorului este marcată ca :guilabel:`În plată`. Apoi, atunci când contul "
-"restant este reconciliat cu o linie de extras bancar, factura sau factura de"
-" la furnizor se schimbă în starea :guilabel:`Plătit`."
 
-#: ../../content/applications/finance/accounting/payments.rst:33
+#: ../../content/applications/finance/accounting/payments.rst:35
 msgid ""
-"The information icon near the payment line displays more information about "
-"the payment. You can access additional information, such as the related "
-"journal, by clicking :guilabel:`View`."
+"The :icon:`fa-info-circle` information icon next to the payment line "
+"displays more information about the payment. To access additional "
+"information, such as the related journal, click :guilabel:`View`."
 msgstr ""
-"Pictograma de informații din apropierea liniei de plată afișează mai multe "
-"informații despre plată. Puteți accesa informații suplimentare, cum ar fi "
-"jurnalul asociat, făcând clic pe :guilabel:`Vizualizați`."
 
 #: ../../content/applications/finance/accounting/payments.rst-1
 msgid "See detailed information of a payment."
 msgstr "Vedeți informații detaliate despre o plată"
 
-#: ../../content/applications/finance/accounting/payments.rst:40
+#: ../../content/applications/finance/accounting/payments.rst:43
 msgid ""
 "The customer invoice or vendor bill must be in the :guilabel:`Posted` status"
 " to register the payment."
@@ -9402,82 +9384,59 @@ msgstr ""
 "Factura de client sau factura de furnizor trebuie să fie în starea "
 ":guilabel:`Postat` pentru a înregistra plata."
 
-#: ../../content/applications/finance/accounting/payments.rst:42
+#: ../../content/applications/finance/accounting/payments.rst:45
 msgid ""
-"If you unreconcile a payment, it still appears in your books but is no "
-"longer linked to the invoice."
+"If a payment is unreconciled, it still appears in the books but is no longer"
+" linked to the invoice."
 msgstr ""
-"Dacă dereconciliați o plată, aceasta apare în continuare în cărțile dvs., "
-"dar nu mai este legată de factură."
 
-#: ../../content/applications/finance/accounting/payments.rst:44
+#: ../../content/applications/finance/accounting/payments.rst:47
 msgid ""
-"If you (un)reconcile a payment in a different currency, a journal entry is "
+"If a payment is (un)reconciled in a different currency, a journal entry is "
 "automatically created to post the currency exchange gains/losses (reversal) "
 "amount."
 msgstr ""
-"Dacă (dez)reconciliați o plată într-o altă monedă, este creată automat o "
-"înregistrare în jurnal pentru a înregistra suma câștigurilor/pierderilor "
-"(reversării) din schimbul valutar."
 
-#: ../../content/applications/finance/accounting/payments.rst:46
+#: ../../content/applications/finance/accounting/payments.rst:49
 msgid ""
-"If you (un)reconcile a payment and an invoice having cash basis taxes, a "
-"journal entry is automatically created to post the cash basis tax (reversal)"
+"If a payment is (un)reconciled and an invoice with cash-basis taxes, a "
+"journal entry is automatically created to post the cash-basis tax (reversal)"
 " amount."
 msgstr ""
-"Dacă (dez)reconciliați o plată și o factură care are taxe pe bază de "
-"numerar, o înregistrare în jurnal este creată automat pentru a înregistra "
-"suma (storno) a impozitului pe bază de numerar."
 
-#: ../../content/applications/finance/accounting/payments.rst:50
+#: ../../content/applications/finance/accounting/payments.rst:53
 msgid ""
-"If your main bank account is set as an :ref:`outstanding account "
+"If the main bank account is set as an :ref:`outstanding account "
 "<bank/outstanding-accounts>`, and the payment is registered in Odoo (not "
-"through a related bank statement), invoices and bills are directly "
+"through a related bank transaction), invoices and bills are directly "
 "registered as :guilabel:`Paid`."
 msgstr ""
-"Dacă contul dvs. bancar principal este setat ca :ref:`cont restant "
-"<bank/outstanding-accounts>`, iar plata este înregistrată în Odoo (nu "
-"printr-un extras bancar aferent), facturile client și facturile furnizor "
-"sunt înregistrate direct ca :guilabel: `Plătit`."
 
-#: ../../content/applications/finance/accounting/payments.rst:55
+#: ../../content/applications/finance/accounting/payments.rst:60
 msgid "Registering payments not tied to an invoice or bill"
 msgstr ""
 "Înregistrarea plăților care nu sunt legate de o factură client sau factură "
 "furnizor"
 
-#: ../../content/applications/finance/accounting/payments.rst:57
+#: ../../content/applications/finance/accounting/payments.rst:62
 msgid ""
 "When a new payment is registered via :menuselection:`Customers / Vendors -->"
-" Payments` menu, it is not directly linked to an invoice or bill. Instead, "
-"the account receivable or the account payable is matched with the "
-"**outstanding account** until it is manually matched with its related "
-"invoice or bill."
+" Payments`, it is not directly linked to an invoice or bill. Instead, the "
+"account receivable or the account payable is matched with the **outstanding "
+"account** until it is manually matched with its related invoice or bill."
 msgstr ""
-"Când o nouă plată este înregistrată prin meniul :menuselection:`Clienți / "
-"Furnizori --> Plăți`, aceasta nu este direct legată de o factură client sau "
-"de factură furnizor. În schimb, contul de încasat sau contul de plătit este "
-"asociat cu **contul restant** până când este asociat manual cu factura "
-"client sau factura furnizor aferentă."
 
-#: ../../content/applications/finance/accounting/payments.rst:63
+#: ../../content/applications/finance/accounting/payments.rst:70
 msgid "Matching invoices and bills with payments"
 msgstr "Potrivirea facturilor client și facturilor furnizor cu plățile"
 
-#: ../../content/applications/finance/accounting/payments.rst:65
+#: ../../content/applications/finance/accounting/payments.rst:72
 msgid ""
-"A blue banner appears when you validate a new invoice/bill and an "
-"**outstanding payment** exists for this specific customer or vendor. It can "
-"easily be matched from the invoice or bill by clicking :guilabel:`ADD` under"
-" :guilabel:`Outstanding Credits` or :guilabel:`Outstanding Debits`."
+"A blue banner appears when validating a new invoice/bill and an "
+"**outstanding payment** exists for this specific customer or vendor. To "
+"match it with the invoice or bill, click :guilabel:`ADD` under "
+":guilabel:`Outstanding Credits` or :guilabel:`Outstanding Debits`."
 msgstr ""
-"Un banner albastru apare atunci când validați o nouă factură client/ factură"
-" furnizor și există o **plată restantă** pentru acest anumit client sau "
-"furnizor. Poate fi asociat cu ușurință din factură client sau factură "
-"furnizor făcând clic pe :guilabel:`Adaugă` sub :guilabel:`Credite restante` "
-"sau :guilabel:`Debite restante`."
 
 #: ../../content/applications/finance/accounting/payments.rst-1
 msgid "Shows the ADD option to reconcile an invoice or a bill with a payment."
@@ -9485,153 +9444,168 @@ msgstr ""
 "Afisează opțiunea Adaugă pentru a reconcilia o factură client sau factură "
 "furnizor cu plata."
 
-#: ../../content/applications/finance/accounting/payments.rst:72
+#: ../../content/applications/finance/accounting/payments.rst:79
 msgid ""
 "The invoice or bill is now marked as :guilabel:`In payment` until it is "
-"reconciled with its corresponding bank statement."
+"reconciled with its corresponding bank transaction."
 msgstr ""
-"Factura client sau factura furnizor este marcat ca :guilabel:`În plată` până"
-" când acesta este reconciliat cu extrasul său bancar corespunzător."
 
-#: ../../content/applications/finance/accounting/payments.rst:78
-msgid "Batch payment"
-msgstr "Plată în lot"
+#: ../../content/applications/finance/accounting/payments.rst:85
+msgid "Group payments"
+msgstr "Grupare plăți"
 
-#: ../../content/applications/finance/accounting/payments.rst:80
+#: ../../content/applications/finance/accounting/payments.rst:87
 msgid ""
-"Batch payments allow you to group different payments to ease "
-":doc:`reconciliation <bank/reconciliation>`. They are also useful when you "
-"deposit :doc:`checks <payments/checks>` to the bank or for :doc:`SEPA "
-"payments <payments/pay_sepa>`. To do so, go to :menuselection:`Accounting "
-"--> Customers --> Batch Payments` or :menuselection:`Accounting --> Vendors "
-"--> Batch Payments`. In the list view of payments, you can select and group "
-"several payments in a batch by clicking :menuselection:`Action --> Create "
-"Batch Payment`."
+"Group payments allow combining outgoing and incoming payments from the same "
+"contact into a single payment to simplify the process and improve payment "
+"usability. To register a group payment:"
 msgstr ""
-"Plățile în lot vă permit să grupați diferite plăți pentru a ușura "
-":doc:`reconcilierea <bank/reconciliation>`. Ele sunt utile și atunci când "
-"depuneți :doc:`cecuri <payments/checks>` la bancă sau pentru :doc:`plăți "
-"SEPA <payments/pay_sepa>`. Pentru a face acest lucru, accesați "
-":menuselection:`Contabilitate --> Clienți --> Plăți în lot` sau "
-":menuselection:`Contabilitate --> Furnizori --> Plăți în lot`. În "
-"vizualizarea listă de plăți, puteți selecta și grupa mai multe plăți într-un"
-" lot făcând clic pe :menuselection:`Acțiune --> Creare plată în lot`."
 
-#: ../../content/applications/finance/accounting/payments.rst:88
-msgid ":doc:`payments/batch`"
-msgstr ":doc:`payments/batch`"
+#: ../../content/applications/finance/accounting/payments.rst:90
+msgid ""
+"Go to :menuselection:`Accounting --> Customers --> Invoices/Credit Notes` or"
+" :menuselection:`Accounting --> Vendors --> Bills/Refunds`."
+msgstr ""
 
-#: ../../content/applications/finance/accounting/payments.rst:89
-msgid ":doc:`payments/batch_sdd`"
-msgstr ":doc:`payments/batch_sdd`"
+#: ../../content/applications/finance/accounting/payments.rst:92
+msgid ""
+"Select the relevant invoices/credit notes or bills/refunds linked to a "
+"specific contact."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments.rst:93
+msgid ""
+"Click the :icon:`fa-cog` (:guilabel:`Action menu`) icon and select "
+":guilabel:`Register Payment`."
+msgstr ""
 
 #: ../../content/applications/finance/accounting/payments.rst:94
-msgid "Payments matching"
-msgstr "Potrivirea plății"
+msgid ""
+"In the :guilabel:`Register Payment` window, select the :guilabel:`Journal`, "
+"the :guilabel:`Payment Method`, and the :guilabel:`Payment Date`."
+msgstr ""
 
 #: ../../content/applications/finance/accounting/payments.rst:96
 msgid ""
-"The :guilabel:`Payments matching` tool opens all unreconciled customer "
-"invoices or vendor bills and allows you to process them individually, "
-"matching all payments and invoices in one place. You can reach this tool "
-"from the :menuselection:`Accounting Dashboard --> Customer Invoices / Vendor"
-" Bills`, click the drop-down menu button (:guilabel:`⋮`), and select "
-":guilabel:`Payments Matching`, or go to :menuselection:`Accounting --> "
-"Accounting --> Reconciliation`."
+"Enable the :guilabel:`Group Payments` option and click :guilabel:`Create "
+"payment`."
 msgstr ""
-"Instrumentul :guilabel:`Potrivirea plăților` deschide toate facturile "
-"clienților nereconciliate sau facturile furnizorilor și vă permite să le "
-"procesați individual, potrivind toate plățile și facturile într-un singur "
-"loc. Puteți accesa acest instrument din :menuselection:`Tabloul de bord "
-"contabil --> Facturi clienți/Facturi furnizori`, faceți clic pe butonul "
-"meniului derulant (:guilabel:`⋮`) și selectați :guilabel:`Potrivirea "
-"plăților`, sau mergeți la :menuselection:`Contabilitate --> Contabilitate "
-"--> Reconciliere`."
+
+#: ../../content/applications/finance/accounting/payments.rst:98
+msgid ""
+"The invoices or bills are now marked as :guilabel:`In payment` until they "
+"are reconciled with the corresponding bank transactions. The credit notes or"
+" refunds are marked as :guilabel:`Paid`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments.rst:106
+msgid ""
+"Batch payments allow grouping payments from multiple contacts to ease "
+":doc:`reconciliation <bank/reconciliation>`. They are also useful when "
+"depositing :doc:`checks <payments/checks>` to the bank or for :doc:`SEPA "
+"payments <payments/pay_sepa>`. To do so, go to :menuselection:`Accounting "
+"--> Customers --> Batch Payments` or :menuselection:`Accounting --> Vendors "
+"--> Batch Payments`. In the list view of payments, to group several payments"
+" in a batch, select them and click :menuselection:`Action --> Create Batch "
+"Payment`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments.rst:114
+msgid ":doc:`payments/batch`"
+msgstr ":doc:`payments/batch`"
+
+#: ../../content/applications/finance/accounting/payments.rst:115
+msgid ":doc:`payments/batch_sdd`"
+msgstr ":doc:`payments/batch_sdd`"
+
+#: ../../content/applications/finance/accounting/payments.rst:120
+msgid "Payments matching"
+msgstr "Potrivirea plății"
+
+#: ../../content/applications/finance/accounting/payments.rst:122
+msgid ""
+"The :guilabel:`Payments matching` tool opens all unreconciled customer "
+"invoices or vendor bills and allows them to be processed individually, "
+"matching all payments and invoices in one place. Go to the "
+":guilabel:`Accounting Dashboard`, click the :icon:`fa-ellipsis-v` "
+"(:guilabel:`dropdown menu`) button from the :guilabel:`Customer Invoices` or"
+" :guilabel:`Vendor Bills` journals, and select :guilabel:`Payments "
+"Matching`, or go to :menuselection:`Accounting --> Accounting --> "
+"Reconciliation`."
+msgstr ""
 
 #: ../../content/applications/finance/accounting/payments.rst-1
 msgid "Payments matching menu in the drop-down menu."
 msgstr "Meniul de potrivire a plăților din meniul derulant."
 
-#: ../../content/applications/finance/accounting/payments.rst:106
+#: ../../content/applications/finance/accounting/payments.rst:133
 msgid ""
 "During the :doc:`reconciliation <bank/reconciliation>`, if the sum of the "
 "debits and credits does not match, there is a remaining balance. This either"
-" needs to be reconciled at a later date or needs to be written off directly."
+" needs to be reconciled at a later date or written off directly."
 msgstr ""
-"În timpul :doc:`reconcilierii <bank/reconciliation>`, dacă suma debitelor și"
-" creditelor nu se potrivește, există un sold rămas. Acest lucru fie trebuie "
-"să fie reconciliat la o dată ulterioară, fie trebuie anulat direct."
 
-#: ../../content/applications/finance/accounting/payments.rst:111
+#: ../../content/applications/finance/accounting/payments.rst:140
 msgid "Batch payments matching"
 msgstr "Potrivirea plăților în lot"
 
-#: ../../content/applications/finance/accounting/payments.rst:113
+#: ../../content/applications/finance/accounting/payments.rst:142
 msgid ""
-"You can use the batch reconciliation feature to reconcile several "
-"outstanding payments or invoices simultaneously for a specific customer or "
-"vendor. Go to :menuselection:`Accounting --> Reporting --> Aged Receivable /"
-" Aged Payable`. You can see all transactions that have not been reconciled "
-"yet for that partner, and when you select a customer or vendor, the "
+"Use the batch reconciliation feature to reconcile several outstanding "
+"payments or invoices simultaneously for a specific customer or vendor. Go to"
+" :menuselection:`Accounting --> Reporting --> Aged Receivable / Aged "
+"Payable`. All transactions that have not yet been reconciled for that "
+"contact are visible, and when a customer or vendor is selected, the "
 ":guilabel:`Reconcile` option is displayed."
 msgstr ""
-"Puteți utiliza caracteristica de reconciliere a loturilor pentru a "
-"reconcilia mai multe plăți sau facturi restante simultan pentru un anumit "
-"client sau furnizor. Accesați :menuselection:`Contabilitate --> Raportare "
-"--> Încasări vechi / Plăti vechi`. Puteți vedea toate tranzacțiile care nu "
-"au fost încă reconciliate pentru acel partener, iar când selectați un client"
-" sau un furnizor, este afișată opțiunea :guilabel:`Reconciliere`."
 
 #: ../../content/applications/finance/accounting/payments.rst-1
 msgid "See the reconcile option."
 msgstr "Vezi opțiunea de reconciliere."
 
-#: ../../content/applications/finance/accounting/payments.rst:123
+#: ../../content/applications/finance/accounting/payments.rst:154
 msgid "Registering a partial payment"
 msgstr "Înregistrarea unei plăți parțiale"
 
-#: ../../content/applications/finance/accounting/payments.rst:125
+#: ../../content/applications/finance/accounting/payments.rst:156
 msgid ""
-"To register a **partial payment**, click :guilabel:`Register payment` from "
-"the related invoice or bill, and enter the amount received or paid. Upon "
-"entering the amount, a prompt appears to decide whether to :guilabel:`Keep "
-"open` the invoice or bill, or :guilabel:`Mark as fully paid`. Select "
-":guilabel:`Keep open` and click :guilabel:`Create payment`. The invoice or "
-"bill is now marked as :guilabel:`Partial`. Select :guilabel:`Mark as fully "
-"paid` if you wish to settle the invoice or bill with a difference in the "
-"amount."
+"To register a partial payment, click on :guilabel:`Register Payment` from "
+"the related invoice or bill. In the case of a partial payment (when the "
+":guilabel:`Amount` paid is less than the total remaining amount on the "
+"invoice or the bill), the :guilabel:`Payment Difference` field displays the "
+"outstanding balance. There are two options:"
 msgstr ""
-"Pentru a înregistra o **plată parțială**, faceți clic pe "
-":guilabel:`Înregistrați plata` din factura client sau factura furnizor "
-"aferentă și introduceți suma primită sau plătită. La introducerea sumei, "
-"apare o solicitare pentru a decide dacă :guilabel:`Păstrați deschisă` "
-"factura client sau factura furnizor \\:guilabel:`Marcați ca complet "
-"plătită`. Selectați :guilabel:`Păstrați deschis` și faceți clic pe "
-":guilabel:`Creați plata`. Factura client sau factura furnizor este acum "
-"marcată ca :guilabel:`Parțial`. Selectați :guilabel:`Marcați ca complet "
-"plătit` dacă doriți să plătiți factura client sau factura furnizor cu o "
-"diferență de sumă."
+
+#: ../../content/applications/finance/accounting/payments.rst:161
+msgid ""
+":guilabel:`Keep open`: Keep the invoice or the bill open and mark it with a "
+":guilabel:`Partial` banner;"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/payments.rst:163
+msgid ""
+":guilabel:`Mark as fully paid`: Select an account in the :guilabel:`Post "
+"Difference In` field and change the :guilabel:`Label` if needed. A journal "
+"entry will be created to balance the accounts payable or receivable with the"
+" selected account."
+msgstr ""
 
 #: ../../content/applications/finance/accounting/payments.rst-1
-msgid "Partial payment of an invoice or bill."
-msgstr "Plata parțială a unei facturi client sau facturi furnizor"
+#: ../../content/applications/finance/accounting/vendor_bills.rst-1
+msgid "register a partial payment"
+msgstr ""
 
-#: ../../content/applications/finance/accounting/payments.rst:136
-msgid "Reconciling payments with bank statements"
-msgstr "Reconcilierea plăților cu extrasele bancare"
+#: ../../content/applications/finance/accounting/payments.rst:173
+msgid "Reconciling payments with bank transactions"
+msgstr ""
 
-#: ../../content/applications/finance/accounting/payments.rst:138
+#: ../../content/applications/finance/accounting/payments.rst:175
 msgid ""
 "Once a payment has been registered, the status of the invoice or bill is "
 ":guilabel:`In payment`. The next step is :doc:`reconciling "
-"<bank/reconciliation>` it with the related bank statement line to have the "
-"transaction finalized and the invoice or bill marked as :guilabel:`Paid`."
+"<bank/reconciliation>` it with the related bank transaction line to finalize"
+" the payment workflow and mark the invoice or bill as :guilabel:`Paid`."
 msgstr ""
-"Odată ce o plată a fost înregistrată, starea facturii client sau a facturii "
-"furnizor este :guilabel:`În plată`. Următorul pas este :doc:`reconcilierea "
-"<bank/reconciliation>` cu linia aferentă extrasului bancar pentru ca "
-"tranzacția să fie finalizată și factura client sau factura furnizor marcată "
-"ca :guilabel:`Plătit`."
 
 #: ../../content/applications/finance/accounting/payments/batch.rst:3
 msgid "Batch payments by bank deposit"
@@ -14374,17 +14348,12 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/reporting/year_end.rst:63
 msgid ""
-"Optionally, run :ref:`payments matching <payments/matching>` to validate any"
-" open vendor bills and customer invoices with their payments. While this "
-"step is optional, it could assist the year-end closing process if all "
-"outstanding payments and invoices are reconciled, potentially finding errors"
-" or mistakes in the system."
+"Optionally, run :ref:`payments matching <accounting/payments/matching>` to "
+"validate any open vendor bills and customer invoices with their payments. "
+"While this step is optional, it could assist the year-end closing process if"
+" all outstanding payments and invoices are reconciled, potentially finding "
+"errors or mistakes in the system."
 msgstr ""
-"Opțional, rulați :ref:`plăți care se potrivesc <payments/matching>` pentru a"
-" valida orice facturi deschise ale furnizorilor și facturile clienților cu "
-"plățile acestora. Deși acest pas este opțional, ar putea ajuta procesul de "
-"închidere de sfârșit de an dacă toate plățile și facturile restante sunt "
-"reconciliate, găsind posibil erori sau greșeli în sistem."
 
 #: ../../content/applications/finance/accounting/reporting/year_end.rst:68
 msgid ""
@@ -18733,12 +18702,9 @@ msgstr ""
 #: ../../content/applications/finance/accounting/vendor_bills.rst:39
 msgid ""
 ":guilabel:`Bill Reference`: add the sales order reference provided by the "
-"vendor and is used to do the :ref:`matching <payments/matching>` when you "
-"receive the products."
+"vendor and is used to do the :ref:`matching <accounting/payments/matching>` "
+"when you receive the products."
 msgstr ""
-":guilabel:`Referința facturii`: ​​adaugă referința comenzii de vânzare "
-"furnizată de furnizor și este folosită pentru a face :ref:`potrivirea "
-"<plăților/potrivirii>` când primiți produsele."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:41
 msgid ""
@@ -18869,10 +18835,6 @@ msgid ""
 ":guilabel:`Post Difference In` field and change the :guilabel:`Label` if "
 "needed. A journal entry will be created to balance the account receivable "
 "with the selected account."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/vendor_bills.rst-1
-msgid "register a partial payment"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:90
@@ -19795,11 +19757,9 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:14
 msgid ""
-"`Odoo Tutorials: Invoice Digitization with OCR "
-"<https://www.odoo.com/slides/slide/digitize-bills-with-ocr-1712>`_"
+"`Odoo Tutorials: Vendor Bill Digitization "
+"<https://www.odoo.com/slides/slide/vendor-bill-digitization-7065>`_"
 msgstr ""
-"`Tutoriale Odoo: Digitizarea facturilor cu OCR "
-"<https://www.odoo.com/slides/slide/digitize-bills-with-ocr-1712>`_"
 
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:20
 msgid ""
