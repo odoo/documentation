@@ -12,6 +12,8 @@ Configuration
 Enable the :guilabel:`Analytic Accounting` feature by going to :menuselection:`Accounting -->
 Configuration --> Settings --> Analytics`.
 
+.. _accounting/analytic_accounting/analytic_accounts:
+
 Analytic accounts
 =================
 

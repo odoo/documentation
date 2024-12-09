@@ -1,102 +1,171 @@
-================
-Analytic budgets
+=======
+Budgets
+=======
+
+:ref:`Analytic budgets <accounting/reporting/budgets/analytic-budgets>` track specific activities
+and projects using analytic accounts, helping businesses make informed decisions about specific
+departments, projects, or other groups of transactions. In contrast, :ref:`financial budgets
+<accounting/reporting/budgets/financial>` are tied to the general ledger accounts that appear on the
+profit and loss and focus on the company's overall economic position.
+
+.. _accounting/reporting/budgets/analytic-budgets:
+
+Analytic Budgets
 ================
 
-Managing budgets is an essential part of running a business. Budgets help people become more
-intentional with how money is spent and direct people to organize and prioritize their work to meet
-financial goals. They allow the planning of a desired financial outcome and then measure the actual
-performance against the plan. Odoo manages budgets using both **general** and **analytic accounts**.
+Analytic budgets allow for allocating and tracking income and expenses in detail, breaking down
+costs and revenues by specific projects, departments, or groups of transactions. Analytic budgets
+can be applied across various departments or projects to measure profitability and performance. Odoo
+manages analytic budgets using :doc:`analytic accounting <analytic_accounting>`.
+
+.. _accounting/reporting/budgets/analytic-configuration:
 
 Configuration
-=============
+-------------
 
-Go to :menuselection:`Accounting --> Configuration --> Settings --> Analytics section`, and enable
-:guilabel:`Budget Management`.
+Go to :menuselection:`Accounting --> Configuration --> Settings`, and enable
+:guilabel:`Budget Management` in the :guilabel:`Analytics` section.
 
-Budgetary positions
+.. _accounting/reporting/budgets/analytic-accounting:
+
+Analytic accounting
 -------------------
 
-Budgetary positions are lists of accounts for which you want to keep budgets (typically expense or
-income accounts).
+Odoo structures budgets using :ref:`plans <analytic_accounting/analytic_plans>` and
+:ref:`accounts <accounting/analytic_accounting/analytic_accounts>`, which must be configured
+*before* creating a budget.
 
-To define budgetary positions, go to :menuselection:`Accounting --> Configuration --> Management:
-Budgetary Positions` and :guilabel:`New`. Add a :guilabel:`Name` to your budgetary position and
-select the :guilabel:`Company` it applies to. Click :guilabel:`Add a line` to add one or more
-accounts.
+.. _accounting/reporting/budgets/analytic-budget-set:
+
+Set an analytic budget
+----------------------
+
+To create a new budget, go to :menuselection:`Accounting --> Analytic Budgets` and click
+:guilabel:`New`. Make sure the following fields are appropriately completed:
+:guilabel:`Budget Name`, :guilabel:`Period`, and :guilabel:`Budget Type`.
+
+Click :guilabel:`Add a line` in the :guilabel:`Budget Lines` tab to structure the budget with the
+analytic plans and accounts previously created. While the analytic plans correspond to the column
+names, select the analytic accounts to define the budget lines and set the amounts for each in the
+:guilabel:`Budgeted` column. Once all the budget lines are settled, click :guilabel:`Open`. If
+changes need to be made once the budget is in the :guilabel:`Open` status, there are two options:
+
+- :guilabel:`Reset to Draft`: To overwrite the data, then reopen the budget.
+- :guilabel:`Revise`: A new budget will be created. Once it is set to the :guilabel:`Open` status,
+  Odoo will add a :guilabel:`Rev` reference to the :guilabel:`Budget Name`. The original budget then
+  has the :guilabel:`Revised` status.
+
+.. _accounting/reporting/budgets/analytic-budget-check:
+
+Check an analytic budget
+------------------------
+
+Once the budget is in the :guilabel:`Open` status, two additional columns are available:
+:guilabel:`Committed` and :guilabel:`Achieved`. These columns' amounts are automatically calculated
+based on the related analytic distribution of journal items. When the analytic distribution of a
+journal item within the budget's period is updated, the budget's columns for the analytic account(s)
+selected in the distribution update automatically. The :guilabel:`Achieved` amount reflects the
+current result according to the items of confirmed journal entries for the associated analytic
+account. In contrast, the :guilabel:`Committed` amount displays the full value of the
+:guilabel:`Achieved` amount, plus any confirmed sales or purchase orders that have not yet been
+invoiced or billed.
 
 .. note::
-   Each budgetary position can have any number of accounts from the chart of accounts, though it
-   must have at least one.
+   - When a line in a request for quotation or purchase order includes an :guilabel:`analytic
+     distribution`, a :guilabel:`Budget` smart button appears, providing a link to the budget report
+     for more details.
+   - For budgets in the :guilabel:`Open` status, if a request for quotation or a purchase order is
+     created using the associated analytic distribution and exceeds the allocated budget amount, the
+     corresponding purchase order line is highlighted in red.
 
-Use case
-========
+To reveal the :guilabel:`Theoretical` amount or percentage, use the :icon:`oi-settings-adjust`
+(:guilabel:`settings adjust`) icon in the far right of the budget top row. The
+:guilabel:`Theoretical` represents the amount of money that could theoretically have been spent or
+should have been received based on the current date relative to the start/end dates. To open the
+:ref:`budget report <accounting/reporting/budgets/analytic-budget-reporting>`, click
+:guilabel:`Details` and filter the budget lines and columns of the pivot table.
 
-Let’s illustrate this with an example.
+.. image:: budget/budget.png
+   :alt: open budget with committed, achieved, and theoretical amounts
 
-We just started a project with *Smith & Co*, and we would like to budget the income and expenses of
-that project. We plan on having a revenue of 1000, and we don’t want to spend more than 700.
+.. note::
+   Deleting a budget is only allowed in the :guilabel:`Draft` and :guilabel:`Cancelled` stages.
 
-First, we need to define what accounts relate to our project’s expenses. Go to
-:menuselection:`Accounting --> Configuration --> Management: Budgetary positions`, and click
-:guilabel:`New` to add a position. Add the accounts wherein expenses will be booked.
+To view all the different budget lines of one or multiple budgets directly from the
+:guilabel:`Budgets` list view, select the budget(s) and click :guilabel:`Budget Lines`.
 
-.. image::  budget/smith-and-co-expenses.png
-   :align: center
-   :alt: display the Smith and Co expenses
+.. _accounting/reporting/budgets/analytic-budget-generate:
 
-Let's repeat the steps to create a budgetary position that reflects the revenue.
+Generate periodic budgets
+-------------------------
 
-.. image::  budget/smith-and-co-revenue.png
-   :align: center
-   :alt: display the Smith and Co revenue
+The :guilabel:`Generate` button allows the creation of periodic budgets (monthly, quarterly, and
+yearly) according to the :guilabel:`Analytic Plans` selected.
+Odoo generates a new budget for each :guilabel:`Period` between the start and end dates:
 
-Analytical accounts
--------------------
+- If a single analytic plan is selected, each budget includes a line for each account in that
+  analytic plan.
+- If multiple analytic plans are selected, each budget includes a line for each unique combination
+  involving one account per analytic plan.
 
-Odoo needs to know which costs or expenses are relevant to a specified budget, as the above general
-accounts may be used for different projects. Go to :menuselection:`Accounting --> Configuration -->
-Analytic Accounting: Analytic Accounts` and click :guilabel:`New` to add a new **Analytic Account**
-called *Smith & Co*.
+To generate periodic budgets, follow these steps:
 
-The :guilabel:`Plan` field has to be completed. Plans group multiple analytic accounts; they
-distribute costs and benefits to analyze business performance. **Analytic Plans** can be created or
-configured by going to :menuselection:`Accounting --> Configuration --> Analytic Accounting:
-Analytic Plans`.
+#. In the :guilabel:`Budgets` list view, click :guilabel:`Generate`.
+#. In the :guilabel:`Generate Budget` window, set the dates and select the :guilabel:`Period` and
+   the :guilabel:`Analytic Plans`.
 
-When creating a new customer invoice and/or vendor bill, you have to refer to this analytic account.
+   .. image:: budget/generate-budgets.png
+      :alt: all the options to generate periodical budgets
 
-.. image:: budget/analytic-accounts.png
-   :align: center
-   :alt: add analytic accounts in a new invoice or bill.
+#. Click :guilabel:`Split` to create the periodic budgets.
+#. Click :guilabel:`Budgets` in the top-left corner to return to the :guilabel:`Budgets` list view.
+#. One by one, click on the different periodic budgets in :guilabel:`Draft` status to open them and
+   set the amounts in the :guilabel:`Budgeted` column for each analytic account linked to the
+   chosen analytic plans.
+#. Click :guilabel:`Open` for each periodic budget.
 
-Define the budget
------------------
+.. _accounting/reporting/budgets/analytic-budget-reporting:
 
-Let’s set our targets. We specified that we expect to gain 1000 with this project, and we would like
-not to spend more than 700. Go to :menuselection:`Accounting --> Management: Budgets` and click
-:guilabel:`New` to create a new budget for *Smith & Co* project.
+Reporting
+---------
 
-First, fill in your :guilabel:`Budget Name`. Then, select the :guilabel:`Period` wherein the budget
-is applicable. Next, add the :guilabel:`Budgetary Position` you want to track, define the related
-:guilabel:`Analytic Account`, and add the :guilabel:`Planned Amount`.
+To perform various reporting actions, go to :menuselection:`Accounting --> Reporting -->
+Budget Report`, then:
 
-.. image:: budget/define-the-budget.png
-   :align: center
-   :alt: budget lines display
+- Track, analyze, and compare budget data.
+- Filter and group data using the :icon:`fa-plus-square` (:guilabel:`plus-square`) or
+  :icon:`fa-minus-square` :guilabel:`(minus-square)` icon.
+- Drill down into the report to see more detail on the actual amounts and transactions.
+- Export for further analysis or reporting needs.
 
-.. Note::
-   When recording a planned amount related to expenses, the amount must be negative.
+.. _accounting/reporting/budgets/financial:
 
-Check your budget
------------------
+Financial budgets
+=================
 
-Go to :menuselection:`Accounting --> Management: Budgets` and find the *Smith & Co* Project to see
-how it evolves according to the expenses or income for the related analytic account.
+Financial budgets, available on the :guilabel:`Profit and Loss` report, are structured around
+specific income and expense accounts and transactions for official financial reporting and
+compliance purposes.
 
-The :guilabel:`Practical Amount` evolves when a new journal entry related to your analytic account
-and an account from your budgetary position is created.
+.. _accounting/reporting/budgets/financial-budget-set:
 
-The :guilabel:`Theoretical Amount` represents the amount of money you theoretically could have spent
-or should have received based on the date. For example, suppose your budget is 1200 for 12 months
-(January to December), and today is 31 of January. In that case, the theoretical amount will be 100
-since this is the actual amount that could have been made.
+Set a financial budget
+----------------------
+
+To create a new financial budget, follow these steps:
+
+#. Go to :menuselection:`Accounting --> Reporting --> Profit and Loss` to open the
+   :ref:`Profit and Loss <accounting/reporting/profit-and-loss>` report.
+#. Use the :icon:`fa-calendar` :guilabel:`(calendar)` button to use the date selector and choose a
+   period.
+#. Click the :icon:`fa-bar-chart` :guilabel:`Budget` button and name the budget. A new column
+   labeled with the budget name will appear next to the :guilabel:`Balance` column.
+#. Assign amounts to each account that needs analysis.
+#. A new :guilabel:`%` column will appear to the right of the new budget column, indicating the
+   current status.
+
+Different budgets can be created using these steps for comparison purposes.
+
+.. note::
+   The date selector enables the division of periods and navigation between periods, automatically
+   updating the amounts accordingly.
