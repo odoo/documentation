@@ -15,11 +15,12 @@ Install languages
 
 To allow translation of your website, you must first :doc:`install <../../../general/users/language>`
 the required languages and add them to your website. To do so, go to :menuselection:`Website -->
-Configuration --> Settings` and click :guilabel:`Install languages` in the :guilabel:`Website info`
-section. In the dialog box that opens, select the :guilabel:`Languages` you want from the dropdown
-menu, tick the required :guilabel:`Websites to translate`, and click :guilabel:`Add`.
+Configuration --> Settings` and click :icon:`fa-arrow-right` :guilabel:`Install languages` in the
+:guilabel:`Website Info` section. In the dialog box that opens, select the :guilabel:`Languages` you
+want from the dropdown menu, tick the required :guilabel:`Websites to translate`, and
+click :guilabel:`Add`.
 
-To edit your website's languages, go to :menuselection:`Website –> Configuration –> Settings` and
+To edit your website's languages, go to :menuselection:`Website -–> Configuration -–> Settings` and
 add/remove the required languages in/from the :guilabel:`Languages` field in the
 :guilabel:`Website info` section.
 
@@ -51,7 +52,7 @@ the :guilabel:`Copyright` section at the bottom of the page. To edit the languag
 #. Go to your website and click :guilabel:`Edit`;
 #. Click the language selector available in the :guilabel:`Copyright` block and go to the
    :guilabel:`Copyright` section of the website builder;
-#. Set the :guilabel:`Language selector` field to either :guilabel:`Dropdown` or :guilabel:`Inline`.
+#. Set the :guilabel:`Language Selector` field to either :guilabel:`Dropdown` or :guilabel:`Inline`.
    Click :guilabel:`None` if you do not want to display the  :guilabel:`Language selector`;
 
      .. image:: translate/language-selector.png
@@ -83,14 +84,16 @@ In this mode, you can only translate text. To change the page's structure, you m
 page, i.e., the page in the original language of the database. Any changes made to the master page
 are automatically applied to all translated versions.
 
-To replace the original text with the translation, click the block, edit its contents, and save.
+To replace the original text with the translation, click the block, edit its contents, and
+:guilabel:`Save`.
 
 .. note::
-  When a website supports multiple languages, the content is accessible through different URLs,
-  depending on the language selected. For example,
-  `https://www.mywebsite.com/shop/product/my-product-1` is the URL to the master page, in English,
-  while `https://www.mywebsite.com/fr_FR/shop/product/mon-produit-1` is the URL to the French
-  version of the same page.
+  When a website supports multiple languages, the core URL structure remains consistent across
+  languages, while specific elements like product names or categories are translated. For example,
+  `https://www.mywebsite.com/shop/product/my-product-1` is the English version of a product page,
+  while `https://www.mywebsite.com/fr/shop/product/mon-produit-1` is the French version of the same
+  page. The structure (/shop/product/) stays unchanged, but the translated elements (e.g., product
+  name) adapt to the selected language.
 
 .. tip::
   Once the desired language is installed, you can translate some items from the backend (e.g., the
