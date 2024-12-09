@@ -11,6 +11,8 @@ Off Officer* or *Administrator* access rights for the **Time Off** application. 
 on access rights, refer to the :doc:`access rights <../../general/users/access_rights/>`
 documentation.
 
+.. _time_off/allocation-form:
+
 Allocate time off
 =================
 
@@ -19,7 +21,7 @@ Allocations`.
 
 This presents a list of all current allocations, including their respective statuses.
 
-Click :guilabel:`New` to allocate time off, and a blank allocation form appears.
+Click :guilabel:`New` to allocate time off, and a blank :guilabel:`Allocation` form appears.
 
 After entering a name for the allocation on the first blank field of the form, enter the following
 information:
@@ -74,27 +76,59 @@ information:
 - :guilabel:`Allocation`: Enter the amount of time that is being allocated to the employees. This
   field displays the time in either :guilabel:`Hours` or :guilabel:`Days`, depending on how the
   selected :ref:`Time Off Type <time_off/time-off-types>` is configured.
-- :guilabel:`Mode`: Using the drop-down menu, select how the allocation is assigned. This selection
-  determines who receives the time off allocation. The options are :guilabel:`By Employee`,
-  :guilabel:`By Company`, :guilabel:`By Department`, or :guilabel:`By Employee Tag`.
-
-  Depending on what is selected for the :guilabel:`Mode`, the field beneath :guilabel:`Mode` is
-  labeled either: :guilabel:`Employees`, :guilabel:`Company`, :guilabel:`Department`, or
-  :guilabel:`Employee Tag`.
-
-  Using the drop-down menu, indicate the specific employees, company, department, or employee tags
-  receiving this time off.
-
-  Multiple selections can be made for either :guilabel:`Employees` or :guilabel:`Employee Tag`.
-
-  Only one selection can be made for the :guilabel:`Company` or :guilabel:`Department`.
 - :guilabel:`Add a reason...`: If any description or note is necessary to explain the time off
   allocation, enter it in this field at the bottom of the form.
 
 .. image:: allocations/new-allocation.png
-   :align: center
    :alt: A new allocation form with all the fields filled out for the annual two week vacation
          granted to all employees.
+
+Multiple Allocations
+--------------------
+
+When allocating time off, it is common to allocate time to several employees at once. This is done
+using the :guilabel:`Multiple Requests` feature.
+
+To allocate time to multiple employees in a single allocation, navigate to :menuselection:`Time Off
+app --> Management --> Allocations`. Then, click the :icon:`fa-gear` :guilabel:`(Actions)` icon in
+the upper-left corner, then click :icon:`fa-users` :guilabel:`Multiple Requests`. This reveals a
+:guilabel:`Multiple Requests` pop-up window.
+
+This form is identical to the :guilabel:`Allocation` form, with an additional :guilabel:`Mode`
+field. The :guilabel:`Mode` field determines how multiple employees are selected.
+
+Using the drop-down menu, select one of the following :guilabel:`Modes`:
+
+- :guilabel:`By Employee`: This option allows for the selection of multiple individual employees
+  that are unrelated in terms of department, company, or tags. Selecting this reveals an
+  :guilabel:`Employees` field. Select the employees to receive the allocation in the
+  :guilabel:`Employees` field. There is no limit to the amount of employees that can be selected.
+- :guilabel:`By Company`: This option allows for the selection of all employees within a specific
+  company. Selecting this reveals a :guilabel:`Company` field. Select the :guilabel:`Company` to
+  assign the allocation to. Only one company can be assigned in the :guilabel:`Company` field. When
+  a company is selected, *all* employees within the company receive the allocation.
+- :guilabel:`By Department`: This option allows for the selection of all employees within a specific
+  department. Selecting this reveals a :guilabel:`Department` field. Select the
+  :guilabel:`Department` to assign the allocation to. Only one department can be assigned in the
+  :guilabel:`Department` field. When a department is selected, *all* employees within the department
+  receive the allocation.
+- :guilabel:`By Employee Tag`: This option allows for the selection of all employees with a specific
+  tag. Selecting this reveals an :guilabel:`Employee Tag` field. Select the desired
+  :guilabel:`Employee Tag` to select all employees with that tag. Only one tag can be assigned in
+  the :guilabel:`Employee Tag` field. When a tag is selected, *all* employees with that tag receive
+  the allocation.
+
+Next, select the :guilabel:`Time Off Type` using the drop-down menu. Once a :guilabel:`Time Off
+Type` is selected, the placeholder name, 'Allocation Request', changes to the name of the selected
+:guilabel:`Time Off Type`, including the amount of days. Change the name of the allocation, if
+desired.
+
+Fill out the remainder of the :ref:`Multiple Requests form <time_off/allocation-form>`, then click
+:guilabel:`Create Allocations` when done.
+
+.. image:: allocations/multiple-requests.png
+   :alt: An allocation request form filled out for sick time for all employees within the sales
+         department.
 
 .. _time_off/request-allocation:
 
@@ -120,7 +154,7 @@ Enter the following information on the new allocation request form:
 - :guilabel:`Time Off Type`: Select the type of time off being requested for the allocation from the
   drop-down menu. After a selection is made, the title updates with the time off type.
 - :guilabel:`Validity Period`: By default, the current date populates this field, and it is **not**
-  able to be modified. This field **only** appears when requesting an allocatoin from the
+  able to be modified. This field **only** appears when requesting an allocation from the
   :guilabel:`My Allocations` view (:menuselection:`Time Off --> My Time --> My Allocations`).
 - :guilabel:`Allocation`: Enter the amount of time being requested in this field. The format is
   presented in either :guilabel:`Days` or :guilabel:`Hours`, depending on how the :guilabel:`Time
@@ -137,6 +171,5 @@ automatically saved as it is entered. However, the form can be saved manually at
 clicking the :icon:`fa-cloud-upload` :guilabel:`(cloud upload)` icon.
 
 .. image:: allocations/allocation-request.png
-   :align: center
    :alt: An allocation request form filled out for an employee requesting an additional week of
          sick time.
