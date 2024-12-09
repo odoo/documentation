@@ -18,7 +18,6 @@ page. Next, navigate to the :guilabel:`Senders & Domains` section and click on :
 SEND API Settings`.
 
 .. image:: mailjet_api/api-settings.png
-   :align: center
    :alt: SMTP and Send API Settings link in the Senders & Domains section of Mailjet.
 
 Then, copy the :abbr:`SMTP (Simple Mail Transfer Protocol)` configuration settings onto a notepad.
@@ -37,7 +36,6 @@ port number. The settings are needed to configure Mailjet in Odoo, which is cove
    databases.
 
 .. image:: mailjet_api/smtp-config.png
-   :align: center
    :alt: SMTP configuration from Mailjet.
 
 Next, click on the button labeled :guilabel:`Retrieve your API credentials` to retrieve the Mailjet
@@ -57,7 +55,6 @@ email address or domain is approved to send emails using Mailjet's servers. Firs
 :guilabel:`Add a Sender Domain or Address` link under the :guilabel:`Senders & Domains` section.
 
 .. image:: mailjet_api/add-domain-email.png
-   :align: center
    :alt: Add a sender domain or address in the Mailjet interface.
 
 Determine if a sender's email address or the entire domain needs to be added to the Mailjet
@@ -125,7 +122,6 @@ Copy the TXT record information to a notepad and then navigate to the domain's :
 Name System)` provider to complete validation.
 
 .. image:: mailjet_api/host-value-dns.png
-   :align: center
    :alt: The TXT record information to input on the domain's DNS.
 
 Setup in the domain's DNS
@@ -151,7 +147,6 @@ Next, click :guilabel:`Check Now` to validate the TXT record that was added on t
 success screen will appear if the domain is configured correctly.
 
 .. image:: mailjet_api/check-dns.png
-   :align: center
    :alt: Check DNS record in Mailjet.
 
 After successfully setting up the domain, there is an option to :guilabel:`Authenticate this domain
@@ -163,7 +158,6 @@ Identified Mail) records to input into the :abbr:`DNS (Domain Name System)` prov
    360042412734-Authenticating-Domains-with-SPF-DKIM>`_
 
 .. image:: mailjet_api/authenticate.png
-   :align: center
    :alt: Authenticate the domain with SPF/DKIM records in Mailjet.
 
 .. _maintain/mailjet-api/odoo-setup:
@@ -187,30 +181,8 @@ settings can be found on :menuselection:`Mailjet -->  Account Settings --> SMTP 
 Settings`.
 
 Then, if the Mailjet server is used for mass emailing, set the :guilabel:`Priority` value higher
-than that of any transactional email server(s). Finally, save the settings and :guilabel:`Test the Connection`.
+than that of any transactional email server(s). Finally, save the settings and :guilabel:`Test the
+Connection`.
 
 .. image:: mailjet_api/server-settings.png
-   :align: center
    :alt: Odoo outgoing email server settings.
-
-.. important::
-   In order for the notifications feature to work using Mailjet, there are three settings that need
-   to be set in Odoo.
-
-   #. The :guilabel:`From Filter` needs to be set on the server configuration. It is recommended
-      to set it as a domain and not a full email address. It should match the domain in the two
-      proceeding steps. For more information, check out the :ref:`FROM filtering documentation
-      <email-outbound-different-servers-personalized-from-filtering>`.
-   #. The :guilabel:`mail.default.from` system parameter must have the value
-      `notifications\@yourdomain.com`.
-   #. The :guilabel:`mail.default.from_filter` system parameter must have the value
-      `yourdomain.com`. Replace `yourdomain` with the custom domain for the Odoo database. If there
-      isn't one, then use the :guilabel:`mail.catchall.domain` system parameter.
-
-   For more information, check out the :ref:`"Using a unique email address" documentation
-   <email-outbound-unique-address>`.
-
-   The :guilabel:`System Parameters` can be accessed by activating the :ref:`developer-mode`.
-
-Once the setup is complete, the Odoo database is ready to use the Mailjet email server for mass
-mailing or transactional emails.
