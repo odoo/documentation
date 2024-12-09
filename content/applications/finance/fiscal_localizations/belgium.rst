@@ -449,8 +449,9 @@ This government-certified system entails the use of a :ref:`certified POS system
 Certified POS system
 --------------------
 
-The Odoo POS system is certified for the major versions of databases hosted on **Odoo Online** and
-**Odoo.sh**. Please refer to the following table to ensure that your POS system is certified.
+The Odoo POS system is certified for the major versions of databases hosted on **Odoo Online**,
+**Odoo.sh**, and **On-Premise**. Please refer to the following table to ensure that your POS system
+is certified.
 
 .. list-table::
    :header-rows: 1
@@ -460,22 +461,26 @@ The Odoo POS system is certified for the major versions of databases hosted on *
      - Odoo Online
      - Odoo.sh
      - On-Premise
+   * - Odoo 18.0
+     - Certified
+     - Certified
+     - Certified
    * - Odoo 17.0
      - Certified
      - Certified
-     - Not certified
+     - Certified
    * - Odoo 16.0
      - Certified
      - Certified
-     - Not certified
+     - Certified
    * - Odoo 15.0
      - Certified
      - Certified
-     - Not certified
+     - Certified
    * - Odoo 14.0
      - Certified
      - Certified
-     - Not certified
+     - Certified
 
 .. seealso::
    :doc:`/administration/supported_versions`
