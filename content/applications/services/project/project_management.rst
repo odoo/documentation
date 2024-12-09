@@ -76,3 +76,33 @@ may have **additional options** available.
 .. note::
    If an activity is **already** scheduled, the icon may change to a **phone**, **group of people**,
    or other.
+
+Top bar
+=======
+
+In project management, reviewing the various records and documents related to a project is often
+necessary. Odoo Project’s **top bar** provides quick access to these essential resources. You can
+customize each project's top bar to match its specific needs.
+
+To set up the top bar for a project, go to the :guilabel:`Project` app, click the project's card,
+then click the top bar :icon:`fa-sliders` :guilabel:`(sliders)` button. In the bar that appears
+above the search bar, click the :icon:`fa-sliders` :guilabel:`(sliders)` button to select the records
+you want to display, such as timesheets, sales orders, invoices, documents, dashboards, etc.
+
+You can then click the buttons to access the related records without leaving the Project app. To
+return to your project tasks' Kanban view, click the :guilabel:`Tasks` button in the top bar.
+
+.. image:: project_management/top-bar.png
+   :alt: Top bar selection menu
+
+Custom top bar buttons
+----------------------
+
+You can also create your own buttons to access more specific views:
+
+#. Click an existing top bar button to access the view.
+#. Customize the view with keywords, filters, and grouping options using the search bar.
+#. Click the :icon:`fa-sliders` :guilabel:`(sliders)` button in the top bar and select
+   :guilabel:`Save View`.
+#. Edit the default button name if necessary, then enable :guilabel:`Shared` if you want to share
+   the button with other users.
