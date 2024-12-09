@@ -647,7 +647,7 @@ Method decorators
 =================
 
 .. automodule:: odoo.api
-    :members: depends, depends_context, constrains, onchange, returns, autovacuum, model, model_create_multi, ondelete
+    :members: depends, depends_context, constrains, onchange, autovacuum, model, model_create_multi, ondelete
 
 .. .. currentmodule:: odoo.api
 
@@ -655,7 +655,6 @@ Method decorators
 .. .. autodata:: depends
 .. .. autodata:: constrains
 .. .. autodata:: onchange
-.. .. autodata:: returns
 .. .. autodata:: autovacuum
 
 .. todo:: With sphinx 2.0 : autodecorator
