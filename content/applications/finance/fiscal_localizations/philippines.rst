@@ -156,7 +156,7 @@ switch the report to select :menuselection:`Report: --> SAWT & QAP (PH)`.
 The report is split into two sections, which can be accessed from their respective buttons at the
 top:
 
-- | :guilabel:`SAWT` for :abbr:`SAWT (Summary Alphalist of Withholding Tax)` report
+- | :guilabel:`SAWT` for the :abbr:`SAWT (Summary Alphalist of Withholding Tax)` report
   | All customer invoices with the associated sales witholding taxes applied are
    shown in this report.
 - | :guilabel:`QAP` for :abbr:`QAP (Quarterly Alphalist of Payees)` report
