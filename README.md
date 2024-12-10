@@ -1,38 +1,30 @@
-# Odoo documentation
+# Odoo Documentation
 
-## Build the documentation locally
+This repository contains the official documentation for Odoo. Follow the instructions below to build the documentation locally and contribute to its content.
+
+## Build the Documentation Locally
 
 ### Requirements
 
-- Git
-- Python 3.6, 3.7, or 3.8
-- Python dependencies listed in the file `requirements.txt`.
-- Make
-- A local copy of the [odoo/odoo repository](https://github.com/odoo/odoo) (optional)
-- A local copy of the [odoo/upgrade-util repository](https://github.com/odoo/upgrade-util) (optional)
+Ensure you have the following dependencies installed before building the documentation:
+
+- **Git**: for cloning the repositories.
+- **Python**: versions 3.6, 3.7, or 3.8.
+- **Python dependencies**: listed in the `requirements.txt` file.
+- **Make**: for executing build commands.
+- **Optional**:
+  - A local copy of the [Odoo/odoo repository](https://github.com/odoo/odoo).
+  - A local copy of the [Odoo/upgrade-util repository](https://github.com/odoo/upgrade-util).
 
 ### Instructions
 
-1. In a terminal, navigate to the root directory of the documentation and build it `make`.
-   Additional commands are available with `make help`.
-2. Open the file `documentation/_build/html/index.html` in your web browser.
-3. See [this guide](https://www.odoo.com/documentation/latest/contributing/documentation.html)
-   for more detailed instructions.
+Follow these steps to build the documentation locally:
 
-Optional: place your local copy of the `odoo/odoo` and `odoo/upgrade-util` repositories in
-the parent directory or in the root directory of the documentation to build the latter
-with the documented Python docstrings.
+1. **Navigate to the root directory** of the documentation in your terminal and run the following command to build it:
 
-## Contribute to the documentation
+```bash
+make
 
-For contributions to the content of the documentation, please refer to the
-[Introduction Guide](https://www.odoo.com/documentation/latest/contributing/documentation.html).
 
-To **report a content issue**, **request new content** or **ask a question**, use the
-[repository's issue tracker](https://github.com/odoo/documentation/issues).
 
-## Learn More
 
-To learn more about Odoo, in addition to the documentation, have a look at
-[the official eLearning](https://odoo.com/slides) and
-[Scale-up, The Business Game](https://www.odoo.com/page/scale-up-business-game).
