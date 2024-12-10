@@ -174,7 +174,7 @@ Check Printing
 ==============
 
 Philippines check print layout is following the latest
-:abbr:`PCHC (Philippine Clearing House Corporation)` standardised printing format.
+:abbr:`PCHC (Philippine Clearing House Corporation)` standardized printing format.
 For enabling check printing, under :menuselection:`Accounting --> Configuration --> Settings`,
 ensure that the :guilabel:`Checks` setting is enabled and to choose the correct
 :guilabel:`Check Layout` as `Print Check - PH`.
