@@ -53,3 +53,18 @@ Sign in with LDAP
 .. image:: ldap/ldap07.png
     :align: center
     :alt: User information highlighted on LDAP server setup on Odoo.
+
+.. note::
+    When using Microsoft Active Directory (AD) for LDAP authentication in Odoo, you may encounter issues logging in with valid credentials.
+
+    To fix this issue, you need to disable referral chasing by adding a system parameter in Odoo.
+    Follow these steps :
+
+   - Go to **Settings** > *(Developer Tools)* Active the developer mode > **Technical** > *(Parameters)* System Parameters
+
+   - Create a System Parameter :
+
+     - **Key** : ``auth_ldap.disable_chase_ref``
+     - **Value** : ``True``
+
+    This setting will prevent the LDAP client from chasing referrals, allowing users to authenticate successfully with their AD credentials.
