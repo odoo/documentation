@@ -182,5 +182,4 @@ ensure that the :guilabel:`Checks` setting is enabled and to choose the correct
 .. image:: philippines/philippines-check-setup.png
    :alt: Print Check - PH settings
 
-The workflow to print the check is following the standard workflow which can be followed here:
-:doc:`Pay by Checks <../accounting/payments/pay_checks>`.
+Print checks using the :ref:`standard workflow <../accounting/payments/pay_checks>`.
