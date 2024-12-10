@@ -29,10 +29,15 @@ can make a simple component in Odoo.
 
 .. code-block:: javascript
 
-    const { useState } = owl.hooks;
-    const { xml } = owl.tags;
+    import { Component, xml, useState } from "@odoo/owl";
 
     class MyComponent extends Component {
+        static template = xml`
+            <div t-on-click="increment">
+                <t t-esc="state.value">
+            </div>
+        `;
+
         setup() {
             this.state = useState({ value: 1 });
         }
@@ -41,10 +46,6 @@ can make a simple component in Odoo.
             this.state.value++;
         }
     }
-    MyComponent.template = xml
-        `<div t-on-click="increment">
-            <t t-esc="state.value">
-        </div>`;
 
 This example shows that Owl is available as a library in the global namespace as
 `owl`: it can simply be used like most libraries in Odoo. Note that we
@@ -67,12 +68,13 @@ Here is how the component above should be defined:
 
 .. code-block:: javascript
 
-    const { useState } = owl.hooks;
+    import { Component, useState } from "@odoo/owl";
 
     class MyComponent extends Component {
+        static template = 'myaddon.MyComponent';
+
         ...
     }
-    MyComponent.template = 'myaddon.MyComponent';
 
 And the template is now located in the corresponding xml file:
 
@@ -768,16 +770,21 @@ Props
 
    .. code-block:: javascript
 
+      import { Component, xml } from "@odoo/owl";
       import { Notebook } from "@web/core/notebook/notebook";
 
-      class MyTemplateComponent extends owl.Component {
-        static template = owl.tags.xml`
+      class MyTemplateComponent extends Component {
+        static template = xml`
           <h1 t-esc="props.title" />
           <p t-esc="props.text" />
         `;
       }
 
-      class MyComponent extends owl.Component {
+      class MyComponent extends Component {
+        static template = xml`
+          <Notebook defaultPage="'page_2'" pages="pages" />
+        `;
+
         get pages() {
           return [
             {
@@ -800,9 +807,6 @@ Props
           ]
         }
       }
-      MyComponent.template = owl.tags.xml`
-        <Notebook defaultPage="'page_2'" pages="pages" />
-      `;
 
   Both examples are shown here:
 
@@ -941,9 +945,18 @@ The shape of a `group` is the following:
 
    .. code-block:: javascript
 
+      import { Component, xml } from "@odoo/owl";
       import { SelectMenu } from "@web/core/select_menu/select_menu";
 
-      class MyComponent extends owl.Component {
+      class MyComponent extends Component {
+        static template = xml`
+          <SelectMenu
+            choices="choices"
+            groups="groups"
+            value="'value_2'"
+          />
+        `;
+
         get choices() {
           return [
               {
@@ -979,30 +992,21 @@ The shape of a `group` is the following:
           ]
         }
       }
-      MyComponent.template = owl.tags.xml`
-        <SelectMenu
-          choices="choices"
-          groups="groups"
-          value="'value_2'"
-        />
-      `;
 
    You can also customize the appearance of the toggler and set a custom template for the choices, using the appropriate component `slot`'s.
 
-   .. code-block:: javascript
+   .. code-block:: xml
 
-      MyComponent.template = owl.tags.xml`
-        <SelectMenu
-          choices="choices"
-          groups="groups"
-          value="'value_2'"
-        >
-          Make a choice!
-          <t t-set-slot="choice" t-slot-scope="choice">
-            <span class="coolClass" t-esc="'👉 ' + choice.data.label + ' 👈'" />
-          </t>
-        </SelectMenu>
-      `;
+      <SelectMenu
+        choices="choices"
+        groups="groups"
+        value="'value_2'"
+      >
+        Make a choice!
+        <t t-set-slot="choice" t-slot-scope="choice">
+          <span class="coolClass" t-esc="'👉 ' + choice.data.label + ' 👈'" />
+        </t>
+      </SelectMenu>
 
    .. image:: owl_components/select_menu.png
       :width: 400 px
@@ -1019,22 +1023,20 @@ The shape of a `group` is the following:
    For more advanced use cases, you can customize the bottom area of the dropdown, using the `bottomArea` slot. Here, we choose to display
    a button with the corresponding value set in the search input.
 
-   .. code-block:: javascript
+   .. code-block:: xml
 
-      MyComponent.template = owl.tags.xml`
-        <SelectMenu
-            choices="choices"
-        >
-            <span class="select_menu_test">Select something</span>
-            <t t-set-slot="bottomArea" t-slot-scope="select">
-                <div t-if="select.data.searchValue">
-                    <button class="btn text-primary" t-on-click="() => this.onCreate(select.data.searchValue)">
-                        Create this article "<i t-esc="select.data.searchValue" />"
-                    </button>
-                </div>
-            </t>
-        </SelectMenu>
-      `;
+      <SelectMenu
+          choices="choices"
+      >
+          <span class="select_menu_test">Select something</span>
+          <t t-set-slot="bottomArea" t-slot-scope="select">
+              <div t-if="select.data.searchValue">
+                  <button class="btn text-primary" t-on-click="() => this.onCreate(select.data.searchValue)">
+                      Create this article "<i t-esc="select.data.searchValue" />"
+                  </button>
+              </div>
+          </t>
+      </SelectMenu>
 
    .. image:: owl_components/select_menu_bottomArea.png
       :width: 400 px
@@ -1098,9 +1100,13 @@ The shape of a `tag` is the following:
 
    .. code-block:: javascript
 
+      import { Component, xml } from "@odoo/owl";
       import { TagsList } from "@web/core/tags_list/tags_list";
 
       class Parent extends Component {
+        static template = xml`<TagsList tags="tags" />`;
+        static components = { TagsList };
+
         setup() {
           this.tags = [{
               id: "tag1",
@@ -1119,8 +1125,6 @@ The shape of a `tag` is the following:
           }];
         }
       }
-      Parent.components = { TagsList };
-      Parent.template = xml`<TagsList tags="tags" />`;
 
    Depending the attributes given to each tag, their appearance and behavior will differ.
 

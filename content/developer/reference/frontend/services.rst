@@ -313,10 +313,10 @@ Let's say we want to add an effect that add a sepia look at the page.
 .. code-block:: javascript
 
   import { registry } from "@web/core/registry";
-  const { Component, tags } = owl;
+  import { Component, xml } from "@odoo/owl";
 
-  class SepiaEffect extends Component {}
-  SepiaEffect.template = tags.xml`
+  class SepiaEffect extends Component {
+    static template = xml`
       <div style="
           position: absolute;
           left: 0;
@@ -326,7 +326,8 @@ Let's say we want to add an effect that add a sepia look at the page.
           pointer-events: none;
           background: rgba(124,87,0, 0.4);
       "></div>
-  `;
+    `;
+  }
 
   export function sepiaEffectProvider(env, params = {}) {
       return {

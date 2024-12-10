@@ -154,7 +154,6 @@ This is done by using the `patch` utility function:
 
 .. code-block:: javascript
 
-    /** @odoo-module */
     import { Hamster } from "@web/core/hamster"
     import { patch } from "@web/core/utils/patch";
 

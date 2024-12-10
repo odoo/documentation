@@ -193,18 +193,20 @@ the window is resized/scrolled.
 .. code-block:: javascript
 
     import { usePosition } from "@web/core/position_hook";
+    import { Component, xml } from "@odoo/owl";
 
-    class MyPopover extends owl.Component {
+    class MyPopover extends Component {
+      static template = xml`
+        <div t-ref="popper">
+          I am positioned through a wonderful hook!
+        </div>
+      `;
+
       setup() {
         // Here, the reference is the target props, which is an HTMLElement
         usePosition(this.props.target);
       }
     }
-    MyPopover.template = owl.tags.xml`
-      <div t-ref="popper">
-        I am positioned through a wonderful hook!
-      </div>
-    `;
 
 .. important::
    You should indicate your `popper` element using a `t-ref directive <https://github.com/odoo/owl/blob/master/doc/reference/hooks.md#useref>`_.
@@ -260,11 +262,21 @@ API
 
    .. code-block:: javascript
 
+      import { Component, xml, useRef } from "@odoo/owl";
       import { usePosition } from "@web/core/position_hook";
 
-      class DropMenu extends owl.Component {
+      class DropMenu extends Component {
+        static template = xml`
+          <button t-ref="toggler">Toggle Menu</button>
+          <div t-ref="menu">
+            <t t-slot="default">
+              This is the menu default content.
+            </t>
+          </div>
+        `;
+
         setup() {
-          const toggler = owl.useRef("toggler");
+          const toggler = useRef("toggler");
           usePosition(
             () => toggler.el,
             {
@@ -278,14 +290,6 @@ API
           );
         }
       }
-      DropMenu.template = owl.tags.xml`
-        <button t-ref="toggler">Toggle Menu</button>
-        <div t-ref="menu">
-          <t t-slot="default">
-            This is the menu default content.
-          </t>
-        </div>
-      `;
 
 .. _frontend/hooks/useSpellCheck:
 
