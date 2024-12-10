@@ -1,6 +1,6 @@
-==========================
-Connect an IoT box via SSH
-==========================
+=============================
+Connect to an IoT box via SSH
+=============================
 
 .. |iot| replace:: :abbr:`IoT (Internet of Things)`
 .. |SSH| replace:: :abbr:`SSH (secure shell protocol)`
@@ -17,9 +17,6 @@ To provide an |SSH| connection to an Internet of Things (IoT) box, a password ne
 
 First, navigate to the :menuselection:`IoT app --> IoT Boxes`. Click on the IP address of the
 appropriate |iot| box.
-
-.. note::
-   If the desired |iot| box does not appear, see :doc:`troubleshooting` for additional steps.
 
 At the bottom of the |iot| box pop-up window, click :guilabel:`Remote Debug`. This opens the
 :guilabel:`Remote Debugging` pop-up window.
@@ -39,8 +36,3 @@ Enter the :guilabel:`Authentication Token` provided by the user attempting to co
 box.
 
 Click :guilabel:`Enable Remote Debugging`.
-
-.. seealso::
-   - :doc:`connect`
-   - :doc:`troubleshooting`
-   - :doc:`updating_iot`
