@@ -60,7 +60,9 @@ For individuals not belonging to a company, identify them by using the following
 BIR 2307 report
 ===============
 
-**BIR 2307** report data, also known as *Certificate of Creditable Tax Withheld at Source*,
+**BIR 2307** report data, also known as 
+`Certificate of Creditable Tax Withheld at Source 
+<https://www.bir.gov.ph/bir-forms?tab=Certificates&idTag=BIR2307&datasetCode=3381&label=2307&type=TAB%20LINK>`_,
 can be generated for purchase orders and vendor payments with the applicable withholding taxes.
 
 To generate a BIR 2307 report, select one or multiple vendor bills from the list view, and click
@@ -179,7 +181,4 @@ For enabling check printing, under :menuselection:`Accounting --> Configuration 
 ensure that the :guilabel:`Checks` setting is enabled and to choose the correct
 :guilabel:`Check Layout` as `Print Check - PH`.
 
-.. image:: philippines/philippines-check-setup.png
-   :alt: Print Check - PH settings
-
-Print checks using the :ref:`standard workflow <../accounting/payments/pay_checks>`.
+Print checks using the :doc:`standard workflow <../accounting/payments/pay_checks>`.
