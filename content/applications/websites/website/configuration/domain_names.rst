@@ -224,18 +224,27 @@ DNS hosting services do not offer an easy way to do so.
    .. image:: domain_names/cloudflare-cname-db.png
       :alt: Adding a CNAME DNS record to Cloudflare to redirect a www subdomain to an Odoo database
 
-#. Define a page rule to permanently (301) redirect your naked domain + `/*` (e.g.,
-   `yourdomain.com/*`) to `https://www.` + your naked domain + `/$1` (e.g.,
-   `https://www.yourdomain.com/$1`) by going to :menuselection:`Rules --> Page Rules --> Create Page
-   Rule`, and using the following configuration:
+#. Define a redirect rule to permanently redirect (301) your naked domain (e.g., `yourdomain.com`)
+   to both `http://` and `https://` by going to :menuselection:`Rules --> Redirect Rules --> Create
+   rule`, and:
 
-   - :guilabel:`URL`: e.g., `yourdomain.com/*`
-   - :guilabel:`Pick a Setting`: Forwarding URL
-   - :guilabel:`Select status code`: 301 - Permanent Redirect
-   - :guilabel:`Enter destination URL`: e.g., `https://www.yourdomain.com/$1`
+   - Enter any :guilabel:`Rule name`.
+   - Under the :guilabel:`If incoming requests match...` section, select :guilabel:`Custom filter
+     expression` and use the following configuration:
 
-   .. image:: domain_names/cloudflare-page-rule.png
-      :alt: Defining a Cloudflare page rule to create a permanent redirect (301)
+     - :guilabel:`Field`: Hostname
+     - :guilabel:`Operator`: equals
+     - :guilabel:`Value`: e.g., `yourdomain.com`
+
+   - Under the :guilabel:`Then...` section, use the following configuration:
+
+     - :guilabel:`Type`: Dynamic
+     - :guilabel:`Expression`: e.g., `concat("https://www.yourdomain.com/", http.request.uri.path)`
+     - :guilabel:`Status code`: 301
+     - :guilabel:`Preserve query string`: enabled
+
+   .. image:: domain_names/cloudflare-redirect-rule.png
+      :alt: Defining a Cloudflare redirect rule to create a permanent redirect (301)
 
 #. Go to :guilabel:`SSL/TLS` and set the encryption mode to :guilabel:`Full`.
 
