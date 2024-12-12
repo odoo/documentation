@@ -724,14 +724,22 @@ and the :ref:`master data <peru-master_data>`, :ref:`install <general/install>` 
 
 Next, you need to retrieve the *client ID* and *client secret* from |SUNAT|. To do so, follow the
 `manual de servicios web plataforma nueva GRE
-<https://cpe.sunat.gob.pe/sites/default/files/inline-files/Manual_Servicios_GRE.pdf>`_.
+<https://cpe.sunat.gob.pe/sites/default/files/inline-files/Manual_Servicios_GRE%20%281%29.pdf>`_.
 
 .. note::
    In the |SUNAT| portal, it is important to have the correct access rights enabled, as they may
    differ from the user set for electronic invoicing.
 
 These credentials should be used to configure the delivery guide general settings from
-:menuselection:`Accounting --> Configuration --> Settings --> Peruvian Electronic Invoicing`.
+:menuselection:`Inventory --> Configuration --> Settings`, and scroll down to the :guilabel:`Peru
+Delivery Guide` section.
+
+Configure the following :guilabel:`Sunat Delivery Guide API` fields:
+
+- :guilabel:`Guide Client ID`: the unique API *client ID* generated in the |SUNAT| portal
+- :guilabel:`Guide Client Secret`: the unique API *client secret* generated in the |SUNAT| portal
+- :guilabel:`Guide SOL User`: the RUC Number + SOL username
+- :guilabel:`Guide SOL Password`: the SOL user password
 
 .. image:: peru/gre-fields-example.png
    :alt: Example for the SUNAT Delivery Guide API section configuration.
