@@ -161,7 +161,7 @@ top:
 - | :guilabel:`SAWT` for the :abbr:`SAWT (Summary Alphalist of Withholding Tax)` report
   | All customer invoices with the associated sales witholding taxes applied are
    shown in this report.
-- | :guilabel:`QAP` for :abbr:`QAP (Quarterly Alphalist of Payees)` report
+- | :guilabel:`QAP` for the :abbr:`QAP (Quarterly Alphalist of Payees)` report
   | All vendor bills with the associated purchase witholding taxes applied are shown in this report.
 
 .. image:: philippines/philippines-sawt.png
@@ -177,7 +177,7 @@ Check Printing
 
 Philippines check print layout is following the latest
 :abbr:`PCHC (Philippine Clearing House Corporation)` standardized printing format.
-For enabling check printing, under :menuselection:`Accounting --> Configuration --> Settings`,
+To enable check printing, under :menuselection:`Accounting --> Configuration --> Settings`,
 ensure that the :guilabel:`Checks` setting is enabled and to choose the correct
 :guilabel:`Check Layout` as `Print Check - PH`.
 
