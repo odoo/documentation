@@ -77,25 +77,11 @@ the :guilabel:`Point of Sale` tab and fill in the :guilabel:`Category` field und
 .. image:: configuration/form-pos-category.png
    :alt: Point of Sale tab of a product form to add a PoS product category
 
-Adapt the POS interface
------------------------
-
-Start category
-~~~~~~~~~~~~~~
-
-You can select one product category to display when :ref:`opening a POS session
-<pos/session-start>`. To configure it, go to your :ref:`POS settings <configuration/settings>` and
-select a PoS category from the dropdown menu of the :guilabel:`Start Category` field within the
-:guilabel:`Product & PoS categories` section.
-
-.. image:: configuration/start-category.png
-   :alt: Setting to set up the start category feature
-
 Restrict categories
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
-You can also limit the categories displayed on your POS interface. To achieve this, go to your
-:ref:`POS settings <configuration/settings>` and choose the specific categories to display in the
+You can limit the categories displayed on your POS interface. To achieve this, go to your :ref:`POS
+settings <configuration/settings>` and choose the specific categories to display in the
 :guilabel:`Restrict Categories` field within the :guilabel:`Product & PoS categories` section.
 
 .. image:: configuration/restrict-category.png
