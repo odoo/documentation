@@ -3928,6 +3928,9 @@ msgid ""
 "the :ref:`developer mode <developer-mode>`. Then, go to "
 ":menuselection:`Settings app --> Technical --> Aliases`."
 msgstr ""
+"受信エイリアスは、受信Eメールを受信してレコードを作成するためにOdooデータベースに設定されます。Odooデータベースに設定されたエイリアスを表示するには、まず"
+" :ref:`開発者モード<developer-mode>` を有効化します。次に :menuselection:`管理設定アプリ --> 技術設定 "
+"--> エイリアス` を開きます。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:328
 msgid ""
@@ -3937,6 +3940,9 @@ msgid ""
 "create a ticket, lead, opportunity, etc., eliminates false positives where "
 "email addresses with only the prefix alias, not the domain, are present."
 msgstr ""
+"次のシステムパラメータ、`mail.catchall.domain.allowed` "
+"は、許可されたエイリアスドメイン値をカンマで区切って設定することで、エイリアス宛のメールを正しくフィルタリングします。エイリアスがチケット、リード、案件などを作成できるドメインを設定することで、(ドメインではなく)"
+" プレフィックスエイリアスのみを持つEメールアドレスが存在する場合の誤検出を排除します。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:333
 msgid ""
@@ -3956,6 +3962,9 @@ msgid ""
 " `commercial` alias, with a different domain, and therefore, creates a "
 "ticket/lead/opportunity/etc."
 msgstr ""
+"Odooが、送信者、宛先、または:abbr:`CC(カーボンコピー)` のメールアドレス (例：commercial@example.com)に "
+"`commercial` というプレフィクスのエイリアスを含むEメールを受信すると、データベースは、そのEメールを`commercial` "
+"という完全なエイリアスとして、異なるドメインで誤って処理し、その結果、チケット/リード/案件/その他を作成します。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:343
 msgid ""
@@ -3965,6 +3974,10 @@ msgid ""
 ":guilabel:`New`. Then, type in `mail.catchall.domain.allowed` for the "
 ":guilabel:`Key` field."
 msgstr ""
+" `mail.catchall.domain.allowed`システムパラメータを追加するには、まず :ref:`開発者モード<developer-"
+"mode>` を有効化します。次に :menuselection:`設定アプリ --> 技術設定 -->  システムパラメータ` "
+"に進みます。:guilabel:`新規` をクリックします。次に :guilabel:`キー` フィールドに "
+"`mail.catchall.domain.allowed`  と入力します。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:347
 msgid ""
@@ -3972,10 +3985,12 @@ msgid ""
 "Manually :icon:`fa-cloud-upload` :guilabel:`(Save)`, and the system "
 "parameter takes immediate effect."
 msgstr ""
+"次に、:guilabel:`値` フィールドにカンマで区切ったドメインを追加します。 :icon:`fa-cloud-upload` "
+":guilabel:`(保存)` を手動で実行すると、システムパラメータが即座に有効になります。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst-1
 msgid "mail.catchall.domain.allowed system parameter set."
-msgstr ""
+msgstr "mail.catchall.domain.allowed システムパラメータセット。"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:354
 msgid "Local-part based incoming detection"
@@ -3989,6 +4004,8 @@ msgid ""
 "Odoo requires the whole email address to match for routing an incoming "
 "email."
 msgstr ""
+"新しいエイリアスを作成する際、:guilabel:`ローカルパートに基づく受信検出` "
+"を有効にするオプションがあります。有効にすると、Odooは受信Eメールのルーティングにローカルパートのみを一致させるよう要求します。この機能をオフにすると、Odooは受信EメールのルーティングにEメールアドレス全体を一致させるよう要求します。"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:3
 msgid "Manage outbound messages"

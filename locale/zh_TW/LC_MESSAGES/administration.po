@@ -4813,6 +4813,10 @@ msgid ""
 "spawned too. A configurable process reaper monitors resource usage and can "
 "kill/restart failed workers."
 msgstr ""
+"**多處理程序** 伺服器是主要用於生產的完整伺服器。它不受 Python "
+"的資源使用限制（GIL）約束，因此能充份利用硬件。伺服器啟動時，會建立一個工作進程池。新的 HTTP "
+"請求會被操作系統排隊，直至有可用的工作進程可以處理它們。為處理實時聊天功能，系統還會在另一個連接埠上，生成一個額外、基於事件驅動的 HTTP "
+"工作進程，同時還會生成額外的定時任務工作進程。一個可配置的進程管理器，會監控資源使用情況，並可以終止/重新啟動失敗的工作進程。"
 
 #: ../../content/administration/on_premise/deploy.rst:201
 msgid ""
@@ -5150,6 +5154,12 @@ msgid ""
 "--x-sendfile>` CLI flag (this unique flag is used for both X-Sendfile and "
 "X-Accel)."
 msgstr ""
+"雖然如此，一旦找到檔案並經 Odoo 驗證存取權限，較好的做法是使用靜態網絡伺服器去提供檔案，而不是由 Odoo 系統。若要 Odoo "
+"委託靜態網絡伺服器去提供檔案，必須在靜態網絡伺服器上，啟用並配置 `X-Sendfile "
+"<https://tn123.org/mod_xsendfile/>`_ (apache) 或 `X-Accel "
+"<https://www.nginx.com/resources/wiki/start/topics/examples/x-accel/>`_ "
+"(nginx) 擴充功能。完成設置後，使用 :option:`--x-sendfile <odoo-bin --x-sendfile>` CLI "
+"標幟，去啟動 Odoo。（X-Sendfile 以及 X-Accel 都是使用此獨特標幟）。"
 
 #: ../../content/administration/on_premise/deploy.rst:527
 msgid ""
@@ -6675,6 +6685,9 @@ msgid ""
 "because it involves moving data around inside the database, even though the "
 "database may end up at the same physical location after the upgrade."
 msgstr ""
+"指的是一個複雜的數據處理操作，當中資料庫的結構及內容被永久改變，以使其兼容新版本的 Odoo。此操作不可逆轉，當你決定要切換至較新版本的 Odoo "
+"時，通常要透過 Odoo 的 `資料庫升級服務 <https://upgrade.odoo.com>`_ "
+"去完成。此過程以往亦稱為「遷移」，因為涉及在資料庫內部移動數據，即使資料庫在升級後可能仍然位於同一物理位置，也是如此。"
 
 #: ../../content/administration/on_premise/update.rst:37
 msgid ""
@@ -6784,6 +6797,9 @@ msgid ""
 " be sure to restart the Odoo service or reboot your server, and you're all "
 "set."
 msgstr ""
+"如果使用由我們網站下載的安裝套件（推薦方法）安裝 Odoo，更新便非常簡單。你只需下載與你的系統對應的安裝套件（參閱步驟 "
+"#1），並將其安裝至伺服器上。它們每天更新，包括最新的安全性修復。通常，只需連按兩下該套件，便可在目前已安裝的軟件上，直接將其安裝。安裝軟件套裝後，請確保重新啟動"
+" Odoo 服務，或重新啟動伺服器，便完成所有設置。"
 
 #: ../../content/administration/on_premise/update.rst:106
 msgid "Source Install (Tarball)"
@@ -7304,6 +7320,9 @@ msgid ""
 "the upgrade process can be found in your newly upgraded staging build by "
 "going to :file:`~/logs/upgrade.log`."
 msgstr ""
+"一旦升級平台完成升級備份，並將其上載至分支，它就會進入 **特殊模式** ：每次在分支上 **推送提交** 時，都會對升級後的備份，進行一項 "
+"**恢復操作** ，並 **更新所有自訂模組** 。這樣，你便可以在已升級資料庫的原始副本上，測試自訂模組。升級過程的日誌檔案，可透過前往 "
+":file:`~/logs/upgrade.log`，在新升級的測試構建中找到。"
 
 #: ../../content/administration/upgrade.rst:156
 msgid ""
