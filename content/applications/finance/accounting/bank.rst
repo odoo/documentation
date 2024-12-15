@@ -110,6 +110,8 @@ You can edit the currency used to enter the statements.
 .. seealso::
    :doc:`get_started/multi_currency`
 
+.. _bank_accounts/number:
+
 Account number
 --------------
 

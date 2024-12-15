@@ -12,6 +12,8 @@ amounts on time.
    - Tutorial `Registering a vendor bill <https://www.odoo.com/slides/slide/registering-a-vendor-bill-1683?fullscreen=1>`_
    - :doc:`/applications/inventory_and_mrp/purchase/manage_deals/manage`
 
+.. _vendor_bills/create:
+
 Bill creation
 =============
 
@@ -67,6 +69,8 @@ Click :guilabel:`Confirm` when the document is completed. The status of your doc
 .. note::
    Once confirmed, it is no longer possible to update it. Click :guilabel:`Reset to draft` if
    changes are required.
+
+.. _vendor_bills/payment:
 
 Bill Payment
 ============
