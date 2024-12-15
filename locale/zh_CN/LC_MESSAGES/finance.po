@@ -38,8 +38,8 @@
 # Wil Odoo, 2024
 # Cécile Collart <cco@odoo.com>, 2024
 # Raymond Yu <cl_yu@hotmail.com>, 2024
-# Chloe Wang, 2024
 # Emily Jia <eji@odoo.com>, 2024
+# Chloe Wang, 2024
 # 
 #, fuzzy
 msgid ""
@@ -48,7 +48,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-02 09:51+0000\n"
 "PO-Revision-Date: 2022-10-04 12:53+0000\n"
-"Last-Translator: Emily Jia <eji@odoo.com>, 2024\n"
+"Last-Translator: Chloe Wang, 2024\n"
 "Language-Team: Chinese (China) (https://app.transifex.com/odoo/teams/41243/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -7759,7 +7759,7 @@ msgid ""
 "If a payment is **linked to an invoice or bill**, it reduces/settles the "
 "amount due on the invoice. Multiple payments on the same invoice are "
 "possible."
-msgstr ""
+msgstr "如果付款 **与发票或账单** 链接，则会减少/结算发票上的应付金额。可对同一张发票进行多次付款。"
 
 #: ../../content/applications/finance/accounting/payments.rst:13
 msgid ""
@@ -7767,7 +7767,7 @@ msgid ""
 "outstanding credit with the company, or the company has an outstanding debit"
 " with a vendor. Those outstanding amounts reduce/settle unpaid "
 "invoices/bills."
-msgstr ""
+msgstr "如果付款**未链接到发票或帐单**，则客户对公司有未结贷项，或者公司对供应商有未结借项。这些未清金额减少/结算未支付的发票/账单。"
 
 #: ../../content/applications/finance/accounting/payments.rst:18
 msgid ":doc:`Internal transfers <payments/internal_transfers>`"
@@ -7782,6 +7782,7 @@ msgid ""
 "`Odoo Tutorials: Bank Configuration <https://www.odoo.com/slides/slide/bank-"
 "configuration-6832>`_"
 msgstr ""
+"`Odoo 教程：银行配置<https://www.odoo.com/slides/slide/bank-configuration-6832>`_"
 
 #: ../../content/applications/finance/accounting/payments.rst:26
 msgid "Registering payment from an invoice or bill"
@@ -7855,6 +7856,8 @@ msgid ""
 "account receivable or the account payable is matched with the **outstanding "
 "account** until it is manually matched with its related invoice or bill."
 msgstr ""
+"通过 :menuselection:`客户 / 供应商 --> 付款` 注册新付款时，不会直接与发票或账单关联。相反，应收账款或应付账款会与 "
+"**未清账款** 匹配，直到与相关发票或账单手动匹配为止。"
 
 #: ../../content/applications/finance/accounting/payments.rst:70
 msgid "Matching invoices and bills with payments"
@@ -7887,44 +7890,48 @@ msgid ""
 "Group payments allow combining outgoing and incoming payments from the same "
 "contact into a single payment to simplify the process and improve payment "
 "usability. To register a group payment:"
-msgstr ""
+msgstr "群组支付允许将同一联系人的付款和收款合并为一次付款，以简化流程并提高付款可用性。要注册团体付款："
 
 #: ../../content/applications/finance/accounting/payments.rst:90
 msgid ""
 "Go to :menuselection:`Accounting --> Customers --> Invoices/Credit Notes` or"
 " :menuselection:`Accounting --> Vendors --> Bills/Refunds`."
 msgstr ""
+"转到 :menuselection:`会计 --> 客户 --> 发票/贷项凭单` 或 :menuselection:`会计 --> 供应商 --> "
+"账单/退款`。"
 
 #: ../../content/applications/finance/accounting/payments.rst:92
 msgid ""
 "Select the relevant invoices/credit notes or bills/refunds linked to a "
 "specific contact."
-msgstr ""
+msgstr "选择链接到特定联系人的相关发票/贷方票据或账单/退款。"
 
 #: ../../content/applications/finance/accounting/payments.rst:93
 msgid ""
 "Click the :icon:`fa-cog` (:guilabel:`Action menu`) icon and select "
 ":guilabel:`Register Payment`."
-msgstr ""
+msgstr "点击 :icon:`fa-cog`（:guilabel:`操作菜单`）图标，然后选择 :guilabel:`登记付款`。"
 
 #: ../../content/applications/finance/accounting/payments.rst:94
 msgid ""
 "In the :guilabel:`Register Payment` window, select the :guilabel:`Journal`, "
 "the :guilabel:`Payment Method`, and the :guilabel:`Payment Date`."
 msgstr ""
+"在 :guilabel:`登记付款` 窗口中，选择 :guilabel:`日记账`、:guilabel:`付款方式` 和 "
+":guilabel:`付款日期`。"
 
 #: ../../content/applications/finance/accounting/payments.rst:96
 msgid ""
 "Enable the :guilabel:`Group Payments` option and click :guilabel:`Create "
 "payment`."
-msgstr ""
+msgstr "启用 :guilabel:`团体付款` 选项，然后点击 :guilabel:`创建付款`。"
 
 #: ../../content/applications/finance/accounting/payments.rst:98
 msgid ""
 "The invoices or bills are now marked as :guilabel:`In payment` until they "
 "are reconciled with the corresponding bank transactions. The credit notes or"
 " refunds are marked as :guilabel:`Paid`."
-msgstr ""
+msgstr "发票或账单现在标记为 :guilabel:`付款中`，直到与相应的银行交易对账。贷记票据或退款标记为 :guilabel:`已支付`。"
 
 #: ../../content/applications/finance/accounting/payments.rst:106
 msgid ""
@@ -7937,6 +7944,10 @@ msgid ""
 " in a batch, select them and click :menuselection:`Action --> Create Batch "
 "Payment`."
 msgstr ""
+"批量付款允许将多个联系人的付款分组，以方便 :doc:`对账 <bank/reconciliation>`。在将 :doc:`支票 "
+"<payments/checks>` 存入银行或 :doc:`SEPA 付款 <payments/pay_sepa>`时，批量付款也很有用。为此，请转到"
+" :menuselection:`会计 --> 客户 --> 批量付款` 或 :menuselection:`会计 --> 供应商 --> "
+"批量付款`。在付款列表视图中，要将几笔付款归为一批，请选择它们并点击 :menuselection:`操作 --> 创建批量付款`。"
 
 #: ../../content/applications/finance/accounting/payments.rst:114
 msgid ":doc:`payments/batch`"
@@ -7961,6 +7972,10 @@ msgid ""
 "Matching`, or go to :menuselection:`Accounting --> Accounting --> "
 "Reconciliation`."
 msgstr ""
+":guilabel:`付款匹配` 工具打开所有未对账的客户发票或供应商账单，并允许对其进行单独处理，在一个地方匹配所有付款和发票。进入 "
+":guilabel:`会计仪表板`，在 :guilabel:`客户发票` 或 :guilabel:`供应商账单` 日记账中点击 :icon:`fa-"
+"ellipsis-v`（:guilabel:`下拉菜单`）按钮，选择 :guilabel:`付款匹配`，或进入 :menuselection:`会计 "
+"--> 会计 --> 对账`。"
 
 #: ../../content/applications/finance/accounting/payments.rst-1
 msgid "Payments matching menu in the drop-down menu."
@@ -36505,19 +36520,20 @@ msgid ""
 " to pay off the **end of service amount** by settling it with the **payables"
 " account**."
 msgstr ""
+"然后，通过与两个账户关联的工资规则计算准备金：**服务终止赔偿（费用账户）**和**服务终止准备金（非流动负债账户）**。后者用于通过**应付账款**结算来偿还**服务终止金额**。"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:208
 msgid ""
 "The end of service amount is calculated based on the gross salary and the "
 "start and end dates of the employee’s contract."
-msgstr ""
+msgstr "服务终止金额根据工资总额以及员工合同的开始和结束日期计算。"
 
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:214
 msgid ""
 "The UAE localization package allows the generation of invoices in English, "
 "Arabic, or both. The localization also includes a line to display the **VAT "
 "amount** per line."
-msgstr ""
+msgstr "阿联酋本地化包允许生成英语、阿拉伯语或两者的发票。本地化还包括一行，用于显示每行**增值税金额**。"
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:3
 msgid "United Kingdom"
@@ -36529,6 +36545,8 @@ msgid ""
 ":guilabel:`UK - Accounting Reports` modules to get all the features of the "
 "UK localization."
 msgstr ""
+":ref:`安装 <general/install>` :guilabel:`英国 - 会计` 和 :guilabel:`英国 - 会计报告` "
+"模块可获得英国本地化的所有功能。"
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:17
 msgid ":guilabel:`UK - Accounting`"
