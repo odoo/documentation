@@ -43,8 +43,10 @@ Odoo database or by creating and editing new field data. Key information to ente
 includes:
 
 - :guilabel:`Event Name`: give the event a title.
-- :guilabel:`Date`: includes the start and end dates/times for the event.
-- :guilabel:`Timezone`: covers the timezone for when the event is taking place.
+- :guilabel:`Date`: when the event is scheduled to take place (expressed in your local timezone on
+  the form view).
+- :guilabel:`Display Timezone`: indicates the timezone in which the event dates/times will be
+  displayed on the website.
 - :guilabel:`Template`: choose from a pre-built event template or build a custom one and connect it
   here.
 - :guilabel:`Tags`: add tags to indicate briefly what the event is for (e.g. `tradeshow`). Tags
@@ -84,8 +86,8 @@ Send automated emails, text, and social posts to event attendees
 
 Under the :guilabel:`Communication` tab, configure personalized email, SMS, or social post messages
 to keep in touch with event attendees. For each communication, click :guilabel:`Add a line` in the
-:guilabel:`Communication` tab form, and then choose (or create) a communications template using
-the drop-down menu under the :guilabel:`Template` column.
+:guilabel:`Communication` tab form, and then choose (or create) a communications template using the
+drop-down menu under the :guilabel:`Template` column.
 
 Next, define the :guilabel:`Interval` and :guilabel:`Unit` of time for how often the communication
 should be sent; use these time fields to specify the frequency of :guilabel:`Hours`,
@@ -112,8 +114,8 @@ To create a questionnaire, from the :guilabel:`Events` application, navigate to
 :menuselection:`Configuration --> Settings` and then enable the :guilabel:`Questions` setting.
 
 With the setting enabled, questions and answers can now be added (and recorded) under the the
-:guilabel:`Questions` tab back on the event form. For each question, specify if it should only
-be asked once with the :guilabel:`Ask once per order` checkbox, or if the question requires a
+:guilabel:`Questions` tab back on the event form. For each question, specify if it should only be
+asked once with the :guilabel:`Ask once per order` checkbox, or if the question requires a
 :guilabel:`Mandatory Answer`, which will make the question required for registration.
 
 .. example::
@@ -267,12 +269,12 @@ Publish events
 
 Until an event is published, it will remain hidden from public view on the website and registering
 for it will not be possible. To publish an event, navigate to it either from the backend of Odoo
-through the :guilabel:`Events` application, or access the hidden event page through the frontend
-as either a priveliged user or administrator.
+through the :guilabel:`Events` application, or access the hidden event page through the frontend as
+either a priveliged user or administrator.
 
-If navigating from the backend, go to the event form, and click the :guilabel:`Go to Website`
-smart button to reach the event page on the website (on the frontend). If starting from the frontend
-, simply navigate to the event page that needs to be published.
+If navigating from the backend, go to the event form, and click the :guilabel:`Go to Website` smart
+button to reach the event page on the website (on the frontend). If starting from the frontend,
+simply navigate to the event page that needs to be published.
 
 No matter the route, an event page can only be published from the frontend. In the upper right
 corner of the event page on the website, toggle the switch from the red :guilabel:`Unpublished`
