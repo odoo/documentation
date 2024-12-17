@@ -11,7 +11,7 @@ Introduction
 In order to benefit from the latest improvements, security fixes, bug corrections and
 performance boosts, you may need to update your Odoo installation from time to time.
 
-This guide only applies when are using Odoo on your own hosting infrastructure.
+This guide only applies when you are using Odoo on your own hosting infrastructure.
 If you are using one of the Odoo Cloud solutions, updates are automatically performed for you.
 
 The terminology surrounding software updates is often confusing, so here are some preliminary
