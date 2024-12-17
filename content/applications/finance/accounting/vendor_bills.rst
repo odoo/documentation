@@ -37,7 +37,7 @@ appropriately completed:
 - :guilabel:`Vendor`: Odoo automatically fills some information based on the vendor's registered
   information, previous purchase orders, or bills.
 - :guilabel:`Bill Reference`: add the sales order reference provided by the vendor and is used to do
-  the :ref:`matching <accounting/payments/matching>` when you receive the products.
+  the :ref:`matching <accounting/payments/payments-matching>` when you receive the products.
 - :guilabel:`Auto-Complete`: select a past bill/purchase order to automatically complete the
   document. The :guilabel:`Vendor` field should be completed prior to completing this field.
 - :guilabel:`Bill Date`: is the issuance date of the document.
