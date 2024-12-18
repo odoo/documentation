@@ -186,3 +186,33 @@ Connection`.
 
 .. image:: mailjet_api/server-settings.png
    :alt: Odoo outgoing email server settings.
+
+.. important::
+   For the notifications feature to work using Mailjet, with a custom domain, the following settings
+   need to be configured:
+
+   #. The :guilabel:`From Filter` needs to be set on the server configuration. It is recommended to
+      set it as a domain and not a full email address. It should match the domain in the two
+      proceeding steps.
+   #. The :guilabel:`mail.default.from` system parameter must have the value
+      `notifications\@yourdomain.com`.
+   #. The :guilabel:`mail.default.from_filter` system parameter must have the value
+      `yourdomain.com`. Replace `yourdomain` with the custom domain.
+
+   If utilizing a database domain, and **not** a custom domain, the following settings need to be
+   configured:
+
+   #. The :guilabel:`From Filter` needs to be set on the server configuration. It should match the
+      domain in the two proceeding steps.
+   #. The :guilabel:`mail.default.from` system parameter must have the value `notifications`.
+   #. The :guilabel:`mail.default.from_filter` system parameter must have the value
+      `yourdomain.odoo.com`.
+
+   For more information, check out the :ref:`"Using a unique email address" documentation
+   <email-outbound-unique-address>`.
+
+   The :guilabel:`System Parameters` can be accessed by activating the :ref:`developer-mode`.
+
+Once the setup is complete, the Odoo database is ready to use the Mailjet email server for mass
+mailing or transactional emails.
+=======
