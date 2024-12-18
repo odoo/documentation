@@ -2,6 +2,12 @@
 Chapter 12: Inheritance
 =======================
 
+.. danger::
+   This tutorial is outdated. We recommend reading :doc:`../server_framework_101` instead.
+
+.. seealso::
+   :doc:`Homepage of the tutorial <../server_framework_101_legacy>`
+
 A powerful aspect of Odoo is its modularity. A module is dedicated to a business need, but
 modules can also interact with one another. This is useful for extending the functionality of an existing
 module. For example, in our real estate scenario we want to display the list of a salesperson's properties
