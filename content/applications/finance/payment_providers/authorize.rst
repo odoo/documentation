@@ -74,16 +74,14 @@ When ready, change the provider's :guilabel:`State` to :guilabel:`Enabled` for a
 Import an Authorize.Net statement
 =================================
 
+.. _authorize-import-template:
+
 Export from Authorize.Net
 -------------------------
 
-.. _authorize-import-template:
-
 .. admonition:: Template
 
-   `Download the Excel import template <https://docs.google.com/spreadsheets/d/1CMVtBWLLVIrUpYA92paw-cL7-WdKLbaa/edit?usp=share_link&ouid=105295722917050444558&rtpof=true&sd=true>`_
-
-To export a statement:
+   :download:`Download the Excel import template. <authorize/authorize-net-magic-sheet.xlsx>`
 
 - Log in to Authorize.Net.
 - Go to :menuselection:`Account --> Statements --> eCheck.Net Settlement Statement`.
