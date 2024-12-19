@@ -2,8 +2,8 @@
 Receiving tickets
 =================
 
-Odoo *Helpdesk* offers multiple channels where customers can reach out for assistance, such as
-email, live chat, and through a website's submission form. The variety of these contact options
+Odoo's **Helpdesk** app offers multiple channels where customers can reach out for assistance, such
+as email, live chat, and through a website's submission form. The variety of these contact options
 provides customers with multiple opportunities to receive support quickly while also allowing the
 support team to manage multi-channel support tickets from one central location.
 
@@ -31,29 +31,28 @@ The *Email Alias* setting creates tickets from messages sent to that team's spec
    The following steps are for **Odoo Online** and **Odoo.sh** databases. For **On-premise**
    databases, external servers are required for email aliases.
 
-When a new *Helpdesk* team is created, an email alias is created for it. This alias can be changed
+When a new **Helpdesk** team is created, an email alias is created for it. This alias can be changed
 on the team's settings page.
 
-To change a *Helpdesk* team's email alias, navigate to :menuselection:`Helpdesk app -->
+To change a **Helpdesk** team's email alias, navigate to :menuselection:`Helpdesk app -->
 Configuration --> Helpdesk Teams`, and click on a team name to open its settings page.
 
 Then, scroll to :menuselection:`Channels --> Email Alias`. In the :guilabel:`Alias` field, type the
 desired name for the team's email alias.
 
 .. image:: receiving_tickets/receiving-tickets-email-alias.png
-   :align: center
    :alt: View of the settings page of a Helpdesk team emphasizing the email alias feature in Odoo
          Helpdesk.
 
 .. note::
    Custom email domains are **not** required in order to use an email alias, however, they can be
-   configured through the *Settings* app.
+   configured through the **Settings** app.
 
    If the database does not have a custom domain already configured, click :guilabel:`Set an Alias
    Domain` to be redirected to the :guilabel:`Settings` page. From there, enable :guilabel:`Custom
    Email Servers`.
 
-When an email is received, the subject line becomes the title of a new *Helpdesk* ticket. The body
+When an email is received, the subject line becomes the title of a new **Helpdesk** ticket. The body
 of the email is also added to the ticket, under the :guilabel:`Description` tab, and in the ticket's
 chatter.
 
@@ -62,11 +61,11 @@ chatter.
 Live Chat
 ---------
 
-The *Live Chat* feature lets website visitors connect directly with a support agent or chatbot.
-*Helpdesk* tickets can be instantly created during these conversations using the :doc:`response
+The **Live Chat** feature lets website visitors connect directly with a support agent or chatbot.
+**Helpdesk** tickets can be instantly created during these conversations using the :doc:`response
 command </applications/websites/livechat/responses>` `/ticket`.
 
-To enable *Live Chat*, navigate to the :menuselection:`Helpdesk app --> Configuration --> Helpdesk
+To enable **Live Chat**, navigate to the :menuselection:`Helpdesk app --> Configuration --> Helpdesk
 Teams` list view, select a team, and on the team's settings page, click the checkbox next to
 :guilabel:`Live Chat`, under the :guilabel:`Channels` section.
 
@@ -75,21 +74,21 @@ Teams` list view, select a team, and on the team's settings page, click the chec
    the database, the page may need to be saved manually and refreshed before any further steps can
    be taken.
 
-After the :guilabel:`Live Chat` setting is enabled on a *Helpdesk* team, a new *Live Chat* channel
-is created. Click on :guilabel:`Configure Live Chat Channel` to update the channel's settings.
+After the :guilabel:`Live Chat` setting is enabled on a **Helpdesk** team, a new **Live Chat**
+channel is created. Click on :guilabel:`Configure Live Chat Channel` to update the channel's
+settings.
 
 Live Chat channel configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 On the channel's settings page, :guilabel:`Channel Name` can be edited, though, Odoo names the
-channel to match the *Helpdesk* team name, by default.
+channel to match the **Helpdesk** team name, by default.
 
 .. example::
-   If a *Helpdesk* team is named `Customer Care`, a *Live Chat* channel is created called `Customer
-   Care`.
+   If a **Helpdesk** team is named `Customer Care`, a **Live Chat** channel is created called
+   `Customer Care`.
 
    .. image:: receiving_tickets/receiving-tickets-live-chat-new-channel.png
-      :align: center
       :alt: View of the Kanban cards for the available Live Chat channels.
 
 On the channel form, navigate through the tabs to complete the setup.
@@ -101,7 +100,6 @@ Operators tab
 user who created the live chat channel is added by default.
 
 To add additional users, click on the :guilabel:`Operators` tab, then click :guilabel:`Add`.
-
 
 Click the checkbox next to the users to be added on the :guilabel:`Add: Operators` pop-up window
 that appears, then click :guilabel:`Select`.
@@ -123,10 +121,9 @@ or by using one of the buttons located at the bottom of the form, such as :guila
 
 .. tip::
    Users can add themselves as an operator by clicking the :guilabel:`Join Channel` button on a
-   *Live Chat* channel.
+   **Live Chat** channel.
 
    .. image:: receiving_tickets/receiving-tickets-join-live-chat.png
-      :align: center
       :alt: View of a live chat channel Kanban card with the join button emphasized.
 
 Options tab
@@ -135,25 +132,24 @@ Options tab
 The :guilabel:`Options` tab contains the visual and text settings for the live chat window.
 
 .. image:: receiving_tickets/receiving-tickets-options-tab.png
-   :align: center
    :alt: View of the options tab of a Live Chat channel's settings.
 
-- :guilabel:`Notification Text`: this field updates the greeting displayed in the text bubble when
+- :guilabel:`Notification Text`: This field updates the greeting displayed in the text bubble when
   the live chat button appears on the website.
 
-- :guilabel:`Livechat Button Color`: this field alters the color of the live chat button as it
+- :guilabel:`Livechat Button Color`: This field alters the color of the live chat button as it
   appears on the website. To change the color, click on a color bubble to open the color selection
   window, then click and drag the circle along the color gradient. Click out of the selection window
   once complete. Click the refresh icon to the right of the color bubbles to reset the colors to the
   default selection.
 
-- :guilabel:`Show`: the chat button displays on the selected page.
-- :guilabel:`Show with notification`: the chat button is displayed, with the addition of the
+- :guilabel:`Show`: The chat button displays on the selected page.
+- :guilabel:`Show with notification`: The chat button is displayed, with the addition of the
   :guilabel:`Notification text` from the :guilabel:`Options` tab.
-- :guilabel:`Open automatically`: the chat button is displayed, and automatically opens the chat
+- :guilabel:`Open automatically`: The chat button is displayed, and automatically opens the chat
   window after a designated amount of time. The amount of time is designated in the :guilabel:`Open
   automatically timer` field, which appears only when this display option is selected.
-- :guilabel:`Hide`: the chat button is hidden from display on the webpage.
+- :guilabel:`Hide`: The chat button is hidden from display on the webpage.
 
 .. tip::
    Color selection, for the button or header, can be made manually, or through RGB, HSL, or HEX code
@@ -178,16 +174,16 @@ appears.
 
 Choose how the *Live Chat Button* displays on the webpage.
 
-- :guilabel:`Show`: the chat button displays on the selected page.
+- :guilabel:`Show`: The chat button displays on the selected page.
 
-- :guilabel:`Show with notification`: the chat button is displayed, with the addition of the
+- :guilabel:`Show with notification`: The chat button is displayed, with the addition of the
   :guilabel:`Notification text` from the :guilabel:`Options` tab.
 
-- :guilabel:`Open automatically`: the chat button is displayed, and automatically opens the chat
+- :guilabel:`Open automatically`: The chat button is displayed, and automatically opens the chat
   window after a designated amount of time. The amount of time is designated in the :guilabel:`Open
   automatically timer` field, which appears only when this display option is selected.
 
-- :guilabel:`Hide`: the chat button is hidden from display on the webpage.
+- :guilabel:`Hide`: The chat button is hidden from display on the webpage.
 
 To include a :guilabel:`Chatbot` on this channel, select it from the drop-down menu. If the chatbot
 should only be active when no operators are available, check the box labeled :guilabel:`Enabled only
@@ -213,7 +209,6 @@ If this channel should only be available to users in specific countries, add tho
 visitors.
 
 .. image:: receiving_tickets/receiving-tickets-channel-rules.png
-   :align: center
    :alt: View of the Kanban cards for the available Live Chat channels.
 
 Widget tab
@@ -246,7 +241,7 @@ window. The transcript from the conversation is added to the new ticket, under t
 :guilabel:`Description` tab.
 
 .. tip::
-   *Helpdesk* tickets can also be created through the :doc:`WhatsApp
+   **Helpdesk** tickets can also be created through the :doc:`WhatsApp
    </applications/productivity/whatsapp>` app using the same `/ticket` command.
 
 .. _helpdesk/receiving_tickets/website-form:
@@ -279,7 +274,6 @@ automatically by Odoo.
    submission form.
 
 .. image:: receiving_tickets/receiving-tickets-go-to-website.png
-   :align: center
    :alt: View of the settings page of a helpdesk team emphasizing the Go to Website button in
          Odoo Helpdesk.
 
@@ -329,7 +323,6 @@ All tickets include a :guilabel:`Priority` field. The highest priority tickets a
 the Kanban and list views.
 
 .. image:: receiving_tickets/receiving-tickets-priority.png
-   :align: center
    :alt: View of a team's Kanban view and the prioritized tasks in Odoo Helpdesk.
 
 The priority levels are represented by stars:
