@@ -96,6 +96,8 @@ data into an Odoo database.
    Should the :guilabel:`Allow matching with subfields` option be selected, then all subfields
    within a field are used to match under the :guilabel:`Odoo Field` while importing.
 
+.. _essentials/export_import_data/get-started:
+
 Get started
 -----------
 
@@ -110,23 +112,27 @@ Open the view of the object to which the data should be imported/populated, and 
    :align: center
    :alt:  Action menu revealed with the import records option highlighted.
 
-After clicking :guilabel:`Import records`, Odoo reveals a separate page with templates that can be
-downloaded and populated with the company's own data. Such templates can be imported in one click,
-since the data mapping is already done. To download a template click :guilabel:`Import Template for
-Customers` at the center of the page.
+Odoo reveals a separate page with templates that can be downloaded and populated with the company's
+own data. Such templates can be imported in one click, since the data mapping is already done. To
+download a template click :guilabel:`Import Template for Customers` at the center of the page.
+
+To upload the downloaded template or your own file, click on :guilabel:`Upload Data File` at the
+top left corner. This button leads to a page that allows for customization of the data file before
+importing it into Odoo. The following actions are available:
+
+- :guilabel:`Import`: Click this button when everything is ready for import.
+- :guilabel:`Test`: Verify that the data file is valid before importing.
+- :guilabel:`Load Data File`: Load another data file.
+- :guilabel:`Cancel`: Cancel all operations.
 
 .. important::
    When importing a :abbr:`CSV (Comma-separated Values)` file, Odoo provides :guilabel:`Formatting`
    options. These options do **not** appear when importing the proprietary Excel file type (`.xls`,
    `.xlsx`).
 
-   .. image:: export_import_data/formatting.png
-      :align: center
-      :alt: Formatting options presented when a CVS file is imported in Odoo.
-
-Make necessary adjustments to the *Formatting* options, and ensure all columns in the
-:guilabel:`Odoo field` and :guilabel:`File Column` are free of errors. Finally, click
-:guilabel:`Import` to import the data.
+Make necessary adjustments to the :guilabel:`Formatting` options, and ensure all columns in the
+:guilabel:`Odoo field` and :guilabel:`File Column` are free of errors. Click :guilabel:`Test` to
+verify that all columns are valid, then click :guilabel:`Import` to import the data.
 
 Adapt a template
 ----------------
@@ -400,6 +406,32 @@ respective contacts:
 
 - :download:`Customers and their respective contacts
   <export_import_data/o2m_customers_contacts.csv>`
+
+Import images into templates
+----------------------------
+
+With the :guilabel:`Files to import` section on the :guilabel:`Import a File` app page, you can
+easily import the images that correspond to the information in your imported data.
+
+.. note::
+   - The :guilabel:`Files to import` section is enabled if your product template has an
+     :guilabel:`Image` column with all fields populated.
+   - The image file names in your product template have to correspond to the uploaded images files.
+
+Once you have :ref:`imported the data file <essentials/export_import_data/get-started>`, click
+:guilabel:`Upload your files` under the :guilabel:`Files to import` section and select the relevant
+images. The number of files selected appears next to the button. Leave the :guilabel:`Product Type`
+field unselected to avoid blocking errors. Click :guilabel:`Test` to verify that all columns
+are valid, then click :guilabel:`Import`.
+
+During the import process, Odoo performs a file check to automatically link the uploaded images to
+the imported data file. If there is no match, the data file is imported without any image.
+
+In :doc:`debug mode <../general/developer_mode>`, the :guilabel:`Max size per batch` and the
+:guilabel:`Delay after each batch` options are enabled, and can be filled in under the
+:guilabel:`Files to import` section. This allows to define the number of megabytes to import and
+the delay added to prevent overwhelming the system. By default, the delay meets the RPC/API calls
+limit defined in the `Odoo Cloud - Acceptable Use Policy <https://www.odoo.com/acceptable-use>`_.
 
 Import records several times
 ----------------------------
