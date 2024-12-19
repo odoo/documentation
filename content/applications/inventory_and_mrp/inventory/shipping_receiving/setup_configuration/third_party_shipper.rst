@@ -109,6 +109,8 @@ delivery method.
    :guilabel:`Unpublished` smart button. Doing so changes that smart button to read:
    :guilabel:`Published`.
 
+.. _inventory/shipping_receiving/shipping-methods-details:
+
 The :guilabel:`Shipping Method` page contains details about the provider, including:
 
 - :guilabel:`Shipping Method` (*Required field*): the name of the delivery method (e.g. `FedEx US`,
@@ -212,6 +214,8 @@ the :guilabel:`Logistics` section.
 .. image:: third_party_shipper/product-weight.png
    :align: center
    :alt: Display the "Weight" field in the Inventory tab of the product form.
+
+.. _inventory/shipping_receiving/apply-third-party-carrier:
 
 Apply third-party shipping carrier
 ==================================

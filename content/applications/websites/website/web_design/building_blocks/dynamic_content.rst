@@ -2,10 +2,10 @@
 Dynamic content
 ===============
 
-The :guilabel:`Dynamic Content` building blocks, such as :ref:`Form <dynamic_content/form>`,
-:ref:`Products <dynamic_content/products>`, :ref:`Embed Code <dynamic_content/embed_code>`, or
-:doc:`Blog Posts <../../../blog>`, help you create interactive and visually appealing layouts for
-your web pages.
+The :guilabel:`Dynamic Content` :doc:`building blocks <../building_blocks>`, such as
+:ref:`Form <website/dynamic_content/form>`, :ref:`Products <website/dynamic_content/products>`,
+:ref:`Embed Code <website/dynamic_content/embed_code>`, or :doc:`Blog Posts <../../../blog>`, help
+you create interactive and visually appealing layouts for your web :doc:`pages <../../pages>`.
 
 .. note::
    To add a building block, click :guilabel:`Edit`, select the desired building block under the
@@ -13,7 +13,7 @@ your web pages.
    go to the :guilabel:`Customize` tab, where the available options depend on the type of block
    selected.
 
-.. _dynamic_content/form:
+.. _website/dynamic_content/form:
 
 Form
 ====
@@ -70,7 +70,7 @@ contains. The fields available depend on the selected action.
 .. tip::
    Property fields added to the database can also be used.
 
-.. _dynamic_content/products:
+.. _website/dynamic_content/products:
 
 Products
 ========
@@ -88,7 +88,7 @@ the :guilabel:`Recently Sold Products` or :guilabel:`Recently Viewed Products` o
 In addition, it is possible to display products from a single category only by selecting one with
 the :guilabel:`Category` field.
 
-.. _dynamic_content/embed_code:
+.. _website/dynamic_content/embed_code:
 
 Embed code
 ==========

@@ -116,7 +116,7 @@ website to trigger the creation of tasks in a project.
    - :guilabel:`Action`: select :guilabel:`Create a Task`.
    - :guilabel:`Project`: choose the project that you want the new tasks to be created in.
 
-#. :ref:`Customize the form <dynamic_content/form>`.
+#. :ref:`Customize the form <website/dynamic_content/form>`.
 
 When the form is submitted, it automatically creates a project task. The task's content is defined
 by the form's corresponding fields.
