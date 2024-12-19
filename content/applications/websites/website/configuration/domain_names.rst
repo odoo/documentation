@@ -274,8 +274,8 @@ Map a domain name to an Odoo database
 
       Open the `database manager <https://www.odoo.com/my/databases>`_, click the gear icon
       (:guilabel:`⚙️`) next to the database name, and go to :menuselection:`Domain Names --> Use my
-      own domain`. Then, enter the domain name (e.g., `yourdomain.com`), click :guilabel:`Verify`
-      and :guilabel:`I confirm, it's done`.
+      own domain`. Then, enter the domain name (e.g., `www.yourdomain.com`), click
+      :guilabel:`Verify` and :guilabel:`I confirm, it's done`.
 
       .. image:: domain_names/map-database-online.png
          :alt: Mapping a domain name to an Odoo Online database
