@@ -28,15 +28,13 @@ select a record, tick the checkbox next to the corresponding record. Finally, cl
 then :guilabel:`Export`.
 
 .. image:: export_import_data/list-view-export.png
-   :align: center
    :alt: View of the different things to enable/click to export data.
 
 When clicking on :guilabel:`Export`, an :guilabel:`Export Data` pop-over window appears, with
 several options for the data to export:
 
 .. image:: export_import_data/export-data-overview.png
-   :align: center
-   :alt: Overview of options to consider when exporting data in Odoo..
+   :alt: Overview of options to consider when exporting data in Odoo.
 
 #. With the :guilabel:`I want to update data (import-compatable export)` option ticked, the system
    only shows the fields that can be imported. This is helpful in the case where the :ref:`existing
@@ -87,7 +85,6 @@ data into an Odoo database.
    options: :guilabel:`Track history during import` and :guilabel:`Allow matching with subfields`.
 
    .. image:: export_import_data/advanced-import.png
-      :align: center
       :alt: Advanced import options when developer mode is activated.
 
    If the model uses openchatter, the :guilabel:`Track history during import` option sets up
@@ -96,6 +93,8 @@ data into an Odoo database.
    Should the :guilabel:`Allow matching with subfields` option be selected, then all subfields
    within a field are used to match under the :guilabel:`Odoo Field` while importing.
 
+.. _essentials/export_import_data/get-started:
+
 Get started
 -----------
 
@@ -103,30 +102,32 @@ Data can be imported on any Odoo business object using either Excel (`.xlsx`) or
 (Comma-separated Values)` (`.csv`) formats. This includes: contacts, products, bank statements,
 journal entries, and orders.
 
-Open the view of the object to which the data should be imported/populated, and click on
-:menuselection:`⚙️ (Action) --> Import records`.
+Open the view of the object to which the data should be imported/populated, click the :icon:`fa-cog`
+(:guilabel:`gear`) icon and select :guilabel:`Import records`.
 
 .. image:: export_import_data/import-button.png
-   :align: center
    :alt:  Action menu revealed with the import records option highlighted.
 
-After clicking :guilabel:`Import records`, Odoo reveals a separate page with templates that can be
-downloaded and populated with the company's own data. Such templates can be imported in one click,
-since the data mapping is already done. To download a template click :guilabel:`Import Template for
-Customers` at the center of the page.
+Click :icon:`fa-download`:guilabel:`Import Template for Customers` at the center of the page to
+download a :ref:`template <essentials/export_import_data/adapt-a-template>` and populate it with
+the company's own data. Such templates can be imported in one click since the data mapping is
+already preconfigured.
 
-.. important::
-   When importing a :abbr:`CSV (Comma-separated Values)` file, Odoo provides :guilabel:`Formatting`
-   options. These options do **not** appear when importing the proprietary Excel file type (`.xls`,
-   `.xlsx`).
+To upload the downloaded template or your own file, follow the next steps:
 
-   .. image:: export_import_data/formatting.png
-      :align: center
-      :alt: Formatting options presented when a CVS file is imported in Odoo.
+#. Click :guilabel:`Upload Data File` and select the desired file.
+#. Adjust the :guilabel:`Formatting` options as needed (for CSV files only).
+#. Ensure all data in the :guilabel:`File Column` is correctly mapped to the appropriate
+   :guilabel:`Odoo Field` and free of errors.
+#. (Optional) Click :guilabel:`Load Data File` to reload the same file or upload a different one.
+#. Click :guilabel:`Test` to verify that the data is valid.
+#. Click :guilabel:`Import`.
 
-Make necessary adjustments to the *Formatting* options, and ensure all columns in the
-:guilabel:`Odoo field` and :guilabel:`File Column` are free of errors. Finally, click
-:guilabel:`Import` to import the data.
+.. note::
+   The :guilabel:`Formatting` options do **not** appear when importing the proprietary Excel file
+   type (i.e., `.xls` or `.xlsx`).
+
+.. _essentials/export_import_data/adapt-a-template:
 
 Adapt a template
 ----------------
@@ -144,7 +145,6 @@ Once the template is downloaded, proceed to follow these steps:
   (ID) column.
 
 .. image:: export_import_data/dragdown.gif
-   :align: center
    :alt: An animation of the mouse dragging down the ID column, so each record has a unique ID.
 
 .. note::
@@ -153,7 +153,6 @@ Once the template is downloaded, proceed to follow these steps:
    Search the drop-down menu for the corresponding field.
 
    .. image:: export_import_data/field_list.png
-      :align: center
       :alt: Drop-down menu expanded in the initial import screen on Odoo.
 
    Then, use this field's label in the import file to ensure future imports are successful.
@@ -203,7 +202,6 @@ If this happens, check the :guilabel:`Show fields of relation fields (advanced) 
 complete list of fields becomes available for each column.
 
 .. image:: export_import_data/field_list.png
-   :align: center
    :alt: Searching for the field to match the tax column.
 
 Change data import format
@@ -400,6 +398,33 @@ respective contacts:
 
 - :download:`Customers and their respective contacts
   <export_import_data/o2m_customers_contacts.csv>`
+
+Import image files
+------------------
+
+To import image files along with the :ref:`uploaded <essentials/export_import_data/get-started>`
+CSV or Excel file, follow the next steps:
+
+#. Add the image file names to the relevant :guilabel:`Image` column in the data file.
+#. :ref:`Upload the data file <essentials/export_import_data/get-started>` or reload it by
+   clicking :guilabel:`Load Data File`.
+#. Click :guilabel:`Upload your files` under the :guilabel:`Files to import` section.
+#. Select the relevant image files. The number of files selected appears next to the button.
+#. Click :guilabel:`Test` to verify that all data is valid.
+#. Click :guilabel:`Import`. During the import process, Odoo performs a file check to automatically
+   link the uploaded images to the imported data file. If there is no match, the data file is
+   imported without any image.
+
+.. note::
+   - The :guilabel:`Files to import` section is enabled if your product template has an
+     :guilabel:`Image` column with all fields populated.
+   - The image file names in the data file must correspond to the uploaded image files.
+   - When importing a large number of images, you can specify the maximum batch size in megabytes
+     and set a delay to prevent the system from becoming overloaded. To do so, :doc:`enable the
+     developer mode <../general/developer_mode>` and fill in the :guilabel:`Max size per
+     batch` and the :guilabel:`Delay after each batch` fields in the :guilabel:`Files to import`
+     section. By default, the delay meets the RPC/API call limit defined in the `Odoo Cloud -
+     Acceptable Use Policy <https://www.odoo.com/acceptable-use>`_.
 
 Import records several times
 ----------------------------
