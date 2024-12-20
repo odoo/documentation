@@ -411,7 +411,7 @@ the field to `0.00` to make the payment provider available regardless of the pay
 .. important::
    This feature is not intended to work on pages that allow the customer to update the payment
    amount, e.g., the **Donation** snippet and the **Checkout** page when paid :doc:`shipping methods
-   <../websites/ecommerce/checkout_payment_shipping/shipping>` are enabled.
+   <../websites/ecommerce/checkout_payment_delivery/shipping>` are enabled.
 
 .. _payment_providers/journal:
 
@@ -461,5 +461,5 @@ other payments.
    - :doc:`payment_providers/stripe`
    - :doc:`payment_providers/worldline`
    - :doc:`payment_providers/xendit`
-   - :doc:`../websites/ecommerce/checkout_payment_shipping/payments`
+   - :doc:`../websites/ecommerce/checkout_payment_delivery/payments`
    - :doc:`accounting/bank`
