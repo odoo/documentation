@@ -1,7 +1,7 @@
 :nosearch:
 
 ===============================
-Checkout, payment, and shipping
+Checkout, payment, and delivery
 ===============================
 
 .. toctree::
