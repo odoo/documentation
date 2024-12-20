@@ -392,7 +392,7 @@ user is requested by the **State** to:
 
 - Select a tax with the option :guilabel:`Has exoneration of tax (Italy)` ticked, and the
   :guilabel:`Exoneration` set to `N3.3`;
-- Use the generic :abbr:`SdI (Sistema di Interscambio)` :guilabel:`Codice Destinatario` `2R4GT08`.
+- Use the generic :abbr:`SdI (Sistema di Interscambio)` :guilabel:`Codice Destinatario` `2R4GTO8`.
   The invoice is then routed by a dedicated office in San Marino to the correct business.
 
 Bills
