@@ -51,7 +51,7 @@ When moving packages internally, the *Move Entire Packages* feature can be enabl
 type to update a package's contained item's location upon updating the package's location.
 
 To do that, go to :menuselection:`Inventory app --> Configuration --> Operations Types` and select
-the desired operation that this feature will apply to. (May have to set it for multiple)
+the desired operation this feature will apply to (may have to set it for multiple).
 
 On the operation type page, in the :guilabel:`Packages` section, tick the :guilabel:`Move Entire
 Packages` checkbox.

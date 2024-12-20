@@ -69,7 +69,7 @@ businesses evaluate which best suits their requirements.
        items in a package). Can enable the :ref:`Move Entire Packages
        <inventory/product_management/move-entire-pack>` feature to update the package's contained
        items' locations, when moving the package
-     - Scanning a packaging barcode automatically records all included units. (e.g., 1 pack = 12
+     - Scanning a packaging barcode automatically records all included units. (e.g. 1 pack = 12
        units).
    * - Product lookup
      - Not available.
@@ -77,8 +77,8 @@ businesses evaluate which best suits their requirements.
      - Barcode identifies grouped quantity, not storage location.
    * - Unique barcodes
      - Not available.
-     - Unique barcodes for individual packages (e.g., Pallet #12).
-     - Barcodes set at the packaging type level (e.g., for a pack of 6).
+     - Unique barcodes for individual packages (e.g. Pallet #12).
+     - Barcodes set at the packaging type level (e.g. for a pack of 6).
    * - Reusability
      - Not applicable.
      - Can be disposable or reusable, configured via the :ref:`Package Use
@@ -103,7 +103,7 @@ Use cases
 =========
 
 After comparing the various features, consider how these businesses, with various inventory
-management and logistics workflows came to their decision.
+management and logistics workflows, came to their decision.
 
 Pallets of items using packaging
 --------------------------------
@@ -119,29 +119,31 @@ barcode to be assigned to the pallet, indicating it is a "pallet type" containin
 barcode streamlines operations by automatically registering the grouped quantity. However, there are
 important distinctions:
 
-- **Tracking individual items within packaging**. Once items are removed from the pallet, each bar
+- **Tracking individual items within packaging**: Once items are removed from the pallet, each bar
   of soap retains its individual product barcode for separate tracking.
-- **Packaging barcodes are type-specific, not unique**. While a barcode can be assigned to represent
+- **Packaging barcodes are type-specific, not unique**: While a barcode can be assigned to represent
   a "pallet of 96 soap bars," it does not uniquely identify individual pallets (e.g., Pallet #1,
   Pallet #2).
-- **Less flexibility for mixed products**. Packaging treats the 96 bars as a single product, which
-  works well for uniform shipments but does not accommodate mixed or variable quantities.
+- **Less flexibility for mixed products**: Packaging treats the 96 bars as a single product, which
+  works well for uniform shipments, but does not accommodate mixed or variable quantities.
 
-Capturing product information using barcode
+Capture product information using barcode
 -------------------------------------------
 
-An Odoo user expects the Barcode app to display the typical storage location of a product by
+An Odoo user expects the **Barcode** app to display the typical storage location of a product by
 scanning a barcode for a container.
 
-**Packages** was the most suitable. When the :ref:`appropriate setting is enabled
+*Packages* was the most suitable. When the :ref:`appropriate setting is enabled
 <inventory/warehouses_storage/enable-package>`, scanning a package barcode displays its contents in
-the Barcode app. Packages represent physical containers, enabling detailed tracking of the items
-they hold. Scanning a package provides visibility into its contents and facilitates operations like
-inventory moves.
+the **Barcode** app. 
+
+Packages represent physical containers, enabling detailed tracking of the items they hold.
+Scanning a package provides visibility into its contents and facilitates operations, like inventory
+moves.
 
 .. _inventory/product_management/lots-uom:
 
-Tracking different units of measure in storage
+Track different units of measure in storage
 ----------------------------------------------
 
 A fruit juice distributor tracks multiple |UoMs| for their operations:
@@ -150,7 +152,7 @@ A fruit juice distributor tracks multiple |UoMs| for their operations:
 - Juice is produced and stored in kilograms.
 - Small samples are stored in grams for recipe testing.
 
-**Unit of Measure** was most suitable. Odoo automatically converts tons to kilograms during
+*Unit of Measure* was most suitable. Odoo automatically converts tons to kilograms during
 receipts. However, since Odoo tracks only one |UoM| per product in the database, the company uses
 lot numbers to differentiate |UoMs|:
 
