@@ -74,6 +74,21 @@ a form to provide details about the shipping provider, including:
 - :guilabel:`Free if order amount is above`: checking this box enables free shipping if the customer
   spends above the specified amount.
 
+.. _inventory/shipping_receiving/availability:
+
+Use the :guilabel:`Availability` tab to define conditions for the delivery method based on the
+order’s content or destination:
+
+- :guilabel:`Countries`: Specify one or more countries where the method is available.
+- :guilabel:`Max Weight`: Set a maximum weight; the method is only available for orders below
+  this limit.
+- :guilabel:`Max Volume`: Set a maximum volume; the method is only available for orders below
+  this limit.
+- :guilabel:`Must Have Tags`: The method is available only if at least one product in the order
+  has one of these tags.
+- :guilabel:`Excluded Tags`: The method is unavailable if at least one product in the order has
+  one of these tags.
+
 For examples on how to configure specific shipping methods, refer to the sections below.
 
 .. _inventory/shipping/fixed:
