@@ -1,9 +1,9 @@
 ========
-Shipping
+Delivery
 ========
 
-Odoo eCommerce allows you to configure various shipping methods, enabling customers to choose
-their preferred option at checkout. These methods include :ref:`external providers
+Odoo eCommerce allows you to configure various delivery methods, enabling customers to choose
+their preferred option at :doc:`checkout <checkout>`. These methods include :ref:`external providers
 <ecommerce/shipping/external-provider>`, :ref:`custom options <ecommerce/shipping/custom-method>`
 such as flat-rate or free shipping, local carriers via
 :doc:`Sendcloud <../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping>`
@@ -24,11 +24,11 @@ A shipping connector links to these providers, automating :doc:`tracking labels
 <../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels>` and shipping
 processes.
 
-To enable a third-party shipping provider, go to :menuselection:`Website --> Configuration -->
-Settings`, scroll to the :guilabel:`Shipping` section, select the desired shipping provider(s),
+To enable a third-party delivery provider, go to :menuselection:`Website --> Configuration -->
+Settings`, scroll to the :guilabel:`Delivery` section, select the desired delivery provider(s),
 and :guilabel:`Save`.
 
-Go to :menuselection:`Website --> Configuration --> Shipping Methods` and select the shipping method
+Go to :menuselection:`Website --> Configuration --> Delivery Methods` and select the delivery method
 in the list to :ref:`configure it <inventory/shipping_receiving/configure-delivery-method>`.
 
 .. seealso::
@@ -36,10 +36,10 @@ in the list to :ref:`configure it <inventory/shipping_receiving/configure-delive
    <../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper>`
 
 .. important::
-   The field used to define additional fees **must** be filled **in your third-party shipping
+   The field used to define additional fees **must** be filled **in your third-party delivery
    provider account**, even if you do not plan to charge customers any additional fee. If you do not
    want to apply a fee, enter `0`. If the field is left empty, the delivery price cannot be
-   calculated, and an error message prompts the customer to select an alternative shipping method.
+   calculated, and an error message prompts the customer to select an alternative delivery method.
 
 Margin on delivery rate
 -----------------------
@@ -61,47 +61,65 @@ field to add a fixed amount.
 
 .. _ecommerce/shipping/custom-method:
 
-Custom shipping method
+Custom delivery method
 ======================
 
-Custom shipping methods must be created, for example:
+Custom delivery methods must be created, for example:
 
-- to integrate shipping carriers through :doc:`Sendcloud
+- to integrate delivery carriers through :doc:`Sendcloud
   <../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping>`;
 - to configure specific rules (e.g., to offer free shipping for orders above a specific amount) for
   a specific provider;
 - to configure :ref:`Fixed Price <inventory/shipping/fixed>` shipping or shipping
   :ref:`Based on Rules <inventory/shipping/rules>`.
 
-To create a custom shipping method, go to :menuselection:`Website --> Configuration -->
-Shipping Methods`, click :guilabel:`New` and fill in the :ref:`fields
+To create a custom delivery method, go to :menuselection:`Website --> Configuration --> Delivery
+Methods`, click :guilabel:`New`, and fill in the :ref:`fields
 <inventory/shipping_receiving/shipping-methods-details>`.
 
 In the :guilabel:`Provider` field, select :ref:`Based on Rules <inventory/shipping/rules>`,
 :ref:`Fixed Price <inventory/shipping/fixed>`, or :ref:`Pickup in store <inventory/shipping/pickup>`
-if the shiping method does not involve any specific provider.
+if the shipping method does not involve any specific provider.
 
 .. tip::
-   Upon :ref:`configuring <inventory/shipping_receiving/configure-delivery-method>` a shipping
+   Upon :ref:`configuring <inventory/shipping_receiving/configure-delivery-method>` a delivery
    method, you can:
 
-   - restrict it :doc:`to a specific website <../../website/configuration/multi_website>` by
-     selecting it in :guilabel:`Website` field;
-   - use the :guilabel:`Destination availability` tab to filter the delivery carriers displayed
-     based on the customer's area;
-   - click the :guilabel:`Test Environment` smart button to switch to
-     the :guilabel:`Production Environment`, then click :guilabel:`Unpublished` to
-     :guilabel:`Publish` the shipping method and make it available to website visitors.
+   - Restrict it :doc:`to a specific website <../../website/configuration/multi_website>` by
+     selecting it in the :guilabel:`Website` field;
+   - Click the :guilabel:`Test Environment` smart button to switch to the
+     :guilabel:`Production Environment`. Then, click :guilabel:`Unpublished` to :guilabel:`Publish`
+     the delivery method and make it available to website visitors;
+   - Use the :guilabel:`Availability` tab to define :ref:`conditions
+     <inventory/shipping_receiving/availability>` for the delivery method based on the order’s
+     content or destination.
 
 .. _ecommerce/shipping/instore-pickup:
 
-In-store pickup
+Click & Collect
 ===============
 
-To allow customers to reserve products online and pay for/collect them in person at the store, go to
-:menuselection:`Website --> Configuration --> Settings`, scroll to the :guilabel:`Shipping` section,
-enable :guilabel:`On Site Payments & Picking`, and :guilabel:`Save`.
+To allow customers to reserve products online and pay for/collect them in-store, follow these steps:
 
-Then, click :guilabel:`Customize Pickup Sites`, select the shipping method or click :guilabel:`New`
-to create a new one and :ref:`configure <inventory/shipping_receiving/configure-delivery-method>`
-the fields. Make sure the :guilabel:`Provider` field is set to :guilabel:`Pickup in store`.
+#. Go to :menuselection:`Website --> Configuration --> Settings`.
+#. Scroll to the :guilabel:`Delivery` section, enable :guilabel:`Click & Collect`, and
+   :guilabel:`Save`.
+#. Click :icon:`fa-arrow-right` :guilabel:`Configure Pickup Locations` to :ref:`configure
+   <inventory/shipping_receiving/configure-delivery-method>` the delivery method and ensure the
+   :guilabel:`Provider` field is set to :guilabel:`Pick up in store`.
+#. In the :guilabel:`Stores` tab, click :guilabel:`Add a line` and select the warehouse(s) where
+   customers can collect their orders.
+#. Once your setup is complete, click the :guilabel:`Unpublish` button to change the status to
+   :guilabel:`Publish` and make the delivery method available to customers.
+
+.. note::
+   - When the product is in stock, a location selector is displayed on the :doc:`product
+     <../products>` and :doc:`checkout <checkout>` pages. Customers cannot select a pickup location
+     if the product is out of stock at that location. The :ref:`Continue selling
+     <ecommerce/products/stock-management>` option for out-of-stock products is not supported.
+   - If the :ref:`Show Available Qty <ecommerce/products/stock-management>` option is enabled for a
+     product, customers can view the stock quantity available for each warehouse in the location
+     selector on the product page.
+   - Each warehouse must have a **complete address** to ensure its location is accurately displayed
+     to customers. Incomplete addresses prevent the warehouse from being shown.
+   - The Click & Collect option is not available for services.
