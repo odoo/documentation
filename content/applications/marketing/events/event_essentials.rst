@@ -43,8 +43,8 @@ Odoo database or by creating and editing new field data. Key information to ente
 includes:
 
 - :guilabel:`Event Name`: give the event a title.
-- :guilabel:`Date`: includes the start and end dates/times for the event.
-- :guilabel:`Timezone`: covers the timezone for when the event is taking place.
+- :guilabel:`Date`: when the event is scheduled to take place (expressed in your local timezone on the form view).
+- :guilabel:`Display Timezone`: indicates the timezone in which the event dates/times will be displayed on the website..
 - :guilabel:`Template`: choose from a pre-built event template or build a custom one and connect it
   here.
 - :guilabel:`Tags`: add tags to indicate briefly what the event is for (e.g. `tradeshow`). Tags
