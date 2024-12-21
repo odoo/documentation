@@ -42,7 +42,7 @@ assigned to a work center:
 - :guilabel:`Time Efficiency`: used to calculate the expected duration of a work order at the work
   center; for example, if a work order normally takes one hour and the efficiency is set to 200%,
   the work order will take 30 minutes
-- :guilabel:`Capacity`: the number of operations that can be performed at the work center
+- :guilabel:`Capacity`: the number of products that can be processed at the work center
   simultaneously
 - :guilabel:`OEE Target`: the target for efficiency at the work center
 - :guilabel:`Time before prod.`: setup time required before work can commence
