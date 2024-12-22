@@ -261,7 +261,7 @@ msgstr "取引先元帳"
 
 #: ../../content/applications/finance/accounting.rst:151
 msgid "Aged receivable"
-msgstr "長期滞留債権"
+msgstr "売掛金年齢表"
 
 #: ../../content/applications/finance/accounting.rst:153
 msgid "Aged payable"
@@ -747,7 +747,7 @@ msgstr "**未払金勘定**は、銀行明細からの引落にリンクされ�
 msgid ""
 "An **outstanding receipts account** is where incoming payments are posted "
 "until they are linked with a deposit from your bank statement."
-msgstr "**未収勘定**は、銀行取引明細からの入金が確認されるまでの間、入金が計上される勘定です。"
+msgstr "**未消込入金勘定** は、銀行取引明細からの入金が確認されるまでの間、入金が計上される勘定です。"
 
 #: ../../content/applications/finance/accounting/bank.rst:153
 msgid ""
@@ -773,9 +773,8 @@ msgid ""
 "Settings --> Default Accounts` and update your :guilabel:`Outstanding "
 "Receipts Account` and :guilabel:`Outstanding Payments Account`."
 msgstr ""
-"未消込勘定科目はデフォルトで定義されています。必要であれば、 :menuselection:`Accounting --> Configuration "
-"--> Settings --> Default Accounts` で :guilabel:`Outstanding Receipts "
-"Account` と :guilabel:`Outstanding Payments Account` を更新してください。"
+"未消込勘定科目はデフォルトで定義されています。必要であれば、 :menuselection:`会計 --> 設定 --> 管理設定 --> "
+"デフォルト勘定科目` で :guilabel:`未消込入金勘定` と :guilabel:`未消込支払勘定` を更新して下さい。"
 
 #: ../../content/applications/finance/accounting/bank.rst:167
 msgid "Bank and cash journals configuration"
@@ -5715,6 +5714,8 @@ msgid ""
 ":doc:`Using inventory valuation "
 "<../../../inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation>`"
 msgstr ""
+":doc:`在庫評価を使用する "
+"<../../../inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation>`"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:35
 msgid ""
@@ -5739,6 +5740,8 @@ msgid ""
 ":doc:`Inventory valuation configuration "
 "<../../../inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config>`"
 msgstr ""
+":doc:`在庫評価設定 "
+"<../../../inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config>`"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:50
 msgid "Using average cost valuation"
@@ -7943,6 +7946,8 @@ msgid ""
 "amount due on the invoice. Multiple payments on the same invoice are "
 "possible."
 msgstr ""
+"支払いが **顧客請求書または仕入先請求書にリンク** "
+"されている場合、請求書に記載された支払額が減額/精算されます。同一の顧客請求書に対して複数の支払いが可能です。"
 
 #: ../../content/applications/finance/accounting/payments.rst:13
 msgid ""
@@ -7951,6 +7956,8 @@ msgid ""
 " with a vendor. Those outstanding amounts reduce/settle unpaid "
 "invoices/bills."
 msgstr ""
+"支払いが**顧客請求書または仕入先請求書にリンクされていない** "
+"場合、顧客が会社に対して未払残高があるか、会社が仕入先に対して未払残高があります。これらの未払残高は、未払請求書/仕入先請求書の減額/精算となります。"
 
 #: ../../content/applications/finance/accounting/payments.rst:18
 msgid ":doc:`Internal transfers <payments/internal_transfers>`"
@@ -7965,6 +7972,8 @@ msgid ""
 "`Odoo Tutorials: Bank Configuration <https://www.odoo.com/slides/slide/bank-"
 "configuration-6832>`_"
 msgstr ""
+"`Odooチュートリアル: 銀行設定 <https://www.odoo.com/slides/slide/bank-"
+"configuration-6832>`_"
 
 #: ../../content/applications/finance/accounting/payments.rst:26
 msgid "Registering payment from an invoice or bill"
@@ -7981,6 +7990,11 @@ msgid ""
 "transaction line, the invoice or vendor bill changes to the :guilabel:`Paid`"
 " status."
 msgstr ""
+"顧客請求書または仕入先請求書の :guilabel:`支払登録` "
+"をクリックすると、新しい仕訳帳が作成され、支払額に応じて未払金額が変更されます。対応する取引は、 :ref:`未消込 "
+"<bank/outstanding-accounts>` **入金** または **支払** 勘定に反映されます。 "
+"この時点で、顧客請求書または仕入先請求書は :guilabel:`In payment`（支払済み）としてマークされます。 "
+"その後、未消込勘定が銀行取引明細と照合されると、請求書または仕入先請求書は :guilabel:`支払済` ステータスに変更されます。"
 
 #: ../../content/applications/finance/accounting/payments.rst:35
 msgid ""
@@ -7988,6 +8002,8 @@ msgid ""
 "displays more information about the payment. To access additional "
 "information, such as the related journal, click :guilabel:`View`."
 msgstr ""
+"支払明細の横にある情報アイコン :icon:`fa-info-circle` をクリックすると、支払に関する詳細情報が表示されます。 "
+"関連する仕訳帳などの追加情報にアクセスするには、:guilabel:`照会` をクリックします。"
 
 #: ../../content/applications/finance/accounting/payments.rst-1
 msgid "See detailed information of a payment."
@@ -8003,21 +8019,21 @@ msgstr "支払登録するには、顧客請求書または仕入先請求書が
 msgid ""
 "If a payment is unreconciled, it still appears in the books but is no longer"
 " linked to the invoice."
-msgstr ""
+msgstr "支払いが消込されない場合、その支払いは帳簿には記載されますが、顧客請求書にはリンクされなくなります。"
 
 #: ../../content/applications/finance/accounting/payments.rst:47
 msgid ""
 "If a payment is (un)reconciled in a different currency, a journal entry is "
 "automatically created to post the currency exchange gains/losses (reversal) "
 "amount."
-msgstr ""
+msgstr "異なる通貨で支払が(未)消込された場合、為替差損益(逆転)額を記帳するために仕訳が自動的に作成されます。"
 
 #: ../../content/applications/finance/accounting/payments.rst:49
 msgid ""
 "If a payment is (un)reconciled and an invoice with cash-basis taxes, a "
 "journal entry is automatically created to post the cash-basis tax (reversal)"
 " amount."
-msgstr ""
+msgstr "支払いが(未)消込され、現金ベースの税金が含まれる請求書の場合、現金ベースの税金(逆転)金額を記入するための仕訳が自動的に作成されます。"
 
 #: ../../content/applications/finance/accounting/payments.rst:53
 msgid ""
@@ -8026,6 +8042,8 @@ msgid ""
 "through a related bank transaction), invoices and bills are directly "
 "registered as :guilabel:`Paid`."
 msgstr ""
+"メインの銀行口座が :ref:`未消込勘定 <bank/outstanding-accounts>` として設定されており、支払いが Odoo "
+"に登録されている場合(関連する銀行取引を介さない場合)、顧客請求書と仕入先請求書は直接 :guilabel:`支払済` として登録されます。"
 
 #: ../../content/applications/finance/accounting/payments.rst:60
 msgid "Registering payments not tied to an invoice or bill"
@@ -8038,6 +8056,9 @@ msgid ""
 "account receivable or the account payable is matched with the **outstanding "
 "account** until it is manually matched with its related invoice or bill."
 msgstr ""
+"新しい支払いが :menuselection:`顧客 / 仕入先 --> 支払` "
+"で登録された場合、それは直接的に顧客請求書や仕入先請求書にリンクされるわけではありません。 "
+"代わりに、売掛金または買掛金は、関連する顧客請求書または仕入先請求書と手動で照合されるまで、**未消込勘定** と照合されます。"
 
 #: ../../content/applications/finance/accounting/payments.rst:70
 msgid "Matching invoices and bills with payments"
@@ -8685,7 +8706,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/checks.rst-1
 msgid "Bypass the Outstanding Receipts account using the Bank account."
-msgstr "銀行勘定を使って未収金勘定を回避します。"
+msgstr "銀行勘定を使って未消込入金勘定を回避します。"
 
 #: ../../content/applications/finance/accounting/payments/checks.rst:61
 msgid "By default, there are two ways to register payments made by check:"
@@ -10017,7 +10038,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/reporting.rst:101
 msgid "Aged Receivable"
-msgstr "長期滞留債権"
+msgstr "売掛金年齢表"
 
 #: ../../content/applications/finance/accounting/reporting.rst:103
 msgid ""
@@ -33823,7 +33844,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst-1
 msgid "A Vendor Bill that is In Payment."
-msgstr "支払内の取引先請求書。"
+msgstr "支払処理中の取引先請求書。"
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst-1
 msgid "DIOT (TXT) download button."
