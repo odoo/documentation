@@ -21,7 +21,8 @@ Terminology
 Replenishment report and reordering rules
 -----------------------------------------
 
-The replenishment report is a list of all products that have a negative forecast quantity.
+The :doc:`replenishment report <replenishment/report>` is a list of all products that have a
+negative forecast quantity.
 
 *Reordering rules* are used to ensure there's always a minimum amount of a product in-stock, in
 order to manufacture products and/or fulfill sales orders. When the stock level of a product reaches
@@ -203,6 +204,7 @@ on the product form.
    :titlesonly:
 
    replenishment/mto
+   replenishment/report
    replenishment/reordering_rules
    replenishment/lead_times
    replenishment/resupply_warehouses
