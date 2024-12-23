@@ -13,6 +13,8 @@ The :guilabel:`Add to Cart` button can be customized in multiple ways. You can:
 .. seealso::
    :doc:`checkout`
 
+.. _ecommerce/cart/action_customization:
+
 'Add to Cart' action customization
 ==================================
 
@@ -41,7 +43,7 @@ of your choice.
 
 .. note::
    Hiding the :guilabel:`Add to Cart` button is often used by B2B eCommerces that need to restrict
-   purchases only to :ref:`customers with an account <checkout-sign>`, but still want to
+   purchases only to :ref:`customers with an account <ecommerce/checkout/policy>`, but still want to
    display an online product catalog for those without.
 
 To do so, go to :menuselection:`Website --> Configuration --> Settings --> Shop - Products` and tick
@@ -78,19 +80,22 @@ and place the building block. Once placed, you have the following options:
    :align: center
    :alt: Customizable 'Add to Cart' button
 
-.. _cart/buy-now:
+.. _ecommerce/cart/buy-now:
 
 'Buy Now' button
 ================
 
-You can enable the 'Buy Now' button to instantly take the customer to **checkout** instead
-of adding the product to the cart. The :guilabel:`Buy Now` button is an *additional* button and
-does not replace the :guilabel:`Add to Cart` button. To enable it, go to
-:menuselection:`Website --> Configuration --> Settings --> Shop - Checkout Process` and tick
-:guilabel:`Buy Now`.
+You can enable the :guilabel:`Buy Now` button to take customers directly to the :ref:`review order
+<ecommerce/checkout/review_order>` step instead of adding the product to the
+cart. This button is an *additional* option and does not replace the :guilabel:`Add to Cart` button.
+To do so, go to :menuselection:`Website --> Configuration --> Settings`, scroll to the
+:guilabel:`Shop—Checkout Process` section, enable :guilabel:`Buy Now`, and :guilabel:`Save`.
+
+.. tip::
+   Alternatively, you can enable the :guilabel:`Buy Now` button directly from a product page by
+   clicking :guilabel:`Edit` and navigating to the :guilabel:`Customize` tab.
 
 .. image:: cart/cart-buy-now.png
-   :align: center
    :alt: Buy Now button
 
 Re-order from portal

@@ -2,133 +2,174 @@
 Checkout
 ========
 
-You can customize the **checkout steps**, add more content using the **website builder**, and enable
-additional features such as **express checkout** and **sign in/up at checkout**.
+Once customers have added their desired products to the cart, they can access it by clicking the
+:icon:`fa-shopping-cart` button in the header to start the checkout process. In Odoo eCommerce, this
+process consists of sequential :ref:`steps <ecommerce/checkout/steps>`, some of which support
+additional features. The related checkout pages can be :ref:`customized
+<ecommerce/checkout/customize_steps>` using the website editor.
 
-You can use **building blocks** to add content at any step of the checkout process. To do so, from
-any **checkout page**, go to :menuselection:`Edit --> Blocks`, and drag and drop **building blocks**
-to the page.
+.. _ecommerce/checkout/policy:
+
+Checkout policy
+===============
+
+To allow customers to checkout as guests or force them to sign in/create an account, go to
+:menuselection:`Website --> Configuration --> Settings`, scroll down to the
+:guilabel:`Shop - Checkout Process` section, and configure the :guilabel:`Sign in/up at checkout`
+setting. The following options are available:
+
+- :guilabel:`Optional`: Customers can check out as guests and register later via the order
+  confirmation email to track their order.
+- :guilabel:`Disabled (buy as guest)`: Customers can checkout as guests without creating an account.
+- :guilabel:`Mandatory (no guest checkout)`: Customers must sign in or create an account at
+  the :ref:`Review Order <ecommerce/checkout/review_order>` step to complete their purchase.
+
+B2B access management
+---------------------
+
+To restrict checkout to selected B2B customers, follow these steps:
+
+#. Go to :menuselection:`Website --> Configuration --> Settings`, and in the
+   :guilabel:`Shop - Checkout Process` section, enable the
+   :ref:`Mandatory (no guest checkout) <ecommerce/checkout/policy>` option.
+#. Scroll down to the :guilabel:`Privacy` section, go to :guilabel:`Customer Account`, and select
+   :guilabel:`On invitation`.
+#. Go to :menuselection:`Website --> eCommerce --> Customers`, switch to the :guilabel:`List` view,
+   and select the customers you wish to grant access to your
+   :doc:`portal <../../../general/users/portal>`.
+#. Click the :icon:`fa-cog` :guilabel:`Actions` button, then :guilabel:`Grant portal access`.
+#. Review the selected customers in the :guilabel:`Portal Access Management` pop-up and click
+   :guilabel:`Grant Access`.
+
+Once done, the relevant customers receive an email confirming their account creation, including
+instructions on setting a password and activating their account.
 
 .. note::
-   Note that content added through building blocks is **specific** to each step.
+   - You can revoke access or re-invite a customer using the related buttons in the
+     :guilabel:`Portal Access Management` pop-up.
+   - Users can only have one :doc:`portal access <../../../general/users/portal>` per email.
+   - Settings are website-specific, so you could set up a B2C website that allows guest checkout and
+     B2B website with mandatory sign-in.
+
+.. seealso::
+   - :doc:`Customer accounts <../ecommerce_management/customer_accounts>`
+   - :doc:`Portal access <../../../general/users/portal>`
+
+.. _ecommerce/checkout/steps:
 
 Checkout steps
 ==============
 
-Review order: promo code (and subtotal)
----------------------------------------
+During the checkout process, customers are taken through the following steps:
 
-If you have enabled :guilabel:`Discounts, Loyalty, & Gift Card` in the settings
-(:menuselection:`Website --> Configuration --> Settings --> Shop - Products`), you can enable the
-:guilabel:`Promo Code` field (:menuselection:`Edit --> Customize`) from any checkout page. Customers
-can then redeem gift cards and promotional codes at the :guilabel:`Review Order` step.
+- :ref:`Review order <ecommerce/checkout/review_order>`
+- :ref:`Delivery <ecommerce/checkout/delivery>`
+- :ref:`Extra info (if enabled) <ecommerce/checkout/extra_step>`
+- :ref:`Payment <ecommerce/checkout/payment>`
+- :ref:`Order confirmation <ecommerce/checkout/order_confirmation>`
 
-Furthermore, you can display the subtotal with discounts applied by enabling :guilabel:`Show
-Discount in Subtotal`.
+.. _ecommerce/checkout/customize_steps:
 
-.. image:: checkout/checkout-subtotal.png
-   :align: center
-   :alt: Subtotal discount
-
-Address: B2B fields
--------------------
-
-Optional :guilabel:`TIN/VAT` and :guilabel:`Company Name` fields can be added to the
-:guilabel:`Billing Address` form for B2B customers, at the :guilabel:`Address` step. To add the
-fields, go to :menuselection:`Edit --> Customize` from any checkout page, and enable
-:guilabel:`Show B2B fields`.
-
-Request extra info (additional step)
-------------------------------------
-
-You can request :guilabel:`Extra Info` from the customer by adding an :guilabel:`Extra Info` step
-between the :guilabel:`Address` and :guilabel:`Confirm Order` steps. To do so, go to
-:menuselection:`Edit --> Customize` from any checkout page, and enable :guilabel:`Extra Step
-Option`.
-
-.. image:: checkout/checkout-steps.png
-   :align: center
-   :alt: Checkout steps
-
-The :guilabel:`Extra Info` step is an online form linked to the quotation or sales order of the
-customer. The information added during that step can be found on the quotation or sales order of the
-customer from the back end, in the **Sales** app.
-
-When enabled, you can remove, add, and modify fields of the form by clicking on :guilabel:`Edit` in
-the top-right corner, and then clicking on any of the form's fields. All customization options, as
-well as the :guilabel:`+ Field` button to add new fields, are available at the bottom of the
-:guilabel:`Customize` menu under the :guilabel:`Field` section.
-
-.. image:: checkout/checkout-form.png
-   :align: center
-   :alt: Online form customization
-
-Confirm order: terms and conditions
------------------------------------
-
-You can ask customers to agree to the :guilabel:`Terms & Conditions` in order to confirm their order
-by enabling :guilabel:`Accept Terms & Conditions` under :menuselection:`Edit --> Customize` on any
-checkout page.
-
-.. image:: checkout/checkout-terms.png
-   :align: center
-   :alt: Terms and conditions
-
-Express checkout
-================
-
-You can enable a :guilabel:`Buy Now` button on products' pages which instantly takes the customer to
-the :guilabel:`Confirm Order` checkout page, instead of adding the product to the cart. To do so, go
-to :menuselection:`Website --> Configuration --> Settings --> Shop - Checkout Process section` and
-tick :guilabel:`Buy Now`. Alternatively, the :guilabel:`Buy Now` button can also be enabled from any
-product's page by going :menuselection:`Edit --> Customize`, in the :guilabel:`Cart` section.
-
-The button can be found next to the :guilabel:`Add to Cart` button on the product's page.
-
-.. image:: checkout/checkout-express.png
-   :align: center
-   :alt: Buy now (express checkout) button
-
-.. _checkout-sign:
-
-Guest and signed-in checkout
-============================
-
-It is possible to introduce a **checkout policy** under which customers can either checkout as
-**guests** or **signed-in users only**. Customers can also checkout as guest, and **optionally sign
-up later** in order to track their order, if enabled.
-
-To select a policy, go to :menuselection:`Website --> Configuration --> Settings --> Shop - Checkout
-Process`. You can choose between:
-
-- :guilabel:`Optional`: allows guests to checkout and later register from the **order confirmation**
-  email to track their order;
-- :guilabel:`Disabled (buy as guest)`: customers can only checkout as guests;
-- :guilabel:`Mandatory (no guest checkout)`: customers can only checkout if they have signed-in.
-
-.. seealso::
-   - :doc:`../ecommerce_management/customer_accounts`
-   - :doc:`/applications/general/users/portal`
-
-B2B access restriction
-----------------------
-
-If you wish to restrict checkout only to **selected B2B customers**, enable :guilabel:`Mandatory (no
-guest checkout)` and go to :menuselection:`Website --> eCommerce --> Customers`. Select the customer
-you wish to **grant access to**, click :menuselection:`Action --> Grant portal access`, and click
-:guilabel:`Grant Access`.
-
-.. tip::
-   Settings are **website-specific**, which means you can set up a B2C website allowing **guest**
-   checkout, and another for B2B customers with **mandatory sign-in**.
+Each step can be customized using the website editor: Click :guilabel:`Edit` to add
+:doc:`building blocks <../../website/web_design/building_blocks>` from the :guilabel:`Blocks` tab or
+open to the :guilabel:`Customize` tab to enable various checkout options.
 
 .. note::
-   Users can only have one portal access per **email**. They *cannot* be granted access to two
-   different portals with the same **email address**.
+   Content added through building blocks is **specific** to each step.
 
-Shared customer accounts
-------------------------
+.. _ecommerce/checkout/review_order:
 
-If you enable :guilabel:`Shared Customer Accounts` under :menuselection:`Website --> Configuration
---> Settings --> Privacy section`, you can allow or disallow access to *all* websites for one same
-account.
+Review order
+------------
+
+The :guilabel:`Review Order` step allows customers to see the items they added to their cart, adjust
+quantities, or :guilabel:`Remove` products. Information related to the product prices and taxes
+applied are also displayed. Customers can then click the :guilabel:`Checkout` button to continue to
+the :ref:`Delivery <ecommerce/checkout/delivery>` step.
+
+Open the website editor to :ref:`enable <ecommerce/checkout/customize_steps>` checkout options such
+as:
+
+- :guilabel:`Suggested Accessories`: to showcase :ref:`accessory products
+  <ecommerce/cross_upselling/accessory>`;
+- :guilabel:`Promo Code`: to allow customers to redeem :ref:`gift cards <ewallet_gift/gift-cards>`
+  or apply :doc:`discount codes <../../../sales/sales/products_prices/loyalty_discount>`;
+- :guilabel:`Add to Wishlist`: To allow signed-in users to remove a product from their cart and add
+  it to their wishlist, go to :menuselection:`Website --> Configuration --> Settings`, scroll to
+  the :guilabel:`Shop - Products` section, and enable :guilabel:`Wishlists`. The :guilabel:`Add to
+  Wishlist` option is then enabled by default in the website editor.
+
+.. note::
+   - If a :doc:`fiscal position </applications/finance/fiscal_localizations>` is detected automatically,
+     the product tax is determined based on the customer's IP address.
+   - If the installed :doc:`payment provider </applications/finance/payment_providers>` supports
+     :ref:`express checkout <payment_providers/express_checkout>`, a dedicated button is displayed,
+     allowing customers to go straight from the cart to the confirmation page without filling out
+     the contact form.
+
+.. _ecommerce/checkout/delivery:
+
+Delivery
+--------
+
+Once they have reviewed their order:
+
+- Unsigned-in customers are prompted to :guilabel:`Sign in` or enter their
+  :guilabel:`Email address`, along with their delivery address and phone details;
+- Signed-in customers can select the appropriate :guilabel:`Delivery address`.
+
+They can then :doc:`choose a delivery method <shipping>`, select or enter their :guilabel:`Billing
+Address` (or toggle the :guilabel:`Same as delivery address` switch if the billing and delivery
+addresses are identical), and click :guilabel:`Confirm` to proceed to the next step.
+
+.. tip::
+   For B2B customers, you can also :ref:`enable <ecommerce/checkout/customize_steps>` optional
+   :guilabel:`VAT` and :guilabel:`Company name` fields by toggling the :guilabel:`Show B2B Fields`
+   option in the website editor.
+
+.. _ecommerce/checkout/extra_step:
+
+Extra info
+----------
+
+You can add an :guilabel:`Extra Info` step in the checkout process to collect additional
+customer information through an online form, which is then included in the :ref:`sales order
+<handling/sales>`. To do so :ref:`enable <ecommerce/checkout/customize_steps>` the :guilabel:`Extra
+Step` option in the website editor. The form can be :ref:`customized <website/dynamic_content/form>`
+as needed.
+
+.. tip::
+   Alternatively, go to :menuselection:`Website --> Configuration --> Settings`, scroll to the
+   :guilabel:`Shop - Checkout Process` section, enable :guilabel:`Extra Step During Checkout`, and
+   click :guilabel:`Save`. Click :icon:`fa-arrow-right` :guilabel:`Configure Form` to customize the
+   form.
+
+.. _ecommerce/checkout/payment:
+
+Payment
+-------
+
+At the :guilabel:`Payment` step, customers :guilabel:`Choose a payment method`, enter their
+payment details, and click :guilabel:`Pay now`.
+
+You can require customers to agree to your :doc:`terms and conditions
+</applications/finance/accounting/customer_invoices/terms_conditions>` before payment. To
+:ref:`enable <ecommerce/checkout/customize_steps>` this option, go to the website editor and toggle
+the :guilabel:`Accept Terms & Conditions` feature.
+
+.. tip::
+   Enable the :ref:`developer mode <developer-mode>` and click the :icon:`fa-bug` :guilabel:`bug`
+   icon to display an :ref:`availability <payment_providers/availability>` report for payment
+   providers and payment methods, which helps diagnose potential availability issues on the payment
+   form.
+
+.. _ecommerce/checkout/order_confirmation:
+
+Order confirmation
+------------------
+
+The final step of the checkout process is the :guilabel:`Order confirmation`, which provides a
+summary of the customer's purchase details.
+
+.. seealso::
+   :doc:`Order handling <../../ecommerce/ecommerce_management/order_handling>`
