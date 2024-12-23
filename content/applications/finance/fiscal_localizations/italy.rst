@@ -510,7 +510,7 @@ the invoice type: `TD01`, `TD04`, `TD05`, `TD24`, `TD25`. Additional requirement
 by Odoo. However, the user is requested by the **State** to:
 
 - Select a tax with the :guilabel:`Tax Exemption Kind` set to `N3.3`;
-- Use the generic :abbr:`SdI (Sistema di Interscambio)` :guilabel:`Destination Code` `2R4GT08`.
+- Use the generic :abbr:`SdI (Sistema di Interscambio)` :guilabel:`Destination Code` `2R4GTO8`.
 
 The invoice is then routed by a dedicated office in San Marino to the correct business.
 
