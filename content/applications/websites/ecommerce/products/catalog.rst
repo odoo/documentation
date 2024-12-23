@@ -6,6 +6,12 @@ The eCommerce catalog is the equivalent of your physical store shelves: it allow
 what you have to offer. Clear categories, available options, sorting, and navigation threads help
 you structure it efficiently.
 
+.. tip::
+   Go to :menuselection:`Website --> Configuration --> Settings`, scroll down to the
+   :guilabel:`Privacy` section to restrict :guilabel:`Ecommerce Access` to logged-in users and/or
+   enable :guilabel:`Shared Customer Accounts` to allow access to all websites with a single
+   account.
+
 Categorize the product catalog
 ==============================
 
