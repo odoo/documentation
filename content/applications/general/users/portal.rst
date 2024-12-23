@@ -25,6 +25,8 @@ of the following in Odoo:
    Portal users only have read/view access, and will not be able to edit any documents in the
    database.
 
+.. _portal/access:
+
 Provide portal access to customers
 ==================================
 
