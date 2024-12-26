@@ -197,3 +197,104 @@ blocks are defined and highlighted on the page when **dragging-and-dropping** a 
    **keywords** linked to the products or the eCommerce categories improves organic traffic.
    Additionally, each category has its own specific URL that can be pointed to and is indexed by
    search engines.
+
+Multi-channel promotion
+=======================
+
+Expand your reach by connecting your product catalog to platforms like **Google Merchant Center
+(GMC)**. This integration allows you to create an automated feed of your product catalog, making it
+easier to promote your products on Google Shopping and other platforms.
+
+By enabling the **Google Merchant Center Data Source**, your website will generate a dynamic
+`/gmc.xml` feed containing essential product information such as names, prices, descriptions,
+images, and availability. This feed can be customized to include multiple languages and pricelists,
+ensuring your products are displayed correctly for different regions and audiences.
+
+Here is an example of a product and the corresponding `/gmc.xml` generated file:
+
+.. image:: catalog/catalog-example-product.png
+   :alt: Example Product in Odoo
+
+The resulting XML output might look like this:
+
+.. code-block:: xml
+
+   <rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
+      <channel>
+         <title>Home | Your Website</title>
+         <link>https://yourwebsite.com/</link>
+         <description>This is the homepage of the website</description>
+         <item>
+            <g:id>FURN_6666</g:id>
+            <g:title>Acoustic Bloc Screens</g:title>
+            <g:description></g:description>
+            <g:link>https://yourwebsite.com/shop/acoustic-bloc-screens-23#attribute_values=4</g:link>
+            <g:image_link>https://yourwebsite.com/web/image/product.product/31/image_1920</g:image_link>
+            <g:availability>in_stock</g:availability>
+            <g:price>295.0 USD</g:price>
+            <g:sale_price>265.5 USD</g:sale_price>
+            <g:sale_price_effective_date>2024-12-01T00:00/2024-12-31T23:59</g:sale_price_effective_date>
+            <g:product_detail>
+               <g:attribute_name>Color</g:attribute_name>
+               <g:attribute_value>White</g:attribute_value>
+            </g:product_detail>
+            <g:item_group_id>23</g:item_group_id>
+            <g:product_type>Desks &gt; Components</g:product_type>
+            <g:shipping>
+               <g:country>BE</g:country>
+               <g:service>Standard delivery</g:service>
+               <g:price>14.99 USD</g:price>
+            </g:shipping>
+            <g:free_shipping_threshold>
+                  <g:country>BE</g:country>
+                  <g:price_threshold>1000.0 USD</g:price_threshold>
+            </g:free_shipping_threshold>
+         </item>
+      </channel>
+   </rss>
+
+Follow the steps below to enable and configure this feature.
+
+Configuration
+-------------
+
+Start by making the `/gmc.xml` feed accessible:
+
+- Go to :menuselection:`Settings --> Website`.
+- In the **SEO** section, enable the option **Google Merchant Center Data Source**.
+
+Next, set up the connection with Google Merchant Center:
+
+- Log in to your Google Merchant Center account.
+- Head over to the **Data sources** section by clicking on the gear icon :guilabel:`(⚙)` and
+  selecting **Data sources**.
+- Click on **Add product source**.
+- Add the URL of your product feed (`/gmc.xml`) as the link to your product source file.
+
+   Example: `https://yourwebsite.com/gmc.xml`.
+
+Localized feeds
+---------------
+
+Creating language-specific feeds for each country you sell in is essential. It ensures clarity and
+cultural relevance in product information, potentially boosting sales.
+
+To target mutliple languages and countries, append the desired language code to the URL. Example:
+Use `/fr/gmc.xml` for French.
+
+.. note::
+   The selected language must first be enabled in your website's settings.
+
+It is also possible to create different feeds for different currencies, which allows customers to
+view prices in their local currency.
+
+To enable this feature, create a pricelist with the foreign currecny and include it's name in the
+feed URL. Example: `/gmc-EUR.xml` for a pricelist named "EUR".
+
+.. note::
+   The pricelist must be selectable.
+
+.. seealso::
+   For a detailed explanation of all fields in the `/gmc.xml` file, refer to Google's documentation:
+   `Google Merchant Center Product Feed Specifications
+   <https://support.google.com/merchants/answer/7052112>`_.
