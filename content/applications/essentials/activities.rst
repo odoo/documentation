@@ -200,33 +200,9 @@ activities that are :guilabel:`Late`, due :guilabel:`Today`, and scheduled in th
       :alt: The list of activities that is accessed from the main menu bar. Two entries for the Time
             Off application are highlighted.
 
-Request a document
-------------------
-
-The option to :guilabel:`Request a Document` is available at the bottom of the list of :ref:`all
-scheduled activities <activities/all>`, the option to :guilabel:`Request a Document` appears. Click
-:guilabel:`Request a Document`, and a :guilabel:`Request a file` pop-up window appears.
-
-Enter the following information on the form:
-
-- :guilabel:`Document Name`: enter a name for the document being requested.
-- :guilabel:`Request To`: select the user the document is being requested from using the drop-down
-  menu.
-- :guilabel:`Due Date In`: enter a numerical value indicating when the document is due. Next to
-  this field, a :guilabel:`Days` field is visible. Click :guilabel:`Days`, the default option, to
-  reveal a drop-down menu. Select the desired time-frame option from the list. The options are
-  :guilabel:`Days`, :guilabel:`Weeks`, or :guilabel:`Months`.
-- :guilabel:`Workspace`: using the drop-down menu, select the specific :ref:`Workspace
-  <documents/workspaces>` the document is being uploaded to.
-- :guilabel:`Tags`: select any desired tags from the drop-down menu. The available tags displayed
-  are based on the tags configured for the selected :guilabel:`Workspace`.
-- :guilabel:`Message`: enter a message to clarify the document request in this field.
-
-When all the fields are completed, click :guilabel:`Request` to send the document request.
-
-.. image:: activities/request-doc.png
-   :align: center
-   :alt: The Request a file form, with all fields filled out to request a contract.
+.. tip::
+   The option to :ref:`Request a Document <documents/request>` is available at the bottom of the
+   list of all scheduled activities.
 
 .. _activities/types:
 
