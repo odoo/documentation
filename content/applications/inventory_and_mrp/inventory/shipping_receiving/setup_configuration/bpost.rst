@@ -6,8 +6,8 @@ Set up the *Bpost* shipping connector in Odoo to manage Bpost shipments to clien
 Odoo. To configure it, complete these steps:
 
 #. Create a Bpost account.
-#. Get the :ref:`Account ID and passphrase <inventory/shipping/Bpost-account>`.
-#. Set up the shipping method in Odoo.
+#. Get the :ref:`Account ID and passphrase <inventory/shipping_receiving/bpost-account>`.
+#. :ref:`Set up the shipping method in Odoo <inventory/shipping_receiving/bpost-method>`.
 
 Upon completion, it is possible to calculate the cost of shipping, based on package size and weight,
 have the charges applied directly to a Bpost business account, and automatically print Bpost
@@ -19,8 +19,8 @@ tracking labels through Odoo.
    - :doc:`dhl_credentials`
    - :doc:`ups_credentials`
 
-Bpost account setup
-===================
+Account setup
+=============
 
 To begin, go to the `Bpost website <https://parcel.bpost.be/en/home/business>`_ to create, or log
 into, the company's Bpost business account. When creating the Bpost account, have the company's VAT
@@ -30,25 +30,24 @@ Follow the website's steps to complete registration, and sign up for shipping se
 submits a request to enter a contractual business relationship between the company and Bpost.
 
 .. important::
-   Odoo **cannot** be integrated with `non-business Bpost
-   <https://bpost.freshdesk.com/support/solutions/articles/174847-account-id-and-passphrase>`_
-   accounts.
+   Odoo **cannot** be integrated with `non-business Bpost <https://www.odoo.com/r/Z4wZ>`_ accounts.
 
 After completing the setup, get the Bpost account ID and passphrase, by navigating to the
 :guilabel:`Shipping Manager` menu item.
 
-.. _inventory/shipping/bpost-account:
+.. _inventory/shipping_receiving/bpost-account:
 
 On the :guilabel:`Shipping Manager` page, go to the :guilabel:`Admin` tab, then the
 :guilabel:`General Settings` tab, to find the :guilabel:`Account ID` and :guilabel:`Passphrase`
 needed to configure Odoo's shipping method.
 
 .. image:: bpost/credentials.png
-   :align: center
    :alt: In the *Admin* tab, show the Account ID and Passphrase.
 
-Configure Bpost shipping method
-===============================
+.. _inventory/shipping_receiving/bpost-method:
+
+Shipping method configuration
+=============================
 
 With those necessary credentials, configure the Bpost shipping method in Odoo by going to
 :menuselection:`Inventory app --> Configuration --> Shipping Methods`.
@@ -69,23 +68,20 @@ Product`, refer to the :doc:`Configure third-party carrier <third_party_shipper>
 In the :guilabel:`Bpost Configuration` tab, complete the following fields:
 
 - :guilabel:`Bpost Account Number` (required field): enter the company's unique :ref:`account ID
-  <inventory/shipping/bpost-account>` from the Bpost website.
+  <inventory/shipping_receiving/bpost-account>` from the Bpost website.
 - :guilabel:`Passphrase` (required field): enter the :ref:`passphrase
-  <inventory/shipping/bpost-account>` from the Bpost website.
+  <inventory/shipping_receiving/bpost-account>` from the Bpost website.
 - :guilabel:`Bpost Delivery Nature`: select either :guilabel:`Domestic` or :guilabel:`International`
   shipping services. Choosing :guilabel:`Domestic` shows the :guilabel:`Options` section, while
   :guilabel:`International` enables the :guilabel:`Bpost Shipment Type` and :guilabel:`Bpost Parcel
   Return Instructions` fields.
 - :guilabel:`Bpost Package Type`: select the type of shipping service from the drop-down menu.
 
-  For `domestic delivery
-  <https://help.shipmondo.com/en/articles/6092265-bpost-belgium-parcel-types-and-requirements>`_,
-  the options are: :guilabel:`bpack 24h Pro`, :guilabel:`bpack 24h business`, or :guilabel:`bpack
-  Bus`.
+  For `domestic delivery <https://www.odoo.com/r/uOVM>`_, the options are: :guilabel:`bpack 24h
+  Pro`, :guilabel:`bpack 24h business`, or :guilabel:`bpack Bus`.
 
-  For `international delivery <https://www.bpost.be/en/business-parcels-send/international>`_, the
-  options are: :guilabel:`bpack World Express Pro`, :guilabel:`bpack World Business`, or
-  :guilabel:`bpack Europe Business`.
+  For `international delivery <https://www.odoo.com/r/s6G>`_, the options are: :guilabel:`bpack
+  World Express Pro`, :guilabel:`bpack World Business`, or :guilabel:`bpack Europe Business`.
 - :guilabel:`Bpost Shipment Type` (required field): for international deliveries, declare the type
   of goods in the package as :guilabel:`SAMPLE`, :guilabel:`GIFT`, :guilabel:`GOODS`,
   :guilabel:`DOCUMENTS`, or :guilabel:`OTHER`.
@@ -105,6 +101,5 @@ For domestic deliveries, these features are available in the :guilabel:`Options`
   validating the delivery order.
 
 .. image:: bpost/bpost.png
-   :align: center
    :alt: Show Bpost shipping method.
 
