@@ -38,7 +38,7 @@ The following is a list of available shipping connectors in Odoo:
      - United States of America
    * - :doc:`Sendcloud <sendcloud_shipping>`
      - Some European countries (see details below)
-   * - Bpost
+   * - :doc:`Bpost <bpost>`
      - Belgium
    * - Easypost
      - North America
