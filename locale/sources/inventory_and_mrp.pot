@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-02 12:38+0000\n"
+"POT-Creation-Date: 2024-12-30 16:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -864,6 +864,7 @@ msgid "(02)(\\\\d{14})"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:180
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:43
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:3
 msgid "Packaging"
 msgstr ""
@@ -1131,7 +1132,7 @@ msgid "(91) ([!\"%-/0-9:-?A-Z_a-z]{0,90})"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:225
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:115
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:126
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:77
 msgid "Package type"
 msgstr ""
@@ -2334,18 +2335,324 @@ msgstr ""
 msgid "Product management"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:5
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:9
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_basic.rst:35
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_dropship.rst:51
 #: ../../content/applications/inventory_and_mrp/manufacturing/subcontracting/subcontracting_resupply.rst:53
 msgid "Configure product"
 msgstr ""
 
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:11
+msgid "A group of products in Odoo can be further defined using:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:13
+msgid ":doc:`Units of measure (UoM) <configure/uom>`: a standard quantity for specifying product amounts (e.g., meters, yards, kilograms). Enables automatic conversion between measurement systems in Odoo, such as centimeters to feet."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:17
+msgid "*Ex: Purchasing fabric measured in meters but receiving it in yards from a vendor.*"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:19
+msgid ":doc:`configure/package`: A physical container used to group products together, regardless of whether they are the same or different."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:22
+msgid "*Ex: A box containing assorted items for delivery, or a storage box of two hundred buttons on a shelf.*"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:25
+msgid ":doc:`configure/packaging`: groups the *same* products together to receive or sell them in specified quantities."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:28
+msgid "*Ex: Cans of soda sold in packs of six, twelve, or twenty-four.*"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:31
+msgid "Comparison"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:33
+msgid "This table provides a detailed comparison of units of measure, packages, and packaging to help businesses evaluate which best suits their requirements."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:40
+msgid "Feature"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:41
+msgid "Unit of measure"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:42
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:3
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:188
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:99
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:159
 msgid "Packages"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:44
+msgid "Purpose"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:45
+msgid "Standardized measurement for product units (e.g., cm, lb, L)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:46
+msgid "Tracks the specific physical container and its contents"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:47
+msgid "Groups a fixed number of items together for easier management (e.g., packs of 6, 12 or 24)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:48
+msgid "Product uniformity"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:49
+msgid "Defined per product; saved as one |UoM| in the database"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:50
+msgid "Allows mixed products"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:51
+msgid "Same products only"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:52
+msgid "Flexible"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:53
+msgid "Converts between vendor/customer |UoMs| and database |UoM|"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:54
+msgid "Items can be added or removed from the container"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:55
+msgid "Quantities are fixed (e.g., always packs of 6, 12 or 24)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:56
+msgid "Complexity"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:57
+msgid "Simplest for unit conversions"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:58
+msgid "More complex due to container-level inventory tracking"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:59
+msgid "Simpler; suitable for uniform product groupings"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:60
+msgid "Inventory tracking"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:61
+msgid "Tracks product quantities within the warehouse in the specific |UoM| defined in the product form"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:63
+msgid "Tracks package location and contents within the warehouse"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:64
+msgid "Tracks grouped quantities but not individual items' locations"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:65
+msgid "Smooth barcode operations"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:66
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:74
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:78
+msgid "Not available"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:67
+msgid "Requires scanning both the package and individual items for reception. (even if there are 30 items in a package). Can enable the :ref:`Move Entire Packages <inventory/product_management/move-entire-pack>` feature to update the package's contained items' locations, when moving the package"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:71
+msgid "Scanning a packaging barcode automatically records all included units. (e.g. 1 pack = 12 units)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:73
+msgid "Product lookup"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:75
+msgid "Scanning a product's barcode identifies its typical storage location in the Odoo database"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:76
+msgid "Barcode identifies grouped quantity, not storage location"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:77
+msgid "Unique barcodes"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:79
+msgid "Unique barcodes for individual packages (e.g. Pallet #12)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:80
+msgid "Barcodes set at the packaging type level (e.g. for a pack of 6)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:81
+msgid "Reusability"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:82
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:87
+msgid "Not applicable"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:83
+msgid "Can be disposable or reusable, configured via the :ref:`Package Use <inventory/warehouses_storage/cluster-pack>` field"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:85
+msgid "Disposable only"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:86
+msgid "Container weight"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:88
+msgid "Weight of the container itself is included in the *Shipping Weight* field of a package (:menuselection:`Inventory app --> Products --> Packages`)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:90
+msgid "Weight of the container is defined in the *Package Type* settings"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:91
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:30
+msgid "Lot/serial number tracking"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:92
+msgid "Requires manual adjustments to track |UoMs| via lots (See :ref:`use case <inventory/product_management/lots-uom>` for details)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:94
+msgid "Applies only to contained products"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:95
+msgid "Applies to both contained products and the container"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:96
+msgid "Custom routes"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:97
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:98
+msgid "Cannot be set"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:99
+msgid "Routes can define specific warehouse paths for a particular packaging type"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:102
+msgid "Use cases"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:104
+msgid "After comparing the various features, consider how these businesses, with various inventory management and logistics workflows, came to their decision."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:108
+msgid "Pallets of items using packaging"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:110
+msgid "A warehouse receives shipments of soap organized on physical pallets, each containing 96 bars. These pallets are used for internal transfers and are also sold as standalone units. For logistical purposes, the pallet's weight must be included in the total shipping weight for certain deliveries. Additionally, the pallet requires a barcode to facilitate tracking, and the number of individual bars of soap must be included in the stock count when the pallet is received."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:116
+msgid "After evaluating various options, *product packaging* was the most suitable solution. Packaging enables assigning a barcode to a pallet, identifying it as a \"pallet type\" containing 96 soap bars. This barcode streamlines operations by automatically registering the grouped quantity. Key distinctions include:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:121
+msgid "**Warehouse tracking limitations**: Odoo tracks only the total quantity, not the number of packagings. For instance, if a pallet with 12 and 24 quantities is received, Odoo records 36 quantities, not the pallet details."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:124
+msgid "**Packaging barcodes are type-specific, not unique**: Barcodes represent packaging types (e.g., \"pallet of 96 soap bars\") but do not uniquely identify individual pallets, such as Pallet #1 or Pallet #2."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:129
+msgid "Capture product information using barcode"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:131
+msgid "An Odoo user expects the **Barcode** app to display the typical storage location of a product by scanning a barcode for a container."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:134
+msgid "*Packages* was the most suitable. When the :ref:`appropriate setting is enabled <inventory/warehouses_storage/enable-package>`, scanning a package barcode displays its contents in the **Barcode** app."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:138
+msgid "Packages represent physical containers, enabling detailed tracking of the items they hold. Scanning a package provides visibility into its contents and facilitates operations, like inventory moves."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:145
+msgid "Track different units of measure in storage"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:147
+msgid "A fruit juice distributor tracks multiple |UoMs| for their operations:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:149
+msgid "Fruits are purchased in tons."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:150
+msgid "Juice is produced and stored in kilograms."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:151
+msgid "Small samples are stored in grams for recipe testing."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:153
+msgid "*Unit of Measure* was most suitable. Odoo automatically converts tons to kilograms during receipts. However, since Odoo tracks only one |UoM| per product in the database, the company uses lot numbers to differentiate |UoMs|:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:157
+msgid "LOT1: Grams (g)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:158
+msgid "LOT2: Kilograms (kg)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:160
+msgid "Manual inventory adjustments are required to convert between lots, such as subtracting 1 kg from LOT2 to add 1,000 g to LOT1. While functional, this workaround can be time-consuming and prone to errors."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:7
@@ -2392,27 +2699,39 @@ msgstr ""
 msgid "Activate the *Packages* setting in Inventory > Configuration > Settings."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:51
-msgid "Pack items"
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:50
+msgid "When moving packages internally, the *Move Entire Packages* feature can be enabled on an operation type to update a package's contained item's location upon updating the package's location."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:53
+msgid "To do that, go to :menuselection:`Inventory app --> Configuration --> Operations Types` and select the desired operation this feature will apply to (may have to set it for multiple)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:56
+msgid "On the operation type page, in the :guilabel:`Packages` section, tick the :guilabel:`Move Entire Packages` checkbox."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:62
+msgid "Pack items"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:64
 msgid "Products can be added to packages in any transfer by:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:55
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:66
 msgid "Clicking each :ref:`Detailed Operations <inventory/warehouses_storage/detailed-operations>` icon on the product line."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:57
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:68
 msgid "Using the :ref:`Put in Pack <inventory/warehouses_storage/put-in-pack>` button to place everything in the transfer into a package."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:63
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:74
 msgid "Detailed operations"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:65
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:76
 msgid "On any warehouse transfer (e.g. receipt, delivery order), add a product to a package by clicking the :guilabel:`⦙≣ (bulleted list)` icon in the :guilabel:`Operations` tab."
 msgstr ""
 
@@ -2420,99 +2739,99 @@ msgstr ""
 msgid "Show \"Detailed Operations\" icon in the product line."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:72
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:83
 msgid "Doing so opens the :guilabel:`Detailed Operations` pop-up window for the :guilabel:`Product`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:74
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:85
 msgid "To put the :guilabel:`Product` in a package, click :guilabel:`Add a line`, and assign the product to a :guilabel:`Destination Package`. Select an existing package, or create a new one by typing the name of the new package, then select :guilabel:`Create...`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:82
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:93
 msgid "Assign a package to \"Destination Package\" field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:82
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:93
 msgid "Twelve units of `Acoustic Bloc Screen` are placed in `PACK0000001`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:84
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:95
 msgid "Then, specify the quantity of items to go into the package in the :guilabel:`Done` column. Repeat the above steps to place the :guilabel:`Product` in different packages. Once finished, click :guilabel:`Confirm` to close the window."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:89
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:100
 msgid ":doc:`Ship one order in multiple packages <../../shipping_receiving/setup_configuration/multipack>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:95
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:106
 msgid "Put in pack"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:97
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:108
 msgid "Alternatively, click the :guilabel:`Put in Pack` button on **any** warehouse transfer to create a new package, and place all the items in the transfer in that newly-created package."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:101
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:112
 msgid "The :guilabel:`Put in Pack` button appears on receipts, delivery orders, and other transfer forms with the *Packages* feature enabled in :menuselection:`Inventory app --> Configuration --> Settings`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:109
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:120
 msgid "Image of the \"Put in Pack\" button being clicked."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:109
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:120
 msgid "In batch transfer `BATCH/00003`, the :guilabel:`Put in Pack` button was clicked to create a new package, `PACK0000002`, and assign all items to it in the :guilabel:`Destination Package` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:117
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:128
 msgid "Create package types by navigating to :menuselection:`Inventory app --> Configuration --> Package Types`, in order to set custom dimensions and weight limits. This feature is mainly used to calculate package weights for shipping costs."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:122
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:133
 msgid ":doc:`Shipping carriers <../../shipping_receiving/setup_configuration/third_party_shipper>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:123
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:134
 msgid ":doc:`../../shipping_receiving/setup_configuration`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:125
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:136
 msgid "On the :guilabel:`Package Types` list, clicking :guilabel:`New` opens a blank package type form. The fields of the form are as follows:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:128
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:139
 msgid ":guilabel:`Package Type` (required): define the package type's name."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:129
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:140
 msgid ":guilabel:`Size`: define the dimensions of the package in millimeters (mm). The fields, from left to right, define the :guilabel:`Length`, :guilabel:`Width`, and :guilabel:`Height`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:131
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:142
 msgid ":guilabel:`Weight`: weight of an empty package (e.g. an empty box, pallet)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:134
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:145
 msgid "Odoo calculates the package's weight by adding the weight of the empty package plus the weight of the item(s), which can be found in the :guilabel:`Weight` field, in the :guilabel:`Inventory` tab, of each product form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:138
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:149
 msgid ":guilabel:`Max Weight`: maximum shipping weight allowed in the package."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:139
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:150
 msgid ":guilabel:`Barcode`: define a barcode to identify the package type from a scan."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:140
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:151
 msgid ":guilabel:`Company`: specify a company to make the package type available **only** at the selected company. Leave the field blank if it is available at all companies."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:142
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:153
 msgid ":guilabel:`Carrier`: specify the intended shipping carrier for this package type."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:143
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:154
 msgid ":guilabel:`Carrier Code`: define a code that is linked to the package type."
 msgstr ""
 
@@ -2520,11 +2839,11 @@ msgstr ""
 msgid "Package type for FedEx's 25 kilogram box."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:152
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:163
 msgid "Cluster packages"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:154
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:165
 msgid "To use *cluster packages*, first navigate to :menuselection:`Inventory app --> Configuration --> Settings`, and activate the :guilabel:`Batch Transfers` feature, located in the :guilabel:`Operations` section. Doing so makes the *Package Use* field become visible on a package form."
 msgstr ""
 
@@ -2532,39 +2851,39 @@ msgstr ""
 msgid "Activate the *Batch Transfers* feature in Inventory > Configuration > Settings."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:163
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:174
 msgid "Add new packages by going to :menuselection:`Inventory app --> Products --> Packages`. Then, click :guilabel:`New`, or select an existing package. Doing so opens the package form, which contains the following fields:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:167
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:178
 msgid ":guilabel:`Package Reference` (required): name of the package."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:168
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:179
 msgid ":guilabel:`Package Type`: used for :ref:`configuring shipping boxes to ship to the customer <inventory/warehouses_storage/package-type>`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:172
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:183
 msgid ":guilabel:`Package Type` is unnecessary for configuring packages for cluster pickings."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:174
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:185
 msgid ":guilabel:`Shipping Weight`: used to input the weight of the package after measuring it on a scale."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:176
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:187
 msgid ":guilabel:`Company`: specify a company to make the package available **only** at the selected company. Leave the field blank if the package is available at all companies."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:178
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:189
 msgid ":guilabel:`Location`: current location of the package."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:179
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:190
 msgid ":guilabel:`Pack Date`: the date the package was created."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:180
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:191
 msgid ":guilabel:`Package Use`: choose :guilabel:`Reusable` for packages used for moving products within the warehouse; :guilabel:`Disposable` for packages used to ship products to customers."
 msgstr ""
 
@@ -2572,7 +2891,7 @@ msgstr ""
 msgid "Display package form to create a cluster pack."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:188
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:199
 msgid ":doc:`Using cluster packages <../../shipping_receiving/picking_methods/cluster>`"
 msgstr ""
 
@@ -3779,7 +4098,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:372
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:391
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:235
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:241
 msgid "Manual"
 msgstr ""
 
@@ -9854,7 +10173,7 @@ msgid "Show delivery order on the sales order line."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:261
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:261
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:265
 msgid "Delivery order"
 msgstr ""
 
@@ -10533,7 +10852,7 @@ msgid ":doc:`../setup_configuration/third_party_shipper`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:43
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:129
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:131
 msgid ":guilabel:`Company`: if the shipping method should apply to a specific company, select it from the drop-down menu. Leave the field blank to apply the method to all companies."
 msgstr ""
 
@@ -11359,7 +11678,7 @@ msgid "Odoo integration of Sendcloud works on free Sendcloud plans *only* if a b
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:37
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:181
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:183
 msgid "Warehouse configuration"
 msgstr ""
 
@@ -12228,83 +12547,83 @@ msgstr ""
 msgid "Ensure the delivery method is published when it should be available on the *Website* app. To publish a delivery method on the website, click the desired delivery method, then click the :guilabel:`Unpublished` smart button. Doing so changes that smart button to read: :guilabel:`Published`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:112
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:114
 msgid "The :guilabel:`Shipping Method` page contains details about the provider, including:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:114
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:116
 msgid ":guilabel:`Shipping Method` (*Required field*): the name of the delivery method (e.g. `FedEx US`, `FedEx EU`, etc.)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:116
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:118
 msgid ":guilabel:`Website`: configure shipping methods for an *eCommerce* page that is connected to a specific website in the database. Select the applicable website from the drop-down menu, or leave it blank to apply the method to all web pages."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:119
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:121
 msgid ":guilabel:`Provider` (*Required field*): choose the third-party delivery service, like FedEx. Upon choosing a provider, the :guilabel:`Integration Level`, :guilabel:`Invoicing Policy` and :guilabel:`Insurance Percentage` fields become available."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:122
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:124
 msgid ":guilabel:`Integration Level`: choose :guilabel:`Get Rate` to simply get an :ref:`estimated shipment cost <inventory/shipping_receiving/third-party-so>` on an |SO| or invoice."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:126
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:128
 msgid "Select :guilabel:`Get Rate and Create Shipment` to also :doc:`generate shipping labels <labels>`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:131
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:133
 msgid ":guilabel:`Delivery Product` (*Required field*): the delivery charge name that is added to the |SO| or invoice."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:133
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:135
 msgid ":guilabel:`Invoicing Policy`: select and calculate an :guilabel:`Estimated cost` of shipping directly from the shipping carrier. If the :guilabel:`Real cost` of shipping is wanted instead, refer to :doc:`Invoice real shipping costs <invoicing>` document."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:136
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:138
 msgid ":guilabel:`Margin on Rate`: specify an additional percentage amount added to the base shipping rate to cover extra costs, such as handling fees, packaging materials, exchange rates, etc."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:138
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:140
 msgid ":guilabel:`Free if order amount is above`: enables free shipping for orders surpassing a specified amount entered in the corresponding :guilabel:`Amount` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:140
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:142
 msgid ":guilabel:`Insurance Percentage`: specify a percentage amount of the shipping costs reimbursed to the senders if the package is lost or stolen in transit."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:147
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:149
 msgid "Screenshot of a FedEx shipping method."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:147
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:149
 msgid "**Shipping Method** configuration page for `FedEx US`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:149
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:151
 msgid "In the :guilabel:`Configuration` tab, fill out the API credential fields (e.g. API key, password, account number, etc.). Depending on the third-party shipping carrier chosen in the :guilabel:`Provider` field, the :guilabel:`Configuration` tab will contain different required fields. For more details about configuring specific carriers' credentials, refer to the following documents:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:156
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:158
 msgid ":doc:`DHL credentials <dhl_credentials>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:157
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:159
 msgid ":doc:`Sendcloud credentials <sendcloud_shipping>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:158
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:160
 msgid ":doc:`UPS credentials <ups_credentials>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:163
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:165
 msgid "Production environment"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:165
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:167
 msgid "With the delivery method details configured, click the :guilabel:`Test Environment` smart button to set it to :guilabel:`Production Environment`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:169
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:171
 msgid "Setting the delivery method to :guilabel:`Production` creates **real** shipping labels, and users are at risk of being charged through their carrier account (e.g. UPS, FedEx, etc.) **before** users charge customers for shipping. Verify all configurations are correct before launching the delivery method to :guilabel:`Production`."
 msgstr ""
 
@@ -12312,11 +12631,11 @@ msgstr ""
 msgid "Show the \"Test Environment\" smart button."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:183
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:185
 msgid "Ensure the warehouse's :guilabel:`Address` (including ZIP code) and :guilabel:`Phone` number are entered accurately. To do that, go to :menuselection:`Inventory app --> Configuration --> Warehouses`, and select the desired warehouse."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:187
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:189
 msgid "On the warehouse configuration page, open the warehouse contact page by clicking the :guilabel:`Company` field."
 msgstr ""
 
@@ -12324,7 +12643,7 @@ msgstr ""
 msgid "Highlight the \"Company\" field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:194
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:196
 msgid "Verify that the :guilabel:`Address` and :guilabel:`Phone` number are correct, as they are required for the shipping connector to work properly."
 msgstr ""
 
@@ -12332,15 +12651,15 @@ msgstr ""
 msgid "Show company address and phone number."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:204
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:206
 msgid "Product weight"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:206
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:208
 msgid "For the carrier integration to work properly, specify the weight of products by going to :menuselection:`Inventory app --> Products --> Products`, and selecting the desired product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:209
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:211
 msgid "Then, switch to the :guilabel:`Inventory` tab, and define the :guilabel:`Weight` of the product in the :guilabel:`Logistics` section."
 msgstr ""
 
@@ -12348,23 +12667,23 @@ msgstr ""
 msgid "Display the \"Weight\" field in the Inventory tab of the product form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:217
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:221
 msgid "Apply third-party shipping carrier"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:219
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:223
 msgid "Shipping carriers can be applied on a :abbr:`SO (Sales Order)`, invoice, or delivery order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:221
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:225
 msgid "After configuring the third-party carrier's :ref:`delivery method <inventory/shipping_receiving/configure-delivery-method>` in Odoo, create or navigate to a quotation by going to :menuselection:`Sales app --> Orders --> Quotations`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:228
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:232
 msgid "Sales order"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:230
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:234
 msgid "To assign a third-party shipping carrier, and get an estimated cost of shipping, begin by going to :menuselection:`Sales app --> Orders --> Quotations`. Create or select an existing quotation, and add the cost of shipping through a third-party carrier to a quotation, by clicking the :guilabel:`Add Shipping` button in the bottom-right corner of the :guilabel:`Order Lines` tab."
 msgstr ""
 
@@ -12372,35 +12691,35 @@ msgstr ""
 msgid "Show the \"Add shipping\" button at the bottom of a quotation."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:239
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:243
 msgid "In the resulting :guilabel:`Add a shipping method` pop-up window, select the intended carrier from the :guilabel:`Shipping Method` drop-down menu. The :guilabel:`Cost` field is automatically filled based on:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:243
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:247
 msgid "the amount specified in the :guilabel:`Total Order Weight` field (if it is not provided, the sum of :ref:`product weights <inventory/shipping_receiving/configure-weight>` in the order is used)"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:245
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:249
 msgid "the distance between the warehouse's :ref:`source address <inventory/shipping_receiving/configure-source-address>` and the customer's address."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:250
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:254
 msgid "After selecting a third-party provider in the :guilabel:`Shipping Method` field, click :guilabel:`Get Rate` in the :guilabel:`Add a shipping method` pop-up window to get the estimated cost through the shipping connector. Then, click the :guilabel:`Add` button to add the delivery charge to the |SO| or invoice."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:256
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:260
 msgid ":doc:`Charge customers for shipping after product delivery <invoicing>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:263
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:267
 msgid "For users making shipments without installing the *Sales* app, assign the shipping carrier to the delivery order, by first going to the :menuselection:`Inventory` app. Then, from the :guilabel:`Inventory Overview` dashboard, select the :guilabel:`Delivery Orders` operation type, and choose the desired delivery order that is not already marked as :guilabel:`Done` or :guilabel:`Cancelled`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:269
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:273
 msgid "In the :guilabel:`Additional info` tab, set the :guilabel:`Carrier` field to the desired third-party shipping carrier. When the delivery method is set to :ref:`production mode <inventory/shipping_receiving/configure-delivery-method>`, a :guilabel:`Tracking Reference` is provided."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:275
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:279
 msgid ":doc:`Generate shipping labels <labels>`"
 msgstr ""
 
@@ -12408,39 +12727,39 @@ msgstr ""
 msgid "Show the delivery order's \"Additional info\" tab."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:284
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:288
 msgid "Troubleshooting"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:286
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:290
 msgid "Since shipping connectors can sometimes be complex to set up, here are some checks to try when things are not working as expected:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:289
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:293
 msgid "Ensure the :ref:`warehouse information <inventory/shipping_receiving/configure-source-address>` (e.g., address and phone number) in Odoo is correct **and** matches the records saved in the shipping provider's website."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:292
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:296
 msgid "Verify that the :ref:`package type <inventory/warehouses_storage/package-type>` and parameters are valid for the shipping carrier. To check, ensure the shipment can be directly created on the shipping carrier's website."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:295
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:299
 msgid "When encountering a price mismatch between Odoo's estimated cost and the provider's charge, first ensure the delivery method is set to :ref:`production environment <inventory/shipping_receiving/production-env>`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:299
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:303
 msgid "Then, create the shipment in both the carrier's website and Odoo, and verify the prices are the same across Odoo, the shipping provider, and in the *debug logs*."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:303
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:307
 msgid "When checking for a price mismatch in the debug logs, if the request says the package weighs six kilograms, but the response from FedEx says the package weights seven kilograms, it concludes that the issue is on FedEx's side."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:308
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:312
 msgid "Debug log"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:310
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:314
 msgid "Track shipping data inconsistencies by activating debug logging. To do that, go to the delivery method's configuration page (:menuselection:`Inventory app --> Configuration --> Shipping Method`), and select the desired shipping method. Click the :guilabel:`No Debugging` smart button to activate :guilabel:`Debug Requests`."
 msgstr ""
 
@@ -12448,11 +12767,11 @@ msgstr ""
 msgid "Show the \"No Debug\" smart button."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:319
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:323
 msgid "With :guilabel:`Debug Requests` activated, each time the shipping connector is used to estimate the cost of shipping, records are saved in the :guilabel:`Logging` report. To access the report, turn on :ref:`developer mode <developer-mode>`, and go to :menuselection:`Settings app --> Technical --> Database Structure section --> Logging`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:325
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:329
 msgid "Logs are created for a shipping method each time the :ref:`Get Rate <inventory/shipping_receiving/third-party-rate>` button is clicked on :abbr:`SOs (Sales Orders)` and invoices, **and** when a customer adds the shipping carrier to their order through the *Website* app."
 msgstr ""
 
@@ -12460,7 +12779,7 @@ msgstr ""
 msgid "Show how to find the \"Logging\" option from the \"Technical\" menu."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:334
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:338
 msgid "Click the *HTTP request* line item to open a detailed page, and verify the correct information is sent from Odoo to the shipping carrier. In the *HTTP response*, verify that the same information is received."
 msgstr ""
 
@@ -14730,7 +15049,7 @@ msgstr ""
 msgid "Set the Product Type as Storable."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:37
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:36
 msgid "Next, click on the :guilabel:`Inventory` tab and select one or more routes from the :guilabel:`Routes` section. Doing so tells Odoo which route to use to replenish the product."
 msgstr ""
 
@@ -14738,7 +15057,7 @@ msgstr ""
 msgid "Select one or more routes on the Inventory tab."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:44
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:42
 msgid "If the product is reordered using the :guilabel:`Buy` route, confirm that the :guilabel:`Can be Purchased` checkbox is enabled under the product name. This makes the :guilabel:`Purchase` tab appear. Click on the :guilabel:`Purchase` tab, and specify at least one vendor, and the price that they sell the product for, so that Odoo knows which company the product should be purchased from."
 msgstr ""
 
@@ -14746,119 +15065,123 @@ msgstr ""
 msgid "Specify a vendor and price on the Purchase tab."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:53
-msgid "If the product is replenished using the :guilabel:`Manufacture` route, it needs to have at least one Bill of Materials (BoM) associated with it. This is necessary because Odoo only creates manufacturing orders for products with a :abbr:`BoM (Bill of Materials)`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:57
-msgid "If a :abbr:`BoM (Bill of Materials)` does not already exist for the product, select the :guilabel:`Bill of Materials` smart button at the top of the product form, then click :guilabel:`New` to configure a new :abbr:`BoM (Bill of Materials)`."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:50
+msgid "If the product is replenished using the :guilabel:`Manufacture` route, it needs to have at least one Bill of Materials (BoM) associated with it. This is necessary because Odoo only creates manufacturing orders for products with a :abbr:`BoM (Bill of Materials)`. If a :abbr:`BoM (Bill of Materials)` does not already exist for the product, select the :guilabel:`Bill of Materials` smart button at the top of the product form, then click :guilabel:`New` to configure a new :abbr:`BoM (Bill of Materials)`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:-1
 msgid "The Bill of Materials smart button on a product form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:66
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:61
 msgid "Create new reordering rules"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:68
-msgid "To create a new reordering rule, navigate to :menuselection:`Inventory app --> Configuration --> Reordering Rules`, then click :guilabel:`New`, and fill out the new line as follows:"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:63
+msgid "To create a new reordering rule, navigate to :menuselection:`Inventory app --> Operations --> Replenishment`, then click :guilabel:`New`, and fill out the following fields for the new reordering rule line item:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:71
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:67
 msgid ":guilabel:`Product`: The product that is replenished by the rule."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:72
-msgid ":guilabel:`Location`: The location where the product is stored."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:68
+msgid ":guilabel:`Route`: The :doc:`supply chain route <../../shipping_receiving/daily_operations/use_routes>` for this product"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:73
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:70
 msgid ":guilabel:`Min Quantity`: The minimum quantity that can be forecasted without the rule being triggered. When forecasted stock falls below this number, a replenishment order for the product is created."
 msgstr ""
 
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:73
+msgid ":guilabel:`Max Quantity`: The maximum quantity at which the stock is replenished."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:74
+msgid ":guilabel:`To Order`: The number of units, according to the *UoM* that should be replenished for this reordering rule."
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:76
-msgid ":guilabel:`Max Quantity`: The maximum quantity that stock is replenished up to."
+msgid ":guilabel:`UoM`: The *unit of measurement* used for reordering the product. This value can simply be `Units` or a more specific unit of measurement for weight, length, etc."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:77
-msgid ":guilabel:`Multiple Quantity`: Specify if the product should be replenished in batches of a certain quantity (e.g., a product could be replenished in batches of 20)."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:80
+msgid "Two other fields are automatically populated: :guilabel:`On Hand` (the number of units currently available in inventory) and :guilabel:`Forecast` (the number of units expected to be available in inventory after all orders are taken into account). These numbers will only change when an :doc:`inventory adjustment <../inventory_management/count_products>` is made."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:79
-msgid ":guilabel:`UoM`: The unit of measure used for reordering the product. This value can simply be `Units` or a specific unit of measurement for weight, length, etc."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:86
+msgid "Additional fields can be accessed by clicking the :icon:`oi-settings-adjust` :guilabel:`(additional options slider icon)`. For example, :guilabel:`Multiple Quantity` specifies if the product should be replenished in batches of a certain quantity (e.g., a product could be replenished in batches of 20)."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:-1
 msgid "The form for creating a new reordering rule."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:87
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:96
 msgid "Reordering rules can also be created from each product form. To do so, navigate to :menuselection:`Inventory app --> Products --> Products`, and select a product. Then, click the :guilabel:`Reordering Rules` smart button, and click :guilabel:`New` to fill out the new line, as detailed above."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:92
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:101
 msgid "For advanced usage of reordering rules, learn about the following reordering rule fields:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:94
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:103
 msgid ":ref:`Trigger <inventory/product_management/trigger>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:95
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:104
 msgid ":ref:`Visibility days <inventory/product_management/visibility-days>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:96
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:105
 msgid ":ref:`Route <inventory/product_management/route>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:101
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:110
 msgid "0/0/1 reordering rule"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:103
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:112
 msgid "The *0/0/1* reordering rule is a specialty rule used to replenish a product that is not kept on-hand, each time a sales order (SO) is confirmed for that product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:107
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:116
 msgid "The 0/0/1 reordering rule is similar to the *Replenish on Order (MTO)* route, in that both workflows are used to replenish a product upon confirmation of an |SO|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:110
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:119
 msgid "The main difference between the two methods is that the *Replenish on Order* route automatically reserves the product for the |SO| that caused it to be replenished. This means the product **cannot** be used for a different |SO|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:114
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:123
 msgid "The 0/0/1 reordering rule does not have this limitation. A product replenished using the rule is not reserved for any specific |SO|, and can be used as needed."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:117
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:126
 msgid "Another key difference is that replenishment orders created by the *Replenish on Order* route are linked to the original |SO| by a smart button at the top of the order. When using the 0/0/1 reordering rule, a replenishment order is created, but is not linked to the original |SO|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:121
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:130
 msgid "See the :doc:`Replenish on Order (MTO) <mto>` documentation for a full overview of the MTO route."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:123
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:132
 msgid "To create a 0/0/1 reordering rule, navigate to :menuselection:`Inventory app --> Products --> Products`, and select a product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:126
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:135
 msgid "At the top of the product's page, click the :icon:`fa-refresh` :guilabel:`Reordering Rules` smart button to open the :guilabel:`Reordering Rules` page for the product. On the resulting page, click :guilabel:`New` to begin configuring a new reordering rule."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:130
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:139
 msgid "In the :guilabel:`Location` field of the new reordering rule, select the location in which replenished products should be stored. By default, this location is set to :guilabel:`WH/Stock`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:133
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:142
 msgid "In the :guilabel:`Route` field, select the route the rule should use to replenish the item. For example, if the product should be purchased from a vendor, select the :guilabel:`Buy` route."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:136
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:145
 msgid "In the :guilabel:`Min Quantity` field and :guilabel:`Max Quantity` field, leave the values set to `0.00`. In the :guilabel:`To Order` field, enter a value of `1.00`."
 msgstr ""
 
@@ -14866,43 +15189,43 @@ msgstr ""
 msgid "A 0/0/1 reordering rule."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:143
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:151
 msgid "With the reordering rule configured using these values, each time an |SO| causes the forecasted quantity of the product to fall below the :guilabel:`Min Quantity` of `0.00`, the selected :guilabel:`Route` is used to replenish the product in one-unit increments, back up to the :guilabel:`Max Quantity` of `0.00`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:149
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:157
 msgid "A picture frame is configured with a 0/0/1 reordering rule that uses the *Buy* route. Zero units of the picture frame are kept on-hand at any given time."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:152
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:160
 msgid "An |SO| is confirmed for one unit of the picture frame, which causes the forecasted quantity to drop to `-1.00`. This triggers the reordering rule, which automatically creates a |PO| for one unit of the picture frame."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:156
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:164
 msgid "Once the product is received from the vendor, the forecasted quantity of the picture frame returns to `0.00`. There is now one picture frame on-hand, but it is not reserved for the |SO| which triggered its purchase. It can be used to fulfill that |SO|, or reserved for a different order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:164
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:172
 msgid "Trigger"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:166
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:174
 msgid "When stock falls below the reordering rule's minimum, set the reordering rule's *trigger* to *automatic* to automatically create purchase or manufacturing orders to replenish stock."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:169
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:177
 msgid "Alternatively, setting the reordering rule's trigger to *manual* displays the product and forecasted stock on the *replenishment dashboard*, where the procurement manager can review the stock levels, lead times, and forecasted dates of arrival."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:174
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:182
 msgid ":doc:`../replenishment`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:177
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:185
 msgid "The replenishment dashboard is accessible by going to :menuselection:`Inventory app --> Operations --> Replenishment`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:180
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:188
 msgid "To enable the :guilabel:`Trigger` field, go to :menuselection:`Inventory app --> Configuration --> Reordering Rules`. Then, click the :guilabel:`(slider)` icon, located to the far-right of the column titles, and enable the :guilabel:`Trigger` option from the additional options drop-down menu that appears."
 msgstr ""
 
@@ -14910,39 +15233,39 @@ msgstr ""
 msgid "Enable the Trigger field by toggling it in the additional options menu"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:189
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:196
 msgid "In the :guilabel:`Trigger` column, select :guilabel:`Auto` or :guilabel:`Manual`. Refer to the sections below to learn about the different types of reordering rules."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:193
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:200
 msgid "Auto"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:195
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:202
 msgid "Automatic reordering rules, configured by setting the reordering rule's :guilabel:`Trigger` field to :guilabel:`Auto`, generates purchase or manufacturing orders when:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:198
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:205
 msgid "the scheduler runs, and the *On Hand* quantity is below the minimum"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:199
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:206
 msgid "a sales order is confirmed, and lowers the *Forecasted* quantity of the product below the minimum"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:203
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:210
 msgid "The scheduler is set to run once a day, by default."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:205
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:212
 msgid "To manually trigger a reordering rule before the scheduler runs, ensure :ref:`developer mode <developer-mode>` is enabled, and select :menuselection:`Inventory app --> Operations --> Run Scheduler`. Then, click the purple :guilabel:`Run Scheduler` button on the pop-up window that appears."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:210
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:217
 msgid "Be aware that this also triggers any other scheduled actions."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:213
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:220
 msgid "The product, `Office Lamp`, has an automatic reordering rule set to trigger when the forecasted quantity falls below the :guilabel:`Min Quantity` of `5.00`. Since the current :guilabel:`Forecast` is `55.00`, the reordering rule is **not** triggered."
 msgstr ""
 
@@ -14950,31 +15273,31 @@ msgstr ""
 msgid "Show automatic reordering rule from the Reordering Rule page."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:221
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:227
 msgid "If the :guilabel:`Buy` route is selected, then an :abbr:`RFQ (Request for Quotation)` is generated. To view and manage :abbr:`RFQs (Requests for Quotation)`, navigate to :menuselection:`Purchase app --> Orders --> Requests for Quotation`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:225
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:231
 msgid "If the :guilabel:`Manufacture` route is selected, then an :abbr:`MO (Manufacturing Order)` is generated. To view and manage :abbr:`MOs (Manufacturing Orders)`, navigate to :menuselection:`Manufacturing app --> Operations --> Manufacturing Orders`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:229
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:235
 msgid "When no route is selected, Odoo selects the :guilabel:`Route` specified in the :guilabel:`Inventory` tab of the product form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:237
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:243
 msgid "Manual reordering rules, configured by setting the reordering rule's :guilabel:`Trigger` field to :guilabel:`Manual`, lists a product on the replenishment dashboard when the forecasted quantity falls below a specified minimum. Products on this dashboard are called *needs*, because they are needed to fulfill upcoming sales orders, but the forecasted quantity is not enough."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:242
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:248
 msgid "The replenishment dashboard, accessible by navigating to :menuselection:`Inventory app --> Operations --> Replenishment`, considers sales order deadlines, forecasted stock levels, and vendor lead times. It displays needs **only** when it is time to reorder items."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:247
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:253
 msgid "If the one-day window for ordering products is too short, skip to the :ref:`visibility days <inventory/product_management/visibility-days>` section to make the need appear on the replenishment dashboard a specified number of days in advance."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:251
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:257
 msgid "When a product appears on the replenishment dashboard, clicking the :guilabel:`Order Once` button generates the purchase or manufacturing order with the specified amounts :guilabel:`To Order`."
 msgstr ""
 
@@ -14982,31 +15305,31 @@ msgstr ""
 msgid "Click the Order Once button on the replenishment dashboard to replenish stock."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:261
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:266
 msgid "Visibility days"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:264
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:269
 msgid "Ensure :doc:`lead times <lead_times>` are understood before proceeding with this section."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:266
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:271
 msgid "When :ref:`manual reordering rules <inventory/product_management/manual-rr>` are assigned to a product, *visibility days* make the product appear on the replenishment dashboard (:menuselection:`Inventory app --> Operations --> Replenishment`) a certain number of days in advance."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:272
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:277
 msgid "A product has a manual reordering rule set to trigger when the stock level falls below four units. The current on-hand quantity is ten units."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:275
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:280
 msgid "The current date is February 20th, and the *delivery date* on a sales order (in the :guilabel:`Other Info` tab) is March 3rd — twelve days from the current date."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:278
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:283
 msgid "The :ref:`vendor lead time <inventory/shipping_receiving/purchase-lt>` is four days, and the :ref:`purchase security lead time <inventory/shipping_receiving/purchase-security-lt>` is one day."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:282
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:287
 msgid "When the :guilabel:`Visibility Days` field of the reordering rule is set to zero, the product appears on the replenishment dashboard five days before the delivery date, which, in this case, is February 27th."
 msgstr ""
 
@@ -15014,27 +15337,27 @@ msgstr ""
 msgid "Graphic representing when the need appears on the replenishment dashboard: Feb 27th."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:290
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:294
 msgid "To see the product on the replenishment dashboard for the current date, February 20, set the :guilabel:`Visibility Days` to `7.00`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:293
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:297
 msgid "To determine the amount of visibility days needed to see a product on the replenishment dashboard, subtract *today's date* from the *date the need appears* on the replenishment dashboard."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:296
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:300
 msgid "Visibility~days = Need~appears~date - Today's~date"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:301
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:305
 msgid "Referring to the example above, today's date is February 20th, and the need for the product appears on February 27th."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:304
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:308
 msgid "(February 27 - February 20 = 7 days)"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:306
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:310
 msgid "Incorrectly setting the :guilabel:`Visibility Days` fewer than seven days in this case results in the need **not** appearing on the replenishment dashboard."
 msgstr ""
 
@@ -15042,27 +15365,27 @@ msgstr ""
 msgid "Show the replenishment dashboard with the correct and incorrect visibility days set."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:316
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:319
 msgid "Route"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:318
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:321
 msgid "Odoo allows for multiple routes to be selected under the :guilabel:`Inventory` tab on each product form. For instance, it is possible to select both :guilabel:`Buy` and :guilabel:`Manufacture`, thus enabling the functionality of both routes."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:322
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:325
 msgid "Odoo also enables users to set a preferred route for a product's reordering rule. This is the route that the rule defaults to, if multiple are selected. To select a preferred route, begin by navigating to :menuselection:`Inventory app --> Configuration --> Reordering Rules`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:326
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:329
 msgid "By default, the :guilabel:`Route` column is hidden on the :guilabel:`Reordering Rules` page."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:328
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:331
 msgid "Reveal the :guilabel:`Route` column by selecting the :guilabel:`(slider)` icon to the far-right of the column titles, and checking the :guilabel:`Route` option from the drop-down menu that appears."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:331
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:334
 msgid "Click inside of the column on the row of a reordering rule, and a drop-down menu shows all available routes for that rule. Select one to set it as the preferred route."
 msgstr ""
 
@@ -15070,7 +15393,7 @@ msgstr ""
 msgid "Select a preferred route from the drop-down."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:339
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:341
 msgid "If multiple routes are enabled for a product but no preferred route is set for its reordering rule, the product is reordered using the selected route that is listed first on the :guilabel:`Inventory` tab of the product form."
 msgstr ""
 
@@ -17421,7 +17744,7 @@ msgid ":guilabel:`Time Efficiency`: used to calculate the expected duration of a
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:45
-msgid ":guilabel:`Capacity`: the number of operations that can be performed at the work center simultaneously"
+msgid ":guilabel:`Capacity`: the number of products that can be processed at the work center simultaneously"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:47
@@ -17991,10 +18314,6 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:-1
 msgid "The Manufacturing route on the Inventory tab of a product page."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:30
-msgid "Lot/serial number tracking"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:32
