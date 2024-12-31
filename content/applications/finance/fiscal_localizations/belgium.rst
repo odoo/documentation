@@ -136,11 +136,8 @@ Let's take an example reflecting **restaurant** and **car expenses**.
 Restaurant expenses
 ~~~~~~~~~~~~~~~~~~~
 
-In Belgium, 31% of **restaurant** expenses are non-deductible. Create a new **disallowed expenses
+In Belgium, 69% of **restaurant** expenses are deductible. Create a new **disallowed expenses
 category** and set both :guilabel:`Related Account(s)` and :guilabel:`Current Rate`.
-
-.. image:: belgium/restaurant-expenses.png
-   :alt: Disallowed expenses categories
 
 .. _belgium/vehicle-split:
 
@@ -149,7 +146,7 @@ Car expenses: vehicle split
 
 In Belgium, the deductible percentage varies from car to car and, therefore, should be indicated for
 each vehicle. To do so, open :menuselection:`Fleet` and select a vehicle. In the :guilabel:`Tax
-info` tab, go to the :guilabel:`Disallowed Expenses Rate` section and click on :guilabel:`Add a
+info` tab, go to the :guilabel:`Deductibility Rates` section and click on :guilabel:`Add a
 line`. Add a :guilabel:`Start Date` and a :guilabel:`%`. The amounts go in the same account for all
 car expenses.
 
