@@ -11,3 +11,4 @@ Task management
    tasks/task_creation
    tasks/recurring_tasks
    tasks/sub-tasks
+   tasks/task_dependencies
