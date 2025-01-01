@@ -8,3 +8,4 @@ Integrations
    integrations/unsplash
    integrations/geolocation
    integrations/google_translate
+   integrations/barcodelookup
