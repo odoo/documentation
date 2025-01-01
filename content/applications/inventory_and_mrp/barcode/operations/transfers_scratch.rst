@@ -170,6 +170,10 @@ out.
    the same lot or serial number is shared between different products, scan the product barcode
    first, then the barcode of the lot/serial number.
 
+.. seealso::
+   :ref:`Connect to the Barcode Lookup database <barcode/setup/barcodelookup>` to quickly create new
+   products by scanning their barcodes during internal transfers.
+
 Create a transfer from scratch
 ==============================
 
