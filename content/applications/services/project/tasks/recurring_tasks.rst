@@ -18,22 +18,26 @@ activate :guilabel:`Recurring Tasks`, and press :guilabel:`Save`.
 Set up task recurrence
 ----------------------
 
-In an existing task, press the :guilabel:`Recurrent` button next to the :guilabel:`Planned date`.
-Then, configure :guilabel:`Repeat Every` field according to your needs.
+In an existing task, click the :icon:`fa-repeat` (:guilabel:`Recurrent`) button next to the
+:guilabel:`Deadline` field. Then, configure the :guilabel:`Repeat Every` field according to your
+needs.
 
-A new task in recurrence will be created once either of this conditions is met:
-- Previous task in recurrence has been closed.
-- On the day of the planned recurrence.
+A new task in recurrence will be created once the status of the previous task is set to
+:guilabel:`Done` or :guilabel:`Canceled`.
 
-The new task is created on your project dashboard with the following configuration:
+The new task is created on the project dashboard with the following configuration:
 
-- :guilabel:`Stage`: first stage of the project dashboard (:guilabel:`New` or equivalent);
+- :guilabel:`Stage`: is set to the first stage of the project dashboard (:guilabel:`New` or
+  equivalent);
 - :guilabel:`Name`, :guilabel:`Description`, :guilabel:`Project`, :guilabel:`Assignees`,
-  :guilabel:`Customer`, :guilabel:`Tags`: copied from the original task;
-- :guilabel:`Milestones`, :guilabel:`Deadline`, :guilabel:`Timesheets`, :guilabel:`Chatter`,
-  :guilabel:`Activities`, :guilabel:`Subtasks`: those fields are not copied;
+  :guilabel:`Customer`, :guilabel:`Tags`: are copied from the original task;
+- :guilabel:`Deadline`: is updated based on the :guilabel:`Repeat Every` field (e.g., if the task is
+  set to repeat once a week, 7 days will be added to the deadline);
+- :guilabel:`Milestones`, :guilabel:`Timesheets`, :guilabel:`Chatter`,
+  :guilabel:`Activities`, :guilabel:`Subtasks`: are **not** copied from the original task.
 
-- A **smart button** on the task displays the total number of existing recurrences.
+Once a recurrence is configured, a **smart button** on the task displays the total number of
+existing recurrences.
 
 Edit or stop task recurrence
 ----------------------------
