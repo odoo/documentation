@@ -31,7 +31,7 @@ List
       :align: center
       :alt: List view
 
-List views, also called list views, display records in a tabular form.
+List views, also called tree views, display records in a tabular form.
 
 Their root element is ``<list>``. The most basic version of this view simply
 lists all the fields to display in the table (where each field is a column):
@@ -44,7 +44,7 @@ lists all the fields to display in the table (where each field is a column):
     </list>
 
 A simple example can be found
-`here <https://github.com/odoo/odoo/blob/6da14a3aadeb3efc40f145f6c11fc33314b2f15e/addons/crm/views/crm_lost_reason_views.xml#L46-L54>`__.
+`here <https://github.com/odoo/odoo/blob/2fe55ae592e5812c5ee5e39ed1e8332bde608cb2/addons/crm/views/crm_lost_reason_views.xml#L45C1-L53C14>`__.
 
 .. exercise:: Add a custom list view.
 
