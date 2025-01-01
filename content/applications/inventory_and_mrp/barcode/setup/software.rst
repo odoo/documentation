@@ -77,3 +77,23 @@ license for a prefix, visit the GS1 Company Prefix page.
 
 Odoo users are able to use GTIN barcodes to identify their products. However, since Odoo supports
 any numeric string as a barcode, it is also possible to define a custom barcode for internal use.
+
+.. _barcode/setup/barcodelookup:
+
+Barcode Lookup
+==============
+
+`Barcode Lookup <https://www.barcodelookup.com/>`_ allows you to scan (or enter) products' barcodes
+(:abbr:`UPC (Universal Product Code)`, :abbr:`EAN (European Article Number)`, or :abbr:`ISBN
+(International Standard Book Number)`) to automatically create them in your Odoo database, complete
+with product names, descriptions, images, categories, etc.
+
+To use Barcode Lookup to scan and create products in Barcode, go to :menuselection:`Inventory -->
+Configuration --> Settings`, scroll down to the :guilabel:`Barcode` section, and enable
+:guilabel:`Stock Barcode Database`.
+
+.. note::
+   If your database is hosted on **Odoo.sh** or **on-premise**, you must also :ref:`configure
+   an API key <barcodelookup/configuration>`.
+   If your database is hosted on **Odoo Online**, you can use Barcode Lookup without further
+   configuration.
