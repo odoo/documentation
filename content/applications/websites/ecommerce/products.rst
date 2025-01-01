@@ -36,6 +36,10 @@ page. When you :guilabel:`Save`, the product page is automatically published.
      :guilabel:`Go to Website` smart button to access the product page, then toggle the switch from
      :guilabel:`Unpublished` to :guilabel:`Published`.
 
+.. seealso::
+   :doc:`Create new products using the Barcode Lookup database
+   </applications/general/integrations/barcodelookup>`.
+
 .. _ecommerce/products/import-products:
 
 Import products
