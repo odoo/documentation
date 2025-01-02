@@ -284,10 +284,10 @@ Transfer goods
 ~~~~~~~~~~~~~~
 
 *Transfers* are warehouse operations that involve the movement of goods. Examples of transfers
-include
-:doc:`deliveries and receipts <../../shipping_receiving/daily_operations/receipts_delivery_one_step>`,
-as well as :doc:`internal transfers <../../warehouses_storage/replenishment/resupply_warehouses>`
-between warehouses.
+include :doc:`deliveries and receipts
+<../../shipping_receiving/daily_operations/receipts_delivery_one_step>`, as well as
+:doc:`internal transfers <../../warehouses_storage/replenishment/resupply_warehouses>` between
+warehouses.
 
 When creating a transfer for tracked products in the **Inventory** app, transfers modify the on-hand
 quantity at each location. For example, transferring five units from the internal location
