@@ -35,9 +35,6 @@ To do so, go to :menuselection:`Accounting --> Configuration --> Settings`. Unde
 - :guilabel:`Reminder`: define when Odoo should remind you to submit your tax return;
 - :guilabel:`Journal`: select the journal in which to record the tax return.
 
-.. image:: tax_returns/tax_return_periodicity.png
-   :align: center
-   :alt: Configure how often tax returns have to be made in Odoo Accounting
 
 .. note::
    This is usually configured during the :doc:`app's initial set up <../get_started>`.
@@ -53,16 +50,11 @@ You can see the :guilabel:`Tax Grids` by opening the :guilabel:`Journal Items` t
 invoice and bill.
 
 .. image:: tax_returns/tax_return_grids.png
-   :align: center
    :alt: see which tax grids are used to record transactions in Odoo Accounting
 
 To configure your tax grids, go to :menuselection:`Accounting --> Configuration --> Taxes`,
 and open the tax you want to modify. There, you can edit your tax settings, along with the tax
-grids that are used to record invoices or credit notes.
-
-.. image:: tax_returns/tax_return_taxes.png
-   :align: center
-   :alt: Configure taxes and their tax grids in Odoo Accounting
+grids that are used to record invoices or refunds.
 
 .. note::
    Taxes and reports are usually already pre-configured in Odoo: a :ref:`fiscal localization package
@@ -76,40 +68,41 @@ Close a tax period
 
 .. _tax-returns/lock-date:
 
-Tax Lock Date
+Tax lock date
 -------------
 
-Any new transaction whose accounting date prior to the :guilabel:`Tax Lock Date` has its tax values
-moved to the next open tax period. This is useful to make sure that no change can be made to a
-report once its period is closed.
+Any new transaction whose accounting date prior to the :guilabel:`Lock Tax Return` date has its tax
+values moved to the next open tax period. This is useful to make sure that no change can be made to
+a report once its period is closed.
 
 Therefore, we recommend locking your tax date before working on your
 :guilabel:`Closing Journal Entry`.
 This way, other users cannot modify or add transactions that would have an impact on the
 :guilabel:`Closing Journal Entry`, which can help you avoid some tax declaration errors.
 
-To check the current :guilabel:`Tax Lock Date`, or to edit it, go to
-:menuselection:`Accounting --> Accounting --> Actions: Lock Dates`.
-
-.. image:: tax_returns/tax_return_lock.png
-   :align: center
-   :alt: Lock your tax for a specific period in Odoo Accounting
+To check the current :guilabel:`Lock Tax Return` date, or to edit it, go to
+:menuselection:`Accounting --> Accounting --> Lock Dates`.
 
 .. _tax-returns/report:
 
-Tax Report
+Tax return
 ----------
 
 Once all the transactions involving taxes have been posted for the period you want to report, open
-your :guilabel:`Tax Report` by going to :menuselection:`Accounting --> Reporting -->
-Audit Reports: Tax Report`. Make sure to select the right period you want to declare by using the
-date filter, this way you can have an overview of your tax report. From this view, you can easily
-access different formats of your tax report, such as `PDF` and XLSX. These include all the values to
-report to the tax authorities, along with the amount you have to pay or be refunded.
+the :guilabel:`Tax Return` report by going to :menuselection:`Accounting --> Reporting --> Tax
+Return`. Select the period you want to declare using the date filter to have an overview of the tax
+return. Then, click :guilabel:`Closing Entry` to create a tax closing journal entry. Odoo
+automatically proposes the details of the journal entry. Make any necessary changes and click
+:guilabel:`Post`.
 
-.. image:: tax_returns/tax_return_report.png
-   :align: center
-   :alt: download the PDF with your Tax Report in Odoo Accounting
+From the report, click :guilabel:`PDF` to download a PDF of the tax return. Alternatively, click the
+:icon:`fa-cog` (:guilabel:`gear`) icon, then click :guilabel:`Download Excel` to download an XLSX of
+the tax return. To save the report to the Documents app, click the :icon:`fa-cog` (:guilabel:`gear`)
+icon, then click :guilabel:`Copy to Documents`. Select the format to :guilabel:`Export to`, the
+:guilabel:`Documents Name`, the :guilabel:`Folder` to store it in, and add any :guilabel:`Tags`.
+
+The report includes all the values to report to the tax authorities, along with the amount to be
+paid or refunded.
 
 .. note::
    If you forgot to lock your tax date before clicking on :guilabel:`Closing Journal Entry`, then
