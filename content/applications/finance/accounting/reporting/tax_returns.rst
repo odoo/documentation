@@ -101,14 +101,13 @@ Tax Report
 ----------
 
 Once all the transactions involving taxes have been posted for the period you want to report, open
-your :guilabel:`Tax Report` by going to :menuselection:`Accounting --> Reporting -->
-Audit Reports: Tax Report`. Make sure to select the right period you want to declare by using the
-date filter, this way you can have an overview of your tax report. From this view, you can easily
-access different formats of your tax report, such as `PDF` and XLSX. These include all the values to
-report to the tax authorities, along with the amount you have to pay or be refunded.
+the :guilabel:`Tax Report` by going to :menuselection:`Accounting --> Reporting --> Tax Report`.
+Select the period you want to declare using the date filter to have an overview of the tax report.
+From the report, click :guilabel:`PDF` or :guilabel:`XLSX` to download the desired format of the tax
+report, or click :guilabel:`Save` to save the report to the Documents app. The report includes all
+the values to report to the tax authorities, along with the amount to be paid or refunded.
 
 .. image:: tax_returns/tax_return_report.png
-   :align: center
    :alt: download the PDF with your Tax Report in Odoo Accounting
 
 .. note::
