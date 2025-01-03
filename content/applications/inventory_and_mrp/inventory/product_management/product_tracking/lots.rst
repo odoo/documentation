@@ -339,6 +339,35 @@ Choose :guilabel:`Use Existing ones` if only existing lot numbers can be selecte
 
 .. _inventory/product_management/lot-traceability:
 
+Lots on delivery slips
+======================
+
+When selling products tracked using lots, it is possible to include those lot numbers on the
+delivery slips included in packages delivered to customers. This can be helpful to customers in
+cases where they need the lot number to file an RMA or repair request, or to register the product
+for any reason.
+
+To include lot numbers on delivery slips, open the :menuselection:`Inventory` app, and navigate to
+:menuselection:`Configuration -> Settings`. Scroll down to the :guilabel:`Traceability` section,
+tick the checkbox next to :guilabel:`Display Lots & Serial Numbers on Delivery Slips` and click
+:guilabel:`Save`.
+
+After enabling the :guilabel:`Display Lots & Serial Numbers on Delivery Slips` setting, lot numbers
+automatically appear on delivery slips for every product tracked using lot numbers.
+
+To view a delivery slip, navigate to the :menuselection:`Inventory` app, click on the
+:guilabel:`Delivery Orders` card, and select a delivery order. Click :guilabel:`Validate` to confirm
+the delivery and add product information to the delivery slip.
+
+At the top of the order's form, click the :icon:`fa-cog` :guilabel:`(Actions)` button, and select
+:guilabel:`Print -> Delivery Slip`. The delivery slip is then downloaded. Open the delivery slip
+using the device's browser or file manager. Lot numbers are listed next to their respective products
+in :guilabel:`Lot/Serial Number` column of the order lines section.
+
+.. image:: lots/delivery-slip.png
+   :align: center
+   :alt: The order lines section of a delivery slip, showing a product and its serial number.
+
 Traceability
 ============
 
