@@ -24,5 +24,5 @@ products and increase your average cart sizes.
    :titlesonly:
 
    ecommerce/products
-   ecommerce/checkout_payment_shipping
+   ecommerce/checkout_payment_delivery
    ecommerce/ecommerce_management
