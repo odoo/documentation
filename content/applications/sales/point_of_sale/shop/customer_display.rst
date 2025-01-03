@@ -31,8 +31,8 @@ Connect a second screen to your POS and :ref:`open a POS session <pos/session-st
 
 .. _customer_display/iot:
 
-IoT box
--------
+IoT system
+----------
 
 Connect an IoT box to your database and the second screen to the IoT box. Then, go to
 :menuselection:`Point of Sale --> Configuration --> Settings`, scroll down to the
@@ -46,4 +46,4 @@ monitor in the :guilabel:`Customer Display` field.
    Both devices need to be connected to the same local network.
 
 .. seealso::
-   :doc:`../../../general/iot/config/pos`
+   :doc:`../configuration/pos_iot`
