@@ -13,8 +13,8 @@ From there, customers can access their :guilabel:`quotations`, :guilabel:`orders
    :alt: Customer account log-in
 
 .. note::
-   Customers can only have an account if the :ref:`sign in/up at checkout <checkout-sign>` option
-   allows for accounts creation.
+   Customers can only have an account if the
+   :ref:`sign in/up at checkout <ecommerce/checkout/policy>` option allows for accounts creation.
 
 .. tip::
    Similarly to the rest of the website, the customer account page can be customized with **content

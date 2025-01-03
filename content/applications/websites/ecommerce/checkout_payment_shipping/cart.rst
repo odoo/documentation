@@ -41,7 +41,7 @@ of your choice.
 
 .. note::
    Hiding the :guilabel:`Add to Cart` button is often used by B2B eCommerces that need to restrict
-   purchases only to :ref:`customers with an account <checkout-sign>`, but still want to
+   purchases only to :ref:`customers with an account <ecommerce/checkout/policy>`, but still want to
    display an online product catalog for those without.
 
 To do so, go to :menuselection:`Website --> Configuration --> Settings --> Shop - Products` and tick
