@@ -6,17 +6,17 @@
 # Translators:
 # Martin Trigaux, 2023
 # Daye Jeong, 2024
-# Wil Odoo, 2024
-# Sarah Park, 2024
+# Sarah Park, 2025
+# Wil Odoo, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-02 12:38+0000\n"
+"POT-Creation-Date: 2024-12-30 16:06+0000\n"
 "PO-Revision-Date: 2023-11-08 08:57+0000\n"
-"Last-Translator: Sarah Park, 2024\n"
+"Last-Translator: Wil Odoo, 2025\n"
 "Language-Team: Korean (https://app.transifex.com/odoo/teams/41243/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -856,7 +856,6 @@ msgid ":doc:`/applications/sales/sales/products_prices/ewallets_giftcards`"
 msgstr ":doc:`/applications/sales/sales/products_prices/ewallets_giftcards`"
 
 #: ../../content/applications/websites/ecommerce/checkout_payment_shipping/payments.rst:11
-#: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:12
 msgid ":doc:`../checkout_payment_shipping/checkout`"
 msgstr ":doc:`../checkout_payment_shipping/checkout`"
 
@@ -942,151 +941,187 @@ msgid "Enter gift card code to process checkout"
 msgstr "결제하려면 기프트 카드 코드를 입력하세요."
 
 #: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:3
-msgid "Shipping methods"
-msgstr "배송 방법"
+msgid "Shipping"
+msgstr "배송"
 
 #: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:5
 msgid ""
-"Depending on your shipping strategy, you have the choice to either use your "
-":ref:`own shipping methods <ecommerce-own-shipping>`, or use an integration "
-"with an :ref:`existing shipping provider <ecommerce-shipping-providers>`."
+"Odoo eCommerce allows you to configure various shipping methods, enabling "
+"customers to choose their preferred option at checkout. These methods "
+"include :ref:`external providers <ecommerce/shipping/external-provider>`, "
+":ref:`custom options <ecommerce/shipping/custom-method>` such as flat-rate "
+"or free shipping, local carriers via :doc:`Sendcloud "
+"<../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping>`"
+" or :ref:`Based on Rules <inventory/shipping/rules>`, and :ref:`in-store "
+"pickup <ecommerce/shipping/instore-pickup>`."
 msgstr ""
-"배송 전략에 따라 :ref:`자체 배송 방법 <ecommerce-own-shipping>`을 사용하거나 :ref:`기존 배송 업체 "
-"<ecommerce-shipping-providers>`와의 통합을 사용할 수 있습니다."
 
-#: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:15
-msgid "Own shipping methods"
-msgstr "자체 배송 방법"
+#: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:16
+msgid "External provider integration"
+msgstr ""
 
-#: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:17
+#: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:18
 msgid ""
-"You can create your own custom shipping methods and define rules to compute "
-"shipping costs. To do so, go to :menuselection:`Website --> Configuration "
-"--> Shipping Methods`, and either select an **existing** shipping method, or"
-" :guilabel:`Create` one. When creating a shipping method, you can choose "
-"between :ref:`Fixed Price <inventory/shipping/fixed>`, :ref:`Based on Rules "
-"<inventory/shipping/rules>`, and :guilabel:`Pickup in store`."
+"To handle product delivery, you can connect your database to :doc:`third-"
+"party shipping carriers "
+"<../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper>`"
+" like :doc:`FedEx "
+"<../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex>`,"
+" :doc:`UPS "
+"<../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials>`,"
+" or :doc:`DHL "
+"<../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials>`."
+" A shipping connector links to these providers, automating :doc:`tracking "
+"labels "
+"<../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels>`"
+" and shipping processes."
 msgstr ""
-"사용자 지정으로 배송 방법을 생성하고 배송비 계산 규칙을 지정할 수 있습니다. 그러려면 :menuselection:`웹사이트 --> 환경"
-" 설정 --> 배송 방법` 으로 이동하여 **기존** 배송 방법을 선택하거나 :guilabel:`만들기` 를 클릭합니다. 배송 방법을 "
-"선택할 때 :ref:`고정 가격 <inventory/shipping/fixed>`, :ref:`규칙 기반 "
-"<inventory/shipping/rules>` 또는 :guilabel:`매장에서 픽업` 중에서 선택할 수 있습니다."
 
-#: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:24
-msgid "Pickup in store"
-msgstr "현장 수령"
-
-#: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:26
+#: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:27
 msgid ""
-":guilabel:`Pickup in store` must first be **enabled** in the settings "
-"(:menuselection:`Website --> Configuration --> Settings --> Shipping "
-"section)` by checking :guilabel:`On Site Payments & Picking`. Once enabled, "
-"you can select and :guilabel:`Customize Pickup Sites`. :guilabel:`Picking "
-"sites` can be made **website-specific**, but are by default available for "
-"*all* websites."
+"To enable a third-party shipping provider, go to :menuselection:`Website -->"
+" Configuration --> Settings`, scroll to the :guilabel:`Shipping` section, "
+"select the desired shipping provider(s), and :guilabel:`Save`."
 msgstr ""
-":guilabel:`매장에서 픽업`을 사용하려면 먼저 설정(:menuselection:`웹사이트 --> 환경설정 --> 설정 --> "
-"배송)`에서 :guilabel:`현장 결제 및 픽업`을 체크하여 **활성화**해야 합니다. 활성화되면 :guilabel:`픽업 지점 "
-"사용자 지정`을 선택합니다. :guilabel:`픽업 지점`은 웹사이트별로 설정할 수도 있지만, 기본적으로 *모든* 웹사이트에 사용 "
-"가능합니다."
 
-#: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:32
+#: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:31
 msgid ""
-":doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration`"
+"Go to :menuselection:`Website --> Configuration --> Shipping Methods` and "
+"select the shipping method in the list to :ref:`configure it "
+"<inventory/shipping_receiving/configure-delivery-method>`."
 msgstr ""
-":doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration`"
-
-#: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:33
-#: ../../content/applications/websites/ecommerce/ecommerce_management/order_handling.rst:83
-msgid ""
-":doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing`"
-msgstr ""
-":doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing`"
-
-#: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:34
-#: ../../content/applications/websites/ecommerce/ecommerce_management/order_handling.rst:85
-msgid ""
-":doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack`"
-msgstr ""
-":doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack`"
 
 #: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:35
 msgid ""
-":doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/cancel`"
+":doc:`Third-party shipping carriers "
+"<../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper>`"
 msgstr ""
-":doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/cancel`"
 
-#: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:40
-msgid "Shipping providers"
-msgstr "배송업체"
-
-#: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:42
+#: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:39
 msgid ""
-"Another solution is to use one of the integrations with an existing shipping"
-" provider. The advantage of using an integration is that delivery costs are "
-"automatically computed based on each order as well as generating shipping "
-"labels."
+"The field used to define additional fees **must** be filled **in your third-"
+"party shipping provider account**, even if you do not plan to charge "
+"customers any additional fee. If you do not want to apply a fee, enter `0`. "
+"If the field is left empty, the delivery price cannot be calculated, and an "
+"error message prompts the customer to select an alternative shipping method."
 msgstr ""
-"또 다른 방법은 기존 배송업체와의 통합 서비스 중 하나를 활용하는 것입니다. 통합 기능을 사용하면 각 주문에 대한 배송비를 자동으로 "
-"계산하고 배송 라벨을 생성하여 관련 프로세스를 간소화할 수 있습니다."
 
-#: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:49
-msgid ""
-":doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper`"
+#: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:45
+msgid "Margin on delivery rate"
 msgstr ""
-":doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper`"
 
-#: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:50
+#: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:47
 msgid ""
-":doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials`"
+"To add an additional fee to the base shipping rate (e.g., to cover extra "
+"costs), log into your carrier account and set the desired fee in the related"
+" field. The shipping connector retrieves this fee and includes it in the "
+"final price at checkout. Contact your carrier for further assistance with "
+"this configuration."
 msgstr ""
-":doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials`"
-
-#: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:51
-msgid ""
-":doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials`"
-msgstr ""
-":doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials`"
 
 #: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:52
-#: ../../content/applications/websites/ecommerce/ecommerce_management/order_handling.rst:84
 msgid ""
-":doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels`"
+"Alternatively, enter `0` in your third-party shipping provider account, then"
+" set the fee in Odoo. To do so, access the desired :ref:`shipping method's "
+"form <inventory/shipping_receiving/configure-delivery-method>` and enter the"
+" fee in the :guilabel:`Margin on Rate` field to add a percentage to the "
+"shipping costs and/or the :guilabel:`Additional margin` field to add a fixed"
+" amount."
 msgstr ""
-":doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels`"
 
-#: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:55
-#: ../../content/applications/websites/ecommerce/products.rst:341
-msgid "Website availability"
-msgstr "웹사이트 가용성"
-
-#: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:57
+#: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:59
 msgid ""
-"Shipping methods can be made available on **specific** websites *only*, if "
-"desired. To do so, go to :menuselection:`Website --> Configuration --> "
-"Settings --> Shipping Methods`, and select the desired **shipping method**. "
-"In the :guilabel:`Website` field, set the website you want the shipping "
-"method to be restrained to. Leave the field **empty** for the method to be "
-"available on *all* websites."
+"The field used to define additional fees cannot be left empty in your third-"
+"party shipping provider account."
 msgstr ""
-"필요한 경우 **특정** *웹사이트에서만* 배송 방법을 사용할 수 있도록 설정할 수 있습니다. 먼저, "
-":menuselection:`웹사이트 --> 환경설정 --> 설정 --> 배송 방법`으로 이동하여 원하는 **배송 방법**을 선택합니다."
-" 그리고 :guilabel:`웹사이트` 필드에서 배송 방법을 제한할 웹사이트를 입력합니다. *모든* 웹사이트에서 해당 방법을 사용하려면 "
-"필드를 *공백*으로 남겨둡니다."
-
-#: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:63
-msgid "Delivery method at checkout"
-msgstr "결제 시 배송 방법"
 
 #: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:65
-msgid ""
-"Customers can choose the shipping method at the end of the checkout process,"
-" at the :guilabel:`Confirm Order` step."
-msgstr "고객은 결제 과정의 마지막 단계인 :guilabel:`주문 확인` 단계에서 배송 방법을 선택할 수 있습니다."
+msgid "Custom shipping method"
+msgstr ""
 
-#: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst-1
-msgid "Delivery method choice at checkout"
-msgstr "결제 시 배송 방법 선택"
+#: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:67
+msgid "Custom shipping methods must be created, for example:"
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:69
+msgid ""
+"to integrate shipping carriers through :doc:`Sendcloud "
+"<../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping>`;"
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:71
+msgid ""
+"to configure specific rules (e.g., to offer free shipping for orders above a"
+" specific amount) for a specific provider;"
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:73
+msgid ""
+"to configure :ref:`Fixed Price <inventory/shipping/fixed>` shipping or "
+"shipping :ref:`Based on Rules <inventory/shipping/rules>`."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:76
+msgid ""
+"To create a custom shipping method, go to :menuselection:`Website --> "
+"Configuration --> Shipping Methods`, click :guilabel:`New` and fill in the "
+":ref:`fields <inventory/shipping_receiving/shipping-methods-details>`."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:80
+msgid ""
+"In the :guilabel:`Provider` field, select :ref:`Based on Rules "
+"<inventory/shipping/rules>`, :ref:`Fixed Price <inventory/shipping/fixed>`, "
+"or :ref:`Pickup in store <inventory/shipping/pickup>` if the shiping method "
+"does not involve any specific provider."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:85
+msgid ""
+"Upon :ref:`configuring <inventory/shipping_receiving/configure-delivery-"
+"method>` a shipping method, you can:"
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:88
+msgid ""
+"restrict it :doc:`to a specific website "
+"<../../website/configuration/multi_website>` by selecting it in "
+":guilabel:`Website` field;"
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:90
+msgid ""
+"use the :guilabel:`Destination availability` tab to filter the delivery "
+"carriers displayed based on the customer's area;"
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:92
+msgid ""
+"click the :guilabel:`Test Environment` smart button to switch to the "
+":guilabel:`Production Environment`, then click :guilabel:`Unpublished` to "
+":guilabel:`Publish` the shipping method and make it available to website "
+"visitors."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:99
+msgid "In-store pickup"
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:101
+msgid ""
+"To allow customers to reserve products online and pay for/collect them in "
+"person at the store, go to :menuselection:`Website --> Configuration --> "
+"Settings`, scroll to the :guilabel:`Shipping` section, enable :guilabel:`On "
+"Site Payments & Picking`, and :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/websites/ecommerce/checkout_payment_shipping/shipping.rst:105
+msgid ""
+"Then, click :guilabel:`Customize Pickup Sites`, select the shipping method "
+"or click :guilabel:`New` to create a new one and :ref:`configure "
+"<inventory/shipping_receiving/configure-delivery-method>` the fields. Make "
+"sure the :guilabel:`Provider` field is set to :guilabel:`Pickup in store`."
+msgstr ""
 
 #: ../../content/applications/websites/ecommerce/ecommerce_management.rst:5
 msgid "eCommerce management"
@@ -1537,6 +1572,24 @@ msgstr ""
 "고객이 매장에서 주문을 수령하거나 계좌 이체를 통해 결제할 수 있는 경우, 견적은 확정되지 **않으며** 재고는 자동으로 예약되지 "
 "**않습니다**. 재고가 있는 제품을 예약하려면 주문을 수동으로 확인해야 합니다."
 
+#: ../../content/applications/websites/ecommerce/ecommerce_management/order_handling.rst:83
+msgid ""
+":doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing`"
+msgstr ""
+":doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing`"
+
+#: ../../content/applications/websites/ecommerce/ecommerce_management/order_handling.rst:84
+msgid ""
+":doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels`"
+msgstr ""
+":doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels`"
+
+#: ../../content/applications/websites/ecommerce/ecommerce_management/order_handling.rst:85
+msgid ""
+":doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack`"
+msgstr ""
+":doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/multipack`"
+
 #: ../../content/applications/websites/ecommerce/ecommerce_management/order_handling.rst:88
 msgid "Returns and refunds"
 msgstr "반품 및 환불"
@@ -1751,23 +1804,24 @@ msgstr ""
 
 #: ../../content/applications/websites/ecommerce/products.rst:49
 msgid "To publish **large batches** of products, follow these steps:"
-msgstr ""
+msgstr "**대량 일괄** 품목을 게시하려면 다음 단계에 따라 진행하세요."
 
 #: ../../content/applications/websites/ecommerce/products.rst:51
 msgid "Go to :menuselection:`Website --> eCommerce --> Products`."
-msgstr ""
+msgstr ":menuselection:`웹사이트 --> 이커머스 --> 품목` 으로 이동합니다."
 
 #: ../../content/applications/websites/ecommerce/products.rst:52
 msgid ""
 "Remove the :guilabel:`Published` filter and switch to the :guilabel:`List` "
 "view."
-msgstr ""
+msgstr ":guilabel:`게시됨` 필터를 제거하고 :guilabel:`목록` 보기로 전환합니다."
 
 #: ../../content/applications/websites/ecommerce/products.rst:53
 msgid ""
 "Click the :icon:`fa-sliders` (:guilabel:`dropdown toggle`) icon and enable "
 ":guilabel:`Is published`."
 msgstr ""
+":icon:`fa-sliders` (:guilabel:`드롭다운 토글`) 아이콘을 클릭하고 :guilabel:`게시됨` 을 활성화합니다."
 
 #: ../../content/applications/websites/ecommerce/products.rst:55
 msgid ""
@@ -1777,7 +1831,7 @@ msgstr ""
 
 #: ../../content/applications/websites/ecommerce/products.rst:57
 msgid "Select the products to publish by ticking their box."
-msgstr ""
+msgstr "게시할 품목을 선택하려면 확인란에 표시하세요."
 
 #: ../../content/applications/websites/ecommerce/products.rst:58
 msgid ""
@@ -1816,6 +1870,8 @@ msgid ""
 ":guilabel:`Style`: Select :guilabel:`Default`, :guilabel:`Cards`, "
 ":guilabel:`Thumbnails`, or :guilabel:`Grid`."
 msgstr ""
+":guilabel:`스타일`: :guilabel:`기본값`, :guilabel:`카드`, :guilabel:`썸네일` 또는 "
+":guilabel:`그리드` 를 선택합니다."
 
 #: ../../content/applications/websites/ecommerce/products.rst:76
 msgid ""
@@ -2110,7 +2166,7 @@ msgstr ""
 
 #: ../../content/applications/websites/ecommerce/products.rst:215
 msgid "Enabled functions apply to all product pages."
-msgstr ""
+msgstr "기능이 활성화되면 모든 품목 페이지에 적용됩니다."
 
 #: ../../content/applications/websites/ecommerce/products.rst:216
 msgid ""
@@ -2158,6 +2214,7 @@ msgid ""
 ":guilabel:`Thumbnails`: Align thumbnails on the :icon:`fa-long-arrow-left` "
 "(:guilabel:`Left`) or"
 msgstr ""
+":guilabel:`썸네일`: 썸네일을 :icon:`fa-long-arrow-left`(:guilabel:`왼쪽`)에 정렬하거나"
 
 #: ../../content/applications/websites/ecommerce/products.rst:233
 msgid "at the :icon:`fa-long-arrow-down` (:guilabel:`Bottom`)."
@@ -2167,7 +2224,7 @@ msgstr ":icon:`fa-long-arrow-down`(:guilabel:`하단`)에 있습니다."
 msgid ""
 ":guilabel:`Main Image`: Click :guilabel:`Replace` to change the product's "
 "main image."
-msgstr ""
+msgstr ":guilabel:`기본 이미지`: :guilabel:`바꾸기` 를 클릭하면 품목의 기본 이미지가 변경됩니다."
 
 #: ../../content/applications/websites/ecommerce/products.rst:235
 msgid ""
@@ -2195,7 +2252,7 @@ msgstr ""
 
 #: ../../content/applications/websites/ecommerce/products.rst:250
 msgid "To configure product variants for a product:"
-msgstr ""
+msgstr "품목에 대해서 품목 세부 옵션을 설정하려면:"
 
 #: ../../content/applications/websites/ecommerce/products.rst:252
 #: ../../content/applications/websites/website/configuration/multi_website.rst:26
@@ -2252,7 +2309,7 @@ msgstr ""
 
 #: ../../content/applications/websites/ecommerce/products.rst:273
 msgid "Two attribute values are needed to make the filter visible."
-msgstr ""
+msgstr "필터를 표시하려면 두 가지 속성 값이 필요합니다."
 
 #: ../../content/applications/websites/ecommerce/products.rst:276
 msgid ""
@@ -2315,7 +2372,7 @@ msgstr ""
 
 #: ../../content/applications/websites/ecommerce/products.rst-1
 msgid "digital file available before payment on the  product page"
-msgstr ""
+msgstr "결제 전에 디지털 파일을 품목 페이지에서 사용할 수 있습니다."
 
 #: ../../content/applications/websites/ecommerce/products.rst:311
 msgid "Digital files available after payment"
@@ -2377,6 +2434,10 @@ msgid ""
 "Configuration --> Settings` and go to the :guilabel:`Website Info` section."
 msgstr ""
 
+#: ../../content/applications/websites/ecommerce/products.rst:341
+msgid "Website availability"
+msgstr "웹사이트 가용성"
+
 #: ../../content/applications/websites/ecommerce/products.rst:343
 msgid ""
 "To set the product's website availability, navigate to the :ref:`product "
@@ -2427,7 +2488,7 @@ msgstr "재고 관리"
 #: ../../content/applications/websites/ecommerce/products.rst:369
 msgid ""
 "In the :guilabel:`Inventory Defaults` sub-section, fill in those fields:"
-msgstr ""
+msgstr ":guilabel:`재고 기본값` 하위 섹션에서 다음 필드에 입력합니다."
 
 #: ../../content/applications/websites/ecommerce/products.rst:371
 msgid ""
@@ -2921,6 +2982,8 @@ msgid ""
 " the products you wish to feature in the :guilabel:`Optional Products` "
 "field."
 msgstr ""
+"**선택 품목** 을 활성화하려면 :menuselection:`웹사이트 --> 이커머스 --> 품목` 으로 이동하여 품목을 선택한 후, "
+":guilabel:`판매` 탭으로 이동하여 :guilabel:`선택 품목` 필드에 해당하는 품목을 입력합니다."
 
 #: ../../content/applications/websites/ecommerce/products/cross_upselling.rst-1
 msgid "Optional products cross-selling"
@@ -2960,6 +3023,8 @@ msgid ""
 "expensive variant or product than their initial choice by presenting "
 "appealing alternatives."
 msgstr ""
+"품목 페이지 하단에 **대체품** 을 표시하는 업셀링 기법을 통해, 매력적인 대안을 제시함으로써 고객이 처음에 선택한 품목보다 더 비싼 "
+"세부 옵션 혹은 다른 품목을 고려도록 유도할 수 있습니다."
 
 #: ../../content/applications/websites/ecommerce/products/cross_upselling.rst-1
 msgid "Alternative products on the product page"
@@ -2972,6 +3037,8 @@ msgid ""
 ":guilabel:`Sales` tab. In the :guilabel:`Alternative Products` field, add "
 "the products you want to feature."
 msgstr ""
+"대체품 기능을 활성화하려면 :menuselection:`웹사이트 --> 전자상거래 --> 품목` 으로 이동하여 원하는 품목을 선택한 후 "
+":guilabel:`판매` 탭으로 이동합니다. :guilabel:`대체품` 필드에서 추천하려는 품목을 추가합니다."
 
 #: ../../content/applications/websites/ecommerce/products/cross_upselling.rst:64
 msgid ""
@@ -2987,6 +3054,9 @@ msgid ""
 "section and modify the settings as needed to tailor the display to your "
 "preferences."
 msgstr ""
+"설정을 조정하려면 :guilabel:`편집` 을 클릭한 후 관련 :doc:`빌딩 블록 "
+"<../../website/web_design/building_blocks>` 을 선택합니다. :guilabel:`사용자 지정` 탭에서 "
+":guilabel:`대체품` 섹션으로 스크롤을 이동하여 필요에 따라 설정을 수정하고 원하는 대로 표시 내용을 조정합니다."
 
 #: ../../content/applications/websites/ecommerce/products/price_management.rst:3
 msgid "Price management"
@@ -7920,7 +7990,7 @@ msgid ""
 msgstr "본인의 도메인 주소를 Odoo 데이터베이스 주소로 전달하려면 CNAME 레코드를 생성해야 합니다."
 
 #: ../../content/applications/websites/website/configuration/domain_names.rst:157
-#: ../../content/applications/websites/website/configuration/domain_names.rst:212
+#: ../../content/applications/websites/website/configuration/domain_names.rst:273
 msgid "Odoo Online"
 msgstr "Odoo 온라인"
 
@@ -7932,7 +8002,7 @@ msgstr ""
 "CNAME 레코드의 대상 주소는 레코드를 생성할 때 지정된 데이터베이스 주소가 됩니다 (예: `mycompany.odoo.com`)."
 
 #: ../../content/applications/websites/website/configuration/domain_names.rst:162
-#: ../../content/applications/websites/website/configuration/domain_names.rst:222
+#: ../../content/applications/websites/website/configuration/domain_names.rst:283
 msgid "Odoo.sh"
 msgstr "Odoo.sh"
 
@@ -7984,11 +8054,10 @@ msgstr ""
 
 #: ../../content/applications/websites/website/configuration/domain_names.rst:176
 msgid ""
-"`Cloudflare: Manage DNS records <https://support.cloudflare.com/hc/en-"
-"us/articles/360019093151>`_"
+"`Cloudflare: Manage DNS records "
+"<https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-"
+"records/>`_"
 msgstr ""
-"`Cloudflare: DNS 레코드 관리하기 <https://support.cloudflare.com/hc/en-"
-"us/articles/360019093151>`_"
 
 #: ../../content/applications/websites/website/configuration/domain_names.rst:180
 msgid ""
@@ -8023,11 +8092,166 @@ msgstr ""
 "그런 다음 리디렉션 (301 영구 또는 표시용 리디렉션) 항목을 생성하여 방문자를 'yourdomain.com' 에서 "
 "'wwww.yourdomain.com' 으로 리디렉션합니다."
 
+#: ../../content/applications/websites/website/configuration/domain_names.rst:194
+msgid "Using Cloudflare to secure and redirect a naked domain"
+msgstr ""
+
 #: ../../content/applications/websites/website/configuration/domain_names.rst:196
+msgid ""
+"To redirect a naked domain with a secure HTTPS connection, we recommend "
+"using Cloudflare, as most DNS hosting services do not offer an easy way to "
+"do so."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:199
+msgid ""
+"`Sign up and log in to Cloudflare <https://dash.cloudflare.com/sign-up>`_."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:200
+msgid ""
+"Enter your domain name on `Cloudflare's dashboard "
+"<https://dash.cloudflare.com/login>`_ and select :guilabel:`Quick scan for "
+"DNS records`."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:202
+msgid "Choose a plan (the free plan is sufficient)."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:203
+msgid ""
+"Follow Cloudflare's instructions and recommendations to complete the "
+"activation."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:204
+msgid ""
+"Add a CNAME record to redirect your naked domain (`yourdomain.com`) to the "
+"`www` subdomain (e.g., `www.yourdomain.com`) by clicking :guilabel:`DNS` in "
+"the navigation menu, then clicking the :guilabel:`Add record` button, and "
+"using the following configuration:"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:208
+#: ../../content/applications/websites/website/configuration/domain_names.rst:219
+msgid ":guilabel:`Type`: CNAME"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:209
+msgid ":guilabel:`Name`: `@` (or `yourdomain.com`)"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:210
+msgid ":guilabel:`Target`: e.g., `www.yourdomain.com`"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:211
+msgid ":guilabel:`Proxy status`: Proxied"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:0
+msgid ""
+"Adding a CNAME DNS record to Cloudflare to redirect a naked domain to a www "
+"subdomain"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:216
+msgid ""
+"Add another second CNAME record to redirect the `www` subdomain (e.g., "
+"`www.yourdomain.com`) to your database address (e.g., `mycompany.odoo.com`) "
+"using the following configuration:"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:220
+msgid ":guilabel:`Name`: e.g., `www.yourdomain.com`"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:221
+msgid ":guilabel:`Target`: e.g., `mycompany.odoo.com`"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:222
+msgid ":guilabel:`Proxy status`: DNS only"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:0
+msgid ""
+"Adding a CNAME DNS record to Cloudflare to redirect a www subdomain to an "
+"Odoo database"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:227
+msgid ""
+"Define a redirect rule to permanently redirect (301) your naked domain "
+"(e.g., `yourdomain.com`) to both `http://` and `https://` by going to "
+":menuselection:`Rules --> Redirect Rules --> Create rule`, and:"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:231
+msgid "Enter any :guilabel:`Rule name`."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:232
+msgid ""
+"Under the :guilabel:`If incoming requests match...` section, select "
+":guilabel:`Custom filter expression` and use the following configuration:"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:235
+msgid ":guilabel:`Field`: Hostname"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:236
+msgid ":guilabel:`Operator`: equals"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:237
+msgid ":guilabel:`Value`: e.g., `yourdomain.com`"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:239
+msgid ""
+"Under the :guilabel:`Then...` section, use the following configuration:"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:241
+msgid ":guilabel:`Type`: Dynamic"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:242
+msgid ""
+":guilabel:`Expression`: e.g., `concat(\"https://www.yourdomain.com/\", "
+"http.request.uri.path)`"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:243
+msgid ":guilabel:`Status code`: 301"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:244
+msgid ":guilabel:`Preserve query string`: enabled"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:0
+msgid ""
+"Defining a Cloudflare redirect rule to create a permanent redirect (301)"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:249
+msgid ""
+"Go to :guilabel:`SSL/TLS` and set the encryption mode to :guilabel:`Full`."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:0
+msgid "Setting the encryption mode to full on Cloudflare"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:257
 msgid "Map a domain name to an Odoo database"
 msgstr "도메인 주소를 Odoo 데이터베이스에 매핑하기"
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:199
+#: ../../content/applications/websites/website/configuration/domain_names.rst:260
 msgid ""
 "Ensure you have :ref:`added a CNAME record <domain-name/cname>` to your "
 "domain name's DNS **before** mapping your domain name to your Odoo database."
@@ -8035,7 +8259,7 @@ msgstr ""
 "도메인 주소를 Odoo 데이터베이스에 매핑하기 **전에** 도메인 주소의 DNS에 :ref:`CNAME 레코드를 추가 <domain-"
 "name/cname>` 했는지 확인합니다."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:202
+#: ../../content/applications/websites/website/configuration/domain_names.rst:263
 msgid ""
 "Failing to do so may prevent the validation of the :ref:`SSL certificate "
 "<domain-name/ssl>` and could result in a *certificate name mismatch* error. "
@@ -8046,7 +8270,7 @@ msgstr ""
 "불일치* 오류가 발생할 수 있습니다. 웹 브라우저에서는 *\"연결이 비공개로 설정되지 않았습니다\"* 와 같은 경고 메시지가 나타나게 "
 "됩니다."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:206
+#: ../../content/applications/websites/website/configuration/domain_names.rst:267
 msgid ""
 "If you encounter this error after mapping the domain name to your database, "
 "wait up to five days, as the validation may still happen. If not, you can "
@@ -8057,24 +8281,20 @@ msgstr ""
 "대기합니다. 그렇지 않은 경우 CNAME 레코드의 스크린샷을 첨부하여 `고객 지원 상담 "
 "<https://www.odoo.com/help>`_ 을 요청하도록 합니다."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:214
+#: ../../content/applications/websites/website/configuration/domain_names.rst:275
 msgid ""
 "Open the `database manager <https://www.odoo.com/my/databases>`_, click the "
 "gear icon (:guilabel:`⚙️`) next to the database name, and go to "
 ":menuselection:`Domain Names --> Use my own domain`. Then, enter the domain "
-"name (e.g., `yourdomain.com`), click :guilabel:`Verify` and :guilabel:`I "
-"confirm, it's done`."
+"name (e.g., `www.yourdomain.com`), click :guilabel:`Verify` and :guilabel:`I"
+" confirm, it's done`."
 msgstr ""
-"`데이터베이스 관리자 <https://www.odoo.com/my/databases>`_ 를 열고 데이터베이스 이름 옆에 있는 톱니바퀴 "
-"아이콘 (:guilabel:`⚙️`)을 클릭한 다음 :menuselection:`도메인 이름 --> 내 도메인 사용`으로 이동합니다. "
-"그런 다음 도메인 주소 (예: `yourdomain.com`)를 입력한 후 :guilabel:`확인` 및 :guilabel:`확인 및 "
-"완료` 를 클릭합니다."
 
 #: ../../content/applications/websites/website/configuration/domain_names.rst:0
 msgid "Mapping a domain name to an Odoo Online database"
 msgstr "도메인 주소를 Odoo 온라인 데이터베이스에 매핑하기"
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:224
+#: ../../content/applications/websites/website/configuration/domain_names.rst:285
 msgid ""
 "On Odoo.sh, go to :menuselection:`Branches --> select your branch --> "
 "Settings --> Custom domains`, type the domain name to add, then click "
@@ -8087,7 +8307,7 @@ msgstr ""
 msgid "Mapping a domain name to an Odoo.sh branch"
 msgstr "도메인 주소를 Odoo.sh 브랜치에 매핑하기"
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:231
+#: ../../content/applications/websites/website/configuration/domain_names.rst:292
 msgid ""
 ":ref:`Odoo.sh branches: settings tab <odoosh-gettingstarted-branches-tabs-"
 "settings>`"
@@ -8095,11 +8315,11 @@ msgstr ""
 ":ref:`Odoo.sh branches: settings tab <odoosh-gettingstarted-branches-tabs-"
 "settings>`"
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:236
+#: ../../content/applications/websites/website/configuration/domain_names.rst:297
 msgid "SSL encryption (HTTPS protocol)"
 msgstr "SSL 암호화 (HTTPS 프로토콜)"
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:238
+#: ../../content/applications/websites/website/configuration/domain_names.rst:299
 msgid ""
 "**SSL encryption** allows visitors to navigate a website through a secure "
 "connection, which appears as the *https://* protocol at the beginning of a "
@@ -8108,7 +8328,7 @@ msgstr ""
 "**SSL 암호화** 를 사용하면 방문자는 보안이 되지 않는 *http://* 프로토콜 대신, 웹 주소 시작 부분에 *https://* "
 "프로토콜로 표시되는 보안 연결을 통해 웹사이트를 탐색할 수 있습니다."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:242
+#: ../../content/applications/websites/website/configuration/domain_names.rst:303
 msgid ""
 "Odoo generates a separate SSL certificate for each domain :ref:`mapped to a "
 "database <domain-name/db-map>` using `Let's Encrypt's certificate authority "
@@ -8118,31 +8338,31 @@ msgstr ""
 "하며 `Let's Encrypt 인증 기관 및 ACME 프로토콜 <https://letsencrypt.org/how-it-"
 "works/>`_ 을 사용합니다."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:247
+#: ../../content/applications/websites/website/configuration/domain_names.rst:308
 msgid "Certificate generation may take up to 24 hours."
 msgstr "인증서 생성에는 최대 24시간까지 걸릴 수 있습니다."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:248
+#: ../../content/applications/websites/website/configuration/domain_names.rst:309
 msgid ""
 "Several attempts to validate your certificate are made for five days after "
 "you map your domain name to your database."
 msgstr "데이터베이스에 도메인 주소가 매핑되면 5일 동안 수 차례에 걸쳐 인증서 유효성 검사를 시도합니다."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:250
+#: ../../content/applications/websites/website/configuration/domain_names.rst:311
 msgid "If you use another service, you can keep using it or change to Odoo's."
 msgstr "다른 서비스를 사용 중인 경우에는 계속 사용하거나 Odoo로 변경할 수 있습니다."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:253
+#: ../../content/applications/websites/website/configuration/domain_names.rst:314
 msgid ""
 "No SSL certificate is generated for naked domains :dfn:`(domain names "
 "without any subdomains or prefixes)`."
 msgstr "네이키드 도메인인 :dfn:`(하위 도메인이나 접두사가 없는 도메인 주소)` 에 대해서는 SSL 인증서가 생성되지 않습니다."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:259
+#: ../../content/applications/websites/website/configuration/domain_names.rst:320
 msgid "Web base URL of a database"
 msgstr "데이터베이스의 웹 기본 URL"
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:262
+#: ../../content/applications/websites/website/configuration/domain_names.rst:323
 msgid ""
 "If the Website app is installed on your database, skip this section and "
 "continue from the :ref:`Map a domain name to a website <domain-name/website-"
@@ -8151,7 +8371,7 @@ msgstr ""
 "데이터베이스에 웹사이트 앱이 설치되어 있는 경우에는 이 섹션을 건너뛰고 :ref:`웹사이트에 도메인 주소 매핑하기 <domain-"
 "name/website-map>` 섹션부터 계속합니다."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:265
+#: ../../content/applications/websites/website/configuration/domain_names.rst:326
 msgid ""
 "The *web base URL* or root URL of a database affects your main website "
 "address and all the links sent to your customers (e.g., quotations, portal "
@@ -8160,7 +8380,7 @@ msgstr ""
 "데이터베이스의 *웹 기본 URL* 또는 루트 URL은 기본 웹사이트 주소와 고객에게 전송되는 모든 링크 (예: 견적서, 포털 링크 등)에"
 " 영향을 미칩니다."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:268
+#: ../../content/applications/websites/website/configuration/domain_names.rst:329
 msgid ""
 "To make your custom domain name the *web base URL* of your database, access "
 "your database using your custom domain name and log in as an administrator "
@@ -8170,7 +8390,7 @@ msgstr ""
 "사용자 지정 도메인 주소를 데이터베이스의 *웹 기본 URL* 로 만들려면, 사용자 지정 도메인 주소로 데이터베이스에 액세스하려 관리자 "
 ":dfn:`(관리자 아래의 설정 액세스 권한 그룹에 속한 사용자)` 로 로그인합니다"
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:273
+#: ../../content/applications/websites/website/configuration/domain_names.rst:334
 msgid ""
 "If you access your database with the original Odoo address (e.g., "
 "`mycompany.odoo.com`), the *web base URL* of your database will be updated "
@@ -8186,7 +8406,7 @@ msgstr ""
 "만들기` 를 선택하고 :guilabel:`키` 로 `web.base.url.freeze` 를 입력한 다음 :guilabel:`값` 으로 "
 "`예` 를 입력합니다."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:280
+#: ../../content/applications/websites/website/configuration/domain_names.rst:341
 msgid ""
 "You can also set the web base URL manually. To do so, activate the "
 ":ref:`developer mode <developer-mode>`, go to :menuselection:`Settings --> "
@@ -8200,35 +8420,35 @@ msgstr ""
 "경우 생성). 값에 웹사이트의 전체 주소를 입력합니다 (예: `https://www.yourdomain.com`). URL에는 프로토콜 "
 "`https://` (또는 `http://`) 이 포함되어 있어야 하며 슬래시 (`/`)로 끝나지 *않아야* 합니다."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:289
+#: ../../content/applications/websites/website/configuration/domain_names.rst:350
 msgid "Map a domain name to an Odoo website"
 msgstr "Odoo 웹사이트에 도메인 주소 매핑하기"
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:291
+#: ../../content/applications/websites/website/configuration/domain_names.rst:352
 msgid ""
 "Mapping your domain name to your website is different than mapping it to "
 "your database:"
 msgstr "도메인 주소를 웹사이트에 매핑하는 것은 데이터베이스에 매핑하는 것과는 다릅니다."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:293
+#: ../../content/applications/websites/website/configuration/domain_names.rst:354
 msgid ""
 "It defines your domain name as the main one for your website, helping search"
 " engines to index your website correctly."
 msgstr "도메인 주소가 웹사이트의 기본 주소로 지정되어 검색 엔진에서 웹사이트를 정확하게 색인화할 수 있게 됩니다."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:295
+#: ../../content/applications/websites/website/configuration/domain_names.rst:356
 msgid ""
 "It defines your domain name as the base URL for your database, including "
 "portal links sent by email to your customers."
 msgstr "고객에게 이메일로 전송되는 포털 링크를 포함하여, 도메인 주소를 데이터베이스 기본 URL로 지정합니다."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:297
+#: ../../content/applications/websites/website/configuration/domain_names.rst:358
 msgid ""
 "If you have multiple websites, it maps your domain name to the appropriate "
 "website."
 msgstr "웹사이트가 여러 개 있는 경우에는 도메인 주소를 알맞은 웹사이트에 매핑합니다."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:299
+#: ../../content/applications/websites/website/configuration/domain_names.rst:360
 msgid ""
 "Go to :menuselection:`Website --> Configuration --> Settings`. If you have "
 "multiple websites, select the one you want to configure. In the "
@@ -8239,7 +8459,7 @@ msgstr ""
 "웹사이트를 선택합니다. :guilabel:`도메인` 에 웹사이트 주소 (예: `https://www.yourdomain.com`)를 "
 "입력하고 :guilabel:`저장` 을 클릭합니다."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:304
+#: ../../content/applications/websites/website/configuration/domain_names.rst:365
 msgid ""
 "Mapping your domain name to your Odoo website prevents Google Search from "
 "indexing your original database address (e.g., `mycompany.odoo.com`)."
@@ -8247,7 +8467,7 @@ msgstr ""
 "도메인 주소를 Odoo 웹사이트에 매핑하면, 이전의 데이터베이스 주소 (예: `mycompany.odoo.com`)가 Google 검색에"
 " 색인화되는 것을 방지할 수 있습니다."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:307
+#: ../../content/applications/websites/website/configuration/domain_names.rst:368
 msgid ""
 "If both addresses are already indexed, it may take some time before the "
 "indexation of the second address is removed from Google Search. You can use "
@@ -8258,7 +8478,7 @@ msgstr ""
 "'Google 검색 콘솔 <https://search.google.com/search-console/welcome>`_ 을 활용하여 "
 "문제를 해결할 수 있습니다."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:312
+#: ../../content/applications/websites/website/configuration/domain_names.rst:373
 msgid ""
 "If you have multiple websites and companies on your database, make sure to "
 "select the right :guilabel:`Company` under :menuselection:`Website --> "
@@ -8965,7 +9185,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/configuration/spam_protection.rst:72
 #: ../../content/applications/websites/website/configuration/spam_protection.rst:128
-#: ../../content/applications/websites/website/configuration/translate.rst:60
+#: ../../content/applications/websites/website/configuration/translate.rst:61
 msgid "Click :guilabel:`Save`."
 msgstr ":guilabel:`저장`을 클릭합니다."
 
@@ -9172,26 +9392,20 @@ msgid ""
 "To allow translation of your website, you must first :doc:`install "
 "<../../../general/users/language>` the required languages and add them to "
 "your website. To do so, go to :menuselection:`Website --> Configuration --> "
-"Settings` and click :guilabel:`Install languages` in the :guilabel:`Website "
-"info` section. In the dialog box that opens, select the "
-":guilabel:`Languages` you want from the dropdown menu, tick the required "
-":guilabel:`Websites to translate`, and click :guilabel:`Add`."
+"Settings` and click :icon:`fa-arrow-right` :guilabel:`Install languages` in "
+"the :guilabel:`Website Info` section. In the dialog box that opens, select "
+"the :guilabel:`Languages` you want from the dropdown menu, tick the required"
+" :guilabel:`Websites to translate`, and click :guilabel:`Add`."
 msgstr ""
-"웹사이트 번역을 허용하려면 반드시 필요한 언어를 먼저 :doc:`설치 <../../../general/users/language>` 한 "
-"후 웹사이트에 추가해야 합니다. 진행하려면 :menuselection:`웹사이트 --> 환경 설정 --> 설정` 으로 이동하여 "
-":guilabel:`웹사이트 정보` 섹션에서 :guilabel:`언어 설치` 를 클릭합니다. 대화 상자가 열리면 드롭다운 메뉴에서 "
-":guilabel:`언어` 를 선택하고 :guilabel:`번역할 웹사이트` 에 표시한 다음 :guilabel:`추가` 를 클릭합니다."
 
-#: ../../content/applications/websites/website/configuration/translate.rst:22
+#: ../../content/applications/websites/website/configuration/translate.rst:23
 msgid ""
-"To edit your website's languages, go to :menuselection:`Website –> "
-"Configuration –> Settings` and add/remove the required languages in/from the"
-" :guilabel:`Languages` field in the :guilabel:`Website info` section."
+"To edit your website's languages, go to :menuselection:`Website -–> "
+"Configuration -–> Settings` and add/remove the required languages in/from "
+"the :guilabel:`Languages` field in the :guilabel:`Website info` section."
 msgstr ""
-"웹사이트 언어를 편집하려면 :menuselection:`웹사이트 –> 환경 설정 –> 설정` 으로 이동하여 :guilabel:`웹사이트 "
-"정보` 섹션의 :guilabel:`언어` 에서 필요한 언어를 추가/제거합니다."
 
-#: ../../content/applications/websites/website/configuration/translate.rst:27
+#: ../../content/applications/websites/website/configuration/translate.rst:28
 msgid ""
 "Alternatively, once the languages have been installed, you can add them from"
 " the :ref:`language selector <translate/language-selector>`. You might then "
@@ -9200,11 +9414,11 @@ msgstr ""
 "또는 언어가 설치되면 :ref:`언어 선택기 <translate/language-selector>` 에서 추가할 수 있습니다. 이후에 새"
 " 언어를 확인하려면 페이지 새로고침을 해야 합니다."
 
-#: ../../content/applications/websites/website/configuration/translate.rst:34
+#: ../../content/applications/websites/website/configuration/translate.rst:35
 msgid "Default language"
 msgstr "기본 언어"
 
-#: ../../content/applications/websites/website/configuration/translate.rst:36
+#: ../../content/applications/websites/website/configuration/translate.rst:37
 msgid ""
 "When multiple languages are available on your website, you can set a default"
 " language to be used if the visitor’s browser language is not available. To "
@@ -9215,17 +9429,17 @@ msgstr ""
 " 설정하려면 :menuselection:`웹사이트 –-> 환경 설정 ––> 설정` 으로 이동하여 :guilabel:`기본값` 에서 언어를"
 " 선택합니다."
 
-#: ../../content/applications/websites/website/configuration/translate.rst:41
+#: ../../content/applications/websites/website/configuration/translate.rst:42
 msgid ""
 "This field is only visible if multiple languages have been installed and "
 "added to your website."
 msgstr "이 항목은 웹사이트에 여러 가지 언어가 설치 및 추가된 경우에만 표시됩니다."
 
-#: ../../content/applications/websites/website/configuration/translate.rst:46
+#: ../../content/applications/websites/website/configuration/translate.rst:47
 msgid "Language selector"
 msgstr "언어 선택기"
 
-#: ../../content/applications/websites/website/configuration/translate.rst:48
+#: ../../content/applications/websites/website/configuration/translate.rst:49
 msgid ""
 "Your website’s visitors can switch languages using the language selector, "
 "available by default in the :guilabel:`Copyright` section at the bottom of "
@@ -9234,11 +9448,11 @@ msgstr ""
 "웹사이트 방문자는 페이지 하단의 :guilabel:`저작권` 섹션에서 기본 제공되는 언어 선택기를 사용하여 언어를 전환할 수 있습니다. "
 "언어 선택기 메뉴를 편집하려면 다음과 같이 진행합니다."
 
-#: ../../content/applications/websites/website/configuration/translate.rst:51
+#: ../../content/applications/websites/website/configuration/translate.rst:52
 msgid "Go to your website and click :guilabel:`Edit`;"
 msgstr "웹사이트로 이동하여 :guilabel:`편집` 을 클릭합니다."
 
-#: ../../content/applications/websites/website/configuration/translate.rst:52
+#: ../../content/applications/websites/website/configuration/translate.rst:53
 msgid ""
 "Click the language selector available in the :guilabel:`Copyright` block and"
 " go to the :guilabel:`Copyright` section of the website builder;"
@@ -9246,20 +9460,18 @@ msgstr ""
 "사용 가능한 언어 선택기를 :guilabel:`저작권` 블록에서 클릭한 후 웹사이트 빌더의 :guilabel:`저작권` 섹션으로 "
 "이동합니다."
 
-#: ../../content/applications/websites/website/configuration/translate.rst:54
+#: ../../content/applications/websites/website/configuration/translate.rst:55
 msgid ""
-"Set the :guilabel:`Language selector` field to either :guilabel:`Dropdown` "
+"Set the :guilabel:`Language Selector` field to either :guilabel:`Dropdown` "
 "or :guilabel:`Inline`. Click :guilabel:`None` if you do not want to display "
 "the  :guilabel:`Language selector`;"
 msgstr ""
-":guilabel:`언어 선택기` 를 :guilabel:`드롭다운` 또는 :guilabel:`인라인` 으로 설정합니다. "
-":guilabel:`언어 선택기` 를 표시하지 않으려면 :guilabel:`없음` 을 클릭합니다."
 
 #: ../../content/applications/websites/website/configuration/translate.rst:0
 msgid "Add a language selector menu."
 msgstr "언어 선택 메뉴를 추가합니다."
 
-#: ../../content/applications/websites/website/configuration/translate.rst:63
+#: ../../content/applications/websites/website/configuration/translate.rst:64
 msgid ""
 "You can also add the :guilabel:`Language Selector` to the :guilabel:`Header`"
 " of your page. To do so, click the :guilabel:`Header` block and go to the "
@@ -9268,11 +9480,11 @@ msgstr ""
 "페이지 :guilabel:`헤더` 에 :guilabel:`언어 선택기` 를 추가할 수도 있습니다. 추가하려면 :guilabel:`헤더` "
 "블록을 클릭하고 :guilabel:`내비게이션바` 섹션에 있는 :guilabel:`언어 선택기` 를 편집합니다."
 
-#: ../../content/applications/websites/website/configuration/translate.rst:70
+#: ../../content/applications/websites/website/configuration/translate.rst:71
 msgid "Translate your website"
 msgstr "웹사이트 번역하기"
 
-#: ../../content/applications/websites/website/configuration/translate.rst:72
+#: ../../content/applications/websites/website/configuration/translate.rst:73
 msgid ""
 "Select your desired language from the language selector to see your content "
 "in another language. Then, click the :guilabel:`Translate` button in the "
@@ -9282,7 +9494,7 @@ msgstr ""
 "다른 언어로 콘텐츠를 보려면 언어 선택기에서 언어를 선택합니다. 그런 다음 오른쪽 상단의 :guilabel:`번역` 버튼을 클릭하여 번역"
 " 모드를 수동으로 활성화하면 Odoo에서 자동 번역되지 않은 내용을 번역할 수 있습니다."
 
-#: ../../content/applications/websites/website/configuration/translate.rst:76
+#: ../../content/applications/websites/website/configuration/translate.rst:77
 msgid ""
 "Translated text strings are highlighted in green; text strings that were not"
 " translated automatically are highlighted in yellow."
@@ -9292,7 +9504,7 @@ msgstr "번역된 텍스트 문자열은 초록색으로 강조 표시되고, �
 msgid "Entering the translation mode"
 msgstr "번역 모드로 들어가기"
 
-#: ../../content/applications/websites/website/configuration/translate.rst:82
+#: ../../content/applications/websites/website/configuration/translate.rst:83
 msgid ""
 "In this mode, you can only translate text. To change the page's structure, "
 "you must edit the master page, i.e., the page in the original language of "
@@ -9302,27 +9514,25 @@ msgstr ""
 "이 모드에서는 텍스트만 번역할 수 있습니다. 페이지 구조를 변경하려면 마스터 페이지, 즉 데이터베이스에서 원래의 언어로 된 페이지를 "
 "편집해야 합니다. 마스터 페이지에서 변경한 사항은 모든 번역 버전에 자동으로 적용됩니다."
 
-#: ../../content/applications/websites/website/configuration/translate.rst:86
+#: ../../content/applications/websites/website/configuration/translate.rst:87
 msgid ""
 "To replace the original text with the translation, click the block, edit its"
-" contents, and save."
-msgstr "원본 텍스트를 번역된 내용으로 바꾸려면 블록을 클릭하고 내용을 편집한 다음 저장합니다."
-
-#: ../../content/applications/websites/website/configuration/translate.rst:89
-msgid ""
-"When a website supports multiple languages, the content is accessible "
-"through different URLs, depending on the language selected. For example, "
-"`https://www.mywebsite.com/shop/product/my-product-1` is the URL to the "
-"master page, in English, while "
-"`https://www.mywebsite.com/fr_FR/shop/product/mon-produit-1` is the URL to "
-"the French version of the same page."
+" contents, and :guilabel:`Save`."
 msgstr ""
-"웹사이트가 여러 가지 언어를 지원하는 경우 선택한 언어에 따라 다른 URL을 통해 콘텐츠를 확인할 수 있습니다. 예를 들어 "
-"`https://www.mywebsite.com/shop/product/my-product-1` 은 영어로 된 마스터 페이지의 URL이고"
-" `https://www.mywebsite.com/fr_FR/shop/product/mon-produit-1` 은 같은 페이지의 프랑스어"
-" 버전 URL입니다."
 
-#: ../../content/applications/websites/website/configuration/translate.rst:96
+#: ../../content/applications/websites/website/configuration/translate.rst:91
+msgid ""
+"When a website supports multiple languages, the core URL structure remains "
+"consistent across languages, while specific elements like product names or "
+"categories are translated. For example, "
+"`https://www.mywebsite.com/shop/product/my-product-1` is the English version"
+" of a product page, while `https://www.mywebsite.com/fr/shop/product/mon-"
+"produit-1` is the French version of the same page. The structure "
+"(/shop/product/) stays unchanged, but the translated elements (e.g., product"
+" name) adapt to the selected language."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/translate.rst:99
 msgid ""
 "Once the desired language is installed, you can translate some items from "
 "the backend (e.g., the product's name in the product form). To do so, click "
@@ -9332,30 +9542,30 @@ msgstr ""
 "선택한 언어가 설치되면 백엔드에서 일부 항목 (예: 품목 양식의 품목명)을 번역할 수 있습니다. 번역하려면 번역하려는 텍스트 옆에 있는 "
 "언어 코드 (예: :guilabel:`EN`)를 클릭하고 번역을 추가합니다."
 
-#: ../../content/applications/websites/website/configuration/translate.rst:101
+#: ../../content/applications/websites/website/configuration/translate.rst:104
 msgid "Content visibility by language"
 msgstr "언어별 콘텐츠 표시 여부"
 
-#: ../../content/applications/websites/website/configuration/translate.rst:103
+#: ../../content/applications/websites/website/configuration/translate.rst:106
 msgid ""
 "You can hide content (such as images or videos, for example) depending on "
 "the language. To do so:"
 msgstr "언어에 따라 콘텐츠 (예: 이미지 또는 비디오)를 숨길 수 있습니다. 다음과 같이 진행합니다."
 
-#: ../../content/applications/websites/website/configuration/translate.rst:105
+#: ../../content/applications/websites/website/configuration/translate.rst:108
 msgid "Click :guilabel:`Edit` and select an element of your website;"
 msgstr ":guilabel:`편집` 을 클릭한 후 웹사이트의 요소를 선택합니다."
 
-#: ../../content/applications/websites/website/configuration/translate.rst:106
+#: ../../content/applications/websites/website/configuration/translate.rst:109
 msgid "Go to the :guilabel:`Text - Image` section and :guilabel:`Visibility`;"
 msgstr ":guilabel:`텍스트 - 이미지` 섹션과 :guilabel:`표시 여부` 로 이동합니다."
 
-#: ../../content/applications/websites/website/configuration/translate.rst:107
+#: ../../content/applications/websites/website/configuration/translate.rst:110
 msgid ""
 "Click :guilabel:`No condition` and select :guilabel:`Conditionally` instead;"
 msgstr ":guilabel:`조건 없음` 을 클릭하고 :guilabel:`조건부` 를 대신 선택합니다."
 
-#: ../../content/applications/websites/website/configuration/translate.rst:108
+#: ../../content/applications/websites/website/configuration/translate.rst:111
 msgid ""
 "Go to :guilabel:`Languages` to configure the condition(s) to apply by "
 "selecting :guilabel:`Visible for` or :guilabel:`Hidden for`, and click "
@@ -11571,16 +11781,13 @@ msgstr "동적 콘텐츠"
 
 #: ../../content/applications/websites/website/web_design/building_blocks/dynamic_content.rst:5
 msgid ""
-"The :guilabel:`Dynamic Content` building blocks, such as :ref:`Form "
-"<dynamic_content/form>`, :ref:`Products <dynamic_content/products>`, "
-":ref:`Embed Code <dynamic_content/embed_code>`, or :doc:`Blog Posts "
-"<../../../blog>`, help you create interactive and visually appealing layouts"
-" for your web pages."
+"The :guilabel:`Dynamic Content` :doc:`building blocks <../building_blocks>`,"
+" such as :ref:`Form <website/dynamic_content/form>`, :ref:`Products "
+"<website/dynamic_content/products>`, :ref:`Embed Code "
+"<website/dynamic_content/embed_code>`, or :doc:`Blog Posts <../../../blog>`,"
+" help you create interactive and visually appealing layouts for your web "
+":doc:`pages <../../pages>`."
 msgstr ""
-":guilabel:`동적 콘텐츠` 빌딩 블록에는 :ref:`양식 <dynamic_content/form>`, :ref:`품목 "
-"<dynamic_content/products>`, :ref:`코드 삽입 <dynamic_content/embed_code>`, 또는 "
-":doc:`블로그 게시물 <../../../blog>` 등이 있으며, 웹페이지에서 비주얼 면에서 뛰어난 대화형 레이아웃을 만들 수 있도록"
-" 해줍니다."
 
 #: ../../content/applications/websites/website/web_design/building_blocks/dynamic_content.rst:11
 #: ../../content/applications/websites/website/web_design/building_blocks/features.rst:12
