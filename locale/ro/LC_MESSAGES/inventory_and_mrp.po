@@ -12,8 +12,9 @@
 # Foldi Robert <foldirobert@nexterp.ro>, 2024
 # Maria Muntean, 2024
 # Vacaru Adrian <adrian.vacaru@gmail.com>, 2024
-# Dorin Hongu <dhongu@gmail.com>, 2024
 # Cozmin Candea <office@terrabit.ro>, 2024
+# Dorin Hongu <dhongu@gmail.com>, 2024
+# Lyall Kindmurr, 2024
 # Larisa_nexterp, 2024
 # Wil Odoo, 2024
 # 
@@ -22,7 +23,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-04 08:54+0000\n"
+"POT-Creation-Date: 2024-12-30 14:12+0000\n"
 "PO-Revision-Date: 2022-10-04 12:53+0000\n"
 "Last-Translator: Wil Odoo, 2024\n"
 "Language-Team: Romanian (https://app.transifex.com/odoo/teams/41243/ro/)\n"
@@ -1441,6 +1442,7 @@ msgid "(02)(\\\\d{14})"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:180
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:43
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:3
 msgid "Packaging"
 msgstr "Ambalare"
@@ -1707,7 +1709,7 @@ msgid "(91) ([!\"%-/0-9:-?A-Z_a-z]{0,90})"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:225
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:115
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:126
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:77
 msgid "Package type"
 msgstr "Tip pachet"
@@ -3507,13 +3509,387 @@ msgstr "`Tutoriale Odoo: Stoc <https://www.odoo.com/slides/inventory-24>`_"
 msgid "Product management"
 msgstr "Management de produs"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:5
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:9
 msgid "Configure product"
 msgstr "Configurați produsul"
 
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:11
+msgid "A group of products in Odoo can be further defined using:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:13
+msgid ""
+":doc:`Units of measure (UoM) <configure/uom>`: a standard quantity for "
+"specifying product amounts (e.g., meters, yards, kilograms). Enables "
+"automatic conversion between measurement systems in Odoo, such as "
+"centimeters to feet."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:17
+msgid ""
+"*Ex: Purchasing fabric measured in meters but receiving it in yards from a "
+"vendor.*"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:19
+msgid ""
+":doc:`configure/package`: A physical container used to group products "
+"together, regardless of whether they are the same or different."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:22
+msgid ""
+"*Ex: A box containing assorted items for delivery, or a storage box of two "
+"hundred buttons on a shelf.*"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:25
+msgid ""
+":doc:`configure/packaging`: groups the *same* products together to receive "
+"or sell them in specified quantities."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:28
+msgid "*Ex: Cans of soda sold in packs of six, twelve, or twenty-four.*"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:31
+msgid "Comparison"
+msgstr "Comparație"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:33
+msgid ""
+"This table provides a detailed comparison of units of measure, packages, and"
+" packaging to help businesses evaluate which best suits their requirements."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:40
+msgid "Feature"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:41
+msgid "Unit of measure"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:42
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:3
 msgid "Packages"
 msgstr "Pachete"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:44
+msgid "Purpose"
+msgstr "Scop"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:45
+msgid "Standardized measurement for product units (e.g., cm, lb, L)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:46
+msgid "Tracks the specific physical container and its contents"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:47
+msgid ""
+"Groups a fixed number of items together for easier management (e.g., packs "
+"of 6, 12 or 24)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:48
+msgid "Product uniformity"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:49
+msgid "Defined per product; saved as one |UoM| in the database"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:50
+msgid "Allows mixed products"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:51
+msgid "Same products only"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:52
+msgid "Flexible"
+msgstr "Flexibil"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:53
+msgid "Converts between vendor/customer |UoMs| and database |UoM|"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:54
+msgid "Items can be added or removed from the container"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:55
+msgid "Quantities are fixed (e.g., always packs of 6, 12 or 24)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:56
+msgid "Complexity"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:57
+msgid "Simplest for unit conversions"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:58
+msgid "More complex due to container-level inventory tracking"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:59
+msgid "Simpler; suitable for uniform product groupings"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:60
+msgid "Inventory tracking"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:61
+msgid ""
+"Tracks product quantities within the warehouse in the specific |UoM| defined"
+" in the product form"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:63
+msgid "Tracks package location and contents within the warehouse"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:64
+msgid "Tracks grouped quantities but not individual items' locations"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:65
+msgid "Smooth barcode operations"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:66
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:74
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:78
+msgid "Not available"
+msgstr "Nu este disponibil"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:67
+msgid ""
+"Requires scanning both the package and individual items for reception. (even"
+" if there are 30 items in a package). Can enable the :ref:`Move Entire "
+"Packages <inventory/product_management/move-entire-pack>` feature to update "
+"the package's contained items' locations, when moving the package"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:71
+msgid ""
+"Scanning a packaging barcode automatically records all included units. (e.g."
+" 1 pack = 12 units)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:73
+msgid "Product lookup"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:75
+msgid ""
+"Scanning a product's barcode identifies its typical storage location in the "
+"Odoo database"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:76
+msgid "Barcode identifies grouped quantity, not storage location"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:77
+msgid "Unique barcodes"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:79
+msgid "Unique barcodes for individual packages (e.g. Pallet #12)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:80
+msgid "Barcodes set at the packaging type level (e.g. for a pack of 6)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:81
+msgid "Reusability"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:82
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:87
+msgid "Not applicable"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:83
+msgid ""
+"Can be disposable or reusable, configured via the :ref:`Package Use "
+"<inventory/warehouses_storage/cluster-pack>` field"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:85
+msgid "Disposable only"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:86
+msgid "Container weight"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:88
+msgid ""
+"Weight of the container itself is included in the *Shipping Weight* field of"
+" a package (:menuselection:`Inventory app --> Products --> Packages`)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:90
+msgid "Weight of the container is defined in the *Package Type* settings"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:91
+msgid "Lot/serial number tracking"
+msgstr "Urmărire lot/număr de serie"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:92
+msgid ""
+"Requires manual adjustments to track |UoMs| via lots (See :ref:`use case "
+"<inventory/product_management/lots-uom>` for details)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:94
+msgid "Applies only to contained products"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:95
+msgid "Applies to both contained products and the container"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:96
+msgid "Custom routes"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:97
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:98
+msgid "Cannot be set"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:99
+msgid ""
+"Routes can define specific warehouse paths for a particular packaging type"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:102
+msgid "Use cases"
+msgstr "Cazuri de utilizare"
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:104
+msgid ""
+"After comparing the various features, consider how these businesses, with "
+"various inventory management and logistics workflows, came to their "
+"decision."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:108
+msgid "Pallets of items using packaging"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:110
+msgid ""
+"A warehouse receives shipments of soap organized on physical pallets, each "
+"containing 96 bars. These pallets are used for internal transfers and are "
+"also sold as standalone units. For logistical purposes, the pallet's weight "
+"must be included in the total shipping weight for certain deliveries. "
+"Additionally, the pallet requires a barcode to facilitate tracking, and the "
+"number of individual bars of soap must be included in the stock count when "
+"the pallet is received."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:116
+msgid ""
+"After evaluating various options, *product packaging* was the most suitable "
+"solution. Packaging enables assigning a barcode to a pallet, identifying it "
+"as a \"pallet type\" containing 96 soap bars. This barcode streamlines "
+"operations by automatically registering the grouped quantity. Key "
+"distinctions include:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:121
+msgid ""
+"**Warehouse tracking limitations**: Odoo tracks only the total quantity, not"
+" the number of packagings. For instance, if a pallet with 12 and 24 "
+"quantities is received, Odoo records 36 quantities, not the pallet details."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:124
+msgid ""
+"**Packaging barcodes are type-specific, not unique**: Barcodes represent "
+"packaging types (e.g., \"pallet of 96 soap bars\") but do not uniquely "
+"identify individual pallets, such as Pallet #1 or Pallet #2."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:129
+msgid "Capture product information using barcode"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:131
+msgid ""
+"An Odoo user expects the **Barcode** app to display the typical storage "
+"location of a product by scanning a barcode for a container."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:134
+msgid ""
+"*Packages* was the most suitable. When the :ref:`appropriate setting is "
+"enabled <inventory/warehouses_storage/enable-package>`, scanning a package "
+"barcode displays its contents in the **Barcode** app."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:138
+msgid ""
+"Packages represent physical containers, enabling detailed tracking of the "
+"items they hold. Scanning a package provides visibility into its contents "
+"and facilitates operations, like inventory moves."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:145
+msgid "Track different units of measure in storage"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:147
+msgid "A fruit juice distributor tracks multiple |UoMs| for their operations:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:149
+msgid "Fruits are purchased in tons."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:150
+msgid "Juice is produced and stored in kilograms."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:151
+msgid "Small samples are stored in grams for recipe testing."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:153
+msgid ""
+"*Unit of Measure* was most suitable. Odoo automatically converts tons to "
+"kilograms during receipts. However, since Odoo tracks only one |UoM| per "
+"product in the database, the company uses lot numbers to differentiate "
+"|UoMs|:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:157
+msgid "LOT1: Grams (g)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:158
+msgid "LOT2: Kilograms (kg)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:160
+msgid ""
+"Manual inventory adjustments are required to convert between lots, such as "
+"subtracting 1 kg from LOT2 to add 1,000 g to LOT1. While functional, this "
+"workaround can be time-consuming and prone to errors."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:7
 msgid ""
@@ -3609,15 +3985,35 @@ msgid ""
 "Activate the *Packages* setting in Inventory > Configuration > Settings."
 msgstr "Activați setarea *Pachete* în Inventar > Configurare > Setări."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:51
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:50
+msgid ""
+"When moving packages internally, the *Move Entire Packages* feature can be "
+"enabled on an operation type to update a package's contained item's location"
+" upon updating the package's location."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:53
+msgid ""
+"To do that, go to :menuselection:`Inventory app --> Configuration --> "
+"Operations Types` and select the desired operation this feature will apply "
+"to (may have to set it for multiple)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:56
+msgid ""
+"On the operation type page, in the :guilabel:`Packages` section, tick the "
+":guilabel:`Move Entire Packages` checkbox."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:62
 msgid "Pack items"
 msgstr "Împachetați articole"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:53
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:64
 msgid "Products can be added to packages in any transfer by:"
 msgstr "Produsele pot fi adăugate la pachete în orice transfer prin:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:55
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:66
 msgid ""
 "Clicking each :ref:`Detailed Operations "
 "<inventory/warehouses_storage/detailed-operations>` icon on the product "
@@ -3626,7 +4022,7 @@ msgstr ""
 "Făcând clic pe fiecare pictogramă :ref:`Operațiuni detaliate "
 "<inventory/warehouses_storage/detailed-operations>` de pe linia de produse."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:57
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:68
 msgid ""
 "Using the :ref:`Put in Pack <inventory/warehouses_storage/put-in-pack>` "
 "button to place everything in the transfer into a package."
@@ -3634,11 +4030,11 @@ msgstr ""
 "Folosind butonul :ref:`Pune în pachet <inventory/warehouses_storage/put-in-"
 "pack>` pentru a plasa totul în transfer într-un pachet."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:63
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:74
 msgid "Detailed operations"
 msgstr "Operații detaliate"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:65
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:76
 msgid ""
 "On any warehouse transfer (e.g. receipt, delivery order), add a product to a"
 " package by clicking the :guilabel:`⦙≣ (bulleted list)` icon in the "
@@ -3652,7 +4048,7 @@ msgstr ""
 msgid "Show \"Detailed Operations\" icon in the product line."
 msgstr "Afișați pictograma „Operațiuni detaliate” în linia de produse."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:72
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:83
 msgid ""
 "Doing so opens the :guilabel:`Detailed Operations` pop-up window for the "
 ":guilabel:`Product`."
@@ -3660,7 +4056,7 @@ msgstr ""
 "Procedând astfel, se deschide fereastra pop-up :guilabel:`Operațiuni "
 "detaliate` pentru :guilabel:`Produs`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:74
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:85
 msgid ""
 "To put the :guilabel:`Product` in a package, click :guilabel:`Add a line`, "
 "and assign the product to a :guilabel:`Destination Package`. Select an "
@@ -3672,17 +4068,17 @@ msgstr ""
 " destinație`. Selectați un pachet existent sau creați unul nou tastând "
 "numele noului pachet, apoi selectați :guilabel:`Creați...`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:82
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:93
 msgid "Assign a package to \"Destination Package\" field."
 msgstr "Atribuiți un pachet câmpului „Pachet de destinație”."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:82
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:93
 msgid "Twelve units of `Acoustic Bloc Screen` are placed in `PACK0000001`."
 msgstr ""
 "Douăsprezece unități de „Acoustic Bloc Screen” sunt plasate în "
 "„PACK0000001”."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:84
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:95
 msgid ""
 "Then, specify the quantity of items to go into the package in the "
 ":guilabel:`Done` column. Repeat the above steps to place the "
@@ -3694,17 +4090,17 @@ msgstr ""
 ":guilabel:`Produsul` în diferite pachete. După ce ați terminat, faceți clic "
 "pe :guilabel:`Confirm` pentru a închide fereastra."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:89
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:100
 msgid ""
 ":doc:`Ship one order in multiple packages "
 "<../../shipping_receiving/setup_configuration/multipack>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:95
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:106
 msgid "Put in pack"
 msgstr "Pune în pachet"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:97
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:108
 msgid ""
 "Alternatively, click the :guilabel:`Put in Pack` button on **any** warehouse"
 " transfer to create a new package, and place all the items in the transfer "
@@ -3714,7 +4110,7 @@ msgstr ""
 "**orice** transfer de depozit pentru a crea un nou pachet și plasați toate "
 "articolele din transfer în acel pachet nou creat."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:101
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:112
 msgid ""
 "The :guilabel:`Put in Pack` button appears on receipts, delivery orders, and"
 " other transfer forms with the *Packages* feature enabled in "
@@ -3724,11 +4120,11 @@ msgstr ""
 "alte formulare de transfer cu funcția *Pachete* activată în "
 ":menuselection:`Aplicația Inventory --> Configurare --> Setări`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:109
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:120
 msgid "Image of the \"Put in Pack\" button being clicked."
 msgstr "Imaginea butonului „Pune în pachet” pe care se face clic."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:109
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:120
 msgid ""
 "In batch transfer `BATCH/00003`, the :guilabel:`Put in Pack` button was "
 "clicked to create a new package, `PACK0000002`, and assign all items to it "
@@ -3738,7 +4134,7 @@ msgstr ""
 "fost făcut clic pentru a crea un nou pachet, `PACK0000002`, și a atribui "
 "toate articolele acestuia în câmpul :guilabel:`Pachet de destinație`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:117
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:128
 msgid ""
 "Create package types by navigating to :menuselection:`Inventory app --> "
 "Configuration --> Package Types`, in order to set custom dimensions and "
@@ -3750,7 +4146,7 @@ msgstr ""
 "limite de greutate. Această caracteristică este utilizată în principal "
 "pentru a calcula greutățile pachetelor pentru costurile de transport."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:122
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:133
 msgid ""
 ":doc:`Shipping carriers "
 "<../../shipping_receiving/setup_configuration/third_party_shipper>`"
@@ -3758,11 +4154,11 @@ msgstr ""
 ":doc:`Transportatori "
 "<../../shipping_receiving/setup_configuration/third_party_shipper>`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:123
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:134
 msgid ":doc:`../../shipping_receiving/setup_configuration`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:125
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:136
 msgid ""
 "On the :guilabel:`Package Types` list, clicking :guilabel:`New` opens a "
 "blank package type form. The fields of the form are as follows:"
@@ -3771,13 +4167,13 @@ msgstr ""
 "deschide un formular de tip de pachet necompletat. Câmpurile formularului "
 "sunt următoarele:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:128
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:139
 msgid ":guilabel:`Package Type` (required): define the package type's name."
 msgstr ""
 ":guilabel:`Tipul de pachet` (obligatoriu): definiți numele tipului de "
 "pachet."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:129
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:140
 msgid ""
 ":guilabel:`Size`: define the dimensions of the package in millimeters (mm). "
 "The fields, from left to right, define the :guilabel:`Length`, "
@@ -3787,14 +4183,14 @@ msgstr ""
 "Câmpurile, de la stânga la dreapta, definesc :guilabel:`Lungime`, "
 ":guilabel:`Lățime` și :guilabel:`Înălțime`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:131
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:142
 msgid ""
 ":guilabel:`Weight`: weight of an empty package (e.g. an empty box, pallet)."
 msgstr ""
 ":guilabel:`Greutate`: greutatea unui pachet gol (de exemplu, o cutie goală, "
 "un palet)."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:134
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:145
 msgid ""
 "Odoo calculates the package's weight by adding the weight of the empty "
 "package plus the weight of the item(s), which can be found in the "
@@ -3806,14 +4202,14 @@ msgstr ""
 ":guilabel:`Greutate`, în fila :guilabel:`Inventar`, al fiecărui produs "
 "formă."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:138
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:149
 msgid ""
 ":guilabel:`Max Weight`: maximum shipping weight allowed in the package."
 msgstr ""
 ":guilabel:`Greutate maximă`: greutatea maximă de transport permisă în "
 "pachet."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:139
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:150
 msgid ""
 ":guilabel:`Barcode`: define a barcode to identify the package type from a "
 "scan."
@@ -3821,7 +4217,7 @@ msgstr ""
 ":guilabel:`Cod de bare`: definiți un cod de bare pentru a identifica tipul "
 "de pachet dintr-o scanare."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:140
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:151
 msgid ""
 ":guilabel:`Company`: specify a company to make the package type available "
 "**only** at the selected company. Leave the field blank if it is available "
@@ -3831,7 +4227,7 @@ msgstr ""
 "disponibil **numai** la compania selectată. Lăsați câmpul necompletat dacă "
 "este disponibil la toate companiile."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:142
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:153
 msgid ""
 ":guilabel:`Carrier`: specify the intended shipping carrier for this package "
 "type."
@@ -3839,7 +4235,7 @@ msgstr ""
 ":guilabel:`Purtător`: specificați transportatorul destinat pentru acest tip "
 "de pachet."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:143
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:154
 msgid ""
 ":guilabel:`Carrier Code`: define a code that is linked to the package type."
 msgstr ""
@@ -3850,11 +4246,11 @@ msgstr ""
 msgid "Package type for FedEx's 25 kilogram box."
 msgstr "Tip de pachet pentru cutia FedEx de 25 de kilograme."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:152
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:163
 msgid "Cluster packages"
 msgstr "Pachete cluster"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:154
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:165
 msgid ""
 "To use *cluster packages*, first navigate to :menuselection:`Inventory app "
 "--> Configuration --> Settings`, and activate the :guilabel:`Batch "
@@ -3874,7 +4270,7 @@ msgid ""
 msgstr ""
 "Activați funcția *Transferuri în loturi* în Inventar > Configurare > Setări."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:163
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:174
 msgid ""
 "Add new packages by going to :menuselection:`Inventory app --> Products --> "
 "Packages`. Then, click :guilabel:`New`, or select an existing package. Doing"
@@ -3885,11 +4281,11 @@ msgstr ""
 "existent. Procedând astfel, se deschide formularul de pachet, care conține "
 "următoarele câmpuri:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:167
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:178
 msgid ":guilabel:`Package Reference` (required): name of the package."
 msgstr ":guilabel:`Referință pachet` (obligatoriu): numele pachetului."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:168
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:179
 msgid ""
 ":guilabel:`Package Type`: used for :ref:`configuring shipping boxes to ship "
 "to the customer <inventory/warehouses_storage/package-type>`."
@@ -3898,7 +4294,7 @@ msgstr ""
 "expediere pentru a fi expediate către client "
 "<inventory/warehouses_storage/package-type>`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:172
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:183
 msgid ""
 ":guilabel:`Package Type` is unnecessary for configuring packages for cluster"
 " pickings."
@@ -3906,7 +4302,7 @@ msgstr ""
 ":guilabel:`Tipul pachetului` nu este necesar pentru configurarea pachetelor "
 "pentru selectarea clusterelor."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:174
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:185
 msgid ""
 ":guilabel:`Shipping Weight`: used to input the weight of the package after "
 "measuring it on a scale."
@@ -3914,7 +4310,7 @@ msgstr ""
 ":guilabel:`Greutate transport`: folosit pentru a introduce greutatea "
 "coletului după măsurarea acestuia pe o cântar."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:176
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:187
 msgid ""
 ":guilabel:`Company`: specify a company to make the package available "
 "**only** at the selected company. Leave the field blank if the package is "
@@ -3924,15 +4320,15 @@ msgstr ""
 "disponibil **doar** la compania selectată. Lăsați câmpul necompletat dacă "
 "pachetul este disponibil la toate companiile."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:178
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:189
 msgid ":guilabel:`Location`: current location of the package."
 msgstr ":guilabel:`Locație`: locația curentă a pachetului."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:179
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:190
 msgid ":guilabel:`Pack Date`: the date the package was created."
 msgstr ":guilabel:`Data pachetului`: data la care a fost creat pachetul."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:180
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:191
 msgid ""
 ":guilabel:`Package Use`: choose :guilabel:`Reusable` for packages used for "
 "moving products within the warehouse; :guilabel:`Disposable` for packages "
@@ -3947,7 +4343,7 @@ msgstr ""
 msgid "Display package form to create a cluster pack."
 msgstr "Afișați formularul de pachet pentru a crea un pachet de cluster."
 
-#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:188
+#: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:199
 msgid ""
 ":doc:`Using cluster packages "
 "<../../shipping_receiving/picking_methods/cluster>`"

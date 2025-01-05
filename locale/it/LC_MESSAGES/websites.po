@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-24 08:53+0000\n"
+"POT-Creation-Date: 2024-12-30 14:12+0000\n"
 "PO-Revision-Date: 2022-10-04 12:54+0000\n"
 "Last-Translator: Marianna Ciofani, 2024\n"
 "Language-Team: Italian (https://app.transifex.com/odoo/teams/41243/it/)\n"
@@ -6407,7 +6407,7 @@ msgstr ""
 "all'indirizzo del database Odoo."
 
 #: ../../content/applications/websites/website/configuration/domain_names.rst:157
-#: ../../content/applications/websites/website/configuration/domain_names.rst:212
+#: ../../content/applications/websites/website/configuration/domain_names.rst:273
 msgid "Odoo Online"
 msgstr "Odoo Online"
 
@@ -6420,7 +6420,7 @@ msgstr ""
 "database indicato durante la creazione (ad es., `mycompany.odoo.com`)."
 
 #: ../../content/applications/websites/website/configuration/domain_names.rst:162
-#: ../../content/applications/websites/website/configuration/domain_names.rst:222
+#: ../../content/applications/websites/website/configuration/domain_names.rst:283
 msgid "Odoo.sh"
 msgstr "Odoo.sh"
 
@@ -6475,11 +6475,10 @@ msgstr ""
 
 #: ../../content/applications/websites/website/configuration/domain_names.rst:176
 msgid ""
-"`Cloudflare: Manage DNS records <https://support.cloudflare.com/hc/en-"
-"us/articles/360019093151>`_"
+"`Cloudflare: Manage DNS records "
+"<https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-"
+"records/>`_"
 msgstr ""
-"`Cloudflare: Gestire record DNS <https://support.cloudflare.com/hc/en-"
-"us/articles/360019093151>`_"
 
 #: ../../content/applications/websites/website/configuration/domain_names.rst:180
 msgid ""
@@ -6516,11 +6515,166 @@ msgstr ""
 "reindirizzamento (301 definitivo o visibile) per reindirizzare i visitatori "
 "da `yourdomain.com` a `wwww.yourdomain.com`."
 
+#: ../../content/applications/websites/website/configuration/domain_names.rst:194
+msgid "Using Cloudflare to secure and redirect a naked domain"
+msgstr ""
+
 #: ../../content/applications/websites/website/configuration/domain_names.rst:196
+msgid ""
+"To redirect a naked domain with a secure HTTPS connection, we recommend "
+"using Cloudflare, as most DNS hosting services do not offer an easy way to "
+"do so."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:199
+msgid ""
+"`Sign up and log in to Cloudflare <https://dash.cloudflare.com/sign-up>`_."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:200
+msgid ""
+"Enter your domain name on `Cloudflare's dashboard "
+"<https://dash.cloudflare.com/login>`_ and select :guilabel:`Quick scan for "
+"DNS records`."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:202
+msgid "Choose a plan (the free plan is sufficient)."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:203
+msgid ""
+"Follow Cloudflare's instructions and recommendations to complete the "
+"activation."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:204
+msgid ""
+"Add a CNAME record to redirect your naked domain (`yourdomain.com`) to the "
+"`www` subdomain (e.g., `www.yourdomain.com`) by clicking :guilabel:`DNS` in "
+"the navigation menu, then clicking the :guilabel:`Add record` button, and "
+"using the following configuration:"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:208
+#: ../../content/applications/websites/website/configuration/domain_names.rst:219
+msgid ":guilabel:`Type`: CNAME"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:209
+msgid ":guilabel:`Name`: `@` (or `yourdomain.com`)"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:210
+msgid ":guilabel:`Target`: e.g., `www.yourdomain.com`"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:211
+msgid ":guilabel:`Proxy status`: Proxied"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:0
+msgid ""
+"Adding a CNAME DNS record to Cloudflare to redirect a naked domain to a www "
+"subdomain"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:216
+msgid ""
+"Add another second CNAME record to redirect the `www` subdomain (e.g., "
+"`www.yourdomain.com`) to your database address (e.g., `mycompany.odoo.com`) "
+"using the following configuration:"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:220
+msgid ":guilabel:`Name`: e.g., `www.yourdomain.com`"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:221
+msgid ":guilabel:`Target`: e.g., `mycompany.odoo.com`"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:222
+msgid ":guilabel:`Proxy status`: DNS only"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:0
+msgid ""
+"Adding a CNAME DNS record to Cloudflare to redirect a www subdomain to an "
+"Odoo database"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:227
+msgid ""
+"Define a redirect rule to permanently redirect (301) your naked domain "
+"(e.g., `yourdomain.com`) to both `http://` and `https://` by going to "
+":menuselection:`Rules --> Redirect Rules --> Create rule`, and:"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:231
+msgid "Enter any :guilabel:`Rule name`."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:232
+msgid ""
+"Under the :guilabel:`If incoming requests match...` section, select "
+":guilabel:`Custom filter expression` and use the following configuration:"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:235
+msgid ":guilabel:`Field`: Hostname"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:236
+msgid ":guilabel:`Operator`: equals"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:237
+msgid ":guilabel:`Value`: e.g., `yourdomain.com`"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:239
+msgid ""
+"Under the :guilabel:`Then...` section, use the following configuration:"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:241
+msgid ":guilabel:`Type`: Dynamic"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:242
+msgid ""
+":guilabel:`Expression`: e.g., `concat(\"https://www.yourdomain.com/\", "
+"http.request.uri.path)`"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:243
+msgid ":guilabel:`Status code`: 301"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:244
+msgid ":guilabel:`Preserve query string`: enabled"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:0
+msgid ""
+"Defining a Cloudflare redirect rule to create a permanent redirect (301)"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:249
+msgid ""
+"Go to :guilabel:`SSL/TLS` and set the encryption mode to :guilabel:`Full`."
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:0
+msgid "Setting the encryption mode to full on Cloudflare"
+msgstr ""
+
+#: ../../content/applications/websites/website/configuration/domain_names.rst:257
 msgid "Map a domain name to an Odoo database"
 msgstr "Mappare un nome di dominio in un database Odoo"
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:199
+#: ../../content/applications/websites/website/configuration/domain_names.rst:260
 msgid ""
 "Ensure you have :ref:`added a CNAME record <domain-name/cname>` to your "
 "domain name's DNS **before** mapping your domain name to your Odoo database."
@@ -6529,7 +6683,7 @@ msgstr ""
 "DNS del nome di dominio **prima** di mappare il nome di dominio nel tuo "
 "database Odoo."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:202
+#: ../../content/applications/websites/website/configuration/domain_names.rst:263
 msgid ""
 "Failing to do so may prevent the validation of the :ref:`SSL certificate "
 "<domain-name/ssl>` and could result in a *certificate name mismatch* error. "
@@ -6541,7 +6695,7 @@ msgstr ""
 "certificato non corrispondente*. I browser web spesso mostrano l'errore come"
 " *\"La connessione non è privata\"*."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:206
+#: ../../content/applications/websites/website/configuration/domain_names.rst:267
 msgid ""
 "If you encounter this error after mapping the domain name to your database, "
 "wait up to five days, as the validation may still happen. If not, you can "
@@ -6553,25 +6707,20 @@ msgstr ""
 "Altrimenti, è possibile `inviare un ticket di supporto "
 "<https://www.odoo.com/help>`_ inserendo screenshot dei record CNAME."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:214
+#: ../../content/applications/websites/website/configuration/domain_names.rst:275
 msgid ""
 "Open the `database manager <https://www.odoo.com/my/databases>`_, click the "
 "gear icon (:guilabel:`⚙️`) next to the database name, and go to "
 ":menuselection:`Domain Names --> Use my own domain`. Then, enter the domain "
-"name (e.g., `yourdomain.com`), click :guilabel:`Verify` and :guilabel:`I "
-"confirm, it's done`."
+"name (e.g., `www.yourdomain.com`), click :guilabel:`Verify` and :guilabel:`I"
+" confirm, it's done`."
 msgstr ""
-"Apri il ` gestore di database <https://www.odoo.com/my/databases>`_, fai "
-"clic sull'icona a forma di ingranaggio (:guilabel:`⚙️`) accanto al nome del "
-"database e vai su :menuselection:`Nomi dominio --> Usa il mio dominio`. In "
-"seguito, inserisci il nome di dominio (ad es., `yourdomain.com`), fai clic "
-"su :guilabel:`Verifica` e :guilabel:`Confermo, è stato sistemato`."
 
 #: ../../content/applications/websites/website/configuration/domain_names.rst:0
 msgid "Mapping a domain name to an Odoo Online database"
 msgstr "Mappare un nome di dominio in un database Odoo Online"
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:224
+#: ../../content/applications/websites/website/configuration/domain_names.rst:285
 msgid ""
 "On Odoo.sh, go to :menuselection:`Branches --> select your branch --> "
 "Settings --> Custom domains`, type the domain name to add, then click "
@@ -6585,7 +6734,7 @@ msgstr ""
 msgid "Mapping a domain name to an Odoo.sh branch"
 msgstr "Mappare un nome di dominio in un ramo Odoo.sh "
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:231
+#: ../../content/applications/websites/website/configuration/domain_names.rst:292
 msgid ""
 ":ref:`Odoo.sh branches: settings tab <odoosh-gettingstarted-branches-tabs-"
 "settings>`"
@@ -6593,11 +6742,11 @@ msgstr ""
 ":ref:`Rami Odoo.sh: scheda impostazioni <odoosh-gettingstarted-branches-"
 "tabs-settings>`"
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:236
+#: ../../content/applications/websites/website/configuration/domain_names.rst:297
 msgid "SSL encryption (HTTPS protocol)"
 msgstr "Crittografia SSL (protocollo HTTPS)"
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:238
+#: ../../content/applications/websites/website/configuration/domain_names.rst:299
 msgid ""
 "**SSL encryption** allows visitors to navigate a website through a secure "
 "connection, which appears as the *https://* protocol at the beginning of a "
@@ -6608,7 +6757,7 @@ msgstr ""
 "all'inizio di un indirizzo web rispetto ad un protocollo non sicuro "
 "*http://*."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:242
+#: ../../content/applications/websites/website/configuration/domain_names.rst:303
 msgid ""
 "Odoo generates a separate SSL certificate for each domain :ref:`mapped to a "
 "database <domain-name/db-map>` using `Let's Encrypt's certificate authority "
@@ -6618,11 +6767,11 @@ msgstr ""
 " database <domain-name/db-map>` utilizzando il `protocollo Let's Encrypt's "
 "certificate authority and ACME <https://letsencrypt.org/how-it-works/>`_."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:247
+#: ../../content/applications/websites/website/configuration/domain_names.rst:308
 msgid "Certificate generation may take up to 24 hours."
 msgstr "La generazione di un certificato potrebbe impiegare fino a 24 ore."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:248
+#: ../../content/applications/websites/website/configuration/domain_names.rst:309
 msgid ""
 "Several attempts to validate your certificate are made for five days after "
 "you map your domain name to your database."
@@ -6630,13 +6779,13 @@ msgstr ""
 "Dopo aver mappato il nome di dominio nel database, verranno effettuati vari "
 "tentativi per convalidare il certificato nell'arco di cinque giorni."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:250
+#: ../../content/applications/websites/website/configuration/domain_names.rst:311
 msgid "If you use another service, you can keep using it or change to Odoo's."
 msgstr ""
 "Se utilizzi un altro servizio, è possibile continuare ad utilizzarlo o "
 "modificarlo con Odoo."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:253
+#: ../../content/applications/websites/website/configuration/domain_names.rst:314
 msgid ""
 "No SSL certificate is generated for naked domains :dfn:`(domain names "
 "without any subdomains or prefixes)`."
@@ -6644,11 +6793,11 @@ msgstr ""
 "Non viene generato nessun certificato SSL per domini semplici :dfn:`(nomi di"
 " dominio senza sottodomini o prefissi)`."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:259
+#: ../../content/applications/websites/website/configuration/domain_names.rst:320
 msgid "Web base URL of a database"
 msgstr "URL base web di un database"
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:262
+#: ../../content/applications/websites/website/configuration/domain_names.rst:323
 msgid ""
 "If the Website app is installed on your database, skip this section and "
 "continue from the :ref:`Map a domain name to a website <domain-name/website-"
@@ -6658,7 +6807,7 @@ msgstr ""
 " dalla sezione :ref:`Mappa un nome di dominio in un sito web <domain-"
 "name/website-map>`. "
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:265
+#: ../../content/applications/websites/website/configuration/domain_names.rst:326
 msgid ""
 "The *web base URL* or root URL of a database affects your main website "
 "address and all the links sent to your customers (e.g., quotations, portal "
@@ -6668,7 +6817,7 @@ msgstr ""
 "del sito web principale e su tutti i link inviati ai clienti (ad es., "
 "preventivi, link portale, ecc.)."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:268
+#: ../../content/applications/websites/website/configuration/domain_names.rst:329
 msgid ""
 "To make your custom domain name the *web base URL* of your database, access "
 "your database using your custom domain name and log in as an administrator "
@@ -6680,7 +6829,7 @@ msgstr ""
 "personalizzato e accedi come amministratore :dfn:`(un utente appartenente al"
 " gruppo di diritti di accesso Impostazioni in Amministrazione)`."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:273
+#: ../../content/applications/websites/website/configuration/domain_names.rst:334
 msgid ""
 "If you access your database with the original Odoo address (e.g., "
 "`mycompany.odoo.com`), the *web base URL* of your database will be updated "
@@ -6698,7 +6847,7 @@ msgstr ""
 "Tecnico --> Parametri sistema --> Nuovo` e inserisci `web.base.url.freeze` "
 "come :guilabel:`Chiave` e `Vero` come :guilabel:`Valore`.    "
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:280
+#: ../../content/applications/websites/website/configuration/domain_names.rst:341
 msgid ""
 "You can also set the web base URL manually. To do so, activate the "
 ":ref:`developer mode <developer-mode>`, go to :menuselection:`Settings --> "
@@ -6715,11 +6864,11 @@ msgstr ""
 "`https://www.yourdomain.com`). L'URL deve includere il protocollo `https://`"
 " (or `http://`) e *non* deve terminare con uno slash (`/`)."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:289
+#: ../../content/applications/websites/website/configuration/domain_names.rst:350
 msgid "Map a domain name to an Odoo website"
 msgstr "Mappare un nome di dominio in un sito web Odoo"
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:291
+#: ../../content/applications/websites/website/configuration/domain_names.rst:352
 msgid ""
 "Mapping your domain name to your website is different than mapping it to "
 "your database:"
@@ -6727,7 +6876,7 @@ msgstr ""
 "La mappatura del nome di dominio nel tuo sito web è diversa rispetto alla "
 "mappatura nel database:"
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:293
+#: ../../content/applications/websites/website/configuration/domain_names.rst:354
 msgid ""
 "It defines your domain name as the main one for your website, helping search"
 " engines to index your website correctly."
@@ -6735,7 +6884,7 @@ msgstr ""
 "Definisce il nome di dominio come principale per il tuo sito web così da "
 "aiutare i motori di ricerca a indicizzare il sito web correttamente."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:295
+#: ../../content/applications/websites/website/configuration/domain_names.rst:356
 msgid ""
 "It defines your domain name as the base URL for your database, including "
 "portal links sent by email to your customers."
@@ -6743,7 +6892,7 @@ msgstr ""
 "Definisce il nome di dominio come l'URL base per il tuo database, inclusi "
 "link al portale inviate via e-mail ai clienti."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:297
+#: ../../content/applications/websites/website/configuration/domain_names.rst:358
 msgid ""
 "If you have multiple websites, it maps your domain name to the appropriate "
 "website."
@@ -6751,7 +6900,7 @@ msgstr ""
 "Se possiedi diversi siti web, mappa il nome di dominio nel sito web "
 "appropriato."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:299
+#: ../../content/applications/websites/website/configuration/domain_names.rst:360
 msgid ""
 "Go to :menuselection:`Website --> Configuration --> Settings`. If you have "
 "multiple websites, select the one you want to configure. In the "
@@ -6763,7 +6912,7 @@ msgstr ""
 ":guilabel:`Dominio`, inserisci l'indirizzo del tuo sito web (ad es., "
 "`https://www.yourdomain.com`) e :guilabel:`Salva`."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:304
+#: ../../content/applications/websites/website/configuration/domain_names.rst:365
 msgid ""
 "Mapping your domain name to your Odoo website prevents Google Search from "
 "indexing your original database address (e.g., `mycompany.odoo.com`)."
@@ -6772,7 +6921,7 @@ msgstr ""
 " di indicizzare il tuo indirizzo di database originale (ad es., "
 "`mycompany.odoo.com`)."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:307
+#: ../../content/applications/websites/website/configuration/domain_names.rst:368
 msgid ""
 "If both addresses are already indexed, it may take some time before the "
 "indexation of the second address is removed from Google Search. You can use "
@@ -6785,7 +6934,7 @@ msgstr ""
 "<https://search.google.com/search-console/welcome>`_ per risolvere il "
 "problema."
 
-#: ../../content/applications/websites/website/configuration/domain_names.rst:312
+#: ../../content/applications/websites/website/configuration/domain_names.rst:373
 msgid ""
 "If you have multiple websites and companies on your database, make sure to "
 "select the right :guilabel:`Company` under :menuselection:`Website --> "
@@ -7377,7 +7526,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/websites/website/configuration/recaptcha.rst:63
-#: ../../content/applications/websites/website/configuration/translate.rst:60
+#: ../../content/applications/websites/website/configuration/translate.rst:61
 msgid "Click :guilabel:`Save`."
 msgstr ""
 
@@ -7462,31 +7611,31 @@ msgid ""
 "To allow translation of your website, you must first :doc:`install "
 "<../../../general/users/language>` the required languages and add them to "
 "your website. To do so, go to :menuselection:`Website --> Configuration --> "
-"Settings` and click :guilabel:`Install languages` in the :guilabel:`Website "
-"info` section. In the dialog box that opens, select the "
-":guilabel:`Languages` you want from the dropdown menu, tick the required "
-":guilabel:`Websites to translate`, and click :guilabel:`Add`."
+"Settings` and click :icon:`fa-arrow-right` :guilabel:`Install languages` in "
+"the :guilabel:`Website Info` section. In the dialog box that opens, select "
+"the :guilabel:`Languages` you want from the dropdown menu, tick the required"
+" :guilabel:`Websites to translate`, and click :guilabel:`Add`."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:22
+#: ../../content/applications/websites/website/configuration/translate.rst:23
 msgid ""
-"To edit your website's languages, go to :menuselection:`Website –> "
-"Configuration –> Settings` and add/remove the required languages in/from the"
-" :guilabel:`Languages` field in the :guilabel:`Website info` section."
+"To edit your website's languages, go to :menuselection:`Website -–> "
+"Configuration -–> Settings` and add/remove the required languages in/from "
+"the :guilabel:`Languages` field in the :guilabel:`Website info` section."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:27
+#: ../../content/applications/websites/website/configuration/translate.rst:28
 msgid ""
 "Alternatively, once the languages have been installed, you can add them from"
 " the :ref:`language selector <translate/language-selector>`. You might then "
 "need to refresh your page to see the new language."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:34
+#: ../../content/applications/websites/website/configuration/translate.rst:35
 msgid "Default language"
 msgstr "Lingua predefinita"
 
-#: ../../content/applications/websites/website/configuration/translate.rst:36
+#: ../../content/applications/websites/website/configuration/translate.rst:37
 msgid ""
 "When multiple languages are available on your website, you can set a default"
 " language to be used if the visitor’s browser language is not available. To "
@@ -7494,36 +7643,36 @@ msgid ""
 "select a language in the :guilabel:`Default` field."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:41
+#: ../../content/applications/websites/website/configuration/translate.rst:42
 msgid ""
 "This field is only visible if multiple languages have been installed and "
 "added to your website."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:46
+#: ../../content/applications/websites/website/configuration/translate.rst:47
 msgid "Language selector"
 msgstr "Selettore lingua"
 
-#: ../../content/applications/websites/website/configuration/translate.rst:48
+#: ../../content/applications/websites/website/configuration/translate.rst:49
 msgid ""
 "Your website’s visitors can switch languages using the language selector, "
 "available by default in the :guilabel:`Copyright` section at the bottom of "
 "the page. To edit the language selector menu:"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:51
+#: ../../content/applications/websites/website/configuration/translate.rst:52
 msgid "Go to your website and click :guilabel:`Edit`;"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:52
+#: ../../content/applications/websites/website/configuration/translate.rst:53
 msgid ""
 "Click the language selector available in the :guilabel:`Copyright` block and"
 " go to the :guilabel:`Copyright` section of the website builder;"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:54
+#: ../../content/applications/websites/website/configuration/translate.rst:55
 msgid ""
-"Set the :guilabel:`Language selector` field to either :guilabel:`Dropdown` "
+"Set the :guilabel:`Language Selector` field to either :guilabel:`Dropdown` "
 "or :guilabel:`Inline`. Click :guilabel:`None` if you do not want to display "
 "the  :guilabel:`Language selector`;"
 msgstr ""
@@ -7532,18 +7681,18 @@ msgstr ""
 msgid "Add a language selector menu."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:63
+#: ../../content/applications/websites/website/configuration/translate.rst:64
 msgid ""
 "You can also add the :guilabel:`Language Selector` to the :guilabel:`Header`"
 " of your page. To do so, click the :guilabel:`Header` block and go to the "
 ":guilabel:`Navbar` section to edit the :guilabel:`Language Selector`."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:70
+#: ../../content/applications/websites/website/configuration/translate.rst:71
 msgid "Translate your website"
 msgstr "Tradurre il proprio sito web"
 
-#: ../../content/applications/websites/website/configuration/translate.rst:72
+#: ../../content/applications/websites/website/configuration/translate.rst:73
 msgid ""
 "Select your desired language from the language selector to see your content "
 "in another language. Then, click the :guilabel:`Translate` button in the "
@@ -7551,7 +7700,7 @@ msgid ""
 "translate what has not been translated automatically by Odoo."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:76
+#: ../../content/applications/websites/website/configuration/translate.rst:77
 msgid ""
 "Translated text strings are highlighted in green; text strings that were not"
 " translated automatically are highlighted in yellow."
@@ -7561,7 +7710,7 @@ msgstr ""
 msgid "Entering the translation mode"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:82
+#: ../../content/applications/websites/website/configuration/translate.rst:83
 msgid ""
 "In this mode, you can only translate text. To change the page's structure, "
 "you must edit the master page, i.e., the page in the original language of "
@@ -7569,23 +7718,25 @@ msgid ""
 "to all translated versions."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:86
+#: ../../content/applications/websites/website/configuration/translate.rst:87
 msgid ""
 "To replace the original text with the translation, click the block, edit its"
-" contents, and save."
+" contents, and :guilabel:`Save`."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:89
+#: ../../content/applications/websites/website/configuration/translate.rst:91
 msgid ""
-"When a website supports multiple languages, the content is accessible "
-"through different URLs, depending on the language selected. For example, "
-"`https://www.mywebsite.com/shop/product/my-product-1` is the URL to the "
-"master page, in English, while "
-"`https://www.mywebsite.com/fr_FR/shop/product/mon-produit-1` is the URL to "
-"the French version of the same page."
+"When a website supports multiple languages, the core URL structure remains "
+"consistent across languages, while specific elements like product names or "
+"categories are translated. For example, "
+"`https://www.mywebsite.com/shop/product/my-product-1` is the English version"
+" of a product page, while `https://www.mywebsite.com/fr/shop/product/mon-"
+"produit-1` is the French version of the same page. The structure "
+"(/shop/product/) stays unchanged, but the translated elements (e.g., product"
+" name) adapt to the selected language."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:96
+#: ../../content/applications/websites/website/configuration/translate.rst:99
 msgid ""
 "Once the desired language is installed, you can translate some items from "
 "the backend (e.g., the product's name in the product form). To do so, click "
@@ -7593,30 +7744,30 @@ msgid ""
 "translate and add the translation."
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:101
+#: ../../content/applications/websites/website/configuration/translate.rst:104
 msgid "Content visibility by language"
 msgstr "Visibilità contenuto per lingua"
 
-#: ../../content/applications/websites/website/configuration/translate.rst:103
+#: ../../content/applications/websites/website/configuration/translate.rst:106
 msgid ""
 "You can hide content (such as images or videos, for example) depending on "
 "the language. To do so:"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:105
+#: ../../content/applications/websites/website/configuration/translate.rst:108
 msgid "Click :guilabel:`Edit` and select an element of your website;"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:106
+#: ../../content/applications/websites/website/configuration/translate.rst:109
 msgid "Go to the :guilabel:`Text - Image` section and :guilabel:`Visibility`;"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:107
+#: ../../content/applications/websites/website/configuration/translate.rst:110
 msgid ""
 "Click :guilabel:`No condition` and select :guilabel:`Conditionally` instead;"
 msgstr ""
 
-#: ../../content/applications/websites/website/configuration/translate.rst:108
+#: ../../content/applications/websites/website/configuration/translate.rst:111
 msgid ""
 "Go to :guilabel:`Languages` to configure the condition(s) to apply by "
 "selecting :guilabel:`Visible for` or :guilabel:`Hidden for`, and click "
