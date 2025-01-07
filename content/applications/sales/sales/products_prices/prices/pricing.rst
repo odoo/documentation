@@ -10,35 +10,19 @@ quantity sold, and more) in order to apply certain prices or discounts.
 
 Pricelists suggest certain prices, but they can always be overridden on the sales order.
 
-Pricing strategy options
+Pricelists configuration
 ========================
 
-To choose a pricing strategy, first navigate to :menuselection:`Sales app --> Configuration -->
-Settings`. In the :guilabel:`Pricing` section, click the checkbox next to the :guilabel:`Pricelists`
-feature.
-
-Doing so reveals two additional options beneath it: :guilabel:`Multiple prices per product` and
-:guilabel:`Advanced price rules (discounts, formulas)`. A link labeled :guilabel:`Pricelists` also
-appears, which leads to a separate pricelists page, wherein pricelists can be created and/or
-modified.
-
-- :guilabel:`Multiple prices per product`: provides the option to set several different prices per
-  product.
-- :guilabel:`Advanced price rules (discounts, formulas)`: provides the option to create detailed
-  price rules and apply discounts, margins, and roundings.
+To enable pricelists in the Odoo **Sales** app, first navigate to :menuselection:`Sales app -->
+Configuration --> Settings`. In the :guilabel:`Pricing` section, tick the checkbox next to the
+:guilabel:`Pricelists` feature, and click :guilabel:`Save` to save all changes.
 
 .. image:: pricing/pricelist-feature-setting.png
    :align: center
    :alt: How the pricelist feature setting looks in Odoo Sales.
 
-After clicking the checkbox beside the :guilabel:`Pricelists` feature, select one of those two
-options, then click :guilabel:`Save` to save all changes.
-
-Pricelists
-==========
-
 After activating and saving the :guilabel:`Pricelists` feature, the :guilabel:`Settings` page
-reloads and, from here, either select the :guilabel:`Pricelists` link (beneath the
+reloads. From here, either select the :guilabel:`Pricelists` link (beneath the
 :guilabel:`Pricelists` feature on the :guilabel:`Settings` page), or navigate to
 :menuselection:`Sales app --> Products --> Pricelists`.
 
@@ -50,87 +34,100 @@ modified at any time.
    :alt: How the pricelists page looks in Odoo Sales.
 
 .. important::
-   The order of the pricelists on the :guilabel:`Pricelists` page has an impact on how they are
-   applied. If several pricelists share the same criteria, **only** the first listed pricelist is
-   applied.
-
-   For example, for two pricelists with different rules, but same criteria (e.g., same website, same
-   country), only the *first* pricelist in the list is applied.
+   If there is no specific pricelist configured on a sales quotation, the :guilabel:`Default`
+   pricelist will be applied.
 
 .. note::
-   The :guilabel:`Public Pricelist` is the default pricelist used with Odoo *Sales* and *eCommerce*.
-   This pricelist is applied by default, if there are no matching criteria.
+   The :guilabel:`Selectable` column is only applicable to Odoo **eCommerce**. This option allows
+   website visitors to choose a pricelist when shopping in your **eCommerce** website.
 
 .. note::
-   In Odoo 17 (and above), it is no longer required to have a pricelist entered in the
-   :guilabel:`Pricelist` field on a quotation form in order to confirm it (i.e. turn it into a sales
-   order).
+   In Odoo 17 (and above), you are *not required* to enter a pricelist in the :guilabel:`Pricelist`
+   field on a sales quotation form in order to confirm it (i.e. turn it into a sales order).
 
-   It should also be noted that, in Odoo 17 (and above), a chatter section can be found on pricelist
-   forms, which enhances the ability to communicate about them.
+   The chatter section is available in Odoo 17 and above on pricelist forms, which allows you to add
+   notes and communications on each pricelist page.
 
-From the :guilabel:`Pricelists` page, either select the desired pricelist to edit, or click
+From the :guilabel:`Pricelists` page, either select the pricelist you would like to edit, or click
 :guilabel:`New` to create a new pricelist, which reveals a blank pricelist form that can be
 configured in a number of different ways.
 
-.. image:: pricing/pricelist-detail-form.png
+.. image:: pricing/18-sales-new-pricelist-form.png
    :align: center
    :alt: How the pricelist detail form looks in Odoo Sales.
 
-When creating a new pricelist, start by adding a name for the pricelist at the top of the form, in
-the blank field. Next, select which :guilabel:`Currency` should be used.
+When creating a new pricelist, start by adding a name for the pricelist at the blank field at top of
+the form. Next, select which :guilabel:`Currency` should be used.
 
-Then, if working in a multi-company environment, select which company this pricelist should apply to
+If working in a multi-company environment, select which company this pricelist should apply to
 in the :guilabel:`Company` field. If this field is left blank, the pricelist is automatically
 applied to all companies in the database.
+
+If working in a multinational company, select the countries where this pricelist will apply under
+the :guilabel:`Country Groups` column.
+
+If working in a multinational company, select the countries where this pricelist will apply under
+the :guilabel:`Country Groups` column.
 
 Price Rules tab
 ---------------
 
-The :guilabel:`Price Rules` tab functionality on a pricelist form varies depending on the
-:guilabel:`Pricelists` setting chosen: either :guilabel:`Multiple prices per product` or
-:guilabel:`Advanced price rules (discounts, formulas)`.
+In the :guilabel:`Price Rules` tab, you can select which products or product categories to apply
+this pricelist. Click on :guilabel:`Add a line`, which opens a new pricelist rules form. From here,
+select whether to apply this set of rules to a :guilabel:`Product` or :guilabel:`Category`.
 
-However, the :guilabel:`Time-based rules` tab and :guilabel:`Configuration` tab are always the same,
-regardless of the chosen :guilabel:`Pricelists` setting.
+There are several configuration options:
 
-Multiple prices per product
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- :guilabel:`Product`: Select one or more products to which this pricelist will apply.
+- :guilabel:`Category`: Select one or more product categories to which this pricelist will apply.
+- :guilabel:`Price Type`: Select whether the specialized pricing will fall under
+  :guilabel:`Discount`, :guilabel:`Formula`, or :guilabel:`Fixed Price`. Depending on the price
+  type, there will be additional configurations on how to apply the pricelist.
 
-With the :guilabel:`Multiple prices per product` setting activated, the :guilabel:`Price Rules` tab
-on pricelist forms provides the option to add specific products, with a specific price, to a
-pricelist.
+  - :guilabel:`Discount`: Enter the percentage to be discounted.
+  - :guilabel:`Formula`: Calculate the pricelist rules based the following configuration:
 
-To add a specific product and price to a pricelist form, click the :guilabel:`Price Rules` tab, then
-click :guilabel:`Add a line` in the :guilabel:`Products` column. Then, select the desired product
-for which a specific price should be applied.
+    - :guilabel:`Discount`: Percentage discount to be applied.
+    - :guilabel:`Round off to`: Numerical value to act as round-off multiple, to be applied after
+      discount.
+    - :guilabel:`Extra Fee`: Fixed amount to be added or subtracted once :guilabel:`Discount` and
+      :guilabel:`Round off to` have been applied.
 
-Next, if necessary, select a product variant under the :guilabel:`Variants` column (e.g. a specific
-product size, color, etc.). If no variants are selected, then this price will apply to all variants
-of the product.
+  - :guilabel:`Fixed Price`: Enter fixed price for this pricelist. When applied, all product lines
+    in the quotation form will be updated to this price.
 
-If a minimum amount of the product must be purchased in order to apply the specific price, enter the
-amount under the :guilabel:`Min. Quantity` column.
+- :guilabel:`Min Qty`: Specify the minimum quantity of selected products for this pricelist to
+  apply.
+- :guilabel:`Validity Period`: Specify the start and end date during which this pricelist can be
+  applied to quotations.
+In the :guilabel:`Price Rules` tab, you can select which products or product categories to apply
+this pricelist. Click on :guilabel:`Add a line`, which opens a new pricelist rules form. From here,
+select whether to apply this set of rules to a :guilabel:`Product` or :guilabel:`Category`.
 
-To configure the price of the product for this specific pricelist, enter the desired amount under
-the :guilabel:`Price` column. Then, there is the option to add a :guilabel:`Start Date` and
-:guilabel:`End Date` to the configured product price, if desired.
+There are several configuration options:
 
-To add another product line, click :guilabel:`Add a line` again, and repeat the process. There is no
-limit to how many products can be added in the :guilabel:`Price Rules` tab of a pricelist form.
+- :guilabel:`Product`: Select one or more products to which this pricelist will apply.
+- :guilabel:`Category`: Select one or more product categories to which this pricelist will apply.
+- :guilabel:`Price Type`: Select whether the specialized pricing will fall under
+  :guilabel:`Discount`, :guilabel:`Formula`, or :guilabel:`Fixed Price`. Depending on the price
+  type, there will be additional configurations on how to apply the pricelist.
 
-For more information, check out the following section: :ref:`Multiple prices per product
-<sales/multiple-prices-per-product>`.
+  - :guilabel:`Discount`: Enter the percentage to be discounted.
+  - :guilabel:`Formula`: Calculate the pricelist rules based the following configuration:
 
-Advanced price rules
-~~~~~~~~~~~~~~~~~~~~
+    - :guilabel:`Discount`: Percentage discount to be applied.
+    - :guilabel:`Round off to`: Numerical value to act as round-off multiple, to be applied after
+      discount.
+    - :guilabel:`Extra Fee`: Fixed amount to be added or subtracted once :guilabel:`Discount` and
+      :guilabel:`Round off to` have been applied.
 
-With the :guilabel:`Advanced price rules (discounts, formulas)` setting activated, the
-:guilabel:`Price Rules` tab on pricelist forms provides the option to configure detailed price rules
-based on formulas.
+  - :guilabel:`Fixed Price`: Enter fixed price for this pricelist. When applied, all product lines
+    in the quotation form will be updated to this price.
 
-Check out the :ref:`Advanced price rules (discounts, formulas) <sales/advanced-price-rules>` section
-for detailed steps on how to add advanced price rules to a pricelist.
+- :guilabel:`Min Qty`: Specify the minimum quantity of selected products for this pricelist to
+  apply.
+- :guilabel:`Validity Period`: Specify the start and end date during which this pricelist can be
+  applied to quotations.
 
 Recurring Prices tab
 --------------------
