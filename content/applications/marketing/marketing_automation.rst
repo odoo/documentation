@@ -4,6 +4,8 @@
 Marketing Automation
 ====================
 
+Test.
+
 The Odoo *Marketing Automation* application enables users to create dynamic campaigns with actions
 that automatically occur within a defined duration, such as sending a series of timed mass emails or
 engaging with leads based on their interactions with marketing campaigns.
