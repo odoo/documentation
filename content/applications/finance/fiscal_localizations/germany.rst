@@ -30,112 +30,6 @@ Export from Odoo to DATEV
 Provided that the German localization is installed, you can export your accounting entries
 from Odoo to DATEV from the general ledger.
 
-.. _germany/pos:
-
-Point of Sale in Germany: Technical Security System
-===================================================
-
-The **Kassensicherungsverordnung** (The Act on Protection against Manipulation of Digital Records)
-requires that electronic record-keeping systems - including the :doc:`point of sale
-</applications/sales/point_of_sale>` systems - must be equipped with a **Technical Security System**
-(also called **TSS** or **TSE**).
-
-Odoo offers a service that is compliant with the help of `fiskaly <https://fiskaly.com>`_, a
-*cloud-based solution*.
-
-.. important::
-   Since this solution is cloud-based, a working internet connection is required.
-
-.. note::
-   The only VAT rates allowed are given by fiskaly. You can check these rates by consulting:
-   `fiskaly DSFinV-K API: VAT Definition
-   <https://developer.fiskaly.com/api/dsfinvk/v0/#tag/VAT-Definition>`_.
-
-Configuration
--------------
-
-Modules installation
-~~~~~~~~~~~~~~~~~~~~
-
-#. If your database was created before June 2021, :ref:`upgrade <general/upgrade>` your **Point of
-   Sale** app (`point_of_sale`) and the **Restaurant** module (`pos_restaurant`).
-#. :ref:`Install <general/install>` the **Germany - Certification for Point of Sale**
-   (`l10n_de_pos_cert`) and **Germany - Certification for Point of Sale of type restaurant**
-   (`l10n_de_pos_res_cert`) modules.
-
-   .. tip::
-      If these modules are not listed, :ref:`update the app list <general/install>`.
-
-.. image:: germany/pos-upgrade.png
-   :align: center
-   :alt: Upgrading Odoo Point of Sale from the Apps dashboard
-
-Register your company at the financial authority
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-To register your company, go to :menuselection:`Settings --> General Settings --> Companies -->
-Update Info`, fill out the following fields and *Save*.
-
-- **Company name**
-- Valid **address**
-- **VAT** number
-- **St.-Nr** (Steuernummer): this number is assigned by the tax office to every taxable natural or
-  legal person. (e.g., `2893081508152`)
-- **W-IdNr** (Wirtschafts-Identifikationsnummer): this number is used as a permanent
-  identification number for economically active persons.
-
-You can then **register your company through fiskaly** by opening the *fiskaly* tab and clicking on
-the *fiskaly Registration* button.
-
-.. tip::
-   If you do not see the *fiskaly Registration* button, make sure that you *saved* your company
-   details and are not in *editing mode* anymore.
-
-Once the registration has been finalized, the following fields appear:
-
-- :guilabel:`Fiskaly Organization ID`: refers to the ID of your company on fiskaly;
-- :guilabel:`Fiskaly API Key` and :guilabel:`Fiskaly API Secret`:
-  credentials used by the system to access the services offered by fiskaly.
-
-.. note::
-   It is possible to request new credentials if there is any issue with the current ones.
-
-Create and link a Technical Security System to your PoS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-To use your point of sale in Germany, you first have to create a :abbr:`TSS (Technical Security
-System)` for it.
-
-To do so, :ref:`access the POS settings <configuration/settings>`, select your POS`,
-scroll down to the :guilabel:`Fiskaly API section`, enable :guilabel:`Create TSS`,
-and :guilabel:`Save`.
-
-Once the TSS has been created, the following fields appear:
-
-- :guilabel:`TSS ID`: refers to the ID of your TSS on fiskaly.
-- :guilabel:`Fiskaly Client ID`: refers to your PoS on fiskaly.
-
-DSFinV-K
---------
-
-Whenever you close a PoS session, the orders' details are sent to the :abbr:`DSFinV-K (Digitale
-Schnittstelle der Finanzverwaltung für Kassensysteme)` service of fiskaly.
-
-In case of an audit, you can export the data sent to DSFinV-K by following these steps:
-
-#. Go to :menuselection:`Point of Sale --> Orders --> DSFinV-k exports` and click :guilabel:`New`.
-#. Fill in the :guilabel:`Start Datetime` and :guilabel:`End Datetime` fields.
-#. Select a :guilabel:`Point of Sale` or leave the field empty to export the data of all your points of sale.
-
-The creation of a DSFinV-K export triggers an export on fiskaly's side.
-
-.. image:: germany/dsfinv-k-export-fields.png
-   :align: center
-   :alt: Pending DSFinV-K export on Odoo
-
-The :guilabel:`State` is then set to :guilabel:`Pending`. This means that the export has been successfully
-triggered and is being processed. Click :guilabel:`Refresh State` to check if it is ready.
-
 .. _germany/gobd:
 
 GoBD compliance
@@ -296,3 +190,109 @@ What happens if you are not compliant?
 
 In the event of an infringement, you can expect a fine but also a court order demanding the
 implementation of specific measures.
+
+.. _germany/pos:
+
+Point of Sale in Germany: Technical Security System
+===================================================
+
+The **Kassensicherungsverordnung** (The Act on Protection against Manipulation of Digital Records)
+requires that electronic record-keeping systems - including the :doc:`point of sale
+</applications/sales/point_of_sale>` systems - must be equipped with a **Technical Security System**
+(also called **TSS** or **TSE**).
+
+Odoo offers a service that is compliant with the help of `fiskaly <https://fiskaly.com>`_, a
+*cloud-based solution*.
+
+.. important::
+   Since this solution is cloud-based, a working internet connection is required.
+
+.. note::
+   The only VAT rates allowed are given by fiskaly. You can check these rates by consulting:
+   `fiskaly DSFinV-K API: VAT Definition
+   <https://developer.fiskaly.com/api/dsfinvk/v0/#tag/VAT-Definition>`_.
+
+Configuration
+-------------
+
+Modules installation
+~~~~~~~~~~~~~~~~~~~~
+
+#. If your database was created before June 2021, :ref:`upgrade <general/upgrade>` your **Point of
+   Sale** app (`point_of_sale`) and the **Restaurant** module (`pos_restaurant`).
+#. :ref:`Install <general/install>` the **Germany - Certification for Point of Sale**
+   (`l10n_de_pos_cert`) and **Germany - Certification for Point of Sale of type restaurant**
+   (`l10n_de_pos_res_cert`) modules.
+
+   .. tip::
+      If these modules are not listed, :ref:`update the app list <general/install>`.
+
+.. image:: germany/pos-upgrade.png
+   :align: center
+   :alt: Upgrading Odoo Point of Sale from the Apps dashboard
+
+Register your company at the financial authority
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To register your company, go to :menuselection:`Settings --> General Settings --> Companies -->
+Update Info`, fill out the following fields and *Save*.
+
+- **Company name**
+- Valid **address**
+- **VAT** number
+- **St.-Nr** (Steuernummer): this number is assigned by the tax office to every taxable natural or
+  legal person. (e.g., `2893081508152`)
+- **W-IdNr** (Wirtschafts-Identifikationsnummer): this number is used as a permanent
+  identification number for economically active persons.
+
+You can then **register your company through fiskaly** by opening the *fiskaly* tab and clicking on
+the *fiskaly Registration* button.
+
+.. tip::
+   If you do not see the *fiskaly Registration* button, make sure that you *saved* your company
+   details and are not in *editing mode* anymore.
+
+Once the registration has been finalized, the following fields appear:
+
+- :guilabel:`Fiskaly Organization ID`: refers to the ID of your company on fiskaly;
+- :guilabel:`Fiskaly API Key` and :guilabel:`Fiskaly API Secret`:
+  credentials used by the system to access the services offered by fiskaly.
+
+.. note::
+   It is possible to request new credentials if there is any issue with the current ones.
+
+Create and link a Technical Security System to your PoS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To use your point of sale in Germany, you first have to create a :abbr:`TSS (Technical Security
+System)` for it.
+
+To do so, :ref:`access the POS settings <configuration/settings>`, select your POS`,
+scroll down to the :guilabel:`Fiskaly API section`, enable :guilabel:`Create TSS`,
+and :guilabel:`Save`.
+
+Once the TSS has been created, the following fields appear:
+
+- :guilabel:`TSS ID`: refers to the ID of your TSS on fiskaly.
+- :guilabel:`Fiskaly Client ID`: refers to your PoS on fiskaly.
+
+DSFinV-K
+--------
+
+Whenever you close a PoS session, the orders' details are sent to the :abbr:`DSFinV-K (Digitale
+Schnittstelle der Finanzverwaltung für Kassensysteme)` service of fiskaly.
+
+In case of an audit, you can export the data sent to DSFinV-K by following these steps:
+
+#. Go to :menuselection:`Point of Sale --> Orders --> DSFinV-k exports` and click :guilabel:`New`.
+#. Fill in the :guilabel:`Start Datetime` and :guilabel:`End Datetime` fields.
+#. Select a :guilabel:`Point of Sale` or leave the field empty to export the data of all your points of sale.
+
+The creation of a DSFinV-K export triggers an export on fiskaly's side.
+
+.. image:: germany/dsfinv-k-export-fields.png
+   :align: center
+   :alt: Pending DSFinV-K export on Odoo
+
+The :guilabel:`State` is then set to :guilabel:`Pending`. This means that the export has been successfully
+triggered and is being processed. Click :guilabel:`Refresh State` to check if it is ready.
