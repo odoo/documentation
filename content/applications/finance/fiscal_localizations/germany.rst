@@ -5,19 +5,18 @@ Germany
 German Chart of Accounts
 ========================
 
-Both the SKR03 and SKR04 charts of accounts are supported in Odoo. You can select your
-preferred option by navigating to :menuselection:`Accounting --> Configuration` and then
-choosing the desired package in the Fiscal Localization section. Please note that you can
-only change the accounting package if you have not yet created any accounting entries.
+Both the SKR03 and SKR04 charts of accounts are supported in Odoo. To select your
+preferred option, go to :menuselection:`Accounting --> Configuration --> Settings`
+and select the desired package in the :guilabel:`Fiscal Localization` section.
 
-.. tip::
+.. note::
+   - The SK03 chart of accounts is installed by default.
+   - Selecting another package is only possible if no accounting entry has been posted.
 
-    The SKR03 chart of accounts is installed by default.
-
-German Accounting Reports
+German accounting reports
 =========================
 
-These German-specific reports are available on Odoo Enterprise:
+The following German-specific reports are available:
 
 - Balance Sheet
 - Profit & Loss
@@ -29,7 +28,7 @@ Export from Odoo to DATEV
 =========================
 
 Provided that the German localization is installed, you can export your accounting entries
-from Odoo to DATEV from the General Ledger.
+from Odoo to DATEV from the general ledger.
 
 .. _germany/pos:
 
@@ -88,23 +87,15 @@ Update Info`, fill out the following fields and *Save*.
 You can then **register your company through fiskaly** by opening the *fiskaly* tab and clicking on
 the *fiskaly Registration* button.
 
-.. image:: germany/fiskaly-registration.png
-   :align: center
-   :alt: Button to register a company through fiskaly in Odoo
-
 .. tip::
    If you do not see the *fiskaly Registration* button, make sure that you *saved* your company
    details and are not in *editing mode* anymore.
 
-Once the registration has been finalized, new fields appear:
+Once the registration has been finalized, the following fields appear:
 
-- **fiskaly organization ID** refers to the ID of your company at the fiskaly side.
-- **fiskaly API key** and **secret** are the credentials the system uses to access the services
-  offered by fiskaly.
-
-.. image:: germany/fiskaly-keys.png
-   :align: center
-   :alt: fiskaly keys as displayed on Odoo
+- :guilabel:`Fiskaly Organization ID`: refers to the ID of your company on fiskaly;
+- :guilabel:`Fiskaly API Key` and :guilabel:`Fiskaly API Secret`:
+  credentials used by the system to access the services offered by fiskaly.
 
 .. note::
    It is possible to request new credentials if there is any issue with the current ones.
@@ -112,61 +103,43 @@ Once the registration has been finalized, new fields appear:
 Create and link a Technical Security System to your PoS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: germany/create-tss.png
-   :align: right
-   :alt: Create TSS option from a point of sale
-
 To use your point of sale in Germany, you first have to create a :abbr:`TSS (Technical Security
 System)` for it.
 
-To do so, go to :menuselection:`Point of Sale --> Configuration --> Point of Sale`, open the point
-of sale you want to edit, then check the box next to **Create TSS** and *Save*.
+To do so, :ref:`access the POS settings <configuration/settings>`, select your POS`,
+scroll down to the :guilabel:`Fiskaly API section`, enable :guilabel:`Create TSS`,
+and :guilabel:`Save`.
 
-.. image:: germany/tss-ids.png
-   :align: right
-   :alt: Example of TSS ID and Client ID from fiskaly in Odoo Point of Sale
+Once the TSS has been created, the following fields appear:
 
-Once the creation of the TSS is successful, you can find your **TSS ID** and **Client ID** under the
-*fiskaly API* section.
-
-- **TSS ID** refers to the ID of your TSS at fiskaly's side.
-- **Client ID** refers to your PoS but at fiskaly's side.
+- :guilabel:`TSS ID`: refers to the ID of your TSS on fiskaly.
+- :guilabel:`Fiskaly Client ID`: refers to your PoS on fiskaly.
 
 DSFinV-K
 --------
 
-.. image:: germany/dsfinv-k-export.png
-   :align: right
-   :alt: Menu to export DSFinV-K
-
 Whenever you close a PoS session, the orders' details are sent to the :abbr:`DSFinV-K (Digitale
 Schnittstelle der Finanzverwaltung für Kassensysteme)` service of fiskaly.
 
-In case of an audit, you can export the data sent to DSFinV-K by going to :menuselection:`Point of
-Sale --> Orders --> DSFinV-k exports`.
+In case of an audit, you can export the data sent to DSFinV-K by following these steps:
 
-These fields are mandatory:
+#. Go to :menuselection:`Point of Sale --> Orders --> DSFinV-k exports` and click :guilabel:`New`.
+#. Fill in the :guilabel:`Start Datetime` and :guilabel:`End Datetime` fields.
+#. Select a :guilabel:`Point of Sale` or leave the field empty to export the data of all your points of sale.
 
-- **Name**
-- **Start Datetime** (export data with dates larger than or equal to the given start date)
-- **End Datetime** (export data with dates smaller than or equal to the given end date)
-
-Leave the **Point of Sale** field blank if you want to export the data of all your points of sale.
-Specify a Point of Sale if you want to export this specific PoS' data only.
-
-The creation of a DSFinV-K export triggers on export at fiskaly's side.
+The creation of a DSFinV-K export triggers an export on fiskaly's side.
 
 .. image:: germany/dsfinv-k-export-fields.png
    :align: center
    :alt: Pending DSFinV-K export on Odoo
 
-As you can see, the **State** is *Pending*. This means that the export has been successfully
-triggered and is being processed. You have to click on *Refresh State* to check if it is ready.
+The :guilabel:`State` is then set to :guilabel:`Pending`. This means that the export has been successfully
+triggered and is being processed. Click :guilabel:`Refresh State` to check if it is ready.
 
 .. _germany/gobd:
 
-Odoo is GoBD compliant
-======================
+GoBD compliance
+===============
 
 **GoBD** stands for *Grundsätze zur ordnungsmäßigen Führung und Aufbewahrung von Büchern,
 Aufzeichnungen und Unterlagen in elektronischer Form sowie zum Datenzugriff*.
@@ -185,11 +158,6 @@ hosting, paperless companies, etc.).
 
 What do you need to know about GoBD when relying on accounting software?
 ------------------------------------------------------------------------
-
-.. note::
-   If you can, the best way to understand GoBD is to read the `official GoBD text
-   <https://ao.bundesfinanzministerium.de/ao/2021/Anhaenge/BMF-Schreiben-und-gleichlautende-Laendererlasse/Anhang-64/anhang-64.html>`_.
-   It is a bit long but quite readable for non-experts. But in short, here is what to expect:
 
 The **GoBD is binding for companies that have to present accounts, which includes SMEs, freelancers,
 and entrepreneurs, to the financial authorities**. As such, **the taxpayer himself is the sole
