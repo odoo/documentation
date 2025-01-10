@@ -828,6 +828,16 @@ Domain (`domain`)
 
     - Supported field types: `char`
 
+  Options:
+
+    - `model`: the name of the char field encoding the `res_model` on which the domain applies.
+
+    - `foldable` (default: `false`): if true, the domain field is rendered compactly and unfolds
+      itself upon user interaction.
+
+    - `in_dialog` (default: `false`): if true, the widget opens a dialog when the user wants to edit
+      the domain whereas by default, the domain editor is rendered just below the value.
+
 Link button (`link_button`)
     The `LinkButton` widget actually simply displays a span with an icon and the
     text value as content. The link is clickable and will open a new browser
