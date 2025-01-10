@@ -26,19 +26,17 @@ In order to use reordering rules for a product, it must first be correctly confi
 navigating to :menuselection:`Inventory app --> Products --> Products`, then select an existing
 product, or create a new one by clicking :guilabel:`New`.
 
-On the product form, under the :guilabel:`General Information` tab, make sure the :guilabel:`Product
-Type` is set to :guilabel:`Storable Product`. This is necessary because Odoo only tracks stock
-quantities for storable products, and this number is used to trigger reordering rules.
+On the product form, under the :guilabel:`General Information` tab, make sure the
+:guilabel:`Track Inventory` checkbox is ticked. This is necessary for Odoo to track the product's
+stock levels and trigger reordering rules.
 
 .. image:: reordering_rules/product-type.png
-   :align: center
    :alt: Set the Product Type as Storable.
 
 Next, click on the :guilabel:`Inventory` tab and select one or more routes from the
 :guilabel:`Routes` section. Doing so tells Odoo which route to use to replenish the product.
 
 .. image:: reordering_rules/select-routes.png
-   :align: center
    :alt: Select one or more routes on the Inventory tab.
 
 If the product is reordered using the :guilabel:`Buy` route, confirm that the :guilabel:`Can be
@@ -47,7 +45,6 @@ appear. Click on the :guilabel:`Purchase` tab, and specify at least one vendor, 
 they sell the product for, so that Odoo knows which company the product should be purchased from.
 
 .. image:: reordering_rules/specify-vendor.png
-   :align: center
    :alt: Specify a vendor and price on the Purchase tab.
 
 If the product is replenished using the :guilabel:`Manufacture` route, it needs to have at least one
@@ -59,29 +56,39 @@ If a :abbr:`BoM (Bill of Materials)` does not already exist for the product, sel
 :guilabel:`New` to configure a new :abbr:`BoM (Bill of Materials)`.
 
 .. image:: reordering_rules/bom-smart-button.png
-   :align: center
    :alt: The Bill of Materials smart button on a product form.
 
 Create new reordering rules
 ===========================
 
-To create a new reordering rule, navigate to :menuselection:`Inventory app --> Configuration -->
-Reordering Rules`, then click :guilabel:`New`, and fill out the new line as follows:
+To create a new reordering rule, navigate to :menuselection:`Inventory app --> Operations -->
+Replenishment`, then click :guilabel:`New`, and fill out the following fields for the new reordering
+rule line item:
 
 - :guilabel:`Product`: The product that is replenished by the rule.
 - :guilabel:`Location`: The location where the product is stored.
-- :guilabel:`Min Quantity`: The minimum quantity that can be forecasted without the rule being
+- :guilabel:`Min`: The minimum quantity that can be forecasted without the rule being
   triggered. When forecasted stock falls below this number, a replenishment order for the product is
   created.
-- :guilabel:`Max Quantity`: The maximum quantity that stock is replenished up to.
-- :guilabel:`Multiple Quantity`: Specify if the product should be replenished in batches of a
-  certain quantity (e.g., a product could be replenished in batches of 20).
+- :guilabel:`Max`: The maximum quantity at which the stock is replenished.
+- :guilabel:`To Order`: The number of units, according to the *UoM*, that should be replenished for
+  this reordering rule (e.g., a product could be replenished in batches of 20).
 - :guilabel:`UoM`: The unit of measure used for reordering the product. This value can simply be
   `Units` or a specific unit of measurement for weight, length, etc.
 
 .. image:: reordering_rules/reordering-rule-form.png
-   :align: center
    :alt: The form for creating a new reordering rule.
+
+.. note::
+   Two other fields are automatically populated: :guilabel:`On Hand` (the number of units currently
+   available in inventory) and :guilabel:`Forecast` (the number of units expected to be available in
+   inventory after all orders are taken into account). These numbers will only change when an
+   :doc:`inventory adjustment <../inventory_management/count_products>` is made.
+
+   Also, additional fields can be accessed by clicking the :icon:`oi-settings-adjust`
+   :guilabel:`(additional options slider icon)`. For example, :guilabel:`Multiple Quantity`
+   specifies if the product should be replenished in batches of a certain quantity (e.g., a product
+   could be replenished in batches of 20).
 
 .. tip::
    Reordering rules can also be created from each product form. To do so, navigate to
@@ -137,7 +144,6 @@ In the :guilabel:`Min Quantity` field and :guilabel:`Max Quantity` field, leave 
 `0.00`. In the :guilabel:`To Order` field, enter a value of `1.00`.
 
 .. image:: reordering_rules/001-rule.png
-   :align: center
    :alt: A 0/0/1 reordering rule.
 
 With the reordering rule configured using these values, each time an |SO| causes the forecasted
@@ -183,7 +189,6 @@ titles, and enable the :guilabel:`Trigger` option from the additional options dr
 appears.
 
 .. image:: reordering_rules/enable-trigger.png
-   :align: center
    :alt: Enable the Trigger field by toggling it in the additional options menu
 
 In the :guilabel:`Trigger` column, select :guilabel:`Auto` or :guilabel:`Manual`. Refer to the
@@ -215,7 +220,6 @@ Automatic reordering rules, configured by setting the reordering rule's :guilabe
    :guilabel:`Forecast` is `55.00`, the reordering rule is **not** triggered.
 
    .. image:: reordering_rules/auto.png
-      :align: center
       :alt: Show automatic reordering rule from the Reordering Rule page.
 
 If the :guilabel:`Buy` route is selected, then an :abbr:`RFQ (Request for Quotation)` is generated.
@@ -252,7 +256,6 @@ When a product appears on the replenishment dashboard, clicking the :guilabel:`O
 generates the purchase or manufacturing order with the specified amounts :guilabel:`To Order`.
 
 .. image:: reordering_rules/manual.png
-   :align: center
    :alt: Click the Order Once button on the replenishment dashboard to replenish stock.
 
 .. _inventory/product_management/visibility-days:
@@ -284,11 +287,10 @@ advance.
    is February 27th.
 
    .. image:: reordering_rules/need-dates.png
-      :align: center
       :alt: Graphic representing when the need appears on the replenishment dashboard: Feb 27th.
 
-   To see the product on the replenishment dashboard for the current date, February 20, set
-   the :guilabel:`Visibility Days` to `7.00`.
+   To see the product on the replenishment dashboard for the current date, February 20, set the
+   :guilabel:`Visibility Days` to `7.00`.
 
 To determine the amount of visibility days needed to see a product on the replenishment dashboard,
 subtract *today's date* from the *date the need appears* on the replenishment dashboard.
@@ -307,7 +309,6 @@ subtract *today's date* from the *date the need appears* on the replenishment da
    the need **not** appearing on the replenishment dashboard.
 
    .. image:: reordering_rules/visibility-days.png
-      :align: center
       :alt: Show the replenishment dashboard with the correct and incorrect visibility days set.
 
 .. _inventory/product_management/route:
@@ -332,7 +333,6 @@ Click inside of the column on the row of a reordering rule, and a drop-down menu
 routes for that rule. Select one to set it as the preferred route.
 
 .. image:: reordering_rules/select-preferred-route.png
-   :align: center
    :alt: Select a preferred route from the drop-down.
 
 .. important::
