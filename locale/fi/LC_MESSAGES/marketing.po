@@ -17,6 +17,7 @@
 # Jarmo Kortetjärvi <jarmo.kortetjarvi@gmail.com>, 2024
 # Ossi Mantylahti <ossi.mantylahti@obs-solutions.fi>, 2024
 # Tuomo Aura <tuomo.aura@web-veistamo.fi>, 2024
+# Martti Valto, 2025
 # 
 #, fuzzy
 msgid ""
@@ -25,7 +26,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-02 12:38+0000\n"
 "PO-Revision-Date: 2023-11-08 08:57+0000\n"
-"Last-Translator: Tuomo Aura <tuomo.aura@web-veistamo.fi>, 2024\n"
+"Last-Translator: Martti Valto, 2025\n"
 "Language-Team: Finnish (https://app.transifex.com/odoo/teams/41243/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -884,6 +885,11 @@ msgid ""
 "using the front-end rich text editor that accepts forward slash `/` "
 "commands."
 msgstr ""
+"Jos haluat rakentaa sähköpostin alusta alkaen ilman "
+"rakennuspalikkaelementtejä, valitse :guilabel:\"Plain Text\" -malli. Kun "
+"valittuna, Odoo tarjoaa täysin tyhjän sähköpostipohjan, jota voidaan "
+"mukauttaa useilla tavoilla käyttämällä käyttöliittymän rich text editoria, "
+"joka hyväksyy vinoviivan `/`-komennot."
 
 #: ../../content/applications/marketing/email_marketing.rst:471
 msgid ""
@@ -891,12 +897,18 @@ msgid ""
 ":guilabel:`Plain Text` template, a drop-down menu of various design elements"
 " appears, which can be used to create the desired email design."
 msgstr ""
+"Kun `/` kirjoitetaan sähköpostin tyhjään runkoon, kun käytät "
+":guilabel:`Plain Text` -mallia, näkyviin tulee erilaisten "
+"suunnitteluelementtien pudotusvalikko, jota voidaan käyttää halutun "
+"sähköpostimallin luomiseen."
 
 #: ../../content/applications/marketing/email_marketing.rst:0
 msgid ""
 "View of the rich text editor drop-down in the Odoo Email Marketing "
 "application."
 msgstr ""
+"Näkymä Odoo Email Marketing -sovelluksen avattavasta Rich Text Editor "
+"-valikosta."
 
 #: ../../content/applications/marketing/email_marketing.rst:482
 msgid "A/B Tests tab"
@@ -908,12 +920,17 @@ msgid ""
 "the only option available is :guilabel:`Allow A/B Testing`. This is **not** "
 "a required option."
 msgstr ""
+"Aluksi, kun :guilabel:`A/B-testit`-välilehti avataan sähköpostilomakkeella, "
+"ainoa käytettävissä oleva vaihtoehto on :guilabel:`Salli A/B-testit`. Tämä "
+"**ei** ole pakollinen vaihtoehto."
 
 #: ../../content/applications/marketing/email_marketing.rst:487
 msgid ""
 "If this option is enabled, recipients are only mailed *once* for the "
 "entirety of the campaign."
 msgstr ""
+"Jos tämä vaihtoehto on käytössä, vastaanottajille lähetetään postia vain "
+"*kerran* koko kampanjan ajan."
 
 #: ../../content/applications/marketing/email_marketing.rst:489
 msgid ""
@@ -922,6 +939,10 @@ msgid ""
 "formats, layouts, content, and so on -- without any duplicate messages being"
 " sent."
 msgstr ""
+"Näin käyttäjä voi lähettää saman postituksen eri versioita satunnaisesti "
+"valituille vastaanottajille arvioidakseen eri mallien, formaattien, "
+"ulkoasujen, sisällön ja niin edelleen tehokkuutta - ilman, että lähetetään "
+"päällekkäisiä viestejä."
 
 #: ../../content/applications/marketing/email_marketing.rst:493
 msgid ""
@@ -2103,6 +2124,10 @@ msgid ""
 "Refer to the database's actual stage names in the *CRM* app's pipeline to "
 "complete this step, accordingly."
 msgstr ""
+"Tässä vaiheessa oletetaan, että *New*-, *Qualified*- ja *Won*-vaiheet ovat "
+"CRM-liukuhihnassa; taiteilijanimet voivat kuitenkin vaihdella "
+"yrityskohtaisesti. Katso tietokannan todelliset näyttämönimet "
+"*CRM*-sovelluksen prosessissa suorittaaksesi tämän vaiheen vastaavasti"
 
 #: ../../content/applications/marketing/email_marketing/lost_leads_email.rst:126
 msgid ""
@@ -2112,17 +2137,25 @@ msgid ""
 ":guilabel:`New`, :guilabel:`Qualified` and :guilabel:`Won` stages to define "
 "the rule's parameters."
 msgstr ""
+"Aloita uudelleen napsauttamalla :guilabel:`Uusi sääntö` ja valitse "
+":guilabel:`Vaihe` ensimmäisen kentän avattavasta valikosta. Valitse toisessa"
+" kentässä operaattori :guilabel:`is not in` ja kolmannesta kentästä "
+":guilabel:`New`, :guilabel:`Qualified` ja :guilabel:`Voitti`-vaiheet "
+"määrittääksesi säännön. parametrit."
 
 #: ../../content/applications/marketing/email_marketing/lost_leads_email.rst:131
 msgid ""
 "When the rule is added in this way, the logic in the third field renders as "
 ":code:`OR` (`|`) statements."
 msgstr ""
+"Kun sääntö lisätään tällä tavalla, kolmannen kentän logiikka esitetään "
+":code:`OR` (`|`) -lausekkeina."
 
 #: ../../content/applications/marketing/email_marketing/lost_leads_email.rst-1
 msgid ""
 "Include multiple Stages in the filtering rule, using the \"is in\" operator."
 msgstr ""
+"Sisällytä useita vaiheita suodatussääntöön ”is in” operaattorin avulla."
 
 #: ../../content/applications/marketing/email_marketing/lost_leads_email.rst:139
 msgid ""
@@ -2132,12 +2165,20 @@ msgid ""
 "method, however, only allows for one selection at a time, which can be "
 "useful for quickly turning on/off filters in the :guilabel:`Search...` bar."
 msgstr ""
+"Toinen tapa lisätä Stage sääntöjä on tehdä se yksi sääntö per rivi "
+"-periaatteella käyttäen :guilabel:contains tai :guilabel:does not contain "
+"operaattoreita ja kirjoittamalla määrittävät merkit jokaisen stage-nimen "
+"kohdalle käsin. Tämä menetelmä kuitenkin sallii vain yhden valinnan "
+"kerrallaan, mikä voi olla hyödyllistä suodattimien nopeassa päälle/pois "
+"kytkemisessä :guilabel:Search... palkissa."
 
 #: ../../content/applications/marketing/email_marketing/lost_leads_email.rst:0
 msgid ""
 "Three filter rules requiring that the Stage does not contain New, Qualified,"
 " or Won."
 msgstr ""
+"Kolme suodatussääntöä, jotka edellyttävät, että Vaihe ei sisällä Uusia, "
+"Hyväksytty- tai Voitettuja."
 
 #: ../../content/applications/marketing/email_marketing/lost_leads_email.rst:151
 msgid "Lost Reason"
@@ -2149,6 +2190,9 @@ msgid ""
 "should **not** be targeted for specific :doc:`lost reasons "
 "<../../sales/crm/pipeline/lost_opportunities>`."
 msgstr ""
+"Lisää seuraavaksi yksi tai useampi :guilabel:\"Lost Reason\" -sääntö "
+"sulkeaksesi pois liidejä, joita **ei** pitäisi kohdistaa tiettyihin "
+":doc:`lost reasons <../../sales/crm/pipeline/lost_opportunities>`."
 
 #: ../../content/applications/marketing/email_marketing/lost_leads_email.rst:156
 msgid ""
@@ -2159,6 +2203,12 @@ msgid ""
 "field to enter a lost reason (or multiple lost reasons, depending on your "
 "operator choice) to include in the rule."
 msgstr ""
+"Tätä varten luo jälleen uusi :guilabel:`New Rule`. Valitse sitten säännön "
+"ensimmäiseen kenttään :guilabel:`Lost Reason` pudotusvalikosta. Valitse "
+"operaattoriksi joko :guilabel:`is not in` tai :guilabel:`does not contain` "
+"pudotusvalikosta. Jos valitset kumman tahansa, kirjoita kolmanteen kenttään "
+"sääntöön sisällytettävä kadonneen syy (tai useita kadonneen syitä "
+"operaattorin valinnasta riippuen)."
 
 #: ../../content/applications/marketing/email_marketing/lost_leads_email.rst:162
 msgid ""
@@ -2166,6 +2216,9 @@ msgid ""
 "preceding steps to add more lost reasons, as needed, where each lost reason "
 "occupies one rule row at a time."
 msgstr ""
+"Jos valitset :guilabel:`does not contain`-operaattorin, toista edelliset "
+"vaiheet lisätäksesi lisää kadonneita syitä tarpeen mukaan, jolloin jokainen "
+"kadonnut syy vie yhden sääntörivin kerrallaan."
 
 #: ../../content/applications/marketing/email_marketing/lost_leads_email.rst:165
 msgid ""
@@ -2173,12 +2226,17 @@ msgid ""
 ":ref:`select appropriate lost reasons "
 "<email_marketing/select_lost_reasons>`."
 msgstr ""
+"Lisätietoja saat alla olevasta osiosta, jossa kerrotaan, miten "
+":ref:`valitaan sopivat kadonneet syyt "
+"<email_marketing/select_lost_reasons>`."
 
 #: ../../content/applications/marketing/email_marketing/lost_leads_email.rst-1
 msgid ""
 "A list of filter rules that exclude all lost reasons other than the desired "
 "reason."
 msgstr ""
+"Luettelo suodatinsäännöistä, jotka sulkevat pois kaikki muut menetetyt syyt "
+"kuin haluttu syy."
 
 #: ../../content/applications/marketing/email_marketing/lost_leads_email.rst:175
 msgid "Active"
@@ -2189,6 +2247,8 @@ msgid ""
 "Finally, add a pair of :guilabel:`Active` filters to include both active and"
 " inactive leads for the campaign."
 msgstr ""
+"Lisää lopuksi pari :guilabel:`Active`-suodatinta, jotta kampanjaan voidaan "
+"sisällyttää sekä aktiiviset että inaktiiviset liidit."
 
 #: ../../content/applications/marketing/email_marketing/lost_leads_email.rst:181
 msgid ""
@@ -2197,6 +2257,11 @@ msgid ""
 "greatly impacts the number of targetable records for the email campaign, and"
 " does **not** include a complete or accurate lost leads audience."
 msgstr ""
+"Sekä aktiivisten * että* ei-aktiivisten liiditietueiden lisääminen on "
+"välttämätöntä, jotta tietokantaan voidaan tallentaa kaikki kadonneet liidit."
+" Toisen tekeminen ilman toista vaikuttaa suuresti sähköpostikampanjan "
+"kohdistettavien tietueiden määrään, eikä se **ei** sisällä täydellistä tai "
+"tarkkaa menetettyjen liidien yleisöä."
 
 #: ../../content/applications/marketing/email_marketing/lost_leads_email.rst:186
 msgid ""
@@ -2207,6 +2272,13 @@ msgid ""
 " select the :guilabel:`Active` parameter from the drop-down menu. The rule "
 "then automatically fills out to read: :guilabel:`Active` *is* `set`."
 msgstr ""
+"Napsauta ensin :guilabel:`(Add Branch)` -kuvaketta viimeksi luodussa "
+"säännössä (esim. :guilabel:`Lost Reason`), joka on sääntörivin oikealla "
+"puolella olevien kolmen kuvakkeen keskellä. Tämä lisää parin "
+":guilabel:\"joka tahansa\" sääntöä. Valitse sitten juuri luodun haaran "
+"ylimmän säännön ensimmäisessä kentässä avattavasta valikosta parametri "
+":guilabel:`Active. Sääntö täyttyy sitten automaattisesti lukemaan: "
+":guilabel:`Active` *is* `set`."
 
 #: ../../content/applications/marketing/email_marketing/lost_leads_email.rst:192
 msgid ""
@@ -2215,16 +2287,22 @@ msgid ""
 " :guilabel:`is not` from the operator drop-down menu in the second field. "
 "The rule should then read: :guilabel:`Active` *is not* `set`."
 msgstr ""
+"Valitse haaran alimman säännön ensimmäiseksi kenttään avattavasta valikosta "
+"uudelleen :guilabel:`Active`. Tällä kertaa valitse kuitenkin toisen kentän "
+"avattavasta operaattorivalikosta :guilabel:`is not`. Säännön pitäisi sitten "
+"olla seuraava: :guilabel:`Active` *is not* `set`."
 
 #: ../../content/applications/marketing/email_marketing/lost_leads_email.rst-1
 msgid ""
 "A pair of Match Any Of filter rules that include both active and inactive "
 "leads."
 msgstr ""
+"Pari Match Any Of -suodatussääntöä, jotka sisältävät sekä aktiiviset että "
+"inaktiiviset liidit."
 
 #: ../../content/applications/marketing/email_marketing/lost_leads_email.rst:201
 msgid "Add body content"
-msgstr ""
+msgstr "Lisää vartalosisältöä"
 
 #: ../../content/applications/marketing/email_marketing/lost_leads_email.rst:203
 msgid ""
@@ -2235,6 +2313,12 @@ msgid ""
 " Marketing* :ref:`documentation on how to create an email "
 "<email_marketing/create_email>`."
 msgstr ""
+"Nyt kanssa sähköpostikampanjan verkkotunnusosio on valmis, luo sähköpostin "
+"runkosisältö millä tahansa valmiiksi tehty tyylitellyistä malleista tai "
+"valitse :guilabel:`Pelateksti` tai :guilabel:`Aloita tyhjästä` "
+"-vaihtoehdoista saadaksesi lisää. rakeinen ohjaus. Katso lisätietoja "
+"*Sähköpostimarkkinointi* :ref:`dokumentaatiosta sähköpostin luomiseen "
+"<email_marketing/create_email>`."
 
 #: ../../content/applications/marketing/email_marketing/lost_leads_email.rst:209
 msgid ""
@@ -2242,6 +2326,9 @@ msgid ""
 "Filter 💾 (floppy disk)`, enter a name (such as `Lost Leads`), and click "
 ":guilabel:`Add`."
 msgstr ""
+"Tallenna suodatinsarja myöhempää käyttöä varten napsauttamalla "
+":guilabel:`Tallenna suosikkisuodattimeksi 💾 (levyke)`, kirjoita nimi (kuten "
+"`Lost Leads`) ja napsauta :guilabel:`Lisää`."
 
 #: ../../content/applications/marketing/email_marketing/lost_leads_email.rst:0
 msgid ""
@@ -10915,10 +11002,13 @@ msgid ""
 "environment to avoid this issue. If a page gets de-autenticated, simply "
 "remove the stream, and re-establish it."
 msgstr ""
+"Varmista siis, että lisäät *kaikkien* yritysten *kaikkien* sivujen sivut "
+"usean yrityksen ympäristössä, jotta vältät tämän ongelman. Jos sivulta "
+"poistetaan tunnistus, poista virta ja luo se uudelleen."
 
 #: ../../content/applications/marketing/social_marketing/social_posts.rst:172
 msgid "Create and post social media content"
-msgstr ""
+msgstr "Luo ja julkaise sosiaalisen median sisältöä"
 
 #: ../../content/applications/marketing/social_marketing/social_posts.rst:174
 msgid ""

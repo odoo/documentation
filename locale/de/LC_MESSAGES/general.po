@@ -3474,7 +3474,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_domain.rst:63
 msgid "DKIM (DomainKeys Identified Mail)"
-msgstr ""
+msgstr "DKIM (DomainKeys Identified Mail)"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:65
 msgid ""
@@ -3492,18 +3492,29 @@ msgid ""
 "domain name. If the signature and the key contained in the record match, it "
 "proves the message is authentic and has not been altered during transport."
 msgstr ""
+"Wenn Sie eine E-Mail versenden, fügt der Odoo-E-Mail-Server eine eindeutige "
+":abbr:`DKIM (DomainKeys Identified Mail)`-Signatur in die Kopfzeile ein. Der"
+" Server des Empfängers entschlüsselt diese Signatur mit Hilfe des DKIM-"
+"Datensatzes im Domainnamen der Datenbank. Wenn die Signatur und der im "
+"Datensatz enthaltene Schlüssel übereinstimmen, bestätigt dies, dass die "
+"Nachricht authentisch ist und während des Transports nicht verändert wurde."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:72
 msgid ""
 "Enabling DKIM is **required** when sending emails **from a custom domain** "
 "using the Odoo email server."
 msgstr ""
+"Die Aktivierung von DKIM ist **erforderlich**, wenn  E-Mails über einen "
+"Odoo-E-Mail-Server **von einer benutzerdefinierten Domain** gesendet werden."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:75
 msgid ""
 "To enable DKIM, add a :abbr:`CNAME (Canonical Name)` record to the "
 ":abbr:`DNS (Domain Name System)` zone of the domain name:"
 msgstr ""
+"Um DKIM zu aktivieren, fügen Sie einen :abbr:`CNAME (Canonical "
+"Name)`-Datensatz in die :abbr:`DNS (Domain Name System)`-Zone des "
+"Domainnamens ein:"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:83
 msgid ""
@@ -3511,6 +3522,9 @@ msgid ""
 "`odoo._domainkey.company-name.com` whose canonical name is "
 "`odoo._domainkey.odoo.com.`."
 msgstr ""
+"Wenn der Domainname `unternehmensname.com` lautet, stellen Sie sicher, dass "
+"Sie eine Unterdomain `odoo._domainkey.meinunternehmen.com` erstellen, deren "
+"kanonischer Name `odoo._domainkey.odoo.com.` lautet."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:86
 msgid ""
@@ -3518,6 +3532,9 @@ msgid ""
 "the DNS zone of the domain name. The :ref:`most common providers <email-"
 "domain-providers-documentation>` and their documentation are listed below."
 msgstr ""
+"Wie Sie einen CNAME-Datensatz erstellen oder ändern, hängt von dem Provider "
+"ab, der die DNS-Zone des Domainnamens hostet. Die :ref:`gängigsten Provider "
+"<email-domain-providers-documentation>` sind unter aufgelistet."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:90
 msgid ""
@@ -3530,6 +3547,7 @@ msgstr ""
 #: ../../content/applications/general/email_communication/email_domain.rst:97
 msgid "DMARC (Domain-based Message Authentication, Reporting and Conformance)"
 msgstr ""
+"DMARC (Domain-based Message Authentication, Reporting and Conformance)"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:99
 msgid ""
@@ -3539,6 +3557,12 @@ msgid ""
 "contained in the DMARC record of a domain name tell the destination server "
 "what to do with an incoming email that fails the SPF and/or DKIM check."
 msgstr ""
+"Der :abbr:`DMARC (Domain-based Message Authentication, Reporting, & "
+"Conformance)`-Datensatz ist ein Protokoll, das :abbr:`SPF (Sender Policy "
+"Framework)` und :abbr:`DKIM (DomainKeys Identified Mail)` vereinigt. Die "
+"Anweisungen, die im DMARC-Datensatz eines Domainnamens enthalten sind, "
+"teilen dem Zielserver mit, was mit einer eingehenden E-Mail geschehen soll, "
+"die die SPF- und/oder DKIM-Prüfung nicht besteht."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:105
 msgid ""
@@ -3550,7 +3574,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_domain.rst:109
 msgid "There are three DMARC policies:"
-msgstr ""
+msgstr "Es gibt drei DMARC-Richtlinien:"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:111
 msgid "`p=none`"
@@ -3569,6 +3593,9 @@ msgid ""
 "`p=quarantine` and `p=reject` instruct the server that receives an email to "
 "quarantine that email or ignore it if the SPF or DKIM check fails."
 msgstr ""
+"`p=quarantine` und `p=reject` weisen den Server, der eine E-Mail empfängt, "
+"an, diese E-Mail unter Quarantäne zu stellen oder zu ignorieren, wenn die "
+"SPF- und/oder DKIM-Prüfung fehlschlägt."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:119
 msgid ""
@@ -3589,6 +3616,9 @@ msgid ""
 "`p=none` is used for the domain owner to receive reports about entities "
 "using their domain. It should not impact the deliverability."
 msgstr ""
+"`p=none` wird für den Besitzer der Domain verwendet, um Berichte über "
+"Einrichtungen zu erhalten, die ihre Domain verwenden. Es sollte keine "
+"Auswirkungen auf die Zustellbarkeit haben."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:130
 msgid ""
@@ -3596,10 +3626,13 @@ msgid ""
 "rua=mailto:postmaster@example.com”` means that aggregate DMARC reports will "
 "be sent to `postmaster\\@example.com`."
 msgstr ""
+":literal:`_dmarc IN TXT “v=DMARC1; p=none; "
+"rua=mailto:postmaster@example.com”` bedeutet, dass aggregierte DMARC-"
+"Berichte an `postmaster\\@example.com` gesendet werden."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:137
 msgid "SPF, DKIM and DMARC documentation of common providers"
-msgstr ""
+msgstr "SPF-, DKIM- und DMARC-Dokumentation der gängigen Anbieter"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:139
 msgid ""
@@ -3620,6 +3653,8 @@ msgid ""
 "`GoDaddy CNAME record <https://www.godaddy.com/help/add-a-cname-"
 "record-19236>`_"
 msgstr ""
+"`GoDaddy-CNAME-Datensatz <https://www.godaddy.com/help/add-a-cname-"
+"record-19236>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:142
 msgid ""
@@ -3627,6 +3662,9 @@ msgid ""
 "<https://www.namecheap.com/support/knowledgebase/article.aspx/317/2237/how-"
 "do-i-add-txtspfdkimdmarc-records-for-my-domain/>`_"
 msgstr ""
+"`NameCheap "
+"<https://www.namecheap.com/support/knowledgebase/article.aspx/317/2237/how-"
+"do-i-add-txtspfdkimdmarc-records-for-my-domain/>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:143
 msgid ""
@@ -3642,6 +3680,9 @@ msgid ""
 "us/articles/360002101888-Adding-custom-DNS-records-to-your-Squarespace-"
 "managed-domain>`_"
 msgstr ""
+"`Squarespace-DNS-Datensätze <https://support.squarespace.com/hc/en-"
+"us/articles/360002101888-Adding-custom-DNS-records-to-your-Squarespace-"
+"managed-domain>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:145
 msgid ""
@@ -3685,7 +3726,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:12
 msgid "Email aliases"
-msgstr ""
+msgstr "E-Mail-Aliasse"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:17
 msgid "Model specific aliases"
@@ -3844,7 +3885,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:109
 msgid "Receive emails with Odoo's default configuration"
-msgstr ""
+msgstr "E-Mails erhalten mit Odoos Standardkonfiguration"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:111
 msgid ""
@@ -4272,6 +4313,12 @@ msgid ""
 " `commercial` alias, with a different domain, and therefore, creates a "
 "ticket/lead/opportunity/etc."
 msgstr ""
+"Wenn Odoo E-Mails mit dem Präfix-Alias `kommerziell` empfängt, die in den "
+"Absender-, Empfänger- oder :abbr:`CC (Carbon Copy)`-E-Mail-Adressen (z. B. "
+"kommerziell\\beispiel.com) den Aliasnamen `kommerziell` enthalten, behandelt"
+" die Datenbank die E-Mail fälschlicherweise als den vollständigen Alias "
+"`commercial` (mit einer anderen Domain) und erstellt daher ein "
+"Ticket/Lead/Verkaufschance/etc."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:343
 msgid ""
@@ -4281,6 +4328,11 @@ msgid ""
 ":guilabel:`New`. Then, type in `mail.catchall.domain.allowed` for the "
 ":guilabel:`Key` field."
 msgstr ""
+"Um den Systemparameter `mail.catchall.domain.allowed` hinzuzufügen, "
+"aktivieren Sie zunächst den :ref:`Entwicklermodus <developer-mode>`. Gehen "
+"Sie dann zu :menuselection:`Einstellungen --> Technisch --> "
+"Systemparameter`. Klicken Sie auf :guilabel:`Neu`. Geben Sie dann "
+"`mail.catchall.domain.allowed` in das Feld :guilabel:`Schlüssel` ein."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:347
 msgid ""
@@ -4288,10 +4340,13 @@ msgid ""
 "Manually :icon:`fa-cloud-upload` :guilabel:`(Save)`, and the system "
 "parameter takes immediate effect."
 msgstr ""
+"Als nächstes fügen Sie in das Feld :guilabel:`Wert` die Domains durch Kommas"
+" getrennt ein. Klicken Sie manuell auf :icon:`fa-cloud-upload` "
+":guilabel:`(Speichern)`, und der Systemparameter wird sofort wirksam."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst-1
 msgid "mail.catchall.domain.allowed system parameter set."
-msgstr ""
+msgstr "Systemparameter mail.catchall.domain.allowed eingestellt"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:354
 msgid "Local-part based incoming detection"
@@ -4305,6 +4360,13 @@ msgid ""
 "Odoo requires the whole email address to match for routing an incoming "
 "email."
 msgstr ""
+"Beim Erstellen eines neuen Alias gibt es die Option, die "
+":guilabel:`Erkennung des Eingangs eines lokalen Elements` zu aktivieren. "
+"Wenn diese Option aktiviert ist, muss bei Odoo nur das lokale Element "
+"übereinstimmen, damit eine eingehende E-Mail weitergeleitet werden kann. "
+"Wenn diese Funktion deaktiviert ist, muss bei Odoo die gesamte E-Mail-"
+"Adresse übereinstimmen, damit eine eingehende E-Mail weitergeleitet werden "
+"kann."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:3
 msgid "Manage outbound messages"
@@ -4312,13 +4374,15 @@ msgstr "Ausgehende Nachrichten verwalten"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:8
 msgid "Sending emails with Odoo's default configuration"
-msgstr ""
+msgstr "E-Mails senden mit Odoos Standardkonfiguration"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:10
 msgid ""
 "On **Odoo Online** and **Odoo.sh**, sending and receiving emails works out "
 "of the box. No configuration is required."
 msgstr ""
+"In **Odoo Online** und **Odoo.sh** funktioniert das Senden und Empfangen von"
+" E-Mails sofort. Es ist keine Konfiguration erforderlich."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:13
 msgid ""
@@ -4326,6 +4390,10 @@ msgid ""
 " send and receive emails. The deliverability is optimized for this subdomain"
 " as it uses Odoo’s DNS configuration."
 msgstr ""
+"Wenn eine Datenbank erstellt wird, wird die Subdomain "
+"`unternehmensname.odoo.com` zum Senden und Empfangen von E-Mails verwendet. "
+"Die Zustellbarkeit ist für diese Subdomain optimiert, da sie die DNS-"
+"Konfiguration von Odoo verwendet."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:17
 msgid ""
@@ -4333,6 +4401,9 @@ msgid ""
 "configurations are the default ones, all emails will be sent from "
 "`notifications@company-name.odoo.com`."
 msgstr ""
+"Wenn die Subdomain der Datenbank `unternehmensname.odoo.com` lautet und alle"
+" Mailing-Konfigurationen die Standardeinstellungen sind, werden alle E-Mails"
+" von `benachrichtigungen@unternehmensname.odoo.com` gesendet."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst-1
 msgid "Odoo’s default outbound messages configuration."
@@ -4563,7 +4634,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:140
 msgid "Personalized mail servers"
-msgstr ""
+msgstr "Personalisierte Mailserver"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:142
 msgid ""
@@ -4813,7 +4884,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:297
 msgid "Notification system"
-msgstr ""
+msgstr "Benachrichtigungssystem"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:299
 msgid ""
@@ -4978,7 +5049,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/faq.rst-1
 msgid "Example of a sending failure."
-msgstr ""
+msgstr "Beispiel eines Sendefehlers"
 
 #: ../../content/applications/general/email_communication/faq.rst:70
 msgid ""

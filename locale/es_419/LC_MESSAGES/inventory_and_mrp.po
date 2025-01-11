@@ -6,8 +6,8 @@
 # Translators:
 # Tiffany Chang, 2024
 # Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2024
-# Fernanda Alvarez, 2025
 # Wil Odoo, 2025
+# Fernanda Alvarez, 2025
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-30 16:06+0000\n"
 "PO-Revision-Date: 2023-11-08 08:57+0000\n"
-"Last-Translator: Wil Odoo, 2025\n"
+"Last-Translator: Fernanda Alvarez, 2025\n"
 "Language-Team: Spanish (Latin America) (https://app.transifex.com/odoo/teams/41243/es_419/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -6079,10 +6079,10 @@ msgid ""
 " :menuselection:`Inventory app --> Products --> Products`, and selecting the"
 " desired product."
 msgstr ""
-"Las cantidades disponibles y previstas de un producto almacenable, basadas "
-"en los pedidos entrantes y salientes, se reflejan en el formulario de "
-"producto, el cual puede ver en :menuselection:`la aplicación Inventario --> "
-"Productos --> Productos`, seleccione el producto deseado."
+"Las cantidades a la mano y pronosticadas de un producto almacenable, basadas"
+" en las órdenes entrantes y salientes, aparecen en el formulario del "
+"producto. Para verlo, vaya a :menuselection:`Inventario --> Productos --> "
+"Productos` y seleccione el producto deseado."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:127
 msgid "Show \"On Hand\" and \"Forecast\" smart buttons."
@@ -30119,7 +30119,7 @@ msgstr ":doc:`../../../manufacturing/advanced_configuration/sub_assemblies`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:3
 msgid "Reordering rules"
-msgstr "Reglas de reabastecimiento"
+msgstr "Reglas de reordenamiento"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:9
 msgid ""
@@ -30242,6 +30242,13 @@ msgid ""
 "Materials` smart button at the top of the product form, then click "
 ":guilabel:`New` to configure a new :abbr:`BoM (Bill of Materials)`."
 msgstr ""
+"Si el producto se reabastece con la ruta :guilabel:`Fabricación`, debe tener"
+" asociada al menos una lista de materiales (LdM). Esto es necesario porque "
+"Odoo solo crea órdenes de fabricación para los productos que tienen una "
+":abbr:`LdM (Lista de materiales)`. Si el producto no tiene una, haga clic en"
+" el botón inteligente :guilabel:`Lista de materiales` ubicado en la parte "
+"superior del formulario del producto, después haga clic en :guilabel:`Nuevo`"
+" para configurar una nueva :abbr:`LdM (Lista de materiales)`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst-1
 msgid "The Bill of Materials smart button on a product form."
@@ -30258,6 +30265,9 @@ msgid ""
 "--> Operations --> Replenishment`, then click :guilabel:`New`, and fill out "
 "the following fields for the new reordering rule line item:"
 msgstr ""
+"Vaya a :menuselection:`Inventario --> Operaciones --> Reabastecimiento` para"
+" crear una nueva regla de reordenamiento. Haga clic en :guilabel:`Nuevo` y "
+"complete los siguientes campos:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:67
 msgid ":guilabel:`Product`: The product that is replenished by the rule."
@@ -30269,6 +30279,8 @@ msgid ""
 ":guilabel:`Route`: The :doc:`supply chain route "
 "<../../shipping_receiving/daily_operations/use_routes>` for this product"
 msgstr ""
+":guilabel:`Ruta`: La :doc:`ruta de cadena de suministro "
+"<../../shipping_receiving/daily_operations/use_routes>` del producto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:70
 msgid ""
@@ -30285,12 +30297,16 @@ msgid ""
 ":guilabel:`Max Quantity`: The maximum quantity at which the stock is "
 "replenished."
 msgstr ""
+":guilabel:`Cantidad máxima`: La cantidad máxima de reabastecimiento de las "
+"existencias."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:74
 msgid ""
 ":guilabel:`To Order`: The number of units, according to the *UoM* that "
 "should be replenished for this reordering rule."
 msgstr ""
+":guilabel:`Por ordenar`: El número de unidades, según la *UdM*, que debe "
+"reabastecerse para esta regla de reordenamiento."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:76
 msgid ""
@@ -30298,6 +30314,9 @@ msgid ""
 "This value can simply be `Units` or a more specific unit of measurement for "
 "weight, length, etc."
 msgstr ""
+":guilabel:`UdM`: La *unidad de medida* que se utiliza para reordenar el "
+"producto. Este valor puede ser `unidades` o una unidad de medida más "
+"específica para peso, longitud, etc."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:80
 msgid ""
@@ -30308,6 +30327,12 @@ msgid ""
 ":doc:`inventory adjustment <../inventory_management/count_products>` is "
 "made."
 msgstr ""
+"Hay otros dos campos que se completan de manera automática: :guilabel:`A la "
+"mano` (el número de unidades que están disponibles en el inventario en ese "
+"momento) y :guilabel:`Pronóstico` (el número de unidades que se espera que "
+"estén disponibles en el inventario después de considerar todas las órdenes)."
+" Estos números solo cambiarán cuando haga un :doc:`ajuste de inventario "
+"<../inventory_management/count_products>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:86
 msgid ""
@@ -30317,6 +30342,11 @@ msgid ""
 " in batches of a certain quantity (e.g., a product could be replenished in "
 "batches of 20)."
 msgstr ""
+"Puede acceder a otros campos si hace clic en el icono :icon:`oi-settings-"
+"adjust` :guilabel:`(opciones adicionales)`. Por ejemplo, :guilabel:`Cantidad"
+" múltiple` especifica si el producto debe reabastecerse en lotes de una "
+"cantidad determinada (por ejemplo, reabastecer un producto en lotes de 20 "
+"unidades)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst-1
 msgid "The form for creating a new reordering rule."
@@ -35926,6 +35956,8 @@ msgid ""
 ":guilabel:`Capacity`: the number of products that can be processed at the "
 "work center simultaneously"
 msgstr ""
+":guilabel:`Capacidad`: El número de productos que se pueden procesar de "
+"manera simultánea en el centro de trabajo."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:47
 msgid ":guilabel:`OEE Target`: the target for efficiency at the work center"
@@ -51541,7 +51573,7 @@ msgstr "Configuración necesaria para los productos que se pueden comprar."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:39
 msgid "Vendor pricelist"
-msgstr "Lista de precios del proveedor"
+msgstr "Listas de precios del proveedor"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:41
 msgid ""
