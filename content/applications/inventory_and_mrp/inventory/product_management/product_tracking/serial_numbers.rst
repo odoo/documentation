@@ -140,8 +140,8 @@ serial number.
 
 .. _inventory/product_management/incoming-outgoing-products:
 
-Create serial numbers to incoming or outgoing products
-------------------------------------------------------
+Create serial numbers for incoming or outgoing products
+-------------------------------------------------------
 
 Serial numbers can be assigned to both incoming and outgoing goods. The receipt and delivery order
 forms mirror one another; the instructions below can be followed to assign serial numbers in either
@@ -296,6 +296,43 @@ the desired serial numbers for each individual product.
 
 When finished, click the receipt/delivery order's breadcrumbs, and the assigned serial numbers are
 automatically saved.
+
+Display serial numbers on delivery slips
+========================================
+
+When selling products tracked using serial numbers, it is possible to include the serial numbers on
+the delivery slips sent to customers. This can be helpful to customers in cases where serial numbers
+are needed, such as filing an RMA or repair request, or registering the product.
+
+To include serial numbers on delivery slips, open the :menuselection:`Inventory` app, and navigate
+to :menuselection:`Configuration --> Settings`. Scroll down to the :guilabel:`Traceability` section,
+tick the :guilabel:`Display Lots & Serial Numbers on Delivery Slips` checkbox, and click
+:guilabel:`Save`.
+
+After enabling the :guilabel:`Display Lots & Serial Numbers on Delivery Slips` setting, serial
+numbers are listed on delivery slips for products tracked by serial numbers, once the delivery order
+is validated.
+
+To view serial numbers on delivery orders and delivery slips, navigate to the
+:menuselection:`Inventory` app, click on :guilabel:`Delivery Orders`, and select an order containing
+a product tracked using serial numbers.
+
+To view the serial numbers of products included in the order, make sure the :guilabel:`Operations`
+tab is selected, then click the :icon:`oi-settings-adjust` :guilabel:`(adjust)` icon to the right of
+the tab. Ensure that the :guilabel:`Serial Numbers` checkbox is ticked, which causes a
+:guilabel:`Serial Numbers` column to appear. The serial number(s) for each product included in the
+order are displayed in this column.
+
+When the order is ready to be processed, click :guilabel:`Validate` to confirm the delivery and add
+product information to the delivery slip.
+
+At the top of the order's form, click the :icon:`fa-cog` :guilabel:`(Actions)` button, and select
+:menuselection:`Print --> Delivery Slip`. The delivery slip is then downloaded. Open the delivery
+slip using the device's browser or file manager. Serial numbers are listed next to their respective
+products in the :guilabel:`Lot/Serial Number` column.
+
+.. image:: serial_numbers/delivery-slip.png
+   :alt: The order lines section of a delivery slip, showing a product and its serial number.
 
 Traceability & reporting
 ========================
