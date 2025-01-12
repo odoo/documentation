@@ -14,7 +14,7 @@
 # Martin Trigaux, 2023
 # Wil Odoo, 2024
 # Felix Schubert <felix.schubert@go-erp.com>, 2024
-# Larissa Manderfeld, 2024
+# Larissa Manderfeld, 2025
 # 
 #, fuzzy
 msgid ""
@@ -23,7 +23,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-30 14:12+0000\n"
 "PO-Revision-Date: 2022-10-04 12:53+0000\n"
-"Last-Translator: Larissa Manderfeld, 2024\n"
+"Last-Translator: Larissa Manderfeld, 2025\n"
 "Language-Team: German (https://app.transifex.com/odoo/teams/41243/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -9563,6 +9563,9 @@ msgid ""
 "amount due on the invoice. Multiple payments on the same invoice are "
 "possible."
 msgstr ""
+"Wenn eine Zahlung **mit einer Rechnung verknüpft** ist, verringert/berechnet"
+" sie den fälligen Rechnungsbetrag. Für dieselbe Rechnung sind mehrere "
+"Zahlungen möglich."
 
 #: ../../content/applications/finance/accounting/payments.rst:13
 msgid ""
@@ -9571,6 +9574,10 @@ msgid ""
 " with a vendor. Those outstanding amounts reduce/settle unpaid "
 "invoices/bills."
 msgstr ""
+"Wenn eine Zahlung **nicht mit einer Rechnung** verknüpft ist, hat der Kunde "
+"ein ausstehendes Guthaben bei dem Unternehmen oder das Unternehmen hat eine "
+"ausstehende Belastung bei einem Lieferanten. Diese ausstehenden Beträge "
+"reduzieren/begleichen unbezahlte Rechnungen."
 
 #: ../../content/applications/finance/accounting/payments.rst:18
 msgid ":doc:`Internal transfers <payments/internal_transfers>`"
@@ -9585,6 +9592,8 @@ msgid ""
 "`Odoo Tutorials: Bank Configuration <https://www.odoo.com/slides/slide/bank-"
 "configuration-6832>`_"
 msgstr ""
+"`Odoo-Tutorials: Bankkonfiguration <https://www.odoo.com/slides/slide/bank-"
+"configuration-6832>`_"
 
 #: ../../content/applications/finance/accounting/payments.rst:26
 msgid "Registering payment from an invoice or bill"
@@ -9601,6 +9610,15 @@ msgid ""
 "transaction line, the invoice or vendor bill changes to the :guilabel:`Paid`"
 " status."
 msgstr ""
+"Wenn Sie in einer Kunden- oder Lieferantenrechnung auf :guilabel:`Zahlung "
+"registrieren` klicken, wird eine neue Journalbuchung erstellt und der "
+"fällige Betrag entsprechend der Höhe der Zahlung geändert. Der Gegenwert "
+"wird in einem Konto für :ref:`ausstehende <bank/outstanding-accounts>` "
+"**Eingänge** oder **Zahlungen** ausgewiesen. Zu diesem Zeitpunkt wird die "
+"Kunden- oder Lieferantenrechnung als :guilabel:`In Zahlung` gekennzeichnet. "
+"Wenn dann das ausstehende Konto mit einer Kontoauszugszeile abgeglichen "
+"wird, wechselt die Rechnung oder Lieferantenrechnung in den Status "
+":guilabel:`Bezahlt`."
 
 #: ../../content/applications/finance/accounting/payments.rst:35
 msgid ""
@@ -9608,6 +9626,10 @@ msgid ""
 "displays more information about the payment. To access additional "
 "information, such as the related journal, click :guilabel:`View`."
 msgstr ""
+"Das Informationssymbol :icon:`fa-info-circle` neben der Zahlungszeile zeigt "
+"weitere Informationen über die Zahlung an. Klicken Sie auf "
+":guilabel:`Ansicht`, um zusätzliche Informationen, wie z. B. das zugehörige "
+"Journal, aufzurufen."
 
 #: ../../content/applications/finance/accounting/payments.rst-1
 msgid "See detailed information of a payment."
@@ -9626,6 +9648,8 @@ msgid ""
 "If a payment is unreconciled, it still appears in the books but is no longer"
 " linked to the invoice."
 msgstr ""
+"Wenn eine Zahlung nicht abgestimmt wurde, erscheint sie weiterhin in den "
+"Büchern, ist aber nicht mehr mit der Rechnung verknüpft."
 
 #: ../../content/applications/finance/accounting/payments.rst:47
 msgid ""
@@ -9633,6 +9657,9 @@ msgid ""
 "automatically created to post the currency exchange gains/losses (reversal) "
 "amount."
 msgstr ""
+"Wenn eine Zahlung in einer anderen Währung (nicht) abgestimmt wird, wird "
+"automatisch eine Journalbuchung erstellt, um den Betrag der "
+"Wechselkursgewinne/-verluste (Rückbuchung) zu buchen."
 
 #: ../../content/applications/finance/accounting/payments.rst:49
 msgid ""
@@ -9640,6 +9667,9 @@ msgid ""
 "journal entry is automatically created to post the cash-basis tax (reversal)"
 " amount."
 msgstr ""
+"Wenn eine Zahlung und eine Rechnung mit Steuern mit Ist-Versteuerung (nicht)"
+" abgestimmt sind, wird automatisch eine Journalbuchung erstellt, um den "
+"Steuerbetrag mit Ist-Versteuerung (Rückbuchung) zu buchen."
 
 #: ../../content/applications/finance/accounting/payments.rst:53
 msgid ""
@@ -9648,6 +9678,10 @@ msgid ""
 "through a related bank transaction), invoices and bills are directly "
 "registered as :guilabel:`Paid`."
 msgstr ""
+"Wenn das Hauptbankkonto als :ref:`Konto für offene Rechnungen "
+"<bank/outstanding-accounts>` eingestellt ist, und die Zahlung in Odoo "
+"registriert wurde (nicht in Verbindung mit einem Kontoauszug), werden Ein- "
+"und Ausgangsrechnungen direkt als :guilabel:`Bezahlt` registriert."
 
 #: ../../content/applications/finance/accounting/payments.rst:60
 msgid "Registering payments not tied to an invoice or bill"
@@ -9662,6 +9696,11 @@ msgid ""
 "account receivable or the account payable is matched with the **outstanding "
 "account** until it is manually matched with its related invoice or bill."
 msgstr ""
+"Wenn eine neue Zahlung über das Menü :menuselection:`Kunden/Lieferanten --> "
+"Zahlungen` registriert wird, ist sie nicht direkt mit einer Rechnung "
+"verknüpft. Stattdessen wird das Debitoren- oder Kreditorenkonto mit dem "
+"Konto für **offene Rechnungen** verknüpft, bis es manuell mit der "
+"zugehörigen Rechnung abgeglichen wird."
 
 #: ../../content/applications/finance/accounting/payments.rst:70
 msgid "Matching invoices and bills with payments"
@@ -9674,6 +9713,12 @@ msgid ""
 "match it with the invoice or bill, click :guilabel:`ADD` under "
 ":guilabel:`Outstanding Credits` or :guilabel:`Outstanding Debits`."
 msgstr ""
+"Ein blaues Banner wird angezeigt, wenn Sie eine neue Ein- oder "
+"Ausgangsrechnung validieren und es eine **ausstehende Zahlung** für diesen "
+"Kunden oder Lieferanten gibt. Sie können die Ein- oder Ausgangsrechnung ganz"
+" einfach abgleichen, indem Sie unter :guilabel:`Ausstehende "
+"Verbindlichkeiten` oder :guilabel:`Ausstehende Forderungen` auf "
+":guilabel:`HINZUFÜGEN` klicken."
 
 #: ../../content/applications/finance/accounting/payments.rst-1
 msgid "Shows the ADD option to reconcile an invoice or a bill with a payment."
@@ -9686,6 +9731,8 @@ msgid ""
 "The invoice or bill is now marked as :guilabel:`In payment` until it is "
 "reconciled with its corresponding bank transaction."
 msgstr ""
+"Die Ein- oder Ausgangsrechnung wird nun als :guilabel:`In Zahlung` markiert,"
+" bis sie mit der entsprechenden Banktransaktion abgestimmt ist."
 
 #: ../../content/applications/finance/accounting/payments.rst:85
 msgid "Group payments"
@@ -9697,12 +9744,19 @@ msgid ""
 "contact into a single payment to simplify the process and improve payment "
 "usability. To register a group payment:"
 msgstr ""
+"Sammelzahlungen ermöglichen es, ausgehende und eingehende Zahlungen von "
+"derselben Kontaktperson in einer einzigen Zahlung zusammenzufassen, um den "
+"Prozess zu vereinfachen und die Benutzerfreundlichkeit zu verbessern. So "
+"registrieren Sie eine Sammelzahlung:"
 
 #: ../../content/applications/finance/accounting/payments.rst:90
 msgid ""
 "Go to :menuselection:`Accounting --> Customers --> Invoices/Credit Notes` or"
 " :menuselection:`Accounting --> Vendors --> Bills/Refunds`."
 msgstr ""
+"Gehen Sie zu :menuselection:`Buchhaltung --> Kunden --> "
+"Rechnungen/Gutschriften` oder zu :menuselection:`Buchhaltung --> Lieferanten"
+" --> Rechnungen/Rückerstattungen`."
 
 #: ../../content/applications/finance/accounting/payments.rst:92
 msgid ""
@@ -9734,6 +9788,9 @@ msgid ""
 "are reconciled with the corresponding bank transactions. The credit notes or"
 " refunds are marked as :guilabel:`Paid`."
 msgstr ""
+"Ein- oder Ausgangsrechnungen werden nun als :guilabel:`In Zahlung` markiert,"
+" bis sie mit der entsprechenden Banktransaktion abgestimmt ist. Die "
+"Gutschriften oder Rückerstattungen werden als :guilabel:`Bezahlt` markiert."
 
 #: ../../content/applications/finance/accounting/payments.rst:106
 msgid ""
@@ -9746,6 +9803,15 @@ msgid ""
 " in a batch, select them and click :menuselection:`Action --> Create Batch "
 "Payment`."
 msgstr ""
+"Mit Sammelzahlungen können Sie mehrere Zahlungen von unterschiedlichen "
+"Zahlungen gruppieren, um die :doc:`Abstimmung <bank/reconciliation>` zu "
+"erleichtern. Sie sind auch nützlich, wenn Sie :doc:`Schecks "
+"<payments/checks>` bei der Bank einreichen oder für :doc:`SEPA-Zahlungen "
+"<payments/pay_sepa>`. Gehen Sie dazu zu :menuselection:`Buchhaltung --> "
+"Kunden --> Sammelzahlungen` oder :menuselection:`Buchhaltung --> Lieferanten"
+" --> Sammelzahlungen`. In der Listenansicht der Zahlungen können Sie mehrere"
+" Zahlungen grupppieren und zu einem Stapel zusammenfassen, indem Sie auf "
+":menuselection:`Aktion --> Sammelzahlung erstellen` klicken."
 
 #: ../../content/applications/finance/accounting/payments.rst:114
 msgid ":doc:`payments/batch`"
@@ -9795,6 +9861,13 @@ msgid ""
 "contact are visible, and when a customer or vendor is selected, the "
 ":guilabel:`Reconcile` option is displayed."
 msgstr ""
+"Verwenden Sie die Funktion zur Abstimmung in Stapeln, um mehrere ausstehende"
+" Zahlungen oder Rechnungen für einen bestimmten Kunden oder Lieferanten "
+"gleichzeitig abzustimmen. Gehen Sie zu :menuselection:`Buchhaltung --> "
+"Berichtswesen --> Überfällige Forderungen / Überfällige Verbindlichkeiten`. "
+"Sie sehen nun alle Transaktionen dieses Kontakts, die noch nicht abgestimmt "
+"wurden, und wenn Sie einen Kunden oder Lieferanten auswählen, wird die "
+"Option :guilabel:`Abstimmen` angezeigt."
 
 #: ../../content/applications/finance/accounting/payments.rst-1
 msgid "See the reconcile option."
@@ -9826,6 +9899,10 @@ msgid ""
 "entry will be created to balance the accounts payable or receivable with the"
 " selected account."
 msgstr ""
+":guilabel:`Als vollständig bezahlt markieren`: Wählen Sie in diesem Fall ein"
+" Konto im Feld :guilabel:`Differenz buchen in` aus und ändern Sie bei Bedarf"
+" die :guilabel:`Bezeichnung`. Es wird eine Journalbuchung erstellt, um das "
+"Debitorenkonto mit dem ausgewählten Konto auszugleichen."
 
 #: ../../content/applications/finance/accounting/payments.rst-1
 #: ../../content/applications/finance/accounting/vendor_bills.rst-1
@@ -9834,7 +9911,7 @@ msgstr "Eine Teilzahlung registrieren"
 
 #: ../../content/applications/finance/accounting/payments.rst:173
 msgid "Reconciling payments with bank transactions"
-msgstr ""
+msgstr "Zahlungen mit Banktransaktionen abstimmen"
 
 #: ../../content/applications/finance/accounting/payments.rst:175
 msgid ""
@@ -9843,6 +9920,11 @@ msgid ""
 "<bank/reconciliation>` it with the related bank transaction line to finalize"
 " the payment workflow and mark the invoice or bill as :guilabel:`Paid`."
 msgstr ""
+"Sobald eine Zahlung registriert wurde, hat die Ein- oder Ausgangsrechnung "
+"den Status :guilabel:`In Zahlung`. Der nächste Schritt ist die "
+":doc:`Abstimmung <bank/reconciliation>` mit der entsprechenden "
+"Banktransaktion, um die Zahlung abzuschließen und die Rechnung als "
+":guilabel:`Bezahlt` zu markieren."
 
 #: ../../content/applications/finance/accounting/payments/batch.rst:3
 msgid "Batch payments by bank deposit"
