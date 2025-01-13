@@ -6,7 +6,7 @@ Connecting a payment terminal allows you to offer a fluid payment flow to your c
 the work of your cashiers.
 
 .. important::
-   - Ingenico payment terminals require an :doc:`IoT Box </applications/general/iot>`.
+   - Ingenico payment terminals require an :doc:`IoT system </applications/general/iot>`.
    - Ingenico is currently only available in Belgium, the Netherlands and Luxembourg.
    - Odoo works with the Ingenico Lane/, Desk/, and Move/ payment terminals as they support the TLV
      communication protocol through TCP/IP.
@@ -14,12 +14,12 @@ the work of your cashiers.
 Configuration
 =============
 
-Connect an IoT Box
-------------------
+Connect an IoT system
+---------------------
 
-Connecting an Ingenico payment terminal to Odoo is a feature that requires an IoT Box. For more
-information on how to connect an IoT Box to your database, please refer to the :doc:`IoT
-documentation </applications/general/iot/config/connect>`.
+Connecting an Ingenico payment terminal to Odoo is a feature that requires an IoT system. For more
+information on how to connect an IoT system to your database, please refer to the :doc:`IoT
+documentation </applications/general/iot>`.
 
 Configure the Lane/Desk/Move 5000 terminals for Ingenico BENELUX
 ----------------------------------------------------------------
@@ -29,10 +29,10 @@ Configure the Lane/Desk/Move 5000 terminals for Ingenico BENELUX
 #. Go to :menuselection:`Kassa menu --> Settings Menu` and enter the settings password.
 #. Select :guilabel:`Change Connection` and press :guilabel:`OK` on the next screen.
 #. Select :guilabel:`TCP/IP` and :guilabel:`IP-address`.
-#. On the next screen, enter the IP address of your IoT Box.
+#. On the next screen, enter the IP address of your IoT system.
 #. Enter `9000` as port number and press :guilabel:`OK` on the next screen.
 
-At this point, the terminal restarts and should be displayed in your IoT Box form in Odoo.
+At this point, the terminal restarts and should be displayed on the IoT system's form in Odoo.
 
 .. image:: ingenico/payment_terminal_02.png
    :align: center
