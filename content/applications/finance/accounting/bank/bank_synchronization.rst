@@ -11,7 +11,7 @@ To check if your bank is compatible with Odoo, go to `Odoo Accounting Features
 <https://www.odoo.com/page/accounting-features>`_, and click on
 :guilabel:`See list of supported institutions`.
 
-Odoo supports more than 25,000 institutions around the world.
+Odoo supports more than 26,000 institutions around the world.
 
 To connect to the banks, Odoo uses multiple web-services:
 
