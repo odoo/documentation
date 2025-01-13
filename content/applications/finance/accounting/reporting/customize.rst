@@ -173,7 +173,8 @@ expression's **label** (ex. **code.label**).
 `CUR` is the currency code in capital letters, and `amount` is the amount of the bound expressed in
 that currency.
 
-You can also use the `cross_report` subformula to match an expression found in another report.
+`cross_report(xml_id | report_id)`
+   Used to match an expression from another report targeted by the xml_id or the report ID itself.
 
 'Prefix of Account Codes' engine
 --------------------------------
