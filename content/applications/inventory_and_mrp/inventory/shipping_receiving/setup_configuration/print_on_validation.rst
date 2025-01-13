@@ -40,7 +40,6 @@ A *delivery slip* contains recipient and package details, usually placed inside 
 package.
 
 .. seealso::
-   - :ref:`Picking list <inventory/warehouses_storage/barcode_picking>`
    - :doc:`Tracking label <../setup_configuration/labels>`
 
 After :ref:`enabling the Delivery Slip setting <inventory/shipping_receiving/print_setup>` in the
