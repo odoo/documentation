@@ -10,8 +10,12 @@ Odoo *Sales* has a useful pricelist feature that can be tailored to fit any uniq
 Pricelists suggest certain prices, but they can always be overridden on the sales order.
 
 Pricelists configuration
+Pricelists configuration
 ========================
 
+To enable pricelists in the Odoo **Sales** app, first navigate to :menuselection:`Sales app -->
+Configuration --> Settings`. In the :guilabel:`Pricing` section, tick the checkbox next to the
+:guilabel:`Pricelists` feature, and click :guilabel:`Save` to save all changes.
 To enable pricelists in the Odoo **Sales** app, first navigate to :menuselection:`Sales app -->
 Configuration --> Settings`. In the :guilabel:`Pricing` section, tick the checkbox next to the
 :guilabel:`Pricelists` feature, and click :guilabel:`Save` to save all changes.
@@ -21,6 +25,7 @@ Configuration --> Settings`. In the :guilabel:`Pricing` section, tick the checkb
    :alt: How the pricelist feature setting looks in Odoo Sales.
 
 After activating and saving the :guilabel:`Pricelists` feature, the :guilabel:`Settings` page
+reloads. From here, either select the :guilabel:`Pricelists` link (beneath the
 reloads. From here, either select the :guilabel:`Pricelists` link (beneath the
 :guilabel:`Pricelists` feature on the :guilabel:`Settings` page), or navigate to
 :menuselection:`Sales app --> Products --> Pricelists`.
@@ -35,8 +40,12 @@ modified at any time.
 .. important::
    If there is no specific pricelist configured on a sales quotation, the :guilabel:`Default`
    pricelist will be applied.
+   If there is no specific pricelist configured on a sales quotation, the :guilabel:`Default`
+   pricelist will be applied.
 
 .. note::
+   The :guilabel:`Selectable` column is only applicable to Odoo **eCommerce**. This option allows
+   website visitors to choose a pricelist when shopping in your **eCommerce** website.
    The :guilabel:`Selectable` column is only applicable to Odoo **eCommerce**. This option allows
    website visitors to choose a pricelist when shopping in your **eCommerce** website.
 
@@ -51,19 +60,27 @@ Editing and creating pricelists
 -------------------------------
 
 From the :guilabel:`Pricelists` page, either select the pricelist you would like to edit, or click
+From the :guilabel:`Pricelists` page, either select the pricelist you would like to edit, or click
 :guilabel:`New` to create a new pricelist, which reveals a blank pricelist form that can be
 configured in a number of different ways.
 
+.. image:: pricing/18-sales-new-pricelist-form.png
 .. image:: pricing/18-sales-new-pricelist-form.png
    :align: center
    :alt: How the pricelist detail form looks in Odoo Sales.
 
 When creating a new pricelist, start by adding a name for the pricelist at the blank field at top of
 the form. Next, select which :guilabel:`Currency` should be used.
+When creating a new pricelist, start by adding a name for the pricelist at the blank field at top of
+the form. Next, select which :guilabel:`Currency` should be used.
 
+If working in a multi-company environment, select which company this pricelist should apply to
 If working in a multi-company environment, select which company this pricelist should apply to
 in the :guilabel:`Company` field. If this field is left blank, the pricelist is automatically
 applied to all companies in the database.
+
+If working in a multinational company, select the countries where this pricelist will apply under
+the :guilabel:`Country Groups` column.
 
 If working in a multinational company, select the countries where this pricelist will apply under
 the :guilabel:`Country Groups` column.
