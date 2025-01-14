@@ -2,6 +2,10 @@
 Netherlands
 ===========
 
+.. seealso::
+   :doc:`Documentation on e-invoicing’s legality and compliance in the Netherlands
+   <../accounting/customer_invoices/electronic_invoicing/netherlands>`
+
 XAF Export
 ==========
 
