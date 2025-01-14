@@ -66,40 +66,9 @@ applied to all companies in the database.
 If working in a multinational company, select the countries where this pricelist will apply under
 the :guilabel:`Country Groups` column.
 
-If working in a multinational company, select the countries where this pricelist will apply under
-the :guilabel:`Country Groups` column.
-
 Price Rules tab
 ---------------
 
-In the :guilabel:`Price Rules` tab, you can select which products or product categories to apply
-this pricelist. Click on :guilabel:`Add a line`, which opens a new pricelist rules form. From here,
-select whether to apply this set of rules to a :guilabel:`Product` or :guilabel:`Category`.
-
-There are several configuration options:
-
-- :guilabel:`Product`: Select one or more products to which this pricelist will apply.
-- :guilabel:`Category`: Select one or more product categories to which this pricelist will apply.
-- :guilabel:`Price Type`: Select whether the specialized pricing will fall under
-  :guilabel:`Discount`, :guilabel:`Formula`, or :guilabel:`Fixed Price`. Depending on the price
-  type, there will be additional configurations on how to apply the pricelist.
-
-  - :guilabel:`Discount`: Enter the percentage to be discounted.
-  - :guilabel:`Formula`: Calculate the pricelist rules based the following configuration:
-
-    - :guilabel:`Discount`: Percentage discount to be applied.
-    - :guilabel:`Round off to`: Numerical value to act as round-off multiple, to be applied after
-      discount.
-    - :guilabel:`Extra Fee`: Fixed amount to be added or subtracted once :guilabel:`Discount` and
-      :guilabel:`Round off to` have been applied.
-
-  - :guilabel:`Fixed Price`: Enter fixed price for this pricelist. When applied, all product lines
-    in the quotation form will be updated to this price.
-
-- :guilabel:`Min Qty`: Specify the minimum quantity of selected products for this pricelist to
-  apply.
-- :guilabel:`Validity Period`: Specify the start and end date during which this pricelist can be
-  applied to quotations.
 In the :guilabel:`Price Rules` tab, you can select which products or product categories to apply
 this pricelist. Click on :guilabel:`Add a line`, which opens a new pricelist rules form. From here,
 select whether to apply this set of rules to a :guilabel:`Product` or :guilabel:`Category`.
