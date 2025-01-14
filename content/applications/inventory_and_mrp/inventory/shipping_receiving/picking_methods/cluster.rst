@@ -7,16 +7,17 @@ Cluster picking
 .. |SO| replace:: :abbr:`SO (Sales Order)`
 .. |SOS| replace:: :abbr:`SOs (Sales Orders)`
 
-Cluster picking is an advanced order fulfillment approach derived from :ref:`batch picking
-<inventory/misc/batch_picking>`.
+Cluster picking is an advanced picking method that combines the efficiency of :ref:`batch picking
+<inventory/misc/batch_picking>` with immediate sorting during the picking process. It is best suited
+for warehouses with high order volumes where organization and speed are critical.
 
-In this strategy, pickers load a cart with multiple packages, each designated for a specific *sales
-order* (SO). Then, the picker travels to each storage location, and places the products directly in
-the package of the associated order.
+Unlike batch picking, which requires a separate sorting step after picking, cluster picking sorts
+items directly into designated bins or containers for each *sales order* (SO). This eliminates the
+need for post-picking consolidation, making it ideal for operations prioritizing speed and accuracy.
 
-This method is most efficient for medium-sized companies, with high order volumes, and relatively
-few unique products, since the method eliminates the need for sorting products into packages for
-customers after picking.
+Cluster picking is particularly effective in environments where immediate organization is crucial,
+and orders contain a mix of items that need precise sorting during, rather than after, the picking
+process.
 
 However, cluster picking does have some disadvantages. For instance, urgent orders cannot be
 prioritized, and optimized batches must be manually created beforehand. As a result, the picking
@@ -41,7 +42,6 @@ process can lead to bottlenecks.
    where the packages are sealed and prepared for shipment.
 
    .. image:: cluster/cluster-example.png
-      :align: center
       :alt: Show example of fulfilling sales orders 2 and 3 at once.
 
 Configuration
@@ -49,10 +49,9 @@ Configuration
 
 To enable cluster picking, begin by navigating to :menuselection:`Inventory app --> Configuration
 --> Settings`. Under the :guilabel:`Operations` heading, activate the :guilabel:`Packages` and
-:guilabel:`Batch Transfers` options.
+:guilabel:`Batch, Wave & Cluster Transfers` options.
 
 .. image:: cluster/configs.png
-   :align: center
    :alt: Activate *Packages* and *Batch Transfers* features in the settings.
 
 Since batch picking is used to optimize the *pick* operation in Odoo, the :guilabel:`Storage
@@ -65,7 +64,6 @@ also be checked on this settings page.
 When finished, click :guilabel:`Save`.
 
 .. image:: cluster/locations-routes-checkbox.png
-   :align: center
    :alt: Enable *Storage Locations* and *Multi-Step Routes* Inventory > Configuration > Settings.
 
 .. _inventory/misc/create-package:
@@ -73,8 +71,9 @@ When finished, click :guilabel:`Save`.
 Packages setup
 --------------
 
-After the :guilabel:`Packages` feature is enabled, navigate to :menuselection:`Inventory app -->
-Products --> Packages`, and click the :guilabel:`New` button to create a new package.
+To configure the containers to be used during the picking process, navigate to
+:menuselection:`Inventory app --> Products --> Packages`. Click the :guilabel:`New` button to create
+a new package.
 
 On the new package form, the :guilabel:`Package Reference` is pre-filled with the next available
 `PACK` number in the system. :guilabel:`Pack Date` is automatically set to the creation date of the
@@ -88,37 +87,17 @@ Set the :guilabel:`Package Use` field to :guilabel:`Reusable Box`.
 .. example::
    A package intended for cluster picking is named `CLUSTER-PACK-3` for easy identification. For
    this workflow, the products are directly packed using their intended shipping boxes, so
-   :guilabel:`Package Use` is set to :guilabel:`Disposable Box`.
+   :guilabel:`Package Use` is set to :guilabel:`Reusable Box`.
 
    .. image:: cluster/cluster-package.png
-      :align: center
       :alt: Create new package form.
 
 Create cluster batch
 ====================
 
-To see how cluster picking works in Odoo, navigate to the :menuselection:`Sales` app, and create
-|SOS| that will be fulfilled together in the same batch. After confirming an |SO|, the
-:guilabel:`Delivery` smart button becomes visible. Displayed inside the icon is a number
-representing the amount of steps in the outgoing shipment process.
-
-.. example::
-   Begin by creating three |SOS| for the apples, oranges, and bananas, as shown in the :ref:`example
-   above <inventory/misc/cluster_picking/example>`.
-
-   After confirming the |SO|, the :guilabel:`Delivery` smart button displays the number `2`,
-   indicating there are two operations to complete: `Pick` and `Delivery`.
-
-   .. image:: cluster/create-sales-order.png
-      :align: center
-      :alt: Example sales order for an apple, orange, and banana.
-
-With the |SOS| created, orders now must be grouped into batches. To do so, navigate to the
-*Inventory* dashboard and select the operation type card, :guilabel:`Delivery Orders` or
-:guilabel:`Pick` (whichever is the first operation in the delivery flow).
-
-Doing so displays a filtered list of outgoing operations with the :guilabel:`Ready` status,
-indicating that all the products in the |SO| are in stock.
+To create a cluster, navigate to :menuselection:`Inventory app` and select the operation type card,
+:guilabel:`Delivery Orders` or :guilabel:`Pick` (whichever is the first operation in the delivery
+flow).
 
 .. note::
    Cluster pick batches can be created for outgoing shipments in one, two, or three steps.
@@ -129,8 +108,8 @@ indicating that all the products in the |SO| are in stock.
    - :doc:`Delivery in three steps <../daily_operations/delivery_three_steps>`
 
 Click the checkbox to the left of the corresponding outgoing operation to add them to the batch.
-With the desired pickings selected, click the :guilabel:`⚙️ Actions (gear)` button, and select the
-:guilabel:`Add to batch` option from the resulting drop-down menu.
+With the desired pickings selected, click the :icon:`fa-cog` :guilabel:`Actions` button, and select
+the :guilabel:`Add to batch` option from the resulting drop-down menu.
 
 .. example::
    To create a cluster batch, as shown in the :ref:`example above
@@ -142,7 +121,6 @@ With the desired pickings selected, click the :guilabel:`⚙️ Actions (gear)` 
    - `WH/PICK/00009`: linked to |SO| 90 for one apple, orange, and banana.
 
    .. image:: cluster/select-picks.png
-      :align: center
       :alt: Use *Add to batch* button, from the *Action* button's list.
 
 Doing so opens an :guilabel:`Add to batch` pop-up window, wherein the employee
@@ -151,13 +129,18 @@ Doing so opens an :guilabel:`Add to batch` pop-up window, wherein the employee
 Choose from the two options in the :guilabel:`Add to` field to either: add to :guilabel:`an existing
 batch transfer`, or create :guilabel:`a new batch transfer`.
 
+Then, add a :guilabel:`Description` for this batch.
+
+.. tip::
+   The :guilabel:`Description` field can be used to add additional information to help workers
+   identify the source of the batch, where to place the batch, what shipping containers to use, etc.
+
 To create draft batch pickings to be confirmed at a later date, select the :guilabel:`Draft`
 checkbox.
 
 Conclude the process by clicking :guilabel:`Confirm`.
 
 .. image:: cluster/add-to-batch-window.png
-   :align: center
    :alt: Show *Add to batch* window to create a batch transfer.
 
 Process batches
@@ -168,73 +151,17 @@ Click on a batch to select it.
 
 In the :guilabel:`Detailed Operations` tab, products that are to be picked are grouped by location.
 
-Under the :guilabel:`Source Package` or :guilabel:`Destination Package` field, enter the package
-used for the picking.
-
-.. note::
-   Use the :guilabel:`Source Package` field when the picking package is configured as *reusable* on
-   the :ref:`package form <inventory/misc/create-package>`. This means the products are temporarily
-   placed in a container during picking, before getting transferred to their final shipping box.
-
-   Alternatively, use the :guilabel:`Destination Package` field when the product is directly placed
-   in its *disposable* shipping box during picking.
+Set the :guilabel:`Destination Package` to the package dedicated to that particular order.
 
 .. example::
    Process the cluster batch for the three orders of apples, oranges, and bananas :ref:`example
    <inventory/misc/cluster_picking/example>` by assigning each picking to a dedicated package.
 
    At the storage location for apples, `WH/Stock/Shelf A`, assign the apples in all three pickings
-   to one of the three disposable packages, `CLUSTER-PACK-1`, `CLUSTER-PACK-2`, or `CLUSTER-PACK-3`.
+   to one of the three reusable packages, `CLUSTER-PACK-1`, `CLUSTER-PACK-2`, or `CLUSTER-PACK-3`.
 
    Record this in Odoo using the :guilabel:`Destination Package` field in the :guilabel:`Detailed
    Operations` tab.
 
    .. image:: cluster/cluster-batch-example.png
-      :align: center
       :alt: Example of processing cluster pickings in *Inventory*.
-
-In Barcode
-----------
-
-To process cluster pickings directly from the *Barcode* app, select the :guilabel:`Batch Transfers`
-button from the *Barcode* dashboard. Then, select the desired batch.
-
-On the batch transfer screen, the products in the picking are grouped by location, and each line is
-color-coded to associate products in the same picking together.
-
-Then, follow the prompt to :guilabel:`Scan the source location` barcode for the storage location of
-the first product. Then, scan the barcode for the product and package to process the transfer.
-
-Repeat this for all products, and click the :guilabel:`Validate` button.
-
-.. note::
-   To find the package barcode, navigate to :menuselection:`Inventory app --> Products -->
-   Packages`, select the desired package, click the :guilabel:`⚙️ (gear)` icon at the top of the
-   package form, and select the :guilabel:`Print` option.
-
-   Next, select one of the three print options to generate the package barcode from the
-   :guilabel:`Package Reference` field.
-
-   .. image:: cluster/find-package-barcode.png
-      :align: center
-      :alt: Display where the package barcode can be generated.
-
-.. example::
-   Begin processing the cluster picking by going to the first storage location, `Shelf A`, and
-   scanning the :ref:`location barcode <barcode/setup/location>`. Doing so highlights all the
-   pickings that need products from this particular location.
-
-   Scan the barcode for the apple, which highlights the picking (labeled in red) for the product
-   `Apple`, for the picking, `WH/PICK/00007`.
-
-   Then, scan the `CLUSTER-PACK-1` package barcode, and place the product in the designated package.
-
-   .. image:: cluster/batch-barcode.png
-      :align: center
-      :alt: Example of cluster batch from the *Barcode* app.
-
-.. tip::
-   After creating a batch transfer and assigning a package to a picking, Odoo suggests the specified
-   package by displaying the name *in italics* under the product name, ensuring pickers place
-   products into the correct boxes.
-
