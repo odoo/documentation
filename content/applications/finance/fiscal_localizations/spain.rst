@@ -20,6 +20,12 @@ select a package in the :guilabel:`Fiscal Localization` section.
 .. warning::
    You can only change the accounting package as long as you have not created any accounting entry.
 
+.. seealso::
+   - :doc:`Documentation on e-invoicing’s legality and compliance in Spain
+     <../accounting/customer_invoices/electronic_invoicing/spain>`
+   - :doc:`Documentation on e-invoicing’s legality and compliance in the Basque Country
+     <../accounting/customer_invoices/electronic_invoicing/basque_country>`
+
 Chart of accounts
 =================
 

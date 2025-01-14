@@ -11,6 +11,10 @@ Install the :guilabel:`🇧🇪 Belgium` :ref:`fiscal localization package
 <fiscal_localizations/packages>` to get all the default accounting features of the Belgian
 localization, following the :abbr:`IFRS(International Financial Reporting Standards)` rules.
 
+.. seealso::
+   :doc:`Documentation on e-invoicing’s legality and compliance in Belgium
+   <../accounting/customer_invoices/electronic_invoicing/belgium>`
+
 .. _belgium/coa:
 
 Chart of accounts
