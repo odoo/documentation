@@ -15,3 +15,4 @@ Workflows
    workflows/unbuild_orders
    workflows/byproducts
    workflows/continuous_improvement
+   workflows/manufacture_lots_serials
