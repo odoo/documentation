@@ -20,3 +20,4 @@ deliver and invoice what has been sold.
    sales/invoicing
    sales/products_prices
    sales/amazon_connector
+   sales/shopee_connector
