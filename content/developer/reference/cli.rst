@@ -651,13 +651,13 @@ Here is a sample file:
 .. _jinja2: https://jinja.palletsprojects.com/
 .. _regular expression: https://docs.python.org/3/library/re.html
 .. _password authentication:
-    https://www.postgresql.org/docs/12/static/auth-methods.html#AUTH-PASSWORD
+    https://www.postgresql.org/docs/15/auth-password.html
 .. _template database:
-    https://www.postgresql.org/docs/12/static/manage-ag-templatedbs.html
+    https://www.postgresql.org/docs/15/manage-ag-templatedbs.html
 .. _level:
     https://docs.python.org/3/library/logging.html#logging.Logger.setLevel
 .. _a PostgreSQL URI:
-    https://www.postgresql.org/docs/12/static/libpq-connect.html#AEN38208
+    https://www.postgresql.org/docs/15/libpq-connect.html#id-1.7.3.8.3.6
 .. _Werkzeug's proxy support:
     https://werkzeug.palletsprojects.com/en/0.16.x/middleware/proxy_fix/#module-werkzeug.middleware.proxy_fix
 .. _pyinotify: https://github.com/seb-m/pyinotify/wiki
