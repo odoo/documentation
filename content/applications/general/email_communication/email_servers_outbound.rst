@@ -100,9 +100,10 @@ Sending emails with an external SMTP server
    the DNS of an Odoo subdomain is not feasible.
 
 To add an external SMTP server in Odoo, open :guilabel:`Settings`, and enable the :guilabel:`Use
-Custom Email Servers` option found under the :guilabel:`Discuss` section.
+Custom Email Servers` option found under the :guilabel:`Emails` section. Then, click
+:guilabel:`Save` at the top of the page to save the changes.
 
-Still under the :guilabel:`Discuss` section, click :guilabel:`Outgoing Email Servers`, then `New` to
+Returning to the :guilabel:`Emails` section, click :guilabel:`Outgoing Email Servers`, then `New` to
 create an outgoing mail server record. Most fields are the common parameters used to set up a
 connection to an SMTP server; use the values provided by your email provider.
 
@@ -158,9 +159,8 @@ transactional emails are given priority.
    :alt: Example of split between transaction and mass mailing mail servers.
 
 Now, go to :menuselection:`Email Marketing --> Configuration --> Settings`, enable
-:guilabel:`Dedicated Server`, and select the appropriate email server. Odoo uses the server
-with the lowest priority value for transactional emails, and the server selected here for mass
-mailings.
+:guilabel:`Dedicated Server`, and select the appropriate email server. Odoo uses the server with the
+lowest priority value for transactional emails, and the server selected here for mass mailings.
 
 .. image:: email_servers_outbound/dedicated-mass-mail-server.png
    :alt: Dedicated mail server on Email Marketing app settings.
@@ -194,8 +194,8 @@ When an email is sent from Odoo, the following sequence is used to choose the ou
    If the sender's email address is `test@example.com`, only an email server having a FROM filtering
    value equal to `test@example.com` or `example.com` can be used.
 
-- If no server is found based on the first criteria, Odoo looks for the first server
-  without a FROM filtering value set. The email will be overridden with the notification address.
+- If no server is found based on the first criteria, Odoo looks for the first server without a FROM
+  filtering value set. The email will be overridden with the notification address.
 
 - If no server is found based on the second criteria, Odoo uses the first server, and the email will
   be overridden with the notification address.
@@ -228,8 +228,8 @@ server is set, the default Odoo's SMTP server will be used.
    :alt: Splitting of Odoo mail server for transactional emails and Mail server for Mass mailing.
 
 .. note::
-   On Odoo Online, the command line interface is equivalent to the default Odoo mail
-   server, using the same limit as if there was no outgoing mail server in place.
+   On Odoo Online, the command line interface is equivalent to the default Odoo mail server, using
+   the same limit as if there was no outgoing mail server in place.
 
 .. tip::
    On Odoo Online, the page also shows your daily email usage and your daily limit. On Odoo.sh, you
