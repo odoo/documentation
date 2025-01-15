@@ -105,39 +105,61 @@ search for your company to verify the following:
 Set up a Uruware account
 ------------------------
 
-To set up a Uruware account, first be sure to have a valid Odoo subscription. Then follow the
-proceeding steps.
+To set up a Uruware account, follow these steps:
 
-Locate the Uruware credentials settings by navigating to the :menuselection:`Accounting -->
-Configuration --> Settings`. Scroll down to the :guilabel:`Uruguayan Localization` section and click
-on :guilabel:`Create Uruware Account`.
+#. Verify that you have a valid Odoo subscription.
+#. Locate the Uruware credentials settings by navigating to the :menuselection:`Accounting -->
+   Configuration --> Settings`.
+#. Scroll down to the :guilabel:`Uruguayan Localization` section and select the environment
+   (:guilabel:`Production` or :guilabel:`Testing`).
+#. Click on :guilabel:`Create Uruware Account`.
 
 Upon doing so, an email is sent to the address associated with your Odoo subscription with the
-username and password to enter Uruware's portal and set up your account.
+password to enter Uruware's portal and set up your account.
 
 .. tip::
-   Your :guilabel:`Tax ID` needs to be setup to be able to create your account.
+  - The email with the credentials is not immediate; it might take up to 48 hours for the account to
+    be created.
+  - The company's :guilabel:`Tax ID` needs to be set up to be able to create an Uruware account.
+  - The password sent expires after 24 hours. In this case, reset it by using the *Forgot Password*
+    link in Uruware's portal.
 
 .. note::
    This action will create an account with Uruware with the following information:
 
    - Legal name (razón social)
    - RUT from the company
-   - User name (RUT.odoo)
+   - Username (the Odoo subscription email or `RUT`.odoo. For example: `213344556677.odoo`)
    - Odoo database link
 
    To ensure your account is created correctly, please add any missing information from above.
 
-Once the account is created, a confirmation email is sent to the email linked to your subscription
-in Odoo, containing the credentials to configure the account directly in the Uruware
-`testing portal <https://odootest.ucfe.com.uy/Gestion/>`_ or
+Once the account is created and you have received the email containing the credentials, configure
+your accounts directly in the Uruware `testing portal <https://odootest.ucfe.com.uy/Gestion/>`_ or
 `production portal <https://prod6109.ucfe.com.uy/Gestion/>`_:
 
-Use the account credentials in the email to log in to the portal.
+Use the account credentials in the email to log in to the to the corresponding (`test
+<https://odootest.ucfe.com.uy/Gestion/>`_ or `production <https://prod6109.ucfe.com.uy/Gestion/>`_)
+portal.
+
+In Uruware's portal, the following steps are needed to be able to issue invoices from Odoo:
+
+#. Complete and correct the company's information.
+#. Add your digital certificate.
+#. Add your :abbr:`CAEs (Constancia de Autorización para Emisión)` for each document-type you plan
+   to issue.
+#. Configure the format of the PDF to be printed and sent to your customers.
 
 .. important::
-   Be sure to configure two accounts, one for testing and one for production. The email address can
-   be changed in Uruware and the same can be used in both environments.
+   Be sure to configure two accounts, one for testing and one for production. The certificate is
+   needed in both environments, but :abbr:`CAEs (Constancia de Autorización para Emisión)` are only
+   needed in production.
+
+.. seealso::
+   - `Odoo Tutorials: Uruguay Localization
+     <https://www.odoo.com/slides/smart-tutorial-localizacion-de-uruguay-432>`_
+   - `Odoo Help Forum: Uruguay
+     <https://www.odoo.com/forum/help-1?search=l10n_uy>`_
 
 Electronic invoice data
 -----------------------
@@ -156,6 +178,9 @@ First, select the :guilabel:`UCFE Web Services` environment:
   to the |DGI|. For this reason, rejection errors will not appear in this mode. Every internal
   validation can be tested in demo mode. Avoid selecting this option in a production database.
 
+.. note::
+   Using :guilabel:`Demo` mode does not require a Uruware account.
+
 Then, enter the :guilabel:`Uruware Data`:
 
 - :guilabel:`Uruware WS Password`
@@ -166,9 +191,16 @@ Then, enter the :guilabel:`Uruware Data`:
    :alt: Required information for electronic invoice.
 
 .. note::
-   This data can be obtained from the Uruware portal, after configuring the :ref:`Uruware account
-   <l10n_uy/uruware-account>`. The :guilabel:`Uruware WS Password` differs from the password you use
-   to enter your Uruware account.
+   This data can be obtained from the Uruware portal after configuring the :ref:`Uruware account
+   <l10n_uy/uruware-account>`.
+
+   To get the :guilabel:`Uruware WS Password`, go to :menuselection:`Configuration --> Company -->
+   Edit` and look for the :guilabel:`Validators and Additional Information` tab to find
+   :guilabel:`WS Password`.
+
+   To get the :guilabel:`Commerce Code`, go to :menuselection:`Configuration --> Branches`.
+
+   To get the :guilabel:`Terminal Code`, go to :menuselection:`Configuration --> Issuing Points`.
 
 Master data
 -----------
