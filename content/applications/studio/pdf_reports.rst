@@ -212,7 +212,7 @@ There are two types of text content in reports:
   the report is generated, e.g., the SO number or the quotation date.
 
 You can add content (e.g., fields, lists, tables, images, banners, etc.) to the report using
-commands. Type `/` to open the :ref:`powerbox <knowledge/powerbox>`, then type the command's
+commands. Type `/` to open the :ref:`powerbox <essentials/commands>`, then type the command's
 name or select it from the list.
 
 To add static text to the report, type the text where you want it.
@@ -265,7 +265,7 @@ Formatting
 **********
 
 To format text in the report, select it, then format it using the options in the
-:ref:`knowledge/text-editor`.
+:doc:`text editor <../../../applications/essentials/text_editor>`.
 
   .. image:: pdf_reports/text-editor.png
      :alt: Format text using the text editor.
