@@ -33,8 +33,6 @@ Configuration on the Xendit Dashboard
 #. In the :guilabel:`Webhook URL` section, enter your Odoo database's URL, followed by
    `/payment/xendit/webhook` (e.g., `https://example.odoo.com/payment/xendit/webhook`) in the field
    :guilabel:`Invoices paid` and click the :guilabel:`Test and save` button next to it.
-#. Navigate to the `Card Settings page <https://dashboard.xendit.co/settings/payment-methods/cards-configuration>`_
-   and ensure that :guilabel:`Optional 3DS` is enabled while :guilabel:`Dynamic 3DS` is disabled.
 
 Configuration on Odoo
 =====================
