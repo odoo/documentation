@@ -15,7 +15,7 @@ for use at a later date:
   reduce/settle unpaid invoices/bills.
 
 .. seealso::
-   - :doc:`Internal transfers <payments/internal_transfers>`
+   - :doc:`Internal transfers <bank/internal_transfers>`
    - :doc:`bank/reconciliation`
    - `Odoo Tutorials: Bank Configuration
      <https://www.odoo.com/slides/slide/bank-configuration-6832>`_
@@ -27,10 +27,10 @@ Registering payment from an invoice or bill
 
 When clicking :guilabel:`Register payment` in a customer invoice or vendor bill, it generates a new
 journal entry and changes the amount due according to the payment amount. The counterpart is
-reflected in an :ref:`outstanding <bank/outstanding-accounts>` **receipts** or **payments** account.
-At this point, the customer invoice or vendor bill is marked as :guilabel:`In payment`. Then, when
-the outstanding account is reconciled with a bank transaction line, the invoice or vendor bill
-changes to the :guilabel:`Paid` status.
+reflected in an :ref:`outstanding <accounting/bank/outstanding-accounts>` **receipts** or
+**payments** account. At this point, the customer invoice or vendor bill is marked as :guilabel:`In
+payment`. Then, when the outstanding account is reconciled with a bank transaction line, the invoice
+or vendor bill changes to the :guilabel:`Paid` status.
 
 The :icon:`fa-info-circle` information icon next to the payment line displays more
 information about the payment. To access additional information, such as the related journal, click
@@ -51,8 +51,8 @@ information about the payment. To access additional information, such as the rel
 
 .. tip::
    If the main bank account is set as an :ref:`outstanding account
-   <bank/outstanding-accounts>`, and the payment is registered in Odoo (not through a related
-   bank transaction), invoices and bills are directly registered as :guilabel:`Paid`.
+   <accounting/bank/outstanding-accounts>`, and the payment is registered in Odoo (not through a
+   related bank transaction), invoices and bills are directly registered as :guilabel:`Paid`.
 
 .. _accounting/payments/not-tied:
 
@@ -184,7 +184,6 @@ finalize the payment workflow and mark the invoice or bill as :guilabel:`Paid`.
    payments/batch
    payments/batch_sdd
    payments/follow_up
-   payments/internal_transfers
    payments/pay_sepa
    payments/pay_checks
    payments/forecast
