@@ -17,7 +17,7 @@ into account checks yet to be cashed.
    statement.
 
 .. seealso::
-   * :ref:`Outstanding accounts <bank/outstanding-accounts>`
+   * :ref:`Outstanding accounts <accounting/bank/outstanding-accounts>`
    * :ref:`Bank reconciliation <accounting/reconciliation>`
 
 .. _checks/outstanding-account:
