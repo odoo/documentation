@@ -21,7 +21,7 @@ which include action buttons.
 .. image:: bank/card.png
    :alt: Bank journals are displayed on the Accounting Dashboard and contain action buttons
 
-.. _bank_accounts/manage:
+.. _accounting/bank/manage_accounts:
 
 Manage your bank and cash accounts
 ==================================
@@ -36,7 +36,7 @@ follow the instructions.
 .. seealso::
    :doc:`bank/bank_synchronization`
 
-.. _bank_accounts/create:
+.. _accounting/bank/create_account:
 
 Create a bank account
 ---------------------
@@ -61,7 +61,7 @@ To create a new cash journal, go to :menuselection:`Accounting --> Configuration
 Journals`, click on :guilabel:`Create` and select :guilabel:`Cash` in the :guilabel:`Type` field.
 
 For more information on the accounting information fields, read the
-:ref:`bank_accounts/configuration` section of this page.
+:ref:`accounting/bank/configuration` section of this page.
 
 .. note::
    A default cash journal is available and can be used straight away. You can review it by going to
@@ -73,7 +73,7 @@ Edit an existing bank or cash journal
 To edit an existing bank journal, go to :menuselection:`Accounting --> Configuration --> Accounting:
 Journals` and select the journal you want to modify.
 
-.. _bank_accounts/configuration:
+.. _accounting/bank/configuration:
 
 Configuration
 =============
@@ -137,7 +137,7 @@ Bank feeds
    - :doc:`bank/bank_synchronization`
    - :doc:`bank/transactions`
 
-.. _bank/outstanding-accounts:
+.. _accounting/bank/outstanding-accounts:
 
 Outstanding accounts
 ====================
@@ -175,7 +175,6 @@ Payments` tab. To display the outstanding accounts column, click on the toggle b
 :guilabel:`Outstanding Receipts/Payments accounts`, then update the account.
 
 .. image:: bank/toggle-button.png
-   :align: center
    :alt: Select the toggle button and click on outstanding Accounts
 
 .. note::
@@ -192,5 +191,6 @@ Payments` tab. To display the outstanding accounts column, click on the toggle b
    bank/transactions
    bank/reconciliation
    bank/reconciliation_models
+   bank/internal_transfers
    bank/foreign_currency
    bank/loans
