@@ -25,6 +25,10 @@ The supported documents are:
 The localization requires an Uruware account, which enables users to generate electronic documents
 within Odoo.
 
+.. seealso::
+   :doc:`Documentation on e-invoicing's legality and compliance in Uruguay
+   <../accounting/customer_invoices/electronic_invoicing/uruguay>`
+
 Glossary
 --------
 
