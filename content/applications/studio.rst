@@ -35,5 +35,10 @@ button, or vice versa.
 
 To close Studio, click :guilabel:`Close` in the upper right corner.
 
+Test auva test auva
+
+- To access Studio, navigate to the app and model you want to modify, then click the **Toggle Studio**
+  button, or vice versa.
+
 .. seealso::
    `Odoo Tutorials: Studio <https://www.odoo.com/slides/studio-31>`_
