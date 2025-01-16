@@ -45,6 +45,9 @@ localization:
      - `l10n_ar_website_sale`
      - (optional) Allows the user to see Identification Type and AFIP Responsibility in the
        eCommerce checkout form in order to create electronic invoices.
+   * - :ref:`Argentina - Payment Withholdings <l10n_ar/payment-withholdings>`
+     - `l10n_ar_withholding`
+     - Allows to register withholdings during the payment of an invoice.
 
 .. _argentina/configure-your-company:
 
@@ -677,6 +680,147 @@ the invoice can then be validated.
 .. image:: argentina/enter-perception-amount.png
    :align: center
    :alt: Enter the perception amount.
+
+.. _l10n_ar/payment-withholdings:
+
+Withholding management
+----------------------
+
+The Argentinean fiscal localization module is already loaded with the necessary withholdings
+records, which can be seen by navigating to :menuselection:`Accounting app --> Configuration -->
+Taxes`. To verify these records, the **Argentina Payment Withholdings** (`l10n_ar_withholding`)
+module must be :ref:`installed <general/install>`:
+
+Journal entries are *not* created when payments are posted until outstanding accounts are set up.
+Thus, for this feature to work properly, it is important to verify that *all* payment methods within
+the bank journals have an outstanding payment and receipt account set.
+
+.. image:: argentina/l10n-ar-outstanding-payments.png
+   :alt: An outstanding payment account must be set.
+
+This configuration is crucial for the proper accounting of withholding transactions with clients
+and vendors.
+
+Configuration
+~~~~~~~~~~~~~
+
+As mentioned, Odoo already creates most of the required withholdings inside the :guilabel:`Taxes`
+menu. In several cases, it is necessary to apply or modify certain configurations to correctly
+calculate the withholding amount on vendor payments. The current withholding types available are:
+
+- :ref:`Earnings <l10n_ar/earnings-withholdings>`
+- :ref:`Earnings Scale <l10n_ar/earnings-scale-withholdings>`
+- :ref:`IIBB Total Amount <l10n_ar/iib-total-amount-withholdings>`
+- :ref:`IIBB Non-Taxable <l10n_ar/iib-nontax-withholdings>`
+
+.. _l10n_ar/earnings-withholdings:
+
+Earnings withholdings
+*********************
+
+For :guilabel:`Earnings` withholdings, Odoo already has a record for each regime group, which is
+stated under the name of the tax and the AFIP code.
+
+Each of these records are ready to be used. As a good practice, the configuration should be double
+checked to make sure the configuration is updated and well-applied. The fields to validate are:
+
+- :guilabel:`Amount`: This is the percentage of the total payment amount which is withheld.
+- :guilabel:`Non-Taxable Amount`: Up to this amount, the withholding does not apply.
+- :guilabel:`Minimum Withholding`: If the calculated withholding amount is smaller than this value,
+  the total withholding amount is set to `0.0`.
+- :guilabel:`Withholding Sequence`: This field helps to automate the capture of a withholding number
+  under the payment line. If this field is not set, a number is manually captured while adding a
+  withholding to a payment.
+
+.. image:: argentina/l10n-ar-earnings.png
+   :alt: Earnings withholding type.
+
+.. _l10n_ar/earnings-scale-withholdings:
+
+Earnings scale withholdings
+***************************
+
+In this particular case, a percentage does not need to be set. However, this withholding is
+calculated based on the :guilabel:`Scale` related to this field.
+
+.. image:: argentina/l10n-ar-earnings-scale.png
+   :alt: Earnings Scales withholding type.
+
+To view, modify, or create new scales, first activate :ref:`developer mode <developer-mode>` and
+then navigate to :menuselection:`Accounting app --> Configuration --> Earnings Scale`. By default,
+Odoo comes loaded with two main scales. However, scales should be created and updated as necessary
+to suit a business' needs.
+
+.. image:: argentina/l10n-ar-earnings-scale-1.png
+   :alt: Earnings Scale table to modify if applicable.
+
+.. note::
+   Earnings Scales are cumulative, which means that Odoo keeps track of the different records
+   created for a bill and automatically calculating the proper withholding amount.
+
+.. _l10n_ar/iib-total-amount-withholdings:
+
+IIBB total amount withholdings
+******************************
+
+In this case, the necessary records related to the applicable province need to be created. The
+withholding amount is calculated based on the amount (%) set on the tax configuration. Since Odoo
+does not automatically synchronize the percentages applicable to each province, this information
+needs to be manually updated.
+
+.. image:: argentina/l10n-ar-total-amount-withholding.png
+   :alt: Total Amount Withholding
+
+The recommendation, in this case, is to always duplicate and apply the different configurations for
+each record to safeguard any technical configurations that allow the proper calculation and
+accounting of the withholding.
+
+.. _l10n_ar/iib-nontax-withholdings:
+
+IIBB non-taxable withholding
+****************************
+
+The configuration of Non-Taxable Gross Income withholdings is very similar to that of a :ref:`total
+amount withholding <l10n_ar/iib-total-amount-withholdings>`, so the :guilabel:`Amount (%)` in each
+of the records needs to be maintained. However, Odoo comes loaded with several records that apply to
+different provinces. The difference, in this case, is that it is not necessary to establish a
+*Non-Taxable Amount* or *Minimum Withholding* for this record type.
+
+.. image:: argentina/l10n-ar-non-taxable.png
+   :alt: Non Taxable
+
+Partner withholding assignation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Once the proper configuration is set on each possible withholding for partners, the applicable
+withholdings need to be assigned to each contact. To do this, access the **Contacts** app and select
+the desired record. Then, find the :guilabel:`Purchase Withholdings` field in the
+:guilabel:`Accounting` tab. By default, only one withholding record is allowed for each type.
+However, by using the additional fields :guilabel:`Initial date` and :guilabel:`End date`, new
+withholding lines can be added of the same type with different date ranges.
+
+.. image:: argentina/l10n-ar-partner-assignation.png
+   :alt: Partner assignation
+
+Automatic withholding calculation and application per payment
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+By applying new payments to vendor bills, Odoo automatically applies and calculates the proper
+withholding into the payment. Based on the record's configuration, it may be necessary to use a
+reference number for each withholding line.
+
+More withholdings can be added, or computed withholdings can be edited if necessary.
+
+.. image:: argentina/l10n-ar-payment.png
+   :alt: Payment with applied withholdings.
+
+.. important::
+   The total amount of the debt to be canceled is the total amount of the payment. However, Odoo
+   still captures the net amount (i.e. the amount to be reconciled with the bank), which will be
+   represented as the payment amount after the withholding application.
+
+   .. image:: argentina/l10n-ar-payment-registered.png
+      :alt: Payment Registered
 
 Check management
 ----------------
