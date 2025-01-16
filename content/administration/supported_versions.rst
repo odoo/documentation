@@ -38,13 +38,13 @@ This matrix shows the support status of every version.
      - October 2024
      - October 2027 (planned)
    * - Odoo SaaS 17.4
-     - |green|
+     - |red|
      - N/A
      - N/A
      - July 2024
      -
    * - Odoo SaaS 17.2
-     - |green|
+     - |red|
      - N/A
      - N/A
      - April 2024
