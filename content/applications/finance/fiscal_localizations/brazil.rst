@@ -34,6 +34,8 @@ needed.
      <https://youtube.com/playlist?list=PL1-aSABtP6ADqexw4YNCbKPmpFggajxlX&si=RgmZR3Jco3223Np4>`_.
    - `YouTube playlist - Tutoriais Odoo em Português
      <https://youtube.com/playlist?list=PL1-aSABtP6ACGOW2UREePGjHQ2Bgdy-UZ&si=j6tiI36eB7BoKVQB>`_.
+   - :doc:`Documentation on e-invoicing's legality and compliance in Brazil
+     <../accounting/customer_invoices/electronic_invoicing/brazil>`
 
 Configuration
 =============
