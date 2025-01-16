@@ -81,6 +81,8 @@ Peruvian localization.
    - `App Tour - Localización de Peru <https://youtu.be/Ic3mGovkf8Y>`_
    - `Smart Tutorial - Localización de Peru (videos for workflows and configurations)
      <https://www.odoo.com/slides/smart-tutorial-localizacion-de-peru-133>`_
+   - :doc:`Documentation on e-invoicing's legality and compliance in Peru
+     <../accounting/customer_invoices/electronic_invoicing/peru>`
 
 Configuration
 =============

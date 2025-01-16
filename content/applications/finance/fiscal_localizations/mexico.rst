@@ -36,6 +36,10 @@ enables foreign trade, and the creation of delivery guides).
    In order to electronically sign any documents in Odoo, ensure the *Sign* application is
    installed.
 
+.. seealso::
+   :doc:`Documentation on e-invoicing's legality and compliance in Mexico
+   <../accounting/customer_invoices/electronic_invoicing/mexico>`
+
 Configuration
 =============
 
