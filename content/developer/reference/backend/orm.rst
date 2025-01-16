@@ -889,7 +889,37 @@ Search/Read
 
 .. automethod:: Model._read_group
 
-.. automethod:: Model.search_read_group
+.. method:: Model.web_formatted_read_group(self, domain, groupby=(), aggregates=(), having=(), offset=0, limit=None, order=None)
+
+    :meth:`~._read_group` with all formatting needed for the webclient.
+
+    :param list domain: :ref:`A search domain <reference/orm/domains>`. Use an empty
+            list to match all records.
+    :param list groupby: list of groupby descriptions by which the records will be grouped.
+            A groupby description is either a field (then it will be grouped by that field)
+            or a string `'field:granularity'`. Right now, the only supported granularities
+            are `'day'`, `'week'`, `'month'`, `'quarter'` or `'year'`, and they only make sense for
+            date/datetime fields.
+    :param list aggregates: list of aggregates specification.
+            Each element is `'field:agg'` (aggregate field with aggregation function `'agg'`).
+            The possible aggregation functions are the ones provided by
+            `PostgreSQL <https://www.postgresql.org/docs/current/static/functions-aggregate.html>`_,
+            `'count_distinct'` with the expected meaning.
+    :param list having: A domain where the valid "fields" are the aggregates.
+    :param int offset: optional number of groups to skip
+    :param int limit: optional max number of groups to return
+    :param str order: optional ``order by`` specification, for
+            overriding the natural sort ordering of the groups,
+            see also :meth:`~.search`.
+    :return: list of dictionaries (one dictionary for each group) containing:
+
+                * the groupby values: {groupby[i]: <value>}
+                * the aggregate values: {aggregates[i]: <value>}
+                * __extra_domain: list of tuples specifying the group search criteria
+                * __fold: boolean if a fold_name is set on the comodel
+
+    :rtype: [{'groupy_spec': value, ...}, ...]
+    :raise AccessError: if user is not allowed to access requested information
 
 Fields
 ~~~~~~

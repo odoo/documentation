@@ -4,6 +4,12 @@
 Changelog
 =========
 
+Odoo Online version 18.2
+========================
+
+- `read_group` has been deprecated in favor to `_read_group` for backend usage or
+  `web_formatted_read_group` as formatted public API. See `#163300 <https://github.com/odoo/odoo/pull/163300>`_.
+
 Odoo Online version 18.1
 ========================
 
@@ -12,8 +18,6 @@ Odoo Online version 18.1
 - Declare constraints and indexes as model attributes with `#175783 <https://github.com/odoo/odoo/pull/175783>`_.
 - The `json` controllers have been renamed to `jsonrpc`. They are called the same, only the
   `type` in the python files changed. See `#183636 <https://github.com/odoo/odoo/pull/183636>`_.
-- `read_group` has been deprecated in favor to the new API search_read_group or web_read_group if
-  formatted result is necessary. See `#163300 <https://github.com/odoo/odoo/pull/163300>`_.
 
 Odoo version 18.0
 =================
