@@ -15,6 +15,8 @@ Chile
    - `Chilean localization app tour <https://www.youtube.com/watch?v=3qYkgbmBYHw>`_
    - `Chilean localization smart tutorial
      <https://www.odoo.com/slides/smart-tutorial-localizacion-de-chile-131>`_
+   - :doc:`Documentation on e-invoicing's legality and compliance in Chile
+     <../accounting/customer_invoices/electronic_invoicing/chile>`
 
 .. _chile/configuration:
 
