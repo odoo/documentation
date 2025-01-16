@@ -17,6 +17,8 @@ each purchase invoice.
 .. seealso::
    - `App Tour - Localización de Ecuador <https://www.youtube.com/watch?v=BQOXVSDeeK8>`_
    - `Smart Tutorial - Localización de Ecuador <https://www.odoo.com/slides/smart-tutorial-localizacion-de-ecuador-170>`_
+   - :doc:`Documentation on e-invoicing's legality and compliance in Ecuador
+     <../accounting/customer_invoices/electronic_invoicing/ecuador>`
 
 Glossary
 --------

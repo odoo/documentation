@@ -11,7 +11,10 @@ Below you can find videos with a general description of the localization, and ho
 - `eCommerce - Localización de Argentina <https://www.youtube.com/watch?v=5gUi2WWfRuI>`_.
 
 .. seealso::
-   `Smart Tutorial - Localización de Argentina <https://www.odoo.com/slides/smart-tutorial-localizacion-de-argentina-130>`_
+   - `Smart Tutorial - Localización de Argentina
+     <https://www.odoo.com/slides/smart-tutorial-localizacion-de-argentina-130>`_
+   - :doc:`Documentation on e-invoicing's legality and compliance in Argentina
+     <../accounting/customer_invoices/electronic_invoicing/argentina>`
 
 Configuration
 =============

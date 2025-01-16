@@ -24,9 +24,11 @@ solution with Odoo:
 
 .. seealso::
    - For more information on how to complete the certification process for the |DIAN| module, review
-     the following `webinar <https://www.youtube.com/watch?v=l0G6iDc7NQA>`_.
+     the following `webinar <https://www.youtube.com/watch?v=l0G6iDc7NQA>`_
    - `Smart Tutorial - Colombian Localization
-     <https://www.odoo.com/slides/smart-tutorial-localizacion-de-colombia-132>`_.
+     <https://www.odoo.com/slides/smart-tutorial-localizacion-de-colombia-132>`_
+   - :doc:`Documentation on e-invoicing's legality and compliance in Colombia
+     <../accounting/customer_invoices/electronic_invoicing/colombia>`
 
 .. _localization/colombia/configuration:
 
