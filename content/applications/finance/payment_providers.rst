@@ -367,6 +367,8 @@ enable :guilabel:`Allow Express Checkout`.
 .. note::
    All prices shown on the express checkout payment form always include taxes.
 
+.. _payment_providers/availability:
+
 Availability
 ============
 
