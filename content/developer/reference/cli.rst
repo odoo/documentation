@@ -608,6 +608,15 @@ Multiprocessing
 
     For multi-processing mode, this is in addition to the HTTP worker processes.
 
+.. option:: --limit-time-worker-cron <limit>
+
+    Soft limit on how long a :ref:`cron <reference/actions/cron>` thread/worker is
+    allowed to live before is is restarted, in seconds.
+
+    Set to 0 to disable.
+
+    Defaults to *0*.
+
 .. _reference/cmdline/config:
 
 Configuration file
