@@ -605,6 +605,15 @@ Multiprocessing
 
     For multi-processing mode, this is in addition to the HTTP worker processes.
 
+.. option:: --limit-time-cron-conn <limit>
+
+    Soft limit on how long a :ref:`cron <reference/actions/cron>` worker's connection is
+    allowed to live before being re-established, in seconds.
+
+    Set to 0 to disable.
+
+    Defaults to *0*.
+
 .. _reference/cmdline/config:
 
 Configuration file
