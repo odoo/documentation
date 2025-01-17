@@ -149,11 +149,16 @@ Before configuring the :abbr:`FACe (General Entrance for Electronic Invoices)` s
 :ref:`install <general/install>` the :guilabel:`Spain - Facturae EDI (l10n_es_edi_facturae)` module
 and other **Facturae EDI**-related modules.
 
-To enable FACe, go to :menuselection:`Settings --> General Settings`, click
-:guilabel:`Update Info` in the :guilabel:`Companies` section, then click :guilabel:`Update Info` and
-set the :guilabel:`Country` and :guilabel:`Tax ID` of your company. Next, add the
-:guilabel:`Facturae signature certificate` by clicking :guilabel:`Add a line`, uploading the
-certificate provided by the tax agency, and entering the provided password.
+To configure FACe, follow these steps:
+
+#. Go to :menuselection:`Accounting --> Configuration --> Certificates`.
+#. Click :guilabel:`New` to create a new certificate.
+#. Complete the fields, including uploading the file of the :guilabel:`Certificate` provided by the
+   tax agency and the provided :guilabel:`Certificate Password`.
+
+.. note::
+   If using the Invoicing app instead of Accounting, go to :menuselection:`Invoicing -->
+   Configuration --> Certificates`.
 
 Use case
 --------
