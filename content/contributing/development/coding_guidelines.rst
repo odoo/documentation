@@ -25,8 +25,12 @@ These guidelines should be applied to every new module and to all new developmen
     going under major changes. In that case first do a **move** commit then apply
     the changes related to the feature.
 
+.. _contributing/coding_guidelines/module_structure:
+
 Module structure
 ================
+
+.. _contributing/coding_guidelines/module_structure/directories:
 
 Directories
 -----------
@@ -46,6 +50,7 @@ Other optional directories compose the module.
 - *report/* : contains the printable reports and models based on SQL views. Python objects and XML views are included in this directory
 - *tests/* : contains the Python tests
 
+.. _contributing/coding_guidelines/module_structure/file_naming:
 
 File naming
 -----------
@@ -807,6 +812,8 @@ In general in Odoo, when manipulating strings, prefer ``%`` over ``.format()``
 (when only one variable to replace in a string), and prefer ``%(varname)`` instead
 of position (when multiple variables have to be replaced). This makes the
 translation easier for the community translators.
+
+.. _contributing/coding_guidelines/model_members:
 
 Symbols and Conventions
 -----------------------
