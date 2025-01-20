@@ -339,6 +339,42 @@ Choose :guilabel:`Use Existing ones` if only existing lot numbers can be selecte
 
 .. _inventory/product_management/lot-traceability:
 
+Display lots on delivery slips
+==============================
+
+When selling products tracked with lots, it is possible to include the lot numbers on the delivery
+slips sent to customers. This can be helpful to customers in cases where lot numbers are needed,
+such as filing an RMA or repair request, or registering the product.
+
+To include lot numbers on delivery slips, open the :menuselection:`Inventory` app, and navigate to
+:menuselection:`Configuration --> Settings`. Scroll down to the :guilabel:`Traceability` section,
+tick the :guilabel:`Display Lots & Serial Numbers on Delivery Slips` checkbox, and click
+:guilabel:`Save`.
+
+After enabling the :guilabel:`Display Lots & Serial Numbers on Delivery Slips` setting, lot numbers
+are listed on delivery slips for products tracked by lots, once the delivery order is validated.
+
+To view lot numbers on delivery orders and delivery slips, navigate to the
+:menuselection:`Inventory` app, click on :guilabel:`Delivery Orders`, and select an order containing
+a product tracked using lots.
+
+To view the lot numbers of products included in the order, make sure the :guilabel:`Operations` tab
+is selected, then click the :icon:`oi-settings-adjust` :guilabel:`(adjust)` button to the right of
+the tab. Ensure that the :guilabel:`Serial Numbers` checkbox is ticked, which causes a
+:guilabel:`Serial Numbers` column to appear. The lot number(s) for each product included in the
+order are displayed in this column.
+
+When the order is ready to be processed, click :guilabel:`Validate` to confirm the delivery and add
+product information to the delivery slip.
+
+At the top of the order's form, click the :icon:`fa-cog` :guilabel:`(Actions)` button, and select
+:guilabel:`Print --> Delivery Slip`. The delivery slip is then downloaded. Open the delivery slip
+using the device's browser or file manager. Lot numbers are listed next to their respective products
+in the :guilabel:`Lot/Serial Number` column.
+
+.. image:: lots/delivery-slip.png
+   :alt: The order lines section of a delivery slip, showing a product and its serial number.
+
 Traceability
 ============
 
