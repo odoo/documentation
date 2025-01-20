@@ -34,13 +34,13 @@ Setup form
 From the :ref:`setup form <kitchen_printing/enable>`, select the :guilabel:`Printer Type` according
 to your installation:
 
-- If your printer is connected to an IoT box, select :guilabel:`Use a printer connected to the IoT
-  Box` and select the device in the :guilabel:`IoT Device` field.
-- If you use an Epson printer that does not need an IoT box, select :guilabel:`Use an Epson printer`
-  and enter the printer's IP address in the :guilabel:`Epson Printer IP Address` field.
+- If your printer is connected to an IoT system, select :guilabel:`Use a printer connected to the
+  IoT Box` and select the device in the :guilabel:`IoT Device` field.
+- If you use an Epson printer that does not require an IoT system, select :guilabel:`Use an Epson
+  printer` and enter the printer's IP address in the :guilabel:`Epson Printer IP Address` field.
 
 .. seealso::
-   - :doc:`/applications/general/iot/config/connect`
+   - :doc:`/applications/general/iot/connect`
    - :doc:`/applications/general/iot/devices/printer`
    - :doc:`../configuration/epos_ssc`
 
