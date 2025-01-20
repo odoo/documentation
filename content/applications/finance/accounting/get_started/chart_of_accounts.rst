@@ -169,6 +169,23 @@ To do so, check the :guilabel:`Allow Reconciliation` box in the account's settin
 .. image:: chart_of_accounts/chart-of-accounts-reconciliation.png
    :alt: Allow reconciliation for accounts in Odoo Accounting
 
+.. _coa_shared_accounts:
+
+Shared Accounts
+---------------
+
+This feature allows you to create a single account for a specific purpose and share it between
+multiple companies. It is especially useful for multi-company environments in which a similar
+account might be used across different companies.
+
+.. image:: shared_accounts/shared_accounts_configure_shared_accounts_accounting.png
+   :alt: Shared accounts feature in Odoo Accounting
+
+.. note::
+   Check the :doc:`Shared Accounts <shared_accounts>` page for more information on the
+   :ref:`benefits of that feature <shared_accounts_benefits>` and :ref:`how to configure it
+   <setting_up_shared_accounts>`.
+
 Deprecated
 ----------
 
