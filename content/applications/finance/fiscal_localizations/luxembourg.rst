@@ -32,6 +32,10 @@ localization:
    Installing the module :guilabel:`Luxembourg - Accounting Reports` installs all three modules at
    once.
 
+.. seealso::
+   :doc:`Documentation on e-invoicing’s legality and compliance in Luxembourg
+   <../accounting/customer_invoices/electronic_invoicing/luxembourg>`
+
 Standard Chart of Accounts - PCN 2020
 =====================================
 

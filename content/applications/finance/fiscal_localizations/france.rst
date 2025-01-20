@@ -2,6 +2,10 @@
 France
 ======
 
+.. seealso::
+   :doc:`Documentation on e-invoicing’s legality and compliance in France
+   <../accounting/customer_invoices/electronic_invoicing/france>`
+
 .. _localization/france/fec:
 
 FEC - Fichier des Écritures Comptables

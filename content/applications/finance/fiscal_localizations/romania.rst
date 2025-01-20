@@ -24,6 +24,10 @@ localization.
 .. image:: romania/romania-modules.png
    :alt: Modules for the Romanian localization
 
+.. seealso::
+   :doc:`Documentation on e-invoicing’s legality and compliance in Romania
+   <../accounting/customer_invoices/electronic_invoicing/romania>`
+
 D.406 declaration
 =================
 
