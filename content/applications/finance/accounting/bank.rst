@@ -4,7 +4,7 @@
 Bank and cash accounts
 ======================
 
-You can manage as many bank or cash accounts as needed on your database. Configuring them well
+You can manage as many bank or cash accounts as needed on your database. Configuring them correctly
 allows you to have all your banking data up-to-date and ready for :doc:`reconciliation
 <bank/reconciliation>` with your journal entries.
 
@@ -21,22 +21,22 @@ which include action buttons.
 .. image:: bank/card.png
    :alt: Bank journals are displayed on the Accounting Dashboard and contain action buttons
 
-.. _accounting/bank/manage_accounts:
+.. _accounting/bank/manage:
 
-Manage your bank and cash accounts
-==================================
+Manage bank and cash accounts
+=============================
 
-Connect your bank for automatic synchronization
------------------------------------------------
+Connect a bank for automatic synchronization
+--------------------------------------------
 
 To connect your bank account to your database, go to :menuselection:`Accounting --> Configuration
---> Banks: Add a Bank Account`, select your bank in the list, click on :guilabel:`Connect`, and
-follow the instructions.
+--> Add a Bank Account`, select your bank in the list, click on :guilabel:`Connect`, and follow the
+instructions.
 
 .. seealso::
    :doc:`bank/bank_synchronization`
 
-.. _accounting/bank/create_account:
+.. _accounting/bank/create:
 
 Create a bank account
 ---------------------
@@ -44,8 +44,9 @@ Create a bank account
 If your banking institution is not available in Odoo, or if you don't want to connect your bank
 account to your database, you can configure your bank account manually.
 
-To manually add a bank account, go to :menuselection:`Accounting --> Configuration --> Banks:
-Add a Bank Account`, click on :guilabel:`Create it` (at the bottom right), and fill out the form.
+To manually add a bank account, go to :menuselection:`Accounting --> Configuration --> Add a Bank
+Account`, click on :guilabel:`Record transactions manually` (at the bottom right), fill out the bank
+information, and click :guilabel:`Create`.
 
 .. note::
    - Odoo automatically detects the bank account type (e.g., IBAN) and enables some features
@@ -86,14 +87,23 @@ You can edit the accounting information and bank account number according to you
 .. seealso::
    - :doc:`get_started/multi_currency`
    - :doc:`bank/transactions`
+   - `Bank configuration <https://www.youtube.com/watch?v=tVhhXw-VnGE>`_
 
-.. _bank_accounts/suspense:
+.. _accounting/bank/suspense:
 
 Suspense account
 ----------------
 
-Bank statement transactions are posted on the :guilabel:`Suspense Account` until the final
-reconciliation allows finding the right account.
+Bank statement transactions are posted on the suspense account until they are reconciled. At any
+moment, the suspense account's balance in the general ledger shows the balance of transactions that
+have not yet been reconciled.
+
+.. note::
+   When a bank transaction is reconciled, the journal entry is modified to replace the bank suspense
+   account with the account of the journal item it is reconciled with. This account is usually the
+   :ref:`outstanding receipts or payments account <accounting/bank/outstanding-accounts>` if
+   reconciling with a registered payment or the account receivable or payable if reconciling with
+   an invoice or bill directly.
 
 Profit and loss accounts
 ------------------------
@@ -105,7 +115,7 @@ register a loss when the ending balance of a cash register differs from what the
 Currency
 --------
 
-You can edit the currency used to enter the statements.
+You can edit the currency used to enter the transactions.
 
 .. seealso::
    :doc:`get_started/multi_currency`
@@ -114,7 +124,7 @@ Account number
 --------------
 
 If you need to **edit your bank account details**, click on the external link arrow next to your
-:guilabel:`Account Number`. On the new page, click on the external link arrow next to your
+:guilabel:`Account Number`. On the account page, click on the external link arrow next to your
 :guilabel:`Bank` and update your bank information accordingly. These details are used when
 registering payments.
 
@@ -124,12 +134,13 @@ registering payments.
 Bank feeds
 ----------
 
-:guilabel:`Bank Feeds` defines how the bank statements are registered. Three options are available:
+:guilabel:`Bank Feeds` defines how the bank transactions are registered. Three options are
+available:
 
 - :guilabel:`Undefined yet`, which should be selected when you don’t know yet if you will
   synchronize your bank account with your database or not.
 - :guilabel:`Import (CAMT, CODA, CSV, OFX, QIF)`, which should be selected if you want to import
-  your bank statement using a different format.
+  your bank statements and transactions using a different format.
 - :guilabel:`Automated Bank Synchronization`, which should be selected if your bank is synchronized
   with your database.
 
@@ -142,47 +153,42 @@ Bank feeds
 Outstanding accounts
 ====================
 
-By default, payments are registered through transitory accounts named **outstanding accounts**,
-before being recorded in your bank account.
+By default, payments in Odoo do not create journal entries, but they can easily be configured to
+create journal entries using **outstanding accounts**.
 
-- An **outstanding payments account** is where outgoing payments are posted until they are linked
-  with a withdrawal from your bank statement.
 - An **outstanding receipts account** is where incoming payments are posted until they are linked
-  with a deposit from your bank statement.
+  with incoming bank transactions.
+- An **outstanding payments account** is where outgoing payments are posted until they are linked
+  with outgoing bank transactions.
 
-These accounts should be of :ref:`type <chart-of-account/type>` :guilabel:`Current Assets`.
+These accounts are usually of :ref:`type <chart-of-account/type>` :guilabel:`Current Assets` and
+:guilabel:`Current Liabilities`.
 
-.. note::
-   The movement from an outstanding account to a bank account is done automatically when you
-   reconcile the bank account with a bank statement.
+Payments that are registered in Odoo are posted to the outstanding receipts and outstanding accounts
+until they are reconciled. At any moment, the outstanding receipts account's balance in the general
+ledger shows the balance of registered incoming payments that have not yet been reconciled, and the
+outstanding payments account's balance in the general ledger shows the balance of registered
+outgoing payments that have not yet been reconciled.
 
-Default accounts configuration
-------------------------------
+Bank and cash journal configuration
+-----------------------------------
 
-The outstanding accounts are defined by default. If necessary, you can update them by going to
-:menuselection:`Accounting --> Configuration --> Settings --> Default Accounts` and update your
-:guilabel:`Outstanding Receipts Account` and :guilabel:`Outstanding Payments Account`.
+To configure payments to create journal entries, set outstanding accounts for the journal's payment
+methods. This can be done for any journal with the :ref:`type <chart-of-account/type>`
+:guilabel:`Bank` or :guilabel:`Cash`.
 
-Bank and cash journals configuration
-------------------------------------
-
-You can also set specific outstanding accounts for any journal with the :ref:`type
-<chart-of-account/type>` :guilabel:`Bank` or :guilabel:`Cash`.
-
-From your :guilabel:`Accounting Dashboard`, click on the menu selection ⋮ of the journal you want to
-configure, and click on :guilabel:`Configuration`, then open the :guilabel:`Incoming/Outgoing
-Payments` tab. To display the outstanding accounts column, click on the toggle button and check the
-:guilabel:`Outstanding Receipts/Payments accounts`, then update the account.
-
-.. image:: bank/toggle-button.png
-   :alt: Select the toggle button and click on outstanding Accounts
+To configure the outstanding accounts for a journal's payment methods, first go to
+:menuselection:`Accounting --> Configuration --> Journals` and select a bank or cash journal. In the
+:guilabel:`Incoming Payments` and :guilabel:`Outgoing Payments` tabs, set :guilabel:`Outstanding
+Receipts accounts` and :guilabel:`Outstanding Payments accounts` for each payment method that you
+want to create journal entries.
 
 .. note::
-   - If you do not specify an outstanding payments account or an outstanding receipts account for a
-     specific journal, Odoo uses the default outstanding accounts.
-   - If your main bank account is added as an outstanding receipts account or outstanding payments
-     account, when a payment is registered, the invoice or bill's status is directly set to
-     :guilabel:`Paid`.
+   - If the main bank account of the journal is added as an outstanding receipts account or
+     outstanding payments account, when a payment is registered, the invoice or bill's status is
+     directly set to :guilabel:`Paid`.
+   - If the outstanding receipts or outstanding payments account for a payment method is left blank,
+     registering a payment with that payment method will not create any journal entry.
 
 .. toctree::
    :titlesonly:
