@@ -89,7 +89,7 @@ Creating a new Driver requires:
 
 - Extending `Driver`
 - Setting the `connection_type` class attribute.
-- Setting the `device_type`, `device_connection` and `device_name` attributes.
+- Setting the `device_type`, `device_connection`, and `device_name` attributes.
 - Defining the `supported` method
 
 .. code-block:: python
@@ -118,6 +118,7 @@ only be reached from the same local network. Communication, therefore, needs to
 happen on the browser-side, in JavaScript.
 
 The process depends on the direction of the communication:
+
 - From the browser to the box, through `Actions`_
 - From the box to the browser, through `Longpolling`_
 
@@ -151,7 +152,7 @@ An action can be performed on the DeviceProxy Object.
     iot_device.action(data);
 
 In your driver, define an `action` method that will be executed when called
-from an Odoo module. It takes the data given during the call as argument.
+from an Odoo module. It takes the data given during the call as an argument.
 
 .. code-block:: python
 
@@ -164,7 +165,7 @@ Longpolling
 When any module in Odoo wants to read data from a specific device, it creates a
 listener identified by the IP/domain of the box and the device identifier and
 passes it a callback function to be called every time the device status
-changes. The callback is called with the new data as argument.
+changes. The callback is called with the new data as an argument.
 
 .. code-block:: javascript
 
@@ -176,7 +177,7 @@ changes. The callback is called with the new data as argument.
 
 In the Driver, an event is released by calling the `device_changed` function
 from the `event_manager`. All callbacks set on the listener will then be called
-with `self.data` as argument.
+with `self.data` as an argument.
 
 .. code-block:: python
 
