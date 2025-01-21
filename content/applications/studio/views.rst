@@ -43,8 +43,8 @@ contacts, sales orders, products, etc.
 
 - To structure a form, drag and drop the :guilabel:`Tabs and Columns` element found under the
   :guilabel:`+ Add` tab.
-- To prevent users from creating, editing, or deleting records, untick :guilabel:`Can Create`,
-  :guilabel:`Can Edit`, or :guilabel:`Can Delete`.
+- To prevent users from creating, editing, deleting or duplicating records, untick :guilabel:`Can Create`,
+  :guilabel:`Can Edit`, :guilabel:`Can Delete` or :guilabel:`Can Duplicate`.
 - To add a button, click :guilabel:`Add a button` at the top of the form, enter a :guilabel:`Label`,
   and select the button's action:
 
