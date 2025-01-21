@@ -633,6 +633,65 @@ the :abbr:`PA (Public Administration)` business directly, sending them both the 
 received deadline notification by email. You can make an arrangement with them and manually set the
 correct :guilabel:`SdI State` on your invoice.
 
+Ri.Ba. (Ricevuta Bancaria)
+==========================
+
+:abbr:`Ri.Ba. (Ricevuta Bancaria)` is a payment method widely used in Italy where businesses request
+payments through their bank, which forwards the request to the debtor's own bank and takes
+responsibility for the collection. This enables payment automation and reduces risks for the vendor.
+
+The creditor generally uploads a fixed-format text file with the list of payments, which has to
+follow the :abbr:`CBI (Corporate Banking Interbancario)` standards, to the bank's web portal.
+
+.. note::
+   - Ri.Ba. are exclusively for **domestic payments** in Italy. For recurrent international
+     payments, please use `SEPA Direct Debt (SDD) <../accounting/payments/batch_sdd>`_
+   - The format specification PDF is available only for users registered on the
+     `CBI website <https://www.cbi-org.eu>`_.
+
+.. seealso::
+   :abbr:`Ri.Ba. (Ricevuta Bancaria)` `format specification <https://www.cbi-org.eu/My-Menu/Servizio-CBI-Documentazione/Servizio-CBI-Documentazione-Standard>`_
+
+
+Configuration
+-------------
+
+- Check that the `l10n_it_riba` module :ref:`is installed <general/install>`.
+- Fill out the required :guilabel:`SIA Code` on the Company.
+
+.. image:: italy/sia-code.png
+   :alt: Company's SIA code to be provided
+
+- Ensure the Company's bank account is :doc:`trusted <../accounting/payments/trusted_accounts>`
+  and includes an Italian IBAN.
+
+.. image:: italy/trusted-account.png
+   :alt: Bank Account's trusted flag
+
+.. seealso::
+   How to configure :doc:`Bank Accounts <../accounting/bank>`
+
+Create and export
+-----------------
+
+| To create a RiBa batch payment, go to :menuselection:`Accounting --> Customers --> Batch Payments`,
+  and click :guilabel:`New`.
+| Then, click :guilabel:`Add a line`. In the pop-up window, tick all payments that have the type
+  :guilabel:`Bank Receipt (IT)` that you want to include, then click :guilabel:`Select`.
+
+.. warning::
+   Make sure that your payments involve Partners which have bank accounts with an Italian IBAN.
+
+.. seealso::
+   - :doc:`Batch Payments <../accounting/payments>`
+   - :doc:`Create a Batch Payment <../accounting/payments/batch>`
+
+Once you :guilabel:`Validate` the Batch Payment, the RiBa file is generated and attached to the
+Batch Payment, so you can download it and upload it through your bank's web portal.
+
+.. image:: italy/riba-attachment.png
+   :alt: The RiBa file attached
+
 Point of Sale fiscal printers
 =============================
 
