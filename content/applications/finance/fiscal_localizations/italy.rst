@@ -628,3 +628,60 @@ If the :abbr:`PA (Public Administration)` business doesn't reply within 15 days,
 the :abbr:`PA (Public Administration)` business directly, sending them both the invoice and the
 received deadline notification by email. You can make an arrangement with them and manually set the
 correct :guilabel:`SdI State` on your invoice.
+
+Ri.Ba. (Ricevuta Bancaria)
+==========================
+
+:abbr:`Ri.Ba. (Ricevuta Bancaria)` is a payment method widely used in Italy where vendors request
+payments through their bank, which forwards the request to the customer's own bank and takes
+responsibility for the collection. This enables payment automation and reduces risks for the vendor.
+
+The vendor generally uploads a fixed-format text file with the list of payments to the bank's web
+portal.
+
+.. note::
+   - Ri.Ba. are exclusively for **domestic payments** in Italy. For recurring international
+     payments, please use `SEPA Direct Debt (SDD) <../accounting/payments/batch_sdd>`_
+
+Configuration
+-------------
+
+#. Check that the `l10n_it_riba` module is :ref:`installed <general/install>`.
+#. Go to :menuselection:`Settings --> Users & Companies --> Companies` and select the company that
+   will use Ri.Ba.
+#. Fill out the required :guilabel:`SIA Code`.
+
+   .. image:: italy/sia-code.png
+      :alt: The company's SIA code
+
+   .. note::
+      The :guilabel:`SIA Code` identifies businesses within the Italian banking network and is used
+      to receive money through specific payment methods. It consists of one letter and four digits
+      (e.g., T1234) and can usually be found on the bank's portal or obtained by contacting the bank.
+
+#. Ensure the Company's bank account has an Italian IBAN.
+
+   .. seealso::
+      How to configure :doc:`Bank Accounts <../accounting/bank>`
+
+Accept Ri.Ba. for your invoices
+-------------------------------
+
+Payments of type :abbr:`Ri.Ba. (Ricevuta Bancaria)` can be registered from the :guilabel:`Invoices`
+(:menuselection:`Accounting --> Customers --> Invoices`).
+
+.. important::
+   Make sure that your invoice involves a Partner that has a bank account with an Italian IBAN.
+
+Then, all Payments must be grouped in a **Batch Payment**.
+
+.. seealso::
+   - :doc:`Batch Payments <../accounting/payments>`
+   - :doc:`Create a Batch Payment <../accounting/payments/batch>`
+
+Once you press the :guilabel:`Validate` button for the Batch Payment, the :abbr:`Ri.Ba. (Ricevuta
+Bancaria)` file is generated and attached to the Batch Payment, so you can download it and upload it
+through your bank's web portal.
+
+.. image:: italy/riba-attachment.png
+   :alt: The Ri.Ba. file attached
