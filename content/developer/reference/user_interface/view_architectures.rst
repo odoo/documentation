@@ -516,8 +516,8 @@ Structural components
 Structural components provide structure or "visual" features with little logic. They are used as
 elements or sets of elements in form views.
 
-Form views accept the following children structural components: :ref:`group
-<reference/view_architectures/form/group>`, :ref:`sheet <reference/view_architectures/form/sheet>`,
+Form views accept the following children structural components: :ref:`sheet
+<reference/view_architectures/form/sheet>`, :ref:`group <reference/view_architectures/form/group>`,
 :ref:`notebook <reference/view_architectures/form/notebook>`,
 :ref:`notebook <reference/view_architectures/form/notebook>`,
 :ref:`newline <reference/view_architectures/form/newline>`,
@@ -528,6 +528,24 @@ Form views accept the following children structural components: :ref:`group
 :ref:`reference/view_architectures/form/title_container`.
 
 Placeholders are denoted in all caps.
+
+.. _reference/view_architectures/form/sheet:
+
+`sheet`: make the layout responsive
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The `sheet` element can be used as a direct child of the :ref:`form
+<reference/view_architectures/form>` root element for a narrower and more responsive form layout
+(centered page, margin...). It usually contains :ref:`group
+<reference/view_architectures/form/group>` elements.
+
+.. code-block:: xml
+
+   <form>
+       <sheet>
+           ...
+       </sheet>
+   </form>
 
 .. _reference/view_architectures/form/group:
 
@@ -614,24 +632,6 @@ The `group` element can have the following attributes:
                      <field name="i"/>
                  </group>
              </group>
-
-.. _reference/view_architectures/form/sheet:
-
-`sheet`: make the layout responsive
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The `sheet` element can be used as a direct child of the :ref:`form
-<reference/view_architectures/form>` root element for a narrower and more responsive form layout
-(centered page, margin...). It usually contains :ref:`group
-<reference/view_architectures/form/group>` elements.
-
-.. code-block:: xml
-
-   <form>
-       <sheet>
-           ...
-       </sheet>
-   </form>
 
 .. _reference/view_architectures/form/notebook:
 

@@ -2,6 +2,12 @@
 Chapter 11: Add The Sprinkles
 =============================
 
+.. danger::
+   This tutorial is outdated. We recommend reading :doc:`../server_framework_101` instead.
+
+.. seealso::
+   :doc:`Homepage of the tutorial <../server_framework_101_legacy>`
+
 Our real estate module now makes sense from a business perspective. We created
 :doc:`specific views <06_basicviews>`, added several
 :doc:`action buttons <09_actions>` and
