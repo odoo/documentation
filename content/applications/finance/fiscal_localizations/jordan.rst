@@ -1,0 +1,219 @@
+======
+Jordan
+======
+
+.. _localizations_jordan/configuration/modules:
+
+Modules
+=======
+
+The following modules are installed automatically with the Jordanian localization:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25 25 50
+
+   * - Name
+     - Technical name
+     - Description
+   * - :guilabel:`Jordan - Accounting`
+     - `l10n_jo`
+     - Jordanian :ref:`fiscal localization package <fiscal_localizations/packages>`, complete with
+       the Jordan chart of accounts, taxes, tax report, and fiscal positions
+   * - :guilabel:`Jordan E-Invoicing`
+     - `l10n_jo_edi`
+     - Integration module for JoFotara to support Jordanian e-invoicing requirements
+
+.. note::
+   In some cases, such as when upgrading to a version with additional modules, it is possible that
+   modules may not be installed automatically. Any missing modules can be manually :ref:`installed
+   <general/install>`.
+
+.. _localizations/jordan/specifics:
+
+Localization specifics
+======================
+
+The Jordan localization package ensures compliance with Jordanian fiscal and accounting regulations.
+It includes tools for managing taxes, fiscal positions, reporting, and a predefined chart of
+accounts tailored to Jordan's standards.
+
+The Jordan localization package provides the following key features to ensure compliance with local
+fiscal and accounting regulations:
+
+- :doc:`../accounting/get_started/chart_of_accounts`: a predefined structure tailored to Jordanian
+  accounting standards
+- :ref:`localizations/jordan/taxes`: pre-configured tax rates, including standard VAT, zero-rated,
+  and exempt options
+- :doc:`../accounting/taxes/fiscal_positions`: automated tax adjustments based on customer or
+  supplier registration status
+- :ref:`localizations/jordan/tax-reporting`: detailed overview of your net tax liability
+- :ref:`E-invoicing (JoFotara)<localizations/jordan/jofotara>`: integration for electronic invoicing
+  in line with Jordanian government requirements
+
+.. _localizations/jordan/taxes:
+
+Taxes
+-----
+
+The following :doc:`taxes <../accounting/taxes>` are available by default with the Jordan
+localization package:
+
+- Standard Sales Tax (16%): Applied to most goods and services within Jordan.
+- Exempt Transactions: For sales and services not subject to VAT, such as financial services or
+  healthcare.
+- Export Tax (0%): Zero-rated tax applied to goods and services exported outside Jordan.
+
+.. _localizations/jordan/tax-reporting:
+
+Tax reporting
+-------------
+
+The :doc:`VAT summary <../accounting/reporting/tax_returns>` provides a detailed breakdown of
+taxable, zero-rated, and exempt transactions. Like other :doc:`financial reports
+<../accounting/reporting>`, the VAT summary can be filtered by period, compared against other
+periods, and exported in Excel and PDF formats, ensuring compliance with Jordanian tax laws.
+
+.. _localizations/jordan/jofotara:
+
+E-invoicing with JoFotara
+=========================
+
+E-invoicing with JoFotara is seamlessly integrated with Odoo, ensuring compliance with Jordanian
+government's technical and legal requirements for electronic invoicing. The JoFotara integration in
+Odoo directly connects with the Jordanian e-invoicing platform, allowing companies to:
+
+- generate compliant electronic invoices
+- submit invoices in real time for validation
+- track invoice statuses directly within Odoo
+
+The integration requires first creating an account with JoFotara, then generating API credentials,
+and finally entering those credentials in your Odoo database to link the two.
+
+.. _manuals: https://istd.gov.jo/EN/List/Electronic_billing_User_Manual
+
+`Government manuals <manuals_>`_ provide instructions for creating an account and generating the API
+credentials.
+
+.. _localizations/jordan/jofotara-configuration:
+
+Configuration
+-------------
+
+.. _localizations/jordan/linking-jofotara:
+
+Link Odoo to JoFotara
+~~~~~~~~~~~~~~~~~~~~~
+
+#. If you don't already have an account, create one by going to the `government manuals <manuals_>`_
+   page and following the steps in the **Procedure Manual for Joining the Jordanian National
+   Electronic Invoicing System**.
+#. Generate API credentials (Activity Number, Secret Key, and Client ID) by going to the `government
+   manuals <manuals_>`_ page and following the steps in **Procedure Manual for Linking to the
+   Jordanian National Electronic Invoicing System**.
+#. In your Odoo database, go to :menuselection:`Accounting --> Configuration --> Settings`. In the
+   :guilabel:`Electronic Invoicing (Jordan)` section, enter the API credentials generated
+   previously:
+
+   - :guilabel:`Activity Number` (income source sequence)
+   - :guilabel:`JoFotara Secret Key`
+   - :guilabel:`JoFotara Client ID`
+
+#. Enter the :guilabel:`Taxpayer type`:
+
+   - :guilabel:`Unregistered in the sales tax`: For businesses not registered for sales tax.
+
+     - No tax on the invoice line is required.
+   - :guilabel:`Registered in the sales tax`: For businesses registered under Jordan's standard
+     sales tax system.
+
+     - One tax computed as a percentage is required per invoice line.
+
+   - :guilabel:`Registered in the special sales tax`: For businesses subject to special sales tax
+     regulations.
+
+     - One tax computed as a percentage and one fixed tax per invoice line are allowed per invoice
+       line.
+
+#. Click :guilabel:`Save`.
+
+.. tip::
+   If the :guilabel:`Electronic Invoicing (Jordan)` section is not in the :guilabel:`Settings`, make
+   sure the :guilabel:`Jordan E-Invoicing` module is :ref:`installed <general/install>`.
+
+.. _localizations/jordan/company-and-contacts:
+
+Company and customers
+~~~~~~~~~~~~~~~~~~~~~
+
+The JoFotara invoicing workflow requires address information related to the company that sends the
+invoices and the customers who receive them:
+
+#. Go to :menuselection:`Settings --> Users & Companies --> Companies` and select the company that
+   will use JoFotara.
+#. Fill in the :guilabel:`Street`, :guilabel:`City`, :guilabel:`Country`, and :guilabel:`Tax ID
+   (TIN)`, as well as any additional optional fields.
+
+   .. important::
+      The company currency must be set to :guilabel:`JOD`.
+
+#. Go to :menuselection:`Accounting --> Customers --> Customers`. For each customer whose invoices
+   will be sent via JoFotara, click on the customer to open the form view, and complete the
+   :guilabel:`Country` and :guilabel:`Tax ID`.
+
+.. _localizations/jordan/sending-invoices:
+
+Sending invoices via JoFotara with Odoo
+---------------------------------------
+
+Once the company has been :ref:`linked with JoFotara <localizations/jordan/linking-jofotara>` and
+the :ref:`company and customers have been properly configured
+<localizations/jordan/company-and-contacts>`, invoices can be sent to JoFotara via Odoo:
+
+#. Go to :menuselection:`Accounting --> Customers --> Invoices` and open a confirmed invoice.
+#. Click :guilabel:`Send & Print`.
+#. In the :guilabel:`Send` window, select :guilabel:`Send JoFotara e-invoice` and click
+   :guilabel:`Send & Print`.
+
+When an invoice is sent via JoFotara, Odoo does the following:
+
+- generates the invoice in the required format (UBL 1.2)
+- submits the invoice to JoFotara for validation
+- receives the QR code from JoFotara on the invoice's PDF
+
+.. tip::
+   - Multiple invoices can be :ref:`sent at once <accounting/invoice/sending>` to JoFotara.
+   - From the invoices list view, filter the invoices by their
+     :ref:`localizations/jordan/jofotara-state` to see only the invoices that have not been sent to
+     JoFotara.
+   - In the :icon:`oi-settings-adjust` (:guilabel:`adjust settings`) menu, add the
+     :guilabel:`JoFotara Error` field to see any errors directly in the list view.
+
+.. important::
+   There is an inherent difference in how values are approximated in Odoo and ISTD due to the
+   differing system architectures. JOD values in Odoo are stored and approximated to three decimals,
+   whereas ISTD expects values to have nine decimals. As a result, an insignificant difference is
+   inevitable and arises between the values stores in Odoo and the values reported to ISTD, which
+   can have an error margin of <0.01.
+
+.. _localizations/jordan/jofotara-state:
+
+JoFotara State
+~~~~~~~~~~~~~~
+
+The :guilabel:`JoFotara State` field in the :guilabel:`Other Info` tab of confirmed invoices
+reflects the current state of the document in JoFotara. It can be changed to reflect the actual
+state of the invoices in cases where a technical error or timeout has prevented the automatic
+updating of the state in Odoo.
+
+.. _localizations/jordan/qr-codes:
+
+Validating QR codes (Sanad app)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To validate JoFotara's invoice, follow these steps:
+
+#. Install the `Sanad app <https://www.sanad.gov.jo/Default/en>`_.
+#. Navigate to :guilabel:`More`.
+#. Click on :guilabel:`Validate document` and scan the QR code.
+#. Review results.
