@@ -136,8 +136,8 @@ List
 The :guilabel:`List` :icon:`oi-view-list` view is used to overview many records at once, look for
 records, and edit simple records.
 
-- To prevent users from creating, editing, or deleting records, untick :guilabel:`Can Create`,
-  :guilabel:`Can Edit`, or :guilabel:`Can Delete`.
+- To prevent users from creating, editing, deleting or duplicating records, untick
+  :guilabel:`Can Create`, :guilabel:`Can Edit`, :guilabel:`Can Delete`, or :guilabel:`Can Duplicate`.
 - To create and edit records directly within the view, select either :guilabel:`Add record at the
   bottom`, :guilabel:`Add record on top` or :guilabel:`Open form view` under
   :guilabel:`When Creating Record`.
