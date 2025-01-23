@@ -202,11 +202,14 @@ Link
 To add a link to your documents dashboard, click :icon:`fa-link` :guilabel:`Link`, enter the
 :guilabel:`URL`, and :guilabel:`Name` it.
 
+.. _documents/documents/spreadsheet:
+
 Spreadsheet
 ~~~~~~~~~~~
 
-To create a new :doc:`spreadsheet <spreadsheet>`, click :guilabel:`Spreadsheet`. You can select
-a :guilabel:`Blank spreadsheet` or an :doc:`existing template <spreadsheet/templates>`.
+To create a new :doc:`spreadsheet <spreadsheet>`, select the workspace where the file should be
+stored, click the :guilabel:`New` button, then :guilabel:`Spreadsheet`. You can create a
+:guilabel:`Blank spreadsheet` or select an :doc:`existing template <spreadsheet/templates>` to use.
 
 Share
 -----
