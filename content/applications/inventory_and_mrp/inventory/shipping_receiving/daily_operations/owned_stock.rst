@@ -28,8 +28,8 @@ Receive (and store) consignment stock
 =====================================
 
 With the feature enabled in Odoo, consignment stock can now be received into a warehouse. From the
-main :menuselection:`Inventory` dashboard, click into the :guilabel:`Receipts`
-section. Then, click :guilabel:`Create`.
+main :menuselection:`Inventory` dashboard, click into the :guilabel:`Receipts` section. Then, click
+:guilabel:`Create`.
 
 .. note::
    Consignment stock is not actually purchased from the vendor; it is simply received and stored.
@@ -74,9 +74,9 @@ quotation is complete, click :guilabel:`Confirm`.
    :align: center
    :alt: Sales order of consignment stock.
 
-Once the :abbr:`RFQ (Request for Quotation)` has been confirmed, it will become a sales order. From
-here, the products can be delivered by clicking on the :guilabel:`Delivery` smart button, and
-selecting :guilabel:`Validate` to validate the delivery.
+Once the quotation has been confirmed, it becomes a sales order. From here, the products can be
+delivered by clicking on the :guilabel:`Delivery` smart button, and selecting :guilabel:`Validate`
+to validate the delivery.
 
 Traceability and reporting of consignment stock
 ===============================================
@@ -88,19 +88,19 @@ To find inventory reports, go to :menuselection:`Inventory --> Reporting`, and c
 view.
 
 .. note::
-   Since the consignee does not actually own consigment stock, these products are *not* reflected
+   Since the consignee does not actually own consignment stock, these products are *not* reflected
    in the :guilabel:`Stock Valuation` report, and have no impact on the consignee's inventory
    valuation.
 
 Product moves report
 --------------------
 
-To view all information about on-hand stock moves, navigate to the the :guilabel:`Product Moves`
+To view all information about on-hand stock moves, navigate to the :guilabel:`Product Moves`
 dashboard by going to :menuselection:`Inventory --> Reporting --> Product Moves`. For consignment
-products, the information in this report is the same as any other product: the history
-of its product moves can be reviewed; the :guilabel:`Quantity Done` and :guilabel:`Reference`
-document are available; and its :guilabel:`Locations` are available, as well. The consignment stock
-will originate from :guilabel:`Partner Location/Vendors`.
+products, the information in this report is the same as any other product: the history of its
+product moves can be reviewed; the :guilabel:`Quantity Done` and :guilabel:`Reference` document are
+available; and its :guilabel:`Locations` are available, as well. The consignment stock will
+originate from :guilabel:`Partner Location/Vendors`.
 
 .. tip::
    To view a consignment product's moves by ownership, select the :guilabel:`Group By` filter,
@@ -120,6 +120,6 @@ Stock on hand report
 
 View the :guilabel:`Stock On Hand` dashboard by navigating to :menuselection:`Inventory -->
 Reporting --> Inventory Report`. From this report, the :guilabel:`Locations` of all stock on-hand
-are displayed, in addition to the quantities per location. For consigment products, the
+are displayed, in addition to the quantities per location. For consignment products, the
 :guilabel:`Owner` column will be populated with the owner of those products, or the original vendor
 who supplied the products in the first place.
