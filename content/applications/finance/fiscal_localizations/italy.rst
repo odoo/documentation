@@ -655,7 +655,7 @@ as follows:
 #. Make sure the fiscal printer is set to its default state: printer on, start-up cycle complete,
    and no transaction in progress.
 #. Type `3333`.
-#. Press :guilabel:`Chiave`. The screen displays :guilabel:`Scleta Funzione`.
+#. Press :guilabel:`Chiave`. The screen displays :guilabel:`Scelta Funzione`.
 #. Type `14`. The screen displays :guilabel:`Apprendimento`.
 #. Type `62`. The screen displays :guilabel:`Simulazione`.
 #. To turn the :guilabel:`no` into a :guilabel:`si`, press :guilabel:`X`.
