@@ -91,9 +91,10 @@ To buy credits, go to :menuselection:`Accounting --> Configuration --> Settings 
 and click on :guilabel:`Buy credits`, or go to :menuselection:`Settings --> Odoo IAP` and click on
 :guilabel:`View My Services`.
 
-.. important::
-   If you are on Odoo Online and have the Enterprise version, you benefit from free trial credits to
-   test the feature.
+.. note::
+   Enterprise Odoo users with a valid subscription get free credits to test IAP features before
+   deciding to purchase more credits for the database. This includes demo/training databases,
+   educational databases, and one-app-free databases.
 
 .. seealso::
    - `Our Privacy Policy <https://iap.odoo.com/privacy#header_6>`_
