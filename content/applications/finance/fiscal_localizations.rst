@@ -187,17 +187,17 @@ Fiscal localization modules are available for the countries listed below.
    fiscal_localizations/mexico
    fiscal_localizations/netherlands
    fiscal_localizations/new_zealand
-   fiscal_localizations/romania
    fiscal_localizations/peru
    fiscal_localizations/philippines
+   fiscal_localizations/romania
    fiscal_localizations/saudi_arabia
    fiscal_localizations/singapore
    fiscal_localizations/spain
    fiscal_localizations/switzerland
    fiscal_localizations/thailand
-   fiscal_localizations/vietnam
    fiscal_localizations/united_arab_emirates
    fiscal_localizations/united_kingdom
    fiscal_localizations/united_states
    fiscal_localizations/uruguay
+   fiscal_localizations/vietnam
    fiscal_localizations/employment_hero
