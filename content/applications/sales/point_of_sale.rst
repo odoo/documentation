@@ -178,11 +178,11 @@ the **POS dashboard**.
 .. toctree::
    :titlesonly:
 
+   point_of_sale/configuration
    point_of_sale/employee_login
    point_of_sale/receipts_invoices
    point_of_sale/preparation
    point_of_sale/combos
-   point_of_sale/configuration
    point_of_sale/shop
    point_of_sale/restaurant
    point_of_sale/pricing
