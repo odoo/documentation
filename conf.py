@@ -21,7 +21,7 @@ copyright = 'Odoo S.A.'
 
 # `version` is the version info for the project being documented, acts as replacement for |version|,
 # also used in various other places throughout the built documents.
-# `release` is the full version, including alpha/beta/rc tags. Acts as replacement for |release|.
+# `release` is the full version, including a/b/rc tags. Acts as replacement for |release|.
 version = release = 'master'
 
 # `current_branch` is the technical name of the current branch.
@@ -116,7 +116,7 @@ else:
     odoo.addons.__path__.append(str(odoo_dir) + '/addons')
     from odoo import release as odoo_release  # Don't collide with Sphinx's 'release' config option
     odoo_version = '.'.join(str(s) for s in odoo_release.version_info[:2]).replace('~', '-')  # Change saas~XX.Y to saas-XX.Y
-    odoo_version = 'master' if 'alpha' in odoo_release.version else odoo_version
+    odoo_version = 'master' if odoo_release.ALPHA in odoo_release.version_info else odoo_version
     if release != odoo_version:
         _logger.warning(
             "Found Odoo sources in %(directory)s but with version '%(odoo_version)s' incompatible "
