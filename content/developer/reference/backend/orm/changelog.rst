@@ -4,6 +4,12 @@
 Changelog
 =========
 
+Odoo Online version 18.2
+========================
+
+- Native namespaces for ``odoo`` module `PEP-420 <https://peps.python.org/pep-0420/>`_.
+  See `#195664 <https://github.com/odoo/odoo/pull/195664>`_.
+
 Odoo Online version 18.1
 ========================
 

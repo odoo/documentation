@@ -6,8 +6,6 @@ from docutils.parsers.rst.states import RSTState
 from sphinx.domains.python import PyAttribute, PyClasslike
 from sphinx.ext.autodoc import AttributeDocumenter, ClassDocumenter
 
-import odoo
-
 nested_parse = RSTState.nested_parse
 def patched_nested_parse(self, block, input_offset, node, match_titles=False,
     state_machine_class=None, state_machine_kwargs=None):
@@ -23,7 +21,8 @@ class OdooClassDocumenter(ClassDocumenter):
 
     @classmethod
     def can_document_member(cls, member, membername, isattr, parent):
-        return isinstance(member, odoo.models.MetaModel)
+        from odoo.models import MetaModel
+        return isinstance(member, MetaModel)
 
     def add_content(self, more_content):
         sourcename = self.get_sourcename()
@@ -56,7 +55,8 @@ class FieldDocumenter(AttributeDocumenter):
 
     @classmethod
     def can_document_member(cls, member, membername, isattr, parent):
-        return isinstance(member, odoo.fields.Field)
+        from odoo.fields import Field
+        return isinstance(member, Field)
 
     def update_annotations(self, parent):
         super().update_annotations(parent)
@@ -67,7 +67,8 @@ class FieldDocumenter(AttributeDocumenter):
         if field.type == 'many2one':
             annotation[attrname] = int
         elif field.type in ('one2many', 'many2many'):
-            annotation[attrname] = Sequence[odoo.fields.Command]
+            from odoo.fields import Command
+            annotation[attrname] = Sequence[Command]
         elif field.type in ('selection', 'reference', 'char', 'text', 'html'):
             annotation[attrname] = str
         elif field.type == 'boolean':
@@ -104,7 +105,8 @@ class FieldDocumenter(AttributeDocumenter):
             if reference:
                 self.add_line(f":possible_values: `{reference} <{self.config.source_read_replace_vals['GITHUB_PATH']}/{reference}>`__", source_name)
         if field.default:
-            self.add_line(f":default: {field.default(odoo.models.Model)}", source_name)
+            from odoo.models import Model
+            self.add_line(f":default: {field.default(Model)}", source_name)
 
         super().add_content(more_content)
         if field.help:
