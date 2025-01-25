@@ -71,9 +71,9 @@ def setup(app):
             project = 'upgrade-util'
             project_root = os.path.join(os.path.dirname(util.__file__), '../..')
         else:
-            import odoo
+            from odoo import release
             project = 'odoo'
-            project_root = os.path.join(os.path.dirname(odoo.__file__), '..')
+            project_root = os.path.join(os.path.dirname(release.__file__), '..')
         return make_github_link(
             app,
             project=project,
