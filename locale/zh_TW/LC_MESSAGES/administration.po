@@ -4542,7 +4542,7 @@ msgstr ""
 
 #: ../../content/administration/on_premise/deploy.rst:3
 msgid "System configuration"
-msgstr ""
+msgstr "系統配置"
 
 #: ../../content/administration/on_premise/deploy.rst:5
 msgid ""
@@ -4551,16 +4551,18 @@ msgid ""
 "is not generally necessary for a development systems that is not exposed on "
 "the internet."
 msgstr ""
+"本文介紹在正式運行資料庫或對外向互聯網開放的伺服器上，安裝 Odoo 的基本步驟。安裝過程大致與 :doc:`安裝 <.../on_premise>` "
+"相若，而不對外向互聯網開放的開發系統，一般不需要進行此安裝。"
 
 #: ../../content/administration/on_premise/deploy.rst:10
 msgid ""
 "If you are setting up a public server, be sure to check our :ref:`security` "
 "recommendations!"
-msgstr ""
+msgstr "若要設置公共伺服器，請務必查看我們的 :ref:`安全 <security>` 措施建議！"
 
 #: ../../content/administration/on_premise/deploy.rst:15
 msgid "dbfilter"
-msgstr ""
+msgstr "dbfilter 資料庫篩選器"
 
 #: ../../content/administration/on_premise/deploy.rst:17
 msgid ""
@@ -4569,13 +4571,15 @@ msgid ""
 "customizations (starting from the modules being loaded) depending on the "
 "\"current database\"."
 msgstr ""
+"Odoo 系統以多租戶形式運作，單一個 Odoo 系統可以運行及服務數個資料庫安裝個體。Odoo "
+"亦具有高度可自訂空間，而自訂功能（例如加載的模組）需要依賴「目前資料庫」。"
 
 #: ../../content/administration/on_premise/deploy.rst:21
 msgid ""
 "This is not an issue when working with the backend (web client) as a logged-"
 "in company user: the database can be selected when logging in, and "
 "customizations loaded afterwards."
-msgstr ""
+msgstr "透過已登入公司使用者身份使用後端（網絡客戶端）時，這不會是問題，因為登入時可選擇適用的資料庫，然後加載自訂功能。"
 
 #: ../../content/administration/on_premise/deploy.rst:25
 msgid ""
@@ -4586,6 +4590,9 @@ msgid ""
 "multiple databases accessible Odoo needs a rule to know which one it should "
 "use."
 msgstr ""
+"但是，對於未綁定至資料庫的非登入使用者（門戶、網站）來說，這是一個問題，因為 Odoo "
+"需要知道應該使用哪個資料庫去載入網站頁面或執行操作。若不採用多租戶，這不會是問題，因為只有一個資料庫可以使用；但如果有多個資料庫可以存取，Odoo "
+"便需要一個規則，去決定應該使用哪一個資料庫。"
 
 #: ../../content/administration/on_premise/deploy.rst:31
 msgid ""
@@ -4595,6 +4602,9 @@ msgid ""
 "possibly including the dynamically injected hostname (``%h``) or the first "
 "subdomain (``%d``) through which the system is being accessed."
 msgstr ""
+"這正是 :option:`--db-filter <odoo-bin --db-filter>` "
+"指令的用途之一：它用作指定應如何根據所請求的主機名（網域）選擇資料庫。該值是一個 "
+"`正規表達式`_，可能包括動態注入的主機名（``%h``）或存取系統時經過的第一個子網域（``%d``）。"
 
 #: ../../content/administration/on_premise/deploy.rst:37
 msgid ""
@@ -4602,21 +4612,22 @@ msgid ""
 "``website`` is used, dbfilter **must** be set, otherwise a number of "
 "features will not work correctly."
 msgstr ""
+"對於在正式運行環境中寄存多個資料庫的伺服器，尤其是在使用「網站」的情況下，便 **必須** 設置 dbfilter，否則有多項功能將無法正確運作。"
 
 #: ../../content/administration/on_premise/deploy.rst:42
 msgid "Configuration samples"
-msgstr ""
+msgstr "配置範例"
 
 #: ../../content/administration/on_premise/deploy.rst:44
 msgid "Show only databases with names beginning with 'mycompany'"
-msgstr ""
+msgstr "只顯示名稱以「mycompany」起首的資料庫"
 
 #: ../../content/administration/on_premise/deploy.rst:46
 #: ../../content/administration/on_premise/deploy.rst:58
 #: ../../content/administration/on_premise/deploy.rst:153
 #: ../../content/administration/on_premise/deploy.rst:280
 msgid "in :ref:`the configuration file <reference/cmdline/config_file>` set:"
-msgstr ""
+msgstr "在 :ref:`配置檔案 <reference/cmdline/config_file>` 中，設定："
 
 #: ../../content/administration/on_premise/deploy.rst:53
 msgid ""
@@ -4625,6 +4636,9 @@ msgid ""
 " ``www.mycompany.com`` or ``mycompany.co.uk``, but not for "
 "``www2.mycompany.com`` or ``helpdesk.mycompany.com``."
 msgstr ""
+"只顯示符合 ``www`` 之後第一個子網域的資料庫：例如，如果傳入的請求發送至 ``www.mycompany.com`` 或 "
+"``mycompany.co.uk``，會顯示資料庫「mycompany」；但若果是 ``www2.mycompany.com`` 或 "
+"``helpdesk.mycompany.com`` 便不會顯示。"
 
 #: ../../content/administration/on_premise/deploy.rst:67
 msgid ""
@@ -4635,11 +4649,14 @@ msgid ""
 "database-list`` startup parameter to prevent listing your databases, and to "
 "block access to the database management screens. See also security_."
 msgstr ""
+"設置適當的 :option:`--db-filter <odoo-bin --db-filter>` "
+"是保護安裝個體安全的重要一環。當它正確運作，而每個主機名稱只匹配至一個資料庫後，強烈建議封鎖對資料庫管理工具畫面的存取要求，並使用 ``--no-"
+"database-list`` 啟動參數去阻止系統列出資料庫，並封鎖對資料庫管理畫面的存取要求。另請參閱：安全_。"
 
 #: ../../content/administration/on_premise/deploy.rst:76
 #: ../../content/administration/on_premise/source.rst:189
 msgid "PostgreSQL"
-msgstr ""
+msgstr "PostgreSQL"
 
 #: ../../content/administration/on_premise/deploy.rst:78
 msgid ""
@@ -4647,6 +4664,8 @@ msgid ""
 " connections (from \"localhost\", the same machine the PostgreSQL server is "
 "installed on)."
 msgstr ""
+"預設情況下，PostgreSQL 只允許通過 UNIX 通訊端及環迴連線（來自「localhost」，即與 PostgreSQL "
+"伺服器安裝的機器相同）去進行連線。"
 
 #: ../../content/administration/on_premise/deploy.rst:82
 msgid ""
@@ -4655,6 +4674,9 @@ msgid ""
 "and PostgreSQL to execute on different machines [#different-machines]_ it "
 "will need to `listen to network interfaces`_ [#remote-socket]_, either:"
 msgstr ""
+"若希望 Odoo 及 PostgreSQL 在同一台機器上執行，使用 UNIX 通訊端是沒有問題的，而且它是在沒有提供主機時的預設值。但若想 Odoo "
+"和 PostgreSQL 在不同的機器 [#different-machines]_ 上執行，將需要 `監聽網絡介面`_ [#remote-"
+"socket]_。你可選擇其中一項："
 
 #: ../../content/administration/on_premise/deploy.rst:87
 msgid ""
@@ -4662,6 +4684,7 @@ msgid ""
 "machine on which Odoo runs and the one on which PostgreSQL runs, then "
 "configure Odoo to connect to its end of the tunnel"
 msgstr ""
+"只接受環迴連線，並在運行 Odoo 及 PostgreSQL 的不同機器之間 `使用 SSH 隧道`_，然後將 Odoo 配置為連線至該隧道的末端；"
 
 #: ../../content/administration/on_premise/deploy.rst:90
 msgid ""
@@ -4669,34 +4692,35 @@ msgid ""
 "ssl (see `PostgreSQL connection settings`_ for details), then configure Odoo"
 " to connect over the network"
 msgstr ""
+"接受向安裝 Odoo 的機器傳送的連線，有可能通過 ssl（詳情請參閱 `PostgreSQL 連線設定`_），然後將 Odoo 配置為透過網絡連線。"
 
 #: ../../content/administration/on_premise/deploy.rst:95
 #: ../../content/administration/on_premise/deploy.rst:145
 #: ../../content/administration/on_premise/deploy.rst:235
 #: ../../content/administration/on_premise/deploy.rst:275
 msgid "Configuration sample"
-msgstr ""
+msgstr "配置範例"
 
 #: ../../content/administration/on_premise/deploy.rst:97
 msgid "Allow tcp connection on localhost"
-msgstr ""
+msgstr "允許在 localhost 本地主機上，進行 tcp 連線"
 
 #: ../../content/administration/on_premise/deploy.rst:98
 msgid "Allow tcp connection from 192.168.1.x network"
-msgstr ""
+msgstr "允許由 192.168.1.x 網絡提出的 tcp 連線"
 
 #: ../../content/administration/on_premise/deploy.rst:100
 msgid "in ``/etc/postgresql/<YOUR POSTGRESQL VERSION>/main/pg_hba.conf`` set:"
-msgstr ""
+msgstr "在 ``/etc/postgresql/<你的 PostgreSQL 版本>/main/pg_hba.conf`` 內，設定："
 
 #: ../../content/administration/on_premise/deploy.rst:108
 msgid ""
 "in ``/etc/postgresql/<YOUR POSTGRESQL VERSION>/main/postgresql.conf`` set:"
-msgstr ""
+msgstr "在 ``/etc/postgresql/<你的 PostgreSQL 版本>/main/postgresql.conf`` 內，設定："
 
 #: ../../content/administration/on_premise/deploy.rst:119
 msgid "Configuring Odoo"
-msgstr ""
+msgstr "配置 Odoo"
 
 #: ../../content/administration/on_premise/deploy.rst:121
 msgid ""
@@ -4705,12 +4729,15 @@ msgid ""
 "<reference/cmdline/server/database>` when your Postgres deployment is not "
 "local and/or does not use the installation defaults."
 msgstr ""
+"Odoo 開箱即用，透過 UNIX 通訊端通過連接埠 5432 連線至本地 postgres。若你的 Postgres "
+"部署不是本地寄存及/或不使用安裝後的預設設定時，可使用 :ref:`資料庫選項 <reference/cmdline/server/database>`"
+" 去覆蓋它。"
 
 #: ../../content/administration/on_premise/deploy.rst:126
 msgid ""
 "The :doc:`packaged installers <packages>` will automatically create a new "
 "user (``odoo``) and set it as the database user."
-msgstr ""
+msgstr ":doc:`套裝化安裝程式 <packages>` 會自動建立一個新的用戶（``odoo``），並將它設為資料庫使用者。"
 
 #: ../../content/administration/on_premise/deploy.rst:129
 msgid ""
@@ -4720,6 +4747,8 @@ msgid ""
 " randomly generated value to ensure third parties can not use this "
 "interface."
 msgstr ""
+"資料庫管理畫面受 ``admin_passwd`` "
+"的設定所保護。此設定只可透過配置檔案進行設置，並會在執行資料庫更改前，只作簡單檢查。它應設為隨機生成的數值，以確保第三方無法使用此介面。"
 
 #: ../../content/administration/on_premise/deploy.rst:134
 msgid ""
@@ -4728,6 +4757,9 @@ msgid ""
 "screen. For the database management screen to work requires that the "
 "PostgreSQL user have ``createdb`` right."
 msgstr ""
+"所有資料庫操作都使用 :ref:`資料庫選項 "
+"<reference/cmdline/server/database>`，包括資料庫管理畫面。要使資料庫管理畫面正常運作，需要 PostgreSQL "
+"使用者具有 ``createdb`` 權限。"
 
 #: ../../content/administration/on_premise/deploy.rst:138
 msgid ""
@@ -4736,34 +4768,36 @@ msgid ""
 "with ``no-createdb`` and the database must be owned by a different "
 "PostgreSQL user."
 msgstr ""
+"使用者始終可以刪除他們名下擁有的資料庫。為使資料庫管理畫面完全無法運作，需要使用 ``no-createdb`` 建立 PostgreSQL "
+"使用者，而且資料庫必須由其他 PostgreSQL 使用者擁有。"
 
 #: ../../content/administration/on_premise/deploy.rst:142
 msgid "the PostgreSQL user *must not* be a superuser"
-msgstr ""
+msgstr "該 PostgreSQL 使用者 **不可** 是超級使用者"
 
 #: ../../content/administration/on_premise/deploy.rst:147
 msgid "connect to a PostgreSQL server on 192.168.1.2"
-msgstr ""
+msgstr "連線至 192.168.1.2 上的 PostgreSQL 伺服器"
 
 #: ../../content/administration/on_premise/deploy.rst:148
 msgid "port 5432"
-msgstr ""
+msgstr "連接埠 5432"
 
 #: ../../content/administration/on_premise/deploy.rst:149
 msgid "using an 'odoo' user account,"
-msgstr ""
+msgstr "使用「odoo」使用者帳戶，"
 
 #: ../../content/administration/on_premise/deploy.rst:150
 msgid "with 'pwd' as a password"
-msgstr ""
+msgstr "以「pwd」作為密碼"
 
 #: ../../content/administration/on_premise/deploy.rst:151
 msgid "filtering only db with a name beginning with 'mycompany'"
-msgstr ""
+msgstr "只篩選名稱起首是「mycompany」的資料庫"
 
 #: ../../content/administration/on_premise/deploy.rst:168
 msgid "SSL Between Odoo and PostgreSQL"
-msgstr ""
+msgstr "在 Odoo 與 PostgreSQL 之間使用 SSL"
 
 #: ../../content/administration/on_premise/deploy.rst:170
 msgid ""
@@ -4772,21 +4806,26 @@ msgid ""
 "value chosen out of 'disable', 'allow', 'prefer', 'require', 'verify-ca' or "
 "'verify-full'"
 msgstr ""
+"由 Odoo 11.0 開始，你可在 Odoo 與 PostgreSQL 之間，強制使用 ssl 連線。在 Odoo 中，是以 db_sslmode "
+"去控制連線的 ssl 安全性，可選用值為：disable（停用）、allow（允許）、prefer（偏好）、require（必需）、verify-"
+"ca（驗證ca）及 verify-full（完整驗證）。"
 
 #: ../../content/administration/on_premise/deploy.rst:175
 msgid ""
 "`PostgreSQL Doc <https://www.postgresql.org/docs/12/static/libpq-ssl.html>`_"
 msgstr ""
+"`PostgreSQL 使用說明 <https://www.postgresql.org/docs/12/static/libpq-"
+"ssl.html>`_"
 
 #: ../../content/administration/on_premise/deploy.rst:180
 msgid "Builtin server"
-msgstr ""
+msgstr "內置伺服器"
 
 #: ../../content/administration/on_premise/deploy.rst:182
 msgid ""
 "Odoo includes built-in HTTP, cron, and live-chat servers, using either "
 "multi-threading or multi-processing."
-msgstr ""
+msgstr "Odoo 已有內置 HTTP、cron 以及實時聊天伺服器，只會是使用多線程或多進程模式。"
 
 #: ../../content/administration/on_premise/deploy.rst:185
 msgid ""
@@ -4797,6 +4836,9 @@ msgid ""
 "cron threads are spawned too. Due to a Python limitation (GIL), it doesn't "
 "make the best use of the hardware."
 msgstr ""
+"**多線程** 伺服器是較簡單的伺服器，主要用於開發、演示，及利用其兼容各種操作系統（包括 Windows）的特性。每個新的 HTTP "
+"請求都會產生一個新的線程，即使是 websocket 等的長時間連線也不例外。此外，還會生成額外的守護 cron 線程。由於 Python "
+"有限制（GIL 全域直譯器鎖），它不能充份利用硬件的性能。"
 
 #: ../../content/administration/on_premise/deploy.rst:191
 msgid ""
@@ -4804,6 +4846,8 @@ msgid ""
 " It is selected by leaving the :option:`--workers <odoo-bin --workers>` "
 "option out or setting it to ``0``."
 msgstr ""
+"多線程伺服器是預設的伺服器，也適用於 docker 容器。只要不使用 :option:`--workers <odoo-bin --workers>` "
+"選項，或將其設為 ``0``，就可以選擇多線程伺服器。"
 
 #: ../../content/administration/on_premise/deploy.rst:194
 msgid ""
@@ -4826,32 +4870,33 @@ msgid ""
 "The multi-processing server is opt-in. It is selected by setting the "
 ":option:`--workers <odoo-bin --workers>` option to a non-null integer."
 msgstr ""
+"多進程伺服器是要你選擇使用，才會生效。可將 :option:`--workers <odoo-bin --workers>` 選項設為非空白整數去選用。"
 
 #: ../../content/administration/on_premise/deploy.rst:205
 msgid ""
 "Because it is highly customized for Linux servers, the multi-processing "
 "server is not available on Windows."
-msgstr ""
+msgstr "由於多進程伺服器是高度自訂給 Linux 伺服器使用，因此 Windows 無法使用。"
 
 #: ../../content/administration/on_premise/deploy.rst:209
 msgid "Worker number calculation"
-msgstr ""
+msgstr "計算工作器數目"
 
 #: ../../content/administration/on_premise/deploy.rst:211
 msgid "Rule of thumb : (#CPU * 2) + 1"
-msgstr ""
+msgstr "一般估算法則：(中央處理器數目 × 2) + 1"
 
 #: ../../content/administration/on_premise/deploy.rst:212
 msgid "Cron workers need CPU"
-msgstr ""
+msgstr "Cron 工作器需要中央處理器"
 
 #: ../../content/administration/on_premise/deploy.rst:213
 msgid "1 worker ~= 6 concurrent users"
-msgstr ""
+msgstr "1 個工作器 ~= 6 個同時存取使用者"
 
 #: ../../content/administration/on_premise/deploy.rst:216
 msgid "memory size calculation"
-msgstr ""
+msgstr "計算記憶體大小"
 
 #: ../../content/administration/on_premise/deploy.rst:218
 msgid ""
@@ -4875,12 +4920,12 @@ msgstr ""
 msgid ""
 "Needed RAM = #worker * ( (light_worker_ratio * light_worker_ram_estimation) "
 "+ (heavy_worker_ratio * heavy_worker_ram_estimation) )"
-msgstr ""
+msgstr "所需記憶體 = 工作器數目 × ( (輕型工作器比例 × 輕型工作器記憶體估算值) + (重型工作器比例 × 重型工作器記憶體估算值) )"
 
 #: ../../content/administration/on_premise/deploy.rst:225
 #: ../../content/administration/on_premise/deploy.rst:413
 msgid "LiveChat"
-msgstr ""
+msgstr "實時聊天"
 
 #: ../../content/administration/on_premise/deploy.rst:227
 msgid ""
@@ -4900,7 +4945,7 @@ msgstr ""
 
 #: ../../content/administration/on_premise/deploy.rst:238
 msgid "60 concurrent users"
-msgstr ""
+msgstr "60 個同時存取使用者"
 
 #: ../../content/administration/on_premise/deploy.rst:240
 msgid "60 users / 6 = 10 <- theoretical number of worker needed"

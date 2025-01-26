@@ -8,8 +8,8 @@
 # Sergio Zanchetta <primes2h@gmail.com>, 2023
 # Rita Amboni, 2023
 # Stefano Savanelli, 2024
-# Marianna Ciofani, 2024
 # Wil Odoo, 2024
+# Marianna Ciofani, 2025
 # 
 #, fuzzy
 msgid ""
@@ -18,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-30 14:12+0000\n"
 "PO-Revision-Date: 2023-01-13 14:30+0000\n"
-"Last-Translator: Wil Odoo, 2024\n"
+"Last-Translator: Marianna Ciofani, 2025\n"
 "Language-Team: Italian (https://app.transifex.com/odoo/teams/41243/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1004,6 +1004,9 @@ msgid ""
 "For more information about the upgrade process, check out the :ref:`Odoo "
 "Online upgrade documentation <upgrade-request-test>`."
 msgstr ""
+"Per maggiori informazioni sul processo di aggiornamento, consulta la "
+":ref:`documetazione sull'aggiornamento di Odoo Online <upgrade-request-"
+"test>`."
 
 #: ../../content/administration/odoo_online.rst:54
 msgid "Duplicate"
@@ -1635,6 +1638,8 @@ msgstr ""
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:36
 msgid "How can I automate tasks when an IP address change occurs?"
 msgstr ""
+"In che modo è possibile automatizzare le attività quando viene modificato un"
+" indirizzo IP?"
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:38
 msgid ""
@@ -1644,6 +1649,12 @@ msgid ""
 "address included as a query string parameter (`new`), along with the "
 "previous IP address as an additional parameter (`old`)."
 msgstr ""
+"**Odoo.sh notifica gli amministratori del progetto sul cambiamento "
+"dell'indirizzo IP.** In aggiunta, quando l'indirizzo IP di un'istanza di "
+"produzione cambia, viene fatta una richiesta HTTP di tipo `GET` al percorso "
+"`/_odoo.sh/ip-change` con il nuovo indirizzo IP incluso come parametro della"
+" stringa di query (`new`), insieme con l'indirizzo IP precedente come "
+"parametro aggiuntivo (`old`)."
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:43
 msgid ""
@@ -1651,6 +1662,9 @@ msgid ""
 "address change (e.g., sending an email, contacting a firewall API, "
 "configuring database objects, etc.)"
 msgstr ""
+"Il meccanismo permette di applicare azioni personalizzate in risposta al "
+"cambiamento dell'indirizzo IP (ad es. inviare e-mail, contattare un firewall"
+" API, configurare gli oggetti di un database, ecc.)"
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:46
 msgid ""
@@ -1658,10 +1672,13 @@ msgid ""
 "internally by the platform itself and returns a `403` response if accessed "
 "through any other means."
 msgstr ""
+"Per motivi di sicurezza, il percorso `/_odoo.sh/ip-change` è accessibile "
+"solo internamente dalla piattaforma stessa e restituisce la risposta 403` se"
+" l'accesso viene effettuato con altri mezzi."
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:49
 msgid "Here is a pseudo-implementation example:"
-msgstr ""
+msgstr "Di seguito un esempio di pseudo-implementazione:"
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:6
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:249
@@ -4967,11 +4984,12 @@ msgstr "Gestisci gli utenti Github che possono accedere al progetto."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:36
 msgid "There are three levels of users:"
-msgstr ""
+msgstr "Esistono tre livelli di utenti:"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:38
 msgid ":guilabel:`Admin`: has access to all features of an Odoo.sh project."
 msgstr ""
+":guilabel:`Admin`: ha accesso a tutte le funzionalità di un progetto Odoo.sh"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:40
 msgid ""
@@ -4980,6 +4998,11 @@ msgid ""
 "Testers can work with copies of production data but cannot access the "
 "production database through the Odoo.sh tooling."
 msgstr ""
+":guilabel:`Tester`: ha accesso ai database di *staging* e *sviluppo* e ai "
+"rispettivi strumenti. Questo ruolo è per gli utenti che effettuano test di "
+"accettazione utenti. I tester possono lavorare con copie dei dati di "
+"produzione ma non possono accedere ai database di produzione attraverso gli "
+"strumenti di Odoo.sh."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:44
 msgid ""
@@ -4988,6 +5011,10 @@ msgid ""
 "but are not allowed to access production and staging databases through the "
 "Odoo.sh tooling."
 msgstr ""
+":guilabel:`Developer`: ha accesso esclusivamente ai database *di sviluppo* e"
+" ai relativi strumenti. Questo ruolo è per sviluppatori che propongono "
+"modifiche del codice ma non possono accedere ai database di produzione e "
+"staging tramite Odoo.sh."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:54
 msgid "Developer"
@@ -5092,6 +5119,13 @@ msgid ""
 "your-repository/managing-protected-branches/managing-a-branch-protection-"
 "rule>`_ for detailed guidance."
 msgstr ""
+"I ruoli descritti si applicano solo all'utilizzo di Odoo.sh. È importante "
+"riportare l'attribuzione dei ruoli degli utenti all'interno del repository "
+"su GitHub. Per avere informazioni più dettagliate, consulta la sezione della"
+" documentazione di GitHub `Gestire una regola di protezione di un ramo "
+"<https://docs.github.com/en/repositories/configuring-branches-and-merges-in-"
+"your-repository/managing-protected-branches/managing-a-branch-protection-"
+"rule>`_. "
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:207
 msgid "Public Access"
@@ -5106,6 +5140,8 @@ msgid ""
 "If activated, this option exposes the Builds page publicly, allowing "
 "visitors to view logs of development builds."
 msgstr ""
+"Se attivata, l'opzione rende pubblica la pagina relativa ai build, "
+"permettendo ai visitatori di visualizzare i registri dei build di sviluppo."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:216
 msgid ""
@@ -5117,7 +5153,7 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:221
 msgid "GitHub commit statuses"
-msgstr ""
+msgstr "Stati commit GitHub"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:223
 msgid ""
@@ -5129,6 +5165,13 @@ msgid ""
 "secure/managing-your-personal-access-tokens>`_ for instructions to create "
 "yours."
 msgstr ""
+"Una volta attivata, l'opzione permette a Odoo.sh di inviare gli stati dei "
+"commit alla repository di GitHub quando un build viene creato o aggiornato. "
+"Per farlo, è necessario avere il token GitHub con i permessi adatti. "
+"Consulta la `documentazione di GitHub sui token di accesso personale  "
+"<https://docs.github.com/en/authentication/keeping-your-account-and-data-"
+"secure/managing-your-personal-access-tokens>`_ per scoprire come creare il "
+"tuo."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:229
 msgid ""
@@ -5136,28 +5179,35 @@ msgid ""
 "be disabled if they fail to update the commit status. You can replace the "
 "token at any time on Odoo.sh."
 msgstr ""
+"I **token personali dettagliati** di GitHub hanno una data di scadenza e "
+"verranno disattivati se l'aggiornamento allo stato del commit fallisce. Puoi"
+" sostituire il token in qualsiasi momento su Odoo.sh."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:232
 msgid "The commit statuses pushed to GitHub can have the following contexts:"
 msgstr ""
+"Gli stati dei commit inviati a GitHub possono avere i seguenti contesti:"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:234
 msgid ":guilabel:`ci/odoo.sh (dev)`: status of a development build"
-msgstr ""
+msgstr ":guilabel:`ci/odoo.sh (dev)`: stato di un build di sviluppo"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:235
 msgid ":guilabel:`ci/odoo.sh (staging)`: status of a staging build"
-msgstr ""
+msgstr ":guilabel:`ci/odoo.sh (staging)`: stato di un build di staging"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:236
 msgid ":guilabel:`ci/odoo.sh (production)`: status of a production build"
-msgstr ""
+msgstr ":guilabel:`ci/odoo.sh (production)`: stato di un build di produzione"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:237
 msgid ""
 ":guilabel:`ci/odoo.sh (test_ci)`: testing the token from the Settings page "
 "will push a test status on the last commit of your repository"
 msgstr ""
+":guilabel:`ci/odoo.sh (test_ci)`: se il token viene testato dalla pagina "
+"delle impostazioni, all'ultimo commit nella repository verrà inviato uno "
+"stato di test"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:241
 msgid "Custom domains"
@@ -5523,11 +5573,11 @@ msgstr ""
 
 #: ../../content/administration/on_premise.rst:64
 msgid "Odoo 18.0 and above: `services.odoo.com` on port `80`"
-msgstr ""
+msgstr "Odoo 18.0 e versioni successive: `services.odoo.com` sulla porta `80`"
 
 #: ../../content/administration/on_premise.rst:65
 msgid "Odoo 17.0 and below: `services.openerp.com` on port `80`"
-msgstr ""
+msgstr "Odoo 17.0 e inferiori: `services.openerp.com` sulla porta `80`"
 
 #: ../../content/administration/on_premise.rst:67
 msgid ""
@@ -9003,20 +9053,20 @@ msgstr "Fine del supporto"
 
 #: ../../content/administration/supported_versions.rst:34
 msgid "**Odoo 18.0**"
-msgstr ""
+msgstr "**Odoo 18.0**"
 
 #: ../../content/administration/supported_versions.rst:38
 #: ../../content/administration/supported_versions.rst:69
 msgid "October 2024"
-msgstr ""
+msgstr "Ottobre 2024"
 
 #: ../../content/administration/supported_versions.rst:39
 msgid "October 2027 (planned)"
-msgstr ""
+msgstr "Ottobre 2027 (pianificato)"
 
 #: ../../content/administration/supported_versions.rst:40
 msgid "Odoo SaaS 17.4"
-msgstr ""
+msgstr "Odoo SaaS 17.4"
 
 #: ../../content/administration/supported_versions.rst:42
 #: ../../content/administration/supported_versions.rst:43
@@ -9027,11 +9077,11 @@ msgstr "N/D"
 
 #: ../../content/administration/supported_versions.rst:44
 msgid "July 2024"
-msgstr ""
+msgstr "Luglio 2024"
 
 #: ../../content/administration/supported_versions.rst:46
 msgid "Odoo SaaS 17.2"
-msgstr ""
+msgstr "Odoo SaaS 17.2"
 
 #: ../../content/administration/supported_versions.rst:50
 msgid "April 2024"
@@ -9060,7 +9110,7 @@ msgstr "Ottobre 2022"
 
 #: ../../content/administration/supported_versions.rst:63
 msgid "October 2025 (planned)"
-msgstr ""
+msgstr "Ottobre 2025 (pianificato)"
 
 #: ../../content/administration/supported_versions.rst:64
 msgid "**Odoo 15.0**"
@@ -9096,11 +9146,11 @@ msgstr "Versioni precedenti"
 
 #: ../../content/administration/supported_versions.rst:80
 msgid "Before 2020"
-msgstr ""
+msgstr "Prima del 2020"
 
 #: ../../content/administration/supported_versions.rst:81
 msgid "Before 2023"
-msgstr ""
+msgstr "Prima del 2023"
 
 #: ../../content/administration/supported_versions.rst:83
 msgid "Legend"
@@ -9134,18 +9184,28 @@ msgid ""
 "patches. Using a :doc:`supported version <supported_versions>` is strongly "
 "recommended. Each major version is supported for three years."
 msgstr ""
+"Un aggiornamento comporta lo spostamento di un database da una versione più "
+"vecchia a una più recente (ad es. da Odoo 16.0 a Odoo 18.0). Aggiornamenti "
+"regolari sono cruciali in quanto ogni versione offre nuove funzionalità, "
+"correzione di bug e patch di sicurezza. L'utilizzo di una :doc:`versione "
+"supportata <supported_versions>` è fortemente consigliato.  Ogni versione "
+"maggiore è supportata per tre anni."
 
 #: ../../content/administration/upgrade.rst:10
 msgid ""
 "Depending on the hosting type and Odoo version used, a database upgrade can "
 "be **mandatory**."
 msgstr ""
+"In base al tipo di hosting e alla versione di Odoo utilizzata, "
+"l'aggiornamento di un database potrebbe essere **obbligatorio**."
 
 #: ../../content/administration/upgrade.rst:16
 msgid ""
 "If a database is on a **major version** (e.g., 16.0, 17.0, 18.0), an upgrade"
 " is mandatory every two years."
 msgstr ""
+"Se un database è su una **versione maggiore** (ad es. 16.0, 17.0, 18.0), "
+"l'aggiornamento è obbligatorio ogni due anni."
 
 #: ../../content/administration/upgrade.rst:18
 msgid ""
@@ -9153,16 +9213,23 @@ msgid ""
 " is mandatory a few weeks after the next version is released. Minor versions"
 " are usually released every two months."
 msgstr ""
+"Se un database è su una **versione minore** (ad es., 17.1, 17.2, 17.4), "
+"l'aggiornamento è obbligatorio un paio di settimane dopo il rilascio della "
+"versione successiva. Di solito, le versioni minori vengono rilasciate ogni "
+"due mesi."
 
 #: ../../content/administration/upgrade.rst:24
 msgid ""
 "After the initial three years of support, you will have another two years to"
 " complete the upgrade. You will be notified when an upgrade is required."
 msgstr ""
+"Dopo i tre anni iniziali di supporto, avrai altri due anni per completare "
+"l'aggiornamento. Riceverai una notifica se sarà necessario aggiornare il tuo"
+" database."
 
 #: ../../content/administration/upgrade.rst:0
 msgid "The \"unsupported version\" popup on Odoo.sh."
-msgstr ""
+msgstr "Popup \"versione non supportata\" su Odoo.sh."
 
 #: ../../content/administration/upgrade.rst:32
 msgid ""
@@ -9170,6 +9237,9 @@ msgid ""
 "recommended. Note that the smaller the version gap, the easier the upgrade "
 "should be."
 msgstr ""
+"Puoi continuare a utilizzare la stessa versione all'infinito anche se non è "
+"consigliato. Tieni a mente che quanto minore è il divario tra le versioni, "
+"tanto più facile sarà eseguire l'aggiornamento."
 
 #: ../../content/administration/upgrade.rst:37
 msgid ""
@@ -9177,6 +9247,9 @@ msgid ""
 "mandatory upgrade will be automatically carried out. You are in control of "
 "the process as long as the deadline is not reached."
 msgstr ""
+"Riceverai una notifica nel tuo database alcune settimane prima "
+"dell'esecuzione automatica di un aggiornamento obbligatorio. Hai il "
+"controllo del processo fino alla data di scadenza."
 
 #: ../../content/administration/upgrade.rst:0
 msgid "The upgrade message prompt on the top right of the database"
@@ -9190,6 +9263,11 @@ msgid ""
 "the test fails, you can test an upgrade using the `database manager "
 "<https://www.odoo.com/my/databases>`_."
 msgstr ""
+"Nel concreto, il team di aggiornamento di Odoo esegue un aggiornamento di "
+"prova invisibile di ogni database che dovrebbe essere aggiornato. Se il test"
+" riesce e dura meno di 20 minuti, puoi eseguire l'aggiornamento direttamente"
+" dal database. Se il test fallisce, puoi testare un aggiornamento "
+"utilizzando il `database manager <https://www.odoo.com/my/databases>`_."
 
 #: ../../content/administration/upgrade.rst:49
 msgid ""
@@ -9197,12 +9275,17 @@ msgid ""
 " an upgraded test database <upgrade-request-test>` first and spend time "
 ":ref:`testing <upgrade-testing>` it."
 msgstr ""
+"Se devi aggiornare Odoo, è fortemente consigliato :ref:`richiedere un "
+"database di prova aggiornato <upgrade-request-test>` e  :ref:`testarlo "
+"<upgrade-testing>` ."
 
 #: ../../content/administration/upgrade.rst:52
 msgid ""
 "An automatic upgrade to the next version will be triggered if no action is "
 "taken before the specified due date."
 msgstr ""
+"Se prima della data limite indicata non viene eseguita nessuna azione, verrà"
+" automaticamente effettuato l'aggiornamento alla versione successiva."
 
 #: ../../content/administration/upgrade.rst:55
 msgid "An upgrade does not cover:"
@@ -9241,6 +9324,13 @@ msgid ""
 "request-test>` while also :doc:`upgrading the source code of your custom "
 "modules </developer/howtos/upgrade_custom_db>`."
 msgstr ""
+"Se il tuo database contiene moduli personalizzati, non può essere aggiornato"
+" fino al momento in cui sarà disponibile una versione per i moduli "
+"personalizzati corrispondente alla versione desiderata di Odoo. Per i "
+"clienti che gestiscono i propri moduli personalizzati, consigliamo di "
+"parallelizzare il processo :ref:`richiedendo un database aggiornato` "
+"<upgrade-request-test>mentre :doc:`viene aggiornato anche il codice sorgente"
+" dei moduli personalizzati </developer/howtos/upgrade_custom_db>`."
 
 #: ../../content/administration/upgrade.rst:73
 msgid "Upgrading in a nutshell"
@@ -9251,6 +9341,8 @@ msgid ""
 "Request an upgraded test database (see :ref:`obtaining an upgraded test "
 "database <upgrade-request-test>`)."
 msgstr ""
+"Richiedi un database di prova aggiornato (consulta la sezione :ref:`Ottenere"
+" un database di prova aggiornato <upgrade-request-test>`)."
 
 #: ../../content/administration/upgrade.rst:77
 msgid ""
@@ -9267,6 +9359,8 @@ msgid ""
 "Thoroughly test the upgraded database (see :ref:`testing the new version of "
 "the database <upgrade-testing>`)."
 msgstr ""
+"Testa a fondo il database aggiornato (consulta la sezione :ref:`Testare una "
+"nuova versione del database <upgrade-testing>`)."
 
 #: ../../content/administration/upgrade.rst:81
 msgid ""
@@ -9274,6 +9368,10 @@ msgid ""
 "`Support page and selecting \"An issue related to my future upgrade (I am "
 "testing an upgrade)\" <https://www.odoo.com/help?stage=migration>`_."
 msgstr ""
+"Segnala qualsiasi problema riscontrato durante il test di Odoo accedendo "
+"alla `pagina di supporto per poi selezionare \"Un problema relativo al mio "
+"futuro aggiornamento (sto testando un aggiornamento)\" "
+"<https://www.odoo.com/help?stage=migration>`_."
 
 #: ../../content/administration/upgrade.rst:84
 msgid ""
@@ -9291,6 +9389,10 @@ msgid ""
 "for the time it takes to complete the process (see :ref:`upgrading the "
 "production database <upgrade-production>`)."
 msgstr ""
+"Richiedi l'aggiornamento per il database di produzione rendendolo non "
+"disponibile per il tempo necessario al completamento del processo (consulta "
+"la sezione :ref:`Aggiornare il database di produzione <upgrade-"
+"production>`)."
 
 #: ../../content/administration/upgrade.rst:88
 msgid ""
@@ -9298,6 +9400,9 @@ msgid ""
 "`Support page and selecting \"An issue related to my upgrade (production)\" "
 "<https://www.odoo.com/help?stage=post_upgrade>`_."
 msgstr ""
+"Segnala qualsiasi problema riscontrato durante il test di Odoo accedendo "
+"alla `pagina di supporto per poi selezionare \"Un problema relativo al mio "
+"upgrade (produzione)\" <https://www.odoo.com/help?stage=post_upgrade>`_."
 
 #: ../../content/administration/upgrade.rst:95
 msgid "Obtaining an upgraded test database"
@@ -9311,6 +9416,12 @@ msgid ""
 "manager <https://www.odoo.com/my/databases>`_, or your `Odoo.sh project "
 "<https://www.odoo.sh/project>`_."
 msgstr ""
+"La `pagina di aggiornamento <https://upgrade.odoo.com>`_ è la piattaforma "
+"principale per richiedere un database aggiornato. Tuttavia, in base al tipo "
+"di hosting, puoi eseguire l'aggiornamento dalla riga di comando (on-"
+"premise), dal `gestore di database Odoo Online "
+"<https://www.odoo.com/my/databases>`_ oppure dal `Odoo.sh project "
+"<https://www.odoo.sh/project>`_."
 
 #: ../../content/administration/upgrade.rst:103
 msgid ""
@@ -9329,6 +9440,8 @@ msgid ""
 "Odoo Online databases can be manually upgraded via the `database manager "
 "<https://www.odoo.com/my/databases>`_."
 msgstr ""
+"I database Odoo Online possono essere aggiornati manualmente attraverso il "
+"`gestore di database <https://www.odoo.com/my/databases>`_."
 
 #: ../../content/administration/upgrade.rst:114
 msgid ""
@@ -9419,6 +9532,8 @@ msgid ""
 "The **latest production daily automatic backup** is then sent to the Upgrade"
 " platform."
 msgstr ""
+"In seguito, **l'ultimo back-up automatico giornaliero di produzione** viene "
+"inviato alla piattaforma di aggiornamento."
 
 #: ../../content/administration/upgrade.rst:148
 msgid ""
@@ -9473,6 +9588,7 @@ msgstr ""
 #: ../../content/administration/upgrade.rst:173
 msgid "This command has some requirements on the environment it runs in:"
 msgstr ""
+"Questo comando ha alcuni requisiti per l'ambiente in cui viene eseguito:"
 
 #: ../../content/administration/upgrade.rst:175
 msgid ""
@@ -9480,6 +9596,9 @@ msgid ""
 "normally found in any Linux distribution (including WSL). An error will be "
 "displayed if one or several of them are missing."
 msgstr ""
+"alcuni comandi esterni che devono essere forniti dal sistema operativo, "
+"normalmente trovati in qualsiasi distribuzione Linux (compresa WSL). Se uno "
+"o più di essi mancano, viene visualizzato un errore;"
 
 #: ../../content/administration/upgrade.rst:178
 msgid ""
@@ -9490,6 +9609,12 @@ msgid ""
 "<https://www.postgresql.org/docs/current/libpq-pgpass.html>`_ for this "
 "requirement."
 msgstr ""
+"L'utente del sistema che esegue il comando deve essere configurato con "
+"accesso al database. Per questo requisito, consulta la documentazione "
+"PostgreSQL relativa al `client environment "
+"<https://www.postgresql.org/docs/current/libpq-envars.html>`_ oppure la "
+"sezione `client password file  "
+"<https://www.postgresql.org/docs/current/libpq-pgpass.html>`_."
 
 #: ../../content/administration/upgrade.rst:182
 msgid ""
@@ -9498,6 +9623,11 @@ msgid ""
 "between 32768 and 60999. This can be in conflict with your restrictive "
 "firewall and may need an exception added to the firewall configuration."
 msgstr ""
+"Lo script deve essere in grado di raggiungere uno o più server della "
+"piattaforma di aggiornamento sia sulla porta TCP 443 che su qualsiasi porta "
+"TCP nell'intervallo tra 32768 e 60999. Questo può essere in conflitto con il"
+" firewall restrittivo e potrebbe essere necessario aggiungere un'eccezione "
+"alla configurazione del firewall."
 
 #: ../../content/administration/upgrade.rst:187
 msgid ""
@@ -9512,6 +9642,8 @@ msgid ""
 "An upgraded test database can also be requested via the `Upgrade page "
 "<https://upgrade.odoo.com>`_."
 msgstr ""
+"Un database di test aggiornato può essere richiesto anche attraverso la "
+"`pagina di aggiornamento <https://upgrade.odoo.com>`_."
 
 #: ../../content/administration/upgrade.rst:197
 msgid ""
@@ -9607,6 +9739,10 @@ msgid ""
 "not stuck in your day-to-day activities by a change in views, behavior, or "
 "an error message once the upgrade goes live."
 msgstr ""
+"È essenziale testare il database di prova aggiornato per assicurarti di non "
+"essere bloccato con le attività giornaliere a causa di cambiamenti relativi "
+"a viste, comportamenti o messaggi di errore una volta che l'aggiornamento è "
+"live."
 
 #: ../../content/administration/upgrade.rst:236
 msgid ""
@@ -9807,6 +9943,13 @@ msgid ""
 "to report any problem encountered during the testing to fix it before "
 "upgrading your production database."
 msgstr ""
+"Se riscontri problemi durante la fase di test del database di prova "
+"aggiornato, è possibile richiedere il supporto di Odoo accedendo alla "
+"`pagina di supporto per poi selezionare \"Un problema relativo al mio futuro"
+" aggiornamento (sto testando un aggiornamento)\" "
+"<https://www.odoo.com/help?stage=migration>`_. In qualsiasi caso, è "
+"essenziale segnalare qualsiasi problema riscontrato durante la fase di test "
+"per correggerlo prima di aggiornare il database di produzione."
 
 #: ../../content/administration/upgrade.rst:293
 msgid ""
@@ -9866,6 +10009,9 @@ msgid ""
 "that the upgraded database can be used as your main database without any "
 "issues, it is time to plan the go-live day."
 msgstr ""
+"Una volta che i :ref:`test <upgrade-testing>` sono stati completati e sei "
+"sicuro di utilizzare il database aggiornato come database principale senza "
+"problemi, è il momento di pianificare il giorno per la messa in funzione."
 
 #: ../../content/administration/upgrade.rst:317
 msgid ""
@@ -9923,6 +10069,8 @@ msgid ""
 "The process of upgrading a production database is similar to upgrading a "
 "test database, but with a few exceptions."
 msgstr ""
+"L'aggiornamento di un database di produzione è simile all'aggiornamento di "
+"un database di prova ma con poche eccezioni."
 
 #: ../../content/administration/upgrade.rst:339
 msgid ""
@@ -9930,6 +10078,10 @@ msgid ""
 "<upgrade-request-test>`, except for the purpose option, which must be set to"
 " :guilabel:`Production` instead of :guilabel:`Test`."
 msgstr ""
+"Il processo è simile :ref:`all'ottenimento di un database di prova "
+"aggiornato <upgrade-request-test>`, a eccezione dell'opzione scopo che "
+"dovrebbe essere impostata su :guilabel:`Produzione` invece di "
+":guilabel:`Test`."
 
 #: ../../content/administration/upgrade.rst:344
 msgid ""
@@ -9946,6 +10098,8 @@ msgid ""
 "The process is similar to :ref:`obtaining an upgraded test database "
 "<upgrade-request-test>` on the :guilabel:`Production` branch."
 msgstr ""
+"Il processo è simile :ref:`all'ottenimento di un database di prova "
+"aggiornato <upgrade-request-test>` sul branch di :guilabel:`Produzione`."
 
 #: ../../content/administration/upgrade.rst:0
 msgid "View from the upgrade tab"
@@ -10006,6 +10160,8 @@ msgid ""
 "An upgraded production database can also be requested via the `Upgrade page "
 "<https://upgrade.odoo.com>`_."
 msgstr ""
+"Un database di produzione aggiornato può essere richiesto anche attraverso "
+"la `pagina di aggiornamento <https://upgrade.odoo.com>`_."
 
 #: ../../content/administration/upgrade.rst:383
 msgid ""
@@ -10013,6 +10169,10 @@ msgid ""
 "will **not** be present on your upgraded database. This is why we recommend "
 "not using it during the upgrade process."
 msgstr ""
+"Una volta che il database è stato caricato, qualsiasi modifica apportata al "
+"database di produzione **non** sarà presente nel database aggiornato. È per "
+"questo che consigliamo di non utilizzarlo durante il processo di "
+"aggiornamento."
 
 #: ../../content/administration/upgrade.rst:388
 msgid ""
@@ -10033,6 +10193,10 @@ msgid ""
 "related to my upgrade (production)\" "
 "<https://www.odoo.com/help?stage=post_upgrade>`_."
 msgstr ""
+"In caso di problemi con il database di produzione, è possibile richiedere "
+"assistenza a Odoo accedendo alla `pagina di supporto per poi selezionare "
+"\"Un problema relativo al mio upgrade (produzione)\" "
+"<https://www.odoo.com/help?stage=post_upgrade>`_."
 
 #: ../../content/administration/upgrade.rst:399
 msgid "Service-level agreement (SLA)"
@@ -10122,6 +10286,8 @@ msgid ""
 "the upgrade of **additional modules not covered by a maintenance contract** "
 "that are created in-house or by third parties, including Odoo partners; and"
 msgstr ""
+"l'aggiornamento di **moduli aggiuntivi non coperti da un contratto di "
+"manutenzione**, creati in-house o da terze parti inclusi partner Odoo"
 
 #: ../../content/administration/upgrade.rst:435
 msgid "**training** on using the upgraded version's features and workflows."
