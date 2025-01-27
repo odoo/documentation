@@ -44,7 +44,7 @@ lists all the fields to display in the table (where each field is a column):
     </list>
 
 A simple example can be found
-`here <https://github.com/odoo/odoo/blob/6da14a3aadeb3efc40f145f6c11fc33314b2f15e/addons/crm/views/crm_lost_reason_views.xml#L46-L54>`__.
+`here <https://github.com/odoo/odoo/blob/18.0/addons/crm/views/crm_lost_reason_views.xml#L45-L53>`__.
 
 .. exercise:: Add a custom list view.
 
