@@ -271,6 +271,18 @@ email or text message:
   :guilabel:`SMS template` and post it as an internal note in the chatter.
 - :guilabel:`Note only`: to only post the message as an internal note in the chatter.
 
+.. _studio/automated-actions/action/send-whatsapp:
+
+Send WhatsApp
+-------------
+
+.. important::
+   To automate the sending of WhatsApp messages, one or more
+   :ref:`WhatsApp templates <productivity/whatsapp/templates>` must be created.
+
+This action is used to send a WhatsApp message to a contact linked to a specific record.
+To do so, select the appropriate :guilabel:`WhatsApp Template` from the drop-down menu.
+
 .. _studio/automated-actions/action/add-followers:
 
 Add Followers and Remove Followers
