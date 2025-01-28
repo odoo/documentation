@@ -17,6 +17,10 @@ emails. The deliverability is optimized for this subdomain as it uses Odoo’s D
    If the database subdomain is `company-name.odoo.com` and all mailing configurations are the
    default ones, all emails will be sent from `notifications@company-name.odoo.com`.
 
+.. important::
+   Only **one** subdomain can be used as a mailing server in Odoo. Subdomains for additional
+   companies require an external email server with a custom domain.
+
 .. image:: email_servers_outbound/diagram-inbound-mailing-method.png
    :alt: Odoo’s default outbound messages configuration.
 
