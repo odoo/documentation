@@ -21,6 +21,7 @@ Then, as the QR code type differs depending on your country, follow the correspo
 page from the following table to set them up.
 
 .. list-table::
+   :widths: 20 20 20 40
    :header-rows: 1
 
    * - QR code types
@@ -75,6 +76,7 @@ Create the payment method
 
 .. image:: qr_code_payment/qr-payment-methods-setting.png
    :alt: QR code payment method configuration
+   :scale: 85 %
 
 .. important::
    At least one bank account must be defined in the journal to allow QR code payments to be
@@ -85,6 +87,7 @@ the payment method to your POS under the :guilabel:`Payment` section.
 
 .. image:: qr_code_payment/qr-configuration-setting.png
    :alt: Enable QR code payment method
+   :scale: 85 %
 
 Register payments using QR codes
 ================================
@@ -94,6 +97,7 @@ and displayed on the screen for the customer to scan and pay with their mobile b
 
 .. image:: qr_code_payment/qr-payment-example.png
    :alt: QR code payment example
+   :scale: 75 %
 
 Hit :guilabel:`Confirm Payment` to validate the transaction.
 
