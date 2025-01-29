@@ -15,10 +15,15 @@ one of the application of EDI.
 
 Odoo supports e-invoicing in many countries. Refer to the country's page for more details:
 
+- :doc:`Argentina <electronic_invoicing/argentina>`
 - :doc:`Austria <electronic_invoicing/austria>`
 - :doc:`Belgium <electronic_invoicing/belgium>`
+- :doc:`Brazil <electronic_invoicing/brazil>`
+- :doc:`Chile <electronic_invoicing/chile>`
+- :doc:`Colombia <electronic_invoicing/colombia>`
 - :doc:`Croatia <electronic_invoicing/croatia>`
 - :doc:`Denmark <electronic_invoicing/denmark>`
+- :doc:`Ecuador <electronic_invoicing/ecuador>`
 - :doc:`Estonia <electronic_invoicing/estonia>`
 - :doc:`Finland <electronic_invoicing/finland>`
 - :doc:`France <electronic_invoicing/france>`
@@ -29,14 +34,17 @@ Odoo supports e-invoicing in many countries. Refer to the country's page for mor
 - :doc:`Latvia <electronic_invoicing/latvia>`
 - :doc:`Lithuania <electronic_invoicing/lithuania>`
 - :doc:`Luxembourg <electronic_invoicing/luxembourg>`
+- :doc:`Mexico <electronic_invoicing/mexico>`
 - :doc:`Netherlands <electronic_invoicing/netherlands>`
 - :doc:`Norway <electronic_invoicing/norway>`
+- :doc:`Peru <electronic_invoicing/peru>`
 - :doc:`Poland <electronic_invoicing/poland>`
 - :doc:`Portugal <electronic_invoicing/portugal>`
 - :doc:`Romania <electronic_invoicing/romania>`
 - :doc:`Slovenia <electronic_invoicing/slovenia>`
 - :doc:`Spain <electronic_invoicing/spain>`
 - :doc:`Spain - Basque Country <electronic_invoicing/basque_country>`
+- :doc:`Uruguay <electronic_invoicing/uruguay>`
 
 .. seealso::
    :doc:`Fiscal localizations documentation <../../fiscal_localizations>`
