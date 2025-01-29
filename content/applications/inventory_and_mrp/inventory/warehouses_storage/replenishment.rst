@@ -115,7 +115,7 @@ click the checkbox next to a field to make it visible.
 - :guilabel:`Vendor`: the company from which the product is acquired.
 - :guilabel:`Bill of Materials`: the bill of materials for the product (if one is configured).
 - :guilabel:`Trigger`: how the replenishment is created, either :guilabel:`Auto` (automatically,
-  once the :guilabel:`On Hand` quantity goes below the :guilabel:`Min Quantity`) or
+  once the :guilabel:`Forecasted` quantity goes below the :guilabel:`Min Quantity`) or
   :guilabel:`Manual` (only when the replenishment is requested).
 - :guilabel:`Procurement Group`: the reference number for how the product is being acquired, such as
   a sales order, purchase order, or manufacturing order.
