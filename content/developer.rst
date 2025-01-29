@@ -3,7 +3,7 @@
 
 =========
 Developer
-=========
+=====
 
 .. toctree::
    developer/tutorials
