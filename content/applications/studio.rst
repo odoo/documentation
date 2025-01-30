@@ -30,8 +30,8 @@ You can also :doc:`build an app from scratch <studio/models_modules_apps>`.
 
 .. _studio/access:
 
-To access Studio, navigate to the app and model you want to modify, then click the **Toggle Studio**
-button, or vice versa.
+To access Studio, navigate to the app and model you want to modify, then click the :icon:`oi-studio`
+(:guilabel:`Toggle Studio`) button, or vice versa.
 
 To close Studio, click :guilabel:`Close` in the upper right corner.
 
