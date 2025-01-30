@@ -11,18 +11,20 @@ Default layout
 ==============
 
 The default layout of reports is managed outside Studio. Go to :menuselection:`Settings`, then, in
-the :guilabel:`Companies` section, click :guilabel:`Configure Document Layout`. Layout settings are
-company-specific but apply to all reports.
+the :guilabel:`Companies` section of the main page, click :guilabel:`Configure Document Layout`.
+Layout settings are company-specific but apply to all reports.
 
 .. tip::
    You can see how the different settings affect the report layout in the report preview on the
-   right, or download  a sample invoice PDF by clicking :guilabel:`Download PDF Preview`.
+   right side of the :guilabel:`Configure your document layout` window. When creating or editing a
+   report, you can see a preview of the report by clicking :guilabel:`Print preview` on the left
+   side of the screen.
 
 Use the following settings:
 
-.. _studio/pdf-reports/default-layout/layout:
+.. _studio/pdf-reports/default-layout-layout:
 
-- :guilabel:`Layout`: Four layouts are available:
+- :guilabel:`Layout`: Seven layouts are available:
 
   .. tabs::
 
@@ -30,92 +32,127 @@ Use the following settings:
 
         .. image:: pdf_reports/layout-light.png
            :alt: Light report layout sample
+           :scale: 90%
 
      .. tab:: Boxed
 
         .. image:: pdf_reports/layout-boxed.png
            :alt: Boxed report layout sample
+           :scale: 90%
 
      .. tab:: Bold
 
         .. image:: pdf_reports/layout-bold.png
            :alt: Bold report layout sample
+           :scale: 90%
 
      .. tab:: Striped
 
         .. image:: pdf_reports/layout-striped.png
            :alt: Striped report layout sample
+           :scale: 90%
 
-.. _studio/pdf-reports/default-layout/font:
+     .. tab:: Bubble
 
-- :guilabel:`Font`: Seven fonts are available: Lato, Roboto, Open Sans, Montserrat, Oswald, Raleway,
-  and Tajawal (which supports Arabic and Latin scripts). Go to the
-  `Google Fonts website <https://fonts.google.com/>`_ to preview them.
+        .. image:: pdf_reports/layout-bubble.png
+           :alt: Bubble report layout sample
+           :scale: 90%
 
-.. _studio/pdf-reports/default-layout/logo:
+     .. tab:: Wave
+
+        .. image:: pdf_reports/layout-wave.png
+           :alt: Wave report layout sample
+           :scale: 90%
+
+     .. tab:: Folder
+
+        .. image:: pdf_reports/layout-folder.png
+           :alt: Folder report layout sample
+           :scale: 90%
+
+.. _studio/pdf-reports/default-layout-background:
+
+- :guilabel:`Background`: The following backgrounds are available:
+
+  - :guilabel:`Blank`: Nothing is displayed.
+  - :guilabel:`Demo logo`: A demo logo is displayed in the background.
+  - :guilabel:`Custom`: Upload a custom background image.
+
+.. _studio/pdf-reports/default-layout-font:
+
+- :guilabel:`Text`: Eight fonts are available: Lato, Roboto, Open Sans, Montserrat, Oswald,
+  Raleway, Tajawal (which supports Arabic and Latin scripts), and Fira Mono. Go to the `Google Fonts
+  website <https://fonts.google.com/>`_ to preview them.
+
+.. _studio/pdf-reports/default-layout-logo:
 
 - :guilabel:`Company logo`: Click the :guilabel:`Edit` button to upload or change the logo. This
   adds the logo to the company’s record on the *Company* model, which you can access by going to
   :menuselection:`Settings` and then clicking :guilabel:`Update Info` in the :guilabel:`Companies`
   section.
 
-.. _studio/pdf-reports/default-layout/colors:
+.. _studio/pdf-reports/default-layout-colors:
 
 - :guilabel:`Colors`: Change the primary and secondary colors used to structure reports. The default
   colors are automatically generated based on the colors of the logo.
 
-.. _studio/pdf-reports/default-layout/background:
+.. _studio/pdf-reports/default-layout-address:
 
-- :guilabel:`Layout background`: The following backgrounds are available:
+- :guilabel:`Address`: The company name and address are displayed in the header of :ref:`external
+  reports <studio/pdf-reports/header-footer>`. You can add multiple lines of text.
 
-  - :guilabel:`Blank`: nothing is displayed.
-  - :guilabel:`Geometric`: an image featuring geometric shapes is displayed in the background.
-  - :guilabel:`Custom`: upload a custom background image.
+.. _studio/pdf-reports/default-layout-tagline:
 
-.. _studio/pdf-reports/default-layout/tagline:
+- :guilabel:`Tagline`: This is displayed in the header of :ref:`external reports
+  <studio/pdf-reports/header-footer>` using the Light, Striped, Bubble, Wave and Folder
+  layouts and in the footer of external reports using the Boxed and Bold layouts. You
+  can add multiple lines of text.
 
-- :guilabel:`Company tagline`: This is displayed in the header of :ref:`external reports
-  <studio/pdf-reports/header-footer/external>`. You can add multiple lines of text.
-
-.. _studio/pdf-reports/default-layout/details:
-
-- :guilabel:`Company details`: These are displayed in the header of :ref:`external reports
-  <studio/pdf-reports/header-footer/external>`. You can add multiple lines of text.
-
-.. _studio/pdf-reports/default-layout/footer:
+.. _studio/pdf-reports/default-layout-footer:
 
 - :guilabel:`Footer`: This text is used in the footer of :ref:`external reports
-  <studio/pdf-reports/header-footer/external>`. You can add multiple lines of text. You can also
+  <studio/pdf-reports/header-footer>`. You can add multiple lines of text. You can also
   edit the footer using the :ref:`report editor <studio/pdf-reports/edit>`.
 
-.. _studio/pdf-reports/default-layout/paper:
+.. _studio/pdf-reports/default-layout-paper:
 
-- :guilabel:`Paper format`: to define the default paper size of reports. You can select
-  :guilabel:`A4` (21 cm x 29.7 cm), :guilabel:`US Letter` (21.59 cm x 27.54 cm), or
-  :guilabel:`QR codes page`. This can also be defined for individual reports in the
-  :guilabel:`Paper format` field in :ref:`Studio <studio/pdf-reports/create>`.
+- :guilabel:`Paper format`: This defines the default paper size of reports. You can select
+  :guilabel:`A4` (21 cm x 29.7 cm) and :guilabel:`US Letter` (21.59 cm x 27.54 cm). This can also be
+  defined for individual reports in the :guilabel:`Paper format` field in
+  :ref:`Studio <studio/pdf-reports/edit-options>`.
+
+  .. note::
+     Other paper formats may be available depending on which apps or modules you have installed, for
+     example, label sheets for the Inventory app or event badges for the Events app.
 
 .. _studio/pdf-reports/create:
 
 Creating new PDF reports
 ========================
 
-To create a new report for a model, access the model, click the **Toggle Studio** button, then click
-:guilabel:`Reports`. Click :guilabel:`New` and, in the popup window that opens, select the type of
-report. This is solely used to determine what is displayed in the header and footer:
+To create a new report for a :doc:`model </applications/studio/models_modules_apps>`,
+(e.g., sales orders) access the model, click the :icon:`oi-studio` (:guilabel:`Toggle Studio`)
+button, then click :guilabel:`Reports`. Click :guilabel:`New` and, in the popup window that opens,
+select the type of report. This is solely used to determine what is displayed in the header and
+footer:
 
-.. _studio/pdf-reports/header-footer/external:
+.. _studio/pdf-reports/header-footer:
 
 - :guilabel:`External`:
 
-  - The header displays the company's :ref:`logo <studio/pdf-reports/default-layout/logo>`,
-    :ref:`tagline <studio/pdf-reports/default-layout/tagline>`, and
-    :ref:`details <studio/pdf-reports/default-layout/details>`.
-  - The footer displays the values set in the
-    :ref:`Footer <studio/pdf-reports/default-layout/footer>` field and the page number.
+  - The header displays the company's :ref:`logo <studio/pdf-reports/default-layout-logo>` and its
+    :ref:`name and address <studio/pdf-reports/default-layout-address>`. For reports using the
+    Light, Striped, Bubble, Wave and Folder layouts, the
+    :ref:`tagline <studio/pdf-reports/default-layout-tagline>` also appears in the header.
 
-- :guilabel:`Internal`: The header displays the user's current date and time,
-  :guilabel:`Company Name`, and page number. There is no footer.
+  - The footer displays the values set in the
+    :ref:`Footer <studio/pdf-reports/default-layout-footer>` field and the page number. For
+    reports using the Boxed and Bold layouts, the
+    :ref:`tagline <studio/pdf-reports/default-layout-tagline>` also appears in the footer.
+
+- :guilabel:`Internal`: The header displays the user's current date and time, the company's
+  :ref:`name and address <studio/pdf-reports/default-layout-address>` and the page number. There is
+  no footer.
 
 - :guilabel:`Blank`: There is neither a header nor a footer. Click in the upper left corner of the
   page to edit the report.
@@ -127,34 +164,36 @@ Once you have created the report, you can start :ref:`editing it <studio/pdf-rep
 Editing PDF reports
 ===================
 
-To access the reports available for a model, access the model (e.g., sales orders), click the
-**Toggle Studio** button, then click :guilabel:`Reports`. Select an existing report to open it or
-:ref:`create a new one <studio/pdf-reports/create>`.
+To access the reports available for a model, access the model, click the
+:icon:`oi-studio` (:guilabel:`Toggle Studio`) button, then click :guilabel:`Reports`. Select an
+existing report to open it.
 
-.. tip::
-   Alternatively, you can also open Studio, click :guilabel:`Reports`, and search for a specific
-   report or model.
+Alternatively, you can also open Studio, click :guilabel:`Reports`, and search for a specific
+report or model.
 
 .. important::
-   It is strongly recommended to **duplicate** the standard report and perform changes in the
+   It is strongly recommended to **duplicate** the standard report and make changes in the
    duplicated version. To duplicate a report, hover the mouse pointer on the top right corner
-   of the report, click the vertical ellipsis icon (:guilabel:`⋮`), and then select
-   :guilabel:`Duplicate`.
+   of the report, click the :icon:`fa-ellipsis-vertical` (:guilabel:`vertical ellipsis`) icon, and
+   then select :guilabel:`Duplicate`.
 
    .. image:: pdf_reports/duplicate-report.png
       :alt: Duplicating a PDF report
 
+.. _studio/pdf-reports/edit-options:
+
 Options
 -------
 
-Once you've selected or created a report, you can use the options in the left part of the screen to:
+Once you have selected or created a report, you can use the options in the left part of the screen
+to:
 
-- Change the :guilabel:`Report name`. The new name is applied everywhere (in Studio, under
-  the :guilabel:`Print` button, and in the PDF file name).
-- Modify the :guilabel:`Paper format`. If no value is selected, the format defined in the
-  :ref:`default layout <studio/pdf-reports/default-layout/paper>` is used.
-- :guilabel:`Show in print menu`: to add the report in the :guilabel:`Print` menu available from the
-  record.
+- Change the :guilabel:`Report name`: The new name is applied everywhere (in Studio, in the
+  :guilabel:`Print` menu under the :icon:`fa-cog` (:guilabel:`gear`) icon in the form view, and in
+  the PDF file name).
+- Modify the :guilabel:`Paper format`: If no value is selected, the format defined in the
+  :ref:`default layout <studio/pdf-reports/default-layout-paper>` is used.
+- :guilabel:`Show in print menu`: to add the report to the :guilabel:`Print` menu in the form view.
 - :guilabel:`Reload from attachment`: to save the report as an attachment on the record the first
   time it is generated and reload the original version of the report any subsequent time. This is
   legally required for invoices and is mainly used in this case.
@@ -169,11 +208,11 @@ Once you've selected or created a report, you can use the options in the left pa
 Report editor
 -------------
 
-The report editor allows you to modify the formatting and contents of the report.
+The report editor allows you to modify the content and formatting of the report.
 
 .. tip::
   - You can :guilabel:`Undo` or :guilabel:`Redo` changes using the related buttons or the shortcuts
-    `CTRL Z` and `CTRL Y`.
+    `CTRL` + `Z` and `CTRL` + `Y`.
 
   - Changes are saved automatically when you leave the report or manually using the
     :guilabel:`Save` button.
@@ -199,17 +238,18 @@ Select a value to preview its corresponding output and edit it if necessary.
    :alt: Preview the output of another condition.
 
 .. note::
-   Conditions can only be edited in :ref:`XML <studio/pdf-reports/XML-editing>`.
+   Conditions can only be edited in the :ref:`XML <studio/pdf-reports/XML-editing>`.
 
 Other content
 ~~~~~~~~~~~~~
 
 There are two types of text content in reports:
 
-- Static text, i.e., the text that's not highlighted in blue, which can be modified directly in the
+- Static text, i.e., the text that is not highlighted in blue, which can be modified directly in the
   editor.
-- Dynamic text, i.e., the text that's highlighted in blue, which is replaced by field values when
-  the report is generated, e.g., the SO number or the quotation date.
+- Dynamic text, i.e., the text that is highlighted in blue, which is replaced by
+  :doc:`field </applications/studio/fields>` values when the report is generated, e.g., the sales order number or
+  the quotation date.
 
 You can add content (e.g., fields, lists, tables, images, banners, etc.) to the report using
 commands. Type `/` to open the :ref:`powerbox <knowledge/powerbox>`, then type the command's
@@ -227,39 +267,88 @@ Add a field
 
 To add a field, type `/` and select the :guilabel:`Field` command. In the list that opens, select
 or search for the field; click the right arrow next to the field name to access the list of related
-fields if needed. Then, specify the default value and press `Enter`.
+fields if needed. Then, specify the default value that will be shown if the field is not completed
+in the record and press `Enter`.
 
 .. image:: pdf_reports/powerbox-field.png
    :alt: Select a related field.
 
-Add a data table
-****************
+.. _studio/pdf-reports/add-edit-table:
 
-Data tables are used to display :ref:`relational fields <studio/fields/relational-fields>`. To add
-a data table, type `/`, select the :guilabel:`Dynamic Table` command, and select the relation to be
-displayed in the table.
+Add or edit a table
+*******************
+
+There are two types of tables in reports:
+
+- :ref:`Static tables <studio/pdf-reports/static-table>`, which are used to display static text or fields. For this type of table, you define
+  the number of columns and rows when adding the table.
+- :ref:`Dynamic tables <studio/pdf-reports/dynamic-table>`, which are used to display data from
+  :ref:`relational fields <studio/fields/relational-fields>`.
+  For this type of table, you only define the number of columns when adding the table. The number
+  of rows in the generated report will be determined by the number of records in the related model
+  that are linked with the current model.
+
+  .. example::
+     In a sales order report, a dynamic table is used to show the order lines related to the sales
+     order. If the sales order contains 10 order lines, the table in the generated report has 10 rows;
+     if it contains two order lines, the table has two rows.
+
+.. _studio/pdf-reports/static-table:
+
+Add or edit a static table
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To add a static table, type `/` and select the :guilabel:`Table` command. Determine the number of
+columns and rows for the table. Once the table has been added, you can start editing it.
+
+You can insert, move and delete columns and rows using the table tools. Position the cursor on top
+of the column or to the left of the row then click the purple rectangle and select an option.
+
+.. image:: pdf_reports/table-tools.png
+   :alt: List of available options for editing table structure.
+
+To resize a column, drag the column border to the desired position; reset all columns
+to their standard size by selecting :guilabel:`Reset Size` from the table tools.
+
+Add the :ref:`field of your choice <studio/pdf-reports/add-field>` in a cell or add static text
+by typing.
+
+.. tip::
+   To add text in a structured way without using a table, you can use columns. Add columns by
+   typing `/` and selecting the appropriate command: :guilabel:`2 columns`, :guilabel:`3 columns` or
+   :guilabel:`4 columns`.
+
+.. _studio/pdf-reports/dynamic-table:
+
+Add or edit a dynamic table
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  .. note::
+     - Only relations of type `one2many` or `many2many` can be displayed as dynamic tables.
+     - An existing dynamic table in a standard report has a more complex structure than a dynamic table
+       you add yourself. For such tables, it is possible to insert or delete columns; it is not possible
+       to move columns or to insert, move or delete rows.
+
+To add a dynamic table, type `/` and select the :guilabel:`Dynamic Table` command. In the list that
+opens, select or search for the relation the table will be based on and press `Enter`. Once the
+table has been added, you can start editing it.
+
+You can insert, move and delete columns using the table tools, as for a
+:ref:`static table <studio/pdf-reports/static-table>`. It is also possible to insert static rows
+that will appear above or below the generated rows.
+
+To add a field to a cell, delete any placeholder text then add the :ref:`field of your choice
+<studio/pdf-reports/add-field>`. The dialog box that opens shows the source object for the
+field (e.g., the *Order Lines* model) and the list of available fields.
+
+.. image:: pdf_reports/available-fields.png
+   :alt: List of available fields for the sale order lines model.
+
+Replace the :guilabel:`Column name` label by the label of your choice.
 
 .. note::
-   Only relations of type `one2many` or `many2many` can be displayed as data tables.
-
-Once the table has been added, you can add columns using the table tools. Position the cursor on top
-of the column, then click the purple rectangle and select an option.
-
-.. image:: pdf_reports/table-add-column.png
-   :alt: Add a column in a dynamic table.
-
-You can then insert the :ref:`field of your choice
-<studio/pdf-reports/add-field>` in the columns. The dialog box that opens shows the source object
-for the field (e.g., the *Tag* model) and the list of available fields.
-
-.. image:: pdf_reports/dynamic-table.png
-   :alt: List of available fields for the Tag model.
-
-.. note::
-   - The default row automatically iterates over the field's content, generating a row on the report
-     for each field value (e.g., one row per tag). You can add static content rows above or below
-     the generated rows using the table tools.
-   - You can also add data tables by :ref:`modifying the report's XML <studio/pdf-reports/XML-editing>`.
+   The default row automatically iterates over the field's content, generating a row on the report
+   for each field value (e.g., one row per order line).
 
 Formatting
 **********
@@ -285,128 +374,31 @@ To edit the report's XML, click :guilabel:`Edit sources` in the left pane.
 Examples
 ~~~~~~~~
 
-.. spoiler:: Modify a non-compliant table
+.. spoiler:: Modify the widget of a field
 
-   Sometimes, tables are not properly recognized as such due to complex structures. In those cases,
-   you can still modify them manually in the report XML. For example, with a sales order, you can
-   find the following structure in the XML (simplified for documentation purposes):
-
-    .. code-block:: xml
-
-       <!-- table root element -->
-       <table>
-           <!-- thead = table header, the row with column titles -->
-           <thead>
-               <!-- table row element -->
-               <tr>
-                   <!-- table header element -->
-                   <th>Name</th>
-                   <th>Price</th>
-               </tr>
-           </thead>
-           <!-- table body, the main content -->
-           <tbody>
-               <!-- we create a row for each subrecord with t-foreach -->
-               <tr t-foreach="record.some_relation_ids" t-as="line">
-                   <!-- for each line, we output the name and price as table cells -->
-                   <td t-out="line.name"/>
-                   <td t-out="line.price"/>
-               </tr>
-           </tbody>
-       </table>
-
-    To modify a table, you must ensure that each row has the same number of data cells. For example,
-    in the case above, you need to add a cell in the header section (with e.g., the column title)
-    and another one in the body section with the field content (usually, with a `t-out` or
-    `t-field` directive).
-
-    .. code-block:: xml
-       :emphasize-lines: 6,13
-
-       <table> <!-- table root element -->
-           <thead> <!-- thead = table header, the row with column titles -->
-               <tr> <!-- table row element -->
-                   <th>Name</th> <!-- table header element -->
-                   <th>Price</th>
-                   <th>Category</th>
-               </tr>
-           </thead>
-           <tbody>  <!-- table body, the main content -->
-               <tr t-foreach="record.some_relation_ids" t-as="line">  <!-- we create a row for each subrecord with t-foreach -->
-                   <td t-out="line.name"/>  <!-- for each line, we output the name and price as table cells -->
-                   <td t-out="line.price"/>
-                   <td t-out="line.category_id.display_name"/>
-               </tr>
-           </tbody>
-       </table>
-
-    .. note::
-       Cells can span multiple rows or columns. For more information, go to the
-       `Mozilla Developer Network website <https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Basics>`_.
-
-    For example, you can modify the **Quotation/Order** report to add a column to display the
-    product category in the main table:
-
-      .. code-block:: xml
-         :emphasize-lines: 6,13
-
-         <table class="table table-sm o_main_table table-borderless mt-4">
-             <!-- In case we want to repeat the header, remove "display: table-row-group" -->
-             <thead style="display: table-row-group">
-                 <tr>
-                     <th name="th_description" class="text-start">Description</th>
-                     <th>Product Category</th>
-                     <th name="th_quantity" class="text-end">Quantity</th>
-                     <th name="th_priceunit" class="text-end">Unit Price</th>
-         [...]
-                     <tr t-att-class="'bg-200 fw-bold o_line_section' if line.display_type == 'line_section' else 'fst-italic o_line_note' if line.display_type == 'line_note' else ''">
-                         <t t-if="not line.display_type">
-                             <td name="td_name"><span t-field="line.name">Bacon Burger</span></td>
-                             <td t-out="line.product_id.categ_id.display_name"/>
-                             <td name="td_quantity" class="text-end">
-                                 <span t-field="line.product_uom_qty">3</span>
-                                 <span t-field="line.product_uom">units</span>
-                                 <span t-if="line.product_packaging_id">
-
-    .. image:: pdf_reports/XML-SO-product-category.png
-       :alt: Add a Product Category column in a SO.
-
-.. spoiler:: Add a data table
-
-   To add a table in XML, you need to know the names of the fields and objects you wish to access
-   and display. As an example, let's add a table that details the tags on a sales order:
+   To change how data is presented in your report, you can modify a field's default
+   :doc:`widget </applications/studio/fields>` manually. In the example below, the order date shows
+   the date and time by default, while the unit price defaults to a precision of two decimal
+   places.
 
    .. code-block:: xml
+      :emphasize-lines: 2,3
 
-      <!-- table root element -->
-      <table class="table">
-          <!-- thead = table header, the row with column titles -->
-          <thead>
-              <!-- table row element -->
-              <tr>
-                  <!-- table header element -->
-                  <th>ID</th>
-                  <th>Name</th>
-              </tr>
-          </thead>
-          <!-- table body, the main content -->
-          <tbody>
-              <!-- we create a row for each subrecord with t-foreach -->
-              <tr t-foreach="doc.tag_ids" t-as="tag">
-                  <!-- for each line, we output the name and price as table cells -->
-                  <td t-out="tag.id"/>
-                  <td t-out="tag.name"/>
-              </tr>
-          </tbody>
-      </table>
+      <div class="oe_structure">
+       <span t-field="doc.date_order"/>
+       <span t-field="doc.price_unit"/>
+      </div>
 
-   .. image:: pdf_reports/XML-data-table.png
-      :alt: Add a data table in XML
+  By using `t-options`, in this case the `widget` option, these fields can be modified to show
+  only the date and a precision of four decimal places, respectively:
 
-   .. note::
-      When adding tables manually, style them using `Bootstrap classes
-      <https://getbootstrap.com/docs/5.1/content/tables>`_, like the `table` class included in the
-      example above.
+   .. code-block:: xml
+      :emphasize-lines: 2,3
+
+      <div class="oe_structure">
+       <span t-field="doc.date_order" t-options="{'widget': 'date'}"/>
+       <span t-field="doc.price_unit" t-options="{'widget': 'float', 'precision': 4}"/>
+      </div>
 
 .. spoiler:: Conditional blocks
 
@@ -506,7 +498,7 @@ Examples
 
    Working with images in a report can be challenging, as precise control over image size and
    behavior is not always obvious. You can insert image fields using the report editor
-   (:ref:`by using the /Field command <studio/pdf-reports/add-field>`), but inserting them in XML
+   (by using the :ref:`Field command <studio/pdf-reports/add-field>`), but inserting them in XML
    using the `t-field` directive and accompanying `t-options` attributes provides better sizing and
    positioning control.
 
