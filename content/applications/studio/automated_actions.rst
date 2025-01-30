@@ -8,7 +8,7 @@ a record 7 days after its last update), or external events.
 
 To create an automation rule with Studio, proceed as follows:
 
-#. Open Studio and click :guilabel:`Automations`, then :guilabel:`New`.
+#. :ref:`Open Studio <studio/access>` and click :guilabel:`Automations`, then :guilabel:`New`.
 #. Select the :ref:`studio/automated-actions/trigger` and, if necessary, fill in the fields that
    appear on the screen based on the chosen trigger.
 #. Click :guilabel:`Add an action`, then select the :guilabel:`Type` of
