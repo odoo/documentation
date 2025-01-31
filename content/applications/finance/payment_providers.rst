@@ -8,6 +8,7 @@ Online payments
    :titlesonly:
 
    payment_providers/wire_transfer
+   payment_providers/sdd
    payment_providers/adyen
    payment_providers/alipay
    payment_providers/amazon_payment_services
@@ -171,7 +172,7 @@ Bank payments
 - | :doc:`Wire Transfer <payment_providers/wire_transfer>`
   | When selected, Odoo displays your payment information with a payment reference. You have to
     approve the payment manually once you have received it in your bank account.
-- | :doc:`SEPA Direct Debit <../finance/accounting/payments/batch_sdd>`
+- | :doc:`SEPA Direct Debit <payment_providers/sdd>`
   | Your customers can make a bank transfer to register a SEPA Direct Debit mandate and get their
     bank account charged directly.
 
@@ -443,6 +444,7 @@ other payments.
 
 .. seealso::
    - :doc:`payment_providers/wire_transfer`
+   - :doc:`payment_providers/sdd`
    - :doc:`payment_providers/adyen`
    - :doc:`payment_providers/alipay`
    - :doc:`payment_providers/authorize`

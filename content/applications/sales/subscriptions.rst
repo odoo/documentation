@@ -75,6 +75,10 @@ invoice manually.
    feature <payment_providers/tokenization>`. This ensures that the customer is automatically
    charged at each new period.
 
+.. seealso::
+   - :doc:`/applications/finance/accounting/payments/online`
+   - :doc:`Payment providers and payment methods </applications/finance/payment_providers>`
+
 .. toctree::
    :titlesonly:
 
@@ -87,4 +91,3 @@ invoice manually.
    subscriptions/automatic_alerts
    subscriptions/scheduled_actions
    subscriptions/reports
-   subscriptions/payment_providers
