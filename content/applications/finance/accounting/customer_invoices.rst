@@ -44,22 +44,33 @@ goods and services. Make sure the following fields are appropriately completed:
   upon confirmation.
 - :guilabel:`Due Date` or :doc:`payment terms <customer_invoices/payment_terms>`: To specify when
   the customer has to pay the invoice.
-- :guilabel:`Journal`: Is automatically set and can be changed if needed.
-- :doc:`Currency <get_started/multi_currency>`
-- :guilabel:`Product`: Click :guilabel:`Add a line` to add a product.
+- :guilabel:`Journal`: Automatically set and can be changed if needed.
+- :doc:`Currency <get_started/multi_currency>`. If the invoice's currency differs from the
+  company's currency, the currency exchange rate is automatically displayed.
+
+In the :guilabel:`Invoice Lines` tab:
+
+- :guilabel:`Product`: Click :guilabel:`Add a line`, then search for and select the product.
 - :guilabel:`Quantity`
 - :guilabel:`Price`
 - :doc:`Taxes <taxes>` (if applicable)
+
+To access the product catalog and view all items in an organized display, click :guilabel:`Catalog`.
+To select products, click :icon:`fa-shopping-cart` :guilabel:`Add` on the product card. The quantity
+can be adjusted using the :icon:`fa-minus-square` :guilabel:`(minus-square)` or
+:icon:`fa-plus-square` :guilabel:`(plus-square)` buttons. :guilabel:`Remove` products if needed.
+Then, click :guilabel:`Back to Invoice` to return to the invoice. The selected catalog items will
+appear in the invoice lines.
 
 .. tip::
    To display the total amount of the invoice in words, go to :menuselection:`Accounting -->
    Configuration --> Settings` and activate the :guilabel:`Total amount of invoice in letters`
    option.
 
-The :guilabel:`Journal Items` tab displays the accounting entries created.
-Additional invoice information such as the :guilabel:`Customer Reference`, :doc:`Fiscal Positions
-<taxes/fiscal_positions>`, :doc:`Incoterms <customer_invoices/incoterms>`, and more can be added or
-modified in the :guilabel:`Other Info` tab.
+The :guilabel:`Journal Items` tab displays the accounting entries created. Additional invoice
+information such as the :guilabel:`Customer Reference`, :guilabel:`Payment Reference`, :doc:`Fiscal
+Positions <taxes/fiscal_positions>`, :doc:`Incoterms <customer_invoices/incoterms>`, and more can be
+added or modified in the :guilabel:`Other Info` tab.
 
 .. note::
    Odoo initially creates invoices in :guilabel:`Draft` status. Draft invoices have no accounting
@@ -89,16 +100,47 @@ confirmation, Odoo assigns each document a unique number from a defined
 Invoice sending
 ===============
 
-To send the invoice to the customer, click :guilabel:`Send & Print`. A :guilabel:`Configure your
-document layout` pop-up window will appear if a :ref:`default invoice layout
-<studio/pdf-reports/default-layout>` hasn't been customized. Then, select how to send this invoice
-to the customer in the :guilabel:`Send` window.
+To set a preferred :guilabel:`Invoice sending` method for a customer, go to
+:menuselection:`Accounting --> Customers --> Customers` and select the customer. In the
+:guilabel:`Accounting` tab of the contact form, select the preferred :guilabel:`Invoice sending`
+method in the :guilabel:`Customer Invoices` section.
 
-To send and print multiple invoices, go to :menuselection:`Accounting --> Customers --> Invoices`
-and select them. Then click the :icon:`fa-cog` :guilabel:`Actions` menu and select
-:guilabel:`Send & Print`. A banner will appear on the selected invoices to indicate they are part of
+To send the invoice to the customer, navigate back to the invoice record and follow these steps:
+
+#. Click :guilabel:`Print & Send`.
+#. If a :ref:`default invoice layout <studio/pdf-reports/default-layout>` hasn't been customized, a
+   :guilabel:`Configure your document layout` pop-up window will appear. Configure the invoice
+   layout and click :guilabel:`Continue`.
+
+   .. note::
+      - The document layout can be changed at any time in the general settings.
+      - To add a QR code for banking app payments to the invoice, enable the :guilabel:`QR Code`
+        option in the :guilabel:`Configure Your Document Layout` window. This option can always be
+        changed by going to :menuselection:`Accounting --> Configuration --> Settings`, and changing
+        the :guilabel:`QR Codes` option in the :guilabel:`Customer Payments` section.
+
+#. In the :guilabel:`Print & Send` window:
+
+   - If a preferred :guilabel:`Invoice sending` method was set in the contact form, it will be
+     selected by default. However, a different sending option can be chosen if needed.
+   - If no preferred :guilabel:`Invoice sending` method was set in the contact form, select how to
+     send this invoice to the customer.
+
+#. Click :guilabel:`Print & Send` if the :guilabel:`by Email` option is selected, or click
+   :guilabel:`Print`.
+
+To send and print multiple invoices, go to :menuselection:`Accounting --> Customers --> Invoices`,
+select them in the :guilabel:`Invoices` list view and click :guilabel:`Print & Send`. The
+:guilabel:`Print & Send` window displays the selected invoice sending methods based on the preferred
+method set.
+
+A banner will appear on the selected invoices to indicate they are part of
 an ongoing send and print batch. This helps prevent the process from being triggered manually again,
 as it may take some time to complete for exceptionally large batches.
+
+To check all invoices that have not yet been sent, go to :menuselection:`Accounting --> Customers
+--> Invoices`. In the :guilabel:`Invoices` list view, click into the search bar and filter on
+:guilabel:`Not Sent`.
 
 .. _accounting/invoice/paymentandreconciliation:
 
@@ -128,11 +170,11 @@ same customer, the actions are performed on the most overdue invoice.
 Sequence
 ========
 
-The sequence that Odoo assigns to each document is a unique number made up of a prefix and a number.
-The prefix combines the journal code and the entry date and is used to group entries by period. The
-number is unique for each period and is used to identify the entry. The default sequence on customer
-invoices is INV/YYYY/number. In some specific cases,
-:ref:`resequencing <accounting/invoice/resequencing>` invoices might be necessary.
+Odoo assigns each document a unique sequence made up of a prefix and a number. The prefix combines
+the journal code and the entry date and groups entries by period. The number is unique for each
+period and is used to identify the entry. The default sequence on customer invoices is
+INV/YYYY/number. In some specific cases, :ref:`resequencing <accounting/invoice/resequencing>`
+invoices might be necessary.
 
 .. _accounting/invoice/resequencing:
 
