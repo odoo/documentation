@@ -265,7 +265,7 @@ Formatting
 **********
 
 To format text in the report, select it, then format it using the options in the
-:ref:`knowledge/text-editor`.
+:doc:`text editor <../../../applications/essentials/text_editor>`.
 
   .. image:: pdf_reports/text-editor.png
      :alt: Format text using the text editor.
