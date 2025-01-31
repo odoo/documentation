@@ -2,19 +2,22 @@
 Down payments
 =============
 
-A down payment is a partial payment made by the buyer when a sales contract is concluded. This
-implies both parties' (seller and buyer) full commitment to honor the contract.
+A down payment is an initial, up-front payment made during the confirmation of a sales transaction.
+Down payments reduce the risk for both parties (the seller and the buyer) as they indicate a mutual
+commitment to complete the sales transaction.
 
 With a down payment, the buyer pays a portion of the total amount owed while agreeing to pay the
-remaining amount at a later date. In turn, the seller provides goods or services to the buyer after
-accepting the down payment, trusting that the remaining amount will be paid later on.
+remaining amount at a later date. In turn, the seller provides goods or services to the buyer upon
+or after accepting the down payment, trusting that the remaining amount will be paid later on.
+
+In the Odoo **Sales** app, down payments can be customized to fit the needs of each individual sales
+transaction.
 
 Create invoices
 ===============
 
 When a sales order is confirmed, the option to create an invoice becomes available, via the
-:guilabel:`Create Invoice` button, located in the upper-left corner of the sales order form. When
-clicked, a :guilabel:`Create invoices` pop-up appears.
+:guilabel:`Create Invoice` button. When clicked, a :guilabel:`Create invoice(s)` pop-up appears.
 
 .. image:: down_payment/create-invoices-popup-form.png
    :align: center
@@ -42,19 +45,11 @@ On the :guilabel:`Create invoices` pop-up form, the down payment options are:
 - :guilabel:`Down payment (percentage)`
 - :guilabel:`Down payment (fixed amount)`
 
-Once the desired down payment option is selected in the :guilabel:`Create Invoice` field on the
-pop-up form, designate the desired amount, either as a percentage or a fixed amount, in the
-:guilabel:`Down Payment Amount` field.
+Select the desired down payment option, then designate the desired amount, either as a percentage or
+a fixed amount, in the :guilabel:`Down Payment Amount` field.
 
-Then, select the appropriate income account for the invoice in the :guilabel:`Income Account` field.
-Next, select a tax amount, if necessary, in the :guilabel:`Customer Taxes` drop-down field.
-
-.. image:: down_payment/create-invoices-popup-form-filled-out.png
-   :align: center
-   :alt: A create invoices pop-up form with down payment fields filled in with information.
-
-Once all fields are filled in with the desired information, click the :guilabel:`Create Draft
-Invoice` button. Upon clicking this button, Odoo reveals the :guilabel:`Customer Invoice Draft`.
+Once all fields are filled in, click the :guilabel:`Create Draft` button. Upon clicking this button,
+Odoo reveals the :guilabel:`Customer Invoice Draft`.
 
 In the :guilabel:`Invoice Lines` tab of the :guilabel:`Customer Invoice Draft`, the down payment
 that was just configured in the :guilabel:`Create invoices` pop-up form appears as a
@@ -63,24 +58,6 @@ that was just configured in the :guilabel:`Create invoices` pop-up form appears 
 .. image:: down_payment/down-payment-product-inv-draft.png
    :align: center
    :alt: Down payment as a product in the invoice lines tab of a customer invoice draft in Odoo.
-
-.. note::
-   When the :guilabel:`Down payment` product in the :guilabel:`Invoice Lines` tab is clicked, Odoo
-   reveals the product form for the down payment.
-
-   By default, the :guilabel:`Product Type` of down payment products generated for invoices are set
-   as :guilabel:`Service`, with the :guilabel:`Invoicing Policy` set to :guilabel:`Prepaid/Fixed
-   Price`.
-
-   .. image:: down_payment/down-payment-product.png
-      :align: center
-      :alt: Down payment product form with service product type and invoicing policy field.
-
-   This product can be edited/modified at any time.
-
-.. warning::
-   If :guilabel:`Based on Delivered Quantity (Manual)` is chosen as the :guilabel:`Invoicing
-   Policy`, an invoice will **not** be able to be created.
 
 .. _sales/invoicing/50-percent-down-payments:
 
