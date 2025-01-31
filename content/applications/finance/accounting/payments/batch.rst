@@ -1,69 +1,55 @@
-==============================
-Batch payments by bank deposit
-==============================
+==============
+Batch payments
+==============
 
-A **batch deposit** is a convenient way to group customer payments and deposit them into your bank
-account. The feature lets you list multiple payments and generate a detailed deposit slip with a
-batch reference. This reference can be used when reconciling to match bank statement lines with
-transactions in the batch deposit.
+Batch payments allow grouping payments from multiple customers or vendors into a single batch and
+generating a detailed deposit slip or payment file with a batch reference. This reference can be
+used during :doc:`reconciliation <../bank/reconciliation>` to match bank transactions with the
+corresponding payments. This feature is particularly useful for submitting :doc:`SEPA Direct Debit
+payments <batch_sdd>`, depositing cash payments or :doc:`checks <checks>`, or generating outgoing
+payment files, such as :doc:`SEPA <pay_sepa>` or :ref:`NACHA <l10n_us/nacha>`.
 
 Configuration
 =============
 
-Go to :menuselection:`Accounting --> Configuration --> Settings --> Customer Payments` and tick
-:guilabel:`Batch Payments` to activate the feature.
+To enable batch payments, go to :menuselection:`Accounting --> Configuration --> Settings`, scroll
+down to the :guilabel:`Customer Payments` section, and enable :guilabel:`Batch Payments`.
 
-Deposit multiple payments in batch
-==================================
+.. _accounting/batch/creation:
 
-.. _batch-payments/register-payments:
+Batch creation
+==============
 
-Register payments
------------------
+To create a batch payment, follow these steps:
 
-Before performing a batch deposit, it is necessary to register each transaction's payment. To do so,
-open the corresponding customer invoice and click :guilabel:`Register Payment`. In the pop-up
-window, select the :guilabel:`Journal` linked to your bank account and :guilabel:`Batch Deposit` as
-the :guilabel:`Payment Method`, and click :guilabel:`Create Payment`.
+#. Make sure all payments to be included in the batch have been :ref:`registered
+   <accounting/payments/from-invoice-bill>`.
+#. Go to :menuselection:`Accounting --> Customers --> Payments`.
+#. Select the payments to include in the batch.
 
-.. image:: batch/batch-payments.png
-   :alt: Registering a customer payment as part of a batch deposit
+   .. note::
+      All payments in the batch must use the same payment method. If needed, payments can be grouped
+      using the :guilabel:`Payment Method Line`.
 
-Add payments to a batch deposit
--------------------------------
+#. Click :guilabel:`Create batch` or click :icon:`fa-cog` :guilabel:`Actions` and select
+   :guilabel:`Create batch payment`.
+#. In the batch payment form, review the selected payments. If any individual payments were missed,
+   click :guilabel:`Add a line` and select the missing payments to be included in the batch.
+#. Once all relevant payments are included, click :guilabel:`Validate` to finalize the batch.
 
-To add payments to a batch deposit, go to :menuselection:`Accounting --> Customers --> Batch
-Payments`, and click :guilabel:`New`. Next, select the :guilabel:`Bank` and choose :guilabel:`Batch
-Deposit` as the :guilabel:`Payment Method`.
-
-.. image:: batch/batch-customer-payment.png
-   :alt: Filling out a new inbound batch payment form
-
-Click :guilabel:`Add a line`. In the pop-up window, tick all payments to include in the batch
-deposit, then click :guilabel:`Select`.
-
-.. image:: batch/batch-lines-selection.png
-   :alt: Selecting all payments to include in the batch deposit
-
-Once done, click :guilabel:`Validate` to finalize the batch deposit.
+.. note::
+   Once validated, no additional payments can be added to a batch.
 
 .. tip::
-   Click :guilabel:`Print` to download a PDF file to include with the deposit slip.
+   - Click :guilabel:`Print` to download a list of the included payments.
+   - To view existing batch payments, go to :menuselection:`Accounting --> Customers --> Batch
+     Payments`.
 
 Bank reconciliation
 -------------------
 
-Once the bank transactions are on your database, you can reconcile bank statement lines with the
-batch payment. To do so, go to the :guilabel:`Accounting Dashboard` and click :guilabel:`Reconcile
-Items` on the related bank account. Go to the :guilabel:`Batch Payments` tab to select a specific
-batch and click :guilabel:`Validate` to finalize the process.
-
-.. image:: batch/batch-reconciliation.png
-   :alt: Reconciling the batch payment with all its transactions
-
-.. note::
-   If a specific payment could not be processed by the bank or is missing, remove the related
-   payment before reconciling.
+Once the bank transactions :doc:`have been created <../bank/transactions>` in your database, you can
+:ref:`reconcile them with the batch payment <reconciliation/batch-payments>`.
 
 .. seealso::
    - :doc:`../payments`
