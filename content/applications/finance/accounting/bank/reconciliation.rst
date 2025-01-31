@@ -17,6 +17,8 @@ matching entries automatically.
    - :doc:`bank_synchronization`
    - :doc:`transactions`
 
+.. _accounting/reconciliation/access:
+
 Bank reconciliation view
 ========================
 
@@ -54,6 +56,8 @@ Resulting entry
    the counterpart entries and includes any remaining debits or credits. In this section, you can
    validate the reconciliation or mark it as :guilabel:`To Check`. Any :ref:`reconciliation model
    buttons <reconciliation/button>` are also available in the resulting entry section.
+
+.. _accounting/reconciliation/reconcile:
 
 Reconcile transactions
 ======================
@@ -102,7 +106,7 @@ suggested entries appearing first.
 Batch payments
 --------------
 
-`Batch payments <payments/batch-payments>`_ allow you to group different payments to ease
+:doc:`Batch payments <../payments/batch>` allow you to group different payments to ease
 reconciliation. Use the :guilabel:`Batch Payments` tab to find batch payments for customers and
 vendors. Similarly to the :guilabel:`Match Existing Entries` tab, the :guilabel:`Batch Payments` tab
 has a search bar that allows you to search for specific batch payments.
