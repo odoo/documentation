@@ -113,8 +113,7 @@ Since the delivery methods are managed internally, set the :guilabel:`Provider` 
 prices are calculated, refer to the :doc:`Delivery method <../setup_configuration>` article.
 
 Next, set a :guilabel:`Delivery Product`, which is the product that shows up as the customer's
-:ref:`delivery charge <inventory/shipping_receiving/delivery-product>` on the sales order or
-invoice.
+:ref:`delivery charge <inventory/shipping/sales-order>` on the sales order or invoice.
 
 Optionally, in the :guilabel:`Availability` tab, set the :guilabel:`Countries`, :guilabel:`States`,
 or :guilabel:`Zip Prefixes` to limit the range of local delivery.

@@ -7,8 +7,8 @@ their preferred option at :doc:`checkout <checkout>`. These methods include :ref
 <ecommerce/shipping/external-provider>`, :ref:`custom options <ecommerce/shipping/custom-method>`
 such as flat-rate or free shipping, local carriers via
 :doc:`Sendcloud <../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping>`
-or :ref:`Based on Rules <inventory/shipping/rules>`, and :ref:`in-store pickup
-<ecommerce/shipping/instore-pickup>`.
+or ::ref:`Based on Rules <inventory/shipping/rules>`, and
+:ref:`in-store pickup <ecommerce/shipping/instore-pickup>`.
 
 .. _ecommerce/shipping/external-provider:
 
@@ -70,8 +70,8 @@ Custom delivery methods must be created, for example:
   <../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping>`;
 - to configure specific rules (e.g., to offer free shipping for orders above a specific amount) for
   a specific provider;
-- to configure :ref:`Fixed Price <inventory/shipping/fixed>` shipping or shipping
-  :ref:`Based on Rules <inventory/shipping/rules>`.
+- to configure :ref:`Fixed Price <inventory/shipping/fixed>` shipping, or shipping :ref:`Based on
+  Rules <inventory/shipping/rules>`.
 
 To create a custom delivery method, go to :menuselection:`Website --> Configuration --> Delivery
 Methods`, click :guilabel:`New`, and fill in the :ref:`fields
@@ -91,7 +91,7 @@ if the shipping method does not involve any specific provider.
      :guilabel:`Production Environment`. Then, click :guilabel:`Unpublished` to :guilabel:`Publish`
      the delivery method and make it available to website visitors;
    - Use the :guilabel:`Availability` tab to define :ref:`conditions
-     <inventory/shipping_receiving/availability>` for the delivery method based on the order’s
+     <inventory/shipping_receiving/availability>` for the delivery method based on the order's
      content or destination.
 
 .. _ecommerce/shipping/instore-pickup:
