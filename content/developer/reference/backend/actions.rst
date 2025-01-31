@@ -442,34 +442,82 @@ Actions triggered automatically on a predefined frequency.
     Priority of the action when executing multiple actions at the same time
 
 
-Advanced use: Batching
+Writing cron functions
 ----------------------
 
-When executing a scheduled action, it's recommended to try batching progress in order
-to avoid hogging a worker for a long period of time and possibly running into timeout exceptions.
+When executing a scheduled action, it's recommended to try batching progress in
+order to avoid hogging a worker for a long period of time and possibly running
+into timeout exceptions. Therefore you should split the processing so that each
+call will progress some of the work to be done.
 
-Odoo provides a simple API for scheduled action batching;
+When writing a such a function, you should focus on processing a single batch.
+A batch should process one or many records and should generally take no more
+than *a few seconds*. Work will be committed by the framework after each batch.
 
 .. code-block:: python
 
-      self.env['ir.cron']._notify_progress(done=XX:int, remaining=XX:int)
+    def _cron_do_something(self, limit=300):  # some default batch limit, allows for tweaking
+        domain = [('state', '=', 'ready')]
+        records = self.search(domain, limit=limit)
+        records.do_something()
+        # notify progression
+        remaining = 0 if len(records) == limit else self.search_count(domain)
+        self.env.cron_commit_progress(len(records), remaining=remaining)
 
-This method allows the scheduler to know if progress was made and whether there is
-still remaining work that must be done.
+The framework will call the function as many times as need to process remaining
+work.
 
-By default, if the API is used, the scheduler tries to process 10 batches in one sitting.
-If there are still remaining tasks after those 10 batches, a new cron call will be executed as
-soon as possible.
-
-Advanced use: Triggers
-----------------------
-
-For more complex use cases, Odoo provides a more advanced way to trigger
-scheduled actions directly from business code.
+There are some cases, where you may still want to keep resources between cron
+calls or if you want to loop yourself.
+If you do this, you must check the result of ``cron_commit_progress``.
+It returns the number of seconds remaining for your run. If you don't have
+remaining time, you must return as soon as possible.
+The following shows how to commit after each processed record while keeping an
+open connection.
 
 .. code-block:: python
 
-      action_record._trigger(at=XX:date)
+    def _cron_do_something(self):
+        # limit is less important as we already give back control to the scheduler
+        domain = [('state', '=', 'ready')]
+        records = self.search(domain)
+        self.env.cron_commit_progress(remaining=len(records))
+
+        with open_some_connection() as conn:
+            def process_record(record):
+                if record:
+                    record.do_something(conn)
+                    self.env.cron_progress(1)
+            for record in records:
+                # with_prefetch: keep prefetch to the single processed value
+                # exists: record may disappear while looping and committing
+                #         if possible, we could lock the record for update
+                # filtered_domain: record may have changed
+                record = record.with_prefetch().exists().filtered_domain(domain)
+                if not record:
+                    continue
+                try
+                    record.do_something(conn)
+                    if not self.env.cron_commit_progress(1):
+                        break
+                except Exception:
+                    # if you handle exceptions, the default stategy is to
+                    # rollback first the error or reraise it
+                    self.env.cr.rollback()
+
+Running cron functions
+----------------------
+
+There are two ways to run functions: immediate (in current thread, but still in
+a separate transaction) or trigger to start at a given time or as soon as
+possible.
+
+.. code-block:: python
+
+    # run now (still in a separate transaction)
+    cron_record.method_direct_trigger()
+    # trigger
+    cron_record._trigger()
 
 Security
 --------
