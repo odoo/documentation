@@ -411,8 +411,8 @@ Imports
 The imports are ordered as
 
 #. External libraries (one per line sorted and split in python stdlib)
-#. Imports of ``odoo``
-#. Imports from Odoo modules (rarely, and only if necessary)
+#. Imports of ``odoo`` submodules
+#. Imports from Odoo addons (rarely, and only if necessary)
 
 Inside these 3 groups, the imported lines are alphabetically sorted.
 
@@ -424,8 +424,8 @@ Inside these 3 groups, the imported lines are alphabetically sorted.
     import time
     from datetime import datetime
     # 2 : imports of odoo
-    import odoo
-    from odoo import api, fields, models, _ # alphabetically ordered
+    from odoo import api, fields, models  # alphabetically ordered
+    from odoo.fields import Domain
     from odoo.tools.safe_eval import safe_eval as eval
     # 3 : imports from odoo addons
     from odoo.addons.web.controllers.main import login_redirect
