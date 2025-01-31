@@ -19,7 +19,7 @@ can:
 - :doc:`Insert and link your Odoo data (pivots, graphs, lists, and menus) <spreadsheet/insert>`.
 - :doc:`Use global filters <spreadsheet/global_filters>`.
 - :doc:`Use formulas and functions <spreadsheet/functions>`.
-- :doc:`Use default templates or create new ones <spreadsheet/templates>`.
+- :doc:`Create and use templates <spreadsheet/templates>`.
 - Format data.
 - Sort and filter data.
 
