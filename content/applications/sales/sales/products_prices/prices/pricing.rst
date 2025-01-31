@@ -85,9 +85,26 @@ From here, there are several configuration options:
 
   - :guilabel:`Discount`: Enter the percentage to be discounted. A mark-up can be configured by
     using a negative value in this field.
+
+    .. important::
+       If a pricelist is applied to a sales quotation with the discount :guilabel:`Price Type` set
+       as :guilabel:`Discount`, the discount will visible to the customer.
+
+       .. image:: pricing/sales-pricelist-pricerule-discount.png
+          :alt: A pricelist rule using Price Type: Discount to create a discount.
+
+       .. image:: pricing/sales-pricelist-pricerule-discount-customer.png
+          :alt: How a pricelist rule using Price Type: Discount appears on customer preview.
+
   - :guilabel:`Formula`: Calculate the pricelist rules based the following configuration:
 
-    - :guilabel:`Discount`: Percentage discount to be applied.
+    - :guilabel:`Discount`: Percentage discount to be applied. Negative values can be entered to
+      increase prices.
+
+    .. important::
+       If a pricelist is applied to a sales quotation with the discount :guilabel:`Price Type` set
+       as :guilabel:`Formula`, the discount will *not* be visible to the customer.
+
     - :guilabel:`Round off to`: Numerical value to act as round-off multiple, to be applied after
       discount. The rounding method sets the price so that it is a multiple of the value in this
       field.
@@ -106,9 +123,9 @@ From here, there are several configuration options:
   applied to quotations.
 
 .. example::
-   To formulate a 100% markup (or 2 times the cost of the product), with a $5 minimum margin, set
-   the :guilabel:`Based on` field to :guilabel:`Cost`, the :guilabel:`Discount` to `-100`, and the
-   :guilabel:`Margins` to `5`. This is often seen in retail situations.
+   To formulate a 100% markup (or two times the price of the product), with a $5 minimum margin, set
+   the :guilabel:`Based price` field to :guilabel:`Sales Price` and the :guilabel:`Discount` to
+   `-100`. This is often seen in retail situations.
 
    .. image:: pricing/formula-markup-cost-example.png
       :alt: How it looks to formulate a markup cost with 5 dollar minimum margin in Odoo Sales.
@@ -129,24 +146,30 @@ Recurring Prices tab
 --------------------
 
 Recurring prices are specifically used with :doc:`subscription products
-<../../../subscriptions/products>`.
+<../../../subscriptions/products>`. When configuring price rules in this tab, keep in mind that
+they will only apply to subscription products, or products with recurring prices enabled.
 
-Under the :guilabel:`Recurring Prices` tab, the same functionality of the :guilabel:`Price Rules`
-tab is present. The only difference being that a recurring time period can be applied in the
-:guilabel:`Recurring Plan` column.
+In the :guilabel:`Recurring Prices` tab, pricelists are configured with the same options as in the
+:guilabel:`Price Rules` tab, with additional columns for :guilabel:`Product Variants` add
+:guilabel:`Recurring Plan`.
 
-Once :guilabel:`Products` and/or :guilabel:`Product Variants` are selected, click :guilabel:`Add a
-price rule`, and select the blank field in the :guilabel:`Recurring Plan` column to reveal a
-drop-down menu of pre-designated recurrence periods (e.g. `Monthly`, `Quarterly`, `Weekly`, etc.).
+:guilabel:`Product Variants` are configured under products that have one or more values, such as
+color, size, etc. Once a product has been selected under the :guilabel:`Products Tab`, if
+applicable, select the desired product variants to be included in the price rule.
+
+Then, select the blank field in the :guilabel:`Recurring Plan` column to reveal a drop-down menu of
+pre-designated recurrence periods (e.g. `Monthly`, `Quarterly`, `Weekly`, etc.).
+
+.. image:: pricing/sales-pricelist-recurringprices.png
+   :alt: The recurring prices tab in a pricelist configuration form.
 
 New recurrence periods can also be created from this column. To do so, type in the name for the new
 :guilabel:`Recurring Plan`, then select :guilabel:`Create` from the resulting drop-down menu to
-create the time period, which can be edited later.
-
-Or, select :guilabel:`Create and edit...` to reveal a :guilabel:`Create Recurring Plan` pop-up form.
-From this pop-up form, the new recurrence period can be configured, with specific
-:guilabel:`Details`, :guilabel:`Self-Service`, and :guilabel:`Pricing` options. When the
-configurations are complete, click the :guilabel:`Save & Close` button.
+create the time period, which can be edited later. Alternatively, select :guilabel:`Create and
+edit...` to reveal a :guilabel:`Create Recurring Plan` pop-up form. From this pop-up form, the new
+recurrence period can be configured, with specific :guilabel:`Details`, :guilabel:`Self-Service`,
+and :guilabel:`Pricing` options. When the configurations are complete, click the :guilabel:`Save &
+Close` button.
 
 .. image:: pricing/time-period-popup.png
    :align: center
@@ -161,9 +184,9 @@ column.
 Rental rules tab
 ----------------
 
-Under the :guilabel:`Rental rules` tab, specific price rules can be configured for various rental
-products, using the same methodology as the :guilabel:`Price Rules` and :guilabel:`Recurring Prices`
-tabs.
+Price rules can be configured for :doc:`rental products <../../../rental>` under the
+:guilabel:`Rental rules` tab, using the same methodology as the :guilabel:`Price Rules` and
+:guilabel:`Recurring Prices` tabs.
 
 To add a rental rule, click :guilabel:`Add a line`, and select a desired product in the
 :guilabel:`Products` column. Then, select any specific :guilabel:`Variants`, if necessary.
@@ -172,43 +195,24 @@ Next, designate a :guilabel:`Period` of time for the rental rule (e.g. `Daily`, 
 
 Lastly, configure a :guilabel:`Price` for the rental rule in the respective column.
 
-Configuration tab
------------------
+.. image:: pricing/sales-pricelist-rental.png
+   :alt: The rental tab in a pricelist configuration form.
 
-Under the :guilabel:`Configuration` tab, there are a few options that can further customize the
-pricelist.
+Ecommerce Tab
+-------------
 
-.. image:: pricing/configuration-tab.png
-   :align: center
-   :alt: Configuration tab on pricelist detail form in Odoo Sales.
+Under the :guilabel:`Ecommerce` tab, price rules can be configured for products sold on an
+:doc:`Ecommerce website <../../../../websites/ecommerce/products>`.
 
-From here, under the :guilabel:`Availability` section, in the :guilabel:`Country Groups` field,
-certain country groups can be added to the pricelist. There is no limit to how many country groups
-can be added in this field.
+To enable the pricelist to be visible, select the target website in the :guilabel:`Website` field.
 
-.. note::
-   If no country is set for a customer, Odoo takes the first pricelist without any country group.
+The :guilabel:`Selectable` can be enabled to allow the customer to choose this pricelist.
 
-Under the :guilabel:`Website` section, there are a few options that can be configured. In the
-:guilabel:`Website` field, this pricelist can be applied to a specific website, if working in a
-multi-website environment. If left blank, the pricelist is applied to all websites in the database.
+Finally, promotional and loyalty codes can be added to the :guilabel:`E-commerce Promotional Code`
+field.
 
-Tick the :guilabel:`Selectable` checkbox to have this pricelist as a selectable option for
-customers to choose as they shop. If the :guilabel:`Selectable` box is left unticked, customers
-**cannot** select this pricelist for themselves.
-
-Lastly, there is the option to add an :guilabel:`E-commerce Promotional Code`. To add a code, type
-in the desired promo code that, when entered during the checkout process, applies the pricelist to
-the customer, even if the customer does not fall into the previously-specified criteria.
-
-Then, in the :guilabel:`Discounts` section, there is a :guilabel:`Discount Policy` field with two
-options to choose from: :guilabel:`Discount included in the price` or :guilabel:`Show public price &
-discount to the customer`.
-
-If :guilabel:`Discount included in the price` is selected, the price shown to the customer already
-accounts for the discount being applied. However, if :guilabel:`Show public price & discount to the
-customer` is selected, the customer sees the actual public price *and* how much they are saving with
-this pricelist discount.
+.. image:: pricing/sales-pricelist-ecommerce.png
+   :alt: The Ecommerce tab in a pricelist configuration form.
 
 Customer pricelist application
 ==============================
