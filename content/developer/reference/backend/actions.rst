@@ -442,34 +442,78 @@ Actions triggered automatically on a predefined frequency.
     Priority of the action when executing multiple actions at the same time
 
 
-Advanced use: Batching
+Writing cron functions
 ----------------------
 
-When executing a scheduled action, it's recommended to try batching progress in order
-to avoid hogging a worker for a long period of time and possibly running into timeout exceptions.
+When executing a scheduled action, it's recommended to try batching progress in
+order to avoid hogging a worker for a long period of time and possibly running
+into timeout exceptions. Therefore you should split the processing so that each
+call will progress in the work to be done.
 
-Odoo provides a simple API for scheduled action batching;
+It is the responsiblity of the framework to call the function as many times as
+needed to process remaining work.
+When writing a such a function, you should focus on processing a single batch.
+A batch should process one or many records and should generally take no more
+than *a few seconds*. Work will be committed by the framework after each batch.
 
 .. code-block:: python
 
-      self.env['ir.cron']._notify_progress(done=XX:int, remaining=XX:int)
+    @api.cron('xml_id...')
+    def _cron_do_something(self, limit=300):  # some default batch limit, allows for tweaking
+        domain = [('state', '=', 'ready')]
+        records = self.search(domain, limit=limit)
+        records.do_something()
+        # notify progression
+        remaining = 0 if len(records) == limit else self.search_count(domain)
+        self.env.cron_progress(done=len(records), remaining=remaining)
 
 This method allows the scheduler to know if progress was made and whether there is
 still remaining work that must be done.
 
-By default, if the API is used, the scheduler tries to process 10 batches in one sitting.
-If there are still remaining tasks after those 10 batches, a new cron call will be executed as
-soon as possible.
-
-Advanced use: Triggers
-----------------------
-
-For more complex use cases, Odoo provides a more advanced way to trigger
-scheduled actions directly from business code.
+There are some cases, where you may still want to keep resources between cron calls.
+In such a case, the ``@api.cron`` decorator understands yielding work that should
+be processed in isolation.
+The scheduler is still responsible of scheduling the work and stopping when needed.
+The following shows how to commit after each processed record while keeping an
+open connection.
 
 .. code-block:: python
 
-      action_record._trigger(at=XX:date)
+    @api.cron('xml_id...')
+    def _cron_do_something(self):
+        # limit is less important as we already give back control to the scheduler
+        domain = [('state', '=', 'ready')]
+        records = self.search(domain)
+        self.env.cron_progress(remaining=len(records))
+
+        with open_some_connection() as conn:
+            def process_record(record):
+                # with_prefetch: keep prefetch to the single processed value
+                # exists: record may disappear while looping and committing
+                #         if possible, we could lock the record for update
+                # filtered_domain: record may have changed
+                record = record.with_prefetch().exists().filtered_domain(domain)
+                if record:
+                    record.do_something(conn)
+                    self.env.cron_progress(1)
+            for record in records:
+                try:
+                    yield lambda: process_record(record)
+                except Exception:
+                    raise  # you may catch it an continue safely
+
+Running cron functions
+----------------------
+
+There are two ways to run functions: immediate (in current thread) or trigger
+to start at a given time or as soon as possible.
+
+.. code-block:: python
+
+    # run now (still in a separate transaction)
+    cron_record.method_direct_trigger()
+    # trigger
+    self._cron_do_something.trigger()
 
 Security
 --------

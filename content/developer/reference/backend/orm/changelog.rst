@@ -4,6 +4,11 @@
 Changelog
 =========
 
+Odoo Online version 18.3
+========================
+
+- New CRON API. TODO
+
 Odoo Online version 18.2
 ========================
 
