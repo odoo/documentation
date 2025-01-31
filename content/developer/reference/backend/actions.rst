@@ -413,6 +413,8 @@ how the POS interface works.
 Scheduled Actions (``ir.cron``)
 ===============================
 
+.. automodule:: odoo.addons.base.models.ir_cron
+
 Actions triggered automatically on a predefined frequency.
 
 ``name``
@@ -442,34 +444,84 @@ Actions triggered automatically on a predefined frequency.
     Priority of the action when executing multiple actions at the same time
 
 
-Advanced use: Batching
+Writing cron functions
 ----------------------
 
-When executing a scheduled action, it's recommended to try batching progress in order
-to avoid hogging a worker for a long period of time and possibly running into timeout exceptions.
+When running a scheduled action, it's recommended that you try to batch the
+progress in order to avoid blocking a worker for a long period of time and
+possibly run into timeout exceptions. Therefore, you should split the processing
+so that each call makes progress on some of the work to be done.
 
-Odoo provides a simple API for scheduled action batching;
+When writing such a function, you should focus on processing a single batch.
+A batch should process one or many records and should generally take no more
+than *a few seconds*.
+
+Work is committed by the framework after each batch. The framework will
+call the function as many times as necessary to process the remaining work.
+Do not reschedule yourself the job.
+
+.. automethod:: IrCron._commit_progress
 
 .. code-block:: python
 
-      self.env['ir.cron']._notify_progress(done=XX:int, remaining=XX:int)
+    def _cron_do_something(self, *, limit=300):  # limit: allows for tweaking
+        domain = [('state', '=', 'ready')]
+        records = self.search(domain, limit=limit)
+        records.do_something()
+        # notify progression
+        remaining = 0 if len(records) == limit else self.search_count(domain)
+        self.env['ir.cron']._commit_progress(len(records), remaining=remaining)
 
-This method allows the scheduler to know if progress was made and whether there is
-still remaining work that must be done.
+In some cases, you may want to share resources between multiple batches or
+manage the loop yourself to handle exceptions.
+In this case, you should inform the scheduler of the progress of your work
+by calling :func:`IrCron._commit_progress` and checking the result. The progress
+function returns the number of seconds remaining for the call; if it is 0, you
+must return as soon as possible.
 
-By default, if the API is used, the scheduler tries to process 10 batches in one sitting.
-If there are still remaining tasks after those 10 batches, a new cron call will be executed as
-soon as possible.
-
-Advanced use: Triggers
-----------------------
-
-For more complex use cases, Odoo provides a more advanced way to trigger
-scheduled actions directly from business code.
+The following is an example of how to commit after each record that is
+processed, while keeping the connection open.
 
 .. code-block:: python
 
-      action_record._trigger(at=XX:date)
+    def _cron_do_something(self):
+        assert self.env.context.get('cron_id'), "Run only inside cron jobs"
+        domain = [('state', '=', 'ready')]
+        records = self.search(domain)
+        self.env['ir.cron']._commit_progress(remaining=len(records))
+
+        with open_some_connection() as conn:
+            for record in records:
+                # You may have other needs; we do some common stuff here:
+                # - lock record (also checks existence)
+                # - prefetch: break prefetch in this case, we process one record
+                # - filtered_domain: record may have changed
+                record = record.try_lock_for_update().filtered_domain(domain)
+                if not record:
+                    continue
+                # Processing the batch here...
+                try
+                    record.do_something(conn)
+                    if not self.env['ir.cron']._commit_progress(1):
+                        break
+                except Exception:
+                    # if you handle exceptions, the default stategy is to
+                    # rollback first the error
+                    self.env.cr.rollback()
+                    _logger.warning(...)
+                    # you may commit some status using _commit_progress
+
+Running cron functions
+----------------------
+
+You should not call cron functions directly.
+There are two ways to run functions:
+
+.. automethod:: IrCron.method_direct_trigger
+.. automethod:: IrCron._trigger
+
+Testing of a cron function should be done by calling
+:func:`IrCron.method_direct_trigger` in the registry test mode.
 
 Security
 --------
@@ -481,3 +533,5 @@ correct functioning of your scheduled actions.
   it will skip its current execution and be considered as failed.
 - If a scheduled action fails its execution five consecutive times over a period of at least
   seven days, it will be deactivated and will notify the DB admin.
+- A hard-limit exists for the cron execution at the database level after which
+  the process executing cron jobs is killed.

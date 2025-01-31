@@ -658,9 +658,15 @@ Never commit the transaction
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The Odoo framework is in charge of providing the transactional context for
-all RPC calls. The principle is that a new database cursor is opened at the
-beginning of each RPC call, and committed when the call has returned, just
-before transmitting the answer to the RPC client, approximately like this:
+all RPC calls.
+All ``cr.commit()`` calls outside of the server framework must
+have an **explicit comment** explaining why they are absolutely necessary, why
+they are indeed correct, and why they do not break the transactions. Otherwise
+they can and will be removed!
+
+The principle is that a new database cursor is opened at the beginning of each
+RPC call, and committed when the call has returned, just before transmitting the
+answer to the RPC client, approximately like this:
 
 .. code-block:: python
 
@@ -671,7 +677,7 @@ before transmitting the answer to the RPC client, approximately like this:
         try:
             res = pool.execute_cr(cr, uid, obj, method, *args, **kw)
             cr.commit() # all good, we commit
-        except Exception:
+        except Exception:  # try to be more specific
             cr.rollback() # error, rollback everything atomically
             raise
         finally:
@@ -682,8 +688,7 @@ If any error occurs during the execution of the RPC call, the transaction is
 rolled back atomically, preserving the state of the system.
 
 Similarly, the system also provides a dedicated transaction during the execution
-of tests suites, so it can be rolled back or not depending on the server
-startup options.
+of tests suites and scheduled actions.
 
 The consequence is that if you manually call ``cr.commit()`` anywhere there is
 a very high chance that you will break the system in various ways, because you
@@ -697,9 +702,9 @@ among others:
    during the transaction)
 
 Here is the very simple rule:
-    You should **NEVER** call ``cr.commit()`` yourself, **UNLESS** you have
-    created your own database cursor explicitly! And the situations where you
-    need to do that are exceptional!
+    You should **NEVER** call ``cr.commit()`` or ``cr.rollback()`` yourself,
+    **UNLESS** you have explicitly created your own database cursor!
+    And the situations in which you need to do this are exceptional!
 
     And by the way if you did create your own cursor, then you need to handle
     error cases and proper rollback, as well as properly close the cursor when
@@ -707,20 +712,66 @@ Here is the very simple rule:
 
 And contrary to popular belief, you do not even need to call ``cr.commit()``
 in the following situations:
+
 - in the ``_auto_init()`` method of an *models.Model* object: this is taken
-care of by the addons initialization method, or by the ORM transaction when
-creating custom models
+  care of by the addons initialization method, or by the ORM transaction when
+  creating custom models
 - in reports: the ``commit()`` is handled by the framework too, so you can
-update the database even from within a report
+  update the database even from within a report
 - within *models.Transient* methods: these methods are called exactly like
-regular *models.Model* ones, within a transaction and with the corresponding
-``cr.commit()/rollback()`` at the end
+  regular *models.Model* ones, within a transaction and with the corresponding
+  ``cr.commit()/rollback()`` at the end
 - etc. (see general rule above if you are in doubt!)
 
-All ``cr.commit()`` calls outside of the server framework from now on must
-have an **explicit comment** explaining why they are absolutely necessary, why
-they are indeed correct, and why they do not break the transactions. Otherwise
-they can and will be removed !
+Avoid catching exceptions
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Catch only specific exceptions, and avoid overly broad exception handling.
+Uncaught exceptions will be logged and handled properly by the framework.
+
+You should be specific about the types you catch and handle them
+accordingly, and you should limit the scope of your try-catch block as much
+as possible.
+
+.. code-block:: python
+
+    # BAD CODE
+    try:
+        do_something()
+    except Exception as e:
+        # if we caught a ValidationError, we did not rollback and we left the
+        # ORM in an undefined state
+        _logger.warning(e)
+
+For scheduled actions, you should rollback the changes if you catch errors and
+wish to continue. Scheduled actions run in a separate transaction, so you can
+rollback or commit directly when you signal progress.
+
+.. seealso::
+   :ref:`reference/actions/cron`
+
+If you must handle framework exceptions, you must use **savepoints**
+to isolate your function as much as possible.
+This will flush the computations when entering the block and rollback changes
+properly in case of exceptions.
+
+.. code-block:: python
+
+    try:
+        with self.env.cr.savepoint():
+            do_stuff()
+    except ...:
+        ...
+
+.. warning::
+
+    After you start more than 64 savepoints during a single transaction,
+    PostgreSQL will slow down.
+    In all cases, if the server runs replicas, savepoints have a huge overhead.
+    If you process records and savepoint in a loop, for example when processing
+    records one by one for a batch, limit the size of the batch.
+    If you have more records, the function should maybe become a scheduled job
+    or you have to accept the performance penalty.
 
 Use translation method correctly
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
