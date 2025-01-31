@@ -284,21 +284,13 @@ To register payments on multiple invoices/credit notes or bills/refunds, follow 
 Registering a single payment for multiple customers or vendors (batch payments)
 ===============================================================================
 
-Batch payments allow grouping payments from multiple contacts to ease :doc:`reconciliation
-<bank/reconciliation>`. They are also useful when depositing :doc:`checks <payments/checks>` to the
-bank or for generating bank payment files such as :doc:`SEPA <payments/pay_sepa>` or :ref:`NACHA
-<l10n_us/nacha>`. To do so, go to :menuselection:`Accounting --> Customers --> Payments` or
-:menuselection:`Accounting --> Vendors --> Payments`. In the payments list view, select the payments
-to be grouped in a batch, click :icon:`fa-cog` :guilabel:`Actions`, and select :guilabel:`Create
-Batch Payment`.
-
-.. note::
-   All payments in a batch must have the same :ref:`payment method
-   <accounting/payments/payment-methods>`.
+Batch payments allow grouping payments from multiple customers to ease :doc:`reconciliation
+<bank/reconciliation>`. They are also useful when depositing :doc:`checks <payments/checks>` or
+cash payments to the bank or for generating bank payment files such as :doc:`SEPA
+<payments/pay_sepa>` or :ref:`NACHA <l10n_us/nacha>`.
 
 .. seealso::
-   - :doc:`payments/batch`
-   - :doc:`payments/batch_sdd`
+   :doc:`payments/batch`
 
 .. _accounting/payments/matching:
 
