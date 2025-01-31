@@ -158,7 +158,7 @@ Bill payments
 -------------
 
 To generate Bacs files for bill payments, set the :guilabel:`Payment Method` to
-:guilabel:`BACS Direct Debit` when :ref:`registering vendor payments <batch-payments/register-payments>`.
+:guilabel:`BACS Direct Debit` when :doc:`registering vendor payments <../accounting/payments>`.
 
 Then, create a vendor batch payment:
 
@@ -179,6 +179,9 @@ Export File` if you need a new Bacs file for that batch payment.
 .. image:: united_kingdom/bacs-files.png
    :alt: Vendor Batch Payment view with generated BACS file.
 
+.. seealso::
+   :doc:`../accounting/payments/batch`
+
 Invoice payments
 ----------------
 
@@ -188,7 +191,7 @@ and click :guilabel:`New`. Select a :guilabel:`Customer`, their :guilabel:`IBAN`
 :guilabel:`Journal` you wish to use.
 
 To generate Bacs files for invoice payments, set the :guilabel:`Payment Method` to
-:guilabel:`BACS Direct Debit` when :ref:`registering invoice payments <batch-payments/register-payments>`.
+:guilabel:`BACS Direct Debit` when :doc:`registering invoice payments <../accounting/payments>`.
 
 .. tip::
    If you register the payment for an invoice linked to a subscription or via
