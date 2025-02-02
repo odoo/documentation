@@ -10,17 +10,17 @@
 # Hà Trần Thị Minh, 2024
 # Martin Trigaux, 2024
 # Võ Văn Khoa, 2024
-# Wil Odoo, 2024
 # Thi Huong Nguyen, 2025
+# Wil Odoo, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-31 16:01+0000\n"
+"POT-Creation-Date: 2025-01-28 12:25+0000\n"
 "PO-Revision-Date: 2024-10-08 06:34+0000\n"
-"Last-Translator: Thi Huong Nguyen, 2025\n"
+"Last-Translator: Wil Odoo, 2025\n"
 "Language-Team: Vietnamese (https://app.transifex.com/odoo/teams/41243/vi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -79,6 +79,7 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/configuration.rst:54
 #: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:10
 #: ../../content/applications/sales/point_of_sale/employee_login.rst:13
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:35
 #: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:9
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:13
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:20
@@ -89,6 +90,8 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/stripe.rst:19
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_wallet.rst:13
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:16
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:72
+#: ../../content/applications/sales/point_of_sale/preparation.rst:12
 #: ../../content/applications/sales/point_of_sale/pricing/cash_rounding.rst:17
 #: ../../content/applications/sales/point_of_sale/pricing/electronic_labels.rst:16
 #: ../../content/applications/sales/point_of_sale/pricing/fiscal_position.rst:16
@@ -107,7 +110,7 @@ msgstr ""
 #: ../../content/applications/sales/sales/products_prices/products/product_images.rst:14
 #: ../../content/applications/sales/sales/products_prices/products/variants.rst:34
 #: ../../content/applications/sales/sales/send_quotations/pdf_quote_builder.rst:24
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:14
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:13
 #: ../../content/applications/sales/subscriptions/closing.rst:9
 #: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:17
 msgid "Configuration"
@@ -7310,6 +7313,7 @@ msgid ":ref:`search/favorites`"
 msgstr ":ref:`search/favorites`"
 
 #: ../../content/applications/sales/point_of_sale.rst:6
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:54
 msgid "Point of Sale"
 msgstr "Điểm bán hàng"
 
@@ -7706,6 +7710,7 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/combos.rst:54
 #: ../../content/applications/sales/point_of_sale/employee_login.rst:26
+#: ../../content/applications/sales/point_of_sale/preparation.rst:50
 #: ../../content/applications/sales/point_of_sale/pricing/electronic_labels.rst:122
 #: ../../content/applications/sales/point_of_sale/shop/ship_later.rst:32
 msgid "Practical application"
@@ -7779,6 +7784,8 @@ msgid "To make products available for sale,"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/configuration.rst:43
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:88
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:102
 msgid "Go to :menuselection:`Point of Sale --> Products --> Products`."
 msgstr ""
 
@@ -8622,6 +8629,466 @@ msgid ""
 "To get an overview of all orders, regardless of the session, click the "
 "vertical ellipsis button (:guilabel:`⋮`) on the POS card and select "
 ":guilabel:`Orders` from the :guilabel:`View` section."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:3
+msgid "Online food delivery"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:5
+msgid ""
+"**UrbanPiper** is an order management system that integrates with multiple "
+"food delivery platforms. It consolidates orders from all connected platforms"
+" into a single interface, simplifying the delivery process."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:9
+msgid "Supported providers:"
+msgstr "Nhà cung cấp được hỗ trợ:"
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:11
+msgid "`Careem <https://www.careem.com>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:12
+msgid "`Cari <https://getcari.com/>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:13
+msgid "`ChowNow <https://www.chownow.com>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:14
+msgid "`Deliveroo <https://deliveroo.co.uk/>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:15
+msgid "`DoorDash <https://www.doordash.com>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:16
+msgid "`EatEasy <https://www.eateasy.ae/dubai>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:17
+msgid "`Glovo <https://glovoapp.com>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:18
+msgid "`Grubhub <https://www.grubhub.com>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:19
+msgid "`HungryPanda <https://www.hungrypanda.co>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:20
+msgid "`HungerStation <https://hungerstation.com>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:21
+msgid "`Jahez <https://www.jahez.net/>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:22
+msgid "`Just Eat <https://www.just-eat.ie/>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:23
+msgid "`Mrsool <https://mrsool.co>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:24
+msgid "`Ninja <https://ananinja.com/>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:25
+msgid "`NoonFood <https://www.noon.com>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:26
+msgid "`Postmates <https://www.postmates.com>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:27
+msgid "`Rafeeq <https://www.gorafeeq.com/en>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:28
+msgid "`SkipTheDishes <https://www.skipthedishes.com/>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:29
+msgid "`Swiggy <https://www.swiggy.com>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:30
+msgid "`Talabat <https://www.talabat.com>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:31
+msgid "`UberEats <https://www.ubereats.com>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:32
+msgid "`Zomato <https://www.zomato.com>`_"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:40
+msgid "UrbanPiper credentials"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:42
+msgid "Get your Atlas credentials:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:44
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:58
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:115
+#: ../../content/applications/sales/point_of_sale/preparation.rst:16
+msgid "Go to the :ref:`POS settings <configuration/settings>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:45
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:59
+msgid "Scroll down to the :guilabel:`Food Delivery Connector` section."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:46
+msgid ""
+"Click :guilabel:`Fill this form to get Username & Api key` and fill out the "
+"survey."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:47
+msgid ""
+"`Go to your Atlas account <https://atlas.urbanpiper.com>`_ and retrieve your"
+" API key and username by navigating to :menuselection:`Settings --> API "
+"Access`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst-1
+msgid "Atlas API access"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:56
+msgid "Enable the :guilabel:`Urban Piper` setting:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:60
+msgid "Check the :guilabel:`Urban Piper` setting."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:62
+msgid "Set up UrbanPiper:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:64
+msgid ""
+"Fill in the :guilabel:`Username` and :guilabel:`Api Key` fields with your "
+":ref:`UrbanPiper credentials <online_food_delivery/credentials>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:66
+msgid ""
+"Select the desired delivery providers in the :guilabel:`Food Delivery "
+"Platforms` field under the :guilabel:`Urban Piper Location` section (i.e., "
+"Zomato, Uber Eats)."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:68
+msgid "Save the settings."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:69
+msgid ""
+"Click the :guilabel:`+ Create Store` button. Doing so creates a new location"
+" on the UrbanPiper Atlas platform."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:73
+msgid ""
+"The :guilabel:`Pricelist` and :guilabel:`Fiscal Position` fields are "
+"automatically selected after saving."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:75
+msgid "A successful store creation triggers a notification."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:76
+msgid ""
+"The store creation process may take 2–3 minutes to reflect changes on the "
+"UrbanPiper Atlas platform."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:78
+msgid "The store is automatically named after your point of sale name."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst-1
+msgid "Food delivery connector settings"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:84
+msgid "Products"
+msgstr "Sản phẩm"
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:86
+msgid "To make products available individually,"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:89
+msgid "Select any product to open its product form."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:90
+msgid "Go to the :guilabel:`Point of Sale` tab."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:91
+msgid "Complete the :guilabel:`Urban Piper` section:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:93
+msgid ""
+"Fill in the :guilabel:`Available on Food Delivery` with the desired POS."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:94
+msgid ""
+"Optionally, set up the :guilabel:`Meal Type` field and enable the "
+":guilabel:`Is Recommended` and :guilabel:`Is Alcoholic` buttons."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst-1
+msgid "where to make a single product available for delivery"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:100
+msgid "To make multiple products available for food delivery at once,"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:103
+msgid "Click the list icon (:icon:`oi-view-list`) to switch to the list view."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:104
+msgid "Select the products."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:105
+msgid ""
+"Enter the desired POS in the :guilabel:`Available on Food Delivery` column."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst-1
+msgid "Product list"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:111
+msgid "Synchronization"
+msgstr "Đồng bộ"
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:113
+msgid ""
+"To make products available on food delivery platforms, synchronize with your"
+" UrbanPiper account:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:116
+msgid "Scroll down the :guilabel:`Food Delivery Connector` section."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:117
+msgid "Click the :guilabel:`Sync Menu` button."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:119
+msgid ""
+"The :guilabel:`Last Sync on` timestamp below the :guilabel:`Create Store` "
+"and :guilabel:`Sync Menu` buttons updates."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:123
+msgid "A successful synchronization triggers a notification."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:124
+msgid ""
+"The synchronization process may take 2–3 minutes to reflect changes on the "
+"UrbanPiper Atlas platform."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:128
+msgid "Go live"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:130
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:153
+msgid ""
+"`Go to the Locations tab <https://atlas.urbanpiper.com/locations>`_ of your "
+"Atlas account."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:131
+msgid ""
+"Select the location to activate, then click :guilabel:`Request to go Live`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:0
+msgid "Request to go live button in the locations tab of the Atlas account"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:136
+msgid "In the popup window:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:138
+msgid "Select the platform(s) to activate and click :guilabel:`Next`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:139
+msgid ""
+"Enter the :guilabel:`Platform ID` and :guilabel:`Platform URL` in the "
+"corresponding fields to establish the connection between the platform and "
+"UrbanPiper."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:141
+msgid "Click the :guilabel:`Request to Go Live` button."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:0
+msgid "Go live parameters"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:147
+msgid ""
+"To find the location's :guilabel:`Platform ID` and :guilabel:`Platform URL`,"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:149
+msgid "Click the location to open its setup form."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:150
+msgid "The location's parameters are available in the :guilabel:`HUB` tab."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:151
+msgid "Verify that your location is live:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:154
+msgid ""
+"Select any provider in the :guilabel:`Assoc. platform(s)` column to review "
+"the status of that platform for this location."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:158
+msgid "Order flow"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:160
+msgid ""
+"An order placed via the configured delivery platform triggers a "
+"notification. To manage these orders, open the orders' list view by:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:163
+msgid "Clicking :guilabel:`Review Orders` on the notification popup."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:164
+msgid "Clicking the bag-shaped icon for online orders and :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:0
+msgid "Cart button"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:170
+msgid ""
+"Clicking this icon displays the number of orders at each stage: "
+":guilabel:`New`, :guilabel:`Ongoing`, and :guilabel:`Done`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:172
+msgid ""
+"The :guilabel:`New` button indicates newly placed orders, "
+":guilabel:`Ongoing` is for accepted orders, and :guilabel:`Done` is for "
+"orders ready to be delivered."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:175
+msgid "Then,"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:177
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:196
+msgid "Select the desired order."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:178
+msgid "Click the :guilabel:`Accept` button."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:179
+msgid ""
+"When an order is accepted, its :guilabel:`Order Status` switches from "
+":guilabel:`Placed` to :guilabel:`Acknowledged` and is automatically "
+"displayed on the preparation display."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:182
+msgid "When the order is ready,"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:184
+msgid "Open the orders' list view."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:185
+msgid "Select the order."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:186
+msgid ""
+"Click the :guilabel:`Mark as ready` button. Its :guilabel:`Order Status` "
+"switches from :guilabel:`Acknowledged` to :guilabel:`Food Ready`, and its "
+":guilabel:`Status` switches from :guilabel:`Ongoing` to :guilabel:`Paid`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:191
+msgid "Order rejection"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:193
+msgid ""
+"Sometimes, the shop or restaurant may want to **reject** an order. In this "
+"case, open the orders' list view,"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:197
+msgid "Click the :guilabel:`Reject` button."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:198
+msgid "Select one of the reasons from the popup window."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst-1
+msgid "Reject order pop-up"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:204
+msgid ""
+"**Swiggy** orders cannot be directly rejected. Attempting to reject one "
+"prompts Swiggy customer support to contact the restaurant. Similarly, "
+"**Deliveroo**, **JustEat**, and **HungerStation** do not allow order "
+"rejection. Always follow the respective provider's guidelines for handling "
+"such cases."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods.rst:5
@@ -10226,6 +10693,468 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:93
 msgid ""
 "Set a fixed IP to your IoT Box’s router to prevent losing the connexion."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:3
+msgid "Marketing features"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:5
+msgid ""
+"Use your POS system to engage with customers directly by sending them "
+"promotional offers via email or WhatsApp."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:9
+msgid "Storing contact details"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:11
+msgid ""
+"This feature requires your customer's contact details, either their email "
+"address or phone number."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:13
+msgid ""
+"**Email addresses**: automatically collected and saved in POS orders when "
+"sending a receipt by email."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:15
+msgid ""
+"**Phone numbers**: to store phone numbers when sending receipts on WhatsApp "
+"or by SMS,"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:17
+msgid ""
+"Go to :menuselection:`Configuration --> Settings` and scroll to the "
+":guilabel:`Bills & Receipts` section;"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:19
+msgid ""
+"Activate the :guilabel:`WhatsApp Enabled` or :guilabel:`SMS Enabled` "
+"option(s)."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst-1
+msgid "setting to enable to store phone numbers when sending receipts"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:24
+msgid ""
+"If a customer’s contact information is missing, it will be automatically "
+"saved in POS orders when the receipt is sent via email, SMS, or WhatsApp."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:28
+msgid ""
+"From a POS order form, navigate to the :guilabel:`Contact Info` category "
+"under the :guilabel:`Extra Info` tab, then click the email icon or whatsapp "
+"icon to send standalone marketing messages."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:0
+msgid "pos orders form's standalone marketing message option"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:36
+msgid "Email marketing"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:38
+msgid "To send marketing emails to your customers from POS orders,"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:40
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:101
+msgid "Go to :menuselection:`Point of Sale --> Orders --> Orders`;"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:41
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:102
+msgid "Select the orders;"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:42
+msgid ""
+"Click :guilabel:`Actions`, then :guilabel:`Send Email` from the dropdown "
+"menu."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:44
+msgid ""
+"Doing so opens an email composing form. Fill it in and hit :guilabel:`Send`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst-1
+msgid "mail composer view"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:51
+msgid ""
+"Save some time by saving your content as a template. Click the vertical "
+"ellipsis button and select your template under the :guilabel:`Insert "
+"Template` section."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:53
+msgid ""
+"You can also save your content as template for later use. Click the vertical"
+" ellipsis button and select :guilabel:`Save as Template`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:57
+msgid ""
+"Fill in the :guilabel:`Mass Mailing Name` field to create a mass mailing and"
+" track its results in the :doc:`Email Marketing app "
+"<../../marketing/email_marketing>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:59
+msgid ""
+"If an email address is not related to an existing customer, a new customer "
+"is automatically created when sending marketing emails."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:63
+msgid ""
+":doc:`Use the email marketing app for more advanced marketing features "
+"<../../marketing/email_marketing>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:67
+msgid "Whatsapp marketing"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:74
+msgid ""
+"You first need to enable the related server action to send WhatsApp "
+"marketing messages from your POS using the phone numbers collected from POS "
+"orders. To do so,"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:77
+msgid "Go to the WhatsApp application;"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:78
+msgid "Create a new :ref:`WhatsApp template <WhatsApp/templates>`;"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:79
+msgid "Configure the fields:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:81
+msgid ":guilabel:`Applies to` field set to :guilabel:`Point of Sale Orders`;"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:82
+msgid ":guilabel:`Category` field to :guilabel:`Marketing`;"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:83
+msgid ""
+":guilabel:`Phone Field` to either :guilabel:`Mobile` or :guilabel:`Customer "
+"> Phone`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:84
+msgid "Click :guilabel:`Submit for Approval`;"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:85
+msgid ""
+"Once approved, click the :guilabel:`Allow Multi` button to create a server "
+"action in the POS orders list view."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst-1
+msgid "approved and configured for marketing uses whatsapp template"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:92
+msgid ""
+"If you modify the template's content, you must request for approval again, "
+"as its status returns to the :guilabel:`Draft` state."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:96
+msgid ":doc:`WhatsApp configuration <../../productivity/whatsapp>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:99
+msgid "Send WhatsApp marketing messages"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:103
+msgid ""
+"Click :guilabel:`Actions`, then :guilabel:`WhatsApp Message` from the "
+"dropdown menu."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:105
+msgid ""
+"Doing so opens a WhatsApp message composing form. Select the desired "
+"marketing template in the :guilabel:`Template` field and hit :guilabel:`Send"
+" Message`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst-1
+msgid "whatsapp composer view"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:112
+msgid ""
+"To use WhatsApp marketing in the Point of Sale, approved marketing templates"
+" must have the :guilabel:`Allow Multi` option enabled and :guilabel:`Point "
+"of Sale Orders` selected in the :guilabel:`Applies to` field."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:115
+msgid ""
+"If the server action is displayed without a properly configured template, an"
+" error message appears. Click :guilabel:`Configure Templates` and complete "
+"the :ref:`WhatsApp setup <pos_based_marketing/whatsapp_config>` steps."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/pos_based_marketing.rst:120
+msgid ":doc:`../../productivity/whatsapp`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:3
+msgid "Preparation display"
+msgstr "Màn hình khâu chuẩn bị"
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:5
+msgid ""
+"The preparation display feature allows you to handle POS orders requiring "
+"preparation. Concretely,"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:7
+msgid ""
+"**For retail**:  The preparation team is notified after a payment is "
+"completed at the POS to gather the purchased items for customer pickup."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:9
+msgid ""
+"**For restaurants**: POS orders inform the kitchen of the meals to be "
+"prepared."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:14
+msgid "To enable the preparation display feature,"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:17
+msgid "Scroll down to the :guilabel:`Preparation` section."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:18
+msgid "Check the :guilabel:`Preparation Display` option."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst-1
+msgid "Setting to enable the preparation display feature"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:24
+msgid "To create and set up a preparation display,"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:26
+msgid ""
+"Go to :menuselection:`Point of Sale --> Orders --> Preparation Display`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:27
+msgid "Click :guilabel:`New`."
+msgstr "Nhấp :guilabel:`Mới`."
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:28
+msgid ""
+"Give the display a descriptive :guilabel:`Name` (e.g., `Main Kitchen`, "
+"`Bar`)"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:29
+msgid "Set it up:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:31
+msgid ""
+":guilabel:`Point of Sale`: Select the POS that sends orders to this display."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:32
+msgid ""
+":guilabel:`Product categories`: Specify the POS :guilabel:`Product "
+"categories` sent to this display."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:34
+msgid ""
+":guilabel:`Stages`: Define the steps required for the orders to be ready."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:36
+msgid "Click :guilabel:`Add a line` to add a stage."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:37
+msgid "Assign specific colors to each stage for clarity (optional)."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:38
+msgid ""
+"Define an :guilabel:`Alert timer (min)` for each stage to indicate the "
+"expected processing time."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst-1
+msgid "preparation display set-up form"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:46
+msgid ""
+"To edit a pre-existing preparation display, click the vertical ellipsis "
+"button (:icon:`fa-ellipsis-v`) on the display's card and select "
+":guilabel:`Configure`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:52
+msgid ""
+"Go to :menuselection:`Point of Sale --> Orders --> Preparation Display` to "
+"get an overview of all your displays."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst-1
+msgid "Kanban view of the preparation display"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:59
+msgid "The display card shows:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:61
+msgid "The configured stages."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:62
+msgid "The number of orders currently :guilabel:`In progress`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:63
+msgid ""
+"The :guilabel:`Average time` employees usually take to complete an order."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:66
+msgid ""
+"Click the :guilabel:`Kitchen Display` app icon on your Odoo Dashboard for "
+"quicker access."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:69
+msgid "Using the preparation display"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:71
+msgid ""
+"To access the preparation display, click :guilabel:`Preparation Screen`. "
+"This interface, designed for employees, shows:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:74
+msgid ""
+"**Stages and order count**: Displays the progress of orders across stages "
+"such as `To prepare`, `Ready`, and `Completed`, along with the number of "
+"orders in each stage."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:76
+msgid ""
+"**Ordered products by category**: Lists all items in progress, grouped by "
+"POS categories (e.g., `Drinks`, `Food`)."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:78
+msgid "**Order cards**: Summarizes individual orders, including:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:80
+msgid "Associated tables and order numbers."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:81
+msgid "Status, such as `Ready`, highlighted with the defined colors."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:82
+msgid "Waiting time, with visual indicators."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:85
+msgid ""
+"The duration indicator turns red if the elapsed time exceeds the predefined "
+"alert time."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst-1
+msgid "the preparation display interface with orders to process."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:91
+msgid "To update order progress:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:93
+msgid "Click items on the order card to cross them off individually."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:94
+msgid "Click the order card itself to mark all items at once."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:95
+msgid ""
+"The card automatically moves to the next stage once every item is crossed "
+"off."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:96
+msgid ""
+"Click :icon:`fa-undo` :guilabel:`Recall` to move an order back to the "
+"previous stage if you mistakenly sent it to the next stage."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:100
+#: ../../content/applications/sales/point_of_sale/shop/customer_display.rst:3
+msgid "Customer display"
+msgstr "Màn hình cho khách hàng"
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:102
+msgid ""
+"In parallel, click :guilabel:`Order Status Screen` to open the customer "
+"interface. This interface, designed for customers, provides an overview of "
+"orders that are:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:105
+msgid ":guilabel:`Ready` for pickup."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:106
+msgid ":guilabel:`Almost there`, indicating they are taken care of."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/preparation.rst:109
+msgid "The order number can be found at the top of the customer's receipt."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/pricing.rst:5
@@ -12097,10 +13026,6 @@ msgid ""
 "POS."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/shop/customer_display.rst:3
-msgid "Customer display"
-msgstr "Màn hình cho khách hàng"
-
 #: ../../content/applications/sales/point_of_sale/shop/customer_display.rst:5
 msgid ""
 "The **customer display** feature provides customers with real-time checkout "
@@ -13130,30 +14055,6 @@ msgid "Send by Amazon, based on delivery status synchronized from Odoo."
 msgstr ""
 
 #: ../../content/applications/sales/sales/amazon_connector/features.rst:66
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:20
-msgid ""
-"The stock synchronization does **not** currently support selling the same "
-"product as :abbr:`FBM (Fulfilled By Merchant)` *and* :abbr:`FBA (Fulfilled "
-"By Amazon)`."
-msgstr ""
-
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:69
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:23
-msgid ""
-"At times, when stock is sent for all products, it triggers a stock problem "
-"with Amazon, where Amazon incorrectly thinks the :abbr:`FBM (Fulfilled By "
-"Merchant)` product has some quantity in :abbr:`FBM (Fulfilled By Merchant)`."
-msgstr ""
-
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:73
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:27
-msgid ""
-"As a result, Amazon then sells it as :abbr:`FBM (Fulfilled By Merchant)`, "
-"instead of taking from their own warehouse. Odoo developers are currently "
-"working on resolving this issue to avoid future discrepancies."
-msgstr ""
-
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:78
 msgid ""
 "The Amazon Connector is designed to synchronize the data of sales orders. "
 "Other actions, such as downloading monthly fees reports, handling disputes, "
@@ -13161,7 +14062,7 @@ msgid ""
 " usual."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:83
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:71
 msgid ""
 "As of February 19, 2024, in North American marketplaces, :abbr:`FBA "
 "(Fulfilled by Amazon)` orders created with the *Amazon Connector*, do not "
@@ -13172,102 +14073,102 @@ msgid ""
 "(Fulfilled by Amazon)` order."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:92
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:80
 msgid "Supported marketplaces"
 msgstr "Marketplace được hỗ trợ"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:94
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:82
 msgid ""
 "If a marketplace is not listed in your Amazon marketplaces, it's possible to"
 " :ref:`add a new marketplace <amazon/add-new-marketplace>`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:98
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:86
 msgid "**North America region**"
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:100
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:88
 msgid "Canada"
 msgstr "Canada"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:100
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:88
 msgid "Amazon.ca"
 msgstr "Amazon.ca"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:102
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:90
 msgid "Mexico"
 msgstr "Mexico"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:102
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:90
 msgid "Amazon.com.mx"
 msgstr "Amazon.com.mx"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:104
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:92
 msgid "US"
 msgstr "Hoa Kỳ"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:104
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:92
 msgid "Amazon.com"
 msgstr "Amazon.com"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:108
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:96
 msgid "**Europe region**"
 msgstr "**Khu vực Châu Âu**"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:110
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:98
 msgid "Germany"
 msgstr "Đức"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:110
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:98
 msgid "Amazon.de"
 msgstr "Amazon.de"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:112
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:100
 msgid "Spain"
 msgstr "Tây Ban Nha"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:112
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:100
 msgid "Amazon.es"
 msgstr "Amazon.es"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:114
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:102
 msgid "France"
 msgstr "Pháp"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:114
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:102
 msgid "Amazon.fr"
 msgstr "Amazon.fr"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:116
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:104
 msgid "UK"
 msgstr "Vương quốc Anh"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:116
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:104
 msgid "Amazon.co.uk"
 msgstr "Amazon.co.uk"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:118
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:106
 msgid "Italy"
 msgstr "Ý"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:118
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:106
 msgid "Amazon.it"
 msgstr "Amazon.it"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:120
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:108
 msgid "Netherlands"
 msgstr "Hà Lan"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:120
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:108
 msgid "Amazon.nl"
 msgstr "Amazon.nl"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:124
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:112
 #: ../../content/applications/sales/sales/amazon_connector/manage.rst:200
 msgid ":doc:`setup`"
 msgstr ":doc:`setup`"
 
-#: ../../content/applications/sales/sales/amazon_connector/features.rst:125
+#: ../../content/applications/sales/sales/amazon_connector/features.rst:113
 #: ../../content/applications/sales/sales/amazon_connector/setup.rst:155
 msgid ":doc:`manage`"
 msgstr ":doc:`manage`"
@@ -13305,6 +14206,27 @@ msgid ""
 "*Cancelled* orders. For each synchronized order, a sales order and customer "
 "are created in Odoo (if the customer is not already registered in the "
 "database)."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:20
+msgid ""
+"The stock synchronization does **not** currently support selling the same "
+"product as :abbr:`FBM (Fulfilled By Merchant)` *and* :abbr:`FBA (Fulfilled "
+"By Amazon)`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:23
+msgid ""
+"At times, when stock is sent for all products, it triggers a stock problem "
+"with Amazon, where Amazon incorrectly thinks the :abbr:`FBM (Fulfilled By "
+"Merchant)` product has some quantity in :abbr:`FBM (Fulfilled By Merchant)`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:27
+msgid ""
+"As a result, Amazon then sells it as :abbr:`FBM (Fulfilled By Merchant)`, "
+"instead of taking from their own warehouse. Odoo developers are currently "
+"working on resolving this issue to avoid future discrepancies."
 msgstr ""
 
 #: ../../content/applications/sales/sales/amazon_connector/manage.rst:32
@@ -20168,7 +21090,7 @@ msgid ":doc:`../products_prices/prices/pricing`"
 msgstr ":doc:`../products_prices/prices/pricing`"
 
 #: ../../content/applications/sales/sales/send_quotations/create_quotations.rst:167
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:160
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:158
 msgid "Optional Products tab"
 msgstr ""
 
@@ -20505,13 +21427,13 @@ msgstr ":doc:`deadline`"
 
 #: ../../content/applications/sales/sales/send_quotations/create_quotations.rst:328
 #: ../../content/applications/sales/sales/send_quotations/get_paid_to_validate.rst:90
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:282
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:258
 msgid ":doc:`get_signature_to_validate`"
 msgstr ":doc:`get_signature_to_validate`"
 
 #: ../../content/applications/sales/sales/send_quotations/create_quotations.rst:329
 #: ../../content/applications/sales/sales/send_quotations/get_signature_to_validate.rst:78
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:283
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:259
 msgid ":doc:`get_paid_to_validate`"
 msgstr ":doc:`get_paid_to_validate`"
 
@@ -21047,7 +21969,6 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/sales/send_quotations/optional_products.rst:9
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:166
 msgid ""
 "For instance, if a customer wants to buy a car, they have the choice to "
 "order massaging seats, as well, or ignore the offer and simply buy the car. "
@@ -21078,7 +21999,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/sales/send_quotations/optional_products.rst:27
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:183
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:179
 msgid ""
 "When clicked, a drop-down menu with products from the database appear. "
 "Select the desired product from the drop-down menu to add it as an optional "
@@ -21099,7 +22020,6 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/sales/send_quotations/optional_products.rst:39
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:186
 msgid ""
 "To delete any line item from the :guilabel:`Optional Products` tab, click "
 "the :guilabel:`🗑️ (trash can)` icon."
@@ -21892,51 +22812,51 @@ msgstr "Mẫu báo giá"
 
 #: ../../content/applications/sales/sales/send_quotations/quote_template.rst:5
 msgid ""
-"In Odoo *Sales*, salespeople have the ability to create reusable quotation "
-"templates for common products or services that the business offers."
+"Reusable quotation templates can be made in Odoo's **Sales** app for common "
+"products or services."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:8
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:7
 msgid ""
 "By using these templates, quotations can be tailored and sent to customers "
-"at a much faster pace, without having to create new quotations from scratch "
+"at a quicker pace, without having to create new quotations from scratch "
 "every time a sales negotiation occurs."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:16
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:15
 msgid ""
-"Begin by activating the setting in :menuselection:`Sales app --> "
-"Configuration --> Settings`, and scroll to the :guilabel:`Quotations \\& "
-"Orders` heading."
+"To use quotation templates, begin by activating the setting in "
+":menuselection:`Sales app --> Configuration --> Settings`, and scroll to the"
+" :guilabel:`Quotations &_Orders` heading."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:19
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:18
 msgid ""
-"In that section, check the box beside the :guilabel:`Quotation Templates` "
-"option. Doing so reveals a new :guilabel:`Default Template` field, in which "
-"a default quotation template can be chosen from a drop-down menu."
+"Under the heading, tick the :guilabel:`Quotation Templates` checkbox. Doing "
+"so reveals a new :guilabel:`Default Template` field, in which a default "
+"quotation template can be chosen from the drop-down menu."
 msgstr ""
 
 #: ../../content/applications/sales/sales/send_quotations/quote_template.rst-1
 msgid "How to enable quotation templates on Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:27
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:25
 msgid ""
-"Also, upon activating the :guilabel:`Quotation Template` feature, an "
-"internal :guilabel:`➡️ Quotation Templates` link appears beneath the "
-":guilabel:`Default Template` field."
+"Upon activating the :guilabel:`Quotation Template` feature, an internal "
+":icon:`fa-arrow-right` :guilabel:`Quotation Templates` link appears beneath "
+"the :guilabel:`Default Template` field."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:30
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:28
 msgid ""
-"Clicking that link reveals the :guilabel:`Quotation Templates` page, from "
+"Clicking this link reveals the :guilabel:`Quotation Templates` page, from "
 "which templates can be created, viewed, and edited."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:33
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:31
 msgid ""
-"Before leaving the :guilabel:`Settings` page, don't forget to click the "
+"Before leaving the :guilabel:`Settings` page, do not forget to click the "
 ":guilabel:`Save` button to save all changes made during the session."
 msgstr ""
 
@@ -21946,8 +22866,9 @@ msgstr ""
 
 #: ../../content/applications/sales/sales/send_quotations/quote_template.rst:39
 msgid ""
-"Click the :guilabel:`Quotation Templates` link on the :guilabel:`Settings` "
-"page, or navigate to :menuselection:`Sales app --> Configuration --> "
+"To create a quotation template, click the :guilabel:`Quotation Templates` "
+"link on the :guilabel:`Settings` page once :guilabel:`Quotation templates` "
+"are enabled, or navigate to :menuselection:`Sales app --> Configuration --> "
 "Quotation Templates`. Both options reveal the :guilabel:`Quotation "
 "Templates` page, where quotation templates can be created, viewed, and "
 "edited."
@@ -21961,34 +22882,34 @@ msgstr ""
 msgid ""
 "To create a new quotation template, click the :guilabel:`New` button, "
 "located in the upper-left corner. Doing so reveals a blank quotation "
-"template form that can be customized in a number of ways."
+"template form that can be customized."
 msgstr ""
 
 #: ../../content/applications/sales/sales/send_quotations/quote_template.rst-1
 msgid "Create a new quotation template on Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:54
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:53
 msgid ""
 "Start by entering a name for the template in the :guilabel:`Quotation "
 "Template` field."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:56
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:55
 msgid ""
 "Then, in the :guilabel:`Quotation Validity` field, designate how many days "
 "the quotation template will remain valid for, or leave the field on the "
 "default `0` to keep the template valid indefinitely."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:60
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:59
 msgid ""
-"Next, in the :guilabel:`Confirmation Mail` field, click the blank field to "
-"reveal a drop-down menu. From the drop-down menu, select a pre-configured "
-"email template to be sent to customers upon confirmation of an order."
+"Next, in the :guilabel:`Confirmation Mail` field, click the blank drop-down "
+"menu to select a preconfigured email template to be sent to customers upon "
+"confirmation of an order."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:65
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:63
 msgid ""
 "To create a new email template directly from the :guilabel:`Confirmation "
 "Mail` field, start typing the name of the new email template in the field, "
@@ -21996,17 +22917,17 @@ msgid ""
 " the drop-down menu that appears."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:69
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:67
 msgid ""
 "Selecting :guilabel:`Create` creates the email template, which can be edited"
 " later."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:71
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:69
 msgid ""
 "Selecting :guilabel:`Create and edit...` creates the email template, and a "
 ":guilabel:`Create Confirmation Mail` pop-up window appears, in which the "
-"email template can be customized and configured right away."
+"email template can be customized and configured immediately."
 msgstr ""
 
 #: ../../content/applications/sales/sales/send_quotations/quote_template.rst-1
@@ -22015,19 +22936,19 @@ msgid ""
 "Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:79
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:76
 msgid ""
-"When all modifications are complete, click :guilabel:`Save \\& Close` to "
-"save the email template and return to the quotation form."
+"When all modifications are complete, click :guilabel:`Save & Close` to save "
+"the email template and return to the quotation form."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:82
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:79
 msgid ""
 "If working in a multi-company environment, use the :guilabel:`Company` field"
 " to designate to which company this quotation template applies."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:85
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:82
 msgid ""
 "If a journal is set in the :guilabel:`Invoicing Journal` field, all sales "
 "orders with this template will invoice in that specified journal. If no "
@@ -22035,7 +22956,7 @@ msgid ""
 "used."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:89
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:86
 msgid ""
 "If the :guilabel:`Online Signature` and/or :guilabel:`Online Payment` "
 "features are activated in the :guilabel:`Settings` (:menuselection:`Sales "
@@ -22043,13 +22964,13 @@ msgid ""
 "quotation template forms."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:93
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:90
 msgid ""
 "Check the box beside :guilabel:`Online Signature` to request an online "
 "signature from the customer to confirm an order."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:96
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:93
 msgid ""
 "Check the box beside :guilabel:`Online Payment` to request an online payment"
 " from the customer to confirm an order. When :guilabel:`Online Payment` is "
@@ -22057,32 +22978,32 @@ msgid ""
 "payment can be entered."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:100
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:97
 msgid ""
 "Both options, :guilabel:`Online Signature` and :guilabel:`Online Payment` "
 "can be enabled simultaneously, in which case the customer must provide "
 "**both** a signature **and** a payment to confirm an order."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:104
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:101
 msgid ""
 "In the :guilabel:`Recurring Plan` field, choose from a variety of pre-"
 "configured amounts of time (e.g. :guilabel:`Monthly`, :guilabel:`Quarterly`,"
 " etc.) to designate how often this quotation template should occur."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:109
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:106
 msgid ""
 "The :guilabel:`Recurring Plan` field **only** applies to subscription plans."
 " For more information, check out the documentation on "
 ":doc:`../../subscriptions/plans`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:113
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:110
 msgid "Lines tab"
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:115
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:112
 msgid ""
 "In the :guilabel:`Lines` tab, products can be added to the quotation "
 "template by clicking :guilabel:`Add a product`, organized by clicking "
@@ -22091,49 +23012,49 @@ msgid ""
 "terms, etc.) by clicking :guilabel:`Add a note`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:120
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:117
 msgid ""
 "To add a product to a quotation template, click :guilabel:`Add a product` in"
 " the :guilabel:`Lines` tab of a quotation template form. Doing so reveals a "
 "blank field in the :guilabel:`Product` column."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:123
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:120
 msgid ""
 "When clicked, a drop-down menu with existing products in the database "
-"appear. Select the desired product from the drop-down menu to add it to the "
-"quotation template."
+"appears. Select the desired product from the drop-down menu to add it to the"
+" quotation template."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:126
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:123
 msgid ""
-"If the desired product isn't readily visible, type the name of the desired "
+"If the desired product is not readily visible, type the name of the desired "
 "product in the :guilabel:`Product` field, and the option appears in the "
 "drop-down menu. Products can also be found by clicking :guilabel:`Search "
 "More...` from the drop-down menu."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:131
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:128
 msgid ""
-"In Odoo 17, it is now possible to add event-related products (booths and "
-"registrations) to quotation templates. To do so, click the "
-":guilabel:`Product` field, type in `Event`, and select the desired event-"
-"related product from the resulting drop-down menu."
+"It is possible to add event-related products (booths and registrations) to "
+"quotation templates. To do so, click the :guilabel:`Product` field, type in "
+"`Event`, and select the desired event-related product from the resulting "
+"drop-down menu."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:136
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:133
 msgid ""
 "When a product is added to a quotation template, the default "
 ":guilabel:`Quantity` is `1`, but that can be edited at any time."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:139
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:136
 msgid ""
-"Then, drag-and-drop the product to the desired position, via the "
+"Then, drag and drop the product to the desired position, via the "
 ":guilabel:`six squares` icon, located to the left of each line item."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:142
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:139
 msgid ""
 "To add a *section*, which serves as a header to organize the lines of a "
 "sales order, click :guilabel:`Add a section` in the :guilabel:`Lines` tab. "
@@ -22142,42 +23063,49 @@ msgid ""
 "the section name."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:147
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:144
 msgid ""
-"Then, drag-and-drop the section name to the desired position, via the "
-":guilabel:`six squares` icon, located to the left of each line item."
+"Then, drag and drop the section name to the desired position, via the "
+":icon:`oi-apps` :guilabel:`(six squares)` icon, located to the left of each "
+"line item."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:150
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:147
 msgid ""
-"To add a note, which would appear as a piece of text for the customer on the"
-" quotation, click :guilabel:`Add a note` in the :guilabel:`Lines` tab. When "
+"To add a note, which appears as a piece of text for the customer on the "
+"quotation, click :guilabel:`Add a note` in the :guilabel:`Lines` tab. When "
 "clicked, a blank field appears, in which the desired note can be typed. When"
 " the note has been entered, click away to secure the note."
 msgstr ""
 
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:151
+msgid ""
+"Then, drag and drop the note to the desired position, via the :icon:`oi-"
+"apps` :guilabel:`(six squares)` icon."
+msgstr ""
+
 #: ../../content/applications/sales/sales/send_quotations/quote_template.rst:154
 msgid ""
-"Then, drag-and-drop the note to the desired position, via the :guilabel:`six"
-" squares` icon."
-msgstr ""
-
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:156
-msgid ""
 "To delete any line item from the :guilabel:`Lines` tab (product, section, "
-"and/or note), click the :guilabel:`🗑️ (trash can)` icon on the far-right "
-"side of the line."
+"and/or note), click the :icon:`fa-trash` :guilabel:`(remove record)` icon on"
+" the far-right side of the line."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:162
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:160
 msgid ""
-"The use of *optional products* is a marketing strategy that involves the "
-"cross-selling of products along with a core product. The aim is to offer "
-"useful and related products to customers, which may result in an increased "
-"sale."
+"Using *optional products* is a marketing strategy that involves the cross-"
+"selling of products along with a core product. The aim is to offer useful "
+"and related products to customers, which may result in an increased sale."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:170
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:165
+msgid ""
+"If a customer wants to buy a car, they have the choice to order massaging "
+"seats as an additional product that compliments the car, or ignore the offer"
+" and buy the car alone."
+msgstr ""
+
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:168
 msgid ""
 "Optional products appear as a section on the bottom of sales orders and "
 "eCommerce pages. Customers can immediately add them to their online sales "
@@ -22188,81 +23116,68 @@ msgstr ""
 msgid "Optional products appearing on a typical sales order with Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:177
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:174
 msgid ""
 "In the :guilabel:`Optional Products` tab, :guilabel:`Add a line` for each "
 "cross-selling product related to the original items in the :guilabel:`Lines`"
-" tab, if applicable. The products added here ideally complement the original"
-" offering as added value for the prospective buyer."
+" tab, if applicable."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:181
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:177
 msgid ""
 "Clicking :guilabel:`Add a line` reveals a blank field in the "
 ":guilabel:`Product` column."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:190
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:182
+msgid ""
+"To delete any line item from the :guilabel:`Optional Products` tab, click "
+"the :icon:`fa-trash` :guilabel:`(remove record)` icon."
+msgstr ""
+
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:186
 msgid "Optional products are **not** required to create a quotation template."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:193
-msgid "Terms \\& Conditions tab"
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:189
+msgid "Terms & Conditions tab"
+msgstr ""
+
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:191
+msgid ""
+"The :guilabel:`Terms & Conditions` tab provides the opportunity to add terms"
+" and conditions to the quotation template. To add terms and conditions, type"
+" the desired terms and conditions in this tab."
 msgstr ""
 
 #: ../../content/applications/sales/sales/send_quotations/quote_template.rst:195
-msgid ""
-"The :guilabel:`Terms \\& Conditions` tab provides the opportunity to add "
-"terms and conditions to the quotation template. To add terms and conditions,"
-" simply type (or copy/paste) the desired terms and conditions in this tab."
-msgstr ""
-
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:200
 msgid ":doc:`../../../finance/accounting/customer_invoices/terms_conditions`"
 msgstr ":doc:`../../../finance/accounting/customer_invoices/terms_conditions`"
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:203
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:198
 msgid ""
 "Terms and conditions are **not** required to create a quotation template."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:206
-msgid "PDF Quote Builder tab"
-msgstr ""
-
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:208
-msgid ""
-"The :guilabel:`PDF Quote Builder` tab provides options to compose an "
-"attractive quotation, with more information and visually-pleasing elements, "
-"to highlight products and/or services."
-msgstr ""
-
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:211
-msgid ""
-"To upload customer :guilabel:`Header pages` and :guilabel:`Footer pages`, "
-"click the :guilabel:`✏️ (pencil)` icon to the right of the respective pages."
-" Click the :guilabel:`🗑️ (trash)` icon to delete an uploaded PDF."
-msgstr ""
-
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:216
-msgid ":doc:`/applications/sales/sales/send_quotations/pdf_quote_builder`"
-msgstr ":doc:`/applications/sales/sales/send_quotations/pdf_quote_builder`"
-
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:219
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:201
 msgid "Use quotation templates"
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:221
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:203
 msgid ""
 "When creating a quotation (:menuselection:`Sales app --> New`), choose a "
-"pre-configured template in the :guilabel:`Quotation Template` field."
+"preconfigured template in the :guilabel:`Quotation Template` field."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst-1
-msgid "Quotation templates field on a standard quotation form in Odoo Sales."
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:207
+msgid ""
+"The order of the templates in the :guilabel:`Quotation Template` field is "
+"determined by the order of the templates in the Quotation Templates form. "
+"The order of the quotations in the Quotation Templates form does **not** "
+"affect anything else."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:228
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:211
 msgid ""
 "To view what the customer will see, click the :guilabel:`Preview` button at "
 "the top of the page to see how the quotation template appears on the front-"
@@ -22273,54 +23188,47 @@ msgstr ""
 msgid "Customer preview of a quotation template in Odoo Sales."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:237
-msgid ""
-"Quotation template design uses the same methodology and functionality with "
-"design building blocks as a typical web page design with Odoo *Website*. Be "
-"sure to check out the :doc:`../../../websites/website` documentation to "
-"learn more."
-msgstr ""
-
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:241
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:218
 msgid ""
 "When all blocks and customizations are complete, click the :guilabel:`Save` "
-"button to put those configurations into place."
+"button to save the configuration."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:244
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:221
 msgid ""
-"There is also a blue banner at the top of the quotation template design with"
-" a link to quickly return :guilabel:`Back to edit mode`. When clicked, Odoo "
-"returns to the quotation form in the back-end of the *Sales* application."
+"The blue banner located at the top of the quotation template preview can be "
+"used to quickly return :icon:`fa-arrow-right` :guilabel:`Back to edit mode`."
+" When clicked, Odoo returns to the quotation form in the back-end of the "
+"*Sales* application."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:249
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:226
 msgid "Mass cancel quotations/sales orders"
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:251
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:228
 msgid ""
 "Cancel multiple quotations (or sales orders) by navigating to the "
 ":menuselection:`Sales app --> Orders --> Quotations` dashboard, landing, by "
 "default, in the list view. Then, on the left side of the table, tick the "
-"preferred checkboxes for removal."
+"checkboxes for the quotations to be canceled."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:256
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:233
 msgid ""
 "Select all records in the table by selecting the checkbox column header at "
 "the top-left of the table; the total number of selected items are displayed "
 "at the top of the page."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:259
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:236
 msgid ""
 "Then, with the desired quotations (or sales orders) selected from the list "
 "view on the :guilabel:`Quotations` page, click the :icon:`fa-cog` "
 ":guilabel:`Actions` button to reveal a drop-down menu."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:263
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:240
 msgid "From this drop-down menu, select :guilabel:`Cancel quotations`."
 msgstr ""
 
@@ -22330,20 +23238,20 @@ msgid ""
 " application."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:270
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:246
 msgid ""
 "This action can be performed for quotations in *any* stage, even if it is "
 "confirmed as a sales order."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:273
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:249
 msgid ""
 "Upon selecting the :guilabel:`Cancel quotations` option, a :guilabel:`Cancel"
 " quotations` confirmation pop-up window appears. To complete the "
 "cancellation, click the :guilabel:`Cancel quotations` button."
 msgstr ""
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:278
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:254
 msgid ""
 "An error pop-up message appears when attempting to cancel an order for an "
 "ongoing subscription that has an invoice."
