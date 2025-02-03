@@ -132,7 +132,7 @@ be downloaded from the `Odoo download page <https://www.odoo.com/page/download>`
    .. group-tab:: Fedora
 
       .. note::
-         Odoo {CURRENT_MAJOR_VERSION} 'rpm' package supports Fedora 36.
+         Odoo {CURRENT_MAJOR_VERSION} 'rpm' package supports Fedora 38.
 
       Once downloaded, the package can be installed using the 'dnf' package manager:
 
