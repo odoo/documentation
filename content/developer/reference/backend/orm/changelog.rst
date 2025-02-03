@@ -7,6 +7,9 @@ Changelog
 Odoo Online version 18.3
 ========================
 
+- Domain optimization is applied before executing `Fields.search` methods.
+  All equalities are handled consistently: `=` is equivalent to `in`.
+  See `#191549 <https://github.com/odoo/odoo/pull/191549>`_.
 - New cron API for notifying progress with batch commits.
   See `#197781 <https://github.com/odoo/odoo/pull/197781>`_.
 
