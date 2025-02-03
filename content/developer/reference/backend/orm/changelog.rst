@@ -4,6 +4,12 @@
 Changelog
 =========
 
+Odoo Online version 18.3
+========================
+
+- Domain optimization is applied before executing `Fields.search` methods.
+  See `#191549 <https://github.com/odoo/odoo/pull/191549>`_.
+
 Odoo Online version 18.1
 ========================
 
