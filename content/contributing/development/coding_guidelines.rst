@@ -955,7 +955,8 @@ Symbols and Conventions
             ...
 
         # CRUD methods (and name_search, _search, ...) overrides
-        def create(self, values):
+        @api.model
+        def create(self, vals_list):
             ...
 
         # Action methods
