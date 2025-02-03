@@ -58,8 +58,6 @@ and select it. Then configure the following fields:
 - :guilabel:`TTx`: Malaysian Tourism Tax Number, if applicable
 - :guilabel:`Phone`
 
-.. _malaysia/myinvois:
-
 E-invoicing integration with MyInvois
 =====================================
 
@@ -107,7 +105,7 @@ portal to grant Odoo the **right to invoice** as an intermediary for your compan
    - :guilabel:`Name`:
 
      - :guilabel:`Production`: `ODOO S.A.`
-     - :guilabel:`Pre-production`: `OXXX_XXXXO S.A.`
+     - :guilabel:`Pre-production`: `OXXX_XXXXA.`
 
 #. Grant the following permissions by clicking the :icon:`fa-toggle-on` :guilabel:`(toggle-on)`
    icon:
@@ -134,12 +132,24 @@ Configuration in Odoo
 
 .. _malaysia/myinvois/setup/odoo/einvoicing:
 
+Company
+*******
+
+Navigate to the :guilabel:`Settings` app, and in the :guilabel:`Companies` section, click
+:guilabel:`Update Info`.
+
+   - :guilabel:`Tax ID`: Enter the tax identification number.
+   - :guilabel:`Identification`: Select the :guilabel:`ID Type` and enter the associated
+     :guilabel:`Identification number` used to register for the digital certificate.
+   - :guilabel:`Ind. Classification`: Input the 5-digit numeric code that represents the nature and
+     activity of the business.
+
 Electronic invoicing
 ********************
 
 Go to :menuselection:`Accounting --> Configuration --> Settings`. In the
-:guilabel:`Malaysian Electronic Invoicing` section, choose the relevant :guilabel:`MyInvois mode`
-based on the environment you used to register on MyInvois.
+:guilabel:`Malaysian Electronic Invoicing` section, select the relevant :guilabel:`MyInvois mode`
+based on the environment used for your MyInvois registration.
 
 Make sure to allow Odoo to process e-invoices by checking the box, then click :guilabel:`Register`.
 
@@ -147,18 +157,19 @@ Make sure to allow Odoo to process e-invoices by checking the box, then click :g
    To change the TIN reference, click :guilabel:`Unregister`, change the company's information and
    make sure the number registered on MyInvois matches, then :guilabel:`Register` again.
 
+.. important::
+   For taxpayers with a :abbr:`TIN (tax identification number)` starting with "IG" and has a
+   :abbr:`ROB (registration of business)` number, combine the TIN and ROB in the **TIN:ROB** format
+   for the :guilabel:`Tax ID` field.
+
+   To register, go to :menuselection:`Accounting --> Configuration --> Settings`, and in the
+   :guilabel:`Malaysian Electronic Invoicing` section, click :guilabel:`Register`. Once the
+   registration is complete, the **:ROB** can be removed from the :guilabel:`Tax ID`.
+
+   Additionally, remember to log into your `MyTax account <https://mytax.hasil.gov.my/>`_ and set
+   your :guilabel:`Type of Role` as :guilabel:`Business Owner`.
+
 .. _malaysia/myinvois/setup/odoo/company:
-
-Company
-*******
-
-Open the Settings app, and in the :guilabel:`Companies` section, click :guilabel:`Update Info`. Then,
-in the :guilabel:`E-invoicing` section, fill in the following fields:
-
-   - :guilabel:`Identification`: The :guilabel:`ID Type` and associated :guilabel:`Identification
-     number` used to register for the digital certificate.
-   - :guilabel:`Ind. Classification`: The 5-digit numeric code that represents the nature and
-     activity of the business.
 
 Contacts
 ********
@@ -181,6 +192,19 @@ All products to be included in e-invoices require a Malaysian classification cod
 access the :guilabel:`Product` form and in the :guilabel:`General Information` tab, fill in the
 :guilabel:`Malaysian classification code` field.
 
+Malaysian tax type
+******************
+
+To configure the field of :guilabel:`Malaysian Tax Type` for a tax, go to
+:menuselection:`Accounting --> Configuration --> Accounting --> Taxes`.
+
+When an invoice or bill includes a tax with the :guilabel:`Malaysian Tax Type` set to
+**Tax Exempt**, a :guilabel:`Tax Exemption Reason` must be specified in the :guilabel:`MyInvois`
+tab before the document is sent.
+
+.. image:: malaysia/myinvois-tax-exemption-reason.png
+      :alt: MyInvois tax exemption reason
+
 .. _malaysia/myinvois/workflow:
 
 Workflow
@@ -193,21 +217,40 @@ Send invoices to MyInvois
 
 Invoices can be sent to MyInvois once they have been confirmed. To do so, follow the
 :ref:`invoice sending <accounting/invoice/sending>` steps, and in the :guilabel:`Send` window,
-enable the :guilabel:`Send to MyInvois` option and click :guilabel:`Send & Print`.
+enable the :guilabel:`Send To MyInvois` option and click :guilabel:`Send & Print`.
+
+Send bills to MyInvois
+~~~~~~~~~~~~~~~~~~~~~~
+
+Sending a bill to MyInvois is necessary when issuing an e-Invoice on behalf of a supplier. Once a
+bill is confirmed, click :guilabel:`Send To MyInvois`.
+
+.. note::
+   In the MyInvois portal, these vendor bills are categorized as :guilabel:`Self-billed Invoice`.
+   For more information, refer to the `User Guide <https://preprod.myinvois.hasil.gov.my/content>`_
+   of MyInvois Portal.
+
+.. note::
+   If the :guilabel:`Bill Reference` field on a bill is empty, the :guilabel:`Vendor Bill Number`
+   from Odoo is used for the MyInvois Portal number. If a reference is entered in the
+   :guilabel:`Bill Reference` field, that reference is used instead.
 
 .. _malaysia/myinvois/workflow/sending/status:
 
 MyInvois status
 ***************
 
-In the :guilabel:`MyInvois` tab of the invoice, the :guilabel:`MyInvois State` is updated to
-:guilabel:`Valid` when the submission to MyInvois is successful. The :guilabel:`Submission UID`,
-:guilabel:`MyInvois` and :guilabel:`Validation Time` are also updated.
-The same information is available on MyInvois.
+The current status is available in the :guilabel:`MyInvois` tab of an invoice or bill in the
+:guilabel:`MyInvois State` field.
+
+ - :guilabel:`Validation in Progress`: the validation is being processed by MyInvois. A blue
+   :guilabel:`PROCESSING` banner is also displayed.
+ - :guilabel:`Valid`: it is validated by MyInvois. The :guilabel:`Submission UID`, :guilabel:`MyInvois` and
+   :guilabel:`Validation Time` are automatically updated with information from the MyInvois portal.
 
 .. note::
-   If no information is received from the MyInvois portal, the :guilabel:`MyInvois State` is
-   :guilabel:`In Progress`. In this case, Odoo automatically checks and updates the status.
+   Odoo automatically checks for and updates the status every hour through a scheduled action. To
+   update the status manually at any time, click :guilabel:`Update MyInvois Status`.
 
 .. _malaysia/myinvois/workflow/cancellation:
 
@@ -215,6 +258,70 @@ Invoice cancellation
 ~~~~~~~~~~~~~~~~~~~~
 
 Sent invoices can be canceled within 72 hours from :guilabel:`Validation time`. In this case, open
-the invoice and click :guilabel:`Request Cancel`. In the :guilabel:`Cancel document` window, include
-the cancellation :guilabel:`Reason`, then click :guilabel:`Update Invoice`. The
+the invoice and click :guilabel:`Request Cancel`. In the :guilabel:`Cancel document` window,
+include the cancellation :guilabel:`Reason`, then click :guilabel:`Update Invoice`. The
 :guilabel:`MyInvois State` is updated to :guilabel:`cancelled`.
+
+Send credit note to MyInvois
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Before sending a credit note, the original invoice must be successfully submitted to MyInvois.
+Otherwise, the credit note's :guilabel:`MyInvois State` is updated to :guilabel:`Invalid`.
+
+While Odoo uses a single :guilabel:`credit note` document, MyInvois categorizes these into two
+types: :guilabel:`credit note` and :guilabel:`refund note`, depending on how they are reconciled.
+
+- :guilabel:`MyInvois Credit Note`: This is created when an Odoo credit note is reconciled with the
+  original invoice.
+- :guilabel:`MyInvois Refund Note`: This is created when an Odoo credit note is reconciled with a
+  full payment instead of the original invoice.
+
+.. note::
+   If a credit note is reconciled with only a partial payment before being sent, it is still
+   categorized as a :guilabel:`credit note` in the MyInvois portal.
+
+.. tip::
+   To issue both a credit note and a refund note for the same original invoice:
+    - Create two separate credit notes in Odoo from the original invoice.
+    - For one, register a payment before sending it. This becomes a :guilabel:`Refund Note` in the
+      MyInvois Portal.
+    - For the other, do not register a payment before sending it. This becomes a
+      :guilabel:`Credit Note`.
+
+.. note::
+   The same logic applies to credit notes created from bills: if reconciled with a full payment, it
+   becomes a :guilabel:`Self-billed Refund Note`; Otherwise, it becomes a
+   :guilabel:`Self-billed Credit Note`.
+
+Send debit note to MyInvois
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To issue a debit note from an existing bill or invoice:
+
+#. Click the :icon:`fa-cog` :guilabel:`(gear)` icon and select :guilabel:`Debit Note`.
+
+   .. image:: malaysia/myinvois-debit-note.png
+      :alt: MyInvois debit note
+
+#. Fill in the necessary fields and click :guilabel:`Create Debit Note`.
+#. Complete and :guilabel:`Confirm`` the new debit note.
+#. Click :guilabel:`Send To MyInvois`. In the MyInvois Portal, it appears as either a
+   :guilabel:`Debit Note` or a :guilabel:`Self-billed Debit Note`.
+
+.. note::
+   The :guilabel:`Debit Notes module` must be installed to issue a debit note.
+
+Access invoices via QR code
+---------------------------
+
+When a document is successfully submitted to MyInvois, a QR code is added to its PDF version.
+Scanning this code links directly to the validated document in the MyInvois portal.
+
+To download the PDF from an invoice or bill:
+
+#. Click the :icon:`fa-cog` :guilabel:`(gear)` icon
+#. Select :guilabel:`Download`
+#. Choose either :guilabel:`PDF` or :guilabel:`PDF without Payment`
+
+.. image:: malaysia/myinvois-qr-code.png
+      :alt: MyInvois QR code
