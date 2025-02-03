@@ -649,11 +649,12 @@ Method decorators
 =================
 
 .. automodule:: odoo.api
-    :members: depends, depends_context, constrains, onchange, autovacuum, model, model_create_multi, ondelete
+    :members: depends, depends_context, constrains, onchange, autovacuum, model, model_create_multi, private, ondelete
 
 .. .. currentmodule:: odoo.api
 
 .. .. autodata:: model
+.. .. autodata:: private
 .. .. autodata:: depends
 .. .. autodata:: constrains
 .. .. autodata:: onchange
