@@ -59,11 +59,11 @@ specific business logic::
         ...
 
         @api.model
-        def create(self, vals):
+        def create(self, vals_list):
             # Do some business logic, modify vals...
             ...
             # Then call super to execute the parent method
-            return super().create(vals)
+            return super().create(vals_list)
 
 The decorator :func:`~odoo.api.model` is necessary for the :meth:`~odoo.models.Model.create`
 method because the content of the recordset ``self`` is not relevant in the context of creation,

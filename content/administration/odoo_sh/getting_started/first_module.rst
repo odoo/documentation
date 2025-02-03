@@ -481,15 +481,16 @@ Add
 .. code-block:: python
 
   @api.model
-  def create(self, values):
-      if 'name' in values:
-          values['name'] = unidecode(values['name'])
-      return super(my_module, self).create(values)
+  def create(self, vals_list):
+      for vals in vals_list:
+          if 'name' in vals:
+              vals['name'] = unidecode(vals['name'])
+      return super().create(vals_list)
 
-  def write(self, values):
-      if 'name' in values:
-          values['name'] = unidecode(values['name'])
-      return super(my_module, self).write(values)
+  def write(self, vals):
+      if 'name' in vals:
+          vals['name'] = unidecode(vals['name'])
+      return super().write(vals)
 
 Adding a Python dependency requires a module version increase for the platform to install it.
 
