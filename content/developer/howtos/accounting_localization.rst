@@ -277,6 +277,7 @@ Basic :file:`__manifest__.py` file for such a module looks as following:
         "name": "COUNTRY - Accounting Reports",
         "category": "Accounting/Localizations/Reporting",
         "version": "1.0.0",
+        "author": "Odoo S.A.",
         "license": "OEEL-1",
         "depends": [
             "l10n_XX", "account_reports"

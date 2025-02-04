@@ -63,7 +63,7 @@ On the other hand, the ``__manifest__.py`` file must describe our module and can
 Its only required field is the ``name``, but it usually contains much more information.
 
 Take a look at the
-`CRM file <https://github.com/odoo/odoo/blob/fc92728fb2aa306bf0e01a7f9ae1cfa3c1df0e10/addons/crm/__manifest__.py#L1-L67>`__
+`CRM file <https://github.com/odoo/odoo/blob/67a952f30731fc00941587ae165b7a885da0e77e/addons/crm/__manifest__.py>`__
 as an example. In addition to providing the description of the module (``name``, ``category``,
 ``summary``, ``website``...), it lists its dependencies (``depends``). A dependency means that the
 Odoo framework will ensure that these modules are installed before our module is installed. Moreover, if
