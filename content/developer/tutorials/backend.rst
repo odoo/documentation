@@ -803,9 +803,10 @@ In a similar way, you can add more complex
 
 A Python constraint is defined as a method decorated with
 :func:`~odoo.api.constrains`, and invoked on a recordset. The decorator
-specifies which fields are involved in the constraint, so that the constraint is
-automatically evaluated when one of them is modified. The method is expected to
-raise an exception if its invariant is not satisfied::
+specifies which fields are involved in the constraint. The constraint is
+automatically evaluated at the end of transaction when any of these fields
+are modified. The method is expected to raise an exception if its invariant
+is not satisfied::
 
     from odoo.exceptions import ValidationError
 
