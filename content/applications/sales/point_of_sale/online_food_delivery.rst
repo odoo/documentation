@@ -107,6 +107,11 @@ To make multiple products available for food delivery at once,
 .. image:: online_food_delivery/product-list.png
    :alt: Product list
 
+.. note::
+   - Currently, UrbanPiper does not support combo products.
+   - As a workaround, create a product and define combo choices as :doc:`Attributes & Variants
+     <../sales/products_prices/products/variants>`.
+
 Synchronization
 ---------------
 
