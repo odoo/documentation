@@ -339,7 +339,7 @@ Staging builds duplicate the production build and the production build only inst
 **Test suite**
 
 For development branches, you can choose to enable or disable the test suite. It's enabled by default.
-When the test suite is enabled, you can restrict them by specifying test tags :ref:`test tags
+When the test suite is enabled, you can restrict them by specifying :ref:`test tags
 <developer/reference/testing/selection>`.
 
 **Odoo Version**
@@ -413,15 +413,15 @@ explained in the documentation about :ref:`SPF <email-domain-spf>` and :ref:`DKI
 Shell commands
 ==============
 
-In the top right-hand corner of the view, different shell commands are available.
+Various shell commands are available in the top right corner of the view.
 
 .. image:: branches/interface-branches-shellcommands.png
    :align: center
 
-Each command can be copied in the clipboard to be used in a terminal,
-and some of them can be used directly from Odoo.sh by clicking the *run* button
-in such case a popup will prompt the user in order to define eventual placeholders
-such as ``<URL>``, ``<PATH>``, ...
+Each command can be copied to the clipboard for use in a terminal. Some commands can also be
+run directly from Odoo.sh by clicking the *Run* button. In cases like these,
+a popup will prompt the user to define any required placeholders
+such as ``<URL>`` and ``<PATH>``.
 
 Clone
 -----
@@ -562,3 +562,9 @@ Deletes the branch in your remote repository.
   $ git branch -D master
 
 Deletes the branch in your local copy of the repository.
+
+.. code-block:: bash
+
+  $ git remote prune origin
+
+Removes deleted remote branches from your local tracking list.
