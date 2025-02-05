@@ -27,7 +27,6 @@ Next, click :guilabel:`Select a project` and select (or create) an API project t
 in, and store credentials. Click :guilabel:`New Project`.
 
 .. image:: google/new-api-project.png
-   :align: center
    :alt: Create a new API project to store credentials.
 
 .. tip::
@@ -40,14 +39,12 @@ Now, click on :guilabel:`Enabled APIs and Services` in the left menu. Select :gu
 and Services` again if the :guilabel:`Search bar` doesn't appear.
 
 .. image:: google/enable-apis-services.png
-   :align: center
    :alt: Enable APIs and Services on the API Project.
 
 After that, search for `Google Calendar API` using the search bar and select :guilabel:`Google
 Calendar API` from the search results. Click :guilabel:`Enable`.
 
 .. image:: google/enable-google-cal-api.png
-   :align: center
    :alt: Enable the Google Calendar API.
 
 OAuth consent screen
@@ -97,7 +94,6 @@ Under :menuselection:`Create OAuth Client ID`, select :guilabel:`Website applica
   `/google_account/authentication`. Finally, click :guilabel:`Create`.
 
 .. image:: google/uri.png
-   :align: center
    :alt: Add the authorized JavaScript origins and the authorized redirect URIs.
 
 A :guilabel:`Client ID` and :guilabel:`Client Secret` will appear, copy these to a notepad.
@@ -106,16 +102,20 @@ Setup in Odoo
 =============
 
 Once the *Client ID* and the *Client Secret* are located, open the Odoo database and go to
-:menuselection:`Settings --> General Settings --> Integrations --> Google Calendar`. Check the box
-next to :guilabel:`Google Calendar`.
+:menuselection:`Settings --> Calendar` to find the :guilabel:`Google Calendar` feature. Tick the
+checkbox labeled :guilabel:`Google Calendar`.
 
 .. image:: google/settings-google-cal.png
-   :align: center
    :alt: The Google Calendar checkbox in General Settings.
 
 Next, copy and paste the *Client ID* and the *Client Secret* from the Google Calendar API
 credentials page into their respective fields below the :guilabel:`Google Calendar` checkbox. Then,
 click :guilabel:`Save`.
+
+.. note::
+   Tick the :guilabel:`Pause Synchronization` checkbox to temporarily pause events from being
+   updated. This allows for testing and troubleshooting without removing credentials or uninstalling
+   the synchronization. To resume the sync, clear the checkbox and save.
 
 Sync calendar in Odoo
 =====================
@@ -124,7 +124,6 @@ Finally, open the :menuselection:`Calendar` app in Odoo and click on the :guilab
 button to sync Google Calendar with Odoo.
 
 .. image:: google/sync-google.png
-   :align: center
    :alt: Click the Google sync button in Odoo Calendar to sync Google Calendar with Odoo.
 
 .. note::
@@ -134,7 +133,6 @@ button to sync Google Calendar with Odoo.
    give permission for the transfer of data)`.
 
 .. image:: google/trust-odoo.png
-   :align: center
    :alt: Give Odoo permission to access Google Calendar.
 
 Now, Odoo Calendar is successfully synced with Google Calendar!
@@ -166,7 +164,6 @@ app --> Manage Users`. Then, select the user to modify the calendar, and click t
 :guilabel:`Calendar` tab.
 
 .. image:: google/google-reset.png
-   :align: center
    :alt: Reset buttons highlighted on the calendar tab of the user.
 
 Next, click :guilabel:`Reset Account` under the correct calendar.
@@ -177,7 +174,6 @@ Reset options
 The following reset options are available for troubleshooting Google calendar sync with Odoo:
 
 .. image:: google/reset-calendar.png
-   :align: center
    :alt: Google calendar reset options in Odoo.
 
 :guilabel:`User's Existing Events`:
@@ -201,9 +197,9 @@ synchronization.
 Google OAuth FAQ
 ================
 
-At times there can be misconfigurations that take place, and troubleshooting is needed to resolve
-the issue. Below are the most common errors that may occur when configuring the *Google Calendar*
-for use with Odoo.
+At times there can be configuration errors that occur, and troubleshooting is needed to resolve the
+issue. Below are the most common errors that may occur when configuring the *Google Calendar* for
+use with Odoo.
 
 Production vs. testing publishing status
 ----------------------------------------
@@ -225,7 +221,6 @@ If no test users are added to the :guilabel:`OAuth consent screen`, then an :gui
 access_denied` populates.
 
 .. image:: google/403-error.png
-   :align: center
    :alt: 403 Access Denied Error.
 
 To correct this error, return to the :guilabel:`OAuth consent screen`, under :guilabel:`APIs &
@@ -239,7 +234,6 @@ selected for the :guilabel:`Application Type`, an :guilabel:`Authorization Error
 (:guilabel:`Error 400:redirect_uri_mismatch`).
 
 .. image:: google/error-400.png
-   :align: center
    :alt: Error 400 Redirect URI Mismatch.
 
 To correct this error, delete the existing credentials, and create new credentials, by selecting
