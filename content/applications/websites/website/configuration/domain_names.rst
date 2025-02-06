@@ -225,8 +225,8 @@ DNS hosting services do not offer an easy way to do so.
       :alt: Adding a CNAME DNS record to Cloudflare to redirect a www subdomain to an Odoo database
 
 #. Define a redirect rule to permanently redirect (301) your naked domain (e.g., `yourdomain.com`)
-   to both `http://` and `https://` by going to :menuselection:`Rules --> Redirect Rules --> Create
-   rule`, and:
+   to both `http://` and `https://` by going to :menuselection:`Rules --> Create rule --> Products`,
+   and clicking :guilabel:`Create a Rule` under :guilabel:`Redirect Rules`:
 
    - Enter any :guilabel:`Rule name`.
    - Under the :guilabel:`If incoming requests match...` section, select :guilabel:`Custom filter
@@ -239,7 +239,7 @@ DNS hosting services do not offer an easy way to do so.
    - Under the :guilabel:`Then...` section, use the following configuration:
 
      - :guilabel:`Type`: Dynamic
-     - :guilabel:`Expression`: e.g., `concat("https://www.yourdomain.com/", http.request.uri.path)`
+     - :guilabel:`Expression`: e.g., `concat("https://www.yourdomain.com", http.request.uri.path)`
      - :guilabel:`Status code`: 301
      - :guilabel:`Preserve query string`: enabled
 
