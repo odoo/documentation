@@ -11,6 +11,8 @@ Odoo Online version 18.2
   `formatted_read_group` as formatted public API. See `#163300 <https://github.com/odoo/odoo/pull/163300>`_.
 - `@api.private` is added to distinguish public Python methods from methods exposed for RPC calls.
   See `#195402 <https://github.com/odoo/odoo/pull/195402>`_.
+- Native namespaces for ``odoo`` module `PEP-420 <https://peps.python.org/pep-0420/>`_.
+  See `#195664 <https://github.com/odoo/odoo/pull/195664>`_.
 
 Odoo Online version 18.1
 ========================
