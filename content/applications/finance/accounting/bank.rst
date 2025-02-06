@@ -120,6 +120,8 @@ You can edit the currency used to enter the transactions.
 .. seealso::
    :doc:`get_started/multi_currency`
 
+.. _accounting/bank/account-number:
+
 Account number
 --------------
 
