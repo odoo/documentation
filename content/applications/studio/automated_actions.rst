@@ -6,7 +6,8 @@ Automation rules are used to trigger automatic changes based on user actions (e.
 modification when a field is set to a specific value), email events, time conditions (e.g., archive
 a record 7 days after its last update), or external events.
 
-To create an automation rule with Studio, proceed as follows:
+To create an automated action with Studio, :ref:`open Studio <studio/access>`, then go to
+:guilabel:`Automations` and click :guilabel:`New`.
 
 #. Open Studio and click :guilabel:`Automations`, then :guilabel:`New`.
 #. Select the :ref:`studio/automated-actions/trigger` and, if necessary, fill in the fields that
