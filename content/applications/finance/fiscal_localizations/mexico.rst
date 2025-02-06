@@ -1384,7 +1384,7 @@ DIOT report
 
 The DIOT (Declaración Informativa de Operaciones con Terceros / *Informative Declaration of
 Operations with Third Parties*) is an additional obligation with the |SAT|, where the current status
-of creditable and non-creditable payments, withholdings, and refunds of VAT from your vendor bills,
+of creditable and non-creditable payments, withholdings, import taxes and refunds of VAT from your vendor bills,
 are provided to the |SAT|.
 
 Unlike other reports, the |DIOT| is uploaded to a software provided by the |SAT| that contains the
