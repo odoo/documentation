@@ -21,7 +21,7 @@ can, in any app, add or modify:
 - :doc:`Fields <studio/fields>`
 - :doc:`Views <studio/views>`
 - :doc:`Models <studio/models_modules_apps>`
-- :doc:`Automated actions <studio/automated_actions>`
+- :doc:`Automation rules <studio/automated_actions>`
 - :doc:`PDF reports <studio/pdf_reports>`
 - :doc:`Approval rules <studio/approval_rules>`
 - Security rules
