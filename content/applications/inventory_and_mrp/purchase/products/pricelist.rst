@@ -144,7 +144,7 @@ Below is a list of commonly-used fields when importing vendor pricelists:
    * - Quantity
      - The minimum quantity required to receive the product at the specified price.
      - :guilabel:`Quantity` field in the vendor pricelist. (If not visible, enable it by clicking
-       the :icon:`oi-settings-adjust` :guilabel:`(settings)` icon, and tick the :guilabel:`Quantity`
+       the :icon:`oi-settings-adjust` :guilabel:`(adjust)` icon, and tick the :guilabel:`Quantity`
        checkbox)
      - `min_qty`
    * - Unit Price
@@ -152,8 +152,8 @@ Below is a list of commonly-used fields when importing vendor pricelists:
      - :guilabel:`Price` field in the vendor pricelist.
      - `price`
    * - Delivery Lead Time
-     - :ref:`Number of days <inventory/shipping_receiving/purchase-lt>` before receiving the
-       product after confirming a purchase order.
+     - :ref:`Number of days <inventory/warehouses_storage/purchase-lt>` before receiving the product
+       after confirming a purchase order.
      - :guilabel:`Delivery Lead Time` field on the vendor pricelist.
      - `delay`
    * - Sequence
