@@ -18,10 +18,10 @@ Studio
 Studio is a toolbox that allows you to customize Odoo without coding knowledge. For example, you
 can, in any app, add or modify:
 
-- :doc:`Fields <studio/fields>`
+- :doc:`Fields and widgets <studio/fields>`
 - :doc:`Views <studio/views>`
-- :doc:`Models <studio/models_modules_apps>`
-- :doc:`Automated actions <studio/automated_actions>`
+- :doc:`Models, modules and apps <studio/models_modules_apps>`
+- :doc:`Automated actions (automations) <studio/automated_actions>`
 - :doc:`PDF reports <studio/pdf_reports>`
 - :doc:`Approval rules <studio/approval_rules>`
 - Security rules
