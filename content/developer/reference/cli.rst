@@ -702,6 +702,30 @@ interaction with the :ref:`orm <reference/orm>` and its functionalities.
 
 .. _reference/cmdline/scaffold:
 
+Neutralize
+==========
+
+.. program:: odoo-bin neutralize
+
+The Odoo command line allows for neutralizing a database as well. The command must be run with a
+database option.
+
+.. code-block:: console
+
+   $ odoo-bin --addons-path <PATH,...>  neutralize -d <database>
+
+.. option:: -d <database, --database <database>
+
+   Specify the database name that you would like to neutralize.
+
+
+.. option:: --stdout
+
+   Output the neutralization SQL instead of applying it
+
+.. seealso::
+   :doc:`Neutralized Database <../../administration/neutralized_database>`
+
 Scaffolding
 ===========
 
