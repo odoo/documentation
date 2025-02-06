@@ -6,8 +6,8 @@ Automated actions are used to trigger automatic changes based on user actions (e
 modification when a field is set to a specific value) or on time conditions (e.g., archive a record
 7 days after its last update).
 
-To create an automated action with Studio, go to :guilabel:`Automations` from anywhere within
-Studio.
+To create an automated action with Studio, :ref:`open Studio <studio/access>`, then go to
+:guilabel:`Automations` and click :guilabel:`New`.
 
 For every automated action you create, the following elements should be defined: the
 :ref:`studio/automated-actions/model`, the :ref:`studio/automated-actions/trigger`, the
@@ -130,8 +130,8 @@ as when you apply filters on a model.
 
 .. _studio/automated-actions/action:
 
-Action
-======
+Action To Do
+============
 
 Determine what the automated action should do (server action). There are eight types of action to
 choose from.

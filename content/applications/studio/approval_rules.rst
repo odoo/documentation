@@ -2,13 +2,13 @@
 Approval rules
 ==============
 
-Studio approval rules are used to automate approval processes for actions. They allow you to define
+Approval rules are used to automate approval processes for actions. They allow you to define
 the criteria for when an approval is required before an action can be performed using a button.
 
 Configuration
 =============
 
-To add approval rules, proceed as follows:
+To add approval rules with Studio, proceed as follows:
 
 #. :ref:`Open Studio <studio/access>` and switch to the required :doc:`view <views>`.
 #. Select the button for which you want to add approval rules.
