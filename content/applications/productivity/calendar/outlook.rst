@@ -120,12 +120,11 @@ Copy the :guilabel:`Value` for use in the next section.
 Configuration in Odoo
 =====================
 
-In the Odoo database, go to :menuselection:`Settings app --> Integrations section`, and tick the
-checkbox beside the :guilabel:`Outlook Calendar` setting. Remember to click :guilabel:`Save` to
+In the Odoo database, go to :menuselection:`Calendar app --> Configuration --> Settings`, and tick
+the checkbox beside the :guilabel:`Outlook Calendar` setting. Remember to click :guilabel:`Save` to
 implement the changes.
 
 .. image:: outlook/outlook-calendar-setting.png
-   :align: center
    :alt: The "Outlook Calendar" setting activated in Odoo.
 
 From the Microsoft *Azure* portal, under the :guilabel:`Overview` section of the application, copy
