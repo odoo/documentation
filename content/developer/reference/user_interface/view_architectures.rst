@@ -3302,6 +3302,17 @@ Their root element is ``<calendar>``. Available attributes on the root node are:
    :type: bool
    :default: `False`
 
+.. attribute:: show_date_picker
+   :noindex:
+
+   By default, a mini calendar (in month mode) is displayed in the side panel,
+   next to the main calendar. This option allows to remove it by setting it to
+   `False`.
+
+   :requirement: Optional
+   :type: bool
+   :default: `True`
+
 .. attribute:: form_view_id
    :noindex:
 
