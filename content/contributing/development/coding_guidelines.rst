@@ -424,7 +424,7 @@ Inside these 3 groups, the imported lines are alphabetically sorted.
     import time
     from datetime import datetime
     # 2 : imports of odoo
-    from odoo import api, fields, models  # alphabetically ordered
+    from odoo import Command, _, api, fields, models # alphabetically ordered
     from odoo.fields import Domain
     from odoo.tools.safe_eval import safe_eval as eval
     # 3 : imports from odoo addons
