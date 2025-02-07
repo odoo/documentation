@@ -3188,105 +3188,275 @@ calendar.
    order to set the initial focus of the calendar on the period (see `mode`) around
    this date (the context key to use being `initial_date`)
 
-Their root element is ``<calendar>``. Available attributes on the
-calendar view are:
-
-:string:
-  string (default: ``''``)
-
-  This view title is displayed only if you open an action that has no name and
-  whose target is 'new' (opening a dialog)
-
-:create:
-  bool (default: ``True``)
-
-  Disable/enable record creation on the view.
-
-:edit:
-  bool (default: ``True``)
-
-  Disable/enable record edition on the view.
-
-:delete:
-  bool (default: ``True``)
-
-  Disable/enable record deletion on the view through the **Action** dropdown.
+Their root element is ``<calendar>``. Available attributes on the root node are:
 
 .. rst-class:: o-definition-list
 
-``date_start`` (required)
-    name of the record's field holding the start date for the event
-``date_stop``
-    name of the record's field holding the end date for the event, if
-    ``date_stop`` is provided records become movable (via drag and drop)
-    directly in the calendar
-``date_delay``
-    alternative to ``date_stop``, provides the duration of the event instead of
-    its end date (unit: day)
-``color``
-    name of a record field to use for *color segmentation*. Records in the
-    same color segment are allocated the same highlight color in the calendar,
-    colors are allocated semi-randomly.
-    Displayed the display_name/avatar of the visible record in the sidebar
-``form_view_id``
-    view to open when the user create or edit an event. Note that if this attribute
-    is not set, the calendar view will fall back to the id of the form view in the
-    current action, if any.
-``event_open_popup``
-    If the option 'event_open_popup' is set to true, then the calendar view will
-    open events (or records) in a FormViewDialog. Otherwise, it will open events
-    in a new form view (with a do_action)
-``quick_create``
-    enables quick-event creation on click: only asks the user for a ``name``
-    (the field to which this values is saved can be controlled through
-    ``rec_name``) and tries to create a new event with just that and the clicked
-    event time. Falls back to a full form dialog if the quick creation fails
-``quick_create_view_id``
-    View to open when the attribute ``quick_create`` is set and the user creates
-    an event instead of the default dialog.
-``create_name_field``
-    name of the record's field holding the textual representation of the record,
-    this is used when creating records through the 'quick create' mechanism
-``all_day``
-    name of a boolean field on the record indicating whether the corresponding
-    event is flagged as day-long (and duration is irrelevant)
-``mode``
-    Default display mode when loading the calendar.
-    Possible attributes are: ``day``, ``week``, ``month``, ``year``
-``scales``
-    Comma-separated list of scales to provide. By default, all scales are
-    available. See mode for possible scale values.
-``create``, ``delete``
-    allows disabling the corresponding action in the view by setting the
-    corresponding attribute to ``false``
-``<field>``
-  declares fields to aggregate or to use in kanban *logic*. If the field is
-  simply displayed in the calendar cards.
+.. attribute:: date_start
+   :noindex:
 
-  Fields can have additional attributes:
+   Name of the record's field holding the start date for the event.
 
-  .. rst-class:: o-definition-list
+   :requirement: Mandatory
+   :type: str
 
-  ``invisible``
-    use "True" to hide the value in the cards
-  ``avatar_field``
-    only for x2many field, to display the avatar instead of the display_name
-    in the cards
-  ``write_model`` and ``write_field`` and ``filter_field``
-    you can add a filter and save the result in the defined model, the
-    filter is added in the sidebar. The ``filter_field`` is optional and allows
-    you to specify the field that will hold the status of the filter.
-  ``filters`` and ``color``
-    use "True" to add this field in filter in the sidebar. You can specify
-    a ``color`` field used to colorize the checkbox.
+.. attribute:: date_stop
+   :noindex:
 
+   Name of the record's field holding the end date for the event.
 
-Model Commons
--------------
+   :requirement: Optional
+   :type: str
 
-.. currentmodule:: odoo.addons.base.models.ir_ui_view
-.. autoattribute:: Base._date_name
-    :noindex:
+.. attribute:: date_delay
+   :noindex:
+
+   Alternative to ``date_stop``. Provides the duration of the event instead of
+   its end date (unit: hour).
+
+   :requirement: Optional
+   :type: str
+
+.. attribute:: scales
+   :noindex:
+
+   Comma-separated list of available scales, among ``day``, ``week``, ``month``,
+   ``year``. By default, all scales are available.
+
+   :requirement: Optional
+   :type: str
+   :default: `"day,week,month,year"`
+
+.. attribute:: mode
+   :noindex:
+
+   Default scale of the calendar.
+
+   :requirement: Optional
+   :type: `"day"`, `"week"`, `"month"` or `"year"`
+   :default: `"week"`
+
+.. attribute:: color
+   :noindex:
+
+   Name of the record's field to use for *color segmentation*. Records in the
+   same color segment are allocated the same highlight color in the calendar.
+
+   :requirement: Optional
+   :type: str
+
+.. attribute:: all_day
+   :noindex:
+
+   Name of the record's boolean field indicating whether the corresponding
+   event is flagged as day-long, in which case duration is irrelevant.
+
+   :requirement: Optional
+   :type: str
+
+.. attribute:: event_limit
+   :noindex:
+
+   Limits the number of events displayed in calendar cells, in `month` scale, and
+   for all-day events in `week` and `day` scales. If there are more events than
+   the limit, a "more" button is added to show the rest of the events in a popover.
+
+   :requirement: Optional
+   :type: int
+   :default: 5
+
+.. attribute:: show_unusual_days
+   :noindex:
+
+   If set to true weekend days and public holidays have a greyed out background.
+
+   :requirement: Optional
+   :type: bool
+   :default: `False`
+
+.. attribute:: hide_date
+   :noindex:
+
+   Set it to true to hide the date part in the record's popover.
+
+   :requirement: Optional
+   :type: bool
+   :default: `False`
+
+.. attribute:: hide_time
+   :noindex:
+
+   Set it to true to hide the time part in the record's popover.
+
+   :requirement: Optional
+   :type: bool
+   :default: False
+
+.. attribute:: event_open_popup
+   :noindex:
+
+   If true, open events in dialog to edit them, otherwise, open them in a
+   classical form view.
+
+   :requirement: Optional
+   :type: bool
+   :default: `False`
+
+.. attribute:: form_view_id
+   :noindex:
+
+   View to open when the user creates or edits an event. By default, uses the
+   form view of the current action, if any.
+
+   :requirement: Optional
+   :type: int
+
+.. attribute:: quick_create
+   :noindex:
+
+   Enables quick event creation on click: only asks the user for a ``name`` and
+   tries to create a new event with just that and the clicked event time. Falls
+   back to a full form view if the quick creation fails.
+
+   :requirement: Optional
+   :type: bool
+   :default: `True`
+
+.. attribute:: create_name_field
+   :noindex:
+
+   Name of the record's field holding the display name of the record. This field
+   is used when creating records through the 'quick create' mechanism.
+
+   :requirement: Optional
+   :type: str
+   :default: `name`
+
+.. attribute:: quick_create_view_id
+   :noindex:
+
+   Id of the form view to open when the attribute ``quick_create`` is set and the
+   user creates an event, instead of the default dialog which only allows to
+   specify a name.
+
+   :requirement: Optional
+   :type: int
+
+.. include:: view_architectures/root_attribute_create.rst
+
+.. include:: view_architectures/root_attribute_edit.rst
+
+.. attribute:: delete
+   :noindex:
+
+   Disable/enable record deletion on the view.
+
+   :requirement: Optional
+   :type: bool
+   :default: `True`
+
+.. include:: view_architectures/root_attribute_string.rst
+
+.. _reference/view_architectures/calendar/components:
+
+Components
+----------
+
+Calendar views accept a single type of child elements: ``<field>``. Those fields
+are displayed in a popover, in the given order, which opens when a record
+(a calendar event) is clicked.
+
+.. note:: Fields in the popover are readonly. If the `edit` action is available,
+   an `Edit` button is displayed in the popover, to open a form view where fields
+   can be edited.
+
+Field nodes can have the following attributes:
+
+.. include:: view_architectures/field_attribute_name.rst
+
+.. attribute:: invisible
+   :noindex:
+
+   Python expression indicating whether the field should be displayed or not.
+   Other fields of the model can be used in the expression, as long as those
+   fields are also declared here.
+
+   :requirement: Optional
+   :type: :ref:`Python expression <reference/view_architectures/python_expression>`
+   :default: `False`
+
+.. attribute:: options
+   :noindex:
+
+   Python expression encoding an object of options for the field. In particular,
+   the option `icon`, allowing to specify, as classnames, which icon to display
+   in front of the field in the popover (for instance, `fa fa-users`). If no
+   icon is given, the option `string` can be set, and its value is then used as
+   label, displayed in front of the field.
+
+   :requirement: Optional
+   :type: :ref:`Python expression <reference/view_architectures/python_expression>`
+   :default: `{}`
+
+Specifying a ``<field>`` in a calendar arch also allows to customize the filter
+side panel, by setting the `filters` attribute. Extra attributes are then
+available for that matter:
+
+.. attribute:: filters
+   :noindex:
+
+   If set to true, the field can be used as filter, from the side panel of the
+   calendar.
+
+   :requirement: Optional
+   :type: bool
+   :default: `False`
+
+.. attribute:: avatar_field
+   :noindex:
+
+   Only for relational fields. Specify the name of the field on the co-model to
+   use to display as avatar in front of field values in the side panel filters.
+
+   :requirement: Optional
+   :type: str
+
+.. attribute:: color
+   :noindex:
+
+   Specify which field to use to colorize the checkbox in the side panel filters.
+   By default, the color attribute of the calendar view is used to match events
+   with values in the filters.
+
+   :requirement: Optional
+   :type: str
+
+.. attribute:: write_model
+   :noindex:
+
+   Allows to create new filter values on the fly. The given model is then used
+   as model for those filters.  To combine with `write_field`.
+
+   :requirement: Optional
+   :type: str
+
+.. attribute:: write_field
+   :noindex:
+
+   Combined with `write_model`, specifies the field name, in the given model,
+   to use to encode the filter value.
+
+   :requirement: Optional
+   :type: str
+
+.. attribute:: filter_field
+   :noindex:
+
+   Combined with `write_model`, specifies the field name, in the given model,
+   to use to encode the status of the filter (whether it is checked or not).
+
+   :requirement: Optional
+   :type: str
 
 .. _reference/view_architectures/activity:
 
