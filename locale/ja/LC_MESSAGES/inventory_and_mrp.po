@@ -6,8 +6,8 @@
 # Translators:
 # Noma Yuki, 2024
 # Tiffany Chang, 2024
-# Junko Augias, 2025
 # Wil Odoo, 2025
+# Junko Augias, 2025
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-01-28 12:25+0000\n"
 "PO-Revision-Date: 2024-10-08 06:34+0000\n"
-"Last-Translator: Wil Odoo, 2025\n"
+"Last-Translator: Junko Augias, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/odoo/teams/41243/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -5211,7 +5211,7 @@ msgid ""
 " Serial Number`, :guilabel:`By Lots`, or :guilabel:`By Quantity`."
 msgstr ""
 ":guilabel:`在庫追跡` にチェックを入れると、ドロップダウンメニューが表示され、在庫を追跡する方法として次の3つのうちいずれかを選択できます:"
-" :guilabel:`シリアル番号`、:guilabel:`ロット` または:guilabel:`数量`"
+" :guilabel:`固有のシリアル番号`、:guilabel:`ロット` または:guilabel:`数量`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst-1
 msgid "Configure a tracked good."
@@ -5582,18 +5582,20 @@ msgid ""
 " Zone` decreases the recorded quantity at `WH/Stock` and increases it at "
 "`WH/Packing Zone`."
 msgstr ""
+"**在庫** アプリで追跡対象のプロダクトの転送を作成すると、転送により各ロケーションの手持数量が変更されます。例えば、内部ロケーション `WH/在庫`"
+" から `WH/梱包ゾーン` に5ユニットを転送すると、`WH/在庫` の記録数量が減少し、`WH/梱包ゾーン` の数量が増加します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:297
 msgid ""
 "For untracked products, transfers can be created, but exact quantities at "
 "each storage location are not tracked."
-msgstr ""
+msgstr "追跡されていないプロダクトについては、転送を作成することはできますが、各保管場所の正確な数量は追跡されません。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:305
 msgid ""
 "Both tracked and untracked (non-inventory), products can be placed in "
 ":doc:`packages <package>`."
-msgstr ""
+msgstr "追跡対象および追跡対象外(非在庫)のプロダクトは、:doc:`梱包 <package>` に入れることができます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:307
 msgid ""
@@ -5602,6 +5604,8 @@ msgid ""
 "accessed by going to :menuselection:`Inventory app --> Products --> "
 "Packages`, and selecting the desired package)."
 msgstr ""
+"ただし、在庫製品以外の場合は数量が追跡されず、そのプロダクトはパッケージの :guilabel:`内容` (:menuselection:`在庫アプリ "
+"--> プロダクト --> 梱包` にアクセスし、希望のパッケージを選択することで表示可能) にも記載されません。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:314
 msgid "Show Packages page, containing the package contents list."
@@ -5611,7 +5615,7 @@ msgstr "梱包内容リストを含む梱包ページを表示します。"
 msgid ""
 "An untracked product was placed in the package, but the **Content** section "
 "does not list it."
-msgstr ""
+msgstr "未追跡のプロダクトが梱包内に置かれましたが、**内容** セクションには記載されません。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:316
 msgid ""
@@ -5622,20 +5626,26 @@ msgid ""
 "select any operation, and tick the :guilabel:`Move Entire Packages` "
 "checkbox."
 msgstr ""
+"さらに、*梱包全体を移動* "
+"機能が有効になっている場合、梱包を移動すると、その梱包に含まれる追跡対象のプロダクトの場所は更新されますが、含まれている未追跡のプロダクトの場所は更新されません。この機能を有効にするには、:menuselection:`在庫アプリ"
+" --> 設定 --> オペレーションタイプ` に移動し、任意のオペレーションを選択して、:guilabel:`梱包全体を移動` "
+"チェックボックスをオンにします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:324
 msgid "Inventory reports"
-msgstr ""
+msgstr "在庫レポート"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:326
 msgid "**Only** tracked products appear on the following reports."
-msgstr ""
+msgstr "追跡されたプロダクト **のみ** が、以下のレポートに表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:329
 msgid ""
 "These reports are only available to users with :doc:`administrator access "
 "<../../../../general/users/access_rights>`."
 msgstr ""
+"これらのレポートは、:doc:`管理者アクセス権限 <../../../../general/users/access_rights>` "
+"を持つユーザのみが利用できます。 "
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:332
 msgid ""
@@ -5644,6 +5654,9 @@ msgid ""
 "outgoing tracked inventory. To access the report, go to "
 ":menuselection:`Inventory app --> Reporting --> Stock`."
 msgstr ""
+":doc:`在庫レポート <../../warehouses_storage/reporting/stock>`: "
+"このレポートは、全ての手持在庫、未引当在庫、入庫、出庫の追跡在庫の包括的なリストを提供します。レポートにアクセスするには "
+":menuselection:`在庫アプリ --> レポーティング --> 在庫` に移動して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:335
 msgid ""
@@ -5654,6 +5667,10 @@ msgid ""
 " Configuration --> Settings`). To access it, go to :menuselection:`Inventory"
 " app --> Reporting --> Locations`."
 msgstr ""
+":doc:`ロケーションレポート  <../../warehouses_storage/reporting/locations>`: "
+"このレポートでは、追跡されたプロダクトが各ロケーション(内部、外部、またはバーチャル)でどのように保管されているかが示されます。このレポートは、*保管ロケーション*"
+" 機能が有効化 (:menuselection:`在庫アプリ --> 設定 --> 管理設定`) "
+"されている場合のみ利用できます。:menuselection:`在庫アプリ --> レポーティング --> ロケーション` からアクセスして下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:340
 msgid ""
@@ -5665,18 +5682,24 @@ msgid ""
 "button on a product form to filter the report on that product's specific "
 "moves history."
 msgstr ""
+":doc:`移動履歴レポート <../../warehouses_storage/reporting/moves_history>`: "
+"このレポートは、このプロダクトの在庫の入出庫をいつどこで記録したかをまとめたものです。:menuselection:`在庫アプリ --> レポート "
+"--> 移動履歴` からアクセスできます。または、プロダクトフォーム上の :icon:`fa-exchange` :guilabel:`入庫/出庫` "
+"スマートボタンをクリックして、そのプロダクトの特定の移動履歴に関するレポートをフィルタリングします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:345
 msgid ""
 ":guilabel:`Moves Analysis`: This report provides a pivot table view of "
 "inventory transfers by operation type."
-msgstr ""
+msgstr ":guilabel:`移動分析`: このレポートは、オペレーションタイプ別の在庫転送のピボットテーブルを表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:347
 msgid ""
 ":ref:`Stock Valuation report <inventory/management/reporting/valuation-"
 "report>`: A detailed record of the monetary value of all tracked inventory."
 msgstr ""
+":ref:`在庫評価レポート <inventory/management/reporting/valuation-report>`: "
+"追跡されている在庫の全てについて、金銭的価値の詳細な記録。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/uom.rst:3
 msgid "Units of measure"
@@ -7091,6 +7114,10 @@ msgid ""
 "<using_inventory_valuation>` or :doc:`automatic "
 "<inventory_valuation_config>`."
 msgstr ""
+"仕入先請求書に仕入諸掛を適用するには、元の購買オーダのプロダクトは、*原価計算方法* が移動平均原価 |AVCO| または先入先出 |FIFO| "
+"のいずれかである *プロダクトカテゴリ* に属している必要があります。また、評価方法は、:doc:`手動 "
+"<using_inventory_valuation>` または:doc:`自動 <inventory_valuation_config>` "
+"にすることができます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:77
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:54
@@ -7706,8 +7733,8 @@ msgid ""
 "Unique Serial Number` from the resulting drop-down menu."
 msgstr ""
 "次に、ロットまたはシリアル番号で追跡するプロダクトを有効化するには、:guilabel:`在庫追跡` "
-"チェックボックスにチェックを入れます。次に、表示される隣接するフィールドをクリックし、ドロップダウンメニューから :guilabel:`ロット別` "
-"または :guilabel:`シリアル番号` を選択します。"
+"チェックボックスにチェックを入れます。次に、表示される隣接するフィールドをクリックし、ドロップダウンメニューから :guilabel:`ロット` または"
+" :guilabel:`固有のシリアル番号` を選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/valuation_by_lots.rst:41
 msgid ""
@@ -7879,6 +7906,8 @@ msgid ""
 ":guilabel:`Counted Quantity`, and click :icon:`fa-floppy-o` "
 ":guilabel:`Apply`."
 msgstr ""
+"表示される新しい在庫調整明細で、:guilabel:`プロダクト`を設定し、:guilabel:`ロット/シリアル番号`を作成し、:guilabel:`棚卸数量`"
+" を設定し、:icon:`fa-floppy-o` :guilabel:`適用` をクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/valuation_by_lots.rst:121
 msgid ""
@@ -7886,32 +7915,34 @@ msgid ""
 "Reporting --> Valuation`. The :guilabel:`Total Value` per unit matches the "
 "*Cost* on the product form."
 msgstr ""
+"評価レイヤーを表示するには、:menuselection:`在庫アプリ --> レポート --> 評価` に移動します。 単位当たりの "
+":guilabel:`合計金額` は、プロダクトフォームの *原価* と一致します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/valuation_by_lots.rst:125
 msgid ""
 "Continuing the example in the table above, when the product cost is `$15`, "
 "the valuation for a newly-created `LOT3` is also be `$15`."
-msgstr ""
+msgstr "上記の表の例を続けると、プロダクトの原価が` $15` の場合、新しく作成された` LOT3` の評価額も `$15` となります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/valuation_by_lots.rst:0
 msgid "Show inventory adjustment valuation."
-msgstr ""
+msgstr "在庫調整評価を表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/valuation_by_lots.rst:134
 msgid "Existing lot/serial number"
-msgstr ""
+msgstr "既存のロット/シリアル番号"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/valuation_by_lots.rst:136
 msgid ""
 "When adjusting the quantity of an existing lot/serial number, the value is "
 "based on the most recent valuation layer for that specific lot/serial "
 "number."
-msgstr ""
+msgstr "既存のロット/シリアル番号の数量を調整する場合、その値は、その特定のロット/シリアル番号の最新の評価レイヤーに基づきます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/valuation_by_lots.rst:140
 msgid ""
 "Continuing the example in the table above, the value for `LOT 1` is `$10`."
-msgstr ""
+msgstr "上記の表の例を続けると、`ロット1` の値は `$10` です。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/valuation_by_lots.rst:142
 msgid ""
@@ -7919,20 +7950,21 @@ msgid ""
 "quantity is also valued at `$10`, reflecting the latest valuation layer for "
 "`LOT 1`."
 msgstr ""
+"そのため、数量が `1.00` から `2.00`に更新されると、追加の数量も `$10` と評価され、`ロット1` の最新の評価層が反映されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/valuation_by_lots.rst:0
 msgid "Show valuation of LOT 1 getting updated."
-msgstr ""
+msgstr "ロット1の評価額が更新されています。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/valuation_by_lots.rst:148
 msgid ""
 "The inventory adjustment (top line) is valued the same as LOT 1 (bottom "
 "line)."
-msgstr ""
+msgstr "在庫調整(上段)はロット1(下段)と同じ価値です。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/valuation_by_lots.rst:153
 msgid "View valuation"
-msgstr ""
+msgstr "評価を見る"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/valuation_by_lots.rst:155
 msgid ""
@@ -7940,6 +7972,8 @@ msgid ""
 ":menuselection:`Inventory app --> Products --> Lots/Serial Numbers`, and "
 "select the desired record."
 msgstr ""
+"特定のロット/シリアル番号の平均原価を調べるには、:menuselection:`在庫アプリ --> プロダクト --> ロット/シリアル番号` "
+"に移動し、希望のレコードを選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/valuation_by_lots.rst:158
 msgid ""
@@ -7947,22 +7981,25 @@ msgid ""
 "average cost. The :guilabel:`Total Value` reflects the total on-hand value "
 "for that lot/serial number."
 msgstr ""
+":guilabel:`原価` と:guilabel:`平均原価` "
+"のフィールドは、いずれも単位あたりの平均原価を示します。:guilabel:`合計金額` は、ロット/シリアル番号ごとの手持在庫の合計金額を示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/valuation_by_lots.rst:162
 msgid ""
 "Ensure the costing method is set to *First In First Out (FIFO)* or *Average "
 "Cost (AVCO)* to display the cost on this page."
 msgstr ""
+"このページに原価を表示するには、原価計算法が *先入先出法(FIFO)* または *平均原価法(AVCO)* に設定されていることを確認して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/valuation_by_lots.rst:168
 msgid "Show cost of the lot/serial number."
-msgstr ""
+msgstr "ロット/シリアル番号の原価を表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/valuation_by_lots.rst:168
 msgid ""
 "Lot form, displaying **Cost** field. The **Valuation** smart button is in "
 "the top-right."
-msgstr ""
+msgstr "ロットフォーム、**原価** フィールドを表示。**評価** スマートボタンは右上にあります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/valuation_by_lots.rst:170
 msgid ""
@@ -7972,16 +8009,20 @@ msgid ""
 "These detailed, line-by-line records can help determine how each inventory "
 "move of the specific lot/serial number affects its valuation."
 msgstr ""
+"ロット番号/シリアル番号の評価明細は、:ref:`評価レポート <inventory/product_management/valuation-"
+"report>` から、またはロット番号/シリアル番号の :guilabel:`評価` "
+"スマートボタンをクリックして表示できます。これらの詳細な明細記録は、特定のロット番号/シリアル番号の各在庫移動が評価にどのように影響するかを判断するのに役立ちます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/valuation_by_lots.rst:178
 msgid "Valuation report"
-msgstr ""
+msgstr "評価レポート"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/valuation_by_lots.rst:180
 msgid ""
 "Display the valuation of lots and serial numbers in the database by going to"
 " :menuselection:`Inventory app --> Reporting --> Valuation`."
 msgstr ""
+"データベース内のロットとシリアル番号の評価を表示するには、:menuselection:`在庫アプリ --> レポート --> 評価` に移動します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/valuation_by_lots.rst:183
 msgid ""
@@ -7989,6 +8030,8 @@ msgid ""
 "and in the :icon:`oi-group` :guilabel:`Group By` section of the resulting "
 "drop-down menu, select :guilabel:`Lot/Serial number`."
 msgstr ""
+"表示された :guilabel:`在庫評価` レポートで検索バーをクリックし、表示されたドロップダウンメニューの :icon:`oi-group` "
+":guilabel:`グループ化` セクションで :guilabel:`ロット/シリアル番号` を選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/valuation_by_lots.rst:188
 msgid ""
@@ -7996,6 +8039,9 @@ msgid ""
 "collapsed lot number line to :ref:`manually modify the cost "
 "<inventory/product_management/update-unit-price>`."
 msgstr ""
+"明細が折りたたまれているロット番号行の右側にある :icon:`fa-plus` :guilabel:`(プラス)` "
+"アイコンをクリックして、:ref:`原価を手動で調整 <inventory/product_management/update-unit-price>`"
+" します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/valuation_by_lots.rst:191
 msgid ""
@@ -8003,14 +8049,15 @@ msgid ""
 "bill includes multiple lots/serial numbers, as initial prices are identical "
 "upon reception."
 msgstr ""
+"これは、購買オーダや仕入先請求書に複数のロット/シリアル番号が含まれる場合に、個々のロット価格を調整するのに便利です。入荷時の初期価格は同一です。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/valuation_by_lots.rst-1
 msgid "Show valuation report, by lots."
-msgstr ""
+msgstr "ロットごとに評価レポートを表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/valuation_by_lots.rst:198
 msgid "Valuation smart button"
-msgstr ""
+msgstr "評価スマートボタン"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/valuation_by_lots.rst:200
 msgid ""
@@ -8018,20 +8065,22 @@ msgid ""
 " or serial number, go to :menuselection:`Inventory app --> Products --> "
 "Lots/Serial Numbers`, and select the desired item."
 msgstr ""
+"特定のロットまたはシリアル番号に関連する *在庫評価* レポートの特定部分にアクセスするには、、:menuselection:`在庫アプリ --> "
+"プロダクト --> ロット/シリアル番号` に移動し、必要な項目を選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/valuation_by_lots.rst:203
 msgid ""
 "On the :guilabel:`Lot/Serial Numbers` page, click the :guilabel:`Valuation` "
 "smart button."
-msgstr ""
+msgstr ":guilabel:`ロット/シリアル番号` ページで、:guilabel:`評価` スマートボタンをクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/valuation_by_lots.rst:208
 msgid "All stock moves relating to `LOT 1`."
-msgstr ""
+msgstr " `ロット1` に関連する全ての在庫移動。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/valuation_by_lots.rst:208
 msgid "All stock moves that affect the valuation of `LOT 1`."
-msgstr ""
+msgstr " `ロット1` の評価に影響する全ての在庫移動。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking.rst:6
 msgid "Product tracking"
@@ -8338,7 +8387,7 @@ msgid ""
 ":guilabel:`By Unique Serial Number` or :guilabel:`By Lots` is checked."
 msgstr ""
 "次に :guilabel:`在庫` タブをクリックし、 :guilabel:`トレーサビリティ` セクションまでスクロールダウンします。ここから、 "
-":guilabel:`シリアル番号` または :guilabel:`ロット` のいずれかにチェックが入っていることを確認します。"
+":guilabel:`固有のシリアル番号` または :guilabel:`ロット` のいずれかにチェックが入っていることを確認します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:61
 msgid ""
@@ -8437,8 +8486,8 @@ msgid ""
 ":menuselection:`Purchase` app and click :guilabel:`Create` to create a new "
 "request for quotation (RFQ)."
 msgstr ""
-"**入荷** 商品の有効期限は購買オーダから直接作成することができます。購買オーダを作成するには、 :menuselection:`購買` "
-"アプリに行き、 :guilabel:作成` をクリックして新しい見積依頼書(RFQ)を作成します。"
+"**入荷** 品の有効期限は購買オーダから直接作成することができます。購買オーダを作成するには、 :menuselection:`購買` アプリに行き、"
+" :guilabel:作成` をクリックして新しい見積依頼書(RFQ)を作成します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:107
 msgid ""
@@ -8900,8 +8949,8 @@ msgid ""
 "delivery>`, select products with specific lot numbers on the delivery order "
 "form."
 msgstr ""
-"入荷フォームで :ref:`入荷商品 <inventory/product_management/assign-lots>` "
-"に新しいロット番号を割当てます。:ref:`出荷商品 <inventory/product_management/assign-lots-"
+"入荷フォームで :ref:`入荷品 <inventory/product_management/assign-lots>` "
+"に新しいロット番号を割当てます。:ref:`出荷品 <inventory/product_management/assign-lots-"
 "delivery>` を出荷する場合は、配送オーダフォームで特定のロット番号のプロダクトを選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:75
@@ -8912,7 +8961,7 @@ msgstr "入荷時"
 msgid ""
 "Assigning new or existing lot numbers to incoming goods can be done directly"
 " on receipts."
-msgstr "入荷商品への新規または既存のロット番号の割当ては、直接、入荷時に行うことができます。"
+msgstr "入荷品への新規または既存のロット番号の割当ては、入荷時に直接行うことができます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:79
 msgid ""
@@ -8921,7 +8970,7 @@ msgid ""
 "by lot numbers. Then, click the :guilabel:`Receipt` smart button that "
 "appears at the top of the page to navigate to the warehouse receipt form."
 msgstr ""
-"まず、 :menuselection:`購買` アプリにアクセスして、ロット番号で追跡されるプロダクトの |PO|を `作成し確認 "
+":menuselection:`購買` アプリにアクセスして、ロット番号で追跡されるプロダクトの |PO|を `作成し確認 "
 "<https://www.youtube.com/watch?v=o_uI718P1Dc>`_ します。次に、ページ上部に表示される "
 ":guilabel:`入荷` スマートボタンをクリックし、倉庫の入荷フォームに移動します。"
 
@@ -9423,7 +9472,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:343
 msgid "Display lots on delivery slips"
-msgstr ""
+msgstr "配送伝票にロット番号を表示する"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:345
 msgid ""
@@ -9432,6 +9481,7 @@ msgid ""
 "customers in cases where lot numbers are needed, such as filing an RMA or "
 "repair request, or registering the product."
 msgstr ""
+"ロット番号で追跡されたプロダクトを販売する際には、顧客に送付する配送伝票にロット番号を記載することができます。これは、RMA(返品商品認証)や修理依頼、または製品登録など、ロット番号が必要な場合に顧客にとって役立つ場合があります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:349
 msgid ""
@@ -9441,6 +9491,9 @@ msgid ""
 ":guilabel:`Traceability` section, tick the :guilabel:`Display Lots & Serial "
 "Numbers on Delivery Slips` checkbox, and click :guilabel:`Save`."
 msgstr ""
+"配送伝票にロット番号を含めるには、:menuselection:`在庫` アプリを開き、:menuselection:`設定 --> 管理設定` "
+"に移動します。 :guilabel:`トレーサビリティ` セクションまでスクロールダウンし、:guilabel:`ロット/シリアル番号を配送伝票に表示`"
+" チェックボックスにチェックを入れ、:guilabel:`保存` をクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:354
 msgid ""
@@ -9448,6 +9501,8 @@ msgid ""
 "Slips` setting, lot numbers are listed on delivery slips for products "
 "tracked by lots, once the delivery order is validated."
 msgstr ""
+":guilabel:`配送伝票にロット/シリアル番号を表示` "
+"設定を有効にすると、配送オーダが検証済の場合、ロットで追跡されるプロダクトの配送伝票にロット番号が記載されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:357
 msgid ""
@@ -9455,6 +9510,8 @@ msgid ""
 ":menuselection:`Inventory` app, click on :guilabel:`Delivery Orders`, and "
 "select an order containing a product tracked using lots."
 msgstr ""
+"配送オーダおよび配送伝票のロット番号を表示するには、:menuselection:`在庫` アプリに移動し、:guilabel:`配送オーダ` "
+"をクリックし、ロットで追跡されているプロダクトを含むオーダを選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:361
 msgid ""
@@ -9465,13 +9522,17 @@ msgid ""
 ":guilabel:`Serial Numbers` column to appear. The lot number(s) for each "
 "product included in the order are displayed in this column."
 msgstr ""
+"オーダに含まれるプロダクトのロット番号を表示するには、:guilabel:`オペレーション` タブが選択されていることを確認し、タブの右側にある "
+":icon:`oi-settings-adjust` :guilabel:`(調整)` ボタンをクリックします。:guilabel:`シリアル番号` "
+"チェックボックスにチェックマークが付いていることを確認してください。これにより、 :guilabel:`シリアル番号` "
+"列が表示されます。オーダに含まれる各プロダクトのロット番号がこの列に表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:367
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:326
 msgid ""
 "When the order is ready to be processed, click :guilabel:`Validate` to "
 "confirm the delivery and add product information to the delivery slip."
-msgstr ""
+msgstr "オーダが処理可能な状態になったら、:guilabel:`検証` をクリックして配送を確認し、配送伝票にプロダクト情報を追加します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:370
 msgid ""
@@ -9481,13 +9542,16 @@ msgid ""
 "the device's browser or file manager. Lot numbers are listed next to their "
 "respective products in the :guilabel:`Lot/Serial Number` column."
 msgstr ""
+"オーダフォームの上部にある :icon:`fa-cog` :guilabel:`(アクション)` ボタンをクリックし、:guilabel:`印刷 -->"
+" 配送伝票` を選択すると、配送伝票がダウンロードされます。 デバイスのブラウザまたはファイルマネジャーを使用して配送伝票を開きます。 "
+"ロット番号は、:guilabel:`ロット/シリアル番号` 列のそれぞれのプロダクトの隣にリスト表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst-1
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst-1
 msgid ""
 "The order lines section of a delivery slip, showing a product and its serial"
 " number."
-msgstr ""
+msgstr "プロダクトとシリアル番号が表示されている、配送伝票のオーダ明細セクション。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:381
 msgid ""
@@ -9645,8 +9709,8 @@ msgid ""
 "Serial Number`."
 msgstr ""
 "プロダクトフォーム (:menuselection:`在庫アプリ --> プロダクト --> プロダクト`) に戻り、:guilabel:`在庫` "
-"タブに切り替えます。:guilabel:`トレーサビリティ` セクションで、 :guilabel:`トラッキング`オプションを "
-":guilabel:`トラッキングなし` から :guilabel:`ロット` または :guilabel:`シリアル番号` に変更します。"
+"タブに切り替えます。:guilabel:`トレーサビリティ` セクションで、 :guilabel:`追跡` オプションを "
+":guilabel:`追跡なし` から :guilabel:`ロット` または :guilabel:`固有のシリアル番号` に変更します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst-1
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst-1
@@ -9730,6 +9794,8 @@ msgid ""
 "numbers, letters, other typographical characters, or any mix of these "
 "character types."
 msgstr ""
+"*シリアル番号* は、Odooでプロダクトを識別し追跡する2つの方法のうちの1つです。他の1つは :doc:`ロット <lots>`  "
+"です。シリアル番号は、シリーズ内の他のプロダクトと区別するためにプロダクトに割当てられる一意の識別子です。シリアル番号は、いくつかの文字タイプで構成されます。数字、文字、その他のタイポグラフィ文字、またはこれらの文字タイプの任意の組み合わせを含めることができます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:10
 msgid ""
@@ -9739,6 +9805,8 @@ msgid ""
 "manufacturers locate products to provide after-sales services or in the "
 "event of a recall."
 msgstr ""
+"シリアル番号を割当てる目的は、個々のプロダクトとその :doc:`使用期限 "
+"<expiration_dates>`、およびサプライチェーン全体における所在地を追跡するためです。例えば、シリアル番号は、メーカーが販売後のサービスやリコールの際、プロダクトを特定するのに役立ちます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:16
 msgid ""
@@ -9754,10 +9822,14 @@ msgid ""
 "number usage by operation type <inventory/product_management/operation-type-"
 "setting>`."
 msgstr ""
+"シリアル番号を使用してプロダクトを追跡するには、次の2つの設定を有効にして下さい。:ref:`ロット/シリアル番号のトレーサビリティ設定 "
+"<inventory/product_management/traceability-setting>`、および "
+":ref:`オペレーションタイプ別のシリアル番号の使用 <inventory/product_management/operation-type-"
+"setting>`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:30
 msgid "Traceability setting"
-msgstr ""
+msgstr "トレーサビリティ設定"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:32
 msgid ""
@@ -9767,14 +9839,18 @@ msgid ""
 "section, and tick the :guilabel:`Lots & Serial Numbers` checkbox. Remember "
 "to click the :guilabel:`Save` button to save changes."
 msgstr ""
+"プロダクトを追跡するには、まずロット番号とシリアル番号のトレーサビリティ機能を有効にする必要があります。 "
+"これを行うには、:menuselection:`在庫アプリ --> 設定 --> 設定`に移動し、:guilabel:`トレーサビリティ` "
+"セクションまでスクロールダウンし、:guilabel:`ロット/シリアル番号` チェックボックスにチェックを入れます。 :guilabel:`保存` "
+"ボタンをクリックして変更を保存して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst-1
 msgid "Enabled Lots & Serial Numbers setting."
-msgstr ""
+msgstr "ロット/シリアル番号の設定が有効になりました。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:44
 msgid "By operation type"
-msgstr ""
+msgstr "オペレーションタイプ別"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:46
 msgid ""
@@ -9783,6 +9859,8 @@ msgid ""
 " or receiving goods). In other words, this setting allows for serial number "
 "tracking on warehouse receipts and delivery orders."
 msgstr ""
+"次に、特定のオペレーションタイプ(商品の出荷や入荷など) "
+"に対して、新規作成または既存のシリアル番号を使用する機能を有効にするかどうかを指定します。この設定により、倉庫入荷伝票や配送オーダでのシリアル番号の追跡が可能になります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:51
 msgid ""
@@ -9791,12 +9869,16 @@ msgid ""
 " disabled to prevent workers from accidentally assigning serial numbers that"
 " do not exist in inventory."
 msgstr ""
+"入荷に対して *新規作成* "
+"オプションを有効にすると、入荷品に対して新しいシリアル番号を割当てることができます。しかし、配送オーダに対しては、在庫に存在しないシリアル番号を誤って割当てないよう、このオプションを無効にすることが多いでしょう。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:55
 msgid ""
 "To enable the creation of new serial numbers on an operation, navigate to "
 ":menuselection:`Inventory app --> Configuration --> Operations Types`."
 msgstr ""
+"オペレーションで新しいシリアル番号を作成できるようにするには、:menuselection:`在庫アプリ --> 設定 --> オペレーションタイプ` "
+"に移動します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:58
 msgid ""
@@ -9816,7 +9898,7 @@ msgstr "入荷時のオペレーションタイプで \"新規作成\" オプシ
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:69
 msgid "Configure serial number tracking on individual products"
-msgstr ""
+msgstr "個々のプロダクトでシリアル番号の追跡を設定します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:71
 msgid ""
@@ -9826,6 +9908,9 @@ msgid ""
 "product, go to :menuselection:`Inventory app --> Products --> Products`, and"
 " select the desired product."
 msgstr ""
+":ref:`ロット/シリアル番号の設定 <inventory/product_management/traceability-setting>` "
+"が有効化されると、シリアル番号を使用して個々のプロダクトを追跡できるようになります。 "
+"プロダクトを追跡するには、:menuselection:`在庫アプリ --> プロダクト --> プロダクト` に移動し、目的のプロダクトを選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:75
 msgid ""
@@ -9835,6 +9920,10 @@ msgid ""
 "changes. Now, existing or new serial numbers can now be selected and "
 "assigned to newly-received or manufactured batches of this product."
 msgstr ""
+"プロダクトフォームの :guilabel:`一般情報` タブで、:guilabel:`在庫追跡` "
+"の隣にあるボックスにチェックマークが入っていることを確認します。次に、:guilabel:`固有のシリアル番号` を選択し、:guilabel:`保存`"
+" "
+"をクリックして変更を保存します。これで、既存または新規のシリアル番号を選択し、このプロダクトの新規入荷バッチまたは製造バッチに割当てることができるようになりました。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst-1
 msgid "Enabled serial number tracking on product form."
@@ -9846,25 +9935,28 @@ msgstr "シリアル番号を割当てる"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:88
 msgid "In Odoo, serial numbers can be assigned at several times and places:"
-msgstr ""
+msgstr "Odooでは、シリアル番号は複数のタイミングと場所で割当てることができます:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:90
 msgid ""
 "When a product is :ref:`already in stock "
 "<inventory/product_management/already-in-stock>`"
 msgstr ""
+"プロダクトが :ref:`すでに在庫にある時 <inventory/product_management/already-in-stock>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:91
 msgid ""
 "Via the :ref:`Moves smart button <inventory/product_management/moves-"
 "button>` on a receipt"
 msgstr ""
+"入荷時に :ref:`移動スマートボタン <inventory/product_management/moves-button>` から行う"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:92
 msgid ""
 "Via the :ref:`Open: Stock move window <inventory/product_management/stock-"
 "move>` on a receipt"
 msgstr ""
+"入荷時に :ref:`開く: 在庫移動ウィンドウ <inventory/product_management/stock-move>` から行う"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:93
 msgid ""
@@ -9872,12 +9964,16 @@ msgid ""
 "<../../../manufacturing/basic_setup/configure_manufacturing_product>` for a "
 "product tracked by lots/serial numbers"
 msgstr ""
+"ロット番/シリアル番号で追跡される :doc:`プロダクトの製造オーダ中 "
+"<../../../manufacturing/basic_setup/configure_manufacturing_product>` "
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:96
 msgid ""
 "When :doc:`making an inventory adjustment "
 "<../../warehouses_storage/inventory_management/count_products>`"
 msgstr ""
+":doc:`在庫調整を行う<../../warehouses_storage/inventory_management/count_products>`"
+" 時"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:102
 msgid "Create new serial numbers for products already in stock"
@@ -9891,6 +9987,10 @@ msgid ""
 "reveals a blank lot/serial number form. On this form, a new "
 ":guilabel:`Lot/Serial Number` is generated automatically."
 msgstr ""
+"シリアル番号が割当てられていない在庫プロダクトに対して、新しいシリアル番号を作成することができます。 "
+"これを行うには、:menuselection:`在庫 --> プロダクト --> ロット/シリアル番号` に移動し、:guilabel:`新規作成` "
+"をクリックします。 そうすると、空のロット/シリアル番号フォームが表示されます。 このフォーム上で、新しい :guilabel:`ロット/シリアル番号`"
+" が自動的に生成されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:110
 msgid ""
@@ -9920,6 +10020,10 @@ msgid ""
 "detailed description of this specific lot/serial number can also be added in"
 " the :guilabel:`Description` tab below."
 msgstr ""
+"このフォームでは、:guilabel:`手持数量` の調整、固有の :guilabel:`内部参照`  "
+"番号の割当て(追加トレーサビリティ用)、:guilabel:`会社` "
+"フィールドでこの特定のロット/シリアル番号設定を特定の会社に割当てるオプションもあります。この特定のロット/シリアル番号の詳細説明は、下の "
+":guilabel:`説明` タブにも追加できます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:125
 msgid ""
@@ -9927,6 +10031,8 @@ msgid ""
 " to input an additional unique number to allow for easier tracking. For "
 "instance, SKU values may be used here."
 msgstr ""
+":guilabel:`内部参照` "
+"番号フィールドには、メーカーが追跡を容易にするために追加の固有の番号を入力することができます。例えば、SKU値をここに記入する場合があります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:129
 msgid ""
@@ -9945,6 +10051,8 @@ msgid ""
 ":menuselection:`Inventory app --> Products --> Products`, and selecting the "
 "product that this newly-created serial number was just assigned to."
 msgstr ""
+"新しいシリアル番号を作成して、希望のプロダクトに割当て保存したら、:menuselection:`在庫アプリ --> プロダクト --> プロダクト` "
+"に移動し、この新しく作成されたシリアル番号を割当てたプロダクトを選択して、プロダクトフォームに戻ります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:138
 msgid ""
@@ -9955,7 +10063,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:144
 msgid "Create serial numbers for incoming or outgoing products"
-msgstr ""
+msgstr "入荷または出荷するプロダクトのシリアル番号を作成する"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:146
 msgid ""
@@ -9963,6 +10071,7 @@ msgid ""
 "receipt and delivery order forms mirror one another; the instructions below "
 "can be followed to assign serial numbers in either form."
 msgstr ""
+"シリアル番号は、入荷品と出荷品の両方に割り当てることができます。入荷オーダフォームと出荷オーダフォームは、互いに対応関係にあります。以下の手順に従って、いずれかのフォームにシリアル番号を割当てることができます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:150
 msgid ""
@@ -9970,6 +10079,8 @@ msgid ""
 "Receipts can be accessed by navigating to :menuselection:`Inventory app --> "
 "Operations --> Receipts`."
 msgstr ""
+"**入荷品:** **入荷** 時にシリアル番号を直接割当てます。入荷は、:menuselection:`在庫アプリ --> オペレーション --> "
+"入荷` からアクセスできます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:152
 msgid ""
@@ -9977,6 +10088,8 @@ msgid ""
 "order**. Receipts can be accessed by navigating to :menuselection:`Inventory"
 " app --> Operations --> Deliveries`."
 msgstr ""
+"**出荷品:** **配送オーダ** にシリアル番号を直接割当てます。入荷は、:menuselection:`在庫アプリ --> オペレーション -->"
+" 配送` にアクセスして確認できます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:156
 msgid ""
@@ -9984,20 +10097,23 @@ msgid ""
 " the ability to :ref:`create new serial numbers by operations type "
 "<inventory/product_management/operation-type-setting>` is enabled."
 msgstr ""
+"入荷オーダや配送オーダにシリアル番号を割当てる前に、 :ref:`オペレーションタイプごとに新規シリアル番号を作成 "
+"<inventory/product_management/operation-type-setting>` "
+"機能が有効になっていることを確認してください。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:161
 msgid "Lots/serial number field"
-msgstr ""
+msgstr "ロット/シリアル番号フィールド"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:163
 msgid ""
 "Serial numbers can be entered directly into the :guilabel:`Serial Numbers` "
 "field on a receipt or delivery order."
-msgstr ""
+msgstr "シリアル番号は、入荷または配送オーダの :guilabel:`シリアル番号` フィールドに直接入力できます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst-1
 msgid "Select value for Serial Number field on receipt."
-msgstr ""
+msgstr "入荷時にシリアル番号欄の値を選択して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:170
 msgid ""
@@ -10006,14 +10122,17 @@ msgid ""
 "Settings)` icon, and in the drop-down menu, tick the :guilabel:`Serial "
 "Numbers` checkbox."
 msgstr ""
+"入荷または配送オーダに :guilabel:`シリアル番号` フィールドを表示するには、:icon:`oi-settings-adjust` "
+":guilabel:`(調整設定)` アイコンをクリックし、ドロップダウンメニューで :guilabel:`シリアル番号` "
+"チェックボックスにチェックを入れます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:0
 msgid "Allow Serial Numbers field to show on a receipt or delivery order."
-msgstr ""
+msgstr "シリアル番号フィールドを、入荷または配送オーダに表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:177
 msgid "Example **Serial Numbers** field on a delivery order."
-msgstr ""
+msgstr "例: 配送オーダの **シリアル番号** フィールド。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:182
 msgid "Stock move pop-up window"
@@ -10025,6 +10144,8 @@ msgid ""
 "click the :icon:`fa-list` :guilabel:`(list)` icon in the product line of a "
 "receipt."
 msgstr ""
+"シリアル番号を個別または一括で割当てるさまざまな方法については、入荷のプロダクト明細にある :icon:`fa-list` "
+":guilabel:`(list)`アイコンをクリックして下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:188
 msgid "Add a line"
@@ -10036,10 +10157,12 @@ msgid ""
 "numbers in the :guilabel:`Lot/Serial Number` column. This method is best "
 "reserved for adding only one or a few serial numbers."
 msgstr ""
+":guilabel:`開く: 在庫移動` ポップアップウィンドウで、:guilabel:`ロット/シリアル番号` "
+"列にシリアル番号を手動で入力します。この方法は、シリアル番号を1つまたは数個だけ追加する場合に最適です。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst-1
 msgid "Add a line on the stock move pop-up."
-msgstr ""
+msgstr "在庫移動ポップアップで、明細を追加します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:200
 msgid "Generate Serials/Lots"
@@ -10055,13 +10178,13 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst-1
 msgid "Show generate serials pop-up."
-msgstr ""
+msgstr "シリアル番号生成のポップアップを表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:208
 msgid ""
 "Doing so opens a new popup, :guilabel:`Generate Serial numbers`, which "
 "contains a few fields:"
-msgstr ""
+msgstr "新しいポップアップが開き、:guilabel:`シリアル番号を生成する` というフィールドがいくつか表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:210
 msgid ""
@@ -10069,12 +10192,14 @@ msgid ""
 "sequence. From there, Odoo automatically detects what pattern should be "
 "followed to generate more serial numbers."
 msgstr ""
+":guilabel:`最初のシリアル番号`: "
+"シーケンスを開始する最初のシリアル番号を入力します。そこから、Odooが自動的に、さらにシリアル番号を生成するためにどのようなパターンに従うべきかを検出します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:212
 msgid ""
 ":guilabel:`Number of SN`: Specify the desired number of serial numbers to "
 "generate."
-msgstr ""
+msgstr ":guilabel:`シリアル番号の数`: 生成するシリアル番号の希望する数を指定します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:215
 msgid ""
@@ -10084,11 +10209,13 @@ msgid ""
 "Odoo still allows the quantity (based on the serial numbers) to be delivered"
 " or received."
 msgstr ""
+"生成されたシリアル番号の数は、入荷または配送オーダの :guilabel:`数量` フィールドに反映されます。生成されたシリアル番号の数が "
+":guilabel:`需要` の値を超える場合でも、Odoo は(シリアル番号に基づく)数量の配送または入荷を許可します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:0
 msgid ""
 "Show how the quantity of serial numbers alters the delivery order quantity."
-msgstr ""
+msgstr "シリアル番号の数量が配送オーダの数量にどのように影響するかを示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:223
 msgid ""
@@ -14971,7 +15098,7 @@ msgstr "最少梱包"
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:95
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:96
 msgid "Lots & Serial Numbers"
-msgstr "ロット&シリアル番号"
+msgstr "ロット/シリアル番号"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:97
 msgid "Lots & Serial Numbers, Expiration Date"
@@ -15334,7 +15461,7 @@ msgid ""
 "or :guilabel:`By Unique Serial Number`."
 msgstr ""
 "この日数は、プロダクトフォームの :guilabel:`在庫` タブに移動してユーザが設定します。:guilabel:`トレーサビリティ` "
-"セクションで、:guilabel:`追跡` フィールドが :guilabel:`ロット` または :guilabel:`シリアル番号` "
+"セクションで、:guilabel:`追跡` フィールドが :guilabel:`ロット` または :guilabel:`固有のシリアル番号` "
 "に設定されていることを確認して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies/fefo.rst:23
@@ -19937,7 +20064,7 @@ msgstr "プロダクトラベルは :guilabel:`ラベルを印刷` ボタンを�
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/print_on_validation.rst:131
 msgid "Lot/SN Labels"
-msgstr "ロット/SNラベル"
+msgstr "ロット/シリアル番号ラベル"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/print_on_validation.rst:133
 msgid ""
@@ -28494,7 +28621,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:54
 msgid ":guilabel:`Serial Number`: the unique serial number of the equipment"
-msgstr ""
+msgstr ":guilabel:`シリアル番号`: 機器の固有のシリアル番号"
 
 #: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:55
 msgid ""
