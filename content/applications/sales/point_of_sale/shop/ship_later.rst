@@ -33,10 +33,8 @@ Practical application
 
 #. :ref:`Open a session <pos/session-start>` and make a sale.
 #. On the payment screen, set a customer and select :guilabel:`Ship Later`.
-#. On the popup window, set a shipping date and click :guilabel:`Confirm` to proceed to payment.
 
 .. image:: ship_later/payment.png
-   :scale: 75%
    :alt: selecting ship later at checkout.
 
 The system instantly creates a delivery order from the warehouse to the shipping address.
