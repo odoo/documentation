@@ -31,6 +31,9 @@ localization:
    * - :guilabel:`Indian - Accounting Reports`
      - `l10n_in_reports`
      - :ref:`Indian tax reports <india/gstr_reports>`
+   * - :guilabel:`Indian - TDS`
+     - `l10n_in_withholding`
+     - :ref:`Indian TDS <india/tds>`
    * - :guilabel:`Indian - Purchase Report(GST)`
      - `l10n_in_purchase`
      - Indian GST Purchase report
@@ -507,3 +510,31 @@ The :guilabel:`GSTR-3` report contains different sections:
 
    .. image:: india/gst-gstr-3-report.png
       :alt: GSTR-3 Report
+
+.. _india/tds:
+
+TDS(Tax Deducted at Source)
+===========================
+
+:guilabel:`TDS`` is deducted at the time of specific payments such as rent,
+professional fees, and contractor payments. The deducted tax
+is remitted to the government by the payer.
+
+Applying TDS in Odoo
+--------------------
+- Use the :guilabel:`TDS Entry`` button on invoices and bills to apply TDS.
+   .. image:: india/tds_entry_button.png
+      :alt: TDS Entry Button
+
+- Click the button to open a wizard and enter the required details.
+- Multiple TDS can be applied together by adding them in the wizard.
+   .. image:: india/tds_wizard.png
+      :alt: TDS Entry wizard
+
+- Once the TDS entry is created, a TDS stat button appears
+  on the invoice, displaying all applied TDS entries.
+   .. image:: india/tds_stat_button.png
+      :alt: TDS stat button
+
+   .. image:: india/tds_entries.png
+      :alt: TDS Entries
