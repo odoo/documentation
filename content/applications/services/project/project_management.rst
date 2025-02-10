@@ -77,6 +77,8 @@ may have **additional options** available.
    If an activity is **already** scheduled, the icon may change to a **phone**, **group of people**,
    or other.
 
+.. _project/project-management/top-bar:
+
 Top bar
 =======
 

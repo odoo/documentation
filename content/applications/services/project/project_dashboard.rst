@@ -14,7 +14,8 @@ Using the project dashboard
 
 To access the project dashboard, open the **Project** app and hover over the desired project’s
 card. Then, click the :icon:`fa-vertical-ellipsis` (:guilabel:`vertical ellipsis`) icon and
-select :guilabel:`Dashboard`.
+select :guilabel:`Dashboard`. Alternatively, you can access the project dashboard from the project’s
+:ref:`top bar <project/project-management/top-bar>`.
 
 The left side of the dashboard displays a list of existing :ref:`project updates <project/project-dashboard/updates>`,
 and the right side provides :ref:`detailed information about records linked to the project
@@ -32,14 +33,14 @@ and the right side provides :ref:`detailed information about records linked to t
 Totals smart buttons
 --------------------
 
-The following smart buttons are displayed on the top left of the project dashboard:
+The following smart buttons are displayed on the top right of the project dashboard:
 
  - :guilabel:`Tasks`: the number of completed (i.e., :guilabel:`Done` or :guilabel:`Canceled`
    :ref:`tasks <project/tasks/task_stages_statuses/statuses>`) and all tasks, in format
    completed/all, as well as the entire project's completion percentage estimation.
  - :guilabel:`Timesheets`: the number of hours or days (depending on the **Timesheets** app
-   configuration) linked to the project. This includes all :doc:`timesheets <../timesheets>`,
-   whether or not they have been validated.
+   configuration) allocated in the project’s **settings**. This includes all
+   :doc:`timesheets <../timesheets>`, whether or not they have been validated.
  - :guilabel:`Planned`: the number of hours that have been planned for shifts in the **Planning**
    app. This includes all :doc:`planned shifts <../planning>`, including past shifts and shifts that
    have not yet been published.
@@ -48,7 +49,8 @@ The following smart buttons are displayed on the top left of the project dashboa
  - :guilabel:`Burndown Chart`: click the smart button to access a :doc:`report </applications/essentials/reporting>`
    on the status of the project’s tasks over time.
  - :guilabel:`Timesheets and Planning`: click the smart button to access a :doc:`report </applications/essentials/reporting>`
-   on the project’s timesheets and shifts.
+   on the project’s timesheets and shifts. This allows you to easily compare planned and effective
+   hours of work on the project.
  - **Additional fields**, such as :guilabel:`Sales Orders`, :guilabel:`Sales Order Items`,
    :guilabel:`Purchase Orders`, and more, represent the number of records linked to the project.
 
@@ -63,17 +65,24 @@ Milestones
 ----------
 
 This section is only visible if :doc:`milestones </applications/sales/sales/invoicing/milestone>`
-have been created for this project. Click :guilabel:`Add Milestone` to create a new milestone.
-Click a milestone in the checklist to edit it, enable its checkbox to mark it as completed, or
-click the :icon:`fa-trash` (:guilabel:`trash`) icon to remove it.
+have been enabled in the Project’s app settings. Click :guilabel:`Add Milestone` to create a new
+milestone. Click a milestone in the checklist to edit it, enable its checkbox to mark it as
+completed, or click the :icon:`fa-trash` (:guilabel:`trash`) icon to remove it.
+
+The milestones are displayed in red if they’re past their deadline, or in green if they are ready to
+be marked as reached (i.e. tasks linked to the milestone that have been marked with :guilabel:`done`
+or :guilabel:`canceled` :ref:`status <project/tasks/task_stages_statuses/statuses>`).
 
 .. _project/project-dashboard/profitability:
 
 Profitability
 -------------
 
-This section only applies to billable projects and provides a breakdown of project costs and
-revenues.
+This section provides a breakdown of project costs and revenues, which are impacted by all records
+linked to the project and its :doc:`Analytic account </applications/finance/accounting/reporting/analytic_accounting>`.
+
+.. note::
+   The profitability report is only displayed for billable projects.
 
 .. _project/project-dashboard/budgets:
 
@@ -84,9 +93,8 @@ If a budget has been set for the project, its status and related details are dis
 section. Click :guilabel:`Add Budget` to create a new budget for the project.
 
 .. note::
-   :doc:`Analytic accounting </applications/finance/accounting/reporting/analytic_accounting>` must
-   be enabled in your database’s **Accounting** application in order for this section to be
-   displayed.
+   :doc:`Budgets </applications/finance/accounting/reporting/budget>` must be enabled in your
+   database’s **Accounting** application in order for this section to be displayed.
 
 .. _project/project-dashboard/updates:
 
