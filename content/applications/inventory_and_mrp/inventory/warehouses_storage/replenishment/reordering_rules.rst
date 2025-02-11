@@ -406,13 +406,13 @@ the **long-term forecasted quantity**.
 
 .. example::
 
-   .. figure:: report/zero-forecast.png
+   .. figure:: reordering_rules/zero-forecast.png
       :alt: Forecast and To Order quantities is zero.
 
       Continuing the above example, when the sales order's deadline is adjusted to December 4th, the
       :guilabel:`Forecast` and :guilabel:`To Order` quantities are zero.
 
-   .. figure:: report/five-forecast.png
+   .. figure:: reordering_rules/five-forecast.png
       :alt: Show forecasted report.
 
       Opening the :guilabel:`Forecasted Report` shows the :guilabel:`Forecasted` units is `5.00`.
@@ -458,7 +458,7 @@ A product shipped from Asia has a combined vendor lead time of 30 days and a shi
 
 Ordering separately for these sales orders totals $300 in shipping costs.
 
-.. image:: report/forecasted-date.png
+.. image:: reordering_rules/forecasted-date.png
    :alt: Show forecasted date visualization.
 
 Setting :guilabel:`Visibility Days` to `20.0` allows Odoo to "look ahead" 20 days from December 4
@@ -467,7 +467,7 @@ Setting :guilabel:`Visibility Days` to `20.0` allows Odoo to "look ahead" 20 day
 - It groups |SO| 2's order with |SO| 1, reducing shipping costs by consolidating orders.
 - |SO| 3, which is due on Dec 25, is one day late and is not grouped with the other two orders.
 
-.. image:: report/visibility-days.png
+.. image:: reordering_rules/visibility-days.png
    :alt: Visibility days visualization.
 
 Counterexample where visibility days is not triggered
