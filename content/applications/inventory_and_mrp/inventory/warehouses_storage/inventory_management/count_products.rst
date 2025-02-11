@@ -11,11 +11,6 @@ damage, human error, theft, or other factors. As such, inventory adjustments mus
 reconcile the differences, and ensure that the recorded counts in the database match the actual
 counts in the warehouse.
 
-.. important::
-   Only users with *Administrator* rights in the **Inventory** app can apply inventory adjustments.
-   Those with *User* rights can complete :ref:`counts <inventory/create-adjustment>`, though the
-   adjustment **must** be verified and :ref:`applied <inventory/apply-adjustment>` by a manager.
-
 Inventory Adjustments page
 ==========================
 
