@@ -46,7 +46,7 @@ Configuration
 
 Removal strategies are set on either the product category or storage location.
 
-.. image:: removal_strategies/removal/navigate-location-category.png
+.. image:: removal_strategies/navigate-location-category.png
    :align: center
    :alt: Change the Force Removal Strategy for either the Product Categories or Locations.
 
@@ -108,7 +108,7 @@ expiration dates. To enable this feature, navigate to :menuselection:`Inventory 
 --> Settings`. Under the :guilabel:`Traceability` heading, check the box beside :guilabel:`Lots &
 Serial Numbers` to enable the feature.
 
-.. image:: removal_strategies/removal/enable-lots.png
+.. image:: removal_strategies/enable-lots.png
    :align: center
    :alt: Enable lots and serial numbers.
 
@@ -133,7 +133,7 @@ To activate these features, navigate to :menuselection:`Inventory --> Configurat
 Under the :guilabel:`Warehouse` heading, enable the :guilabel:`Storage Location` and
 :guilabel:`Multi-Step Routes` features.
 
-.. image:: removal_strategies/removal/enable-location.png
+.. image:: removal_strategies/enable-location.png
    :align: center
    :alt: Enable the locations and route features.
 
@@ -149,7 +149,7 @@ Configuration --> Settings`.
 Under the :guilabel:`Traceability` heading, ensure the :guilabel:`Lots & Serial Numbers` feature is
 selected, and then select the check box for :guilabel:`Expiration Dates` to enable the feature.
 
-.. image:: removal_strategies/removal/enable-expiration.png
+.. image:: removal_strategies/enable-expiration.png
    :align: center
    :alt: Enable expiration dates feature for FEFO.
 
@@ -164,7 +164,7 @@ removal strategy.
 Navigate to :menuselection:`Inventory --> Configuration --> Settings` and select the check box for
 the :guilabel:`Packages` feature.
 
-.. image:: removal_strategies/removal/enable-pack.png
+.. image:: removal_strategies/enable-pack.png
    :align: center
    :alt: Enable the packages feature.
 
