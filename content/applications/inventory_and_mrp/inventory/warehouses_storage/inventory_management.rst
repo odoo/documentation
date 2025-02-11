@@ -82,7 +82,7 @@ field, there are:
       correct the quantity, five units are moved from `WH/Stock` to `Virtual Locations/Inventory
       Adjustment`.
 
-      .. image:: inventory_management/inventory_management/inventory-loss.png
+      .. image:: inventory_management/inventory-loss.png
          :align: center
          :alt: Product ends up in Virtual Locations/Inventory Adjustment.
 
@@ -93,7 +93,7 @@ field, there are:
   products shipped between different addresses, such as :ref:`Physical Locations/Inter-warehouse
   transit <inventory/warehouses_storage/interwarehouse-transit>`.
 
-.. image:: inventory_management/inventory_management/locations.png
+.. image:: inventory_management/locations.png
    :align: center
    :alt: List of locations in Odoo.
 
