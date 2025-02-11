@@ -504,8 +504,9 @@ def _generate_alternate_urls(app, pagename, templatename, context, doctree):
         _version = _version or app.config.version
         _lang = _lang or app.config.language or 'en'
         _canonical_page = f'{pagename}.html'
-
-        # legal translations have different URLs schemes as they are not managed on transifex
+        
+        
+         # legal translations have different URLs schemes as they are not managed on transifex
         # e.g. FR translation of /terms/enterprise => /fr/terms/enterprise_fr
         if pagename.startswith('legal/terms/'):
             if _lang in legal_translations and not pagename.endswith(f"_{_lang}"):
@@ -530,3 +531,9 @@ def _generate_alternate_urls(app, pagename, templatename, context, doctree):
     _canonicalize()
     _versionize()
     _localize()
+    _config()
+    _canonical_page() 
+    _language_code()
+    _replace_index()
+    _replace_legal_translations()
+    _returnfroot()
