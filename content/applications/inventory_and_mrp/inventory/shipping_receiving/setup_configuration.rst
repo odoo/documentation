@@ -25,7 +25,7 @@ To do so, navigate to the :menuselection:`Apps` application from the main Odoo d
 Then, remove the :guilabel:`Apps` filter, and type in `Delivery Costs` in the :guilabel:`Search...`
 bar. After finding the :guilabel:`Delivery Costs` module, click :guilabel:`Activate` to install it.
 
-.. image:: setup_configuration/setup_configuration/install-module.png
+.. image:: setup_configuration/install-module.png
    :align: center
    :alt: Install the Delivery Costs module.
 
@@ -43,7 +43,7 @@ Methods`.
    #. Scroll to the :guilabel:`Shipping` section and enable the :guilabel:`Delivery Methods` feature
       by checking the corresponding checkbox.
 
-   .. image:: setup_configuration/setup_configuration/enable-delivery.png
+   .. image:: setup_configuration/enable-delivery.png
       :align: center
       :alt: Enable the *Delivery Methods* feature by checking the box in Configuration > Settings.
 
@@ -97,7 +97,7 @@ To enable free shipping if the amount of the order exceeds a specified amount, c
    - :guilabel:`Free if order amount is above`: `$100.00`
    - :guilabel:`Delivery Product`: `[SHIP] Flat`
 
-   .. image:: setup_configuration/setup_configuration/new-shipping-method.png
+   .. image:: setup_configuration/new-shipping-method.png
       :align: center
       :alt: Example of filling out a shipping method.
 
@@ -124,7 +124,7 @@ Once finished, click either :guilabel:`Save & New` to add another rule, or :guil
    To charge customers $20 in shipping for orders with five or fewer products, set the
    :guilabel:`Condition` to `Quantity <= 5.00`, and the :guilabel:`Delivery Cost` to `$20`.
 
-   .. image:: setup_configuration/setup_configuration/pricing-rule.png
+   .. image:: setup_configuration/pricing-rule.png
       :align: center
       :alt: Display window to add a pricing rule. Set a condition and delivery cost.
 
@@ -150,7 +150,7 @@ Shipping cost is the :guilabel:`Delivery cost` specified in the rule that satisf
 
    :guilabel:`Margin on Rate` is `10%` and :guilabel:`Additional margin` is `$9.00`.
 
-   .. image:: setup_configuration/setup_configuration/delivery-cost-example.png
+   .. image:: setup_configuration/delivery-cost-example.png
       :align: center
       :alt: Show example of "Based on rules" shipping method with margins configured.
 
@@ -201,7 +201,7 @@ the shipping method form.
    `Furniture Delivery`, a delivery product with a fixed rate of `$200`, is added to sales order
    `S00088`.
 
-     .. image:: setup_configuration/setup_configuration/delivery-product.png
+     .. image:: setup_configuration/delivery-product.png
         :align: center
         :alt: Show delivery order on the sales order line.
 
@@ -212,7 +212,7 @@ The shipping method added to the sales order is linked to the shipping carrier d
 delivery order. To add or change the delivery method on the delivery itself, go to the
 :guilabel:`Additional Info` tab and modify the :guilabel:`Carrier` field.
 
-.. image:: setup_configuration/setup_configuration/delivery-order.png
+.. image:: setup_configuration/delivery-order.png
    :align: center
    :alt: Shipping carrier information on the delivery form.
 
