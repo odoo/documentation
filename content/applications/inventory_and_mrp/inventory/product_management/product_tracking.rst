@@ -32,7 +32,7 @@ To do that, go to the :menuselection:`Inventory app --> Configuration --> Settin
 the :guilabel:`Traceability` section, and click the box next to :guilabel:`Lots & Serial Numbers`.
 Then, click the :guilabel:`Save` button to save changes.
 
-.. image:: product_tracking/product_tracking/differences-enabled-setting.png
+.. image:: product_tracking/differences-enabled-setting.png
    :align: center
    :alt: Enabled lots and serial numbers feature in inventory settings.
 
@@ -44,7 +44,7 @@ or food. Lots and can be used to trace a product back to a group, which is espec
 managing product recalls or expiration dates.
 
 .. example::
-   .. image:: product_tracking/product_tracking/differences-lot.png
+   .. image:: product_tracking/differences-lot.png
       :align: center
       :alt: Created lot with quantity of products in it.
 
@@ -61,7 +61,7 @@ identifiable when it travels through the supply chain. This can be especially us
 manufacturers that provide after-sales services related to products they sell and deliver.
 
 .. example::
-   .. image:: product_tracking/product_tracking/differences-serial-numbers.png
+   .. image:: product_tracking/differences-serial-numbers.png
       :align: center
       :alt: List of serial numbers for product.
 
@@ -91,7 +91,7 @@ Doing so reveals all existing lots and serial numbers, and each can be expanded 
 quantities with that assigned number. For unique serial numbers that are *not* reused, there should
 *only* be one product per serial number.
 
-.. image:: product_tracking/product_tracking/differences-tracking.png
+.. image:: product_tracking/differences-tracking.png
    :align: center
    :alt: Reporting page with drop-down lists of lots and serial numbers.
 

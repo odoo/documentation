@@ -23,7 +23,7 @@ Edit Security Settings --> Delete Account`. It can also be accessed by going to
 Upon clicking the :guilabel:`Delete Account` button, a pop-up window appears, requesting
 confirmation for the account deletion.
 
-.. image:: odoo_account/delete-account.png
+.. image:: odoo_accounts/delete-account.png
    :align: center
    :alt: Clicking on the Delete Account button will populate a window verifying the change.
 
