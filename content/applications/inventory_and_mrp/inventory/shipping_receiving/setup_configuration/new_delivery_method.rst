@@ -2,6 +2,16 @@
 Add a new delivery method
 =========================
 
+The *Delivery Methods* setting adds the option of calculating the cost of shipping on sales orders
+and e-commerce shopping carts. The shipping cost can then be added to a sales order as a delivery
+product, and the shipping details can be added to the delivery order.
+
+.. seealso::
+   :doc:`../setup_configuration`
+
+Configuration
+-------------
+
 To configure delivery methods, go to :menuselection:`Inventory app --> Configuration --> Delivery
 Methods`.
 
@@ -14,34 +24,35 @@ Methods`.
       by checking the corresponding checkbox.
 
    .. image:: new_delivery_method/enable-delivery.png
-      :alt: Enable the *Delivery Methods* feature by checking the box in Configuration > Settings.
+      :alt: The Delivery Methods feature enabled in the settings.
+
+.. _inventory/shipping_receiving/delivery-product:
 
 On the :guilabel:`Delivery Methods` page, add a method by clicking :guilabel:`New`. Doing so opens
 a form to provide details about the shipping provider, including:
 
 - :guilabel:`Delivery Method` (*Required field*): the name of the delivery method (e.g. `flat-rate
   shipping`, `same day delivery`, etc.).
-- :guilabel:`Provider` (*Required field*): choose the delivery service, like FedEx, if using a
-  :ref:`third-party carrier <inventory/shipping/third_party>`. Ensure the integration with the
-  shipping carrier is properly installed and select the provider from the drop-down menu.
-
-  For more details on configuring custom shipping methods, such as :ref:`fixed price
-  <inventory/shipping/fixed>`, :ref:`based on rules <inventory/shipping/rules>`, or :ref:`pickup in
-  store <inventory/shipping/pickup>` options, refer to their respective sections below.
 - :guilabel:`Website`: configure shipping methods for an **eCommerce** page. Select the applicable
   website from the drop-down menu, or leave it blank to apply the method to all web pages.
+- :guilabel:`Provider` (*Required field*): choose the delivery service, like FedEx, if using a
+  :ref:`third-party carrier <inventory/shipping/third_party>`. Ensure the integration with the
+  shipping carrier is properly installed and select the provider from the drop-down menu. For more
+  details on configuring custom shipping methods, such as :ref:`fixed price
+  <inventory/shipping/fixed>` or :ref:`based on rules <inventory/shipping/rules>` options, refer to
+  their respective sections below.
 - :guilabel:`Company`: If the shipping method should apply to a specific company, select it from the
   drop-down menu. Leave the field blank to apply the method to all companies.
 - :guilabel:`Routes`: select the applicable routes to define different delivery methods, such as
-  standard or express shipping, based on varying lead times. For more information, jump
-  to the :ref:`Set routes on shipping method <inventory/shipping_receiving/shipping-route>` section.
-
-.. _inventory/shipping_receiving/delivery-product:
-
+  standard or express shipping, based on varying lead times. For more information, jump to the
+  :ref:`Set routes on shipping method <inventory/shipping_receiving/shipping-route>` section.
 - :guilabel:`Delivery Product` (*Required field*): the product listed on the :ref:`sales order line
   <inventory/shipping/sales-order>` as the delivery charge.
 - :guilabel:`Free if order amount is above`: checking this box enables free shipping if the customer
   spends above the specified amount.
+- :guilabel:`Tracking Link`: This option adds a link to the portal so the customer can track their
+  delivery. When a custom carrier is added in a delivery order, the tracking button is enabled, and
+  the link directs to the tracking portal with that URL.
 
 .. _inventory/shipping_receiving/availability:
 
@@ -141,23 +152,6 @@ Shipping cost is the :guilabel:`Delivery cost` specified in the rule that satisf
    When the first rule is applied, the delivery cost is $31 (20 + (0.1 * 20) + 9). When the second
    rule is applied, the delivery cost is $64 (50 + (0.1 * 50) + 9).
 
-.. _inventory/shipping/pickup:
-
-Pickup in store
----------------
-
-To configure in-store pickup, select :guilabel:`Pickup in store` in the :guilabel:`Provider` field
-and specify the pickup location in :guilabel:`Warehouse`.
-
-To invoice the customer for the shipping cost to the pickup location, choose the :guilabel:`Get Rate
-and Create Shipment` option in the :guilabel:`Integration Level` field. Then, pick either the
-:guilabel:`Estimated cost` or :guilabel:`Real cost` radio options in the :guilabel:`Invoicing
-Policy` field to decide whether the added shipping charge on the sales order is the precise cost
-from the shipping carrier.
-
-.. seealso::
-   :doc:`Invoice cost of shipping <../setup_configuration/invoicing>`
-
 .. _inventory/shipping_receiving/shipping-route:
 
 Route on shipping method
@@ -199,8 +193,5 @@ routes from the drop-down menu.
    If the desired route is not selectable, check that the *Shipping Methods* option is enabled in
    the route's *Applicable On* section.
 
-.. figure:: new_delivery_method/set-routes.png
+.. image:: new_delivery_method/set-routes.png
    :alt: Show set routes on shipping method form.
-
-   By default, most shipping methods are created with two routes available for standard or express
-   delivery.
