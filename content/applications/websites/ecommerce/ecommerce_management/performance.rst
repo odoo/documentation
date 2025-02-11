@@ -12,7 +12,7 @@ Data monitoring
 **reporting view**, go to :menuselection:`Website --> Reporting --> eCommerce`. This dashboard helps
 you monitor everything related to sales, such as sales performance per product, category, day, etc.
 
-.. image:: reporting/reporting.png
+.. image:: performance/reporting.png
    :align: center
    :alt: Performance reporting of eCommerce
 
