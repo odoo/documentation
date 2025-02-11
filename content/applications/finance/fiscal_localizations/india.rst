@@ -23,32 +23,63 @@ localization:
      - `l10n_in_edi`
      - :ref:`Indian e-invoicing integration <india/e-invoicing>`
    * - :guilabel:`Indian E-waybill`
-     - `l10n_in_edi_ewaybill`
+     - `l10n_in_ewaybill`
      - :ref:`Indian E-way bill integration <india/e-waybill>`
    * - :guilabel:`Indian E-waybill Stock`
      - `l10n_in_ewaybill_stock`
      - :ref:`E-waybill creation from the Inventory app <india/e-waybill-stock>`
-   * - :guilabel:`Indian - Check GST Number Status`
-     - `l10n_in_gstin_status`
-     - :ref:`Indian Check GST Number Status <india/gstin_status>`
-   * - :guilabel:`Indian - GSTR India eFiling`
-     - `l10n_in_reports_gstr`
-     - :ref:`Indian GST Return filing <india/gstr>`
    * - :guilabel:`Indian - Accounting Reports`
      - `l10n_in_reports`
-     - :ref:`Indian tax reports <india/gstr_reports>`
+     - Adds the :ref:`Indian GST Return filing <india/gstr>` and the :ref:`Indian
+       Tax reports <india/gstr_reports>`.
 
-.. image:: india/india-modules.png
-   :alt: Indian localization modules
+.. _india/company:
 
-.. _india/e-invoicing:
+Company
+-------
+
+To configure your company information, open the **Settings** app, scroll down to the
+:guilabel:`Companies` section, click :guilabel:`Update Info`, and configure the following:
+
+- :guilabel:`Company Name`
+- :guilabel:`Address`, including the :guilabel:`Street`, :guilabel:`City`, :guilabel:`State`,
+  :guilabel:`ZIP`, and :guilabel:`Country`
+- :guilabel:`PAN`: essential for determining the type of taxpayer.
+- :guilabel:`GSTIN`: necessary for generating e-Invoices, E-waybills and filing GST returns.
+
+.. _india/indian-configuration:
 
 Indian Configuration
 ====================
 
-In :menuselection:`Settings --> Users & Companies --> Companies`, add your :guilabel:`PAN` and
-:guilabel:`GSTIN`. The PAN is essential for determining the type of taxpayer,
-while GSTIN is required for generating e-Invoices and E-waybills.
+The **Indian Integration** section provides essential taxation and compliance features to simplify
+financial operations. To enable these features, navigate to :menuselection:`Accounting -->
+Configuration --> Settings` and scroll down to the :guilabel:`Indian Integration` section.
+
+.. image:: india/indian-integration.png
+   :alt: Indian Integration Section
+
+- :guilabel:`TDS/TCS`: Activate this to enable :ref:`TDS/TCS <india/tds-tcs-threshold>`
+  functionality along with account-based TDS/TCS section suggestions.
+- :guilabel:`Registered Under GST`: Select this if your business is registered under GST to access
+  GST-related features, including e-invoice, e-waybill, GST e-filing, fetch vendor e-invoiced
+  document and check GST number status.
+- :guilabel:`E-Invoicing`: Connects to the :ref:`e-invoice <india/e-invoicing>` :abbr:`NIC
+  (National Informatics Center)` portal to submit invoices.
+- :guilabel:`E-Way bill`: Connects to the :ref:`e-waybill <india/e-waybill>` :abbr:`NIC
+  (National Informatics Center)` portal to generate e-waybills.
+- :guilabel:`GST E-Filing & Matching`: Enable the feature to facilitate :ref:`GST return filing
+  <india/gstr>` and connect with the GST portal to submit GSTR-1 and retrieve GSTR-2B.
+- :guilabel:`Check GST Number Status`: Enable to verify :ref:`GSTIN Status <india/gstin_status>`.
+- :guilabel:`Fetch Vendor E-Invoiced Document`: Helps in creating draft vendor bills using
+  e-invoice data submitted by vendors on GST portal.
+
+.. important::
+   Check the :guilabel:`Production Environment` checkbox to start using Indian services in the
+   production environment. If you want to use the testing environment then keep the checkbox
+   unchecked.
+
+.. _india/e-invoicing:
 
 e-Invoice system
 ================
@@ -92,44 +123,29 @@ You must register on the :abbr:`NIC (National Informatics Centre)` e-Invoice por
 Configuration in Odoo
 ~~~~~~~~~~~~~~~~~~~~~
 
-To enable the e-Invoice service in Odoo, go to :menuselection:`Accounting --> Configuration -->
-Settings --> Indian Electronic Invoicing`, and enter the :guilabel:`Username` and
-:guilabel:`Password` previously set for the API.
-
-.. image:: india/e-invoice-setup.png
-   :alt: Setup e-invoice service
-
-.. _india/e-invoicing-journals:
-
-Journals
-********
-
-To automatically send e-Invoices to the NIC e-Invoice portal, you must first configure your *sales*
-journal by going to :menuselection:`Accounting --> Configuration --> Journals`, opening your *sales*
-journal, and in the :guilabel:`Advanced Settings` tab, under :guilabel:`Electronic Data
-Interchange`, enable :guilabel:`E-Invoice (IN)` and save.
+To enable the e-Invoice service in Odoo, :ref:`activate <india/indian-configuration>` the
+:guilabel:`E-Invoicing` feature and enter the :guilabel:`Username` and :guilabel:`Password`
+previously set for the API.
 
 .. _india/e-invoicing-workflow:
 
 Workflow
 --------
 
-.. _india/invoice-validation:
+.. _india/generate-e-invoice:
 
-Invoice validation
+Generate e-Invoice
 ~~~~~~~~~~~~~~~~~~
 
-Once an invoice is validated, a confirmation message is displayed at the top. Odoo automatically
-uploads the JSON-signed file of validated invoices to the NIC e-Invoice portal after some time. If
-you want to process the invoice immediately, click :guilabel:`Process now`.
+Once an invoice is confirmed, click the :guilabel:`Send` button to open the wizard. Select
+:guilabel:`E-Invoicing`, then click the :guilabel:`Generate` button. Odoo will upload the
+JSON-signed file of the invoice to the NIC e-Invoice portal.
 
-.. image:: india/e-invoice-process.png
-   :alt: Indian e-invoicing confirmation message
+.. image:: india/generate-e-invoice.png
+   :alt: Generate e-Invoice
 
 .. note::
-   - You can find the JSON-signed file in the attached files in the chatter.
-   - You can check the document's :abbr:`EDI (electronic data interchange)` status under the
-     :guilabel:`EDI Document` tab or the :guilabel:`Electronic invoicing` field of the invoice.
+   - You can find the JSON-signed file and check the e-Invoicing status in the chatter.
 
 .. _india/invoice-pdf-report:
 
@@ -137,9 +153,8 @@ Invoice PDF report
 ~~~~~~~~~~~~~~~~~~
 
 Once an invoice is validated and submitted, the invoice PDF report can be printed. The report
-includes the :abbr:`IRN (Invoice Reference Number)`, :guilabel:`Ack. No` (acknowledgment number) and
-:guilabel:`Ack. Date` (acknowledgment date), and QR code. These certify that the invoice is a valid
-fiscal document.
+includes the :abbr:`IRN (Invoice Reference Number)`, :guilabel:`Acknowledgement` (number and date)
+and QR code. These certify that the invoice is a valid fiscal document.
 
 .. image:: india/invoice-report.png
    :alt: IRN and QR code
@@ -149,24 +164,12 @@ fiscal document.
 e-Invoice cancellation
 ~~~~~~~~~~~~~~~~~~~~~~
 
-If you want to cancel an e-Invoice, go to the :guilabel:`Other info` tab of the invoice and fill out
-the :guilabel:`Cancel reason` and :guilabel:`Cancel remarks` fields. Then, click :guilabel:`Request
-EDI cancellation`. The status of the :guilabel:`Electronic invoicing` field changes to :guilabel:`To
-Cancel`.
-
-.. important::
-   Doing so cancels both the :ref:`e-Invoice <india/e-invoicing>` and the :ref:`E-Way bill
-   <india/e-waybill>`.
-
-.. image:: india/e-invoice-cancellation.png
-   :alt: cancel reason and remarks
+To cancel an e-Invoice, click the :guilabel:`Request Cancel` button on the related invoice. In the
+:guilabel:`Cancel E-Invoice` window, fill out the :guilabel:`Cancel Reason` and :guilabel:`Cancel
+Remarks`.
 
 .. note::
-   - If you want to abort the cancellation before processing the invoice, then click :guilabel:`Call
-     Off EDI Cancellation`.
-   - Once you request to cancel the e-Invoice, Odoo automatically submits the JSON-signed file to
-     the NIC e-Invoice portal. You can click :guilabel:`Process now` if you want to process the
-     invoice immediately.
+   - You can find the e-Invoicing status in the chatter.
 
 .. _india/e-invoice-negative-lines:
 
@@ -275,44 +278,24 @@ You must register on the :abbr:`NIC (National Informatics Centre)` E-Way bill po
 Configuration in Odoo
 ~~~~~~~~~~~~~~~~~~~~~
 
-To set up the E-Way bill service, go to :menuselection:`Accounting --> Configuration --> Settings
---> Indian Electronic WayBill --> Setup E-Way bill`, and enter your :guilabel:`Username` and
-:guilabel:`Password`.
-
-.. image:: india/e-waybill-configuration.png
-   :alt: E-way bill setup odoo
+To enable the E-Way bill service in Odoo, :ref:`activate <india/indian-configuration>` the
+:guilabel:`E-Way bill` feature and enter the :guilabel:`Username` and :guilabel:`Password`.
 
 .. _india/e-waybill-workflow:
 
 Workflow
 --------
 
-.. _india/e-waybill-send:
+.. _india/generate-e-waybill:
 
-Send an E-Way bill
-~~~~~~~~~~~~~~~~~~
+Generate E-Way bill
+~~~~~~~~~~~~~~~~~~~
 
-To send an E-Way bill, confirm the customer invoice/vendor bill and click :guilabel:`Send E-Way
-bill`.
-
-.. image:: india/e-waybill-send-button.png
-   :alt: Send E-waybill button on invoices
-
-.. _india/invoice-validation-e-way:
-
-Invoice validation
-~~~~~~~~~~~~~~~~~~
-
-Once an invoice/bill has been issued and sent via :guilabel:`Send E-Way bill`, a confirmation
-message is displayed.
-
-.. image:: india/e-waybill-process.png
-   :alt: Indian e-Way bill confirmation message
+To generate an E-Way bill, confirm the customer invoice/vendor bill and click :guilabel:`Create
+e-Waybill`. Enter the necessary details and click :guilabel:`Generate e-Waybill` to proceed.
 
 .. note::
    - You can find the JSON-signed file in the attached files in the chatter.
-   - Odoo automatically uploads the JSON-signed file to the government portal after some time. Click
-     :guilabel:`Process now` if you want to process the invoice/bill immediately.
 
 Invoice PDF report
 ~~~~~~~~~~~~~~~~~~
@@ -328,23 +311,16 @@ You can print the invoice PDF report once you have submitted the E-Way bill. The
 E-Way bill cancellation
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-If you want to cancel an E-Way bill, go to the :guilabel:`E-Way bill` tab of the related
-invoice/bill and fill out the :guilabel:`Cancel reason` and :guilabel:`Cancel remarks` fields. Then,
-click :guilabel:`Request EDI Cancellation`.
-
-.. important::
-   Doing so cancels both the :ref:`e-Invoice <india/e-invoicing>` (if applicable) and the
-   :ref:`E-Way bill <india/e-waybill>`.
+To cancel an E-Way bill, click :guilabel:`e-Waybill` on the related invoice/bill, then
+:guilabel:`Cancel e-Waybill`. In the :guilabel:`Cancel Ewaybill` window, fill out the
+:guilabel:`Cancel Reason` and :guilabel:`Cancel Remarks`.
 
 .. image:: india/e-waybill-cancellation.png
    :alt: Cancel reason and remarks
 
 .. note::
-   - If you want to abort the cancellation before processing the invoice, click :guilabel:`Call Off
-     EDI Cancellation`.
    - Once you request to cancel the E-Way bill, Odoo automatically submits the JSON-signed file to
-     the government portal. You can click :guilabel:`Process Now` if you want to process the invoice
-     immediately.
+     the government portal. You can check the JSON file in the chatter.
 
 .. _india/e-waybill-stock:
 
@@ -385,7 +361,7 @@ To print the E-waybill or the challan, click the :icon:`fa-cog` :guilabel:`(gear
 Indian Check GSTIN Status
 =========================
 
-The :guilabel:`Indian - Check GST Number Status` module allows you to verify the status of a
+The :guilabel:`Indian - Check GST Number Status` allows you to verify the status of a
 :abbr:`GSTIN (Goods and Services Tax Identification Number)` directly from Odoo.
 
 To verify the status of a contact's GST number, access the customer's/vendor's form and click
@@ -436,12 +412,10 @@ To file GST Returns in Odoo, you must first enable API access on the GST portal.
 Indian GST Service In Odoo
 --------------------------
 
-Once you have enabled the :ref:`API access <india/gstr_api>` on the GST portal, you can set up the
-:guilabel:`Indian GST Service` in Odoo.
-
-Go to :menuselection:`Accounting --> Configuration --> Settings --> Indian GST Service` and enter
-the :guilabel:`GST Username`. Click :guilabel:`Send OTP`, enter the code, and finally,
-:guilabel:`Validate`.
+Once you have enabled the :ref:`API access <india/gstr_api>` on the GST portal, :ref:`activate
+<india/indian-configuration>` the :guilabel:`GST E-Filing & Matching Feature` to start using GST
+Service. Then, in the :guilabel:`Registered Under GST` section, fill in the required :guilabel:`GST
+Username`.
 
    .. image:: india/gst-setup.png
       :alt: Please enter your GST portal Username as Username
@@ -451,9 +425,9 @@ the :guilabel:`GST Username`. Click :guilabel:`Send OTP`, enter the code, and fi
 File-in GST Return
 ------------------
 
-When the :guilabel:`Indian GST Service` is configured, you can file your GST return. Go to
-:menuselection:`Accounting --> Reporting --> India --> GST Return periods` and create a new **GST
-Return Period** if it does not exist. GST Return file-in is done in **three steps** in Odoo:
+When the :guilabel:`GST E-Filing & Matching Feature` is enabled, you can file your GST return. Go
+to :menuselection:`Accounting --> Reporting --> India --> GST Return periods` and create a new
+**GST Return Period** if it does not exist. GST Return file-in is done in **three steps** in Odoo:
 
 .. note::
    **Tax Return Periodicity** can be
@@ -659,7 +633,8 @@ Configuration
 -------------
 
 #. Navigate to :menuselection:`Accounting --> Configuration --> Settings`
-#. In the :guilabel:`Indian Integration` section, enable the :guilabel:`TDS and TCS` feature.
+#. In the :guilabel:`Indian Integration` section, enable the :guilabel:`TDS` or :guilabel:`TCS`
+   feature as required.
 #. Navigate to :menuselection:`Accounting --> Configuration --> Chart of Accounts`.
 #. Click :guilabel:`View` on the desired account, and set the :guilabel:`TDS/TCS Section` field.
 
