@@ -212,16 +212,87 @@ Export and import customizations
 ================================
 
 When you do any customization with Studio, a new module named :guilabel:`Studio customizations` is
-added to your database.
+added to your database. Exporting customizations from one database and importing them in another can
+be useful, for example, when setting up a new module or for training purposes.
 
-To export these customizations, go to :menuselection:`Main dashboard --> Studio --> Customizations
---> Export` to download a ZIP file containing all customizations.
+.. note::
 
-To import and install these customizations in another database, connect to the destination database
-and go to :menuselection:`Main dashboard --> Studio --> Customizations --> Import`, then upload
-the exported ZIP file before clicking on the :guilabel:`Import` button.
+   Exporting customizations from Studio is different from the standard Odoo export function, which
+   allows you to export data as an Excel or csv file. With :guilabel:`Studio Export`, data is
+   exported as a ZIP file, which corresponds to a module.
+
+   When the module is imported in another database, the data is imported in a logical way, e.g. if
+   the module contains customers and sales orders, the customers are created first, since these are
+   required for the sales orders.
+
+.. _studio/export-import/export:
+
+Export customizations
+---------------------
+
+To export customizations, from the main Odoo dashboard click the **Toggle Studio** button, then
+:guilabel:`Export`.
+
+You can download a ZIP file containing all Studio customizations by clicking the :guilabel:`Export`
+button. Alternatively, you can choose which data and/or demo data to export by clicking
+:guilabel:`Configure data and demo data to export`.
+
+.. _studio/export-import/export/configure:
+
+Configure data to export
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+To select specific models to export, on the :guilabel:`Studio Export` screen click
+:guilabel:`New`, then choose the relevant model.
+
+.. tip::
+
+   Click :guilabel:`Preset` to see a list of all models in your database with records that have been
+   modifed using Studio. To configure one of these models for export, click on the model to open it
+   and make the required changes.
+
+Tick the following options as relevant:
+
+- :guilabel:`Demo`: if the exported records should be considered as demo data when imported.
+- :guilabel:`Attachments`: if attachments related to exported records should be included in the
+  exported.
+- :guilabel:`Updatable`: if the exported records should be able to updated during a module update.
+
+To set or change the rules determining which of the model's records should be exported, click the
+:icon:`fa-caret-right` icon next to :guilabel:`Domain` then click :guilabel:`Edit domain`.
+
+After configuring a model for export, click :guilabel:`Studio Export` to return to the main screen.
+To download a ZIP file with the customizations for all the listed models, click :guilabel:`Export`.
+
+.. note::
+
+   It is not necessary to select one or more models as all listed models will be included in the
+   export. To remove a model from the export, select it and click
+   :icon:`fa-cog` :guilabel:`Actions` then :icon:`fa-trash-o` :guilabel:`Delete`.
+
+Choose whether to only :guilabel:`Include Data` or to also
+:guilabel:`Include Demo Data`, then click the :guilabel:`Export` button.
+
+.. image:: models_modules_apps/studio-export.png
+      :alt: Choosing to export both data and demo data
+
+When the download is complete, click the **X** to close the :guilabel:`Studio Export` window.
+
+.. _studio/export-import/import:
+
+Import customizations
+---------------------
 
 .. warning::
-   Before importing, make sure the destination database contains the same apps and modules as the
-   source database. Studio does not add the underlying modules as dependencies of the exported
-   module.
+   Before importing, make sure the destination database is the same Odoo version and contains the
+   same apps and modules as the source database. Studio does not add the underlying modules as
+   dependencies of the exported module.
+
+To import and install Studio customizations in another database, connect to the destination
+database, then, from the main Odoo dashboard click the **Toggle Studio** button then
+:guilabel:`Import`.
+
+Upload the exported ZIP file. If demo data should be imported, tick :guilabel:`Load demo data`.
+Click the :guilabel:`Install` button to complete the import.
+
+
