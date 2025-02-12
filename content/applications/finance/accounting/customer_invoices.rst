@@ -7,8 +7,7 @@ Customer invoices
 A customer invoice is a document issued by a company for products and/or services sold to a
 customer. It records receivables as they are sent to customers. Customer invoices can include
 amounts due for the goods and/or services provided, applicable sales taxes, shipping and handling
-fees, and other charges.
-Odoo supports multiple invoicing and payment workflows.
+fees, and other charges. Odoo supports multiple invoicing and payment workflows.
 
 .. seealso::
    :doc:`/applications/finance/accounting/customer_invoices/overview`
@@ -84,14 +83,14 @@ Invoice confirmation
 
 Click :guilabel:`Confirm` when the invoice is completed. The invoice's status changes to
 :guilabel:`Posted`, and a journal entry is generated based on the invoice configuration. On
-confirmation, Odoo assigns each invoice a unique number from a defined
-:ref:`sequence <accounting/invoice/sequence>`.
+confirmation, Odoo assigns each invoice a unique number from a defined :ref:`sequence
+<accounting/invoice/sequence>`.
 
 .. note::
    - Once confirmed, an invoice can no longer be updated. Click :guilabel:`Reset to draft` if
      changes are needed.
-   - If required, invoices and other journal entries can be locked once posted
-     using the :ref:`Secure posted entries with hash <data-inalterability/restricted>` feature.
+   - If required, invoices and other journal entries can be locked once posted using the
+     :ref:`Secure posted entries with hash <data-inalterability/restricted>` feature.
 
 .. _accounting/invoice/sending:
 
@@ -174,53 +173,45 @@ same customer, the actions are performed on the most overdue invoice.
 
 .. _accounting/invoice/sequence:
 
-Sequence
-========
+Invoice sequence
+================
 
-Odoo assigns each document a unique sequence made up of a prefix and a number. The prefix combines
-the journal code and the entry date and groups entries by period. The number is unique for each
-period and is used to identify the entry. The default sequence on customer invoices is
-INV/YYYY/number. In some specific cases, :ref:`resequencing <accounting/invoice/resequencing>`
-invoices might be necessary.
+When confirming an invoice, Odoo generates a unique invoice reference number. By default, Odoo uses
+the following sequence format `INV/year/incrementing-number` (e.g., `INV/2025/00001`), which
+restarts from `00001` each year.
+
+However, it is possible to :ref:`change the sequence format <accounting/invoice/resequencing>` and
+its periodicity, and to :ref:`mass-resequence invoices <accounting/invoice/mass-resequencing>`.
+
+.. note::
+   Changes made to reference numbers are logged in the chatter.
 
 .. _accounting/invoice/resequencing:
 
-Resequencing
-------------
+Changing the default sequence
+-----------------------------
 
-Resequencing is not possible:
+To customize the default sequence, open the last confirmed invoice, click :guilabel:`Reset to
+Draft`, and edit the invoice's reference number.
 
-- When entries are before a lock date.
-- When the sequence leads to a duplicate.
-- When the :guilabel:`Invoice Date` doesn't match the date contained in the new sequence number,
-  e.g., if the sequence is changed to INV/2023/XXXXX for a document with an :guilabel:`Invoice Date`
-  of 2024.
+.. image:: customer_invoices/reference-number.png
+   :alt: Editing the reference number of an invoice.
 
-To change the invoice sequence with the structure INV/YYYY/MM/number, add `/MM` with the number of
-the month of the :guilabel:`Invoice date`. Odoo will recognize the "/" term as a month and update
-the future invoice sequence appropriately with the month of the :guilabel:`Invoice date`. For
-example, if the invoice date is January, change the sequence to `INV/2024/01/XXXXX`.
+Odoo then explains how the detected format will be applied to all future invoices. For example, if
+the current invoice's month is added, the sequence's periodicity will change to every month instead
+of every year.
 
-In this case, if the :guilabel:`Invoice date` isn't aligned with the sequence number, a
-:guilabel:`Validation Error` message appears.
+.. image:: customer_invoices/sequence-dialog.png
+   :alt: Editing the reference number of an invoice.
 
-.. note::
-
-   - All sequence changes are logged in the chatter to keep the information.
-   - Sequence changes also affect the format of future invoices' sequences.
-
-.. _accounting/invoice/resequencing-one-invoice:
-
-Resequencing a single invoice
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-To resequence the last confirmed invoice, click :guilabel:`Reset to Draft`, then change the
-sequence. The invoice now appears in red on the :guilabel:`Customer Invoices` list.
+.. tip::
+   The sequence format can be edited directly when creating the first invoice of a given sequence
+   period.
 
 .. _accounting/invoice/mass-resequencing:
 
 Mass-resequencing invoices
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------
 
 It can be helpful to resequence multiple invoice numbers. For example, when importing invoices from
 another invoicing or accounting system and the reference originates from the previous software,
@@ -239,6 +230,7 @@ Follow these steps to resequence invoice numbers:
 
    - :guilabel:`Keep current order`: The order of the numbers remains the same.
    - :guilabel:`Reorder by accounting date`: The number is reordered by accounting date.
+
 #. Set the :guilabel:`First New Sequence`.
 #. :guilabel:`Preview Modifications` and click :guilabel:`Confirm`.
 
@@ -270,18 +262,18 @@ go to :menuselection:`Accounting --> Reporting --> Partner Ledger`.
 Aged Receivable
 ~~~~~~~~~~~~~~~
 
-To review outstanding customer invoices and their related due dates, use the
-:ref:`Aged Receivable <accounting/reporting/aged-receivable>` report. To access it, go to
-:menuselection:`Accounting --> Reporting --> Aged Receivable`.
+To review outstanding customer invoices and their related due dates, use the :ref:`Aged Receivable
+<accounting/reporting/aged-receivable>` report. To access it, go to :menuselection:`Accounting -->
+Reporting --> Aged Receivable`.
 
 .. _accounting/invoices/aged-payable:
 
 Aged Payable
 ~~~~~~~~~~~~
 
-To review outstanding vendor bills and their related due dates, use the
-:ref:`Aged Payable <accounting/reporting/aged-payable>` report. To access it, go to
-:menuselection:`Accounting --> Reporting --> Aged Payable`.
+To review outstanding vendor bills and their related due dates, use the :ref:`Aged Payable
+<accounting/reporting/aged-payable>` report. To access it, go to :menuselection:`Accounting -->
+Reporting --> Aged Payable`.
 
 .. _accounting/invoices/profit-and-loss:
 
