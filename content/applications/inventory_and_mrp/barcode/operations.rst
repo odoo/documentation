@@ -10,6 +10,7 @@ Daily operations
 
    operations/adjustments
    operations/receipts_deliveries
+   operations/process_transfers
    operations/transfers_scratch
    operations/barcode_nomenclature
    operations/gs1_nomenclature
