@@ -2,99 +2,96 @@
 Data Cleaning
 =============
 
-The Odoo *Data Cleaning* app keeps the database neat and organized throughout the use of its
-provided features:
+The Odoo **Data Cleaning** app maintains data integrity and consistency with the following features:
 
 - :ref:`Deduplicates <data_cleaning/deduplication>`: merges or removes duplicate entries to ensure
   data is unique.
 - :ref:`Recycles <data_cleaning/recycle>`: identifies outdated records to either archive or delete
   them.
-- :ref:`Merges <data_cleaning/merge-action-manager>`: combines multiple similar entries into one
-  streamlined record.
 - :ref:`Formats <data_cleaning/field-cleaning>`: standardizes text data by finding and replacing it
   according to specified needs.
 
-Through customizable automated rules (or manual praxis), individual records and accompanying text
-data in the database will remain up-to-date and consistently formatted, tailored to company
-specifications.
+Customizable rules ensure text data stays up-to-date, streamlined, consistently formatted, and
+aligned with company-specific formatting requirements.
 
 .. _data_cleaning/install-modules:
 
 Install modules
 ===============
 
-The *Data Cleaning* application consists of several modules. :ref:`Install <general/install>` the
+The **Data Cleaning** application consists of several modules. :ref:`Install <general/install>` the
 following to access all available features:
 
 .. list-table::
    :header-rows: 1
-   :widths: 25 25 50
+   :widths: 40 60
 
-   * - Name
-     - Technical name
+   * - | Name
+       | `Technical name`
      - Description
-   * - :guilabel:`Data Recycle`
-     - `data_recycle`
-     - Base module to enable the recycle feature, available on Odoo Community edition.
-   * - :guilabel:`Data Cleaning`
-     - `data_cleaning`
+   * - | :guilabel:`Data Recycle`
+       | `data_recycle`
+     - Base module to enable the recycle feature, available on :ref:`Odoo Community edition
+       <install/editions>`.
+   * - | :guilabel:`Data Cleaning`
+       | `data_cleaning`
      - Enables field cleaning feature to format text data across multiple records, available
-       **only** on Odoo Enterprise edition.
-   * - :guilabel:`Data Cleaning (merge)`
-     - `data_merge`
+       **only** on :ref:`Odoo Enterprise edition <install/editions>`.
+   * - | :guilabel:`Data Cleaning (merge)`
+       | `data_merge`
      - Enables the deduplication feature to find similar (or duplicate) records, and merge them,
-       available **only** on Odoo Enterprise edition.
+       available **only** on :ref:`Odoo Enterprise edition <install/editions>`.
 
 .. spoiler:: Additionally, several app-specific modules are available
 
    .. list-table::
-      :widths: 25 25 50
+      :widths: 40 60
 
-      * - :guilabel:`CRM Deduplication`
-        - `data_merge_crm`
-        - Enables the deduplication feature on the *CRM* app, and uses the :doc:`CRM default merging
-          feature <../sales/crm/pipeline/merge_similar>`.
-      * - :guilabel:`Helpdesk Merge action`
-        - `data_merge_helpdesk`
-        - Enables the merge feature for the *Helpdesk* app.
-      * - :guilabel:`Project Merge action`
-        - `data_merge_project`
-        - Enables the merge feature for the *Projects* app.
-      * - :guilabel:`UTM Deduplication`
-        - `data_merge_utm`
-        - Enables the merge feature for the *UTM Tracker* app.
-      * - :guilabel:`WMS Accounting Merge`
-        - `data_merge_stock_account`
+      * - | :guilabel:`CRM Deduplication`
+          | `data_merge_crm`
+        - Enables the deduplication feature on the **CRM** app, and uses the :doc:`CRM default
+          merging feature <../sales/crm/pipeline/merge_similar>`.
+      * - | :guilabel:`Helpdesk Merge action`
+          | `data_merge_helpdesk`
+        - Enables the merge feature for the **Helpdesk** app.
+      * - | :guilabel:`Project Merge action`
+          | `data_merge_project`
+        - Enables the merge feature for the **Projects** app.
+      * - | :guilabel:`UTM Deduplication`
+          | `data_merge_utm`
+        - Enables the merge feature for the **UTM Tracker** app.
+      * - | :guilabel:`WMS Accounting Merge`
+          | `data_merge_stock_account`
         - Creates a warning in cases of products merging that may affect inventory valuation, if the
-          *Inventory* app is installed.
+          **Inventory** app is installed.
 
 .. _data_cleaning/deduplication:
 
 Deduplication
 =============
 
-On the :guilabel:`Duplicates` dashboard (:menuselection:`Data Cleaning app --> Deduplication`), Odoo
-suggests groups of similar records to be :ref:`merged <data_cleaning/merge-records>` by matching
-conditions within the records set by the :ref:`deduplication rules
+The *Duplicates* dashboard groups similar records to be :ref:`merged <data_cleaning/merge-records>`
+by matching conditions within the records set by the :ref:`deduplication rules
 <data_cleaning/deduplication-rules>`.
 
+Navigate to this dashboard by going to :menuselection:`Data Cleaning app --> Deduplication`.
+
 .. image:: data_cleaning/data-cleaning-duplicates.png
-   :align: center
    :alt: Deduplication dashboard in the Data Cleaning application.
 
 The :guilabel:`RULE` sidebar lists each of the active deduplication rules, and displays the total
 number of duplicates detected beside each rule.
 
-By default, the :guilabel:`All` rule is selected. Displayed records are grouped by their rule, with
-a :guilabel:`Similarity` rating (out of 100%) in the list view, with the following columns:
+By default, the :guilabel:`All` rule is selected. Records are grouped by their rule, with a
+:guilabel:`Similarity` rating (out of 100%), with the following columns:
 
 - :guilabel:`Created On`: the date and time the original record was created.
 - :guilabel:`Name`: the name or title of the original record.
 - :guilabel:`Field Values`: the original record's values for the fields used to detect duplicates.
 - :guilabel:`Used In`: lists other models referencing the original record.
 - :guilabel:`ID`: the original record's unique ID.
-- :guilabel:`Is Master`: the duplicates are merged into the *master* record. There can be **one**
-  master record in a grouping of similar records.
+- :guilabel:`Is Master`: the duplicates are merged into the *master* record. There can only be
+  **one** master record in a grouping of similar records.
 
 Select a specific rule in the :guilabel:`RULE` sidebar to filter the duplicate records.
 
@@ -112,38 +109,36 @@ Next, click the :guilabel:`Merge` button at the top of the similar records group
 :guilabel:`Ok` to confirm the merge.
 
 Once a record is merged, a message is logged in the chatter of the master record, describing the
-merge. Certain records, like *Project* tasks, are logged in the chatter with a link to the old
-record for a convenient reference.
+merge. Certain records, like **Project** tasks, are logged in the chatter with a link to the old
+record as a convenient reference of the merge.
 
 .. tip::
    Discard groupings by clicking the :guilabel:`DISCARD` button. Upon doing so, the grouping is
    hidden from the list and archived.
 
-   View discarded groupings by selecting the :guilabel:`Discarded` filter from the :ref:`Search...
-   <search/filters>` bar.
+   View discarded groupings by selecting the :guilabel:`Discarded` filter from the :ref:`search bar
+   <search/filters>`.
 
 .. _data_cleaning/deduplication-rules:
 
 Deduplication rules
 -------------------
 
-The :guilabel:`Deduplication Rules` page (:menuselection:`Data Cleaning app --> Configuration -->
-Rules: Deduplication`) is where the conditions for records to be detected as duplicates can be set.
+The *Deduplication Rules* set the conditions for how records are detected as duplicates.
 
 These rules can be configured for each model in the database, and with varying levels of
-specificity.
+specificity. To get started, navigate to :menuselection:`Data Cleaning app --> Configuration -->
+Deduplication`.
 
 .. tip::
-   The deduplication rules run once every day, by default, as part of a scheduled action chron
+   The deduplication rules run once every day, by default, as part of a scheduled action cron
    (*Data Merge: Find Duplicate Records*). However, each rule can be :ref:`ran manually
    <data_cleaning/run-deduplication-rule>` anytime.
 
 Modify a deduplication rule
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Select a default rule to edit, or create a new rule by clicking on the :guilabel:`New` button, on
-the :guilabel:`Deduplication Rules` page (:menuselection:`Data Cleaning app --> Configuration -->
-Rules: Deduplication`).
+Select a default rule to edit, or create a new rule by clicking on the :guilabel:`New` button.
 
 First, choose a :guilabel:`Model` for this rule to target. Selecting a model updates the rule title
 to the chosen model.
@@ -178,8 +173,7 @@ clicking :guilabel:`Add a line`, under the :guilabel:`Unique ID Field` column.
     casing and language-specific accent differences.
 
 .. important::
-   The rule does **not** capture duplicates without at least one deduplication rule set in the
-   :guilabel:`Deduplication Rules` field.
+   At least one :guilabel:`Deduplication Rules` must be set for the rule to capture duplicates.
 
 .. tip::
    A few more fields are available for an advanced configuration.
@@ -199,38 +193,38 @@ Manually run a deduplication rule
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To manually run a specific deduplication rule at any time, navigate to :menuselection:`Data Cleaning
-app --> Configuration --> Rules: Deduplication`, and select the rule to run.
+app --> Configuration --> Deduplication`, and select the rule to run.
 
 Then, on the rule form, select the :guilabel:`Deduplicate` button on the top-left. Upon doing so,
 the :icon:`fa-clone` :guilabel:`Duplicates` smart button displays the number of duplicates captured.
 
-Click on the :icon:`fa-clone` :guilabel:`Duplicates` smart button to manage these records.
+Click on the :icon:`fa-clone` :guilabel:`Duplicates` smart button to :ref:`manage these records
+<data_cleaning/merge-records>`.
 
 .. _data_cleaning/recycle:
 
 Recycle records
 ===============
 
-Use the *Recycle Records* feature to rid the database of old and outdated records.
+Use the *recycle records* feature to rid the database of old and outdated records.
 
-On the :guilabel:`Field Recycle Records` dashboard (:menuselection:`Data Cleaning app --> Recycle
-Records`), Odoo detects records that can be archived or deleted, by matching conditions within the
-records set by the :ref:`recycle record's rules <data_cleaning/recylce-rule>`.
+The *Field Recycle Records* dashboard displays records that can be archived or deleted, by matching
+conditions within the records set by the :ref:`recycle record's rules <data_cleaning/recylce-rule>`.
+
+Navigate to this dashboard by going to :menuselection:`Data Cleaning app --> Recycle Records`.
 
 .. image:: data_cleaning/data-cleaning-recycle.png
-   :align: center
    :alt: Field Recycle Records dashboard in the Data Cleaning application.
 
-The :guilabel:`RECYCLE RULES` sidebar lists each of the active recycle record rules, and displays
-the total number of records detected beside each rule.
+The :guilabel:`RECYCLE RULES` sidebar lists each of the active recycle record rules.
 
-By default, the :guilabel:`All` option is selected. Records are displayed in the list view, with the
-following columns:
+By default, the :guilabel:`All` option is selected. Records are displayed with the following
+columns:
 
 - :guilabel:`Record ID`: the ID of the original record.
 - :guilabel:`Record Name`: the name or title of the original record.
 
-Select a specific rule in the :guilabel:`RECYCLE RULES` sidebar to filter the duplicate records.
+Select a specific rule in the :guilabel:`RECYCLE RULES` sidebar to filter the records.
 
 To recycle records, click the :icon:`fa-check` :guilabel:`Validate` button on the row of the record.
 
@@ -249,16 +243,16 @@ archived or deleted from the database.
 Recycle record rules
 --------------------
 
-The :guilabel:`Recycle Records Rules` page (:menuselection:`Data Cleaning app --> Configuration -->
-Rules: Recycle Records`) is where the conditions for records to be recycled can be set.
+The *Recycle Records Rules* set the conditions for how records are recycled.
 
 These rules can be configured for each model in the database, and with varying levels of
-specificity.
+specificity. To get started, navigate to :menuselection:`Data Cleaning app --> Configuration -->
+Recycle Records`.
 
 .. tip::
-   The recycle rules run once a day, by default, as part of a scheduled action chron (*Data
-   Recycle: Clean Records*). However, each rule can be :ref:`run manually
-   <data-cleaning/run-recycle-rule>` anytime.
+   Recycle rules run once a day, by default, as part of a scheduled action cron (*Data Recycle:
+   Clean Records*). However, each rule can be :ref:`run manually <data-cleaning/run-recycle-rule>`
+   anytime.
 
 By default, no recycle record rules exist. Click the :guilabel:`New` button to create a new rule.
 
@@ -306,7 +300,6 @@ With the rule's configuration complete, either close the rule form, or :ref:`run
    - :guilabel:`Include Archived`: :icon:`fa-check-square`
 
    .. image:: data_cleaning/data-cleaning-recycle-rule.png
-      :align: center
       :alt: Recycle records rule form for a lead/opportunity.
 
 .. _data-cleaning/run-recycle-rule:
@@ -315,12 +308,13 @@ Manually run a recycle rule
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To manually run a specific recycle rule at any time, navigate to :menuselection:`Data Cleaning app
---> Configuration --> Rules: Recycle Records`, and select the rule to run.
+--> Configuration --> Recycle Records`, and select the rule to run.
 
 Then, on the rule form, click the :guilabel:`Run Now` button on the top-left. Upon doing so, the
 :icon:`fa-bars` :guilabel:`Records` smart button displays the number of records captured.
 
-Click the :icon:`fa-bars` :guilabel:`Records` smart button to manage these records.
+Click the :icon:`fa-bars` :guilabel:`Records` smart button to :ref:`manage these records
+<data_cleaning/recycle>`.
 
 .. _data_cleaning/field-cleaning:
 
@@ -330,17 +324,17 @@ Field cleaning
 Use the field cleaning feature to maintain consistent formatting of names, phone numbers, IDs and
 other fields throughout a database.
 
-On the :guilabel:`Field Cleaning Records` dashboard (:menuselection:`Data Cleaning app --> Field
-Cleaning`), Odoo suggests formatting changes to data in fields of a record, to follow a convention
-set by the field cleaning rules.
+The *Field Cleaning Records* dashboard displays formatting changes to data in fields of a record,
+to follow a convention set by the field cleaning rules.
+
+Navigate to this dashboard by going to :menuselection:`Data Cleaning app --> Field Cleaning`.
 
 .. image:: data_cleaning/data-cleaning-field.png
    :alt: Field Cleaning Records dashboard in the Data Cleaning application.
 
-The :guilabel:`CLEANING RULES` sidebar lists each of the active cleaning rules, and displays the
-total number of records detected beside each rule.
+The :guilabel:`CLEANING RULES` sidebar lists each of the active cleaning rules.
 
-By default, the :guilabel:`All` records are listed, with the following columns:
+By default, the :guilabel:`All` rule is selected. Records are listed with the following columns:
 
 - :guilabel:`Record ID`: the ID of the original record.
 - :guilabel:`Record Name`: the name or title of the original record.
@@ -366,14 +360,14 @@ Upon doing so, the record is formatted and/or cleaned.
 Field cleaning rules
 --------------------
 
-The :guilabel:`Field Cleaning Rules` page (:menuselection:`Data Cleaning app --> Configuration -->
-Field Cleaning`) is where the conditions for fields to be cleaned and formatted can be set.
+The *Field Cleaning Rules* set the conditions for fields to be cleaned and/or formatted.
 
 These rules can be configured for each model in the database, and with varying levels of
-specificity.
+specificity. To get started, navigate to :menuselection:`Data Cleaning app --> Configuration -->
+Field Cleaning`.
 
 .. tip::
-   The field cleaning rules run once every day, by default, as part of a scheduled action chron
+   The field cleaning rules run once every day, by default, as part of a scheduled action cron
    (*Data Cleaning: Clean Records*). However, each rule can be :ref:`ran manually
    <data-cleaning/run-field-cleaning-rule>` anytime.
 
@@ -459,13 +453,31 @@ Cleaning app --> Configuration --> Field Cleaning`, and select the rule to run.
 Then, on the rule form, select the :guilabel:`Clean` button on the top-left. Upon doing so, the
 :icon:`fa-bars` :guilabel:`Records` smart button displays the number of records captured.
 
-Click on the :icon:`fa-bars` :guilabel:`Records` smart button to manage these records.
+Click on the :icon:`fa-bars` :guilabel:`Records` smart button to :ref:`manage these records
+<data_cleaning/field-cleaning>`.
 
 .. _data_cleaning/merge-action-manager:
 
 Merge action manager
 ====================
 
-The :guilabel:`Merge Action Manager` (:menuselection:`Data Cleaning app --> Configuration --> Merge
-Action Manager`) enables or disables the *Merge* action available in the *Actions* menu for models
-in the database.
+The *Merge Action Manager* enables or disables the *Merge* action available in the *Actions* menu
+for models in the database.
+
+Enable :ref:`developer-mode` and navigate to :menuselection:`Data Cleaning app --> Configuration -->
+Merge Action Manager`.
+
+Models are listed with the following columns:
+
+- :guilabel:`Model`: technical name of the model.
+- :guilabel:`Model Description`: display name of the model.
+- :guilabel:`Type`: whether the model is of the *Base Object* or *Custom Object* type.
+- :guilabel:`Transient Model`: the model handles temporary data that does not need to be stored
+  long-term in the database.
+- :guilabel:`Can Be Merged`: enables the *Merge* action for the model.
+
+To view which models are enabled by default, use the :ref:`search bar <search/filters>` to filter
+models that :guilabel:`Can Be Merged`.
+
+.. seealso::
+   :doc:`../essentials/contacts/merge`
