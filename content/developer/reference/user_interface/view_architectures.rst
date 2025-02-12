@@ -3292,15 +3292,17 @@ Their root element is ``<calendar>``. Available attributes on the root node are:
    :type: bool
    :default: False
 
-.. attribute:: event_open_popup
+.. attribute:: month_overflow
    :noindex:
 
-   If true, open events in dialog to edit them, otherwise, open them in a
-   classical form view.
+   By default, in month mode, the last days of the previous month and the first
+   days of the next months are displayed, as well as their events. This option
+   allows to disable this such that those sibling days are greyed out and their
+   events aren't displayed.
 
    :requirement: Optional
    :type: bool
-   :default: `False`
+   :default: `True`
 
 .. attribute:: show_date_picker
    :noindex:
@@ -3312,6 +3314,16 @@ Their root element is ``<calendar>``. Available attributes on the root node are:
    :requirement: Optional
    :type: bool
    :default: `True`
+
+.. attribute:: event_open_popup
+   :noindex:
+
+   If true, open events in dialog to edit them, otherwise, open them in a
+   classical form view.
+
+   :requirement: Optional
+   :type: bool
+   :default: `False`
 
 .. attribute:: form_view_id
    :noindex:
