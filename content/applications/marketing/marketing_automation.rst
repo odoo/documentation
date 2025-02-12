@@ -4,11 +4,11 @@
 Marketing Automation
 ====================
 
-The Odoo *Marketing Automation* application enables users to create dynamic campaigns with actions
-that automatically occur within a defined duration, such as sending a series of timed mass emails or
+Use the Odoo **Marketing Automation** application to create dynamic campaigns with actions that
+automatically occur within a defined duration, such as sending a series of timed mass emails or
 engaging with leads based on their interactions with marketing campaigns.
 
-While the application is designed to be user-friendly for quickly creating, launching, and reviewing
+While the application is designed to be user-friendly for creating, launching, and reviewing
 marketing campaigns, it also provides advanced features to automate repetitive tasks throughout the
 database.
 
@@ -43,19 +43,15 @@ with a :ref:`campaign template <marketing_automation/campaign-templates>`.
 Configuration
 =============
 
-To install the *Marketing Automation* application, navigate to the :menuselection:`Apps application`
-and search for `Marketing Automation`.
-
-In the list of results, click the :guilabel:`Activate` button on the :guilabel:`Marketing
-Automation` application to install it.
+To begin, make sure the **Marketing Automation** application is :ref:`installed <general/install>`.
 
 .. important::
-   Installing the *Marketing Automation* application also installs the :doc:`Email Marketing
-   <email_marketing>` app, as most features of Odoo *Marketing Automation* are dependent on that
+   Installing the **Marketing Automation** application also installs the :doc:`Email Marketing
+   <email_marketing>` app, as most features of Odoo **Marketing Automation** are dependent on that
    specific application.
 
    Additionally, install the :doc:`CRM <../sales/crm>` and :doc:`SMS Marketing <sms_marketing>`
-   applications to access *all* of the features available in *Marketing Automation*.
+   applications to access *all* of the features available in **Marketing Automation**.
 
    The following documentation assumes that all three of these dependent applications are installed
    on the database.
@@ -71,9 +67,8 @@ audience, based on predefined filters, triggers, and durations of activities.
 A new campaign can be created from scratch or from a :ref:`template
 <marketing_automation/campaign-templates>`.
 
-To create a campaign, navigate to the :menuselection:`Marketing Automation` application, from the
-main Odoo dashboard, to open the :guilabel:`Campaigns` dashboard. From here, click the
-:guilabel:`New` button to reveal a new campaign form.
+To create a campaign, navigate to the :menuselection:`Marketing Automation` application and click
+the :guilabel:`New` button to reveal a new campaign form.
 
 .. _marketing_automation/campaign-templates:
 
@@ -89,22 +84,21 @@ To get started with a template, navigate to the :menuselection:`Marketing Automa
 from the main Odoo dashboard, to open the :guilabel:`Campaigns` dashboard, which displays six
 :doc:`campaign template <marketing_automation/campaign_templates>` cards:
 
-- | :guilabel:`🏷️ Tag Hot Contacts`
+- | :icon:`fa-tag` :guilabel:`Tag Hot Contacts`
   | :guilabel:`Send a welcome email to contacts and tag them if they click it.`
-- | :guilabel:`✌️ Welcome Flow`
+- | :icon:`fa-hand-peace-o` :guilabel:`Welcome Flow`
   | :guilabel:`Send a welcome email to new subscribers, remove the address that bounced.`
 - | :icon:`fa-check-square` :doc:`Double Opt-in
     <marketing_automation/campaign_templates/double_optin>`
   | :guilabel:`Send an email to new recipients to confirm their consent.`
-- | :guilabel:`🔍 Commercial prospection`
+- | :icon:`fa-search` :guilabel:`Commercial prospection`
   | :guilabel:`Send a free catalog and follow-up according to reactions.`
-- | :guilabel:`📞 Schedule Calls`
+- | :icon:`fa-phone` :guilabel:`Schedule Calls`
   | :guilabel:`If a lead is created for existing contact, schedule a call with their salesperson.`
-- | :guilabel:`⭐️ Prioritize Hot leads`
+- | :icon:`fa-star` :guilabel:`Prioritize Hot leads`
   | :guilabel:`Send an email to new leads and assign them a high priority if they open it.`
 
 .. image:: marketing_automation/campaigns-dashboard.png
-   :align: center
    :alt: Six campaign template cards on the Campaigns dashboard of the Marketing Automation app.
 
 These templates are designed to be used as starting points for creating new campaigns. Click one of
@@ -112,8 +106,7 @@ the template cards to open the campaign form.
 
 .. tip::
    To display the campaign template cards again after a campaign has been created, type the name of
-   a campaign that does **not** exist in the database into the :guilabel:`Search...` bar, then press
-   :kbd:`Enter`.
+   a campaign that does **not** exist in the database into the search bar, then press :kbd:`Enter`.
 
    For example, searching for `empty` displays the campaign template cards again, as long as there
    is not a campaign with the name "empty" in the database.
