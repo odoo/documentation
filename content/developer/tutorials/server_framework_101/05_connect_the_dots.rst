@@ -30,8 +30,8 @@ specifies the fields that trigger an automatic recomputation whenever their valu
 that computed fields remain consistent.
 
 .. example::
-   In the example below, the computed `margin`, `is_profitable` and `breadcrumb` fields are added to
-   the `product` model.
+   In the following example, the computed `margin`, `is_profitable` and `breadcrumb` fields are
+   added to the `product` model.
 
    .. code-block:: python
 
@@ -99,8 +99,8 @@ Let's implement them.
    Add the following fields to the corresponding models and relevant views:
 
    - **Total Area** (`real.estate.property`): The sum of the floor and garden areas.
-   - **Expiry Date** (`real.estate.offer`): The start date offset by the validity period.
    - **Best Offer** (`real.estate.property`): The maximum amount of all offers.
+   - **Expiry Date** (`real.estate.offer`): The start date offset by the validity period.
 
    .. tip::
       - Use the :meth:`mapped <odoo.models.Model.mapped>` method to extract a recordset's field
@@ -111,9 +111,10 @@ Let's implement them.
 
    .. code-block:: python
       :caption: `real_estate_property.py`
-      :emphasize-lines: 1,8,13,16-27
+      :emphasize-lines: 1,9,14,17-28
 
       from odoo import api, fields, models
+
 
       class RealEstateProperty(models.Model):
           [...]
@@ -174,10 +175,11 @@ Let's implement them.
 
    .. code-block:: python
       :caption: `real_estate_offer.py`
-      :emphasize-lines: 1-2,9,12-15
+      :emphasize-lines: 1-2,10,13-16
 
       from odoo import api, fields, models
       from odoo.tools import date_utils
+
 
       class RealEstateOffer(models.Model):
           [...]
@@ -232,7 +234,7 @@ declaration using the `inverse` argument. This method specifies how updates to t
 should be applied to its dependencies.
 
 .. example::
-   In the example below, an inverse method is added to the `margin` field.
+   In the following example, an inverse method is added to the `margin` field.
 
    .. code-block:: python
 
@@ -290,7 +292,7 @@ triggers a recomputation, which can significantly impact performance on producti
 large number of records.
 
 .. example::
-   In the example below, the `margin` field is stored in the database.
+   In the following example, the `margin` field is stored in the database.
 
    .. code-block:: python
 
@@ -341,7 +343,8 @@ declaration using the `search` argument. This method receives the search query's
 domain must be constructed using stored fields only.
 
 .. example::
-   In the example below, a search method is added to allow searching on the `is_profitable` field.
+   In the following example, a search method is added to allow searching on the `is_profitable`
+   field.
 
    .. code-block:: python
 
@@ -482,7 +485,8 @@ the path of the related record's field. Related fields can also be stored with t
 argument, just like regular computed fields.
 
 .. example::
-   In the example below, the related `category_name` field is derived from the `category_id` field.
+   In the following example, the related `category_name` field is derived from the `category_id`
+   field.
 
    .. code-block:: python
 
@@ -631,7 +635,8 @@ through `self`. If field values are modified, the changes are automatically refl
         format, or as keyword arguments when using the :code:`%(name)s` format.
       - The `_origin` model attribute refers to the original record before user modifications.
       - The `env` model attribute is an object that allows access to other models and their classes.
-      - The `search` method can be used to query a model for records matching a given search domain.
+      - The `search` environment method can be used to query a model for records matching a given
+        search domain.
       - In onchanges methods, the `id` attribute cannot be used to directly access the record's ID.
       - Blocking user errors are raised as exceptions.
 
@@ -920,7 +925,7 @@ Set default field values
 ========================
 
 When creating new records, pre-filling certain fields with default values can simplify data entry
-and reduces the likelihood of errors. Defaults are particularly useful when values are derived from
+and reduce the likelihood of errors. Defaults are particularly useful when values are derived from
 the system or context, such as the current date, time, or logged-in user.
 
 Fields can be assigned a default value by including the `default` argument in their declaration.
@@ -929,11 +934,68 @@ as a model method or a lambda function. In both cases, the `self` argument provi
 environment but does not represent the current record, as no record exists yet during the creation
 process.
 
-.. todo: real.estate.offer.amount::default -> property.selling_price
-.. todo: salesperson_id = fields.Many2one(default=lambda self: self.env.user)
-.. todo: availability_date = fields.Date(default=lambda self: date_utils.add(fields.Date.today(), months=2))
-.. todo: real.estate.tag.color -> default=_default_color ;  def _default_color(self): return random.randint(1, 11)  (check if lambda works)
-.. todo: copy=False on some fields
+.. example::
+   In the following example, a default value is assigned to the `price` and `category_id` fields.
+
+   .. code-block:: py
+
+      price = fields.Float(string="Sales Price", required=True, default=100)
+      category_id = fields.Many2one(
+          string="Category",
+          comodel_name='product.category',
+          ondelete='restrict',
+          required=True,
+          default=lambda self: self.env.ref('product_tutorial.category_apparel'),
+      )
+
+   .. note::
+      The `ref` environment method can be used to retrieve a record by its XML ID, similar to how
+      it's done in data files.
+
+To make our real estate app more user-friendly, we can help with data entry by pre-filling key
+fields with default values.
+
+.. exercise::
+   #. Set the current user as the default salesperson for new properties.
+   #. Set the default availability date of properties to two months from today.
+   #. Assign a random default color to property tags.
+
+   .. tip::
+      - The current user can be accessed through the `user` environment property.
+      - Color codes range from 1 to 11.
+
+.. spoiler:: Solution
+
+   .. code-block:: python
+      :caption: `real_estate_property.py`
+      :emphasize-lines: 1-4,6-8
+
+      availability_date = fields.Date(
+          string="Availability Date",
+          default=lambda self: date_utils.add(fields.Date.today(), months=2)
+      )
+      [...]
+      salesperson_id = fields.Many2one(
+          string="Salesperson", comodel_name='res.users', default=lambda self: self.env.user
+      )
+
+   .. code-block:: python
+      :caption: `real_estate_tag.py`
+      :emphasize-lines: 1,9-10,13
+
+      import random
+
+      from odoo import fields, models
+
+
+      class RealEstateTag(models.Model):
+          [...]
+
+          def _default_color(self):
+              return random.randint(1, 11)
+
+          name = fields.Char(string="Label", required=True)
+          color = fields.Integer(string="Color", default=_default_color)
 
 .. _tutorials/server_framework_101/action_buttons:
 
