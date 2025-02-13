@@ -92,6 +92,104 @@ If you wish to have any amount input in the :guilabel:`II` section (from boxes :
 
 Repeat this operation for all contacts related to the **agriculture** industry.
 
+
+.. _localizations/spain/veri-factu:
+
+Veri*Factu
+==========
+
+.. note::
+   Producers of Veri*Factu billing systems must self-certify their compliance with the regulations.
+   :download:`Download Odoo's "declaración responsable"<spain/declaracion_responsable.pdf>`
+
+**Veri*Factu** is an e-Invoicing system used by the Spanish Tax Agency. It is mandatory for most
+taxpayers in Spain, except for those who use the SII system or are under a regional tax regime
+(i.e., TicketBai).
+
+Odoo allows :ref:`invoices <localizations/spain/veri-factu-invoices>` and Point of Sale :ref:`orders
+<localizations/spain/veri-factu-orders>` to be automatically sent to the tax authorities.
+
+.. _localizations/spain/veri-factu-configuration:
+
+Configuration
+-------------
+
+To enable **Veri\*Factu**, follow these steps:
+
+#. Open the Settings app to make sure your company's :guilabel:`Country` and :guilabel:`Tax ID` are
+   correctly set in the :ref:`Companies <general/companies/company>` section.
+#. :ref:`Install <general/install>` the :guilabel:`Spain - Veri*Factu (l10n_es_edi_verifactu)`
+   module.
+#. Go to :menuselection:`Accounting --> Configuration --> Settings`, scroll to the
+   :guilabel:`Veri\*Factu` section, check the :guilabel:`Enable Veri*Factu` option, and click
+   :icon:`oi-arrow-right` :guilabel:`Manage certificates` to add a certificate.
+#. In the :guilabel:`Certificates for Veri\*Factu` list view, click :guilabel:`New`.
+#. Click :guilabel:`Upload your file`, then select a certificate file and enter the
+   :guilabel:`Password` needed to open the certificate (if there is one).
+
+.. note::
+   - At least one certificate has to be uploaded.
+   - By default Veri*Factu is in testing mode. The data is sent to test servers
+     and is not considered official. When official data can be sent to the production servers, go to
+     the :guilabel:`Veri\*Factu` section in the :guilabel:`Settings` and disable :guilabel:`Test
+     Environment`.
+
+.. _localizations/spain/veri-factu-invoices:
+
+Invoices
+--------
+
+Once an :doc:`invoice <../../finance/accounting/customer_invoices>` is confirmed, it can be
+:ref:`sent <accounting/invoice/sending>`. In the :guilabel:`Send` window, the Veri*Factu option is
+available if Veri*Factu has been enabled.
+
+Click :guilabel:`Send` to generate a JSON file containing the invoice details. This file is stored
+as a Veri*Factu document. In the :guilabel:`Veri*Factu` tab, all corresponding documents are
+listed by their creation date and current status.
+
+.. tip::
+   To download a JSON file, click on its document in the :guilabel:`Veri*Factu` tab. Then, in
+   the :guilabel:`Open: Veri*Factu Documents` window, click the link in the :guilabel:`JSON` field.
+
+.. note::
+   - The document should be sent to the :abbr:`AEAT (Agencia Estatal de Administración Tributaria)`
+     immediately. However, it may be delayed due to mandatory waiting periods between submissions
+     required by the :abbr:`AEAT (Agencia Estatal de Administración Tributaria)`. In such cases,
+     the document is automatically sent the next time a scheduled action runs.
+   - A Veri\*Factu **QR code** appears on the invoice PDF. Scan this code to verify that the invoice
+     has been received and recognized by the :abbr:`AEAT (Agencia Estatal de Administración
+     Tributaria)`.
+
+.. _localizations/spain/veri-factu-orders:
+
+Point of sale orders
+--------------------
+
+Once an order has been :ref:`paid <pos/sell>`, a JSON file containing the order details is
+generated. This file is stored as a Veri*Factu document.
+
+Go to :menuselection:`Point of Sale --> Orders --> Orders`. In the :guilabel:`Orders` list view,
+select the relevant order. In the :guilabel:`Veri*Factu` tab, all the corresponding documents are
+listed by their creation date and current status.
+
+.. tip::
+   To download a JSON file, click on its document in the :guilabel:`Veri*Factu` tab. Then, in
+   the :guilabel:`Open: Veri*Factu Documents` window, click the link in the :guilabel:`JSON` field.
+
+.. note::
+   - The document should be sent to the :abbr:`AEAT (Agencia Estatal de Administración Tributaria)`
+     immediately. However, it may be delayed due to mandatory waiting periods between submissions
+     required by the :abbr:`AEAT (Agencia Estatal de Administración Tributaria)`. In such cases,
+     the document is automatically sent the next time a scheduled action runs.
+
+If an invoice is generated for an order during the payment process, the Veri*Factu document is
+:ref:`created and sent for the invoice <localizations/spain/veri-factu-invoices>` instead.
+
+.. note::
+   A Veri\*Factu **QR code** appears on the order receipt, even if an invoice is created for the
+   order. Scan this code to verify that the invoice has been received and recognized by the
+   :abbr:`AEAT (Agencia Estatal de Administración Tributaria)`
+
 TicketBAI
 =========
 
