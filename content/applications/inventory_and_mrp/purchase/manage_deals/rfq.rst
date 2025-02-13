@@ -91,6 +91,8 @@ In addition to various view options, the :guilabel:`Requests for Quotation` dash
 .. seealso::
    :doc:`../../../essentials/search`
 
+.. _purchase/manage_deals/create-new-rfq:
+
 Create new |RFQ|
 ----------------
 
