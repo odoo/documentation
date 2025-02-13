@@ -213,11 +213,19 @@ These helpers are also available by importing `odoo.tools.date_utils`.
 Relational Fields
 ~~~~~~~~~~~~~~~~~
 
+.. _reference/fields/many2one:
+
 .. autoclass:: Many2one()
+
+.. _reference/fields/one2many:
 
 .. autoclass:: One2many()
 
+.. _reference/fields/many2many:
+
 .. autoclass:: Many2many()
+
+.. _reference/fields/command:
 
 .. autoclass:: Command()
    :members:
@@ -509,6 +517,8 @@ behavior is desired:
 
   :class:`~odoo.fields.Many2one`
   :type: :class:`~odoo.addons.base.models.res_company`
+
+.. _reference/orm/recordsets:
 
 Recordsets
 ==========
