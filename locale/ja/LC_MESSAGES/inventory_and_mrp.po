@@ -1407,7 +1407,7 @@ msgstr "世界各地への発送/配達"
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:183
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:186
 msgid "Destination location"
-msgstr "目的地"
+msgstr "移動先ロケーション"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/gs1_nomenclature.rst:183
 msgid "(410)(\\\\d{13})"
@@ -2634,7 +2634,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst-1
 msgid ""
 "Blank internal transfer form with source location and destination location."
-msgstr "移動元と移動先が記載された空白の内部運送フォーム。"
+msgstr "移動元ロケーションと移動先ロケーションが記載された空白の内部運送フォーム。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/transfers_scratch.rst:74
 msgid ""
@@ -4217,7 +4217,7 @@ msgid ""
 " enabling the *Batch Transfers* and *Packages* features "
 "(:menuselection:`Inventory app --> Configuration --> Settings`)."
 msgstr ""
-"*梱包の使用* はOdooの梱包フォームにあるフィールドで、*バッチ転送* と *梱包* 機能を有効にしないと表示されません "
+"*梱包の使用* はOdooの梱包フォームにあるフィールドで、*一括転送* と *梱包* 機能を有効にしないと表示されません "
 "(:menuselection:`在庫アプリ --> 設定 --> 管理設定`)。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:21
@@ -4410,8 +4410,8 @@ msgid ""
 "clicked to create a new package, `PACK0000002`, and assign all items to it "
 "in the :guilabel:`Destination Package` field."
 msgstr ""
-"バッチ転送 `BATCH/00003` で :guilabel:`梱包する` ボタンがクリックされ、新しい梱包 `PACK0000002` が作成され、"
-" :guilabel:`先梱包` フィールドに全てのアイテムが割当てられました。"
+"一括転送 `BATCH/00003` で :guilabel:`梱包する` ボタンがクリックされ、新しい梱包 `PACK0000002` が作成され、 "
+":guilabel:`先梱包` フィールドに全てのアイテムが割当てられました。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:128
 msgid ""
@@ -10223,6 +10223,8 @@ msgid ""
 "serial numbers that may have been previously added. To replace existing "
 "serial numbers in the list, leave the box unchecked."
 msgstr ""
+":guilabel:`既存の明細を保持する` チェックボックス: 以前に追加された既存のシリアル番号を保持するには、このボックスにチェックを入れます。 "
+"リスト内の既存のシリアル番号を置き換える場合は、ボックスのチェックを外したままにしておきます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:227
 msgid ""
@@ -10232,6 +10234,9 @@ msgid ""
 ":guilabel:`Quantity` and the :guilabel:`Serial Numbers` fields on the "
 "delivery order or receipt update automatically."
 msgstr ""
+"これらのフィールドに入力したら、:guilabel:`生成` ボタンをクリックします。新しく生成されたシリアル番号が、:guilabel:`在庫移動` "
+"ウィンドウに表示されます。:icon:`fa-cloud-upload` :guilabel:`(保存)` "
+"をクリックすると、配送オーダまたは入荷の:guilabel:`数量`および :guilabel:`シリアル番号` フィールドが自動的に更新されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:233
 msgid "Import Serials/Lots"
@@ -10243,6 +10248,8 @@ msgid ""
 " :guilabel:`Import Serials/Lots` button in the :guilabel:`Open: Stock move` "
 "pop-up window."
 msgstr ""
+"複数のシリアル番号を一度に割当てるもう一つの方法は、ポップアップウィンドウ :guilabel:`開く: 在庫移動` の "
+":guilabel:`シリアル/ロットをインポートする` ボタンをクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:239
 msgid ""
@@ -10250,6 +10257,8 @@ msgid ""
 "is checked in the :ref:`receipt's configuration page "
 "<inventory/product_management/operation-type-setting>`."
 msgstr ""
+"インポートボタンが表示されていない場合は、:ref:`入荷設定ページ <inventory/product_management/operation-"
+"type-setting>` で :guilabel:`新規作成` ボックスにチェックが入っていることを確認して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:242
 msgid ""
@@ -10257,6 +10266,8 @@ msgid ""
 "serial number on a separate line in the :guilabel:`Lots/Serial numbers` text"
 " field."
 msgstr ""
+"それにより、:guilabel:`シリアル番号のインポート` ポップアップウィンドウが開きます。:guilabel:`ロット/シリアル番号` "
+"テキストフィールドに、シリアル番号を明細ごとに分けて入力します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:245
 msgid ""
@@ -10264,16 +10275,21 @@ msgid ""
 "serials>`, check the :guilabel:`Keep current lines` box to keep existing "
 "serial numbers, or leave it unchecked to overwrite them."
 msgstr ""
+":ref:`シリアルを生成 <inventory/product_management/generate-serials>` "
+"の場合と同様に、既存のシリアル番号を維持するには、:guilabel:`現在の明細を維持` "
+"ボックスにチェックを入れ、上書きする場合はチェックを外します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:250
 msgid ""
 "To expedite this process, copy/paste serial numbers from an existing "
 "spreadsheet and add them to the :guilabel:`Lots/Serial numbers` text field."
 msgstr ""
+"このプロセスを迅速化するには、既存のスプレッドシートからシリアル番号をコピー/ペーストし、:guilabel:`ロット/シリアル番号` "
+"テキストフィールドに追加します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst-1
 msgid "Show import serials pop-up."
-msgstr ""
+msgstr "シリアルをインポートポップアップを表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:259
 msgid ""
@@ -10314,6 +10330,8 @@ msgid ""
 "This level of detail permits more precise tracking, for example, when "
 "handling perishable or regulated goods."
 msgstr ""
+"入荷および配送オーダフォームの両方からアクセス可能な *詳細オペレーション* "
+"ページでは、シリアル番号、正確な場所、使用期限などの情報を含む、プロダクトの移動の詳細なビューを表示します。この詳細レベルにより、例えば、生鮮品や規制対象品を扱う場合など、より正確なトラッキングが可能になります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:287
 msgid ""
@@ -10322,26 +10340,30 @@ msgid ""
 "click on the :icon:`fa-bars` :guilabel:`Moves` smart button at the top of "
 "the page."
 msgstr ""
+"このページにアクセスするには、まず :ref:`倉庫入荷または配送オーダを選択 "
+"<inventory/product_management/incoming-outgoing-products>` します。次に、ページ上部の "
+":icon:`fa-bars` :guilabel:`移動` スマートボタンをクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:291
 msgid ""
 "In the :guilabel:`Lot/Serial Number` column, manually type (or select from "
 "the drop-down menu) the desired serial numbers for each individual product."
 msgstr ""
+":guilabel:`ロット/シリアル番号` 列に、各プロダクトの希望するシリアル番号を手動で入力 (またはドロップダウンメニューから選択) します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst-1
 msgid "Show the detailed Moves page."
-msgstr ""
+msgstr "詳細な仕訳ページを表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:297
 msgid ""
 "When finished, click the receipt/delivery order's breadcrumbs, and the "
 "assigned serial numbers are automatically saved."
-msgstr ""
+msgstr "完了したら、入荷/配送オーダのブレッドクラムをクリックすると、割当てられたシリアル番号が自動的に保存されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:301
 msgid "Display serial numbers on delivery slips"
-msgstr ""
+msgstr "配送伝票にシリアル番号を表示する"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:303
 msgid ""
@@ -10350,6 +10372,7 @@ msgid ""
 " be helpful to customers in cases where serial numbers are needed, such as "
 "filing an RMA or repair request, or registering the product."
 msgstr ""
+"シリアル番号で追跡されているプロダクトを販売する際には、顧客に送付する配送伝票にシリアル番号を記載することができます。これは、顧客がRMAや修理依頼、製品登録など、シリアル番号が必要な場合に役立ちます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:307
 msgid ""
@@ -10359,6 +10382,9 @@ msgid ""
 ":guilabel:`Traceability` section, tick the :guilabel:`Display Lots & Serial "
 "Numbers on Delivery Slips` checkbox, and click :guilabel:`Save`."
 msgstr ""
+"配送伝票にシリアル番号を含めるには、:menuselection:`在庫` アプリを開き、:menuselection:`設定 --> 管理設定` "
+"に移動します。 :guilabel:`トレーサビリティ` セクションまでスクロールダウンし、:guilabel:`ロット/シリアル番号を配送伝票に表示`"
+" チェックボックスにチェックを入れ、:guilabel:`保存` をクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:312
 msgid ""
@@ -10366,6 +10392,8 @@ msgid ""
 "Slips` setting, serial numbers are listed on delivery slips for products "
 "tracked by serial numbers, once the delivery order is validated."
 msgstr ""
+":guilabel:`ロット/シリアル番号を配送伝票に表示` "
+"を有効にすると、配送オーダが検証済の場合、シリアル番号で追跡されるプロダクトの配送伝票にシリアル番号が記載されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:316
 msgid ""
@@ -10373,6 +10401,8 @@ msgid ""
 "the :menuselection:`Inventory` app, click on :guilabel:`Delivery Orders`, "
 "and select an order containing a product tracked using serial numbers."
 msgstr ""
+"配送オーダおよび配送伝票に記載されているシリアル番号を確認するには、:menuselection:`在庫` "
+"アプリに移動し、:guilabel:`配送オーダ` をクリックし、シリアル番号を使用して追跡されているプロダクトを含むオーダを選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:320
 msgid ""
@@ -10383,6 +10413,11 @@ msgid ""
 ":guilabel:`Serial Numbers` column to appear. The serial number(s) for each "
 "product included in the order are displayed in this column."
 msgstr ""
+"オーダに含まれるプロダクトのシリアル番号を表示するには、:guilabel:`オペレーション` "
+"タブが選択されていることを確認し、タブの右側にある:icon:`oi-settings-adjust` :guilabel:`(調整)` "
+"アイコンをクリックします。:guilabel:`シリアル番号` "
+"チェックボックスにチェックが入っていることを確認してください。これにより、:guilabel:`シリアル番号` "
+"列が表示されます。オーダに含まれる各プロダクトのシリアル番号がこの列に表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:329
 msgid ""
@@ -10392,10 +10427,14 @@ msgid ""
 "the device's browser or file manager. Serial numbers are listed next to "
 "their respective products in the :guilabel:`Lot/Serial Number` column."
 msgstr ""
+"オーダフォームの上部にある :icon:`fa-cog` :guilabel:`(アクション)` "
+"ボタンをクリックし、:menuselection:`印刷 --> 配送伝票` を選択します。 配送伝票がダウンロードされます。 "
+"デバイスのブラウザまたはファイルマネジャーを使用して、配送伝票を開きます。 シリアル番号は、:guilabel:`ロット/シリアル番号` "
+"列のそれぞれのプロダクトの隣にリスト表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:338
 msgid "Traceability & reporting"
-msgstr ""
+msgstr "トレーサビリティ & レポーティング"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:340
 msgid ""
@@ -10403,10 +10442,12 @@ msgid ""
 " and traceability reports to see the entire lifecycle of a product: when and"
 " where it originated, where it was stored, and who it was shipped to."
 msgstr ""
+"メーカーや会社は、*ロット/シリアル番号* "
+"ダッシュボードとトレーサビリティレポートを参照することで、プロダクトのライフサイクル全体を確認することができます。いつ、どこで製造されたか、どこに保管されていたか、誰宛に出荷されたかなどです。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:345
 msgid "Lots/Serial Numbers dashboard"
-msgstr ""
+msgstr "ロット/シリアル番号ダッシュボード"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:347
 msgid ""
@@ -10430,6 +10471,9 @@ msgid ""
 "right` :guilabel:`(expand)` icon to show which serial numbers are assigned "
 "to the chosen product."
 msgstr ""
+":guilabel:`ロット/シリアル番号` ダッシュボードでは、シリアル番号が割当てられたプロダクトがデフォルトでリスト表示されます。 "
+":icon:`fa-caret-right` :guilabel:`(展開)` "
+"アイコンをクリックすると、選択したプロダクトに割当てられているシリアル番号が表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:358
 msgid ""
@@ -10439,6 +10483,10 @@ msgid ""
 " which reveals a mini drop-down menu. From this mini drop-down menu, select "
 ":guilabel:`Lot/Serial Number`, and click :guilabel:`Apply`."
 msgstr ""
+"シリアル番号(またはロット)でグループ化するには、まず右上の検索バーからデフォルトのフィルタを全て削除します。次に、:icon:`fa-caret-"
+"down` :guilabel:`(下向き矢印)` アイコンをクリックし、:guilabel:`カスタムグループ追加` "
+"を選択すると、ミニドロップダウンメニューが表示されます。このミニドロップダウンメニューから :guilabel:`ロット/シリアル番号` "
+"を選択し、:guilabel:`適用` をクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:363
 msgid ""
@@ -10447,6 +10495,7 @@ msgid ""
 "number. For unique serial numbers that are not reused, there should be just "
 "one product per serial number."
 msgstr ""
+"それにより、既存のシリアル番号とロットが全て表示されます。各行は、そのシリアル番号/ロット番号に割当てられたプロダクトの数量全てを表示して展開することができます。再利用されていない固有のシリアル番号については、シリアル番号ごとにプロダクトは1つのみ存在します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst-1
 msgid "Serial numbers reporting page with drop-down lists."
@@ -10461,10 +10510,13 @@ msgid ""
 "stock on-hand using that serial number, and any operations made using that "
 "serial number."
 msgstr ""
+"個々のシリアル番号(またはロット)に関する追加情報については、シリアル番号の明細をクリックすると、特定の :guilabel:`シリアル番号` "
+"フォームが表示されます。このフォームから、:guilabel:`ロケーション` と :guilabel:`トレーサビリティ` "
+"のスマートボタンをクリックすると、そのシリアル番号を使用した全ての手持在庫と、そのシリアル番号を使用した全てのオペレーションを確認することができます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:377
 msgid ":doc:`Reassign <reassign>`"
-msgstr ""
+msgstr ":doc:`再割当 <reassign>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:379
 msgid ""
@@ -10473,18 +10525,21 @@ msgid ""
 " Number` field or the ability to filter by serial number. Go to "
 ":menuselection:`Inventory app --> Reporting` to access:"
 msgstr ""
+":guilabel:`ロット/シリアル番号` ダッシュボードの使用に加えて、:guilabel:`ロット/シリアル番号` "
+"フィールドを表示する、またはシリアル番号でフィルタリングする機能を持つ、レポートテンプレートがいくつかあります。 "
+":menuselection:`在庫アプリ --> レポート` にアクセスするには、以下に移動します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:383
 msgid ":guilabel:`Locations` report"
-msgstr ""
+msgstr ":guilabel:`ロケーション` リポート"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:384
 msgid ":guilabel:`Moves History` report"
-msgstr ""
+msgstr ":guilabel:`移動履歴` レポート"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:385
 msgid ":guilabel:`Moves Analysis` report"
-msgstr ""
+msgstr ":guilabel:`移動分析` レポート"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving.rst:5
 msgid "Shipping and receiving"
@@ -10879,6 +10934,9 @@ msgid ""
 ":guilabel:`Customer`, add a storable :guilabel:`Product`, and click "
 ":guilabel:`Confirm`."
 msgstr ""
+"新規に見積を作成するには、:menuselection:`販売アプリ --> 作成` に移動し、空白の見積フォームを表示します。 "
+"空白の見積フォームで、:guilabel:`顧客` を選択し、在庫可能品として:guilabel:`プロダクト` を追加し、:guilabel:`確認`"
+" をクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/delivery_three_steps.rst:51
 msgid ""
@@ -10928,7 +10986,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/delivery_three_steps.rst-1
 msgid ""
 "Picking order operation showing source location and destination location."
-msgstr "出荷元と出荷先を示すピッキングオーダ。"
+msgstr "移動元ロケーションと移動先ロケーションを示すピッキングオーダ。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/delivery_three_steps.rst:78
 msgid "Process a packing"
@@ -10961,7 +11019,7 @@ msgstr "販売オーダに関連付けられている梱包オーダをクリッ
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/delivery_three_steps.rst-1
 msgid ""
 "Packing order operation showing source location and destination location."
-msgstr "出荷元と出荷先を示す梱包オーダオペレーション。"
+msgstr "移動元ロケーションと移動先ロケーションを示す梱包オーダオペレーション。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/delivery_three_steps.rst:93
 msgid ""
@@ -13296,15 +13354,17 @@ msgid ""
 " up, these rules help automate the logistics of product movement based on "
 "specific conditions."
 msgstr ""
+"Odooの *ルート* "
+"は、プッシュとプルの規則を使用して、社内または社外を問わず、異なる場所間のプロダクトの移動を管理します。これらの規則は一度設定すると、特定の条件に基づいたプロダクト移動のロジスティクスを自動化できます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:10
 msgid ""
 "`Odoo Tutorials: Routes <https://www.youtube.com/watch?v=qkhDUezyZuc>`_"
-msgstr ""
+msgstr "`Odooチュートリアル: ルート <https://www.youtube.com/watch?v=qkhDUezyZuc>`_"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:11
 msgid ":doc:`Standard routes in Odoo <../daily_operations>`"
-msgstr ""
+msgstr ":doc:`Odooのスタンダードルート <../daily_operations>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:14
 msgid ""
@@ -13312,10 +13372,11 @@ msgid ""
 ":ref:`packagings <inventory/product_management/route-on-packaging>`, and on "
 "the sales order line."
 msgstr ""
+"ルートは、プロダクト、プロダクトカテゴリ、配送方法、:ref:`パッケージング <inventory>`、および販売オーダ明細に適用されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:18
 msgid "About routes and terminology"
-msgstr ""
+msgstr "ルートと用語について"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:20
 msgid ""
@@ -13368,7 +13429,7 @@ msgstr "プッシュ規則"
 msgid ""
 "Push rules are used to *supply products into a storage locations* as soon as"
 " they arrive at a specific receiving location."
-msgstr ""
+msgstr "プッシュ規則は、特定の入荷ロケーションにプロダクトが到着次第、*保管場所にプロダクトを供給* するために使用されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:54
 msgid ""
@@ -13384,14 +13445,17 @@ msgid ""
 "can be applied to different products, allowing for customized storage "
 "locations."
 msgstr ""
+"1つのプッシュ規則を使用する :doc:`1ステップ入荷ルート  <receipts_delivery_one_step>` "
+"では、プロダクトが倉庫に到着すると、プッシュ規則によって自動的に *保管場所* に転送されます。 "
+"異なるプッシュ規則を異なるプロダクトに適用することで、保管場所をカスタマイズすることができます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:66
 msgid "Rule for a Receive in one step route."
-msgstr ""
+msgstr "1ステップで受信するためのルート規則。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:66
 msgid "Push rule for the 'Receive in one step' route."
-msgstr ""
+msgstr "'1ステップで入荷' ルートにプッシュ規則を適用します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:68
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:90
@@ -13399,6 +13463,8 @@ msgid ""
 "For more information about configuring rules, skip to the :ref:`Configure "
 "rules section <inventory/shipping_receiving/configure-rules>`."
 msgstr ""
+"規則の設定に関する詳細については :ref:`ルール設定規則セクション <inventory/shipping_receiving/configure-"
+"rules>` をご覧下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:72
 msgid "Pull rules"
@@ -13410,6 +13476,9 @@ msgid ""
 ":doc:`need to restock "
 "<../../warehouses_storage/replenishment/reordering_rules>`."
 msgstr ""
+"販売オーダや :doc:`再仕入の必要 "
+"<../../warehouses_storage/replenishment/reordering_rules>` "
+"など、オンデマンドでプロダクトの仕訳をトリガするプル規則。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:77
 msgid ""
@@ -13421,14 +13490,19 @@ msgid ""
 "rule creates a transfer from *Stock* to *Output*. The warehouse workers then"
 " process these transfers in the reverse order: picking, then shipping."
 msgstr ""
+"プル規則は、要求された場所から逆方向に機能します。例えば、:ref:`2ステップ配送  "
+"<inventory/shipping_receiving/two-step-delivery>` ルートでは、アイテムが *在庫* から *出荷* "
+"に仕訳され、*顧客ロケーション* に配送される前に、プル規則がまず *出荷* から顧客への転送を作成します。プロダクトが *出荷* "
+"にない場合、別のプル規則により *在庫* から *出荷* への転送が作成されます。 "
+"その後、倉庫作業員がこれらの転送を逆の順序で処理します。つまり、ピッキング、配送の順です。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:88
 msgid "Example pull rule."
-msgstr ""
+msgstr "プル規則の例"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:88
 msgid "Pull rules for the 'Deliver in two steps' route."
-msgstr ""
+msgstr "'2ステップで入荷' ルートにプル規則を適用します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:98
 msgid ""
@@ -13937,6 +14011,9 @@ msgid ""
 "list. After the picking, the batch is taken to an output location, where the"
 " products are sorted into their respective delivery packages."
 msgstr ""
+"*バッチピッキング* により、1人のピッカーが複数のオーダを同時に処理することができ、倉庫内の場所を移動する回数を減らすことができます。 "
+"バッチでピッキングを行う際には、オーダはグループ化され、ピッキングリストに統合されます。 "
+"ピッキング後、バッチは出荷場所に運ばれ、そこでプロダクトはそれぞれの配送パッケージに仕分けられます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:12
 msgid ""
@@ -13954,6 +14031,7 @@ msgid ""
 "workers to pick items for multiple orders in one trip through the warehouse,"
 " reducing travel time and boosting productivity."
 msgstr ""
+"バッチピッキングは、安定した需要のある大量のオーダを処理する業界・倉庫に最適です。この方法では、作業員が倉庫内を1回巡回するだけで複数のオーダの品目をピッキングできるため、移動時間を短縮し、生産性を向上し業務効率を高めることができます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:23
 msgid ""
@@ -13962,6 +14040,8 @@ msgid ""
 ":guilabel:`Operations` section, check the :guilabel:`Batch, Wave & Cluster "
 "Transfers` box."
 msgstr ""
+"バッチピッキングオプションを有効化するには、まず最初に :menuselection:`在庫アプリ --> 設定 --> 管理設定` に進みます。 "
+":guilabel:`オペレーション` セクションで、:guilabel:`バッチ、ウェーブ、クラスタ転送` ボックスにチェックを入れます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst-1
 msgid "Enable the *Batch Transfers* in Inventory > Configuration > Settings."
@@ -14008,10 +14088,14 @@ msgid ""
 ":icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon, then select "
 ":guilabel:`Prepare Batch`."
 msgstr ""
+":menuselection:`在庫アプリ` "
+"から直接転送を手動でグループ化するには、:guilabel:`在庫概要`メニューから希望するオペレーションタイプ "
+"(:guilabel:`入荷かんばんカード` など) にカーソルを合わせて、:icon: `fa-ellipsis-v` "
+":guilabel:`(縦三点リーダ)` アイコンをクリックし、:guilabel:`バッチを準備` を選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst-1
 msgid "The Inventory dashboard with the Prepare Batch option highlighted."
-msgstr ""
+msgstr "バッチ処理オプションがハイライトされた在庫ダッシュボード。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:52
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:231
@@ -14047,6 +14131,9 @@ msgid ""
 ":guilabel:`Vehicle Category` fields, see :doc:`dispatch management system "
 "<../../shipping_receiving/setup_configuration/dispatch>`."
 msgstr ""
+":guilabel:`ドックロケーション`、:guilabel:`車両`、および :guilabel:`車両カテゴリ` "
+"フィールドの詳細については、:doc:`発送管理システム "
+"<../../shipping_receiving/setup_configuration/dispatch>` を参照して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:66
 msgid ""
@@ -14080,6 +14167,8 @@ msgid ""
 "Willis`, for the `Pick` :guilabel:`Operation Type`. The :guilabel:`Scheduled"
 " Date` is set to `August 11`."
 msgstr ""
+"新しい一括転送が、:guilabel:`担当`、`Joel Willis`、`ピック`  :guilabel:`オペレーションタイプ` "
+"に割当てられます。 :guilabel:`予定日` は `8月11日` に設定されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:0
 msgid "View of *Batch Transfers* form."
@@ -14138,11 +14227,13 @@ msgid ""
 ":guilabel:`Actions` button, and click :guilabel:`Add to batch` from the "
 "resulting drop-down menu."
 msgstr ""
+"転送リストで、一括転送に追加する転送の左にあるチェックボックスを選択します。次に、:icon:`fa-cog` :guilabel:`アクション` "
+"ボタンに移動し、ドロップダウンメニューから :guilabel:`バッチに追加` をクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst-1
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.rst:0
 msgid "Use *Add to batch* button, from the *Action* button's list."
-msgstr "*アクション*ボタンリストから*バッチに追加*ボタンを使用します。"
+msgstr "*アクション* ボタンリストから *バッチに追加* ボタンを使用します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:114
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.rst:126
@@ -14161,7 +14252,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:120
 msgid "Add a :guilabel:`Description` for this batch."
-msgstr ""
+msgstr "このバッチに :guilabel:`説明` を追加します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:123
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.rst:135
@@ -14170,12 +14261,14 @@ msgid ""
 "to help workers identify the source of the batch, where to place the batch, "
 "what shipping containers to use, etc."
 msgstr ""
+":guilabel:`説明` "
+"フィールドは、作業員がバッチのソースを特定したり、バッチをどこに配置するか、どの出荷用コンテナを使用するかなどを判断するのに役立つ情報を追加するために使用できます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:126
 msgid ""
 "To create a batch to be processed at a later time, select the "
 ":guilabel:`Draft` checkbox."
-msgstr ""
+msgstr "後で処理するバッチを作成するには、:guilabel:`ドラフト` チェックボックスを選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:128
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.rst:141
@@ -14185,17 +14278,18 @@ msgstr ":guilabel:`確認` をクリックして処理を終了します。"
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst-1
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.rst-1
 msgid "Show *Add to batch* window to create a batch transfer."
-msgstr "一括転送を作成するには、*一括に追加*ウィンドウを表示します。"
+msgstr "一括転送を作成するには、*バッチに追加* ウィンドウを表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:134
 msgid "Automatic batches"
-msgstr ""
+msgstr "自動バッチ"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:136
 msgid ""
 "Batches can be automatically created and assigned based on several criteria."
 " The *Automatic Batches* option is defined on the *operation type* level."
 msgstr ""
+"バッチは、複数の基準に基づいて自動的に作成および割当てることができます。 *自動バッチ* オプションは、*オペレーションタイプ* レベルで定義されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:140
 msgid ""
@@ -14203,6 +14297,7 @@ msgid ""
 "customer, while the shipping operation can be organized by carrier and "
 "destination country."
 msgstr ""
+"複数のステップからなる配送プロセスでは、ピッキングオペレーションは顧客ごとにグループ化でき、出荷オペレーションは運送会社と配送先国ごとに整理できます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:143
 msgid ""
@@ -14213,37 +14308,41 @@ msgid ""
 "Even if more than one grouping option is selected, only one batch is "
 "created."
 msgstr ""
+"*自動バッチ* を有効にするには、:menuselection:`在庫アプリ --> 設定 --> オペレーションタイプ` "
+"に移動し、希望するオペレーションタイプ (例：:guilabel:`配送`、:guilabel:`ピッキング`など) "
+"を選択します。次に、適切なチェックボックスをオンにして、1つまたは複数の :guilabel:`バッチグループ化` "
+"基準を選択します。複数のグループ化オプションを選択した場合でも、作成されるバッチは1つだけです。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:148
 msgid ""
 "Batches can be automatically generated based on the following criteria:"
-msgstr ""
+msgstr "バッチは、以下の基準に基づいて自動的に生成することができます:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:150
 msgid ":guilabel:`Contact`"
-msgstr ""
+msgstr ":guilabel:`連絡先`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:151
 msgid ":guilabel:`Carrier`"
-msgstr ""
+msgstr ":guilabel:`運送会社`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:152
 msgid ":guilabel:`Destination Country`"
-msgstr ""
+msgstr ":guilabel:`配送先国`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:153
 msgid ":guilabel:`Source Location`"
-msgstr ""
+msgstr ":guilabel:`移動元ロケーション`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:154
 msgid ":guilabel:`Destination Location`"
-msgstr ""
+msgstr ":guilabel:`移動先ロケーション`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst-1
 msgid ""
 "The Batch and Wave Transfers settings page with the Auto batch grouping "
 "criteria visible."
-msgstr ""
+msgstr "自動バッチグループ化の基準が表示された、一括転送とウェーブ転送の設定ページ。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:160
 msgid "Process batch transfer"
@@ -14319,6 +14418,9 @@ msgid ""
 ":guilabel:`Operations` tab because there are no :guilabel:`Reserved` "
 "quantities in stock to fulfill the batch transfer."
 msgstr ""
+" :ref:`上記の例 <inventory/management/batch-transfers-example>` と同じバッチのプロダクト "
+"`デスクパッド` は 一括転送を実行するのに必要な :guilabel:`引当済` 数量が在庫にないため、:guilabel:`オペレーション` "
+"タブでのみ表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:197
 msgid ""
@@ -14350,13 +14452,13 @@ msgstr "このポップアップ・ウィンドウには、 :guilabel:`バック
 msgid ""
 "Clicking the :guilabel:`Create Backorder` button automatically creates a new"
 " batch transfer."
-msgstr ""
+msgstr ":guilabel:`バックオーダを作成` ボタンをクリックすると、新しい一括転送が自動的に作成されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:213
 msgid ""
 "When creating a new backorder, the transfers that have **not** been "
 "validated in the batch will be removed from it."
-msgstr ""
+msgstr "新しいバックオーダを作成する際、バッチで検証済で **ない** 転送は、そのバッチから削除されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst:216
 msgid ""
@@ -14385,6 +14487,8 @@ msgid ""
 "sorting during the picking process. It is best suited for warehouses with "
 "high order volumes where organization and speed are critical."
 msgstr ""
+"クラスターピッキングは、:ref:`バッチピッキング<inventory/misc/batch_picking>` "
+"の効率性とピッキングプロセス中の即時仕分けを組み合わせた高度なピッキング方法です。 整理とスピードが重要な大量のオーダを扱う倉庫に最適です。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.rst:14
 msgid ""
@@ -14394,6 +14498,7 @@ msgid ""
 "consolidation, making it ideal for operations prioritizing speed and "
 "accuracy."
 msgstr ""
+"バッチピッキングとは異なり、ピッキング後に別途仕分け作業が必要となることはありません。クラスターピッキングでは、各販売オーダ(SO)ごとに指定された容器やコンテナに直接商品を仕分けます。これにより、ピッキング後の統合作業が不要となり、スピードと正確性を重視するオペレーションに最適です。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.rst:18
 msgid ""
@@ -14401,6 +14506,7 @@ msgid ""
 "organization is crucial, and orders contain a mix of items that need precise"
 " sorting during, rather than after, the picking process."
 msgstr ""
+"クラスターピッキングは、即時に行うことが不可欠な環境において特に効果的であり、オーダにはピッキングプロセス中ではなく、その後に正確な仕分けが必要なアイテムが混在しています。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.rst:22
 msgid ""
@@ -14461,6 +14567,9 @@ msgid ""
 "heading, activate the :guilabel:`Packages` and :guilabel:`Batch, Wave & "
 "Cluster Transfers` options."
 msgstr ""
+"クラスターピッキングを有効にするには、まず最初に :menuselection:`在庫アプリ --> 設定 --> 管理設定` に移動します。 "
+":guilabel:`オペレーション` の見出しの下にある :guilabel:`パッケージング` と "
+":guilabel:`バッチ、ウェーブ、クラスタ転送` オプションを有効化します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.rst-1
 msgid "Activate *Packages* and *Batch Transfers* features in the settings."
@@ -14499,6 +14608,8 @@ msgid ""
 "to :menuselection:`Inventory app --> Products --> Packages`. Click the "
 ":guilabel:`New` button to create a new package."
 msgstr ""
+"ピッキングプロセスで使用するコンテナを設定するには、:menuselection:`在庫アプリ --> プロダクト --> 梱包` "
+"に移動します。:guilabel:`新規` ボタンをクリックして、新しいパッケージを作成します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.rst:78
 msgid ""
@@ -14524,6 +14635,9 @@ msgid ""
 "their intended shipping boxes, so :guilabel:`Package Use` is set to "
 ":guilabel:`Reusable Box`."
 msgstr ""
+"クラスターピッキング用の梱包は、識別しやすいように`CLUSTER-PACK-3` "
+"という名前が付けられています。このワークフローでは、プロダクトは出荷用のボックスに直接梱包されるため :guilabel:`梱包使用` は "
+":guilabel:`再利用可能箱` に設定されています。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.rst:0
 msgid "Create new package form."
@@ -14539,6 +14653,8 @@ msgid ""
 "the operation type card, :guilabel:`Delivery Orders` or :guilabel:`Pick` "
 "(whichever is the first operation in the delivery flow)."
 msgstr ""
+"クラスタを作成するには、:menuselection:`在庫アプリ` に移動し、オペレーションタイプカード、:guilabel:`配送オーダ`または "
+":guilabel:`ピッキング` (配送フローの最初のオペレーション) を選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.rst:103
 msgid ""
@@ -14563,6 +14679,9 @@ msgid ""
 ":icon:`fa-cog` :guilabel:`Actions` button, and select the :guilabel:`Add to "
 "batch` option from the resulting drop-down menu."
 msgstr ""
+"バッチに追加する対応する送信オペレーションの左にあるチェックボックスをクリックします。 選択したアイテムが選択された状態で、:icon:`fa-cog`"
+" :guilabel:`アクション` ボタンをクリックし、表示されるドロップダウンメニューから :guilabel:`バッチに追加` "
+"オプションを選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.rst:115
 msgid ""
@@ -14596,7 +14715,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.rst:132
 msgid "Then, add a :guilabel:`Description` for this batch."
-msgstr ""
+msgstr "次に、このバッチの :guilabel:`説明` を追加します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.rst:138
 msgid ""
@@ -14626,7 +14745,7 @@ msgstr ":guilabel:`詳細オペレーション` タブでは、ピッキング�
 msgid ""
 "Set the :guilabel:`Destination Package` to the package dedicated to that "
 "particular order."
-msgstr ""
+msgstr ":guilabel:`先梱包` を、その特定のオーダ専用のパッケージに設定します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.rst:157
 msgid ""
@@ -14643,6 +14762,8 @@ msgid ""
 " all three pickings to one of the three reusable packages, `CLUSTER-PACK-1`,"
 " `CLUSTER-PACK-2`, or `CLUSTER-PACK-3`."
 msgstr ""
+"りんごの保管場所 `WH/在庫/棚A` で、3回のピッキングで集めたりんごを、3つの再利用可能なパッケージング `CLUSTER-PACK-1`, "
+"`CLUSTER-PACK-2` または `CLUSTER-PACK-3` の1つに割当てます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.rst:163
 msgid ""
@@ -14665,6 +14786,8 @@ msgid ""
 "batch transfers with an extra step: transfers are split before being grouped"
 " in a batch."
 msgstr ""
+"一括転送は複数のピックアップのグループですが、**ウェーブ転送** は異なるピックアップの特定のパーツを含みます。 "
+"Odooでは、ウェーブ転送は追加のステップを含む一括転送です。転送はバッチにグループ化される前に分割されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst:11
 msgid ""
@@ -14674,6 +14797,9 @@ msgid ""
 "location, category, or scheduled shipping times. Each wave is assigned to a "
 "different employee for the most efficient execution."
 msgstr ""
+"ウェーブピッキングは、大量の注文を最適に処理しながら、複雑なピッキング基準を管理する必要がある倉庫に最適です。 "
+"ウェーブ転送では、プロダクトのロケーション、カテゴリ、または出荷予定時間などの要因に基づいてオーダがグループ化されます。 "
+"最も効率的に実行できるよう、各ウェーブは異なる従業員に割当てられます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst:16
 msgid ""
@@ -14682,45 +14808,46 @@ msgid ""
 " approach enables flexible scheduling, allowing warehouses to align picking "
 "activities with shipping deadlines, or resource availability."
 msgstr ""
+"複数の販売オーダ(SO)または単一のオーダを異なる複数ウェーブからピッキングする必要があるオペレーションでは、特にウェーブピッキングが有効です。このアプローチにより柔軟なスケジューリングが可能になり、倉庫はピッキング活動を出荷期限やリソース空き状況と一致させることができます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst:21
 msgid "|SO| 1 calls for one apple and one orange"
-msgstr ""
+msgstr "|SO| 1要求 1リンゴ、1オレンジ"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst:22
 msgid "|SO| 2 calls for one apple and one banana"
-msgstr ""
+msgstr "|SO| 2要求 1リンゴ、1バナナ"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst:23
 msgid "|SO| 3 calls for one apple, one orange, and two bananas"
-msgstr ""
+msgstr "|SO| 3要求 1リンゴ、1オレンジ、2バナナ"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst:25
 msgid ""
 "Apples are stored in Shelf A, oranges in Shelf B, and bananas in Shelf C. A "
 "warehouse employee is assigned to the wave, and is provided with the "
 "following instructions:"
-msgstr ""
+msgstr "りんごは棚A、オレンジは棚B、バナナは棚Cに保管されています。倉庫作業員はウェーブに割当てられ、以下の指示が与えられます:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst:28
 msgid ""
 "Shelf A: Pick three apples. Place them into a central cart designated for "
 "the wave."
-msgstr ""
+msgstr "棚A: リンゴ3個をピッキングし、中央のウェーブ用カートに入れて下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst:29
 msgid "Shelf B: Pick two oranges. Add them to the same cart."
-msgstr ""
+msgstr "棚B: オレンジを2個ピッキングし、同じカートに追加して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst:30
 msgid "Shelf C: Pick three bananas. Add them to the cart."
-msgstr ""
+msgstr "棚C: バナナを3本ピッキングし、カートに入れて下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst:32
 msgid ""
 "The employee then takes the cart to the sorting/packing station. Items are "
 "then sorted and packed into individual orders."
-msgstr ""
+msgstr "次に、従業員がカートを仕分け/梱包ステーションに運びます。 アイテムはその後、個々のオーダに仕分けられ、梱包されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst:38
 msgid ""
@@ -14729,6 +14856,9 @@ msgid ""
 "the :guilabel:`Batch, Wave & Cluster Transfers` checkbox to enable the "
 "setting."
 msgstr ""
+"ウェーブピッキングを有効にするには、まず最初に :menuselection:`在庫 --> 設定 --> 管理設定` に移動します。 "
+":guilabel:`オペレーション` セクションで、:guilabel:`バッチ、ウェーブ、クラスタ転送` "
+"チェックボックスをオンにして設定を有効にします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst-1
 msgid ""
@@ -14741,14 +14871,16 @@ msgid ""
 "options, under the :guilabel:`Warehouse` heading, must also be checked on "
 "this settings page."
 msgstr ""
+"次に、この管理設定ページでも、:guilabel:`倉庫` の見出しの下にある :guilabel:`保管場所` と "
+":guilabel:`複数ステップルート` のオプションも確認する必要があります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst:51
 msgid "Then, click :guilabel:`Save` to save the changes."
-msgstr ""
+msgstr "次に、:guilabel:`保存` をクリックして変更を保存します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst:54
 msgid "Create a wave"
-msgstr ""
+msgstr "ウェーブを作成する"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst:56
 msgid ""
@@ -14759,6 +14891,10 @@ msgid ""
 "ellipsis)` icon to open the options menu. Under :guilabel:`New`, click "
 ":guilabel:`Prepare Wave`."
 msgstr ""
+"ウェーブ転送には、同じオペレーションタイプの転送からのプロダクト明細のみ含めることができます。特定のオペレーションの転送とプロダクト明細を全て表示するには、:menuselection:`在庫アプリ`"
+" に移動します。目的のかんばんカードを見つけ、:icon:`fa-ellipsis-v` :guilabel:`(縦三点リーダ)` "
+"アイコンをクリックしてオプションメニューを開きます。:guilabel:`新規作成` の下にある :guilabel:`ウェーブを準備` "
+"をクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst-1
 msgid "How to get an operation type's list of operations."
@@ -14766,7 +14902,7 @@ msgstr "オペレーションタイプのオペレーションリストの入手
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst:66
 msgid "Create a new wave"
-msgstr ""
+msgstr "新規ウェーブを作成する"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst:68
 msgid ""
@@ -14774,6 +14910,9 @@ msgid ""
 "source location. Select the checkboxes for the product lines that should be "
 "added. Then, click :guilabel:`Add to Wave`."
 msgstr ""
+":guilabel:`ウェーブを準備` "
+"ポップアップ画面では、移動明細がソース別にグループ化されています。追加するプロダクトのチェックボックスを選択します。次に、:guilabel:`ウェーブに追加`"
+" をクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst-1
 msgid "Select lines to add to the wave."
@@ -14783,11 +14922,11 @@ msgstr "ウェーブに追加するラインを選択します。"
 msgid ""
 "Use the :guilabel:`Filters` in the search bar to group lines with the same "
 "product, location, carrier, etc."
-msgstr ""
+msgstr "検索バーの:guilabel:`フィルタ` を使用して、同じプロダクト、場所、運送会社などの明細をグループ化します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst:79
 msgid "Add products to an existing wave"
-msgstr ""
+msgstr "プロダクトを既存のウェーブに追加する"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst:81
 msgid ""
@@ -14795,16 +14934,20 @@ msgid ""
 "--> Operations --> Wave Transfers`. Click on the appropriate wave from the "
 "list to open it."
 msgstr ""
+"既存のウェーブにプロダクトを追加するには、:menuselection:`在庫 --> オペレーション --> ウェーブ転送` に移動します。 "
+"リストから該当するウェーブをクリックして開きます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst:84
 msgid ""
 "Under the :guilabel:`Detailed Operations` tab, click :guilabel:`Add a line`."
 " Then, in the :guilabel:`Product` field, search for the desired product."
 msgstr ""
+":guilabel:`詳細オペレーション` タブで、:guilabel:`明細追加` をクリックします。次に、:guilabel:`プロダクト` "
+"フィールドで、希望するプロダクトを検索します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst:88
 msgid "Process a wave"
-msgstr ""
+msgstr "ウェーブを処理する"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst:90
 msgid ""
@@ -14812,12 +14955,15 @@ msgid ""
 ":menuselection:`Inventory --> Operations --> Wave Transfers`. Click on the "
 "appropriate wave from the list to open it."
 msgstr ""
+"全てのウェーブ転送とそのステータスを表示するには、:menuselection:`在庫 --> オペレーション --> ウェーブ転送` に移動します。 "
+"リストから該当するウェーブをクリックして開きます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst:93
 msgid ""
 "To assign the wave to a specific employee, click the :guilabel:`Responsible`"
 " field and select the appropriate name from the drop-down list."
 msgstr ""
+"特定の従業員にウェーブを割当てるには、:guilabel:`担当者` フィールドをクリックし、ドロップダウンリストから該当する名前を選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst:96
 msgid ""
@@ -14825,6 +14971,8 @@ msgid ""
 "select an option from the drop-down menu in the :guilabel:`Docks Location` "
 "field."
 msgstr ""
+":ref:`ドックロケーション <inventory/shipping_receiving/docks>` "
+"を指定するには、:guilabel:`ドックロケーション` フィールドのドロップダウンメニューからオプションを選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst:100
 msgid ""
@@ -14833,26 +14981,33 @@ msgid ""
 "used to plan and build shipments. Assigning batches to loading docks ensures"
 " the right products are pack into the appropriate trucks for delivery."
 msgstr ""
+"Odooの :doc:`発送管理システム "
+"<../../shipping_receiving/setup_configuration/dispatch>` "
+"機能は、配送の計画と構築に使用されます。 バッチを積込みドックに割当てることで、適切なプロダクトが配送用の適切なトラックに確実に積込まれます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst:104
 msgid ""
 "Select a :guilabel:`Vehicle` from the drop-down. Making a selection in this "
 "field automatically updates the :guilabel:`Vehicle Category` field."
 msgstr ""
+"ドロップダウンから :guilabel:`車両` を選択します。このフィールドで選択を行うと、:guilabel:`車両カテゴリ` "
+"フィールドが自動的に更新されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst:107
 msgid "Enter a :guilabel:`Description` for this wave, if desired."
-msgstr ""
+msgstr "必要に応じて、このウェーブの :guilabel:`説明` を入力して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst:110
 msgid ""
 "The :guilabel:`Description` field is automatically generated for "
 ":ref:`automatic waves <inventory/shipping_receiving/auto-waves>`."
 msgstr ""
+":guilabel:`説明` フィールドは :ref:`自動ウェーブ <inventory/shipping_receiving/auto-"
+"waves>` 用に自動的に生成されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst:116
 msgid "Automatic waves"
-msgstr ""
+msgstr "自動ウェーブ"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst:118
 msgid ""
@@ -14861,6 +15016,8 @@ msgid ""
 "which enables the creation of waves with distinct grouping criteria for each"
 " operation type."
 msgstr ""
+"異なる基準に基づいて、ウェーブを自動的に作成し、割当てることができます。 *自動バッチ* オプションは、*オペレーションタイプ* "
+"レベルで定義され、各オペレーションタイプに異なるグループ化基準でウェーブを作成することができます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst:122
 msgid ""
@@ -14870,6 +15027,9 @@ msgid ""
 ":guilabel:`Batch & Wave Transfers` heading, tick the :guilabel:`Automatic "
 "Batches` checkbox."
 msgstr ""
+"*自動バッチ* を有効にするには、:menuselection:`在庫アプリ --> 設定 --> オペレーションタイプ` "
+"に移動し、希望するオペレーションタイプ(例：:guilabel:`配送`、:guilabel:`ピック` など) を選択します。 "
+":guilabel:`バッチ＆ウェーブ転送` の見出しの下にある :guilabel:`自動バッチ` チェックボックスにチェックを入れます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst:127
 msgid ""
@@ -14877,28 +15037,30 @@ msgid ""
 "appropriate checkbox. Even if more than one grouping option is selected, "
 "only one wave is created."
 msgstr ""
+"次に、適切なチェックボックスをオンにして、1つまたは複数の :guilabel:`ウェーブグループ化` "
+"条件を選択します。複数のグループ化オプションを選択した場合でも、作成されるのは1つのウェーブのみです。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst:130
 msgid "Automatic waves can be created based on the following criteria:"
-msgstr ""
+msgstr "ウェーブは、以下の基準に基づいて作成することができます:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst:132
 msgid ""
 ":guilabel:`Product`: Split transfers by product, then group transfers that "
 "have the same product."
-msgstr ""
+msgstr ":guilabel:`プロダクト`: プロダクト別に転送を分割し、同じプロダクトを持つ転送をグループ化します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst:133
 msgid ""
 ":guilabel:`Product Category`: Split transfers by product category, then "
 "group transfers that have the same product category."
-msgstr ""
+msgstr ":guilabel:`プロダクトカテゴリ`: プロダクトカテゴリ別に転送を分割し、同じプロダクトカテゴリを持つ転送をグループ化します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/wave.rst-1
 msgid ""
 "The Automatic batches feature with the wave grouping option for product "
 "category selected."
-msgstr ""
+msgstr "プロダクトカテゴリを選択したウェーブグループ化オプション付きの自動バッチ機能。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:6
 msgid "Removal strategies"
@@ -14982,7 +15144,7 @@ msgstr ":ref:`先に使用期限が切れるもの <inventory/warehouses_storage
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:36
 msgid "Alphanumeric name of location"
-msgstr ""
+msgstr "英数字のロケーション名"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:37
 msgid "Quantity closest to fulfilling demand"
@@ -17128,6 +17290,8 @@ msgid ""
 "company, select it from the drop-down menu. Leave the field blank to apply "
 "the method to all companies."
 msgstr ""
+":guilabel:`会社`: 特定の会社に配送方法を適用する場合は、ドロップダウンメニューから選択して下さい。 "
+"全てに適用する場合は、このフィールドを空白のままにして下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:66
 msgid ""
@@ -17136,6 +17300,9 @@ msgid ""
 "lead times. For more information, jump to the :ref:`Set routes on shipping "
 "method <inventory/shipping_receiving/shipping-route>` section."
 msgstr ""
+":guilabel:`ルート`: 異なるリードタイムに基づく標準またはエクスプレス配送など、異なる配送方法を定義するために該当するルートを選択します。 "
+"詳細については、:ref:`配送方法でルートを設定する <inventory/shipping_receiving/shipping-route>` "
+"セクションを参照して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:72
 msgid ""
@@ -17158,37 +17325,37 @@ msgstr ""
 msgid ""
 "Use the :guilabel:`Availability` tab to define conditions for the delivery "
 "method based on the order’s content or destination:"
-msgstr ""
+msgstr "オーダの内容や配送先に基づいて配送方法の条件を定義するには、:guilabel:`利用可能` タブを使用します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:82
 msgid ""
 ":guilabel:`Countries`: Specify one or more countries where the method is "
 "available."
-msgstr ""
+msgstr ":guilabel:`国`: その方法が利用可能な国を1つ以上指定して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:83
 msgid ""
 ":guilabel:`Max Weight`: Set a maximum weight; the method is only available "
 "for orders below this limit."
-msgstr ""
+msgstr ":guilabel:`最大重量`: 最大重量を設定します。この方法は、この制限値以下のオーダに対してのみ利用可能です。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:85
 msgid ""
 ":guilabel:`Max Volume`: Set a maximum volume; the method is only available "
 "for orders below this limit."
-msgstr ""
+msgstr ":guilabel:`最大容量`: 最大容量の設定。この方法はこの制限値以下のオーダにのみ適用できます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:87
 msgid ""
 ":guilabel:`Must Have Tags`: The method is available only if at least one "
 "product in the order has one of these tags."
-msgstr ""
+msgstr ":guilabel:`必須タグ`: この方法は、オーダ内のプロダクトにこれらのタグが少なくとも1つ付いている場合にのみ利用可能です。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:89
 msgid ""
 ":guilabel:`Excluded Tags`: The method is unavailable if at least one product"
 " in the order has one of these tags."
-msgstr ""
+msgstr ":guilabel:`除外タグ`: オーダ内のプロダクトにこれらのタグが1つでも含まれている場合、この方法は利用できません。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:92
 msgid ""
@@ -17400,7 +17567,7 @@ msgstr ":doc:`配送費用を請求する <setup_configuration/invoicing>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:198
 msgid "Route on shipping method"
-msgstr ""
+msgstr "配送方法のルート"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:200
 msgid ""
@@ -17408,12 +17575,14 @@ msgid ""
 " by configuring different :doc:`routes <daily_operations/use_routes>` for "
 "it."
 msgstr ""
+"オプションとして、配送方法ごとに異なる倉庫配送プロセスを設定するには、その配送方法に対して異なる :doc:`ルート "
+"<daily_operations/use_routes>` を設定します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:204
 msgid ""
 "Configuring multiple routes per shipping method is helpful for adjusting "
 "warehouse delivery processes based on:"
-msgstr ""
+msgstr "配送方法ごとに複数のルートを設定すると、倉庫への配送プロセスを調整するのに役立ちます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:207
 msgid ""
@@ -17422,66 +17591,74 @@ msgid ""
 ":doc:`two-step <daily_operations/receipts_delivery_two_steps>` for standard "
 "shipping)."
 msgstr ""
+"スピード (例: エクスプレス配送には :doc:`1ステップ配送 "
+"<daily_operations/receipts_delivery_one_step>` を使用、または通常配送には :doc:`2ステップ配送 "
+"<daily_operations/receipts_delivery_two_steps>` を使用します)。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:210
 msgid ""
 "international shipping (e.g. use :doc:`three-step delivery "
 "<daily_operations/delivery_three_steps>` to prepare documents for customs)"
 msgstr ""
+"国際配送 (例: 税関用のドキュメントを準備するために、:doc:`3ステップ配送 "
+"<daily_operations/delivery_three_steps>` を使用します)"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:212
 msgid ""
 "in-store pickup or home delivery: ship from the central warehouse, or pick "
 "from the store's stock, depending on customer selection."
-msgstr ""
+msgstr "店頭受取または配送: 顧客の選択に応じて、中央倉庫から発送するか、店舗の在庫からピックアップします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:215
 msgid ""
 "To set up routes, go to :menuselection:`Inventory app --> Configuration --> "
 "Routes`. Click :guilabel:`New`, or select the desired route."
 msgstr ""
+"ルートを設定するには、:menuselection:`在庫アプリ --> 設定 --> ルート` に移動します。:guilabel:`新規作成` "
+"をクリックするか、希望のルートを選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:218
 msgid ""
 "On the route form, in the :guilabel:`Applicable On` section, tick the "
 ":guilabel:`Shipping Methods` checkbox."
-msgstr ""
+msgstr "ルートフォームの :guilabel:`適用対象` セクションで、:guilabel:`配送方法` チェックボックスにチェックを入れます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:225
 msgid "Routes form with the Shipping Methods checkbox selected."
-msgstr ""
+msgstr "配送方法のチェックボックスを選択すると、ルートが形成されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:225
 msgid "Routes form with the Shipping Methods checkbox ticked."
-msgstr ""
+msgstr "配送方法のチェックボックスにチェックを入れると、ルートが形成されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:227
 msgid ""
 "Then, go to :menuselection:`Inventory app --> Configuration --> Shipping "
 "Methods`, and select the desired shipping method."
-msgstr ""
+msgstr "次に、:menuselection:`在庫アプリ --> 設定 --> 配送方法` に移動し、ご希望の配送方法を選択して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:230
 msgid ""
 "On the shipping method form, in the :guilabel:`Routes` field, select the "
 "available fulfillment routes from the drop-down menu."
-msgstr ""
+msgstr "配送方法フォームの :guilabel:`ルート` フィールドで、ドロップダウンメニューから利用可能なフルフィルメントルートを選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:234
 msgid ""
 "If the desired route is not selectable, check that the *Shipping Methods* "
 "option is enabled in the route's *Applicable On* section."
 msgstr ""
+"希望する配送方法が選択できない場合は、その *配送方法* が該当する配送方法の *適用対象* セクションで有効になっていることを確認して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:241
 msgid "Show set routes on shipping method form."
-msgstr ""
+msgstr "配送方法フォームに設定されたルートを表示する"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:241
 msgid ""
 "By default, most shipping methods are created with two routes available for "
 "standard or express delivery."
-msgstr ""
+msgstr "デフォルトでは、ほとんどの配送方法は、標準またはエクスプレス配送用の2つのルートが利用可能に設定されています。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration.rst:247
 msgid "Add shipping"
@@ -17577,12 +17754,13 @@ msgid ""
 "Get the :ref:`Account ID and passphrase <inventory/shipping_receiving/bpost-"
 "account>`."
 msgstr ""
+":ref:`アカウントIDおよびパスフレーズ <inventory/shipping_receiving/bpost-account>` を入手します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:10
 msgid ""
 ":ref:`Set up the shipping method in Odoo "
 "<inventory/shipping_receiving/bpost-method>`."
-msgstr ""
+msgstr ":ref:`Odooで配送方法を設定する <inventory/shipping_receiving/bpost-method>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:12
 msgid ""
@@ -17614,7 +17792,7 @@ msgstr ":doc:`ups_credentials`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:23
 msgid "Account setup"
-msgstr ""
+msgstr "アカウント設定"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:25
 msgid ""
@@ -17639,6 +17817,7 @@ msgid ""
 "Odoo **cannot** be integrated with `non-business Bpost "
 "<https://www.odoo.com/r/Z4wZ>`_ accounts."
 msgstr ""
+"Odooは、`非ビジネスBpost <https://www.odoo.com/r/Z4wZ>`_ アカウントと統合することは **できません。**"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:35
 msgid ""
@@ -17661,7 +17840,7 @@ msgstr "*管理*タブで、アカウントIDとパスフレーズを表示し�
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:50
 msgid "Shipping method configuration"
-msgstr ""
+msgstr "配送方法設定"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:52
 msgid ""
@@ -17714,12 +17893,16 @@ msgid ""
 "unique :ref:`account ID <inventory/shipping_receiving/bpost-account>` from "
 "the Bpost website."
 msgstr ""
+":guilabel:`Bpostアカウント番号` (必須項目): Bpostウェブサイトから、その会社固有の :ref:`アカウントID "
+"<inventory/shipping_receiving/bpost-account>` を入力して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:72
 msgid ""
 ":guilabel:`Passphrase` (required field): enter the :ref:`passphrase "
 "<inventory/shipping_receiving/bpost-account>` from the Bpost website."
 msgstr ""
+":guilabel:`パスフレーズ` (必須項目): Bpostウェブサイトから :ref:`パスフレーズ "
+"<inventory/shipping_receiving/bpost-account>` を入力して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:74
 msgid ""
@@ -17746,6 +17929,8 @@ msgid ""
 ":guilabel:`bpack 24h Pro`, :guilabel:`bpack 24h business`, or "
 ":guilabel:`bpack Bus`."
 msgstr ""
+"`国内配送 <https://www.odoo.com/r/uOVM>`_ について、オプションは: :guilabel:`bpack 24h "
+"Pro`, :guilabel:`bpack 24h business`, or :guilabel:`bpack Bus` があります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:83
 msgid ""
@@ -17753,6 +17938,9 @@ msgid ""
 " :guilabel:`bpack World Express Pro`, :guilabel:`bpack World Business`, or "
 ":guilabel:`bpack Europe Business`."
 msgstr ""
+"`国際配送 <https://www.odoo.com/r/s6G>`_ について、オプションは: :guilabel:`bpack World "
+"Express Pro`, :guilabel:`bpack World Business`, or :guilabel:`bpack Europe "
+"Business` があります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/bpost.rst:85
 msgid ""
@@ -17818,7 +18006,7 @@ msgstr "Bpost配送方法を表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/cancel.rst:3
 msgid "How to cancel a shipping request to a shipper?"
-msgstr "荷送人への出荷依頼を取消する方法"
+msgstr "配送業者への出荷依頼を取消する"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/cancel.rst:6
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/label_type.rst:6
@@ -17829,7 +18017,7 @@ msgstr "概要"
 msgid ""
 "Odoo can handle various delivery methods, including third party shippers. "
 "Odoo will be linked with the transportation company tracking system."
-msgstr "Odooは第三者荷主を含む様々な配送方法に対応できます。Odooは運送会社の追跡システムと連動します。"
+msgstr "Odooはサードパーティ配送業者を含む様々な配送方法に対応できます。Odooは運送会社の追跡システムと連動します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/cancel.rst:12
 msgid ""
@@ -17872,7 +18060,7 @@ msgstr "ご希望であれば運送会社を変更することができます。
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/cancel.rst:40
 msgid "How to send a shipping request after cancelling one?"
-msgstr "出荷依頼を取消した後、出荷依頼を送信する方法"
+msgstr "出荷依頼を取消した後、出荷依頼を送信する"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/cancel.rst:42
 msgid ""
@@ -17894,7 +18082,7 @@ msgstr ":doc:`複数梱包`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:3
 msgid "DHL integration"
-msgstr ""
+msgstr "DHL統合"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:5
 msgid ""
@@ -17904,6 +18092,9 @@ msgid ""
 "process of :doc:`calculating shipping rates <../setup_configuration>` and "
 ":doc:`generating shipping labels <labels>` is greatly simplified."
 msgstr ""
+"DHLは、Odooの **在庫** アプリで利用できる *配送コネクタ* "
+"が利用できる運送会社の1つです。アプリの設定で配送コネクタを有効にし、少なくとも1つの *配送方法* を設定することで、:doc:`送料の計算 "
+"<../setup_configuration>` および :doc:`配送ラベルの生成 1` のプロセスが大幅に簡素化されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:11
 msgid ""
@@ -17913,10 +18104,12 @@ msgid ""
 "common to all shippers, see the documentation on :doc:`third-party shippers "
 "<third_party_shipper>`."
 msgstr ""
+"さまざまな運送会社に対応する多様な配送コネクタが利用可能ですが、このドキュメントでは、DHLとの統合に特化した設定の詳細を説明します。全ての配送業者に共通する統合設定の構成方法については、:doc:`サードパーティ配送業者に関するドキュメントを参照して下さい"
+" <third_party_shipper>` 。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:17
 msgid "Enable DHL shipping connector"
-msgstr ""
+msgstr "DHL配送コネクタを有効にする"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:19
 msgid ""
@@ -17924,6 +18117,8 @@ msgid ""
 "carrier's shipping connector. To do so, navigate to "
 ":menuselection:`Inventory app --> Configuration --> Settings`."
 msgstr ""
+"DHLの配送方法を作成する前に、運送会社の配送コネクタを有効にする必要があります。 "
+"これを行うには、次の順に移動します。:menuselection:`在庫アプリ --> 設定 --> 管理設定`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:22
 msgid ""
@@ -17931,6 +18126,8 @@ msgid ""
 "checkbox next to :guilabel:`DHL Express Connector`. Finally, click "
 ":guilabel:`Save` to apply the changes."
 msgstr ""
+":guilabel:`配送コネクタ` セクションまでスクロールダウンし、:guilabel:`DHL Expressコネクタ` "
+"の横にあるチェックボックスにチェックを入れます。最後に、:guilabel:`保存` をクリックして変更を適用します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:25
 msgid ""
@@ -17938,10 +18135,12 @@ msgid ""
 " Shipping Methods` link appears below. Click the link to open a page showing"
 " all shipping methods configured for DHL."
 msgstr ""
+"コネクタが有効化されると、その下に :icon:`oi-arrow-right` :guilabel:`DHL 配送方法` "
+"リンクが表示されます。このリンクをクリックすると、DHL用に設定された全ての配送方法を示すページが開きます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:29
 msgid "Configure DHL shipping method"
-msgstr ""
+msgstr "DHL配送方法を設定する"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:31
 msgid ""
@@ -17950,6 +18149,8 @@ msgid ""
 "as a line item to sales orders (SOs), which allows for automatic computation"
 " of shipping rates, and generation of shipping labels."
 msgstr ""
+"DHLの配送コネクタを有効にすると、運送会社向けの配送方法の設定が可能になります。 "
+"配送方法が設定されると、販売オーダ(SO)に明細として追加できるようになり、送料の自動計算や配送ラベルの作成が可能になります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:35
 msgid ""
@@ -17958,6 +18159,9 @@ msgid ""
 "section, select the :guilabel:`DHL Shipping Methods` link below the "
 ":guilabel:`DHL Express Connector` checkbox."
 msgstr ""
+"DHLの新しい配送方法を作成するには、:menuselection:`在庫アプリ --> 設定 --> 設定` "
+"に移動します。:guilabel:`配送コネクタ` セクションで、:guilabel:`DHL Expressコネクタ` チェックボックスの下にある "
+":guilabel:`DHL配送方法` リンクを選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:40
 msgid ""
@@ -17965,16 +18169,18 @@ msgid ""
 "navigating to :menuselection:`Inventory app --> Configuration --> Shipping "
 "Methods`."
 msgstr ""
+"また、:menuselection:`在庫アプリ --> 設定 --> 配送方法` に移動すると、各運送会社の既存の配送方法を確認することができます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:43
 msgid ""
 "Click :guilabel:`New` to open a blank shipping method form. If a shipping "
 "method has already been created, it can be selected from this screen."
 msgstr ""
+":guilabel:`新規` をクリックすると、空の配送方法フォームが開きます。配送方法がすでに作成されている場合は、この画面から選択できます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst-1
 msgid "The form for a DHL shipping method."
-msgstr ""
+msgstr "DHL配送方法用のフォーム"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:51
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:60
@@ -17985,7 +18191,7 @@ msgstr "一般情報"
 msgid ""
 "Begin configuring the shipping method by entering its title in the "
 ":guilabel:`Shipping Method` field."
-msgstr ""
+msgstr ":guilabel:`配送方法` フィールドに配送方法のタイトルを入力して、配送方法の設定を開始します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:56
 msgid ""
@@ -17993,6 +18199,8 @@ msgid ""
 "option. After doing so, a new :guilabel:`DHL Configuration` tab appears at "
 "the bottom of the form."
 msgstr ""
+":guilabel:`プロバイダ`ドロップダウンメニューで、:guilabel:`DHL` オプションを選択します。そうすると、フォームの下部に新しい "
+":guilabel:`DHL 設定` タブが表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:59
 msgid ""
@@ -18001,6 +18209,8 @@ msgid ""
 "shippers <third_party_shipper>` for instructions on how to properly "
 "configure them."
 msgstr ""
+"このセクションの他の全てのフィールドは、各運送会社の配送方法フォームで同一です。それらを適切に設定する方法については、:doc:`サードバーティ配送業者"
+" <third_party_shipper>` のドキュメントを参照して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:64
 msgid "DHL Configuration"
@@ -18012,10 +18222,11 @@ msgid ""
 " connect the user's DHL account to Odoo, and configure the shipping method's"
 " details."
 msgstr ""
+"配送方法フォームの :guilabel:`DHL設定` タブは、ユーザの DHLアカウントをOdooに接続し、配送方法の詳細を設定するために使用します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:70
 msgid "DHL SiteID, password, and account number"
-msgstr ""
+msgstr "DHL SiteID、パスワード、アカウント番号"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:72
 msgid ""
@@ -18024,6 +18235,8 @@ msgid ""
 "password are different credentials than the ones used to log in to a DHL "
 "account."
 msgstr ""
+"DHLのSiteID、パスワード、およびアカウント番号は、DHLのアカウントとOdoo **在庫** "
+"アプリなどのサードパーティサービスをリンクするために使用されます。SiteIDとパスワードは、DHLアカウントへのログインに使用される認証情報とは異なります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:76
 msgid ""
@@ -18032,22 +18245,24 @@ msgid ""
 "<https://developer.dhl.com/user/register>`_, by filling out the following "
 "information:"
 msgstr ""
+"DHLの SiteID、パスワード、およびアカウント番号を取得するには、以下の情報を記入して `DHL API開発者ポータル "
+"<https://developer.dhl.com/user/register>` に登録する必要があります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:80
 msgid ":guilabel:`First name`"
-msgstr ""
+msgstr ":guilabel:`名`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:81
 msgid ":guilabel:`Last name`"
-msgstr ""
+msgstr ":guilabel:`姓`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:82
 msgid ":guilabel:`Email address`"
-msgstr ""
+msgstr ":guilabel:`Eメールアドレス`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:83
 msgid ":guilabel:`Username`"
-msgstr ""
+msgstr ":guilabel:`ユーザ名`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:84
 msgid ":guilabel:`Company Name`"
@@ -18063,6 +18278,8 @@ msgid ""
 "accept the terms of use and the privacy policy` checkbox, and click "
 ":guilabel:`Send` to register."
 msgstr ""
+"全ての項目を入力したら、:guilabel:`利用規約とプライバシーポリシーを読み、同意します` "
+"チェックボックスにチェックを入れ、:guilabel:`送信` をクリックして登録します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:90
 msgid ""
@@ -18070,6 +18287,7 @@ msgid ""
 "Click the link inside the email to activate the developer portal account, "
 "and set a password."
 msgstr ""
+"登録後、申請を確認するための確認メールが送信されます。Eメール内のリンクをクリックして開発者ポータルアカウントを有効化し、パスワードを設定して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:93
 msgid ""
@@ -18077,6 +18295,7 @@ msgid ""
 "account. Enter the number in the :guilabel:`DHL Account Number` field on the"
 " shipping method form."
 msgstr ""
+"このEメールには、開発者ポータルアカウントの口座番号も記載されています。この番号を、配送方法フォームの:guilabel:`DHLアカウント番号`フィールドに入力して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:96
 msgid ""
@@ -18084,6 +18303,7 @@ msgid ""
 "using the username and password. Click on the user avatar in the top-right "
 "corner of the screen to open the user dashboard."
 msgstr ""
+"開発者ポータルアカウントが確認されたら、ユーザ名とパスワードを使用してポータルにログインします。画面右上のユーザアバターをクリックして、ユーザダッシュボードを開きます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:99
 msgid ""
@@ -18091,6 +18311,9 @@ msgid ""
 "the :guilabel:`Credentials` section, click the :guilabel:`Show key` button "
 "below the :guilabel:`API Key` and :guilabel:`API Secret` fields."
 msgstr ""
+"ダッシュボードで、:guilabel:`アプリ` タブをクリックし、アプリを選択します。:guilabel:`認証情報` "
+"セクションで、:guilabel:`APIキー` および :guilabel:`APIシークレット` フィールドの下にある "
+":guilabel:`キーを表示` ボタンをクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:103
 msgid ""
@@ -18098,55 +18321,57 @@ msgid ""
 "Key* in the :guilabel:`DHL SiteID` field, and the *API Secret* in the "
 ":guilabel:`DHL Password` field."
 msgstr ""
+"Odooデータベースの配送方法フォームに戻ります。:guilabel:`DHL SiteID`フィールドに *DHL APIキー* "
+"を入力し、:guilabel:`DHLパスワード` フィールドに *APIシークレット* を入力します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:107
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:123
 msgid "Shipping details"
-msgstr ""
+msgstr "配送詳細"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:109
 msgid ""
 "The rest of the fields in the :guilabel:`DHL Configuration` tab are used to "
 "configure the shipping method itself:"
-msgstr ""
+msgstr ":guilabel:`DHL設定` タブのその他のフィールドは、配送方法自体の設定に使用されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:112
 msgid ":guilabel:`Region`: the region in which the shipping method is used."
-msgstr ""
+msgstr ":guilabel:`地域`: その配送方法が使用される地域"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:113
 msgid ""
 ":guilabel:`DHL Product`: the shipping service purchased from DHL (e.g. "
 "Express Worldwide)."
-msgstr ""
+msgstr ":guilabel:`DHLプロダクト`: DHLより購入された配送サービス (例: Express Worldwide)"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:114
 msgid ""
 ":guilabel:`DHL Package Type`: the type of DHL package used for delivery "
 "(e.g. DHL Box)."
-msgstr ""
+msgstr ":guilabel:`DHL梱包タイプ`: 配送に使用されるDHL梱包のタイプ (例: DHLボックス)"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:115
 msgid ""
 ":guilabel:`Package Weight Unit`: the unit of measure used to display package"
 " weight."
-msgstr ""
+msgstr ":guilabel:`梱包重量単位`: パッケージの重量を表示する際に使用される単位"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:116
 msgid ""
 ":guilabel:`Package Dimension Unit`: the unit of measure used to display "
 "package size."
-msgstr ""
+msgstr ":guilabel:`パッケージ寸法単位`：パッケージのサイズを表示する際に使用される単位"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:117
 msgid ""
 ":guilabel:`Label Format`: the file format used to generate shipping labels."
-msgstr ""
+msgstr ":guilabel:`ラベルフォーマット`: 配送ラベルを生成するために使用されるファイルフォーマット"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:118
 msgid ""
 ":guilabel:`Label Template`: the paper size used to print shipping labels."
-msgstr ""
+msgstr ":guilabel:`ラベルテンプレート`:  出荷ラベルの印刷に使用される用紙サイズ"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:121
 msgid ""
@@ -18154,6 +18379,7 @@ msgid ""
 "services are actually available for the DHL account. Available services "
 "depend on the contract negotiated with DHL."
 msgstr ""
+"配送方法のサービスオプションを選択する前に、それらのサービスがDHLアカウントで実際に利用可能であることを確認して下さい。利用可能なサービスは、DHLとの契約内容によって異なります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:125
 msgid "Options"
@@ -18163,29 +18389,29 @@ msgstr "オプション"
 msgid ""
 "Additional settings are available in the :guilabel:`Options` section at the "
 "bottom of the :guilabel:`DHL Configuration` tab:"
-msgstr ""
+msgstr "追加の設定は、:guilabel:`DHL設定` タブの下部にある :guilabel:`オプション` セクションで利用できます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:130
 msgid ""
 ":guilabel:`Generate Return Label`: Enable this option to automatically "
 "generate a return label after validating a delivery order."
-msgstr ""
+msgstr ":guilabel:`返品ラベルを生成`: このオプションを有効にすると、配送オーダの検証後に返品ラベルが自動的に生成されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:132
 msgid ""
 ":guilabel:`Dutiable Material`: Enable this option if the shipping method is "
 "liable to customs or other duties."
-msgstr ""
+msgstr ":guilabel:`関税対象物`: 配送方法が関税やその他の税金がかかる可能性がある場合は、このオプションを有効にして下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:3
 msgid "Dispatch management system"
-msgstr ""
+msgstr "発送管理システム"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:5
 msgid ""
 "The *dispatch management system* feature in Odoo is used to plan and build "
 "shipments. Key features include:"
-msgstr ""
+msgstr "Odooの*発送管理システム* 機能は、配送の計画と構築に使用されます。主な機能は次のとおりです:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:8
 msgid ""
@@ -18194,58 +18420,66 @@ msgid ""
 "vehicle assignments based on fleet capacity. This ensures the right products"
 " are packed into the appropriate trucks for delivery."
 msgstr ""
+"**積載構築**: 特定の運送会社向けのプロダクトをグループ化し、それらの :doc:`バッチ <../picking_methods/batch>` "
+"を積み込みドックに割当て、車両の割当てを車両の容量に基づいて管理します。これにより、適切なプロダクトが配送用の適切なトラックに確実に積み込むことができます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:11
 msgid ""
 ":doc:`Fleet management <../../../../hr/fleet>`: Track and manage the "
 "capacity of in-house delivery vehicles."
-msgstr ""
+msgstr ":doc:`フリート管理 <../../../../hr/fleet>`: 社内配送車両の容量を追跡し、管理します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:17
 msgid ""
 "To use the dispatch management system, the following setup must be "
 "completed:"
-msgstr ""
+msgstr "発送管理システムを使用するには、以下の設定を完了する必要があります:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:19
 msgid ":ref:`Install <general/install>` the **Fleet** application."
-msgstr ""
+msgstr " **フリート** アプリを :ref:`インストール <general/install>` します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:20
 msgid ""
 "Configure vehicle :ref:`capacity (volume and weight) "
 "<inventory/shipping_receiving/vehicle-capacity>`."
 msgstr ""
+"車両 :ref:積載量 (容積および重量) <inventory/shipping_receiving/vehicle-capacity>` "
+"を設定します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:22
 msgid "Enter vehicle :doc:`car model(s) <../../../../hr/fleet/models>`."
-msgstr ""
+msgstr "車両 :doc:`車両モデル <../../../../hr/fleet/models>` を入力します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:23
 msgid ""
 "Enable :ref:`necessary features <inventory/shipping_receiving/inventory-"
 "features>` in the **Inventory** app."
 msgstr ""
+"**在庫** アプリで、:ref:`必要機能 <inventory/shipping_receiving/inventory-features>` "
+"を有効にします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:25
 msgid ""
 "Set up :ref:`vehicles as delivery methods "
 "<inventory/shipping_receiving/delivery-method-for-carrier>`."
 msgstr ""
+":ref:`車両を配送方法 <inventory/shipping_receiving/delivery-method-for-carrier>` "
+"として設定します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:27
 msgid "Create :ref:`dock locations <inventory/shipping_receiving/docks>`."
-msgstr ""
+msgstr ":ref:`ドックロケーション <inventory/shipping_receiving/docks>` を作成します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:32
 msgid "Vehicle capacity"
-msgstr ""
+msgstr "車両積載量"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:34
 msgid ""
 "To configure the vehicle capacity, go to :menuselection:`Fleet app --> "
 "Configuration --> Categories`."
-msgstr ""
+msgstr "車両積載量を設定するには :menuselection:`フリートアプリ --> 設定 --> カテゴリ` に行きます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:37
 msgid ""
@@ -18255,28 +18489,32 @@ msgid ""
 "vehicle capacity in the :guilabel:`Max Weight` (in kilograms) and "
 ":guilabel:`Max Volume` (in cubic meters) fields."
 msgstr ""
+"次に、新しいカテゴリを追加するには :guilabel:`新規` をクリックし、既存のカテゴリを修正するにはそのカテゴリをクリックします。 "
+":guilabel:`名前`  フィールドに車両の種類 (例：`ピックアップトラック`、`バン`、または`貨物トラック` など) "
+"を入力します。次に、:guilabel:`最大重量` (キログラム単位)および :guilabel:`最大容積` "
+"(立方メートル単位)のフィールドに車両の積載量を入力します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst-1
 msgid "Vehicle categories with defined weight and volume."
-msgstr ""
+msgstr "重量と容積が定義された車両カテゴリ"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:47
 msgid ""
 "The units of measurement for vehicle capacity are assigned at the global "
 "level in the **Settings** app, in the :guilabel:`Units of Measure` section."
-msgstr ""
+msgstr "車両容量の測定単位は、**設定** アプリの :guilabel:`測定単位` セクションで全体レベルで割当てられます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:0
 msgid "Show units of measure settings."
-msgstr ""
+msgstr "測定単位の設定を表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:54
 msgid ":ref:`Vehicle category <fleet/categories>`"
-msgstr ""
+msgstr ":ref:`車両カテゴリ <fleet/categories>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:58
 msgid "Car model"
-msgstr ""
+msgstr "車両モデル"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:60
 msgid ""
@@ -18285,12 +18523,14 @@ msgid ""
 "automatically applies weight and volume capacities to all vehicles of that "
 "type."
 msgstr ""
+"Odooで車両を追加する際には、車両の車種を設定する必要があります。 車種には正しいカテゴリが選択されていることを確認して下さい。 "
+"そうすることで、そのタイプの車両全てに重量と容量が自動的に適用されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:64
 msgid ""
 "To configure, navigate to :menuselection:`Fleet app --> Configuration --> "
 "Models`."
-msgstr ""
+msgstr "設定するには、:menuselection:`フリートアプリ --> 設定 --> モデル` に移動して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:66
 msgid ""
@@ -18298,26 +18538,30 @@ msgid ""
 ":guilabel:`New` in the top-left corner to create a new model. Then, set the "
 "relevant :guilabel:`Category` field to the relevant vehicle category."
 msgstr ""
+":guilabel:`モデル` リストから既存のモデルを選択するか、左上隅にある :guilabel:`新規` "
+"をクリックして新しいモデルを作成します。次に、関連する :guilabel:`カテゴリ` フィールドを該当する車両カテゴリに設定します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:71
 msgid ":doc:`Create car model <../../../../hr/fleet/models>`"
-msgstr ""
+msgstr ":doc:`車両モデルの作成 <../../../../hr/fleet/models>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:77
 msgid "Inventory settings"
-msgstr ""
+msgstr "在庫設定"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:79
 msgid ""
 "Next, go to :menuselection:`Inventory app --> Configuration --> Settings`, "
 "and enable the required features for dispatch management."
-msgstr ""
+msgstr "次に、:menuselection:`在庫アプリ --> 設定 --> 管理設定` に移動し、発送管理に必要な機能を有効にします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:82
 msgid ""
 "In the :guilabel:`Operations` section, tick the :guilabel:`Batch, Wave & "
 "Cluster Transfers` checkbox to prepare batches of orders for delivery."
 msgstr ""
+":guilabel:`オペレーション` セクションで、:guilabel:`バッチ、ウェーブ、クラスタ転送` "
+"チェックボックスにチェックを入れ、配送用のオーダのバッチを準備します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:85
 msgid ""
@@ -18326,6 +18570,9 @@ msgid ""
 "specific vehicles to be :ref:`set as carriers "
 "<inventory/shipping_receiving/delivery-method-for-carrier>`."
 msgstr ""
+":guilabel:`配送` セクションで、:guilabel:`配送方法` と :guilabel:`発送管理システム` "
+"のチェックボックスにチェックを入れます。そうすることで、特定の車両を :ref:`運送会社として設定 "
+"<inventory/shipping_receiving/delivery-method-for-carrier>` できるようになります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:89
 msgid ""
@@ -18333,12 +18580,14 @@ msgid ""
 " checkbox to assign specific locations in the warehouse as loading zones for"
 " delivery trucks."
 msgstr ""
+":guilabel:`倉庫` セクションで、:guilabel:`保管場所` "
+"チェックボックスにチェックを入れると、配送トラックの荷積みゾーンとして倉庫内の特定のロケーションを割当てることができます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:92
 msgid ""
 "Then, once all the configurations are complete, be sure to click "
 ":guilabel:`Save`."
-msgstr ""
+msgstr "そして、全ての設定が完了したら、必ず :guilabel:`保存` をクリックして下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:97
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:90
@@ -18349,7 +18598,7 @@ msgstr "配送方法"
 msgid ""
 "Next, assign each delivery vehicle as a *Carrier* by configuring a delivery "
 "method."
-msgstr ""
+msgstr "次に、配送方法の設定により、各配送車両を *運送会社* として割当てます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:101
 msgid ""
@@ -18357,10 +18606,12 @@ msgid ""
 "Configuration --> Delivery Methods`. Select an existing delivery method, or "
 "click :guilabel:`New`."
 msgstr ""
+"配送方法を設定するには、:menuselection:`在庫アプリ --> 設定 --> "
+"配送方法`に移動します。既存の配送方法を選択するか、:guilabel:`新規作成` をクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:105
 msgid ":doc:`Configure delivery method <../setup_configuration>`"
-msgstr ""
+msgstr ":doc:`配送方法の設定 <../setup_configuration>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:107
 msgid ""
@@ -18368,6 +18619,9 @@ msgid ""
 "method. It is recommended to use identifying information, such as the "
 "vehicle description and license plate number (e.g. `Truck 123-ABCD`)."
 msgstr ""
+":guilabel:`配送方法` "
+"フォームに、配送方法の名称を入力します。車両の説明やナンバープレート番号など、識別可能な情報を使用することをお勧めします(例: `トラック "
+"123-ABCD`)。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:111
 msgid ""
@@ -18376,6 +18630,9 @@ msgid ""
 "on Rules`. For more information about how shipping prices are calculated, "
 "refer to the :doc:`Delivery method <../setup_configuration>` article."
 msgstr ""
+"配送方法は内部で管理されているため、:guilabel:`プロバイダー` を :guilabel:`固定価格` または "
+":guilabel:`計算規則に基づく` のいずれかに設定します。配送価格の計算方法の詳細については、:doc:`配送方法 "
+"<../setup_configuration>` の記事を参照して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:115
 msgid ""
@@ -18384,6 +18641,8 @@ msgid ""
 "<inventory/shipping_receiving/delivery-product>` on the sales order or "
 "invoice."
 msgstr ""
+"次に、:guilabel:`配送プロダクト` を設定します。これは、販売オーダまたは顧客請求書に顧客の :ref:`配送料金 "
+"<inventory/shipping_receiving/delivery-product>`  として表示されるプロダクトです。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:119
 msgid ""
@@ -18391,20 +18650,22 @@ msgid ""
 ":guilabel:`Countries`, :guilabel:`States`, or :guilabel:`Zip Prefixes` to "
 "limit the range of local delivery."
 msgstr ""
+"オプションとして、:guilabel:`利用可能` タブで、:guilabel:`国`、:guilabel:`州/都道府県`、または "
+":guilabel:`郵便番号プレフィクス` を設定して、ローカル配送の範囲を限定することができます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:125
 msgid "Delivery method form."
-msgstr ""
+msgstr "配送方法フォーム"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:125
 msgid ""
 "Example delivery method, with the :guilabel:`Zip Prefixes` set to San "
 "Francisco's zip code."
-msgstr ""
+msgstr ":guilabel:`郵便番号プレフィクス` をサンフランシスコの郵便番号に設定した配送方法の例"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:130
 msgid "Dock locations"
-msgstr ""
+msgstr "ドックロケーション"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:132
 msgid ""
@@ -18412,6 +18673,8 @@ msgid ""
 "dock locations, go to :menuselection:`Inventory app --> Configuration --> "
 "Locations`."
 msgstr ""
+"各ローディングドックには専用のロケーションが必要です。ドックロケーションを作成または設定するには、次の場所に移動します。:menuselection:`在庫アプリ"
+" --> 設定 --> ロケーション`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:135
 msgid ""
@@ -18419,20 +18682,22 @@ msgid ""
 "the :guilabel:`Additional Information` section, tick the :guilabel:`Is a "
 "Dock Location` checkbox."
 msgstr ""
+"希望のロケーションをクリックすると、:guilabel:`ロケーション` フォームが開きます。:guilabel:`追加情報` "
+"セクションで、:guilabel:`ドックロケーションである` チェックボックスにチェックを入れます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:141
 msgid "Location configuration."
-msgstr ""
+msgstr "ロケーション設定"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:141
 msgid ""
 "Location configuration page with :guilabel:`Is a Dock Location` checkbox "
 "ticked."
-msgstr ""
+msgstr ":guilabel:`ドックロケーションである` チェックボックスにチェックが入った状態のロケーション設定ページ"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:144
 msgid "Build loads"
-msgstr ""
+msgstr "載積を構築する"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:146
 msgid ""
@@ -18441,34 +18706,40 @@ msgid ""
 "batches <inventory/shipping_receiving/create-batch>`. Then, :ref:`configure "
 "the batch form <inventory/shipping_receiving/batch-form>`, as needed."
 msgstr ""
+"設定が完了したら、:ref:`運送会社にオーダを割当て <inventory/shipping_receiving/assign-"
+"carrier>`、:ref:`バッチにグループ化 <inventory/shipping_receiving/create-batch>` "
+"します。その後、必要に応じて、:ref:`バッチフォームを設定 <inventory/shipping_receiving/batch-form>` "
+"します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:151
 msgid ""
 "To group products, go to the :menuselection:`Inventory app --> Operations "
 "--> Deliveries`, which reveals a list of outgoing deliveries."
 msgstr ""
+"プロダクトをグループ化するには、:menuselection:`在庫アプリ --> オペレーション --> 配送` "
+"に移動し、発送済みの配送のリストを表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:155
 msgid ""
 "Since this article is about a specific use case, explore details about each "
 "picking method in their dedicated articles."
-msgstr ""
+msgstr "この記事は特定のユースケースに関するものですので、各ピッキング方法の詳細については、それぞれの専用記事をご覧下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:158
 msgid ":doc:`../picking_methods/batch`"
-msgstr ""
+msgstr ":doc:`../picking_methods/batch`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:159
 msgid ":doc:`Wave picking <../picking_methods/wave>`"
-msgstr ""
+msgstr ":doc:`ウェーブピッキング <../picking_methods/wave>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:160
 msgid ":doc:`../picking_methods/cluster`"
-msgstr ""
+msgstr ":doc:`../picking_methods/cluster`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:166
 msgid "Carrier assignment"
-msgstr ""
+msgstr "運送会社の割当"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:168
 msgid ""
@@ -18476,12 +18747,15 @@ msgid ""
 "the :icon:`oi-settings-adjust` :guilabel:`(settings)` icon in the top-right "
 "corner, and ticking the :guilabel:`Carrier` checkbox."
 msgstr ""
+"デフォルトで表示されていない場合は、右上隅にある :icon:`oi-settings-adjust` :guilabel:`(設定)` "
+"アイコンをクリックして、:guilabel:`運送会社` チェックボックスにチェックを入れることで、*運送会社* 列を表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:173
 msgid ""
 "Other useful columns to enable can be :guilabel:`Zip` code, "
 ":guilabel:`Shipping Weight`, and :guilabel:`Shipping Volume`."
 msgstr ""
+"有効にできるその他の便利な列は、:guilabel:`郵便番号`、:guilabel:`配送重量`、:guilabel:`配送容量` です。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:176
 msgid ""
@@ -18493,32 +18767,37 @@ msgid ""
 "orders being added to the batch. Click :guilabel:`Confirm`, and the carrier "
 "is updated for all the selected records."
 msgstr ""
+"左側のチェックボックスにチェックを入れ、バッチの配送オーダを選択します。次に、明細の :guilabel:`運送会社` "
+"フィールドをクリックします。ドロップダウンメニューから、希望する車両の :ref:`配送方法 "
+"<inventory/shipping_receiving/delivery-method-for-carrier>` "
+"を選択します。:guilabel:`確認` というポップアップウィンドウが表示され、バッチに追加されるオーダの数が示されます。 "
+":guilabel:`確認` をクリックすると、選択したレコードの全てに対して運送会社が更新されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:185
 msgid "Set carrier."
-msgstr ""
+msgstr "運送会社を設定します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:185
 msgid ""
 "The delivery method `Truck 1-MER-001` is set as the :guilabel:`Carrier` for "
 "two delivery orders."
-msgstr ""
+msgstr "配送オーダ2件に対して、配送方法 `トラック 1-MER-001`が :guilabel:`運送会社` として設定されています。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:190
 msgid "Create batch"
-msgstr ""
+msgstr "バッチを作成する"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:192
 msgid ""
 "With the carrier set, begin adding orders to a batch or wave transfer by "
 "ticking the checkbox."
-msgstr ""
+msgstr "運送会社を設定したら、チェックボックスにチェックを入れ一括転送またはウェーブ転送にオーダを追加します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:195
 msgid ""
 "If a delivery order is already assigned to a batch transfer, assigning a "
 "batch transfer here does **not** update it."
-msgstr ""
+msgstr "配送オーダがすでに一括転送に割当てられている場合、ここで一括転送を割当てても、**更新はされません**。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:198
 msgid ""
@@ -18527,18 +18806,21 @@ msgid ""
 "ensure :guilabel:`Add to` is set to :guilabel:`a new [batch/wave] transfer`,"
 " then click :guilabel:`Confirm`."
 msgstr ""
+"次に、:icon:`fa-cog` :guilabel:`アクション` ボタンをクリックし、:guilabel:`バッチに追加` または "
+":guilabel:`ウェーブに追加` のいずれかをクリックします。ポップアップウィンドウで、:guilabel:`追加先` が "
+":guilabel:`新規 [一括/ウェーブ] 転送` に設定されていることを確認し、:guilabel:`確認` をクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:205
 msgid "Example wave."
-msgstr ""
+msgstr "ウェーブの例"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:205
 msgid "Delivery orders are selected to be grouped into a wave transfer."
-msgstr ""
+msgstr "配送オーダは、ウェーブ転送にグループ化されるように選択されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:208
 msgid "Alternative batch creation method"
-msgstr ""
+msgstr "代替のバッチ作成方法"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:210
 msgid ""
@@ -18547,82 +18829,86 @@ msgid ""
 " click the :icon:`fa-ellipsis-v` :guilabel:`(three dots)` icon. In the "
 "resulting drop-down menu, click :guilabel:`Prepare batch`."
 msgstr ""
+"バッチを作成する別の場所は、:menuselection:`在庫` アプリに移動し、:guilabel:`配送オーダ` カードで、:icon:`fa-"
+"ellipsis-v` :guilabel:`(3つのドット)` "
+"アイコンをクリックします。表示されるドロップダウンメニューで、:guilabel:`バッチを準備` をクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:215
 msgid ""
 "The :guilabel:`Transport Management` drop-down menu contains other tools for"
 " fleet management:"
-msgstr ""
+msgstr ":guilabel:`輸送管理`ドロップダウンメニューには、車両管理用の他のツールも含まれています。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:217
 msgid ":guilabel:`Manage Batches`: open list of batches"
-msgstr ""
+msgstr ":guilabel:`バッチ管理`: バッチのリストを開く"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:218
 msgid ""
 ":guilabel:`Dock Dispatching`: open weekly calendar view of scheduled batch "
 "operations"
-msgstr ""
+msgstr ":guilabel:`ドック配車管理`: スケジュールされたバッチオペレーションの週次カレンダを開く"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:219
 msgid ""
 ":guilabel:`Batches by Route`: Kanban view of batches grouped by fulfillment "
 "route"
-msgstr ""
+msgstr ":guilabel:`ルート別バッチ`: フルフィルメントルートごとにグループ化されたバッチのカンバンビューを開く"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:220
 msgid ""
 ":guilabel:`Calendar`: open hourly calendar view of scheduled operations"
-msgstr ""
+msgstr ":guilabel:`カレンダ`: スケジュールされた作業の時間単位カレンダを開く"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:221
 msgid ":guilabel:`Statistics`: open pivot table of the batch transfers"
-msgstr ""
+msgstr ":guilabel:`統計`: 一括転送のピボットテーブルを開く"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst-1
 msgid ""
 "Show prepare batch option from the Transport Management drop-down menu."
-msgstr ""
+msgstr "輸送管理のドロップダウンメニューからバッチオプションの準備を表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:229
 msgid "Batch form"
-msgstr ""
+msgstr "バッチフォーム"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:233
 msgid ""
 ":guilabel:`Responsible`: employee assigned to the picking. Leave blank if "
 "*any* worker can fulfill this picking."
 msgstr ""
+":guilabel:`担当`:ピッキングに割当てられた従業員。 * どの作業員でも* このピッキングを行える場合は、空欄のままにして下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:239
 msgid ":guilabel:`Dock Location`: select the loading location."
-msgstr ""
+msgstr ":guilabel:`ドックロケーション`: 積載場所を選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:240
 msgid ""
 ":guilabel:`Vehicle`: select the vehicle, which will auto-fill "
 ":guilabel:`Vehicle Category`."
-msgstr ""
+msgstr ":guilabel:`車両`: 車両を選択すると、:guilabel:`車両カテゴリ` が自動入力されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:241
 msgid ""
 ":guilabel:`Vehicle Category`: show if the order exceeds the :ref:`vehicle's "
 "capacity limits <inventory/shipping_receiving/vehicle-capacity>`"
-msgstr ""
+msgstr ":guilabel:`車両カテゴリ`: オーダが :ref:`車両の容量制限 <inventory>` を超える場合に表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:245
 msgid ""
 "The :guilabel:`Volume` bar is grayed out because the capacity has been "
 "reached."
-msgstr ""
+msgstr "容量が限界に達しているため、:guilabel:`容量` バーはグレー表示になっています。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:0
 msgid "Show batch form."
-msgstr ""
+msgstr "バッチフォームを表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:251
 msgid "Prepare delivery route"
-msgstr ""
+msgstr "配送ルートを準備する"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:253
 msgid ""
@@ -18630,26 +18916,28 @@ msgid ""
 "the batch or wave form to view delivery destinations on a map. Selecting an "
 "individual delivery order pinpoints its location."
 msgstr ""
+"ドライバーが準備できるように、バッチまたはウェーブの上部にある :guilabel:`地図` "
+"ボタンをクリックして、配送先を地図上に表示します。個々の配送オーダを選択すると、その場所が特定されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:257
 msgid ""
 "The :guilabel:`Map` button is only visible for transfers with the "
 ":guilabel:`In progress` status."
-msgstr ""
+msgstr ":guilabel:`地図` ボタンは、:guilabel:`進行中` ステータスの転送に対してのみ表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst-1
 msgid "Show map in Odoo, with information of the delivery orders."
-msgstr ""
+msgstr "Odooで配送オーダ情報を表示した地図を表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst:262
 msgid ""
 "Additionally, use the :guilabel:`View in Google Maps` button to generate a "
 "route from the warehouse to the delivery points."
-msgstr ""
+msgstr "さらに、:guilabel:`Googleマップで見る` ボタンを使用して、倉庫から配送先までのルートを生成します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch.rst-1
 msgid "Show Google Map route."
-msgstr ""
+msgstr "Googleマップのルートを表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:3
 msgid "FedEx integration"
@@ -18772,6 +19060,8 @@ msgid ""
 "way the method operates in Odoo. In the :guilabel:`Provider` field, select "
 ":guilabel:`FedEx` from the drop-down menu, if it is not already selected."
 msgstr ""
+"配送方法フォームの一番上には、Odooでの配送方法のオペレーションを設定するためのフィールドがあります。まだ選択されていない場合 "
+":guilabel:`プロバイダー` フィールドで、ドロップダウンメニューから :guilabel:`FedEx` を選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:66
 msgid ""
@@ -18779,10 +19069,12 @@ msgid ""
 "providers. For details on how to fill them out, see the documentation on "
 ":doc:`third-party shippers <third_party_shipper>`."
 msgstr ""
+"このセクションの残りの項目は、全ての配送プロバイダに共通するものです。記入方法の詳細については、:doc:`サードパーティの配送業者 "
+"<third_party_shipper>`ドキュメントを参照して下さい。 "
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:70
 msgid "Fedex Configuration tab"
-msgstr ""
+msgstr "Fedex設定タブ"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:72
 msgid ""
@@ -18791,6 +19083,8 @@ msgid ""
 " the shipping details associated with the method (drop-off type, package "
 "type, etc.)."
 msgstr ""
+"FedEx 配送方法フォームの :guilabel:`Fedex設定` タブのオプションは、その配送方法を FedEx "
+"アカウントに接続し、その配送方法に関連する配送の詳細 (配送物受け渡し方法、梱包タイプなど) を設定するために使用します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:76
 msgid ""
@@ -18799,10 +19093,13 @@ msgid ""
 "FedEx's `Open Account <https://www.fedex.com/en-us/open-account.html>`_ "
 "page, click on :guilabel:`Create Account`, and follow the instructions."
 msgstr ""
+"このタブのフィールドに入力するために必要な情報を取得するには、FedExのビジネスアカウントが必要です。新しいアカウントを作成するには、 "
+"`アカウントの開設 <https://www.fedex.com/ja-jp/open-account.html>` "
+"ページに移動し、:guilabel:`アカウントの開設` をクリックし、指示に従って下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:82
 msgid "Developer Key and Meter Number fields"
-msgstr ""
+msgstr "開発者キーとメータ番号のフィールド"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:84
 msgid ""
@@ -18810,6 +19107,8 @@ msgid ""
 "service, like the Odoo **Inventory** app. A *meter number* is a unique ID "
 "number used by FedEx to identify negotiated shipping rates for each account."
 msgstr ""
+"開発者キーは、FedExアカウントをOdoo **在庫** "
+"アプリなどの外部サービスと統合するために使用されます。メーター番号は、各アカウントの契約済送料を識別するためにFedExが使用する一意のID番号です。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:88
 msgid ""
@@ -18818,6 +19117,9 @@ msgid ""
 "services.html>`_. Then, click on the :guilabel:`FedEx Web Services` drop-"
 "down menu."
 msgstr ""
+"開発者キーとメーター番号を取得するには、まず FedEx の `開発者リソースセンター <https://www.fedex.com/en-"
+"us/developer/web-services.html>` "
+"に移動します。次に、:guilabel:FedExウェブサービス`ドロップダウンメニューをクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:92
 msgid ""
@@ -18825,6 +19127,8 @@ msgid ""
 "key and meter number which can be used to configure a shipping method for "
 "testing purposes."
 msgstr ""
+":guilabel:`テストキーの取得` "
+"をクリックして、テスト目的で配送方法を設定するために使用できる開発者キーとメーター番号を取得するプロセスを開始します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:95
 msgid ""
@@ -18832,6 +19136,8 @@ msgid ""
 "developer key and meter number, which can be used to configure a shipping "
 "method that generates real shipments with FedEx."
 msgstr ""
+":guilabel:`プロダクションキーの取得` "
+"をクリックすると、FedExで実際の出荷を行う配送方法を設定するために使用できるデベロッパーキーとメーター番号を取得するプロセスが開始されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:98
 msgid ""
@@ -18839,6 +19145,8 @@ msgid ""
 ":guilabel:`Confirmation` screen is reached. This screen displays the "
 "developer key and meter number."
 msgstr ""
+"いずれかのオプションをクリックした後、:guilabel:`確認` "
+"画面が表示されるまで指示に従ってください。この画面には開発者キーとメーター数が表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:101
 msgid ""
@@ -18846,16 +19154,19 @@ msgid ""
 ":guilabel:`Developer Key` and :guilabel:`Meter Number` fields on the "
 ":guilabel:`Fedex Configuration` tab of the shipping method form."
 msgstr ""
+"開発者キーとメーター番号が決定したら、配送方法フォームの :guilabel:`Fedex設定` タブにある :guilabel:`開発者キー` および"
+" :guilabel:`メーター番号` フィールドに入力します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:106
 msgid "Password and Account Number fields"
-msgstr ""
+msgstr "パスワードおよびアカウント番号フィールド"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:108
 msgid ""
 "A *password* is used, along with a username, to log into a FedEx account. An"
 " *account number* is the unique number assigned to each FedEx account."
 msgstr ""
+"FedExのアカウントにログインするには、ユーザー名とともにパスワードが使用されます。アカウント番号とは、各FedExアカウントに割当てられた一意の番号です。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:111
 msgid ""
@@ -18864,12 +19175,14 @@ msgid ""
 "corner of the screen, and select :menuselection:`My Profile` from the drop-"
 "down menu."
 msgstr ""
+"FedExのアカウント番号を確認するには、https://www.fedex.comでFedExアカウントにログインします。画面右上のアカウント所有者の名前をクリックし、ドロップダウンメニューから"
+" :menuselection:`マイプロフィール` を選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:115
 msgid ""
 "On the profile page, click :guilabel:`Account Management` on the left side "
 "of the screen. The account number is displayed on this screen."
-msgstr ""
+msgstr "プロフィールページで、画面左側の :guilabel:`アカウント管理` をクリックします。この画面にアカウント番号が表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:118
 msgid ""
@@ -18877,6 +19190,8 @@ msgid ""
 ":guilabel:`Password` and :guilabel:`Account Number` fields on the "
 ":guilabel:`Fedex Configuration` tab of the shipping method form."
 msgstr ""
+"パスワードとアカウント番号が決定したら、配送方法フォームの :guilabel:`Fedex設定` タブにある :guilabel:`パスワード` "
+"および :guilabel:`アカウント番号` フィールドに入力します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:125
 msgid ""
@@ -18884,50 +19199,51 @@ msgid ""
 "number of additional fields used provide information about the shipping "
 "method:"
 msgstr ""
+":guilabel:`Fedex設定` タブのメインセクションには、配送方法に関する情報を提供するための追加フィールドがいくつか含まれています。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:128
 msgid ""
 ":guilabel:`Fedex Service Type`: The FedEx service used to ship a package."
-msgstr ""
+msgstr ":guilabel:`Fedexサービスタイプ`: 梱包を発送する際に使用するFedExサービス"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:129
 msgid ""
 ":guilabel:`Fedex Drop-Off Type`: The method for getting a package into "
 "FedEx's possession."
-msgstr ""
+msgstr ":guilabel:`Fedex配送物受け渡し方法`: FedExに梱包を預ける方法"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:130
 msgid ""
 ":guilabel:`Fedex Package Type`: The type of package used for the shipping "
 "method."
-msgstr ""
+msgstr ":guilabel:`Fedex梱包タイプ`: 配送方法に使用される梱包の種類"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:131
 msgid ""
 ":guilabel:`Package Weight Unit`: The unit of measure used to weigh packages."
-msgstr ""
+msgstr ":guilabel:`パッケージ重量単位`: 梱包重量の測定に使用される単位"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:132
 msgid ""
 ":guilabel:`Package Length Unit`: The unit of measure used to determine the "
 "dimensions of packages."
-msgstr ""
+msgstr ":guilabel:`梱包長さ単位`: パッケージングの寸法を決定するために使用される測定単位"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:133
 msgid ":guilabel:`Label Type`: The type of shipping label used for packages."
-msgstr ""
+msgstr ":guilabel:`ラベルタイプ`: 梱包に使用される配送ラベルの種類"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:134
 msgid ""
 ":guilabel:`Label Format`: The file format used by Odoo to generate shipping "
 "labels."
-msgstr ""
+msgstr ":guilabel:`ラベルフォーマット`: Odooが配送ラベルを生成する際に使用するファイルフォーマット"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:135
 msgid ""
 ":guilabel:`Commercial Invoice Type`: The dimensions and type of the paper "
 "used to print invoices."
-msgstr ""
+msgstr ":guilabel:`コマーシャルインボイスタイプ`: インボイスを印刷する用紙の寸法と種類"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:138
 msgid ""
@@ -18937,38 +19253,45 @@ msgid ""
 "account, visit the *Account Management* page after logging in to the FedEx "
 "website, or speak with a customer service representative."
 msgstr ""
+"出荷方法の :guilabel:`Fedex設定` タブで選択すべきオプションは、関連する FedEx "
+"アカウントで交渉された出荷サービスによって異なります。 FedEx アカウントで利用可能なサービスを確認するには、FedEx "
+"ウェブサイトにログイン後、*アカウント管理* ページにアクセスするか、カスタマーサービス担当者にご相談下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:144
 msgid "Options section"
-msgstr ""
+msgstr "オプションセクション"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:146
 msgid ""
 "The :guilabel:`Options` section of the :guilabel:`Fedex Configuration` tab "
 "provides a few additional options to further configure the shipping method:"
 msgstr ""
+":guilabel:`Fedex設定` タブの :guilabel:`オプション` "
+"セクションでは、配送方法をさらに設定するための追加オプションがいくつか用意されています:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:149
 msgid ""
 ":guilabel:`Saturday Delivery`: Tick the checkbox to allow packages shipped "
 "with the delivery method to be delivered on Saturdays."
-msgstr ""
+msgstr ":guilabel:`土曜日配送`: このチェックボックスをオンにすると、この配送方法で発送された荷物を土曜日に配送できるようになります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:151
 msgid ""
 ":guilabel:`Generate Return Label`: Tick the checkbox to automatically "
 "generate a return label upon validation of a delivery order."
-msgstr ""
+msgstr ":guilabel:`返品ラベルを生成`: 配送オーダの検証済時に自動的に返品ラベルを生成するには、チェックボックスにチェックを入れます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:153
 msgid ""
 ":guilabel:`Duties paid by`: Use the drop-down menu to select whether duty "
 "charges should be paid by the :guilabel:`Sender` or :guilabel:`Recipient`."
 msgstr ""
+":guilabel:`税支払者`: ドロップダウンメニューを使用して、関税が :guilabel:`発送人` または :guilabel:`荷受人` "
+"のどちらによって支払われるべきかを選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:157
 msgid "Activate shipping method"
-msgstr ""
+msgstr "配送方法を有効化する"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:159
 msgid ""
@@ -18976,6 +19299,7 @@ msgid ""
 "environment*. This means they can only be used for testing purposes, and are"
 " unable to generate actual shipping orders."
 msgstr ""
+"デフォルトでは、Odooの配送方法はテスト環境内に作成されます。これは、テスト目的でのみ使用でき、実際の配送オーダを生成できないことを意味します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:162
 msgid ""
@@ -18984,25 +19308,27 @@ msgid ""
 "shipping method form. After doing so, the smart buttons changes to read "
 ":icon:`fa-play` :guilabel:`Production Environment`."
 msgstr ""
+"*本番環境* で配送方法を有効化するには、配送方法フォームの上部にあるスマートボタンのアイコン :fa-stop:guilabel:`テスト環境` "
+"をクリックします。するとスマートボタンのアイコンが :fa-play:guilabel:`本番環境` に変わります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:166
 msgid ""
 "With the production environment enabled, validating a delivery order using "
 "the shipping method generates an actual shipping label with FedEx."
-msgstr ""
+msgstr "本番環境が有効になっている場合、配送方法を使用して配送オーダを検証すると、FedExで実際の配送ラベルが生成されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:169
 msgid ""
 "Click the :icon:`fa-play` :guilabel:`Production Environment` smart button to"
 " return the shipping method to a test environment."
-msgstr ""
+msgstr ":icon:`fa-play` :guilabel:`本番環境` スマートボタンをクリックして、出荷方法をテスト環境に戻します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:173
 msgid ""
 "**Do not** enable the production environment for a shipping method before it"
 " is ready to be used for actual shipping orders. Doing so may lead to the "
 "creation of unwanted charges with FedEx."
-msgstr ""
+msgstr "実際の出荷オーダに使用できるようになる前に、本番環境で出荷方法を有効化しないで下さい。FedExで不要な料金が発生する可能性があります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:3
 msgid "Shipping cost invoicing"
@@ -20376,6 +20702,9 @@ msgid ""
 ":menuselection:`Inventory app --> Configuration --> Settings`, ticking the "
 ":guilabel:`Packages` checkbox, and clicking :guilabel:`Save`."
 msgstr ""
+"このオプションが利用できない場合は、:doc:`梱包 <../../product_management/configure/package>` "
+"機能を有効にして下さい。 :menuselection:`在庫アプリ --> 設定 --> 管理設定` に進み、:guilabel:`梱包` "
+"チェックボックスにチェックを入れ、:guilabel:`保存` をクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/print_on_validation.rst:297
 msgid ""
@@ -20441,7 +20770,7 @@ msgstr "梱包バーコードと梱包日のPDF"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:3
 msgid "Sendcloud integration"
-msgstr ""
+msgstr "Sendcloud統合"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:5
 msgid ""
@@ -20816,6 +21145,7 @@ msgid ""
 "Sendcloud account will be charged, unless the associated package is "
 "cancelled within 24 hours of creation."
 msgstr ""
+"Sendcloudでは、会社がOdooで荷物の発送をテストする際にテストキーを提供しません。つまり、荷物が作成された場合、作成から24時間以内に関連する荷物が取消されない限り、設定したSendcloudアカウントに料金が請求されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:173
 msgid ""
@@ -20825,6 +21155,8 @@ msgid ""
 "creation — this occurs automatically. The test and production environment "
 "settings can be toggled back and forth from their respective smart buttons."
 msgstr ""
+" "
+"Odooにはテスト環境での不要な請求に対する保護機能が組込まれています。テスト環境では、ラベル作成に配送方法が使用された場合、ラベル作成後すぐに取消されます。これは、自動で行われます。テスト環境と本番環境の設定は、それぞれのスマートボタンから切替えることができます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:181
 msgid "Shipping information"
@@ -20941,6 +21273,8 @@ msgid ""
 "<inventory/shipping_receiving/third-party-rate>`, and are only used to "
 "improve the process of :doc:`generating shipping labels <labels>`."
 msgstr ""
+"配送規則は、:ref:`送料計算 <inventory/shipping_receiving/third-party-"
+"rate>`には影響しません。配送ラベルの生成プロセスを改善するためにのみ使用されます <labels>`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:232
 msgid ""
@@ -21136,7 +21470,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:11
 msgid ":doc:`Automatically calculate shipping <../setup_configuration>`"
-msgstr ""
+msgstr ":doc:`送料の自動計算 <../setup_configuration>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:12
 msgid ":doc:`Integrate other third-party couriers <third_party_shipper>`"
@@ -21334,6 +21668,9 @@ msgid ""
 " For more information about the other fields, refer to "
 ":doc:`../setup_configuration`."
 msgstr ""
+"送料を自動計算 "
+"このセクションで説明されているフィールドは、Starshipitの設定に固有のものです。その他のフィールドの詳細については、:doc:`../setup_configuration`"
+" を参照して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:130
 msgid ""
@@ -21414,7 +21751,7 @@ msgstr "Odooで設定されたStarshipit配送プロダクトのサンプル:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:0
 msgid ":guilabel:`Sendle: Sendle drop off`"
-msgstr ":guilabel:`Sendle: Sendleドロップオフ`"
+msgstr ":guilabel:`Sendle: Sendle配送物受け渡し`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:0
 msgid ":guilabel:`Shipping Product`: `Sendle Delivery`"
@@ -21441,12 +21778,13 @@ msgid ""
 "provider being used, the account might be charged for printing label, unless"
 " the order is cancelled manually on the couriers’s portal."
 msgstr ""
+"Odooには、テスト環境を使用している際に発生する可能性のある不要な請求に対する保護機能が組み込まれています。テスト環境で、配送方法を使用してラベルを作成した場合、作成されたラベルは直ちにキャンセルされます。これは自動的に行われます。ただし、使用している配送業者の種類によっては、配送業者のポータルでオーダを手動で取消しない限り、ラベルの印刷に対してアカウントに請求が発生する場合があります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:180
 msgid ""
 "Switch between the test and production environment by clicking the "
 ":guilabel:`Environment` smart button at the top of the shipping method form."
-msgstr "配送方法フォームの上部にある :guilabel:`環境` スマートボタンをクリックして、テスト環境とプロダクト環境を切り替えます。"
+msgstr "配送方法フォームの上部にある :guilabel:`環境` スマートボタンをクリックして、テスト環境と本番環境を切り替えます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/starshipit_shipping.rst:186
 msgid "Generate a label with Starshipit"
@@ -21592,6 +21930,8 @@ msgid ""
 "calculate shipping costs <../setup_configuration>`, and :doc:`generate "
 "shipping labels <labels>`."
 msgstr ""
+"ユーザはサードパーティの配送会社を Odoo データベースにリンクして、特定の住所への運送会社の配送を検証し、:doc:`配送費用を自動計算 "
+"<../setup_configuration>` し、配送ラベルを :doc:`配送ラベルを生成  <labels>` することができます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:14
 msgid ""
@@ -21622,7 +21962,7 @@ msgstr "利用可能地域"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:31
 msgid ":doc:`FedEx <fedex>`"
-msgstr ""
+msgstr ":doc:`FedEx <fedex>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:32
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:34
@@ -21632,7 +21972,7 @@ msgstr "全て"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:33
 msgid ":doc:`DHL Express <dhl_credentials>`"
-msgstr ""
+msgstr ":doc:`DHL Express <dhl_credentials>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:35
 msgid ":doc:`UPS <ups_credentials>`"
@@ -21652,11 +21992,11 @@ msgstr ":doc:`Sendcloud <sendcloud_shipping>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:40
 msgid "Some European countries (see details below)"
-msgstr ""
+msgstr "一部のヨーロッパ諸国 (詳細は下記参照)"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:41
 msgid ":doc:`Bpost <bpost>`"
-msgstr ""
+msgstr ":doc:`Bpost <bpost>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:42
 msgid "Belgium"
@@ -21680,15 +22020,15 @@ msgstr "インド"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:47
 msgid ":doc:`Starshipit <starshipit_shipping>`"
-msgstr ""
+msgstr ":doc:`Starshipit <starshipit_shipping>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:48
 msgid "Australia and New Zealand"
-msgstr ""
+msgstr "オーストラリア・ニュージーランド"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:51
 msgid "Other services from DHL are **not** supported."
-msgstr ""
+msgstr "DHLの他のサービスはサポートされて **いません**。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:53
 msgid ""
@@ -21696,6 +22036,7 @@ msgid ""
 "Germany, Italy, the Netherlands, Spain, and the United Kingdom, and **to** "
 "any European country."
 msgstr ""
+"Sendcloudは現在、オーストリア、ベルギー、フランス、ドイツ、イタリア、オランダ、スペイン、英国からの発送、およびヨーロッパのあらゆる国への発送に対応しています。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:59
 msgid ""
@@ -21762,6 +22103,9 @@ msgid ""
 "refer to the :ref:`install apps and modules <general/install>` "
 "documentation."
 msgstr ""
+":doc:`配送方法 <../setup_configuration>` は *販売*、*eコマース*、*ウェブサイト* "
+"アプリのオペレーションと統合することもできます。インストールについては、:ref:`アプリとモジュールのインストール "
+"<general/install>` ドキュメントを参照して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst-1
 msgid "Options of available shipping connectors in Odoo."
@@ -21790,10 +22134,12 @@ msgid ""
 "Additional delivery methods can be created for specific purposes, such as "
 ":doc:`packaging <../../product_management/configure/packaging>`."
 msgstr ""
+"特定の目的のために、追加の配送方法を定義することができます。例えば、:doc:`パッケージング "
+"<../../product_management/configure/packaging>`　などです。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:104
 msgid ":doc:`Configure delivery methods <../setup_configuration>`"
-msgstr ""
+msgstr ":doc:`配送方法の設定 <../setup_configuration>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:107
 msgid ""
@@ -21867,6 +22213,8 @@ msgid ""
 " cost` of shipping is wanted instead, refer to :doc:`Invoice real shipping "
 "costs <invoicing>` document."
 msgstr ""
+":guilabel:`請求方針`: 運送会社から直接選択し、:guilabel:`見積費用` を計算します。 代わりに、配送の "
+":guilabel:`実際原価` が必要な場合は、:doc:`実際送料を請求する <invoicing>`ドキュメントを参照して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:138
 msgid ""
@@ -22094,7 +22442,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:260
 msgid ""
 ":doc:`Charge customers for shipping after product delivery <invoicing>`"
-msgstr ""
+msgstr ":doc:`プロダクト配送後に送料を顧客に請求する <invoicing>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:267
 msgid ""
@@ -22285,6 +22633,8 @@ msgid ""
 ":guilabel:`Provider` is set to :guilabel:`UPS`, **NOT** :guilabel:`UPS "
 "Legacy`."
 msgstr ""
+"UPSを使用する配送方法を設定する際は、:guilabel:`プロバイダー` が :guilabel:`UPS` "
+"に設定されていることを確認して下さい。:guilabel:`UPS レガシー` では **ありません**。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:24
 msgid ""
@@ -22292,6 +22642,8 @@ msgid ""
 ":guilabel:`UPS Legacy`, archive them, and create new shipping methods using "
 ":guilabel:`UPS`, instead."
 msgstr ""
+"現在、配送方法が存在し、:guilabel:`プロバイダー` が :guilabel:`UPSレガシー` "
+"に設定されている場合は、それをアーカイブし、代わりに :guilabel:`UPS` を使用して新しい配送方法を作成します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:28
 msgid "UPS account setup"
@@ -22504,7 +22856,7 @@ msgstr ":guilabel:`ペーパレスドキュメント`: 配送にリンクする�
 msgid ""
 ":guilabel:`Shipping`: Enables UPS shipping services, such as preparing "
 "packages for shipment, managing returns, and cancelling scheduled shipments."
-msgstr ""
+msgstr ":guilabel:`配送`: UPSの配送サービスを有効にします。出荷準備、返品管理、出荷予定の取消などのサービスが利用できます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:134
 msgid ":guilabel:`Rating`: Compare delivery services and shipping rates."
@@ -22628,6 +22980,8 @@ msgid ""
 "the :doc:`package type <../../product_management/configure/package>` that is"
 " supported for the shipping service."
 msgstr ""
+":guilabel:`UPS梱包タイプ`: (*必須*) ドロップダウンメニューから、配送サービスでサポートされている :doc:`梱包タイプ "
+"<../../product_management/configure/package>` を選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials.rst:192
 msgid ""
@@ -23048,6 +23402,9 @@ msgid ""
 "within the warehouse, or :doc:`between warehouses "
 "<replenishment/resupply_warehouses>`."
 msgstr ""
+"倉庫内のプロダクトが顧客に、仕入先から、倉庫内で、または :doc:`倉庫間  <replenishment/resupply_warehouses>`"
+" でどのように移動されるかを制御するために、倉庫内の :doc:`ルート "
+"<../shipping_receiving/daily_operations/use_routes>` を設定します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:31
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:3
