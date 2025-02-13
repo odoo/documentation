@@ -92,6 +92,58 @@ If you wish to have any amount input in the :guilabel:`II` section (from boxes :
 
 Repeat this operation for all contacts related to the **agriculture** industry.
 
+Veri*Factu
+==========
+
+**Veri\*Factu** is an e-Invoicing system used by the Spanish Tax Agency.
+It is mandatory for most tax payers in Spain with some exceptions.
+Notable exceptions are tax payers who use SII or fall under a regional tax regime (i.e. TicketBai TODO:link).
+
+Odoo supports the automatic sending of invoices and Point of Sale orders to the authorities.
+To enable **Veri\*Factu**, set your company's :guilabel:`Country` and
+:guilabel:`Tax ID` under :menuselection:`Settings --> General Settings` in the :guilabel:`Companies`
+section.
+
+Then, :ref:`install <general/install>` the module :guilabel:`Spain - Veri*Factu (l10n_es_edi_verifactu)`,
+go to the :guilabel:`Veri\*Factu` section under :menuselection:`Accounting --> Configuration --> Settings`.
+There you need to check :guilabel:`Enable Veri*Factu` and add at least one certificate under
+:guilabel:`Manage certificates`.
+
+.. warning::
+   If you are testing, enable :guilabel:`Veri*Factu Test Environment` in the
+   :guilabel:`Veri\*Factu` section, which can be found under :menuselection:`Settings --> General Settings`.
+
+Invoicing
+---------
+
+Once an invoice has been :doc:`created <../../finance/accounting/customer_invoices>` and confirmed,
+it can be send: Click :guilabel:`Send & Print` to open the sending dialog.
+The :guilabel:`Veri*Factu` checkbox should be checked (since :guilabel:`Enable Veri*Factu` is active in the settings).
+Click :guilabel:`Send & Print` again.
+This will create an XML file with information about the invoice and store it as a a Veri*Factu document.
+A list of all such documents associated with an invoice can be found in the :guilabel:`Veri*Factu` tab.
+
+If possible the document is send immediately to the AEAT.
+This may not happen some times due to waiting time requirements between submissions (imposed by the AEAT).
+In that case the document will be send at the next possible time via a scheduled action.
+
+.. note::
+   The Veri\*Factu **QR code** is displayed on the invoice PDF.
+   By scanning this QR code it can be verified that the invoice is known to the AEAT.
+
+Point of Sale
+-------------
+
+Immediatly after order has been paid, the Veri*Factu document will be generated.
+Just like for invoices it will be send immediately if possible or at the next possible time via a scheduled action.
+If an invoice is created for the order during the payment process the Veri*Factu document will be
+generated and send for the invoice instead.
+
+.. note::
+   The Veri\*Factu **QR code** is displayed on the order receipt.
+   This happens even if an invoice is created for the order.
+   By scanning this QR code it can be verified that the order is known to the AEAT.
+
 TicketBAI
 =========
 
