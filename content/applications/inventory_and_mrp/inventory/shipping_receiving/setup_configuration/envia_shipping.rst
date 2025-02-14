@@ -86,6 +86,8 @@ Once previous fields are properly set, sync the carriers and a pop up will ask y
 .. note::
    If more than one shipping option is needed, just create more Odoo shipping methods and vary any parameter like the package, carrier or service.
 
+.. _inventory/shipping_receiving/envia-shipping-info:
+
 Shipping information
 --------------------
 
@@ -215,18 +217,20 @@ LTL shipment labels can be generated through the connector, the insurance for LT
 .. note::
    Additional services are available when you select pallet as an option and allows you to give additional services like lift assistance and deliveries during weekends.
 
+.. _inventory/shipping_receiving/setup_configuration/cancel:
 
 Tracking and cancellation
 ==================
 Shipments registered with Envia can be tracked using the tracking smart button from the delivery order or using the tracking link from the customer portal.
+
+Cancellations can be requested directly, see :ref:`Cancel section <inventory/shipping_receiving/setup_configuration/cancel>`
 
 .. image:: sendcloud_shipping/contracts.png
    :align: center
    :alt: Pending image.
 
 
-Cancellations can be requested directly, see :ref:`Cancel section
-   <inventory/shipping_receiving/setup_configuration/cancel>`
+
 
 FAQ
 ===
