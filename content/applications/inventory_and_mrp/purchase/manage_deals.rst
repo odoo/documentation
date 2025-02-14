@@ -10,5 +10,6 @@ Manage deals
    manage_deals/rfq
    manage_deals/blanket_orders
    manage_deals/calls_for_tenders
+   manage_deals/purchase_templates
    manage_deals/control_bills
    manage_deals/manage
