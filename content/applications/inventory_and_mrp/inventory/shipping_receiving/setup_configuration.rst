@@ -24,7 +24,7 @@ To do so, navigate to the :menuselection:`Apps` application from the main Odoo d
 Then, remove the :guilabel:`Apps` filter, and type in `Delivery Costs` in the :guilabel:`Search...`
 bar. After finding the :guilabel:`Delivery Costs` module, click :guilabel:`Activate` to install it.
 
-.. image:: setup_configuration/setup_configuration/install-module.png
+.. image:: setup_configuration/install-module.png
    :alt: Install the Delivery Costs module.
 
 .. _inventory/shipping/sales-order:
@@ -54,7 +54,7 @@ the shipping method form.
    `Furniture Delivery`, a delivery product with a fixed rate of `$200`, is added to sales order
    `S00088`.
 
-     .. image:: setup_configuration/setup_configuration/delivery-product.png
+     .. image:: setup_configuration/delivery-product.png
         :alt: Show delivery order on the sales order line.
 
 Delivery order
@@ -64,7 +64,7 @@ The shipping method added to the sales order is linked to the shipping carrier d
 delivery order. To add or change the delivery method on the delivery itself, go to the
 :guilabel:`Additional Info` tab and modify the :guilabel:`Carrier` field.
 
-.. image:: setup_configuration/setup_configuration/delivery-order.png
+.. image:: setup_configuration/delivery-order.png
    :alt: Shipping carrier information on the delivery form.
 
 .. toctree::

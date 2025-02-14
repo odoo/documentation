@@ -16,7 +16,7 @@ about the Odoo JavaScript framework in its entirety, as used by the web client.
 
 ..     odoo[Odoo JavaScript framework] --> Owl
 
-.. figure:: 02_web_framework/previously_learned.svg
+.. figure:: 02_build_a_dashboard/previously_learned.svg
    :align: center
    :width: 50%
 
@@ -28,7 +28,7 @@ features to it, using the Odoo JavaScript framework.
 
 .. admonition:: Goal
 
-   .. image:: 02_web_framework/overview_02.png
+   .. image:: 02_build_a_dashboard/overview_02.png
       :align: center
 
 .. spoiler:: Solutions
@@ -55,7 +55,7 @@ and a main content zone just below. This is done using the `Layout component
 Open http://localhost:8069/web, then open the :guilabel:`Awesome Dashboard` app, and see the
 result.
 
-.. image:: 02_web_framework/new_layout.png
+.. image:: 02_build_a_dashboard/new_layout.png
    :align: center
 
 .. seealso::
@@ -169,7 +169,7 @@ Let us now add two buttons to our control panel:
    <https://github.com/odoo/odoo/blob/ef424a9dc22a5abbe7b0a6eff61cf113826f04c0/addons/account
    /static/src/components/journal_dashboard_activity/journal_dashboard_activity.js#L28-L35>`_.
 
-.. image:: 02_web_framework/navigation_buttons.png
+.. image:: 02_build_a_dashboard/navigation_buttons.png
    :align: center
 
 .. seealso::
@@ -186,7 +186,7 @@ Let us now improve our content.
    hardcoded to `(18*size)rem`.
 #. Add two cards to the dashboard. One with no size, and the other with a size of 2.
 
-.. image:: 02_web_framework/dashboard_item.png
+.. image:: 02_build_a_dashboard/dashboard_item.png
    :align: center
 
 .. seealso::
@@ -223,7 +223,7 @@ A basic request could look like this:
    - Number of cancelled orders this month
    - Average time for an order to go from 'new' to 'sent' or 'cancelled'
 
-.. image:: 02_web_framework/statistics.png
+.. image:: 02_build_a_dashboard/statistics.png
    :align: center
 
 .. seealso::
@@ -275,7 +275,7 @@ the chartjs code every time if they don't need it.
 #. The `PieChart` component will need to render a canvas, and draw on it using `chart.js`.
 #. Make it work!
 
-.. image:: 02_web_framework/pie_chart.png
+.. image:: 02_build_a_dashboard/pie_chart.png
    :align: center
    :scale: 80%
 
@@ -442,7 +442,7 @@ The dashboard configuration will be saved as a list of removed item ids.
 #. And modify the `Dashboard` component to filter the current items by removing the ids of items
    from the configuration.
 
-.. image:: 02_web_framework/items_configuration.png
+.. image:: 02_build_a_dashboard/items_configuration.png
    :width: 80%
    :align: center
 

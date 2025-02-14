@@ -48,7 +48,7 @@ scheduled date that products should be reserved if the transfers are starred (fa
    This means products are reserved two days before the scheduled delivery date for normal orders,
    and three days before the scheduled delivery date for starred (favorited) transfers.
 
-   .. image:: before_scheduled_date/before-scheduled-date- days-before.png
+   .. image:: before_scheduled_date/before-scheduled-date-days-before.png
       :align: center
       :alt: Reserve before scheduled date field with set numerical values.
 

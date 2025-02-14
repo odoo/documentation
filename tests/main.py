@@ -18,15 +18,14 @@ CUSTOM_RST_DIRECTIVES = [
 ]
 
 ADDITIONAL_CHECKERS = [
-    checkers.resource_files.check_image_size,
-    checkers.resource_files.check_resource_file_name,
+    checkers.resource_files.check_resource_file_referenced
 ]
 
 
 def run_additional_checks(argv=None):
     _enabled_checkers, args = sphinxlint.parse_args(argv)
     for path in chain.from_iterable(sphinxlint.walk(path, args.ignore) for path in args.paths):
-        if not path.endswith('.rst'):
+        if path.startswith('content') and not path.endswith('.rst'):
             for checker in ADDITIONAL_CHECKERS:
                 checker(path)
 
@@ -88,6 +87,10 @@ if __name__ == '__main__':
         if os.getenv('REVIEW') == '1':  # Enable checkers for `make review`.
             setattr(sphinxlint.check_line_too_long, 'enabled', True)
             setattr(checkers.rst_style.check_early_line_breaks, 'enabled', True)
-            ADDITIONAL_CHECKERS.extend([checkers.resource_files.check_image_color_depth])
-            run_additional_checks()
+            ADDITIONAL_CHECKERS.extend([
+                checkers.resource_files.check_image_size,
+                checkers.resource_files.check_image_color_depth,
+                checkers.resource_files.check_resource_file_name,
+            ])
+        run_additional_checks()
         sys.exit(sphinxlint.main())

@@ -57,6 +57,27 @@ def check_resource_file_name(file_path):
             'resource-file-name'
         )
 
+def check_resource_file_referenced(file, options=None):
+    """ Check that resource files are referenced in at least one RST file. """
+    resource_file = Path(file)
+    resource_folder = resource_file.parent
+    rst_file = resource_folder.with_suffix('.rst')
+    if rst_file.exists():
+        if resource_file.name not in rst_file.read_text():
+            log_error(
+                file,
+                0,
+                f"the resource file is not referenced in {rst_file}",
+                "resource-file-referenced",
+            )
+    else:
+        log_error(
+            rst_file,
+            0,
+            f"resource folder name '{resource_folder.name}' does not match an rst file name.",
+            'resource-folder-match',
+        )
+
 @sphinxlint.checker('')
 def check_file_extensions(file, lines, options=None):
     """ Check that there is no file without extension. """
