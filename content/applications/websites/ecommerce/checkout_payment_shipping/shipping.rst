@@ -77,9 +77,8 @@ To create a custom delivery method, go to :menuselection:`Website --> Configurat
 Methods`, click :guilabel:`New`, and fill in the :ref:`fields
 <inventory/shipping_receiving/shipping-methods-details>`.
 
-In the :guilabel:`Provider` field, select :ref:`Based on Rules <inventory/shipping/rules>`,
-:ref:`Fixed Price <inventory/shipping/fixed>`, or :ref:`Pickup in store <inventory/shipping/pickup>`
-if the shipping method does not involve any specific provider.
+In the :guilabel:`Provider` field, select :ref:`Based on Rules <inventory/shipping/rules>` or
+:ref:`Fixed Price <inventory/shipping/fixed>`.
 
 .. tip::
    Upon :ref:`configuring <inventory/shipping_receiving/configure-delivery-method>` a delivery
