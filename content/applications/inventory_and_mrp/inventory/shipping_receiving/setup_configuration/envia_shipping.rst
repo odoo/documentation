@@ -224,7 +224,7 @@ Shipments registered with Envia can be tracked using the tracking smart button f
    :align: center
    :alt: Pending image.
 
-Cancellations can be requested directly, see :ref:`Product weight section
+Cancellations can be requested directly, see :ref:`Cancel section
    <inventory/shipping_receiving/setup_configuration/cancel>`
 
 FAQ
