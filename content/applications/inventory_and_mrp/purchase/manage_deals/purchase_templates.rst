@@ -8,7 +8,7 @@ Purchase templates
 .. |RFQs| replace:: :abbr:`RFQs (requests for quotation)`
 
 *Purchase templates* are an agreement type that allow for the repeated creation of Requests for
-Quotation (RfQs) for recurring purchases. Products can then be added and quantities can be changed,
+Quotation (RFQs) for recurring purchases. Products can then be added and quantities can be changed,
 as needed. |Pts| can be used for multiple vendors, saving time and simplifying the |RFQ| process.
 
 |Pts| differ from *blanket orders* in that a blanket order is a large order split into several
@@ -64,7 +64,7 @@ opens a new |RFQ|, that is pre-populated with the correct information, depending
 configured on the |pt| form.
 
 If there was no vendor identified on the |pt|, choose a :guilabel:`Vendor` from the drop-down list.
-Products can be added to the |RFQ| by clicking :guilabel:`Add a product`. To remove a product, click
+Products can be added to the |RFQ| by clicking :guilabel:`Add a product` in the 'Products' tab. To remove a product, click
 the :icon:`fa-trash-o` :guilabel:`(trash)` icon at the far-right of the product line.
 
 From the new |RFQ| form, click :guilabel:`Send by Email` to compose and send an email to the listed
