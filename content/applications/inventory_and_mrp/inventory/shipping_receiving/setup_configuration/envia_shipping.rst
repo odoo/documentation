@@ -133,7 +133,7 @@ Each country has rules regarding how an address is filled so here is a comprehen
      - City
      - State
    * - Chile
-     - Street
+     - Street and number
      - City
      - Commune
      - Region
@@ -143,7 +143,7 @@ Each country has rules regarding how an address is filled so here is a comprehen
      - Municipality
      - Department
    * - Guatemala
-     - Street and Number
+     - Street and number
      - Neighborhood
      - City
      - State
