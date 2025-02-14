@@ -3633,6 +3633,10 @@ msgid ""
 "DKIM lookup tool, specifying that the selector being tested is `odoo` for "
 "the custom domain `example.com`."
 msgstr ""
+"Prüfen Sie, ob der DKIM-Datensatz gültig ist, indem Sie ein Tool wie "
+"`MXToolbox DKIM Record Lookup <https://mxtoolbox.com/dkim.aspx>`_ verwenden."
+" Geben Sie im DKIM-Suchtool `beispiel.com:odoo` ein, um zu verdeutlichen, "
+"dass das zu testende Auswahlsystem `odoo` für die Domain `beispiel.com` ist."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:97
 msgid "DMARC (Domain-based Message Authentication, Reporting and Conformance)"
@@ -3661,6 +3665,11 @@ msgid ""
 " creating a DMARC record. Refer to a resource like `DMARC.org "
 "<https://dmarc.org/>`_ to set the DMARC record."
 msgstr ""
+"Das Ziel dieser Dokumentation ist es, **den Einfluss von DMARC auf die "
+"Zustellbarkeit von E-Mails zu verstehen**, und nicht, um genaue Anweisungen "
+"zur Erstellung eines DMARC-Datensatzes zu erhalten. Verweisen Sie auf eine "
+"Resource wie `DMARC.org <https://dmarc.org/>`_, um den DMARC-Datensatz "
+"einzustellen."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:109
 msgid "There are three DMARC policies:"
@@ -3693,6 +3702,10 @@ msgid ""
 "domains must be in alignment. If the hosting type is Odoo Online, DKIM "
 "configuration on the sending domain is required to pass the DMARC."
 msgstr ""
+"**Damit DMARC erfolgreich ist, muss die DKIM- oder SPF-Prüfung erfolgreich "
+"sein** und die Domains müssen aufeinander abgestimmt sein. Wenn der "
+"Hostingtyp Odoo Online ist, ist eine DKIM-Konfiguration auf der sendenden "
+"Domain erforderlich, um DMARC zu bestehen."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:123
 msgid ""
@@ -3700,6 +3713,10 @@ msgid ""
 " However, it's important to note that **other factors like spam filters can "
 "still reject or quarantine a message**."
 msgstr ""
+"Das Bestehen von DMARC bedeutet im Allgemeinen, dass die E-Mail erfolgreich "
+"zugestellt wird. Es ist jedoch wichtig zu beachten, dass **andere Faktoren "
+"wie Spam-Filter eine Nachricht immer noch ablehnen oder in Quarantäne "
+"stellen können**."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:126
 msgid ""
@@ -3813,6 +3830,10 @@ msgid ""
 "send an email to an email alias created in the database or reply to an email"
 " that was previously sent from the database based on the *reply-to* header."
 msgstr ""
+"Eine eingehende Nachricht ist eine E-Mail, die an eine Odoo-Datenbank "
+"gesendet wird. Jeder kann eine E-Mail an ein in der Datenbank erstelltes "
+"E-Mail-Alias senden oder auf eine E-Mail antworten, die zuvor von der "
+"Datenbank aus gesendet wurde, basierend auf der Kopfzeile *Antwort an*."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:12
 msgid "Email aliases"
@@ -3844,7 +3865,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst-1
 msgid "The local-part \"info\" is used for the alias of the sales team."
-msgstr ""
+msgstr "Der lokale Teil „info“ wird als Alias für das Verkaufsteam verwendet."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:30
 msgid ""
@@ -3855,6 +3876,13 @@ msgid ""
 "name.odoo.com`. The reply will be posted in the right chatter, according to "
 "the *message-id* header."
 msgstr ""
+"Im oben gezeigten Beispiel wird durch das Senden einer E-Mail an "
+"`info@unternehmensname.odoo.com` automatisch eine neue Verkaufschance oder "
+"ein neuer Lead erstellt, die/der dem entsprechenden Verkaufsteam zugewiesen "
+"wird. Wenn eine E-Mail aus dem Chatter einer bestehenden Verkaufschance "
+"gesendet wird, lautet *Antwort an* `info@unternehmensname.odoo.com`. Die "
+"Antwort wird im richtigen Chatter entsprechend der Kopfzeile *Nachrichten-"
+"ID* gepostet."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:39
 msgid "Catchall"
@@ -3879,6 +3907,9 @@ msgid ""
 "mode` and go to :menuselection:`Settings --> Technical --> Emails: Alias "
 "Domains` to access the configuration."
 msgstr ""
+"Standardmäßig wird der lokale Teil *catchall* verwendet. Aktivieren Sie den "
+":ref:`developer-mode` und gehen Sie zu :menuselection:`Einstellungen --> "
+"Technisch --> E-Mails: Alias-Domains`, um auf die Konfiguration zuzugreifen."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:48
 msgid ""
@@ -3886,11 +3917,16 @@ msgid ""
 " from the database. If an email is sent directly to the catchall, the sender"
 " will receive the following message:"
 msgstr ""
+"Eine E-Mail an die Catchall-Adresse muss immer eine Antwort auf eine zuvor "
+"aus der Datenbank gesendete E-Mail sein. Wenn eine E-Mail direkt an die "
+"Catchall-Adresse gesendet wird, erhält der Absender die folgende Nachricht:"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst-1
 msgid ""
 "Bounce email from \"MAILER-DEAMON\" explaining how to contact the database."
 msgstr ""
+"Unzustellbare E-Mail von „MAILER-DEAMON”, die erklärt, wie die Datenbank "
+"kontaktiert werden kann."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:55
 msgid ""
@@ -3902,6 +3938,14 @@ msgid ""
 "options unless specific needs dictate, as it will affect all replies to "
 "previously sent emails."
 msgstr ""
+"Die E-Mail-Adresse `info@unternehmensname.com`, die im obigen Screenshot "
+"angezeigt wird, ist die E-Mail-Adresse, die für das Unternehmen festgelegt "
+"wurde. Nach dem Aufrufen des Entwicklermodus in einem Unternehmensprofil "
+"werden zusätzliche Konfigurationsoptionen (wie z. B. „catchall“ und "
+"„unzustellbar“) lesbar. Sie können durch Klicken auf den internen Link der "
+"E-Mail-Domain geändert werden. Es wird generell davon abgeraten, diese "
+"Optionen zu ändern, es sei denn, es besteht eine besondere Notwendigkeit, da"
+" sich dies auf alle Antworten auf zuvor gesendete E-Mails auswirkt."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:63
 msgid ""
@@ -3909,6 +3953,9 @@ msgid ""
 "replies to an email coming from the CRM app, the *reply-to* is "
 "`info@company-name.odoo.com`."
 msgstr ""
+"Ein Alias kann für ein Verkaufsteam in der CRM-App konfiguriert werden. Wenn"
+" ein Kunde auf eine E-Mail aus der CRM-App antwortet, lautet die *Antwort "
+"an*-Adresse `info@unternehmensname.odoo.com`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:66
 msgid ""
@@ -3916,6 +3963,9 @@ msgid ""
 "`catchall@company-name.odoo.com` because there is no alias on the contact "
 "model."
 msgstr ""
+"Wenn eine E-Mail über die Kontakte-App gesendet wird, lautet die "
+"Antwortadresse `catchall@unternehmensname.odoo.com`, da das Kontaktmodell "
+"keinen Alias enthält."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:70
 msgid ""
@@ -3924,6 +3974,11 @@ msgid ""
 " will still have the previous local-part values. This could lead to replies "
 "not being correctly received in the database."
 msgstr ""
+"Es wird empfohlen, den lokalen Teil des Catchalls und die "
+"Unzustellbarkeitsadresse unverändert zu lassen. Wenn dieser Wert geändert "
+"wird, haben frühere E-Mails, die aus der Datenbank gesendet wurden, "
+"weiterhin die vorherigen lokalen Teilwerte. Dies könnte dazu führen, dass "
+"Antworten nicht korrekt in der Datenbank eingehen."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:77
 msgid "Bounce"
@@ -3936,6 +3991,11 @@ msgid ""
 "path* is used when emails cannot be delivered to the recipient and an error "
 "is returned to the sender."
 msgstr ""
+"Auf die gleiche Weise, wie der Catchall-Alias für die Erstellung der "
+"Antwortadresse verwendet wird, wird der Zuzustellbarkeitsalias für die "
+"Erstellung des *Rückgabepfads* der E-Mail verwendet. Der *Rückgabepfad* wird"
+" verwendet, wenn E-Mails nicht an den Empfänger zugestellt werden können und"
+" eine Fehlermeldung an den Absender zurückgesendet wird."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:83
 msgid ""
@@ -3943,6 +4003,9 @@ msgid ""
 "go to :menuselection:`Settings --> Technical --> Emails: Alias Domains` to "
 "access the configuration."
 msgstr ""
+"Standardmäßig wird der Name *Unzustellbar* verwendet. Aktivieren Sie den "
+":ref:`developer-mode` und gehen Sie zu :menuselection:`Einstellungen --> "
+"Technisch --> E-Mails: Alias-Domains`, um auf die Konfiguration zuzugreifen."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:87
 msgid ""
@@ -3950,6 +4013,10 @@ msgid ""
 "path address is forced to the value `bounce@company-name.odoo.com` "
 "independently of the value set as bounce alias."
 msgstr ""
+"Wenn Sie auf Odoo Online den Standard-E-Mail-Server für ausgehende E-Mails "
+"verwenden, wird die Adresse des Rückpfads unabhängig vom als "
+"Unzustellbarkeitsalias festgelegten Wert auf den Wert "
+"`unzustellbar@unternehmensname.odoo.com` gesetzt."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:90
 msgid ""
@@ -3958,18 +4025,26 @@ msgid ""
 "`no error` message, meaning there is an error that could not be handled by "
 "Odoo."
 msgstr ""
+"Wenn ein Fehler auftritt, wird eine Benachrichtigung empfangen und in einem "
+"roten Umschlag im Chatter angezeigt. In einigen Fällen kann der rote "
+"Umschlag lediglich die Meldung `Kein Fehler` enthalten, was bedeutet, dass "
+"ein Fehler vorliegt, der von Odoo nicht bearbeitet werden konnte."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:94
 msgid ""
 "A notification will also be displayed in the Discuss icon on the navigation "
 "bar."
 msgstr ""
+"Es wird auch eine Benachrichtigung im Dialog-Symbol in der Navigationsleiste"
+" angezeigt."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst-1
 msgid ""
 "An email sent to a contact had an issue and the error is reported on the "
 "navbar."
 msgstr ""
+"Eine E-Mail, die an einen Kontakt gesendet wurde, hatte einen Fehler und der"
+" Fehler wird in der Navigationsleiste gemeldet."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:100
 msgid ""
@@ -3977,12 +4052,17 @@ msgid ""
 "envelope in the chatter an error message containing the reason for the "
 "failure will be given."
 msgstr ""
+"Wenn die E-Mail-Adresse des Empfängers falsch ist, wird durch Klicken auf "
+"den roten Umschlag im Chatter eine Fehlermeldung mit dem Grund für den "
+"Fehler angezeigt."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid ""
 "An email sent to a wrong domain generates a bounce displayed as a red "
 "envelope."
 msgstr ""
+"Eine E-Mail, die an eine falsche Domain gesendet wurde, generiert eine "
+"Unzustellbarkeitsnachricht, die als roter Umschlag angezeigt wird."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:109
 msgid "Receive emails with Odoo's default configuration"
@@ -3994,6 +4074,9 @@ msgid ""
 "addresses are pre-configured. These addresses use the alias domain "
 "automatically added to a standard database."
 msgstr ""
+"In **Odoo Online** und **Odoo.sh** sind die E-Mail-Alias-, Antwort- und "
+"Unzustellbarkeitsadressen vorkonfiguriert. Diese Adressen verwenden die "
+"Alias-Domain, die automatisch zu einer Standarddatenbank hinzugefügt wird."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:115
 msgid ""
@@ -4002,6 +4085,11 @@ msgid ""
 "used and their address is respectively `catchall@mydatabase.odoo.com`, and "
 "`bounce@mydatabase.odoo.com`."
 msgstr ""
+"Angenommen, die Datenbank-URL lautet `https://meinedatenbank.odoo.com`, wird"
+" die Alias-Domain `meinedatenbank.odoo.com` automatisch erstellt. Catchall "
+"und Unzustellbarkeit können verwendet werden und ihre Adresse lautet "
+"`catchall@meinedatenbank.odoo.com` bzw. "
+"`unzustellbar@meinedatenbank.odoo.com`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:119
 msgid ""
@@ -4009,12 +4097,18 @@ msgid ""
 "created, the `info@mydatabase.odoo.com` address can be used immediately. The"
 " same goes for any other alias created in other applications."
 msgstr ""
+"Wenn die CRM-App installiert ist und ein Verkaufsteam mit dem Alias `info` "
+"erstellt wurde, kann die E-Mail-Adresse `info@meinedatenbank.odoo.com` "
+"sofort verwendet werden. Dasselbe gilt für jeden anderen Alias, der in "
+"anderen Apps erstellt wurde."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:123
 msgid ""
 "The database domain is ready to be used to receive emails without any "
 "additional configuration."
 msgstr ""
+"Die Datenbankdomain kann verwendet werden, um E-Mails ohne weitere "
+"Konfiguration zu erhalten."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:128
 msgid "Use multiple Odoo subdomains"
@@ -4035,14 +4129,19 @@ msgid ""
 "they are not used yet in another branch. These domains must then be added to"
 " the alias domains to be used by a company."
 msgstr ""
+"Auf **Odoo.sh** ist es möglich, mehrere Odoo-Subdomains zu verwenden. In den"
+" Einstellungen des Zweigs können zusätzliche Odoo-Subdomains hinzugefügt "
+"werden, solange sie noch nicht in einem anderen Zweig verwendet werden. "
+"Diese Domains müssen dann zu den Alias-Domains hinzugefügt werden, die von "
+"einem Unternehmen verwendet werden sollen."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst-1
 msgid "Setting up an Odoo subdomain on a branch."
-msgstr ""
+msgstr "Einstellung einer Odoo-Subdomain auf einem Zweig."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:142
 msgid "Use a custom domain for inbound messages"
-msgstr ""
+msgstr "Eine Benutzerdefinierte Domain für eingehende Nachrichten verwenden"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:144
 msgid ""
@@ -4050,10 +4149,13 @@ msgid ""
 "the general settings. If you have multiple companies, each one must be "
 "configured."
 msgstr ""
+"Die :ref:`Alias-Domain <email-outbound-alias-domain>` muss in den "
+"allgemeinen Einstellungen ausgewählt werden. Wenn Sie mehrere Unternehmen "
+"haben, muss jedes konfiguriert werden"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst-1
 msgid "The alias domain in the general settings."
-msgstr ""
+msgstr "Die Alias-Domain in den allgemeinen Einstellungen."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:150
 msgid ""
@@ -4062,11 +4164,18 @@ msgid ""
 "other models are sent to the catchall through `catchall@my-custom-"
 "domain.com`."
 msgstr ""
+"Alle Aliasse verwenden diese benutzerdefinierte Domain. Antworten auf "
+"Modelle, für die ein Alias konfiguriert ist, werden an `[alias]@meine-"
+"benutzerdefinierte-domain.com` gesendet. Antworten auf andere Modelle werden"
+" über `catchall@meine-benutzerdefinierte-domain.com` an das Sammelpostfach "
+"gesendet."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst-1
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:0
 msgid "Technical schema of mailing route when using a custom domain in Odoo."
 msgstr ""
+"Technisches Schema der Mailingroute unter Verwendung einer "
+"benutzerdefinierten Domain in Odoo."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:158
 msgid ""
@@ -4074,6 +4183,10 @@ msgid ""
 "follow the :ref:`\"Using a custom domain with Odoo’s email server\" "
 "instructions <email-outbound-custom-domain-odoo-server>`."
 msgstr ""
+"Wenn E-Mails über die E-Mail-Server von Odoo gesendet werden, während eine "
+"benutzerdefinierte Domain verwendet wird, befolgen Sie die Anweisungen unter"
+" :ref:`Eine benutzerdefinierten Domain mit dem E-Mail-Server von Odoo "
+"verwenden <email-outbound-custom-domain-odoo-server>`."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:162
 msgid ""
@@ -4083,6 +4196,12 @@ msgid ""
 "display them in the chatter or to create new records, it is necessary to "
 "retrieve these incoming emails in the Odoo database."
 msgstr ""
+"Da diese benutzerdefinierte Domain verwendet wird, werden alle E-Mails, die "
+"einen Alias verwenden (Antworten, Unzustellbarkeit und Direktsendungen), an "
+"eine Adresse der Domain gesendet. Sie werden somit an den mit der Domain "
+"verknüpften E-Mail-Server (MX-Eintrag) übermittelt. Um sie im Chatter "
+"anzuzeigen oder neue Datensätze zu erstellen, müssen diese eingehenden "
+"E-Mails in der Odoo-Datenbank abgerufen werden."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:171
 msgid "Method"
@@ -4094,7 +4213,7 @@ msgstr "Leistungen"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:173
 msgid "Drawbacks"
-msgstr ""
+msgstr "Nachteile"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:174
 msgid ":ref:`Redirections <email-inbound-custom-domain-redirections>`"
@@ -4120,24 +4239,32 @@ msgid ""
 "Allows to keep a copy of the email in your mailbox (with IMAP). Allows to "
 "create records in the chosen model."
 msgstr ""
+"Ermöglicht es, eine Kopie der E-Mail in Ihrem Postfach zu behalten (mit "
+"IMAP). Ermöglicht es, Datensätze im ausgewählten Modell zu erstellen."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:180
 msgid ""
 "Depends on a CRON, meaning emails are not retrieved immediately in the "
 "database. Each alias of a database needs to be configured."
 msgstr ""
+"Hängt von einem CRON ab, d. h. E-Mails werden nicht sofort in der Datenbank "
+"abgerufen. Jeder Alias einer Datenbank muss konfiguriert werden."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:182
 msgid ":ref:`MX record <email-inbound-custom-domain-mx>`"
-msgstr ""
+msgstr ":ref:`MX-Datensatz <email-inbound-custom-domain-mx>`"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:183
 msgid "Only one record needs to be created to make all aliases work properly."
 msgstr ""
+"Es muss nur ein Datensatz erstellt werden, damit alle Aliasse ordnungsgemäß "
+"funktionieren."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:184
 msgid "Using a subdomain is required. Requires advanced technical knowledge."
 msgstr ""
+"Die Verwendung einer Subdomain ist erforderlich. Erfordert fortgeschrittene "
+"technische Kenntnisse."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:188
 msgid ""
@@ -4146,6 +4273,11 @@ msgid ""
 "<../../../../administration/on_premise/email_gateway>`. Going through this "
 "script requires **advanced technical and infrastructure knowledge**."
 msgstr ""
+"Bei **On-Premise-Datenbanken** erfordern die Umleitungs- und die MX-"
+"Datensatzmethode auch die Konfiguration des :doc:`Mail-Gateway-Skripts "
+"<../../../../administration/on_premise/email_gateway>`. Die Verwendung "
+"dieses Skripts erfordert **fortgeschrittene technische und "
+"Infrastrukturkenntnisse**."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:193
 msgid ""
@@ -4213,24 +4345,38 @@ msgid ""
 "`catchall` to `temp-catchall`. This will allow to use `catchall` as the "
 "local-part of another alias."
 msgstr ""
+"Ändern Sie den Wert von `catchall` in der E-Mail-Alias-Domain. Für den "
+"Zugriff auf dieses Menü muss der :ref:`developer-mode` aktiviert sein. Der "
+"Wert kann beispielsweise von `catchall` in `temp-catchall` geändert werden. "
+"Dadurch kann `catchall` als lokaler Teil eines anderen Alias verwendet "
+"werden."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:221
 msgid ""
 "Open an app that uses an alias. For example, CRM contains aliases for each "
 "sales team. Set `catchall` as the local-part of the alias of a sales team."
 msgstr ""
+"Öffnen Sie eine App, die einen Alias verwendet. CRM enthält beispielsweise "
+"Aliasse für jedes Verkaufsteam. Legen Sie `catchall` als lokalen Teil des "
+"Alias eines Verkaufsteams fest."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:223
 msgid ""
 "The validation email will create a record in the CRM app. The email sent "
 "will be visible in the chatter, allowing you to validate the redirection."
 msgstr ""
+"Die Bestätigungs-E-Mail erstellt einen Datensatz in der CRM-App. Die "
+"gesendete E-Mail ist im Chatter sichtbar, sodass Sie die Umleitung "
+"bestätigen können."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:225
 msgid ""
 "Do not forget to change back the alias of the sales team and the catchall "
 "value on the mail alias domain, just as they were before this procedure."
 msgstr ""
+"Vergessen Sie nicht, den Alias des Verkaufsteams und den Catchall-Wert auf "
+"der E-Mail-Alias-Domain wieder so zu ändern, wie sie vor diesem Vorgang "
+"waren."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:229
 msgid ""
@@ -4238,6 +4384,10 @@ msgid ""
 "address forwarding the email will be identified as the sender**, while with "
 "redirections, the original sender will always remain."
 msgstr ""
+"Eine Alternative zu Umleitungen ist die **Umleitung**. Bei der Umleitung "
+"wird **die Adresse, an die die E-Mail weitergeleitet wird, als Absender "
+"identifiziert**, während bei Umleitungen der ursprüngliche Absender immer "
+"erhalten bleibt."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:236
 msgid "Incoming mail servers"
@@ -4253,6 +4403,13 @@ msgid ""
 "going to :menuselection:`Settings --> Technical --> Emails: Incoming Mail "
 "Servers`."
 msgstr ""
+"Wie bereits erwähnt, ist die Verwendung von Umleitungen die empfohlene "
+"Methode, um E-Mails in Odoo zu empfangen. Es ist jedoch auch möglich, "
+"Posteingangsserver einzurichten. Bei dieser Methode wird für jedes Postfach "
+"auf Ihrem Server, für Catchall, Unzustellbarkeit und jeden Alias der "
+"Datenbank ein Posteingangsserver erstellt, um alle eingehenden E-Mails "
+"abzurufen. Posteingangsserver werden über :menuselection:`Einstellungen --> "
+"Technisch --> E-Mails: Posteingangsserver` erstellt."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:245
 msgid ""
@@ -4260,6 +4417,9 @@ msgid ""
 "all unread emails, while POP fetches all the emails' history and then tags "
 "them as deleted in your mailbox."
 msgstr ""
+"Wir empfehlen, das IMAP-Protokoll anstelle des POP-Protokolls zu verwenden, "
+"da IMAP alle ungelesenen E-Mails abruft, während POP den gesamten E-Mail-"
+"Verlauf abruft und sie dann in Ihrem Postfach als gelöscht markiert."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:249
 msgid ""
@@ -4267,12 +4427,17 @@ msgid ""
 "OAuth <google_oauth>` or :doc:`Outlook with Microsoft Azure OAuth "
 "<azure_oauth>`."
 msgstr ""
+"Es ist auch möglich, ein Postfach über :doc:`Gmail mit Google OAuth "
+"<google_oauth>` oder :doc:`Outlook mit Microsoft Azure OAuth <azure_oauth>` "
+"zu verbinden."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:252
 msgid ""
 "Regardless of the protocol chosen, emails are fetched using the *Mail: "
 "Fetchmail Service* scheduled action."
 msgstr ""
+"Unabhängig vom gewählten Protokoll werden E-Mails mithilfe der geplanten "
+"Aktion *E-Mail: Fetchmail-Dienst* abgerufen."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:255
 msgid ""
@@ -4280,12 +4445,18 @@ msgid ""
 " create new records in a specified model. Each incoming mail server can "
 "create records in a different model."
 msgstr ""
+"Darüber hinaus bietet die Verwendung eines Posteingangsservers in Odoo die "
+"Möglichkeit, neue Datensätze in einem bestimmten Modell zu erstellen. Jeder "
+"Posteingangsserver kann Datensätze in einem anderen Modell erstellen."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:259
 msgid ""
 "Emails received on `task@company-name.com` are fetched by the Odoo database."
 " All fetched emails will create a new project task in the database."
 msgstr ""
+"E-Mails, die unter `aufgabe@unternehmensname.com` eingehen, werden von der "
+"Odoo-Datenbank abgerufen. Alle abgerufenen E-Mails erstellen eine neue "
+"Projektaufgabe in der Datenbank."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:268
 msgid "MX record"
@@ -4297,12 +4468,18 @@ msgid ""
 " mail server managing emails sent to your domain. **Advanced technical "
 "knowledge is required.**"
 msgstr ""
+"Eine dritte Möglichkeit besteht darin, einen MX-Datensatz in Ihrer DNS-Zone "
+"zu erstellen, der den E-Mail-Server angibt, der die an Ihre Domain "
+"gesendeten E-Mails verwaltet. **Erweiterte technische Kenntnisse sind "
+"erforderlich.**"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:274
 msgid ""
 "This configuration only works with a subdomain on the Odoo Online or Odoo.sh"
 " infrastructure (e.g., `@mail.mydomain.com`)"
 msgstr ""
+"Diese Konfiguration funktioniert nur mit einer Subdomain auf der Odoo-"
+"Online- oder Odoo.sh-Infrastruktur (z. B. `@mail.meinedomain.com`)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:277
 msgid "Below are presented some specifications depending on the hosting type:"
@@ -4363,11 +4540,16 @@ msgid ""
 "more emails are sent, they are blocked and the sender receives the following"
 " message:"
 msgstr ""
+"Standardmäßig können von einer E-Mail-Adresse aus innerhalb von 120 Minuten "
+"bis zu 20 E-Mails versendet werden. Werden mehr E-Mails versendet, werden "
+"diese blockiert und der Absender erhält die folgende Nachricht:"
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst-1
 msgid ""
 "Bounce email received after attempting contact too many times an alias."
 msgstr ""
+"E-Mail mit Unzustellbarkeitsmeldung erhalten, nachdem zu oft versucht wurde,"
+" eine Alias-Adresse zu kontaktieren."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:309
 msgid ""
@@ -4386,6 +4568,9 @@ msgid ""
 ":guilabel:`Key` and choose a number of minutes as the :guilabel:`Value` "
 "(`120` is the default behavior)."
 msgstr ""
+"Geben Sie für den ersten Parameter `mail.gateway.loop.minutes` als "
+":guilabel:`Schlüssel` ein und wählen Sie eine Anzahl von Minuten als "
+":guilabel:`Wert` (Standardwert: `120`)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:314
 msgid ""
@@ -4393,6 +4578,9 @@ msgid ""
 ":guilabel:`Key` and choose a number of emails as the :guilabel:`Value` (`20`"
 " is the default behavior)."
 msgstr ""
+"Geben Sie für den zweiten Parameter `mail.gateway.loop.threshold` als "
+":guilabel:`Schlüssel` ein und wählen Sie eine Anzahl von E-Mails als "
+":guilabel:`Wert` (Standardwert: `20`)."
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:318
 msgid ""
@@ -4570,10 +4758,15 @@ msgid ""
 "Emails sent to an alias are automatically routed and will reply to an "
 "existing and linked record or will create a new one in the database."
 msgstr ""
+"Die Catchall-, Unzustellbarkeits- und Benachrichtigungsadressen "
+"funktionieren nicht wie andere Aliasse. Sie sind nicht dazu bestimmt, "
+"Datensätze in einer Datenbank zu erstellen. An einen Alias gesendete E-Mails"
+" werden automatisch weitergeleitet und antworten auf einen vorhandenen und "
+"verknüpften Datensatz oder erstellen einen neuen in der Datenbank."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:34
 msgid "Using a custom domain to send emails"
-msgstr ""
+msgstr "Eine Benutzerdefinierte Domain zum Versenden von E-Mails verwenden"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:36
 msgid ""
@@ -4585,6 +4778,15 @@ msgid ""
 "domain can be utilized when sending emails either with Odoo’s email servers "
 "or an external one."
 msgstr ""
+"Die Datenbank kann so konfiguriert werden, dass eine benutzerdefinierte "
+"Domain verwendet wird. In diesem Fall werden alle Standard-E-Mail-Adressen "
+"unter Verwendung der benutzerdefinierten Domain erstellt. Wenn die "
+"benutzerdefinierte Domain `unternehmensname.com` lautet, lautet die "
+"Absenderadresse `benachrichtigungen@unternehmensname.com`, die *Antwort "
+"an*-Adresse `catchall@unternehmensname.com` und die `Unzustellbar`-Adresse "
+"`unzustellbar@unternehmensname.com`. Die benutzerdefinierte Domain kann "
+"verwendet werden, wenn E-Mails entweder über die E-Mail-Server von Odoo oder"
+" über einen externen Server gesendet werden."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:42
 msgid ""
@@ -4592,10 +4794,14 @@ msgid ""
 "must be purchased from a domain registrar such as GoDaddy, Namecheap, or any"
 " alternative provider."
 msgstr ""
+"In diesem Abschnitt wird davon ausgegangen, dass Sie Eigentümer einer "
+"benutzerdefinierten Domain sind. Wenn nicht, muss eine benutzerdefinierte "
+"Domain bei einem Domain-Register wie GoDaddy, Namecheap oder einem anderen "
+"Anbieter erworben werden."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:48
 msgid "Using a custom domain with Odoo’s email server"
-msgstr ""
+msgstr "Eine Benutzerdefinierte Domain mit Odoos E-Mail-Server verwenden"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:50
 msgid ""
@@ -4612,6 +4818,10 @@ msgid ""
 " might require some configuration on the mail server itself. **Some "
 "technical knowledge is required.**"
 msgstr ""
+"Der Großteil der Konfiguration wird auf der Seite des Domain-Anbieters "
+"durchgeführt, und es kann sein, dass eine gewisse Konfiguration auf dem "
+"E-Mail-Server selbst erforderlich ist. **Es sind technische Kenntnisse "
+"erforderlich.**"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:57
 msgid ""
@@ -4978,6 +5188,7 @@ msgstr ""
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:250
 msgid "Using a custom domain with an external email server"
 msgstr ""
+"Eine Benutzerdefinierte Domain mit Odoos externem E-Mail-Server verwenden"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:252
 msgid ""
@@ -10643,6 +10854,8 @@ msgid ""
 "A computer with a micro SD card reader/adapter is **required** to re-flash "
 "the micro SD card."
 msgstr ""
+"Ein Computer mit einem SD-Kartenleser/-adapter ist **erforderlich**, um die "
+"Micro-SD-Karte erneut zu flashen."
 
 #: ../../content/applications/general/iot/config/updating_iot.rst:42
 msgid ""
@@ -10667,10 +10880,18 @@ msgid ""
 ":guilabel:`Flash from file`, then find and select the `iotbox-latest.zip` "
 "image and extract it. Next, select the drive the image should be burned to."
 msgstr ""
+"Nachdem dieser Schritt abgeschlossen ist, stecken Sie die Micro-SD-Karte der"
+" :abbr:`IoT (Internet of Things)`-Box in den Computer oder das Lesegerät. "
+"Öffnen Sie *Etcher* und wählen Sie :guilabel:`Flash from file` (Flash aus "
+"Datei), dann suchen und wählen Sie das Bild `iotbox-latest.zip` und "
+"extrahieren Sie es. Wählen Sie dann das Laufwerk, auf das das Bild gebrannt "
+"werden soll."
 
 #: ../../content/applications/general/iot/config/updating_iot.rst:54
 msgid "Lastly, click :guilabel:`Flash`, and wait for the process to finish."
 msgstr ""
+"Klicken Sie abschließend auf :guilabel:`Flash` und warten Sie, bis der "
+"Vorgang abgeschlossen ist."
 
 #: ../../content/applications/general/iot/config/updating_iot.rst-1
 msgid "Balena's Etcher software dashboard."
@@ -10771,10 +10992,12 @@ msgid ""
 "Confirm the uninstallation, and follow the steps to uninstall through the "
 "Odoo uninstall wizard."
 msgstr ""
+"Bestätigen Sie die Deinstallation und befolgen Sie die Schritte zur "
+"Deinstallation mithilfe des Odoo-Deinstallationsassistenten."
 
 #: ../../content/applications/general/iot/config/updating_iot.rst:119
 msgid "Download and re-install"
-msgstr ""
+msgstr "Download und Deinstallation"
 
 #: ../../content/applications/general/iot/config/updating_iot.rst:121
 msgid ""
