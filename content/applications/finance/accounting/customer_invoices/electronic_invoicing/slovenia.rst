@@ -14,8 +14,8 @@ In Slovenia, e-invoicing is regulated under the `Slovenian VAT Act <https://www.
 and complies with `EU Directive 2014/55/EU <https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32014L0055>`_,
 mandating the use of e-invoices for :abbr:`B2G (business-to-government)` transactions. Suppliers to
 public sector entities must submit e-invoices in the e-SLOG XML format, which is the national
-standard for e-invoicing. These invoices are transmitted via the UJP (Uradni list Republike
-Slovenije - Agency for Public Payments) e-invoicing platform. While B2B e-invoicing remains
+standard for e-invoicing. These invoices are transmitted via the UJP (Uprava Republike Slovenije
+za javna plačila - Agency for Public Payments) e-invoicing platform. While B2B e-invoicing remains
 optional, its adoption is encouraged to promote transparency and tax compliance.
 
 Compliance with Slovenian e-invoicing regulations
