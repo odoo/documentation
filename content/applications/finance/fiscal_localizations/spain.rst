@@ -92,6 +92,41 @@ If you wish to have any amount input in the :guilabel:`II` section (from boxes :
 
 Repeat this operation for all contacts related to the **agriculture** industry.
 
+Veri*Factu
+==========
+
+**Veri\*Factu** is an e-Invoicing system used by the Spanish Tax Agency.
+It is mandatory for most tax payers in Spain with some exceptions.
+Notable exceptions are tax payers who use SII or fall under a regional tax regime (i.e. TicketBai TODO:link).
+
+Odoo supports the automatic sending of invoices and Point of Sale orders to the authorities.
+To enable **Veri\*Factu**, set your company's :guilabel:`Country` and
+:guilabel:`Tax ID` under :menuselection:`Settings --> General Settings` in the :guilabel:`Companies`
+section.
+
+Then, :ref:`install <general/install>` the module :guilabel:`Spain - Veri*Factu (l10n_es_edi_verifactu)`,
+go to the :guilabel:`Veri\*Factu` section under :menuselection:`Accounting --> Configuration --> Settings`.
+There you need to check :guilabel:`Enable Veri*Factu` and add at least one certificate under
+:guilabel:`Manage certificates`.
+
+.. warning::
+   If you are testing certificates, enable :guilabel:`Veri*Factu Test Environment` in the
+   :guilabel:`Veri\*Factu` section, which can be found under :menuselection:`Settings --> General Settings`.
+
+Use case
+--------
+
+Once an invoice has been :doc:`created <../../finance/accounting/customer_invoices>` and confirmed,
+it can be send TODO:
+
+.. note::
+   The Veri\*Factu **QR code** is displayed on the invoice PDF.
+   TODO: update image
+
+   .. image:: spain/qr-code.png
+      :alt: Veri\*Factu QR code  on the invoice.
+
+
 TicketBAI
 =========
 
