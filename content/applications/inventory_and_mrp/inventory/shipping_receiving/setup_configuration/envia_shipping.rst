@@ -151,7 +151,7 @@ Each country has rules regarding how an address is filled so here is a comprehen
      - City
      - State
    * - Uruguay
-     - All
+     - Street and number
      - Complementary info
      - Locality
      - State
