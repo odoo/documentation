@@ -23,8 +23,14 @@ Basic messaging system
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Integrating messaging features to your model is extremely easy. Simply inheriting
-the ``mail.thread`` model and adding the messaging fields (and their appropriate
-widgets) to your form view will get you up and running in no time.
+the ``mail.thread`` mixin and adding the chatter ``<chatter/>`` element to your form
+view will get you up and running in no time. The chatter element supports some
+options to control form behavior:
+
+* ``open_attachments``: Shows attachment section expanded by default
+* ``reload_on_attachment``: Reloads form view when attachments are added/removed
+* ``reload_on_follower``: Reloads form view when followers are updated
+* ``reload_on_post``: Reloads form view when new messages are posted
 
 .. example::
 
@@ -54,11 +60,8 @@ widgets) to your form view will get you up and running in no time.
                 <form string="Business Trip">
                     <!-- Your usual form view goes here
                     ...
-                    Then comes chatter integration -->
-                    <div class="oe_chatter">
-                        <field name="message_follower_ids" widget="mail_followers"/>
-                        <field name="message_ids" widget="mail_thread"/>
-                    </div>
+                    Then comes chatter integration with options you might want to set -->
+                    <chatter open_attachments="True"/>
                 </form>
             </field>
         </record>
