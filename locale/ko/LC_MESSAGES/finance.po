@@ -722,6 +722,9 @@ msgid ""
 " a registered payment or the account receivable or payable if reconciling "
 "with an invoice or bill directly."
 msgstr ""
+"은행 거래가 조정되면 전표 항목이 수정되어 은행 가계정은 조정할 전표에 있는 계정으로 변경됩니다. 보통 이와 같은 계정으로는 등록이 "
+"완료된 결제를 조정하는 경우 :ref:`미납 입출금 계정 <accounting/bank/outstanding-accounts>` 을 "
+"사용하고, 청구서 또는 업체 청구서와 직접 조정하는 경우에는 미수금 또는 미지급 계정을 사용합니다."
 
 #: ../../content/applications/finance/accounting/bank.rst:109
 msgid "Profit and loss accounts"
@@ -832,6 +835,9 @@ msgid ""
 "the balance of registered outgoing payments that have not yet been "
 "reconciled."
 msgstr ""
+"Odoo에 등록되어 있는 결제 항목은 조정이 완료될 때까지 미납 수입 및 미납 계정에 게시됩니다. 언제든지 총계정원장에 있는 미납 수입 "
+"계정 잔액에는 아직 조정되지 않은 입금 결제 등록 잔액이 표시되고, 총계정원장의 미지급 지급 계정 잔액에는 아직 조정이 되지 않은 출금 "
+"결제 등록 잔액이 표시됩니다."
 
 #: ../../content/applications/finance/accounting/bank.rst:174
 msgid "Bank and cash journal configuration"
@@ -1979,6 +1985,11 @@ msgid ""
 "<reconciliation_models>` button. This reconciliation model button writes the"
 " transaction off to the :guilabel:`Internal Transfer` account."
 msgstr ""
+"한 은행이나 현금 계좌에서 다른 은행이나 현금 계좌로 자금을 이체할 경우 해당 금액은 두 개의 거래로 전표에 표시되며, 거래에 대해서는 "
+"수동으로 생성되었는지, 가져오기를 통해 생성되었는지 혹은 :doc:`은행 동기화 <bank_synchronization>` 를 통해 "
+"생성되었는지 여부와는 무관합니다. 거래를 조정할 때에는 :guilabel:`내부 이체` :doc:`조정 모델 "
+"<reconciliation_models>` 버튼을 선택합니다. 이 조정 모델 버튼을 통해 거래를 :guilabel:`내부 이체` 계정에"
+" 기록합니다."
 
 #: ../../content/applications/finance/accounting/bank/internal_transfers.rst:30
 msgid ""
@@ -3037,8 +3048,8 @@ msgid ""
 msgstr ""
 ":guilabel:`고객`: 고객을 선택하면 Odoo에서 자동으로 청구서 주소, :doc:`선호하는 지급 조건 "
 "<customer_invoices/payment_terms>`, :doc:`재정 위치 <taxes/fiscal_positions>`, "
-"미수금 계정 등의 정보를 고객 레코드에서 청구서로 가져옵니다. 특정한 청구서에 대해 이러한 값을 변경하려면 청구서에서 직접 수정하세요. "
-"앞으로 발생할 청구서에 대해 변경하려면 연락처 레코드에서 값을 변경합니다."
+"미수금 계정 등의 정보를 고객 레코드에서 청구서로 가져옵니다. 특정 청구서서 이와 같은 값을 변경하려면 직접 청구서에서 수정하세요. "
+"청구서 발행 전에 변경하려면 연락처 레코드에서 값을 변경합니다."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst:43
 msgid ""
@@ -3491,10 +3502,10 @@ msgid ""
 "discount percentage, discount days, and :ref:`tax reduction <cash-"
 "discounts/tax-reductions>` fields."
 msgstr ""
-"고객에게 현금 할인을 적용해 주려면 먼저 :ref:`손익 계정 <cash-discounts/gain-loss-accounts>` 부터 "
+"고객에게 현금 할인을 적용하려면 먼저 :ref:`손익 계정 <cash-discounts/gain-loss-accounts>` 부터 "
 "확인해야 합니다. 그런 다음 :ref:`지급 조건 <cash-discounts/payment-terms>` 을 설정하고 "
 ":guilabel:`조기 할인` 확인란에 표시한 후 할인율, 할인 일수,  :ref:`세금 감면 <cash-discounts/tax-"
-"reductions>` 항목을 입력하여 현금 할인을 추가합니다."
+"reductions>` 항목을 입력하면 현금 할인이 추가됩니다."
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:38
 msgid "Cash discount gain/loss accounts"
@@ -3541,8 +3552,8 @@ msgid ""
 "Configuration of payment terms named \"2/7 Net 30\". The field \"Description on Invoices\"\n"
 "reads: \"Payment terms: 30 Days, 2% Early Payment Discount under 7 days\"."
 msgstr ""
-"지급 조건을 \"2/7 순액 30\" 으로 설정합니다. \"청구서 설명\" 항목에 다음과 같이 설명되어 있습니다: \n"
-"\"지급 조건: 30일, 7일 미만 2% 조기 결제 할인\""
+"지급 조건에 대한 환경 설정을 \"2/7 순액 30\" 으로 설정합니다. \"청구서 설명\" 항목에 다음과 같이\n"
+"설명되어 있습니다: \"지급 조건: 30일, 7일 미만 2% 조기 결제 할인\""
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:64
 msgid "Tax reductions"
@@ -3555,7 +3566,7 @@ msgid ""
 "set on individual payment terms, each term can use a specific tax reduction."
 msgstr ""
 "국가 또는 지역에 따라 세금 계산을 할 때 기준 금액이 달라질 수 있으며, 그 결과 **세금 감면** 을 받는 경우도 있습니다. 세금 "
-"감면은 개별적인 지급 조건에 따라 설정되므로 각 조건마다 특정한 세금 감면이 적용될 수 있습니다."
+"감면은 개별적인 지급 조건에 따라 설정되므로 각 조건마다 별도로 세금 감면이 적용될 수 있습니다."
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:70
 msgid ""
@@ -3727,7 +3738,7 @@ msgid ""
 "An invoice of €100.00 with \"2/7 Net 30\" selected as payment terms. The \"Journal Items\" tab\n"
 "is open, and the \"Discount Date\" and \"Discount Amount\" columns are displayed."
 msgstr ""
-"청구서 지급 조건이 '2/7 순액 30' 인 금액 €100.00 청구서가 있습니다. '전표 항목' 탭을 열면\n"
+"청구서 지급 조건이 '2/7 순액 30' 인 금액 €100.00인 청구서가 있습니다. '전표 항목' 탭을 열면\n"
 "'할인 날짜' 및 '할인 금액' 열이 표시됩니다."
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:162
@@ -3744,7 +3755,7 @@ msgid ""
 "An invoice of €100.00 with the following text added to the terms and conditions: \"30\n"
 "Days, 2% Early Payment Discount under 7 days. 118.58 € due if paid before 01/08/2023.\""
 msgstr ""
-"금액이 €100.00 청구서의 지급 조건에 다음의 문구가 추가되어 있습니다:\n"
+"금액이 €100.00인 청구서의 지급 조건에 다음의 문구가 추가되어 있습니다:\n"
 "\"30일, 7일 이내 2% 조기 결제 할인. 2023년 1월 8일 이전까지 결제 시 €118.58 가 청구됩니다.\""
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:170
@@ -7987,15 +7998,16 @@ msgid ""
 "**Payment terms** specify all the conditions of a sale's payment to help "
 "ensure customers pay their invoices correctly and on time."
 msgstr ""
-"**지급 조건**은 판매 대금 결제에 관련된 모든 조건을 명시하여 고객이 적시에 정확하게 청구서 결제를 할 수 있도록 합니다."
+"**지급 조건** 에는 판매 대금 결제에 관련된 모든 조건을 명시되어 있으며 이를 통해 고객이 적시에 정확하게 청구서 결제를 할 수 "
+"있습니다."
 
 #: ../../content/applications/finance/accounting/customer_invoices/payment_terms.rst:8
 msgid ""
 "Payment terms are generally defined on documents such as sales orders, "
 "customer invoices, and vendor bills. Payment terms cover:"
 msgstr ""
-"지급 조건은 보통 판매주문서, 고객 청구서, 공급업체 청구서 등의 문서에 정의되어 있습니다. 지급 조건에는 다음과 같은 내용이 "
-"포함됩니다:"
+"지급 조건은 보통 판매주문서, 고객 청구서, 공급업체 청구서 등의 문서에 정의되어 있습니다. 지급 조건에는 다음과 같은 내용이 들어 "
+"있습니다:"
 
 #: ../../content/applications/finance/accounting/customer_invoices/payment_terms.rst:11
 msgid "The due date(s)"
@@ -8070,9 +8082,9 @@ msgid ""
 "order, you issue multiple invoices to your customer, that is neither a "
 "payment term nor an installment plan but an invoicing policy."
 msgstr ""
-"지급 조건을 :doc:`선결제 청구서 </applications/sales/sales/invoicing/down_payment>`와 "
-"혼동하면 안됩니다. 특정 주문에 대해 고객에게 여러 개의 청구서를 발행하는 경우에는, 지급 조건이나 분할 납부가 아니라 청구서 발행 "
-"정책을 따라야 합니다."
+"지급 조건을 :doc:`선결제 청구서 </applications/sales/sales/invoicing/down_payment>` 와 "
+"혼동하지 않도록 합니다. 특정 주문에 대해 고객에게 여러 개의 청구서를 발행하는 경우에는, 지급 조건이나 분할 납부가 아니라 청구서 발행"
+" 정책을 기준으로 해야 합니다."
 
 #: ../../content/applications/finance/accounting/customer_invoices/payment_terms.rst:37
 msgid ""
@@ -8081,8 +8093,8 @@ msgid ""
 "regarding content use, return policies, and other policies surrounding the "
 "sale of goods and services."
 msgstr ""
-"이 페이지에서 설명하고 있는 *지급 조건* 기능은, :doc:`이용약관 <terms_conditions>`과는 다릅니다. 이는 콘텐츠 "
-"사용, 반품 정책 및 기타 재화 및 서비스 판매와 관련된 정책과 관련된 계약상의 의무를 명시하는 데 사용할 수 있습니다. "
+"이 페이지에서 설명하고 있는 *지급 조건* 기능은, :doc:`이용약관 <terms_conditions>` 과는 다릅니다. 이는 콘텐츠 "
+"사용, 반품 정책 및 기타 재화 및 서비스 판매와 관련된 정책과 관련된 계약 상의 의무를 명시하는 데 사용할 수 있습니다. "
 
 #: ../../content/applications/finance/accounting/customer_invoices/payment_terms.rst:42
 msgid ""
@@ -8129,8 +8141,9 @@ msgid ""
 " calculates the payments' due date(s). This is particularly helpful for "
 "managing **installment plans** (:dfn:`payment terms with multiple terms`)."
 msgstr ""
-":guilabel:`납부 기한` 섹션에 규정 (약관)을 추가하여 납부 항목과 기한을 지정합니다. 조건을 지정해 놓으면 납부 기한은 "
-"자동으로 계산됩니다. 이 기능은 **분할 납부**를 관리할 때 특히 유용합니다 (:dfn:`약관이 여러 개인 지급 조건`)."
+":guilabel:`납부 기한` 섹션에 규정(약관)을 추가하여 지급해야 하는 항목과 기한을 지정합니다. 조건을 지정하면 자동으로 납부 "
+"기한이 계산됩니다. 이 기능은 **분할 납부 중인 요금제** 를 관리할 때 특히 유용합니다(:dfn:`지급 조건에 여러 가지 조항이 "
+"지정된 경우`)."
 
 #: ../../content/applications/finance/accounting/customer_invoices/payment_terms.rst:62
 msgid ""
@@ -8184,12 +8197,12 @@ msgid ""
 "Example of Payment Terms. The first line is the 30% due immediately. The second line is\n"
 "the remaining 70% due at the end of the following month."
 msgstr ""
-"지급 조건의 예시입니다. 첫 번째 줄의 30%는 즉시 납부해야 합니다. 두 번째 줄에 있는 나머지 70%는\n"
-"다음 달 말에 납부해야 합니다."
+"지급 조건에 대한 예시입니다. 첫 번째 줄에 있는 30%는 즉시 납부해야 합니다. 두 번째 줄에 있는\n"
+"나머지 70%는 다음 달 말에 납부해야 합니다."
 
 #: ../../content/applications/finance/accounting/customer_invoices/payment_terms.rst:89
 msgid "Using payment terms"
-msgstr "지급 조건 사용하기"
+msgstr "지급 조건 적용하기"
 
 #: ../../content/applications/finance/accounting/customer_invoices/payment_terms.rst:91
 msgid ""
@@ -8202,8 +8215,8 @@ msgid ""
 "sales orders, invoices, and bills. This can be modified in the contact form,"
 " under the :guilabel:`Sales & Purchase` tab."
 msgstr ""
-"**연락처:** 연락처에 있는 새로운 판매주문서, 청구서 및 업체 청구서에 기본 지급 조건을 자동으로 설정합니다. 연락처 양식의 "
-":guilabel:`판매 및 구매` 탭에서 수정할 수 있습니다."
+"**연락처:** 연락처에 있는 새로운 판매주문서, 청구서 및 업체 청구서에 지급 조건에 대한 기본값을 자동으로 설정합니다. 연락처 양식에"
+" 있는 :guilabel:`판매 및 매입` 탭에서 수정할 수 있습니다."
 
 #: ../../content/applications/finance/accounting/customer_invoices/payment_terms.rst:96
 msgid ""
@@ -8233,17 +8246,17 @@ msgid ""
 "setting the **due date** is enough. If payment terms are already defined, "
 "empty the field to select a date."
 msgstr ""
-"공급업체 청구서에 지급 조건을 설정해 놓으면, 공급업체에서 주로 할부 또는 현금 할인 항목을 여러 개 다루고 있는 경우 조건을 관리하는 "
-"데 유용합니다. 그렇지 않은 경우에는, **납부 기한**을 직접 설정하는 것으로 충분합니다. 지급 조건이 이미 지정되어 있는 경우에는 "
-"필드를 비워 놓고 날짜를 선택합니다."
+"공급업체 청구서에 지급 조건을 설정해 놓으면 공급업체에서 주로 할부나 현금 할인 항목을 여러 개 다루고 있는 경우 조건을 관리하는 데 "
+"유용합니다. 그렇지 않은 경우에는 **납부 기한** 을 직접 설정하는 것으로 충분합니다. 지급 조건이 이미 지정되어 있는 경우에는 필드를"
+" 비워 놓고 날짜를 선택합니다."
 
 #: ../../content/applications/finance/accounting/customer_invoices/payment_terms.rst:113
 msgid ""
 "Invoices with specific payment terms generate different *journal entries*, "
 "with one *journal item* for every computed *due date*."
 msgstr ""
-"청구서에 특정 지급 조건이 있는 경우에는, 모든 *납부 기한* 계산 결과에 대해 하나의 *전표*를 사용하여 서로 다른 *전표 항목*을 "
-"생성합니다."
+"청구서에 특정 지급 조건이 있는 경우에는, 모든 *납부 기한* 계산 결과에 대해 하나의 *전표* 를 사용하여 서로 다른 *전표 항목* 을"
+" 생성합니다."
 
 #: ../../content/applications/finance/accounting/customer_invoices/payment_terms.rst:116
 msgid ""
@@ -12495,7 +12508,7 @@ msgstr "향후 지불할 청구서 예측하기"
 msgid ""
 "In Odoo, you can manage payments by setting automatic **Payments Terms** and"
 " **follow-ups**."
-msgstr "Odoo에서는 자동으로 **지급 조건**과 **후속 조치**를 설정하여 결제를 관리할 수 있습니다."
+msgstr "Odoo에서는 자동으로 **지급 조건** 과 **후속 조치** 를 설정하여 결제를 관리할 수 있습니다."
 
 #: ../../content/applications/finance/accounting/payments/forecast.rst:8
 msgid "Configuration: payment terms"
@@ -12507,8 +12520,8 @@ msgid ""
 "allow keeping track of due dates on invoices. Examples of **Payment Terms** "
 "are:"
 msgstr ""
-"공급업체 조건을 추적하기 위해, Odoo에서 **지급 조건**을 사용합니다. 이를 통해 청구서 기한을 추적할 수 있습니다. 지급 조건의 "
-"예는 다음과 같습니다:"
+"공급업체 조건을 추적하기 위해 Odoo에서는 **지급 조건** 을 사용하고 있습니다. 이를 통해 청구서 기한을 추적할 수 있습니다. "
+"**지급 조건** 의 예시는 다음과 같습니다:"
 
 #: ../../content/applications/finance/accounting/payments/forecast.rst:13
 msgid "50% within 30 days"
@@ -12543,9 +12556,9 @@ msgid ""
 "**Payment Term**. This way, every time you purchase from this vendor, Odoo "
 "automatically proposes the chosen Payment Term."
 msgstr ""
-"**지급 조건** 내용이 결정되면, 이를 공급업체 기본값으로 정할 수 있습니다. 이렇게 하려면 :menuselection:`공급업체 "
-"--> 공급업체`로 이동하여 업체를 선택하고 :guilabel:`판매 및 매입` 탭을 클릭한 후 특정 **지급 조건**을 선택합니다. "
-"이렇게 하면 해당 공급업체에서 매입을 할 때마다 선택한 지급 조건을 Odoo에서 자동 제안합니다."
+"**지급 조건** 을 지정하면, 이를 공급업체 기본값으로 정할 수 있습니다. 지정하려면 :menuselection:`공급업체 --> "
+"공급업체` 로 이동하여 업체를 선택하고 :guilabel:`판매 및 매입` 탭을 클릭한 후 대상으로 할 **지급 조건** 을 선택합니다."
+" 이렇게 하면 해당 공급업체에서 매입을 할 때마다 선택한 지급 조건이 Odoo에서 자동 제안됩니다."
 
 #: ../../content/applications/finance/accounting/payments/forecast.rst:29
 msgid ""
@@ -13671,7 +13684,7 @@ msgstr ":guilabel:`도메인`: 계획이 적용될 회계 문서를 선택합니
 msgid ""
 ":guilabel:`Financial Accounts Prefix`: select the prefix of the account(s) "
 "to which this plan should be applied;"
-msgstr ":guilabel:`금융 계정 접두어`: 계획을 적용할 계정의 접두어를 선택합니다;"
+msgstr ":guilabel:`금융 계정 접두사`: 계획을 적용할 계정의 접두사를 선택합니다;"
 
 #: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:75
 msgid ""
@@ -13767,7 +13780,7 @@ msgstr ""
 msgid ""
 ":guilabel:`Accounts Prefix`: this analytic distribution will apply to all "
 "financial accounts sharing the prefix specified;"
-msgstr ":guilabel:`계정 접두어`: 이 분석적 분배 항목에서는 공유 중인 모든 금융 계정에 지정 접두어를 적용합니다."
+msgstr ":guilabel:`계정 접두사`: 해당하는 분석 분배 항목에서는 공유 중인 모든 금융 계정에 지정 접두사를 적용합니다."
 
 #: ../../content/applications/finance/accounting/reporting/analytic_accounting.rst:121
 msgid ""
@@ -14522,13 +14535,13 @@ msgstr "'cross_report' 하위 수식으로 다른 보고서에 있는 표현식�
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:179
 msgid "'Prefix of Account Codes' engine"
-msgstr "'회계 코드 접두어' 엔진"
+msgstr "'회계 코드 접두사' 엔진"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:181
 msgid ""
 "This engine is used to match amounts made on accounts using the prefixes of "
 "these accounts' codes as variables in an arithmetic expression."
-msgstr "이 엔진은 이같은 계정 코드 접두어를 산술 표현식의 변수로 사용하여 계정에 생긴 금액을 일치시키는 데 사용됩니다."
+msgstr "이 엔진은 이같은 계정 코드 접두사를 산술 표현식의 변수로 사용하여 계정에 생긴 금액을 일치시키는 데 사용됩니다."
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:0
 msgid "`21`"
@@ -14536,7 +14549,7 @@ msgstr "`21`"
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:0
 msgid "Arithmetic expressions can also be a single prefix, such as here."
-msgstr "산술 표현식에는 다음과 같이 접두어가 하나만 있을 수도 있습니다."
+msgstr "산술 표현식에는 다음과 같이 접두사가 하나만 있을 수도 있습니다."
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:0
 msgid "`21 + 10 - 5`"
@@ -14548,11 +14561,11 @@ msgid ""
 "codes start with `21` and `10`, and subtracts the balance of the ones on "
 "accounts with the prefix `5`."
 msgstr ""
-"이 공식은 코드가 '21'과 '10'으로 시작하는 계정에서 작업 줄에 있는 잔액을 더하고 접두어 '5'가 있는 계정의 잔액을 뺍니다."
+"이 공식은 코드가 '21'과 '10'으로 시작하는 계정에서 작업 줄에 있는 잔액을 더하고 접두사 '5'가 있는 계정의 잔액을 뺍니다."
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:193
 msgid "It is also possible to ignore a selection of sub-prefixes."
-msgstr "하위 접두어를 선택하지 않을 수도 있습니다."
+msgstr "하위 접두사를 선택하지 않을 수도 있습니다."
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:0
 msgid "`21 + 10\\\\(101, 102) - 5\\\\(57)`"
@@ -14562,7 +14575,7 @@ msgstr "`21 + 10\\\\(101, 102) - 5\\\\(57)`"
 msgid ""
 "This formula works the same way as the previous example but ignores the "
 "prefixes `101`, `102`, and `57`."
-msgstr "이 수식은 이전 예시와 동일한 방식으로 사용하나, 접두어 '101', '102', '57'을 무시합니다."
+msgstr "이 수식은 이전 예시와 동일한 방식으로 사용하나, 접두사 '101', '102', '57'을 무시합니다."
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:200
 msgid ""
@@ -14585,7 +14598,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:209
 msgid "Prefix exclusions can be mixed with the `C` and `D` suffixes."
-msgstr "접두어를 빼고 'C' 및 'D' 접미어를 사용할 수 있습니다."
+msgstr "접두사를 빼고 'C' 및 'D' 접미어를 사용할 수 있습니다."
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:0
 msgid "`21D + 10\\\\(101, 102)C - 5\\\\(57)`"
@@ -14606,7 +14619,7 @@ msgstr ""
 msgid ""
 "To match the letter `C` or `D` in a prefix and not use it as a suffix, use "
 "an empty exclusion `()`."
-msgstr "접두어 `C` 또는 `D`를 접미어로 사용하지 않고 일치시키려면 `()`로 비워두어 제외시킵니다."
+msgstr "접두사 `C` 또는 `D`를 접미사로 사용하지 않고 일치시키려면 `()`로 비워두어 제외시킵니다."
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:0
 msgid "`21D\\\\()`"
@@ -14658,7 +14671,7 @@ msgstr "이 수식은 계정의 연결 태그에 *my_module.my_tag* 표시된 �
 msgid ""
 "You can also use arithmetic expressions with tags, possibly combining them "
 "with prefix selections."
-msgstr "태그와 함께 산술 표현식을 사용할 수도 있으며, 접두어를 선택하여 결합할 수도 있습니다."
+msgstr "태그와 함께 산술 표현식을 사용할 수도 있으며, 접두사를 선택하여 결합할 수도 있습니다."
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:0
 msgid "`tag(my_module.my_tag) + tag(42) + 10`"
@@ -14670,7 +14683,7 @@ msgid ""
 "those of accounts linked to the tag with ID *42* and accounts with the code "
 "prefix `10`"
 msgstr ""
-"*my_module.my_tag*로 태그가 연결된 계정의 잔액은, 태그에 연결된 계정 중 ID가 *42*이고 코드 접두어 '10'이 있는"
+"*my_module.my_tag*로 태그가 연결된 계정의 잔액은, 태그에 연결된 계정 중 ID가 *42*이고 코드 접두사 '10'이 있는"
 " 계정의 잔액과 합산됩니다."
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:245
@@ -14689,7 +14702,7 @@ msgstr "이 수식은 *my_module.my_tag* 태그와 차변 잔액이 있는 계�
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:251
 msgid "Prefix exclusion also works with tags."
-msgstr "태그에서도 접두어를 사용하지 않을 수 있습니다."
+msgstr "태그에서도 접두사를 사용하지 않을 수 있습니다."
 
 #: ../../content/applications/finance/accounting/reporting/customize.rst:0
 msgid "`tag(my_module.my_tag)\\\\(10)`"
@@ -16772,8 +16785,8 @@ msgid ""
 "relationship with prices included and prices excluded, as shown in this use "
 "case, in belgium with a tax of 21%:"
 msgstr ""
-"이 문서는 동일한 품목에 대해 두 가지 가격 (세금 포함 또는 제외) 참조가 필요한 특정한 사용 사례에만 적용됩니다. 해당 사용 사례에 "
-"표시된 것처럼 세금이 21%인 벨기에의 경우 포함 가격과 제외 가격이 대칭 관계가 아니기 때문입니다:"
+"이 문서는 동일한 품목에 대해 두 가지 가격 (세금 포함 또는 제외) 참조가 필요한 특정한 사례에 대해서만 적용됩니다. 해당 사례에 "
+"표시된 것과 같이 세금이 21%인 벨기에의 경우 포함 가격과 제외 가격이 대칭 관계가 아니기 때문에 복잡해집니다:"
 
 #: ../../content/applications/finance/accounting/taxes/B2B_B2C.rst:21
 msgid "Your eCommerce has a product at **10€ (taxes included)**"
@@ -24044,7 +24057,8 @@ msgid ""
 "of document that shows all the taxes in detail along with the customer's "
 "information."
 msgstr ""
-"**고객 IVA Responsable Inscripto, 접두어 A**는 고객 정보와 함께 전체 세금이 자세히 표시되는 문서 유형입니다."
+"**고객 IVA Responsable Inscripto, 접두사 A** 는 고객 정보와 함께 전체 세금이 자세히 표시되는 문서 "
+"유형입니다."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:0
 msgid "Invoice for a customer IVA Responsable Inscripto, prefix A."
@@ -24054,27 +24068,27 @@ msgstr "고객용 IVA 등록 책임 청구서, 접두사 A."
 msgid ""
 "**Invoice for an end customer, prefix B** is the type of document that does "
 "not detail the taxes, since the taxes are included in the total amount."
-msgstr "**최종 고객용 청구서, 접두어 B**는 세금이 자세히 표시되지 않는 문서 유형으로, 세금이 총액에 포함되어 있습니다."
+msgstr "**최종 고객용 청구서, 접두사 B** 는 세금이 상세하게 표시되지 않는 문서 유형으로, 총액에 세금이 포함되어 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:0
 msgid "Invoice for an end customer, prefix B."
-msgstr "최종 고객용 청구서, 접두어 B."
+msgstr "최종 고객용 청구서, 접두사 B."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:358
 msgid ""
 "**Exportation Invoice, prefix E** is the type of document used when "
 "exporting goods that shows the incoterm."
-msgstr "**수출용 청구서, 접두어 E**는 품목 수출 시 인코텀즈을 표시하는데 사용되는 문서 유형입니다."
+msgstr "**수출용 청구서, 접두사 E** 는 품목 수출 시 인코텀즈을 표시하는데 사용되는 문서 유형입니다."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:0
 msgid "Exportation Invoice, prefix E"
-msgstr "수출용 청구서, 접두어 E"
+msgstr "수출용 청구서, 접두사 E"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:364
 msgid ""
 "Even though some invoices use the same journal, the prefix and sequence are "
 "given by the :guilabel:`Document Type` field."
-msgstr "청구서에서 같은 전표를 사용하더라도 접두어와 순서는 :guilabel:`문서 유형` 필드에 따라 지정됩니다."
+msgstr "청구서에서 같은 전표를 사용하더라도 접두사와 순서는 :guilabel:`문서 유형` 필드에 따라 지정됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:367
 msgid ""
@@ -24561,7 +24575,7 @@ msgid ""
 "the following format: *Document Prefix - Letter - Document Number*."
 msgstr ""
 "공급업체 청구서 번호는 고객 청구서와 같은 방식으로 만들어지나, 다음의 문서 순서 형식으로 입력한다는 점에서 차이가 있습니다: *문서 "
-"접두어 - 문자 - 문서 번호*."
+"접두사 - 문자 - 문서 번호*."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:615
 msgid "Validate vendor bill number in AFIP"
@@ -28339,7 +28353,7 @@ msgid ""
 ":guilabel:`Tax ID` by providing, if you have one, your :abbr:`UID-Nummer "
 "(Umsatzsteueridentifikationsnummer)` (including the country prefix)"
 msgstr ""
-"세금 ID가 있는 경우 :abbr:`UID 번호(Umsatzsteueridentifikationsnummer)` (국가 접두어 포함)를 "
+"세금 ID가 있는 경우 :abbr:`UID 번호(Umsatzsteueridentifikationsnummer)` (국가 접두사 포함)를 "
 "입력합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/austria.rst:74
@@ -28381,7 +28395,7 @@ msgstr ""
 msgid ""
 "For partners that are companies, fill in the VAT number (including the "
 "country prefix) in the :guilabel:`Tax ID` field."
-msgstr "파트너가 회사인 경우, :guilabel:`Tax ID` 필드에 VAT 번호 (국가 접두어 포함)를 입력합니다."
+msgstr "파트너가 회사인 경우, :guilabel:`세금 ID` 필드에 VAT 번호 (국가 접두사 포함)를 입력합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/austria.rst:92
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:85
@@ -39185,6 +39199,10 @@ msgid ""
 "data access, that is relevant for the German tax authority, tax declaration,"
 " and balance sheet."
 msgstr ""
+"**GoBD** 는 *Grundsätze zur ordnungsmäßigen Führung und Aufbewahrung von "
+"Büchern, Aufzeichnungen und Unterlagen in elektronischer Form sowie zum "
+"Datenzugriff* 의 약자입니다. 즉, 전자 형태의 장부, 기록 및 문서의 적절한 관리 및 보관과 데이터 접근에 대한 가이드라인을"
+" 의미하며, 독일 세무 당국, 세무 신고 및 재무상태표와 관련하여 사용합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/germany.rst:116
 msgid ""
@@ -39195,6 +39213,10 @@ msgid ""
 "January 2020 to specify some of the content due to the development of "
 "digital solutions (cloud hosting, paperless companies, etc.)."
 msgstr ""
+"이와 같은 원칙은 2014년 11월 연방 재무부(BMF)에서 제정하여 발표했습니다. 2015년 1월부터 **이 원칙이 표준으로 "
+"지정되었으며** 컴퓨터를 기반으로 하는 회계와 관련하여 허용되어 온 관행을 대체하고 있습니다. BMF에서는 2019년과 2020년 1월 "
+"디지털 솔루션(클라우드 호스팅, 종이 없는 회사 등)의 발전을 계기로 일부 내용을 구체적으로 실현할 수 있도록 몇 가지 변경 사항이 "
+"적용되었습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/germany.rst:123
 msgid "Odoo is certified **GoBD-compliant**."
@@ -39370,6 +39392,9 @@ msgid ""
 " bill to the respective record in Odoo. *Odoo Documents helps you automate "
 "this task*."
 msgstr ""
+"Odoo에서는 정확한 환경설정을 통해 알맞은 계정을 사용할 수 있도록 합니다. 또한 구매발주서와 판매주문서 및 각각의 청구서 간에 연결된"
+" 상호 관리 시스템을 통해 비즈니스 실무 내용을 확인할 수 있습니다. 사용자 측에서 책임지고 종이로 된 공급업체 청구서를 스캔하여 "
+"해당하는 Odoo 기록에 첨부하도록 합니다. *Odoo 문서 앱으로 이러한 작업을 자동화할 수 있습니다*."
 
 #: ../../content/applications/finance/fiscal_localizations/germany.rst:0
 msgid "**Timely booking and record-keeping**"
@@ -45465,9 +45490,10 @@ msgid ""
 "invoices (with or without addedums) and payment complements to the "
 "government."
 msgstr ""
-":doc:`전자 문서 <../accounting/customer_invoices/electronic_invoicing>`을 생성하고 "
-"검증하기 위한 모든 기술 및 기능 요구 사항이 포함되어 있으며, |SAT|에서 발행한 기술 문서를 기반으로 합니다. 이를 통해 청구서 "
-"(추가 정보 포함 또는 미포함)와 결제 보완 자료를 정부에 보낼 수 있습니다."
+"모든 기술 및 기능 요구 사항을 포함하여 :doc:`전자 문서 "
+"<../accounting/customer_invoices/electronic_invoicing>` 를 생성하고 승인할 수 있으며, 이 "
+"문서는 |SAT| 에서 발행한 기술 문서를 기반으로 합니다. 이를 통해 청구서(추가 정보 포함 가능)와 결제 보완 자료를 정부 기관에 "
+"제출할 수 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:86
 msgid ":guilabel:`EDI v4.0 for Mexico`"
@@ -46113,8 +46139,8 @@ msgid ""
 "managed from :menuselection:`Accounting --> Configuration --> Payment "
 "Terms`."
 msgstr ""
-"일부 :guilabel:`결제 조건`은 기본값으로 이미 설치되어 있으며 :menuselection:`회계 --> 환경 설정 --> 결제 "
-"조건` 에서 관리할 수 있습니다."
+"일부 :guilabel:`지급 조건` 은 기본값으로 이미 포함되어 있으며 :menuselection:`회계 --> 환경 설정 --> 지급"
+" 조건` 에서 관리할 수 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:388
 msgid ""
@@ -46217,8 +46243,8 @@ msgid ""
 "Policy` `PPD`, Odoo generates the corresponding payment complement "
 "automatically, once you click :guilabel:`Process Now`."
 msgstr ""
-"`PPD` :guilabel:`결제 정책` 을 사용하여 서명된 청구서와 관련된 결제의 경우 :guilabel:`지금 처리하기` 를 "
-"클릭하면 Odoo에서 결제 보완을 알맞게 자동으로 생성합니다."
+"`PPD` :guilabel:`결제 정책` 을 적용하여 서명된 청구서 및 관련된 결제의 경우 :guilabel:`지금 처리하기` 를 "
+"클릭하면 Odoo에서 결제 보완 항목이 자동으로 알맞게 생성됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst-1
 msgid "CFDI (4.0) E-invoicing service process payment now message."
@@ -46400,10 +46426,10 @@ msgid ""
 "to the |SAT|. After a few seconds, you can click :guilabel:`Retry` to "
 "confirm the current |SAT| status."
 msgstr ""
-"*결제 보완* 을 취소하는 것도 가능합니다. 취소하려면 :menuselection:`회계 --> 고객 --> 결제` 를 통해 결제로 "
-"이동한 후 :guilabel:`EDI 취소 요청` 을 선택합니다. 청구서에서와 같이 파란색 버튼이 나타납니다. :guilabel:`지금 "
-"처리하기` 를 클릭하면 문서가 |SAT| 로 전송됩니다. 잠시 후 :guilabel:`재시도` 를 클릭하면 현재 |SAT| 상태를 확인할"
-" 수 있습니다. "
+"*결제 보완* 항목을 취소하는 것도 가능합니다. 취소하려면 :menuselection:`회계 --> 고객 --> 결제` 를 통해 결제로 "
+"이동한 후 :guilabel:`EDI 취소 요청` 을 선택합니다. 청구서와 마찬가지로 파란색 버튼이 나타납니다. :guilabel:`지금"
+" 처리하기` 를 클릭하면 문서가 |SAT| 로 전송됩니다. 잠시 후 :guilabel:`재시도` 를 클릭하면 현재 |SAT| 상태를 "
+"확인할 수 있습니다. "
 
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:522
 msgid "Finally, the payment status is moved to :guilabel:`Cancelled`."
@@ -55852,7 +55878,7 @@ msgstr ""
 msgid ""
 "Receive the payment confirmation and wait until the order is shipped to "
 "capture the payment."
-msgstr "결제 승인이 된 후 주문이 배송될 때까지 기다렸다가 결제를 매입 처리합니다."
+msgstr "결제 승인이 된 후 주문이 출고될 때까지 기다렸다가 결제를 매입 처리합니다."
 
 #: ../../content/applications/finance/payment_providers.rst:315
 msgid ""
@@ -56410,7 +56436,7 @@ msgid ""
 "Copy the :guilabel:`Prefix` for your live Customer area (i.e., **data "
 "center**) and save it for later."
 msgstr ""
-"실제 고객 영역 (예: **데이터 센터**)에 대한 :guilabel:`Prefix` 를 복사한 후 나중에 사용할 수 있도록 저장합니다."
+"실제 고객 영역(예: **데이터 센터**)에 대한 :guilabel:`접두사` 를 복사한 후 나중에 사용할 수 있도록 저장합니다."
 
 #: ../../content/applications/finance/payment_providers/adyen.rst:0
 msgid "Copy the prefix for the Adyen APIs"
