@@ -951,6 +951,7 @@ form.
    - :doc:`payroll/reporting`
    - :doc:`payroll/work_entry_analysis`
    - :doc:`payroll/salary_attachment`
+   - :doc:`payroll/payroll_localizations`
 
 .. toctree::
    :titlesonly:
@@ -962,3 +963,4 @@ form.
    payroll/reporting
    payroll/work_entry_analysis
    payroll/salary_attachment
+   payroll/payroll_localizations
