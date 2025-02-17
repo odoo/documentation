@@ -95,7 +95,7 @@ outgoing mail server is recommended.
    - :ref:`Helpdesk ticket creation using an email alias <helpdesk/receiving_tickets/email-alias>`
    - :ref:`Lead creation using an email alias <crm/configure_email_alias>`
    - :ref:`Project task creation using an email alias <task_creation/email_alias>`
-   - :doc:`Technical mail getaway for on-premise users
+   - :doc:`Technical mail gateway for on-premise users
      <../../administration/on_premise/email_gateway>`
    - :ref:`Technical start of Odoo database with an outgoing mail server configured from the
      command-line interface <reference/cmdline/server/emails>`
