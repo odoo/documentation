@@ -766,11 +766,11 @@ widgets, respectively).
             <field name="arch" type="xml">
                 <form string="Business Trip">
                     <!-- Your usual form view goes here -->
-                    <div class="oe_chatter">
+                    <chatter>
                         <field name="message_follower_ids" widget="mail_followers"/>
                         <field name="activity_ids" widget="mail_activity"/>
                         <field name="message_ids" widget="mail_thread"/>
-                    </div>
+                    </chatter>
                 </form>
             </field>
         </record>
