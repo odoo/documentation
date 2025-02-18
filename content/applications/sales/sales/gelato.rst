@@ -72,7 +72,7 @@ The webhook form requires several specific configurations:
   Odoo database URL with the additional suffix `/gelato/webhook`.
 
   .. example::
-     `https://stealthywood.odoo.com/odoo/gelato/webhook`
+     `https://stealthywood.odoo.com/gelato/webhook`
 
 - :guilabel:`Events`: Click into the field and select :guilabel:`order_status_updated`. Selecting
   :guilabel:`order_status_updated` ensures Odoo receives order changes automatically.
@@ -115,8 +115,8 @@ Select which product to synchronize in Odoo, then hover over the product card to
 Odoo Sales product
 ------------------
 
-To create a product in Odoo that matches the Gelato one, navigate to :menuselection:`Sales app -->
-Products --> Products`, select :guilabel:`New` to create a new product form. Type in the product
+To create a product in Odoo that matches the Gelato product, navigate to :menuselection:`Sales app
+--> Products --> Products`, select :guilabel:`New` to create a new product form. Type in the product
 :guilabel:`Name`, then navigate to the :guilabel:`Sales` tab. Find the :guilabel:`Gelato` section,
 then click into the :guilabel:`Template Reference` field and paste the copied template ID from the
 Gelato product. Finally, click :guilabel:`Synchronize`.
@@ -129,7 +129,8 @@ product image. Click the :icon:`fa-pencil` :guilabel:`(edit)` icon and select th
 to upload, then :guilabel:`Save & Close`.
 
 .. important::
-   The :guilabel:`Print Images` field *must* be configured on the product before it can be ordered.
+   The :guilabel:`Print Images` field *must* be configured on all Gelato products and their
+   respective product variations before they can be ordered.
 
 Product variants
 ----------------
@@ -161,7 +162,3 @@ produces the product at the nearest fulfillment center, and ships it directly to
    When creating a sales order for Gelato products in the database, only Gelato products can be
    added to the same sales order. Multivendor orders are not available with the Gelato connector at
    this time.
-
-.. important::
-   For **eCommerce** orders, deliver methods must be manually published on the website for them to
-   appear at checkout.
