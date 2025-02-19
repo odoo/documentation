@@ -61,6 +61,57 @@ in the reordering rule.
 .. image:: report/order-to-max.png
    :alt: The Order to Max option on the replenishment dashboard.
 
+.. _inventory/warehouses_storage/horizon-days:
+
+Horizon days
+------------
+
+*Horizon days* determine how many days ahead Odoo checks if the forecasted quantity will drop below
+reordering rule's minimum. The feature is meant to help users plan replenishment in advance, by
+increasing the :ref:`forecasted date <inventory/warehouses_storage/forecasted-date>` on the
+:doc:`replenishment report <report>`.
+
+.. example::
+   Setting horizon days to `7` ensures all manual reordering rules set to trigger within the next
+   seven days appear on the replenishment report, allowing users to review and decide which products
+   to order in advance.
+
+To set horizon days, go to :menuselection:`Inventory app --> Operations --> Replenishment`, and
+click :icon:`fa-angle-double-right` :icon:`fa-folder` :guilabel:`Manual` in the left sidebar. In the
+menu that appears, set the number of :guilabel:`Horizon` days.
+
+Both horizon days and :ref:`visibility days <inventory/warehouses_storage/visibility-days>` allow
+Odoo to anticipate future demand, but they work differently:
+
+- **Visibility days**: only checks future demand if a replenishment would have been triggered today.
+- **Horizon days**: looks ahead a specified number of days and triggers reordering rules as soon as
+  the forecasted quantity falls below the minimum within that window — even if no replenishment is
+  needed today.
+
+.. example::
+   - Current date: Feb 18
+   - On hand quantity: 10
+   - Reordering rule: Min: 5, Max 10
+   - Vendor lead time: 1 day
+
+   8 units are needed for an |SO| on Feb 23. That means, on Feb 23, there will only be 2 units in
+   stock.
+
+   **Without horizon days**
+
+   - The demand appears on the replenishment report only on Feb 22, one day before the delivery
+     date.
+   - Forecasted date: Feb 19 (current date + vendor lead time)
+
+   **With horizon days (4 or more days)**
+
+   - Odoo considers demand up to Feb 23 as relevant today (Feb 18)
+   - The need for 8 more units appears immediately in the replenishment report
+   - Forecasted date: Feb 23 (current date + vendor lead time + horizon days)
+
+   .. image:: report/horizon-days.png
+      :alt: Show forecasted date brought forward.
+
 Replenishment information
 =========================
 
