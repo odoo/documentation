@@ -3747,7 +3747,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:60
 msgid "Inventory tracking"
-msgstr ""
+msgstr "库存追踪"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:61
 msgid ""
@@ -3904,6 +3904,7 @@ msgid ""
 "number of individual bars of soap must be included in the stock count when "
 "the pallet is received."
 msgstr ""
+"某仓库接收以实体托盘运输的香皂货物，每托盘标准装载96块。这些托盘既用于内部调拨，也可作为独立销售单元。出于物流需求，对于某些货件，托拍的重量必须包含在总发货重量中。此外，托盘须配置专属条形码实现全链路追踪，并且到货验收时需同步登记香皂单品数量。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:116
 msgid ""
@@ -3913,6 +3914,8 @@ msgid ""
 "operations by automatically registering the grouped quantity. Key "
 "distinctions include:"
 msgstr ""
+"在对各种方案进行评估后，*产品包装*是最合适的解决方案。通过包装，可以为托盘分配一个条形码，将其识别为包含 96 "
+"块肥皂的\"托盘类型”。该条形码可自动登记分组数量，从而简化操作。主要区别包括"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:121
 msgid ""
@@ -3920,6 +3923,8 @@ msgid ""
 " the number of packagings. For instance, if a pallet with 12 and 24 "
 "quantities is received, Odoo records 36 quantities, not the pallet details."
 msgstr ""
+"**仓库追踪限制**：Odoo 只追踪总数量，而不是容器数量。例如，如果收到一个包含 12 和 24 个数量的托盘，Odoo 会记录 36 "
+"个数量，而不是托盘的详细信息。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:124
 msgid ""
@@ -3927,16 +3932,17 @@ msgid ""
 "packaging types (e.g., \"pallet of 96 soap bars\") but do not uniquely "
 "identify individual pallets, such as Pallet #1 or Pallet #2."
 msgstr ""
+"**包装条形码是特定类型的，不是唯一的**：条形码代表包装类型（如 \"96 块肥皂的托盘\"），但不能唯一标识单个托盘，如 1 号托盘或 2 号托盘。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:129
 msgid "Capture product information using barcode"
-msgstr ""
+msgstr "使用条形码捕获产品信息"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:131
 msgid ""
 "An Odoo user expects the **Barcode** app to display the typical storage "
 "location of a product by scanning a barcode for a container."
-msgstr ""
+msgstr "Odoo 用户希望 **条形码** 应用程序通过扫描容器的条形码，来显示产品的典型存放位置。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:134
 msgid ""
@@ -3944,33 +3950,35 @@ msgid ""
 "enabled <inventory/warehouses_storage/enable-package>`, scanning a package "
 "barcode displays its contents in the **Barcode** app."
 msgstr ""
+"*包裹*是最合适的。当 :ref:`启用 <inventory/warehouses_storage/enable-package>` "
+"中的适当设置时，扫描包裹条形码会在 **条形码** 应用程序中显示其内容。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:138
 msgid ""
 "Packages represent physical containers, enabling detailed tracking of the "
 "items they hold. Scanning a package provides visibility into its contents "
 "and facilitates operations, like inventory moves."
-msgstr ""
+msgstr "包裹代表物理容器，可对其所装物品进行详细追踪。扫描包裹可以查看其中的物品，方便库存移动等操作。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:145
 msgid "Track different units of measure in storage"
-msgstr ""
+msgstr "追踪存储中的不同计量单位"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:147
 msgid "A fruit juice distributor tracks multiple |UoMs| for their operations:"
-msgstr ""
+msgstr "以一家果汁经销商为例，在运营时需要追踪多个计量单位："
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:149
 msgid "Fruits are purchased in tons."
-msgstr ""
+msgstr "水果以吨为单位采购。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:150
 msgid "Juice is produced and stored in kilograms."
-msgstr ""
+msgstr "果汁以千克为单位生产和存储。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:151
 msgid "Small samples are stored in grams for recipe testing."
-msgstr ""
+msgstr "用于配方测试的小样品以克为单位存储。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:153
 msgid ""
@@ -3979,21 +3987,23 @@ msgid ""
 "product in the database, the company uses lot numbers to differentiate "
 "|UoMs|:"
 msgstr ""
+"“计量单位”是最合适的解决方案。Odoo 系统在收货时会自动将吨转换为千克。但是，由于 Odoo "
+"数据库中每种产品只能追踪一种计量单位，因此公司使用批号来区分不同的计量单位。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:157
 msgid "LOT1: Grams (g)"
-msgstr ""
+msgstr "批次1：克（g）"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:158
 msgid "LOT2: Kilograms (kg)"
-msgstr ""
+msgstr "批次2：千克（kg）"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:160
 msgid ""
 "Manual inventory adjustments are required to convert between lots, such as "
 "subtracting 1 kg from LOT2 to add 1,000 g to LOT1. While functional, this "
 "workaround can be time-consuming and prone to errors."
-msgstr ""
+msgstr "批次之间的转换需要手动调整库存，例如从批次2中减去 1 kg，再向批次1中添加 1 kg。这种工作方法虽然实用，但耗时且容易出错。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:7
 msgid ""
@@ -4086,7 +4096,7 @@ msgid ""
 "When moving packages internally, the *Move Entire Packages* feature can be "
 "enabled on an operation type to update a package's contained item's location"
 " upon updating the package's location."
-msgstr ""
+msgstr "在内部移动数据包时，可在操作类型上启用 *移动整个数据包* 功能，以便在更新数据包位置时，更新数据包所含项目的位置。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:53
 msgid ""
@@ -4094,12 +4104,14 @@ msgid ""
 "Operations Types` and select the desired operation this feature will apply "
 "to (may have to set it for multiple)."
 msgstr ""
+"要执行此操作，请转到 :menuselection:`库存应用程序 --> 配置 --> 操作类型`（库存应用程序 --> 配置 --> "
+"操作类型），然后选择此功能适用的所需操作（可能需要设置为多个）。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:56
 msgid ""
 "On the operation type page, in the :guilabel:`Packages` section, tick the "
 ":guilabel:`Move Entire Packages` checkbox."
-msgstr ""
+msgstr "在操作类型页面的 :guilabel:`包裹` 部分，勾选 :guilabel:`移动整个包裹` 复选框。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:62
 msgid "Pack items"
@@ -4387,13 +4399,13 @@ msgstr "显示包裹表单以创建集群包裹。"
 msgid ""
 ":doc:`Using cluster packages "
 "<../../shipping_receiving/picking_methods/cluster>`"
-msgstr ""
+msgstr ":doc:`使用集群包裹<../../shipping_receiving/picking_methods/cluster>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:7
 msgid ""
 "In Odoo *Inventory*, *packaging* refers to disposable containers holding "
 "multiple units of a specific product."
-msgstr ""
+msgstr "在 Odoo *库存*中，*包裹* 指的是容纳特定产品多个单位的一次性容器。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:10
 msgid ""
@@ -4401,6 +4413,8 @@ msgid ""
 "12-pack, or a case of 36, **must** be configured on the individual product "
 "form. This is because packagings are product specific, not generic."
 msgstr ""
+"举例来说，对于汽水罐的不同包装形式，比如 6 罐装、12 罐装或者 36 "
+"罐装箱，必须在具体产品的表单中进行配置。这是因为包装规格是针对具体产品制定的，而不是通用的。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:15
 msgid ""
@@ -4438,7 +4452,7 @@ msgstr "包装可直接在产品表单上创建，或从 :guilabel:`产品包裹
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:39
 msgid "From product form"
-msgstr ""
+msgstr "从产品表单"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:41
 msgid ""
@@ -4492,6 +4506,8 @@ msgid ""
 ":guilabel:`Packaging` section, and selecting the desired options from the "
 "drop-down menu that appears."
 msgstr ""
+"点击 :guilabel:`包装` 部分列标题最右侧的 |调整| 图标，并从出现的下拉菜单中选择所需的选项，即可访问下面 :guilabel:`包装` "
+"表中的其他字段。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:59
 msgid ""
@@ -4525,7 +4541,7 @@ msgstr "为产品制作 6 个包装箱。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:74
 msgid "From product packagings page"
-msgstr ""
+msgstr "从产品包装页面"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:76
 msgid ""
@@ -4609,27 +4625,27 @@ msgstr "为了更好地评估基于业务需求的选项，请参考以下示例
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:117
 msgid "a product is sold in twelve units per packaging."
-msgstr ""
+msgstr "一个产品以每包装12个单位进行销售。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:118
 msgid "an order demands two packagings."
-msgstr ""
+msgstr "有一个订单需要2个包装。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:119
 msgid "there are only twenty-two units in stock."
-msgstr ""
+msgstr "当前库存只有22个单位。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:121
 msgid ""
 "When :guilabel:`Reserve Only Full Packagings` is selected, only twelve units"
 " are reserved for the order."
-msgstr ""
+msgstr "当选择 :guilabel:`仅预留完整包装` 选项时，系统只会为该订单预留12个单位。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:124
 msgid ""
 "Conversely, when :guilabel:`Reserve Partial Packagings` is selected, twenty-"
 "two units are reserved for the order."
-msgstr ""
+msgstr "相反，选择 :guilabel:`保留部分包装` 时，将为订单保留 22 个单位。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:128
 msgid "Apply packagings"
@@ -4649,15 +4665,15 @@ msgstr ""
 msgid ""
 "18 cans of the product, `Grape Soda`, is packed using three 6-pack "
 "packagings."
-msgstr ""
+msgstr "18 罐 `葡萄汽水` 产品使用三个 6 罐装包装进行打包。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:0
 msgid "Assign packagings on the Sales Order Line."
-msgstr ""
+msgstr "在销售订单明细行中分配包装。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:144
 msgid "Routes for packaging"
-msgstr ""
+msgstr "包装路线设置"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:146
 msgid ""
@@ -4667,6 +4683,9 @@ msgid ""
 "packaging-specific route, go to :menuselection:`Inventory app --> "
 "Configuration --> Routes`."
 msgstr ""
+"在接收包装时，默认情况下，包装会遵循 :doc:`仓库配置的接收路线 "
+"<../../shipping_receiving/daily_operations>`。如果需要为特定包装设置专门的路线（**可选**），请前往 "
+":menuselection:`库存应用程序 --> 配置 --> 路线`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:151
 msgid ""
@@ -4674,14 +4693,16 @@ msgid ""
 "features (found by going to :menuselection:`Inventory app --> Configuration "
 "--> Settings`) **must** be activated, and saved."
 msgstr ""
+"*产品包装*、存储位置*和*多步骤路线*功能（可通过 :menuselection:`库存应用程序 --> 配置 --> "
+"设置`）。**必须**激活并保存。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:156
 msgid ":doc:`../../shipping_receiving/daily_operations/use_routes`"
-msgstr ""
+msgstr ":doc:`../../shipping_receiving/daily_operations/use_routes`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:159
 msgid "Create route"
-msgstr ""
+msgstr "创建路线"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:161
 msgid ""
@@ -4689,26 +4710,28 @@ msgid ""
 "that is **not** for a warehouse. Next, in the :guilabel:`Applicable on` "
 "section, tick the :guilabel:`Packagings` checkbox."
 msgstr ""
+"在 :guilabel:`路径` 页面上，点击 :guilabel:`新建`，或选择一个**不**仓库的路径。然后，在 :guilabel:`适用于` "
+"部分，勾选 :guilabel:`包装` 复选框。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:168
 msgid "Create route for a packaging."
-msgstr ""
+msgstr "为包装创建路径。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:168
 msgid ""
 "Route with \"Packagings\" selected, with \"Products\" and \"Warehouses\" not"
 " selected."
-msgstr ""
+msgstr "选中“包装”选项，同时不选择“产品”和“仓库”路线设置。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:173
 msgid "Apply route on packaging"
-msgstr ""
+msgstr "在包装上应用路径"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:175
 msgid ""
 "Then, to apply the route, go to :menuselection:`Inventory app --> Products "
 "--> Products`, and select the product that uses packaging."
-msgstr ""
+msgstr "然后，要应用路径，请转到 :menuselection:`库存应用程序 --> 产品 --> 产品`，然后选择使用包装的产品。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:178
 msgid ""
@@ -4718,16 +4741,19 @@ msgid ""
 "Tick the :guilabel:`Routes` checkbox to make the column visible in the "
 ":guilabel:`Packaging` table."
 msgstr ""
+"在产品表单中，切换到 :guilabel:`库存` 选项卡。在包含 :ref:`已配置包装 "
+"<inventory/product_management/packaging-setup>` 的 :guilabel:`包装` 部分，点击 |调整| "
+"图标。勾选 :guilabel:`路径` 复选框，使列在 :guilabel:`包装` 表中可见。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:183
 msgid ""
 "In the :guilabel:`Routes` field, select the packaging-specific route. Repeat"
 " these steps for all packaging intended to use the route."
-msgstr ""
+msgstr "在 :guilabel:`路径` 字段中，选择特定包装的路线。对所有要使用该路径的包装重复上述步骤。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst-1
 msgid "Set route on a packaging."
-msgstr ""
+msgstr "在包装上设置路径。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:3
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:69
@@ -4948,7 +4974,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:54
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:77
 msgid "Create purchase order"
-msgstr ""
+msgstr "创建采购订单"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:95
 msgid ":ref:`Yes* <inventory/product_management/po>`"
@@ -5581,17 +5607,19 @@ msgid ""
 "the :guilabel:`Stock Valuation` section, tick the :guilabel:`Automatic "
 "Accounting` checkbox. Then, click :guilabel:`Save`."
 msgstr ""
+"要使用自动库存估价，请安装 *会计* 应用程序。然后，进入 :menuselection:`会计应用程序 --> 配置 --> 设置`，在 "
+":guilabel:`库存估值` 部分，勾选 :guilabel:`自动会计` 复选框。然后，点击 :guilabel:`保存`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:65
 msgid ""
 "Enabling :guilabel:`Automatic Accounting` shows the previously invisible "
 "*Inventory Valuation* field on a product category."
-msgstr ""
+msgstr "启用 :guilabel:`自动会计` 会显示产品类别上以前不可见的 *库存估值* 字段。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst-1
 msgid ""
 "Automatic Accounting feature in Stock Valuation section of Settings page."
-msgstr ""
+msgstr "设置页面库存估值部分的自动会计功能。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:72
 msgid ""
@@ -5600,10 +5628,12 @@ msgid ""
 "sections of documentation for details on configuring the accounting journals"
 " shown."
 msgstr ""
+"有关配置所示会计日记账的详情，请参阅文档中的 :ref:`费用 <inventory/warehouses_storage/expense-"
+"account>` 和 :ref:`库存输入/输出<inventory/warehouses_storage/stock-account>` 部分。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:79
 msgid "Product category setup"
-msgstr ""
+msgstr "产品类别设置"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:81
 msgid ""
@@ -5611,6 +5641,8 @@ msgid ""
 "<inventory/warehouses_storage/accounting-setup>`, the next step is to set "
 "the product category to use automatic inventory valuation."
 msgstr ""
+"在 :ref:`启用库存估值 <inventory/warehouses_storage/accounting-setup>` "
+"之后，下一步是设置产品类别以使用自动库存估价。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:84
 msgid ""
@@ -5807,11 +5839,11 @@ msgstr "4"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:151
 msgid "2 * $10"
-msgstr ""
+msgstr "2 * $10"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:152
 msgid "$40"
-msgstr ""
+msgstr "$40"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:154
 msgid "Average Cost (AVCO)"
@@ -5823,7 +5855,7 @@ msgid ""
 "product, divided by the total number of available stock on-hand. With this "
 "costing method, inventory valuation is *dynamic*, and constantly adjusts "
 "based on the purchase price of products."
-msgstr ""
+msgstr "根据产品的平均成本除以现有库存总数来计算产品的价值。使用这种成本计算方法，存货估值是*动态*的，会根据产品的购买价格不断调整。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:180
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:185
@@ -5861,7 +5893,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:192
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:264
 msgid "2 * $6"
-msgstr ""
+msgstr "2 * $6"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:193
 msgid "$36"
@@ -6542,6 +6574,9 @@ msgid ""
 "upload` :guilabel:`(cloud with arrow)` icon to manually save and update the "
 "draft bill."
 msgstr ""
+"然后，在 :guilabel:`发票行` 选项卡下，点击 :guilabel:`添加一行`，并点击 :guilabel:`产品` "
+"列中的下拉菜单，选择先前创建的落地成本产品。点击 :icon:`fa-cloud-upload`:guilabel:`（带箭头的云）` "
+"图标，手动保存和更新账单草稿。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst-1
 msgid "Landed Costs column checkboxes for product and landed cost."
@@ -29206,6 +29241,8 @@ msgid ""
 ":guilabel:`Operations` section, tick the checkbox for :guilabel:`By-"
 "Products` to enable the feature."
 msgstr ""
+"要在 |BOM| 中添加副产品，首先在 :menuselection:`制造应用程序 --> 配置 --> 设置` 中启用*副产品*功能。在 "
+":guilabel:`操作` 部分，勾选 :guilabel:`副产品` 复选框以启用该功能。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst-1
 msgid "\"By Products\" feature in the settings page."
