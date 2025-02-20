@@ -230,6 +230,10 @@ Defines an ``ir.ui.menu`` record with a number of defaults and fallbacks:
     of an action to execute when the menu is open
 ``id``
     the menu item's :term:`external id`
+``web_icon``
+    the web icon file.
+``web_invisible``
+    Python expression, when evaluated as true, the menu isn't shown.
 
 .. _reference/data/template:
 

@@ -37,6 +37,26 @@ expression** that will be executed in an environment that has access to the foll
 - `uid (int)`: the id of the current user;
 - `today (str)`: the current local date in the `YYYY-MM-DD` format;
 - `now (str)`: the current local datetime in the `YYYY-MM-DD hh:mm:ss` format.
+- `companies (dict)`: the information of the companies. The dict contains:
+  - `multi_company (bool)`: A boolean indicating whether the user has access to multiple companies.
+  - `allowed_ids`: The list of company IDs the user is allowed to connect to.
+  - `active_ids`: The list of company IDs the user is connected to (selected in the company
+    switcher dropdown).
+  - `active_id`: The ID of the main company selected (the one highlighted in the company switcher
+    dropdown and displayed in the navbar of the webclient).
+  - `has(id|ids, 'property', value)`: returns a boolean indicating whether there's a company with id
+    in ids for which field matches the given value. Note that the properties of the companies are
+    those sent by the server in the session info. If a new property is needed, the company function
+    _get_session_info can be overridden. For example, the following code will add the
+    company_code property:
+    .. code-block:: python
+
+        def _get_session_info(self, allowed_company_ids):
+          res = super()._get_session_info(allowed_company_ids)
+          res.update({
+            'country_code': self.country_id.code
+          })
+          return res
 
 .. example::
    .. code-block:: xml
@@ -54,6 +74,16 @@ expression** that will be executed in an environment that has access to the foll
               <field name="field_b" invisible="parent.field_a"/>
           </form>
       </field>
+
+.. example::
+   .. code-block:: xml
+
+      <field name="foo" invisible="not companies.multi_company"/>
+
+.. example::
+   .. code-block:: xml
+
+      <field name="foo" invisible="not companies.has(companies.active_ids, 'country_code', 'PE')"/>
 
 .. _reference/view_architectures/form:
 

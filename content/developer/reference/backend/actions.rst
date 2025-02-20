@@ -55,6 +55,9 @@ attributes used to present an action in an arbitrary model's contextual menu:
     a comma-separated list of view types for which the action appears in the
     contextual menu, mostly "list" and / or "form". Defaults to ``list,form``
     (both list and form )
+``binding_invisible``
+    Python expression, when evaluated as true, the action isn't shown in the
+    action menu.
 
 .. _reference/actions/window:
 
