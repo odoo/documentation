@@ -29,15 +29,6 @@ localization:
      - `l10n_in_reports`
      - Adds the :ref:`Indian GST Return filing <india/gstr>` and the :ref:`Indian
        Tax reports <india/gstr_reports>`.
-   * - :guilabel:`Indian - Purchase Report(GST)`
-     - `l10n_in_purchase`
-     - Indian GST Purchase report
-   * - :guilabel:`Indian - Sale Report(GST)`
-     - `l10n_in_sale`
-     - Indian GST Sale report
-   * - :guilabel:`Indian - Stock Report(GST)`
-     - `l10n_in_stock`
-     - Indian GST Stock report
 
 .. _india/company:
 
