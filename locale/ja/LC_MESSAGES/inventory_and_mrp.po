@@ -8782,14 +8782,14 @@ msgstr "ロットとシリアル番号のページで有効期限ごとにグル
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:247
 msgid "Expiration alerts"
-msgstr "使用期限警告"
+msgstr "有効期限アラート"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:249
 msgid ""
 "To see expiration alerts, go to :menuselection:`Inventory app --> Products "
 "--> Lots/Serial Numbers`."
 msgstr ""
-"使用期限アラートを表示するには、 :menuselection:`在庫アプリ --> プロダクト --> ロット/シリアル番号` にアクセスして下さい。"
+"有効期限アラートを表示するには、 :menuselection:`在庫アプリ --> プロダクト --> ロット/シリアル番号` にアクセスして下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:251
 msgid ""
@@ -8828,13 +8828,13 @@ msgid ""
 "are expired (or will expire soon), remove all of the search filters from the"
 " :guilabel:`Search...` bar on the :guilabel:`Lots/Serial Numbers` dashboard."
 msgstr ""
-"新しい使用期限アラート、または期限切れ(またはもうすぐ期限切れ)のプロダクトの使用期限アラートを表示するには、 "
+"新しい有効期限アラート、または期限切れ(またはもうすぐ期限切れ)のプロダクトの有効期限アラートを表示するには、 "
 ":guilabel:`ロット/シリアル番号` ダッシュボードの :guilabel:`検索...` バーから検索フィルタを全て削除して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:267
 msgid ""
 "Then, click :guilabel:`Filters`, and choose :guilabel:`Expiration Alerts`."
-msgstr "次に、 :guilabel:`フィルタ` をクリックし、 :guilabel:`使用期限警告` を選択します。"
+msgstr "次に、 :guilabel:`フィルタ` をクリックし、 :guilabel:`有効期限アラート` を選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst-1
 msgid "Expiration alert for product past the expiration date."
@@ -13451,7 +13451,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:66
 msgid "Rule for a Receive in one step route."
-msgstr "1ステップで受信するためのルート規則。"
+msgstr "1ステップ入荷用のルート規則"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/use_routes.rst:66
 msgid "Push rule for the 'Receive in one step' route."
@@ -16316,13 +16316,13 @@ msgstr "Odooには3種類の引当方法があります: *確認時*、*手動*�
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst:20
 msgid "At Confirmation"
-msgstr "確認時"
+msgstr "確定時"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst:22
 msgid ""
 "Reserves products **only** when a sales order is confirmed, **and** if stock"
 " is already available."
-msgstr "販売オーダが確認され、在庫がある場合*のみ*プロダクトを予約します。"
+msgstr "販売オーダが確定され、在庫がある場合 *のみ* プロダクトを引当てします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/reservation_methods.rst:25
 msgid "Manually"
@@ -28131,20 +28131,25 @@ msgid ""
 "Cost)` accounting, as they convey which stock came into a warehouse first "
 "and the value of said stock."
 msgstr ""
+":guilabel:`残在庫価値`: 需要が考慮された後の、この在庫移動における、現在の在庫レベルの価値。:guilabel:`残数量` "
+"とともに、このフィールドは、:abbr:`FIFO(先入先出)` および :abbr:`AVCO(平均原価)` "
+"会計に特に役立ちます。なぜなら、どちらの在庫が先に倉庫に入庫されたか、またその在庫の価値が示されるからです。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/aging.rst:107
 msgid ""
 "Some of these settings may not appear unless first enabled in Odoo's "
 "**:doc:`Settings <../../../general>`** application."
 msgstr ""
+"これらの設定の一部は、Odooの **:doc:`管理設定 <../../../general>`** "
+"アプリケーションで最初に有効にしないと表示されない場合があります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/aging.rst-1
 msgid "Stock valuation report."
-msgstr ""
+msgstr "在庫評価レポート"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/aging.rst:116
 msgid "Stock valuation layers (SVLs)"
-msgstr ""
+msgstr "在庫評価レイヤ(SVL)"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/aging.rst:118
 msgid ""
@@ -28157,6 +28162,11 @@ msgid ""
 "be validated (by clicking the :guilabel:`Validate` button) for the "
 ":abbr:`SVL (stock move layer)` to be created."
 msgstr ""
+":guilabel:`在庫評価` レポートの各明細は、Odooのシステム内の *在庫評価レイヤ(SVL)* として知られるレコードを表します。 "
+":abbr:`SVL(在庫移動レイヤ)` "
+"は、プロダクトの在庫評価に影響を与える方法でプロダクトが移動した際に生成されます。具体的には、:abbr:`SVL(在庫移動レイヤ)` "
+"を生成する在庫移動には、倉庫への入荷、配送、直送オーダ、直送返品などがあります。 :abbr:`SVL(在庫移動レイヤ)` "
+"を作成するには、まずこれらの在庫移動を検証済 (:guilabel:`検証` ボタンをクリック) にする必要があります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/aging.rst:125
 msgid ""
@@ -28171,6 +28181,12 @@ msgid ""
 "the new pricing. These entries are connected to journal entries in Odoo's "
 "**Accounting** app."
 msgstr ""
+"プロダクトフォームでプロダクトの在庫評価方法が変更された場合、結果として生じる :abbr:`SVL(在庫評価レイヤ)` "
+"を反映するために、:guilabel:`在庫評価` レポートに新しい明細行が生成されます。例えば、評価方法が *標準価格* から :abbr:`AVCO"
+" (平均原価)` または :abbr:`FIFO (先入先出)` 会計に変更された場合、在庫に残っている商品の価格変更を反映するために、*再評価仕訳* "
+"が自動的に投稿されます。最初の仕訳は、古い価格設定を \"削除\" "
+"するためのマイナス仕訳となり、2番目の仕訳は、新しい価格設定を記録するためのプラス仕訳となります。これらの仕訳は、Odooの **会計** "
+"アプリの仕訳と連動しています。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/aging.rst:133
 msgid ""
@@ -28178,10 +28194,11 @@ msgid ""
 " a few stock moves have occurred for a product using standard price "
 "accounting."
 msgstr ""
+"以下は、標準価格会計を使用しているプロダクトでいくつかの在庫の仕訳が発生した場合に、:guilabel:`在庫評価` テーブルに表示される内容の例です。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/aging.rst-1
 msgid "Stock valuation table in standard price accounting."
-msgstr ""
+msgstr "標準価格会計における在庫評価表"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/aging.rst:139
 msgid ""
@@ -28189,12 +28206,13 @@ msgid ""
 "table might look like after a product has switched from standard price to "
 ":abbr:`FIFO (First In, First Out)` accounting."
 msgstr ""
+"逆に、次の画像は、プロダクトが標準価格から :abbr:`FIFO (先入先出)` 会計に切り替わった後の *在庫評価* 報告書テーブルの見本です。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/aging.rst-1
 msgid ""
 "Stock valuation table after switching from standard price to FIFO "
 "accounting."
-msgstr ""
+msgstr "標準価格から先入先出(FIFO)法会計に切り替えた後の在庫評価表"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/aging.rst:146
 msgid ""
@@ -28202,6 +28220,8 @@ msgid ""
 "are derived from what occurs at the :abbr:`SVL (stock move layer)` level in "
 "Odoo and, as such, are better understood with an example."
 msgstr ""
+":guilabel:`残在庫価格` および:guilabel:`残数量` フィールドは、Odooの:abbr:`SVL(在庫移動レイヤ)` "
+"レベルで発生する内容から派生したものであり、そのため、具体例とともに理解するとより分かりやすくなります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/aging.rst:150
 msgid ""
@@ -28210,6 +28230,9 @@ msgid ""
 "receives a :guilabel:`Quantity` of `100.00` sweaters in one stock move, then"
 " re-sells and delivers `-10.00` sweaters in a second stock move."
 msgstr ""
+"フランキーの委託販売店は、セーターを原価、つまり :guilabel:`単価` 5.00ドルで仕入れています。今回初めて、フランキーは1回の在庫移動で "
+":guilabel:`数量`  `100.00` 枚のセーターを購買して入荷し、さらに2回目の在庫移動で :guilabel:`数量`  "
+"`-10.00` 枚のセーターを販売、配送しました。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/aging.rst:154
 msgid ""
@@ -28221,6 +28244,10 @@ msgid ""
 "`$500.00` to `$450.00`. The :guilabel:`Total Value` will remain at "
 "`$500.00`, regardless of subsequent transactions."
 msgstr ""
+"最初の在庫移動明細では、2回目の在庫移動が記録されると、:guilabel:`残数量` が `100.00` から `90.00` "
+"に変更されます。この変更は、当初は100枚のセーターが購買され、現在では90着しか在庫が残っておらず、評価額にも90着分しか計上されていないことを反映しています。同様に、:guilabel:`残在庫価格`"
+" は、`$500.00` から `$450.00` に減少します。:guilabel:`合計価格` は、その後の取引に関わらず、`$500.00` "
+"のままです。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/aging.rst:161
 msgid ""
@@ -28230,16 +28257,19 @@ msgid ""
 "layer)` was a sale, there is no stock left that needs to be valued from that"
 " transaction."
 msgstr ""
+"一方、2番目の在庫移動明細の :guilabel:`残数量` は、`-10.00` の数量が販売されたため、`0.00` "
+"として記録され、変更されません。システムでは、:abbr:`SVL(在庫移動レイヤ)` "
+"が販売取引だったため、その取引において評価が必要な在庫は残っていません。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/aging.rst:0
 msgid ""
 "Remaining value and quantity are calculated based on :abbr:`SVLs (stock move"
 " layers)`."
-msgstr ""
+msgstr "残在庫価値と数量は、:abbr:`SVL(在庫移動レイヤ)` に基づいて計算されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/aging.rst:170
 msgid "Change the valuation date"
-msgstr ""
+msgstr "評価日を変更する"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/aging.rst:172
 msgid ""
@@ -28248,6 +28278,8 @@ msgid ""
 ":guilabel:`Stock Valuation` page. The report will show the "
 ":guilabel:`Quantity` and :guilabel:`Total Value` of each stock move."
 msgstr ""
+"特定の日付と時刻における在庫の評価を確認するには、:guilabel:`在庫評価` ページの左上にある :guilabel:`評価日` "
+"ボタンをクリックします。レポートには、各仕訳の :guilabel:`数量 `と :guilabel:`合計金額` が表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/aging.rst:177
 msgid ""
@@ -28256,6 +28288,9 @@ msgid ""
 "The stock moves shown when selecting a past date will still display the "
 "*current on-hand quantity and value* of the products."
 msgstr ""
+"在庫移動の :guilabel:`残数量` および :guilabel:`残在庫価格` "
+"は、過去の日付を選択してもその時点の値にはなりません。過去の日付を指定して在庫移動を表示しても、プロダクトの *現在の在庫数量と評価額* "
+"が表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/aging.rst:182
 msgid ""
@@ -28266,10 +28301,13 @@ msgid ""
 ":guilabel:`Valuation at Date` is selected as January 1st, the "
 ":guilabel:`Remaining Quantity` will still show as `70.00`."
 msgstr ""
+"ある企業では、1月1日に100個の在庫があり、そのうち20個を2月1日に販売しました。2月1日には、:abbr:`SVL(在庫移動レイヤ)` の "
+":guilabel:`残数量` が `100.00` から `70.00` に減少します。他の在庫移動が行われず、2月1日に "
+":guilabel:`日付指定評価` が1月1日として選択された場合、:guilabel:`残数量` は `70.00` のまま表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/aging.rst:191
 msgid "Pivot view: stock aging"
-msgstr ""
+msgstr "ピボットビュー: 在庫経過"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/aging.rst:193
 msgid ""
@@ -28279,6 +28317,9 @@ msgid ""
 "value of inventory by purchase date, which can help monitor products with "
 "expiration dates."
 msgstr ""
+":guilabel:`在庫評価` ダッシュボードから、:icon:`oi-view-pivot` :guilabel:`(ピボット)` "
+"アイコンをクリックしてピボットビューにアクセスします。 このビューは本質的には *在庫経過レポート* "
+"であり、購買日ごとの在庫の手持数量と価格を表示します。これは、使用期限のあるプロダクトのモニタリングに役立ちます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/aging.rst:201
 msgid ""
@@ -28291,6 +28332,13 @@ msgid ""
 ":guilabel:`Add Custom Group` Clicking the :icon:`fa-minus-square-o` "
 ":guilabel:`(minus)` icon collapses the field back to an empty state."
 msgstr ""
+"デフォルトでは、ピボットビューには、全ての *プロダクトカテゴリ* の値が *日次および月次* で表示されます。 各列または行にあるアイコン:fa-"
+"plus-square:`fa-plus-square` :guilabel:`(プラス)` "
+"アイコンをクリックすると、在庫評価をより詳細に分析するためのオプションのドロップダウンリストが表示されます。 "
+"ドロップダウンオプションには、以下のものが含まれます。:guilabel:`プロダクト`, :guilabel:`ロット/シリアル番号`, "
+":guilabel:`プロダクトカテゴリ`, :guilabel:`日付`, :guilabel:`会社`, または "
+":guilabel:`カスタムグループを追加`。:icon:`fa-minus-square-o` :guilabel:`(マイナス)` "
+"アイコンをクリックすると、フィールドが空の状態に戻ります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/aging.rst:208
 msgid ""
@@ -28298,10 +28346,11 @@ msgid ""
 "on-hand items, and :guilabel:`Remaining Value` displays the total cost of "
 "purchasing these items."
 msgstr ""
+"表の :guilabel:`残数量` 列には手持在庫数が表示され、:guilabel:`残金額` 列にはこれらの商品の購買総コストが表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/aging.rst-1
 msgid "Stock aging report, showing product row items and day columns."
-msgstr ""
+msgstr "在庫経過レポート、プロダクト行項目と日列を表示"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/aging.rst:217
 #: ../../content/applications/inventory_and_mrp/maintenance/maintenance_calendar.rst:301
@@ -28315,20 +28364,25 @@ msgid ""
 ":icon:`fa-line-chart` line chart view and filtered to show the cumulative "
 "total of all inventory value over time in Odoo."
 msgstr ""
+"アイコン:`fa-area-chart` :guilabel:`(グラフ)` "
+"アイコンをクリックすると、在庫価値をグラフで表示できます。デフォルトでは、グラフはアイコン :`fa-line-chart` "
+"の折れ線グラフ表示で、Odooにおける時間経過に伴う在庫価値の累計合計が表示されるようにフィルタリングされています。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/aging.rst:223
 msgid ""
 "At the top of the report, a :icon:`fa-bar-chart` bar chart or :icon:`fa-pie-"
 "chart` pie chart view can be selected instead."
 msgstr ""
+"レポートの一番上では、代わりに :icon:`fa-bar-chart` の棒グラフまたは :icon:`fa-pie-chart` "
+"の円グラフを選択できます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/aging.rst:227
 msgid ":doc:`Odoo reporting essentials <../../../../essentials/reporting>`"
-msgstr ""
+msgstr ":doc:`Odoo レポーティングの基本 <../../../../essentials/reporting>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:3
 msgid "Locations dashboard"
-msgstr ""
+msgstr "ロケーションダッシュボード"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:7
 msgid ""
@@ -28338,12 +28392,18 @@ msgid ""
 "<inventory/warehouse_storage/stranded>`, or view past inventory to see "
 "product locations on specific dates."
 msgstr ""
+"在庫アプリケーションの *ロケーション* "
+"ダッシュボードでは、会社プロダクトの手持在庫の保管場所の概要を確認できます。このレポートを使用して、在庫が保管されている場所を確認したり、:ref:`誤った場所にある在庫"
+" <inventory/warehouse_storage/stranded>` "
+"を特定したり、特定の日のプロダクトの場所を確認するために過去の在庫を表示したりすることができます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:13
 msgid ""
 "The *Reporting* menu in *Inventory* is only accessible to users with "
 ":doc:`admin access <../../../../general/users/access_rights>`."
 msgstr ""
+"*在庫* の *レポーティング* メニューは :doc:`管理アクセス "
+"<../../../../general/users/access_rights>` 権限を持つユーザのみがアクセスできます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:16
 msgid ""
@@ -28354,10 +28414,14 @@ msgid ""
 "locations dashboard by navigating to :menuselection:`Inventory app --> "
 "Reporting --> Locations`."
 msgstr ""
+"ロケーションレポートにアクセスするには、*保管場所* 機能を有効にする必要があります。 これを行うには、:menuselection:`在庫アプリ "
+"--> 設定 --> 管理設定` に移動します。 :guilabel:`倉庫` セクションで、:guilabel:`保管場所` "
+"のチェックボックスにチェックを入れ、:guilabel:`保存` をクリックします。次に、:menuselection:`在庫アプリ --> "
+"レポーティング --> ロケーション` に移動して、ロケーションダッシュボードにアクセスします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:24
 msgid "Navigate the locations dashboard"
-msgstr ""
+msgstr "ロケーションダッシュボードのナビゲーション"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:26
 msgid ""
@@ -28365,6 +28429,8 @@ msgid ""
 "in stock (in the :guilabel:`Product` column), along with the following "
 "information:"
 msgstr ""
+"デフォルトでは、:guilabel:`ロケーション` ダッシュボードには、在庫にある全ての手持在庫プロダクト (:guilabel:`プロダクト` "
+"列)が、以下の情報とともにリスト表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:29
 msgid ""
@@ -28372,17 +28438,19 @@ msgid ""
 "`Shelf 1` and `Shelf 2`, the product is listed twice, showing quantities at "
 "each location."
 msgstr ""
+":guilabel:`ロケーション`: 現在の保管場所。プロダクトが `棚 1` と `棚 "
+"2`に保管されている場合、プロダクトは2回表示され、それぞれの場所の数量が表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:31
 msgid ""
 ":guilabel:`Package`: the package that the product is stored in, if any."
-msgstr ""
+msgstr ":guilabel:`梱包`: プロダクトが梱包されている梱包材がある場合、その梱包材。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:32
 msgid ""
 ":guilabel:`Lot/Serial Number`: if the product has a lot or serial number, it"
 " is specified here."
-msgstr ""
+msgstr ":guilabel:`ロット/シリアル番号`: プロダクトにロット番号またはシリアル番号がある場合は、ここで指定します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:33
 msgid ""
@@ -28390,23 +28458,26 @@ msgid ""
 ":icon:`fa-pencil` :guilabel:`(pencil)` icon to :doc:`modify the on-hand "
 "quantity <../inventory_management/count_products>`."
 msgstr ""
+":guilabel:`手持在庫数`: 現在のプロダクトの数量です。 :icon:`fa-pencil` :guilabel:`(鉛筆)` "
+"アイコンをクリックすると、:doc:`手持在庫を変更する  <../inventory_management/count_products>` "
+"ことができます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:36
 msgid ""
 ":guilabel:`Reserved Quantity`: on-hand quantity reserved for operations, "
 "such as pickings, delivery orders, or manufacturings."
-msgstr ""
+msgstr ":guilabel:`引当済数量`: ピッキング、配送オーダ、製造などのオペレーション用に確保された手持の引当済数量。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:38
 msgid ":guilabel:`Unit`: the unit of measure of the product."
-msgstr ""
+msgstr ":guilabel:`単位`: プロダクトの測定単位。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:40
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:52
 msgid ""
 "Click the buttons to the right of each row item to access additional "
 "information:"
-msgstr ""
+msgstr "各行のアイテムの右側にあるボタンをクリックすると、追加情報にアクセスできます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:42
 msgid ""
@@ -28414,12 +28485,16 @@ msgid ""
 " product, displaying information about the quantity and description of why "
 "the product was moved from one location to another."
 msgstr ""
+":icon:`fa-history` :guilabel:`履歴`: "
+"プロダクトの在庫移動履歴にアクセスし、プロダクトが別のロケーションに移動された理由の数量と説明に関する情報を表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:47
 msgid ""
 "View what the product is reserved for, by clicking the :icon:`fa-history` "
 ":guilabel:`History` button on the far-right of the product line."
 msgstr ""
+"プロダクトの右端にある :icon:`fa-history` :guilabel:`履歴` "
+"ボタンをクリックすると、そのプロダクトが何のために引当されているかを確認できます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:50
 msgid ""
@@ -28428,11 +28503,14 @@ msgid ""
 ":guilabel:`Search...` bar to reveal filter options, and select the "
 ":guilabel:`To Do` filter."
 msgstr ""
+":guilabel:`移動履歴` ページで、:icon:`fa-filter` :guilabel:`完了` "
+"フィルタを削除します。次に、:guilabel:`検索...` "
+"バーの右側にある下向き矢印アイコンをクリックしてフィルタオプションを表示し、:guilabel:`To Do` フィルタを選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:0
 msgid ""
 "Display *Moves History* page of to-do deliveries that reserved the product."
-msgstr ""
+msgstr "プロダクトを引当した配送のTo-Doの履歴ページを表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:58
 msgid ""
@@ -28440,6 +28518,8 @@ msgid ""
 "rules <../replenishment/reordering_rules>` page to replenish products at the"
 " specific location."
 msgstr ""
+":icon:`fa-refresh` :guilabel:`補充`: 特定のロケーションでプロダクトを補充するには、:doc:`再オーダ規則 "
+"<../replenishment/reordering_rules>` ページにアクセスします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:61
 msgid ""
@@ -28448,6 +28528,9 @@ msgid ""
 "<../inventory_management/count_products>` to record quantities of a certain "
 "product at a specific :guilabel:`Location`."
 msgstr ""
+"ページの左上隅にある :guilabel:`新規` ボタンをクリックして、特定の :guilabel:`ロケーション` "
+"における特定のプロダクトの数量を記録する :doc:`在庫調整 <../inventory_management/count_products>` "
+"を作成します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:65
 msgid ""
@@ -28456,6 +28539,8 @@ msgid ""
 "left corner of the page). Select a date and time in the :guilabel:`Inventory"
 " at Date` field, then click :guilabel:`Confirm`."
 msgstr ""
+"指定した日付のプロダクト、数量、ロケーションを表示するには、:guilabel:`在庫日付` ボタンをクリックします "
+"(ページの左上にもあります)。:guilabel:`在庫日付` フィールドで日付と時刻を選択し、:guilabel:`確認`  をクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:70
 msgid "Generate reports"
@@ -28467,28 +28552,30 @@ msgid ""
 "<inventory/warehouses_storage/locations-report>`, it can be used to create "
 "and share different reports."
 msgstr ""
+"ロケーションダッシュボードのナビゲーション方法 <inventory/warehouses_storage/locations-report>` "
+"を学ぶと、さまざまなレポートを作成し、共有することができます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:76
 msgid ""
 "A few common reports that can be created using the :guilabel:`Locations` "
 "dashboard are detailed below."
-msgstr ""
+msgstr ":guilabel:`ロケーション` ダッシュボードを使用して作成できる一般的なレポートの例を以下に示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:80
 msgid "Dead stock report"
-msgstr ""
+msgstr "デッドストックレポート"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:82
 msgid ""
 "To get list of expired items, also referred to as *dead stock*, follow these"
 " steps:"
-msgstr ""
+msgstr "使用期限切れの商品のリスト (*デッドストック* とも呼ばれる) を取得するには、以下の手順に従って下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:84
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:113
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:142
 msgid "Go to :menuselection:`Inventory app --> Reporting --> Locations`."
-msgstr ""
+msgstr ":menuselection:`在庫アプリ --> レポーティング --> ロケーション` に移動します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:85
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:143
@@ -28497,16 +28584,20 @@ msgid ""
 " reveal a drop-down list of :guilabel:`Filters`, :guilabel:`Group By`, and "
 ":guilabel:`Favorite` options."
 msgstr ""
+"次に、:guilabel:`検索...`バーの右側にある下向き矢印アイコンをクリックすると、:guilabel:`フィルタ`、:guilabel:`グループ化`、:guilabel:`お気に入り`"
+" オプションのドロップダウンリストが表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:87
 msgid ""
 "Enable the :guilabel:`Internal Locations` and :guilabel:`Expiration Alerts` "
 "option under the :guilabel:`Filters` section."
 msgstr ""
+":guilabel:`フィルタ`セクションで、:guilabel:`内部ロケーション`と:guilabel:`有効期限アラート` "
+"オプションを有効にします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:90
 msgid "The report now displays a list of expired products."
-msgstr ""
+msgstr "レポートには、現在、使用期限切れのプロダクトのリストが表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:93
 msgid ""
@@ -28514,14 +28605,17 @@ msgid ""
 "<inventory/product_management/expiration-alerts>` page, accessed by going to"
 " :menuselection:`Inventory app --> Products --> Lots/Serial Numbers`."
 msgstr ""
+"このレポートは、:ref:`ロットとシリアル番号 <inventory/product_management/expiration-alerts>`  "
+"のページからも生成できます。アクセスするには、:menuselection:`在庫アプリ --> プロダクト --> ロット番号/シリアル番号` "
+"に移動します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst-1
 msgid "Show a list of products whose expiration dates have exceeded today."
-msgstr ""
+msgstr "使用期限が過ぎたプロダクトのリストを表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:104
 msgid "Stranded inventory report"
-msgstr ""
+msgstr "標準在庫レポート"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:106
 msgid ""
@@ -28532,12 +28626,15 @@ msgid ""
 "are moved to their intended storage locations, and accurately recorded in "
 "the database."
 msgstr ""
+"*在庫* アプリや *製造* アプリでマルチステップフローを使用している企業では、人的エラーにより、プロダクトが適切な保管場所に保管されない *滞留* "
+"が発生する可能性があります。このレポートを使用して、転送ロケーション (例: *WH/入庫*、*WH/前処理*) "
+"を周期設定で定期的に確認し、アイテムが意図した保管場所に仕訳され、データベースに正確に記録されていることを確認します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:111
 msgid ""
 "To get a list of items that might be sitting idly in storage, follow these "
 "steps:"
-msgstr ""
+msgstr "保管場所で滞留している可能性があるアイテムのリストを取得するには、以下の手順に従います。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:114
 msgid ""
@@ -28545,26 +28642,29 @@ msgid ""
 "where products are intended to be moved to, such as `WH/Input`,  or "
 "`WH/Packing`."
 msgstr ""
+":guilabel:`検索...` バーに、プロダクトを仕訳する予定のロケーション名を入力します。例えば、`WH/入庫` や `WH/梱包` などです。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:116
 msgid ""
 "Select the :guilabel:`Search Location for:` [location name] option from the "
 "resulting drop-down menu that appears beneath the :guilabel:`Search...` bar."
 msgstr ""
+":guilabel:`検索...` バーの下に表示されるドロップダウンメニューから、:guilabel:`ロケーションを検索:` [ロケーション名] "
+"オプションを選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:0
 msgid "Show search result for the location."
-msgstr ""
+msgstr "ロケーションの検索結果を表示"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:123
 msgid "The report now displays a list of products at the transit location."
-msgstr ""
+msgstr "レポートには、積送ロケーションのプロダクトのリストが表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:126
 msgid ""
 "Searching `Input` in :guilabel:`Location` shows a list of products at a "
 "*WH/Input* location."
-msgstr ""
+msgstr ":guilabel:`ロケーション` で `入庫` を検索すると、*WH/入庫* ロケーションのプロダクトの一覧が表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:128
 msgid ""
@@ -28572,14 +28672,16 @@ msgid ""
 "refrigerated soon after reception. The stranded inventory report helps "
 "identify items that have been idling in non-storage locations."
 msgstr ""
+"このリストには `チキン` "
+"が500個と表示されていますが、これは入荷後すぐに冷蔵する必要があります。滞留在庫レポートは、保管場所以外で滞留状態となっているアイテムを特定するのに役立ちます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:0
 msgid "Show items stored at a specific location."
-msgstr ""
+msgstr "特定のロケーションに保管されているアイテムを表示"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:137
 msgid "Inventory discrepancy report"
-msgstr ""
+msgstr "在庫差異レポート"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:139
 msgid ""
@@ -28587,22 +28689,26 @@ msgid ""
 ":doc:`inventory audit <../inventory_management/cycle_counts>`, follow these "
 "steps:"
 msgstr ""
+"直近の :doc:`在庫監査 <../inventory_management/cycle_counts>` "
+"以降に仕訳された項目のレポートを生成するには、以下の手順に従います。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:145
 msgid ""
 "Enable the :guilabel:`Internal Locations` and :guilabel:`Conflicts` option "
 "from the :guilabel:`Filters` section."
 msgstr ""
+":guilabel:`フィルタ` セクションから、:guilabel:`内部ロケーション` および :guilabel:`不整合` "
+"オプションを有効にします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:147
 msgid ""
 "The report now displays items whose quantities have changed since the last "
 "cycle count."
-msgstr ""
+msgstr "レポートには、前回のサイクルカウント以降に数量が変更された項目が表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:0
 msgid "Show items from the *Conflicts* filter in the report."
-msgstr ""
+msgstr "レポートに *不整合* フィルタからアイテムを表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:153
 msgid ""
@@ -28610,16 +28716,18 @@ msgid ""
 "transfers, including receipts and deliveries, that have occurred since the "
 "inventory adjustment."
 msgstr ""
+"在庫調整以降の在庫転送 (入荷および配送を含む) を表示するには、:icon:`fa-history` :guilabel:`履歴` "
+"ボタンをクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:0
 msgid ""
 "Show *Moves History*, showing a delivery that occurred after an inventory "
 "adjustment."
-msgstr ""
+msgstr "在庫調整後に発生した配送を表示する *移動履歴* を表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:3
 msgid "Moves history dashboard"
-msgstr ""
+msgstr "移動履歴ダッシュボード"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:5
 msgid ""
@@ -28629,6 +28737,8 @@ msgid ""
 "this report essential for analyzing stock levels, monitoring inventory "
 "turnover, and identifying any discrepancies in inventory."
 msgstr ""
+"Odooの *在庫* における *移動履歴* レポートは、プロダクトの移動 (過去のロケーションと現在のロケーションを含む) "
+"、ロット番号、移動の理由の詳細な記録を提供します。レポートは任意の期間で生成することができ、このレポートは在庫レベルの分析、在庫回転率のモニタリング、在庫の不一致の特定に不可欠です。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:11
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:9
@@ -28636,60 +28746,62 @@ msgid ""
 "The reporting feature is only accessible to users with :doc:`admin access "
 "<../../../../general/users/access_rights>`."
 msgstr ""
+"レポート機能は、 :doc:`管理者アクセス権限 <../../../../general/users/access_rights>` "
+"を持つユーザのみが利用できます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:14
 msgid ""
 "To access the stock report, go to :menuselection:`Inventory app --> "
 "Reporting --> Moves History`."
-msgstr ""
+msgstr "在庫レポートにアクセスするには、 :menuselection:`在庫アプリ --> レポーティング --> 移動履歴` に移動します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst-1
 msgid "Display Moves History report."
-msgstr ""
+msgstr "移動履歴レポートを表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:23
 msgid "Navigate the moves history report"
-msgstr ""
+msgstr "仕訳履歴レポートのナビゲーション"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:25
 msgid "In the report, the columns represent:"
-msgstr ""
+msgstr "レポートで、列は以下を表します:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:27
 msgid ":guilabel:`Date`: calendar date and time of the stock move."
-msgstr ""
+msgstr ":guilabel:`日付`: 在庫移動のカレンダ日時"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:28
 msgid ""
 ":guilabel:`Reference`: description of the reason for the stock move or "
 "quantity change, such as a receipt number (e.g. `WH/IN/00012`)."
-msgstr ""
+msgstr ":guilabel:`参照番号`: 在庫移動や数量変更の理由の説明、例えば、入荷番号(例: `WH/IN/00012`) など。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:30
 msgid ":guilabel:`Product`: name of the product involved in the move."
-msgstr ""
+msgstr ":guilabel:`プロダクト`: 仕訳に関わるプロダクトの名称"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:31
 msgid ""
 ":guilabel:`Lot/Serial Number`: specifies the lot or serial number of the "
 "tracked product being moved."
-msgstr ""
+msgstr ":guilabel:`ロット/シリアル番号`: 移動中の追跡対象プロダクトのロットまたはシリアル番号を指定します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:33
 msgid ":guilabel:`From`: source location of the moved product."
-msgstr ""
+msgstr ":guilabel:`移動元`: 移動されたプロダクトの移動元ロケーション"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:34
 msgid ":guilabel:`To`: destination location of the moved product."
-msgstr ""
+msgstr ":guilabel:`移動先`: 移動されたプロダクトの移動先ロケーション"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:35
 msgid ":guilabel:`Quantity`: number of products moved."
-msgstr ""
+msgstr ":guilabel:`数量`: 移動されたプロダクトの数量"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:36
 msgid ":guilabel:`Unit`: unit of measure of the products moved."
-msgstr ""
+msgstr ":guilabel:`単位`: 移動されたプロダクトの単位"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:37
 msgid ""
@@ -28698,6 +28810,8 @@ msgid ""
 ":guilabel:`Partially Available` (insufficient quantities to complete the "
 "operation)."
 msgstr ""
+":guilabel:`ステータス`: 移動のステータスを表し、 :guilabel:`完了`, :guilabel:`利用可能` "
+"(処理の準備完了)または、 :guilabel:`一部利用可能` (処理を完了するのに十分な数量がない) のいずれかになります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:42
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:66
@@ -28708,7 +28822,7 @@ msgstr "検索オプション"
 msgid ""
 "Use the following search options to customize the :guilabel:`Moves History` "
 "report to display relevant information"
-msgstr ""
+msgstr "次の検索オプションを使用して、関連情報を表示するように :guilabel:`移動履歴` レポートをカスタマイズします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:49
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:70
@@ -28721,6 +28835,7 @@ msgid ""
 "The :guilabel:`Filters` section allows users to search among pre-made and "
 "custom filters to find specific stock records."
 msgstr ""
+":guilabel:`フィルタ` セクションでは、特定の在庫記録を検索するために、ユーザが作成済みのフィルタやカスタムフィルタを検索することができます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:54
 msgid ""
@@ -28728,28 +28843,30 @@ msgid ""
 "includes lines with a :guilabel:`Status` column value of "
 ":guilabel:`Available` or :guilabel:`Partially Available`."
 msgstr ""
+":guilabel:`To Do`: 移動中の在庫移動記録を表示します。これには、:guilabel:`ステータス` 列の値が "
+":guilabel:`利用可能` または :guilabel:`一部利用可能` である明細が含まれます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:56
 msgid ""
 ":guilabel:`Done`: completed stock moves, with a :guilabel:`Status` of "
 ":guilabel:`Done`."
-msgstr ""
+msgstr ":guilabel:`完了`: 移動が完了し :guilabel:`ステータス` は :guilabel:`完了` です。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:57
 msgid ":guilabel:`Incoming`: displays move records from vendor locations."
-msgstr ""
+msgstr ":guilabel:`入荷`: 仕入先からの移動レコードを表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:58
 msgid ""
 ":guilabel:`Outgoing`: displays move records to customer locations, including"
 " customer returns."
-msgstr ""
+msgstr ":guilabel:`出荷`: 顧客返品を含む顧客ロケーションへの移動レコードを表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:60
 msgid ""
 ":guilabel:`Internal`: displays move records from one internal location to "
 "another."
-msgstr ""
+msgstr ":guilabel:`Internal`: 内部ロケーションから別の内部ロケーションへの移動レコードを表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:61
 msgid ""
@@ -28757,22 +28874,26 @@ msgid ""
 "the virtual, production :doc:`location "
 "<../inventory_management/use_locations>`."
 msgstr ""
+":guilabel:`生産`: 仮想の生産 :doc:`ロケーション <../inventory_management/use_locations>` "
+"からプロダクトが生産されたレコードを表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:63
 msgid ""
 ":guilabel:`Date`: select this drop-down menu to access various date filter "
 "options and view stock moves from a specific month, quarter, or year."
 msgstr ""
+":guilabel:`日付`: "
+"このドロップダウンメニューを選択すると、さまざまな日付フィルタオプションにアクセスでき、特定の月、四半期、または年の在庫移動を表示できます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:65
 msgid ""
 ":guilabel:`Last 30 Days`: show records that occurred in the last thirty "
 "days."
-msgstr ""
+msgstr ":guilabel:`過去30日間`:過去30日間に発生した移動レコードを表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:66
 msgid ":guilabel:`Last 3 Months`: show records from the last three months."
-msgstr ""
+msgstr ":guilabel:`過去3か月`: 過去3か月間のレコードを表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:68
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:111
@@ -28784,10 +28905,11 @@ msgid ""
 "The :guilabel:`Group By` section allows users to add pre-made and custom "
 "groupings to the search."
 msgstr ""
+":guilabel:`グループ化` セクションでは、ユーザが検索用にあらかじめ用意されたグループ分けやカスタムグループ分けを追加することができます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:73
 msgid ":guilabel:`Product`: group records by product."
-msgstr ""
+msgstr ":guilabel:`プロダクト`: プロダクトごとにグループ化します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:74
 msgid ""
@@ -28795,24 +28917,31 @@ msgid ""
 ":guilabel:`Done`, :guilabel:`Available`, and :guilabel:`Partially "
 "Available`."
 msgstr ""
+":guilabel:`ステータス`: レコードを: :guilabel:`完了`、 :guilabel:`利用可能`、 "
+":guilabel:`一部利用可能` の3つのステータスでグループ化します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:76
 msgid ""
 ":guilabel:`Date`: group records by :guilabel:`Year`, :guilabel:`Quarter`, "
 ":guilabel:`Month`, :guilabel:`Week`, or :guilabel:`Day`."
 msgstr ""
+":guilabel:`日付`: レコードを :guilabel:`年`、 :guilabel:`四半期`、 :guilabel:`月`、 "
+":guilabel:`週`、または :guilabel:`日` でグループ化します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:78
 msgid ""
 ":guilabel:`Transfers`: group records by operation number, e.g. "
 "`WH/OUT/00012`, `WH/MO/00211`."
 msgstr ""
+":guilabel:`転送`: オペレーション番号 ( 例: `WH/OUT/00012`、 `WH/MO/00211`) "
+"でレコードをグループ化します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:80
 msgid ""
 ":guilabel:`Location`: group records by source location (the :guilabel:`From`"
 " column in this report)."
 msgstr ""
+":guilabel:`ロケーション`: 移動元ロケーション(このレポートの :guilabel:`移動元` 列) 別にレコードをグループ化します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:82
 msgid ""
@@ -28820,12 +28949,16 @@ msgid ""
 " go to :menuselection:`Inventory app --> Configuration --> Products: Product"
 " Categories`."
 msgstr ""
+":guilabel:`カテゴリ`: プロダクトカテゴリ別にレコードをグループ化します。 "
+"これらの設定を行うには、:menuselection:`在庫アプリ --> 設定 --> プロダクト:  プロダクトカテゴリ` にアクセスします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:84
 msgid ""
 ":guilabel:`Batch Transfer`: group records by :doc:`batch "
 "<../../shipping_receiving/picking_methods/batch>`."
 msgstr ""
+":guilabel:`一括転送`: レコードを :doc:`バッチ "
+"<../../shipping_receiving/picking_methods/batch>` ごとにグループ化します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:87
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:123
@@ -28838,6 +28971,8 @@ msgid ""
 "be easily accessed after closing this page, click :guilabel:`Save current "
 "search`."
 msgstr ""
+"現在のフィルタリングとグループを保存して、このページを閉じた後でも同じ情報に簡単にアクセスできるようにするには、:guilabel:`現在の検索を保存`"
+" をクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:92
 msgid ""
@@ -28846,20 +28981,23 @@ msgid ""
 "report. Or tick the :guilabel:`Shared` checkbox to make the search option "
 "available to other users."
 msgstr ""
+"オプションとして、:guilabel:`デフォルトフィルタ` "
+"チェックボックスにチェックを入れると、:guilabel:`移動履歴`レポートを開く際に、現在のビューがデフォルトのフィルタになります。または、:guilabel:`共有"
+" `チェックボックスにチェックを入れると、検索オプションを他のユーザも利用できるようになります。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:96
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:132
 msgid "Lastly, click the :guilabel:`Save` button."
-msgstr ""
+msgstr "最後に :guilabel:`保存` ボタンをクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/moves_history.rst:99
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:135
 msgid ":doc:`../../../../essentials/search`"
-msgstr ""
+msgstr ":doc:`../../../../essentials/search`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:3
 msgid "Stock report"
-msgstr ""
+msgstr "在庫レポート"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:5
 msgid ""
@@ -28867,21 +29005,23 @@ msgid ""
 "products, including those reserved, purchased and in transit, as well as "
 "those delivered to customers."
 msgstr ""
+"Odooの在庫レポート *在庫* "
+"を使用して、顧客に配送されたものだけでなく、予約、購買、輸送中のものも含む、全て保管されているプロダクトの詳細なリストを確認することができます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:12
 msgid ""
 "To access the stock report, go to :menuselection:`Inventory app --> "
 "Reporting --> Stock`."
-msgstr ""
+msgstr "在庫レポートにアクセスするには :menuselection:`在庫アプリ --> レポーティング --> 在庫` に移動して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst-1
 msgid ""
 "Show the stock report, accessible by going to Inventory > Reporting > Stock."
-msgstr ""
+msgstr "在庫レポートを表示するには、 在庫 > レポーティング > 在庫にアクセスします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:19
 msgid "Navigate the stock report"
-msgstr ""
+msgstr "在庫レポートのナビゲーション"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:21
 msgid ""
@@ -28890,6 +29030,8 @@ msgid ""
 "  which filters products by specific warehouses, and :guilabel:`Category`, "
 "which shows products within a selected product category."
 msgstr ""
+"在庫レポートでは、左サイドバーに表示内容を絞り込むためのいくつかのグループ分けが含まれています。デフォルトのグループ分けは、特定の倉庫からプロダクトをフィルタリングする"
+" :guilabel:`倉庫` と、選択したプロダクトカテゴリ内のプロダクトを表示する :guilabel:`カテゴリ` です。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:26
 msgid ""
@@ -28897,38 +29039,43 @@ msgid ""
 " warehouses in the database. Refer to the "
 ":doc:`../inventory_management/warehouses` documentation for more details."
 msgstr ""
+":guilabel:`倉庫` "
+"グループ化は、データベースに複数の倉庫がある場合にのみ利用可能です。詳細は、:doc:`../inventory_management/warehouses`"
+" ドキュメントを参照して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:29
 msgid "In the report itself, the columns represent:"
-msgstr ""
+msgstr "レポートで、列は以下を表します:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:31
 msgid ":guilabel:`Product`: name of the product."
-msgstr ""
+msgstr ":guilabel:`プロダクト`: プロダクトの名前"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:32
 msgid ""
 ":guilabel:`Unit Cost`: average inventory valuation per unit, adjusted based "
 "on the cost to purchase and/or manufacture the product."
-msgstr ""
+msgstr ":guilabel:`単位原価`: プロダクトの購買および/または製造コストに基づいて調整される、単位あたりの平均在庫評価額"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:34
 msgid ""
 ":guilabel:`Total Value`: Total inventory valuation of the product, "
 "calculated by multiplying unit cost by on-hand quantity."
-msgstr ""
+msgstr ":guilabel:`総在庫価値`: 単価と手持在庫数量を掛けて算出されるプロダクトの在庫評価総額"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:38
 msgid ""
 ":ref:`Compute average cost inventory valuation per unit "
 "<inventory/avg_cost/formula>`"
-msgstr ""
+msgstr ":ref:`平均原価法による在庫評価を1単位あたりで計算する <inventory/avg_cost/formula>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:39
 msgid ""
 ":doc:`Inventory valuation methods "
 "<../../product_management/inventory_valuation/inventory_valuation_config>`"
 msgstr ""
+":doc:`在庫評価方法 "
+"<../../product_management/inventory_valuation/inventory_valuation_config>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:42
 msgid ""
@@ -28936,18 +29083,20 @@ msgid ""
 "pencil` :guilabel:`(pencil)` icon to :doc:`modify the on-hand quantity "
 "<../inventory_management/count_products>`."
 msgstr ""
+":guilabel:`手持在庫数`: 現在のプロダクトの数量です。:icon:`fa-pencil` :guilabel:`(鉛筆)` "
+"アイコンをクリックして :doc:`手持在庫数を変更 <../inventory_management/count_products>` します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:45
 msgid ""
 ":guilabel:`Free to Use`: on-hand quantity that are **not** reserved for "
 "delivery or manufacturing orders, and are available to sell or use."
-msgstr ""
+msgstr ":guilabel:`引当なし`: 配送オーダや製造オーダに引当てられて **いない**、販売または使用可能な手持在庫。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:47
 msgid ""
 ":guilabel:`Incoming`: items expected to arrive at the warehouse. Number of "
 "products is based on quantities in confirmed purchase orders."
-msgstr ""
+msgstr ":guilabel:`入荷予定`: 倉庫に到着予定の商品。プロダクトの数は、確定した購買オーダの数量に基づいています。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:49
 msgid ""
@@ -28955,6 +29104,7 @@ msgid ""
 "in manufacturing orders. Number of products is based on quantities in "
 "confirmed sales or manufacturing orders."
 msgstr ""
+":guilabel:`出荷予定`:倉庫から出荷される、または製造オーダで消費される予定の商品。プロダクトの数は、確定済みの販売オーダまたは製造オーダの数量に基づいています。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:54
 msgid ""
@@ -28962,6 +29112,7 @@ msgid ""
 "displaying information about the quantity and description of why the product"
 " was moved from one location to another."
 msgstr ""
+":guilabel:`履歴`: プロダクトの在庫移動履歴にアクセスし、プロダクトが別のロケーションに移動された理由の数量と説明に関する情報を表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:56
 msgid ""
@@ -28969,12 +29120,15 @@ msgid ""
 "<../replenishment/reordering_rules>` page for the product to create or "
 "manage methods of procuring the product."
 msgstr ""
+":guilabel:`補充`: プロダクトの調達方法を新規作成または管理するには、プロダクトの :doc:`再オーダ規則 "
+"<../replenishment/reordering_rules>` ページにアクセスします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:59
 msgid ""
 ":guilabel:`Locations`: break down of on-hand quantity at multiple storage "
 "locations. Only available when the product is stored in multiple locations."
 msgstr ""
+":guilabel:`ロケーション`: 複数の保管場所における手持在庫数量の内訳。プロダクトが複数の場所に保管されている場合のみ利用可能です。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:61
 msgid ""
@@ -28983,18 +29137,22 @@ msgid ""
 "purchase, sales, or manufacturing orders. Only available when there are "
 "confirmed sales, purchase, or manufacturing orders for the product."
 msgstr ""
+":guilabel:`予測`: 予測レポートにアクセスして、手持在庫、入荷、出荷数量を表示します。 "
+"レポートには、確定した購買、販売、または製造オーダへのリンクも含まれています。 "
+"プロダクトに対して確定した販売、購買、または製造オーダがある場合のみ利用可能です。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:75
 msgid ""
 ":guilabel:`Published`: display products published on the website. Only "
 "available with the *Website* app installed."
 msgstr ""
+":guilabel:`公開済`: ウェブサイトに公開されたプロダクトを表示します。ウェブサイトアプリがインストールされている場合のみ利用可能です。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:77
 msgid ""
 ":guilabel:`Available in POS`: display products available through the *Point "
 "of Sale* app."
-msgstr ""
+msgstr ":guilabel:`POSで利用可能`: *POS* アプリで利用可能なプロダクトを表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:78
 msgid ""
@@ -29005,22 +29163,26 @@ msgid ""
 " The option is only available when the :guilabel:`Available in POS` checkbox"
 " is ticked."
 msgstr ""
+":guilabel:`セルフオーダで利用可能`: *POS* アプリでセルフオーダ可能なプロダクトを表示します。 "
+"検索結果に表示されるのは、プロダクトフォームの :guilabel:`販売` タブの :guilabel:`POS` セクションで "
+":guilabel:`セルフで利用可能` チェックボックスがオンになっている場合です。 このオプションは、:guilabel:`POSで利用可能` "
+"チェックボックスがオンになっている場合のみ利用可能です。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:0
 msgid ""
 "In the Sales tab of a product form, showing *Available in Self Order* "
 "setting."
-msgstr ""
+msgstr "プロダクトフォームの販売タブで、*セルフオーダで利用可能* 設定を表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:87
 msgid ""
 ":guilabel:`Not available in Self`: display products available in *PoS*, but "
 "not available in self order."
-msgstr ""
+msgstr ":guilabel:`セルフオーダで利用不可`: *PoS* で利用可能ですが、セルフオーダでは利用できないプロダクトを表示します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:91
 msgid "`Configure PoS products <https://youtu.be/REbA3TBhFa4>`_"
-msgstr ""
+msgstr "`PoSプロダクトを設定する <https://youtu.be/REbA3TBhFa4>`_"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:93
 msgid ""
@@ -29028,6 +29190,8 @@ msgid ""
 "Appears in the search because the :guilabel:`Can be Sold` checkbox is ticked"
 " on the product form."
 msgstr ""
+":guilabel:`販売可能`: 顧客に販売可能なプロダクトを表示します。 検索結果に表示されるのは、プロダクトフォームで "
+":guilabel:`販売可能` チェックボックスにチェックマークが付いているためです。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:95
 msgid ""
@@ -29035,6 +29199,8 @@ msgid ""
 "vendors. Appears in the search because the :guilabel:`Can be Purchased` "
 "checkbox is ticked on the product form."
 msgstr ""
+":guilabel:`購買可能`: 仕入先から購買可能なプロダクトを表示します。 検索結果に表示されるのは、プロダクトフォームで "
+":guilabel:`購買可能` チェックボックスにチェックが入っているためです。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:97
 msgid ""
@@ -29042,6 +29208,8 @@ msgid ""
 "ticking the :guilabel:`Recurring` checkbox on the product form. Only "
 "available with the *Subscription* app activated."
 msgstr ""
+":guilabel:`定期購入可能`: サブスクリプションプロダクトを表示します。プロダクトフォームの :guilabel:`サブスク` "
+"チェックボックスにチェックを入れることで指定できます。サブスクリプションアプリが有効化されている場合のみ利用可能です。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:100
 msgid ""
@@ -29050,6 +29218,9 @@ msgid ""
 " checkbox was ticked on the product form. Only available with the *Rental* "
 "app installed."
 msgstr ""
+":guilabel:`レンタル可`: 顧客に一定期間貸し出すことができるプロダクトを表示します。 プロダクトフォームで "
+":guilabel:`レンタル可` チェックボックスにチェックを入れたため、検索に表示されます。 *レンタル* "
+"アプリがインストールされている場合のみ利用可能です。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:103
 msgid ""
@@ -29057,28 +29228,33 @@ msgid ""
 " third-party manufacturer. Available only with the *Manufacturing* app "
 "installed."
 msgstr ""
+":guilabel:`外注可`: サードパーティのメーカーで生産可能なプロダクトを表示します。*製造* "
+"アプリがインストールされている場合のみ利用可能です。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:105
 msgid ""
 ":guilabel:`Can be Expensed`: show items that can be expensed. Only available"
 " with the *Expenses* app installed."
-msgstr ""
+msgstr ":guilabel:`経費計上可能`: 経費計上が可能な項目を表示します。 *経費* アプリがインストールされている場合のみ利用可能です。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:109
 msgid ":doc:`../../product_management/configure/type`"
-msgstr ""
+msgstr ":doc:`../../product_management/configure/type`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:113
 msgid ""
 "The :guilabel:`Group By` section allows users to add pre-made and custom "
 "groupings to the search results."
 msgstr ""
+":guilabel:`グループ化` セクションでは、ユーザが検索結果にあらかじめ用意されたグループ分けやカスタムのグループ分けを追加することができます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:116
 msgid ""
 ":guilabel:`Product Type`: group items by :doc:`product type "
 "<../../product_management/configure/type>`."
 msgstr ""
+":guilabel:`プロダクトタイプ`: :doc:`プロダクトタイプごと "
+"<../../product_management/configure/type>` に商品をグループ化します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:118
 msgid ""
@@ -29086,12 +29262,16 @@ msgid ""
 "these, go to :menuselection:`Inventory app --> Configuration --> Products: "
 "Product Categories`."
 msgstr ""
+":guilabel:`プロダクトカテゴリ`: プロダクトカテゴリ別にアイテムをグループ化します。 "
+"設定するには、:menuselection:`在庫アプリ --> 設定 --> プロダクト：プロダクトカテゴリ` にアクセスします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:120
 msgid ""
 ":guilabel:`POS Product Category`: group items by :doc:`point of sale product"
 " categories <../../../../sales/point_of_sale/configuration>`."
 msgstr ""
+":guilabel:`POS プロダクトカテゴリ`: :doc:`POS プロダクトカテゴリ "
+"<../../../../sales/point_of_sale/configuration>` ごとにアイテムをグループ化します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:125
 msgid ""
@@ -29099,6 +29279,8 @@ msgid ""
 "can be easily accessed after closing this page, click :guilabel:`Save "
 "current search`."
 msgstr ""
+"現在の適用フィルタとグループ化を保存して、このページを閉じた後でも同じ情報に簡単にアクセスできるようにするには、:guilabel:`現在の検索を保存`"
+" をクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.rst:128
 msgid ""
@@ -29107,6 +29289,9 @@ msgid ""
 ":guilabel:`Shared` checkbox to make the search option available to other "
 "users."
 msgstr ""
+"オプションとして、:guilabel:`デフォルトフィルタ` "
+"チェックボックスにチェックを入れると、在庫レポートを開く際に、現在のビューがデフォルトのフィルタになります。または、:guilabel:`共有 "
+"`チェックボックスにチェックを入れると、検索オプションを他のユーザも利用できるようになります。"
 
 #: ../../content/applications/inventory_and_mrp/maintenance.rst:8
 msgid "Maintenance"
@@ -29116,17 +29301,19 @@ msgstr "整備"
 msgid ""
 "**Odoo Maintenance** helps extend the effectiveness of equipment by keeping "
 "track of maintenance requirements."
-msgstr ""
+msgstr "**Odoo整備** は、整備要件を追跡することで、機器の有効性を向上させるのに役立ちます。"
 
 #: ../../content/applications/inventory_and_mrp/maintenance.rst:14
 msgid ""
 "`Odoo Tutorials: Managing Equipment Maintenance "
 "<https://www.odoo.com/slides/slide/managing-equipment-maintenance-709>`_"
 msgstr ""
+"`Odooチュートリアル: 機器の整備を管理する <https://www.odoo.com/slides/slide/managing-"
+"equipment-maintenance-709>`_"
 
 #: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:3
 msgid "Add new equipment"
-msgstr ""
+msgstr "新しい備品を追加する"
 
 #: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:7
 msgid ""
@@ -29137,6 +29324,10 @@ msgid ""
 "the company that uses the Odoo database, or by a third party, such as a "
 "vendor in the case of equipment rentals."
 msgstr ""
+"Odoo において、*備品* "
+"とは、製品の製造を含む日常業務で使用されるあらゆるアイテムを指します。これは、生産ライン上の機械、さまざまな場所で使用される工具、オフィス内のコンピューターなどを意味する場合があります。Odoo"
+" に登録された備品は、Odoo "
+"データベースを使用する企業が所有している場合もあれば、備品のレンタルなどの場合のように、仕入先などの第三者が所有している場合もあります。"
 
 #: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:13
 msgid ""
@@ -29146,10 +29337,13 @@ msgid ""
 "module, select :menuselection:`Equipments --> Machines & Tools --> Create`, "
 "and configure the equipment as follows:"
 msgstr ""
+"Odoo *Maintenance* "
+"を使用すると、個々の備品を追跡し、メンテナンス要件に関する情報を記録することができます。新しい備品を追加するには、:guilabel:`整備` "
+"モジュールに移動し、:menuselection:`備品 --> 機械・工具 --> 作成` を選択し、以下の手順で備品を設定します。"
 
 #: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:18
 msgid ":guilabel:`Equipment Name`: the product name of the piece of equipment"
-msgstr ""
+msgstr ":guilabel:`備品名`: その備品のプロダクト名"
 
 #: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:19
 msgid ""
@@ -29158,12 +29352,15 @@ msgid ""
 "created by navigating to :menuselection:`Configuration --> Equipment "
 "Categories` and clicking :guilabel:`Create`"
 msgstr ""
+":guilabel:`備品カテゴリ`: 備品が属するカテゴリ。例えば、パソコン、機械、工具など。新しいカテゴリは、:menuselection:`設定 "
+"--> 備品カテゴリ`  に移動し、:guilabel:`作成` をクリックすることで作成できます。"
 
 #: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:22
 msgid ""
 ":guilabel:`Company`: the company that owns the equipment; again, this can be"
 " the company that uses the Odoo database, or a third-party company"
 msgstr ""
+":guilabel:`会社`: 備品を所有する会社。この会社は、Odooデータベースを使用する会社、または第三者の企業である可能性があります。"
 
 #: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:24
 msgid ""
@@ -29171,6 +29368,9 @@ msgid ""
 "employee, department, or both; select :guilabel:`Other` to specify both an "
 "employee and a department"
 msgstr ""
+":guilabel:`使用者`: "
+"特定の従業員、部署、またはその両方によって備品が使用されている場合は、その旨を指定します。従業員と部署の両方を指定する場合は、:guilabel:`その他`"
+" を選択します。"
 
 #: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:26
 msgid ""
@@ -29180,6 +29380,8 @@ msgid ""
 ":guilabel:`Create`; the members of each team can also be assigned from this "
 "page"
 msgstr ""
+":guilabel:`整備チーム`: 備品管理を担当するチームです。新しいチームは、:menuselection:`設定 --> 整備チーム` "
+"に移動し、:guilabel:`作成` を選択することで作成できます。各チームのメンバーもこのページから割当てることができます。"
 
 #: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:29
 msgid ""
@@ -29189,6 +29391,8 @@ msgid ""
 "should always be responsible for the equipment; any person added to Odoo as "
 "a user can be assigned as a technician"
 msgstr ""
+":guilabel:`技術者`: "
+"備品の管理責任者。整備チームが割当てられていない場合や、割当てられたチームの特定のメンバーが常に備品管理を担当すべき場合などに、特定の個人を割当てるために使用できます。Odooにユーザとして追加された人は、全て技術者として割当てることができます。"
 
 #: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:33
 msgid ""
@@ -29196,6 +29400,8 @@ msgid ""
 " is a simple text field that can be used to specify locations that are not "
 "work centers, like an office, for example"
 msgstr ""
+":guilabel:`使用場所`: "
+"備品が使用されている場所。これは、作業区ではない場所、例えばオフィスなどを指定するためのシンプルなテキストフィールドです。"
 
 #: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:36
 msgid ""
@@ -29205,33 +29411,36 @@ msgid ""
 "work center or creating a new one using the :guilabel:`Create` button, and "
 "clicking the :guilabel:`Equipment` tab on the work center form"
 msgstr ""
+":guilabel:`作業区`: 作業区で使用する場合は、ここで指定します。 :menuselection:`整備 --> 備品 --> 作業区` "
+"に移動し、作業区を選択するか、:guilabel:`作成` ボタンを使用して新規作業区を作成し、作業区フォームの :guilabel:`備品` "
+"タブをクリックすることで、作業区に備品を割当てることができます。"
 
 #: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst-1
 msgid "An example of a fully configured new equipment form."
-msgstr ""
+msgstr "新規備品フォームを完全設定した例"
 
 #: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:46
 msgid "Include additional product information"
-msgstr ""
+msgstr "追加プロダクト情報を含める"
 
 #: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:48
 msgid ""
 "The :guilabel:`Product Information` tab at the bottom of the page can be "
 "used to provide further details about the piece of equipment:"
-msgstr ""
+msgstr "ページ下部の :guilabel:`プロダクト情報` タブでは、備品に関する詳細情報を提供することができます。"
 
 #: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:51
 msgid ":guilabel:`Vendor`: the vendor that the equipment was purchased from"
-msgstr ""
+msgstr ":guilabel:`仕入先`: 備品の購入元である仕入先"
 
 #: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:52
 msgid ""
 ":guilabel:`Vendor Reference`: the reference code assigned to the vendor"
-msgstr ""
+msgstr ":guilabel:`仕入先登録番号`: 仕入先に割当られた参照番号コード"
 
 #: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:53
 msgid ":guilabel:`Model`: the specific model of the piece of equipment"
-msgstr ""
+msgstr ":guilabel:`モデル`: 備品の特定のモデル"
 
 #: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:54
 msgid ":guilabel:`Serial Number`: the unique serial number of the equipment"
@@ -29243,37 +29452,38 @@ msgid ""
 " use; this is used to calculate the :abbr:`MTBF (Mean Time Between "
 "Failures)`"
 msgstr ""
+":guilabel:`有効日`：その備品が使用可能となった日付。これは :abbr:`MTBF(平均故障間隔)` を計算するために使用されます。"
 
 #: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:57
 msgid ":guilabel:`Cost`: the amount the equipment was purchased for"
-msgstr ""
+msgstr ":guilabel:`原価`: 備品の購買金額"
 
 #: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:58
 msgid ""
 ":guilabel:`Warranty Expiration Date`: the date on which the equipment's "
 "warranty will expire"
-msgstr ""
+msgstr ":guilabel:`保証書有効期限`: 備品の保証が切れる日付"
 
 #: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst-1
 msgid "The product information tab for the new piece of equipment."
-msgstr ""
+msgstr "新しい備品に関するプロダクト情報タブ。"
 
 #: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:65
 msgid "Add maintenance details"
-msgstr ""
+msgstr "整備詳細を追加する"
 
 #: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:67
 msgid ""
 "The :guilabel:`Maintenance` tab at the bottom of the page provides "
 "information about the failure frequency of the piece of equipment:"
-msgstr ""
+msgstr "ページ下部の :guilabel:`整備` タブには、その備品の故障頻度に関する情報が表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:70
 msgid ""
 ":guilabel:`Expected Mean Time Between Failure`: the average number of days "
 "the equipment is expected to operate between failures. This number can be "
 "configured manually."
-msgstr ""
+msgstr ":guilabel:`予測平均故障間隔`：故障が起きるまでの間に備品が機能すると予想される平均日数。この数値は手動で設定できます。"
 
 #: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:72
 msgid ""
@@ -29281,6 +29491,8 @@ msgid ""
 "equipment operates between failures. This number is calculated automatically"
 " based on previous failures, and cannot be configured manually."
 msgstr ""
+":guilabel:`平均故障間隔`: 故障と故障の間の平均日数で、備品が機能している日数です。 "
+"この数値は、過去の故障に基づいて自動的に計算され、手動で設定することはできません。"
 
 #: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:75
 msgid ""
@@ -29289,6 +29501,8 @@ msgid ""
 "the data in the :guilabel:`Mean Time Between Failure` and :guilabel:`Latest "
 "Failure` fields, and cannot be configured manually."
 msgstr ""
+":guilabel:`次回の故障予想`: その備品が次に故障するであろうと推定される日付です。 この日付は、:guilabel:`平均故障間隔` および"
+" :guilabel:`最終故障` フィールドのデータに自動的に基づいて計算され、手動で設定することはできません。"
 
 #: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:79
 msgid ""
@@ -29296,6 +29510,7 @@ msgid ""
 "failed. This date is based on the creation date of the equipment's most "
 "recent maintenance request, and cannot be configured manually."
 msgstr ""
+":guilabel:`最終故障`：備品が最後に故障した日付。この日付は、備品の最新の整備依頼の作成日を基にしており、手動で設定することはできません。"
 
 #: ../../content/applications/inventory_and_mrp/maintenance/add_new_equipment.rst:82
 msgid ""

@@ -3750,7 +3750,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:60
 msgid "Inventory tracking"
-msgstr ""
+msgstr "库存追踪"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:61
 msgid ""
@@ -3907,6 +3907,7 @@ msgid ""
 "number of individual bars of soap must be included in the stock count when "
 "the pallet is received."
 msgstr ""
+"某仓库接收以实体托盘运输的香皂货物，每托盘标准装载96块。这些托盘既用于内部调拨，也可作为独立销售单元。出于物流需求，对于某些货件，托拍的重量必须包含在总发货重量中。此外，托盘须配置专属条形码实现全链路追踪，并且到货验收时需同步登记香皂单品数量。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:116
 msgid ""
@@ -3916,6 +3917,8 @@ msgid ""
 "operations by automatically registering the grouped quantity. Key "
 "distinctions include:"
 msgstr ""
+"在对各种方案进行评估后，*产品包装*是最合适的解决方案。通过包装，可以为托盘分配一个条形码，将其识别为包含 96 "
+"块肥皂的\"托盘类型”。该条形码可自动登记分组数量，从而简化操作。主要区别包括"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:121
 msgid ""
@@ -3923,6 +3926,8 @@ msgid ""
 " the number of packagings. For instance, if a pallet with 12 and 24 "
 "quantities is received, Odoo records 36 quantities, not the pallet details."
 msgstr ""
+"**仓库追踪限制**：Odoo 只追踪总数量，而不是容器数量。例如，如果收到一个包含 12 和 24 个数量的托盘，Odoo 会记录 36 "
+"个数量，而不是托盘的详细信息。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:124
 msgid ""
@@ -3930,16 +3935,17 @@ msgid ""
 "packaging types (e.g., \"pallet of 96 soap bars\") but do not uniquely "
 "identify individual pallets, such as Pallet #1 or Pallet #2."
 msgstr ""
+"**包装条形码是特定类型的，不是唯一的**：条形码代表包装类型（如 \"96 块肥皂的托盘\"），但不能唯一标识单个托盘，如 1 号托盘或 2 号托盘。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:129
 msgid "Capture product information using barcode"
-msgstr ""
+msgstr "使用条形码捕获产品信息"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:131
 msgid ""
 "An Odoo user expects the **Barcode** app to display the typical storage "
 "location of a product by scanning a barcode for a container."
-msgstr ""
+msgstr "Odoo 用户希望 **条形码** 应用程序通过扫描容器的条形码，来显示产品的典型存放位置。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:134
 msgid ""
@@ -3947,33 +3953,35 @@ msgid ""
 "enabled <inventory/warehouses_storage/enable-package>`, scanning a package "
 "barcode displays its contents in the **Barcode** app."
 msgstr ""
+"*包裹*是最合适的。当 :ref:`启用 <inventory/warehouses_storage/enable-package>` "
+"中的适当设置时，扫描包裹条形码会在 **条形码** 应用程序中显示其内容。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:138
 msgid ""
 "Packages represent physical containers, enabling detailed tracking of the "
 "items they hold. Scanning a package provides visibility into its contents "
 "and facilitates operations, like inventory moves."
-msgstr ""
+msgstr "包裹代表物理容器，可对其所装物品进行详细追踪。扫描包裹可以查看其中的物品，方便库存移动等操作。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:145
 msgid "Track different units of measure in storage"
-msgstr ""
+msgstr "追踪存储中的不同计量单位"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:147
 msgid "A fruit juice distributor tracks multiple |UoMs| for their operations:"
-msgstr ""
+msgstr "以一家果汁经销商为例，在运营时需要追踪多个计量单位："
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:149
 msgid "Fruits are purchased in tons."
-msgstr ""
+msgstr "水果以吨为单位采购。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:150
 msgid "Juice is produced and stored in kilograms."
-msgstr ""
+msgstr "果汁以千克为单位生产和存储。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:151
 msgid "Small samples are stored in grams for recipe testing."
-msgstr ""
+msgstr "用于配方测试的小样品以克为单位存储。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:153
 msgid ""
@@ -3982,21 +3990,23 @@ msgid ""
 "product in the database, the company uses lot numbers to differentiate "
 "|UoMs|:"
 msgstr ""
+"“计量单位”是最合适的解决方案。Odoo 系统在收货时会自动将吨转换为千克。但是，由于 Odoo "
+"数据库中每种产品只能追踪一种计量单位，因此公司使用批号来区分不同的计量单位。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:157
 msgid "LOT1: Grams (g)"
-msgstr ""
+msgstr "批次1：克（g）"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:158
 msgid "LOT2: Kilograms (kg)"
-msgstr ""
+msgstr "批次2：千克（kg）"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure.rst:160
 msgid ""
 "Manual inventory adjustments are required to convert between lots, such as "
 "subtracting 1 kg from LOT2 to add 1,000 g to LOT1. While functional, this "
 "workaround can be time-consuming and prone to errors."
-msgstr ""
+msgstr "批次之间的转换需要手动调整库存，例如从批次2中减去 1 kg，再向批次1中添加 1 kg。这种工作方法虽然实用，但耗时且容易出错。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:7
 msgid ""
@@ -4089,7 +4099,7 @@ msgid ""
 "When moving packages internally, the *Move Entire Packages* feature can be "
 "enabled on an operation type to update a package's contained item's location"
 " upon updating the package's location."
-msgstr ""
+msgstr "在内部移动数据包时，可在操作类型上启用 *移动整个数据包* 功能，以便在更新数据包位置时，更新数据包所含项目的位置。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:53
 msgid ""
@@ -4097,12 +4107,14 @@ msgid ""
 "Operations Types` and select the desired operation this feature will apply "
 "to (may have to set it for multiple)."
 msgstr ""
+"要执行此操作，请转到 :menuselection:`库存应用程序 --> 配置 --> 操作类型`（库存应用程序 --> 配置 --> "
+"操作类型），然后选择此功能适用的所需操作（可能需要设置为多个）。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:56
 msgid ""
 "On the operation type page, in the :guilabel:`Packages` section, tick the "
 ":guilabel:`Move Entire Packages` checkbox."
-msgstr ""
+msgstr "在操作类型页面的 :guilabel:`包裹` 部分，勾选 :guilabel:`移动整个包裹` 复选框。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:62
 msgid "Pack items"
@@ -4391,11 +4403,11 @@ msgstr "显示包裹表单以创建集群包裹。"
 msgid ""
 ":doc:`Using cluster packages "
 "<../../shipping_receiving/picking_methods/cluster>`"
-msgstr ""
+msgstr ":doc:`使用集群包装<../../shipping_receiving/picking_methods/cluster>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:202
 msgid "View packages"
-msgstr ""
+msgstr "查看包装"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:204
 msgid ""
@@ -4403,20 +4415,21 @@ msgid ""
 "Packages`. By default, packages are shown in Kanban view, in their current "
 "storage location."
 msgstr ""
+"要查看所有包装，请访问 :menuselection:`库存应用程序 --> 产品 --> 包装`。默认情况下，包装在当前存储位置的看板视图中显示。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst:208
 msgid "Drag-and-drop packages to move them between internal locations."
-msgstr ""
+msgstr "拖放包装，在内部位置之间移动。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/package.rst-1
 msgid "Packages dashboard."
-msgstr ""
+msgstr "包装仪表板。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:7
 msgid ""
 "In Odoo *Inventory*, *packaging* refers to disposable containers holding "
 "multiple units of a specific product."
-msgstr ""
+msgstr "在 Odoo *库存*中，*包装* 指的是容纳特定产品多个单位的一次性容器。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:10
 msgid ""
@@ -4424,6 +4437,8 @@ msgid ""
 "12-pack, or a case of 36, **must** be configured on the individual product "
 "form. This is because packagings are product specific, not generic."
 msgstr ""
+"举例来说，对于汽水罐的不同包装形式，比如 6 罐装、12 罐装或者 36 "
+"罐装箱，**必须**在具体产品的表单中进行配置。这是因为包装规格是针对具体产品制定的，而不是通用的。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:15
 msgid ""
@@ -4461,7 +4476,7 @@ msgstr "包装可直接在产品表单上创建，或从 :guilabel:`产品包裹
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:39
 msgid "From product form"
-msgstr ""
+msgstr "从产品表单"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:41
 msgid ""
@@ -4515,6 +4530,8 @@ msgid ""
 ":guilabel:`Packaging` section, and selecting the desired options from the "
 "drop-down menu that appears."
 msgstr ""
+"点击 :guilabel:`包装` 部分列标题最右侧的 |调整| 图标，并从出现的下拉菜单中选择所需的选项，即可访问下面 :guilabel:`包装` "
+"表中的其他字段。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:59
 msgid ""
@@ -4548,7 +4565,7 @@ msgstr "为产品制作 6 个包装箱。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:74
 msgid "From product packagings page"
-msgstr ""
+msgstr "从产品包装页面"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:76
 msgid ""
@@ -4632,27 +4649,27 @@ msgstr "为了更好地评估基于业务需求的选项，请参考以下示例
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:117
 msgid "a product is sold in twelve units per packaging."
-msgstr ""
+msgstr "一个产品以每包装12个单位进行销售。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:118
 msgid "an order demands two packagings."
-msgstr ""
+msgstr "有一个订单需要2个包装。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:119
 msgid "there are only twenty-two units in stock."
-msgstr ""
+msgstr "当前库存只有22个单位。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:121
 msgid ""
 "When :guilabel:`Reserve Only Full Packagings` is selected, only twelve units"
 " are reserved for the order."
-msgstr ""
+msgstr "当选择 :guilabel:`仅预留完整包装` 选项时，系统只会为该订单预留12个单位。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:124
 msgid ""
 "Conversely, when :guilabel:`Reserve Partial Packagings` is selected, twenty-"
 "two units are reserved for the order."
-msgstr ""
+msgstr "相反，选择 :guilabel:`保留部分包装` 时，将为订单保留 22 个单位。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:128
 msgid "Apply packagings"
@@ -4672,15 +4689,15 @@ msgstr ""
 msgid ""
 "18 cans of the product, `Grape Soda`, is packed using three 6-pack "
 "packagings."
-msgstr ""
+msgstr "18 罐 `葡萄汽水` 产品使用三个 6 罐装包装进行打包。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:0
 msgid "Assign packagings on the Sales Order Line."
-msgstr ""
+msgstr "在销售订单明细行中分配包装。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:144
 msgid "Routes for packaging"
-msgstr ""
+msgstr "包装路线设置"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:146
 msgid ""
@@ -4690,6 +4707,9 @@ msgid ""
 "packaging-specific route, go to :menuselection:`Inventory app --> "
 "Configuration --> Routes`."
 msgstr ""
+"在接收包装时，默认情况下，包装会遵循 :doc:`仓库配置的接收路线 "
+"<../../shipping_receiving/daily_operations>`。如果需要为特定包装设置专门的路线（**可选**），请前往 "
+":menuselection:`库存应用程序 --> 配置 --> 路线`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:151
 msgid ""
@@ -4697,14 +4717,16 @@ msgid ""
 "features (found by going to :menuselection:`Inventory app --> Configuration "
 "--> Settings`) **must** be activated, and saved."
 msgstr ""
+"*产品包装*、存储位置*和*多步骤路线*功能（可通过 :menuselection:`库存应用程序 --> 配置 --> "
+"设置`）。**必须**激活并保存。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:156
 msgid ":doc:`../../shipping_receiving/daily_operations/use_routes`"
-msgstr ""
+msgstr ":doc:`../../shipping_receiving/daily_operations/use_routes`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:159
 msgid "Create route"
-msgstr ""
+msgstr "创建路径"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:161
 msgid ""
@@ -4712,26 +4734,28 @@ msgid ""
 "that is **not** for a warehouse. Next, in the :guilabel:`Applicable on` "
 "section, tick the :guilabel:`Packagings` checkbox."
 msgstr ""
+"在 :guilabel:`路径` 页面上，点击 :guilabel:`新建`，或选择一个**不**仓库的路径。然后，在 :guilabel:`适用于` "
+"部分，勾选 :guilabel:`包装` 复选框。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:168
 msgid "Create route for a packaging."
-msgstr ""
+msgstr "为包装创建路径。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:168
 msgid ""
 "Route with \"Packagings\" selected, with \"Products\" and \"Warehouses\" not"
 " selected."
-msgstr ""
+msgstr "选中“包装”选项，同时不选择“产品”和“仓库”路线设置。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:173
 msgid "Apply route on packaging"
-msgstr ""
+msgstr "在包装上应用路径"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:175
 msgid ""
 "Then, to apply the route, go to :menuselection:`Inventory app --> Products "
 "--> Products`, and select the product that uses packaging."
-msgstr ""
+msgstr "然后，要应用路径，请转到 :menuselection:`库存应用程序 --> 产品 --> 产品`，然后选择使用包装的产品。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:178
 msgid ""
@@ -4741,16 +4765,19 @@ msgid ""
 "Tick the :guilabel:`Routes` checkbox to make the column visible in the "
 ":guilabel:`Packaging` table."
 msgstr ""
+"在产品表单中，切换到 :guilabel:`库存` 选项卡。在包含 :ref:`已配置包装 "
+"<inventory/product_management/packaging-setup>` 的 :guilabel:`包装` 部分，点击 |调整| "
+"图标。勾选 :guilabel:`路径` 复选框，使列在 :guilabel:`包装` 表中可见。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst:183
 msgid ""
 "In the :guilabel:`Routes` field, select the packaging-specific route. Repeat"
 " these steps for all packaging intended to use the route."
-msgstr ""
+msgstr "在 :guilabel:`路径` 字段中，选择特定包装的路线。对所有要使用该路径的包装重复上述步骤。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/packaging.rst-1
 msgid "Set route on a packaging."
-msgstr ""
+msgstr "在包装上设置路径。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:3
 msgid "Product type"
@@ -4761,7 +4788,7 @@ msgid ""
 "In Odoo, goods and services are both set up as *products*. When setting up a"
 " new product, there are several fields that should be carefully chosen, as "
 "they determine how to invoice and track a business' goods or services."
-msgstr ""
+msgstr "在 Odoo 中，商品和服务都被设置为*产品*。在设置新产品时，有几个字段需要仔细选择，因为它们决定了如何开具发票和追踪企业的商品或服务。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:11
 msgid ""
@@ -4770,6 +4797,8 @@ msgid ""
 "Alternatively, from the :guilabel:`Products` menu, click :guilabel:`New` to "
 "create a new product."
 msgstr ""
+"要配置现有产品，请转到 :menuselection:`库存应用程序 --> 产品 --> 产品`，然后从列表中选择所需的产品。或者，在 "
+":guilabel:`产品` 菜单中点击 :guilabel:`新建` 创建新产品。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:16
 msgid ""
@@ -4779,7 +4808,7 @@ msgstr "`Odoo 教程：产品类型<https://www.youtube.com/watch?v=l6j0ZkP5mLM>
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:21
 msgid "For sale vs. purchase"
-msgstr ""
+msgstr "销售和采购"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:23
 msgid ""
@@ -4788,6 +4817,8 @@ msgid ""
 "can be *sold* to a customer (e.g. finished goods). Tick :guilabel:`Purchase`"
 " if the product can be *purchased* (e.g. raw materials)."
 msgstr ""
+"商品和服务可以指定为可以购买、销售或两者兼有。在产品表单中，如果产品可以*出售*给客户（如成品），请勾选 :guilabel:`销售` "
+"复选框。如果产品可以*购买*（如原材料），请勾选 :guilabel:`采购`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:28
 msgid ""
@@ -4795,6 +4826,8 @@ msgid ""
 "higher cost to the end consumer, the `Jacket` product form might have *both*"
 " the :guilabel:`Sales` and :guilabel:`Purchase` checkbox ticked."
 msgstr ""
+"如果一家转售服装店以折扣价购入牛仔夹克，并以较高的价格出售给最终消费者，则 `夹克` 产品表单可能同时勾选了 :guilabel:`销售` 和 "
+":guilabel:`采购` 复选框。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:32
 msgid ""
@@ -4803,10 +4836,12 @@ msgid ""
 " :guilabel:`Purchase` should be ticked, whereas the `Handmade Jacket` "
 "product form would only tick :guilabel:`Sales`."
 msgstr ""
+"另一方面，假设该店偶尔使用牛仔布和线作为原材料缝制新夹克。在 `牛仔布` 和 `线` 的产品表单中，应该只勾选 :guilabel:`采购` 选项，而 "
+"`手工夹克` 产品表单则只需勾选\"销售\"选项。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:37
 msgid "Goods vs. services"
-msgstr ""
+msgstr "商品与服务"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:39
 msgid ""
@@ -4815,12 +4850,14 @@ msgid ""
 "type impacts different operations in other Odoo applications, such as "
 "**Sales** and **Purchase**, and should be chosen carefully."
 msgstr ""
+"配置产品时，需要在产品表单的 :guilabel:`一般信息` 选项卡上选择 :guilabel:`产品类型`。每种产品类型都会影响其他 Odoo "
+"应用程序中的不同操作，如**销售**和**采购**，因此应谨慎选择。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:44
 msgid ""
 ":guilabel:`Goods`: a tangible, material object (e.g. anything from a "
 "hamburger to a house)"
-msgstr ""
+msgstr ":guilabel:`商品`：有形的物质对象（例如，从汉堡包到房子的任何物品）"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:45
 msgid ""
@@ -4901,6 +4938,8 @@ msgid ""
 "product is for sale (in other words, if :guilabel:`Sales` is ticked, and the"
 " **Sales** app is installed)."
 msgstr ""
+":guilabel:`开票策略`字段只有在产品销售时（换句话说，如果 "
+":guilabel:`销售`被勾选，并且安装了**销售**应用程序）才会显示在产品表单上。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:89
 msgid ""
@@ -4911,23 +4950,26 @@ msgid ""
 " once the sales order is confirmed. When :guilabel:`Delivered quantities` is"
 " selected, customers are invoiced once the delivery is completed."
 msgstr ""
+"在配置产品销售时，必须选择 :doc:`开票策略 "
+"<.../.../.../sales/sales/invoicing/invoicing_policy>`。当选择 :guilabel:`已订购的数量`"
+" 的开票策略时，一旦确认销售订单，就会向客户开具发票。选择 :guilabel:`已交付数量` 时，将在交货完成后向客户开具发票。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:98
 msgid "Tracked vs. untracked goods"
-msgstr ""
+msgstr "已跟踪与未追踪的商品"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:100
 msgid ""
 "The :guilabel:`Track Inventory` field on the product form determines a lot "
 "of Odoo's **Inventory** operations."
-msgstr ""
+msgstr "产品表单上的 :guilabel:`追踪库存` 字段决定了 Odoo 许多**库存**操作。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:103
 msgid ""
 "*Tracked* products are those for which stock and inventory are maintained. "
 "Examples include finished goods and, often, the raw materials or components "
 "needed to make them."
-msgstr ""
+msgstr "*已跟踪*产品是指保持库存和存货的产品。例如，制成品以及通常生产制成品所需的原材料或部件。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:106
 msgid ""
@@ -4935,10 +4977,13 @@ msgid ""
 "offering for inventory to be tracked one of three ways: :guilabel:`By Unique"
 " Serial Number`, :guilabel:`By Lots`, or :guilabel:`By Quantity`."
 msgstr ""
+"选中 :guilabel:`追踪库存` "
+"时，会出现一个下拉菜单，提供三种跟踪库存的方式：:guilabel:`按唯一序列号`、:guilabel:`按批次` 或 "
+":guilabel:`按数量`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst-1
 msgid "Configure a tracked good."
-msgstr ""
+msgstr "配置已追踪的货物。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:113
 msgid ""
@@ -4949,23 +4994,24 @@ msgid ""
 "supplies, packaging materials, or items used in production that do not need "
 "to be individually tracked."
 msgstr ""
+"*未追踪*产品（有时称为*非库存*产品）通常在短时间内消耗，这意味着*不需要*维持库存/存货。非库存产品通常是必需品，但没有必要进行精确清点。例如：办公用品、包装材料或生产中使用的不需要单独追踪的物品。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:119
 msgid ""
 "Tick the :guilabel:`Track Inventory` checkbox if it is necessary to track a "
 "product's stock at various locations, for inventory valuation, with lots "
 "and/or serial numbers, or when using reordering rules."
-msgstr ""
+msgstr "如果需要追踪产品在不同地点的库存、库存估价、批次和/或序列号，或使用重新订购规则时，请勾选 :guilabel:`追踪库存` 复选框。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:124
 msgid ""
 ":doc:`Tracking storable products using lot and serial numbers "
 "<../product_tracking>`"
-msgstr ""
+msgstr ":doc:`使用批次和序列号追踪可储存产品 <../product_tracking>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:129
 msgid "Inventory operations by product type"
-msgstr ""
+msgstr "按产品类型进行库存操作"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:131
 msgid ""
@@ -4973,17 +5019,19 @@ msgid ""
 "<inventory/product_management/tracking-inventory>` affects common "
 "**Inventory** operations, like transfers and reordering rules."
 msgstr ""
+":ref:`物品是否被追踪 <inventory/product_management/tracking-inventory>` 会影响常见的 "
+"**库存** 操作，如转移和重新排序规则。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:134
 msgid ""
 "The table below summarizes which operations (and smart buttons) are enabled "
 "for tracked vs. untracked goods. Click highlighted chart items to navigate "
 "to detailed sections and related documents."
-msgstr ""
+msgstr "下表总结了哪些操作（和智能按钮）针对已追踪货物和未追踪货物启用。点击突出显示的图表项，可浏览详细章节和相关文件。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:142
 msgid "Inventory operation"
-msgstr ""
+msgstr "库存操作"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:143
 msgid "Tracked"
@@ -4991,11 +5039,11 @@ msgstr "已跟踪"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:144
 msgid "Untracked"
-msgstr ""
+msgstr "未追踪"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:145
 msgid ":ref:`Show on-hand quantity <inventory/product_management/on-hand>`"
-msgstr ""
+msgstr ":ref:`显示库存数量 <inventory/product_management/on-hand>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:146
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:149
@@ -5031,17 +5079,17 @@ msgstr "否"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:148
 msgid ":ref:`Show forecasted quantity <inventory/product_management/on-hand>`"
-msgstr ""
+msgstr ":ref:`显示预测数量 <inventory/product_management/on-hand>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:151
 msgid ""
 ":ref:`Use reordering rules <inventory/product_management/replenishment>`"
-msgstr ""
+msgstr ":ref:`使用重新订购规则 <inventory/product_management/replenishment>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:154
 msgid ""
 ":ref:`Can be included in a purchase order <inventory/product_management/po>`"
-msgstr ""
+msgstr ":ref:`可包含在采购订单中 <inventory/product_management/po>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:157
 msgid ":ref:`Use putaway rules <inventory/product_management/putaway>`"
@@ -5097,7 +5145,7 @@ msgstr ""
 msgid ""
 "A tracked product's on-hand and forecasted quantities, based on incoming and"
 " outgoing orders, are reflected on the product form with two smart buttons:"
-msgstr ""
+msgstr "根据入库和出库订单，已追踪产品的在库数量和预测数量可通过两个智能按钮反映在产品表单上："
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:197
 msgid ""
@@ -5105,6 +5153,7 @@ msgid ""
 " units currently available in inventory. Click the button to view or add "
 "stock levels for a tracked product."
 msgstr ""
+":icon:`fa-cubes` :guilabel:`现有数量`：表示当前库存中可用的单位数量。点击该按钮可查看或添加追踪产品的库存水平。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:199
 msgid ""
@@ -5114,6 +5163,9 @@ msgid ""
 "quantity} + \\text{incoming shipments} - \\text{outgoing shipments}`. Click "
 "the button to view the :guilabel:`Forecasted Report`."
 msgstr ""
+":icon:`fa-area-chart` :guilabel:`已预测`：这表示在考虑所有订单后，库存中*预计*可用的单位数量。换句话说， "
+":math:`text{forecasted} = \\text{库存数量｝ + （text{incoming shipments} - "
+"（text{outgoing shipments}）。点击按钮查看 :guilabel:`预测报告`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:204
 msgid ""
@@ -5121,6 +5173,7 @@ msgid ""
 "Consequently, :guilabel:`On-Hand Quantity` is not tracked, and there is no "
 ":guilabel:`Forecasted` quantity available."
 msgstr ""
+"另一方面，未追踪的产品被视为 *始终* 可用。因此，:guilabel:`现有数量` 不会被追踪，也没有 :guilabel:`预测数量`可用。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:211
 msgid "Putaway rules and storage"
@@ -5301,14 +5354,16 @@ msgid ""
 "select any operation, and tick the :guilabel:`Move Entire Packages` "
 "checkbox."
 msgstr ""
+"此外，如果启用了 *移动整个包装* 功能，则移动一个包装会更新包含的已跟踪产品的位置，但不会更新包含的未追踪产品的位置。要启用此功能，请导航至 "
+":menuselection:`库存应用程序 --> 配置 --> 操作类型`，选择任何操作，并勾选 :guilabel:`移动整个包装` 复选框。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:324
 msgid "Inventory reports"
-msgstr ""
+msgstr "库存报告"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:326
 msgid "**Only** tracked products appear on the following reports."
-msgstr ""
+msgstr "**只有**已追踪的产品才会出现在以下报告中。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:329
 msgid ""
@@ -5776,17 +5831,19 @@ msgid ""
 "the :guilabel:`Stock Valuation` section, tick the :guilabel:`Automatic "
 "Accounting` checkbox. Then, click :guilabel:`Save`."
 msgstr ""
+"要使用自动库存估价，请安装 *会计* 应用程序。然后，进入 :menuselection:`会计应用程序 --> 配置 --> 设置`，在 "
+":guilabel:`库存估值` 部分，勾选 :guilabel:`自动会计` 复选框。然后，点击 :guilabel:`保存`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:65
 msgid ""
 "Enabling :guilabel:`Automatic Accounting` shows the previously invisible "
 "*Inventory Valuation* field on a product category."
-msgstr ""
+msgstr "启用 :guilabel:`自动会计` 会显示产品类别上以前不可见的 *库存估值* 字段。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst-1
 msgid ""
 "Automatic Accounting feature in Stock Valuation section of Settings page."
-msgstr ""
+msgstr "设置页面库存估值部分的自动会计功能。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:72
 msgid ""
@@ -5795,10 +5852,12 @@ msgid ""
 "sections of documentation for details on configuring the accounting journals"
 " shown."
 msgstr ""
+"有关配置所示会计日记账的详情，请参阅文档中的 :ref:`费用 <inventory/warehouses_storage/expense-"
+"account>` 和 :ref:`库存输入/输出<inventory/warehouses_storage/stock-account>` 部分。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:79
 msgid "Product category setup"
-msgstr ""
+msgstr "产品类别设置"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:81
 msgid ""
@@ -5806,6 +5865,8 @@ msgid ""
 "<inventory/warehouses_storage/accounting-setup>`, the next step is to set "
 "the product category to use automatic inventory valuation."
 msgstr ""
+"在 :ref:`启用库存估值 <inventory/warehouses_storage/accounting-setup>` "
+"之后，下一步是设置产品类别以使用自动库存估价。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:84
 msgid ""
@@ -6004,11 +6065,11 @@ msgstr "4"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:151
 msgid "2 * $10"
-msgstr ""
+msgstr "2 * $10"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:152
 msgid "$40"
-msgstr ""
+msgstr "$40"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:154
 msgid "Average Cost (AVCO)"
@@ -6020,7 +6081,7 @@ msgid ""
 "product, divided by the total number of available stock on-hand. With this "
 "costing method, inventory valuation is *dynamic*, and constantly adjusts "
 "based on the purchase price of products."
-msgstr ""
+msgstr "根据产品的平均成本除以现有库存总数来计算产品的价值。使用这种成本计算方法，存货估值是*动态*的，会根据产品的购买价格不断调整。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:180
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:185
@@ -6058,7 +6119,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:192
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:264
 msgid "2 * $6"
-msgstr ""
+msgstr "2 * $6"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:193
 msgid "$36"
@@ -6691,7 +6752,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_one_step.rst:54
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps.rst:77
 msgid "Create purchase order"
-msgstr ""
+msgstr "创建采购订单"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst:79
 msgid ""
@@ -6745,6 +6806,9 @@ msgid ""
 "upload` :guilabel:`(cloud with arrow)` icon to manually save and update the "
 "draft bill."
 msgstr ""
+"然后，在 :guilabel:`发票行` 选项卡下，点击 :guilabel:`添加一行`，并点击 :guilabel:`产品` "
+"列中的下拉菜单，选择先前创建的落地成本产品。点击 :icon:`fa-cloud-upload`:guilabel:`（带箭头的云）` "
+"图标，手动保存和更新账单草稿。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs.rst-1
 msgid "Landed Costs column checkboxes for product and landed cost."
@@ -30621,10 +30685,12 @@ msgid ""
 ":guilabel:`Operations` section, tick the checkbox for :guilabel:`By-"
 "Products` to enable the feature."
 msgstr ""
+"要在 |BOM| 中添加副产品，首先在 :menuselection:`制造应用程序 --> 配置 --> 设置` 中启用*副产品*功能。在 "
+":guilabel:`操作` 部分，勾选 :guilabel:`副产品` 复选框以启用该功能。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst-1
 msgid "\"By Products\" feature in the settings page."
-msgstr ""
+msgstr "设置页面中的“副产品”功能。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:249
 msgid ""
@@ -30634,16 +30700,19 @@ msgid ""
 "Measure`. Optionally, specify a :guilabel:`Produced in Operation` for the "
 "by-product."
 msgstr ""
+"启用该功能后，点击 :guilabel:`副产品` 选项卡，将副产品添加到 |BOM| 中。点击 :guilabel:`添加行`，填写 "
+":guilabel:`副产品`、:guilabel:`数量` 和:guilabel:`计量单位`。可选择为副产品指定 "
+":guilabel:`操作中生产`。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:255
 msgid ""
 "The by-product, `Mush`, is created in the `Grind grapes` operation when "
 "producing `Red Wine`."
-msgstr ""
+msgstr "副产品 `麝香` 是在生产 `红葡萄酒` 的 `磨葡萄` 过程中产生的。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:0
 msgid "Show sample by-product in the BoM."
-msgstr ""
+msgstr "在 BoM 中展示副产品样本。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:3
 msgid "Manufacturing product configuration"
@@ -30696,28 +30765,32 @@ msgid ""
 ":guilabel:`Inventory` tab. In the :guilabel:`Tracking` field, select "
 ":guilabel:`By Unique Serial Number` or :guilabel:`By Lots`."
 msgstr ""
+"为新生产的产品分配批号或序列号是可选的。要选择 :doc:` 为新生产的产品分配批次或序列号 "
+"<.../.../inventory/product_management/product_tracking>`，请转到 :guilabel:`库存` "
+"选项卡中的 :guilabel:`可追溯性` 部分。在 :guilabel:`追踪` 字段中，选择 :guilabel:`按唯一序列号` 或 "
+":guilabel:`按批次`。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:38
 msgid ""
 "Doing so enables the *Lot/Serial Number* field on a manufacturing order, or "
 "the *Register Production* instruction on a work order card in the *Shop "
 "Floor* app."
-msgstr ""
+msgstr "这样做可以启用制造订单上的 *批次/序列号* 字段，或 *车间*应用程序中工单卡上的*登记生产*指令。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:45
 msgid "\"Lot/Serial Number\" field on the MO."
-msgstr ""
+msgstr "制造订单上的 “批次/序列号” 字段。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:45
 msgid "**Lot/Serial Number** field on the MO."
-msgstr ""
+msgstr "制造订单上的 **批次/序列号** 字段。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:51
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:51
 msgid ""
 "**Register Production** option to generate lot/serial number on a work order"
 " card."
-msgstr ""
+msgstr "**登记生产** 选项可在工作订单卡上生成批次/序列号。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/configure_manufacturing_product.rst:54
 msgid "Configure a bill of materials (BoM)"
@@ -30804,10 +30877,12 @@ msgid ""
 "For more information about bills of materials, see the documentation on how "
 "to :doc:`create a bill of materials <bill_configuration>`."
 msgstr ""
+"上节提供了创建基本 |BOM| 的说明，以便在 Odoo 中生产产品。然而，这绝不是对配置 |BOM| "
+"时所有可用选项的详尽总结。有关物料清单的更多信息，请参阅文档 :doc:`创建物料清单<bill_configuration>`。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:3
 msgid "Manufacturing order costs"
-msgstr ""
+msgstr "制造订单成本"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:11
 msgid ""
@@ -30817,12 +30892,14 @@ msgid ""
 "complete each manufacturing order (MO), as well as the average production "
 "cost of a product, based on all completed |MOs|."
 msgstr ""
+"在确定产品盈利能力时，准确计算产品制造成本的能力至关重要。Odoo **制造** "
+"应用程序可自动计算完成每个制造订单（MO）的成本，并根据所有已完成的制造订单计算产品的平均生产成本，从而简化了计算过程。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:17
 msgid ""
 "Odoo's Manufacturing app distinguishes between the *MO cost* and the *real "
 "cost* of an |MO|."
-msgstr ""
+msgstr "Odoo “制造” 应用程序可区分 *MO 成本* 和 |MO| 的*实际成本*。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:19
 msgid ""
@@ -30831,6 +30908,7 @@ msgid ""
 "takes into account the cost and quantity of components, as well as the cost "
 "of completing the necessary operations."
 msgstr ""
+"MO 成本代表根据产品物料清单（BOM）的配置，完成一个制造订单*应该*花费的金额。这个成本计算考虑了组件的成本和数量，以及完成必要作业的成本。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:23
 msgid ""
@@ -30840,10 +30918,12 @@ msgid ""
 "component quantity might be needed than was specified on the |BoM|, or the "
 "price of components may change during manufacturing."
 msgstr ""
+"实际成本代表完成 |MO| 的*实际*成本。一些因素会导致实际成本与 |MO| 成本不同。例如，完成一项操作所需的时间可能比预计的长，所需组件数量可能比"
+" |BoM| 上指定的多，或者组件价格在制造过程中可能会发生变化。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:29
 msgid "Cost configuration"
-msgstr ""
+msgstr "成本配置"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:31
 msgid ""
@@ -30853,10 +30933,12 @@ msgid ""
 "costs of the work centers where those operations are carried out, and the "
 "amount paid to each employee who works on an operation."
 msgstr ""
+"Odoo 根据用于制造产品的 |BoM| 配置计算 |MO| 成本。该计算包括 |BoM| "
+"上列出的组件和操作的成本和数量，以及执行这些操作的工作中心的运营成本和支付给每个操作员工的金额。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:37
 msgid "Component cost"
-msgstr ""
+msgstr "组件成本"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:39
 msgid ""
@@ -30867,6 +30949,8 @@ msgid ""
 "field of the :guilabel:`General Information` tab, on the component's product"
 " form."
 msgstr ""
+"组件成本根据所有采购订单（PO）中组件的平均采购成本自动计算。要查看组件成本，请导航至 :guilabel:`库存应用程序 --> 产品 --> "
+"产品`，然后选择组件产品。成本显示在组件产品表单中 :guilabel:`一般信息` 标签页的 :guilabel:`成本` 字段中。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:44
 msgid ""
@@ -30876,10 +30960,12 @@ msgid ""
 "value, resetting the :guilabel:`Cost` field back to an automatically "
 "computed value."
 msgstr ""
+"通过点击组件产品表单上的 :guilabel:`成本` 字段并输入数值，可以手动设置组件的成本。但是，组件今后的任何 |PO| "
+"都会覆盖手动输入的值，从而将 :guilabel:`成本` 字段重置为自动计算值。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:52
 msgid "Work center cost"
-msgstr ""
+msgstr "工作中心成本"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:54
 msgid ""
@@ -30887,6 +30973,7 @@ msgid ""
 ":menuselection:`Manufacturing app --> Configuration --> Work Centers`, and "
 "select a work center."
 msgstr ""
+"要设置特定工作中心的运营成本，请导航至 :menuselection:`制造应用程序 --> 配置 --> 工作中心`，然后选择一个工作中心。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:57
 msgid ""
@@ -30894,6 +30981,8 @@ msgid ""
 "the :guilabel:`per workcenter` field, located beside the :guilabel:`Cost per"
 " hour` section on the work center's :guilabel:`General Information` tab."
 msgstr ""
+"要设置工作中心运行一小时的成本，请在工作中心 :guilabel:`一般信息` 选项卡上 :guilabel:`每小时成本` 部分旁边的 "
+":guilabel:`每个工作中心` 字段中输入数值。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:61
 msgid ""
@@ -30904,12 +30993,15 @@ msgid ""
 "employee` field, it costs $25.00 per hour for *each* employee working at the"
 " work center."
 msgstr ""
+"要设置工作中心每位员工的每小时成本，请在工作中心的 :guilabel:`一般信息` 选项卡上 :guilabel:`每小时成本` 部分旁边的 "
+":guilabel:`每名员工` 字段中输入数值。例如，如果在 :guilabel:`每名员工` "
+"字段中输入了`25.00`，则在工作中心工作的*每*名员工每小时的成本为 $25.00。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:68
 msgid ""
 "The value entered in the :guilabel:`per employee` field is only used to "
 "calculate the |MO| cost, which is the estimated cost of completing the |MO|."
-msgstr ""
+msgstr "在 :guilabel:`每名员工` 字段中输入的值仅用于计算 |MO| 成本，即完成 |MO| 的估计成本。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:71
 msgid ""
@@ -30917,6 +31009,7 @@ msgid ""
 "Instead of using the value entered in the :guilabel:`per employee` field, "
 "the real cost is calculated using the hourly cost specific to each employee."
 msgstr ""
+"完成 |MO| 的实际成本由实际成本表示。实际成本不是使用在 :guilabel:`每名员工` 字段中输入的值，而是使用每个员工的特定小时成本计算。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:75
 msgid ""
@@ -30925,16 +31018,20 @@ msgid ""
 "order there, the |MO| cost (estimated) is calculated using the $50/hr cost, "
 "while the real cost is calculated using the $60/hr cost."
 msgstr ""
+"例如，如果某个工作中心的 :guilabel:`每名员工` 成本为 '$50.00'，而一名每小时成本为 '$60.00' "
+"的员工在该工作中心完成了一个工单，则 |MO| 成本（估算）将使用 $50/小时的成本计算，而实际成本将使用 $60/小时的成本计算。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:79
 msgid ""
 "See the :ref:`employee cost section <manufacturing/mo-costs/employee-cost>` "
 "below for information on how to set the cost for specific employees."
 msgstr ""
+"有关如何为特定员工设置成本的信息，请参阅下面的 :ref:`员工成本部分 <manufacturing/mo-costs/employee-"
+"cost>`。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:85
 msgid "Employee cost"
-msgstr ""
+msgstr "员工成本"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:87
 msgid ""
@@ -30944,6 +31041,8 @@ msgid ""
 "the :guilabel:`Hourly Cost` field of the :guilabel:`Application Settings` "
 "section."
 msgstr ""
+"要为特定员工设置每小时成本，请浏览 :menuselection:`员工` 应用程序并选择一名员工。在该员工的表单中，选择 :guilabel:`设置`"
+" 选项卡，并在 :guilabel:`应用程序设置` 部分的 :guilabel:`每小时成本` 字段中输入该员工的费率。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:93
 msgid ""
@@ -30953,10 +31052,13 @@ msgid ""
 "|MO|. The estimated cost of an |MO|, referred to as the |MO| cost, uses the "
 "per employee cost set on each work center's form."
 msgstr ""
+"如上文 :ref:`工作中心成本部分 <manufacturing/mo-costs/work-center-cost>` 所述，在员工表单的 "
+":guilabel:`每小时成本` 字段中输入的值将用于计算 |MO| "
+"实际成本。估计的|MO|成本（称为|MO|成本）使用每个工作中心表单上设置的每位员工成本。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:99
 msgid "|BoM| configuration"
-msgstr ""
+msgstr "|BoM| 配置"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:101
 msgid ""
@@ -30965,6 +31067,8 @@ msgid ""
 "required quantity specified. Second, operations **must** be added, along "
 "with the work centers where they are carried out."
 msgstr ""
+"配置 |BoM| 使 Odoo 能够准确计算使用该 |BoM| 的 |MO| "
+"成本需要两个步骤。首先，必须添加组件，并指定所需数量。其次，**必须**添加操作以及执行这些操作的工作中心。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:105
 msgid ""
@@ -30972,6 +31076,8 @@ msgid ""
 "Bills of Materials`. Select a |BoM|, or create a new one by clicking "
 ":guilabel:`New`."
 msgstr ""
+"首先，导航至 :menuselection:`制造应用程序 --> 产品 --> 物料清单`。选择一个物料清单，或点击 :guilabel:`新建` "
+"创建一个新的物料清单。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:108
 msgid ""
@@ -30980,6 +31086,8 @@ msgid ""
 "menu in the :guilabel:`Component` column, and entering the quantity in the "
 ":guilabel:`Quantity` column."
 msgstr ""
+"在 |BoM| 表单的:guilabel:`组件` 选项卡中，点击 :guilabel:`添加一行`，从:guilabel:`组件` "
+"栏的下拉菜单中选择组件，并在 :guilabel:`数量` 栏中输入数量，即可添加每个组件。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:112
 msgid ""
@@ -30987,13 +31095,15 @@ msgid ""
 ":guilabel:`Add a line` to open the :guilabel:`Create Operations` pop-up "
 "window. Enter a title for the operation in the :guilabel:`Operation` field."
 msgstr ""
+"在 :guilabel:`操作` 选项卡中，点击 :guilabel:`添加一行` 打开 :guilabel:`创建操作` 弹出窗口，添加操作。在 "
+":guilabel:`操作` 字段中输入操作的标题。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:116
 msgid ""
 "Select the :guilabel:`Work Center` where the operation is carried out. Then,"
 " add a :guilabel:`Default Duration`, which is the estimated amount of time "
 "the operation takes to complete."
-msgstr ""
+msgstr "选择执行操作的 :guilabel:`工作中心`。然后，添加 :guilabel:`默认持续时间`，即估计完成操作所需的时间。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:119
 msgid ""
@@ -31002,6 +31112,8 @@ msgid ""
 ":guilabel:`Default Duration` field is always used as the expected duration "
 "of the operation."
 msgstr ""
+"默认情况下，:guilabel:`持续时间计算` 字段设置为:guilabel:`手动设置持续时间`，这意味着在:guilabel:`默认持续时间` "
+"字段中输入的数字始终用作操作的预期持续时间。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:123
 msgid ""
@@ -31011,12 +31123,14 @@ msgid ""
 "Before there are work orders to compute this duration, the value in the "
 ":guilabel:`Default Duration` field is used instead."
 msgstr ""
+"选择 :guilabel:`根据追踪时间计算` 会使 Odoo 根据一定数量的工单自动计算 :guilabel:`默认持续时间`，该数量在 "
+":guilabel:`基于` 字段中设置。如果没有工单来计算工期，则使用 :guilabel:`默认持续时间` 字段中的值。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:128
 msgid ""
 "The hourly cost of operating the work center, and the duration of the "
 "operation, are used to calculate the operation's cost."
-msgstr ""
+msgstr "工作中心每小时的运营成本和运营持续时间，都用来计算运营成本。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:131
 msgid ""
@@ -31025,16 +31139,18 @@ msgid ""
 "click :guilabel:`Save & New` to add the operation to the |BoM|, and open a "
 "blank :guilabel:`Create Operations` pop-up window to add another operation."
 msgstr ""
+"最后，点击 :guilabel:`保存并关闭` 将操作添加到 |BoM|，并关闭 :guilabel:`创建操作` 弹出窗口。或者，点击 "
+":guilabel:`保存和新建` 将操作添加到 |BoM|，并打开空白的 :guilabel:`创建操作` 弹出窗口以添加其他操作。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:137
 msgid ""
 "For a full overview of |BoM| configuration, see the documentation on "
 ":doc:`bills of materials <bill_configuration>`."
-msgstr ""
+msgstr "有关 |BoM| 配置的完整概述，请参阅 :doc:`物料清单<bill_configuration>` 说明文档。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:141
 msgid "|MO| overview"
-msgstr ""
+msgstr "|MO| 概述"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:143
 msgid ""
@@ -31044,6 +31160,9 @@ msgid ""
 "Manufacturing Orders`, and select an |MO|. Then, click the :icon:`fa-bars` "
 ":guilabel:`Overview` smart button at the top of the |MO|."
 msgstr ""
+"每个 |MO| 都有一个*概述*页面，列出有关 |MO| 的各种信息，包括 |MO| 成本和实际成本。要查看 |MO| 概述，请导航至 "
+":menuselection:`制造应用程序 --> 操作 --> 制造订单`，然后选择一个 |MO|。然后，点击 |MO| 顶部的 "
+":icon:`fa-bars`:guilabel:`概述` 智能按钮。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:148
 msgid ""
@@ -31052,6 +31171,8 @@ msgid ""
 "page lists a row for each of these values, with the sum of them listed at "
 "the bottom of the :guilabel:`MO Cost` and :guilabel:`Real Cost` columns."
 msgstr ""
+"|MO| 成本和实际成本都考虑了组件的成本和数量，以及完成每个工单的成本。概览页面为每个值都列出一行，它们的总和列在 :guilabel:`MO 成本`"
+" 和 :guilabel:`实际成本` 列的底部。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:152
 msgid ""
@@ -31059,6 +31180,8 @@ msgid ""
 "Cost` columns display the same costs. This is the *estimated* cost of "
 "completing the |MO|."
 msgstr ""
+"在 |MO| 工作开始前，:guilabel:`MO 成本` 和 :guilabel:`实际成本` 列会显示相同的成本。这是完成 |MO| "
+"的*预估*成本。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:155
 msgid ""
@@ -31069,6 +31192,8 @@ msgid ""
 "hourly cost of the employee performing a work order differs from the "
 "employee cost set on the work center."
 msgstr ""
+"但是，一旦工作开始，:guilabel:`实际成本` 列中的值可能会开始偏离 :guilabel:`MO 成本` "
+"列中的值。如果使用的组件数量与|MO|上列出的不同，工单持续时间与预期不同，或执行工单的员工每小时成本与工作中心设定的员工成本不同，就会出现这种情况。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:161
 msgid ""
@@ -31076,14 +31201,16 @@ msgid ""
 "values in the :guilabel:`MO Cost` column update to match those displayed in "
 "the :guilabel:`Real Cost` column."
 msgstr ""
+"点击 :guilabel:`生产全部` 完成 |MO| 后，:guilabel:`MO 成本` 列中的值会更新，以匹配 :guilabel:`实际成本`"
+" 列中显示的值。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst-1
 msgid "The MO Overview page."
-msgstr ""
+msgstr "MO 概览页面。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:169
 msgid "Average manufacturing cost"
-msgstr ""
+msgstr "平均制造成本"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:171
 msgid ""
@@ -31093,6 +31220,8 @@ msgid ""
 ":menuselection:`Inventory app --> Products --> Products`, and select a "
 "product."
 msgstr ""
+"除了产品的每个单独 |MO| 的成本外，Odoo 还会跟踪产品的平均制造成本，同时考虑每个已完成 |MO| 的成本。要查看此信息，请导航至 "
+":menuselection:`库存应用程序 --> 产品 --> 产品` 并选择产品。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:175
 msgid ""
@@ -31101,6 +31230,8 @@ msgid ""
 "tab. The value continues to update as the costs of additional |MOs| are "
 "factored into the average cost."
 msgstr ""
+"产品的制造成本显示在 :guilabel:`一般信息` 标签中的 :guilabel:`成本` 字段中。随着额外 |MO| "
+"的成本计入平均成本，该值会不断更新。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:179
 msgid ""
@@ -31110,6 +31241,8 @@ msgid ""
 "which only takes into account the components and operations listed on the "
 "|BoM|."
 msgstr ""
+"在 :guilabel:`成本` 字段的右边有一个 :guilabel:`从 BoM 计算价格` 按钮，它只出现在至少有一个 |BoM| "
+"的产品上。点击此按钮可将产品成本重置为预期成本，预期成本只考虑 |BoM| 上列出的组件和操作。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:186
 msgid ""
@@ -31117,10 +31250,11 @@ msgid ""
 "price permanently. The cost continues to update based on the average of the "
 "|BoM| price and the real cost of any future |MOs|."
 msgstr ""
+"请注意，点击 :guilabel:`从 BoM 计算价格` 并不会永久设置价格。成本会根据 |BoM| 价格和未来 |MO| 实际成本的平均值持续更新。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:190
 msgid "Example workflow: manufacturing cost"
-msgstr ""
+msgstr "工作流程示例：制造成本"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:193
 msgid ""
@@ -31129,47 +31263,49 @@ msgid ""
 "for the putting green, so Odoo automatically calculates the manufacturing "
 "cost of each putting green |MO|."
 msgstr ""
+"高尔夫产品制造商 *Fairway Fields* 生产各种高尔夫产品，其中包括室内 *推杆果岭*。他们为推杆果岭配置了 |BoM|，因此 Odoo "
+"会自动计算每个推杆果岭的制造成本 |MO|。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:197
 msgid "The |BoM| lists two components:"
-msgstr ""
+msgstr "|BoM| 列出了两个组件："
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:199
 msgid "One unit of *green felt*, which costs $20.00."
-msgstr ""
+msgstr "一个单位的*绿色毛毡*，价格为 $20.00。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:200
 msgid "One unit of a *rubber pad*, which costs $30.00."
-msgstr ""
+msgstr "一个单位的*橡胶垫*，价格为 $30.00。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:202
 msgid ""
 "The |BoM| also lists four operations, all of which are carried out at "
 "*Assembly Station 1*, which has an hourly operating cost of $30.00. Those "
 "operations are as follows:"
-msgstr ""
+msgstr "物料清单 |BoM| 还列出了四个作业，这些作业都在*装配工位1*进行，该工位的每小时运营成本为 $30.00。这些作业如下："
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:205
 msgid ""
 "*Cut felt*: default duration of seven minutes, for a total cost of $3.50."
-msgstr ""
+msgstr "*切毡*：默认持续时间为 7 分钟，总费用为 $3.50。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:206
 msgid ""
 "*Cut rubber pad*: default duration of five minutes, for a total cost of "
 "$2.50."
-msgstr ""
+msgstr "*切割橡胶垫*：默认时间为 5 分钟，总费用为 $2.50。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:207
 msgid ""
 "*Attach pad to felt*: default duration of 15 minutes, for a total cost of "
 "$7.50."
-msgstr ""
+msgstr "*将垫子粘贴到毛毡上*：默认持续时间为 15 分钟，总费用为 $7.50。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:208
 msgid ""
 "*Cut holes*: default duration of three minutes, for a total cost of $1.50."
-msgstr ""
+msgstr "*切孔*：默认持续时间为 3 分钟，总费用为 $1.50。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:210
 msgid ""
@@ -31178,6 +31314,8 @@ msgid ""
 "cost of $65.00. This cost is reflected in the :guilabel:`Cost` field on the "
 "putting green's product form."
 msgstr ""
+"生产一个果岭所需的组件总成本为 $50.00，所需的操作成本为 $15.00，总制造成本为 $65.00。该成本反映在果岭产品表格的 "
+":guilabel:`成本` 字段中。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:214
 msgid ""
@@ -31185,10 +31323,12 @@ msgid ""
 "starts, the |MO| overview lists a cost of `$65.00` in both the :guilabel:`MO"
 " Cost` and :guilabel:`Real Cost` fields."
 msgstr ""
+"Fairway Fields 确认了一个推杆果岭的 |MO|。在生产开始前，|MO| 概览在 :guilabel:`MO 成本` 和 "
+":guilabel:`实际成本` 字段中列出了 `$65.00` 的成本。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst-1
 msgid "The MO Overview page for one putting green, before production starts."
-msgstr ""
+msgstr "生产开始前，一个推杆果岭的 MO 概述页面。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:222
 msgid ""
@@ -31197,10 +31337,12 @@ msgid ""
 "the |BoM| is reflected on the |MO| overview, which now lists a "
 ":guilabel:`Real Cost` of `$70.00`."
 msgstr ""
+"生产开始，操作时间比预期长 10 分钟，总生产时间为 40 分钟。与 |BoM| 的偏差反映在 |MO| 概览上，现在列出的 "
+":guilabel:`实际成本` 为 `$70.00`。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst-1
 msgid "The MO Overview page for one putting green, during production."
-msgstr ""
+msgstr "一个推杆果岭在生产过程中的 MO 概述页面。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:230
 msgid ""
@@ -31208,6 +31350,8 @@ msgid ""
 "overview updates again, so the values in the :guilabel:`MO Cost` and "
 ":guilabel:`Real Cost` columns match, each displaying a value of `$70.00`."
 msgstr ""
+"一旦制造完成，|MO| 被标记为 *已完成*，|MO| 概览会再次更新，因此 :guilabel:`MO 成本` 列和 :guilabel:`实际成本`"
+" 列的值会匹配，各自显示 `$70.00`。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/mo_costs.rst:234
 msgid ""
@@ -31215,10 +31359,12 @@ msgid ""
 " a cost of `$67.50`, the average of the original cost of $65.00 and the real"
 " cost of $70.00 from the |MO|."
 msgstr ""
+"在推杆果岭的产品页面上，:guilabel:`成本` 字段现在显示的成本为 `$67.50`，这是原始成本 $65.00 和来自 |MO| 的实际成本 "
+"$70.00 的平均值。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:3
 msgid "One-step manufacturing"
-msgstr ""
+msgstr "一步制造"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:9
 msgid ""
@@ -31230,6 +31376,8 @@ msgid ""
 "manufactured, but the act of transferring them to and from inventory is not "
 "tracked."
 msgstr ""
+"Odoo *制造* 允许用户使用一步、两步或三步制造产品。使用一步制造时，Odoo "
+"会创建制造订单（MO），但不会生成将组件从库存移出或将成品移入库存的转账。库存计数仍会根据使用的组件和制造的产品数量进行更新，但不会追踪将组件和产品转入或转出库存的行为。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:16
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:15
@@ -31241,6 +31389,8 @@ msgid ""
 ":menuselection:`Inventory --> Configuration --> Warehouses`, and then select"
 " a warehouse from the :guilabel:`Warehouses` screen."
 msgstr ""
+"制造中使用的步数是在仓库级别设置的，允许每个仓库使用不同的步数。要更改特定仓库使用的步数，首先导航到 :menuselection:`库存 --> 配置"
+" --> 仓库`，然后从 :guilabel:`仓库` 屏幕选择一个仓库。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:21
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:20
@@ -31252,12 +31402,15 @@ msgid ""
 "then manufacture (2 steps)`, or :guilabel:`Pick components, manufacture and "
 "then store products (3 steps)`."
 msgstr ""
+"在:guilabel:`仓库配置` 选项卡上，找到 :guilabel:`制造` "
+"单选输入字段，并从以下三个选项中选择一个：:guilabel:`制造（1 步）`、:guilabel:`挑选组件然后制造（2 步）` "
+"或:guilabel:`挑选组件、制造然后存储产品（3 步）`。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:0
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:0
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:0
 msgid "The Manufacture radio input field on a warehouse configuration page."
-msgstr ""
+msgstr "仓库配置页面上的制造单选输入字段。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:31
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:30
@@ -31268,12 +31421,14 @@ msgid ""
 ":ref:`configure a product for manufacturing "
 "<manufacturing/management/configure-manufacturing-product>`."
 msgstr ""
+"在 Odoo 中制造产品之前，必须正确配置产品。有关如何进行配置的详细信息，请参阅有关如何 :ref:`为制造 "
+"<manufacturing/management/configure-manufacturing-product>` 配置产品的文档。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:36
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:35
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:36
 msgid "Create manufacturing order"
-msgstr ""
+msgstr "创建制造订单"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:38
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:37
@@ -31283,6 +31438,8 @@ msgid ""
 ":menuselection:`Manufacturing --> Operations --> Manufacturing Orders`, and "
 "then click :guilabel:`New` to create a new |MO|."
 msgstr ""
+"要在 Odoo *制造* 中制造产品，首先导航到:menuselection:`制造 --> 操作 --> 制造订单`，然后点击 "
+":guilabel:`新建`创建一个新的|MO|。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:42
 msgid ""
@@ -31290,6 +31447,8 @@ msgid ""
 ":guilabel:`Product` drop-down menu. The :guilabel:`Bill of Material` field "
 "auto-populates with the associated bill of materials (BoM)."
 msgstr ""
+"在新的 |MO| 上，从 :guilabel:`产品` 下拉菜单中选择要生产的产品。guilabel:`物料清单` "
+"字段会自动填充相关的物料清单（BoM）。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:45
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:44
@@ -31299,6 +31458,8 @@ msgid ""
 "can be selected in the :guilabel:`Bill of Material` field, and the "
 ":guilabel:`Product` field auto-populates with the associated product."
 msgstr ""
+"如果一个产品配置了多个|BOM|，可在 :guilabel:`物料清单` "
+"字段中选择特定的|BOM|，:guilabel:`产品`字段会自动填充相关产品。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:49
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:48
@@ -31311,6 +31472,9 @@ msgid ""
 ":guilabel:`Components` and :guilabel:`Work Orders` tabs by clicking "
 ":guilabel:`Add a line`."
 msgstr ""
+"选择|BOM|后，:guilabel:`组件` 和:guilabel:`工单` 选项卡会自动填充 |BOM| 上指定的组件和操作。如果正在配置的 "
+"|MO| 需要其他组件或操作，请点击 :guilabel:`添加行` 将其添加到 :guilabel:`组件` 和 :guilabel:`工单` "
+"选项卡。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:54
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:53
@@ -31322,7 +31486,7 @@ msgstr "最后，单击 :guilabel:`确认`，以确认 |MO|。"
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:80
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:77
 msgid "Process manufacturing order"
-msgstr ""
+msgstr "处理制造订单"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:59
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:82
@@ -31331,13 +31495,13 @@ msgid ""
 "An |MO| is processed by completing all of the work orders listed under its "
 ":guilabel:`Work Orders` tab. This can be done on the |MO| itself, or from "
 "the work order tablet view."
-msgstr ""
+msgstr "完成其 :guilabel:`工作订单` 标签下列出的所有工单后，就可以处理一个 |MO|。这可以在 |MO| 本身或工单平板视图中完成。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:63
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:86
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:83
 msgid "Basic workflow"
-msgstr ""
+msgstr "基本工作流程"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:65
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:85
@@ -31346,6 +31510,7 @@ msgid ""
 ":menuselection:`Manufacturing --> Operations --> Manufacturing Orders`, and "
 "then select an |MO|."
 msgstr ""
+"要从 |MO| 本身完成工单，首先要导航到 :menuselection:`制造 --> 操作 --> 制造订单`，然后选择一个 |MO|。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:68
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:91
@@ -31356,10 +31521,12 @@ msgid ""
 "starts a timer that keeps track of how long the work order takes to "
 "complete."
 msgstr ""
+"在 |MO| 页面，选择 :guilabel:`工作订单` 选项卡。一旦开始处理需要完成的第一个工单，请点击该工单的 :guilabel:`开始` "
+"按钮。然后，Odoo *制造* 会启动一个计时器，记录工单完成所需的时间。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst-1
 msgid "The Start button for an operation on a manufacturing order."
-msgstr ""
+msgstr "制造订单操作的开始按钮。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:76
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:99
@@ -31369,10 +31536,11 @@ msgid ""
 " work order. Repeat the same process for each work order listed on the "
 ":guilabel:`Work Orders` tab."
 msgstr ""
+"工单完成后，点击该工单的 :guilabel:`已完成` 按钮。对 :guilabel:`工作订单` 选项卡上列出的每个工单重复同样的过程。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst-1
 msgid "The Done button for an operation on a manufacturing order."
-msgstr ""
+msgstr "制造订单操作的 “已完成” 按钮。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:83
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:106
@@ -31489,6 +31657,8 @@ msgid ""
 " in the :guilabel:`Units` field, and then click :guilabel:`Validate` to "
 "register that number."
 msgstr ""
+"如果必须输入不同的数字，请点击 :guilabel:`登记生产` 步骤打开弹出窗口。在 :guilabel:`单位` 字段中输入生产单位数，然后点击 "
+":guilabel:`验证` 以登记该数字。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:131
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:154
@@ -31497,7 +31667,7 @@ msgid ""
 "The *Register Production* step appears on every work order card. It must be "
 "completed for the first work order that is processed. After doing so, the "
 "step appears as already completed for each remaining work order in the |MO|."
-msgstr ""
+msgstr "*登记生产* 步骤出现在每张工单卡上。必须为处理的第一张工单完成该步骤。完成该步骤后，|MO| 中的每个剩余工单都会显示为已完成。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:135
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:158
@@ -31509,6 +31679,8 @@ msgid ""
 "Done`. If there are no additional work orders to complete, the button is "
 "titled :guilabel:`Close Production`."
 msgstr ""
+"完成工单的所有步骤后，工单卡的页脚会出现一个按钮。如果必须先完成其他工单才能关闭该工单，则按钮标题为 "
+":guilabel:`标记为已完成`。如果没有其他工单要完成，按钮标题为 :guilabel:`关闭生产`。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:140
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:163
@@ -31521,6 +31693,8 @@ msgid ""
 "out. Any additional work orders can be processed using the instructions "
 "detailed in this section."
 msgstr ""
+"点击 :guilabel:`标记为已完成` 会使工单卡片消失。一旦工单卡完全消失，工单的状态就会在|MO|上标记为*已完成*，下一张工单就会出现在 "
+"*车间* 模块中，并出现在工作中心的页面上，该工作中心被配置为执行下一张工单。任何其他工单都可以使用本节的详细说明进行处理。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:146
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:169
@@ -31529,7 +31703,7 @@ msgid ""
 "Clicking :guilabel:`Close Production` causes the work order card to fade "
 "away. Once it disappears, the |MO| is marked as *Done*, and the units of the"
 " product that were produced are entered into inventory."
-msgstr ""
+msgstr "点击 :guilabel:`关闭生产` 会使工单卡消失。一旦消失，|MO|就会被标记为*完成*，生产的产品单位就会被记入库存。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:150
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:173
@@ -31540,6 +31714,8 @@ msgid ""
 ":guilabel:`Undo` button before the work order card fades away to keep the "
 "work order open."
 msgstr ""
+"点击 :guilabel:`标记为已完成` 或 :guilabel:`关闭生产` 后，每个按钮都会被 :guilabel:`撤消` "
+"按钮取代。在工单卡消失前点击 :guilabel:`撤消` 按钮，以保持工单打开。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/one_step_manufacturing.rst:155
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:178
@@ -31550,6 +31726,8 @@ msgid ""
 "features, please see the :ref:`Shop Floor overview "
 "<manufacturing/shop_floor/shop_floor_overview>` documentation."
 msgstr ""
+"本节详细介绍在 *车间* 模块中处理 |MO| 的基本工作流程。有关该模块及其所有功能的更深入解释，请参阅 :ref:`车间概述 "
+"<manufacturing/shop_floor/shop_floor_overview>` 说明文档。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:3
 msgid "Three-step manufacturing"
@@ -31573,13 +31751,13 @@ msgid ""
 ":guilabel:`Product` drop-down menu. The :guilabel:`Bill of Material` field "
 "auto-populates with the associated Bill of Materials (BoM)."
 msgstr ""
-"在新的 |MO| 上，从 :guilabel:`产品` "
-"下拉菜单中选择要生产的产品。guilabel:`物料清单'字段会自动填充相关的物料清单（BoM）。"
+"在新的 |MO| 上，从 :guilabel:`产品` 下拉菜单中选择要生产的产品。guilabel:`物料清单` "
+"字段会自动填充相关的物料清单（BoM）。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:56
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/two_step_manufacturing.rst:57
 msgid "Process pick components transfer"
-msgstr ""
+msgstr "处理组件领料调拨"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:58
 msgid ""
@@ -31631,15 +31809,15 @@ msgid ""
 "To complete work orders from the |MO| itself, begin by navigating to "
 ":menuselection:`Manufacturing --> Operations --> Manufacturing Orders`, and "
 "then select a manufacturing order."
-msgstr "要从 |MO| 本身完成工单，首先要导航到:menuselection:`制造-->操作-->制造单`，然后选择一个制造单。"
+msgstr "要从 |MO| 本身完成工单，首先要导航到:menuselection:`制造-->操作-->制造单`，然后选择一个制造订单。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst-1
 msgid "The Start button for a work order on a manufacturing order."
-msgstr "生产单上工单的开始按钮。"
+msgstr "制造订单上工单的开始按钮。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst-1
 msgid "The Done button for an work order on a manufacturing order."
-msgstr "生产单上工单的“完成”按钮。"
+msgstr "制造订单上工单的“完成”按钮。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:136
 msgid ""
@@ -31648,6 +31826,8 @@ msgid ""
 "the pop-up window that appears. Once the step is completed, click "
 ":guilabel:`Next` to move on to the next step, if any are required."
 msgstr ""
+"要处理工单，必须完成工单卡上列出的每个步骤。可通过点击一个步骤并按照弹出窗口中列出的说明进行操作。步骤完成后，点击 :guilabel:`下一步` "
+"进入下一步（如需要）。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/three_step_manufacturing.rst:183
 msgid "Process finished product transfer"
@@ -31963,33 +32143,33 @@ msgstr "通过点击“打印标签” 或 “打印多个标签” 生成的分
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/oee.rst:3
 msgid "Overall equipment effectiveness"
-msgstr ""
+msgstr "设备整体效能"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/oee.rst:9
 msgid ""
 "In Odoo's *Manufacturing* app, *overall equipment effectiveness* (OEE) "
 "represents the amount of time a work center is fully productive. |OEE| is "
 "displayed as a percentage of the total time a work center is active."
-msgstr ""
+msgstr "在 Odoo *制造* 应用程序中，*设备总效率*（OEE）表示工作中心满负荷生产的时间。|OEE| 显示为工作中心活动总时间的百分比。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/oee.rst:13
 msgid ""
 "Fully productive time is considered to be time when the work center is "
 "operational **and** processing work orders that have not exceeded their "
 "*expected duration*."
-msgstr ""
+msgstr "完全生产时间是指工作中心运行 **和** 处理未超过 *预期期限* 的工单的时间。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/oee.rst:16
 msgid ""
 "|OEE| helps manufacturing teams understand the efficiency of work centers, "
 "and the causes of manufacturing downtime."
-msgstr ""
+msgstr "|OEE| 帮助制造团队了解工作中心的效率，以及造成制造停机的原因。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/oee.rst:20
 msgid ""
 "Since |OEE| tracks work center productivity, using it requires enabling the "
 "work centers feature in the settings of the Manufacturing app."
-msgstr ""
+msgstr "由于 |OEE| 追踪工作中心的生产率，因此使用它需要在制造应用的设置中启用工作中心功能。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/oee.rst:23
 msgid ""
@@ -31997,10 +32177,12 @@ msgid ""
 "--> Settings`, and tick the checkbox next to :guilabel:`Work Orders`, under "
 "the :guilabel:`Operations` heading. Then, click :guilabel:`Save`."
 msgstr ""
+"要执行此操作，请导航至 :menuselection:`制造应用程序 --> 配置 --> 设置`，并勾选 :guilabel:`操作` 标题下 "
+":guilabel:`工作订单` 旁边的复选框。然后点击 :guilabel:`保存`。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/oee.rst:28
 msgid "Efficiency standards"
-msgstr ""
+msgstr "效率标准"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/oee.rst:30
 msgid ""
@@ -32009,10 +32191,12 @@ msgid ""
 "correct productivity metrics. These include the work center's *time "
 "efficiency*, *capacity*, and *OEE target*."
 msgstr ""
+"要使 |OEE| 准确反映工作中心完全生产时间的百分比，工作中心**必须**正确配置正确的生产率指标。这些指标包括工作中心的 *时间效率*、*产能* 和"
+" *OEE 目标*。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/oee.rst:35
 msgid "Time efficiency"
-msgstr ""
+msgstr "时间效率"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/oee.rst:37
 msgid ""
@@ -32023,6 +32207,8 @@ msgid ""
 "greater than 100% signifies that the work center processes work orders "
 "slower or faster than an operation's expected duration, respectively."
 msgstr ""
+"时间效率表示工作中心处理工单的效率，用百分比表示。时间效率值为 100%，表示工作中心处理工单的速度与产品 |BoM| "
+"上列出的预期持续时间一致。时间效率值小于或大于 100%，表示工作中心处理工单的速度慢于或快于操作的预期持续时间。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/oee.rst:43
 msgid ""
@@ -32031,27 +32217,29 @@ msgid ""
 "select a work center. On the :guilabel:`General Information` tab, enter a "
 "numerical value in the :guilabel:`Time Efficiency` field."
 msgstr ""
+"要设置工作中心的时间效率，请导航至 :menuselection:`制造应用程序 --> 配置 --> 工作中心`，然后选择一个工作中心。在 "
+":guilabel:`一般信息` 选项卡上，在 :guilabel:`时间效率` 字段中输入数值。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/oee.rst:48
 msgid ""
 "Manufacturing a *chair* product requires two operations: *cut* and "
 "*assemble*. The product's |BoM| lists an expected duration of 30 minutes for"
 " each operation."
-msgstr ""
+msgstr "生产 *椅子* 需要两道工序：*切割* 和 *组装*。产品的 |BoM| 列出了每项操作的预计持续时间为 30 分钟。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/oee.rst:51
 msgid ""
 "The cut operation is carried out at the *cut station* work center, which has"
 " a time efficiency value of 50%. This means it takes twice as long to "
 "complete the operation, for a total time of one hour."
-msgstr ""
+msgstr "切割操作在 *切割站* 工作中心进行，该工作中心的时间效率值为 50%。这意味着完成该操作需要两倍的时间，总时间为一小时。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/oee.rst:55
 msgid ""
 "The assemble operation is carried out at the *assembly line* work center, "
 "which has a time efficiency value of 200%. This means it takes half as long "
 "to complete the operation, for a total time of 15 minutes."
-msgstr ""
+msgstr "组装操作在 *装配线* 工作中心进行，其时间效率值为 200%。这意味着完成该操作只需一半的时间，总时间为 15 分钟。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/oee.rst:60
 msgid "Capacity"
@@ -32062,7 +32250,7 @@ msgid ""
 "Capacity represents how many units of a product can be produced in parallel "
 "at a work center. The duration of work orders for multiple units increases "
 "or decreases, based on how many units the work center can handle."
-msgstr ""
+msgstr "产能表示一个工作中心可以并行生产多少个单位的产品。多个单位的工单持续时间根据工作中心可处理的单位数量而增减。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/oee.rst:66
 msgid ""
@@ -32071,31 +32259,33 @@ msgid ""
 "select a work center. On the :guilabel:`General Information` tab, enter a "
 "numerical value in the :guilabel:`Capacity` field."
 msgstr ""
+"要设置工作中心的容量，请导航至 :menuselection:`制造应用程序 --> 配置 --> 工作中心`，然后选择一个工作中心。在 "
+":guilabel:`一般信息` 选项卡上，在 :guilabel:`产能` 字段中输入数值。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/oee.rst:71
 msgid ""
 "A *drill station* work center has a capacity of one unit. An |MO| is "
 "confirmed for 10 units of a *chair*, a product manufactured using the drill "
 "station."
-msgstr ""
+msgstr "一个 *钻孔站* 的工作中心产能为一个单位。现已确认一张制造 10 个椅子的制造订单 |MO|，这种产品需要使用钻孔站进行生产。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/oee.rst:74
 msgid ""
 "Since there are ten times as many units to produce than the work center can "
 "handle at once, the operation time is ten times the duration listed on the "
 "product's |BoM|."
-msgstr ""
+msgstr "由于要生产的单位数量是工作中心可同时处理数量的十倍，因此操作时间是产品 |BoM| 上所列时间的十倍。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/oee.rst:78
 msgid "|OEE| target"
-msgstr ""
+msgstr "|OEE| 目标"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/oee.rst:80
 msgid ""
 "The |OEE| target is the goal for how much of a work center's operating time "
 "should be fully productive time. It is displayed as a percentage, and should"
 " only be set as high as `100%`."
-msgstr ""
+msgstr "|OEE| 目标是指工作中心有多少工作时间是完全生产时间。它以百分比显示，只能设置为 `100%`。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/oee.rst:83
 msgid ""
@@ -32105,10 +32295,13 @@ msgid ""
 "tab, enter a numerical value of `100.00` or less in the :guilabel:`OEE "
 "Target` field."
 msgstr ""
+"要为工作中心设置 OEE 目标，请导航至 :menuselection:`制造应用程序 --> 配置 --> 设置 --> "
+"工作中心`，然后选择一个工作中心。在 :guilabel:`一般信息` 选项卡上，在 :guilabel:`OEE 目标` 字段中输入 `100.00`"
+" 或更小的数值。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/oee.rst:88
 msgid "Calculating |OEE|"
-msgstr ""
+msgstr "计算 |OEE|"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/oee.rst:90
 msgid ""
@@ -32118,10 +32311,13 @@ msgid ""
 " less than full efficiency. This can occur for a number of reasons, "
 "including *reduced speed*, *material availability*, and *equipment failure*."
 msgstr ""
+"|OEE| 表示 0 到 100 "
+"之间的百分比值。该值表示工作中心满负荷工作的时间。剩余部分表示工作中心工作效率低于满负荷的时间。出现这种情况的原因有很多，包括 "
+"*速度降低*、*材料可用性* 和 *设备故障*。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/oee.rst:96
 msgid "Fully productive time"
-msgstr ""
+msgstr "全面生产日期"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/oee.rst:98
 msgid ""
