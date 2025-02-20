@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-27 14:31+0000\n"
+"POT-Creation-Date: 2025-02-20 08:51+0000\n"
 "PO-Revision-Date: 2022-10-04 12:53+0000\n"
 "Last-Translator: Wil Odoo, 2024\n"
 "Language-Team: Slovenian (https://app.transifex.com/odoo/teams/41243/sl/)\n"
@@ -399,7 +399,6 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper.rst:55
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations.rst:8
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:13
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:56
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:11
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:23
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:11
@@ -4684,7 +4683,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:320
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config.rst:339
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:174
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:206
 msgid "Manual"
 msgstr "Ročno"
 
@@ -7610,10 +7609,9 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:77
 msgid ""
-"Once the :abbr:`RFQ (Request for Quotation)` has been confirmed, it will "
-"become a sales order. From here, the products can be delivered by clicking "
-"on the :guilabel:`Delivery` smart button, and selecting :guilabel:`Validate`"
-" to validate the delivery."
+"Once the quotation has been confirmed, it becomes a sales order. From here, "
+"the products can be delivered by clicking on the :guilabel:`Delivery` smart "
+"button, and selecting :guilabel:`Validate` to validate the delivery."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:82
@@ -7635,7 +7633,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:91
 msgid ""
-"Since the consignee does not actually own consigment stock, these products "
+"Since the consignee does not actually own consignment stock, these products "
 "are *not* reflected in the :guilabel:`Stock Valuation` report, and have no "
 "impact on the consignee's inventory valuation."
 msgstr ""
@@ -7646,7 +7644,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:98
 msgid ""
-"To view all information about on-hand stock moves, navigate to the the "
+"To view all information about on-hand stock moves, navigate to the "
 ":guilabel:`Product Moves` dashboard by going to :menuselection:`Inventory "
 "--> Reporting --> Product Moves`. For consignment products, the information "
 "in this report is the same as any other product: the history of its product "
@@ -7683,7 +7681,7 @@ msgid ""
 "View the :guilabel:`Stock On Hand` dashboard by navigating to "
 ":menuselection:`Inventory --> Reporting --> Inventory Report`. From this "
 "report, the :guilabel:`Locations` of all stock on-hand are displayed, in "
-"addition to the quantities per location. For consigment products, the "
+"addition to the quantities per location. For consignment products, the "
 ":guilabel:`Owner` column will be populated with the owner of those products,"
 " or the original vendor who supplied the products in the first place."
 msgstr ""
@@ -15469,63 +15467,97 @@ msgstr ""
 msgid "Example warehouse form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:13
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:15
 msgid ""
-"In Odoo, there are two strategies for automatically replenishing inventory: "
-"*reordering rules* and the *make to order (MTO)* route. Although these "
-"strategies differ slightly, they both have similar consequences: triggering "
-"the automatic creation of a |PO| or |MO|. The choice of which strategy to "
-"use depends on the business's manufacturing and delivery processes."
+"In Odoo, stock can be replenished one of three ways: *reordering rules*, the"
+" *make to order* (MTO) route, or using the *master production schedule* "
+"(MPS)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:19
-msgid "Terminology"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:18
+msgid ""
+"Each replenishment mechanism triggers the creation or suggestion of a "
+"purchase order (PO) or manufacturing order (MO), with the best choice "
+"depending on the business process."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:22
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:59
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:42
+msgid "Replenishment strategies"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:45
 msgid "Replenishment report and reordering rules"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:24
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:47
 msgid ""
-"The replenishment report is a list of all products that have a negative "
-"forecast quantity."
+"Reordering rules are rules that can be set up to maintain a minimum stock "
+"level. They are often configured to support manufacturing or sales "
+"requirements. When a product's stock falls at or below the minimum level, "
+"Odoo generates (or suggests) a purchase or manufacturing order to replenish "
+"stock to the maximum level."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:26
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:52
 msgid ""
-"*Reordering rules* are used to ensure there's always a minimum amount of a "
-"product in-stock, in order to manufacture products and/or fulfill sales "
-"orders. When the stock level of a product reaches its minimum, Odoo "
-"automatically generates a purchase order with the quantity needed to reach "
-"the maximum stock level."
+"When using automatic reordering rules, Odoo generates a new order. When "
+"using manual, Odoo suggests orders on the replenishment report. For detailed"
+" guidance, refer to the :doc:`replenishment report <replenishment/report>` "
+"and :doc:`reordering rules <replenishment/reordering_rules>`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:31
-msgid ""
-"Reordering rules can be created and managed in the replenishment report, or "
-"from the product form."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:56
+msgid "Key points include:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:36
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:58
+msgid ""
+":ref:`Automatic reordering rules <inventory/warehouses_storage/auto-rr>`: "
+"Automatically create |POs| or |MOs| when stock falls below the minimum "
+"level. While this is convenient, it is less flexible."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:61
+msgid ""
+":ref:`Manual reordering rules <inventory/warehouses_storage/manual-rr>`: "
+"Generate suggestions in the replenishment report for user review, allowing "
+"adjustments and batch orders while meeting deadlines."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:64
+msgid ""
+":ref:`Just-in-time logic <inventory/warehouses_storage/just-in-time>`: A "
+"strategy to replenish only what is needed to prevent overstocking."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:68
+msgid ":doc:`replenishment/reordering_rules`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:69
+msgid ":doc:`replenishment/report`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:74
 msgid "Make to order"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:38
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:76
 msgid ""
-"*Make to order (MTO)* is a procurement route that creates a draft purchase "
-"order (or manufacturing order) each time a sales order is confirmed, "
-"**regardless of the current stock level**."
+"An |MTO| strategy means that procurement or production is triggered only "
+"after a sales order has been confirmed. This strategy is recommended when "
+"products are customizable, demand is unpredictable, there is limited storage"
+" capacity, and when products are high in value and low in demand. In such "
+"cases, it does not make sense to keep on-hand inventory."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:41
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:81
 msgid ""
 "Unlike products replenished using reordering rules, Odoo automatically links"
 " the sales order to the |PO| or |MO| generated by the |MTO| route."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:44
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:84
 msgid ""
 "Another difference between reordering rules and |MTO| is, with |MTO|, Odoo "
 "generates a draft |PO| or |MO| immediately after the |SO| is confirmed. With"
@@ -15533,341 +15565,63 @@ msgid ""
 "forecasted stock falls below the set minimum quantity."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:48
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:88
 msgid ""
 "In addition, Odoo automatically adds quantities to the |PO| or |MO| as the "
 "forecast changes, so long as the |PO| or |MO| is not confirmed."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:51
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:91
 msgid ""
 "The |MTO| route is the best replenishment strategy for products that are "
 "customized, and/or for products that have no stock kept on-hand."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:61
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:95
+msgid ":doc:`replenishment/mto`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:98
+msgid "Master production schedule"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:100
 msgid ""
-"To access the replenishment report, go to :menuselection:`Inventory app --> "
-"Operations --> Replenishment.`"
+"The :abbr:`MPS (Master Production Schedule)` is a dashboard where products "
+"and their forecasted quantities are entered. Based on confirmed "
+"manufacturing and purchase orders, the dashboard recommends amounts to order"
+" or produce."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:64
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:104
 msgid ""
-"By default, the replenishment report dashboard shows every product that "
-"needs to be manually reordered. If there is no specific rule for a product, "
-"Odoo assumes the :guilabel:`Min Quantity` and :guilabel:`Max Quantity` stock"
-" are both `0.00`"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:69
-msgid ""
-"For products that don't have a set reordering rule, Odoo calculates the "
-"forecast based on confirmed sales orders, deliveries, and receipts. For "
-"products that have a set reordering rule, Odoo calculates the forecast "
-"normally, but also takes into account the purchase/manufacturing lead time "
-"and security lead time."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:75
-msgid ""
-"Before creating a new reordering rule, make sure the product has a *vendor* "
-"or a *bill of materials* configured on the product form. To check this, go "
-"to :menuselection:`Inventory app --> Products --> Products`, and select the "
-"product to open its product form. The vendor, if configured, is listed in "
-"the :guilabel:`Purchase` tab, and the bill on materials, if configured, is "
-"found in the :guilabel:`Bill of Materials` smart button at the top of the "
-"form."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:81
-msgid ""
-"The :guilabel:`Product Type`, located in the :guilabel:`General Information`"
-" tab on the product form, **must** be set to :guilabel:`Storable Product`. "
-"By definition, a consumable product does not have its inventory levels "
-"tracked, so Odoo cannot account for a consumable product in the "
-"replenishment report."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst-1
-msgid ""
-"Replenishment report listing all items needing to be purchased to meet "
-"current needs."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:90
-msgid ""
-"To create a new reordering rule from the replenishment report, go to "
-":menuselection:`Inventory app --> Operations --> Replenishment`, click "
-":guilabel:`Create`, and select the desired product from the drop-down menu "
-"in the :guilabel:`Product` column. If necessary, a :guilabel:`Min Quantity` "
-"and a :guilabel:`Max Quantity` can be configured in the corresponding "
-"columns on the :guilabel:`Replenishment` report page, as well."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:96
-msgid ""
-"To create a new reordering rule from the product form, go to "
-":menuselection:`Inventory app --> Products --> Products`, and select a "
-"product to open its product form. Click the :guilabel:`Reordering Rules` "
-"smart button, click :guilabel:`Create`, and fill out the fields."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:101
-msgid "Replenishment report fields"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:103
-msgid ""
-"The following fields are on the :guilabel:`Replenishment` report. If any of "
-"these fields are not visible, click the :guilabel:`⋮ (additional options)` "
-"icon on the far right side of the report, then click the checkbox next to a "
-"field to make it visible."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:107
-msgid ":guilabel:`Product`: the product that requires a replenishment."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:108
-msgid ""
-":guilabel:`Location`: the specific location where the product is stored."
+"This a useful **manual** tool for keeping track of quantities. The "
+":abbr:`MPS (Master Production Schedule)` **should absolutely not** be used "
+"alongside reordering rules, as the automated workflow disrupts its manual "
+"replenishment method."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:109
-msgid ":guilabel:`Warehouse`: the warehouse where the product is stored."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:110
-msgid ":guilabel:`On Hand`: the amount of product currently available."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:111
-msgid ""
-":guilabel:`Forecast`: the amount of product available after all current "
-"orders (sales, manufacturing, purchase, etc.) are taken into account."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:113
-msgid ""
-":guilabel:`Preferred Route`: how the product is procured, either "
-":guilabel:`Buy`, :guilabel:`Manufactured`, :guilabel:`Dropship`, etc."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:115
-msgid ":guilabel:`Vendor`: the company from which the product is acquired."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:116
-msgid ""
-":guilabel:`Bill of Materials`: the bill of materials for the product (if one"
-" is configured)."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:117
-msgid ""
-":guilabel:`Trigger`: how the replenishment is created, either "
-":guilabel:`Auto` (automatically, once the :guilabel:`On Hand` quantity goes "
-"below the :guilabel:`Min Quantity`) or :guilabel:`Manual` (only when the "
-"replenishment is requested)."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:120
-msgid ""
-":guilabel:`Procurement Group`: the reference number for how the product is "
-"being acquired, such as a sales order, purchase order, or manufacturing "
-"order."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:122
-msgid ""
-":guilabel:`Min Quantity`: the minimum amount of product that should be "
-"available. When inventory levels goes below this number, the replenishment "
-"is triggered."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:124
-msgid ""
-":guilabel:`Max Quantity`: the amount of product that should be available "
-"after replenishing the product."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:126
-msgid ""
-":guilabel:`Multiple Quantity`: if the product should be ordered in specific "
-"quantities, enter the number that should be ordered. For example, if the "
-":guilabel:`Multiple Quantity` is set to `5`, and only 3 are needed, 5 "
-"products are replenished."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:129
-msgid ""
-":guilabel:`To Order`: the amount of product that is currently needed, and "
-"will be ordered, if the :guilabel:`Order Once` or :guilabel:`Automate "
-"Orders` button is clicked."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:131
-msgid ":guilabel:`UoM`: the unit of measure used to acquire the product."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:132
-msgid ":guilabel:`Company`: the company for which the product is acquired."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:134
-msgid ""
-"By default, the quantity in the :guilabel:`To Order` field is the quantity "
-"required to reach the set :guilabel:`Max Quantity`. However, the "
-":guilabel:`To Order` quantity can be adjusted by clicking on the field and "
-"changing the value. To replenish a product manually, click :guilabel:`Order "
-"Once`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:138
-msgid ""
-"To automate a replenishment from the :guilabel:`Replenishment` page, click "
-":guilabel:`Automate Orders` on the right-side of the line, represented by a "
-":guilabel:`🔄 (circular arrow)` icon."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:141
-msgid ""
-"When this button is clicked, Odoo will automatically generate a draft "
-"|PO|/|MO| every time the forecasted stock level falls below the set "
-":guilabel:`Min Quantity` of the reordering rule."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:144
-msgid ""
-"On the :guilabel:`Replenishment` page, a reordering rule or manual "
-"replenishment can be temporarily deactivated for a given period, by clicking"
-" the :guilabel:`🔕 (snooze)` icon on the far-right of the line."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst-1
-msgid ""
-"Snooze options to turn off notifications for reordering for a period of "
-"time."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:152
-msgid ""
-"A |PO| or |MO| created by a manual replenishment has a "
-":guilabel:`Replenishment Report` as the source document. A |PO| or |MO| "
-"created by an automated reordering rule has the |SO| reference number(s) "
-"that triggered the rule as the source document."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst-1
-msgid ""
-"Quote request list shows which quotes are directly from the replenishment "
-"report."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:161
-msgid "Make to order (MTO) route"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:163
-msgid ""
-"Since the |MTO| route is recommended for customized products, the route is "
-"hidden by default."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:172
-msgid "To activate the |MTO| route in Odoo:"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:166
-msgid "Go to :menuselection:`Inventory app --> Configuration  --> Settings`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:167
-msgid ""
-"Activate the :guilabel:`Multi-Step Routes` setting, located under the "
-":guilabel:`Warehouse` section, and click :guilabel:`Save`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:169
-msgid ""
-"Then, go to :menuselection:`Inventory app --> Configuration  --> Routes`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:170
-msgid ""
-"Click on :menuselection:`Filters --> Archived` to show archived routes."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:171
-msgid ""
-"Select the checkbox next to :guilabel:`Replenish on Order (MTO)`, and click "
-"on :menuselection:`Action --> Unarchive`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:175
-msgid ""
-"Activating the :guilabel:`Multi-Step Routes` setting also activates "
-":guilabel:`Storage Locations`. If these features aren't applicable to the "
-"warehouse, disable these settings after unarchiving the |MTO| route."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:179
-msgid ""
-"To set a product's procurement route to |MTO|, go to "
-":menuselection:`Inventory app --> Products --> Products`, and click on the "
-"desired product to open its product form."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:182
-msgid ""
-"Then, click the :guilabel:`Inventory` tab, and in the :guilabel:`Routes` "
-"section of options, select :guilabel:`Replenish on Order (MTO)`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:185
-msgid ""
-"For products purchased directly from a vendor, make sure the :guilabel:`Buy`"
-" route is selected, in addition to the :guilabel:`Replenish on Order (MTO)` "
-"route. Also, make sure a vendor is configured in the :guilabel:`Purchase` "
-"tab of the product form."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:189
-msgid ""
-"For products manufactured in-house, make sure the :guilabel:`Manufacture` "
-"route is selected, in addition to the :guilabel:`Replenish on Order (MTO)` "
-"route. Also, make sure a bill of materials is configured for the product, "
-"which is accessible via the :guilabel:`Bill of Materials` smart button on "
-"the product form."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:195
-msgid ""
-"The |MTO| route cannot be selected alone. |MTO| **only** works if the "
-":guilabel:`Manufacture` or :guilabel:`Buy` route is also selected."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst-1
-msgid "Replenish on Order selected on the product form."
+msgid ":doc:`../../manufacturing/management/use_mps`"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:3
 msgid "Lead times"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:5
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:7
 msgid ""
 "Accurately forecasting delivery dates is vital for fulfilling customer "
-"expectations. In Odoo, the *Inventory* app allows for comprehensive lead "
+"expectations. In Odoo, the **Inventory** app allows for comprehensive lead "
 "time configuration, allowing coordination and planning of manufacturing "
-"orders, deliveries, and receptions."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:10
-msgid "Lead time types"
+"orders, deliveries, and receipts."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:12
+msgid "Lead time types"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:14
 msgid ""
 "Different lead times for different operations can impact various stages of "
 "the order fulfillment process. Here's a summary of the types of lead times "
@@ -15878,7 +15632,7 @@ msgstr ""
 msgid "Show graphic of all lead times working together."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:19
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:21
 msgid ""
 ":ref:`Customer lead time <inventory/management/customer-lt>`: The default "
 "time frame for fulfilling customer orders. The customer lead time is the "
@@ -15887,7 +15641,7 @@ msgid ""
 " lead time*."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:24
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:26
 msgid ""
 ":ref:`Sales security lead time <inventory/management/sales-security-lt>`: "
 "moves the *scheduled delivery date* forward by a specified number of days. "
@@ -15896,7 +15650,7 @@ msgid ""
 "process."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:29
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:31
 msgid ""
 ":ref:`Purchase lead time <inventory/management/purchase-lt>`: the number of "
 "days from the confirmation of a purchase order (PO) to the receipt of "
@@ -15905,7 +15659,7 @@ msgid ""
 "deliveries."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:34
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:36
 msgid ""
 ":ref:`Purchase security lead time <inventory/management/purchase-security-"
 "lt>`: advances the order deadline on a :abbr:`PO (Purchase Order)` by a "
@@ -15915,7 +15669,15 @@ msgid ""
 "earlier, according to the specified number of days."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:40
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:42
+msgid ""
+":ref:`Days to Purchase lead time <inventory/warehouses_storage/days-to-"
+"purchase>`: days needed for the vendor to receive a request for quotation "
+"(RFQ) and confirm it. It advances the deadline to schedule a |RFQ| by a "
+"specified number of days."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:46
 msgid ""
 ":ref:`Manufacturing lead time <inventory/management/manuf-lt>`: the number "
 "of days needed to complete a manufacturing order (MO) from the date of "
@@ -15923,7 +15685,7 @@ msgid ""
 "and is used to forecast an approximate production date for a finished good."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:45
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:51
 msgid ""
 ":ref:`Manufacturing security lead time <inventory/management/manuf-security-"
 "lt>`: moves the scheduled date of the :abbr:`MO (Manufacturing Order)` "
@@ -15933,11 +15695,11 @@ msgid ""
 "report."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:53
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:59
 msgid "Sales lead times"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:55
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:61
 msgid ""
 "Customer lead times and sales security lead times can be configured to "
 "automatically compute an *expected delivery date* on a :abbr:`SO (Sales "
@@ -15945,14 +15707,14 @@ msgid ""
 "setting for shipments from the warehouse."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:59
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:65
 msgid ""
 "Odoo issues a warning message if the set delivery date is earlier than the "
 "expected date, as it may not be feasible to fulfill the order by that time, "
 "which would impact other warehouse operations."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:63
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:69
 msgid ""
 "A :abbr:`SO (Sales Order)` containing a `Coconut-scented candle` is "
 "confirmed on July 11th. The product has a customer lead time of 14 days, and"
@@ -15965,17 +15727,17 @@ msgid ""
 "Set *Delivery Date* in a sales order. Enables delivery lead times feature."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:71
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:77
 msgid ""
 "The following sections demonstrate how to automatically compute expected "
 "delivery dates."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:74
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:80
 msgid "Customer lead time"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:76
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:82
 msgid ""
 "Set the customer lead time on each product form, by navigating to the "
 "products page. To do so, go to :menuselection:`Sales app --> Products --> "
@@ -15985,7 +15747,7 @@ msgid ""
 "order from start to finish."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:82
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:88
 msgid ""
 "Set a 14-day customer lead time for the `Coconut-scented candle` by "
 "navigating to its product form. Then, in the :guilabel:`Inventory` tab, type"
@@ -15996,31 +15758,31 @@ msgstr ""
 msgid "Set *Customer Lead Time* on the product form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:93
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:99
 msgid "Sales security lead time"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:95
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:101
 msgid ""
 "*Sales security lead time* is set globally for the business in "
 ":menuselection:`Inventory app --> Configuration --> Settings`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:98
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:104
 msgid ""
 "On the configuration page, under the :guilabel:`Advanced Scheduling` "
 "heading, locate the box for :guilabel:`Security Lead Time for Sales`, and "
 "click the checkbox to enable the feature."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:101
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:107
 msgid ""
 "Next, enter the desired number of calendar days. This security lead time is "
 "a buffer notifying the team to prepare for outgoing shipments earlier than "
 "the scheduled date."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:105
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:111
 msgid ""
 "Setting the :guilabel:`Security Lead Time for Sales` to `1.00` day, pushes "
 "the :guilabel:`Scheduled Date` of a delivery order (DO) forward by one day. "
@@ -16035,11 +15797,11 @@ msgid ""
 "settings."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:115
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:121
 msgid "Deliver several products"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:117
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:123
 msgid ""
 "For orders that include multiple products with different lead times, the "
 "lead times can be configured directly from the quotation itself. On a "
@@ -16047,7 +15809,7 @@ msgid ""
 ":guilabel:`Shipping Policy` to:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:121
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:127
 msgid ""
 ":guilabel:`As soon as possible` to deliver products as soon as they are "
 "ready. The :guilabel:`Scheduled Date` of the :abbr:`DO (Delivery Order)` is "
@@ -16055,7 +15817,7 @@ msgid ""
 "products in the order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:125
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:131
 msgid ""
 ":guilabel:`When all products are ready` to wait to fulfill the entire order "
 "at once. The :guilabel:`Scheduled Date` of the :abbr:`DO (Delivery Order)` "
@@ -16067,14 +15829,14 @@ msgstr ""
 msgid "Show *Shipping Policy* field in the *Other Info* tab of a quotation."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:134
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:140
 msgid ""
 "In a quotation containing 2 products, `Yoga mat` and `Resistance band,` the "
 "products have a lead time of 8 days and 5 days, respectively. Today's date "
 "is April 2nd."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:137
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:143
 msgid ""
 "When the :guilabel:`Shipping Policy` is set to :guilabel:`As soon as "
 "possible`, the scheduled delivery date is 5 days from today: April 7th. On "
@@ -16082,17 +15844,17 @@ msgid ""
 " the scheduled date to be 8 days from today: April 10th."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:144
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:150
 msgid "Purchase lead times"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:146
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:152
 msgid ""
 "Automatically determining the dates on which to place orders from suppliers "
 "can help simplify the procurement process."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:149
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:155
 msgid ""
 "Odoo calculates the supplier shipment *receipt date*, and :abbr:`PO "
 "(Purchase Order)` deadline, based on the required date the product is needed"
@@ -16101,7 +15863,7 @@ msgid ""
 "determine the :abbr:`PO (Purchase Order)` deadline."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:154
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:160
 msgid ""
 "This deadline is the date by which the order should be confirmed, in order "
 "to ensure timely arrival by the expected receipt date."
@@ -16112,24 +15874,24 @@ msgid ""
 "Visualization of PO deadline and receipt date used with vendor lead times."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:162
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:168
 msgid ""
 ":ref:`PO scheduling with reordering rules "
 "<inventory/management/reordering_rules>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:165
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:171
 msgid "Vendor lead time"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:167
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:173
 msgid ""
 "To set a vendor lead time for orders arriving in the warehouse from a vendor"
 " location, begin by navigating to a product form through "
 ":menuselection:`Purchase app --> Products --> Products`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:170
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:176
 msgid ""
 "Next, select the desired product, and switch to the :guilabel:`Purchase` "
 "tab. In the editable vendor pricelist, click the :guilabel:`Add a line` "
@@ -16138,14 +15900,14 @@ msgid ""
 ":guilabel:`Delivery Lead Time`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:176
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:182
 msgid ""
 "Multiple vendors and lead times can be added to the vendor pricelist. The "
 "default vendor and lead time selected will be the entry at the top of the "
 "list."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:180
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:186
 msgid ""
 "On the vendor pricelist of the product form, the :guilabel:`Delivery Lead "
 "Time` for the selected vendor is set to `10 days.`"
@@ -16155,7 +15917,7 @@ msgstr ""
 msgid "Add delivery lead times to vendor pricelist on a product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:187
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:193
 msgid ""
 "By setting the vendor lead time, the expected arrival date of the item is "
 "automatically determined as the date of the :abbr:`PO (Purchase Order)` "
@@ -16164,7 +15926,7 @@ msgid ""
 "expected timeframe."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:193
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:199
 msgid ""
 "On a :abbr:`PO (Purchase Order)` confirmed on July 11th, for a product "
 "configured with a 10-day vendor lead time, Odoo automatically sets the "
@@ -16183,31 +15945,31 @@ msgid ""
 "Show expected *Scheduled Date* of arrival of the product from the vendor."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:209
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:215
 msgid "Purchase security lead time"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:211
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:217
 msgid ""
 "*Purchase security lead time* is set globally for the business in "
 ":menuselection:`Inventory app --> Configuration --> Settings`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:214
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:220
 msgid ""
 "On the configuration page, under the :guilabel:`Advanced Scheduling` "
 "heading, locate the box for :guilabel:`Security Lead Time for Purchase`, and"
 " click the checkbox to enable the feature."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:217
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:223
 msgid ""
 "Next, enter the desired number of calendar days. By configuring the security"
 " lead time, a buffer is set to account for potential delays in supplier "
 "deliveries."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:221
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:227
 msgid ""
 "Setting the :guilabel:`Security Lead Time for Purchase` to `2.00` days, "
 "pushes the :guilabel:`Scheduled Date` of receipt back by one day. In that "
@@ -16222,18 +15984,30 @@ msgid ""
 "Settings."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:233
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:239
+msgid "Days to purchase lead time"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:241
+msgid ""
+"To set it up, go to :menuselection:`Inventory app --> Configuration --> "
+"Settings`. Under the :guilabel:`Advanced Scheduling` section, in the "
+":guilabel:`Days to Purchase` field, specify the number of days required for "
+"the vendor to confirm a |RFQ| after receiving it from the company."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:248
 msgid "Manufacturing lead times"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:235
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:250
 msgid ""
 "Lead times can help simplify the procurement process for consumable "
 "materials and components used in manufactured products with bills of "
 "materials."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:238
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:253
 msgid ""
 "The :abbr:`MO (Manufacturing Order)` deadline, which is the deadline to "
 "begin the manufacturing process to complete the product by the scheduled "
@@ -16247,25 +16021,25 @@ msgid ""
 "times."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:247
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:262
 msgid "Manufacturing lead time"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:249
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:264
 msgid ""
 "Configure the manufacturing lead time directly on the product form, by "
 "navigating to :menuselection:`Manufacturing app --> Products --> Products`, "
 "and select the desired product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:252
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:267
 msgid ""
 "In the :guilabel:`Inventory` tab of the product, specify the calendar days "
 "needed to the manufacture the product in the :guilabel:`Manufacturing Lead "
 "Time` field."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:256
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:271
 msgid ""
 "Specify a 14-day :guilabel:`Manufacturing Lead Time` for a product directly "
 "in the :guilabel:`Inventory` tab of the product."
@@ -16276,14 +16050,14 @@ msgid ""
 "View of the manufacturing lead time configuration from the product form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:263
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:278
 msgid ""
 "Establish a :abbr:`MO (Manufacturing Order)` deadline, based on the "
 "*expected delivery date*, indicated in the :guilabel:`Scheduled Date` field "
 "of the :abbr:`DO (Delivery Order)`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:266
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:281
 msgid ""
 "The :abbr:`MO (Manufacturing Order)` deadline, which is the "
 ":guilabel:`Scheduled Date` field on the :abbr:`MO (Manufacturing Order)`, is"
@@ -16291,13 +16065,13 @@ msgid ""
 "lead time."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:270
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:285
 msgid ""
 "This ensures the manufacturing process begins on time, in order to meet the "
 "delivery date."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:272
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:287
 msgid ""
 "However, it's important to note that lead times are based on calendar days. "
 "Lead times do **not** consider weekends, holidays, or *work center capacity*"
@@ -16305,17 +16079,17 @@ msgid ""
 "simultaneously`)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:277
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:292
 msgid ":ref:`Manufacturing planning <manufacturing/management/use_mps>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:278
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:293
 msgid ""
 ":ref:`Configure automatic MO scheduling with reordering rules "
 "<inventory/management/reordering_rules>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:282
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:297
 msgid ""
 "A product's scheduled shipment date on the :abbr:`DO (Delivery Order)` is "
 "August 15th. The product requires 14 days to manufacture. So, the latest "
@@ -16323,11 +16097,11 @@ msgid ""
 "date is August 1st."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:289
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:304
 msgid "Manufacturing security lead time"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:291
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:306
 msgid ""
 "*Manufacturing security lead time* is set globally for the business in "
 ":menuselection:`Manufacturing app --> Configuration --> Settings`. Under the"
@@ -16335,7 +16109,7 @@ msgid ""
 "Time`, and click the checkbox to enable the feature."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:295
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:310
 msgid ""
 "Next, enter the desired number of calendar days. By configuring the security"
 " lead time, a buffer is set to account for potential delays in the "
@@ -16348,7 +16122,7 @@ msgid ""
 "settings."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:303
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:318
 msgid ""
 "A product has a scheduled shipment date on the :abbr:`DO (Delivery Order)` "
 "set for August 15th. The manufacturing lead time is 7 days, and "
@@ -16358,37 +16132,37 @@ msgid ""
 ":abbr:`MO (Manufacturing Order)` is August 5th."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:310
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:325
 msgid "Global example"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:312
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:327
 msgid ""
 "See the following example to understand how all the lead times work together"
 " to ensure timely order fulfillment:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:315
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:330
 msgid "**Sales security lead time**: 1 day"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:316
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:331
 msgid "**Manufacturing security lead time**: 2 days"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:317
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:332
 msgid "**Manufacturing lead time**: 3 days"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:318
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:333
 msgid "**Purchase security lead time**: 1 day"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:319
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:334
 msgid "**Vendor lead time**: 4 days"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:321
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:336
 msgid ""
 "The customer places an order for a manufactured product on September 1st, "
 "and the scheduled delivery date from the warehouse is on September 20th. "
@@ -16403,24 +16177,24 @@ msgid ""
 "operations."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:329
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:344
 msgid "**September 1st**: Sales order created, confirmed by salesperson."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:331
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:346
 msgid ""
 "**September 9th**: Deadline to order components to ensure they arrive in "
 "time when manufacturing begins (4-day supplier lead time)."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:334
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:349
 msgid ""
 "**September 13th**: Scheduled date of receipt for components. Initially, it "
 "was set to 9/14, but the 1-day purchase security lead time pushed the date "
 "earlier by 1 day."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:337
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:352
 msgid ""
 "**September 14th**: Deadline to begin manufacturing. Calculated by "
 "subtracting the manufacturing lead time of 3 days, and the manufacturing "
@@ -16428,7 +16202,7 @@ msgid ""
 "19th."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:341
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:356
 msgid ""
 "**September 19th**: :guilabel:`Scheduled Date` on the delivery order form "
 "indicates the updated expected delivery date, which was originally set as "
@@ -16436,7 +16210,7 @@ msgid ""
 "a day."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:345
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:360
 msgid ""
 "Odoo's replenishment planning maps a business' order fulfillment process, "
 "setting pre-determined deadlines and raw material order dates, including "
@@ -16460,18 +16234,18 @@ msgid ""
 " being ordered."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:17
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:19
 msgid "Unarchive the Replenish on Order (MTO) route"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:19
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:21
 msgid ""
 "By default, Odoo sets the |MTO| route as *archived*. This is because |MTO| "
 "is a somewhat niche workflow that is only used by certain companies. "
 "However, it is easy to unarchive the route in just a few simple steps."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:23
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:25
 msgid ""
 "To do so, begin by navigating to :menuselection:`Inventory --> Configuration"
 " --> Routes`. On the :guilabel:`Routes` page, click the :guilabel:`Filters` "
@@ -16483,7 +16257,7 @@ msgstr ""
 msgid "The archived filter on the Routes page."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:31
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:33
 msgid ""
 "Enable the checkbox next to :guilabel:`Replenish on Order (MTO)`, then click"
 " the :guilabel:`Action` button to reveal a drop-down menu. From the drop-"
@@ -16494,7 +16268,7 @@ msgstr ""
 msgid "The unarchive action on the Routes page."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:38
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:40
 msgid ""
 "Finally, remove the :guilabel:`Archived` filter from the "
 ":guilabel:`Search...` bar. The :guilabel:`Routes` page will now show all "
@@ -16506,11 +16280,11 @@ msgstr ""
 msgid "The MTO route appears on the Routes page after unarchiving it."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:47
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:49
 msgid "Configure a product to use the MTO route"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:49
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:51
 msgid ""
 "With the |MTO| route unarchived, products can now be properly configured to "
 "use replenish on order. To do so, begin by going to "
@@ -16518,14 +16292,14 @@ msgid ""
 "existing product, or click :guilabel:`Create` to configure a new one."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:53
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:55
 msgid ""
 "On the product page, select the :guilabel:`Inventory` tab and enable the "
 ":guilabel:`Replenish on Order (MTO)` route in the :guilabel:`Routes` "
 "section, along with one other route."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:57
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:59
 msgid ""
 "The :guilabel:`Replenish on Order (MTO)` route **does not** work unless "
 "another route is selected as well. This is because Odoo needs to know how to"
@@ -16537,7 +16311,7 @@ msgstr ""
 msgid "Select the MTO route and a second route on the Inventory tab."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:65
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:67
 msgid ""
 "If the product is purchased from a vendor to fulfill sales orders, enable "
 "the :guilabel:`Can be Purchased` checkbox under the product name. Doing so "
@@ -16545,7 +16319,7 @@ msgid ""
 "below."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:69
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:71
 msgid ""
 "Select the :guilabel:`Purchase` tab and specify a :guilabel:`Vendor` and the"
 " :guilabel:`Price` they sell the product for."
@@ -16555,7 +16329,7 @@ msgstr ""
 msgid "Enable \"Can be Purchased\" and specify a vendor."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:76
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:78
 msgid ""
 "If the product is manufactured, make sure that it has a bill of materials "
 "(BOM) configured for it. To do so, click the :guilabel:`Bill of Materials` "
@@ -16563,22 +16337,22 @@ msgid ""
 ":guilabel:`Bill of Materials` page to configure a new |BOM| for the product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:81
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:83
 msgid ""
 "On the blank |BOM| form, add the components used to manufacture the product "
 "on the :guilabel:`Components` tab, along with the operations required for "
 "the manufacturing workflow on the :guilabel:`Operations` tab."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:85
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:87
 msgid "Finally, click :guilabel:`Save` to save the |BOM|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:88
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:90
 msgid "Fulfill a sales order using the MTO route"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:90
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:92
 msgid ""
 "After configuring a product to use the |MTO| route, a replenishment order is"
 " created for it every time a sales order including the product is confirmed."
@@ -16586,13 +16360,13 @@ msgid ""
 "to |MTO|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:94
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:96
 msgid ""
 "For example, if *Buy* was the second route selected, then a purchase order "
 "is created upon confirmation of a sales order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:98
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:100
 msgid ""
 "When the |MTO| route is enabled for a product, a replenishment order is "
 "always created upon confirmation of a sales order. This is the case even if "
@@ -16600,7 +16374,7 @@ msgid ""
 "without buying or manufacturing additional units of it."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:102
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:104
 msgid ""
 "While the |MTO| route can be used in unison with a variety of other routes, "
 "the *Buy* route is used as the example for this workflow. Begin by "
@@ -16608,7 +16382,7 @@ msgid ""
 " which opens a blank quotation form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:106
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:108
 msgid ""
 "On the blank quotation form, add a :guilabel:`Customer`, then click "
 ":guilabel:`Add a product` under the :guilabel:`Order Lines` tab, and enter a"
@@ -16616,14 +16390,14 @@ msgid ""
 ":guilabel:`Confirm` and the quotation is turned into a sales order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:110
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:112
 msgid ""
 "A :guilabel:`Purchase` smart button now appears in the top-right corner of "
 "the sales order. Clicking it opens the |RFQ| associated with the sales "
 "order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:113
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:115
 msgid ""
 "Click :guilabel:`Confirm Order` to confirm the |RFQ|, and turn it into a "
 "purchase order. A green :guilabel:`Receive Products` button now appears at "
@@ -16631,14 +16405,14 @@ msgid ""
 ":guilabel:`Receive Products` to register them into inventory."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:117
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:119
 msgid ""
 "Return to the sales order by clicking the :guilabel:`SO` breadcrumb, or by "
 "navigating to :menuselection:`Sales --> Orders --> Orders`, and selecting "
 "the sales order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:120
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:122
 msgid ""
 "Finally, click the :guilabel:`Delivery` smart button in the top-right of the"
 " order to be taken to the delivery order. Once the products have been "
@@ -16649,72 +16423,123 @@ msgstr ""
 msgid "Reordering rules"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:7
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:17
 msgid ""
-"Reordering rules are used to keep forecasted stock levels above a certain "
+"*Reordering rules* are used to keep forecasted stock levels above a certain "
 "threshold without exceeding a specified upper limit. This is accomplished by"
 " specifying a minimum quantity that stock should not fall below and a "
 "maximum quantity that stock should not exceed."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:11
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:21
 msgid ""
 "Reordering rules can be configured for each product based on the route used "
-"to replenish it. If a product uses the *Buy* route, then a Request for "
-"Quotation (RFQ) is created when the reordering rule is triggered. If a "
-"product uses the *Manufacture* route, then a Manufacturing Order (MO) is "
+"to replenish it. If a product uses the *Buy* route, then a *request for "
+"quotation* (RFQ) is created when the reordering rule is triggered. If a "
+"product uses the *Manufacture* route, then a *manufacturing order* (MO) is "
 "created instead. This is the case regardless of the selected replenishment "
 "route."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:17
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:27
 msgid ""
 "`Odoo Tutorials: Automatic Reordering Rules "
 "<https://www.youtube.com/watch?v=XEJZrCjoXaU>`_"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:18
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:28
 msgid ""
 "`Odoo Tutorials: Manual Reordering Rules "
 "<https://www.youtube.com/watch?v=deIREJ1FFj4>`_"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:21
-msgid "Configure products for reordering rules"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:30
+msgid "To set up reordering rules for the first time, refer to:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:23
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:32
 msgid ""
-"In order to use reordering rules for a product, it must first be correctly "
-"configured. Begin by navigating to :menuselection:`Inventory app --> "
-"Products --> Products`, then select an existing product, or create a new one"
-" by clicking :guilabel:`New`."
+":ref:`Reordering rules setup <inventory/warehouses_storage/configure-rr>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:27
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:33
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:128
+msgid ":ref:`Trigger <inventory/product_management/trigger>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:34
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:129
+msgid ":ref:`Preferred route <inventory/warehouses_storage/route>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:36
+msgid "To understand and optimize replenishment using advanced features, see:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:38
+msgid ":ref:`Just-in-time logic <inventory/warehouses_storage/just-in-time>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:39
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:133
+msgid ":ref:`Visibility days <inventory/product_management/visibility-days>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:44
+msgid "Reordering rules setup"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:46
 msgid ""
-"On the product form, under the :guilabel:`General Information` tab, make "
-"sure that the :guilabel:`Product Type` is set to :guilabel:`Storable "
-"Product`. This is necessary because Odoo only tracks stock quantities for "
-"storable products, and this number is used to trigger reordering rules."
+"To configure automatic and manual reordering rules, complete the following:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:48
+msgid ""
+":ref:`Product type configuration <inventory/warehouses_storage/set-product-"
+"type>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:49
+msgid ":ref:`Create rule <inventory/warehouses_storage/rr-fields>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:54
+msgid "Product type configuration"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:56
+msgid ""
+"A product must be configured correctly to use reordering rules. Begin by "
+"navigating to :menuselection:`Inventory app --> Products --> Products`, then"
+" select an existing product, or create a new one by clicking "
+":guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:60
+msgid ""
+"On the product form, under the :guilabel:`General Information` tab, set the "
+":guilabel:`Product Type` to :guilabel:`Storable Product`. This is necessary "
+"because Odoo only tracks stock quantities for storable products, and "
+"quantities are needed to trigger reordering rules."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst-1
 msgid "Set the Product Type as Storable."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:35
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:68
 msgid ""
-"Next, click on the :guilabel:`Inventory` tab and select one or more routes "
-"from the :guilabel:`Routes` section. Doing so tells Odoo which route to use "
-"to replenish the product."
+"Next, click the :guilabel:`Inventory` tab and select one or more routes from"
+" the :guilabel:`Routes` section. Doing so tells Odoo which route to use to "
+"replenish the product."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst-1
 msgid "Select one or more routes on the Inventory tab."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:42
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:75
 msgid ""
 "If the product is reordered using the :guilabel:`Buy` route, confirm that "
 "the :guilabel:`Can be Purchased` checkbox is enabled under the product name."
@@ -16728,185 +16553,200 @@ msgstr ""
 msgid "Specify a vendor and price on the Purchase tab."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:51
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:84
 msgid ""
 "If the product is replenished using the :guilabel:`Manufacture` route, it "
-"needs to have at least one Bill of Materials (BoM) associated with it. This "
-"is necessary because Odoo only creates manufacturing orders for products "
-"with a :abbr:`BoM (Bill of Materials)`."
+"needs to have at least one *bill of materials* (BoM) associated with it. "
+"This is necessary because Odoo only creates manufacturing orders for "
+"products with a |BoM|."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:55
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:88
 msgid ""
-"If a :abbr:`BoM (Bill of Materials)` does not already exist for the product,"
-" select the :guilabel:`Bill of Materials` smart button at the top of the "
-"product form, then click :guilabel:`New` to configure a new :abbr:`BoM (Bill"
-" of Materials)`."
+"If a |BoM| does not already exist for the product, select the "
+":guilabel:`Bill of Materials` smart button at the top of the product form, "
+"then click :guilabel:`New` to configure a new |BoM|."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst-1
 msgid "The Bill of Materials smart button on a product form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:64
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:98
 msgid "Create new reordering rules"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:66
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:100
 msgid ""
 "To create a new reordering rule, navigate to :menuselection:`Inventory app "
 "--> Configuration --> Reordering Rules`, then click :guilabel:`New`, and "
-"fill out the new line as follows:"
+"fill out the following fields in the new line:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:69
-msgid ":guilabel:`Product`: The product that is replenished by the rule."
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:103
+msgid ":guilabel:`Product`: The product that requires replenishment."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:70
-msgid ":guilabel:`Location`: The location where the product is stored."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:71
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:104
 msgid ""
-":guilabel:`Min Quantity`: The minimum quantity that can be forecasted "
-"without the rule being triggered. When forecasted stock falls below this "
-"number, a replenishment order for the product is created."
+":guilabel:`Location`: The specific location where the product is stored."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:74
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:105
 msgid ""
-":guilabel:`Max Quantity`: The maximum quantity that stock is replenished up "
-"to."
+":guilabel:`Min Quantity`: The minimum amount of product that should be "
+"available. When inventory levels goes below this number, the replenishment "
+"is triggered."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:75
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:107
 msgid ""
-":guilabel:`Multiple Quantity`: Specify if the product should be replenished "
-"in batches of a certain quantity (e.g., a product could be replenished in "
-"batches of 20)."
+":guilabel:`Max Quantity`: The amount of product that should be available "
+"after replenishing the product."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:77
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:109
 msgid ""
-":guilabel:`UoM`: The unit of measure used for reordering the product. This "
-"value can simply be `Units` or a specific unit of measurement for weight, "
-"length, etc."
+":guilabel:`Multiple Quantity`: If the product should be ordered in specific "
+"quantities, enter the number that should be ordered. For example, if the "
+":guilabel:`Multiple Quantity` is set to `5`, and only 3 are needed, 5 "
+"products are replenished."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst-1
 msgid "The form for creating a new reordering rule."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:85
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:118
 msgid ""
-"Reordering rules can also be created from each product form. To do so, "
-"navigate to :menuselection:`Inventory app --> Products --> Products`, then "
-"select a product. Click on :menuselection:`Reordering Rules smart button -->"
-" New`, then fill out the new line, as detailed above."
+"Reordering rules can also be created from the :guilabel:`Reordering Rules` "
+"smart button on the product form."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:90
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:122
+msgid ""
+"To learn how the :guilabel:`On Hand`, :guilabel:`Forecast`, and "
+":guilabel:`To Order` fields are calculated using on-hand quantities and "
+"future demand, see the :ref:`Just-in-time logic "
+"<inventory/warehouses_storage/just-in-time>` section."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:126
 msgid ""
 "For advanced usage of reordering rules, learn about the following reordering"
 " rule fields:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:92
-msgid ":ref:`Trigger <inventory/product_management/trigger>`"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:130
+msgid ":ref:`Vendor <inventory/warehouses_storage/set-vendor>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:93
-msgid ":ref:`Visibility days <inventory/product_management/visibility-days>`"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:131
+msgid ":ref:`Bill of materials <inventory/warehouses_storage/set-bom-field>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:94
-msgid ":ref:`Preferred route <inventory/product_management/route>`"
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:132
+msgid ""
+":ref:`Procurement group <inventory/warehouses_storage/procurement-grp>`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:97
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:136
 msgid ""
 "The fields above are not available by default, and must be enabled by "
-"selecting the :guilabel:`(slider)` icon in the far-right corner, and "
-"selecting the desired column from the drop-down menu."
+"selecting the :icon:`oi-settings-adjust` :guilabel:`(adjust)` icon in the "
+"far-right corner and selecting the desired column from the drop-down menu."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:104
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:143
 msgid "Trigger"
 msgstr "Sprožilec"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:106
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:145
 msgid ""
-"When stock falls below the reordering rule's minimum, set the reordering "
-"rule's *trigger* to *automatic* to automatically create purchase or "
-"manufacturing orders to replenish stock."
+"A reordering rule's *trigger* can be set to *automatic* or *manual*. While "
+"both function the same way, the difference between the two types of "
+"reordering rules is how the rule is launched:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:109
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:148
 msgid ""
-"Alternatively, setting the reordering rule's trigger to *manual* displays "
-"the product and forecasted stock on the *replenishment dashboard*, where the"
-" procurement manager can review the stock levels, lead times, and forecasted"
-" dates of arrival."
+":ref:`Auto <inventory/warehouses_storage/auto-rr>`: A purchase or "
+"manufacturing order is automatically created when the forecasted stock falls"
+" below the reordering rule's minimum quantity. By default, the "
+":guilabel:`Auto` trigger is selected."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:114
-msgid ":doc:`../replenishment`"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:117
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:151
 msgid ""
-"The :guilabel:`Replenishment` dashboard is accessible by going to "
-":menuselection:`Inventory app --> Operations --> Replenishment`."
+":ref:`Manual <inventory/warehouses_storage/manual-rr>`: The "
+":doc:`Replenishment report <report>` lists products needing replenishment, "
+"showing current/forecasted stock, lead times, and arrival dates. Users can "
+"review forecasts before clicking *Order Once*."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:120
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:155
 msgid ""
 "To enable the :guilabel:`Trigger` field, go to :menuselection:`Inventory app"
-" --> Configuration --> Reordering Rules`. Then, click the "
-":guilabel:`(slider)` icon, located to the far-right of the column titles, "
-"and enable the :guilabel:`Trigger` option from the additional options drop-"
-"down menu that appears."
+" --> Operations --> Replenishment` or :menuselection:`Inventory app --> "
+"Configuration --> Reordering Rules`. Then, click the :icon:`oi-settings-"
+"adjust` :guilabel:`(adjust)` icon, located to the far-right of the column "
+"titles, and tick the :guilabel:`Trigger` checkbox."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst-1
-msgid ""
-"Enable the Trigger field by toggling it in the additional options menu."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:129
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:160
 msgid ""
 "In the :guilabel:`Trigger` column, select :guilabel:`Auto` or "
 ":guilabel:`Manual`. Refer to the sections below to learn about the different"
 " types of reordering rules."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:133
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:166
 msgid "Auto"
 msgstr "Samodejno"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:135
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:168
 msgid ""
-"Automatic reordering rules, enabled by setting the reordering rule's "
+"*Automatic reordering rules*, enabled by setting the reordering rule's "
 ":guilabel:`Trigger` field to :guilabel:`Auto`, generate purchase or "
-"manufacturing orders when:"
+"manufacturing orders when either:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:138
-msgid "the scheduler runs, and the *On Hand* quantity is below the minimum"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:139
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:171
 msgid ""
-"a sales order is confirmed, and lowers the *Forecasted* quantity of the "
-"product below the minimum"
+"The scheduler runs, and the *Forecasted* quantity is below the minimum, or"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:142
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:172
+msgid ""
+"A sales order is confirmed, and lowers the *Forecasted* quantity of the "
+"product below the minimum."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:175
+msgid ""
+"If the :guilabel:`Buy` route is selected, then an |RFQ| is generated. To "
+"view and manage |RFQs|, navigate to :menuselection:`Purchase app --> Orders "
+"--> Requests for Quotation`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:178
+msgid ""
+"If the :guilabel:`Manufacture` route is selected, then an |MO| is generated."
+" To view and manage |MOs|, navigate to :menuselection:`Manufacturing app -->"
+" Operations --> Manufacturing Orders`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:181
+msgid ""
+"When no route is selected, Odoo selects the :guilabel:`Route` specified in "
+"the :guilabel:`Inventory` tab of the product form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:185
 msgid "The scheduler is set to run once a day, by default."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:144
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:187
 msgid ""
 "To manually trigger a reordering rule before the scheduler runs, ensure "
 ":ref:`developer mode <developer-mode>` is enabled, and then select "
@@ -16915,11 +16755,11 @@ msgid ""
 "appears."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:149
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:192
 msgid "Be aware that this also triggers *any other* scheduled actions."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:152
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:195
 msgid ""
 "The product, `Office Lamp`, has an automatic reordering rule set to trigger "
 "when the forecasted quantity falls below the :guilabel:`Min Quantity` of "
@@ -16931,52 +16771,23 @@ msgstr ""
 msgid "Show automatic reordering rule from the Reordering Rule page."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:160
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:208
 msgid ""
-"If the :guilabel:`Buy` route is selected, then an :abbr:`RFQ (Request for "
-"Quotation)` is generated. To view and manage :abbr:`RFQs (Requests for "
-"Quotation)`, navigate to :menuselection:`Purchase app --> Orders --> "
-"Requests for Quotation`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:164
-msgid ""
-"If the :guilabel:`Manufacture` route is selected, then an :abbr:`MO "
-"(Manufacturing Order)` is generated. To view and manage :abbr:`MOs "
-"(Manufacturing Orders)`, navigate to :menuselection:`Manufacturing app --> "
-"Operations --> Manufacturing Orders`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:168
-msgid ""
-"When no route is selected, Odoo selects the :guilabel:`Route` specified in "
-"the :guilabel:`Inventory` tab of the product form."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:176
-msgid ""
-"Manual reordering rules, configured by setting the reordering rule's "
+"*Manual reordering rules*, configured by setting the reordering rule's "
 ":guilabel:`Trigger` field to :guilabel:`Manual`, list a product on the "
-"replenishment dashboard when the forecasted quantity falls below a specified"
-" minimum. Products on this dashboard are called *needs*, because they are "
-"needed to fulfill upcoming sales orders, for which the forecasted quantity "
-"is not enough."
+":doc:`replenishment dashboard <report>` when the forecasted quantity falls "
+"below a specified minimum. Products on this dashboard are called *needs*, "
+"because they are needed to fulfill upcoming sales orders, for which the "
+"forecasted quantity is not enough."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:181
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:214
 msgid ""
 "The replenishment dashboard, accessible by navigating to "
 ":menuselection:`Inventory app --> Operations --> Replenishment`, considers "
 "sales order deadlines, forecasted stock levels, and vendor lead times. It "
-"displays needs **only** when it is time to reorder items."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:186
-msgid ""
-"If the one-day window for ordering products is too short, skip to the "
-":ref:`visibility days <inventory/product_management/visibility-days>` "
-"section to make the need appear on the replenishment dashboard a specified "
-"number of days in advance."
+"displays needs **only** when it is time to reorder items, thanks to the "
+":guilabel:`To Reorder` filter."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst-1
@@ -16985,110 +16796,19 @@ msgid ""
 "stock."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:197
-msgid "Visibility days"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:200
-msgid ""
-"Ensure :doc:`lead times <lead_times>` are understood before proceeding with "
-"this section."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:202
-msgid ""
-"When :ref:`manual reordering rules <inventory/product_management/manual-rr>`"
-" are assigned to a product, *visibility days* make the product appear on the"
-" replenishment dashboard (:menuselection:`Inventory app --> Operations --> "
-"Replenishment`) a certain number of days in advance."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:208
-msgid ""
-"A product has a manual reordering rule set to trigger when the stock level "
-"falls below four units. The current on-hand quantity is ten units."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:211
-msgid ""
-"The current date is February twentieth, and the *delivery date* on a sales "
-"order (in the :guilabel:`Other Info` tab) is March third — twelve days from "
-"the current date."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:214
-msgid ""
-"The :ref:`vendor lead time <inventory/management/purchase-lt>` is four days,"
-" and the :ref:`purchase security lead time <inventory/management/purchase-"
-"security-lt>` is one day."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:217
-msgid ""
-"When the :guilabel:`Visibility Days` field of the reordering rule is set to "
-"zero, the product appears on the replenishment dashboard five days before "
-"the delivery date, which, in this case, is February twenty-seventh."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst-1
-msgid ""
-"Graphic representing when the need appears on the replenishment dashboard: "
-"Feb 27."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:225
-msgid ""
-"To see the product on the replenishment dashboard for the current date, "
-"February twentieth, set the :guilabel:`Visibility Days` to `7.00`."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:228
-msgid ""
-"To determine the number of visibility days needed to see a product on the "
-"replenishment dashboard, subtract *today's date* from the *date the need "
-"appears* on the replenishment dashboard."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:231
-msgid "Visibility~days = Need~appears~date - Today's~date"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:236
-msgid ""
-"Referring to the example above, today's date is February twentieth, and the "
-"need for the product appears on February twenty-seventh."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:239
-msgid "(February 27 - February 20 = 7 days)"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:241
-msgid ""
-"Incorrectly setting the :guilabel:`Visibility Days` fewer than seven days in"
-" this case results in the need **not** appearing on the replenishment "
-"dashboard."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:0
-msgid ""
-"Show the replenishment dashboard with the correct and incorrect visibility "
-"days set."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:251
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:226
 msgid "Preferred route"
 msgstr "Prednostne proge"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:253
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:228
 msgid ""
-"Odoo allows for multiple routes to be selected under the "
-":guilabel:`Inventory` tab on each product form. For instance, it is possible"
-" to select both :guilabel:`Buy` and :guilabel:`Manufacture`, thus enabling "
-"the functionality of both routes."
+"Odoo allows for multiple routes to be selected as replenishment methods "
+"under the :guilabel:`Inventory` tab on each product form. For instance, it "
+"is possible to select both :guilabel:`Buy` and :guilabel:`Manufacture`, "
+"indicating to Odoo that the product can be bought or manufactured."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:257
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:233
 msgid ""
 "Odoo also enables users to set a preferred route for a product's reordering "
 "rule. This is the route that the rule defaults to if multiple are selected. "
@@ -17097,7 +16817,7 @@ msgid ""
 ":menuselection:`Inventory app --> Operations --> Replenishment`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:262
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:238
 msgid ""
 "Click inside of the column on the row of a reordering rule, and a drop-down "
 "menu shows all available routes for that rule. Select one to set it as the "
@@ -17108,11 +16828,556 @@ msgstr ""
 msgid "Select a preferred route from the drop-down."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:270
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:245
 msgid ""
 "If multiple routes are enabled for a product but no preferred route is set "
 "for its reordering rule, the product is reordered using the selected route "
 "that is listed first on the :guilabel:`Inventory` tab of the product form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:250
+msgid "Advanced uses"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:252
+msgid ""
+"Pairing :guilabel:`Preferred Route` with one of the following fields on the "
+"replenishment report unlocks advanced configurations of reordering rules. "
+"Consider the following:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:257
+msgid ""
+":guilabel:`Vendor`: When the selected :guilabel:`Preferred Route` is "
+":guilabel:`Buy`, setting the :guilabel:`Vendor` field to one of the multiple"
+" vendors on the vendor pricelist indicates to Odoo that the vendor is "
+"automatically populated on |RFQs| when a reordering rule triggers the "
+"creation of a purchase order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:264
+msgid ""
+":guilabel:`Bill of Materials`: When the :guilabel:`Preferred Route` is set "
+"to :guilabel:`Manufacture`, and there are multiple |BoMs| in use, specifying"
+" the desired |BoM| in the replenishment report, draft manufacturing orders "
+"are created with this |BoM| in use."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:270
+msgid ""
+":guilabel:`Procurement Group`: This is a way to group related |POs| or |MOs|"
+" that are tied to fulfilling a specific demand, like an |SO| or a project. "
+"It helps organize and track which orders are linked to a particular demand."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:275
+msgid ""
+"Procurement groups link replenishment methods to demand, enabling smart "
+"buttons to appear when using the :ref:`MTO route "
+"<inventory/warehouse_storage/mto-route>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:0
+msgid "Showing smart button to PO."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:281
+msgid ""
+"Sales order (demand) with a linked purchase order (replenishment method)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:283
+msgid "In the context of reordering rules:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:285
+msgid ""
+"Reordering rules do not automatically assign a procurement group, which is "
+"why there are no smart buttons that link |SOs| to |POs|, unlike the "
+":abbr:`MTO (Make to Order)` route."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:287
+msgid ""
+"To enable smart buttons for products replenished by reordering rules (not "
+":abbr:`MTO (Make to Order)`), with specific quantities linked to specific "
+"demands (e.g. |SOs|), assign a procurement group."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:290
+msgid ""
+"Without a procurement group, demands for the same product can be combined "
+"into a single |RFQ|, even if the reordering rule is executed multiple times "
+"for those demands. This allows for more efficient procurement by "
+"consolidating demands into fewer orders."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:294
+msgid ""
+"Selecting a procurement group in the :guilabel:`Procurement Group` field on "
+"the replenishment report ensures that all linked orders are grouped under "
+"the same demand, based on the defined route."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:299
+msgid ""
+"How can you set the *Procurement Group*, *Vendor*, and *Preferred Route* "
+"fields on the replenishment report to generate a single |RFQ| for five "
+"different products in sales order SO35, given they share the same vendor, "
+"Azure Interior, and ensure other demands for these products are handled "
+"separately?"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:306
+msgid ""
+"Set the :guilabel:`Procurement Group` to `SO35`, in the reordering rule for "
+"all five products. This groups the demands for `SO35` in the same |RFQ| or "
+"|MO|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:308
+msgid ""
+"Set the :guilabel:`Vendor` to `Azure Interior` to ensure the |RFQ| is "
+"created for the same supplier."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:310
+msgid ""
+"Set the :guilabel:`Preferred Route` to :guilabel:`Buy` to generate an |RFQ|."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:311
+msgid ""
+"Click the :guilabel:`Order Once` button to generate a single |RFQ| for the "
+"five products tied to `SO35`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:0
+msgid ""
+"After placing the order, remove `SO35` from the :guilabel:`Procurement "
+"Group` field of the five products' reordering rules. This ensures future "
+"demands for these products are managed separately and assigned to different "
+"|RFQs| (the usual behavior)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:321
+msgid "Just-in-time logic"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:323
+msgid ""
+"*Just-in-time logic* in Odoo minimizes storage costs by placing orders "
+"precisely to meet deadlines. This is achieved using the :ref:`forecasted "
+"date <inventory/warehouses_storage/forecasted-date>`, which determines when "
+"replenishment is necessary to avoid overstocking."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:327
+msgid ""
+"The forecasted date is the **earliest possible date** to receive a product "
+"if the replenishment process starts immediately. It is calculated by summing"
+" the lead times linked to the replenishment process, such as :ref:`vendor "
+"lead times <inventory/management/purchase-lt>` and :ref:`purchasing delays "
+"<inventory/management/purchase-security-lt>` for purchases, or "
+":ref:`manufacturing lead times <inventory/management/manuf-lt>` for "
+"production. Both automatic and manual reordering rules work this way."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:335
+msgid ""
+"For a product with a 5-day total lead time and a sales order delivery date "
+"in 10 days, Odoo waits 5 days to place the order, ensuring it arrives just "
+"in time for delivery."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:338
+msgid "Important considerations:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:340
+msgid ""
+"**If this feels risky**, consider adding buffer time or :doc:`adjusting lead"
+" times <lead_times>` for more flexibility."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:342
+msgid ""
+"While lead times and just-in-time logic provide additional control, "
+"**reordering rules work perfectly fine without them**. Keeping delivery "
+"dates on sales orders as their *creation date* ensures purchases are "
+"immediately triggered when needed"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:349
+msgid "Forecasted date and To Order quantity"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:351
+msgid ""
+"To view the *forecasted date*, go to the replenishment report and click the "
+":icon:`fa-info-circle` :guilabel:`(info)` icon for the desired reordering "
+"rule. The :guilabel:`Replenishment Information` pop-up window displays the "
+":guilabel:`Forecasted Date` and various lead times."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:355
+msgid ""
+"The *forecasted date* is the total time needed to procure a product in Odoo."
+" It is calculated by summing the lead times linked to the product's "
+"replenishment process. The total of these lead times, added to the current "
+"date, determines when Odoo checks for demanded stock."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:360
+msgid ""
+"The forecasted date is the **earliest possible date** the customer can "
+"receive the product if the replenishment process began right **now**. It is "
+"calculated by adding all lead times related to the product to the current "
+"date."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:365
+msgid ""
+"A manual reordering rule is set up with no minimum or maximum quantities."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:367
+msgid ""
+"Vendor lead time is 4 days, the purchase security lead time is 1 day, and "
+"the days to purchase is 2 days."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:369
+msgid "Today's date is November 26."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:370
+msgid "These add up to 7 days, making the forecasted date, December 3rd."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:372
+msgid ""
+"A confirmed |SO| for 5 units has a delivery date of December 3rd (7 days "
+"from today). This demand will appear on the replenishment report today, in "
+"the **To Order** field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:375
+msgid ""
+"However, if the delivery date were later than December 3rd, it would not yet"
+" appear on the report. Odoo only displays quantities to replenish when they "
+"fall within the forecasted date window, ensuring orders are placed precisely"
+" when needed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:0
+msgid "Show forecasted date in Odoo."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:382
+msgid ""
+"The *just-in-time* logic ensures replenishment happens only when it's "
+"necessary for the forecasted date's demand, helping avoid overstocking."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:385
+msgid "For example:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:387
+msgid ""
+"If the forecasted quantity drops below the minimum **on** the forecasted "
+"date, replenishment must begin immediately to avoid shortages."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:389
+msgid ""
+"If the quantity drops below the minimum **after** the forecasted date, "
+"replenishment can wait."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:391
+msgid "The **To Order** quantity is the total demand on the forecasted date."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:393
+msgid ""
+"By timing purchase orders based on the combined lead times, Odoo optimizes "
+"stock levels, keeping inventory minimal while ensuring future requirements "
+"are ordered at the last possible moment—strategic procrastination without "
+"the stress!"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:398
+msgid "Common confusion about forecasted quantities"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:400
+msgid ""
+"|SOs| due **after** the :guilabel:`Forecasted Date` are not accounted for in"
+" the :guilabel:`Forecast` quantities of the reordering rule."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:403
+msgid ""
+"They are, however, accounted for on the forecasted report that is opened by "
+"clicking the :icon:`fa-area-chart` :guilabel:`(graph)` icon on the "
+"replenishment report, as this one represents the **long-term forecasted "
+"quantity**."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:0
+msgid "Forecast and To Order quantities is zero."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:412
+msgid ""
+"Continuing the above example, when the sales order's deadline is adjusted to"
+" December 4th, the :guilabel:`Forecast` and :guilabel:`To Order` quantities "
+"are zero."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:0
+msgid "Show forecasted report."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:418
+msgid ""
+"Opening the :guilabel:`Forecasted Report` shows the :guilabel:`Forecasted` "
+"units is `5.00`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:423
+msgid "Visibility days"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:425
+msgid ""
+"*Visibility days* enable the ability to determine if additional quantities "
+"should be added to the planned replenishment. Odoo checks if forecasted "
+"stock on the forecasted date will drop below the minimum in the reordering "
+"rule. **Only if** it is time to reorder, visibility days check additional "
+"future demand by the specified number of days."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:430
+msgid ""
+"This feature helps consolidate orders by grouping immediate and near-future "
+"needs, reducing transport costs and enabling supplier discounts for larger "
+"orders."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:433
+msgid ""
+"To set visibility days to incorporate orders for a specified number of days "
+"in the future, navigate to :menuselection:`Inventory app --> Operations --> "
+"Replenishment`, or by clicking the *Reordering Rules* smart button from the "
+"product form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:437
+msgid ""
+"Next, enable the :guilabel:`Visibility Days` field by clicking the "
+":icon:`oi-settings-adjust` :guilabel:`(adjust)` icon to the far right and "
+"choosing the feature from the drop-down menu. Then, enter the desired "
+"visibility days."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:442
+msgid ""
+"The forecasted date is never pushed forward or extended; Odoo only checks "
+"the extra visibility days if the stock falls below the minimum threshold on "
+"the forecasted date."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:446
+msgid "Example where visibility days is triggered"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:448
+msgid ""
+"A product shipped from Asia has a combined vendor lead time of 30 days and a"
+" shipping cost of $100 (including :doc:`landed costs "
+"<../../product_management/inventory_valuation/integrating_landed_costs>` and"
+" tariffs)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:452
+msgid ""
+"November 4: Current date. The forecasted date is December 4 (30 days later)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:453
+msgid ""
+"|SO| 1: Requires the product by Dec 4. Odoo places the order today, costing "
+"$100."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:454
+msgid ""
+"|SO| 2: Requires the product by Dec 19. Normally, Odoo would order on Nov "
+"19, costing an additional $100."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:456
+msgid ""
+"|SO| 3: Requires the product by Dec 25. Normally, Odoo would order on Nov "
+"25, costing another $100."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:459
+msgid ""
+"Ordering separately for these sales orders totals $300 in shipping costs."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst-1
+msgid "Show forecasted date visualization."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:464
+msgid ""
+"Setting :guilabel:`Visibility Days` to `20.0` allows Odoo to \"look ahead\" "
+"20 days from December 4 (|SO| 1's forecasted date) to December 24."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:467
+msgid ""
+"It groups |SO| 2's order with |SO| 1, reducing shipping costs by "
+"consolidating orders."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:468
+msgid ""
+"|SO| 3, which is due on Dec 25, is one day late and is not grouped with the "
+"other two orders."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst-1
+msgid "Visibility days visualization."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:474
+msgid "Counterexample where visibility days is not triggered"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:476
+msgid "Considering the example above, if |SO| 1 does not exist, then:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:478
+msgid ""
+"**November 4**: Current date. The forecasted date is December 4 (30 days "
+"later)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:479
+msgid "**November 5**: The forecasted date shifts to December 5."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:480
+msgid ""
+"|SO| 2: Requires the product by December 19. Odoo will only trigger the "
+"order on November 19, meaning the user will not see a replenishment "
+"notification until then."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:483
+msgid ""
+"This shows that visibility days complement just-in-time logic by optimizing "
+"it to balance replenishment costs more effectively."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst-1
+msgid "Example where the visibility days does not trigger."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:3
+msgid "Replenishment report"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:8
+msgid ""
+"The *replenishment report* is an interactive dashboard that uses "
+":doc:`manual reordering rules <reordering_rules>`, lead times, and upcoming "
+"demands to forecast quantities of products that need restocking."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:12
+msgid ""
+"Reordering rules used on this dashboard are normal reordering rules, but the"
+" user benefits from a monitoring menu with extra options to manage "
+"suggestions for replenishment."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:15
+msgid ""
+"This enables users to anticipate future needs, keep less products on hand "
+"without the risk of running out, plan and consolidate orders."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:18
+msgid ""
+"To access the replenishment report, go to :menuselection:`Inventory app --> "
+"Operations --> Replenishment.`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:21
+msgid ""
+"The fields and features unique to the replenishment dashboard are displayed "
+"below. For definitions of the other fields, go to the :ref:`Create "
+"reordering rules section <inventory/warehouses_storage/rr-fields>`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:25
+msgid ""
+"By default, the quantity in the :guilabel:`To Order` field is the quantity "
+"required to reach the set :guilabel:`Max Quantity`. However, the "
+":guilabel:`To Order` quantity can be adjusted by clicking on the field and "
+"changing the value. To replenish a product manually, click :icon:`fa-truck` "
+":guilabel:`Order Once`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:30
+msgid ""
+"Clicking :icon:`fa-bell-slash` :guilabel:`Snooze` temporarily deactivates "
+"the reordering rule for the set period, hiding the entry from the "
+"replenishment dashboard, when it is supposed to appear."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:34
+msgid ""
+"Defining a :guilabel:`Vendor` allows filtering or grouping demands by the "
+"vendor. This simplifies the process of identifying products to order and can"
+" reduce shipment costs."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst-1
+msgid "Replenishment report that displays recommended quantities to order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:41
+msgid ""
+"Automatic reordering rules appear on this menu, too but are hidden by "
+"default."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:44
+msgid "Replenishment information"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:46
+msgid ""
+"In each line of the replenishment report, clicking the :icon:`fa-info-"
+"circle` :guilabel:`(info)` icon opens the :guilabel:`Replenishment "
+"Information` pop-up window, which displays the *lead times* and *forecasted "
+"date*."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:50
+msgid ""
+"For detailed information on how to use this feature for replenishment, go to"
+" the :ref:`Just in time logic <inventory/warehouses_storage/just-in-time>` "
+"section."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses.rst:3
