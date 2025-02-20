@@ -31,15 +31,6 @@ localization:
    * - :guilabel:`Indian - Accounting Reports`
      - `l10n_in_reports`
      - :ref:`Indian tax reports <india/gstr_reports>`
-   * - :guilabel:`Indian - Purchase Report(GST)`
-     - `l10n_in_purchase`
-     - Indian GST Purchase report
-   * - :guilabel:`Indian - Sale Report(GST)`
-     - `l10n_in_sale`
-     - Indian GST Sale report
-   * - :guilabel:`Indian - Stock Report(GST)`
-     - `l10n_in_stock`
-     - Indian GST Stock report
 
 .. image:: india/india-modules.png
    :alt: Indian localization modules
