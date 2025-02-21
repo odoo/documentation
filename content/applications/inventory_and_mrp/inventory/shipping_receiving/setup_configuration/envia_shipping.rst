@@ -5,7 +5,7 @@ Envia.com Integration
 Envia is a shipping service aggregator that facilitates the integration in several continents. Once integrated, users can select shipping carriers on inventory operations in their Odoo database.
 
 Setup in Envia
-==================
+==============
 
 Create an account and activate carriers
 ---------------------------------------
@@ -34,7 +34,7 @@ This API key is the one we will request in Odoo, you can always come back for it
    :alt: API Keys in Envia.com.
 
 Setup in Odoo
-==================
+=============
 
 Install Envia.com shipping module
 ---------------------------------
@@ -111,7 +111,7 @@ accurately and completely in Odoo:
 #. **Warehouse address**: By default all packages will be sent from the specified address in the warehouse, make sure to set the address for correct label generation.
 
 Address filling guide
---------------------
+---------------------
 
 Each country has rules regarding how an address is filled. This is a comprehensive guide of each country's expected fields exceptions:
 
@@ -181,7 +181,7 @@ Countries not listed here should be filled as normal.
 
   
 Generate labels with Envia
-==================
+==========================
 
 When creating a quotation in Odoo, add shipping and the :guilabel:`Envia.com shipping product`. 
 Then, :guilabel:`Validate` the delivery. Shipping label documents are automatically generated in the chatter, which include the following:
@@ -200,12 +200,12 @@ Additionally, the tracking number is now available.
 
 
 International shipping
---------------------
+----------------------
 
 For international shipments it is required to fill both the :guilabel:`HS code` and the country of :guilabel:`Origin of Goods`, both can be found on the product’s :guilabel:`Inventory tab`.
 
 LTL Shipments
---------------------
+-------------
 LTL shipment labels can be generated through the connector. The insurance for LTL shipments is covered under the insurance percentage value at the delivery method’s form.
 
 .. important:: 
@@ -218,7 +218,7 @@ LTL shipment labels can be generated through the connector. The insurance for LT
 .. _inventory/shipping_receiving/setup_configuration/cancel:
 
 Tracking and cancellation
-==================
+=========================
 Shipments registered with Envia can be tracked using the Tracking smart button from the delivery order or using the tracking link from the customer portal.
 
 .. image:: envia_shipping/envia_customer_portal_tracking.png
@@ -232,7 +232,7 @@ FAQ
 ===
 
 Measuring volumetric weight
----------------------
+---------------------------
   
 Many carriers have several measurements for weight. There is the actual weight of the products in the parcel, and the volumetric weight. 
 Volumetric weight is the volume that a package occupies when in transit, i.e. the physical size of a package.
@@ -242,23 +242,23 @@ Volumetric weight is the volume that a package occupies when in transit, i.e. th
 
 
 Which printing options are available?
----------------------
+-------------------------------------
   
 On Envia.com in :menuselection:`Settings > Print options and Carriers printing options` for each of your carriers are displayed, make sure to use the appropriate format for the chosen carrier.
 
 
 The needed service is not available
----------------------
+-----------------------------------
 
 For available carriers, make sure that they are enabled through Envia.
 
 
 Who will pay customs duties?
----------------------
+----------------------------
 
 It’s important to make sure that if there are exports to other countries, use Envia’s carrier settings to configure whether it is paid by the sender or the receiver.
 
 What is "Envia error"?
----------------------------------
+----------------------
 
 It’s a message that appears when there’s an error in Envia. This message mentions what went wrong in their platform so it can be addressed.
