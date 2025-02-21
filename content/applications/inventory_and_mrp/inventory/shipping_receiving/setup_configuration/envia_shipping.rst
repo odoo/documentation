@@ -210,7 +210,7 @@ LTL shipment labels can be generated through the connector. The insurance for LT
 
 .. important:: 
    For Mexico, since a Bill of Landing needs to be created for the shipment, Odoo is required to send the UNSPSC code of the contents, as well as a unit of measure for transportation which is  
-   :guilabel:`X8A - Pallet de madera` as default.
+   **X8A - Pallet de madera** as default.
 
 .. note::
    Additional services are available when you select `pallet` as an option, which allows to select additional services like lift assistance and deliveries during weekends.
