@@ -83,8 +83,8 @@ Invoice confirmation
 
 Click :guilabel:`Confirm` when the invoice is completed. The invoice's status changes to
 :guilabel:`Posted`, and a journal entry is generated based on the invoice configuration. On
-confirmation, Odoo assigns each invoice a unique number from a defined :ref:`sequence
-<accounting/invoice/sequence>`.
+confirmation, Odoo assigns each invoice a unique number from a defined :doc:`sequence
+<customer_invoices/sequence>`.
 
 .. note::
    - Once confirmed, an invoice can no longer be updated. Click :guilabel:`Reset to draft` if
@@ -171,74 +171,6 @@ how much the customer is overdue. These actions are bundled into follow-up level
 an invoice is overdue by a certain number of days. If there are multiple overdue invoices for the
 same customer, the actions are performed on the most overdue invoice.
 
-.. _accounting/invoice/sequence:
-
-Invoice sequence
-================
-
-When confirming an invoice, Odoo generates a unique invoice reference number. By default, Odoo uses
-the following sequence format `INV/year/incrementing-number` (e.g., `INV/2025/00001`), which
-restarts from `00001` each year.
-
-However, it is possible to :ref:`change the sequence format <accounting/invoice/resequencing>` and
-its periodicity, and to :ref:`mass-resequence invoices <accounting/invoice/mass-resequencing>`.
-
-.. note::
-   Changes made to reference numbers are logged in the chatter.
-
-.. _accounting/invoice/resequencing:
-
-Changing the default sequence
------------------------------
-
-To customize the default sequence, open the last confirmed invoice, click :guilabel:`Reset to
-Draft`, and edit the invoice's reference number.
-
-.. image:: customer_invoices/reference-number.png
-   :alt: Editing the reference number of an invoice.
-
-Odoo then explains how the detected format will be applied to all future invoices. For example, if
-the current invoice's month is added, the sequence's periodicity will change to every month instead
-of every year.
-
-.. image:: customer_invoices/sequence-dialog.png
-   :alt: Editing the reference number of an invoice.
-
-.. tip::
-   The sequence format can be edited directly when creating the first invoice of a given sequence
-   period.
-
-.. _accounting/invoice/mass-resequencing:
-
-Mass-resequencing invoices
---------------------------
-
-It can be helpful to resequence multiple invoice numbers. For example, when importing invoices from
-another invoicing or accounting system and the reference originates from the previous software,
-continuity for the current year must be maintained without restarting from the beginning.
-
-.. note::
-   This feature is only available to users with administrator or advisor access.
-
-Follow these steps to resequence invoice numbers:
-
-#. Activate the :ref:`developer mode <developer-mode>`.
-#. From the :guilabel:`Accounting Dashboard`, open the :guilabel:`Customer Invoices` journal.
-#. Select the invoices that need a new sequence.
-#. Click the :icon:`fa-cog` :guilabel:`Actions` menu and select :guilabel:`Resequence`.
-#. In the :guilabel:`Ordering` field, choose to
-
-   - :guilabel:`Keep current order`: The order of the numbers remains the same.
-   - :guilabel:`Reorder by accounting date`: The number is reordered by accounting date.
-
-#. Set the :guilabel:`First New Sequence`.
-#. :guilabel:`Preview Modifications` and click :guilabel:`Confirm`.
-
-The first invoice using the new sequence appears in red in the :guilabel:`Customer Invoices` list.
-
-.. image:: customer_invoices/invoice-sequencing.png
-   :alt: Resequence options window
-
 .. _accounting/invoice/reporting:
 
 Reporting
@@ -303,6 +235,7 @@ liabilities, and equity at a specific time.
    customer_invoices/cash_rounding
    customer_invoices/deferred_revenues
    customer_invoices/electronic_invoicing
+   customer_invoices/sequence
    customer_invoices/snailmail
    customer_invoices/epc_qr_code
    customer_invoices/incoterms
