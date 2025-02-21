@@ -168,7 +168,8 @@ Odoo variables
 --------------
 
 Odoo declares many CSS rules, most entirely customizable by overriding the related SCSS variables.
-To do so, create a :file:`primary_variables.scss` file and add it to the `_assets_primary_variables`
+To do so, create a :file:`primary_variables.scss` file and add it to the `_assets_primary_variables` 
+after the defaults file in the 'website' addon.
 bundle.
 
 **Declaration**
@@ -178,7 +179,7 @@ bundle.
 
    'assets': {
       'web._assets_primary_variables': [
-         ('prepend', 'website_airproof/static/src/scss/primary_variables.scss'),
+         ('after', 'website/static/src/scss/primary_variables.scss', 'website_airproof/static/src/scss/primary_variables.scss'),
       ],
    },
 
