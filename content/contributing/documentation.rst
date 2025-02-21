@@ -132,11 +132,15 @@ to make changes from the GitHub interface.
 
    .. tabs::
 
-      .. group-tab:: Linux and macOS
+      .. group-tab:: Linux
 
          .. code-block:: console
 
             $ sudo apt install make -y
+
+      .. group-tab:: macOS
+
+         Follow the `guide to install Make on macOS <https://formulae.brew.sh/formula/make>`_
 
       .. group-tab:: Windows
 
