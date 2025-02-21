@@ -2261,6 +2261,16 @@ attributes:
    :default: `True`
    :scope: :class:`~odoo.fields.Many2one` fields
 
+.. attribute:: depth
+   :noindex:
+
+   If set to a non zero integer, the hierarchy (if any) will be unfold up to the given level.
+
+   :requirement: Optional
+   :type: integer
+   :default: `0`
+   :scope: :class:`~odoo.fields.Many2one` fields
+
 When the `field` element has the `select=multi` attribute set, it can have the following additional
 attributes:
 
