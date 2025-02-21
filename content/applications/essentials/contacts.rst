@@ -183,28 +183,6 @@ Review` configurations. These are **only** present when the *Resellers* module i
    Follow the :doc:`Resellers documentation <../sales/crm/track_leads/resellers>` for more
    information on publishing partners on the website.
 
-Membership tab
---------------
-
-Finally, there is the :guilabel:`Membership` tab on contact forms, which can help users manage any
-memberships that are being offered to this specific contact. It should be noted that this tab
-**only** appears when the *Members* application is installed.
-
-Activate membership
-~~~~~~~~~~~~~~~~~~~
-
-To activate a contact's membership, click :guilabel:`Buy Membership` in the :guilabel:`Membership`
-tab of a contact form. On the pop-up window that appears, select a :guilabel:`Membership` from the
-drop-down menu. Then, configure a :guilabel:`Member Price`. Click :guilabel:`Invoice Membership`
-when both fields are filled in.
-
-Alternatively, to offer a free membership, tick the :guilabel:`Free Member` checkbox, in the
-:guilabel:`Membership` tab of a contact form.
-
-.. seealso::
-   Follow the :doc:`Members documentation <../sales/members>` for more information on publishing
-   members on the website.
-
 Smart buttons
 =============
 
