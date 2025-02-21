@@ -29,7 +29,6 @@ view of the chat.
    ticket, so the operator can go there directly to add any additional information, if necessary.
 
    .. image:: responses/responses-ticket-link.png
-      :align: center
       :alt: View of the chat window with a helpdesk ticket created in Odoo Live Chat.
 
 More information about each available command can be found below.
@@ -73,7 +72,6 @@ After entering the `/ticket` command, type a title for the ticket into the chat 
 `Enter`.
 
 .. image:: responses/helpdesk.png
-   :align: center
    :alt: View of the results from a helpdesk search in a Live Chat conversation.
 
 The newly created ticket will be added to the *Helpdesk* team that has live chat enabled. If more
@@ -98,7 +96,6 @@ After entering the `/search_tickets` command, type a keyword or ticket number, t
 conversation window.
 
 .. image:: responses/helpdesk-search.png
-   :align: center
    :alt: View of the results from a helpdesk search in a Live Chat conversation.
 
 .. note::
@@ -111,7 +108,6 @@ If an operator types `/history` in the chat window, it generates a list of the m
 visitor has viewed on the website (up to 15).
 
 .. image:: responses/responses-history.png
-   :align: center
    :alt: View of the results from a /history command in a Live Chat conversation.
 
 Lead
@@ -120,7 +116,6 @@ Lead
 By typing `/lead` in the chat window, an operator can create a *lead* in the **CRM** application.
 
 .. image:: responses/responses-lead.png
-   :align: center
    :alt: View of the results from a /lead command in a Live Chat conversation.
 
 .. important::
@@ -172,25 +167,24 @@ field, and type the message that should replace the shortcut.
    Try to connect the shortcut to the topic of the substitution. The easier it is for the operators
    to remember, the easier it is to use the canned responses in conversations.
 
+Authorized groups
+~~~~~~~~~~~~~~~~~
+
+When a new canned response is created, it can **only** be utilized by the operator that created it.
+To allow the response to be used by other operators, select one or more :ref:`groups
+<access-rights/groups>` from the :guilabel:`Authorized Groups` drop-down list.
+
 Use canned responses in a live chat conversation
 ------------------------------------------------
 
-To use a canned response during a live chat conversation, type a colon (`:`) into the chat window,
-followed by the shortcut.
-
-.. example::
-   An operator is chatting with a visitor. As soon as they type `:` they would see a list of
-   available responses. They can manually select one from the list, or continue to type. If they
-   want to use the canned response `'I am sorry to hear that.'`, they would type `:sorry`.
-
-.. image:: responses/canned-responses.png
-   :align: center
-   :alt: View of a chat window and the use of a canned response in Odoo Live Chat.
+To use a canned response in a conversation, click the :icon:`fa-plus-circle` :guilabel:`(plus)` icon
+in the message window. Then, click :guilabel:`Insert a Canned Response`. This opens a list of
+available canned responses. Either select a response from the list, or type the appropriate
+shortcut, then click the :icon:`fa-paper-plane` :guilabel:`(send)` icon or hit :kbd:`Enter`.
 
 .. tip::
-   Typing `:` into a chat window on its own will generate a list of available canned responses.
+   Typing `::` into a chat window on its own generates a list of available canned responses.
    Responses can be manually selected from the list, in addition to the use of shortcuts.
 
    .. image:: responses/response-list.png
-      :align: center
       :alt: View of a chat window and the list of available canned responses.
