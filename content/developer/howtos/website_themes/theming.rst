@@ -10,6 +10,8 @@ theme module. In this chapter, you will discover how to:
 - Get the most out of Bootstrap variables.
 - Add custom styles and JavaScript.
 
+.. _theming/module:
+
 Theme module
 ============
 
@@ -18,6 +20,8 @@ theme, you are extending the default theme.
 
 Remember to add the directory containing your module to the `addons-path` command-line argument
 when running Odoo in your development environment.
+
+.. _theming/module/naming:
 
 Technical naming
 ----------------
@@ -33,6 +37,8 @@ The first step is to create a new directory.
 
    In this documentation, we will use **Airproof** (a fictional project) as an example.
 
+.. _theming/module/structure:
+
 File structure
 --------------
 
@@ -44,18 +50,17 @@ package its theme like a module.
     website_airproof
     ├── data
     ├── i18n
-    ├── lib
     ├── static
     │   ├── description
     │   ├── fonts
-    │   ├── image_shapes // Shapes for images
+    │   ├── lib
     │   ├── shapes // Shapes for background
     │   └── src
     │       ├── img
     │       │   ├── content // For those used in the pages of your website
     │       │   └── wbuilder // For those used in the builder
     │       ├── js
-    │       ├── scss
+    │       ├── scss // Theme specific styles
     │       └── snippets // custom snippets
     ├── views
     ├── __init__.py
@@ -79,11 +84,16 @@ package its theme like a module.
    * - views
      - Custom views and templates (`*.xml`)
 
+.. _theming/module/initialization:
+
 Initialization
 --------------
 
 An Odoo module is also a Python package with a :file:`__init__.py` file containing import
 instructions for various Python files in the module. This file can remain empty for now.
+
+
+.. _theming/module/declaration:
 
 Declaration
 -----------
@@ -99,7 +109,7 @@ always required. It usually contains much more information.
       'name': 'Airproof Theme',
       'description': '...',
       'category': 'Website/Theme',
-      'version': '15.0.0',
+      'version': '{BRANCH}.0',
       'author': '...',
       'license': '...',
       'depends': ['website'],
@@ -130,7 +140,8 @@ always required. It usually contains much more information.
    * - author
      - Name of the module author
    * - license
-     - Distribution license for the module
+     - By default, we use the `LGPL-3` license. More information in the :ref:`module manifest
+       <reference/module/manifest>` page.
    * - depends
      - Odoo modules must be loaded before this one, either because this module uses features
        they create or because it alters resources they define
@@ -140,8 +151,24 @@ always required. It usually contains much more information.
      - List of SCSS and JS files
 
 .. note::
-   To create a website theme, you only need to install the Website app. If you need other apps
-   (Blogs, Events, eCommerce, ...), you can also add them.
+    - The file structure above is just a suggestion.  We could add as many other folders as needed in
+      the project, such as `/controllers` to include controllers or `/views/backend` for backend
+      views, etc.
+    - To create a website theme, you only need to install the Website app. If you need other apps
+      (Blogs, Events, eCommerce, ...), you can also add them.
+    - Odoo version and major number are mandatory. However, patch number is optional. If you want
+      to specify the required version of Odoo to run your module, you should use a five arguments
+      structure, using the first two arguments to indicate the Odoo version.
+
+   .. image:: theming/versioning.png
+      :alt: Module versioning
+      :width: 300
+
+.. warning::
+   Automated file inclusion using wildcard notations `(ex.: /myfolder/*.scss)` doesn't work in
+   Odoo SaaS databases. In this case, include each file manually in the manifest.
+
+.. _theming/options:
 
 Default options
 ===============
@@ -164,6 +191,8 @@ First, try to construct your theme by using Odoo's default options. This ensures
 .. seealso::
    :doc:`Odoo coding guidelines <../../../contributing/development/coding_guidelines>`
 
+.. _theming/module/variables:
+
 Odoo variables
 --------------
 
@@ -178,7 +207,7 @@ bundle.
 
    'assets': {
       'web._assets_primary_variables': [
-         ('prepend', 'website_airproof/static/src/scss/primary_variables.scss'),
+         'website_airproof/static/src/scss/primary_variables.scss',
       ],
    },
 
@@ -193,6 +222,8 @@ By reading the source code, variables related to options are easily noticeable.
       data-img="..."/>
 
 These variables can be overridden through the `$o-website-value-palettes` map, for example.
+
+.. _theming/module/variables/global:
 
 Global
 ~~~~~~
@@ -218,6 +249,8 @@ Global
 .. seealso::
    `Primary variables SCSS
    <https://github.com/odoo/odoo/blob/34c0c9c1ae00aba391932129d4cefd027a9c6bbd/addons/website/static/src/scss/primary_variables.scss#L1954>`_
+
+.. _theming/module/variables/fonts:
 
 Fonts
 ~~~~~
@@ -257,6 +290,8 @@ the font selector.
       ),
    );
 
+.. _theming/module/variables/fonts/google:
+
 Google fonts
 ************
 
@@ -274,6 +309,8 @@ Google fonts
          ),
       ),
    );
+
+.. _theming/module/variables/fonts/custom:
 
 Custom fonts
 ************
@@ -295,8 +332,11 @@ Then, use the `@font-face` rule to allow you custom font(s) to be loaded on your
    :caption: ``/website_airproof/static/src/scss/font.scss``
 
    @font-face {
-      font-family: '<font-name>';
-      ...
+      font-family: "My Custom Font", Helvetica, Helvetica Neue, Arial, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      src: url('/fonts/my-custom-font.woff') format('woff'),
+           url('/fonts/my-custom-font.woff2') format('woff2');
    }
 
 .. code-block:: scss
@@ -314,7 +354,9 @@ Then, use the `@font-face` rule to allow you custom font(s) to be loaded on your
    );
 
 .. tip::
-   It is recommended to use the .woff format for your fonts.
+   It is recommended to use the `.woff` and/or `.woff2` format for your fonts.
+
+.. _theming/module/variables/colors:
 
 Colors
 ~~~~~~
@@ -334,7 +376,7 @@ ensures it stays consistent.
    * - o-color-2
      - Secondary
    * - o-color-3
-     - Extra
+     - Extra (Light)
    * - o-color-4
      - Whitish
    * - o-color-5
@@ -392,8 +434,8 @@ buttons, and secondary buttons. These colors can be customized later by the user
    :alt: Theme colors
    :width: 300
 
-The colors used in a color combination are accessible and can be overridden through the BS
-`$colors map` using a specific prefix (`o-cc` for `color combination`).
+The colors used in a color combination are accessible and can be overridden through
+`$o-color-palettes` using a specific prefix (`o-cc` for `color combination`).
 
 .. code-block:: scss
    :caption: ``/website_airproof/static/src/scss/primary_variables.scss``
@@ -435,6 +477,30 @@ The colors used in a color combination are accessible and can be overridden thro
 
    The Website Builder automatically generates a page to view the color combinations of the theme
    color palette: http://localhost:8069/website/demo/color-combinations
+
+.. _theming/module/variables/gradients:
+
+Gradients
+~~~~~~~~~
+
+You can also define gradients for the menu, header, footer and copyright bar, directly in your
+`primary_variables.scss` file.
+
+**Declaration**
+
+.. code-block:: scss
+   :caption: ``/website_airproof/static/src/scss/primary_variables.scss``
+
+   $o-website-values-palettes: (
+      (
+         'menu-gradient': linear-gradient(135deg, rgb(203, 94, 238) 0%, rgb(75, 225, 236) 100%),
+         'header-boxed-gradient': [your-gradient],
+         'footer-gradient': [your-gradient],
+         'copyright-gradient': [your-gradient],
+      ),
+   );
+
+.. _theming/module/bootstrap:
 
 Bootstrap variables
 -------------------
@@ -484,13 +550,19 @@ values and *not* the :file:`primary_variables.scss` file.
    Don't override Bootstrap variables that depend on Odoo variables. Otherwise, you might break the
    possibility for the user to customize them using the Website Builder.
 
+   When an option is defined by a variable in `primary_variables.scss` and by a Boostrap variable,
+   you should always go for an override through the primary variables. Do it via
+   `bootsrap_overridden.scss` only if nothing exists in the primary variables.
+
 .. seealso::
    `Bootstrap overridden SCSS
-   <{GITHUB_PATH}/addons/website/static/src/scss/bootstrap_overridden.scss>`_
+   <{GITHUB_PATH}/addons/web/static/lib/bootstrap/scss/_variables.scss>`_
 
 .. admonition:: Demo page
 
    http://localhost:8069/website/demo/bootstrap
+
+.. _theming/module/views:
 
 Views
 -----
@@ -513,6 +585,23 @@ By reading the source code, templates related to options are easily found.
    <template id="..." inherit_id="..." name="..." active="True"/>
    <template id="..." inherit_id="..." name="..." active="False"/>
 
+.. _theming/module/views/presets:
+
+Presets
+~~~~~~~
+
+In order to activate and deactivate views as presets, you should include those inside the
+`presets.xml` file.
+
+**Use**
+
+.. code-block:: xml
+   :caption: ``/website_airproof/data/presets.xml``
+
+   <record id="module.view" model="ir.ui.view">
+         <field name="active" eval="False"/>
+   </record>
+
 .. example::
    **Changing the menu items' horizontal alignment**
 
@@ -528,6 +617,7 @@ By reading the source code, templates related to options are easily found.
    **eCommerce - Display products categories**
 
    .. code-block:: xml
+      :caption: ``/website_airproof/data/presets.xml``
 
        <record id="website_sale.products_categories" model="ir.ui.view">
           <field name="active" eval="False"/>
@@ -536,10 +626,13 @@ By reading the source code, templates related to options are easily found.
    **Portal - Disable the language selector**
 
    .. code-block:: xml
+      :caption: ``/website_airproof/data/presets.xml``
 
       <record id="portal.footer_language_selector" model="ir.ui.view">
          <field name="active" eval="False"/>
       </record>
+
+.. _theming/assets:
 
 Assets
 ======
@@ -547,6 +640,31 @@ Assets
 For this part, we will refer to the `assets_frontend` bundle located in the web module. This bundle
 specifies the list of assets loaded by the Website Builder, and the goal is to add your SCSS and JS
 files to the bundle.
+
+This is a non-exhaustive list of the frequently used bundles for a website:
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: 20 80
+
+   * - Bundle
+     - Description
+   * - web._assets_primary_variables
+     - Mainly used for the `primary_variables.scss` file
+   * - web._assets_secondary_variables
+     - Mainly used for the `secondary_variables.scss` file
+   * - web._assets_frontend_helpers
+     - Mainly used for the `bootstrap_overridden.scss` file
+   * - web.assets_frontend
+     - You can add all your custom SCSS, JS or QWeb JS files
+   * - website.assets_wysiwyg
+     - Add your JS files related to the Website Builder options behaviors (for instance, a custom
+       method for your custom building block)
+   * - website.assets_wysiwyg
+     - If you need to extend Boostrap through the Bootstrap Utilities API, for example
+
+.. _theming/assets/styles:
 
 Styles
 ------
@@ -578,6 +696,8 @@ Feel free to reuse the variables from your Bootstrap file and the ones used by O
          color: o-color('o-color-3');
          font-family: o-website-value('headings-font');
        }
+
+.. _theming/assets/interactivity:
 
 Interactivity
 -------------
@@ -619,16 +739,21 @@ brings the benefit of a better developer experience with better integration with
 .. tip::
    - Use a linter (JSHint, ...).
    - Never add minified JavaScript libraries.
-   - Add `'use strict';` on top of every Odoo JavaScript module.
-   - Variables and functions should be *camelcased* (`myVariable`) instead of *snakecased*
+   - Add `'use strict';` at the top of every old-style module (this is automatic for new-style
+     modules).
+   - Use `js_` prefixed CSS classes on elements you target with JavaScript.
+   - Variables and functions should be *camelCased* (`myVariable`) instead of *snake_cased*
      (`my_variable`).
-   - Do not name a variable `event`; use `ev.` instead. This is to avoid bugs on non-Chrome
-     browsers, as Chrome is magically assigning a global event variable (so if you use the event
-     variable without declaring it, it will work fine on Chrome but crash on every other browser).
+   - Do not name a variable `event`; use `ev` instead. This is to avoid bugs on non-Chrome
+     browsers, as Chrome is magically assigning a global `event` variable (so if you use the
+     `event` variable without declaring it, it will work fine on Chrome but crash on every other
+     browser).
    - Use strict comparisons (`===` instead of `==`).
    - Use double quotes for all textual strings (such as `"Hello"`) and single quotes for all other
      strings, such as a CSS selector `.x_nav_item`.
-   - Always use `this._super.apply(this, arguments)`.
+   - If you're using native standard JS functions (`start()`, `willStart()`, `cleanForSave()`,
+     etc), make sure you call `this._super.apply(this, arguments)`; (Check if it's necessary in the
+     standard code).
 
 .. seealso::
    - `Odoo JavaScript coding guidelines <https://github.com/odoo/odoo/wiki/Javascript-coding-guidelines>`_
