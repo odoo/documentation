@@ -4,21 +4,17 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Veikko Väätäjä <veikko.vaataja@gmail.com>, 2024
-# Miku Laitinen <miku.laitinen@gmail.com>, 2024
-# Martin Trigaux, 2024
-# Jarmo Kortetjärvi <jarmo.kortetjarvi@gmail.com>, 2024
-# Tuomo Aura <tuomo.aura@web-veistamo.fi>, 2024
-# Ossi Mantylahti <ossi.mantylahti@obs-solutions.fi>, 2024
+# Ossi Mantylahti <ossi.mantylahti@obs-solutions.fi>, 2025
+# Wil Odoo, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 17.0\n"
+"Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-21 11:43+0000\n"
-"PO-Revision-Date: 2024-03-30 23:40+0000\n"
-"Last-Translator: Ossi Mantylahti <ossi.mantylahti@obs-solutions.fi>, 2024\n"
+"POT-Creation-Date: 2025-02-20 16:01+0000\n"
+"PO-Revision-Date: 2024-10-08 06:34+0000\n"
+"Last-Translator: Wil Odoo, 2025\n"
 "Language-Team: Finnish (https://app.transifex.com/odoo/teams/41243/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -49,7 +45,7 @@ msgid ":doc:`Models <studio/models_modules_apps>`"
 msgstr ""
 
 #: ../../content/applications/studio.rst:24
-msgid ":doc:`Automated actions <studio/automated_actions>`"
+msgid ":doc:`Automation rules <studio/automated_actions>`"
 msgstr ""
 
 #: ../../content/applications/studio.rst:25
@@ -89,9 +85,9 @@ msgstr ""
 
 #: ../../content/applications/studio/approval_rules.rst:5
 msgid ""
-"Studio approval rules are used to automate approval processes for actions. "
-"They allow you to define the criteria for when an approval is required "
-"before an action can be performed using a button."
+"Approval rules are used to automate approval processes for actions. They "
+"allow you to define the criteria for when an approval is required before an "
+"action can be performed using a button."
 msgstr ""
 
 #: ../../content/applications/studio/approval_rules.rst:9
@@ -99,7 +95,7 @@ msgid "Configuration"
 msgstr "Asetukset"
 
 #: ../../content/applications/studio/approval_rules.rst:11
-msgid "To add approval rules, proceed as follows:"
+msgid "To add approval rules with Studio, proceed as follows:"
 msgstr ""
 
 #: ../../content/applications/studio/approval_rules.rst:13
@@ -109,146 +105,168 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/studio/approval_rules.rst:14
-msgid "Select the button for which you want to add approval rules."
+msgid "Select the button to which the rule should be applied."
 msgstr ""
 
 #: ../../content/applications/studio/approval_rules.rst:15
 msgid ""
-"In the :guilabel:`Properties` tab on the left, enable the :guilabel:`Set "
-"approval rules` feature."
+"Click :icon:`fa-plus` :guilabel:`Add an approval step` in the :icon:`fa-"
+"server` :guilabel:`Properties` tab."
 msgstr ""
 
 #: ../../content/applications/studio/approval_rules.rst:17
 msgid ""
-"Specify the :guilabel:`Allowed Group` to limit the approval permission to a "
-"specific user group."
+"Specify which users are responsible for approving the action by using one of"
+" the following fields or both:"
 msgstr ""
 
-#: ../../content/applications/studio/approval_rules.rst:19
-msgid ""
-"Select the :guilabel:`Responsible` user to create an activity for a specific"
-" user when approval is requested from them."
+#: ../../content/applications/studio/approval_rules.rst:20
+msgid ":guilabel:`Approvers` to specify one or several users;"
 msgstr ""
 
 #: ../../content/applications/studio/approval_rules.rst:21
-msgid "Select the :guilabel:`Users to notify` via internal note."
-msgstr ""
-
-#: ../../content/applications/studio/approval_rules.rst:22
-msgid ""
-"Add a :guilabel:`Description` to be displayed in the :ref:`Approval dialog "
-"<approval-rules/use>`."
+msgid ":guilabel:`Approver Group` to specify one user group."
 msgstr ""
 
 #: ../../content/applications/studio/approval_rules.rst:24
 msgid ""
-"Optionally, you can also add conditions for the approval rule to be applied "
-"by clicking the :icon:`fa-filter` (:guilabel:`filter`) icon next to the "
-":guilabel:`Allowed Group` field."
+"An activity is created for all users set as :guilabel:`Approvers` when their"
+" approval is requested."
 msgstr ""
 
 #: ../../content/applications/studio/approval_rules.rst:27
 msgid ""
-"To add another rule, click :guilabel:`Add an approval rule`. When there are "
-"multiple approval rules, you can:"
+"(*optional*) Select the :guilabel:`Users to Notify` via an internal note "
+"when the action is approved or rejected."
 msgstr ""
 
-#: ../../content/applications/studio/approval_rules.rst:30
+#: ../../content/applications/studio/approval_rules.rst:29
 msgid ""
-"enable :guilabel:`Exclusive Approval` to require approvers to be different "
-"users;"
+"(*optional*) Add a :guilabel:`Description` to be displayed on the button."
 msgstr ""
 
-#: ../../content/applications/studio/approval_rules.rst:31
+#: ../../content/applications/studio/approval_rules.rst:32
 msgid ""
-"change the :guilabel:`Notification Order` of the approval rule so that the "
-":guilabel:`Responsible` and :guilabel:`Users to notify` are only notified "
-"when the previous rule has been approved, and their approval is required. If"
-" the approval rules have the same :guilabel:`Notification Order`, all users "
-"are notified at the same time when the first approval is requested."
+"You can specify under which condition(s) an approval step should be applied "
+"by clicking the :icon:`fa-filter` (:guilabel:`filter`) icon next to the "
+":guilabel:`Approvers` field."
 msgstr ""
 
-#: ../../content/applications/studio/approval_rules.rst:36
+#: ../../content/applications/studio/approval_rules.rst:35
 msgid ""
-"Click the :icon:`fa-trash` (:guilabel:`trash`) icon next to the "
-":guilabel:`Allowed Group` field to delete the approval rule."
+"To add another approval step, click :icon:`fa-plus` :guilabel:`Add an "
+"approval step`. When there are multiple steps, you can:"
+msgstr ""
+
+#: ../../content/applications/studio/approval_rules.rst:38
+msgid ""
+"Enable :guilabel:`Exclusive Approval` on any step so that a user who "
+"approves a step cannot approve another step for the same record."
 msgstr ""
 
 #: ../../content/applications/studio/approval_rules.rst:40
+msgid ""
+"Change the :guilabel:`Approval Order` of the steps by selecting a number, "
+"`1` being the first step, `2` the second step, and so on. A user responsible"
+" for a higher step can approve/reject previous step(s) unless "
+":guilabel:`Exclusive Approval` is selected."
+msgstr ""
+
+#: ../../content/applications/studio/approval_rules.rst:44
+msgid ""
+"Click the :icon:`fa-trash` (:guilabel:`trash`) icon next to the "
+":guilabel:`Approvers` field to remove an approval step."
+msgstr ""
+
+#: ../../content/applications/studio/approval_rules.rst:48
 msgid ""
 "You can create :ref:`user groups <access-rights/groups>` specifically for "
 "approvals."
 msgstr ""
 
-#: ../../content/applications/studio/approval_rules.rst:45
+#: ../../content/applications/studio/approval_rules.rst:53
 msgid "Use"
 msgstr "Käytä"
 
-#: ../../content/applications/studio/approval_rules.rst:47
-msgid "Once approval rules have been defined for a button:"
-msgstr ""
-
-#: ../../content/applications/studio/approval_rules.rst:49
-msgid ""
-"A **user avatar** icon is displayed next to the button's label for each "
-"approval rule that has been defined."
-msgstr ""
-
-#: ../../content/applications/studio/approval_rules.rst:0
-msgid "Confirm button with approval for purchase orders"
-msgstr ""
-
 #: ../../content/applications/studio/approval_rules.rst:55
 msgid ""
-"When an unauthorized user clicks the button, an error message is displayed "
-"in the top-right corner and an activity is created for the user specified in"
-" the :guilabel:`Responsible` field."
-msgstr ""
-
-#: ../../content/applications/studio/approval_rules.rst:57
-msgid ""
-"Only users from the group defined in the :guilabel:`Allowed Group` field are"
-" authorized to approve or reject the action."
-msgstr ""
-
-#: ../../content/applications/studio/approval_rules.rst:60
-msgid "Authorized users can:"
-msgstr ""
-
-#: ../../content/applications/studio/approval_rules.rst:62
-msgid "approve and perform the action by clicking the button;"
-msgstr ""
-
-#: ../../content/applications/studio/approval_rules.rst:63
-msgid ""
-"approve the action and allow another user to perform it by clicking the "
-"**user avatar** icon next to the button's label, then clicking the "
-":icon:`fa-check` (:guilabel:`Approve`) button in the dialog that opens;"
-msgstr ""
-
-#: ../../content/applications/studio/approval_rules.rst:66
-msgid ""
-"reject the action by clicking the **user avatar** icon next to the button's "
-"label, then clicking the :icon:`fa-times` (:guilabel:`Reject`) button in the"
-" dialog that opens."
+"Once an approval rule has been defined for a button, a **user avatar** icon "
+"is displayed next to the button's label for each approval step. Clicking an "
+"icon reveals the step(s)."
 msgstr ""
 
 #: ../../content/applications/studio/approval_rules.rst-1
-msgid "Approval dialog"
+msgid "Confirm button with two approval steps"
+msgstr ""
+
+#: ../../content/applications/studio/approval_rules.rst:62
+msgid ""
+"If an unauthorized user clicks the button, an error message is displayed and"
+" an activity is created for the users specified in the :guilabel:`Approvers`"
+" field, if any."
+msgstr ""
+
+#: ../../content/applications/studio/approval_rules.rst:65
+msgid "Authorized users can:"
+msgstr ""
+
+#: ../../content/applications/studio/approval_rules.rst:67
+msgid ""
+"Perform the action directly by clicking the button if it is the last/only "
+"approval step."
+msgstr ""
+
+#: ../../content/applications/studio/approval_rules.rst:68
+msgid ""
+"Approve the action and let another user perform it - or move it to the next "
+"approval step - by clicking the **user avatar** icon next to the button's "
+"label, then clicking the :icon:`fa-check` (:guilabel:`approve`)."
+msgstr ""
+
+#: ../../content/applications/studio/approval_rules.rst:71
+msgid ""
+"Reject the action by clicking the **user avatar** icon next to the button's "
+"label and then the :icon:`fa-times` (:guilabel:`reject`) button."
 msgstr ""
 
 #: ../../content/applications/studio/approval_rules.rst:73
 msgid ""
-"The user who approved/rejected the action can revoke their decision by "
-"clicking the **user avatar** icon next to the button's label, then clicking "
-"the :icon:`fa-undo` (:guilabel:`Revoke`) button."
+"(only for users selected under the :guilabel:`Approvers` field) Delegate "
+"their approval rights to one or several users for **all records** by:"
 msgstr ""
 
 #: ../../content/applications/studio/approval_rules.rst:76
 msgid ""
+"Clicking the :icon:`oi-view-kanban` (:guilabel:`kanban view`) icon and then "
+":guilabel:`Delegate`."
+msgstr ""
+
+#: ../../content/applications/studio/approval_rules.rst:78
+msgid ""
+"Selecting one or several :guilabel:`Approvers`, :guilabel:`Until` when they "
+"will have approval rights (forever if left empty), and, optionally, the "
+"user(s) who should be notified via an internal note using the "
+":guilabel:`Notify to` field."
+msgstr ""
+
+#: ../../content/applications/studio/approval_rules.rst:0
+msgid "Delegate to dialog"
+msgstr ""
+
+#: ../../content/applications/studio/approval_rules.rst:86
+msgid ""
+"A user who approves/rejects an action can revoke their decision by clicking "
+"the **user avatar** icon next to the button's label and then the :icon:`fa-"
+"undo` (:guilabel:`revoke`) button. They can also revoke the decision of "
+"other users for steps with a lower :guilabel:`Approval Order` unless "
+":guilabel:`Exclusive Approval` is enabled."
+msgstr ""
+
+#: ../../content/applications/studio/approval_rules.rst:90
+msgid ""
 "Approvals are tracked in the record's chatter. An approval entry is also "
 "created every time a Studio approval-related action is performed. To access "
-"the approval entries, :doc:`activate the developer mode "
+"approval entries, :doc:`activate the developer mode "
 "</applications/general/developer_mode>` and go to :menuselection:`Settings "
 "--> Technical --> Studio Approval Entries`."
 msgstr ""
@@ -270,7 +288,9 @@ msgid "To create an automation rule with Studio, proceed as follows:"
 msgstr ""
 
 #: ../../content/applications/studio/automated_actions.rst:11
-msgid "Open Studio and click :guilabel:`Automations`, then :guilabel:`New`."
+msgid ""
+":ref:`Open Studio <studio/access>` and click :guilabel:`Automations`, then "
+":guilabel:`New`."
 msgstr ""
 
 #: ../../content/applications/studio/automated_actions.rst:12
@@ -736,23 +756,40 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/studio/automated_actions.rst:277
+msgid "Send WhatsApp"
+msgstr "Lähetä WhatsApp"
+
+#: ../../content/applications/studio/automated_actions.rst:280
+msgid ""
+"To automate the sending of WhatsApp messages, one or more :ref:`WhatsApp "
+"templates <productivity/whatsapp/templates>` must be created."
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:283
+msgid ""
+"This action is used to send a WhatsApp message to a contact linked to a "
+"specific record. To do so, select the appropriate :guilabel:`WhatsApp "
+"Template` from the drop-down menu."
+msgstr ""
+
+#: ../../content/applications/studio/automated_actions.rst:289
 msgid "Add Followers and Remove Followers"
 msgstr ""
 
-#: ../../content/applications/studio/automated_actions.rst:279
+#: ../../content/applications/studio/automated_actions.rst:291
 msgid ""
 "Use these actions to (un)subscribe existing contacts to/from the record."
 msgstr ""
 
-#: ../../content/applications/studio/automated_actions.rst:282
+#: ../../content/applications/studio/automated_actions.rst:294
 msgid "Create Record"
 msgstr "Luo tietue"
 
-#: ../../content/applications/studio/automated_actions.rst:284
+#: ../../content/applications/studio/automated_actions.rst:296
 msgid "This action is used to create a new record on any model."
 msgstr ""
 
-#: ../../content/applications/studio/automated_actions.rst:286
+#: ../../content/applications/studio/automated_actions.rst:298
 msgid ""
 "Select the required model in the :guilabel:`Record to Create` field; it "
 "contains the current model by default. Specify a :guilabel:`Name` for the "
@@ -761,7 +798,7 @@ msgid ""
 "triggered the creation of the new record."
 msgstr ""
 
-#: ../../content/applications/studio/automated_actions.rst:292
+#: ../../content/applications/studio/automated_actions.rst:304
 msgid ""
 "The dropdown list related to the :guilabel:`Link Field` field only contains "
 ":ref:`one2many fields <studio/fields/relational-fields/one2many>` existing "
@@ -769,7 +806,7 @@ msgid ""
 "<studio/fields/relational-fields/many2one>` on the target model."
 msgstr ""
 
-#: ../../content/applications/studio/automated_actions.rst:297
+#: ../../content/applications/studio/automated_actions.rst:309
 msgid ""
 "You can create another automation rule with :ref:`studio/automated-"
 "actions/action/update-record` actions to update the fields of the new record"
@@ -778,96 +815,96 @@ msgid ""
 ":guilabel:`Update Record` action."
 msgstr ""
 
-#: ../../content/applications/studio/automated_actions.rst:305
+#: ../../content/applications/studio/automated_actions.rst:317
 msgid "Execute Code"
 msgstr "Suorita koodi"
 
-#: ../../content/applications/studio/automated_actions.rst:307
+#: ../../content/applications/studio/automated_actions.rst:319
 msgid ""
 "This action is used to execute Python code. You can write your code into the"
 " :guilabel:`Code` tab using the following variables:"
 msgstr ""
 
-#: ../../content/applications/studio/automated_actions.rst:310
+#: ../../content/applications/studio/automated_actions.rst:322
 msgid "`env`: environment on which the action is triggered"
 msgstr ""
 
-#: ../../content/applications/studio/automated_actions.rst:311
+#: ../../content/applications/studio/automated_actions.rst:323
 msgid ""
 "`model`: model of the record on which the action is triggered; is a void "
 "recordset"
 msgstr ""
 
-#: ../../content/applications/studio/automated_actions.rst:312
+#: ../../content/applications/studio/automated_actions.rst:324
 msgid "`record`: record on which the action is triggered; may be void"
 msgstr ""
 
-#: ../../content/applications/studio/automated_actions.rst:313
+#: ../../content/applications/studio/automated_actions.rst:325
 msgid ""
 "`records`: recordset of all records on which the action is triggered in "
 "multi-mode; this may be left empty"
 msgstr ""
 
-#: ../../content/applications/studio/automated_actions.rst:315
+#: ../../content/applications/studio/automated_actions.rst:327
 msgid "`time`, `datetime`, `dateutil`, `timezone`: useful Python libraries"
 msgstr ""
 
-#: ../../content/applications/studio/automated_actions.rst:316
+#: ../../content/applications/studio/automated_actions.rst:328
 msgid ""
 "`float_compare`: utility function to compare floats based on specific "
 "precision"
 msgstr ""
 
-#: ../../content/applications/studio/automated_actions.rst:317
+#: ../../content/applications/studio/automated_actions.rst:329
 msgid ""
 "`log(message, level='info')`: logging function to record debug information "
 "in ir.logging table"
 msgstr ""
 
-#: ../../content/applications/studio/automated_actions.rst:319
+#: ../../content/applications/studio/automated_actions.rst:331
 msgid "`_logger.info(message)`: logger to emit messages in server logs"
 msgstr ""
 
-#: ../../content/applications/studio/automated_actions.rst:320
+#: ../../content/applications/studio/automated_actions.rst:332
 msgid "`UserError`: exception class for raising user-facing warning messages"
 msgstr ""
 
-#: ../../content/applications/studio/automated_actions.rst:321
+#: ../../content/applications/studio/automated_actions.rst:333
 msgid "`Command`: x2many commands namespace"
 msgstr ""
 
-#: ../../content/applications/studio/automated_actions.rst:322
+#: ../../content/applications/studio/automated_actions.rst:334
 msgid "`action = {...}`: to return an action"
 msgstr ""
 
-#: ../../content/applications/studio/automated_actions.rst:325
+#: ../../content/applications/studio/automated_actions.rst:337
 msgid ""
 "The available variables are described both in the :guilabel:`Code` and "
 ":guilabel:`Help` tabs."
 msgstr ""
 
-#: ../../content/applications/studio/automated_actions.rst:328
+#: ../../content/applications/studio/automated_actions.rst:340
 msgid "Send Webhook Notification"
 msgstr "Lähetä Webhook-ilmoitus"
 
-#: ../../content/applications/studio/automated_actions.rst:330
+#: ../../content/applications/studio/automated_actions.rst:342
 msgid ""
 "This action allows to send a POST request with the values of the "
 ":guilabel:`Fields` to the URL specified in the :guilabel:`URL` field."
 msgstr ""
 
-#: ../../content/applications/studio/automated_actions.rst:333
+#: ../../content/applications/studio/automated_actions.rst:345
 msgid ""
 "The :guilabel:`Sample Payload` provides a preview of the data included in "
 "the request using a random record's data or dummy data if no record is "
 "available."
 msgstr ""
 
-#: ../../content/applications/studio/automated_actions.rst:339
+#: ../../content/applications/studio/automated_actions.rst:351
 msgid "Execute Existing Actions"
 msgstr "Suorita olemassa oleva toiminto"
 
-#: ../../content/applications/studio/automated_actions.rst:341
+#: ../../content/applications/studio/automated_actions.rst:353
 msgid ""
 "The action is used to trigger multiple actions (linked to the current model)"
 " at the same time. To do so, click on :guilabel:`Add a line`, then, in the "
@@ -2620,9 +2657,9 @@ msgid "General views"
 msgstr "Yleiset näkymät"
 
 #: ../../content/applications/studio/views.rst:33
-#: ../../content/applications/studio/views.rst:104
-#: ../../content/applications/studio/views.rst:205
-#: ../../content/applications/studio/views.rst:320
+#: ../../content/applications/studio/views.rst:106
+#: ../../content/applications/studio/views.rst:207
+#: ../../content/applications/studio/views.rst:322
 msgid ""
 "The settings described below are found under the view's :guilabel:`View` tab"
 " unless specified otherwise."
@@ -2645,7 +2682,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/studio/views.rst:46
-#: ../../content/applications/studio/views.rst:137
+#: ../../content/applications/studio/views.rst:139
 msgid ""
 "To prevent users from creating, editing, or deleting records, untick "
 ":guilabel:`Can Create`, :guilabel:`Can Edit`, or :guilabel:`Can Delete`."
@@ -2658,20 +2695,27 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/studio/views.rst:51
-#: ../../content/applications/studio/views.rst:153
+#: ../../content/applications/studio/views.rst:155
 msgid ""
 ":guilabel:`Run a Server Action`: select the :ref:`server action "
 "<reference/actions/server>` to be executed from the dropdown list;"
 msgstr ""
 
 #: ../../content/applications/studio/views.rst:53
-#: ../../content/applications/studio/views.rst:155
+#: ../../content/applications/studio/views.rst:157
 msgid ""
 ":guilabel:`Call a method`: specify an existing Python method already defined"
 " in Odoo."
 msgstr ""
 
 #: ../../content/applications/studio/views.rst:55
+msgid ""
+"To change a button's label or style, click the button and edit its "
+":guilabel:`Label` or :guilabel:`Class` (either `btn-primary` or `btn-"
+"secondary`) in the :guilabel:`Properties` tab."
+msgstr ""
+
+#: ../../content/applications/studio/views.rst:57
 msgid ""
 "To add a smart button, click the :icon:`fa-plus-square` (:guilabel:`plus`) "
 "icon in the top-right corner of the form. Enter a :guilabel:`Label`, choose "
@@ -2683,17 +2727,17 @@ msgstr ""
 msgid "Sales order model's Form view"
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:67
+#: ../../content/applications/studio/views.rst:69
 msgid "Activity"
 msgstr "Toimenpide"
 
-#: ../../content/applications/studio/views.rst:69
+#: ../../content/applications/studio/views.rst:71
 msgid ""
 "The :guilabel:`Activity` :icon:`fa-clock-o` view is used to schedule and "
 "have an overview of activities (emails, calls, etc.) linked to records."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:73
+#: ../../content/applications/studio/views.rst:75
 msgid "This view can only be modified within Studio by editing the XML code."
 msgstr ""
 
@@ -2701,24 +2745,24 @@ msgstr ""
 msgid "Lead/Opportunity model's Activity view"
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:83
+#: ../../content/applications/studio/views.rst:85
 msgid "Search"
 msgstr "Hae"
 
-#: ../../content/applications/studio/views.rst:85
+#: ../../content/applications/studio/views.rst:87
 msgid ""
 "The :guilabel:`Search` :icon:`oi-search` view is added on top of other views"
 " to filter, group, and search records."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:88
+#: ../../content/applications/studio/views.rst:90
 msgid ""
 "To add custom :guilabel:`Filters` and structure them using "
 ":guilabel:`Separators`, go to the :guilabel:`+ Add` tab and drag and drop "
 "them under :guilabel:`Filters`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:90
+#: ../../content/applications/studio/views.rst:92
 msgid ""
 "To add an existing field under the search dropdown menu, go to the "
 ":guilabel:`+ Add` tab and drag and drop it under :guilabel:`Autocompletion "
@@ -2729,41 +2773,41 @@ msgstr ""
 msgid "Project model's Search view on the Kanban view"
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:101
+#: ../../content/applications/studio/views.rst:103
 msgid "Multiple records views"
 msgstr "Useiden tietueiden näkymä"
 
-#: ../../content/applications/studio/views.rst:110
+#: ../../content/applications/studio/views.rst:112
 msgid "Kanban"
 msgstr "Kanban"
 
-#: ../../content/applications/studio/views.rst:112
+#: ../../content/applications/studio/views.rst:114
 msgid ""
 "The :guilabel:`Kanban` :icon:`oi-view-kanban` view is often used to support "
 "business flows by moving records across stages or as an alternative way to "
 "display records inside *cards*."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:116
+#: ../../content/applications/studio/views.rst:118
 msgid ""
 "If the :guilabel:`Kanban` view exists, it is used by default to display data"
 " on mobile devices instead of the :ref:`List view <studio/views/multiple-"
 "records/list>`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:119
+#: ../../content/applications/studio/views.rst:121
 msgid ""
 "To prevent users from creating new records, untick :guilabel:`Can Create`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:120
+#: ../../content/applications/studio/views.rst:122
 msgid ""
 "To create records directly within the view, in a minimalistic form, enable "
 ":guilabel:`Quick Create`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:122
-#: ../../content/applications/studio/views.rst:149
+#: ../../content/applications/studio/views.rst:124
+#: ../../content/applications/studio/views.rst:151
 msgid ""
 "To set a default grouping for records, select a field under "
 ":guilabel:`Default Group By`."
@@ -2773,46 +2817,46 @@ msgstr ""
 msgid "Project model's Kanban view"
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:132
+#: ../../content/applications/studio/views.rst:134
 msgid "List"
 msgstr "Lista"
 
-#: ../../content/applications/studio/views.rst:134
+#: ../../content/applications/studio/views.rst:136
 msgid ""
 "The :guilabel:`List` :icon:`oi-view-list` view is used to overview many "
 "records at once, look for records, and edit simple records."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:139
+#: ../../content/applications/studio/views.rst:141
 msgid ""
 "To create and edit records directly within the view, select either "
 ":guilabel:`Add record at the bottom`, :guilabel:`Add record on top` or "
 ":guilabel:`Open form view` under :guilabel:`When Creating Record`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:144
+#: ../../content/applications/studio/views.rst:146
 msgid ""
 "This prevents users from opening records in :ref:`Form view "
 "<studio/views/general/form>` from the :guilabel:`List` view."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:147
+#: ../../content/applications/studio/views.rst:149
 msgid "To edit several records at once, tick :guilabel:`Enable Mass Editing`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:148
+#: ../../content/applications/studio/views.rst:150
 msgid ""
 "To change the way records are sorted by default, select a field under "
 ":guilabel:`Sort By`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:150
+#: ../../content/applications/studio/views.rst:152
 msgid ""
 "To add a button, click :guilabel:`Add a button` at the top of the list, "
 "enter a :guilabel:`Label`, and select the button's action:"
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:158
+#: ../../content/applications/studio/views.rst:160
 msgid ""
 "To add a :icon:`oi-draggable` (:guilabel:`drag handle`) icon to reorder "
 "records manually, add an :ref:`Integer field <studio/fields/simple-"
@@ -2827,43 +2871,43 @@ msgstr ""
 msgid "Sales order model's List view"
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:172
+#: ../../content/applications/studio/views.rst:174
 msgid "Map"
 msgstr "Kartta"
 
-#: ../../content/applications/studio/views.rst:174
+#: ../../content/applications/studio/views.rst:176
 msgid ""
 "The :guilabel:`Map` :icon:`fa-map-marker` view is used to display records on"
 " a map. For example, it is used in the Field Service app to plan an "
 "itinerary between different tasks."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:178
+#: ../../content/applications/studio/views.rst:180
 msgid ""
 "A :ref:`Many2One field <studio/fields/relational-fields/many2one>` linked to"
 " the *Contact* model is required to activate the view, as the contact "
 "address is used to position records on the map."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:181
+#: ../../content/applications/studio/views.rst:183
 msgid ""
 "To select which kind of contact should be used on the map, select it under "
 ":guilabel:`Contact Field`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:183
+#: ../../content/applications/studio/views.rst:185
 msgid ""
 "To hide the name or the address of the record, tick :guilabel:`Hide Name` or"
 " :guilabel:`Hide Address`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:185
+#: ../../content/applications/studio/views.rst:187
 msgid ""
 "To add information from other fields, select them under "
 ":guilabel:`Additional Fields`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:186
+#: ../../content/applications/studio/views.rst:188
 msgid ""
 "To have a route suggested between the different records, tick "
 ":guilabel:`Enable Routing` and select which field should be used to sort "
@@ -2874,11 +2918,11 @@ msgstr ""
 msgid "Task model's Map view"
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:197
+#: ../../content/applications/studio/views.rst:199
 msgid "Timeline views"
 msgstr "Aikajananäkymät"
 
-#: ../../content/applications/studio/views.rst:200
+#: ../../content/applications/studio/views.rst:202
 msgid ""
 "When you first activate one of the timeline views, you need to select which "
 ":ref:`Date <studio/fields/simple-fields/date>` or :ref:`Date & Time "
@@ -2888,57 +2932,57 @@ msgid ""
 "Date Field` after activating the view."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:211
+#: ../../content/applications/studio/views.rst:213
 msgid "Calendar"
 msgstr "Kalenteri"
 
-#: ../../content/applications/studio/views.rst:213
+#: ../../content/applications/studio/views.rst:215
 msgid ""
 "The :guilabel:`Calendar` :icon:`fa-calendar` view is used to overview and "
 "manage records inside a calendar."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:216
+#: ../../content/applications/studio/views.rst:218
 msgid ""
 "To create records directly within the view instead of opening the :ref:`Form"
 " view <studio/views/general/form>`, enable :guilabel:`Quick Create`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:220
+#: ../../content/applications/studio/views.rst:222
 msgid ""
 "This only works on specific models that can be *quick-created* using only a "
 "*name*. However, most models do not support quick creation and open the "
 ":guilabel:`Form` view to fill in the required fields."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:224
+#: ../../content/applications/studio/views.rst:226
 msgid ""
 "To color records on the calendar, select a field under :guilabel:`Color`. "
 "All the records sharing the same value for that field are displayed using "
 "the same color."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:228
+#: ../../content/applications/studio/views.rst:230
 msgid ""
 "As the number of colors is limited, the same color can end up being assigned"
 " to different values."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:231
+#: ../../content/applications/studio/views.rst:233
 msgid ""
 "To display events lasting the whole day at the top of the calendar, select a"
 " :ref:`Checkbox field <studio/fields/simple-fields/checkbox>` that specifies"
 " if the event lasts the whole day."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:234
+#: ../../content/applications/studio/views.rst:236
 msgid ""
 "To choose the default time scale used to display events, select "
 ":guilabel:`Day`, :guilabel:`Week`, :guilabel:`Month`, or :guilabel:`Year` "
 "under :guilabel:`Default Display Mode`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:238
+#: ../../content/applications/studio/views.rst:240
 msgid ""
 "You can also use a :guilabel:`Delay Field` to display the duration of the "
 "event in hours by selecting a :ref:`Decimal <studio/fields/simple-"
@@ -2952,31 +2996,31 @@ msgstr ""
 msgid "Calendar Event model's Calendar view"
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:252
+#: ../../content/applications/studio/views.rst:254
 msgid "Cohort"
 msgstr "Kohortti"
 
-#: ../../content/applications/studio/views.rst:254
+#: ../../content/applications/studio/views.rst:256
 msgid ""
 "The :guilabel:`Cohort` :icon:`oi-view-cohort` view is used to examine the "
 "life cycle of records over a time period. For example, it is used in the "
 "Subscriptions app to view the subscriptions' retention rate."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:258
+#: ../../content/applications/studio/views.rst:260
 msgid ""
 "To display a measure (i.e., the aggregated value of a given field) by "
 "default on the view, select a :guilabel:`Measure Field`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:260
+#: ../../content/applications/studio/views.rst:262
 msgid ""
 "To choose which time interval is used by default to group results, select "
 ":guilabel:`Day`, :guilabel:`Week`, :guilabel:`Month`, or :guilabel:`Year` "
 "under :guilabel:`Interval`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:262
+#: ../../content/applications/studio/views.rst:264
 msgid ""
 "To change the cohort :guilabel:`Mode`, select either :guilabel:`Retention` "
 ":dfn:`the percentage of records staying over a period of time, it starts at "
@@ -2985,7 +3029,7 @@ msgid ""
 "with time`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:266
+#: ../../content/applications/studio/views.rst:268
 msgid ""
 "To change the way the :guilabel:`Timeline` (i.e., the columns) progresses, "
 "select either :guilabel:`Forward` (from 0 to +15) or :guilabel:`Backward` "
@@ -2997,73 +3041,73 @@ msgstr ""
 msgid "Subscription model's Cohort view"
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:278
+#: ../../content/applications/studio/views.rst:280
 msgid "Gantt"
 msgstr "Gantt"
 
-#: ../../content/applications/studio/views.rst:280
+#: ../../content/applications/studio/views.rst:282
 msgid ""
 "The :guilabel:`Gantt` :icon:`fa-tasks` view is used to forecast and examine "
 "the overall progress of records. Records are represented by a bar under a "
 "time scale."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:283
+#: ../../content/applications/studio/views.rst:285
 msgid ""
 "To prevent users from creating or editing records, untick :guilabel:`Can "
 "Create` or :guilabel:`Can Edit`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:285
+#: ../../content/applications/studio/views.rst:287
 msgid ""
 "To fill cells in gray whenever a record should not be created there (e.g., "
 "on weekends for employees), tick :guilabel:`Display Unavailability`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:289
+#: ../../content/applications/studio/views.rst:291
 msgid ""
 "The underlying model must support this feature, and support for it cannot be"
 " added using Studio. It is supported for the Project, Time Off, Planning, "
 "and Manufacturing apps."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:292
+#: ../../content/applications/studio/views.rst:294
 msgid "To show a total row at the bottom, tick :guilabel:`Display Total row`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:293
+#: ../../content/applications/studio/views.rst:295
 msgid ""
 "To collapse multiple records in a single row, tick :guilabel:`Collapse First"
 " Level`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:294
+#: ../../content/applications/studio/views.rst:296
 msgid ""
 "To choose which way records are grouped by default on rows (e.g., per "
 "employee or project), select a field under :guilabel:`Default Group by`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:296
+#: ../../content/applications/studio/views.rst:298
 msgid ""
 "To define a default time scale to view records, select :guilabel:`Day`, "
 ":guilabel:`Week`, :guilabel:`Month`, or :guilabel:`Year` under "
 ":guilabel:`Default Scale`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:298
+#: ../../content/applications/studio/views.rst:300
 msgid ""
 "To color records on the view, select a field under :guilabel:`Color`. All "
 "the records sharing the same value for that field are displayed using the "
 "same color."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:302
+#: ../../content/applications/studio/views.rst:304
 msgid ""
 "As the number of colors is limited, the same color can be assigned to "
 "different values."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:304
+#: ../../content/applications/studio/views.rst:306
 msgid ""
 "To specify with which degree of precision each time scale should be divided "
 "by, select :guilabel:`Quarter Hour`, :guilabel:`Half Hour`, or "
@@ -3076,15 +3120,15 @@ msgstr ""
 msgid "Planning Shift model's Gantt view"
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:317
+#: ../../content/applications/studio/views.rst:319
 msgid "Reporting views"
 msgstr "Raportointinäkymät"
 
-#: ../../content/applications/studio/views.rst:326
+#: ../../content/applications/studio/views.rst:328
 msgid "Pivot"
 msgstr "Taulukko"
 
-#: ../../content/applications/studio/views.rst:328
+#: ../../content/applications/studio/views.rst:330
 msgid ""
 "The :guilabel:`Pivot` :icon:`oi-view-pivot` view is used to explore and "
 "analyze the data contained in records in an interactive manner. It is "
@@ -3092,26 +3136,26 @@ msgid ""
 "down the data by expanding and collapsing different levels of data."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:332
+#: ../../content/applications/studio/views.rst:334
 msgid ""
 "To access all records whose data is aggregated under a cell, tick "
 ":guilabel:`Access records from cell`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:334
+#: ../../content/applications/studio/views.rst:336
 msgid ""
 "To divide the data into different categories, select field(s) under "
 ":guilabel:`Column grouping`, :guilabel:`Row grouping - First level`, or "
 ":guilabel:`Row grouping - Second level`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:336
+#: ../../content/applications/studio/views.rst:338
 msgid ""
 "To add different types of data to be measured using the view, select a field"
 " under :guilabel:`Measures`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:338
+#: ../../content/applications/studio/views.rst:340
 msgid ""
 "To display a count of records that made up the aggregated data in a cell, "
 "tick :guilabel:`Display count`."
@@ -3121,50 +3165,50 @@ msgstr ""
 msgid "Purchase Report model's Pivot view"
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:349
+#: ../../content/applications/studio/views.rst:351
 msgid "Graph"
 msgstr "Kaavio"
 
-#: ../../content/applications/studio/views.rst:351
+#: ../../content/applications/studio/views.rst:353
 msgid ""
 "The :guilabel:`Graph` :icon:`fa-area-chart` view is used to showcase data "
 "from records in a bar, line, or pie chart."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:354
+#: ../../content/applications/studio/views.rst:356
 msgid ""
 "To change the default chart, select :guilabel:`Bar`, :guilabel:`Line`, or "
 ":guilabel:`Pie` under :guilabel:`Type`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:356
+#: ../../content/applications/studio/views.rst:358
 msgid ""
 "To choose a default data dimension (category), select a field under "
 ":guilabel:`First dimension` and, if needed, another under :guilabel:`Second "
 "dimension`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:358
+#: ../../content/applications/studio/views.rst:360
 msgid ""
 "To select a default type of data to be measured using the view, select a "
 "field under :guilabel:`Measure`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:360
+#: ../../content/applications/studio/views.rst:362
 msgid ""
 "*For Bar and Line charts only*: To sort the different data categories by "
 "their value, select :guilabel:`Ascending` (from lowest to highest value) or "
 ":guilabel:`Descending` (from highest to lowest) under :guilabel:`Sorting`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:363
+#: ../../content/applications/studio/views.rst:365
 msgid ""
 "*For Bar and Pie charts only*: To access all records whose data is "
 "aggregated under a data category on the chart, tick :guilabel:`Access "
 "records from graph`."
 msgstr ""
 
-#: ../../content/applications/studio/views.rst:365
+#: ../../content/applications/studio/views.rst:367
 msgid ""
 "*For Bar charts only*: When using two data dimensions (categories), display "
 "the two columns on top of each other by default by ticking "
