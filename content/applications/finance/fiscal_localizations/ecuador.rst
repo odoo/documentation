@@ -382,45 +382,39 @@ documents can be created from your sales order or manually. They must contain th
 Customer credit note
 ~~~~~~~~~~~~~~~~~~~~
 
-The :doc:`Customer credit note <../accounting/customer_invoices/credit_notes>` is an
-electronic document that, when validated, is sent to SRI. It is necessary to have a validated
-(posted) invoice in order to register a credit note. On the invoice there is a button named
-:guilabel:`Credit note`, click on this button to be directed to the :guilabel:`Create credit note`
-form, then complete the following information:
+The :doc:`Customer credit note <../accounting/customer_invoices/credit_notes>` is an electronic document that, 
+when validated, is sent to SRI. A validated (posted) invoice is necessary to register a credit note. 
+On the invoice there is a button named :guilabel:`Credit note`, click on this button to be directed to 
+the :guilabel:`Create credit note`form, then complete the following information:
 
-- :guilabel:`Credit Method`: select the type of credit method.
+- :guilabel:`Reason displayed on Credit Note:`: type the reason for the credit note.
+- :guilabel:`Journal`:Select the journal.
+- :guilabel:`Document Type: by default, we’ll have `(04) Credit Note`.
+- :guilabel:`Reversal Date`: Credit Note date.
 
-  - :guilabel:`Partial Refund`: use this option when you need to type the first number of documents
-    and if it is a partial credit note.
-  - :guilabel:`Full Refund`: use this option if the credit note is for the total invoice and you
-    need the credit note to be auto-validated and reconciled with the invoice.
-  - :guilabel:`Full refund and new draft invoice`: use this option if the credit note is for the
-    total invoice and you need the credit note to be auto-validated and reconciled with the invoice,
-    and auto-create a new draft invoice.
+Once reviewed, you can click on the :guilabel:`Reverse` or :guilabel:`Reverse and Create Invoice` button.
 
-- :guilabel:`Reason`: type the reason for the credit note.
-- :guilabel:`Rollback Date`: select the :guilabel:`specific` options.
-- :guilabel:`Reversal Date`: type the date.
-- :guilabel:`Use Specific Journal`: select the printer point for your credit note, or leave it empty
-  if you want to use the same journal as the original invoice.
-
-Once reviewed, you can click on the :guilabel:`Reverse` button.
-
-.. image:: ecuador/add-customer-credit-note.png
+.. image:: ln10-ec-credit-note.png
    :align: center
    :alt: Add Customer Credit Note for Ecuador.
 
-When the :guilabel:`Partial Refund` option is used, you can change the amount of the credit note and
-then validate it. Before validating the credit note, review the following information:
+.. note::
+When creating the first credit note, you will need to use the option :guilabel:`Reverse`  and assign the first Credit Note number.
+
+
+When the :guilabel:`Credit Note` is created, you can change the amount of the credit note and then validate it. 
+Before validating the credit note, review the following information:
 
 - :guilabel:`Customer`: type the customer's information.
-- :guilabel:`Journal`: select the printer point for the customer Credit Note.
+- :guilabel:`Journal`: use the same or change if needed.
 - :guilabel:`Document Type`: this is the document type `(04) Credit Note`.
 - :guilabel:`Products`: It must specify the product with the correct taxes.
 
-.. image:: ecuador/customer-credit-note.png
+.. image:: l10n-ec-credit-note-2.0.png
    :align: center
    :alt: Customer Credit Note for Ecuador.
+
+`
 
 Customer debit note
 ~~~~~~~~~~~~~~~~~~~
