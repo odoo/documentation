@@ -26,7 +26,6 @@ that is designated on their profile page.
    include only their first name.
 
    .. image:: participate/online-chat-name.png
-      :align: center
       :alt: View of user profile in Odoo, emphasizing the Online Chat name field.
 
 Set online chat languages
@@ -50,6 +49,22 @@ field, and select one or more languages from the drop-down menu.
    Only :doc:`languages <../../general/users/language>` that are enabled on the database can be
    selected in the :guilabel:`Online Chat Language` field.
 
+Set live chat expertise
+-----------------------
+
+Operators can designate *Expertise* in one or more areas on their profile. A :doc:`chatbot
+<chatbots>` can then assign conversations to the operator with the appropriate expertise. Select one
+or more options from the :guilabel:`Live Chat Expertise` drop-down list.
+
+To create a new expertise, navigate to :menuselection:`Live Chat app --> Configuration -->
+Expertise` and click :guilabel:`New`. Enter the :guilabel:`Name` of the expertise, and, if desired,
+select one or more :guilabel:`Operators`. Click :guilabel:`Save` when finished.
+
+.. important::
+   When forwarding live chat conversations, the chatbot prioritizes users with matching expertise.
+   If no applicable match is found, the chatbot forwards the conversation to the next available
+   operator.
+
 Join or leave a channel
 -----------------------
 
@@ -60,7 +75,6 @@ Any channel where the user is currently active shows a :guilabel:`Leave` button.
 to disconnect from the channel.
 
 .. image:: participate/leave-channel.png
-   :align: center
    :alt: View of a channel form and the option to join a channel for Odoo Live Chat.
 
 .. important::
@@ -74,23 +88,21 @@ When an operator is active in a channel, chat windows open in the bottom-right c
 screen, no matter where they are in the database. This allows them to access other pages and apps,
 while still participating in the conversation.
 
-.. tip::
-   Conversations can also be accessed by clicking the :icon:`fa-comments` :guilabel:`(messages)`
-   icon in the menu bar.
-
-   .. image:: participate/menu-bar.png
-      :align: center
-      :alt: View of the menu bar in Odoo emphasizing the comments icon.
-
 Live chat conversations can also be viewed by navigating to the :menuselection:`Discuss app`. New
-conversations appear in bold under the :guilabel:`LIVECHAT` heading, located along the left panel.
+conversations appear in bold under the channel name, located along the left panel.
 
 .. image:: participate/managing-chat-responses.png
-   :align: center
    :alt: View of the discuss application with a message sent through live chat in Odoo.
 
 Click on a conversation in the left panel to select it. This opens the conversation. From this
 view, an operator can participate in the chat the same as they would in the normal chat window.
+
+.. tip::
+   Conversations can also be accessed by clicking the :icon:`fa-comments` :guilabel:`(Messages)`
+   icon in the menu bar.
+
+   .. image:: participate/menu-bar.png
+      :alt: View of the menu bar in Odoo emphasizing the comments icon.
 
 .. seealso::
    - :doc:`../../productivity/discuss`
