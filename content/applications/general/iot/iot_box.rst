@@ -49,7 +49,8 @@ Make sure no Ethernet cable is connected to the IoT box and follow these steps:
 
      .. note::
         Depending on your operating system, the browser might not open and redirect to the IoT box's
-        homepage. In this case, open your browser manually and navigate to `http://10.11.12.1`.
+        homepage. In this case, open your browser manually and navigate to `http://10.11.12.1`
+        or any url starting with **http** (e.g., `http://odoo.com`).
 
   #. On the IoT box's homepage, click :guilabel:`Configure` next to the :guilabel:`Internet Status`
      section.
@@ -81,7 +82,8 @@ The IoT box's IP address can be retrieved by:
      :scale: 75%
      :alt: POS display with IoT box's IP address
 
-- connecting the IoT box to a printer: the IP address is automatically printed.
+- connecting the IoT box to a `supported receipt or label printer <https://www.odoo.com/fr_FR/app/iot-hardware>`_
+  with a USB cable: the IP address is automatically printed.
 - accessing the administrator interface of the router to which the IoT box is connected or using
   third-party software to scan the network.
 
