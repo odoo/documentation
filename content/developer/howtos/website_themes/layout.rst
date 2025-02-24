@@ -212,28 +212,28 @@ below:
       </xpath>
 
 .. tip::
-Using `move` directives inside an other XPath forces you to use only this kind of directives.
+   Using `move` directives inside an other XPath forces you to use only this kind of directives.
 
-.. example::
-   | **Good example:**
+   .. example::
+      | **Good example:**
 
-   .. code-block:: xml
+      .. code-block:: xml
 
-      <xpath expr="//*[hasclass('o_wsale_products_main_row')]" position="before">
-        <xpath expr="//t[@t-if='opt_wsale_categories_top']" position="move" />
-      </xpath>
-      <xpath expr="//*[hasclass('o_wsale_products_main_row')]" position="before">
-        <div><!-- Content --></div>
-      </xpath>
+         <xpath expr="//*[hasclass('o_wsale_products_main_row')]" position="before">
+         <xpath expr="//t[@t-if='opt_wsale_categories_top']" position="move" />
+         </xpath>
+         <xpath expr="//*[hasclass('o_wsale_products_main_row')]" position="before">
+         <div><!-- Content --></div>
+         </xpath>
 
-   | **Bad example:**
+      | **Bad example:**
 
-   .. code-block:: xml
+      .. code-block:: xml
 
-      <xpath expr="//*[hasclass('o_wsale_products_main_row')]" position="before">
-        <xpath expr="//t[@t-if='opt_wsale_categories_top']" position="move" />
-        <div><!-- Content --></div>
-      </xpath>
+         <xpath expr="//*[hasclass('o_wsale_products_main_row')]" position="before">
+         <xpath expr="//t[@t-if='opt_wsale_categories_top']" position="move" />
+         <div><!-- Content --></div>
+         </xpath>
 
 
 .. seealso::
@@ -247,6 +247,60 @@ generate HTML fragments and pages.
 
 .. seealso::
    :doc:`QWeb templates documentation <../../reference/frontend/qweb>`.
+
+Custom fields
+=============
+
+Depending on your needs, you can create custom fields to save data in the database.
+
+Declaration
+-----------
+
+First, create a record to declare the field. This field has to be linked to an existing model.
+
+.. code-block:: xml
+   :caption: ``/website_airproof/data/fields.xml``
+
+   <record id="x_post_category" model="ir.model.fields">
+      <field name="name">x_post_category</field>
+      <field name="field_description">...</field>
+      <field name="ttype">html</field>
+      <field name="state">manual</field>
+      <field name="index">0</field>
+      <field name="model_id" ref="website_blog.model_blog_post"/>
+   </record>
+
+.. note:: Fields creation is also possible (and recommended) through `a model using Python </developer/tutorials/backend>`_.
+
+Back-end
+--------
+
+Add the field to the relevant view through an XPath. Therefore, the user can see the field in the
+interface and fill it afterwards.
+
+.. code-block:: xml
+   :caption: ``/website_airproof/views/backend/website_blog_views.xml``
+
+   <record id="view_blog_post_form_category" model="ir.ui.view">
+      <field name="name">view_blog_post_form_category</field>
+      <field name="model">blog.post</field>
+      <field name="inherit_id" ref="website_blog.view_blog_post_form"/>
+      <field name="arch" type="xml">
+         <xpath expr="//field[@name='blog_id']" position="before">
+            <field name="x_post_category" string="..." placeholder="..."/>
+         </xpath>
+      </field>
+   </record>
+
+Front-end
+---------
+
+The field value can be shown somewhere in a page by calling `model_name.field_name` like this:
+
+.. code-block:: xml
+   :caption: ``/website_airproof/views/website_blog_templates.xml``
+
+   <h1 t-field="blog_post.x_post_category"/>
 
 Background
 ==========
@@ -293,6 +347,17 @@ Enable one of the header default templates.
 .. important::
    Don't forget that you may need to disable the active header template first.
 
+   .. example::
+
+      .. code-block:: xml
+         :caption: ``/website_aiproof/data/presets.xml``
+
+         <record id="website.template_header_default" model="ir.ui.view">
+            <field name="active" eval="False"/>
+         </record>
+
+Explicitly set the desired template in the `primary_variables.scss` file.
+
 .. code-block:: scss
    :caption: ``/website_airproof/static/src/scss/primary_variables.scss``
 
@@ -322,13 +387,13 @@ Create your own template and add it to the list.
 Use the following code to add an option for your new custom header on the Website Builder.
 
 .. code-block:: xml
-   :caption: ``/website_airproof/data/presets.xml``
+   :caption: ``/website_airproof/views/website_templates.xml``
 
-   <template id="template_header_opt" inherit_id="website.snippet_options" name="Header Template - Option">
-      <xpath expr="//we-select[@data-variable='header-template']" position="inside">
+   <template id="template_footer_opt" inherit_id="website.snippet_options" name="Footer Template - Option">
+      <xpath expr="//we-select[@data-variable='footer-template']" position="inside">
          <we-button title="airproof"
-            data-customize-website-views="website_airproof.header"
-            data-customize-website-variable="'airproof'"  data-img="/website_airproof/static/src/img/wbuilder/template_header_opt.svg"/>
+            data-customize-website-views="website_airproof.footer"
+            data-customize-website-variable="'airproof'"  data-img="/website_airproof/static/src/img/wbuilder/template_footer_opt.svg"/>
       </xpath>
    </template>
 
@@ -358,7 +423,7 @@ variables.
       ),
    );
 
-**Layout**
+**Template**
 
 .. code-block:: xml
    :caption: ``/website_airproof/views/website_templates.xml``
@@ -392,14 +457,10 @@ Logo
       <t t-set="_link_class" t-valuef="..."/>
    </t>
 
-Don't forget to record the logo of your website in the database.
+.. important::
 
-.. code-block:: xml
-   :caption: ``/website_airproof/data/images.xml``
-
-   <record id="website.default_website" model="website">
-      <field name="logo" type="base64" file="website_airproof/static/src/img/content/logo.png"/>
-   </record>
+   Don't forget to :ref:`create a record of the website logo <howto/website_themes/media_logo>` logo
+    in the database.
 
 Menu
 ~~~~
@@ -480,19 +541,31 @@ Standard
 Enable one of the default footer templates. Don't forget that you may need to disable the active
 footer template first.
 
+.. important::
+   Don't forget that you may need to disable the active footer template first.
+
+   .. example::
+
+      .. code-block:: xml
+         :caption: ``/website_aiproof/data/presets.xml``
+
+         <record id="website.footer_custom" model="ir.ui.view">
+            <field name="active" eval="False"/>
+         </record>
+
 .. code-block:: scss
    :caption: ``/website_airproof/static/src/scss/primary_variables.scss``
 
    $o-website-values-palettes: (
       (
-         'header-template': 'Contact',
+         'footer-template': 'Links',
       ),
    );
 
 .. code-block:: xml
    :caption: ``/website_airproof/data/presets.xml``
 
-   <record id="website.template_header_contact" model="ir.ui.view">
+   <record id="website.template_footer_links" model="ir.ui.view">
       <field name="active" eval="True"/>
    </record>
 
@@ -505,7 +578,7 @@ active footer template first.
 **Option**
 
 .. code-block:: xml
-   :caption: ``/website_airproof/data/presets.xml``
+   :caption: ``/website_airproof/views/website_templates.xml``
 
    <template id="template_header_opt" inherit_id="website.snippet_options" name="Footer Template - Option">
       <xpath expr="//we-select[@data-variable='footer-template']" position="inside">
@@ -527,7 +600,7 @@ active footer template first.
       ),
    );
 
-**Layout**
+**Template**
 
 .. code-block:: xml
     :caption: ``/website_airproof/views/website_templates.xml``
@@ -578,8 +651,6 @@ You can define an empty area that the user can fill with snippets.
 
    <div id="oe_structure_layout_01" class="oe_structure"/>
 
-.. todo:: Missing description in table ...
-
 .. list-table::
    :header-rows: 1
    :stub-columns: 1
@@ -591,6 +662,9 @@ You can define an empty area that the user can fill with snippets.
      - Define a drag-and-drop area for the user.
    * - oe_structure_solo
      - Only one snippet can be dropped in this area.
+   * - oe_structure_not_nearest
+     - If a building block is dropped outside of a Drop zone having this class, the block will be
+       moved in the nearest Drop Zone.
 
 You can also populate an existing drop zone with your content.
 
@@ -607,47 +681,96 @@ You can also populate an existing drop zone with your content.
 Responsive
 ==========
 
-You can find some hints below to help you make your website responsive.
+Odoo in general relies on the Bootstrap framework which eases the responsiveness of your website on
+ desktop and mobile. On Odoo 16, you can mainly take action on 3 aspects:
 
-Bootstrap
+#. Automatic computed font sizes depending on the device
+#. Column sizes on desktop (the columns are automatically stacked on mobile)
+#. Visibility conditions (Show/Hide something on desktop/mobile)
+
+.. seealso::
+   - `Bootstrap documentation on display property
+     <https://getbootstrap.com/docs/5.1/utilities/display/>`_
+
+Font size
 ---------
 
-.. seealso::
-   - `Bootstrap documentation on responsive breakpoints
-     <https://getbootstrap.com/docs/4.6/layout/overview/#responsive-breakpoints>`_
-   - `Bootstrap documentation on display property
-     <https://getbootstrap.com/docs/4.6/utilities/display/>`_
-
-**Font size**
-
-As of v4.3.0, Bootstrap ships with the option to enable responsive font sizes, allowing text to
-scale more naturally across device and viewport sizes. Enable them by changing the
-`$enable-responsive-font-sizes` Sass variable to true.
+In Bootstrap 5, responsive font sizes are enabled by default, allowing text to scale more naturally
+across device and viewport sizes (relying on the `$enable-rfs` variable).
 
 .. seealso::
-   `Responsive Font Size GitHub <https://github.com/twbs/rfs/tree/v8.1.0>`_
+   - `Bootstrap documentation about responsive font sizes
+     <https://getbootstrap.com/docs/5.1/getting-started/rfs/>`_
 
-Website Builder
----------------
+Columns sizes
+-------------
 
-Hide a specific `<section>` on mobile.
+Bootstrap uses a grid made of rows and columns to layout a page. Thanks to this structure, columns
+can be sized differently on mobile and desktop. In this version, the Website Builder allows to set
+mobile sizes (`col-12` for example) and desktop ones (`col-lg-4` for example) but not the
+medium breakpoints (`col-md-4` for example).
+
+.. warning::
+   The medium sizes can be set but the end-user is not able to edit them within the Website Builder.
+
+.. seealso::
+   - `Bootstrap documentation on responsive breakpoints <https://getbootstrap.com/docs/5.1/layout/breakpoints/>`_
+   - `Bootstrap documentation about the grid <https://getbootstrap.com/docs/5.1/layout/grid/>`_
+
+Visibility conditions
+---------------------
+
+In the Odoo Website Builder, entire sections or specific columns can be hidden on mobile or desktop.
+ This functionality leverages Bootstrap along with Odoo-specific classes:
+
+- `o_snippet_mobile_invisible`
+- `o_snippet_desktop_invisible`
+
+Hide a section on desktop:
 
 .. code-block:: xml
 
-    <section class="d-none d-md-block">
-       <!-- Content -->
-    </section>
+   <section class="s_text_block o_cc o_cc1 o_colored_level pt16 pb16 d-lg-none o_snippet_desktop_invisible" data-snippet="s_text_block" name="Text">
+	   <!-- Content -->
+   </section>
 
-Hide a `<col>` on mobile.
+Hide a column on mobile:
 
 .. code-block:: xml
 
-   <section>
-      <div class="container">
-         <div class="row d-flex align-items-stretch">
-            <div class="col-lg-4 d-none d-md-block">
-               <!-- Content -->
+   <section class="s_text_block o_cc o_cc1 o_colored_level pt16 pb16" data-snippet="s_text_block" name="Text">
+      <div class="container s_allow_columns">
+         <div class="row">
+            <div class="col-12 col-lg-6 d-none d-lg-block o_snippet_mobile_invisible">
+               Column 1
+            </div>
+            <div class="col-12 col-lg-6">
+               Column 2
             </div>
          </div>
       </div>
    </section>
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: 20 80
+
+   * - Class
+     - Description
+   * - o_snippet_mobile_invisible
+     - It tells the Website Builder that the element is hidden and is using visibility conditions
+       option.
+   * - o_snippet_desktop_invisible
+     - It tells the Website Builder that the element is hidden **on desktop :and:** is using visibility
+       conditions option.
+   * - d-none
+     - Hide the element in every situations.
+   * - d-lg-block
+     - Show the element from the "large" breakpoint (on desktop).
+
+.. warning::
+   `o_snippet_mobile_invisible` / `o_snippet_desktop_invisible` classes have to be specified to keep the visibility conditions option functional. Even if an element is hidden on desktop, the Website Builder displays a list of these elements allowing the end-user to force show the element and edit it without switching between mobile and desktop mode.
+
+   .. image:: layout/screenshot-visibility.png
+      :alt: Force show a hidden element on the current device.
