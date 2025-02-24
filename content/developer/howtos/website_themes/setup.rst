@@ -155,23 +155,30 @@ Database setup
 
 Create an empty database.
 
-.. code-block:: xml
+.. code-block:: bash
 
    createdb <database_name>
 
 Import the SQL file in the database that you just created.
 
-.. code-block:: xml
+.. code-block:: bash
 
    psql <database_name> < dump.sql
 
 Reset the admin user password.
 
-.. code-block:: xml
+.. code-block:: bash
 
    psql \c
    <database_name>
    update res_users set login='admin', password='admin' where id=2;
+
+If necessary, disable the two-factor authentication enforcing policy option.
+
+.. code-block:: bash
+
+    psql <database-name>
+    update res_users set top_secret='' where id=2;
 
 Getting started
 ===============
