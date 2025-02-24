@@ -13,6 +13,7 @@ Mexico
 .. |PPD| replace:: :abbr:`PPD (Pago en Parcialidades o Diferido/Payment in Installements or
    Deferred)`
 .. |PUE| replace:: :abbr:`PUE (Pago en una Sola Exhibición/Payment in a Single Exhibition)`
+.. |CFDI| replace:: :abbr:`CFDI (Comprobante Fiscal Digital por Internet)`
 
 Webinars
 ========
@@ -453,66 +454,71 @@ It is possible to cancel the EDI documents sent to the |SAT|. According to the `
 there are two requirements for this:
 
 - With all cancellation requests, you **must** specify a *cancellation reason*.
-- After 24 hours have passed since the creation of the invoice, the client **must** be asked to
-  accept the cancellation.
+- After 24 hours from the invoice creation, the client must be asked to approve the cancellation. If
+  there is no response within 72 hours, the cancellation is processed automatically.
 
-There are four different cancellation reasons. In Odoo, you can cancel invoices with the reasons *01
-Invoices sent with errors with a relation*, and *02 Invoices sent with errors without a relation*.
+Invoice cancellations can be made for one of the following reasons:
 
-The following sections break down the process of cancelling invoices for each cancellation reason in
-Odoo.
+- 01 - Invoice issued with errors (with related document)
+- 02 - Invoice issued with errors (no replacement)
+- 03 - The operation was not carried out
+- 04 - Nominative operation related to the global invoice
 
-.. important::
-   Odoo has certain limitations to cancelling invoices in the |SAT|: The reasons 03 and 04
-   (*Operation did not take place* and *Nominative transactions related to a global invoice*,
-   respectively) are not currently supported by Odoo. For this, you need to cancel the invoice
-   directly in the |SAT|, and press :guilabel:`Retry` in the :guilabel:`SAT Status field`.
+To initiate a cancellation, go to :menuselection:`Accounting --> Customers --> Invoices`, select the
+posted invoice to cancel, and click :guilabel:`Request Cancel`. Then, refer to the
+:ref:`localizations/mexico/01-invoice-cancellation` or
+:ref:`localizations/mexico/02-03-04-invoice-cancellation` sections, depending on the cancellation
+reason.
 
-01 - invoices sent with errors with a relation
-**********************************************
+.. tip::
+   Alternatively, request a cancellation from the :guilabel:`CFDI` tab by clicking
+   :guilabel:`Cancel` on the line item.
 
-This cancellation reason must be used when a new invoice needs to substitute the original one, due
-to an error in any field.
+.. _localizations/mexico/01-invoice-cancellation:
 
-Begin by navigating to :menuselection:`Accounting --> Customers --> Invoices`, and select the old
-invoice. Copy the :guilabel:`Fiscal Folio` from the old invoice. Then, navigate to the new invoice,
-and in the :guilabel:`CFDI Origin` field, add the value `04|` and paste the :guilabel:`Fiscal Folio`
-of the old invoice after the value. Finally, sign the new document.
+Cancellation reason 01 - Invoice issued with errors (with related document)
+***************************************************************************
 
-Next, navigate back to the old invoice, and notice the :guilabel:`Substituted By` field is now
-available. Click the :guilabel:`Request EDI Cancellation` button on the old invoice, and then click
-:guilabel:`Process Now` in the blue section that appears. The invoice status changes to
-:guilabel:`Cancelled`, and a confirmation is logged in the chatter.
+#. In the :guilabel:`Request CFDI Cancellation` pop-up window, select :guilabel:`01 - Invoice issued
+   with errors (with related document)` from the :guilabel:`Reason` field and click
+   :guilabel:`Create Replacement Invoice` to create a new draft invoice. This new draft invoice
+   replaces the previous invoice, along with the related |CFDI|.
+#. :guilabel:`Confirm` the draft and :guilabel:`Send & Print` the invoice.
+#. Return to the initial invoice (i.e., the invoice from which you first requested the
+   cancellation). Notice the :guilabel:`Substituted By` field appears with a reference to the
+   new replacement invoice.
+#. Click :guilabel:`Request Cancel`. In the :guilabel:`Request CFDI Cancellation` pop-up window, the
+   :guilabel:`01 - Invoice issued with errors (with related document)` option is automatically
+   selected in the :guilabel:`Reason` field.
+#. Click :guilabel:`Confirm`.
 
-Now, the invoice should be cancelled in the |SAT| as well. You can confirm this was done correctly,
-by pressing :guilabel:`Retry` in the |SAT| status field.
+The invoice cancellation is then generated with a reason line item in the :guilabel:`CFDI` tab.
 
-If the document was cancelled more than 24 hours after its creation, you may need to ask the client
-to accept the cancellation in their “Buzón Tributario” directly from the `SAT website
-<https://www.sat.gob.mx/home>`_.
+.. image:: mexico/mx-invoice-cancellation-reason-01.png
+   :alt: Canceled invoice line item in the CFDI tab.
 
 .. note::
-   The `04|` is only a code that helps Odoo to perform this process. It has no relation to the
-   method 04 reason for cancellation.
+   - If the client rejects the cancellation, the invoice cancellation line item is removed from the
+     :guilabel:`CFDI` tab.
+   - When using the *01 - Invoice issued with errors (with related document)* cancellation reason,
+     the `04|` prefix may appear in the :guilabel:`Fiscal Folio` field. This is an internal prefix
+     used by Odoo to complete the cancellation and **does not** mean that the cancellation reason
+     was *04 - Nominative operation related to the global invoice*.
 
-.. image:: mexico/mx-01-invoice-cancellation-substitute.png
-   :alt: Old invoice with CFDI Origin.
+.. _localizations/mexico/02-03-04-invoice-cancellation:
 
-.. image:: mexico/mx-01-invoice-cancellation.png
-   :alt: Invoice with the Substituted By field referencing the CFDI Origin invoice.
+Cancellation reasons 02, 03, and 04
+***********************************
 
-02 - invoices sent with errors without a relation
-*************************************************
+In the :guilabel:`Request CFDI Cancellation` pop-up window, select the desired cancellation
+:guilabel:`Reason` and :guilabel:`Confirm` the cancellation.
 
-This cancellation reason has to be used when an invoice was sent with an error in any field, and
-does not need to be replaced by another one.
+Upon doing so, the invoice cancellation is generated with a reason line item in the :guilabel:`CFDI`
+tab.
 
-For this case, navigate to :menuselection:`Accounting --> Customers --> Invoices`, and select the
-old invoice. From here, the only requirement is to click the :guilabel:`Request EDI Cancellation`
-button, and then click the :guilabel:`Process Now` button.
-
-Because the field :guilabel:`Substituted By` does not appear when using this cancellation reason,
-the |SAT| should automatically detect that the cancellation reason is 02.
+.. note::
+   If the client rejects the cancellation, the invoice cancellation line item is removed from the
+   :guilabel:`CFDI` tab.
 
 Payment cancellations
 *********************
