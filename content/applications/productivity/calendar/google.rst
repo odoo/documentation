@@ -29,14 +29,14 @@ in, and store credentials. Click :guilabel:`New Project`.
 .. image:: google/new-api-project.png
    :alt: Create a new API project to store credentials.
 
-.. tip::
-   Give the API Project a clear name, like "Odoo Sync", so it can be easily identified.
+Give the API project a clear name, like `Odoo Sync`, so it can be identified. Then click the
+:guilabel:`Create` button.
 
 Enable Google calendar API
 --------------------------
 
 Now, click on :guilabel:`Enabled APIs and Services` in the left menu. Select :guilabel:`Enabled APIs
-and Services` again if the :guilabel:`Search bar` doesn't appear.
+and Services` again if the :guilabel:`Search bar` does not appear.
 
 .. image:: google/enable-apis-services.png
    :alt: Enable APIs and Services on the API Project.
@@ -51,7 +51,7 @@ OAuth consent screen
 --------------------
 
 Now that the API project has been created, OAuth should be configured. To do that, click on
-:guilabel:`OAuth consent` in the left menu and then select the :guilabel:`User Type`.
+:guilabel:`OAuth consent screen` in the left menu, then click the :guilabel:`Get started` button.
 
 .. warning::
    *Personal* Gmail Accounts are only allowed to be **External** User Type, which means Google may
@@ -61,26 +61,38 @@ Now that the API project has been created, OAuth should be configured. To do tha
    Note, as well, that while the API connection is in the *External* testing mode, then no approval
    is necessary from Google. User limits in this testing mode is set to 100 users.
 
-In the second step, :guilabel:`OAuth Consent Screen`, type `Odoo` in the :guilabel:`App name` field,
-select the email address for the :guilabel:`User support email` field, and type the email address
-for the :guilabel:`Developer contact information` section. Then, click :guilabel:`Save and
-Continue`.
+Follow the proceeding steps, in order:
 
-Skip the third step, :menuselection:`Scopes`, by clicking :guilabel:`Save and Continue`.
+#. In :guilabel:`App Information`, type `Odoo` in the :guilabel:`App name` field, then enter the
+   email address for the :guilabel:`User support email` field and click the :guilabel:`Next` button.
+#. In :guilabel:`Audience`, select :guilabel:`External`, then click the :guilabel:`Next` button.
+#. In :guilabel:`Contact Information`, enter the email again, then click the :guilabel:`Next`
+   button.
+#. In :guilabel:`Finish`, tick the checkbox to agree to :guilabel:`Google API Services: User
+   Policy.` For the last step, click the :guilabel:`Create` button.
 
-Next, if continuing in testing mode (External), add the email addresses being configured under the
-:guilabel:`Test users` step, by clicking on :guilabel:`Add Users`, and then the :guilabel:`Save and
-Continue` button. A summary of the app registration appears.
+Authorized domain setup
+-----------------------
 
-Finally, scroll to the bottom, and click on :guilabel:`Back to Dashboard`.
+Next, any domains set to appear on the consent screen or in an OAuth client's configuration must be
+pre-registered. To do so, navigate to :guilabel:`Branding` in the left menu. In the
+:guilabel:`Authorized domains` section, click the :guilabel:`Add domain` button to create a field to
+enter an authorized domain. Enter a domain, such as `odoo.com`, then click the :guilabel:`Save`
+button at the bottom of the page.
 
-Now, the OAuth consent has been configured, and it's time to create credentials.
+Test users
+----------
+
+To give users the ability to sync with personal Gmail accounts, they must be set as a test user.
+Setup test users by going to :guilabel:`Audience` in the left-side menu and clicking the
+:guilabel:`Add users` button in the :guilabel:`Test users` section. Enter any desired user emails,
+and click the :guilabel:`Save` button.
 
 Create credentials
 ------------------
 
 The *Client ID* and the *Client Secret* are both needed to connect Google Calendar to Odoo. This is
-the last step in the Google console. Begin by clicking :guilabel:`Credentials` in the left menu.
+the last step in the Google console. Begin by clicking :guilabel:`Clients` in the left menu.
 Then, click :guilabel:`Create Credentials`, and select :guilabel:`OAuth client ID`, Google will open
 a guide to create credentials.
 
@@ -96,7 +108,7 @@ Under :menuselection:`Create OAuth Client ID`, select :guilabel:`Website applica
 .. image:: google/uri.png
    :alt: Add the authorized JavaScript origins and the authorized redirect URIs.
 
-A :guilabel:`Client ID` and :guilabel:`Client Secret` will appear, copy these to a notepad.
+A :guilabel:`Client ID` and :guilabel:`Client Secret` will appear, save these somewhere safe.
 
 Setup in Odoo
 =============
@@ -129,8 +141,8 @@ button to sync Google Calendar with Odoo.
 .. note::
    When syncing Google Calendar with Odoo for the first time, the page will redirect to the Google
    Account. From there, select the :guilabel:`Email Account` that should have access, then select
-   :guilabel:`Continue` (should the app be unverifed), and finally select :guilabel:`Continue` (to
-   give permission for the transfer of data)`.
+   :guilabel:`Continue` (should the app be unverified), and finally select :guilabel:`Continue` (to
+   give permission for the transfer of data).
 
 .. image:: google/trust-odoo.png
    :alt: Give Odoo permission to access Google Calendar.
