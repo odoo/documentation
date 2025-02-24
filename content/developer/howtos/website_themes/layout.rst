@@ -41,8 +41,8 @@ an `<odoo>` tag.
    </odoo>
 
 .. note::
-   Using precise file names is important to find information through all modules quickly. File names
-   should only contain lowercase alphanumerics and underscores.
+   Using precise template names is important to find information through all modules quickly.
+   Template names should only contain lowercase alphanumerics and underscores.
 
    Always add an empty line at the end of your file. This can be done automatically by configuring
    your IDE.
@@ -71,7 +71,7 @@ A view is coded the following way.
    * - id
      - ID of the modified view
    * - inherited_id
-     - ID of the standard view
+     - ID of the standard view (using the following pattern: `module.template`)
    * - name
      - Human-readable name of the modified view
 
@@ -162,32 +162,6 @@ below:
      - Adds the XPath content inside an attribute.
 
 .. example::
-   This XPath adds a `<div>` before the `<nav>` that is a direct child of the `<header>`.
-
-   .. code-block:: xml
-
-      <xpath expr="//header/nav" position="before">
-         <div>Some content before the header</div>
-      </xpath>
-
-   This XPath adds `x_airproof_header` in the class attribute of the header. You also need to define
-   a `separator` attribute to add a space before the class you are adding.
-
-   .. code-block:: xml
-
-      <xpath expr="//header" position="attributes">
-         <attribute name="class" add="x_airproof_header" separator=" "/>
-      </xpath>
-
-   This XPath removes `x_airproof_header` in the class attribute of the header. In this case, you
-   don't need to use the `separator` attribute.
-
-   .. code-block:: xml
-
-      <xpath expr="//header" position="attributes">
-         <attribute name="class" remove="x_airproof_header" />
-      </xpath>
-
    This XPath removes the first element with a `.breadcrumb` class.
 
    .. code-block:: xml
@@ -201,6 +175,66 @@ below:
       <xpath expr="//ul" position="inside">
          <li>Last element of the list</li>
       </xpath>
+
+   This XPath adds a `<div>` before the `<nav>` that is a direct child of the `<header>`.
+
+   .. code-block:: xml
+
+      <xpath expr="//header/nav" position="before">
+         <div>Some content before the header</div>
+      </xpath>
+
+   This XPath removes `x_airproof_header` in the class attribute of the header. In this case, you
+   don't need to use the `separator` attribute.
+
+   .. code-block:: xml
+
+      <xpath expr="//header" position="attributes">
+         <attribute name="class" remove="x_airproof_header" />
+      </xpath>
+
+   This XPath adds `x_airproof_header` in the class attribute of the header. You also need to define
+   a `separator` attribute to add a space before the class you are adding.
+
+   .. code-block:: xml
+
+      <xpath expr="//header" position="attributes">
+         <attribute name="class" add="x_airproof_header" separator=" "/>
+      </xpath>
+
+   This XPath moves the element with `.o_footer_scrolltop_wrapper` class before the element with the
+    `footer` ID attribute.
+
+   .. code-block:: xml
+
+      <xpath expr="//div[@id='footer']" position="before">
+         <xpath expr="//div[@id='o_footer_scrolltop_wrapper']" position="move" />
+      </xpath>
+
+.. tip::
+Using `move` directives inside an other XPath forces you to use only this kind of directives.
+
+.. example::
+   | **Good example:**
+
+   .. code-block:: xml
+
+      <xpath expr="//*[hasclass('o_wsale_products_main_row')]" position="before">
+        <xpath expr="//t[@t-if='opt_wsale_categories_top']" position="move" />
+      </xpath>
+      <xpath expr="//*[hasclass('o_wsale_products_main_row')]" position="before">
+        <div><!-- Content --></div>
+      </xpath>
+
+   | **Bad example:**
+
+   .. code-block:: xml
+
+      <xpath expr="//*[hasclass('o_wsale_products_main_row')]" position="before">
+        <xpath expr="//t[@t-if='opt_wsale_categories_top']" position="move" />
+        <div><!-- Content --></div>
+      </xpath>
+
 
 .. seealso::
    You can find more information about XPath in this `cheat sheet <https://devhints.io/xpath>`_.
