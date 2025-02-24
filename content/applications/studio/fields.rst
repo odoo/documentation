@@ -484,7 +484,7 @@ Properties
   :guilabel:`Help Tooltip`. It is displayed inside a tooltip box when hovering with your mouse over
   the field's label.
 - :guilabel:`Placeholder`: To provide an example of how a field should be completed, write it under
-  :guilabel:`Placeholder`. It is displayed in light gray in lieu of the field's value.
+  :guilabel:`Placeholder`. It appears in light gray as a placeholder until a value is entered.
 - :guilabel:`Widget`: To change the default appearance or functionality of a field, select one of
   the available widgets.
 - :guilabel:`Default value`: To add a default value to a field when a record is created, use
