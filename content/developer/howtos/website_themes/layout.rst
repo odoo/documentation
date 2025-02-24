@@ -10,6 +10,8 @@ In this chapter, you will learn how to:
 - Add a copyright section.
 - Improve your website's responsiveness.
 
+.. _website_themes/layout/default :
+
 Default
 =======
 
@@ -41,11 +43,13 @@ an `<odoo>` tag.
    </odoo>
 
 .. note::
-   Using precise file names is important to find information through all modules quickly. File names
-   should only contain lowercase alphanumerics and underscores.
+   Using precise template names is important to find information through all modules quickly.
+   Template names should only contain lowercase alphanumerics and underscores.
 
    Always add an empty line at the end of your file. This can be done automatically by configuring
    your IDE.
+
+.. _website_themes/layout/xpath :
 
 XPath
 =====
@@ -71,7 +75,7 @@ A view is coded the following way.
    * - id
      - ID of the modified view
    * - inherited_id
-     - ID of the standard view
+     - ID of the standard view (using the following pattern: `module.template`)
    * - name
      - Human-readable name of the modified view
 
@@ -98,6 +102,8 @@ For each XPath, you modify two attributes: **expression** and **position**.
    - *XML IDs* of inheriting views should use the same *ID* as the original record. It helps to find
      all inheritance at a glance. As final *XML IDs* are prefixed by the module that creates them,
      there is no overlap.
+
+.. _website_themes/layout/xpath/expressions :
 
 Expressions
 -----------
@@ -137,6 +143,8 @@ expression to target the right element. The most useful ones are listed below.
    * - \*[@t-call="t-call"]
      - Selects a specific t-call.
 
+.. _website_themes/layout/xpath/position :
+
 Position
 --------
 
@@ -162,32 +170,6 @@ below:
      - Adds the XPath content inside an attribute.
 
 .. example::
-   This XPath adds a `<div>` before the `<nav>` that is a direct child of the `<header>`.
-
-   .. code-block:: xml
-
-      <xpath expr="//header/nav" position="before">
-         <div>Some content before the header</div>
-      </xpath>
-
-   This XPath adds `x_airproof_header` in the class attribute of the header. You also need to define
-   a `separator` attribute to add a space before the class you are adding.
-
-   .. code-block:: xml
-
-      <xpath expr="//header" position="attributes">
-         <attribute name="class" add="x_airproof_header" separator=" "/>
-      </xpath>
-
-   This XPath removes `x_airproof_header` in the class attribute of the header. In this case, you
-   don't need to use the `separator` attribute.
-
-   .. code-block:: xml
-
-      <xpath expr="//header" position="attributes">
-         <attribute name="class" remove="x_airproof_header" />
-      </xpath>
-
    This XPath removes the first element with a `.breadcrumb` class.
 
    .. code-block:: xml
@@ -202,8 +184,70 @@ below:
          <li>Last element of the list</li>
       </xpath>
 
+   This XPath adds a `<div>` before the `<nav>` that is a direct child of the `<header>`.
+
+   .. code-block:: xml
+
+      <xpath expr="//header/nav" position="before">
+         <div>Some content before the header</div>
+      </xpath>
+
+   This XPath removes `x_airproof_header` in the class attribute of the header. In this case, you
+   don't need to use the `separator` attribute.
+
+   .. code-block:: xml
+
+      <xpath expr="//header" position="attributes">
+         <attribute name="class" remove="x_airproof_header" />
+      </xpath>
+
+   This XPath adds `x_airproof_header` in the class attribute of the header. You also need to define
+   a `separator` attribute to add a space before the class you are adding.
+
+   .. code-block:: xml
+
+      <xpath expr="//header" position="attributes">
+         <attribute name="class" add="x_airproof_header" separator=" "/>
+      </xpath>
+
+   This XPath moves the element with `.o_footer_scrolltop_wrapper` class before the element with the
+    `footer` ID attribute.
+
+   .. code-block:: xml
+
+      <xpath expr="//div[@id='footer']" position="before">
+         <xpath expr="//div[@id='o_footer_scrolltop_wrapper']" position="move" />
+      </xpath>
+
+.. tip::
+   Using `move` directives inside an other XPath forces you to use only this kind of directives.
+
+   .. example::
+      | **Good example:**
+
+      .. code-block:: xml
+
+         <xpath expr="//*[hasclass('o_wsale_products_main_row')]" position="before">
+         <xpath expr="//t[@t-if='opt_wsale_categories_top']" position="move" />
+         </xpath>
+         <xpath expr="//*[hasclass('o_wsale_products_main_row')]" position="before">
+         <div><!-- Content --></div>
+         </xpath>
+
+      | **Bad example:**
+
+      .. code-block:: xml
+
+         <xpath expr="//*[hasclass('o_wsale_products_main_row')]" position="before">
+         <xpath expr="//t[@t-if='opt_wsale_categories_top']" position="move" />
+         <div><!-- Content --></div>
+         </xpath>
+
+
 .. seealso::
    You can find more information about XPath in this `cheat sheet <https://devhints.io/xpath>`_.
+
+.. _website_themes/layout/qweb :
 
 QWeb
 ====
@@ -214,12 +258,79 @@ generate HTML fragments and pages.
 .. seealso::
    :doc:`QWeb templates documentation <../../reference/frontend/qweb>`.
 
+.. _website_themes/layout/custom_fields :
+
+Custom fields
+=============
+
+Depending on your needs, you can create custom fields to save data in the database.
+
+.. _website_themes/layout/custom_fields/declaration :
+
+Declaration
+-----------
+
+First, create a record to declare the field. This field has to be linked to an existing model.
+
+.. code-block:: xml
+   :caption: ``/website_airproof/data/fields.xml``
+
+   <record id="x_post_category" model="ir.model.fields">
+      <field name="name">x_post_category</field>
+      <field name="field_description">...</field>
+      <field name="ttype">html</field>
+      <field name="state">manual</field>
+      <field name="index">0</field>
+      <field name="model_id" ref="website_blog.model_blog_post"/>
+   </record>
+
+.. note:: Fields creation is also possible (and recommended) through `a model using Python </developer/tutorials/backend>`_.
+
+.. _website_themes/layout/custom_fields/backend :
+
+Back-end
+--------
+
+Add the field to the relevant view through an XPath. Therefore, the user can see the field in the
+interface and fill it afterwards.
+
+.. code-block:: xml
+   :caption: ``/website_airproof/views/backend/website_blog_views.xml``
+
+   <record id="view_blog_post_form_category" model="ir.ui.view">
+      <field name="name">view_blog_post_form_category</field>
+      <field name="model">blog.post</field>
+      <field name="inherit_id" ref="website_blog.view_blog_post_form"/>
+      <field name="arch" type="xml">
+         <xpath expr="//field[@name='blog_id']" position="before">
+            <field name="x_post_category" string="..." placeholder="..."/>
+         </xpath>
+      </field>
+   </record>
+
+.. _website_themes/layout/custom_fields/frontend :
+
+Front-end
+---------
+
+The field value can be shown somewhere in a page by calling `model_name.field_name` like this:
+
+.. code-block:: xml
+   :caption: ``/website_airproof/views/website_blog_templates.xml``
+
+   <h1 t-field="blog_post.x_post_category"/>
+
+.. _website_themes/layout/background :
+
 Background
 ==========
 
 You can define a color or an image as the background of your website.
 
-**Colors**
+.. _website_themes/layout/background/colors :
+
+Colors
+------
 
 .. code-block:: scss
    :caption: ``/website_airproof/static/src/scss/primary_variables.scss``
@@ -233,7 +344,10 @@ You can define a color or an image as the background of your website.
        )
    );
 
-**Image/pattern**
+.. _website_themes/layout/background/image_pattern :
+
+Image/pattern
+-------------
 
 .. code-block:: scss
    :caption: ``/website_airproof/static/src/scss/primary_variables.scss``
@@ -245,11 +359,15 @@ You can define a color or an image as the background of your website.
       )
    );
 
+.. _website_themes/layout/header :
+
 Header
 ======
 
 By default, the header contains a responsive navigation menu and the company's logo. You can easily
 add new elements or create your own template.
+
+.. _website_themes/layout/header/standard :
 
 Standard
 --------
@@ -258,6 +376,17 @@ Enable one of the header default templates.
 
 .. important::
    Don't forget that you may need to disable the active header template first.
+
+   .. example::
+
+      .. code-block:: xml
+         :caption: ``/website_aiproof/data/presets.xml``
+
+         <record id="website.template_header_default" model="ir.ui.view">
+            <field name="active" eval="False"/>
+         </record>
+
+Explicitly set the desired template in the `primary_variables.scss` file.
 
 .. code-block:: scss
    :caption: ``/website_airproof/static/src/scss/primary_variables.scss``
@@ -275,6 +404,8 @@ Enable one of the header default templates.
       <field name="active" eval="True"/>
    </record>
 
+.. _website_themes/layout/header/custom :
+
 Custom
 ------
 
@@ -288,13 +419,13 @@ Create your own template and add it to the list.
 Use the following code to add an option for your new custom header on the Website Builder.
 
 .. code-block:: xml
-   :caption: ``/website_airproof/data/presets.xml``
+   :caption: ``/website_airproof/views/website_templates.xml``
 
-   <template id="template_header_opt" inherit_id="website.snippet_options" name="Header Template - Option">
-      <xpath expr="//we-select[@data-variable='header-template']" position="inside">
+   <template id="template_footer_opt" inherit_id="website.snippet_options" name="Footer Template - Option">
+      <xpath expr="//we-select[@data-variable='footer-template']" position="inside">
          <we-button title="airproof"
-            data-customize-website-views="website_airproof.header"
-            data-customize-website-variable="'airproof'"  data-img="/website_airproof/static/src/img/wbuilder/template_header_opt.svg"/>
+            data-customize-website-views="website_airproof.footer"
+            data-customize-website-variable="'airproof'"  data-img="/website_airproof/static/src/img/wbuilder/template_footer_opt.svg"/>
       </xpath>
    </template>
 
@@ -324,7 +455,7 @@ variables.
       ),
    );
 
-**Layout**
+**Template**
 
 .. code-block:: xml
    :caption: ``/website_airproof/views/website_templates.xml``
@@ -344,10 +475,14 @@ variables.
       </field>
    </record>
 
+.. _website_themes/layout/header/components :
+
 Components
 ----------
 
 In your custom header, you can call several sub-templates using the `t-call` directive from QWeb:
+
+.. _website_themes/layout/header/components/logo :
 
 Logo
 ~~~~
@@ -358,14 +493,12 @@ Logo
       <t t-set="_link_class" t-valuef="..."/>
    </t>
 
-Don't forget to record the logo of your website in the database.
+.. important::
 
-.. code-block:: xml
-   :caption: ``/website_airproof/data/images.xml``
+   Don't forget to :ref:`create a record of the website logo <website_themes/media/images/use/logo>`
+   logo in the database.
 
-   <record id="website.default_website" model="website">
-      <field name="logo" type="base64" file="website_airproof/static/src/img/content/logo.png"/>
-   </record>
+.. _website_themes/layout/headers/components/menu :
 
 Menu
 ~~~~
@@ -379,6 +512,8 @@ Menu
       </t>
    </t>
 
+.. _website_themes/layout/header/components/signin :
+
 Sign in
 ~~~~~~~
 
@@ -388,6 +523,8 @@ Sign in
       <t t-set="_item_class" t-valuef="nav-item"/>
       <t t-set="_link_class" t-valuef="nav-link"/>
    </t>
+
+.. _website_themes/layout/header/components/user_dropdown :
 
 User dropdown
 ~~~~~~~~~~~~~
@@ -403,6 +540,8 @@ User dropdown
       <t t-set="_dropdown_menu_class" t-valuef="..."/>
    </t>
 
+.. _website_themes/layout/header/components/language_selector :
+
 Language selector
 ~~~~~~~~~~~~~~~~~
 
@@ -412,6 +551,8 @@ Language selector
       <t t-set="_div_classes" t-valuef="..."/>
    </t>
 
+.. _website_themes/layout/header/components/cta :
+
 Call to action
 ~~~~~~~~~~~~~~
 
@@ -420,6 +561,8 @@ Call to action
    <t t-call="website.placeholder_header_call_to_action">
       <t t-set="_div_classes" t-valuef="..."/>
    </t>
+
+.. _website_themes/layout/header/components/navbar_toggler :
 
 Navbar toggler
 ~~~~~~~~~~~~~~
@@ -434,11 +577,15 @@ Navbar toggler
    You can add a :ref:`header overlay <header_overlay>` to position your header over the content of
    your page. It has to be done on each page individually.
 
+.. _website_themes/layout/footer :
+
 Footer
 ======
 
 By default, the footer contains a section with some static content. You can easily add new elements
 or create your own template.
+
+.. _website_themes/layout/footer/standard :
 
 Standard
 --------
@@ -446,21 +593,35 @@ Standard
 Enable one of the default footer templates. Don't forget that you may need to disable the active
 footer template first.
 
+.. important::
+   Don't forget that you may need to disable the active footer template first.
+
+   .. example::
+
+      .. code-block:: xml
+         :caption: ``/website_aiproof/data/presets.xml``
+
+         <record id="website.footer_custom" model="ir.ui.view">
+            <field name="active" eval="False"/>
+         </record>
+
 .. code-block:: scss
    :caption: ``/website_airproof/static/src/scss/primary_variables.scss``
 
    $o-website-values-palettes: (
       (
-         'header-template': 'Contact',
+         'footer-template': 'Links',
       ),
    );
 
 .. code-block:: xml
    :caption: ``/website_airproof/data/presets.xml``
 
-   <record id="website.template_header_contact" model="ir.ui.view">
+   <record id="website.template_footer_links" model="ir.ui.view">
       <field name="active" eval="True"/>
    </record>
+
+.. _website_themes/layout/footer/custom :
 
 Custom
 ------
@@ -471,7 +632,7 @@ active footer template first.
 **Option**
 
 .. code-block:: xml
-   :caption: ``/website_airproof/data/presets.xml``
+   :caption: ``/website_airproof/views/website_templates.xml``
 
    <template id="template_header_opt" inherit_id="website.snippet_options" name="Footer Template - Option">
       <xpath expr="//we-select[@data-variable='footer-template']" position="inside">
@@ -493,7 +654,7 @@ active footer template first.
       ),
    );
 
-**Layout**
+**Template**
 
 .. code-block:: xml
     :caption: ``/website_airproof/views/website_templates.xml``
@@ -513,6 +674,8 @@ active footer template first.
        </field>
     </record>
 
+.. _website_themes/layout/copyright :
+
 Copyright
 =========
 
@@ -531,6 +694,8 @@ To replace the content or modify its structure, you can add your own code to the
        </xpath>
     </template>
 
+.. _website_themes/layout/dropzone :
+
 Drop zone
 =========
 
@@ -544,8 +709,6 @@ You can define an empty area that the user can fill with snippets.
 
    <div id="oe_structure_layout_01" class="oe_structure"/>
 
-.. todo:: Missing description in table ...
-
 .. list-table::
    :header-rows: 1
    :stub-columns: 1
@@ -557,6 +720,9 @@ You can define an empty area that the user can fill with snippets.
      - Define a drag-and-drop area for the user.
    * - oe_structure_solo
      - Only one snippet can be dropped in this area.
+   * - oe_structure_not_nearest
+     - If a building block is dropped outside of a Drop zone having this class, the block will be
+       moved in the nearest Drop Zone.
 
 You can also populate an existing drop zone with your content.
 
@@ -570,50 +736,110 @@ You can also populate an existing drop zone with your content.
        </xpath>
     </template>
 
+.. _website_themes/layout/responsive :
+
 Responsive
 ==========
 
-You can find some hints below to help you make your website responsive.
+Odoo in general relies on the Bootstrap framework which eases the responsiveness of your website on
+ desktop and mobile. On Odoo 16, you can mainly take action on 3 aspects:
 
-Bootstrap
----------
+#. Automatic computed font sizes depending on the device
+#. Column sizes on desktop (the columns are automatically stacked on mobile)
+#. Visibility conditions (Show/Hide something on desktop/mobile)
 
 .. seealso::
-   - `Bootstrap documentation on responsive breakpoints
-     <https://getbootstrap.com/docs/4.6/layout/overview/#responsive-breakpoints>`_
    - `Bootstrap documentation on display property
-     <https://getbootstrap.com/docs/4.6/utilities/display/>`_
+     <https://getbootstrap.com/docs/5.1/utilities/display/>`_
 
-**Font size**
+.. _website_themes/layout/reponsive/font_sizes :
 
-As of v4.3.0, Bootstrap ships with the option to enable responsive font sizes, allowing text to
-scale more naturally across device and viewport sizes. Enable them by changing the
-`$enable-responsive-font-sizes` Sass variable to true.
+Font sizes
+----------
+
+In Bootstrap 5, responsive font sizes are enabled by default, allowing text to scale more naturally
+across device and viewport sizes (relying on the `$enable-rfs` variable).
 
 .. seealso::
-   `Responsive Font Size GitHub <https://github.com/twbs/rfs/tree/v8.1.0>`_
+   - `Bootstrap documentation about responsive font sizes
+     <https://getbootstrap.com/docs/5.1/getting-started/rfs/>`_
 
-Website Builder
----------------
+.. _website_themes/layout/reponsive/column_sizes :
 
-Hide a specific `<section>` on mobile.
+Column sizes
+------------
+
+Bootstrap uses a grid made of rows and columns to layout a page. Thanks to this structure, columns
+can be sized differently on mobile and desktop. In this version, the Website Builder allows to set
+mobile sizes (`col-12` for example) and desktop ones (`col-lg-4` for example) but not the
+medium breakpoints (`col-md-4` for example).
+
+.. warning::
+   The medium sizes can be set but the end-user is not able to edit them within the Website Builder.
+
+.. seealso::
+   - `Bootstrap documentation on responsive breakpoints <https://getbootstrap.com/docs/5.1/layout/breakpoints/>`_
+   - `Bootstrap documentation about the grid <https://getbootstrap.com/docs/5.1/layout/grid/>`_
+
+.. _website_themes/layout/reponsive/visibility_conditions :
+
+Visibility conditions
+---------------------
+
+In the Odoo Website Builder, entire sections or specific columns can be hidden on mobile or desktop.
+ This functionality leverages Bootstrap along with Odoo-specific classes:
+
+- `o_snippet_mobile_invisible`
+- `o_snippet_desktop_invisible`
+
+Hide a section on desktop:
 
 .. code-block:: xml
 
-    <section class="d-none d-md-block">
+   <section class="s_text_block o_cc o_cc1 o_colored_level pt16 pb16 d-lg-none o_snippet_desktop_invisible" data-snippet="s_text_block" name="Text">
        <!-- Content -->
-    </section>
+   </section>
 
-Hide a `<col>` on mobile.
+Hide a column on mobile:
 
 .. code-block:: xml
 
-   <section>
-      <div class="container">
-         <div class="row d-flex align-items-stretch">
-            <div class="col-lg-4 d-none d-md-block">
-               <!-- Content -->
+   <section class="s_text_block o_cc o_cc1 o_colored_level pt16 pb16" data-snippet="s_text_block" name="Text">
+      <div class="container s_allow_columns">
+         <div class="row">
+            <div class="col-12 col-lg-6 d-none d-lg-block o_snippet_mobile_invisible">
+               Column 1
+            </div>
+            <div class="col-12 col-lg-6">
+               Column 2
             </div>
          </div>
       </div>
    </section>
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: 20 80
+
+   * - Class
+     - Description
+   * - o_snippet_mobile_invisible
+     - It tells the Website Builder that the element is hidden and is using visibility conditions
+       option.
+   * - o_snippet_desktop_invisible
+     - It tells the Website Builder that the element is hidden **on desktop and** is using visibility
+       conditions option.
+   * - d-none
+     - Hide the element in every situations.
+   * - d-lg-block
+     - Show the element from the "large" breakpoint (on desktop).
+
+.. important::
+   `o_snippet_mobile_invisible` / `o_snippet_desktop_invisible` classes have to be specified to keep
+    the visibility conditions option functional. Even if an element is hidden on desktop, the
+    Website Builder displays a list of these elements allowing the end-user to force show the
+    element and edit it without switching between mobile and desktop mode.
+
+   .. image:: layout/screenshot-visibility.png
+      :alt: Force show a hidden element on the current device.
