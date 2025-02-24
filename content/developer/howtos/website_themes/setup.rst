@@ -9,6 +9,8 @@ In this chapter, you will learn:
 - To export and import an Odoo database in your local environment.
 - To have an Odoo instance up and running.
 
+.. _website_themes/setup/install :
+
 Install
 =======
 
@@ -17,8 +19,12 @@ intended use case. This documentation assumes you use the :doc:`source install
 </administration/on_premise/source>` (running Odoo from the source code), which is best suited
 for Odoo designers and developers.
 
+.. _website_themes/setup/databases :
+
 Databases
 =========
+
+.. _website_themes/setup/databases/structure :
 
 Structure
 ---------
@@ -26,6 +32,8 @@ Structure
 Every Odoo application works similarly; they are built with the same logic. A model contains fields
 and relational fields that link to other models. Each model has views representing all its fields,
 with backend and frontend views.
+
+.. _website_themes/setup/databases/models :
 
 Models
 ~~~~~~
@@ -38,6 +46,8 @@ backend by enabling the :ref:`developer mode <developer-mode>` and then going to
 .. image:: setup/models-page.png
    :alt: Models page
 
+.. _website_themes/setup/databases/fields :
+
 Fields
 ~~~~~~
 
@@ -46,6 +56,8 @@ In a model, we will centralize fields (field names we need to target in our code
 .. seealso::
    :doc:`/applications/studio/fields`
 
+.. _website_themes/setup/databases/fields/classic :
+
 Classic fields
 **************
 
@@ -53,6 +65,8 @@ Classic fields
 - Char
 - Selection
 - …
+
+.. _website_themes/setup/databases/fields/relational :
 
 Relational fields
 *****************
@@ -71,6 +85,8 @@ on this linked record.
   another model. For example, you can put several tags on one product, and several products can use
   the same tags (from *many* records, you can select *many*).
 
+.. _website_themes/setup/databases/views :
+
 Views
 ~~~~~
 
@@ -78,11 +94,15 @@ Views define how records should be displayed to end-users. They are specified in
 can be edited independently from the models they represent. They are flexible and allow deep
 customization of the screens they control.
 
+.. _website_themes/setup/databases/views/backend_vs_frontend :
+
 Backend vs. Frontend
 ********************
 
 - **Backend views**: Kanban, List, Form, etc.
 - **Frontend view**: QWeb
+
+.. _website_themes/setup/databases/views/static_vs_dynamic :
 
 Static vs. Dynamic
 ******************
@@ -91,6 +111,8 @@ Static vs. Dynamic
   properties like published, indexed, etc.
 - **Dynamic pages** are dynamically generated, such as the product page. Their URL is dynamic
   and is accessible to all by default (this can be changed by configuring access rights).
+
+.. _website_themes/setup/databases/views/standard_vs_inherited :
 
 Standard vs. Inherited
 **********************
@@ -102,6 +124,8 @@ Standard vs. Inherited
   there is a duplicate view, there will be two views with the same name in the database, but the
   duplicated view will not have an ID like for standard view.
 
+.. _website_themes/setup/databases/import :
+
 Import an existing database
 ---------------------------
 
@@ -109,13 +133,19 @@ Import an existing database
    You can directly go to the :doc:`theming` chapter if you do not need to import an existing
    database.
 
+.. _website_themes/setup/databases/import/dump :
+
 Dump
 ~~~~
+
+.. _website_themes/setup/databases/import/saas :
 
 Odoo SaaS
 *********
 
 Go to `<database_url>/saas_worker/dump`.
+
+.. _website_themes/setup/databases/import/sh :
 
 Odoo.sh
 *******
@@ -138,6 +168,8 @@ Odoo.sh
    .. image:: setup/database-backup.png
      :alt: Database backup
 
+.. _website_themes/setup/databases/import/filestore :
+
 Move filestore
 ~~~~~~~~~~~~~~
 
@@ -150,31 +182,44 @@ your computer:
 .. note::
    `/Library` is a hidden folder.
 
+.. _website_themes/setup/databases/import/database_setup :
+
 Database setup
 ~~~~~~~~~~~~~~
 
 Create an empty database.
 
-.. code-block:: xml
+.. code-block:: bash
 
    createdb <database_name>
 
 Import the SQL file in the database that you just created.
 
-.. code-block:: xml
+.. code-block:: bash
 
    psql <database_name> < dump.sql
 
 Reset the admin user password.
 
-.. code-block:: xml
+.. code-block:: bash
 
    psql \c
    <database_name>
    update res_users set login='admin', password='admin' where id=2;
 
+If necessary, disable the two-factor authentication enforcing policy option.
+
+.. code-block:: bash
+
+    psql <database-name>
+    update res_users set top_secret='' where id=2;
+
+.. _website_themes/setup/getting_started :
+
 Getting started
 ===============
+
+.. _website_themes/setup/getting_started/running_odoo :
 
 Running Odoo
 ------------
@@ -191,6 +236,8 @@ method is presented below.
 The :ref:`CLI <reference/cmdline>` offers several functionalities related to Odoo. You can use it to
 :ref:`run the server <reference/cmdline/server>`, scaffold an Odoo theme, populate a database, or
 count the number of lines of code.
+
+.. _website_themes/setup/getting_started/shell_script :
 
 Shell script
 ------------
@@ -233,6 +280,8 @@ A typical way to :ref:`run the server <reference/cmdline/server>` would be to ad
      - Comma-separated list of features. For development purposes only. :ref:`More info
        <reference/cmdline/dev>`
 
+.. _website_themes/setup/getting_started/signin :
+
 Sign in
 -------
 
@@ -246,6 +295,8 @@ Type **admin** for the email and **admin** for the password.
 
 .. tip::
    Hit *CTRL+C* to stop the server. Do it twice if needed.
+
+.. _website_themes/setup/getting_started/developer_mode :
 
 Developer mode
 --------------
