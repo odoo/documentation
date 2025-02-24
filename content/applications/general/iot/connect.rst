@@ -95,7 +95,7 @@ list of :doc:`devices <devices>` connected to the IoT system.
    address`, and :guilabel:`Image version`.
 
 .. note::
-   By default, drivers are automatically :ref:`udpated <iot_updating_iot/handlers>` every time the
+   By default, drivers are automatically :ref:`updated <iot_updating_iot/handlers>` every time the
    IoT system is restarted. To disable automatic updates, uncheck the :guilabel:`Automatic drivers
    update` option.
 
