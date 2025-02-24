@@ -12,7 +12,7 @@ Reordering rules
 .. |MOs| replace:: :abbr:`MOs (Manufacturing Orders)`
 .. |BoM| replace:: :abbr:`BoM (Bill of Materials)`
 .. |BoMs| replace:: :abbr:`BoMs (Bills of Materials)`
-.. |adjust| replace:: :icon:`oi-settings-adjust` :guilabel:`(adjust)` icon
+.. |adjust| replace:: :icon:`oi-settings-adjust` :guilabel:`(adjust settings)` icon
 
 *Reordering rules* are used to keep forecasted stock levels above a certain threshold without
 exceeding a specified upper limit. This is accomplished by specifying a minimum quantity that stock
@@ -30,13 +30,14 @@ created instead. This is the case regardless of the selected replenishment route
 To set up reordering rules for the first time, refer to:
 
 - :ref:`Reordering rules setup <inventory/warehouses_storage/configure-rr>`
-- :ref:`Trigger <inventory/product_management/trigger>`
+- :ref:`Trigger <inventory/warehouses_storage/trigger>`
 - :ref:`Preferred route <inventory/warehouses_storage/route>`
 
 To understand and optimize replenishment using advanced features, see:
 
 - :ref:`Just-in-time logic <inventory/warehouses_storage/just-in-time>`
-- :ref:`Visibility days <inventory/product_management/visibility-days>`
+- :ref:`Visibility days <inventory/warehouses_storage/visibility-days>`
+- :ref:`Horizon days <inventory/warehouses_storage/horizon-days>`
 
 .. _inventory/warehouses_storage/configure-rr:
 
@@ -70,8 +71,7 @@ necessary for Odoo to track the product's stock levels and trigger reordering ru
 Replenishment method
 --------------------
 
-Next, configure the replenishment method (e.g., buy or manufacture) by going to the
-:guilabel:`Inventory` tab and select one or more routes from the :guilabel:`Routes` section.
+Next, configure the replenishment method (e.g. buy or manufacture).
 
 If the product is purchased, :ref:`install <general/install>` the **Purchase** app, and confirm that
 the :guilabel:`Purchase` checkbox is enabled under the product name. In the :guilabel:`Purchase`
@@ -81,8 +81,7 @@ Odoo uses the vendor at the top of the list to generate |RFQs| when reordering r
 In the :guilabel:`Inventory` tab's :guilabel:`Routes` field, tick the :guilabel:`Buy` checkbox.
 
 .. seealso::
-   - :doc:`Buy route <../../../purchase/manage_deals/rfq>`
-   - :doc:`Vendor pricelist <../../../purchase/products/pricelist>`
+   :doc:`Vendor pricelist <../../../purchase/products/pricelist>`
 
 If the product is manufactured, :ref:`install <general/install>` the **Manufacturing** app, and in
 the :guilabel:`Inventory` tab's :guilabel:`Routes` field, tick the :guilabel:`Manufacture` checkbox.
@@ -90,13 +89,13 @@ the :guilabel:`Inventory` tab's :guilabel:`Routes` field, tick the :guilabel:`Ma
 Next, ensure at least one :doc:`bill of materials
 <../../../manufacturing/basic_setup/bill_configuration>` (BoM) is displayed in the :guilabel:`Bill
 of Materials` smart button at the top of the product form. This is necessary because Odoo only
-creates manufacturing orders for products with a |BoM|.
+creates manufacturing orders (MOs) for products with a |BoM|.
 
 If a |BoM| does not already exist for the product, click the :guilabel:`Bill of Materials` smart
 button, then click :guilabel:`New` to configure a new |BoM|.
 
 .. seealso::
-   - :doc:`Manufacture route <../../../manufacturing/basic_setup/bill_configuration>`
+   :doc:`Configure BoM <../../../manufacturing/basic_setup/bill_configuration>`
 
 .. _inventory/warehouses_storage/rr-fields:
 
@@ -131,14 +130,14 @@ rule line item:
    calculated using on-hand quantities and future demand, see the :ref:`Just-in-time logic
    <inventory/warehouses_storage/just-in-time>` section.
 
-For advanced usage of reordering rules, learn about the following reordering rule fields:
+For advanced usage learn about the following reordering rule fields:
 
-- :ref:`Trigger <inventory/product_management/trigger>`
+- :ref:`Trigger <inventory/warehouses_storage/trigger>`
 - :ref:`Preferred route <inventory/warehouses_storage/route>`
 - :ref:`Vendor <inventory/warehouses_storage/set-vendor>`
 - :ref:`Bill of materials <inventory/warehouses_storage/set-bom-field>`
 - :ref:`Procurement group <inventory/warehouses_storage/procurement-grp>`
-- :ref:`Visibility days <inventory/product_management/visibility-days>`
+- :ref:`Visibility days <inventory/warehouses_storage/visibility-days>`
 
 .. note::
    The fields above are not available by default, and must be enabled by selecting the |adjust| in
@@ -182,31 +181,28 @@ replenished products should be stored. By default, this location is set to :guil
 In the :guilabel:`Route` field, select the route the rule should use to replenish the item. For
 example, if the product should be purchased from a vendor, select the :guilabel:`Buy` route.
 
-In the :guilabel:`Min Quantity` field and :guilabel:`Max Quantity` field, leave the values set to
-`0.00`. In the :guilabel:`To Order` field, enter a value of `1.00`.
+In the :guilabel:`Min` field and :guilabel:`Max` field, leave the values set to `0.00`. In the
+:guilabel:`To Order` field, enter a value of `1.00`.
 
 .. image:: reordering_rules/001-rule.png
    :alt: A 0/0/1 reordering rule.
 
 With the reordering rule configured using these values, each time an |SO| causes the forecasted
-quantity of the product to fall below the :guilabel:`Min Quantity` of `0.00`, the selected
-:guilabel:`Route` is used to replenish the product in one-unit increments, back up to the
-:guilabel:`Max Quantity` of `0.00`.
+quantity of the product to fall below the :guilabel:`Min` of `0.00`, the selected :guilabel:`Route`
+is used to replenish the product in one-unit increments, back up to the :guilabel:`Max` of `0.00`.
 
 .. example::
-   A picture frame is configured with a 0/0/1 reordering rule that uses the *Buy* route. Zero units
-   of the picture frame are kept on-hand at any given time.
+   An item is configured with a 0/0/1 reordering rule that uses the *Buy* route. Zero units are kept
+   on-hand at any given time.
 
-   An |SO| is confirmed for one unit of the picture frame, which causes the forecasted quantity to
-   drop to `-1.00`. This triggers the reordering rule, which automatically creates a |PO| for one
-   unit of the picture frame.
+   A |SO| is confirmed for one unit, which causes the forecasted quantity to drop to `-1.00`. This
+   triggers the reordering rule, which automatically creates a |PO| for one unit.
 
-   Once the product is received from the vendor, the forecasted quantity of the picture frame
-   returns to `0.00`. There is now one picture frame on-hand, but it is not reserved for the |SO|
-   which triggered its purchase. It can be used to fulfill that |SO|, or reserved for a different
-   order.
+   Once the product is received from the vendor, the forecasted quantity returns to `0.00`. There is
+   now one unit on-hand, but it is not reserved for the |SO| which triggered its purchase. It can be
+   used to fulfill that |SO|, or reserved for a different order.
 
-.. _inventory/product_management/trigger:
+.. _inventory/warehouses_storage/trigger:
 
 Trigger
 =======
@@ -237,8 +233,7 @@ Auto
 :guilabel:`Auto`, generate purchase or manufacturing orders when either:
 
 #. The scheduler runs, and the *Forecasted* quantity is below the minimum, or
-#. A sales order is confirmed, and lowers the *Forecasted* quantity of the product below the
-   minimum.
+#. A |SO| is confirmed, and lowers the *Forecasted* quantity of the product below the minimum.
 
 If the :guilabel:`Buy` route is selected, then an |RFQ| is generated. To view and manage |RFQs|,
 navigate to :menuselection:`Purchase app --> Orders --> Requests for Quotation`.
@@ -275,13 +270,12 @@ Manual
 *Manual reordering rules*, configured by setting the reordering rule's :guilabel:`Trigger` field to
 :guilabel:`Manual`, list a product on the :doc:`replenishment dashboard <report>` when the
 forecasted quantity falls below a specified minimum. Products on this dashboard are called *needs*,
-because they are needed to fulfill upcoming sales orders, for which the forecasted quantity is not
-enough.
+because they are needed to fulfill upcoming |SOs|, for which the forecasted quantity is not enough.
 
 The replenishment dashboard, accessible by navigating to :menuselection:`Inventory app -->
-Operations --> Replenishment`, considers sales order deadlines, forecasted stock levels, and vendor
-lead times. It displays needs **only** when it is time to reorder items, thanks to the :guilabel:`To
-Reorder` filter.
+Operations --> Replenishment`, considers order deadlines, forecasted stock levels, and lead times.
+It displays needs **only** when it is time to reorder items, thanks to the :guilabel:`To Reorder`
+filter.
 
 When a product appears on the replenishment dashboard, clicking the :guilabel:`Order` button
 generates the purchase or manufacturing order with the specified amounts :guilabel:`To Order`.
@@ -298,6 +292,9 @@ Odoo allows for multiple routes to be selected as replenishment methods under th
 :guilabel:`Inventory` tab on each product form. For instance, it is possible to select both
 :guilabel:`Buy` and :guilabel:`Manufacture`, indicating to Odoo that the product can be bought or
 manufactured.
+
+.. seealso::
+   :ref:`Set route on product form <inventory/warehouses_storage/set-method>`
 
 Odoo also enables users to set a preferred route for a product's reordering rule. This is the
 replenishment method (e.g., buying or manufacturing) that the rule defaults to, if multiple are
@@ -345,13 +342,14 @@ advanced configurations of reordering rules. Consider the following:
   are linked to a particular demand.
 
   .. note::
-     Procurement groups link replenishment methods to demand, enabling smart buttons to appear when
-     using the :doc:`MTO route <mto>`.
+     Procurement groups link replenishment methods to demand, making smart buttons to appear —
+     similar to how smart buttons appear when using the :doc:`MTO route <mto>`.
 
      .. figure:: reordering_rules/po-smartbutton.png
         :alt: Showing smart button to PO.
 
-        Sales order (demand) with a linked purchase order (replenishment method).
+        Sales order (demand) with a smart button linking to the related purchase order
+        (replenishment method).
 
   In the context of reordering rules:
 
@@ -430,9 +428,9 @@ summing the lead times linked to the product's replenishment process. The total 
 added to the current date, determines when Odoo checks for demanded stock.
 
 .. important::
-   The forecasted date is the **earliest possible date** the customer can receive the product if the
-   replenishment process began right **now**. It is calculated by adding all lead times related to
-   the product to the current date.
+   The forecasted date is the **earliest possible date** we can receive the product at the warehouse
+   if the replenishment process began right **now**. It is calculated by adding all lead times
+   related to the product to the current date.
 
 .. example::
    A manual reordering rule is set up with no minimum or maximum quantities.
@@ -490,7 +488,7 @@ the **long-term forecasted quantity**.
 
       Opening the :guilabel:`Forecasted Report` shows the :guilabel:`Forecasted` units is `5.00`.
 
-.. _inventory/product_management/visibility-days:
+.. _inventory/warehouses_storage/visibility-days:
 
 Visibility days
 ===============
@@ -539,9 +537,6 @@ Setting :guilabel:`Visibility Days` to `20.0` allows Odoo to "look ahead" 20 day
 - It groups |SO| 2's order with |SO| 1, reducing shipping costs by consolidating orders.
 - |SO| 3, which is due on Dec 25, is one day late and is not grouped with the other two orders.
 
-.. image:: reordering_rules/visibility-days.png
-   :alt: Visibility days visualization.
-
 Counterexample where visibility days is not triggered
 -----------------------------------------------------
 
@@ -557,3 +552,48 @@ replenishment costs more effectively.
 
 .. image:: reordering_rules/counterexample.png
    :alt: Example where the visibility days does not trigger.
+
+.. _inventory/warehouses_storage/horizon-days:
+
+Horizon days
+============
+
+*Horizon days* determine how many days ahead Odoo checks whether the forecasted quantity will fall
+below the minimum set in a reordering rule. This feature helps ensure timely replenishment by
+detecting potential shortages before they occur.
+
+To set horizon days, go to :menuselection:`Inventory app --> Operations --> Replenishment`, and
+click :icon:`fa-angle-double-right` :icon:`fa-folder` :guilabel:`Manual` in the left sidebar. In the
+menu that appears, set the number of :guilabel:`Horizon` days.
+
+Both horizon days and :ref:`visibility days <inventory/warehouses_storage/visibility-days>` allow
+Odoo to anticipate future demand, but they work differently:
+
+- **Visibility days**: only checks future demand if a replenishment would have been triggered today.
+- **Horizon days**: looks ahead a specified number of days and triggers reordering rules as soon as
+  the forecasted quantity falls below the minimum within that window — even if no replenishment is
+  needed today.
+
+.. example::
+   - Current date: Feb 18
+   - On hand quantity: 10
+   - Reordering rule: Min: 5, Max 10
+   - Vendor lead time: 1 day
+
+   8 units are needed for an |SO| on Feb 23. That means, on Feb 23, there will only be 2 units in
+   stock.
+
+   **Without horizon days**
+
+   - The demand appears on the replenishment report only on Feb 22, one day before the delivery
+     date.
+   - Forecasted date: Feb 19 (current date + vendor lead time)
+
+   **With horizon days (4 or more days)**
+
+   - Odoo considers demand up to Feb 23 as relevant today (Feb 18)
+   - The need for 8 more units appears immediately in the replenishment report
+   - Forecasted date: Feb 23 (current date + vendor lead time + horizon days)
+
+   .. image:: reordering_rules/horizon-days.png
+      :alt: Show forecasted date brought forward.
