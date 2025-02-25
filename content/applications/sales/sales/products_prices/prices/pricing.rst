@@ -1,6 +1,6 @@
-===================================
-Pricelists, discounts, and formulas
-===================================
+==========
+Pricelists
+==========
 
 A *pricelist* is a method of dynamic pricing that applies a list of prices (or price rules) to
 adjust sales prices. This adjustment can apply to specific customers, customer groups, sales orders,
@@ -245,87 +245,6 @@ the drop-down menu in the :guilabel:`Pricelist` field.
    (based on the information from their contact form), that predetermined pricelist can be removed
    from the *Pricelist* field, and the quotation can still be confirmed, and subsequently, turned
    into a sales order.
-
-.. _sales/discounts:
-
-Discounts
-=========
-
-The *Discounts* feature allows the ability to set a discount or increase the price on *individual
-items* in a sales order. This is calculated as a percentage of that product's sales price.
-
-To access discounts, navigate to the *Sales* app setting page (:menuselection:`Sales app -->
-Configuration --> Settings`), and click the :guilabel:`Discounts` checkbox, then click
-:guilabel:`Save`.
-
-.. image:: pricing/discounts-option.png
-   :align: center
-   :alt: Click the checkbox labeled Discounts to activate Discounts.
-
-After the setting has been activated, navigate to the desired quotation by going to
-:menuselection:`Sales app --> Orders --> Quotations` at the top of the page. Once there, click on
-the desired quote from the list.
-
-In the order lines section of the quotation form, a new column heading will appear labeled
-:guilabel:`Disc.%`. This column is used to set discounts on individual line items. Enter the desired
-discount for each product line and the new price will automatically be calculated in the quote
-:guilabel:`Total` at the bottom of the page.
-
-.. tip::
-   A discount can also be added directly to a sales order in the same way. Navigate to
-   :menuselection:`Sales app --> Orders --> Orders`, click on the desired sales order, and add the
-   discount to :guilabel:`Disc.%` as described above.
-
-.. image:: pricing/discount-on-sales-order.png
-   :align: center
-   :alt: The Dis.% heading will now appear in Order Lines.
-
-.. tip::
-   Positive values for :guilabel:`Disc.%` will apply a *discount*, while negative values can be
-   used to *increase* the price.
-
-Discount button
----------------
-
-In Odoo 17, with the :ref:`Discounts setting <sales/discounts>` enabled, a :guilabel:`Discount`
-button appears at the bottom of sales orders.
-
-.. image:: pricing/discount-button-sales-order.png
-   :align: center
-   :alt: The discount button located at the bottom of a sales order form in the Odoo Sales app.
-
-When the :guilabel:`Discount` button on a sales order is clicked, a :guilabel:`Discount` pop-up
-window appears.
-
-On this pop-up window, configure the :guilabel:`Discount` percentage, and select one of the
-following discount options: :guilabel:`On All Order Lines`, :guilabel:`Global Discount`, or
-:guilabel:`Fixed Amount`.
-
-- :guilabel:`On All Order Lines`: When selected, Odoo provides the ability to add the specified
-  discount percentage (configured in the :guilabel:`Discount` field of the pop-up window) on all
-  existing order lines of the sales order.
-- :guilabel:`Global Discount`: When selected, Odoo adds a discount product to the order, which has
-  the cumulative value equivalent to the specified discount percentage (configured in the
-  :guilabel:`Discount` field of the pop-up window). Any product added (or removed) *after* the
-  discount is added does **not** affect the discount value on the order line.
-
-  .. example::
-     In this example, since the total of the order is $600, and there is a 30% global discount, that
-     specific line is added to the sales order with a -180 value (which is 30% of $600).
-
-     .. image:: pricing/global-discount-option-so.png
-        :align: center
-        :alt: The sales order with the applied global discount option in the Odoo Sales application.
-
-- :guilabel:`Fixed Amount`: When selected, the percentage designation in the :guilabel:`Discount`
-  field turns to a monetary value (e.g. dollars), wherein a specific amount must be entered. This
-  configured value is added as a discount line on the sales order.
-
-.. note::
-   It is more beneficial to add a :guilabel:`Fixed Amount` discount after **all** desired products
-   have been added to a sales order. If there are changes made to the sales order *after* the
-   discount is added, make sure to change the value on the :guilabel:`Discount` line, or remove the
-   line and add the discount again.
 
 Conditions
 ----------
