@@ -2,9 +2,9 @@
 Contracts
 =========
 
-Every employee in Odoo is required to have a contract in order to be paid. A contract outlines the
-terms of an employee's position, their compensation, working hours, and any other details about
-their position.
+Every employee in Odoo is required to have a running contract in order to be paid. A contract
+outlines the terms of an employee's position, their compensation, working hours, and any
+other details about their position.
 
 .. important::
    Contract documents (PDFs) are uploaded and organized using the *Documents* application, and are
@@ -14,7 +14,7 @@ their position.
 
 To view the employee contracts, go to the :menuselection:`Payroll app --> Contracts --> Contracts`
 from the top menu. All employee contracts, and their current contract status, are displayed in a
-Kanban view, by default. The Kanban view displays running contracts, contracts that require action,
+list view, by default. The list view displays running contracts, contracts that require action,
 expired contracts, and cancelled contracts.
 
 .. image:: contracts/contracts-overview.png
@@ -29,7 +29,7 @@ expired contracts, and cancelled contracts.
 
 In order for an employee to be paid, an active contract is required. If a new contract is needed,
 click the :guilabel:`Create` button on the :guilabel:`Contracts` dashboard. A contract form appears
-where the information can be entered. Required fields are underlined in bold.
+where the information can be entered.
 
 New contract form
 -----------------
@@ -87,36 +87,6 @@ General information section
    :align: center
    :alt: New contract form to be filled in when creating a new contract, with required fields
          outlined in red.
-
-- :guilabel:`Contact Reference`: type in the name or title for the contract, such as `John Smith
-  Contract`. This field is **required**.
-- :guilabel:`Employee`: name of the employee the contract applies to.
-- :guilabel:`Contract Start Date`: the date the contract starts. Choose a date by clicking on the
-  drop-down menu, navigating to the correct month and year by using the :icon:`fa-chevron-left`
-  :icon:`fa-chevron-right` :guilabel:`(arrow)` icons, then clicking on the desired date. This field
-  is **required**.
-- :guilabel:`Contract End Date`: the date the contract ends. Choose a date by clicking on the
-  drop-down menu, navigating to the correct month and year by using the :icon:`fa-chevron-left`
-  :icon:`fa-chevron-right` :guilabel:`(arrow)` icons, then clicking on the desired date. This field
-  is **required**.
-- :guilabel:`Salary Structure Type`: select one of the salary structure types from the drop-down
-  menu. The default salary structure types are :guilabel:`Employee` or :guilabel:`Worker`. A new
-  salary structure type can be created by typing the name in the field. This field is **required**.
-- :guilabel:`Working Schedule`: select one of the working schedules from the drop-down menu. This
-  field is **required**.
-- :guilabel:`Department`: the department the contract applies to.
-- :guilabel:`Job Position`: the specific job position the contract applies to.
-- :guilabel:`Wage on Payroll`: the amount to be paid to the employee each month.
-- :guilabel:`Contract Type`: choose from :guilabel:`CDI`, :guilabel:`CDD`, or :guilabel:`PFI` from
-  the drop-down menu.
-
-  - :guilabel:`CDI` is an open-ended contract with only a start date, but no end date.
-  - :guilabel:`CDD` is a contract with both a start date and an end date.
-  - :guilabel:`PFI` is a Belgian-specific contract used when hiring employees that need training,
-    and covers the training period specifically.
-
-- :guilabel:`HR Responsible`: if there is a specific person in HR that is responsible for the
-  contract, select the person from the drop-down menu. This field is required.
 
 .. tip::
    The :guilabel:`Working Schedule` drop-down menu displays all the working times for the selected
@@ -213,17 +183,6 @@ Notes section
    :align: center
    :alt: Contract details in optional tabs for a new contract.
 
-- :guilabel:`Analytic Account`: this field allows a link between the contract and a specific
-  analytic account for accounting purposes.
-- :guilabel:`Contract Template`: select a pre-existing contract template from the drop-down menu.
-  Contract templates are typically created through the *Recruitment* application.
-- :guilabel:`New Contract Document Template`: select a contract from the drop-down menu to be
-  modified for this new employee contract.
-- :guilabel:`Contract Update Document Template`: select a contract from the drop-down menu, if the
-  employee has an existing contract that requires updating.
-- :guilabel:`Notes`: the notes field is a text field where any notes for the employee contract can
-  be entered for future reference.
-
 Modify a contract template
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -234,7 +193,7 @@ the corresponding contract template, and proceed to make any desired changes.
 Click the :guilabel:`Upload your file` button next to the corresponding document, navigate to the
 file, then click :guilabel:`Open` to select the document and add it to the tab.
 
-Modifying contract templates
+Modifying document templates
 ============================
 
 Contracts templates can be modified at any point when changes are needed.
@@ -264,24 +223,6 @@ Once the edits are complete, click the :guilabel:`Save` button. All the informat
 contract template populates the fields in the :guilabel:`Salary Information` tab. Any additional
 tabs, such as :guilabel:`Personal Documents`, appears if applicable.
 
-Salary information
-------------------
-
-.. image:: contracts/salary-info.png
-   :align: center
-   :alt: Optional tabs for a new contract.
-
-This section is where the specific salary details are defined. This section is country-specific, so
-these fields vary, depending on where the company is located.
-
-Enter the amount in the various fields, or tick a checkbox to apply a benefit. Some options that can
-be entered here include :guilabel:`Group Insurance Sacrifice Rate` and :guilabel:`Canteen Cost`, for
-example.
-
-Some fields may be automatically filled in as other fields are entered. For example, the
-:guilabel:`Yearly Cost (Real)` and :guilabel:`Monthly Cost (Real)` updates once the :guilabel:`Wage`
-is populated.
-
 Personal documents
 ------------------
 
@@ -292,22 +233,19 @@ are linked to the employee on their employee record. Documents cannot be added t
 The available documents in this tab can be downloaded. Click the :icon:`fa-download`
 :guilabel:`(download)` icon next to the document to download it.
 
-Save and send the contract
---------------------------
+Send the contract
+-----------------
 
-Once a contract has been created and/or modified, save the contract by clicking the :guilabel:`Save`
-button. Next, the contract must be sent to the employee to be signed.
-
-Click on one of the following buttons to send the contract to the employee:
+Click on the following button to send the contract to the employee:
 
 .. image:: contracts/send-contract.png
    :align: center
    :alt: Send the contract to the employee via one of the buttons.
 
-- :guilabel:`Generate Simulation Link`: this option is **only** for Belgian companies. Clicking this
-  opens a pop-up window that contains the basic information from the contract, as well as a link for
-  the contract when using the salary configurator. Click :guilabel:`Send` to send an email to the
-  employee, so they can sign the contract.
+- :guilabel:`Generate Offer`: Clicking this opens a pop-up window that contains the basic
+  information from the contract, as well as a link for the contract when using the salary
+  configurator. Click :guilabel:`Send` to send an email to the employee, so they can sign
+  the contract.
 
 At the bottom of the pop-up form is a :guilabel:`Link Expiration Date`. This is the timeframe that
 the contract offer is valid for. By default, this field is pre-populated with `30 days`, but it can
@@ -347,14 +285,6 @@ Fill out the following fields on the form:
 - :guilabel:`Description`: enter a short description for the salary attachment, such as `Child
   Support` or `529 Contribution`.
 - :guilabel:`Type`: using the drop-down menu, select the type of salary attachment being created.
-  Choose from:
-
-  - :guilabel:`Attachment of Salary`: any payments taken out towards something that is *not* child
-    support. Typically any garnishments, such as lawsuit payments, payments toward taxes owed, etc.
-  - :guilabel:`Assignment of Salary`: any deduction that is not required, but voluntary, such as a
-    pre-tax allocation to a college savings account.
-  - :guilabel:`Child Support`: any payments taken out specifically for child support.
-
 - :guilabel:`Start Date`: the date the salary attachment starts. Choose a date by clicking on the
   drop-down menu, navigating to the correct month and year by using the :icon:`fa-chevron-left`
   :icon:`fa-chevron-right` :guilabel:`(arrow)` icons, then clicking on the desired date. This field
