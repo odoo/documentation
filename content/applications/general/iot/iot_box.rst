@@ -10,6 +10,9 @@ To start using an IoT box:
 #. :ref:`Connect the IoT box to the network <iot/iot_box/network>`.
 #. :doc:`Connect the IoT box to your Odoo database <connect>`.
 
+.. seealso::
+   `Video: How to Set Up and Use the Odoo IoT Box: A Beginner's Guide <https://www.youtube.com/watch?v=w2_Dcm3r_7o&ab_channel=Odoo>`_
+
 .. note::
    Devices can also be connected after the IoT box is added to the network and/or connected to the
    database; however, a reboot of the IoT box might be required.
