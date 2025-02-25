@@ -9,6 +9,8 @@ In this chapter, you will learn:
 - To export and import an Odoo database in your local environment.
 - To have an Odoo instance up and running.
 
+.. _howto/website_themes/setup_install :
+
 Install
 =======
 
@@ -17,8 +19,12 @@ intended use case. This documentation assumes you use the :doc:`source install
 </administration/on_premise/source>` (running Odoo from the source code), which is best suited
 for Odoo designers and developers.
 
+.. _howto/website_themes/setup_databases :
+
 Databases
 =========
+
+.. _howto/website_themes/setup_databases_structure :
 
 Structure
 ---------
@@ -26,6 +32,8 @@ Structure
 Every Odoo application works similarly; they are built with the same logic. A model contains fields
 and relational fields that link to other models. Each model has views representing all its fields,
 with backend and frontend views.
+
+.. _howto/website_themes/setup_databases_structure_models :
 
 Models
 ~~~~~~
@@ -37,6 +45,8 @@ backend by enabling the :ref:`developer mode <developer-mode>` and then going to
 
 .. image:: setup/models-page.png
    :alt: Models page
+
+.. _howto/website_themes/setup_databases_structure_fields :
 
 Fields
 ~~~~~~
@@ -71,6 +81,8 @@ on this linked record.
   another model. For example, you can put several tags on one product, and several products can use
   the same tags (from *many* records, you can select *many*).
 
+.. _howto/website_themes/setup_databases_structure_views :
+
 Views
 ~~~~~
 
@@ -101,6 +113,8 @@ Standard vs. Inherited
 - **Inherited views** are duplicated views. Modifications always take place in an inherited view. If
   there is a duplicate view, there will be two views with the same name in the database, but the
   duplicated view will not have an ID like for standard view.
+
+.. _howto/website_themes/setup_databases_import :
 
 Import an existing database
 ---------------------------
@@ -180,8 +194,12 @@ If necessary, disable the two-factor authentication enforcing policy option.
     psql <database-name>
     update res_users set top_secret='' where id=2;
 
+.. _howto/website_themes/setup_getting_started :
+
 Getting started
 ===============
+
+.. _howto/website_themes/setup_getting_started_running :
 
 Running Odoo
 ------------
@@ -198,6 +216,8 @@ method is presented below.
 The :ref:`CLI <reference/cmdline>` offers several functionalities related to Odoo. You can use it to
 :ref:`run the server <reference/cmdline/server>`, scaffold an Odoo theme, populate a database, or
 count the number of lines of code.
+
+.. _howto/website_themes/setup_getting_started_shell :
 
 Shell script
 ------------
@@ -240,6 +260,8 @@ A typical way to :ref:`run the server <reference/cmdline/server>` would be to ad
      - Comma-separated list of features. For development purposes only. :ref:`More info
        <reference/cmdline/dev>`
 
+.. _howto/website_themes/setup_getting_started_signin :
+
 Sign in
 -------
 
@@ -253,6 +275,8 @@ Type **admin** for the email and **admin** for the password.
 
 .. tip::
    Hit *CTRL+C* to stop the server. Do it twice if needed.
+
+.. _howto/website_themes/setup_getting_started_developer_mode :
 
 Developer mode
 --------------
