@@ -4,6 +4,8 @@ Pages
 
 In this chapter, you will learn how to declare static pages.
 
+.. _howto/website_themes/pages_default :
+
 Default pages
 =============
 
@@ -11,39 +13,57 @@ In Odoo, websites come with a few default static pages (Home, Contact us, 404, .
 the following way.
 
 .. code-block:: xml
+   :caption: `/website/data/website_data.xml`
 
-   <template id="website.homepage" name="Homepage">
-       <t t-call="website.layout">
-
-           <!-- Variables -->
-           <t t-set="additional_title" t-value="'Home'" />
-
-           <div id="wrap" class="oe_structure oe_empty">
-
-               <!-- Content -->
-
-           </div>
-
-       </t>
+   <template id="website.homepage" name="Home">
+      <t t-call="website.layout">
+         <t t-set="pageName" t-value="'homepage'"/>
+         <div id="wrap" class="oe_structure oe_empty" />
+      </t>
    </template>
+
+Each default page is a template with its own content saved into a record. This is the reason why,
+:ref:`custom pages are created within a record <howto/website_themes/pages_theme>`.
+
+The `<t -call='website.layout'>` has some variabls that can be set:
 
 Define the meta title.
 
 .. code-block:: xml
 
-   <t t-set="additional_title" t-value="'...'"/>
+   <t t-set="additional_title">My Page Title</t>
+
+.. tip::
+   The `t-set` here does not pass the value into a `t-value` or a `t-valuef` attribute.
+   This is for translation purpose. The content of a `t-value` or a `t-valuef` is not explicitly
+   exported for translation. Beside that, as it's written in XML, a string located between an opening
+   and a closing tag is considered translatable by default.
+
+   .. example::
+      | **Good example:**
+
+      .. code-block:: xml
+
+         <t t-set="additional_title">My title</t>
+
+      | **Bad example:**
+
+      .. code-block:: xml
+
+         <t t-set="additional_title" t-valuef="My title"/>
 
 Define the meta description.
 
 .. code-block:: xml
 
-   <t t-set="meta_description" t-value="'...'"/>
+   <t t-set="meta_description">This is the description of the page that will appear on Search
+   Engines.</t>
 
 Add a CSS class to the page.
 
 .. code-block:: xml
 
-   <t t-set="pageName" t-value="'...'"/>
+   <t t-set="pageName" t-valuef="..."/>
 
 Hide the header.
 
@@ -80,20 +100,18 @@ Alternatively, replace the default content of these pages using XPath.
 
    <template id="404" inherit_id="http_routing.404">
        <xpath expr="//*[@id='wrap']" position="replace">
-
            <t t-set="additional_title" t-value="'404 - Not found'"/>
 
            <div id="wrap" class="oe_structure">
                <!-- Content -->
            </div>
-
        </xpath>
    </template>
 
 .. seealso::
-   - `Odoo eLearning: Search Engine Optimization (SEO)
-     <https://www.odoo.com/slides/slide/search-engine-optimization-seo-648>`_
    - :doc:`Odoo Documentation on SEO <../../../applications/websites/website/pages/seo>`
+
+.. _howto/website_themes/pages_theme :
 
 Theme pages
 ===========
@@ -106,28 +124,33 @@ page object.
 .. code-block:: xml
    :caption: ``/website_airproof/data/pages/about_us.xml``
 
-   <record id="page_about_us" model="website.page">
-       <field name="name">About us</field>
-       <field name="is_published" eval="True"/>
-       <field name="key">website_airproof.page_about_us</field>
-       <field name="url">/about-us</field>
-       <field name="type">qweb</field>
-       <field name="arch" type="xml">
-           <t t-name="website_airproof.page_about_us">
+   <odoo>
+      <data noupdate="1">
+         <record id="page_about_us" model="website.page">
+               <field name="name">About us</field>
+               <field name="is_published" eval="True"/>
+               <field name="key">website_airproof.page_about_us</field>
+               <field name="url">/about-us</field>
+               <field name="website_id" eval="1" />
+               <field name="type">qweb</field>
+               <field name="arch" type="xml">
+                  <t t-name="website_airproof.page_about_us">
+                     <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure">
+                           <!-- Content -->
+                        </div>
+                     </t>
+                  </t>
+               </field>
+         </record>
+      </data>
+   </odoo>
 
-               <t t-call="website.layout">
-                   <div id="wrap" class="oe_structure">
+.. admonition:: Multiwebsite and `website_id`
 
-                       <!-- Content -->
-
-                   </div>
-               </t>
-
-           </t>
-       </field>
-   </record>
-
-.. todo:: Missing description in table ...
+   In a module context, the record created above is available, by default, on every website
+   available on the database. It's preferable to specify the `website_id` of the website where the
+   page will be findable.
 
 .. list-table::
    :header-rows: 1
@@ -137,21 +160,59 @@ page object.
    * - Field
      - Description
    * - name
-     - Page name.
+     - Page name (human-readable).
    * - is_published
      - Define if the page is published (visible to visitors).
    * - key
      - View key (must be unique)
    * - url
-     - URL where the page is reachable.
+     - Relative path where the page is reachable.
    * - type
      - View type
    * - arch
-     - View architecture
+     - View architecture (the markup of your page)
 
 With `<t t-call="website.layout">` you use the Odoo default page layout with your code.
 
-.. _header_overlay:
+.. _howto/website_themes/pages_theme_noupdate :
+
+`noupdate` attribute
+--------------------
+
+This attribute prevents data overwriting.
+
+.. code-block:: xml
+
+   <data noupdate="1">
+      <!-- Your record -->
+   </data>
+
+**Use case**
+
+There are several static pages created in the module. This one has been installed on the database
+and the end-user has updated some of those pages. Some bug fixes must be applied on the
+static pages while avoiding any loss of changes made by the end-user.
+
+**Problem**
+
+In case of a module update on the database, every record declared into the module will overwrite
+those existing in the database even if the end-user has changed some of these records.
+
+**Solution**
+
+By wrapping the record (or all records declared in the file) into a `<data noupdate="1"></data>`
+tag, the record declared is created at
+the first module installation but not updated after a module update.
+
+.. spoiler:: What happens if the record has been manually deleted (e.g.: a menu item) ?
+
+   The system detects that this record doesn't exist and will re-create it.
+
+.. spoiler:: Is this method only valid on static page records?
+
+   Of course not. It's technically usable for every type of records.
+
+.. _howto/website_themes/pages_theme_header_overlay :
 
 Header overlay
 --------------
@@ -165,145 +226,10 @@ Make the header background transparent and stand on top of the page content.
 .. image:: pages/header-overlay.png
    :alt: Header overlay
 
-Media
-=====
+.. note::
+   To create the content of a static page, use the Odoo way of doing things in order to remain
+   editable by the Website Builder. Please note that Odoo takes advantage of Bootstrap framework (5.1.3).
 
-Images
-------
-
-You can record images in the database and use them later in your design/code. They will also be
-available for the end user through the *media dialog*.
-
-.. image:: pages/media-window.png
-   :alt: Media window
-
-The Website Builder supports the following image file formats: JPG, GIF, PNG, and SVG.
-
-**Declaration**
-
-.. code-block:: xml
-   :caption: ``/website_airproof/data/images.xml``
-
-   <record id="img_about_01" model="ir.attachment">
-       <field name="name">About Image 01</field>
-       <field name="datas" type="base64" file="website_airproof/static/src/img/content/img_about_01.jpg"/>
-       <field name="res_model">ir.ui.view</field>
-       <field name="public" eval="True"/>
-   </record>
-
-.. todo:: Missing description in table ...
-
-.. list-table::
-   :header-rows: 1
-   :stub-columns: 1
-   :widths: 20 80
-
-   * - Field
-     - Description
-   * - name
-     - Image name
-   * - datas
-     - Path to the image file
-   * - res_model
-     - Name of the wizard model
-
-Use it as a background image.
-
-.. code-block:: xml
-
-   <section style="background-image: url('/web/image/website_airproof.img_about_01');">
-
-Use it as a regular image.
-
-.. code-block:: xml
-
-   <img src="/web/image/website_airproof.img_about_01" alt=""/>
-
-Use as a regular image with a color filter.
-
-.. code-block:: xml
-
-   <img src="/web/image/website.s_media_list_default_image_1"
-       class="img img-fluid mx-auto" alt=""
-       data-gl-filter="custom"
-       data-filter-options="{'filterColor': 'rgba(0, 0, 0, 0.5)'}"/>
-
-.. tip::
-   The image size greatly influences the user experience, search engine optimization, and overall
-   website performance. So, be sure to size your images correctly.
-
-Videos
-------
-
-Add videos as background.
-
-.. code-block:: xml
-
-   <section class="o_background_video" data-bg-video-src="...">
-       <!-- Content -->
-   </section>
-
-.. list-table::
-   :header-rows: 1
-   :stub-columns: 1
-   :widths: 20 80
-
-   * - Attribute
-     - Description
-   * - data-bg-video-src
-     - Video URL.
-
-Add videos as content.
-
-.. code-block:: xml
-
-   <div class="media_iframe_video" data-oe-expression="...">
-       <div class="css_editable_mode_display">&nbsp;</div>
-       <div class="media_iframe_video_size" contenteditable="false">&nbsp;</div>
-       <iframe src="..."
-           frameborder="0"
-           contenteditable="false"
-           allowfullscreen="allowfullscreen"/>
-   </div>
-
-.. list-table::
-   :header-rows: 1
-   :stub-columns: 1
-   :widths: 20 80
-
-   * - Attribute
-     - Description
-   * - data-oe-expression
-     - Video URL.
-   * - src
-     - Video URL.
-
-Icons
------
-
-By default, the Font Awesome icons library is included in the Website Builder. You can place icons
-anywhere using the CSS Prefix `fa` and the icon's name. Font Awesome is designed to be used with
-inline elements. You can use `<i>` tag for brevity, but using a `<span>` is more semantically
-correct.
-
-.. code-block:: xml
-
-   <span class="fa fa-picture-o"/>
-
-.. seealso::
-   `Font Awesome v4 icons <https://fontawesome.com/v4/icons/>`_
-
-Enable the Website Builder style options.
-
-.. code-block:: xml
-
-   <span class="fa fa-2x fa-picture-o rounded-circle"/>
-
-Increase the icon size (fa-2x, fa-3x, fa-4x, or fa-5x classes).
-
-.. code-block:: xml
-
-   <span class="fa fa-2x fa-picture-o"/>
-
-.. image:: pages/icon-options.png
-   :alt: Icon options
+   Find the available classes and components:
+   - `Bootstrap cheat sheet <https://getbootstrap.com/docs/5.1/examples/cheatsheet/>`_
+   - `Bootstrap documentation <https://getbootstrap.com/docs/5.1/getting-started/introduction/>`_
