@@ -736,7 +736,7 @@ database option.
    Output the neutralization SQL instead of applying it
 
 .. seealso::
-   :doc:`Neutralized Database <../../administration/neutralized_database>`
+   :doc:`../../administration/neutralized_database`
 
 Scaffolding
 ===========
