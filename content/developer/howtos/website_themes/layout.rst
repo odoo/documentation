@@ -835,8 +835,11 @@ Hide a column on mobile:
    * - d-lg-block
      - Show the element from the "large" breakpoint (on desktop).
 
-.. warning::
-   `o_snippet_mobile_invisible` / `o_snippet_desktop_invisible` classes have to be specified to keep the visibility conditions option functional. Even if an element is hidden on desktop, the Website Builder displays a list of these elements allowing the end-user to force show the element and edit it without switching between mobile and desktop mode.
+.. important::
+   `o_snippet_mobile_invisible` / `o_snippet_desktop_invisible` classes have to be specified to keep
+    the visibility conditions option functional. Even if an element is hidden on desktop, the
+    Website Builder displays a list of these elements allowing the end-user to force show the
+    element and edit it without switching between mobile and desktop mode.
 
    .. image:: layout/screenshot-visibility.png
       :alt: Force show a hidden element on the current device.
