@@ -9,6 +9,9 @@ When the deduction is voluntary, they are typically considered *deductions*. Whe
 court-ordered, or involuntary, it is sometimes referred to as a *wage garnishment*. In Odoo, these
 are all universally called, *salary attachments*.
 
+Note that salary attachments could also be used to give recurring amount of money to employees.
+Like bonus divided in multiple parts.
+
 .. _payroll/salary-attachment/types:
 
 Salary attachment types
@@ -38,8 +41,8 @@ Create new salary attachment types
    affect various salary rules, and can prevent the creation of payslips.
 
    A new salary attachment type *can* be created, but this should only be done when absolutely
-   necessary. All salary attachments can be associated with one of the three default salary
-   attachment types.
+   necessary. A salary attachment type needs to be linked to a salary rule in order to be considered
+   in the salary computation.
 
 To make a new type of salary attachment, click the :guilabel:`New` button, and a blank
 :guilabel:`Salary Attachment Types` form loads. Enter the :guilabel:`Name` for the new salary
@@ -105,7 +108,7 @@ default :guilabel:`Salary Attachment` dashboard in its entirety.
 Manage salary attachments
 =========================
 
-Salary attachments can have one of three statuses: *Running*, *Completed*, or *Canceled*. To view
+Salary attachments can have one of three statuses: *Running*, *Completed*, or *Cancelled*. To view
 the current status of all salary attachments, navigate to :menuselection:`Payroll app --> Contracts
 --> Salary Attachments`.
 
@@ -131,7 +134,7 @@ the upper-left corner, and the status changes to :guilabel:`Completed`.
 
 .. example::
    The following is an example of when a payroll manager may need to manually change a salary
-   attachment from :guilabel:`Active` to :guilabel:`Cancelled`.
+   attachment from :guilabel:`Active` to :guilabel:`Completed`.
 
    Rose Smith has a salary attachment for a lawsuit settlement, where she is required to pay
    $3,000.00. A salary attachment is created that takes $250.00 a month out of Rose's paycheck, to
