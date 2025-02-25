@@ -21,6 +21,7 @@ as content in the page.
    Documentation on :ref:`<default pages>` and :ref:`<theme pages>`.
 
 .. spoiler:: Solutions
+
    .. code-block:: python
          :caption: ``/website_airproof/__manifest__.py``
 
@@ -65,13 +66,13 @@ as content in the page.
 Add a media
 ===========
 
-If you want the client to be able to reuse certain pictures that you are going to add on the website
-, they must be added to the image library.
+If you want the client to be able to reuse certain pictures that you are going to add on the
+website, they must be added to the image library.
 
-To do the test, declare the drone image to add it in the library. You will find the picture
-`here <>`. 
-Go to the :guilabel:`website builder`, double click on the :guilabel:`logo`, you will see the drone
-image in the library.
+| To do the test, declare the drone image to add it in the library. You will find the picture
+  `here <{GITHUB_PATH}>`_. 
+| Go to the :guilabel:`website builder`, double click on the :guilabel:`logo`, you will see the
+  drone image in the library.
 
 .. seealso::
    Documentation on :ref:`<images>`.
@@ -82,6 +83,7 @@ Add building blocks
 ===================
 
 Now, let's get into the real work. Start adding content to the pages.
+
 In an Odoo website, we create the content of a page using building blocks. These can be compared to
 snippets editable by the user using the Website Builder. The standard main container of any snippet
 is a section.
@@ -95,14 +97,18 @@ Based on the Airproof design, add the following elements to the homepage :
 
 - Create another section containing the title and icons.
 
-You will find medias `here <>`. 
+You will find medias `here <{GITHUB_PATH}>`. 
+
+.. image:: 02_build_website/building-blocks.png
+   :alt: Airproof building blocks.
+   :scale: 75%
 
 .. tip::
    To determine the code needed to create your building blocks :
 
-   - Create a test page via the website builder.
-     Drag & drop the building block that interests you and give it the right design.
-     Use the code generated via :guilabel:`Editor HTML/SCSS`.
+   - | Create a test page via the website builder.
+     | Drag & drop the building block that interests you and give it the right design.
+     | Use the code generated via :guilabel:`Editor HTML/SCSS`.
    - You can also find the original building block code in Odoo :
      :file:`odoo/addons/website/views/snippets/**.xml`.
 
@@ -110,7 +116,8 @@ You will find medias `here <>`.
    Documentation on :ref:`<building blocks layout>`.
 
 .. spoiler:: Solutions
-   Find the solution in our Airproof example on :file:`home.xml`.
+
+   Find the solution in our Airproof example on `home.xml <{GITHUB_PATH}>`_.
 
 .. _website/build_website/navigation:
 
@@ -127,10 +134,13 @@ The client has requested the following changes:
   and “Tutorials”.
 - Add a mega-menu “Waterproof drones” to display the different products.
 
+.. image:: 02_build_website/mega-menu.png
+   :alt: Aiproof mega-menu.
+
 .. tip::
    - Make sure the `Blog app` is installed and create the two different blogs in the backend.
-   - Create the different products via the backend.
-     You will find some product pictures `here <>`. 
+   - | Create the different products via the backend.
+     | You will find some product pictures `here <{GITHUB_PATH}>`_. 
 
 .. seealso::
    - You can find the original mega-menu templates code in Odoo :
@@ -138,4 +148,5 @@ The client has requested the following changes:
    - Documentation on :ref:`<navigation>`.
 
 .. spoiler:: Solutions
-   Find the solution in our Airproof example on :file:`menu.xml`.
+
+   Find the solution in our Airproof example on `menu.xml <{GITHUB_PATH}>`_.
