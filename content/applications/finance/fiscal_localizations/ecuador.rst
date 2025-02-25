@@ -64,7 +64,7 @@ localization:
        :doc:`Electronics Documents
        <../accounting/customer_invoices/electronic_invoicing>`, based on the Technical
        documentation published by the SRI. The authorized documents are: Invoices, Credit Notes,
-       Debit Notes, Withholdings and Purchase liquidations.
+        Notes, Withholdings and Purchase liquidations.
    * - :guilabel:`Ecuadorian Accounting Reports`
      - `l10n_ec_reports`
      - Includes all the technical and functional requirements to generate forms 103 and 104.
@@ -144,7 +144,7 @@ Configure the next information:
 .. note::
    When configuring the withholdings in the configuration menu, these suggested withholdings are
    only for domestic suppliers when no withholdings are setup on their *Taxpayer Type*. Moreover,
-   the Credit Card withholding set up is always used when a Credit or Debit Card SRI Payment Metho
+   the Credit Card withholding set up is always used when a Credit or  Card SRI Payment Metho
    is used.
 
 VAT withholding
@@ -172,7 +172,7 @@ To configure your printer points, go to :menuselection:`Accounting --> Configura
 Journals`.
 
 Printer points need to be configured for each type of electronic document that you need. For
-example: Customer Invoice, Credit Notes, and Debit Notes
+example: Customer Invoice, Credit Notes, and  Notes
 
 For each printer point, you need to configure the following information:
 
@@ -189,7 +189,7 @@ For each printer point, you need to configure the following information:
 - :guilabel:`Short Code`: This is the unique code for the sequence of accounting entries, enter a
   unique 5-digit code, for example: `VT001`
 
-Customer Invoice, Credit Notes and Debit Notes need to use the same journal as the
+Customer Invoice, Credit Notes and  Notes need to use the same journal as the
 :guilabel:`Emission Point`, and the :guilabel:`Entity Point` should be unique per journal.
 
 .. image:: ecuador/printer-point.png
@@ -426,9 +426,10 @@ Customer debit note
 ~~~~~~~~~~~~~~~~~~~
 
 The :guilabel:`Customer debit note` is an electronic document that, when validated, is sent to SRI.
-It is necessary to have a validated (posted) invoice in order to register a debit note. On the
-invoice there is a button named :guilabel:`Debit Note`, click on this button to be directed to the
-:guilabel:`Create debit note` form, then complete the following information:
+It is necessary to have a validated (posted) invoice in order to register a debit note. 
+On the Gear icon you will find the guilabel:`Debit Note`:  option, click on it to be directed to the Create debit note form, 
+then complete the following information:
+
 
 - :guilabel:`Reason`: type the reason for the debit note.
 - :guilabel:`Debit note date`: select the :guilabel:`specific` options.
@@ -439,7 +440,11 @@ invoice there is a button named :guilabel:`Debit Note`, click on this button to 
 
 Once reviewed you can click on the :guilabel:`Create Debit Note` button.
 
-.. image:: ecuador/add-customer-debit-note.png
+.. image:: l10n-ec-debit-note-gear.png
+   :align: center
+   :alt: Add Customer Debit Note for Ecuador.
+
+.. image:: l10n-ec-debit-note.png
    :align: center
    :alt: Add Customer Debit Note for Ecuador.
 
@@ -451,9 +456,11 @@ the following information:
 - :guilabel:`Document Type`: this is the document type `(05) Debit Note`.
 - :guilabel:`Products`: It must specify the product with the correct taxes.
 
-.. image:: ecuador/customer-debit-note.png
+.. image:: l10n-ec-debit-note-2.0.png
    :align: center
    :alt: Customer Debit Note for Ecuador.
+
+
 
 Customer withholding
 ~~~~~~~~~~~~~~~~~~~~
