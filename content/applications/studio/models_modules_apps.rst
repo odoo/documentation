@@ -39,8 +39,8 @@ Contact details
 ---------------
 
 Selecting :guilabel:`Contact details` adds to the :ref:`Form view <studio/views/general/form>` a
-:ref:`Many2One field <studio/fields/relational-fields/many2one>` linked to the *Contact* model and
-two of its :ref:`Related Fields <studio/fields/relational-fields/related-field>`: :guilabel:`Phone`
+:ref:`Many2One field <studio/fields/relational-fields-many2one>` linked to the *Contact* model and
+two of its :ref:`Related Fields <studio/fields/relational-fields-related-field>`: :guilabel:`Phone`
 and :guilabel:`Email`. The :guilabel:`Contact` field is also added to the :ref:`List view
 <studio/views/multiple-records/list>`, and the :ref:`Map view <studio/views/multiple-records/map>`
 is activated.
@@ -57,7 +57,7 @@ User assignment
 ---------------
 
 Selecting :guilabel:`User assignment` adds to the :ref:`Form view <studio/views/general/form>` a
-:ref:`Many2One field <studio/fields/relational-fields/many2one>` linked to the *Contact* model, with
+:ref:`Many2One field <studio/fields/relational-fields-many2one>` linked to the *Contact* model, with
 the following :guilabel:`Domain`: `Share User is not set` to only allow the selection of *Internal
 Users*. In addition, the :guilabel:`many2one_avatar_user` widget is used to display the user's
 avatar. The :guilabel:`Responsible` field is also added to the :ref:`List view
@@ -75,7 +75,7 @@ Date & Calendar
 ---------------
 
 Selecting :guilabel:`Date & Calendar` adds to the :ref:`Form view <studio/views/general/form>` a
-:ref:`Date field <studio/fields/simple-fields/date>` and activates the :ref:`Calendar view
+:ref:`Date field <studio/fields/simple-fields-date>` and activates the :ref:`Calendar view
 <studio/views/timeline/calendar>`.
 
 .. _studio/models-modules-apps/suggested-features/date-range-gantt:
@@ -84,7 +84,7 @@ Date range & Gantt
 ------------------
 
 Selecting :guilabel:`Date range & Gantt` adds to the :ref:`Form view <studio/views/general/form>`
-two :ref:`Date fields <studio/fields/simple-fields/date>` next to each other: one to set a start
+two :ref:`Date fields <studio/fields/simple-fields-date>` next to each other: one to set a start
 date, the other to set an end date, using the :guilabel:`daterange` widget, and activates the
 :ref:`Gantt view <studio/views/timeline/gantt>`.
 
@@ -95,7 +95,7 @@ Pipeline stages
 
 Selecting :guilabel:`Pipeline stages` activates the :ref:`Kanban view
 <studio/views/multiple-records/kanban>`, adds several fields such as :ref:`Priority
-<studio/fields/simple-fields/priority>` and :guilabel:`Kanban State`, and three stages:
+<studio/fields/simple-fields-priority>` and :guilabel:`Kanban State`, and three stages:
 :guilabel:`New`, :guilabel:`In Progress`, and :guilabel:`Done`. The :guilabel:`Pipeline status bar`
 and the :guilabel:`Kanban State` field are added to the :ref:`Form view
 <studio/views/general/form>`. The :guilabel:`Color` field is added to the :ref:`List view
@@ -111,7 +111,7 @@ Tags
 
 Selecting :guilabel:`Tags` adds to the :ref:`studio/views/general/form` and
 :ref:`studio/views/multiple-records/list` views a :ref:`Tags field
-<studio/fields/relational-fields/tags>`, creating a *Tag* model with preconfigured access rights in
+<studio/fields/relational-fields-tags>`, creating a *Tag* model with preconfigured access rights in
 the process.
 
 .. _studio/models-modules-apps/suggested-features/picture:
@@ -120,7 +120,7 @@ Picture
 -------
 
 Selecting :guilabel:`Picture` adds to the top-right of the :ref:`Form view
-<studio/views/general/form>` an :ref:`Image field <studio/fields/simple-fields/image>`.
+<studio/views/general/form>` an :ref:`Image field <studio/fields/simple-fields-image>`.
 
 .. note::
    The :guilabel:`Picture` feature can be added at a later stage.
@@ -131,7 +131,7 @@ Lines
 -----
 
 Selecting :guilabel:`Lines`: adds to the :ref:`Form view <studio/views/general/form>` a :ref:`Lines
-field <studio/fields/relational-fields/lines>` inside a :guilabel:`Tab` component.
+field <studio/fields/relational-fields-lines>` inside a :guilabel:`Tab` component.
 
 .. _studio/models-modules-apps/suggested-features/notes:
 
@@ -139,7 +139,7 @@ Notes
 -----
 
 Selecting :guilabel:`Notes` adds to the :ref:`Form view <studio/views/general/form>` an :ref:`Html
-field <studio/fields/simple-fields/html>` using the full width of the form.
+field <studio/fields/simple-fields-html>` using the full width of the form.
 
 .. _studio/models-modules-apps/suggested-features/monetary-value:
 
@@ -148,7 +148,7 @@ Monetary value
 
 Selecting :guilabel:`Monetary value` adds to the :ref:`studio/views/general/form` and
 :ref:`studio/views/multiple-records/list` views a :ref:`Monetary field
-<studio/fields/simple-fields/monetary>`. The :ref:`studio/views/reporting/graph` and
+<studio/fields/simple-fields-monetary>`. The :ref:`studio/views/reporting/graph` and
 :ref:`studio/views/reporting/pivot` views are also activated.
 
 .. note::
@@ -161,7 +161,7 @@ Company
 
 Selecting :guilabel:`Company` adds to the :ref:`studio/views/general/form` and
 :ref:`studio/views/multiple-records/list` views a :ref:`Many2One field
-<studio/fields/relational-fields/many2one>` linked to the *Company* model.
+<studio/fields/relational-fields-many2one>` linked to the *Company* model.
 
 .. note::
    This is only useful if you work in a multi-company environment.
