@@ -166,7 +166,7 @@ Date (`date`)
 The :guilabel:`Date` field is used to select a date on a calendar.
 
 - :guilabel:`Remaining Days`: the remaining number of days before the selected date is displayed
-  (e.g., *In 5 days*), based on the current date.
+  (e.g., *In 5 days*), based on the current date. This field should be set to :guilabel:`Read only`.
 
 .. example::
 
@@ -182,15 +182,55 @@ Date & Time (`datetime`)
 The :guilabel:`Date & Time` field is used to select a date on a calendar and a time on a clock. The
 user's current time is automatically used if no time is set.
 
-- :guilabel:`Date`: used to record the time without displaying it on the UI.
+- :guilabel:`Date Range`: used to display a period of time defined by a start date and an end date
+  on one line in your database. To add a date range:
+
+  #. Add a :guilabel:`Date & Time` field and select the :guilabel:`Datetime widget`. This field will
+     be used for the end date but the field itself will not be visible on the UI.
+  #. Give the *end date* field an appropriate label, then tick the checkbox
+     :ref:`Invisible <studio/fields/properties>`.
+  #. Add a second :guilabel:`Date & Time` field, this time selecting the
+     :guilabel:`Daterange widget`. This field will be used for the start date and will be visible
+     on the UI.
+  #. Give the *start date* field an appropriate label.
+  #. Still in the *start date* field, click the :guilabel:`End date field` dropdown and select the
+     *end date* field you created.
+  #. Update any other properties as needed and click :guilabel:`Close` in the upper right corner of
+     the screen.
+
+  .. tip:: When you add a date range in a new record, click the field to open the calendar and clock
+     view. Select the start date and time then click the :icon:`fa-plus` :guilabel:`Add end date`
+     button that appears.
+
+      .. image:: fields/date-range-selection.png
+         :alt: Example of date and time selector
+         :scale: 75%
+
+     Select the end date and time, then click :guilabel:`Apply`.
+
 - :guilabel:`Remaining days`: displays the remaining number of days before the selected date (e.g.,
-  *In 5 days*), based on the current date and time.
+  *In 5 days*), based on the current date and time. This field should be set to :guilabel:`Read
+  only`.
 
 .. example::
 
    .. image:: fields/date-time-examples.png
       :align: center
       :alt: Examples of Date & Time fields with different widgets
+
+.. tip::
+   For :guilabel:`Date & Time` fields using the :guilabel:`Date & Time` and
+   :guilabel:`Date Range` widgets, some specific :ref:`properties <studio/fields/properties>` are
+   available. You can:
+
+   - control the minute intervals shown in the time selector by entering the appropriate number of
+     minutes in the :guilabel:`Time interval` field
+   - opt to display a warning icon if a future date is chosen by ticking the :guilabel:`Warning for
+     future dates` checkbox
+   - opt to not show the time on a read-only field by unticking the :guilabel:`Show time` checkbox.
+     This can keep a list view less cluttered, for example.
+   - restrict the dates that can be selected in the date picker using the :guilabel:`Earliest
+     accepted date` and :guilabel:`Latest accepted date` fields
 
 .. _studio/fields/simple-fields/checkbox:
 
@@ -483,11 +523,13 @@ Properties
 - :guilabel:`Help Tooltip`: To explain the purpose of a field, write a description under
   :guilabel:`Help Tooltip`. It is displayed inside a tooltip box when hovering with your mouse over
   the field's label.
-- :guilabel:`Placeholder`: To provide an example of how a field should be completed, write it under
-  :guilabel:`Placeholder`. It appears in light gray as a placeholder until a value is entered.
 - :guilabel:`Widget`: To change the default appearance or functionality of a field, select one of
   the available widgets.
+- :guilabel:`Placeholder`: To provide an example of how a field should be completed, write it under
+  :guilabel:`Placeholder`. It appears in light gray as a placeholder until a value is entered.
 - :guilabel:`Default value`: To add a default value to a field when a record is created, use
   :guilabel:`Default value`.
 - :guilabel:`Limit visibility to groups`: To limit which users can see the field, select a user
   access group.
+
+
