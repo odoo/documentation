@@ -50,9 +50,9 @@ edit it, click :guilabel:`Measures` and choose one or, only for pivots, multiple
 
 .. note::
    When you select a measure, Odoo aggregates the values recorded on that field for the filtered
-   records. Only numerical fields (:ref:`integer <studio/fields/simple-fields/integer>`,
-   :ref:`decimal <studio/fields/simple-fields/decimal>`, :ref:`monetary
-   <studio/fields/simple-fields/monetary>`) can be measured. In addition, the :guilabel:`Count`
+   records. Only numerical fields (:ref:`integer <studio/fields/simple-fields-integer>`,
+   :ref:`decimal <studio/fields/simple-fields-decimal>`, :ref:`monetary
+   <studio/fields/simple-fields-monetary>`) can be measured. In addition, the :guilabel:`Count`
    option is used to count the total number of filtered records.
 
 After choosing what you want to measure, you can define how the data should be :ref:`grouped
