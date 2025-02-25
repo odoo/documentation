@@ -40,7 +40,7 @@ Localizations
 database, which account for all taxes, fees, and allowances for that particular country.
 
 The :guilabel:`Localization` section of the *Payroll* app :guilabel:`Settings` page may include
-specific settings that need to be set for the specific locality. This selection also provides a
+specific settings that need to be set for the specific country. This selection also provides a
 detailed view of all benefits provided to employees.
 
 The settings and options shown in this section varies, depending on the localization enabled for the
@@ -56,9 +56,8 @@ database.
    including the headquarters, would be set up as their own company/branch using the multi-company
    method.
 
-   Each individual company can have a different localization setting configured for that specific
-   company, since company locations can vary and be located anywhere in the world, where rules and
-   laws differ.
+   Each individual company can have a different localization setting, since locations can vary
+   anywhere in the world, where rules and laws differ.
 
    For more information on companies, refer to the :doc:`Companies <../general/companies>`
    documentation, which covers how to set up companies.
@@ -67,7 +66,7 @@ Time off
 --------
 
 - :guilabel:`Deferred Time Off`: if time off is taken after payslips are validated, the time off
-  needs to be applied to the following pay period. Select the person responsible for validating
+  needs to be applied to the following pay period. Select the person that will be notified for
   these specific time off situations using the drop-down menu in the :guilabel:`Responsible` field.
 
   .. example::
@@ -90,8 +89,8 @@ Payroll
 - :guilabel:`Work Permit Expiration Notice Period`: enter the number of :guilabel:`Days` before a
   work permit expires, and Odoo notifies the responsible person about the upcoming expiration at
   that time.
-- :guilabel:`Payslip PDF Display`: enable this option to have payslips display a PDF file on the
-  payslip form.
+- :guilabel:`Payslip PDF Display`: enable this option to show the payslip's PDF when the state is
+  validated.
 
 .. _payroll/work-entries-config:
 
@@ -107,7 +106,7 @@ possible from this section of the configuration header menu.
 Templates
 ---------
 
-Contract templates are used with the *Recruitment* application when sending an offer to a candidate.
+Contract templates are used when sending an offer to a candidate.
 The contract template forms the basis of an offer, and can be modified for specific candidates or
 employees, when necessary. If a contract template is created or modified in the *Payroll*
 application, the changes are also reflected in the *Recruitment* application.
@@ -244,8 +243,8 @@ Off`, :guilabel:`Training`, or :guilabel:`Public Holiday`.
 Work entry types
 ----------------
 
-When creating a work entry in the *Payroll* application, or when an employee enters information in
-the *Timesheets* application, a :guilabel:`Work Entry Type` needs to be selected. The list of
+When creating a work entry in the *Payroll* application, or when an employee enters new time off types
+in *Time Off* application, a :guilabel:`Work Entry Type` needs to be selected. The list of
 :guilabel:`Work Entry Types` is automatically created based on localization settings set in the
 database.
 
@@ -273,16 +272,9 @@ General information section
 - :guilabel:`Payroll Code`: this code appears with the work entry type on timesheets and payslips.
   Since the code is used in conjunction with the *Accounting* application, it is advised to check
   with the accounting department for a code to use.
-- :guilabel:`DMFA code`: this code is used to identify :abbr:`DMFA (De Multifunctionele Aangifte)`
-  entries on a corresponding :abbr:`DMFA (De Multifunctionele Aangifte)` report. The :abbr:`DMFA
-  (De Multifunctionele Aangifte)` report is a quarterly report that Belgian-based companies are
-  required to submit for social security reporting purposes. This report states the work done by the
-  employees during the quarter, as well as the salaries paid to those employees.
 - :guilabel:`External Code`: this code is used for exporting data to a third-party payroll service.
   Check with the third-party being used to determine the :guilabel:`External Code` to enter for the
   new work entry type.
-- :guilabel:`SDWorx code`: this code is only for companies that use SDWorx, a payroll service
-  provider.
 - :guilabel:`Color`: select a color for the particular work entry type.
 
 Display in payslip section
@@ -291,13 +283,13 @@ Display in payslip section
 - :guilabel:`Rounding`: the rounding method selected determines how quantities on timesheet entries
   are displayed on the payslip.
 
-  - :guilabel:`No Rounding`: a timesheet entry is not modified.
-  - :guilabel:`Half Day`: a timesheet entry is rounded to the closest half day amount.
-  - :guilabel:`Day`: a timesheet entry is rounded to the closest full day amount.
+  - :guilabel:`No Rounding`: entry is not modified.
+  - :guilabel:`Half Day`: entry is rounded to the closest half day amount.
+  - :guilabel:`Day`: entry is rounded to the closest full day amount.
 
 .. example::
    If the working time is set to an 8-hour work day (40-hour work week), and an employee enters a
-   time of 5.5 hours on a timesheet, and :guilabel:`Rounding` is set to :guilabel:`No Rounding`, the
+   time of 5.5 hours on a work entry, and :guilabel:`Rounding` is set to :guilabel:`No Rounding`, the
    entry remains 5.5 hours. If :guilabel:`Rounding` is set to :guilabel:`Half Day`, the entry is
    changed to 4 hours. If it is set to :guilabel:`Day`, it is changed to 8 hours.
 
@@ -306,7 +298,7 @@ Unpaid section
 
 - :guilabel:`Unpaid in Structures Types`: if the work entry is for work that is not paid, specify
   which pay structure the unpaid work entry applies to from the drop-down menu. Some situations
-  where work is logged on a timesheet, but no compensation given would be for unpaid internships,
+  where work is logged on a payslip, but no compensation given would be for unpaid internships,
   unpaid training, or volunteer work.
 
 Valid for advantages section
@@ -325,16 +317,11 @@ Time off options section
   request, or entry, in the *Time Off* application.
 
   If :guilabel:`Time Off` is checked, a :guilabel:`Time Off Type` field appears. This field has a
-  drop-down menu to select the specific type of time off, such as `Paid Time Off`, `Sick Time Off`,
+  drop-down menu to select the specific types of time off, such as `Paid Time Off`, `Sick Time Off`,
   or `Extra Hours`, for example.
 
   A new type of time off can be entered in the field, if the listed types of time off in the
   drop-down menu do **not** display the type of time off needed.
-- :guilabel:`Keep Time Off Right`: this is for Belgian-specific companies **only**, and does
-  **not** appear for other localizations. Check this box if the work entry is for time off that
-  affects the time off benefits for the following year. Workers are given time off each year,
-  according to the government, and in some cases, time off taken during a specific time period can
-  affect how much time off the employee receives or accrues the following year.
 
 Reporting section
 *****************
@@ -353,7 +340,7 @@ Working schedules
 
 To view the currently configured working schedules, go to :menuselection:`Payroll app -->
 Configuration --> Work Entries --> Working Schedules`. The working schedules that are available for
-an employee's contracts and work entries are found in this list.
+an employee's contracts are found in this list.
 
 Working schedules are company-specific. Each company **must** identify each type of working schedule
 they use. If the database is created for only one company, the company column is not available.
@@ -405,6 +392,10 @@ Salary
 
 Structure types
 ---------------
+
+In Odoo, structure types are used to identify group of people referring to the same payroll rules.
+A structure type contains specific options and a subset of structures that will be used according
+the situation.
 
 In Odoo, an employee's payslip is based on *structures* and *structure types*, which both affect how
 an employee enters timesheets. Each structure type is an individual set of rules for processing a
@@ -463,9 +454,11 @@ modified.
   the drop-down menu. The default working hours that are pre-configured in Odoo is the
   :guilabel:`Standard 40 hours/week` option. If the needed working hours do not appear in the list,
   a :ref:`new set of default working hours can be created <new-default-working-hours>`.
-- :guilabel:`Regular Pay Structure`: type in the name for the regular pay structure.
-- :guilabel:`Default Work Entry Type`: select the default type of work entry the new structure type
-  falls under from the drop-down menu. The default options include :guilabel:`Attendance`,
+- :guilabel:`Regular Pay Structure`: type in the name for the regular pay structure. It will be
+  used as the default option when generating payslips.
+- :guilabel:`Default Work Entry Type`: For employees whose contracts is referred under this
+  structure type, the main work entry type used for all period of work is defined here. It will
+  commonly be set as **Attendance**,
   :guilabel:`Overtime Hours`, :guilabel:`Generic Time Off`, :guilabel:`Compensatory Time Off`,
   :guilabel:`Home Working`, :guilabel:`Unpaid`, :guilabel:`Sick Time Off`, :guilabel:`Paid Time
   Off`, :guilabel:`Out Of Contract`, :guilabel:`Extra Hours`, and :guilabel:`Long Term Time Off`.
@@ -494,8 +487,7 @@ completed, click :guilabel:`Save & Close`.
 - :guilabel:`Name`: type in the name for the new default working hours. This should be descriptive
   and clear to understand, such as `Standard 20 Hours/Week`.
 - :guilabel:`Company`: select the company that can use these new default working hours from the
-  drop-down menu. Keep in mind, working hours are company-specific, and cannot be shared between
-  companies. Each company needs to have their own working hours set.
+  drop-down menu. Blank field means it's available for all companies.
 - :guilabel:`Average Hour Per Day`: the average hours per day field is auto-populated, based on the
   working hours configured in the :guilabel:`Working Hours` tab. This entry affects resource
   planning, since the average daily hours affect what resources can be used, and in what quantity,
@@ -532,8 +524,8 @@ completed, click :guilabel:`Save & Close`.
 Structures
 ----------
 
-*Salary structures* are the different ways an employee gets paid within a specific *structure*, and
-are specifically defined by various rules.
+*Salary structures* are the different situations an employee could be paid within a specific
+*structure*, and are specifically defined by various rules.
 
 The amount of structures a company needs for each structure type depends on how many different ways
 employees are paid, and how their pay is calculated. For example, a common structure that could be
@@ -549,8 +541,8 @@ it. Each structure contains a set of rules that define it.
    :align: center
    :alt: All available salary structures.
 
-Click on a structure to view its :guilabel:`Salary Rules`. These rules are what calculate the
-payslip for the employee.
+Click on a structure to view its :guilabel:`Salary Rules`. These rules define how the payslip will
+be computed for the employee.
 
 .. image:: payroll/structure-regular-pay-rules.png
    :align: center
@@ -559,9 +551,9 @@ payslip for the employee.
 Rules
 -----
 
-Each structure has a set of *salary rules* to follow for accounting purposes. These rules are
-configured by the localization, and affect actions in the *Accounting* application, so modifications
-to the default rules, or the creation of new rules, should only be done when necessary.
+Each structure has a set of salary rules used to compute the various amounts considered in the pay.
+These rules are configured by the localization and affect the computation of the salaries. Modification
+or creation of rules should only be done when necessary.
 
 To view all the rules, go to :menuselection:`Payroll app --> Configuration --> Salary --> Rules`.
 Click on a structure (such as :guilabel:`Regular Pay`) to view all the rules.
@@ -575,16 +567,15 @@ Top section
 - :guilabel:`Rule Name`: enter a name for the rule. This field is required.
 - :guilabel:`Category`: select a category the rule applies to from the drop-down menu, or enter a
   new one. This field is required.
-- :guilabel:`Code`: enter a code to be used for this new rule. It is recommended to coordinate with
-  the accounting department for a code to use as this affects accounting reports and payroll
-  processing. This field is required.
+- :guilabel:`Code`: enter a code to be used for this new rule. This field is required.
 - :guilabel:`Sequence`: enter a number indicating when this rule is calculated in the sequence of
   all other rules.
 - :guilabel:`Salary Structure`: select a salary structure the rule applies to from the drop-down
   menu, or enter a new one. This field is required.
 - :guilabel:`Active`: enable this toggle, so the rule is available for use. Disable the toggle to
-  hide the rule without deleting it in the database.
-- :guilabel:`Appears on payslip`: tick the checkbox to have the rule appear on employee payslips.
+  continue to show it on the payslip, but skip the computation.
+- :guilabel:`Appears on payslip`: tick the checkbox to have the rule appear on employee printed
+  payslip.
 - :guilabel:`View on Employer Cost Dashboard`: tick the checkbox to have the rule appear on the
   :guilabel:`Employer Cost` report, located on the *Payroll* app dashboard.
 - :guilabel:`View on Payroll Reporting`: tick the checkbox to have the rule appear on payroll
@@ -630,17 +621,8 @@ Accounting tab
 
 - :guilabel:`Debit Account`: select the debit account from the drop-down menu the rule affects.
 - :guilabel:`Credit Account`: select the credit account from the drop-down menu the rule affects.
-- :guilabel:`Not computed in net accountability`: tick the checkbox to delete the value of this rule
-  in the `Net Salary` rule.
-
-Rule parameters
----------------
-
-.. note::
-   Currently, the :guilabel:`Rule Parameters` feature found inside the :menuselection:`Payroll app
-   --> Configuration --> Salary --> Rule Parameters` menu is still in development and only serves a
-   specific use case for Belgian markets. The documentation will be updated when this section has
-   matured to more markets.
+- :guilabel:`Not computed in net accountability`: If checked, the amount of the rule will be show
+  independantly from the Net Salary, to allow a better reporting in Accounting.
 
 Other input types
 -----------------
@@ -674,8 +656,7 @@ Salary package configurator
 
 The various options under the :guilabel:`Salary Package Configurator` section of the
 :menuselection:`Payroll app --> Configuration --> Salary Package Configurator` menu all affect an
-employee's potential salary. These sections (:guilabel:`Benefits`, :guilabel:`Personal Info`,
-and :guilabel:`Resume`) specify what benefits can be offered to an employee in their salary package.
+employee's potential salary.
 
 Depending on what information an employee enters (such as deductions, dependents, etc.), their
 salary is adjusted accordingly. When an applicant applies for a job on the company website, the
@@ -714,22 +695,21 @@ The various fields for creating a benefit are as follows:
 General information section
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+- :guilabel:`Contract Related Field`: select from the drop-down menu a field from the contract.
+  The choosen value from the employee will be recorded to that field.
 - :guilabel:`Benefits`: enter the name for the benefit. This field is required.
-- :guilabel:`Benefit Field`: select from the drop-down menu the type of benefit this is.
-- :guilabel:`Cost Field`: select from the drop-down menu the type of cost incurred by the company
-  for this specific benefit. The default options are :guilabel:`Calendar Changed`, :guilabel:`Yearly
-  Cost (Real)`, :guilabel:`Extra Time Off`, :guilabel:`Hourly Wage`, :guilabel:`Part Time`,
+- :guilabel:`Benefit Type`: select from the drop-down menu what type of benefit it is. Select from
+  :guilabel:`Monthly Benefit in Kind`, :guilabel:`Monthly Benefit in Net`, :guilabel:`Monthly
+  Benefit in Cash`, :guilabel:`Yearly Benefits in Cash`, or :guilabel:`Non Financial Benefits`. This
+  field is required.
+- :guilabel:`Cost Field`: select from the drop-down menu a field from the contract. The field will
+  define the cost of the benefit and by extention the impact on the salary,
   :guilabel:`Wage`, :guilabel:`Wage with Holidays`, and :guilabel:`Work time rate`. Depending on the
   localization settings, additional options are available.
 - :guilabel:`Related Type`: select from the drop-down menu what type of benefit it is. Select from
   :guilabel:`Monthly Benefit in Kind`, :guilabel:`Monthly Benefit in Net`, :guilabel:`Monthly
   Benefit in Cash`, :guilabel:`Yearly Benefits in Cash`, or :guilabel:`Non Financial Benefits`. This
   field is required.
-- :guilabel:`Benefit Field`: select from the drop-down menu the specific field on the contract the
-  benefit appears.
-- :guilabel:`Cost Field`: select the specific field on the contract that the cost of the benefit is
-  linked to, using the drop-down menu. If this field is left blank, the cost of the benefit is not
-  computed in the employee budget.
 - :guilabel:`Impacts Net Salary`: tick the checkbox if the benefit should impact the employee's net
   salary.
 - :guilabel:`Requested Documents`: select any document that is required to be submitted for this
@@ -816,7 +796,7 @@ To view an employee's card, go to the main :menuselection:`Employees` app dashbo
 the employee's card.
 
 .. note::
-   An employee card can be thought of as an employee personnel file.
+   An employee card can be thought of as an employee personal file.
 
 The :guilabel:`Personal Info` section lists all of the fields that are available to enter on the
 employee's card. To access this section, go to :menuselection:`Payroll app --> Configuration -->
