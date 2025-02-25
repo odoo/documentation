@@ -209,7 +209,7 @@ This action allows to update one of the record's (related) fields. Click the :gu
 field and, in the list that opens, select or search for the field to be updated; click the right
 arrow next to the field name to access the list of related fields if needed.
 
-If you selected a :ref:`many2many field <studio/fields/relational-fields/many2many>`, choose whether
+If you selected a :ref:`many2many field <studio/fields/relational-fields-many2many>`, choose whether
 the field must be updated by :guilabel:`Adding`, :guilabel:`Removing`, or :guilabel:`Setting it to`
 the selected value or by :guilabel:`Clearing it`.
 
@@ -225,7 +225,7 @@ the selected value or by :guilabel:`Clearing it`.
    Alternatively, you can also set a record's field dynamically using Python code. To do so, select
    :guilabel:`Compute` instead of :guilabel:`Update`, then enter the code to be used for computing
    the field's value. For example, if you want the automation rule to compute a custom
-   :ref:`datetime field <studio/fields/simple-fields/date-time>` when a task's priority is set to
+   :ref:`datetime field <studio/fields/simple-fields-date-time>` when a task's priority is set to
    `High` (by starring the task), you can define the trigger :guilabel:`Priority is set to` to
    `High` and define the :guilabel:`Update Record` action as follows:
 
@@ -290,8 +290,8 @@ triggered the creation of the new record.
 
 .. note::
    The dropdown list related to the :guilabel:`Link Field` field only contains :ref:`one2many fields
-   <studio/fields/relational-fields/one2many>` existing on the current model that are linked to a
-   :ref:`many2one field <studio/fields/relational-fields/many2one>` on the target model.
+   <studio/fields/relational-fields-one2many>` existing on the current model that are linked to a
+   :ref:`many2one field <studio/fields/relational-fields-many2one>` on the target model.
 
 .. tip::
    You can create another automation rule with :ref:`studio/automated-actions/action/update-record`
