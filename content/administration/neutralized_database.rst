@@ -1,5 +1,3 @@
-.. _neutralized_database:
-
 ====================
 Neutralized database
 ====================
