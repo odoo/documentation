@@ -119,7 +119,8 @@ accurately and completely in Odoo:
 #. **Customer information**: When creating a quotation, ensure the selected :guilabel:`Customer` has
    a valid phone number, email address, and shipping address.
 
-   To verify, select the :guilabel:`Customer` field to open their contact page. Here, Add their shipping address in the :guilabel:`Contact` field, along with their :guilabel:`Mobile` number and
+   To verify, select the :guilabel:`Customer` field to open their contact page. Here, add their
+   shipping address in the :guilabel:`Contact` field, along with their :guilabel:`Mobile` number and
    :guilabel:`Email` address.
 
 #. **Product weight**: Ensure all products in a delivery order have a specified :guilabel:`Weight`
