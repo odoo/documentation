@@ -1,3 +1,5 @@
+.. _howtos/website/navigation:
+
 ==========
 Navigation
 ==========
@@ -9,6 +11,8 @@ In this chapter, you will learn how to:
 - Delete and create menu items.
 - Create a dropdown menu.
 - Create a mega menu.
+
+.. _navigation/default:
 
 Default
 =======
@@ -29,6 +33,8 @@ Delete default menu items.
    <!-- Shop -->
    <delete model="website.menu" search="[('url','in', ['/', '/shop']),
    ('website_id', '=', 1)]"/>
+
+.. _navigation/menu:
 
 Menu item
 =========
@@ -66,6 +72,8 @@ Menu item
    * - sequence
      - Defines the link's position in the top menu.
 
+.. _navigation/menu/window:
+
 New window
 ----------
 
@@ -76,6 +84,8 @@ Open the link's URL in a new tab.
    <record id="..." model="website.menu">
        <field name="new_window" eval="True"/>
    </record>
+
+.. _navigation/menu/window:
 
 External Links
 --------------
