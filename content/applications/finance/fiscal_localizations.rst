@@ -66,7 +66,7 @@ available on Odoo.
 - Costa Rica - Accounting
 - Croatia - Accounting (RRIF 2012)
 - Czech - Accounting
-- Denmark - Accounting
+- :doc:`Denmark - Accounting <fiscal_localizations/denmark>`
 - Dominican Republic - Accounting
 - :doc:`Ecuadorian - Accounting <fiscal_localizations/ecuador>`
 - :doc:`Egypt - Accounting <fiscal_localizations/egypt>`
@@ -139,6 +139,7 @@ available on Odoo.
    fiscal_localizations/canada
    fiscal_localizations/chile
    fiscal_localizations/colombia
+   fiscal_localizations/denmark
    fiscal_localizations/ecuador
    fiscal_localizations/egypt
    fiscal_localizations/france
