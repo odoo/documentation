@@ -236,7 +236,7 @@ based on the *insurance percentage* specified in the delivery method's form.
    **X8A - Pallet de madera** as default.
 
 .. note::
-   Additional services are available when you select `pallet` as an option, which allows to select
+   Additional services are available when you select `pallet` as a :guilabel:`Envia Package Type` on the delivery method, which allows you to select 
    additional services like lift assistance and deliveries during weekends.
 
 .. _inventory/shipping_receiving/setup_configuration/cancel:
