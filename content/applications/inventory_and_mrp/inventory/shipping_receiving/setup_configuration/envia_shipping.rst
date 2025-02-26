@@ -74,8 +74,8 @@ Fill out the following form fields:
 - Manually :guilabel:`Save` the form by clicking the cloud icon next to the :guilabel:`Shipping
   Methods / New` breadcrumbs.
 - :guilabel:`Insurance percentage`: If insurance is needed, place a percentage of the value to
-  insure, if not, it can be left as 0. Keep in mind that the insurance price is calculated only
-  after the label has been generated. This also applies to LTL shipments.
+  insure. If not, leave it as 0. Keep in mind that the insurance price is calculated only after the
+  label has been generated, including for LTL shipments.
 
 .. tip::
    It is mandatory to fill both the production and sandbox tokens, but it could be left with just a
