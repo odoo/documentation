@@ -278,7 +278,6 @@ The needed service is not available
 
 For available carriers, make sure that they are enabled through Envia.
 
-
 Who will pay customs duties?
 ----------------------------
 
