@@ -186,8 +186,8 @@ Countries not listed here should be filled as normal.
    For some countries, the zip code is not commonly requested. If empty, Odoo will use Envia's zip
    approximation services to get the zip code.
 
-   For Colombia, the zip code is extracted from the city selected in city_id if the localization is
-   installed, otherwise Odoo will use the zip field.
+   For Colombia, the zip code is extracted from the city selected in `city_id` if the localization
+   is installed, otherwise Odoo will use the zip field.
 
 .. note::
    Colombia and Mexico have a list of cities referred to as `city_id` in Odoo. If `city_id` is set,
