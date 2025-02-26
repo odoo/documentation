@@ -193,8 +193,8 @@ Countries not listed here should be filled as normal.
    for Mexico (Advanced Features)` module will be needed.
 
 .. note::
-   In Brazil the address is split to comply with regulation, so street_name is used for the street
-   name only. street_number1 is used for the street number and street_number2 is used for the
+   In Brazil the address is split to comply with regulation, so `street_name` is used for the street
+   name only. `street_number1` is used for the street number and street_number2 is used for the
    complement. This logic also applies if the :guilabel:`Extended Addresses` module is installed.
 
 Generate labels with Envia
