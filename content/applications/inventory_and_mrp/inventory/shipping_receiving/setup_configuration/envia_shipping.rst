@@ -13,6 +13,9 @@ include:
 Setup in Envia
 ==============
 
+To integrate `Envia.com <https://www.envia.com>`_ with Odoo, first create an account and activate
+the necessary shipping carriers. Then, obtain the API credentials, which is used to connect
+Envia.com to your Odoo database.
 Create an account and activate carriers
 ---------------------------------------
 
