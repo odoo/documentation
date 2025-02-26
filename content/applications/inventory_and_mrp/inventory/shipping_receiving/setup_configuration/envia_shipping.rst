@@ -67,8 +67,8 @@ Fill out the following form fields:
 
 - :guilabel:`Shipping Method`: Name of the shipping method, e.g. `Envia.com`.
 - :guilabel:`Provider`: Select :guilabel:`Envia` from the drop-down menu.
-- :guilabel:`Delivery Product`: Set the product that was configured for this shipping method, or
-  create a new product. A default Envia.com product is provided.
+- :guilabel:`Delivery Product`: The product listed on the sales order as the delivery charge. A
+  specific delivery product for Envia.com must be created.
 - In the :guilabel:`Envia Configuration` tab, enter the :guilabel:`Envia Production Access Token`.
 - In the :guilabel:`Envia Configuration` tab, enter the :guilabel:`Envia Sandbox Access Token`.
 - Manually :guilabel:`Save` the form by clicking the cloud icon next to the :guilabel:`Shipping
