@@ -63,7 +63,7 @@ Envia.com shipping connector configuration
 After activating the Envia.com connector, create a delivery method by going to
 :menuselection:`Inventory --> Configuration --> Delivery Methods` and click :guilabel:`New`.
 
-Fill out the following fields in the New Delivery Method form:
+Fill out the following form fields:
 
 - :guilabel:`Shipping Method`: Type `Shipping carrier name`.
 - :guilabel:`Provider`: Select :guilabel:`Envia` from the drop-down menu.
