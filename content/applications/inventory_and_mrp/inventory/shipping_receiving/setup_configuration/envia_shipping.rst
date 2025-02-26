@@ -190,8 +190,8 @@ Countries not listed here should be filled as normal.
    installed, otherwise Odoo will use the zip field.
 
 .. note::
-   Colombia and Mexico have a list of cities referred to as city_id in Odoo. If city_id is set, it
-   will be used as the city field. If not set, then Odoo will try to use the city field.
+   Colombia and Mexico have a list of cities referred to as `city_id` in Odoo. If `city_id` is set,
+   it is used as the city field. If not set, then Odoo will try to use the city field.
 
 .. note::
    In Mexico, some carriers might require the :guilabel:`Colony` field, commonly known as
