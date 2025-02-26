@@ -82,7 +82,7 @@ Fiscal localization modules are available for the countries listed below.
 - Cyprus
 - Czech Republic
 - Democratic Republic of the Congo
-- Denmark
+- :doc:`Denmark <fiscal_localizations/denmark>`
 - Dominican Republic
 - :doc:`Ecuador <fiscal_localizations/ecuador>`
 - :doc:`Egypt <fiscal_localizations/egypt>`
@@ -173,6 +173,7 @@ Fiscal localization modules are available for the countries listed below.
    fiscal_localizations/canada
    fiscal_localizations/chile
    fiscal_localizations/colombia
+   fiscal_localizations/denmark
    fiscal_localizations/ecuador
    fiscal_localizations/egypt
    fiscal_localizations/france
