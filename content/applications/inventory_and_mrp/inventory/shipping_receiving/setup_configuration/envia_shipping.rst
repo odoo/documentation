@@ -209,7 +209,7 @@ chatter, which include the following:
 
 .. important::
    When labels are created, Envia.com automatically charges the configured account and the final
-   amount is logged in the chatter. If multi-currency operations occur, the amount logged will be
+   amount is logged in the chatter. If multi-currency operations occur, the amount logged is
    calculated using Odoo's rate. Actual rates may vary.
 
 Additionally, the tracking number is now available.
