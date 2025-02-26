@@ -60,11 +60,8 @@ On Odoo’s :guilabel:`Apps` module, search for the `Envia Shipping` integration
 Envia.com shipping connector configuration
 ------------------------------------------
 
-After activating the Envia.com Connector, go to the Delivery Methods page and click Create.
-
-.. tip::
-   :guilabel:`Shipping Methods` can also be accessed by going to :menuselection:`Inventory -->
-   Configuration --> Delivery --> Shipping Methods`.
+After activating the Envia.com connector, create a delivery method by going to
+:menuselection:`Inventory --> Configuration --> Delivery Methods` and click :guilabel:`New`.
 
 Fill out the following fields in the New Delivery Method form:
 
