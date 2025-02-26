@@ -609,25 +609,22 @@ Checkout Scale User's Guide <https://www.mt.com/dam/RET_DOCS/Ariv.pdf>`_.
 To begin, go to page 17 in the above manual for *Setup*. This guide lists potential settings for the
 Ariva S series scales.
 
-Follow the instructions, along with the following process, to set the scale to setup mode. First,
-hold the **>T<** button for eight seconds, or until :guilabel:`CONF` appears.
+Follow the instructions, along with the following process:
 
-Next, press **>T<** until :guilabel:`GRP 3` appears, then press **>0<** to confirm.
+#. Hold the **>T<** button for eight seconds, or until :guilabel:`CONF` appears.
+#. Press **>T<** until :guilabel:`GRP 3` appears, then press **>0<** to confirm.
+#. At step :guilabel:`3.1`, make sure the value is set to :guilabel:`1` (USB Virtual COM ports) by
+   pressing **>T<** to cycle through the options.
+#. Press **>0<** until :guilabel:`3.6` (if available, otherwise skip the next step).
+#. At step :guilabel:`3.6`, make sure the value is set to :guilabel:`3` (8217 Mettler-Toledo (WO))
+   by pressing **>T<** to cycle through the options.
+#. Press **>0<** (multiple times if necessary) until :guilabel:`GRP 4` appears.
+#. Press **>T<** until :guilabel:`EXIT` appears.
 
-Under :guilabel:`3.1`, ensure the setting is set to :guilabel:`1` (USB Virtual COM ports). Press
-**>T<** to cycle through the options under group 3.1.
+   .. important::
+      Do **not** make any other changes unless otherwise needed.
 
-Once :guilabel:`3.1` is set to :guilabel:`1`, press **>0<** to confirm the selection. Continue to
-press **>0<** until :guilabel:`GRP 4` appears.
-
-Now, press **>T<** until :guilabel:`EXIT` appears.
-
-.. important::
-   Do **not** make any other changes unless otherwise needed.
-
-Once :guilabel:`EXIT` appears, press **>0<**. Following this, press **>0<** again to
-:guilabel:`SAVE`. Now the scale restarts.
-
-Finally, restart the :abbr:`IoT (Internet of Things)` box to recognize the changes made on the
-scale's configuration. After restarting, the scale appears as `Toledo 8217`, as opposed to the
-previous display, where it appeared as `Adam Equipment Serial`.
+#. Press **>0<**.
+#. Press **>0<** again to :guilabel:`SAVE`; the scale restarts.
+#. Reboot the IoT box or restart the Windows virtual IoT service. The scale should then appear as
+   Toledo 8217, as opposed to the previous display, where it appeared as Adam Equipment Serial.
