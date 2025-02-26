@@ -38,7 +38,8 @@ Generate Envia.com credentials
 Go to Envia.com, navigate to :menuselection:`Developers --> API Keys`, on the left menu, then click
 :guilabel:`add` to generate a new key.
 
-This API key is the one we will request in Odoo, you can always come back for it.
+This key is required to authenticate Odoo's connection with Envia.com. Retrieve it at any time by
+returning to the :guilabel:`API Keys` section.
 
 .. image:: envia_shipping/envia_token.png
    :alt: API Keys in Envia.com.
