@@ -2,8 +2,13 @@
 Envia.com integration
 =====================
 
-Envia is a shipping service aggregator that facilitates the integration in several continents. Once
-integrated, users can select shipping carriers on inventory operations in their Odoo database.
+Envia is a shipping service that connects businesses with multiple carriers in Odoo. Key features
+include:
+
+- **Multi-carrier & international shipping**: Compare rates across carriers and select the best
+  option for domestic or global shipments.
+- **Automated label generation**: Generate shipping labels at order confirmation.
+- **Real-time rate calculation**: Fetch rates based on package details and destination.
 
 Setup in Envia
 ==============
