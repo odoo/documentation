@@ -89,3 +89,17 @@ The IoT box's IP address can be retrieved by:
 
 Once the IoT box is :doc:`connected to the Odoo database <connect>`, its homepage can be accessed
 from Odoo by opening the IoT app and clicking the URL displayed on the IoT box's card.
+
+.. _iot/iot-box/led-status:
+
+LED status
+==========
+
+The IoT box features two LEDs, located to the right of the SD card slot, which show its status and
+help with troubleshooting when no display is connected. The LEDs can be interpreted as follows:
+
+- **Red LED lit**: The IoT box has no Internet connection. Ensure the Ethernet cable is properly
+  connected or :ref:`connect the IoT box via Wi-Fi <iot/iot_box/network-wifi>`.
+- **Green LED flashing**: The IoT box is awaiting :doc:`connection to a database <connect>`.
+- **Green LED constantly lit**: The IoT box is connected to a database; no further action is
+  required.
