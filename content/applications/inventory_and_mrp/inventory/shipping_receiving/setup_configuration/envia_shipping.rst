@@ -71,8 +71,6 @@ Fill out the following form fields:
   specific delivery product for Envia.com must be created.
 - In the :guilabel:`Envia Configuration` tab, enter the :guilabel:`Envia Production Access Token`.
 - In the :guilabel:`Envia Configuration` tab, enter the :guilabel:`Envia Sandbox Access Token`.
-- Manually :guilabel:`Save` the form by clicking the cloud icon next to the :guilabel:`Shipping
-  Methods / New` breadcrumbs.
 - :guilabel:`Insurance percentage`: If insurance is needed, place a percentage of the value to
   insure. If not, leave it as 0. Keep in mind that the insurance price is calculated only after the
   label has been generated, including for LTL shipments.
