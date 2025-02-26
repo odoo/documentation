@@ -178,7 +178,7 @@ country's expected fields exceptions:
      - Locality
      - State
 
-Countries not listed here should be filled as normal.
+Countries not listed here should be entered normally
 
 .. note::
    For some countries, the zip code is not commonly requested. If empty, Odoo will use Envia's zip
