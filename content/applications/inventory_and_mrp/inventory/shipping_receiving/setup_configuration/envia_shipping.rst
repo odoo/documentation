@@ -80,9 +80,9 @@ Fill out the following form fields:
 
 Additional considerations for the :guilabel:`Envia Default Package`:
 
-- The package is specified in :guilabel:`mm` and :guilabel:`kg`. Keep in mind that the weight is for
-  the container alone and not its contents, it can be left as 0 for no reported weight and 0 in max
-  weight for no specified limit weight.
+- The package is specified in :guilabel:`mm` and :guilabel:`kg`. The weight refers to the container
+  itself, not its contents. Leave the weight as 0 if no weight is reported, and set the max weight
+  to 0 if there is no specified limit.
 - :guilabel:`Envia Package Type`: It is set to Box by default. Make sure to select the appropriate
   one since it will be used to display available carriers and options as they change depending on
   this field.
