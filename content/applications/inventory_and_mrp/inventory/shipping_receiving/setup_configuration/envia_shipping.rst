@@ -227,8 +227,8 @@ For international shipments it is required to fill both the :guilabel:`HS code` 
 LTL Shipments
 -------------
 
-LTL shipment labels can be generated through the connector. The insurance for LTL shipments is
-covered under the insurance percentage value at the delivery method’s form.
+LTL shipment labels can be generated through the Envia connector. The insurance for LTL shipments is
+based on the *insurance percentage* specified in the delivery method's form.
 
 .. important::
    For Mexico, since a Bill of Landing needs to be created for the shipment, Odoo is required to
