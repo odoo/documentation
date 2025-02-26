@@ -126,7 +126,7 @@ accurately and completely in Odoo:
    in the :guilabel:`Inventory` tab of their product form. Refer to the :ref:`Product weight section
    <inventory/shipping_receiving/configure-weight>` of this article for detailed instructions.
 
-#. **Warehouse address**: By default all packages will be sent from the specified address in the
+#. **Warehouse address**: By default all packages are sent from the specified address in the
    warehouse, make sure to set the address for correct label generation.
 
 Address filling guide
