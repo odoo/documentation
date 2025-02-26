@@ -56,7 +56,6 @@ On Odoo’s :guilabel:`Apps` module, search for the `Envia Shipping` integration
    :align: center
    :alt: Envia module to install in Odoo.
 
-
 Envia.com shipping connector configuration
 ------------------------------------------
 
