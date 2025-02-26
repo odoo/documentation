@@ -17,7 +17,7 @@ tick the checkbox.
    :align: center
    :alt: Activate the Customer Addresses setting.
 
-.. _sales/send_quotations/contact-form-config:
+.. _sales/sales_quotations/contact-form-config:
 
 Contact form configuration
 ==========================

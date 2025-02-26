@@ -7,7 +7,7 @@ Reusable quotation templates can be made in Odoo's **Sales** app for common prod
 By using these templates, quotations can be tailored and sent to customers at a quicker pace,
 without having to create new quotations from scratch every time a sales negotiation occurs.
 
-.. _sales/send_quotations/templates:
+.. _sales/sales_quotations/templates:
 
 Configuration
 =============
@@ -31,7 +31,7 @@ created, viewed, and edited.
 Before leaving the :guilabel:`Settings` page, do not forget to click the :guilabel:`Save` button to
 save all changes made during the session.
 
-.. _sales/send_quotations/create_templates:
+.. _sales/sales_quotations/create_templates:
 
 Create quotation templates
 ==========================
