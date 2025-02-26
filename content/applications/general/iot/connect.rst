@@ -79,6 +79,9 @@ Connection using a connection token
 #. In the :guilabel:`Odoo database connected` section, click :guilabel:`Configure`.
 #. Paste the token into the :guilabel:`Server Token` field and click :guilabel:`Connect`.
 
+.. note::
+   Once the IoT box is connected to a database, its green LED remains constantly lit.
+
 .. _iot/connect/IoT-form:
 
 IoT system form
