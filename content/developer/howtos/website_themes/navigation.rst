@@ -1,4 +1,4 @@
-.. _howtos/website/navigation:
+.. _howtos/website_themes/navigation:
 
 ==========
 Navigation
@@ -12,7 +12,7 @@ In this chapter, you will learn how to:
 - Create a dropdown menu.
 - Create a mega menu.
 
-.. _navigation/default:
+.. _howtos/website_themes/navigation_default:
 
 Default
 =======
@@ -34,7 +34,7 @@ Delete default menu items.
    <delete model="website.menu" search="[('url','in', ['/', '/shop']),
    ('website_id', '=', 1)]"/>
 
-.. _navigation/menu:
+.. _howtos/website_themes/navigation_menu:
 
 Menu item
 =========
@@ -72,7 +72,7 @@ Menu item
    * - sequence
      - Defines the link's position in the top menu.
 
-.. _navigation/menu/window:
+.. _howtos/website_themes/navigation_menu_window:
 
 New window
 ----------
@@ -85,7 +85,7 @@ Open the link's URL in a new tab.
        <field name="new_window" eval="True"/>
    </record>
 
-.. _navigation/menu/window:
+.. _howtos/website_themes/navigation_menu_links:
 
 External Links
 --------------
@@ -98,6 +98,8 @@ Add a link to an external website.
        <field name="url">https://www.odoo.com</field>
    </record>
 
+.. _howtos/website_themes/navigation_menu_anchor:
+
 Anchor
 ------
 
@@ -108,6 +110,8 @@ Link to a specific section of a page.
    <record id="..." model="website.menu">
        <field name="url">/about-us#our-team</field>
    </record>
+
+.. _howtos/website_themes/navigation_dropdown:
 
 Dropdown menu
 =============
@@ -148,6 +152,8 @@ Add an item to a dropdown menu.
    * - parent_id
      - The dropdown in which the item will be added.
 
+.. _howtos/website_themes/navigation_megamenu:
+
 Mega menu
 =========
 
@@ -187,6 +193,8 @@ mega menu, you can use any kind of content (text, images, icons, ...).
      - Custom classes to be added to the main element
    * - mega_menu_content
      - The default content of the mega menu
+
+.. _howtos/website_themes/navigation_megamenu_custom:
 
 Custom template
 ---------------
