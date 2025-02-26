@@ -87,7 +87,6 @@ Additional considerations for the :guilabel:`Envia Default Package`:
   correct type, as it affects the available carriers and options displayed, which vary depending on
   this selection.
 
-
 Once previous fields are properly set, sync the carriers. A pop-up window will appear, select a
 carrier and a service level from the list:
 
