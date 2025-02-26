@@ -94,7 +94,6 @@ carrier and a service level from the list:
 .. image:: envia_shipping/envia_popup.png
    :alt: Envia.com carrier and services popup.
 
-
 .. important::
    Envia keeps the main currency of the account fixed. In order to provide more precise conversions
    for the costs of shipping, specify the currency that is set for your account on Envia. If
