@@ -22,9 +22,9 @@ If you don’t have an account, we recommend heading to `Envia.com <https://www.
    :alt: Registry process in website with Envia.com.
 
 .. tip::
-   Make sure to select the appropriate country for your main billing. If you have multicountry
-   operations, you can also create two separate accounts, but the billing will be done in the main
-   currency.
+   Billing is always processed in the currency of the country that matches your primary billing
+   address. If the company operates in multiple countries, you may create separate accounts for each
+   location.
 
 .. note::
    Envia will send an SMS or WhatsApp message to confirm your email address and phone number.
