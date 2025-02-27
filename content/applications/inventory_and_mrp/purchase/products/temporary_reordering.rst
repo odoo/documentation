@@ -79,6 +79,8 @@ from the drop-down menu. Lastly, :guilabel:`Confirm` the :abbr:`SO (sales order)
    :align: center
    :alt: Sales order for product with no set reordering rules.
 
+.. _purchase/check-replenishment:
+
 Check replenishment report
 ==========================
 
