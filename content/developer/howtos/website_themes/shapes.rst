@@ -6,11 +6,29 @@ Shapes are handy if you want to add personality to your website.
 
 In this chapter, you will learn how to add standard and custom background and image shapes.
 
+.. _website_themes/shapes/bg:
+
 Background shapes
 =================
 
 Background shapes are SVG files that you can add as a decorative background in your different
 sections. Each shape has one or several customizable colors, and some of them are animated.
+
+.. warning::
+    Odoo's default shapes use the Odoo default colors palette map as reference. This way, colors
+    will be automatically adapted to a new palette everytime it changes:
+
+    .. code-block:: scss
+
+        default_palette = {
+            '1': '#3AADAA',
+            '2': '#7C6576',
+            '3': '#F6F6F6',
+            '4': '#FFFFFF',
+            '5': '#383E45',
+        }
+
+.. _website_themes/shapes/bg/standard:
 
 Standard
 --------
@@ -28,9 +46,11 @@ A large selection of default background shapes is available.
         </div>
    </section>
 
-`data-oe-shape-data` is the location of your shape.
+`data-oe-shape-data` is a JSON object containing information about your shape like the location
+of the SVG file, the repeat and flip options, etc.
 
-Flip the shape horizontally or vertically by using the X or Y axis.
+For example, you can **flip the shape** horizontally or vertically by using the X or Y axis like
+this:
 
 .. code-block:: xml
 
@@ -41,28 +61,84 @@ Flip the shape horizontally or vertically by using the X or Y axis.
        </div>
    </section>
 
+.. _website_themes/shapes/bg/standard/colors:
+
 Colors mapping
 ~~~~~~~~~~~~~~
 
-You can also change the default color mapping of your shape.
+You can also change the default colors mapping of your shape either by switching colors in the
+current map or by creating a alternate map without modifying the initial one.
+
+.. _website_themes/shapes/bg/standard/colors/switch:
 
 Switch colors mapping
 *********************
 
-First, put the c* color (here `4`).
+First, we can use a shape like this:
 
-Then, the replacement color (here `3`). These replacement colors also range from 1 to 5:
+.. image:: shapes/shapes-initial.png
+   :alt: Initial shape
 
-- `1` = background color of the color preset 1 (o-cc1).
-- `2` = background color of the color preset 2 (o-cc2).
-- `3` = background color of the color preset 3 (o-cc3).
-- `4` = background color of the color preset 4 (o-cc4).
-- `5` = background color of the color preset 5 (o-cc5).
+.. code-block:: xml
+
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" width="100%" height="100%">
+        <defs>
+            <svg id="zigs06_top" viewBox="0 0 30 30" preserveAspectRatio="xMinYMin meet" fill="#383E45" width="100%">
+                <path d="M30,7.9C22.5,7.9,22.5,20,15,20S7.5,7.9,0,7.9V0h30V7.9z"/>
+            </svg>
+            <svg id="zigs06_bottom" viewBox="0 0 30 30" preserveAspectRatio="xMinYMax meet" fill="#FFFFFF" width="100%">
+                <path d="M0,22.1C7.5,22.1,7.5,10,15,10s7.5,12.1,15,12.1V30H0V22.1z"/>
+            </svg>
+        </defs>
+        <svg>
+            <use xlink:href="#zigs06_top"/>
+            <use xlink:href="#zigs06_bottom"/>
+        </svg>
+    </svg>
+
+Here, we use `#383E45`  and `#FFFFFF` which corresponds to the 5th and 4th colors in the Odoo's
+default color palette.
+
+The shape is declared as follows in SCSS:
+
+.. code-block:: sass
+   :caption: ``/website_airproof/static/src/scss/primary_variables.scss``
+
+   'Zigs/06': ('position': bottom, 'size': 30px 100%, 'colors': (4, 5), 'repeat-x': true),
+
+.. image:: shapes/shapes-bg.jpg
+   :alt: Shape colors
+
+The blackish color is used at the top (`c5`), the lightish (`c4`) at the bottom and in between,
+the shape is simply transparent.
+
+We are going to rewrite the `colors` map with some `key: value` couples:
+
+**With color palette reference and custom color**
 
 .. code-block:: scss
-   :caption: ``/website_airproof/static/src/scss/boostrap_overridden.scss``
+   :caption: ``/website_airproof/static/src/scss/primary_variables.scss``
 
-   $o-bg-shapes: change-shape-colors-mapping('web_editor', 'Zigs/06', (4: 3, 5: 1));
+    $o-bg-shapes: change-shape-colors-mapping('web_editor', 'Zigs/06', (4: 3, 5: rgb(187, 27, 152)))
+
+**Or just with references**
+
+.. code-block:: scss
+   :caption: ``/website_airproof/static/src/scss/primary_variables.scss``
+
+    $o-bg-shapes: change-shape-colors-mapping('web_editor', 'Zigs/06', (4: 3, 5: 1));
+
+The `c4` (white) will be replaced by `c3` (whitish) and `c5` (black) by `c1` (white).
+
+**Results**
+
+.. image:: shapes/shapes-final.png
+   :alt: Shape final
+
+.. image:: shapes/shapes-final-options.png
+   :alt: Shape final options
+
+.. _website_themes/shapes/bg/standard/colors/extra:
 
 Add extra colors mapping
 ************************
@@ -84,6 +160,8 @@ keeping the original.
        </div>
    </section>
 
+.. _website_themes/shapes/bg/custom:
+
 Custom
 ------
 
@@ -98,7 +176,7 @@ Firstly, you need to create an SVG file for your shape.
        <polygon points="0 25, 43 0, 86 25, 86 75, 43 100, 0 75" style="fill: #3AADAA;"/>
    </svg>
 
-Make sure to use colors from the default Odoo palette for your shape.
+Make sure to use colors from the default Odoo palette for your shape (as explained :ref:`above <website_themes/shapes/bg>`).
 
 .. code-block:: scss
 
@@ -109,6 +187,10 @@ Make sure to use colors from the default Odoo palette for your shape.
        '4': '#FFFFFF',
        '5': '#383E45',
    }
+.. _website_themes/shapes/bg/custom/attachment:
+
+Attachment
+~~~~~~~~~~
 
 Declare your shape file.
 
@@ -122,8 +204,6 @@ Declare your shape file.
        <field name="public" eval="True"/>
    </record>
 
-.. todo:: Missing description in table ...
-
 .. list-table::
    :header-rows: 1
    :stub-columns: 1
@@ -136,9 +216,15 @@ Declare your shape file.
    * - datas
      - Path to the shape
    * - url
-     - ...
+     - The location of your shape in the web editor. The file is automatically duplicated in
+       `/web_editor/shape/illustration` by the Website Builder.
    * - public
      - Makes the shape available for later editing.
+
+.. _website_themes/shapes/bg/custom/scss:
+
+SCSS
+~~~~
 
 Define the styles of your shape.
 
@@ -179,6 +265,11 @@ Define the styles of your shape.
      - Defines if the shape is repeated vertically. This key is optional and only needs to be
        defined if set to `true`.
 
+.. _website_themes/shapes/bg/custom/option:
+
+Add the option
+~~~~~~~~~~~~~~
+
 Lastly, add your shape to the list of shapes available on the Website Builder.
 
 .. code-block:: xml
@@ -192,42 +283,21 @@ Lastly, add your shape to the list of shapes available on the Website Builder.
        </xpath>
    </template>
 
-Your custom shape can now be used the same way as standard shapes.
+.. _website_themes/shapes/bg/custom/use:
 
-Image shapes
-============
+Use it into your pages
+~~~~~~~~~~~~~~~~~~~~~~
 
-Image shapes are SVG files you can add as a clipping mask on your images. Some shapes have
-customizable colors, and some are animated.
-
-Standard
---------
-
-A large selection of default image shapes is available.
-
-**Use**
+In your XML pages, you can use your shape in the same way as the others.
 
 .. code-block:: xml
 
-   <img src="..."
-       class="img img-fluid mx-auto"
-       alt="..."
-       data-shape="web_editor/solid/blob_2_solid_str"
-       data-shape-colors="#35979C;;;;"
-   >
+    <section class="..." data-oe-shape-data="{'shape': 'illustration/hexagons/01', 'colors': 'c4': '#8595A2', 'c5': 'rgba(0, 255, 0)'}">
+        <div class="o_we_shape o_illustration_hexagons_01"/>
+        <div class="container">
+            <!-- Content -->
+        </div>
+    </section>
 
-.. list-table::
-   :header-rows: 1
-   :stub-columns: 1
-   :widths: 20 80
+You can also redefine colors using the `data-oe-shape-data attribute`, but this is optional.
 
-   * - Attribute
-     - Description
-   * - data-shape
-     - Location of the shape
-   * - data-shape-colors
-     - Colors applied to the shape
-
-.. warning::
-   Sometimes, your image shape might not be applied after adding your changes. To fix the issue,
-   open the Website Builder and save the page to force the shape to load.
