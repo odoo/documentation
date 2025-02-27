@@ -33,6 +33,14 @@ Create your custom shape using the following setup :
    Documentation on :ref:`custom background shapes
    <ANCOR website_themes/shapes/background_shape_custom>`.
 
+.. spoiler:: Solutions
+
+   Find the solution in our Airproof example for:
+   
+   - the shape declaration on `shapes.xml <{GITHUB_PATH}>`_.
+   - adding the shape to the list thanks to `primary_variable.scss <{GITHUB_PATH}>`_ and
+     `option.xml <{GITHUB_PATH}>`_.
+
 Based on the Airproof design, apply the shape you just added to a `Text-Image` building block on the
 homepage :
 
@@ -46,6 +54,23 @@ homepage :
 .. seealso::
    Documentation on how to use :ref:`<ANCOR website_themes/shapes/background_shapes>`.
 
+.. spoiler:: Solutions
+
+   .. code-block:: xml
+      :caption: ``/website_airproof/data/pages/home.xml``
+
+      <!-- Text-image block & Background shape -->
+      <section class="s_text_image o_cc o_cc5 o_colored_level pt120 pb96"
+      data-snippet="s_image_text" data-name="Image - Text" style="background-color: rgb(41, 128,
+      187);" data-oe-shape-data="{'shape':'illustration/airproof/waves','colors':{'c3':'#BBE1FA'}
+      'flip':['x']}">
+         <div class="o_we_shape o_illustration_airproof_waves o_we_flip_x" style="background-image:
+         url('/web_editor/shape/illustration%2Fairproof%2Fwaves.svg?c2=%23BBE1FA');
+         background-position: 100% 100%;"/>
+            [...]
+         </div>
+      </section>
+
 .. _website/customisation_part2/background_gradient:
 
 Add a background gradient
@@ -56,6 +81,19 @@ Apply a custom background gradient to your ”*Latest products*” block, transi
 
 .. seealso::
    Documentation on :ref:`<ANCOR website_themes/gradients>`.
+
+.. spoiler:: Solutions
+
+   .. code-block:: xml
+      :caption: ``/website_airproof/data/pages/home.xml``
+
+      <!-- Latest products section -->
+      <section class="s_parallax o_colored_level o_cc o_cc5 s_parallax_no_overflow_hidden pt40 pb32"
+      data-scroll-background-ratio="0" data-snippet="s_parallax" data-name="Parallax"
+      style="background-image: linear-gradient(0deg, rgb(41, 128, 187) 0%, rgb(11, 142, 230) 100%)
+      !important;">
+         [...]
+      </section>
 
 .. _website/customisation_part2/animations:
 
@@ -78,6 +116,33 @@ Adjust animation delays for smoother transitions.
 
 .. seealso::
    Documentation on :ref:`<ANCOR website_themes/animations>`.
+
+.. spoiler:: Solutions
+
+   Find the solution in our Airproof example on `home.xml <{GITHUB_PATH}>`_.
+
+   .. code-block:: xml
+      :caption: Image animation
+
+      <img src="/web/image/website_airproof.img_sticker" class="img img-fluid position-absolute
+      x_sticker o_animate o_anim_rotate_in o_visible" style="animation-delay: 0.8s;
+      --wanim-intensity: 30;"/>
+
+      <img src="/web/image/website_airproof.img_drone" class="img img-fluid o_animate
+      o_anim_zoom_out o_visible" alt="Drone"/>
+
+   .. code-block:: xml
+      :caption: Text animation
+
+      <span class="o_animated_text o_animate o_anim_fade_in o_anim_from_bottom o_visible">One
+      step</span>
+
+   .. code-block:: xml
+      :caption: Columns animation
+
+      <div class="o_grid_item o_colored_level g-height-7 g-col-lg-3 col-lg-3 text-center
+      o_anim_fade_in o_animate o_anim_from_bottom o_visible" style="z-index: 2;
+      grid-area: 6 / 1 / 12 / 4; --wanim-intensity: 15;">
 
 .. _website/customisation_part2/forms:
 
@@ -115,3 +180,7 @@ contact form must be properly configured.
      - :ref:`<ANCOR website_themes/pages/theme_pages>`,
      - :ref:`<ANCOR website_themes/navigation/menu_item>`.
    | And see documentation on :ref:`<ANCOR website_themes/forms>`.
+
+.. spoiler:: Solutions
+
+   Find the solution in our Airproof example on `contact.xml <{GITHUB_PATH}>`_.
