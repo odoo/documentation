@@ -10,7 +10,7 @@ In this chapter, you will learn how to:
 - Add a copyright section.
 - Improve your website's responsiveness.
 
-.. _howto/website_themes/layout_default :
+.. _howtos/website_themes/layout/default :
 
 Default
 =======
@@ -49,7 +49,7 @@ an `<odoo>` tag.
    Always add an empty line at the end of your file. This can be done automatically by configuring
    your IDE.
 
-.. _howto/website_themes/layout_xpath :
+.. _howtos/website_themes/layout/xpath :
 
 XPath
 =====
@@ -103,7 +103,7 @@ For each XPath, you modify two attributes: **expression** and **position**.
      all inheritance at a glance. As final *XML IDs* are prefixed by the module that creates them,
      there is no overlap.
 
-.. _howto/website_themes/layout_xpath_expressions :
+.. _howtos/website_themes/layout/xpath/expressions :
 
 Expressions
 -----------
@@ -143,7 +143,7 @@ expression to target the right element. The most useful ones are listed below.
    * - \*[@t-call="t-call"]
      - Selects a specific t-call.
 
-.. _howto/website_themes/layout_xpath_position :
+.. _howtos/website_themes/layout/xpath/position :
 
 Position
 --------
@@ -247,7 +247,7 @@ below:
 .. seealso::
    You can find more information about XPath in this `cheat sheet <https://devhints.io/xpath>`_.
 
-.. _howto/website_themes/layout_qweb :
+.. _howtos/website_themes/layout/qweb :
 
 QWeb
 ====
@@ -258,14 +258,14 @@ generate HTML fragments and pages.
 .. seealso::
    :doc:`QWeb templates documentation <../../reference/frontend/qweb>`.
 
-.. _howto/website_themes/layout_custom_fields :
+.. _howtos/website_themes/layout/custom_fields :
 
 Custom fields
 =============
 
 Depending on your needs, you can create custom fields to save data in the database.
 
-.. _howto/website_themes/layout_custom_fields_declaration :
+.. _howtos/website_themes/layout/custom_fields/declaration :
 
 Declaration
 -----------
@@ -286,7 +286,7 @@ First, create a record to declare the field. This field has to be linked to an e
 
 .. note:: Fields creation is also possible (and recommended) through `a model using Python </developer/tutorials/backend>`_.
 
-.. _howto/website_themes/layout_custom_fields_backend :
+.. _howtos/website_themes/layout/custom_fields/backend :
 
 Back-end
 --------
@@ -308,7 +308,7 @@ interface and fill it afterwards.
       </field>
    </record>
 
-.. _howto/website_themes/layout_custom_fields_frontend :
+.. _howtos/website_themes/layout/custom_fields/frontend :
 
 Front-end
 ---------
@@ -320,14 +320,14 @@ The field value can be shown somewhere in a page by calling `model_name.field_na
 
    <h1 t-field="blog_post.x_post_category"/>
 
-.. _howto/website_themes/layout_background :
+.. _howtos/website_themes/layout/background :
 
 Background
 ==========
 
 You can define a color or an image as the background of your website.
 
-.. _howto/website_themes/layout_background_colors :
+.. _howtos/website_themes/layout/background/colors :
 
 Colors
 ------
@@ -344,7 +344,7 @@ Colors
        )
    );
 
-.. _howto/website_themes/layout_background_image_pattern :
+.. _howtos/website_themes/layout/background/image_pattern :
 
 Image/pattern
 -------------
@@ -359,7 +359,7 @@ Image/pattern
       )
    );
 
-.. _howto/website_themes/layout_header :
+.. _howtos/website_themes/layout/header :
 
 Header
 ======
@@ -367,7 +367,7 @@ Header
 By default, the header contains a responsive navigation menu and the company's logo. You can easily
 add new elements or create your own template.
 
-.. _howto/website_themes/layout_header_standard :
+.. _howtos/website_themes/layout/header/standard :
 
 Standard
 --------
@@ -404,7 +404,7 @@ Explicitly set the desired template in the `primary_variables.scss` file.
       <field name="active" eval="True"/>
    </record>
 
-.. _howto/website_themes/layout_header_custom :
+.. _howtos/website_themes/layout/header/custom :
 
 Custom
 ------
@@ -475,14 +475,14 @@ variables.
       </field>
    </record>
 
-.. _howto/website_themes/layout_header_components :
+.. _howtos/website_themes/layout/header/components :
 
 Components
 ----------
 
 In your custom header, you can call several sub-templates using the `t-call` directive from QWeb:
 
-.. _howto/website_themes/layout_header_components_logo :
+.. _howtos/website_themes/layout/header/components/logo :
 
 Logo
 ~~~~
@@ -498,7 +498,7 @@ Logo
    Don't forget to :ref:`create a record of the website logo <howto/website_themes/media_logo>` logo
     in the database.
 
-.. _howto/website_themes/layout_header_components_menu :
+.. _howtos/website_themes/layout/headers/components/menu :
 
 Menu
 ~~~~
@@ -512,7 +512,7 @@ Menu
       </t>
    </t>
 
-.. _howto/website_themes/layout_header_components_signin :
+.. _howtos/website_themes/layout/header/components/signin :
 
 Sign in
 ~~~~~~~
@@ -524,7 +524,7 @@ Sign in
       <t t-set="_link_class" t-valuef="nav-link"/>
    </t>
 
-.. _howto/website_themes/layout_header_components_user_dropdown :
+.. _howtos/website_themes/layout/header/components/user_dropdown :
 
 User dropdown
 ~~~~~~~~~~~~~
@@ -540,7 +540,7 @@ User dropdown
       <t t-set="_dropdown_menu_class" t-valuef="..."/>
    </t>
 
-.. _howto/website_themes/layout_header_components_language_selector :
+.. _howtos/website_themes/layout/header/components/language_selector :
 
 Language selector
 ~~~~~~~~~~~~~~~~~
@@ -551,7 +551,7 @@ Language selector
       <t t-set="_div_classes" t-valuef="..."/>
    </t>
 
-.. _howto/website_themes/layout_header_components_cta :
+.. _howtos/website_themes/layout/header/components/cta :
 
 Call to action
 ~~~~~~~~~~~~~~
@@ -562,7 +562,7 @@ Call to action
       <t t-set="_div_classes" t-valuef="..."/>
    </t>
 
-.. _howto/website_themes/layout_header_components_navbar_toggler :
+.. _howtos/website_themes/layout/header/components/navbar_toggler :
 
 Navbar toggler
 ~~~~~~~~~~~~~~
@@ -577,7 +577,7 @@ Navbar toggler
    You can add a :ref:`header overlay <header_overlay>` to position your header over the content of
    your page. It has to be done on each page individually.
 
-.. _howto/website_themes/layout_footer :
+.. _howtos/website_themes/layout/footer :
 
 Footer
 ======
@@ -585,7 +585,7 @@ Footer
 By default, the footer contains a section with some static content. You can easily add new elements
 or create your own template.
 
-.. _howto/website_themes/layout_footer_standard :
+.. _howtos/website_themes/layout/footer/standard :
 
 Standard
 --------
@@ -621,7 +621,7 @@ footer template first.
       <field name="active" eval="True"/>
    </record>
 
-.. _howto/website_themes/layout_footer_custom :
+.. _howtos/website_themes/layout/footer/custom :
 
 Custom
 ------
@@ -674,7 +674,7 @@ active footer template first.
        </field>
     </record>
 
-.. _howto/website_themes/layout_copyright :
+.. _howtos/website_themes/layout/copyright :
 
 Copyright
 =========
@@ -694,7 +694,7 @@ To replace the content or modify its structure, you can add your own code to the
        </xpath>
     </template>
 
-.. _howto/website_themes/layout_dropzone :
+.. _howtos/website_themes/layout/dropzone :
 
 Drop zone
 =========
@@ -736,7 +736,7 @@ You can also populate an existing drop zone with your content.
        </xpath>
     </template>
 
-.. _howto/website_themes/layout_responsive :
+.. _howtos/website_themes/layout/responsive :
 
 Responsive
 ==========
@@ -752,7 +752,7 @@ Odoo in general relies on the Bootstrap framework which eases the responsiveness
    - `Bootstrap documentation on display property
      <https://getbootstrap.com/docs/5.1/utilities/display/>`_
 
-.. _howto/website_themes/layout_reponsive_font_sizes :
+.. _howtos/website_themes/layout/reponsive/font_sizes :
 
 Font sizes
 ----------
@@ -764,7 +764,7 @@ across device and viewport sizes (relying on the `$enable-rfs` variable).
    - `Bootstrap documentation about responsive font sizes
      <https://getbootstrap.com/docs/5.1/getting-started/rfs/>`_
 
-.. _howto/website_themes/layout_reponsive_column_sizes :
+.. _howtos/website_themes/layout/reponsive/column_sizes :
 
 Column sizes
 -------------
@@ -781,7 +781,7 @@ medium breakpoints (`col-md-4` for example).
    - `Bootstrap documentation on responsive breakpoints <https://getbootstrap.com/docs/5.1/layout/breakpoints/>`_
    - `Bootstrap documentation about the grid <https://getbootstrap.com/docs/5.1/layout/grid/>`_
 
-.. _howto/website_themes/layout_reponsive_visibility_conditions :
+.. _howtos/website_themes/layout/reponsive/visibility_conditions :
 
 Visibility conditions
 ---------------------
