@@ -767,7 +767,7 @@ across device and viewport sizes (relying on the `$enable-rfs` variable).
 .. _howtos/website_themes/layout/reponsive/column_sizes :
 
 Column sizes
--------------
+------------
 
 Bootstrap uses a grid made of rows and columns to layout a page. Thanks to this structure, columns
 can be sized differently on mobile and desktop. In this version, the Website Builder allows to set
@@ -797,7 +797,7 @@ Hide a section on desktop:
 .. code-block:: xml
 
    <section class="s_text_block o_cc o_cc1 o_colored_level pt16 pb16 d-lg-none o_snippet_desktop_invisible" data-snippet="s_text_block" name="Text">
-	   <!-- Content -->
+       <!-- Content -->
    </section>
 
 Hide a column on mobile:
@@ -828,7 +828,7 @@ Hide a column on mobile:
      - It tells the Website Builder that the element is hidden and is using visibility conditions
        option.
    * - o_snippet_desktop_invisible
-     - It tells the Website Builder that the element is hidden **on desktop :and:** is using visibility
+     - It tells the Website Builder that the element is hidden **on desktop and** is using visibility
        conditions option.
    * - d-none
      - Hide the element in every situations.
