@@ -525,9 +525,9 @@ data. By default, access to newly created models is restricted until it is expli
 Granting access rights is done by creating records of the `ir.model.access` model, which specifies
 who has access to which model.
 
-The topic of security will be covered in detail in :doc:`../restrict_data_access`. For now, we'll
-just give ourselves access rights to the `real.estate.property` model to get rid of the warning that
-began being logged at server start-up after creating the model:
+The topic of security will be covered in detail in :doc:`06_security`. For now, we'll just give
+ourselves access rights to the `real.estate.property` model to get rid of the warning that began
+being logged at server start-up after creating the model:
 
 .. code-block:: text
 
