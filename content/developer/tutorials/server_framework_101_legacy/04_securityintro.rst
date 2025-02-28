@@ -13,7 +13,7 @@ intended to store business data. In a business application such as Odoo, one of 
 to consider is who\ [#who]_ can access the data. Odoo provides a security mechanism to allow access
 to the data for specific groups of users.
 
-The topic of security is covered in more detail in :doc:`../restrict_data_access`. This chapter aims
+The topic of security is covered in more detail in :doc:`restrict_data_access`. This chapter aims
 to cover the minimum required for our new module.
 
 Data Files (CSV)
