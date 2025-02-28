@@ -23,7 +23,7 @@ the following way.
    </template>
 
 Each default page is a template with its own content saved into a record. This is the reason why,
-:ref:`custom pages are created within a record <howtos/website_themes/pages_theme>`.
+:ref:`custom pages are created within a record <howtos/website_themes/pages/theme_pages>`.
 
 The `<t -call='website.layout'>` has some variabls that can be set:
 
