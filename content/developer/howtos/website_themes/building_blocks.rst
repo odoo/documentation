@@ -609,7 +609,7 @@ This tag is used inside `<we-select>` and `<we-button-group>`.
       <we-button data-select-class="mt-5">3</we-button>
    </we-button-group>
 
-Add `data-select-class=""`` to indicate which class is added to the targeted element when this
+Add `data-select-class=""` to indicate which class is added to the targeted element when this
 choice is selected. Like any XML node, add other attributes allows to improve the style and/or the
 user experience.
 
