@@ -4,7 +4,7 @@ Pages
 
 In this chapter, you will learn how to declare static pages.
 
-.. _howto/website_themes/pages_default :
+.. _howtos/website_themes/pages/default :
 
 Default pages
 =============
@@ -23,7 +23,7 @@ the following way.
    </template>
 
 Each default page is a template with its own content saved into a record. This is the reason why,
-:ref:`custom pages are created within a record <howto/website_themes/pages_theme>`.
+:ref:`custom pages are created within a record <howtos/website_themes/pages_theme>`.
 
 The `<t -call='website.layout'>` has some variabls that can be set:
 
@@ -111,7 +111,7 @@ Alternatively, replace the default content of these pages using XPath.
 .. seealso::
    - :doc:`Odoo Documentation on SEO <../../../applications/websites/website/pages/seo>`
 
-.. _howto/website_themes/pages_theme :
+.. _howtos/website_themes/pages/theme_pages :
 
 Theme pages
 ===========
@@ -174,7 +174,7 @@ page object.
 
 With `<t t-call="website.layout">` you use the Odoo default page layout with your code.
 
-.. _howto/website_themes/pages_theme_noupdate :
+.. _howtos/website_themes/pages/theme_pages/noupdate :
 
 `noupdate` attribute
 --------------------
@@ -212,7 +212,7 @@ the first module installation but not updated after a module update.
 
    Of course not. It's technically usable for every type of records.
 
-.. _howto/website_themes/pages_theme_header_overlay :
+.. _howtos/website_themes/pages/theme_pages/header_overlay :
 
 Header overlay
 --------------
