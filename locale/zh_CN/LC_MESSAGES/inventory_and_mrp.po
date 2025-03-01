@@ -37462,7 +37462,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/unbuild_orders.rst:85
 msgid "Scrap unusable components"
-msgstr ""
+msgstr "报废无法使用的部件"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/unbuild_orders.rst:87
 msgid ""
@@ -37472,13 +37472,16 @@ msgid ""
 "should be removed from inventory using a :doc:`scrap order "
 "<../../inventory/warehouses_storage/inventory_management/scrap_inventory>`."
 msgstr ""
+"在某些情况下，部件在拆卸过程结束后可能无法使用。为确保库存计数准确反映手头可用组件的数量，应使用 :doc:`报废订单 "
+"<.../../inventory/warehouses_storage/inventory_management/scrap_inventory>` "
+"从库存中移除任何不能再使用的组件。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:16
 msgid ""
 "In Odoo's *Manufacturing* app, the *master production schedule* (MPS) is "
 "used to manually plan manufacturing orders (MOs) and purchase orders (POs), "
 "based on forecasted quantities of products and components."
-msgstr ""
+msgstr "在 Odoo *制造*应用程序中，*主生产计划*（MPS）用于根据产品和组件的预测数量手动计划制造订单（MO）和采购订单（PO）。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:20
 msgid ""
@@ -37487,20 +37490,21 @@ msgid ""
 " replenishment. This ensures the continued availability of the necessary "
 "products and components."
 msgstr ""
+"通过考虑已确认的 |MO| 和 |PO| 以及人工调整的需求预测的影响，|MPS| 可用于管理长期产品补货。这可确保持续供应必要产品和组件。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:24
 msgid ""
 "Since the |MPS| allows for manual intervention, it is useful for "
 "replenishing products where the demand of existing sales orders (SOs) does "
 "**not** reflect probable future demand."
-msgstr ""
+msgstr "由于 |MPS| 允许手动干预，因此在现有销售订单（SO）的需求**不能**反映未来可能需求的情况下，|MPS| 对补货非常有用。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:28
 msgid ""
 "A retail store sells artificial *Christmas trees* during the holiday season."
 " It is currently September, and the store has less than ten Christmas tree "
 "|MOs| confirmed for the month of December."
-msgstr ""
+msgstr "一家零售店在节日期间销售人造*圣诞树*。目前是 9 月份，该店已确认的 12 月份圣诞树数量不足 10 棵。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:32
 msgid ""
@@ -37510,6 +37514,8 @@ msgid ""
 " in the |MPS|, so they can properly replenish the product in time for the "
 "increase in customer demand."
 msgstr ""
+"尽管已确认的 |MO| 数量很多，但采购经理知道，一旦节日季开始，12 月份对圣诞树的需求将大增。因此，他们在 |MPS| "
+"中手动输入了更大的需求量，以便在客户需求增加时及时适当补货。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:38
 msgid ""
@@ -37519,6 +37525,8 @@ msgid ""
 "should be replenished, but requires user input to create the |MOs| or |POs| "
 "that are used to replenish it."
 msgstr ""
+"必须记住，|MPS| 是一个 **人工** 工具。将产品添加到 |MPS| 中并不会自动生产或采购该产品。|MPS| "
+"只是建议应补货的产品数量，但需要用户输入信息来创建用于补充的 |MO| 或 |PO|。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:43
 msgid ""
@@ -37528,10 +37536,12 @@ msgid ""
 "|MPS|. Using both, in unison, can lead to inaccurate forecasts and the "
 "creation of unnecessary replenishment orders."
 msgstr ""
+"因此，建议 |MPS| **不** 与同一产品的重新排序规则同时使用。因为重新排序规则是一种自动工作流程，与 |MPS| "
+"的手动补货方法相冲突。同时使用这两种方法会导致预测不准确，并产生不必要的补货订单。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:49
 msgid "Enable and configure |MPS|"
-msgstr ""
+msgstr "启用并配置 |MPS|"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:51
 msgid ""
@@ -37540,6 +37550,8 @@ msgid ""
 "Schedule` checkbox in the :guilabel:`Planning` section. Finally, click "
 ":guilabel:`Save`."
 msgstr ""
+"要使用 |MPS| 功能，请导航至 :menuselection:`制造应用程序 --> 配置 --> 设置`，并在 :guilabel:`计划` "
+"部分勾选 :guilabel:`主生产计划` 复选框。最后，点击 :guilabel:`保存`。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:55
 msgid ""
@@ -37547,6 +37559,8 @@ msgid ""
 "fields appear under it on the :guilabel:`Settings` page: :guilabel:`Time "
 "Range` and :guilabel:`Number of Columns`."
 msgstr ""
+"启用 :guilabel:`主生产计划` 功能后，:guilabel:`设置` 页面上将出现两个新字段：:guilabel:`时间范围` 和 "
+":guilabel:`列数`。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:58
 msgid ""
@@ -37556,6 +37570,8 @@ msgid ""
 ":guilabel:`Monthly` is selected, the |MPS| plans the production requirements"
 " of products and components on a monthly basis."
 msgstr ""
+":guilabel:`时间范围` 字段用于选择进行计划的时间段，有三个选项：:guilabel:`每月`、:guilabel:`每周` "
+"和:guilabel:`每日`。例如，如果选择 :guilabel:`每月`，|MPS| 将按月计划产品和组件的生产需求。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:63
 msgid ""
@@ -37565,30 +37581,34 @@ msgid ""
 "and `12` is entered in the :guilabel:`Number of Columns` field, the |MPS| "
 "shows one column for the next 12 months, starting with the current month."
 msgstr ""
+":guilabel:`列数` 字段用于指定 |MPS| 页面上显示的所选 :guilabel:`时间范围` 单位的数量。例如，如果 "
+":guilabel:`时间范围` 字段设置为 :guilabel:`每月`，并在 :guilabel:`列数` 字段中输入 `12`，|MPS| "
+"将显示从当前月份开始的未来 12 个月的一列。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:68
 msgid ""
 "If the values of the :guilabel:`Time Range` or :guilabel:`Number of Columns`"
 " fields are altered, click :guilabel:`Save` again to save the changes."
 msgstr ""
+"如果更改了 :guilabel:`时间范围` 或 :guilabel:`列数` 字段的值，请再次点击 :guilabel:`保存`，以保存更改。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst-1
 msgid "The MPS setting in the Manufacturing app's settings."
-msgstr ""
+msgstr "制造应用设置中的 MPS 设置。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:76
 msgid "|MPS| dashboard"
-msgstr ""
+msgstr "|MPS| 仪表板"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:78
 msgid ""
 "To open the |MPS|, navigate to :menuselection:`Manufacturing app --> "
 "Planning --> Master Production Schedule`. The |MPS| view appears as follows:"
-msgstr ""
+msgstr "要打开 |MPS|，请导航至:menuselection:`制造应用程序 --> 计划 --> 主生产计划`。|MPS| 视图显示如下："
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst-1
 msgid "The Master Production Schedule in the Manufacturing app."
-msgstr ""
+msgstr "制造应用程序中的主生产计划。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:85
 msgid ""
@@ -38014,7 +38034,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:3
 msgid "Work center time off"
-msgstr ""
+msgstr "工作中心休假"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:7
 msgid ""
@@ -38033,6 +38053,8 @@ msgid ""
 " being unavailable for a set period of time. Doing so ensures manufacturing "
 "operations can continue until the impacted work center is available again."
 msgstr ""
+"因此，有必要在 Odoo 中停用工作中心，这样新工单就会被转发到其他可运行的工作中心。使用 Odoo **休假** "
+"应用程序，可以将工作中心指定为在设定时间内不可用。这样做可确保生产操作能够继续进行，直到受影响的工作中心再次可用。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:19
 msgid ""
@@ -38041,12 +38063,14 @@ msgid ""
 ":ref:`developer mode <developer-mode>`. This allows the *Time Off* smart "
 "button to appear on each work center's *Working Hours* page."
 msgstr ""
+"在将工作中心指定为不可用之前，必须正确配置 Odoo 平台。首先，必须启用 :ref:`开发者模式<developer-"
+"mode>`。这样就可以在每个工作中心的*工作时间*页面上显示*休假*智能按钮。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:23
 msgid ""
 "Next, install the **Time Off** app. This is the app used for managing time "
 "off for all resources within Odoo, including employees and work centers."
-msgstr ""
+msgstr "接下来，安装 **休假** 应用程序。该应用程序用于管理 Odoo 中所有资源的休假时间，包括员工和工作中心。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:26
 msgid ""
@@ -39989,65 +40013,65 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:32
 msgid ""
 ":guilabel:`# of Lines`: The number of |PO| order lines, across all |POs|."
-msgstr ""
+msgstr ":guilabel:`订单行数`：所有 |PO| 中的 |PO| 订单行数。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:33
 msgid ":guilabel:`Average Cost`: The average cost of |POs|."
-msgstr ""
+msgstr ":guilabel:`平均成本`：POS 平均成本。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:34
 msgid ""
 ":guilabel:`Days to Confirm`: The number of days it takes to confirm a |PO|."
-msgstr ""
+msgstr ":guilabel:`确认天数`：确认 |PO| 所需的天数。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:35
 msgid ""
 ":guilabel:`Days to Receive`: The number of days it takes to receive the "
 "products in a |PO|."
-msgstr ""
+msgstr ":guilabel:`收货天数`：收到 |PO| 中的产品所需的天数。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:36
 msgid ":guilabel:`Gross Weight`: The total weight of purchased products."
-msgstr ""
+msgstr ":guilabel:`毛重`：购买产品的总重量。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:37
 msgid ""
 ":guilabel:`Qty Billed`: The quantity of a product (or products) for which "
 "the vendor has already been billed."
-msgstr ""
+msgstr ":guilabel:`已结算数量`：供应商已收到账单的产品数量。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:39
 msgid ""
 ":guilabel:`Qty Ordered`: The quantity of a product (or products) ordered."
-msgstr ""
+msgstr ":guilabel:`订购数量`：订购产品的数量。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:40
 msgid ""
 ":guilabel:`Qty Received`: The quantity of an ordered product (or products) "
 "received."
-msgstr ""
+msgstr ":guilabel:`已收到数量`：已收到的订购产品（或产品）的数量。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:41
 msgid ""
 ":guilabel:`Qty to be Billed`: The quantity of an ordered product (or "
 "products) for which the vendor has yet to be billed."
-msgstr ""
+msgstr ":guilabel:`待结算数量`：供应商尚未收到账单的已订购产品（或产品）的数量。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:43
 msgid ":guilabel:`Total`: The total amount spent, including tax."
-msgstr ""
+msgstr ":guilabel:`总计`：消费总额（含税）。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:44
 msgid ""
 ":guilabel:`Untaxed Total`: The total amount spent, excluding tax. This "
 "measure is selected by default."
-msgstr ""
+msgstr ":guilabel:`不含税总额`：支出总额（不含税）。默认选择此项。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:46
 msgid ""
 ":guilabel:`Volume`: The total volume of ordered products, for products which"
 " are measured by volume."
-msgstr ""
+msgstr ":guilabel:`体积`：订购产品的总体积，适用于按体积计量的产品。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:48
 msgid ":guilabel:`Count`: The total count of |POs|."
@@ -40139,11 +40163,11 @@ msgstr "基于这些发现，David 决定减少从 Bike Friends 购买产品的�
 msgid ""
 "The Purchase report, showing the average days to receive products from "
 "vendors."
-msgstr ""
+msgstr "采购报告，显示从供应商收到产品的平均天数。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:101
 msgid "Use case: compare vendor POs for two time periods"
-msgstr ""
+msgstr "用例：比较两个时间段的供应商采购单"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/analyze.rst:103
 msgid ""
@@ -40300,6 +40324,9 @@ msgid ""
 "the pivot view provides the most detailed view of the data, and is the "
 "recommended starting point."
 msgstr ""
+"虽然 |per| 也可以 :ref:`<purchase/view-results>` 作为 :icon:`fa-bar-"
+"chart`:guilabel:`（条形图）`、:icon:`fa-line-chart` :guilabel:`（折线图）` 或 :icon:`fa-"
+"pie-chart`:guilabel:`（饼状图）` 查看，但透视图提供了最详细的数据视图，建议从透视图开始查看。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/procurement_expenses_report.rst:37
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:29
@@ -40309,6 +40336,8 @@ msgid ""
 ":guilabel:`Filters`, :guilabel:`Group By`, and :guilabel:`Favorites` "
 "columns."
 msgstr ""
+"删除 :guilabel:`搜索...` 栏中的任何默认筛选器。然后，点击 |caret|，打开包含 "
+":guilabel:`筛选器`、:guilabel:`分组依据` 和 :guilabel:`收藏夹` 列的下拉菜单。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/procurement_expenses_report.rst:42
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:34
@@ -40318,6 +40347,8 @@ msgid ""
 "Quotation` or :guilabel:`Purchase Orders` under the :guilabel:`Filters` "
 "column."
 msgstr ""
+"除非另有说明，否则报告将同时显示来自 |RFQ| 和 |PO| 的数据。可以通过在 :guilabel:`筛选` 列下选择 "
+":guilabel:`报价请求` 或 :guilabel:`采购订单` 来更改。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/procurement_expenses_report.rst:46
 msgid ""
@@ -40326,6 +40357,8 @@ msgid ""
 ":guilabel:`Confirmation Date`. Choose one from the list, and click the "
 "|caret| to specify the date range, either by month, quarter, or year."
 msgstr ""
+"在 :guilabel:`筛选` 列下，选择用于比较的时间范围。报告可按 :guilabel:`订单日期` 或 :guilabel:`确认日期` "
+"进行筛选。从列表中选择其一，然后点击 |caret|，按月、季度或年指定日期范围。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/procurement_expenses_report.rst:50
 msgid ""
@@ -40333,6 +40366,8 @@ msgid ""
 "Then, select :guilabel:`Product Category`, which is also located in the "
 ":guilabel:`Group By` column."
 msgstr ""
+"然后，在 :guilabel:`分组方式` 列下选择 :guilabel:`供应商`。然后，选择 :guilabel:`产品类别`，它也位于 "
+":guilabel:`分组方式` 列。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/procurement_expenses_report.rst:54
 msgid ""
@@ -40342,6 +40377,8 @@ msgid ""
 "more in depth look at the performance of specific items, in place of an "
 "entire category."
 msgstr ""
+"根据各公司的需要，可以更改 :guilabel:`分组方式` 标题下的选择。例如，选择 :guilabel:`产品` 而不是 "
+":guilabel:`产品类别`，可以更深入地查看特定项目的性能，而不是整个类别。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/procurement_expenses_report.rst:59
 msgid ""
@@ -40352,25 +40389,28 @@ msgid ""
 "as the last month or quarter. :guilabel:`Previous Year` compares the same "
 "time period from the previous year."
 msgstr ""
+"接下来，在出现的 :guilabel:`比较` 标题下进行选择。这些选项只有在 :guilabel:`筛选器` "
+"列下选择日期范围后才可用，并根据该范围而有所不同。 :guilabel:`上一时期` 添加与上一时期的比较，如上一个月或上一季度。 "
+":guilabel:`上一年` 比较上一年的同一时期。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/procurement_expenses_report.rst:65
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:60
 msgid ""
 "While multiple time-based filters can be added at once, only one comparison "
 "can be selected at a time."
-msgstr ""
+msgstr "虽然可以同时添加多个基于时间的筛选器，但一次只能选择一个比较。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/procurement_expenses_report.rst:73
 msgid ""
 "The drop-down menu of filters, group by and comparison options for the procurement expenses\n"
 "report."
-msgstr ""
+msgstr "筛选下拉菜单，采购费用报告的分组方式和比较选项"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/procurement_expenses_report.rst:73
 msgid ""
 "The filter for Q2, comparison for **Previous Period**, and group-by for "
 "**Vendor** and **Product Category** were selected."
-msgstr ""
+msgstr "选择了第二季度作为筛选条件，**与上期对比**作为比较方式，并按**供应商**和**产品类别**进行分组。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/procurement_expenses_report.rst:77
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:68
@@ -40824,14 +40864,14 @@ msgstr ""
 msgid ""
 ":guilabel:`Select only one RfQ (exclusive)`: when a purchase order is "
 "confirmed, the remaining purchase orders are cancelled."
-msgstr ""
+msgstr ":guilabel:`仅选择一个RfQ（独占）`：当确认一个采购订单时，其余的采购订单将被取消。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:99
 msgid ""
 ":guilabel:`Select multiple RfQ (non-exclusive)`: when a purchase order is "
 "confirmed, remaining purchase orders are **not** cancelled. Instead, "
 "multiple purchase orders are allowed."
-msgstr ""
+msgstr ":guilabel:`选择多个RfQ（非独占）`：当确认一个采购订单时，其余的采购订单**不会**被取消。相反，允许存在多个采购订单。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:102
 msgid ""
@@ -40993,14 +41033,14 @@ msgstr ":doc:`calls_for_tenders`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:3
 msgid "Call for tenders"
-msgstr ""
+msgstr "要求招标"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:12
 msgid ""
 "Sometimes, companies might want to invite vendors to submit offers for "
 "similar goods or services all at once. This helps companies select the "
 "cheapest, fastest vendors for their specific business needs."
-msgstr ""
+msgstr "有时，公司可能希望邀请供应商一次性提交类似商品或服务的报价。这有助于公司选择最便宜、最快的供应商，以满足其特定的业务需求。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:16
 msgid ""
@@ -41044,13 +41084,13 @@ msgstr "创建询价单"
 msgid ""
 "To create a new |RfQ|, follow the instructions in the :doc:`rfq` "
 "documentation."
-msgstr ""
+msgstr "要创建新的 |RfQ| ，请按照 :doc:`rfq` 文档中的说明操作。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:47
 msgid ""
 "`Odoo Tutorial: Purchase Basics and Your First Request for Quotation "
 "<https://www.youtube.com/watch?v=o_uI718P1Dc>`_"
-msgstr ""
+msgstr "`Odoo教程：采购基础和第一次询价 <https://www.youtube.com/watch?v=o_uI718P1Dc>`_"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:53
 msgid "Create alternative |RfQs|"
@@ -41249,6 +41289,8 @@ msgid ""
 " be located, click the :icon:`fa-chevron-down` :guilabel:`(chevron)` icon to"
 " the right of the search bar, at the top of the pop-up window."
 msgstr ""
+"如果正在处理大量 |PO|，且无法找到前一个|PO|，请点击弹出窗口顶部搜索栏右侧的 :icon:`fa-chevron-"
+"down`:guilabel:`(chevron)`图标。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:151
 msgid ""
@@ -41339,7 +41381,7 @@ msgid ""
 "Once the desired products have been chosen from the :guilabel:`Compare Order"
 " Lines` page, the remaining |RfQs|, from which no products were chosen, can "
 "be cancelled."
-msgstr ""
+msgstr "一旦从 :guilabel:`比较订单行` 页面选择了所需的产品，就可以取消未选择产品的其余 |RfQ|。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:202
 msgid ""
@@ -41353,23 +41395,23 @@ msgid ""
 "Although they haven't been cancelled yet, this indicates that each of those "
 "orders can be cancelled without having an effect on the other live orders, "
 "once those orders have been confirmed."
-msgstr ""
+msgstr "虽然这些订单还没有被取消，但这表明，一旦这些订单被确认，就可以取消其中的每一个订单，而不会对其他实时订单产生影响。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst-1
 msgid "Cancelled quotations in the Purchase app overview."
-msgstr ""
+msgstr "在采购应用程序概览中取消报价。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:212
 msgid ""
 "To confirm an |RfQ| for which products were selected, click into an |RfQ|, "
 "and click :guilabel:`Confirm Order`."
-msgstr ""
+msgstr "要确认已选择产品的 |RfQ|，请点击 |RfQ|，然后点击 :guilabel:`确认订单`。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:215
 msgid ""
 "This causes a :guilabel:`What about the alternative Requests for "
 "Quotations?` pop-up window to appear."
-msgstr ""
+msgstr "这将导致弹出 :guilabel:`另一种询价方式如何？` 窗口。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:218
 msgid ""
@@ -41390,6 +41432,7 @@ msgid ""
 "up window, two options are presented: :guilabel:`Cancel Alternatives` and "
 ":guilabel:`Keep Alternatives`."
 msgstr ""
+"在 :guilabel:`其他报价请求如何？`弹出窗口中，有两个选项：:guilabel:`取消替代选项` 和 :guilabel:`保留替代选项`。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:227
 msgid "If this |PO| should **not** be confirmed, click :guilabel:`Discard`."
@@ -41409,7 +41452,7 @@ msgstr ""
 msgid ""
 "Once all products are ordered, select :guilabel:`Cancel Alternatives` from "
 "whichever |PO| is open at that time."
-msgstr ""
+msgstr "订购完所有产品后，从当时打开的 |PO| 中选择 :guilabel:`取消替代选项`。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst-1
 msgid "Keep or cancel pop-up for alternative RFQs."
@@ -41420,14 +41463,14 @@ msgid ""
 "Finally, using the breadcrumbs at the top of the page, click "
 ":guilabel:`Requests for Quotation` to navigate back to an overview of all "
 "|RfQs|."
-msgstr ""
+msgstr "最后，使用页面顶部的面包屑导航，点击 :guilabel:`请求报价` 返回所有 |RfQ| 概览。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:243
 msgid ""
 "The cancelled orders can be seen, greyed out and listed with a "
 ":guilabel:`Cancelled` status, under the :guilabel:`Status` column at the "
 "far-right of their respective rows."
-msgstr ""
+msgstr "在各行最右侧的 :guilabel:`状态` 列中，可以看到被取消的订单，它们都是灰色的，并带有 :guilabel:`已取消` 状态。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/calls_for_tenders.rst:246
 msgid ""
@@ -41673,23 +41716,25 @@ msgid ""
 ":menuselection:`Purchase app --> Orders --> Purchase Orders`, and select a "
 "|PO| to view."
 msgstr ""
+"要查看 |PO| 的:guilabel:`账单状态`，请导航至 :menuselection:`采购应用程序 --> 订单 --> "
+"采购订单`，然后选择要查看的 |PO|。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:131
 msgid ""
 "Click the :guilabel:`Other Information` tab, and locate the "
 ":guilabel:`Billing Status` field."
-msgstr ""
+msgstr "点击 :guilabel:`其他信息` 选项卡，找到 :guilabel:`账单状态` 字段。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst-1
 msgid "Billing status field on a purchase order form."
-msgstr ""
+msgstr "采购订单表上的账单状态字段。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:137
 msgid ""
 "The table below details the different values the :guilabel:`Billing Status` "
 "field could read, and when they are displayed, depending on the *Bill "
 "Control* policy used."
-msgstr ""
+msgstr "下表详细说明了 :guilabel:`账单状态` 字段可读取的不同值，以及何时显示这些值，具体取决于所使用的 *账单控制* 策略。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:144
 msgid "Billing Status"
@@ -41755,13 +41800,14 @@ msgid ""
 "arrive from vendors, and can include amounts owed for the goods and/or "
 "services purchased, sales taxes, freight and delivery charges, and more."
 msgstr ""
+"*供应商账单*是公司从供应商处购买产品和/或服务时收到的发票。供应商账单记录了从供应商处收到的应付款项，其中可能包括所购商品和/或服务的欠款、销售税、运费和送货费等。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:16
 msgid ""
 "In Odoo, a vendor bill can be created at different points in the purchasing "
 "process, depending on the *bill control* policy chosen in the *Purchase* "
 "app's settings."
-msgstr ""
+msgstr "在 Odoo 中，供应商账单可在采购流程的不同阶段创建，具体取决于*采购* 应用程序设置中选择的 *账单控制* 政策。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:22
 msgid ""
@@ -41769,40 +41815,42 @@ msgid ""
 ":menuselection:`Purchase app --> Configuration --> Settings`, and scroll to "
 "the :guilabel:`Invoicing` section."
 msgstr ""
+"要配置默认账单控制策略，请导航至 :menuselection:`采购应用程序 --> 配置 --> 设置`，然后滚动到 "
+":guilabel:`开具发票` 部分。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:25
 msgid ""
 "The :guilabel:`Bill Control` feature lists two policy options: "
 ":guilabel:`Ordered quantities` and :guilabel:`Received quantities`."
-msgstr ""
+msgstr ":guilabel:`账单控制` 功能列出两个策略选项：:guilabel:`已订购数量` 和 :guilabel:`已收货数量`。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:28
 msgid ""
 "The policy selected acts as the default for any new product created. Each "
 "policy acts as follows:"
-msgstr ""
+msgstr "所选策略将作为创建任何新产品的默认设置。每种策略的作用如下："
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:30
 msgid ""
 ":guilabel:`Ordered quantities`: creates a vendor bill as soon as a purchase "
 "order is confirmed. The products and quantities in the purchase order are "
 "used to generate a draft bill."
-msgstr ""
+msgstr ":guilabel:`已订购数量`：采购订单确认后立即创建供应商账单。采购订单中的产品和数量用于生成账单草稿。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:32
 msgid ""
 ":guilabel:`Received quantities`: a bill is only created **after** all (or "
 "part) of the total order has been received. The products and quantities "
 "received are used to generate a draft bill."
-msgstr ""
+msgstr ":guilabel:`已收货数量`：只有在收到全部（或部分）订单**后**才会创建账单。收到的产品和数量用于生成账单草稿。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst-1
 msgid "Bill control policies in purchase app settings."
-msgstr ""
+msgstr "采购应用程序设置中的账单控制策略。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:39
 msgid "Once a policy is selected, click :guilabel:`Save` to save the changes."
-msgstr ""
+msgstr "选择策略后，点击 :guilabel:`保存`，以保存更改。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:42
 msgid ""
@@ -41811,16 +41859,18 @@ msgid ""
 "going to the :guilabel:`Purchase` tab on a product form, and selecting the "
 "desired policy in the :guilabel:`Control Policy` field."
 msgstr ""
+"如果产品需要一个与**采购**应用程序设置中不同的控制策略，可以通过在产品表单的 :guilabel:`采购` 选项卡中，在 "
+":guilabel:`控制策略` 字段中选择所需的策略，来覆盖该产品的控制策略。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:0
 msgid "Control policy field on product form."
-msgstr ""
+msgstr "产品表单上的控制策略字段。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:53
 msgid ""
 "The *3-way matching* policy ensures vendor bills are only paid once all (or "
 "some) products in a purchase order (PO) have been received."
-msgstr ""
+msgstr "*三方匹配* 策略确保只有在收到采购订单（PO）中的所有（或部分）产品后，才会支付供应商账单。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:56
 msgid ""
@@ -41828,22 +41878,25 @@ msgid ""
 "Configuration --> Settings`, and scroll to the :guilabel:`Invoicing` "
 "section."
 msgstr ""
+"要激活三方匹配，请导航至 :menuselection:`采购应用程序 --> 配置 --> 设置`，然后滚动到 :guilabel:`开具发票` "
+"部分。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:59
 msgid ""
 "Tick the checkbox next to :guilabel:`3-way matching`, and click "
 ":guilabel:`Save`."
-msgstr ""
+msgstr "勾选 :guilabel:`三方匹配` 旁边的复选框，然后点击 :guilabel:`保存`。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:62
 msgid ""
 "The :guilabel:`3-way matching` feature is **only** intended to work with the"
 " :guilabel:`Bill Control` policy set to :guilabel:`Received quantities`."
 msgstr ""
+":guilabel:`三方匹配` 功能**仅**用于将 :guilabel:`账单控制` 策略设置为 :guilabel:`已收到数量` 时。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:66
 msgid "Create and manage vendor bills on receipts"
-msgstr ""
+msgstr "创建和管理收据上的供应商账单"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:68
 msgid ""
@@ -41869,6 +41922,8 @@ msgid ""
 ":menuselection:`Purchase app`, and click :guilabel:`New` from the "
 ":guilabel:`Requests for Quotation` dashboard."
 msgstr ""
+"对于那些*账单控制*策略被设置为*订购数量*的收据，如果要创建和管理其供应商账单，首先导航到 :menuselection:`采购应用程序`，然后从 "
+":guilabel:`询价请求` 仪表板点击 :guilabel:`新建`。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:82
 msgid ""
@@ -41876,6 +41931,8 @@ msgid ""
 "blank |RfQ| form, add a :guilabel:`Vendor`, and click :guilabel:`Add a line`"
 " under the :guilabel:`Product` tab to add products to the order."
 msgstr ""
+"这样做会打开一个新的 :guilabel:`请求报价` 表单。在空白的 |RfQ| 表单上，添加一个 :guilabel:`供应商` 并点击 "
+":guilabel:`产品` 选项卡下的 :guilabel:`添加行` 添加产品到订单。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:86
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:126
@@ -41883,14 +41940,14 @@ msgid ""
 "On the product line, select a product from the drop-down menu in the "
 ":guilabel:`Product` field, and enter the quantity to order in the "
 ":guilabel:`Quantity` field."
-msgstr ""
+msgstr "在产品行，从 :guilabel:`产品` 字段的下拉菜单中选择产品，并在 :guilabel:`数量` 字段中输入要订购的数量。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:89
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:129
 msgid ""
 "Once ready, click :guilabel:`Confirm Order` to confirm the |RfQ| into a "
 "|PO|."
-msgstr ""
+msgstr "准备就绪后，点击 :guilabel:`确认订单` 将 |RfQ| 确认为 |PO|。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:91
 msgid ""
@@ -41898,26 +41955,28 @@ msgid ""
 ":guilabel:`Vendor Bill` form in the :guilabel:`Draft` state. From here, add "
 "a billing date in the :guilabel:`Bill Date` field."
 msgstr ""
+"然后，点击 :guilabel:`创建账单` 创建供应商账单。这将打开处于 :guilabel:`草稿` 状态的 :guilabel:`供应商账单` "
+"表单。在 :guilabel:`账单日期` 字段中添加账单日期。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:95
 msgid ""
 "Once ready, confirm the bill by clicking :guilabel:`Confirm` on the "
 ":guilabel:`Vendor Bill` page."
-msgstr ""
+msgstr "准备就绪后，点击 :guilabel:`供应商账单` 页面上的 :guilabel:`确认` 以确认账单。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:98
 msgid ""
 "Since the bill control policy is set to *Ordered quantities*, the draft bill"
 " can be confirmed as soon as it is created, before any products have been "
 "received."
-msgstr ""
+msgstr "由于账单控制策略设置为 *已订购数量*，因此账单草稿在创建后，在收到任何产品之前就可以立即确认。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:101
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:152
 msgid ""
 "Once a payment has been received, click :guilabel:`Register Payment` at the "
 "top of the bill to record it."
-msgstr ""
+msgstr "收到付款后，点击账单顶部的 :guilabel:`登记付款` 进行记录。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:104
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:155
@@ -41926,6 +41985,7 @@ msgid ""
 "wherein a payment :guilabel:`Journal` can be chosen, and a "
 ":guilabel:`Payment Method` selected."
 msgstr ""
+"这样做会弹出一个 :guilabel:`登记付款` 窗口，在此可以选择付款 :guilabel:`日记账` 和 :guilabel:`付款方式`。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:107
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:158
@@ -41934,6 +41994,8 @@ msgid ""
 ":guilabel:`Memo` (:dfn:`Reference Number`) can be edited from this pop-up "
 "window, if necessary."
 msgstr ""
+"此外，如有必要，还可在弹出窗口中编辑账单 :guilabel:`金额`、:guilabel:`付款日期` 和 "
+":guilabel:`备忘录`（:dfn:`参考编号`）。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:110
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:161
@@ -41942,10 +42004,12 @@ msgid ""
 ":guilabel:`Vendor Bill`. Doing so displays a green :guilabel:`Paid` banner "
 "on the |RfQ| form."
 msgstr ""
+"准备就绪后，点击 :guilabel:`创建付款` 完成 :guilabel:`供应商账单` 的创建。这样，|RfQ| 表单上就会显示绿色的 "
+":guilabel:`已付款` 条幅。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst-1
 msgid "Vendor bill form for ordered quantities control policy."
-msgstr ""
+msgstr "订购数量控制政策的供应商账单表。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:118
 msgid "Received quantities"
@@ -41957,6 +42021,8 @@ msgid ""
 "set to *Received quantities*, first navigate to the "
 ":menuselection:`Purchase` app, and click :guilabel:`New`."
 msgstr ""
+"要为收据创建和管理供应商账单，并将账单控制策略设置为*收据数量*，首先导航到 :menuselection:`采购` 应用程序，然后点击 "
+":guilabel:`新建`。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:123
 msgid ""
@@ -41964,6 +42030,8 @@ msgid ""
 ":guilabel:`Vendor`, and click :guilabel:`Add a line` under the "
 ":guilabel:`Product` tab to add products to the order."
 msgstr ""
+"这样会打开一个新的 |RfQ| 表单。在空白的 |RfQ| 表单中，添加 :guilabel:`供应商` 并点击 :guilabel:`产品` "
+"选项卡下的 :guilabel:`添加一行` 添加产品到订单。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:132
 msgid ""
@@ -41971,12 +42039,13 @@ msgid ""
 ":guilabel:`Create Bill` before any products are received causes an "
 ":guilabel:`Invalid Operation` pop-up window to appear."
 msgstr ""
+"使用 *已接收数量* 控制策略时，在收到任何产品之前点击 :guilabel:`创建账单` 会弹出 :guilabel:`无效操作` 窗口。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:135
 msgid ""
 "Odoo requires at least partial quantities of the items included in the |PO| "
 "to be received in order to create a vendor bill."
-msgstr ""
+msgstr "Odoo 要求至少收到 |PO| 中所含项目的部分数量，以便创建供应商账单。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:0
 msgid "User error pop-up for received quantities control policy."
@@ -42170,7 +42239,7 @@ msgstr ":doc:`control_bills`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/purchase_templates.rst:3
 msgid "Purchase templates"
-msgstr ""
+msgstr "采购模板"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/purchase_templates.rst:10
 msgid ""
@@ -42179,6 +42248,8 @@ msgid ""
 " can then be added and quantities can be changed, as needed. |Pts| can be "
 "used for multiple vendors, saving time and simplifying the |RFQ| process."
 msgstr ""
+"*采购模板* "
+"是一种协议类型，可重复创建重复采购的询价单（RFQ）。然后可根据需要添加产品和更改数量。采购模板（PT）可用于多个供应商，从而节省时间并简化询价流程。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/purchase_templates.rst:14
 msgid ""
@@ -42188,6 +42259,8 @@ msgid ""
 " vendors, and can copy over quantities, which is useful when placing "
 "frequent orders."
 msgstr ""
+"|PT| 不同于*空白订单*，因为 :doc:`总括订单<blanket_orders>` 是一个大订单，被分割成几个交货，因此所有 |RFQ| "
+"必须针对同一个供应商。|PT| 可以复制给多个供应商，并且可以复制数量，这在频繁下订单时非常有用。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/purchase_templates.rst:22
 msgid ""
@@ -42196,10 +42269,12 @@ msgid ""
 ":guilabel:`Purchase Agreements` checkbox. Click :guilabel:`Save` to save the"
 " changes."
 msgstr ""
+"首先，导航至 :menuselection:`采购应用程序 --> 配置 --> 设置`。在 :guilabel:`订单` 部分，勾选 "
+":guilabel:`采购协议` 复选框。点击 :guilabel:`保存`，以保存更改。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/purchase_templates.rst-1
 msgid "The Purchase agreements setting in the Purchase app."
-msgstr ""
+msgstr "采购应用程序中的采购协议设置。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/purchase_templates.rst:30
 msgid "Create a new template"
@@ -42209,29 +42284,29 @@ msgstr "创建一个新的模板"
 msgid ""
 "Navigate :menuselection:`Purchase app --> Orders --> Purchase Agreements` "
 "and click :guilabel:`New`."
-msgstr ""
+msgstr "导航 :menuselection:`采购应用程序 --> 订单 --> 采购协议` 并单击 :guilabel:`新建`。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/purchase_templates.rst:34
 msgid "Select a :guilabel:`Vendor` from the drop-down list."
-msgstr ""
+msgstr "从下拉列表中选择 :guilabel:`供应商` 。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/purchase_templates.rst:37
 msgid ""
 "To make this template available to use with multiple vendors, leave the "
 ":guilabel:`Vendor` field blank."
-msgstr ""
+msgstr "要使该模板可用于多个供应商，请将 :guilabel:`供应商` 字段留空。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/purchase_templates.rst:40
 msgid ""
 "In the :guilabel:`Agreement Type` field, select :guilabel:`Purchase "
 "Template` from the drop-down."
-msgstr ""
+msgstr "在 :guilabel:`协议类型` 字段中，从下拉列表中选择 :guilabel:`采购模板`。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/purchase_templates.rst:42
 msgid ""
 "Confirm the information in the remaining fields is correct, or update as "
 "needed."
-msgstr ""
+msgstr "确认其余字段中的信息是否正确，或根据需要进行更新。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/purchase_templates.rst:44
 msgid ""
@@ -42239,10 +42314,12 @@ msgid ""
 "the desired product. Update the :guilabel:`Quantity`, and set the "
 ":guilabel:`Unit Price`."
 msgstr ""
+"在 :guilabel:`产品` 选项卡上，点击 :guilabel:`添加一行` 并选择所需的产品。更新 :guilabel:`数量`，并设置 "
+":guilabel:`单价`。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/purchase_templates.rst:53
 msgid "After adding all necessary products, click :guilabel:`Confirm`."
-msgstr ""
+msgstr "添加所有必要的产品后，点击 :guilabel:`确认`。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/purchase_templates.rst:56
 msgid "Create a new RFQ from a purchase template"
@@ -42511,17 +42588,19 @@ msgid ""
 "field is enabled. Contact names auto-populate here from the **Contacts** "
 "app."
 msgstr ""
+"在此选择收货仓库地址，或选择 :guilabel:`直运` 来表明此订单将直接发货给最终客户。当选择 :guilabel:`直运` "
+"时，:guilabel:`直运地址` 字段将被启用。联系人姓名会从 **联系人** 应用程序中自动填充到此处。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:135
 msgid "Products tab"
-msgstr ""
+msgstr "产品选项卡"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:137
 msgid ""
 "In the :guilabel:`Products` tab, add the products to be ordered. Click "
 ":guilabel:`Add a product`, and type in the product name, or select the item "
 "from the drop-down menu."
-msgstr ""
+msgstr "在 :guilabel:`产品` 标签中，添加要订购的产品。点击 :guilabel:`添加产品`，输入产品名称，或从下拉菜单中选择项目。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:140
 msgid ""
@@ -42531,23 +42610,25 @@ msgid ""
 ":guilabel:`Create and edit...` to be taken to the product form for that new "
 "item."
 msgstr ""
+"要创建新产品并添加它，请在 :guilabel:`产品` 列中键入新产品名称，从生成的下拉菜单中选择 :guilabel:`创建 "
+"[产品名称］`，然后手动添加单价。或选择 :guilabel:`创建并编辑...`，进入新项目的产品表单。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:145
 msgid ""
 ":guilabel:`Catalog` can also be selected to navigate to a product menu from "
 "the chosen vendor. From here, products can be added to the cart."
-msgstr ""
+msgstr "还可选择 :guilabel:`目录` 浏览所选供应商的产品菜单。从这里可以将产品添加到购物车。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:149
 msgid ""
 "To make adjustments to products and prices, access the product form by "
 "clicking the :icon:`oi-arrow-right` :guilabel:`(right arrow)` icon that "
 "becomes available upon hovering over the :guilabel:`Product` name."
-msgstr ""
+msgstr "要调整产品和价格，请点击 :icon:`oi-arrow-right`(右箭头) :guilabel:`(右箭头)` 图标进入产品表单。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:154
 msgid "Send |RFQ|"
-msgstr ""
+msgstr "发送询价请求"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:156
 msgid ""
@@ -42556,16 +42637,18 @@ msgid ""
 "loaded, ready to send to the vendor's email address (configured in the "
 "**Contacts** app)."
 msgstr ""
+"点击 :guilabel:`通过电子邮件发送`，弹出 :guilabel:`撰写电子邮件`窗口，其中包含一个 :guilabel:`采购：请求报价` "
+"模板已加载，准备发送到供应商的电子邮件地址（在**联系人**应用程序中配置）。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:160
 msgid ""
 "After crafting the desired message, click :guilabel:`Send`. Once sent, the "
 "|RFQ| moves to the :guilabel:`RFQ Sent` stage."
-msgstr ""
+msgstr "制作好所需信息后，点击 :guilabel:`发送`。发送后，|RFQ| 将进入 :guilabel:`询价请求已发送` 阶段。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:163
 msgid "Clicking :guilabel:`Print RFQ` downloads a PDF of the |RFQ|."
-msgstr ""
+msgstr "点击 :guilabel:`打印询价请求` 可下载 PDF 格式的 |RFQ|。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:166
 msgid "Confirm order"
@@ -42575,7 +42658,7 @@ msgstr "确认订单"
 msgid ""
 "Clicking :guilabel:`Confirm Order` directly transforms the |RFQ| into an "
 "active |PO|."
-msgstr ""
+msgstr "点击 :guilabel:`确认订单` 可直接将 |RFQ| 转换为激活的 |PO|。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:171
 msgid ""
@@ -42584,17 +42667,19 @@ msgid ""
 "as any internal notes and activities. Messages, notes, and activities can "
 "also be logged on the chatter."
 msgstr ""
+"Odoo 通过 |PO| "
+"表单的聊天记录追踪每个订单的通信情况。这将显示用户与联系人之间发送的电子邮件，以及任何内部备注和活动。信息、备注和活动也可记录在聊天记录中。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:175
 msgid "Once an |RFQ| is confirmed, it creates a |PO|."
-msgstr ""
+msgstr "一旦 |RFQ| 得到确认，就会创建一个 |PO|。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:177
 msgid ""
 "On the new |PO|, the :guilabel:`Order Deadline` field changes to "
 ":guilabel:`Confirmation Date`, which displays the date and time the user "
 "confirmed the order."
-msgstr ""
+msgstr "在新的 |PO| 中，:guilabel:`订单截止日期` 字段变为 :guilabel:`确认日期`，显示用户确认订单的日期和时间。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:180
 msgid ""
@@ -42603,19 +42688,21 @@ msgid ""
 "received. For more information, refer to the documentation on :doc:`managing"
 " vendor bills <manage>`."
 msgstr ""
+"根据用户在 **采购** 应用程序设置中选择的配置，一旦订购或收到产品，就会创建 *供应商账单*。更多信息，请参阅 "
+":doc:`管理供应商账单<manage>` 文档。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:185
 msgid ""
 "After an order is placed, clicking :guilabel:`Receive Products` records the "
 "reception of new products into the database."
-msgstr ""
+msgstr "下订单后，点击 :guilabel:`接收产品` 将记录数据库接收新产品的情况。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:189
 msgid ""
 "With the **Inventory** app installed, confirming a |PO| automatically "
 "creates a receipt document, with the product information and expected "
 "arrival dates automatically populated."
-msgstr ""
+msgstr "安装**库存**应用程序后，确认|PO|会自动创建收货文件，并自动填充产品信息和预计到达日期。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products.rst:5
 msgid "Products"
@@ -42624,14 +42711,14 @@ msgstr "产品"
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:3
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:40
 msgid "Import vendor pricelist"
-msgstr ""
+msgstr "导入供应商价目表"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:5
 msgid ""
 "Set vendor prices to auto-populate requests for quotations (RFQs) or "
 "purchase orders (POs) with the unit price, once the product is added, which "
 "reduces errors and saves time."
-msgstr ""
+msgstr "设置供应商价格，以便在添加产品后自动在询价单（RFQ）或采购订单（PO）中填入单价，从而减少错误并节省时间。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:8
 msgid ""
@@ -42639,6 +42726,8 @@ msgid ""
 "<purchase/products/pricelist>` on the product form, or :ref:`imported in "
 "bulk <purchase/products/import-pricelist>`, via an XLSX or CSV file."
 msgstr ""
+"在 Odoo 中，供应商价目表可以 :ref:`在产品表单上单独添加 <purchase/products/pricelist>`，或 :ref:`通过"
+" XLSX 或 CSV 文件批量导入 <purchase/products/import-pricelist>`。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:13
 msgid ""
@@ -42646,40 +42735,41 @@ msgid ""
 "<../../../essentials/export_import_data>` before uploading vendor "
 "pricelists."
 msgstr ""
+"在上传供应商价目表之前，请查看此 :doc:`导入指南 <.../../../essentials/export_import_data>` 。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:19
 msgid "On product form"
-msgstr ""
+msgstr "在产品表单"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:21
 msgid ""
 "To manually add the vendor price on the product form, go to the "
 ":menuselection:`Purchase app --> Products --> Products`, and click the "
 "desired product."
-msgstr ""
+msgstr "要在产品表单上手动添加供应商价格，请转到 :menuselection:`采购应用程序 --> 产品 --> 产品`，然后点击所需的产品。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:25
 msgid ""
 "Product forms are accessible from multiple apps, such as **Sales**, "
 "**Inventory**, and **Manufacturing**."
-msgstr ""
+msgstr "产品表单可通过多个应用程序访问，如 **销售**、**库存** 和 **制造**。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:28
 msgid ""
 "In the :guilabel:`Purchase` tab of the product form, input the vendor and "
 "their price, to have this information auto-populate on a request for "
 "quotation each time the product is listed."
-msgstr ""
+msgstr "在产品表单的 :guilabel:`采购` 选项卡中，输入供应商及其价格，以便每次列出产品时都能在询价时自动填充这些信息。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:32
 msgid ""
 ":ref:`Vendor pricelist on product form <purchase/manage_deals/vendor-"
 "pricelist>`"
-msgstr ""
+msgstr ":ref:`产品表格上的供应商价目表 <purchase/manage_deals/vendor-pricelist>`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst-1
 msgid "Vendor pricelist on product form."
-msgstr ""
+msgstr "产品表格上的供应商价目表。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:42
 msgid ""
@@ -42688,36 +42778,40 @@ msgid ""
 "product names, references, and vendor details, is to first :ref:`export a "
 "pricelist <purchase/products/export-price>` from the database."
 msgstr ""
+"要导入供应商价目表，请确保 XLSX 或 CSV 文件填写准确。要获得格式正确的模板（包括产品名称、引用和供应商详细信息），最好的方法是首先 "
+":ref:`从数据库导出价格表 <purchase/products/export-price>`。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:46
 msgid ""
 "Modify the exported file, as needed, then import it back into the Odoo "
 "database."
-msgstr ""
+msgstr "根据需要修改导出文件，然后将其导入 Odoo 数据库。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:51
 msgid "Export pricelist"
-msgstr ""
+msgstr "导出价目表"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:53
 msgid ""
 "To export a pricelist, go to :menuselection:`Purchase app --> Configuration "
 "--> Vendor Pricelists`."
-msgstr ""
+msgstr "要导出价目表，请转到 :menuselection:`采购应用程序 --> 配置 --> 供应商价目表`。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:55
 msgid "On the page, tick the checkbox(es) for the desired vendor pricelists."
-msgstr ""
+msgstr "在页面上，勾选所需供应商价目表的复选框。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:57
 msgid ""
 "Then, click the :icon:`fa-cog` :guilabel:`Actions` button that appears, and "
 "choose :icon:`fa-upload` :guilabel:`Export` from the drop-down menu."
 msgstr ""
+"然后，点击出现的 :icon:`fa-cog`:guilabel:`操作` 按钮，并从下拉菜单中选择 :icon:`fa-"
+"upload`:guilabel:`导出`。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst-1
 msgid "Show selected exported fields, with the Export button visible."
-msgstr ""
+msgstr "显示选定的导出字段，同时显示导出按钮。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:63
 msgid ""
@@ -42726,6 +42820,8 @@ msgid ""
 " the desired field in the :guilabel:`Available fields` section, and click "
 "the :icon:`fa-plus` :guilabel:`(plus)` icon to the right of the field."
 msgstr ""
+"在弹出的窗口中，:guilabel:`要导出的字段` 部分中列出的字段将包含在导出文件中。要添加更多字段，请在 :guilabel:`可用字段` "
+"部分找到所需字段，然后点击字段右侧的 :icon:`fa-plus`:guilabel:`（加号）` 图标。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:69
 msgid ""
@@ -42733,18 +42829,21 @@ msgid ""
 "(import-compatible export)` checkbox, and refer to the section on the "
 ":ref:`External ID <purchase/products/external-id>` field."
 msgstr ""
+"要更新现有记录，请勾选 :guilabel:`我想更新数据（兼容导入导出）`复选框，并参考 :ref:`外部 ID "
+"<purchase/products/external-id>` 字段。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:73
 msgid ""
 "For details on commonly-used fields for importing vendor pricelists, see the"
 " :ref:`Common fields <purchase/products/common-fields>` section."
 msgstr ""
+"有关导入供应商价目表常用字段的详细信息，请参阅 :ref:`常见字段 <purchase/products/common-fields>` 部分。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:76
 msgid ""
 "Select the desired :guilabel:`Export Format`: :guilabel:`XLSX` or "
 ":guilabel:`CSV`."
-msgstr ""
+msgstr "选择所需的 :guilabel:`导出格式`：:guilabel:`XLSX` 或 :guilabel:`CSV`。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:78
 msgid ""
@@ -42754,27 +42853,29 @@ msgid ""
 ":guilabel:`(save)` icon. After that, the template is a selectable option "
 "when clicking the :guilabel:`Template` field."
 msgstr ""
+"要将选定字段保存为模板，请点击 :guilabel:`模板` 字段，并从下拉菜单中选择 :guilabel:`新模板`。键入新模板的名称，然后点击 "
+":icon:`fa-floppy-o`:guilabel:`（保存）` 图标。之后，点击 :guilabel:`模板` 字段时，该模板将成为一个可选项。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:83
 msgid "Finally, click :guilabel:`Export`."
-msgstr ""
+msgstr "最后，点击 :guilabel:`导出`。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:86
 msgid ""
 "With :ref:`developer mode <developer-mode>` turned on, the column names of "
 "the exported file display the *field name* with the *technical name* in "
 "parenthesis."
-msgstr ""
+msgstr "打开 :ref:`开发者模式<developer-mode>` 后，导出文件的列名将显示 *字段名称* 和括号中的 *技术名称*。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:0
 msgid "Exporting vendor pricelist."
-msgstr ""
+msgstr "导出供应商价目表。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:93
 msgid ""
 "Export vendor pricelist in XLSX format. It includes :guilabel:`Product "
 "Template` and other fields in the :guilabel:`Fields to export` section."
-msgstr ""
+msgstr "以 XLSX 格式导出供应商价目表。它包括 :guilabel:`产品模板` 和 :guilabel:`待导出字段` 部分中的其他字段。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:99
 msgid "External ID"
@@ -42787,6 +42888,8 @@ msgid ""
 "updating existing ones. Including this field in the XLSX or CSV, indicates "
 "the line replaces an existing vendor pricelist in the Odoo database."
 msgstr ""
+"*外部 ID* 是用于更新现有供应商价目表的唯一标识符。如果没有它，导入的记录将创建新条目，而不是更新现有条目。在 XLSX 或 CSV "
+"中包含此字段，表示该行替换了 Odoo 数据库中的现有供应商价目表。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:0
 msgid "Show 'Ready Mat' appear twice."
@@ -42860,7 +42963,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:139
 msgid "`partner_id`"
-msgstr ""
+msgstr "`partner_id`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:140
 msgid "Product Template"
@@ -42868,20 +42971,20 @@ msgstr "产品模板"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:141
 msgid "The Odoo product the vendor pricelist entry is related to."
-msgstr ""
+msgstr "供应商价目表条目相关的 Odoo 产品。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:142
 msgid ":guilabel:`Product` field in the vendor pricelist."
-msgstr ""
+msgstr "供应商价目表中的 :guilabel:`产品` 字段。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:143
 msgid "`product_tmpl_id`"
-msgstr ""
+msgstr "`product_tmpl_id`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:145
 msgid ""
 "The minimum quantity required to receive the product at the specified price."
-msgstr ""
+msgstr "以指定价格接收产品所需的最小数量。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:146
 msgid ""
@@ -42889,10 +42992,12 @@ msgid ""
 "it by clicking the :icon:`oi-settings-adjust` :guilabel:`(adjust)` icon, and"
 " tick the :guilabel:`Quantity` checkbox)"
 msgstr ""
+"供应商价目表中的 :guilabel:`数量` 字段。（如果不可见，请点击 :icon:`oi-settings-adjust` "
+":guilabel:`（调整）` 图标，然后勾选 :guilabel:` 数量` 复选框，启用该选项）"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:149
 msgid "`min_qty`"
-msgstr ""
+msgstr "`min_qty`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:150
 msgid "Unit Price"
@@ -42900,15 +43005,15 @@ msgstr "单价"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:151
 msgid "The purchase price for the product from the vendor."
-msgstr ""
+msgstr "从供应商处购买产品的价格。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:152
 msgid ":guilabel:`Price` field in the vendor pricelist."
-msgstr ""
+msgstr "供应商价目表中的 :guilabel:`价格` 字段。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:153
 msgid "`price`"
-msgstr ""
+msgstr "`价格`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:154
 msgid "Delivery Lead Time"
@@ -43083,7 +43188,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:216
 msgid "product_tmpl_id"
-msgstr ""
+msgstr "product_tmpl_id"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:217
 msgid "sequence"
@@ -43095,23 +43200,23 @@ msgstr "partner_id"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:219
 msgid "product.product_supplierinfo_3"
-msgstr ""
+msgstr "product.product_supplierinfo_3"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:220
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:227
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:234
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:241
 msgid "My Company (San Francisco)"
-msgstr ""
+msgstr "My Company (San Francisco)"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:222
 msgid "13.00"
-msgstr ""
+msgstr "13.00"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:223
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:230
 msgid "[E-COM08] Storage Box"
-msgstr ""
+msgstr "[E-COM08] 储存盒"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:225
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:239
@@ -43120,7 +43225,7 @@ msgstr "Wood Corner"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:229
 msgid "14.00"
-msgstr ""
+msgstr "14.00"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:232
 msgid "Ready Mat"
@@ -43128,24 +43233,24 @@ msgstr "Ready Mat"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:236
 msgid "1299.00"
-msgstr ""
+msgstr "1299.00"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:237
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:244
 msgid "[E-COM09] Large Desk"
-msgstr ""
+msgstr "[E-COM09] 大书桌"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:238
 msgid "6"
-msgstr ""
+msgstr "6"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:243
 msgid "1399.00"
-msgstr ""
+msgstr "1399.00"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:245
 msgid "7"
-msgstr ""
+msgstr "7"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:246
 msgid "Azure Interior"
@@ -43153,15 +43258,15 @@ msgstr "Azure Interior"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:249
 msgid "The *technical field name* was used to create this information."
-msgstr ""
+msgstr "*技术字段名称* 用于创建此信息。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:252
 msgid "Download the sample files for reference:"
-msgstr ""
+msgstr "下载样本文件以供参考："
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:254
 msgid ":download:`Sample XLSX import file <pricelist/pricelist-example.xlsx>`"
-msgstr ""
+msgstr ":download:`XLSX 导入文件示例 <pricelist/pricelist-example.xlsx>`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/pricelist.rst:255
 msgid ":download:`Sample CSV import file <pricelist/pricelist-example.csv>`"
@@ -43405,12 +43510,13 @@ msgstr ""
 msgid ""
 "This rule is deleted upon confirmation of the purchase order (PO) generated "
 "for the product."
-msgstr ""
+msgstr "为产品生成的采购订单（PO）一经确认，该规则即被删除。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/temporary_reordering.rst:27
 msgid ""
 ":doc:`../../inventory/warehouses_storage/replenishment/reordering_rules`"
 msgstr ""
+":doc:`../../inventory/warehouses_storage/replenishment/reordering_rules`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/temporary_reordering.rst:33
 msgid ""
@@ -43465,7 +43571,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/temporary_reordering.rst:0
 msgid "Warning pop-up upon clicking to replenish product with no set vendor."
-msgstr ""
+msgstr "点击补货但未设置供应商时弹出警告。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/temporary_reordering.rst:60
 msgid ""
@@ -43474,16 +43580,18 @@ msgid ""
 "Then, ensure that the :guilabel:`Reordering Rules` smart button reads `0`, "
 "indicating there are no rules applied to this product."
 msgstr ""
+"在为产品创建 :abbr:`SO（销售订单）`之前，请确保产品表单上的 :guilabel:`现有库存` 智能按钮为 `0.00 单位`。然后，确保 "
+":guilabel:`重新订购规则` 智能按钮的值为 `0`，表示该产品未应用任何规则。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/temporary_reordering.rst-1
 msgid ""
 "Product form smart button row displaying reordering rules and on hand "
 "buttons."
-msgstr ""
+msgstr "产品表单智能按钮行显示重新排序规则和现有库存按钮。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/temporary_reordering.rst:69
 msgid "Trigger temporary reordering rule"
-msgstr ""
+msgstr "触发临时重新订购规则"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/temporary_reordering.rst:71
 msgid ""
@@ -43526,16 +43634,18 @@ msgid ""
 "negative :guilabel:`Forecast` quantity, *Buy* :guilabel:`Route`, and "
 ":guilabel:`To Order` quantity to replenish can be seen."
 msgstr ""
+"在此仪表板上，找到创建了临时重新排序规则的产品。在其产品线上，可以看到其 :guilabel:`现有库存` 数量、负 :guilabel:`预测` "
+"数量、*购买* :guilabel:`路径` 和 :guilabel:`待订购` 补货数量。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/temporary_reordering.rst:93
 msgid ""
 "Additionally, two replenishment options are located to the far-right of the "
 "row: :guilabel:`Order Once` and :guilabel:`Automate`."
-msgstr ""
+msgstr "此外，该行最右侧还有两个补货选项：:guilabel:`一次订购`和 :guilabel:`自动`。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/temporary_reordering.rst-1
 msgid "Replenishment report displaying temporary reordering rule and options."
-msgstr ""
+msgstr "补货报告显示临时重新订购规则和选项。"
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/temporary_reordering.rst:100
 msgid ""
