@@ -41,8 +41,8 @@ Quotation*.
 .. seealso::
    For more information on the above process of confirming quotations and invoicing payments,
    see:
-   - :doc:`../sales/send_quotations/create_quotations`
-   - :doc:`../sales/send_quotations/get_paid_to_validate`
+   - :doc:`../sales/sales_quotations/create_quotations`
+   - :doc:`../sales/sales_quotations/get_paid_to_validate`
 
 Once the payment from the subscription quotation is confirmed, the quotation turns into a sales
 order. An :guilabel:`In Progress` tag is applied to the sales order form, and a series of buttons
