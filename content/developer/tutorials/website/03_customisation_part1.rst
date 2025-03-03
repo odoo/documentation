@@ -27,7 +27,8 @@ You will find the various media `here <{GITHUB_PATH}img/content/icons>`_.
 
 .. note::
    | It’s always preferable to include all your SCSS rules in `#wrapwrap`. This ID is applied to the
-     div that groups the header, footer, and main content of all your pages.
+     div that groups the :guilabel:`header`, :guilabel:`footer`, and :guilabel:`main` content of all
+     your pages.
    | So you will be sure that your rules will only have an impact on the website parts.
 
 .. seealso::
@@ -73,6 +74,8 @@ You can find the `logo <{GITHUB_PATH}img/content/branding>`_,
 `cart icon <{GITHUB_PATH}img/content/icons>`_ and
 `template illustration <{GITHUB_PATH}img/wbuilder>`_. 
 
+.. image:: 03_customisation_part1/header.png
+
 .. tip::
    - Base yourself on the code of existing header templates that you can find in
      `odoo/addons/website/views/website_templates.xml
@@ -82,9 +85,9 @@ You can find the `logo <{GITHUB_PATH}img/content/branding>`_,
        put all sale-related elements, such as the cart icon.
      | It will be the same principle for the blog views (:file:`website_blog_templates.xml`), event
        (:file:`website_event_templates.xml`), etc.
-   - Don't forget to continue making as many modifications as you can through the Bootstrap
-     variables and primary variables (font, colors, size...). You can use them to help you with this
-     exercise.
+   - Don't forget to continue making as many modifications as you can through the :file:`Bootstrap
+     variables` and :file:`primary variables` (font, colors, size...). You can use them to help you
+     with this exercise.
 
 .. seealso::
    Documentation on :ref:`<ANCOR website_themes/layout/header>` and
@@ -104,6 +107,8 @@ Based on the Airproof design, create a custom footer with the following elements
 - A section for the copyright and social media.
 
 You will find the icons `here <{GITHUB_PATH}img/content/icons>`_. 
+
+.. image:: 03_customisation_part1/footer.png
 
 .. tip::
    - You can enable or disable the copyright section via the presets.
@@ -131,7 +136,8 @@ cover section on your homepage.
    
    .. image:: 03_customisation_part1/custom-building-block.png
 
-#. Add an option to be able to choose blue or green for the bubble shadow.
+#. Add an option available in the website builder to be able to choose blue or green for the bubble
+   shadow.
 
    .. image:: 03_customisation_part1/custom-building-block-option.png
       :scale: 75%
@@ -160,7 +166,7 @@ snippet on the homepage.
 
 #. First, create a custom template that includes the following elements:
 
-   - Add a “Discover more” link
+   - Add a :guilabel:`Discover more` link
    - Add a hover effect on cards
    - Move the navigation arrows
 
