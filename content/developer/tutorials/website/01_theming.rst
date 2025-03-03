@@ -12,9 +12,9 @@ theme module for your website.
 Setup
 =====
 
-| The first step is to ensure that Odoo is running correctly locally. To do this, use a Shell script
-  to run the server. 
-| In this script, define the database name and install only the website application.
+| The first step is to ensure that Odoo is running correctly locally. To do this, use a
+  :file:`Shell script` to run the server. 
+| In this script, define the database name and install only the `website` application.
 
 .. seealso::
    Documentation on how to :ref:`run Odoo <ANCOR setup/getting_started>`.
@@ -28,7 +28,7 @@ Now that we know everything is working properly, let's start building our module
 
 | Based on the following structure, start creating your module that will be used as a theme. This is
   where you are going to add your XML pages, SCSS, JS, …
-| Start with the basics : `/data`, `/img`, `/scss`, `/js`
+| Start with the basics : :file:`/data`, :file:`/img`, :file:`/scss`, :file:`/js`
 | Don’t forget to add the :file:`__init__.py` and :file:`__manifest__.py` files
 
 In your :file:`__manifest__.py` file, you can declare your module with the following information:
@@ -63,7 +63,7 @@ following elements:
   later.
 
 | Restart your script to already see the application of your changes.
-| Don't forget to add the path to your manifest and set your module as the app to install.
+| Don't forget to add the path to your :file:`manifest` and set your module as the app to install.
 
 To ensure your changes are applied correctly, log in to your website and verify that your
 color palette contains your specified colors.
