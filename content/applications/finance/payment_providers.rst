@@ -138,8 +138,8 @@ Online payment providers
      -
      -
    * - :doc:`Xendit <payment_providers/xendit>`
-     - The provider's website
-     -
+     - Odoo or the provider's website
+     - |V|
      -
      -
      -
