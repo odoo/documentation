@@ -12,14 +12,15 @@ Create a custom background shape
 Shapes are decorative elements that can be applied to backgrounds or images. These are SVG files
 that can be animated and customized with different colors.
 
-First, to better align with the website’s desired atmosphere, create a custom background shape that
-the client can reuse on different blocks.
+#. To better align with the website’s desired atmosphere, create a custom background shape that the
+   client can reuse on different blocks.
 
-Create your custom shape using the following setup :
+   Create your custom shape using the following setup :
 
-- | Declare your shape.
-  | You can find the SVG shape `here <{GITHUB_PATH}img/>`_.
-- Set the base color of the shape to the theme's green, and add it to the list of available shapes.
+   - | Declare your shape.
+     | You can find the SVG shape `here <{GITHUB_PATH}img/>`_.
+   - Set the base color of the shape to the theme's green, and add it to the list of available
+     shapes.
 
 .. image:: 04_customisation_part2/shape.png
 
@@ -41,11 +42,13 @@ Create your custom shape using the following setup :
    - adding the shape to the list thanks to `primary_variable.scss <{GITHUB_PATH}>`_ and
      `option.xml <{GITHUB_PATH}>`_.
 
-Based on the Airproof design, apply the shape you just added to a `Text-Image` building block on the
-homepage :
+2. Based on the Airproof design, apply the shape you just added to a `Text-Image` building block on
+   the homepage :
 
-- Ensure the shape is in the right position.
-- Set its color to the theme’s light blue.
+   - Ensure the shape is in the right position.
+   - Set its color to the theme’s light blue.
+
+.. image:: 04_customisation_part2/shape-section.png
 
 .. tip::
    Unlike a standard Odoo shapes, when applying a custom shape to a section, replace `web_editor`
@@ -101,8 +104,8 @@ Animations
 ==========
 
 The client loves the overall design but finds the page a bit static. Enhance page interactivity with
-animations such as fade-in, rotate, bounce, etc. These can be applied to columns, images, texts,
-buttons…
+animations such as `fade-in`, `rotate`, `bounce`, etc. These can be applied to columns, images,
+texts, buttons…
 
 Based on the airproof design, animate the following elements: 
 
@@ -156,13 +159,15 @@ This is great, as one of your client's main priorities is after-sales service. T
 contact form must be properly configured.
 
 | Based on the airproof design, create a contact page. Remember to disable the default one and add
-  the new page to the menu.
+  the new page link to the menu.
 | The client has the following requests for their contact form: 
 
-- “*Conditional VAT*” field displayed only if “*Company name*” is filled in.
-- All fields should be mandatory, except for "*Company name*".
+- *Name* and *email address* field.
+- *Company name* field.
+- *Conditional VAT* field displayed only if *Company name* is filled in.
+- All fields should be mandatory, except for *Company name*.
 - Form submission must trigger an email.
-- After form submission, the thank-you message should remain visible on the contact page.
+- After form submission, the `thank-you message` should remain visible on the contact page.
 
 .. tip::
    To determine the correct code for your form :
