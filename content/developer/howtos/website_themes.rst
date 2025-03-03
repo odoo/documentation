@@ -28,6 +28,7 @@ successes. We invite you to use it as a base to build your own website and adapt
     website_themes/layout
     website_themes/navigation
     website_themes/pages
+    website_themes/media
     website_themes/building_blocks
     website_themes/shapes
     website_themes/gradients
