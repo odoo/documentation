@@ -2,16 +2,20 @@
 Extract API
 ===========
 
+.. |IAP| replace:: :abbr:`IAP (In-app purchases)`
+.. |OCR| replace:: :abbr:`OCR (Optical Character Recognition)`
+
 Odoo provides a service to automate the processing of documents of type **invoices**, **bank statements**,
 **expenses** or **resumes**.
 
-The service scans documents using an :abbr:`OCR (Optical Character Recognition)` engine and then
+The service scans documents using an |OCR| engine and then
 uses :abbr:`AI(Artificial Intelligence)`-based algorithms to extract fields of interest such as the
 total, due date, or invoice lines for *invoices*, the initial and final balances, the date for
 *bank statements*, the total, date for *expenses*, or the name, email, phone number for *resumes*.
 
-This service is a paid service. Each document processing will cost you one credit.
-Credits can be bought on `iap.odoo.com <https://iap.odoo.com/iap/in-app-services/259?sortby=date>`_.
+This service is a paid service. Each document processing will cost you one credit from your
+document digitization |IAP| account. More information about |IAP| accounts can be found
+:doc:`here </applications/essentials/in_app_purchase>`.
 
 You can either use this service directly in the Accounting, Expense, or Recruitment App or through
 the API. The Extract API, which is detailed in the next section, allows you to integrate our
@@ -59,8 +63,8 @@ testing is provided in the
 Parse
 =====
 
-Request the processing of a document from the OCR. The route will return a `document_token`,
-you can use it to obtain the result of your request.
+Request the digitization of a document. The route will return a `document_token` that you can use
+to fetch the result of your request.
 
 .. _extract_api/parse:
 
@@ -87,17 +91,15 @@ Request
     .. rst-class:: o-definition-list
 
     ``account_token`` (required)
-        The token of the account from which credits will be taken. Each successful call costs one
-        token.
+        The token of the :doc:`IAP </applications/essentials/in_app_purchase>` account from which
+        credits will be charged. Each successful call costs one credit.
     ``version`` (required)
         The version will determine the format of your requests and the format of the server response.
         You should use the :ref:`latest version available <extract_api/version>`.
     ``documents`` (required)
-        The document must be provided as a string in the ASCII encoding. The list should contain
-        only one string. If multiple strings are provided only the first string corresponding to a
-        pdf will be processed. If no pdf is found, the first string will be processed. This field
-        is a list only for legacy reasons. The supported extensions are *pdf*, *png*, *jpg* and
-        *bmp*.
+        The document must be provided as a Base64 string in the ASCII encoding.
+        The list should contain only one document. This field is a list only for legacy reasons.
+        The supported formats are *pdf*, *png* and *jpg*.
     ``dbuuid`` (optional)
         Unique identifier of the Odoo database.
     ``webhook_url`` (optional)
@@ -238,7 +240,7 @@ Request
     ``document_token`` (required)
         The ``document_token`` for which you want to get the current parsing status.
     ``account_token`` (required)
-        The token of the account that was used to submit the document.
+        The token of the |IAP| account that was used to submit the document.
 
 .. code-block:: js
 
@@ -279,7 +281,7 @@ are the name of the field and the value is the value of the field.
         .. rst-class:: o-definition-list
 
         ``full_text_annotation``
-            Contains the unprocessed full result from the OCR for the document
+            Contains the unprocessed full result from the |OCR| for the document.
 
 ================================  =============================================================
 status                            status_msg
