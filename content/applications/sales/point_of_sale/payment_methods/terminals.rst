@@ -26,6 +26,7 @@ Then, follow the corresponding documentation to configure your device:
 - :doc:`Razorpay configuration <terminals/razorpay>`
 - :doc:`SIX configuration <terminals/six>`
 - :doc:`Stripe configuration <terminals/stripe>`
+- :doc:`Tyro configuration <terminals/tyro>`
 - :doc:`Viva Wallet configuration <terminals/viva_wallet>`
 - :doc:`Worldline configuration <terminals/worldline>`
 
@@ -55,5 +56,6 @@ Successful`.
    terminals/razorpay
    terminals/six
    terminals/stripe
+   terminals/tyro
    terminals/viva_wallet
    terminals/worldline
