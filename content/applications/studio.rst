@@ -14,6 +14,7 @@ Studio
    studio/automated_actions
    studio/pdf_reports
    studio/approval_rules
+   studio/studio_webhooks
 
 Studio is a toolbox that allows you to customize Odoo without coding knowledge. For example, you
 can, in any app, add or modify:
@@ -24,6 +25,7 @@ can, in any app, add or modify:
 - :doc:`Automation rules <studio/automated_actions>`
 - :doc:`PDF reports <studio/pdf_reports>`
 - :doc:`Approval rules <studio/approval_rules>`
+- :doc:`Studio automations with webhooks <studio/studio_webhooks>`
 - Security rules
 
 You can also :doc:`build an app from scratch <studio/models_modules_apps>`.
