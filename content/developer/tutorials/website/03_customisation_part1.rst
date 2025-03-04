@@ -34,6 +34,11 @@ You will find the various media `here <{GITHUB_PATH}img/content/icons>`_.
 .. seealso::
    Documentation on :ref:`<ANCOR website_themes/theming/styles>`.
 
+.. spoiler:: Solutions
+
+   Find the solution in our Airproof example on `header.scss <{GITHUB_PATH}>`_ and
+   `caroussel.scss <{GITHUB_PATH}>`_.
+
 .. _website/customisation_part1/custom_js:
 
 Add custom JS
@@ -93,6 +98,40 @@ You can find the `logo <{GITHUB_PATH}img/content/branding>`_,
    Documentation on :ref:`<ANCOR website_themes/layout/header>` and
    :ref:`<ANCOR website_themes/layout/xpath>`.
 
+.. spoiler:: Solutions
+
+   Find the solution in our Airproof example for:
+
+   - the xml structure and to add the template to the options list on
+     `website_template.xml <{GITHUB_PATH}>`_.
+   - disable the default header:
+     
+     .. code-block:: xml
+        :caption: ``/website_airproof/data/presets.xml``
+
+        <!-- Disable default header -->
+        <record id="website.template_header_default" model="ir.ui.view">
+           <field name="active" eval="False"/>
+        </record>
+
+   - record the logo:
+
+     .. code-block:: xml
+        :caption: ``/website_airproof/data/images.xml``
+
+        <!-- Set as the logo of the website -->
+        <record id="website.default_website" model="website">
+           <field name="logo" type="base64" file="website_airproof/static/src/img/content/branding/airproof-logo.svg"/>
+        </record>
+
+   - declare your :file:`website_template.xml` file along with all the new ones in your
+     :file:`manifest`.
+   - make the use of `primaries <{GITHUB_PATH}>`_ like `header-template`, `navbar-font`,
+     `header-font-size`...
+   - use `bootstrap_overridden <{GITHUB_PATH}>`_ like `$navbar-light-color`,
+     `$navbar-light-hover-color`, `$navbar-padding-y`...
+   - add some `scss <{GITHUB_PATH}>` rules.
+
 .. _website/customisation_part1/custom_footer:
 
 Create a custom footer
@@ -117,6 +156,38 @@ You will find the icons `here <{GITHUB_PATH}img/content/icons>`_.
 .. seealso::
    Documentation on :ref:`<ANCOR website_themes/layout/footer>` and
    :ref:`<ANCOR website_themes/layout/copyright>`.
+
+.. spoiler:: Solutions
+   
+   Find the solution in our Airproof example for:
+
+   - add `mass mailing` to your depends:
+     
+     .. code-block:: python
+         :caption: ``/website_airproof/__manifest__.py``
+
+         'depends': ['website_sale', 'website_sale_wishlist', 'website_blog',
+         'website_mass_mailing'],
+
+   - the xml structure and add the template to the options list on
+     `website_template.xml <{GITHUB_PATH}>`_.
+   - disable the default footer and enable the copyright:
+     
+     .. code-block:: xml
+        :caption: ``/website_airproof/data/presets.xml``
+
+        <!-- Disable Default Footer -->
+        <record id="website.footer_custom" model="ir.ui.view">
+           <field name="active" eval="False"/>
+        </record>
+        <!-- Enable Copyright -->
+        <record id="website.footer_no_copyright" model="ir.ui.view">
+           <field name="active" eval="False"/>
+        </record>
+
+   - make the use of `primaries <{GITHUB_PATH}>`_ like `footer-template`, `footer`,
+     `o-cc4-link`...
+   - add a little scss rule for the `newsletter <{GITHUB_PATH}>` section.
 
 .. _website/customisation_part1/custom_building_blocks:
 
@@ -151,6 +222,65 @@ cover section on your homepage.
 .. seealso::
    Documentation on :ref:`custom building blocks <ANCOR website_themes/building_blocks/Custom>`.
 
+.. spoiler:: Solutions
+
+   To complete this exercise, you need to:
+
+   #. Create your template.
+   
+      - You can find all the necessary information in the
+        `s_airproof_carousel.xml <{GITHUB_PATH}>`_ file and
+        `s_airproof_carousel/000.scss <{GITHUB_PATH}>`_ file from our example module.
+      - Record your images in `images.xml <{GITHUB_PATH}>`_.
+      - Declare your files in the `__manifest__.py <{GITHUB_PATH}>`_.
+      - Add it to the list of building blocks. In our example, it looks like this:
+
+        .. code-block:: xml
+           :caption: ``/website_airproof/views/snippets/options.xml``
+
+           <!-- Add custom snippets to the builder -->
+           <template id="snippets" inherit_id="website.snippets" name="Custom Snippets">
+              <xpath expr="//*[@id='default_snippets']" position="before">
+                 <t id="x_theme_snippets">
+                    <div id="x_airproof_snippets" class="o_panel">
+                       <div class="o_panel_header">Airproof</div>
+                       <div class="o_panel_body">
+                          <!-- Carousel snippet -->
+                          <t t-snippet="website_airproof.s_airproof_carousel"
+                          t-thumbnail="/website_airproof/static/src/img/wbuilder/s-airproof-snippet.svg">
+                             <keywords>Carousel block</keywords>
+                          </t>
+                       </div>
+                    </div>
+                 </t>
+              </xpath>
+           </template>
+
+   #. Add to the options. In our example, it looks like this:
+
+      .. code-block:: xml
+         :caption: ``/website_airproof/views/snippets/options.xml``
+
+         <!-- Add options to snippets -->
+         <template id="snippet_options" inherit_id="website.snippet_options" name="Airproof -
+         Snippets Options">
+            <xpath expr="." position="inside">
+               <!-- *** Carousel snippet : blue or green bubble *** -->
+               <div data-selector=".x_bubble_item">
+                  <we-button-group string="Bubble shadow">
+                     <we-button data-select-class="x_bubble1">Blue</we-button>
+                     <we-button data-select-class="x_bubble2">Green</we-button>
+                  </we-button-group>
+               </div>
+            </xpath>
+         </template>
+
+      As well as the SCSS related to the bubbles in the
+      `s_airproof_carousel/000.scss <{GITHUB_PATH}>`_ file. 
+
+   #. Add your snippet to the homepage. You can find all the necessary information in the
+      `home.xml <{GITHUB_PATH}>`_ file from our example module.
+
 .. _website/customisation_part1/custom_building_blocks:
 
 Create a template to add in dynamic snippets
@@ -184,4 +314,16 @@ snippet on the homepage.
 .. seealso::
    Documentation on :ref:`<ANCOR website_themes/building_blocks/dynamic_content_templates>`.
 
+.. spoiler:: Solutions
 
+   To complete this exercise, you need to:
+
+   #. Create your snippet template and add to the option list.
+   
+      - You can find all the necessary information in the
+        `options.xml <{GITHUB_PATH}>`_ file and
+        `caroussel.scss <{GITHUB_PATH}>`_ file from our example module.
+      - Record your images in `images.xml <{GITHUB_PATH}>`_.
+
+   #. Applied to a product dynamic snippet on the homepage. You can find all the necessary
+      information in the `home.xml <{GITHUB_PATH}>`_ file from our example module.
