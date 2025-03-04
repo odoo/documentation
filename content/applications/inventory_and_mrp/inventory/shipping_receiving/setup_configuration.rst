@@ -75,6 +75,7 @@ delivery order. To add or change the delivery method on the delivery itself, go 
    setup_configuration/labels
    setup_configuration/bpost
    setup_configuration/dhl_credentials
+   setup_configuration/envia_shipping
    setup_configuration/fedex
    setup_configuration/sendcloud_shipping
    setup_configuration/starshipit_shipping
