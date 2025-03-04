@@ -73,8 +73,7 @@ structure guidelines** that offer several benefits:
         directory.
 
 .. seealso::
-   :ref:`Coding guidelines on module directories
-   <contributing/coding_guidelines/module_structure/directories>`
+   :ref:`Coding guidelines on module structure <contributing/coding_guidelines/module_structure>`
 
 .. exercise::
    Restructure the `real_estate` module according to the guidelines.
@@ -248,8 +247,7 @@ managing property types.
 .. exercise::
    #. Create a new `real.estate.property.type` model.
 
-      - Update the :file:`ir.model.access.csv` file to grant all database administrators access to
-        the model.
+      - Update the :file:`ir.model.access.csv` file to grant all database users access to the model.
       - Replace the dummy :guilabel:`Settings` menu item with a new :menuselection:`Configuration
         --> Property Types` menu item.
       - Create a window action to browse property types only in list view.
@@ -296,8 +294,8 @@ managing property types.
       :emphasize-lines: 3
 
       id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-      real_estate_property_system,real.estate.property.system,model_real_estate_property,base.group_system,1,1,1,1
-      real_estate_property_type_system,real.estate.property.type.system,model_real_estate_property_type,base.group_system,1,1,1,1
+      real_estate_property_user,real.estate.property.user,model_real_estate_property,base.group_user,1,1,1,1
+      real_estate_property_type_user,real.estate.property.type.user,model_real_estate_property_type,base.group_user,1,1,1,1
 
    .. code-block:: xml
       :caption: `menus.xml`
@@ -673,8 +671,6 @@ to a list of offers received from potential buyers.
    #. Modify the form view of properties to display offers in a new notebook page titled
       :guilabel:`Offers`.
 
-
-
 .. spoiler:: Solution
 
    .. code-block:: python
@@ -720,9 +716,9 @@ to a list of offers received from potential buyers.
       :emphasize-lines: 2
 
       id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-      real_estate_offer_system,real.estate.offer.system,model_real_estate_offer,base.group_system,1,1,1,1
-      real_estate_property_system,real.estate.property.system,model_real_estate_property,base.group_system,1,1,1,1
-      real_estate_property_type_system,real.estate.property.type.system,model_real_estate_property_type,base.group_system,1,1,1,1
+      real_estate_offer_user,real.estate.offer.user,model_real_estate_offer,base.group_user,1,1,1,1
+      real_estate_property_user,real.estate.property.user,model_real_estate_property,base.group_user,1,1,1,1
+      real_estate_property_type_user,real.estate.property.type.user,model_real_estate_property_type,base.group_user,1,1,1,1
 
    .. code-block:: xml
       :caption: `real_estate_offer_views.xml`
@@ -819,7 +815,7 @@ convention, `Many2many` field names end with the `_ids` suffix, like for `One2ma
 
 .. example::
    In the example below, a many-to-many relationship is established between the `product` model and
-   the `res.partner` model, which is used to represent sellers offering products for sale.
+   the `res.partner` model, which is used to represent suppliers offering products for sale.
 
    .. code-block:: python
 
@@ -831,11 +827,11 @@ convention, `Many2many` field names end with the `_ids` suffix, like for `One2ma
           _description = "Storable Product"
 
           [...]
-          seller_ids = fields.Many2many(
-              string="Sellers",
-              help="The sellers offering the product for sale.",
+          supplier_ids = fields.Many2many(
+              string="Suppliers",
+              help="The suppliers offering the product for sale.",
               comodel_name='res.partner',
-              relation='product_seller_rel',
+              relation='product_supplier_rel',
               column1='product_id',
               column2='partner_id',
           )
@@ -899,7 +895,7 @@ with each property.
 
       id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
       [...]
-      real_estate_tag_system,real.estate.tag.system,model_real_estate_tag,base.group_system,1,1,1,1
+      real_estate_tag_user,real.estate.tag.user,model_real_estate_tag,base.group_user,1,1,1,1
 
    .. code-block:: xml
       :caption: `real_estate_tag_data.xml`

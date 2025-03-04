@@ -581,7 +581,7 @@ through `self`. If field values are modified, the changes are automatically refl
 .. example::
    In the following example, onchange methods are implemented to:
 
-   - unpublish products when all sellers are removed;
+   - unpublish products when all suppliers are removed;
    - warn the user if changing the sales price would result in a negative margin;
    - raise a blocking user error if the category is changed after sales have been made.
 
@@ -594,9 +594,9 @@ through `self`. If field values are modified, the changes are automatically refl
       class Product(models.Model):
           is_published = fields.Boolean(string="Published")
 
-          @api.onchange('seller_ids')
-          def _onchange_seller_ids_unpublish_if_no_sellers(self):
-              if not self.seller_ids:
+          @api.onchange('supplier_ids')
+          def _onchange_supplier_ids_unpublish_if_no_suppliers(self):
+              if not self.supplier_ids:
                   self.is_published = False
 
           @api.onchange('price')
@@ -1183,7 +1183,7 @@ action, add a `button` element to the view, with its `type` attribute set to `ac
 
    .. code-block:: xml
 
-      <record id="view_similar_products_action" model="ir.actions.act_window">
+      <record id="product.view_similar_products_action" model="ir.actions.act_window">
           <field name="name">Products</field>
           <field name="res_model">product</field>
           <field name="domain">
@@ -1192,7 +1192,7 @@ action, add a `button` element to the view, with its `type` attribute set to `ac
           <field name="view_mode">list,form</field>
       </record>
 
-      <record id="product_form" model="ir.ui.view">
+      <record id="product.product_form" model="ir.ui.view">
           <form>
               <sheet>
                   <div name="button_box">
@@ -1490,11 +1490,11 @@ desired business logic. Creating a scheduled action is simply a matter of adding
 
 .. example::
    The following example implements a scheduled action that automatically reassigns inactive
-   products or products without sellers to the default seller.
+   products or products without suppliers to the default supplier.
 
    .. code-block:: xml
 
-      <record id="reassign_inactive_products_cron" model="ir.cron">
+      <record id="product.reassign_inactive_products_cron" model="ir.cron">
           <field name="name">Reassign Inactive Products</field>
           <field name="model_id" ref="model_product"/>
           <field name="code">model._reassign_inactive_products()</field>
@@ -1504,27 +1504,27 @@ desired business logic. Creating a scheduled action is simply a matter of adding
 
    .. code-block:: python
 
-    from odoo import api, models
-    from odoo.fields import Command
+      from odoo import api, models
+      from odoo.fields import Command
 
 
-    class Product(models.Model):
+      class Product(models.Model):
 
-        @api.model
-        def _reassign_inactive_products(self):
-            # Clear sellers from underperfoming products.
-            underperforming_products = self.search([('sales_count', '<', 10)])
-            underperforming_products.write({
-                'seller_ids': [Command.clear()],  # Remove all sellers.
-            })
+          @api.model
+          def _reassign_inactive_products(self):
+              # Clear suppliers from underperfoming products.
+              underperforming_products = self.search([('sales_count', '<', 10)])
+              underperforming_products.write({
+                  'supplier_ids': [Command.clear()],  # Remove all suppliers.
+              })
 
-            # Assign the default seller to products without sellers.
-            products_without_sellers = self.search([('seller_ids', '=', False)])
-            if products_without_sellers:
-                default_seller = self.env.ref('product.default_seller')
-                products_without_sellers.write({
-                    'seller_ids': [Command.set(default_seller.ids)]  # Replace with default seller.
-                })
+              # Assign the default supplier to products without suppliers.
+              products_without_suppliers = self.search([('supplier_ids', '=', False)])
+              if products_without_suppliers:
+                  default_supplier = self.env.ref('product.default_supplier')
+                  products_without_suppliers.write({
+                      'supplier_ids': [Command.set(default_supplier.ids)]  # Replace with default supplier.
+                  })
 
    .. note::
       - The cron is scheduled to run weekly thanks to `interval_number=1` and

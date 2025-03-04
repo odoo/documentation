@@ -323,7 +323,7 @@ field labels and values).
    .. code-block:: xml
       :caption: A list view for `product`
 
-      <record id="product_list" model="ir.ui.view">
+      <record id="product.product_list" model="ir.ui.view">
           <field name="name">Product List</field>
           <field name="model">product</field>
           <field name="arch" type="xml">
@@ -338,7 +338,7 @@ field labels and values).
    .. code-block:: xml
       :caption: A form view for `product`
 
-      <record id="product_form" model="ir.ui.view">
+      <record id="product.product_form" model="ir.ui.view">
           <field name="name">Product Form</field>
           <field name="model">product</field>
           <field name="arch" type="xml">
@@ -358,7 +358,7 @@ field labels and values).
    .. code-block:: xml
       :caption: A search view for `product`
 
-      <record id="product_search" model="ir.ui.view">
+      <record id="product.product_search" model="ir.ui.view">
           <field name="name">Product Search</field>
           <field name="model">product</field>
           <field name="arch" type="xml">
