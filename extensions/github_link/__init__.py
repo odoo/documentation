@@ -23,8 +23,8 @@ import importlib
 import inspect
 import os.path
 
-import werkzeug
 import contextlib
+from urllib.parse import urlunsplit
 
 
 def setup(app):
@@ -93,7 +93,7 @@ def make_github_link(app, project, path, line=None, mode="blob"):
         branch = 'master'
 
     urlpath = f"/{app.config.github_user}/{project}/{mode}/{branch}/{path}"
-    return werkzeug.urls.url_unparse((
+    return urlunsplit((
         'https',
         'github.com',
         urlpath,
