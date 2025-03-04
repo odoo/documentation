@@ -12,12 +12,12 @@ Adapt the shop template
 Now, let's adapt the dynamic sections of the website.
 
 As you may know, some pages such as those for eCommerce are automatically generated. Pages like the
-shop, product, and checkout are automatically generated when the `eCommerce` application is
+shop, product, and checkout are automatically generated when the `website_sale` application is
 installed. These template pages pull their displayed information from the backend.
 
 To modify these pages, we need to edit the standard Odoo template. This can be done using SCSS,
 presets, and especially XPath.
-Locate the standard Odoo template you want to modify and extend it using XPath.
+Locate the standard Odoo template you want to modify and extend it using `XPath`.
 
 Following the Airproof design, let's begin by modifying the shop view.
 
@@ -60,7 +60,7 @@ Based on the Airproof design below, adapt a few elements including:
 - Remove the quantity selector, Terms and Conditions, and share icons.
 - Update the :guilabel:`Add to cart` button icon.
 - Insert a title above the product specifications. (This section appears only when the product has
-  one variant per attribute).
+  one variant per attribute.)
 - Design the appropriate layout for the carousel.
 - Add a title and apply the previously created product template to the `Alternative products`
   section. (Ensure alternative products are assigned on the product in the backend for this section
