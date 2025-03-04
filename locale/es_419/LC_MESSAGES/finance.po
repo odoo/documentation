@@ -14863,6 +14863,13 @@ msgid ""
 "section for invoice payments or for vendor bill payments in the "
 ":guilabel:`Purchase` section."
 msgstr ""
+"Para establecer un :guilabel:`método de pago` preferido para un cliente o "
+"proveedor, vaya a :menuselection:`Contabilidad --> Clientes --> Clientes` o "
+":menuselection:`Contabilidad --> Proveedores --> Proveedores` y seleccione "
+"al cliente o proveedor. En la pestaña :guilabel:`Ventas y compra` del "
+"formulario de contacto, seleccione el :guilabel:`método de pago` preferido "
+"en la sección :guilabel:`Ventas` para el pago de facturas de clientes o en "
+":guilabel:`Compra` para el pago de facturas de proveedores."
 
 #: ../../content/applications/finance/accounting/payments.rst:54
 msgid ""
@@ -14871,6 +14878,10 @@ msgid ""
 ":guilabel:`Vendors` filter. Alternatively, access the full contact list "
 "through the Contacts app."
 msgstr ""
+"Elimine el filtro de clientes o proveedores para acceder a la lista completa"
+" de contactos desde la vista de lista de :guilabel:`clientes` o "
+":guilabel:`proveedores`. También puede acceder a la lista completa de "
+"contactos desde la aplicación Contactos."
 
 #: ../../content/applications/finance/accounting/payments.rst:61
 msgid "Registering payment from an invoice or bill"
@@ -14917,7 +14928,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/payments.rst:72
 msgid "If necessary, edit the :guilabel:`Memo`."
-msgstr ""
+msgstr "Edite el :guilabel:`memorando` si es necesario."
 
 #: ../../content/applications/finance/accounting/payments.rst:73
 #: ../../content/applications/finance/accounting/payments/checks.rst:76
@@ -14975,6 +14986,9 @@ msgid ""
 "When a bank transaction is reconciled with an invoice with cash-basis, a "
 "journal entry is automatically created to post the cash-basis tax amount."
 msgstr ""
+"Si una transacción bancaria está conciliada con una factura sobre base de "
+"efectivo, entonces se crea un asiento contable de forma automática para "
+"registrar el importe del impuesto con base en efectivo."
 
 #: ../../content/applications/finance/accounting/payments.rst:95
 #: ../../content/applications/finance/accounting/payments.rst:146
@@ -14993,6 +15007,9 @@ msgid ""
 "easily be configured to create journal entries using :ref:`outstanding "
 "accounts <accounting/bank/outstanding-accounts>`."
 msgstr ""
+"Los pagos en Odoo no crean asientos contables de forma predeterminada, pero "
+"puede usar las *:ref:`cuentas pendientes <accounting/bank/outstanding-"
+"accounts>` para que los creen."
 
 #: ../../content/applications/finance/accounting/payments.rst:101
 msgid ""
@@ -15005,6 +15022,14 @@ msgid ""
 "<bank/reconciliation>` with a bank transaction, the invoice or vendor bill "
 "status changes to :guilabel:`Paid`."
 msgstr ""
+"Registrar un pago en una factura de cliente o de proveedor genera un nuevo "
+"asiento contable y reduce la :guilabel:`cantidad por pagar` de acuerdo al "
+"importe del pago. La contrapartida se refleja en una cuenta de **ingresos** "
+"o **pagos** :ref:`pendientes <accounting/bank/outstanding-accounts>`. En ese"
+" momento, la factura del cliente o del proveedor se marca como :guilabel:`En"
+" proceso de pago`. Luego, cuando el pago está :doc:`conciliado "
+"<bank/reconciliation>` con una transacción bancaria, el estado de la factura"
+" del cliente o proveedor cambia a :guilabel:`Pagado`."
 
 #: ../../content/applications/finance/accounting/payments.rst:108
 msgid ""
@@ -15025,6 +15050,8 @@ msgid ""
 "Unreconciling a payment unlinks it from the invoice or bill but does not "
 "delete the payment."
 msgstr ""
+"Desconciliar un pago lo desvincula de la factura de cliente o proveedor, "
+"pero no elimina el pago."
 
 #: ../../content/applications/finance/accounting/payments.rst:118
 msgid ""
@@ -15042,6 +15069,9 @@ msgid ""
 "journal entry is automatically created to post the cash-basis tax (reversal)"
 " amount."
 msgstr ""
+"Si se concilia (o desconcilia) un pago en una factura con impuestos con base"
+" de efectivo, el sistema crea un asiento contable de forma automática para "
+"registrar el importe del impuesto con base de efectivo (o su anulación)."
 
 #: ../../content/applications/finance/accounting/payments.rst:124
 msgid ""
@@ -15050,6 +15080,10 @@ msgid ""
 " moves the invoice/bill directly to the :guilabel:`Paid` status without "
 "requiring bank reconciliation."
 msgstr ""
+"Si configura la cuenta bancaria principal como la cuenta pendiente en el "
+"método de pago del diario bancario, al registrar el pago total en una "
+"factura de cliente o proveedor, el sistema la mueve directo al estado "
+":guilabel:`Pagado` sin necesidad de realizar la conciliación bancaria."
 
 #: ../../content/applications/finance/accounting/payments.rst:131
 msgid "Registering payments not tied to an invoice or bill"
@@ -15060,6 +15094,8 @@ msgid ""
 "When a new payment is registered via :menuselection:`Customers / Vendors -->"
 " Payments`, it is not directly linked to an invoice or bill."
 msgstr ""
+"Al registrar un nuevo pago desde :menuselection:`Clientes / Proveedores --> "
+"Pagos`, este no se vincula a una factura de cliente o de proveedor."
 
 #: ../../content/applications/finance/accounting/payments.rst:140
 msgid ""
@@ -15070,6 +15106,13 @@ msgid ""
 "received is not reflected in the accounting and the :guilabel:`Amount Due` "
 "is not updated based on the payment amount."
 msgstr ""
+"No debe registrar los pagos que no estén vinculados a una factura de cliente"
+" o de proveedor sin utilizar :ref:`cuentas pendientes "
+"<accounting/bank/outstanding-accounts>`, pues no se crea un asiento contable"
+" para el pago y no hay forma de asociar el pago con la factura de cliente o "
+"proveedor. El importe pagado o recibido no se refleja en la contabilidad y "
+"la :guilabel:`cantidad a pagar` no se actualiza de acuerdo al importe del "
+"pago."
 
 #: ../../content/applications/finance/accounting/payments.rst:148
 msgid ""
@@ -15079,6 +15122,11 @@ msgid ""
 ":doc:`reconciling <bank/reconciliation>` the payment with the bank "
 "transaction completes the payment workflow."
 msgstr ""
+"El asiento contable del pago concilia la :guilabel:`cuenta pendiente` con la"
+" cuenta por cobrar o la cuenta por pagar hasta que concilia el pago de forma"
+" manual con la factura de cliente o de proveedor correspondiente. El flujo "
+"de pago se completa al :doc:`conciliar <bank/reconciliation>` el pago con la"
+" transacción bancaria."
 
 #: ../../content/applications/finance/accounting/payments.rst:156
 #: ../../content/applications/finance/accounting/payments.rst:306
@@ -15092,6 +15140,10 @@ msgid ""
 " when records are compared with bank transactions. This balance must either "
 "be reconciled later or written off immediately."
 msgstr ""
+"Durante el proceso de :doc:`conciliación bancaria <bank/reconciliation>`, se"
+" identifica un saldo restante si los débitos y créditos totales no coinciden"
+" al comparar los registros con las transacciones bancarias. Es necesario que"
+" concilie este saldo después o que lo anule de inmediato."
 
 #: ../../content/applications/finance/accounting/payments.rst:166
 msgid "For a single invoice or bill"
@@ -15102,6 +15154,8 @@ msgid ""
 "By default, payments in Odoo do not create journal entries. As a result, "
 "there is no payment to match."
 msgstr ""
+"Los pagos en Odoo no crean asientos contables de forma predeterminada. Como "
+"resultado, no hay ningún pago que conciliar."
 
 #: ../../content/applications/finance/accounting/payments.rst:177
 msgid ""
@@ -15125,6 +15179,9 @@ msgid ""
 "payment is :doc:`reconciled <bank/reconciliation>` with its corresponding "
 ":doc:`bank transaction(s) <bank/transactions>`."
 msgstr ""
+"La factura de cliente o de proveedor se marca como :guilabel:`En proceso de "
+"pago` hasta que el pago se :doc:`concilia <bank/reconciliation>` con las "
+":doc:`transacciones bancarias <bank/transactions>` correspondientes."
 
 #: ../../content/applications/finance/accounting/payments.rst:191
 msgid "For multiple invoices or bills"
@@ -15136,6 +15193,9 @@ msgid ""
 "there is no payment to match, but this feature can still be used to match "
 "miscellaneous journal items."
 msgstr ""
+"Los pagos en Odoo no crean asientos contables de forma predeterminada. Como "
+"resultado, no hay ningún pago que conciliar, pero puede usar esta función "
+"para conciliar apuntes contables misceláneos."
 
 #: ../../content/applications/finance/accounting/payments.rst:202
 msgid ""
@@ -15148,12 +15208,23 @@ msgid ""
 " Alternatively, go to :menuselection:`Accounting --> Accounting --> "
 "Reconcile`."
 msgstr ""
+"La herramienta de :guilabel:`conciliación de pagos` o "
+":guilabel:`conciliación automática` permite conciliar apuntes contables "
+"entre sí (es decir, pagos con facturas de cliente o de proveedor), ya sea de"
+" forma individual o por lotes. Vaya al :guilabel:`tablero de Contabilidad`, "
+"haga clic en el botón :icon:`fa-ellipsis-v` (:guilabel:`tres puntos "
+"verticales`) de los diarios :guilabel:`Facturas de cliente` o "
+":guilabel:`Facturas de proveedor` y seleccione :guilabel:`Conciliación de "
+"pagos` o vaya a :menuselection:`Contabilidad --> Contabilidad --> "
+"Conciliar`."
 
 #: ../../content/applications/finance/accounting/payments.rst:209
 msgid ""
 "To manually :guilabel:`Reconcile` journal items, select the individual items"
 " from the list view and click :guilabel:`Reconcile`."
 msgstr ""
+"Para conciliar los apuntes contables de forma manual, selecciónelos de la "
+"vista de lista y haga clic en :guilabel:`Conciliar`."
 
 #: ../../content/applications/finance/accounting/payments.rst:215
 msgid "Auto-Reconcile Feature"
@@ -15163,6 +15234,8 @@ msgstr "Función de conciliación automática"
 #: ../../content/applications/finance/accounting/payments.rst:230
 msgid "To use the :guilabel:`Auto-Reconcile` feature, follow these steps:"
 msgstr ""
+"Siga estos pasos para usar la función de :guilabel:`conciliación "
+"automática`:"
 
 #: ../../content/applications/finance/accounting/payments.rst:223
 #: ../../content/applications/finance/accounting/payments.rst:232
@@ -15171,12 +15244,18 @@ msgid ""
 ":guilabel:`Auto-Reconcile` next to the receivable or payable account (or a "
 "specific contact's group of journal items in that account)."
 msgstr ""
+"En la vista de lista :guilabel:`Apuntes contables por conciliar`, haga clic "
+"en :guilabel:`Conciliación automática` junto a la cuenta por cobrar o por "
+"pagar (o un grupo específico de apuntes contables de un contacto en esa "
+"cuenta)."
 
 #: ../../content/applications/finance/accounting/payments.rst:226
 msgid ""
 "In the :guilabel:`Reconcile automatically` window, click "
 ":guilabel:`Reconcile`."
 msgstr ""
+"En la ventana :guilabel:`Conciliar de forma automática`, haga clic en "
+":guilabel:`Conciliar`."
 
 #: ../../content/applications/finance/accounting/payments.rst:235
 msgid ""
@@ -15184,18 +15263,27 @@ msgid ""
 ":guilabel:`Reconcile` field depending on how you want to match journal "
 "items:"
 msgstr ""
+"En la ventana :guilabel:`Conciliar de forma automática`, configure el campo "
+":guilabel:`Conciliar` de acuerdo a la manera en la que desee conciliar los "
+"apuntes contables:"
 
 #: ../../content/applications/finance/accounting/payments.rst:238
 msgid ""
 ":guilabel:`Perfect Match`: Each debit journal item will be matched with the "
 "corresponding credit journal item of the same value."
 msgstr ""
+":guilabel:`Coincidencia perfecta`: Cada apunte contable de débito se "
+"conciliará con el apunte contable de crédito correspondiente del mismo "
+"valor."
 
 #: ../../content/applications/finance/accounting/payments.rst:240
 msgid ""
 ":guilabel:`Clear Accounts`: All reconciled journal items will have the same "
 "matching number, as they are selected from the same account."
 msgstr ""
+":guilabel:`Cuentas de compensación`: Todos los apuntes contables conciliados"
+" tendrán el mismo número de conciliación, ya que se seleccionan de la misma "
+"cuenta."
 
 #: ../../content/applications/finance/accounting/payments.rst:243
 msgid "Click :guilabel:`Reconcile`."
@@ -15208,18 +15296,26 @@ msgid ""
 "<bank/reconciliation>` with their corresponding :doc:`bank transactions "
 "<bank/transactions>`."
 msgstr ""
+"Las facturas de cliente y de proveedor se concilian de forma automática con "
+"sus pagos correspondientes y se marcan como :guilabel:`En proceso de pago` "
+"hasta que se :doc:`concilien <bank/reconciliation>` con las "
+":doc:`transacciones bancarias <bank/transactions>` correspondientes."
 
 #: ../../content/applications/finance/accounting/payments.rst:252
 msgid ""
 "Registering payments on multiple invoices/credit notes or bills/refunds "
 "(group payments)"
 msgstr ""
+"Registrar pagos en varias facturas de cliente, notas de crédito, facturas de"
+" proveedor o reembolsos (pagos por grupo)"
 
 #: ../../content/applications/finance/accounting/payments.rst:254
 msgid ""
 "To register payments on multiple invoices/credit notes or bills/refunds, "
 "follow these steps:"
 msgstr ""
+"Siga estos pasos para registrar pagos en varias facturas de cliente, notas "
+"de crédito, facturas de proveedor o reembolsos:"
 
 #: ../../content/applications/finance/accounting/payments.rst:256
 msgid ""
@@ -15236,12 +15332,18 @@ msgid ""
 "Method`, select the relevant invoices/credit notes or bills/refunds and "
 "click :guilabel:`Pay`."
 msgstr ""
+"En la vista de lista, haga clic en la barra de búsqueda, agrupe por "
+":guilabel:`método de pago`, seleccione las facturas de cliente, notas de "
+"crédito, facturas de proveedor o reembolsos correspondientes y haga clic en "
+":guilabel:`Pagar`."
 
 #: ../../content/applications/finance/accounting/payments.rst:260
 msgid ""
 "In the :guilabel:`Pay` window, select the :guilabel:`Journal` and the "
 ":guilabel:`Payment Date`."
 msgstr ""
+"En la ventana :guilabel:`Pagar` seleccione el :guilabel:`diario` y la "
+":guilabel:`fecha de pago`."
 
 #: ../../content/applications/finance/accounting/payments.rst:266
 msgid ""
@@ -15249,6 +15351,8 @@ msgid ""
 "the :guilabel:`Group Payments` option, or leave it unchecked to create "
 "separate payments."
 msgstr ""
+"Active la opción :guilabel:`Agrupar pagos` para combinar todos los pagos del"
+" mismo contacto en uno solo o déjela desactivada para crear pagos separados."
 
 #: ../../content/applications/finance/accounting/payments.rst:268
 msgid "Click :guilabel:`Create payment`."
@@ -15259,6 +15363,9 @@ msgid ""
 "The invoices or bills are then marked as :guilabel:`In payment` until they "
 "are :doc:`reconciled <bank/reconciliation>` with the bank transactions."
 msgstr ""
+"Las facturas de cliente o de proveedor se marcan como :guilabel:`En proceso "
+"de pago` hasta que quedan :doc:`conciliadas <bank/reconciliation>` con sus "
+"transacciones bancarias."
 
 #: ../../content/applications/finance/accounting/payments.rst:279
 msgid ""
@@ -15266,12 +15373,16 @@ msgid ""
 "bank transactions are :doc:`reconciled <bank/reconciliation>` with the "
 "payments."
 msgstr ""
+"Las facturas de cliente o de proveedor se marcan como :guilabel:`En proceso "
+"de pago` hasta las transacciones bancarias están :doc:`conciliadas "
+"<bank/reconciliation>` con sus pagos."
 
 #: ../../content/applications/finance/accounting/payments.rst:285
 msgid ""
 "Registering a single payment for multiple customers or vendors (batch "
 "payments)"
 msgstr ""
+"Registrar un solo pago para varios clientes o proveedores (pagos por lote)"
 
 #: ../../content/applications/finance/accounting/payments.rst:287
 msgid ""
@@ -15285,12 +15396,23 @@ msgid ""
 ":icon:`fa-cog` :guilabel:`Actions`, and select :guilabel:`Create Batch "
 "Payment`."
 msgstr ""
+"Los pagos por lote permiten agrupar pagos de varios contactos para facilitar"
+" la :doc:`conciliación <bank/reconciliation>`. También son útiles para "
+"depositar :doc:`cheques <payments/checks>` en el banco o para generar "
+"archivos de pago bancarios como :doc:`SEPA <payments/pay_sepa>` o "
+":ref:`NACHA <l10n_us/nacha>`. Para esto, vaya a :menuselection:`Contabilidad"
+" --> Clientes --> Pagos` o a :menuselection:`Contabilidad --> Proveedores "
+"--> Pagos`. En la vista de lista de pagos, seleccione los pagos a agrupar en"
+" un lote, haga clic en :icon:`fa-cog` :guilabel:`Acciones` y seleccione "
+":guilabel:`Crear pago por lote`."
 
 #: ../../content/applications/finance/accounting/payments.rst:296
 msgid ""
 "All payments in a batch must have the same :ref:`payment method "
 "<accounting/payments/payment-methods>`."
 msgstr ""
+"Todos los pagos en un lote deben tener el mismo :ref:`método de pago "
+"<accounting/payments/payment-methods>`."
 
 #: ../../content/applications/finance/accounting/payments.rst:300
 msgid ":doc:`payments/batch`"
@@ -15310,6 +15432,14 @@ msgid ""
 ":guilabel:`Customer Invoices` or :guilabel:`Vendor Bills` journals, and "
 "select :guilabel:`Payments Matching`."
 msgstr ""
+"La herramienta de :guilabel:`conciliación de pagos` abre todos los apuntes "
+"contables sin conciliar y permite procesarlos de forma individual para "
+"después conciliar todos los pagos y apuntes contables. Vaya al "
+":guilabel:`tablero de Contabilidad` y abra :menuselection:`Contabilidad --> "
+"Contabilidad --> Conciliar` o haga clic en el botón :icon:`fa-ellipsis-v` "
+"(:guilabel:`tres puntos verticales`) de los diarios :guilabel:`Facturas de "
+"cliente` o :guilabel:`Facturas de proveedor` y luego seleccione "
+":guilabel:`Conciliación de pagos`."
 
 #: ../../content/applications/finance/accounting/payments.rst-1
 msgid "Payments matching menu in the drop-down menu."
@@ -15334,6 +15464,8 @@ msgid ""
 "To register a partial payment, click on :guilabel:`Pay` from the related "
 "invoice or bill."
 msgstr ""
+"Para registrar un pago parcial, haga clic en :guilabel:`Pagar` en la factura"
+" de cliente o proveedor relacionada."
 
 #: ../../content/applications/finance/accounting/payments.rst:333
 msgid ""
@@ -15341,6 +15473,9 @@ msgid ""
 "than the total remaining amount on the invoice or the bill), fill in the "
 ":guilabel:`Amount` in the :guilabel:`Pay` window."
 msgstr ""
+"Si se trata de un pago parcial (cuando el :guilabel:`importe` pagado es "
+"menor al importe total pendiente en la factura de cliente o de proveedor), "
+"complete el :guilabel:`importe` en la ventana :guilabel:`Pagar`."
 
 #: ../../content/applications/finance/accounting/payments.rst:339
 msgid ""
@@ -15349,6 +15484,10 @@ msgid ""
 ":guilabel:`Payment Difference` field displays the outstanding balance. There"
 " are two options:"
 msgstr ""
+"Si se trata de un pago parcial (cuando el :guilabel:`importe` pagado es "
+"menor al importe total pendiente en la factura de cliente o de proveedor), "
+"el campo :guilabel:`Diferencia de pago` muestra el balance pendiente. Hay "
+"dos opciones:"
 
 #: ../../content/applications/finance/accounting/payments.rst:343
 msgid ""
@@ -15387,6 +15526,11 @@ msgid ""
 "<bank/transactions>` line with the invoice or bill to finalize the payment "
 "workflow and mark the invoice or bill as :guilabel:`Paid`."
 msgstr ""
+"Luego de registrar el pago, el estado de la factura de cliente o de "
+"proveedor será :guilabel:`En estado de pago`. El siguiente paso es "
+":doc:`conciliar <bank/reconciliation>` la línea de la :doc:`transacción "
+"bancaria <bank/transactions>` relacionada con la factura para finalizar el "
+"flujo de pago y marcarla como :guilabel:`Pagada`."
 
 #: ../../content/applications/finance/accounting/payments.rst:368
 msgid ""
@@ -15396,6 +15540,11 @@ msgid ""
 "<bank/transactions>` line to finalize the payment workflow and mark the "
 "invoice or bill as :guilabel:`Paid`."
 msgstr ""
+"Luego de registrar el pago, el estado de la factura de cliente o de "
+"proveedor será :guilabel:`En estado de pago`. El siguiente paso es "
+":doc:`conciliar <bank/reconciliation>` el pago con línea de la "
+":doc:`transacción bancaria <bank/transactions>` relacionada para finalizar "
+"el flujo de pago y marcarla como :guilabel:`Pagada`."
 
 #: ../../content/applications/finance/accounting/payments/batch.rst:3
 msgid "Batch payments by bank deposit"
@@ -20544,6 +20693,11 @@ msgid ""
 "if all outstanding payments and invoices are reconciled, potentially finding"
 " errors or mistakes in the system."
 msgstr ""
+"Si lo desea, :ref:`concilie los pagos <accounting/payments/auto-reconcile-"
+"tool>` para validar cualquier factura de proveedor o de cliente pendiente "
+"con sus pagos. Este paso es opcional, pero puede ser útil para el proceso de"
+" cierre fiscal si concilia todos los pagos y facturas pendientes, lo que le "
+"permitiría  identificar errores o discrepancias en el sistema."
 
 #: ../../content/applications/finance/accounting/reporting/year_end.rst:70
 msgid ""
@@ -24931,6 +25085,10 @@ msgid ""
 "vendor and is used to do the :ref:`matching <accounting/payments/payments-"
 "matching>` when you receive the products."
 msgstr ""
+":guilabel:`Referencia de la factura`: Agregue la referencia de la orden de "
+"venta proporcionada por el proveedor, esta se utiliza para realizar la "
+":ref:`conciliación <accounting/payments/payments-matching>` al recibir los "
+"productos."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:41
 msgid ""
@@ -29158,7 +29316,7 @@ msgstr "`l10n_ar_withholding`"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:53
 msgid "Allows registering withholdings during the payment of an invoice."
-msgstr ""
+msgstr "Permite registrar las retenciones durante el pago de una factura."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:58
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:77
@@ -30581,6 +30739,12 @@ msgid ""
 "**Argentina Payment Withholdings** (`l10n_ar_withholding`) module must be "
 ":ref:`installed <general/install>`:"
 msgstr ""
+"El módulo de localización fiscal de Argentina cuenta con los registros de "
+"retenciones necesarios. Para acceder a ellos vaya a "
+":menuselection:`Contabilidad --> Configuración --> Impuestos` y elimine el "
+"filtro predeterminado :guilabel:`Venta o compra`. El módulo **Argentina - "
+"Retenciones de pago** (`l10n_ar_withholding`) debe estar :ref:`instalado "
+"<general/install>` para que pueda verificar estos registros."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:698
 msgid ""
@@ -30590,16 +30754,23 @@ msgid ""
 "*all* payment methods within the bank journals have an outstanding payment "
 "and receipt account set."
 msgstr ""
+"No se crean *asientos contables* al registrar los pagos, a menos que "
+"configure las :ref:`cuentas pendientes <accounting/bank/outstanding-"
+"accounts>`. Por lo tanto, para que esta función funcione de forma correcta, "
+"es importante que verifique que *todos* los métodos de pago de los diarios "
+"bancarios tengan configurada una cuenta de pagos pendientes y de cobros."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst-1
 msgid "An outstanding payment account must be set."
-msgstr ""
+msgstr "Es necesario que defina una cuenta de pagos pendientes."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:706
 msgid ""
 "This configuration is crucial for the proper accounting of withholding "
 "transactions with clients and vendors."
 msgstr ""
+"Esta configuración es indispensable para contabilizar las transacciones de "
+"retención con clientes y proveedores de forma correcta."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:710
 msgid ""
@@ -30608,6 +30779,10 @@ msgid ""
 "be collected from a customer. Therefore, one or multiple withholdings can be"
 " recorded for each payment applied to an invoice."
 msgstr ""
+"En Argentina, las retenciones representan la cancelación de una porción "
+"específica de la deuda total que se debe a un proveedor o una reducción en "
+"el pago total que se debe cobrar a un cliente. Por lo tanto, es posible "
+"registrar una o varias retenciones para cada pago aplicado a una factura."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:717
 msgid ""
@@ -30616,6 +30791,11 @@ msgid ""
 " certain configurations to correctly calculate the withholding amount on "
 "vendor payments. The following withholding types are available:"
 msgstr ""
+"Si bien Odoo ya crea la mayoría de las retenciones requeridas en el menú "
+":guilabel:`Impuestos`, en varios casos es necesario aplicar o modificar "
+"ciertas configuraciones para calcular el importe de la retención en los "
+"pagos a proveedores de forma correcta. Estos son los tipos de retención "
+"disponibles:"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:721
 msgid ":ref:`Earnings <l10n_ar/earnings-withholdings>`"
@@ -30623,15 +30803,15 @@ msgstr ":ref:`Ganancias <l10n_ar/earnings-withholdings>`"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:722
 msgid ":ref:`Earnings Scale <l10n_ar/earnings-scale-withholdings>`"
-msgstr ""
+msgstr ":ref:`Escala de ganancias <l10n_ar/earnings-scale-withholdings>`"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:723
 msgid ":ref:`IIBB Total Amount <l10n_ar/iib-total-amount-withholdings>`"
-msgstr ""
+msgstr ":ref:`Importe total de IIBB <l10n_ar/iib-total-amount-withholdings>`"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:724
 msgid ":ref:`IIBB Non-Taxable <l10n_ar/iib-nontax-withholdings>`"
-msgstr ""
+msgstr ":ref:`IIBB no gravable <l10n_ar/iib-nontax-withholdings>`"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:729
 msgid "Earnings"
@@ -30642,6 +30822,9 @@ msgid ""
 "For :guilabel:`Earnings` withholdings, Odoo already has a record for each "
 "regime group, which is stated under the name of the tax and the AFIP code."
 msgstr ""
+"Para las retenciones de :guilabel:`ganancias`, Odoo ya tiene un registro "
+"para cada grupo de régimen y este se encuentra bajo el nombre del impuesto y"
+" el código de la AFIP."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:734
 msgid ""
@@ -30649,24 +30832,33 @@ msgid ""
 "configuration should be double checked to make sure the configuration is "
 "updated and well-applied. The fields to validate are:"
 msgstr ""
+"Todos estos registros están listos para su uso. Como buena práctica, "
+"verifique la configuración para asegurarse de que esté actualizada y "
+"aplicada de forma correcta. Los campos a validar son los siguientes:"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:737
 msgid ""
 ":guilabel:`Amount`: This is the percentage of the total payment amount which"
 " is withheld."
 msgstr ""
+":guilabel:`Importe`: Es el porcentaje del importe total del pago que se "
+"retiene."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:738
 msgid ""
 ":guilabel:`Non-Taxable Amount`: Up to this amount, the withholding does not "
 "apply."
 msgstr ""
+":guilabel:`Monto no imponible`: Hasta este importe, la retención no se "
+"aplica."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:739
 msgid ""
 ":guilabel:`Minimum Withholding`: If the calculated withholding amount is "
 "smaller than this value, the total withholding amount is set to `0.0`."
 msgstr ""
+":guilabel:`Retención mínima`: Si el importe de la retención calculado es "
+"menor que este valor, el monto total de la retención se definirá con `0.0`."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:741
 msgid ""
@@ -30674,14 +30866,18 @@ msgid ""
 "of a withholding number under the payment line. If this field is not set, a "
 "number is manually captured while adding a withholding to a payment."
 msgstr ""
+":guilabel:`Secuencia de retención`: Este campo ayuda a automatizar la "
+"captura de un número de retención en la línea de pago. Si este campo no está"
+" configurado, entonces se captura un número de forma manual al agregar una "
+"retención a un pago."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst-1
 msgid "Earnings withholding type."
-msgstr ""
+msgstr "Tipo de retención de ganancias."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:751
 msgid "Earnings Scale"
-msgstr ""
+msgstr "Escala de ganancias"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:753
 msgid ""
@@ -30689,6 +30885,8 @@ msgid ""
 " withholding is calculated based on the value of the :guilabel:`Scale` "
 "field."
 msgstr ""
+"En este caso no es necesario establecer un porcentaje, sino que esta "
+"retención se calcula de acuerdo al valor del campo :guilabel:`Escala`."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:756
 msgid ""
@@ -30698,6 +30896,11 @@ msgid ""
 " However, scales should be created and updated as necessary to suit a "
 "business's needs."
 msgstr ""
+"Vaya a :menuselection:`Contabilidad --> Configuración --> Escala de "
+"ganancias` para ver, modificar o crear nuevas escalas. La localización "
+"argentina está preconfigurada con dos escalas principales de forma "
+"predeterminada, pero debe crear y actualizar las escalas según sea necesario"
+" para que se adapten a las necesidades de su empresa."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:761
 msgid ""
@@ -37074,15 +37277,15 @@ msgid ""
 "In the :guilabel:`Street` field, enter the street name, number, and any "
 "additional address information."
 msgstr ""
-"En el campo :guilabel:`Calle` escriba el nombre de la calle, el número y la "
-"información adicional de la dirección."
+"Escriba el nombre de la calle, el número y la información adicional de la "
+"dirección en el campo :guilabel:`Calle`."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:91
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:332
 #: ../../content/applications/finance/fiscal_localizations/malaysia.rst:54
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:48
 msgid "In the :guilabel:`Street 2` field, enter the neighborhood."
-msgstr "En el campo :guilabel:`calle 2`, ingrese la zona."
+msgstr "Ingrese la zona en el campo :guilabel:`Calle 2`."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:93
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:334
@@ -37695,8 +37898,8 @@ msgid ""
 "In the :guilabel:`Street` field, enter the street, number, and any extra "
 "address information."
 msgstr ""
-"En el campo :guilabel:`Calle` escriba el nombre de la calle, el número y la "
-"información adicional de la dirección."
+"Escriba el nombre de la calle, el número y la información adicional de la "
+"dirección en el campo :guilabel:`Calle`."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:336
 msgid ":guilabel:`IE`: state tax identification number"
@@ -51246,7 +51449,7 @@ msgstr "Reporte de estado de resultados"
 
 #: ../../content/applications/finance/fiscal_localizations/india.rst:596
 msgid "TDS/TCS threshold alert"
-msgstr ""
+msgstr "Alerta de umbral de TDS y TCS"
 
 #: ../../content/applications/finance/fiscal_localizations/india.rst:598
 msgid ""
@@ -51256,6 +51459,12 @@ msgid ""
 "value of invoices or bills surpasses these limits, prompting the application"
 " of the appropriate TDS/TCS."
 msgstr ""
+":abbr:`TDS (Impuestos deducidos en el origen)` y :abbr:`TCS (Impuesto "
+"recaudado en el origen)` son disposiciones fiscales según la ley india, que "
+"se activan cuando el importe de las transacciones superan los umbrales "
+"especificados. Esta alerta notifica a los usuarios cuando el valor de las "
+"facturas de cliente o de proveedor supera estos límites, lo que genera la "
+"aplicación del TDS o TCS correspondiente."
 
 #: ../../content/applications/finance/fiscal_localizations/india.rst:603
 msgid ""
@@ -51264,6 +51473,11 @@ msgid ""
 "of accounts. Odoo will display a banner suggesting the TDS/TCS section under"
 " which tax might be applicable when recording an invoice or bill."
 msgstr ""
+"Para configurar Odoo y que le informe cuándo aplicar TDS/TCS, configure el "
+"campo :guilabel:`Sección TDS/TCS` en la cuenta correspondiente del plan de "
+"cuentas. Odoo le mostrará un mensaje que le sugiera la sección TDS/TCS en la"
+" que podría ser posible aplicar el impuesto al registrar una factura de "
+"cliente o de proveedor."
 
 #: ../../content/applications/finance/fiscal_localizations/india.rst:610
 msgid ""
@@ -51275,6 +51489,8 @@ msgid ""
 "In the :guilabel:`Indian Integration` section, enable the :guilabel:`TDS and"
 " TCS` feature."
 msgstr ""
+"Habilite la función :guilabel:`TDS y TCS` en la sección de "
+":guilabel:`integración india` "
 
 #: ../../content/applications/finance/fiscal_localizations/india.rst:612
 msgid ""
@@ -51288,6 +51504,8 @@ msgid ""
 "Click :guilabel:`View` on the desired account, and set the "
 ":guilabel:`TDS/TCS Section` field."
 msgstr ""
+"Haga clic en :guilabel:`Ver` en la cuenta deseada y configure el campo "
+":guilabel:`Sección TDS/TCS`."
 
 #: ../../content/applications/finance/fiscal_localizations/india.rst:616
 msgid ""
@@ -51351,7 +51569,7 @@ msgstr "**Factura**"
 
 #: ../../content/applications/finance/fiscal_localizations/india.rst:654
 msgid "**Transaction Amount (₹)**"
-msgstr ""
+msgstr "**Importe de la transacción (₹)**"
 
 #: ../../content/applications/finance/fiscal_localizations/india.rst:655
 msgid "**PAN Number**"
@@ -66012,7 +66230,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:715
 msgid "Create batch payment"
-msgstr "Crea un pago por lote"
+msgstr "Crear pago por lotes"
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:717
 msgid "Now, record each payment in Odoo using the |NACHA| payment method."
@@ -67065,6 +67283,8 @@ msgid ""
 "The following modules are installed automatically with the Vietnamese "
 "localization:"
 msgstr ""
+"La localización vietnamita incluye la instalación de los siguientes módulos "
+"de forma automática:"
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:20
 msgid ":guilabel:`Vietnam - Accounting`"
@@ -67087,6 +67307,8 @@ msgid ""
 "This module includes the features required for integration with "
 ":ref:`SInvoice <localizations/vietnam/sinvoice>`."
 msgstr ""
+"Este módulo incluye las funciones necesarias para integrar :ref:`SInvoice "
+"<localizations/vietnam/sinvoice>`."
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:30
 msgid ""
@@ -67094,16 +67316,24 @@ msgid ""
 "it is possible that modules may not be installed automatically. Any missing "
 "modules can be manually :ref:`installed <general/install>`."
 msgstr ""
+"Es posible que en algunos casos los módulos no se instalen en automático, "
+"por ejemplo, al actualizar a una versión con módulos adicionales. "
+":ref:`Instale <general/install>` los módulos faltantes de forma manual."
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:39
 msgid ""
 "To use all the features of this fiscal localization, the following fields "
 "are required on the :doc:`company record </applications/general/companies>`:"
 msgstr ""
+"El :doc:`registro de la empresa </applications/general/companies>` debe "
+"tener completos los siguientes campos para que pueda utilizar todas las "
+"funciones de la localización fiscal:"
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:50
 msgid ":guilabel:`Tax ID`: tax identification number."
 msgstr ""
+":guilabel:`Número de identificación fiscal`: El número de identificación "
+"fiscal."
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:55
 msgid "E-invoicing with SInvoice"
@@ -67115,16 +67345,22 @@ msgid ""
 "biggest e-invoice service providers in Vietnam. Odoo supports integration "
 "with SInvoice to submit invoices generated in Odoo."
 msgstr ""
+"SInvoice_ es la plataforma de facturación electrónica de Viettel, uno de los"
+" mayores proveedores de servicios de facturación electrónica en Vietnam. "
+"Odoo es compatible con la integración con SInvoice para enviar las facturas "
+"generadas en Odoo."
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:64
 msgid "SInvoice platform"
-msgstr "Plataforma SInvoice"
+msgstr "Plataforma de SInvoice"
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:66
 msgid ""
 "To send electronic invoices to SInvoice, the following must be created on "
 "SInvoice_:"
 msgstr ""
+"Cree lo siguiente en SInvoice_ para poder enviar facturas electrónicas a "
+"SInvoice:"
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:68
 msgid ":ref:`SInvoice account <localizations/vietname/sinvoice-registration>`"
@@ -67138,12 +67374,13 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:70
 msgid ":ref:`Invoice symbol <localizations/vietname/sinvoice-symbol>`"
-msgstr ""
+msgstr ":ref:`Símbolo de la factura <localizations/vietname/sinvoice-symbol>`"
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:71
 msgid ""
 ":ref:`Invoice issuance notice <localizations/vietname/sinvoice-notice>`"
 msgstr ""
+":ref:`Aviso de emisión de facturas <localizations/vietname/sinvoice-notice>`"
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:76
 msgid "SInvoice registration"
@@ -67155,22 +67392,30 @@ msgid ""
 "Fill in the form that opens to be contacted by SInvoice_ to create an "
 "account."
 msgstr ""
+"Para crear una cuenta, vaya a SInvoice_ y regístrese en el plan que desee. "
+"Complete el formulario que se abre, después SInvoice_ le contactará para "
+"crear una cuenta."
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:81
 msgid ""
 "Once you have an account, log into SInvoice_ using your :guilabel:`Username`"
 " and :guilabel:`Password`."
 msgstr ""
+"Una vez que tenga una cuenta, inicie sesión en SInvoice_ con su "
+":guilabel:`nombre de usuario` y su :guilabel:`contraseña`."
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:87
 msgid "Invoice template creation"
-msgstr ""
+msgstr "Creación de plantilla de facturas"
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:89
 msgid ""
 "On the left side of the overview page, in the :guilabel:`Release management`"
 " menu, click :guilabel:`Create business information`."
 msgstr ""
+"En el lado izquierdo de la página de información general, en el menú "
+":guilabel:`Gestión de versiones`, haga clic en :guilabel:`Crear información "
+"empresarial`."
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:91
 msgid ""
@@ -67179,6 +67424,10 @@ msgid ""
 ":guilabel:`Address`, :guilabel:`Contact person`, :guilabel:`Type of "
 "representative documents`."
 msgstr ""
+"En el paso :guilabel:`Actualizar información clave`, complete los campos "
+":guilabel:`Nombre de la unidad`, :guilabel:`Dirección`, :guilabel:`Persona "
+"de contacto`, :guilabel:`Tipo de documentos del representante` y otra "
+"información opcional en caso de que sea necesario."
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:94
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:111
@@ -67190,12 +67439,16 @@ msgid ""
 "In the :guilabel:`Look up digital certificate` step, click :guilabel:`Add "
 "new` to add a digital certificate."
 msgstr ""
+"En el paso :guilabel:`Buscar certificado digital`, haga clic en "
+":guilabel:`Agregar nuevo` para subir un certificado digital."
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:97
 msgid ""
 "Select the :guilabel:`Branch/Enterprise` and the :guilabel:`Type of digital "
 "certificate`, then fill in the required fields for each type:"
 msgstr ""
+"Seleccione la :guilabel:`sucursal o empresa` y el :guilabel:`tipo de "
+"certificado digital`, luego complete los campos necesarios para cada tipo."
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:100
 msgid ":guilabel:`Supplier`: CloudCA"
@@ -67203,31 +67456,35 @@ msgstr ":guilabel:`Proveedor`: CloudCA"
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:101
 msgid ":guilabel:`Signer ID`: CloudCA"
-msgstr ""
+msgstr ":guilabel:`ID del signatario`: CloudCA"
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:102
 msgid ":guilabel:`Digital Certificate`: CloudCA"
-msgstr ""
+msgstr ":guilabel:`Certificado digital`: CloudCA"
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:103
 msgid ":guilabel:`How to download file`: HSM"
-msgstr ""
+msgstr ":guilabel:`Cómo descargar el archivo`: HSM"
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:104
 msgid ":guilabel:`File Upload`: HSM, USB-TOKEN"
-msgstr ""
+msgstr ":guilabel:`Archivo a subir`: HSM, USB-TOKEN"
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:106
 msgid ""
 "Click :guilabel:`Generate key pair` to generate encryption keys for "
 "authentication, and :guilabel:`Save`."
 msgstr ""
+"Haga clic en :guilabel:`Generar par de claves` para generar las claves de "
+"cifrado para la autenticación y luego en :guilabel:`Guardar`."
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:108
 msgid ""
 "In the :guilabel:`Manage invoice templates` step, add a new "
 ":guilabel:`Invoice template`."
 msgstr ""
+"Agregue una nueva :guilabel:`plantilla de factura` en el paso "
+":guilabel:`Gestionar plantillas de factura`."
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:109
 msgid ""
@@ -67235,6 +67492,9 @@ msgid ""
 "template code`, :guilabel:`Invoice template name`, and other optional "
 "information if needed."
 msgstr ""
+"Seleccione el :guilabel:`tipo de factura` y complete el :guilabel:`código de"
+" plantilla de factura`, el :guilabel:`nombre de la plantilla de factura` y "
+"otra información opcional en caso de que sea necesaria."
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:114
 msgid ""
@@ -67242,32 +67502,45 @@ msgid ""
 "<https://www.sinvoice.vn/2021/02/hdsd-tai-lieu-nghiep-vu-tao-mau-hoa-don-"
 "dien-tu.html?debug=1>`_"
 msgstr ""
+"`Documentación de SInvoice sobre creación de plantillas de factura "
+"electrónica <https://www.sinvoice.vn/2021/02/hdsd-tai-lieu-nghiep-vu-tao-"
+"mau-hoa-don-dien-tu.html?debug=1>`_"
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:120
 msgid "Invoice symbol creation"
-msgstr ""
+msgstr "Creación del símbolo de la factura"
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:122
 msgid ""
 "On the left side of the main screen, in the :guilabel:`Release management` "
 "menu, click :guilabel:`Invoice symbol` and follow these steps:"
 msgstr ""
+"En el lado izquierdo de la pantalla principal, en el menú :guilabel:`Gestión"
+" de versiones`, haga clic en :guilabel:`Símbolo de la factura` y siga estos "
+"pasos:"
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:125
 msgid "Click :guilabel:`Add new` and select the :guilabel:`Invoice template`."
 msgstr ""
+"Haga clic en :guilabel:`Agregar nuevo` y seleccione la :guilabel:`plantilla "
+"de la factura`."
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:126
 msgid ""
 "Set the :guilabel:`Status` to :guilabel:`Active` to activate the symbol and "
 "fill in the :guilabel:`Invoice symbol`."
 msgstr ""
+"Establezca el :guilabel:`estado` en :guilabel:`Activo` para activar el "
+"símbolo y complete el :guilabel:`símbolo de la factura`."
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:128
 msgid ""
 "Enable :guilabel:`Stop automatic sending to tax authorities` and "
 ":guilabel:`Default for built-in API` based on preference."
 msgstr ""
+"Habilite :guilabel:`Detener el envío automático a las autoridades fiscales` "
+"y :guilabel:`Predeterminado para la API integrada` de acuerdo a sus "
+"preferencias."
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:130
 msgid "Click :guilabel:`Save`."
@@ -67275,13 +67548,16 @@ msgstr "Haga clic en :guilabel:`Guardar`."
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:135
 msgid "Invoice issuance notice"
-msgstr ""
+msgstr "Aviso de emisión de facturas"
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:137
 msgid ""
 "On the left side of the main screen, in the :guilabel:`Release management` "
 "menu, click :guilabel:`Create issuance notice` and follow these steps:"
 msgstr ""
+"En el lado izquierdo de la pantalla principal, en el menú :guilabel:`Gestión"
+" de versiones`, haga clic en :guilabel:`Crear aviso de emisión` y siga estos"
+" pasos:"
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:140
 msgid ""
@@ -67291,30 +67567,45 @@ msgid ""
 ":guilabel:`Address`, :guilabel:`Phone number`, and :guilabel:`Separator "
 "used` are automatically filled and uneditable."
 msgstr ""
+"Haga clic en :guilabel:`Agregar nuevo`, seleccione el :guilabel:`nombre de "
+"la unidad empresarial para emitir una factura electrónica` y el "
+":guilabel:`nombre de la agencia tributaria`. El :guilabel:`código "
+"tributario`, la :guilabel:`dirección`, el :guilabel:`número telefónico` y el"
+" :guilabel:`separador utilizado` se completan en automático de acuerdo a la "
+"unidad empresarial y la agencia tributaria que haya seleccionado y no se "
+"pueden editar."
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:144
 msgid ""
 "Click :guilabel:`Select the invoice type for issuance`, and then select and "
 "fill in the following information :"
 msgstr ""
+"Haga clic en :guilabel:`Seleccionar el tipo de factura para emisión`, luego "
+"seleccione y complete la siguiente información:"
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:147
 msgid ""
 ":guilabel:`Invoice type`: The invoice type on which to declare an issuance "
 "notice."
 msgstr ""
+":guilabel:`Tipo de factura`: El tipo de factura en la que se debe declarar "
+"un aviso de emisión"
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:148
 msgid ""
 ":guilabel:`Invoice template`: Select from the list of templates available "
 "based on the invoice type."
 msgstr ""
+":guilabel:`Plantilla de la factura`: Seleccione una de la lista de "
+"plantillas disponibles de acuerdo al tipo de factura."
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:150
 msgid ""
 ":guilabel:`Symbol`: Select from the list of symbols available based on the "
 "invoice type."
 msgstr ""
+":guilabel:`Símbolo`: Seleccione uno de la lista de símbolos disponibles de "
+"acuerdo al tipo de factura."
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:151
 msgid ""
@@ -67322,12 +67613,18 @@ msgid ""
 "type. Based on the type and template selected, this field is filled in "
 "automatically. It can be changed if needed."
 msgstr ""
+":guilabel:`Cantidad`: El número total de facturas a emitir para el tipo "
+"seleccionado. Este campo se completa en automático de acuerdo al tipo y "
+"plantilla que haya seleccionado. Es posible cambiarlo en caso de que sea "
+"necesario."
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:153
 msgid ""
 ":guilabel:`Start date of use`: The date from which the invoice template, "
 "range, and quantity are used for the issuance notice."
 msgstr ""
+":guilabel:`Fecha de inicio de uso`: La fecha a partir de la que se utiliza "
+"la plantilla de factura, el rango y la cantidad para el aviso de emisión."
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:156
 msgid ""
@@ -67335,12 +67632,18 @@ msgid ""
 "repeating the steps above. Click :guilabel:`Save` to finish drafting the "
 "notice."
 msgstr ""
+"Haga clic en :guilabel:`Guardar` y seleccione más tipos de factura si es "
+"necesario, solo repita los pasos anteriores. Haga clic en "
+":guilabel:`Guardar` para finalizar la redacción del aviso."
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:158
 msgid ""
 "Click :guilabel:`Send to tax authorities` for approval. Once approved, the "
 "notice's :guilabel:`Status` is changed to :guilabel:`Active`."
 msgstr ""
+"Haga clic en :guilabel:`Enviar a las autoridades fiscales` para su "
+"aprobación. Después, el :guilabel:`estado` del aviso cambiará a "
+":guilabel:`Activo`."
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:164
 msgid "Odoo database"
@@ -67358,6 +67661,12 @@ msgid ""
 ":guilabel:`Password`. Add a :guilabel:`Default symbol` to generate a prefix "
 "for the invoice number managed in SInvoice if needed."
 msgstr ""
+"Vaya a :menuselection:`Contabilidad --> Configuración --> Ajustes` para "
+"conectar Odoo con SInvoice. En la sección :guilabel:`Integración "
+"vietnamita`, complete su :guilabel:`nombre de usuario` y "
+":guilabel:`contraseña` de SInvoice. Agregue un :guilabel:`símbolo "
+"predeterminado` para generar un prefijo para el número de factura gestionado"
+" en SInvoice en caso de que sea necesario."
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:175
 msgid "Invoice template"
@@ -67373,10 +67682,20 @@ msgid ""
 "đơn GTGT - ND123`, the :guilabel:`Template code` is `1/001`. The SInvoice "
 "templates in Odoo must match the ones in SInvoice."
 msgstr ""
+"Vaya a :menuselection:`Contabilidad --> Configuración --> Plantillas` para "
+"crear plantillas de SInvoice., luego haga clic en :guilabel:`Nuevo` y "
+"agregue el :guilabel:`código de plantilla` y el :guilabel:`tipo de plantilla"
+" de la factura`. El :guilabel:`código de la plantilla` es la secuencia "
+"inicial de dígitos en el nombre que asignó SInvoice. Por ejemplo, si la "
+"plantilla de la factura es `1/001 - Hóa đơn GTGT - ND123`, el "
+":guilabel:`código de la plantilla` es `1/001`. Las plantillas de SInvoice en"
+" Odoo deben coincidir con las de SInvoice."
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:183
 msgid "To add :guilabel:`Invoice Symbols`, click :guilabel:`Add a new line`."
 msgstr ""
+"Haga clic en click :guilabel:`Agregar una nueva línea` para agregar los "
+":guilabel:`símbolos de la factura`."
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:186
 msgid "Sending invoices to SInvoice"
@@ -67389,6 +67708,11 @@ msgid ""
 " :guilabel:`Send` popup, enable :guilabel:`Send to SInvoice` and click "
 ":guilabel:`Send & Print`."
 msgstr ""
+"Puede enviar las facturas a SInvoice una vez que las haya confirmado, solo "
+"siga los pasos de la sección :ref:`Envío de facturas "
+"<accounting/invoice/sending>` para hacerlo. En la ventana "
+":guilabel:`Enviar`, seleccione :guilabel:`Enviar a SInvoice` y haga clic en "
+":guilabel:`Enviar e imprimir`."
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:192
 msgid ""
@@ -67399,10 +67723,16 @@ msgid ""
 "Number` fields are also updated. The same information is available on "
 "SInvoice."
 msgstr ""
+"Una vez que haya enviado la factura a SInvoice con éxito, el campo "
+":guilabel:`Estado de SInvoice` de la pestaña :guilabel:`SInvoice` de la "
+"factura cambiará a :guilabel:`Enviado`. Los campos :guilabel:`Número de "
+"SInvoice`, :guilabel:`Fecha de emisión`, :guilabel:`Código secreto` y "
+":guilabel:`Número de factura electrónica` también se actualizarán. La misma "
+"información estará disponible en SInvoice."
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:198
 msgid "Replacement or adjustment invoices"
-msgstr ""
+msgstr "Facturas de sustitución o rectificación"
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:200
 msgid ""
@@ -67411,30 +67741,36 @@ msgid ""
 "has **already been tax declared**. Follow these steps to issue a replacement"
 " or adjustment invoice:"
 msgstr ""
+"Las facturas de sustitución sirven para corregir las facturas que **aún no "
+"han sido declaradas**, mientras que las facturas de rectificación corrigen "
+"las facturas que **ya fueron declaradas**. Siga estos pasos para emitir una "
+"factura de sustitución o rectificación:"
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:204
 msgid "Open the invoice and click :guilabel:`Credit Note`."
-msgstr ""
+msgstr "Abra la factura y haga clic en :guilabel:`Nota de crédito`."
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:205
 msgid "In the :guilabel:`Credit Note` popup, fill in the following fields:"
 msgstr ""
+"Complete los siguientes campos en la ventana emergente :guilabel:`Nota de "
+"crédito`:"
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:207
 msgid ":guilabel:`Reason displayed on Credit Note`"
-msgstr ""
+msgstr ":guilabel:`Motivo que aparece en la nota de crédito`"
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:208
 msgid ":guilabel:`Adjustment type`"
-msgstr ""
+msgstr ":guilabel:`Tipo de ajuste`"
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:209
 msgid ":guilabel:`Agreement Name`"
-msgstr ""
+msgstr ":guilabel:`Nombre del acuerdo`"
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:210
 msgid ":guilabel:`Agreement Date`"
-msgstr ""
+msgstr ":guilabel:`Fecha del acuerdo`"
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:211
 msgid ":guilabel:`Journal`"
@@ -67442,13 +67778,16 @@ msgstr ":guilabel:`Diario`"
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:212
 msgid ":guilabel:`Reversal date`"
-msgstr ""
+msgstr ":guilabel:`Fecha de reversión`"
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:214
 msgid ""
 "Click :guilabel:`Reverse and Create Invoice` to issue a replacement invoice,"
 " or :guilabel:`Reverse` to issue an adjustment invoice."
 msgstr ""
+"Haga clic en :guilabel:`Revertir y crear factura` para emitir una factura de"
+" sustitución o en :guilabel:`Revertir` para emitir una factura de "
+"rectificación."
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:217
 msgid ""
@@ -67456,6 +67795,9 @@ msgid ""
 "updated to :guilabel:`Replaced` for a replacement invoice or "
 ":guilabel:`Adjusted` for an adjustment invoice."
 msgstr ""
+"El :guilabel:`Estado de SInvoice` en la pestaña :guilabel:`SInvoice` de la "
+"factura se actualiza a :guilabel:`Reemplazada` para una factura de "
+"sustitución o :guilabel:`Ajustada` para una factura de rectificación."
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:223
 msgid ""
@@ -67464,12 +67806,19 @@ msgid ""
 "enter the cancellation :guilabel:`Reason`, :guilabel:`Agreement Name`, and "
 ":guilabel:`Agreement Date`, and click :guilabel:`Request Cancellation`."
 msgstr ""
+"Si necesita cancelara una factura, ábrala y luego haga clic en "
+":guilabel:`Solicitud de cancelación`. En la ventana emergente "
+":guilabel:`Cancelar facturas`, escriba el el :guilabel:`motivo` de "
+"cancelación, el :guilabel:`nombre del acuerdo` y la :guilabel:`fecha del "
+"acuerdo`, después haga clic en :guilabel:`Solicitar cancelación`."
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:228
 msgid ""
 "The :guilabel:`SInvoice Status` in the :guilabel:`SInvoice` invoice tab is "
 "updated to :guilabel:`Canceled`."
 msgstr ""
+"El :guilabel:`Estado de SInvoice` en la pestaña :guilabel:`SInvoice` de la "
+"factura se actualiza a :guilabel:`Cancelada`."
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:234
 msgid "QR banking codes"
@@ -67507,24 +67856,38 @@ msgid ""
 "information used to identify the :guilabel:`Merchant Account`, such as the "
 "card number and bank account numbers), and :guilabel:`Proxy Value` fields."
 msgstr ""
+"Vaya a :menuselection:`Contactos --> Configuración --> Cuentas bancarias` "
+"para activar los pagos con código QR para una cuenta bancaria. Seleccione la"
+" cuenta correspondiente y complete los campos :guilabel:`Código de "
+"identificación bancaria`, :guilabel:`Tipo de proxy` (de acuerdo a la "
+"información que utiliza para identificar la :guilabel:`cuenta de "
+"comerciante`, como el número de tarjeta o al cuenta bancaria) y "
+":guilabel:`Valor del proxy`."
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:253
 msgid ""
 "Enable :guilabel:`Include Reference` to include the invoice number in the QR"
 " code."
 msgstr ""
+"Habilite la opción :guilabel:`Incluir referencia` para incluir el número de "
+"la factura en el código QR."
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:256
 msgid ""
 "The account holder's country must be set to `Vietnam`, and their city must "
 "be specified on the contact form."
 msgstr ""
+"El país del titular de la cuenta debe ser `Vietnam` y debe especificar su "
+"ciudad en su formulario de contacto"
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:258
 msgid ""
 "The :ref:`account number <accounting/bank/account-number>` and bank must be "
 "set on the :guilabel:`Bank` journal."
 msgstr ""
+"Es necesario que configure el :ref:`número de cuenta "
+"<accounting/bank/account-number>` y el banco en el diario "
+":guilabel:`bancario`."
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:265
 msgid "Generating QR codes on invoices"
@@ -67536,12 +67899,17 @@ msgid ""
 ":guilabel:`EMV Merchant-Presented QR-code` in the :guilabel:`Payment QR-"
 "code` field."
 msgstr ""
+"Al crear una nueva factura de cliente, abra la pestaña :guilabel:`Otra "
+"información` y seleccione :guilabel:`Código QR EMV del comerciante` en el "
+"campo :guilabel:`Código QR de pago`."
 
 #: ../../content/applications/finance/fiscal_localizations/vietnam.rst:271
 msgid ""
 "Ensure the :guilabel:`Recipient Bank` is configured, as Odoo uses this field"
 " to generate QR codes."
 msgstr ""
+"Asegúrese de que el :guilabel:`banco destinatario` esté configurado, ya que "
+"Odoo utiliza este campo para generar los códigos QR."
 
 #: ../../content/applications/finance/payment_providers.rst:26
 msgid ""
