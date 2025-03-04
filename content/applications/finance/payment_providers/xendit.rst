@@ -6,6 +6,10 @@ Xendit
 several Southeast Asian countries. It allows businesses to accept credit cards as well as several
 local payment methods.
 
+.. note::
+    Credit card payments are processed through Odoo, while all other payment methods are handled via
+    Xendit's website.
+
 .. _payment_providers/xendit/configure_dashboard:
 
 Configuration on the Xendit Dashboard
@@ -33,6 +37,10 @@ Configuration on the Xendit Dashboard
 #. In the :guilabel:`Webhook URL` section, enter your Odoo database's URL, followed by
    `/payment/xendit/webhook` (e.g., `https://example.odoo.com/payment/xendit/webhook`) in the field
    :guilabel:`Invoices paid` and click the :guilabel:`Test and save` button next to it.
+#. To allow recurring payments for credit cards, go to :menuselection:`Configuration: Payment
+   Channels` in the left part of the application page. Then, hover your mouse over the
+   :guilabel:`Visa, Mastercard, JCB, Amex` channel, click :guilabel:`View Details`, and enable
+   :guilabel:`Recurring Payments` by toggling the related switch.
 
 Configuration on Odoo
 =====================
