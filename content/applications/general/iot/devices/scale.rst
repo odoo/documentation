@@ -60,10 +60,12 @@ Guide for Ariva S series scales <https://www.mt.com/dam/RET_DOCS/Ariv.pdf>`_ and
 
 #. Hold the **>T<** button for eight seconds, or until :guilabel:`CONF` appears.
 #. Press **>T<** until :guilabel:`GRP 3` appears, then press **>0<** to confirm.
-#. Under :guilabel:`3.1`, ensure the setting is set to :guilabel:`1` (USB Virtual COM ports) and
-   press **>T<** to cycle through the options under group 3.1.
-#. Once :guilabel:`3.1` is set to :guilabel:`1`, press **>0<** to confirm the selection.
-#. Continue to press **>0<** until :guilabel:`GRP 4` appears.
+#. At step :guilabel:`3.1`, make sure the value is set to :guilabel:`1` (USB Virtual COM ports) by
+   pressing **>T<** to cycle through the options.
+#. Press **>0<** until :guilabel:`3.6` (if available, otherwise skip the next step).
+#. At step :guilabel:`3.6`, make sure the value is set to :guilabel:`3` (8217 Mettler-Toledo (WO))
+   by pressing **>T<** to cycle through the options.
+#. Press **>0<** (multiple times if necessary) until :guilabel:`GRP 4` appears.
 #. Press **>T<** until :guilabel:`EXIT` appears.
 
    .. important::
