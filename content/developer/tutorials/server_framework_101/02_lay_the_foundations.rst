@@ -536,13 +536,13 @@ being logged at server start-up after creating the model:
 .. exercise::
    #. Create a new :file:`ir.model.access.csv` file at the root of the `real_estate` module.
    #. Declare it in the manifest as you did for the :file:`real_estate_property_data.xml` file.
-   #. Grant access to the `real.estate.property` model to all administrators of the database by
-      adding new access rights with the following specifications:
+   #. Grant access to the `real.estate.property` model to all users of the database by adding new
+      access rights with the following specifications:
 
-      - XML ID: `real_estate_property_system`
-      - `name`: `real.estate.property.system`
+      - XML ID: `real_estate_property_user`
+      - `name`: `real.estate.property.user`
       - `model_id`: The record ID of `model_real_estate_property`
-      - `group_id`: The record ID of `base.group_system`
+      - `group_id`: The record ID of `base.group_user`
       - `perm_read`, `perm_write`, `perm_create`, and `perm_unlink`: `1`
 
    .. tip::
@@ -564,7 +564,7 @@ being logged at server start-up after creating the model:
       :caption: `ir.model.access.csv`
 
       id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-      real_estate_property_system,real.estate.property.system,model_real_estate_property,base.group_system,1,1,1,1
+      real_estate_property_user,real.estate.property.user,model_real_estate_property,base.group_user,1,1,1,1
 
 After restarting the server, the warning should no longer appear.
 
