@@ -1,11 +1,16 @@
+:orphan:
+
 =======================
 Restrict access to data
 =======================
 
+.. danger::
+   This tutorial is outdated. We recommend reading :doc:`../server_framework_101` instead.
+
 .. important::
-   This tutorial is an extension of the :doc:`server_framework_101` tutorial. Make sure you have
-   completed it and use the `estate` module you have built as a base for the exercises in this
-   tutorial.
+   This tutorial is an extension of the :doc:`../server_framework_101_legacy` tutorial. Make sure
+   you have completed it and use the `estate` module you have built as a base for the exercises in
+   this tutorial.
 
 So far we have mostly concerned ourselves with implementing useful features.
 However in most business scenarios *security* quickly becomes a concern:
@@ -15,7 +20,7 @@ currently,
   update or delete properties, property types, or property tags.
 * If ``estate_account`` is installed then only agents allowed to interact
   with invoicing can confirm sales as that's necessary to :ref:`create an
-  invoice <tutorials/server_framework_101/13_other_module/create>`.
+  invoice <tutorials/server_framework_101_legacy/13_other_module/create>`.
 
 However:
 
@@ -77,7 +82,7 @@ This baseline seems sufficient for us:
 
 In keeping with Odoo's data-driven nature, a group is no more than a record of
 the ``res.groups`` model. They are normally part of a module's :doc:`master data
-<define_module_data>`, defined in one of the module's data files.
+<../define_module_data>`, defined in one of the module's data files.
 
 As simple example `can be found here <https://github.com/odoo/odoo/blob/532c083cbbe0ee6e7a940e2bdc9c677bd56b62fa/addons/hr/security/hr_security.xml#L9-L14>`_.
 
@@ -139,8 +144,6 @@ Access Rights
     - Employees who are not at least real-estate agents will not see the
       real-estate application.
     - Real-estate agents will not be able to update the property types or tags.
-
-Access rights were first introduced in :doc:`server_framework_101/04_securityintro`.
 
 Access rights are a way to give users access to models *via* groups: associate
 an access right to a group, then all users with that group will have the access.
@@ -464,7 +467,7 @@ or a *visibility* feature before using it:
 
 * *Visibility* features mean a user can still access the model or record
   otherwise, either through another part of the interface or by :doc:`performing
-  operations remotely using RPC <../reference/external_api>`, things might just not be
+  operations remotely using RPC <../../reference/external_api>`, things might just not be
   visible in the web interface in some contexts.
 * *Security* features mean a user can not access records, fields or operations.
 
