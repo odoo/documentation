@@ -2,8 +2,33 @@
 Odoo.com accounts
 =================
 
-This documentation is dedicated to edits made to an Odoo.com account. The following processes
-describe how to delete an Odoo.com account, and how to change the password on an Odoo.com account.
+This document describes how to edit and manage an Odoo.com account, including adding a client
+database, deleting an account, resetting a password, and enabling two-factor authentication.
+
+Grant users access to database
+==============================
+
+A database can be linked to an Odoo.com account that was created by a different Odoo.com account.
+This allows the database to appear in the *My Databases* page of the account. To do so, the
+client Odoo.com account needs to be added to the database as a user.
+
+First, sign in to the Odoo.com account that created the client database. In the main Odoo dashboard
+of the database, navigate to the **Settings** app, and click :guilabel:`Manage Users` in the
+:guilabel:`Users` section. Click the :guilabel:`New` button, and enter a name in the
+:guilabel:`Name` field for this user. Next, enter the email address used to register the desired
+Odoo.com account in the :guilabel:`Email` field. Navigate back to :guilabel:`Settings` using the
+breadcrumbs, and a pop-up window titled :guilabel:`Users Invitations` appears, with a warning that
+adding additional users will increase the amount of the subscription.
+
+Click :guilabel:`Confirm`, and the :guilabel:`Users` list appears. An invitation is automatically
+sent to the email address. Once confirmed, the client database now appears in the **My Databases**
+page of the target Odoo.com account.
+
+.. tip::
+   To provide full access to the database for this user, set the :guilabel:`Dashboard` field under
+   the :guilabel:`Productivity` header to :guilabel:`Admin`. Next, set the
+   :guilabel:`Administration` field under the :guilabel:`Administration` header to
+   :guilabel:`Settings`.
 
 Delete Odoo.com account
 =======================
