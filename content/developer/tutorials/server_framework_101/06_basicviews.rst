@@ -66,6 +66,12 @@ to see the result.
     You will probably use some copy-paste in this chapter, therefore always make sure that the ``id``
     remains unique for each view!
 
+
+.. warning::
+   Remember to set the correct access rights to the user as explained in the :doc:`security intro <04_securityintro>`!
+
+   The :guilabel:`Create` button is not shown if the user has only read permission.
+
 Form
 ====
 
