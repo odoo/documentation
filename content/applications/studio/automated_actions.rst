@@ -184,6 +184,9 @@ data sent by the source system matches the expected format and content. This als
 and diagnose any issues that may arise. To access the logs, click the :guilabel:`Logs` smart
 button at the top of the :guilabel:`Automation rules` form.
 
+.. seealso::
+   :doc:`automated_actions/webhooks`
+
 .. _studio/automated-actions/action:
 
 Actions
@@ -336,6 +339,8 @@ using the following variables:
 .. tip::
    The available variables are described both in the :guilabel:`Code` and :guilabel:`Help` tabs.
 
+.. _studio/automated-actions/action-webhook:
+
 Send Webhook Notification
 -------------------------
 
@@ -353,3 +358,8 @@ Execute Existing Actions
 The action is used to trigger multiple actions (linked to the current model) at the same time. To do
 so, click on :guilabel:`Add a line`, then, in the :guilabel:`Add: Child Actions` pop-up, select an
 existing action or click :guilabel:`New` to create a new one.
+
+.. toctree::
+   :titlesonly:
+
+   automated_actions/webhooks
