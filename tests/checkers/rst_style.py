@@ -74,7 +74,8 @@ def check_min_one_main_heading(file, lines, options=None):
 def check_heading_delimiters_length(file, lines, options=None):
     """ Check that heading delimiters have the same length as their heading. """
     for lno, line in enumerate(lines):
-        if HEADING_DELIMITER_RE.search(line):  # The line is a heading delimiter.
+        previous_line = lno >= 1 and lines[lno - 1]
+        if HEADING_DELIMITER_RE.search(line) and previous_line != '\n':  # Heading delimiter found.
             if MAIN_HEADING_RE.search(''.join(lines[lno:lno+3])):  # Upper delimiter of h1.
                 heading_lno = lno + 1
             else:  # Lower delimiter of a heading of any level.
@@ -87,7 +88,8 @@ def check_heading_delimiters_length(file, lines, options=None):
 def check_heading_spacing(file, lines, options=None):
     """ Check that headings are preceded and followed by at least one blank line. """
     for lno, line in enumerate(lines):
-        if HEADING_DELIMITER_RE.search(line):  # The line is a heading delimiter.
+        previous_line = lno > 1 and lines[lno - 1]
+        if HEADING_DELIMITER_RE.search(line) and previous_line != '\n':  # Heading delimiter found.
             if MAIN_HEADING_RE.search(''.join(lines[lno:lno+3])):  # Upper delimiter of h1.
                 continue  # We handle this heading via its lower delimiter.
 
