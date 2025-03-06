@@ -9,26 +9,17 @@ simultaneously, and set their specific warehouses, customers, equipment, and con
 the ability to generate reports of aggregated figures without switching interfaces, which
 facilitates daily tasks, and enhances the overall management process.
 
-.. danger::
-   Utilizing a multi-company environment in an Odoo database warrants a subscription change from
-   *Standard* (or *One App Free*) to a *Custom* plan. Should the administrator not migrate the
-   subscription to a *Custom* plan after adding another company, the database risks being
-   deactivated. For more information, consult the `Odoo Pricing page
-   <https://www.odoo.com/pricing-plan>`_.
+.. warning::
+   Enabling multi-company functionality in an Odoo database on a *Standard* plan automatically
+   triggers an upsell to the *Custom* plan. This does not apply to databases on the *One-App Free*
+   plan.
 
-   If the customer is on the *Standard* plan, and adds multi-company functionality to the database,
-   it triggers an upsell for the *Custom* plan.
+   - **For yearly or multi-year contracts**: An upsell order is created with a 30-day limit.
+   - **For monthly contracts**: The subscription automatically switches to the *Custom* plan and
+     the new rate is applied when the next bill is generated.
 
-   If they are on a *Yearly* or *Multi-year* contract, this creates an upsell order, with a 30-day
-   limit (risking deactivation). If multi-company functionality is fully removed within that time
-   period, the next time the database pings, the upsell order and limit are removed automatically.
-
-   If the customer is on a *Monthly* contract, once the next bill is created, and multi-company
-   functionality is still detected while they are on a *Standard* plan, they are automatically
-   switched, and billed on the *Custom* plan.
-
-   Should the customer want to go back to *Standard*, the Customer Success Team **must** be
-   contacted.
+   For more information, refer to `Odoo's pricing page <https://www.odoo.com/pricing-plan>`_ or
+   contact your account manager.
 
 To create a new company, navigate to :menuselection:`Settings app --> Companies section`, and click
 :guilabel:`Manage Companies`. Then, click :guilabel:`New` to create a new company.
