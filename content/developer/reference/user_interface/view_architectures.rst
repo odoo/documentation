@@ -3264,6 +3264,18 @@ Their root element is ``<calendar>``. Available attributes on the root node are:
    :requirement: Optional
    :type: str
 
+.. attribute:: aggregate
+   :noindex:
+
+   Name of the record's field to use to display aggregated values next to
+   filters, in the filter side panel. The aggregator can be explicitly given
+   (e.g. `aggregate="expected_revenue:sum"`). If not given, the aggregator of
+   the field is used. Supported aggregators are `sum`, `avg`, `min`, `max`,
+   `count` and `count_distinct`.
+
+   :requirement: Optional
+   :type: str
+
 .. attribute:: event_limit
    :noindex:
 
