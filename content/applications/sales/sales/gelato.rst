@@ -144,7 +144,7 @@ Order a Gelato product from Odoo
 --------------------------------
 
 Once synchronized, Gelato products are available to order in Odoo through :doc:`sales quotations
-<send_quotations>` or on the **eCommerce** store. Gelato delivery options are automatically
+<sales_quotations>` or on the **eCommerce** store. Gelato delivery options are automatically
 synchronized upon API and webhook configuration.
 
 To add Gelato delivery, click :guilabel:`Add shipping` on the sales order. Select
@@ -156,7 +156,7 @@ for fulfillment. Once a sales order is sent from Odoo to Gelato, Gelato processe
 produces the product at the nearest fulfillment center, and ships it directly to the end-customer.
 
 .. seealso::
-   :doc:`send_quotations/create_quotations`
+   :doc:`sales_quotations/create_quotations`
 
 .. important::
    When creating a sales order for Gelato products in the database, only Gelato products can be
