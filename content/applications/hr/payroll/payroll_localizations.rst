@@ -23,7 +23,7 @@ Payroll localization modules are available for the countries listed below.
    New countries are frequently added to this list and Odoo keeps expanding and improving existing
    localizations and the related documentation.
 
-- Australia
+- :doc:`Australia <payroll_localizations/australia>`
 - :doc:`Belgium <payroll_localizations/belgium>`
 - Bangladesh
 - Egypt
@@ -50,5 +50,6 @@ Payroll localization modules are available for the countries listed below.
 .. toctree::
    :titlesonly:
 
+   payroll_localizations/australia
    payroll_localizations/belgium
    payroll_localizations/hong_kong
