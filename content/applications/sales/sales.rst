@@ -16,7 +16,7 @@ deliver and invoice what has been sold.
 .. toctree::
    :titlesonly:
 
-   sales/send_quotations
+   sales/sales_quotations
    sales/invoicing
    sales/products_prices
    sales/amazon_connector
