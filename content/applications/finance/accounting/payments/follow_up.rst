@@ -5,7 +5,7 @@ Follow-up on invoices
 Follow-up messages can be sent to customers when payments are overdue. Odoo helps identify late
 payments and allows scheduling and sending the appropriate reminders using **follow-up actions**
 according to the number of overdue days. Follow-ups can be sent through different methods, including
-email, post, or SMS.
+email, WhatsApp message, SMS, or post.
 
 .. seealso::
    - `Odoo Tutorials: Payment Follow-up <https://www.youtube.com/watch?v=50qy2ygS7eM>`_
@@ -22,18 +22,19 @@ actions are configured by default.
 
 To modify a follow-up level, click on the record. From the form view, edit the
 :guilabel:`Description` or adjust the number of days before a reminder is sent. In the
-:guilabel:`Notification` tab, select :guilabel:`Actions` such as :guilabel:`Send Email`, :ref:`Send
-a Letter <customer_invoices/snailmail>`, and :ref:`Send SMS Message <pricing/pricing_and_faq>`.
+:guilabel:`Notification` tab, select :guilabel:`Actions` such as :guilabel:`Send Email`,
+:doc:`Send WhatsApp message </applications/productivity/whatsapp>`, :ref:`Send SMS Message
+<pricing/pricing_and_faq>`, and :ref:`Send a Letter <customer_invoices/snailmail>`.
 
 .. note::
-   Sending letters or SMS messages in Odoo requires :doc:`In-App Purchase (IAP)
+   Sending letters and WhatsApp or SMS messages in Odoo requires :doc:`In-App Purchase (IAP)
    </applications/essentials/in_app_purchase>` credit or tokens.
 
 To use a pre-filled template when sending an email or letter, select a :guilabel:`Content Template`.
 To modify it, click the :icon:`oi-arrow-right` :guilabel:`(internal link arrow)` icon next to the
-:guilabel:`Content Template` field. If enabled, SMS messages use a specific :guilabel:`Sms Template`
-field that can be modified by clicking the :icon:`oi-arrow-right` :guilabel:`(internal link arrow)`
-icon.
+:guilabel:`Content Template` field. If enabled, WhatsApp and SMS messages use a
+specific :guilabel:`WhatsApp Template` or :guilabel:`Sms Template` field that can be modified by
+clicking the :icon:`oi-arrow-right` :guilabel:`(internal link arrow)` icon.
 
 Other options can be enabled in the :guilabel:`Options` section within the specific follow-up level:
 
@@ -87,11 +88,13 @@ the :guilabel:`Send and Print` window:
 
 - :guilabel:`Print`;
 - :guilabel:`Email`;
+- :guilabel:`WhatsApp`;
 - :guilabel:`Sms`;
 - :guilabel:`By post`.
 
-Enable the :guilabel:`Attach Invoices` option and change the :guilabel:`Content Template` if needed.
-Then, click :guilabel:`Send` or :guilabel:`Send & Print`.
+Enable the :guilabel:`Attach Invoices` option, and change the :guilabel:`Content Template`,
+:guilabel:`WhatsApp Template`, or :guilabel:`Phone` if needed. Then, click :guilabel:`Send` or
+:guilabel:`Send & Print`.
 
 .. seealso::
    :doc:`/applications/essentials/in_app_purchase`
