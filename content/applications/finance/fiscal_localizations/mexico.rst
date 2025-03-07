@@ -2,72 +2,22 @@
 Mexico
 ======
 
-.. _sat-catalog: http://omawww.sat.gob.mx/tramitesyservicios/Paginas/catalogos_emision_cfdi_
-   complemento_ce.htm
-
 .. |SAT| replace:: :abbr:`SAT (Servicio de Administración Tributaria)`
 .. |DIOT| replace:: :abbr:`DIOT (Declaración Informativa de Operaciones con Terceros)`
 .. |PAC| replace:: :abbr:`PAC (Proveedor Autorizado de Certificación / Authorized Certification
    Provider)`
 .. |RFC| replace:: :abbr:`RFC (Registro Federal de Contribuyentes)`
-.. |PPD| replace:: :abbr:`PPD (Pago en Parcialidades o Diferido/Payment in Installements or
+.. |PPD| replace:: :abbr:`PPD (Pago en Parcialidades o Diferido/Payment in Installments or
    Deferred)`
 .. |PUE| replace:: :abbr:`PUE (Pago en una Sola Exhibición/Payment in a Single Exhibition)`
 .. |CFDI| replace:: :abbr:`CFDI (Comprobante Fiscal Digital por Internet)`
 
-Webinars
-========
+.. _l10n/mx/modules:
 
-A video on the Mexican localization is also available. This video covers how to implement this
-localization from scratch, including how to set up the configurations, how to complete common
-workflows, and provides an in-depth look at several specific use cases, as well.
+Modules
+=======
 
-- `Video webinar of a complete demo <https://www.youtube.com/watch?v=5cdogjm0GCI>`_.
-
-Introduction
-============
-
-The Odoo Mexican localization modules allow for the signing of electronic invoices, according to the
-specifications of the |SAT| for `version 4.0 of the CFDI <http://omawww.sat.gob.mx/
-tramitesyservicios/Paginas/documentos/Anexo_20_Guia_de_llenado_CFDI.pdf>`_, a legal requirement, as
-of January 1, 2022. These modules also add relevant accounting reports (such as: the |DIOT|,
-enables foreign trade, and the creation of delivery guides).
-
-.. note::
-   In order to electronically sign any documents in Odoo, ensure the *Sign* application is
-   installed.
-
-.. seealso::
-   :doc:`Documentation on e-invoicing's legality and compliance in Mexico
-   <../accounting/customer_invoices/electronic_invoicing/mexico>`
-
-Configuration
-=============
-
-Requirements
-------------
-
-It is necessary to meet the following requirements before configuring the Mexican localization
-modules in Odoo:
-
-.. _mx-requirements:
-
-#. Be registered in the |SAT|, with a valid |RFC|.
-#. Have a `Certificate of Digital Seal <https://www.gob.mx/sat/acciones-y-programas/
-   certificado-de-sello-digital>`_ (CSD).
-#. Choose a PAC (Proveedor Autorizado de Certificación / Authorized Certification Provider).
-   Currently, Odoo works with the following |PAC|\s: `Solución Factible
-   <https://solucionfactible.com/>`_, `Quadrum (formerly Finkok) <https://cfdiquadrum.com.mx/>`_ and
-   `SW Sapien - Smarter Web <https://sw.com.mx/>`_.
-#. Have knowledge and experience with billing, sales, and accounting in Odoo. This documentation
-   **only** contains the necessary information needed to use Odoo.
-
-Installing modules
-------------------
-
-:ref:`Install <general/install>` the following modules to get all the features of the Mexican
-localization. The :doc:`Accounting <../accounting>` and *Contacts* modules are required to be
-installed for this configuration:
+The following modules are automatically installed with the Mexican localization:
 
 .. list-table::
    :header-rows: 1
@@ -78,40 +28,29 @@ installed for this configuration:
      - Description
    * - :guilabel:`Mexico - Accounting`
      - `l10n_mx`
-     - The default :doc:`fiscal localization package <../fiscal_localizations>`, adds accounting
+     - The default :doc:`fiscal localization package <../fiscal_localizations>` adds accounting
        characteristics for the Mexican localization, such as: the most common taxes and the chart of
        accounts – based on `the SAT account grouping code
        <https://www.gob.mx/cms/uploads/attachment/file/151586/codigo_agrupador.pdf>`_.
    * - :guilabel:`EDI for Mexico`
      - `l10n_mx_edi`
      - Includes all the technical and functional requirements to generate and validate
-       :doc:`Electronics Documents <../accounting/customer_invoices/electronic_invoicing>` — based
+       :doc:`electronics documents <../accounting/customer_invoices/electronic_invoicing>` — based
        on the technical documentation published by the |SAT|. This allows you to send invoices (with
        or without addedums) and payment complements to the government.
-   * - :guilabel:`EDI v4.0 for Mexico`
-     - `l10n_mx_edi_40`
-     - Necessary to create XML documents with the correct specifications of the CFDI 4.0.
    * - :guilabel:`Odoo Mexican Localization Reports`
      - `l10n_mx_reports`
-     - Adapts reports for Mexico's Electronic Accounting: Chart of Accounts, Trial Balance, and
+     - Adapts reports for Mexico's electronic accounting: chart of accounts, trial balance, and
        |DIOT|.
-   * - :guilabel:`Mexico - Localization Reports for Closing`
+   * - :guilabel:`Mexico - Month 13 Trial Balance`
      - `l10n_mx_reports_closing`
-     - Necessary to create the Closing Entry (Also known as the *month 13th move*).
+     - Necessary to create the closing entry (also known as the *month 13 move*).
    * - :guilabel:`Odoo Mexican XML Polizas Export`
      - `l10n_mx_xml_polizas`
-     - Allows the export of XML files of Journal Entries for a compulsory audit.
-   * - :guilabel:`Odoo Mexican XML Polizas Export Edi bridge`
-     - `l10n_mx_xml_polizas_edi`
-     - Complements the module `l10n_mx_xml_polizas`.
+     - Allows the export of XML files of journal entries for a compulsory audit.
 
-.. note::
-   When installing a database from scratch and selecting :guilabel:`Mexico` as the country, Odoo
-   automatically installs the following modules: :guilabel:`Mexico - Accounting`, :guilabel:`EDI for
-   Mexico`, and :guilabel:`EDI v4.0 for Mexico`.
-
-The following modules are optional. It's recommended to install them *only* if meeting a specific
-requirement. Make sure that they are needed for the business.
+The following modules are optional. It's recommended to :ref:`install <general/install>` them *only*
+if meeting a specific requirement for the business.
 
 .. list-table::
    :header-rows: 1
@@ -122,191 +61,275 @@ requirement. Make sure that they are needed for the business.
      - Description
    * - :guilabel:`EDI for Mexico (Advanced Features)`
      - `l10n_mx_edi_extended`
-     - Adds the external trade complement to invoices: A legal requirement for selling products to
-       foreign countries.
-   * - :guilabel:`EDI v4.0 for Mexico (COMEX)`
-     - `l10n_mx_edi_extended_40`
-     - Adapts the module `l10n_mx_edi_extended` for CFDI 4.0.
+     - Adds the external trade complement to invoices (a legal requirement for selling products to
+       foreign countries).
    * - :guilabel:`Mexico - Electronic Delivery Guide`
      - `l10n_mx_edi_stock`
      - Lets you create a *Carta Porte*: A bill of lading that proves to the government you are
        sending goods between A & B with a signed electronic document.
-   * - :guilabel:`Electronic Delivery Guide for Mexico CFDI 4.0`
-     - `l10n_mx_edi_stock_40`
-     - Adapts the module `l10n_mx_edi_stock` for CFDI 4.0
    * - :guilabel:`Odoo Mexico Localization for Stock/Landing`
      - `l10n_mx_edi_landing`
      - Allows managing customs numbers related to landed costs in electronic documents.
+   * - :guilabel:`CFDI 4.0 fields for sale orders`
+     - `l10n_mx_edi_sale`
+     - Adds extra fields to the :doc:`Sales <../../sales/sales>` module to comply with the Mexican
+       Electronic Invoicing
+   * - :guilabel:`Mexican Localization for the Point of Sale`
+     - `l10n_mx_edi_pos`
+     - Adds extra fields to the :doc:`Point of Sale <../../sales/point_of_sale>` module to comply
+       with the Mexican Electronic Invoicing
+   * - :guilabel:`Mexican Localization for eCommerce`
+     - `l10n_mx_edi_website_sale`
+     - Adds extra fields to the :doc:`eCommerce <../../websites/ecommerce>` module to comply with
+       the Mexican electronic invoicing requirements
+   * - :guilabel:`Employees - Mexico`
+     - `l10n_mx_hr`
+     - Adds extra fields to the :doc:`Employees <../../hr/employees>` module to comply with local
+       information for employees.
+   * - :guilabel:`Mexico - Payroll with Accounting`
+     - `l10n_mx_hr_payroll_account`
+     - Adds the required rules and parameters to manage local payroll calculation with the
+       :doc:`Payroll <../../hr/payroll>` app.
 
-Configure your company
-----------------------
+.. _l10n/mx/video-tutorials:
 
-After installing the correct modules, the next step is to verify that your company is configured
-with the correct data. To do so, go to :menuselection:`Settings --> General Settings --> Companies`,
-and select :guilabel:`Update Info` under your company name.
+Video tutorials
+===============
+
+Videos on the Mexican localization are also available. Basic workflows and most topics covered
+on this page are also available in video format, please check out the following:
+
+- `Odoo Smart Tutorial - Mexican localization <https://www.odoo.com/es/slides/smart-tutorial-localizacion-de-mexico-173>`_
+- `Basic configurations and Youtube playlist <https://www.youtube.com/watch?v=TjWddMtQRfc&list=PL1-aSABtP6ACcwRzy_cdx-avDoNfSvooD&index=22>`_
+
+.. _l10n/mx/overview:
+
+Localization overview
+=====================
+
+The Odoo Mexican localization modules allow for the signing of electronic invoices, according to the
+specifications of the |SAT| for `version 4.0 of the CFDI <http://omawww.sat.gob.mx/
+tramitesyservicios/Paginas/documentos/Anexo_20_Guia_de_llenado_CFDI.pdf>`_, a legal requirement, as
+of January 1, 2022. These modules also add relevant accounting reports including the |DIOT|, enable
+foreign trade, and enable the creation of delivery guides.
+
+.. note::
+   In order to electronically sign any documents in Odoo, the Sign application must be installed.
+
+.. seealso::
+   :doc:`Documentation on e-invoicing's legality and compliance in Mexico
+   <../accounting/customer_invoices/electronic_invoicing/mexico>`
+
+.. _l10n/mx/requirements:
+
+Requirements
+------------
+
+It is necessary to meet the following requirements before configuring the Mexican localization
+modules in Odoo:
+
+#. Be registered in the |SAT| with a valid |RFC|.
+#. Have a `Certificado de Sello Digital / Digital Seal Certificate
+   <https://www.gob.mx/sat/acciones-y-programas/ certificado-de-sello-digital>`_ (CSD).
+#. Choose a |PAC|. Currently, Odoo works with the following |PAC|\s: `Solución Factible
+   <https://solucionfactible.com/contenido/productos/timbrado/general#dos>`_,
+   `Quadrum <https://cfdiquadrum.com.mx/odoo/>`_, and
+   `SW Sapien - Smarter Web <https://info.sw.com.mx/sw-smarter-odoo>`_.
+
+.. _l10n/mx/company:
+
+Company
+-------
+
+After installing the correct modules, the next step is to verify that the company is configured with
+the correct data. To do so, go to :menuselection:`Settings --> Users & Companies --> Companies`, and
+select the company to configure.
 
 Enter the full :guilabel:`Address` in the resulting form, including: :guilabel:`ZIP` code,
-:guilabel:`State`, :guilabel:`Country`, and |RFC| (:guilabel:`VAT` number).
+:guilabel:`State`, :guilabel:`Country`, and |RFC| (:guilabel:`Tax ID` number).
 
-According to the requirements of the CFDI 4.0, the name of the main company contact **must**
-coincide with your business name registered in the |SAT|, without the legal entity abbreviation.
-
-.. image:: mexico/mx-company-info.png
-   :alt: Main company contact requirements for a correct invoicing.
+According to the requirements of the |CFDI| 4.0, the name of the main company contact **must**
+match the business name registered in the |SAT|, without the legal entity abbreviation. This is the
+same for the :guilabel:`ZIP` code.
 
 .. important::
-   From a legal point of view, a Mexican company **must** use the local currency (MXN). Therefore,
-   Odoo does not provide features to manage an alternative configuration. If you want to manage
+   From a legal point of view, Mexican companies **must** use the local currency (MXN). To use
    another currency, let MXN be the default currency and use a :doc:`pricelist
-   <../../sales/sales/products_prices/prices/pricing>`, instead.
+   <../../sales/sales/products_prices/prices/pricing>` instead.
 
-Next, go to :menuselection:`Settings --> Accounting --> Electronic Invoicing (MX) --> Fiscal
-Regime`, then select the regime that applies to your company from the drop-down list, and click
-:guilabel:`Save`.
-
-.. image:: mexico/mx-fiscal-regime.png
-   :alt: Fiscal regime configuration in the Accounting settings.
+Next, go to :menuselection:`Accounting --> Settings`, and scroll to the :guilabel:`MX Electronic
+invoicing` section. Under :guilabel:`Service Tax Administration (SAT)`, select the :guilabel:`Fiscal
+Regime` that applies to the company from the drop-down list, and click :guilabel:`Save`.
 
 .. tip::
-   If you want to test the Mexican localization, the company can be configured with a real address
-   within Mexico (including all fields), and add `EKU9003173C9` as the :guilabel:`VAT` and `ESCUELA
-   KEMPER URGATE` as the :guilabel:`Company Name`. For the :guilabel:`Fiscal Regime`, use
+   In order to test the Mexican localization, configure the company with a real address within
+   Mexico (including all fields). Add `EKU9003173C9` as the :guilabel:`Tax ID` and `ESCUELA KEMPER
+   URGATE` as the :guilabel:`Company Name`. For the :guilabel:`Fiscal Regime`, use
    :guilabel:`General de Ley Personas Morales`.
+
+.. _l10n/mx/contacts:
 
 Contacts
 --------
 
+.. note::
+   :ref:`Install <general/install>` the Contacts application to access contact records.
+
 To create a contact that can be invoiced, go to :menuselection:`Contacts --> Create`. Then, enter
-the contact name, full :guilabel:`Address` including: :guilabel:`ZIP` code, :guilabel:`State`,
-:guilabel:`Country`, and |RFC| (:guilabel:`VAT` number).
+the contact name, full :guilabel:`Address` including the :guilabel:`ZIP` code, :guilabel:`State`,
+:guilabel:`Country`, and |RFC| (:guilabel:`Tax ID`).
 
 .. important::
-   As with your own company, all of your contacts needs to have their correct business name
-   registered in the |SAT|. This also applies to the :guilabel:`Fiscal Regime`, which needs to be
-   added in the :guilabel:`MX EDI` tab.
+   As with your own company, all contacts must have their correct business name registered in the
+   |SAT|. This also applies to the :guilabel:`Fiscal Regime`, which needs to be added in the
+   :guilabel:`Sales & Purchase` tab.
+
+.. warning::
+   Having a |RFC| (:guilabel:`Tax ID`) set but no :guilabel:`Country` configured may result in
+   incorrect invoices.
+
+.. _l10n/mx/taxes:
 
 Taxes
 -----
 
-Some additional configurations for factor type and tax objects need to be added to the sales taxes
-in order to properly sign invoices.
+In order to properly sign invoices, set the :ref:`Factor Type <l10n/mx/factor-type>` and :ref:`Tax
+Object <l10n/mx/tax-object>` fields on sales taxes.
+
+.. _l10n/mx/factor-type:
 
 Factor type
 ~~~~~~~~~~~
 
-The *Factor Type* field is pre-loaded in the default taxes. If new taxes are created, you need to
-make sure to configure this field. To do so, go to :menuselection:`Accounting --> Configuration -->
-Taxes`, then enable the :guilabel:`Factor Type` field in the :guilabel:`Advanced Options` tab for
-all records, with the :guilabel:`Tax Type` set as :guilabel:`Sales`.
+Both the :guilabel:`SAT Tax Type` and :guilabel:`Factor Type` fields are pre-loaded in the default
+taxes. If new taxes are created, these fields must be set. To do so, go to
+:menuselection:`Accounting --> Configuration --> Taxes`, then fill both fields in the
+:guilabel:`Advanced Options` tab for all tax records, with the :guilabel:`Tax Type` set as
+:guilabel:`Sales`.
 
-.. image:: mexico/mx-factor-type.png
-   :alt: Factor Type Sales tax type configuration.
+Odoo supports four groups of :guilabel:`SAT Tax Types`: :guilabel:`IVA`, :guilabel:`ISR`,
+:guilabel:`IEPS`, and :guilabel:`Local Taxes`.
 
 .. tip::
    Mexico manages two different kinds of 0% VAT to accommodate two scenarios:
 
-   - *0% VAT* set the :guilabel:`Factor Type` as :guilabel:`Tasa`
-   - *VAT Exempt* set the :guilabel:`Factor Type` as :guilabel:`Exento`
+   - For *0% VAT*, set the :guilabel:`Factor Type` as :guilabel:`Tasa`
+   - For *VAT Exempt*, set the :guilabel:`Factor Type` as :guilabel:`Exento`
+
+.. _l10n/mx/tax-object:
 
 Tax object
 ~~~~~~~~~~
 
-One requirement of the CFDI 4.0 is that the resulting XML file needs (or does not need) to break
-down the taxes of the operation. There are three different possible values that are added in the XML
-file:
+One requirement of the CFDI 4.0 is that the resulting XML file handles the breakdown of taxes of the
+operation in accordance with the regulation. There are three different possible values that are
+added in the XML file:
 
-- `01`: Not subject to tax - this value is added automatically if your invoice line doesn't contain
+- `01`: Not subject to tax: This value is added automatically if the invoice line doesn't contain
   any taxes.
-- `02`: Subject to tax - this is the default configuration of any invoice line that contains taxes.
-- `03`: Subject to tax and not forced to break down - this value can be triggered on-demand for
-  certain customers to replace the value 02.
+- `02`: Subject to tax: This is the default configuration of any invoice line that contains taxes.
+- `03`: Subject to tax and not forced to break down: This value can be triggered on demand for
+  certain customers to replace the value `02`.
 
-To use the `03` value, navigate to :menuselection:`Contacts --> your customer's invoice --> MX EDI
-tab`, and activate the :guilabel:`No Tax Breakdown` checkbox.
-
-.. image:: mexico/mx-tax-breakdown.png
-   :alt: No Tax Breakdown option on the MX EDI tab of the customer's invoice.
+To use the `03` value for a contact, navigate to the contact's :guilabel:`Sales & Purchase` tab, and
+activate the :guilabel:`No Tax Breakdown` checkbox under the :guilabel:`Fiscal Information` section.
 
 .. important::
    The :guilabel:`No Tax Breakdown` value applies **only** to specific fiscal regimes and/or taxes.
    Consult your accountant first to see if it is needed for your business before making any
    modification.
 
+.. _l10n/mx/tax-config:
+
 Other tax configurations
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-When registering a payment, Odoo will carry out the movement of taxes from the *Cash Basis
-Transition Account* to the account set in the :guilabel:`Definition` tab. For such movement, a tax
-base account will be used: (`Base Imponible de Impuestos en Base a Flujo de Efectivo`) in the
-journal entry when reclassifying taxes. **Do not delete this account**.
+The Mexican Localization uses :doc:`cash basis taxes <../../finance/accounting/taxes/cash_basis>`.
+When registering a payment, Odoo carries out the movement of taxes from the *Cash Basis Transition
+Account* to the account set in the :guilabel:`Definition` tab of the tax record set on the invoice
+or bill line. For such movement, a tax base account is used: (:guilabel:`899.01.99 Base Imponible de
+Impuestos en Base a Flujo de Efectivo`) in the journal entry when reclassifying taxes. **Do not
+delete this account**.
 
-If you create a new tax in :menuselection:`Accounting --> Configuration --> Taxes`, you need to add
-the correct :guilabel:`Tax Grids` for it (`IVA`, `ISR` or `IEPS`). Odoo **only** supports these
-three groups of taxes.
-
-.. image:: mexico/mx-taxes-config.png
-   :alt: Tax accounts available for Odoo.
+.. _l10n/mx/products:
 
 Products
 --------
 
 To configure products, go to :menuselection:`Accounting --> Customers --> Products`, then select a
-product to configure, or :guilabel:`Create` a new one. In the :guilabel:`Accounting` tab, and in the
+product to configure, or :guilabel:`Create` a new one. In the :guilabel:`Accounting` tab, in the
 :guilabel:`UNSPSC Product Category` field, select the category that represents the product. The
 process can be done manually, or through :doc:`a bulk import <../../essentials/export_import_data>`.
 
 .. note::
-   All products need to have an |SAT| code associated with them in order to prevent validation
+   All products need to have a |SAT| code associated with them in order to prevent validation
    errors.
+
+.. _l10n/mx/e-invoicing-overview:
 
 Electronic invoicing
 --------------------
 
+.. _l10n/mx/pac:
+
 PAC credentials
 ~~~~~~~~~~~~~~~
 
-After you have processed your `Private Key (CSD)
+After processing your `Private Key (CSD)
 <https://www.sat.gob.mx/aplicacion/16660/genera-y-descarga-tus-archivos-a-traves-de-la-aplicacion-
-certifica>`_ with the |SAT|, you **must** register directly with the :ref:`PAC <mx-requirements>` of
-your choice before you start creating invoices from Odoo.
+certifica>`_ with the |SAT|, you **must** register directly with the :ref:`PAC
+<l10n/mx/requirements>` of your choice before you start creating invoices from Odoo.
 
-Once you've created your account with any of these providers, go to :menuselection:`Settings -->
-Accounting --> Electronic Invoicing (MX)`. Under the :guilabel:`MX PAC` section, enter the name of
-your |PAC| with your credentials (:guilabel:`PAC username` and :guilabel:`PAC password`).
+Once you've created your account with any of these providers, go to :menuselection:`Accounting -->
+Configuration --> Settings` and navigate to the :guilabel:`MX Electronic invoicing` section. Under
+the :guilabel:`Authorized Certification Provider (PAC)` section, enter the name of your |PAC| with
+your credentials (:guilabel:`PAC username` and :guilabel:`PAC password`).
 
 .. image:: mexico/mx-pac-account.png
    :alt: Configuring PAC credentials from the Accounting settings.
 
 .. tip::
-   If you do not have credentials, but want to test the electronic invoicing, you can activate the
-   :guilabel:`MX PAC test environment` checkbox, and select :guilabel:`Solucion Factible` as the
-   |PAC|. You do not need to add a username or password for a test environment.
+   To test the electronic invoicing without credentials, activate the :guilabel:`MX PAC
+   test environment` checkbox, and select :guilabel:`Solucion Factible` as the :guilabel:`PAC`. It
+   is not required to add a username or password for a test environment.
+
+.. _l10n/mx/certifications:
 
 .cer and .key certificates
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The `digital certificates of the company
 <https://www.gob.mx/tramites/ficha/certificado-de-sello-digital/SAT139>`_ must be uploaded within
-the :guilabel:`MX Certificates` section. To do so, navigate to :menuselection:`Settings -->
-Accounting --> Electronic Invoicing (MX)`. Under the :guilabel:`MX Certificates` section, select
-:guilabel:`Add a line`, and a window will open. Click :guilabel:`Create`, and from there, upload
-your digital :guilabel:`Certificate` (:file:`.cer` file), your :guilabel:`Certificate Key`
-(:file:`.key` file), and your :guilabel:`Certificate Password`. To finish, click on :guilabel:`Save
-& Close`.
+the :guilabel:`Certificates` section. To do so, navigate to :menuselection:`Settings -->
+General Settings --> Certificates and Keys`.
 
-.. image:: mexico/mx-certificates.png
-   :alt: Certificate and key upload inputs.
+Under :guilabel:`Manage your certificates`, click the :icon:`fa-right-arrow` :guilabel:`Keys` link
+to access the :guilabel:`Keys` list view. Click :guilabel:`Create`, upload the digital
+:guilabel:`Key file` (:file:`.key` file), add a :guilabel:`Name` to the key, and enter the
+:guilabel:`Private key password`.
+
+From :menuselection:`Settings --> General Settings --> Certificates and Keys`, select
+:guilabel:`Certificates` to access the :guilabel:`Certificate` list view. Click :guilabel:`Create`,
+upload the digital :guilabel:`Certificate` (:file:`.cer` file), add a :guilabel:`Name` to the
+certificate, and select the :guilabel:`Private Key` created on the previous step from the drop-down
+menu.
+
+.. note::
+   The :guilabel:`Certificate Password` and :guilabel:`Public Key` fields on :guilabel:`Certificate`
+   records are optional.
 
 .. tip::
-   If you still do not have one of the contracted |PAC|\s and you want to test electronic invoicing,
-   you can use the following |SAT| test certificates:
+   In order to test the electronic invoicing,
+   the following |SAT| test certificates are provided:
 
    - :download:`Certificate <mexico/certificate.cer>`
    - :download:`Certificate Key <mexico/certificate.key>`
    - **Password**: ``12345678a``
 
-Workflows
-=========
+Accounting
+==========
+
+.. _l10n/mx/e-invoicing:
 
 Electronic invoicing
 --------------------
@@ -314,6 +337,8 @@ Electronic invoicing
 The invoicing process in Odoo is based on `Annex 20
 <http://omawww.sat.gob.mx/tramitesyservicios/Paginas/anexo_20.htm>`_ version 4.0 of electronic
 invoicing of the |SAT|.
+
+.. _l10n/mx/invoices:
 
 Customer invoices
 ~~~~~~~~~~~~~~~~~
@@ -324,23 +349,28 @@ flow <../accounting/customer_invoices>`.
 While the document is in draft mode, changes can be made to it (the correct :guilabel:`Payment Way`
 or :guilabel:`Usage` that the customer might require can be added, for example.)
 
-After you :guilabel:`Confirm` the customer invoice, a blue message appears stating: :guilabel:`The
-invoice will be processed asynchronously by the following E-invoicing service: CFDI (4.0)`.
+After clicking on :guilabel:`Confirm` in the customer invoice, click on the :guilabel:`Send` button
+to process the invoice with the government. Make sure that the :guilabel:`CFDI` checkbox is marked.
 
-Pressing the :guilabel:`Process Now` button sends the document to the government so it can be
-signed. After receiving the signed document back from the government, the :guilabel:`Fiscal Folio`
-field appears on the document, and the XML file is attached in the chatter.
+.. image:: mexico/mx-send-cfdi.png
+   :alt: CFDI Checkbox
+
+After receiving the signed document back from the government, the :guilabel:`Fiscal Folio` field
+appears on the document, and the XML file appears both in the |CFDI| tab and attached in the
+chatter.
+
+If an email address is configured on the customer contact record, marking the :guilabel:`by Email`
+and :guilabel:`CFDI` checkboxes sends both the XML and PDF files together.
+
+To download the PDF file locally, click the :guilabel:`Print` button.
 
 .. tip::
-   If you click :guilabel:`Retry` in the :guilabel:`SAT status` field on the invoice, you can
-   confirm if the XML file is valid in the |SAT|.
+   When clicking :guilabel:`Update SAT`, the :guilabel:`SAT status` field on the invoice will
+   confirm if the XML file is **Validated** in the |SAT|.
 
-   If you are in a testing environment, you will always receive the message :guilabel:`Not Found`.
+   On a testing environment, the message :guilabel:`Not Found` will always come up.
 
-To send the signed invoice to your client by mail, you can send both the XML and PDF files together,
-directly from Odoo, by clicking the :guilabel:`Send & Print` button. You can also download the PDF
-file to your computer, by clicking the :guilabel:`Print` button, and selecting the desired print
-option.
+.. _l10n/mx/credit-notes:
 
 Credit notes
 ~~~~~~~~~~~~
@@ -354,41 +384,38 @@ to be a relation between a credit note and an invoice through the fiscal folio.
 Because of this requirement, the field :guilabel:`CFDI Origin` adds this relation with a `01|`,
 followed by the fiscal folio of the original invoice.
 
-.. image:: mexico/mx-creating-credit-note.png
-   :alt: Example CFDI Origin number.
-
 .. tip::
    For the :guilabel:`CFDI Origin` field to be automatically added, use the :guilabel:`Add Credit
    Note` button from the invoice, instead of creating it manually.
 
-Payment complements
-~~~~~~~~~~~~~~~~~~~
+.. _l10n/mx/payments:
+
+Payments
+~~~~~~~~
+
+.. _l10n/mx/payment-policy:
 
 Payment policy
 **************
 
-One addition of the Mexican localization is the :guilabel:`Payment Policy` field. According to
-the SAT documentation, there are two types of payments:
+One addition of the Mexican localization is the :guilabel:`Payment Policy` field. `According to
+the SAT documentation <https://www.sat.gob.mx/consultas/92764/comprobante-de-recepcion-de-pagos>`_,
+there are two types of payments:
 
-- `PUE` (Pago en una Sola Exhibición/Payment in a Single Exhibition)
-- `PPD` (Pago en Parcialidades o Diferido/Payment in Installements or Deferred)
+- :guilabel:`PUE` (Pago en una Sola Exhibición/Payment in a Single Exhibition)
+- :guilabel:`PPD` (Pago en Parcialidades o Diferido/Payment in Installements or Deferred)
 
-   .. seealso::
-      :doc:`../../inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs`
-
-The difference lies in the *Due Date* or *Payment Terms* of the invoice.
+The difference lies in the :guilabel:`Due Date` or
+:doc:`../accounting/customer_invoices/payment_terms` of the invoice.
 
 To configure |PUE| invoices, navigate to :menuselection:`Accounting --> Customers --> Invoices`,
-and either select an invoice :guilabel:`Due Date` within the same month, or choose a payment term
-that does not imply changing the due month (immediate payment, 15 days, 21 days, all falling within
-the current month).
+and either select an invoice :guilabel:`Due Date` within the same month, or choose
+:guilabel:`Payment terms` that do not imply changing the due month (i.e., :guilabel:`Immediate
+Payment`, or :guilabel:`15 Days` or :guilabel:`21 Days`, as long as they fall within the current
+month).
 
 .. image:: mexico/mx-pue-payment.png
    :alt: Example of an invoice with the PUE requirements.
-
-.. tip::
-   Some :guilabel:`Payment Terms` are already installed by default, and can be managed from
-   :menuselection:`Accounting --> Configuration --> Payment Terms`.
 
 To configure |PPD| invoices, navigate to :menuselection:`Accounting --> Customers --> Invoices`, and
 select an invoice with a :guilabel:`Due Date` after the first day of the following month. This also
@@ -397,54 +424,55 @@ applies if your :guilabel:`Payment Term` is due in the following month.
 .. image:: mexico/mx-ppd-payment.png
    :alt: Example of an invoice with the PPD requirements.
 
-.. important::
-   Because the |PPD| policy implies that an invoice is not going to get paid at the moment, the
-   correct :guilabel:`Payment Way` for the |PPD| invoices is :guilabel:`99 - Por Definir` (To
-   define).
+.. _l10n/mx/payment-flow:
 
 Payment flow
 ************
 
-In both cases, the payment process in Odoo :doc:`is the same <../accounting/customer_invoices>`, the
-main difference being payments related to |PPD| invoices trigger the creation of a document type "P"
-(Pago).
+In both cases, the payment process in Odoo :doc:`is the same <../accounting/payments>`, the main
+difference being payments related to |PPD| invoices, by law, need to be sent to the government as a
+document type "P" (Pago).
 
-If a payment is related to a |PUE| invoice, it can be registered with the wizard, and be associated
-with the corresponding invoice. To do so, navigate to :menuselection:`Accounting --> Customers -->
-Invoices`, and select an invoice. Then, click the :guilabel:`Register Payment` button. The invoice
-status changes to :guilabel:`In Payment`, since the payment is effectively validated when it is bank
-reconciled.
+If a payment is related to a |PUE| invoice, it can be registered through the payment popup, and be
+associated with the corresponding invoice. To do so, navigate to :menuselection:`Accounting -->
+Customers --> Invoices`, and select an invoice. Then, click the :guilabel:`Pay` button to open the
+payment popup, set the :guilabel:`Payment Way` and any other fields, and click :guilabel:`Create
+Payment`.
 
 .. seealso::
-   :doc:`../accounting/bank/reconciliation`
+   - :doc:`../accounting/payments`
+   - :doc:`../accounting/bank/reconciliation`
 
-While this process is the same for PPD invoices, the addition of the creating an :doc:`electronic
+While this process is the same for PPD invoices, the addition of creating an :doc:`electronic
 document <../accounting/customer_invoices/electronic_invoicing>` means some additional requirements
 are needed to correctly send the document to the |SAT|.
 
-From an invoice, you need to confirm the specific :guilabel:`Payment Way` where you received the
-payment. Because of this, the :guilabel:`Payment Way` field **cannot** be set as `99 - Por Definir
-(To Define)`.
-
-If you are going to add a bank account number in the :guilabel:`Accounting` tab of a customer's
-contact card, it must have a valid account number.
+From a legal perspective, PPD invoices **must** include the specific :guilabel:`Payment Way` that
+the payment was received. Because of this, the :guilabel:`Payment Way` field **cannot** be set as
+:guilabel:`To Define`, thus the field will become invisible when selecting it.
 
 .. note::
-   The exact configurations are in the `Anexo 20 of the SAT
-   <http://omawww.sat.gob.mx/tramitesyservicios/Paginas/anexo_20.htm>`_. Usually, the
-   :guilabel:`Bank Account` needs to be 10 or 18 digits for transfers, 16 for credit or debit cards.
+   - If a bank account number is required, add it in the :guilabel:`Accounting` tab of a customer's
+     contact record.
+   - The exact configurations are in the `Anexo 20 of the SAT
+     <http://omawww.sat.gob.mx/tramitesyservicios/Paginas/anexo_20.htm>`_. Usually, the
+     :guilabel:`Bank Account` needs to be 10 or 18 digits for transfers, 16 for credit or debit
+     cards.
 
-If a payment is related to a signed invoice with the :guilabel:`Payment Policy` `PPD`, Odoo
-generates the corresponding payment complement automatically, once you click :guilabel:`Process
-Now`.
+If a fully-reconciled payment is related to an invoice with a :guilabel:`Fiscal Folio`, the
+:guilabel:`Update Payments` appears. Click the :guilabel:`Update Payments` button to send the
+**payment complement** XML file to the government automatically and display it in the |CFDI| tab in
+both the invoice and the payment.
 
-.. image:: mexico/mx-signed-complement.png
-   :alt: CFDI (4.0) E-invoicing service process payment now message.
+.. tip::
+   While it is a bad fiscal practice, the |PUE| payments can also be sent to the government, however
+   it is required to click :guilabel:`Force CFDI` in the :guilabel:`CFDI` tab for this.
 
-.. warning::
-   A payment in MXN **cannot** be used to pay multiple invoices in USD. Instead, the payment should
-   be separated into multiple payments, using the :guilabel:`Register Payment` button on the
-   corresponding invoices.
+Similar to an invoice or credit note, the PDF and XML can be sent to the final customer. To do so,
+click the :icon:`fa-cog` :guilabel:`(gear)` icon to open the actions drop-down menu and select
+:guilabel:`Send receipt by email`.
+
+.. _l10n/mx/invoice-cancellations:
 
 Invoice cancellations
 ~~~~~~~~~~~~~~~~~~~~~
@@ -453,7 +481,7 @@ It is possible to cancel the EDI documents sent to the |SAT|. According to the `
 <https://www.sat.gob.mx/consultas/91447/nuevo-esquema-de-cancelacion>`_, since January 1st, 2022,
 there are two requirements for this:
 
-- With all cancellation requests, you **must** specify a *cancellation reason*.
+- All cancellation requests require a *cancellation reason*.
 - After 24 hours from the invoice creation, the client must be asked to approve the cancellation. If
   there is no response within 72 hours, the cancellation is processed automatically.
 
@@ -466,18 +494,23 @@ Invoice cancellations can be made for one of the following reasons:
 
 To initiate a cancellation, go to :menuselection:`Accounting --> Customers --> Invoices`, select the
 posted invoice to cancel, and click :guilabel:`Request Cancel`. Then, refer to the
-:ref:`localizations/mexico/01-invoice-cancellation` or
-:ref:`localizations/mexico/02-03-04-invoice-cancellation` sections, depending on the cancellation
-reason.
+:ref:`l10n/mx/01-invoice-cancellation` or :ref:`l10n/mx/02-03-04-invoice-cancellation` sections,
+depending on the cancellation reason.
 
 .. tip::
    Alternatively, request a cancellation from the :guilabel:`CFDI` tab by clicking
    :guilabel:`Cancel` on the line item.
 
-.. _localizations/mexico/01-invoice-cancellation:
+.. note::
+   - If a cancellation is requested on a locked period, the CFDI will be cancelled but not the
+     accounting entry.
+   - If the client rejects the cancellation, the invoice cancellation line item is removed from the
+     :guilabel:`CFDI` tab.
 
-Cancellation reason 01 - Invoice issued with errors (with related document)
-***************************************************************************
+.. _l10n/mx/01-invoice-cancellation:
+
+Cancellation reason 01
+**********************
 
 #. In the :guilabel:`Request CFDI Cancellation` pop-up window, select :guilabel:`01 - Invoice issued
    with errors (with related document)` from the :guilabel:`Reason` field and click
@@ -498,14 +531,12 @@ The invoice cancellation is then generated with a reason line item in the :guila
    :alt: Canceled invoice line item in the CFDI tab.
 
 .. note::
-   - If the client rejects the cancellation, the invoice cancellation line item is removed from the
-     :guilabel:`CFDI` tab.
-   - When using the *01 - Invoice issued with errors (with related document)* cancellation reason,
-     the `04|` prefix may appear in the :guilabel:`Fiscal Folio` field. This is an internal prefix
-     used by Odoo to complete the cancellation and **does not** mean that the cancellation reason
-     was *04 - Nominative operation related to the global invoice*.
+   When using the :guilabel:`01 - Invoice issued with errors (with related document)` cancellation
+   reason, the `04|` prefix appears in the :guilabel:`Fiscal Folio` field. This is an internal
+   prefix used by Odoo to complete the cancellation and **does not** mean that the cancellation
+   reason was :guilabel:`04 - Nominative operation related to the global invoice`.
 
-.. _localizations/mexico/02-03-04-invoice-cancellation:
+.. _l10n/mx/02-03-04-invoice-cancellation:
 
 Cancellation reasons 02, 03, and 04
 ***********************************
@@ -517,106 +548,475 @@ Upon doing so, the invoice cancellation is generated with a reason line item in 
 tab.
 
 .. note::
-   If the client rejects the cancellation, the invoice cancellation line item is removed from the
-   :guilabel:`CFDI` tab.
+   If the :guilabel:`SAT Status` goes back to **Validated** it could be due to one of these three
+   reasons:
+
+   - The invoice is labeled as *No Cancelable* in the `SAT Website <https://www.sat.gob.mx/home>`_.
+     due to the fact that it has a valid related document: Either another invoice linked with the
+     :guilabel:`CFDI Origin` field or a Payment Complemement. If so, you need to cancel any other
+     related document first.
+   - The cancellation request is still being processed by the |SAT|. If so, wait a few minutes and
+     try again.
+   - The final customer needs to reject or accept the cancellation request in their
+     `Buzón Tributario
+     <http://omawww.sat.gob.mx/BuzonTributario/Paginas/servicios_disponibles.html>`_. This
+     can take up to 72 hours and, in case that the cancellation requests gets rejected, you will
+     need to repeat the process again.
+
+.. seealso::
+   `Tool to validate Mexican Electronic Documents (CFDI) status
+   <https://verificacfdi.facturaelectronica.sat.gob.mx/>`_
+
+For the cancellation reasons **02**, **03** and **04**, the :guilabel:`Create Replacement Invoice`
+button is replaced by a :guilabel:`Confirm` button that requests the cancellation immediately.
+
+Both the current :guilabel:`State` and :guilabel:`Cancellation Reason` can be found in the
+:guilabel:`CFDI` tab.
+
+.. image:: mexico/mx-invoice-cancellation-reason-tab.png
+   :alt: Old invoice with CFDI Origin.
+
+.. _l10n/mx/payment-cancellations:
 
 Payment cancellations
 *********************
 
-It is also possible to cancel *Payment Complements*. For this, go to the payment, via
-:menuselection:`Accounting --> Customers --> Payments`, and select :guilabel:`Request EDI
-Cancellation`. As with invoices, a blue button will appear. Click :guilabel:`Process now`, and the
-document will be sent to the |SAT|. After a few seconds, you can click :guilabel:`Retry` to confirm
-the current |SAT| status.
+To cancel :ref:`payment complements <l10n/mx/payment-flow>`, go to the :guilabel:`CFDI` tab of the
+related invoice and click :guilabel:`Cancel` on the line of the payment complement.
 
-Finally, the payment status is moved to :guilabel:`Cancelled`.
+Like with invoices, go to the payment and click :guilabel:`Update SAT` in order to change the
+:guilabel:`SAT Status` and :guilabel:`Status` to :guilabel:`Cancelled`.
 
 .. note::
-   Just like invoices, when you create a new *Payment Complement*, you can add the relation of the
+   Just like invoices, when creating a new payment complement, you can add the relation of the
    original document, by adding a `04|` plus the fiscal folio in the :guilabel:`CFDI Origin` field.
+   This action cancels the invoice and marks the :guilabel:`Reason` as :guilabel:`01 - Invoice
+   issued with errors (with related document)`.
+
+.. _l10n/mx/special-use-cases:
 
 Invoicing special use cases
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-CFDI to public
-**************
-
-If the customer you are selling goods or services to does not require an invoice, a *CFDI to Public*
-has to be created.
-
-If you use the :guilabel:`Customer` name `PUBLICO EN GENERAL`, an error will be triggered. This is a
-main change in the CFDI 4.0 that requires invoices with that specific name to need additional
-fields, which Odoo does not currently support. So, for a *CFDI to Public* to be created, you need to
-add any name to your customer that is **not** `PUBLICO EN GENERAL`. (For example: `CLIENTE FINAL`).
-
-In addition to this, it is required that the :guilabel:`ZIP` code of your company is added, the
-generic |RFC| is set as `XAXX010101000`, and the :guilabel:`Fiscal Regime` of your customer must be
-set as: `Sin obligaciones fiscales`.
-
-.. image:: mexico/mx-cfdi-to-public.png
-   :alt: CFDI to Public Customer field configuration.
+.. _l10n/mx/multicurrency:
 
 Multicurrency
 *************
 
-The main currency in Mexico is MXN. While this is mandatory for all Mexican companies, it is
-possible to send and receive invoices (and payments) in different currencies. To enable the use of
-:doc:`multicurrency <../accounting/get_started/multi_currency>`, navigate to the
-:menuselection:`Accounting --> Settings --> Currencies`, and set :guilabel:`Mexican Bank` as the
-:guilabel:`Service` in the :guilabel:`Automatic Currency Rates` section. Then, set the
-:guilabel:`Interval` field to the frequency you wish to update the exchange rates.
+The :guilabel:`Main Currency` in Mexico is MXN. While this is mandatory for all Mexican companies,
+it is possible to send and receive invoices (and payments) in different currencies. To enable the
+use of :doc:`multicurrency <../accounting/get_started/multi_currency>`, navigate to the
+:menuselection:`Accounting --> Configuration --> Currencies`, and set :guilabel:`[MX] Bank of
+Mexico` as the :guilabel:`Service` in the :guilabel:`Automatic Currency Rates` section. Then, set
+the :guilabel:`Interval` field to the frequency you wish to update the exchange rates.
 
 This way, the XML file of the document will have the correct exchange rate, and the total amount,
 in both the foreign currency and in MXN.
 
-It is highly recommended to use :doc:`a bank account for each currency
+It is highly recommended to use separate :doc:`bank accounts for each currency
 <../accounting/bank/foreign_currency>`.
 
 .. note::
-   The only currencies that automatically update their exchange rate daily are: USD, EUR, GBP, and
-   JPY.
+   The only currencies that automatically update their exchange rate daily are: USD, EUR, GBP, JPY
+   and CNY.
 
-.. image:: mexico/mx-multicurrency-1.png
-   :alt: Multi-currency configuration in the Accounting settings.
+.. _l10n/mx/discounts:
+
+Discounts
+*********
+
+By law, electronic documents sent to the government cannot have negative lines, as this can trigger
+errors. Therefore, when using :doc:`Gift Cards
+<../../sales/sales/products_prices/ewallets_giftcards>` or :doc:`Loyalty Programs
+<../../sales/sales/products_prices/loyalty_discount>`, the subsequent negative lines will be
+translated in the XML as if they were regular :doc:`Discounts
+<../../sales/sales/products_prices/prices/pricing/>`.
+
+In order to set this up, navigate to :menuselection:`Sales --> Products --> Products` and create a
+product `Discounts`, make sure that it has a valid :guilabel:`Tax` (usually :guilabel:`IVA` at
+`16%`).
+
+After this, create and sign the invoice via CFDI, and add the `Discounts` product at the bottom. In the XML
+the discount should be subtracted from the first invoice line available, Odoo will try to subtract
+from each line the total amount in order until all the discount has been applied.
+
+.. tip::
+   A `Discount` and `UNSPSC Product Category` for each product variant related to :guilabel:`Gift
+   Cards` or :guilabel:`Loyalty Programs` have to be created.
+
+.. _l10n/mx/down-payments:
 
 Down payments
 *************
 
-There can be cases where you receive a payment in advance from a customer that needs to be applied
-to an invoice later. In order to do this in Odoo, it is required to properly link invoices to each
-other with the :guilabel:`CFDI Origin` field. To do so, it is necessary to have the :doc:`Sales
-<../../sales>` app installed.
+A common practice in Mexico is the usage of :doc:`down payments
+<../../sales/sales/invoicing/down_payment>`. It's usage primarily consists of cases where you receive
+a payment for a good or service where either the product or the price (or both) hasn't been
+determinated at the moment.
+
+The |SAT| allows two diferent ways to handle this process: both of them involve linking all invoices
+to each other with the :guilabel:`CFDI Origin` field.
+
+.. note::
+   For this process, the :doc:`Sales <../../sales>` app must be installed.
 
 .. seealso::
    `The official documentation for registration of down payments in Mexico
-   <http://omawww.sat.gob.mx/tramitesyservicios/Paginas/documentos/Caso_uso_Anticipo.pdf>`_.
+   <http://http://omawww.sat.gob.mx/tramitesyservicios/Paginas/documentos/GuiaAnexo311221.pdf>`_.
 
-First, navigate to the :menuselection:`Sales` app to create a product `Anticipo` and configure it.
-The :guilabel:`Product Type` must be :guilabel:`Service`, and use the :guilabel:`UNSPSC Category`
-must be: `84111506 Servicios de facturación`.
+Configuration
+^^^^^^^^^^^^^
+
+First, navigate to :menuselection:`Sales --> Products --> Products` to create a product `Anticipo`
+and configure it. The :guilabel:`Product Type` must be :guilabel:`Service`, and use the
+:guilabel:`UNSPSC Category` :guilabel:`84111506 Servicios de facturación`.
 
 Then, go to :menuselection:`Sales --> Settings --> Invoicing --> Down Payments`, and add the
 *Anticipo* product as the default.
 
-Create a sales order with the total amount, and create a down payment (either using a percentage or
-fixed amount). Then, sign the document, and :guilabel:`Register the Payment`.
+.. _l10n-mx/down-payment-method-a:
+
+Method A
+^^^^^^^^
+
+This method consists of creating a down payment invoice, creating a invoice for the total amount,
+and finally, creating a credit note for the total of the down payment.
+
+First, create a sales order with the total amount, and create a down payment from it (either using a
+percentage or fixed amount). Then, sign the document via CFDI, and register the payment.
 
 When the time comes for the customer to get the final invoice, create it again from the same sales
-order. In the :guilabel:`Create Invoices` wizard, select :guilabel:`Regular Invoice`, and uncheck
-:guilabel:`Deduct down payments`.
+order. In the :guilabel:`Create Invoice` popup, select :guilabel:`Regular Invoice`. Make sure to
+delete the line that contains the product *Anticipo*.
 
-Then, copy the :guilabel:`Fiscal Folio` from the first invoice, and paste it into the
-:guilabel:`CDFI Origin` of the second invoice, adding the prefix `07|` before the value. Then, sign
-the document.
+.. tip::
+   When using down payments with the Mexican localization, make sure that the :guilabel:`Invoicing
+   Policy` of the products are :guilabel:`Ordered quantities`. Otherwise a customer credit note will
+   be created.
 
-After this, create a credit note for the first invoice. Copy the :guilabel:`Fiscal Folio` from the
-second invoice, and paste it in the :guilabel:`CFDI Origin` of the credit note, adding the prefix
-`07|`. Then, sign the document.
+Then, copy the :guilabel:`Fiscal Folio` from the down payment invoice, and paste it into the
+:guilabel:`CDFI Origin` of the final invoice, adding the prefix `07|` before the value and sign
+the document via CFDI.
+
+Finally, create a credit note for the first invoice. Copy the :guilabel:`Fiscal Folio` from the
+final invoice, and paste it in the :guilabel:`CFDI Origin` of the credit note, adding the prefix
+`07|`. Then, sign the document via CFDI.
 
 With this, all electronic documents are linked to each other. The final step is to fully pay the new
 invoice. At the bottom of the new invoice, you can find the credit note in the
 :guilabel:`Outstanding credits` - add it as payment. Finally, register the remaining amount with the
-:guilabel:`Register Payment` wizard.
+:guilabel:`Pay` popup.
+
+In the sales order, all three documents should appear as "In Payment".
+
+Method B
+^^^^^^^^
+
+Another, simpler way to fulfill |SAT| requirements involves creating only the down payment invoice,
+and a second invoice for the remnant. This method involves the fact that negative lines are treated
+as discounts.
+
+For this, follow the same process as :ref:`Method A <l10n-mx/down-payment-method-a>`, up until the
+creation of the final invoice. Do not delete the line that contains the *Anticipo* and instead
+rename the other products :guilabel:`Description` to include the text `CFDI por remanente de un
+anticipo`. Don't forget to add the :guilabel:`Fiscal Folio` of the down payment invoice in the
+:guilabel:`CDFI Origin` of the final invoice, adding the prefix `07|`.
+
+Finally, sign the final invoice via CFDI.
+
+.. _l10n/mx/xml-reader:
+
+XML reader
+**********
+
+In certain occasions, such as when you are creating invoices in another software or in the |SAT|
+directly, you would want to upload the invoices in Odoo. The XML Reader allows you to retrieve the
+data from an XML file. To do this, navigate to :menuselection:`Accounting --> Customers -->
+Invoices` and, in the list view, click the :guilabel:`Upload` button to select any number of XML
+files, and draft invoices will be automatically created. This can work also by dragging the files
+from your computer and dropping them in the view.
+
+The draft invoices will retrieve the :guilabel:`Customer information` (if it doesn't exist, new ones
+will be created), the :guilabel:`Product Lines` (only if products with the same name already exist)
+and will calculate all taxes and additional fields exclusive to the Mexican Localization. The import
+information will appear in the chatter.
+
+.. warning::
+   Depending on where the invoice was created, XML files could have different values from the total
+   calculated in Odoo. **Always** double-check any document uploaded this way.
+
+:guilabel:`Customer Invoices` created this way will be able to create **payment complements** and to
+be canceled at any time. If you use the :guilabel:`Print` button, the PDF document will have all the
+corresponding information.
+
+This can be done for :guilabel:`Vendor Bills` too.
+
+.. tip::
+
+   To retrieve the :guilabel:`Fiscal Folio`, drag and drop XML files for already created draft
+   invoices.
+
+.. _l10n/mx/cfdi:
+
+CFDI to public
+**************
+
+The Mexican government requires that any goods or services that are sold must be backed up by
+an invoice. If the customer does not require an invoice or has no |RFC|, a
+*CFDI to Public* has to be created also known as a "nominative" invoice.
+
+A contact must be created and it must have a particular name.
+If  the :guilabel:`CFDI to Public` checkbox in either a sales order or an invoice is checked, the
+final XML will override the data in the invoice contact and will add the following characteristics:
+
+- |RFC|: **XAXX010101000** if it is a national customer or **XEXX010101000** if it is a foreign
+  customer
+- :guilabel:`ZIP` code: The same code of the company
+- :guilabel:`Usage`: S01 - Without Fiscal Effects
+
+.. image:: mexico/mx-cfdi-to-public.png
+   :alt: CFDI to Public Checkbox
+
+.. important::
+   If your contact :guilabel:`Country` is empty, the final invoice is considered as a *CFDI to
+   Public* for national customers. A non-blocking warning will be displayed before signing the
+   document.
+
+If the final customer doesn't share any details, create a generic :guilabel:`Customer`. The name
+cannot be `PUBLICO EN GENERAL` or an error will be triggered (it can be, for example, `CLIENTE
+FINAL`).
+
+.. seealso::
+   `Regla 2.7.1.21 Expedición de comprobantes en operaciones con el público en general.
+   <https://www.sat.gob.mx/articulo/90959/regla-2.7.1.21>`_.
+
+.. _l10n/mx/global-invoice:
+
+Global invoice
+**************
+
+If by the end of a certain period of time (that can vary from daily to bimonthly, depending of your
+company's legal needs and preferences) and the customer still has sales that weren't marked as
+regular invoices or individual *CFDI to Public* invoices, the |SAT| allows for the creation of a
+single invoice that can contain all operations, known as a *global invoice*.
+
+.. note::
+   For this process, the :doc:`Sales <../../sales/sales>` app must be installed.
+
+.. seealso::
+   `Guía de llenado del CFDI global <http://omawww.sat.gob.mx/tramitesyservicios/Paginas/documentos/GuiallenadoCFDIglobal311221.pdf>`_
+
+Sales flow
+^^^^^^^^^^
+
+First, it is necessary to create a special :guilabel:`Journal` created in :menuselection:`Accounting
+--> Configuration --> Journals` with the purpose of keeping a separate sequence.
+
+Then, make sure that all the sales orders that need to be signed have the following configurations:
+
+- :guilabel:`CFDI to Public` checkbox enabled
+- :guilabel:`Invoice Status` marked as :guilabel:`To Invoice`
+
+After this, go to :menuselection:`Sales --> To Invoice --> Orders to Invoice`, select all relevant
+sales orders and press :guilabel:`Create Invoices`. Make sure to disable the :guilabel:`Consolidated
+Billing` checkbox and click :guilabel:`Create Draft Invoice`.
+
+Odoo will redirect to a list of invoices. Select all of them and in the :icon:`fa-gear`
+:guilabel:`Actions` drop-down menu select :guilabel:`Post entries`. Select all posted invoices again
+and go back to the  :icon:`fa-gear` :guilabel:`Actions` drop-down menu to select :guilabel:`Create
+Global Invoice`.
+
+In the wizard, select the :guilabel:`Periodicity` indicated by a professional accountant and press
+:guilabel:`Create`. All invoices should be signed under the same XML file, with the same
+:guilabel:`Fiscal Folio`.
+
+.. tip::
+   - Click :guilabel:`Show` in the :guilabel:`CFDI` tab to display a list with all related invoices.
+   - Click :guilabel:`Cancel` in the :guilabel:`CFDI` tab to cancel the global invoice in both the
+     |SAT| and Odoo.
+
+.. note::
+   Global invoices created this way won't have a **PDF** in them as their information is already
+   within Odoo and is not to be seen by a customer.
+
+.. _l10n/mx/reporting:
+
+Electronic accounting (reporting)
+---------------------------------
+
+For Mexico, `Electronic Accounting
+<https://www.sat.gob.mx/aplicacion/42150/envia-tu-contabilidad-electronica>`_ refers to the
+obligation to keep accounting records and entries through electronic means, and to enter accounting
+information on a monthly basis, through the |SAT| website.
+
+It consists of three main XML files:
+
+#. The updated list of the chart of accounts that is currently in use
+#. A monthly trial balance, plus a closing entry report, also known as: *Trial Balance Month 13*
+#. An export of the journal entries in the general ledger (optional except in the case of a
+   compulsory audit)
+
+The resulting XML files follow the requirements of the `Anexo Técnico de Contabilidad Electrónica
+1.3 <https://www.gob.mx/cms/uploads/attachment/file/151135/Anexo24_05012015.pdf>`_.
+
+In addition to this, it is possible to generate the `DIOT
+<https://www.sat.gob.mx/declaracion/74295/presenta-tu-declaracion-informativa-de-operaciones-con-
+terceros-(diot)->`_: a report of vendors' journal entries that involve IVA taxes that can be
+exported in a TXT file.
+
+.. note::
+  In order to use these reports, the following modules must be installed:
+
+  - :guilabel:`Odoo Mexican Localization Reports` `l10n_mx_reports`
+  - :guilabel:`Mexico - Month 13 Trial Balance` `l10n_mx_reports_closing`
+  - :guilabel:`Odoo Mexican XML Polizas Export` `l10n_mx_xml_polizas`
+
+The *chart of accounts* and the *Trial Balance Month 13* reports can be found in
+:menuselection:`Accounting --> Reporting --> Trial Balance`. The *DIOT* report can be found in
+:menuselection:`Accounting --> Reporting --> Tax Report`.
+
+.. important::
+   The specific characteristics and obligations of the reports that you send might change according
+   to your fiscal regime. Always contact your accountant before sending any documents to the
+   government.
+
+.. _l10n_mx/chart-of-accounts:
+
+Chart of accounts
+~~~~~~~~~~~~~~~~~
+
+The :doc:`chart of accounts <../accounting/get_started/chart_of_accounts>` in Mexico follows a
+specific pattern based on |SAT|'s' `Código agrupador de cuentas
+<http://omawww.sat.gob.mx/fichas_tematicas/buzon_tributario/Documents/codigo_agrupador.pdf>`_.
+
+It is possible to create any account, as long as it respects |SAT|'s encoding group: the pattern is
+`NNN.YY.ZZ` or `NNN.YY.ZZZ`.
+
+.. example::
+   Some examples are `102.01.99` or `401.01.001`.
+
+When a new account is created in :menuselection:`Accounting --> Configuration --> Chart of
+Accounts`, with the |SAT| encoding group pattern, the correct grouping code appears in
+:guilabel:`Tags`, and the account appears in the *COA* report.
+
+Once all accounts are created, make sure the correct :guilabel:`Tags` are added as these mark the
+nature of the account.
+
+.. note::
+   It is not advised use any pattern that ends a section with a 0 (such as `100.01.01`, `301.00.003`
+   or `604.77.00`). This triggers errors in the report. By default Odoo will mark the accounts as
+   yellow if the numbering will cause issue later on, this is to prevent reports from providing
+   inaccurate data.
+
+Once everything is set up, go to :menuselection:`Accounting --> Reporting --> Trial Balance`, and
+click the :guilabel:`COA SAT (XML)` button to generate an XML file containing all of the accounts.
+This XML file is ready to upload to the |SAT| website.
+
+.. _l10n/mx/trial-balance:
+
+Trial balance
+~~~~~~~~~~~~~
+
+The trial balance reports the initial balance, credit, and total balance of your accounts, provided
+that you added their correct :ref:`encoding group <l10n_mx/chart-of-accounts>`.
+
+To generate an XML file of the trial balance, go to :menuselection:`Accounting --> Reporting -->
+Trial Balance`, select the date, and click the :icon:`fa-cog` :guilabel:`(action menu)`, then select
+:guilabel:`SAT (XML)`.
+
+.. image:: mexico/mx-reports-trial-balance.png
+   :alt: Trial balance report.
+
+.. note::
+   Odoo does not generate the *Balanza de Comprobación Complementaria*.
+
+.. _l10n/mx/month-13:
+
+Month 13
+********
+
+An additional report is the *Month 13*: a closing balance sheet that shows any adjustments or
+movements made in the accounting to close the year.
+
+To generate this XML document, navigate to :menuselection:`Accounting --> Accounting --> Journal
+Entries`, and create a new document. Here, add all amounts to modify, and balance the debit and/or
+credit of each one.
+
+After this is done, go to the :guilabel:`Other Info` tab and check the :guilabel:`Month 13 Closing`
+field. If needed, go to :menuselection:`Accounting --> Reporting --> Trial Balance` and select the
+date :guilabel:`Month 13`, where it is possible to see the the total amount of the year, plus all
+the additions of the journal entry. To generate the XML file, click the :icon:`fa-cog`
+:guilabel:`(action menu)`, then select :guilabel:`SAT (XML)`.
+
+.. _l10n/mx/general-ledger:
+
+General ledger
+~~~~~~~~~~~~~~
+
+By law, all transactions in Mexico must be recorded digitally. Since Odoo automatically creates all
+the underlying journal entries of all invoices and payments, simply exporting the general ledger
+complies with |SAT|'s audits and/or tax refunds.
+
+.. tip::
+   The report can be filtered by period or by journal, depending on the need.
+
+To create the XML, go to :menuselection:`Accounting --> Reporting --> General Ledger`, click
+:icon:`fa-cog` :guilabel:`(action menu)`, then click :guilabel:`XML (Polizas)`. Then, select among
+four :guilabel:`Export` types:
+
+- :guilabel:`Tax audit`
+- :guilabel:`Audit certification`
+- :guilabel:`Return of goods`
+- :guilabel:`Compensation`
+
+For :guilabel:`Tax audit` or :guilabel:`Audit certification`, add the :guilabel:`Order Number`
+provided by the |SAT|. For :guilabel:`Return of goods` or :guilabel:`Compensation`, add the
+:guilabel:`Process Number`, also provided by the |SAT|.
+
+.. note::
+   To see this report without sending it, use `ABC6987654/99` for the :guilabel:`Order
+   Number` or `AB123451234512` for the :guilabel:`Process Number`.
+
+.. _l10n/mx/diot:
+
+DIOT report
+~~~~~~~~~~~
+
+The DIOT (Declaración Informativa de Operaciones con Terceros / *Informative Declaration of
+Operations with Third Parties*) is an additional obligation with the |SAT|, where the current status
+of creditable and non-creditable payments, withholdings, import taxes, and refunds of VAT from your
+vendor bills are provided to the |SAT|.
+
+.. note::
+   Since July 2025 the new 2025 version of the report is available.
+
+Unlike other reports, the |DIOT| is uploaded to a software provided by the |SAT| that contains the
+A-29 form. In Odoo, you can download the records of your transactions as a TXT file that can be
+uploaded to the form, avoiding direct capture of this data.
+
+The transactions file contains the total amount of your payments registered in vendor bills, broken
+down into the corresponding types of IVA. The :guilabel:`VAT` and :guilabel:`Country` is mandatory
+for all vendors.
+
+To download the |DIOT| report as a TXT file, go to :menuselection:`Accounting --> Reports --> Tax
+Return`. Select the desired month, click :icon:`fa-cog` :guilabel:`(action menu)`, and select
+:guilabel:`DIOT (TXT)`.
+
+.. image:: mexico/mx-reports-diot.png
+   :alt: DIOT (TXT) download button.
+
+.. important::
+   It is required to fill in the :guilabel:`Type of Operation` field in the :guilabel:`Accounting`
+   tab of each vendor to prevent validation errors. Make sure that foreign customers have their
+   :guilabel:`Country` set.
+
+   .. image:: mexico/mx-reports-diot-contact.png
+      :alt: DIOT information on a vendor contact.
+
+   Selecting :guilabel:`87 - Global Operations` will cause the final TXT file to merge all vendors
+   that are part of the global operations under one generic VAT: *XAXX010101000*.
+
+.. _l10n/mx/external-trade:
 
 External trade
 --------------
@@ -627,17 +1027,19 @@ PDF, to invoices with a foreign customer according to `SAT regulations
 
 - The specific address of the receiver and the sender
 - The addition of a :guilabel:`Tariff Fraction` that identifies the type of product
-- The correct :guilabel:`Incoterm` (International Commercial Terms), among others (*certificate of
-  origin* and *special units of measure*).
+- The correct :doc:`../accounting/customer_invoices/incoterms` (International Commercial Terms)
+- And more, such as the *certificate of origin* and *special units of measure*
 
 This allows the correct identification of exporters and importers, in addition to expanding the
 description of the merchandise sold.
 
-Since January 1, 2018, external trade is a requirement for taxpayers, who carry export operations of
-type A1. While the current CFDI is 4.0, the external trade is currently on version 1.1
+Since January 1, 2018, external trade is a requirement for taxpayers who carry export operations of
+type A1. While the current CFDI is 4.0, the external trade is currently on version 2.0.
 
-In order to use this feature, the modules :guilabel:`l10n_mx_edi_extended` and
-:guilabel:`l10n_mx_edi_extended_40` have to be installed.
+
+.. note::
+   In order to use this feature, the :guilabel:`EDI for Mexico (Advanced Features)`
+   `l10n_mx_edi_extended` module must be installed.
 
 .. important::
    Before installing, make sure your business needs to use this feature. Consult your accountant
@@ -650,22 +1052,20 @@ Contacts
 ********
 
 To configure your company contact for external trade, navigate to :menuselection:`Accounting -->
-Customers --> Customers`, and select your :guilabel:`Company`. While the CFDI 4.0 requirements ask
-you to add a valid :guilabel:`ZIP` code in your contact, the external trade complement adds the
-requirement that your :guilabel:`City` and the :guilabel:`State` must also be valid. All three
-fields must coincide with the `Official SAT Catalog <sat-catalog_>`_, or you will receive an error.
+Customers --> Customers`, remove the default :guilabel:`Customer Invoices` filter, and select your
+:guilabel:`Company` name. While the CFDI 4.0 requirements require adding a valid :guilabel:`ZIP`
+code in the company contact record, the external trade complement adds the requirement that the
+:guilabel:`City` and the :guilabel:`State` must also be valid. All three fields must coincide with
+the `Official SAT Catalog for Carta Porte
+<http://omawww.sat.gob.mx/tramitesyservicios/Paginas/catalogos_emision_cfdi_complemento_ce.htm>`_,
+or it will produce an error.
 
 .. warning::
-   Add the :guilabel:`City` and :guilabel:`State` in the company's *contact*, not in the company
-   itself. You can find your company's contact in :menuselection:`Accounting --> Customers -->
-   Customers`.
+   Add the :guilabel:`City` and :guilabel:`State` in the company's *contact record*, not in the
+   company record itself.
 
-The fields :guilabel:`Locality` and :guilabel:`Colony Code` are optional and can be added in the
-company directly in :menuselection:`Settings --> General Settings --> Companies`. These two fields
-have to coincide with the data in the |SAT|.
-
-.. image:: mexico/mx-external-trade-rescompany.png
-   :alt: Optional external trade company fields.
+On the contact record, the optional fields :guilabel:`Locality` and :guilabel:`Colony Code` can also
+be filled. These two fields also have to coincide with the data in the |SAT|.
 
 To configure the contact data for a foreign receiving client, navigate to :menuselection:`Accounting
 --> Customers --> Customers`, and select the foreign client's contact. The contact must have the
@@ -673,19 +1073,15 @@ following fields completed to avoid errors:
 
 #. The entire company :guilabel:`Address`, including a valid :guilabel:`ZIP` code and the foreign
    :guilabel:`Country`.
-#. The format of the foreign :guilabel:`VAT` (tax identification number, for example: Colombia
-   `123456789-1`)
-#. In the :guilabel:`MX EDI` tab, you need to address if the customer receives goods for a period of
-   time temporarily (:guilabel:`Temporary`) or permanently (:guilabel:`Definitive`).
+#. The foreign :guilabel:`RFC` (tax identification number), in the correct format (for example:
+   Colombia `123456789-1`)
+#. In the :guilabel:`Sales & Purchase` tab, to activate the :guilabel:`Needs external trade?`
+   checkbox.
 
 .. important::
-   If the new contact was created by duplicating another existing contact from Mexico, make sure to
-   delete any carried over information from the :guilabel:`Fiscal Regime` field. In addition, do not
-   enable the :guilabel:`No Tax Breakdown` option. Selecting this option hides mandatory fields that
-   are required for external trade contact configuration.
 
-.. image:: mexico/mx-external-trade-customer-contact.png
-   :alt: Required external trade customer fields.
+   Do not enable the :guilabel:`No Tax Breakdown` option for External Trade customers. Selecting
+   this option hides mandatory fields that are required for external trade contact configuration.
 
 .. note::
    In the resulting XML and PDF files, the :guilabel:`VAT` is automatically replaced by the generic
@@ -694,14 +1090,15 @@ following fields completed to avoid errors:
 Products
 ********
 
-All products involved with external trade have four fields that are required, two of them exclusive
-to external trade.
+All products involved with external trade have four additional fields that are required, two of
+which are exclusive to external trade.
 
-#. The :guilabel:`Internal Reference` of the product is in the :guilabel:`General Information` tab.
-#. The :guilabel:`Weight` of the product must be more than `0`.
+#. The :guilabel:`Reference` of the product must be set in the :guilabel:`General Information` tab.
+#. The :guilabel:`Weight` of the product in the :guilabel:`Inventory` tab must be more than `0`.
 #. The `correct  <https://www.ventanillaunica.gob.mx/vucem/Clasificador.html>`_ :guilabel:`Tariff
-   Fraction` of the product in the :guilabel:`Accounting` tab.
-#. The :guilabel:`UMT Aduana` corresponds to the :guilabel:`Tariff Fraction`.
+   Fraction` of the product must be set in the :guilabel:`Accounting` tab for external trade.
+#. The :guilabel:`UMT Aduana` in the :guilabel:`Accounting` tab must be set and correspond to the
+   :guilabel:`Tariff Fraction` for external trade.
 
 .. image:: mexico/mx-external-trade-product.png
    :alt: Required external trade product fields.
@@ -716,20 +1113,256 @@ Invoicing flow
 ~~~~~~~~~~~~~~
 
 Before creating an invoice, it is important to take into account that external trade invoices
-require to convert the amounts of your product into USD. Therefore, :doc:`multicurrency
-<../accounting/get_started/multi_currency>` **must** be enabled and *USD* **must** be activated in
-the :guilabel:`Currencies` section. The correct :guilabel:`Service` to run is :guilabel:`Mexican
-Bank`.
+require converting product prices into a foreign currency such as USD. Therefore,
+:doc:`multicurrency <../accounting/get_started/multi_currency>` **must** be enabled with the foreign
+currency activated in the :guilabel:`Currencies` section. The correct :guilabel:`Service` to run is
+:guilabel:`[MX] Bank of Mexico`. To convert product prices, create a :doc:`pricelist
+<../../sales/sales/products_prices/prices/pricing>` in the foreign currency.
 
 Then, with the correct exchange rate set up in :menuselection:`Accounting --> Settings -->
-Currency`, the only fields left are :guilabel:`Incoterm` and the optional :guilabel:`Certificate
-Source` in the :guilabel:`Other Info` tab.
+Currency`, set the :guilabel:`Incoterm` and the optional :guilabel:`Certificate Source` fields in
+the invoice's :guilabel:`Other Info` tab.
 
-.. image:: mexico/mx-external-trade-other-info.png
-   :alt: External trade Other Info tab of a product.
+Finally, confirm the invoice with the same process as a regular invoice, and click the
+:guilabel:`Send` button to sign it via CFDI.
 
-Finally, sign the invoice with the same process as a regular invoice, and click the
-:guilabel:`Process Now` button.
+.. _l10n/mx/pos:
+
+Point of sale
+=============
+
+The :doc:`Point of sale <../../sales/point_of_sale>` adaptation of the Mexican Localization enables
+the creation of invoices that comply with the |SAT| requirements directly in the **POS session**,
+with the added benefit of creating receipt tickets that allow *self-invoicing* in a special portal
+and creating global invoices.
+
+.. _l10n/mx/pos/flow:
+
+Point of sale flow
+------------------
+
+Other than the standard :doc:`Point of Sale configuration
+<../../sales/point_of_sale/configuration>`, the only requirement for the Mexican localization is the
+additional fact that each payment method needs to be configured with a correct :guilabel:`Payment
+Way`.
+
+.. tip::
+   By default Odoo creates preconfigured payment methods for cash, credit card, and debit card.
+
+While selling on the **Point of Sale**, click the :guilabel:`Customer` button to either create or
+select a customer. Here it is possible to review customer invoicing information (such as the |RFC|
+or :guilabel:`Fiscal Regime`) and even modify it directly inside the session.
+
+After selecting a customer, tick the :icon:`fa-file-text-o` :guilabel:`Invoice` checkbox. This opens
+a menu to select the :guilabel:`Usage` and to define if it is an invoice to the public. Click
+confirm, select the payment method, and then click validate to complete the order. The PDF is then
+downloaded and it is possible to send the invoice via mail to the final customer alongside the
+receipt.
+
+.. tip::
+   To create invoices from orders, go to the :guilabel:`Orders` menu, select the order, click
+   :guilabel:`Load Order`, and tick the :icon:`fa-file-text-o` :guilabel:`Invoice` checkbox. This
+   opens the same menu for the :guilabel:`Usage` and :guilabel:`CFDI to Public`.
+
+.. image:: mexico/mx-pos.png
+   :alt: Invoice Configuration for Point of Sale.
+
+To sign a credit note automatically, tick the :icon:`fa-file-text-o` :guilabel:`Invoice` checkbox
+when processing a :ref:`refund <pos/refund>`.
+
+.. note::
+   Credit notes for returned products will contain the relation type :guilabel:`03 - Devolución de
+   mercancía sobre facturas o traslados previos`.
+
+.. important::
+   - In the Mexican localization, positive and negative lines in a **POS** session cannot be mixed.
+   - If a |SAT| validation error occurs customer will get a :doc:`Pro-Forma
+     <../../sales/sales/invoicing/proforma>` invoice instead.
+
+.. _l10n/mx/pos/portal:
+
+Self-invoicing portal
+---------------------
+
+If the final customer is not sure if they want to have their invoice generated at the exact moment
+of the sale, it is possible to give them the option of creating a receipt with either a QR code or a
+URL. To do so, follow these steps:
+
+#. Go to :menuselection:`Point of Sale --> Configuration`.
+#. Select the :guilabel:`Point of Sale`.
+#. Scroll to the :guilabel:`Bills & Receipts` section.
+#. Enable :guilabel:`Self-service invoicing`.
+#. Set the :guilabel:`Print` field to :guilabel:`QR code`, :guilabel:`URL`, or :guilabel:`QR code +
+   URL`.
+
+Customers who scan this QR code or follow the URL will access to a menu where they can add their
+fiscal information, including the *Usage* and *Fiscal Regime* once they enter the five digit code
+that is also provided on the receipt.
+
+.. seealso::
+   :doc:`../../sales/point_of_sale/receipts_invoices`
+
+.. _l10n/mx/pos/global-invoice:
+
+Global invoice
+--------------
+
+As with regular sales orders, global invoices can also be created from a POS session.
+
+For this, make sure not to select a customer or the invoice option in the payment menu and go to
+:menuselection:`Point of Sale --> Orders --> Orders`. There, select all the orders to invoice, click
+:icon:`fa-cog` :guilabel:`Actions` and select :guilabel:`Create Global Invoice`.
+
+Like with sales orders, choose the correct :guilabel:`Periodicity` and press :guilabel:`Create`.
+
+This attaches an XML file to each of the selected orders. The XML files can be downloaded by going
+to the :guilabel:`CFDI` tab. If needed, it is possible to cancel the invoice from the same tab.
+
+If eventually any of the orders that are part of the global invoice need to be addressed to a
+customer, it is still possible to send an invoice by entering a new POS session, clicking the
+:icon:`fa-bars` :guilabel:`(drop-down menu)`, then click :guilabel:`Orders`. Change the
+:guilabel:`All active orders` filter to :guilabel:`Paid`, select the order, and click the
+:icon:`fa-file-text-o` :guilabel:`Invoice` button.
+
+.. note::
+   Global invoices, just as regular invoices, can only be grouped by physical address. That is
+   determined by the address set on the POS invoice journal, so when attempting to invoice two
+   addresses a warning will come up to warn the user of the error.
+
+.. _l10n/mx/ecommerce:
+
+eCommerce
+=========
+
+The eCommerce adaptation of the Mexican Localization provides and extra step to create invoices that
+comply with the |SAT| requirements on :doc:`eCommerce  <../../websites/ecommerce>` by retrieving
+the customer data after the **Checkout** and even allowing for the signature of **automatic
+invoices** after the payment is processed, as well as sending customers the files via email and
+granting them access to retrieve their PDF & XML files from their own customer portal.
+
+.. _l10n/mx/ecommerce/flow:
+
+eCommerce flow
+--------------
+
+During the regular checkout process, a new :guilabel:`Invoicing Info` step appears, where it is
+possible to request an invoice or not. If :guilabel:`No` is selected, a **CFDI to Public** is
+created,. If :guilabel:`Yes` is selected, the :guilabel:`RFC`, :guilabel:`Fiscal Regime`,
+and :guilabel:`Usage` are required in order to get all information in the sales order, where its
+status will change to :guilabel:`To Invoice`.
+
+.. important::
+   Make sure to add a :guilabel:`UNSPSC code` to the :ref:`shipping product
+   <ecommerce/checkout/delivery>`.
+
+If you enable the :guilabel:`Automatic Invoicing` in :menuselection:`Settings --> Website -->
+Invoicing`, the electronic document will be signed automatically.
+
+.. _l10n/mx/subscriptions:
+
+Subscriptions
+=============
+
+While handling subscriptions, all the sales fields are used to create the recurrent invoices. These
+are automatically signed and sent via email with the PDF and XML attached with no additional manual
+actions required.
+
+.. _l10n/mx/inventory:
+
+Inventory
+=========
+
+.. _l10n/mx/inventory/customs:
+
+Customs numbers
+---------------
+
+A *customs declaration* (Pedimento Aduanero) is a fiscal document that certifies that all
+contributions to the fiscal entity (the |SAT|) have been paid for, including the import/export of
+goods.
+
+According to the `Annex 20 <http://omawww.sat.gob.mx/tramitesyservicios/Paginas/anexo_20.htm>`_ of
+CFDI 4.0, in documents where the invoiced goods come from a first-hand import operation, the
+:guilabel:`Customs Number` field, needs to be added to all lines of products involved with the
+operation.
+
+.. note::
+   To do so, the :guilabel:`Odoo Mexico Localization for Stock/Landing` `l10n_mx_edi_landing` module
+   must be installed, in addition to the :doc:`Inventory <../../inventory_and_mrp/inventory>`,
+   :doc:`Purchase <../../inventory_and_mrp/purchase>`, and :doc:`Sales <../../sales/sales>` apps.
+
+.. important::
+   Do not confuse this feature with external trade. The customs numbers are directly related to
+   importing goods, while the external trade complement is related to exporting. Consult your
+   accountant first if this feature is needed before doing any modifications.
+
+Configuration
+~~~~~~~~~~~~~
+
+In order to track the correct customs number for a specific invoice, Odoo uses :doc:`landed costs
+<../../inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs>`. Go to
+:menuselection:`Inventory --> Configuration --> Settings`, and in the :guilabel:`Valuation` section,
+make sure that :guilabel:`Landed Costs` is activated.
+
+Begin by creating a **service-type** product called, `Pedimento`. In the :guilabel:`Purchase` tab,
+activate :guilabel:`Is a Landed Cost`, and select a :guilabel:`Default Split Method`.
+
+Then, configure the **goods-type** products that hold the customs numbers. To do so, create the
+products, and make sure the :guilabel:`Product Category` has the following configuration:
+
+- :guilabel:`Costing Method`: Either :guilabel:`FIFO` or :guilabel:`AVCO`
+- :guilabel:`Inventory Valuation`: :guilabel:`Automated`
+- :guilabel:`Stock Valuation Account`: :guilabel:`115.01.01 Inventory`
+- :guilabel:`Stock Journal`: :guilabel:`Inventory Valuation`
+- :guilabel:`Stock Input Account`: :guilabel:`115.05.01 Goods in transit`
+- :guilabel:`Stock Output Account`: :guilabel:`115.05.01 Goods in transit`
+
+.. note::
+   Setting the :guilabel:`Inventory Valuation` to :guilabel:`Automated` requires first enabling the
+   feature. Go to :menuselection:`Accounting --> Configuration --> Settings`, and in the
+   :guilabel:`Stock Valuation` section, enable :guilabel:`Automatic Accounting`.
+
+.. image:: mexico/mx-landing-configuration.png
+   :alt: Storable products general configuration.
+
+.. image:: mexico/mx-landing-configuration-category.png
+   :alt: Storable product category configuration.
+
+Purchase and sales flow
+~~~~~~~~~~~~~~~~~~~~~~~
+
+After configuring the product, follow the standard :doc:`purchase flow
+<../../inventory_and_mrp/purchase>`.
+
+Create a purchase order from :menuselection:`Purchase --> Orders --> Purchase Order`. Then, confirm
+the order to display a :guilabel:`Receipt` smart button. Click on the :guilabel:`Receipt` smart
+button and :guilabel:`Validate` the receipt.
+
+Go to :menuselection:`Inventory --> Operations --> Landed Costs`, and create a new record. In the
+:guilabel:`Transfer`, add the receipt that was just validated, add the :guilabel:`Customs number`
+and in the :guilabel:`Additional Costs` tab, add the :guilabel:`Pedimento` product.
+
+Optionally, it is possible to add a cost amount. After this, :guilabel:`Validate` the landed cost.
+Once :guilabel:`Posted`, all products related to that receipt have the customs number assigned.
+
+.. warning::
+   The :guilabel:`Pedimento Number` field is not editable once it is set, so be careful when
+   associating the correct number with the transfer(s).
+
+.. image:: mexico/mx-landing-inventory.png
+   :alt: Customs number on a landed costs Inventory record.
+
+Next, create a sales order and confirm it. Click on the :guilabel:`Delivery` smart button that
+appears, and :guilabel:`Validate` the delivery order.
+
+Finally, :ref:`create an invoice from the sales order <accounting/inv-process/so>`, and confirm it.
+The invoice line related to the product has a customs number on it. This number matches the customs
+number added in the landed cost record created earlier.
+
+.. image:: mexico/mx-landing-invoice.png
+   :alt: Customs number on confirmed sales order product.
+
+.. _l10n/mx/inventory/delivery-guide:
 
 Delivery guide
 --------------
@@ -737,19 +1370,19 @@ Delivery guide
 A `Carta Porte <https://www.sat.gob.mx/consultas/68823/complemento-carta-porte->`_ is a bill of
 lading: a document that states the type, quantity, and destination of goods being carried.
 
-On December 1st, 2021, version 2.0 of this CFDI was implemented for all transportation providers,
+On July 17th, 2024, version 3.1 of this |CFDI| was implemented for all transportation providers,
 intermediaries, and owners of goods. Odoo is able to generate a document type "T" (Traslado), which,
 unlike other documents, is created in a delivery order instead of an invoice or payment.
 
 Odoo can create XML and PDF files with (or without) ground transport, and can process materials that
 are treated as *Dangerous Hazards*.
 
-In order to use this feature, the modules :guilabel:`l10n_mx_edi_extended`,
-:guilabel:`l10n_mx_edi_extended_40`, :guilabel:`l10n_mx_edi_stock` and
-:guilabel:`l10n_mx_edi_stock_40` have to be installed.
+.. note::
+   In order to use this feature, the :guilabel:`Mexico - Electronic Delivery Guide`
+   `l10n_mx_edi_stock` module must be installed.
 
-In addition to this, it is necessary to have the :doc:`Inventory
-<../../inventory_and_mrp/inventory>` and :doc:`Sales <../../sales/sales>` apps installed, as well.
+   Additionally, it is necessary to have the :doc:`Inventory <../../inventory_and_mrp/inventory>`
+   and :doc:`Sales <../../sales/sales>` apps installed.
 
 .. important::
    Odoo does not support Carta Porte type document type "I" (Ingreso), air, or marine transport.
@@ -758,48 +1391,49 @@ In addition to this, it is necessary to have the :doc:`Inventory
 Configuration
 ~~~~~~~~~~~~~
 
-Odoo manages two different types of CFDI:
+Odoo manages two different types of CFDI type "T". Both can be created from either :doc:`incoming
+shipments or delivery orders
+<../../inventory_and_mrp/inventory/shipping_receiving/daily_operations>`.
 
-- **No Federal Highways**: Is used when the *Distance to Destination* is `less than 30 KM
+- :guilabel:`No Federal Highways` is used when the :guilabel:`Distance to Destination` is `less
+  than 30 km
   <http://omawww.sat.gob.mx/cartaporte/Paginas/documentos/PreguntasFrecuentes_Autotransporte.pdf>`_.
-- **Federal Transport**: Is used when the *Distance to Destination* exceeds 30 KM.
+- :guilabel:`Federal Transport` is used when the :guilabel:`Distance to Destination` exceeds 30 km.
 
-Other than the standard requirements of regular invoicing (The |RFC| of the customer, the UNSPSC
+Other than the standard requirements of regular invoicing (the |RFC| of the customer, the UNSPSC
 code, etc.), if you are using *No Federal Highways*, no external configuration is needed.
 
 For *Federal Transport*, several configurations have to be added to contacts, vehicle setups, and
-products. Those configurations are added to the XML and PDF files.
+products. Those configurations are then included in the XML and PDF files.
 
 Contacts and vehicles
 *********************
 
 Like the external trade feature, the :guilabel:`Address` in both the company and the final customer
 must be complete. The :guilabel:`ZIP` code, :guilabel:`City`, and :guilabel:`State` must coincide
-with the `Official SAT Catalog for Carta Porte <sat-catalog_>_`.
+with the `Official SAT Catalog for Carta Porte
+<http://omawww.sat.gob.mx/tramitesyservicios/Paginas/catalogos_emision_cfdi_complemento_ce.htm>`_.
 
 .. tip::
    The field, :guilabel:`Locality`, is optional for both addresses.
 
-.. image:: mexico/mx-delivery-guide-contacts.png
-   :alt: Delivery guide contact configuration.
-
 .. important::
    The origin address used for the delivery guide is set in :menuselection:`Inventory -->
-   Configuration --> Warehouses Management --> Warehouses`. While this is set as the company address
-   by default, you can change it according to your correct warehouse address.
+   Configuration --> Warehouses`. While this is set as the company address by default, you can
+   change it to your correct warehouse address.
 
 Another addition to this feature is the :guilabel:`Vehicle Setups` menu found in
-:menuselection:`Inventory --> Settings --> Mexico`. This menu lets you add all the information
-related to the vehicle used for the delivery order.
+:menuselection:`Inventory --> Settings --> Vehicle Setups`. This menu lets you add all the
+information related to the vehicle used for the delivery order.
 
 All fields are mandatory to create a correct delivery guide.
 
 .. tip::
    The fields, :guilabel:`Vehicle Plate Number` and :guilabel:`Number Plate`, must contain between
-   5 to 7 characters.
+   5 and 7 characters.
 
-In the :guilabel:`Intermediaries` section, you must add the operator of the vehicle. The only
-mandatory fields for this contact are the :guilabel:`VAT` and :guilabel:`Operator Licence`.
+In the :guilabel:`Intermediaries` section, add the operator of the vehicle. The only mandatory
+fields for this contact are the :guilabel:`VAT` and :guilabel:`Operator Licence`.
 
 .. image:: mexico/mx-delivery-guide-vehicle.png
    :alt: Delivery guide vehicle configuration.
@@ -812,40 +1446,39 @@ this, there are two extra configurations for products involved in delivery guide
 
 - The :guilabel:`Product Type` must be set as :guilabel:`Storable Product` for stock movements to be
   created.
-- In the :guilabel:`Inventory` tab, the field :guilabel:`Weight` should have more than `0`.
+- In the :guilabel:`Inventory` tab, the field :guilabel:`Weight` must be more than `0`.
 
 .. warning::
    Creating a delivery guide of a product with the value `0` will trigger an error. As the
    :guilabel:`Weight` has been already stored in the delivery order, it is needed to return the
-   products, and create the delivery order (and delivery guide) again with the correct amounts.
-
-.. image:: mexico/mx-delivery-guide-products.png
-   :alt: Delivery guide product configuration.
+   products and create the delivery order (and delivery guide) again with the correct amounts.
 
 Sales and inventory flow
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-To create a delivery guide, first, you need to create and confirm a sales order from
-:menuselection:`Sales --> Sales Order`. This generates a :guilabel:`Delivery` smart button. Click
-it, and :guilabel:`Validate` the transfer.
+To create a delivery guide, first, first create and confirm a sales order from :menuselection:`Sales
+--> Sales Order`. Click the :guilabel:`Delivery` smart button that is generated, and
+:guilabel:`Validate` the transfer.
 
 After the status is set to :guilabel:`Done`, you can edit the transfer, and select the
-:guilabel:`Transport Type` (either :guilabel:`No Federal Highways` or :guilabel:`Federal
-Transport`).
+:guilabel:`Transport Type` in the :guilabel:`Additional Info` tab.
 
-If your delivery guide has the type :guilabel:`No Federal Highways`, you can save the transfer, and
-then click :guilabel:`Generate Delivery Guide`. The resulting XML can be found in the chatter.
+If using the :guilabel:`No Federal Highways` :guilabel:`Transport Type`, save the transfer, and then
+click :guilabel:`Generate Delivery Guide`. The resulting XML can be found in the chatter.
 
 .. note::
-   Other than the :guilabel:`UNSPSC` in all products, delivery guides that use :guilabel:`No Federal
+   Other than the :guilabel:`UNSPSC` on all products, delivery guides that use :guilabel:`No Federal
    Highways` do not require any special configuration to be sent to the government.
 
-If your delivery guide has the type, :guilabel:`Federal Transport`, the tab :guilabel:`MX EDI`
-appears. There, enter a value in :guilabel:`Distance to Destination (KM)` bigger than `0`, and
+If using the :guilabel:`Federal Transport` :guilabel:`Transport Type`, the tab :guilabel:`MX EDI`
+appears. There, enter a value in :guilabel:`Distance to Destination (KM)` greater than `0`, and
 select the :guilabel:`Vehicle Setup` used for this delivery.
 
-.. image:: mexico/mx-delivery-guide-federal-transport.png
-   :alt: Delivery guide MX EDI tab configuration.
+Finally, add a :guilabel:`Gross Vehicle Weight` and click :guilabel:`Generate Delivery Guide`.
+
+.. tip::
+   Delivery Guides can also be created from :guilabel:`Receipts`, either from the Inventory app or
+   by the standard flow of the Purchase app.
 
 Dangerous hazards
 *****************
@@ -855,256 +1488,46 @@ Certain values in the :guilabel:`UNSPSC Category` are considered in the `officia
 hazards*. These categories need additional considerations when creating a delivery guide with
 :guilabel:`Federal Transport`.
 
-First, select your product from :menuselection:`Inventory --> Products --> Products`. Then, in the
-:guilabel:`Accounting` tab, the fields :guilabel:`Hazardous Material Designation Code (MX)` and
-:guilabel:`Hazardous Packaging (MX)` must be filled with the correct code from the |SAT| catalog.
+First, select the product from :menuselection:`Inventory --> Products --> Products`. Then, in the
+:guilabel:`Accounting` tab, fill the :guilabel:`Hazardous Material Designation Code` and
+:guilabel:`Hazardous Packaging` fields with the correct code from the |SAT| catalog.
 
 .. image:: mexico/mx-delivery-guide-hazards-designation.png
    :alt: Delivery guide hazardous material product required fields.
 
-In :menuselection:`Inventory --> Settings --> Mexico --> Vehicle Setup`, the data from the
-:guilabel:`Environment Insurer` and :guilabel:`Environment Insurance Policy` has to be filed, as
-well. After this, continue with the regular process to create a delivery guide.
-
-.. image:: mexico/mx-delivery-guide-hazards-environment.png
-   :alt: Delivery Guide environment insurer required fields.
-
-Customs numbers
----------------
-
-A *customs declaration* (Pedimento Aduanero) is a fiscal document that certifies that all
-contributions to the fiscal entity (the |SAT|) has been paid for, including the import/export of
-goods.
-
-According to the `Annex 20 <http://omawww.sat.gob.mx/tramitesyservicios/Paginas/anexo_20.htm>`_ of
-CFDI 4.0, in documents where the invoiced goods come from a first-hand import operation, the field,
-:guilabel:`Customs Number`, needs to be added to all lines of products involved with the operation.
-
-To do so, the module :guilabel:`l10n_mx_edi_landing` must be installed, in addition to the
-:doc:`Inventory <../../inventory_and_mrp/inventory>`, :doc:`Purchase
-<../../inventory_and_mrp/purchase>` and :doc:`Sales <../../sales/sales>` apps.
-
 .. important::
-   Do not confuse this feature with external trade. The customs numbers are directly related to
-   importing goods, while the external trade complement is related to exporting. Consult your
-   accountant first if this feature is needed before doing any modifications.
+   There exists the possibility that a :guilabel:`UNSPSC Category` may or may not be a dangerous
+   hazard (for example *01010101*). If it is not dangerous, enter `0` in the :guilabel:`Hazardous
+   Material Designation Code` field.
 
-Configuration
-~~~~~~~~~~~~~
+In :menuselection:`Inventory --> Settings --> Vehicle Setup`, complete the :guilabel:`Environment
+Insurer` and :guilabel:`Environment Insurance Policy` well. After this, continue with the regular
+process to create a delivery guide.
 
-In order to track the correct customs number for a specific invoice, Odoo uses :doc:`landed costs
-<../../inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs>`. Go to
-:menuselection:`Inventory --> Configuration --> Settings --> Valuation`. Make sure that
-:guilabel:`Landed Costs` is activated.
+Imports and Exports
+*******************
 
-Begin by creating a *service*-type product called, `Pedimento`. In the :guilabel:`Purchase` tab,
-activate :guilabel:`Is a Landed Cost`, and select a :guilabel:`Default Split Method`.
+If your Carta Porte is for international operations (for exports), some additional fields need to be
+taken into account.
 
-Then, configure the *storable products* that hold the customs numbers. To do so, create the storable
-products, and make sure the :guilabel:`Product Category` has the following configuration.
+First, make sure that all relevant :guilabel:`Products` have the following configuration:
 
-- :guilabel:`Costing Method`: Either :guilabel:`FIFO` or :guilabel:`AVCO`
-- :guilabel:`Inventory Valuation`: :guilabel:`Automated`
-- :guilabel:`Stock Valuation Account`: :guilabel:`115.01.01 Inventario`
-- :guilabel:`Stock Journal`: :guilabel:`Inventory Valuation`
-- :guilabel:`Stock Input Account`: :guilabel:`115.05.01 Mercancías en tránsito`
-- :guilabel:`Stock Output Account`: :guilabel:`115.05.01 Mercancías en tránsito`
+- :guilabel:`UNSPSC Category` cannot be :guilabel:`01010101 Does not exist in the catalog`.
+- :guilabel:`Tariff Fraction` and :guilabel:`UMT Aduana` must be set, similar to the
+  :ref:`external trade <l10n/mx/external-trade>` flow.
+- :guilabel:`Material Type` must be set.
 
-.. image:: mexico/mx-landing-configuration.png
-   :alt: Storable products general configuration.
+Then, when creating a :guilabel:`Delivery Guide` from a delivery or receipt, fill the following
+fields:
 
-.. image:: mexico/mx-landing-configuration-category.png
-   :alt: Storable product category configuration.
+- :guilabel:`Customs Regimes`
+- :guilabel:`Customs Document Type`
+- :guilabel:`Customs Document Identification`
 
-Purchase and sales flow
-~~~~~~~~~~~~~~~~~~~~~~~
-
-After you configure your product, follow the standard :doc:`purchase flow
-<../../inventory_and_mrp/purchase>`.
-
-Create a purchase order from :menuselection:`Purchase --> Orders --> Purchase Order`. Then, confirm
-the order to display a :guilabel:`Receipt` smart button. Click on the :guilabel:`Receipt` smart
-button to :guilabel:`Validate` the receipt.
-
-Go to :menuselection:`Inventory --> Operations --> Landed Costs`, and create a new record. Add the
-transfer that you just created, and both: the product `Pedimento` and :guilabel:`Customs number`.
-
-Optionally, you can add a cost amount. After this, validate the landed cost. Once
-:guilabel:`Posted`, all products related to that receipt have the customs number assigned.
-
-.. warning::
-   You can only add the *Pedimentos* number **once**, so be careful when associating the correct
-   number with the transfer(s).
-
-.. image:: mexico/mx-landing-inventory.png
-   :alt: Customs number on a landed costs Inventory record.
-
-Now, create a sales order, and confirm it. This should trigger a :guilabel:`Delivery` smart button.
-Validate it.
-
-Finally, create an invoice from the sales order, and confirm it. The invoice line related to your
-product has a customs number in it. This number should match the customs number added in the
-*Landed Costs* record you created earlier.
-
-.. image:: mexico/mx-landing-invoice.png
-   :alt: Customs number on confirmed sales order product.
-
-Electronic accounting
----------------------
-
-For Mexico, `Electronic Accounting
-<https://www.sat.gob.mx/aplicacion/42150/envia-tu-contabilidad-electronica>`_ refers to the
-obligation to keep accounting records and entries through electronic means, and to enter accounting
-information on a monthly basis, through the |SAT| website.
-
-It consists of three main XML files:
-
-#. The updated list of the chart of accounts that you are currently using.
-#. A monthly trial balance, plus a closing entry report, also known as: *Trial Balance Month 13*.
-#. Either optional, or for a compulsory audit, an export of the journal entries in your general
-   ledger.
-
-The resulting XML files follow the requirements of the `Anexo Técnico de Contabilidad Electrónica
-1.3 <https://www.gob.mx/cms/uploads/attachment/file/151135/Anexo24_05012015.pdf>`_.
-
-In addition to this, you can generate the `DIOT
-<https://www.sat.gob.mx/declaracion/74295/presenta-tu-declaracion-informativa-de-operaciones-con-
-terceros-(diot)->`_: A report of vendor's journal entries that involve IVA taxes that can be
-exported in a :file:`.txt` file.
-
-In order to use these reports, the modules :guilabel:`l10n_mx_reports`,
-:guilabel:`l10n_mx_reports_closing`, :guilabel:`l10n_mx_xml_polizas` and
-:guilabel:`l10n_mx_xml_polizas_edi` have to be installed, as well as the :doc:`Accounting
-<../accounting/get_started>`.
-
-.. important::
-   The specific characteristics and obligations of the reports that you send might change according
-   to your fiscal regime. Always contact your accountant before sending any documents to the
-   government.
-
-.. _l10n_mx/chart-of-accounts:
-
-Chart of accounts
-~~~~~~~~~~~~~~~~~
-
-The :doc:`chart of accounts <../accounting/get_started/chart_of_accounts>` in México follows a
-specific pattern based on |SAT|'s' `Código agrupador de cuentas
-<http://omawww.sat.gob.mx/fichas_tematicas/buzon_tributario/Documents/codigo_agrupador.pdf>`_.
-
-You can create any account, as long as it respects |SAT|'s encoding group: the pattern is
-`NNN.YY.ZZ` or `NNN.YY.ZZZ`.
-
-.. example::
-   Some examples are `102.01.99` or `401.01.001`.
-
-When a new account is created in :menuselection:`Accounting --> Configuration --> Chart of
-Accounts`, with the |SAT| encoding group pattern, the correct grouping code appears in
-:guilabel:`Tags`, and your account appears in the *COA* report.
-
-Once you create all your accounts, make sure the correct :guilabel:`Tags` are added.
-
-.. note::
-   You cannot use any pattern that ends a section with a 0 (such as `100.01.01`, `301.00.003` or
-   `604.77.00`). This triggers errors in the report.
-
-Once everything is set up, go to :menuselection:`Accounting --> Reporting --> Trial Balance`,
-click the :icon:`fa-caret-down` (:guilabel:`down arrow`) next to the :guilabel:`PDF` button, and
-select :guilabel:`COA SAT (XML)`. This generates an XML file with your accounts, which you can
-upload directly to the |SAT| website.
-
-Trial balance
-~~~~~~~~~~~~~
-
-The trial balance reports the initial balance, credit, and total balance of your accounts, provided
-that you added their correct :ref:`encoding group <l10n_mx/chart-of-accounts>`.
-
-To generate this report in an XML format, go to :menuselection:`Accounting --> Reporting -->
-Trial Balance`. Select the month you want to download in the calendar, then click the
-:icon:`fa-caret-down` (:guilabel:`down arrow`) next to the :guilabel:`PDF` button, and select
-:guilabel:`SAT (XML)`.
-
-.. image:: mexico/mx-reports-trial-balance.png
-   :alt: Trial balance report.
-
-.. note::
-   Odoo does not generate the *Balanza de Comprobación Complementaria*.
-
-Month 13 trial balance
-**********************
-
-The *Month 13* report is a closing balance sheet that shows any adjustments or movements made in the
-accounting to close the year.
-
-To generate it, proceed as follows:
-
-#. Go to :menuselection:`Accounting --> Accounting --> Journal Entries` and create a new entry for
-   all the amounts to be changed, balancing the debit and/or credit of each one.
-#. In the :guilabel:`Other Info` tab, enable the :guilabel:`Month 13 Closing` option.
-#. Go to :menuselection:`Accounting --> Reporting --> Trial Balance`, click the calendar, and select
-   :guilabel:`Month 13`.
-#. Click the :icon:`fa-caret-down` (:guilabel:`down arrow`) next to the :guilabel:`PDF` button, and
-   select :guilabel:`SAT (XML)`.
-
-.. image:: mexico/mx-reports-trial-balance-13-report.png
-   :alt: Trial Balance Month 13 report.
-
-General ledger
-~~~~~~~~~~~~~~
-
-By law, all transactions in Mexico must be recorded digitally. Since Odoo automatically creates all
-the underlying journal entries of your invoicing and payments, you can export your journal entries
-to comply with |SAT|'s audits and/or tax refunds.
+Then, when creating a :guilabel:`Delivery Guide` for a receipt where the :guilabel:`Customs Document
+Type` is :guilabel:`Pedimento`, two new fields appear: :guilabel:`Pedimento Number` and
+:guilabel:`Importer`.
 
 .. tip::
-   You can filter by period, or by journal, according to your current needs.
-
-To create the XML, go to :menuselection:`Accounting --> Reporting --> General Ledger`, click the
-:icon:`fa-caret-down` (:guilabel:`down arrow`) next to the :guilabel:`PDF` button, and select
-:guilabel:`XML (Polizas)`. In the :guilabel:`XML Polizas Export Options` window, choose between four
-different :guilabel:`Export` types:
-
-- :guilabel:`Tax audit`
-- :guilabel:`Audit certification`
-- :guilabel:`Return of goods`
-- :guilabel:`Compensation`
-
-For :guilabel:`Tax audit` or :guilabel:`Audit certification`, you need to write the
-:guilabel:`Order Number` provided by the |SAT|. For :guilabel:`Return of goods`, or
-:guilabel:`Compensation`, you need to write your :guilabel:`Process Number`, also provided by the
-|SAT|.
-
-.. note::
-   If you want to see this report without sending it, use `ABC6987654/99` for :guilabel:`Order
-   Number` and `AB123451234512` for :guilabel:`Process Number`.
-
-DIOT report
-~~~~~~~~~~~
-
-The DIOT (Declaración Informativa de Operaciones con Terceros / *Informative Declaration of
-Operations with Third Parties*) is an additional obligation with the |SAT|, where the current status
-of creditable and non-creditable payments, withholdings, and refunds of VAT from your vendor bills,
-are provided to the |SAT|.
-
-Unlike other reports, the |DIOT| is uploaded to a software provided by the |SAT| that contains the
-A-29 form. In Odoo, you can download the records of your transactions as a :file:`.txt` file that
-can be uploaded to the form, avoiding direct capture of this data.
-
-The transactions file contains the total amount of your payments registered in vendor bills, broken
-down into the corresponding types of IVA. The :guilabel:`VAT` and :guilabel:`Country` is mandatory
-for all vendors.
-
-To generate the |DIOT| report, go to :menuselection:`Accounting --> Reporting --> Tax Reports`.
-Select the month you want to download in the calendar, then click the :icon:`fa-caret-down`
-(:guilabel:`down arrow`) next to the :guilabel:`PDF` button to select :guilabel:`Report: DIOT (MX)`
-and download the :file:`.txt` file.
-
-.. image:: mexico/mx-reports-diot-example.png
-   :alt: A Vendor Bill that is In Payment.
-
-.. important::
-   You need to fill the :guilabel:`L10N Mx Type of Operation` field in the :guilabel:`Accounting`
-   tab of each one of your vendors to prevent validation errors. Make sure that your foreign
-   customers have their country set up for :guilabel:`L10N Mx Nationality` to appear automatically.
-
-   .. image:: mexico/mx-reports-diot-contact.png
-      :alt: DIOT information on a vendor contact.
+   The field :guilabel:`Pedimento Number` should follow the pattern `xx xx xxxx xxxxxxx`. For
+   example, `15 48 3009 0001235`.
