@@ -15,6 +15,8 @@ create draft invoices:
 Sales
 =====
 
+.. _accounting/inv-process/so:
+
 Sales Order ‣ Invoice
 ---------------------
 
