@@ -4039,8 +4039,8 @@ msgid ""
 ":guilabel:`Reset to Draft`, and edit the invoice's reference number."
 msgstr ""
 "Para personalizar la secuencia predeterminada, abra la última factura "
-"confirmada, haga clic en :guilabel:`Restablecer a borrador y edite el número"
-" de referencia de la factura."
+"confirmada, haga clic en :guilabel:`Restablecer a borrador` y edite el "
+"número de referencia de la factura."
 
 #: ../../content/applications/finance/accounting/customer_invoices.rst-1
 #: ../../content/applications/finance/accounting/customer_invoices.rst-1
@@ -15244,9 +15244,9 @@ msgid ""
 ":guilabel:`Auto-Reconcile` next to the receivable or payable account (or a "
 "specific contact's group of journal items in that account)."
 msgstr ""
-"En la vista de lista :guilabel:`Apuntes contables por conciliar`, haga clic "
-"en :guilabel:`Conciliación automática` junto a la cuenta por cobrar o por "
-"pagar (o un grupo específico de apuntes contables de un contacto en esa "
+"En la vista de lista de :guilabel:`apuntes contables por conciliar`, haga "
+"clic en :guilabel:`Conciliación automática` junto a la cuenta por cobrar o "
+"por pagar (o un grupo específico de apuntes contables de un contacto en esa "
 "cuenta)."
 
 #: ../../content/applications/finance/accounting/payments.rst:226
@@ -30908,10 +30908,13 @@ msgid ""
 "different records created for a bill and automatically calculates the proper"
 " withholding amount."
 msgstr ""
+"Las escalas de ganancias son acumulativas, es decir, Odoo lleva seguimiento "
+"de los distintos registros creados para una factura de proveedor y calcula "
+"el importe de retención correspondiente de manera automática."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:767
 msgid "IIBB Total Amount"
-msgstr ""
+msgstr "Importe total de IIBB"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:769
 msgid ""
@@ -30921,6 +30924,11 @@ msgid ""
 "automatically synchronize the percentages applicable to each province, this "
 "information needs to be manually updated."
 msgstr ""
+"En este caso debe crear los registros necesarios relacionados con la "
+"provincia aplicable. El importe de la retención se calcula de acuerdo al "
+"porcentaje de :guilabel:`importe` definido en la configuración del impuesto."
+" Odoo no sincroniza los porcentajes aplicables a cada provincia de forma "
+"automática, así que es necesario que actualice esta información manualmente."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:774
 msgid ""
@@ -30929,10 +30937,14 @@ msgid ""
 "configurations that allow the proper calculation and accounting of the "
 "withholding."
 msgstr ""
+"En este caso, la recomendación es que siempre duplique y aplique las "
+"diferentes configuraciones para cada registro, con la finalidad de proteger "
+"cualquier configuración técnica que permita el cálculo y la contabilización "
+"de la retención de forma correcta."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:781
 msgid "IIBB Untaxed"
-msgstr ""
+msgstr "IIBB no gravable"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:783
 msgid ""
@@ -30944,10 +30956,17 @@ msgid ""
 "that it is not necessary to establish a non-taxable amount or minimum "
 "withholding for this record type."
 msgstr ""
+"La configuración de las retenciones de los ingresos brutos no gravados es "
+"muy parecida a la de una :ref:`retención por importe total <l10n_ar/iib-"
+"total-amount-withholdings>`, por lo que debe mantener el porcentaje de "
+":guilabel:`importe` en cada uno de los registros. Odoo está preconfigurado "
+"con varios registros que aplican a distintas provincias. La diferencia en "
+"este caso es que no es necesario establecer un importe no gravado ni una "
+"retención mínima para este tipo de registros."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:790
 msgid "Partner withholding assignation"
-msgstr ""
+msgstr "Asignación de retención de contactos"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:792
 msgid ""
@@ -30957,6 +30976,11 @@ msgid ""
 "partner. In the :guilabel:`Accounting` tab, find the :guilabel:`Purchase "
 "Withholdings` table."
 msgstr ""
+"Una vez que haya configurado todas las posibles retenciones para los "
+"contactos de forma adecuada, deberá asignar las retenciones aplicables a "
+"cada uno de ellos. Abra la aplicación :guilabel:`Contactos`, seleccione el "
+"contacto deseado, vaya a la pestaña :guilabel:`Contabilidad` y busque la "
+"tabla :guilabel:`Retenciones de compra`."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:797
 msgid ""
@@ -30968,14 +30992,23 @@ msgid ""
 "them. These fields are accessible from the :icon:`oi-settings-adjust` "
 ":guilabel:`(adjust settings)` menu."
 msgstr ""
+"Al utilizar los campos adicionales :guilabel:`Desde la fecha` y "
+":guilabel:`Hasta la fecha` puede automatizar la aplicación de varias "
+"retenciones en diferentes intervalos. El campo :guilabel:`Referencia` le "
+"permite asignar un número de control interno a cada línea de retención, este"
+" solo es para referencia interna y no influye en ninguna transacción ni "
+"aparece en ellas. Vaya al menú :icon:`oi-settings-adjust` "
+":guilabel:`(ajustes adicionales)` para acceder a estos campos."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:803
 msgid ":guilabel:`From Date`: the start of the withholding date range."
 msgstr ""
+":guilabel:`Desde la fecha`: El inicio del intervalo de fechas de retención."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:804
 msgid ":guilabel:`To Date`: the end of the withholding date range."
 msgstr ""
+":guilabel:`Hasta la fecha`: El fin del intervalo de fechas de retención."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:805
 msgid ""
@@ -30983,10 +31016,13 @@ msgid ""
 "that is only visible for internal reference and does not affect any "
 "transactions."
 msgstr ""
+":guilabel:`ref`: Aplique un número de control interno a cada línea de "
+"retención, solo será visible para referencia interna y no influirá en "
+"ninguna operación."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:809
 msgid "Automatic withholding calculation and application per payment"
-msgstr ""
+msgstr "Cálculo automático de la retención y aplicación por pago"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:811
 msgid ""
@@ -30995,12 +31031,18 @@ msgid ""
 "configuration, it may be necessary to use a reference number for each "
 "withholding line."
 msgstr ""
+"Al aplicar nuevos pagos a facturas de proveedor, Odoo calcula y aplica la "
+"retención correspondiente en el pago de manera automática. Es posible que "
+"deba utilizar un número de referencia para cada línea de retención, esto "
+"depende de la configuración del registro."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:815
 msgid ""
 "More withholdings can be added, or computed withholdings can be edited if "
 "necessary."
 msgstr ""
+"Puede agregar más retenciones o, si es necesario, editar las retenciones "
+"caluladas."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst-1
 msgid "Payment with applied withholdings."
@@ -31013,6 +31055,10 @@ msgid ""
 "reconciled with the bank), which will be represented as the payment amount "
 "after the withholding application."
 msgstr ""
+"El importe total de la deuda a cancelar es el importe total del pago. Sin "
+"embargo, Odoo sigue capturando el importe neto (es decir, el importe que se "
+"conciliaría con el banco), que se representará como el importe del pago "
+"después de aplicar la retención."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:0
 msgid "Payment registered form."
@@ -51515,14 +51561,19 @@ msgid ""
 ":icon:`fa-arrow-right` :guilabel:`(internal link)` icon of the "
 ":guilabel:`Section` field."
 msgstr ""
+"Las secciones TDS/TCS están preconfiguradas con límites umbral Vaya a "
+":menuselection:`Contabilidad --> Configuración --> Impuestos` en caso de que"
+" necesite modificarlos. En la pestaña :guilabel:`Opciones avanzadas`, haga "
+"clic en el icono :icon:`fa-arrow-right` :guilabel:`(enlace interno)` del "
+"campo :guilabel:`Sección`."
 
 #: ../../content/applications/finance/fiscal_localizations/india.rst:0
 msgid "TDS/TCS section modify"
-msgstr ""
+msgstr "Modificar sección TDS/TCS"
 
 #: ../../content/applications/finance/fiscal_localizations/india.rst:625
 msgid "Applying TCS/TDS on invoices and bills"
-msgstr ""
+msgstr "Aplicar TCS o TDS en facturas de cliente o de proveedor"
 
 #: ../../content/applications/finance/fiscal_localizations/india.rst:627
 msgid ""
@@ -51532,10 +51583,15 @@ msgid ""
 "alert that suggests applying the appropriate TCS/TDS. The alert will "
 "disappear once the TCS/TDS is applied."
 msgstr ""
+"Odoo verifica el límite umbral TCS/TDS según la cuenta que utilice en la "
+"factura de cliente o de proveedor. Si supera el límite especificado en la "
+":guilabel:`sección TCS/TDS` de la cuenta, Odoo muestra una alerta que "
+"sugiere aplicar el TCS o TDS correspondiente y esta desaparecerá una vez que"
+" lo aplique."
 
 #: ../../content/applications/finance/fiscal_localizations/india.rst-1
 msgid "TCS advice"
-msgstr ""
+msgstr "Notificación sobre aviso de TCS"
 
 #: ../../content/applications/finance/fiscal_localizations/india.rst:635
 msgid ""
@@ -51544,16 +51600,23 @@ msgid ""
 "bill/payment. The popup window allows specifying the TDS details. Confirm "
 "the entry to apply the TDS."
 msgstr ""
+"El **TCS** se aplica directo en el impuesto de las líneas de factura. Para "
+"aplicar **TDS**, haga clic en el botón inteligente :guilabel:`Entrada TDS` "
+"que se encuentra en la factura de proveedor o el pago. En la ventana "
+"emergente podrá especificar los detalles del TDS, solo confirme la entrada "
+"para aplicarlo."
 
 #: ../../content/applications/finance/fiscal_localizations/india.rst-1
 msgid "TDS application"
-msgstr ""
+msgstr "Aplicar TDS"
 
 #: ../../content/applications/finance/fiscal_localizations/india.rst:642
 msgid ""
 "In Odoo, the aggregate total is calculated for partners sharing the same PAN"
 " number, across all company branches."
 msgstr ""
+"En Odoo, el total agregado se calcula para los contactos que comparten el "
+"mismo número PAN en todas las sucursales de la empresa."
 
 #: ../../content/applications/finance/fiscal_localizations/india.rst:651
 msgid "**Branch**"
@@ -53826,6 +53889,11 @@ msgid ""
 "collection. This enables payment automation and reduces risks for the "
 "vendor."
 msgstr ""
+":abbr:`Ri.Ba. (Ricevuta Bancaria)` es un método de pago muy utilizado en "
+"Italia. Mediante este, los proveedores solicitan pagos a través de su banco,"
+" que reenvía la solicitud al banco del cliente y se encarga de realizar el "
+"cobro. Esto permite automatizar el pago y reduce los riesgos a los que se "
+"puede exponer el proveedor."
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:716
 msgid ""
@@ -53841,6 +53909,10 @@ msgid ""
 "international payments, please use `SEPA Direct Debt (SDD) "
 "<../accounting/payments/batch_sdd>`_"
 msgstr ""
+"El método Ri.Ba. es de uso exclusivo para realizar **pagos locales** en "
+"Italia. Use la `domiciliación bancaria SEPA (SDD) "
+"<../accounting/payments/batch_sdd>` para los pagos internacionales "
+"recurrentes."
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:726
 msgid ""
@@ -53854,10 +53926,12 @@ msgid ""
 "Go to :menuselection:`Settings --> Users & Companies --> Companies` and "
 "select the company that will use Ri.Ba."
 msgstr ""
+"Vaya a :menuselection:`Ajustes --> Usuarios y empresas --> Empresas` y "
+"seleccione la empresa que utilizará Ri.Ba."
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:729
 msgid "Fill out the required :guilabel:`SIA Code`."
-msgstr ""
+msgstr "Complete el :guilabel:`código SIA` necesario."
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:0
 msgid "The company's SIA code"
@@ -53870,14 +53944,20 @@ msgid ""
 "consists of one letter and four digits (e.g., T1234) and can usually be "
 "found on the bank's portal or obtained by contacting the bank."
 msgstr ""
+"El :guilabel:`código SIA` identifica a las empresas dentro de la red "
+"bancaria italiana y se utiliza para recibir dinero mediante métodos de pago "
+"específicos. Consta de una letra y cuatro dígitos (por ejemplo, T1234) y por"
+" lo general podrá encontrarlo en su portal bancario o puede comunicarse con "
+"su banco para solicitarlo."
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:739
 msgid "Ensure the Company's bank account has an Italian IBAN."
 msgstr ""
+"Asegúrese de que la cuenta bancaria de la empresa tiene un IBAN italiano."
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:742
 msgid "How to configure :doc:`Bank Accounts <../accounting/bank>`"
-msgstr ""
+msgstr "Cómo configurar :doc:`cuentas bancarias <../accounting/bank>`"
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:745
 msgid "Accept Ri.Ba. for your invoices"
@@ -53889,6 +53969,9 @@ msgid ""
 "the :guilabel:`Invoices` (:menuselection:`Accounting --> Customers --> "
 "Invoices`)."
 msgstr ""
+"Puede registrar los pagos de tipo :abbr:`Ri.Ba. (Ricevuta Bancaria)` desde "
+":guilabel:`Facturas` (:menuselection:`Contabilidad --> Clientes --> "
+"Facturas`)."
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:751
 msgid ""
@@ -53908,7 +53991,7 @@ msgstr ":doc:`Pagos por lote <../accounting/payments>`"
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:757
 msgid ":doc:`Create a Batch Payment <../accounting/payments/batch>`"
-msgstr ""
+msgstr ":doc:`Crear un pago por lote <../accounting/payments/batch>`"
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst:759
 msgid ""
@@ -53917,6 +54000,9 @@ msgid ""
 "Batch Payment, so you can download it and upload it through your bank's web "
 "portal."
 msgstr ""
+"El archivo :abbr:`Ri.Ba. (Ricevuta Bancaria)` se genera una vez que presione"
+" el botón :guilabel:`Validar` del pago por lote y se adjunta al mismo para "
+"que pueda descargarlo y subirlo a través del portal web de su banco."
 
 #: ../../content/applications/finance/fiscal_localizations/italy.rst-1
 msgid "The Ri.Ba. file attached"
@@ -60440,7 +60526,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:926
 msgid ":ref:`Client account registration <ecommerce/checkout/policy>`;"
-msgstr ""
+msgstr ":ref:`Registro de la cuenta del cliente <ecommerce/checkout/policy>`."
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:927
 msgid ":ref:`Automatic invoice <handling/legal>`;"
