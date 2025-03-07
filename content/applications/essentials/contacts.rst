@@ -253,7 +253,7 @@ in the main contacts page, but they can still be searched for with the :guilabel
    the contact is restored.
 
 .. seealso::
-   - :doc:`Add different addresses in CRM <../sales/sales/send_quotations/different_addresses>`
+   - :doc:`Add different addresses in CRM <../sales/sales/sales_quotations/different_addresses>`
    - `Odoo's eLearning Contacts tutorial
      <https://www.odoo.com/slides/slide/contacts-2527?fullscreen=1>`_
 
