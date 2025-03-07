@@ -2,8 +2,44 @@
 Odoo.com accounts
 =================
 
-This documentation is dedicated to edits made to an Odoo.com account. The following processes
-describe how to delete an Odoo.com account, and how to change the password on an Odoo.com account.
+This document describes how to edit and manage an Odoo.com account. This includes common processes
+such as how to add a client database to an Odoo.com account, how to delete an Odoo.com account, how
+to reset an account password, and how to add two-factor authentication.
+
+Add a client database to an Odoo.com account
+============================================
+
+A database can be linked to an Odoo.com account that was created by a different Odoo.com account.
+This allows the database to appear in the **My Databases** page of the account. To do so, the
+desired Odoo.com account needs to be added to the database as a user.
+
+First, sign in to the Odoo.com account that created the desired database. In the main Odoo dashboard
+of the database, navigate to :menuselection:`Settings --> Manage Users`. Click the
+:guilabel:`New` button, and enter a name in the :guilabel:`Name` field for this user. Next, enter
+the email address used to register the desired Odoo.com account in the :guilabel:`Email` field.
+Navigate back to :guilabel:`Settings` using the breadcrumbs, and a pop-up window titled
+:guilabel:`Users Invitations` appears, with a warning that adding additional users will increase the
+amount of the subscription.
+
+.. image:: odoo_accounts/users-invitations.png
+   :alt: The `Users Invitations` pop-up window with the options to `Confirm` or `Cancel`.
+
+Click :guilabel:`Confirm`, and the :guilabel:`Users` list appears. An invitation is automatically
+sent to the email address. Once confirmed, the desired database now appears in the **My Databases**
+page of the target Odoo.com account.
+
+.. tip::
+   To provide full access to the database for this user, set the :guilabel:`Dashboard` field under
+   the :guilabel:`Productivity` header to :guilabel:`Admin`. Next, set the
+   :guilabel:`Administration` field under the :guilabel:`Administration` header to
+   :guilabel:`Settings`.
+
+.. example::
+   Deco Addict wishes to have the database **Stealthy Wood** appear in their **My Databases**
+   page, but **Stealthy Wood** was created by a different user, Mitchell Admin. To add the account,
+   a user with administrator access of the **Stealthy Wood** database adds Deco Addict as a user of
+   **Stealthy Wood**. Now when Deco Addict visits their **My Databases** page, the **Stealthy Wood**
+   database appears, and they have user access.
 
 Delete Odoo.com account
 =======================
