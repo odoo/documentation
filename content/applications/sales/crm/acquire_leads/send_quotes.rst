@@ -52,7 +52,7 @@ of the form, and update any missing or incorrect fields:
 - :guilabel:`Invoice Address`: physical address where the invoice should be sent.
 - :guilabel:`Delivery Address`: physical address where any products should be delivered.
 - :guilabel:`Quotation Template`: if applicable, select a pre-configured :doc:`quotation template
-  </applications/sales/sales/send_quotations/quote_template>` from this field.
+  <../../sales/sales_quotations/quote_template>` from this field.
 - :guilabel:`Expiration`: date when this quotation is no longer valid.
 - :guilabel:`Quotation Date`: creation date of draft/sent orders, confirmation date of confirmed
   orders. Note that this field is only visible if :doc:`Developer mode (debug mode)
