@@ -3,7 +3,7 @@ Subscription plans
 ==================
 
 *Subscription plans* are :doc:`quotation templates
-</applications/sales/sales/send_quotations/quote_template>` used to preconfigure quotations with
+<../sales/sales_quotations/quote_template>` used to preconfigure quotations with
 subscription products. Use subscription plans to quickly create subscription orders.
 
 Configure subscription plans
