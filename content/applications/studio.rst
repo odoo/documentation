@@ -12,6 +12,7 @@ Studio
    studio/views
    studio/models_modules_apps
    studio/automated_actions
+   studio/automated_actions/webhooks
    studio/pdf_reports
    studio/approval_rules
 
@@ -22,6 +23,7 @@ can, in any app, add or modify:
 - :doc:`Views <studio/views>`
 - :doc:`Models <studio/models_modules_apps>`
 - :doc:`Automation rules <studio/automated_actions>`
+- :doc:`Webhooks <studio/automated_actions/webhooks>`
 - :doc:`PDF reports <studio/pdf_reports>`
 - :doc:`Approval rules <studio/approval_rules>`
 - Security rules
