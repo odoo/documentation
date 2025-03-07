@@ -53,4 +53,4 @@ automatically calculated, based on the number of days designated above. However,
 overwritten before sending the quotation to the customer.
 
 .. seealso::
-   :doc:`/applications/sales/sales/send_quotations/quote_template`
+   :doc:`quote_template`

@@ -271,4 +271,4 @@ product PDF that was set to be visible inside the quote, can be viewed and print
    for added reference.
 
 .. seealso::
-   - :doc:`/applications/sales/sales/send_quotations/quote_template`
+   - :doc:`quote_template`
