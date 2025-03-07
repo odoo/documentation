@@ -37,9 +37,10 @@ Fields
 
 View objects expose a number of fields. They are optional unless specified otherwise.
 
-* ``name`` (mandatory) :class:`~odoo.fields.Char`
+* ``name``  :class:`~odoo.fields.Char`
 
   Only useful as a mnemonic/description of the view when looking for one in a list of some sort.
+  If the field is not defined, it will be generated automatically like this "MODEL TYPE".
 
 * ``model`` :class:`~odoo.fields.Char`
 
