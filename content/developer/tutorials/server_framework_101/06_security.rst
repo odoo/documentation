@@ -59,8 +59,8 @@ meaningful roles.
 .. exercise::
    #. Define a new group for real estate agents and one for managers. Belonging to the manager group
       implies also belonging to the agent group.
-   #. Assign the default admin user to the manager group and define a new default user assigned to
-      the agent and `base.group_user` groups.
+   #. Assign the default admin user to the manager group.
+   #. Define a new default user assigned to the agent and `base.group_user` groups.
    #. Go to :menuselection:`Settings --> Users & Companies --> Users`, activate the :doc:`developer
       mode </applications/general/developer_mode>`, and verify that the users are assigned to the
       correct groups.
@@ -93,6 +93,10 @@ meaningful roles.
 
       <?xml version="1.0" encoding="utf-8"?>
       <odoo>
+
+          <record id="base.user_admin" model="res.users">
+              <field name="groups_id" eval="[Command.link(ref('real_estate.manager_group'))]"/>
+          </record>
 
           <record id="real_estate.agent_user" model="res.users">
               <field name="partner_id" ref="real_estate.bafien_carpink"/>
