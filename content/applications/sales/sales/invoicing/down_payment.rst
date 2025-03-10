@@ -33,10 +33,6 @@ On the :guilabel:`Create invoices` pop-up, there are 3 options to choose from in
 - :guilabel:`Down payment (percentage)`
 - :guilabel:`Down payment (fixed amount)`
 
-.. note::
-   If :guilabel:`Regular Invoice` is selected, the other fields disappear, as they only pertain to
-   down payment configurations.
-
 Initial down payment request
 ============================
 
@@ -93,13 +89,13 @@ Next, on the :guilabel:`Create invoices` pop-up window that appears, select :gui
 (percentage)`, and type `50` in the :guilabel:`Down Payment Amount` field.
 
 .. note::
-   The :guilabel:`Income Account` and :guilabel:`Customer Taxes` fields are *not* required fields,
-   and they will *not* appear if they've already been preconfigured in previous down payment
-   requests.
+   The :guilabel:`Income Account` attached to the :guilabel:`Down payment` product can be changed.
 
-   For more information, check out the documentation on :ref:`customer taxes modification on down
-   payments <sales/invoicing/customer-tax-modification-down-payments>` and :ref:`income account
+   For more information, check out the documentation on :ref:`income account
    modification on down payments <sales/invoicing/income-account-modification>`.
+
+   A :guilabel:`Down payment Account` can also be set on a product. If set it will be used
+   in priority.
 
 Lastly, click :guilabel:`Create Draft Invoice` to create and view the invoice draft.
 
@@ -235,17 +231,7 @@ Upon clicking the :guilabel:`Confirm` button, the quotation turns into a sales o
 an invoice can now be created by clicking :guilabel:`Create Invoice` in the top-left corner.
 
 On the :guilabel:`Create invoices` pop-up window that appears, select :guilabel:`Down payment
-(percentage)`, and type `100` in the :guilabel:`Down Payment Amount` field. Then, if desired, select
-an :guilabel:`Income Account` and :guilabel:`Customer Taxes` in their respective fields.
-
-.. note::
-   The :guilabel:`Income Account` and :guilabel:`Customer Taxes` fields are *not* required fields,
-   and they will *not* appear if they've already been preconfigured in previous down payment
-   requests.
-
-   For more information, check out the documentation on :ref:`customer taxes modification on down
-   payments <sales/invoicing/customer-tax-modification-down-payments>` and :ref:`income account
-   modification on down payments <sales/invoicing/income-account-modification>`.
+(percentage)`, and type `100` in the :guilabel:`Down Payment Amount` field.
 
 .. image:: down_payment/100p-down-payment-percentage.png
    :align: center
@@ -276,22 +262,6 @@ After clicking :guilabel:`Create Payment`, Odoo reveals the customer invoice, no
 The process is now complete, and the 100% down payment has been successfully applied.
 
 .. _sales/invoicing/customer-tax-modification-down-payments:
-
-Customer taxes modification on down payments
-============================================
-
-To adjust the income account and customer taxes attached to a down payment, navigate to the
-:guilabel:`Products` page (:menuselection:`Sales app --> Products --> Products`), search for the
-`Down Payment` product in the search bar, and select it to reveal the product detail page.
-
-On the :guilabel:`Down Payment` product page, in the :guilabel:`General Information` tab, the
-customer taxes can be modified in the :guilabel:`Customer Taxes` field.
-
-.. image:: down_payment/customer-taxes-field.png
-   :align: center
-   :alt: How to modify the income account link to down payments.
-
-.. _sales/invoicing/income-account-modification:
 
 Income account modification on down payments
 ============================================
