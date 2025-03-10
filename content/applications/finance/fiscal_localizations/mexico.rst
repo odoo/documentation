@@ -128,6 +128,12 @@ requirement. Make sure that they are needed for the business.
      - `l10n_mx_edi_website_sale`
      - Adds extra fields to the :doc:`eCommerce <../../websites/ecommerce>` module to comply with
        the Mexican Electronic Invoicing
+   * - :guilabel:`Employees - Mexico`
+     - `l10n_mx_hr`
+     - Adds extra fields to the :doc:`Employees <../../hr/employees>` module to comply with local information for employees.
+   * - :guilabel:`Mexico - Payroll with Accounting`
+     - `l10n_mx_hr_payroll_account`
+     - Adds the required rules and parameters to manage local payroll calculation with the :doc:`Payroll <../../hr/payroll>` app.
 
 Configure your company
 ----------------------
