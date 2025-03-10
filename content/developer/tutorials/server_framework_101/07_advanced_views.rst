@@ -18,7 +18,7 @@ tmp
 .. todo: hide the 'Cancelled' state from the statusbar widget unless selected
 .. todo: pills for the offer state in list view
 .. todo: adapt existing or add new stat button relying on a model method that returns a dictionary acting as an action descriptor
-
+.. todo: prevent agents from accessing the configuration menu item
 
 ----
 
