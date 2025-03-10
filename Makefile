@@ -35,6 +35,8 @@ endif
 
 #=== Standard rules ===#
 
+.PHONY: all help clean html latexpdf gettext fast static test review
+
 # In first position to build the documentation from scratch by default
 all: html
 

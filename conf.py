@@ -228,7 +228,7 @@ sphinx.transforms.i18n.docname_to_domain = (
 ) = lambda docname, compact: docname.split('/')[1 if docname.startswith('applications/') else 0]
 
 # The version names that should be shown in the version switcher, if the config option `versions`
-# is populated. If a version is passed to `versions` but is not listed here, it will not be shown.
+# is populated.
 versions_names = {
     'master': "Master",
     'saas-18.1': "Odoo Online",
@@ -241,7 +241,7 @@ versions_names = {
 }
 
 # The language names that should be shown in the language switcher, if the config option `languages`
-# is populated. If a language is passed to `languages` but is not listed here, it will not be shown.
+# is populated.
 languages_names = {
     'de': 'DE',
     'en': 'EN',
@@ -428,7 +428,7 @@ def _generate_alternate_urls(app, pagename, templatename, context, doctree):
       - The language switcher and related link tags
     """
 
-    def _canonicalize():
+    def canonicalize():
         """ Add the canonical URL for the current document in the rendering context.
 
         The canonical version is the last released version of the documentation.
@@ -440,94 +440,93 @@ def _generate_alternate_urls(app, pagename, templatename, context, doctree):
         - /documentation/11.0/fr/website.html -> canonical = /documentation/14.0/fr/website.html
         """
         # If the canonical version is not set, assume that the project has a single version
-        _canonical_version = app.config.canonical_version or app.config.version
-        _canonical_lang = 'en'  # Always 'en'. Don't take the value of the config option.
-        context['canonical'] = _build_url(_version=_canonical_version, _lang=_canonical_lang)
+        canonical_version_ = app.config.canonical_version or app.config.version
+        canonical_lang_ = 'en'  # Always 'en'. Don't take the value of the config option.
+        context['canonical'] = build_url(version_=canonical_version_, lang_=canonical_lang_)
 
-    def _versionize():
+    def versionize():
         """ Add the pairs of (version, url) for the current document in the rendering context.
 
         The entry 'version' is added by Sphinx in the rendering context.
         """
-        context['version_display_name'] = versions_names[version]
+        context['version_display_name'] = versions_names.get(version, version)
 
-        # If the list of versions is not set, assume the project has no alternate version
-        _provided_versions = app.config.versions and app.config.versions.split(',') or []
+        # If the list of versions is not set, assume the project has no alternate version.
+        provided_versions_ = app.config.versions and app.config.versions.split(',') or []
 
         # Map alternate versions to their display names and URLs.
         context['alternate_versions'] = []
-        for _alternate_version, _display_name in versions_names.items():
-            if _alternate_version in _provided_versions and _alternate_version != version:
-                context['alternate_versions'].append(
-                    (_display_name, _build_url(_alternate_version))
-                )
+        for alternate_version_ in provided_versions_:
+            if alternate_version_ != version:
+                display_name_ = versions_names.get(alternate_version_, alternate_version_)
+                context['alternate_versions'].append((display_name_, build_url(alternate_version_)))
 
-    def _localize():
+    def localize():
         """ Add the pairs of (lang, code, url) for the current document in the rendering context.
 
         E.g.: ('French', 'fr', 'https://.../fr_BE/...')
 
         The entry 'language' is added by Sphinx in the rendering context.
         """
-        _current_lang = app.config.language or 'en'
+        current_lang_ = app.config.language or 'en'
         # Replace the context value by its upper-cased value ("FR" instead of "fr")
-        context['language'] = languages_names.get(_current_lang, _current_lang.upper())
-        context['language_code'] = _current_lang
+        context['language'] = languages_names.get(current_lang_, current_lang_.upper())
+        context['language_code'] = current_lang_
 
         # If the list of languages is not set, assume that the project has no alternate language
-        _provided_languages = app.config.languages and app.config.languages.split(',') or []
+        provided_languages_ = app.config.languages and app.config.languages.split(',') or []
 
         # Map alternate languages to their display names and URLs.
         context['alternate_languages'] = []
-        for _alternate_lang, _display_name in languages_names.items():
-            if _alternate_lang in _provided_languages and _alternate_lang != _current_lang:
+        for alternate_lang_ in provided_languages_:
+            if alternate_lang_ != current_lang_:
+                display_name_ = languages_names.get(alternate_lang_, alternate_lang_.upper())
                 context['alternate_languages'].append(
                     (
-                        _display_name,
-                        _alternate_lang.split('_')[0] if _alternate_lang != 'en' else 'x-default',
-                        _build_url(_lang=_alternate_lang),
+                        display_name_,
+                        alternate_lang_.split('_')[0] if alternate_lang_ != 'en' else 'x-default',
+                        build_url(lang_=alternate_lang_),
                     )
                 )
 
         # Dynamic generation of localized legal doc links
         context['legal_translations'] = legal_translations
 
-
-    def _build_url(_version=None, _lang=None):
+    def build_url(version_=None, lang_=None):
         if app.config.is_remote_build:
             # Project root like https://www.odoo.com/documentation
-            _root = app.config.project_root
+            root_ = app.config.project_root
         else:
             # Project root like .../documentation/_build/html/14.0/fr
-            _root = re.sub(rf'(/{app.config.version})?(/{app.config.language})?$', '', app.outdir)
+            root_ = re.sub(rf'(/{app.config.version})?(/{app.config.language})?$', '', app.outdir)
         # If the canonical version is not set, assume that the project has a single version
-        _canonical_version = app.config.canonical_version or app.config.version
-        _version = _version or app.config.version
-        _lang = _lang or app.config.language or 'en'
-        _canonical_page = f'{pagename}.html'
+        canonical_version_ = app.config.canonical_version or app.config.version
+        version_ = version_ or app.config.version
+        lang_ = lang_ or app.config.language or 'en'
+        canonical_page_ = f'{pagename}.html'
 
         # legal translations have different URLs schemes as they are not managed on transifex
         # e.g. FR translation of /terms/enterprise => /fr/terms/enterprise_fr
         if pagename.startswith('legal/terms/'):
-            if _lang in legal_translations and not pagename.endswith(f"_{_lang}"):
+            if lang_ in legal_translations and not pagename.endswith(f"_{lang_}"):
                 # remove language code for current translation, set target one
-                _page = re.sub("_[a-z]{2}$", "", pagename)
-                if 'terms/i18n' not in _page:
-                    _page = _page.replace("/terms/", "/terms/i18n/")
-                _canonical_page = f'{_page}_{_lang}.html'
-            elif _lang == 'en' and pagename.endswith(tuple(f"_{l}" for l in legal_translations)):
+                page_ = re.sub("_[a-z]{2}$", "", pagename)
+                if 'terms/i18n' not in page_:
+                    page_ = page_.replace("/terms/", "/terms/i18n/")
+                canonical_page_ = f'{page_}_{lang_}.html'
+            elif lang_ == 'en' and pagename.endswith(tuple(f"_{l}" for l in legal_translations)):
                 # remove language code for current translation, link to original EN one
-                _page = re.sub("_[a-z]{2}$", "", pagename)
-                _canonical_page = f'{_page.replace("/i18n/", "/")}.html'
+                page_ = re.sub("_[a-z]{2}$", "", pagename)
+                canonical_page_ = f'{page_.replace("/i18n/", "/")}.html'
 
         if app.config.is_remote_build:
-            _canonical_page = _canonical_page.replace('index.html', '')
+            canonical_page_ = canonical_page_.replace('index.html', '')
 
-        return f'{_root}' \
-               f'{f"/{_version}" if app.config.versions else ""}' \
-               f'{f"/{_lang}" if _lang != "en" else ""}' \
-               f'/{_canonical_page}'
+        return f'{root_}' \
+               f'{f"/{version_}" if app.config.versions else ""}' \
+               f'{f"/{lang_}" if lang_ != "en" else ""}' \
+               f'/{canonical_page_}'
 
-    _canonicalize()
-    _versionize()
-    _localize()
+    canonicalize()
+    versionize()
+    localize()
