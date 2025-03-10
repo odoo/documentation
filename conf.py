@@ -231,10 +231,11 @@ sphinx.transforms.i18n.docname_to_domain = (
 # is populated.
 versions_names = {
     'master': "Master",
-    'saas-18.1': "Odoo Online",
+    'saas-18.2': "Odoo 18.2",
+    'saas-18.1': "Odoo 18.1",
     '18.0': "Odoo 18",
-    'saas-17.4': "Odoo Online",
-    'saas-17.2': "Odoo Online",
+    'saas-17.4': "Odoo 17.4",
+    'saas-17.2': "Odoo 17.2",
     '17.0': "Odoo 17",
     '16.0': "Odoo 16",
     '15.0': "Odoo 15",
