@@ -426,10 +426,10 @@ are needed to correctly send the document to the |SAT|.
 
 From a legal perspective, you **must** confirm the specific :guilabel:`Payment Way` where you received 
 the payment. Because of this, the :guilabel:`Payment Way` field **cannot** be set as `99 - Por Definir
-(To Define)`.
+(To Define)`, thus the field will become invisible when selecting it.
 
-If you are going to add a bank account number in the :guilabel:`Accounting` tab of a customer's
-contact card, it must have a valid account number.
+If a bank account number is required, go to the :guilabel:`Accounting` tab of a customer's
+contact card, and it can be added there.
 
 .. note::
    The exact configurations are in the `Anexo 20 of the SAT
@@ -441,16 +441,18 @@ If a fully-conciliated payment is related to an invoice with a Fiscal Folio, the
 automatically and it'll appear in the |CFDI| tab in both the Invoice and the Payment. 
 
 .. tip::
-   While it is a bad fiscal practice, you can also send PUE payments to the government, however you need 
+   While it is a bad fiscal practice, the PUE payments can also be sent to the government, however it is required 
    to press *Force CFDI* in the *CFDI* tab for this.
 
 .. image:: mexico/mx-signed-complement.png
-   :align: center
    :alt: Payment Complement sucessfully signed.
 
-Similar to an invoice or credit note, you can send the PDF and XML to the final customer. To do so, click
+Similar to an invoice or credit note, the PDF and XML can be sent to the final customer. To do so, click
 the :icon:`fa-cog` :guilabel:`(gear)` to open the actions drop-down menu and select :guilabel:`Send receipt 
 by email`.
+
+.. Warning::
+   Bank reconciliation direct payments can't create a PDF, this feature was added in v18.1
 
 Invoice cancellations
 ~~~~~~~~~~~~~~~~~~~~~
@@ -459,7 +461,7 @@ It is possible to cancel the EDI documents sent to the |SAT|. According to the `
 <https://www.sat.gob.mx/consultas/91447/nuevo-esquema-de-cancelacion>`_, since January 1st, 2022,
 there are two requirements for this:
 
-- With all cancellation requests, you **must** specify a *cancellation reason*.
+- With all cancellation requests, a *cancellation reason* **must** be specified.
 - After 24 hours have passed since the creation of the invoice, if certain conditions are met, the 
   client **must** be asked to accept or reject the cancellation.
 
@@ -469,11 +471,11 @@ there are two requirements for this:
 
 .. important::
    There are four different cancellation reasons and Odoo will let you use any of them. The correct
-   reason for each document needs to be reviewed by your accountant.
+   reason for each document needs to be reviewed by a professional accountant.
 
 The cancellation reason **01 - Invoice issued with errors (with related document)** must be used when a
-new invoice needs to substitute the original one, due to an error in any field. For this, Odoo will ask 
-you to create a new document immediately after requesting the cancellation.
+new invoice needs to substitute the original one, due to an error in any field. For this, Odoo will ask
+to create a new document immediately after requesting the cancellation.
 
 Begin by selecting the invoice to cancel in :menuselection:`Accounting --> Customers --> Invoices` and 
 click the :guilabel:`Request Cancel` button. Select the :guilabel:`Reason` 01 from the menu and click in
@@ -481,7 +483,6 @@ click the :guilabel:`Request Cancel` button. Select the :guilabel:`Reason` 01 fr
 field having the value `04|` plus the :guilabel:`Fiscal Folio` of the old document. 
 
 .. image:: mexico/mx-01-invoice-cancellation-substitute.png
-   :align: center
    :alt: Cancellation Reason Menu
 
 .. note::
@@ -520,7 +521,7 @@ Finally, click the button and the :guilabel:`SAT Status` will change to **Not De
 For the cancellation reasons **02**, **03** and **04**, the button :guilabel:`Create Replacement Invoice`
 won't appear and you'll be able to ask for the request immediately.
 
-You can see both the current :guilabel:`State` and :guilabel:`Cancellation Reason` in the :guilabel:`CFDI` tab.
+Both the current :guilabel:`State` and :guilabel:`Cancellation Reason` can be found in the :guilabel:`CFDI` tab.
 
 .. image:: mexico/mx-cancellation-reason-tab.png
    :align: center
@@ -537,7 +538,8 @@ the :guilabel:`SAT Status` and :guilabel:`Status` to :guilabel:`Cancelled`.
 
 .. note::
    Just like invoices, when you create a new *Payment Complement*, you can add the relation of the
-   original document, by adding a `04|` plus the fiscal folio in the :guilabel:`CFDI Origin` field.
+   original document, by adding a `04|` plus the fiscal folio in the :guilabel:`CFDI Origin` field, this will
+   cancel with 01 relation.
 
 Invoicing special use cases
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -559,7 +561,7 @@ It is highly recommended to use :doc:`a bank account for each currency
 <../accounting/bank/foreign_currency>`.
 
 .. note::
-   The only currencies that automatically update their exchange rate daily are: USD, EUR, GBP, JPY and
+   The only currencies that automatically update their exchange rate daily are: USD, CAD, EUR, GBP, JPY and
    CNY.
 
 .. image:: mexico/mx-multicurrency.png
