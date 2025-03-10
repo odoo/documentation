@@ -150,7 +150,6 @@ coincide with your business name registered in the |SAT|, without the legal enti
 is the same for the :guilabel:`ZIP` code.
 
 .. image:: mexico/mx-company-info.png
-   :align: center
    :alt: Main company contact requirements for a correct invoicing.
 
 .. important::
@@ -163,7 +162,6 @@ Administration (SAT)`, then select the :guilabel:`Fiscal Regime` that applies to
 the drop-down list, and click :guilabel:`Save`.
 
 .. image:: mexico/mx-fiscal-regime.png
-   :align: center
    :alt: Fiscal regime configuration in the Accounting settings.
 
 .. tip::
@@ -201,10 +199,9 @@ are created, you need to make sure to configure this field. To do so, go to :men
 --> Configuration --> Taxes`, then fill both fields in the :guilabel:`Advanced Options` tab for
 all records, with the :guilabel:`Tax Type` set as :guilabel:`Sales`.
 
-Odoo **only** supports three groups of Tax Types: `IVA`, `ISR` or `IEPS`.
+Odoo supports four groups of Tax Types: `IVA`, `ISR`, `IEPS` and `Local Taxes`.
 
 .. image:: mexico/mx-factor-type.png
-   :align: center
    :alt: Factor Type Sales tax type configuration.
 
 .. tip::
@@ -276,7 +273,6 @@ section, enter the name of your |PAC| with your credentials (:guilabel:`Username
 :guilabel:`Password`).
 
 .. image:: mexico/mx-pac-account.png
-   :align: center
    :alt: Configuring PAC credentials from the Accounting settings.
 
 .. tip::
@@ -290,17 +286,23 @@ section, enter the name of your |PAC| with your credentials (:guilabel:`Username
 The `digital certificates of the company
 <https://www.gob.mx/tramites/ficha/certificado-de-sello-digital/SAT139>`_ must be uploaded within
 the :guilabel:`Certificates` section. To do so, navigate to :menuselection:`Settings -->
-Accounting --> MX Electronic invoicing`. Under the :guilabel:`Certificates` section, select
-:guilabel:`Add a line`, and a window will open. From there, upload your digital :guilabel:`Certificate`
-(:file:`.cer` file), your :guilabel:`Certificate Key` (:file:`.key` file), and your 
-:guilabel:`Certificate Password`. To finish, click on :guilabel:`Save & Close`.
+General Settings --> Certificates and Keys`. 
+First Select under :guilabel:`Manage your certificates` the :guilabel:`Keys` button and a menu will open. From there, create a new registry
+and upload the digital :guilabel:`Key file` (:file:`.key` file), add a name to the key and write down the :guilabel:`Private key password`.
+
+On the previous menu select :guilabel:`Certificates`, and a menu will open. From there, create a new registry and upload the digital :guilabel:`Certificate`
+(:file:`.cer` file), add a name to the certificate and select the :guilabel:`Private Key` created on the previous step
+from the drop-down menu. 
 
 .. image:: mexico/mx-certificates.png
-   :align: center
    :alt: Certificate and key upload inputs.
 
+.. note::
+   The :guilabel:`Certificates` registries do not require :guilabel:`Certificate Password` or :guilabel:`Public Key` to 
+   be filled
+
 .. tip::
-   If you still do not have one of the contracted |PAC|\s and you want to test electronic invoicing,
+   If you you want to test electronic invoicing,
    you can use the following |SAT| test certificates:
 
    - :download:`Certificate <mexico/certificate.cer>`
