@@ -31,6 +31,12 @@ This matrix shows the support status of every version.
      - On-Premise
      - Release date
      - End of support
+   * - Odoo SaaS 18.2
+     - |green|
+     - N/A
+     - N/A
+     - March 2025
+     -
    * - Odoo SaaS 18.1
      - |green|
      - N/A
@@ -73,18 +79,12 @@ This matrix shows the support status of every version.
      - |red|
      - October 2021
      - October 2024
-   * - **Odoo 14.0**
-     - |red|
-     - |red|
-     - |red|
-     - October 2020
-     - November 2023
    * - Older versions
      - |red|
      - |red|
      - |red|
-     - Before 2020
-     - Before 2023
+     - Before 2021
+     - Before 2024
 
 .. admonition:: Legend
 
