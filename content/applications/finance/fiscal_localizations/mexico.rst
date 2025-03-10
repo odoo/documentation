@@ -302,8 +302,8 @@ from the drop-down menu.
    be filled
 
 .. tip::
-   If you you want to test electronic invoicing,
-   you can use the following |SAT| test certificates:
+   In order to test the electronic invoicing,
+   the following |SAT| test certificates are provided:
 
    - :download:`Certificate <mexico/certificate.cer>`
    - :download:`Certificate Key <mexico/certificate.key>`
@@ -328,26 +328,25 @@ flow <../accounting/customer_invoices>`.
 While the document is in draft mode, changes can be made to it (the correct :guilabel:`Payment Way`
 or :guilabel:`Usage` that the customer might require can be added, for example.)
 
-After you :guilabel:`Confirm` the customer invoice, click on the :guilabel:`Send & Print` button to 
+After clicking on :guilabel:`Confirm` in the customer invoice, click on the :guilabel:`Send & Print` button to 
 process the invoice with the government. Make sure that the :guilabel:`CFDI` checkbox is marked.
 
 .. image:: mexico/mx-send-and-print.png
-   :align: center
    :alt: CFDI Checkbox
 
 After receiving the signed document back from the government, the :guilabel:`Fiscal Folio`
 field appears on the document, and the XML file will appear both in the |CFDI| tab and attached in the
 chatter.
 
-If your customer had a mail set up, you will send can send both the XML and PDF files together. You 
-can also download the PDF file to your computer, by clicking the :guilabel:`Print` button, and selecting 
-the desired print option.
+If the customer had a mail set up, it is possible to send both the XML and PDF files together. Both files 
+can also be downloaded on a zip file, by clicking the :guilabel:`Print` button, and selecting 
+the :guilabel:`Download` option.
 
 .. tip::
-   If you click :guilabel:`Update SAT`, the :guilabel:`SAT status` field on the invoice will confirm
+   When clicking :guilabel:`Update SAT`, the :guilabel:`SAT status` field on the invoice will confirm
    if the XML file is **Validated** in the |SAT|.
 
-   If you are in a testing environment, you will always receive the message :guilabel:`Not Found`.
+   On a testing environment, the message :guilabel:`Not Found` will always come up.
 
 Credit notes
 ~~~~~~~~~~~~
@@ -362,7 +361,6 @@ Because of this requirement, the field :guilabel:`CFDI Origin` adds this relatio
 followed by the fiscal folio of the original invoice.
 
 .. image:: mexico/mx-creating-credit-note.png
-   :align: center
    :alt: Example CFDI Origin number.
 
 .. tip::
@@ -377,7 +375,7 @@ Payment policy
 
 One addition of the Mexican localization is the :guilabel:`Payment Policy` field. `According to
 the SAT documentation <https://www.sat.gob.mx/consultas/92764/comprobante-de-recepcion-de-pagos>`_,
-there may be 2 types of payments:
+there are 2 types of payments:
 
 - `PUE` (Pago en una Sola Exhibición/Payment in a Single Exhibition)
 - `PPD` (Pago en Parcialidades o Diferido/Payment in Installements or Deferred)
@@ -390,19 +388,20 @@ that does not imply changing the due month (immediate payment, 15 days, 21 days,
 the current month).
 
 .. image:: mexico/mx-pue-payment.png
-   :align: center
    :alt: Example of an invoice with the PUE requirements.
 
 .. tip::
    Some :guilabel:`Payment Terms` are already installed by default, and can be managed from
    :menuselection:`Accounting --> Configuration --> Payment Terms`.
 
+.. note::
+   Starting on v18.1 the payment policy is now selectable.
+
 To configure |PPD| invoices, navigate to :menuselection:`Accounting --> Customers --> Invoices`, and
 select an invoice with a :guilabel:`Due Date` after the first day of the following month. This also
 applies if your :guilabel:`Payment Term` is due in the following month.
 
 .. image:: mexico/mx-ppd-payment.png
-   :align: center
    :alt: Example of an invoice with the PPD requirements.
 
 Payment flow
