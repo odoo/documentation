@@ -27,7 +27,7 @@ Menu items can take on two distinct roles:
   often trigger actions, they are separate entities. The same action can be triggered by different
   menu items, or even buttons.
 
-In Odoo, menu items are actually records of the `ir.ui.menu` model whose key fields are:
+In Odoo, menu items are actually records of the `ir.ui.menu` model whose key fields include:
 
 .. rst-class:: o-definition-list
 

@@ -23,8 +23,8 @@ In Odoo, groups are records of the `res.groups` model. Users are assigned to gro
 multiple groups at once.
 
 .. example::
-   In the example below, we create two groups for our fictional product management application and
-   assign the default admin user to one of them.
+   In the example below, we create two groups for our fictional product management module and assign
+   the default admin user to one of them.
 
    .. code-block:: xml
 
@@ -128,31 +128,95 @@ meaningful roles.
 
 .. _tutorials/server_framework_101/access_rights:
 
-Control model access
-====================
+Grant model access
+==================
 
-tmp
+**Access control lists** (ACLs) are an essential security mechanism that defines who can access
+specific resources and what operations they're allowed to perform. ACLs help prevent unauthorized
+data access and operations by explicitly defining access rights for different user and groups.
 
-.. todo: Reference the basic access rights created in chapter 2
+In Odoo, ACLs operate at the model level, controlling access to all records of a particular model
+rather than individual records. Each ACL links a user group with a model and specifies which
+:abbr:`CRUD (Create, Read, Update, Delete)` operations the group members can perform. Odoo follows a
+default-deny approach: if no access right explicitly applies to a user for a particular model,
+access is denied. When a user belongs to multiple groups with overlapping access rights, the
+permissions are granted in an *additive* manner and the most permissive set of permissions is given.
 
-Let's apply these concepts to our real estate app by defining who can access our models and what
-they can do with them.
+ACLs are implemented as records of the `ir.model.access` model whose key fields include:
+
+.. rst-class:: o-definition-list
+
+`name` (required)
+   A descriptive, human-readable name for the access right.
+`model_id` (required)
+   The model whose access the ACL controls.
+`group_id`
+   The user group receiving the permissions. If not specified, the ACL applies to all users.
+
+.. example::
+   In the following example, we define ACLs to allow internal users to read the product catalog and
+   categories, but only product managers can create, update, or delete records.
+
+   .. code-block:: csv
+
+      id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+      product_user,product.user,model_product,base.group_user,1,0,0,0
+      product_manager,product.manager,model_product,product_tutorial.product_manager_group,1,1,1,1
+      product_category_user,product.category.user,model_product_category,base.group_user,1,0,0,0
+      product_category_manager,product.category.manager,model_product_category,product_tutorial.product_manager_group,1,1,1,1
+
+   .. note::
+      - Access rights are typically defined in CSV files named :file:`ir.model.access.csv` within
+        the module's :file:`security` directory.
+      - The last four columns represent boolean flags for the read, write, create, and delete
+        permissions.
+      - UI elements linked to a model for which the user does not have access are automatically
+        hidden. This includes menu items, the :guilabel:`New` button in list views, the
+        :guilabel:`Delete` button in form views, the :guilabel:`Create` and :guilabel:`Create and
+        edit...` buttons in dropdowns, etc.
+
+.. seealso::
+   - Reference documentation on :ref:`access rights <reference/security/acl>`.
+   - The :ref:`tutorials/server_framework_101/csv_data_files` section in which we defined the first
+     access right for the `real.estate.property` model.
+
+Now let's update our real estate app to specify who can access our property listings and what they
+can do with them.
 
 .. exercise::
-   tmp
+   #. Prevent users who are not real estate agents to access the application and its records.
+   #. Allow real estate agents to:
 
-   .. todo: prevent users who are not real estate agents to access the application and its records
-   .. todo: only managers can create and delete properties
-   .. todo: restrict who can manage property types and tags (agents can read)
+      - Read and update properties.
+      - Read, update, create, and delete offers.
+      - Read property types and tags.
 
-.. tip::
-   - Try logging in as the agent and manager users to verify that they have the expected access
-     rights.
+   #. Allow only managers to read, update, create and delete all records of the application.
+
+   .. tip::
+      Try logging in as the agent and manager users to verify that they have the expected access
+      rights.
+
+.. spoiler:: Solution
+
+   .. code-block:: csv
+      :caption: `security/ir.model.access.csv`
+      :emphasize-lines: 2-9
+
+      id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+      real_estate_offer_agent,real.estate.offer.agent,model_real_estate_offer,real_estate.agent_group,1,1,1,1
+      real_estate_offer_manager,real.estate.offer.manager,model_real_estate_offer,real_estate.manager_group,1,1,1,1
+      real_estate_property_agent,real.estate.property.agent,model_real_estate_property,real_estate.agent_group,1,1,0,0
+      real_estate_property_manager,real.estate.property.manager,model_real_estate_property,real_estate.manager_group,1,1,1,1
+      real_estate_property_type_agent,real.estate.property.type.agent,model_real_estate_property_type,real_estate.agent_group,1,0,0,0
+      real_estate_property_type_manager,real.estate.property.type.manager,model_real_estate_property_type,real_estate.manager_group,1,1,1,1
+      real_estate_tag_agent,real.estate.tag.agent,model_real_estate_tag,real_estate.agent_group,1,0,0,0
+      real_estate_tag_manager,real.estate.tag.manager,model_real_estate_tag,real_estate.manager_group,1,1,1,1
 
 .. _tutorials/server_framework_101/record_rules:
 
-Define record access rules
-==========================
+Restrict record access
+======================
 
 tmp
 
