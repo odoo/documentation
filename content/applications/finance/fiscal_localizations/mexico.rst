@@ -113,9 +113,6 @@ requirement. Make sure that they are needed for the business.
      - `l10n_mx_edi_stock` & `l10n_mx_edi_stock_extended`
      - Lets you create a *Carta Porte*: A bill of lading that proves to the government you are
        sending goods between A & B with a signed electronic document.
-   * - :guilabel:`Mexico - Electronic Delivery Guide - Version 3.0`, :guilabel:`Mexico - Electronic Delivery Guide Comex - Version 3.0` & :guilabel:`Mexico - Electronic Delivery Guide Comex - Version 3.1`
-     - `l10n_mx_edi_stock_30`, `l10n_mx_edi_stock_extended_30` & `l10n_mx_edi_stock_extended_31`
-     - Complements the `l10n_mx_edi_stock` module to comply with the government newest requirements.
    * - :guilabel:`Odoo Mexico Localization for Stock/Landing`
      - `l10n_mx_edi_landing`
      - Allows managing customs numbers related to landed costs in electronic documents.
