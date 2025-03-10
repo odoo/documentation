@@ -572,21 +572,22 @@ Discounts
 **********
 
 By law, electronic document sent to the government cannot have negative lines, as this can trigger errors. Therefore,
-when you utilize :doc:`Gift Cards <../../sales/sales/products_prices/ewallets_giftcards>` or :doc:`Loyalty Programs <../../sales/sales/products_prices/loyalty_discount>` the subsequent negative lines will be translated in the XML as if they were regular 
+when using :doc:`Gift Cards <../../sales/sales/products_prices/ewallets_giftcards>` or :doc:`Loyalty Programs <../../sales/sales/products_prices/loyalty_discount>` 
+the subsequent negative lines will be translated in the XML as if they were regular 
 :doc:`Discounts <../../sales/sales/products_prices/prices/pricing/>`.
 
 In order to set this up, navigate to :menuselection:`Sales --> Products --> Products` and create a product `Discounts`,
 make sure that it has a valid :guilabel:`Tax` (usually :guilabel:`IVA` at `16%`).
 
-After this, create and sign your invoice, and add the `Discounts` product at the bottom. In the XML the discount should
-be substracted from the first invoice line available.
+After this, create and sign the invoice, and add the `Discounts` product at the bottom. In the XML the discount should
+be substracted from the first invoice line available, Odoo will try to subtract from each line the total amount in order
+until all the discount has been applied.
 
 .. tip::
-   You have to add a `Discount` and `UNSPSC Product Category` for each product variant related to :guilabel:`Gift Cards`
-   or :guilabel:`Loyalty Programs.`
+   A `Discount` and `UNSPSC Product Category` for each product variant related to :guilabel:`Gift Cards`
+   or :guilabel:`Loyalty Programs` have to be created.
 
 .. image:: mexico/mx-discounts.png
-   :align: center
    :alt: Configuration of a discount product
 
 Down payments
@@ -605,17 +606,7 @@ For this process, it is necessary to have the :doc:`Sales <../../sales>` app ins
    `The official documentation for registration of down payments in Mexico
    <http://http://omawww.sat.gob.mx/tramitesyservicios/Paginas/documentos/GuiaAnexo311221.pdf>`_.
 
-Configuration
-^^^^^^^^^^^^^
-
-First, navigate to :menuselection:`Sales --> Products --> Products` to create a product `Anticipo` 
-and configure it. The :guilabel:`Product Type` must be :guilabel:`Service`, and use the :guilabel:`UNSPSC Category`
-must be: `84111506 Servicios de facturación`.
-
-Then, go to :menuselection:`Sales --> Settings --> Invoicing --> Down Payments`, and add the
-*Anticipo* product as the default.
-
-.. FEAV Note - Not necessary in 18.0
+   :Downpayments <../../sales/sales/invoicing/down_payment>`
 
 Method A
 ^^^^^^^^
@@ -638,7 +629,7 @@ delete the line that contains the product *Anticipo*.
    of your products are :guilabel:`Ordered quantities`. Otherwise a customer credit note will be created.
 
 Then, copy the :guilabel:`Fiscal Folio` from the down payment invoice, and paste it into the
-:guilabel:`CDFI Origin` of the final invoice, adding the prefix `07|` before the value. Then, sign
+:guilabel:`CDFI Origin` of the final invoice, adding the prefix `07|` before the value and sign
 the document.
 
 Finally, create a credit note for the first invoice. Copy the :guilabel:`Fiscal Folio` from the
@@ -661,8 +652,8 @@ Method B
 Another, simpler way to fulfill |SAT| requirements involves creating only the down payment invoice, and
 a second invoice for the remnant. This method involves the fact that negative lines are treated as discounts.
 
-For this, follow the same process as :ref:`Method A <l10n-mx/down-payment-method-a>`, up until the creation of the final invoice. Don't delete
-the line that contains the *Anticipo* product, and instead, rename the other products :guilabel:`Description`
+For this, follow the same process as :ref:`Method A <l10n-mx/down-payment-method-a>`, up until the creation of the final invoice. Do not delete
+the line that contains the *Anticipo* and instead rename the other products :guilabel:`Description`
 to include the text `CFDI por remanente de un anticipo`. Don't forget to add the :guilabel:`Fiscal Folio`
 of the down payment invoice in the :guilabel:`CDFI Origin` of the final invoice, adding the prefix `07|`.
 
@@ -707,11 +698,12 @@ This can be done for :guilabel:`Vendor Bills` too.
 CFDI to public
 **************
 
-The Mexican government requires that any goods or services that you might sell should be backed up by
-an invoice. If the customer you are selling to does not require an invoice or has no |RFC|, a 
-*CFDI to Public* has to be created. 
+The Mexican government requires that any goods or services that are sold must be backed up by
+an invoice. If the customer does not require an invoice or has no |RFC|, a 
+*CFDI to Public* has to be created also known as a "nominative" invoice. 
 
-If you select the :guilabel:`CFDI to Public` checkbox in either a sale order or an invoice, the final XML
+A contact must be created and it must have a particular name.
+If  the :guilabel:`CFDI to Public` checkbox in either a sale order or an invoice is checked, the final XML
 will override the data in the invoice contact and will add the following characteristics:
 
 - |RFC|: **XAXX010101000** if it is a national customer or **XEXX010101000** if it is a foreign customer 
@@ -724,10 +716,10 @@ will override the data in the invoice contact and will add the following charact
 
 .. important::
    If your contact *Country* is empty, the final invoice is considered as a *CFDI to Public* for national 
-   customers. You'll receive a non-blocking warning before signing the document. 
+   customers. A non-blocking warning will be displayed before signing the document. 
 
-If the final customer doesn't share any details with you, you can also create a generic :guilabel:`Customer`.
-It's name cannot be `PUBLICO EN GENERAL` or an error will be triggered (it can be, for example, `CLIENTE FINAL`).
+If the final customer doesn't share any details, create a generic :guilabel:`Customer`.
+The name cannot be `PUBLICO EN GENERAL` or an error will be triggered (it can be, for example, `CLIENTE FINAL`).
 
 .. seealso::
    `Regla 2.7.1.21 Expedición de comprobantes en operaciones con el público en general.
@@ -753,11 +745,9 @@ Sales flow
 First, it is necessary to create a special :guilabel:`Journal` created in :menuselection:`Accounting --> 
 Configuration --> Journals` with the purpose of keeping a separate sequence. 
 
-Then, make sure that all of your sales orders that you want to sign have the following configurations:
+Then, make sure that all the sales orders that need to be signed have the following configurations:
 
 - All of them have the :guilabel:`CFDI to Public` checkbox enabled.
-- All of them have the :guilabel:`Invoicing Journal` that you created, in the :guilabel:`Other Info` tab
- with the :doc:`debug mode <../../general/developer_mode>` enabled.
 - All of them have the :guilabel:`Invoice Status` marked as :guilabel:`To Invoice`.
 
 After this, go to :menuselection:`Sales --> To Invoice --> Orders to Invoice`, select all relevant sales
@@ -767,23 +757,24 @@ checkbox and press :guilabel:`Create Draft Invoice`.
 .. image:: mexico/mx-global-invoice1.png
    :alt: Configuration of Sales Orders for Global Invoice.
 
-You will be redirected to a list of invoices. Select all of them and in the :icon:`fa-gear` :guilabel:`Actions` drop-down menu 
+Odoo will redirect to a list of invoices. Select all of them and in the :icon:`fa-gear` :guilabel:`Actions` drop-down menu 
 select :guilabel:`Post entries`. Select all posted invoices again and go back to the  :icon:`fa-gear` :guilabel:`Actions` drop-down 
 menu to select :guilabel:`Create Global Invoice`.
 
 .. image:: mexico/mx-global-invoice2.png
    :alt: Configuration of Invoices for Global Invoice.
 
-In the wizard, select the :guilabel:`Periodicity` that fits your business needs and press :guilabel:`Create`.
+In the wizard, select the :guilabel:`Periodicity` indicated by a professional accountant and press :guilabel:`Create`.
 All invoices should be signed under the same XML file, with the same :guilabel:`Fiscal Folio`.
 
 .. tip::
-   - By pressing :guilabel:`Show` in the :guilabel:`CFDI` tab, you will be able to see a list with all related invoices.
-   - By pressing :guilabel:`Cancel` in the :guilabel:`CFDI` tab, you will be able to cancel the global invoice in both the |SAT|
+   - By pressing :guilabel:`Show` in the :guilabel:`CFDI` tab, a list with all related invoices will be displayed.
+   - By pressing :guilabel:`Cancel` in the :guilabel:`CFDI` tab, it is possible to cancel the global invoice in both the |SAT|
    and Odoo. 
 
 .. note::
-   Global Invoices created this way won't have a **PDF** in them.
+   Global Invoices created this way won't have a **PDF** in them as their information is already within Odoo and is not to be
+   seen by a customer.
 
 Point of sale
 -------------
