@@ -44,7 +44,7 @@ Once you have taken an order, click :guilabel:`Change table` to return to the fl
 .. note::
    As soon as you click a table, the number of guests is automatically set to one. If you
    mistakenly select a table, click :guilabel:`Release table` to free it or :ref:`transfer the
-   customer <floors_tables/transfer>` to another table.
+   customer <pos/floors_tables/transfer>` to another table.
 
 .. toctree::
    :titlesonly:

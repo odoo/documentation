@@ -3,20 +3,17 @@ Floors and tables
 =================
 
 The **Floor plan view** enables you to manage restaurant floors and table arrangements and monitor
-table status in real time, including occupancy, reservations, and kitchen orders.
+table status in real time — including occupancy, reservations, and kitchen orders.
 
-.. example::
+.. image:: floors_tables/plan-understand.png
+   :alt: example of a floor plan view with visual keys to understand it.
+   :scale: 90 %
 
-   .. image:: floors_tables/plan-understand.png
-      :alt: example of a floor plan view with visual keys to understand it.
-
-   - Table 1: An order has been placed and sent to the kitchen.
-   - Table 3: An order of four items has been placed and needs to be sent to the kitchen.
-   - Tables 2, 4, and 5: These tables are available.
-   - Tables 2, 4, and 5: These tables' total capacity is, respectively, 2, 4, and 8 people.
-   - Table 1: The table of two is full.
-   - Table 3: The table of four is taken by one person.
-   - Table 5: "Famous Joe" has a reservation for 8 people at 12:00.
+- Table 101: The table is available now but booked at 15:00.
+- Table 102: An order has been placed and sent to the kitchen.
+- Table 103: The table was booked at 12:00, but customers are late.
+- Table 104: Two items are waiting to be sent to the kitchen.
+- Table 105: The table is available.
 
 Configuration
 =============
@@ -25,65 +22,78 @@ From the POS backend
 --------------------
 
 To create floors and tables from the backend, go to :menuselection:`Point of Sale --> Configuration
---> Floor Plans`, and click :guilabel:`New` to create a floor. Name it, select the related point(s)
-of sales, and click :guilabel:`Add a line` to create a table. Name the table and assign a number of
-seats. You can also link it to an appointment resource to make the table bookable. Once done,
-click :guilabel:`Save & Close` or :guilabel:`Save & New` to confirm.
+--> Floor Plans`, and click :guilabel:`New` to create a floor. Optionally, activate additional
+settings by clicking the :icon:`oi-settings-adjust` (:guilabel:`adjust settings`) icon. Then,
 
-.. image:: floors_tables/table-creation-backend.png
+#. Enter a :guilabel:`Floor Name`.
+#. Select the related :guilabel:`Point of Sales`.
+#. Hover over the placeholder image and click the :icon:`fa-pencil` (:guilabel:`pencil`) icon to add
+   a background image (e.g., your restaurant layout).
+#. Click :guilabel:`Add a line` to create a table and set it up:
+
+   - Enter a :guilabel:`Table Number`.
+   - Fill in the number of :guilabel:`Seats`.
+   - Select a :guilabel:`Square` or :guilabel:`Round` :guilabel:`Shape`.
+   - Assign an :guilabel:`Appointment resource` to make the table bookable.
+   - Adjust the :guilabel:`Height`, :guilabel:`Width`, and :guilabel:`Color`.
+#. Click the :icon:`fa-trash-o` (:guilabel:`delete`) icon to delete a table.
+
+.. image:: floors_tables/add-floor-backend.png
    :scale: 75%
    :alt: window to create a table in the POS backend
 
-.. note::
-   The POS must be opened and :ref:`edited from the frontend <floors_tables/frontend>` to create a
-   map of your restaurant or bar reflecting your actual floor plan.
-
 .. tip::
    Create floors on the spot: :ref:`access your POS settings <configuration/settings>`, type your
-   floor name in the :guilabel:`Floor` field of the :guilabel:`Floors & Tables Map` category, and
-   press *enter*.
-
-   .. image:: floors_tables/floor-creation-backend.png
-      :scale: 75%
-      :alt: setting to create floors from the POS settings
+   floor name in the :guilabel:`Floors` field of the :guilabel:`Floors & Tables Map` section, and
+   press *enter* or click :guilabel:`Create and edit...` to set it up.
 
 .. _floors_tables/frontend:
 
-From the POS frontend
----------------------
+From the POS front end
+----------------------
 
-To create floors and tables from the frontend, :ref:`open a POS session <pos/session-start>`, click
-the hamburger menu icon :guilabel:`≡` in the upper right corner, then :guilabel:`Edit Plan` to enter
-the **edit mode**.
+To create floors and tables from the front end, :ref:`open a POS session <pos/session-start>`, click
+the :icon:`fa-bars` (:guilabel:`hamburger menu`) icon in the upper right corner, then
+:guilabel:`Edit Plan`.
 
-Click :guilabel:`+ Add Floor` to add a floor, then enter a name in the pop-up window.
+#. Add a floor by clicking the :icon:`fa-plus` (:guilabel:`plus`) icon, then enter a name in  the
+   modal window.
+#. Click the :icon:`fa-paint-brush` (:guilabel:`paintbrush`) icon to change the background color or
+   image.
+#. Click :icon:`fa-plus-circle` :guilabel:`Table` to add a new table.
 
-Once a floor is created, add a table by clicking :guilabel:`+ TABLE`. To move it, select it and drag
-and drop it as desired. You can also modify the attributes of the selected table, such as the number
-of seats by clicking :guilabel:`SEATS`, the table shape using :guilabel:`SHAPE`, the table color
-using :guilabel:`FILL`, or the table name by clicking :guilabel:`RENAME`. To duplicate an existing
-table, select it and click :guilabel:`COPY`. You can also remove the table by clicking
-:guilabel:`DELETE`.
+To adjust a specific table, select it and click:
 
-After making all the necessary modifications, click :guilabel:`CLOSE` to save.
+- The :icon:`fa-user` (:guilabel:`user`) icon to change the number of seats.
+- The :icon:`fa-square` (:guilabel:`square`) or :icon:`fa-circle` (:guilabel:`round`)
+  icon to switch the shape from round to square, and vice versa.
+- The :icon:`fa-paint-brush` (:guilabel:`paintbrush`) icon to change the table's color.
+- The :icon:`fa-pencil-square-o` (:guilabel:`rename`) icon to change the table number.
+- The :icon:`fa-copy` (:guilabel:`clone`) icon to duplicate the table.
+- The :icon:`fa-trash` (:guilabel:`bin`) icon to remove the table.
 
-.. image:: floors_tables/floor-map.png
+After making all the necessary modifications, click :guilabel:`Save` or the :icon:`fa-floppy-o`
+(:guilabel:`floppy disk`) icon to save.
+
+.. image:: floors_tables/edit-plan-frontend.png
    :alt: the floor plan view in edit mode.
-
-.. note::
-   If no table is selected, the modifications are applied to the floor.
+   :scale: 85 %
 
 .. warning::
    Removing a table or a floor cannot be undone.
 
-.. _floors_tables/transfer:
+.. _pos/floors_tables/transfer:
 
 Table transfer
 ==============
 
-To move customers from one table to another, select a table and click :guilabel:`→ Transfer` on the
-POS interface. This redirects you to the floor plan view, where you can choose the new table to
-which you want to transfer the customers.
+Select a table to move customers to another table, then click :guilabel:`Actions` and
+:icon:`oi-arrow-right` :guilabel:`Transfer/Merge`.
 
-When you transfer customers, all of the orders they have placed and that are linked to the original
-table are also transferred.
+In the floor plan view, choose the target table:
+
+- Select a free table to transfer customers and their orders.
+- Select an occupied table to merge customers and their orders.
+
+.. seealso::
+   :doc:`../restaurant`
