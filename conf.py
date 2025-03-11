@@ -227,8 +227,8 @@ sphinx.transforms.i18n.docname_to_domain = (
     sphinx.util.i18n.docname_to_domain
 ) = lambda docname, compact: docname.split('/')[1 if docname.startswith('applications/') else 0]
 
-# The version names that should be shown in the version switcher, if the config option `versions`
-# is populated.
+# The labels used in the version switcher to show the versions provided with the `versions` config
+# option. If a provided version has no label, the version string is used as label.
 versions_names = {
     'master': "Master",
     'saas-18.2': "Odoo 18.2",
@@ -239,8 +239,8 @@ versions_names = {
     '16.0': "Odoo 16",
 }
 
-# The language names that should be shown in the language switcher, if the config option `languages`
-# is populated.
+# The labels used in the language switcher to show the languages provided with the `languages`
+# config option. If a provided language code has no label, the upper-cased code is used as label.
 languages_names = {
     'de': 'DE',
     'en': 'EN',
@@ -455,7 +455,7 @@ def _generate_alternate_urls(app, pagename, templatename, context, doctree):
 
         # Map alternate versions to their display names and URLs.
         context['alternate_versions'] = []
-        for alternate_version_ in provided_versions_:
+        for alternate_version_ in reversed(provided_versions_):  # Reverse to show latest first.
             if alternate_version_ != version:
                 display_name_ = versions_names.get(alternate_version_, alternate_version_)
                 context['alternate_versions'].append((display_name_, build_url(alternate_version_)))
