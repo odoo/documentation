@@ -4,22 +4,28 @@
 Vendor bills
 ============
 
-In Odoo, we can register vendor bills **manually** or **automatically**, while the
-**Aged Payable report** provides an overview of all outstanding bills to help us pay the correct
-amounts on time.
+Vendor bills can be registered either **manually** or **automatically** in Odoo. The
+:ref:`Aged Payable report <accounting/vendor_bills/age-payable-report>` provides an overview of all
+outstanding bills to help ensure timely payment of the correct amounts.
 
 .. seealso::
-   - Tutorial `Registering a vendor bill <https://www.odoo.com/slides/slide/registering-a-vendor-bill-1683?fullscreen=1>`_
+   - Tutorial `Registering a vendor bill <https://www.odoo.com/fr_FR/slides/slide/register-a-vendor-bill-6582>`_
    - :doc:`/applications/inventory_and_mrp/purchase/manage_deals/manage`
+
+.. _accounting/vendor_bills/creation:
 
 Bill creation
 =============
 
+.. _accounting/vendor_bills/creation-manual:
+
 Manually
 --------
 
-Create a vendor bill manually by going to :menuselection:`Accounting --> Vendors --> Bills` and
-clicking :guilabel:`Create`.
+To create a vendor bill manually, go to :menuselection:`Accounting --> Vendors --> Bills` and
+click :guilabel:`Create`.
+
+.. _accounting/vendor_bills/automatic:
 
 Automatically
 -------------
@@ -28,25 +34,27 @@ Vendor bills can be automatically created by **sending an email** to an :ref:`em
 <invoice-digitization/email-alias>` associated with the purchase journal, or by **uploading a PDF**
 in :menuselection:`Accounting --> Vendors --> Bills` and then clicking :guilabel:`Upload`.
 
+.. _accounting/vendor_bills/bill-completion:
+
 Bill completion
 ===============
 
 Whether the bill is created manually or automatically, make sure the following fields are
 appropriately completed:
 
-- :guilabel:`Vendor`: Odoo automatically fills some information based on the vendor's registered
+- :guilabel:`Vendor`: Odoo automatically fills in some information based on the vendor's registered
   information, previous purchase orders, or bills.
-- :guilabel:`Bill Reference`: add the sales order reference provided by the vendor and is used to do
-  the :ref:`matching <accounting/payments/matching>` when you receive the products.
-- :guilabel:`Auto-Complete`: select a past bill/purchase order to automatically complete the
-  document. The :guilabel:`Vendor` field should be completed prior to completing this field.
-- :guilabel:`Bill Date`: is the issuance date of the document.
-- :guilabel:`Accounting Date`: is the date on which the document is registered in your accounting.
-- :guilabel:`Payment Reference`: when registering the payment, it is automatically indicated in the
-  :guilabel:`Memo` field.
-- :guilabel:`Recipient Bank`: to indicate to which account number the payment has to be made.
-- :guilabel:`Due Date` or :guilabel:`Terms` to pay the bill.
-- :guilabel:`Journal`: select in which journal the bill should be recorded and the :doc:`Currency
+- :guilabel:`Bill Reference`: Add the sales order reference provided by the vendor, and is used to
+  :ref:`match <accounting/payments/matching>` the products when they are received.
+- :guilabel:`Auto-Complete`: Select a past bill/purchase order to complete the document
+  automatically. The :guilabel:`Vendor` field should be completed before completing this field.
+- :guilabel:`Bill Date`: Select the document's issuance date.
+- :guilabel:`Accounting Date`: Update the document's accounting registration date if needed.
+- :guilabel:`Payment Reference`: Automatically indicated in the :guilabel:`Memo` field when
+   registering the payment.
+- :guilabel:`Recipient Bank`: Indicates the account number to make the payment.
+- :guilabel:`Due Date` or :guilabel:`Terms` for paying the bill.
+- :guilabel:`Journal`: Select which journal should record the bill and in which :doc:`Currency
   <get_started/multi_currency>`.
 
 .. image:: vendor_bills/bill-completion.png
@@ -55,61 +63,61 @@ appropriately completed:
 .. note::
    - Bills can be :doc:`digitized <vendor_bills/invoice_digitization>` for
      automatic completion by clicking :guilabel:`Send for Digitization`.
-   - If you upload the bill, the PDF document is displayed on the right of the screen, allowing you
-     to easily fill in the bill information.
+   - Once the bill is uploaded, the PDF document appears on the right side of the screen, making it
+     easy to fill in the bill information.
+
+.. _accounting/vendor_bills/bill-confirmation:
 
 Bill confirmation
 =================
 
-Click :guilabel:`Confirm` when the document is completed. The status of your document changes to
-:guilabel:`Posted` and a journal entry is generated based on the configuration on the invoice.
+Click :guilabel:`Confirm` when the document is completed. The status changes to :guilabel:`Posted`,
+and a journal entry is generated based on the vendor bill configuration.
 
 .. note::
-   Once confirmed, it is no longer possible to update it. Click :guilabel:`Reset to draft` if
+   Once confirmed, it can no longer be updated. Click :guilabel:`Reset to draft` if
    changes are required.
 
-Bill Payment
-============
+.. _accounting/vendor_bills/bill-payment:
 
-Upon payment of the vendor bill, click on :guilabel:`Register Payment` to open a new payment window.
+Payment and reconciliation
+==========================
 
-Select the :guilabel:`Journal`, the :guilabel:`Payment Method`, the :guilabel:`Amount` you wish to
-pay (full or partial payment), and the :guilabel:`Currency`. In the case of a partial payment (when
-the :guilabel:`Amount` paid is less than the total remaining amount on the vendor bill), the
-:guilabel:`Payment Difference` field displays the outstanding balance.
-You have two options:
+To register a payment, click on :guilabel:`Register Payment`. In the :guilabel:`Register Payment`
+window, select the :guilabel:`Journal`, the :guilabel:`Payment Method`, the :guilabel:`Amount`, and
+the :guilabel:`Currency`.
 
-- :guilabel:`Keep open`: to keep the bill open and mark it with a :guilabel:`Partial` banner;
-- :guilabel:`Mark as fully paid`: In this case, select an account in the
-  :guilabel:`Post Difference In` field and change the :guilabel:`Label` if needed. A journal entry
-  will be created to balance the account receivable with the selected account.
+When the :guilabel:`Amount` paid is less than the total remaining amount on the vendor bill, the
+payment is :ref:`partial <accounting/payments/partial-payment>`, and the :guilabel:`Payment
+Difference` field displays the outstanding balance.
 
-.. image:: vendor_bills/partial-payment.png
-   :alt: register a partial payment
-
-The :guilabel:`Memo` field is filled automatically if the :guilabel:`Payment Reference` has been
-set correctly in the vendor bill. If the field is empty, select the vendor invoice number as a
+The :guilabel:`Memo` field is filled automatically if the :guilabel:`Payment Reference` has been set
+correctly in the vendor bill. If the field is empty, select the vendor invoice number as a
 reference.
 
-Once confirmed, an :guilabel:`In Payment` banner appears on the bill until it is :doc:`reconciled
-<bank/reconciliation>`.
+Then click :guilabel:`Create payment`. An :guilabel:`In Payment`/:guilabel:`Partial` banner appears
+on the bill until it is :doc:`reconciled <bank/reconciliation>`.
+
+.. seealso::
+   - :doc:`payments`
+   - :doc:`bank/reconciliation`
+
+.. _accounting/vendor_bills/age-payable-report:
 
 Aged payable report
 ===================
 
-To get an overview of your open vendor bills and their related due dates, you can use the
-**Aged Payable report**. Go to :menuselection:`Accounting --> Reporting --> Partner Reports: Aged
-payable`.
+To get an overview of the open vendor bills and related due dates, go to :menuselection:`Accounting
+--> Reporting --> Aged payable`.
 
-Click on a vendor's name to open up the details of all outstanding bills, the amounts due, the due
-dates, etc.
+Click the :icon:`fa-caret-right` :guilabel:`(right arrow)` icon next to a vendor to view the details
+of all outstanding bills, including the due dates and amounts.
 
 .. Note::
-   - By clicking the :guilabel:`Save` button, you can export the information available on the screen
-     as a PDF or XLSX file and save it in the folder of your choice.
-   - You might receive several bills for the same purchase order if your vendor is in back-order and
-     is sending you invoices as they ship the products, or if your vendor is sending you a partial
-     bill or asking for a deposit.
+   - To export and save the information as a PDF or XLSX file, click :guilabel:`Save`.
+   - Multiple bills for the same purchase order may be issued if the vendor is on back-order and
+     sends invoices as products are shipped or if the vendor sends partial bills or requests a
+     deposit.
 
 .. toctree::
    :titlesonly:
