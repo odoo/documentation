@@ -93,7 +93,7 @@ icon to remove a row.
 - :guilabel:`Users` tab: lists the current users in the group. Users listed in black have
   administrative rights. Users without administrative access appear in blue. Click :guilabel:`Add a
   line` to add users to this group.
-- :guilabel:`Inherited` tab: inherited means that users added to this group are automatically added
+- :guilabel:`Inherited` tab: Inherited means that users added to this group are automatically added
   to the groups listed on this tab. Click :guilabel:`Add a line` to add inherited groups.
 
   .. example::
@@ -101,35 +101,37 @@ icon to remove a row.
      its :guilabel:`Inherited` tab, then any users added to the *Sales/Administrator* group
      automatically receive access to the *Website/Restricted Editor* group, as well.
 
-- :guilabel:`Menus` tab: defines which menus/models the group can have access to. Click
+- :guilabel:`Menus` tab: defines which models the group can have access to. Click
   :guilabel:`Add a line` to add a specific menu.
 - :guilabel:`Views` tab: lists which views in Odoo the group has access to. Click :guilabel:`Add a
   line` to add a view to the group.
-- :guilabel:`Access Rights` tab: lists the first level of rights (models) that this group has access
-  rights to. Click :guilabel:`Add a line` to link access rights to this group. In this tab, the
-  :guilabel:`Model` column represents the common name of the menu/model, and the :guilabel:`Name`
-  column represents the technical name given to the model. For each model, enable the following
-  options as appropriate:
+- :guilabel:`Access Rights` tab: lists the first level of rights (models) that this group has. The
+  :guilabel:`Name` column represents the name for the current group's access to the model
+  selected in the :guilabel:`Model` column.
 
-  - :guilabel:`Read`: users can see the object's existing values.
-  - :guilabel:`Write`: users can edit the object's existing values.
-  - :guilabel:`Create`: users can create new values for the object.
-  - :guilabel:`Delete`: users can delete values for the object.
+  To link a new access right to a group, click :guilabel:`Add a line`. Select the appropriate model
+  from the :guilabel:`Model` dropdown, then enter a name for the access right in the
+  :guilabel:`Name` column. For each model, enable the following options as appropriate:
+
+  - :guilabel:`Read`: Users can see the object's existing values.
+  - :guilabel:`Write`: Users can edit the object's existing values.
+  - :guilabel:`Create`: Users can create new values for the object.
+  - :guilabel:`Delete`: Users can delete values for the object.
 
   .. tip::
-     First try searching for the common name of the model in the drop-down menu of the
-     :guilabel:`Model` column. The :guilabel:`Model` technical name can be found by expanding the
-     model common name, which can be done by clicking the :guilabel:`(external link)` icon.
+     While there are no conventions for naming access rights, it is advisable to choose a name that
+     easily identifies its purpose.
 
-     The model technical name can also be accessed in :ref:`developer mode <developer-mode>`.
+     For example, the access that purchase managers have to the :guilabel:`Contact` model could be
+     named `res.partner.purchase.manager`. This consists of the technical name of the model,
+     followed by a name identifying the group of users in question.
 
-     On a form, navigate to any field, and hover over the field name. A box of backend information
-     reveals itself with the specific Odoo :guilabel:`Object` name in the backend. This is the
-     technical name of the model that should be added.
+     .. image:: access_rights/name-field.png
+        :alt: Name of access rights to a model
 
-     .. image:: access_rights/technical-info.png
-        :align: center
-        :alt: Technical information shown on a field of a model, with object highlighted.
+     To find the model's technical name from the current view, first enter a placeholder text
+     in the :guilabel:`Name` field, then click the :guilabel:`Model` name, then the
+     :icon:`fa-arrow-right` :guilabel:`(Internal link)` icon.
 
 - :guilabel:`Record Rules`: lists the second layer of editing and visibility rights.
   :guilabel:`Record Rules` overwrite, or refine, the group's access rights. Click :guilabel:`Add a
