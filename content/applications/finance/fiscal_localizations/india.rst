@@ -25,6 +25,9 @@ localization:
    * - :guilabel:`Indian E-waybill`
      - `l10n_in_edi_ewaybill`
      - :ref:`Indian E-way bill integration <india/e-waybill>`
+   * - :guilabel:`Indian E-waybill Stock`
+     - `l10n_in_ewaybill_stock`
+     - :ref:`E-waybill creation from the Inventory app <india/e-waybill-stock>`
    * - :guilabel:`Indian - GSTR India eFiling`
      - `l10n_in_reports_gstr`
      - :ref:`Indian GST Return filing <india/gstr>`
@@ -224,6 +227,8 @@ website itself.
 E-Way bill
 ==========
 
+.. _india/e-waybill-setup:
+
 Setup
 -----
 
@@ -330,6 +335,40 @@ click :guilabel:`Request EDI Cancellation`.
    - Once you request to cancel the E-Way bill, Odoo automatically submits the JSON-signed file to
      the government portal. You can click :guilabel:`Process Now` if you want to process the invoice
      immediately.
+
+.. _india/e-waybill-stock:
+
+E-waybill creation from receipts and delivery orders
+----------------------------------------------------
+
+.. note::
+   Make sure the **E-Way bill Stock** module is :ref:`installed <general/install>` and
+   the :ref:`E-Way bill setup <india/e-waybill-setup>` is complete.
+
+To create E-Way bills from :doc:`receipts and deliveries
+</applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations>` in the Inventory
+app, follow these steps:
+
+#. Go to :menuselection:`Inventory --> Operations --> Deliveries` or :menuselection:`Inventory -->
+   Operations --> Receipts` and select an existing delivery order/receipt or create a new one.
+
+#. Click :guilabel:`Create E-waybill/Challan`.
+
+   .. note::
+      To create an E-way bill:
+
+      - A delivery order must be in the :guilabel:`Done` state (i.e., validated)
+      - A receipt must have the :guilabel:`Ready` or :guilabel:`Done` state.
+
+#. Click :guilabel:`Generate e-Waybill` to validate the E-Way bill and send it to the NIC E-Way
+   bill portal.
+
+   .. tip::
+      To use the E-Way bill as a challan for goods deliveries without sending it to the NIC
+      E-Waybill portal, click :guilabel:`Use as Challan`.
+
+To print the E-waybill or the challan, click the :icon:`fa-cog` :guilabel:`(gear)` icon and select
+:icon:`fa-print` :guilabel:`Ewaybill / Delivery Challan`.
 
 .. _india/gstr:
 
