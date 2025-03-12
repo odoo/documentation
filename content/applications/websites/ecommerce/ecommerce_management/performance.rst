@@ -49,10 +49,12 @@ which sends queued emails as soon as possible.
 To enable asynchronous email sending:
 
 #. Enable the :doc:`developer mode </applications/general/developer_mode>`.
+#. Go to :menuselection:`Apps`, remove the :guilabel:`Apps` filter, and install the :guilabel:`Sales
+   - Async Emails` module.
 #. Go to :menuselection:`Settings --> Technical --> System Parameters` and set the
    :guilabel:`sale.async_emails` system parameter to `True`.
-#. Go to :menuselection:`Settings --> Technical --> Scheduled Actions` and enable the
-   :guilabel:`Sales: Send pending emails` scheduled action.
+#. Go to :menuselection:`Settings --> Technical --> Scheduled Actions` and ensure that the
+   :guilabel:`Sales: Send pending emails` scheduled action is enabled.
 
 .. caution::
    Enabling this feature may delay order confirmation and invoice emails by a few minutes. It is
