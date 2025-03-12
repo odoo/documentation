@@ -130,11 +130,8 @@ create invoices manually in exceptional use cases:
 Specific modules
 ----------------
 
-Some specific modules are also able to generate draft invoices:
-
--  **membership**: invoice your members every year
-
--  **repairs**: invoice your after-sale services
+Some specific modules are also able to generate draft invoices, e.g. **repairs** where you can
+invoice your after-sale services.
 
 Resequencing of the invoices
 ----------------------------
