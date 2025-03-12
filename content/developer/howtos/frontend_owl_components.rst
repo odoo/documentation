@@ -98,9 +98,9 @@ Don't forget to add this file to the data section of your assets bundle:
 
     {
         # ...
-        'data': {
+        'data': [
             'views/templates.xml',
-        }
+        ]
     }
 
 And that's it! If you open the home page of the portal you should see the message
