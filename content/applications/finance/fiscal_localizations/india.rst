@@ -25,6 +25,9 @@ localization:
    * - :guilabel:`Indian E-waybill`
      - `l10n_in_edi_ewaybill`
      - :ref:`Indian E-way bill integration <india/e-waybill>`
+   * - :guilabel:`Indian E-waybill Stock`
+     - `l10n_in_ewaybill_stock`
+     - :ref:`Indian E-waybill Stock integration <india/e-waybill-stock>`
    * - :guilabel:`Indian - GSTR India eFiling`
      - `l10n_in_reports_gstr`
      - :ref:`Indian GST Return filing <india/gstr>`
@@ -182,6 +185,8 @@ website itself.
 E-Way bill
 ==========
 
+.. _india/e-waybill-setup:
+
 Setup
 -----
 
@@ -288,6 +293,43 @@ click :guilabel:`Request EDI Cancellation`.
    - Once you request to cancel the E-Way bill, Odoo automatically submits the JSON-signed file to
      the government portal. You can click :guilabel:`Process Now` if you want to process the invoice
      immediately.
+
+.. _india/e-waybill-stock:
+
+Indian Stock E-waybill
+======================
+
+.. note::
+   Make sure you have completed :ref:`setting up E-waybill <india/e-waybill-setup>` before using E-waybill Stock
+
+An **E-waybill** can be created on Receipt/Delivery. To do so, go to the :guilabel:`Inventory` app and create a new **Delivery Order/Receipt**. Once the picking is validated, you can create E-waybill for that picking.
+
+.. image:: india/e-waybill-stock-create.png
+   :alt: Create E-waybill for picking
+
+.. note::
+   You can create **E-waybill** for a **receipt** on **ready state**
+
+Click on :guilabel:`Create E-waybill/Challan` to create E-waybill for the picking.
+
+.. image:: india/e-waybill-stock-form.png
+   :alt: E-waybill Form
+
+Validate the e-waybill to send it to the NIC E-waybill portal by clicking to Generate E-waybill.
+
+
+.. note::
+   You can use it as a challan for the delivery of goods.
+   By clicking on Use challan, won't send the e-waybill to the NIC E-waybill portal.
+   But can used as a challan for the delivery of goods.
+
+Print E-waybill/Challan by clicking on the Print button.
+
+.. image:: india/e-waybill-stock-print.png
+   :alt: Print E-waybill/Challan
+
+.. image:: india/e-waybill-stock-report.png
+   :alt: E-waybill/Challan Report
 
 .. _india/gstr:
 
