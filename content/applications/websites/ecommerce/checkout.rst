@@ -36,7 +36,7 @@ To restrict checkout to selected B2B customers, follow these steps:
    :guilabel:`On invitation`.
 #. Go to :menuselection:`Website --> eCommerce --> Customers`, switch to the :guilabel:`List` view,
    and select the customers you wish to grant access to your
-   :doc:`portal <../../../general/users/portal>`.
+   :doc:`portal </applications/general/users/portal>`.
 #. Click the :icon:`fa-cog` :guilabel:`Actions` button, then :guilabel:`Grant portal access`.
 #. Review the selected customers in the :guilabel:`Portal Access Management` pop-up and click
    :guilabel:`Grant Access`.
@@ -47,13 +47,13 @@ instructions on setting a password and activating their account.
 .. note::
    - You can revoke access or re-invite a customer using the related buttons in the
      :guilabel:`Portal Access Management` pop-up.
-   - Users can only have one :doc:`portal access <../../../general/users/portal>` per email.
+   - Users can only have one :doc:`portal access </applications/general/users/portal>` per email.
    - Settings are website-specific, so you could set up a B2C website that allows guest checkout and
      B2B website with mandatory sign-in.
 
 .. seealso::
-   - :doc:`Customer accounts <../ecommerce_management/customer_accounts>`
-   - :doc:`Portal access <../../../general/users/portal>`
+   - :doc:`Customer accounts <customer_accounts>`
+   - :doc:`Portal access </applications/general/users/portal>`
 
 .. _ecommerce/checkout/steps:
 
@@ -71,7 +71,7 @@ During the checkout process, customers are taken through the following steps:
 .. _ecommerce/checkout/customize_steps:
 
 Each step can be customized using the website editor: Click :guilabel:`Edit` to add
-:doc:`building blocks <../../website/web_design/building_blocks>` from the :guilabel:`Blocks` tab or
+:doc:`building blocks <../website/web_design/building_blocks>` from the :guilabel:`Blocks` tab or
 open to the :guilabel:`Customize` tab to enable various checkout options.
 
 .. note::
@@ -93,7 +93,7 @@ as:
 - :guilabel:`Suggested Accessories`: to showcase :ref:`accessory products
   <ecommerce/cross_upselling/accessory>`;
 - :guilabel:`Promo Code`: to allow customers to redeem :ref:`gift cards <ewallet_gift/gift-cards>`
-  or apply :doc:`discount codes <../../../sales/sales/products_prices/loyalty_discount>`;
+  or apply :doc:`discount codes </applications/sales/sales/products_prices/loyalty_discount>`;
 - :guilabel:`Add to Wishlist`: To allow signed-in users to remove a product from their cart and add
   it to their wishlist, go to :menuselection:`Website --> Configuration --> Settings`, scroll to
   the :guilabel:`Shop - Products` section, and enable :guilabel:`Wishlists`. The :guilabel:`Add to
@@ -172,4 +172,4 @@ The final step of the checkout process is the :guilabel:`Order confirmation`, wh
 summary of the customer's purchase details.
 
 .. seealso::
-   :doc:`Order handling <../../ecommerce/ecommerce_management/order_handling>`
+   :doc:`Order handling <order_handling>`
