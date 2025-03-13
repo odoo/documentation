@@ -117,3 +117,4 @@ dates, etc.
    vendor_bills/invoice_digitization
    vendor_bills/assets
    vendor_bills/deferred_expenses
+   vendor_bills/sequence
