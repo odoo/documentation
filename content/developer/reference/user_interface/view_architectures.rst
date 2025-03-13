@@ -3387,6 +3387,22 @@ Their root element is ``<calendar>``. Available attributes on the root node are:
    :requirement: Optional
    :type: int
 
+.. attribute:: multi_create_view
+   :noindex:
+
+   Reference of a form view. When set, in **month** scale, allows to create (and
+   delete) records in batches by clicking on calendar cells or by selecting an
+   area of calendar cells. One record is then created for each selected cell and
+   for each active filter's value, with the values of the multi create form view,
+   which is displayed in the side panel. In delete mode, all records displayed
+   in selected cells are deleted.
+
+   Note: if the side panel contains multiple filter sections, only the first one
+   is used, to avoid a combinatorial explosion.
+
+   :requirement: Optional
+   :type: str
+
 .. include:: view_architectures/root_attribute_create.rst
 
 .. include:: view_architectures/root_attribute_edit.rst
