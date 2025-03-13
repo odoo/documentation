@@ -169,7 +169,7 @@ or a **wishlist**. To do so, go to your **main shop page**, and at the end of th
 appear when hovering the mouse over a product's image.
 
 - :guilabel:`Add to Cart`: adds a button to
-  :doc:`add the product to the cart <../checkout_payment_shipping/cart>`;
+  :doc:`add the product to the cart <../cart>`;
 - :guilabel:`Comparison List`: adds a button to **compare** products based on their price, variant,
   etc.;
 - :guilabel:`Wishlist Button`: adds a button to **wishlist** the product.

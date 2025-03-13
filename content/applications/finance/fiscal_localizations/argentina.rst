@@ -1048,7 +1048,7 @@ Client account registration
 ***************************
 
 To configure your website for client accounts, follow the instructions in the :doc:`checkout
-<../../websites/ecommerce/checkout_payment_shipping/checkout>` documentation.
+<../../websites/ecommerce/checkout>` documentation.
 
 Automatic invoice
 *****************
@@ -1093,7 +1093,7 @@ the corresponding layout and fiscal stamps stated in the :ref:`Invoice printed r
 <argentina/invoice-printed-report>`.
 
 .. seealso::
-   :doc:`Client account creation <../../websites/ecommerce/checkout_payment_shipping/checkout>`
+   :doc:`Client account creation <../../websites/ecommerce/checkout>`
 
 Liquidity product direct sales
 ------------------------------
