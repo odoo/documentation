@@ -926,7 +926,7 @@ the following configurations for the **eCommerce** flow:
 - :doc:`../../websites/ecommerce/products`: Set the :guilabel:`Invoicing Policy` to
   :guilabel:`Ordered quantities` and define the desired :guilabel:`Customer taxes`.
 - :doc:`../payment_providers`;
-- :doc:`../../websites/ecommerce/checkout_payment_shipping/shipping`: For each shipping method, set
+- :doc:`../../websites/ecommerce/shipping`: For each shipping method, set
   the :guilabel:`Provider` field to :guilabel:`Fixed Price`. Then, set a :guilabel:`Fixed Price`
   amount greater than `0.00` (not zero), as the shipping method price is added to the invoice line.
 
