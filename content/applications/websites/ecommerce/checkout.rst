@@ -107,7 +107,7 @@ Process`. You can choose between:
 - :guilabel:`Mandatory (no guest checkout)`: customers can only checkout if they have signed-in.
 
 .. seealso::
-   - :doc:`../ecommerce_management/customer_accounts`
+   - :doc:`customer_accounts`
    - :doc:`/applications/general/users/portal`
 
 B2B access restriction
