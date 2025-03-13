@@ -56,7 +56,7 @@ the following additional options:
 
 - :guilabel:`Self Closable`: Check this box to enable the customer to terminate their subscription
   from the :doc:`customer portal
-  </applications/websites/ecommerce/ecommerce_management/customer_accounts>`.
+  </applications/websites/ecommerce/customer_accounts>`.
 - :guilabel:`Automatic Closing`: Enter the number of days after which *unpaid* subscriptions *past*
   the due date are automatically closed.
 - :guilabel:`Invoicing Journal`: Select the accounting journal in which invoices for this

@@ -8,7 +8,7 @@ customers to pay with their preferred payment methods.
 
 .. seealso::
    - :doc:`/applications/sales/sales/products_prices/ewallets_giftcards`
-   - :doc:`../checkout_payment_shipping/checkout`
+   - :doc:`checkout`
 
 Configuration
 =============
