@@ -83,8 +83,16 @@ Invoice confirmation
 
 Click :guilabel:`Confirm` when the invoice is completed. The invoice's status changes to
 :guilabel:`Posted`, and a journal entry is generated based on the invoice configuration. On
+<<<<<<< 18.0
 confirmation, Odoo assigns each invoice a unique number from a defined :doc:`sequence
 <customer_invoices/sequence>`.
+||||||| 1cb3b36704ca383856512129973796b20c1e4941
+confirmation, Odoo assigns each document a unique number from a defined
+:ref:`sequence <accounting/invoice/sequence>`.
+=======
+confirmation, Odoo assigns each invoice a unique number from a defined
+:doc:`sequence <customer_invoices/sequence>`.
+>>>>>>> 3a41fdbfd97e03a90d948bd2417cebbdeaa1a4f2
 
 .. note::
    - Once confirmed, an invoice can no longer be updated. Click :guilabel:`Reset to draft` if
