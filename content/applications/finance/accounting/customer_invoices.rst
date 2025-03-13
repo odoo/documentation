@@ -75,8 +75,8 @@ Invoice confirmation
 
 Click :guilabel:`Confirm` when the document is completed. The document's status changes to
 :guilabel:`Posted`, and a journal entry is generated based on the invoice configuration. On
-confirmation, Odoo assigns each document a unique number from a defined
-:ref:`sequence <accounting/invoice/sequence>`.
+confirmation, Odoo assigns each invoice a unique number from a defined
+:doc:`sequence <customer_invoices/sequence>`.
 
 .. note::
    - Once confirmed, an invoice can no longer be updated. Click :guilabel:`Reset to draft` if
@@ -122,81 +122,6 @@ Different actions can be set up to remind customers to pay their outstanding inv
 how much the customer is overdue. These actions are bundled into follow-up levels that trigger when
 an invoice is overdue by a certain number of days. If there are multiple overdue invoices for the
 same customer, the actions are performed on the most overdue invoice.
-
-.. _accounting/invoice/sequence:
-
-Sequence
-========
-
-The sequence that Odoo assigns to each document is a unique number made up of a prefix and a number.
-The prefix combines the journal code and the entry date and is used to group entries by period. The
-number is unique for each period and is used to identify the entry. The default sequence on customer
-invoices is INV/YYYY/number. In some specific cases,
-:ref:`resequencing <accounting/invoice/resequencing>` invoices might be necessary.
-
-.. _accounting/invoice/resequencing:
-
-Resequencing
-------------
-
-Resequencing is not possible:
-
-- When entries are before a lock date.
-- When the sequence leads to a duplicate.
-- When the :guilabel:`Invoice Date` doesn't match the date contained in the new sequence number,
-  e.g., if the sequence is changed to INV/2023/XXXXX for a document with an :guilabel:`Invoice Date`
-  of 2024.
-
-To change the invoice sequence with the structure INV/YYYY/MM/number, add `/MM` with the number of
-the month of the :guilabel:`Invoice date`. Odoo will recognize the "/" term as a month and update
-the future invoice sequence appropriately with the month of the :guilabel:`Invoice date`. For
-example, if the invoice date is January, change the sequence to `INV/2024/01/XXXXX`.
-
-In this case, if the :guilabel:`Invoice date` isn't aligned with the sequence number, a
-:guilabel:`Validation Error` message appears.
-
-.. note::
-
-   - All sequence changes are logged in the chatter to keep the information.
-   - Sequence changes also affect the format of future invoices' sequences.
-
-.. _accounting/invoice/resequencing-one-invoice:
-
-Resequencing a single invoice
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-To resequence the last confirmed invoice, click :guilabel:`Reset to Draft`, then change the
-sequence. The invoice now appears in red on the :guilabel:`Customer Invoices` list.
-
-.. _accounting/invoice/mass-resequencing:
-
-Mass-resequencing invoices
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-It can be helpful to resequence multiple invoice numbers. For example, when importing invoices from
-another invoicing or accounting system and the reference originates from the previous software,
-continuity for the current year must be maintained without restarting from the beginning.
-
-.. note::
-   This feature is only available to users with administrator or advisor access.
-
-Follow these steps to resequence invoice numbers:
-
-#. Activate the :ref:`developer mode <developer-mode>`.
-#. From the :guilabel:`Accounting Dashboard`, open the :guilabel:`Customer Invoices` journal.
-#. Select the invoices that need a new sequence.
-#. Click the :icon:`fa-cog` :guilabel:`Actions` menu and select :guilabel:`Resequence`.
-#. In the :guilabel:`Ordering` field, choose to
-
-   - :guilabel:`Keep current order`: The order of the numbers remains the same.
-   - :guilabel:`Reorder by accounting date`: The number is reordered by accounting date.
-#. Set the :guilabel:`First New Sequence`.
-#. :guilabel:`Preview Modifications` and click :guilabel:`Confirm`.
-
-The first invoice using the new sequence appears in red in the :guilabel:`Customer Invoices` list.
-
-.. image:: customer_invoices/invoice-sequencing.png
-   :alt: Resequence options window
 
 .. _accounting/invoice/reporting:
 
@@ -262,6 +187,7 @@ liabilities, and equity at a specific time.
    customer_invoices/cash_rounding
    customer_invoices/deferred_revenues
    customer_invoices/electronic_invoicing
+   customer_invoices/sequence
    customer_invoices/snailmail
    customer_invoices/epc_qr_code
    customer_invoices/incoterms
