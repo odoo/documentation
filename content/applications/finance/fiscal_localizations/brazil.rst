@@ -490,7 +490,7 @@ the government for validation.
    Credit notes are only available for electronic invoices for goods (NF-e).
 
 .. seealso::
-   :ref:`Issue a credit note <accounting/issue-credit-note>`
+   :ref:`Issue a credit note <accounting/credit_notes/issue-credit-note>`
 
 Debit Notes
 ~~~~~~~~~~~
@@ -507,7 +507,7 @@ accurately provided in the original invoice, a debit note can be issued.
    original invoice for the same or fewer products.
 
 .. seealso::
-   :ref:`Issue a debit note <accounting/issue-debit-note>`
+   :ref:`Issue a debit note <accounting/credit_notes/issue-debit-note>`
 
 Invoice cancellation
 ~~~~~~~~~~~~~~~~~~~~
