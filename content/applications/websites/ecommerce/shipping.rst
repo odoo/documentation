@@ -6,9 +6,12 @@ Odoo eCommerce allows you to configure various delivery methods, enabling custom
 their preferred option at :doc:`checkout <checkout>`. These methods include :ref:`external providers
 <ecommerce/shipping/external-provider>`, :ref:`custom options <ecommerce/shipping/custom-method>`
 such as flat-rate or free shipping, local carriers via
-:doc:`Sendcloud <../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping>`
-or ::ref:`Based on Rules <inventory/shipping/rules>`, and
+:doc:`Sendcloud </applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping>`
+or :ref:`Based on Rules <inventory/shipping/rules>`, and
 :ref:`in-store pickup <ecommerce/shipping/instore-pickup>`.
+:doc:`Sendcloud </applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping>`
+or :ref:`Based on Rules <inventory/shipping/rules>`, and :ref:`in-store pickup
+<ecommerce/shipping/instore-pickup>`.
 
 .. _ecommerce/shipping/external-provider:
 
@@ -16,12 +19,12 @@ External provider integration
 =============================
 
 To handle product delivery, you can connect your database to :doc:`third-party shipping carriers
-<../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper>`
-like :doc:`FedEx <../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex>`,
-:doc:`UPS <../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials>`,
-or :doc:`DHL <../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials>`.
+</applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper>`
+like :doc:`FedEx </applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex>`,
+:doc:`UPS </applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials>`,
+or :doc:`DHL </applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials>`.
 A shipping connector links to these providers, automating :doc:`tracking labels
-<../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels>` and shipping
+</applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels>` and shipping
 processes.
 
 To enable a third-party delivery provider, go to :menuselection:`Website --> Configuration -->
@@ -33,7 +36,7 @@ in the list to :ref:`configure it <inventory/shipping_receiving/configure-delive
 
 .. seealso::
    :doc:`Third-party shipping carriers
-   <../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper>`
+   </applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper>`
 
 .. important::
    The field used to define additional fees **must** be filled **in your third-party delivery
@@ -67,7 +70,7 @@ Custom delivery method
 Custom delivery methods must be created, for example:
 
 - to integrate delivery carriers through :doc:`Sendcloud
-  <../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping>`;
+  </applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping>`;
 - to configure specific rules (e.g., to offer free shipping for orders above a specific amount) for
   a specific provider;
 - to configure :ref:`Fixed Price <inventory/shipping/fixed>` shipping, or shipping :ref:`Based on
@@ -84,11 +87,11 @@ In the :guilabel:`Provider` field, select :ref:`Based on Rules <inventory/shippi
    Upon :ref:`configuring <inventory/shipping_receiving/configure-delivery-method>` a delivery
    method, you can:
 
-   - Restrict it :doc:`to a specific website <../../website/configuration/multi_website>` by
-     selecting it in the :guilabel:`Website` field;
+   - Restrict it :doc:`to a specific website <../website/configuration/multi_website>` by
+     selecting it in the :guilabel:`Website` field.
    - Click the :guilabel:`Test Environment` smart button to switch to the
      :guilabel:`Production Environment`. Then, click :guilabel:`Unpublished` to :guilabel:`Publish`
-     the delivery method and make it available to website visitors;
+     the delivery method and make it available to website visitors.
    - Use the :guilabel:`Availability` tab to define :ref:`conditions
      <inventory/shipping_receiving/availability>` for the delivery method based on the order's
      content or destination.
@@ -113,7 +116,7 @@ To allow customers to reserve products online and pay for/collect them in-store,
 
 .. note::
    - When the product is in stock, a location selector is displayed on the :doc:`product
-     <../products>` and :doc:`checkout <checkout>` pages. Customers cannot select a pickup location
+     <products>` and :doc:`checkout <checkout>` pages. Customers cannot select a pickup location
      if the product is out of stock at that location. The :ref:`Continue selling
      <ecommerce/products/stock-management>` option for out-of-stock products is not supported.
    - If the :ref:`Show Available Qty <ecommerce/products/stock-management>` option is enabled for a
