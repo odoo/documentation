@@ -789,34 +789,38 @@ Point of sale flow
 Other than the standard :doc:`Point of Sale configuration <../../sales/point_of_sale/configuration>`, the only requirement for the Mexican localization is the
 addition fact that each payment method needs to be configured with a journal that contains a correct :guilabel:`Payment Way`.
 
-By continuing the regular **Point of Sale** flow, by clicking the :guilabel `Customer` button you can either create or select 
-a customer. You can make sure that your customer invoicing information (such as the RFC or Fiscal Regime) is
-correct and even modify it directly from the session. 
+While selling on the **Point of Sale**, by clicking the :guilabel `Customer` button the option is prompted to either create or select 
+a customer. Here it is possible to review customer invoicing information (such as the |RFC| or :guilabel:`Fiscal Regime`) and
+even modify it directly inside the session. 
 
-After selecting a customer, you can press the :guilabel:`Invoice` button. A menu will appear for you to select the :guilabel:`Usage`
+After selecting a customer, press the :guilabel:`Invoice` button. A menu will appear to select the :guilabel:`Usage`
 and to determine if it is an invoice to public. Press confirm and then validate to complete the order.
-The PDF will be downloaded and will be able to be sent via mail to the final customer alongside the receipt. 
+The PDF will be downloaded and it is possible to send the invoice via mail to the final customer alongside the receipt. 
 
 .. tip::
-   You can create invoices from orders after creating them by going to the Order menu, selecting the document, and pressing
-   Invoice, the same menu for the usage and cfdi to public will apprear.
+   Invoices can be created from orders by going to the Order menu, selecting the document, and pressing
+   Invoice, the same menu for the :guilabel:`Usage` and :guilabel:`CFDI to Public` will apprear.
 
 .. image:: mexico/mx-pos.png
    :alt: Invoice Configuration for Point of Sale.
 
-You can also create and sign Credit notes automatically by selecting an order and after pressing Refund, making sure that
-you select again the "invoice" button.
+It is also possible to sign Credit notes automatically by selecting an order and after pressing Refund, making sure to
+select again the "invoice" button.
+
+.. note::
+   Credit notes for returned products will contain the relation type **03 - Devolución de mercancía sobre facturas o
+   traslados previos**
 
 .. important::
-   - In the Mexican localization, you cannot mix positive and negative lines in a **POS** session.
-   - If you receive a |SAT| validation error, customer will get a :doc:`Pro-Forma <../../sales/sales/invoicing/proforma>` invoice instead.
+   - In the Mexican localization, positive and negative lines in a **POS** session cannot be mixed.
+   - If a |SAT| validation error occurrs customer will get a :doc:`Pro-Forma <../../sales/sales/invoicing/proforma>` invoice instead.
 
 Self-invoicing portal
 ~~~~~~~~~~~~~~~~~~~~~
 
 If the final customer is not sure if they want to have their invoice generated at the exact moment of the sale,
-you can add the option of creating an receipt with either a QR code or a five digit code in the settings of your **Point of Sale** session
-in :menuselection:`Point of Sale --> Configuration --> Bills & Receipts` and select :guilabel:`Use QR code on ticket`,
+it is possible to add the option of creating an receipt with either a QR code or a five digit code in the settings of the **Point of Sale**
+session in :menuselection:`Point of Sale --> Configuration --> Bills & Receipts` and select :guilabel:`Use QR code on ticket`,
 :guilabel:`Generate a code on ticket` or both. 
 
 This will provide access to a special menu where they can add their fiscal information, including the *Usage* and
@@ -831,7 +835,7 @@ This will provide access to a special menu where they can add their fiscal infor
 Global invoice
 ~~~~~~~~~~~~~~
 
-As with regular sales orders, you can also create global invoices from a POS session. 
+As with regular sales orders, global invoices can also be created from a POS session. 
 
 For this, make sure not to select a customer or the invoice option in the payment menu and go to :menuselection:`Point of Sale --> Orders --> Orders`.
 There, select all the orders to invoice, click the :icon:`fa-cog` :guilabel:`(gear)` to open the actions drop-down menu and select :guilabel:`Create Global Invoice`. 
@@ -841,23 +845,19 @@ Like with sales orders, choose the correct :guilabel:`Periodicity` and press :gu
 .. image:: mexico/mx-pos-gi.png
    :alt: Global Invoice POS.
 
-This attaches an XML file in all orders, and can be downloaded by going to the :guilabel:`CFDI` tab. If needed, in the same tab you can cancel the invoice.
+This attaches an XML file in all orders, and can be downloaded by going to the :guilabel:`CFDI` tab. If needed, in the same tab it is possible to cancel the invoice.
 
-.. important::
-   In order to use this feature, you need to make sure not to use taxes *Included in the Price* to prevent rounding issues.
-
-If eventually any of the orders thar are part of the global invoice needs to be addressed to a customer, you can still send an invoice in the same view by pressing :guilabel:`Refund` and :guilabel:`Payment` to create a *refund* order and then create the corresponding invoice in the original order with a c
-
-This can also be done in the **POS** session, by going to the :guilabel:`Order` menu and pressing :guilabel:`Invoice`. It'll ask you to add a customer
-for both the credit note of the global invoice and the new invoice to be created automatically.
+If eventually any of the orders that are part of the global invoice need to be addressed to a customer, it is still possible to send an invoice by entering a
+new POS session, selecting :menuselection:`Breadcrumbs --> Orders`, changing :guilabel:`All active orders` to :guilabel:`Paid`, selecting the sale and
+clicking on the `Invoice` Button.
 
 eCommerce
 ---------
 
-The eCommerce adaptation of the Mexican Localization let's you create invoices that comply with the |SAT|
-requeriements in your **Online Store** by retreiving the customer data after the **Checkout** and even 
-allowing for the signature of **Automatic Invoices** after the payment is proccessed, as well as allowing
-the final customer to retreive their PDF & XML files for their own customer portal. 
+The eCommerce adaptation of the Mexican Localization provides and extra step to create invoices that comply with the |SAT|
+requeriements on :doc:`eCommerce  <../../websites/ecommerce>` by retreiving the customer data after the **Checkout** and even 
+allowing for the signature of **Automatic Invoices** after the payment is proccessed, as well as sending them the files via email and
+granting the customer access to retreive their PDF & XML files for their own customer portal. 
 
 eCommerce flow
 ~~~~~~~~~~~~~
