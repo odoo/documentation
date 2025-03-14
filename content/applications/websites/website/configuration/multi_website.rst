@@ -124,8 +124,8 @@ Customer accounts
 -----------------
 
 You can :doc:`allow your customers to use the same account
-<../../ecommerce/ecommerce_management/customer_accounts>` on all of your websites by enabling the
-:guilabel:`Shared Customer Accounts` check box in the website settings.
+<../../ecommerce/customer_accounts>` on all of your websites by enabling the :guilabel:`Shared
+Customer Accounts` check box in the website settings.
 
 Pricing
 -------

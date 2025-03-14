@@ -27,11 +27,11 @@ the :guilabel:`Shop - Checkout Process` section, look for :guilabel:`Add to Cart
 the options.
 
 .. note::
-   If a product has :doc:`optional products <../products/cross_upselling>`, the **dialog
+   If a product has :doc:`optional products <products/cross_upselling>`, the **dialog
    box** will always appear.
 
 .. seealso::
-   :doc:`../products/catalog`
+   :doc:`products/catalog`
 
 .. _cart/prevent-sale:
 
@@ -50,7 +50,7 @@ To do so, go to :menuselection:`Website --> Configuration --> Settings --> Shop 
 :guilabel:`Prevent Sale of Zero Priced Product`. This creates a new :guilabel:`Button url` field
 where you can enter the **redirect URL** to be used. Then, set the price of the product to `0.00`
 either from the **product's template**, or from a
-:doc:`pricelist <../../../sales/sales/products_prices/prices/pricing>`.
+:doc:`pricelist </applications/sales/sales/products_prices/prices/pricing>`.
 
 .. image:: cart/cart-contactus.png
    :align: center
