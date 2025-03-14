@@ -8,7 +8,7 @@ Helpdesk
 Odoo **Helpdesk** is a ticket-based customer support application. Multiple teams can be configured
 and managed in one dashboard, each with their own pipeline for tickets submitted by customers.
 Pipelines are organized in customizable stages that enable teams to track, prioritize, and solve
-customer issues quickly and efficiently.
+customer issues efficiently.
 
 Create a Helpdesk team
 ======================
@@ -88,16 +88,24 @@ When tickets are received, they need to be assigned to a member of the team. Thi
 manually on each individual ticket, or through :guilabel:`Automatic Assignment`. Check the
 :guilabel:`Automatic Assignment` checkbox to enable this feature for the team.
 
+.. important::
+   If an employee has time off scheduled in the **Time Off** application, they are **not** assigned
+   tickets during that time. If no employees are currently available, the system looks ahead on the
+   calendar until there is a match.
+
 .. image:: helpdesk/helpdesk-visibility-assignment.png
    :alt: View of a Helpdesk team settings page emphasizing the automatic assignment features in Odoo
          Helpdesk.
+
+Assign tickets based on workload
+********************************
 
 Select one of the following assignment methods, based on how the workload should be allocated across
 the team:
 
 - :guilabel:`Each user is assigned an equal number of tickets`: Tickets are assigned to team members
-  based on total ticket count, regardless of the number of open or closed tickets they are
-  currently assigned.
+  based on total unassigned ticket count, regardless of the number of open or closed tickets they
+  are currently assigned.
 - :guilabel:`Each user has an equal number of open tickets`: Tickets are assigned to team members
   based on how many open tickets they are currently assigned.
 
@@ -109,14 +117,22 @@ the team:
    When :guilabel:`Each user has an equal number of open tickets` is selected, it ensures a balanced
    workload among team members, as it takes the current number of active tickets into account.
 
-Finally, add the :guilabel:`Team Members` who are to be assigned tickets for this team. Leave the
+Add the :guilabel:`Team Members` who are to be assigned tickets for this team. Leave the
 field empty to include all employees who have the proper assignments and access rights configured in
 their user account settings.
 
+Assign tickets based on expertise
+*********************************
+
+To assign tickets to team members based on their expertise, and the associated tag on the tickets,
+select :guilabel:`Dispatch tickets based on tags` under :guilabel:`Automatic Assignment`. Then,
+click :guilabel:`Configure tags handled by team members`.
+
+Click :guilabel:`New` to create a new :guilabel:`Ticket Tag`, such as `Pricing` or `IT`. Select one
+or more :guilabel:`Team Members` from the drop-down list. Click :guilabel:`Save` when finished.
+
 .. important::
-   If an employee has time off scheduled in the **Time Off** application, they are **not** assigned
-   tickets during that time. If no employees are available, the system looks ahead until there is a
-   match.
+   If a ticket has no tag set, the ticket remains unassigned.
 
 .. seealso::
    - :ref:`Manage users <users/add-individual>`
@@ -148,8 +164,8 @@ tickets can be converted to *opportunities* and assigned to a sales team for fol
 .. important::
    This feature is **only** available if the :doc:`CRM <../sales/crm>` app is installed.
 
-To convert a ticket to an opportunity, first navigate to a ticket, either from a team's pipeline,
-or by navigating to :menuselection:`Helpdesk app --> Tickets` and clicking a ticket to open it.
+To convert a ticket to an opportunity, first navigate to a ticket, either from a team's pipeline, or
+by navigating to :menuselection:`Helpdesk app --> Tickets` and clicking a ticket to open it.
 
 At the top of the ticket, click the :guilabel:`Convert to Opportunity` button.
 
