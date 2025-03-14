@@ -6,7 +6,7 @@ Odoo eCommerce allows you to configure various shipping methods, enabling custom
 their preferred option at checkout. These methods include :ref:`external providers
 <ecommerce/shipping/external-provider>`, :ref:`custom options <ecommerce/shipping/custom-method>`
 such as flat-rate or free shipping, local carriers via
-:doc:`Sendcloud <../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping>`
+:doc:`Sendcloud </applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping>`
 or :ref:`Based on Rules <inventory/shipping/rules>`, and :ref:`in-store pickup
 <ecommerce/shipping/instore-pickup>`.
 
@@ -16,12 +16,12 @@ External provider integration
 =============================
 
 To handle product delivery, you can connect your database to :doc:`third-party shipping carriers
-<../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper>`
-like :doc:`FedEx <../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex>`,
-:doc:`UPS <../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials>`,
-or :doc:`DHL <../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials>`.
+</applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper>`
+like :doc:`FedEx </applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex>`,
+:doc:`UPS </applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials>`,
+or :doc:`DHL </applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials>`.
 A shipping connector links to these providers, automating :doc:`tracking labels
-<../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels>` and shipping
+</applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels>` and shipping
 processes.
 
 To enable a third-party shipping provider, go to :menuselection:`Website --> Configuration -->
@@ -33,7 +33,7 @@ in the list to :ref:`configure it <inventory/shipping_receiving/configure-delive
 
 .. seealso::
    :doc:`Third-party shipping carriers
-   <../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper>`
+   </applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper>`
 
 .. important::
    The field used to define additional fees **must** be filled **in your third-party shipping
@@ -67,7 +67,7 @@ Custom shipping method
 Custom shipping methods must be created, for example:
 
 - to integrate shipping carriers through :doc:`Sendcloud
-  <../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping>`;
+  </applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping>`;
 - to configure specific rules (e.g., to offer free shipping for orders above a specific amount) for
   a specific provider;
 - to configure :ref:`Fixed Price <inventory/shipping/fixed>` shipping or shipping
@@ -85,7 +85,7 @@ if the shiping method does not involve any specific provider.
    Upon :ref:`configuring <inventory/shipping_receiving/configure-delivery-method>` a shipping
    method, you can:
 
-   - restrict it :doc:`to a specific website <../../website/configuration/multi_website>` by
+   - restrict it :doc:`to a specific website <../website/configuration/multi_website>` by
      selecting it in :guilabel:`Website` field;
    - use the :guilabel:`Destination availability` tab to filter the delivery carriers displayed
      based on the customer's area;
