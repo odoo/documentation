@@ -82,9 +82,13 @@ Multi-company
 =============
 
 Several companies can be managed within the same database. Each company has its :doc:`chart of
-accounts <accounting/get_started/chart_of_accounts>`, which is also useful to generate consolidation
-reports. Users can access several companies but can only work on a single company's accounting at a
-time.
+accounts <accounting/get_started/chart_of_accounts>`, but it is possible to share accounts
+between them for scenarios in which such a configuration would be required. Users can then
+access several companies but only work on a single company's accounting at a time.
+
+.. seealso::
+   - :ref:`Shared Accounts Feature <coa_shared_accounts>`
+   - :doc:`Consolidation <accounting/get_started/consolidation>`
 
 Multi-currency environment
 ==========================
