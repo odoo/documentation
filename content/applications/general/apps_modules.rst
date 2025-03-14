@@ -2,73 +2,88 @@
 Apps and modules
 ================
 
-You can :ref:`install <general/install>`, :ref:`upgrade <general/upgrade>` and :ref:`uninstall
-<general/uninstall>` all apps and modules from the :menuselection:`Apps` dashboard.
+:ref:`Install <general/install>`, :ref:`upgrade <general/upgrade>` and :ref:`uninstall
+<general/uninstall>` any needed apps and modules from the :menuselection:`Apps` dashboard.
 
-By default, an *Apps* filter is applied. If you want to search for modules, click on
-*Filters* and select *Extra*.
+By default, an :guilabel:`Apps` filter is applied. To search for modules too, select
+:guilabel:`Extra` from the :icon:`fa-filter` :guilabel:`Filters`.
 
 .. image:: apps_modules/apps-search-filter.png
-   :align: center
-   :alt: Add "Extra" filter in Odoo Apps
+   :alt: Add "Extra" filter in Odoo Apps.
 
 .. warning::
-   Odoo is *not a smartphone*, and its apps shouldn't be installed or uninstalled carelessly. Apply
-   caution when adding or removing apps and modules on your database since this may impact your
-   subscription costs.
+   Adding or removing apps can significantly affect other apps in the database and modify
+   subscription costs. Consider carefully or test the changes in a staging environment before
+   proceeding.
 
-   - | **Installing or uninstalling apps and managing users is up to you.**
-     | As the administrator of your database, you are responsible for its usage, as you know best
-       how your organization works.
-   - | **Odoo apps have dependencies.**
-     | Installing some apps and features with dependencies may also install additional apps and
-       modules that are technically required, even if you won't actively use them.
-   - | **Test app installation/removal on a duplicate of your database.**
-     | This way, you can know what app dependencies may be required or what data may be erased.
+   - **Administrators manage the database**: The administrator of the database is responsible for
+     its usage, as they know best how their organization works.
+   - **Odoo apps can have dependencies**: Installing some apps and features with dependencies may
+     also install additional apps and modules that are technically required, even if database users
+     do not actively use them.
+   - **Duplicate the database to test apps**: Testing on a duplicate database reveals what app
+     dependencies may be required or what database may be erased. Learn how to duplicate an
+     :doc:`Odoo Online database <../../administration/odoo_online>` or an :doc:`Odoo On-premise
+     database <../../administration/on_premise>`.
 
 .. _general/install:
 
 Install apps and modules
 ========================
 
-Go to :menuselection:`Apps`, and click on the *Install* button of the app you want to install.
+From the main Odoo dashboard, open the :menuselection:`Apps` app, then click on the search bar to
+find the app to be installed or scroll to find it. From here, click :guilabel:`Activate` on the
+app's card.
 
 .. note::
-   If the module you are looking for is not listed, you can **update the app list**.
-
-   To do so, activate the :ref:`developer mode <developer-mode>`, then go to :menuselection:`Apps
-   --> Update Apps List` and click on *Update*.
+   If the app or module to be installed is not listed, update the app list by activating
+   :ref:`developer mode <developer-mode>`, and then go to :menuselection:`Apps --> Update Apps
+   List`, and then click :guilabel:`Update`.
 
 .. _general/upgrade:
 
 Upgrade apps and modules
 ========================
 
-On some occasions, new improvements or app features are added to :doc:`supported versions of Odoo
-</administration/supported_versions>`. To be able to use them, you must **upgrade** your app.
+With each :doc:`new Odoo release </administration/supported_versions>`, new improvements or app
+features are added. Upgrade the app to use these new improvements and features.
 
-Go to :menuselection:`Apps`, click on the *dropdown menu* of the app you want to upgrade, then on
-*Upgrade*.
+Go to :menuselection:`Apps` and then on the app to upgrade, click the :icon:`fa-ellipsis-v`
+:guilabel:`(vertical ellipsis)` icon and select :guilabel:`Upgrade`.
 
 .. _general/uninstall:
 
 Uninstall apps and modules
 ==========================
 
-Go to :menuselection:`Apps`, click on the *dropdown menu* of the app you want to uninstall, then on
-*Uninstall*.
+.. danger::
+   Uninstalling apps also deletes their database records. Test uninstalling apps on a duplicated
+   database before removing apps on a production database.
+
+.. note::
+   Some apps have dependencies, meaning that one app requires another. Therefore, uninstalling one
+   app may uninstall multiple apps and modules.
+
+Go to :menuselection:`Apps` and then on the app to uninstall, click the :icon:`fa-ellipsis-v`
+:guilabel:`(vertical ellipsis)` icon and select :guilabel:`Uninstall` to open the
+:guilabel:`Uninstall module` pop-up window.
+
+The :guilabel:`Apps to Uninstall` section lists the applications to be uninstalled.
+
+.. tip::
+   Select the :guilabel:`Show All` checkbox to display all module dependencies.
+
+The :guilabel:`Documents to Delete` section lists the database records to be deleted.
+
+To proceed with uninstalling the app, its dependencies, and all related database records, click
+:guilabel:`Uninstall`.
 
 .. image:: apps_modules/uninstall.png
-   :align: center
+   :alt: An app's card with the "Uninstall" menu option highlighted.
 
-Some apps have dependencies, meaning that one app requires another. Therefore, uninstalling one app
-may uninstall multiple apps and modules. Odoo warns you which dependent apps and modules are
-affected by it.
+.. example::
+   The **Restaurant** app requires the **Point of Sale** app to function, so uninstalling the
+   **Point of Sale** app will also uninstall the **Restaurant** app, and any related records.
 
-.. image:: apps_modules/uninstall_deps.png
-   :align: center
-
-To complete the uninstallation, click on *Confirm*.
-
-.. danger::
-   Uninstalling an app also uninstalls all its dependencies and permanently erases their data.
+   .. image:: apps_modules/uninstall-deps.png
+      :alt: A warning message showing apps that are uninstalled if the uninstallation is completed.
