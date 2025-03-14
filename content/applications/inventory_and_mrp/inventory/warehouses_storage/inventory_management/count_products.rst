@@ -269,6 +269,8 @@ desired month.
 
 Once all desired changes have been made, click :guilabel:`Save` to save all changes.
 
+.. _inventory/plan-counts:
+
 Plan big inventory counts
 -------------------------
 
