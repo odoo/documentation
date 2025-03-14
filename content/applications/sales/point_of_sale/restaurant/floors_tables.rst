@@ -39,7 +39,6 @@ settings by clicking the :icon:`oi-settings-adjust` (:guilabel:`adjust settings`
 #. Click the :icon:`fa-trash-o` (:guilabel:`delete`) icon to delete a table.
 
 .. image:: floors_tables/add-floor-backend.png
-   :scale: 75%
    :alt: window to create a table in the POS backend
 
 .. tip::
