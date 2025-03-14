@@ -1,3 +1,6 @@
+:show-content:
+:hide-page-toc:
+
 ==================
 Project management
 ==================
@@ -108,3 +111,9 @@ You can also create your own buttons to access more specific views:
    :guilabel:`Save View`.
 #. Edit the default button name if necessary, then enable :guilabel:`Shared` if you want to share
    the button with other users.
+
+.. toctree::
+   :titlesonly:
+
+   project_management/project_dashboard
+   project_management/project_profitability
