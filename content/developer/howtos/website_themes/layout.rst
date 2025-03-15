@@ -574,7 +574,7 @@ Navbar toggler
    </t>
 
 .. seealso::
-   You can add a :ref:`header overlay <header_overlay>` to position your header over the content of
+   You can add a :ref:`header overlay <website_themes/pages/theme_pages/header_overlay>` to position your header over the content of
    your page. It has to be done on each page individually.
 
 .. _website_themes/layout/footer :
