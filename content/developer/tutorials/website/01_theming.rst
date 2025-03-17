@@ -17,7 +17,7 @@ Setup
 | In this script, define the database name and install only the `website` application.
 
 .. seealso::
-   Documentation on how to :ref:`run Odoo <ANCOR setup/getting_started>`.
+   Documentation on how to :ref:`run Odoo <website_themes/setup/getting_started>`.
 
 .. _website/theming/module:
 
@@ -42,7 +42,7 @@ In your :file:`__manifest__.py` file, you can declare your module with the follo
 - depends
 
 .. seealso::
-   Documentation on :ref:`<ANCOR website_themes/theming/theme_module>`
+   Documentation on :ref:`theming/module`.
 
 .. _website/theming/odoo_variables:
 
@@ -76,7 +76,7 @@ color palette contains your specified colors.
    The font families are from `Google fonts <https://fonts.google.com/>`_.
 
 .. seealso::
-   Documentation on :ref:`<ANCOR theming/#odoo-variables>`. And see all the `primary variables
+   Documentation on :ref:`theming/module/variables`. And see all the `primary variables
    <{GITHUB_PATH}/addons/website/static/src/scss/primary_variables.scss>`_ available.
 
 .. spoiler:: Solutions
@@ -84,13 +84,13 @@ color palette contains your specified colors.
    To complete this exercise, you need to:
 
    #. Create your :file:`primary_variables.scss` file. You can find all the necessary information in
-      the `primary_variables.scss <{GITHUB_PATH}>`_ file from our example module.
+      the `primary_variables.scss <https://github.com/odoo/tutorials/tree/16.0/website_airproof/static/src/scss/primary_variables.scss>`_ file from our example module.
    #. Declare your file in the :file:`__manifest__.py` as indicated in the documentation.
    #. Install your module via your script. In our example, it looks like this:
 
    .. code-block:: xml
 
-      ./odoo-bin --addons-path=../enterprise,addons --db-filter=theming -d theming
+      ./odoo-bin --addons-path=../enterprise,addons,../myprojects --db-filter=theming -d theming
       --without-demo=all -i website_airproof --dev=xml
 
 .. _website/theming/bootstrap_variables:
@@ -124,7 +124,7 @@ Based on the Airproof design, define the following elements:
      and have not caused any errors.
 
 .. seealso::
-   - Documentation on :ref:`<ANCOR theming/#bootstrap-variables>`.
+   - Documentation on :ref:`theming/module/bootstrap`.
    - `Bootstrap overridden SCSS
      <{GITHUB_PATH}/addons/web/static/lib/bootstrap/scss/_variables.scss>`_.
    - And `Bootstrap framework <https://getbootstrap.com/docs/4.6/getting-started/introduction/>`_
@@ -157,12 +157,13 @@ to meet the following client requests:
    - | To see the effect of your presets, add **products** (*Airproof Mini*, *Airproof Robin*, 
        *Warranty*, *Charger cable*) and create **eCommerce categories** (*Warranties*, *Accessories*
        , and *Drones* with *Camera drones* and *Waterproof drones*) in the database.
-     | You will find the product images `here <>`_.
+     | You will find the product images `here 
+       <https://github.com/odoo/tutorials/tree/16.0/website_airproof/static/src/img/content>`_.
    - You will need to activate more views to replicate the Airproof design. Remember to add them
      throughout the creation of your website.
 
 .. seealso::
-   | Documentation on :ref:`<ANCOR theming.html/views>`.
+   | Documentation on :ref:`theming/module/views`.
    | To start writing your file, follow the instructions for any Odoo XML page described in
      :doc:`/developer/howtos/website_themes/layout`.
 
@@ -182,7 +183,7 @@ to meet the following client requests:
             <record id="website.header_call_to_action" model="ir.ui.view">
                <field name="active" eval="False"/>
             </record>
-        </odoo>
+         </odoo>
    #. In the manifest, add the 2 apps and declare your file.
 
       .. code-block:: xml
