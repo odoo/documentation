@@ -610,7 +610,7 @@ markup:
          Use relative links for internal URLs
          ------------------------------------
 
-         Please refer to the :ref:`<contributing/rst/hyperlinks-guidelines>` section to learn more
+         Please refer to the :ref:`contributing/rst/hyperlinks-guidelines` section to learn more
          about :ref:`relative links <contributing/rst/relative-links>`.
 
 .. _contributing/rst/doc-hyperlinks:
