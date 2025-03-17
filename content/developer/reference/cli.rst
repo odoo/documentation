@@ -92,7 +92,8 @@ Running the server
 
 .. option:: --upgrade-path <upgrade_path>
 
-   specify an additional upgrade path.
+   comma-separated list of directories from which additional upgrade scripts
+   are loaded.
 
 .. option:: --pre-upgrade-scripts <pre_upgrade_scripts>
 
