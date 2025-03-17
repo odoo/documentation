@@ -19,6 +19,10 @@ Configuration --> Settings`. In the :guilabel:`Pricing` section, tick the checkb
 .. image:: pricing/pricelist-feature-setting.png
    :alt: How the pricelist feature setting looks in Odoo Sales.
 
+.. important::
+   If there is no specific pricelist configured on a sales quotation, the pricelist that is first in
+   the sequence is applied as default.
+
 After activating and saving the :guilabel:`Pricelists` feature, the :guilabel:`Settings` page
 reloads. From here, either select the :icon:`oi-arrow-right` :guilabel:`Pricelists` link (beneath
 the :guilabel:`Pricelists` feature on the :guilabel:`Settings` page), or navigate to
@@ -29,14 +33,6 @@ modified at any time.
 
 .. image:: pricing/18-sales-pricelist-page.png
    :alt: How the pricelists page looks in Odoo Sales.
-
-.. important::
-   If there is no specific pricelist configured on a sales quotation, the :guilabel:`Default`
-   pricelist is applied.
-
-.. note::
-   The :guilabel:`Selectable` column is only applicable to Odoo **eCommerce**. This option allows
-   website visitors to choose a pricelist when shopping in your **eCommerce** website.
 
 .. note::
    In Odoo 17 (and above), you are *not required* to enter a pricelist in the :guilabel:`Pricelist`
@@ -64,6 +60,11 @@ to all companies in the database.
 
 If working in a multinational company, select the countries where this pricelist will apply under
 the :guilabel:`Country Groups` column.
+
+.. important::
+   When a country group is assigned to at least one pricelist, country groups must be assigned to
+   *all* pricelists in the database. This is because once a country group is assigned to a pricelist
+   ,Odoo checks the visitor's IP address and applies the matching country group for all pricelists.
 
 Price Rules tab
 ---------------
@@ -146,8 +147,8 @@ Recurring Prices tab
 --------------------
 
 Recurring prices are specifically used with :doc:`subscription products
-<../../../subscriptions/products>`. When configuring price rules in this tab, keep in mind that
-they will only apply to subscription products, or products with recurring prices enabled.
+<../../../subscriptions/products>`. When configuring price rules in this tab, keep in mind that they
+will only apply to subscription products, or products with recurring prices enabled.
 
 In the :guilabel:`Recurring Prices` tab, pricelists are configured with the same options as in the
 :guilabel:`Price Rules` tab, with additional columns for :guilabel:`Product Variants` add
@@ -172,7 +173,6 @@ and :guilabel:`Pricing` options. When the configurations are complete, click the
 Close` button.
 
 .. image:: pricing/time-period-popup.png
-   :align: center
    :alt: Custom time period pop-up form in Odoo Sales.
 
 Lastly, add the desired price for this recurring price rule in the :guilabel:`Recurring Price`
@@ -204,9 +204,33 @@ Ecommerce Tab
 Under the :guilabel:`Ecommerce` tab, price rules can be configured for products sold on an
 :doc:`Ecommerce website <../../../../websites/ecommerce/products>`.
 
+With pricelists, online stores can:
+
+- Display different prices for logged-in users versus guest visitors.
+- Offer region-specific pricing by assigning country groups.
+- Enable promotional discounts and loyalty-based pricing.
+- Allow customers to select from multiple pricing options.
+
+By leveraging pricelists, eCommerce businesses can implement strategic pricing models that drive
+sales while maintaining full control over pricing rules and promotions.
+
 To enable the pricelist to be visible, select the target website in the :guilabel:`Website` field.
 
-The :guilabel:`Selectable` can be enabled to allow the customer to choose this pricelist.
+.. important::
+   A pricelist is a website default for public users (users not signed in to Odoo accounts) only
+   once the pricelist is assigned to the website, and if it is not assigned a country group.
+
+The :guilabel:`Selectable` checkbox can be enabled to allow the customer to choose this pricelist
+when shopping on the website.
+
+.. important::
+   The :guilabel:`Selectable` column is only applicable to Odoo **eCommerce**.
+
+   When setting the default pricelist as :guilabel:`Selectable` in the database, no pricelists
+   appear as selectable options on the website store.
+
+   When setting multiple pricelists as :guilabel:`Selectable` in the database, the pricelists appear
+   as selectable options on the website store in the :guilabel:`Shop` page.
 
 Finally, promotional and loyalty codes can be added to the :guilabel:`E-commerce Promotional Code`
 field.
