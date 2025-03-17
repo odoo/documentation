@@ -93,6 +93,13 @@ Running the server
 
    specify an additional upgrade path.
 
+.. option:: --pre-upgrade-scripts <pre_upgrade_scripts>
+
+   comma-separated list of paths to upgrade scripts. The scripts are run before
+   loading base module when an upgrade of any module is requested. This is
+   useful to perform some actions during custom modules upgrade after a major
+   upgrade.
+
 .. option:: --load <modules>
 
    list of server-wide modules to load. Those modules are supposed to provide
