@@ -575,7 +575,7 @@ So, you can write ``if some_collection:`` instead of ``if len(some_collection):`
 - As a good developer, document your code (docstring on methods, simple
   comments for tricky part of code)
 - In additions to these guidelines, you may also find the following link
-  interesting: http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html
+  interesting: https://david.goodger.org/projects/pycon/2007/idiomatic/handout.html
   (a little bit outdated, but quite relevant)
 
 Programming in Odoo
