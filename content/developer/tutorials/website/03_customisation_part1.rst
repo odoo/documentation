@@ -87,17 +87,20 @@ and `template illustration <https://github.com/odoo/tutorials/tree/16.0/website_
    - Base yourself on the code of existing header templates that you can find in
      `odoo/addons/website/views/website_templates.xml
      <{GITHUB_PATH}/addons/website/views/website_templates.xml>`_.
+   - A good practise should be to create different files to manage your custom views and templates.
+     For example, everything concerning the general layout (header, footer...) in
+     :file:`website_templates.xml`, everything related to blog in :file:`website_blog_templates.xml`
+     , to event in :file:`website_event_templates.xml`, etc.
    - | To modify the cart icon, you can use an `XPath`.
-     | Just as you did for the custom header (in :file:`website_templates.xml`), create a file to
-       put all sale-related elements, such as the cart icon.
-     | It will be the same principle for the blog views (:file:`website_blog_templates.xml`), event
-       (:file:`website_event_templates.xml`), etc.
+     | And since this is linked to eCommerce, place it in a new file called
+       :file:`website_sale_templates.xml`.
    - Don't forget to continue making as many modifications as you can through the :file:`Bootstrap
      variables` and :file:`primary variables` (font, colors, size...). You can use them to help you
      with this exercise.
 
 .. seealso::
-   Documentation on :ref:`website_themes/layout/header` and :ref:`website_themes/layout/xpath`.
+   Documentation on :ref:`custom headers <website_themes/layout/header/custom>` and
+   :ref:`website_themes/layout/xpath`.
 
 .. spoiler:: Solutions
 
@@ -125,7 +128,7 @@ and `template illustration <https://github.com/odoo/tutorials/tree/16.0/website_
            <field name="logo" type="base64" file="website_airproof/static/src/img/content/branding/airproof-logo.svg"/>
         </record>
 
-   - declare your :file:`website_template.xml` file along with all the new ones in your
+   - declare your :file:`website_templates.xml` file along with all the new ones in your
      :file:`manifest`.
    - make the use of `primaries <https://github.com/odoo/tutorials/tree/16.0/website_airproof/static/src/scss/primary_variables.scss>`_
      like `header-template`, `navbar-font`, `header-font-size`...
@@ -156,12 +159,12 @@ You will find the `icons here <https://github.com/odoo/tutorials/tree/16.0/websi
    - For the newsletter section to work, you need to install the `website_mass_mailing` application.
 
 .. seealso::
-   Documentation on :ref:`footer <website_themes/layout/footer/custom>` and
+   Documentation on :ref:`custom footer <website_themes/layout/footer/custom>` and
    :ref:`website_themes/layout/copyright`.
 
 .. spoiler:: Solutions
    
-   Find the solution in our Airproof example for:
+   To complete this exercise, you need to:
 
    - add `mass mailing` to your depends:
      
@@ -171,7 +174,7 @@ You will find the `icons here <https://github.com/odoo/tutorials/tree/16.0/websi
          'depends': ['website_sale', 'website_sale_wishlist', 'website_blog',
          'website_mass_mailing'],
 
-   - the xml structure and add the template to the options list on
+   - find the xml structure and add the template to the options list on
      `website_template.xml <https://github.com/odoo/tutorials/tree/16.0/website_airproof/views/website_templates.xml>`_.
    - disable the default footer and enable the copyright:
      
@@ -206,8 +209,7 @@ cover section on your homepage.
 #. | Create the snippet template.
    | And add it to the list of building blocks available in the website builder.
    | Here you will find the `images <https://github.com/odoo/tutorials/tree/16.0/website_airproof/static/src/img/snippets/s_airproof_caroussel>`_
-     and `snippet <https://github.com/odoo/tutorials/tree/16.0/website_airproof/static/src/img/wbuilder/s-airproof-snippet.svg>`_
-     illustration. 
+     and `snippet illustration <https://github.com/odoo/tutorials/tree/16.0/website_airproof/static/src/img/wbuilder/s-airproof-snippet.svg>`_. 
    
    .. image:: 03_customisation_part1/custom-building-block.png
 
@@ -232,7 +234,7 @@ cover section on your homepage.
 
    #. Create your template.
    
-      - You can find all the necessary information in the
+      - You can find all the necessary information in
         `s_airproof_carousel.xml <https://github.com/odoo/tutorials/tree/16.0/website_airproof/views/snippets/s_airproof_carousel.xml>`_
         file and `s_airproof_carousel/000.scss <https://github.com/odoo/tutorials/tree/16.0/website_airproof/static/src/snippets/s_airproof_carousel/000.scss>`_
         file from our example module.
@@ -244,7 +246,7 @@ cover section on your homepage.
            :caption: ``/website_airproof/views/snippets/options.xml``
 
            <!-- Add custom snippets to the builder -->
-           <template id="snippets" inherit_id="website.snippets" name="Custom Snippets">
+           <template id="snippets" inherit_id="website.snippets" name="Airproof - Custom Snippets">
               <xpath expr="//*[@id='default_snippets']" position="before">
                  <t id="x_theme_snippets">
                     <div id="x_airproof_snippets" class="o_panel">
@@ -261,10 +263,10 @@ cover section on your homepage.
               </xpath>
            </template>
 
-   #. Add to the options. In our example, it looks like this:
+   #. Add the option to the website builder. In our example, it looks like this:
 
       .. code-block:: xml
-         :caption: ``/website_airproof/views/snippets/options.xml``
+         :caption: ``/website_airproof/views/snippets/s_airproof_carousel.xml``
 
          <!-- Add options to snippets -->
          <template id="snippet_options" inherit_id="website.snippet_options" name="Airproof -
@@ -301,16 +303,16 @@ Create a template to add in dynamic snippets
 Based on the Airproof design, create a custom template that you will apply to a product dynamic
 snippet on the homepage.
 
-#. First, create a custom template that includes the following elements:
+#. | First, create a custom template that will be added to the list of dynamic products templates.
+   | It has to include the following elements:
 
    - Add a :guilabel:`Discover more` link.
    - Add a hover effect on cards.
    - Move the navigation arrows.
 
-   .. image:: 03_customisation_part1/custom-template.png
+   You will find the `icons here <https://github.com/odoo/tutorials/tree/16.0/website_airproof/static/src/img/content/icons>`_.
 
-#. | Apply this template to the list of dynamic products templates.
-   | You will find the `icons here <https://github.com/odoo/tutorials/tree/16.0/website_airproof/static/src/img/content/icons>`_.
+   .. image:: 03_customisation_part1/custom-template.png   
 
 #. Then add a product dynamic snippet with the template you just created on the homepage.
 
@@ -325,14 +327,11 @@ snippet on the homepage.
 
    To complete this exercise, you need to:
 
-   #. Create your snippet template and add to the option list.
-   
-      - You can find all the necessary information in the
-        `options.xml <https://github.com/odoo/tutorials/tree/16.0/website_airproof/views/snippets/options.xml>`_
-        file and `caroussel.scss <https://github.com/odoo/tutorials/tree/16.0/website_airproof/static/src/scss/snippets/caroussel.scss>`_
-        file from our example module.
-      - Record your images in `images.xml <https://github.com/odoo/tutorials/tree/16.0/website_airproof/data/images.xml>`_.
+   #. Create your snippet template. You can find all the necessary information in the
+      `options.xml <https://github.com/odoo/tutorials/tree/16.0/website_airproof/views/snippets/options.xml>`_
+      file and `caroussel.scss <https://github.com/odoo/tutorials/tree/16.0/website_airproof/static/src/scss/snippets/caroussel.scss>`_
+      file from our example module.
 
-   #. Applied to a product dynamic snippet on the homepage. You can find all the necessary
+   #. Apply to a product dynamic snippet on the homepage. You can find all the necessary
       information in the `home.xml <https://github.com/odoo/tutorials/tree/16.0/website_airproof/data/pages/home.xml>`_
       file from our example module.
