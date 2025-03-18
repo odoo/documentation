@@ -81,6 +81,11 @@ localization:
      - `l10n_ec_edi_pos`
      - Includes all the technical and functional requirements to generate automatic electronic
        invoices from a POS sale.
+   * - :guilabel:`Ecuadorian Delivery Guide`
+     - `l10n_ec_edi_stock`
+     - Includes all the technical and functional requirements to generate :ref:`electronic delivery
+       guides <l10n_ec/electronic-delivery-guide>`.
+
 
 .. note::
    In some cases, such as when upgrading to a version with additional modules, it is possible that
@@ -601,6 +606,99 @@ vendor bill includes the reimbursement information.
 
 .. image:: ecuador/l10n-ec-individual-flow.png
    :alt: Expense Reimbursement.
+
+.. _l10n_ec/electronic-delivery-guide:
+
+Electronic delivery guide
+-------------------------
+
+An *Electronic Delivery Guide* in Ecuador is a legal document that supports the transportation of
+goods or merchandise from one place to another within the national territory. It is issued by the
+sender of the goods and aims to record and justify the movement of products to avoid legal or tax
+issues. It is a fiscal requirement mandated by the *Internal Revenue Service (SRI)*.
+
+.. important::
+   Make sure to :ref:`install <general/install>` the :guilabel:`Ecuadorian Delivery Guide`
+   (`l10n_ec_edi_stock`) module.
+
+Transporter
+~~~~~~~~~~~
+
+To create a new carrier (transporter), first :doc:`create a new contact <../../essentials/contacts>`
+and fill out the contact information as a :guilabel:`Company`. Make sure the following fields are
+complete:
+
+- :guilabel:`Identification Number`: select :guilabel:`RUC` as the type of identification and type
+  in their number.
+- :guilabel:`SRI Taxpayer Type`: select :guilabel:`Companies - Legal Entities` as the partner
+  position in the tax pyramid, to automate the computation of VAT withholdings.
+
+.. image:: ecuador/l10n-ec-carrier-contact.png
+   :alt: Configuration of a carrier contact.
+
+Certificate file for SRI
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+To upload the certificate file for SRI, go to :menuselection:`Accounting --> Configuration -->
+Settings` and scroll to the :guilabel:`Ecuadorian Localization` section. From here, select the
+:icon:`oi-arrow-right` :guilabel:`SRI Certificates` link and create a :guilabel:`New` certificate.
+
+Fill out the following fields on the new certificate form:
+
+- :guilabel:`Name`: the title of the certificate.
+- :guilabel:`Certificate`: use the :guilabel:`Upload your file` button to upload the SRI
+  certificate.
+- :guilabel:`Certificate Password`: include the password to decrypt the PKS file, if required.
+
+Once the certificate is created, go back to the settings using the breadcrumbs and ensure the
+certificate is selected in the :guilabel:`Certificate file for SRI` field and the :guilabel:`Use
+production servers` checkbox is ticked.
+
+Warehouse configuration
+~~~~~~~~~~~~~~~~~~~~~~~
+
+To configure a warehouse, first :doc:`create a new warehouse
+<../../inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses>`. Enter the
+following data for each warehouse that will generate an electronic delivery guide:
+
+- :guilabel:`Entity Point`: the emission entity number given from the SRI.
+- :guilabel:`Emission Point`: the emission point number given from the SRI.
+- :guilabel:`Next Delivery Guide Number`: the forwarding tracking number (editable at any time after
+  first saving the warehouse).
+
+Generate an electronic delivery guide
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Once the :doc:`delivery <../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration>`
+from inventory is created during the sales workflow, make sure the following fields are complete in
+the :guilabel:`Delivery Guide` section on the :guilabel:`Additional info` tab:
+
+- :guilabel:`Transporter`: enter the contact created earlier with the carrier's identification and
+  tax number.
+- :guilabel:`Plate Number`: enter the plate number of the vehicle.
+- :guilabel:`Transfer Reason`: by default `Goods dispatch` is set, modify as needed.
+- :guilabel:`Start date`: automatically set to the creation date (editable).
+- :guilabel:`End date`: automatically set to 15 days after the start date (editable).
+
+.. image:: ecuador/l10n-ec-delivery-guide-settings.png
+   :alt: Delivery Guide Settings.
+
+Once validated, click the :guilabel:`Generate Delivery Guide` button to obtain the following
+information:
+
+- :guilabel:`Authorization date`: date on which government authorizes the document.
+- :guilabel:`Authorization number`: EDI authorization number (same as access key).
+- :guilabel:`Delivery Guide Status`: status of the delivery guide.
+
+.. image:: ecuador/l10n-ec-authorization-number.png
+   :alt: Authorization number.
+
+An email can be sent to the contact used in the :guilabel:`Delivery Address` field to receive the
+XML and PDF - this is an optional and manual step; the :guilabel:`Send Email` button needs to be
+clicked.
+
+.. image:: ecuador/l10n-ec-delivery-guide-pdf.png
+   :alt: Delivery Guide PDF.
 
 eCommerce
 ---------
