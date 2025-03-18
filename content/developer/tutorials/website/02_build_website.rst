@@ -34,31 +34,33 @@ as content in the page.
       :caption: ``/website_airproof/data/pages/home.xml``
 
       <?xml version="1.0" encoding="utf-8"?>
-      <odoo noupdate="1">
-         <!-- Deactivate default homepage -->
-         <record id="website.homepage" model="ir.ui.view">
-            <field name="active" eval="False"/>
-         </record>
-         <!-- Home -->
-         <record id="page_home" model="website.page">
-            <field name="name">Home</field>
-            <field name="is_published" eval="True"/>
-            <field name="key">website_airproof.page_home</field>
-            <field name="url">/</field>
-            <field name="type">qweb</field>
-            <field name="arch" type="xml">
-               <t t-name="website_airproof.page_home">
-                  <t t-call="website.layout">
-                     <!-- Title -->
-                     <t t-set="additional_title">One step beyond the horizon | Airproof</t>
-                     <!-- Content -->
-                     <div id="wrap" class="oe_structure">
-                        <p>Hello</p>
-                     </div>
+      <odoo>
+         <data noupdate="1">
+            <!-- Deactivate default homepage -->
+            <record id="website.homepage" model="ir.ui.view">
+               <field name="active" eval="False"/>
+            </record>
+            <!-- Home -->
+            <record id="page_home" model="website.page">
+               <field name="name">Home</field>
+               <field name="is_published" eval="True"/>
+               <field name="key">website_airproof.page_home</field>
+               <field name="url">/</field>
+               <field name="type">qweb</field>
+               <field name="arch" type="xml">
+                  <t t-name="website_airproof.page_home">
+                     <t t-call="website.layout">
+                        <!-- Title -->
+                        <t t-set="additional_title">One step beyond the horizon | Airproof</t>
+                        <!-- Content -->
+                        <div id="wrap" class="oe_structure">
+                           <p>Hello</p>
+                        </div>
+                     </t>
                   </t>
-               </t>
-            </field>
-         </record>
+               </field>
+            </record>
+         </data>
       </odoo>
 
 .. _website/build_website/media:
@@ -77,6 +79,16 @@ website, they must be added to the image library.
 .. seealso::
    Documentation on :ref:`website_themes/media/images`.
 
+.. spoiler:: Solutions
+
+   To complete this exercise, you need to:
+
+   #. Put your PNG in the right image folder.
+   #. Create your :file:`images.xml` file. You can find all the necessary information
+      in the `images.xml <https://github.com/odoo/tutorials/tree/16.0/website_airproof/data/images.xml>`_
+      file from our example module.
+   #. Declare your file in the :file:`__manifest__.py`.
+
 .. _website/build_website/building_blocks:
 
 Add building blocks
@@ -92,8 +104,8 @@ Based on the Airproof design, add the following elements to the homepage :
 
 - Create a section with the 3 boxes using the :guilabel:`Big boxes` building block.
 
-  - Ensure that it cannot be edited via the website builder
-  - Put an opacity filter on the background image of the 3 boxes
+  - Ensure that it cannot be edited via the website builder.
+  - Put an opacity filter on the background image of the 3 boxes.
 
 - Create another section containing the title and icons.
 
@@ -109,7 +121,7 @@ and the `icons here <https://github.com/odoo/tutorials/tree/16.0/website_airproo
 
    - | Create a test page via the website builder.
      | Drag & drop the building block that interests you and give it the right design.
-     | Use the code generated via :guilabel:`Editor HTML/SCSS`.
+     | Use the code generated via :guilabel:`Editor HTML/SCSS` in the menu.
    - You can also find the original building block code in Odoo :
      :file:`odoo/addons/website/views/snippets/**.xml`.
 
@@ -145,7 +157,7 @@ The client has requested the following changes:
 
 .. seealso::
    - You can find the original mega-menu templates code in Odoo :
-     :file:`odoo/addons/website/views/snippets/**.xml`
+     :file:`odoo/addons/website/views/snippets/s_mega_menu_**.xml`
    - Documentation on :doc:`/developer/howtos/website_themes/navigation`.
 
 .. spoiler:: Solutions
