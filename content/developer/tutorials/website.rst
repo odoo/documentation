@@ -11,6 +11,14 @@ Build a website theme
   which we'll replicate.
 
 To start, you must have :doc:`installed Odoo locally <../../../administration/on_premise/source>`.
+You will also need some knowledge in:
+
+- XML
+- JavaScript (not mandatory)
+- Bootstrap 5.1.3
+- SCSS
+- QWeb (Odoo's own templating system)
+- OWL (JavaScript framework, not mandatory)
 
 | **Goal**
 | Replicate the Airproof design.
