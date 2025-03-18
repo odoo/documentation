@@ -63,7 +63,8 @@ following elements:
   later.
 
 | Restart your script to already see the application of your changes.
-| Don't forget to add the path to your :file:`manifest` and set your module as the app to install.
+| Don't forget to add the path to your :file:`manifest` in the script and set your module as the app
+  to install.
 
 To ensure your changes are applied correctly, log in to your website and verify that your
 color palette contains your specified colors.
@@ -130,6 +131,15 @@ Based on the Airproof design, define the following elements:
    - And `Bootstrap framework <https://getbootstrap.com/docs/4.6/getting-started/introduction/>`_
      official documentation.
 
+.. spoiler:: Solutions
+
+   To complete this exercise, you need to:
+
+   #. Create your :file:`bootstrap_overridden.scss` file. You can find all the necessary information
+      in the `bootstrap_overridden.scss <https://github.com/odoo/tutorials/tree/16.0/website_airproof/static/src/scss/bootstrap_overridden.scss>`_
+      file from our example module.
+   #. Declare your file in the :file:`__manifest__.py` as indicated in the documentation.
+
 .. _website/theming/presets:
 
 Define presets
@@ -153,8 +163,8 @@ to meet the following client requests:
    - | In order to find the templates to activate or not, go to the source code:
        `odoo/addons/website/views/**`.
      | For example, you can find all the templates for the header in
-       :file:`odoo/addons/website/views/website_templates.xml`.
-   - | To see the effect of your presets, add **products** (*Airproof Mini*, *Airproof Robin*, 
+       `odoo/addons/website/views/website_templates.xml <{GITHUB_PATH}/addons/website/views/website_templates.xml>`_.
+   - | To see the effect of your presets, add some **products** (*Airproof Mini*, *Airproof Robin*, 
        *Warranty*, *Charger cable*) and create **eCommerce categories** (*Warranties*, *Accessories*
        , and *Drones* with *Camera drones* and *Waterproof drones*) in the database.
      | You will find the `product images here 
