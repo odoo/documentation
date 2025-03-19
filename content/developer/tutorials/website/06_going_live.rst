@@ -14,24 +14,26 @@ is fully adapted to the Airproof design. Amazing!
 
 Now, the client wants the website translated into French.
 
-For the exercise, you will translate only the menu and the homepage carousel.
+The easiest way to do it is:
 
-- Add French to the website in the settings.
-- Enable the language switcher in the header via presets.
-- Export the French :file:`.po` file for your Airproof module.
-- Translate the required sections (using Poedit software, your code editor, or another translation
-  tool).
-- Place your translated file in the :file:`/i18n` translations folder.
+#. | Add French to the website in the settings.
+   | Enable the language switcher in the header via presets.
+#. | Translate the content of the homepage carousel through the backend.
+   | But for the menu, make the translations through the frontend.
+#. | Export the French :file:`.po` file for your Airproof module.
+   | Place it in the :file:`/i18n` translations folder.
+#. If you want you can make more translations directly by editing the :file:`.po` file. (using
+   Poedit software, your code editor, or another translation tool).
 
 .. note::
    - Be careful when using Poedit it doesn’t handle tags with style well and it generates an
      :file:`.mo` file.
-   - You view your translations, restart your service. After the first restart, you will need to
-     manually import the file to see any further updates.
+   - To see the changes made directly via the :file:`.po` file, you will need to manually import the
+     file.
 
 .. seealso::
-   Documentation on :ref:`translations <website_themes/translations/export>` and
-   :doc:`translating modules <../../howtos/translations>` for more details.
+   Documentation on :ref:`website_themes/translations/backend` and :ref:`website_themes/translations/frontend`
+   translations, and how to :ref:`website_themes/translations/export` them.
 
 .. spoiler:: Solutions
 
@@ -55,8 +57,8 @@ Before that, test the import process on a new database.
    - Manually import translations after module installation, as they won’t apply automatically.
 
 .. seealso::
-   Documentation on :doc:`going live, module import and Odoo SaaS
-   <../../howtos/website_themes/going_live>`.
+   Documentation on how to :doc:`deploy a module <../../howtos/website_themes/going_live>` on an
+   Odoo SaaS database.
 
 Conclusion
 ==========
