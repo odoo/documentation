@@ -21,9 +21,9 @@ Locate the standard Odoo template you want to modify and extend it using `XPath`
 
 Following the Airproof design, let's begin by modifying the shop view.
 
-#. First, locate the standard template : :guilabel:`website_sale` --> :guilabel:`templates.xml` -->
-   :guilabel:`id="products"`
-#. Apply all changes in :file:`website_sale_templates.xml`. Start by:
+#. First, locate the standard template in Odoo : :guilabel:`website_sale` -->
+   :guilabel:`templates.xml` --> :guilabel:`id="products"`
+#. Apply all changes in your :file:`website_sale_templates.xml` file. Start by:
 
 - Add a banner.
 - Adapt the layout of the e-commerce category filtering on the left.
@@ -66,14 +66,14 @@ Based on the Airproof design below, adapt a few elements including:
   section. (Ensure alternative products are assigned on the product in the backend for this section
   to appear.)
 - | Implement a new drop zone below product details, visible on all products.
-  | As a use case, add an `Text-Image` building block using the website builder (e.g.: “*Six reasons
-    to buy…*”).
+  | As a use case, add an `Text-Image` building block using the website builder (e.g.: See product
+    page screenshot with “*Six reasons to buy…*”).
 
 .. tip::
    - Make your modifications using presets, XPath, and SCSS. Be sure to comment your code properly
      so you can find your way around.
-   - The drop zone will be visible on all products. To create a specific dropzone per product, add a
-     new field to the product model.
+   - The drop zone will be visible on all products. To create a specific dropzone per product, you
+     need to add a new field to the product model.
 
 .. seealso::
    Documentation on :ref:`website_themes/layout/dropzone`.
