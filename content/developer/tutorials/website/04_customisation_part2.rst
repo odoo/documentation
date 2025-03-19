@@ -55,7 +55,7 @@ that can be animated and customized with different colors.
    with `illustration` in the shape class.
 
 .. seealso::
-   Documentation on how to use :ref:`background shapes <website_themes/shapes/bg/standard>`.
+   Documentation on how to use :ref:`background shapes <website_themes/shapes/bg/custom/use>`.
 
 .. spoiler:: Solutions
 
@@ -65,8 +65,8 @@ that can be animated and customized with different colors.
       <!-- Text-image block & Background shape -->
       <section class="s_text_image o_cc o_cc5 o_colored_level pt120 pb96"
       data-snippet="s_image_text" data-name="Image - Text" style="background-color: rgb(41, 128,
-      187);" data-oe-shape-data="{'shape':'illustration/airproof/waves','colors':{'c3':'#BBE1FA'}
-      'flip':['x']}">
+      187);" data-oe-shape-data="{'shape': 'illustration/airproof/waves', 'colors': {'c3': '#BBE1FA'},
+      'flip': ['x']}">
          <div class="o_we_shape o_illustration_airproof_waves o_we_flip_x" style="background-image:
          url('/web_editor/shape/illustration%2Fairproof%2Fwaves.svg?c2=%23BBE1FA');
          background-position: 100% 100%;"/>
@@ -177,7 +177,8 @@ contact form must be properly configured.
      | Drag & drop the building block that interests you and give it the right design.
      | Use the code generated through :guilabel:`Editor HTML/SCSS`.
    - You can also find the original building block code in Odoo :
-     :file:`odoo/addons/website/views/snippets/s_website_form.xml`.
+     `odoo/addons/website/views/snippets/s_website_form.xml
+     <{GITHUB_PATH}/addons/website/views/snippets/s_website_form.xml>`_.
 
 .. seealso::
    | For page creation, refer to the documentation on 
@@ -185,7 +186,7 @@ contact form must be properly configured.
      - :ref:`website_themes/pages/default`,
      - :ref:`website_themes/pages/theme_pages`,
      - :ref:`website_themes/navigation/menu`.
-     
+
    | And see documentation on :doc:`/developer/howtos/website_themes/forms`.
 
 .. spoiler:: Solutions
