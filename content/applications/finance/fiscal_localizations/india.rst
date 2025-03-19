@@ -31,6 +31,9 @@ localization:
    * - :guilabel:`Indian - Accounting Reports`
      - `l10n_in_reports`
      - :ref:`Indian tax reports <india/gstr_reports>`
+   * - :guilabel:`Indian - TDS`
+     - `l10n_in_withholding`
+     - :ref:`Indian TDS <india/tds>`
 
 .. image:: india/india-modules.png
    :alt: Indian localization modules
@@ -498,3 +501,46 @@ The :guilabel:`GSTR-3` report contains different sections:
 
    .. image:: india/gst-gstr-3-report.png
       :alt: GSTR-3 Report
+
+.. _india/tds:
+
+TDS (Tax Deducted at Source)
+============================
+
+:guilabel:`TDS` is a tax deducted at the time of making specific payments such
+as rent, professional fees, contractor payments, and other applicable transactions.
+The deducted tax is then remitted to the government by the payer, ensuring tax
+compliance and transparency.
+
+Applying TDS
+------------
+
+- Use the :guilabel:`TDS Entry` button on invoices, bills, credit notes,
+  debit notes, and payments to apply TDS.
+
+   .. image:: india/tds_entry_button.png
+      :alt: TDS Entry Button
+
+- Click the button to open a wizard and enter the required details.
+- Multiple TDS Taxes can be applied together by adding them in the wizard.
+
+   .. image:: india/tds_wizard.png
+      :alt: TDS Entry wizard
+
+- Once the TDS entry is created, a TDS stat button appears
+  on the invoice, displaying all applied TDS entries.
+
+   .. image:: india/tds_stat_button.png
+      :alt: TDS stat button
+
+- TDS entries are automatically reconciled after being created,
+  reducing manual effort and ensuring accuracy.
+
+.. note::
+   To configure the default journal for TDS entries, follow these steps:
+
+   - Navigate to :menuselection:`Accounting --> Configuration --> Settings --> Default Accounts --> India TDS Control`.
+   - Set up the default journal and account to manage TDS-related entries.
+
+      .. image:: india/tds_journal_config.png
+         :alt: TDS Journal Config
