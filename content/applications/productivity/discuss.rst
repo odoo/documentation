@@ -162,13 +162,13 @@ upper-right corner of the database header.
 .. seealso::
    - :doc:`discuss/team_communication`
    - :doc:`/applications/essentials/activities`
-   - :doc:`discuss/ice_servers`
+   - :doc:`discuss/calls`
    - :doc:`discuss/chatter`
 
 .. toctree::
    :titlesonly:
 
    discuss/team_communication
-   discuss/ice_servers
+   discuss/calls
    discuss/chatter
    discuss/canned_responses
