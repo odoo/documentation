@@ -2,113 +2,240 @@
 Articles management
 ===================
 
-Managing articles effectively is key to maximizing the value of your knowledge resources, whether
-working on a research project, studying for an exam, or building a knowledge database for your
-business. Knowledge allows you to fully manage your articles, from
-:ref:`creation <management/create>` to :ref:`removal <management/remove>`, through :ref:`sharing
-<management/share>` and :ref:`structure <management/structure>`.
+Knowledge allows for managing articles, which consists of :ref:`structuring
+<knowledge/management/structure>`, :ref:`sharing <knowledge/management/share>`,
+:ref:`exporting/importing <knowledge/management/export>`, :ref:`removing
+<knowledge/management/remove>`, and :ref:`retrieving <knowledge/management/retrieve>` them.
 
-You can find most tools to manage articles by clicking the vertical ellipsis button (:guilabel:`⋮`)
-at the right side of the top bar. From there, you can move, lock, delete, or duplicate an article.
+Click the :icon:`fa-ellipsis-v` (:guilabel:`ellipsis`) icon and select one of the generic tools
+to manage articles:
 
-.. image:: management/toolbox.png
-   :alt: Menu with tools for the management of articles
-
-Creation, sharing, and removal of articles
-==========================================
-
-.. _management/create:
-
-Creation
---------
-
-To create articles, click the :guilabel:`+ New` button on the right side of the top bar or the
-:guilabel:`+` button next to a category or another article.
+- :guilabel:`Move To`: To move an article to a different category, select its position, then click
+  :guilabel:`Move Article`.
+- :guilabel:`Lock Content`: Lock an article to prevent it from being edited. Click :guilabel:`Unlock` to
+  allow for editing once again.
+- :guilabel:`Create a Copy`: Create a copy of an article in the :guilabel:`Private` section.
+- :guilabel:`Export`: Print an article or save it as PDF.
+- :guilabel:`Send to Trash`: Delete an article.
 
 .. tip::
-   Create private articles quickly with the Alt/Option + C keyboard shortcut.
+   - Hold-click an article in the sidebar tree to drag and drop it under a preferred article or
+     category. Dragging and dropping an article to the :guilabel:`Favorites` category is not
+     possible.
+   - Press `CTRL` + `K` to open the command palette, then type `?` to search for visible articles
+     or `$` for hidden articles.
 
-.. _management/share:
+.. _knowledge/management/structure:
 
-Sharing
--------
+Article structuring
+===================
 
-You can share articles with internal or external users. To do so, open the share menu by clicking
-:guilabel:`Share` in the top-right menu of articles.
+The article structure follows a hierarchy with parent and nested articles and is reflected in the
+sidebar tree categories:
 
-Invite users
-~~~~~~~~~~~~
+- :guilabel:`Favorites`: Personal bookmarks for quick access.
+- :guilabel:`Workspace`: Articles accessible to all internal users.
+- :guilabel:`Shared`: A shared space for users with specific access rights.
+- :guilabel:`Private`: Personal drafts.
 
-To share articles with specific users (internal or external, such as a partner or a customer), click
-:guilabel:`Invite`. This opens a pop-up window in which you can choose the :guilabel:`Permission`
-:ref:`(i.e, access rights) <management/categories>` and enter the :guilabel:`Recipients`' name or
-email.
+.. note::
+   - To mark an article as a favorite and display the :guilabel:`Favorites` category, click the
+     :icon:`fa-star-o` (:guilabel:`star`) icon in the top-right menu. This action is user-specific
+     and does not affect other users.
+   - Every :ref:`created article <knowledge/articles_editing/create-article>` automatically appears
+     in the :guilabel:`Private` category.
 
-You can also restrict a specific user from accessing the article by selecting :guilabel:`No access`
-permission.
+.. _knowledge/management/share:
 
-.. image:: management/invite.png
-   :alt: pop-up window to invite users to access a Knowledge article
+Article sharing
+===============
+
+Sharing an article involves configuring :ref:`access rights <knowledge/management/rights>`,
+inviting :ref:`users <knowledge/management/invite>`, providing :ref:`online access
+<knowledge/management/share-online>`, and determining its visibility in the :ref:`sidebar tree
+<knowledge/management/structure>` and search availability in the :doc:`command palette
+</applications/essentials/keyboard_shortcuts>`.
+
+.. _knowledge/management/rights:
+
+Configure access rights
+-----------------------
+
+To open the **Share** menu and configure access rights, click :guilabel:`Share` in the top-right
+menu.
+
+.. tabs::
+   .. tab:: Default Access Rights
+
+      .. list-table::
+         :widths: 20 80
+         :header-rows: 1
+         :stub-columns: 1
+
+         * - Setting
+           - Use
+         * - :guilabel:`Can edit`
+           - Allow users to edit an article.
+         * - :guilabel:`Can read`
+           - Allow users to read an article only.
+         * - :guilabel:`No access`
+           - Prevent specific users from accessing an article whether in the sidebar tree or
+             searching in the command palette.
+
+   .. tab:: Visibility
+
+      .. list-table::
+         :widths: 20 80
+         :header-rows: 1
+         :stub-columns: 1
+
+         * - Setting
+           - Use
+         * - :guilabel:`Everyone`
+           - All users can edit or read a selected article :guilabel:`Workspace` category depending
+             on the :guilabel:`Default Access Rights`
+         * - :guilabel:`Members`
+           - Grant invited users direct access to an article, while allowing other members to find
+             it through a hidden article search.
+
+.. note::
+   - An article requires at least two invited users to share.
+   - To display the :guilabel:`Shared` category in the sidebar tree, select `No access` in the
+     :guilabel:`Default Access Rights`, invite users, add their specific access rights
+     (permissions), and click :guilabel:`Invite`. Specific access rights override default access
+     rights.
+   - To display the :guilabel:`Visibility` setting in the **Share** menu, select the `Can edit` or
+     `Can read` access right in the :guilabel:`Default Access Rights`.
+
+.. _knowledge/management/invite:
+
+Share with users
+----------------
+
+To share an article with internal or external users, follow the next steps:
+
+#. Click :guilabel:`Share` in the top-right menu to open the **Share** menu.
+#. Configure the :ref:`access rights <knowledge/management/rights>`, then click :guilabel:`Invite`.
+#. Select the preferred :guilabel:`Permission` and add users in the :guilabel:`Recipients` field.
+#. Click :guilabel:`Invite`.
+
+.. example::
+   When sharing an article with users, select `Can read` in the :guilabel:`Default Access Rights`
+   and `Members` in the :guilabel:`Visibility`. Invite users and select `Can edit` as their
+   specific access right. The invited users can access and edit the article in the
+   :guilabel:`Workspace` category. Other members must hover over the :guilabel:`Workspace`
+   category, click the :icon:`fa-eye` (:guilabel:`eye`) icon to search for it in the hidden
+   articles, and click :guilabel:`Join` to edit the article.
+
+.. _knowledge/management/share-online:
 
 Share online
-~~~~~~~~~~~~
+------------
 
-To share articles **online**, activate the :guilabel:`Share to web` button. Doing so generates a URL
-link anyone can use to view the article.
+To share an article online, click :guilabel:`Share` and activate the :guilabel:`Share to web`
+button to generate a URL link. Click the :icon:`fa-clone` (:guilabel:`copy`) icon to copy the link
+and share it with external users.
 
-Additionally, the share menu displays the default permission for internal members along with all the
-users who have been granted specific permission.
+.. note::
+   If an article contains :ref:`inserted views <knowledge/articles_editing/views>`, users with the
+   link will not see them unless they can access the inserted content.
 
-.. image:: management/share-menu.png
-   :alt: Sharing menu with URL for online sharing and the list of members.
+.. _knowledge/management/remove:
 
-.. _management/remove:
+Article removal
+===============
 
-Removal
--------
+Removing an article involves deleting or archiving it:
 
-To remove an article, you can either **delete** it or **archive** it.
+- **Delete an article**
 
-To delete an article, open it and click the vertical ellipsis button :menuselection:`(⋮) -->
-Delete`. The article is moved to the trash for 30 days before being permanently deleted. To restore
-it, click :guilabel:`Open the Trash`, select the article, and click :guilabel:`Restore`.
+Select an article in the sidebar tree, and click the :icon:`fa-ellipsis-v` (:guilabel:`ellipsis`)
+icon, then :guilabel:`Send to Trash`. The article is moved to the trash for 30 days before being
+permanently deleted.
 
-To archive articles, click :guilabel:`Search`, select the article(s), and click
-:menuselection:`Action --> Archive --> Archive`. Archived articles are hidden from the search menu.
-To retrieve an archived article, add a custom filter to display them (:menuselection:`Search -->
-Filters --> Add Custom Filter`, and set :guilabel:`Active` as :guilabel:`is No`). Then, select the
-article(s) and go to :menuselection:`Action --> Unarchive`.
+Alternatively, click :guilabel:`Search` in the top-left menu. Select an article and click
+:menuselection:`Actions --> Delete --> Delete` to remove the article permanently.
 
-.. _management/structure:
+- **Archive an article**
 
-Structure of articles
+Click :guilabel:`Search`, select an article, and click :menuselection:`Actions --> Archive -->
+Archive`.
+
+.. note::
+   - By default, archived articles have a 30-day expiration date before being permanently deleted.
+   - Archived articles are hidden in the search menu.
+
+.. _knowledge/management/export:
+
+Article export/import
 =====================
 
-Articles are organized into a hierarchical structure wherein the article on top is a parent article,
-and those underneath are called nested articles. This structure allows the grouping of related
-articles.
+Click :guilabel:`Search` to access the list of all articles. Select an article, then click
+:menuselection:`Actions --> Export` to :ref:`export <essentials/export_import_data/export-data>` it.
+Otherwise, click the :icon:`fa-cog` (:guilabel:`gear`) icon and :guilabel:`Import records` to
+:ref:`import <essentials/export_import_data/import-data>` an article.
 
-To establish this hierarchy, create new articles by clicking the :guilabel:`+` button next to the
-parent-to-be article, or move existing articles by either dragging and dropping them under the
-parent-to-be or by clicking the vertical ellipsis button (:guilabel:`⋮`), clicking :guilabel:`Move
-To` on the toolbox and selecting the article to use as a parent.
+.. note::
+   - Only exported Knowledge articles are importable into Knowledge.
+   - Imported articles become hidden articles. Once retrieved, they appear in the
+     :guilabel:`Workspace` by default and retain their previously configured access rights.
 
-.. _management/categories:
+.. _knowledge/management/retrieve:
 
-Categories
-----------
+Article retrieval
+=================
 
-Additionally, articles are divided into four categories that can be found on the left sidebar. These
-categories give articles default **access rights**.
+Retrieving Knowledge articles consists of :ref:`restoring <knowledge/management/restore>` or
+:ref:`accessing <knowledge/management/access>` them from various Odoo apps.
 
-- :guilabel:`Favorites`: You can set any article you can access as a favorite. To do so, click the
-  star-shaped icon (:guilabel:`★`) in the top-right menu of articles. Marking articles as
-  **favorites** is user-specific and does not affect other users.
-- :guilabel:`Workspace`: Articles displayed in that category are available to all internal users.
-  These users have the right to read, modify or share these articles.
-- :guilabel:`Shared`: Articles displayed in that category are those you shared with internal users,
-  external users, or shared with you.
-- :guilabel:`Private`: Articles displayed in that category are only available to you.
+.. _knowledge/management/restore:
 
-.. image:: management/left-sidebar-cat.png
-   :alt: Categories displayed in the left sidebar of Odoo Knowledge
+Restore articles
+----------------
+
+Deleted articles
+~~~~~~~~~~~~~~~~
+
+To restore a deleted article, click :guilabel:`Open the Trash` at the bottom of the sidebar tree,
+select an article, and click :guilabel:`Restore`.
+
+Alternatively, click :guilabel:`Search` in the top-left menu. In the search bar, click
+:menuselection:`Filters --> Trashed`. Click the article, then :guilabel:`Restore`.
+
+Archived articles
+~~~~~~~~~~~~~~~~~
+
+To restore an archived article, click :guilabel:`Search`. In the search bar, click
+:menuselection:`Filters --> Archived`. Select an article and go to :menuselection:`Action -->
+Unarchive`.
+
+Version history
+~~~~~~~~~~~~~~~
+
+To restore a previous version of an article, select it in the sidebar tree and click the
+:icon:`fa-history` (:guilabel:`history`) icon in the top-right menu to open the version history.
+Select a version and click :guilabel:`Restore history`.
+
+.. note::
+   In the version history, the :guilabel:`Content` tab shows the selected version, while the
+   :guilabel:`Comparison` tab displays the differences between an article's previous and current
+   version.
+
+.. _knowledge/management/access:
+
+Access articles from various apps
+---------------------------------
+
+Knowledge articles are accessible from the :ref:`form view <studio/views/general/form>` of various
+apps. Click the :icon:`fa-bookmark` :guilabel:`(Knowledge)` icon in the top right corner to open
+the command palette, then perform one of the following methods:
+
+- :guilabel:`Search for an article`: start typing the text to execute a semantic search that
+  identifies relevant article information.
+- :icon:`fa-arrows-alt` :guilabel:`Advanced Search`: after typing the text in the search bar, click
+  :guilabel:`Advanced Search` to perform a parametric search with options to filter, group, or save
+  articles as favorites.
+
+.. note::
+  The :icon:`fa-bookmark` :guilabel:`(Knowledge)` icon is only visible if the Knowledge app is
+  installed.
