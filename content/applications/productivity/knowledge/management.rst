@@ -1,114 +1,214 @@
-===================
-Articles management
-===================
+==================
+Article management
+==================
 
-Managing articles effectively is key to maximizing the value of your knowledge resources, whether
-working on a research project, studying for an exam, or building a knowledge database for your
-business. Knowledge allows you to fully manage your articles, from
-:ref:`creation <management/create>` to :ref:`removal <management/remove>`, through :ref:`sharing
-<management/share>` and :ref:`structure <management/structure>`.
+Knowledge allows for managing articles, which consists of :ref:`structuring
+<knowledge/management/structure>`, :ref:`sharing <knowledge/management/share>`, :ref:`removing
+<knowledge/management/remove>`, and :ref:`retrieving <knowledge/management/retrieve>` them.
 
-You can find most tools to manage articles by clicking the vertical ellipsis button (:guilabel:`⋮`)
-at the right side of the top bar. From there, you can move, lock, delete, or duplicate an article.
+Basic management
+================
 
-.. image:: management/toolbox.png
-   :alt: Menu with tools for the management of articles
+Click the :icon:`fa-ellipsis-v` (:guilabel:`ellipsis`) icon and select one of the following actions
+for basic article management:
 
-Creation, sharing, and removal of articles
-==========================================
+- :guilabel:`Move To`: Select the article to move under a category or another article, then click
+  :guilabel:`Move Article`.
+- :guilabel:`Lock Content`: Lock the article to stop edits. Click :guilabel:`Unlock` to edit again.
+- :guilabel:`Create a Copy`: Copy the article under the :guilabel:`Private` section.
+- :guilabel:`Export`: Open the browser's print function.
+- :guilabel:`Send to Trash`: Move the article to the trash.
 
-.. _management/create:
+.. note::
+   The following actions only apply to nested articles and :ref:`article items
+   <knowledge/articles_editing/commands>`:
 
-Creation
---------
-
-To create articles, click the :guilabel:`+ New` button on the right side of the top bar or the
-:guilabel:`+` button next to a category or another article.
+   - :guilabel:`Convert into Article Item`: Convert the nested article into an article item.
+   - :guilabel:`Convert into Article`: Convert the article item into a nested article.
 
 .. tip::
-   Create private articles quickly with the Alt/Option + C keyboard shortcut.
+   - Move an article directly from the sidebar tree by dragging and dropping it under another
+     article or category.
+   - Press `CTRL` / `CMD` + `K` to open the command palette, then type `?` to search for visible
+     articles or `$` for :ref:`hidden articles <knowledge/management/visibility>`. Alternatively,
+     hover over the :guilabel:`Workspace` category and click the :icon:`fa-eye` (:guilabel:`eye`)
+     icon to find hidden articles.
 
-.. _management/share:
+.. _knowledge/management/structure:
+
+Structuring
+===========
+
+The article structure follows a hierarchy with parent and nested articles organized within the
+following categories:
+
+- :guilabel:`Favorites` displays all articles marked as favorites.
+- :guilabel:`Workspace` displays articles accessible to all internal users.
+- :guilabel:`Shared` displays articles shared with specific users.
+- :guilabel:`Private` displays personal articles.
+
+.. note::
+   - To mark an article as a favorite and display the :guilabel:`Favorites` category, click the
+     :icon:`fa-star-o` (:guilabel:`star`) icon in the top-right menu.
+   - Nested articles inherit the access rights of their parent article.
+
+.. _knowledge/management/share:
 
 Sharing
--------
+=======
 
-You can share articles with internal or external users. To do so, open the share menu by clicking
-:guilabel:`Share` in the top-right menu of articles.
+Sharing an article involves configuring :ref:`access rights <knowledge/management/rights>`,
+inviting :ref:`users <knowledge/management/invite>`, providing :ref:`online access
+<knowledge/management/share-online>`, and determining its visibility in the :ref:`sidebar tree
+<knowledge/management/structure>`.
 
-Invite users
-~~~~~~~~~~~~
+Articles listed under a category in the sidebar tree are visible. Articles that certain users must
+search for through the command palette due to restricted access rights are hidden.
 
-To share articles with specific users (internal or external, such as a partner or a customer), click
-:guilabel:`Invite`. This opens a pop-up window in which you can choose the :guilabel:`Permission`
-:ref:`(i.e, access rights) <management/categories>` and enter the :guilabel:`Recipients`' name or
-email.
+.. _knowledge/management/rights:
 
-You can also restrict a specific user from accessing the article by selecting :guilabel:`No access`
-permission.
+Configure access rights
+-----------------------
 
-.. image:: management/invite.png
-   :alt: pop-up window to invite users to access a Knowledge article
+Click :guilabel:`Share` in the top-right menu to configure access rights.
 
-Share online
-~~~~~~~~~~~~
+Default access rights
+~~~~~~~~~~~~~~~~~~~~~
 
-To share articles **online**, activate the :guilabel:`Share to web` button. Doing so generates a URL
-link anyone can use to view the article.
+.. tabs::
 
-Additionally, the share menu displays the default permission for internal members along with all the
-users who have been granted specific permission.
+   .. list-table::
+      :widths: 20 80
+      :header-rows: 1
+      :stub-columns: 1
 
-.. image:: management/share-menu.png
-   :alt: Sharing menu with URL for online sharing and the list of members.
+      * - Setting
+        - Use
+      * - :guilabel:`Can edit`
+        - Allow all internal users to edit the article.
+      * - :guilabel:`Can read`
+        - Allow all internal users to read the article only.
+      * - :guilabel:`No access`
+        - Prevent all users from accessing the article in the sidebar tree or searching in the
+          command palette.
 
-.. _management/remove:
+.. _knowledge/management/visibility:
+
+Visibility
+~~~~~~~~~~
+
+.. tabs::
+
+   .. list-table::
+      :widths: 20 80
+      :header-rows: 1
+      :stub-columns: 1
+
+      * - Setting
+        - Use
+      * - :guilabel:`Everyone`
+        - The article is visible in the sidebar tree to all internal users.
+      * - :guilabel:`Members`
+        - The article is only visible in the sidebar tree to :ref:`invited users
+          <knowledge/management/invite>`, while other users can find it using the hidden article
+          search by pressing `CTRL` / `CMD` + `K` and typing `$`.
+
+.. note::
+   - The :guilabel:`Default Access Rights` apply to all internal users except invited users;
+     specific access rights override default access rights.
+   - Selecting `Can edit` or `Can read` in the :guilabel:`Default Access Rights` moves the article
+     to the :guilabel:`Workspace` category, while selecting `No access` moves it to the
+     :guilabel:`Private` category if it is not shared with anyone.
+   - The :guilabel:`Visibility` setting only applies to :guilabel:`Workspace` articles.
+
+.. _knowledge/management/invite:
+
+Invite specific users
+---------------------
+
+To grant specific internal or portal users access to a private article or to share a
+:guilabel:`Workspace` article with a portal user, follow these steps:
+
+#. Click :guilabel:`Share` in the top-right menu.
+#. Click :guilabel:`Invite`.
+#. Select the preferred :guilabel:`Permission` and add users in the :guilabel:`Recipients` field.
+#. Click :guilabel:`Invite`.
+
+.. _knowledge/management/share-online:
+
+Generate article URL
+--------------------
+
+Click :guilabel:`Share` and activate the :guilabel:`Share to web` toggle to generate a URL.
+Click the :icon:`fa-clone` (:guilabel:`copy`) icon to copy the article's URL.
+
+.. note::
+   - If an article contains :ref:`inserted views <knowledge/articles_editing/views>`, users with
+     the URL do not see them unless they can access the inserted content.
+   - Having the Website app is necessary to share an article's URL.
+
+.. _knowledge/management/remove:
 
 Removal
--------
+=======
 
-To remove an article, you can either **delete** it or **archive** it.
+Removing an article involves deleting or archiving it.
 
-To delete an article, open it and click the vertical ellipsis button :menuselection:`(⋮) -->
-Delete`. The article is moved to the trash for 30 days before being permanently deleted. To restore
-it, click :guilabel:`Open the Trash`, select the article, and click :guilabel:`Restore`.
+Delete an article
+-----------------
 
-To archive articles, click :guilabel:`Search`, select the article(s), and click
-:menuselection:`Action --> Archive --> Archive`. Archived articles are hidden from the search menu.
-To retrieve an archived article, add a custom filter to display them (:menuselection:`Search -->
-Filters --> Add Custom Filter`, and set :guilabel:`Active` as :guilabel:`is No`). Then, select the
-article(s) and go to :menuselection:`Action --> Unarchive`.
+Select an article in the sidebar tree and click the :icon:`fa-ellipsis-v` (:guilabel:`ellipsis`)
+icon, then :guilabel:`Send to Trash`. The article is moved to the trash for 30 days before being
+permanently deleted.
 
-.. _management/structure:
+To delete an article directly, click :guilabel:`Search` in the top-left menu, select an article,
+and click :menuselection:`Actions --> Delete --> Delete` to remove the article permanently.
 
-Structure of articles
-=====================
+.. note::
+   To restore a trashed article, click :guilabel:`Open the Trash` at the bottom of the sidebar
+   tree, select an article, and click :guilabel:`Restore`. Alternatively, click :guilabel:`Search`
+   in the top-left menu. In the search bar, click :menuselection:`Filters --> Trashed`. Click the
+   article, then :guilabel:`Restore`.
 
-Articles are organized into a hierarchical structure wherein the article on top is a parent article,
-and those underneath are called nested articles. This structure allows the grouping of related
-articles.
+Archive an article
+------------------
 
-To establish this hierarchy, create new articles by clicking the :guilabel:`+` button next to the
-parent-to-be article, or move existing articles by either dragging and dropping them under the
-parent-to-be or by clicking the vertical ellipsis button (:guilabel:`⋮`), clicking :guilabel:`Move
-To` on the toolbox and selecting the article to use as a parent.
+Click :guilabel:`Search`, select an article, and click :menuselection:`Actions --> Archive -->
+Archive`.
 
-.. _management/categories:
+.. note::
+   To restore an archived article, click :guilabel:`Search`. In the search bar, click
+   :menuselection:`Filters --> Archived`. Select the article and go to :menuselection:`Actions -->
+   Unarchive`.
 
-Categories
-----------
+.. _knowledge/management/retrieve:
 
-Additionally, articles are divided into four categories that can be found on the left sidebar. These
-categories give articles default **access rights**.
+Retrieval
+=========
 
-- :guilabel:`Favorites`: You can set any article you can access as a favorite. To do so, click the
-  star-shaped icon (:guilabel:`★`) in the top-right menu of articles. Marking articles as
-  **favorites** is user-specific and does not affect other users.
-- :guilabel:`Workspace`: Articles displayed in that category are available to all internal users.
-  These users have the right to read, modify or share these articles.
-- :guilabel:`Shared`: Articles displayed in that category are those you shared with internal users,
-  external users, or shared with you.
-- :guilabel:`Private`: Articles displayed in that category are only available to you.
+Retrieving Knowledge articles consists of accessing them from various Odoo apps or restoring
+previous versions.
 
-.. image:: management/left-sidebar-cat.png
-   :alt: Categories displayed in the left sidebar of Odoo Knowledge
+Access articles from various apps
+---------------------------------
+
+Knowledge articles are accessible from the :ref:`form view <studio/views/general/form>` of various
+apps. Click the :icon:`fa-bookmark` :guilabel:`(Knowledge)` icon in the top right corner to open
+the command palette, then choose one of the following search methods:
+
+- :guilabel:`Search for an article`: start typing the text to execute a semantic search that
+  identifies relevant article information.
+- :guilabel:`Advanced Search`: after typing the text in the search bar, click :guilabel:`Advanced
+  Search` to perform a parametric search with options to filter, group, or save articles.
+
+Version history
+---------------
+
+To retrieve a previous version of an article, select it in the sidebar tree and click the
+:icon:`fa-history` (:guilabel:`history`) icon in the top-right menu to open the version history.
+Select a version and click :guilabel:`Restore history`.
+
+.. note::
+   In the version history, the :guilabel:`Content` tab shows the selected version, while the
+   :guilabel:`Comparison` tab displays the differences between the article's previous and current
+   versions.
