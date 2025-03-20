@@ -2,6 +2,8 @@
 Article creation and editing
 ============================
 
+.. _knowledge/articles_editing/create-article:
+
 Article creation
 ================
 
@@ -117,6 +119,8 @@ To add a title emoji to the article's name and header:
 
 - Alternatively, click the :icon:`fa-file-text-o` :guilabel:`(page)` icon next to the article's
   name in the sidebar or the top bar and select the preferred emoji.
+
+.. _knowledge/articles_editing/views:
 
 Views and links from other apps
 -------------------------------
