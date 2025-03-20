@@ -175,6 +175,7 @@ The specific instructions depend on your DNS hosting service.
    - `OVHcloud: Add a new DNS record <https://docs.ovh.com/us/en/domains/web_hosting_how_to_edit_my_dns_zone/#add-a-new-dns-record>`_
    - `Cloudflare: Manage DNS records
      <https://support.cloudflare.com/hc/en-us/articles/360019093151>`_
+   - `Hostinger: How to Point a Domain to Odoo <https://support.hostinger.com/en/articles/7733038-how-to-point-a-domain-to-odoo>`_
 
 .. important::
    Odoo only supports subdomains. To use your naked domain name :dfn:`(a domain name without any
