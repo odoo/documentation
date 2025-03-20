@@ -253,6 +253,25 @@ fields that can be configured.
   confirmation window appears, as well.
 - :guilabel:`Analytic Account`: Select an analytic account to apply to this customer/quotation.
 
+When :doc:`Debug mode is enabled <../../../general/developer_mode>`, additional fields appear in
+this section:
+
+- :guilabel:`Invoicing Journal`: The sales order invoices in the journal selected. When no selection
+  is made, the sales journal with the lowest sequence is used.
+- :guilabel:`Invoice Status`: This field **only** appears when the quotation is confirmed, and
+  becomes a sales order. One of the following options appear in this field, depending on its status:
+
+  - :guilabel:`Nothing to Invoice`: default value if other conditions are not met, or if the sales
+    order is still a quotation. For example, when the ordered quantity is more than the invoiced
+    quantity, but the *Invoicing Policy* of the product is set to *Based on Delivered Quantity
+    (Manual)* or *Delivered quantities*, and it has not been delivered yet.
+  - :guilabel:`To Invoice`: if invoiced quantity is not equal to what should be invoiced, which
+    depends on the *Invoicing Policy* set on the product form. For example, when the ordered
+    quantity is more than the invoiced quantity, or vice versa.
+  - :guilabel:`Upselling Opportunity`: **only** possible for a product with an *Invoicing Policy*
+    set to *Ordered quantities*, and more than the expected amount was delivered.
+  - :guilabel:`Fully Invoiced`: the quantity invoiced is equal to the ordered quantity.
+
 Tracking section
 ~~~~~~~~~~~~~~~~
 
