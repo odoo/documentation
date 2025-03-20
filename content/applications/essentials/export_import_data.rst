@@ -13,7 +13,7 @@ modification. This document covers the export and import of data into and out of
    can occur with large exports, or in cases where the import file is too large. To circumvent this
    limitation surrounding the size of the records, process exports or imports in smaller batches.
 
-.. _export-data:
+.. _essentials/export_import_data/export-data:
 
 Export data from Odoo
 =====================
@@ -66,7 +66,7 @@ several options for the data to export:
    in the export user interface is equal to *parent_id* (external identifier). This is helpful
    because then, the only data exported is what should be modified and re-imported.
 
-.. _import-data:
+.. _essentials/export_import_data/import-data:
 
 Import data into Odoo
 =====================
@@ -534,14 +534,15 @@ that are able to be imported.
    unless it is manually added, but it is still included in the export. However, if the :guilabel:`I
    want to update data (import-compatible export)` checkbox is ticked, it is included in the export.
 
-Select the required fields to be included in the export using the :ref:`options <export-data>` on
-the pop-up window, then click :guilabel:`Export`.
+Select the required fields to be included in the export using the :ref:`options
+<essentials/export_import_data/export-data>` on the pop-up window, then click :guilabel:`Export`.
 
 Import updated data
 -------------------
 
 After exporting, make any necessary changes to the data file. When the file is ready, it can be
-:ref:`imported <import-data>` by following the same process as a normal data import.
+:ref:`imported <essentials/export_import_data/import-data>` by following the same process as a
+normal data import.
 
 .. danger::
    When updating data, it is extremely important that the *External ID* remain consistent, as
