@@ -249,6 +249,9 @@ Some attributes are available on all fields, here are the most common ones:
 :attr:`~odoo.fields.Field.required` (``bool``, default: ``False``)
     If ``True``, the field can not be empty. It must either have a default
     value or always be given a value when creating a record.
+..note::
+   For existing records, a boolean field defaulting to ``False`` signifies a null boolean state.
+   So sql constraints needs to use ``is not True`` instead of ``is False``.
 :attr:`~odoo.fields.Field.help` (``str``, default: ``''``)
     Provides long-form help tooltip for users in the UI.
 :attr:`~odoo.fields.Field.index` (``bool``, default: ``False``)
