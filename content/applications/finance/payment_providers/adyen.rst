@@ -30,8 +30,7 @@ Odoo needs your **API Credentials** to connect with your Adyen account, which co
 - :ref:`API Key <adyen/api_and_client_keys>`: The API key of the webservice user.
 - :ref:`Client Key <adyen/api_and_client_keys>`: The client key of the webservice user.
 - :ref:`HMAC Key <adyen/hmac_key>`: The HMAC key of the webhook.
-- :ref:`Checkout API URL <adyen/urls>`: The base URL for the Checkout API endpoints.
-- :ref:`Recurring API URL <adyen/urls>`: The base URL for the Recurring API endpoints.
+- :ref:`API URL Prefix<adyen/urls>`: The base URL for the API endpoints.
 
 You can copy your credentials from your Adyen account, and paste them in the related fields under
 the **Credentials** tab.
@@ -106,18 +105,12 @@ URLs, proceed as follows:
      :alt: Copy the prefix for the Adyen APIs
 
 #. In Odoo, :ref:`navigate to the payment provider Adyen <payment_providers/add_new>`.
-#. In the :guilabel:`Checkout API URL` field, enter the following URL and replace `yourprefix` with
-   the prefix you previously saved:
-   `https://yourprefix-checkout-live.adyenpayments.com/checkout`
-#. In the :guilabel:`Recurring API URL` field, enter the following URL and replace `yourprefix` with
-   the prefix you previously saved:
-   `https://yourprefix-pal-live.adyenpayments.com/pal/servlet/Recurring`.
+#. In the :guilabel:`API URL Prefix` field, enter the prefix you previously saved.
 
 .. note::
-   If you are trying Adyen as a test, you can use the following URLs instead:
+   If you are trying Adyen as a test, you can use the following Prefix instead:
 
-   - :guilabel:`Checkout API URL`: `https://checkout-test.adyen.com`
-   - :guilabel:`Recurring API URL`: `https://pal-test.adyen.com/pal/servlet/Recurring`
+   - :guilabel:`API URL Prefix`: `checkout-test`
 
 Adyen Account
 -------------
