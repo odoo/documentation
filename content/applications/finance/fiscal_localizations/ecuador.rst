@@ -602,6 +602,84 @@ vendor bill includes the reimbursement information.
 .. image:: ecuador/l10n-ec-individual-flow.png
    :alt: Expense Reimbursement.
 
+Electronic Delivery Guide 
+-----------------------------
+
+An *Electronic Delivery Guide* in Ecuador is a legal document that supports the transportation of goods or 
+merchandise from one place to another within the national territory. It is issued by the sender of the goods 
+and aims to record and justify the movement of products to avoid legal or tax issues. It is a fiscal requirement 
+mandated by the *Internal Revenue Service (SRI)*.
+
+Configuration
+*******
+Download New Module: Install the new module: **l10n_ec_edi_stock**.
+
+.. image:: l10n-ec-Delivery-Guide-Module.png
+   :alt: Delivery Guide Module. 
+
+Transporter Creation
+*******
+To create a new carrier, navigate to **Contacts** ‣ **Create** and fill out the contact information.
+For the company address, make sure the following fields are complete:
+
+- :guilabel:`Tax ID (RUC)`
+- :guilabel:`Tax ID Number`
+
+.. image:: l10n-ec-Transporter.png
+   :alt: Configuration of Transporter.
+ 
+Certificate File for SRI 
+*******
+Ensure the certificate file is uploaded for SRI and the checkbox for production servers.
+
+.. image:: l10n-ec-certificate-SRI.png
+   :alt: SRI certificate.
+
+Warehouse Configuration
+*******
+Navigate to **Inventory** ‣ **Configuration** ‣ ** Warehouse Management** ‣ **Warehouses**.
+Enter the following data for each warehouse that will generate an Electronic Delivery Guide: 
+
+- :guilabel:`Entity Point`
+- :guilabel:`Emission Point`
+- :guilabel:`Next Delivery Guide Number`(editable at any time).
+
+.. image::l10n-ec-Delivery-Guide-warehouse-settings.png
+   :alt: Delivery Guide Warehouse Settings.
+
+Generating an Electronic Delivery Guide
+*******
+Once the delivery from inventory is created during the sales workflow, make sure you complete the 
+*Delivery Guide* fields on the *Additional info* tab section:
+
+- :guilabel:`Transporter`: Enter the already created contact with the carrier's identification and tax number.
+- Enter the :guilabel:`license`plate number.
+- :guilabel:`Transfer Reason`: By default, it is set to "Goods dispatch," but it can be modified.
+- :guilabel:`Start date`: Automatically set to the creation date (editable).
+- :guilabel:`End date`: Automatically set to 15 days after the start date (editable).
+
+.. image::l10n-ec-Delivery-Guide-Settings.png
+   :alt: Delivery Guide Settings.
+
+.. image:l10n-ec-OUT.png
+   :alt: Delivery Operation.
+
+Upon processing the **Generate Delivery Guide** button, the following information is obtained:
+- :guilabel:`Authorization date`
+- :guilabel:`Authorization number`
+- :guilabel:`Status of the delivery guide`
+
+
+.. image:l10n-ec-Authorization-number.png
+   :alt: Authorization number.
+
+An email can be sent to the contact used in the "Delivery Address" to receive the XML and PDF - 
+this is an optional and manual step; the send by email button needs to be clicked.
+
+.. image:l10n-ec-Delivery-Guide-PDF.png
+   :alt: Delivery Guide PDF.
+
+
 eCommerce
 ---------
 
