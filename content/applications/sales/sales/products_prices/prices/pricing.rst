@@ -280,6 +280,8 @@ discount for each product line and the new price will automatically be calculate
    Positive values for :guilabel:`Disc.%` will apply a *discount*, while negative values can be
    used to *increase* the price.
 
+.. _sales/pricing/discount-button:
+
 Discount button
 ---------------
 

@@ -90,6 +90,7 @@ available on Odoo.
 - Israel - Accounting
 - :doc:`Italy - Accounting <fiscal_localizations/italy>`
 - Japan - Accounting
+- :doc:`Jordan - Accounting <fiscal_localizations/jordan>`
 - :doc:`Kenya - Accounting <fiscal_localizations/kenya>`
 - Lithuania - Accounting
 - :doc:`Luxembourg - Accounting <fiscal_localizations/luxembourg>`
@@ -146,6 +147,7 @@ available on Odoo.
    fiscal_localizations/india
    fiscal_localizations/indonesia
    fiscal_localizations/italy
+   fiscal_localizations/jordan
    fiscal_localizations/kenya
    fiscal_localizations/luxembourg
    fiscal_localizations/malaysia
