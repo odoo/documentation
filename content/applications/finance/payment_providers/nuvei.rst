@@ -50,21 +50,21 @@ Configuration on Odoo
 Payment methods
 ===============
 
-Most Nuvei payment methods are **region specific**. The supported payment methods for each country
-are listed below:
+Most Nuvei payment methods are **region specific**. The supported payment methods and brands for
+each country are listed below:
 
 +---------------------------------+----------------------------------+
 | **Argentina**                   | **Ecuador**                      |
 |                                 |                                  |
 | - Boleto                        | - Card (AMEX, Mastercard, Visa)  |
-| - Card (AMEX, Mastercard, Visa) | - Banco Guayaquil                |
-|                                 | - Banco Pichincha                |
+| - Card (AMEX, Mastercard, Visa) | - AstroPay TEF (Banco Guayaquil, |
+|                                 |   Banco Pichincha, Facilito)     |
 +---------------------------------+----------------------------------+
 | **Brazil**                      | **Mexico**                       |
 |                                 |                                  |
 | - Boleto                        | - Card (AMEX, Mastercard, Visa)  |
 | - Card (AMEX, Mastercard, Visa) | - SPEI                           |
-| - Pix                           |                                  |
+| - Pix                           | - Oxxo Pay                       |
 +---------------------------------+----------------------------------+
 | **Canada**                      | **Peru**                         |
 |                                 |                                  |
@@ -78,9 +78,9 @@ are listed below:
 +---------------------------------+----------------------------------+
 | **Colombia**                    | **Uruguay**                      |
 |                                 |                                  |
-| - Card (AMEX, Mastercard, Visa) | - Abitab                         |
-| - PSE                           | - Card (AMEX, Mastercard, Visa)  |
-|                                 | - RedPagos                       |
+| - Card (AMEX, Mastercard, Visa) | - Card (AMEX, Mastercard, Visa)  |
+| - PSE                           | - Local Payments (Abitab,        |
+|                                 |   RedPagos)                      |
 +---------------------------------+----------------------------------+
 
 .. seealso::
