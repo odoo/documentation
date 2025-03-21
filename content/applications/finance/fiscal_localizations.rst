@@ -159,8 +159,113 @@ Fiscal localization modules are available for the countries listed below.
 - :doc:`Vietnam <fiscal_localizations/vietnam>`
 - Zambia
 
+<<<<<<< 18.0
 .. seealso::
    :doc:`Employment Hero Payroll documentation <fiscal_localizations/employment_hero>`
+||||||| 062b4c80049afae61129d24f7920975756999d0b
+  - Germany SKR03 - Accounting
+  - Germany SKR04 - Accounting
+
+- Greece - Accounting
+- Guatemala - Accounting
+- Honduras - Accounting
+- :doc:`Hong Kong - Accounting <fiscal_localizations/hong_kong>`
+- Hungarian - Accounting
+- :doc:`Indian - Accounting <fiscal_localizations/india>`
+- :doc:`Indonesian - Accounting <fiscal_localizations/indonesia>`
+- Ireland - Accounting
+- Israel - Accounting
+- :doc:`Italy - Accounting <fiscal_localizations/italy>`
+- Japan - Accounting
+- :doc:`Kenya - Accounting <fiscal_localizations/kenya>`
+- Lithuania - Accounting
+- :doc:`Luxembourg - Accounting <fiscal_localizations/luxembourg>`
+- :doc:`Malaysia - Accounting <fiscal_localizations/malaysia>`
+- Maroc - Accounting
+- :doc:`Mexico - Accounting <fiscal_localizations/mexico>`
+- Mongolia - Accounting
+- :doc:`Netherlands - Accounting <fiscal_localizations/netherlands>`
+- New Zealand - Accounting
+- Norway - Accounting
+- OHADA - Accounting
+- Pakistan - Accounting
+- Panama - Accounting
+- :doc:`Peru - Accounting <fiscal_localizations/peru>`
+- :doc:`Philippines - Accounting <fiscal_localizations/philippines>`
+- Poland - Accounting
+- Portugal - Accounting
+- :doc:`Romania - Accounting <fiscal_localizations/romania>`
+- :doc:`Saudi Arabia - Accounting <fiscal_localizations/saudi_arabia>`
+- :doc:`Singapore - Accounting <fiscal_localizations/singapore>`
+- Slovak - Accounting
+- Slovenian - Accounting
+- South Africa - Accounting
+- :doc:`Spain - Accounting (PGCE 2008) <fiscal_localizations/spain>`
+- Sweden - Accounting
+- :doc:`Switzerland - Accounting <fiscal_localizations/switzerland>`
+- Taiwan - Accounting
+- :doc:`Thailand - Accounting <fiscal_localizations/thailand>`
+- Turkey - Accounting
+- :doc:`United Arab Emirates - Accounting <fiscal_localizations/united_arab_emirates>`
+- :doc:`UK - Accounting <fiscal_localizations/united_kingdom>`
+- Ukraine - Accounting
+- :doc:`United States - Accounting <fiscal_localizations/united_states>`
+- :doc:`Uruguay - Accounting <fiscal_localizations/uruguay>`
+- Venezuela - Accounting
+- :doc:`Vietnam - Accounting <fiscal_localizations/vietnam>`
+=======
+  - Germany SKR03 - Accounting
+  - Germany SKR04 - Accounting
+
+- Greece - Accounting
+- Guatemala - Accounting
+- Honduras - Accounting
+- :doc:`Hong Kong - Accounting <fiscal_localizations/hong_kong>`
+- Hungarian - Accounting
+- :doc:`Indian - Accounting <fiscal_localizations/india>`
+- :doc:`Indonesian - Accounting <fiscal_localizations/indonesia>`
+- Ireland - Accounting
+- Israel - Accounting
+- :doc:`Italy - Accounting <fiscal_localizations/italy>`
+- Japan - Accounting
+- :doc:`Jordan - Accounting <fiscal_localizations/jordan>`
+- :doc:`Kenya - Accounting <fiscal_localizations/kenya>`
+- Lithuania - Accounting
+- :doc:`Luxembourg - Accounting <fiscal_localizations/luxembourg>`
+- :doc:`Malaysia - Accounting <fiscal_localizations/malaysia>`
+- Maroc - Accounting
+- :doc:`Mexico - Accounting <fiscal_localizations/mexico>`
+- Mongolia - Accounting
+- :doc:`Netherlands - Accounting <fiscal_localizations/netherlands>`
+- New Zealand - Accounting
+- Norway - Accounting
+- OHADA - Accounting
+- Pakistan - Accounting
+- Panama - Accounting
+- :doc:`Peru - Accounting <fiscal_localizations/peru>`
+- :doc:`Philippines - Accounting <fiscal_localizations/philippines>`
+- Poland - Accounting
+- Portugal - Accounting
+- :doc:`Romania - Accounting <fiscal_localizations/romania>`
+- :doc:`Saudi Arabia - Accounting <fiscal_localizations/saudi_arabia>`
+- :doc:`Singapore - Accounting <fiscal_localizations/singapore>`
+- Slovak - Accounting
+- Slovenian - Accounting
+- South Africa - Accounting
+- :doc:`Spain - Accounting (PGCE 2008) <fiscal_localizations/spain>`
+- Sweden - Accounting
+- :doc:`Switzerland - Accounting <fiscal_localizations/switzerland>`
+- Taiwan - Accounting
+- :doc:`Thailand - Accounting <fiscal_localizations/thailand>`
+- Turkey - Accounting
+- :doc:`United Arab Emirates - Accounting <fiscal_localizations/united_arab_emirates>`
+- :doc:`UK - Accounting <fiscal_localizations/united_kingdom>`
+- Ukraine - Accounting
+- :doc:`United States - Accounting <fiscal_localizations/united_states>`
+- :doc:`Uruguay - Accounting <fiscal_localizations/uruguay>`
+- Venezuela - Accounting
+- :doc:`Vietnam - Accounting <fiscal_localizations/vietnam>`
+>>>>>>> c749ee1e7d05bbc0b9d558d3514f6913d9f92e51
 
 .. toctree::
    :titlesonly:
@@ -181,6 +286,7 @@ Fiscal localization modules are available for the countries listed below.
    fiscal_localizations/india
    fiscal_localizations/indonesia
    fiscal_localizations/italy
+   fiscal_localizations/jordan
    fiscal_localizations/kenya
    fiscal_localizations/luxembourg
    fiscal_localizations/malaysia

@@ -246,6 +246,522 @@ the drop-down menu in the :guilabel:`Pricelist` field.
    from the *Pricelist* field, and the quotation can still be confirmed, and subsequently, turned
    into a sales order.
 
+<<<<<<< 18.0
+||||||| 062b4c80049afae61129d24f7920975756999d0b
+.. _sales/multiple-prices-per-product:
+
+Multiple prices per product
+===========================
+
+To apply several prices per individual product, select the :guilabel:`Multiple prices per product`
+option, after enabling the :guilabel:`Pricelists` feature on the *Sales* app setting page
+(:menuselection:`Sales app --> Configuration --> Settings`), and click :guilabel:`Save`.
+
+Next, apply pricelists to specific products using the product form. Navigate to the
+:menuselection:`Sales app --> Products --> Products` and select the product for which multiple
+prices should be applied. Selecting a product from the :guilabel:`Products` page reveals that
+specific product's product form on a separate page.
+
+On the product form, click the :guilabel:`Extra Prices` smart button, located at the top of the
+form.
+
+.. image:: pricing/extra-prices-smartbutton.png
+   :align: center
+   :alt: How the extra prices smart button appears in Odoo Sales.
+
+Doing so reveals a separate page displaying the :guilabel:`Price Rules` that are specific to that
+particular product. Here, price rules can be edited or created at any time.
+
+.. image:: pricing/price-rules-product-page.png
+   :align: center
+   :alt: How the extra price rules per product page appears in Odoo Sales.
+
+To create a new price rule for a product from this specific :guilabel:`Price Rules` page, click
+:guilabel:`New` to add a new, customizable row that has the desired product already populated in the
+:guilabel:`Applied On` column.
+
+Next, select which :guilabel:`Pricelist` this specific product price rule should apply to, via the
+drop-down menu in the :guilabel:`Pricelist` column.
+
+.. note::
+   The :guilabel:`Public Pricelist` is the default pricelist used with Odoo *Sales* and *eCommerce*.
+
+.. tip::
+   To create a new pricelist from this page, type in the desired name of the new pricelist in the
+   :guilabel:`Pricelist` column, then select :guilabel:`Create` from the drop-down menu. All
+   pricelists can be modified at any time, by navigating to :menuselection:`Sales app --> Products
+   --> Pricelists`. Pricelists can also be created on that specific :guilabel:`Pricelists` page, as
+   well.
+
+After the desired pricelist is added to the row, designate a :guilabel:`Min. Quantity` for the price
+rule.
+
+.. example::
+   If the :guilabel:`Min. Quantity` column is set to `2`, the new price in the :guilabel:`Price`
+   column will be applied to orders of 2 or more products. So, in theory, if a single product costs
+   $100, customers can be encouraged to buy more, if the :guilabel:`Price` is set at $85 per product
+   for a :guilabel:`Min. Quantity` of `2` products.
+
+Next, enter the desired amount in the :guilabel:`Price` column. Then, if needed, enter a
+:guilabel:`Start Date` and :guilabel:`End Date` for the product's price rule.
+
+And lastly, if working in a multi-company environment, select which company this price rule should
+be applied to in the :guilabel:`Company` field. Leaving this field blank means the price rule
+applies for all companies in the database.
+
+Click away from the row to activate Odoo's auto-save capability, meaning that newly-created price
+rule is now ready to be used.
+
+Proceed to add as many unique price rules per product as desired. There is no limit to how many
+price rules can be added per product.
+
+With the price rule(s) in place for a specific product, customers who fall into those corresponding
+pricelists automatically see those new prices applied. The number of price rules applied to a
+particular product are also displayed in the :guilabel:`Extra Prices` smart button, located on every
+product form.
+
+.. note::
+   When a price rule/pricelist is added to a product via the :guilabel:`Extra Prices` smart button,
+   it is also reflected on the pricelist itself. Similarly, when a price rule for a specific product
+   is added to a pricelist, it is also reflected on the product form via the :guilabel:`Extra
+   Prices` smart button.
+
+.. _sales/discounts:
+
+Discounts
+=========
+
+The *Discounts* feature allows the ability to set a discount or increase the price on *individual
+items* in a sales order. This is calculated as a percentage of that product's sales price.
+
+To access discounts, navigate to the *Sales* app setting page (:menuselection:`Sales app -->
+Configuration --> Settings`), and click the :guilabel:`Discounts` checkbox, then click
+:guilabel:`Save`.
+
+.. image:: pricing/discounts-option.png
+   :align: center
+   :alt: Click the checkbox labeled Discounts to activate Discounts.
+
+After the setting has been activated, navigate to the desired quotation by going to
+:menuselection:`Sales app --> Orders --> Quotations` at the top of the page. Once there, click on
+the desired quote from the list.
+
+In the order lines section of the quotation form, a new column heading will appear labeled
+:guilabel:`Disc.%`. This column is used to set discounts on individual line items. Enter the desired
+discount for each product line and the new price will automatically be calculated in the quote
+:guilabel:`Total` at the bottom of the page.
+
+.. tip::
+   A discount can also be added directly to a sales order in the same way. Navigate to
+   :menuselection:`Sales app --> Orders --> Orders`, click on the desired sales order, and add the
+   discount to :guilabel:`Disc.%` as described above.
+
+.. image:: pricing/discount-on-sales-order.png
+   :align: center
+   :alt: The Dis.% heading will now appear in Order Lines.
+
+.. tip::
+   Positive values for :guilabel:`Disc.%` will apply a *discount*, while negative values can be
+   used to *increase* the price.
+
+Discount button
+---------------
+
+In Odoo 17, with the :ref:`Discounts setting <sales/discounts>` enabled, a :guilabel:`Discount`
+button appears at the bottom of sales orders.
+
+.. image:: pricing/discount-button-sales-order.png
+   :align: center
+   :alt: The discount button located at the bottom of a sales order form in the Odoo Sales app.
+
+When the :guilabel:`Discount` button on a sales order is clicked, a :guilabel:`Discount` pop-up
+window appears.
+
+On this pop-up window, configure the :guilabel:`Discount` percentage, and select one of the
+following discount options: :guilabel:`On All Order Lines`, :guilabel:`Global Discount`, or
+:guilabel:`Fixed Amount`.
+
+- :guilabel:`On All Order Lines`: When selected, Odoo provides the ability to add the specified
+  discount percentage (configured in the :guilabel:`Discount` field of the pop-up window) on all
+  existing order lines of the sales order.
+- :guilabel:`Global Discount`: When selected, Odoo adds a discount product to the order, which has
+  the cumulative value equivalent to the specified discount percentage (configured in the
+  :guilabel:`Discount` field of the pop-up window). Any product added (or removed) *after* the
+  discount is added does **not** affect the discount value on the order line.
+
+  .. example::
+     In this example, since the total of the order is $600, and there is a 30% global discount, that
+     specific line is added to the sales order with a -180 value (which is 30% of $600).
+
+     .. image:: pricing/global-discount-option-so.png
+        :align: center
+        :alt: The sales order with the applied global discount option in the Odoo Sales application.
+
+- :guilabel:`Fixed Amount`: When selected, the percentage designation in the :guilabel:`Discount`
+  field turns to a monetary value (e.g. dollars), wherein a specific amount must be entered. This
+  configured value is added as a discount line on the sales order.
+
+.. note::
+   It is more beneficial to add a :guilabel:`Fixed Amount` discount after **all** desired products
+   have been added to a sales order. If there are changes made to the sales order *after* the
+   discount is added, make sure to change the value on the :guilabel:`Discount` line, or remove the
+   line and add the discount again.
+
+.. _sales/advanced-price-rules:
+
+Advanced price rules
+====================
+
+The :guilabel:`Advanced price rules (discounts, formulas)` pricelist feature provides the option to
+set price change rules based on discounts and formulas. These changes can be relative to the product
+list/catalog price, the product's cost, or another pricelist.
+
+To use advanced pricing rules, with discounts and formulas, select the :guilabel:`Advanced price
+rules (discounts, formulas)` option, after enabling the :guilabel:`Pricelists` feature on the
+*Sales* app setting page (:menuselection:`Sales app --> Configuration --> Settings`), and click
+:guilabel:`Save`.
+
+After activating and saving that :guilabel:`Pricelists` feature, the :guilabel:`Settings` page
+reloads and, from here, either select the :guilabel:`Pricelists` link (beneath the
+:guilabel:`Pricelists` feature on the :guilabel:`Settings` page), or navigate to
+:menuselection:`Sales app --> Products --> Pricelists`.
+
+Either option reveals the :guilabel:`Pricelists` page, in which pricelists can be created and/or
+modified at any time.
+
+From the :guilabel:`Pricelists` page, select a desired pricelist to modify, or create a new
+pricelist by clicking the :guilabel:`New` button.
+
+On the pricelist form, under the :guilabel:`Price Rules` tab, click :guilabel:`Add a line` to add an
+advanced price rule. Doing so reveals a :guilabel:`Create Pricelist Rules` pop-up form, in which the
+advanced rule is configured.
+
+.. image:: pricing/create-pricelist-rules-popup.png
+   :align: center
+   :alt: How the Create Pricelist Rules pop-up form looks in Odoo Sales.
+
+Price computation
+-----------------
+
+On this form, first choose one of the three :guilabel:`Computation` options:
+
+- :guilabel:`Fixed Price`: the price computation is based on a fixed price.
+- :guilabel:`Discount`: the price computation is based on a discount.
+- :guilabel:`Formula`: the price computation is based on a formula.
+
+.. note::
+   Each :guilabel:`Computation` option reveals its own computation-specific fields on the form.
+
+If :guilabel:`Fixed Price` is selected, enter the desired price in the :guilabel:`Fixed Price` field
+below. If :guilabel:`Discount` is selected, enter the desired discount percentage in the
+:guilabel:`Discount` field that appears.
+
+If :guilabel:`Formula` is selected, a number of configurable options appear.
+
+.. image:: pricing/formula-computation-options.png
+   :align: center
+   :alt: The various formula computation options present in Odoo Sales.
+
+To configure the :guilabel:`Formula` computation option, start by selecting an option from the
+:guilabel:`Based on` field: :guilabel:`Sales Price`, :guilabel:`Cost`, or :guilabel:`Other
+Pricelist`. This determines what the advanced price rule formula will be based on.
+
+Next, in the :guilabel:`Discount` field, determine how much of a discount should be applied. It
+should be noted that a mark-up can be applied by setting a negative discount in this field.
+
+.. example::
+   To formulate a 100% markup (or 2 times the cost of the product), with a $5 minimum margin, set
+   the :guilabel:`Based on` field to :guilabel:`Cost`, the :guilabel:`Discount` to `-100`, and the
+   :guilabel:`Margins` to `5`. This is often seen in retail situations.
+
+   .. image:: pricing/formula-markup-cost-example.png
+      :align: center
+      :alt: How it looks to formulate a markup cost with 5 dollar minimum margin in Odoo Sales.
+
+Then, in the :guilabel:`Extra Fee` field, specify a fixed amount to add (or subtract) to the amount
+calculated with the discount. After that, enter a desired figure in the :guilabel:`Rounding Method`
+field. The rounding method sets the price so that it is a multiple of the value in the field.
+
+.. note::
+   Rounding is applied *after* the discount and *before* the surcharge.
+
+.. tip::
+   To have prices that end in 9.99, set the :guilabel:`Rounding Method` to `10` and the
+   :guilabel:`Extra Fee` to `-0.01`.
+
+Lastly, specify the minimum amount of margin over the base price in the :guilabel:`Margins` field.
+
+Once all formula-related configurations are complete, Odoo provides an example of the formula in a
+blue block to the right of the configurations.
+
+.. example::
+   To apply 20% discounts, with prices rounded up to 9.99, set the :guilabel:`Based on` field to
+   :guilabel:`Sales Price`, the :guilabel:`Discount` field to `20`, the :guilabel:`Extra Fee` field
+   to `-0.01`, and the :guilabel:`Rounding Method` field to `10`.
+
+   .. image:: pricing/formula-discount-example.png
+      :align: center
+      :alt: Example of a 20% discount with prices rounded to 9.99 in Odoo Sales.
+
+=======
+.. _sales/multiple-prices-per-product:
+
+Multiple prices per product
+===========================
+
+To apply several prices per individual product, select the :guilabel:`Multiple prices per product`
+option, after enabling the :guilabel:`Pricelists` feature on the *Sales* app setting page
+(:menuselection:`Sales app --> Configuration --> Settings`), and click :guilabel:`Save`.
+
+Next, apply pricelists to specific products using the product form. Navigate to the
+:menuselection:`Sales app --> Products --> Products` and select the product for which multiple
+prices should be applied. Selecting a product from the :guilabel:`Products` page reveals that
+specific product's product form on a separate page.
+
+On the product form, click the :guilabel:`Extra Prices` smart button, located at the top of the
+form.
+
+.. image:: pricing/extra-prices-smartbutton.png
+   :align: center
+   :alt: How the extra prices smart button appears in Odoo Sales.
+
+Doing so reveals a separate page displaying the :guilabel:`Price Rules` that are specific to that
+particular product. Here, price rules can be edited or created at any time.
+
+.. image:: pricing/price-rules-product-page.png
+   :align: center
+   :alt: How the extra price rules per product page appears in Odoo Sales.
+
+To create a new price rule for a product from this specific :guilabel:`Price Rules` page, click
+:guilabel:`New` to add a new, customizable row that has the desired product already populated in the
+:guilabel:`Applied On` column.
+
+Next, select which :guilabel:`Pricelist` this specific product price rule should apply to, via the
+drop-down menu in the :guilabel:`Pricelist` column.
+
+.. note::
+   The :guilabel:`Public Pricelist` is the default pricelist used with Odoo *Sales* and *eCommerce*.
+
+.. tip::
+   To create a new pricelist from this page, type in the desired name of the new pricelist in the
+   :guilabel:`Pricelist` column, then select :guilabel:`Create` from the drop-down menu. All
+   pricelists can be modified at any time, by navigating to :menuselection:`Sales app --> Products
+   --> Pricelists`. Pricelists can also be created on that specific :guilabel:`Pricelists` page, as
+   well.
+
+After the desired pricelist is added to the row, designate a :guilabel:`Min. Quantity` for the price
+rule.
+
+.. example::
+   If the :guilabel:`Min. Quantity` column is set to `2`, the new price in the :guilabel:`Price`
+   column will be applied to orders of 2 or more products. So, in theory, if a single product costs
+   $100, customers can be encouraged to buy more, if the :guilabel:`Price` is set at $85 per product
+   for a :guilabel:`Min. Quantity` of `2` products.
+
+Next, enter the desired amount in the :guilabel:`Price` column. Then, if needed, enter a
+:guilabel:`Start Date` and :guilabel:`End Date` for the product's price rule.
+
+And lastly, if working in a multi-company environment, select which company this price rule should
+be applied to in the :guilabel:`Company` field. Leaving this field blank means the price rule
+applies for all companies in the database.
+
+Click away from the row to activate Odoo's auto-save capability, meaning that newly-created price
+rule is now ready to be used.
+
+Proceed to add as many unique price rules per product as desired. There is no limit to how many
+price rules can be added per product.
+
+With the price rule(s) in place for a specific product, customers who fall into those corresponding
+pricelists automatically see those new prices applied. The number of price rules applied to a
+particular product are also displayed in the :guilabel:`Extra Prices` smart button, located on every
+product form.
+
+.. note::
+   When a price rule/pricelist is added to a product via the :guilabel:`Extra Prices` smart button,
+   it is also reflected on the pricelist itself. Similarly, when a price rule for a specific product
+   is added to a pricelist, it is also reflected on the product form via the :guilabel:`Extra
+   Prices` smart button.
+
+.. _sales/discounts:
+
+Discounts
+=========
+
+The *Discounts* feature allows the ability to set a discount or increase the price on *individual
+items* in a sales order. This is calculated as a percentage of that product's sales price.
+
+To access discounts, navigate to the *Sales* app setting page (:menuselection:`Sales app -->
+Configuration --> Settings`), and click the :guilabel:`Discounts` checkbox, then click
+:guilabel:`Save`.
+
+.. image:: pricing/discounts-option.png
+   :align: center
+   :alt: Click the checkbox labeled Discounts to activate Discounts.
+
+After the setting has been activated, navigate to the desired quotation by going to
+:menuselection:`Sales app --> Orders --> Quotations` at the top of the page. Once there, click on
+the desired quote from the list.
+
+In the order lines section of the quotation form, a new column heading will appear labeled
+:guilabel:`Disc.%`. This column is used to set discounts on individual line items. Enter the desired
+discount for each product line and the new price will automatically be calculated in the quote
+:guilabel:`Total` at the bottom of the page.
+
+.. tip::
+   A discount can also be added directly to a sales order in the same way. Navigate to
+   :menuselection:`Sales app --> Orders --> Orders`, click on the desired sales order, and add the
+   discount to :guilabel:`Disc.%` as described above.
+
+.. image:: pricing/discount-on-sales-order.png
+   :align: center
+   :alt: The Dis.% heading will now appear in Order Lines.
+
+.. tip::
+   Positive values for :guilabel:`Disc.%` will apply a *discount*, while negative values can be
+   used to *increase* the price.
+
+.. _sales/pricing/discount-button:
+
+Discount button
+---------------
+
+In Odoo 17, with the :ref:`Discounts setting <sales/discounts>` enabled, a :guilabel:`Discount`
+button appears at the bottom of sales orders.
+
+.. image:: pricing/discount-button-sales-order.png
+   :align: center
+   :alt: The discount button located at the bottom of a sales order form in the Odoo Sales app.
+
+When the :guilabel:`Discount` button on a sales order is clicked, a :guilabel:`Discount` pop-up
+window appears.
+
+On this pop-up window, configure the :guilabel:`Discount` percentage, and select one of the
+following discount options: :guilabel:`On All Order Lines`, :guilabel:`Global Discount`, or
+:guilabel:`Fixed Amount`.
+
+- :guilabel:`On All Order Lines`: When selected, Odoo provides the ability to add the specified
+  discount percentage (configured in the :guilabel:`Discount` field of the pop-up window) on all
+  existing order lines of the sales order.
+- :guilabel:`Global Discount`: When selected, Odoo adds a discount product to the order, which has
+  the cumulative value equivalent to the specified discount percentage (configured in the
+  :guilabel:`Discount` field of the pop-up window). Any product added (or removed) *after* the
+  discount is added does **not** affect the discount value on the order line.
+
+  .. example::
+     In this example, since the total of the order is $600, and there is a 30% global discount, that
+     specific line is added to the sales order with a -180 value (which is 30% of $600).
+
+     .. image:: pricing/global-discount-option-so.png
+        :align: center
+        :alt: The sales order with the applied global discount option in the Odoo Sales application.
+
+- :guilabel:`Fixed Amount`: When selected, the percentage designation in the :guilabel:`Discount`
+  field turns to a monetary value (e.g. dollars), wherein a specific amount must be entered. This
+  configured value is added as a discount line on the sales order.
+
+.. note::
+   It is more beneficial to add a :guilabel:`Fixed Amount` discount after **all** desired products
+   have been added to a sales order. If there are changes made to the sales order *after* the
+   discount is added, make sure to change the value on the :guilabel:`Discount` line, or remove the
+   line and add the discount again.
+
+.. _sales/advanced-price-rules:
+
+Advanced price rules
+====================
+
+The :guilabel:`Advanced price rules (discounts, formulas)` pricelist feature provides the option to
+set price change rules based on discounts and formulas. These changes can be relative to the product
+list/catalog price, the product's cost, or another pricelist.
+
+To use advanced pricing rules, with discounts and formulas, select the :guilabel:`Advanced price
+rules (discounts, formulas)` option, after enabling the :guilabel:`Pricelists` feature on the
+*Sales* app setting page (:menuselection:`Sales app --> Configuration --> Settings`), and click
+:guilabel:`Save`.
+
+After activating and saving that :guilabel:`Pricelists` feature, the :guilabel:`Settings` page
+reloads and, from here, either select the :guilabel:`Pricelists` link (beneath the
+:guilabel:`Pricelists` feature on the :guilabel:`Settings` page), or navigate to
+:menuselection:`Sales app --> Products --> Pricelists`.
+
+Either option reveals the :guilabel:`Pricelists` page, in which pricelists can be created and/or
+modified at any time.
+
+From the :guilabel:`Pricelists` page, select a desired pricelist to modify, or create a new
+pricelist by clicking the :guilabel:`New` button.
+
+On the pricelist form, under the :guilabel:`Price Rules` tab, click :guilabel:`Add a line` to add an
+advanced price rule. Doing so reveals a :guilabel:`Create Pricelist Rules` pop-up form, in which the
+advanced rule is configured.
+
+.. image:: pricing/create-pricelist-rules-popup.png
+   :align: center
+   :alt: How the Create Pricelist Rules pop-up form looks in Odoo Sales.
+
+Price computation
+-----------------
+
+On this form, first choose one of the three :guilabel:`Computation` options:
+
+- :guilabel:`Fixed Price`: the price computation is based on a fixed price.
+- :guilabel:`Discount`: the price computation is based on a discount.
+- :guilabel:`Formula`: the price computation is based on a formula.
+
+.. note::
+   Each :guilabel:`Computation` option reveals its own computation-specific fields on the form.
+
+If :guilabel:`Fixed Price` is selected, enter the desired price in the :guilabel:`Fixed Price` field
+below. If :guilabel:`Discount` is selected, enter the desired discount percentage in the
+:guilabel:`Discount` field that appears.
+
+If :guilabel:`Formula` is selected, a number of configurable options appear.
+
+.. image:: pricing/formula-computation-options.png
+   :align: center
+   :alt: The various formula computation options present in Odoo Sales.
+
+To configure the :guilabel:`Formula` computation option, start by selecting an option from the
+:guilabel:`Based on` field: :guilabel:`Sales Price`, :guilabel:`Cost`, or :guilabel:`Other
+Pricelist`. This determines what the advanced price rule formula will be based on.
+
+Next, in the :guilabel:`Discount` field, determine how much of a discount should be applied. It
+should be noted that a mark-up can be applied by setting a negative discount in this field.
+
+.. example::
+   To formulate a 100% markup (or 2 times the cost of the product), with a $5 minimum margin, set
+   the :guilabel:`Based on` field to :guilabel:`Cost`, the :guilabel:`Discount` to `-100`, and the
+   :guilabel:`Margins` to `5`. This is often seen in retail situations.
+
+   .. image:: pricing/formula-markup-cost-example.png
+      :align: center
+      :alt: How it looks to formulate a markup cost with 5 dollar minimum margin in Odoo Sales.
+
+Then, in the :guilabel:`Extra Fee` field, specify a fixed amount to add (or subtract) to the amount
+calculated with the discount. After that, enter a desired figure in the :guilabel:`Rounding Method`
+field. The rounding method sets the price so that it is a multiple of the value in the field.
+
+.. note::
+   Rounding is applied *after* the discount and *before* the surcharge.
+
+.. tip::
+   To have prices that end in 9.99, set the :guilabel:`Rounding Method` to `10` and the
+   :guilabel:`Extra Fee` to `-0.01`.
+
+Lastly, specify the minimum amount of margin over the base price in the :guilabel:`Margins` field.
+
+Once all formula-related configurations are complete, Odoo provides an example of the formula in a
+blue block to the right of the configurations.
+
+.. example::
+   To apply 20% discounts, with prices rounded up to 9.99, set the :guilabel:`Based on` field to
+   :guilabel:`Sales Price`, the :guilabel:`Discount` field to `20`, the :guilabel:`Extra Fee` field
+   to `-0.01`, and the :guilabel:`Rounding Method` field to `10`.
+
+   .. image:: pricing/formula-discount-example.png
+      :align: center
+      :alt: Example of a 20% discount with prices rounded to 9.99 in Odoo Sales.
+
+>>>>>>> c749ee1e7d05bbc0b9d558d3514f6913d9f92e51
 Conditions
 ----------
 
