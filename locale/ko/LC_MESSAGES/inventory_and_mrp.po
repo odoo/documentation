@@ -10825,6 +10825,9 @@ msgid ""
 ":guilabel:`Owner` column will be populated with the owner of those products,"
 " or the original vendor who supplied the products in the first place."
 msgstr ""
+":guilabel:`보유 재고` 현황판을 :menuselection:`재고 --> 보고 --> 재고 보고서` 로 이동하여 확인합니다. 이"
+" 보고서에서는 모든 보유 재고 :guilabel:`위치` 가 각각의 위치별 수량과 함께 표시됩니다. 위탁 판매 품목의 경우 "
+":guilabel:`소유자` 열은 품목의 소유자 또는 처음에 품목을 공급한 원래 공급업체가 입력됩니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:3
 msgid "Putaway rules"
@@ -23609,6 +23612,8 @@ msgid ""
 "Odoo generates (or suggests) a purchase or manufacturing order to replenish "
 "stock to the maximum level."
 msgstr ""
+"재주문 규칙은 최소 재고 수준을 유지하기 위해 설정하는 규칙입니다. 생산이나 판매에서의 요구 사항을 지원하도록 설정되는 경우가 많습니다."
+" 품목의 재고가 최소 수준 이하로 떨어지면 Odoo는최대 수준으로 재고가 보충되도록 발주서 또는 제조주문서를 생성(또는 제안)합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:52
 msgid ""
@@ -23664,6 +23669,9 @@ msgid ""
 " capacity, and when products are high in value and low in demand. In such "
 "cases, it does not make sense to keep on-hand inventory."
 msgstr ""
+"|MTO| 방식은 조달 또는 생산 작업은 판매주문서가 확정된 후에만 트리거됩니다. 이 방식을 권장하는 상황은 품목을 사용자 지정할 수 "
+"있거나, 수요를 예측할 수 없는 경우, 혹은 저장 용량이 제한되어 있거나, 가치는 높으나 수요는 낮은 경우입니다. 이러한 경우 보유 "
+"재고를 유지하는 것은 합리적이지 않습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:81
 msgid ""
@@ -23790,6 +23798,10 @@ msgid ""
 "that are set to replenish to order, the need appears on the *Replenishment "
 "report* earlier, according to the specified number of days."
 msgstr ""
+":ref:`매입 보안 리드타임 <inventory/warehouses_storage/purchase-security-lt>`: "
+":abbr:`PO(구매발주서)` 의 주문 마감일을 지정된 날짜 수만큼 앞당깁니다. 이러한 예방적 접근 방식을 통해 공급업체 또는 배송 "
+"지연과 관련된 리스크를 줄입니다. 따라서 주문 시 보충되도록 설정된 품목의 경우 지정된 날짜 수에 따라 *보충 보고서* 에 수요가 더 "
+"일찍 표시됩니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:45
 msgid ""
@@ -24373,6 +24385,9 @@ msgid ""
 "Date` on the |MO| reflects the latest date to begin the manufacturing order."
 " In this example, the planned date on the |MO| is August 5th."
 msgstr ""
+"품목의 :abbr:`DO (배송주문서)` 에 예정되어 있는 배송 날짜는 8월 15일입니다. 제조 리드타임은 7일이고 제조 보안 리드타임은"
+" 3일입니다. 따라서 |MO| 의 :guilabel:`예정일` 은 제조 주문을 시작할 수 있는 가장 빠른 날짜로 반영됩니다. 이 예시에서"
+" |MO| 의 예정일은 8월 5일입니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:350
 msgid "Global example"
@@ -24769,6 +24784,9 @@ msgid ""
 "created instead. This is the case regardless of the selected replenishment "
 "route."
 msgstr ""
+"재주문 규칙은 각각의 품목에 대해 재보충에 사용된 경로를 기준으로 설정할 수 있습니다. 품목에서 *매입* 경로를 사용하는 경우 재주문 "
+"규칙이 트리거되면 *견적요청서*(RFQ)가 생성됩니다. 반대로 품목에 *제조* 경로를 사용하는 경우에는 *제조주문서*(MO)가 "
+"생성됩니다. 이러한 내용은 선택한 재보충 경로와 관계없이 적용됩니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:26
 msgid ""
@@ -25268,6 +25286,9 @@ msgid ""
 "because they are needed to fulfill upcoming sales orders, for which the "
 "forecasted quantity is not enough."
 msgstr ""
+"*수동 재주문 규칙* 에 대한 환경설정은 재주문 규칙에 있는 :guilabel:`트리거` 필드를 :guilabel:`수동` 으로 "
+"설정하며, 예상 수량이 지정된 최소값 아래로 떨어지면 :doc:`보충 현황판 <report>` 에 품목이 표시됩니다. 이 현황판에 "
+"표시되는 품목은 *필요* 항목이라고 하며, 이는 예정된 판매주문서 작업에 필요하나 예상 수량이 충분하지 않기 때문입니다. "
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:271
 msgid ""
@@ -25499,6 +25520,12 @@ msgid ""
 "or :ref:`manufacturing lead times <inventory/warehouses_storage/manuf-lt>` "
 "for production. Both automatic and manual reordering rules work this way."
 msgstr ""
+"예상 날짜는 보충 프로세스가 시작되면 즉시 품목을 수령할 수 있는 **가장 빠른 날짜** 입니다. 보충 프로세스와 연결된 리드타임을 "
+"합산하여 계산하며, 예를 들어 매입의 경우에는 :ref:`공급업체 리드타임 "
+"<inventory/warehouses_storage/purchase-lt>` 및 :ref:`매입 지연 "
+"<inventory/warehouses_storage/purchase-security-lt>` 을 합산한 것이며, 제조하는 경우에는 "
+":ref:`제조 리드타임 <inventory/warehouses_storage/manuf-lt>` 이 됩니다. 자동 및 수동 재주문 규칙"
+" 모두 이러한 방식으로 진행됩니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:398
 msgid ""
@@ -25676,6 +25703,9 @@ msgid ""
 "rule. **Only if** it is time to reorder, visibility days check additional "
 "future demand by the specified number of days."
 msgstr ""
+"*공개 일수* 기능으로 계획되어 있는 보충 항목에 별도로 수량을 추가할 지 여부를 결정할 수 있습니다. Odoo는 예상 날짜에 예상 "
+"재고가 재주문 규칙의 최소값 아래로 떨어지게 되는지 확인합니다. **재주문 시기가 된 경우에만**, 공개 일수를 통해 별도의 향후 수요를"
+" 지정된 날짜 수만큼 확인할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:493
 msgid ""
