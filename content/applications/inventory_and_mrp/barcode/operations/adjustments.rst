@@ -18,7 +18,6 @@ scanner, or the Odoo mobile app.
    :doc:`../../inventory/warehouses_storage/inventory_management/count_products`
 
 .. tip::
-
    Odoo's **Barcode** application provides demo data with barcodes to explore the features of the
    app. These can be used for testing purposes, and can be printed from the home screen of the app.
 
@@ -129,7 +128,7 @@ change the quantity. Additionally, the :guilabel:`+1` and :guilabel:`-1` buttons
 add or subtract quantity of the product, and the number keys can be used to add quantity, as well.
 
 .. example::
-   In the below inventory adjustment, the source location `WH/Stoc/Shelf 1` was scanned, assigning
+   In the below inventory adjustment, the source location `WH/Stock/Shelf 1` was scanned, assigning
    the location. Then, the barcode for the product `[FURN_7888] Desk Stand with Screen` was scanned
    three times, increasing the units in the adjustment. Additional products can be added to this
    adjustment by scanning the barcodes for those specific products.
