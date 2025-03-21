@@ -5,87 +5,120 @@
 Inbound and outbound flows
 ==========================
 
-There are several ways to handle how a warehouse receives products (receipts) and ships products
-(deliveries). Depending on several factors, such as the type of products stocked and sold, warehouse
-size, and the amount of daily confirmed receipts and delivery orders, the way products are handled
-when coming in and out of the warehouse can vary a lot. Different settings can be configured for
-receipts and deliveries; they do not have to be configured to have the same number of steps.
+Setting up inbound and outbound flows is a critical step in configuring inventory management in
+Odoo. The chosen setup impacts operational efficiency, traceability, and cost.
 
-.. seealso::
-   - `Using Routes (eLearning Tutorial) <https://www.odoo.com/slides/slide/using-routes-1018>`_
-   - `Push & Pull Rules (eLearning Tutorial)
-     <https://www.odoo.com/slides/slide/push-pull-rules-1024>`_
+Warehouse managers must balance speed and accountability when designing inventory flows. Businesses
+may opt for a streamlined process for faster operations or implement additional checkpoints to
+enhance traceability and control.
 
-Choosing the right inventory flow to handle receipts and deliveries
-===================================================================
+Odoo supports three inventory flow configurations: one-step, two-step, and three-step. The default
+one-step flow is the simplest, while additional steps add control but require more operations. The
+best choice depends on factors like quality checks, packaging needs, and warehouse size.
 
-By default, Odoo handles shipping and receiving in three different ways: in one, two, or three
-steps. The simplest configuration is one step, which is the default. Each additional step required
-for a warehouse for either the receiving or shipping process will add an additional layer of
-operations to perform before a product is either received or shipped. These configurations depend
-entirely on the requirements for the products stored, such as performing quality checks on received
-products, or using special packaging on shipped products.
+This guide helps the business determine the most suitable setup.
 
 One-step flow
--------------
+=============
 
-The receiving and shipping rules for a one-step configuration are as follows:
-
-- **Receipt**: Receive products directly into stock. No intermediate steps between receipt and stock
-  occur, such as a transfer to a quality control location.
-- **Shipping**: Ship products directly from stock. No intermediate steps between stock and shipping
-  occur, such as a transfer to a packing location.
-- Can only be used if not using :abbr:`FIFO (First In, First Out)`, :abbr:`LIFO (Last In, First
-  Out)`, or :abbr:`FEFO (First Expired, First Out)` removal strategies.
-- Receipts and/or deliveries are handled quickly.
-- Recommended for small warehouses with low stock levels, and for non-perishable items.
-- Items are received or shipped directly into/from stock.
+- **Receiving**: Products go directly into stock.
+- **Shipping**: Products ship directly from stock.
+- **Best for**: Small warehouses, low stock levels, and non-perishable items, where minimal
+  processing is needed before products are stored or shipped.
 
 .. seealso::
    :doc:`daily_operations/receipts_delivery_one_step`
 
 Two-step flow
--------------
+=============
 
-The receiving and shipping rules for a two-step configuration are as follows:
+- **Receiving**: Products move to an *input* area before being transferred into stock.
 
-- **Input + stock**: Bring products to an input location *before* moving into stock. Products can be
-  organized by different internal storage locations, such as various shelves, freezers, and locked
-  areas, before being stocked in the warehouse.
-- **Pick + ship**: Bring products to an output location before shipping. Packages can be organized
-  by different carriers or shipping docks before being shipped.
-- Minimum requirement to use lot numbers or serial numbers to track products with a
-  :abbr:`FIFO (First In, First Out)`, :abbr:`LIFO (Last In, First Out)` or
-  :abbr:`FEFO (First Expired, First Out)` removal strategy.
-- Recommended for larger warehouses with high stock levels, or when stocking large items (such as
-  mattresses, large furniture, heavy machinery, etc.).
-- Products received will not be available for manufacturing, shipping, etc., until they are
-  transferred into stock.
+  - Until transferred, received products are not automatically reserved for manufacturing, shipping,
+    or other operations.
+
+- **Shipping**: Products move to an *output* before shipping to allow for :doc:`sorting or
+  consolidation <picking_methods>`.
+- **Best for**: Large warehouses, high stock levels, bulky items, and workflows that separate
+  receiving from storage to improve organization and efficiency.
 
 .. seealso::
    :doc:`daily_operations/receipts_delivery_two_steps`
 
 Three-step flow
----------------
+===============
 
-The receiving and shipping rules for a three-step configuration are as follows:
-
-- **Input + quality + stock**: Receive products at the input location, transfer them to a quality
-  control area, and move the ones that pass inspection into stock.
-- **Pick + pack + ship**: Pick products according to their removal strategy, pack them in a
-  dedicated packing area, and bring them to an output location for shipping.
-- Can be used when tracking products by lot or serial numbers when using a :abbr:`FIFO (First In,
-  First Out)`, :abbr:`LIFO (Last In, First Out)`, or :abbr:`FEFO (First Expired, First Out)` removal
-  strategy.
-- Recommended for very large warehouses with very high stock levels.
-- Required for any warehouse needing to perform quality control inspections before receiving items
-  into stock.
-- Products received will not be available for manufacturing, shipping, etc., until they are
-  transferred into stock.
+- **Receiving**: Products follow a structured process— *input area* → *quality control* → *stock*.
+- **Shipping**: Products are *picked*, *packed*, then *shipped*, ensuring proper handling and
+  organization.
+- **Best for**: Very large warehouses with strict quality control requirements, dedicated picking
+  and packing workflows, and a need for clear traceability across multiple handling stages. Suitable
+  when multiple teams manage different steps before products are stocked or shipped.
 
 .. seealso::
    - :doc:`daily_operations/receipts_three_steps`
    - :doc:`daily_operations/delivery_three_steps`
+
+Add-ons
+=======
+
+To optimize each flow, Odoo provides additional features that can enhance the process.
+
+Storage
+-------
+
+.. cards::
+
+   .. card:: Putaway rules
+      :target: daily_operations/putaway
+
+      Guide products to specific storage locations based on predefined rules
+
+   .. card:: Storage categories
+      :target: daily_operations/storage_category
+
+      Set item or weight limits to prevent overstocking at the location and ensure proper
+      organization
+
+   .. card:: Consignment
+      :target: daily_operations/owned_stock
+
+      Keep track of products owned by third parties
+
+Delivery
+--------
+
+.. cards::
+
+   .. card:: Cross dock
+      :target: daily_operations/cross_dock
+
+      Receive products and immediately transfer them to another warehouse without storing them
+
+   .. card:: Dropshipping
+      :target: daily_operations/dropshipping
+
+      Coordinate with vendors to deliver orders directly to customers, bypassing internal stock
+
+   .. card:: Picking methods
+      :target: picking_methods
+
+      Optimize picking operations using piece, batch, cluster, or wave picking techniques
+
+   .. card:: Removal strategies
+      :target: removal_strategies
+
+      Use FIFO, LIFO, or FEFO strategies to automate the selection of products for delivery
+
+Customization
+-------------
+
+.. cards::
+
+   .. card:: Custom routes
+      :target: daily_operations/use_routes
+
+      Define tailored receiving or delivery workflows to meet specific business needs
 
 .. toctree::
    :titlesonly:
