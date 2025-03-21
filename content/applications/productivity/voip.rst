@@ -17,4 +17,3 @@ VoIP (Voice over Internet Protocol)
    voip/axivox
    voip/voip_widget
    voip/devices_integrations
-   voip/transfer_forward
