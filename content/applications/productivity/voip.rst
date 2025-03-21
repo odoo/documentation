@@ -18,7 +18,7 @@ predefined rules. Features like call recording and analytics provide insights in
 response times, helping teams track communication efficiency.
 
 .. cards::
-   .. card:: VoIP widget
+   .. card:: VoIP actions
       :target: voip/voip_widget
       :large:
 
@@ -60,7 +60,7 @@ provider to the Odoo database.
 VoIP providers
 --------------
 
-While |VOIP| setup is minimal in Odoo, all configuration happens in the external |VOIP| service
+While |VOIP| setup is minimal in Odoo, most configuration happens in the external |VOIP| service
 provider. Two verified providers are :doc:`OnSIP <voip/onsip>` and :doc:`Axivox <voip/axivox>`.
 Click on the cards below to learn how to configure these service providers in the Odoo database. If
 these providers cannot be used, an alternate provider must meet these requirements to connect with
@@ -104,4 +104,3 @@ the :ref:`relevant troubleshooting steps <voip/voip_widget/troubleshooting_voip>
    voip/axivox
    voip/voip_widget
    voip/devices_integrations
-   voip/transfer_forward
