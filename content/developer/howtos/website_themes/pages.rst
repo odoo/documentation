@@ -179,13 +179,42 @@ With `<t t-call="website.layout">` you use the Odoo default page layout with you
 `noupdate` attribute
 --------------------
 
-This attribute prevents data overwriting.
+This attribute prevents data overwriting. It can be added either on a `data` tag wrapping some
+records to protect or on the `odoo`tag` in order to protect all records declared into the file.
+
+Protect all records of the file:
 
 .. code-block:: xml
 
-   <data noupdate="1">
-      <!-- Your record -->
-   </data>
+   <?xml version="1.0" encoding="utf-8"?>
+   <odoo noupdate="1">
+      <record id="menu_company" model="website.menu">
+         <!-- Fields -->
+      </record>
+      <record id="menu_faq" model="website.menu">
+         <!-- Fields -->
+      </record>
+   </odoo>
+
+Protect specific records in the file:
+
+.. code-block:: xml
+
+   <?xml version="1.0" encoding="utf-8"?>
+   <odoo>
+      <record id="menu_company" model="website.menu">
+         <!-- Fields -->
+      </record>
+
+      <data noupdate="1">
+         <record id="menu_faq" model="website.menu">
+            <!-- Fields -->
+         </record>
+         <record id="menu_legal" model="website.menu">
+            <!-- Fields -->
+         </record>
+      </data>
+   </odoo>
 
 **Use case**
 
@@ -201,8 +230,8 @@ those existing in the database even if the end-user has changed some of these re
 **Solution**
 
 By wrapping the record (or all records declared in the file) into a `<data noupdate="1"></data>`
-tag, the record declared is created at
-the first module installation but not updated after a module update.
+tag, the record declared is created at the first module installation but not updated after a module
+update.
 
 .. spoiler:: What happens if the record has been manually deleted (e.g.: a menu item) ?
 
@@ -234,3 +263,114 @@ Make the header background transparent and stand on top of the page content.
 
    - `Bootstrap cheat sheet <https://getbootstrap.com/docs/5.1/examples/cheatsheet/>`_
    - `Bootstrap documentation <https://getbootstrap.com/docs/5.1/getting-started/introduction/>`_
+
+.. _website_themes/pages/theme_pages/page_templates :
+
+Page templates
+--------------
+
+Create preset static page templates available from the New Page dialog window.
+
+**Declaration**
+
+The page templates has to be defined into the :file:`__manifest__.py` of the module through
+`new_page_templates`:
+
+.. code-block:: python
+   :caption: `/website_airproof/__manifest__.py`
+   :emphasize-lines: 15-18
+
+   {
+      'name': 'Airproof Theme',
+      'description': '...',
+      'category': 'Website/Theme',
+      'version': '17.0.0',
+      'author': '...',
+      'license': '...',
+      'depends': ['website'],
+      'data': [
+         # ...
+      ],
+      'assets': {
+         # ...
+      },
+      'new_page_templates': {
+         'airproof': {
+            'faq': ['s_airproof_text_block_h1', 's_title', 's_faq_collapse', 's_call_to_action']
+      }
+   }
+
+**Templates**
+
+Then you have to create the template using a specific naming convention based on the hierarchy into
+the :file:`__manifest__.py`. In this case, the name is `new_page_template_sections_airproof_faq`.
+The building blocks called in this template are exactly the same as the standard ones except for
+the first that has been adapted "on the fly".
+
+Create a new instance of the standard `s_text_block` (`primary` attribute is important) and apply some
+adaptations:
+
+.. code-block:: xml
+   :caption: `/website_airproof/views/new_page_template_templates.xml`
+
+   <template id="s_airproof_text_block_h1" inherit_id="website.s_text_block" primary="True">
+      <xpath expr="//div[hasclass('container')]|//div[hasclass('o_container_small')]" position="replace">
+         <div class="container s_allow_columns">
+               <h1 class="display-1">FAQ - Help</h1>
+         </div>
+      </xpath>
+   </template>
+
+Instantiate each building block (modified or not) for the page template:
+
+.. code-block:: xml
+   :caption: `/website_airproof/views/new_page_template_templates.xml`
+
+   <template id="new_page_template_s_airproof_text_block_h1" inherit_id="website_airproof.s_airproof_text_block_h1" primary="True"/>
+   <template id="new_page_template_airproof_faq_s_title" inherit_id="website.s_title" primary="True"/>
+
+Then, create your page template with some `t-snippet-call` within an '#wrap' as explained above:
+
+.. code-block:: xml
+   :caption: `/website_airproof/views/new_page_template_templates.xml`
+
+   <div id="wrap">
+      <t t-snippet-call="website_airproof.new_page_template_airproof_faq_s_text_block_h1"/>
+      <t t-snippet-call="website_airproof.new_page_template_airproof_faq_s_title"/>
+      <t t-snippet-call="website_airproof.new_page_template_airproof_faq_s_faq_collapse"/>
+      <t t-snippet-call="website_airproof.new_page_template_airproof_faq_s_call_to_action"/>
+   </div>
+
+Once the page template is created, it can be added to an existing group. Find below a list of the
+existing group:
+
+.. code-block:: xml
+   :caption: `/website/views/new_page_template_templates.xml`
+
+   <template id="new_page_template_groups">
+      <div id="basic">Basic</div>
+      <div id="about">About</div>
+      <div id="landing">Landing Pages</div>
+      <div id="gallery">Gallery</div>
+      <div id="services">Services</div>
+      <div id="pricing">Pricing Plans</div>
+      <div id="team">Team</div>
+   </template>
+
+Feel free to add custom groups to the list:
+
+.. code-block:: xml
+   :caption: `/website_airproof/views/new_page_template_templates.xml`
+
+   <template id="new_pages_template_groups" inherit_id="website.new_pages_template_groups" name="Airproof - New Page Template Groups">
+      <xpath expr="//div[@id='custom']" position="after">
+         <div id="airproof">Airproof</div>
+      </xpath>
+   </template>
+
+.. image:: pages/new-page-template.png
+   :width: 520
+   :alt: List of existing static page templates
+
+.. seealso::
+   `Go further by altering the building blocks of a custom template <https://github.com/odoo/odoo/blob/339d929e7a01e077fed8a21507cac4c2ff260b42/addons/website/views/new_page_template_templates.xml#L38>`_
