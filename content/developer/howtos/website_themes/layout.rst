@@ -364,13 +364,23 @@ Image/pattern
 Header
 ======
 
-By default, the header contains a responsive navigation menu and the company's logo. You can easily
-add new elements or create your own template.
+By default, the header contains two distinct templates (desktop and mobile) which display the  main
+navigation, the company's logo and other optional elements (call-to-action, language selector, etc).
+Depending on the situation, choose between enabling/disabling existing elements with a standard
+template or building a brand new custom template.
 
 .. _website_themes/layout/header/standard :
 
 Standard
 --------
+
+The Odoo Website Builder distinguishes between desktop templates and the mobile template in order to
+facilitate the adaptation of the user experience according to the device.
+
+.. _website_themes/layout/header/standard/desktop :
+
+Desktop template
+~~~~~~~~~~~~~~~~
 
 Enable one of the header default templates.
 
@@ -403,6 +413,18 @@ Explicitly set the desired template in the `primary_variables.scss` file.
    <record id="website.template_header_contact" model="ir.ui.view">
       <field name="active" eval="True"/>
    </record>
+
+.. _website_themes/layout/header/standard/mobile :
+
+Mobile template
+~~~~~~~~~~~~~~~
+
+Each header template comes with the `template_header_mobile` template ensuring a seamless user
+experience accross every devices.
+
+.. seealso::
+   `Mobile header template on Odoo's Git repository <https://github.com/odoo/odoo/blob/d053ea84d45f2ba50a31c2773f2d3ded9fd1ee6b/addons/website/views/website_templates.xml#L343>`_
+
 
 .. _website_themes/layout/header/custom :
 
@@ -474,6 +496,16 @@ variables.
          </xpath>
       </field>
    </record>
+
+Don't forget to adapt the `template_header_mobile` accordingly to keep consistency between desktop
+and mobile:
+
+.. code-block:: xml
+   :caption: ``website_airproof/views/website_templates.xml``
+
+   <template id="template_header_mobile" inherit_id="website.template_header_mobile" name="Airproof - Template Header Mobile">
+      <!-- Xpaths -->
+   </template>
 
 .. _website_themes/layout/header/components :
 
