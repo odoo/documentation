@@ -2,11 +2,12 @@
 Animations
 ==========
 
-Odoo uses eye-catching animations that can bring your website to life. By default, we can use two
+Odoo uses eye-catching animations that can bring your website to life. By default, we can use three
 kinds of animations:
 
 - Animations on appearance
 - Animations on scroll
+- Animations on hover
 
 .. _website_themes/animations/appearance:
 
@@ -78,9 +79,87 @@ Additionally, we can also set an `in` or `out` effect, an animation `direction` 
         <p>Write one or two paragraphs describing your product or services.</p>
     </div>
 
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: 30 50 50
+
+   * - Option
+     - Data attribute
+     - Value type
+   * - Intensity
+     - `--wanim-intensity`
+     - Integer (in the CSS)
+   * - Scroll Zone Start
+     - `data-scroll-zone-start`
+     - Integer
+   * - Scroll Zone End
+     - `data-scroll-zone-end`
+     - Integer
+
 .. image:: animations/scroll.png
    :alt: Animation on scroll options
 
 .. seealso::
    `Website Animate
    <https://github.com/odoo/odoo/blob/34c0c9c1ae00aba391932129d4cefd027a9c6bbd/addons/website/static/src/scss/website.scss#L1638>`_
+
+.. _website_themes/animations/hover:
+
+On hover
+========
+
+This third kind of animations is only related to images and triggered every time we hover on the
+animated image.
+
+We can add 6 animation on hover effects:
+
+- Overlay
+- Zoom In
+- Zoom Out
+- Dolly Zoom
+- Outline
+- Mirror Blur
+
+**Use**
+
+Enable animations on hover by adding the `o_animate_on_hover` class on your image tag. You can
+also define the type of animation in the `data-hover-effect` attribute.
+
+.. code-block:: xml
+
+    <img
+        src="..." alt="..."
+        class="img img-fluid o_we_custom_image o_animate_on_hover"
+        data-hover-effect="overlay"
+        data-hover-effect-color="rgba(0, 0, 0, 0.25)"
+    />
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: 30 50 50
+
+   * - Option
+     - Data attribute
+     - Value type
+   * - Animation
+     - `data-hover-effect`
+     - String
+   * - Intensity
+     - `data-hover-effect-intensity`
+     - Integer
+   * - Overlay / Stroke color
+     - `data-hover-effect-color`
+     - Hexadecimal or RGBA value
+   * - Stroke width
+     - `data-hover-stroke-width`
+     - Integer (saved as `px`)
+
+.. image:: animations/hover.png
+   :width: 300
+   :alt: Animation on hover options
+
+.. seealso::
+   `Hover effect options
+   <https://github.com/odoo/odoo/blob/f43fbf67c98236434429e26d9d93de71ddb06790/addons/website/views/snippets/snippets.xml#L405>`_
