@@ -10245,6 +10245,10 @@ msgid ""
 "the products can be delivered by clicking on the :guilabel:`Delivery` smart "
 "button, and selecting :guilabel:`Validate` to validate the delivery."
 msgstr ""
+"Sobald das Angebot bestätigt wurde, wird sie zu einem Verkaufsauftrag. Von "
+"hier aus können Sie die Produkte liefern lassen, indem Sie auf die "
+"intelligente Schaltfläche :guilabel:`Lieferung` klicken und "
+":guilabel:`Validieren` wählen, um die Lieferung zu bestätigen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:82
 msgid "Traceability and reporting of consignment stock"
@@ -10275,6 +10279,9 @@ msgid ""
 "are *not* reflected in the :guilabel:`Stock Valuation` report, and have no "
 "impact on the consignee's inventory valuation."
 msgstr ""
+"Da der Empfänger keine eigene Konsignationsware besitzt, werden diese "
+"Produkte *nicht* im Bericht zur :guilabel:`Bestandsbewertung` berücksichtigt"
+" und haben keinen Einfluss auf die Bestandsbewertung des Empfängers."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:96
 msgid "Product moves report"
@@ -10291,6 +10298,14 @@ msgid ""
 "are available, as well. The consignment stock will originate from "
 ":guilabel:`Partner Location/Vendors`."
 msgstr ""
+"Um alle Informationen über vorrätige Lagerbuchungen einzusehen, gehen Sie "
+"zum Dashboard :guilabel:`Produktbewegungen`, indem Sie zu "
+":menuselection:`Lager --> Berichtswesen --> Produktbewegungen` gehen. Für "
+"Konsignationsprodukte sind die Informationen in diesem Bericht dieselben wie"
+" für jedes andere Produkt: Sie können die Historie der Produktbewegungen "
+"einsehen, das Dokument :guilabel:`Erledigte Menge` und :guilabel:`Referenz` "
+"sind verfügbar und die :guilabel:`Standorte` sind ebenfalls verfügbar. Der "
+"Konsignationsware wird von :guilabel:`Partnerstandort/Lieferanten` stammen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/owned_stock.rst:106
 msgid ""
@@ -10330,6 +10345,13 @@ msgid ""
 ":guilabel:`Owner` column will be populated with the owner of those products,"
 " or the original vendor who supplied the products in the first place."
 msgstr ""
+"Sehen Sie sich das Dashboard :guilabel:`Vorrätiger Bestand` an, indem Sie zu"
+" :menuselection:`Lager --> Berichtswesen --> Bestandsbericht` navigieren. In"
+" diesem Bericht werden die :guilabel:`Lagerorte` des gesamten Lagerbestands "
+"sowie die Mengen pro Standort angezeigt. Bei Konsignationsprodukten wird in "
+"der Spalte :guilabel:`Eigentümer` der Eigentümer dieser Produkte oder der "
+"ursprüngliche Lieferant, der die Produkte ursprünglich geliefert hat, "
+"angezeigt."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/putaway.rst:3
 msgid "Putaway rules"
@@ -20957,7 +20979,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:42
 msgid "Replenishment strategies"
-msgstr ""
+msgstr "Auffüllstrategien"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:45
 msgid "Replenishment report and reordering rules"
@@ -21104,6 +21126,10 @@ msgid ""
 "time configuration, allowing coordination and planning of manufacturing "
 "orders, deliveries, and receipts."
 msgstr ""
+"Die genaue Vorhersage von Lieferterminen ist entscheidend für die Erfüllung "
+"der Kundenerwartungen. In Odoo ermöglicht die **Lagerapp** eine umfassende "
+"Konfiguration der Vorlaufzeiten und damit die Koordination und Planung von "
+"Fertigungsaufträgen, Lieferungen und Wareneingängen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:12
 msgid "Lead time types"
@@ -21637,7 +21663,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:239
 msgid "Days to purchase lead time"
-msgstr ""
+msgstr "Tage bis Vorlaufzeit für den Einkauf"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:241
 msgid ""
@@ -21646,6 +21672,11 @@ msgid ""
 ":guilabel:`Days to Purchase` field, specify the number of days required for "
 "the vendor to confirm a |RFQ| after receiving it from the company."
 msgstr ""
+"Um sie einzurichten, gehen Sie zu :menuselection:`Lager --> Konfiguration "
+"--> Einstellungen`. Im Abschnitt :guilabel:`Erweiterte Planung` geben Sie im"
+" Feld :guilabel:`Tage bis Einkauf` die Anzahl der Tage an, die der Lieferant"
+" benötigt, um eine Angebotsanfrage zu bestätigen, nachdem er sie vom "
+"Unternehmen erhalten hat."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:248
 msgid "Manufacturing lead times"
@@ -22284,6 +22315,12 @@ msgid ""
 "created instead. This is the case regardless of the selected replenishment "
 "route."
 msgstr ""
+"Nachbestellregeln können für jedes Produkt auf der Grundlage der Route "
+"konfiguriert werden, über die es nachbestellt wird. Wenn ein Produkt die "
+"*Einkaufen*-Route verwendet, wird eine *Angebotsanfrage* erstellt, wenn die "
+"Nachbestellregel ausgelöst wird. Wenn ein Produkt die Route *Fertigung* "
+"verwendet, wird stattdessen ein *Fertigungsauftrag* (FA) erstellt. Dies ist "
+"unabhängig von der gewählten Auffüllroute der Fall."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:27
 msgid ""
@@ -22303,12 +22340,14 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:30
 msgid "To set up reordering rules for the first time, refer to:"
-msgstr ""
+msgstr "Um zum ersten Mal Nachbestellregeln festzulegen, siehe:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:32
 msgid ""
 ":ref:`Reordering rules setup <inventory/warehouses_storage/configure-rr>`"
 msgstr ""
+":ref:`Einrichtung der Nachbestellregeln "
+"<inventory/warehouses_storage/configure-rr>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:33
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:128
@@ -22318,15 +22357,17 @@ msgstr ":ref:`Auslöser <inventory/product_management/trigger>`"
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:34
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:129
 msgid ":ref:`Preferred route <inventory/warehouses_storage/route>`"
-msgstr ""
+msgstr ":ref:`Bevorzugte Route <inventory/warehouses_storage/route>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:36
 msgid "To understand and optimize replenishment using advanced features, see:"
 msgstr ""
+"Um die Auffüllung mit erweiteten Funktionen zu verstehen und zu optimieren, "
+"lesen Sie folgende Dokumentation:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:38
 msgid ":ref:`Just-in-time logic <inventory/warehouses_storage/just-in-time>`"
-msgstr ""
+msgstr ":ref:`Just-in-time-Logik <inventory/warehouses_storage/just-in-time>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:39
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:133
@@ -22336,26 +22377,30 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:44
 msgid "Reordering rules setup"
-msgstr ""
+msgstr "Einrichtung von Nachbestellregeln"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:46
 msgid ""
 "To configure automatic and manual reordering rules, complete the following:"
 msgstr ""
+"Um automatische und manuelle Nachbestellregeln zu konfigurieren, durchlaufen"
+" Sie folgende Schritte:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:48
 msgid ""
 ":ref:`Product type configuration <inventory/warehouses_storage/set-product-"
 "type>`"
 msgstr ""
+":ref:`Konfiguration des Produkttyps <inventory/warehouses_storage/set-"
+"product-type>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:49
 msgid ":ref:`Create rule <inventory/warehouses_storage/rr-fields>`"
-msgstr ""
+msgstr ":ref:`Regel erstellen <inventory/warehouses_storage/rr-fields>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:54
 msgid "Product type configuration"
-msgstr ""
+msgstr "Konfiguration des Produkttyps"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:56
 msgid ""
@@ -22364,6 +22409,11 @@ msgid ""
 " select an existing product, or create a new one by clicking "
 ":guilabel:`New`."
 msgstr ""
+"Damit Sie die Nachbestellregeln für ein Produkt verwenden können, muss es "
+"zunächst korrekt konfiguriert sein. Navigieren Sie zunächst zu "
+":menuselection:`Lager --> Produkte --> Produkte`, wählen Sie dann ein "
+"vorhandenes Produkt aus oder erstellen Sie ein neues, indem Sie auf "
+":guilabel:`Neu` klicken."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:60
 msgid ""
@@ -22468,6 +22518,10 @@ msgid ""
 ":guilabel:`Multiple Quantity` is set to `5`, and only 3 are needed, 5 "
 "products are replenished."
 msgstr ""
+":guilabel:`Mehrfache Menge`: Wenn das Produkt in bestimmten Mengen bestellt "
+"werden soll, geben Sie die Anzahl ein, die bestellt werden soll. Wenn zum "
+"Beispiel die :guilabel:`Mehrfache Menge` auf `5` gesetzt ist und nur 3 "
+"benötigt werden, werden 5 Produkte nachbestellt."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst-1
 msgid "The form for creating a new reordering rule."
@@ -22478,6 +22532,8 @@ msgid ""
 "Reordering rules can also be created from the :guilabel:`Reordering Rules` "
 "smart button on the product form."
 msgstr ""
+"Nachbestellregeln können auch über die Schaltfläche "
+":guilabel:`Nachbestellregeln` auf dem Produktformular erstellt werden."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:122
 msgid ""
@@ -22486,6 +22542,10 @@ msgid ""
 "future demand, see the :ref:`Just-in-time logic "
 "<inventory/warehouses_storage/just-in-time>` section."
 msgstr ""
+"Wie die Felder :guilabel:`Vorrätig`, :guilabel:`Prognose` und :guilabel:`Zu "
+"bestellen` anhand der vorrätigen Mengen und der zukünftigen Nachfrage "
+"berechnet werden, erfahren Sie im Abschnitt :ref:`Just-in-time-Logik "
+"<inventory/warehouses_storage/just-in-time>` "
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:126
 msgid ""
@@ -22497,16 +22557,17 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:130
 msgid ":ref:`Vendor <inventory/warehouses_storage/set-vendor>`"
-msgstr ""
+msgstr ":ref:`Lieferant <inventory/warehouses_storage/set-vendor>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:131
 msgid ":ref:`Bill of materials <inventory/warehouses_storage/set-bom-field>`"
-msgstr ""
+msgstr ":ref:`Stückliste <inventory/warehouses_storage/set-bom-field>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:132
 msgid ""
 ":ref:`Procurement group <inventory/warehouses_storage/procurement-grp>`"
 msgstr ""
+":ref:`Beschaffungsgruppe <inventory/warehouses_storage/procurement-grp>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:136
 msgid ""
@@ -22525,6 +22586,10 @@ msgid ""
 "both function the same way, the difference between the two types of "
 "reordering rules is how the rule is launched:"
 msgstr ""
+"Der *Auslöser* einer Nachbestellregel kann auf *automatisch* oder *manuell* "
+"eingestellt werden. Beide funktionieren auf die gleiche Weise, der "
+"Unterschied zwischen den beiden Arten von Nachbestellregeln besteht jedoch "
+"darin, wie die Regel gestartet wird:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:148
 msgid ""
@@ -22533,6 +22598,10 @@ msgid ""
 " below the reordering rule's minimum quantity. By default, the "
 ":guilabel:`Auto` trigger is selected."
 msgstr ""
+":ref:`Automatisch <inventory/warehouses_storage/auto-rr>`: Eine Bestellung "
+"oder ein Fertigungsauftrag wird automatisch erstellt, wenn der "
+"prognostizierte Bestand unter die Mindestmenge der Nachbestellregel fällt. "
+"Standardmäßig ist der Auslöser :guilabel:`Automatisch` ausgewählt."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:151
 msgid ""
@@ -22541,6 +22610,11 @@ msgid ""
 "showing current/forecasted stock, lead times, and arrival dates. Users can "
 "review forecasts before clicking *Order Once*."
 msgstr ""
+":ref:`Manuell <inventory/warehouses_storage/manual-rr>`: Der "
+":doc:`Auffüllbericht <report>` listet alle Produkt auf, die aufgefüllt "
+"werden müssen, zeigt den aktuellen und prognostizierten Bestand, die "
+"Vorlaufzeiten und Ankunftsdaten. Benutzer können Prognosen vor Klick auf "
+"*Einmalig bestellen* einsehen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:155
 msgid ""
@@ -22571,17 +22645,23 @@ msgid ""
 ":guilabel:`Trigger` field to :guilabel:`Auto`, generate purchase or "
 "manufacturing orders when either:"
 msgstr ""
+"*Automatische Nachbestellregeln*, die Sie aktivieren, indem Sie das Feld "
+":guilabel:`Auslöser` der Nachbestellregel auf :guilabel:`Automatisch` "
+"setzen, erzeugen Bestellungen oder Fertigungsaufträge, wenn:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:171
 msgid ""
 "The scheduler runs, and the *Forecasted* quantity is below the minimum, or"
 msgstr ""
+"der Planer läuft und die *prognostizierte* Menge unter dem Minimum liegt"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:172
 msgid ""
 "A sales order is confirmed, and lowers the *Forecasted* quantity of the "
 "product below the minimum."
 msgstr ""
+"ein Verkaufsauftrag bestätigt wird und die *prognostizierte* Menge des "
+"Produkts unter das Minimum sinkt."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:175
 msgid ""
@@ -22589,6 +22669,9 @@ msgid ""
 "view and manage |RFQs|, navigate to :menuselection:`Purchase app --> Orders "
 "--> Requests for Quotation`."
 msgstr ""
+"Wenn Sie die Route :guilabel:`Einkaufen` wählen, wird eine Angebotsanfrage "
+"erstellt. Um Angebotsanfragen anzuzeigen und zu verwalten, navigieren Sie zu"
+" :menuselection:`Einkauf --> Aufträge --> Angebotsanfragen`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:178
 msgid ""
@@ -22596,6 +22679,10 @@ msgid ""
 " To view and manage |MOs|, navigate to :menuselection:`Manufacturing app -->"
 " Operations --> Manufacturing Orders`."
 msgstr ""
+"Wenn die Route :guilabel:`Fertigung` gewählt wird, wird ein "
+"Fertigungsauftrag erzeugt. Um Fertigungsaufträge anzuzeigen und zu "
+"verwalten, navigieren Sie zu :menuselection:`Fertigung --> Vorgänge --> "
+"Fertigungsaufträge`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:181
 msgid ""
@@ -22650,6 +22737,13 @@ msgid ""
 "because they are needed to fulfill upcoming sales orders, for which the "
 "forecasted quantity is not enough."
 msgstr ""
+"*Manuelle Nachbestellregeln*, die Sie konfigurieren, indem Sie das Feld "
+":guilabel:`Auslöser` der Nachbestellregel auf :guilabel:`Manuell` setzen, "
+"listen ein Produkt auf dem :doc:`Auffüllungsdashboard <report>` auf, wenn "
+"die prognostizierte Menge unter ein bestimmtes Minimum fällt. Produkte auf "
+"diesem Dashboard werden als *Bedarf* bezeichnet, da sie zur Erfüllung "
+"anstehender Verkaufsaufträge benötigt werden, die prognostizierte Menge "
+"jedoch nicht ausreicht."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:214
 msgid ""
@@ -22659,6 +22753,11 @@ msgid ""
 "displays needs **only** when it is time to reorder items, thanks to the "
 ":guilabel:`To Reorder` filter."
 msgstr ""
+"Das Auffüllungsdashboard, auf das Sie über :menuselection:`Lager --> "
+"Vorgänge --> Auffüllung` zugreifen können, berücksichtigt "
+"Verkaufsauftragsfristen, prognostizierte Lagerbestände und Vorlaufzeiten der"
+" Lieferanten. Dank des Filters :guilabel:`Nachzubestellen` zeigt es **nur** "
+"den Bedarf an, wenn es an der Zeit ist, Artikel nachzubestellen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst-1
 msgid ""
@@ -22679,6 +22778,11 @@ msgid ""
 "is possible to select both :guilabel:`Buy` and :guilabel:`Manufacture`, "
 "indicating to Odoo that the product can be bought or manufactured."
 msgstr ""
+"Odoo ermöglicht die Auswahl mehrerer Routen als Auffüllmethoden im Reiter "
+":guilabel:`Lager` in jedem Produktformular. So ist es beispielsweise "
+"möglich, sowohl :guilabel:`Einkaufen` als auch :guilabel:`Fertigung` "
+"auszuwählen und damit anzugeben, dass das Produkt eingekauft oder gefertigt "
+"werden kann."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:233
 msgid ""
@@ -22716,7 +22820,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:250
 msgid "Advanced uses"
-msgstr ""
+msgstr "Erweiterte Anwendungen"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:252
 msgid ""
@@ -22748,6 +22852,11 @@ msgid ""
 " that are tied to fulfilling a specific demand, like an |SO| or a project. "
 "It helps organize and track which orders are linked to a particular demand."
 msgstr ""
+":guilabel:`Beschaffungsgruppe`: Dies ist eine Möglichkeit, zusammengehörige "
+"Bestellungen oder Fertigungsaufträge zu gruppieren, die mit der Erfüllung "
+"einer bestimmten Nachfrage verbunden sind, wie z. B. ein Verkaufsauftrag "
+"oder ein Projekt. Sie hilft bei der Organisation und Nachverfolgung, welche "
+"Aufträge mit einer bestimmten Nachfrage verbunden sind."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:275
 msgid ""
@@ -22758,16 +22867,17 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:0
 msgid "Showing smart button to PO."
-msgstr ""
+msgstr "Anzeige der intelligenten Schaltfläche für Bestellungen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:281
 msgid ""
 "Sales order (demand) with a linked purchase order (replenishment method)."
 msgstr ""
+"Verkaufsauftrag (Bedarf) mit verknüpften Bestellungen (Auffüllmethode)"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:283
 msgid "In the context of reordering rules:"
-msgstr ""
+msgstr "Im Kontext von Nachbestellregeln:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:285
 msgid ""
@@ -22775,6 +22885,10 @@ msgid ""
 "why there are no smart buttons that link |SOs| to |POs|, unlike the "
 ":abbr:`MTO (Make to Order)` route."
 msgstr ""
+"Nachbestellregeln weisen nicht automatisch eine Beschaffungsgruppe zu, "
+"weshalb es im Gegensatz zur Route :abbr:`Auffüllung nach Auftrag "
+"(Auftragsfertigung)` keine intelligenten Schaltflächen gibt, die "
+"Verkaufsaufträge mit Bestellungen verknüpfen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:287
 msgid ""
@@ -22782,6 +22896,10 @@ msgid ""
 ":abbr:`MTO (Make to Order)`), with specific quantities linked to specific "
 "demands (e.g. |SOs|), assign a procurement group."
 msgstr ""
+"Um intelligente Schaltflächen für Produkte zu aktivieren, die durch "
+"Nachbestellregeln (nicht Auftragsfertigung) mit bestimmten Mengen, die mit "
+"bestimmten Anforderungen (z. B. Verkaufsaufträgen) verknüpft sind, "
+"aufgefüllt werden, weisen Sie eine Beschaffungsgruppe zu."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:290
 msgid ""
@@ -22790,6 +22908,11 @@ msgid ""
 "for those demands. This allows for more efficient procurement by "
 "consolidating demands into fewer orders."
 msgstr ""
+"Ohne eine Beschaffungsgruppe kann der Bedarf für dasselbe Produkt in einer "
+"einzigen Anfrage zusammengefasst werden, selbst wenn die Nachbestellregel "
+"für diesen Bedarf mehrfach ausgeführt wird. Dies ermöglicht eine "
+"effizientere Beschaffung, indem der Bedarf in weniger Bestellungen "
+"zusammengefasst werden."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:294
 msgid ""
@@ -22797,6 +22920,10 @@ msgid ""
 "the replenishment report ensures that all linked orders are grouped under "
 "the same demand, based on the defined route."
 msgstr ""
+"Durch die Auswahl einer Beschaffungsgruppe im Feld "
+":guilabel:`Beschaffungsgruppe` im Auffüllbericht wird sichergestellt, dass "
+"alle verknüpften Aufträge auf der Grundlage der festgelegten Route unter "
+"derselben Nachfrage zusammengefasst werden."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:299
 msgid ""
@@ -22813,12 +22940,19 @@ msgid ""
 "all five products. This groups the demands for `SO35` in the same |RFQ| or "
 "|MO|."
 msgstr ""
+"Setzen Sie die :guilabel:`Beschaffungsgruppe` auf `VA35`, in der "
+"Nachbestellregel für alle fünf Produkte. Dadurch wird der Bedarf für `VA35` "
+"in derselben Angebotsanfrage oder denselben Fertigungsauftrag "
+"zusammengefasst."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:308
 msgid ""
 "Set the :guilabel:`Vendor` to `Azure Interior` to ensure the |RFQ| is "
 "created for the same supplier."
 msgstr ""
+"Setzen Sie den :guilabel:`Lieferant` auf `Azure Interior`, um "
+"sicherzustellen, dass die Angebotsanfrage für denselben Lieferanten erstellt"
+" wird."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:310
 msgid ""
@@ -22838,10 +22972,15 @@ msgid ""
 "demands for these products are managed separately and assigned to different "
 "|RFQs| (the usual behavior)."
 msgstr ""
+"Nachdem Sie die Bestellung aufgegeben haben, entfernen Sie `VA35` aus dem "
+"Feld :guilabel:`Beschaffungsgruppe` der Nachbestellregeln der fünf Produkte."
+" Dadurch wird sichergestellt, dass zukünftige Nachfragen für diese Produkte "
+"separat verwaltet und verschiedenen Angebotsanfragen zugewiesen werden (das "
+"übliche Verhalten)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:321
 msgid "Just-in-time logic"
-msgstr ""
+msgstr "Just-in-time-Logik"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:323
 msgid ""
@@ -22850,6 +22989,11 @@ msgid ""
 "date <inventory/warehouses_storage/forecasted-date>`, which determines when "
 "replenishment is necessary to avoid overstocking."
 msgstr ""
+"Die *Just-in-time-Logik* in Odoo minimiert Lagerkosten, indem Bestellungen "
+"genau zum richtigen Zeitpunkt aufgegeben werden. Dies wird durch das "
+":ref:`prognostizierte Datum <inventory/warehouses_storage/forecasted-date>` "
+"erreicht, das bestimmt, wann eine Auffüllung notwendig ist, um einen "
+"Überbestand zu vermeiden."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:327
 msgid ""
@@ -22868,16 +23012,23 @@ msgid ""
 "in 10 days, Odoo waits 5 days to place the order, ensuring it arrives just "
 "in time for delivery."
 msgstr ""
+"Bei einem Produkt mit einer Gesamtvorlaufzeit von 5 Tagen und einem "
+"Liefertermin für den Verkaufsauftrag in 10 Tagen wartet Odoo 5 Tage, um die "
+"Bestellung aufzugeben, und stellt so sicher, dass sie rechtzeitig für die "
+"Lieferung eintrifft."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:338
 msgid "Important considerations:"
-msgstr ""
+msgstr "Wichtige Überlegungen:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:340
 msgid ""
 "**If this feels risky**, consider adding buffer time or :doc:`adjusting lead"
 " times <lead_times>` for more flexibility."
 msgstr ""
+"**Wenn Ihnen das zu riskant erscheint,** sollten Sie eine Pufferzeit "
+"einplanen oder die :doc:`Vorlaufzeiten anpassen <lead_times>`, um mehr "
+"Flexibilität zu erhalten."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:342
 msgid ""
@@ -22886,10 +23037,15 @@ msgid ""
 "dates on sales orders as their *creation date* ensures purchases are "
 "immediately triggered when needed"
 msgstr ""
+"Während Vorlaufzeiten und Just-in-Time-Logik zusätzliche Kontrolle bieten, "
+"funktionieren **Nachbestellregeln auch ohne sie einwandfrei**. Wenn "
+"Liefertermine für Verkaufsaufträge als ihr *Erstellungsdatum* beibehalten "
+"werden, wird sichergestellt, dass Einkäufe bei Bedarf sofort ausgelöst "
+"werden."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:349
 msgid "Forecasted date and To Order quantity"
-msgstr ""
+msgstr "Prognostiziertes Datum und zu bestellende Menge"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:351
 msgid ""
@@ -22898,6 +23054,11 @@ msgid ""
 "rule. The :guilabel:`Replenishment Information` pop-up window displays the "
 ":guilabel:`Forecasted Date` and various lead times."
 msgstr ""
+"Um das *prognostizierte Datum* anzuzeigen, gehen Sie zum Auffüllbericht und "
+"klicken Sie auf das Symbol :icon:`fa-info-circle` :guilabel:`(Info)` für die"
+" gewünschte Nachbestellregel. Im Pop-up-Fenster "
+":guilabel:`Auffüllinformationen` werden das :guilabel:`prognostizierte "
+"Datum` und verschiedene Vorlaufzeiten angezeigt."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:355
 msgid ""
@@ -22906,6 +23067,11 @@ msgid ""
 "replenishment process. The total of these lead times, added to the current "
 "date, determines when Odoo checks for demanded stock."
 msgstr ""
+"Das *prognostizierte Datum* ist die Gesamtzeit, die benötigt wird, um ein "
+"Produkt in Odoo zu beschaffen. Sie wird berechnet, indem die Vorlaufzeiten, "
+"die mit dem Auffüllprozess des Produkts verbunden sind, addiert werden. Die "
+"Summe dieser Vorlaufzeiten, die zum aktuellen Datum addiert wird, bestimmt, "
+"wann Odoo den angeforderten Bestand überprüft."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:360
 msgid ""
@@ -22914,25 +23080,36 @@ msgid ""
 "calculated by adding all lead times related to the product to the current "
 "date."
 msgstr ""
+"Das prognostizierte Datum ist das **frühestmögliche Datum**, an dem der "
+"Kunde das Produkt erhalten kann, wenn der Auffüllprozess **jetzt** beginnt. "
+"Es wird berechnet, indem alle mit dem Produkt verbundenen Vorlaufzeiten zum "
+"aktuellen Datum addiert werden."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:365
 msgid ""
 "A manual reordering rule is set up with no minimum or maximum quantities."
 msgstr ""
+"Es wird eine manuelle Nachbestellregel ohne minimale oder maximale Mengen "
+"eingerichtet."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:367
 msgid ""
 "Vendor lead time is 4 days, the purchase security lead time is 1 day, and "
 "the days to purchase is 2 days."
 msgstr ""
+"Die Vorlaufzeit für Lieferanten beträgt 4 Tage, die Vorlaufzeit für die "
+"Sicherheitsvorlaufzeit des Einkaufs beträgt 1 Tag und die Tage bis zum "
+"Einkauf betragen 2 Tage."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:369
 msgid "Today's date is November 26."
-msgstr ""
+msgstr "Heute ist der 26. November."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:370
 msgid "These add up to 7 days, making the forecasted date, December 3rd."
 msgstr ""
+"Diese summieren sich auf 7 Tage, sodass der voraussichtliche Termin der 3. "
+"Dezember ist."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:372
 msgid ""
@@ -22940,6 +23117,9 @@ msgid ""
 "from today). This demand will appear on the replenishment report today, in "
 "the **To Order** field."
 msgstr ""
+"Ein bestätigter Verkaufsauftrag für 5 Einheiten hat ein Lieferdatum am 3. "
+"Dezember (7 Tage ab heute). Dieser Bedarf wird heute im Auffüllbericht im "
+"Feld **Zu bestellen** angezeigt."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:375
 msgid ""
@@ -22948,16 +23128,23 @@ msgid ""
 "fall within the forecasted date window, ensuring orders are placed precisely"
 " when needed."
 msgstr ""
+"Wenn der Liefertermin jedoch nach dem 3. Dezember liegt, erscheint er noch "
+"nicht im Bericht. Odoo zeigt nur die aufzufüllenden Mengen an, wenn sie in "
+"das Fenster für das prognostizierte Datum fallen, um sicherzustellen, dass "
+"Bestellungen genau zum richtigen Zeitpunkt aufgegeben werden."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:0
 msgid "Show forecasted date in Odoo."
-msgstr ""
+msgstr "Anzeige des prognostizierten Datums in Odoo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:382
 msgid ""
 "The *just-in-time* logic ensures replenishment happens only when it's "
 "necessary for the forecasted date's demand, helping avoid overstocking."
 msgstr ""
+"Die *Just-in-Time-Logik* stellt sicher, dass nur dann nachgefüllt wird, wenn"
+" es für den prognostizierten Bedarf erforderlich ist, und hilft so, "
+"Überbestände zu vermeiden."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:385
 msgid "For example:"
@@ -22968,16 +23155,23 @@ msgid ""
 "If the forecasted quantity drops below the minimum **on** the forecasted "
 "date, replenishment must begin immediately to avoid shortages."
 msgstr ""
+"Wenn die prognostizierte Menge am prognostizierten Datum unter das Minimum "
+"fällt, muss sofort mit der Auffüllung begonnen werden, um Engpässe zu "
+"vermeiden."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:389
 msgid ""
 "If the quantity drops below the minimum **after** the forecasted date, "
 "replenishment can wait."
 msgstr ""
+"Wenn die Menge **nach** dem prognostizierten Datum unter das Minimum fällt, "
+"kann die Auffüllung warten."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:391
 msgid "The **To Order** quantity is the total demand on the forecasted date."
 msgstr ""
+"Die **zu bestellende** Menge ist der Gesamtbedarf zum prognostizierten "
+"Datum."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:393
 msgid ""
@@ -22986,16 +23180,24 @@ msgid ""
 "are ordered at the last possible moment—strategic procrastination without "
 "the stress!"
 msgstr ""
+"Durch die zeitliche Abstimmung von Bestellungen auf der Grundlage der "
+"kombinierten Vorlaufzeiten optimiert Odoo die Lagerbestände, hält den "
+"Lagerbestand minimal und stellt gleichzeitig sicher, dass der zukünftige "
+"Bedarf zum letztmöglichen Zeitpunkt bestellt werden – strategische "
+"Aufschiebung ohne Stress!"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:398
 msgid "Common confusion about forecasted quantities"
-msgstr ""
+msgstr "Häufige Verwirrung bei prognostizierte Mengen"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:400
 msgid ""
 "|SOs| due **after** the :guilabel:`Forecasted Date` are not accounted for in"
 " the :guilabel:`Forecast` quantities of the reordering rule."
 msgstr ""
+"Verkaufsaufträge, die **nach** dem :guilabel:`Prognostizierten Datum` fällig"
+" sind, werden in den :guilabel:`Prognose`-Mengen der Nachbestellregel nicht "
+"berücksichtigt."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:403
 msgid ""
@@ -23004,10 +23206,14 @@ msgid ""
 "replenishment report, as this one represents the **long-term forecasted "
 "quantity**."
 msgstr ""
+"Sie werden jedoch im Prognosebericht berücksichtigt, der durch Klicken auf "
+"das Symbol :icon:`fa-area-chart` :guilabel:`(Grafik)` im Auffüllbericht "
+"geöffnet wird, da dieser die **langfristig prognostizierte Menge** "
+"darstellt."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:0
 msgid "Forecast and To Order quantities is zero."
-msgstr ""
+msgstr "Menge unter „Prognose“ und „Zu bestellen“ sind null."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:412
 msgid ""
@@ -23015,16 +23221,21 @@ msgid ""
 " December 4th, the :guilabel:`Forecast` and :guilabel:`To Order` quantities "
 "are zero."
 msgstr ""
+"Um das obige Beispiel fortzusetzen: Wenn die Frist für den Verkaufsauftrag "
+"auf den 4. Dezember angepasst wird, sind die Mengen für :guilabel:`Prognose`"
+" und :guilabel:`Zu bestellen` gleich Null."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:0
 msgid "Show forecasted report."
-msgstr ""
+msgstr "Anzeige des prognostizierten Berichts."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:418
 msgid ""
 "Opening the :guilabel:`Forecasted Report` shows the :guilabel:`Forecasted` "
 "units is `5.00`."
 msgstr ""
+"Wenn Sie den :guilabel:`Prognosebericht` öffnen, sehen Sie, dass die "
+":guilabel:`prognostizierten` Einheiten `5,00` betragen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:423
 msgid "Visibility days"
@@ -23038,6 +23249,12 @@ msgid ""
 "rule. **Only if** it is time to reorder, visibility days check additional "
 "future demand by the specified number of days."
 msgstr ""
+"*Sichtbarkeitstage* ermöglichen es zu bestimmen, ob zusätzliche Mengen zur "
+"geplanten Auffüllung hinzugefügt werden sollten. Odoo überprüft, ob der "
+"prognostizierte Bestand zum prognostizierten Datum unter das Minimum in der "
+"Nachbestellregel fällt. **Nur wenn** es Zeit für eine Nachbestellung ist, "
+"überprüfen Sichtbarkeitstage den zusätzlichen zukünftigen Bedarf um die "
+"angegebene Anzahl von Tagen."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:430
 msgid ""
