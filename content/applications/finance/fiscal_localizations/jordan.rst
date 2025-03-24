@@ -128,10 +128,6 @@ Link Odoo to JoFotara
    - :guilabel:`Registered in the special sales tax`: for businesses subject to special sales tax
      regulations. One tax computed as a percentage and one fixed tax per invoice line are required
      per invoice.
-   - :guilabel:`Registered in the special sales tax`: For businesses subject to special sales tax
-     regulations.
-
-     - One tax computed as a percentage and one fixed tax per invoice line are required per invoice.
 
 #. Click :guilabel:`Save`.
 
