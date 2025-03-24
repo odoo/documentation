@@ -37,7 +37,6 @@ to the database, but they can be adjusted at any point in the user's profile.
 To make changes to a user's rights, click on the desired user to edit their profile.
 
 .. image:: access_rights/navigate-to-users-menu.png
-   :align: center
    :alt: Users menu in the Users & Companies section of the Settings app of Odoo.
 
 On the user's profile page, in the :guilabel:`Access Rights` tab, scroll down to view the current
@@ -51,7 +50,6 @@ The :guilabel:`Administration` field in the :guilabel:`Access Rights` tab has th
 :guilabel:`Settings` or :guilabel:`Access Rights`.
 
 .. image:: access_rights/user-permissions-dropdown-menu.png
-   :align: center
    :alt: The Sales apps drop-down menu to set the user's level of permissions.
 
 .. _access-rights/groups:
@@ -67,7 +65,6 @@ To access groups, first activate Odoo's :ref:`developer mode <developer-mode>`, 
 :menuselection:`Settings app --> Users & Companies --> Groups`.
 
 .. image:: access_rights/click-users-and-companies.png
-   :align: center
    :alt: Groups menu in the Users & Companies section of the Settings app of Odoo.
 
 To create a new group from the :guilabel:`Groups` page, click :guilabel:`Create`. Then, from the
@@ -83,11 +80,10 @@ this group was created to set access rights for sharing data with some users.
    Always test the settings being changed to ensure they are being applied to the correct users.
 
 The group form contains multiple tabs for managing all elements of the group. In each tab, click
-:guilabel:`Add a line` to add a new row for users or rules, and click the :guilabel:`❌ (remove)`
-icon to remove a row.
+:guilabel:`Add a line` to add a new row for users or rules, and click the :icon:`fa-times`
+:guilabel:`(cancel)` icon to remove a row.
 
 .. image:: access_rights/groups-form.png
-   :align: center
    :alt: Tabs in the Groups form to modify the settings of the group.
 
 - :guilabel:`Users` tab: lists the current users in the group. Users listed in black have
@@ -110,7 +106,7 @@ icon to remove a row.
   selected in the :guilabel:`Model` column.
 
   To link a new access right to a group, click :guilabel:`Add a line`. Select the appropriate model
-  from the :guilabel:`Model` dropdown, then enter a name for the access right in the
+  from the :guilabel:`Model` drop-down, then enter a name for the access right in the
   :guilabel:`Name` column. For each model, enable the following options as appropriate:
 
   - :guilabel:`Read`: Users can see the object's existing values.
@@ -120,14 +116,14 @@ icon to remove a row.
 
   .. tip::
      While there are no conventions for naming access rights, it is advisable to choose a name that
-     easily identifies its purpose.
+     identifies its purpose.
 
      For example, the access that purchase managers have to the :guilabel:`Contact` model could be
      named `res.partner.purchase.manager`. This consists of the technical name of the model,
      followed by a name identifying the group of users in question.
 
      .. image:: access_rights/name-field.png
-        :alt: Name of access rights to a model
+        :alt: Name of access rights to a model.
 
      To find the model's technical name from the current view, first enter a placeholder text
      in the :guilabel:`Name` field, then click the :guilabel:`Model` name, then the
@@ -161,7 +157,7 @@ Superuser mode
 
 *Superuser mode* allows the user to bypass record rules and access rights. To activate *Superuser
 mode*, first, activate :ref:`developer mode <developer-mode>`. Then, navigate to the *debug* menu,
-represented by a :guilabel:`🪲 (bug)` icon, located in the top banner.
+represented by a :icon:`fa-bug` :guilabel:`(debug)` icon, located in the top banner.
 
 Finally, towards the bottom of the menu, click :guilabel:`Become Superuser`.
 
