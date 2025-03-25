@@ -34,6 +34,10 @@ Emirates** localization:
    :align: center
    :alt: Select the modules to install.
 
+.. seealso::
+   :doc:`United Arab Emirates Payroll localization documentation
+   <../../hr/payroll/payroll_localizations/united_arab_emirates>`
+
 Chart of accounts
 =================
 
@@ -143,19 +147,6 @@ To launch the update automatically at set intervals, change the :guilabel:`Inter
 .. note::
    By default, the UAE Central Bank exchange rates web service is used. Several other providers are
    available under the :guilabel:`Service` field.
-
-.. _uae/payroll:
-
-Payroll
-=======
-
-The :guilabel:`UAE - Payroll` module creates the necessary **salary rules** in the Payroll app in
-compliance with the UAE rules and regulations. The salary rules are linked to the corresponding
-accounts in the **chart of accounts**.
-
-.. image:: united_arab_emirates/uae-localization-salary-rules.png
-   :align: center
-   :alt: The UAE Employee Payroll Structure.
 
 Salary rules
 ------------

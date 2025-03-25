@@ -45,7 +45,7 @@ Payroll localization modules are available for the countries listed below.
 - Slovakia
 - Switzerland
 - Türkiye
-- United Arab Emirates
+- :doc:`United Arab Emirates <payroll_localizations/united_arab_emirates>`
 - United States
 
 .. toctree::
@@ -54,3 +54,4 @@ Payroll localization modules are available for the countries listed below.
    payroll_localizations/australia
    payroll_localizations/belgium
    payroll_localizations/hong_kong
+   payroll_localizations/united_arab_emirates
