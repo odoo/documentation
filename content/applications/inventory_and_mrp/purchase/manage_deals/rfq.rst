@@ -2,8 +2,6 @@
 Requests for quotation
 ======================
 
-.. _purchase/manage_deals/rfq:
-
 .. |PO| replace:: :abbr:`PO (Purchase Order)`
 .. |POs| replace:: :abbr:`POs (Purchase Orders)`
 .. |RFQ| replace:: :abbr:`RFQ (Request for Quotation)`
