@@ -158,7 +158,8 @@ always required. It usually contains much more information.
       (Blogs, Events, eCommerce, ...), you can also add them.
     - Odoo version and major number are mandatory. However, patch number is optional. If you want
       to specify the required version of Odoo to run your module, you should use a five arguments
-      structure, using the first two arguments to indicate the Odoo version.
+      structure, using the first two arguments to indicate your current Odoo version (for
+      instance, `{BRANCH}`).
 
    .. image:: theming/versioning.png
       :alt: Module versioning
@@ -561,6 +562,167 @@ values and *not* the :file:`primary_variables.scss` file.
 .. admonition:: Demo page
 
    http://localhost:8069/website/demo/bootstrap
+
+.. _theming/module/bootstrap/fonts:
+
+Font sizes
+~~~~~~~~~~
+
+Odoo has CSS font size classes to separate style (font sizes) and semantic (tag and styles in
+general). Both logic can be combined to be more flexible.
+
+.. seealso::
+   `Bootstrap documentation about display headings
+   <https://getbootstrap.com/docs/5.1/content/typography/#display-headings>`_
+
+.. _theming/module/bootstrap/fonts/text:
+
+Text style
+**********
+
+Odoo's Website Builder allows to select a style for your text. Some are just tag related like the
+`Header` with no extra CSS class. Other combine tag and style directly applied on them like the
+`Header 1 Display`.
+
+.. image:: theming/header.png
+   :alt: Header styles
+   :width: 300
+
+.. code-block:: xml
+
+   <!-- h1 with display heading sizes -->
+   <h1 class="display-1">Heading 1 with Display Heading 1 size</h1>
+   <h1 class="display-2">Heading 1 with Display Heading 2 size</h1>
+   <h1 class="display-3">Heading 1 with Display Heading 3 size</h1>
+   <h1 class="display-4">Heading 1 with Display Heading 4 size</h1>
+
+   <!-- Lead text - named "Light" in the dropdown -->
+   <p class="lead">A text typically used as an introduction.</p>
+
+   <!-- Small text -->
+   <p class="o_small">Body text with a smaller size.</p>
+
+.. _theming/module/bootstrap/fonts/sizing:
+
+Sizing classes
+**************
+
+The sizing classes are added on a freshly created `span` tag inside the targeted element (See
+examples below).
+
+.. image:: theming/sizing.png
+   :alt: Sizing classes
+   :width: 300
+
+.. _theming/module/bootstrap/fonts/sizing/headings-and-body:
+
+Heading and body text
+^^^^^^^^^^^^^^^^^^^^^
+
+Assuming these classes can be applied on any text element, take `h2` as an example below:
+
+.. code-block:: xml
+
+   <!-- h2 sized like an h1 -->
+   <h2><span class="h1-fs">Heading</span></h2>
+
+   <!-- h2 sized with other heading sizes -->
+   <h2><span class="h2-fs">Heading</span></h2>
+   <h2><span class="h3-fs">Heading</span></h2>
+   <h2><span class="h4-fs">Heading</span></h2>
+   <h2><span class="h5-fs">Heading</span></h2>
+   <h2><span class="h6-fs">Heading</span></h2>
+
+   <!-- h2 sized like a normal paragraph (base size, 16px by default) -->
+   <h2><span class="base-fs">Heading</span></h2>
+
+   <!-- h2 sized like a small text (14px by default) -->
+   <h2><span class="o_small-fs">Heading</span></h2>
+
+.. _theming/module/bootstrap/fonts/sizing/display:
+
+Display headings
+^^^^^^^^^^^^^^^^
+
+If larger titles are needed, Odoo uses Bootstrap's Display Headings classes, from `display-1` to `6`.
+
+.. code-block:: xml
+
+   <h2><span class="display-1-fs">Heading</span></h2>
+   <h2><span class="display-2-fs">Heading</span></h2>
+   <h2><span class="display-3-fs">Heading</span></h2>
+   <h2><span class="display-4-fs">Heading</span></h2>
+
+.. note::
+   The Website Builder allows the user to configure only sizes from `Display 1` to `Display 4`. You
+   can set the other sizes (`5` and `6`) to use them in your code but the user won't be able to
+   modify them directly within the Website Builder interface.
+
+.. _theming/module/website:
+
+Website settings
+----------------
+
+Global options related to the website can be set through the website record by following the
+structure below.
+
+**Declaration**
+
+.. code-block:: xml
+   :caption: ``/website_airproof/data/website.xml``
+
+   <?xml version="1.0" encoding="utf-8"?>
+   <odoo noupdate="1">
+      <record id="website.default_website" model="website">
+         <field name="name">Airproof</field>
+         <field name="logo" type="base64" file="website_airproof/static/src/img/content/logo_pred.png"/>
+         <field name="favicon" type="base64" file="website_airproof/static/description/favicon.png" />
+         <field name="shop_ppg">18</field>
+         <field name="shop_ppr">3</field>
+         <field name="cookies_bar" eval="True" />
+         <field name="contact_us_button_url">/contact-us</field>
+         <field name="social_facebook">https://www.facebook.com/Airproof</field>
+         <field name="social_instagram">https://www.instagram.com/airproof</field>
+         <field name="social_linkedin">https://www.linkedin.com/company/airproof</field>
+         <field name="social_youtube">https://www.youtube.com/c/airproof</field>
+      </record>
+   </odoo>
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: 20 80
+
+   * - Field
+     - Description
+   * - name
+     - Name of the website (displayed in the browser)
+   * - logo
+     - Path to the logo (previously created into a record)
+   * - favicon
+     - Path to the favicon (previously created into a record)
+   * - shop_ppg
+     - Number of products shown per page in the e-commerce
+   * - shop_ppr
+     - Number of products shown per rows (in a page) in the e-commerce
+   * - cookies_bar
+     - Enable/disable the cookies bar
+   * - contact_us_button_url
+     - URL of the `Contact us` page (For instance, used in the standard header templates).
+   * - social_facebook
+     - URL of a Facebook profile
+   * - social_instagram
+     - URL of a Instagram profile
+   * - social_linkedin
+     - URL of a LinkedIn company profile
+   * - social_youtube
+     - URL of a YouTube channel
+
+.. note::
+
+   `website.default_website` is the default reference whenever you work with only one website. If
+   there are several websites in your database, this record will refer to the default site (the
+   first one).
 
 .. _theming/module/views:
 
