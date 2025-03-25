@@ -34,6 +34,7 @@ Payroll localization modules are available for the countries listed below.
 - Kenya
 - Lithuania
 - Luxembourg
+- Malaysia
 - Mexico
 - Morocco
 - Netherlands
