@@ -23,18 +23,14 @@ The following modules are installed automatically with the Jordanian localizatio
    * - :guilabel:`Jordan E-Invoicing`
      - `l10n_jo_edi`
      - Integration module for JoFotara to support Jordanian e-invoicing requirements
-   * - :guilabel:`Jordan - Payroll`
-     - `l10n_jo_hr_payroll`
-     - Payroll module supporting basic calculation, tax income brackets, and national contribution
-       tax and social security
-   * - :guilabel:`Jordan - Payroll with Accounting`
-     - `l10n_jo_hr_payroll_account`
-     - Bridge module between Payroll and Accounting
 
 .. note::
    In some cases, such as when upgrading to a version with additional modules, it is possible that
    modules may not be installed automatically. Any missing modules can be manually :ref:`installed
    <general/install>`.
+
+.. seealso::
+   :doc:`Jordan Payroll localization documentation <../../hr/payroll/payroll_localizations/jordan>`
 
 .. _localizations/jordan/specifics:
 
