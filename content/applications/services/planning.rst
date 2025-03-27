@@ -90,6 +90,8 @@ Employees`, and choose the employee for whom you want to edit the settings. Then
 Two sections of the employee's :guilabel:`Work Information` tab have an impact on Planning:
 :guilabel:`Schedule` (namely, the :guilabel:`Working Hours` field) and :guilabel:`Planning`.
 
+.. _planning/working-hours:
+
 Working hours
 ~~~~~~~~~~~~~
 
@@ -254,6 +256,14 @@ by email.
    - Employees with a user account are redirected to the :guilabel:`My Planning` view in the
      backend view of Odoo.
 
+.. tip::
+   The **split shifts** tool allows to easily split long shifts into segments. Hover the mouse over
+   the desired shift. A :icon:`fa-scissors` (:guilabel:`scissors`) icon appears. Click it to divide
+   the shift into segments.
+
+   .. image:: planning/split-shifts.png
+      :alt: Split shifts tool.
+
 .. _planning/open-shifts:
 
 Open shifts and auto planning
@@ -271,8 +281,11 @@ The following features have an impact on auto planning:
   they have assigned to them.
 - **Conflicts**: Employees or materials cannot be assigned multiple shifts at the same time.
 - **Time off**: The employees’ time off is taken into account, as well as public holidays.
-- **Company working hours**: Are taken into account when assigning shifts to employees or materials.
-- **Contracts**: Employees without an active contract cannot be assigned shifts.
+- **Working hours**: Are taken into account when assigning shifts to employees or materials. It is
+  not possible to use the :guilabel:`Auto Plan` feature for and employee who is working
+  :ref:`flexible hours <planning/working-hours>`.
+- **Contracts**: If the employee has an active contract, they won't be assigned shifts that fall
+  outside of their contract period.
 
 Click :guilabel:`Publish` to confirm the schedule and notify the employees of their planning.
 
@@ -305,7 +318,7 @@ it to themselves, they can click the :guilabel:`I take it` button.
    The following rules apply:
 
    - Only the shifts matching the employee's roles are displayed as available to them.
-   - Switching shifts is only available for shifts that are in the future.
+   - Switching shifts is not available for shifts in the past.
 
 Unassignment
 ~~~~~~~~~~~~
@@ -323,4 +336,4 @@ shift reverts to an open shift.
    The following rules apply:
 
    - Only the shifts matching the employee's roles are displayed in their schedule.
-   - Switching shifts is only available for shifts that are in the future.
+   - Unassigning shifts is not available for shifts in the past.
