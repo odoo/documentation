@@ -53,6 +53,7 @@ List of countries
 
 Fiscal localization modules are available for the countries listed below.
 
+<<<<<<< f3b326cc9e8381ce1a0a2b1867353dc86c64b622
 .. note::
    New countries are frequently added to this list and Odoo keeps expanding and improving existing
    localizations and the related documentation.
@@ -92,6 +93,53 @@ Fiscal localization modules are available for the countries listed below.
 - Finland
 - :doc:`France <fiscal_localizations/france>`
 - Gabon
+||||||| 2b34cbcf6357995cf6439219601787dfc160a672
+- Algeria - Accounting
+- :doc:`Argentina - Accounting <fiscal_localizations/argentina>`
+- :doc:`Australian - Accounting <fiscal_localizations/australia>`
+- :doc:`Austria - Accounting <fiscal_localizations/austria>`
+- :doc:`Belgium - Accounting <fiscal_localizations/belgium>`
+- Bolivia - Accounting
+- :doc:`Brazilian - Accounting <fiscal_localizations/brazil>`
+- :doc:`Canada - Accounting <fiscal_localizations/canada>`
+- :doc:`Chile - Accounting <fiscal_localizations/chile>`
+- China - Accounting
+- :doc:`Colombia - Accounting <fiscal_localizations/colombia>`
+- Costa Rica - Accounting
+- Croatia - Accounting (RRIF 2012)
+- Czech - Accounting
+- Denmark - Accounting
+- Dominican Republic - Accounting
+- :doc:`Ecuadorian - Accounting <fiscal_localizations/ecuador>`
+- :doc:`Egypt - Accounting <fiscal_localizations/egypt>`
+- Ethiopia - Accounting
+- Finnish Localization
+- :doc:`France - Accounting <fiscal_localizations/france>`
+- Generic - Accounting
+=======
+- Algeria - Accounting
+- :doc:`Argentina - Accounting <fiscal_localizations/argentina>`
+- :doc:`Australian - Accounting <fiscal_localizations/australia>`
+- :doc:`Austria - Accounting <fiscal_localizations/austria>`
+- :doc:`Belgium - Accounting <fiscal_localizations/belgium>`
+- Bolivia - Accounting
+- :doc:`Brazilian - Accounting <fiscal_localizations/brazil>`
+- :doc:`Canada - Accounting <fiscal_localizations/canada>`
+- :doc:`Chile - Accounting <fiscal_localizations/chile>`
+- China - Accounting
+- :doc:`Colombia - Accounting <fiscal_localizations/colombia>`
+- Costa Rica - Accounting
+- Croatia - Accounting (RRIF 2012)
+- Czech - Accounting
+- :doc:`Denmark - Accounting <fiscal_localizations/denmark>`
+- Dominican Republic - Accounting
+- :doc:`Ecuadorian - Accounting <fiscal_localizations/ecuador>`
+- :doc:`Egypt - Accounting <fiscal_localizations/egypt>`
+- Ethiopia - Accounting
+- Finnish Localization
+- :doc:`France - Accounting <fiscal_localizations/france>`
+- Generic - Accounting
+>>>>>>> 55ca7bb2073f863ea6bd56d91483dbb3b45e2392
 - :doc:`Germany <fiscal_localizations/germany>`
 - Guinea
 - Greece
@@ -173,6 +221,7 @@ Fiscal localization modules are available for the countries listed below.
    fiscal_localizations/canada
    fiscal_localizations/chile
    fiscal_localizations/colombia
+   fiscal_localizations/denmark
    fiscal_localizations/ecuador
    fiscal_localizations/egypt
    fiscal_localizations/france
