@@ -97,6 +97,10 @@ use `<t t-call="website.placeholder_header_brand">`.
         <field name="logo" type="base64" file="website_airproof/static/src/img/content/logo.png"/>
     </record>
 
+.. note::
+   :ref:`Here <theming/module/website>` you can find more information about the company logo setup
+   and global website settings presets.
+
 .. tip::
    To make sure that your images don't slow down your web page and don't weigh too much, try to
    respect these few points:
