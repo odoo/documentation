@@ -16,6 +16,7 @@ Tutorials
     tutorials/unit_tests
     tutorials/mixins
     tutorials/pdf_reports
+    tutorials/website_theme
 
 .. cards::
 
