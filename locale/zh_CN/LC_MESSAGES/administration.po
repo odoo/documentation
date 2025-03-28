@@ -10,7 +10,6 @@
 # 何彬 <vnsoft.he@gmail.com>, 2024
 # Gary Wei <Gary.wei@elico-corp.com>, 2024
 # Datasource International <Hennessy@datasourcegroup.com>, 2024
-# liAnGjiA <liangjia@qq.com>, 2024
 # Jeana Jiang, 2024
 # Tiffany Chang, 2024
 # Mandy Choy <mnc@odoo.com>, 2024
@@ -29,7 +28,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-20 16:01+0000\n"
+"POT-Creation-Date: 2025-03-27 16:07+0000\n"
 "PO-Revision-Date: 2024-10-08 06:34+0000\n"
 "Last-Translator: Chloe Wang, 2025\n"
 "Language-Team: Chinese (China) (https://app.transifex.com/odoo/teams/41243/zh_CN/)\n"
@@ -602,16 +601,57 @@ msgstr "Odoo.com 账户"
 
 #: ../../content/administration/odoo_accounts.rst:5
 msgid ""
-"This documentation is dedicated to edits made to an Odoo.com account. The "
-"following processes describe how to delete an Odoo.com account, and how to "
-"change the password on an Odoo.com account."
-msgstr "本文档专用于对 Odoo.com 帐户的编辑。以下流程说明了如何删除 Odoo.com 账户以及如何更改 Odoo.com 账户的密码。"
+"This document describes how to edit and manage an Odoo.com account, "
+"including adding a client database, deleting an account, resetting a "
+"password, and enabling two-factor authentication."
+msgstr ""
 
 #: ../../content/administration/odoo_accounts.rst:9
+msgid "Grant users access to database"
+msgstr ""
+
+#: ../../content/administration/odoo_accounts.rst:11
+msgid ""
+"A database can be linked to an Odoo.com account that was created by a "
+"different Odoo.com account. This allows the database to appear in the *My "
+"Databases* page of the account. To do so, the client Odoo.com account needs "
+"to be added to the database as a user."
+msgstr ""
+
+#: ../../content/administration/odoo_accounts.rst:15
+msgid ""
+"First, sign in to the Odoo.com account that created the client database. In "
+"the main Odoo dashboard of the database, navigate to the **Settings** app, "
+"and click :guilabel:`Manage Users` in the :guilabel:`Users` section. Click "
+"the :guilabel:`New` button, and enter a name in the :guilabel:`Name` field "
+"for this user. Next, enter the email address used to register the desired "
+"Odoo.com account in the :guilabel:`Email` field. Navigate back to "
+":guilabel:`Settings` using the breadcrumbs, and a pop-up window titled "
+":guilabel:`Users Invitations` appears, with a warning that adding additional"
+" users will increase the amount of the subscription."
+msgstr ""
+
+#: ../../content/administration/odoo_accounts.rst:23
+msgid ""
+"Click :guilabel:`Confirm`, and the :guilabel:`Users` list appears. An "
+"invitation is automatically sent to the email address. Once confirmed, the "
+"client database now appears in the **My Databases** page of the target "
+"Odoo.com account."
+msgstr ""
+
+#: ../../content/administration/odoo_accounts.rst:28
+msgid ""
+"To provide full access to the database for this user, set the "
+":guilabel:`Dashboard` field under the :guilabel:`Productivity` header to "
+":guilabel:`Admin`. Next, set the :guilabel:`Administration` field under the "
+":guilabel:`Administration` header to :guilabel:`Settings`."
+msgstr ""
+
+#: ../../content/administration/odoo_accounts.rst:34
 msgid "Delete Odoo.com account"
 msgstr "删除 Odoo.com 账户"
 
-#: ../../content/administration/odoo_accounts.rst:11
+#: ../../content/administration/odoo_accounts.rst:36
 msgid ""
 "To delete an Odoo.com account, start by clicking the profile icon in the "
 "upper-right corner (represented by the username and icon) to reveal a drop-"
@@ -621,7 +661,7 @@ msgstr ""
 "要删除 Odoo.com 帐户，首先点击右上角的个人资料图标（由用户名和图标表示），显示一个下拉菜单。从下拉菜单中选择 :guilabel:`我的 "
 "Odoo.com 帐户`，显示用户门户。"
 
-#: ../../content/administration/odoo_accounts.rst:15
+#: ../../content/administration/odoo_accounts.rst:40
 msgid ""
 "From the user portal, the delete option can be accessed by going to "
 ":menuselection:`My Account --> Edit Security Settings --> Delete Account`. "
@@ -631,13 +671,13 @@ msgstr ""
 "在用户门户，可通过 :menuselection:`我的账户 --> 编辑安全设置 --> 删除账户` 访问删除选项。也可以访问 "
 "`https://www.odoo.com/my/home <https://www.odoo.com/my/home>`_。"
 
-#: ../../content/administration/odoo_accounts.rst:20
+#: ../../content/administration/odoo_accounts.rst:45
 msgid ""
 "Deleting an Odoo account is irreversible. Be careful performing this action,"
 " as the Odoo.com account is **not** retrievable once deleted."
 msgstr "删除 Odoo 帐户是不可逆的。执行此操作时请务必小心，因为 Odoo.com 帐户一旦删除将**无法**检索。"
 
-#: ../../content/administration/odoo_accounts.rst:23
+#: ../../content/administration/odoo_accounts.rst:48
 msgid ""
 "Upon clicking the :guilabel:`Delete Account` button, a pop-up window "
 "appears, requesting confirmation for the account deletion."
@@ -649,7 +689,7 @@ msgid ""
 "change."
 msgstr "单击“删除账户”按钮后，会弹出一个窗口验证更改。"
 
-#: ../../content/administration/odoo_accounts.rst:30
+#: ../../content/administration/odoo_accounts.rst:55
 msgid ""
 "To confirm the deletion, enter the :guilabel:`Password` and the "
 ":guilabel:`Login` for the account being deleted. Then, click the "
@@ -658,11 +698,11 @@ msgstr ""
 "要确认删除，请输入要删除账户的 :guilabel:`密码` 和 :guilabel:`登录名`。然后点击 :guilabel:`删除账户` "
 "按钮确认删除。"
 
-#: ../../content/administration/odoo_accounts.rst:36
+#: ../../content/administration/odoo_accounts.rst:61
 msgid "Odoo.com account password change"
 msgstr "修改 Odoo.com 账户密码"
 
-#: ../../content/administration/odoo_accounts.rst:38
+#: ../../content/administration/odoo_accounts.rst:63
 msgid ""
 "To change an Odoo.com account password, first login into the Odoo.com user "
 "account from the Odoo.com login page. After logging-in, go to the upper-"
@@ -673,7 +713,7 @@ msgstr ""
 "要更改 Odoo.com 账户密码，请首先从 Odoo.com 登录页面登录 Odoo.com 用户账户。登录后，转到屏幕右上角，点击个人资料图标旁边的"
 " :guilabel:`▼（向下箭头）` 图标。然后，选择 :guilabel:`我的帐户`，门户仪表板就会出现。"
 
-#: ../../content/administration/odoo_accounts.rst:43
+#: ../../content/administration/odoo_accounts.rst:68
 msgid ""
 "To change the Odoo.com password, click on the :guilabel:`Edit Security "
 "Settings` link, below the :menuselection:`Account Security` section. Next, "
@@ -685,23 +725,23 @@ msgstr ""
 "链接。然后，输入当前的 :guilabel:`密码` 和 :guilabel:`新密码` 进行必要更改，并验证新密码。最后，点击 "
 ":guilabel:`更改密码` 完成密码更改。"
 
-#: ../../content/administration/odoo_accounts.rst:49
+#: ../../content/administration/odoo_accounts.rst:74
 msgid ""
 "If a customer would like to change the login, contact Odoo support `here "
 "<https://www.odoo.com/help>`_."
 msgstr "如果客户希望更改登录名，请联系 Odoo 支持`此处<https://www.odoo.com/help>`_。"
 
-#: ../../content/administration/odoo_accounts.rst:53
+#: ../../content/administration/odoo_accounts.rst:78
 msgid ""
 "Passwords for Odoo.com users and portal users remain separate, even if the "
 "same email address is used."
 msgstr "即使使用相同的电子邮件地址，Odoo.com 用户和门户网站用户的密码也要分开。"
 
-#: ../../content/administration/odoo_accounts.rst:57
+#: ../../content/administration/odoo_accounts.rst:82
 msgid "Add two-factor authentication"
 msgstr "添加双因素身份验证"
 
-#: ../../content/administration/odoo_accounts.rst:59
+#: ../../content/administration/odoo_accounts.rst:84
 msgid ""
 "To add two-factor authentication, login into the Odoo.com user account from "
 "the Odoo.com login page. After logging-in, go to the upper-right corner of "
@@ -713,7 +753,7 @@ msgstr ""
 "用户账户。登录后，转到屏幕右上角，点击:guilabel:`个人资料图标旁边的:guilabel:`▼（向下箭头）`图标。然后选择 "
 ":guilabel:`我的账户'，门户仪表板就会出现。"
 
-#: ../../content/administration/odoo_accounts.rst:64
+#: ../../content/administration/odoo_accounts.rst:89
 msgid ""
 "If the user would like to turn on two-factor authentication (2FA) for "
 "Odoo.com access, click on the :guilabel:`Edit Security Settings` link below "
@@ -722,7 +762,7 @@ msgstr ""
 "如果用户希望为访问 Odoo.com 启用双因素身份验证 "
 "（2FA），请单击:menuselection:`账户安全`部分下方的:guilabel:`编辑安全设置`链接。"
 
-#: ../../content/administration/odoo_accounts.rst:67
+#: ../../content/administration/odoo_accounts.rst:92
 msgid ""
 "Click on :guilabel:`Enable two-factor authentication` to turn on :abbr:`2FA "
 "(two-factor authentication)`. Then, confirm the current password in the "
@@ -737,26 +777,26 @@ msgstr ""
 "码`或输入:guilabel:`验证码`，在:abbr:`2FA（双因素身份验证）`应用程序（Google Authenticator、Authy "
 "等）中激活:abbr:`2FA（双因素身份验证）`。"
 
-#: ../../content/administration/odoo_accounts.rst:73
+#: ../../content/administration/odoo_accounts.rst:98
 msgid ""
 "Finally, click on :guilabel:`Enable two-factor authentication` to complete "
 "the setup."
 msgstr "最后，点击 :guilabel:`启用双因素身份验证` 完成设置。"
 
-#: ../../content/administration/odoo_accounts.rst:76
+#: ../../content/administration/odoo_accounts.rst:101
 msgid ""
 "Under :guilabel:`My Account` Odoo.com users can also access the following:"
 msgstr "在:guilabel:`我的账户` 下，Odoo.com 用户还可以访问以下内容："
 
-#: ../../content/administration/odoo_accounts.rst:78
+#: ../../content/administration/odoo_accounts.rst:103
 msgid ":guilabel:`My Partner dashboard`"
 msgstr ":guilabel:`我的合作伙伴仪表板`"
 
-#: ../../content/administration/odoo_accounts.rst:79
+#: ../../content/administration/odoo_accounts.rst:104
 msgid ":guilabel:`My In-App Services`"
 msgstr ":guilabel:`我的应用程序内服务`"
 
-#: ../../content/administration/odoo_accounts.rst:80
+#: ../../content/administration/odoo_accounts.rst:105
 msgid ":guilabel:`My Apps Dashboard`"
 msgstr ":guilabel:`我的应用程序仪表板`"
 
@@ -4227,14 +4267,15 @@ msgstr "管理员"
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:186
 #: ../../content/administration/supported_versions.rst:35
 #: ../../content/administration/supported_versions.rst:41
-#: ../../content/administration/supported_versions.rst:42
-#: ../../content/administration/supported_versions.rst:43
-#: ../../content/administration/supported_versions.rst:59
-#: ../../content/administration/supported_versions.rst:60
-#: ../../content/administration/supported_versions.rst:61
+#: ../../content/administration/supported_versions.rst:47
+#: ../../content/administration/supported_versions.rst:48
+#: ../../content/administration/supported_versions.rst:49
 #: ../../content/administration/supported_versions.rst:65
 #: ../../content/administration/supported_versions.rst:66
 #: ../../content/administration/supported_versions.rst:67
+#: ../../content/administration/supported_versions.rst:71
+#: ../../content/administration/supported_versions.rst:72
+#: ../../content/administration/supported_versions.rst:73
 msgid "|green|"
 msgstr "|green|"
 
@@ -7501,46 +7542,53 @@ msgid "End of support"
 msgstr "终止支持"
 
 #: ../../content/administration/supported_versions.rst:34
-msgid "Odoo SaaS 18.1"
-msgstr "Odoo SaaS 18.1"
+msgid "Odoo SaaS 18.2"
+msgstr ""
 
 #: ../../content/administration/supported_versions.rst:36
 #: ../../content/administration/supported_versions.rst:37
-#: ../../content/administration/supported_versions.rst:48
-#: ../../content/administration/supported_versions.rst:49
+#: ../../content/administration/supported_versions.rst:42
+#: ../../content/administration/supported_versions.rst:43
 #: ../../content/administration/supported_versions.rst:54
 #: ../../content/administration/supported_versions.rst:55
+#: ../../content/administration/supported_versions.rst:60
+#: ../../content/administration/supported_versions.rst:61
 msgid "N/A"
 msgstr "无"
 
 #: ../../content/administration/supported_versions.rst:38
+msgid "March 2025"
+msgstr ""
+
+#: ../../content/administration/supported_versions.rst:40
+msgid "Odoo SaaS 18.1"
+msgstr "Odoo SaaS 18.1"
+
+#: ../../content/administration/supported_versions.rst:44
 msgid "January 2025"
 msgstr "2025 年 1 月"
 
-#: ../../content/administration/supported_versions.rst:40
+#: ../../content/administration/supported_versions.rst:46
 msgid "**Odoo 18.0**"
 msgstr "**Odoo 18.0**"
 
-#: ../../content/administration/supported_versions.rst:44
-#: ../../content/administration/supported_versions.rst:51
+#: ../../content/administration/supported_versions.rst:50
 #: ../../content/administration/supported_versions.rst:57
-#: ../../content/administration/supported_versions.rst:75
+#: ../../content/administration/supported_versions.rst:63
+#: ../../content/administration/supported_versions.rst:81
 msgid "October 2024"
 msgstr "2024 年 10 月"
 
-#: ../../content/administration/supported_versions.rst:45
+#: ../../content/administration/supported_versions.rst:51
 msgid "October 2027 (planned)"
 msgstr "2027 年 10 月（计划）"
 
-#: ../../content/administration/supported_versions.rst:46
+#: ../../content/administration/supported_versions.rst:52
 msgid "Odoo SaaS 17.4"
 msgstr "Odoo SaaS 17.4"
 
-#: ../../content/administration/supported_versions.rst:47
 #: ../../content/administration/supported_versions.rst:53
-#: ../../content/administration/supported_versions.rst:71
-#: ../../content/administration/supported_versions.rst:72
-#: ../../content/administration/supported_versions.rst:73
+#: ../../content/administration/supported_versions.rst:59
 #: ../../content/administration/supported_versions.rst:77
 #: ../../content/administration/supported_versions.rst:78
 #: ../../content/administration/supported_versions.rst:79
@@ -7550,70 +7598,61 @@ msgstr "Odoo SaaS 17.4"
 msgid "|red|"
 msgstr "|red|"
 
-#: ../../content/administration/supported_versions.rst:50
+#: ../../content/administration/supported_versions.rst:56
 msgid "July 2024"
 msgstr "2024 年 7 月"
 
-#: ../../content/administration/supported_versions.rst:52
+#: ../../content/administration/supported_versions.rst:58
 msgid "Odoo SaaS 17.2"
 msgstr "Odoo SaaS 17.2"
 
-#: ../../content/administration/supported_versions.rst:56
+#: ../../content/administration/supported_versions.rst:62
 msgid "April 2024"
 msgstr "2024 年 4 月"
 
-#: ../../content/administration/supported_versions.rst:58
+#: ../../content/administration/supported_versions.rst:64
 msgid "**Odoo 17.0**"
 msgstr "**Odoo 17.0**"
 
-#: ../../content/administration/supported_versions.rst:62
-#: ../../content/administration/supported_versions.rst:81
+#: ../../content/administration/supported_versions.rst:68
 msgid "November 2023"
 msgstr "2023 年 11 月"
 
-#: ../../content/administration/supported_versions.rst:63
+#: ../../content/administration/supported_versions.rst:69
 msgid "October 2026 (planned)"
 msgstr "2026 年 10 月（计划）"
 
-#: ../../content/administration/supported_versions.rst:64
+#: ../../content/administration/supported_versions.rst:70
 msgid "**Odoo 16.0**"
 msgstr "**Odoo 16.0**"
 
-#: ../../content/administration/supported_versions.rst:68
+#: ../../content/administration/supported_versions.rst:74
 msgid "October 2022"
 msgstr "2022 年 10 月"
 
-#: ../../content/administration/supported_versions.rst:69
+#: ../../content/administration/supported_versions.rst:75
 msgid "October 2025 (planned)"
 msgstr "2025 年 10 月（计划）"
 
-#: ../../content/administration/supported_versions.rst:70
+#: ../../content/administration/supported_versions.rst:76
 msgid "**Odoo 15.0**"
 msgstr "**Odoo 15.0**"
 
-#: ../../content/administration/supported_versions.rst:74
+#: ../../content/administration/supported_versions.rst:80
 msgid "October 2021"
 msgstr "2021 年 10 月"
-
-#: ../../content/administration/supported_versions.rst:76
-msgid "**Odoo 14.0**"
-msgstr "**Odoo 14.0**"
-
-#: ../../content/administration/supported_versions.rst:80
-msgid "October 2020"
-msgstr "2020 年 10 月"
 
 #: ../../content/administration/supported_versions.rst:82
 msgid "Older versions"
 msgstr "更早版本"
 
 #: ../../content/administration/supported_versions.rst:86
-msgid "Before 2020"
-msgstr "2020 年之前"
+msgid "Before 2021"
+msgstr ""
 
 #: ../../content/administration/supported_versions.rst:87
-msgid "Before 2023"
-msgstr "2023 年之前"
+msgid "Before 2024"
+msgstr ""
 
 #: ../../content/administration/supported_versions.rst:89
 msgid "Legend"
