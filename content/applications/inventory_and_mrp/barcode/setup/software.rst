@@ -20,6 +20,8 @@ have ticked the feature, you can hit save.
 .. image:: software/software_01.png
     :align: center
 
+.. _inventory/barcode/set-barcodes:
+
 Set Product Barcodes
 ====================
 
