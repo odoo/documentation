@@ -147,7 +147,7 @@ with a browser, but you can for instance:
 
 .. code-block:: bash
 
-  $  odoo-bin -i sale --without-demo=all --stop-after-init
+  $  odoo-bin -i sale --stop-after-init
 
 * update a module,
 
@@ -163,7 +163,6 @@ with a browser, but you can for instance:
 
 In the above commands, the argument:
 
-* ``--without-demo=all`` prevents demo data to be loaded for all modules
 * ``--stop-after-init`` will immediately shutdown the server instance after it completed the operations you asked.
 
 More options are available and detailed in the
