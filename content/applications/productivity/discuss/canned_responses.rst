@@ -13,20 +13,19 @@ is the keyword or key phrase that is to be replaced. The substitution is the lon
 replaces the shortcut.
 
 .. image:: canned_responses/canned-response-sample.png
-   :align: center
    :alt: A live chat conversation using a canned response.
 
-Canned responses are available :ref:`to use <discuss/use-cases>` in *Live Chat* conversations, the
-*Discuss* app, and the *Chatter* composer. This includes direct message conversations, channel
-conversations, and *WhatsApp* messages.
+Canned responses are available :ref:`to use <discuss/use-cases>` in **Live Chat** conversations, the
+**Discuss** app, and the *Chatter*. Canned responses are also available in direct message
+conversations, channel conversations, and *WhatsApp* messages.
 
 .. _discuss/created-canned-response:
 
 Creating canned responses
 =========================
 
-Canned responses are managed through the *Discuss* application. To create a new canned response, or
-manage the list of existing responses, navigate to :menuselection:`Discuss app --> Configuration
+Canned responses are managed through the **Discuss** application. To create a new canned response,
+or manage the list of existing responses, navigate to :menuselection:`Discuss app --> Configuration
 --> Canned Responses`.
 
 Then, to create a new canned response, click :guilabel:`New` at the top-left of the list. Doing so
@@ -36,7 +35,6 @@ Canned responses consist of two main components, a *shortcut* the user enters, a
 *substitution* that replaces the shortcut.
 
 .. image:: canned_responses/shortcut-substitution.png
-   :align: center
    :alt: A list of canned responses emphasizing the shortcut and substitution fields.
 
 Type a shortcut command in the :guilabel:`Shortcut` field. Next, click on the
@@ -78,9 +76,9 @@ canned response available for others to use, they need to be shared.
 
 .. note::
    Users with *Administrator* access rights can view and edit canned responses created by other
-   users through the *Discuss* app. However, they are **only** able to use them if they are included
-   in an authorized group that has been designated on that canned responses item line, located on
-   the :guilabel:`Canned Responses` page.
+   users through the **Discuss** app. However, they are **only** able to use them if they are
+   included in an authorized group that has been designated on that canned responses item line,
+   located on the :guilabel:`Canned Responses` page.
 
 Access to shared responses is granted on the :ref:`groups <access-rights/groups>` level.
 
@@ -108,24 +106,20 @@ response.
 Use a canned response
 =====================
 
-Canned responses can be used in the *Discuss* app, in a *Live Chat* conversation, or on any record
-that contains a *Chatter* composer. This includes direct message conversations, channel
-conversations, and *WhatsApp* messages.
-
-To use a canned response, type a colon (`:`) into a *Chatter* composer or chat window, followed by
-the shortcut. Then press :kbd:`Enter`. This replaces the shortcut with the substitution, though the
-response can still be edited before it is sent.
+To use a canned response in a conversation, click the :icon:`fa-plus-circle` :guilabel:`(plus)` icon
+in the message window. Then, click :guilabel:`Insert a Canned Response`. This opens a list of
+available canned responses. Either select a response from the list, or type the appropriate
+shortcut, then click the :icon:`fa-paper-plane` :guilabel:`(send)` icon or hit :kbd:`Enter`.
 
 .. tip::
-   Typing `:` in the *Chatter* composer, or chat window, on its own generates a drop-down list of
+   Typing `::` in the *Chatter* composer, or chat window, on its own generates a drop-down list of
    available canned responses. A response can be selected from the list, in addition to the use of
    shortcuts.
 
-   To search through the list of available responses, type `:`, followed by the first few letters of
-   the shortcut.
+   To search through the list of available responses, type `::`, followed by the first few letters
+   of the shortcut.
 
    .. image:: canned_responses/canned-responses-using.png
-      :align: center
       :alt: A live chat window with a list of all available canned responses.
 
 .. seealso::
