@@ -37,8 +37,8 @@ having data for demonstration purposes:
 * Test that the data is loaded correctly, without raising an error.
 * Setup most of the features to be used quickly when creating a new database.
 
-Demo data is automatically loaded when you start the server if you don't explicitly say you don't
-want it. This can be done in the database manager or with the command line.
+The database manager let you create databases with demo data. The same can be achieved via the
+command line with :option:`--with-demo <odoo-bin --with-demo>`.
 
 .. code-block:: console
 
@@ -51,13 +51,10 @@ want it. This can be done in the database manager or with the command line.
 
   Common options:
     [...]
-    --without-demo=WITHOUT_DEMO
-                        disable loading demo data for modules to be installed
-                        (comma-separated, use "all" for all modules). Requires
-                        -d and -i. Default is none
+    --with-demo         install demo data in new databases
   [...]
 
-  $ ./odoo-bin --addons-path=... -d db -i account --without-demo=all
+  $ ./odoo-bin --addons-path=... -d new-db -i base --with-demo
 
 Data Declaration
 ================

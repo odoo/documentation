@@ -121,11 +121,14 @@ Running the server
     (:file:`{$HOME}/.odoorc` by default, and can be overridden using
     :option:`-c`).
 
+.. option:: --with-demo
+
+    install demo data in new databases.
+
 .. option:: --without-demo
 
-    disables demo data loading for modules installed
-    comma-separated, use ``all`` for all modules.
-    Requires :option:`-d` and :option:`-i`.
+    don't install demo data nor in new databases nor when installing new
+    modules in a database that uses demo data, this is the default.
 
 .. option:: --pidfile=<pidfile>
 

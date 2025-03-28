@@ -9,6 +9,8 @@ Odoo Online version 18.3
 
 - New cron API for notifying progress with batch commits.
   See `#197781 <https://github.com/odoo/odoo/pull/197781>`_.
+- Demo data no longer loaded by default.
+  See `#194585 <https://github.com/odoo/odoo/pull/194585>`_.
 
 Odoo Online version 18.2
 ========================
