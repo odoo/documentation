@@ -38,6 +38,8 @@ discount for each product line and the new price is automatically calculated in 
    price increases, will *not* be visible to the customer. Instead of a discount column, the
    negative discount will change the product's unit price.
 
+.. _sales/discounts/discount-button:
+
 Discount button
 ===============
 
