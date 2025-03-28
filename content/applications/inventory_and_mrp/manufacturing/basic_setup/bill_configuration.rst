@@ -7,8 +7,8 @@ Bill of materials
 .. |MO| replace:: :abbr:`MO (Manufacturing Order)`
 
 A *bill of materials* (or *BoM* for short) documents specific components, along with their
-respective quantities, that are needed to produce or repair a product. In Odoo, |BoMs| as blueprints
-for manufactured goods and kits, and often include production operations and step-by-step
+respective quantities, that are needed to produce or repair a product. In Odoo, |BoMs| act as
+blueprints for manufactured goods and kits, and often include production operations and step-by-step
 guidelines, as well.
 
 BoM setup
@@ -23,13 +23,12 @@ Then, specify :ref:`required components <manufacturing/basic_setup/setup-compone
 necessary, define any :ref:`manufacturing operations <manufacturing/basic_setup/setup-operations>`.
 
 .. tip::
-   Individual |BOMs| can also be quickly accessed or created by clicking the :guilabel:`Bill of
-   Materials` smart button on any product form, as accessible through the *Sales*, *Inventory*, and
-   *Manufacturing* apps, as well as through any internal links where a product is referenced (such
+   Individual |BOMs| can also be accessed or created by clicking the :guilabel:`Bill of Materials`
+   smart button on any product form, as accessible through the **Sales**, **Inventory**, and
+   **Manufacturing** apps, as well as through any internal links where a product is referenced (such
    as in a field or a line item).
 
 .. figure:: bill_configuration/bom-example.png
-   :align: center
    :alt: Show BoM for a product, with components listed.
 
    BoM for `Drawer`, displaying the **Components** tab.
@@ -46,11 +45,10 @@ Components
 In the :guilabel:`Components` tab of a |BOM|, specify components used to manufacture the product by
 clicking :guilabel:`Add a line`. From the :guilabel:`Components` drop-down menu, select from
 existing products or create a new product by typing the name and selecting either the
-:guilabel:`Create " "` option to quickly add the line item, or the :guilabel:`Create and edit...`
-option to add the component and continue to its configuration form.
+:guilabel:`Create " "` option to add the line item, or the :guilabel:`Create and edit...` option to
+add the component and continue to its configuration form.
 
 .. image:: bill_configuration/component.png
-   :align: center
    :alt: Add a component by selecting it from the drop-down menu.
 
 Optionally, access additional fields by clicking the :icon:`oi-settings-adjust` :guilabel:`(settings
@@ -69,14 +67,12 @@ following features to enable these columns:
   :guilabel:`Consumed` checkbox on a manufacturing order (MO).
 
   .. image:: bill_configuration/consumed-field.png
-     :align: center
      :alt: Show a manufacturing order, highlighting the *Consumed* field.
 
   Not doing so triggers the :guilabel:`Consumption Warning` error message, where the consumed
   component quantity must be manually inputted. Otherwise, the operation cannot be completed.
 
   .. image:: bill_configuration/consumption-warning.png
-     :align: center
      :alt: Show the consumption warning error message.
 
 .. _manufacturing/basic_setup/setup-operations:
@@ -93,7 +89,6 @@ section, tick the :guilabel:`Work Orders` checkbox to enable the feature.
    :doc:`../advanced_configuration/work_order_dependencies`
 
 .. image:: bill_configuration/enable-work-orders.png
-   :align: center
    :alt: "Work Orders" feature in the Settings page.
 
 Next, navigate to the |BOM| by going to :menuselection:`Manufacturing app --> Products --> Bill of
@@ -133,11 +128,9 @@ instructions in the :guilabel:`Description` text field.
    Type `/` for a list of formatting options and features, including ChatGPT.
 
    .. image:: bill_configuration/description.png
-      :align: center
       :alt: Show ChatGPT feature to generate instructions for a work order.
 
 .. image:: bill_configuration/create-operations.png
-   :align: center
    :alt: Fill out the Create Operations pop-up window.
 
 Finally, click :guilabel:`Save \& Close` to close the pop-up window. To add more operations, click
@@ -151,14 +144,13 @@ Finally, click :guilabel:`Save \& Close` to close the pop-up window. To add more
    operation to duplicate.
 
    .. image:: bill_configuration/copy-existing-operations.png
-      :align: center
       :alt: Show Operation tab, highlighting the "Copy Existing Operations" field.
 
 Instructions
 ~~~~~~~~~~~~
 
 .. important::
-   To add detailed instructions to operations, the *Quality* app must be installed.
+   To add detailed instructions to operations, the **Quality** app must be installed.
 
 Add specific instructions to an existing operation by clicking the operation's :icon:`fa-list-ul`
 :guilabel:`(list)` icon in the :guilabel:`Instructions` column. The number in the
@@ -166,7 +158,6 @@ Add specific instructions to an existing operation by clicking the operation's :
 operation.
 
 .. image:: bill_configuration/add-instructions.png
-   :align: center
    :alt: Show the Instructions column, and list icon.
 
 On the :guilabel:`Steps` dashboard, click :guilabel:`New` to open a blank quality control point form
@@ -181,7 +172,6 @@ where the new manufacturing step can be created. Here, give the specific instruc
    <../../quality/quality_check_types/instructions_check>` documentation.
 
 .. image:: bill_configuration/steps.png
-   :align: center
    :alt: Show the page to add a quality check.
 
 Miscellaneous
@@ -204,20 +194,18 @@ calculate costs, and define how components are consumed.
      field <manufacturing/basic_setup/consumed-in-operation>`.
 
   .. image:: bill_configuration/component-status.png
-     :align: center
      :alt: Show the *Component Status* field on the manufacturing order dashboard.
 
-- :guilabel:`Version`: displays the current |BoM| version, visible with the Odoo *PLM* app installed
-  for managing |BoM| changes.
+- :guilabel:`Version`: displays the current |BoM| version, visible with the Odoo **PLM** app
+   installed for managing |BoM| changes.
 - :guilabel:`Flexible Consumption`: specifies if components used can deviate from the quantity
   defined on the |BoM|. Choose :guilabel:`Blocked` if operators **must** adhere strictly to the
   |BoM| quantity. Otherwise, choose :guilabel:`Allowed` or :guilabel:`Allowed with Warning`.
 - :guilabel:`Routing`: select the preferred warehouse's manufacturing operation type for products
   produced in multiple warehouses. If left blank, this warehouse's `Manufacturing` operation type is
   used by default.
-- :guilabel:`Analytic Distribution`: select pre-created :doc:`analytic distribution models
-  <../../../finance/accounting/reporting/analytic_accounting>` from the list to automatically record
-  the cost of manufacturing products in the chosen journal.
+- :guilabel:`Analytic Distribution`: select pre-created :doc:`analytic distribution models <../../../finance/accounting/reporting/analytic_accounting>`
+  from the list to automatically record the cost of manufacturing products in the chosen journal.
 - :guilabel:`Manuf Lead Time`: define the number of days needed to complete a |MO| from the date of
   confirmation.
 - :guilabel:`Days to prepare Manufacturing Order`: number of days needed to replenish components, or
@@ -225,11 +213,9 @@ calculate costs, and define how components are consumed.
 
 .. seealso::
    - :doc:`Analytic distribution <../../../finance/accounting/reporting/analytic_accounting>`
-   - :doc:`Lead times
-     <../../inventory/warehouses_storage/replenishment/lead_times>`
+   - :doc:`Lead times<../../inventory/warehouses_storage/replenishment/lead_times>`
 
 .. image:: bill_configuration/misc-tab.png
-   :align: center
    :alt: Show the *Miscellaneous* tab of the BoM.
 
 Add by-products to BoMs
@@ -243,7 +229,6 @@ To add by-products to a |BOM|, first enable the *By-Products* feature in
 section, tick the checkbox for :guilabel:`By-Products` to enable the feature.
 
 .. image:: bill_configuration/by-products.png
-   :align: center
    :alt: "By Products" feature in the settings page.
 
 Once the feature is enabled, add by-products to a |BOM| by clicking the :guilabel:`By-products` tab.
@@ -255,5 +240,4 @@ by-product.
    The by-product, `Mush`, is created in the `Grind grapes` operation when producing `Red Wine`.
 
    .. image:: bill_configuration/add-by-product.png
-      :align: center
       :alt: Show sample by-product in the BoM.
