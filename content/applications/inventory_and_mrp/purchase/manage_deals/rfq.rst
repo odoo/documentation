@@ -22,40 +22,50 @@ Product
 -------
 
 To auto-populate product information and prices on an |RFQ|, configure products by going to
-:menuselection:`Purchase app --> Products --> Products`. Select an existing product, or create a
-new one by selecting :guilabel:`New`. Doing so opens the product form, where various sales and
-purchasing data can be configured.
+:menuselection:`Purchase app --> Products --> Products`. Select an existing product, or create a new
+one by selecting :guilabel:`New`. Doing so opens the product form, where sales and purchasing data
+can be configured.
 
-To configure purchasable products, tick the :guilabel:`Can be purchased` checkbox, under the product
-name. Then, go to the :guilabel:`Inventory` tab, and enable the :guilabel:`Buy` route.
+To configure purchasable products, tick the :guilabel:`Purchase` checkbox, under the product name.
+Next, go to the :guilabel:`Inventory` tab, and enable the :guilabel:`Buy` route.
+
+.. important::
+   The :guilabel:`Inventory` tab and routes are only visible if using the :doc:`Inventory app
+   <../../inventory>`.
+
+.. seealso::
+   :doc:`Configure product types and track quantities
+   <../../../inventory_and_mrp/inventory/product_management/configure>`
 
 .. image:: rfq/product-vendor-pricelist-config.png
-   :align: center
    :alt: Required configuration for purchasable products.
+
 
 .. _purchase/manage_deals/vendor-pricelist:
 
 Vendor pricelist
 ----------------
 
-In the :guilabel:`Purchase` tab of the product form, input the vendor and their price, to have this
-information auto-populate on an |RFQ| each time the product is listed.
+In the :guilabel:`Purchase` tab of the product form, click :guilabel:`Add a line` to input the
+vendor and their price, to have this information auto-populate on an |RFQ| each time the product is
+listed.
 
 .. seealso::
    :doc:`../products/pricelist`
 
-Default columns include :guilabel:`Quantity`, :guilabel:`Price`, and :guilabel:`Delivery Lead Time`,
-but other columns like, :guilabel:`Product Variant` or :guilabel:`Discounts`, can also be enabled.
+Default columns include :guilabel:`Quantity`, :guilabel:`Unit Price`, and :guilabel:`Delivery Lead
+Time`, but other columns like, :guilabel:`Vendor Product Code` or :guilabel:`Discount (%)`, can also
+be enabled.
 
 To enable or disable columns, click the :icon:`oi-settings-adjust` :guilabel:`(additional options)`
 icon on the right side of the header row to reveal a drop-down menu of additional columns that can
 be added (or removed) from the :guilabel:`Purchase` tab.
 
 .. note::
-   Alternatively, prices and delivery lead times for existing products can be added in bulk by
-   going to :menuselection:`Purchase app --> Configuration --> Vendor Pricelists`. Click
-   :guilabel:`New` in the top-left corner. In the :guilabel:`Vendor` section of the pricelist form
-   that appears, add the product information as it pertains to the vendor.
+   Alternatively, prices and delivery lead times for existing products can be added by going to
+   :menuselection:`Purchase app --> Configuration --> Vendor Pricelists`. Click :guilabel:`New` in
+   the top-left corner. In the :guilabel:`Vendor` section of the pricelist form that appears, add
+   the product information as it pertains to the vendor.
 
 Order products
 ==============
@@ -72,8 +82,8 @@ The :guilabel:`Requests for Quotation` dashboard displays an overview of the com
 |POs|, and their status. The top of the screen breaks down all |RFQs| in the company, as well as
 individual ones (where the user is the buyer) with a summary of their status.
 
-The top-right corner also provides a quick report of the company's recent purchases by total value,
-lead times, and number of |RFQs| sent.
+The top-right corner also provides a report of the company's recent purchases by total value, lead
+times, and number of |RFQs| sent.
 
 Additionally, the dashboard includes buttons for:
 
@@ -82,10 +92,9 @@ Additionally, the dashboard includes buttons for:
 - :guilabel:`Late`: |RFQs| or |POs| where the :guilabel:`Order Deadline` has passed.
 
 .. image:: rfq/rfq-dashboard.png
-   :align: center
    :alt: RFQ dashboard with orders and order statuses.
 
-In addition to various view options, the :guilabel:`Requests for Quotation` dashboard provides
+In addition to view options, the :guilabel:`Requests for Quotation` dashboard provides
 :guilabel:`Filters` and :guilabel:`Group By` options, accessible via the search bar drop-down menu.
 
 .. seealso::
@@ -93,8 +102,8 @@ In addition to various view options, the :guilabel:`Requests for Quotation` dash
 
 .. _purchase/manage_deals/create-new-rfq:
 
-Create new |RFQ|
-----------------
+Create a new |RFQ|
+------------------
 
 To create a new |RFQ|, click the :guilabel:`New` button on the top-left corner of the
 :guilabel:`Requests for Quotation` dashboard to reveal a new |PO| form.
@@ -105,11 +114,15 @@ The :guilabel:`Vendor Reference` field points to the sales and delivery order nu
 vendor. This comes in handy once products are received, and the |PO| needs to be matched to the
 delivery order.
 
-The :guilabel:`Blanket Order` field refers to long-term purchase agreements on recurring orders with
-set pricing. To view and configure blanket orders, head to :menuselection:`Purchase app --> Orders
---> Purchase agreements`.
+With the :doc:`Purchase Agreements feature <blanket_orders>` activated, the :guilabel:`Blanket
+Order` field appears, referring to long-term purchase agreements on recurring orders with set
+pricing. To view and configure blanket orders, head to :menuselection:`Purchase app --> Orders -->
+Purchase agreements`.
 
-The :guilabel:`Currency` can be changed, if purchasing products from a vendor in another country.
+.. important::
+   The :guilabel:`Purchase agreements` view only appears if the :guilabel:`Blanket Order` setting is
+   enabled. To do so, navigate to :menuselection:`Purchase app --> Configuration --> Settings`, then
+   tick the :guilabel:`Blanket Orders` checkbox.
 
 Next, configure an :guilabel:`Order Deadline`, which is the date by which the vendor must confirm
 their agreement to supply the products.
@@ -118,18 +131,29 @@ their agreement to supply the products.
    After the :guilabel:`Order Deadline` is exceeded, the |RFQ| is marked as late, but the products
    can still be ordered.
 
-:guilabel:`Expected Arrival` is automatically calculated based on the :guilabel:`Order Deadline`
-and vendor lead time. Tick the checkbox for :guilabel:`Ask confirmation` to ask for signage at
-delivery.
+:guilabel:`Expected Arrival` is automatically calculated based on the :guilabel:`Order Deadline` and
+vendor lead time. Tick the checkbox for :guilabel:`Ask confirmation` to ask the vendor to confirm
+the shipping date by email.
 
 With the :doc:`Storage Locations feature
-<../../inventory/warehouses_storage/inventory_management/use_locations>` activated,
-the :guilabel:`Deliver to` field appears, with options for the order shipment.
+<../../inventory/warehouses_storage/inventory_management/use_locations>` activated, the
+:guilabel:`Deliver to` field appears, which specifies which warehouse operation (set in the
+**Inventory** app) is used to receive the shipment.
 
 Select the receiving warehouse address here, or select :guilabel:`Dropship` to indicate that this
 order is to be shipped directly to the end customer. When :guilabel:`Dropship` is selected, the
 :guilabel:`Dropship address` field is enabled. Contact names auto-populate here from the
 **Contacts** app.
+
+.. important::
+   The :guilabel:`Dropship` options only appear if the :guilabel:`Dropshipping` setting is enabled
+   in the **Inventory** app. To do so, navigate to :menuselection:`Inventory app --> Configuration
+   --> Settings`, then tick the :guilabel:`Dropshipping` checkbox.
+
+.. tip::
+   To create |RFQs| using different currencies, each currency needs to be enabled in the
+   **Invoicing** app settings. See :doc:`../../../sales/sales/products_prices/prices/currencies` to
+   learn more.
 
 Products tab
 ~~~~~~~~~~~~
@@ -138,9 +162,9 @@ In the :guilabel:`Products` tab, add the products to be ordered. Click :guilabel
 and type in the product name, or select the item from the drop-down menu.
 
 To create a new product and add it, type the new product name in the :guilabel:`Product` column,
-select :guilabel:`Create [product name]` from the resulting drop-down menu, and manually add the
-unit price. Or, select :guilabel:`Create and edit...` to be taken to the product form for that new
-item.
+select :guilabel:`Create [product name]` from the resulting drop-down menu and manually add the unit
+price. Alternatively, select :guilabel:`Create and edit...` to be taken to the product form for that
+new item.
 
 :guilabel:`Catalog` can also be selected to navigate to a product menu from the chosen vendor. From
 here, products can be added to the cart.
@@ -150,8 +174,8 @@ here, products can be added to the cart.
    :icon:`oi-arrow-right` :guilabel:`(right arrow)` icon that becomes available upon hovering over
    the :guilabel:`Product` name.
 
-Send |RFQ|
-----------
+Send the |RFQ|
+--------------
 
 Clicking :guilabel:`Send by Email` reveals a :guilabel:`Compose Email` pop-up window, with a
 :guilabel:`Purchase: Request for Quotation` template loaded, ready to send to the vendor's email
@@ -161,6 +185,9 @@ After crafting the desired message, click :guilabel:`Send`. Once sent, the |RFQ|
 :guilabel:`RFQ Sent` stage.
 
 Clicking :guilabel:`Print RFQ` downloads a PDF of the |RFQ|.
+
+.. seealso::
+   :doc:`../../../essentials/contacts`
 
 Confirm order
 -------------
@@ -191,4 +218,3 @@ documentation on :doc:`managing vendor bills <manage>`.
 
 .. seealso::
    :doc:`manage`
-
