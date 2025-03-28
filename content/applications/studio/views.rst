@@ -54,7 +54,7 @@ contacts, sales orders, products, etc.
 
 - To add a smart button, click the :icon:`fa-plus-square` (:guilabel:`plus`) icon in the top-right
   corner of the form. Enter a :guilabel:`Label`, choose an :guilabel:`Icon`, and select a
-  :ref:`related field <studio/fields/relational-fields/related-field>`.
+  :ref:`related field <studio/fields/relational-fields-related-field>`.
 
 .. example::
 
@@ -156,7 +156,7 @@ records, and edit simple records.
 
 .. tip::
    To add a :icon:`oi-draggable` (:guilabel:`drag handle`) icon to reorder records manually, add an
-   :ref:`Integer field <studio/fields/simple-fields/integer>` with the :guilabel:`Handle` widget.
+   :ref:`Integer field <studio/fields/simple-fields-integer>` with the :guilabel:`Handle` widget.
 
    .. image:: views/list-drag-handle.png
       :alt: Drag handle icon enabling to sort records manually in List view
@@ -175,7 +175,7 @@ The :guilabel:`Map` :icon:`fa-map-marker` view is used to display records on a m
 is used in the Field Service app to plan an itinerary between different tasks.
 
 .. note::
-   A :ref:`Many2One field <studio/fields/relational-fields/many2one>` linked to the *Contact* model
+   A :ref:`Many2One field <studio/fields/relational-fields-many2one>` linked to the *Contact* model
    is required to activate the view, as the contact address is used to position records on the map.
 
 - To select which kind of contact should be used on the map, select it under :guilabel:`Contact
@@ -198,8 +198,8 @@ Timeline views
 
 .. note::
    - When you first activate one of the timeline views, you need to select which :ref:`Date
-     <studio/fields/simple-fields/date>` or :ref:`Date & Time
-     <studio/fields/simple-fields/date-time>` fields on your model should be used to define when the
+     <studio/fields/simple-fields-date>` or :ref:`Date & Time
+     <studio/fields/simple-fields-date-time>` fields on your model should be used to define when the
      records start and stop in order to display them on the view. You can modify the
      :guilabel:`Start Date Field` and :guilabel:`Stop Date Field` after activating the view.
    - The settings described below are found under the view's :guilabel:`View` tab unless specified
@@ -229,15 +229,15 @@ calendar.
      values.
 
 - To display events lasting the whole day at the top of the calendar, select a :ref:`Checkbox field
-  <studio/fields/simple-fields/checkbox>` that specifies if the event lasts the whole day.
+  <studio/fields/simple-fields-checkbox>` that specifies if the event lasts the whole day.
 
 - To choose the default time scale used to display events, select :guilabel:`Day`, :guilabel:`Week`,
   :guilabel:`Month`, or :guilabel:`Year` under :guilabel:`Default Display Mode`.
 
 .. note::
    You can also use a :guilabel:`Delay Field` to display the duration of the event in hours by
-   selecting a :ref:`Decimal <studio/fields/simple-fields/decimal>` or :ref:`Integer
-   <studio/fields/simple-fields/integer>` field on the model which specifies the duration of the
+   selecting a :ref:`Decimal <studio/fields/simple-fields-decimal>` or :ref:`Integer
+   <studio/fields/simple-fields-integer>` field on the model which specifies the duration of the
    event. However, if you set an :guilabel:`End Date Field`, the :guilabel:`Delay Field` will not be
    taken into account.
 
