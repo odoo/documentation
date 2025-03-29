@@ -270,12 +270,6 @@ it uses the values of other *fields*, it should specify those fields using
             operator = 'ilike'
         return Domain('name', operator, value)
 
-  The search method is invoked when processing domains before doing an
-  actual search on the model. It must return a domain equivalent to the
-  condition: ``field operator value``.
-
-.. TODO and/or by setting the store to True for search domains ?
-
 * computed fields are readonly by default. To allow *setting* values on a
   computed field, use the ``inverse`` parameter.
   It is the name of a function reversing the computation and
@@ -494,7 +488,7 @@ behavior is desired:
 
   When :attr:`~._parent_store` is set to True, used to store a value reflecting
   the tree structure of :attr:`~._parent_name`, and to optimize the operators
-  ``child_of`` and ``parent_of`` in search domains.
+  ``child_of`` and ``parent_of`` in :ref:`reference/orm/domains`.
   It must be declared with ``index=True`` for proper operation.
 
   :class:`~odoo.fields.Char`
@@ -900,8 +894,31 @@ Fields
 Search domains
 ~~~~~~~~~~~~~~
 
-A :class:`~odoo.fields.Domain` is a first-order logical expression used for
+A search domain is a first-order logical predicate used for
 filtering and searching recordsets.
+You combine simple conditions on a field expression with logical operators.
+
+:class:`~odoo.fields.Domain` can be used as a builder for domains.
+
+.. code-block:: python
+
+    # simple condition domains
+    d1 = Domain('name', '=', 'abc')
+    d2 = Domain('phone', 'like', '7620')
+
+    # combine domains
+    d3 = d1 & d2  # and
+    d4 = d1 | d2  # or
+    d5 = ~d1      # not
+
+    # combine and parse multiple domains (any iterable of domains)
+    Domain.AND([d1, d2, d3, ...])
+    Domain.OR([d4, d5, ...])
+
+    # constants
+    Domain.TRUE   # true domain
+    Domain.FALSE  # false domain
+
 A domain can be a simple condition ``(field_expr, operator, value)`` where:
 
 * ``field_expr`` (``str``)
@@ -983,7 +1000,30 @@ A domain can be a simple condition ``(field_expr, operator, value)`` where:
     variable type, must be comparable (through ``operator``) to the named
     field.
 
-:class:`~odoo.fields.Domain` can be used as a builder for domains.
+.. example::
+
+    To search for partners named *ABC*, with a phone or mobile number containing *7620*::
+
+        Domain('name', '=', 'ABC') & (
+          Domain('phone', 'ilike', '7620') | Domain('mobile', 'ilike', '7620')
+        )
+
+    To search sales orders to invoice that have at least one line with
+    a product that is out of stock::
+
+        Domain('invoice_status', '=', 'to invoice') \
+          & Domain('order_line', 'any', Domain('product_id.qty_available', '<=', 0))
+
+    To search for all partners born in the month of February::
+
+        Domain('birthday.month_number', '=', 2)
+
+:class:`~odoo.fields.Domain` can be used to serialize the domain as a ``list``
+of simple conditions represented by 3-item ``tuple`` (or a ``list``).
+Such a serialized form may be sometimes faster to read or write.
+Domain conditions can be combined using logical operators in a *prefix* notation.
+You can combine 2 domains using ``'&'`` (AND), ``'|'`` (OR)
+and you can negate 1 using ``'!'`` (NOT).
 
 .. code-block:: python
 
@@ -992,52 +1032,16 @@ A domain can be a simple condition ``(field_expr, operator, value)`` where:
 
     # serialize domain as a list (from Domain to list)
     domain_list = list(domain)
-
-    # simple domains
-    d1 = Domain('name', '=', 'abc')
-    d2 = Domain('phone', 'like', '7620')
-
-    # combine domains
-    d3 = d1 & d2  # and
-    d4 = d1 | d2  # or
-    d5 = ~d1      # not
-
-    # combine and parse multiple domains (any iterable of domains)
-    Domain.AND([d1, d2, d3, ...])
-    Domain.OR([d4, d5, ...])
-
-    # constants
-    Domain.TRUE   # true domain
-    Domain.FALSE  # false domain
+    # will output:
+    # ['&', ('name', '=', 'abc'), ('phone', 'like', '7620')]
 
 .. automethod:: odoo.fields.Domain.iter_conditions
 
 .. automethod:: odoo.fields.Domain.map_conditions
 
-A domain is serialized as a ``list`` of criteria, each criterion being a triple
-(either a ``list`` or a ``tuple``) representing a simple condition.
-Domain criteria can be combined using logical operators in a *prefix* notation.
-You can combine 2 domains using ``'&'`` (AND), ``'|'`` (OR)
-and you can negate 1 using ``'!'`` (NOT).
+.. automethod:: odoo.fields.Domain.optimize
 
-.. example::
-
-    To search for partners named *ABC*, with a phone or mobile number containing *7620*::
-
-        [('name', '=', 'ABC'),
-         '|', ('phone','ilike','7620'), ('mobile', 'ilike', '7620')]
-
-    To search sales orders to invoice that have at least one line with
-    a product that is out of stock::
-
-        [('invoice_status', '=', 'to invoice'),
-         ('order_line', 'any', [('product_id.qty_available', '<=', 0)])]
-
-
-    To search for all partners born in the month of February::
-
-        [('birthday.month_number', '=', 2)]
-
+.. automethod:: odoo.fields.Domain.validate
 
 Unlink
 ------
