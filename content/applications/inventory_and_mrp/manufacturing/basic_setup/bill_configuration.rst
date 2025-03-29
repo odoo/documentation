@@ -7,8 +7,8 @@ Bill of materials
 .. |MO| replace:: :abbr:`MO (Manufacturing Order)`
 
 A *bill of materials* (or *BoM* for short) documents specific components, along with their
-respective quantities, that are needed to produce or repair a product. In Odoo, |BoMs| as blueprints
-for manufactured goods and kits, and often include production operations and step-by-step
+respective quantities, that are needed to produce or repair a product. In Odoo, |BoMs| serve as
+blueprints for manufactured goods and kits, and often include production operations and step-by-step
 guidelines, as well.
 
 BoM setup
@@ -225,8 +225,7 @@ calculate costs, and define how components are consumed.
 
 .. seealso::
    - :doc:`Analytic distribution <../../../finance/accounting/reporting/analytic_accounting>`
-   - :doc:`Lead times
-     <../../inventory/warehouses_storage/replenishment/lead_times>`
+   - :doc:`Lead times <../../inventory/warehouses_storage/replenishment/lead_times>`
 
 .. image:: bill_configuration/misc-tab.png
    :align: center
