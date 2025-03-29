@@ -12,10 +12,13 @@ effective project management and ensuring that your project stays on track.
 Using the project dashboard
 ===========================
 
-To access the project dashboard, open the **Project** app and hover over the desired project’s
-card. Then, click the :icon:`fa-vertical-ellipsis` (:guilabel:`vertical ellipsis`) icon and
-select :guilabel:`Dashboard`. Alternatively, you can access the project dashboard from the project’s
-:ref:`top bar <project/project-management/top-bar>`.
+To access the project dashboard, open the **Project** app and navigate to the applicable project.
+Click the :icon:`fa-sliders` (:guilabel:`sliders`) icon to add :guilabel:`Dashboard` to the
+project's :ref:`top bar <project/project-management/top-bar>`.
+
+.. tip::
+   You can also access the project dashboard by hovering over the desired project’s card, clicking
+   the :icon:`fa-ellipsis-v` (:guilabel:`vertical ellipsis`), and selecting :guilabel:`Dashboard`.
 
 The left side of the dashboard displays a list of existing :ref:`project updates <project/project-dashboard/updates>`,
 and the right side provides :ref:`detailed information about records linked to the project
@@ -40,11 +43,11 @@ The following smart buttons are displayed on the top right of the project dashbo
    completed/all, as well as the entire project's completion percentage estimation.
  - :guilabel:`Timesheets`: the number of hours or days (depending on the **Timesheets** app
    configuration) allocated in the project’s **settings**. This includes all
-   :doc:`timesheets <../timesheets>`, whether or not they have been validated.
+   :doc:`timesheets </applications/services/timesheets>`, whether or not they have been validated.
  - :guilabel:`Planned`: the number of hours that have been planned for shifts in the **Planning**
-   app. This includes all :doc:`planned shifts <../planning>`, including past shifts and shifts that
-   have not yet been published.
- - :guilabel:`Documents`: number of :doc:`documents <../../productivity/documents>` in the
+   app. This includes all :doc:`planned shifts </applications/services/planning>`, including past
+   shifts and shifts that have not yet been published.
+ - :guilabel:`Documents`: number of :doc:`documents </applications/productivity/documents>` in the
    project’s workspace.
  - :guilabel:`Burndown Chart`: click the smart button to access a :doc:`report </applications/essentials/reporting>`
    on the status of the project’s tasks over time.
@@ -78,8 +81,9 @@ or :guilabel:`canceled` :ref:`status <project/tasks/task_stages_statuses/statuse
 Profitability
 -------------
 
-This section provides a breakdown of project costs and revenues, which are impacted by all records
-linked to the project and its :doc:`Analytic account </applications/finance/accounting/reporting/analytic_accounting>`.
+The :doc:`profitability dashboard </applications/services/project/project_management/project_profitability>`
+provides a breakdown of project costs and revenues, which are impacted by all records linked to the
+project and its :doc:`Analytic account </applications/finance/accounting/reporting/analytic_accounting>`.
 
 .. note::
    The profitability report is only displayed for billable projects.
