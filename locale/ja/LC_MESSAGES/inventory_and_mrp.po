@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-20 08:51+0000\n"
+"POT-Creation-Date: 2025-03-27 08:53+0000\n"
 "PO-Revision-Date: 2022-10-04 12:53+0000\n"
 "Last-Translator: Junko Augias, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/odoo/teams/41243/ja/)\n"
@@ -20617,18 +20617,16 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:3
-msgid "Use kits"
-msgstr "キットを使用する"
+msgid "Kits"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:5
 msgid ""
 "In Odoo, a *kit* is a type of bill of materials (BoM) that can be "
 "manufactured and sold. Kits are sets of unassembled components sold to "
-"customers. They may be sold as standalone products, but are also useful "
+"customers. They may be sold as standalone products, and are also useful "
 "tools for managing more complex bills of materials (BoMs)."
 msgstr ""
-"Odooで *キット* "
-"とは製造・販売可能な部品表(BoM)の一種で、顧客に販売される未組立の構成品のセットです。キットは単体プロダクトとして販売されることもありますが、より複雑な部品表(BoM)を管理する上でも便利なツールです。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:10
 msgid ""
@@ -20643,52 +20641,26 @@ msgstr "キットをプロダクトとして作成する"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:16
 msgid ""
-"To use a kit as a sellable product, or simply as a component organization "
-"tool, the kit should first be created as a product."
-msgstr "キットを販売可能なプロダクトとして、あるいは単に構成品として使用するには、まずキットをプロダクトとして作成する必要があります。"
+"To use a kit as a sellable product, or as a component organization tool, the"
+" kit should first be created as a product."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:19
 msgid ""
 "To create a kit product, go to :menuselection:`Inventory app --> Products "
-"--> Products`, and click :guilabel:`Create`."
+"--> Products`, and then click :guilabel:`New`."
 msgstr ""
-"キットプロダクトを作成するには、:menuselection:`在庫アプリ --> プロダクト --> プロダクト` "
-"に移動し、:guilabel:`作成`をクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:22
 msgid ""
-"Then, assign a name to the new kit product. Next, under the "
-":guilabel:`General Information` tab, set the :guilabel:`Product Type` to "
-":guilabel:`Consumable`. Kit products work best as consumables, because the "
-"stock on-hand for kits is typically not tracked."
+"Then, assign a name to the new kit product. Next, set the kit's product type"
+" depending on inventory tracking needs and accounting requirements. To do "
+"this, under the :guilabel:`General Information` tab, set the "
+":guilabel:`Product Type` to either :guilabel:`Consumable` or "
+":guilabel:`Storable`."
 msgstr ""
-"次に、新しいキットプロダクトに名前を割当てます。次に :guilabel:`一般情報` タブで、:guilabel:`プロダクトタイプ` を "
-":guilabel:`消耗品` に設定します。キットの手持在庫は通常追跡されないため、キットプロダクトは消耗品として使用するのが最適です。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:27
-msgid ""
-"Although kits should almost always be set to :guilabel:`Consumable`, "
-"companies using **Anglo-Saxon** accounting might need to create kits as a "
-":guilabel:`Storable Product`. This is because when processing invoices for "
-"kits, the Cost of Goods Sold (COGS) will be posted in accounting journals."
-msgstr ""
-"キットはほとんどの場合 :guilabel:`消耗品` に設定すべきですが、**アングロサクソン** 会計を採用している会社では、キットを "
-":guilabel:`在庫可能品` として作成する必要があるかもしれません。 "
-"これは、キットの顧客請求書を作成する際、売上原価(COGS)が会計仕訳帳に計上されるためです。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:32
-msgid ""
-"Unlike storable products, the :guilabel:`Routes` designation under the "
-":guilabel:`Inventory` tab does not matter for kits, since Odoo uses the "
-"routes of the kit's individual components for replenishment purposes. All "
-"other parameters for the kit product may be modified according to "
-"preference. Once ready, click :guilabel:`Save` to save the new product."
-msgstr ""
-"在庫可能品とは異なり、Odooは補充の目的でキットの個々の構成品のルートを使用するため、キットでは、:guilabel:`在庫` タブの "
-":guilabel:`ルート` 指定は重要ではありません。 キットプロダクトの他の全てのパラメータは、優先順位に従って変更することができます。 "
-"準備ができたら、:guilabel:`保存` をクリックして新しいプロダクトを保存します。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:37
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:26
 msgid ""
 "The kit's components must also be configured as products via "
 ":menuselection:`Inventory app --> Products --> Products`. These components "
@@ -20697,48 +20669,149 @@ msgstr ""
 "キットの構成品も、:menuselection:`在庫アプリ --> プロダクト --> プロダクト` "
 "からプロダクトとして設定する必要があります。これらの構成品には、特別な設定は必要ありません。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:41
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:30
+msgid "Consumable kit setup details"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:32
+msgid ""
+"Consumable products do not have inventory tracking. Consider setting the kit"
+" as a consumable product when the kit is used in other manufacturing "
+"processes or when tracking inventory for the kit itself is not needed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:36
+msgid ""
+"**Recommended for Continental Accounting**: If costs are expensed "
+"immediately upon purchase, then setting the kit's type to *consumable* is "
+"recommended."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:38
+msgid ""
+"**Replenishment via Components**: Inventory count is managed at the "
+"component level, so reordering rules must be set to individual components."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:40
+msgid ""
+"**Selling & Stock Constraints**: Kits cannot be sold if any required "
+"component is out of stock. Since availability depends on individual "
+"components, a sales order may appear valid, but delivery can be delayed if "
+"components are unavailable."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:45
+msgid "Storable kit setup details"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:47
+msgid ""
+"Storable products have detailed tracking and inventory management since they"
+" are expected to be *stored* once they are created. Consider setting the kit"
+" as a storable product when the kit is a tangible product or warehouse and "
+"inventory tracking is essential."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:51
+msgid ""
+"**Recommended for Angle-Saxon Accounting**: If the Cost of Goods Sold (COGS)"
+" needs to be recorded in journals, then setting the kit's type to *storable*"
+" is recommended."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:53
+msgid ""
+"**Component Purchase Constraints**: Only the kit's minimum required "
+"components can be added to an **eCommerce** cart unless the option to "
+":doc:`continue "
+"selling<../../../websites/ecommerce/managing_products/products>` is "
+"disabled."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:56
+msgid ""
+"**No Kit Serial Numbers**: Serial number tracking does not track the kit, "
+"only its shipped components."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:58
+msgid ""
+"**Reordering Rule Recommendation**: Reordering rules should be set at the "
+"component-level."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:59
+msgid ""
+"**Stock Replenishment Recommendation**: Stock replenishment should also be "
+"done at the component-level."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:63
+msgid "Kit setup similarities"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:65
+msgid ""
+"Regardless of which setup is used, there are some similarities between the "
+"two options."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:67
+msgid ""
+"**No Kit-Level Stock Adjustments**: Stock adjustments cannot be handled at "
+"the kit-level."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:68
+msgid ""
+"**Kit Value Does Not Change**: The stock's value is the same whether the kit"
+" is consumable or storable."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:70
+msgid ""
+"**Kit Internal Transfers**: An internal transfer for the kit breaks it into "
+"components."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:73
 msgid "Set up the kit BoM"
 msgstr "キット部品表を設定する"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:43
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:75
 msgid ""
 "After fully configuring the kit product and its components, a new :abbr:`BoM"
 " (bill of materials)` can be created for the kit product."
 msgstr "キットプロダクトとその構成品を完全に設定した後、キットプロダクト用の新しい  :abbr:`BoM(部品表)` を作成することができます。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:46
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:78
 msgid ""
 "To do so, go to :menuselection:`Manufacturing app --> Products --> Bills of "
-"Materials`, and click :guilabel:`Create`. Next to the :guilabel:`Product` "
-"field, click the drop-down menu to reveal a list of products, and select the"
-" previously configured kit product."
+"Materials`, and then click :guilabel:`New`. Next to the :guilabel:`Product` "
+"field, click the drop-down menu to reveal a list of products, and then "
+"select the previously configured kit product."
 msgstr ""
-"これを行うには、:menuselection:`製造アプリ --> プロダクト --> 部品表` に移動し、:guilabel:`作成` "
-"をクリックします。 :guilabel:`プロダクト` "
-"フィールドの隣にあるドロップダウンメニューをクリックしてプロダクトのリストを表示し、事前に設定したキットプロダクトを選択します。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:50
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:82
 msgid ""
-"Then, for the :guilabel:`BoM Type` field, select the :guilabel:`Kit` option."
-" Finally, under the :guilabel:`Components` tab, click :guilabel:`Add a "
-"line`, and add each desired component, and specify their quantities under "
-"the :guilabel:`Quantity` column."
+"Then, for the :guilabel:`BoM Type` field, click the :guilabel:`Kit` option. "
+"Finally, under the :guilabel:`Components` tab, click :guilabel:`Add a line`,"
+" and add each desired component, and specify their quantities under the "
+":guilabel:`Quantity` column."
 msgstr ""
-"次に、:guilabel:`部品表タイプ` フィールドで、:guilabel:`キット` オプションを選択します。最後に、:guilabel:`構成品`"
-" タブで :guilabel:`明細を追加` をクリックし、必要な各構成品を追加し、:guilabel:`数量` 列で数量を指定します。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:54
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:86
 msgid ""
-"Once ready, click :guilabel:`Save` to save the newly-created :abbr:`BoM "
+"Once ready, click :guilabel:`Save` to save the newly created :abbr:`BoM "
 "(bill of materials)`."
-msgstr "準備ができたら、:guilabel:`保存` をクリックして、新しく作成した :abbr:`部品表` を保存します。"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst-1
 msgid "Kit selection on the bill of materials."
 msgstr "部品表でのキットの選択"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:60
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:91
 msgid ""
 "If the kit is solely being used as a sellable product, then only components "
 "need to be added under the :guilabel:`Components` tab, and configuring "
@@ -20747,7 +20820,7 @@ msgstr ""
 "キットが販売可能なプロダクトとしてのみ使用される場合は、:guilabel:`構成品` "
 "タブで構成品を追加するだけでよく、製造オペレーションの設定は必要ありません。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:64
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:95
 msgid ""
 "When a kit is sold as a product, it appears as a single line item on the "
 "quotation and sales order. However, on delivery orders, each component of "
@@ -20755,100 +20828,27 @@ msgid ""
 msgstr ""
 "キットがプロダクトとして販売される場合、見積書および販売オーダには単一の明細として表示されます。しかし、配送オーダにはキットの各構成品がリストされます。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:68
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:99
 msgid "Use kits to manage complex BoMs"
 msgstr "キットを使用して複雑な部品表を管理する"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:70
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:101
 msgid ""
-"Kits are also used to manage multi-level :abbr:`BoMs (bills of materials)`. "
-"These are products that contain **other** :abbr:`BoM (bill of materials)` "
-"products as components, and therefore require *nested* :abbr:`BoMs (bills of"
-" materials)`. Incorporating pre-configured kits into multi-level :abbr:`BoMs"
-" (bills of materials)` allows for cleaner organization of bundled products."
+"Kits can also be used for complex :abbr:`BoMs (Bills of Materials)`. This "
+"method nests BoMs within other BoMs, organizing complex products while "
+"simplifying manufacturing by defining each procurement and production step "
+"separately."
 msgstr ""
-"キットは、多階層 :abbr:`BoM（部品表）` を管理するのにも使用できます。これらは、**その他** :abbr:`BoM (部品表)` "
-"プロダクトを構成品として含むプロダクトであり、そのため *入れ子構造* の :abbr:`BoMs (部品表)` が必要です。 "
-"事前設定済みのキットを多階層の :abbr:`BoMs (部品表)` "
-"に組み込むことで、バンドルされたプロダクトをより整理された状態で管理することができます。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:75
-msgid ""
-"To configure this type of :abbr:`BoM (bill of materials)` with a kit as a "
-"component, go to :menuselection:`Manufacturing app --> Products --> Bills of"
-" Materials`, and click :guilabel:`Create`."
-msgstr ""
-"このタイプの :abbr:`BoM(部品表)` をキットの構成品として設定するには、:menuselection:`製造アプリ --> プロダクト "
-"--> 部品表` に進み、:guilabel:`作成` をクリックします。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:79
-msgid ""
-"Next to the :guilabel:`Product` field, click the drop-down menu to reveal a "
-"list of products, and select the desired :abbr:`BoM (bill of materials)` "
-"product. Then, for the :guilabel:`BoM Type` field, select the "
-":guilabel:`Manufacture this product` option."
-msgstr ""
-":guilabel:`プロダクト` フィールドの隣にあるドロップダウンメニューをクリックしてプロダクトのリストを表示し、希望する :abbr:`BoM "
-"(部品表)` プロダクトを選択します。次に、:guilabel:`部品表タイプ` フィールドで、:guilabel:`このプロダクトを製造する` "
-"オプションを選択します。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:83
-msgid ""
-"Under the :guilabel:`Components` tab, click :guilabel:`Add a line`, and "
-"select a kit as the component. Adding the kit as a component eliminates the "
-"need to add the kit's components individually. Any :guilabel:`BoM Type` can "
-"be used for the higher-level product's :abbr:`BoM (bill of materials)`."
-msgstr ""
-":guilabel:`構成品` タブで :guilabel:`明細追加` をクリックし、キットを構成品として選択します。 "
-"キットを構成品として追加すると、キットの構成品を個別に追加する必要がなくなります。 任意の :guilabel:`部品表タイプ` "
-"を上位レベルのプロダクトの :abbr:`BoM (部品表)` に使用できます。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:88
-msgid "Once ready, click :guilabel:`Save` to save changes."
-msgstr "準備ができたら、:guilabel:`保存` をクリックして変更を保存します。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst-1
-msgid "Kit as a component in a multilevel bill of materials."
-msgstr "多階層部品表の構成品としてのキット"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:95
-msgid "Structure & cost"
-msgstr "構成と原価"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:97
-msgid ""
-"To access a comprehensive overview of the multi-level :abbr:`BoM's (bill of "
-"material's)` components, click on the :guilabel:`Structure & Cost` smart "
-"button. Sublevel :abbr:`BoMs (bills of materials)` can be expanded and "
-"viewed from this report."
-msgstr ""
-"多階層の :abbr:`BoM' (部品表) の構成品の概要にアクセスするには、:guilabel:`構造と原価` "
-"スマートボタンをクリックします。このレポートから、サブレベルの :abbr:`BoM (部品表)` を展開して表示することができます。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst-1
-msgid "Expanded kit in the Structure and Cost report."
-msgstr "構造と原価レポートの拡張されたキット"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:105
 msgid ""
-"When creating a manufacturing order for a product with a multi-level "
-":abbr:`BoM (bill of materials)`, the kit product automatically expands to "
-"show all components. Any operations in the kit's :abbr:`BoM (bill of "
-"materials)` are also added to the list of work orders on the manufacturing "
-"order."
+"Sublevel BoMs (subassemblies or semi-finished products) streamline these "
+"workflows, helping with traceability efforts."
 msgstr ""
-"多階層の :abbr:`BoM(部品表)` を持つプロダクトの製造オーダを作成する際、キットプロダクトは自動的に展開され、全ての構成品が表示されます。 "
-"キットの :abbr:`BoM(部品表)` 内のオペレーションは、製造オーダ上の作業オーダのリストにも追加されます。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:111
-msgid ""
-"Kits are primarily used to bundle components together for organization or "
-"sale. To manage multi-level products that require manufactured sub-"
-"components, refer to :doc:`this documentation <sub_assemblies>` on sub-"
-"assemblies."
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:109
+msgid ":doc:`sub_assemblies`"
 msgstr ""
-"キットは主に、構成品をまとめて販売するために使用されます。製造されたサブ構成品を必要とする多階層のプロダクトを管理するには、サブアセンブリの "
-":doc:`このドキュメント<sub_assemblies>`  を参照して下さい。 "
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:3
 msgid "Manufacturing backorders"
@@ -23663,6 +23663,7 @@ msgid ""
 " (MOs) and work orders. It also allows manufacturing employees to track the "
 "amount of time spent working on manufacturing and work orders."
 msgstr ""
+"製造現場モジュールは、製造アプリの補完モジュールです。製造現場モジュールは、製造オーダ(MO)および作業オーダの処理用の視覚的なインターフェースを提供します。また、製造現場の従業員が製造および作業オーダに費やした作業時間を追跡することもできます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:13
 msgid ""
@@ -23672,12 +23673,15 @@ msgid ""
 ":guilabel:`Search...` bar, and then click :guilabel:`Install` on the "
 ":guilabel:`Manufacturing` app card."
 msgstr ""
+"製造現場モジュールは、製造アプリと一緒にインストールされます。単独ではインストールできません。製造アプリをインストールするには、:menuselection:`アプリ`"
+" に移動し、:guilabel:`検索...` バーで`製造` を検索し、:guilabel:`製造` アプリカードの "
+":guilabel:`インストール` をクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:19
 msgid ""
 "The *Shop Floor* module replaces the tablet view functionality of the "
 "*Manufacturing* app, and is only available in Odoo versions 16.4 and later."
-msgstr ""
+msgstr "製造現場モジュールは、製造アプリのタブレットビュー機能を置き換えるもので、Odooバージョン16.4以降でのみ利用可能です。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:22
 msgid ""
@@ -23685,12 +23689,16 @@ msgid ""
 ":menuselection:`Settings` and scroll down to the :guilabel:`About` section "
 "at the bottom of the page. The version number is displayed there."
 msgstr ""
+"Odooデータベースのバージョン番号を確認するには、:menuselection:`管理設定` に移動し、ページ下部の "
+":guilabel:`バージョン情報` セクションまでスクロールダウンします。バージョン番号がそこに表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:26
 msgid ""
 "To switch to a newer version of Odoo, see the documentation on "
 ":doc:`upgrading a database <../../../../administration/upgrade>`."
 msgstr ""
+"Odooの新しいバージョンに切り替えるには、:doc:`データベースをアップグレードする "
+"<../../../../administration/upgrade>` ドキュメントを参照して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:30
 msgid "Navigation"
@@ -23700,13 +23708,13 @@ msgstr "ナビゲーション"
 msgid ""
 "*Shop Floor* is broken down into three main views, which can be selected "
 "from the navigation bar at the top of the module:"
-msgstr ""
+msgstr "*製造現場* は、モジュール上部のナビゲーションバーから選択できる3つの主要なビューに分割されています。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:35
 msgid ""
 "The :guilabel:`All` page serves as the main dashboard for the module, and "
 "displays information cards for |MOs|."
-msgstr ""
+msgstr ":guilabel:`全て` ページはモジュールのメインダッシュボードとして機能し、製造オーダのインフォメーションカードを表示します。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:37
 msgid ""
@@ -23716,6 +23724,9 @@ msgid ""
 "navigation bar, selecting or deselecting them on the pop-up window that "
 "appears, and then clicking :guilabel:`Confirm`."
 msgstr ""
+"各作業区にも専用のページがあり、その作業区に割当てられた作業オーダの情報カードが表示されます。作業区のページは、ナビゲーションバーにある "
+":guilabel:`+ (プラス)` ボタンをクリックして表示されるポップアップウィンドウで選択または選択解除し、:guilabel:`確認` "
+"をクリックすることで、表示/非表示を切り替えることができます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:41
 msgid ""
@@ -23725,6 +23736,9 @@ msgid ""
 " the active employee, this page functions the same as the pages for each "
 "work center."
 msgstr ""
+":guilabel:`自分の` "
+"ページ(マイページ)には、モジュールの左側にあるオペレータパネルで現在有効化されているプロフィールの従業員に割当てられた全ての作業オーダの情報カードが表示されます。"
+" 有効な従業員に割当てられた作業オーダのみを表示する以外は、このページは各作業区のページと同じように機能します。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:47
 msgid ""
@@ -23733,6 +23747,8 @@ msgid ""
 "the top of the module. This search filter remains active while switching "
 "between the different module views."
 msgstr ""
+"製造オーダまたは作業オーダを他のオーダが表示されないように分離するには、モジュール上部の :guilabel:`検索...` "
+"バーで製造オーダの参照番号を検索するだけです。この検索フィルタは、異なるモジュールビューを切り替える間も有効化されたままです。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:51
 msgid ""
@@ -23742,16 +23758,19 @@ msgid ""
 " which view is selected. It can be toggled on or off by clicking the "
 ":guilabel:`sidebar` button at the extreme left of the navigation bar."
 msgstr ""
+"モジュールの左側にはオペレーターパネルがあり、現在 *製造現場* "
+"にサインインしている全ての従業員が表示され、新規従業員のサインインも可能です。オペレーターパネルは、どのビューが選択されているかに関わらず、モジュール内で常に利用可能です。ナビゲーションバーの左端にある"
+" :guilabel:`サイドバー` ボタンをクリックすることで、オペレーターパネルの表示/非表示を切り替えることができます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst-1
 msgid ""
 "The \"sidebar\" button, which is used to toggle the operator panel on or "
 "off."
-msgstr ""
+msgstr "「サイドバー」ボタンでオペレーターパネルのオン・オフを切り替えることができます"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:61
 msgid "All page"
-msgstr ""
+msgstr "全てのページ"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:63
 msgid ""
@@ -23759,6 +23778,8 @@ msgid ""
 "|MO| that is *ready to start*. An |MO| is considered ready to start once it "
 "has been confirmed, and all required components are available."
 msgstr ""
+"デフォルトでは、:guilabel:`全て` ページには、*開始準備が整っている* "
+"製造オーダの全ての情報カードが表示されます。製造オーダは、確認済かつ、必要な構成品が全て揃っている場合に、開始準備が整っていると見なされます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:67
 msgid ""
@@ -23766,6 +23787,8 @@ msgid ""
 ":guilabel:`x` button on the :guilabel:`Ready to Start` filter to remove it "
 "from the :guilabel:`Search...` bar."
 msgstr ""
+"準備状況に関わらず、すべての確認済の製造オーダを表示するには、:guilabel:`x` ボタンをクリックして、:guilabel:`Ready to "
+"Start` フィルタを :guilabel:`検索...` バーから削除します。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/shop_floor/shop_floor_overview.rst:71
 msgid "MO information card"

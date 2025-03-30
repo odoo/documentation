@@ -23,7 +23,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-20 08:51+0000\n"
+"POT-Creation-Date: 2025-03-27 08:53+0000\n"
 "PO-Revision-Date: 2022-10-04 12:53+0000\n"
 "Last-Translator: Vacaru Adrian <adrian.vacaru@gmail.com>, 2025\n"
 "Language-Team: Romanian (https://app.transifex.com/odoo/teams/41243/ro/)\n"
@@ -22760,20 +22760,16 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:3
-msgid "Use kits"
-msgstr "Utilizați kit-uri"
+msgid "Kits"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:5
 msgid ""
 "In Odoo, a *kit* is a type of bill of materials (BoM) that can be "
 "manufactured and sold. Kits are sets of unassembled components sold to "
-"customers. They may be sold as standalone products, but are also useful "
+"customers. They may be sold as standalone products, and are also useful "
 "tools for managing more complex bills of materials (BoMs)."
 msgstr ""
-"În Odoo, un *kit* este un tip de lista de materiale (BoM) care poate fi "
-"fabricat și vândut. Kiturile sunt seturi de componente neasamblate vândute "
-"clienților. Acestea pot fi vândute ca produse de sine stătătoare, dar sunt "
-"și instrumente utile pentru gestionarea listelor de materiale mai complexe."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:10
 msgid ""
@@ -22789,64 +22785,26 @@ msgstr "Creați kit-ul ca un produs"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:16
 msgid ""
-"To use a kit as a sellable product, or simply as a component organization "
-"tool, the kit should first be created as a product."
+"To use a kit as a sellable product, or as a component organization tool, the"
+" kit should first be created as a product."
 msgstr ""
-"Pentru a utiliza un kit ca produs care poate fi vândut sau pur și simplu ca "
-"instrument de organizare a componentelor, trusa trebuie creată mai întâi ca "
-"produs."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:19
 msgid ""
 "To create a kit product, go to :menuselection:`Inventory app --> Products "
-"--> Products`, and click :guilabel:`Create`."
+"--> Products`, and then click :guilabel:`New`."
 msgstr ""
-"Pentru a crea un produs kit, accesați :menuselection:`Aplicația inventar -->"
-" Produse --> Produse` și faceți clic pe :guilabel:`Creați`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:22
 msgid ""
-"Then, assign a name to the new kit product. Next, under the "
-":guilabel:`General Information` tab, set the :guilabel:`Product Type` to "
-":guilabel:`Consumable`. Kit products work best as consumables, because the "
-"stock on-hand for kits is typically not tracked."
+"Then, assign a name to the new kit product. Next, set the kit's product type"
+" depending on inventory tracking needs and accounting requirements. To do "
+"this, under the :guilabel:`General Information` tab, set the "
+":guilabel:`Product Type` to either :guilabel:`Consumable` or "
+":guilabel:`Storable`."
 msgstr ""
-"Apoi, atribuiți un nume noului produs de kit. Apoi, în fila "
-":guilabel:`Informații generale`, setați :guilabel:`Tipul de produs` la "
-":guilabel:`Consumabil`. Produsele kit funcționează cel mai bine ca "
-"consumabile, deoarece stocul disponibil pentru truse nu este de obicei "
-"urmărit."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:27
-msgid ""
-"Although kits should almost always be set to :guilabel:`Consumable`, "
-"companies using **Anglo-Saxon** accounting might need to create kits as a "
-":guilabel:`Storable Product`. This is because when processing invoices for "
-"kits, the Cost of Goods Sold (COGS) will be posted in accounting journals."
-msgstr ""
-"Deși kiturile ar trebui să fie aproape întotdeauna setate la "
-":guilabel:`Consumabil`, companiile care folosesc contabilitate **anglo-"
-"saxonă** ar putea avea nevoie să creeze kituri ca :guilabel:`Produs "
-"stocabil`. Acest lucru se datorează faptului că la procesarea facturilor "
-"pentru truse, costul mărfurilor vândute (COGS) va fi înregistrat în "
-"jurnalele contabile."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:32
-msgid ""
-"Unlike storable products, the :guilabel:`Routes` designation under the "
-":guilabel:`Inventory` tab does not matter for kits, since Odoo uses the "
-"routes of the kit's individual components for replenishment purposes. All "
-"other parameters for the kit product may be modified according to "
-"preference. Once ready, click :guilabel:`Save` to save the new product."
-msgstr ""
-"Spre deosebire de produsele stocabile, denumirea :guilabel:`Rute` din fila "
-":guilabel:`Inventar` nu contează pentru truse, deoarece Odoo folosește "
-"rutele componentelor individuale ale kit-ului în scopuri de reaprovizionare."
-" Toți ceilalți parametri pentru produsul kit pot fi modificați în funcție de"
-" preferințe. Odată gata, faceți clic pe :guilabel:`Salvați` pentru a salva "
-"noul produs."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:37
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:26
 msgid ""
 "The kit's components must also be configured as products via "
 ":menuselection:`Inventory app --> Products --> Products`. These components "
@@ -22856,11 +22814,117 @@ msgstr ""
 ":menuselection:`Inventory app --> Products --> Products`. Aceste componente "
 "nu necesită o configurație specifică."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:41
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:30
+msgid "Consumable kit setup details"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:32
+msgid ""
+"Consumable products do not have inventory tracking. Consider setting the kit"
+" as a consumable product when the kit is used in other manufacturing "
+"processes or when tracking inventory for the kit itself is not needed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:36
+msgid ""
+"**Recommended for Continental Accounting**: If costs are expensed "
+"immediately upon purchase, then setting the kit's type to *consumable* is "
+"recommended."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:38
+msgid ""
+"**Replenishment via Components**: Inventory count is managed at the "
+"component level, so reordering rules must be set to individual components."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:40
+msgid ""
+"**Selling & Stock Constraints**: Kits cannot be sold if any required "
+"component is out of stock. Since availability depends on individual "
+"components, a sales order may appear valid, but delivery can be delayed if "
+"components are unavailable."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:45
+msgid "Storable kit setup details"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:47
+msgid ""
+"Storable products have detailed tracking and inventory management since they"
+" are expected to be *stored* once they are created. Consider setting the kit"
+" as a storable product when the kit is a tangible product or warehouse and "
+"inventory tracking is essential."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:51
+msgid ""
+"**Recommended for Angle-Saxon Accounting**: If the Cost of Goods Sold (COGS)"
+" needs to be recorded in journals, then setting the kit's type to *storable*"
+" is recommended."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:53
+msgid ""
+"**Component Purchase Constraints**: Only the kit's minimum required "
+"components can be added to an **eCommerce** cart unless the option to "
+":doc:`continue "
+"selling<../../../websites/ecommerce/managing_products/products>` is "
+"disabled."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:56
+msgid ""
+"**No Kit Serial Numbers**: Serial number tracking does not track the kit, "
+"only its shipped components."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:58
+msgid ""
+"**Reordering Rule Recommendation**: Reordering rules should be set at the "
+"component-level."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:59
+msgid ""
+"**Stock Replenishment Recommendation**: Stock replenishment should also be "
+"done at the component-level."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:63
+msgid "Kit setup similarities"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:65
+msgid ""
+"Regardless of which setup is used, there are some similarities between the "
+"two options."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:67
+msgid ""
+"**No Kit-Level Stock Adjustments**: Stock adjustments cannot be handled at "
+"the kit-level."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:68
+msgid ""
+"**Kit Value Does Not Change**: The stock's value is the same whether the kit"
+" is consumable or storable."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:70
+msgid ""
+"**Kit Internal Transfers**: An internal transfer for the kit breaks it into "
+"components."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:73
 msgid "Set up the kit BoM"
 msgstr "Configurați BOM-ul kit-ului"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:43
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:75
 msgid ""
 "After fully configuring the kit product and its components, a new :abbr:`BoM"
 " (bill of materials)` can be created for the kit product."
@@ -22868,43 +22932,33 @@ msgstr ""
 "După configurarea completă a produsului kit și a componentelor sale, o nouă "
 ":abbr:`BoM (bill of materials)` poate fi creată pentru produsul kit."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:46
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:78
 msgid ""
 "To do so, go to :menuselection:`Manufacturing app --> Products --> Bills of "
-"Materials`, and click :guilabel:`Create`. Next to the :guilabel:`Product` "
-"field, click the drop-down menu to reveal a list of products, and select the"
-" previously configured kit product."
+"Materials`, and then click :guilabel:`New`. Next to the :guilabel:`Product` "
+"field, click the drop-down menu to reveal a list of products, and then "
+"select the previously configured kit product."
 msgstr ""
-"Pentru a face acest lucru, accesați :menuselection:`Aplicația de fabricație "
-"--> Produse --> Lista de materiale` și faceți clic pe :guilabel:`Creați`. "
-"Lângă câmpul :guilabel:`Produs`, faceți clic pe meniul derulant pentru a "
-"afișa o listă de produse și selectați produsul kit configurat anterior."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:50
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:82
 msgid ""
-"Then, for the :guilabel:`BoM Type` field, select the :guilabel:`Kit` option."
-" Finally, under the :guilabel:`Components` tab, click :guilabel:`Add a "
-"line`, and add each desired component, and specify their quantities under "
-"the :guilabel:`Quantity` column."
+"Then, for the :guilabel:`BoM Type` field, click the :guilabel:`Kit` option. "
+"Finally, under the :guilabel:`Components` tab, click :guilabel:`Add a line`,"
+" and add each desired component, and specify their quantities under the "
+":guilabel:`Quantity` column."
 msgstr ""
-"Apoi, pentru câmpul :guilabel:`BoM Type`, selectați opțiunea "
-":guilabel:`Kit`. În cele din urmă, sub fila :guilabel:`Componente`, faceți "
-"clic pe :guilabel:`Adăugați o linie` și adăugați fiecare componentă dorită "
-"și specificați cantitățile acestora în coloana :guilabel:`Cantitate`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:54
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:86
 msgid ""
-"Once ready, click :guilabel:`Save` to save the newly-created :abbr:`BoM "
+"Once ready, click :guilabel:`Save` to save the newly created :abbr:`BoM "
 "(bill of materials)`."
 msgstr ""
-"Odată gata, faceți clic pe :guilabel:`Salvați` pentru a salva :abbr:`BoM "
-"(lista de materiale)` nou creată."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst-1
 msgid "Kit selection on the bill of materials."
 msgstr "Selectarea kit-ului în lista de materiale."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:60
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:91
 msgid ""
 "If the kit is solely being used as a sellable product, then only components "
 "need to be added under the :guilabel:`Components` tab, and configuring "
@@ -22914,7 +22968,7 @@ msgstr ""
 "adăugate doar componente sub tabul :guilabel:`Componente`, iar configurarea "
 "operațiunilor de producție nu este necesară."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:64
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:95
 msgid ""
 "When a kit is sold as a product, it appears as a single line item on the "
 "quotation and sales order. However, on delivery orders, each component of "
@@ -22924,114 +22978,27 @@ msgstr ""
 "și comanda de vânzare. Cu toate acestea, pe documentele de livrare, fiecare "
 "componentă a kit-ului este listată."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:68
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:99
 msgid "Use kits to manage complex BoMs"
 msgstr "Folosiți kit-urile pentru a gestiona LdM-uri complexe"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:70
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:101
 msgid ""
-"Kits are also used to manage multi-level :abbr:`BoMs (bills of materials)`. "
-"These are products that contain **other** :abbr:`BoM (bill of materials)` "
-"products as components, and therefore require *nested* :abbr:`BoMs (bills of"
-" materials)`. Incorporating pre-configured kits into multi-level :abbr:`BoMs"
-" (bills of materials)` allows for cleaner organization of bundled products."
+"Kits can also be used for complex :abbr:`BoMs (Bills of Materials)`. This "
+"method nests BoMs within other BoMs, organizing complex products while "
+"simplifying manufacturing by defining each procurement and production step "
+"separately."
 msgstr ""
-"Kiturile sunt, de asemenea, folosite pentru a gestiona :abbr:`BoMs (bill of "
-"materials)` pe mai multe niveluri. Acestea sunt produse care conțin **alte**"
-" :abbr:`BoM (bill of materials)` ca componente și, prin urmare, necesită "
-"*imbricate* :abbr:`BoMs (bill of materials)`. Încorporarea truselor "
-"preconfigurate în :abbr:`BoMs (facturi de materiale)` pe mai multe niveluri "
-"permite o organizare mai curată a produselor la pachet."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:75
-msgid ""
-"To configure this type of :abbr:`BoM (bill of materials)` with a kit as a "
-"component, go to :menuselection:`Manufacturing app --> Products --> Bills of"
-" Materials`, and click :guilabel:`Create`."
-msgstr ""
-"Pentru a configura acest tip de :abbr:`BoM (bill of materials)` cu un kit ca"
-" componentă, accesați :menuselection:`Manufacturing app --> Products --> "
-"Bills of Materials` și faceți clic pe :guilabel:`Create `."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:79
-msgid ""
-"Next to the :guilabel:`Product` field, click the drop-down menu to reveal a "
-"list of products, and select the desired :abbr:`BoM (bill of materials)` "
-"product. Then, for the :guilabel:`BoM Type` field, select the "
-":guilabel:`Manufacture this product` option."
-msgstr ""
-"Lângă câmpul :guilabel:`Produs`, faceți clic pe meniul drop-down pentru a "
-"afișa o listă de produse și selectați produsul dorit :abbr:`BoM (bill of "
-"materials)`. Apoi, pentru câmpul :guilabel:`Tip BoM`, selectați opțiunea "
-":guilabel:`Fabricați acest produs`."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:83
-msgid ""
-"Under the :guilabel:`Components` tab, click :guilabel:`Add a line`, and "
-"select a kit as the component. Adding the kit as a component eliminates the "
-"need to add the kit's components individually. Any :guilabel:`BoM Type` can "
-"be used for the higher-level product's :abbr:`BoM (bill of materials)`."
-msgstr ""
-"Sub fila :guilabel:`Componente`, faceți clic pe :guilabel:`Adăugați o linie`"
-" și selectați un kit ca componentă. Adăugarea kit-ului ca componentă elimină"
-" necesitatea de a adăuga componentele kit-ului individual. Orice "
-":guilabel:`BoM Type` poate fi folosit pentru :abbr:`BoM (bill of materials)`"
-" a produsului de nivel superior."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:88
-msgid "Once ready, click :guilabel:`Save` to save changes."
-msgstr ""
-"Odată gata, faceți clic pe :guilabel:`Salvați` pentru a salva modificările."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst-1
-msgid "Kit as a component in a multilevel bill of materials."
-msgstr "Kit ca și componentă într-o listă de materiale multinivel."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:95
-msgid "Structure & cost"
-msgstr "Structură și cost"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:97
-msgid ""
-"To access a comprehensive overview of the multi-level :abbr:`BoM's (bill of "
-"material's)` components, click on the :guilabel:`Structure & Cost` smart "
-"button. Sublevel :abbr:`BoMs (bills of materials)` can be expanded and "
-"viewed from this report."
-msgstr ""
-"Pentru a accesa o imagine de ansamblu cuprinzătoare a componentelor "
-":abbr:`BoM's (liste de materiale)` pe mai multe niveluri, faceți clic pe "
-"butonul inteligent :guilabel:`Structură și cost`. Subnivelul :abbr:`BoMs "
-"(bill of materials)` poate fi extins și vizualizat din acest raport."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst-1
-msgid "Expanded kit in the Structure and Cost report."
-msgstr "Kit extins în raportul Structură și Cost."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:105
 msgid ""
-"When creating a manufacturing order for a product with a multi-level "
-":abbr:`BoM (bill of materials)`, the kit product automatically expands to "
-"show all components. Any operations in the kit's :abbr:`BoM (bill of "
-"materials)` are also added to the list of work orders on the manufacturing "
-"order."
+"Sublevel BoMs (subassemblies or semi-finished products) streamline these "
+"workflows, helping with traceability efforts."
 msgstr ""
-"Când se creează o comandă de fabricație pentru un produs cu un :abbr:`BoM "
-"(bill of materials)` pe mai multe niveluri, produsul kit se extinde automat "
-"pentru a afișa toate componentele. Orice operațiuni din :abbr:`BoM (bill of "
-"materials)` a kit-ului sunt adăugate și la lista comenzilor de lucru din "
-"comanda de fabricație."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:111
-msgid ""
-"Kits are primarily used to bundle components together for organization or "
-"sale. To manage multi-level products that require manufactured sub-"
-"components, refer to :doc:`this documentation <sub_assemblies>` on sub-"
-"assemblies."
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:109
+msgid ":doc:`sub_assemblies`"
 msgstr ""
-"Kiturile sunt utilizate în principal pentru a combina componente pentru "
-"organizare sau vânzare. Pentru a gestiona produsele pe mai multe niveluri "
-"care necesită sub-componente fabricate, consultați :doc:`această "
-"documentație <sub_assemblies>` despre sub-ansambluri."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:3
 msgid "Manufacturing backorders"

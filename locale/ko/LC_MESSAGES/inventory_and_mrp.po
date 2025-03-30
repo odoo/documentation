@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-20 08:51+0000\n"
+"POT-Creation-Date: 2025-03-27 08:53+0000\n"
 "PO-Revision-Date: 2022-10-04 12:53+0000\n"
 "Last-Translator: Sarah Park, 2025\n"
 "Language-Team: Korean (https://app.transifex.com/odoo/teams/41243/ko/)\n"
@@ -18469,6 +18469,9 @@ msgid ""
 ":guilabel:`Days to Purchase` field, specify the number of days required for "
 "the vendor to confirm a |RFQ| after receiving it from the company."
 msgstr ""
+"설정하려면 :menuselection:`재고 관리 앱 --> 환경설정 --> 설정` 으로 이동합니다. :guilabel:`고급 예약` "
+"섹션의 :guilabel:`매입 소요 기간` 필드에서 공급업체가 회사로부터 RFQ를 받은 후 |RFQ| 를 확인하는 데 필요한 날짜 수를"
+" 지정합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:248
 msgid "Manufacturing lead times"
@@ -20997,19 +21000,16 @@ msgstr ""
 "<manufacturing/management/bill-configuration>`에 대한 문서를 참조하십시오."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:3
-msgid "Use kits"
-msgstr "키트 사용"
+msgid "Kits"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:5
 msgid ""
 "In Odoo, a *kit* is a type of bill of materials (BoM) that can be "
 "manufactured and sold. Kits are sets of unassembled components sold to "
-"customers. They may be sold as standalone products, but are also useful "
+"customers. They may be sold as standalone products, and are also useful "
 "tools for managing more complex bills of materials (BoMs)."
 msgstr ""
-"Odoo에서 *키트*는 제조 및 판매할 수 있는 일종의 자재명세서 (BoM)입니다. 키트는 고객에게 판매되는 조립되지 않은 부품 "
-"세트입니다. 키트는 독립적인 제품으로 판매할 수도 있지만, 더 복잡한 자재명세서(BoM)를 관리하기 위한 효과적인 도구로도 사용할 수 "
-"있습니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:10
 msgid ""
@@ -21024,53 +21024,26 @@ msgstr "키트를 제품으로 생성"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:16
 msgid ""
-"To use a kit as a sellable product, or simply as a component organization "
-"tool, the kit should first be created as a product."
-msgstr "키트를 판매 가능한 제품으로 사용하거나 단순히 부품을 정리하는 도구로 사용하려면 먼저 키트를 상품으로 생성해야 합니다."
+"To use a kit as a sellable product, or as a component organization tool, the"
+" kit should first be created as a product."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:19
 msgid ""
 "To create a kit product, go to :menuselection:`Inventory app --> Products "
-"--> Products`, and click :guilabel:`Create`."
+"--> Products`, and then click :guilabel:`New`."
 msgstr ""
-"키트 제품을 생성하려면 :menuselection:`재고 관리 앱 --> 품목 --> 품목`으로 이동한 다음 :guilabel:`생성`을"
-" 클릭합니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:22
 msgid ""
-"Then, assign a name to the new kit product. Next, under the "
-":guilabel:`General Information` tab, set the :guilabel:`Product Type` to "
-":guilabel:`Consumable`. Kit products work best as consumables, because the "
-"stock on-hand for kits is typically not tracked."
+"Then, assign a name to the new kit product. Next, set the kit's product type"
+" depending on inventory tracking needs and accounting requirements. To do "
+"this, under the :guilabel:`General Information` tab, set the "
+":guilabel:`Product Type` to either :guilabel:`Consumable` or "
+":guilabel:`Storable`."
 msgstr ""
-"그런 다음 새로 생성한 키트 제품에 이름을 지정합니다. :guilabel:`일반 정보` 탭에서 :guilabel:`품목 유형`을 "
-":guilabel:`소모품`으로 설정합니다. 키트 제품은 일반적으로 재고 수준을 모니터링하지 않으므로 소모품으로 지정하는 것이 가장 "
-"적합합니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:27
-msgid ""
-"Although kits should almost always be set to :guilabel:`Consumable`, "
-"companies using **Anglo-Saxon** accounting might need to create kits as a "
-":guilabel:`Storable Product`. This is because when processing invoices for "
-"kits, the Cost of Goods Sold (COGS) will be posted in accounting journals."
-msgstr ""
-"키트는 일반적으로 :guilabel:`소모품`으로 설정해야 하지만, **영미형** 회계를 사용하는 회사는 키트를 "
-":guilabel:`보관용 제품`으로 지정해야 할 수도 있습니다. 이는 키트에 대한 청구서를 처리할 때 회계 전표에 매출원가(COGS)가"
-" 기록되기 때문입니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:32
-msgid ""
-"Unlike storable products, the :guilabel:`Routes` designation under the "
-":guilabel:`Inventory` tab does not matter for kits, since Odoo uses the "
-"routes of the kit's individual components for replenishment purposes. All "
-"other parameters for the kit product may be modified according to "
-"preference. Once ready, click :guilabel:`Save` to save the new product."
-msgstr ""
-"Odoo는 키트 개별 구성품의 경로를 보충 목적으로 사용하므로 보관용 제품과 달리 :guilabel:`재고 관리` 탭에서 "
-":guilabel:`경로`를 지정해도 키트에는 영향을 미치지 않습니다. 키트 제품에 대한 다른 모든 매개변수는 기본 설정에 따라 조정할 "
-"수 있습니다. 구성이 완료되면 :guilabel:`저장`을 클릭하여 새 제품을 저장합니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:37
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:26
 msgid ""
 "The kit's components must also be configured as products via "
 ":menuselection:`Inventory app --> Products --> Products`. These components "
@@ -21079,49 +21052,149 @@ msgstr ""
 "키트의 구성 요소도 :menuselection:`재고 관리 앱 --> 품목 --> 품목`을 통해 제품으로 설정해야 합니다. 이러한 구성 "
 "요소는 특정 구성이 필요하지 않습니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:41
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:30
+msgid "Consumable kit setup details"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:32
+msgid ""
+"Consumable products do not have inventory tracking. Consider setting the kit"
+" as a consumable product when the kit is used in other manufacturing "
+"processes or when tracking inventory for the kit itself is not needed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:36
+msgid ""
+"**Recommended for Continental Accounting**: If costs are expensed "
+"immediately upon purchase, then setting the kit's type to *consumable* is "
+"recommended."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:38
+msgid ""
+"**Replenishment via Components**: Inventory count is managed at the "
+"component level, so reordering rules must be set to individual components."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:40
+msgid ""
+"**Selling & Stock Constraints**: Kits cannot be sold if any required "
+"component is out of stock. Since availability depends on individual "
+"components, a sales order may appear valid, but delivery can be delayed if "
+"components are unavailable."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:45
+msgid "Storable kit setup details"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:47
+msgid ""
+"Storable products have detailed tracking and inventory management since they"
+" are expected to be *stored* once they are created. Consider setting the kit"
+" as a storable product when the kit is a tangible product or warehouse and "
+"inventory tracking is essential."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:51
+msgid ""
+"**Recommended for Angle-Saxon Accounting**: If the Cost of Goods Sold (COGS)"
+" needs to be recorded in journals, then setting the kit's type to *storable*"
+" is recommended."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:53
+msgid ""
+"**Component Purchase Constraints**: Only the kit's minimum required "
+"components can be added to an **eCommerce** cart unless the option to "
+":doc:`continue "
+"selling<../../../websites/ecommerce/managing_products/products>` is "
+"disabled."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:56
+msgid ""
+"**No Kit Serial Numbers**: Serial number tracking does not track the kit, "
+"only its shipped components."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:58
+msgid ""
+"**Reordering Rule Recommendation**: Reordering rules should be set at the "
+"component-level."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:59
+msgid ""
+"**Stock Replenishment Recommendation**: Stock replenishment should also be "
+"done at the component-level."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:63
+msgid "Kit setup similarities"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:65
+msgid ""
+"Regardless of which setup is used, there are some similarities between the "
+"two options."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:67
+msgid ""
+"**No Kit-Level Stock Adjustments**: Stock adjustments cannot be handled at "
+"the kit-level."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:68
+msgid ""
+"**Kit Value Does Not Change**: The stock's value is the same whether the kit"
+" is consumable or storable."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:70
+msgid ""
+"**Kit Internal Transfers**: An internal transfer for the kit breaks it into "
+"components."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:73
 msgid "Set up the kit BoM"
 msgstr "자재명세서 키트 설정"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:43
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:75
 msgid ""
 "After fully configuring the kit product and its components, a new :abbr:`BoM"
 " (bill of materials)` can be created for the kit product."
 msgstr "키트 제품 및 구성 요소를 완전히 구성한 후 키트 제품에 대한 새 :abbr:`BoM (자재명세서)`을 생성할 수 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:46
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:78
 msgid ""
 "To do so, go to :menuselection:`Manufacturing app --> Products --> Bills of "
-"Materials`, and click :guilabel:`Create`. Next to the :guilabel:`Product` "
-"field, click the drop-down menu to reveal a list of products, and select the"
-" previously configured kit product."
+"Materials`, and then click :guilabel:`New`. Next to the :guilabel:`Product` "
+"field, click the drop-down menu to reveal a list of products, and then "
+"select the previously configured kit product."
 msgstr ""
-"이렇게 하려면 :menuselection:`제조 관리 앱 --> 품목 --> 자재명세서`로 이동한 다음 :guilabel:`생성`을 "
-"클릭합니다. :guilabel:`품목` 필드 옆에 있는 드롭다운 메뉴를 클릭하여 제품 목록을 표시한 다음 이전에 구성한 키트 제품을 "
-"선택합니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:50
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:82
 msgid ""
-"Then, for the :guilabel:`BoM Type` field, select the :guilabel:`Kit` option."
-" Finally, under the :guilabel:`Components` tab, click :guilabel:`Add a "
-"line`, and add each desired component, and specify their quantities under "
-"the :guilabel:`Quantity` column."
+"Then, for the :guilabel:`BoM Type` field, click the :guilabel:`Kit` option. "
+"Finally, under the :guilabel:`Components` tab, click :guilabel:`Add a line`,"
+" and add each desired component, and specify their quantities under the "
+":guilabel:`Quantity` column."
 msgstr ""
-"그런 다음 :guilabel:`자재명세서 유형` 필드에서 :guilabel:`키트` 옵션을 선택합니다. 마지막으로 "
-":guilabel:`부품` 탭에서 :guilabel:`항목 추가`를 클릭하고 각 필수 부품을 추가한 다음 :guilabel:`수량` 열에"
-" 해당 수량을 지정합니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:54
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:86
 msgid ""
-"Once ready, click :guilabel:`Save` to save the newly-created :abbr:`BoM "
+"Once ready, click :guilabel:`Save` to save the newly created :abbr:`BoM "
 "(bill of materials)`."
-msgstr "준비가 완료되면 :guilabel:`저장`을 클릭하여 새로 생성된 :abbr:`BoM (자재명세서)`을 저장합니다."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst-1
 msgid "Kit selection on the bill of materials."
 msgstr "자재명세서에서 키트를 선택합니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:60
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:91
 msgid ""
 "If the kit is solely being used as a sellable product, then only components "
 "need to be added under the :guilabel:`Components` tab, and configuring "
@@ -21130,7 +21203,7 @@ msgstr ""
 "키트를 판매 가능한 품목으로만 사용하는 경우에는 :guilabel:`부품` 탭에 부품만 포함해야 하며 제조 작업을 구성할 필요가 "
 "없습니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:64
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:95
 msgid ""
 "When a kit is sold as a product, it appears as a single line item on the "
 "quotation and sales order. However, on delivery orders, each component of "
@@ -21139,98 +21212,27 @@ msgstr ""
 "키트가 제품으로 판매되는 경우 견적서와 판매주문서 모두에 단일 품목으로 표시됩니다. 그러나 배송 주문에는 키트의 각 구성품이 개별적으로 "
 "나열됩니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:68
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:99
 msgid "Use kits to manage complex BoMs"
 msgstr "키트를 사용하여 복잡한 BoM 관리하기"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:70
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:101
 msgid ""
-"Kits are also used to manage multi-level :abbr:`BoMs (bills of materials)`. "
-"These are products that contain **other** :abbr:`BoM (bill of materials)` "
-"products as components, and therefore require *nested* :abbr:`BoMs (bills of"
-" materials)`. Incorporating pre-configured kits into multi-level :abbr:`BoMs"
-" (bills of materials)` allows for cleaner organization of bundled products."
+"Kits can also be used for complex :abbr:`BoMs (Bills of Materials)`. This "
+"method nests BoMs within other BoMs, organizing complex products while "
+"simplifying manufacturing by defining each procurement and production step "
+"separately."
 msgstr ""
-"키트는 다중 단계 :abbr:`BoM (자재명세서)`를 관리하는 데에도 사용됩니다. 이는 **기타** :abbr:`BoM (자재명세서)`"
-" 항목을 부품으로 포함하는 제품을 나타내며, *중첩된* :abbr:`BoM (자재명세서)`이 필요합니다. 사전 구성된 키트를 다중 단계 "
-":abbr:`BoM (자재명세서)`에 통합하면 번들 제품을 보다 체계적으로 구성할 수 있습니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:75
-msgid ""
-"To configure this type of :abbr:`BoM (bill of materials)` with a kit as a "
-"component, go to :menuselection:`Manufacturing app --> Products --> Bills of"
-" Materials`, and click :guilabel:`Create`."
-msgstr ""
-"키트를 구성 요소로 사용하여 이러한 형식의 :abbr:`BoM (자재명세서)`을 설정하려면 :menuselection:`제조 관리 앱 "
-"--> 품목 --> 부품 명세서`로 이동하고 :guilabel:`생성`을 선택합니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:79
-msgid ""
-"Next to the :guilabel:`Product` field, click the drop-down menu to reveal a "
-"list of products, and select the desired :abbr:`BoM (bill of materials)` "
-"product. Then, for the :guilabel:`BoM Type` field, select the "
-":guilabel:`Manufacture this product` option."
-msgstr ""
-":guilabel:`품목` 필드 옆에 있는 드롭다운 메뉴를 열어 제품 목록을 표시한 다음 원하는 :abbr:`BoM (자재명세서)`를 "
-"선택합니다. 그런 다음 :guilabel:`BoM 유형` 필드에서 :guilabel:`이 제품 제조하기`를 선택합니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:83
-msgid ""
-"Under the :guilabel:`Components` tab, click :guilabel:`Add a line`, and "
-"select a kit as the component. Adding the kit as a component eliminates the "
-"need to add the kit's components individually. Any :guilabel:`BoM Type` can "
-"be used for the higher-level product's :abbr:`BoM (bill of materials)`."
-msgstr ""
-":guilabel:`부품` 탭에서 :guilabel:`항목 추가`를 누르고 키트를 구성품으로 지정합니다. 키트를 구성품으로 지정하면 "
-"키트의 부품을 별도로 입력할 필요가 없습니다. 상위 제품의 :abbr:`BoM (자재명세서)`에는 모든 :guilabel:`BoM "
-"유형`을 사용할 수 있습니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:88
-msgid "Once ready, click :guilabel:`Save` to save changes."
-msgstr "준비가 완료되면 :guilabel:`저장`을 클릭하여 변경 사항을 저장합니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst-1
-msgid "Kit as a component in a multilevel bill of materials."
-msgstr "키트를 다중 단계 자재명세서의 구성 요소로 사용합니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:95
-msgid "Structure & cost"
-msgstr "구조 및 원가"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:97
-msgid ""
-"To access a comprehensive overview of the multi-level :abbr:`BoM's (bill of "
-"material's)` components, click on the :guilabel:`Structure & Cost` smart "
-"button. Sublevel :abbr:`BoMs (bills of materials)` can be expanded and "
-"viewed from this report."
-msgstr ""
-"다중 단계 :abbr:`BoM (자재명세서)` 내의 구성품에 대한 자세한 요약을 보려면 :guilabel:`구조 및 비용` 스마트 버튼을"
-" 클릭합니다. 이 보고서 내에서 하위 레벨 :abbr:`BoM (자재명세서)`을 확장하여 볼 수 있습니다."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst-1
-msgid "Expanded kit in the Structure and Cost report."
-msgstr "구조 및 비용 보고서의 확장 키트."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:105
 msgid ""
-"When creating a manufacturing order for a product with a multi-level "
-":abbr:`BoM (bill of materials)`, the kit product automatically expands to "
-"show all components. Any operations in the kit's :abbr:`BoM (bill of "
-"materials)` are also added to the list of work orders on the manufacturing "
-"order."
+"Sublevel BoMs (subassemblies or semi-finished products) streamline these "
+"workflows, helping with traceability efforts."
 msgstr ""
-"다중 단계로 구성된 제품에 대한 제조 주문을 생성하는 경우, 키트 제품이 자동으로 펼쳐져 모든 구성품이 표시됩니다. 또한 키트 내의 모든"
-" 작업은 제조 주문의 작업 주문 목록에 추가됩니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:111
-msgid ""
-"Kits are primarily used to bundle components together for organization or "
-"sale. To manage multi-level products that require manufactured sub-"
-"components, refer to :doc:`this documentation <sub_assemblies>` on sub-"
-"assemblies."
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:109
+msgid ":doc:`sub_assemblies`"
 msgstr ""
-"키트는 주로 구성품을 함께 묶어 정리하거나 판매하는 데 사용됩니다. 제조된 하위 구성품이 필요한 다중 단계 제품을 취급하려면 하위 "
-"어셈블리에 대한 :doc:`문서 <sub_assemblies>`을 참조하세요."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/manufacturing_backorders.rst:3
 msgid "Manufacturing backorders"
