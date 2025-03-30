@@ -28,7 +28,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-20 12:15+0000\n"
+"POT-Creation-Date: 2025-03-27 10:38+0000\n"
 "PO-Revision-Date: 2023-11-08 08:57+0000\n"
 "Last-Translator: Jolien De Paepe, 2025\n"
 "Language-Team: French (https://app.transifex.com/odoo/teams/41243/fr/)\n"
@@ -27290,7 +27290,6 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/maintenance/maintenance_setup.rst:46
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:88
 msgid "Once ready, click :guilabel:`Save` to save changes."
 msgstr ""
 "Une fois que vous avez terminé, cliquez sur :guilabel:`Enregistrer` pour "
@@ -27687,20 +27686,16 @@ msgid "Advanced configuration"
 msgstr "Configuration avancée"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:3
-msgid "Use kits"
-msgstr "Utiliser des kits"
+msgid "Kits"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:5
 msgid ""
 "In Odoo, a *kit* is a type of bill of materials (BoM) that can be "
 "manufactured and sold. Kits are sets of unassembled components sold to "
-"customers. They may be sold as standalone products, but are also useful "
+"customers. They may be sold as standalone products, and are also useful "
 "tools for managing more complex bills of materials (BoMs)."
 msgstr ""
-"Dans Odoo, un *kit* est un type de nomenclature qui peut être fabriqué et "
-"vendu. Les kits sont des ensembles de composants non assemblés vendus aux "
-"clients. Ils peuvent être vendus en tant que produits autonomes, mais sont "
-"également des outils utiles pour gérer des nomenclatures plus complexes."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:10
 msgid ""
@@ -27716,64 +27711,26 @@ msgstr "Créer le kit en tant que produit"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:16
 msgid ""
-"To use a kit as a sellable product, or simply as a component organization "
-"tool, the kit should first be created as a product."
+"To use a kit as a sellable product, or as a component organization tool, the"
+" kit should first be created as a product."
 msgstr ""
-"Pour utiliser un kit comme produit vendable ou simplement comme outil "
-"d'organisation des composants, le kit doit d'abord être créé en tant que "
-"produit."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:19
 msgid ""
 "To create a kit product, go to :menuselection:`Inventory app --> Products "
-"--> Products`, and click :guilabel:`Create`."
+"--> Products`, and then click :guilabel:`New`."
 msgstr ""
-"Pour créer un kit, allez à l'application :menuselection:`Inventaire --> "
-"Produits --> Produits`, et cliquez sur :guilabel:`Créer`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:22
 msgid ""
-"Then, assign a name to the new kit product. Next, under the "
-":guilabel:`General Information` tab, set the :guilabel:`Product Type` to "
-":guilabel:`Consumable`. Kit products work best as consumables, because the "
-"stock on-hand for kits is typically not tracked."
+"Then, assign a name to the new kit product. Next, set the kit's product type"
+" depending on inventory tracking needs and accounting requirements. To do "
+"this, under the :guilabel:`General Information` tab, set the "
+":guilabel:`Product Type` to either :guilabel:`Consumable` or "
+":guilabel:`Storable`."
 msgstr ""
-"Assignez ensuite un nom au nouveau kit. Ensuite, dans l'onglet "
-":guilabel:`Informations générales`, définissez le :guilabel:`Type de "
-"produit` sur :guilabel:`Consommable`. Les kits fonctionnent mieux en tant "
-"que consommables, car le stock disponible pour les kits ne fait généralement"
-" pas l'objet d'un suivi."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:27
-msgid ""
-"Although kits should almost always be set to :guilabel:`Consumable`, "
-"companies using **Anglo-Saxon** accounting might need to create kits as a "
-":guilabel:`Storable Product`. This is because when processing invoices for "
-"kits, the Cost of Goods Sold (COGS) will be posted in accounting journals."
-msgstr ""
-"Même si les kits doivent presque toujours être définis en tant que produit "
-":guilabel:`consommable`, les entreprises qui utilisent la comptabilité "
-"**anglo-saxonne** peuvent avoir besoin de créer des kits en tant que "
-":guilabel:`Produit stockable`. En effet, lors du traitement des factures "
-"pour les kits, le coût des marchandises vendues (COGS) sera enregistré dans "
-"les journaux comptables."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:32
-msgid ""
-"Unlike storable products, the :guilabel:`Routes` designation under the "
-":guilabel:`Inventory` tab does not matter for kits, since Odoo uses the "
-"routes of the kit's individual components for replenishment purposes. All "
-"other parameters for the kit product may be modified according to "
-"preference. Once ready, click :guilabel:`Save` to save the new product."
-msgstr ""
-"Contrairement aux produits stockables, la définition des :guilabel:`Routes` "
-"dans l'onglet :guilabel:`Inventaire` n'a pas d'importance pour les kits, car"
-" Odoo utilise les routes des composants individuels du kit à des fins de "
-"réassort. Tous les autres paramètres du produit de kit peuvent être modifiés"
-" selon les préférences. Une fois que vous avez terminé, cliquez sur "
-":guilabel:`Enregistrer` pour enregistrer le nouveau produit."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:37
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:26
 msgid ""
 "The kit's components must also be configured as products via "
 ":menuselection:`Inventory app --> Products --> Products`. These components "
@@ -27783,11 +27740,115 @@ msgstr ""
 " via l'application :menuselection:`Inventaire --> Produits --> Produits`. "
 "Ces composants ne nécessitent aucune configuration spécifique."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:41
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:30
+msgid "Consumable kit setup details"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:32
+msgid ""
+"Consumable products do not have inventory tracking. Consider setting the kit"
+" as a consumable product when the kit is used in other manufacturing "
+"processes or when tracking inventory for the kit itself is not needed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:36
+msgid ""
+"**Recommended for Continental Accounting**: If costs are expensed "
+"immediately upon purchase, then setting the kit's type to *consumable* is "
+"recommended."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:38
+msgid ""
+"**Replenishment via Components**: Inventory count is managed at the "
+"component level, so reordering rules must be set to individual components."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:40
+msgid ""
+"**Selling & Stock Constraints**: Kits cannot be sold if any required "
+"component is out of stock. Since availability depends on individual "
+"components, a sales order may appear valid, but delivery can be delayed if "
+"components are unavailable."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:45
+msgid "Storable kit setup details"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:47
+msgid ""
+"Storable products have detailed tracking and inventory management since they"
+" are expected to be *stored* once they are created. Consider setting the kit"
+" as a storable product when the kit is a tangible product or warehouse and "
+"inventory tracking is essential."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:51
+msgid ""
+"**Recommended for Angle-Saxon Accounting**: If the Cost of Goods Sold (COGS)"
+" needs to be recorded in journals, then setting the kit's type to *storable*"
+" is recommended."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:53
+msgid ""
+"**Component Purchase Constraints**: Only the kit's minimum required "
+"components can be added to an **eCommerce** cart unless the option to "
+":doc:`continue selling<../../../websites/ecommerce/products>` is disabled."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:56
+msgid ""
+"**No Kit Serial Numbers**: Serial number tracking does not track the kit, "
+"only its shipped components."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:58
+msgid ""
+"**Reordering Rule Recommendation**: Reordering rules should be set at the "
+"component-level."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:59
+msgid ""
+"**Stock Replenishment Recommendation**: Stock replenishment should also be "
+"done at the component-level."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:63
+msgid "Kit setup similarities"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:65
+msgid ""
+"Regardless of which setup is used, there are some similarities between the "
+"two options."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:67
+msgid ""
+"**No Kit-Level Stock Adjustments**: Stock adjustments cannot be handled at "
+"the kit-level."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:68
+msgid ""
+"**Kit Value Does Not Change**: The stock's value is the same whether the kit"
+" is consumable or storable."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:70
+msgid ""
+"**Kit Internal Transfers**: An internal transfer for the kit breaks it into "
+"components."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:73
 msgid "Set up the kit BoM"
 msgstr "Configurer la nomenclature du kit"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:43
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:75
 msgid ""
 "After fully configuring the kit product and its components, a new :abbr:`BoM"
 " (bill of materials)` can be created for the kit product."
@@ -27795,43 +27856,33 @@ msgstr ""
 "Après avoir entièrement configuré le kit et ses composants, une nouvelle "
 "nomenclature peut être créée pour le kit."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:46
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:78
 msgid ""
 "To do so, go to :menuselection:`Manufacturing app --> Products --> Bills of "
-"Materials`, and click :guilabel:`Create`. Next to the :guilabel:`Product` "
-"field, click the drop-down menu to reveal a list of products, and select the"
-" previously configured kit product."
+"Materials`, and then click :guilabel:`New`. Next to the :guilabel:`Product` "
+"field, click the drop-down menu to reveal a list of products, and then "
+"select the previously configured kit product."
 msgstr ""
-"Allez à l'application :menuselection:`Fabrication --> Produits --> "
-"Nomenclatures`, et cliquez sur :guilabel:`Créer`. À côté du champ "
-":guilabel:`Produit`, cliquez sur le menu déroulant pour afficher une liste "
-"de produits et sélectionner le produit en kit précédemment configuré."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:50
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:82
 msgid ""
-"Then, for the :guilabel:`BoM Type` field, select the :guilabel:`Kit` option."
-" Finally, under the :guilabel:`Components` tab, click :guilabel:`Add a "
-"line`, and add each desired component, and specify their quantities under "
-"the :guilabel:`Quantity` column."
+"Then, for the :guilabel:`BoM Type` field, click the :guilabel:`Kit` option. "
+"Finally, under the :guilabel:`Components` tab, click :guilabel:`Add a line`,"
+" and add each desired component, and specify their quantities under the "
+":guilabel:`Quantity` column."
 msgstr ""
-"Ensuite, dans le champ :guilabel:`Type de nomenclature`, sélectionnez "
-"l'option :guilabel:`Kit`. Enfin, dans l'onglet :guilabel:`Composants`, "
-"cliquez sur :guilabel:`Ajouter une ligne`, ajoutez chaque composant souhaité"
-" et précisez leurs quantités dans la colonne :guilabel:`Quantité`."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:54
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:86
 msgid ""
-"Once ready, click :guilabel:`Save` to save the newly-created :abbr:`BoM "
+"Once ready, click :guilabel:`Save` to save the newly created :abbr:`BoM "
 "(bill of materials)`."
 msgstr ""
-"Une fois que vous avez terminé, cliquez sur :guilabel:`Enregistrer` pour "
-"enregistrer la nomenclature nouvellement créée."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst-1
 msgid "Kit selection on the bill of materials."
 msgstr "Sélection de kit sur la nomenclature."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:60
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:91
 msgid ""
 "If the kit is solely being used as a sellable product, then only components "
 "need to be added under the :guilabel:`Components` tab, and configuring "
@@ -27841,7 +27892,7 @@ msgstr ""
 "composants doivent être ajoutés sous l'onglet :guilabel:`Composants` et la "
 "configuration des opérations de fabrication n'est pas nécessaire."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:64
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:95
 msgid ""
 "When a kit is sold as a product, it appears as a single line item on the "
 "quotation and sales order. However, on delivery orders, each component of "
@@ -27851,108 +27902,27 @@ msgstr ""
 "ligne sur le devis et la commande client. Cependant, sur les bons de "
 "livraison, chaque composant du kit est répertorié."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:68
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:99
 msgid "Use kits to manage complex BoMs"
 msgstr "Utiliser des kits pour gérer des nomenclatures complexes"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:70
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:101
 msgid ""
-"Kits are also used to manage multi-level :abbr:`BoMs (bills of materials)`. "
-"These are products that contain **other** :abbr:`BoM (bill of materials)` "
-"products as components, and therefore require *nested* :abbr:`BoMs (bills of"
-" materials)`. Incorporating pre-configured kits into multi-level :abbr:`BoMs"
-" (bills of materials)` allows for cleaner organization of bundled products."
+"Kits can also be used for complex :abbr:`BoMs (Bills of Materials)`. This "
+"method nests BoMs within other BoMs, organizing complex products while "
+"simplifying manufacturing by defining each procurement and production step "
+"separately."
 msgstr ""
-"Les kits sont également utilisés pour gérer les nomenclatures à plusieurs "
-"niveaux. Ce sont des produits qui contiennent d'**autres** nomenclatures en "
-"tant que composants et qui nécessitent des nomenclatures **imbriquées**. "
-"L'incorporation de kits préconfigurés dans les nomenclatures à plusieurs "
-"niveaux permet de mieux organiser les produits groupés."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:75
-msgid ""
-"To configure this type of :abbr:`BoM (bill of materials)` with a kit as a "
-"component, go to :menuselection:`Manufacturing app --> Products --> Bills of"
-" Materials`, and click :guilabel:`Create`."
-msgstr ""
-"Pour configurer ce type de nomenclature avec un kit comme composant, allez à"
-" l'application :menuselection:`Fabrication --> Produits --> Nomenclatures` "
-"et cliquez sur :guilabel:`Créer`."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:79
-msgid ""
-"Next to the :guilabel:`Product` field, click the drop-down menu to reveal a "
-"list of products, and select the desired :abbr:`BoM (bill of materials)` "
-"product. Then, for the :guilabel:`BoM Type` field, select the "
-":guilabel:`Manufacture this product` option."
-msgstr ""
-"À côté du champ :guilabel:`Produit` cliquez sur le menu déroulant pour "
-"afficher une liste de produits et sélectionner la nomenclature souhaitée. "
-"Dans le champ :guilabel:`Type de nomenclature`, sélectionnez l'option "
-":guilabel:`Fabriquer ce produit`."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:83
-msgid ""
-"Under the :guilabel:`Components` tab, click :guilabel:`Add a line`, and "
-"select a kit as the component. Adding the kit as a component eliminates the "
-"need to add the kit's components individually. Any :guilabel:`BoM Type` can "
-"be used for the higher-level product's :abbr:`BoM (bill of materials)`."
-msgstr ""
-"Dans l'onglet :guilabel:`Composants`, cliquez sur :guilabel:`Ajouter une "
-"ligne` et sélectionnez un kit comme composant. L'ajout du kit en tant que "
-"composant évite d'avoir à ajouter les composants du kit individuellement. "
-"N'importe quel :guilabel:`Type de nomenclature` peut être utilisé pour la "
-"nomenclature du produit de niveau supérieur."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst-1
-msgid "Kit as a component in a multilevel bill of materials."
-msgstr "Kit en tant que composant d'une nomenclature à plusieurs niveaux."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:95
-msgid "Structure & cost"
-msgstr "Structure & coût"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:97
-msgid ""
-"To access a comprehensive overview of the multi-level :abbr:`BoM's (bill of "
-"material's)` components, click on the :guilabel:`Structure & Cost` smart "
-"button. Sublevel :abbr:`BoMs (bills of materials)` can be expanded and "
-"viewed from this report."
-msgstr ""
-"Pour obtenir une vue d'ensemble des composants de la nomenclature à "
-"plusieurs niveaux, cliquez sur le bouton intelligent :guilabel:`Structure & "
-"Coût`. Les nomenclatures de sous-niveaux peuvent être développées et "
-"visualisées à partir de ce rapport."
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst-1
-msgid "Expanded kit in the Structure and Cost report."
-msgstr "Kit développé dans le rapport Structure & Coût"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:105
 msgid ""
-"When creating a manufacturing order for a product with a multi-level "
-":abbr:`BoM (bill of materials)`, the kit product automatically expands to "
-"show all components. Any operations in the kit's :abbr:`BoM (bill of "
-"materials)` are also added to the list of work orders on the manufacturing "
-"order."
+"Sublevel BoMs (subassemblies or semi-finished products) streamline these "
+"workflows, helping with traceability efforts."
 msgstr ""
-"Lors de la création d'un ordre de fabrication pour un produit avec une "
-"nomenclature à plusieurs niveaux, le kit se développe automatiquement pour "
-"afficher tous les composants. Toutes les opérations figurant dans la "
-"nomenclature du kit sont également ajoutées à la liste des ordres de travail"
-" de l'ordre de fabrication."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:111
-msgid ""
-"Kits are primarily used to bundle components together for organization or "
-"sale. To manage multi-level products that require manufactured sub-"
-"components, refer to :doc:`this documentation <sub_assemblies>` on sub-"
-"assemblies."
+#: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/kit_shipping.rst:109
+msgid ":doc:`sub_assemblies`"
 msgstr ""
-"Les kits sont principalement utilisés pour regrouper des composants en vue "
-"de leur organisation ou de leur vente. Pour gérer les produits à plusieurs "
-"niveaux qui nécessitent des sous-composants fabriqués, consultez :doc:`cette"
-" documentation <sub_assemblies>` sur les sous-ensembles."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/product_variants.rst:3
 msgid "Managing BoMs for product variants"
