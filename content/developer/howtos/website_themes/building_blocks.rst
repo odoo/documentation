@@ -5,12 +5,12 @@ Building blocks
 Building blocks, also known as snippets, are how users design and layout pages. They are important
 XML elements of your design.
 
-The building blocks are classified into four categories:
+The building blocks are classified into two types:
 
-#. **Structure blocks**: to give a basic structure to the website
-#. **Feature blocks**: to describe the features of a product or service
-#. **Dynamic Content blocks**: blocks that are animated or interact with the backend
-#. **Inner Content blocks**: blocks used inside other building blocks
+#. **Structure blocks**: visually used as "whole rows" and distributed into multiples categories
+   (:guilabel:`Intro`, :guilabel:`Columns`, :guilabel:`Content`, :guilabel:`Images`,
+   :guilabel:`People`, etc)
+#. **Inner Content blocks**: used inside other building blocks
 
 At the end of this chapter, you will be able to :ref:`create custom snippets
 <website_themes/building_blocks/custom>` and to add them into a dedicated category.
@@ -427,15 +427,21 @@ snippet (e.g., :file:`001.js`, :file:`002.scss`).
 Custom snippet
 ==============
 
-To create a custom snippet, create first the snippet template. Then, add it to the list and make it
-available via the Website Builder.
+Some more specific needs will require the creation of custom snippets. Here is how to create a
+custom snippet/
 
 .. _website_themes/building_blocks/custom/template:
 
 Template
 --------
 
-**Declaration**
+Create first the snippet template. Then, add it to the list and make it available via the Website
+Builder.
+
+1. Declaration
+~~~~~~~~~~~~~~
+
+First, create the template of the custom snippet:
 
 .. code-block:: xml
    :caption: ``/website_airproof/views/snippets/s_airproof_snippet.xml``
@@ -464,25 +470,63 @@ Template
    - Avoid using ID attribute within your `section` as several instances of a snippet may appear
      throughout the page (An ID attribute has to be unique on a page).
 
-Add your custom snippet to the list of standard snippets, so the user can drag and drop it on the
+Add the custom snippet to the list of standard snippets, so the user can drag and drop it on the
 page, directly from the edit panel.
+
+2. Group creation
+~~~~~~~~~~~~~~~~~
+
+Add a group at the top of the list (feel free to the put it where needed in this list).
 
 .. code-block:: xml
    :caption: ``/website_airproof/views/snippets/options.xml``
 
-   <template id="snippets" inherit_id="website.snippets" name="Airproof - Custom Snippets">
-       <xpath expr="//*[@id='default_snippets']" position="before">
-           <t id="x_theme_snippets">
-               <div id="x_theme_snippets_category" class="o_panel">
-                   <div class="o_panel_header">Theme</div>
-                   <div class="o_panel_body">
-                       <t t-snippet="website_airproof.s_airproof_snippet" t-thumbnail="/website_airproof/static/src/img/wbuilder/s_airproof_snippet.svg">
-                           <keywords>Snippet</keywords>
-                       </t>
-                   </div>
-               </div>
-           </t>
-       </xpath>
+   <template id="snippets" inherit_id="website.snippets" name="Airproof - Snippets">
+      <!-- Create the group -->
+      <xpath expr="//snippets[@id='snippet_groups']/*[1]" position="before">
+         <t snippet-group="airproof" t-snippet="website.s_snippet_group" string="Airproof" t-thumbnail="/website_airproof/static/src/img/wbuilder/s_airproof_group_thumbnail.svg"/>
+      </xpath>
+   </template>
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: 20 80
+
+   * - Attribute
+     - Description
+   * - snippet-group
+     - ID of the group
+   * - t-snippet
+     - Inherited template ID
+   * - string
+     - Group name displayed to the users
+   * - t-thumbnail
+     - The path to the thumbnail of the group
+
+3. Snippet addition
+~~~~~~~~~~~~~~~~~~~
+
+Then add the custom snippet into the `<snippets id="snippet_structure">` which contains
+all existing ones on the same level. The Website Builder will split them automatically into
+categories by reading the `group` attribute on the `<t t-snippet="">`
+
+.. code-block:: xml
+   :caption: ``/website_airproof/views/snippets/options.xml``
+   :emphasize-lines: 7-12
+
+   <template id="snippets" inherit_id="website.snippets" name="Airproof - Snippets">
+      <!-- Create the group -->
+      <xpath expr="//snippets[@id='snippet_groups']/*[1]" position="before">
+         <t snippet-group="airproof" t-snippet="website.s_snippet_group" string="Airproof" t-thumbnail="/website_airproof/static/src/img/wbuilder/s_airproof_group_thumbnail.svg"/>
+      </xpath>
+
+      <!-- Add the custom snippet to the group -->
+      <xpath expr="//snippets[@id='snippet_structure']/*[1]" position="before">
+         <t t-snippet="website_airproof.s_airproof_snippet" string="Custom snippet" group="airproof">
+            <keywords>Snippet</keywords>
+         </t>
+      </xpath>
    </template>
 
 .. list-table::
@@ -493,11 +537,33 @@ page, directly from the edit panel.
    * - Attribute
      - Description
    * - t-snippet
-     - The template to use
-   * - t-thumbnail
-     - The path to the snippet thumbnail
+     - The snippet template to use
+   * - group
+     - The group in which the snippet is added.
    * - <keywords>
      - Keywords entered by the user in the search field in the Snippets panel
+
+Inner content snippet
+~~~~~~~~~~~~~~~~~~~~~
+
+To make a custom snippet appearing in the :guilabel:`Inner content` list, add it to the `snippet_content`
+instead:
+
+.. code-block:: xml
+   :caption: ``/website_airproof/views/snippets/options.xml``
+
+   <template id="snippets" inherit_id="website.snippets" name="Airproof - Snippets">
+      <!-- Add the custom snippet to the group -->
+      <xpath expr="//snippets[@id='snippet_content']/*[1]" position="before">
+         <t t-snippet="website_airproof.s_airproof_snippet" string="Custom snippet" t-thumbnail="/website_airproof/static/src/img/wbuilder/s_airproof_snippet.svg" />
+      </xpath>
+   </template>
+
+.. important::
+   - Don't forget to add a `t-thumbnail` and remove the `group` attribute as this kind of building
+     blocks is directly available in the right options panel of the Website Builder.
+   - Don't forget to :ref:`add the snippet to the list of all available "Inner content" snippets
+     <website_themes/building_blocks/custom/options/inner_content>`.
 
 .. _website_themes/building_blocks/custom/options:
 
@@ -508,7 +574,7 @@ Options allow users to edit a snippet's appearance/behavior using the Website Bu
 snippet options easily and automatically add them to the Website Builder.
 
 .. seealso::
-   `Standard snippet options <https://github.com/odoo/odoo/blob/ccb78f7af2a4413836a969ff8009dc3df6c2df33/addons/website/views/snippets/snippets.xml>`_
+   `Standard snippet options <https://github.com/odoo/odoo/blob/247f28fdec788c7eb7c4288db29b931c73a23757/addons/website/views/snippets/snippets.xml>`_
 
 .. _website_themes/building_blocks/custom/options/template:
 
@@ -552,6 +618,8 @@ Then insert the different available options:
       </xpath>
    </template>
 
+.. _website_themes/building_blocks/custom/options/inner_content:
+
 **Inner content**
 
 Make a custom snippet "inner content" (droppable in an other building block) by extending the
@@ -570,7 +638,7 @@ inner content building blocks:
 
 .. seealso::
 
-   `Standard "inner content" snippets declaration on Odoo's GitHub repository <https://github.com/odoo/odoo/blob/f922f09b83c68dff36c064d20709a6e6ba4541dc/addons/website/views/snippets/snippets.xml#L720>`_
+   `Standard "inner content" snippets declaration on Odoo's GitHub repository <https://github.com/odoo/odoo/blob/cc05d9d50ac668eaa26363e1127f914897a4b125/addons/website/views/snippets/snippets.xml#L988>`_
 
 .. _website_themes/building_blocks/custom/options/binding:
 
@@ -949,9 +1017,9 @@ There are also built-in methods directly linked to events the Website Builder li
 
 .. seealso::
    - `Web Editor - JavaScript methods related to snippet options on GitHub
-     <https://github.com/odoo/odoo/blob/380c9153b5fa9a0ea6d7ae485ef52a16ae999eda/addons/web_editor/static/src/js/editor/snippets.options.js#L3247>`_
-   - `XML templates of the different snippets
-     <https://github.com/odoo/odoo/blob/ccb78f7af2a4413836a969ff8009dc3df6c2df33/addons/website/views/snippets/snippets.xml>`_
+     <https://github.com/odoo/odoo/blob/cc05d9d50ac668eaa26363e1127f914897a4b125/addons/web_editor/static/src/js/editor/snippets.options.js#L3512>`_
+   - `XML templates of the different standard snippets
+     <https://github.com/odoo/odoo/blob/cc05d9d50ac668eaa26363e1127f914897a4b125/addons/website/views/snippets/snippets.xml>`_
 
 .. _website_themes/building_blocks/custom/options/methods/custom:
 
