@@ -69,10 +69,10 @@ Add a media
 If you want the client to be able to reuse certain pictures that you are going to add on the
 website, they must be added to the image library.
 
-| To do the test, declare the drone image to add it in the library. You will find the
+| To do the test, declare the drone image to add it to the library. You will find the
   `drone picture here
   <https://github.com/odoo/tutorials/tree/{CURRENT_MAJOR_BRANCH}/website_airproof/static/src/img/content/drone-robin.png>`_.
-| Go to the :guilabel:`website builder`, double click on the :guilabel:`logo`, you will see the
+| Go to the :guilabel:`website builder`, double-click on the :guilabel:`logo`, and you will see the
   drone image in the library.
 
 .. seealso::
@@ -97,12 +97,14 @@ Add building blocks
 Now, let's get into the real work. Start adding content to the pages.
 
 In an Odoo website, we create the content of a page using building blocks. These can be compared to
-snippets editable by the user using the Website Builder. The standard main container of any snippet
+snippets editable by the user in the Website Builder. The standard main container for any snippet
 is a `section`.
 
 Based on the Airproof design, add the following elements to the homepage :
 
 - Create a section with the 3 boxes using the :guilabel:`Big boxes` building block.
+
+.. TODO: cannot be edited?
 
   - Ensure that it cannot be edited via the website builder.
   - Put an opacity filter on the background image of the 3 boxes.
@@ -122,7 +124,7 @@ and the `icons here
    To determine the code needed to create your building blocks :
 
    - | Create a test page via the website builder.
-     | Drag & drop the building block that interests you and give it the right design.
+     | Drag & drop the building block that interests you and apply the right design.
      | Use the code generated via :guilabel:`Editor HTML/SCSS` in the menu.
    - You can also find the original building block code in Odoo :
      :file:`odoo/addons/website/views/snippets/**.xml`.

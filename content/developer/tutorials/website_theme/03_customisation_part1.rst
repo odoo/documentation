@@ -14,7 +14,7 @@ In :file:`theme.scss`, reproduce the following design elements:
 
 - Add a **green underline** on active nav items.
 - Modify the **arrow** for collapsible nav items.
-- Modify the **slider’s arrows** by adding a green background and changing their design.
+- Modify the **slider's arrows** by adding a green background and changing their design.
 
 You will find the various `media here
 <https://github.com/odoo/tutorials/tree/{CURRENT_MAJOR_BRANCH}/website_airproof/static/src/img/content/icons>`_.
@@ -25,7 +25,7 @@ You will find the various `media here
 .. image:: 03_customisation_part1/slider.png
 
 .. note::
-   | It’s always preferable to include all your SCSS rules in `#wrapwrap`. This ID is applied to the
+   | It's always preferable to include all your SCSS rules in `#wrapwrap`. This ID is applied to the
      div that groups the :guilabel:`header`, :guilabel:`footer`, and :guilabel:`main` content of all
      your pages.
    | So you will be sure that your rules will only have an impact on the website parts.
@@ -66,7 +66,7 @@ Use your JavaScript skills to implement this.
 Create a custom header
 ======================
 
-With variables, presets, and custom SCSS in place, it’s time to refine the layout and add key
+With variables, presets, and custom SCSS in place, it's time to refine the layout and add key
 cross-page elements, starting with the header.
 
 Based on the Airproof design, create a custom header with the following elements:
@@ -92,7 +92,7 @@ and `template illustration <https://github.com/odoo/tutorials/tree/16.0/website_
      :file:`website_templates.xml`, everything related to blog in :file:`website_blog_templates.xml`
      , to event in :file:`website_event_templates.xml`, etc.
    - | To modify the cart icon, you can use an `XPath`.
-     | And since this is linked to eCommerce, place it in a new file called
+     | Since this is linked to eCommerce, place it in a new file called
        :file:`website_sale_templates.xml`.
    - Don't forget to continue making as many modifications as you can through the :file:`Bootstrap
      variables` and :file:`primary variables` (font, colors, size...). You can use them to help you
@@ -214,7 +214,7 @@ cover section on your homepage.
 
    .. image:: 03_customisation_part1/custom-building-block.png
 
-#. Add an option available in the website builder to be able to choose blue or green for the bubble
+#. Add an option in the Website Builder to allow users to choose between a blue or green bubble 
    shadow.
 
    .. image:: 03_customisation_part1/custom-building-block-option.png
@@ -283,7 +283,7 @@ cover section on your homepage.
             </xpath>
          </template>
 
-      As well as the SCSS related to the bubbles in the
+      Additionally, the SCSS related to the bubbles in the
       `s_airproof_carousel/000.scss <https://github.com/odoo/tutorials/tree/16.0/website_airproof/static/src/snippets/s_airproof_carousel/000.scss>`_
       file.
 
@@ -293,13 +293,13 @@ cover section on your homepage.
 
 .. _tutorials/website_theme/customisation_part1/custom_dynamic_template:
 
-Create a template to add in dynamic snippets
-============================================
+Create a new dynamic snippet template
+=====================================
 
-| Useful building blocks are the dynamic snippets. These allow you to fetch information from the
-  backend and display it on the website according to certain filters.
+| Dynamic snippets are useful building blocks. These allow you to fetch information from the backend
+  and display it on the website according to certain filters.
 | There are already several layout templates for displaying dynamic snippets. However, none of the
-  existing templates fully match your client’s needs.
+  existing templates fully match your client's needs.
 
 Based on the Airproof design, create a custom template that you will apply to a product dynamic
 snippet on the homepage.
@@ -315,7 +315,7 @@ snippet on the homepage.
 
    .. image:: 03_customisation_part1/custom-template.png
 
-#. Then add a product dynamic snippet with the template you just created on the homepage.
+#. Then, add a product dynamic snippet with the template you just created to the homepage.
 
 .. tip::
    You can verify in the website builder that your template appears in the list of available
@@ -333,6 +333,6 @@ snippet on the homepage.
       file and `caroussel.scss <https://github.com/odoo/tutorials/tree/16.0/website_airproof/static/src/scss/snippets/caroussel.scss>`_
       file from our example module.
 
-   #. Apply to a product dynamic snippet on the homepage. You can find all the necessary
-      information in the `home.xml <https://github.com/odoo/tutorials/tree/16.0/website_airproof/data/pages/home.xml>`_
+   #. Apply the template to a product dynamic snippet on the homepage. You can find all the 
+      necessary information in the `home.xml <https://github.com/odoo/tutorials/tree/16.0/website_airproof/data/pages/home.xml>`_
       file from our example module.

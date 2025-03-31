@@ -27,16 +27,16 @@ You will also need some knowledge in:
    :alt: Airproof homepage.
    :align: center
 
-| In the :file:`README.md` of this `Airproof module
+| In the :file:`README.md` of the `Airproof module
   <https://github.com/odoo/tutorials/tree/{CURRENT_MAJOR_BRANCH}/website_airproof>`_, you can find
-  the various Airproof designs that you will replicate throughout the different exercises of this
+  the various Airproof designs that you will replicate throughout the different exercises in this
   tutorial.
 | You can also find all the code necessary for creating the Airproof website there. You should also
-  obtain this by the end of the tutorial. It is recommended to try to solve the exercices first
+  obtain this by the end of the tutorial. It is recommended to try solving the exercices first
   without looking at the solution!
 
 | **Don't go too fast!**
-| Follow the exercises step by step and you will reach the final design at the end of the exercises.
+| Follow the exercises step by step and you will reach the final design at the end of the tutorial.
 
 Read the documentation linked in the :doc:`How-to guide: Website theme <../howtos/website_themes>`.
 

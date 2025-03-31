@@ -2,7 +2,7 @@
 Chapter 1 - Theming
 ===================
 
-Now that you have Odoo installed and your server is running locally, it’s time to create your own
+Now that you have Odoo installed and your server is running locally, it's time to create your own
 theme module for your website.
 
 .. _tutorials/website_theme/theming/setup:
@@ -27,7 +27,7 @@ Now that we know everything is working properly, let's start building our module
 | Based on the following structure, start creating your module that will be used as a theme. This is
   where you are going to add your XML pages, SCSS, JS, …
 | Start with the basics : :file:`/data`, :file:`/img`, :file:`/scss`, :file:`/js`
-| Don’t forget to add the :file:`__init__.py` and :file:`__manifest__.py` files
+| Don't forget to add the :file:`__init__.py` and :file:`__manifest__.py` files.
 
 In your :file:`__manifest__.py` file, you can declare your module with the following information:
 
@@ -60,12 +60,12 @@ following elements:
 - Header & Footer : Use one of the default templates for the moment, we will create a custom header
   later.
 
-| Restart your script to already see the application of your changes.
+| Restart your script to immediately see the application of your changes.
 | Don't forget to add the path to your manifest in the script and set your module as the app
   to install.
 
-To ensure your changes are applied correctly, log in to your website and verify that your
-color palette contains your specified colors.
+To ensure your changes are applied correctly, log in to your website and check that your
+color palette includes your specified colors.
 
 .. tip::
    You will need to override more variables to replicate the Airproof design. Remember to add them
@@ -75,7 +75,7 @@ color palette contains your specified colors.
    The font families are from `Google fonts <https://fonts.google.com/>`_.
 
 .. seealso::
-   Documentation on :ref:`theming/module/variables`. And see all the `primary variables
+   Documentation on :ref:`theming/module/variables`, as well as a list of all `primary variables
    <{GITHUB_PATH}/addons/website/static/src/scss/primary_variables.scss>`_ available.
 
 .. spoiler:: Solutions
@@ -119,7 +119,7 @@ Based on the Airproof design, define the following elements:
 .. tip::
    - You will need to override more variables to replicate the Airproof design. Remember to add them
      throughout the creation of your website.
-   - Make it a habit to regularly check locally whether your changes have been successfully applied
+   - Make it a habit to regularly check locally that your changes have been successfully applied
      and have not caused any errors.
 
 .. seealso::

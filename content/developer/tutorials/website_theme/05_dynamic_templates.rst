@@ -54,19 +54,20 @@ pages.
 
 Based on the Airproof design below, adapt a few elements including:
 
+.. TODO: list spacing different than the one above?
 - Remove the search bar (if not done with the previous exercise).
 - Remove the quantity selector, Terms and Conditions, and share icons.
 - Update the :guilabel:`Add to cart` button icon.
-- Insert a title above the product specifications. (This section appears only when the product has
-  one variant per attribute.)
+- Insert a title above the product specifications (this section appears only when the product has
+  one variant per attribute).
 - Design the appropriate layout for the carousel.
 - Add a title and apply the previously created product template to the `Alternative products`
-  section. (Ensure alternative products are assigned on the product in the backend for this section
-  to appear.)
+  section (ensure alternative products are assigned on the product in the backend for this section
+  to appear).
 - | Implement a new drop zone below product details, visible on all products.
   | As a use case, add an `Text-Image` building block using the website builder (e.g.: See product
     page screenshot with “*Six reasons to buy…*”).
-
+.. TODO: add screenshot directly here instead?
 .. tip::
    - Make your modifications using presets, XPath, and SCSS. Be sure to comment your code properly
      so you can find your way around.

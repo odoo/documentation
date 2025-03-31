@@ -14,19 +14,20 @@ is fully adapted to the Airproof design. Amazing!
 
 Now, the client wants the website translated into French.
 
-The easiest way to do it is:
+The easiest way to do this is:
 
 #. | Add French to the website in the settings.
    | Enable the language switcher in the header via presets.
-#. | Translate the content of the homepage carousel through the backend.
+   .. TODO: why translate the carousel in the backend?
+#. | Translate the content of the homepage carousel through the backend. 
    | But for the menu, make the translations through the frontend.
 #. | Export the French :file:`.po` file for your Airproof module.
    | Place it in the :file:`/i18n` translations folder.
-#. If you want you can make more translations directly by editing the :file:`.po` file. (using
-   Poedit software, your code editor, or another translation tool).
+#. If you would like, you can add more translations directly by editing the :file:`.po` file. (using
+   Poedit, your code editor, or another translation tool).
 
 .. note::
-   - Be careful when using Poedit it doesn’t handle tags with style well and it generates an
+   - Be careful when using Poedit, as it doesn't handle tags with styles well and generates an
      :file:`.mo` file.
    - To see the changes made directly via the :file:`.po` file, you will need to manually import the
      file.
@@ -54,7 +55,7 @@ Before that, test the import process on a new database.
    - Ensure the `base_import_module` is installed on the database before the module installation.
    - Verify all required applications are installed.
    - Skip the theme installation steps and start from scratch.
-   - Manually import translations after module installation, as they won’t apply automatically.
+   - Manually import translations after module installation, as they won't apply automatically.
 
 .. seealso::
    Documentation on how to :doc:`deploy a module <../../howtos/website_themes/going_live>` on an
@@ -68,17 +69,18 @@ You've successfully navigated through every stage, from setting up your developm
 launching a fully customized Odoo website theme.
 
 Throughout this journey, you've mastered:
+.. TODO: is it a good practice to add emojis in .rst file?
 
-| ✅ **Theme module creation** – setting up the structure, declaring Odoo and Bootstrap variables.
-| ✅ **Website building** – creating pages, adding media, and constructing dynamic building blocks.
-| ✅ **Advanced customization** – implementing custom SCSS, JavaScript, headers, footers, and unique
+| ✅ **Theme module creation** - setting up the structure, declaring Odoo and Bootstrap variables.
+| ✅ **Website building** - creating pages, adding media, and constructing dynamic building blocks.
+| ✅ **Advanced customization** - implementing custom SCSS, JavaScript, headers, footers, and unique
   design elements.
-| ✅ **Visual enhancements** – designing background shapes, gradients, and animations for an
+| ✅ **Visual enhancements** - designing background shapes, gradients, and animations for an
   engaging user experience.
-| ✅ **eCcommerce optimization** – adapting shop and product templates for a seamless shopping
+| ✅ **eCommerce optimization** - adapting shop and product templates for a seamless shopping
   experience.
-| ✅ **Final preparations** – managing translations and ensuring a smooth module import.
+| ✅ **Final preparations** - managing translations and ensuring a smooth module import.
 
-| With these skills, you’re now to design and develop professional, fully customized website themes.
-  Well done! 🎉
-| We can’t wait to see the amazing themes you’ll create in the future.
+| With these skills, you're now ready to design and develop professional, fully customized website
+  themes. Well done! 🎉
+| We can't wait to see the amazing themes you'll create in the future.

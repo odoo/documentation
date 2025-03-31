@@ -7,10 +7,10 @@ Chapter 4 - Customisation, Part II
 Create a custom background shape
 ================================
 
-Shapes are decorative elements that can be applied to backgrounds or images. These are SVG files
+Shapes are decorative elements that can be applied to backgrounds or images. They are SVG files
 that can be animated and customized with different colors.
 
-#. To better align with the website’s desired atmosphere, create a custom background shape that the
+#. To better align with the website's desired atmosphere, create a custom background shape that the
    client can reuse on different blocks.
 
    Create your custom shape using the following setup :
@@ -26,7 +26,7 @@ that can be animated and customized with different colors.
    | **Be careful,** there is a trick!
    | In your shape SVG file, you have to use the colors from the default Odoo palette.
    | Here, I want it to match my primary color 3 (`#CEF8A1`). Therefore, in the SVG file, you must
-     use color 3 from Odoo’s default palette (`#F6F6F6`).
+     use color 3 from Odoo's default palette (`#F6F6F6`).
 
 .. seealso::
    Documentation on :ref:`custom background shapes <website_themes/shapes/bg/custom>`.
@@ -44,7 +44,7 @@ that can be animated and customized with different colors.
    the homepage :
 
    - Ensure the shape is in the right position.
-   - Set its color to the theme’s light blue.
+   - Set its color to the theme's light blue.
 
 .. image:: 04_customisation_part2/shape-section.png
 
@@ -172,7 +172,7 @@ contact form must be properly configured.
    To determine the correct code for your form :
 
    - | Create a test page via the website builder.
-     | Drag & drop the building block that interests you and give it the right design.
+     | Drag & drop the building block that interests you and apply the right design.
      | Use the code generated through :guilabel:`Editor HTML/SCSS`.
    - You can also find the original building block code in Odoo :
      `odoo/addons/website/views/snippets/s_website_form.xml
@@ -185,7 +185,7 @@ contact form must be properly configured.
      - :ref:`website_themes/pages/theme_pages`,
      - :ref:`website_themes/navigation/menu`.
 
-   | And see documentation on :doc:`/developer/howtos/website_themes/forms`.
+   | Also, see documentation on :doc:`/developer/howtos/website_themes/forms`.
 
 .. spoiler:: Solutions
 
