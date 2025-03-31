@@ -65,6 +65,8 @@ to all companies in the database.
 If working in a multinational company, select the countries where this pricelist will apply under
 the :guilabel:`Country Groups` column.
 
+.. _sales/products/price-rules:
+
 Price Rules tab
 ---------------
 
