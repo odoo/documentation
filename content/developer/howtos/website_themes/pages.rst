@@ -25,7 +25,7 @@ the following way.
 Each default page is a template with its own content saved into a record. This is the reason why,
 :ref:`custom pages are created within a record <website_themes/pages/theme_pages>`.
 
-The `<t -call='website.layout'>` has some variables that can be set:
+The `<t-call='website.layout'>` has some variables that can be set:
 
 Define the meta title.
 
@@ -124,26 +124,24 @@ page object.
 .. code-block:: xml
    :caption: ``/website_airproof/data/pages/about_us.xml``
 
-   <odoo>
-      <data noupdate="1">
-         <record id="page_about_us" model="website.page">
-               <field name="name">About us</field>
-               <field name="is_published" eval="True"/>
-               <field name="key">website_airproof.page_about_us</field>
-               <field name="url">/about-us</field>
-               <field name="website_id" eval="1" />
-               <field name="type">qweb</field>
-               <field name="arch" type="xml">
-                  <t t-name="website_airproof.page_about_us">
-                     <t t-call="website.layout">
-                        <div id="wrap" class="oe_structure">
-                           <!-- Content -->
-                        </div>
-                     </t>
-                  </t>
-               </field>
-         </record>
-      </data>
+   <odoo noupdate="1">
+        <record id="page_about_us" model="website.page">
+            <field name="name">About us</field>
+            <field name="is_published" eval="True"/>
+            <field name="key">website_airproof.page_about_us</field>
+            <field name="url">/about-us</field>
+            <field name="website_id" eval="1" />
+            <field name="type">qweb</field>
+            <field name="arch" type="xml">
+                <t t-name="website_airproof.page_about_us">
+                    <t t-call="website.layout">
+                    <div id="wrap" class="oe_structure">
+                        <!-- Content -->
+                    </div>
+                    </t>
+                </t>
+            </field>
+        </record>
    </odoo>
 
 .. admonition:: Multiwebsite and `website_id`
@@ -261,8 +259,8 @@ Make the header background transparent and stand on top of the page content.
 
    Find the available classes and components:
 
-   - `Bootstrap cheat sheet <https://getbootstrap.com/docs/5.1/examples/cheatsheet/>`_
-   - `Bootstrap documentation <https://getbootstrap.com/docs/5.1/getting-started/introduction/>`_
+   - `Bootstrap cheat sheet <https://getbootstrap.com/docs/5.3/examples/cheatsheet/>`_
+   - `Bootstrap documentation <https://getbootstrap.com/docs/5.3/getting-started/introduction/>`_
 
 .. _website_themes/pages/theme_pages/page_templates :
 
@@ -284,7 +282,7 @@ The page templates has to be defined into the :file:`__manifest__.py` of the mod
       'name': 'Airproof Theme',
       'description': '...',
       'category': 'Website/Theme',
-      'version': '17.0.0',
+      'version': '{BRANCH}.0.0',
       'author': '...',
       'license': '...',
       'depends': ['website'],
@@ -373,4 +371,4 @@ Feel free to add custom groups to the list:
    :alt: List of existing static page templates
 
 .. seealso::
-   `Go further by altering the building blocks of a custom template <https://github.com/odoo/odoo/blob/339d929e7a01e077fed8a21507cac4c2ff260b42/addons/website/views/new_page_template_templates.xml#L38>`_
+   `Go further by altering the building blocks of a custom template <https://github.com/odoo/odoo/blob/64971a0b1b2f8c063def5846f6029d5bb3a574cd/addons/website/views/new_page_template_templates.xml#L38>`_
