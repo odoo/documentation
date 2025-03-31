@@ -176,12 +176,10 @@ Services`.
 The available |IAP| accounts appear in a list view on the :guilabel:`IAP Account` page. From here,
 click on the desired |IAP| account to view that service's :guilabel:`Account Information` page.
 
-On the :guilabel:`Account Information` page, tick the :guilabel:`Warn Me` checkbox. Doing so reveals
-two fields on the form: :guilabel:`Threshold` and :guilabel:`Warning Email`.
+On the :guilabel:`Account Information` page, set the :guilabel:`Email Alert Threshold` field to the
+amount of credits that will trigger the notification for this service. Doing so reveals an
+additional :guilabel:`Email Alert Recipients` field, select the users that should receive the email
+notification.
 
-In the :guilabel:`Threshold` field, enter an amount of credits Odoo should use as the
-minimum threshold for this service. In the :guilabel:`Warning Email` field, enter the email address
-that receives the notification.
-
-Odoo sends a low-credit alert to the :guilabel:`Warning Email` when the balance of credits falls
-below the amount listed as the :guilabel:`Threshold`.
+Odoo will send a low-credit alert to the :guilabel:`Email Alert Recipients` once the balance of
+credits falls below the amount listed as the :guilabel:`Email Alert Threshold`.
