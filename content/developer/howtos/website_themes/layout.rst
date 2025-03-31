@@ -423,7 +423,7 @@ Each header template comes with the `template_header_mobile` template ensuring a
 experience accross every devices.
 
 .. seealso::
-   `Mobile header template on Odoo's Git repository <https://github.com/odoo/odoo/blob/d053ea84d45f2ba50a31c2773f2d3ded9fd1ee6b/addons/website/views/website_templates.xml#L343>`_
+   `Mobile header template on Odoo's Git repository <https://github.com/odoo/odoo/blob/43b20e6e52526c415e28c21810cd7023f6feef1e/addons/website/views/website_templates.xml#L354>`_
 
 
 .. _website_themes/layout/header/custom :
@@ -782,7 +782,7 @@ Odoo in general relies on the Bootstrap framework which eases the responsiveness
 
 .. seealso::
    - `Bootstrap documentation on display property
-     <https://getbootstrap.com/docs/5.1/utilities/display/>`_
+     <https://getbootstrap.com/docs/5.3/utilities/display/>`_
 
 .. _website_themes/layout/reponsive/font_sizes :
 
@@ -794,7 +794,7 @@ across device and viewport sizes (relying on the `$enable-rfs` variable).
 
 .. seealso::
    - `Bootstrap documentation about responsive font sizes
-     <https://getbootstrap.com/docs/5.1/getting-started/rfs/>`_
+     <https://getbootstrap.com/docs/5.3/getting-started/rfs/>`_
 
 .. _website_themes/layout/reponsive/column_sizes :
 
@@ -810,8 +810,8 @@ medium breakpoints (`col-md-4` for example).
    The medium sizes can be set but the end-user is not able to edit them within the Website Builder.
 
 .. seealso::
-   - `Bootstrap documentation on responsive breakpoints <https://getbootstrap.com/docs/5.1/layout/breakpoints/>`_
-   - `Bootstrap documentation about the grid <https://getbootstrap.com/docs/5.1/layout/grid/>`_
+   - `Bootstrap documentation on responsive breakpoints <https://getbootstrap.com/docs/5.3/layout/breakpoints/>`_
+   - `Bootstrap documentation about the grid <https://getbootstrap.com/docs/5.3/layout/grid/>`_
 
 .. _website_themes/layout/reponsive/visibility_conditions :
 
