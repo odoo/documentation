@@ -1,4 +1,9 @@
-# Odoo documentation
+# 📖 Odoo Documentation  
+
+This repository contains the **official documentation for Odoo**, an open-source suite of business applications that includes **CRM, eCommerce, accounting, inventory, project management, and more**.  
+
+The documentation provides **comprehensive guides, technical references, and best practices** for **developers, administrators, and end users**.
+
 
 ## Build the documentation locally
 
