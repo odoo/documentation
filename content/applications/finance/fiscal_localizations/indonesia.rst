@@ -2,6 +2,28 @@
 Indonesia
 =========
 
+.. _localization_indonesia/DPP:
+
+12% VAT & 11/12 DPP Adjustment
+==============================
+
+Indonesia's Value Added Tax (VAT) rate increased to 12% from 11% as of January 1, 2025. To mitigate
+the impact of the VAT increase on non-luxury goods and services, a "Tax base of other value"
+(DPP nilai lain) is applied, set at 11/12 of the selling price.
+
+Tax settings
+------------
+
+Adjusted DPP computation will apply to all taxes with a tax group `Non-luxury Good Taxes (ID)` and
+display :guilabel:`DPP` on the :guilabel:`Customer Invoices`, :guilabel:`Vendor Bills` and on the
+printouts of each. Go to :menuselection:`Accounting --> Configuration --> Taxes`, and click the tax
+requiring 11/12 base computation. Under :guilabel:`Advance Options` tab, choose
+:guilabel:`Non-luxury Good Taxes (ID)` for the field :guilabel:`Tax Group`.
+
+.. important::
+   Make sure to :ref:`upgrade <general/upgrade>` the :guilabel:`Indonesian - Accounting` module if
+   `Non-luxury Good Taxes (ID)` is not in the list of tax groups.
+
 .. _localization_indonesia/e-faktur:
 
 E-Faktur Module
