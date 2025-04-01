@@ -23,6 +23,11 @@ Optional: place your local copy of the `odoo/odoo` and `odoo/upgrade-util` repos
 the parent directory or in the root directory of the documentation to build the latter
 with the documented Python docstrings.
 
+## License  
+
+This repository is licensed under the **LGPL-3.0 License**. See the [LICENSE](LICENSE) file for details.  
+
+
 ## Contribute to the documentation
 
 For contributions to the content of the documentation, please refer to the
