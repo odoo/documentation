@@ -2,80 +2,100 @@
 Website themes
 ==============
 
-Odoo offers numerous themes to shape your website's style, including its colors, fonts, and layouts.
-When setting up your site using the Odoo website configurator, you are prompted to select a theme
-that aligns with your desired aesthetic. If you wish to modify the theme options later, navigate to
-the website builder by clicking the :guilabel:`Edit` button and access the :guilabel:`Theme` tab.
-The following sections are available:
+Odoo offers various options to shape your website’s theme, including its colors, fonts, and layouts,
+ensuring alignment with your company's brand identity and aesthetics.
 
-- :guilabel:`Colors`: The website builder relies on palettes composed of five colors: two
-  :guilabel:`Main` colors and three :guilabel:`Light & Dark` colors.
+To access the following design options, go to :menuselection:`Website --> Edit --> Theme`. Once you
+have made the desired changes, click on :guilabel:`Save` to confirm and apply them to your website.
 
-  You can also customize the :guilabel:`Color Presets` that have been defined automatically by the
-  website builder according to the five colors defined above. Click the arrow next to a color preset
-  to update it. Each color preset contains colors for your building block's :guilabel:`Background`,
-  :guilabel:`Text`, :guilabel:`Headings`, :guilabel:`Links`, :guilabel:`Primary Buttons`, and
-  :guilabel:`Secondary Buttons`.
+Choosing theme
+==============
 
-  .. image:: themes/colors.png
-     :alt: select the colors of your website
-     :scale: 75%
+In the :guilabel:`Website` section, click on :guilabel:`Switch Theme` to open the theme selector.
+Hover your mouse over the themes to see an extended preview of each page. Click on a page to apply
+the theme to your website.
 
-  **To apply a color preset** to a building block of your site, select it, go to the
-  :guilabel:`Customize` tab, click the :guilabel:`Background` button, and select the preset.
+Editing colors
+==============
 
-  .. note::
-     Changing a color preset automatically updates the colors of both the default preset and the
-     building blocks where the preset is used.
+In the :guilabel:`Colors` section, click on the paint palette icon to select your color palette. These are
+made of five colors: three main colors and two light and dark colors. You can change the colors in
+your palette by clicking on the color dots located on the left of the paint palette icon. The color
+selection panel offers two options:
 
-- :guilabel:`Website`: From this section, you can :guilabel:`Switch Theme`,
-  :doc:`Add a Language <../configuration/translate>`, select the :guilabel:`Page Layout`, and
-  customize the :guilabel:`Background` by uploading your own image.
+- **Solid**, to choose from a selection of colors.
+- **Custom**, to select a specific color tone manually (or add an #HEX or RGBA code).
 
-- :guilabel:`Paragraph`: Customize the formatting of your website's paragraph `<p>` elements.
+Odoo automatically creates presets for your chosen palette. If you want to modify them, click on
+:guilabel:`Color Presets` to display them and click on a preset to customize it further. Each
+color preset contains colors for your building block’s Background, Text, Headings, Links, Primary
+Buttons, and Secondary Buttons.
 
-  .. tip::
-     The :guilabel:`Font Family` field contains fonts that are hosted and served by Google servers.
-     To add another font, click :guilabel:`Add a Google Font`, and, in the popup window, click
-     :guilabel:`fonts.google.com`.
+.. image:: themes/color-presets.png
+   :scale: 80%
+   :alt: Color presets
 
-     .. image:: themes/add-a-font.png
-        :alt: Select the font you like
-        :scale: 75%
+To apply a color preset to a building block on your site, select it, go to the :guilabel:`Customize`
+tab, click the color dot located next to :guilabel:`Background`, and choose a :guilabel:`Theme`,
+a :guilabel:`Color`, or :guilabel:`Gradient`.
 
-     Select a font you like, copy the address of the page, paste it in the :guilabel:`Google Font
-     address` field, then click :guilabel:`Save and Reload`. The new font applies to your entire
-     website.
+.. note::
+   Changing a color preset automatically updates the colors of both the default preset and the
+   building blocks where the preset is used.
 
-- :guilabel:`Headings`: Customize the formatting of your headings.
+Changing page layout
+====================
 
-- :guilabel:`Button`: Customize the :guilabel:`Primary Style` and :guilabel:`Secondary Style`
-  buttons.
+Odoo offers multiple styles to display your pages content, such as blocks, pictures and more. In the
+:guilabel:`Website` section, click on :guilabel:`Page Layout` and select one in the dropdown menu.
+Under :guilabel:`Page Layout`, customize your :guilabel:`Background` by choosing an
+:guilabel:`Image`, creating a :guilabel:`Pattern`, or leaving it blank.
 
-  .. image:: themes/buttons.png
-     :alt: Two types of buttons in Odoo
+Adding a custom font
+====================
 
-- :guilabel:`Link`: To edit the style of the hyperlinks available on your website.
+In the :guilabel:`Paragraph` section, click on :guilabel:`Font Family` and on
+:guilabel:`Add a Custom Font` at the bottom of the dropdown menu. In the pop-up window:
 
-- :guilabel:`Input Fields`: Customize fields where you can enter data, e.g., a search bar or a form.
+- To add a Google font, click on :guilabel:`Select a Google Font` and click on a font that you like
+  from the list.
+- To upload a custom font from your computer, click on :guilabel:`Choose File`.
 
-- :guilabel:`Advanced`: You can hide the header bar of your website using the
-  :guilabel:`Show Header` button, inject :ref:`head and body code <analytics/google-tag-manager>`,
-  enter your :guilabel:`Google Map Custom Key`, change the colors of the :guilabel:`Success`,
-  :guilabel:`Info`, :guilabel:`Warning`, and :guilabel:`Error` pop up messages by clicking the
-  related :guilabel:`Status Colors` buttons, and customize the :guilabel:`Grays` elements of your
-  site.
+To complete the new font addition and make it available in the font family menu, click on
+:guilabel:`Save and Reload`.
 
-  .. example::
-     - The :guilabel:`Status Color` of the :guilabel:`Success` messages is set to green.
+Modifying theme fonts
+=====================
 
-       .. image:: themes/advanced.png
-          :alt: Status colors success message set to green.
+Odoo allows you to customize the font family and size for specific text elements on your website,
+including paragraphs, headings, buttons, and input fields.
 
-       .. image:: themes/success.png
-          :alt: Success message is green
+- **Font Family**: In the :guilabel:`Paragraph`, :guilabel:`Headings`, and :guilabel:`Button` sections,
+  click on :guilabel:`Font Family` and select a font from the dropdown menu.
 
-     - Customizing the gray elements of your site.
+- **Font Size**: In the :guilabel:`Paragraph`, :guilabel:`Headings`, :guilabel:`Button` and
+  :guilabel:`Input Fields` sections, use the :guilabel:`Font Size` field to set a default size. Click
+  the arrow next to it to define custom :guilabel:`Small` and :guilabel:`Large` sizes.
 
-       .. image:: themes/grays.png
-          :alt: Customize the grays elements of your site
+Additionally, each section offers extra text styling options, such as :guilabel:`Line Height` and
+:guilabel:`Margins`, for further customization.
+
+Modifying button style
+======================
+
+In the :guilabel:`Button` section, click on :guilabel:`Primary Style` or :guilabel:`Secondary Style`
+and select :guilabel:`Fill`, :guilabel:`Outline`, or :guilabel:`Flat`. When selecting
+:guilabel:`Outline`, the :guilabel:`Border Width` option appears below, allowing you to adjust the
+width of the button's outline.
+
+The :guilabel:`Paddings` fields allows you to change the size of the spacing around the text
+displayed on a button. You can also customize the border radius of buttons using the
+:guilabel:`Round Corners` option and add an animation when a button is clicked in the
+:guilabel:`On Click Effect` dropdown menu.
+
+Modifying link style
+====================
+
+In the :guilabel:`Link` section, click on :guilabel:`Link Style` to choose the appearance of links
+on your website: select :guilabel:`No Underline`, :guilabel:`Underline On Hover`, or
+:guilabel:`Always Underline` in the dropdown menu.
