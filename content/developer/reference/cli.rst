@@ -91,7 +91,15 @@ Running the server
 
 .. option:: --upgrade-path <upgrade_path>
 
-   specify an additional upgrade path.
+   comma-separated list of directories from which additional upgrade scripts
+   are loaded.
+
+.. option:: --pre-upgrade-scripts <pre_upgrade_scripts>
+
+   comma-separated list of paths to upgrade scripts. The scripts are run before
+   loading base module when an upgrade of any module is requested. This is
+   useful to perform some actions during custom modules upgrade after a major
+   upgrade.
 
 .. option:: --load <modules>
 
