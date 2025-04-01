@@ -1,3 +1,5 @@
+:show-content:
+
 ================
 Automation rules
 ================
