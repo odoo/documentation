@@ -249,7 +249,7 @@ Global
 
 .. seealso::
    `Primary variables SCSS
-   <https://github.com/odoo/odoo/blob/34c0c9c1ae00aba391932129d4cefd027a9c6bbd/addons/website/static/src/scss/primary_variables.scss#L1954>`_
+   <https://github.com/odoo/odoo/blob/c272c49657e8b7865bb93e5f1dcc183cc7d44f17/addons/website/static/src/scss/primary_variables.scss#L2089>`_
 
 .. _theming/module/variables/fonts:
 
@@ -472,7 +472,7 @@ The colors used in a color combination are accessible and can be overridden thro
 
 .. seealso::
    `Color combinations SCSS
-   <https://github.com/odoo/odoo/blob/34c0c9c1ae00aba391932129d4cefd027a9c6bbd/addons/web_editor/static/src/scss/web_editor.common.scss#L711>`_
+   <https://github.com/odoo/odoo/blob/c272c49657e8b7865bb93e5f1dcc183cc7d44f17/addons/web_editor/static/src/scss/web_editor.common.scss#L16>`_
 
 .. admonition:: Demo page
 
@@ -573,7 +573,7 @@ general). Both logic can be combined to be more flexible.
 
 .. seealso::
    `Bootstrap documentation about display headings
-   <https://getbootstrap.com/docs/5.1/content/typography/#display-headings>`_
+   <https://getbootstrap.com/docs/5.3/content/typography/#display-headings>`_
 
 .. _theming/module/bootstrap/fonts/text:
 
