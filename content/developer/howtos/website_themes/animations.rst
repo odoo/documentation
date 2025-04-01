@@ -102,7 +102,7 @@ Additionally, we can also set an `in` or `out` effect, an animation `direction` 
 
 .. seealso::
    `Website Animate
-   <https://github.com/odoo/odoo/blob/34c0c9c1ae00aba391932129d4cefd027a9c6bbd/addons/website/static/src/scss/website.scss#L1638>`_
+   <https://github.com/odoo/odoo/blob/c272c49657e8b7865bb93e5f1dcc183cc7d44f17/addons/website/static/src/scss/website.scss#L2075>`_
 
 .. _website_themes/animations/hover:
 
@@ -162,4 +162,4 @@ also define the type of animation in the `data-hover-effect` attribute.
 
 .. seealso::
    `Hover effect options
-   <https://github.com/odoo/odoo/blob/f43fbf67c98236434429e26d9d93de71ddb06790/addons/website/views/snippets/snippets.xml#L405>`_
+   <https://github.com/odoo/odoo/blob/c272c49657e8b7865bb93e5f1dcc183cc7d44f17/addons/website/views/snippets/snippets.xml#L694>`_
