@@ -3328,7 +3328,7 @@ msgstr "信用票据和退款"
 msgid ""
 "A credit/debit note, or credit/debit memo, is a document sent to a customer "
 "to inform them that they have been *credited/debited* a certain amount."
-msgstr ""
+msgstr "贷记/借记单或贷记/借记备忘单，是发送给客户的文件，用于通知客户已*贷记/借记*一定金额。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:8
 msgid "Several use cases can lead to a credit note, such as:"
@@ -3362,10 +3362,12 @@ msgid ""
 "</applications/sales/sales/products_prices/returns>` if a storable product "
 "is being returned."
 msgstr ""
+"开具贷记/借记单是取消、退款或修改已验证发票的唯一合法方法。如果向客户退款，请确保**在完成贷记/借记单处理后**，在系统中登记这笔付款交易；如果客户退回可储存的产品，则需要在系统中验证"
+" :doc:`退货</applications/sales/sales/products_prices/returns>`文档。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:27
 msgid "Issue a customer credit note"
-msgstr ""
+msgstr "开具客户贷记单"
 
 #: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:29
 msgid ""
@@ -3374,6 +3376,8 @@ msgid ""
 "Invoices`, open the relevant :guilabel:`Invoice`, and click "
 ":guilabel:`Credit Note`."
 msgstr ""
+"在大多数情况下，贷记单直接从相应的发票创建。要执行此操作，请进入 :menuselection:`会计 --> 客户 --> 发票`，打开相关的 "
+":guilabel:`发票`，然后点击 :guilabel:`贷记单`。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:33
 msgid ""
@@ -3381,6 +3385,8 @@ msgid ""
 "displayed on Credit Note` and update the :guilabel:`Journal` and "
 ":guilabel:`Reversal date` if needed. There are two options:"
 msgstr ""
+"在 :guilabel:`贷记单` 窗口中，填写 :guilabel:`贷记单上显示的原因` 并根据需要更新 :guilabel:`日记账` 和 "
+":guilabel:`逆转日期`。有两个选项："
 
 #: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:37
 msgid ""
@@ -3389,6 +3395,8 @@ msgid ""
 ":guilabel:`Quantity` and click :guilabel:`Confirm`. This option allows for a"
 " partial refund or modifications to the credit note."
 msgstr ""
+"点击 :guilabel:`冲销`，打开预填原始发票详细信息的贷记单草稿。更新 :guilabel:`产品` 和 :guilabel:`数量` 并点击 "
+":guilabel:`确认`。此选项允许部分退款或修改贷记单。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:40
 msgid ""
@@ -3397,6 +3405,7 @@ msgid ""
 " new draft invoice prefilled with the exact details from the original "
 "invoice."
 msgstr ""
+"点击 :guilabel:`冲销和创建发票` 可创建贷记单，进行自动验证，与相关发票进行核对，并打开新的发票草稿，预填原始发票的准确详细信息。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:44
 msgid ""
@@ -3405,29 +3414,31 @@ msgid ""
 " note follows the same process as completing an :ref:`invoice "
 "<accounting/invoice/creation>`."
 msgstr ""
+"要从头开始创建贷记单，请进入 :menuselection:`会计 --> 客户 --> 贷记单`，然后点击 "
+":guilabel:`新建`。填写贷记单的过程与填写 :ref:`发票 <accounting/invoice/creation>` 相同。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:49
 msgid ""
 "A credit note sequence starts with `R` and is followed by the related "
 "document number (e.g., RINV/2025/0004 is associated with the invoice "
 "INV/2025/0004)."
-msgstr ""
+msgstr "贷记单序列以 `R` 开头，后面是相关单据编号（例如，RINV/2025/0004 与发票 INV/2025/0004 相关联）。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:55
 msgid "Issue a customer debit note"
-msgstr ""
+msgstr "开具客户贷记单"
 
 #: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:57
 msgid ""
 "To create a debit note, go to :menuselection:`Accounting --> Customers --> "
 "Invoices` and follow these steps:"
-msgstr ""
+msgstr "要创建贷记单，请转到 :menuselection:`会计 --> 客户 --> 发票` 并按照以下步骤操作："
 
 #: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:60
 msgid ""
 "Select the desired invoice(s), click :icon:`fa-cog` :guilabel:`Actions` and "
 "select :guilabel:`Create Debit Note`."
-msgstr ""
+msgstr "选择所需的发票，点击 :icon:`fa-cog`:guilabel:`操作`，然后选择 :guilabel:`创建贷记单`。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/credit_notes.rst:62
 msgid ""
@@ -5577,6 +5588,8 @@ msgid ""
 "`INV/year/incrementing-number` (e.g., `INV/2025/00001`), which restarts from"
 " `00001` each year."
 msgstr ""
+"确认发票时，Odoo 会生成一个唯一的发票参考编号。默认情况下，Odoo 使用以下序列格式 `INV/year/incrementing-number`"
+" （例如 `INV/2025/00001`），每年从 `00001` 开始。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/sequence.rst:9
 msgid ""
@@ -5601,7 +5614,7 @@ msgstr "更改默认序列"
 msgid ""
 "To customize the default sequence, open the last confirmed invoice, click "
 ":guilabel:`Reset to Draft`, and edit the invoice's reference number."
-msgstr ""
+msgstr "要自定义默认顺序，请打开最后确认的发票，点击 :guilabel:`重置为草稿` 并编辑发票的参考编号。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/sequence.rst-1
 #: ../../content/applications/finance/accounting/customer_invoices/sequence.rst-1
@@ -31728,12 +31741,14 @@ msgid ""
 ":guilabel:`Automatic Invoice` option found under the :guilabel:`Invoicing` "
 "section."
 msgstr ""
+"要在结账流程后生成发票，请导航至 :menuselection:`网站 --> 配置 --> 设置` 并激活 :guilabel:`发票` 部分下的 "
+":guilabel:`自动发票` 选项。"
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:595
 msgid ""
 "The invoice's email template can be modified from the :guilabel:`Invoice "
 "Email Template` field under the :guilabel:`Automatic Invoice` option."
-msgstr ""
+msgstr "发票的电子邮件模板可在 :guilabel:`自动发票` 选项下的 :guilabel:`发票电子邮件模板` 字段中修改。"
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:599
 msgid ""
@@ -31903,25 +31918,25 @@ msgid ""
 "purchase, the credit note should be made using the client's real contact "
 "information. Credit notes cannot be created to *Consumidor Final* and can be"
 " managed :ref:`directly from the POS session <pos/refund>`."
-msgstr ""
+msgstr "如果客户因为退货而要求开具贷记单，贷记单应使用客户的真实联系信息。贷记单不能开给*最终消费者*，可以直接在 POS 会话中管理。"
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:702
 msgid "Electronic invoice: specific customer"
-msgstr ""
+msgstr "电子发票：特定客户"
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:704
 msgid ""
 "If a customer requests an invoice for their purchase, it is possible to "
 "select or create a contact with their fiscal information. This ensures the "
 "invoice is generated with accurate customer details."
-msgstr ""
+msgstr "如果客户要求为其购物开具发票，可以选择或创建一个包含其财务信息的联系人。这样就能确保在生成发票时，提供准确的客户详细信息。"
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:708
 msgid ""
 "If the client requests a credit note due to a return of this type of "
 "purchase, the credit note and return process can be managed :ref:`directly "
 "from the POS session <pos/refund>`."
-msgstr ""
+msgstr "如果客户因退货而要求开具贷记单，可以直接在 :ref:`POS 会话中 <pos/refund>` 管理贷记单和退货流程。"
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:714
 msgid ""
@@ -31990,6 +32005,8 @@ msgid ""
 ":ref:`Install <general/install>` the *ATS Report* (`l10n_ec_reports_ats`) "
 "module to enable downloading the ATS report in XML format."
 msgstr ""
+":ref:`安装 <general/install>` ATS 报告 (`l10n_ec_reports_ats`) 模块以启用以 XML 格式下载 "
+"ATS 报告的功能。"
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:755
 msgid ""
@@ -32593,6 +32610,8 @@ msgid ""
 " :doc:`Units of Measure "
 "<../../inventory_and_mrp/inventory/product_management/configure/uom>`."
 msgstr ""
+":guilabel:`计量单位`：如果您也使用 Odoo 库存并已启用 :doc:`计量单位 "
+"<../../inventory_and_mrp/inventory/product_management/configure/uom>`。"
 
 #: ../../content/applications/finance/fiscal_localizations/egypt.rst:179
 msgid ":guilabel:`Barcode`: **GS1** or **EGS** barcode"
@@ -32646,11 +32665,11 @@ msgstr "从页面 https://www.odoo.com/page/download 下载 Odoo 社区安装程
 
 #: ../../content/applications/finance/fiscal_localizations/egypt.rst:208
 msgid "Select :guilabel:`Odoo IoT` as the type of install."
-msgstr ""
+msgstr "选择 :guilabel:`Odoo 物联网` 作为安装模型。"
 
 #: ../../content/applications/finance/fiscal_localizations/egypt.rst-1
 msgid "Selection of \"Odoo IoT\" during the installation of Odoo Community."
-msgstr ""
+msgstr "安装Odoo 社区版时选择“Odoo 物联网”。"
 
 #: ../../content/applications/finance/fiscal_localizations/egypt.rst:215
 msgid ""
@@ -52492,24 +52511,24 @@ msgstr ""
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:98
 msgid "Click :guilabel:`Add events`."
-msgstr ""
+msgstr "点击 :guilabel:`添加活动`。"
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:99
 msgid ""
 "Click :guilabel:`Add endpoint`, then click :guilabel:`Reveal` and save your "
 ":guilabel:`Signing secret` for later."
-msgstr ""
+msgstr "点击 :guilabel:`添加端点`，然后点击 :guilabel:`揭示` 并保存您的 :guilabel:`签署秘密`以备后用。"
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:103
 msgid ""
 "In the :guilabel:`Credentials` tab, fill the :guilabel:`Webhook Signing "
 "Secret` field with the value you previously saved."
-msgstr ""
+msgstr "在 :guilabel:`凭证` 选项卡中，在 :guilabel:`网络钩子签署秘密` 字段中填写之前保存的值。"
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:107
 msgid ""
 "You can select other events, but they are currently not processed by Odoo."
-msgstr ""
+msgstr "您可以选择其他事件，但 Odoo 目前不会处理这些事件。"
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:110
 msgid "Enable Apple Pay"
@@ -52603,25 +52622,27 @@ msgstr "选择要使用的 :guilabel:`通讯资料`；"
 
 #: ../../content/applications/finance/payment_providers/wire_transfer.rst:38
 msgid ":guilabel:`Based on Document Reference`: sales order or invoice number"
-msgstr ""
+msgstr ":guilabel:`基于文件参考`：销售订单或发票编号"
 
 #: ../../content/applications/finance/payment_providers/wire_transfer.rst:39
 msgid ":guilabel:`Based on Customer ID`: customer identifier"
-msgstr ""
+msgstr ":guilabel:`基于客户 ID`：客户标识符"
 
 #: ../../content/applications/finance/payment_providers/wire_transfer.rst:41
 msgid ""
 "Tick the :guilabel:`Enable QR codes` check box to activate :doc:`QR code "
 "payments <../accounting/customer_invoices/epc_qr_code>`."
 msgstr ""
+"勾选 :guilabel:`启用二维码` 复选框，激活 :doc:`二维码支付 "
+"<../accounting/customer_invoices/epc_qr_code>` 。"
 
 #: ../../content/applications/finance/payment_providers/wire_transfer.rst:44
 msgid "Define the payment instructions in the :guilabel:`Messages` tab:"
-msgstr ""
+msgstr "在 :guilabel:`信息` 标签页中定义付款说明："
 
 #: ../../content/applications/finance/payment_providers/wire_transfer.rst-1
 msgid "Define payment instructions"
-msgstr ""
+msgstr "定义付款说明"
 
 #: ../../content/applications/finance/payment_providers/wire_transfer.rst:49
 msgid ""
