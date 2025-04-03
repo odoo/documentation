@@ -38,7 +38,7 @@ Exporting entries from Odoo to DATEV
 ------------------------------------
 
 Provided that one of the German :ref:`fiscal localization packages
-<fiscal_localizations/accounting>` is installed, you can export your accounting entries from Odoo to
+<fiscal_localizations/packages>` is installed, you can export your accounting entries from Odoo to
 DATEV from the general ledger.
 
 Two types of exports are needed: first the DATEV ATCH export, then the DATEV DATA export.

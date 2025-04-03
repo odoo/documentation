@@ -5,28 +5,25 @@ Fiscal localizations
 ====================
 
 Fiscal localizations are country-specific modules that allow you to be compliant with a country's
-fiscal requirements. Most of these modules are related to the :ref:`Accounting
-<fiscal_localizations/accounting>` or :ref:`Payroll <fiscal_localizations/payroll>` app, but they
-can also be necessary for other apps such as Point of Sale, eCommerce, etc., depending on a
-country's fiscal requirements.
+fiscal requirements. Most of these modules are related to the Accounting app, but they can also be
+necessary for other apps such as Point of Sale, eCommerce, etc., depending on a country's fiscal
+requirements.
+
+.. seealso::
+   :doc:`../hr/payroll/payroll_localizations` are documented separately.
 
 .. _fiscal_localizations/packages:
 
 Configuration
 =============
 
-Odoo should automatically install the required fiscal localization modules based on the company's
-country when the related app is installed. Refer to the :ref:`list of countries
-<fiscal_localizations/countries-list>` to view the currently supported countries and access their
-specific documentation.
+Odoo should automatically install the fiscal localization's core modules based on the company's
+country when the related app is installed. The rest can be manually :ref:`installed
+<general/install>`. Refer to the :ref:`list of countries <fiscal_localizations/countries-list>` to
+view the currently supported countries and access their specific documentation.
 
 .. note::
    Each company in a multi-company environment can use different fiscal localization modules.
-
-.. _fiscal_localizations/accounting:
-
-Accounting
-----------
 
 Verify the right package of modules is installed by going to :menuselection:`Accounting -->
 Configuration --> Settings` and checking the :guilabel:`Package` field under the :guilabel:`Fiscal
@@ -37,14 +34,6 @@ Localization` section. Select another one if necessary.
 
 These packages require fine-tuning the chart of accounts, activating the taxes to be used,
 configuring the country-specific statements and certifications, and sometimes more.
-
-.. _fiscal_localizations/payroll:
-
-Payroll
--------
-
-Localization settings can be accessed by going to :menuselection:`Payroll --> Configuration -->
-Settings` and searching for the country's **Localization** section.
 
 .. _fiscal_localizations/countries-list:
 
@@ -158,9 +147,6 @@ Fiscal localization modules are available for the countries listed below.
 - Venezuela
 - :doc:`Vietnam <fiscal_localizations/vietnam>`
 - Zambia
-
-.. seealso::
-   :doc:`Employment Hero Payroll documentation <fiscal_localizations/employment_hero>`
 
 .. toctree::
    :titlesonly:
