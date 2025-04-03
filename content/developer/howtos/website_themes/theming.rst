@@ -553,7 +553,7 @@ values and *not* the :file:`primary_variables.scss` file.
 
    When an option is defined by a variable in `primary_variables.scss` and by a Boostrap variable,
    you should always go for an override through the primary variables. Do it via
-   `bootsrap_overridden.scss` only if nothing exists in the primary variables.
+   `bootstrap_overridden.scss` only if nothing exists in the primary variables.
 
 .. seealso::
    `Bootstrap overridden SCSS
