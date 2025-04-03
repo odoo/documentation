@@ -1104,7 +1104,7 @@ Rejections and anomalies must be addressed before final acceptance.
 
    - Create an XML document containing employee benefit data, remuneration, and contributions for
      the company.
-   - More information on XML files can be found in the [Specifications page](#).
+   - More information on XML files can be found in the *Specifications* page.
 
 #. **Sending the Declaration**
 
