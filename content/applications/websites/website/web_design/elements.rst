@@ -3,9 +3,10 @@ Elements
 ========
 
 Elements help structure and present content effectively. They range from text-based components like
-:ref:`titles <website/elements/titles>` and :ref:`lists <website/elements/lists>` to interactive
-ones such as :ref:`buttons <website/elements/buttons>` and :ref:`links <website/elements/links>`.
-Visual elements like :ref:`images <website/elements/images>`, :ref:`icons <website/elements/icons>`,
+:ref:`titles <website/elements/titles>`, :ref:`lists <website/elements/lists>` and
+:ref:`text highlights <website/elements/text_highlights>` to interactive ones such as
+:ref:`buttons <website/elements/buttons>` and :ref:`links <website/elements/links>`. Visual elements
+like :ref:`images <website/elements/images>`, :ref:`icons <website/elements/icons>`,
 :ref:`videos <website/elements/videos>`, and :ref:`animations <website/elements/animations>` can
 also be added to improve content presentation and organization.
 
@@ -127,6 +128,23 @@ Lists
 Lists help organize content clearly, making information easier to read and improving web pages'
 structures. Type `/list` and choose from three different types of lists: :guilabel:`Bulleted lists`,
 :guilabel:`Numbered lists`, or :guilabel:`Checklists`.
+
+.. _website/elements/text_highlights:
+
+Text highlights
+===============
+
+Highlights can be added to titles and text using in the :guilabel:`Inline Text` section of the
+website editor. To add a highlight:
+
+#. Select the text or title you want to highlight.
+#. In the website editor, click on :guilabel:`Highlight`.
+#. Select the highlight style.
+#. Modify its :guilabel:`Color`.
+#. Choose its :guilabel:`Thickness`.
+
+.. image:: elements/highlights-elements.png
+   :alt: Highlight texts and titles
 
 .. _website/elements/animations:
 
