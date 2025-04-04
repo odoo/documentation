@@ -2,8 +2,6 @@
 Requests for quotation
 ======================
 
-.. _purchase/manage_deals/rfq:
-
 .. |PO| replace:: :abbr:`PO (Purchase Order)`
 .. |POs| replace:: :abbr:`POs (Purchase Orders)`
 .. |RFQ| replace:: :abbr:`RFQ (Request for Quotation)`
@@ -161,6 +159,8 @@ After crafting the desired message, click :guilabel:`Send`. Once sent, the |RFQ|
 :guilabel:`RFQ Sent` stage.
 
 Clicking :guilabel:`Print RFQ` downloads a PDF of the |RFQ|.
+
+.. _purchase/manage_deals/create-po:
 
 Confirm order
 -------------
