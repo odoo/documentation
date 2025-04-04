@@ -42,6 +42,8 @@ payment dates defined beforehand by the seller.
    - `Odoo Tutorials: payment terms <https://www.odoo.com/slides/slide/payment-terms-1679>`_
    - :doc:`cash_discounts`
 
+.. _accounting/payment-terms/configuration:
+
 Configuration
 =============
 
@@ -61,6 +63,12 @@ To create new payment terms, follow these steps:
 
    To add a term, click on :guilabel:`Add a line`, define the discount's value and type in the
    :guilabel:`Due` fields, then fill out the :guilabel:`After` fields to determine the due date.
+
+   .. tip::
+      The :guilabel:`Days end of the month on the` option allows you to add a :ref:`buffer period
+      <accounting/payment-terms/buffer>` so that an invoice registered at the end of the month isn't
+      due at the beginning of the month that immediately follows.
+
 #. Enter the text to be displayed on the document (sales order, invoice, etc.) in the gray textbox
    in the :guilabel:`Preview` column.
 #. Tick the :guilabel:`Show installment dates` checkbox to display a breakdown of each payment and
@@ -85,6 +93,41 @@ using these payment terms.
       :alt: Example of Payment Terms. The first line is the 30% due immediately. The second line is
             the remaining 70% due at the end of the following month.
 
+.. _accounting/payment-terms/buffer:
+
+End of the month buffer
+-----------------------
+
+The :guilabel:`Days end of the month on the` option allows users to add a buffer period so that an
+invoice registered at the end of the month isn't due at the beginning of the month that immediately
+follows.
+
+When using this option, Odoo calculates the due date by taking the invoice date, adding the integer
+in the :guilabel:`After` field, going to the end of the resulting month, and then adding the integer
+from the :guilabel:`Days on the next month` field.
+
+.. example::
+   For example, take two invoices, one dated 5 March and the other dated 28 March. Both use the same
+   payment terms with a single :guilabel:`Due Terms` line for 100% of the due amount, due `5`
+   :guilabel:`Days end of the month on the` `1`.
+
+   For the invoice dated 5 March, the due date is computed as **1 April** with the following
+   calculations:
+
+   - 5 March + 5 days = 10 March
+   - 10 March + end of the month = 31 March
+   - 31 March + on the 1 = 1 April
+
+
+   For the invoice dated 28 March, the due date is computed as **1 May** with the following
+   calculations:
+
+   - 28 March + 5 days = 2 April
+   - 2 April + end of the month = 30 April
+   - 30 April + on the 1 = 1 May
+
+.. _accounting/payment-terms/use:
+
 Using payment terms
 ===================
 
@@ -106,6 +149,8 @@ drop-down list on:
    Setting payment terms on a vendor bill is mostly useful for managing vendor terms with multiple
    installments or cash discounts. Otherwise, manually setting the **due date** is enough. If
    payment terms are already defined, empty the field to select a date.
+
+.. _accounting/payment-terms/journal-entries:
 
 Journal entries
 ===============
