@@ -16,18 +16,6 @@ For *FBM* (Fulfilled by Merchant), the same is done for *Unshipped* and *Cancell
 synchronized order, a sales order and customer are created in Odoo (if the customer is not already
 registered in the database).
 
-.. important::
-   The stock synchronization does **not** currently support selling the same product as :abbr:`FBM
-   (Fulfilled By Merchant)` *and* :abbr:`FBA (Fulfilled By Amazon)`.
-
-   At times, when stock is sent for all products, it triggers a stock problem with Amazon, where
-   Amazon incorrectly thinks the :abbr:`FBM (Fulfilled By Merchant)` product has some quantity in
-   :abbr:`FBM (Fulfilled By Merchant)`.
-
-   As a result, Amazon then sells it as :abbr:`FBM (Fulfilled By Merchant)`, instead of taking from
-   their own warehouse. Odoo developers are currently working on resolving this issue to avoid
-   future discrepancies.
-
 .. note::
    When an order is cancelled in Amazon, and was already synchronized in Odoo, the corresponding
    sales order is automatically cancelled in Odoo.
