@@ -95,6 +95,8 @@ e-invoicing option to generate and attach the e-invoice file.
 .. image:: electronic_invoicing/send-window.png
    :alt: The Peppol option is checked and an e-invoicing XML file is attached to the email.
 
+.. _e-invoicing/peppol:
+
 Peppol
 ======
 
@@ -120,6 +122,8 @@ If not done yet, :ref:`install <general/install>` the :guilabel:`Peppol` module 
        Croatia, Hungary, Ireland, Iceland, Italy, Liechtenstein, Lithuania, Luxembourg, Latvia,
        Monaco, Montenegro, North Macedonia, Malta, Netherlands, Norway, Poland, Portugal, Romania,
        Serbia, Sweden, Slovenia, Slovakia, San Marino, Turkey, Holy See (Vatican City State)
+
+.. _e-invoicing/peppol-registration:
 
 Registration
 ------------
