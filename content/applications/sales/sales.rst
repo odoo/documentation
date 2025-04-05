@@ -19,6 +19,7 @@ deliver and invoice what has been sold.
    sales/sales_quotations
    sales/invoicing
    sales/products_prices
+   sales/commissions
    sales/amazon_connector
    sales/shopee_connector
    sales/gelato
