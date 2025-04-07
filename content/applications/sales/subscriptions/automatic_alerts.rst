@@ -87,5 +87,4 @@ retention rates very high.
 .. seealso::
   - :doc:`../subscriptions`
   - :doc:`plans`
-  - :doc:`products`
   - :doc:`../../essentials/in_app_purchase`

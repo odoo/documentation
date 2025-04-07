@@ -79,4 +79,3 @@ to your *Subscriptions dashboard* and use the filter *To renew*.
 .. seealso::
    - :doc:`../subscriptions`
    - :doc:`plans`
-   - :doc:`products`
