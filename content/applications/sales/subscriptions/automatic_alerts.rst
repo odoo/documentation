@@ -163,7 +163,6 @@ If :guilabel:`Create next activity` is selected in the :guilabel:`Action To Do` 
    as the assignee(s) for the configured activity.
 
 .. seealso::
-   - :doc:`../subscriptions`
-   - :doc:`plans`
-   - :doc:`products`
-   - :doc:`../../essentials/in_app_purchase`
+  - :doc:`../subscriptions`
+  - :doc:`plans`
+  - :doc:`../../essentials/in_app_purchase`
