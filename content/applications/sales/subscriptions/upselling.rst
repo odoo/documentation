@@ -82,5 +82,4 @@ The only difference between your two sales orders is the description underneath 
 .. seealso::
    - :doc:`../subscriptions`
    - :doc:`plans`
-   - :doc:`products`
 

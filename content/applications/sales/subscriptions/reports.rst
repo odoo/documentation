@@ -119,4 +119,3 @@ apply and the salesperson you want to analyze.
 .. seealso::
    - :doc:`../subscriptions`
    - :doc:`plans`
-   - :doc:`products`

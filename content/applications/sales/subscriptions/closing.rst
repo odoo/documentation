@@ -104,4 +104,3 @@ added by the customer.
 .. seealso::
    - :doc:`../subscriptions`
    - :doc:`plans`
-   - :doc:`products`
