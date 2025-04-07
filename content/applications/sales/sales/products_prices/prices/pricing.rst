@@ -9,8 +9,8 @@ time periods, etc., and is useful for creating pricing strategies and optimizing
 Odoo **Sales** has a useful pricelist feature that can be tailored to fit any unique pricing
 strategy. Pricelists suggest certain prices, but they can always be overridden on the sales order.
 
-Pricelists configuration
-========================
+Configuration
+=============
 
 To enable pricelists in the Odoo **Sales** app, first navigate to :menuselection:`Sales app -->
 Configuration --> Settings`. In the :guilabel:`Pricing` section, tick the checkbox next to the
@@ -147,9 +147,8 @@ From here, there are several configuration options:
 Recurring Prices tab
 --------------------
 
-Recurring prices are specifically used with :doc:`subscription products
-<../../../subscriptions/products>`. When configuring price rules in this tab, keep in mind that
-they will only apply to subscription products, or products with recurring prices enabled.
+Time-based rules are used specifically with subscription products. Be sure to check out the Odoo
+:doc:`Subscriptions </applications/sales/subscriptions>` documentation for more information.
 
 In the :guilabel:`Recurring Prices` tab, pricelists are configured with the same options as in the
 :guilabel:`Price Rules` tab, with additional columns for :guilabel:`Product Variants` add
@@ -213,8 +212,13 @@ The :guilabel:`Selectable` can be enabled to allow the customer to choose this p
 Finally, promotional and loyalty codes can be added to the :guilabel:`E-commerce Promotional Code`
 field.
 
-.. image:: pricing/sales-pricelist-ecommerce.png
-   :alt: The Ecommerce tab in a pricelist configuration form.
+Tick the :guilabel:`Selectable` checkbox to have this pricelist as a selectable option for
+customers to choose as they shop. If the :guilabel:`Selectable` box is left unticked, customers
+**cannot** select this pricelist for themselves.
+
+Lastly, there is the option to add an :guilabel:`E-commerce Promotional Code`. To add a code, type
+in the desired promo code that, when entered during the checkout process, applies the pricelist to
+the customer, even if the customer does not fall into the previously-specified criteria.
 
 Customer pricelist application
 ==============================
