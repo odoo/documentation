@@ -402,4 +402,3 @@ Analysis` reporting page are:
 .. seealso::
    - :doc:`../subscriptions`
    - :doc:`plans`
-   - :doc:`products`
