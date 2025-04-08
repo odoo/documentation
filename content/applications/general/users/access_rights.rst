@@ -28,8 +28,8 @@ should not have access to.
    Once complete, click :guilabel:`Save` to save the changes, and implement the user as an
    administrator.
 
-Users
-=====
+Manage user permissions
+=======================
 
 The access rights for :ref:`individual users <users/add-individual>` are set when the user is added
 to the database, but they can be adjusted at any point in the user's profile.
@@ -51,6 +51,46 @@ The :guilabel:`Administration` field in the :guilabel:`Access Rights` tab has th
 
 .. image:: access_rights/user-permissions-dropdown-menu.png
    :alt: The Sales apps drop-down menu to set the user's level of permissions.
+
+Manage specific permissions
+---------------------------
+
+While access rights are typically managed in a bundle, they can also be set for explicit
+permissions. For example, giving a user the :guilabel:`Administrator` permission for **Timesheets**
+gives them full access to that app. That user, however, can be made to have full access to the app,
+but their ability to manage their own timesheets restricted (e.g., if the payroll administrator is
+salaried and does not need to manage their own timesheets).
+
+Manage specific permissions requires :ref:`developer mode <developer-mode>`. After that, navigate to
+:menuselection:`Settings app --> Manage users --> select a user --> Technical Access Rights tab`.
+From here, groups can be edited (which is covered in the next section) and specific access rights
+can be managed.
+
+These specific access rights are organized by groups and are split into to sections:
+
+- :guilabel:`Selected groups`: access rights set by choices made in the :guilabel:`Access Rights`
+  tab
+- :guilabel:`Groups added automatically`: access rights given as part of the access rights provided
+  by the :guilabel:`Selected groups`
+
+To add a permission to this user profile, click :guilabel:`Add a line` in the :guilabel:`Selected
+groups` table, and then add permissions to this user profile. To remove a permission, click the
+:icon:`fa-times` :guilabel:`cancel` at the end of that permission's row.
+
+Clicking on the permission itself will open a *group management form*. Learn more about
+:ref:`managing groups <access-rights/groups>`.
+
+Any permission in the :guilabel:`Groups added automatically` section are implied or required by the
+permission shown in the :guilabel:`Selected groups` section. These cannot be removed, but more users
+can be given these permissions by clicking on the permission itself, and then adding the user to
+that permission's group.
+
+.. note::
+   Any permission in green is already provided by another permission (for example, setting the
+   **Website** permission to :guilabel:`Editor and Designer` will also give that user the
+   :guilabel:`Restricted Editor` permission). Any permissions in red are conflicting and cannot be
+   active at the same time. Any permissions in *italics* is implied by a :guilabel:`Selected group`
+   (these are usually found in the :guilabel:`Groups added automatically`).
 
 .. _access-rights/groups:
 
