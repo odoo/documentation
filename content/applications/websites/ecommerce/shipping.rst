@@ -9,9 +9,6 @@ such as flat-rate or free shipping, local carriers via
 :doc:`Sendcloud </applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping>`
 or :ref:`Based on Rules <inventory/shipping/rules>`, and
 :ref:`in-store pickup <ecommerce/shipping/instore-pickup>`.
-:doc:`Sendcloud </applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping>`
-or :ref:`Based on Rules <inventory/shipping/rules>`, and :ref:`in-store pickup
-<ecommerce/shipping/instore-pickup>`.
 
 .. _ecommerce/shipping/external-provider:
 
