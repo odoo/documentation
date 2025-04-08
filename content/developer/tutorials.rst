@@ -16,6 +16,7 @@ Tutorials
     tutorials/unit_tests
     tutorials/mixins
     tutorials/pdf_reports
+    tutorials/website_theme
 
 .. cards::
 
@@ -73,3 +74,9 @@ Tutorials
       :target: tutorials/pdf_reports
 
       Use QWeb, Odoo's powerful templating engine, to create custom PDF reports for your documents.
+
+   .. card:: Build a website theme
+      :target: tutorials/website_theme
+
+      You will dive into Odoo website development. Created a tailored website from scratch using
+      Odoo, complete with your own module compatible with SaaS or SH.
