@@ -28,8 +28,8 @@ should not have access to.
    Once complete, click :guilabel:`Save` to save the changes, and implement the user as an
    administrator.
 
-Users
-=====
+Manage user permissions
+=======================
 
 The access rights for :ref:`individual users <users/add-individual>` are set when the user is added
 to the database, but they can be adjusted at any point in the user's profile.
@@ -51,6 +51,67 @@ The :guilabel:`Administration` field in the :guilabel:`Access Rights` tab has th
 
 .. image:: access_rights/user-permissions-dropdown-menu.png
    :alt: The Sales apps drop-down menu to set the user's level of permissions.
+
+Manage specific permissions
+---------------------------
+
+While access rights are typically assigned in bundles under specific roles, they can also be set as
+explicit permissions.
+
+.. example::
+   For example, giving a user the :guilabel:`Administrator` permission for **Timesheets**
+   gives them full access to that app. That user, while holding full access, can *still* have their
+   ability to manage *their own* timesheets restricted — such as in the case of a salaried payroll
+   administrator who does not need to track time.
+
+To manage specific permissions, :ref:`developer mode <developer-mode>` must be enabled.
+
+After that, navigate to the :menuselection:`Settings` app. Then click :guilabel:`Manage Users`,
+select a user, and go to the :guilabel:`Technical Access Rights` tab. From here, :guilabel:`Groups`
+can be edited, and specific access rights can be managed across the various sections. If no changes
+are made to these groups, then their permissions will mirror the selections made in the
+:guilabel:`Access Rights` tab.
+
+- :guilabel:`Selected groups`: a list of detailed access rights, set by choices made in the
+  :guilabel:`Access Rights` tab.
+- :guilabel:`Groups added automatically`: *implied* permissions that are *inherited* with the
+  explicit permissions already granted to the user. The values here will match the values listed
+  under a given *Group*'s form located under the :menuselection:`Users & Companies --> Groups` menu,
+  in the :guilabel:`Inherited` tab.
+
+.. image:: access_rights/tech-access-rights.png
+   :alt: The technical access rights tab opened up for a user profile.
+
+.. example::
+   When the *Sales Administrator* permission set is assigned to a user, then the *Canned Responses
+   Administrator* permissions are inherited automatically. These assignments are reflected across
+   the values listed in the :guilabel:`Selected Groups` and :guilabel:`Groups added automatically`
+   tables, respectively.
+
+To add a permission to this user profile, click :guilabel:`Add a line` in the :guilabel:`Selected
+groups` table, and then add permissions to this user profile. To remove a permission, click the
+:icon:`fa-times` :guilabel:`(cancel)` at the end of that permission's row.
+
+.. warning::
+   Removing permissions from the :guilabel:`Selected Groups` list can impact what permissions are
+   listed in the :guilabel:`Groups added automatically` list, since selected permission groups
+   inform what permission groups are added automatically.
+
+Clicking on the permission itself will open a group management form. Learn more about :ref:`managing
+groups <access-rights/groups>`.
+
+Any permission in the :guilabel:`Groups added automatically` section are implied or required by the
+permission shown in the :guilabel:`Selected groups` section. These cannot be removed, but more users
+can be given these permissions by clicking on the permission itself, and then adding the user to
+that permission's group.
+
+.. note::
+   - Any permission in green is already provided by another permission (for example, setting the
+     :guilabel:`Website` app's permission to :guilabel:`Editor and Designer` will also give that
+     user the :guilabel:`Restricted Editor` permission).
+   - Any permissions in red are conflicting and cannot be active at the same time.
+   - Any permissions in *italics* is implied by a :guilabel:`Selected group` (these are usually
+     found in the :guilabel:`Groups added automatically`).
 
 .. _access-rights/groups:
 
@@ -102,8 +163,8 @@ The group form contains multiple tabs for managing all elements of the group. In
 - :guilabel:`Views` tab: lists which views in Odoo the group has access to. Click :guilabel:`Add a
   line` to add a view to the group.
 - :guilabel:`Access Rights` tab: lists the first level of rights (models) that this group has. The
-  :guilabel:`Name` column represents the name for the current group's access to the model
-  selected in the :guilabel:`Model` column.
+  :guilabel:`Name` column represents the name for the current group's access to the model selected
+  in the :guilabel:`Model` column.
 
   To link a new access right to a group, click :guilabel:`Add a line`. Select the appropriate model
   from the :guilabel:`Model` drop-down, then enter a name for the access right in the
@@ -125,9 +186,9 @@ The group form contains multiple tabs for managing all elements of the group. In
      .. image:: access_rights/name-field.png
         :alt: Name of access rights to a model.
 
-     To find the model's technical name from the current view, first enter a placeholder text
-     in the :guilabel:`Name` field, then click the :guilabel:`Model` name, then the
-     :icon:`fa-arrow-right` :guilabel:`(Internal link)` icon.
+     To find the model's technical name from the current view, first enter a placeholder text in the
+     :guilabel:`Name` field, then click the :guilabel:`Model` name, then the :icon:`fa-arrow-right`
+     :guilabel:`(Internal link)` icon.
 
 - :guilabel:`Record Rules`: lists the second layer of editing and visibility rights.
   :guilabel:`Record Rules` overwrite, or refine, the group's access rights. Click :guilabel:`Add a
