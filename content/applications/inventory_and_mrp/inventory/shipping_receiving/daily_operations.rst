@@ -111,16 +111,11 @@ Delivery
 --------
 
 Tailor the outgoing shipment process to fit the business needs. Picking methods and removal
-strategies control how products are reserved for orders, while cross-docking and dropshipping
-determine how they move. Configuring these options in Odoo ensures visibility into product movement
-and confirms that items reach customers efficiently.
+strategies control how products are reserved for orders, while dropshipping determines how they
+move. Configuring these options in Odoo ensures visibility into product movement and confirms that
+items reach customers efficiently.
 
 .. cards::
-
-   .. card:: Cross dock
-      :target: daily_operations/cross_dock
-
-      Receive products and immediately transfer them to another warehouse without storing them
 
    .. card:: Dropshipping
       :target: daily_operations/dropshipping
@@ -160,7 +155,6 @@ needs.
    daily_operations/delivery_three_steps
    daily_operations/putaway
    daily_operations/storage_category
-   daily_operations/cross_dock
    daily_operations/stock_warehouses
    daily_operations/owned_stock
    daily_operations/dropshipping
