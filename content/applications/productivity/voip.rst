@@ -97,6 +97,20 @@ the :ref:`relevant troubleshooting steps <voip/voip_widget/troubleshooting_voip>
       Learn how to set up OnSIP in Odoo. This includes entering OnSIP credentials into Odoo and
       handling troubleshooting.
 
+VoIP workflows
+==============
+
+Here are a few commonly used workflows for Odoo |VOIP|. This technology is especially popular with
+sales teams, but can be useful for other teams as well.
+
+.. cards::
+   .. card:: Sales teams and VoIP
+      :target: voip/use_case_sales
+      :large:
+
+      Learn how to use VoIP for a sales team. This includes making sales calls, handling follow-ups,
+      and sending a sales quotation while on a call.
+
 .. toctree::
    :titlesonly:
 
@@ -105,3 +119,4 @@ the :ref:`relevant troubleshooting steps <voip/voip_widget/troubleshooting_voip>
    voip/voip_widget
    voip/devices_integrations
    voip/transfer_forward
+   voip/use_case_sales
