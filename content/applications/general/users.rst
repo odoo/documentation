@@ -23,7 +23,6 @@ To add new users, navigate to :menuselection:`Settings app --> Users section -->
 click on :guilabel:`New`.
 
 .. image:: users/manage-users.png
-   :align: center
    :alt: View of the settings page emphasizing the manage users field in Odoo.
 
 Fill in the form with all the required information. Under the :doc:`Access Rights
@@ -32,16 +31,16 @@ Fill in the form with all the required information. Under the :doc:`Access Right
 The list of applications shown is based on the applications installed on the database.
 
 .. image:: users/new-user.png
-   :align: center
    :alt: View of a user's form emphasizing the access rights tab in Odoo.
 
-After filling out all the necessary fields on the page, manually :guilabel:`Save`. An invitation
-email is automatically sent to the user, using the email in the :guilabel:`Email Address` field. The
-user must click on the link included in the email to accept the invitation, and to create a database
-login.
+After filling out all the necessary fields on the page, :icon:`fa-cloud-upload` :guilabel:`(Save
+manually)`. An invitation email is automatically sent to the user, using the email in the
+:guilabel:`Email Address` field. The user must click on the link included in the email to accept the
+invitation, and to create a database login. email is automatically sent to the user, using the email
+in the :guilabel:`Email Address` field. The user must click on the link included in the email to
+accept the invitation, and to create a database login.
 
 .. image:: users/invitation-email.png
-   :align: center
    :alt: View of a user's form with a notification that the invitation email has been sent in Odoo.
 
 .. warning::
@@ -54,25 +53,18 @@ login.
 User type
 ---------
 
-:guilabel:`User Type` can be selected from the :guilabel:`Access Rights` tab of the user form,
-accessible via :menuselection:`Settings app --> Users section --> Manage Users`.
+:guilabel:`User Type` can be chosen on the :guilabel:`Manage Users` page by clicking on the search
+bar, and then :ref:`setting a filter <search/preconfigured-filters>` for either :guilabel:`Internal
+User` or :guilabel:`Portal User`.
 
-There are three types of users: :guilabel:`Internal User`, :guilabel:`Portal`, and
-:guilabel:`Public`.
+Odoo databases have three types of users: :guilabel:`Internal User`, :guilabel:`Portal`, and
+:guilabel:`Public`. Users are considered *internal database* users. Portal users are *external
+users*, who only have access to the database portal to view records. Public users are those visiting
+websites, via the website's frontend. See the documentation on :doc:`users/portal`.
 
-.. image:: users/user-type.png
-   :align: center
-   :alt: View of a user's form in developer mode emphasizing the user type field in Odoo.
-
-.. tip::
-   Users are considered internal database users. Portal users are external users, who only have
-   access to the database portal to view records. See the documentation on :doc:`users/portal`.
-
-   Public users are those visiting websites, via the website's frontend.
-
-The :guilabel:`Portal` and :guilabel:`Public` user options do **not** allow the administrator to
-choose access rights. These users have specific access rights pre-set (such as, record rules and
-restricted menus), and usually do not belong to the usual Odoo groups.
+The :guilabel:`Portal` user option does **not** allow the administrator to choose access rights.
+These users have specific access rights pre-set (such as, record rules and restricted menus), and
+usually do not belong to the usual Odoo groups.
 
 .. _users/deactivate:
 
@@ -80,11 +72,11 @@ Deactivate users
 ================
 
 To deactivate (i.e. archive) a user, navigate to :menuselection:`Settings app --> Users section -->
-Manage Users`. Then, tick the checkbox to the left of the user(s) to be deactivated.
+Manage Users`. Then, tick the checkbox to the left of the users to be deactivated.
 
-After selecting the appropriate user to be archived, click the :guilabel:`⚙️ Actions` icon, and
-select :guilabel:`Archive` from the resulting drop-down menu. Then, click :guilabel:`OK` from the
-:guilabel:`Confirmation` pop-up window that appears.
+After selecting the appropriate user to be archived, click the :icon:`fa-cog` :guilabel:`(Actions)`
+icon, and select :guilabel:`Archive` from the resulting drop-down menu. Then, click :guilabel:`OK`
+from the :guilabel:`Confirmation` pop-up window that appears.
 
 .. danger::
    **Never** deactivate the main/administrator user (admin). Making changes to admin users can have
@@ -99,7 +91,6 @@ If there are more users in an Odoo database than provisioned in the Odoo Enterpr
 the following message is displayed.
 
 .. image:: users/add-more-users.png
-   :align: center
    :alt: Too many users on a database error message.
 
 When the message appears, the database administrator has 30 days to act before the database expires.
@@ -135,7 +126,6 @@ times. Odoo offers a few different methods to reset a user's password.
    password length in the :guilabel:`Minimum Password Length` field. By default the value is `8`.
 
 .. image:: users/minimum-password-length.png
-   :align: center
    :alt: Minimum Password Length highlighted in the Permissions section of General Settings.
 
 .. _users/reset-password:
@@ -159,15 +149,10 @@ To change this setting, go to :menuselection:`Settings app --> Permissions` sect
 :guilabel:`Password Reset`, and then click :guilabel:`Save`.
 
 .. image:: users/password-reset-login.png
-   :align: center
-   :alt: Enabling Password Reset in Odoo Settings
+   :alt: Enabling Password Reset in Odoo Settings.
 
 On the login page, click :guilabel:`Reset Password` to initiate the password reset process, and have
 a reset-token sent to the email on file.
-
-.. image:: users/password-reset.png
-   :align: center
-   :alt: Login screen on Odoo.com with the password reset option highlighted.
 
 .. _users/reset-password-email:
 
@@ -187,7 +172,6 @@ This email contains all the instructions needed to reset the password, along wit
 the user to an Odoo login page.
 
 .. image:: users/password-reset-email.png
-   :align: center
    :alt: Example of an email with a password reset link for an Odoo account.
 
 .. _users/change-password:
@@ -196,20 +180,19 @@ Change user password
 --------------------
 
 Go to :menuselection:`Settings app --> Users & Companies --> Users`, and select a user to access its
-form. Click on the :guilabel:`⚙️ Actions` icon, and select :guilabel:`Change Password` from, the
-resulting drop-down menu. Enter a new password in the :guilabel:`New Password` column of the
-:guilabel:`Change Password` pop-up window that appears, and confirm the change by clicking
+form. Click on the :icon:`fa-cog` :guilabel:`(Actions)` icon, and select :guilabel:`Change Password`
+from the resulting drop-down menu. Enter a new password in the :guilabel:`New Password` column of
+the :guilabel:`Change Password` pop-up window that appears, and confirm the change by clicking
 :guilabel:`Change Password`.
 
 .. image:: users/change-password.png
-   :align: center
    :alt: Change a user's password on Odoo.
 
 .. note::
    This operation only modifies the password of the users locally, and does **not** affect their
-   odoo.com account.
+   Odoo account.
 
-   If the odoo.com password needs to be changed, use the :ref:`send the password reset instructions
+   If the Odoo password needs to be changed, use the :ref:`send the password reset
    <users/reset-password-email>`. Odoo.com passwords grant access to the *My Databases* page, and
    other portal features.
 
@@ -241,7 +224,6 @@ company.
    developer documentation on :doc:`../../../developer/howtos/company`.
 
 .. image:: users/multi-companies.png
-   :align: center
    :alt: View of a user's form emphasizing the multi companies field in Odoo.
 
 .. seealso::
