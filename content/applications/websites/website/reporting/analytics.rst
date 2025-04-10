@@ -18,25 +18,27 @@ Plausible.io
 ============
 
 Odoo hosts its own Plausible.io server and provides a free and ready-to-use Plausible.io
-solution for **Odoo Online** databases. Odoo automatically creates and sets up your account. Start using it
-by going to :menuselection:`Website --> Reporting --> Analytics`.
+solution for **Odoo Online** databases that use the odoo.com domain. Odoo automatically creates and sets up
+your account. Start using it by going to :menuselection:`Website --> Reporting --> Analytics`.
 
 .. note::
-   **If you already have a Plausible.io account** and you want to connect it to your Odoo Online
-   database, you must create two `ir.config.parameters` to use Plausible.io's servers. To do so,
-   enable the :ref:`developer mode <developer-mode>` and go to :menuselection:`General Settings -->
-   Technical --> System Parameters`. Click :guilabel:`New` and fill in the following :guilabel:`Key`
-   and :guilabel:`Value` fields:
+   - If you use a custom :doc:`domain name <../configuration/domain_names>` (e.g., `example.com`), you need to
+     create your own Plausible.io account and subscription.
+   - **If you already have a Plausible.io account** and you want to connect it to your Odoo Online
+     database, you must create two `ir.config.parameters` to use Plausible.io's servers. To do so,
+     enable the :ref:`developer mode <developer-mode>` and go to :menuselection:`General Settings -->
+     Technical --> System Parameters`. Click :guilabel:`New` and fill in the following :guilabel:`Key`
+     and :guilabel:`Value` fields:
 
-   .. list-table::
-      :header-rows: 1
+     .. list-table::
+        :header-rows: 1
 
-      * - Key
-        - Value
-      * - `website.plausible_script`
-        - `https://plausible.io/js/plausible.js`
-      * - `website.plausible_server`
-        - `https://plausible.io`
+        * - Key
+          - Value
+        * - `website.plausible_script`
+          - `https://plausible.io/js/plausible.js`
+        * - `website.plausible_server`
+          - `https://plausible.io`
 
    Then, follow the steps below to connect your existing account with Plausible.io servers.
 
