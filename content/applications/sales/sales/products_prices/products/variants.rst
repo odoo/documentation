@@ -147,27 +147,34 @@ Then, enter the name of the value in the :guilabel:`Value` column. Next, check t
 :guilabel:`Is custom value` column, if the value is custom (i.e. the customer gets to provide unique
 specifications that are specific to this particular value).
 
-.. note::
-   If the :guilabel:`Display Type` - :guilabel:`Color` option is selected, the option to add an HTML
-   color code will appear to the far-right of the value line, to make it easier for salespeople and
-   customers to know exactly what color option they're choosing.
+Colors
+~~~~~~
 
-   .. image:: variants/attribute-value-add-a-line.png
-      :align: center
-      :alt: Attribute values tab when add a line is clicked, showing the custom columns.
+Next to :guilabel:`Display Type`, select the :guilabel:`Color` option. Go to the
+:guilabel:`Attribute Values` tab to modify the value settings.
 
-   To choose a color, click the blank circle in the :guilabel:`Color` column, which reveals an HTML
-   color selector pop-up window.
+.. image:: variants/attribute-value-add-image.png
+   :alt: Add an image of the pattern to an attribute.
 
-   .. image:: variants/picking-a-color.png
-      :align: center
-      :alt: Selecting a color from the HTML color pop-up window that appears on attribute form.
+To choose a color, click the blank circle in the :guilabel:`Color` column, which reveals an HTML
+color selector pop-up window.
 
-   In this pop-up window, select a specific color by dragging the color slider to a particular hue,
-   and clicking on the color portion directly on the color gradient window.
+.. image:: variants/picking-a-color.png
+   :alt: Selecting a color from the HTML color pop-up window that appears on attribute form.
 
-   Or, choose a specific color by clicking the *dropper* icon, and selecting a desired color that's
-   currently clickable on the screen.
+In this pop-up window, select a specific color by dragging the color slider to a particular hue,
+and clicking on the color portion directly on the color gradient window.
+
+Or, choose a specific color by clicking the *dropper* icon, and selecting a desired color that's
+currently clickable on the screen.
+
+If you sell products with specific patterns, you can also add an image to display the
+pattern of the product. To do so, click the :icon:`fa-camera` :guilabel:`(camera)` icon,
+then click the :icon:`fa-pencil` :guilabel:`(pencil)` icon and select an image from your local
+drive. This pattern will appear as a color option on the ecommerce product page.
+
+.. image:: variants/ecommerce-pattern-option.png
+   :alt: Pattern as color option on the ecommerce page.
 
 .. tip::
    Attributes can also be created directly from the product template by adding a new line and
