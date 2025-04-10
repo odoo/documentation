@@ -154,15 +154,23 @@ by adding :ref:`variants <ecommerce/products/product-variants>`, :ref:`digital d
 Customization
 -------------
 
-To customize a product page, click :guilabel:`Edit`. Go to the :guilabel:`Blocks` tab to add
-:doc:`building blocks <../../websites/website/web_design/building_blocks>`.
+To customize a product page, click :guilabel:`Edit` in the upper right corner of the page.
 
 .. tip::
-   - When dragging and dropping a building block on the product page, placing it above or below the
-     top or bottom blue lines makes it visible on all product pages.
-   - You can edit any text on your website simply by clicking on it while in :guilabel:`Edit` mode.
+   You can edit any text on your website by clicking on it.
 
-Go to the :guilabel:`Customize` tab to modify the page layout or add features:
+From here, you can add an additional, detailed product description especially for marketing purposes
+that will only be visible on your ecommerce product page. To do so, click the text field beneath
+the **sales description** located right under the product name. You can use the `/` command to add images,
+tables and other features.
+
+Use the :guilabel:`Blocks` tab to add :doc:`building blocks <../../websites/website/web_design/building_blocks>`.
+
+.. tip::
+   When dragging and dropping a building block on the product page, placing it above or below the top or bottom blue
+   lines makes it visible on all product pages.
+
+Use the :guilabel:`Customize` tab to modify the page layout or add features:
 
 - :guilabel:`Terms and Conditions`: Toggle the switch to display a link to your
   :doc:`terms and conditions <../../finance/accounting/customer_invoices/terms_conditions>` on the
@@ -182,7 +190,7 @@ Go to the :guilabel:`Customize` tab to modify the page layout or add features:
 - :guilabel:`Select Quantity`: Toggle the switch to allow customers to select the product quantity
   they want to purchase.
 
-- :guilabel:`Tax indication`: Toggle the switch to indicate if the price is
+- :guilabel:`Tax Indication`: Toggle the switch to indicate if the price is
   :ref:`VAT included or excluded <ecommerce-price-management-tax-display>`.
 
 - :guilabel:`Variants`: Show all possible product :ref:`variants <ecommerce/products/product-variants>`
@@ -218,10 +226,22 @@ Go to the :guilabel:`Customize` tab to modify the page layout or add features:
 
 .. _ecommerce/products/image-customization:
 
-Image customization
--------------------
+Product images and videos
+-------------------------
 
-To customize the images available on the product page, go to the :guilabel:`Customize` tab:
+You can add additional media items to provide visual resources (i. e. images and videos) and information on
+your product.
+
+Navigate to the :ref:`product form <ecommerce/products/product-form>`, then go to the :guilabel:`Sales` tab
+and click :guilabel:`Add a media` under the :guilabel:`Extra Product Media` section. In the resulting
+:guilabel:`Create Extra Product Media` pop-up window, enter the :guilabel:`Image Name`, and add a video URL
+or click the :icon:`fa-pencil` :guilabel:`(pencil)` icon that appears when the cursor hovers
+over the :icon:`fa-camera` :guilabel:`(camera)` icon to upload images from your local drive.
+
+The media resources will appear on the ecommerce product page where you can adapt their layout.
+
+To do so, go to the ecommerce product page, click :guilabel:`Edit` and select an image. In the :guilabel:`Customize`
+tab, use the following features:
 
 - :guilabel:`Images Width`: Changes the width of the product images displayed on the page.
 - :guilabel:`Layout`: The :guilabel:`Carousel` layout allows customers to navigate from one image to
@@ -229,11 +249,10 @@ To customize the images available on the product page, go to the :guilabel:`Cust
   (:guilabel:`right arrow`); whereas the :guilabel:`Grid` displays four images in a square layout.
 - :guilabel:`Image Zoom`: Select the zoom effect for product images: :guilabel:`Magnifier on hover`
   :guilabel:`Pop-up on Click`, :guilabel:`Both`, or :guilabel:`None`.
-- :guilabel:`Thumbnails`: Align thumbnails on the :icon:`fa-long-arrow-left` (:guilabel:`Left`) or
-   at the :icon:`fa-long-arrow-down` (:guilabel:`Bottom`).
+- :guilabel:`Thumbnails`: Align thumbnails on the :icon:`fa-long-arrow-left` (:guilabel:`Left`) or at
+  the :icon:`fa-long-arrow-down` (:guilabel:`Bottom`).
 - :guilabel:`Main Image`: Click :guilabel:`Replace` to change the product's main image.
-- :guilabel:`Extra Images`: :guilabel:`Add` extra images or videos (including via URL) or
-  :guilabel:`Remove all` product images.
+- :guilabel:`Extra Images`: :guilabel:`Add` more extra images or videos (including via URL) or :guilabel:`Remove all`.
 
 .. note::
    Images must be in PNG or JPG format and with a minimum size of 1024x1024 to trigger the zoom.
