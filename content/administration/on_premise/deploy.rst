@@ -172,7 +172,7 @@ in Odoo the db_sslmode control the ssl security of the connection
 with value chosen out of 'disable', 'allow', 'prefer', 'require', 'verify-ca'
 or 'verify-full'
 
-`PostgreSQL Doc <https://www.postgresql.org/docs/12/static/libpq-ssl.html>`_
+`PostgreSQL Doc <https://www.postgresql.org/docs/15/libpq-ssl.html>`_
 
 .. _builtin_server:
 
@@ -923,8 +923,8 @@ Here are the supported browsers:
 .. _socat: http://www.dest-unreach.org/socat/
 .. _PostgreSQL connection settings:
 .. _listen to network interfaces:
-    https://www.postgresql.org/docs/12/static/runtime-config-connection.html
+    https://www.postgresql.org/docs/15/runtime-config-connection.html
 .. _use an SSH tunnel:
-    https://www.postgresql.org/docs/12/static/ssh-tunnels.html
+    https://www.postgresql.org/docs/15/ssh-tunnels.html
 .. _WSGI: https://wsgi.readthedocs.org/
 .. _POSBox: https://www.odoo.com/page/point-of-sale-hardware#part_2
