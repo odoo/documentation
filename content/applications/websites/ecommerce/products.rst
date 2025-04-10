@@ -64,8 +64,8 @@ Shop page
 =========
 
 To customize the layout of the main :guilabel:`Shop` page or modify its content, click
-:guilabel:`Edit`. Go to the :guilabel:`Blocks` tab to add
-:doc:`building blocks <../../websites/website/web_design/building_blocks>` or to the
+:guilabel:`Edit`. Go to the :guilabel:`Blocks` tab to add :doc:`building blocks
+<../../websites/website/web_design/building_blocks>` or to the
 :guilabel:`Customize` tab to change the page layout or add features:
 
 - :guilabel:`Layout`: Select :guilabel:`Grid` or :guilabel:`List`.
@@ -154,13 +154,13 @@ by adding :ref:`variants <ecommerce/products/product-variants>`, :ref:`digital d
 Customization
 -------------
 
-To customize a product page, click :guilabel:`Edit`. Go to the :guilabel:`Blocks` tab to add
-:doc:`building blocks <../../websites/website/web_design/building_blocks>`.
+To customize a product page, click :guilabel:`Edit` in the upper right corner of the page. Use the
+:guilabel:`Blocks` tab to add :doc:`building blocks <../../websites/website/web_design/building_blocks>`.
 
 .. tip::
-   - When dragging and dropping a building block on the product page, placing it above or below the
-     top or bottom blue lines makes it visible on all product pages.
-   - You can edit any text on your website simply by clicking on it while in :guilabel:`Edit` mode.
+   - When dragging and dropping a building block on the product page, placing it above or below
+     the top or bottom blue lines makes it visible on all product pages.
+   - You can edit any text on your website by clicking on it while in :guilabel:`Edit` mode.
 
 Go to the :guilabel:`Customize` tab to modify the page layout or add features:
 
@@ -182,12 +182,12 @@ Go to the :guilabel:`Customize` tab to modify the page layout or add features:
 - :guilabel:`Select Quantity`: Toggle the switch to allow customers to select the product quantity
   they want to purchase.
 
-- :guilabel:`Tax indication`: Toggle the switch to indicate if the price is
+- :guilabel:`Tax Indication`: Toggle the switch to indicate if the price is
   :ref:`VAT included or excluded <ecommerce-price-management-tax-display>`.
 
-- :guilabel:`Variants`: Show all possible product :ref:`variants <ecommerce/products/product-variants>`
-  vertically as a :guilabel:`Products List` or horizontally as selectable :guilabel:`Options` to
-  compose the variant yourself.
+- :guilabel:`Variants`: Show all possible product :ref:`variants
+  <ecommerce/products/product-variants>` vertically as a :guilabel:`Products List`
+  or horizontally as selectable :guilabel:`Options` to compose the variant yourself.
 
 - :guilabel:`Product Tags`: Toggle the switch to display the :guilabel:`Product Template Tags` on
   the product page and allow customers to filter products using those tags.
@@ -218,10 +218,18 @@ Go to the :guilabel:`Customize` tab to modify the page layout or add features:
 
 .. _ecommerce/products/image-customization:
 
-Image customization
--------------------
+Product images and videos
+-------------------------
 
-To customize the images available on the product page, go to the :guilabel:`Customize` tab:
+To add more media items, such as images and videos, navigate to the
+:ref:`product form <ecommerce/products/product-form>`, then go to the :guilabel:`Sales` tab
+and click :guilabel:`Add a media` under the :guilabel:`Extra Product Media` section. In the
+:guilabel:`Create Extra Product Media` pop-up window, enter the :guilabel:`Image Name`,
+and add a video URL or hover your mouse over the :icon:`fa-camera` :guilabel:`(camera)` icon
+and click the :icon:`fa-pencil` :guilabel:`(pencil)` icon to upload images from your local drive.
+
+To customize the images or videos, go to the ecommerce product page, click :guilabel:`Edit`
+and select the relevant media. In the :guilabel:`Customize` tab, use the following features:
 
 - :guilabel:`Images Width`: Changes the width of the product images displayed on the page.
 - :guilabel:`Layout`: The :guilabel:`Carousel` layout allows customers to navigate from one image to
@@ -229,11 +237,12 @@ To customize the images available on the product page, go to the :guilabel:`Cust
   (:guilabel:`right arrow`); whereas the :guilabel:`Grid` displays four images in a square layout.
 - :guilabel:`Image Zoom`: Select the zoom effect for product images: :guilabel:`Magnifier on hover`
   :guilabel:`Pop-up on Click`, :guilabel:`Both`, or :guilabel:`None`.
-- :guilabel:`Thumbnails`: Align thumbnails on the :icon:`fa-long-arrow-left` (:guilabel:`Left`) or
-   at the :icon:`fa-long-arrow-down` (:guilabel:`Bottom`).
+- :guilabel:`Thumbnails`: Align thumbnails on the :icon:`fa-long-arrow-left` (:guilabel:`Left`)
+  or at
+  the :icon:`fa-long-arrow-down` (:guilabel:`Bottom`).
 - :guilabel:`Main Image`: Click :guilabel:`Replace` to change the product's main image.
-- :guilabel:`Extra Images`: :guilabel:`Add` extra images or videos (including via URL) or
-  :guilabel:`Remove all` product images.
+- :guilabel:`Extra Images`: :guilabel:`Add` more extra images or videos (including via URL) or
+  :guilabel:`Remove all`.
 
 .. note::
    Images must be in PNG or JPG format and with a minimum size of 1024x1024 to trigger the zoom.
@@ -253,8 +262,8 @@ To configure product variants for a product:
 #. Scroll down to the :guilabel:`Shop - Products` section and enable the
    :guilabel:`Product Variants` feature.
 #. Access the :ref:`product forms <ecommerce/products/product-form>` and go to the
-   :guilabel:`Attributes & Variants` tab, where you can add attributes and values, allowing customers
-   to configure and select product variants on the product page. For multiple attributes,
+   :guilabel:`Attributes & Variants` tab, where you can add attributes and values, allowing
+   customers to configure and select product variants on the product page. For multiple attributes,
    you can combine them to create specific variants.
 
 To display or hide an attribute on the :guilabel:`Shop` page and allow visitors to filter them,
@@ -282,7 +291,8 @@ Digital files
 
 You can link digital files like certificates, eBooks, or user manuals to the products. These
 documents are available :ref:`before payment <ecommerce-products-digital-files-before-payment>` on
-the product page or in the customer portal :ref:`after checkout <ecommerce-products-digital-files-after-payment>`.
+the product page or in the customer portal
+:ref:`after checkout <ecommerce-products-digital-files-after-payment>`.
 
 To link a digital file to a product, go to the :ref:`product form <ecommerce/products/product-form>`
 and click the :guilabel:`Documents` smart button. Then, click :guilabel:`Upload` to upload a file
