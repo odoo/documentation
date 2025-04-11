@@ -45,9 +45,9 @@ page. When you :guilabel:`Save`, the product page is automatically published.
 Import products
 ---------------
 
-To :ref:`import product data <import-data>` using XLSX or CSV files, go to
-:menuselection:`Website --> eCommerce --> Products`, click the :icon:`fa-cog` (:guilabel:`gear`)
-icon, then :ref:`Import records <import-data>`.
+To :ref:`import product data <essentials/export_import_data/import-data>` using XLSX or CSV files,
+go to :menuselection:`Website --> eCommerce --> Products`, click the :icon:`fa-cog`
+(:guilabel:`gear`) icon, then :ref:`Import records <essentials/export_import_data/import-data>`.
 
 .. tip::
    To publish **large batches** of products, follow these steps:

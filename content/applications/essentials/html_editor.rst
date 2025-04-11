@@ -51,7 +51,7 @@ toolbar and apply any of the following formatting options:
   the tone by clicking buttons such as :guilabel:`Correct, Shorten, Lengthen, Friendly,
   Professional`, and :guilabel:`Persuasive`.
 
-.. image:: text_editor/style-and-colors.png
+.. image:: html_editor/style-and-colors.png
    :alt: Text editor's toolbox
 
 
