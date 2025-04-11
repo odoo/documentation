@@ -41,7 +41,7 @@ The following |IAP| services are offered by Odoo:
 - :guilabel:`Lead Generation`: generates leads based on a set of criteria, and converts web visitors
   into quality leads and opportunities.
 - :guilabel:`Snailmail`: sends customer invoices and follow-up reports by post, worldwide.
-- :guilabel:`Signer identification with itsme®: Ask document signatories in
+- :guilabel:`Signer identification with itsme®`: Ask document signatories in
   Odoo **Sign** to provide their identity using the *itsme* :icon:`fa-registered` identity platform,
   which is available in Belgium and the Netherlands.
 
