@@ -12,6 +12,7 @@ Productivity
     productivity/spreadsheet
     productivity/knowledge
     productivity/calendar
+    productivity/appointments
     productivity/discuss
     productivity/data_cleaning
     productivity/whatsapp
