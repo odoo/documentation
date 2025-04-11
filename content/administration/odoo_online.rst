@@ -36,6 +36,7 @@ database name. It is only displayed if an upgrade is available.
 - :ref:`odoo_online/delete`
 - :ref:`odoo_online/contact-support`
 - :ref:`odoo_online/users`
+- :ref:`odoo_online/web-services`
 
 .. _odoo_online/upgrade:
 
@@ -149,3 +150,56 @@ To remove users, select them and click :guilabel:`Remove`.
 .. seealso::
    - :doc:`/applications/general/users`
    - :doc:`odoo_accounts`
+
+.. _odoo_online/web-services:
+
+Web Services
+============
+
+In order to programmatically retrieve the list of the databases displayed in the
+`database manager <https://www.odoo.com/my/databases>`_, call the method `list` of the model
+`odoo.database` via a :doc:`Web Service </developer/howtos/web_services>` call.
+
+Inspired from the examples provided in the :doc:`Web Services </developer/howtos/web_services>`
+section, this is how to retrieve this list with the library ``xmlrpc.client``::
+
+   import xmlrpc.client
+
+   USER = 'user@domain.tld'
+   APIKEY = 'your_apikey'
+
+   root = 'https://www.odoo.com/xmlrpc/'
+   uid = xmlrpc.client.ServerProxy(root + 'common').login('openerp', USER, APIKEY)
+   sock = xmlrpc.client.ServerProxy(root + 'object')
+   databases_list = sock.execute('openerp', uid, APIKEY, 'odoo.database', 'list')
+
+And here is the equivalent example with JSON-RPC::
+
+   import json
+   import random
+   import urllib.request
+
+   USER = 'user@domain.tld'
+   APIKEY = 'your_apikey'
+
+   def json_rpc(url, method, params):
+       data = {
+           'jsonrpc': '2.0',
+           'method': method,
+           'params': params,
+           'id': random.randint(0, 1000000000),
+       }
+       req = urllib.request.Request(url=url, data=json.dumps(data).encode(), headers={
+           "Content-Type": "application/json",
+       })
+       reply = json.loads(urllib.request.urlopen(req).read().decode('UTF-8'))
+       if reply.get('error'):
+           raise Exception(reply['error'])
+       return reply['result']
+
+   def call(url, service, method, *args):
+       return json_rpc(url, 'call', {'service': service, 'method': method, 'args': args})
+
+   url = 'https://www.odoo.com/jsonrpc'
+   uid = call(url, 'common', 'login', 'openerp', USER, APIKEY)
+   databases_list = call(url, 'object', 'execute', 'openerp', uid, APIKEY, 'odoo.database', 'list')
