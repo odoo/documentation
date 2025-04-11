@@ -104,4 +104,3 @@ In addition, the specified :guilabel:`Close Reason` appears on the subscription 
 .. seealso::
    - :doc:`../subscriptions`
    - :doc:`plans`
-   - :doc:`products`
