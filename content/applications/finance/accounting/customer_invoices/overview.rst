@@ -44,6 +44,11 @@ This process is good for both services and physical products.
 .. seealso::
    - :doc:`/applications/sales/sales/invoicing/proforma`
 
+.. note::
+    Invoices can also be generated from sales orders created in the :doc:`Repairs
+    app </applications/inventory_and_mrp/repairs>` for invoicing after-sales
+    services.
+
 Sales Order ‣ Delivery Order ‣ Invoice
 --------------------------------------
 
@@ -126,15 +131,6 @@ create invoices manually in exceptional use cases:
 -  if you need to change an invoice created from a sales order
 
 -  if you need to invoice something not related to your core business
-
-Specific modules
-----------------
-
-Some specific modules are also able to generate draft invoices:
-
--  **membership**: invoice your members every year
-
--  **repairs**: invoice your after-sale services
 
 Resequencing of the invoices
 ----------------------------
