@@ -15,9 +15,8 @@ Create a template
 =================
 
 Any spreadsheet can be saved as a template. Open the relevant spreadsheet or :ref:`create a new one
-<documents/documents/spreadsheet>`. From the menu bar, click :menuselection:`File -->
-Save as template`. Modify the default :guilabel:`Template Name` if needed and click
-:guilabel:`Confirm`.
+<documents/spreadsheet>`. From the menu bar, click :menuselection:`File --> Save as template`.
+Modify the default :guilabel:`Template Name` if needed and click :guilabel:`Confirm`.
 
 .. important::
    Once a spreadsheet is saved as a template, any further changes to the open spreadsheet are
