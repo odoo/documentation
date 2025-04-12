@@ -522,7 +522,7 @@ msgid ""
 "*CRM* application, go to :menuselection:`CRM app --> Configuration --> "
 "Activity Types`."
 msgstr ""
-"每個應用程式都有一個專用於該應用程序的*活動類型*列表。例如，要查看和編輯 *客戶關係* 應用程式可用的活動，可往 "
+"每個應用程式都有一個專用於該應用程序的*活動類型*列表。例如，要查看和編輯 *客戶關係* 應用程式可用的活動，可前往 "
 ":menuselection:`客戶關係程式 --> 配置 --> 活動類型`。"
 
 #: ../../content/applications/essentials/activities.rst-1
@@ -2354,11 +2354,11 @@ msgstr "在 :guilabel:`要匯入的檔案` 部份下，按一下 :guilabel:`上�
 msgid ""
 "Select the relevant image files. The number of files selected appears next "
 "to the button."
-msgstr ""
+msgstr "選擇相關圖像檔案。按鈕旁邊會顯示已選取檔案的數目。"
 
 #: ../../content/applications/essentials/export_import_data.rst:413
 msgid "Click :guilabel:`Test` to verify that all data is valid."
-msgstr ""
+msgstr "按一下 :guilabel:`測試` ，以驗證所有資料有效。"
 
 #: ../../content/applications/essentials/export_import_data.rst:414
 msgid ""
@@ -2366,18 +2366,20 @@ msgid ""
 "check to automatically link the uploaded images to the imported data file. "
 "If there is no match, the data file is imported without any image."
 msgstr ""
+"按一下 :guilabel:`匯入`。在匯入過程中，Odoo "
+"會執行檔案檢查，將上載的圖片自動連結至匯入的數據檔案。若未能相符，匯入數據檔案時將不會附帶任何圖片。"
 
 #: ../../content/applications/essentials/export_import_data.rst:419
 msgid ""
 "The :guilabel:`Files to import` section is enabled if your product template "
 "has an :guilabel:`Image` column with all fields populated."
-msgstr ""
+msgstr "若你的產品範本有 :guilabel:`圖片` 直欄，而且所有欄位都已填入，系統會啟用 :guilabel:`要匯入的檔案` 部份。"
 
 #: ../../content/applications/essentials/export_import_data.rst:421
 msgid ""
 "The image file names in the data file must correspond to the uploaded image "
 "files."
-msgstr ""
+msgstr "數據檔案內的圖片檔案名稱，必須對應上載的圖片檔案。"
 
 #: ../../content/applications/essentials/export_import_data.rst:422
 msgid ""
@@ -2390,6 +2392,10 @@ msgid ""
 " in the `Odoo Cloud - Acceptable Use Policy "
 "<https://www.odoo.com/acceptable-use>`_."
 msgstr ""
+"若要匯入大量圖片，可指定每批次最大的檔案大小 MB，並設定延遲時間，防止系統超出負荷。要執行此操作，請 :doc:`啟用開發人員模式 "
+"<../general/developer_mode>`，然後在 :guilabel:`要匯入的檔案` 部份，填寫 "
+":guilabel:`每批次大小上限` 及 :guilabel:`每批次後延遲` 欄位。預設情況下，延遲時間會符合 `Odoo 雲端版 - "
+"可接受使用政策 <https://www.odoo.com/acceptable-use>`_ 所定義的 RPC/API 召用限制。"
 
 #: ../../content/applications/essentials/export_import_data.rst:430
 msgid "Import records several times"
@@ -2403,22 +2409,25 @@ msgid ""
 "users to import the same :abbr:`CSV (Comma-separated Values)` file several "
 "times, while having made some changes in between two imports."
 msgstr ""
+"如果匯入的檔案包含 :guilabel:`外部識別碼` 或 :guilabel:`資料庫識別碼` "
+"的其中一個直欄，已匯入的記錄將被修改，而不是重新建立。這非常有用，因為它允許使用者在兩次匯入之間進行一些修改，然後可重複匯入相同的 :abbr:`CSV"
+" (逗號分隔值)` 檔案。"
 
 #: ../../content/applications/essentials/export_import_data.rst:437
 msgid ""
 "Odoo takes care of creating or modifying each record, depending if it is new"
 " or not."
-msgstr ""
+msgstr "Odoo 負責建立或修改每項記錄（視乎是否新一項記錄）。"
 
 #: ../../content/applications/essentials/export_import_data.rst:439
 msgid ""
 "This feature allows a company to use the *Import/Export tool* in Odoo to "
 "modify a batch of records in a spreadsheet application."
-msgstr ""
+msgstr "此功能允許公司在 Odoo 系統內，使用 **匯入/匯出工具** 去修改試算表應用程式中的一大批記錄。"
 
 #: ../../content/applications/essentials/export_import_data.rst:443
 msgid "Value not provided for a specific field"
-msgstr ""
+msgstr "未有提供值的特定欄位"
 
 #: ../../content/applications/essentials/export_import_data.rst:445
 msgid ""
@@ -2427,10 +2436,12 @@ msgid ""
 " :abbr:`CSV (Comma-separated Values)` file, Odoo sets the empty value in the"
 " field, instead of assigning the default value."
 msgstr ""
+"如果 CSV 檔案內未設定所有欄位，Odoo 會為每個未定義的欄位，指派一個預設值。不過，若欄位在 :abbr:`CSV (逗號分隔值)` "
+"檔案中已設為空白值，Odoo 會在欄位設置空值，而非寫入預設值。"
 
 #: ../../content/applications/essentials/export_import_data.rst:450
 msgid "Export/import different tables from an SQL application to Odoo"
-msgstr ""
+msgstr "以 SQL 程式匯出/匯入不同表格至 Odoo"
 
 #: ../../content/applications/essentials/export_import_data.rst:452
 msgid ""
@@ -2439,6 +2450,7 @@ msgid ""
 "companies and people are imported, the link between each person and the "
 "company they work for needs to be recreated."
 msgstr ""
+"若需要從不同表格匯入數據，你需要為屬於不同表格的記錄，重新建立記錄之間的關係。例如，如果匯入公司及人員資料，便需要重新建立每個人與他們工作的公司之間的連繫。"
 
 #: ../../content/applications/essentials/export_import_data.rst:456
 msgid ""
@@ -2449,6 +2461,9 @@ msgid ""
 "name of the application or table. (like, 'company_1', 'person_1' - instead "
 "of '1')"
 msgstr ""
+"要管理不同表格之間的關係，請使用 Odoo 的 `外部識別碼` 功能。記錄的 `外部識別碼` 是該記錄在其他應用程式的唯一標識符。所有物件、所有記錄的 "
+"`外部識別碼` ，都必須獨一無二，因此最好在 `外部識別碼` 開首，加上應用程式或表格的名稱，例如 `company_1` 、 `person_1` "
+"，而不是單純的 `1` ）。"
 
 #: ../../content/applications/essentials/export_import_data.rst:461
 msgid ""
@@ -2456,34 +2471,37 @@ msgid ""
 "be imported: companies and people. Each person belongs to one company, so "
 "the link between a person and the company they work for must be recreated."
 msgstr ""
+"舉例，假設有一個 SQL 資料庫，當中有兩個表格需要匯入：公司、人員。每個人都屬於一間公司，因此必須重新建立該員工與他工作的公司之間的連繫。"
 
 #: ../../content/applications/essentials/export_import_data.rst:465
 msgid ""
 "Test this example, with a :download:`sample of a PostgreSQL database "
 "<export_import_data/database_import_test.sql>`."
 msgstr ""
+"你可使用 :download:`PostgreSQL 資料庫範例 "
+"<export_import_data/database_import_test.sql>` ，去測試此示例。"
 
 #: ../../content/applications/essentials/export_import_data.rst:468
 msgid ""
 "First, export all companies and their *External ID*. In PSQL, write the "
 "following command:"
-msgstr ""
+msgstr "首先，匯出所有公司及其 **外部識別碼** 。在 PSQL 中，編寫以下指令："
 
 #: ../../content/applications/essentials/export_import_data.rst:474
 msgid ""
 "This SQL command creates the following :abbr:`CSV (Comma-separated Values)` "
 "file:"
-msgstr ""
+msgstr "此 SQL 指令會建立以下 :abbr:`CSV (逗號分隔值)` 檔案："
 
 #: ../../content/applications/essentials/export_import_data.rst:483
 msgid ""
 "To create the :abbr:`CSV (Comma-separated Values)` file for people linked to"
 " companies, use the following SQL command in PSQL:"
-msgstr ""
+msgstr "要為連結至公司的人員建立 :abbr:`CSV (逗號分隔值)` 檔案，請在 PSQL 使用以下 SQL 指令："
 
 #: ../../content/applications/essentials/export_import_data.rst:490
 msgid "It produces the following :abbr:`CSV (Comma-separated Values)` file:"
-msgstr ""
+msgstr "它會生成以下的 :abbr:`CSV (逗號分隔值)` 檔案："
 
 #: ../../content/applications/essentials/export_import_data.rst:500
 msgid ""
@@ -2494,6 +2512,10 @@ msgid ""
 " conflict of ID between people and companies (`person_1` and `company_1`, "
 "who shared the same ID 1 in the original database)."
 msgstr ""
+"此檔案中，Fabien 及 Laurence 在 Bigees 公司（ `company_1` ）工作，而 Eric 在 Organi "
+"公司工作。人員與公司之間的關係，是透過公司的 **外部識別碼** （ID）去建立的。 **外部識別碼** "
+"的字首是表格名稱，以避免人員及公司的識別碼出現衝突（例如， `person_1` 及 `company_1` 在原始資料庫中，各自的識別碼都是 `1` "
+"）。"
 
 #: ../../content/applications/essentials/export_import_data.rst:506
 msgid ""
@@ -2503,6 +2525,8 @@ msgid ""
 "contacts are linked to the first company). Keep in mind to first import the "
 "companies, and then the people."
 msgstr ""
+"生成的兩個檔案，無需任何修改便可匯入 Odoo。匯入這兩個 :abbr:`CSV (逗號分隔值)` 檔案後，資料庫會有 4 個聯絡人及 3 "
+"間公司（首兩名聯絡人與第一間公司相關聯）。請記住，需要首先匯入公司資料，然後才匯入人員資料。"
 
 #: ../../content/applications/essentials/export_import_data.rst:514
 msgid "Update data in Odoo"
@@ -2512,7 +2536,7 @@ msgstr "在 Odoo 內更新資料"
 msgid ""
 "Existing data can be updated in bulk through a data import, as long as the "
 ":ref:`External ID <essentials/external-id>` remains consistent."
-msgstr ""
+msgstr "只要 :ref:`外部識別碼 <essentials/external-id>` 保持一致，便可透過數據匯入功能，大批更新現有數據。"
 
 #: ../../content/applications/essentials/export_import_data.rst:520
 msgid "Prepare data export"
@@ -2525,6 +2549,8 @@ msgid ""
 "list, tick the checkbox for any record to be updated. Then, click |actions|,"
 " and select :icon:`fa-upload` :guilabel:`Export` from the drop-down menu."
 msgstr ""
+"要透過匯入去更新數據，首先請前往要更新的數據，然後點選 |list| 啟用列表檢視畫面。在列表的最左側，勾選想要更新的任何記錄的勾選方格，然後按一下 "
+"|actions| ，並從下拉式選單中，選擇 :icon:`fa-upload` :guilabel:`匯出`。"
 
 #: ../../content/applications/essentials/export_import_data.rst:527
 msgid ""
@@ -2534,6 +2560,9 @@ msgid ""
 "limits the :guilabel:`Fields to export` list to **only** include fields that"
 " are able to be imported."
 msgstr ""
+"在彈出的 :guilabel:`匯出數據` 視窗中，勾選標示了 :guilabel:`我想更新數據（兼容匯入的匯出）` "
+"的勾選方格。這樣會自動在匯出資料中，包含 **外部識別碼** 。此外，它也會限制 :guilabel:`要匯出的欄位` 清單，使其 **只會** "
+"包括可以匯入的欄位。"
 
 #: ../../content/applications/essentials/export_import_data.rst:533
 msgid ""
@@ -2543,13 +2572,15 @@ msgid ""
 "data (import-compatible export)` checkbox is ticked, it is included in the "
 "export."
 msgstr ""
+"除非手動加入，否則 :guilabel:`外部識別碼` 欄位 **不會** 出現在 :guilabel:`要匯出的欄位` "
+"清單中，但仍會包含在匯出資料內。但是，如果勾選了 :guilabel:`我想更新數據（兼容匯入的匯出）` 勾選方格，匯出時便會包含該欄位。"
 
 #: ../../content/applications/essentials/export_import_data.rst:537
 msgid ""
 "Select the required fields to be included in the export using the "
 ":ref:`options <export-data>` on the pop-up window, then click "
 ":guilabel:`Export`."
-msgstr ""
+msgstr "在彈出視窗中，使用 :ref:`選項 <export-data>` 以選取要匯出的欄位，然後按一下 :guilabel:`匯出`。"
 
 #: ../../content/applications/essentials/export_import_data.rst:541
 msgid "Import updated data"
@@ -2561,6 +2592,7 @@ msgid ""
 "is ready, it can be :ref:`imported <import-data>` by following the same "
 "process as a normal data import."
 msgstr ""
+"匯出完成後，你可對數據檔案進行所需修改。檔案準備就緒後，可按照正常數據匯入的相同流程，進行數據 :ref:`匯入 <import-data>` 。"
 
 #: ../../content/applications/essentials/export_import_data.rst:547
 msgid ""
@@ -2569,6 +2601,8 @@ msgid ""
 "altered, or removed, the system may add a duplicate record, instead of "
 "updating the existing one."
 msgstr ""
+"更新數據時，將 **外部識別碼** "
+"保持一致是極為重要，因為它是系統識別記錄的依據。如果識別碼（ID）被更改或移除，系統可能會重複加入記錄，而不是更新現有的記錄。"
 
 #: ../../content/applications/essentials/html_editor.rst:5
 msgid "Odoo rich-text editor"
@@ -3286,6 +3320,9 @@ msgid ""
 "service requires its own prepaid credits, and when they run out, users "
 "**must** :ref:`buy more <iap/buying_credits>` in order to keep using it."
 msgstr ""
+"|IAP| 服務**無需**配置或設定，即可使用。Odoo "
+"使用者只需按一下應用程式中的服務，即可啟動該服務。不過，每項服務都需要預繳費用購買「點數」，當點數用完時，使用者**必須** :ref:`購買更多點數 "
+"<iap/buying_credits>` 才可繼續使用。"
 
 #: ../../content/applications/essentials/in_app_purchase.rst:24
 msgid ""
@@ -3294,6 +3331,8 @@ msgid ""
 "includes demo/training databases, educational databases, and one-app-free "
 "databases."
 msgstr ""
+"企業版 Odoo 用戶若有生效的服務計劃，將獲得免費點數，可測試 IAP "
+"功能，之後才決定是否為資料庫購買更多點數。此安排適用於：演示/訓練資料庫、教育資料庫，以及單一應用程式免費資料庫。"
 
 #: ../../content/applications/essentials/in_app_purchase.rst:31
 msgid "IAP services"
@@ -3307,7 +3346,7 @@ msgstr "|IAP| 服務由 Odoo 以及第三方提供，用途範圍廣泛。"
 
 #: ../../content/applications/essentials/in_app_purchase.rst:35
 msgid "The following |IAP| services are offered by Odoo:"
-msgstr ""
+msgstr "Odoo 提供以下 |IAP| 服務："
 
 #: ../../content/applications/essentials/in_app_purchase.rst:37
 msgid ""
@@ -3346,6 +3385,8 @@ msgid ""
 "registered` identity platform, which is available in Belgium and the "
 "Netherlands."
 msgstr ""
+":guilabel:`使用 itsme® 識別簽署人`：要求文件簽署人使用 Odoo **電子簽名** 應用程式，透過 **itsme** "
+":icon:`fa-registered` 身份識別平台核實其身份。該平台在比利時及荷蘭可用。"
 
 #: ../../content/applications/essentials/in_app_purchase.rst:48
 msgid ""
@@ -3353,6 +3394,8 @@ msgid ""
 "developers other than Odoo), visit the `Odoo IAP Catalog "
 "<https://iap.odoo.com/iap/all-in-app-services>`_."
 msgstr ""
+"有關現時可用的各項服務（由 Odoo 以外的開發者提供）的更多資訊，請瀏覽 `Odoo IAP 目錄 "
+"<https://iap.odoo.com/iap/all-in-app-services>`_。"
 
 #: ../../content/applications/essentials/in_app_purchase.rst:52
 msgid "Use IAP services"
@@ -3363,7 +3406,7 @@ msgid ""
 "|IAP| services are automatically integrated with Odoo, and do **not** "
 "require users to configure any settings. To use a service, interact with it "
 "wherever it appears in the database."
-msgstr ""
+msgstr "|IAP| 服務自動與 Odoo 整合，使用者 **無需** 配置任何設定。要使用服務，只需在資料庫出現某項服務時，與它互動即可。"
 
 #: ../../content/applications/essentials/in_app_purchase.rst:58
 msgid ""
@@ -3375,7 +3418,7 @@ msgstr "以下流程集中講解在聯絡人記錄中使用 *短訊* |IAP| 服�
 msgid ""
 "This can be done by clicking the :icon:`fa-mobile` :guilabel:`SMS` icon "
 "within the database."
-msgstr ""
+msgstr "要使用服務，按一下資料庫中的 :icon:`fa-mobile` :guilabel:`短訊` 圖示即可。"
 
 #: ../../content/applications/essentials/in_app_purchase.rst-1
 msgid ""
@@ -3395,6 +3438,8 @@ msgid ""
 " contact with a mobile phone number entered in either the :guilabel:`Phone` "
 "or :guilabel:`Mobile` field of the contact form."
 msgstr ""
+"首先，前往 :menuselection:`聯絡人應用程式`，然後按一下聯絡人表單的 :guilabel:`電話` 或 :guilabel:`手機` "
+"欄位中，輸入了手機號碼的聯絡人。"
 
 #: ../../content/applications/essentials/in_app_purchase.rst:71
 msgid ""
@@ -3403,6 +3448,9 @@ msgid ""
 ":icon:`fa-mobile` :guilabel:`SMS` icon, and a :guilabel:`Send SMS Text "
 "Message` pop-up window appears."
 msgstr ""
+"然後，找出在 :guilabel:`電話` 或 :guilabel:`手機` 欄位右方顯示的 :icon:`fa-mobile` "
+":guilabel:`短訊` 圖示。按一下 :icon:`fa-mobile` :guilabel:`短訊` 圖示，系統會顯示 "
+":guilabel:`傳送 SMS 文字短訊` 彈出視窗。"
 
 #: ../../content/applications/essentials/in_app_purchase.rst:75
 msgid ""
@@ -3411,6 +3459,8 @@ msgid ""
 " to the contact, and logs what was sent in the *chatter* of the contact's "
 "form."
 msgstr ""
+"在彈出視窗的 :guilabel:`訊息` 欄位中，輸入訊息內容。然後，按一下 :guilabel:`傳送短訊` 按鈕。然後，Odoo 會透過 SMS "
+"電話短訊，向聯絡人發送訊息，並在聯絡人表單的 **聊天視窗** 中，記錄已發送的內容。"
 
 #: ../../content/applications/essentials/in_app_purchase.rst:79
 msgid ""
@@ -3429,17 +3479,18 @@ msgstr "有關如何使用各項 |IAP| 服務的更多資料，以及有關 Odoo
 
 #: ../../content/applications/essentials/in_app_purchase.rst:87
 msgid ":doc:`Lead mining <../sales/crm/acquire_leads/lead_mining>`"
-msgstr ""
+msgstr ":doc:`挖掘潛在客戶 <../sales/crm/acquire_leads/lead_mining>`"
 
 #: ../../content/applications/essentials/in_app_purchase.rst:88
 msgid ""
 ":doc:`Enrich your contacts base with Partner Autocomplete "
 "<../sales/crm/optimize/partner_autocomplete>`"
 msgstr ""
+":doc:`透過合作夥伴自動完成功能，豐富你的聯絡人資料庫 <../sales/crm/optimize/partner_autocomplete>`"
 
 #: ../../content/applications/essentials/in_app_purchase.rst:90
 msgid ":doc:`SMS Marketing <../marketing/sms_marketing>`"
-msgstr ""
+msgstr ":doc:`短訊推廣 <../marketing/sms_marketing>`"
 
 #: ../../content/applications/essentials/in_app_purchase.rst:95
 msgid "IAP credits"
@@ -3501,6 +3552,8 @@ msgid ""
 "For more information, refer to the :doc:`SMS Pricing and FAQ "
 "<../marketing/sms_marketing/pricing_and_faq>` documentation."
 msgstr ""
+"想知更多資訊，請參閱 :doc:`短訊定價及常見問答 <../marketing/sms_marketing/pricing_and_faq>` "
+"說明文件。"
 
 #: ../../content/applications/essentials/in_app_purchase.rst:124
 msgid "Buy credits"
@@ -3519,6 +3572,8 @@ msgid ""
 ":menuselection:`Settings app --> Contacts section`, and beneath the "
 ":guilabel:`Odoo IAP` setting, click :guilabel:`View My Services`."
 msgstr ""
+"使用者可前往 :menuselection:`設定應用程式 --> 聯絡人部份`，在 :guilabel:`Odoo IAP` 設定的下方，按一下 "
+":guilabel:`查看我的服務`，查看每項服務的最新點數結餘，並手動購買更多點數。"
 
 #: ../../content/applications/essentials/in_app_purchase.rst:133
 msgid ""
@@ -3527,6 +3582,8 @@ msgid ""
 ":guilabel:`Account Information` page, where additional credits can be "
 "purchased."
 msgstr ""
+"之後會顯示 :guilabel:`IAP 服務` 頁面，列出資料庫使用的各項 |IAP| 服務。在此處按一下某個 |IAP| 服務，開啟其 "
+":guilabel:`帳戶資訊` 頁面，可在該處購買額外點數。"
 
 #: ../../content/applications/essentials/in_app_purchase.rst:138
 msgid "Manually buy credits"
@@ -3543,6 +3600,8 @@ msgid ""
 " section. Under the :guilabel:`Contacts` section, where it says "
 ":guilabel:`Odoo IAP`, click :guilabel:`View My Services`."
 msgstr ""
+"首先，前往 :menuselection:`設定應用程式`，在搜尋列輸入 `IAP`。或者，可向下捲動至 :guilabel:`聯絡人` 部份。在 "
+":guilabel:`聯絡人` 部份標示 :guilabel:`Odoo IAP` 的地方，按一下 :guilabel:`查看我的服務`。"
 
 #: ../../content/applications/essentials/in_app_purchase.rst-1
 msgid ""
@@ -3567,6 +3626,8 @@ msgid ""
 "credits. Then, follow the prompts to enter payment details, and confirm the "
 "order."
 msgstr ""
+"在 :guilabel:`帳戶資訊` 頁面，按一下 :guilabel:`購買點數` 按鈕。系統會在新分頁載入 :guilabel:`購買點數（IAP "
+"帳戶）` 頁面。在該處，按一下所需點數套裝的 :guilabel:`購買`。然後，按照提示輸入付款詳細資訊，並確認訂單。"
 
 #: ../../content/applications/essentials/in_app_purchase.rst-1
 msgid ""
@@ -3597,6 +3658,8 @@ msgid ""
 "search bar. Under the :guilabel:`Contacts` section, where it says "
 ":guilabel:`Odoo IAP`, click :guilabel:`View My Services`."
 msgstr ""
+"前往 :menuselection:`設定應用程式`，在搜尋列輸入 `IAP`。在 :guilabel:`聯絡人` 部份標示 "
+":guilabel:`Odoo IAP` 的地方，按一下 :guilabel:`查看我的服務`。"
 
 #: ../../content/applications/essentials/in_app_purchase.rst:176
 msgid ""
@@ -3613,6 +3676,8 @@ msgid ""
 "checkbox. Doing so reveals two fields on the form: :guilabel:`Threshold` and"
 " :guilabel:`Warning Email`."
 msgstr ""
+"在 :guilabel:`帳戶資訊` 頁面上，勾選 :guilabel:`警告我` 勾選方格。勾選後，表單會顯示兩個欄位：:guilabel:`門檻值`"
+" 及 :guilabel:`警告電郵`。"
 
 #: ../../content/applications/essentials/in_app_purchase.rst:182
 msgid ""
@@ -3620,6 +3685,8 @@ msgid ""
 "use as the minimum threshold for this service. In the :guilabel:`Warning "
 "Email` field, enter the email address that receives the notification."
 msgstr ""
+"在 :guilabel:`門檻值` 欄位中，輸入 Odoo 應為此服務設定的點數下限門檻值。在 :guilabel:`警告電郵` "
+"欄位中，輸入用以接收通知的電郵地址。"
 
 #: ../../content/applications/essentials/in_app_purchase.rst:186
 msgid ""
@@ -3636,82 +3703,82 @@ msgstr "鍵盤快捷鍵"
 msgid ""
 "Users in Odoo can utilize several keyboard shortcuts to navigate through "
 "modules, execute actions, and manage data."
-msgstr ""
+msgstr "使用者可在 Odoo 系統中，使用不同鍵盤快捷鍵，快速瀏覽模組、執行動作，以及管理數據。"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:9
 msgid ""
 "Hold :kbd:`Ctrl` to view the keyboard shortcuts assigned to each element on "
 "the interface."
-msgstr ""
+msgstr "按住 :kbd:`Ctrl` 可查看已指派至操作界面上不同元素的鍵盤快捷鍵。"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:0
 msgid "A selection of keyboard shortcuts in Odoo."
-msgstr ""
+msgstr "Odoo 系統內的部份鍵盤快捷鍵。"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:16
 msgid ""
 "Some keyboard shortcuts may not be available on different versions of Odoo "
 "or effective depending on browsers, extensions, or other individual "
 "settings."
-msgstr ""
+msgstr "部份鍵盤快捷鍵可能未能在不同版本的 Odoo 上使用，或因應不同瀏覽器、擴充元件或其他個人設定，而變得無效。"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:20
 msgid "Keyboard shortcuts by operating system"
-msgstr ""
+msgstr "鍵盤快捷鍵（按作業系統劃分）"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:22
 msgid ""
 "Below is a list of some of the most commonly used keyboard shortcuts within "
 "Odoo, listed by operating system."
-msgstr ""
+msgstr "Odoo 系統中最常用的鍵盤快捷鍵，按不同作業系統列出如下："
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:29
 msgid "Description"
-msgstr "說明"
+msgstr "描述"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:30
 msgid "Windows / Linux"
-msgstr ""
+msgstr "Windows、Linux"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:31
 msgid "macOS"
-msgstr ""
+msgstr "macOS"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:32
 msgid "Previous breadcrumb"
-msgstr ""
+msgstr "上一個麵包屑導航位置"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:33
 msgid ":kbd:`Alt` + :kbd:`B`"
-msgstr ""
+msgstr ":kbd:`Alt` + :kbd:`B`"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:34
 msgid ":kbd:`Ctrl` + :kbd:`B`"
-msgstr ""
+msgstr ":kbd:`Ctrl` + :kbd:`B`"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:35
 msgid "Create new record"
-msgstr ""
+msgstr "建立新記錄"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:36
 msgid ":kbd:`Alt` + :kbd:`C`"
-msgstr ""
+msgstr ":kbd:`Alt` + :kbd:`C`"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:37
 msgid ":kbd:`Ctrl` + :kbd:`C`"
-msgstr ""
+msgstr ":kbd:`Ctrl` + :kbd:`C`"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:38
 msgid "Odoo Home Page"
-msgstr ""
+msgstr "Odoo 主頁"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:39
 msgid ":kbd:`Alt` + :kbd:`H`"
-msgstr ""
+msgstr ":kbd:`Alt` + :kbd:`H`"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:40
 msgid ":kbd:`Ctrl` + :kbd:`H`"
-msgstr ""
+msgstr ":kbd:`Ctrl` + :kbd:`H`"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:41
 msgid "Discard changes"
@@ -3719,11 +3786,11 @@ msgstr "捨棄變更"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:42
 msgid ":kbd:`Alt` + :kbd:`J`"
-msgstr ""
+msgstr ":kbd:`Alt` + :kbd:`J`"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:43
 msgid ":kbd:`Ctrl` + :kbd:`J`"
-msgstr ""
+msgstr ":kbd:`Ctrl` + :kbd:`J`"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:44
 msgid "Save changes"
@@ -3731,11 +3798,11 @@ msgstr "儲存變更"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:45
 msgid ":kbd:`Alt` + :kbd:`S`"
-msgstr ""
+msgstr ":kbd:`Alt` + :kbd:`S`"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:46
 msgid ":kbd:`Ctrl` + :kbd:`S`"
-msgstr ""
+msgstr ":kbd:`Ctrl` + :kbd:`S`"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:47
 msgid "Next page"
@@ -3743,11 +3810,11 @@ msgstr "下一頁"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:48
 msgid ":kbd:`Alt` + :kbd:`N`"
-msgstr ""
+msgstr ":kbd:`Alt` + :kbd:`N`"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:49
 msgid ":kbd:`Ctrl` + :kbd:`N`"
-msgstr ""
+msgstr ":kbd:`Ctrl` + :kbd:`N`"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:50
 msgid "Previous page"
@@ -3755,11 +3822,11 @@ msgstr "上一頁"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:51
 msgid ":kbd:`Alt` + :kbd:`P`"
-msgstr ""
+msgstr ":kbd:`Alt` + :kbd:`P`"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:52
 msgid ":kbd:`Ctrl` + :kbd:`P`"
-msgstr ""
+msgstr ":kbd:`Ctrl` + :kbd:`P`"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:53
 msgid "Search"
@@ -3767,93 +3834,93 @@ msgstr "搜尋"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:54
 msgid ":kbd:`Alt` + :kbd:`Q`"
-msgstr ""
+msgstr ":kbd:`Alt` + :kbd:`Q`"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:55
 msgid ":kbd:`Ctrl` + :kbd:`Q`"
-msgstr ""
+msgstr ":kbd:`Ctrl` + :kbd:`Q`"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:56
 msgid "Select menus"
-msgstr ""
+msgstr "選擇選單"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:57
 msgid ":kbd:`Alt` + :kbd:`1-9`"
-msgstr ""
+msgstr ":kbd:`Alt` + :kbd:`1 至 9`"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:58
 msgid ":kbd:`Ctrl` + :kbd:`1-9`"
-msgstr ""
+msgstr ":kbd:`Ctrl` + :kbd:`1 至 9`"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:59
 msgid "Create a new To-Do"
-msgstr ""
+msgstr "建立新的待辦事項"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:60
 msgid ":kbd:`Alt` + :kbd:`Shift` + :kbd:`T`"
-msgstr ""
+msgstr ":kbd:`Alt` + :kbd:`Shift` + :kbd:`T`"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:61
 msgid ":kbd:`Ctrl` + :kbd:`Shift` + :kbd:`T`"
-msgstr ""
+msgstr ":kbd:`Ctrl` + :kbd:`Shift` + :kbd:`T`"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:62
 msgid "Search a Knowledge article"
-msgstr ""
+msgstr "搜尋知識庫文章"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:63
 msgid ":kbd:`Alt` + :kbd:`F`"
-msgstr ""
+msgstr ":kbd:`Alt` + :kbd:`F`"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:64
 msgid ":kbd:`Ctrl` + :kbd:`F`"
-msgstr ""
+msgstr ":kbd:`Ctrl` + :kbd:`F`"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:65
 msgid "Share a Knowledge article"
-msgstr ""
+msgstr "分享知識庫文章"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:66
 msgid ":kbd:`Alt` + :kbd:`Shift` + :kbd:`S`"
-msgstr ""
+msgstr ":kbd:`Alt` + :kbd:`Shift` + :kbd:`S`"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:67
 msgid ":kbd:`Ctrl` + :kbd:`Shift` + :kbd:`S`"
-msgstr ""
+msgstr ":kbd:`Ctrl` + :kbd:`Shift` + :kbd:`S`"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:68
 msgid "Open command palette"
-msgstr ""
+msgstr "開啟指令面板"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:69
 msgid ":kbd:`Ctrl` + :kbd:`K`"
-msgstr ""
+msgstr ":kbd:`Ctrl` + :kbd:`K`"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:70
 msgid ":kbd:`Command` + :kbd:`K`"
-msgstr ""
+msgstr ":kbd:`Command` + :kbd:`K`"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:73
 msgid ""
 "After opening the command palette, search using the following keyboard "
 "shortcuts:"
-msgstr ""
+msgstr "開啟指令面板後，使用以下鍵盤快捷鍵進行搜尋："
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:75
 msgid ":kbd:`/`: search for menus, applications, and modules."
-msgstr ""
+msgstr ":kbd:`/`：搜尋選單、應用程式及模組。"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:76
 msgid ":kbd:`@`: search for users."
-msgstr ""
+msgstr ":kbd:`@`：搜尋使用者。"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:77
 msgid ":kbd:`#`: search for **Discuss** channels."
-msgstr ""
+msgstr ":kbd:`#`：搜尋 **聊天** 頻道。"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:78
 msgid ":kbd:`?`: search for **Knowledge** articles."
-msgstr ""
+msgstr ":kbd:`?`：搜尋 **知識庫** 文章。"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:80
 msgid ""
@@ -3861,10 +3928,12 @@ msgid ""
 "through the available options. Then, click :kbd:`Ctrl` + :kbd:`Enter` to "
 "open the selected app, module, or menu in a new tab."
 msgstr ""
+"在搜尋列中輸入名稱（或字詞），或使用箭頭鍵，捲動瀏覽可用的選項。然後，按下 :kbd:`Ctrl` + :kbd:`Enter` "
+"便可使用新分頁開啟所選的應用程式、模組或選單。"
 
 #: ../../content/applications/essentials/keyboard_shortcuts.rst:0
 msgid "The command palette in Odoo, with the menu search option selected."
-msgstr ""
+msgstr "Odoo 系統內的指令面板，當中選取了選單搜尋選項。"
 
 #: ../../content/applications/essentials/reporting.rst:3
 msgid "Reporting"
