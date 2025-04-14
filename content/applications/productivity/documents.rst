@@ -35,7 +35,7 @@ can change the default workspace using the dropdown menu and edit its properties
 
 .. _documents/workspaces:
 
-Workspaces
+Workspaces (outdated since v18. Needs to be updated since Workspace are now just folders!)
 ==========
 
 Workspaces are hierarchical folders having their own set of :ref:`tags <documents/tags>`
