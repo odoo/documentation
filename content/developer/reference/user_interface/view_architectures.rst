@@ -2171,7 +2171,7 @@ can be substituted for the :ref:`separator <reference/view_architectures/search/
 .. code-block:: xml
 
    <search>
-       <group expand="0" string="LABEL">
+       <group>
            <FILTERS/>
        </group>
    </search>
