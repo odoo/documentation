@@ -18,9 +18,10 @@ conditions`.
 Reconciliation model types
 ==========================
 
-The reconciliation models are available by going to :menuselection:`Accounting --> Configuration
---> Banks: Reconciliation Models`. For each reconciliation model, a :guilabel:`Type` must be set.
-Three types of models exist:
+To access reconciliation models, go to the :guilabel:`Accounting Dashboard`, click on the
+:icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` menu on the bank journal and select
+:guilabel:`Models` under the :guilabel:`Reconciliation` section. For each reconciliation model, a
+:guilabel:`Type` must be set. Three types of models exist:
 
 - :guilabel:`Button to generate counterpart entry`: a button is created in the resulting entry
   section of the bank reconciliation view. If clicked, this button generates a counterpart entry to
