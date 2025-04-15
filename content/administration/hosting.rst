@@ -23,7 +23,7 @@ To Odoo Online
 #. Create a :ref:`duplicate of the database <on-premise/duplicate>`.
 #. In this duplicate, uninstall all **non-standard apps**.
 #. Use the database manager to grab a *dump with filestore*.
-#. `Submit a support ticket <https://www.odoo.com/help>`_ including the following:
+#. `Submit a support ticket <https://www.odoo.com/help-form>`_ including the following:
 
    - your **subscription number**,
    - the **URL** you want to use for the database (e.g., `company.odoo.com`), and
@@ -33,8 +33,8 @@ To Odoo Online
    issues during the process, Odoo might contact you.
 
 .. note::
-   If you have time constraints, `submit a support ticket <https://www.odoo.com/help>`_ as soon as
-   possible to schedule the transfer.
+   If you have time constraints, `submit a support ticket <https://www.odoo.com/help-form>`_ as soon
+   as possible to schedule the transfer.
 
 To Odoo.sh
 ----------
@@ -61,8 +61,8 @@ Transferring an Odoo Online database
 
    .. warning::
       If there is an active Odoo subscription linked to the database being migrated, reach out to
-      the Customer Service Manager or `submit a support ticket <https://www.odoo.com/help>`_  to
-      complete the subscription transfer.
+      the Customer Service Manager or `submit a support ticket <https://www.odoo.com/help-form>`_
+      to complete the subscription transfer.
 
 To on-premise
 -------------
@@ -70,7 +70,7 @@ To on-premise
 #. Sign in to `the Odoo Online database manager <https://www.odoo.com/my/databases/>`_ and click the
    gear icon (:guilabel:`⚙`) next to the database name to :guilabel:`Download` a backup. If the
    download fails due to the file being too large, `contact Odoo support
-   <https://www.odoo.com/help>`_.
+   <https://www.odoo.com/help-form>`_.
 #. Restore the database from the database manager on your local server using the backup.
 
 To Odoo.sh
@@ -79,7 +79,7 @@ To Odoo.sh
 #. Sign in to `the Odoo Online database manager <https://www.odoo.com/my/databases/>`_ and click the
    gear icon (:guilabel:`⚙`) next to the database name to :guilabel:`Download` a backup. If the
    download fails due to the file being too large, `contact Odoo support
-   <https://www.odoo.com/help>`_.
+   <https://www.odoo.com/help-form>`_.
 #. Follow the instructions found in :ref:`the Import your database section
    <odoo_sh_import_your_database>` of the Odoo.sh *Create your project* documentation.
 
@@ -93,7 +93,7 @@ To Odoo Online
    Odoo Online is *not* compatible with **non-standard apps**.
 
 #. Uninstall all **non-standard apps** in a staging build before doing it in the production build.
-#. `Create a support ticket <https://www.odoo.com/help>`_ including the following:
+#. `Submit a support ticket <https://www.odoo.com/help-form>`_ including the following:
 
    - your **subscription number**,
    - the **URL** you want to use for the database (e.g., `company.odoo.com`),
@@ -106,8 +106,8 @@ To Odoo Online
    issues during the process, Odoo might contact you.
 
 .. note::
-   - If you have time constraints, `submit a support ticket <https://www.odoo.com/help>`_ as soon as
-     possible to schedule the transfer.
+   - If you have time constraints, `submit a support ticket <https://www.odoo.com/help-form>`_ as
+     soon as possible to schedule the transfer.
    - Select the **region** closest to most of your users to reduce latency.
    - Future **administrator(s)** must have an Odoo.com account.
    - The **date and time** you want the database to be up and running are helpful to organize the
