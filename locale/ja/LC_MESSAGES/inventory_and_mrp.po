@@ -11137,7 +11137,7 @@ msgid ""
 "Process`). This reveals the packing order generated from the previously "
 "confirmed sales order."
 msgstr ""
-":guilabel:`#未処理` ボタン(ここでは :guilabel:`1未処理`) "
+":guilabel:`#処理待ち` ボタン(ここでは :guilabel:`1未処理`) "
 "をクリックします。これにより、以前に確定した販売オーダから作成された梱包オーダが表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/delivery_three_steps.rst:86
@@ -12542,7 +12542,7 @@ msgid ""
 "Click the :guilabel:`# To Process` button to reveal all incoming receipts to"
 " process. Click the receipt associated with the previous purchase order."
 msgstr ""
-":guilabel:`#未処理` ボタンをクリックすると、未処理の全ての入荷が表示されます。前の購買オーダに関連付けられている入荷をクリックします。"
+":guilabel:`#処理待ち` ボタンをクリックすると、処理待ちの全ての入荷が表示されます。前の購買オーダに関連付けられている入荷をクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_three_steps.rst:72
 msgid ""
@@ -12576,7 +12576,8 @@ msgid ""
 "Select the :guilabel:`# To Process` button to reveal all internal transfers "
 "to process. Then, choose the internal transfer associated with the validated"
 " receipt."
-msgstr ":guilabel:`#未処理` ボタンを選択すると、処理する内部転送が全て表示されます。次に、検証済入荷に関連する内部転送を選択します。"
+msgstr ""
+":guilabel:`#処理待ち` ボタンを選択すると、処理待ちの内部転送が全て表示されます。次に、検証済入荷に関連する内部転送を選択します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/receipts_three_steps.rst:91
 msgid ""
@@ -41813,10 +41814,12 @@ msgid ""
 "app, clicking the :guilabel:`# To Process` button on the :guilabel:`Pick "
 "Components` card, and selecting the order."
 msgstr ""
+"廃棄された構成品の補充用にピッキングオーダが自動的に作成された場合、:menuselection:`在庫`アプリを開き、:guilabel:`構成品をピッキングする`"
+" カードの :guilabel:`処理待ち` ボタンをクリックし、オーダを選択することでアクセスできます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/split_merge.rst:3
 msgid "Split and merge manufacturing orders"
-msgstr ""
+msgstr "製造オーダの分割とマージ"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/split_merge.rst:5
 msgid ""
@@ -41826,6 +41829,8 @@ msgid ""
 "units into two or more orders, or to merge two or more orders into a single "
 "order."
 msgstr ""
+"Odoo *製造* では、単品または同一品目の複数単位の製造オーダを作成することができます。 "
+"複数の単位を含む製造オーダを2つ以上のオーダに分割したり、2つ以上のオーダを1つのオーダに統合したりする必要がある場合もあります。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/split_merge.rst:11
 msgid ""
@@ -41834,10 +41839,12 @@ msgid ""
 "a result, it is only possible to merge manufacturing orders when every order"
 " contains the same product being manufactured with the same BoM."
 msgstr ""
+"製造オーダには、1つのプロダクトの1ユニットのみ、または全てが同じ部品表 (BoM)を使用する単一プロダクトの複数ユニットを含めることができます。 "
+"その結果、製造オーダをマージできるのは、全てのオーダが同じプロダクトで同じ部品表を使用する場合のみとなります。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/split_merge.rst:17
 msgid "Split manufacturing orders"
-msgstr ""
+msgstr "製造オーダを分割する"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/split_merge.rst:19
 msgid ""
@@ -41847,16 +41854,19 @@ msgid ""
 ":guilabel:`New` button, the manufacturing order's reference number appears "
 "with a :guilabel:`⚙️ (settings)` button next to it."
 msgstr ""
+"製造オーダを複数のオーダに分割するには、まず :menuselection:`製造 --> オペレーション --> 製造オーダ` "
+"に移動し、製造オーダを選択します。ページの上部にある :guilabel:`新規作成` ボタンの隣に、製造オーダの参照番号と :guilabel:`⚙️"
+" (管理設定)` ボタンが表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/split_merge.rst:24
 msgid ""
 "Click the :guilabel:`⚙️ (settings)` button to open the general settings for "
 "the manufacturing order, then select :guilabel:`Split`."
-msgstr ""
+msgstr ":guilabel:`⚙️ (管理設定)` ボタンをクリックして製造オーダの一般設定を開き、:guilabel:`分割` を選択します。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/split_merge.rst-1
 msgid "The Settings and Split buttons on a manufacturing order."
-msgstr ""
+msgstr "製造オーダの管理設定ボタンと分割ボタン"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/split_merge.rst:31
 msgid ""
@@ -41869,10 +41879,14 @@ msgid ""
 "be assigned to each new manufacturing order. Finally, click "
 ":guilabel:`Split` to split the manufacturing order."
 msgstr ""
+":guilabel:`分割`を選択すると、:guilabel:`生産の分割`ポップアップウィンドウが表示されます。 :guilabel:`分割 "
+"#`フィールドに、元のオーダを分割すべき製造オーダの数を入力し、フィールド外をクリックします。分割によって作成される新しい製造オーダの明細がそれぞれ表示されたテーブルが下部に表示されます。"
+" :guilabel:`生産予定数` 列に、各新しい製造オーダに割当てるユニット数を入力します。最後に、:guilabel:`分割` "
+"をクリックして製造オーダを分割します。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/split_merge.rst-1
 msgid "The Split production pop-up window for a manufacturing order."
-msgstr ""
+msgstr "製造オーダ用の「生産の分割」ポップアップウィンドウ"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/split_merge.rst:42
 msgid ""
@@ -41881,6 +41895,8 @@ msgid ""
 "field. The reference numbers for the new manufacturing orders are the "
 "reference number for the original order with *-###* tags added to the end."
 msgstr ""
+":guilabel:`分割` をクリックすると、元の製造オーダが :guilabel:`分割 #` "
+"フィールドで指定した数に分割されます。新しい製造オーダの参照番号は、元のオーダの参照番号に *-###* タグを末尾に追加したものになります。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/split_merge.rst:48
 msgid ""
@@ -41888,10 +41904,13 @@ msgid ""
 "reference numbers for the new orders are *WH/MO/00012-001*, "
 "*WH/MO/00012-002*, and *WH/MO/00012-003*."
 msgstr ""
+"製造オーダ *WH/MO/00012* "
+"は3つの別々のオーダに分割されます。新しいオーダの参照番号は、*WH/MO/00012-001*、*WH/MO/00012-002*、*WH/MO/00012-003*"
+" です。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/split_merge.rst:52
 msgid "Merge manufacturing orders"
-msgstr ""
+msgstr "製造オーダをマージする"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/split_merge.rst:54
 msgid ""
@@ -41900,12 +41919,14 @@ msgid ""
 " Orders`. Select the manufacturing orders that will be merged by activating "
 "the checkbox to the left of the name of each order."
 msgstr ""
+"2つ以上の製造オーダを1つのオーダに統合するには、まず :menuselection:`製造 --> オペレーション --> 製造オーダ` "
+"に移動します。統合する製造オーダの各オーダ名の左にあるチェックボックスを有効化して選択します。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/split_merge.rst-1
 msgid ""
 "Select manufacturing orders that will be merged by clicking the checkbox for"
 " each."
-msgstr ""
+msgstr "マージする製造オーダのチェックボックスをそれぞれクリックして選択します。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/split_merge.rst:62
 msgid ""
@@ -41913,10 +41934,12 @@ msgid ""
 ":guilabel:`Actions` button at the top of the page, then select "
 ":guilabel:`Merge` from the drop-down menu."
 msgstr ""
+"全ての製造オーダが選択されたら、ページ上部の :guilabel:`アクション` ボタンをクリックし、ドロップダウンメニューから "
+":guilabel:`マージ` を選択します。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/split_merge.rst-1
 msgid "The Actions and Merge buttons on the Manufacturing Orders page."
-msgstr ""
+msgstr "製造オーダページの「アクション」と「マージ」ボタン"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/split_merge.rst:69
 msgid ""
@@ -41924,6 +41947,7 @@ msgid ""
 "reference number for the new manufacturing order is the next sequential "
 "number that has *not* already been assigned to an order."
 msgstr ""
+"選択された製造オーダは、1つのオーダにマージされます。新しい製造オーダの参照番号は、オーダにまだ割当てられて *いない* 次の連続した番号です。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/split_merge.rst:73
 msgid ""
@@ -41932,6 +41956,8 @@ msgid ""
 " single order. The reference number for the manufacturing order created by "
 "the merger is *WH/MO/00013*."
 msgstr ""
+"製造オーダに使用された最後の参照番号は *WH/MO/00012* でした。製造オーダ *WH/MO/00008* と *WH/MO/00009* "
+"の2つが1つのオーダに統合されました。統合により作成された製造オーダの参照番号は *WH/MO/00013* です。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/split_merge.rst:77
 msgid ""
@@ -41939,6 +41965,7 @@ msgid ""
 "merger, the reference numbers of the manufacturing orders that were merged "
 "are listed."
 msgstr ""
+"マージによって作成された製造オーダの :guilabel:`ソース` フィールドには、マージされた製造オーダの参照番号がリスト表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/split_merge.rst:81
 msgid ""
@@ -41946,10 +41973,13 @@ msgid ""
 "*WH/MO/00011*. The source field for *WH/MO/00011* lists both *WH/MO/00009* "
 "and *WH/MO/00010*."
 msgstr ""
+"製造オーダ *WH/MO/00009* および *WH/MO/00010* は統合され、 *WH/MO/00011* "
+"が作成されます。*WH/MO/00011* のソースフィールドには、*WH/MO/00009* と *WH/MO/00010* "
+"の両方がリストされています。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/unbuild_orders.rst:3
 msgid "Unbuild orders"
-msgstr ""
+msgstr "解体オーダ"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/unbuild_orders.rst:7
 msgid ""
@@ -41958,6 +41988,7 @@ msgid ""
 "were built, or if the components of one product must be reclaimed to use in "
 "the manufacturing of another."
 msgstr ""
+"場合によっては、製造された製品を個々の構成品に分解する必要があります。これは、プロダクトの製造数が多すぎる場合や、あるプロダクトの構成品を別のプロダクトの製造に再利用する必要がある場合に必要となります。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/unbuild_orders.rst:11
 msgid ""
@@ -41967,10 +41998,12 @@ msgid ""
 "components remain accurate, based on the quantity of products dismantled, "
 "and the quantity of components reclaimed."
 msgstr ""
+"Odoo *製造* "
+"では、プロダクトを分解し、その構成品を在庫に戻すことができます。分解オーダを使用してこの作業を行うことで、分解されたプロダクトの数量と再利用された構成品の数量を基に、完成品およびその構成品の在庫数量を正確に保つことができます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/unbuild_orders.rst:17
 msgid "Create unbuild order"
-msgstr ""
+msgstr "解体オーダを作成する"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/unbuild_orders.rst:19
 msgid ""
@@ -41978,6 +42011,8 @@ msgid ""
 ":menuselection:`Manufacturing app --> Operations --> Unbuild Orders`, and "
 "clicking :guilabel:`New`."
 msgstr ""
+"新しい解体オーダは、:menuselection:`製造アプリ --> オペレーション --> 解体オーダ` に移動し、:guilabel:`新規` "
+"をクリックすることで作成できます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/unbuild_orders.rst:22
 msgid ""
@@ -41987,6 +42022,9 @@ msgid ""
 "|BoM| should be used, click on the :guilabel:`Bill of Material` field, and "
 "select it from the drop-down menu."
 msgstr ""
+"解体する :guilabel:`プロダクト` を選択して、新しい解体オーダの入力を開始します。 そうすると、 :guilabel:`部品表` "
+"フィールドに該当する部品表 (BoM) が自動的に入力されます。 別の部品表を使用する場合は、 :guilabel:`部品表` "
+"フィールドをクリックし、ドロップダウンメニューから選択します。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/unbuild_orders.rst:27
 msgid ""
@@ -41994,11 +42032,13 @@ msgid ""
 "Material` field before selecting a product, which causes the corresponding "
 "product to auto-populate in the :guilabel:`Product` field."
 msgstr ""
+"あるいは、プロダクトを選択する前に、:guilabel:`部品表` フィールドで特定の部品表を選択することもできます。これにより、対応するプロダクトが"
+"  :guilabel:`プロダクト` フィールドに自動入力されます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/unbuild_orders.rst:31
 msgid ""
 "Next, specify the :guilabel:`Quantity` of the product that is being unbuilt."
-msgstr ""
+msgstr "次に、解体されるプロダクトの :guilabel:`数量` を指定します。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/unbuild_orders.rst:33
 msgid ""
@@ -42006,18 +42046,19 @@ msgid ""
 "manufacturing order (MO), select it in the :guilabel:`Manufacturing Order` "
 "field."
 msgstr ""
+"組み立て解除されたプロダクトが特定の製造オーダ (MO)で製造されたものである場合は、:guilabel:`製造オーダ` フィールドで選択します。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/unbuild_orders.rst:36
 msgid ""
 "In the :guilabel:`Source Location` field, select the location where the "
 "product being unbuilt is currently stored."
-msgstr ""
+msgstr ":guilabel:`移動元ロケーション` フィールドで、アンビルドされるプロダクトが現在保存されているロケーションを選択します。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/unbuild_orders.rst:39
 msgid ""
 "In the :guilabel:`Destination Location` field, select the location where the"
 " reclaimed components are stored after the unbuild order is completed."
-msgstr ""
+msgstr ":guilabel:`移動先ロケーション` フィールドで、解体オーダが完了した後に回収された構成品が保存されるロケーションを選択します。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/unbuild_orders.rst:42
 msgid ""
@@ -42026,6 +42067,8 @@ msgid ""
 "unbuild order, which can be used to specify the lot(s) or serial number(s) "
 "of the product being unbuilt, if any are assigned."
 msgstr ""
+"*ロット/シリアル番号* 機能が *在庫* アプリの設定で有効になっている場合、解体オーダに :guilabel:`ロット/シリアル番号` "
+"フィールドが表示され、割当てがある場合には、解体されるプロダクトのロットまたはシリアル番号を指定するために使用することができます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/unbuild_orders.rst:46
 msgid ""
@@ -42033,16 +42076,18 @@ msgid ""
 ":guilabel:`Company` field appears on the unbuild order, which can be used to"
 " specify the company that owns the product being unbuilt."
 msgstr ""
+"Odooデータベースが複数の会社で設定されている場合、解体オーダに :guilabel:`会社` "
+"フィールドが表示され、解体されるプロダクトの所有会社を指定するために使用できます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/unbuild_orders.rst:50
 msgid ""
 "Finally, once the product has been unbuilt, click the :guilabel:`Unbuild` "
 "button at the top of the order to confirm that it has been completed."
-msgstr ""
+msgstr "最後に、プロダクトが解体されたら、オーダの上部にある :guilabel:`解体` ボタンをクリックして、解体が完了したことを確認します。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/unbuild_orders.rst-1
 msgid "A filled-out unbuild order."
-msgstr ""
+msgstr "記入済みの解体オーダ"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/unbuild_orders.rst:58
 msgid ""
@@ -42050,6 +42095,7 @@ msgid ""
 "(or fewer) units on-hand, this is not advised, since it can lead to "
 "inventory inconsistencies."
 msgstr ""
+"手持在庫がゼロ(またはそれ以下)のプロダクトに対して解体オーダを作成することは可能ですが、これは在庫の不整合につながる可能性があるため、お勧めできません。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/unbuild_orders.rst:61
 msgid ""
@@ -42057,6 +42103,7 @@ msgid ""
 "hand, a pop-up window appears, warning the user that there is an "
 "insufficient quantity to unbuild."
 msgstr ""
+"手持在庫がゼロ(またはそれ以下)のプロダクトに対して解体オーダが作成された場合、解体に必要な数量が不足していることを警告するポップアップウィンドウが表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/unbuild_orders.rst:64
 msgid ""
@@ -42064,25 +42111,29 @@ msgid ""
 ":guilabel:`Confirm` at the bottom of the pop-up window. To return to the "
 "unconfirmed unbuild order, click :guilabel:`Discard`, instead."
 msgstr ""
+"警告を無視して解体オーダを進めるには、ポップアップウィンドウの下部にある :guilabel:`確認` "
+"をクリックします。解体オーダを未確認の状態に戻すには、代わりに :guilabel:`廃棄` をクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/unbuild_orders.rst:0
 msgid ""
 "The insufficient quantity pop-up that appears after trying to confirm an unbuild order\n"
 "for a product with zero or fewer units on hand."
 msgstr ""
+"手持在庫がゼロまたはそれ以下の数量のプロダクトの解体オーダを確認しようとした後に表示される\n"
+"数量不足のポップアップ"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/unbuild_orders.rst:73
 msgid ""
 "After completing an unbuild order, inventory counts automatically update, "
 "based on the quantity of products unbuilt, and the quantity of components "
 "reclaimed."
-msgstr ""
+msgstr "解体オーダを完了すると、在庫数は自動的に更新され、解体されたプロダクトの数量と再利用された構成品の数量を基に更新されます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/unbuild_orders.rst:77
 msgid ""
 "A `Coat Rack` product is comprised of one `Wooden Pole` component and six "
 "`Wooden Dowel` components."
-msgstr ""
+msgstr "プロダクト `コートラック` は、 `木製ポール` 1本と `木製ダボ` 6本で構成されています。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/unbuild_orders.rst:80
 msgid ""
@@ -42091,10 +42142,12 @@ msgid ""
 "the on-hand quantities of `Wooden Poles` and `Wooden Dowels` increase by one"
 " and six, respectively."
 msgstr ""
+"`コートラック` 1個分の解体オーダが作成されます。オーダが完了すると、`コートラック` の手持在庫が1本減少し、 `木製ポール` と `木製ダボ` "
+"の手持在庫がそれぞれ1本と6本増加します。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/unbuild_orders.rst:85
 msgid "Scrap unusable components"
-msgstr ""
+msgstr "使用できない構成品を廃棄する"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/unbuild_orders.rst:87
 msgid ""
@@ -42104,6 +42157,11 @@ msgid ""
 "should be removed from inventory using a :doc:`scrap order "
 "<../../inventory/warehouses_storage/inventory_management/scrap_inventory>`."
 msgstr ""
+"場合によっては、解体処理が完了した後に構成品が使用できなくなることがあります。 "
+"在庫の棚卸数量が、手持在庫の使用可能な構成品の数量を正確に反映していることを保証するため、使用できなくなった構成品は全て、:doc:`scrap "
+"order "
+"<../../inventory/warehouses_storage/inventory_management/scrap_inventory>` "
+"を使用して在庫から払出して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:16
 msgid ""
@@ -42111,6 +42169,8 @@ msgid ""
 "used to manually plan manufacturing orders (MOs) and purchase orders (POs), "
 "based on forecasted quantities of products and components."
 msgstr ""
+"Odooの *製造* アプリでは、*基準生産計画* (MPS)は、プロダクトおよび構成品の予測数量を基に、製造オーダ "
+"(MO)と購買オーダ(PO)を手動で計画するために使用されます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:20
 msgid ""
@@ -42119,6 +42179,7 @@ msgid ""
 " replenishment. This ensures the continued availability of the necessary "
 "products and components."
 msgstr ""
+"確定した製造オーダと購買オーダの影響を考慮し、手動で調整した需要予測と併せて、長期のプロダクト補充を管理するために基準生産計画を使用することで、必要なプロダクトや構成品の継続的な供給を確保することができます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:24
 msgid ""
@@ -42126,6 +42187,7 @@ msgid ""
 "replenishing products where the demand of existing sales orders (SOs) does "
 "**not** reflect probable future demand."
 msgstr ""
+"基準生産計画では手動での調整が可能なため、既存の販売オーダ(SO) の需要が将来の需要を正確に反映して *いない* 場合でも、製品の補充に役立ちます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:28
 msgid ""
@@ -42133,6 +42195,7 @@ msgid ""
 " It is currently September, and the store has less than ten Christmas tree "
 "|MOs| confirmed for the month of December."
 msgstr ""
+"ある小売店では、ホリデーシーズンに人工の *クリスマスツリー* を販売しています。現在は9月で、12月のクリスマスツリー製造オーダは10件未満です。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:32
 msgid ""
@@ -42142,6 +42205,7 @@ msgid ""
 " in the |MPS|, so they can properly replenish the product in time for the "
 "increase in customer demand."
 msgstr ""
+"現在確定している製造オーダ数は少ないですか、購買マネジャーは、ホリデーシーズンが始まれば、12月のクリスマスツリーに対する需要が大幅に増加することを知っています。その結果、顧客の需要増加に間に合うようにプロダクトを適切に補充できるよう、基準生産計画に大量の需要を手動で入力します。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:38
 msgid ""
@@ -42151,6 +42215,8 @@ msgid ""
 "should be replenished, but requires user input to create the |MOs| or |POs| "
 "that are used to replenish it."
 msgstr ""
+"基準生産計画は **手動** "
+"のツールであることに注意して下さい。プロダクトを基準生産計画に追加しても、自動的に製造や購買が行われるわけではありません。基準生産計画は単に補充すべきプロダクトの数量を提案するだけであり、補充に使用される製造オーダや購買オーダを作成するにはユーザの入力が必要です。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:43
 msgid ""
@@ -42160,10 +42226,11 @@ msgid ""
 "|MPS|. Using both, in unison, can lead to inaccurate forecasts and the "
 "creation of unnecessary replenishment orders."
 msgstr ""
+"このため、同じプロダクトの再オーダ規則と基準生産計画を併用することは推奨されません。再オーダ規則は自動化されたワークフローであるため、基準生産計画の手動による補充方法と矛盾が生じます。両者を併用すると、不正確な予測や不要な補充オーダの作成につながる可能性があります。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:49
 msgid "Enable and configure |MPS|"
-msgstr ""
+msgstr "基準生産計画を有効化し設定する"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:51
 msgid ""
@@ -42172,6 +42239,8 @@ msgid ""
 "Schedule` checkbox in the :guilabel:`Planning` section. Finally, click "
 ":guilabel:`Save`."
 msgstr ""
+"基準生産計画機能を使用するには、:menuselection:`製造アプリ --> 設定 --> 管理設定` に移動し、:guilabel:`計画` "
+"セクションの :guilabel:`基準生産計画` チェックボックスにチェックを入れます。最後に、:guilabel:`保存` をクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:55
 msgid ""
@@ -42179,6 +42248,8 @@ msgid ""
 "fields appear under it on the :guilabel:`Settings` page: :guilabel:`Time "
 "Range` and :guilabel:`Number of Columns`."
 msgstr ""
+":guilabel:`基準生産計画` 機能を有効にすると、:guilabel:`管理設定` ページにその下に :guilabel:`時間範囲` と "
+":guilabel:`列数` の2つの新しいフィールドが表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:58
 msgid ""
@@ -42188,6 +42259,9 @@ msgid ""
 ":guilabel:`Monthly` is selected, the |MPS| plans the production requirements"
 " of products and components on a monthly basis."
 msgstr ""
+":guilabel:`時間範囲` フィールドは、計画の対象期間を選択するために使用され、次の3つのオプションが用意されています。 "
+":guilabel:`月次` 、:guilabel:`週次` 、:guilabel:`日次`。 例えば、:guilabel:`月次` "
+"を選択すると、基準生産計画はプロダクトおよび構成品の生産要件を月次ベースで計画します。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:63
 msgid ""
@@ -42197,30 +42271,38 @@ msgid ""
 "and `12` is entered in the :guilabel:`Number of Columns` field, the |MPS| "
 "shows one column for the next 12 months, starting with the current month."
 msgstr ""
+":guilabel:`列数` フィールドは、基準生産計画ページに表示する選択した :guilabel:`時間範囲` "
+"単位の数を指定するために使用します。たとえば、:guilabel:`時間範囲` フィールドが :guilabel:`月次` "
+"に設定され、:guilabel:`列数` フィールドに `12` "
+"が入力されている場合、基準生産計画には、現在の月から始まる次の12か月間が1列で表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:68
 msgid ""
 "If the values of the :guilabel:`Time Range` or :guilabel:`Number of Columns`"
 " fields are altered, click :guilabel:`Save` again to save the changes."
 msgstr ""
+":guilabel:`時間範囲` または :guilabel:`列数` フィールドの値が変更された場合は、変更を保存するために "
+":guilabel:`保存` を再度クリックします。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst-1
 msgid "The MPS setting in the Manufacturing app's settings."
-msgstr ""
+msgstr "製造アプリの設定にある基準生産計画の設定"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:76
 msgid "|MPS| dashboard"
-msgstr ""
+msgstr "基準生産計画ダッシュボード"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:78
 msgid ""
 "To open the |MPS|, navigate to :menuselection:`Manufacturing app --> "
 "Planning --> Master Production Schedule`. The |MPS| view appears as follows:"
 msgstr ""
+"基準生産計画を開くには、:menuselection:`製造アプリ --> 計画 --> 基準生産計画` に移動します。 "
+"基準生産計画のビューは以下のように表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst-1
 msgid "The Master Production Schedule in the Manufacturing app."
-msgstr ""
+msgstr "製造アプリの基準生産計画"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:85
 msgid ""
@@ -42230,6 +42312,9 @@ msgid ""
 "selected in the :guilabel:`Search...` bar drop-down menu at the top of the "
 "page. The default categories that appear in the rows are:"
 msgstr ""
+"画面左側のグレーの列には、基準生産計画に追加された全てのプロダクトのセクションが表示され、各プロダクトセクションはさらに小さな行に分割されています。行に表示される情報は、ページ上部の"
+" :guilabel:`Search...` "
+"バーのドロップダウンメニューで選択されたフィルタによって異なります。行に表示されるデフォルトのカテゴリは以下の通りです。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:90
 msgid ""
@@ -42238,13 +42323,16 @@ msgid ""
 ":icon:`fa-area-chart` are selectable buttons which open the product's page, "
 "or the forecast report for the product, respectively."
 msgstr ""
+":guilabel:`[プロダクト]  ([単位]ごと)` :icon:`fa-area-chart`: 各時間帯の開始時点での予測在庫数量。 "
+":guilabel:`[プロダクト]` と :icon:`fa-area-chart` "
+"は、それぞれクリック可能なボタンであり、プロダクトページまたはプロダクトの予測レポートを開くことができます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:93
 msgid ""
 ":guilabel:`- Forecasted Demand`: the demand forecast, which is entered "
 "manually. This represents an estimate of the demand for the product during "
 "each time period."
-msgstr ""
+msgstr ":guilabel:`- 需要予測`: 需要予測は手動で入力します。これは、各時間枠におけるプロダクトの需要予測を表します。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:95
 msgid ""
@@ -42252,6 +42340,8 @@ msgid ""
 " **only** appears for products that are components of other products. It "
 "represents the demand for the component from existing MOs."
 msgstr ""
+":guilabel:`- 間接需要予測`: "
+"これはデフォルトのカテゴリですが、他のプロダクトの構成品であるプロダクトに対してのみ表示されます。このカテゴリは、既存の製造オーダに基づく、その構成品の需要を表します。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:98
 msgid ""
@@ -42260,37 +42350,41 @@ msgid ""
 "category title is a :guilabel:`Replenish` button, which is used to manually "
 "replenish the product, based on the quantity suggested to be replenished."
 msgstr ""
+":guilabel:`+ 補充提案数` : この項目は、製造オーダまたは購買オーダによって補充が推奨されている数量を示します。カテゴリ名の右側には "
+":guilabel:`補充` ボタンがあり、提案された数量に基づいて、プロダクトを手動で補充するために使用されます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:0
 msgid "The Replenish button on the \"+ Suggested Replenishment\" row."
-msgstr ""
+msgstr "\"+ 補充提案数\" 行の「補充」ボタン"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:107
 msgid "The \"Replenish\" button on the \"+ Suggested Replenishment\" row."
-msgstr ""
+msgstr "\"+ 補充提案数\" 行の \"補充\" ボタン"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:109
 msgid ""
 ":guilabel:`= Forecasted Stock`: the quantity of the product forecasted to be"
 " in stock at the end of each time period, assuming that suggested "
 "replenishment numbers are fulfilled."
-msgstr ""
+msgstr ":guilabel:`= 予測在庫`: 補充提案数が満たされることを前提に、各周期設定の終了時に在庫として予測されるプロダクトの数量。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:112
 msgid "Altogether, these default categories form an equation:"
-msgstr ""
+msgstr "これらのデフォルトのカテゴリは、全体として次のような等式を構成します:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:114
 msgid ""
 "\\text{Forecasted Demand} + \\text{Suggested Replenishment} = \\text{Forecasted Stock}\n"
 "\n"
 msgstr ""
+"\\text{予測需要} + \\text{補充提案数} = \\text{予測在庫}\n"
+"\n"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:117
 msgid ""
 "In the case of components, the :guilabel:`Indirect Demand Forecast` is taken"
 " into account as well."
-msgstr ""
+msgstr "構成品の場合、:guilabel:`間接需要予測` も考慮されます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:119
 msgid ""
@@ -42299,6 +42393,9 @@ msgid ""
 " of the product column. Doing so changes the equation, and updates the value"
 " displayed in the :guilabel:`Forecasted Stock` field."
 msgstr ""
+":guilabel:`- 予測需要` および:guilabel:`+ 補充提案数` "
+"フィールドは、プロダクト列の右側の任意の時間期間に対して編集することができます。 そうすると、計算式が変更され、:guilabel:`予測在庫` "
+"フィールドに表示される値が更新されます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:123
 msgid ""
@@ -42307,6 +42404,9 @@ msgid ""
 "the field. Click the :icon:`fa-times` :guilabel:`(reset)` button next to the"
 " field to reset its value back to the one calculated by the |MPS|."
 msgstr ""
+":guilabel:`+ 補充提案数` フィールドの値を変更すると、フィールドの左側に :icon:`fa-times` "
+":guilabel:`(リセット)` ボタンが表示されます。 フィールドの隣にある :icon:`fa-times` "
+":guilabel:`(リセット)` ボタンをクリックすると、値が基準生産計画によって計算された値に戻ります。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:129
 msgid ""
@@ -42316,6 +42416,10 @@ msgid ""
 "right side of the :guilabel:`Search...` bar, and enabling the "
 ":guilabel:`Actual Demand` option under the :guilabel:`Rows` header."
 msgstr ""
+"基準生産計画ではデフォルトのカテゴリのみが有効になっていますが、:guilabel:`実需` "
+"カテゴリも有効にすることをお勧めします。これは、:guilabel:`検索...`バーの右側にある:icon:`fa-caret-down` "
+":guilabel:`(下向き矢印)` をクリックし、:guilabel:`行` ヘッダーの下にある :guilabel:`実需` "
+"オプションを有効にすることで行います。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:134
 msgid ""
@@ -42325,6 +42429,8 @@ msgid ""
 "this category also displays the confirmed demand for the product, which is "
 "based on confirmed |SOs|."
 msgstr ""
+":guilabel:`実需` オプションを有効にすると、:guilabel:`- 需要予測` カテゴリは:guilabel:`- 実需 / 需要予測` "
+"カテゴリに変更されます。 このカテゴリには、手動で入力された需要予測に加えて、確認済みの需要(確認済みの販売オーダに基づく)も表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:139
 msgid ""
@@ -42333,6 +42439,8 @@ msgid ""
 "*Settings* page (ex. months). The number of time period columns corresponds "
 "to the value entered in the *Number of Columns* field."
 msgstr ""
+"プロダクト列の右側の各列は、*製造* アプリの *管理設定* ページにある *時間範囲* "
+"フィールドで選択した期間の単位を1つ表示します(例:月)。期間列の数は、*列数* フィールドに入力した値に対応します。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:143
 msgid ""
@@ -42341,18 +42449,20 @@ msgid ""
 " data for the current month. On this first column, the :guilabel:`+ "
 "Suggested Replenishment` field appears in one of five colors:"
 msgstr ""
+"最初の期間列は現在の期間を表します。例えば、基準生産計画で月を使用するように設定されている場合、最初の列には現在の月のデータが表示されます。この最初の列では、:guilabel:`+"
+" 補充提案数` フィールドが5つの色のうちの1つで表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:147
 msgid ""
 ":guilabel:`Green`: a replenishment order must be generated to keep stock at "
 "the :guilabel:`Safety Stock Target`."
-msgstr ""
+msgstr ":guilabel:`緑色`: 在庫を :guilabel:`安全在庫目標` に維持するために補充オーダを生成する必要があります。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:149
 msgid ""
 ":guilabel:`Gray`: a replenishment order has already been generated to keep "
 "stock at the :guilabel:`Safety Stock Target`."
-msgstr ""
+msgstr ":guilabel:`灰色`: 在庫を :guilabel:`安全在庫目標` に維持するための補充オーダはすでに生成されています。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:151
 msgid ""
@@ -42360,6 +42470,8 @@ msgid ""
 "the quantity it was created for is not enough to keep stock at the "
 ":guilabel:`Safety Stock Target`."
 msgstr ""
+":guilabel:`黄色`: 補充オーダはすでに作成されていますが、その数量では :guilabel:`安全在庫目標` "
+"の在庫を維持するには不十分です。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:153
 msgid ""
@@ -42367,13 +42479,14 @@ msgid ""
 "quantity it was created for puts the amount of stock above the "
 ":guilabel:`Safety Stock Target`."
 msgstr ""
+":guilabel:`赤色`: 補充オーダはすでに作成されていますが、その数量では在庫量が :guilabel:`安全在庫目標` を上回ってしまいます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:156
 msgid ""
 "The :guilabel:`+ Suggested Replenishment` field appears white, if no "
 "replenishment order has been generated, and it is not necessary to generate "
 "one at the current moment."
-msgstr ""
+msgstr "補充オーダが生成されていない場合、:guilabel:`+ 補充提案数` フィールドは白く表示され、現時点では生成する必要はありません。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:160
 msgid "Add a product"
@@ -42386,12 +42499,15 @@ msgid ""
 "Schedule`. At the top of the |MPS| page, click :guilabel:`Add a Product` to "
 "open the :guilabel:`Add a Product` pop-up window."
 msgstr ""
+"プロダクトの補充を管理するために基準生産計画を使用するには、:menuselection:`製造アプリ --> 計画 --> 基準生産計画` "
+"に移動します。 基準生産計画ページの上部にある :guilabel:`プロダクト追加` をクリックして、:guilabel:`プロダクト追加` "
+"ポップアップウィンドウを開きます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:167
 msgid ""
 "Products **must** be properly configured to be replenished through the "
 "|MPS|."
-msgstr ""
+msgstr "プロダクトは、基準生産計画を通じて補充されるように適切に設定されていなければなりません。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:169
 msgid ""
@@ -42399,6 +42515,7 @@ msgid ""
 "selected in the *Routes* section of the *Inventory* tab, on the product's "
 "form."
 msgstr ""
+"製造されたプロダクトの場合、プロダクトのフォームにある *在庫* タブの *ルート* セクションで、*製造* ルートを選択する必要があります。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:172
 msgid ""
@@ -42407,6 +42524,8 @@ msgid ""
 "Additionally, a vendor and the price they sell the product for must also be "
 "specified on the *Purchase* tab."
 msgstr ""
+"購買されるプロダクトの場合、プロダクトフォームの *在庫* タブの *ルート* セクションで、*購買* ルートを選択する必要があります。さらに、*購買*"
+" タブで、仕入先と販売価格を指定する必要があります。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:176
 msgid ""
@@ -42414,6 +42533,9 @@ msgid ""
 "drop-down menu. If the product is replenished through manufacturing, select "
 "the product's |BoM| in the :guilabel:`Bill of Materials` field."
 msgstr ""
+"ポップアップウィンドウで、:guilabel:`プロダクト` "
+"ドロップダウンメニューから追加するプロダクトを選択します。プロダクトが製造によって補充される場合は、:guilabel:`部品表` "
+"フィールドでプロダクトの部品表を選択します。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:181
 msgid ""
@@ -42422,6 +42544,8 @@ msgid ""
 "components through the |MPS|, simply leave the :guilabel:`Bill of Materials`"
 " field blank."
 msgstr ""
+"MPSにプロダクトを追加する際、部品表を選択すると、部品表にリストされた構成品も追加されます。MPSを通じて構成品の補充を管理する必要がない場合は、:guilabel:`部品表`"
+" フィールドを空白のままにしておいて下さい。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:185
 msgid ""
@@ -42430,6 +42554,8 @@ msgid ""
 "Product` pop-up window. Use this field to specify which warehouse the "
 "product is replenished to."
 msgstr ""
+"データベースが複数のウェアハウスで設定されている場合、:guilabel:`プロダクト追加` ポップアップウィンドウに :guilabel:`製造倉庫`"
+" フィールドが表示されます。このフィールドを使用して、プロダクトを補充する倉庫を指定します。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:189
 msgid ""
@@ -42438,6 +42564,9 @@ msgid ""
 "example, if there should always be 20 units of the product available for "
 "order fulfillment, enter `20` in the :guilabel:`Safety Stock Target` field."
 msgstr ""
+":guilabel:`安全在庫目標` "
+"フィールドに、常にオーダ用に確保しておくべきプロダクトの最小数量を指定します。例えば、プロダクトを常に20個確保しておく必要がある場合は、:guilabel:`安全在庫目標`"
+" フィールドに `20` と入力します。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:194
 msgid ""
@@ -42446,6 +42575,8 @@ msgid ""
 " entered in this field, replenishment orders for the product include a "
 "minimum of five units."
 msgstr ""
+":guilabel:`補充最小数` フィールドに、プロダクトを補充するために作成されるオーダのプロダクトの最小数量を入力します。例えば、このフィールドに"
+" `5` と入力すると、プロ最少補充ダクトの補充オーダには最低5個が含まれます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:198
 msgid ""
@@ -42454,6 +42585,8 @@ msgid ""
 "is entered in this field, replenishment orders for the product include a "
 "maximum of 100 units."
 msgstr ""
+":guilabel:`補充上限数` フィールドには、補充注文を作成する際の最大数量を入力します。例えば、このフィールドに `100` "
+"と入力すると、補充オーダには最大で100個が含まれます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:202
 msgid ""
@@ -42463,14 +42596,18 @@ msgid ""
 "Product` pop-up window, any components listed on the |BoM| appear on the "
 "page, as well."
 msgstr ""
+"最後に、:guilabel:`保存` "
+"をクリックしてプロダクトを基準生産計画に追加します。プロダクトは、基準生産計画ページを開くたびに表示されるようになります。 "
+":guilabel:`プロダクト追加` ポップアップウィンドウの :guilabel:`部品表` "
+"フィールドで部品表が選択されている場合、ページには部品表にリストされた構成品も表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst-1
 msgid "The Add a Product pop-up window in the MPS."
-msgstr ""
+msgstr "基準生産計画における「プロダクト追加」ポップアップウィンドウ"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:212
 msgid "Edit a product"
-msgstr ""
+msgstr "プロダクトを編集する"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:214
 msgid ""
@@ -42480,6 +42617,9 @@ msgid ""
 "the :guilabel:`Replenish` button, on the :guilabel:`+ Suggested "
 "Replenishment` row, below the product's name."
 msgstr ""
+"プロダクトを基準生産計画に追加した後、:guilabel:`プロダクト追加` "
+"ポップアップウィンドウに入力した補充値を変更する必要がある場合があります。これを行うには、プロダクト名の下にある :guilabel:`+ 補充提案数`"
+"  行の、:guilabel:`補充` ボタンのすぐ右側にある :guilabel:`# ≤…≤ #` ボタンをクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:220
 msgid ""
@@ -42488,6 +42628,8 @@ msgid ""
 " :guilabel:`Maximum to Replenish` fields when adding the product to the "
 "|MPS|."
 msgstr ""
+":guilabel:`# ≤...≤ #` ボタンに表示される最初の数字と2番目の数字は、基準生産計画にプロダクトを追加する際に "
+":guilabel:`補充最小数` および :guilabel:`補充上限数` フィールドに入力された値に対応しています。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:224
 msgid ""
@@ -42495,6 +42637,8 @@ msgid ""
 "field, and `100` was entered in the :guilabel:`Maximum to Replenish` field, "
 "the button appears as :guilabel:`5 ≤…≤ 100`."
 msgstr ""
+"例えば、:guilabel:`補充最小数` フィールドに `5` が入力され、:guilabel:`補充上限数` フィールドに `100` "
+"が入力された場合、ボタンは :guilabel:`5 ≤…≤ 100` と表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:228
 msgid ""
@@ -42503,6 +42647,9 @@ msgid ""
 ":guilabel:`Add a Product` pop-up window, except that the :guilabel:`Product`"
 " and :guilabel:`Bill of Materials` fields cannot be edited."
 msgstr ""
+":guilabel:`# ≤…≤ #` ボタンをクリックすると、:guilabel:`生産計画を編集する` ポップアップウィンドウが開きます。 "
+"このポップアップウィンドウは、:guilabel:`プロダクト追加` ポップアップウィンドウと同じですが、:guilabel:`プロダクト` および "
+":guilabel:`部品表` フィールドは編集できません。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:232
 msgid ""
@@ -42511,10 +42658,13 @@ msgid ""
 "Replenish`, and :guilabel:`Maximum to Replenish` fields. Then, click "
 ":guilabel:`Save` to save the changes."
 msgstr ""
+":guilabel:`生産計画を編集する` "
+"ポップアップウィンドウで、:guilabel:`安全在庫目標`、:guilabel:`補充最小数`、:guilabel:`補充上限数` "
+"の各フィールドに希望する値を入力します。その後、:guilabel:`保存` をクリックして変更を保存します。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:237
 msgid "Remove a product"
-msgstr ""
+msgstr "プロダクトを削除する"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:239
 msgid ""
@@ -42524,20 +42674,24 @@ msgid ""
 "menu. Finally, click :guilabel:`Ok` on the :guilabel:`Confirmation` pop-up "
 "window."
 msgstr ""
+"基準生産計画からプロダクトを払出すには、プロダクト名の左にあるチェックボックスにチェックを入れます。次に、画面上部の :icon:`fa-cog` "
+":guilabel:`アクション` ボタンをクリックし、ドロップダウンメニューから :guilabel:`削除` "
+"を選択します。最後に、:guilabel:`確認` ポップアップウィンドウの :guilabel:`Ok` をクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:244
 msgid ""
 "Deleting a product from the |MPS| removes it, along with all of its data. If"
 " the product is re-added, its replenishment values must be reconfigured."
 msgstr ""
+"基準生産計画からプロダクトを削除すると、そのプロダクトに関連するデータも全て削除されます。プロダクトを再追加する場合は、補充値を再設定する必要があります。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:248
 msgid "|MPS| replenishment"
-msgstr ""
+msgstr "基準生産計画補充"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:250
 msgid "Products in the |MPS| can be replenished in one of three ways:"
-msgstr ""
+msgstr "基準生産計画のプロダクトは、以下の3つの方法のうちの1つで補充することができます:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:252
 msgid ""
@@ -42545,6 +42699,8 @@ msgid ""
 "replenishment orders for every product below its :guilabel:`Safety Stock "
 "Target` for the current month."
 msgstr ""
+"画面上部の :guilabel:`補充` ボタンをクリックすると、当月の :guilabel:`安全在庫目標` "
+"を下回っているすべてのプロダクトに対して、補充オーダが作成されます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:254
 msgid ""
@@ -42552,6 +42708,8 @@ msgid ""
 " Suggested Replenishment` row of a specific product, to generate a "
 "replenishment order for that specific product."
 msgstr ""
+"特定のプロダクトの :guilabel:`補充提案数` 行の右側にある :guilabel:`補充` "
+"ボタンをクリックすると、その特定のプロダクトの補充オーダが作成されます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:257
 msgid ""
@@ -42560,12 +42718,15 @@ msgid ""
 "screen, and select :guilabel:`Replenish` from the resulting drop-down menu. "
 "Doing so generates a replenishment order for each selected product."
 msgstr ""
+"1つまたは複数のプロダクト名の左にあるチェックボックスにチェックを入れます。次に、画面上部の :icon:`fa-cog` "
+":guilabel:`アクション` ボタンをクリックし、ドロップダウンメニューから :guilabel:`補充` "
+"を選択します。これにより、選択した各プロダクトの補充オーダが作成されます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:262
 msgid ""
 "The type of replenishment order generated corresponds to the route selected "
 "on the *Inventory* tab of the product's form:"
-msgstr ""
+msgstr "生成される補充オーダの種類は、プロダクトフォームの *在庫* タブで選択されたルートに対応しています。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:265
 msgid ""
@@ -42574,6 +42735,9 @@ msgid ""
 ":menuselection:`Purchase` app. Any |RfQ| generated by the |MPS| lists "
 ":guilabel:`MPS` in its :guilabel:`Source Document` field."
 msgstr ""
+"*購買* ルートが選択された場合、プロダクトを補充するための見積依頼が作成されます。見積依頼は、:menuselection:`購買` "
+"アプリに移動することで選択できます。基準生産計画によって作成された見積依頼は、その見積依頼のソースドキュメントフィールドに "
+":guilabel:`基準生産計画` と表示されます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/use_mps.rst:268
 msgid ""
@@ -42583,10 +42747,13 @@ msgid ""
 "Any |MO| generated by the |MPS| lists :guilabel:`MPS` in its "
 ":guilabel:`Source Document` field."
 msgstr ""
+"*製造* ルートが選択された場合、プロダクトを補充するための製造オーダが生成されます。製造オーダは、:menuselection:`製造アプリ --> "
+"オペレーション --> 製造オーダ` に移動することで選択できます。基準生産計画によって生成された製造オーダは、:guilabel:`基準生産計画` "
+"を:guilabel:`ソースドキュメント` フィールドにリスト表示します。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:3
 msgid "Work center time off"
-msgstr ""
+msgstr "作業区の停止"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:7
 msgid ""
@@ -42595,6 +42762,8 @@ msgid ""
 "reason, work orders begin to pile up at the work center until it is "
 "operational again."
 msgstr ""
+"Odoo "
+"では、作業区は特定の場所で製造作業を行うために使用されます。しかし、何らかの理由で作業区が使用できない場合、その作業区が再び稼働可能になるまで、作業オーダはその作業区で滞留し始めます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:11
 msgid ""
@@ -42604,6 +42773,9 @@ msgid ""
 " being unavailable for a set period of time. Doing so ensures manufacturing "
 "operations can continue until the impacted work center is available again."
 msgstr ""
+"そのため、Odooでは作業区を非稼働状態にする必要があり、新しい作業オーダは稼働中の代替作業区にルートされることになります。 Odooの "
+"**休暇(Time Off)** アプリを使用すると、作業区を一定期間非稼働状態に指定することができます。 "
+"これにより、影響を受ける作業区が再び稼働可能になるまで、製造オペレーションを継続することができます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:19
 msgid ""
@@ -42612,12 +42784,17 @@ msgid ""
 ":ref:`developer mode <developer-mode>`. This allows the *Time Off* smart "
 "button to appear on each work center's *Working Hours* page."
 msgstr ""
+"作業区が利用不可として指定される前に、Odooプラットフォームが適切に設定されている必要があります。まず、:ref:`開発者モード "
+"<developer-mode>` を有効にする必要があります。これにより、*休暇(Time Off)* スマートボタンが各作業区の *作業時間* "
+"ページに表示されるようになります。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:23
 msgid ""
 "Next, install the **Time Off** app. This is the app used for managing time "
 "off for all resources within Odoo, including employees and work centers."
 msgstr ""
+"次に、**休暇(Time Off)** "
+"アプリをインストールします。これは、従業員や作業区を含むOdoo内の全てのリソースの休暇・休止管理に使用するアプリです。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:26
 msgid ""
@@ -42626,6 +42803,8 @@ msgid ""
 "only one that appears on the page. Click the :guilabel:`Install` button on "
 "the card to install the app."
 msgstr ""
+"これを行うには、:menuselection:`アプリ`アプリに移動し、検索バーで `休暇` を検索します。:guilabel:`休暇` "
+"アプリのカードのみがページに表示されるはずです。カード上の :guilabel:`インストール` ボタンをクリックしてアプリをインストールします。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:30
 msgid ""
@@ -42636,18 +42815,22 @@ msgid ""
 "work orders away from the unavailable work center, and they pile up in its "
 "queue."
 msgstr ""
+"最後のステップは、作業区を正しく設定することです。このワークフローでは、少なくとも2つの作業区が必要です: "
+"一方は使用不可に設定され、もう一方は、その作業区が受け取れない作業指示を代わりに受け取るための作業区です。もし2つ目の作業区が設定されていない場合、Odooは作業指示を使用不可の作業区から他へ振り分けることができず、作業指示がその作業区に滞留したままになります。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:35
 msgid ""
 "To create a work center, navigate to :menuselection:`Manufacturing app --> "
 "Configuration --> Work Centers --> New`."
-msgstr ""
+msgstr "作業区を作成するには、:menuselection:`製造アプリ --> 設定 --> 作業区 --> 新規` に移動します。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:39
 msgid ""
 "For a full guide to work center creation, refer to the documentation on "
 ":doc:`work centers <../advanced_configuration/using_work_centers>`."
 msgstr ""
+"作業区の作成に関する詳細なガイドについては、:doc:`作業区 "
+"<../advanced_configuration/using_work_centers>` のドキュメントを参照して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:42
 msgid ""
@@ -42655,6 +42838,8 @@ msgid ""
 ":guilabel:`Equipment` tab. This ensures operations carried out at one work "
 "center can also be performed at the other."
 msgstr ""
+"両方の作業区に同じ備品が :guilabel:`備品` "
+"タブにリストされていることを確認して下さい。これにより、一方の作業区で実施されるオペレーションがもう一方でも実施できることが保証されます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:45
 msgid ""
@@ -42663,14 +42848,15 @@ msgid ""
 " to send work orders to the second work center when the first is unavailable"
 " for any reason."
 msgstr ""
+"利用できない作業区を選択し、:guilabel:`代替作業区`ドロップダウンメニューから2番目の作業区を選択します。これにより、Odooは、何らかの理由で最初の作業区が利用できない場合、作業オーダを2番目の作業区に送信することが可能になります。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst-1
 msgid "A work center form configured with an alternative work center."
-msgstr ""
+msgstr "代替作業区で設定された作業区フォーム"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:54
 msgid "Add time off for a work center"
-msgstr ""
+msgstr "作業区に休暇(休止期間)を追加する"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:56
 msgid ""
@@ -42681,10 +42867,13 @@ msgid ""
 "of the :guilabel:`Working Hours` drop-down menu, to open the working hours "
 "page for the work center."
 msgstr ""
+"設定が完了すると、作業区に対して休暇(休止期間)を割り当てることができるようになります。まず、:menuselection:`製造アプリ --> 設定 "
+"--> 作業区` に移動し、対象となる作業区を選択します。次に、:guilabel:`稼働時間`ドロップダウンメニューの右側にある :icon:oi-"
+"arrow-right :guilabel:`(内部リンク)` ボタンをクリックして、その作業区に設定されている稼働時間のページを開きます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst-1
 msgid "The Working Hours \"External link\" button on the work center form."
-msgstr ""
+msgstr "作業区フォームの \"外部リンク\" ボタン"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:65
 msgid ""
@@ -42693,6 +42882,8 @@ msgid ""
 "Off` smart button appears at the top of the page. Click it to open the "
 ":guilabel:`Resource Time Off` page."
 msgstr ""
+"稼働時間ページには、作業区の標準稼働時間が表示されます。開発者モードを有効化すると、ページの上部にスマートボタン :icon:`fa-plane` "
+":guilabel:`休止` が表示されます。このボタンをクリックすると、:guilabel:`リソース休止` ページが開きます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:69
 msgid ""
@@ -42703,14 +42894,18 @@ msgid ""
 ":guilabel:`End Date` to specify the period during which the work center is "
 "unavailable."
 msgstr ""
+"このページで、:guilabel:`新規`  をクリックして、新しい休止エントリを作成します。タイムオフフォームでは、作業区の休止 "
+":guilabel:`理由` (例: 備品故障、保守作業など) を :guilabel:理由 に入力し、影響を受ける作業区を "
+":guilabel:`リソース` として選択します。次に、作業区終了日が使用不可となる期間を指定するために、:guilabel:`開始日` と "
+":guilabel:`終了日` を選択します。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst-1
 msgid "The \"Resource Time Off\" form."
-msgstr ""
+msgstr "\"リソースの休止\" フォーム"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:79
 msgid "Alternative work center planning"
-msgstr ""
+msgstr "代替作業区計画"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:81
 msgid ""
@@ -42718,6 +42913,7 @@ msgid ""
 " to it can be automatically routed to an alternative work center using the "
 "*Plan* button."
 msgstr ""
+"作業区が指定された休止期間中にある場合、そこに送られた作業オーダは、*計画* ボタンを使用することで、自動的に代替の作業区へ割り当てることができます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:84
 msgid ""
@@ -42727,6 +42923,9 @@ msgid ""
 "unavailable work center for one of its operations. Click :guilabel:`Confirm`"
 " to confirm the |MO|."
 msgstr ""
+"まず、新しい製造オーダ(MO)を作成します。:menuselection:`製造アプリ --> オペレーション --> 製造オーダ --> "
+"新規`に移動します。製造オーダフォームで、使用できない作業区をその作業の1つに使用する :guilabel:`プロダクト` "
+"を指定します。:guilabel:`確認` をクリックして製造オーダを確認します。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:89
 msgid ""
@@ -42734,6 +42933,8 @@ msgid ""
 "the unavailable work center is specified in the :guilabel:`Work Center` "
 "column. There is also a :guilabel:`Plan` button at the top left of the page."
 msgstr ""
+"製造オーダを確認し、:guilabel:`作業オーダ` タブを選択します。 デフォルトでは、利用できない作業区は :guilabel:`作業区` "
+"列で指定されています。 ページの左上には :guilabel:`計画` ボタンもあります。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:93
 msgid ""
@@ -42741,30 +42942,32 @@ msgid ""
 "Center` column of the :guilabel:`Work Orders` tab is automatically changed "
 "to the alternative work center."
 msgstr ""
+":guilabel:`計画` をクリックすると、:guilabel:`作業オーダ` タブの :guilabel:`作業区` "
+"列にリストされた作業区が自動的に代替作業区に変更されます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:100
 msgid ""
 "Before clicking \"Plan\", the work order is scheduled at \"Main Assembly "
 "Line\"."
-msgstr ""
+msgstr "\"計画\" をクリックする前に、作業オーダは \"メイン組立ライン\" でスケジュールされます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:100
 msgid ""
 "Before clicking :guilabel:`Plan`, the work order is scheduled at "
 ":guilabel:`Main Assembly Line`."
-msgstr ""
+msgstr ":guilabel:`計画` をクリックする前は、作業オーダは :guilabel:`メイン組立ライン` でスケジュールされます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:106
 msgid ""
 "After clicking \"Plan\", the work order is rescheduled at \"Alternative "
 "Assembly Line\"."
-msgstr ""
+msgstr "\"計画\" をクリックすると、\"代替組立ライン\" で作業オーダが再スケジュールされます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:106
 msgid ""
 "After clicking :guilabel:`Plan`, the work order is rescheduled at "
 ":guilabel:`Alternative Assembly Line`."
-msgstr ""
+msgstr ":guilabel:`計画` をクリックすると、作業オーダが :guilabel:`代替組立ライン` で再スケジュールされます。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/work_center_time_off.rst:109
 msgid ""
@@ -42773,10 +42976,12 @@ msgid ""
 ":guilabel:`Plan` button does not route work orders to an alternative work "
 "center unless the first one is at capacity."
 msgstr ""
+"利用できない作業区の休止期間が終了すると、Odooは作業区が再び利用可能になったことを認識します。この時点で、最初の作業区がフル稼働していない限り、:guilabel:`計画`"
+" ボタンをクリックしても作業オーダは代替作業区にルートされません。"
 
 #: ../../content/applications/inventory_and_mrp/plm.rst:8
 msgid "Product lifecycle management"
-msgstr ""
+msgstr "プロダクトライフサイクル管理"
 
 #: ../../content/applications/inventory_and_mrp/plm.rst:10
 msgid ""
@@ -42785,19 +42990,21 @@ msgid ""
 "development, design, manufacturing, marketing, and post-launch support "
 "stages."
 msgstr ""
+"Odooの *製品ライフサイクル管理* (*PLM*) "
+"は、製品の構想開発、設計、製造、マーケティング、発売後のサポートといった各段階において、テスト・コラボレーション・反復作業を体系的に行うためのアプローチを提供します。"
 
 #: ../../content/applications/inventory_and_mrp/plm.rst:14
 msgid ""
 "With approvals, key stakeholders can review changes before implementation."
-msgstr ""
+msgstr "承認プロセスを通じて、主要な関係者は変更を実施する前に内容を確認することができます。"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes.rst:3
 msgid "Change management"
-msgstr ""
+msgstr "変更管理"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:10
 msgid "ECO type"
-msgstr ""
+msgstr "設計変更オーダ(ECO)タイプ"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:12
 msgid ""
@@ -42806,6 +43013,9 @@ msgid ""
 " separates |ECOs| into a project in Gantt view, ensuring collaborators and "
 "stakeholders **only** view and assist with relevant |BOM| improvements."
 msgstr ""
+"プロダクトや部品表(BoM)への変更を整理し、追跡するために、設計変更オーダ(ECO)には *ECOタイプ* が割当てられます。 "
+"タイプは、ガントビュー上で設計変更オーダをプロジェクトとして分類し、コラボレーターや関係者が "
+"関連する部品表の改善にのみアクセス・関与できるようにします。"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:17
 msgid ""
@@ -42815,28 +43025,35 @@ msgid ""
 "the 'New Product Introduction' and 'Product Improvement' projects, avoiding "
 "unrelated supplier change or firmware update |ECOs|."
 msgstr ""
+"たとえば、電子チップのメーカーであれば、 '新製品導入' '製品改良'  '部品変更'  'ファームウェア更新' "
+"といった設計変更オーダタイプを使い分けることができます。その結果、設計者やエンジニアは  '新規プロダクト導入' や 'プロダクト改良' "
+"プロジェクト内の設計変更オーダに集中でき、仕入先の変更やファームウェア更新といった無関係な設計変更オーダを避けることができます。"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:23
 msgid "Create ECO type"
-msgstr ""
+msgstr "設計変更オーダ(ECO)タイプを作成する"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:25
 msgid ""
 "To access and manage ECO types, navigate to :menuselection:`PLM app --> "
 "Configuration --> ECO Types`."
 msgstr ""
+"設計変更オーダにアクセスし、管理するには、:menuselection:`製品ライフサイクル管理アプリ --> 設定 --> 設計変更オーダ` "
+"に移動します。"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:28
 msgid ""
 "Create a new ECO type by clicking :guilabel:`New`. On the new :guilabel:`ECO"
 " Types` form, fill in the following information:"
 msgstr ""
+":guilabel:`新規作成` をクリックして、新しい設計変更オーダを作成します。新しい :guilabel:`設計変更オーダ` "
+"フォームで、以下の情報を入力します。"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:31
 msgid ""
 ":guilabel:`Name`: the name of the |ECO| type, which will organize all of the"
 " |ECOs| of this *type* in a project."
-msgstr ""
+msgstr ":guilabel:`名前`: 設計変更オーダのタイプ名です。プロジェクト内の同じタイプの設計変更オーダを整理します。"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:33
 msgid ""
@@ -42844,6 +43061,8 @@ msgid ""
 "to this email address automatically generate |ECOs| in the left-most stage "
 "of this |ECO| type."
 msgstr ""
+":guilabel:`Eメールエイリアス`: "
+"このオプションのフィールドが入力されている場合、このメールアドレスに送信されたEメールは、この設計変更オーダの最も左の段階で自動的に設計変更オーダを生成します。"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:37
 msgid ""
@@ -42852,14 +43071,18 @@ msgid ""
 "generates |ECOs| in the `Formulation change` project sent to the email "
 "address, `pawlish-change@pawlished-glam.odoo.com`."
 msgstr ""
+"`配合変更` "
+"の設計変更オーダタイプは、関連する設計変更オーダを1つのプロジェクト内で整理・追跡するために使用されます。:guilabel:`Eメールエイリアス` "
+"フィールドを設定すると、`pawlish-change@pawlished-glam.odoo.com` に送信されたメールから、`配合変更` "
+"プロジェクト内に 設計変更オーダが自動的に作成されます。"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:0
 msgid "Example of an ECO type."
-msgstr ""
+msgstr "設計変更オーダタイプの例"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:46
 msgid "Edit ECO type"
-msgstr ""
+msgstr "設計変更オーダタイプを編集する"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:48
 msgid ""
@@ -42867,12 +43090,15 @@ msgid ""
 ":menuselection:`PLM app --> Configuration --> ECO Types` page. There, click "
 "on the desired |ECO| type from the list."
 msgstr ""
+":menuselection:`製品ライフサイクル管理アプリ --> 設定 --> 設計変更オーダタイプ` "
+"ページに移動して、既存の設計変更オーダタイプ名とEメールエイリアスを変更します。 そこで、リストから希望する設計変更オーダタイプをクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:51
 msgid ""
 "On the form for each |ECO| type, proceed to edit the :guilabel:`Name` and "
 ":guilabel:`Email Alias` fields."
 msgstr ""
+"各設計変更オーダのフォームで、:guilabel:`名前` および :guilabel:`Eメールエイリアス` フィールドの編集に進みます。"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:57
 msgid "Stages"
@@ -42884,6 +43110,8 @@ msgid ""
 "identify the progress of the |ECO| before the changes are ready to be "
 "applied. (e.g. 'Feedback', 'In Progress', 'Approved', 'Complete')"
 msgstr ""
+"設計変更オーダ内では、*ステージ* はマイルストーンのようなもので、変更が適用される前の設計変更オーダの進捗状況を特定するために使用されます。 (例: "
+"'フィードバック', '進行中', '承認済', '完了')"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:63
 msgid ""
@@ -42893,6 +43121,7 @@ msgid ""
 "enforcing at least one review of suggested changes before they're applied on"
 " a production |BOM|."
 msgstr ""
+"さらに、各段階に必要な承認者を追加することができ、設計変更オーダが承認者にレビューされ、設計変更オーダが承認されるまで、生産部品表への変更が実行されないようにすることができます。これにより、生産部品表に変更が適用される前に、提案された変更を少なくとも1回レビューすることが義務付けられ、生産部品表のエラーが防止されます。"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:68
 msgid ""
@@ -42901,16 +43130,20 @@ msgid ""
 "|ECOs| that have been either cancelled or approved for use as the next "
 "production |BOM|."
 msgstr ""
+"ベストプラクティスとしては、少なくとも1つの *検証* 段階 (承認者が必要な段階) と、1つのクローズ段階 "
+"(取消または製造をクローズするための承認済の設計変更オーダを保管する段階) が必要です。"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:73
 msgid "Create stage"
-msgstr ""
+msgstr "ステージを作成する"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:75
 msgid ""
 "To add a stage, go to the :menuselection:`PLM` app and select the intended "
 "project for an |ECO| type from the :guilabel:`PLM Overview` dashboard."
 msgstr ""
+"ステージを追加するには、:menuselection:`製品ライフサイクル管理` アプリに移動し、:guilabel:`製品ライフサイクル管理概要` "
+"ダッシュボードから設計変更オーダの対象プロジェクトを選択します。"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:78
 msgid ""
@@ -42919,6 +43152,9 @@ msgid ""
 "box to fill in the name of the stage. After filling it in, click the "
 ":guilabel:`Add` button to finish adding the stage."
 msgstr ""
+"次に、 :guilabel:`設計変更オーダ` タイプのプロジェクトパイプラインで、 :guilabel:`+ステージ` ボタンをクリックします。 "
+"そうすると、ステージの名前を入力するテキストボックスが表示されます。 入力後、 :guilabel:`追加`  "
+"ボタンをクリックしてステージの追加を完了します。"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:83
 msgid ""
@@ -42926,20 +43162,24 @@ msgid ""
 " the `New` stage. Adding another stage helps the product manager track "
 "unassigned tasks."
 msgstr ""
+"新しい `割当済` ステージは、`新規` ステージで割当済みの設計変更オーダと未割当ての設計変更オーダを分離します。 "
+"ステージを追加することで、プロダクトマネジャーは未割当てのタスクを追跡しやすくなります。"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:0
 msgid "Create a new stage in a project for an ECO type."
-msgstr ""
+msgstr "設計変更オーダタイプのプロジェクトで新しいステージを作成します。"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:91
 msgid "Verification stage"
-msgstr ""
+msgstr "検証ステージ"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:93
 msgid ""
 "Click an ECO type from :menuselection:`PLM app --> Overview` to open a "
 "kanban view of |ECOs| of this type."
 msgstr ""
+":menuselection:`製品ライフサイクル管理アプリ --> 概要` "
+"から設計変更タイプをクリックすると、そのタイプの設計変更オーダのかんばんビューが開きます。"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:96
 msgid ""
@@ -42947,12 +43187,15 @@ msgid ""
 " the :guilabel:`⚙️ (gear)` icon. Then, click :guilabel:`Edit` to open a pop-"
 "up window."
 msgstr ""
+"検証ステージを設定するには、対象のステージにカーソルを合わせ、:guilabel:`⚙️ (歯車)` "
+"アイコンを選択します。次に、:guilabel:`編集` をクリックしてポップアップウィンドウを開きます。"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:99
 msgid ""
 "Configure the verification stage in the edit stage pop-up window, by "
 "checking the box for :guilabel:`Allow to apply changes`."
 msgstr ""
+"編集ステージのポップアップウィンドウで、 :guilabel:`変更を適用する` のチェックボックスをオンにして、検証ステージを設定します。"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:102
 msgid ""
@@ -42960,12 +43203,15 @@ msgid ""
 ":guilabel:`Add a line`, and specifying the :guilabel:`Role` of the reviewer,"
 " their :guilabel:`User`, and :guilabel:`Approval Type`."
 msgstr ""
+"次に、:guilabel:`承認者` セクションに承認者を追加します。:guilabel:`明細追加` をクリックし、承認者の "
+":guilabel:`役割`、:guilabel:`ユーザ`、:guilabel:`承認タイプ` を指定します。"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:106
 msgid ""
 "Make sure at least one approver is configured with the :guilabel:`Approval "
 "Type`: :guilabel:`Is required to approve`."
 msgstr ""
+"少なくとも1人の承認者が、:guilabel:`承認タイプ`: :guilabel:`承認が必要` として設定されていることを確認して下さい。"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:109
 msgid ""
@@ -42973,6 +43219,8 @@ msgid ""
 " stage specified in the pop-up window. Once finished, click :guilabel:`Save "
 "& Close`."
 msgstr ""
+"ポップアップウィンドウで指定したステージに設計変更オーダがドロップされると、承認者リストに表示されている承認者に自動的に通知されます。完了したら、:guilabel:`保存して閉じる`"
+" をクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:113
 msgid ""
@@ -42981,6 +43229,9 @@ msgid ""
 "selecting :guilabel:`Edit`. Doing so opens the :guilabel:`Edit: Validated` "
 "pop-up window."
 msgstr ""
+"設計変更オーダの `新規プロダクト導入` では、検証段階 `検証済` は、:guilabel:`⚙️ (歯車)` "
+"アイコンをクリックし、:guilabel:`編集` を選択することで設定できます。 そうすると、:guilabel:`編集:検証済` "
+"ポップアップウィンドウが開きます。"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:117
 msgid ""
@@ -42988,20 +43239,22 @@ msgid ""
 "this user can proceed to the next stage, and have the changes applied on the"
 " production |BOM|."
 msgstr ""
+"`エンジニアリングマネジャー` "
+"を承認者として追加することで、このユーザが承認した設計変更オーダのみが次の段階に進み、生産部品表に変更が適用されるようになります。"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:120
 msgid ""
 "Additionally, check the :guilabel:`Allow to apply changes` option to ensure "
 "proper behavior."
-msgstr ""
+msgstr "さらに、適切な動作を確保するために、:guilabel:`変更適用を許可` オプションをチェックして下さい。"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:0
 msgid "Show \"Allow to apply changes\" option is checked."
-msgstr ""
+msgstr " \"変更適用を許可\" オプションがチェックされている状態"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:127
 msgid "Closing stage"
-msgstr ""
+msgstr "クロージングステージ"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:129
 msgid ""
@@ -43010,6 +43263,9 @@ msgid ""
 "(gear)` icon that appears in the top-right corner. Then, click "
 ":guilabel:`Edit` from the drop-down menu."
 msgstr ""
+":guilabel:`編集: [ステージ]` ポップアップウィンドウを開いて、終了ステージを設定します。 "
+"これを行うには、対象のステージにカーソルを合わせて、右上に表示される :guilabel:`⚙️ (歯車)` アイコンをクリックします。 "
+"次に、ドロップダウンメニューから :guilabel:`編集` をクリックします。"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:133
 msgid ""
@@ -43017,6 +43273,9 @@ msgid ""
 ":guilabel:`Folded in kanban view`, :guilabel:`Allow to apply changes` and "
 ":guilabel:`Final Stage`."
 msgstr ""
+":guilabel:`編集: [ステージ]` "
+"ポップアップウィンドウで、:guilabel:`かんばんビューで折りたたむ`、:guilabel:`変更適用を許可`、:guilabel:`最終ステージ`"
+" のチェックボックスを選択します。"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:137
 msgid ""
@@ -43024,14 +43283,17 @@ msgid ""
 ":guilabel:`Folded in kanban view`, :guilabel:`Allow to apply changes`, and "
 ":guilabel:`Final Stage` options"
 msgstr ""
+"終了段階の `有効` "
+"は、:guilabel:`かんばんビューで折りたたむ`、:guilabel:`変更適用を許可`、:guilabel:`最終ステージ` "
+"のオプションにチェックを入れることで設定されます。"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst-1
 msgid "Show configurations of the closing stage."
-msgstr ""
+msgstr "クロージングステージの設定を表示"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/engineering_change_orders.rst:3
 msgid "Engineering change orders"
-msgstr ""
+msgstr "設計変更オーダ"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/engineering_change_orders.rst:12
 msgid ""
@@ -43039,20 +43301,23 @@ msgid ""
 " change versions made to products, and :doc:`bills of materials "
 "<../../manufacturing/basic_setup/bill_configuration>`."
 msgstr ""
+"*設計変更指示* (*ECO*） を活用することで、プロダクトや  :doc:`部品表 "
+"<../../manufacturing/basic_setup/bill_configuration>` "
+"に対して行われた変更のバージョンを追跡・実施・元に戻すことができます。"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/engineering_change_orders.rst:15
 msgid "Engineering change orders can be created:"
-msgstr ""
+msgstr "設計変更オーダは以下の用法で作成することができます:"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/engineering_change_orders.rst:17
 msgid ":ref:`directly in the ECO type <plm/eco/create-eco>`."
-msgstr ""
+msgstr ":ref:`設計変更タイプで直接 <plm/eco/create-eco>` 作成する"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/engineering_change_orders.rst:18
 msgid ""
 "by an operator in the :ref:`tablet view <plm/eco/tablet-view>` of an "
 "operation."
-msgstr ""
+msgstr "オペレーションの :ref:`タブレットビュー <plm/eco/tablet-view>` で作業者が作成する。"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/engineering_change_orders.rst:19
 msgid ""
