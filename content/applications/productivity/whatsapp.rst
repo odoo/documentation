@@ -52,6 +52,9 @@ number), then Odoo will open a group chat with all operators responsible for thi
    It is recommended to set up multiple WhatsApp accounts for different departments. For example,
    the help desk team and sales teams can chat on different channels.
 
+.. seealso::
+   :download:`Magic Sheet - WhatsApp configuration PDF <whatsapp/magic-sheet-whatsapp.pdf>`
+
 WhatsApp configuration in a Meta
 ================================
 
