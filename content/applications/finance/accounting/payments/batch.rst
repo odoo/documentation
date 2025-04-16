@@ -6,8 +6,8 @@ Batch payments allow grouping payments from multiple customers or vendors into a
 generating a detailed deposit slip or payment file with a batch reference. This reference can be
 used during :doc:`reconciliation <../bank/reconciliation>` to match bank transactions with the
 corresponding payments. This feature is particularly useful for submitting :doc:`SEPA Direct Debit
-payments <batch_sdd>`, depositing cash payments or :doc:`checks <checks>`, or generating outgoing
-payment files, such as :doc:`SEPA <pay_sepa>` or :ref:`NACHA <l10n_us/nacha>`.
+payments <batch_sdd>`, depositing cash payments or :ref:`checks <accounting/payments/checks>`, or
+generating outgoing payment files, such as :doc:`SEPA <pay_sepa>` or :ref:`NACHA <l10n_us/nacha>`.
 
 Configuration
 =============

@@ -55,6 +55,40 @@ invoice payments or for vendor bill payments in the :guilabel:`Purchase` section
    view by removing the :guilabel:`Customers` or :guilabel:`Vendors` filter. Alternatively, access
    the full contact list through the Contacts app.
 
+.. _accounting/payments/checks:
+
+Checks
+------
+
+:doc:`Vendor bills can be paid by check <payments/pay_checks>` using a dedicated outgoing payment
+method, which allows check numbers to be tracked and checks to be printed directly from Odoo.
+
+For incoming customer check payments, you can use the default :guilabel:`Manual Payment` payment
+method, or you can create a payment method specifically for checks to help identify such payments
+quickly. To create a *Check* payment method, follow these steps:
+
+#. Go to :menuselection:`Accounting --> Configuration --> Journals` and select the :guilabel:`Bank`
+   journal.
+#. In the :guilabel:`Incoming Payments` tab, click :guilabel:`Add a line`.
+#. As :guilabel:`Payment Method`, select :guilabel:`Manual`, then enter `Check` as the
+   :guilabel:`Name`.
+
+When registering a customer payment :ref:`on an invoice <accounting/payments/from-invoice-bill>` or
+:ref:`not related to an invoice <accounting/payments/not-tied>`, use the new :guilabel:`Check`
+payment method.
+
+.. note::
+   Registering a customer payment by check in Odoo does not move funds. Checks must be deposited in
+   order to make the payment. Once deposited to your bank, the check should appear as a :doc:`bank
+   transaction <bank/transactions>`, at which point it can be :doc:`reconciled
+   <bank/reconciliation>` with the registered payment.
+
+.. tip::
+   - For best practice, enter the check number as the :guilabel:`Memo` when registering a customer
+     payment by check.
+   - :doc:`Batch payments <payments/batch>` can simplify reconciling deposits containing multiple
+     checks.
+
 .. _accounting/payments/from-invoice-bill:
 
 Registering payment from an invoice or bill
@@ -285,9 +319,9 @@ Registering a single payment for multiple customers or vendors (batch payments)
 ===============================================================================
 
 Batch payments allow grouping payments from multiple customers to ease :doc:`reconciliation
-<bank/reconciliation>`. They are also useful when depositing :doc:`checks <payments/checks>` or
-cash payments to the bank or for generating bank payment files such as :doc:`SEPA
-<payments/pay_sepa>` or :ref:`NACHA <l10n_us/nacha>`.
+<bank/reconciliation>`. They are also useful when depositing :ref:`checks
+<accounting/payments/checks>` or cash payments to the bank or for generating bank payment files such
+as :doc:`SEPA <payments/pay_sepa>` or :ref:`NACHA <l10n_us/nacha>`.
 
 .. seealso::
    :doc:`payments/batch`
@@ -366,7 +400,6 @@ Reconciling payments with bank transactions
    :titlesonly:
 
    payments/online
-   payments/checks
    payments/batch
    payments/batch_sdd
    payments/follow_up
