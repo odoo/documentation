@@ -4,27 +4,27 @@
 Frontdesk
 =========
 
-The Odoo *Frontdesk* application provides a way for visitors to check in to a building or location,
-and alert the person they are meeting about their arrival. Additionally, they can request a
-pre-configured beverage to be brought to them, while they wait.
+The Odoo **Frontdesk** application provides a way for visitors to check in to a building or
+location, and alert the person they are meeting about their arrival. Additionally, they can request
+a preconfigured beverage to be brought to them, while they wait.
 
 This application is ideal for businesses that do **not** have someone working at a reception desk,
-locations **without** a designated waiting area available to guests and visitors.
+or locations **without** a designated waiting area available to guests and visitors.
 
 Configuration
 =============
 
-The first item to configure with the *Frontdesk* application is the station, followed by any drink
+The first item to configure with the **Frontdesk** application is the station, followed by any drink
 selections that might optionally be offered.
 
 Stations
 --------
 
-In Odoo's *Frontdesk* application, a *Station* can be thought of as any location where someone can
+In Odoo's **Frontdesk** application, a *Station* can be thought of as any location where someone can
 sign in and wait for an employee. This is typically some form of waiting room, such as a lobby. Each
 station has a kiosk where visitors check in.
 
-When setting up the *Frontdesk* application, a minimum of one station **must** be configured, but
+When setting up the **Frontdesk** application, a minimum of one station **must** be configured, but
 there is no limit to how many stations can be created and configured.
 
 To create a station, navigate to :menuselection:`Frontdesk app --> Configuration --> Stations`, and
@@ -32,9 +32,9 @@ click :guilabel:`New`. When clicked, a blank frontdesk form appears.
 
 Enter the following information on the form:
 
-- :guilabel:`Frontdesk Name`: enter a name for the specific frontdesk location. This should be
-  short and easily identifiable, such as `Reception Desk` or `Main Lobby`. This field is required in
-  order to create a station.
+- :guilabel:`Frontdesk Name`: enter a name for the specific frontdesk location. This should be short
+  and identifiable, such as `Reception Desk` or `Main Lobby`. This field is required in order to
+  create a station.
 - :guilabel:`Responsibles`: select the person (or persons) who are alerted when a visitor checks in
   using this specific frontdesk. Multiple selections can be entered. This field is required in order
   to create a station.
@@ -110,10 +110,10 @@ Options tab
   end of the line, and make any desired edits to the content of the template. The SMS message may
   have a maximum of 242 characters, which fits in 4 SMS (UNICODE) messages.
 - :guilabel:`Notify by Discuss`: this option is enabled by default when the :guilabel:`Host
-  Selection` option is enabled. This option opens a *Discuss* application message window with the
+  Selection` option is enabled. This option opens a **Discuss** application message window with the
   person the guest is visiting upon check in.
 
-  When enabled, a default message appears for the person the guest is visiting. The *Discuss*
+  When enabled, a default message appears for the person the guest is visiting. The **Discuss**
   application **must** be installed in order for this option to work.
 
 .. note::
@@ -125,11 +125,10 @@ Options tab
    The default message format for the :guilabel:`Notify by Discuss` option is: `(Frontdesk Station)
    Check-In: (Guest Name) (Guest Phone Number) (Organization) to meet (Name of employee).`
 
-   An example of how that might appear in a *Discuss* message is: `Main Lobby Check-In: John Doe
-   (123-555-1234) (Odoo, Inc.) to meet Marc Demo.`
+   An example of how that might appear in a **Discuss** message is: `Main Lobby Check-In: John Doe
+   (555-555-5555) (Odoo, Inc.) to meet Marc Demo.`
 
 .. image:: frontdesk/station-form.png
-   :align: center
    :alt: Frontdesk station form with all the information filled out.
 
 Side Message tab
@@ -145,7 +144,7 @@ Drinks
 ------
 
 After a station is created, the next step is to configure the drinks to offer visitors, if desired.
-This step is **not** necessary or required for the *Frontdesk* application to work, and only needs
+This step is **not** necessary or required for the **Frontdesk** application to work, and only needs
 to be configured if drinks are offered to guests.
 
 To add a drink option, navigate to :menuselection:`Frontdesk app --> Configuration --> Drinks`, and
@@ -171,7 +170,6 @@ Enter the following information on the drink form:
    The image selected now appears in the picture field, and is set as the image for the drink.
 
 .. image:: frontdesk/espresso.png
-   :align: center
    :alt: Drink form with the information filled out for an espresso.
 
 Station dashboard
@@ -196,20 +194,24 @@ dedicated device for each frontdesk kiosk, such as a tablet.
 
 Navigate to the kiosk in one of two ways:
 
-- Navigate to the main *Frontdesk* application dashboard, and click the :guilabel:`Open Desk`
+- Navigate to the main **Frontdesk** application dashboard, and click the :guilabel:`Open Desk`
   button on the desired station card. The kiosk loads in a new browser tab.
 - Navigate to :menuselection:`Frontdesk app --> Configuration --> Stations`, and click on the
   desired station. Then, click the :guilabel:`Copy` button at the end of the :guilabel:`Kiosk URL`
   line, and paste the URL into a new browser tab or window.
 
 .. important::
-   It is recommended to log out of the database, and close the tab, after navigating to the kiosk.
-   That way, there is no possibility of a visitor accessing the database when checking-in.
+   Once a frontdesk kiosk is accessed, either with the :guilabel:`Open Desk` button or the
+   :guilabel:`Kiosk URL`, the user is *automatically signed out of the database* on that specific
+   device.
+
+   This is a security measure designed to prevent unauthorized access to the database.
 
 Reporting
 =========
 
-The *Frontdesk* application has two reports available: :guilabel:`Visitors` and :guilabel:`Drinks`.
+The **Frontdesk** application has two reports available: :guilabel:`Visitors` and
+:guilabel:`Drinks`.
 
 To access either of these reports, navigate to :menuselection:`Frontdesk app --> Reporting` to
 reveal a drop-down menu containing the options: :guilabel:`Visitors` and :guilabel:`Drinks`.
