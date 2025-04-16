@@ -46,6 +46,10 @@ either with Odoo’s email servers or an external one.
 This section assumes ownership of a custom domain. If not, a custom domain must be purchased from a
 domain registrar such as GoDaddy, Namecheap, or any alternative provider.
 
+.. seealso::
+   :download:`Magic Sheet - Email domain configuration PDF
+   <email_servers_outbound/magic-sheet-email-domain.pdf>`
+
 .. _email-outbound-custom-domain-odoo-server:
 
 Using a custom domain with Odoo’s email server
