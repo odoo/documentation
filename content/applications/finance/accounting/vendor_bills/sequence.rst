@@ -3,8 +3,8 @@ Vendor bill sequence
 ====================
 
 When confirming a vendor bill, Odoo generates a unique vendor bill reference number. By default, it
-uses the following sequence format `BILL/year/month/incrementing-number` (e.g.,
-`BILL/2025/01/00001`), which restarts from `00001` each year.
+uses the sequence format `BILL/year/month/incrementing-number` (e.g., `BILL/2025/01/00001`), which
+restarts from `00001` each year.
 
 However, it is possible to :ref:`change the sequence format <accounting/vendor_bills/resequencing>`
 and its periodicity, and to :ref:`mass-resequence vendor bills
@@ -60,7 +60,26 @@ Follow these steps to resequence vendor bill numbers:
 #. Set the :guilabel:`First New Sequence`.
 #. :guilabel:`Preview Modifications` and click :guilabel:`Confirm`.
 
-The first vendor bill using the new sequence appears in red in the :guilabel:`Bills` list view.
-
 .. image:: sequence/sequence-bill-sequencing.png
    :alt: Resequence options window
+
+.. note::
+   - To indicate where the sequence change began, the first vendor bill in the new sequence is
+     highlighted in red in the :guilabel:`Vendor Bills` list. This visual marker is permanent
+     and purely informational.
+   - If there are any irregularities in the new sequence, such as gaps, cancelled, or deleted
+     entries within the open period, a :guilabel:`Gaps in the sequence` message appears in the
+     :guilabel:`Vendor Bills` journal on the Accounting dashboard. To view more details about the
+     related vendor bill(s), click :guilabel:`Gaps in the sequence`. This visual marker is temporary
+     and will disappear once the entry's accounting date is on or after the lock date.
+
+.. tip::
+   Resequencing is not possible:
+
+   - When entries are before a lock date.
+   - When the sequence leads to a duplicate.
+   - When the range is invalid. For example, if the :guilabel:`Bill Date` doesn't align with the
+     date in the new sequence, such as using a 2024 sequence (BILL/2024/MM/XXXX) for an vendor bill
+     dated in 2025.
+
+   In these cases, a :guilabel:`Validation Error` message appears.
