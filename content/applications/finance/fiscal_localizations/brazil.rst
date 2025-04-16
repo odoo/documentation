@@ -10,7 +10,7 @@ Introduction
 ============
 
 With the Brazilian localization, sales taxes can be automatically computed and electronic invoices
-for goods (NF-e) and services (NFS-e) can be sent using AvaTax (Avalara) through |API| calls.
+for goods (NF-e) and services (NFS-e) can be sent using AvaTax (Avalara) through |API| calls
 Moreover, taxes for services can be configured.
 
 For the goods and services tax computation and electronic invoicing process, you need to configure
