@@ -11,8 +11,8 @@ local payment methods.
 Configuration on the Xendit Dashboard
 =====================================
 
-#. Create a Xendit account if necessary and log in to the `Xendit Dashboard
-   <https://dashboard.xendit.co>`_.
+#. `Register <https://dashboard.xendit.co/register/1?referral_code=odooid&country_code=ID>_` a Xendit
+   account if necessary and log in to the `Xendit Dashboard <https://dashboard.xendit.co>`_.
 #. Check your account mode in the top left corner of the page. Use the :guilabel:`Test Mode` to try
    the integration without charging your customers. Switch to :guilabel:`Live Mode` once you are
    ready to accept payments.
