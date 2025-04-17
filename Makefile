@@ -27,7 +27,7 @@ SOURCE_DIR     = content
 
 HTML_BUILD_DIR = $(BUILD_DIR)/html
 ifdef VERSIONS
-  HTML_BUILD_DIR := $(HTML_BUILD_DIR)/master
+  HTML_BUILD_DIR := $(HTML_BUILD_DIR)/saas-18.3
 endif
 ifneq ($(CURRENT_LANG),en)
   HTML_BUILD_DIR := $(HTML_BUILD_DIR)/$(CURRENT_LANG)
