@@ -134,6 +134,8 @@ a Custom Font` at the bottom of the dropdown menu. In the pop-up window:
 
 Once done, click on :guilabel:`Save and Reload`.
 
+.. _website/themes/button-styles:
+
 Button styles
 =============
 
@@ -143,6 +145,7 @@ To customize the style of your website's primary and secondary buttons, navigate
 - Click the arrow next to the :guilabel:`Primary Style` or :guilabel:`Secondary Style` fields and
   select one of the available styles for each type of button: :guilabel:`Fill`, :guilabel:`Outline`,
   or :guilabel:`Flat`. When selecting :guilabel:`Outline`, the :guilabel:`Border Width` option
+  appears below, allowing you to adjust the width of the button's outline.
 - :ref:`Modify the fonts <website/themes/fonts>`.
 - Adjust the :guilabel:`Padding` to change the size of the spacing (in pixels) around the buttons'
   labels.
