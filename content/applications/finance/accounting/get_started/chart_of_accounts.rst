@@ -54,45 +54,45 @@ Correctly configuring the **account type** is critical as it serves multiple pur
 To configure an account type, open the :guilabel:`Type` field's drop-down selector and select the
 corresponding type from the following list:
 
-+---------------+--------------+-------------------------+
-| Report        | Category     | Account Types           |
-+===============+==============+=========================+
-| Balance Sheet | Assets       | Receivable              |
-|               |              +-------------------------+
-|               |              | Bank and Cash           |
-|               |              +-------------------------+
-|               |              | Current Assets          |
-|               |              +-------------------------+
-|               |              | Non-current Assets      |
-|               |              +-------------------------+
-|               |              | Prepayments             |
-|               |              +-------------------------+
-|               |              | Fixed Assets            |
-|               +--------------+-------------------------+
-|               | Liabilities  | Payable                 |
-|               |              +-------------------------+
-|               |              | Credit Card             |
-|               |              +-------------------------+
-|               |              | Current Liabilities     |
-|               |              +-------------------------+
-|               |              | Non-current Liabilities |
-|               +--------------+-------------------------+
-|               | Equity       | Equity                  |
-|               |              +-------------------------+
-|               |              | Current Year Earnings   |
-+---------------+--------------+-------------------------+
-| Profit & Loss | Income       | Income                  |
-|               |              +-------------------------+
-|               |              | Other Income            |
-|               +--------------+-------------------------+
-|               | Expense      | Expense                 |
-|               |              +-------------------------+
-|               |              | Depreciation            |
-|               |              +-------------------------+
-|               |              | Cost of Revenue         |
-+---------------+--------------+-------------------------+
-|Other          | Other        | Off-Balance Sheet       |
-+---------------+--------------+-------------------------+
++---------------+-------------+-------------------------+-----------------------------------------------------------------------------------------------------------------+
+| Report        | Category    | Account Types           | Description                                                                                                     |
++===============+=============+=========================+=================================================================================================================+
+| Balance Sheet | Assets      | Receivable              | Money owed to the company by customers for goods or services delivered                                          |
+|               |             +-------------------------+-----------------------------------------------------------------------------------------------------------------+
+|               |             | Bank and Cash           | Funds held in company bank accounts or on hand as cash                                                          |
+|               |             +-------------------------+-----------------------------------------------------------------------------------------------------------------+
+|               |             | Current Assets          | Short-term assets expected to be converted into cash within a year                                              |
+|               |             +-------------------------+-----------------------------------------------------------------------------------------------------------------+
+|               |             | Non-current Assets      | Long-term assets not expected to be converted to cash within a year                                             |
+|               |             +-------------------------+-----------------------------------------------------------------------------------------------------------------+
+|               |             | Prepayments             | Payments made in advance for goods or services to be received in the future                                     |
+|               |             +-------------------------+-----------------------------------------------------------------------------------------------------------------+
+|               |             | Fixed Assets            | Tangible long-term assets like buildings, machinery, and vehicles used in operation and subject to depreciation |
+|               +-------------+-------------------------+-----------------------------------------------------------------------------------------------------------------+
+|               | Liabilities | Payable                 | Money the company owes to suppliers or vendors                                                                  |
+|               |             +-------------------------+-----------------------------------------------------------------------------------------------------------------+
+|               |             | Credit Card             | Balances and transactions associated with company credit card usage                                             |
+|               |             +-------------------------+-----------------------------------------------------------------------------------------------------------------+
+|               |             | Current Liabilities     | Obligations due within one year, such as short-term loans or accrued expenses                                   |
+|               |             +-------------------------+-----------------------------------------------------------------------------------------------------------------+
+|               |             | Non-current Liabilities | Long-term debts and financial obligations due beyond one year                                                   |
+|               +-------------+-------------------------+-----------------------------------------------------------------------------------------------------------------+
+|               | Equity      | Equity                  | The owner's residual interest in the company after liabilities are deducted from assets                         |
+|               |             +-------------------------+-----------------------------------------------------------------------------------------------------------------+
+|               |             | Current Year Earnings   | The company's net profit or loss accumulated in the current fiscal year                                         |
++---------------+-------------+-------------------------+-----------------------------------------------------------------------------------------------------------------+
+| Profit & Loss | Income      | Income                  | Revenue generated from the company's primary business activities                                                |
+|               |             +-------------------------+-----------------------------------------------------------------------------------------------------------------+
+|               |             | Other Income            | Revenue from secondary or non-operational sources, like interest or asset sales                                 |
+|               +-------------+-------------------------+-----------------------------------------------------------------------------------------------------------------+
+|               | Expense     | Expense                 | Costs incurred during operations to generate revenue                                                            |
+|               |             +-------------------------+-----------------------------------------------------------------------------------------------------------------+
+|               |             | Depreciation            | The allocation of the cost of tangible assets over their useful life                                            |
+|               |             +-------------------------+-----------------------------------------------------------------------------------------------------------------+
+|               |             | Cost of Revenue         | Direct costs attributable to the production or delivery of goods and services                                   |
++---------------+-------------+-------------------------+-----------------------------------------------------------------------------------------------------------------+
+| Other         | Other       | Off-Balance Sheet       | Transactions not displayed on the balance sheet or profit and loss report                                       |
++---------------+-------------+-------------------------+-----------------------------------------------------------------------------------------------------------------+
 
 Assets
 ~~~~~~
@@ -156,18 +156,12 @@ and select :guilabel:`Hierarchy and Subtotals`.
 Allow reconciliation
 --------------------
 
-Some accounts, such as accounts made to record the transactions of a payment method, can be used for
-the reconciliation of journal entries.
+To keep the reconciliation process simple, when reconciling a bank, cash, or credit card transaction
+with an existing journal item, only journal items that debit or credit accounts with the
+:guilabel:`Allow reconciliation` option enabled are displayed as possible matches.
 
-For example, an invoice paid with a credit card can be marked as :guilabel:`paid` if reconciled with
-its payment. Therefore, the account used to record credit card payments needs to be configured as
-**allowing reconciliation**.
-
-To do so, check the :guilabel:`Allow Reconciliation` box in the account's settings, and
-:guilabel:`Save`; or enable the button from the chart of accounts view.
-
-.. image:: chart_of_accounts/chart-of-accounts-reconciliation.png
-   :alt: Allow reconciliation for accounts in Odoo Accounting
+To enable this option on an account, tick the :guilabel:`Allow Reconciliation` checkbox in the
+account's settings, and :guilabel:`Save`; or enable the button from the chart of accounts view.
 
 .. _coa_shared_accounts:
 
