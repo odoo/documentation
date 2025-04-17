@@ -115,7 +115,7 @@ Duplicating pages
 To duplicate a page, access the page, then go to :menuselection:`Site --> Properties` and click
 :guilabel:`Duplicate Page`. Enter a :guilabel:`Page Name`, then click :guilabel:`OK`. By default,
 the new page is added after the duplicated page in the menu, but you can remove it from the menu or
-change its position using the :doc:`menu editor <pages/menus>`.
+change its position using the :doc:`menu editor <pages/header_footer>`.
 
 .. _website/delete-page:
 
@@ -195,5 +195,5 @@ Toggle the :guilabel:`Activate` switch to deactivate the redirection.
 .. toctree::
    :titlesonly:
 
-   pages/menus
+   pages/header_footer
    pages/seo
