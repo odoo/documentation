@@ -582,21 +582,22 @@ journal, and click the :menuselection:`⚙️ (gear) icon --> Invalidate Number 
    journal.
 
 PoS NFC-e
-------------
+---------
 The NFC-e in Brazil is a legal document that supports the selling of goods or merchandise for Final Consumer.
 Just like the NF-e, the Electronic Consumer Invoice is also issued in XML file format and has an auxiliary document (DANFC-e) also known as the “NFC-e Summary”.
 This electronic document can be issued through Odoo POS app.
 Its legal validity is guaranteed by the digital signature and by SEFAZ (Secretaria da Fazenda) of each brazilian state.
 
 Configuration
-~~~~~~~~
+~~~~~~~~~~~~~
+
 Download New Module: Install the new module: :guilabel:`l10nbr_edi_pos`.
 
 .. image:: brazil/l10n-br-new-module.png
    :alt: NFC-e Module
 
 CSC Details
-~~~~~~~~
+~~~~~~~~~~~
 
 Navigate to :guilabel:`Accounting` ‣ :guilabel:`Configuration` ‣ :guilabel:`Settings` ‣ :guilabel:`Avatax Brazil` section.
 .. image:: brazil/l10n-br-csc-fields.png
@@ -610,7 +611,8 @@ These information can be generated through :guilabel:`SEFAZ Website` of each bra
 
 
 Product Configuration
-~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+
 Navigate to :guilabel:`Products` ‣ :guilabel:`Products` ‣ :guilabel:`New`
 :guilabel:`Activate the “Point of Sale” checkbox on the product form:`
 .. image:: brazil/l10n-br-new-product.png
@@ -629,7 +631,7 @@ Enter the information on the following fields:
 Click on :guilabel:`Save`.
 
 Shop Configuration
-~~~~~~~~
+~~~~~~~~~~~~~~~~~~
 
 Navigate to :guilabel:`Point of Sale` ‣ :guilabel:`Configuration` ‣ :guilabel:`Point of sales` ‣ :guilabel:`Create a new Point of Sale`
 .. image:: brazil/l10n-br-new-shop.png
@@ -658,7 +660,7 @@ Enter the following NFC-e informations:
 `For the production environment, make sure that this information is updated.`
 
 Generating an NFC-e
-~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
 
 Open the Shop and make a sale.
 
@@ -668,7 +670,7 @@ After validating the payment, Odoo will calculate taxes and issue an NFC-e. The 
    :alt: NFC-e Success
 
 .. note:: 
-`It’s also possible to issue NFC-e identifying the customer by their CPF/CNPJ, just click on guilabel:`Customer` button, then search for the customer if it’s already registered or click on guilabel:`Create` option.`
+It’s also possible to issue NFC-e identifying the customer by their CPF/CNPJ, just click on guilabel:`Customer` button, then search for the customer if it’s already registered or click on guilabel:`Create` option.
 
 .. image:: brazil/l10n-br-customer-button.png
    :alt: Point of Sale Creating New Customer
@@ -687,40 +689,41 @@ At this point, there’s two options to deliver the invoice to the customer:
 guilabel:`Print`
 guilabel:`Send via e-mail`
 
-*******
 NFC-e Ticket Print
-~~~~~~~~
+~~~~~~~~~~~~~~~~~~
+
 This is the DANFC-e, the print of NFC-e when it is successfully issued and showing all the important information that is legally required.
 
 .. image:: brazil/l10n-br-nfc-e-print.png
    :alt: NFC-e Print
 
 .. note:: 
-`guilabel:`Tips`
+guilabel:`Tips`
 There’s no need to use Odoo IotBox to integrate the print NFC-e through the Point of Sale app.
-Odoo NFC-e Feature works with any thermal printer.`
-*******
+Odoo NFC-e Feature works with any thermal printer.
 
 Re-issue PoS Order with NFC-e error
-~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If the NFC-e return an error, you can see the error message and after the error get fixed, it can be issued again:
-Inside the Shop Screen, navigate to guilabel:`Options` ‣  guilabel:`Orders` 
+Inside the Shop Screen, navigate to guilabel:`Options` ‣ guilabel:`Orders`. 
 .. image:: brazil/l10n-br-shop-selecting-orders.png
    :alt: Access Orders on Shop
+
 Filter for guilabel:`Paid Orders` ‣  Click on the guilabel:`Details` Button. Now you can see the Error and the button to “Send NFC-e”.
 .. image:: brazil/l10n-br-order-error-screen.png
    :alt: Point of sale order view form
 
 .. note:: 
-`If the error fix is already done and the PoS Session is closed, it shows the Journal Entry of that order indicating that the taxes weren’t calculated correctly and after reprocessing the NFC-e, Odoo indicates the tax adjustment on that Journal Entry in the chatter.`
+If the error fix is already done and the PoS Session is closed, it shows the Journal Entry of that order indicating that the taxes weren’t calculated correctly and after reprocessing the NFC-e, Odoo indicates the tax adjustment on that Journal Entry in the chatter.
 
 NFC-e Refunds & Cancellations
-~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 The current scope of Odoo allows you to create refunds from Odoo, but cancellations need to be done on the government portal.
 
 .. note:: 
-`SEFAZ only allows users to cancel an NFC-e within 30 minutes after it has been issued directly on the SEFAZ Website. After this time, you need to make a Refund and issue a Return of Goods NF-e.`
+SEFAZ only allows users to cancel an NFC-e within 30 minutes after it has been issued directly on the SEFAZ Website. After this time, you need to make a Refund and issue a Return of Goods NF-e.
 
 Navigate to guilabel:`Orders` ‣ guilabel:`Paid Orders` ‣ guilabel:`Open the order` ‣ guilabel:`Click “Refund” button`
 
@@ -733,8 +736,8 @@ Choose the payment method, amount, then click “Payment”
    :alt: Make Payment Refund
 
 .. note:: 
-`guilabel:`Alternative Flow`
-- You can also reimburse and cancel the NFC-e through back-end navigating to guilabel:`Orders` ‣ guilabel:`Orders` ‣ guilabel:`Open the Order` ‣ guilabel:`Select a customer` ‣ Click the button guilabel:`“Payment”` to reimburse ‣ Then click the button guilabel:`“Invoice”` at the top of the screen to create the invoice and issue the Return of Goods NF-e.`
+guilabel:`Alternative Flow`
+- You can also reimburse and cancel the NFC-e through back-end navigating to guilabel:`Orders` ‣ guilabel:`Orders` ‣ guilabel:`Open the Order` ‣ guilabel:`Select a customer` ‣ Click the button guilabel:`“Payment”` to reimburse ‣ Then click the button guilabel:`“Invoice”` at the top of the screen to create the invoice and issue the Return of Goods NF-e.
 
 When the process is finalized, the approved return NF-e will be created, meaning the previous NFC-e is canceled.
 
