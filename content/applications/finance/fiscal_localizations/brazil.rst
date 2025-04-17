@@ -602,15 +602,12 @@ Navigate to :guilabel:`Accounting` ‣ :guilabel:`Configuration` ‣ :guilabel:`
 .. image:: brazil/l10n-br-csc-fields.png
    :alt: CSC Fields
 
-
-
 Ensure to enter the :guilabel:`CSC (Taxpayer Security Code)` information:
 :guilabel:`CSC ID`
 :guilabel:`CSC Number`
 
-
 These information can be generated through :guilabel:`SEFAZ Website` of each brazilian state by the company’s accountant.
-*******
+
 
 Product Configuration
 ~~~~~~~~
@@ -630,7 +627,6 @@ Enter the information on the following fields:
 **SPED Fiscal Product Type**
 **Purpose of Use**
 Click on :guilabel:`Save`.
-*******
 
 Shop Configuration
 ~~~~~~~~
@@ -648,7 +644,6 @@ Make sure that the correct Point of Sale is selected on the top of the screen
 .. image:: brazil/l10n-br-select-right-shop.png
    :alt: Point of sale configuration settings
 
-
 Enter the following NFC-e informations:
 **Series**
 **Next number**
@@ -662,7 +657,6 @@ Enter the following NFC-e informations:
 .. note:: 
 `For the production environment, make sure that this information is updated.`
 
-
 Generating an NFC-e
 ~~~~~~~~
 
@@ -673,8 +667,6 @@ After validating the payment, Odoo will calculate taxes and issue an NFC-e. The 
 .. image:: brazil/l10n-br-nfce-succesfully-issued.png
    :alt: NFC-e Success
 
-
-
 .. note:: 
 `It’s also possible to issue NFC-e identifying the customer by their CPF/CNPJ, just click on guilabel:`Customer` button, then search for the customer if it’s already registered or click on guilabel:`Create` option.`
 
@@ -682,10 +674,10 @@ After validating the payment, Odoo will calculate taxes and issue an NFC-e. The 
    :alt: Point of Sale Creating New Customer
 
 guilabel:`The mandatory fields to issue CPF/CNPJ Identified NFC-e are:`
-**Name**
-**City** (where it’s being issued the invoice)
-**State** (where it’s being issued the invoice)
-**CPF/CNPJ**
+**- Name**
+**- City** (where it’s being issued the invoice)
+**- State** (where it’s being issued the invoice)
+**- CPF/CNPJ**
 .. image:: brazil/l10n-br-create-new-customer.png
    :alt: Final Consumer Form
 
@@ -740,11 +732,9 @@ Choose the payment method, amount, then click “Payment”
 .. image:: brazil/l10n-br-make-payment-refund.png
    :alt: Make Payment Refund
 
-
 .. note:: 
 `guilabel:`Alternative Flow`
 - You can also reimburse and cancel the NFC-e through back-end navigating to guilabel:`Orders` ‣ guilabel:`Orders` ‣ guilabel:`Open the Order` ‣ guilabel:`Select a customer` ‣ Click the button guilabel:`“Payment”` to reimburse ‣ Then click the button guilabel:`“Invoice”` at the top of the screen to create the invoice and issue the Return of Goods NF-e.`
-
 
 When the process is finalized, the approved return NF-e will be created, meaning the previous NFC-e is canceled.
 
