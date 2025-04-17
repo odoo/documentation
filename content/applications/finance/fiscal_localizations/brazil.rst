@@ -509,6 +509,7 @@ accurately provided in the original invoice, a debit note can be issued.
 .. seealso::
    :ref:`Issue a debit note <accounting/credit_notes/issue-debit-note>`
 
+
 Invoice cancellation
 ~~~~~~~~~~~~~~~~~~~~
 
