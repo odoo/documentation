@@ -56,10 +56,9 @@ Transactions
 ------------
 
 Every :doc:`transaction <transactions>` is linked to a journal entry that debits/credits the
-journal's main account and its :ref:`suspense account <accounting/bank/suspense>` until it is fully
-reconciled. At that point, the suspense account is replaced with the account of the counterpart item
-or, in the case of :ref:`manual matching <accounting/reconciliation/set-account>`, the selected
-account.
+journal's main account and its suspense account until it is fully reconciled. At that point, the
+suspense account is replaced with the account of the counterpart item or, in the case of
+:ref:`manual matching <accounting/reconciliation/set-account>`, the selected account.
 
 .. _accounting/reconciliation/action-buttons:
 

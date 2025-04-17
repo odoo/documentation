@@ -153,7 +153,7 @@ automatically withdraws the amount of that payment from the recipient's account,
 transaction for a negative amount is created to reflect the |sdd| rejection.
 
 |sdd| rejections are handled differently depending on whether :ref:`outstanding accounts
-<accounting/bank/outstanding-accounts>` are configured or not for the |sdd| payment method.
+<accounting/journals/outstanding-accounts>` are configured or not for the |sdd| payment method.
 
 .. note::
    The following procedures assume that the incoming |sdd| payment's bank transaction has already
@@ -163,8 +163,8 @@ transaction for a negative amount is created to reflect the |sdd| rejection.
 
    .. tab:: Without outstanding accounts
 
-      If no :ref:`outstanding accounts <accounting/bank/outstanding-accounts>` are configured for
-      the |sdd| payment method, no journal entry is created. In this case, you must cancel and
+      If no :ref:`outstanding accounts <accounting/journals/outstanding-accounts>` are configured
+      for the |sdd| payment method, no journal entry is created. In this case, you must cancel and
       unreconcile the payment.
 
       #. Access the invoice linked to the rejected |sdd| payment.
@@ -180,11 +180,11 @@ transaction for a negative amount is created to reflect the |sdd| rejection.
 
    .. tab:: Using outstanding accounts
 
-      If an :ref:`outstanding account <accounting/bank/outstanding-accounts>` is set on the |sdd|
-      payment method, |sdd| payments create journal entries. If an |sdd| payment is rejected, you
-      must reverse the journal entry associated with the rejected payment and reconcile the reversal
-      of the journal entry with the transaction for the |sdd| rejection. To do so, follow these
-      steps:
+      If an :ref:`outstanding account <accounting/journals/outstanding-accounts>` is set on the
+      |sdd| payment method, |sdd| payments create journal entries. If an |sdd| payment is rejected,
+      you must reverse the journal entry associated with the rejected payment and reconcile the
+      reversal of the journal entry with the transaction for the |sdd| rejection. To do so, follow
+      these steps:
 
       #. Access the invoice linked to the rejected |sdd| payment.
       #. Click the :icon:`fa-info-circle` :guilabel:`(information)` icon in the footer of the
