@@ -670,7 +670,7 @@ After validating the payment, Odoo will calculate taxes and issue an NFC-e. The 
 .. image:: brazil/l10n-br-nfce-succesfully-issued.png
    :alt: NFC-e Success
 
-.. note:: 
+.. note::
 It’s also possible to issue NFC-e identifying the customer by their CPF/CNPJ, just click on guilabel:`Customer` button, then search for the customer if it’s already registered or click on guilabel:`Create` option.
 
 .. image:: brazil/l10n-br-customer-button.png
