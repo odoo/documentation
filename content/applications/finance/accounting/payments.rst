@@ -113,8 +113,8 @@ After the payment is registered, the customer invoice or vendor bill is marked a
 
    .. group-tab:: Without outstanding accounts
 
-      If no :ref:`outstanding accounts <accounting/bank/outstanding-accounts>` are configured, no
-      journal entry is created. To display more information about the payment, click the
+      If no :ref:`outstanding accounts <accounting/journals/outstanding-accounts>` are configured,
+      no journal entry is created. To display more information about the payment, click the
       :guilabel:`Payments` smart button.
 
       When the invoice or vendor bill is :doc:`reconciled <bank/reconciliation>` with a bank
@@ -130,11 +130,11 @@ After the payment is registered, the customer invoice or vendor bill is marked a
 
       By default, payments in Odoo do not create journal entries, but they can easily be configured
       to create journal entries using :ref:`outstanding accounts
-      <accounting/bank/outstanding-accounts>`.
+      <accounting/journals/outstanding-accounts>`.
 
       Registering a payment on a customer invoice or vendor bill generates a new journal entry and
       reduces the :guilabel:`Amount Due` based on the payment amount. The counterpart is
-      reflected in an :ref:`outstanding <accounting/bank/outstanding-accounts>` **receipts** or
+      reflected in an :ref:`outstanding <accounting/journals/outstanding-accounts>` **receipts** or
       **payments** account. At this point, the customer invoice or vendor bill is marked as
       :guilabel:`In payment`. Then, when the payment is :doc:`reconciled <bank/reconciliation>` with
       a bank transaction, the invoice or vendor bill status changes to :guilabel:`Paid`.
@@ -172,7 +172,7 @@ directly linked to an invoice or bill.
    .. group-tab:: Without outstanding accounts
 
       Payments that are not linked to an invoice or bill should not be registered without using
-      :ref:`outstanding accounts <accounting/bank/outstanding-accounts>`, as there is no way to
+      :ref:`outstanding accounts <accounting/journals/outstanding-accounts>`, as there is no way to
       associate the payment with the invoice or bill since no journal entry is created for the
       payment. The amount paid or received is not reflected in the accounting and the
       :guilabel:`Amount Due` is not updated based on the payment amount.
