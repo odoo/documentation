@@ -2,15 +2,16 @@
 Lead times
 ==========
 
-.. |MO| replace:: :abbr:`MO (Manufacturing Order)`
-.. |MOs| replace:: :abbr:`MOs (Manufacturing Orders)`
+.. |MO| replace:: :abbr:`MO (manufacturing order)`
+.. |MOs| replace:: :abbr:`MOs (manufacturing orders)`
 .. |BoM| replace:: :abbr:`BoM (Bill of Materials)`
 .. |BoMs| replace:: :abbr:`BoMs (Bills of Materials)`
-.. |RFQ| replace:: :abbr:`RFQ (Request for Quotation)`
+.. |RFQ| replace:: :abbr:`RFQ (request for quotation)`
+.. |PO| replace:: :abbr:`PO (purchase order)`
 
 Accurately forecasting delivery dates is vital for fulfilling customer expectations. In Odoo, the
-**Inventory** app allows for comprehensive lead time configuration, allowing coordination and planning
-of manufacturing orders, deliveries, and receipts.
+**Inventory** app allows for comprehensive lead time configuration, allowing coordination and
+planning of manufacturing orders, deliveries, and receipts.
 
 Lead time types
 ===============
@@ -75,7 +76,7 @@ Odoo issues a warning message if the set delivery date is earlier than the expec
 not be feasible to fulfill the order by that time, which would impact other warehouse operations.
 
 .. example::
-   A :abbr:`SO (Sales Order)` containing a `Coconut-scented candle` is confirmed on July 11th. The
+   A :abbr:`SO (sales order)` containing a `Coconut-scented candle` is confirmed on July 11th. The
    product has a customer lead time of 14 days, and the business uses a sales security lead time of
    1 day. Based on the lead time inputs, Odoo suggests a delivery date in 15 days, on July 26th.
 
@@ -149,27 +150,79 @@ and set the :guilabel:`Shipping Policy` to:
    delivery date is 5 days from today: April 7th. On the other hand, selecting :guilabel:`When all
    products are ready` configures the scheduled date to be 8 days from today: April 10th.
 
-.. _inventory/warehouses_storage/purchase-lt:
-
 Purchase lead times
 ===================
 
-Automatically determining the dates on which to place orders from suppliers can help simplify the
-procurement process.
+Automatically scheduling supplier orders streamlines procurement by showing users exactly when to
+confirm a request for quotation (RFQ) and when to expect the goods.
 
-Odoo calculates the supplier shipment *receipt date*, and :abbr:`PO (Purchase Order)` deadline,
-based on the required date the product is needed in the warehouse. By working backwards from the
-receipt date, vendor lead times and purchase security lead times are taken into account, in order to
-determine the :abbr:`PO (Purchase Order)` deadline.
+.. list-table:: Key dates on an RFQ / PO
+   :header-rows: 1
+   :stub-columns: 1
 
-This deadline is the date by which the order should be confirmed, in order to ensure timely arrival
-by the expected receipt date.
+   * - Field
+     - Description
+   * - Order Deadline
+     - Last calendar day to confirm the |RFQ| and convert it to a |PO|
+   * - Expected Arrival
+     - Arrival date of the products. Calculated by *Order Deadline* + *Vendor Lead Time*
+
+In addition, Odoo has global security lead times, which are buffers that widen the
+:ref:`just-in-time <inventory/warehouses_storage/just-in-time>` (JIT) forecast window. The security
+lead times affect **only** replenishment methods that use :doc:`pull rules
+<../../shipping_receiving/daily_operations/use_routes>`—for example :doc:`reordering rules
+<reordering_rules>` or :doc:`make to order (MTO) <mto>`. They do not change the interval between
+*Order Deadline* and *Expected Arrival*.
+
+.. seealso::
+   :doc:`PO scheduling with reordering rules <reordering_rules>`
+
+.. list-table:: Global security lead time buffers
+   :header-rows: 1
+   :stub-columns: 1
+
+   * - Buffer
+     - Purpose
+     - Impact on dates
+   * - :ref:`Purchase Security Lead Time <inventory/warehouses_storage/purchase-security-lt>`
+     - Extra calendar days to account for delays. Typically used to account for weekends or
+       holidays.
+     - None on the |RFQ|/|PO|; adds buffer days in the :ref:`JIT forecast window
+       <inventory/warehouses_storage/forecasted-date>`.
+   * - :ref:`Days to Purchase <inventory/warehouses_storage/days-to-purchase>`
+     - Days the vendor needs to review an |RFQ| after it is sent.
+     - None on the |RFQ|/|PO|; adds buffer days in the :ref:`JIT forecast window
+       <inventory/warehouses_storage/forecasted-date>`.
 
 .. image:: lead_times/vendor-lead-times.png
    :alt: Visualization of PO deadline and receipt date used with vendor lead times.
 
-.. seealso::
-   :doc:`PO scheduling with reordering rules <reordering_rules>`
+.. example::
+   To tie all the purchase lead times together, consider this:
+
+   - Today: April 21
+   - :guilabel:`Vendor Lead Time`: 1 day
+   - :guilabel:`Purchase Security Lead Time`: 4 days
+   - :guilabel:`Days to Purchase`: 2 days
+
+   Days from today = 1 + 4 + 2 = 7
+
+   Forecasted date = April 28
+
+   .. figure:: lead_times/forecasted-date-purchase.png
+      :alt: Forecasted date calculation on the lead times pop-up.
+
+      Example of the :abbr:`JIT (just-in-time)` forecast window, which is April 21-28.
+
+   If an |RFQ| is created today, the following fields show:
+
+   - :guilabel:`Order Deadline`: April 23 (:math:`\text{Today} + 2`)
+   - :guilabel:`Expected Arrival`: April 24 (:math:`\text{Order Deadline} + 1`)
+
+   .. image:: lead_times/order-deadline.png
+      :alt: Order deadline displaying Apr 23 and Expected Arrival Apr 24.
+
+.. _inventory/warehouses_storage/purchase-lt:
 
 Vendor lead time
 ----------------
@@ -184,7 +237,11 @@ pricelist, click the :guilabel:`Add a line` button to add vendor details, such a
 
 .. note::
    Multiple vendors and lead times can be added to the vendor pricelist. The default vendor and lead
-   time selected will be the entry at the top of the list.
+   time selected is the entry at the top of the list.
+
+.. tip::
+   A |PO| is marked late if the *Expected Arrival* date has passed, and appears in the *Late* box on
+   the **Purchase** app's dashboard.
 
 .. example::
    On the vendor pricelist of the product form, the :guilabel:`Delivery Lead Time` for the selected
@@ -193,45 +250,19 @@ pricelist, click the :guilabel:`Add a line` button to add vendor details, such a
    .. image:: lead_times/set-vendor.png
       :alt: Add delivery lead times to vendor pricelist on a product.
 
-By setting the vendor lead time, the expected arrival date of the item is automatically determined
-as the date of the :abbr:`PO (Purchase Order)` confirmation, plus the vendor lead time. This ensures
-that warehouse employees are notified, if the products do **not** arrive within the expected
-timeframe.
-
-.. example::
-   On a :abbr:`PO (Purchase Order)` confirmed on July 11th, for a product configured with a 10-day
-   vendor lead time, Odoo automatically sets the :guilabel:`Receipt Date` to July 21st. The receipt
-   date also appears as the :guilabel:`Scheduled Date` on the warehouse receipt form, accessible
-   from the :guilabel:`Receipt` smart button, located on the :guilabel:`PO (Purchase Order)`.
-
-   .. image:: lead_times/receipt-date.png
-      :alt: Show expected *Receipt Date* of the product from the vendor.
-
-   .. image:: lead_times/scheduled-date-receipt.png
-      :alt: Show expected *Scheduled Date* of arrival of the product from the vendor.
-
 .. _inventory/warehouses_storage/purchase-security-lt:
 
 Purchase security lead time
 ---------------------------
 
-*Purchase security lead time* is set globally for the business in :menuselection:`Inventory app -->
-Configuration --> Settings`.
+*Purchase security lead time* is a global buffer to account for delays, applied to **all** vendors.
+To set it, go to :menuselection:`Inventory app --> Configuration --> Settings`.
 
-On the :guilabel:`Settings` page, under the :guilabel:`Advanced Scheduling` heading, tick the
-checkbox for :guilabel:`Security Lead Time for Purchase`.
+Under :guilabel:`Advanced Scheduling`, tick the :guilabel:`Security Lead Time for Purchase`
+checkbox.
 
 Next, enter the desired number of calendar days. By configuring the security lead time, a buffer is
 set to account for potential delays in supplier deliveries. Then, click :guilabel:`Save`.
-
-.. example::
-   Setting the :guilabel:`Security Lead Time for Purchase` to `2.00` days, pushes the
-   :guilabel:`Scheduled Date` of receipt back by two days. In that case, if a product is initially
-   scheduled to arrive on April 6th, with a two-day security lead time, the new scheduled date for
-   the receipt would be April 8th.
-
-   .. image:: lead_times/vendor-security.png
-      :alt: Set security lead time for purchase from the Inventory > Configuration > Settings.
 
 .. _inventory/warehouses_storage/days-to-purchase:
 
