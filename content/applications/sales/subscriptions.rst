@@ -258,6 +258,10 @@ If an :guilabel:`Online signature` or :guilabel:`Online payment` is required to 
 quotation, set the checkboxes next to either (or both) of these labels in the :guilabel:`Other Info`
 tab, under the ::guilabel:`SALES` section.
 
+.. seealso::
+   - :doc:`/applications/finance/accounting/payments/online`
+   - :doc:`Payment providers and payment methods </applications/finance/payment_providers>`
+
 .. toctree::
    :titlesonly:
 
@@ -269,4 +273,3 @@ tab, under the ::guilabel:`SALES` section.
    subscriptions/automatic_alerts
    subscriptions/scheduled_actions
    subscriptions/reports
-   subscriptions/payment_providers
