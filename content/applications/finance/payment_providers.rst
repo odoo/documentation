@@ -452,7 +452,7 @@ entries. We recommend you ask your accountant for advice.
 
 By default, the :guilabel:`Bank Account` defined for the :ref:`payment journal
 <payment_providers/journal>` is used, but you can also specify an :ref:`outstanding account
-<accounting/bank/outstanding-accounts>` for each payment provider to separate the provider's
+<accounting/journals/outstanding-accounts>` for each payment provider to separate the provider's
 payments from other payments.
 
 .. image:: payment_providers/bank_journal.png
