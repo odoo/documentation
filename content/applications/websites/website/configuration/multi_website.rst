@@ -10,7 +10,7 @@ target audience.
 
 Each website can be designed and configured independently with its own :doc:`domain name
 <domain_names>`, :doc:`theme <../web_design/themes>`, :doc:`pages <../pages>`, :doc:`menus
-<../pages/menus>`, :doc:`languages <translate>`, :doc:`products
+<../pages/header_footer>`, :doc:`languages <translate>`, :doc:`products
 <../../ecommerce/products>`, assigned sales team, etc. They can also
 :ref:`share content and pages <multi-website/website_content>`.
 
