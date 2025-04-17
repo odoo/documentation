@@ -9,8 +9,8 @@ Lead times
 .. |RFQ| replace:: :abbr:`RFQ (Request for Quotation)`
 
 Accurately forecasting delivery dates is vital for fulfilling customer expectations. In Odoo, the
-**Inventory** app allows for comprehensive lead time configuration, allowing coordination and planning
-of manufacturing orders, deliveries, and receipts.
+**Inventory** app allows for comprehensive lead time configuration, allowing coordination and
+planning of manufacturing orders, deliveries, and receipts.
 
 Lead time types
 ===============
@@ -226,12 +226,18 @@ set to account for potential delays in supplier deliveries. Then, click :guilabe
 
 .. example::
    Setting the :guilabel:`Security Lead Time for Purchase` to `2.00` days, pushes the
-   :guilabel:`Scheduled Date` of receipt back by two days. In that case, if a product is initially
+   :guilabel:`Scheduled Date` of receipt back by one day. In that case, if a product is initially
    scheduled to arrive on April 6th, with a two-day security lead time, the new scheduled date for
-   the receipt would be April 8th.
+   the receipt would be April 4th.
 
    .. image:: lead_times/vendor-security.png
       :alt: Set security lead time for purchase from the Inventory > Configuration > Settings.
+
+.. important::
+   Purchase security days affect only deadlines for replenishment methods using :doc:`pull rules
+   <../../shipping_receiving/daily_operations/use_routes>` (e.g. :doc:`MTO <mto>` and
+   :doc:`reordering rules <reordering_rules>`); they do not apply to sales or delivery orders
+   created manually.
 
 .. _inventory/warehouses_storage/days-to-purchase:
 
