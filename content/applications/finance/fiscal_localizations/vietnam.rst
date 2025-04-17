@@ -255,7 +255,7 @@ Enable :guilabel:`Include Reference` to include the invoice number in the QR cod
 .. important::
    - The account holder's country must be set to `Vietnam`, and their city must be specified on the
      contact form.
-   - The :ref:`account number <accounting/bank/account-number>` and bank must be set on the
+   - The :ref:`account number <accounting/journals/bank>` and bank must be set on the
      :guilabel:`Bank` journal.
 
 .. seealso::
