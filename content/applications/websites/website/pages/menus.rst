@@ -1,7 +1,57 @@
-=====
-Menus
-=====
+===================
+Headers and Footers
+===================
 
+Header design
+=============
+
+Headers are used to display elements such as logos, text, search bars, sign-ins, social media links,
+logos, buttons, etc., at the top of every website page.
+
+To modify a header, click on :guilabel:`Edit` and then click on the header. To customize it the
+following options are available in the :guilabel:`Header` section of the website editor:
+
+- Choose a :guilabel:`Template` from one of the options from the drop-down selection.
+- Select :guilabel:`Background` settings to change the color palette through different
+  :guilabel:`Theme` styles, :guilabel:`Custom` color options, and :guilabel:`Gradient` ones.
+- When adding a :guilabel:`Border` to the header, its size, style and color can be defined.
+- :guilabel:`Round corners` can be adapted to fit the design.
+- :guilabel:`Shadow`, its :guilabel:`Color`, :guilabel:`Offset`, :guilabel:`Blur`, and
+  :guilabel:`Spread` can be adjusted.
+- Add a :guilabel:`Scroll Effect`. To preview the effect, hover on it.
+- Choose the :guilabel:`Header Position` between :guilabel:`Regular`,  :guilabel:`Hidden` and
+  :guilabel:`Over The Content` for this last one the :guilabel:`Background` and
+  :guilabel:`Text Color` can be customized.
+- Add additional :guilabel:`Elements` like text, search bar, sign-in, social media links, buttons
+  and logo.
+- :guilabel:`Show Empty` allows to display the cart and the wishlist when empty.
+
+To finalize changes, click on :guilabel:`Save`.
+
+Menu items design
+-----------------
+
+To modify the menu items, go to the :guilabel:`Navbar` section of the website editor to:
+
+- Adapt the :guilabel:`Mobile Alignment`
+- Choose the :guilabel:`Font` for the menu items.
+- Pick the font size, color and alignment in the :guilabel:`Format` field.
+- Select a :guilabel:`Links Style` to show which page is currently being viewed.
+- To change the sign-in button, language button and the contact-us button colors, select the option
+  you need in the :guilabel:`Additional colors` field among :guilabel:`Primary`,
+  :guilabel:`Secondary` or :guilabel:`Default`.
+
+.. note::
+
+   The elements in the :guilabel:`Navbar` section can vary depending on the templates chosen.
+
+To finalize changes, click on :guilabel:`Save`.
+
+How to hide header?
+-------------------------
+
+Menu
+====
 Menus are used to organize your website’s content and help visitors navigate through your web pages
 effectively. User-friendly and well-structured website menus also play a crucial role in improving
 :doc:`search engine rankings <seo>`.
