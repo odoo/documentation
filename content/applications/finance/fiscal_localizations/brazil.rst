@@ -651,14 +651,14 @@ Enter the following NFC-e informations:
 **Series**
 **Next number**
 
-.. note:: 
-`This is the next NFC-e number in the sequence to be issued, for instance, if the last number issued in SEFAZ is 100, the next number will be 101.`
+.. note::
+This is the next NFC-e number in the sequence to be issued, for instance, if the last number issued in SEFAZ is 100, the next number will be 101.
 
 .. image:: brazil/l10n-br-brazilian-edi.png
    :alt: Brazilian EDI Fields
 
-.. note:: 
-`For the production environment, make sure that this information is updated.`
+.. note::
+For the production environment, make sure that this information is updated.
 
 Generating an NFC-e
 ~~~~~~~~~~~~~~~~~~~
@@ -707,7 +707,7 @@ Re-issue PoS Order with NFC-e error
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If the NFC-e return an error, you can see the error message and after the error get fixed, it can be issued again:
-Inside the Shop Screen, navigate to guilabel:`Options`‣guilabel:`Orders`. 
+Inside the Shop Screen, navigate to guilabel:`Options` ‣ guilabel:`Orders`.
 
 .. image:: brazil/l10n-br-shop-selecting-orders.png
    :alt: Access Orders on Shop
