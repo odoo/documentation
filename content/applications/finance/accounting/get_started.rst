@@ -191,6 +191,7 @@ Get started with Stripe and enable secure integrated credit and debit card payme
    get_started/cheat_sheet
    get_started/chart_of_accounts
    get_started/consolidation
+   get_started/journals
    get_started/multi_currency
    get_started/avg_price_valuation
    get_started/tax_units
