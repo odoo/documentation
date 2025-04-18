@@ -14,6 +14,8 @@ Odoo Online databases are accessed using any web browser and do not require a lo
 To quickly try out Odoo, shared `demo <https://demo.odoo.com>`_ instances are available. No
 registration is required, but each instance only lives for a few hours.
 
+.. _odoo_online/database-management:
+
 Database management
 ===================
 
