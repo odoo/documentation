@@ -2,9 +2,9 @@
 Invoice sequence
 ================
 
-When confirming an invoice, Odoo generates a unique invoice reference number. By default, Odoo uses
-the following sequence format `INV/year/incrementing-number` (e.g., `INV/2025/00001`), which
-restarts from `00001` each year.
+When confirming an invoice, Odoo generates a unique invoice reference number. By default, it uses
+the sequence format `INV/year/incrementing-number` (e.g., `INV/2025/00001`), which restarts from
+`00001` each year.
 
 However, it is possible to :ref:`change the sequence format <accounting/invoice/resequencing>` and
 its periodicity, and to :ref:`mass-resequence invoices <accounting/invoice/mass-resequencing>`.
@@ -60,7 +60,26 @@ Follow these steps to resequence invoice numbers:
 #. Set the :guilabel:`First New Sequence`.
 #. :guilabel:`Preview Modifications` and click :guilabel:`Confirm`.
 
-The first invoice using the new sequence appears in red in the :guilabel:`Customer Invoices` list.
-
 .. image:: sequence/invoice-sequencing.png
    :alt: Resequence options window
+
+.. note::
+   - To indicate where the sequence change began, the first invoice in the new sequence is
+     highlighted in red in the :guilabel:`Customer Invoices` list. This visual marker is permanent
+     and purely informational.
+   - If there are any irregularities in the new sequence, such as gaps, cancelled, or deleted
+     entries within the open period, a :guilabel:`Gaps in the sequence` message appears in the
+     :guilabel:`Customer Invoices` journal on the Accounting dashboard. To view more details about
+     the related invoice(s), click :guilabel:`Gaps in the sequence`. This visual marker is temporary
+     and will disappear once the entry's accounting date is on or after the lock date.
+
+.. tip::
+   Resequencing is not possible:
+
+   - When entries are before a lock date.
+   - When the sequence leads to a duplicate.
+   - When the range is invalid. For example, if the :guilabel:`Invoice Date` doesn't align with the
+     date in the new sequence, such as using a 2024 sequence (INV/2024/XXXXX) for an invoice dated
+     in 2025.
+
+   In these cases, a :guilabel:`Validation Error` message appears.
