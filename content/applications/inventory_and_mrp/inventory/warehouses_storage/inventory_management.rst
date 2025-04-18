@@ -106,12 +106,14 @@ field, there are:
 View locations in Odoo
 ----------------------
 
-Odoo databases include pre-configured view locations to organize the hierarchy of locations. These
+Odoo databases include preconfigured view locations to organize the hierarchy of locations. These
 provide helpful context, and distinguish between internal and external locations.
 
-- *Physical locations* serve as an umbrella for external locations, without changing a product's
-  inventory value. (Inventory valuation changes occur when products move from internal to external
-  locations).
+- *Physical locations* group internal locations—such as secondary warehouses and subcontractor
+  sites. Because :doc:`inventory valuation
+  <../product_management/inventory_valuation/inventory_valuation_config>` changes only when goods
+  move from internal to external locations, Odoo uses physical locations to track stock that is
+  off-site or in transit without affecting valuation.
 
 .. _inventory/warehouses_storage/interwarehouse-transit:
 
