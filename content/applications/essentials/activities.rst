@@ -200,33 +200,9 @@ activities that are :guilabel:`Late`, due :guilabel:`Today`, and scheduled in th
       :alt: The list of activities that is accessed from the main menu bar. Two entries for the Time
             Off application are highlighted.
 
-Request a document
-------------------
-
-The option to :guilabel:`Request a Document` is available at the bottom of the list of :ref:`all
-scheduled activities <activities/all>`, the option to :guilabel:`Request a Document` appears. Click
-:guilabel:`Request a Document`, and a :guilabel:`Request a file` pop-up window appears.
-
-Enter the following information on the form:
-
-- :guilabel:`Document Name`: enter a name for the document being requested.
-- :guilabel:`Request To`: select the user the document is being requested from using the drop-down
-  menu.
-- :guilabel:`Due Date In`: enter a numerical value indicating when the document is due. Next to
-  this field, a :guilabel:`Days` field is visible. Click :guilabel:`Days`, the default option, to
-  reveal a drop-down menu. Select the desired time-frame option from the list. The options are
-  :guilabel:`Days`, :guilabel:`Weeks`, or :guilabel:`Months`.
-- :guilabel:`Workspace`: using the drop-down menu, select the specific :ref:`Workspace
-  <documents/workspaces>` the document is being uploaded to.
-- :guilabel:`Tags`: select any desired tags from the drop-down menu. The available tags displayed
-  are based on the tags configured for the selected :guilabel:`Workspace`.
-- :guilabel:`Message`: enter a message to clarify the document request in this field.
-
-When all the fields are completed, click :guilabel:`Request` to send the document request.
-
-.. image:: activities/request-doc.png
-   :align: center
-   :alt: The Request a file form, with all fields filled out to request a contract.
+.. tip::
+   The option to :ref:`Request a Document <documents/request>` is available at the bottom of the
+   list of all scheduled activities.
 
 .. _activities/types:
 
@@ -273,27 +249,24 @@ information on the form.
 Activity Settings section
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- :guilabel:`Action`: using the drop-down menu, select an action associated with this new activity
+- :guilabel:`Action`: Using the drop-down menu, select an action associated with this new activity
   type. Some actions trigger specific behaviors after an activity is scheduled, such as:
 
-  - :guilabel:`Upload Document`: if selected, a link to upload a document is automatically added to
+  - :guilabel:`Upload Document`: If selected, a link to upload a document is automatically added to
     the planned activity in the chatter.
-  - :guilabel:`Call` or :guilabel:`Meeting`: if selected, users have the option to open their
+  - :guilabel:`Call` or :guilabel:`Meeting`: If selected, users have the option to open their
     calendar to select a date and time for the activity.
-  - :guilabel:`Request Signature`: if selected, a link to open a signature request pop-up window is
+  - :guilabel:`Request Signature`: If selected, a link to open a signature request pop-up window is
     automatically added to the planned activity in the chatter. This requires the Odoo *Sign*
     application to be installed.
 
   .. note::
      Available activity types vary based on the installed applications in the database.
 
-- :guilabel:`Folder`: select a specific :ref:`workspace <documents/workspaces>` folder to save a
-  document to. This field **only** appears if :guilabel:`Upload Document` is selected for the
-  :guilabel:`Action`.
+- :guilabel:`Folder`: Select a specific :ref:`folder <documents/folders>` to save a document to.
+  This field **only** appears if :guilabel:`Upload Document` is selected for the :guilabel:`Action`.
 
-  Using the drop-down menu, select the :guilabel:`Folder` the document is saved to.
-
-- :guilabel:`Default User`: select a user from the drop-down menu to automatically assign this
+- :guilabel:`Default User`: Select a user from the drop-down menu to automatically assign this
   activity to the selected user when this activity type is scheduled. If this field is left blank,
   the activity is assigned to the user who creates the activity.
 - :guilabel:`Default Summary`: enter a note to include whenever this activity type is created.
@@ -303,7 +276,7 @@ Activity Settings section
      included when an activity is created. However, they can be altered before the activity is
      scheduled or saved.
 
-- :guilabel:`Keep Done`: tick this checkbox to keep activities that have been marked as `Done`
+- :guilabel:`Keep Done`: Tick this checkbox to keep activities that have been marked as `Done`
   visible in the :ref:`activity view <activities/activity>`.
 - :guilabel:`Default Note`: enter any notes to appear with the activity.
 
