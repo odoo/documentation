@@ -3728,6 +3728,15 @@ msgid ""
 " or :ref:`Based on Rules <inventory/shipping/rules>`, and :ref:`in-store "
 "pickup <ecommerce/shipping/instore-pickup>`."
 msgstr ""
+"La aplicación Comercio electrónico de Odoo le permite configurar varios "
+"métodos de entrega para que los clientes puedan elegir su opción preferida "
+"al :doc:`pagar <checkout>`. Estos métodos incluyen :ref:`proveedores "
+"externos <ecommerce/shipping/external-provider>`, :ref:`opciones "
+"personalizadas <ecommerce/shipping/custom-method>` como tarifa fija o envío "
+"gratuito, transportistas locales con :doc:`Sendcloud "
+"</applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping>`"
+" o :ref:`por reglas <inventory/shipping/rules>` y :ref:`recogida en tienda "
+"<ecommerce/shipping/instore-pickup>`."
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:19
 msgid "External provider integration"
@@ -3749,6 +3758,19 @@ msgid ""
 "</applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels>`"
 " and shipping processes."
 msgstr ""
+"Para gestionar la entrega de productos, puede conectar su base de datos a "
+":doc:`transportistas externos "
+"</applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper>`"
+" como :doc:`FedEx "
+"</applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex>`,"
+" :doc:`UPS "
+"</applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/ups_credentials>`"
+" o :doc:`DHL "
+"</applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials>`."
+" Un conector de envío vinculará su base de datos con estos proveedores y "
+"automatizará las :doc:`etiquetas de seguimiento "
+"</applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/labels>`"
+" y los procesos de envío."
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:30
 msgid ""
@@ -3756,6 +3778,10 @@ msgid ""
 " Configuration --> Settings`, scroll to the :guilabel:`Delivery` section, "
 "select the desired delivery provider(s), and :guilabel:`Save`."
 msgstr ""
+"Vaya a :menuselection:`Sitio web --> Configuración --> Ajustes` para "
+"habilitar un proveedor externo de entrega. Diríjase a la sección "
+":guilabel:`Entrega`, seleccione los proveedores de entrega deseados y haga "
+"clic en :guilabel:`Guardar`."
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:34
 msgid ""
@@ -3763,6 +3789,9 @@ msgid ""
 "select the delivery method in the list to :ref:`configure it "
 "<inventory/shipping_receiving/configure-delivery-method>`."
 msgstr ""
+"Vaya a :menuselection:`Sitio web --> Configuración -->  Métodos de entrega` "
+"y seleccione uno de la lista para :ref:`configurarlo "
+"<inventory/shipping_receiving/configure-delivery-method>`."
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:38
 msgid ""
@@ -3780,10 +3809,16 @@ msgid ""
 "If the field is left empty, the delivery price cannot be calculated, and an "
 "error message prompts the customer to select an alternative delivery method."
 msgstr ""
+"**Debe** completar el campo utilizado para definir los cargos adicionales "
+"**en su cuenta de proveedor externo de entregas** incluso si no planifica "
+"cobrar cargos adicionales a los clientes. Si ese es el caso, escriba `0`. Si"
+" el campo está vacío no será posible calcular el precio de envío y el "
+"cliente verá un mensaje de error que le pedirá seleccionar otro método de "
+"entrega."
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:48
 msgid "Margin on delivery rate"
-msgstr ""
+msgstr "Margen a la tarifa de envío"
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:50
 msgid ""
@@ -3793,6 +3828,12 @@ msgid ""
 "final price at checkout. Contact your carrier for further assistance with "
 "this configuration."
 msgstr ""
+"Para añadir una tarifa adicional a la tarifa base de envío (por ejemplo, "
+"para cubrir costes adicionales), inicie sesión en su cuenta de transportista"
+" y añada la tarifa deseada en el campo correspondiente. El conector de envío"
+" tomará esta tarifa y la incluirá en el precio final al momento de pagar. "
+"Póngase en contacto con su transportista para obtener ayuda con estos "
+"ajustes."
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:55
 msgid ""
@@ -3803,26 +3844,36 @@ msgid ""
 "shipping costs and/or the :guilabel:`Additional margin` field to add a fixed"
 " amount."
 msgstr ""
+"También puede escribir `0` en su cuenta de proveedor de envío externo y "
+"luego definir la tarifa en Odoo. Para ello, vaya al formulario del "
+":ref:`método de envío <inventory/shipping_receiving/configure-delivery-"
+"method>` deseado e ingrese la tarifa en el campo :guilabel:`Margen en la "
+"tarifa` para añadir un porcentaje a los gastos de envío o en el campo "
+":guilabel:`Margen adicional` para añadir un importe fijo."
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:62
 msgid ""
 "The field used to define additional fees cannot be left empty in your third-"
 "party shipping provider account."
 msgstr ""
+"No puede dejar vacío el campo utilizado para definir las tarifas adicionales"
+" en su cuenta de proveedor de envío externo."
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:68
 msgid "Custom delivery method"
-msgstr ""
+msgstr "Método de entrega personalizado"
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:70
 msgid "Custom delivery methods must be created, for example:"
-msgstr ""
+msgstr "Debe crear métodos de entrega personalizados, por ejemplo:"
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:72
 msgid ""
 "to integrate delivery carriers through :doc:`Sendcloud "
 "</applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping>`;"
 msgstr ""
+"para integrar transportistas externos con :doc:`Sendcloud "
+"</applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping>`."
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:74
 msgid ""
@@ -3838,6 +3889,8 @@ msgid ""
 "to configure :ref:`Fixed Price <inventory/shipping/fixed>` shipping, or "
 "shipping :ref:`Based on Rules <inventory/shipping/rules>`."
 msgstr ""
+"para configurar envíos con :ref:`Precio fijo <inventory/shipping/fixed>` o "
+":ref:`Basado en reglas <inventory/shipping/rules>`."
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:79
 msgid ""
@@ -3845,6 +3898,10 @@ msgid ""
 "Configuration --> Delivery Methods`, click :guilabel:`New`, and fill in the "
 ":ref:`fields <inventory/shipping_receiving/shipping-methods-details>`."
 msgstr ""
+"Vaya a :menuselection:`Sitio web --> Configuración --> Métodos de entrega` "
+"para crear un método de entrega personalizado, haga clic en "
+":guilabel:`Nuevo` y rellene los :ref:`campos "
+"<inventory/shipping_receiving/shipping-methods-details>`."
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:83
 msgid ""
@@ -3852,12 +3909,17 @@ msgid ""
 "<inventory/shipping/rules>` or :ref:`Fixed Price "
 "<inventory/shipping/fixed>`."
 msgstr ""
+"En el campo :guilabel:`Proveedor` seleccione entre :ref:`Basado en reglas "
+"<inventory/shipping/rules>`, o :ref:`Precio fijo "
+"<inventory/shipping/fixed>`."
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:87
 msgid ""
 "Upon :ref:`configuring <inventory/shipping_receiving/configure-delivery-"
 "method>` a delivery method, you can:"
 msgstr ""
+"Al :ref:`configurar <inventory/shipping_receiving/configure-delivery-"
+"method>` un método de entrega, puede:"
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:90
 msgid ""
@@ -3865,6 +3927,9 @@ msgid ""
 "<../website/configuration/multi_website>` by selecting it in the "
 ":guilabel:`Website` field."
 msgstr ""
+"Restringirlo :doc:`a un sitio web específico "
+"<../website/configuration/multi_website>` si lo selecciona en el campo "
+":guilabel:`Sitio web`."
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:92
 msgid ""
@@ -3873,6 +3938,10 @@ msgid ""
 ":guilabel:`Publish` the delivery method and make it available to website "
 "visitors."
 msgstr ""
+"Hacer clic en el botón inteligente :guilabel:`Entorno de prueba` para entrar"
+" al :guilabel:`entorno de producción`. Luego, podrá hacer clic en "
+":guilabel:`No publicado` para :guilabel:`Publicar` el método de envío y "
+"permitir que los visitantes del sitio web lo usen."
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:95
 msgid ""
@@ -3880,6 +3949,9 @@ msgid ""
 "<inventory/shipping_receiving/availability>` for the delivery method based "
 "on the order's content or destination."
 msgstr ""
+"Use la pestaña :guilabel:`Disponibilidad` para definir las :ref:`condiciones"
+" <inventory/shipping_receiving/availability>` para el método de entrega en "
+"función del contenido o destino del pedido."
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:102
 msgid "Click & Collect"
@@ -3890,12 +3962,16 @@ msgid ""
 "To allow customers to reserve products online and pay for/collect them in-"
 "store, follow these steps:"
 msgstr ""
+"Siga estos pasos para permitir que los clientes reserven productos en línea "
+"y los paguen o vayan por ellos a la tienda:"
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:107
 msgid ""
 "Scroll to the :guilabel:`Delivery` section, enable :guilabel:`Click & "
 "Collect`, and :guilabel:`Save`."
 msgstr ""
+"Vaya a la sección :guilabel:`Entrega`, seleccione la opción :guilabel:`Clic "
+"y recoger` y haga clic en :guilabel:`Guardar`."
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:109
 msgid ""
@@ -3904,12 +3980,19 @@ msgid ""
 "the delivery method and ensure the :guilabel:`Provider` field is set to "
 ":guilabel:`Pick up in store`."
 msgstr ""
+"Haga clic en :icon:`fa-arrow-right` :guilabel:`Configurar ubicaciones de "
+"recogida` para :ref:`configurar <inventory/shipping_receiving/configure-"
+"delivery-method>` el método de entrega. Asegúrese de que el campo "
+":guilabel:`Proveedor` esté configurado como :guilabel:`Recogida en la "
+"tienda`."
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:112
 msgid ""
 "In the :guilabel:`Stores` tab, click :guilabel:`Add a line` and select the "
 "warehouse(s) where customers can collect their orders."
 msgstr ""
+"En la pestaña :guilabel:`Tiendas`, haga clic en :guilabel:`Añadir una línea`"
+" y seleccione los almacenes donde los clientes podrán recoger sus pedidos."
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:114
 msgid ""
@@ -3917,6 +4000,9 @@ msgid ""
 "change the status to :guilabel:`Publish` and make the delivery method "
 "available to customers."
 msgstr ""
+"Una vez que haya terminado de realizar los ajustes, haga clic en el botón "
+":guilabel:`Anular publicación` para cambiar su estado a :guilabel:`Publicar`"
+" y que los clientes puedan usar este método de entrega."
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:118
 msgid ""
@@ -3926,6 +4012,12 @@ msgid ""
 "location. The :ref:`Continue selling <ecommerce/products/stock-management>` "
 "option for out-of-stock products is not supported."
 msgstr ""
+"Cuando el producto está disponible aparece un selector de ubicación en las "
+"páginas de :doc:`producto <products>` y :doc:`pago <checkout>`. Los clientes"
+" no pueden seleccionar una ubicación de recogida si el producto está agotado"
+" en esa ubicación. La opción :ref:`Continuar venta "
+"<ecommerce/products/stock-management>` no está disponible para los productos"
+" que no tienen stock."
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:122
 msgid ""
@@ -3933,6 +4025,10 @@ msgid ""
 "option is enabled for a product, customers can view the stock quantity "
 "available for each warehouse in the location selector on the product page."
 msgstr ""
+"Si un producto tiene habilitada la opción :ref:`Mostrar la cantidad "
+"disponible <ecommerce/products/stock-management>`, los clientes podrán ver "
+"la cantidad disponible en cada almacén en el selector de ubicación de la "
+"página del producto."
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:125
 msgid ""
@@ -3940,10 +4036,13 @@ msgid ""
 "accurately displayed to customers. Incomplete addresses prevent the "
 "warehouse from being shown."
 msgstr ""
+"Todos los almacenes deben tener una **dirección completa** para asegurar que"
+" los clientes puedan visualizar su ubicación con precisión. Las direcciones "
+"incompletas impiden que puedan ver el almacén."
 
 #: ../../content/applications/websites/ecommerce/shipping.rst:127
 msgid "The Click & Collect option is not available for services."
-msgstr ""
+msgstr "La opción “Clic y recoger” no está disponible para los servicios."
 
 #: ../../content/applications/websites/elearning.rst:3
 msgid "eLearning"
@@ -8401,7 +8500,7 @@ msgstr ""
 
 #: ../../content/applications/websites/livechat/responses.rst:171
 msgid "Authorized groups"
-msgstr ""
+msgstr "Grupos autorizados"
 
 #: ../../content/applications/websites/livechat/responses.rst:173
 msgid ""
@@ -8410,6 +8509,10 @@ msgid ""
 "operators, select one or more :ref:`groups <access-rights/groups>` from the "
 ":guilabel:`Authorized Groups` drop-down list."
 msgstr ""
+"Cuando se crea una nueva respuesta predefinida **solo** la puede usar el "
+"operador que la haya creado. Para permitir que otros operadores usen la "
+"respuesta, seleccione uno o más :ref:`grupos <access-rights/groups>` en la "
+"lista desplegable :guilabel:`Grupos autorizados`."
 
 #: ../../content/applications/websites/livechat/responses.rst:178
 msgid "Use canned responses in a live chat conversation"
@@ -8424,6 +8527,12 @@ msgid ""
 "shortcut, then click the :icon:`fa-paper-plane` :guilabel:`(send)` icon or "
 "hit :kbd:`Enter`."
 msgstr ""
+"Para usar una respuesta predefinida en una conversación, haga clic en el "
+"icono :icon:`fa-plus-circle` :guilabel:`(más)` de la ventana de chat y haga "
+"clic en :guilabel:`Insertar respuesta predefinida` para abrir una lista de "
+"las respuestas predefinidas disponibles. Seleccione una respuesta de la "
+"lista o escriba el atajo correspondieste y haga clic en el icono :icon:`fa-"
+"paper-plane` :guilabel:`(enviar)` o presione :kbd:`Enter`."
 
 #: ../../content/applications/websites/livechat/responses.rst:186
 msgid ""
@@ -8431,6 +8540,9 @@ msgid ""
 "canned responses. Responses can be manually selected from the list, in "
 "addition to the use of shortcuts."
 msgstr ""
+"Al escribir `::` en una ventana de chat se muestra la lista de respuestas "
+"predefinidas disponibles. Puede seleccionar manualmente una de las "
+"respuestas de la lista, o usar un acceso rápido."
 
 #: ../../content/applications/websites/livechat/responses.rst:0
 msgid "View of a chat window and the list of available canned responses."
@@ -9606,6 +9718,11 @@ msgid ""
 ":menuselection:`Rules --> Create rule --> Products`, and clicking "
 ":guilabel:`Create a Rule` under :guilabel:`Redirect Rules`:"
 msgstr ""
+"Defina una regla de redirección para redirigir permanentemente (301) su "
+"dominio simple (por ejemplo, `sudominio.com`) a `http://` y a `https://`. "
+"Vaya a :menuselection:`Reglas --> Crear regla --> Productos` y haga clic en "
+":guilabel:`Crear una regla` dentro de la sección :guilabel:`Reglas de "
+"redireccionamiento`."
 
 #: ../../content/applications/websites/website/configuration/domain_names.rst:231
 msgid "Enter any :guilabel:`Rule name`."
@@ -9647,6 +9764,8 @@ msgid ""
 ":guilabel:`Expression`: e.g., `concat(\"https://www.yourdomain.com\", "
 "http.request.uri.path)`"
 msgstr ""
+":guilabel:`Expresión`: Por ejemplo, `concat(\"https://www.sudominio.com\", "
+"http.request.uri.path)`"
 
 #: ../../content/applications/websites/website/configuration/domain_names.rst:243
 msgid ":guilabel:`Status code`: 301"
@@ -10484,6 +10603,10 @@ msgid ""
 "<../../ecommerce/customer_accounts>` on all of your websites by enabling the"
 " :guilabel:`Shared Customer Accounts` check box in the website settings."
 msgstr ""
+"Para :doc:`permitir que los clientes usen la misma cuenta "
+"<../../ecommerce/customer_accounts>` en todos sus sitios web, habilite la "
+"opción :guilabel:`Cuentas de cliente compartidas` en los ajustes del sitio "
+"web."
 
 #: ../../content/applications/websites/website/configuration/multi_website.rst:131
 msgid "Pricing"
@@ -10873,6 +10996,11 @@ msgid ""
 "levels, only the following four score levels are available by default: "
 "`0.1`, `0.3`, `0.7` and `0.9`."
 msgstr ""
+"Cambie el :guilabel:`Puntuación mínima` (`0.70`) por defecto si es necesario"
+" a un valor entre `1.00` y `0.00`. Entre más alto sea el umbral, más difícil"
+" será aprobar el reCAPTCHA y viceversa. De los 11 niveles, solo los "
+"siguientes cuatro niveles de calificación están disponibles por defecto: "
+"`0.1`, `0.3`, `0.7` y `0.9`."
 
 #: ../../content/applications/websites/website/configuration/spam_protection.rst:131
 msgid ""
@@ -13761,6 +13889,12 @@ msgid ""
 " help you create interactive and visually appealing layouts for your web "
 ":doc:`pages <../../pages>`."
 msgstr ""
+"Los :doc:`bloques de creación <../building_blocks>` de :guilabel:`Contenido "
+"dinámico`, como :ref:`Formulario <website/dynamic_content/form>`, "
+":ref:`Productos <website/dynamic_content/products>`, :ref:`Código incrustado"
+" <website/dynamic_content/embed_code>` y :doc:`Publicaciones de blog "
+"<../../../blog>`, le ayudan a crear diseños interactivos y llamativos para "
+"sus :doc:`páginas <../../pages>` web."
 
 #: ../../content/applications/websites/website/web_design/building_blocks/dynamic_content.rst:11
 #: ../../content/applications/websites/website/web_design/building_blocks/features.rst:12
