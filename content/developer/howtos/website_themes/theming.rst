@@ -158,12 +158,15 @@ always required. It usually contains much more information.
       (Blogs, Events, eCommerce, ...), you can also add them.
     - Odoo version and major number are mandatory. However, patch number is optional. If you want
       to specify the required version of Odoo to run your module, you should use a five arguments
-      structure, using the first two arguments to indicate your current Odoo version (for
-      instance, `{BRANCH}`).
+      structure, using the first two arguments to indicate your current Odoo version (`* = {BRANCH}`).
 
    .. image:: theming/versioning.png
       :alt: Module versioning
       :width: 300
+
+   Example:
+   `{BRANCH}.1.0.0`
+   `odoo_major.odoo_minor.module_major.module_minor.module_patch`
 
 .. warning::
    Automated file inclusion using wildcard notations `(ex.: /myfolder/*.scss)` doesn't work in
