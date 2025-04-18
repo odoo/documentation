@@ -424,8 +424,16 @@ Inside these 3 groups, the imported lines are alphabetically sorted.
     import time
     from datetime import datetime
     # 2 : imports of odoo
+<<<<<<< df1b3e92e95ca7dbf4fac56999132bd9f6a0949a
     from odoo import Command, _, api, fields, models # alphabetically ordered
     from odoo.fields import Domain
+||||||| 89c4692a47e37ea78842fe26f0222b7b93c9f2d7
+    import odoo
+    from odoo import Command, _, api, fields, models # alphabetically ordered
+=======
+    import odoo
+    from odoo import Command, _, api, fields, models # ASCIIbetically ordered
+>>>>>>> 38e39a41114981ad8f7f719cdd7cf0df1ec9b783
     from odoo.tools.safe_eval import safe_eval as eval
     # 3 : imports from odoo addons
     from odoo.addons.web.controllers.main import login_redirect
