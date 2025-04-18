@@ -7,280 +7,278 @@ Webhooks
   role when deciding to use webhooks and throughout the implementation process. If not properly
   configured, webhooks may disrupt the Odoo database and can take time to revert.
 
-Webhooks, which can be created in **Studio**, are automation rules triggered by external events via
-user-defined HTTP callbacks. When an external system sends data to an Odoo webhook's URL (the
-"trigger") with a data file (the "payload"), Odoo responds with a predefined action in the database.
+Webhooks, which can be created in **Odoo Studio**, allow you to automate an action in your Odoo
+database when a specific event occurs in another, external system.
 
-Unlike scheduled actions or manual API calls, webhooks enable real-time communication and
-automation. For example, if a sales order is confirmed in an external POS system, a webhook can
-instantly update Odoo's inventory, ensuring system synchronization.
+In practice, this works as follows: when the event occurs in the external system, a data file (the
+"payload") is sent to the Odoo webhook's URL via a `POST` API request, and a predefined action is
+performed in your Odoo database.
+
+Unlike scheduled actions, which run at predefined intervals, or manual API requests, which need to
+be explicitly invoked, webhooks enable real-time, event-driven communication and automation. For
+example, you can set up a webhook to have your Odoo inventory data updated automatically when a
+sales order is confirmed in an external point-of-sale system.
+
+Setting up a webhook in Odoo requires no coding when connecting two Odoo databases, but
+:ref:`testing a webhook <studio/webhooks/test-webhook>` requires an external tool.
+:ref:`Custom target records or actions <studio/webhooks/webhook-example>` may require programming
+skills.
 
 .. note::
-   This article covers creating a webhook that *takes in* data from an external source. However,
-   an automated action that :ref:`sends an API call to an external webhook
-   <studio/automated-actions/action-webhook>` can also be created.
+   This article covers creating a webhook that *receives* data from an external source. However,
+   it is also possible to create an automated action that :ref:`sends data to an external webhook
+   <studio/automated-actions/action-webhook>` when a change occurs in your Odoo database.
 
-Create a webhook in Studio
-==========================
+.. _studio/webhooks/create-webhook:
 
-Webhooks are configured in **Studio**, and their setup is split between their :ref:`trigger
-<studio/webhooks/webhook_trigger>` and their :ref:`actions <studio/webhooks/webhook_action>`.
+Create a webhook in Odoo
+========================
+
+.. important::
+   Before implementing a webhook in a live database, configure and test it using a :ref:`duplicate
+   database <odoo_online/database-management>` to ensure the webhook performs as intended.
 
 .. tip::
-  - Setting up a webhook in Odoo requires no coding when connecting Odoo databases, but testing
-    requires an external tool like `Postman <https://www.postman.com/>`_. :ref:`Custom target
-    records or actions  <studio/webhooks/webhook-example>` may require programming skills.
-  - :ref:`Activate developer mode <developer-mode>` to modify the model targeted by the webhook
-    (e.g., sales orders or contact information) and to find the model's technical name (which may be
-    required for proper payload configuration).
+   :ref:`Activating developer mode <developer-mode>` before creating up a webhook gives greater
+   flexibility in selecting the :doc:`model <../models_modules_apps>` the automation rule
+   targets. It also allows you to find the technical name of the model and fields, which may be
+   needed to configure the payload.
 
-.. _studio/webhooks/webhook_trigger:
+   To find a model's technical name, with developer mode activated, hover over the model name and
+   then click :icon:`fa-arrow-right` :guilabel:`(Internal link)`. The technical name can be found in
+   the :guilabel:`Model` field. For example, a sales order webhook uses the *Sales
+   Order* model, but the technical name `sale.order` is used in the payload.
 
-Set the webhook's trigger
--------------------------
+To create a webhook in **Studio**, proceed as follows:
 
-To create a webhook with **Studio**, :ref:`open Studio <studio/access>`, click :guilabel:`Webhooks`,
-then :guilabel:`New`. From here, name the webhook, modify the webhook's model (the kind of database
-entry to be targeted) if needed, and toggle whether calls made to the webhook URL should be logged
-(which would track the webhook's call history for troubleshooting).
+#. :ref:`Open Studio <studio/access>` and click :guilabel:`Webhooks`, then :guilabel:`New`.
+#. Give the webhook a clear, meaningful name that identifies its purpose.
+#. If needed, and provided developer mode is activated, select the appropriate :guilabel:`Model`
+   from the dropdown. If developer mode is not activated, the automation rule targets the current
+   model by default.
 
-The webhook's URL is automatically generated. This is the URL that should be used for testing the
-webhook and connecting it to the external system that will send updates to the database.
+#. The webhook's URL is automatically generated, but can be changed if needed by clicking
+   :guilabel:`Rotate Secret`. This is the URL that should be used when implementing the webhook in
+   the external system that will send updates to the database.
 
-.. danger::
-   The webhook's URL is **confidential** and should be treated with care. Sharing it online or
-   without caution can provide unintended access to the Odoo database. Click :guilabel:`Rotate
-   Secret` to change the URL if needed.
+   .. warning::
+      The URL is **confidential** and should be treated with care. Sharing it online or without
+      caution can provide unintended access to the Odoo database. If the URL is updated after the
+      initial implementation, make sure to update it in the external system.
 
-Finally, if the system sending the webhook is not Odoo, adjust the :guilabel:`Target Record` actions
-to look for the JSON record that is included in the API call's payload when the call is made to the
-webhook's URL. If the system sending the webhook is an Odoo database, then make sure that the `id`
-and `model` appear in the payload.
+#. If desired, enable :guilabel:`Log Calls` to track the history of API requests made to the
+   webhook's URL, e.g., for troubleshooting purposes.
+
+#. If the system sending the webhook is not Odoo, adjust the :guilabel:`Target Record` code to look
+   for the JSON record included in the payload when the API request is made to the webhook's URL. If
+   the system sending the webhook is an Odoo database, ensure that the `id` and `model` appear in
+   the payload.
+
+   If the webhook is used to create records in the Odoo database, use `model.browse(i)` or
+   `model.search(i)` instead of the default :guilabel:`Target Record` format.
+
+#. Click :guilabel:`Add an action` in the :guilabel:`Actions To Do` tab to define the :ref:`actions
+   <studio/automated-actions/action>` to be executed.
+#. Before implementing the webhook in the external system, :ref:`test
+   <studio/webhooks/test-webhook>` it to ensure it works as intended.
 
 .. tip::
-   Although the :guilabel:`Model` is set in Odoo, it is the model's technical name that must be
-   included in the payload. Hover over the model name, then click the :icon:`fa-arrow-right`
-   :guilabel:`(Internal link)` icon to find this technical name in the :guilabel:`Model` field. For
-   example, a sales order webhook uses the *Sales Order* model, but the technical name `sale.order`
-   is used in the payload.
+   - Webhooks can also be created via the :guilabel:`Automations` menu in **Studio** by selecting
+     the trigger :guilabel:`On webhook`.
+   - To access the history of API requests if :guilabel:`Log Calls` has been enabled, click the
+     :guilabel:`Logs` smart button at the top of the :guilabel:`Automation rules` form.
+   - If the purpose of the webhook is anything other than to update an existing record, e.g., to
+     create a new record, the :guilabel:`Execute Code` action must be chosen.
 
-.. note::
-  When creating a record in the Odoo database, the target record's default format should not be
-  used. Instead, use `model.browse(i)` or `model.search(i)`.
+.. _studio/webhooks/test-webhook:
 
-.. _studio/webhooks/webhook_action:
+Test a webhook
+==============
 
-Set the webhook's action
-------------------------
+Testing a webhook requires a test payload and an external tool or system, like
+`Postman <https://www.postman.com/>`_, to send the payload via a `POST` API request. This section
+presents the steps to test a webhook in Postman.
 
-To set a webhook's action while configuring a webhook, click :guilabel:`Add an action` under the
-:guilabel:`Actions To Do` tab. Click the action's :guilabel:`Type` and set the fields as needed.
+.. tip::
+   - See the :ref:`webhook use cases section <studio/webhooks/webhook-examples>` for step-by-step
+     explanations of how to test webhooks using test payloads.
+   - To get specific help with testing a webhook with Postman, contact their support team.
 
-.. _studio/webhooks/test_webhook:
+#. In Postman, create a new HTTP request and set its method to :guilabel:`POST`.
+#. Copy the webhook's URL from your Odoo database using the :icon:`fa-link` :guilabel:`(link)` icon
+   and paste it into the URL field in Postman.
+#. Click the :guilabel:`Body` tab and select :guilabel:`raw`.
+#. Set the file type to :guilabel:`JSON`, then copy the code from the test payload and paste it into
+   the code editor.
+#. Click :guilabel:`Send`.
 
-Test the webhook
-----------------
+.. _studio/webhooks/test-webhook-response:
 
-.. note::
-   Testing the webhook requires the webhook to be set up, a test payload to send to the webhook, and
-   an external tool or system to send the payload through a `POST` API request. Consider using a
-   tool like `Postman <https://www.postman.com/>`_ so less technical skills are required.
+In the :guilabel:`Response` viewer at the bottom of the screen in Postman, details, including a HTTP
+response code, indicate whether or not the webhook is functioning correctly.
 
-If a message saying `200 OK` or `status: ok` gets returned during testing, then the webhook is
-functioning properly on Odoo's side. From here, implementation can begin with the other tool to
-automatically send those webhook calls into Odoo using the webhook's URL.
+- A `200 OK` or `status: ok` message indicates that the webhook is functioning properly on Odoo's
+  side. From here, implementation can begin with the other system to automatically send the API
+  requests to the Odoo webhook's URL.
 
-If any other responses are returned, the number sent in the response helps to identify the problem.
-For example, a `500 Internal Server Error` means that Odoo could not interpret the call properly. If
-this gets returned, ensure the fields found in the JSON file are properly mapped in the webhook's
-configuration and in the system sending the test call. Turning on call logging in the webhook's
-configuration provides error logs if the webhook is not functioning as intended.
+- If any other response is returned, the number associated with it helps to identify the problem.
+  For example, a `500 Internal Server Error` message means that Odoo could not interpret the call
+  properly. In this case, ensure the fields found in the JSON file are properly mapped in the
+  webhook's configuration and in the system sending the test call.
 
-Implement the webhook
----------------------
+.. tip::
+   Turning on call logging in the webhook's configuration in Odoo provides error logs if the webhook
+   is not functioning as intended.
 
-Once the webhook is fully configured, begin connecting it to the system that sends data to the Odoo
-database through this webhook. Make sure that the API calls are sent to the webhook's URL when
-setting that system up.
+Implement a webhook in an external system
+=========================================
 
-.. _studio/webhooks/webhook_examples:
+When the webhook has been successfully created in Odoo and tested, implement it in the system that
+sends data to the Odoo database, making sure the `POST` API requests are sent to the webhook's URL.
+
+.. _studio/webhooks/webhook-examples:
 
 Webhook use cases
 =================
 
-Below are two examples of how to use webhooks in Odoo. These webhooks require external tools (which
-are listed with the example).
-
-.. warning::
-   Consult with a developer, solution architect, or another technical role when deciding to
-   implement webhooks. If not properly configured, webhooks may disrupt the Odoo database and can
-   take time to revert.
+Below are two examples of how to use webhooks in Odoo. A test payload is provided for each example,
+and can be found in the section on testing the webhook. `Postman <https://www.postman.com/>`_ is
+used to send the test payload.
 
 Update a sales order's currency
 -------------------------------
 
-This webhook updates a sales order in the **Sales** app to USD. It useful for subsidiaries outside
-the United States with a mother company located inside the United States or during mergers when
-consolidating data into one Odoo database.
+This webhook updates a sales order in the **Sales** app to `USD` when the external system sends a
+`POST` API request to the webhook's URL that includes that sales order number (which is identified
+by the payload's `id` record).
 
-Set the webhook's trigger
-~~~~~~~~~~~~~~~~~~~~~~~~~
+This could be useful for subsidiaries outside the United States with a mother company located inside
+the United States or during mergers when consolidating data into one Odoo database.
 
-To set up this webhook, open the **Sales** app. Then, :ref:`set the trigger
-<studio/webhooks/webhook_trigger>` so the :guilabel:`Model` is set to `Sales Order`. Also, set
-the :guilabel:`Target Record` to `model.env[payload.get('model')].browse(int(payload.get('id')))`.
-This is broken down below.
+Create the webhook
+~~~~~~~~~~~~~~~~~~
 
-- **model**: what gets updated in Odoo (in this case, sales orders). This matches the
-  :guilabel:`Model` set earlier.
-- **env**: where the action takes place. In this case, it is Odoo.
-- **payload**: what is sent to the webhook's URL. This contains the information that updates
-  the sales order.
-- **get('model')**: tells the webhook what database record to look at. In this case, the
-  webhook retrieves (`get`) the data tied to a specific `model`. In this example, this is the
-  Sales Order model.
-- **browse**: tells the webhook to look in the `model` (Sales Order) set by the payload for what to
-  update.
-- **int**: turns the target into an `integer` (a whole number). This is important in case some
-  words (a `string`) or a decimal number is included in the payload's target record.
-- **get('id')**: identifies the sales order number that is being updated in Odoo.
+To create this webhook, proceed as follows:
 
-Set the webhook's action
-~~~~~~~~~~~~~~~~~~~~~~~~
+#. Open the **Sales** app, then :ref:`open Studio <studio/access>` and click :guilabel:`Webhooks`.
+   The *Sales Order* model is selected by default.
+#. Click :guilabel:`New`. The :guilabel:`Trigger` is set to :guilabel:`On webhook` by default.
+#. Set the :guilabel:`Target Record` to
+   `model.env[payload.get('_model')].browse(int(payload.get('_id')))`, where:
 
-After setting the trigger, set the webhook's action by clicking :guilabel:`Add an action`. For the
-:guilabel:`Type`, click :guilabel:`Update Record`. Then, select `Update`, choose the field
-`Currency`, and select `USD` to have the currency field updated to USD. Finally, click
-:guilabel:`Save & Close`.
+   - `payload.get('_model')` retrieves the value associated with the `model` key in the payload,
+     i.e., `sale.order`, which is the technical name of the *Sales Order* model.
+   - `payload.get('_id')` retrieves the value associated with the `id` key in the payload, i.e.,
+     the number of the target sales order in your Odoo database with the `S` and leading
+     zeros removed.
+   - `int` converts the retrieved id to an integer (i.e., a whole number) because the method
+     `browse()` can only be used with an integer.
 
-Webhook setup summary
-~~~~~~~~~~~~~~~~~~~~~
-
-To summarize what is set up, the webhook targets sales orders, identified by their sales order
-number, and updates their currency to `USD` when a POST request is sent to the webhook's URL that
-includes that sales order number (which is identified by the payload's `id` record).
+#. Click :guilabel:`Add an action`.
+#. In the :guilabel:`Type` section, click :guilabel:`Update Record`.
+#. In the :guilabel:`Action details` section, select :guilabel:`Update`, choose the field
+   :guilabel:`Currency`, and select :guilabel:`USD`.
+#. Click :guilabel:`Save & Close`.
 
 Test the webhook
 ~~~~~~~~~~~~~~~~
 
-Test the webhook's setup to make sure everything is correct. This process uses a tool called
-`Postman <https://www.postman.com/>`_ to send the simulated trigger.
+To test this webhook, proceed as follows:
 
-This section walks through the steps to test this webhook in Postman, but does not offer help if
-there's an issue within that tool. To get specific help with Postman, contact their support team.
+#. With `Postman <https://www.postman.com/>`_ open, create a new HTTP request and set its method to
+   :guilabel:`POST`.
+#. Copy the URL of the Odoo webhook using the :icon:`fa-link` :guilabel:`(link)` icon and paste it
+   into the URL field in Postman.
+#. Click the :guilabel:`Body` tab and select :guilabel:`raw`.
+#. Set the file type to :guilabel:`JSON`, then copy this code, i.e., the payload, and paste it into
+   the code editor:
 
-Once Postman is open, create a new :guilabel:`HTTP` request and set its method to :guilabel:`POST`.
-Next, copy the webhook's URL that is being tested and paste it into the URL field in Postman. After
-that, click the :guilabel:`Body` tab and select the :guilabel:`raw` option. Set the file type to
-:guilabel:`JSON`, then copy this code and paste it into the file.
+   .. code-block:: json
 
-.. code-block:: json
+      {
+          "_model": "sale.order",
+          "_id": "SALES ORDER NUMBER"
+      }
 
-   {
-       "model": "sale.order",
-       "id": "SALES ORDER NUMBER"
-   }
-
-From here, choose a sales order to test the webhook on. If it is not possible to test in a live
-Odoo database, consider creating a demo database with a sample sales order and the webhook that was
-configured. Replace `SALES ORDER NUMBER` with the sales order's number without the `S` or any zeros
-before the number. For example, a sales order with the number `S00007` should be entered as `7` in
-Postman. Finally, click :guilabel:`Send` in Postman.
-
-If a message saying `200 OK` or `status: ok` gets returned, then the webhook is functioning properly
-on Odoo's side. The test sales order's currency is updated. From here, implementation can begin with
-the other tool to automatically send those webhook calls into Odoo using the webhook's URL.
-
-If any other responses are returned, the number associated with them helps to identify the problem.
-For example, a `500 Internal Server Error` means that Odoo could not interpret the call properly. If
-this gets returned, ensure the `model` and `id` fields are properly mapped in the webhook's
-configuration and in Postman.
+#. In your Odoo database, choose a sales order to test the webhook on. In the pasted code, replace
+   `SALES ORDER NUMBER` with the sales order's number without the `S` or any zeros before the
+   number. For example, a sales order with the number `S00007` should be entered as `7` in Postman.
+#. Click :guilabel:`Send`.
+#. Consult the :ref:`Response viewer <studio/webhooks/test-webhook-response>` in Postman to
+   determine whether or not the webhook is functioning properly. If a message other than `200 OK` or
+   `status: ok` is returned, the number associated with the message helps to identify the problem.
 
 .. _studio/webhooks/webhook-example:
 
 Create a new contact
 --------------------
 
-This webhook uses custom code to create a new contact in an Odoo database. This could be helpful for
-automatically creating new vendors or customers.
+This webhook uses custom code to create a new contact in an Odoo database when the external system
+sends a `POST` API request to the webhook's URL that includes the contact's information. This could
+be helpful for automatically creating new vendors or customers.
 
-Set the webhook's trigger
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Create the webhook
+~~~~~~~~~~~~~~~~~~
 
-To set up this webhook, open the **Contacts** app. Then, :ref:`set the trigger
-<studio/webhooks/webhook_trigger>` so the :guilabel:`Model` is set to `Contact`. Also, set the
-:guilabel:`Target Record` to `model.browse([2])`. This is broken down below.
+To create this webhook, proceed as follows:
 
-- **model**: what gets updated in Odoo (in this case, a contact). This matches the :guilabel:`Model`
-  set earlier.
-- **browse**: tells the webhook to look in the `model` (the contacts) set by the payload for
-  what to create.
+#. Open the **Contacts** app, then :ref:`open Studio <studio/access>` and click :guilabel:`Webhooks`.
+   The *Contact* model is selected by default.
+#. Click :guilabel:`New`. The :guilabel:`Trigger` is set to :guilabel:`On webhook` by default.
+#. Set the :guilabel:`Target Record` to `model.browse([2])`. This is essentially a placeholder as
+   the code in the automated action tells the webhook what needs to be retrieved from the payload
+   and in which model the record needs to be created.
+#. Click :guilabel:`Add an action`.
+#. In the :guilabel:`Type` section, click :guilabel:`Execute Code`.
+#. Copy this code and paste it into the code editor in the :guilabel:`Code` tab of the
+   :guilabel:`Action details` section:
 
-Set the webhook's action
-~~~~~~~~~~~~~~~~~~~~~~~~
+   .. code-block:: python
 
-After setting the trigger, set the webhook's action by clicking :guilabel:`Add an action`. For the
-:guilabel:`Type`, click :guilabel:`Execute Code`, then set the :guilabel:`code` to the sample code
-below. Finally, click :guilabel:`Save & Close`.
+      # variables to retrieve and hold data from the payload
+      contact_name = payload.get('name')
+      contact_email = payload.get('email')
+      contact_phone = payload.get('phone')
 
-.. code-block:: python
+      # a Python function to turn the variables into a contact in Odoo
+      if contact_name and contact_email:
+          new_partner = env['res.partner'].create({
+              'name': contact_name,
+              'email': contact_email,
+              'phone': contact_phone,
+              'company_type':'person',
+              'customer_rank': 1,
+          })
+      # an error message for missing required data in the payload
+      else:
+          raise ValueError("Missing required fields: 'name' and 'email'")
 
-   # variables to retrieve and hold data from the payload
-   contact_name = payload.get('name')
-   contact_email = payload.get('email')
-   contact_phone = payload.get('phone')
-
-   # a Python function to turn the variables into a contact in Odoo
-   if contact_name and contact_email:
-       new_partner = env['res.partner'].create({
-           'name': contact_name,
-           'email': contact_email,
-           'phone': contact_phone,
-           'company_type':'person',
-           'customer_rank': 1,
-       })
-   # an error message for missing required data in the payload
-   else:
-       raise ValueError("Missing required fields: 'name' and 'email'")
-
-
-Webhook setup summary
-~~~~~~~~~~~~~~~~~~~~~
-
-To summarize what is set up, the webhook creates a contact when an API call is sent to the webhook's
-URL that includes the contact's information.
+#. Click :guilabel:`Save & Close`.
 
 Test the webhook
 ~~~~~~~~~~~~~~~~
 
-Test the webhook's setup to make sure everything is correct. This process uses a tool called
-`Postman <https://www.postman.com/>`_ to send the simulated trigger.
+To test this webhook, proceed as follows:
 
-This section walks through the steps to test this webhook in Postman, but does not offer help if
-there's an issue within that tool. To get specific help with Postman, contact their support team.
+#. In `Postman <https://www.postman.com/>`_, create a new HTTP request and set its method to
+   :guilabel:`POST`.
+#. Copy the URL of the Odoo webhook using the :icon:`fa-link` :guilabel:`(link)` icon and paste it
+   into the URL field in Postman.
+#. Click the :guilabel:`Body` tab and select :guilabel:`raw`.
+#. Set the file type to :guilabel:`JSON`, then copy this code, i.e., the payload, and paste it into
+   the code editor:
 
-Once Postman is open, create a new request, and set its method to :guilabel:`POST`. Next, copy the
-webhook's URL that is being tested and paste it into the URL field in Postman. After that, click the
-:guilabel:`Body` tab and click :guilabel:`raw`. Set the file type to :guilabel:`JSON`, then copy
-this code and paste it into the file.
+   .. code-block:: json
 
-.. code-block:: json
+      {
+          "name": "CONTACT NAME",
+          "email": "CONTACTEMAIL@EMAIL.COM",
+          "phone": "CONTACT PHONE NUMBER"
+      }
 
-   {
-       "name": "CONTACT NAME",
-       "email": "CONTACTEMAIL@EMAIL.COM",
-       "phone": "CONTACT PHONE NUMBER"
-   }
-
-Replace the fields above with a new contact's information in Postman, and then click
-:guilabel:`Send`.
-
-If a message saying `200 OK` or `status: ok` gets returned, then the webhook is functioning properly
-on Odoo's side. The new test contact appears in the **Contacts** app. From here, implementation can
-begin with the other tool to automatically send those webhook calls into Odoo using the webhook's
-URL.
-
-If any other responses are returned, the number associated with them helps to identify the problem.
-For example, a `500 Internal Server Error` means that Odoo could not interpret the call properly. If
-this gets returned, ensure the fields found in the JSON file are properly mapped in the webhook's
-configuration and in Postman.
+#. In the pasted code, replace the `CONTACT NAME`, `CONTACTEMAIL@EMAIL.COM`, and `CONTACT PHONE
+   NUMBER` with a new contact's information.
+#. Click :guilabel:`Send`.
+#. Consult the :ref:`Response viewer <studio/webhooks/test-webhook-response>` in Postman to
+   determine whether or not the webhook is functioning properly. If a message other than `200 OK` or
+   `status: ok` is returned, the number associated with the message helps to identify the problem.
