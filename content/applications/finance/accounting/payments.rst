@@ -55,6 +55,34 @@ invoice payments or for vendor bill payments in the :guilabel:`Purchase` section
    view by removing the :guilabel:`Customers` or :guilabel:`Vendors` filter. Alternatively, access
    the full contact list through the Contacts app.
 
+.. _accounting/payments/checks:
+
+Checks
+------
+
+When :doc:`paying vendors by check <payments/pay_checks>` there is an outgoing payment method
+specifically for checks to allow tracking check numbers and printing checks.
+
+For incoming customer check payments, you can use the default :guilabel:`Manual Payment` payment
+method, or you can create a new payment method named *Check* to help identify such payments quickly.
+To create a *Check* payment method, follow these steps:
+
+#. Go to :menuselection:`Accounting --> Configuration --> Journals --> Bank`.
+#. In the :guilabel:`Incoming Payments` tab, and :guilabel:`Add a line`.
+#. As :guilabel:`Payment Method`, select :guilabel:`Manual`, and enter `Check` as the
+   :guilabel:`Name`.
+#. When registering a customer payment :ref:`on an invoice <accounting/payments/from-invoice-bill>`
+   or :ref:`not related to an invoice <accounting/payments/not-tied>`, use the new :guilabel:`Check`
+   payment method.
+
+.. tip::
+   For best practice, enter the check number as the :guilabel:`Memo` when registering a customer
+   payment by check.
+
+.. seealso::
+   :doc:`Batch payments <payments/batch>` can simplify reconciling deposits containing multiple
+   checks.
+
 .. _accounting/payments/from-invoice-bill:
 
 Registering payment from an invoice or bill
@@ -285,12 +313,12 @@ Registering a single payment for multiple customers or vendors (batch payments)
 ===============================================================================
 
 Batch payments allow grouping payments from multiple contacts to ease :doc:`reconciliation
-<bank/reconciliation>`. They are also useful when depositing :doc:`checks <payments/checks>` to the
-bank or for generating bank payment files such as :doc:`SEPA <payments/pay_sepa>` or :ref:`NACHA
-<l10n_us/nacha>`. To do so, go to :menuselection:`Accounting --> Customers --> Payments` or
-:menuselection:`Accounting --> Vendors --> Payments`. In the payments list view, select the payments
-to be grouped in a batch, click :icon:`fa-cog` :guilabel:`Actions`, and select :guilabel:`Create
-Batch Payment`.
+<bank/reconciliation>`. They are also useful when depositing :ref:`checks
+<accounting/payments/checks>` to the bank or for generating bank payment files such as :doc:`SEPA
+<payments/pay_sepa>` or :ref:`NACHA <l10n_us/nacha>`. To do so, go to :menuselection:`Accounting -->
+Customers --> Payments` or :menuselection:`Accounting --> Vendors --> Payments`. In the payments
+list view, select the payments to be grouped in a batch, click :icon:`fa-cog` :guilabel:`Actions`,
+and select :guilabel:`Create Batch Payment`.
 
 .. note::
    All payments in a batch must have the same :ref:`payment method
@@ -374,7 +402,6 @@ Reconciling payments with bank transactions
    :titlesonly:
 
    payments/online
-   payments/checks
    payments/batch
    payments/batch_sdd
    payments/follow_up
