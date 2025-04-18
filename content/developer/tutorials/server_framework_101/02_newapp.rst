@@ -35,10 +35,6 @@ offers above or below the expected selling price. It is up to the seller to acce
    :align: center
    :alt: Form view 02
 
-Here is a quick video showing the workflow of the module.
-
-Hopefully, this video will be recorded soon :-)
-
 Prepare the addon directory
 ===========================
 
