@@ -4,119 +4,143 @@
 Attendances
 ===========
 
-Odoo's *Attendances* application functions as a time clock. Employees are able to check in and out
-of work using a dedicated device in kiosk mode, while users are also able to check in and out of
-work directly from the database. Managers can quickly see who is available at any given time, create
-reports to see everyone's hours, and gain insights on which employees are working overtime, or
-checking out of work earlier than expected.
+Odoo's **Attendances** application functions as a time clock. Employees are able to check in and out
+of work using a :ref:`dedicated device in kiosk mode <attendances/kiosk-mode-entry>`, while users
+are also able to check in and out of work :ref:`directly from the database <attendances/check-in>`.
+Managers can see who is available at any given time, create reports to see everyone's hours, and
+gain insights on which employees are working overtime, or checking out of work earlier than
+expected.
 
 .. _attendances/access-rights:
 
 Access rights
 =============
 
-It is important to understand how the different access rights affect what options and features users
-can access in the *Attendances* application.
+Understanding access rights is essential to navigating the **Attendances** application.
 
 Every user in the database is able to check in and out directly from the database, without needing
-access to the *Attendances* application. Additionally, all users can access their own attendance
-records from their employee form in the *Employees* app.
+access to the **Attendances** app. Additionally, all users can access their own attendance records
+from their employee form in the **Employees** app.
 
-Access to both the *Attendances* application, and the various features within the application is
+Access to both the **Attendances** application, and the various features within the application is
 determined by access rights.
 
 To see what access rights a user has, navigate to the :menuselection:`Settings app --> Users &
-Companies: Users`, and click on an individual user. The :guilabel:`Access Rights` tab is visible by
-default. Scroll down to the :guilabel:`Human Resources` section to see the setting. For the
+Companies --> Users`, and click on an individual user. The :guilabel:`Access Rights` tab is visible
+by default. Scroll down to the :guilabel:`HUMAN RESOURCES` section to view the settings. For the
 :guilabel:`Attendances` field, the options are either to leave the field blank or select
 :guilabel:`Administrator`.
 
 If the :guilabel:`Administrator` option is selected, the user has full access to the entire
-*Attendances* application, with no restrictions. They can view all employee attendance records,
-enter *Kiosk mMode* from the application, access all reporting metrics, and make modifications to
-the settings. If left blank, the user does **not** have access to the *Attendances* application.
+**Attendances** application, with no restrictions. They can view all employee attendance records,
+enter *Kiosk Mode* from the application, access all reporting metrics, and make modifications to the
+settings. If left blank, the user does **not** have access to the **Attendances** application.
+
+.. note::
+   If a user does **not** have :guilabel:`Administrator` rights for the **Attendances** app, they
+   are **not** able to open the app, even though it appears on the main database dashboard. An
+   :guilabel:`Access Error` pop-up message appears, stating:
+
+   `You do not have enough rights to access the fields "attendance_manager_id" on Employee
+   (hr.employee). Please contact your system administrator.`
+
+   Users who cannot access the **Attendances** app can still :doc:`check in and check out
+   <../hr/attendances/check_in_check_out>` of work within the database, using the :icon:`fa-circle`
+   :guilabel:`(red circle)` or :icon:`fa-circle` :guilabel:`(green circle)` that are always
+   available at the top of the database.
 
 .. _attendances/approvers:
 
 Approvers
 ---------
 
-The **only** other scenario where different information may be accessible in the *Attendances*
-application is for approvers. If a user does *not* have administrative rights for the *Attendances*
-application, but they are set as an employee's approver for the *Attendances* application, that user
-is able to view the attendance records for that specific employee, as well as make modifications to
-that employee's attendance records, if necessary. This applies to all employees for whom the user is
-listed as the *Attendances* application approver. Approvers are typically managers, though this is
-not required.
+An approver is a user assigned to review and manage an employee's attendance records. An approver is
+typically a manager, though that is not required. Approvers without administrative rights can access
+and modify attendance records **only** for the employees they are assigned to. This is the only
+exception where non-admin users can view records in the **Attendances** app.
 
-To see who the attendance approver is for an employee, navigate to the :menuselection:`Employees
+To view who the attendances approver for an employee is, navigate to the :menuselection:`Employees
 application` and click on the specific employee. Click on the :guilabel:`Work Information` tab,
-scroll to the :guilabel:`Approvers` section, and check the :guilabel:`Attendance` field. The person
-selected is able to view that employees' attendance records, both on the *Attendances* application
+scroll to the :guilabel:`APPROVERS` section, and check the :guilabel:`Attendance` field. The person
+selected is able to view that employees' attendance records, both on the **Attendances** application
 dashboard as well as in the attendance reports, and make modifications to their records.
 
 Configuration
 =============
 
-Few configurations are needed in the *Attendances* application. Determining how employees check in
-and out, defining how the kiosks function, and determining how extra hours are computed are all set
-in the Configuration menu. Navigate to the :menuselection:`Attendances application -->
-Configuration` to access the configuration menu.
+Few configurations are needed in the **Attendances** app. Determining how employees check in and
+out, defining how the kiosks function, and determining how extra hours are computed are all set in
+the Configuration menu. Navigate to the :menuselection:`Attendances application --> Configuration`
+to access the configuration menu.
+
+.. note::
+   Any configuration item with an :icon:`fa-building-o` :guilabel:`(building)` icon is a
+   company-specific configuration. Items without an :icon:`fa-building-o` :guilabel:`(building)`
+   icon apply to all companies within the database.
 
 Modes
 -----
 
-- :guilabel:`Attendances from Backend`: activate this selection to allow users to check in and out
-  directly from the Odoo database. If this is not activated, users must use a kiosk to check in and
-  out of work.
+- :guilabel:`Attendances from Backend` :icon:`fa-building-o`: activate this feature to allow users
+  to check in and out directly from the Odoo database. If this is not activated, users must use a
+  kiosk to check in and out of work.
+- :guilabel:`Automatic Check-Out` :icon:`fa-building-o`: activate this feature to automatically
+  check out employees according to their working schedule, after a buffer of time has passed.
+- :guilabel:`Tolerance`: this field appears only when the :guilabel:`Automatic Check-Out`
+  :icon:`fa-building-o` feature is enabled. Enter the amount of time, in hours, that must elapse
+  after an employee's working hours have ended, before they are automatically checked out.
 
-Extra hours
+.. example::
+   With the :guilabel:`Automatic Check-Out` option enabled, and the :guilabel:`Tolerance` set to
+   `2.00` hours, an employee checks in to work at 9:00 AM, and forgets to check-out at 5:00 PM. At
+   7:00 PM, they are automaticlaly checked out.
+
+- :guilabel:`Absence Management` :icon:`fa-building-o`: activate this feature to log any absences
+  that are not associated with a time off request, such as vacation time or sick time, on the
+  attendances report.
+
+Extra Hours
 -----------
 
-This section specifies how extra time is calculated, including when extra time is counted and what
-time is not logged.
+This section specifies how extra time (sometimes referred to as *overtime*) is calculated, including
+when extra time is counted and what time is not logged.
 
-- :guilabel:`Count of Extra Hours`: enable this box to allow employees to log extra hours beyond
-  their set working hours (sometimes referred to as *overtime*). Activating this selection displays
-  the following settings as well. If this is not activated, no other configurations appear.
+- :guilabel:`Tolerance Time In Favor Of Company`: enter the amount of time, in minutes, that is
+  **not** counted towards an employee's overtime. When an employee checks out, and the extra time
+  logged is below the specified minutes, the extra time is **not** counted as overtime for the
+  employee.
+- :guilabel:`Tolerance Time In Favor Of Employee`: enter the amount of time, in minutes, that an
+  employee is given, that does **not** adversely affect their attendance if they log less time than
+  their working hours. When an employee checks out, and the total time logged for the day is less
+  than their specified working hours and less than this specified grace period, they are **not**
+  penalized for their reduced hours.
 
-  - :guilabel:`Start From`: the current date is automatically entered in this field. If desired,
-    click on this field and use the calendar selector to modify the start date on which extra hours
-    are logged.
-  - :guilabel:`Tolerance Time In Favor Of Company`: enter the amount of time, in minutes, that is
-    **not** counted towards an employee's overtime. When an employee checks out, and the extra time
-    logged is below the specified minutes, the extra time is **not** counted as overtime for the
-    employee.
-  - :guilabel:`Tolerance Time In Favor Of Employee`: enter the amount of time, in minutes, that an
-    employee is given, that does **not** adversely affect their attendance if they log less time
-    than their working hours. When an employee checks out, and the total time logged for the day is
-    less than their specified working hours and less than this specified grace period, they are
-    **not** penalized for their reduced hours.
+  .. example::
+     A company sets both of the :guilabel:`Tolerance` fields to `15` minutes, and the working hours
+     for the entire company are set from 9:00 AM to 5:00 PM.
 
-    .. example::
-       A company sets both of the :guilabel:`Tolerance` fields to `15` minutes, and the working
-       hours for the entire company are set from 9:00 AM to 5:00 PM.
+     If an employee checks in at 9:00 AM, and checks out at 5:14 PM, the extra 14 minutes are
+     **not** counted towards their overtime.
 
-       If an employee checks in at 9:00 AM, and checks out at 5:14 PM, the extra 14 minutes are
-       **not** counted towards their overtime.
+     If an employee checks in at 9:05 AM, and checks out at 4:55 PM, even though they logged a total
+     of 10 minutes less than their full working hours, they are **not** penalized for this
+     discrepancy.
 
-       If an employee checks in at 9:05 AM, and checks out at 4:55 PM, even though they logged a
-       total of 10 minutes less than their full working hours, they are **not** penalized for this
-       discrepancy.
+- :guilabel:`Extra Hours Validation` :icon:`fa-building-o`: tick either the radio button next to
+  :guilabel:`Automatically Approved` to have all extra time automatically approved, or
+  :guilabel:`Approved by Manager` if all extra time should be reviewed and approved by a manager.
 
-  - :guilabel:`Display Extra Hours`: activate this box to display the extra hours logged by an
-    employee when they check out with a kiosk, or when a user checks out in the database.
+- :guilabel:`Display Extra Hours`: activate this box to display the extra hours logged by an
+  employee when they check out with a kiosk, or when a user checks out in the database.
 
 .. note::
-   Employees are still able to log overtime hours even if the :guilabel:`Count of Extra Hours`
-   option is not activated. The difference is that when :guilabel:`Count of Extra Hours` is
-   activated, the extra hours can be :ref:`deducted from an approved time off request
+   Approved extra hours can be :ref:`deducted from an approved time off request
    <time_off/deduct-extra-hours>`.
 
 Overview
 ========
 
-When entering the *Attendances* application, the :guilabel:`Overview` dashboard is presented,
+When entering the **Attendances** application, the :guilabel:`Overview` dashboard is presented,
 containing all the check in and check out information for the signed in user. If the user has
 specific :ref:`access rights <attendances/access-rights>` and/or are :ref:`approvers
 <attendances/approvers>` for specific employees, then those additional employee's check in and check
@@ -126,30 +150,29 @@ Views
 -----
 
 To change the view from the default Gantt chart to a list view, click the :guilabel:`List` icon in
-the top right of the dashboard, beneath the user's photo. To switch back to the Gantt chart, click
+the top-right of the dashboard, beneath the user's photo. To switch back to the Gantt chart, click
 the :guilabel:`Gantt` button, located next to the :guilabel:`List` button.
 
 The default view presents the current day's information. To present the information for the
 :guilabel:`Week`, :guilabel:`Month`, or :guilabel:`Year`, click on the :guilabel:`Day` button to
 reveal a drop-down, displaying those other options. Select the desired view, and the dashboard
 updates, presenting the selected information. To change the :guilabel:`Day`, :guilabel:`Week`,
-:guilabel:`Month`, or :guilabel:`Year` presented, click the :guilabel:`← (left arrow)` or
-:guilabel:`→ (right arrow)` buttons on either side of the drop-down menu. To jump back to a view
-containing the current day, click the :guilabel:`Today` button. This refreshes the dashboard,
-presenting information containing the current day's information.
+:guilabel:`Month`, or :guilabel:`Year` presented, click the :icon:`oi-arrow-left` :guilabel:`(left
+arrow)` or :icon:`oi-arrow-right` :guilabel:`(right arrow)` buttons on either side of the drop-down
+menu. To jump back to a view containing the current day, click the :guilabel:`Today` button. This
+refreshes the dashboard, presenting information containing the current day's information.
 
 In the :guilabel:`Day` view, the column for the current hour is highlighted in yellow. If the
 :guilabel:`Week` or :guilabel:`Month` view is selected, the column for the current day is
 highlighted. If the :guilabel:`Year` view is selected, the current month is highlighted.
 
 .. image:: attendances/overview.png
-   :align: center
    :alt: The overview dashboard presenting the information for the week, with the current day
          highlighted.
 
 Any entries that have errors appear in red, indicating they need to be resolved by a user with the
 proper :ref:`access rights <attendances/access-rights>` and/or are :ref:`approvers
-<attendances/approvers>` for the employee(s) with the errors.
+<attendances/approvers>` for the employees with the errors.
 
 .. _attendances/filters-groups:
 
@@ -157,10 +180,10 @@ Filters and groups
 ------------------
 
 To filter the results in the overview dashboard, or to present different groups of information,
-click the :guilabel:`🔻 (triangle drop down)` button in the right side of the :guilabel:`Search` bar
-above the dashboard, and select one of the available :guilabel:`Filters` or :guilabel:`Group By`
-options. There are several pre-configured filters and groups to choose from, as well as an option to
-create custom ones.
+click the :icon:`fa-caret-down` :guilabel:`(Toggle Search Panel)` button in the right side of the
+:guilabel:`Search` bar above the dashboard, and select one of the available :guilabel:`Filters` or
+:guilabel:`Group By` options. Several preconfigured filters and groups are available to choose from,
+as well as an option to create custom ones.
 
 Filters
 ~~~~~~~
@@ -244,7 +267,6 @@ sections.
   pointed out.
 
 .. image:: attendances/details.png
-   :align: center
    :alt: The detailed information for an attendance entry.
 
 Errors
@@ -254,8 +276,8 @@ Entries that contain an error appear on the overview dashboard in red. In the :g
 view`, the entry appears with a red background. If in the :guilabel:`List view`, the entry text
 appears in red.
 
-An error typically occurs when an employee has checked in but has not checked out within the last
-24 hours, or when an employee has a check in and check out period spanning over 16 hours.
+An error typically occurs when an employee has checked in but has not checked out within the last 24
+hours, or when an employee has a check in and check out period spanning over 16 hours.
 
 To fix the error, the attendance entry must be modified or deleted. Click on the entry to reveal a
 pop-up containing the details for that particular entry. To modify the :guilabel:`Check In` and/or
@@ -265,7 +287,6 @@ calendar to select the specific time for the entry. When the information is corr
 :guilabel:`Apply.`
 
 .. image:: attendances/errors.png
-   :align: center
    :alt: The pop-up that allows for modifications to an attendance entry with an error. The calendar
          selector is shown, and the time selector is highlighted.
 
@@ -282,7 +303,7 @@ To view attendance reports, click :guilabel:`Reporting` in the top menu. The def
 each employee's attendance information for the past 3 months, in a :guilabel:`Line Chart`.
 
 The default view is a :guilabel:`Graph`. To view the data in a pivot table, click the
-:guilabel:`Pivot Table` button on the top right of the report. To switch back to the graph view,
+:guilabel:`Pivot Table` button on the top-right of the report. To switch back to the graph view,
 click the :guilabel:`Graph` button, located next to the :guilabel:`Pivot Table` button.
 
 To present different information, adjust the :ref:`filters and groups <attendances/filters-groups>`
@@ -299,7 +320,6 @@ The report can also be inserted into a spreadsheet. Click the :guilabel:`Insert 
 button and a pop-up appears. Select the desired spreadsheet, and click :guilabel:`Confirm`.
 
 .. image:: attendances/reporting.png
-   :align: center
    :alt: The default report view, with all the optional view buttons highlighted.
 
 .. seealso::
