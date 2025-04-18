@@ -106,4 +106,3 @@ Status`.
 .. seealso::
    - :doc:`../subscriptions`
    - :doc:`plans`
-   - :doc:`products`

@@ -19,6 +19,11 @@ Configuration --> Settings`. In the :guilabel:`Pricing` section, tick the checkb
 .. image:: pricing/pricelist-feature-setting.png
    :alt: How the pricelist feature setting looks in Odoo Sales.
 
+.. _sales/product_prices/pricelist:
+
+Pricelists
+==========
+
 After activating and saving the :guilabel:`Pricelists` feature, the :guilabel:`Settings` page
 reloads. From here, either select the :icon:`oi-arrow-right` :guilabel:`Pricelists` link (beneath
 the :guilabel:`Pricelists` feature on the :guilabel:`Settings` page), or navigate to
@@ -128,8 +133,8 @@ From here, there are several configuration options:
 Recurring Prices tab
 --------------------
 
-Recurring prices are specifically used with :doc:`subscription products
-<../../../subscriptions/products>`.
+Time-based rules are used specifically with subscription products. Be sure to check out the Odoo
+:doc:`Subscriptions </applications/sales/subscriptions>` documentation for more information.
 
 Under the :guilabel:`Recurring Prices` tab, the same functionality of the :guilabel:`Price Rules`
 tab is present. The only difference being that a recurring time period can be applied in the
@@ -201,7 +206,12 @@ Lastly, there is the option to add an :guilabel:`E-commerce Promotional Code`. T
 in the desired promo code that, when entered during the checkout process, applies the pricelist to
 the customer, even if the customer does not fall into the previously-specified criteria.
 
-Then, in the :guilabel:`Discounts` section, there is a :guilabel:`Discount Policy` field with two
+.. _sales/products_prices/discounts:
+
+Show discount percentage to customers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In the :guilabel:`Discounts` section, there is a :guilabel:`Discount Policy` label with two radio
 options to choose from: :guilabel:`Discount included in the price` or :guilabel:`Show public price &
 discount to the customer`.
 
