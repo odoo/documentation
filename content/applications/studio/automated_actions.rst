@@ -4,34 +4,45 @@
 Automation rules
 ================
 
-Automation rules are used to trigger automatic changes based on user actions (e.g., apply a
-modification when a field is set to a specific value), email events, time conditions (e.g., archive
-a record 7 days after its last update), or external events.
+Automation rules allow the execution of one or more predefined actions in response to a specific
+trigger, e.g., create an activity when a field is set to a specific value, or archive a record 7
+days after its last update.
 
-To create an automation rule with Studio, proceed as follows:
+To create an automation rule with **Studio**, proceed as follows:
 
 #. :ref:`Open Studio <studio/access>` and click :guilabel:`Automations`, then :guilabel:`New`.
-#. Select the :ref:`studio/automated-actions/trigger` and, if necessary, fill in the fields that
-   appear on the screen based on the chosen trigger.
+#. Name the automated action.
+#. Select the :ref:`trigger <studio/automated-actions/trigger>` and, if necessary, fill in the
+   fields that appear on the screen based on the chosen trigger.
 #. Click :guilabel:`Add an action`, then select the :guilabel:`Type` of
    :ref:`action <studio/automated-actions/action>` and fill in the fields that appear on the screen
    based on your selected action.
 #. Click :guilabel:`Save & Close` or :guilabel:`Save & New`.
 
+.. important::
+   For automation rules that require custom code, note that maintenance of custom code is not
+   included in the *Standard* or *Custom* pricing plans and incurs :ref:`additional fees
+   <charges_standard>`.
+
 .. example::
 
-   .. image:: automated_actions/automation-rule-ex.png
+   To ensure follow-up on less satisfied clients, this automation rule creates an activity three
+   months after a sales order is created for clients with a satisfaction percentage lower than 30%.
+
+   .. image:: automated_actions/create-activity-conditions.png
       :alt: Example of an automated action on the Subscription model
 
 .. tip::
-   - To modify the :doc:`model <models_modules_apps>` of the automation rule, switch models before
-     clicking :guilabel:`Automations` in Studio, or :ref:`activate the developer mode
+   - Name automation rules clearly and use the :guilabel:`Notes` section to document their
+     purpose and functioning to facilitate maintenance and enhance collaboration between users.
+   - To modify the :doc:`model <models_modules_apps>` targeted by the automation rule, switch models
+     before clicking :guilabel:`Automations` in Studio, or :ref:`activate the developer mode
      <developer-mode>`, create or edit an automation rule, and select the :guilabel:`Model` in the
      :guilabel:`Automation Rules` form.
-   - You can also create automation rules from any kanban stage by clicking the gear icon
-     (:guilabel:`⚙` ) next to the kanban stage name, then selecting :guilabel:`Automations`. In this
-     case, the :guilabel:`Trigger` is set to :guilabel:`Stage is set to` by default, but you can
-     change it if necessary.
+   - Automation rules can be created from any kanban stage by clicking the :icon:`fa-cog`
+     :guilabel:`(Settings)` icon that appears when hovering over the kanban stage name, then
+     selecting :guilabel:`Automations`. In this case, the :guilabel:`Trigger` is set to
+     :guilabel:`Stage is set to` by default, but can be changed if necessary.
 
      .. image:: automated_actions/automations-kanban.png
         :alt: Create automations from a kanban stage
@@ -45,17 +56,19 @@ The :guilabel:`Trigger` is used to define when the automation rule should be app
 triggers depend on the :doc:`model <models_modules_apps>`. Five trigger categories are available
 overall:
 
-- :ref:`studio/automated-actions/trigger/values-updated`
-- :ref:`studio/automated-actions/trigger/email-events`
-- :ref:`studio/automated-actions/trigger/values-timing-conditions`
-- :ref:`studio/automated-actions/trigger/custom`
-- :ref:`studio/automated-actions/trigger/external`
+- :ref:`studio/automated-actions/trigger-values-updated`
+- :ref:`studio/automated-actions/trigger-email-events`
+- :ref:`studio/automated-actions/trigger-timing-conditions`
+- :ref:`studio/automated-actions/trigger-custom`
+- :ref:`studio/automated-actions/trigger-external`
+
+.. _studio/automated_actions/before-update-domain:
 
 .. tip::
    You can also define a :guilabel:`Before Update Domain` to specify the conditions that must be met
    *before* the automation rule is triggered. In contrast, the conditions defined using the
-   :ref:`Extra Conditions <studio/automated-actions/trigger/values-timing-conditions>` and
-   :ref:`Apply on <studio/automated-actions/trigger/custom>` filters are checked *during* the
+   :ref:`Extra Conditions <studio/automated-actions/trigger-timing-conditions>` and
+   :ref:`Apply on <studio/automated-actions/trigger-custom>` filters are checked *during* the
    execution of the automation rule.
 
    To define a :guilabel:`Before Update Domain`, :ref:`activate the developer mode
@@ -64,40 +77,45 @@ overall:
 
    For example, if you want the automated action to happen when an email address is set on a
    contact that did not have an address before (in contrast to modifying their existing address),
-   define the :guilabel:`Before Update Domain` to :guilabel:`Email is not set`, and the
-   :guilabel:`Apply on` domain to :guilabel:`Email is set`.
+   use :guilabel:`Email is not set` as the :guilabel:`Before Update Domain` and :guilabel:`Email is
+   set` as the :guilabel:`Apply on` domain.
 
    .. image:: automated_actions/before-update-domain.png
       :alt: Example of a trigger with a Before Update Domain
 
-.. _studio/automated-actions/trigger/values-updated:
+.. _studio/automated-actions/trigger-values-updated:
 
 Values Updated
 --------------
 
-The triggers available in this category depend on the model and are based on common field changes,
-such as adding a specific tag (e.g., to a task) or setting the :guilabel:`User` field. Select the
-trigger, then select a value if required.
+Trigger automated actions when specific changes happen in the database. The triggers available in
+this category depend on the model and are based on common changes, such as adding a specific tag
+(e.g., to a task) or setting a field's value (e.g., setting the :guilabel:`User` field).
 
-.. image:: automated_actions/values-updated-trigger.png
-   :alt: Example of a Values Updated trigger
+Select the trigger, then select a value if required.
 
-.. _studio/automated-actions/trigger/email-events:
+.. _studio/automated-actions/trigger-email-events:
 
 Email Events
 ------------
 
 Trigger automated actions upon receiving or sending emails.
 
-.. _studio/automated-actions/trigger/values-timing-conditions:
+.. _studio/automated-actions/trigger-timing-conditions:
 
 Timing Conditions
 -----------------
 
-Trigger automated actions based on a date field. The following triggers are available:
+.. important::
+   By default, the scheduler checks for time-triggered automation rules every 240 minutes, or 4
+   hours, meaning lower granularity in timing conditions may not always be honored.
+
+Trigger automated actions at a point in time relative to a date field. The following triggers are
+available:
 
 - :guilabel:`Based on date field`: Select the field to be used next to the :guilabel:`Delay` field.
-- :guilabel:`After creation`: The action is triggered when a record is created and saved.
+- :guilabel:`After creation`: The action is triggered a defined period of time after the creation
+  of a record.
 - :guilabel:`After last update`: The action is triggered when an existing record is edited and
   saved.
 
@@ -112,28 +130,24 @@ You can then define:
 The action is triggered when the delay is reached and the conditions are met.
 
 .. example::
-   If you want to send a reminder email 30 minutes before the start of a calendar event, select the
-   :guilabel:`Start (Calendar Event)` under :guilabel:`Trigger Date` and set the :guilabel:`Delay`
-   to **-30** :guilabel:`Minutes`.
+   To send a reminder email 30 minutes *before* the start of a calendar event, select the
+   :guilabel:`Start (Calendar Event)` under :guilabel:`Trigger` and set the :guilabel:`Delay` to
+   `-30` :guilabel:`Minutes`.
 
    .. image:: automated_actions/timing-conditions-trigger.png
       :alt: Example of a Based on date field trigger
 
-.. note::
-   By default, the scheduler checks for trigger dates every 4 hours, meaning lower granularity in
-   time-based automations may not always be honored.
-
-.. _studio/automated-actions/trigger/custom:
+.. _studio/automated-actions/trigger-custom:
 
 Custom
 ------
 
 Trigger automated actions:
 
-- :guilabel:`On save`: When the record is saved;
-- :guilabel:`On deletion`: When a record is deleted;
-- :guilabel:`On UI change`: When a field's value is changed on the :ref:`Form view
-  <studio/views/general/form>`, even before saving the record.
+- :guilabel:`On save`: when a record is saved;
+- :guilabel:`On deletion`: when a record is deleted;
+- :guilabel:`On UI change`: when a field's value is changed on the :ref:`Form view
+  <studio/views/general/form>`, even before the record is saved.
 
 For the :guilabel:`On save` and :guilabel:`On UI change` triggers, you **must** then select the
 field(s) to be used to trigger the automation rule in the :guilabel:`When updating` field.
@@ -145,49 +159,50 @@ field(s) to be used to trigger the automation rule in the :guilabel:`When updati
 Optionally, you can also define additional conditions to be met to trigger the automation rule in
 the :guilabel:`Apply on` field.
 
+.. example::
+   To trigger an automated action *upon* the creation of record, e.g., when a new contact is
+   created, select the :ref:`On save <studio/automated-actions/trigger-custom>` trigger and use
+   :guilabel:`ID is not set` as the :ref:`Before Update Domain
+   <studio/automated_actions/before-update-domain>` and :guilabel:`ID is set` as the
+   :guilabel:`Apply on` domain. Make sure the correct field is selected in the :guilabel:`When
+   updating` field.
+
+   When a new contact is saved, it is automatically assigned a database ID, thereby triggering the
+   automation rule.
+
+   .. image:: automated_actions/on-save-on-creation.png
+      :alt: Example of a triggering an action upon creation of a record
+      :scale: 80%
+
 .. note::
    The :guilabel:`On UI change` trigger can only be used with the
-   :ref:`studio/automated-actions/action/python-code` action and only works when a modification is
+   :ref:`studio/automated-actions/action-execute-code` action and only works when a modification is
    made manually. The action is not executed if the field is changed through another automation
    rule.
 
-.. _studio/automated-actions/trigger/external:
+.. _studio/automated-actions/trigger-external:
 
 External
 --------
 
-Trigger automated actions based on an external event using a webhook. A webhook is a method of
-communication between two systems where the source system sends an HTTP(S) request to a destination
-system based on a specific event. It usually includes a data payload containing information about
-the event that occurred.
+Trigger automated actions based on a specific event in an external system or application using a
+:doc:`webhook <automated_actions/webhooks>`.
 
-To configure the :guilabel:`On webhook` trigger, copy the :guilabel:`URL` generated by Odoo into the
-destination system (i.e., the system receiving the request). Then, in the :guilabel:`Target Record`
-field, enter the code to run to define the record(s) to be updated using the automation rule.
+After the webhook is configured in Odoo, where the webhook's URL is generated and the target record
+defined, it needs to be implemented in the external system.
+
+   .. image:: automated_actions/webhook-update-record.png
+      :alt: Example of a Based on date field trigger
+      :scale: 80%
 
 .. warning::
-   The URL must be treated as **confidential**; sharing it online or without caution could
-   potentially expose your system to malicious parties. Click the :guilabel:`Rotate Secret` button
-   to change the URL's secret if necessary.
+  It is *highly recommended* to consult with a developer, solution architect, or another technical
+  role when deciding to use webhooks and throughout the implementation process. If not properly
+  configured, webhooks may disrupt the Odoo database and can take time to revert.
 
 .. note::
-    - The code defined by default in the :guilabel:`Target Record` field works for webhooks coming
-      from another Odoo database. It is used to determine the record(s) to be updated using the
-      information in the payload.
-    - If you wish to use the webhook's content for a purpose other than to find the record(s) (e.g.,
-      *create* a record), your only option is to use an :ref:`studio/automated-actions/action/python-code`
-      action. In this case, the :guilabel:`Target record` field must contain any valid code, but its
-      result doesn't have any effect on the automated action itself.
-    - The webhook content is available in the server action context as a `payload` variable (i.e., a
-      dictionary that contains the GET parameters or POST JSON body of the incoming request).
-
-You can also choose to :guilabel:`Log Calls` to record the payloads received, e.g., to make sure the
-data sent by the source system matches the expected format and content. This also helps identify
-and diagnose any issues that may arise. To access the logs, click the :guilabel:`Logs` smart
-button at the top of the :guilabel:`Automation rules` form.
-
-.. seealso::
-   :doc:`automated_actions/webhooks`
+   It is also possible to set up an automated action that :ref:`sends data to a external system's
+   webhook <studio/automated-actions/action-webhook>` when an event occurs in your Odoo database.
 
 .. _studio/automated-actions/action:
 
@@ -195,24 +210,28 @@ Actions
 =======
 
 Once you have defined the automation rule's :ref:`trigger <studio/automated-actions/trigger>`, click
-:guilabel:`Add an action` to define the action to be executed.
+:guilabel:`Add an action` in the :guilabel:`Actions To Do` tab to define the action to be executed.
 
 .. tip::
-   You can define multiple actions for the same trigger/automation rule. The actions are executed
-   in the order they are defined. This means, for example, that if you define an
-   :guilabel:`Update record` action and then a :guilabel:`Send email` action, the email uses the
-   updated values. However, if the :guilabel:`Send email` action is defined before the
-   :guilabel:`Update record` action, the email uses the values set *before* the update action is
-   run.
+   You can define multiple actions for the same automation rule. By default, actions are executed in
+   the order in which they were defined.
 
-.. _studio/automated-actions/action/update-record:
+   This means, for example, that if you define an :guilabel:`Update record` action and then a
+   :guilabel:`Send email` action, the email uses the updated values. However, if the :guilabel:`Send
+   email` action is defined before the :guilabel:`Update record` action, the email uses the values
+   set *before* the update action is run.
+
+   To change the order of defined actions, click the :icon:`oi-draggable` (drag handle) icon beside
+   an action and drag it to the desired position.
+
+.. _studio/automated-actions/action-update-record:
 
 Update Record
 -------------
 
-This action allows to update one of the record's (related) fields. Click the :guilabel:`Update`
-field and, in the list that opens, select or search for the field to be updated; click the right
-arrow next to the field name to access the list of related fields if needed.
+This action updates one of the record's (related) fields. Click the :guilabel:`Update` field and, in
+the list that opens, select or search for the field to be updated; click the right arrow next to the
+field name to access the list of related fields if needed.
 
 If you selected a :ref:`many2many field <studio/fields/relational-fields-many2many>`, choose whether
 the field must be updated by :guilabel:`Adding`, :guilabel:`Removing`, or :guilabel:`Setting it to`
@@ -223,7 +242,7 @@ the selected value or by :guilabel:`Clearing it`.
    :guilabel:`Update` field to :guilabel:`Customer > Tags`, select :guilabel:`By Removing`, then
    select the tag.
 
-   .. image:: automated_actions/update-record-action.png
+   .. image:: automated_actions/update-record-tags.png
       :alt: Example of an Update Record action
 
 .. tip::
@@ -237,6 +256,8 @@ the selected value or by :guilabel:`Clearing it`.
    .. image:: automated_actions/update-record-compute.png
       :alt: Compute a custom datetime field using a Python expression
 
+.. _studio/automated-actions/action-create-activity:
+
 Create Activity
 ---------------
 
@@ -244,7 +265,7 @@ This action is used to schedule a new activity linked to the record. Select an :
 Type`, enter a :guilabel:`Title` and description, then specify when you want the activity to be
 scheduled in the :guilabel:`Due Date In` field, and select a :guilabel:`User type`:
 
-- To always assign the activity to the same user, select :guilabel:`Specific User` and add the user
+- To always assign the activity to the same user, select :guilabel:`Specific User` then add the user
   in the :guilabel:`Responsible` field;
 - To target a user linked to the record dynamically, select :guilabel:`Dynamic User (based on
   record)` and change the :guilabel:`User Field` if necessary.
@@ -256,6 +277,8 @@ scheduled in the :guilabel:`Due Date In` field, and select a :guilabel:`User typ
 
    .. image:: automated_actions/create-activity-action.png
       :alt: Example of a Create Activity action
+
+.. _studio/automated-actions/action-send-email-sms:
 
 Send Email and Send SMS
 -----------------------
@@ -276,7 +299,7 @@ email or text message:
   :guilabel:`SMS template` and post it as an internal note in the chatter.
 - :guilabel:`Note only`: to only post the message as an internal note in the chatter.
 
-.. _studio/automated-actions/action/send-whatsapp:
+.. _studio/automated-actions/action-send-whatsapp:
 
 Send WhatsApp
 -------------
@@ -288,12 +311,14 @@ Send WhatsApp
 This action is used to send a WhatsApp message to a contact linked to a specific record.
 To do so, select the appropriate :guilabel:`WhatsApp Template` from the drop-down menu.
 
-.. _studio/automated-actions/action/add-followers:
+.. _studio/automated-actions/action-add-remove-followers:
 
 Add Followers and Remove Followers
 ----------------------------------
 
-Use these actions to (un)subscribe existing contacts to/from the record.
+This action is used to subscribe/unsubscribe existing contacts to/from the record.
+
+.. _studio/automated-actions/action-create-record:
 
 Create Record
 -------------
@@ -311,12 +336,12 @@ triggered the creation of the new record.
    :ref:`many2one field <studio/fields/relational-fields-many2one>` on the target model.
 
 .. tip::
-   You can create another automation rule with :ref:`studio/automated-actions/action/update-record`
+   You can create another automation rule with :ref:`studio/automated-actions/action-update-record`
    actions to update the fields of the new record if necessary. For example, you can use a
    :guilabel:`Create Record` action to create a new project task and then assign it to a specific
    user using an :guilabel:`Update Record` action.
 
-.. _studio/automated-actions/action/python-code:
+.. _studio/automated-actions/action-execute-code:
 
 Execute Code
 ------------
@@ -346,13 +371,17 @@ using the following variables:
 Send Webhook Notification
 -------------------------
 
-This action allows to send a POST request with the values of the :guilabel:`Fields` to the URL
-specified in the :guilabel:`URL` field.
+This action is used to send a `POST` API request with the values of the selected :guilabel:`Fields`
+to the webhook URL specified in the :guilabel:`URL` field.
 
 The :guilabel:`Sample Payload` provides a preview of the data included in the request using a random
 record's data or dummy data if no record is available.
 
-.. _studio/automated-actions/action/several-actions:
+.. note::
+   It is also possible to set up an automated action that :doc:`uses a webhook to receive data from
+   an external system <automated_actions/webhooks>` when an predefined event occurs in that system.
+
+.. _studio/automated-actions/action-existing-actions:
 
 Execute Existing Actions
 ------------------------
