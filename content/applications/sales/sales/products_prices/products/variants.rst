@@ -169,6 +169,23 @@ specifications that are specific to this particular value).
    Or, choose a specific color by clicking the *dropper* icon, and selecting a desired color that's
    currently clickable on the screen.
 
+   If you sell products with specific patterns, you can also add an image to display the pattern of the product.
+
+   To do so, click the :icon:`fa-pencil` :guilabel:`(pencil)` icon that appears when clicking the
+   :icon:`fa-camera` :guilabel:`(camera)` icon.
+
+   .. image:: variants/attribute-value-add-image.png
+      :align: center
+      :alt: Add an image of the pattern to an attribute.
+
+   On the resulting pop-up window, select an image from your local drive and upload it.
+
+   This pattern appears as a color option on the ecommerce product page.
+
+   .. image:: variants/ecommerce-pattern-option.png
+      :align: center
+      :alt: Pattern as color option on the ecommerce page.
+
 .. tip::
    Attributes can also be created directly from the product template by adding a new line and
    typing the name into the :guilabel:`Variants` tab.
