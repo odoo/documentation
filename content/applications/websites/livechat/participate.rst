@@ -21,9 +21,9 @@ If a user's :guilabel:`Online Chat Name` is not set, the name displayed defaults
 that is designated on their profile page.
 
 .. example::
-   A user has their full name as their :guilabel:`User Name`, but they do not want to include their
-   last name in a live chat conversation. They would then set their :guilabel:`Online Chat Name` to
-   include only their first name.
+   Mitchell Admin has his full name as his :guilabel:`User Name`, but he does not want to include
+   his last name in a live chat conversation for privacy reasons. He would then set his
+   :guilabel:`Online Chat Name` to include only his first name, Mitchell.
 
    .. image:: participate/online-chat-name.png
       :alt: View of user profile in Odoo, emphasizing the Online Chat name field.
@@ -84,10 +84,20 @@ to disconnect from the channel.
 Manage live chat requests
 -------------------------
 
-When an operator is active in a channel, chat windows open in the bottom-right corner of the
-screen, no matter where they are in the database. This allows them to access other pages and apps,
-while still participating in the conversation.
+When an operator is active in a channel, chat windows open in the bottom-right corner of the screen,
+no matter what page they are on in Odoo. This allows them to access other pages and apps, while
+still participating in the conversation.
 
+Live chat conversations can also be viewed by navigating to the :menuselection:`Discuss app`. New
+conversations appear in bold under the channel name, located along the left panel.
+
+.. image:: participate/managing-chat-responses.png
+   :alt: View of the discuss application with a message sent through live chat in Odoo.
+
+Click on a conversation in the left panel to open it. From this view, an operator can participate in
+the chat the same as they would in the normal chat window.
+
+<<<<<<< 786b97c7ddce4248fd583edd74a3f2f433fe7b81
 Live chat conversations can also be viewed by navigating to the :menuselection:`Discuss app`. New
 conversations appear in bold under the channel name, located along the left panel.
 
@@ -99,6 +109,29 @@ view, an operator can participate in the chat the same as they would in the norm
 
 .. tip::
    Conversations can also be accessed by clicking the :icon:`fa-comments` :guilabel:`(Messages)`
+||||||| d50b83103237c0445b6f9b7ec6cdeff82cd64f5a
+.. tip::
+   Conversations can also be accessed by clicking the :icon:`fa-comments` :guilabel:`(messages)`
+   icon in the menu bar.
+
+   .. image:: participate/menu-bar.png
+      :align: center
+      :alt: View of the menu bar in Odoo emphasizing the comments icon.
+
+Live chat conversations can also be viewed by navigating to the :menuselection:`Discuss app`. New
+conversations appear in bold under the :guilabel:`LIVECHAT` heading, located along the left panel.
+
+.. image:: participate/managing-chat-responses.png
+   :align: center
+   :alt: View of the discuss application with a message sent through live chat in Odoo.
+
+Click on a conversation in the left panel to select it. This opens the conversation. From this
+view, an operator can participate in the chat the same as they would in the normal chat window.
+
+=======
+.. tip::
+   Conversations can also be accessed by clicking the :icon:`fa-comments` :guilabel:`(messages)`
+>>>>>>> 1ebf0002fca4c0c89362737e7c82c6251a3bc79a
    icon in the menu bar.
 
    .. image:: participate/menu-bar.png
