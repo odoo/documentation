@@ -60,6 +60,8 @@ Once all the configurations on the mailing list form are complete, Odoo automati
 mailing list to the :guilabel:`Mailing List` page in the *Email Marketing* app
 (:menuselection:`Email Marketing app --> Mailing Lists --> Mailing Lists`).
 
+.. _marketing/mailing-list/contacts:
+
 Add contacts to mailing list
 ============================
 

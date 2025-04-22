@@ -79,7 +79,7 @@ Once an article has been created and assigned to a **Helpdesk** team, content ca
 organized through the **Knowledge** app.
 
 .. seealso::
-   :doc:`Editing Knowledge articles <../../../productivity/knowledge/articles_editing>`
+   :ref:`Editing Knowledge articles <knowledge/articles_editing/edit-article>`
 
 Search articles from a Helpdesk ticket
 --------------------------------------
@@ -143,8 +143,8 @@ Add clipboard boxes to articles
 To create a clipboard box, go to :menuselection:`Knowledge app --> Help`. Click on an existing
 nested article or create a new one by clicking the |plus| next to *Help*.
 
-Type :kbd:`/` to open the *powerbox*, and view a drop-down list of :doc:`commands
-<../../../productivity/knowledge/articles_editing>`. Select or type :kbd:`clipboard`. A gray block
+Type :kbd:`/` to open the *powerbox*, and view a drop-down list of :ref:`commands
+<knowledge/articles_editing/commands>`. Select or type :kbd:`clipboard`. A gray block
 is then added to the page. Add any necessary content to this block.
 
 .. image:: help_center/help-center-knowledge-clipboard-options.png
