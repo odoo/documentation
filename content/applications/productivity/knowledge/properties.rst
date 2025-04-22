@@ -2,101 +2,102 @@
 Properties
 ==========
 
-Properties are fields containing data and that can be added to articles by any user with **write**
-access. These fields are shared between all the child articles and article items under the same
-parent.
-
-.. note::
-   To be able to add properties, an article must be either a **child article** or an **article
-   item**.
+Properties are fields containing data that any user with `Can edit` :ref:`access rights
+<knowledge/management/rights>` can add to :ref:`nested articles <knowledge/management/structure>`
+or :ref:`article items <knowledge/articles_editing/commands>`.
 
 Add property fields
 ===================
 
-Hover above the first-level header to make the buttons appear. Click :menuselection:`⚙ Add
-Properties --> Field Type`, select the type and add a default value if needed. To make the fields
-appear in **kanban views**, check :guilabel:`View in Kanban` as well. To validate and close the
-property creation window, click anywhere.
+To add property fields, follow these steps:
 
-.. image:: properties/fields.png
-   :align: center
-   :alt: Dropdown of property fields types
+#. Click the :icon:`fa-ellipsis-v` (:guilabel:`ellipsis`) icon, then :menuselection:`Add Properties
+   --> Add a Property`.
+#. Type in the :guilabel:`label`.
+#. Select a :ref:`field type <knowledge/properties/field-types>`.
+#. Add a :guilabel:`default value`.
+#. (Optional) Tick the :guilabel:`Display in Cards` checkbox to show the properties in an
+   :ref:`article item's view <knowledge/articles_editing/commands>`.
 
-The different types assess what the field content can be:
+.. _knowledge/properties/field-types:
+
+Field types
+-----------
+
+The aspect of the properties depends on the field types selected. The following types assess the
+content of the field.
 
 .. list-table::
    :widths: 20 80
    :header-rows: 1
    :stub-columns: 1
 
-   * - Types
-     - Uses
+   * - Type
+     - Use
    * - :guilabel:`Text`
-     - Allows adding any content with no restriction.
+     - Add a text.
    * - :guilabel:`Checkbox`
      - Add a checkbox.
    * - :guilabel:`Integer`
-     - Allows adding integer numbers.
+     - Add integer numbers.
    * - :guilabel:`Decimal`
-     - Allows adding any number.
+     - Add decimal numbers.
    * - :guilabel:`Date`
-     - Allows selecting a date.
+     - Select a date.
    * - :guilabel:`Date & Time`
-     - Allows selecting a date and time.
+     - Select a date and time.
+   * - :guilabel:`Separator`
+     - Create a separation between properties.
 
-Some **field types** need to be configured:
-
-.. image:: properties/manyone.png
-   :align: center
-   :alt: property configuration form
+The following types need configuring:
 
 .. list-table::
    :widths: 20 80
    :header-rows: 1
    :stub-columns: 1
 
-   * - Types
-     - Uses
+   * - Type
+     - Use
    * - :guilabel:`Selection`
-     - Add a drop-down selection menu with restricted values that have been set at the property
-       creation.
-
-       To set it up, click :guilabel:`Add a Value` next to the :guilabel:`Values` field. Enter
-       predetermined values and press **enter** to validate; you can enter as many values as needed.
-       Click anywhere to close the property creation window.
+     - To add a drop-down selection menu with choices, click :guilabel:`Add a Value`, type the name
+       of the choice, and press `Enter` to save it. Repeat this for each value.
    * - :guilabel:`Tags`
-     - Allows creating and applying as many tags as needed.
-
-       To set it up, enter your `new_tag` in the :guilabel:`Tags` field, and press **enter** or
-       click :guilabel:`Create "new_tag"`. Click anywhere to close the window. Then, add the tags
-       into the property field. To do so, click the property field and choose from the created tags;
-       enter the tags' name and press **enter**; enter a new tag's name and create a new one on the
-       spot.
+     - To create tags, type a tag name in the :guilabel:`Tag` field and press `Enter` or click
+       :guilabel:`Create "new_tag"` to save it. Click on a tag to select a different color for it.
    * - :guilabel:`Many2one`
-     - Choose from a list of records that result from a model's domain. You can only select one
-       result.
-
-       To set it up, click :guilabel:`Search a Model` in the :guilabel:`Model` field, select the
-       model. Match all records by clicking :guilabel:`## Record(s)`, or filter the results by
-       clicking :guilabel:`+ Add Filter` and show the records by clicking :guilabel:`## Record(s)`.
+     - Select one 0 or 1 record from a different model as the field value. Configure by clicking
+       inside the :guilabel:`Model` field, then select the model type from which to choose a record.
+       After saving the property, click inside the property field to manually select values, which
+       replaces the previous selection.
    * - :guilabel:`Many2many`
-     - Choose from a list of records that result from a model's domain. You can select as many
-       results as needed.
+     - Select multiple records from a different model as the field value. Configure by clicking the
+       :guilabel:`Model` field, then select the model type from which to choose any number of
+       records. After saving the property, click inside the property field to manually select
+       various values manually.
 
-       To set it up, click :guilabel:`Search a Model` in the :guilabel:`Model` field, select the
-       model. Match all records by clicking :guilabel:`## Record(s)`, or filter the results by
-       clicking :guilabel:`+ Add Filter` and show the records by clicking :guilabel:`## Record(s)`.
+.. note::
+   - Click outside the property field window to save a property.
+   - With the :guilabel:`Many2one` and :guilabel:`Many2many` field types, editing the
+     :guilabel:`Domain` restricts the choice of values, while adding a :guilabel:`Default value`
+     suggests preselected values.
+
+.. tip::
+   Hover over the property name and click the :icon:`fa-pencil` (:guilabel:`pencil`) icon to edit
+   it or the :icon:`oi-draggable` (:guilabel:`drag`) icon to move it above or below another
+   property.
 
 Delete property fields
 ======================
 
-To remove a property, click the **pencil** icon next to the targeted property, then click
-:menuselection:`Delete --> Delete`.
+To remove a property, hover over its name, click the :icon:`fa-pencil` (:guilabel:`pencil`)
+icon, then click :menuselection:`Delete --> Delete`.
 
-.. warning::
-   Once a property field is deleted, you cannot retrieve it.
+.. note::
+   Deleting a property is permanent, and deleting all properties removes the property sidebar
+   panel.
 
 Hide the property panel
 =======================
 
-To hide the property sidebar panel, click the gear :guilabel:`(⚙)` button.
+Click the :icon:`fa-cogs` (:guilabel:`cogs`) icon to hide the property sidebar panel. Exiting and
+returning to the article causes the panel to reappear.
