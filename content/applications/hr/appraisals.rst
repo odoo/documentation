@@ -16,6 +16,8 @@ promotions, and other benefits.
 Regular appraisals are good for both the employees and the company, since they can accurately
 measure performance based on company goals, and show employees where they need to improve.
 
+.. _appraisals/configuration:
+
 Configuration
 =============
 
