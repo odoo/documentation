@@ -38,20 +38,9 @@ Fill in the following information and click :guilabel:`Get tracked link` to gene
 The :guilabel:`Campaign`, :guilabel:`Medium`, and :guilabel:`Source` are called :abbr:`UTM (Urchin
 Tracking Module)` parameters. They are incorporated in the tracked URL.
 
-Website visibility
-------------------
-
-You can use the :abbr:`UTM (Urchin Tracking Module)` parameters to hide or show building blocks for
-specific audiences. To achieve this, click the :guilabel:`Edit` button on your website, select a
-building block, go to the :guilabel:`Customize` tab, scroll down to :guilabel:`Visibility`, and
-click :guilabel:`Conditionally`.
-
-.. image:: link_tracker/conditional-visibility.png
-   :alt: Use the conditional visibility to display site elements to specific audiences.
-
-For each parameter available in the :ref:`Visibility <building_blocks/visibility>` section, you can
-choose :guilabel:`Visible for` or :guilabel:`Hidden for` and select the record you want from the
-dropdown list.
+  .. tip::
+     You can customize the :ref:`visibility <website/visibility/conditions>` of building blocks
+     using the :abbr:`UTM (Urchin Tracking Module)` parameters, amongst other conditions.
 
 Tracked links overview
 ======================
