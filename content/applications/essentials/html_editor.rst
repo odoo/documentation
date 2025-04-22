@@ -5,8 +5,8 @@ Odoo rich-text editor
 =====================
 
 The Odoo rich-text editor allows creating and editing rich-text content in HTML fields, such as the
-:guilabel:`Internal Notes` and :guilabel:`Description` fields, as well as in :doc:`Knowledge
-articles </applications/productivity/knowledge/articles_editing>` and the :ref:`Studio report
+:guilabel:`Internal Notes` and :guilabel:`Description` fields, as well as in the :ref:`Knowledge
+articles <knowledge/articles_editing/edit-article>` and the :ref:`Studio report
 editor <studio/pdf-reports/report-editor>`, among others. Start typing or use the
 :ref:`toolbar <essentials/html_editor/toolbar>` or :ref:`powerbox
 <essentials/html_editor/commands>` for formatting and structuring text.
