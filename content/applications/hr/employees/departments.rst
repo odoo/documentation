@@ -4,6 +4,8 @@ Departments
 
 All employees in the **Employees** app fall under specific departments within a company.
 
+.. _employee/create-departments:
+
 Create new departments
 ======================
 

@@ -10,6 +10,8 @@ and managed in one dashboard, each with their own pipeline for tickets submitted
 Pipelines are organized in customizable stages that enable teams to track, prioritize, and solve
 customer issues quickly and efficiently.
 
+.. _helpdesk/create-team:
+
 Create a Helpdesk team
 ======================
 
