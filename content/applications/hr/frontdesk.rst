@@ -17,6 +17,8 @@ Configuration
 The first item to configure with the **Frontdesk** application is the station, followed by any drink
 selections that might optionally be offered.
 
+.. _frontdesk/stations:
+
 Stations
 --------
 
