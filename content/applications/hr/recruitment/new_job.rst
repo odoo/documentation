@@ -13,6 +13,8 @@ View submitted applications by clicking anywhere on a job position card.
 .. image:: new_job/jobs.png
    :alt: Main dashboard view of Recruitment app showing all job positions.
 
+.. _job-position/create-job-position:
+
 Create a new job position
 =========================
 
