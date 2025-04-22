@@ -12,9 +12,9 @@ For example, different packages for cans of soda, such as a 6-pack, a 12-pack, o
 specific, not generic.
 
 .. tip::
-   Packaging can be used in conjunction with Odoo :ref:`Barcode <inventory/barcode/software>`. When
-   receiving products from suppliers, scanning the packaging barcode automatically adds the number
-   of units in the packaging to the internal count of the product.
+   Packaging can be used in conjunction with Odoo :doc:`Barcode <../../../barcode/setup/software>`.
+   When receiving products from suppliers, scanning the packaging barcode automatically adds the
+   number of units in the packaging to the internal count of the product.
 
 Configuration
 =============
@@ -172,8 +172,8 @@ warehouse. Next, in the :guilabel:`Applicable on` section, tick the :guilabel:`P
 Apply route on packaging
 ------------------------
 
-Then, to apply the route, go to :menuselection:`Inventory app --> Products --> Products`, and
-select the product that uses packaging.
+Then, to apply the route, go to :menuselection:`Inventory app --> Products --> Products`, and select
+the product that uses packaging.
 
 In the product form, switch to the :guilabel:`Inventory` tab. In the :guilabel:`Packaging` section
 that contains :ref:`configured packagings <inventory/product_management/packaging-setup>`, click the
