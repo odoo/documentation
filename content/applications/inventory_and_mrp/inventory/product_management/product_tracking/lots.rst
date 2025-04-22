@@ -259,7 +259,7 @@ on a lot number form:
    :icon:`fa-cogs` :guilabel:`Add Properties` from the drop-down menu.
 #. Click the :icon:`fa-plus` :guilabel:`Add a Property` button, located below the existing fields.
 
-Name and :doc:`configure the new field <../../../../productivity/knowledge/properties>`. Once
+Name and :doc:`configure the new field </applications/essentials/property_fields>`. Once
 finished, enter the property value in the new field.
 
 .. example::
@@ -270,7 +270,7 @@ finished, enter the property value in the new field.
       :alt: Show the "Add Properties" button on a lot number form.
 
 .. seealso::
-   :doc:`Configuring custom properties <../../../../productivity/knowledge/properties>`
+   :doc:`Configuring custom properties </applications/essentials/property_fields>`
 
 .. _inventory/product_management/create-new-lot:
 

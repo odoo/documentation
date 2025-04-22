@@ -54,6 +54,8 @@ drop-down menu. Then, select the desired options next to the :guilabel:`Display 
 Once all desired :guilabel:`Values` have been added, click :guilabel:`Save` to save the new
 attribute.
 
+.. _product-variants/add-product-variants:
+
 Add product variants on the product form
 ========================================
 
