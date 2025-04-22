@@ -12,6 +12,8 @@ Events can be manually created from scratch or built off of pre-made templates. 
 registration of the event for attendees, the *Sales* app for the purchasing ability of paid tickets,
 as well the *CRM* application through customizable lead generation rules.
 
+.. _events/new-event:
+
 New event
 =========
 

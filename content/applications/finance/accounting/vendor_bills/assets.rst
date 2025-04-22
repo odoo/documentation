@@ -199,6 +199,8 @@ time of the sale and the amount it is sold for.
    To record the sale of an asset, you must first post the related Customer Invoice so you can link
    the sale of the asset with it.
 
+.. _assets/asset-model:
+
 Assets Models
 =============
 

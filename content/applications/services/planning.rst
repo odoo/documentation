@@ -54,7 +54,7 @@ Planning includes the possibility of adding property fields linked to roles to s
 To create a property field, switch to the list view from any schedule. From there, click
 :guilabel:`View` on the shift that you wish to edit. If the :guilabel:`Role` field is empty, fill it
 in with the desired role, then click the cog icon and select :guilabel:`Add Properties`.
-:doc:`Configure <../productivity/knowledge/properties>` the new field according to your needs.
+:doc:`Configure </applications/essentials/property_fields>` the new field according to your needs.
 
 .. image:: planning/add-properties.png
    :alt: Creating a new property field in Planning.
