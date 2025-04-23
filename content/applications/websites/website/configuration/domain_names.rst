@@ -22,8 +22,9 @@ Register a free domain name with Odoo
 =====================================
 
 To register a one-year free domain name for your Odoo Online database, sign in to your account and
-go to the `database manager <https://www.odoo.com/my/databases>`_. Click the gear icon
-(:guilabel:`⚙️`) next to the database name and select :guilabel:`Domain Names`.
+go to the `database manager <https://www.odoo.com/my/databases>`_. Click the :icon:`fa-gear`
+(:guilabel:`gear`) button next to the database name and select :icon:`fa-globe` :guilabel:`Domain
+Names`.
 
 .. image:: domain_names/domain-names.png
    :alt: Accessing a database's domain names configuration
@@ -71,8 +72,8 @@ DNS records
 -----------
 
 To manage your free domain name :abbr:`DNS (domain name system)` records, open the `database manager
-<https://www.odoo.com/my/databases>`_, click the gear icon (:guilabel:`⚙️`) next to the database
-name, select :guilabel:`Domain Names`, and click :guilabel:`DNS`.
+<https://www.odoo.com/my/databases>`_, click the :icon:`fa-gear` (:guilabel:`gear`) button next to
+the database name, select :icon:`fa-globe` :guilabel:`Domain Names`, and click :guilabel:`DNS`.
 
 - :guilabel:`A`: the A record holds the IP address of the domain. It is automatically created and
   **cannot** be edited or deleted.
@@ -87,8 +88,8 @@ Any modification to the DNS records can take up to **72 hours** to propagate wor
 servers.
 
 .. note::
-   `Submit a support ticket <https://www.odoo.com/help>`_ if you need assistance to manage your
-   domain name.
+   `Contact Odoo support <https://www.odoo.com/help>`_ if you need assistance to manage your domain
+   name.
 
 Mailbox
 -------
@@ -103,9 +104,10 @@ You can create a subdomain (e.g., `subdomain.yourdomain.com`) to use as an alias
 database. It allows users to create records in the database from emails received on their
 `email@subdomain.yourdomain.com` alias.
 
-To do so, open the `database manager <https://www.odoo.com/my/databases>`_, click the gear icon
-(:guilabel:`⚙️`) next to the database name, and go to :menuselection:`Domain Names --> DNS --> Add
-DNS record --> CNAME`. Next, enter the desired subdomain in the :guilabel:`Name` field (e.g.,
+To do so, open the `database manager <https://www.odoo.com/my/databases>`_, click the
+:icon:`fa-gear` (:guilabel:`gear`) button next to the database name and select :icon:`fa-globe`
+:guilabel:`Domain Names`. Click :guilabel:`DNS`, then :guilabel:`Add DNS record` and select
+:guilabel:`CNAME`. Next, enter the desired subdomain in the :guilabel:`Name` field (e.g.,
 `subdomain`), the original database domain with a period at the end (e.g., `mycompany.odoo.com.`) in
 the :guilabel:`Content` field, and click :guilabel:`Add record`.
 
@@ -113,22 +115,89 @@ Then, add the alias domain as your *own domain* by clicking :guilabel:`Use my ow
 the alias domain (e.g., `subdomain.yourdomain.com`), clicking :guilabel:`Verify`, and then
 :guilabel:`I confirm, it's done`.
 
-Finally, go to your database and open the :guilabel:`Settings`. Enable :guilabel:`Custom Email
-Servers`, enter the :guilabel:`Alias Domain` (e.g., `subdomain.yourdomain.com`) and click
+Finally, go to your database and open the :guilabel:`Settings`. Under the :guilabel:`Alias Domain`
+field, enter the alias domain (e.g., `subdomain.yourdomain.com`), click :guilabel:`Create`, and then
 :guilabel:`Save`.
 
 Use an external email provider
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To use an external email provider, you should configure an MX record. To do so, open the `database
-manager <https://www.odoo.com/my/databases>`_, click the gear icon (:guilabel:`⚙️`) next to the
-database name, click :menuselection:`Domain Names --> DNS --> Add DNS record --> MX`. The values you
-should enter for the :guilabel:`Name`, :guilabel:`Content`, and :guilabel:`Priority` fields depend
-on the external email provider.
+manager <https://www.odoo.com/my/databases>`_, click the :icon:`fa-gear` (:guilabel:`gear`) button
+next to the database name and select :icon:`fa-globe` :guilabel:`Domain Names`. Click
+:guilabel:`DNS`, then :guilabel:`Add DNS record` and select :guilabel:`MX`. The values you should
+enter for the :guilabel:`Name`, :guilabel:`Content`, and :guilabel:`Priority` fields depend on the
+external email provider.
 
 .. seealso::
    - `Google Workspace: MX record values <https://support.google.com/a/answer/174125?hl=en>`_
    - `Outlook and Exchange Online: Add an MX record for email <https://learn.microsoft.com/en-us/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider?view=o365-worldwide#add-an-mx-record-for-email-outlook-exchange-online>`_
+
+Google Workspace
+****************
+
+To use your free domain name on Gmail, register to `Google Workspace
+<https://workspace.google.com>`_.
+
+During the registration process, select :guilabel:`Set up using your existing domain` when asked to
+:guilabel:`Choose a way to set up your account`, and enter your domain (e.g., `yourdomain.com`) when
+asked :guilabel:`What's your business's domain name?`.
+
+Domain ownership verification
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+#. Sign in to Google Workspace. When asked to verify you own your domain, click :guilabel:`Switch to
+   manual verification`.
+
+   .. image:: domain_names/workspace-verify-switch.png
+      :alt: Switching to manual domain verification on Google Workspace
+
+#. Select `gandi.net` as the :guilabel:`Domain host` and click :guilabel:`Continue`.
+
+   .. image:: domain_names/workspace-verify-domain.png
+      :alt: Selecting the domain host on Google Workspace
+
+#. Copy the content of the :guilabel:`Value` field under :guilabel:`TXT record`. Leave the window
+   open.
+
+   .. image:: domain_names/workspace-verify-code.png
+      :alt: Copying the TXT value on Google Workspace
+
+#. Open the `database manager <https://www.odoo.com/my/databases>`_, click the :icon:`fa-gear`
+   (:guilabel:`gear`) button next to the database name and select :icon:`fa-globe` :guilabel:`Domain
+   Names`. Click :guilabel:`DNS`, then :guilabel:`Add DNS record` and select :guilabel:`TXT`.
+
+#. Enter `@` in the :guilabel:`Name` field, paste the :guilabel:`Value` provided by Google in the
+   :guilabel:`Content` field, and click :guilabel:`Add record`.
+
+   .. image:: domain_names/workspace-txt.png
+      :alt: Creating a TXT record to verify domain name ownership
+
+#. Go back to Google Workspace, tick the box at the bottom, and click :guilabel:`Confirm`.
+
+.. seealso::
+   `Google Workspace Admin Help: Verify your domain with a TXT record
+   <https://support.google.com/a/answer/16018515>`_
+
+Redirect emails to Gmail
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+#. Open the `database manager <https://www.odoo.com/my/databases>`_, click the :icon:`fa-gear`
+   (:guilabel:`gear`) button next to the database name and select :icon:`fa-globe` :guilabel:`Domain
+   Names`. Click :guilabel:`DNS`, then :guilabel:`Add DNS record`, and select :guilabel:`MX`.
+
+#. Enter `@` in the :guilabel:`Name` field, `1` in the :guilabel:`Priority` field,
+   `smtp.google.com.` in the :guilabel:`Content` field, and click :guilabel:`Add record`.
+
+   .. image:: domain_names/workspace-mx.png
+      :alt: Creating an MX record to redirect emails to Gmail
+
+#. Open the `Google Workspace Admin console <https://admin.google.com/ac/domains/manage>`_, click
+   :guilabel:`Activate Gmail` for your domain, and follow the steps.
+
+.. seealso::
+   `Google Workspace Admin Help: Set up MX records for Google Workspace
+   <https://support.google.com/a/answer/16004259>`_
 
 .. _domain-name/existing:
 
@@ -142,6 +211,7 @@ If you already have a domain name, you can use it for your Odoo website.
    certificate validation <domain-name/ssl>` issues:
 
    #. :ref:`Add a CNAME record <domain-name/cname>`
+   #. :ref:`Redirect your naked domain name <domain-name/naked>` (optional, but recommended)
    #. :ref:`Map your domain name to your Odoo database <domain-name/db-map>`
    #. :ref:`Map your domain name to your Odoo website <domain-name/website-map>`
 
@@ -176,25 +246,29 @@ The specific instructions depend on your DNS hosting service.
    - `Cloudflare: Manage DNS records
      <https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-records/>`_
 
-.. important::
-   Odoo only supports subdomains. To use your naked domain name :dfn:`(a domain name without any
-   subdomains or prefixes)` (`yourdomain.com`), create a redirection 301 to redirect visitors to
-   `www.yourdomain.com`.
+.. _domain-name/naked:
 
-.. example::
-   You own the domain name `yourdomain.com`, and your Odoo Online database's address is
-   `mycompany.odoo.com`. You want to access your Odoo database primarily with the domain
-   `www.yourdomain.com` and also with the naked domain `yourdomain.com`.
+Redirect a naked domain
+-----------------------
 
-   To do so, create a CNAME record for the `www` subdomain, with `mycompany.odoo.com` as the target.
-   Next, create a redirect (301 permanent or visible redirect) to redirect visitors from
-   `yourdomain.com` to `wwww.yourdomain.com`.
+.. note::
+   Although optional, completing this step is advised.
+
+To let visitors use your naked domain name :dfn:`(a domain name without any subdomains or prefixes)`
+(`yourdomain.com`), creating a 301 redirect :dfn:`(a permanent redirect from one URL to another)`
+to `www.yourdomain.com` is required:
+
+- from `http://yourdomain.com` to `https://www.yourdomain.com`, and
+- from `https://yourdomain.com` to `https://www.yourdomain.com`.
+
+The specific instructions depend on your DNS hosting service. However, not all of them offer to
+redirect a naked domain with a secure HTTPS connection. If you encounter any issue, we recommend
+:ref:`using Cloudflare <domain-name/naked/cloudflare>`.
+
+.. _domain-name/naked/cloudflare:
 
 Using Cloudflare to secure and redirect a naked domain
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-To redirect a naked domain with a secure HTTPS connection, we recommend using Cloudflare, as most
-DNS hosting services do not offer an easy way to do so.
 
 #. `Sign up and log in to Cloudflare <https://dash.cloudflare.com/sign-up>`_.
 #. Enter your domain name on `Cloudflare's dashboard <https://dash.cloudflare.com/login>`_ and
@@ -266,16 +340,16 @@ Map a domain name to an Odoo database
 
    If you encounter this error after mapping the domain name to your database, wait up to five
    days, as the validation may still happen. If not, you can `submit a support ticket
-   <https://www.odoo.com/help>`_, including screenshots of your CNAME records.
+   <https://www.odoo.com/help-form>`_, including screenshots of your CNAME records.
 
 .. tabs::
 
    .. group-tab:: Odoo Online
 
-      Open the `database manager <https://www.odoo.com/my/databases>`_, click the gear icon
-      (:guilabel:`⚙️`) next to the database name, and go to :menuselection:`Domain Names --> Use my
-      own domain`. Then, enter the domain name (e.g., `www.yourdomain.com`), click
-      :guilabel:`Verify` and :guilabel:`I confirm, it's done`.
+      Open the `database manager <https://www.odoo.com/my/databases>`_, click the :icon:`fa-gear`
+      (:guilabel:`gear`) button next to the database name, select :icon:`fa-globe` :guilabel:`Domain
+      Names`, and click :guilabel:`Use my own domain`. Then, enter the domain name (e.g.,
+      `www.yourdomain.com`), click :guilabel:`Verify` and :guilabel:`I confirm, it's done`.
 
       .. image:: domain_names/map-database-online.png
          :alt: Mapping a domain name to an Odoo Online database
