@@ -323,8 +323,8 @@ the :guilabel:`Tags` dropdown menu (identifiable by its placeholder :guilabel:`A
   :ref:`Alias tags <documents/email-aliases>` can also be used to automatically apply tags to
   files created through the alias.
 
-Linked files
-------------
+Linked records
+--------------
 
 To link the file to a specific record, select the appropriate model from the :guilabel:`Linked to`
 dropdown menu (identifiable by its placeholder :guilabel:`No linked model`), then select the
