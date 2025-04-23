@@ -124,10 +124,11 @@ App registration
 #. Click :guilabel:`Add a certificate or secret` next to :guilabel:`Client credentials`, click
    :guilabel:`New client secret`, then :guilabel:`Add`.
 
-.. important::
-   For security reasons, leave the :guilabel:`Expires` field on `180 days (6 months)` or choose a
-   shorter expiration interval. Before the secret expires, adding a new client secret and updating
-   :ref:`Odoo’s configuration <cloud-storage/microsoft/odoo>` with the new value is necessary.
+   .. important::
+      For security reasons, leave the :guilabel:`Expires` field on `180 days (6 months)` or choose a
+      shorter expiration interval. Before the secret expires, adding a new client secret and
+      updating :ref:`Odoo’s configuration <cloud-storage/microsoft/odoo>` with the new value is
+      necessary.
 
 #. Copy the client secret's :guilabel:`Value` and store it securely. It will be used when
    :ref:`configuring Odoo <cloud-storage/microsoft/odoo>`.
