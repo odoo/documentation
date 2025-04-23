@@ -2570,10 +2570,12 @@ msgid ""
 "Odoo automatically calculates the probability of winning each lead using a "
 "method called *predictive lead scoring*."
 msgstr ""
+"Odoo calcola automaticamente la probabilità di aggiudicarsi ogni lead "
+"utilizzando un metodo chiamato *calcolo previsionale lead*."
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:14
 msgid "Predictive lead scoring"
-msgstr ""
+msgstr "Calcolo previsionale dei lead"
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:16
 msgid ""
@@ -2588,18 +2590,26 @@ msgid ""
 "this data to predict the probability of winning each new lead or "
 "opportunity."
 msgstr ""
+"Quando un'azienda elabora le opportunità attraverso la pipeline del CRM, "
+"Odoo raccoglie dati sulle opportunità vinte e perse. Il calcolo previsionale"
+" dei lead utilizza questi dati per prevedere la probabilità di vincita di "
+"ogni nuovo lead od opportunità."
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:23
 msgid ""
 "The more opportunities that are sent through the CRM pipeline, the more data"
 " Odoo collects, resulting in more accurate probabilities."
 msgstr ""
+"Più opportunità vengono inviate attraverso la pipeline del CRM, più dati "
+"Odoo raccoglie, con conseguenti probabilità più accurate."
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:26
 msgid ""
 "Specifically, Odoo's predictive lead scoring uses the *naive Bayes* "
 "probability model:"
 msgstr ""
+"Nello specifico, il calcolo previsionale di lead di Odoo usa il "
+"classificatore *naive Bayes*:"
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:28
 msgid ""
@@ -2608,10 +2618,14 @@ msgid ""
 "\\end{equation}\n"
 "\n"
 msgstr ""
+"\\begin{equation}\n"
+"P(A | B) = \\frac{P(A) \\times P(B | A)}{P(B)}\n"
+"\\end{equation}\n"
+"\n"
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:33
 msgid "Breaking down the equation:"
-msgstr ""
+msgstr "Scomposizione dell'equazione:"
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:35
 msgid ":math:`P(A|B)` = probability of a successful lead in this *case*"
@@ -2657,7 +2671,7 @@ msgstr ""
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst-1
 msgid "The probability of success displayed on the opportunity form."
-msgstr ""
+msgstr "La probabilità di successo visualizzata nel modulo di opportunità."
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:54
 msgid ""
@@ -2685,53 +2699,63 @@ msgid ""
 "Then, click on the drop-down menu to choose which variables the predictive "
 "lead scoring feature will take into account."
 msgstr ""
+"In seguito, fai clic sul menu a discesa per scegliere le variabili che la "
+"funzione di calcolo previsionale di lead prenderà in considerazione."
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst-1
 msgid ""
 "The Update Probabilities window in the Predictive Lead Scoring settings."
 msgstr ""
+"La finestra Aggiorna probabilità nelle impostazioni del Calcolo previsionale"
+" di lead."
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:76
 msgid "Any number of the following variables can be activated:"
-msgstr ""
+msgstr "È possibile attivare un numero qualsiasi delle seguenti variabili:"
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:78
 msgid ""
 ":guilabel:`State`: the geographical state from which the opportunity "
 "originates"
-msgstr ""
+msgstr ":guilabel:`Stato`: lo stato geografico da cui deriva l'opportunità"
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:79
 msgid ""
 ":guilabel:`Country`: the geographical country from which the opportunity "
 "originates"
-msgstr ""
+msgstr ":guilabel:`Paese`: lo stato geografico da cui deriva l'opportunità"
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:80
 msgid ""
 ":guilabel:`Phone Quality`: whether or not a phone number is listed for the "
 "opportunity"
 msgstr ""
+":guilabel:`Qualità telefono`: se esiste o meno un numero di telefono per "
+"l'opportunità"
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:81
 msgid ""
 ":guilabel:`Email Quality`: whether or not an email address is listed for the"
 " opportunity"
 msgstr ""
+":guilabel:`Qualità e-mail`: se è presente o meno un indirizzo e-mail per "
+"l'opportunità"
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:82
 msgid ""
 ":guilabel:`Source`: the source of an opportunity (e.g. search engine, social"
 " media)"
 msgstr ""
+":guilabel:`Origine`: l'origine di un'opportunità (ad es. motore di ricerca, "
+"social media)"
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:83
 msgid ":guilabel:`Language`: the spoken language specified on the opportunity"
-msgstr ""
+msgstr ":guilabel:`Lingua`: la lingua parlata specificata per l'opportunità"
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:84
 msgid ":guilabel:`Tags`: the tags placed on the opportunity"
-msgstr ""
+msgstr ":guilabel:`Tag`: i tag assegnati all'opportunità"
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:87
 msgid ""
@@ -2741,6 +2765,11 @@ msgid ""
 "takes into account these two variables, regardless of which optional "
 "variables are selected."
 msgstr ""
+"Le variabili `Fase` e `Team` sono sempre attive. `Fase` si riferisce alla "
+"fase della pipeline CRM in cui si trova un'opportunità. Il `Team` si "
+"riferisce al team di vendita assegnato a un'opportunità. Il calcolo "
+"previsionale dei lead tiene *sempre* conto di queste due variabili, "
+"indipendentemente dalle variabili opzionali selezionate."
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:92
 msgid ""
@@ -2748,20 +2777,26 @@ msgid ""
 "created as of the:` to select the date from which predictive lead scoring "
 "will begin its calculations."
 msgstr ""
+"In seguito, fai clic sul campo della data accanto all'opzione "
+":guilabel:`Considera i lead creati a partire dal:` per selezionare la data a"
+" partire dalla quale inizierà il calcolo previsionale di lead."
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:95
 msgid "Lastly, click :guilabel:`Confirm` to save changes."
-msgstr ""
+msgstr "Infine, fai clic su :guilabel:`Conferma` per salvare le modifiche."
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:98
 msgid "Change the probability manually"
-msgstr ""
+msgstr "Modificare la probabilità manualmente"
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:100
 msgid ""
 "An opportunity's probability of success can be changed manually on the "
 "opportunity form. Click on the probability number to edit it."
 msgstr ""
+"La probabilità di successo di un'opportunità può essere modificata "
+"manualmente nel modulo dell'opportunità. Fai clic sul numero della "
+"probabilità per modificarlo."
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:104
 msgid ""
@@ -2781,10 +2816,12 @@ msgid ""
 "The gear icon used to reactivate automatic probability on an opportunity "
 "form."
 msgstr ""
+"L'icona dell'ingranaggio utilizzata per riattivare la probabilità automatica"
+" su un modulo di opportunità."
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:116
 msgid "Assign leads based on probability"
-msgstr ""
+msgstr "Assegnare lead in base alla probabilità"
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:118
 msgid ""
@@ -2796,7 +2833,7 @@ msgstr ""
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:123
 msgid "Configure rule-based assignment"
-msgstr ""
+msgstr "Configurare assegnazioni basate su regole"
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:125
 msgid ""
@@ -2819,10 +2856,15 @@ msgid ""
 ":guilabel:`Running` section. Then, customize how often Odoo will trigger the"
 " automatic assignment in the :guilabel:`Repeat every` section."
 msgstr ""
+"Per impostare l'assegnazione automatica dei lead, seleziona "
+":guilabel:`Ripetutamente` per la sezione :guilabel:`In esecuzione`. In "
+"seguito, personalizza la frequenza con cui Odoo attiverà l'assegnazione "
+"automatica nella sezione :guilabel:`Ripeti ogni`."
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst-1
 msgid "The Rule-Based Assignment setting in CRM settings."
 msgstr ""
+"L'impostazione Assegnazione basata su regole nelle impostazioni del CRM."
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:140
 msgid ""
@@ -2834,7 +2876,7 @@ msgstr ""
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:145
 msgid "Configure assignment rules"
-msgstr ""
+msgstr "Configurare regole di assegnazione"
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:147
 msgid ""
@@ -2859,6 +2901,10 @@ msgid ""
 "the :guilabel:`+` sign on the right of the assignment rule to add another "
 "line. Click on the :guilabel:`x` symbol to remove the line."
 msgstr ""
+"Fai clic su :guilabel:`Aggiungi filtro` per iniziare a creare regole di "
+"assegnazione. Fai clic sul simbolo :guilabel:`+` a destra della regola di "
+"assegnazione per aggiungere un'altra riga. Fai clic sul simbolo "
+":guilabel:`x` per rimuovere la riga."
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:160
 msgid ""
@@ -2866,6 +2912,9 @@ msgid ""
 "success, click on the far left drop-down menu of an assignment rule line, "
 "and select :guilabel:`Probability`."
 msgstr ""
+"Per creare una regola di assegnazione basata sulla probabilità di successo "
+"di un'opportunità, fai clic sul menu a discesa all'estrema sinistra di una "
+"riga della regola di assegnazione e seleziona :guilabel:`Probabilità`."
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:163
 msgid ""
@@ -2873,12 +2922,18 @@ msgid ""
 "likely the symbol for *greater than*, *less than*, *greater than or equal "
 "to*, or *less than or equal to*."
 msgstr ""
+"Dal menu a tendina centrale, seleziona il simbolo dell'equazione desiderata,"
+" probabilmente il simbolo per *maggiore di*, *inferiore a*, *maggiore o "
+"uguale a*, o *inferiore o uguale a*."
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:166
 msgid ""
 "In the far right space, enter the desired number value of the probability. "
 "Finally, click :guilabel:`Save` to save changes."
 msgstr ""
+"Nello spazio all'estrema destra, inserisci il valore numerico desiderato "
+"della probabilità. Infine, fai clic su :guilabel:`Salva` per salvare le "
+"modifiche."
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:170
 msgid ""
@@ -2886,12 +2941,17 @@ msgid ""
 "have a probability of success of 20% or greater, create a :guilabel:`Domain`"
 " line that reads: `Probability >= 20`."
 msgstr ""
+"Per configurare una regola di assegnazione in modo che un team di vendita "
+"riceva lead con una probabilità di successo pari o superiore al 20%, crea "
+"una riga :guilabel:`Dominio` che reciti: `Probabilità >= 20`."
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:0
 msgid ""
 "Sales team domain set to probability greater than or equal to twenty "
 "percent."
 msgstr ""
+"Dominio team vendita impostato su una probabilità maggiore di o uguale al "
+"venti percento."
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:177
 msgid ""
@@ -2900,6 +2960,11 @@ msgid ""
 "the :guilabel:`Members` tab, then edit the :guilabel:`Domain` section. Click"
 " :guilabel:`Save` to save changes."
 msgstr ""
+"È possibile configurare regole di assegnazione separate per i singoli membri"
+" del team. Dalla pagina di configurazione del team di vendita, fai clic su "
+"un membro del team nella scheda :guilabel:`Membri`, quindi modifica la "
+"sezione :guilabel:`Dominio`. Fai clic su :guilabel:`Salva` per salvare le "
+"modifiche."
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:181
 msgid ""
@@ -2918,6 +2983,11 @@ msgid ""
 "assign any leads that are currently unassigned and match this team's "
 "specified domain."
 msgstr ""
+"Per assegnare manualmente lead a questo team di vendita, fai clic sul "
+"pulsante :guilabel:`Assegna lead` nella parte superiore della pagina di "
+"configurazione del team di vendita. In questo modo verranno assegnate tutti "
+"i lead attualmente non assegnati e che corrispondono al dominio specificato "
+"del team."
 
 #: ../../content/applications/sales/members.rst:3
 msgid "Members"
