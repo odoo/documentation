@@ -154,8 +154,10 @@ Taxes
    - :ref:`Tax References <reference/account_tax>`
    - :doc:`/applications/finance/accounting/taxes/`
 
-To add taxes you first need to specify tax groups. You normally need just one tax group for every tax rate, except for the 0% as you need to often distinguish between exempt, 0%, not subject, ... taxes.
+To add taxes you first need to specify fiscal positions and tax groups. You normally need just one tax group for every tax rate, except for the 0% as you need to often distinguish between exempt, 0%, not subject, ... taxes.
 This model only has two required fields: `name` and `country`. Create the file :file:`data/template/account.tax.group-xx.csv` and list the groups.
+
+Taxes should be belong to at least one fiscal position, but can be shared by many. Leave the field empty if you want the tax to be shared by all fiscal positions.
 
 .. example::
   `addons/l10n_uk/data/template/account.tax.group-uk.csv <{GITHUB_PATH}/addons/l10n_uk/data/template/account.tax.group-uk.csv>`_
@@ -176,6 +178,7 @@ Now you can add the taxes via :file:`data/template/account.tax-xx.csv` file.  Th
     :language: xml
     :end-at: uae_sale_tax_5_ras_al_khaima
 
+A tax can also be a replacement for another. This replacement applies when the target fiscal position is used.
 
 Tax Report
 ----------
@@ -233,6 +236,7 @@ Fiscal positions
    - :doc:`/applications/finance/accounting/taxes/fiscal_positions`
 
 Specify fiscal positions in the :file:`data/template/account.fiscal.position-xx.csv` file.
+The first fiscal position that matches the company's country is considered the domestic fiscal position.
 
 .. example::
   `addons/l10n_es/data/template/account.fiscal.position-es_common_mainland.csv <{GITHUB_PATH}/addons/l10n_es/data/template/account.fiscal.position-es_common_mainland.csv>`_
@@ -240,7 +244,7 @@ Specify fiscal positions in the :file:`data/template/account.fiscal.position-xx.
   .. literalinclude:: {ODOO_RELPATH}/addons/l10n_es/data/template/account.fiscal.position-es_common_mainland.csv
     :condition: odoo_dir_in_path
     :language: csv
-    :end-at: account_tax_template_p_iva10_sp_ex
+    :end-at: account_common_7051
 
 Final steps
 ===========
