@@ -325,6 +325,7 @@ button and a pop-up appears. Select the desired spreadsheet, and click :guilabel
 .. seealso::
    - :doc:`attendances/check_in_check_out`
    - :doc:`attendances/kiosks`
+   - :doc:`attendances/management`
    - :doc:`attendances/hardware`
 
 .. toctree::
@@ -332,4 +333,5 @@ button and a pop-up appears. Select the desired spreadsheet, and click :guilabel
 
    attendances/check_in_check_out
    attendances/kiosks
+   attendances/management
    attendances/hardware
