@@ -881,22 +881,12 @@ now appears in the configuration file.
 Supported Browsers
 ==================
 
-Odoo supports all the major desktop and mobile browsers available on the market,
-as long as they are supported by their publishers.
-
-Here are the supported browsers:
+Odoo supports the latest version of the following browsers.
 
 - Google Chrome
 - Mozilla Firefox
 - Microsoft Edge
 - Apple Safari
-
-.. warning:: Please make sure your browser is up-to-date and still supported by
-    its publisher before filing a bug report.
-
-.. note::
-
-    Since Odoo 13.0, ES6 is supported.  Therefore, IE support is dropped.
 
 .. [#different-machines]
     to have multiple Odoo installations use the same PostgreSQL database,
