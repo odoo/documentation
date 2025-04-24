@@ -5766,6 +5766,8 @@ msgid ""
 "accessed by going to :menuselection:`Inventory app --> Products --> "
 "Packages`, and selecting the desired package)."
 msgstr ""
+"단, 재고 외 품목인 경우에는 수량은 추적되지 않으며, 패키지 :guilabel:`내용`에 품목이 표시되지 않습니다. (패키지 내용은 "
+":menuselection:`재고 관리 앱 --> 품목 --> 패키지` 로 이동하여 패키지를 선택하면 확인 가능)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/configure/type.rst:314
 msgid "Show Packages page, containing the package contents list."
@@ -14417,6 +14419,9 @@ msgid ""
 "sorting during the picking process. It is best suited for warehouses with "
 "high order volumes where organization and speed are critical."
 msgstr ""
+"클러스터 피킹은 고급 피킹 방법의 하나로 :ref:`일괄 피킹 <inventory/misc/batch_picking>` 방식이 지닌 "
+"효율성을 피킹 프로세스에서의 즉각적인 분류 방식와 결합한 방법입니다. 주문량이 많은 관계로 체계화와 속도가 중요한 물류 창고에 가장 "
+"적합합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.rst:14
 msgid ""
@@ -15245,8 +15250,8 @@ msgid ""
 "before dates, removal dates, and alert dates on a lot or serial number by "
 "navigating to :menuselection:`Inventory --> Configuration --> Settings`."
 msgstr ""
-":menuselection:`재고 관리 --> 환경설정 --> 설정`으로 이동하여 **만료일** 기능을 활성화하면 로트 또는 일련번호의 "
-"만료일, 유통기한, 제거일, 경고일을 추적할 수 있습니다."
+":menuselection:`재고 관리 --> 환경설정 --> 설정` 으로 이동하여 **만료일** 기능을 활성화하면 로트 또는 일련번호의"
+" 만료일, 유통기한, 제거일, 경고일을 추적할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/removal_strategies.rst:149
 msgid ""
@@ -18752,7 +18757,7 @@ msgstr "패키지 수에 따라 :guilabel:`배송 라벨`을 추가합니다."
 msgid ""
 ":guilabel:`Return label(s)` if the Envia.com connector is configured for "
 "returns."
-msgstr ""
+msgstr ":guilabel:`반품 ​​라벨` 로, Envia.com 커넥터가 반품용으로 환경설정된 경우에 해당합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:221
 msgid ""
@@ -25540,6 +25545,7 @@ msgid ""
 "warehouse (maximum five characters). The short name for the default "
 "warehouse in Odoo is `WH`."
 msgstr ""
+":guilabel:`약칭`(*필수 필드*): 창고에 대한 축약 코드(최대 5자)입니다. Odoo에서 기본 창고의 약칭은 `WH`입니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:26
 msgid ""
@@ -28982,19 +28988,19 @@ msgstr ":guilabel:`보유 중`: 현재 창고에서 실제 사용 가능한 재�
 msgid ""
 ":guilabel:`Incoming`: quantities expected from confirmed purchase orders or "
 "manufacturing orders."
-msgstr ""
+msgstr ":guilabel:`입고 중`: 확정이 완료된 구매발주서 또는 제조지시서에 있는 예상 수량입니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:40
 msgid ""
 ":guilabel:`Outgoing`: quantities reserved for sales orders or other outgoing"
 " operations."
-msgstr ""
+msgstr ":guilabel:`출고 중`: 판매주문서 또는 기타 출고 작업용으로 예약된 수량입니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:41
 msgid ""
 ":guilabel:`Forecasted`: projected stock levels based on confirmed and "
 "planned operations."
-msgstr ""
+msgstr ":guilabel:`예측`: 확정된 작업 및 계획된 작업을 기준으로 예상하는 재고 수준입니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst-1
 msgid "An example of the chart on a forecast report."
@@ -29187,11 +29193,11 @@ msgstr "조달 전략을 조정하여 매입 주문을 신속하게 처리합니
 msgid ""
 "Manage customer expectations by proactively communicating the possibility "
 "for delays."
-msgstr ""
+msgstr "고객이 기대하는 상황을 사전에 관리할 수 있도록 지연 가능성을 안내합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst-1
 msgid "An example of the forecast report with a negative quantity."
-msgstr ""
+msgstr "수량이 마이너스로 표기되어 있는 예측 보고서의 예시입니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/forecast.rst:146
 msgid "Split orders"
@@ -29408,7 +29414,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst-1
 msgid "A list of the empty locations in the Inventory app."
-msgstr ""
+msgstr "재고 관리 앱에서 위치가 비어있는 목록입니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/locations.rst:78
 msgid "Generate reports"
@@ -40127,6 +40133,9 @@ msgid ""
 "field. Doing so automatically generates a lot, using the next available "
 "number, and enters it in the field."
 msgstr ""
+":guilabel:`로트/일련번호` 필드에 로트번호를 입력하려면 필드 오른쪽에 있는 :icon:`fa-plus-square-o` "
+":guilabel:`(더하기)` 아이콘을 클릭합니다. 이렇게 하면 다음 번호로 선택할 수 있는 로트번호가 자동으로 생성되어 필드에 "
+"입력됩니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/manufacture_lots_serials.rst:55
 msgid ""
@@ -40284,6 +40293,9 @@ msgid ""
 "|MOs|, click the :guilabel:`Backorders` smart button at the top of the "
 "screen."
 msgstr ""
+":guilabel:`MO 준비` 또는 :guilabel:`생산` 을 클릭하면 :menuselection:`제조 관리` 앱에서 자동으로 "
+"|MO| 를 분할하여 그 중 첫 번째 내역이 표시됩니다(예: `WH/MO/00109-001`). 나머지 |MO| 분할 내용를 확인하고 이"
+" 내용에 액세스하려면 화면 상단의 :guilabel:`백오더` 스마트 버튼을 클릭합니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/manufacturing_backorders.rst:3
 msgid "Manufacturing backorders"
@@ -47786,8 +47798,8 @@ msgid ""
 "documentation on :ref:`quality alerts <quality/quality_management/quality-"
 "alerts>`."
 msgstr ""
-":guilabel:`품질 경고`를 선택하면 품질 경고 양식이 있는 새 페이지가 열립니다. 품질 경고 양식 작성에 대한 자세한 안내는 "
-":ref:`품질 경고 <quality/quality_management/quality-alerts>`에 대한 문서를 참조하세요."
+":guilabel:`품질 경고` 를 선택하면 품질 경고 양식이 있는 새 페이지가 열립니다. 품질 경고 양식을 작성하는 방법에 대한 자세한"
+" 안내는 :ref:`품질 경고 <quality/quality_management/quality-alerts>` 문서를 참조하세요."
 
 #: ../../content/applications/inventory_and_mrp/quality/quality_check_types/instructions_check.rst:64
 msgid "Process work order quality check"
@@ -48739,10 +48751,10 @@ msgid ""
 "alert forms, view the documentation on :ref:`quality alerts "
 "<quality/quality_management/quality-alerts>`."
 msgstr ""
-"품질 경고를 생성해야 하는 경우, 검사가 확인된 후 제조 또는 재고 주문 페이지 상단에 있는 :guilabel:`품질 경고` 버튼을 "
-"클릭하기만 하면 됩니다. :guilabel:`품질 경고`를 선택하면 새 페이지에 품질 경고 양식이 생성됩니다. 품질 경고 양식을 작성하는"
-" 방법에 대한 종합적인 가이드는 :ref:`품질 경고 <quality/quality_management/quality-alerts>`에 "
-"대한 문서를 참조하세요."
+"품질 경고를 필히 생성해야 하는 경우, 검사가 확인된 후 제조 또는 재고 주문 페이지 상단에 있는 :guilabel:`품질 경고` 버튼만"
+" 클릭하면 됩니다. :guilabel:`품질 경고` 를 선택하면 새로운 페이지에 품질 경고 양식이 생성됩니다. 품질 경고 양식을 작성하는"
+" 방법에 대한 자세한 안내는 :ref:`품질 경고 <quality/quality_management/quality-alerts>` "
+"관련문서를 참조하세요."
 
 #: ../../content/applications/inventory_and_mrp/quality/quality_check_types/picture_check.rst:123
 msgid ""
