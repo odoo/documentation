@@ -49,7 +49,7 @@
         update_btn();
 
         function update_btn() {
-            var $reconcile = $('<button class="btn btn-success" type="button">')
+            var $reconcile = $('<button class="btn btn-secondary" type="button">')
                 .text("Next Reconcile")
                 .appendTo($buttons.empty())
             switch (state) {
