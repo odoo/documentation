@@ -13,7 +13,7 @@ serial numbers can help manufacturers locate products to provide after-sales ser
 event of a recall.
 
 .. seealso::
-   `Odoo Tutorials: Serial Numbers <https://www.youtube.com/watch?v=ZP-gMz2X5AY>`_
+   `Odoo Tutorials: Serial Numbers <https://www.youtube.com/watch?v=XWJjWc0Vl04>`_
 
 .. _inventory/product_management/enable-lots:
 
