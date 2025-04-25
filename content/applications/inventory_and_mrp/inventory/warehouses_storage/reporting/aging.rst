@@ -36,7 +36,7 @@ the supply chain, such as sunken purchase costs or delays in profitability. To a
 go to :menuselection:`Inventory app --> Reporting --> Valuation`.
 
 .. important::
-   The :menuselection:`Reporting`` menu in **Inventory** is only accessible to users with
+   The :menuselection:`Reporting` menu in **Inventory** is only accessible to users with
    :doc:`admin access <../../../../general/users/access_rights>`.
 
 This dashboard has three different views, or inventory reports — :ref:`list view
@@ -104,8 +104,7 @@ the desired fields:
   the value of said stock.
 
 .. tip::
-   Some of these settings may not appear unless first enabled in Odoo's **:doc:`Settings
-   <../../../general>`** application.
+   Some of these settings may not appear unless first enabled in **Settings** application.
 
 .. image:: aging/stock-valuation-report.png
    :alt: Stock valuation report.
@@ -181,9 +180,9 @@ will show the :guilabel:`Quantity` and :guilabel:`Total Value` of each stock mov
 .. example::
    A business has 100 sofas in stock on January 1st and sells 20 of those sofas on February 1st. The
    :guilabel:`Remaining Quantity` of the :abbr:`SVL (stock move layer)` will drop from `100.00` to
-   `70.00` on February 1st. If no other stock moves take place, and on February 1st, the
+   `80.00` on February 1st. If no other stock moves take place, and on February 1st, the
    :guilabel:`Valuation at Date` is selected as January 1st, the :guilabel:`Remaining Quantity`
-   will still show as `70.00`.
+   will still show as `80.00`.
 
 .. _inventory/warehouses_storage/aging-report:
 
