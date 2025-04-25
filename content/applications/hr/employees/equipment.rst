@@ -8,7 +8,7 @@ of important information regarding the equipment, such as serial numbers, warran
 maintenance history.
 
 .. note::
-   To track employee equipment, the :guilabel:`Maintenance` app *must* be installed.
+   To track employee equipment, the **Maintenance** app *must* be installed.
 
 .. _employees/equipment:
 
@@ -24,12 +24,15 @@ a number indicating how many, if any, items are currently assigned to that emplo
 Click the :icon:`fa-cubes` :guilabel:`Equipment Count` smart button, and all equipment currently
 assigned to the employee appears in individual Kanban cards.
 
-Each Kanban card displays the name and brand of the equipment on the first line, the serial number,
-and the employee's name. Any current maintenance requests appear at the bottom of the card in a red
-box.
+Each Kanban card displays the equipment's name and model on the first line, followed by the serial
+number (if available), and lastly, the employee's name. Any current maintenance requests appear at
+the bottom of the card in a red box.
 
 .. image:: equipment/equipment.png
    :alt: A Kanban view of all equipment for an employee.
+
+.. note::
+   A serial number is **not** required when logging equipment.
 
 All employee equipment
 ======================
@@ -38,18 +41,19 @@ To view all equipment for all employees, start on the :ref:`equipment record of 
 employee <employees/equipment>`.
 
 .. note::
-   It does not matter what employee is selected, as this is just to get to the :guilabel:`Equipment`
-   list.
+   It does not matter what employee is selected, or whether they have any equipment assigned to
+   them. This step is only used to get to the :guilabel:`Equipment` list.
 
 In the Kanban view of the employee's equipment, clear the default :guilabel:`Assigned Employee`
 filter in the search bar. This presents *all* equipment in the database, including those assigned to
 individual employees and whole departments.
 
-Click into the search bard, and select :guilabel:`Employee` in the :icon:`oi-group` :guilabel:`Group
-By` column. The equipment is now organized in a Kanban view, organized by employee.
+Click into the search bar, and select :guilabel:`Employee` in the :icon:`oi-group` :guilabel:`Group
+By` column. The equipment is now organized in a Kanban view, by employee.
 
-In the Kanban view displaying all employee equipment records, equipment can be quickly reassigned.
-Click and drag an equipment card to the desired employee to change ownership of the equipment.
+In the Kanban view displaying all employee equipment records, equipment can be reassigned by
+clicking and dragging an equipment card to the desired employee. This changes ownership of the
+equipment.
 
 .. image:: equipment/all-equipment.png
    :alt: A Kanban view of all equipment for all employees.
