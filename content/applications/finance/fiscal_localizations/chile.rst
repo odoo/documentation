@@ -212,6 +212,11 @@ Certificates` section. Then, click :guilabel:`New` to configure the certificate:
    :alt: Digital certificate configuration.
    :align: center
 
+.. warning::
+   If the :guilabel:`Certificate Owner` field is set to a specific user, and there are no
+   certificates shared with users, then the automatic sending of electronic documents and receipt
+   acknowledgments is **disabled**.
+
 Multicurrency
 =============
 
