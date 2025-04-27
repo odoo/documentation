@@ -5077,11 +5077,11 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:130
 msgid "The specific FROM defined on an email marketing campaign,"
-msgstr ""
+msgstr "Die VON-Angabe auf einer E-Mail-Kampagne."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:131
 msgid "The specific FROM that can be defined in an email template."
-msgstr ""
+msgstr "Die VON-Angabe, die in einer E-Mail-Vorlage definiert werden kann."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:134
 msgid ":doc:`google_oauth`"
@@ -5107,12 +5107,19 @@ msgid ""
 "emails*, including the sending of batches of invoices or quotations, will be"
 " managed by the Marketing Automation or Email Marketing application."
 msgstr ""
+"Transaktionsmails und Massenmails können über separate E-Mail-Server in Odoo"
+" versendet werden. Auf diese Weise werden alltägliche E-Mails, Angebote oder"
+" Rechnungen an Kunden als *Transaktionsmails* behandelt. *Massenmails*, "
+"einschließlich des Versands von Rechnungs- oder Angebotsstapeln, werden über"
+" Odoo Marketing-Automatisierung oder E-Mail-Marketing verwaltet."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:153
 msgid ""
 "You can use services like Gmail, Amazon SES, or Brevo for transactional "
 "emails, and services like Mailgun, Sendgrid, or Mailjet for mass mailings."
 msgstr ""
+"Sie können Dienste wie Gmail, Amazon SES oder Brevo für Transaktionsmails "
+"und Dienste wie Mailgun, Sendgrid oder Mailjet für Massenmails verwenden."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:156
 msgid ""
@@ -5123,10 +5130,17 @@ msgid ""
 "transactional server (e.g., `1`) over the mass mailings server (e.g., `2`) "
 "so transactional emails are given priority."
 msgstr ""
+"Aktivieren Sie zunächst den :ref:`developer-mode` und gehen Sie zu "
+":menuselection:`Einstellungen --> Technisch --> E-Mail: Postausgangsserver`."
+" Fügen Sie dort zwei Einträge für ausgehende E-Mail-Server hinzu, einen für "
+"den Transaktionsmailserver und einen für den Massenmailserver. Geben Sie für"
+" den Transaktionsserver einen niedrigeren Wert für die :guilabel:`Priorität`"
+" ein (z. B. `1`) als für den Massenmailserver (z. B. `2`), damit "
+"Transaktionsmails Vorrang erhalten."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst-1
 msgid "Example of split between transaction and mass mailing mail servers."
-msgstr ""
+msgstr "Beispiel einer Teilung der Server für Transaktions- und Massenmails."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:165
 msgid ""
@@ -5154,6 +5168,8 @@ msgid ""
 "It’s **highly recommended** to configure the FROM Filtering on the outgoing "
 "mail servers as per the instructions of your provider."
 msgstr ""
+"Es wird **dringend empfohlen**, die VON-Filterung auf den ausgehenden "
+"Mailservern gemäß den Anweisungen Ihres Providers zu konfigurieren."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:181
 msgid ""
@@ -5163,24 +5179,36 @@ msgid ""
 "address** that matches the sender’s email address and is trusted on the "
 "outgoing mail server provider's side."
 msgstr ""
+"Das Feld :guilabel:`VON-Filterung` ermöglicht die Verwendung eines "
+"bestimmten ausgehenden E-Mail-Servers, abhängig von der *Von*-E-Mail-Adresse"
+" oder Domain, über die Odoo im Namen des Absenders sendet. Der Wert muss "
+"eine Domain oder eine vollständige Adresse sein, die mit der E-Mail-Adresse "
+"des Absenders übereinstimmt und auf der Seite des Providers des ausgehenden "
+"Mailserver vertrauenswürdig ist."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:186
 msgid ""
 "If FROM filtering is not used, emails will go out using the notification "
 "address."
 msgstr ""
+"Wenn die VON-Filterung nicht verwendet wird, werden E-Mails über die "
+"Benachrichtigungsadresse versendet."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:189
 msgid ""
 "Some outgoing mail servers require a specific configuration of the FROM "
 "filter."
 msgstr ""
+"Einige ausgehende Mailserver erfordern eine spezielle Konfiguration des VON-"
+"Filters."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:191
 msgid ""
 "When an email is sent from Odoo, the following sequence is used to choose "
 "the outgoing email server:"
 msgstr ""
+"Wenn eine E-Mail von Odoo versendet wird, wird die folgende Reihenfolge "
+"verwendet, um den ausgehenden E-Mail-Server auszuwählen:"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:193
 msgid ""
@@ -5189,6 +5217,10 @@ msgid ""
 "configuration is ideal if all users of a company share the same domain but "
 "have different local-parts."
 msgstr ""
+"Zunächst sucht Odoo nach einem Server, der denselben VON-Filterwert wie der "
+"in der ausgehenden E-Mail definierte VON-Wert (d. h. die E-Mail-Adresse) "
+"hat. Diese Konfiguration ist ideal, wenn alle Benutzer eines Unternehmens "
+"dieselbe Domain verwenden, aber unterschiedliche lokale Teile haben."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:198
 msgid ""
@@ -5196,6 +5228,9 @@ msgid ""
 "having a FROM filtering value equal to `test@example.com` or `example.com` "
 "can be used."
 msgstr ""
+"Wenn die E-Mail-Adresse des Absenders `test@beispiel.com` lautet, kann nur "
+"ein E-Mail-Server mit einem VON-Filterwert verwendet werden, der gleich "
+"`test@beispiel.com` oder `beispiel.com` ist."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:201
 msgid ""
@@ -5203,12 +5238,18 @@ msgid ""
 "server without a FROM filtering value set. The email will be overridden with"
 " the notification address."
 msgstr ""
+"Wenn kein Server anhand des ersten Kriteriums gefunden wird, sucht Odoo nach"
+" dem ersten Server ohne einen festgelegten VON-Filterwert. Die E-Mail wird "
+"mit der Benachrichtigungsadresse überschrieben."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:204
 msgid ""
 "If no server is found based on the second criteria, Odoo uses the first "
 "server, and the email will be overridden with the notification address."
 msgstr ""
+"Wenn kein Server anhand des zweiten Kriteriums gefunden wird, verwendet Odoo"
+" den ersten Server, und die E-Mail wird mit der Benachrichtigungsadresse "
+"überschrieben."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:208
 msgid ""
@@ -5216,16 +5257,23 @@ msgid ""
 "the value is, the higher the priority is). Failing to do so, the first "
 "server is determined by the servers' names, using alphabetical order."
 msgstr ""
+"Um zu bestimmen, welcher Server zuerst verwendet wird, verwendet Odoo den "
+"Prioritätswert (je niedriger der Wert, desto höher die Priorität). Ist dies "
+"nicht möglich, wird der erste Server anhand der Servernamen in "
+"alphabetischer Reihenfolge bestimmt."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:212
 msgid ""
 "It is also possible to use Odoo's mail server for transactional emails in "
 "addition to mass mailings."
 msgstr ""
+"Es ist auch möglich, den Mailserver von Odoo zusätzlich zu Massenmails für "
+"Transaktionsmails zu verwenden."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:217
 msgid "Using an external email server and Odoo’s default server"
 msgstr ""
+"Verwendung eines externen E-Mail-Servers und des Standardservers von Odoo"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:219
 msgid ""
@@ -5233,12 +5281,17 @@ msgid ""
 "If no outgoing mail server is set, the default Odoo's SMTP server will be "
 "used."
 msgstr ""
+"Bei Odoo Online und Odoo.sh werden Datenbanken mit dem SMTP-Server von Odoo "
+"gestartet. Wenn kein ausgehender Mailserver festgelegt ist, wird der "
+"Standard-SMTP-Server von Odoo verwendet."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst-1
 msgid ""
 "Adding a mail server using the Odoo's mail server with the CLI "
 "authentication."
 msgstr ""
+"Hinzufügen eines Mailservers mit Odoos Mailserver mit der CLI-"
+"Authentifizierung."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:226
 msgid ""
@@ -5248,12 +5301,19 @@ msgid ""
 "there is no FROM filtering, the email will go out using the notification "
 "address."
 msgstr ""
+"Wenn ein ausgehender Mailserver gleichzeitig mit dem Standardserver von Odoo"
+" (CLI) verwendet wird, muss der VON-Filter des ausgehenden Mailservers eine "
+"benutzerdefinierte Domain enthalten, und der VON-Filter der CLI muss die "
+"Subdomain von Odoo enthalten. Wenn keine VON-Filterung vorhanden ist, wird "
+"die E-Mail über die Benachrichtigungsadresse versendet."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst-1
 msgid ""
 "Splitting of Odoo mail server for transactional emails and Mail server for "
 "Mass mailing."
 msgstr ""
+"Trennung des Odoo-Mailservers für Transaktionsmails und Mailserver für "
+"Massenmails."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:235
 msgid ""
@@ -5261,6 +5321,9 @@ msgid ""
 " mail server, using the same limit as if there was no outgoing mail server "
 "in place."
 msgstr ""
+"Bei Odoo Online entspricht die Kommandozeile dem Standardmailserver von Odoo"
+" und verwendet dieselben Beschränkungen, als ob kein ausgehender Mailserver "
+"vorhanden wäre."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:239
 msgid ""
@@ -5268,12 +5331,17 @@ msgid ""
 "limit. On Odoo.sh, you need to check on the monitor page the number of "
 "outgoing emails that were sent."
 msgstr ""
+"Bei Odoo Online werden auf der Seite auch Ihre tägliche E-Mail-Nutzung und "
+"Ihr Tageslimit angezeigt. Bei Odoo.sh müssen Sie auf der Überwachungsseite "
+"die Anzahl der versendeten E-Mails überprüfen."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:243
 msgid ""
 "On Odoo.sh, to use the command-line interface, an outgoing mail server can "
 "be configured on the configuration file."
 msgstr ""
+"Um die Kommandozeile auf Odoo.sh zu verwenden, kann in der "
+"Konfigurationsdatei ein Postausgangsserver konfiguriert werden."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:247
 msgid ""
@@ -5282,6 +5350,10 @@ msgid ""
 "failure-messages-limit>` depends on the database type and the applications "
 "used."
 msgstr ""
+"Der Mailserver von Odoo ist für Transaktionsmails und kleine "
+"Marketingkampagnen vorgesehen. Das :ref:`tägliche Limit <email-issues-"
+"outgoing-delivery-failure-messages-limit>` hängt von der Art der Datenbank "
+"und den verwendeten Apps ab."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:254
 msgid "Using a custom domain with an external email server"
@@ -5297,6 +5369,13 @@ msgid ""
 "records (SPF, DKIM, and DMARC). A list of the :ref:`most common providers is"
 " available <email-domain-providers-documentation>`."
 msgstr ""
+"Ähnlich wie im :ref:`vorherigen Kapitel <email-outbound-different-servers-"
+"external-odoo>` kann eine ordnungsgemäße Konfiguration erforderlich sein, um"
+" sicherzustellen, dass der externe E-Mail-Server E-Mails über Ihre "
+"benutzerdefinierte Domain senden darf. Lesen Sie die Dokumentation Ihres "
+"Providers, um die entsprechenden Einträge (SPF, DKIM und DMARC) "
+"ordnungsgemäß einzurichten. Eine Liste der :ref:`gängigsten Provider finden "
+"Sie hier <email-domain-providers-documentation>`."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:263
 msgid ""
@@ -5307,6 +5386,13 @@ msgid ""
 "of Odoo when using a custom email server. Odoo does not allow the "
 "configuration of Odoo's subdomain."
 msgstr ""
+"Wenn Sie Ihre eigene Domain verwenden, ist eine DNS-Konfiguration "
+"erforderlich. Wenn ein externer Postausgangsserver verwendet wird, hat die "
+"Konfiguration der Einträge wie in der :doc:`Dokumentation zur Odoo-DNS-"
+"Konfiguration für unsere Mailserver <email_domain>` beschrieben **nicht den "
+"gewünschten Effekt**, da sie bei Verwendung eines benutzerdefinierten "
+"E-Mail-Servers unabhängig von Odoo ist. Odoo erlaubt keine Konfiguration der"
+" Odoo-Subdomain."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:272
 msgid "Port restriction"
@@ -5317,6 +5403,8 @@ msgid ""
 "Port 25 is blocked for security reasons on Odoo Online and Odoo.sh. Try "
 "using port 465, 587, or 2525 instead."
 msgstr ""
+"Port 25 ist aus Sicherheitsgründen bei Odoo Online und Odoo.sh gesperrt. "
+"Versuchen Sie stattdessen die Ports 465, 587 oder 2525."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:280
 msgid "Alias domain"
@@ -5328,6 +5416,10 @@ msgid ""
 "Odoo’s subdomain (e.g., `company-name.odoo.com`), but each company may have "
 "its own custom email domain."
 msgstr ""
+"Die Catchall-Domain ist unternehmensspezifisch. Standardmäßig teilen sich "
+"alle Unternehmen die Subdomain von Odoo (z. B. `unternehmensname.odoo.com`),"
+" aber jedes Unternehmen kann eine eigene benutzerdefinierte E-Mail-Domain "
+"haben."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:285
 msgid ""
@@ -5357,6 +5449,11 @@ msgid ""
 "Configure it to determine the `FROM` header of your emails. If a full email "
 "address is used, all outgoing emails will be overwritten with this address."
 msgstr ""
+"Das Feld :guilabel:`Standardabsenderalias` kann mit einem lokalen Teil der "
+"E-Mail-Adresse (standardmäßig `benachrichitungen`) oder einer vollständigen "
+"E-Mail-Adresse ausgefüllt werden. Konfigurieren Sie es, um den `VON`-Kopf "
+"Ihrer E-Mails festzulegen. Wenn eine vollständige E-Mail-Adresse verwendet "
+"wird, werden alle ausgehenden E-Mails mit dieser Adresse überschrieben."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:301
 msgid "Notification system"
@@ -5368,6 +5465,10 @@ msgid ""
 "If a customer replies directly to an email, the answer is logged in the same"
 " chatter, thus functioning as a message thread related to the record."
 msgstr ""
+"Wenn eine E-Mail aus dem Chatter gesendet wird, können Kunden direkt darauf "
+"antworten. Wenn ein Kunde direkt auf eine E-Mail antwortet, wird die Antwort"
+" im selben Chatter protokolliert und fungiert somit als Nachrichten-Thread "
+"zu dem Datensatz."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:307
 msgid ""
@@ -5375,6 +5476,9 @@ msgid ""
 "the subscribed subtypes) to send them a notification by email, or in the "
 "Odoo inbox, depending on the user’s preferences."
 msgstr ""
+"Nach Erhalt der Antwort verwendet Odoo die abonnierten Follower (basierend "
+"auf den abonnierten Subtypen), um ihnen eine Benachrichtigung per E-Mail "
+"oder im Odoo-Posteingang zu senden, je nach den Einstellungen des Benutzers."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:311
 msgid ""
@@ -5383,6 +5487,10 @@ msgid ""
 "default behavior is to redistribute the email's content to all other "
 "followers within the thread."
 msgstr ""
+"Wenn ein Kunde mit der E-Mail-Adresse `„Mary“ <mary@kunde.beispiel.com>` "
+"direkt auf eine E-Mail aus der Odoo-Datenbank antwortet, leitet Odoo den "
+"Inhalt der E-Mail standardmäßig an alle anderen Abonnenten innerhalb des "
+"Threads weiter."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:315
 msgid ""
@@ -5393,6 +5501,13 @@ msgid ""
 "overridden with the value `notifications@company-name.odoo.com` instead of "
 "`mary@customer.example.com`."
 msgstr ""
+"Da Marys Domain nicht zur Alias-Domain gehört, überschreibt Odoo die E-Mail-"
+"Adresse und verwendet die Benachrichtigungs-E-Mail-Adresse, um die Follower "
+"zu benachrichtigen. Diese Überschreibung hängt von der Konfiguration in der "
+"Datenbank ab. Standardmäßig wird in Odoo Online und Odoo.sh die "
+"`VON`-E-Mail-Adresse durch den Wert "
+"`benachrichtigung@unternehmensname.odoo.com` anstelle von "
+"`mary@kunde.beispiel.com` ersetzt."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:321
 msgid ""
@@ -5400,10 +5515,14 @@ msgid ""
 "default from alias}`@`{alias domain, domain name}`, by default, "
 "`notifications@company-name.odoo.com`."
 msgstr ""
+"Die Adresse wird aus dem Namen des Absenders und `{Alias-Domain, "
+"Standardabsenderalias}`@`{Alias-Domain, Domainname}` gebildet, standardmäßig"
+" `benachrichtigung@unternehmensname.odoo.com`."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:328
 msgid "Using a unique email address for all outgoing emails"
 msgstr ""
+"Verwendung einer eindeutigen E-Mail-Adresse für alle ausgehenden E-Mails"
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:330
 msgid ""
@@ -5412,12 +5531,20 @@ msgid ""
 "Email: Alias Domains`. On the :guilabel:`Default From Alias`, use the the "
 "local-part or a complete email address as the value."
 msgstr ""
+"Um die E-Mail-Adresse, von der E-Mails gesendet werden, festzulegen, "
+"aktivieren Sie den :ref:`developer-mode` und gehen Sie zu "
+":menuselection:`Einstellungen --> Technisch --> E-Mail: Alias-Domains`. "
+"Verwenden Sie im Feld Standardabsenderalias den lokalen Teil oder eine "
+"vollständige E-Mail-Adresse als Wert."
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:335
 msgid ""
 "If a **complete address** is used as the :guilabel:`Default From Alias` "
 "value, **all** outgoing emails will be overwritten by this address."
 msgstr ""
+"Wenn eine **vollständige Adresse** als Wert für :guilabel:`Standard-"
+"absenderalias` verwendet wird, werden alle ausgehenden E-Mails mit dieser "
+"Adresse überschrieben."
 
 #: ../../content/applications/general/email_communication/faq.rst:3
 msgid "Common emailing issues and solutions"
@@ -5446,6 +5573,10 @@ msgid ""
 "server. Therefore, it might not behave in the expected way when compared to "
 "a traditional email inbox."
 msgstr ""
+"Odoo verwendet E-Mails als Mittel zur Benachrichtigung und Kommunikation mit"
+" Benutzern/Kunden, ist jedoch nicht als Ersatz für einen dedizierten E-Mail-"
+"Server konzipiert. Daher verhält es sich möglicherweise nicht wie ein "
+"herkömmlicher E-Mail-Posteingang."
 
 #: ../../content/applications/general/email_communication/faq.rst:18
 msgid "The main differences are the following:"
@@ -5460,6 +5591,13 @@ msgid ""
 "content of the same email (when sent to multiple recipients) if the content "
 "is already present in the chatter."
 msgstr ""
+"Standardmäßig wird ein E-Mail-Objekt gelöscht, sobald eine "
+"Benachrichtigungs- oder Transaktionsmail (Angebot, Rechnung, Direktnachricht"
+" an einen Kontakt) erfolgreich versendet wurde. Der Inhalt der E-Mail-"
+"Nachricht wird im Chatter des zugehörigen Datensatzes gespeichert. Dadurch "
+"wird verhindert, dass die Datenbank mit mehreren Kopien desselben E-Mail-"
+"Inhalts (bei Versand an mehrere Empfänger) überfüllt wird, wenn der Inhalt "
+"bereits im Chatter vorhanden ist."
 
 #: ../../content/applications/general/email_communication/faq.rst:25
 msgid ""
@@ -5468,6 +5606,10 @@ msgid ""
 " contact is notified <email-outbound-notifications>` or receives a copy of "
 "an email."
 msgstr ""
+"Es gibt kein Konzept für (blinde) Kopien ([B]CC). Odoo verwendet das Konzept"
+" der Follower, die zu einem Chatter hinzugefügt werden, um automatisch zu "
+"entscheiden, wann und wie :ref:`ein Kontakt benachrichtigt wird <email-"
+"outbound-notifications>` oder eine Kopie einer E-Mail erhält."
 
 #: ../../content/applications/general/email_communication/faq.rst:28
 msgid ""
@@ -5478,6 +5620,13 @@ msgid ""
 "in a spam or quarantine folder. In other words, any email unrelated to an "
 "Odoo database is lost."
 msgstr ""
+"Eingehende E-Mails werden bearbeitet, indem überprüft wird, ob die "
+"*AN*-E-Mail-Adresse eine gültige E-Mail-Adresse in der Odoo-Datenbank ist "
+"oder, im Falle einer Antwort-E-Mail, ob im E-Mail-Kopf ein Verweis auf eine "
+"aus der Odoo-Datenbank gesendete Nachricht vorhanden ist. Alle anderen "
+"E-Mails werden zurückgewiesen und nicht vorübergehend in einem Spam- oder "
+"Quarantäneordner abgelegt. Mit anderen Worten: Alle E-Mails, die nicht mit "
+"einer Odoo-Datenbank in Verbindung stehen, gehen verloren."
 
 #: ../../content/applications/general/email_communication/faq.rst:37
 msgid "Outgoing emails"
@@ -5485,7 +5634,7 @@ msgstr "Ausgehende E-Mails"
 
 #: ../../content/applications/general/email_communication/faq.rst:42
 msgid "Changing the email address of the admin user account"
-msgstr ""
+msgstr "E-Mail-Adresse des Admin-Benutzerkontos ändern"
 
 #: ../../content/applications/general/email_communication/faq.rst:44
 msgid ""
@@ -5493,6 +5642,10 @@ msgid ""
 "placeholder email address. It is recommended to **replace the admin email "
 "address** with a valid email address to prevent outgoing email issues."
 msgstr ""
+"Bei der Erstellung einer Odoo-Datenbank wird dem Haupt-Admin-Konto eine "
+"Platzhalter-E-Mail-Adresse zugewiesen. Es wird empfohlen, die **E-Mail-"
+"Adresse des Administrators** durch eine gültige E-Mail-Adresse zu ersetzen, "
+"um Probleme beim Versand von E-Mails zu vermeiden."
 
 #: ../../content/applications/general/email_communication/faq.rst:48
 msgid ""
@@ -5502,6 +5655,12 @@ msgid ""
 "email address or use your Odoo subdomain (e.g., `company-name.odoo.com`) and"
 " `admin` for the local-part (e.g., `admin@company-name.odoo.com`)."
 msgstr ""
+"Klicken Sie dazu im Administratorkonto auf das Benutzersymbol, dann auf  "
+":guilabel:`Mein Profil` (oder :guilabel:`Präferenzen`) und aktualisieren Sie"
+" das Feld :guilabel:`E-Mail` im Reiter :guilabel:`Präferenzen`. Verwenden "
+"Sie entweder eine andere E-Mail-Adresse oder Ihre Odoo-Subdomain (z. B. "
+"`unternehmensname.odoo.com`) und admin für den lokalen Teil (z. B. "
+"`admin@unternehmensname.odoo.com`)."
 
 #: ../../content/applications/general/email_communication/faq.rst:56
 msgid "Delivery failure"
@@ -5513,6 +5672,9 @@ msgid ""
 " is displayed in the chatter. The icon turns red when delivery has failed "
 "for at least one recipient."
 msgstr ""
+"Wenn eine Nachricht gesendet wird, wird im Chatter ein Symbol :icon:`fa-"
+"envelope-o` :guilabel:`(Umschlag)` angezeigt. Das Symbol wird rot, wenn die "
+"Zustellung an mindestens einen Empfänger fehlgeschlagen ist."
 
 #: ../../content/applications/general/email_communication/faq.rst-1
 msgid "Red envelope icon displayed in the chatter."
@@ -5558,7 +5720,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/faq.rst-1
 msgid "Example of the technical email queue view."
-msgstr ""
+msgstr "Beispiel der technischen E-Mail-Warteschlange."
 
 #: ../../content/applications/general/email_communication/faq.rst:86
 msgid ""
