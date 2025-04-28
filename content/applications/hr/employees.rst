@@ -111,6 +111,7 @@ employee record.
    :titlesonly:
 
    employees/new_employee
+   employees/onboarding
    employees/departments
    employees/certifications
    employees/equipment
