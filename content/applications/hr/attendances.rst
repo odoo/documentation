@@ -78,6 +78,8 @@ to access the configuration menu.
    company-specific configuration. Items without an :icon:`fa-building-o` :guilabel:`(building)`
    icon apply to all companies within the database.
 
+.. _attendances/modes:
+
 Modes
 -----
 
@@ -141,143 +143,137 @@ Overview
 ========
 
 When entering the **Attendances** application, the :guilabel:`Overview` dashboard is presented,
-containing all the check in and check out information for the signed in user. If the user has
-specific :ref:`access rights <attendances/access-rights>` and/or are :ref:`approvers
-<attendances/approvers>` for specific employees, then those additional employee's check in and check
-out information is also visible on the :guilabel:`Overview` dashboard.
+containing all the user's check in and check out information. If the user has the required
+:ref:`access rights <attendances/access-rights>` or is an :ref:`approver <attendances/approvers>`
+for specific employees, those employeess' check-in and check-out information also appears on the
+:guilabel:`Overview` dashboard.
 
-Views
------
-
-To change the view from the default Gantt chart to a list view, click the :guilabel:`List` icon in
-the top-right of the dashboard, beneath the user's photo. To switch back to the Gantt chart, click
-the :guilabel:`Gantt` button, located next to the :guilabel:`List` button.
-
-The default view presents the current day's information. To present the information for the
-:guilabel:`Week`, :guilabel:`Month`, or :guilabel:`Year`, click on the :guilabel:`Day` button to
-reveal a drop-down, displaying those other options. Select the desired view, and the dashboard
-updates, presenting the selected information. To change the :guilabel:`Day`, :guilabel:`Week`,
-:guilabel:`Month`, or :guilabel:`Year` presented, click the :icon:`oi-arrow-left` :guilabel:`(left
-arrow)` or :icon:`oi-arrow-right` :guilabel:`(right arrow)` buttons on either side of the drop-down
-menu. To jump back to a view containing the current day, click the :guilabel:`Today` button. This
-refreshes the dashboard, presenting information containing the current day's information.
-
-In the :guilabel:`Day` view, the column for the current hour is highlighted in yellow. If the
-:guilabel:`Week` or :guilabel:`Month` view is selected, the column for the current day is
-highlighted. If the :guilabel:`Year` view is selected, the current month is highlighted.
+The **Attendance** dashboard allows switching between :icon:`fa-tasks` :guilabel:`(Gantt)` and
+:icon:`oi-view-list` :guilabel:`(List)` views, and selecting a period to analyze. The current period
+is automatically highlighted in yellow for real-time attendance records, while the
+:icon:`fa-crosshairs` :guilabel:`(Focus Today)` button instantly returns the dashboard to the
+present date.
 
 .. image:: attendances/overview.png
    :alt: The overview dashboard presenting the information for the week, with the current day
          highlighted.
 
-Any entries that have errors appear in red, indicating they need to be resolved by a user with the
-proper :ref:`access rights <attendances/access-rights>` and/or are :ref:`approvers
-<attendances/approvers>` for the employees with the errors.
+.. note::
+   Any entries that have errors appear in red, indicating they need to be resolved by a user with
+   the proper :ref:`access rights <attendances/access-rights>` and/or are :ref:`approvers
+   <attendances/approvers>` for the employees with the errors.
 
 .. _attendances/filters-groups:
 
 Filters and groups
+==================
+
+Sometimes, attendance officers and managers need to view specific records, such as all automatic
+checkouts to determine which employees chronically forget to check-out, or by department, to
+determine which team is working the most overtime.
+
+For these cases, use the search bar to select a :icon:`fa-filter` :guilabel:`Filters` or
+:icon:`oi-group` :guilabel:`Group By`, or combine these both to present the desired information.
+
+.. seealso::
+   :doc:`../essentials/search`
+
+High-value filters
 ------------------
 
-To filter the results in the overview dashboard, or to present different groups of information,
-click the :icon:`fa-caret-down` :guilabel:`(Toggle Search Panel)` button in the right side of the
-:guilabel:`Search` bar above the dashboard, and select one of the available :guilabel:`Filters` or
-:guilabel:`Group By` options. Several preconfigured filters and groups are available to choose from,
-as well as an option to create custom ones.
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: 40 60
 
-Filters
-~~~~~~~
+   * - Filter
+     - Common use case
+   * - At Work
+     - Verify employees still on-site before shutting down the building for the night, or to perform
+       a head count.
+   * - Errors
+     - View all errors to correct them prior to payroll processing.
+   * - Automatically Checked-Out
+     - Perform an audit to determine employees who chronically forget to check-out of work.
+   * - Date
+     - Limit results to a specific pay-period or audit window.
+   * - Active/Archived Employees
+     - Switch between current staff and former employees when auditing historical data.
 
-The default filters that can be selected are:
+Insightful groupings
+--------------------
 
-- :guilabel:`My Attendances`: this filter only presents the user's attendance data.
-- :guilabel:`My Team`: this filter presents the attendance data for the user's team.
-- :guilabel:`At Work`: this filter displays the attendance data for everyone currently checked in.
-- :guilabel:`Errors`: this filter displays any entries with :ref:`errors <attendances/errors>` that
-  need to be resolved.
-- :guilabel:`Check In`: this filter has a drop-down to further select a specific time period. Select
-  the desired time period from the options presented, a specific month, quarter, or year.
-- :guilabel:`Last 7 days`: this filter presents the attendance data for the last seven days.
-- :guilabel:`Add Custom Filter`: create a custom filter using the pop-up that appears when this is
-  selected.
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: 40 60
 
-Groups
-~~~~~~
-
-The default groups that can be selected are:
-
-- :guilabel:`Check In`: this grouping presents a drop-down menu containing the following time period
-  options: :guilabel:`Year`, :guilabel:`Quarter`, :guilabel:`Month`, :guilabel:`Week`, and
-  :guilabel:`Day`. Selected the time period to display all the check-in information, grouped by the
-  selected time period.
-- :guilabel:`Employee`: this group presents the attendance data organized by employee.
-- :guilabel:`Check Out`: this grouping presents a drop-down menu containing the following time
-  period options: :guilabel:`Year`, :guilabel:`Quarter`, :guilabel:`Month`, :guilabel:`Week`, and
-  :guilabel:`Day`. Selected the time period to display all the check-out information, grouped by the
-  selected time period.
-- :guilabel:`Add Custom Group`: this option displays a drop-down menu with a variety of options to
-  group the attendance data by, including :guilabel:`City`, :guilabel:`Country`, :guilabel:`Mode`,
-  and :guilabel:`IP Address`.
+   * - Group by
+     - When it helps
+   * - Employee
+     - Review individual attendance records during a 1:1 meeting.
+   * - Department
+     - Compare staffing levels and working hours to determine over-working and under-working teams.
+   * - Manager
+     - Determine where attendance follow-up questions can be directed to for an employee.
+   * - Method
+     - Spot trends in attendance methods to potentially resolve hardware issues.
+   * - Date (Day/Week/Month)
+     - Identify absenteeism spikes or seasonal patterns.
 
 .. _attendances/errors:
 
 Attendance log details
-----------------------
+======================
 
-Odoo captures various time and location details when a user checks in and out. The specific details
-provided are determined by the method the user checked in and out.
-
-To view the specific check in and/or check out details for an employee, click on an individual entry
-in the overview dashboard.
-
-A detailed attendance log for the user appears in a pop-up window. To close the detailed attendance
-log, click the :guilabel:`Save & Close` button in the bottom-left corner of the form.
+Odoo records both the time and location for every check-in and check-out, with fields varying by the
+method used. These detailed attendance logs can confirm where an employee was on any given work day.
+This can be useful for companies with hybrid working schedules, who may need to perform audits to
+ensure proper compliance.
 
 The detailed attendance log contains the following information:
 
 Main details
-~~~~~~~~~~~~
+------------
 
 - :guilabel:`Employee`: the name of the employee.
 - :guilabel:`Check In`: the date and time the employee checked in.
-- :guilabel:`Check Out`: the date and time the employee checked out. This only appears if the
+- :guilabel:`Check Out`: the date and time the employee checked out. This **only** appears if the
   employee has checked out.
-- :guilabel:`Worked Hours`: the total amount of time the employee logged for the day, in an hour and
-  minute format (HH:MM). This value calculates all the checks in and check outs for the day, if the
-  employee checked in and out multiple times.
-- :guilabel:`Extra Hours`: any extra hours the employee logged that is beyond their expected working
-  hours.
+- :guilabel:`Worked Time`: the total amount of time the employee logged for the day, across multiple
+  check-ins and outs. In an hour and minute format (HH:MM).
+- :guilabel:`Worked Extra Hours`: approved overtime (shows **only** when present for the employee).
+- :guilabel:`Extra Hours`: unpaid overtime hours worked beyond the expected working schedule (the
+  :guilabel:`Worked Time` minus the approved :guilabel:`Worked Extra Hours`.
 
 Check in/check out details
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------
 
 The following information appears for both the :guilabel:`Check In` and :guilabel:`Check Out`
 sections.
 
-- :guilabel:`Mode`: the method with which the attendance information was gathered.
-  :guilabel:`Systray` is displayed if the employee logged in and out :ref:`directly from the
-  database <attendances/check-in>`, :guilabel:`Manual` is displayed if the employee logged in and
-  out :ref:`using an attendance kiosk <attendances/kiosk-mode-entry>`.
-- :guilabel:`IP Address`: the IP address for the computer the employee used to log in or out.
+- :guilabel:`Mode`: attendance submission method. Can be :ref:`Systray <attendances/check-in>`,
+  :ref:`Kiosk <attendances/kiosk-mode-entry>`, or :guilabel:`Manual` entry.
+- :guilabel:`IP Address`: the device's IP address used to log in or out.
 - :guilabel:`Browser`: the web browser the employee used to log in or out.
-- :guilabel:`Localization`: the city and country associated with the computer's IP address.
+- :guilabel:`Localisation`: the city and country associated with the computer's IP address.
 - :guilabel:`GPS Coordinates`: the specific coordinates when the user logged in or out. To view the
-  specific coordinates on a map, click the :guilabel:`→ View on Maps` button beneath the
-  :guilabel:`GPS Coordinates`. This opens a map in a new browser tab, with the specific location
-  pointed out.
+  specific coordinates on a map, click the :icon:`oi-arrow-right` :guilabel:`View on Maps` button
+  beneath the :guilabel:`GPS Coordinates`. This opens a map in a new browser tab, with the specific
+  location pointed out.
 
 .. image:: attendances/details.png
    :alt: The detailed information for an attendance entry.
 
-Errors
-------
+Attendance errors
+=================
 
-Entries that contain an error appear on the overview dashboard in red. In the :guilabel:`Gantt
-view`, the entry appears with a red background. If in the :guilabel:`List view`, the entry text
-appears in red.
+Entries that contain an error appear on the overview dashboard in red. In the :icon:`fa-tasks`
+:guilabel:`(Gantt)` view, the entry appears with a red background. If in the :icon:`oi-view-list`
+:guilabel:`(List)` view, the entry text appears in red.
 
-An error typically occurs when an employee has checked in but has not checked out within the last 24
-hours, or when an employee has a check in and check out period spanning over 16 hours.
+An error occurs when an employee has checked in but not checked out within 24 hours, or when a
+single check-in period exceeds 16 hours.
 
 To fix the error, the attendance entry must be modified or deleted. Click on the entry to reveal a
 pop-up containing the details for that particular entry. To modify the :guilabel:`Check In` and/or
@@ -286,15 +282,11 @@ and a calendar selector appears. Click on the desired date, then use the time se
 calendar to select the specific time for the entry. When the information is correct, click
 :guilabel:`Apply.`
 
-.. image:: attendances/errors.png
-   :alt: The pop-up that allows for modifications to an attendance entry with an error. The calendar
-         selector is shown, and the time selector is highlighted.
-
 When all the information on the pop-up is correct, click :guilabel:`Save & Close`. When the entry no
 longer has an error, the entry appears in gray instead of red.
 
-To delete an entry, click :guilabel:`Remove` on the pop-up instead of making modifications to the
-entry.
+To delete an entry, click the red :guilabel:`Delete` button on the pop-up window instead of making
+modifications to the entry.
 
 Reporting
 =========
