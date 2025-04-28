@@ -15,11 +15,9 @@ To start using the Windows virtual IoT:
 Prerequisites
 =============
 
-The following prerequisites must be met before setting up and using the Windows virtual IoT:
-
-- A valid :ref:`IoT box subscription <iot/iot/iot-subscription>`.
-- An updated and recent version of Windows (i.e., Windows 10 or Windows 11) installed on a Windows
-  computer (laptop, desktop, or server).
+To set up the Windows virtual IoT, you need an updated and recent version of Windows (i.e., 
+Windows 10 or Windows 11) installed on a Windows computer (laptop, desktop, or server).
+An IoT box subscription is not necessary for a virtual IoT box.
 
 .. note::
    - :abbr:`MRP (Material Requirement Planning)` devices, including cameras and measurement tools,
