@@ -40,8 +40,8 @@ From Inventory Settings
 .. image:: operation_types/print-operations-and-commands.png
    :alt: Link to print inventory operations and commands.
 
-Specific Locations
-------------------
+Specific operations
+-------------------
 
 :menuselection:`Inventory app --> Configuration --> Operations Types`
 
