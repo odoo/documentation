@@ -34,6 +34,29 @@ Supported providers:
 Configuration
 =============
 
+Prerequisites
+-------------
+
+To use the UrbanPiper integration in a live production environment, ensure the following
+requirements are satisfied:
+
+- **UrbanPiper subscription:** A valid UrbanPiper subscription is mandatory.
+
+  .. note::
+     For any concerns or queries regarding your UrbanPiper subscription, please reach out to the
+     account manager linked to your Odoo database.
+
+- **Odoo requirements:**
+
+  - **Odoo subscription:** An active Odoo Enterprise subscription is required. Odoo Community does
+    not support this integration.
+  - **Odoo version:** Odoo Enterprise version 18.0 or above.
+  - **Odoo platform:** All Odoo platforms are supported, including Odoo Online, Odoo.sh, and
+    On-Premise installations.
+
+- **Delivery platform reseller account:** A registered reseller account is required with each
+  delivery platform to be integrated (e.g., Uber Eats, DoorDash, Careem, Deliveroo, Zomato).
+
 .. _online_food_delivery/credentials:
 
 UrbanPiper credentials
