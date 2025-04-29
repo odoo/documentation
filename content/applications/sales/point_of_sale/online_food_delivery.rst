@@ -31,6 +31,30 @@ Supported providers:
 - `UberEats <https://www.ubereats.com>`_
 - `Zomato <https://www.zomato.com>`_
 
+UrbanPiper Integration Subscription
+===================================
+
+A valid UrbanPiper subscription is required to use the UrbanPiper integration in production.
+
+If you experience issues related to your subscription, please contact the account manager associated
+with your Odoo database.
+
+Prerequisites
+-------------
+
+1. A valid Odoo Enterprise subscription is required.
+
+2. Odoo Enterprise version 18.0 or above is mandatory (not available for Community Edition).
+
+3. All Odoo platforms are supported, including Odoo Online, Odoo.sh, and On-Premise installations.
+
+4. You must be a registered reseller on the delivery platform
+   (e.g., UberEats, Talabat, Careem, Deliveroo, Zomato, etc.)
+
+.. seealso::
+   For a complete setup and usage guide for the UrbanPiper integration, refer to:
+   `A Beginner’s Guide <https://www.odoo.com/knowledge/article/25146>`_
+
 Configuration
 =============
 
