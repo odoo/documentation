@@ -27,7 +27,7 @@ Then, follow the corresponding documentation to configure your device:
 - :doc:`SIX configuration <terminals/six>`
 - :doc:`Stripe configuration <terminals/stripe>`
 - :doc:`Tyro configuration <terminals/tyro>`
-- :doc:`Viva Wallet configuration <terminals/viva_wallet>`
+- :doc:`Viva.com configuration <terminals/viva_com>`
 - :doc:`Worldline configuration <terminals/worldline>`
 
 Once the terminal is configured, you can :doc:`create the corresponding payment method and add it to
@@ -57,5 +57,5 @@ Successful`.
    terminals/six
    terminals/stripe
    terminals/tyro
-   terminals/viva_wallet
+   terminals/viva_com
    terminals/worldline
