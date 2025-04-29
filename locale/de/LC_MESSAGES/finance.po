@@ -10607,6 +10607,9 @@ msgid ""
 "payment is :doc:`reconciled <bank/reconciliation>` with its corresponding "
 ":doc:`bank transaction(s) <bank/transactions>`."
 msgstr ""
+"Die Ein- oder Ausgangsrechnung wird nun als :guilabel:`In Zahlung` markiert,"
+" bis sie mit der entsprechenden :doc:`Banktransaktion :doc:`abgestimmt "
+"<bank/reconciliation>` ist."
 
 #: ../../content/applications/finance/accounting/payments.rst:97
 msgid "Matching payments"
@@ -21313,6 +21316,10 @@ msgid ""
 "`BILL/year/month/incrementing-number` (e.g., `BILL/2025/01/00001`), which "
 "restarts from `00001` each year."
 msgstr ""
+"Bei der Bestätigung einer Lieferantenrechnung generiert Odoo eine eindeutige"
+" Rechnungsreferenznummer. Standardmäßig verwendet Odoo das folgende Format: "
+"`RG/Jahr/Monat/aufsteigende-Nummer` (z. B. `RG/2025/01/00001`), die jedes "
+"Jahr bei `00001` beginnt."
 
 #: ../../content/applications/finance/accounting/vendor_bills/sequence.rst:9
 msgid ""
@@ -21321,6 +21328,10 @@ msgid ""
 ":ref:`mass-resequence vendor bills <accounting/vendor_bills/mass-"
 "resequencing>`."
 msgstr ""
+"Es ist jedoch möglich, das :ref:`Sequenzformat "
+"<accounting/vendor_bills/resequencing>` und seine Periodizität zu ändern und"
+" :ref:`Rechnungen in großen Mengen neu zu sequenzieren "
+"<accounting/vendor_bills/mass-resequencing>`."
 
 #: ../../content/applications/finance/accounting/vendor_bills/sequence.rst:21
 msgid ""
@@ -21328,11 +21339,14 @@ msgid ""
 "click :guilabel:`Reset to Draft`, and edit the vendor bill's reference "
 "number."
 msgstr ""
+"Um die Standardsequenz anzupassen, öffnen Sie die letzte bestätigte "
+"Lieferantenrechnungen, klicken Sie auf :guilabel:`Auf Entwurf zurücksetzen` "
+"und bearbeiten Sie die Referenznummer der Lieferantenrechnung."
 
 #: ../../content/applications/finance/accounting/vendor_bills/sequence.rst-1
 #: ../../content/applications/finance/accounting/vendor_bills/sequence.rst-1
 msgid "Editing the reference number of a vendor bill."
-msgstr ""
+msgstr "Bearbeitung der Referenznummer einer Lieferantenrechnung."
 
 #: ../../content/applications/finance/accounting/vendor_bills/sequence.rst:27
 msgid ""
@@ -21340,16 +21354,22 @@ msgid ""
 "vendor bills. For example, if the current vendor bill's month is withdrawn, "
 "the sequence's periodicity will change to every year instead of every month."
 msgstr ""
+"Odoo erklärt dann, wie das erkannte Format auf alle zukünftige "
+"Lieferantenrechnungen übertragen wird. Wenn der Monat der aktuellen "
+"Lieferantenrechnung hinzugefügt wird, ändert Sie die Periodizität der "
+"Sequenz auf jedes Jahr statt jeden Monat."
 
 #: ../../content/applications/finance/accounting/vendor_bills/sequence.rst:35
 msgid ""
 "The sequence format can be edited directly when creating the first vendor "
 "bill of a given sequence period."
 msgstr ""
+"Das Sequenzformat kann direkt bei der Erstellung der ersten "
+"Lieferantenrechnung einer bestimmten Sequenzperiode angepasst werden."
 
 #: ../../content/applications/finance/accounting/vendor_bills/sequence.rst:41
 msgid "Mass-resequencing vendor bills"
-msgstr ""
+msgstr "Lieferantenrechnungen massenweise neu sequenzieren"
 
 #: ../../content/applications/finance/accounting/vendor_bills/sequence.rst:43
 msgid ""
@@ -21358,22 +21378,31 @@ msgid ""
 " originates from the previous software, continuity for the current year must"
 " be maintained without restarting from the beginning."
 msgstr ""
+"Es kann hilfreich sein, mehrere Lieferantenrechnungsnummern neu zu "
+"sequenzieren. Wenn Sie beispielsweise Lieferantenrechnungen aus einem "
+"anderen Buchhaltungssystem importieren und die Referenz aus der vorherigen "
+"Software stammt, muss die Kontinuität für das laufende Jahr beibehalten "
+"werden, ohne von vorne zu beginnen."
 
 #: ../../content/applications/finance/accounting/vendor_bills/sequence.rst:50
 msgid "Follow these steps to resequence vendor bill numbers:"
-msgstr ""
+msgstr "Befolgen Sie diese Schritte, um Rechnungsnummern neu zu sequenzieren:"
 
 #: ../../content/applications/finance/accounting/vendor_bills/sequence.rst:53
 msgid ""
 "In the vendor bills list view, select the vendor bills that need a new "
 "sequence."
 msgstr ""
+"Wählen Sie in der Listenansicht der Lieferantenrechnungen die Rechnung aus, "
+"die eine neue Sequenz benötigt."
 
 #: ../../content/applications/finance/accounting/vendor_bills/sequence.rst:63
 msgid ""
 "The first vendor bill using the new sequence appears in red in the "
 ":guilabel:`Bills` list view."
 msgstr ""
+"Die erste Lieferantenrechnung mit der neuen Sequenz erscheint nun in Rot in "
+"der Listenansicht der :guilabel:`Rechnungen`."
 
 #: ../../content/applications/finance/expenses.rst:5
 #: ../../content/applications/finance/fiscal_localizations/united_arab_emirates.rst:104
@@ -30015,12 +30044,18 @@ msgid ""
 "Either the :guilabel:`Company VAT` or the :guilabel:`Accounting Firm VAT` is"
 " not in a valid Belgian format."
 msgstr ""
+"Entweder hat die :guilabel:`USt-IdNr. des Unternehmens` oder die "
+":guilabel:`USt-IdNr. des Steuerberaters/Wirtschaftsprüfers` kein in Belgien "
+"gültiges Format."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:411
 msgid ""
 "**It seems that the accounting firm VAT number you provided does not exist "
 "in CodaBox.** **Please check your configuration.**"
 msgstr ""
+"**Es scheint, dass die von Ihnen angegebene USt-IdNr. der Buchhaltungsfirma "
+"in CodaBox nicht vorhanden ist.** **Bitte überprüfen Sie Ihre "
+"Konfiguration.**"
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:414
 msgid ""
@@ -30050,6 +30085,11 @@ msgid ""
 "the :guilabel:`CodaBox` section, click on :guilabel:`Manage Connection`, "
 "then click on :guilabel:`Revoke`."
 msgstr ""
+"Um die Verbindung zwischen Odoo und CodaBox zu widerrufen, gehen Sie zu: "
+":menuselection:`Buchhaltung --> Konfiguration --> Einstellungen`, scrollen "
+"Sie nach unten zum Abschnitt :guilabel:`CodaBox`, klicken Sie auf "
+":guilabel:`Verbindung verwalten` und anschließend auf "
+":guilabel:`Widerrufen`."
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:431
 #: ../../content/applications/finance/fiscal_localizations/malaysia.rst:138
@@ -32460,20 +32500,26 @@ msgid ""
 "delivery occurs that matters. Therefore, delivery is the responsibility of "
 "the vendor and is accounted for at the customer location."
 msgstr ""
+"Bei der Ermittlung der anzuwendenden Steuern ist die Provinz maßgeblich, in "
+"der die Lieferung erfolgt. Daher liegt die Verantwortung für die Lieferung "
+"beim Lieferanten und wird am Standort des Kunden verbucht."
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:165
 msgid "A delivery is made to a customer from another province."
 msgstr ""
+"Eine Lieferung wird an einen Kunden in einer anderen Provinz durchgeführt."
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:166
 msgid ""
 "Set the fiscal position on the customer's record to the province of the "
 "customer."
 msgstr ""
+"Legen Sie die Steuerposition in den Kundendaten entsprechend der Provinz des"
+" Kunden fest."
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:167
 msgid "A customer from another province comes to pick up products."
-msgstr ""
+msgstr "Ein Kunde aus einer anderen Provinz kommt, um Produkte abzuholen."
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:168
 msgid "No fiscal position should be set on the customer's record."
@@ -32485,18 +32531,24 @@ msgid ""
 "An international vendor doesn't charge any tax, but taxes are charged by the"
 " customs broker."
 msgstr ""
+"Ein internationaler Anbieter erhebt keine Steuern, jedoch werden Steuern vom"
+" Zollagenten berechnet."
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:170
 msgid "Set the fiscal position on the vendor's record to *International*."
 msgstr ""
+"Legen Sie die Steuerposition im Datensatz des Lieferanten auf "
+"*International* fest."
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:171
 msgid "An international vendor charges provincial tax."
-msgstr ""
+msgstr "Ein internationaler Anbieter erhebt Provinzsteuer."
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:172
 msgid "Set the fiscal position on the vendor's record to your position."
 msgstr ""
+"Legen Sie die Steuerposition im Datensatz des Lieferanten auf Ihre "
+"Steuerpositio fest."
 
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:175
 msgid ":doc:`../accounting/taxes/fiscal_positions`"
@@ -52495,7 +52547,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:928
 msgid ":doc:`../payment_providers`;"
-msgstr ""
+msgstr ":doc:`../payment_providers`;"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:929
 msgid ""
@@ -52597,15 +52649,15 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:987
 msgid ":ref:`Products <peru/reports-ple-products>`"
-msgstr ""
+msgstr ":ref:`Produkte <peru/reports-ple-products>`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:988
 msgid ":ref:`Warehouses <peru/reports-ple-warehouses>`"
-msgstr ""
+msgstr ":ref:`Lagerhäuser <peru/reports-ple-warehouses>`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:989
 msgid ":ref:`Inventory transfers <peru/reports-ple-transfers>`"
-msgstr ""
+msgstr ":ref:`Bestandstransfers <peru/reports-ple-transfers>`"
 
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:996
 msgid ""
@@ -52725,6 +52777,9 @@ msgid ""
 "the fiscal localization module **Philippines - Accounting** is automatically"
 " installed."
 msgstr ""
+"Wenn Sie eine neue Datenbank erstellen und `Philippinen` als Land auswählen,"
+" wird das Steuerlokalisierungsmodul **Philippinen - Buchhaltung** "
+"automatisch installiert."
 
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst:16
 msgid ""
@@ -52732,6 +52787,9 @@ msgid ""
 " and **taxes** will *not* be replaced if there are already posted journal "
 "entries."
 msgstr ""
+"Wenn das Modul in einem bestehenden Unternehmen installiert wurde, werden "
+"der **Kontenplan** und die **Steuern** *nicht* ersetzt, wenn bereits "
+"Journalbuchungen vorhanden sind."
 
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst:18
 msgid ""
@@ -52751,18 +52809,21 @@ msgid ""
 "A minimum configuration default chart of accounts is installed, and the "
 "following types of taxes are installed and linked to the relevant account:"
 msgstr ""
+"Es wird ein Standardkontenplan mit einer Mindestkonfiguration installiert, "
+"und die folgenden Steuertypen werden installiert und mit dem entsprechenden "
+"Konto verknüpft:"
 
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst:26
 msgid "Sales and Purchase VAT 12%"
-msgstr ""
+msgstr "Umsatz- und Vorsteuer 12 %"
 
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst:27
 msgid "Sales and Purchase VAT Exempt"
-msgstr ""
+msgstr "Umsatz- und Vorsteuerbefreiung 12 %"
 
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst:28
 msgid "Sales and Purchase VAT Zero-Rated"
-msgstr ""
+msgstr "Umsatz- und Vorsteuerbefreiung 12 % Nullsatz"
 
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst:29
 msgid "Purchase Withholding"
@@ -54025,10 +54086,15 @@ msgid ""
 "the :guilabel:`Formula` field to the percentage you wish to apply. Repeat "
 "this action if you wish to modify the other box as well."
 msgstr ""
+"Klicken Sie auf das Feld, das Sie ändern möchten, und klicken Sie im Pop-up-"
+"Fenster auf die Zeile :guilabel:`Prozent`. Ändern Sie im neuen Pop-up-"
+"Fenster den Wert im Feld :guilabel:`Formel` auf den Prozentsatz, den Sie "
+"anwenden möchten. Wiederholen Sie diesen Vorgang, wenn Sie auch das andere "
+"Feld ändern möchten."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:82
 msgid "Report agriculture activity"
-msgstr ""
+msgstr "Landwirtschaftliche Tätigkeit melden"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:84
 msgid ""
@@ -54036,6 +54102,10 @@ msgid ""
 "boxes :guilabel:`[08]` to :guilabel:`[11]`), you must change the "
 "**industry** of the corresponding contact to :guilabel:`Agriculture`:"
 msgstr ""
+"Wenn Sie einen Betrag im Abschnitt :guilabel:`II` (in den Feldern "
+":guilabel:`[08]` bis :guilabel:`[11]`) eingeben möchten, müssen Sie die "
+"**Branche** des entsprechenden Kontakts in :guilabel:`Landwirtschaft` "
+"ändern:"
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:88
 msgid ""
@@ -54043,12 +54113,17 @@ msgid ""
 "Customers` or :menuselection:`Accounting --> Vendors --> Vendors`, for "
 "example), and select a contact."
 msgstr ""
+"Öffnen Sie das Kontaktformular (z. B. über :menuselection:`Buchhaltung --> "
+"Kunden --> Kunden` oder :menuselection:`Buchhaltung --> Lieferanten --> "
+"Lieferanten`) und wählen Sie einen Kontakt aus."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:90
 msgid ""
 "In the :guilabel:`Sales & Purchase` tab, set the :guilabel:`Industry` field "
 "to :guilabel:`Agriculture`."
 msgstr ""
+"Legen Sie im Reiter :guilabel:`Verkauf & Einkauf` das Feld "
+":guilabel:`Branche` auf :guilabel:`Landwirtschaft` fest."
 
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:93
 msgid ""
@@ -56011,6 +56086,8 @@ msgid ""
 "Go to :menuselection:`Accounting --> Customers --> Batch Payments`, and "
 "click :guilabel:`New`."
 msgstr ""
+"Gehen Sie zu :menuselection:`Buchhaltung --> Kunden --> Sammelzahlungen` und"
+" klicken Sie auf :guilabel:`Neu`."
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:15
 msgid ""
@@ -56025,10 +56102,11 @@ msgstr ""
 msgid ""
 "`Financial Accounting Standards Board (FASB) <https://asc.fasb.org/Home>`_"
 msgstr ""
+"`Financial Accounting Standards Board (FASB) <https://asc.fasb.org/Home>`_"
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:22
 msgid "`Securities and Exchange Commission (SEC) <https://www.sec.gov/>`_"
-msgstr ""
+msgstr "`Securities and Exchange Commission (SEC) <https://www.sec.gov/>`_"
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:24
 msgid ""
@@ -56037,12 +56115,19 @@ msgid ""
 "scratch, set up configurations, complete common workflows, and provide in-"
 "depth looks at some specific use cases, as well."
 msgstr ""
+"Außerdem ist eine Reihe von Videos zum Thema Buchhaltung auf der E-Learning-"
+"Plattform von Odoo verfügbar. In diesen Videos erfahren Sie, wie Sie bei "
+"Null anfangen, Konfigurationen einrichten, gängige Arbeitsabläufe "
+"abschließen und auch einige spezielle Anwendungsfälle eingehend betrachten "
+"können."
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:36
 msgid ""
 "Below are the available modules in Odoo for accounting use in the United "
 "States."
 msgstr ""
+"Hierunter finden Sie die verfügbaren Module in Odoo für die Buchhaltung in "
+"den Vereinigten Staaten von Amerika."
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:39
 msgid ""
@@ -56051,6 +56136,10 @@ msgid ""
 "are already included under the default package that came installed during "
 "database initialization."
 msgstr ""
+"Die unten aufgeführten Module dienen entweder nur zu Referenzzwecken oder "
+"sind optional, da die Hauptanforderungen für den Betrieb mit der US-"
+"Steuerlokalisierung in Odoo bereits im Standardpaket enthalten sind, das bei"
+" der Datenbankerstellung installiert wurde."
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:43
 msgid ""
@@ -56072,6 +56161,8 @@ msgid ""
 ":ref:`Install <general/install>` the following modules to get all the "
 "features of the United States localization:"
 msgstr ""
+":ref:`Installieren <general/install>` Sie die folgenden Module, um alle "
+"Funktionen der US-amerikanischen Lokalisierung zu erhalten:"
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:65
 msgid ":guilabel:`United States - Accounting`"
@@ -56079,15 +56170,15 @@ msgstr ":guilabel:`Vereinigte Staaten - Buchhaltung`"
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:66
 msgid "`l10n_us`"
-msgstr ""
+msgstr "`l10n_us`"
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:67
 msgid "Base accounting module for United States localization."
-msgstr ""
+msgstr "Basisbuchhaltungsmodul für die US-amerikanische Lokalisierung."
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:68
 msgid ":ref:`US - Accounting Reports <l10n_us/reports>`"
-msgstr ""
+msgstr ":ref:`USA - Buchhaltungsberichte <l10n_us/reports>`"
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:69
 msgid "`l10n_us_reports`"
@@ -56112,6 +56203,10 @@ msgid ""
 " checks from `checkdepot.net <https://checkdepot.net/collections/computer-"
 "checks/Odoo>`_."
 msgstr ""
+"Ermöglicht das Drucken von Zahlungen auf vorgedrucktem Scheckpapier. "
+"Unterstützt die drei gängigsten Scheckformate und funktioniert von Beginn an"
+" mit den verknüpften Schecks von `checkdepot.net "
+"<https://checkdepot.net/collections/computer-checks/Odoo>`_."
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:84
 msgid ":ref:`NACHA Payments <l10n_us/nacha>`"
@@ -56175,7 +56270,7 @@ msgstr "Arbeitsverträge"
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:99
 msgid "Passport-based Contracts"
-msgstr ""
+msgstr "Pass-basierte Verträge"
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:100
 msgid "Allowances/Deductions"
@@ -56183,19 +56278,21 @@ msgstr "Zulagen/Abzüge"
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:101
 msgid "Allow Configurations for Basic/Gross/Net Salary"
-msgstr ""
+msgstr "Konfigurationen für Basis/Brutto/Netto-Gehalt"
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:102
 msgid "Employee Payslip"
-msgstr ""
+msgstr "Mitarbeiter-Gehaltsabrechnung"
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:103
 msgid "Integration with Leaves Management"
-msgstr ""
+msgstr "Integration mit Urlaubsverwaltung"
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:105
 msgid ":ref:`United States - Payroll with Accounting <l10n_us/payroll>`"
 msgstr ""
+":ref:`Vereinigte Staaten - Personalabrechnung mit Buchhaltung "
+"<l10n_us/payroll>`"
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:106
 msgid "`l10n_us_hr_payroll_account`"
@@ -56205,6 +56302,8 @@ msgstr "`l10n_us_hr_payroll_account`"
 msgid ""
 "Contains the necessary accounting data for the United States payroll rules."
 msgstr ""
+"Enthält die erforderlichen Buchhaltungsdaten für die Regeln der "
+"Personalabrechnung der Vereinigten Staaten."
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:108
 msgid ":ref:`United States - Payroll - Export to ADP <l10n_us/adp>`"
@@ -56218,7 +56317,7 @@ msgstr "`l10n_us_hr_payroll_adp`"
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:110
 msgid "Export Work Entries to the ADP payroll software."
-msgstr ""
+msgstr "Export von Arbeitseinträgen an die ADP-Personalabrechnungssoftware."
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:117
 msgid ""
@@ -56228,6 +56327,11 @@ msgid ""
 "grouped into seven main categories, with corresponding numeric values that "
 "prefix individual journal entries:"
 msgstr ""
+"Der :doc:`Kontenplan <../accounting/get_started/chart_of_accounts>` für die "
+"US-amerikanische Lokalisierung in Odoo befolgt die |GAAP|-Standardstruktur "
+"und umfasst Konten, die in sieben Hauptkategorien mit entsprechenden "
+"numerischen Werten gruppiert sind, die einzelnen Journalbuchungen "
+"vorangestellt werden:"
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:144
 msgid ""
@@ -56237,6 +56341,11 @@ msgid ""
 "to **not** delete these accounts; however, if changes are needed, rename the"
 " accounts instead."
 msgstr ""
+"Vordefinierte Konten sind in Odoo als Teil des Kontenplans enthalten, der "
+"mit dem US-amerikanischen Lokalisierungspaket installiert wird. Die unten "
+"aufgeführten Konten sind für bestimmte Vorgänge in Odoo vorkonfiguriert. Es "
+"wird empfohlen, diese Konten **nicht** zu löschen. Wenn Änderungen "
+"erforderlich sind, benennen Sie die Konten stattdessen um."
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:184
 msgid "View, edit, and sort accounts"
@@ -56248,6 +56357,8 @@ msgid ""
 ":menuselection:`Accounting app --> Configuration --> Accounting: Chart of "
 "Accounts`."
 msgstr ""
+"Sie erreichen den **Kontenplan**, indem Sie zu :menuselection:`Buchhaltung "
+"--> Konfiguration --> Buchhaltung: Kontenplan` gehen."
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:189
 msgid ""
@@ -56971,7 +57082,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:637
 msgid "Send payments: NACHA files"
-msgstr ""
+msgstr "Zahlungen versenden: NACHA-Dateien"
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:639
 msgid ""
@@ -57151,11 +57262,11 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:744
 msgid ":doc:`../accounting/payments/batch`"
-msgstr ""
+msgstr ":doc:`../accounting/payments/batch`"
 
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:745
 msgid ":doc:`Europe's direct debiting <../accounting/payments/batch_sdd>`"
-msgstr ""
+msgstr ":doc:`Europas Lastschrift <../accounting/payments/batch_sdd>`"
 
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:3
 msgid "Uruguay"
@@ -57167,50 +57278,68 @@ msgid ""
 "its XML, fiscal folio, electronic signature and connection to tax authority "
 "Dirección General Impositiva (DGI) through Uruware."
 msgstr ""
+"Mit der uruguayischen Lokalisierung können Sie elektronische Dokumente mit "
+"seinem XML, Fiscal Folio, mit elektronischer Signatur und direkter "
+"Verbindung zur Steuerbehörde Dirección General Impositiva (DGI) über Uruware"
+" erstellen."
 
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:18
 msgid "The supported documents are:"
-msgstr ""
+msgstr "Folgende Dokumente werden unterstützt:"
 
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:20
 msgid ""
 ":guilabel:`e-Invoice`, :guilabel:`e-Invoice Credit Note`, "
 ":guilabel:`e-Invoice Debit Note`;"
 msgstr ""
+":guilabel:`E-Rechnung`, :guilabel:`E-Rechnung Gutschrift`, "
+":guilabel:`E-Rechnung Lastschrift`;"
 
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:21
 msgid ""
 ":guilabel:`e-Ticket`, :guilabel:`e-Ticket Credit Note`, :guilabel:`e-Ticket "
 "Debit Note`;"
 msgstr ""
+":guilabel:`E-Ticket`, :guilabel:`E-Ticket Gutschrift`, :guilabel:`E-Ticket "
+"Lastschrift`;"
 
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:22
 msgid ""
 ":guilabel:`Export e-Invoice`, :guilabel:`Export e-Invoice Credit Note`, "
 ":guilabel:`Export e-Invoice Debit Note`."
 msgstr ""
+":guilabel:`E-Rechnung exportieren`, :guilabel:`E-Rechnung Gutschrift "
+"exportieren`, :guilabel:`E-Rechnung Lastschrift exportieren`;"
 
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:25
 msgid ""
 "The localization requires an Uruware account, which enables users to "
 "generate electronic documents within Odoo."
 msgstr ""
+"Für die Lokalisierung ist ein Uruware-Konto erforderlich, mit dem Benutzer "
+"elektronische Dokumente innerhalb von Odoo erstellen können."
 
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:31
 msgid "The following terms are used throughout the Uruguayan localization:"
 msgstr ""
+"Die folgenden Begriffe werden in der gesamten uruguayischen Lokalisierung "
+"verwendet:"
 
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:33
 msgid ""
 "**DGI**: *Dirección General Impositiva* is the government entity responsible"
 " for enforcing tax payments in Uruguay."
 msgstr ""
+"**DGI**: *Dirección General Impositiva* ist die staatliche Behörde, die für "
+"die Durchsetzung der Steuerzahlungen in Uruguay zuständig ist."
 
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:35
 msgid ""
 "**EDI**: *Electronic Data Interchange* refers to the sending of electronic "
 "documents."
 msgstr ""
+"**EDI**: *Electronic Data Interchange* (Elektronischer Datenaustausch), "
+"bezieht sich auf den Versand von elektronischen Dokumenten."
 
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:36
 msgid ""
@@ -57218,18 +57347,25 @@ msgid ""
 "interchange of electronic documents between companies and the Uruguayan "
 "government."
 msgstr ""
+"**Uruware**: ist eine Drittorganisation, die den Austausch elektronischer "
+"Dokumente zwischen Unternehmen und der uruguayischen Regierung ermöglicht."
 
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:38
 msgid ""
 "**CAE**: *Constancia de Autorización de Emisión* is a document requested "
 "from the tax authority's website to enable electronic invoice issuance."
 msgstr ""
+"**CAE**: *Constancia de Autorización de Emisión* ist ein Dokument, das auf "
+"der Website der Steuerbehörde angefordert werden muss, um elektronische "
+"Rechnungen ausstellen zu können."
 
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:47
 msgid ""
 ":ref:`Install <general/install>` the following modules to get all the "
 "features of the Uruguayan localization:"
 msgstr ""
+":ref:`Installieren <general/install>` Sie die folgenden Module, um alle "
+"Funktionen der uruguayischen Lokalisierung zu erhalten:"
 
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:57
 msgid ":guilabel:`Uruguay - Accounting`"
@@ -57255,7 +57391,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:65
 msgid "`l10n_uy_edi`"
-msgstr ""
+msgstr "`l10n_uy_edi`"
 
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:66
 msgid ""
@@ -57265,6 +57401,11 @@ msgid ""
 "technical documentation published by the |DGI|. The authorized documents are"
 " :ref:`listed above <uruguay/intro>`."
 msgstr ""
+"Enthält alle technischen und funktionalen Anforderungen zur Erstellung und "
+"Validierung von :doc:`Elektronischen Dokumenten "
+"<../accounting/customer_invoices/electronic_invoicing>`, basierend auf der "
+"von dem |DGI| veröffentlichten technischen Dokumentation. Die zugelassenen "
+"Dokumente sind :ref:`oben aufgelistet <uruguay/intro>`."
 
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:72
 msgid ""
@@ -57291,6 +57432,8 @@ msgid ""
 ":guilabel:`Address`, including the :guilabel:`Street`, :guilabel:`City`, "
 ":guilabel:`State`, :guilabel:`ZIP`, and :guilabel:`Country`"
 msgstr ""
+":guilabel:`Adresse`, einschließlich :guilabel:`Straße`, :guilabel:`Stadt`, "
+":guilabel:`Provinz`, :guilabel:`PLZ` und :guilabel:`Land`."
 
 #: ../../content/applications/finance/fiscal_localizations/uruguay.rst:85
 msgid ""
