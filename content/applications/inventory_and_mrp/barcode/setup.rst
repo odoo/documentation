@@ -12,3 +12,4 @@ Setup
    setup/hardware
    setup/software
    setup/serial_numbers_lots
+   setup/operation_types
