@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-27 16:07+0000\n"
+"POT-Creation-Date: 2025-04-30 14:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2456,47 +2456,51 @@ msgstr ""
 msgid "This section assumes ownership of a custom domain. If not, a custom domain must be purchased from a domain registrar such as GoDaddy, Namecheap, or any alternative provider."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:52
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:50
+msgid ":download:`Magic Sheet - Email domain configuration PDF <email_servers_outbound/magic-sheet-email-domain.pdf>`"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:56
 msgid "Using a custom domain with Odoo’s email server"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:54
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:58
 msgid "On **Odoo Online** or **Odoo.sh**, some configurations are mandatory in the custom domain's DNS to ensure good deliverability."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:58
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:62
 msgid "Most of the configuration will be done on the domain provider’s side, and it might require some configuration on the mail server itself. **Some technical knowledge is required.**"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:61
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:65
 msgid "The first step is to configure the :ref:`SPF <email-domain-spf>` and :ref:`DKIM <email-domain-dkim>` to be compliant with Odoo’s mail server."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:64
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:68
 msgid "Next, the custom domain must be set as the alias domain of a company. Select the company, open the :guilabel:`Settings`, and add the custom domain under the :guilabel:`Alias Domain` field."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:67
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:71
 msgid "After adding the alias domain, click the :icon:`oi-arrow-right` (:guilabel:`internal link`) icon to assign more companies to the custom domain if needed. Enable the :ref:`developer-mode` mode to modify the default aliases if desired:"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:71
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:75
 msgid ":guilabel:`Bounce Alias`: the mailbox used to catch delivery errors and populate the :ref:`red envelope <email-issues-outgoing-delivery-failure>` on the corresponding message."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:73
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:77
 msgid ":guilabel:`Catchall Alias`: the default mailbox used to centralize all replies."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:74
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:78
 msgid ":guilabel:`Default From Alias`: the default sender address."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:77
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:81
 msgid "At the creation of the first alias domain, all companies will use it. If you create a new company, the alias domain automatically set is the one with the lowest priority (ad displayed on the alias domain list in :ref:`developer-mode`)."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:81
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:85
 msgid "All email aliases (e.g., related to CRM or Helpdesk teams) must have their corresponding mailbox in the custom domain mail server."
 msgstr ""
 
@@ -2504,103 +2508,103 @@ msgstr ""
 msgid "Technical schema of external mail server configuration with Odoo."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:87
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:91
 msgid "To receive emails in the Odoo database within the corresponding chatter (CRM, invoices, sales orders, etc.), one of these three methods must be used:"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:90
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:94
 msgid ":ref:`Redirections/forwarding <email-inbound-custom-domain-redirections>`,"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:91
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:95
 msgid ":ref:`Incoming mail servers <email-inbound-custom-domain-incoming-server>`,"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:92
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:96
 msgid ":ref:`MX record <email-inbound-custom-domain-mx>` (requires advanced technical knowledge)"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:94
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:98
 msgid "Using a custom domain implies that specific :ref:`local-parts <email-outbound-custom-domain-smtp-server-local-part>` might be used by Odoo to send emails."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:100
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:104
 msgid "Sending emails with an external SMTP server"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:103
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:107
 msgid "If utilizing your own outgoing mail server, it must be paired with your own domain, as updating the DNS of an Odoo subdomain is not feasible."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:106
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:110
 msgid "To add an external SMTP server in Odoo, open :guilabel:`Settings`, and enable the :guilabel:`Use Custom Email Servers` option found under the :guilabel:`Emails` section. Then, click :guilabel:`Save` at the top of the page to save the changes."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:110
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:114
 msgid "Returning to the :guilabel:`Emails` section, click :guilabel:`Outgoing Email Servers`, then `New` to create an outgoing mail server record. Most fields are the common parameters used to set up a connection to an SMTP server; use the values provided by your email provider."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:114
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:118
 msgid "Once completed, click :guilabel:`Test Connection`. Note that a successful test connection does not confirm that the email will go out as some restriction might remain on the provider side, thus, it is recommended to consult your provider’s documentation."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:121
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:125
 msgid "Local-part values"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:123
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:127
 msgid "Below are presented the different local-part values that can be used by Odoo to send emails. It might be required to whitelist them in your mail server:"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:126
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:130
 msgid "The Alias Domain Bounce Alias (default value = `bounce`),"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:127
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:131
 msgid "The Alias Domain Default From (default value = `notifications`),"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:128
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:132
 msgid "The default admin address `admin@company-name.odoo.com` or, if changed, the new value),"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:129
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:133
 msgid "The default Odoobot address `odoobot@company-name.odoo.com` or, if changed, the new value),"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:130
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:134
 msgid "The specific FROM defined on an email marketing campaign,"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:131
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:135
 msgid "The specific FROM that can be defined in an email template."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:134
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:138
 msgid ":doc:`google_oauth`"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:135
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:139
 msgid ":doc:`azure_oauth`"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:140
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:144
 msgid "Setting up different servers for transactional and mass emails"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:145
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:149
 msgid "Personalized mail servers"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:147
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:151
 msgid "Transactional emails and mass mailings can be sent using separate email servers in Odoo. Doing so means day-to-day emails, quotations, or invoices sent to clients will be handled as *transactional emails*. *Mass mailing emails*, including the sending of batches of invoices or quotations, will be managed by the Marketing Automation or Email Marketing application."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:153
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:157
 msgid "You can use services like Gmail, Amazon SES, or Brevo for transactional emails, and services like Mailgun, Sendgrid, or Mailjet for mass mailings."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:156
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:160
 msgid "First, activate the :ref:`developer-mode` and go to :menuselection:`Settings --> Technical --> Email: Outgoing Mail Servers`. There, add two outgoing email server records, one for the transactional emails server and one for the mass mailings server. Enter a lower :guilabel:`Priority` value for the transactional server (e.g., `1`) over the mass mailings server (e.g., `2`) so transactional emails are given priority."
 msgstr ""
 
@@ -2608,7 +2612,7 @@ msgstr ""
 msgid "Example of split between transaction and mass mailing mail servers."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:165
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:169
 msgid "Now, go to :menuselection:`Email Marketing --> Configuration --> Settings`, enable :guilabel:`Dedicated Server`, and select the appropriate email server. Odoo uses the server with the lowest priority value for transactional emails, and the server selected here for mass mailings."
 msgstr ""
 
@@ -2616,59 +2620,59 @@ msgstr ""
 msgid "Dedicated mail server on Email Marketing app settings."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:175
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:179
 msgid "FROM filtering"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:178
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:182
 msgid "It’s **highly recommended** to configure the FROM Filtering on the outgoing mail servers as per the instructions of your provider."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:181
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:185
 msgid "The :guilabel:`FROM Filtering` field allows for the use of a specific outgoing email server depending on the *From* email address or domain that Odoo is sending on behalf of. The **value must be a domain or a complete address** that matches the sender’s email address and is trusted on the outgoing mail server provider's side."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:186
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:190
 msgid "If FROM filtering is not used, emails will go out using the notification address."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:189
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:193
 msgid "Some outgoing mail servers require a specific configuration of the FROM filter."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:191
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:195
 msgid "When an email is sent from Odoo, the following sequence is used to choose the outgoing email server:"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:193
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:197
 msgid "First, Odoo searches for a server that has the same FROM filtering value as the From value (i.e., email address) defined in the outgoing email. This configuration is ideal if all users of a company share the same domain but have different local-parts."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:198
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:202
 msgid "If the sender's email address is `test@example.com`, only an email server having a FROM filtering value equal to `test@example.com` or `example.com` can be used."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:201
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:205
 msgid "If no server is found based on the first criteria, Odoo looks for the first server without a FROM filtering value set. The email will be overridden with the notification address."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:204
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:208
 msgid "If no server is found based on the second criteria, Odoo uses the first server, and the email will be overridden with the notification address."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:208
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:212
 msgid "To determine which server is first, Odoo uses the priority value (the lower the value is, the higher the priority is). Failing to do so, the first server is determined by the servers' names, using alphabetical order."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:212
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:216
 msgid "It is also possible to use Odoo's mail server for transactional emails in addition to mass mailings."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:217
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:221
 msgid "Using an external email server and Odoo’s default server"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:219
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:223
 msgid "On Odoo Online and Odoo.sh, databases are started with Odoo's SMTP server. If no outgoing mail server is set, the default Odoo's SMTP server will be used."
 msgstr ""
 
@@ -2676,7 +2680,7 @@ msgstr ""
 msgid "Adding a mail server using the Odoo's mail server with the CLI authentication."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:226
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:230
 msgid "If an outgoing mail server is used simultaneously with Odoo’s default server (CLI), the FROM filter of the outgoing mail server must contain a custom domain, and the FROM filter of the CLI must contain Odoo’s subdomain. If there is no FROM filtering, the email will go out using the notification address."
 msgstr ""
 
@@ -2684,95 +2688,95 @@ msgstr ""
 msgid "Splitting of Odoo mail server for transactional emails and Mail server for Mass mailing."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:235
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:239
 msgid "On Odoo Online, the command line interface is equivalent to the default Odoo mail server, using the same limit as if there was no outgoing mail server in place."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:239
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:243
 msgid "On Odoo Online, the page also shows your daily email usage and your daily limit. On Odoo.sh, you need to check on the monitor page the number of outgoing emails that were sent."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:243
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:247
 msgid "On Odoo.sh, to use the command-line interface, an outgoing mail server can be configured on the configuration file."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:247
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:251
 msgid "Odoo’s mail server is meant for transactional emails and small-scale marketing campaigns. The :ref:`daily limit <email-issues-outgoing-delivery-failure-messages-limit>` depends on the database type and the applications used."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:254
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:258
 msgid "Using a custom domain with an external email server"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:256
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:260
 msgid "Similar to the :ref:`previous chapter <email-outbound-different-servers-external-odoo>`, proper configuration might be needed to ensure that the external email server is allowed to send emails using your custom domain. Refer to your provider’s documentation to properly set up the relevant records (SPF, DKIM, and DMARC). A list of the :ref:`most common providers is available <email-domain-providers-documentation>`."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:263
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:267
 msgid "DNS configuration is required when you use your own domain. If an external outgoing mail server is used, configuring the records as described in the :doc:`Odoo DNS configuration for our mail servers documentation <email_domain>` **will not have the desired effect**, as it is independent of Odoo when using a custom email server. Odoo does not allow the configuration of Odoo's subdomain."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:272
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:276
 msgid "Port restriction"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:274
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:278
 msgid "Port 25 is blocked for security reasons on Odoo Online and Odoo.sh. Try using port 465, 587, or 2525 instead."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:280
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:284
 msgid "Alias domain"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:282
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:286
 msgid "The catchall domain is company-specific. By default, all companies share Odoo’s subdomain (e.g., `company-name.odoo.com`), but each company may have its own custom email domain."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:285
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:289
 msgid "When the :ref:`developer-mode` is activated, the alias domain options are available by going to :menuselection:`Settings --> Technical --> Email: Alias Domains`."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:289
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:293
 msgid "Any modification of the alias domain must be done very carefully. If one of the aliases (bounce, catchall, default from) is changed, all previous emails that are not properly redirected to the new aliases will be lost."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:293
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:297
 msgid "The :guilabel:`Default From Alias` field can be filled with a local-part of the email address (by default `notifications`) or a full email address. Configure it to determine the `FROM` header of your emails. If a full email address is used, all outgoing emails will be overwritten with this address."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:301
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:305
 msgid "Notification system"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:303
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:307
 msgid "When an email is sent from the chatter, customers can reply directly to it. If a customer replies directly to an email, the answer is logged in the same chatter, thus functioning as a message thread related to the record."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:307
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:311
 msgid "Upon receiving the reply, Odoo then uses the subscribed followers (based on the subscribed subtypes) to send them a notification by email, or in the Odoo inbox, depending on the user’s preferences."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:311
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:315
 msgid "If a customer with the email address `“Mary” <mary@customer.example.com>` makes a direct reply to an email coming from the Odoo database, Odoo's default behavior is to redistribute the email's content to all other followers within the thread."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:315
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:319
 msgid "As Mary’s domain does not belong to the alias domain, Odoo overrides the email address and uses the notification email address to notify the followers. This override depends on the configuration done in the database. By default, on Odoo Online and Odoo.sh, the email `FROM` address will be overridden with the value `notifications@company-name.odoo.com` instead of `mary@customer.example.com`."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:321
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:325
 msgid "The address is constructed using the name of the sender and `{alias domain, default from alias}`@`{alias domain, domain name}`, by default, `notifications@company-name.odoo.com`."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:328
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:332
 msgid "Using a unique email address for all outgoing emails"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:330
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:334
 msgid "To force the email address from which emails are sent, activate the :ref:`developer-mode`, and go to :menuselection:`Settings --> Technical --> Email: Alias Domains`. On the :guilabel:`Default From Alias`, use the the local-part or a complete email address as the value."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:335
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:339
 msgid "If a **complete address** is used as the :guilabel:`Default From Alias` value, **all** outgoing emails will be overwritten by this address."
 msgstr ""
 
@@ -3676,6 +3680,379 @@ msgstr ""
 msgid ":ref:`Create new products during internal transfers using the Barcode Lookup database <barcode/setup/barcodelookup>`."
 msgstr ""
 
+#: ../../content/applications/general/integrations/cloud_storage.rst:3
+msgid "Cloud Storage"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:5
+msgid "The cloud storage integration allows to store :doc:`chatter <../../productivity/discuss/chatter>` and email attachments on the :ref:`Google Cloud <cloud-storage/google>` or :ref:`Microsoft Azure <cloud-storage/microsoft>` platform instead of the database's server."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:9
+msgid "The module can be used to prevent large files from being uploaded to and downloaded from a database's server or when a database requires more data storage."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:13
+msgid "Files generated by Odoo (e.g., sales orders) and Documents/Sign app files are always stored on the database's server."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:15
+msgid "A database's storage limit depends on its hosting solution:"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:17
+msgid "Odoo Online: 100 GB"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:18
+msgid "Odoo.sh:"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:20
+msgid "Shared hosting: 512 GB"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:21
+msgid "Dedicated hosting: 4 TB"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:23
+msgid "On-premise: limited by the infrastructure in place."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:28
+msgid "Google Cloud"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:30
+msgid "First, register and sign in to `Google Cloud <https://cloud.google.com>`_."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:35
+msgid "Service account"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:37
+msgid "Open the navigation sidebar on the Google Cloud console, then go to :menuselection:`IAM & Admin --> Service Accounts --> Create service account`."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:39
+msgid "Define a :guilabel:`Service account name`, click :guilabel:`Create and continue`, then :guilabel:`Done`."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:0
+msgid "Creating a Google Cloud service account"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:45
+msgid "Note down the service account's :guilabel:`Email` as it will be used during the :ref:`cloud storage bucket configuration <cloud-storage/google/bucket>`."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:47
+msgid "Click the :icon:`fa-ellipsis-v` (:guilabel:`Actions`) button, then select :guilabel:`Manage keys`."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:0
+msgid "Accessing the \"Manage keys\" action"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:53
+msgid "Go to :menuselection:`Add key --> Create new key`, select :guilabel:`JSON` as the :guilabel:`Key type`, and click :guilabel:`Create`. Store the downloaded JSON file containing the key securely. It will be used when :ref:`configuring Odoo <cloud-storage/google/odoo>`."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:0
+msgid "Creating a Google Cloud service account's JSON key"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:63
+msgid "Cloud storage bucket"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:65
+msgid "Open the navigation sidebar on the Google Cloud console, then go to :menuselection:`Cloud Storage --> Buckets --> Create`."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:67
+msgid "Enter a bucket name following the `bucket naming guidelines <https://cloud.google.com/storage/docs/buckets?_gl=1*h4hwrv*_ga*MTcwNDM2NDE1Ny4xNzQzNzUxOTEy*_ga_WH2QY8WWF5*MTc0Mzc2NDMyOS4zLjEuMTc0Mzc2NDMyOS42MC4wLjA.#naming>`_ and note it down as it will be used when :ref:`configuring Odoo <cloud-storage/google/odoo>`."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:69
+msgid "Configure the bucket as desired and click :guilabel:`Create` when done."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:0
+msgid "Creating a bucket"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:74
+msgid "Click the :icon:`fa-ellipsis-v` (:guilabel:`More actions`) button, then select :guilabel:`Edit access`."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:0
+msgid "Accessing the \"Edit access\" action of a Google Cloud storage bucket"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:80
+msgid "Click :guilabel:`Add principal` and paste the service account's email in the :guilabel:`New principals` field."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:82
+msgid "Select :guilabel:`Storage Admin` as :guilabel:`Role` under the :guilabel:`Cloud Storage` section and click :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:0
+msgid "Adding a principal to a Google Cloud storage bucket"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:91
+#: ../../content/applications/general/integrations/cloud_storage.rst:253
+#: ../../content/applications/general/integrations/google_translate.rst:100
+msgid "Odoo configuration"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:93
+msgid ":ref:`Install <general/install>` the :guilabel:`Cloud Storage Google` module."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:94
+#: ../../content/applications/general/integrations/cloud_storage.rst:256
+msgid "Open the :guilabel:`Settings` app and select :guilabel:`Cloud Storage` in the navigation sidebar."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:95
+msgid "Select :guilabel:`Google Cloud Storage` as the :guilabel:`Cloud Storage Provider for new attachments`."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:97
+msgid "Enter the :guilabel:`Google Bucket Name` as :ref:`previously set <cloud-storage/google/bucket>`."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:98
+msgid "Click :guilabel:`Upload your file` next to :guilabel:`Google Service Account Key` and select the :ref:`downloaded JSON file <cloud-storage/google/service>`."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:100
+msgid "Set a :guilabel:`Minimum File Size (bytes)` for attachments to be stored on Google Cloud."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:105
+msgid "Microsoft Azure"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:107
+msgid "First, register and sign it to `Microsoft Azure <https://azure.microsoft.com>`_."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:112
+msgid "App registration"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:114
+msgid "On the Microsoft Azure portal, search for the :guilabel:`App registrations` service and open it."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:115
+msgid "Click :guilabel:`New registration`, enter an application :guilabel:`Name`, select :guilabel:`Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant)` under :guilabel:`Supported account types`, and click :guilabel:`Register`."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:0
+msgid "Registering a Microsoft Azure app"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:122
+msgid "Note down the :guilabel:`Application (client) ID` and :guilabel:`Directory (tenant) ID` as they will be used when :ref:`configuring Odoo <cloud-storage/microsoft/odoo>`."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:124
+msgid "Click :guilabel:`Add a certificate or secret` next to :guilabel:`Client credentials`, click :guilabel:`New client secret`, then :guilabel:`Add`."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:128
+msgid "For security reasons, leave the :guilabel:`Expires` field on `180 days (6 months)` or choose a shorter expiration interval. Before the secret expires, adding a new client secret and updating :ref:`Odoo’s configuration <cloud-storage/microsoft/odoo>` with the new value is necessary."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:133
+msgid "Copy the client secret's :guilabel:`Value` and store it securely. It will be used when :ref:`configuring Odoo <cloud-storage/microsoft/odoo>`."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:0
+msgid "Adding a secret to a Microsoft Azure app"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:142
+msgid "Storage account"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:144
+msgid "Search for the :guilabel:`Storage accounts` service, open it, and click :guilabel:`Create`."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:145
+msgid "Click :guilabel:`Create new` below the :guilabel:`Resource group` field, enter a :guilabel:`Name`, and click :guilabel:`OK`."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:147
+msgid "Enter a unique :guilabel:`Storage account name` and note it down as it will be used when :ref:`configuring Odoo <cloud-storage/microsoft/odoo>`."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:149
+msgid "Configure the storage account as desired, and, when done, click :guilabel:`Review + create`, then :guilabel:`Create`."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:0
+msgid "Creating a Microsoft Azure storage account"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:158
+msgid "Container"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:160
+msgid "Open your storage account resource, for example by searching for its name, and select :guilabel:`Containers` under :guilabel:`Data storage` in the navigation sidebar."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:162
+msgid "Enter a :guilabel:`Name`, note it down as it will be used when :ref:`configuring Odoo <cloud-storage/microsoft/odoo>`, and click :guilabel:`Create`."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:0
+msgid "Creating a Microsoft Azure storage container"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:171
+msgid "Resource sharing"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:173
+msgid "Select :guilabel:`Resource sharing (CORS)` under :guilabel:`Settings` on the storage account's navigation sidebar."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:175
+msgid "Create a first CORS blob service rule:"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:177
+#: ../../content/applications/general/integrations/cloud_storage.rst:185
+msgid ":guilabel:`Allowed origins`: `*`"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:178
+msgid ":guilabel:`Allowed methods`: `GET`"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:179
+msgid ":guilabel:`Allowed headers`: `Content-Type`"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:180
+msgid ":guilabel:`Exposed headers`: `Content-Type`"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:181
+#: ../../content/applications/general/integrations/cloud_storage.rst:189
+msgid ":guilabel:`Max age`: `0`"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:183
+msgid "Create a second CORS blob service rule and click :guilabel:`Save`:"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:186
+msgid ":guilabel:`Allowed methods`: `PUT`"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:187
+msgid ":guilabel:`Allowed headers`: `content-type,x-ms-blob-type`"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:188
+msgid ":guilabel:`Exposed headers`: `content-type,x-ms-blob-type`"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:0
+msgid "Creating Microsoft Azure storage account CORS rules"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:197
+msgid "Role assignment"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:199
+msgid "Select :guilabel:`Access control (IAM)` on the storage account's navigation sidebar, then click :guilabel:`Add` and select :guilabel:`Add role assignment`."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:201
+msgid "Search for :guilabel:`Storage Blobs Data Contributor` and click :guilabel:`Next`."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:204
+msgid "To remove the unnecessary `delete` permission, create a :ref:`custom role <cloud-storage/microsoft/custom>` and search for the custom role's name instead."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:207
+msgid "Click :guilabel:`Select members`, enter the name of the :ref:`previously registered application <cloud-storage/microsoft/app>`, select it, and click :guilabel:`Select`."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:209
+msgid "Click :guilabel:`Review + assign` twice."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:0
+msgid "Adding a member to a container"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:217
+msgid "Custom role"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:220
+msgid "This step is **optional**. However, removing the `delete` permission would prevent anyone managing to access the cloud storage's credentials from deleting files."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:223
+msgid "Open your subscription resource, for example by searching for its name, select :guilabel:`Access control (IAM)` in the navigation sidebar, click :guilabel:`Add` and select :guilabel:`Add custom role`."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:226
+msgid "Select the :guilabel:`JSON` tab and click :guilabel:`Edit`. Copy the code below, add your `subscription-id` under `assignableScopes` and change the `roleName` (`Custom role`) if desired, paste it, and click :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:255
+msgid ":ref:`Install <general/install>` the :guilabel:`Cloud Storage Azure` module."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:257
+msgid "Select :guilabel:`Azure Cloud Azure` as the :guilabel:`Cloud Storage Provider for new attachments`."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:259
+msgid "Enter:"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:261
+msgid "the :ref:`storage account name <cloud-storage/microsoft/storage>` in the :guilabel:`Azure Account Name` field;"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:263
+msgid "the :ref:`container name <cloud-storage/microsoft/container>` in the :guilabel:`Azure Container Name` field;"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:265
+msgid "the :ref:`directory (tenant) ID <cloud-storage/microsoft/app>` in the :guilabel:`Azure Tenant ID` field;"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:267
+msgid "the :ref:`application (client) ID <cloud-storage/microsoft/app>` in the :guilabel:`Azure Client ID` field; and"
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:269
+msgid "the :ref:`client secret's value <cloud-storage/microsoft/app>` in the :guilabel:`Azure Client Secret` field."
+msgstr ""
+
+#: ../../content/applications/general/integrations/cloud_storage.rst:272
+msgid "Set a :guilabel:`Minimum File Size (bytes)` for attachments to be stored on Microsoft Azure."
+msgstr ""
+
 #: ../../content/applications/general/integrations/geolocation.rst:3
 msgid "Geolocation"
 msgstr ""
@@ -3830,10 +4207,6 @@ msgstr ""
 
 #: ../../content/applications/general/integrations/google_translate.rst:97
 msgid "Do **not** share the API key publicly or expose it in client-side code."
-msgstr ""
-
-#: ../../content/applications/general/integrations/google_translate.rst:100
-msgid "Odoo configuration"
 msgstr ""
 
 #: ../../content/applications/general/integrations/google_translate.rst:102
@@ -6577,11 +6950,11 @@ msgstr ""
 msgid "View of the settings page emphasizing the manage users field in Odoo."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:29
+#: ../../content/applications/general/users.rst:28
 msgid "Fill in the form with all the required information. Under the :doc:`Access Rights <users/access_rights>` tab, choose the group within each application the user can have access to."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:32
+#: ../../content/applications/general/users.rst:31
 msgid "The list of applications shown is based on the applications installed on the database."
 msgstr ""
 
@@ -6589,67 +6962,55 @@ msgstr ""
 msgid "View of a user's form emphasizing the access rights tab in Odoo."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:38
-msgid "After filling out all the necessary fields on the page, manually :guilabel:`Save`. An invitation email is automatically sent to the user, using the email in the :guilabel:`Email Address` field. The user must click on the link included in the email to accept the invitation, and to create a database login."
+#: ../../content/applications/general/users.rst:36
+msgid "After filling out all the necessary fields on the page, :icon:`fa-cloud-upload` :guilabel:`(Save manually)`. An invitation email is automatically sent to the user, using the email in the :guilabel:`Email Address` field. The user must click on the link included in the email to accept the invitation, and to create a database login. email is automatically sent to the user, using the email in the :guilabel:`Email Address` field. The user must click on the link included in the email to accept the invitation, and to create a database login."
 msgstr ""
 
 #: ../../content/applications/general/users.rst:-1
 msgid "View of a user's form with a notification that the invitation email has been sent in Odoo."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:48
+#: ../../content/applications/general/users.rst:47
 msgid "If the company is on a monthly subscription plan, the database automatically updates to reflect the added users. If the company is on a yearly or multi-year plan, an expiration banner appears in the database. An upsell quotation can be created by clicking the banner to update the subscription. Alternatively, `send a support ticket <https://www.odoo.com/help>`_ to resolve the issue."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:55
+#: ../../content/applications/general/users.rst:54
 msgid "User type"
 msgstr ""
 
-#: ../../content/applications/general/users.rst:57
-msgid ":guilabel:`User Type` can be selected from the :guilabel:`Access Rights` tab of the user form, accessible via :menuselection:`Settings app --> Users section --> Manage Users`."
+#: ../../content/applications/general/users.rst:56
+msgid ":guilabel:`User Type` can be chosen on the :guilabel:`Manage Users` page by clicking on the search bar, and then :ref:`setting a filter <search/preconfigured-filters>` for either :guilabel:`Internal User` or :guilabel:`Portal User`."
 msgstr ""
 
 #: ../../content/applications/general/users.rst:60
-msgid "There are three types of users: :guilabel:`Internal User`, :guilabel:`Portal`, and :guilabel:`Public`."
+msgid "Odoo databases have three types of users: :guilabel:`Internal User`, :guilabel:`Portal`, and :guilabel:`Public`. Users are considered *internal database* users. Portal users are *external users*, who only have access to the database portal to view records. Public users are those visiting websites, via the website's frontend. See the documentation on :doc:`users/portal`."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:-1
-msgid "View of a user's form in developer mode emphasizing the user type field in Odoo."
+#: ../../content/applications/general/users.rst:65
+msgid "The :guilabel:`Portal` user option does **not** allow the administrator to choose access rights. These users have specific access rights pre-set (such as, record rules and restricted menus), and usually do not belong to the usual Odoo groups."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:68
-msgid "Users are considered internal database users. Portal users are external users, who only have access to the database portal to view records. See the documentation on :doc:`users/portal`."
-msgstr ""
-
-#: ../../content/applications/general/users.rst:71
-msgid "Public users are those visiting websites, via the website's frontend."
-msgstr ""
-
-#: ../../content/applications/general/users.rst:73
-msgid "The :guilabel:`Portal` and :guilabel:`Public` user options do **not** allow the administrator to choose access rights. These users have specific access rights pre-set (such as, record rules and restricted menus), and usually do not belong to the usual Odoo groups."
-msgstr ""
-
-#: ../../content/applications/general/users.rst:80
+#: ../../content/applications/general/users.rst:72
 msgid "Deactivate users"
 msgstr ""
 
+#: ../../content/applications/general/users.rst:74
+msgid "To deactivate (i.e. archive) a user, navigate to :menuselection:`Settings app --> Users section --> Manage Users`. Then, tick the checkbox to the left of the users to be deactivated."
+msgstr ""
+
+#: ../../content/applications/general/users.rst:77
+msgid "After selecting the appropriate user to be archived, click the :icon:`fa-cog` :guilabel:`(Actions)` icon, and select :guilabel:`Archive` from the resulting drop-down menu. Then, click :guilabel:`OK` from the :guilabel:`Confirmation` pop-up window that appears."
+msgstr ""
+
 #: ../../content/applications/general/users.rst:82
-msgid "To deactivate (i.e. archive) a user, navigate to :menuselection:`Settings app --> Users section --> Manage Users`. Then, tick the checkbox to the left of the user(s) to be deactivated."
-msgstr ""
-
-#: ../../content/applications/general/users.rst:85
-msgid "After selecting the appropriate user to be archived, click the :guilabel:`⚙️ Actions` icon, and select :guilabel:`Archive` from the resulting drop-down menu. Then, click :guilabel:`OK` from the :guilabel:`Confirmation` pop-up window that appears."
-msgstr ""
-
-#: ../../content/applications/general/users.rst:90
 msgid "**Never** deactivate the main/administrator user (admin). Making changes to admin users can have a detrimental impact on the database. This includes *impotent admin*, which means that no user in the database can make changes to the access rights. For this reason, Odoo recommends contacting an Odoo Business Analyst, or our Support Team, before making changes."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:96
+#: ../../content/applications/general/users.rst:88
 msgid "Error: too many users"
 msgstr ""
 
-#: ../../content/applications/general/users.rst:98
+#: ../../content/applications/general/users.rst:90
 msgid "If there are more users in an Odoo database than provisioned in the Odoo Enterprise subscription, the following message is displayed."
 msgstr ""
 
@@ -6657,39 +7018,39 @@ msgstr ""
 msgid "Too many users on a database error message."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:105
+#: ../../content/applications/general/users.rst:96
 msgid "When the message appears, the database administrator has 30 days to act before the database expires. The countdown is updated every day."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:108
+#: ../../content/applications/general/users.rst:99
 msgid "To resolve the issue, either:"
 msgstr ""
 
-#: ../../content/applications/general/users.rst:110
+#: ../../content/applications/general/users.rst:101
 msgid "Add more users to the subscription by clicking the :guilabel:`Upgrade your subscription` link displayed in the message to validate the upsell quotation, and pay for the extra users."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:112
+#: ../../content/applications/general/users.rst:103
 msgid ":ref:`Deactivate users <users/deactivate>`, and reject the upsell quotation."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:115
+#: ../../content/applications/general/users.rst:106
 msgid "If the company is on a monthly subscription plan, the database automatically updates to reflect the added users. If the company is on a yearly or multi-year plan, an expiration banner appears in the database. An upsell quotation can be created by clicking the banner to update the subscription. Alternatively, users can `send a support ticket <https://www.odoo.com/help>`_ to resolve the issue."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:121
+#: ../../content/applications/general/users.rst:112
 msgid "Once the database has the correct number of users, the expiration message disappears automatically after a few days, when the next verification occurs."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:127
+#: ../../content/applications/general/users.rst:118
 msgid "Password management"
 msgstr ""
 
-#: ../../content/applications/general/users.rst:129
+#: ../../content/applications/general/users.rst:120
 msgid "Password management is an important part of granting users autonomous access to the database at all times. Odoo offers a few different methods to reset a user's password."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:133
+#: ../../content/applications/general/users.rst:124
 msgid "Odoo has a setting to specify the length needed for a password. This setting can be accessed by navigating to :menuselection:`Settings app --> Permissions` section, and entering the desired password length in the :guilabel:`Minimum Password Length` field. By default the value is `8`."
 msgstr ""
 
@@ -6697,51 +7058,47 @@ msgstr ""
 msgid "Minimum Password Length highlighted in the Permissions section of General Settings."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:144
+#: ../../content/applications/general/users.rst:134
 msgid "Reset password"
 msgstr ""
 
-#: ../../content/applications/general/users.rst:146
+#: ../../content/applications/general/users.rst:136
 msgid "Sometimes, users might wish to reset their personal password for added security, so they are the only ones with access to the password. Odoo offers two different reset options: one initiated by the user to reset the password, and another where the administrator triggers a reset."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:153
+#: ../../content/applications/general/users.rst:143
 msgid "Enable password reset from login page"
 msgstr ""
 
-#: ../../content/applications/general/users.rst:155
+#: ../../content/applications/general/users.rst:145
 msgid "It is possible to enable/disable password resets directly from the login page. This action is completed by the individual user, and this setting is enabled by default."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:158
+#: ../../content/applications/general/users.rst:148
 msgid "To change this setting, go to :menuselection:`Settings app --> Permissions` section, activate :guilabel:`Password Reset`, and then click :guilabel:`Save`."
 msgstr ""
 
 #: ../../content/applications/general/users.rst:-1
-msgid "Enabling Password Reset in Odoo Settings"
+msgid "Enabling Password Reset in Odoo Settings."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:165
+#: ../../content/applications/general/users.rst:154
 msgid "On the login page, click :guilabel:`Reset Password` to initiate the password reset process, and have a reset-token sent to the email on file."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:-1
-msgid "Login screen on Odoo.com with the password reset option highlighted."
-msgstr ""
-
-#: ../../content/applications/general/users.rst:175
+#: ../../content/applications/general/users.rst:160
 msgid "Send reset instructions"
 msgstr ""
 
-#: ../../content/applications/general/users.rst:177
+#: ../../content/applications/general/users.rst:162
 msgid "Go to :menuselection:`Settings app --> Users & Companies --> Users`, select the user from the list, and click on :guilabel:`Send Password Reset Instructions` on the user form. An email is automatically sent to them with password reset instructions."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:182
+#: ../../content/applications/general/users.rst:167
 msgid "The :guilabel:`Send Password Reset Instructions` button **only** appears if the Odoo invitation email has already been confirmed by the user. Otherwise, a :guilabel:`Re-send Invitation Email` button appears."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:186
+#: ../../content/applications/general/users.rst:171
 msgid "This email contains all the instructions needed to reset the password, along with a link redirecting the user to an Odoo login page."
 msgstr ""
 
@@ -6749,47 +7106,47 @@ msgstr ""
 msgid "Example of an email with a password reset link for an Odoo account."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:196
+#: ../../content/applications/general/users.rst:180
 msgid "Change user password"
 msgstr ""
 
-#: ../../content/applications/general/users.rst:198
-msgid "Go to :menuselection:`Settings app --> Users & Companies --> Users`, and select a user to access its form. Click on the :guilabel:`⚙️ Actions` icon, and select :guilabel:`Change Password` from, the resulting drop-down menu. Enter a new password in the :guilabel:`New Password` column of the :guilabel:`Change Password` pop-up window that appears, and confirm the change by clicking :guilabel:`Change Password`."
+#: ../../content/applications/general/users.rst:182
+msgid "Go to :menuselection:`Settings app --> Users & Companies --> Users`, and select a user to access its form. Click on the :icon:`fa-cog` :guilabel:`(Actions)` icon, and select :guilabel:`Change Password` from the resulting drop-down menu. Enter a new password in the :guilabel:`New Password` column of the :guilabel:`Change Password` pop-up window that appears, and confirm the change by clicking :guilabel:`Change Password`."
 msgstr ""
 
 #: ../../content/applications/general/users.rst:-1
 msgid "Change a user's password on Odoo."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:209
-msgid "This operation only modifies the password of the users locally, and does **not** affect their odoo.com account."
+#: ../../content/applications/general/users.rst:192
+msgid "This operation only modifies the password of the users locally, and does **not** affect their Odoo account."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:212
-msgid "If the odoo.com password needs to be changed, use the :ref:`send the password reset instructions <users/reset-password-email>`. Odoo.com passwords grant access to the *My Databases* page, and other portal features."
+#: ../../content/applications/general/users.rst:195
+msgid "If the Odoo password needs to be changed, use the :ref:`send the password reset <users/reset-password-email>`. Odoo.com passwords grant access to the *My Databases* page, and other portal features."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:216
+#: ../../content/applications/general/users.rst:199
 msgid "After clicking :guilabel:`Change Password`, the page is redirected to an Odoo login page where the database can be re-accessed using the new password."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:222
+#: ../../content/applications/general/users.rst:205
 msgid "Multi Companies"
 msgstr ""
 
-#: ../../content/applications/general/users.rst:224
+#: ../../content/applications/general/users.rst:207
 msgid "The :guilabel:`Multi Companies` field on a user form allows an administrator to provide access to multiple companies for users. To configure a multi-company environment for a user, navigate to the desired user by going to: :menuselection:`Settings app --> Users section --> Manage users`. Then, select the user to open their user form, and configure with multi-company access."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:229
+#: ../../content/applications/general/users.rst:212
 msgid "Under :guilabel:`Multi Companies` in the :guilabel:`Access Rights` tab, set the fields labeled :guilabel:`Allowed Companies` and :guilabel:`Default Company`."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:232
+#: ../../content/applications/general/users.rst:215
 msgid "The :guilabel:`Allowed Companies` field can contain multiple companies. These are the companies the user can access and edit, according to the set access rights. The :guilabel:`Default Company` is the company the user defaults to, upon logging in each time. This field can contain only **one** company."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:238
+#: ../../content/applications/general/users.rst:221
 msgid "If multi-company access is not configured correctly, it could lead to inconsistent multi-company behaviors. Because of this, only experienced Odoo users should make access rights changes to users for databases with a multi-company configuration. For technical explanations, refer to the developer documentation on :doc:`../../../developer/howtos/company`."
 msgstr ""
 
@@ -6797,7 +7154,7 @@ msgstr ""
 msgid "View of a user's form emphasizing the multi companies field in Odoo."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:248
+#: ../../content/applications/general/users.rst:230
 msgid ":doc:`companies`"
 msgstr ""
 
@@ -6989,15 +7346,15 @@ msgstr ""
 msgid "Users menu in the Users & Companies section of the Settings app of Odoo."
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:43
+#: ../../content/applications/general/users/access_rights.rst:42
 msgid "On the user's profile page, in the :guilabel:`Access Rights` tab, scroll down to view the current permissions."
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:46
+#: ../../content/applications/general/users/access_rights.rst:45
 msgid "For each app, use the drop-down menu to select what level of permission this user should have. The options vary for each section, yet the most common are: :guilabel:`Blank/None`, :guilabel:`User: Own Documents`, :guilabel:`User: All Documents`, or :guilabel:`Administrator`."
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:50
+#: ../../content/applications/general/users/access_rights.rst:49
 msgid "The :guilabel:`Administration` field in the :guilabel:`Access Rights` tab has the following options: :guilabel:`Settings` or :guilabel:`Access Rights`."
 msgstr ""
 
@@ -7005,15 +7362,15 @@ msgstr ""
 msgid "The Sales apps drop-down menu to set the user's level of permissions."
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:60
+#: ../../content/applications/general/users/access_rights.rst:58
 msgid "Create and modify groups"
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:62
+#: ../../content/applications/general/users/access_rights.rst:60
 msgid "*Groups* are app-specific sets of permissions that are used to manage common access rights for a large amount of users. Administrators can modify the existing groups in Odoo, or create new ones to define rules for models within an application."
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:66
+#: ../../content/applications/general/users/access_rights.rst:64
 msgid "To access groups, first activate Odoo's :ref:`developer mode <developer-mode>`, then go to :menuselection:`Settings app --> Users & Companies --> Groups`."
 msgstr ""
 
@@ -7021,163 +7378,163 @@ msgstr ""
 msgid "Groups menu in the Users & Companies section of the Settings app of Odoo."
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:73
+#: ../../content/applications/general/users/access_rights.rst:70
 msgid "To create a new group from the :guilabel:`Groups` page, click :guilabel:`Create`. Then, from the blank group form, select an :guilabel:`Application`, and complete the group form (detailed below)."
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:76
+#: ../../content/applications/general/users/access_rights.rst:73
 msgid "To modify existing groups, click on an existing group from the list displayed on the :guilabel:`Groups` page, and edit the contents of the form."
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:79
+#: ../../content/applications/general/users/access_rights.rst:76
 msgid "Enter a :guilabel:`Name` for the group and tick the checkbox next to :guilabel:`Share Group`, if this group was created to set access rights for sharing data with some users."
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:83
+#: ../../content/applications/general/users/access_rights.rst:80
 msgid "Always test the settings being changed to ensure they are being applied to the correct users."
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:85
-msgid "The group form contains multiple tabs for managing all elements of the group. In each tab, click :guilabel:`Add a line` to add a new row for users or rules, and click the :guilabel:`❌ (remove)` icon to remove a row."
+#: ../../content/applications/general/users/access_rights.rst:82
+msgid "The group form contains multiple tabs for managing all elements of the group. In each tab, click :guilabel:`Add a line` to add a new row for users or rules, and click the :icon:`fa-times` :guilabel:`(cancel)` icon to remove a row."
 msgstr ""
 
 #: ../../content/applications/general/users/access_rights.rst:-1
 msgid "Tabs in the Groups form to modify the settings of the group."
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:93
+#: ../../content/applications/general/users/access_rights.rst:89
 msgid ":guilabel:`Users` tab: lists the current users in the group. Users listed in black have administrative rights. Users without administrative access appear in blue. Click :guilabel:`Add a line` to add users to this group."
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:96
+#: ../../content/applications/general/users/access_rights.rst:92
 msgid ":guilabel:`Inherited` tab: Inherited means that users added to this group are automatically added to the groups listed on this tab. Click :guilabel:`Add a line` to add inherited groups."
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:100
+#: ../../content/applications/general/users/access_rights.rst:96
 msgid "For example, if the group *Sales/Administrator* lists the group *Website/Restricted Editor* in its :guilabel:`Inherited` tab, then any users added to the *Sales/Administrator* group automatically receive access to the *Website/Restricted Editor* group, as well."
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:104
+#: ../../content/applications/general/users/access_rights.rst:100
 msgid ":guilabel:`Menus` tab: defines which models the group can have access to. Click :guilabel:`Add a line` to add a specific menu."
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:106
+#: ../../content/applications/general/users/access_rights.rst:102
 msgid ":guilabel:`Views` tab: lists which views in Odoo the group has access to. Click :guilabel:`Add a line` to add a view to the group."
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:108
+#: ../../content/applications/general/users/access_rights.rst:104
 msgid ":guilabel:`Access Rights` tab: lists the first level of rights (models) that this group has. The :guilabel:`Name` column represents the name for the current group's access to the model selected in the :guilabel:`Model` column."
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:112
-msgid "To link a new access right to a group, click :guilabel:`Add a line`. Select the appropriate model from the :guilabel:`Model` dropdown, then enter a name for the access right in the :guilabel:`Name` column. For each model, enable the following options as appropriate:"
+#: ../../content/applications/general/users/access_rights.rst:108
+msgid "To link a new access right to a group, click :guilabel:`Add a line`. Select the appropriate model from the :guilabel:`Model` drop-down, then enter a name for the access right in the :guilabel:`Name` column. For each model, enable the following options as appropriate:"
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:116
+#: ../../content/applications/general/users/access_rights.rst:112
 msgid ":guilabel:`Read`: Users can see the object's existing values."
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:117
+#: ../../content/applications/general/users/access_rights.rst:113
 msgid ":guilabel:`Write`: Users can edit the object's existing values."
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:118
+#: ../../content/applications/general/users/access_rights.rst:114
 msgid ":guilabel:`Create`: Users can create new values for the object."
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:119
+#: ../../content/applications/general/users/access_rights.rst:115
 msgid ":guilabel:`Delete`: Users can delete values for the object."
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:122
-msgid "While there are no conventions for naming access rights, it is advisable to choose a name that easily identifies its purpose."
+#: ../../content/applications/general/users/access_rights.rst:118
+msgid "While there are no conventions for naming access rights, it is advisable to choose a name that identifies its purpose."
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:125
+#: ../../content/applications/general/users/access_rights.rst:121
 msgid "For example, the access that purchase managers have to the :guilabel:`Contact` model could be named `res.partner.purchase.manager`. This consists of the technical name of the model, followed by a name identifying the group of users in question."
 msgstr ""
 
 #: ../../content/applications/general/users/access_rights.rst:0
-msgid "Name of access rights to a model"
+msgid "Name of access rights to a model."
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:132
+#: ../../content/applications/general/users/access_rights.rst:128
 msgid "To find the model's technical name from the current view, first enter a placeholder text in the :guilabel:`Name` field, then click the :guilabel:`Model` name, then the :icon:`fa-arrow-right` :guilabel:`(Internal link)` icon."
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:136
+#: ../../content/applications/general/users/access_rights.rst:132
 msgid ":guilabel:`Record Rules`: lists the second layer of editing and visibility rights. :guilabel:`Record Rules` overwrite, or refine, the group's access rights. Click :guilabel:`Add a line` to add a record rule to this group. For each rule, choose values for the following options:"
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:140
+#: ../../content/applications/general/users/access_rights.rst:136
 msgid ":guilabel:`Apply for Read`."
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:141
+#: ../../content/applications/general/users/access_rights.rst:137
 msgid ":guilabel:`Apply for Write`."
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:142
+#: ../../content/applications/general/users/access_rights.rst:138
 msgid ":guilabel:`Apply for Create`."
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:143
+#: ../../content/applications/general/users/access_rights.rst:139
 msgid ":guilabel:`Apply for Delete`."
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:146
+#: ../../content/applications/general/users/access_rights.rst:142
 msgid "Record rules are written using a *domain*, or conditions that filter data. A domain expression is a list of such conditions. For example:"
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:149
+#: ../../content/applications/general/users/access_rights.rst:145
 msgid "`[('mrp_production_ids', 'in', user.partner_id.commercial_partner_id.production_ids.ids)]`"
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:151
+#: ../../content/applications/general/users/access_rights.rst:147
 msgid "This record rule is to enable MRP consumption warnings for subcontractors."
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:153
+#: ../../content/applications/general/users/access_rights.rst:149
 msgid "Odoo has a library of preconfigured record rules for ease of use. Users without knowledge of domains (and domain expressions) should consult an Odoo Business Analyst, or the Odoo Support Team, before making changes."
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:160
+#: ../../content/applications/general/users/access_rights.rst:156
 msgid "Superuser mode"
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:162
-msgid "*Superuser mode* allows the user to bypass record rules and access rights. To activate *Superuser mode*, first, activate :ref:`developer mode <developer-mode>`. Then, navigate to the *debug* menu, represented by a :guilabel:`🪲 (bug)` icon, located in the top banner."
+#: ../../content/applications/general/users/access_rights.rst:158
+msgid "*Superuser mode* allows the user to bypass record rules and access rights. To activate *Superuser mode*, first, activate :ref:`developer mode <developer-mode>`. Then, navigate to the *debug* menu, represented by a :icon:`fa-bug` :guilabel:`(debug)` icon, located in the top banner."
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:166
+#: ../../content/applications/general/users/access_rights.rst:162
 msgid "Finally, towards the bottom of the menu, click :guilabel:`Become Superuser`."
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:169
+#: ../../content/applications/general/users/access_rights.rst:165
 msgid "Only users with *Settings* access for the *Administration* section of the *Access Rights* (in their user profile) are allowed to log in to *Superuser mode*."
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:173
+#: ../../content/applications/general/users/access_rights.rst:169
 msgid "*Superuser mode* allows for circumvention of record rules and access rights, and therefore, should be exercised with extreme caution."
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:176
+#: ../../content/applications/general/users/access_rights.rst:172
 msgid "Upon exiting *Superuser mode*, users may be locked out of the database, due to changes that were made. This can cause *impotent admin*, or an administrator without the ability to change access rights/settings."
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:180
+#: ../../content/applications/general/users/access_rights.rst:176
 msgid "In this case contact Odoo Support here: `new help ticket <https://www.odoo.com/help>`_. The support team is able to restore access using a support login."
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:183
+#: ../../content/applications/general/users/access_rights.rst:179
 msgid "To leave *Superuser mode*, log out of the account, by navigating to the upper-right corner, and clicking on the :guilabel:`OdooBot` username. Then, select the :guilabel:`Log out` option."
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:187
+#: ../../content/applications/general/users/access_rights.rst:183
 msgid "An alternative way to activate *Superuser mode* is to login as a superuser. To do that, navigate to the login screen, and enter the appropriate :guilabel:`Email` and :guilabel:`Password`."
 msgstr ""
 
-#: ../../content/applications/general/users/access_rights.rst:190
+#: ../../content/applications/general/users/access_rights.rst:186
 msgid "Instead of clicking :guilabel:`Login`, click :guilabel:`Log in as superuser`."
 msgstr ""
 
