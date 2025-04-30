@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-27 16:07+0000\n"
+"POT-Creation-Date: 2025-04-30 14:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,11 +38,12 @@ msgid "Regular appraisals are good for both the employees and the company, since
 msgstr ""
 
 #: ../../content/applications/hr/appraisals.rst:20
-#: ../../content/applications/hr/attendances.rst:59
+#: ../../content/applications/hr/attendances.rst:69
 #: ../../content/applications/hr/attendances/kiosks.rst:22
 #: ../../content/applications/hr/frontdesk.rst:15
 #: ../../content/applications/hr/payroll/payroll_localizations/australia.rst:840
 #: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:956
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:11
 #: ../../content/applications/hr/payroll/payroll_localizations/united_arab_emirates.rst:12
 #: ../../content/applications/hr/time_off.rst:30
 msgid "Configuration"
@@ -941,7 +942,7 @@ msgid "Each skill has the following information listed:"
 msgstr ""
 
 #: ../../content/applications/hr/appraisals/skills_evolution.rst:38
-#: ../../content/applications/hr/attendances.rst:218
+#: ../../content/applications/hr/attendances.rst:241
 msgid ":guilabel:`Employee`: the name of the employee."
 msgstr ""
 
@@ -1091,102 +1092,130 @@ msgid "Attendances"
 msgstr ""
 
 #: ../../content/applications/hr/attendances.rst:7
-msgid "Odoo's *Attendances* application functions as a time clock. Employees are able to check in and out of work using a dedicated device in kiosk mode, while users are also able to check in and out of work directly from the database. Managers can quickly see who is available at any given time, create reports to see everyone's hours, and gain insights on which employees are working overtime, or checking out of work earlier than expected."
+msgid "Odoo's **Attendances** application functions as a time clock. Employees are able to check in and out of work using a :ref:`dedicated device in kiosk mode <attendances/kiosk-mode-entry>`, while users are also able to check in and out of work :ref:`directly from the database <attendances/check-in>`. Managers can see who is available at any given time, create reports to see everyone's hours, and gain insights on which employees are working overtime, or checking out of work earlier than expected."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:16
+#: ../../content/applications/hr/attendances.rst:17
 msgid "Access rights"
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:18
-msgid "It is important to understand how the different access rights affect what options and features users can access in the *Attendances* application."
+#: ../../content/applications/hr/attendances.rst:19
+msgid "Understanding access rights is essential to navigating the **Attendances** application."
 msgstr ""
 
 #: ../../content/applications/hr/attendances.rst:21
-msgid "Every user in the database is able to check in and out directly from the database, without needing access to the *Attendances* application. Additionally, all users can access their own attendance records from their employee form in the *Employees* app."
+msgid "Every user in the database is able to check in and out directly from the database, without needing access to the **Attendances** app. Additionally, all users can access their own attendance records from their employee form in the **Employees** app."
 msgstr ""
 
 #: ../../content/applications/hr/attendances.rst:25
-msgid "Access to both the *Attendances* application, and the various features within the application is determined by access rights."
+msgid "Access to both the **Attendances** application, and the various features within the application is determined by access rights."
 msgstr ""
 
 #: ../../content/applications/hr/attendances.rst:28
-msgid "To see what access rights a user has, navigate to the :menuselection:`Settings app --> Users & Companies: Users`, and click on an individual user. The :guilabel:`Access Rights` tab is visible by default. Scroll down to the :guilabel:`Human Resources` section to see the setting. For the :guilabel:`Attendances` field, the options are either to leave the field blank or select :guilabel:`Administrator`."
+msgid "To see what access rights a user has, navigate to the :menuselection:`Settings app --> Users & Companies --> Users`, and click on an individual user. The :guilabel:`Access Rights` tab is visible by default. Scroll down to the :guilabel:`HUMAN RESOURCES` section to view the settings. For the :guilabel:`Attendances` field, the options are either to leave the field blank or select :guilabel:`Administrator`."
 msgstr ""
 
 #: ../../content/applications/hr/attendances.rst:34
-msgid "If the :guilabel:`Administrator` option is selected, the user has full access to the entire *Attendances* application, with no restrictions. They can view all employee attendance records, enter *Kiosk mMode* from the application, access all reporting metrics, and make modifications to the settings. If left blank, the user does **not** have access to the *Attendances* application."
+msgid "If the :guilabel:`Administrator` option is selected, the user has full access to the entire **Attendances** application, with no restrictions. They can view all employee attendance records, enter *Kiosk Mode* from the application, access all reporting metrics, and make modifications to the settings. If left blank, the user does **not** have access to the **Attendances** application."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:42
-msgid "Approvers"
+#: ../../content/applications/hr/attendances.rst:40
+msgid "If a user does **not** have :guilabel:`Administrator` rights for the **Attendances** app, they are **not** able to open the app, even though it appears on the main database dashboard. An :guilabel:`Access Error` pop-up message appears, stating:"
 msgstr ""
 
 #: ../../content/applications/hr/attendances.rst:44
-msgid "The **only** other scenario where different information may be accessible in the *Attendances* application is for approvers. If a user does *not* have administrative rights for the *Attendances* application, but they are set as an employee's approver for the *Attendances* application, that user is able to view the attendance records for that specific employee, as well as make modifications to that employee's attendance records, if necessary. This applies to all employees for whom the user is listed as the *Attendances* application approver. Approvers are typically managers, though this is not required."
+msgid "`You do not have enough rights to access the fields \"attendance_manager_id\" on Employee (hr.employee). Please contact your system administrator.`"
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:52
-msgid "To see who the attendance approver is for an employee, navigate to the :menuselection:`Employees application` and click on the specific employee. Click on the :guilabel:`Work Information` tab, scroll to the :guilabel:`Approvers` section, and check the :guilabel:`Attendance` field. The person selected is able to view that employees' attendance records, both on the *Attendances* application dashboard as well as in the attendance reports, and make modifications to their records."
+#: ../../content/applications/hr/attendances.rst:47
+msgid "Users who cannot access the **Attendances** app can still :doc:`check in and check out <../hr/attendances/check_in_check_out>` of work within the database, using the :icon:`fa-circle` :guilabel:`(red circle)` or :icon:`fa-circle` :guilabel:`(green circle)` that are always available at the top of the database."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:61
-msgid "Few configurations are needed in the *Attendances* application. Determining how employees check in and out, defining how the kiosks function, and determining how extra hours are computed are all set in the Configuration menu. Navigate to the :menuselection:`Attendances application --> Configuration` to access the configuration menu."
+#: ../../content/applications/hr/attendances.rst:55
+msgid "Approvers"
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:67
+#: ../../content/applications/hr/attendances.rst:57
+msgid "An approver is a user assigned to review and manage an employee's attendance records. An approver is typically a manager, though that is not required. Approvers without administrative rights can access and modify attendance records **only** for the employees they are assigned to. This is the only exception where non-admin users can view records in the **Attendances** app."
+msgstr ""
+
+#: ../../content/applications/hr/attendances.rst:62
+msgid "To view who the attendances approver for an employee is, navigate to the :menuselection:`Employees application` and click on the specific employee. Click on the :guilabel:`Work Information` tab, scroll to the :guilabel:`APPROVERS` section, and check the :guilabel:`Attendance` field. The person selected is able to view that employees' attendance records, both on the **Attendances** application dashboard as well as in the attendance reports, and make modifications to their records."
+msgstr ""
+
+#: ../../content/applications/hr/attendances.rst:71
+msgid "Few configurations are needed in the **Attendances** app. Determining how employees check in and out, defining how the kiosks function, and determining how extra hours are computed are all set in the Configuration menu. Navigate to the :menuselection:`Attendances application --> Configuration` to access the configuration menu."
+msgstr ""
+
+#: ../../content/applications/hr/attendances.rst:77
+msgid "Any configuration item with an :icon:`fa-building-o` :guilabel:`(building)` icon is a company-specific configuration. Items without an :icon:`fa-building-o` :guilabel:`(building)` icon apply to all companies within the database."
+msgstr ""
+
+#: ../../content/applications/hr/attendances.rst:82
 msgid "Modes"
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:69
-msgid ":guilabel:`Attendances from Backend`: activate this selection to allow users to check in and out directly from the Odoo database. If this is not activated, users must use a kiosk to check in and out of work."
+#: ../../content/applications/hr/attendances.rst:84
+msgid ":guilabel:`Attendances from Backend` :icon:`fa-building-o`: activate this feature to allow users to check in and out directly from the Odoo database. If this is not activated, users must use a kiosk to check in and out of work."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:74
-msgid "Extra hours"
+#: ../../content/applications/hr/attendances.rst:87
+msgid ":guilabel:`Automatic Check-Out` :icon:`fa-building-o`: activate this feature to automatically check out employees according to their working schedule, after a buffer of time has passed."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:76
-msgid "This section specifies how extra time is calculated, including when extra time is counted and what time is not logged."
+#: ../../content/applications/hr/attendances.rst:89
+msgid ":guilabel:`Tolerance`: this field appears only when the :guilabel:`Automatic Check-Out` :icon:`fa-building-o` feature is enabled. Enter the amount of time, in hours, that must elapse after an employee's working hours have ended, before they are automatically checked out."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:79
-msgid ":guilabel:`Count of Extra Hours`: enable this box to allow employees to log extra hours beyond their set working hours (sometimes referred to as *overtime*). Activating this selection displays the following settings as well. If this is not activated, no other configurations appear."
+#: ../../content/applications/hr/attendances.rst:94
+msgid "With the :guilabel:`Automatic Check-Out` option enabled, and the :guilabel:`Tolerance` set to `2.00` hours, an employee checks in to work at 9:00 AM, and forgets to check-out at 5:00 PM. At 7:00 PM, they are automaticlaly checked out."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:83
-msgid ":guilabel:`Start From`: the current date is automatically entered in this field. If desired, click on this field and use the calendar selector to modify the start date on which extra hours are logged."
-msgstr ""
-
-#: ../../content/applications/hr/attendances.rst:86
-msgid ":guilabel:`Tolerance Time In Favor Of Company`: enter the amount of time, in minutes, that is **not** counted towards an employee's overtime. When an employee checks out, and the extra time logged is below the specified minutes, the extra time is **not** counted as overtime for the employee."
-msgstr ""
-
-#: ../../content/applications/hr/attendances.rst:90
-msgid ":guilabel:`Tolerance Time In Favor Of Employee`: enter the amount of time, in minutes, that an employee is given, that does **not** adversely affect their attendance if they log less time than their working hours. When an employee checks out, and the total time logged for the day is less than their specified working hours and less than this specified grace period, they are **not** penalized for their reduced hours."
-msgstr ""
-
-#: ../../content/applications/hr/attendances.rst:97
-msgid "A company sets both of the :guilabel:`Tolerance` fields to `15` minutes, and the working hours for the entire company are set from 9:00 AM to 5:00 PM."
-msgstr ""
-
-#: ../../content/applications/hr/attendances.rst:100
-msgid "If an employee checks in at 9:00 AM, and checks out at 5:14 PM, the extra 14 minutes are **not** counted towards their overtime."
+#: ../../content/applications/hr/attendances.rst:98
+msgid ":guilabel:`Absence Management` :icon:`fa-building-o`: activate this feature to log any absences that are not associated with a time off request, such as vacation time or sick time, on the attendances report."
 msgstr ""
 
 #: ../../content/applications/hr/attendances.rst:103
+msgid "Extra Hours"
+msgstr ""
+
+#: ../../content/applications/hr/attendances.rst:105
+msgid "This section specifies how extra time (sometimes referred to as *overtime*) is calculated, including when extra time is counted and what time is not logged."
+msgstr ""
+
+#: ../../content/applications/hr/attendances.rst:108
+msgid ":guilabel:`Tolerance Time In Favor Of Company`: enter the amount of time, in minutes, that is **not** counted towards an employee's overtime. When an employee checks out, and the extra time logged is below the specified minutes, the extra time is **not** counted as overtime for the employee."
+msgstr ""
+
+#: ../../content/applications/hr/attendances.rst:112
+msgid ":guilabel:`Tolerance Time In Favor Of Employee`: enter the amount of time, in minutes, that an employee is given, that does **not** adversely affect their attendance if they log less time than their working hours. When an employee checks out, and the total time logged for the day is less than their specified working hours and less than this specified grace period, they are **not** penalized for their reduced hours."
+msgstr ""
+
+#: ../../content/applications/hr/attendances.rst:119
+msgid "A company sets both of the :guilabel:`Tolerance` fields to `15` minutes, and the working hours for the entire company are set from 9:00 AM to 5:00 PM."
+msgstr ""
+
+#: ../../content/applications/hr/attendances.rst:122
+msgid "If an employee checks in at 9:00 AM, and checks out at 5:14 PM, the extra 14 minutes are **not** counted towards their overtime."
+msgstr ""
+
+#: ../../content/applications/hr/attendances.rst:125
 msgid "If an employee checks in at 9:05 AM, and checks out at 4:55 PM, even though they logged a total of 10 minutes less than their full working hours, they are **not** penalized for this discrepancy."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:107
+#: ../../content/applications/hr/attendances.rst:129
+msgid ":guilabel:`Extra Hours Validation` :icon:`fa-building-o`: tick either the radio button next to :guilabel:`Automatically Approved` to have all extra time automatically approved, or :guilabel:`Approved by Manager` if all extra time should be reviewed and approved by a manager."
+msgstr ""
+
+#: ../../content/applications/hr/attendances.rst:133
 msgid ":guilabel:`Display Extra Hours`: activate this box to display the extra hours logged by an employee when they check out with a kiosk, or when a user checks out in the database."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:111
-msgid "Employees are still able to log overtime hours even if the :guilabel:`Count of Extra Hours` option is not activated. The difference is that when :guilabel:`Count of Extra Hours` is activated, the extra hours can be :ref:`deducted from an approved time off request <time_off/deduct-extra-hours>`."
+#: ../../content/applications/hr/attendances.rst:137
+msgid "Approved extra hours can be :ref:`deducted from an approved time off request <time_off/deduct-extra-hours>`."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:117
+#: ../../content/applications/hr/attendances.rst:141
 #: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:11
 #: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:231
 #: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:428
@@ -1196,23 +1225,23 @@ msgstr ""
 msgid "Overview"
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:119
-msgid "When entering the *Attendances* application, the :guilabel:`Overview` dashboard is presented, containing all the check in and check out information for the signed in user. If the user has specific :ref:`access rights <attendances/access-rights>` and/or are :ref:`approvers <attendances/approvers>` for specific employees, then those additional employee's check in and check out information is also visible on the :guilabel:`Overview` dashboard."
+#: ../../content/applications/hr/attendances.rst:143
+msgid "When entering the **Attendances** application, the :guilabel:`Overview` dashboard is presented, containing all the check in and check out information for the signed in user. If the user has specific :ref:`access rights <attendances/access-rights>` and/or are :ref:`approvers <attendances/approvers>` for specific employees, then those additional employee's check in and check out information is also visible on the :guilabel:`Overview` dashboard."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:126
+#: ../../content/applications/hr/attendances.rst:150
 msgid "Views"
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:128
-msgid "To change the view from the default Gantt chart to a list view, click the :guilabel:`List` icon in the top right of the dashboard, beneath the user's photo. To switch back to the Gantt chart, click the :guilabel:`Gantt` button, located next to the :guilabel:`List` button."
+#: ../../content/applications/hr/attendances.rst:152
+msgid "To change the view from the default Gantt chart to a list view, click the :guilabel:`List` icon in the top-right of the dashboard, beneath the user's photo. To switch back to the Gantt chart, click the :guilabel:`Gantt` button, located next to the :guilabel:`List` button."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:132
-msgid "The default view presents the current day's information. To present the information for the :guilabel:`Week`, :guilabel:`Month`, or :guilabel:`Year`, click on the :guilabel:`Day` button to reveal a drop-down, displaying those other options. Select the desired view, and the dashboard updates, presenting the selected information. To change the :guilabel:`Day`, :guilabel:`Week`, :guilabel:`Month`, or :guilabel:`Year` presented, click the :guilabel:`← (left arrow)` or :guilabel:`→ (right arrow)` buttons on either side of the drop-down menu. To jump back to a view containing the current day, click the :guilabel:`Today` button. This refreshes the dashboard, presenting information containing the current day's information."
+#: ../../content/applications/hr/attendances.rst:156
+msgid "The default view presents the current day's information. To present the information for the :guilabel:`Week`, :guilabel:`Month`, or :guilabel:`Year`, click on the :guilabel:`Day` button to reveal a drop-down, displaying those other options. Select the desired view, and the dashboard updates, presenting the selected information. To change the :guilabel:`Day`, :guilabel:`Week`, :guilabel:`Month`, or :guilabel:`Year` presented, click the :icon:`oi-arrow-left` :guilabel:`(left arrow)` or :icon:`oi-arrow-right` :guilabel:`(right arrow)` buttons on either side of the drop-down menu. To jump back to a view containing the current day, click the :guilabel:`Today` button. This refreshes the dashboard, presenting information containing the current day's information."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:141
+#: ../../content/applications/hr/attendances.rst:165
 msgid "In the :guilabel:`Day` view, the column for the current hour is highlighted in yellow. If the :guilabel:`Week` or :guilabel:`Month` view is selected, the column for the current day is highlighted. If the :guilabel:`Year` view is selected, the current month is highlighted."
 msgstr ""
 
@@ -1221,144 +1250,144 @@ msgid "The overview dashboard presenting the information for the week, with the 
 "highlighted."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:150
-msgid "Any entries that have errors appear in red, indicating they need to be resolved by a user with the proper :ref:`access rights <attendances/access-rights>` and/or are :ref:`approvers <attendances/approvers>` for the employee(s) with the errors."
+#: ../../content/applications/hr/attendances.rst:173
+msgid "Any entries that have errors appear in red, indicating they need to be resolved by a user with the proper :ref:`access rights <attendances/access-rights>` and/or are :ref:`approvers <attendances/approvers>` for the employees with the errors."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:157
+#: ../../content/applications/hr/attendances.rst:180
 msgid "Filters and groups"
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:159
-msgid "To filter the results in the overview dashboard, or to present different groups of information, click the :guilabel:`🔻 (triangle drop down)` button in the right side of the :guilabel:`Search` bar above the dashboard, and select one of the available :guilabel:`Filters` or :guilabel:`Group By` options. There are several pre-configured filters and groups to choose from, as well as an option to create custom ones."
+#: ../../content/applications/hr/attendances.rst:182
+msgid "To filter the results in the overview dashboard, or to present different groups of information, click the :icon:`fa-caret-down` :guilabel:`(Toggle Search Panel)` button in the right side of the :guilabel:`Search` bar above the dashboard, and select one of the available :guilabel:`Filters` or :guilabel:`Group By` options. Several preconfigured filters and groups are available to choose from, as well as an option to create custom ones."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:166
+#: ../../content/applications/hr/attendances.rst:189
 #: ../../content/applications/hr/payroll/reporting.rst:190
 msgid "Filters"
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:168
+#: ../../content/applications/hr/attendances.rst:191
 msgid "The default filters that can be selected are:"
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:170
+#: ../../content/applications/hr/attendances.rst:193
 msgid ":guilabel:`My Attendances`: this filter only presents the user's attendance data."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:171
+#: ../../content/applications/hr/attendances.rst:194
 msgid ":guilabel:`My Team`: this filter presents the attendance data for the user's team."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:172
+#: ../../content/applications/hr/attendances.rst:195
 msgid ":guilabel:`At Work`: this filter displays the attendance data for everyone currently checked in."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:173
+#: ../../content/applications/hr/attendances.rst:196
 msgid ":guilabel:`Errors`: this filter displays any entries with :ref:`errors <attendances/errors>` that need to be resolved."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:175
+#: ../../content/applications/hr/attendances.rst:198
 msgid ":guilabel:`Check In`: this filter has a drop-down to further select a specific time period. Select the desired time period from the options presented, a specific month, quarter, or year."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:177
+#: ../../content/applications/hr/attendances.rst:200
 msgid ":guilabel:`Last 7 days`: this filter presents the attendance data for the last seven days."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:178
+#: ../../content/applications/hr/attendances.rst:201
 msgid ":guilabel:`Add Custom Filter`: create a custom filter using the pop-up that appears when this is selected."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:182
+#: ../../content/applications/hr/attendances.rst:205
 msgid "Groups"
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:184
+#: ../../content/applications/hr/attendances.rst:207
 msgid "The default groups that can be selected are:"
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:186
+#: ../../content/applications/hr/attendances.rst:209
 msgid ":guilabel:`Check In`: this grouping presents a drop-down menu containing the following time period options: :guilabel:`Year`, :guilabel:`Quarter`, :guilabel:`Month`, :guilabel:`Week`, and :guilabel:`Day`. Selected the time period to display all the check-in information, grouped by the selected time period."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:190
+#: ../../content/applications/hr/attendances.rst:213
 msgid ":guilabel:`Employee`: this group presents the attendance data organized by employee."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:191
+#: ../../content/applications/hr/attendances.rst:214
 msgid ":guilabel:`Check Out`: this grouping presents a drop-down menu containing the following time period options: :guilabel:`Year`, :guilabel:`Quarter`, :guilabel:`Month`, :guilabel:`Week`, and :guilabel:`Day`. Selected the time period to display all the check-out information, grouped by the selected time period."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:195
+#: ../../content/applications/hr/attendances.rst:218
 msgid ":guilabel:`Add Custom Group`: this option displays a drop-down menu with a variety of options to group the attendance data by, including :guilabel:`City`, :guilabel:`Country`, :guilabel:`Mode`, and :guilabel:`IP Address`."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:202
+#: ../../content/applications/hr/attendances.rst:225
 msgid "Attendance log details"
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:204
+#: ../../content/applications/hr/attendances.rst:227
 msgid "Odoo captures various time and location details when a user checks in and out. The specific details provided are determined by the method the user checked in and out."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:207
+#: ../../content/applications/hr/attendances.rst:230
 msgid "To view the specific check in and/or check out details for an employee, click on an individual entry in the overview dashboard."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:210
+#: ../../content/applications/hr/attendances.rst:233
 msgid "A detailed attendance log for the user appears in a pop-up window. To close the detailed attendance log, click the :guilabel:`Save & Close` button in the bottom-left corner of the form."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:213
+#: ../../content/applications/hr/attendances.rst:236
 msgid "The detailed attendance log contains the following information:"
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:216
+#: ../../content/applications/hr/attendances.rst:239
 msgid "Main details"
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:219
+#: ../../content/applications/hr/attendances.rst:242
 msgid ":guilabel:`Check In`: the date and time the employee checked in."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:220
+#: ../../content/applications/hr/attendances.rst:243
 msgid ":guilabel:`Check Out`: the date and time the employee checked out. This only appears if the employee has checked out."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:222
+#: ../../content/applications/hr/attendances.rst:245
 msgid ":guilabel:`Worked Hours`: the total amount of time the employee logged for the day, in an hour and minute format (HH:MM). This value calculates all the checks in and check outs for the day, if the employee checked in and out multiple times."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:225
+#: ../../content/applications/hr/attendances.rst:248
 msgid ":guilabel:`Extra Hours`: any extra hours the employee logged that is beyond their expected working hours."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:229
+#: ../../content/applications/hr/attendances.rst:252
 msgid "Check in/check out details"
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:231
+#: ../../content/applications/hr/attendances.rst:254
 msgid "The following information appears for both the :guilabel:`Check In` and :guilabel:`Check Out` sections."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:234
+#: ../../content/applications/hr/attendances.rst:257
 msgid ":guilabel:`Mode`: the method with which the attendance information was gathered. :guilabel:`Systray` is displayed if the employee logged in and out :ref:`directly from the database <attendances/check-in>`, :guilabel:`Manual` is displayed if the employee logged in and out :ref:`using an attendance kiosk <attendances/kiosk-mode-entry>`."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:238
+#: ../../content/applications/hr/attendances.rst:261
 msgid ":guilabel:`IP Address`: the IP address for the computer the employee used to log in or out."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:239
+#: ../../content/applications/hr/attendances.rst:262
 msgid ":guilabel:`Browser`: the web browser the employee used to log in or out."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:240
+#: ../../content/applications/hr/attendances.rst:263
 msgid ":guilabel:`Localization`: the city and country associated with the computer's IP address."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:241
+#: ../../content/applications/hr/attendances.rst:264
 msgid ":guilabel:`GPS Coordinates`: the specific coordinates when the user logged in or out. To view the specific coordinates on a map, click the :guilabel:`→ View on Maps` button beneath the :guilabel:`GPS Coordinates`. This opens a map in a new browser tab, with the specific location pointed out."
 msgstr ""
 
@@ -1366,20 +1395,20 @@ msgstr ""
 msgid "The detailed information for an attendance entry."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:251
+#: ../../content/applications/hr/attendances.rst:273
 #: ../../content/applications/hr/lunch/orders.rst:84
 msgid "Errors"
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:253
+#: ../../content/applications/hr/attendances.rst:275
 msgid "Entries that contain an error appear on the overview dashboard in red. In the :guilabel:`Gantt view`, the entry appears with a red background. If in the :guilabel:`List view`, the entry text appears in red."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:257
+#: ../../content/applications/hr/attendances.rst:279
 msgid "An error typically occurs when an employee has checked in but has not checked out within the last 24 hours, or when an employee has a check in and check out period spanning over 16 hours."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:260
+#: ../../content/applications/hr/attendances.rst:282
 msgid "To fix the error, the attendance entry must be modified or deleted. Click on the entry to reveal a pop-up containing the details for that particular entry. To modify the :guilabel:`Check In` and/or :guilabel:`Check Out` information, click on the :guilabel:`Check In` or :guilabel:`Check Out` field and a calendar selector appears. Click on the desired date, then use the time selector beneath the calendar to select the specific time for the entry. When the information is correct, click :guilabel:`Apply.`"
 msgstr ""
 
@@ -1388,43 +1417,43 @@ msgid "The pop-up that allows for modifications to an attendance entry with an e
 "selector is shown, and the time selector is highlighted."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:272
+#: ../../content/applications/hr/attendances.rst:293
 msgid "When all the information on the pop-up is correct, click :guilabel:`Save & Close`. When the entry no longer has an error, the entry appears in gray instead of red."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:275
+#: ../../content/applications/hr/attendances.rst:296
 msgid "To delete an entry, click :guilabel:`Remove` on the pop-up instead of making modifications to the entry."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:279
-#: ../../content/applications/hr/frontdesk.rst:210
+#: ../../content/applications/hr/attendances.rst:300
+#: ../../content/applications/hr/frontdesk.rst:213
 #: ../../content/applications/hr/payroll/reporting.rst:3
 #: ../../content/applications/hr/referrals/reporting.rst:3
 #: ../../content/applications/hr/time_off.rst:511
 msgid "Reporting"
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:281
+#: ../../content/applications/hr/attendances.rst:302
 msgid "To view attendance reports, click :guilabel:`Reporting` in the top menu. The default report displays each employee's attendance information for the past 3 months, in a :guilabel:`Line Chart`."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:284
-msgid "The default view is a :guilabel:`Graph`. To view the data in a pivot table, click the :guilabel:`Pivot Table` button on the top right of the report. To switch back to the graph view, click the :guilabel:`Graph` button, located next to the :guilabel:`Pivot Table` button."
+#: ../../content/applications/hr/attendances.rst:305
+msgid "The default view is a :guilabel:`Graph`. To view the data in a pivot table, click the :guilabel:`Pivot Table` button on the top-right of the report. To switch back to the graph view, click the :guilabel:`Graph` button, located next to the :guilabel:`Pivot Table` button."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:288
+#: ../../content/applications/hr/attendances.rst:309
 msgid "To present different information, adjust the :ref:`filters and groups <attendances/filters-groups>` in the same way as in the :guilabel:`Overview` dashboard."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:291
+#: ../../content/applications/hr/attendances.rst:312
 msgid "The data can be presented in either a :guilabel:`Bar Chart`, :guilabel:`Line Chart`, :guilabel:`Pie Chart`, :guilabel:`Stacked` chart, or in :guilabel:`Descending` or :guilabel:`Ascending` order. To change the view to any of these charts, click the corresponding button above the displayed chart."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:295
+#: ../../content/applications/hr/attendances.rst:316
 msgid "To change the :guilabel:`Measures`, click the :guilabel:`Measures` button and select the desired measure from the drop-down menu."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:298
+#: ../../content/applications/hr/attendances.rst:319
 msgid "The report can also be inserted into a spreadsheet. Click the :guilabel:`Insert in Spreadsheet` button and a pop-up appears. Select the desired spreadsheet, and click :guilabel:`Confirm`."
 msgstr ""
 
@@ -1432,15 +1461,19 @@ msgstr ""
 msgid "The default report view, with all the optional view buttons highlighted."
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:306
+#: ../../content/applications/hr/attendances.rst:326
 msgid ":doc:`attendances/check_in_check_out`"
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:307
+#: ../../content/applications/hr/attendances.rst:327
 msgid ":doc:`attendances/kiosks`"
 msgstr ""
 
-#: ../../content/applications/hr/attendances.rst:308
+#: ../../content/applications/hr/attendances.rst:328
+msgid ":doc:`attendances/management`"
+msgstr ""
+
+#: ../../content/applications/hr/attendances.rst:329
 msgid ":doc:`attendances/hardware`"
 msgstr ""
 
@@ -1490,7 +1523,7 @@ msgid "Click anywhere on the screen to close the attendance widget."
 msgstr ""
 
 #: ../../content/applications/hr/attendances/check_in_check_out.rst:52
-#: ../../content/applications/hr/frontdesk/visitors.rst:148
+#: ../../content/applications/hr/frontdesk/visitors.rst:175
 msgid "Check out"
 msgstr ""
 
@@ -1527,7 +1560,7 @@ msgid "Hardware"
 msgstr ""
 
 #: ../../content/applications/hr/attendances/hardware.rst:5
-msgid "Employees who are **not** database users, and therefore, do **not** have access to the *Attendances* app, must sign in and out of work using a kiosk. The following are the physical requirements for setting up a kiosk."
+msgid "Employees who are **not** database users, and therefore, do **not** have access to the **Attendances** app, must sign in and out of work using a kiosk. The following are the physical requirements for setting up a kiosk."
 msgstr ""
 
 #: ../../content/applications/hr/attendances/hardware.rst:10
@@ -1539,7 +1572,7 @@ msgid "A kiosk is a self-service station, where employees can :ref:`check in and
 msgstr ""
 
 #: ../../content/applications/hr/attendances/hardware.rst:17
-msgid "A kiosk is used by navigating to the webpage specified in the :ref:`configuration <attendances/kiosk-settings>` section of the *Attendances* app."
+msgid "A kiosk is used by navigating to the webpage specified in the :ref:`configuration <attendances/kiosk-settings>` section of the **Attendances** app."
 msgstr ""
 
 #: ../../content/applications/hr/attendances/hardware.rst:20
@@ -1559,7 +1592,7 @@ msgid "Mobile phone (Android or iOS)"
 msgstr ""
 
 #: ../../content/applications/hr/attendances/hardware.rst:27
-msgid "Touchscreens are easy to use, and tablets and mobile phones take up less space. That's why most consider using a smaller device with a touchscreen as a kiosk."
+msgid "Touchscreens are easy to use, and tablets and mobile phones take up less space. That is why most consider using a smaller device with a touchscreen as a kiosk."
 msgstr ""
 
 #: ../../content/applications/hr/attendances/hardware.rst:30
@@ -1571,11 +1604,11 @@ msgid "Badges"
 msgstr ""
 
 #: ../../content/applications/hr/attendances/hardware.rst:37
-msgid "Badges are a way for employees to quickly sign in and out from a kiosk, as badges are scanned by the kiosk's camera to quickly identify the employee."
+msgid "Badges are a way for employees to quickly sign in and out from a kiosk, as badges are scanned by the kiosk's camera to identify the employee."
 msgstr ""
 
 #: ../../content/applications/hr/attendances/hardware.rst:40
-msgid "To generate a badge, first navigate to the :menuselection:`Employees app`. Next, click on the desired employee card to open the employee's form, then click the :guilabel:`HR Settings` tab."
+msgid "To generate a badge, first navigate to the :menuselection:`Employees app`. Next, click on the desired employee card to open the employee's form, then click the :guilabel:`Settings` tab."
 msgstr ""
 
 #: ../../content/applications/hr/attendances/hardware.rst:43
@@ -1598,59 +1631,51 @@ msgstr ""
 msgid "A badge for an employee that is created from the Employees app."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/hardware.rst:61
+#: ../../content/applications/hr/attendances/hardware.rst:60
 msgid "Badges are **not** required, as employees can manually identify themselves on the kiosk."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/hardware.rst:64
+#: ../../content/applications/hr/attendances/hardware.rst:63
 msgid "Barcode scanners"
 msgstr ""
 
-#: ../../content/applications/hr/attendances/hardware.rst:66
+#: ../../content/applications/hr/attendances/hardware.rst:65
 msgid "When using badges to check in and out, the barcode **must** be scanned to identify the employee. This can be done with the kiosk's camera, if one is available on the device."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/hardware.rst:69
+#: ../../content/applications/hr/attendances/hardware.rst:68
 msgid "If a camera is **not** available on the kiosk device, an external barcode scanner must be used to scan badges."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/hardware.rst:72
+#: ../../content/applications/hr/attendances/hardware.rst:71
 msgid "Kiosks work with most USB barcode scanners. Bluetooth barcode scanners are also supported for devices without USB ports, or if a wireless connection is desired."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/hardware.rst:75
+#: ../../content/applications/hr/attendances/hardware.rst:74
 msgid "Follow the manufacturer's instructions on the barcode scanner to properly connect the barcode scanner to the kiosk device."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/hardware.rst:79
+#: ../../content/applications/hr/attendances/hardware.rst:78
 msgid "If the barcode scanner is connected directly to a computer, it :doc:`must be configured <../../inventory_and_mrp/barcode/setup/hardware>` to use the computer's keyboard layout."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/hardware.rst:83
+#: ../../content/applications/hr/attendances/hardware.rst:82
 msgid "An IoT box is **not** required to use a barcode scanner."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/hardware.rst:88
+#: ../../content/applications/hr/attendances/hardware.rst:87
 msgid "RFID key fob readers"
 msgstr ""
 
-#: ../../content/applications/hr/attendances/hardware.rst:90
+#: ../../content/applications/hr/attendances/hardware.rst:89
 msgid "Instead of using a :ref:`badge <attendances/hardware/badges>`, employees can scan a personal RFID key fob with an RFID reader to check in and out of work."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/hardware.rst:93
+#: ../../content/applications/hr/attendances/hardware.rst:92
 msgid "It is **required** to purchase *both* RFID key fobs and an RFID reader to use this method to check in and out. Follow the manufacturer's directions to install the RFID reader, and set up the RFID key fob."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/hardware.rst:-1
-msgid "An RFID key fob is placed on an RFID reader."
-msgstr ""
-
-#: ../../content/applications/hr/attendances/hardware.rst:103
-msgid "A recommended RFID reader is the `Neuftech USB RFID Reader <https://neuftech.net/Neuftech-USB-RFID-Reader-ID-Kartenleseger%C3%A4t-Kartenleser-Kontaktlos-Card-Reader-f%C3%BCr-EM4100>`_."
-msgstr ""
-
-#: ../../content/applications/hr/attendances/hardware.rst:107
+#: ../../content/applications/hr/attendances/hardware.rst:97
 msgid "An IoT box is **not** required to use RFID key fobs."
 msgstr ""
 
@@ -1659,7 +1684,7 @@ msgid "Kiosks"
 msgstr ""
 
 #: ../../content/applications/hr/attendances/kiosks.rst:5
-msgid "Odoo's *Attendances* app allows employees to check in and out of work directly from the database, or from a kiosk."
+msgid "Odoo's **Attendances** app allows employees to check in and out of work directly from the database or a kiosk."
 msgstr ""
 
 #: ../../content/applications/hr/attendances/kiosks.rst:8
@@ -1671,7 +1696,7 @@ msgid "Kiosks are needed for employees who do **not** have access to the databas
 msgstr ""
 
 #: ../../content/applications/hr/attendances/kiosks.rst:13
-msgid "Only employees with access to the database can check in and out from the *Attendances* app, and they are referred to as *users*."
+msgid "Only employees with access to the Odoo database can check in and out from the **Attendances** app, and they are referred to as *users*."
 msgstr ""
 
 #: ../../content/applications/hr/attendances/kiosks.rst:17
@@ -1679,7 +1704,7 @@ msgid "If employees :ref:`check in and out <attendances/kiosk-mode-entry>` using
 msgstr ""
 
 #: ../../content/applications/hr/attendances/kiosks.rst:24
-msgid "There are only a few configurations needed to use kiosks in the *Attendances* application. Navigate to :menuselection:`Attendances app --> Configuration` to access the :guilabel:`Settings` page to configure the :ref:`attendances/kiosk-mode` and the :ref:`attendances/kiosk-settings`."
+msgid "To use kiosks in the **Attendances** application, navigate to :menuselection:`Attendances app --> Configuration`. On the :guilabel:`Settings` page, configure the :ref:`Modes section <attendances/kiosk-mode>` and the :ref:`attendances/kiosk-settings`."
 msgstr ""
 
 #: ../../content/applications/hr/attendances/kiosks.rst:28
@@ -1687,66 +1712,70 @@ msgid "Once all desired settings have been configured, click the :guilabel:`Save
 msgstr ""
 
 #: ../../content/applications/hr/attendances/kiosks.rst:34
-msgid "Kiosk Mode section"
+msgid "Modes section"
 msgstr ""
 
 #: ../../content/applications/hr/attendances/kiosks.rst:36
-msgid "Using the drop-down menu, select how an employee checks in when using a kiosk. Options are :guilabel:`Barcode/RFID`, :guilabel:`Barcode/RFID and Manual Selection`, or :guilabel:`Manual Selection`."
+msgid "Determine how an employee checks in when using a kiosk, either by searching for their name on the kiosk (:guilabel:`Manual Selection`), scanning an employee ID or key fob (:guilabel:`Barcode/RFID`). or both."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/kiosks.rst:41
-msgid "The *Barcode* application **does not** need to be installed to use one of the Barcode/RFID settings."
+#: ../../content/applications/hr/attendances/kiosks.rst:40
+msgid "On the settings page, using the drop-down menu for the :guilabel:`Kiosk Mode` :icon:`fa-building-o` field in the :guilabel:`Modes` section, make the desired selection. Options are :guilabel:`Barcode/RFID`, :guilabel:`Barcode/RFID and Manual Selection`, or :guilabel:`Manual Selection`."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/kiosks.rst:47
-msgid "Kiosk Settings section"
-msgstr ""
-
-#: ../../content/applications/hr/attendances/kiosks.rst:49
-msgid "The various settings in the :guilabel:`Kiosk Settings` section determine how employees check in and out with kiosks."
+#: ../../content/applications/hr/attendances/kiosks.rst:46
+msgid "The **Barcode** application **does not** need to be installed to use one of the Barcode/RFID settings."
 msgstr ""
 
 #: ../../content/applications/hr/attendances/kiosks.rst:52
-msgid ":guilabel:`Barcode Source`: this setting **only** appears if one of the two *Barcode/RFID* selections were configured for the :ref:`Kiosk Mode <attendances/kiosk-mode>` setting."
+msgid "Kiosk Settings section"
 msgstr ""
 
-#: ../../content/applications/hr/attendances/kiosks.rst:55
+#: ../../content/applications/hr/attendances/kiosks.rst:54
+msgid "The various settings in the :guilabel:`Kiosk Settings` section determine how employees check in and out with kiosks."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/kiosks.rst:57
+msgid ":guilabel:`Barcode Source` :icon:`fa-building-o`: this setting **only** appears if one of the two *Barcode/RFID* selections were configured for the :ref:`Kiosk Mode <attendances/kiosk-mode>` setting."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/kiosks.rst:61
 msgid "If available, select how barcodes are scanned at the kiosk, via one of the drop-down menu options. Barcodes can be scanned with a dedicated :guilabel:`Scanner`, or with a device's camera (:guilabel:`Front Camera` or :guilabel:`Back Camera`)."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/kiosks.rst:58
+#: ../../content/applications/hr/attendances/kiosks.rst:64
+msgid ":guilabel:`Display Time` :icon:`fa-building-o`: determine how many seconds a check-in/check-out confirmation message remains on the kiosk screen before returning to the main check in screen."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/kiosks.rst:66
 msgid ":guilabel:`Employee PIN Identification`: tick this checkbox if employees should use a unique PIN to check in. PINs are configured on each individual employee record. Refer to the :ref:`new employee documentation <employees/hr-settings>` documentation for more information on setting up PINs."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/kiosks.rst:62
-msgid ":guilabel:`Display Time`: determine how many seconds a check-in/check-out confirmation message remains on the kiosk screen before returning to the main check in screen."
-msgstr ""
-
-#: ../../content/applications/hr/attendances/kiosks.rst:64
-msgid ":guilabel:`Attendance Kiosk Url`: Odoo generates a unique web address (URL) to use a device as a kiosk, without having to sign in to the Odoo database. When setting up a kiosk device, navigate to this unique web address in a web browser to present the *Attendances* app kiosk."
-msgstr ""
-
-#: ../../content/applications/hr/attendances/kiosks.rst:69
-msgid "These kiosk URLs are **not** secured with any type of access code. Anyone who has the URL can access the *Attendances* app kiosk. If the URL is compromised for any reason, such as in the event of a security breach, click :guilabel:`Generate a new Kiosk Mode URL`, located beneath the link, to generate a new URL, and update the kiosk, accordingly."
+#: ../../content/applications/hr/attendances/kiosks.rst:70
+msgid ":guilabel:`Attendance Kiosk Url`: Odoo generates a unique web address (URL) to use a device as a kiosk, without having to sign in to the Odoo database. When setting up a kiosk device, navigate to this unique web address in a web browser to present the **Attendances** app kiosk."
 msgstr ""
 
 #: ../../content/applications/hr/attendances/kiosks.rst:75
+msgid "These kiosk URLs are **not** secured with any type of access code. Anyone who has the URL can access the **Attendances** app kiosk. If the URL is compromised for any reason, such as in the event of a security breach, click :icon:`fa-refresh` :guilabel:`Generate new URL`, located beneath the link, to generate a new URL, and update the kiosk, accordingly."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/kiosks.rst:81
 msgid "Kiosk mode"
 msgstr ""
 
-#: ../../content/applications/hr/attendances/kiosks.rst:77
+#: ../../content/applications/hr/attendances/kiosks.rst:83
 msgid "Entering *Kiosk Mode* is **only** available for users with specific :ref:`access rights <attendances/access-rights>`."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/kiosks.rst:80
+#: ../../content/applications/hr/attendances/kiosks.rst:86
 msgid "*Kiosk Mode* can be activated in two different ways:"
 msgstr ""
 
-#: ../../content/applications/hr/attendances/kiosks.rst:82
+#: ../../content/applications/hr/attendances/kiosks.rst:88
 msgid "Navigate to the :menuselection:`Attendances app`, and click :guilabel:`Kiosk Mode` in the top menu. The device then signs out of Odoo and enters *Kiosk Mode*."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/kiosks.rst:84
+#: ../../content/applications/hr/attendances/kiosks.rst:90
 msgid "Navigate to the :menuselection:`Attendances app --> Configuration`. In the :guilabel:`Kiosk Settings` section, use the link in the :guilabel:`Attendance Kiosk Url` field to open *Kiosk Mode* on any device."
 msgstr ""
 
@@ -1754,95 +1783,95 @@ msgstr ""
 msgid "The Attendances Kiosk URL field in the settings section of the Attendances application."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/kiosks.rst:92
+#: ../../content/applications/hr/attendances/kiosks.rst:98
 msgid "As a security measure, once a device is in *Kiosk Mode*, it is not possible to go back into the database without signing back in."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/kiosks.rst:96
+#: ../../content/applications/hr/attendances/kiosks.rst:102
 msgid "At any time, a new kiosk URL can be generated, if needed. Click the :icon:`fa-refresh` :guilabel:`Generate a new Kiosk Mode URL`"
 msgstr ""
 
-#: ../../content/applications/hr/attendances/kiosks.rst:99
-msgid "To exit *Kiosk Mode*, just close the tab in the web browser or return to the main log-in screen of Odoo."
+#: ../../content/applications/hr/attendances/kiosks.rst:105
+msgid "To exit *Kiosk Mode*, either close the tab in the web browser or return to the main log-in screen of Odoo."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/kiosks.rst:105
+#: ../../content/applications/hr/attendances/kiosks.rst:111
 msgid "Check in and out with a kiosk"
 msgstr ""
 
-#: ../../content/applications/hr/attendances/kiosks.rst:108
+#: ../../content/applications/hr/attendances/kiosks.rst:114
 msgid "Badge"
 msgstr ""
 
-#: ../../content/applications/hr/attendances/kiosks.rst:110
-msgid "To check in or out using a badge, tap the :icon:`fa-camera` :guilabel:`Tap to scan` image in the center of the kiosk."
+#: ../../content/applications/hr/attendances/kiosks.rst:116
+msgid "To check in or out using a badge, tap the :icon:`fa-barcode` :guilabel:`Scan your badge` image in the center of the kiosk."
 msgstr ""
 
 #: ../../content/applications/hr/attendances/kiosks.rst:-1
 msgid "The Attendances Kiosk view displaying the scan badge image."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/kiosks.rst:117
+#: ../../content/applications/hr/attendances/kiosks.rst:122
 msgid "Then, scan the barcode on the badge using the method configured in the :ref:`Kiosk Settings <attendances/kiosk-settings>` section of the configuration menu."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/kiosks.rst:120
+#: ../../content/applications/hr/attendances/kiosks.rst:125
 msgid "Once the barcode is scanned, the employee is checked in or out, and a :ref:`confirmation message <attendances/confirmation>` appears with all the information."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/kiosks.rst:124
+#: ../../content/applications/hr/attendances/kiosks.rst:129
 msgid "RFID"
 msgstr ""
 
-#: ../../content/applications/hr/attendances/kiosks.rst:126
-msgid "To check in or out using an RFID key fob, simply scan the fob with an RFID reader."
+#: ../../content/applications/hr/attendances/kiosks.rst:131
+msgid "To check in or out using an RFID key fob, scan the fob with an RFID reader."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/kiosks.rst:128
+#: ../../content/applications/hr/attendances/kiosks.rst:133
 msgid "Once scanned, the employee is either checked in or checked out, and a :ref:`confirmation message <attendances/confirmation>` appears with all the information."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/kiosks.rst:132
+#: ../../content/applications/hr/attendances/kiosks.rst:137
 msgid "Manually"
 msgstr ""
 
-#: ../../content/applications/hr/attendances/kiosks.rst:134
+#: ../../content/applications/hr/attendances/kiosks.rst:139
 msgid "Users who do not have a scannable badge, or an RFID fob, can manually check in and out at a kiosk."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/kiosks.rst:136
-msgid "Tap the :guilabel:`Identify Manually` button on the kiosk, and a screen appears with all the employees that can be checked in or out. The *Employees* application dashboard has the same display."
+#: ../../content/applications/hr/attendances/kiosks.rst:141
+msgid "Tap the :icon:`fa-user-o` :guilabel:`Identify Manually` button on the kiosk, and a screen appears with all the employees that can be checked in or out. The **Employees** app dashboard has the same display."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/kiosks.rst:139
+#: ../../content/applications/hr/attendances/kiosks.rst:145
 msgid "Tap on a person to check them in or out, and a :ref:`confirmation message <attendances/confirmation>` appears."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/kiosks.rst:142
-msgid "There are two ways to quickly find a specific person:"
+#: ../../content/applications/hr/attendances/kiosks.rst:148
+msgid "To find a specific person, either:"
 msgstr ""
 
-#: ../../content/applications/hr/attendances/kiosks.rst:144
-msgid ":guilabel:`Search...`: tap on the :guilabel:`Search...` field, and enter the desired person's name. As the name is typed in, the matching results are displayed on the screen."
-msgstr ""
-
-#: ../../content/applications/hr/attendances/kiosks.rst:146
-msgid ":guilabel:`Department`: tap on any desired selection in the :guilabel:`Department` section, located on the left-side of the screen, to **only** view employees from that specific department. The number at the end of each listed :guilabel:`Department` represents how many employees that department has."
+#: ../../content/applications/hr/attendances/kiosks.rst:150
+msgid "Search: tap into the search bar and enter the desired person's name. As the name is typed in, the matching results are displayed on the screen."
 msgstr ""
 
 #: ../../content/applications/hr/attendances/kiosks.rst:152
+msgid "By department: tap on any desired selection in the department section, located on the left side of the screen, to **only** view employees from that specific department. The number at the end of each listed department represents how many employees that department has."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/kiosks.rst:157
 msgid "PIN"
 msgstr ""
 
-#: ../../content/applications/hr/attendances/kiosks.rst:154
+#: ../../content/applications/hr/attendances/kiosks.rst:159
 msgid "If the :guilabel:`Employee PIN Identification` checkbox was ticked in the :ref:`Kiosk Settings <attendances/kiosk-settings>` section of the configuration menu, the employee is prompted to enter a PIN when manually checking in or out."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/kiosks.rst:158
-msgid "After the employee is selected, a number pad appears with a message. When checking in, :guilabel:`(Employee) Welcome! Please enter your PIN to check in` appears above the numbers. When checking out, :guilabel:`(Employee) Want to check out? Please enter your PIN to check out` appears above the numbers."
+#: ../../content/applications/hr/attendances/kiosks.rst:163
+msgid "After the employee is selected, a number pad appears with a message. When checking in, :guilabel:`(Employee) Please enter your PIN to check in` appears above the numbers. When checking out, :guilabel:`(Employee) Please enter your PIN to check out` appears above the numbers."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/kiosks.rst:163
+#: ../../content/applications/hr/attendances/kiosks.rst:167
 msgid "Tap in the PIN using the number pad, then tap :guilabel:`OK` when done. The employee is then checked in or out, and a :ref:`confirmation message <attendances/confirmation>` appears."
 msgstr ""
 
@@ -1850,28 +1879,192 @@ msgstr ""
 msgid "The pop-up that appears when prompted to enter a pin."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/kiosks.rst:173
+#: ../../content/applications/hr/attendances/kiosks.rst:176
 msgid "Confirmation message"
 msgstr ""
 
-#: ../../content/applications/hr/attendances/kiosks.rst:175
-msgid "When an employee checks in or out, a confirmation message appears, with all the check in or check out information. When checking in, a welcome message appears, as well as the date and time of check in."
+#: ../../content/applications/hr/attendances/kiosks.rst:178
+msgid "When an employee checks in or out, a confirmation message appears, with all the check in or check out information."
 msgstr ""
 
-#: ../../content/applications/hr/attendances/kiosks.rst:179
-msgid "An :guilabel:`Hours Previously Today: HH:MM` field also appears, displaying any time that has already been logged for that employee for the day. If no time has been logged, the value displayed is: `00:00`. Beneath the message is an :guilabel:`OK` button."
-msgstr ""
-
-#: ../../content/applications/hr/attendances/kiosks.rst:183
-msgid "To exit the screen before the preset time in the kiosk, tap the :guilabel:`OK` button."
+#: ../../content/applications/hr/attendances/kiosks.rst:181
+msgid "When checking in, the :guilabel:`Welcome (Employee)` message appears, along with the current date and time. If the employee has already checked in and out that day, an :guilabel:`Hours Previously Today: HH:MM` message also appears, showing the total hours logged earlier."
 msgstr ""
 
 #: ../../content/applications/hr/attendances/kiosks.rst:185
-msgid "When checking out, the screen displays a goodbye message, with the date and time of check out, and the total hours logged for the day. Beneath the message is a :guilabel:`Goodbye` button. To exit the screen before the preset time, tap the :guilabel:`Goodbye` button."
+msgid "When checking out, :guilabel:`Goodbye (Employee)` appears, as well as the date and time of check out. Beneath the message is an :guilabel:`Hours Today: HH:MM` field, with the total hours and minutes logged for the day."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/kiosks.rst:189
+msgid "Beneath both the \"welcome\" and \"goodbye\" messages is an :guilabel:`OK` button. To exit the screen before the preset time in the kiosk, tap the :guilabel:`OK` button."
 msgstr ""
 
 #: ../../content/applications/hr/attendances/kiosks.rst:-1
 msgid "The goodbye message with all the employee's check out information."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:3
+msgid "Work approvals and overtime"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:5
+msgid "Odoo's **Attendances** app requires management oversight in order to ensure all logged attendances are correct, especially overtime hours and incomplete shifts."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:11
+msgid "Management dashboard"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:13
+msgid "All attendance records that require approval, typically due to overlapping work entries or unapproved time off, are managed from a centralized management dashboard. To access this, navigate to :menuselection:`Attendances app --> Management`."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:17
+msgid "The :guilabel:`Management` dashboard only displays attendance records for current employees that need to be approved, in a default list view. This is due to the two default filters in the search bar, the :guilabel:`To Approve` and :guilabel:`Active Employees`."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:21
+msgid "Each attendance record displays the following information:"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:23
+msgid ":guilabel:`Employee`: the name of the employee"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:24
+msgid ":guilabel:`Check In`: the date and time the employee checked in"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:25
+msgid ":guilabel:`Check Out`: the date and time the employee checked out"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:26
+msgid ":guilabel:`Worked Time`: the number of worked hours the employee logged"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:27
+msgid ":guilabel:`Worked Extra Hours`: the amount of overtime worked"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:28
+msgid ":guilabel:`Extra Hours`: the total extra hours logged"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:29
+msgid ":guilabel:`Overtime Status`: the status of the attendance record. All attendance records that appear on this dashboard have a status of :guilabel:`To Approve`."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:-1
+msgid "The Attendances app Management dashboard, displaying entries needing approval."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:38
+msgid "Approvals and refusals"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:40
+msgid "Attendance records can be approved and refused directly from the :ref:`Management dashboard <attendances/dashboard>`. At the far-right of each record, :icon:`fa-check` :guilabel:`Approve` and :icon:`fa-times` :guilabel:`Refuse` buttons appear. Click the corresponding button to either approve or refuse the logged attendance record."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:46
+msgid "When approving or refusing attendance records from the :guilabel:`Management` dashboard, it is **not** possible to view the details of the attendance record."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:50
+msgid "Partial approvals"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:52
+msgid "It is possible to approve a portion of the logged :guilabel:`Extra Hours` and not the full amount. To approve only a portion of overtime, click into an attendance record to view the details."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:55
+msgid "Click into the :guilabel:`Extra Hours` field and enter the amount of hours being approved. After editing the :guilabel:`Extra Hours field`, the :guilabel:`Worked Extra Hours` field becomes visible to display the difference between the :guilabel:`Worked Time` and :guilabel:`Extra Hours` fields."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:60
+msgid "The :guilabel:`Worked Time` field is the total hours the employee logged (the :guilabel:`Worked Time` and :guilabel:`Extra Hours` combined). For example, if an employee is scheduled to work eight hours, and worked five extra hours, the :guilabel:`Worked Time` is thirteen hours, and the :guilabel:`Extra Hours` is five hours. The :guilabel:`worked Time` field **cannot** be modified."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:65
+msgid "Click :icon:`fa-check` :guilabel:`Approve` to approve the updated :guilabel:`Extra Hours`. Once partially approved, the :guilabel:`Worked Extra Hours` field disappears, along with the :icon:`fa-check` :guilabel:`Approve` button. The difference in hours appears in the :guilabel:`Extra Hours` field."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:70
+msgid "Once overtime hours are partially approved, the status changes to :guilabel:`Approved`."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:-1
+msgid "A detailed attendance record."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:76
+msgid "Once partial overtime is approved, it is still possible to deny overtime by clicking :icon:`fa-times` :guilabel:`Refuse`. The record can be modified as many times as needed."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:80
+msgid "Occasionally, verifying an employee's location when checking-in may be needed. The method the employee checked-in to work is found on the individual record, in the :guilabel:`Mode` field."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:83
+msgid "The :guilabel:`Mode` field is not modifiable, as it only log the method the attendance record was created."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:86
+msgid "The possible options are:"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:88
+msgid ":guilabel:`Kiosk`: the employee physically checked in or out using a :doc:`kiosk <kiosks>` device. The employee was present at the kiosk to check-in."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:90
+msgid ":guilabel:`Systray`: the employee checked in or out :doc:`directly from the database <check_in_check_out>`. Depending on the :guilabel:`IP Address` displayed on the detailed attendance record, the employee's location at the time of check-in can be determined."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:93
+msgid ":guilabel:`Manual`: the record was created manually in the **Attendances** app. This is typically done by management, to add a missing record."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:97
+msgid "Create attendance records"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:99
+msgid "When necessary, users with the required :ref:`access rights <employees/work-info-tab>` are able to create attendance records manually in the **Attendances** app. Some situations requiring this is when employees forget to check in and out for shifts, as employees cannot retroactively create attendance records."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:104
+msgid "To add a missing attendance record, navigate to :menuselection:`Attendances app --> Overview`. Click the :guilabel:`New` button in the upper-left corner. In the :guilabel:`Create` pop-up window, enter the following information on the form:"
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:108
+msgid ":guilabel:`Employee`: select the employee the record is being created for. The signed-in user populates this field, by default."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:110
+msgid ":guilabel:`Check In`: using the calendar modal, select the check in date and time, then click :icon:`fa-check` :guilabel:`Apply`. By default, the current date is selected, and the time is set to `00:00:00`."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:113
+msgid ":guilabel:`Check Out`: using the calendar modal, select the check out date and time, then click :icon:`fa-check` :guilabel:`Apply`. By default, the following date is selected, and the time is set to `00:00:00`."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:116
+msgid ":guilabel:`Worked Time`: this field is automatically populated with the difference from the selected :guilabel:`Check In` and :guilabel:`Check Out` times. This field **cannot** be modified."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:118
+msgid ":guilabel:`Extra Hours`: enter the number of overtime hours, if any, to be approved."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:121
+msgid "Once :guilabel:`Extra Hours` are added, they are automatically approved by the system. However, it is possible to manually refuse them, as explained in the :ref:`Approvals and Refusals <attendances/approve-refuse>` section."
+msgstr ""
+
+#: ../../content/applications/hr/attendances/management.rst:-1
+msgid "An Attendances app record form, filled out for Doris Cole for April 23, 2025."
 msgstr ""
 
 #: ../../content/applications/hr/employees.rst:7
@@ -2040,7 +2233,7 @@ msgid "Departments"
 msgstr ""
 
 #: ../../content/applications/hr/employees/departments.rst:5
-msgid "All employees in the *Employees* app fall under specific departments within a company."
+msgid "All employees in the **Employees** app fall under specific departments within a company."
 msgstr ""
 
 #: ../../content/applications/hr/employees/departments.rst:8
@@ -2048,138 +2241,138 @@ msgid "Create new departments"
 msgstr ""
 
 #: ../../content/applications/hr/employees/departments.rst:10
-msgid "To make a new department, navigate to :menuselection:`Employees app --> Departments`, then click :guilabel:`New` in the top-left to reveal a blank department form. Fill out the following information on the department form:"
+msgid "To make a new department, navigate to :menuselection:`Employees app --> Departments`, then click the :guilabel:`New` button in the top-left corner to reveal a blank department form. Fill out the following information on the department form:"
+msgstr ""
+
+#: ../../content/applications/hr/employees/departments.rst:14
+msgid ":guilabel:`Department Name`: enter a name for the department."
+msgstr ""
+
+#: ../../content/applications/hr/employees/departments.rst:15
+msgid ":guilabel:`Manager`: using the drop-down menu, select the department manager."
+msgstr ""
+
+#: ../../content/applications/hr/employees/departments.rst:16
+msgid ":guilabel:`Parent Department`: if the new department is housed within another department (has a parent department), select the parent department using the drop-down menu."
+msgstr ""
+
+#: ../../content/applications/hr/employees/departments.rst:18
+msgid ":guilabel:`Company`: using the drop-down menu, select the company the department is part of. This field only appears in a multi-company database."
+msgstr ""
+
+#: ../../content/applications/hr/employees/departments.rst:20
+msgid ":guilabel:`Color`: select a color for the department. Click the colored box to display all the color options. Click on a color to select it."
+msgstr ""
+
+#: ../../content/applications/hr/employees/departments.rst:22
+msgid ":guilabel:`Appraisal Templates`: using the drop-down menu, select the appraisal form to be used for all employee appraisals within this department. If a new appraisal is desired, enter the name for the appraisal, then click :guilabel:`Create and edit...` to modify the new appraisal form. This field **only** appears if the **Appraisals** app is installed."
+msgstr ""
+
+#: ../../content/applications/hr/employees/departments.rst:26
+msgid ":guilabel:`Appraisal Survey`: using the drop-down menu, select the default survey to use for the department when requesting feedback from employees within the department. The default options are :guilabel:`Employee Opinion Form`, :guilabel:`360 Feedback`, and :guilabel:`Employee Appraisal Form`. This field **only** appears if the **Appraisals** app is installed, *and* the *360 Feedback* option is enabled in the settings."
+msgstr ""
+
+#: ../../content/applications/hr/employees/departments.rst:32
+msgid "After the form is completed, click the :icon:`fa-cloud-upload` :guilabel:`(cloud upload)` icon to manually save the changes. When saved, a :guilabel:`DEPARTMENT ORGANIZATION` chart appears in the top-right of the department card, illustrating where the department lies in the organization."
 msgstr ""
 
 #: ../../content/applications/hr/employees/departments.rst:-1
 msgid "The department for with all fields filled out."
 msgstr ""
 
-#: ../../content/applications/hr/employees/departments.rst:18
-msgid ":guilabel:`Department Name`: enter a name for the department."
-msgstr ""
-
-#: ../../content/applications/hr/employees/departments.rst:19
-msgid ":guilabel:`Manager`: using the drop-down menu, select the department manager."
-msgstr ""
-
-#: ../../content/applications/hr/employees/departments.rst:20
-msgid ":guilabel:`Parent Department`: if the new department is housed within another department (has a parent department), select the parent department using the drop-down menu."
-msgstr ""
-
-#: ../../content/applications/hr/employees/departments.rst:22
-msgid ":guilabel:`Custom Appraisal Templates`: if employees in this department require a specific appraisal form that is different from the default appraisal form, tick the checkbox. If this option is activated, an :guilabel:`Appraisal Templates` tab appears below the form. This field **only** appears if the *Appraisals* app is installed."
-msgstr ""
-
-#: ../../content/applications/hr/employees/departments.rst:26
-msgid ":guilabel:`Company`: using the drop-down menu, select the company the department is part of."
-msgstr ""
-
-#: ../../content/applications/hr/employees/departments.rst:27
-msgid ":guilabel:`Appraisal Survey`: using the drop-down menu, select the default survey to use for the department when requesting feedback from employees. This field **only** appears if the *Appraisals* app is installed, **and** the *360 Feedback* option is enabled in the settings."
-msgstr ""
-
-#: ../../content/applications/hr/employees/departments.rst:30
-msgid ":guilabel:`Color`: select a color for the department. Click the default white color box to display all the color options. Click on a color to select it."
-msgstr ""
-
-#: ../../content/applications/hr/employees/departments.rst:32
-msgid ":guilabel:`Appraisal Templates` tab: this tab **only** appears if the :guilabel:`Custom Appraisal Templates` options is activated on the form. Make any desired edits to the appraisal form. The appraisal form is used for appraisals for all employees within this department."
-msgstr ""
-
-#: ../../content/applications/hr/employees/departments.rst:36
-msgid "After the form is completed, click the :icon:`fa-cloud-upload` :guilabel:`(cloud upload)` icon to manually save the changes. When saved, a :guilabel:`Department Organization` chart appears in the top-right of the department card."
-msgstr ""
-
-#: ../../content/applications/hr/employees/departments.rst:41
+#: ../../content/applications/hr/employees/departments.rst:40
 msgid "The form auto-saves while data is entered, however the :guilabel:`Department Organization` chart does **not** appear until the form is manually saved. If the form is not saved, the :guilabel:`Department Organization` chart is visible upon opening the department card from the :guilabel:`Departments` dashboard."
 msgstr ""
 
-#: ../../content/applications/hr/employees/departments.rst:47
-msgid "Refer to the :doc:`../appraisals` documentation for more information."
+#: ../../content/applications/hr/employees/departments.rst:46
+msgid ":doc:`../appraisals`"
 msgstr ""
 
-#: ../../content/applications/hr/employees/departments.rst:50
+#: ../../content/applications/hr/employees/departments.rst:49
 msgid "Departments dashboard"
 msgstr ""
 
-#: ../../content/applications/hr/employees/departments.rst:52
-msgid "To view the currently configured departments, navigate to :menuselection:`Employees app --> Departments`. All departments appear in a Kanban view, by default, and are listed in alphabetical order."
+#: ../../content/applications/hr/employees/departments.rst:51
+msgid "To view the currently configured departments, navigate to :menuselection:`Employees app --> Departments`. All departments appear in a Kanban view, and are listed in alphabetical order."
+msgstr ""
+
+#: ../../content/applications/hr/employees/departments.rst:54
+msgid "The default view for the :guilabel:`Departments` dashboard is a :ref:`Kanban view <employees/department-kanban>`. It is possible to view the departments in two other forms: a :ref:`list view <employees/department-list>` and a :ref:`hierarchy view <employees/department-hierarchy>`."
 msgstr ""
 
 #: ../../content/applications/hr/employees/departments.rst:-1
 msgid "The departments dashboard view with all the department cards in a Kanban view."
 msgstr ""
 
-#: ../../content/applications/hr/employees/departments.rst:61
+#: ../../content/applications/hr/employees/departments.rst:65
 #: ../../content/applications/hr/fleet/accidents.rst:142
 #: ../../content/applications/hr/fleet/service.rst:329
 #: ../../content/applications/hr/recruitment.rst:174
 msgid "Kanban view"
 msgstr ""
 
-#: ../../content/applications/hr/employees/departments.rst:63
-msgid "Each department has its own Kanban card on the main :guilabel:`Departments` :icon:`oi-view-kanban` :guilabel:`(Kanban)` dashboard view, that can display the following information:"
-msgstr ""
-
-#: ../../content/applications/hr/employees/departments.rst:66
-msgid "Department name: the name of the department."
-msgstr ""
-
 #: ../../content/applications/hr/employees/departments.rst:67
-msgid "Company: the company the department is part of."
-msgstr ""
-
-#: ../../content/applications/hr/employees/departments.rst:68
-msgid ":guilabel:`Employees`: the number of employees within the department."
-msgstr ""
-
-#: ../../content/applications/hr/employees/departments.rst:69
-msgid ":guilabel:`Appraisals`: the number of appraisals scheduled for employees in the department."
+msgid "Each department has its own Kanban card on the main :guilabel:`Departments` dashboard. Each department card displays the following information, if available:"
 msgstr ""
 
 #: ../../content/applications/hr/employees/departments.rst:70
-msgid ":guilabel:`Time Off Requests`: the number of unapproved time off requests for employees in the department :ref:`awaiting approval <time_off/manage-time-off>` . This **only** appears if there are requests to approve."
+msgid ":guilabel:`Name`: the name of the department."
+msgstr ""
+
+#: ../../content/applications/hr/employees/departments.rst:71
+msgid ":guilabel:`Manager`: the name and image of the department manager."
+msgstr ""
+
+#: ../../content/applications/hr/employees/departments.rst:72
+msgid ":guilabel:`Company`: the company the department is part of, including the location icon."
 msgstr ""
 
 #: ../../content/applications/hr/employees/departments.rst:73
-msgid ":guilabel:`Allocation Requests`: the number of unapproved allocation requests for employees in the department :ref:`awaiting approval <time_off/manage-allocations>`. This **only** appears if there are requests to approve."
+msgid ":guilabel:`Employees`: the number of employees within the department."
 msgstr ""
 
-#: ../../content/applications/hr/employees/departments.rst:76
-msgid ":guilabel:`New Applicants`: the number of :ref:`new applicants <recruitment/new>` for a position in this department. This **only** appears if there are new applicants."
+#: ../../content/applications/hr/employees/departments.rst:74
+msgid ":guilabel:`Appraisals`: the number of appraisals scheduled for employees in the department."
+msgstr ""
+
+#: ../../content/applications/hr/employees/departments.rst:75
+msgid ":guilabel:`Time Off Requests`: the number of unapproved time off requests for employees in the department :ref:`awaiting approval <time_off/manage-time-off>` . This **only** appears if there are requests to approve."
 msgstr ""
 
 #: ../../content/applications/hr/employees/departments.rst:78
-msgid ":guilabel:`Expense Reports`: the number of employees in the department with :doc:`open expense reports to approve <../../finance/expenses/approve_expenses>`. This **only** appears if there are any expense reports waiting for approval."
+msgid ":guilabel:`Allocation Requests`: the number of unapproved allocation requests for employees in the department :ref:`awaiting approval <time_off/manage-allocations>`. This **only** appears if there are requests to approve."
 msgstr ""
 
 #: ../../content/applications/hr/employees/departments.rst:81
-msgid ":guilabel:`Absence`: the number of absences for the current day."
+msgid ":guilabel:`New Applicants`: the number of :ref:`new applicants <recruitment/new>` for a position within the department. This **only** appears if there are new applicants."
 msgstr ""
 
-#: ../../content/applications/hr/employees/departments.rst:82
-msgid "Color bar: the selected color for the department appears as a vertical bar on the left side of the department card."
+#: ../../content/applications/hr/employees/departments.rst:83
+msgid ":guilabel:`Expense Reports`: the number of employees in the department with :doc:`open expense reports to approve <../../finance/expenses/approve_expenses>`. This **only** appears if there are any expense reports waiting for approval."
 msgstr ""
 
 #: ../../content/applications/hr/employees/departments.rst:86
-msgid "Click on an alert in a department card, such as :guilabel:`Time Off Requests`, to reveal a list view of the requests to approve. This list includes **all** open requests to approve, not just from the specific department."
+msgid ":guilabel:`Absence`: the number of employees with approved time off for the current day."
 msgstr ""
 
-#: ../../content/applications/hr/employees/departments.rst:90
-msgid "The default view for the :guilabel:`Departments` dashboard is a Kanban view. It is possible to view the departments in two other forms: a list view and a hierarchy view."
+#: ../../content/applications/hr/employees/departments.rst:87
+msgid "Color bar: the selected color for the department appears as a vertical bar on the left side of the department card."
 msgstr ""
 
-#: ../../content/applications/hr/employees/departments.rst:94
+#: ../../content/applications/hr/employees/departments.rst:91
+msgid "Click on an alert in a department card, such as :guilabel:`Time Off Requests`, to reveal a list view of the requests to approve for that department"
+msgstr ""
+
+#: ../../content/applications/hr/employees/departments.rst:97
 #: ../../content/applications/hr/fleet/service.rst:302
 msgid "List view"
 msgstr ""
 
-#: ../../content/applications/hr/employees/departments.rst:96
+#: ../../content/applications/hr/employees/departments.rst:99
 msgid "To view the departments in a list view, click the :icon:`fa-align-justify` :guilabel:`(list)` icon in the top-right corner. The departments appear in a list view, which displays the :guilabel:`Department Name`, :guilabel:`Company`, :guilabel:`Manager`, :guilabel:`Employees`, :guilabel:`Parent Department`, and :guilabel:`Color` for each department."
 msgstr ""
 
-#: ../../content/applications/hr/employees/departments.rst:101
+#: ../../content/applications/hr/employees/departments.rst:104
 msgid "The departments are sorted alphabetically by :guilabel:`Department Name`, by default."
 msgstr ""
 
@@ -2187,45 +2380,28 @@ msgstr ""
 msgid "The departments presented in a list view."
 msgstr ""
 
-#: ../../content/applications/hr/employees/departments.rst:108
-msgid "When in list view, departments can be managed in batch by selecting one or multiple record's checkbox, then select the :icon:`fa-cog` :guilabel:`Actions` button to reveal a drop-down menu of actions."
-msgstr ""
-
-#: ../../content/applications/hr/employees/departments.rst:113
+#: ../../content/applications/hr/employees/departments.rst:112
 msgid "Hierarchy view"
 msgstr ""
 
-#: ../../content/applications/hr/employees/departments.rst:115
-msgid "To view the departments in a hierarchy view, click the :icon:`fa-share-alt fa-rotate-90` :guilabel:`(hierarchy)` icon in the top-right corner. The departments appear in an organizational chart format, with the highest-level department at the top (typically :guilabel:`Management`), and all other departments beneath it. All child departments of the first-level child departments are folded."
+#: ../../content/applications/hr/employees/departments.rst:114
+msgid "To view the departments in a hierarchy view, click the :icon:`fa-share-alt fa-rotate-90` :guilabel:`(Hierarchy)` icon in the top-right corner. The departments appear in an organizational chart format, with the highest-level department at the top (typically `Executive Management`), and all other departments beneath it. All child departments of the first-level child departments are folded."
 msgstr ""
 
-#: ../../content/applications/hr/employees/departments.rst:121
-msgid "Each department card displays the :guilabel:`Department Name`, the :guilabel:`Manager` (and their profile image), the :guilabel:`Number of Employees` in the department, and the ability to expand the department (:guilabel:`Unfold`) if there are child departments beneath it."
+#: ../../content/applications/hr/employees/departments.rst:120
+msgid "Each department card displays the :guilabel:`Department Name`, the :guilabel:`Manager` (and their profile image), the :guilabel:`Number of Employees` in the department, and the number of any child departments."
 msgstr ""
 
-#: ../../content/applications/hr/employees/departments.rst:125
+#: ../../content/applications/hr/employees/departments.rst:124
 msgid "Click the :guilabel:`Unfold` button on a department card to expand it. Once expanded, the :guilabel:`Unfold` button changes to a :guilabel:`Fold` button. To collapse the department, click the :guilabel:`Fold` button. Only **one** department *per row* can be unfolded at a time."
 msgstr ""
 
-#: ../../content/applications/hr/employees/departments.rst:129
-msgid "Click anywhere on a department card to open the department form. Click the :guilabel:`(#) Employees` smart button to view a list of all the employees in that department, including all employees in the child departments beneath it, organized by individual department."
+#: ../../content/applications/hr/employees/departments.rst:128
+msgid "Click anywhere on a department card to open the department form. Click the :guilabel:`(#) Employees` smart button to view a list of all the employees in that department."
 msgstr ""
 
-#: ../../content/applications/hr/employees/departments.rst:134
-msgid "In the hierarchy view, if the :guilabel:`(2) Employees` button on the :guilabel:`Management` card is clicked (the highest-level department card), **all** employees appear in a list view, grouped by department. This is because **all** departments are children of the :guilabel:`Management` department."
-msgstr ""
-
-#: ../../content/applications/hr/employees/departments.rst:139
-msgid "If the :guilabel:`(3) Employees` button in the :guilabel:`Sales` department card is clicked, the employees from the :guilabel:`Sales` department, as well as its two child departments (:guilabel:`East Coast Territory` and :guilabel:`West Coat Territory`), appear in the list."
-msgstr ""
-
-#: ../../content/applications/hr/employees/departments.rst:0
+#: ../../content/applications/hr/employees/departments.rst:-1
 msgid "The departments presented in a hierarchy view."
-msgstr ""
-
-#: ../../content/applications/hr/employees/departments.rst:0
-msgid "The list view of employees for the department that was clicked, including all child\n"
-"departments."
 msgstr ""
 
 #: ../../content/applications/hr/employees/equipment.rst:3
@@ -5005,15 +5181,15 @@ msgid "Frontdesk"
 msgstr ""
 
 #: ../../content/applications/hr/frontdesk.rst:7
-msgid "The Odoo *Frontdesk* application provides a way for visitors to check in to a building or location, and alert the person they are meeting about their arrival. Additionally, they can request a pre-configured beverage to be brought to them, while they wait."
+msgid "The Odoo **Frontdesk** application provides a way for visitors to check in to a building or location, and alert the person they are meeting about their arrival. Additionally, they can request a preconfigured beverage to be brought to them, while they wait."
 msgstr ""
 
 #: ../../content/applications/hr/frontdesk.rst:11
-msgid "This application is ideal for businesses that do **not** have someone working at a reception desk, locations **without** a designated waiting area available to guests and visitors."
+msgid "This application is ideal for businesses that do **not** have someone working at a reception desk, or locations **without** a designated waiting area available to guests and visitors."
 msgstr ""
 
 #: ../../content/applications/hr/frontdesk.rst:17
-msgid "The first item to configure with the *Frontdesk* application is the station, followed by any drink selections that might optionally be offered."
+msgid "The first item to configure with the **Frontdesk** application is the station, followed by any drink selections that might optionally be offered."
 msgstr ""
 
 #: ../../content/applications/hr/frontdesk.rst:21
@@ -5021,11 +5197,11 @@ msgid "Stations"
 msgstr ""
 
 #: ../../content/applications/hr/frontdesk.rst:23
-msgid "In Odoo's *Frontdesk* application, a *Station* can be thought of as any location where someone can sign in and wait for an employee. This is typically some form of waiting room, such as a lobby. Each station has a kiosk where visitors check in."
+msgid "In Odoo's **Frontdesk** application, a *Station* can be thought of as any location where someone can sign in and wait for an employee. This is typically some form of waiting room, such as a lobby. Each station has a kiosk where visitors check in."
 msgstr ""
 
 #: ../../content/applications/hr/frontdesk.rst:27
-msgid "When setting up the *Frontdesk* application, a minimum of one station **must** be configured, but there is no limit to how many stations can be created and configured."
+msgid "When setting up the **Frontdesk** application, a minimum of one station **must** be configured, but there is no limit to how many stations can be created and configured."
 msgstr ""
 
 #: ../../content/applications/hr/frontdesk.rst:30
@@ -5033,7 +5209,7 @@ msgid "To create a station, navigate to :menuselection:`Frontdesk app --> Config
 msgstr ""
 
 #: ../../content/applications/hr/frontdesk.rst:35
-msgid ":guilabel:`Frontdesk Name`: enter a name for the specific frontdesk location. This should be short and easily identifiable, such as `Reception Desk` or `Main Lobby`. This field is required in order to create a station."
+msgid ":guilabel:`Frontdesk Name`: enter a name for the specific frontdesk location. This should be short and identifiable, such as `Reception Desk` or `Main Lobby`. This field is required in order to create a station."
 msgstr ""
 
 #: ../../content/applications/hr/frontdesk.rst:38
@@ -5041,7 +5217,7 @@ msgid ":guilabel:`Responsibles`: select the person (or persons) who are alerted 
 msgstr ""
 
 #: ../../content/applications/hr/frontdesk.rst:41
-msgid ":guilabel:`Kiosk URL`: this field auto-populates once the frontdesk form is saved, with at least the :guilabel:`Frontdesk Name` and :guilabel:`Responsibles` fields filled. To save manually, click the :guilabel:`(cloud with upward arrow)` icon, located at the top of the form."
+msgid ":guilabel:`Kiosk URL`: this field auto-populates once the frontdesk form is saved, with at least the :guilabel:`Frontdesk Name` and :guilabel:`Responsibles` fields filled. To save manually, click the :icon:`fa-cloud-upload` :guilabel:`(Save manually)` icon located at the top of the form."
 msgstr ""
 
 #: ../../content/applications/hr/frontdesk.rst:45
@@ -5053,13 +5229,13 @@ msgid "To access the kiosk, click the :guilabel:`Copy` button at the end of the 
 msgstr ""
 
 #: ../../content/applications/hr/frontdesk.rst:52
-msgid "To add an image/photo to a frontdesk form, hover over the :guilabel:`(camera with a '+' sign)` icon in the top-right of the form to reveal a :guilabel:`✏️ (pencil)` icon."
+msgid "To add an image/photo to a frontdesk form, hover over the :guilabel:`(camera with a '+' sign)` icon in the top-right of the form to reveal a :icon:`fa-pencil` :guilabel:`(Edit)` icon."
 msgstr ""
 
 #: ../../content/applications/hr/frontdesk.rst:55
-#: ../../content/applications/hr/frontdesk.rst:168
+#: ../../content/applications/hr/frontdesk.rst:169
 #: ../../content/applications/hr/frontdesk.rst:184
-msgid "Click on the :guilabel:`✏️ (pencil)` icon to open a file explorer, navigate to the desired image/photo file, then click :guilabel:`Open` to select it."
+msgid "Click on the :icon:`fa-pencil` :guilabel:`(Edit)` icon to open a file explorer, navigate to the desired image/photo file, then click :guilabel:`Open` to select it."
 msgstr ""
 
 #: ../../content/applications/hr/frontdesk.rst:58
@@ -5115,7 +5291,7 @@ msgid "To change the default email template, click the drop-down menu in the :gu
 msgstr ""
 
 #: ../../content/applications/hr/frontdesk.rst:100
-msgid "To modify the currently selected template, click the :guilabel:`Internal link (arrow)` icon at the end of the line, and make any edits to the template."
+msgid "To modify the currently selected template, click the :icon:`oi-arrow-right` :guilabel:`(Internal link)` icon at the end of the line, and make any edits to the template."
 msgstr ""
 
 #: ../../content/applications/hr/frontdesk.rst:102
@@ -5127,15 +5303,15 @@ msgid "To change the default SMS template, click the drop-down menu in the :guil
 msgstr ""
 
 #: ../../content/applications/hr/frontdesk.rst:109
-msgid "To modify the currently selected template, click the :guilabel:`Internal link (arrow)` icon at the end of the line, and make any desired edits to the content of the template. The SMS message may have a maximum of 242 characters, which fits in 4 SMS (UNICODE) messages."
+msgid "To modify the currently selected template, click the :icon:`oi-arrow-right` :guilabel:`(Internal link)` icon at the end of the line, and make any desired edits to the content of the template. The SMS message may have a maximum of 242 characters, which fits in 4 SMS (UNICODE) messages."
 msgstr ""
 
 #: ../../content/applications/hr/frontdesk.rst:112
-msgid ":guilabel:`Notify by Discuss`: this option is enabled by default when the :guilabel:`Host Selection` option is enabled. This option opens a *Discuss* application message window with the person the guest is visiting upon check in."
+msgid ":guilabel:`Notify by Discuss`: this option is enabled by default when the :guilabel:`Host Selection` option is enabled. This option opens a **Discuss** application message window with the person the guest is visiting upon check in."
 msgstr ""
 
 #: ../../content/applications/hr/frontdesk.rst:116
-msgid "When enabled, a default message appears for the person the guest is visiting. The *Discuss* application **must** be installed in order for this option to work."
+msgid "When enabled, a default message appears for the person the guest is visiting. The **Discuss** application **must** be installed in order for this option to work."
 msgstr ""
 
 #: ../../content/applications/hr/frontdesk.rst:120
@@ -5147,56 +5323,60 @@ msgid "The default message format for the :guilabel:`Notify by Discuss` option i
 msgstr ""
 
 #: ../../content/applications/hr/frontdesk.rst:128
-msgid "An example of how that might appear in a *Discuss* message is: `Main Lobby Check-In: John Doe (123-555-1234) (Odoo, Inc.) to meet Marc Demo.`"
+msgid "An example of how that might appear in a **Discuss** message is: `Main Lobby Check-In: John Doe (555-555-5555) (Odoo, Inc.) to meet Marc Demo.`"
 msgstr ""
 
 #: ../../content/applications/hr/frontdesk.rst:-1
 msgid "Frontdesk station form with all the information filled out."
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk.rst:136
+#: ../../content/applications/hr/frontdesk.rst:135
 msgid "Side Message tab"
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk.rst:138
+#: ../../content/applications/hr/frontdesk.rst:137
 msgid "Enter any desired text to appear on the station kiosk after a guest has checked in, such as a welcome greeting or any necessary instructions. The text appears on the confirmation page, on the right side of the screen after a guest has completed the check-in process."
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk.rst:145
-#: ../../content/applications/hr/frontdesk/visitors.rst:112
+#: ../../content/applications/hr/frontdesk.rst:144
+#: ../../content/applications/hr/frontdesk/visitors.rst:139
 msgid "Drinks"
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk.rst:147
-msgid "After a station is created, the next step is to configure the drinks to offer visitors, if desired. This step is **not** necessary or required for the *Frontdesk* application to work, and only needs to be configured if drinks are offered to guests."
+#: ../../content/applications/hr/frontdesk.rst:146
+msgid "After a station is created, the next step is to configure the drinks to offer visitors, if desired."
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk.rst:151
+#: ../../content/applications/hr/frontdesk.rst:149
+msgid "This step is **not** necessary or required for the **Frontdesk** application to work, and only needs to be configured if drinks are offered to guests."
+msgstr ""
+
+#: ../../content/applications/hr/frontdesk.rst:152
 msgid "To add a drink option, navigate to :menuselection:`Frontdesk app --> Configuration --> Drinks`, and click :guilabel:`New`. Doing so reveals a blank drink form to configure."
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk.rst:154
+#: ../../content/applications/hr/frontdesk.rst:155
 msgid "Enter the following information on the drink form:"
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk.rst:156
+#: ../../content/applications/hr/frontdesk.rst:157
 msgid ":guilabel:`Drink Name`: type the name of the drink option in this field. This field is required."
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk.rst:157
+#: ../../content/applications/hr/frontdesk.rst:158
 msgid ":guilabel:`People to Notify`: use the drop-down menu in this field to select who is notified when the drink is selected. Multiple people can be entered in this field. This field is required."
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk.rst:159
+#: ../../content/applications/hr/frontdesk.rst:160
 msgid ":guilabel:`Sequence`: enter a numerical value in this field to indicate where in the list of drink options this specific option appears. The lower the number, the higher on the list the drink appears. For example, entering the number one would place that drink at the top of the list, and appear first in the sequence."
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk.rst:165
+#: ../../content/applications/hr/frontdesk.rst:166
 #: ../../content/applications/hr/frontdesk.rst:181
-msgid "To add an image/photo to a drink form, hover over the :guilabel:`(camera with a '+' sign)` icon in the top-right of the form to reveal a :guilabel:`✏️ (pencil)` icon."
+msgid "To add an image/photo to a drink form, hover over the :guilabel:`(camera with a '+' sign)` icon in the top-right of the form to reveal a :icon:`fa-pencil` :guilabel:`(Edit)` icon."
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk.rst:171
+#: ../../content/applications/hr/frontdesk.rst:172
 #: ../../content/applications/hr/frontdesk.rst:187
 msgid "The image selected now appears in the picture field, and is set as the image for the drink."
 msgstr ""
@@ -5222,7 +5402,7 @@ msgid "Navigate to the kiosk in one of two ways:"
 msgstr ""
 
 #: ../../content/applications/hr/frontdesk.rst:199
-msgid "Navigate to the main *Frontdesk* application dashboard, and click the :guilabel:`Open Desk` button on the desired station card. The kiosk loads in a new browser tab."
+msgid "Navigate to the main **Frontdesk** application dashboard, and click the :guilabel:`Open Desk` button on the desired station card. The kiosk loads in a new browser tab."
 msgstr ""
 
 #: ../../content/applications/hr/frontdesk.rst:201
@@ -5230,26 +5410,30 @@ msgid "Navigate to :menuselection:`Frontdesk app --> Configuration --> Stations`
 msgstr ""
 
 #: ../../content/applications/hr/frontdesk.rst:206
-msgid "It is recommended to log out of the database, and close the tab, after navigating to the kiosk. That way, there is no possibility of a visitor accessing the database when checking-in."
+msgid "Once a frontdesk kiosk is accessed, either with the :guilabel:`Open Desk` button or the :guilabel:`Kiosk URL`, the user is *automatically signed out of the database* on that specific device."
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk.rst:212
-msgid "The *Frontdesk* application has two reports available: :guilabel:`Visitors` and :guilabel:`Drinks`."
+#: ../../content/applications/hr/frontdesk.rst:210
+msgid "This is a security measure designed to prevent unauthorized access to the database."
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk.rst:214
+#: ../../content/applications/hr/frontdesk.rst:215
+msgid "The **Frontdesk** application has two reports available: :guilabel:`Visitors` and :guilabel:`Drinks`."
+msgstr ""
+
+#: ../../content/applications/hr/frontdesk.rst:218
 msgid "To access either of these reports, navigate to :menuselection:`Frontdesk app --> Reporting` to reveal a drop-down menu containing the options: :guilabel:`Visitors` and :guilabel:`Drinks`."
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk.rst:217
+#: ../../content/applications/hr/frontdesk.rst:221
 msgid "The :guilabel:`Visitors` report displays the number of visitors by month, for the current year. The :guilabel:`Drinks` report shows how many total requests were made for each drink."
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk.rst:220
+#: ../../content/applications/hr/frontdesk.rst:224
 msgid "As with all reports in Odoo, the filters and groups can be modified to show other metrics, as well."
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk.rst:223
+#: ../../content/applications/hr/frontdesk.rst:227
 msgid ":doc:`frontdesk/visitors`"
 msgstr ""
 
@@ -5258,7 +5442,7 @@ msgid "Visitors"
 msgstr ""
 
 #: ../../content/applications/hr/frontdesk/visitors.rst:5
-msgid "In the Odoo *Frontdesk* application, a *visitor* is defined as any non-employee (e.g., repair person, job candidate, etc.). These visitors can be logged upon arrival and departure for security purposes. This ensures an accurate list of people on the premises."
+msgid "In the Odoo **Frontdesk** application, a *visitor* refers to any non-employee (e.g., repair person, job candidate, auditor, etc.). Visitor arrivals and departures can be logged for security purposes, ensuring an accurate record of who is on the premises."
 msgstr ""
 
 #: ../../content/applications/hr/frontdesk/visitors.rst:12
@@ -5302,7 +5486,7 @@ msgid ":guilabel:`CheckIn`: the date and time the guest checked in."
 msgstr ""
 
 #: ../../content/applications/hr/frontdesk/visitors.rst:30
-msgid ":guilabel:`Checkout`\\*: the date and time the guest checked out. In the default view, only guests with a :guilabel:`Checked-In` or :guilabel:`Planned` status are visible. Guests with check-out times are only visible if the :guilabel:`Today` filter is not active."
+msgid ":guilabel:`Checkout`\\*: the date and time the guest checked out. In the default view, only guests with a :guilabel:`Checked-In` or :guilabel:`Planned` status are visible. Guests with check-out times are only visible if the :guilabel:`Today` filter is removed."
 msgstr ""
 
 #: ../../content/applications/hr/frontdesk/visitors.rst:33
@@ -5321,143 +5505,171 @@ msgstr ""
 msgid ":guilabel:`Email`\\*: the guest's email address."
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk/visitors.rst:39
-msgid "\\* These fields are not visible in the default :guilabel:`Visitor` list. These must be enabled using the :icon:`oi-settings-adjust` :guilabel:`(settings adjust)` icon in the top-right of the list."
+#: ../../content/applications/hr/frontdesk/visitors.rst:38
+msgid ":guilabel:`Company`\\*: the company the guest is there to visit. This field is only available if in a multi-company database."
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk/visitors.rst:43
+#: ../../content/applications/hr/frontdesk/visitors.rst:41
+msgid "\\* These fields are not visible in the default :guilabel:`Visitor` list. These must be enabled using the :icon:`oi-settings-adjust` :guilabel:`(adjust settings)` icon in the top-right corner of the list."
+msgstr ""
+
+#: ../../content/applications/hr/frontdesk/visitors.rst:45
 msgid "To the far-right of the titled columns on the :guilabel:`Visitors` page, there is an untitled column, where a guest's status can be updated."
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk/visitors.rst:46
+#: ../../content/applications/hr/frontdesk/visitors.rst:48
 msgid "When a guest leaves, click the available :guilabel:`Check out` button to update the guest's record, and log the date and time they left."
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk/visitors.rst:49
-msgid "If a scheduled guest arrives, and they did not check in using the *Frontdesk* kiosk, they can be checked in here, by clicking the available :guilabel:`Check in` button to log the date and time they arrived."
+#: ../../content/applications/hr/frontdesk/visitors.rst:51
+msgid "If a scheduled guest arrives, and they did not check in using a **Frontdesk** kiosk, they can be checked in from this list, by clicking the available :guilabel:`Check in` button to log the date and time they arrived."
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk/visitors.rst:53
+#: ../../content/applications/hr/frontdesk/visitors.rst:55
 msgid "Beside the untitled status column, a :guilabel:`Drink Served` button appears, but only if that particular visitor requested a drink."
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk/visitors.rst:56
+#: ../../content/applications/hr/frontdesk/visitors.rst:58
 msgid "When their drink has been served, click the :guilabel:`Drink Served` button to indicate the drink has been delivered to the guest. Once clicked, that button disappears."
+msgstr ""
+
+#: ../../content/applications/hr/frontdesk/visitors.rst:61
+msgid "On the far-right of the line, a :guilabel:`Print Badge` button appears for *planned* visitors **only**. Click this button to download a PDF file of the visitor's badge. The badge displays the date and time the visitor checked in, the visitor's name and company, who they are visiting, and the logo of the company they are visiting."
+msgstr ""
+
+#: ../../content/applications/hr/frontdesk/visitors.rst:67
+msgid "The PDF badge can be printed onto adhesive labels for the visitor to wear, or onto paper that can be placed into a plastic badge holder."
 msgstr ""
 
 #: ../../content/applications/hr/frontdesk/visitors.rst:-1
 msgid "The full list of currently checked in visitors, with the drinks to be served highlighted."
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk/visitors.rst:63
-msgid "If any column is not visible, or if a visible column is preferred to be hidden, click the :icon:`oi-settings-adjust` :guilabel:`(additional options)` icon, located at the end of the column name list. Doing so, reveals a reveals a drop-down menu of column options to enable or disable. A :icon:`fa-check` :guilabel:`(check)` icon indicates the column is visible."
+#: ../../content/applications/hr/frontdesk/visitors.rst:73
+msgid "If any column is not visible, or if a visible column is preferred to be hidden, click the :icon:`oi-settings-adjust` :guilabel:`(adjust settings)` icon, located at the end of the top line. Doing so, reveals a drop-down menu of column options to enable or disable. A :icon:`fa-check` :guilabel:`(check)` icon indicates the column is visible."
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk/visitors.rst:69
+#: ../../content/applications/hr/frontdesk/visitors.rst:81
 msgid "Planned visitors"
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk/visitors.rst:71
-msgid "Enter expected guest information in advance by creating a planned guest in the *Frontdesk* app."
+#: ../../content/applications/hr/frontdesk/visitors.rst:83
+msgid "When guests are expected, such as job candidates, government officials, or new suppliers, it can be helpful to enter the visitor information in advance. When the visitors arrive, they can utilize the *Quick Check In* option on the kiosk, rather than entering all their information manually upon arrival."
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk/visitors.rst:73
+#: ../../content/applications/hr/frontdesk/visitors.rst:88
+msgid "Enter expected guest information in advance by creating a planned guest in the **Frontdesk** app."
+msgstr ""
+
+#: ../../content/applications/hr/frontdesk/visitors.rst:90
 msgid "To create a planned guest, navigate to :menuselection:`Frontdesk app --> Visitors`, and click :guilabel:`New`. Then, enter the same information as any other :ref:`visitor <frontdesk/list>` on the guest form that appears. The only required fields are the visitor's :guilabel:`Name` and the :guilabel:`Station` at which they are expected to arrive."
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk/visitors.rst:79
-msgid "If a guest is planned in advance, they must be checked in from the list on the :guilabel:`Visitors` page in the *Frontdesk* application (:menuselection:`Frontdesk app --> Visitors`). If a planned guest checks in using a kiosk, they will be checked in separately, and their planned visitor entry remains listed as :guilabel:`Planned`."
+#: ../../content/applications/hr/frontdesk/visitors.rst:96
+msgid "If a guest is planned in advance, they must be checked in from the list on the :guilabel:`Visitors` page in the **Frontdesk** application (:menuselection:`Frontdesk app --> Visitors`). If a planned guest checks in using a kiosk, they are checked in separately from their planned visitor entry, and their planned visitor entry remains listed as :guilabel:`Planned`."
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk/visitors.rst:84
+#: ../../content/applications/hr/frontdesk/visitors.rst:101
 msgid "The :guilabel:`Planned` status of a planned guest **only** changes to :guilabel:`Checked-In` when they are checked in *inside* the application's :guilabel:`Visitors` list."
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk/visitors.rst:87
+#: ../../content/applications/hr/frontdesk/visitors.rst:104
 msgid "If a guest does check in using a kiosk, ensure all records are current, and the list of guests that are currently on-site is correct. Be sure to check in and/or check out the correct entries, so the visitors list correctly reflects who is currently on the premises."
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk/visitors.rst:91
+#: ../../content/applications/hr/frontdesk/visitors.rst:108
 msgid "Ensure planned guests are informed that they should **not** check in using the kiosk if they are listed as a planned guest in advance."
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk/visitors.rst:95
+#: ../../content/applications/hr/frontdesk/visitors.rst:112
 msgid "Visitor flow"
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk/visitors.rst:98
+#: ../../content/applications/hr/frontdesk/visitors.rst:115
 msgid "Visitor check in"
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk/visitors.rst:100
-msgid "When a visitor arrives at a facility, they approach a :ref:`Frontdesk kiosk <frontdesk/kiosk>`, and click :guilabel:`Check in`. The information requested from the visitor is what was configured for that specific *Frontdesk* station. If any information is required, the field displays a red asterisk (\\*). The visitor **must** enter the required information in order to check in."
+#: ../../content/applications/hr/frontdesk/visitors.rst:117
+msgid "When a visitor arrives at a facility, they approach a :ref:`Frontdesk kiosk <frontdesk/kiosk>`, and click :guilabel:`Check in`. The information requested from the visitor is what was configured for that specific **Frontdesk** station. If any information is required, the field displays a red asterisk (\\*). The visitor **must** enter the required information in order to check in."
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk/visitors.rst:105
+#: ../../content/applications/hr/frontdesk/visitors.rst:122
 msgid "Once all the information is entered, the visitor taps the :guilabel:`Check In` button."
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk/visitors.rst:108
+#: ../../content/applications/hr/frontdesk/visitors.rst:125
 msgid "At any point in the check-in process, if ten seconds pass with no selection, the kiosk returns to the main welcome screen."
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk/visitors.rst:114
+#: ../../content/applications/hr/frontdesk/visitors.rst:129
+msgid "Planned visitor check in"
+msgstr ""
+
+#: ../../content/applications/hr/frontdesk/visitors.rst:131
+msgid "When a :ref:`planned visitor <frontdesk/planned>` arrives at a facility, they first approach a :ref:`Frontdesk kiosk <frontdesk/kiosk>`. If there are planned visitors for that day, a :guilabel:`Quick Check In` panel appears on the right-side of the kiosk, asking :guilabel:`Are you one of these people?` Beneath the question is a list of all visitors schedule to arrive that day."
+msgstr ""
+
+#: ../../content/applications/hr/frontdesk/visitors.rst:136
+msgid "Click on the corresponding name in the list to check-in."
+msgstr ""
+
+#: ../../content/applications/hr/frontdesk/visitors.rst:141
 msgid "If drinks were configured for the station, after tapping :guilabel:`Check In`, a registration confirmation screen loads, along with the question: :guilabel:`Do you want something to drink?`"
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk/visitors.rst:117
+#: ../../content/applications/hr/frontdesk/visitors.rst:144
 msgid "The visitor can tap either :guilabel:`Yes, please`, or :guilabel:`No, thank you`."
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk/visitors.rst:119
-msgid "If they select :guilabel:`Yes, please`, a drink selection screen appears, and the pre-configured options are listed. The visitor then taps the desired selection, or, if they do not want anything, they can tap the :guilabel:`Nothing, thanks` button at the bottom of the screen."
-msgstr ""
-
-#: ../../content/applications/hr/frontdesk/visitors.rst:123
-msgid "If a drink selection was made, a :guilabel:`Thank you for registering! Your drink is on the way.` message appears."
-msgstr ""
-
-#: ../../content/applications/hr/frontdesk/visitors.rst:127
-msgid "Notifications"
-msgstr ""
-
-#: ../../content/applications/hr/frontdesk/visitors.rst:129
-msgid "Once the visitor has checked in, the person they are visiting, and any other users who were configured to be notified when check-ins occur at the kiosk, are notified. The notification is either by email, SMS message, a *Discuss* chat, or any combination of those three options."
-msgstr ""
-
-#: ../../content/applications/hr/frontdesk/visitors.rst:133
-msgid "If the visitor requested a drink, the user(s) configured as the :guilabel:`People to Notify` on the drink form, are notified, via the *Discuss* application. The message that appears is: :guilabel:`(Visitor Name) just checked-in. They requested (Drink Name).`"
-msgstr ""
-
-#: ../../content/applications/hr/frontdesk/visitors.rst:137
-msgid "Once the drink has been delivered to the guest, the person who delivered the drink is responsible for marking the drink as delivered."
-msgstr ""
-
-#: ../../content/applications/hr/frontdesk/visitors.rst:140
-msgid "To mark a drink as delivered, navigate to :menuselection:`Frontdesk app --> Stations`, and choose the desired station card displaying :guilabel:`(#) Drinks to serve`."
-msgstr ""
-
-#: ../../content/applications/hr/frontdesk/visitors.rst:143
-msgid "This opens a list of all the visitors checked in at that station, and are waiting for a drink. Click the :guilabel:`Drink Served` button at the end of the line for the visitor who was served. Once they are marked as having their drink served, the visitor disappears from the list."
+#: ../../content/applications/hr/frontdesk/visitors.rst:146
+msgid "If they select :guilabel:`Yes, please`, a drink selection screen appears, and the preconfigured options are listed. The visitor then taps the desired selection, or, if they do not want anything, they can tap the :guilabel:`Nothing, thanks` button at the bottom of the screen."
 msgstr ""
 
 #: ../../content/applications/hr/frontdesk/visitors.rst:150
-msgid "Once the visitor has completed their business, and has left the premises, it is important to check them out for accurate record keeping."
+msgid "If a drink selection was made, a :guilabel:`Thank you for registering! Your drink is on the way.` message appears."
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk/visitors.rst:153
-msgid "To check visitors out properly, navigate to :menuselection:`Frontdesk app --> Stations`, and choose the desired station card displaying :guilabel:`(#) Drinks to serve`. Doing so opens a list of all the visitors who are currently checked-in at that station."
+#: ../../content/applications/hr/frontdesk/visitors.rst:154
+msgid "Notifications"
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk/visitors.rst:157
-msgid "Click the :guilabel:`Check out` button near the end of the line for the visitor who left. Once they are marked as checked-out, the visitor disappears from the list."
+#: ../../content/applications/hr/frontdesk/visitors.rst:156
+msgid "Once the visitor has checked in, the person they are visiting, and any other users who were configured to be notified when check-ins occur at the kiosk, are notified. The notification is either by email, SMS message, a *Discuss* chat, or any combination of those three options."
 msgstr ""
 
-#: ../../content/applications/hr/frontdesk/visitors.rst:161
-msgid "Visitors do **not** check themselves out when they leave. It is important for *Frontdesk* users to check out visitors for accurate record keeping."
+#: ../../content/applications/hr/frontdesk/visitors.rst:160
+msgid "If the visitor requested a drink, the users configured as the :guilabel:`People to Notify` on the drink form are notified, via the *Discuss* application. The message that appears is: :guilabel:`(Visitor Name) just checked-in. They requested (Drink Name).`"
 msgstr ""
 
 #: ../../content/applications/hr/frontdesk/visitors.rst:164
+msgid "Once the drink has been delivered to the guest, the person who delivered the drink is responsible for marking the drink as delivered."
+msgstr ""
+
+#: ../../content/applications/hr/frontdesk/visitors.rst:167
+msgid "To mark a drink as delivered, navigate to :menuselection:`Frontdesk app --> Stations`, and choose the desired station card displaying :guilabel:`(#) Drinks to serve`."
+msgstr ""
+
+#: ../../content/applications/hr/frontdesk/visitors.rst:170
+msgid "This opens a list of all the visitors checked in at that station, and are waiting for a drink. Click the :guilabel:`Drink Served` button at the end of the line for the visitor who was served. Once they are marked as having their drink served, the visitor disappears from the list."
+msgstr ""
+
+#: ../../content/applications/hr/frontdesk/visitors.rst:177
+msgid "Once the visitor has completed their business, and has left the premises, it is important to check them out for accurate record keeping."
+msgstr ""
+
+#: ../../content/applications/hr/frontdesk/visitors.rst:180
+msgid "To check visitors out properly, navigate to :menuselection:`Frontdesk app --> Stations`, and choose the desired station card displaying :guilabel:`(#) Drinks to serve`. Doing so opens a list of all the visitors who are currently checked-in at that station."
+msgstr ""
+
+#: ../../content/applications/hr/frontdesk/visitors.rst:184
+msgid "Click the :guilabel:`Check out` button near the end of the line for the visitor who left. Once they are marked as checked-out, the visitor disappears from the list."
+msgstr ""
+
+#: ../../content/applications/hr/frontdesk/visitors.rst:188
+msgid "Visitors do **not** check themselves out when they leave. It is important for **Frontdesk** users to check out visitors for accurate record keeping."
+msgstr ""
+
+#: ../../content/applications/hr/frontdesk/visitors.rst:191
 msgid "Always have an accurate list of who is on the premises at any given time. This is important for security purposes, and in the case of an emergency."
 msgstr ""
 
@@ -8062,7 +8274,7 @@ msgid "Indonesia"
 msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations.rst:33
-msgid "Jordan"
+msgid ":doc:`Jordan <payroll_localizations/jordan>`"
 msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations.rst:34
@@ -10041,6 +10253,8 @@ msgid "This module helps manage employee departures by determining the correct n
 msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:435
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:78
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:124
 msgid "Key features"
 msgstr ""
 
@@ -11312,7 +11526,7 @@ msgid "Create an XML document containing employee benefit data, remuneration, an
 msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:1107
-msgid "More information on XML files can be found in the [Specifications page](#)."
+msgid "More information on XML files can be found in the *Specifications* page."
 msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:1109
@@ -11452,6 +11666,7 @@ msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:1185
 #: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:1505
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:96
 msgid "Tax brackets"
 msgstr ""
 
@@ -15234,24 +15449,183 @@ msgstr ""
 msgid "This creates an :file:`.apc` file format which can be uploaded to the HSCB portal for processing."
 msgstr ""
 
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:3
+msgid "Jordan"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:5
+msgid "The Jordan **Payroll** localization package offers a comprehensive solution for managing payroll in compliance with Jordanian labor laws. It supports income tax calculations using progressive tax brackets, social security contributions from both employees and employers and basic salary calculations, including allowances such as housing and transportation."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:13
+msgid ":ref:`Install <general/install>` the following modules to get all the features of the Jordan **Payroll** localization:"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:19
+#: ../../content/applications/hr/payroll/payroll_localizations/united_arab_emirates.rst:20
+msgid "Name"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:20
+#: ../../content/applications/hr/payroll/payroll_localizations/united_arab_emirates.rst:21
+msgid "Technical name"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:21
+#: ../../content/applications/hr/payroll/payroll_localizations/united_arab_emirates.rst:22
+msgid "Description"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:22
+msgid ":guilabel:`Jordan - Payroll`"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:23
+msgid "`l10n_jo_hr_payroll`"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:24
+msgid "Payroll module supporting basic calculation, tax income brackets, and national contribution tax and social security"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:26
+msgid ":guilabel:`Jordan - Payroll with Accounting`"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:27
+msgid "`l10n_jo_hr_payroll_account`"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:28
+msgid "Bridge module between **Payroll** and **Accounting**"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:31
+msgid ":doc:`Jordan fiscal localization documentation <../../../finance/fiscal_localizations/jordan>`"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:34
+msgid "Basic calculations"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:36
+msgid "The Jordan **Payroll** localization package in Odoo provides foundational payroll management tools that are compliant with Jordan's labor laws and regulations. Key features include:"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:39
+msgid "**Basic salary calculations**: Odoo supports the computation of employee salaries based on predefined salary structures, ensuring accurate payroll processing."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:41
+msgid "**Social security contributions**: It handles social security deductions for employees and employer contributions, aligning with local regulations."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:43
+msgid "**Taxation support**: The system is configured to handle income tax calculations in Jordan, including deductions based on progressive tax brackets as required by Jordanian labor and tax laws."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:46
+msgid "**Custom allowances and deductions**: The localization supports additional allowances, deductions, or overtime as part of payroll computation."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:49
+msgid "These features ensure businesses can manage payroll effectively and comply with Jordanian-specific legal requirements. For enhanced functionality, businesses may leverage Odoo's flexibility to customize payroll workflows."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:54
+msgid "Social security"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:56
+msgid "The Jordan **Payroll** localization package in Odoo simplifies social security management by automating calculations for both employees and employers. Contributions are based on a percentage of the employee's basic salary, with a maximum insurable wage cap in line with Jordanian Social Security Corporation (SSC) regulations."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:62
+msgid "Employee contributions"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:64
+msgid "Odoo calculates the employee's social security deduction as 7.5% of their basic salary, up to the insurable wage cap of 3,000 JOD. If the employee's salary exceeds this cap, the deduction is based on the capped amount. This ensures compliance with :abbr:`SSC (Jordanian Social Security Corporation)` requirements and reflects accurately on the employee's payslip."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:70
+msgid "Employer contributions"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:72
+msgid "For employers, Odoo computes social security contributions as 14.25% of the employee's basic salary, also capped at 3,000 JOD. Like the employee contributions, if the salary exceeds this cap, the employer's contribution is calculated based on the capped amount. These contributions include pensions, workplace injury insurance, and other mandated benefits."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:80
+msgid "**Capped contributions**: The system ensures that both employee and employer contributions are aligned with the SSC-mandated insurance cap."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:82
+msgid "**Automated calculations**: Contributions are automatically calculated and included in payroll, reducing errors and administrative work."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:84
+msgid "**Compliance with regulations**: Odoo's configuration ensures full compliance with Jordanian social security laws, reflecting the correct rates and caps for both sides."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:88
+msgid "Income tax calculation"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:90
+msgid "The Jordan **Payroll** localization package automates income tax calculations using progressive tax brackets, ensuring compliance with Jordanian labor laws. The system applies income tax rates based on the employee's annual gross income, with higher brackets subject to increased percentages. The calculations are divided into six brackets, and the appropriate tax is deducted monthly."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:98
+msgid "**5% bracket**: Applicable to annual gross income up to 5,000 JOD. Odoo calculates 5% of the income within this range. If the gross income is below 5,000 JOD, the entire amount is taxed at 5%."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:101
+msgid "**10% bracket**: Applicable to annual gross income between 5,001 and 10,000 JOD. Only the portion of income exceeding 5,000 JOD is taxed at 10%. For example, if the gross income is 7,000 JOD, only 2,000 JOD is taxed at 10%."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:104
+msgid "**15% bracket**: Applicable to annual gross income between 10,001 and 15,000 JOD. The portion of income exceeding 10,000 JOD up to 15,000 JOD is taxed at 15%. For instance, if the gross income is 12,000 JOD, only 2,000 JOD is taxed at 15%."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:107
+msgid "**20% bracket**: Applicable to annual gross income between 15,001 and 20,000 JOD. Income within this range is taxed at 20%, with deductions automatically adjusted by Odoo."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:109
+msgid "**25% bracket**: Applicable to annual gross income between 20,001 and 1,000,000 JOD. Income beyond 20,000 JOD up to 1,000,000 JOD is taxed at 25%. For higher incomes, Odoo ensures accurate calculations by applying the cap of this range."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:112
+msgid "**30% bracket**: Applicable to annual gross income exceeding 1,000,000 JOD. Any income above this amount is taxed at 30%, with the system ensuring accurate monthly deductions for high-income earners."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:117
+msgid "Automated process"
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:119
+msgid "Odoo determines the appropriate tax bracket for each employee based on their gross annual income and applies the corresponding rates. These deductions are prorated and deducted monthly, simplifying payroll management and ensuring compliance."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:126
+msgid "**Progressive tax system**: Calculates taxes for each income range individually, ensuring fairness and accuracy."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:128
+msgid "**Automated deductions**: Ensures a smooth payroll workflows with accurate and timely monthly tax deductions."
+msgstr ""
+
+#: ../../content/applications/hr/payroll/payroll_localizations/jordan.rst:130
+msgid "**Alignment with Jordanian regulations**: Fully complies with Jordanian tax laws, minimizing manual intervention and errors."
+msgstr ""
+
 #: ../../content/applications/hr/payroll/payroll_localizations/united_arab_emirates.rst:3
 msgid "United Arab Emirates"
 msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_arab_emirates.rst:14
 msgid ":ref:`Install <general/install>` the following modules to get all the features of the **United Arab Emirates** **Payroll** localization:"
-msgstr ""
-
-#: ../../content/applications/hr/payroll/payroll_localizations/united_arab_emirates.rst:20
-msgid "Name"
-msgstr ""
-
-#: ../../content/applications/hr/payroll/payroll_localizations/united_arab_emirates.rst:21
-msgid "Technical name"
-msgstr ""
-
-#: ../../content/applications/hr/payroll/payroll_localizations/united_arab_emirates.rst:22
-msgid "Description"
 msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations/united_arab_emirates.rst:23
