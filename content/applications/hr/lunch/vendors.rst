@@ -154,7 +154,7 @@ or condiments.
       :alt: The first of the extras configured for pizza toppings.
 
    The pizzeria also offers a free beverage with any purchase. To set this up, the :guilabel:`Extra
-   2 Label` is set to `Beverages`, and the :guilabel:`Extra 1 Quantity` is set to :guilabel:`Only
+   2 Label` is set to `Beverages`, and the :guilabel:`Extra 2 Quantity` is set to :guilabel:`Only
    One`. The various beverage choices are added, and the cost for each remains zero.
 
    .. image:: vendors/beverages.png
