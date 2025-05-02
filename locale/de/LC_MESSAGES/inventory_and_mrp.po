@@ -11,8 +11,8 @@
 # Martin Trigaux, 2024
 # Friederike Fasterling-Nesselbosch, 2024
 # Tiffany Chang, 2024
-# Wil Odoo, 2025
 # philku79 <philip.kuss@gmx.de>, 2025
+# Wil Odoo, 2025
 # Larissa Manderfeld, 2025
 # 
 #, fuzzy
@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-27 10:38+0000\n"
+"POT-Creation-Date: 2025-04-30 11:37+0000\n"
 "PO-Revision-Date: 2023-11-08 08:57+0000\n"
 "Last-Translator: Larissa Manderfeld, 2025\n"
 "Language-Team: German (https://app.transifex.com/odoo/teams/41243/de/)\n"
@@ -11691,259 +11691,192 @@ msgstr "Wareneingangs- und -ausgangsabläufe"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:8
 msgid ""
-"There are several ways to handle how a warehouse receives products "
-"(receipts) and ships products (deliveries). Depending on several factors, "
-"such as the type of products stocked and sold, warehouse size, and the "
-"amount of daily confirmed receipts and delivery orders, the way products are"
-" handled when coming in and out of the warehouse can vary a lot. Different "
-"settings can be configured for receipts and deliveries; they do not have to "
-"be configured to have the same number of steps."
+"Configuring inbound and outbound flows in Odoo is key to optimizing "
+"efficiency, traceability, and cost. Warehouse managers must balance speed "
+"and control, choosing between a streamlined process or added checkpoints."
 msgstr ""
-"Es gibt verschiedene Möglichkeiten, wie Produkte in einem Lager erhalten "
-"(Wareneingang) und versendet (Warenausgang) werden. Abhängig von "
-"verschiedenen Faktoren, wie z. B. der Art der gelagerten und verkauften "
-"Produkte, der Größe des Lagers und der Anzahl der täglich bestätigten "
-"Bestellungen und Lieferaufträge, kann die Art und Weise, wie Produkte beim "
-"Eingang und Ausgang des Lagers gehandhabt werden, sehr unterschiedlich sein."
-" Für Wareneingänge und Lieferungen können unterschiedliche Einstellungen "
-"konfiguriert werden; sie müssen nicht so konfiguriert werden, dass sie die "
-"gleiche Anzahl von Schritten haben."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:12
+msgid ""
+"Odoo offers one-step, two-step, and three-step flows, with more steps "
+"providing greater control but increasing operations. The best setup depends "
+"on quality checks, packaging, and warehouse size."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:15
-msgid ""
-"`Using Routes (eLearning Tutorial) <https://www.odoo.com/slides/slide/using-"
-"routes-1018>`_"
+msgid "This guide helps businesses determine the most suitable configuration."
 msgstr ""
-"`Routen verwenden (E-Learning-Tutorial) "
-"<https://www.odoo.com/slides/slide/using-routes-1018>`_"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:16
-msgid ""
-"`Push & Pull Rules (eLearning Tutorial) "
-"<https://www.odoo.com/slides/slide/push-pull-rules-1024>`_"
-msgstr ""
-"`Push- & Pull-Regeln (E-Learning-Tutorial) "
-"<https://www.odoo.com/slides/slide/push-pull-rules-1024>`_"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:20
-msgid "Choosing the right inventory flow to handle receipts and deliveries"
-msgstr ""
-"Den richtigen Bestandsfluss auswählen, um Eingänge und Lieferungen zu "
-"handhaben"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:22
-msgid ""
-"By default, Odoo handles shipping and receiving in three different ways: in "
-"one, two, or three steps. The simplest configuration is one step, which is "
-"the default. Each additional step required for a warehouse for either the "
-"receiving or shipping process will add an additional layer of operations to "
-"perform before a product is either received or shipped. These configurations"
-" depend entirely on the requirements for the products stored, such as "
-"performing quality checks on received products, or using special packaging "
-"on shipped products."
-msgstr ""
-"Standardmäßig behandelt Odoo den Versand und Empfang auf drei verschiedene "
-"Arten: in einem, zwei oder drei Schritten. Die einfachste Konfiguration ist "
-"ein Schritt, was auch die Standardeinstellung ist. Jeder zusätzliche "
-"Schritt, der für ein Lager entweder für den Empfangs- oder den "
-"Versandprozess erforderlich ist, fügt eine weitere Ebene von Vorgängen "
-"hinzu, die ausgeführt werden müssen, bevor ein Produkt entweder empfangen "
-"oder versendet wird. Diese Konfigurationen hängen ganz von den Anforderungen"
-" an die gelagerten Produkte ab, wie z. B. die Durchführung von "
-"Qualitätsprüfungen bei eingehenden Produkten oder die Verwendung einer "
-"speziellen Verpackung für versandte Produkte."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:30
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:18
 msgid "One-step flow"
 msgstr "Einstufiger Ablauf"
 
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:20
+msgid ""
+"The *one-step inventory flow* is the simplest option, with minimal handling "
+"steps and the least traceability. In this setup, products move directly from"
+" vendors to stock or from stock to customers, with Odoo only tracking when "
+"items enter or leave the warehouse. This makes it ideal for businesses with "
+"high-volume, low-risk products or fast-moving operations where additional "
+"validation steps aren’t necessary."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:26
+msgid "**Receiving**: Products go directly into stock."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:27
+msgid "**Shipping**: Products ship directly from stock."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:28
+msgid ""
+"**Best for**: Small warehouses, low stock levels, and non-perishable items, "
+"where minimal processing is needed before products are stored or shipped."
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:32
-msgid ""
-"The receiving and shipping rules for a one-step configuration are as "
-"follows:"
-msgstr ""
-"Die Empfangs- und Versandregeln für eine einstufige Konfiguration lauten wie"
-" folgt:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:34
-msgid ""
-"**Receipt**: Receive products directly into stock. No intermediate steps "
-"between receipt and stock occur, such as a transfer to a quality control "
-"location."
-msgstr ""
-"**Eingang**: Die Produkte gehen direkt ins Lager ein. Es gibt keine "
-"Zwischenschritte zwischen Eingang und Bestand, wie z. B. ein Transfer an "
-"eine Qualitätskontrolle."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:36
-msgid ""
-"**Shipping**: Ship products directly from stock. No intermediate steps "
-"between stock and shipping occur, such as a transfer to a packing location."
-msgstr ""
-"**Versand**: Versenden Sie Produkte direkt aus dem Bestand ein. Es gibt "
-"keine Zwischenschritte zwischen Bestand und Versand, wie z. B. ein Transfer "
-"an eine Packstandort."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:38
-msgid ""
-"Can only be used if not using :abbr:`FIFO (First In, First Out)`, "
-":abbr:`LIFO (Last In, First Out)`, or :abbr:`FEFO (First Expired, First "
-"Out)` removal strategies."
-msgstr ""
-"Kann nur verwendet werden, wenn keine Entnahmestrategie :abbr:`FIFO (First "
-"In, First Out)`, :abbr:`LIFO (Last In, First Out)`, oder :abbr:`FEFO (First "
-"Expired, First Out)` verwendet werden."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:40
-msgid "Receipts and/or deliveries are handled quickly."
-msgstr "Eingänge und/oder Ausgänge werden schnell bearbeitet."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:41
-msgid ""
-"Recommended for small warehouses with low stock levels, and for non-"
-"perishable items."
-msgstr ""
-"Empfohlen für kleine Lager mit geringen Lagerbeständen und für "
-"nichtverderbliche Artikel."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:42
-msgid "Items are received or shipped directly into/from stock."
-msgstr "Artikel werden direkt in/aus dem Lager empfangen oder versandt."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:45
 msgid ":doc:`daily_operations/receipts_delivery_one_step`"
 msgstr ":doc:`daily_operations/receipts_delivery_one_step`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:48
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:35
 msgid "Two-step flow"
 msgstr "Zweistufiger Ablauf"
 
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:37
+msgid ""
+"A *two-step flow* adds an input or output area for processing products "
+"before storage or shipment. Incoming goods can be unboxed and inspected "
+"before shelving, while outgoing shipments are sorted and consolidated before"
+" dispatch. This setup improves efficiency by assigning storage teams to "
+"picking and stocking, while dedicated teams handle unboxing, (possibly) "
+"packing, and final verification to reduce order fulfillment errors."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:43
+msgid ""
+"**Receiving**: Products move to an *input* area before being transferred "
+"into stock."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:45
+msgid ""
+"Until transferred, received products are not automatically reserved for "
+"manufacturing, shipping, or other operations."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:48
+msgid ""
+"**Shipping**: Products move to an *output* before shipping to allow for "
+":doc:`sorting or consolidation <picking_methods>`."
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:50
 msgid ""
-"The receiving and shipping rules for a two-step configuration are as "
-"follows:"
+"**Best for**: Large warehouses, high stock levels, bulky items, and "
+"workflows that separate receiving from storage to improve organization and "
+"efficiency."
 msgstr ""
-"Die Empfangs- und Versandregeln für eine zweistufige Konfiguration lauten "
-"wie folgt:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:52
-msgid ""
-"**Input + stock**: Bring products to an input location *before* moving into "
-"stock. Products can be organized by different internal storage locations, "
-"such as various shelves, freezers, and locked areas, before being stocked in"
-" the warehouse."
-msgstr ""
-"**Eingang + Lager**: Bringen Sie die Produkte an einen Eingangsort, *bevor* "
-"sie auf Lager gehen. Die Produkte können nach verschiedenen internen "
-"Lagerorten organisiert werden, z. B. nach verschiedenen Regalen, "
-"Gefrierschränken und verschlossenen Bereichen, bevor sie im Lager "
-"eingelagert werden."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:55
-msgid ""
-"**Pick + ship**: Bring products to an output location before shipping. "
-"Packages can be organized by different carriers or shipping docks before "
-"being shipped."
-msgstr ""
-"**Kommissionierung + Versand**: Bringen Sie die Produkte vor dem Versand an "
-"einen Ausgangsort. Pakete können vor dem Versand nach verschiedenen "
-"Transportunternehmen oder Versanddocks organisiert werden."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:57
-msgid ""
-"Minimum requirement to use lot numbers or serial numbers to track products "
-"with a :abbr:`FIFO (First In, First Out)`, :abbr:`LIFO (Last In, First Out)`"
-" or :abbr:`FEFO (First Expired, First Out)` removal strategy."
-msgstr ""
-"Mindestanforderung für die Verwendung von Los- oder Seriennummern zur "
-"Verfolgung von Produkten mit einer Entnahmestrategie :abbr:`FIFO (First In, "
-"First Out)`, :abbr:`LIFO (Last In, First Out)` oder :abbr:`FEFO (First "
-"Expired, First Out)`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:60
-msgid ""
-"Recommended for larger warehouses with high stock levels, or when stocking "
-"large items (such as mattresses, large furniture, heavy machinery, etc.)."
-msgstr ""
-"Empfohlen für größere Lagerhäuser mit hohen Beständen oder für die Lagerung "
-"großer Artikel (z. B. Matratzen, große Möbel, schwere Maschinen usw.)."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:62
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:83
-msgid ""
-"Products received will not be available for manufacturing, shipping, etc., "
-"until they are transferred into stock."
-msgstr ""
-"Die erhaltenen Produkte stehen erst dann für die Fertigung, den Versand usw."
-" zur Verfügung, wenn sie auf Lager genommen werden."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:66
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:54
 msgid ":doc:`daily_operations/receipts_delivery_two_steps`"
 msgstr ":doc:`daily_operations/receipts_delivery_two_steps`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:69
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:57
 msgid "Three-step flow"
 msgstr "Dreistufiger Ablauf"
 
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:59
+msgid ""
+"A three-step flow builds on the two-step process by adding a quality check "
+"and packing area, enforcing stricter processes and improving oversight."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:63
+msgid ""
+"While this setup enhances process control, separating picking and packing "
+"requires validation at each step. If the same person handles both, it may "
+"cause redundancy and slow operations."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:66
+msgid ""
+"Quality checks and packing do not require a three-step flow. Enable "
+":doc:`quality control points "
+"<../../quality/quality_management/quality_control_points>` separately or "
+"activate the :ref:`Packages feature <inventory/warehouses_storage/enable-"
+"package>` in Odoo to incorporate these processes without adding extra "
+"transfer steps."
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:71
 msgid ""
-"The receiving and shipping rules for a three-step configuration are as "
-"follows:"
+"**Receiving**: Products follow a structured process: *input area* → *quality"
+" control* → *stock*."
 msgstr ""
-"Die Empfangs- und Versandregeln für eine dreistufige Konfiguration lauten "
-"wie folgt:"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:73
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:72
 msgid ""
-"**Input + quality + stock**: Receive products at the input location, "
-"transfer them to a quality control area, and move the ones that pass "
-"inspection into stock."
+"**Shipping**: Products are *picked*, *packed*, and then *shipped*, ensuring "
+"proper handling and organization."
 msgstr ""
-"**Eingang + Qualität + Lager**: Sie nehmen die Produkte am Eingangsort "
-"entgegen, bringen sie in einen Qualitätskontrollbereich und lagern die "
-"Produkte, die die Inspektion bestehen, im Lager ein."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:75
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:74
 msgid ""
-"**Pick + pack + ship**: Pick products according to their removal strategy, "
-"pack them in a dedicated packing area, and bring them to an output location "
-"for shipping."
+"**Best for**: Very large warehouses with strict quality control "
+"requirements, dedicated picking and packing workflows, and a need for clear "
+"traceability across multiple handling stages. Suitable when multiple teams "
+"manage different steps before products are stocked or shipped."
 msgstr ""
-"**Kommissionierung + Verpackung + Versand**: Sie kommissionieren die "
-"Produkte entsprechend ihrer Entnahmestrategie, verpacken sie in einem "
-"speziellen Verpackungsbereich und bringen sie zum Versand an einen "
-"Ausgangsort."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:77
-msgid ""
-"Can be used when tracking products by lot or serial numbers when using a "
-":abbr:`FIFO (First In, First Out)`, :abbr:`LIFO (Last In, First Out)`, or "
-":abbr:`FEFO (First Expired, First Out)` removal strategy."
-msgstr ""
-"Kann bei der Verfolgung von Produkten nach Los- oder Seriennummern verwendet"
-" werden, wenn eine Entnahmestrategie :abbr:`FIFO (First In, First Out)`, "
-":abbr:`LIFO (Last In, First Out)` oder :abbr:`FEFO (First Expired, First "
-"Out)` verwendet wird."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:80
-msgid "Recommended for very large warehouses with very high stock levels."
-msgstr "Empfohlen für sehr große Lager mit sehr hohen Lagerbeständen."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:81
-msgid ""
-"Required for any warehouse needing to perform quality control inspections "
-"before receiving items into stock."
-msgstr ""
-"Erforderlich für jedes Lager, das Qualitätskontrollinspektionen vor der "
-"Einlagerung von Artikeln durchführen muss."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:87
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:79
 msgid ":doc:`daily_operations/receipts_three_steps`"
 msgstr ":doc:`daily_operations/receipts_three_steps`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:88
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:80
 msgid ":doc:`daily_operations/delivery_three_steps`"
 msgstr ":doc:`daily_operations/delivery_three_steps`"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:83
+msgid "Add-ons"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:85
+msgid ""
+"To optimize each flow, Odoo provides additional features that can enhance "
+"the process."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:88
+msgid "Storage"
+msgstr "Speicherung"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:90
+msgid "To organize and store products efficiently, use:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:111
+msgid "Delivery"
+msgstr "Lieferung"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:113
+msgid ""
+"Tailor the outgoing shipment process to fit the business needs. Picking "
+"methods and removal strategies control how products are reserved for orders,"
+" while cross-docking and dropshipping determine how they move. Configuring "
+"these options in Odoo ensures visibility into product movement and confirms "
+"that items reach customers efficiently."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:141
+msgid "Customization"
+msgstr "Anpassungen"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:143
+msgid ""
+"Odoo's flexible framework enables businesses to tailor workflows to match "
+"specific operational needs."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/cross_dock.rst:3
 msgid "Organize a cross-dock in a warehouse"
@@ -26518,26 +26451,22 @@ msgstr "Ansichtsorte in Odoo"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:109
 msgid ""
-"Odoo databases include pre-configured view locations to organize the "
+"Odoo databases include preconfigured view locations to organize the "
 "hierarchy of locations. These provide helpful context, and distinguish "
 "between internal and external locations."
 msgstr ""
-"Odoo-Datenbanken enthalten vorkonfigurierte Ansichtsorte, um die Hierarchie "
-"der Standorte zu organisieren. Diese bieten einen hilfreichen Kontext und "
-"unterscheiden zwischen internen und externen Standorten."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:112
 msgid ""
-"*Physical locations* serve as an umbrella for external locations, without "
-"changing a product's inventory value. (Inventory valuation changes occur "
-"when products move from internal to external locations)."
+"*Physical locations* group internal locations—such as secondary warehouses "
+"and subcontractor sites. Because :doc:`inventory valuation "
+"<../product_management/inventory_valuation/inventory_valuation_config>` "
+"changes only when goods move from internal to external locations, Odoo uses "
+"physical locations to track stock that is off-site or in transit without "
+"affecting valuation."
 msgstr ""
-"*Physische Lagerorte* dienen als Sammelbegriff für externe Standorte, ohne "
-"den Bestandswert eines Produkts zu ändern. (Änderungen der Bestandsbewertung"
-" treten auf, wenn Produkte von internen zu externen Standorten verlagert "
-"werden.)"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:119
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:121
 msgid ""
 "When moving products in warehouses `WH` and `WH2`, the items are not in "
 "either warehouse, but still belong to the company. While in transit, they "
@@ -26549,7 +26478,7 @@ msgstr ""
 "Während des Transports werden sie am Standort `Transit zwischen "
 "Lagerhäusern` platziert, einem Typ :guilabel:`Umschlagslager`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:123
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:125
 msgid ""
 "This location is under the view location, `Physical Locations`, indicating "
 "that `Inter-warehouse transit` is outside of a warehouse, but still part of "
@@ -26561,7 +26490,7 @@ msgstr ""
 "außerhalb eines Lagers befindet, aber dennoch Teil des Unternehmens ist. "
 "Dies hat keine Auswirkungen auf die Bestandsbewertung der Produkte."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:127
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:129
 msgid ""
 "*Partner locations* group customer and vendor locations (external locations)"
 " together. Transfers to these locations affect inventory valuation."
@@ -26570,7 +26499,7 @@ msgstr ""
 "Standorte). Transfers zu diesen Standorten wirken sich auf die "
 "Bestandsbewertung aus."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:129
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:131
 msgid ""
 "*Virtual locations* are locations that do **not** exist physically, but it "
 "is where items that are not in inventory can be placed. These can be items "
@@ -36861,15 +36790,10 @@ msgstr "Stückliste"
 msgid ""
 "A *bill of materials* (or *BoM* for short) documents specific components, "
 "along with their respective quantities, that are needed to produce or repair"
-" a product. In Odoo, |BoMs| as blueprints for manufactured goods and kits, "
-"and often include production operations and step-by-step guidelines, as "
-"well."
+" a product. In Odoo, |BoMs| serve as blueprints for manufactured goods and "
+"kits, and often include production operations and step-by-step guidelines, "
+"as well."
 msgstr ""
-"Eine *Stückliste* (oder kurz *BoM*) dokumentiert bestimmte Komponenten mit "
-"ihren jeweiligen Mengen, die zur Fertigung oder Reparatur eines Produkts "
-"benötigt werden. In Odoo dienen Stücklisten als Entwürfe für hergestellte "
-"Waren und Bausätze und enthalten oft auch Fertigungsvorgänge und Schritt-"
-"für-Schritt-Anleitungen."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:15
 msgid "BoM setup"
@@ -37413,11 +37337,11 @@ msgstr ""
 msgid "Show the *Miscellaneous* tab of the BoM."
 msgstr "Anzeige des Reiters *Sonstiges* der Stückliste."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:236
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:235
 msgid "Add by-products to BoMs"
 msgstr "Nebenprodukte zu Stücklisten hinzufügen"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:238
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:237
 msgid ""
 "A *by-product* is a residual product that is created during production in "
 "addition to the main product of a |BOM|. Unlike the primary product, there "
@@ -37427,7 +37351,7 @@ msgstr ""
 "zum Hauptprodukt einer Stückliste entsteht. Im Gegensatz zum Hauptprodukt "
 "kann es mehr als ein Nebenprodukt auf einer Stückliste geben."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:241
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:240
 msgid ""
 "To add by-products to a |BOM|, first enable the *By-Products* feature in "
 ":menuselection:`Manufacturing app --> Configuration --> Settings`. In the "
@@ -37444,7 +37368,7 @@ msgstr ""
 msgid "\"By Products\" feature in the settings page."
 msgstr "Funktion „Nebenprodukte“ auf der Einstellungsseite."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:249
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:248
 msgid ""
 "Once the feature is enabled, add by-products to a |BOM| by clicking the "
 ":guilabel:`By-products` tab. Click :guilabel:`Add a line`, and fill in the "
@@ -37459,7 +37383,7 @@ msgstr ""
 "Optional können Sie für das Nebenprodukt ein :guilabel:`Produziert in "
 "Vorgang` angeben."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:255
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:254
 msgid ""
 "The by-product, `Mush`, is created in the `Grind grapes` operation when "
 "producing `Red Wine`."
@@ -47905,10 +47829,14 @@ msgid ""
 ":guilabel:`Description` is the name of the operation, followed by the "
 ":abbr:`MO (Manufacturing Order)` number for reference."
 msgstr ""
+":guilabel:`Beschreibung` ist der Name des Vorgangs, gefolgt vom "
+"Fertigungsauftrag (zur Referenz)."
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/engineering_change_orders.rst:308
 msgid "The |ECO| :guilabel:`Type` is automatically assigned to `BOM Changes`."
 msgstr ""
+"Die :guilabel:`Art` des Änderungsuaftrags ist automatisch auf "
+"`Stücklistenänderungen` eingestellt."
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/engineering_change_orders.rst:309
 msgid ""
@@ -47916,14 +47844,18 @@ msgid ""
 "automatically populated, based on the |BOM| used in the :abbr:`MO "
 "(Manufacturing Order)`."
 msgstr ""
+"Die Felder :guilabel:`Produkt` und :guilabel:`Stückliste` werden automatisch"
+" ausgefüllt, basierend auf der im Fertigungsauftrag verwendeten Stückliste."
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/engineering_change_orders.rst:311
 msgid ":guilabel:`Responsible` is the operator who submitted the feedback."
 msgstr ""
+":guilabel:`Verantwortlich` ist der Mitarbeiter, der das Feedback eingereicht"
+" hat"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/engineering_change_orders.rst:314
 msgid "View ECO"
-msgstr ""
+msgstr "Änderungsauftrag ansehen"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/engineering_change_orders.rst:316
 msgid ""
@@ -47932,6 +47864,10 @@ msgid ""
 "Engineering Changes` button represents the amount of operational changes "
 "created from the tablet view."
 msgstr ""
+"Um die vorgeschlagenen Änderungen zu prüfen, gehen Sie zu "
+":menuselection:`PLM --> Übersicht`. Auf der Karte der Änderungsauftragsart "
+"`Stücklsitenänderungen` zeigt die Schaltfläche :guilabel:`X Technische "
+"Änderungen` die Anzahl über die Tabletansicht erstellen Änderungen an,."
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/engineering_change_orders.rst:320
 msgid ""
@@ -47939,6 +47875,9 @@ msgid ""
 "view of the |ECO| type. To view the suggestion, select an |ECO| in the `New`"
 " stage."
 msgstr ""
+"Klicken Sie auf die Schaltfläche :guilabel:`X Technische Änderungen`, um die"
+" Kanban-Ansicht der Änderungsauftragsart an. Um den Vorschlag zu sehen, "
+"wählen Sie einen Änderungsauftrag aus der Phase `Neu`."
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/engineering_change_orders.rst:323
 msgid ""
@@ -48205,6 +48144,10 @@ msgid ""
 "Materials`, and select the desired |BOM|. On the |BOM|, navigate to the "
 "*chatter*, and click the :guilabel:`📎 (paperclip)` icon."
 msgstr ""
+"Navigieren Sie dazu zu :menuselection:`PLM --> Stammdaten --> Stückliste` "
+"und wählen Sie die gewünschte Stückliste aus. Navigieren Sie auf der "
+"Stückliste zum *Chatter* und klicken Sie auf das Symbol :guilabel:`📎 "
+"(Büroklammer)`."
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/version_control.rst:92
 msgid ""
@@ -48219,7 +48162,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/version_control.rst:100
 msgid "Manage design files in an ECO"
-msgstr ""
+msgstr "Design-Dateien in Änderungsaufträgen verwalten"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/version_control.rst:102
 msgid ""
@@ -48228,6 +48171,11 @@ msgid ""
 "Archived files are removed from the |BOM|, but are still accessible in the "
 "|ECO|."
 msgstr ""
+"Fügen Sie Dateien in eines Änderungsauftrags hinzu, ändern Sie sie oder "
+"entfernen Sie sie. Sobald die Änderungsaufträge genehmigt und angewendet "
+"wurde, werden die neuen Dateien automatisch mit der Produktionsstückliste "
+"verknüpft. Archivierte Dateien werden aus der Stückliste entfernt, sind "
+"jedoch weiterhin im Änderungsauftrag verfügbar."
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/version_control.rst:106
 msgid ""
@@ -48236,6 +48184,11 @@ msgid ""
 "open the :guilabel:`Attachments` page by clicking the :guilabel:`Documents` "
 "smart button."
 msgstr ""
+"Um die Design-Dateien im Änderungsauftrag zu verwalten, navigieren Sie "
+"zunächst zu :menuselection:`PLM --> Änderungen` und wählen Sie den "
+"gewünschten Änderungsauftrag aus. Öffnen Sie anschließend die Seite "
+":guilabel:`Anhänge`, indem Sie auf die Schaltfläche :guilabel:`Dokumente` "
+"klicken."
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/version_control.rst:110
 msgid ""
@@ -48245,6 +48198,13 @@ msgid ""
 "contained within the |ECO|, and will only apply to the production |BOM| once"
 " the :ref:`changes are applied <plm/eco/apply-changes>`."
 msgstr ""
+"Bewegen Sie den Mauszeiger über jeden Anhang, um das :guilabel:`Symbol ︙ "
+"(drei vertikale Punkte)` anzuzeigen. Wählen Sie dort aus, ob Sie die Datei "
+":guilabel:`Bearbeiten`, :guilabel:`Entfernen` oder :guilabel:`Herunterladen`"
+" möchten. Alle an diesen Dateien vorgenommenen Änderungen sind im "
+"Änderungsauftrag enthalten und werden erst in die Produktionsstückliste "
+"übernommen, wenn die :ref`Änderungen angewendet werden <plm/eco/apply-"
+"changes>`."
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/version_control.rst:116
 msgid ""
@@ -48252,10 +48212,16 @@ msgid ""
 "`100% keyboard` |BOM|. To replace the keyboard PDF, begin by selecting the "
 ":guilabel:`Documents` smart button."
 msgstr ""
+"Im Änderungsauftrag `60 %-Tastatur erstellen` stammen die Design-Dateien aus"
+" der ursprünglichen Stückliste `100 %-Tastatur`. Um die Tastatur-PDF zu "
+"ersetzen, wählen Sie zunächst die intellifente Schaltfläche "
+":guilabel:`Dokumente` aus."
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/version_control.rst:0
 msgid "Show *Documents* smart button from an active ECO."
 msgstr ""
+"Anzeige der intelligenten Schaltfläche *Dokumente* über einen aktiven "
+"Änderungsauftrag."
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/version_control.rst:123
 msgid ""
@@ -48263,18 +48229,27 @@ msgid ""
 "manual.pdf` design file, and click the :guilabel:`︙ (three vertical dots)` "
 "icon. Then, click the :guilabel:`Remove` option to archive the file."
 msgstr ""
+"Bewegen Sie den Mauszeiger auf der Seite :guilabel:`Dateianhänge` über die "
+"Design-Datei `100-%-Tastatur Anleitung.pdf` und klicken Sie auf das Symbol "
+":guilabel:`︙ (drei vertikale Punkte)`. Klicken Sie auf die Option "
+":guilabel:`Entfernen`, um die Datei zu archivieren."
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/version_control.rst:127
 msgid ""
 "Next, on the same :guilabel:`Attachments` page, click the :guilabel:`Upload`"
 " button to upload the new design file, named `60% keyboard manual`."
 msgstr ""
+"Klicken Sie dann auf der Seite :guilabel:`Dateianhänge` auf die Schaltfläche"
+" :guilabel:`Hochladen`, um die neue Design-Datei mit dem Namen "
+"`60-%-Tastatur Anleitung` hochzuladen."
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/version_control.rst:0
 msgid ""
 "View of *Attachments* page from the *Documents* smart button. Displays one archived and\n"
 "one newly added attachment."
 msgstr ""
+"Ansicht der Seite „Dateianhänge“ über die intelligente Schaltfläche *Dokumente*. Zeigt eine archivierte und \n"
+"eine kürzlich hinzugefügte Datei an."
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/version_control.rst:136
 msgid ""
@@ -48282,6 +48257,9 @@ msgid ""
 "in the previous |ECO|, or as an archived file in the latest |ECO|, where the"
 " archival occurred."
 msgstr ""
+"Archivierte Dateien werden **nicht** dauerhaft gelöscht. Sie können immer im"
+" vorherigen Änderungsauftrag oder als archivierte Datei im letzten "
+"Änderungsauftrag, in dem sie archiviert wurden, aufgerufen werden."
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/version_control.rst:140
 msgid "Apply rebase"
@@ -48447,6 +48425,12 @@ msgid ""
 "Manager`, `Quality Team`, etc.), and select the relevant :guilabel:`User` "
 "from the drop-down menu."
 msgstr ""
+"Klicken Sie im Pop-up-Fenster :guilabel:`Bearbeiten` auf die Schaltfläche  "
+":guilabel:`Zeile hinzufügen` unter :guilabel:`Genehmigungen`. Geben Sie "
+"anschließend unter :guilabel:`Rolle` die Position oder die Bezeichnung des "
+"Genehmigers ein (z. B. `Technischer Leiter`, `Qualitätsteam` usw.) und "
+"wählen Sie den entsprechenden :guilabel:`Benutzer` aus dem Drop-down-Menü "
+"aus."
 
 #: ../../content/applications/inventory_and_mrp/plm/management/approvals.rst:41
 msgid ""
@@ -48454,12 +48438,18 @@ msgid ""
 "approve`, :guilabel:`Approves, but the approval is optional`, or "
 ":guilabel:`Comments only`."
 msgstr ""
+"Legen Sie anschließend den :guilabel:`Genehmigungstyp` auf :guilabel:`Muss "
+"genehmigt werden`, :guilabel:`Genehmigung möglich, aber optional` oder "
+":guilabel:`Nur Kommentare` fest."
 
 #: ../../content/applications/inventory_and_mrp/plm/management/approvals.rst:45
 msgid ""
 "Assign the `CTO`, \"Mitchell Admin,\" as a required approver for |ECOs| in "
 "the `Validated` stage in the `New Product Introduction` ECO type."
 msgstr ""
+"Weisen Sie den `CTO` `Mitchell Admin` als erforderlichen Genehmiger für "
+"Änderungsaufträge in der Phase `Validiert` in der Änderungsauftragsart `Neue"
+" Produkteinführung` zu."
 
 #: ../../content/applications/inventory_and_mrp/plm/management/approvals.rst:48
 msgid ""
@@ -48468,12 +48458,18 @@ msgid ""
 ":guilabel:`Approves, but the approval is optional` and :guilabel:`Comments "
 "only`, respectively."
 msgstr ""
+"Genehmigungen der Qualitäts- und Marketingteams sind für die Anwendung von "
+"Änderungen am Änderungsauftrag **nicht** erforderlich, da ihre "
+":guilabel:`Genehmigungsart` auf :guilabel:`Genehmigung möglich, aber "
+"optional` bzw :guilabel:`Nur Kommentare` gesetzt ist."
 
 #: ../../content/applications/inventory_and_mrp/plm/management/approvals.rst:0
 msgid ""
 "Set an approver that \"Is required to approve\" ECOs in the \"Validated\" "
 "stage."
 msgstr ""
+"Einstellung eines Genehmiger für Änderungsaufträge, die in der Phase "
+"„Validiert“ genehmigt werden müssen."
 
 #: ../../content/applications/inventory_and_mrp/plm/management/approvals.rst:57
 msgid "Manage approvals"
@@ -48485,10 +48481,16 @@ msgid ""
 ":menuselection:`PLM app`, and looking at the card for an ECO type, which "
 "shows the count of open tasks assigned to them."
 msgstr ""
+"Genehmiger können ihre zu erledigenden Genehmigungen verfolgen, indem sie "
+"zur :menuselection:`PLM-App` navigieren und die Karte für eine "
+"Änderungsauftragsart auswählen, auf der die Anzahl der ihnen zugewiesenen "
+"offenen Aufgaben angezeigt wird."
 
 #: ../../content/applications/inventory_and_mrp/plm/management/approvals.rst:62
 msgid "Here's what each button on an ECO project card does:"
 msgstr ""
+"Die einzelnen Schaltflächen auf einer Projektkarte für einen "
+"Änderungsauftrag haben folgende Funktionen:"
 
 #: ../../content/applications/inventory_and_mrp/plm/management/approvals.rst:64
 msgid ""
@@ -48496,6 +48498,10 @@ msgid ""
 " |ECOs| of this ECO type. Clicking the button opens the Gantt view of the "
 ":guilabel:`Engineering Change Orders` page."
 msgstr ""
+"Die Schaltfläche :guilabel:`# Technische Änderungen` zeigt die Anzahl der "
+"laufenden Änderungsaufträge dieser Änderungsauftragsart an. Durch Klicken "
+"auf die Schaltfläche wird die Gantt-Ansicht der Seite :guilabel:`Technische "
+"Änderungsaufträge` geöffnet."
 
 #: ../../content/applications/inventory_and_mrp/plm/management/approvals.rst:66
 msgid ""
@@ -48503,6 +48509,11 @@ msgid ""
 "accept or reject. Clicking on this button displays |ECOs| pending approval "
 "or rejected (marked with the red :guilabel:`Blocked` state)."
 msgstr ""
+":guilabel:`Meine Validierungen` zeigt die Anzahl der Änderungsaufträge an, "
+"die der Genehmiger akzeptieren oder ablehnen muss. Durch Klicken auf diese "
+"Schaltfläche werden Änderungsaufträge angezeigt, die noch genehmigt oder "
+"abgelehnt werden müssen (mit dem roten Status :guilabel:`Blockiert` "
+"gekennzeichnet)."
 
 #: ../../content/applications/inventory_and_mrp/plm/management/approvals.rst:69
 msgid ""
@@ -48510,6 +48521,10 @@ msgid ""
 "approval or rejected by any approver. Clicking it reveals these pending "
 "|ECOs|."
 msgstr ""
+"Die Schaltfläche :guilabel:`Alle Validierungen` zeigt die Anzahl der "
+"Änderungsaufträge an, die von einem Genehmiger genehmigt oder abgelehnt "
+"werden müssen. Durch Klicken auf diese Schaltfläche werden diese "
+"ausstehenden Änderungsaufträge angezeigt."
 
 #: ../../content/applications/inventory_and_mrp/plm/management/approvals.rst:71
 msgid ""
@@ -48517,6 +48532,10 @@ msgid ""
 "apply changes. Clicking on the button displays all the |ECOs| to approve, "
 "and apply changes to, in the verification stage."
 msgstr ""
+":guilabel:Anzuwenden` zeigt die Anzahl der Änderungsaufträge an, auf die der"
+" Benutzer Änderungen anwenden muss. Wenn Sie auf die Schaltfläche klicken, "
+"werden alle Änderungsaufträge angezeigt, die in der Verifizierungsphase "
+"genehmigt und geändert werden müssen."
 
 #: ../../content/applications/inventory_and_mrp/plm/management/approvals.rst:75
 msgid ""
@@ -48524,12 +48543,18 @@ msgid ""
 "approved, and the user just needs to click on the |ECO| to enter the form "
 "view, and click the :guilabel:`Apply Changes` button."
 msgstr ""
+"Änderungsaufträge, die mit dem grünen Status :guilabel:`Erledigt` "
+"gekennzeichnet sind, wurden bereits genehmigt. Der Benutzer muss auf den "
+"Änderungsauftrag klicken, um die Formularansicht aufzurufen, und dann auf "
+"die Schaltfläche :guilabel:`Änderungen anwenden` klicken."
 
 #: ../../content/applications/inventory_and_mrp/plm/management/approvals.rst-1
 msgid ""
 "Display count of validations to-do and buttons to open filtered list of "
 "ECOs."
 msgstr ""
+"Anzeige der Anzahl Validierungen, To-dos und Schaltflächen, um eine "
+"gefilterte Liste der Änderungsaufträge anzuzeigen."
 
 #: ../../content/applications/inventory_and_mrp/plm/management/approvals.rst:84
 msgid "Approve ECOs"
@@ -48552,6 +48577,9 @@ msgid ""
 "(Bill of Materials)`, click :guilabel:`Approve`, and then :guilabel:`Apply "
 "Changes`."
 msgstr ""
+"Um den Änderungsauftrag zu genehmigen und die Änderungen in die "
+"Produktionsstückliste zu übernehmen, klicken Sie auf :guilabel:`Genehmigen` "
+"und dann :guilabel:`Änderungen anwenden`."
 
 #: ../../content/applications/inventory_and_mrp/plm/management/approvals.rst:92
 msgid ""
@@ -48559,6 +48587,9 @@ msgid ""
 ":guilabel:`Approve` button was clicked first. Additionally, the chatter logs"
 " the history of the clicked buttons."
 msgstr ""
+"Die Schaltfläche :guilabel:`Änderungen anwenden` funktioniert **nicht**, "
+"bevor die Schaltfläche :guilabel:`Genehmigen` angeklickt wird. Außerdem wird"
+" die Historie der geklickten Schaltflächen im Chatter protokolliert."
 
 #: ../../content/applications/inventory_and_mrp/plm/management/approvals.rst:96
 msgid ""

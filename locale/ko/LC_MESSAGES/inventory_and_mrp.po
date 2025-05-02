@@ -7,18 +7,18 @@
 # Martin Trigaux, 2023
 # JH CHOI <hwangtog@gmail.com>, 2024
 # Tiffany Chang, 2024
+# Sarah Park, 2025
 # Wil Odoo, 2025
 # Daye Jeong, 2025
-# Sarah Park, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-27 10:38+0000\n"
+"POT-Creation-Date: 2025-04-30 11:37+0000\n"
 "PO-Revision-Date: 2023-11-08 08:57+0000\n"
-"Last-Translator: Sarah Park, 2025\n"
+"Last-Translator: Daye Jeong, 2025\n"
 "Language-Team: Korean (https://app.transifex.com/odoo/teams/41243/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -9893,211 +9893,192 @@ msgstr "인바운드 및 아운바운드 흐름"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:8
 msgid ""
-"There are several ways to handle how a warehouse receives products "
-"(receipts) and ships products (deliveries). Depending on several factors, "
-"such as the type of products stocked and sold, warehouse size, and the "
-"amount of daily confirmed receipts and delivery orders, the way products are"
-" handled when coming in and out of the warehouse can vary a lot. Different "
-"settings can be configured for receipts and deliveries; they do not have to "
-"be configured to have the same number of steps."
+"Configuring inbound and outbound flows in Odoo is key to optimizing "
+"efficiency, traceability, and cost. Warehouse managers must balance speed "
+"and control, choosing between a streamlined process or added checkpoints."
 msgstr ""
-"창고에서 제품을 입고 (입고)하고 배송 (출고)하는 방법에는 여러 가지가 있습니다. 입고 및 판매되는 제품의 유형, 창고 크기, 일일 "
-"확인된 입고 및 배송 주문의 양 등 여러 요인에 따라 창고에서의 제품 입고 및 배송 처리는 크게 달라질 수 있습니다. 입고와 배송에 대해"
-" 서로 다른 설정을 구성할 수 있으며, 반드시 동일한 단계 수를 가질 필요는 없습니다."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:12
+msgid ""
+"Odoo offers one-step, two-step, and three-step flows, with more steps "
+"providing greater control but increasing operations. The best setup depends "
+"on quality checks, packaging, and warehouse size."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:15
-msgid ""
-"`Using Routes (eLearning Tutorial) <https://www.odoo.com/slides/slide/using-"
-"routes-1018>`_"
+msgid "This guide helps businesses determine the most suitable configuration."
 msgstr ""
-"`경로 사용 (온라인 학습 튜토리얼)<https://www.odoo.com/slides/slide/using-routes-1018>`_"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:16
-msgid ""
-"`Push & Pull Rules (eLearning Tutorial) "
-"<https://www.odoo.com/slides/slide/push-pull-rules-1024>`_"
-msgstr ""
-"`푸쉬-풀 방식 (온라인 학습 튜토리얼) <https://www.odoo.com/slides/slide/push-pull-"
-"rules-1024>`_"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:20
-msgid "Choosing the right inventory flow to handle receipts and deliveries"
-msgstr "입고 및 배송 처리에 적합한 재고 흐름 선택하기"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:22
-msgid ""
-"By default, Odoo handles shipping and receiving in three different ways: in "
-"one, two, or three steps. The simplest configuration is one step, which is "
-"the default. Each additional step required for a warehouse for either the "
-"receiving or shipping process will add an additional layer of operations to "
-"perform before a product is either received or shipped. These configurations"
-" depend entirely on the requirements for the products stored, such as "
-"performing quality checks on received products, or using special packaging "
-"on shipped products."
-msgstr ""
-"기본적으로 Odoo는 1단계, 2단계 또는 3단계 구성의 세 가지 방식으로 배송 및 입고를 처리합니다. 가장 간단한 기본 구성은 "
-"1단계입니다. 품질 검사 수행 또는 특수 포장 사용과 같이 저장된 제품의 특정 요구 사항에 따라 추가 단계를 추가할 수 있습니다. 각 "
-"단계가 추가될 때마다 제품을 수령하거나 배송하기 전에 완료해야 할 작업이 추가됩니다. 구성 선택은 물류창고의 요구 사항과 취급하는 제품의"
-" 특성에 따라 달라집니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:30
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:18
 msgid "One-step flow"
 msgstr "1단계 플로우"
 
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:20
+msgid ""
+"The *one-step inventory flow* is the simplest option, with minimal handling "
+"steps and the least traceability. In this setup, products move directly from"
+" vendors to stock or from stock to customers, with Odoo only tracking when "
+"items enter or leave the warehouse. This makes it ideal for businesses with "
+"high-volume, low-risk products or fast-moving operations where additional "
+"validation steps aren’t necessary."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:26
+msgid "**Receiving**: Products go directly into stock."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:27
+msgid "**Shipping**: Products ship directly from stock."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:28
+msgid ""
+"**Best for**: Small warehouses, low stock levels, and non-perishable items, "
+"where minimal processing is needed before products are stored or shipped."
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:32
-msgid ""
-"The receiving and shipping rules for a one-step configuration are as "
-"follows:"
-msgstr "1단계 설정에 대한 입고 및 배송 규칙은 다음과 같습니다:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:34
-msgid ""
-"**Receipt**: Receive products directly into stock. No intermediate steps "
-"between receipt and stock occur, such as a transfer to a quality control "
-"location."
-msgstr "**입고**: 제품이 창고로 바로 입고됩니다. 입고와 재고 사이에 품질 관리팀으로 이관하는 등의 중간 단계가 없습니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:36
-msgid ""
-"**Shipping**: Ship products directly from stock. No intermediate steps "
-"between stock and shipping occur, such as a transfer to a packing location."
-msgstr ""
-"**배송**: 재고에서 바로 품목을 발송합니다. 재고와 배송 간에 패키지 장소로의 이동과 같은 중간 단계가 발생하지 않습니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:38
-msgid ""
-"Can only be used if not using :abbr:`FIFO (First In, First Out)`, "
-":abbr:`LIFO (Last In, First Out)`, or :abbr:`FEFO (First Expired, First "
-"Out)` removal strategies."
-msgstr ""
-":abbr:`FIFO (선입선출)`, :abbr:`LIFO (후입선물)` 또는 :abbr:`FEFO (선한선출)` 제거 전략을 사용하지 "
-"않는 경우에만 사용할 수 있습니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:40
-msgid "Receipts and/or deliveries are handled quickly."
-msgstr "입고 및/또는 배송이 빠르게 처리됩니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:41
-msgid ""
-"Recommended for small warehouses with low stock levels, and for non-"
-"perishable items."
-msgstr "재고 수준이 낮고 부패하기 어려운 품목이 있는 소규모 창고에 권장됩니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:42
-msgid "Items are received or shipped directly into/from stock."
-msgstr "품목은 창고로 직접 입고되거나 배송됩니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:45
 msgid ":doc:`daily_operations/receipts_delivery_one_step`"
 msgstr ":doc:`daily_operations/receipts_delivery_one_step`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:48
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:35
 msgid "Two-step flow"
 msgstr "2단계 플로우"
 
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:37
+msgid ""
+"A *two-step flow* adds an input or output area for processing products "
+"before storage or shipment. Incoming goods can be unboxed and inspected "
+"before shelving, while outgoing shipments are sorted and consolidated before"
+" dispatch. This setup improves efficiency by assigning storage teams to "
+"picking and stocking, while dedicated teams handle unboxing, (possibly) "
+"packing, and final verification to reduce order fulfillment errors."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:43
+msgid ""
+"**Receiving**: Products move to an *input* area before being transferred "
+"into stock."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:45
+msgid ""
+"Until transferred, received products are not automatically reserved for "
+"manufacturing, shipping, or other operations."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:48
+msgid ""
+"**Shipping**: Products move to an *output* before shipping to allow for "
+":doc:`sorting or consolidation <picking_methods>`."
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:50
 msgid ""
-"The receiving and shipping rules for a two-step configuration are as "
-"follows:"
-msgstr "2단계 설정에 대한 입고 및 배송 규칙은 다음과 같습니다:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:52
-msgid ""
-"**Input + stock**: Bring products to an input location *before* moving into "
-"stock. Products can be organized by different internal storage locations, "
-"such as various shelves, freezers, and locked areas, before being stocked in"
-" the warehouse."
+"**Best for**: Large warehouses, high stock levels, bulky items, and "
+"workflows that separate receiving from storage to improve organization and "
+"efficiency."
 msgstr ""
-"**입고 + 창고**: 제품이 입고되기 *전*에 제품을 입고 위치로 가져옵니다.  제품을 창고에 보관하기 전에 여러 선반, 냉동고, 잠금"
-" 구역 등 다양한 내부 보관 위치별로 제품을 정리할 수 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:55
-msgid ""
-"**Pick + ship**: Bring products to an output location before shipping. "
-"Packages can be organized by different carriers or shipping docks before "
-"being shipped."
-msgstr ""
-"**피킹 + 발송**: 배송하기 전에 제품을 출고 위치로 가져옵니다. 배송 전에 여러 배송업체 또는 배송 화물 적재 플랫폼에서 패키지를 "
-"정리할 수 있습니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:57
-msgid ""
-"Minimum requirement to use lot numbers or serial numbers to track products "
-"with a :abbr:`FIFO (First In, First Out)`, :abbr:`LIFO (Last In, First Out)`"
-" or :abbr:`FEFO (First Expired, First Out)` removal strategy."
-msgstr ""
-"로트 번호 또는 일련 번호를 사용하여 :abbr:`FIFO (선입선출)`, :abbr:`LIFO (후입선물)` 또는 :abbr:`FEFO"
-" (선한선출)` 제거 전략으로 제품을 추적하기 위한 최소 요구 사항입니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:60
-msgid ""
-"Recommended for larger warehouses with high stock levels, or when stocking "
-"large items (such as mattresses, large furniture, heavy machinery, etc.)."
-msgstr "재고가 많은 대형 창고 또는 대형 품목 (예: 매트리스, 대형 가구, 중장비 등)을 보관하는 데 권장됩니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:62
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:83
-msgid ""
-"Products received will not be available for manufacturing, shipping, etc., "
-"until they are transferred into stock."
-msgstr "입고된 제품은 재고로 전환될 때까지 제조, 배송 등에 사용할 수 없습니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:66
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:54
 msgid ":doc:`daily_operations/receipts_delivery_two_steps`"
 msgstr ":doc:`daily_operations/receipts_delivery_two_steps`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:69
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:57
 msgid "Three-step flow"
 msgstr "3단계 플로우"
 
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:59
+msgid ""
+"A three-step flow builds on the two-step process by adding a quality check "
+"and packing area, enforcing stricter processes and improving oversight."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:63
+msgid ""
+"While this setup enhances process control, separating picking and packing "
+"requires validation at each step. If the same person handles both, it may "
+"cause redundancy and slow operations."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:66
+msgid ""
+"Quality checks and packing do not require a three-step flow. Enable "
+":doc:`quality control points "
+"<../../quality/quality_management/quality_control_points>` separately or "
+"activate the :ref:`Packages feature <inventory/warehouses_storage/enable-"
+"package>` in Odoo to incorporate these processes without adding extra "
+"transfer steps."
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:71
 msgid ""
-"The receiving and shipping rules for a three-step configuration are as "
-"follows:"
-msgstr "3단계 설정에 대한 입고 및 배송 규칙은 다음과 같습니다:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:73
-msgid ""
-"**Input + quality + stock**: Receive products at the input location, "
-"transfer them to a quality control area, and move the ones that pass "
-"inspection into stock."
+"**Receiving**: Products follow a structured process: *input area* → *quality"
+" control* → *stock*."
 msgstr ""
-"**입고 + 품질 + 재고**: 입고 지점에서 제품을 수령하고 품질 관리 구역으로 가져가 검사를 통과한 제품을 창고에 보관합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:75
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:72
 msgid ""
-"**Pick + pack + ship**: Pick products according to their removal strategy, "
-"pack them in a dedicated packing area, and bring them to an output location "
-"for shipping."
+"**Shipping**: Products are *picked*, *packed*, and then *shipped*, ensuring "
+"proper handling and organization."
 msgstr ""
-"**피킹 + 포장 + 배송**: 제거 전략에 따라 제품을 피킹하고 전용 포장 공간에 포장한 후 배송을 위해 출고 위치로 이동합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:77
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:74
 msgid ""
-"Can be used when tracking products by lot or serial numbers when using a "
-":abbr:`FIFO (First In, First Out)`, :abbr:`LIFO (Last In, First Out)`, or "
-":abbr:`FEFO (First Expired, First Out)` removal strategy."
+"**Best for**: Very large warehouses with strict quality control "
+"requirements, dedicated picking and packing workflows, and a need for clear "
+"traceability across multiple handling stages. Suitable when multiple teams "
+"manage different steps before products are stocked or shipped."
 msgstr ""
-":abbr:`FIFO (선입선출)`, :abbr:`LIFO (후입선출)` 또는 :abbr:`FEFO (선한선출)` 제거 전략을 사용하는 "
-"경우 로트 또는 일련 번호로 제품을 추적할 수 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:80
-msgid "Recommended for very large warehouses with very high stock levels."
-msgstr "재고 수준이 매우 높은 초대형 창고에 권장됩니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:81
-msgid ""
-"Required for any warehouse needing to perform quality control inspections "
-"before receiving items into stock."
-msgstr "상품을 입고하기 전에 품질 관리 검사를 수행해야 하는 모든 창고에 필요합니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:87
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:79
 msgid ":doc:`daily_operations/receipts_three_steps`"
 msgstr ":doc:`daily_operations/receipts_three_steps`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:88
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:80
 msgid ":doc:`daily_operations/delivery_three_steps`"
 msgstr ":doc:`daily_operations/delivery_three_steps`"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:83
+msgid "Add-ons"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:85
+msgid ""
+"To optimize each flow, Odoo provides additional features that can enhance "
+"the process."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:88
+msgid "Storage"
+msgstr "저장 공간"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:90
+msgid "To organize and store products efficiently, use:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:111
+msgid "Delivery"
+msgstr "배송"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:113
+msgid ""
+"Tailor the outgoing shipment process to fit the business needs. Picking "
+"methods and removal strategies control how products are reserved for orders,"
+" while cross-docking and dropshipping determine how they move. Configuring "
+"these options in Odoo ensures visibility into product movement and confirms "
+"that items reach customers efficiently."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:141
+msgid "Customization"
+msgstr "맞춤 설정"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:143
+msgid ""
+"Odoo's flexible framework enables businesses to tailor workflows to match "
+"specific operational needs."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/cross_dock.rst:3
 msgid "Organize a cross-dock in a warehouse"
@@ -22099,21 +22080,22 @@ msgstr "Odoo 위치 보기"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:109
 msgid ""
-"Odoo databases include pre-configured view locations to organize the "
+"Odoo databases include preconfigured view locations to organize the "
 "hierarchy of locations. These provide helpful context, and distinguish "
 "between internal and external locations."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:112
 msgid ""
-"*Physical locations* serve as an umbrella for external locations, without "
-"changing a product's inventory value. (Inventory valuation changes occur "
-"when products move from internal to external locations)."
+"*Physical locations* group internal locations—such as secondary warehouses "
+"and subcontractor sites. Because :doc:`inventory valuation "
+"<../product_management/inventory_valuation/inventory_valuation_config>` "
+"changes only when goods move from internal to external locations, Odoo uses "
+"physical locations to track stock that is off-site or in transit without "
+"affecting valuation."
 msgstr ""
-"*물리적 위치* 는 품목의 재고 가치가 변경되지 않도록, 외부 위치에 대해 우산과도 같은 역할을 합니다(품목이 내부 위치에서 외부로 "
-"변경할 경우 재고 가치 평가가 변동). "
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:119
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:121
 msgid ""
 "When moving products in warehouses `WH` and `WH2`, the items are not in "
 "either warehouse, but still belong to the company. While in transit, they "
@@ -22123,7 +22105,7 @@ msgstr ""
 "`WH` 및 `WH2` 창고에서 품목을 운송할 때 해당 품목은 두 창고에 위치하고 있지 않지만 여전히 회사 소유 하에 있습니다. 운송 "
 "중에는 :guilabel:`운송 위치` 유형 중의 하나인 `창고 간 운송` 위치에 배치됩니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:123
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:125
 msgid ""
 "This location is under the view location, `Physical Locations`, indicating "
 "that `Inter-warehouse transit` is outside of a warehouse, but still part of "
@@ -22133,13 +22115,13 @@ msgstr ""
 "이 위치는 보기 위치인 `실제 위치` 아래에 있으며, `창고 간 운송`은 창고 외부에서 발생하나 여전히 회사의 일부로 진행된다는 것을 "
 "나타냅니다. 이와 같은 내용은 품목의 재고 가치 평가에 영향을 미치지 않습니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:127
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:129
 msgid ""
 "*Partner locations* group customer and vendor locations (external locations)"
 " together. Transfers to these locations affect inventory valuation."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:129
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:131
 msgid ""
 "*Virtual locations* are locations that do **not** exist physically, but it "
 "is where items that are not in inventory can be placed. These can be items "
@@ -30487,12 +30469,10 @@ msgstr "자재명세서"
 msgid ""
 "A *bill of materials* (or *BoM* for short) documents specific components, "
 "along with their respective quantities, that are needed to produce or repair"
-" a product. In Odoo, |BoMs| as blueprints for manufactured goods and kits, "
-"and often include production operations and step-by-step guidelines, as "
-"well."
+" a product. In Odoo, |BoMs| serve as blueprints for manufactured goods and "
+"kits, and often include production operations and step-by-step guidelines, "
+"as well."
 msgstr ""
-"*자재명세서* (또는 줄여서 *BoM*)는 제품을 생산하거나 수리하는 데 필요한 특정 구성품을 해당 수량과 함께 기록한 문서입니다. "
-"Odoo에서는 |BoM|는 제조된 제품 및 키트의 청사진과 같은 역할을 하며 종종 생산 작업 및 단계별 지침도 포함되어 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:15
 msgid "BoM setup"
@@ -30929,11 +30909,11 @@ msgstr ""
 msgid "Show the *Miscellaneous* tab of the BoM."
 msgstr "BoM의 *기타* 탭을 표시합니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:236
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:235
 msgid "Add by-products to BoMs"
 msgstr "BOM에 부산물 추가"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:238
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:237
 msgid ""
 "A *by-product* is a residual product that is created during production in "
 "addition to the main product of a |BOM|. Unlike the primary product, there "
@@ -30942,7 +30922,7 @@ msgstr ""
 "*부산물* 이란 생산 과정에서 |BOM|의 주요 품목 외에 생성되는 잔여 생성품입니다. 기본 품목과 달리 |BOM|에는 부산물이 두 개 "
 "이상 있을 수 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:241
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:240
 msgid ""
 "To add by-products to a |BOM|, first enable the *By-Products* feature in "
 ":menuselection:`Manufacturing app --> Configuration --> Settings`. In the "
@@ -30956,7 +30936,7 @@ msgstr ""
 msgid "\"By Products\" feature in the settings page."
 msgstr "설정 페이지에 있는 품목별 기능입니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:249
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:248
 msgid ""
 "Once the feature is enabled, add by-products to a |BOM| by clicking the "
 ":guilabel:`By-products` tab. Click :guilabel:`Add a line`, and fill in the "
@@ -30968,7 +30948,7 @@ msgstr ""
 ":guilabel:`부산물`, :guilabel:`수량` 및 :guilabel:`측정 단위` 를 입력합니다. 선택 사항으로 부산물에 대해"
 " :guilabel:`작업 중 생산` 을 지정합니다."
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:255
+#: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:254
 msgid ""
 "The by-product, `Mush`, is created in the `Grind grapes` operation when "
 "producing `Red Wine`."
