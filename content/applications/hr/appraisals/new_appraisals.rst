@@ -2,50 +2,47 @@
 New appraisals
 ==============
 
-To create a new appraisal for an employee, first navigate to the main *Appraisals* dashboard by
+To create a new appraisal for an employee, first navigate to the main **Appraisals** dashboard by
 opening the :menuselection:`Appraisals` app. The :guilabel:`Appraisals` dashboard is the default
 view.
 
 Appraisals dashboard
 ====================
 
-All appraisals are displayed on the dashboard in a default Kanban view, with a list of groupings on
-the left side of the dashboard, including :guilabel:`COMPANY`, :guilabel:`DEPARTMENT`, and
-:guilabel:`STATUS`.
-
-Click any grouping option to view appraisals for **only** the chosen selection.
-
-.. note::
-   Only groupings with multiple selections appear in the list. For example, if a database only has
-   one company, the :guilabel:`COMPANY` grouping does **not** appear, since there is no other
-   company to select.
+All scheduled and confirmed appraisals are displayed on the dashboard in a default Kanban view,
+grouped by the month the appraisal is scheduled for. Cancelled and completed appraisals are hidden,
+by default.
 
 Each appraisal card displays the following information:
 
 - **Name**: the employee's name.
+- **Status**: a green dot indicating the appraisal is ready (the employee has marked their feedback
+  as :guilabel:`Visible to Manager`).
 - **Department**: the department the employee is associated with.
-- **Company**: the company the employee works for. This only appears in a multi-company database.
+- **Company**: the company the employee works for. This **only** appears in a multi-company database.
 - **Date**: the date the appraisal was requested, or is scheduled for in the future.
 - **Activities**: any :doc:`activities <../../essentials/activities>` that are scheduled for the
   appraisal, such as *Meetings* or *Phone Calls*.
 - **Manager**: the employee's manager, indicated by the profile icon in the bottom-right corner of
   an appraisal card.
-- **Status banner**: the status of the appraisal. A banner appears if an appraisal is marked as
-  either *Canceled* or *Done*. If no banner is present, that means the appraisal has not happened,
-  or has not been scheduled yet.
 
 To view the details of any appraisal, click on the card to open the appraisal form.
 
 .. image:: new_appraisals/dashboard.png
-   :align: center
    :alt: The Appraisals dashboard with each appraisal in its own box.
 
 Create an appraisal
 ===================
 
 To create a new appraisal, click the :guilabel:`New` button in the upper-left corner of the
-:guilabel:`Appraisals` dashboard. Doing so reveals a blank appraisal form. After entering a name in
-the first blank field, proceed to enter the following information on the form:
+:guilabel:`Appraisals` dashboard. Doing so reveals a blank appraisal form. Using the drop-down
+menu, select an employee in the first blank field.
+
+.. note::
+   If an appraisal is already scheduled for the same employee, a warning stating `Another appraisal
+   with the same people is already ongoing.` appears in a yellow bar at the top of the form.
+
+Proceed to enter the following information on the form:
 
 - :guilabel:`Manager`: select the employee's manager from the drop-down menu. The manager is
   responsible for completing the *Manager's Feedback* section of the appraisal. This field
@@ -206,10 +203,10 @@ Once both portions of an appraisal are completed (the :ref:`employee <appraisals
 and :ref:`manager <appraisals/manager-feedback>` feedback sections), it is time for the employee and
 manager to meet and discuss the appraisal.
 
-A meeting can be scheduled in one of two ways: either from the *Appraisals* application dashboard,
+A meeting can be scheduled in one of two ways: either from the **Appraisals** application dashboard,
 or from an individual appraisal card.
 
-To schedule an appraisal from the dashboard of the *Appraisals* application, first navigate to
+To schedule an appraisal from the dashboard of the **Appraisals** application, first navigate to
 :menuselection:`Appraisals app --> Appraisals`.
 
 Click the :icon:`fa-clock-o` :guilabel:`(clock)` icon, beneath the appraisal date on the desired
