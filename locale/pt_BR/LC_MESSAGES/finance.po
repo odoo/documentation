@@ -27,7 +27,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-27 08:53+0000\n"
+"POT-Creation-Date: 2025-04-30 07:56+0000\n"
 "PO-Revision-Date: 2022-10-04 12:53+0000\n"
 "Last-Translator: Maitê Dietze, 2025\n"
 "Language-Team: Portuguese (Brazil) (https://app.transifex.com/odoo/teams/41243/pt_BR/)\n"
@@ -9046,6 +9046,7 @@ msgid ":doc:`Internal transfers <payments/internal_transfers>`"
 msgstr ":doc:`Internal transfers <payments/internal_transfers>`"
 
 #: ../../content/applications/finance/accounting/payments.rst:19
+#: ../../content/applications/finance/accounting/vendor_bills.rst:119
 msgid ":doc:`bank/reconciliation`"
 msgstr ":doc:`bank/reconciliation`"
 
@@ -9381,7 +9382,6 @@ msgstr ""
 " selected account."
 
 #: ../../content/applications/finance/accounting/payments.rst-1
-#: ../../content/applications/finance/accounting/vendor_bills.rst-1
 msgid "register a partial payment"
 msgstr "register a partial payment"
 
@@ -17357,41 +17357,60 @@ msgstr "Contas do fornecedor"
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:7
 msgid ""
-"In Odoo, we can register vendor bills **manually** or **automatically**, "
-"while the **Aged Payable report** provides an overview of all outstanding "
-"bills to help us pay the correct amounts on time."
+"Vendor bills can be registered either **manually** or **automatically** in "
+"Odoo. The :ref:`Aged Payable report <accounting/vendor_bills/age-payable-"
+"report>` provides an overview of all outstanding bills to help ensure timely"
+" payment of the correct amounts."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:12
 msgid ""
 "Tutorial `Registering a vendor bill "
-"<https://www.odoo.com/slides/slide/registering-a-vendor-"
-"bill-1683?fullscreen=1>`_"
+"<https://www.odoo.com/slides/slide/register-a-vendor-bill-6582>`_"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:13
 msgid ":doc:`/applications/inventory_and_mrp/purchase/manage_deals/manage`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:16
+#: ../../content/applications/finance/accounting/vendor_bills.rst:18
 msgid "Bill creation"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:19
+#: ../../content/applications/finance/accounting/vendor_bills.rst:23
 msgid "Manually"
 msgstr "Manualmente"
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:21
+#: ../../content/applications/finance/accounting/vendor_bills.rst:25
 msgid ""
-"Create a vendor bill manually by going to :menuselection:`Accounting --> "
-"Vendors --> Bills` and clicking :guilabel:`Create`."
+"To create a vendor bill manually, go to :menuselection:`Accounting --> "
+"Vendors --> Bills` and click :guilabel:`New`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:25
+#: ../../content/applications/finance/accounting/vendor_bills.rst:29
+msgid ""
+"Alternatively, it is possible to create a vendor bill from the Accounting "
+"dashboard:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:31
+msgid ""
+"either click :guilabel:`Create Manually` on the :guilabel:`Vendor Bills` "
+"journal;"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:32
+msgid ""
+"or click the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon of "
+"the :guilabel:`Vendor Bills` journal, then :guilabel:`Bill` under the "
+":guilabel:`New` section."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:38
 msgid "Automatically"
 msgstr "Automaticamente"
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:27
+#: ../../content/applications/finance/accounting/vendor_bills.rst:40
 msgid ""
 "Vendor bills can be automatically created by **sending an email** to an "
 ":ref:`email alias <invoice-digitization/email-alias>` associated with the "
@@ -17399,177 +17418,182 @@ msgid ""
 "--> Vendors --> Bills` and then clicking :guilabel:`Upload`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:32
+#: ../../content/applications/finance/accounting/vendor_bills.rst:45
+msgid ""
+"Once the bill is uploaded, the PDF document appears on the right side of the"
+" screen, making it easy to fill in the bill information."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:47
+msgid ""
+"Bills can be :doc:`digitized <vendor_bills/invoice_digitization>` for "
+"automatic completion."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:48
+msgid ""
+"Services such as digitizing scanned or PDF vendor bills in Odoo require "
+":doc:`In-App Purchase (IAP) </applications/essentials/in_app_purchase>` "
+"credit or tokens."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:54
 msgid "Bill completion"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:34
+#: ../../content/applications/finance/accounting/vendor_bills.rst:56
 msgid ""
 "Whether the bill is created manually or automatically, make sure the "
 "following fields are appropriately completed:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:37
+#: ../../content/applications/finance/accounting/vendor_bills.rst:59
 msgid ""
-":guilabel:`Vendor`: Odoo automatically fills some information based on the "
-"vendor's registered information, previous purchase orders, or bills."
+":guilabel:`Vendor`: Odoo automatically fills in some information based on "
+"the information on the vendor's contact record as well as previous purchase "
+"orders and bills."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:39
+#: ../../content/applications/finance/accounting/vendor_bills.rst:61
 msgid ""
-":guilabel:`Bill Reference`: add the sales order reference provided by the "
-"vendor and is used to do the :ref:`matching <accounting/payments/matching>` "
-"when you receive the products."
+":guilabel:`Bill Reference`: Add the sales order reference provided by the "
+"vendor. This field is used to :ref:`match <accounting/payments/matching>` "
+"the products when they are received."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:41
+#: ../../content/applications/finance/accounting/vendor_bills.rst:63
 msgid ""
-":guilabel:`Auto-Complete`: select a past bill/purchase order to "
-"automatically complete the document. The :guilabel:`Vendor` field should be "
-"completed prior to completing this field."
+":guilabel:`Auto-Complete`: Select a past bill/purchase order to complete the"
+" document automatically. The :guilabel:`Vendor` field should be completed "
+"before completing this field."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:43
-msgid ":guilabel:`Bill Date`: is the issuance date of the document."
+#: ../../content/applications/finance/accounting/vendor_bills.rst:65
+msgid ":guilabel:`Bill Date`: Select the document's issuance date."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:44
+#: ../../content/applications/finance/accounting/vendor_bills.rst:66
 msgid ""
-":guilabel:`Accounting Date`: is the date on which the document is registered"
-" in your accounting."
+":guilabel:`Accounting Date`: Update the document's accounting registration "
+"date if needed."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:45
+#: ../../content/applications/finance/accounting/vendor_bills.rst:67
 msgid ""
-":guilabel:`Payment Reference`: when registering the payment, it is "
-"automatically indicated in the :guilabel:`Memo` field."
+":guilabel:`Payment Reference`: Automatically indicated in the "
+":guilabel:`Memo` field when"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:47
+#: ../../content/applications/finance/accounting/vendor_bills.rst:68
+msgid "registering the payment."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:69
 msgid ""
-":guilabel:`Recipient Bank`: to indicate to which account number the payment "
-"has to be made."
+":guilabel:`Recipient Bank`: Indicates the account number to which the "
+"payment will be made. This field is required when paying via batch payment "
+"files (such as NACHA and :doc:`SEPA <payments/pay_sepa>`)."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:48
-msgid ":guilabel:`Due Date` or :guilabel:`Terms` to pay the bill."
+#: ../../content/applications/finance/accounting/vendor_bills.rst:72
+msgid ":guilabel:`Due Date` or :guilabel:`Terms` for paying the bill."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:49
+#: ../../content/applications/finance/accounting/vendor_bills.rst:73
 msgid ""
-":guilabel:`Journal`: select in which journal the bill should be recorded and"
-" the :doc:`Currency <get_started/multi_currency>`."
+":guilabel:`Journal`: Select which journal should record the bill and in "
+"which :doc:`currency <get_started/multi_currency>`."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst-1
 msgid "filling the vendor bill"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:56
+#: ../../content/applications/finance/accounting/vendor_bills.rst:80
 msgid ""
-"Bills can be :doc:`digitized <vendor_bills/invoice_digitization>` for "
-"automatic completion by clicking :guilabel:`Send for Digitization`."
+"Multiple bills for the same purchase order may be issued if the vendor is on"
+" back-order and sends invoices as products are shipped or if the vendor "
+"sends partial bills or requests a deposit. In this case, multiple bills may "
+"have the same :guilabel:`Bill Reference`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:58
-msgid ""
-"If you upload the bill, the PDF document is displayed on the right of the "
-"screen, allowing you to easily fill in the bill information."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/vendor_bills.rst:62
+#: ../../content/applications/finance/accounting/vendor_bills.rst:87
 msgid "Bill confirmation"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:64
+#: ../../content/applications/finance/accounting/vendor_bills.rst:89
 msgid ""
-"Click :guilabel:`Confirm` when the document is completed. The status of your"
-" document changes to :guilabel:`Posted` and a journal entry is generated "
-"based on the configuration on the invoice."
+"Click :guilabel:`Confirm` when the document is completed. The status changes"
+" to :guilabel:`Posted`, and a journal entry is generated based on the vendor"
+" bill information."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:68
+#: ../../content/applications/finance/accounting/vendor_bills.rst:93
 msgid ""
-"Once confirmed, it is no longer possible to update it. Click "
+"Once confirmed, a vendor bill can no longer be updated. Click "
 ":guilabel:`Reset to draft` if changes are required."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:72
-msgid "Bill Payment"
-msgstr ""
+#: ../../content/applications/finance/accounting/vendor_bills.rst:99
+msgid "Payment and reconciliation"
+msgstr "Pagamento e reconciliação"
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:74
+#: ../../content/applications/finance/accounting/vendor_bills.rst:101
 msgid ""
-"Upon payment of the vendor bill, click on :guilabel:`Register Payment` to "
-"open a new payment window."
+"To register a payment, click on :guilabel:`Register Payment`. In the "
+":guilabel:`Register Payment` window, select the :guilabel:`Journal`, the "
+":guilabel:`Payment Method`, the :guilabel:`Amount`, and the "
+":guilabel:`Currency`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:76
+#: ../../content/applications/finance/accounting/vendor_bills.rst:105
 msgid ""
-"Select the :guilabel:`Journal`, the :guilabel:`Payment Method`, the "
-":guilabel:`Amount` you wish to pay (full or partial payment), and the "
-":guilabel:`Currency`. In the case of a partial payment (when the "
-":guilabel:`Amount` paid is less than the total remaining amount on the "
-"vendor bill), the :guilabel:`Payment Difference` field displays the "
-"outstanding balance. You have two options:"
+"When the :guilabel:`Amount` paid is less than the total remaining amount on "
+"the vendor bill, the payment is :ref:`partial <accounting/payments/partial-"
+"payment>`, and the :guilabel:`Payment Difference` field displays the "
+"outstanding balance."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:82
-msgid ""
-":guilabel:`Keep open`: to keep the bill open and mark it with a "
-":guilabel:`Partial` banner;"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/vendor_bills.rst:83
-msgid ""
-":guilabel:`Mark as fully paid`: In this case, select an account in the "
-":guilabel:`Post Difference In` field and change the :guilabel:`Label` if "
-"needed. A journal entry will be created to balance the account receivable "
-"with the selected account."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/vendor_bills.rst:90
+#: ../../content/applications/finance/accounting/vendor_bills.rst:109
 msgid ""
 "The :guilabel:`Memo` field is filled automatically if the :guilabel:`Payment"
-" Reference` has been set correctly in the vendor bill. If the field is "
+" Reference` has been set correctly on the vendor bill. If the field is "
 "empty, select the vendor invoice number as a reference."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:94
+#: ../../content/applications/finance/accounting/vendor_bills.rst:113
 msgid ""
-"Once confirmed, an :guilabel:`In Payment` banner appears on the bill until "
-"it is :doc:`reconciled <bank/reconciliation>`."
+"Then click :guilabel:`Create payment`. An :guilabel:`In "
+"Payment`/:guilabel:`Partial` banner appears on the bill until it is "
+":doc:`reconciled <bank/reconciliation>` and its status updates to "
+":guilabel:`Paid`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:98
+#: ../../content/applications/finance/accounting/vendor_bills.rst:118
+msgid ":doc:`payments`"
+msgstr ":doc:`payments`"
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:124
 msgid "Aged payable report"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:100
+#: ../../content/applications/finance/accounting/vendor_bills.rst:126
 msgid ""
-"To get an overview of your open vendor bills and their related due dates, "
-"you can use the **Aged Payable report**. Go to :menuselection:`Accounting "
-"--> Reporting --> Partner Reports: Aged payable`."
+"To get an overview of the open vendor bills and their due dates, go to "
+":menuselection:`Accounting --> Reporting --> Aged payable`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:104
+#: ../../content/applications/finance/accounting/vendor_bills.rst:129
 msgid ""
-"Click on a vendor's name to open up the details of all outstanding bills, "
-"the amounts due, the due dates, etc."
+"Click the :icon:`fa-caret-right` :guilabel:`(right arrow)` icon next to a "
+"vendor to view the details of all their outstanding bills, including the due"
+" dates and amounts."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:108
+#: ../../content/applications/finance/accounting/vendor_bills.rst:133
 msgid ""
-"By clicking the :guilabel:`Save` button, you can export the information "
-"available on the screen as a PDF or XLSX file and save it in the folder of "
-"your choice."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/vendor_bills.rst:110
-msgid ""
-"You might receive several bills for the same purchase order if your vendor "
-"is in back-order and is sending you invoices as they ship the products, or "
-"if your vendor is sending you a partial bill or asking for a deposit."
+"Click :guilabel:`PDF` or :guilabel:`XLSX` to generate a PDF or XLSX file, "
+"respectively."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:3

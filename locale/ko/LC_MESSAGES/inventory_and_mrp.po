@@ -6,8 +6,8 @@
 # Translators:
 # Martin Trigaux, 2023
 # JH CHOI <hwangtog@gmail.com>, 2024
-# Wil Odoo, 2024
 # Daye Jeong, 2025
+# Wil Odoo, 2025
 # Sarah Park, 2025
 # 
 #, fuzzy
@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-27 08:53+0000\n"
+"POT-Creation-Date: 2025-04-30 07:56+0000\n"
 "PO-Revision-Date: 2022-10-04 12:53+0000\n"
 "Last-Translator: Sarah Park, 2025\n"
 "Language-Team: Korean (https://app.transifex.com/odoo/teams/41243/ko/)\n"
@@ -7904,211 +7904,192 @@ msgstr "인바운드 및 아운바운드 흐름"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:8
 msgid ""
-"There are several ways to handle how a warehouse receives products "
-"(receipts) and ships products (deliveries). Depending on several factors, "
-"such as the type of products stocked and sold, warehouse size, and the "
-"amount of daily confirmed receipts and delivery orders, the way products are"
-" handled when coming in and out of the warehouse can vary a lot. Different "
-"settings can be configured for receipts and deliveries; they do not have to "
-"be configured to have the same number of steps."
+"Configuring inbound and outbound flows in Odoo is key to optimizing "
+"efficiency, traceability, and cost. Warehouse managers must balance speed "
+"and control, choosing between a streamlined process or added checkpoints."
 msgstr ""
-"창고에서 제품을 입고 (입고)하고 배송 (출고)하는 방법에는 여러 가지가 있습니다. 입고 및 판매되는 제품의 유형, 창고 크기, 일일 "
-"확인된 입고 및 배송 주문의 양 등 여러 요인에 따라 창고에서의 제품 입고 및 배송 처리는 크게 달라질 수 있습니다. 입고와 배송에 대해"
-" 서로 다른 설정을 구성할 수 있으며, 반드시 동일한 단계 수를 가질 필요는 없습니다."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:12
+msgid ""
+"Odoo offers one-step, two-step, and three-step flows, with more steps "
+"providing greater control but increasing operations. The best setup depends "
+"on quality checks, packaging, and warehouse size."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:15
-msgid ""
-"`Using Routes (eLearning Tutorial) <https://www.odoo.com/slides/slide/using-"
-"routes-1018>`_"
+msgid "This guide helps businesses determine the most suitable configuration."
 msgstr ""
-"`경로 사용 (온라인 학습 튜토리얼)<https://www.odoo.com/slides/slide/using-routes-1018>`_"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:16
-msgid ""
-"`Push & Pull Rules (eLearning Tutorial) "
-"<https://www.odoo.com/slides/slide/push-pull-rules-1024>`_"
-msgstr ""
-"`푸쉬-풀 방식 (온라인 학습 튜토리얼) <https://www.odoo.com/slides/slide/push-pull-"
-"rules-1024>`_"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:20
-msgid "Choosing the right inventory flow to handle receipts and deliveries"
-msgstr "입고 및 배송 처리에 적합한 재고 흐름 선택하기"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:22
-msgid ""
-"By default, Odoo handles shipping and receiving in three different ways: in "
-"one, two, or three steps. The simplest configuration is one step, which is "
-"the default. Each additional step required for a warehouse for either the "
-"receiving or shipping process will add an additional layer of operations to "
-"perform before a product is either received or shipped. These configurations"
-" depend entirely on the requirements for the products stored, such as "
-"performing quality checks on received products, or using special packaging "
-"on shipped products."
-msgstr ""
-"기본적으로 Odoo는 1단계, 2단계 또는 3단계 구성의 세 가지 방식으로 배송 및 입고를 처리합니다. 가장 간단한 기본 구성은 "
-"1단계입니다. 품질 검사 수행 또는 특수 포장 사용과 같이 저장된 제품의 특정 요구 사항에 따라 추가 단계를 추가할 수 있습니다. 각 "
-"단계가 추가될 때마다 제품을 수령하거나 배송하기 전에 완료해야 할 작업이 추가됩니다. 구성 선택은 물류창고의 요구 사항과 취급하는 제품의"
-" 특성에 따라 달라집니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:30
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:18
 msgid "One-step flow"
 msgstr "1단계 플로우"
 
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:20
+msgid ""
+"The *one-step inventory flow* is the simplest option, with minimal handling "
+"steps and the least traceability. In this setup, products move directly from"
+" vendors to stock or from stock to customers, with Odoo only tracking when "
+"items enter or leave the warehouse. This makes it ideal for businesses with "
+"high-volume, low-risk products or fast-moving operations where additional "
+"validation steps aren’t necessary."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:26
+msgid "**Receiving**: Products go directly into stock."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:27
+msgid "**Shipping**: Products ship directly from stock."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:28
+msgid ""
+"**Best for**: Small warehouses, low stock levels, and non-perishable items, "
+"where minimal processing is needed before products are stored or shipped."
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:32
-msgid ""
-"The receiving and shipping rules for a one-step configuration are as "
-"follows:"
-msgstr "1단계 설정에 대한 입고 및 배송 규칙은 다음과 같습니다:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:34
-msgid ""
-"**Receipt**: Receive products directly into stock. No intermediate steps "
-"between receipt and stock occur, such as a transfer to a quality control "
-"location."
-msgstr "**입고**: 제품이 창고로 바로 입고됩니다. 입고와 재고 사이에 품질 관리팀으로 이관하는 등의 중간 단계가 없습니다"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:36
-msgid ""
-"**Shipping**: Ship products directly from stock. No intermediate steps "
-"between stock and shipping occur, such as a transfer to a packing location."
-msgstr ""
-"**배송**: 재고에서 바로 품목을 발송합니다. 재고와 배송 간에 패키지 장소로의 이동과 같은 중간 단계가 발생하지 않습니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:38
-msgid ""
-"Can only be used if not using :abbr:`FIFO (First In, First Out)`, "
-":abbr:`LIFO (Last In, First Out)`, or :abbr:`FEFO (First Expired, First "
-"Out)` removal strategies."
-msgstr ""
-":abbr:`FIFO (선입선출)`, :abbr:`LIFO (후입선물)` 또는 :abbr:`FEFO (선한선출)` 제거 전략을 사용하지 "
-"않는 경우에만 사용할 수 있습니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:40
-msgid "Receipts and/or deliveries are handled quickly."
-msgstr "입고 및/또는 배송이 빠르게 처리됩니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:41
-msgid ""
-"Recommended for small warehouses with low stock levels, and for non-"
-"perishable items."
-msgstr "재고 수준이 낮고 부패하기 어려운 품목이 있는 소규모 창고에 권장됩니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:42
-msgid "Items are received or shipped directly into/from stock."
-msgstr "품목은 창고로 직접 입고되거나 배송됩니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:45
 msgid ":doc:`daily_operations/receipts_delivery_one_step`"
 msgstr ":doc:`daily_operations/receipts_delivery_one_step`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:48
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:35
 msgid "Two-step flow"
 msgstr "2단계 플로우"
 
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:37
+msgid ""
+"A *two-step flow* adds an input or output area for processing products "
+"before storage or shipment. Incoming goods can be unboxed and inspected "
+"before shelving, while outgoing shipments are sorted and consolidated before"
+" dispatch. This setup improves efficiency by assigning storage teams to "
+"picking and stocking, while dedicated teams handle unboxing, (possibly) "
+"packing, and final verification to reduce order fulfillment errors."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:43
+msgid ""
+"**Receiving**: Products move to an *input* area before being transferred "
+"into stock."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:45
+msgid ""
+"Until transferred, received products are not automatically reserved for "
+"manufacturing, shipping, or other operations."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:48
+msgid ""
+"**Shipping**: Products move to an *output* before shipping to allow for "
+":doc:`sorting or consolidation <picking_methods>`."
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:50
 msgid ""
-"The receiving and shipping rules for a two-step configuration are as "
-"follows:"
-msgstr "2단계 설정에 대한 입고 및 배송 규칙은 다음과 같습니다:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:52
-msgid ""
-"**Input + stock**: Bring products to an input location *before* moving into "
-"stock. Products can be organized by different internal storage locations, "
-"such as various shelves, freezers, and locked areas, before being stocked in"
-" the warehouse."
+"**Best for**: Large warehouses, high stock levels, bulky items, and "
+"workflows that separate receiving from storage to improve organization and "
+"efficiency."
 msgstr ""
-"**입고 + 창고**: 제품이 입고되기 *전*에 제품을 입고 위치로 가져옵니다.  제품을 창고에 보관하기 전에 여러 선반, 냉동고, 잠금"
-" 구역 등 다양한 내부 보관 위치별로 제품을 정리할 수 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:55
-msgid ""
-"**Pick + ship**: Bring products to an output location before shipping. "
-"Packages can be organized by different carriers or shipping docks before "
-"being shipped."
-msgstr ""
-"**피킹 + 발송**: 배송하기 전에 제품을 출고 위치로 가져옵니다. 배송 전에 여러 배송업체 또는 배송 화물 적재 플랫폼에서 패키지를 "
-"정리할 수 있습니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:57
-msgid ""
-"Minimum requirement to use lot numbers or serial numbers to track products "
-"with a :abbr:`FIFO (First In, First Out)`, :abbr:`LIFO (Last In, First Out)`"
-" or :abbr:`FEFO (First Expired, First Out)` removal strategy."
-msgstr ""
-"로트 번호 또는 일련 번호를 사용하여 :abbr:`FIFO (선입선출)`, :abbr:`LIFO (후입선물)` 또는 :abbr:`FEFO"
-" (선한선출)` 제거 전략으로 제품을 추적하기 위한 최소 요구 사항입니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:60
-msgid ""
-"Recommended for larger warehouses with high stock levels, or when stocking "
-"large items (such as mattresses, large furniture, heavy machinery, etc.)."
-msgstr "재고가 많은 대형 창고 또는 대형 품목 (예: 매트리스, 대형 가구, 중장비 등)을 보관하는 데 권장됩니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:62
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:83
-msgid ""
-"Products received will not be available for manufacturing, shipping, etc., "
-"until they are transferred into stock."
-msgstr "입고된 제품은 재고로 전환될 때까지 제조, 배송 등에 사용할 수 없습니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:66
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:54
 msgid ":doc:`daily_operations/receipts_delivery_two_steps`"
 msgstr ":doc:`daily_operations/receipts_delivery_two_steps`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:69
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:57
 msgid "Three-step flow"
 msgstr "3단계 플로우"
 
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:59
+msgid ""
+"A three-step flow builds on the two-step process by adding a quality check "
+"and packing area, enforcing stricter processes and improving oversight."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:63
+msgid ""
+"While this setup enhances process control, separating picking and packing "
+"requires validation at each step. If the same person handles both, it may "
+"cause redundancy and slow operations."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:66
+msgid ""
+"Quality checks and packing do not require a three-step flow. Enable "
+":doc:`quality control points "
+"<../../quality/quality_management/quality_control_points>` separately or "
+"activate the :ref:`Packages feature <inventory/warehouses_storage/enable-"
+"package>` in Odoo to incorporate these processes without adding extra "
+"transfer steps."
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:71
 msgid ""
-"The receiving and shipping rules for a three-step configuration are as "
-"follows:"
-msgstr "3단계 설정에 대한 입고 및 배송 규칙은 다음과 같습니다:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:73
-msgid ""
-"**Input + quality + stock**: Receive products at the input location, "
-"transfer them to a quality control area, and move the ones that pass "
-"inspection into stock."
+"**Receiving**: Products follow a structured process: *input area* → *quality"
+" control* → *stock*."
 msgstr ""
-"**입고 + 품질 + 창고**: 입고 지점에서 제품을 수령하고 품질 관리 구역으로 가져가 검사를 통과한 제품을 창고에 보관합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:75
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:72
 msgid ""
-"**Pick + pack + ship**: Pick products according to their removal strategy, "
-"pack them in a dedicated packing area, and bring them to an output location "
-"for shipping."
+"**Shipping**: Products are *picked*, *packed*, and then *shipped*, ensuring "
+"proper handling and organization."
 msgstr ""
-"**피킹 + 포장 + 배송**: 제거 전략에 따라 제품을 피킹하고 전용 포장 공간에 포장한 후 배송을 위해 출고 위치로 이동합니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:77
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:74
 msgid ""
-"Can be used when tracking products by lot or serial numbers when using a "
-":abbr:`FIFO (First In, First Out)`, :abbr:`LIFO (Last In, First Out)`, or "
-":abbr:`FEFO (First Expired, First Out)` removal strategy."
+"**Best for**: Very large warehouses with strict quality control "
+"requirements, dedicated picking and packing workflows, and a need for clear "
+"traceability across multiple handling stages. Suitable when multiple teams "
+"manage different steps before products are stocked or shipped."
 msgstr ""
-":abbr:`FIFO (선입선출)`, :abbr:`LIFO (후입선출)` 또는 :abbr:`FEFO (선한선출)` 제거 전략을 사용하는 "
-"경우 로트 또는 일련 번호로 제품을 추적할 수 있습니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:80
-msgid "Recommended for very large warehouses with very high stock levels."
-msgstr "재고 수준이 매우 높은 초대형 창고에 권장됩니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:81
-msgid ""
-"Required for any warehouse needing to perform quality control inspections "
-"before receiving items into stock."
-msgstr "상품을 입고하기 전에 품질 관리 검사를 수행해야 하는 모든 창고에 필요합니다."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:87
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:79
 msgid ":doc:`daily_operations/receipts_three_steps`"
 msgstr ":doc:`daily_operations/receipts_three_steps`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:88
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:80
 msgid ":doc:`daily_operations/delivery_three_steps`"
 msgstr ":doc:`daily_operations/delivery_three_steps`"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:83
+msgid "Add-ons"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:85
+msgid ""
+"To optimize each flow, Odoo provides additional features that can enhance "
+"the process."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:88
+msgid "Storage"
+msgstr "저장 공간"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:90
+msgid "To organize and store products efficiently, use:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:111
+msgid "Delivery"
+msgstr "배송"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:113
+msgid ""
+"Tailor the outgoing shipment process to fit the business needs. Picking "
+"methods and removal strategies control how products are reserved for orders,"
+" while cross-docking and dropshipping determine how they move. Configuring "
+"these options in Odoo ensures visibility into product movement and confirms "
+"that items reach customers efficiently."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:141
+msgid "Customization"
+msgstr "맞춤 설정"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:143
+msgid ""
+"Odoo's flexible framework enables businesses to tailor workflows to match "
+"specific operational needs."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/cross_dock.rst:3
 msgid "Organize a cross-dock in a warehouse"
@@ -14026,50 +14007,306 @@ msgid ":doc:`multipack`"
 msgstr ":doc:`multipack`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:3
-msgid "How to get DHL credentials for integration with Odoo?"
-msgstr "Odoo와의 통합을 위한 DHL 자격 증명은 어떻게 받나요?"
+msgid "DHL integration"
+msgstr "DHL 통합"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:5
-msgid "In order to use the Odoo DHL API, you will need:"
-msgstr "Odoo DHL API를 사용하려면 다음 사항이 필요합니다:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:7
-msgid "A DHL.com SiteID"
-msgstr "DHL.com 사이트 ID"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:9
-msgid "A DHL Password"
-msgstr "DHL 비밀번호"
+msgid ""
+"DHL is one of the shipping carriers for which a *shipping connector* is "
+"available in Odoo's **Inventory** app. By enabling the shipping connector in"
+" the app's settings, and configuring at least one *shipping method*, the "
+"process of :doc:`calculating shipping rates <../setup_configuration>` and "
+":doc:`generating shipping labels <labels>` is greatly simplified."
+msgstr ""
+"DHL은 Odoo **재고 관리** 앱에서 *배송 커넥터* 를 사용할 수 있는 운송업체 중 하나입니다. 앱 설정에서 배송 커넥터를 "
+"활성화한 후 최소 하나 이상 *배송 방법* 을 설정해 두면 :doc:`배송 요금 계산 <../setup_configuration>` 및 "
+":doc:`배송 라벨 생성` 프로세스를 크게 간소화할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:11
-msgid "A DHL Account Number"
-msgstr "DHL 계정 번호"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:15
 msgid ""
-"Getting SiteID and password for countries other than United States (UK and "
-"Rest of the world)"
-msgstr "미국 이외의 국가 (영국 및 기타 국가)의 사이트 ID와 비밀번호 가져오기"
+"While a variety of shipping connectors are available for different carriers,"
+" this documentation details the configuration settings specific to "
+"integrating DHL. For instructions on configuring the integration settings "
+"common to all shippers, see the documentation on :doc:`third-party shippers "
+"<third_party_shipper>`."
+msgstr ""
+"배송업체마다 이용하는 배송 커넥터는 각기 다르지만, 이 문서에서는 환경설정에 대해 자세히 설명하며 DHL와 통합하는 경우에 대해 "
+"설명합니다. 모든 배송업체에 공통적으로 적용되는 통합 환경설정 방법에 대한 안내는 :doc:`외부 배송업체 "
+"<third_party_shipper>` 문서를 참조하세요."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:17
-msgid ""
-"You should contact DHL account manager and request integration for XML "
-"Express API. The presales should provide you live credentials."
-msgstr ""
-"DHL 계정 관리자에게 연락하여 XML Express API에 대한 통합을 요청해야 합니다. 사전 판매에서 실시간 자격 증명을 제공해야 "
-"합니다."
+msgid "Enable DHL shipping connector"
+msgstr "DHL 배송 커넥터 사용하기"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:20
-msgid "Getting SiteID and Password for  United States"
-msgstr "미국 사이트 ID 및 비밀번호 가져오기"
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:19
+msgid ""
+"Before creating a DHL shipping method, enable the carrier's shipping "
+"connector. To do so, navigate to :menuselection:`Inventory app --> "
+"Configuration --> Settings`."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:22
 msgid ""
-"You need to write to xmlrequests@dhl.com along with your full Account "
-"details like account number, region, address, etc. to get API Access."
+"Scroll down to the :guilabel:`Shipping Connectors` section, and tick the "
+"checkbox next to :guilabel:`DHL Express Connector`. Finally, click "
+":guilabel:`Save` to apply the changes."
 msgstr ""
-"API 액세스 권한을 얻으려면 계정 번호, 지역, 주소 등 모든 계정 세부 정보를 xmlrequests@dhl.com 으로 보내야 "
-"합니다."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:25
+msgid ""
+"Once the connector has been enabled, a :icon:`fa-arrow-right` :guilabel:`DHL"
+" Shipping Methods` link appears below the setting. Click the link to open a "
+"page showing all shipping methods configured for DHL."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:30
+msgid "Configure DHL shipping method"
+msgstr "DHL 배송 방법 환경설정"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:32
+msgid ""
+"After enabling the shipping connector for DHL, shipping methods can be "
+"configured for the carrier. Once configured, a shipping method can be added "
+"as a line item to sales orders (SOs), which allows for automatic computation"
+" of shipping rates, and generation of shipping labels."
+msgstr ""
+"DHL 배송 커넥터를 활성화한 후, 배송업체에 대한 배송 방법을 설정할 수 있습니다. 설정이 완료되면 판매주문서 (SO)에 배송 방법을 "
+"아이템 내역으로 추가하여 배송 요금을 자동으로 계산하고 배송 라벨을 생성할 수 있습니다."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:36
+msgid ""
+"To create a new DHL shipping method, navigate to :menuselection:`Inventory "
+"app --> Configuration --> Settings`. In the :guilabel:`Shipping Connectors` "
+"section, select the :guilabel:`DHL Shipping Methods` link below the "
+":guilabel:`DHL Express Connector` checkbox."
+msgstr ""
+"새로 DHL 배송 방법을 만들려면 :menuselection:`재고 관리 앱 --> 환경 설정 --> 설정` 으로 이동합니다. "
+":guilabel:`배송 커넥터` 섹션에서 :guilabel:`DHL 익스프레스 커넥터` 확인란 아래에 있는 :guilabel:`DHL "
+"배송 방법` 링크를 선택합니다."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:41
+msgid ""
+"It is also possible to see existing shipping methods for every carrier, by "
+"navigating to :menuselection:`Inventory app --> Configuration --> Shipping "
+"Methods`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:44
+msgid ""
+"Click :guilabel:`New` to open a blank shipping method form. If a shipping "
+"method has already been created, it can be selected from this screen."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst-1
+msgid "The form for a DHL shipping method."
+msgstr "DHL 배송 방법에 대한 양식입니다."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:51
+msgid "General information"
+msgstr "일반 정보"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:53
+msgid ""
+"Begin configuring the shipping method by entering its title in the "
+":guilabel:`Shipping Method` field."
+msgstr "배송 방법에 대한 환경설정은 :guilabel:`배송 방법` 필드에 제목을 입력하는 것부터 시작합니다."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:56
+msgid ""
+"In the :guilabel:`Provider` drop-down menu, select the :guilabel:`DHL` "
+"option. After doing so, a new :guilabel:`DHL Configuration` tab appears at "
+"the bottom of the form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:59
+msgid ""
+"All other fields in this section are identical on the shipping method forms "
+"for each shipping carrier. See the documentation on :doc:`third-party "
+"shippers <third_party_shipper>` for instructions on how to properly "
+"configure them."
+msgstr ""
+"이 섹션에 있는 필드는 각 배송업체의 배송 방법 양식에 있는 것과 모두 동일합니다. 관련된 :doc:`외부 배송업체 "
+"<third_party_shipper>` 문서에서 알맞게 설정하는 방법을 확인해 보세요."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:64
+msgid "DHL Configuration"
+msgstr "DHL 환경 설정"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:66
+msgid ""
+"The :guilabel:`DHL Configuration` tab on the shipping method form is used to"
+" connect the user's DHL account to Odoo, and configure the shipping method's"
+" details."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:70
+msgid "DHL SiteID, password, and account number"
+msgstr "DHL 사이트 ID, 비밀번호 및 계정 번호"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:72
+msgid ""
+"A DHL SiteID, password, and account number are used to link a DHL account "
+"with third-party services, like Odoo's **Inventory** app."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:76
+msgid ""
+"The SiteID and password are different credentials than the ones used to log "
+"in to a DHL account."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:78
+msgid "Here are two ways to obtain these DHL account credentials:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:80
+msgid ""
+"**If a DHL Express account is available**: Log into the `DHL Developer "
+"portal <https://developer.dhl.com/api-reference/dhl-express-mydhl-api#get-"
+"started-section/ user-guide%get-access>`_, and then `request a DHL API "
+"account number <https://developer.dhl. com/form/dhl-express-onboarding>`_."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:84
+msgid ""
+"**If a DHL Express account is unavailable**: Follow DHL's steps to `obtain a"
+" DHL Express account <https://developer.dhl.com/api-reference/dhl-express-"
+"mydhl-api#get-started-section/user-guide%get- "
+"access:~:text=around%20the%20world.-,User%20Guide,-Get%20Access>`_, and then"
+" follow the steps in the previous bullet."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:89
+msgid ""
+"Once the developer portal account has been confirmed, log in to the portal "
+"using the username and password. Click on the user avatar in the top-right "
+"corner of the screen to open the user dashboard."
+msgstr ""
+"개발자 포털 계정에 대한 승인이 완료되면 사용자 이름과 비밀번호를 사용하여 포털에 로그인합니다. 화면 오른쪽 상단에 있는 사용자 아바타를"
+" 클릭하면 사용자 현황판이 열립니다."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:92
+msgid ""
+"On the dashboard, click on the :guilabel:`Apps` tab, and select an app. In "
+"the :guilabel:`Credentials` section, click the :guilabel:`Show key` button "
+"below the :guilabel:`API Key` and :guilabel:`API Secret` fields."
+msgstr ""
+"현황판에서 :guilabel:`앱` 탭을 클릭하고 앱을 선택합니다. :guilabel:`자격 증명` 섹션에서 :guilabel:`키 "
+"표시` 버튼을 클릭합니다. 이 버튼은 :guilabel:`API 키` 및 :guilabel:`API 비밀번호` 필드 아래에 있습니다."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:96
+msgid ""
+"Return to the shipping method form in the Odoo database. Enter the *DHL API "
+"Key* in the :guilabel:`DHL SiteID` field, and the *API Secret* in the "
+":guilabel:`DHL Password` field."
+msgstr ""
+"Odoo 데이터베이스의 배송 방법 양식으로 돌아갑니다. :guilabel:`DHL 사이트 ID` 필드에 *DHL API 키* 를 입력하고"
+" :guilabel:`DHL 비밀번호` 필드에는 *API 비밀번호* 를 입력합니다."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:100
+msgid "Shipping details"
+msgstr "배송 세부 내용"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:102
+msgid ""
+"The rest of the fields in the :guilabel:`DHL Configuration` tab are used to "
+"configure the shipping method itself:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:105
+msgid ":guilabel:`Region`: the region in which the shipping method is used."
+msgstr ":guilabel:`지역`: 배송 방법이 사용되는 지역입니다."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:106
+msgid ""
+":guilabel:`DHL Product`: the shipping service purchased from DHL (e.g. "
+"Express Worldwide)."
+msgstr ":guilabel:`DHL 제품`: DHL에서 구매한 배송 서비스(예: Express Worldwide)입니다."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:107
+msgid ""
+":guilabel:`DHL Package Type`: the type of DHL package used for delivery "
+"(e.g. DHL Box)."
+msgstr ":guilabel:`DHL 패키지 유형`: DHL 배송용 패키지 유형입니다(예: DHL 상자)."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:108
+msgid ""
+":guilabel:`Package Weight Unit`: the unit of measure used to display package"
+" weight."
+msgstr ":guilabel:`패키지 중량 단위`: 패키지 중량을 표시하는 데 사용하는 측정 단위입니다."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:109
+msgid ""
+":guilabel:`Package Dimension Unit`: the unit of measure used to display "
+"package size."
+msgstr ":guilabel:`패키지 치수 단위`: 패키지 사이즈를 표시하는 데 사용하는 측정 단위입니다."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:110
+msgid ""
+":guilabel:`Label Format`: the file format used to generate shipping labels."
+msgstr ":guilabel:`라벨 형식`: 배송 라벨을 생성하는 데 사용되는 파일 형식입니다."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:111
+msgid ""
+":guilabel:`Label Template`: the paper size used to print shipping labels."
+msgstr ":guilabel:`라벨 템플릿`: 배송 라벨을 인쇄하는 데 사용되는 용지 크기입니다."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:114
+msgid ""
+"Before selecting service options for a shipping method, make sure those "
+"services are actually available for the DHL account. Available services "
+"depend on the contract negotiated with DHL."
+msgstr ""
+"배송 방법에 대한 서비스 옵션을 선택하기 전에 해당 서비스가 실제 DHL 계정에 적용될 수 있는 서비스인지 확인하세요. 사용 가능한 "
+"서비스는 DHL와 체결한 계약 내용에 따라 달라집니다."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:118
+msgid "Options"
+msgstr "선택 사항"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:120
+msgid ""
+"Additional settings are available in the :guilabel:`Options` section at the "
+"bottom of the :guilabel:`DHL Configuration` tab:"
+msgstr "추가적인 설정은 :guilabel:`DHL 환경설정` 탭 하단의 :guilabel:`옵션` 섹션에서 사용할 수 있습니다."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:123
+msgid ""
+":guilabel:`Generate Return Label`: Enable this option to automatically "
+"generate a return label after validating a delivery order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:125
+msgid ""
+":guilabel:`Dutiable Material`: Enable this option if the shipping method is "
+"liable to customs or other duties."
+msgstr ":guilabel:`관세 부과 자재류`: 배송 방법에 관세 또는 기타 세금이 부과되는 경우 이 옵션을 활성화합니다."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:129
+msgid "Turn on the DHL Connection"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:131
+msgid ""
+"Once the DHL connection is set up, use the buttons at the top of the form to"
+" turn on or debug the connection."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:134
+msgid "**Unpublished/Published**: turns the connection on or off."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:135
+msgid ""
+"**Test Environment/Production Environment**: sets whether requests actually "
+"get sent to DHL."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:136
+msgid ""
+"**No Debug/Debug Requests**: determines whether error logging occurs for "
+"requests to DHL."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:3
 msgid "Shipping cost invoicing"
@@ -16468,21 +16705,22 @@ msgstr "Odoo 위치 보기"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:109
 msgid ""
-"Odoo databases include pre-configured view locations to organize the "
+"Odoo databases include preconfigured view locations to organize the "
 "hierarchy of locations. These provide helpful context, and distinguish "
 "between internal and external locations."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:112
 msgid ""
-"*Physical locations* serve as an umbrella for external locations, without "
-"changing a product's inventory value. (Inventory valuation changes occur "
-"when products move from internal to external locations)."
+"*Physical locations* group internal locations—such as secondary warehouses "
+"and subcontractor sites. Because :doc:`inventory valuation "
+"<../product_management/inventory_valuation/inventory_valuation_config>` "
+"changes only when goods move from internal to external locations, Odoo uses "
+"physical locations to track stock that is off-site or in transit without "
+"affecting valuation."
 msgstr ""
-"*물리적 위치* 는 품목의 재고 가치가 변경되지 않도록, 외부 위치에 대해 우산과도 같은 역할을 합니다(품목이 내부 위치에서 외부로 "
-"변경할 경우 재고 가치 평가가 변동). "
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:119
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:121
 msgid ""
 "When moving products in warehouses `WH` and `WH2`, the items are not in "
 "either warehouse, but still belong to the company. While in transit, they "
@@ -16492,7 +16730,7 @@ msgstr ""
 "`WH` 및 `WH2` 창고에서 품목을 운송할 때 해당 품목은 두 창고에 위치하고 있지 않지만 여전히 회사 소유 하에 있습니다. 운송 "
 "중에는 :guilabel:`운송 위치` 유형 중의 하나인 `창고 간 운송` 위치에 배치됩니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:123
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:125
 msgid ""
 "This location is under the view location, `Physical Locations`, indicating "
 "that `Inter-warehouse transit` is outside of a warehouse, but still part of "
@@ -16502,13 +16740,13 @@ msgstr ""
 "이 위치는 보기 위치인 `실제 위치` 아래에 있으며, `창고 간 운송`은 창고 외부에서 발생하나 여전히 회사의 일부로 진행된다는 것을 "
 "나타냅니다. 이와 같은 내용은 품목의 재고 가치 평가에 영향을 미치지 않습니다."
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:127
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:129
 msgid ""
 "*Partner locations* group customer and vendor locations (external locations)"
 " together. Transfers to these locations affect inventory valuation."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:129
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:131
 msgid ""
 "*Virtual locations* are locations that do **not** exist physically, but it "
 "is where items that are not in inventory can be placed. These can be items "

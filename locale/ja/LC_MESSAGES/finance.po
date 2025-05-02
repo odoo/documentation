@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-27 08:53+0000\n"
+"POT-Creation-Date: 2025-04-30 07:56+0000\n"
 "PO-Revision-Date: 2022-10-04 12:53+0000\n"
 "Last-Translator: Junko Augias, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/odoo/teams/41243/ja/)\n"
@@ -7968,6 +7968,7 @@ msgid ":doc:`Internal transfers <payments/internal_transfers>`"
 msgstr ":doc:`Internal transfers <payments/internal_transfers>`"
 
 #: ../../content/applications/finance/accounting/payments.rst:19
+#: ../../content/applications/finance/accounting/vendor_bills.rst:119
 msgid ":doc:`bank/reconciliation`"
 msgstr ":doc:`bank/reconciliation`"
 
@@ -8227,7 +8228,6 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/accounting/payments.rst-1
-#: ../../content/applications/finance/accounting/vendor_bills.rst-1
 msgid "register a partial payment"
 msgstr ""
 
@@ -15994,45 +15994,60 @@ msgstr "仕入先請求書"
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:7
 msgid ""
-"In Odoo, we can register vendor bills **manually** or **automatically**, "
-"while the **Aged Payable report** provides an overview of all outstanding "
-"bills to help us pay the correct amounts on time."
+"Vendor bills can be registered either **manually** or **automatically** in "
+"Odoo. The :ref:`Aged Payable report <accounting/vendor_bills/age-payable-"
+"report>` provides an overview of all outstanding bills to help ensure timely"
+" payment of the correct amounts."
 msgstr ""
-"Odooではベンダーの請求書を**手動**または**自動**で登録することができ、**未払金レポート**は未払請求書の概要を提供し、適切な金額を期限内に支払うのに役立ちます。"
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:12
 msgid ""
 "Tutorial `Registering a vendor bill "
-"<https://www.odoo.com/slides/slide/registering-a-vendor-"
-"bill-1683?fullscreen=1>`_"
+"<https://www.odoo.com/slides/slide/register-a-vendor-bill-6582>`_"
 msgstr ""
-"チュートリアル `仕入先請求書の登録 <https://www.odoo.com/slides/slide/registering-a-vendor-"
-"bill-1683?fullscreen=1>`_"
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:13
 msgid ":doc:`/applications/inventory_and_mrp/purchase/manage_deals/manage`"
 msgstr ":doc:`/applications/inventory_and_mrp/purchase/manage_deals/manage`"
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:16
+#: ../../content/applications/finance/accounting/vendor_bills.rst:18
 msgid "Bill creation"
 msgstr "取引先請求書作成"
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:19
+#: ../../content/applications/finance/accounting/vendor_bills.rst:23
 msgid "Manually"
 msgstr "手動"
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:21
-msgid ""
-"Create a vendor bill manually by going to :menuselection:`Accounting --> "
-"Vendors --> Bills` and clicking :guilabel:`Create`."
-msgstr ""
-"menuselection:`会計 --> 仕入先 --> 請求書`に行き、 :guilabel:`作成`をクリックして仕入先請求書を手動で作成します。"
-
 #: ../../content/applications/finance/accounting/vendor_bills.rst:25
+msgid ""
+"To create a vendor bill manually, go to :menuselection:`Accounting --> "
+"Vendors --> Bills` and click :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:29
+msgid ""
+"Alternatively, it is possible to create a vendor bill from the Accounting "
+"dashboard:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:31
+msgid ""
+"either click :guilabel:`Create Manually` on the :guilabel:`Vendor Bills` "
+"journal;"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:32
+msgid ""
+"or click the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon of "
+"the :guilabel:`Vendor Bills` journal, then :guilabel:`Bill` under the "
+":guilabel:`New` section."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:38
 msgid "Automatically"
 msgstr "自動的に"
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:27
+#: ../../content/applications/finance/accounting/vendor_bills.rst:40
 msgid ""
 "Vendor bills can be automatically created by **sending an email** to an "
 ":ref:`email alias <invoice-digitization/email-alias>` associated with the "
@@ -16043,192 +16058,183 @@ msgstr ""
 "に電子メール** を送信するか、または :menuselection:`会計 --> 仕訳帳 --> 仕入先請求書` で PDF** をアップロードし、"
 " :guilabel:`アプロード` をクリックすることで自動的に作成されます。"
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:32
+#: ../../content/applications/finance/accounting/vendor_bills.rst:45
+msgid ""
+"Once the bill is uploaded, the PDF document appears on the right side of the"
+" screen, making it easy to fill in the bill information."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:47
+msgid ""
+"Bills can be :doc:`digitized <vendor_bills/invoice_digitization>` for "
+"automatic completion."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:48
+msgid ""
+"Services such as digitizing scanned or PDF vendor bills in Odoo require "
+":doc:`In-App Purchase (IAP) </applications/essentials/in_app_purchase>` "
+"credit or tokens."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:54
 msgid "Bill completion"
 msgstr "仕入先請求書完成"
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:34
+#: ../../content/applications/finance/accounting/vendor_bills.rst:56
 msgid ""
 "Whether the bill is created manually or automatically, make sure the "
 "following fields are appropriately completed:"
 msgstr "請求書が手動で作成される場合でも、自動で作成される場合でも、以下のフィールドが適切に記入されていることを確認して下さい:"
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:37
+#: ../../content/applications/finance/accounting/vendor_bills.rst:59
 msgid ""
-":guilabel:`Vendor`: Odoo automatically fills some information based on the "
-"vendor's registered information, previous purchase orders, or bills."
-msgstr ":guilabel:`仕入先`: Odooは仕入先の登録情報、過去の発注書、請求書に基づいていくつかの情報を自動的に入力します。"
-
-#: ../../content/applications/finance/accounting/vendor_bills.rst:39
-msgid ""
-":guilabel:`Bill Reference`: add the sales order reference provided by the "
-"vendor and is used to do the :ref:`matching <accounting/payments/matching>` "
-"when you receive the products."
+":guilabel:`Vendor`: Odoo automatically fills in some information based on "
+"the information on the vendor's contact record as well as previous purchase "
+"orders and bills."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:41
+#: ../../content/applications/finance/accounting/vendor_bills.rst:61
 msgid ""
-":guilabel:`Auto-Complete`: select a past bill/purchase order to "
-"automatically complete the document. The :guilabel:`Vendor` field should be "
-"completed prior to completing this field."
+":guilabel:`Bill Reference`: Add the sales order reference provided by the "
+"vendor. This field is used to :ref:`match <accounting/payments/matching>` "
+"the products when they are received."
 msgstr ""
-":guilabel:`オートコンプリート`: 過去の請求書/発注書を選択して、自動的にドキュメントを完成させます。guilabel:`仕入先` "
-"フィールドはこのフィールドを入力する前に完了しておく必要があります。"
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:43
-msgid ":guilabel:`Bill Date`: is the issuance date of the document."
-msgstr ":guilabel:`仕入先請求書日付`: はドキュメントの発行日です。"
-
-#: ../../content/applications/finance/accounting/vendor_bills.rst:44
+#: ../../content/applications/finance/accounting/vendor_bills.rst:63
 msgid ""
-":guilabel:`Accounting Date`: is the date on which the document is registered"
-" in your accounting."
-msgstr ":guilabel:`会計日`: ドキュメントが会計に登録された日付です。"
-
-#: ../../content/applications/finance/accounting/vendor_bills.rst:45
-msgid ""
-":guilabel:`Payment Reference`: when registering the payment, it is "
-"automatically indicated in the :guilabel:`Memo` field."
-msgstr ":guilabel:`支払参照`: 支払を登録する際、自動的に :guilabel:`メモ` フィールドに表示されます。"
-
-#: ../../content/applications/finance/accounting/vendor_bills.rst:47
-msgid ""
-":guilabel:`Recipient Bank`: to indicate to which account number the payment "
-"has to be made."
-msgstr ":guilabel:`受取人の銀行`: 支払がどの口座番号に行われなければならないかを示します。"
-
-#: ../../content/applications/finance/accounting/vendor_bills.rst:48
-msgid ":guilabel:`Due Date` or :guilabel:`Terms` to pay the bill."
-msgstr ":guilabel:`期日` または :guilabel:`条件`で請求書を支払う。"
-
-#: ../../content/applications/finance/accounting/vendor_bills.rst:49
-msgid ""
-":guilabel:`Journal`: select in which journal the bill should be recorded and"
-" the :doc:`Currency <get_started/multi_currency>`."
+":guilabel:`Auto-Complete`: Select a past bill/purchase order to complete the"
+" document automatically. The :guilabel:`Vendor` field should be completed "
+"before completing this field."
 msgstr ""
-":guilabel:`仕訳帳`: 小切手がどの仕訳帳に記録されるべきかを選択し、 :doc:`通貨 "
-"<get_started/multi_currency>` を指定します。"
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:65
+msgid ":guilabel:`Bill Date`: Select the document's issuance date."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:66
+msgid ""
+":guilabel:`Accounting Date`: Update the document's accounting registration "
+"date if needed."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:67
+msgid ""
+":guilabel:`Payment Reference`: Automatically indicated in the "
+":guilabel:`Memo` field when"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:68
+msgid "registering the payment."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:69
+msgid ""
+":guilabel:`Recipient Bank`: Indicates the account number to which the "
+"payment will be made. This field is required when paying via batch payment "
+"files (such as NACHA and :doc:`SEPA <payments/pay_sepa>`)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:72
+msgid ":guilabel:`Due Date` or :guilabel:`Terms` for paying the bill."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:73
+msgid ""
+":guilabel:`Journal`: Select which journal should record the bill and in "
+"which :doc:`currency <get_started/multi_currency>`."
+msgstr ""
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst-1
 msgid "filling the vendor bill"
 msgstr "仕入先請求書を記入"
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:56
+#: ../../content/applications/finance/accounting/vendor_bills.rst:80
 msgid ""
-"Bills can be :doc:`digitized <vendor_bills/invoice_digitization>` for "
-"automatic completion by clicking :guilabel:`Send for Digitization`."
+"Multiple bills for the same purchase order may be issued if the vendor is on"
+" back-order and sends invoices as products are shipped or if the vendor "
+"sends partial bills or requests a deposit. In this case, multiple bills may "
+"have the same :guilabel:`Bill Reference`."
 msgstr ""
-"仕入先請求書は :doc:`デジタル化済 <vendor_bills/invoice_digitization>` で "
-":guilabel:`デジタル化のために送信` をクリックすることで自動補完することができます。"
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:58
-msgid ""
-"If you upload the bill, the PDF document is displayed on the right of the "
-"screen, allowing you to easily fill in the bill information."
-msgstr "仕入先請求書をアップロードすると、画面右側にPDF文書が表示され、請求書情報を簡単に入力することができます。"
-
-#: ../../content/applications/finance/accounting/vendor_bills.rst:62
+#: ../../content/applications/finance/accounting/vendor_bills.rst:87
 msgid "Bill confirmation"
 msgstr "仕入先請求書確認"
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:64
+#: ../../content/applications/finance/accounting/vendor_bills.rst:89
 msgid ""
-"Click :guilabel:`Confirm` when the document is completed. The status of your"
-" document changes to :guilabel:`Posted` and a journal entry is generated "
-"based on the configuration on the invoice."
+"Click :guilabel:`Confirm` when the document is completed. The status changes"
+" to :guilabel:`Posted`, and a journal entry is generated based on the vendor"
+" bill information."
 msgstr ""
-"ドキュメントが完成したら :guilabel:`確認` をクリックします。ドキュメントのステータスが :guilabel:`記帳済` "
-"に変わり、請求書の設定に基づいて仕訳が作成されます。"
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:68
+#: ../../content/applications/finance/accounting/vendor_bills.rst:93
 msgid ""
-"Once confirmed, it is no longer possible to update it. Click "
+"Once confirmed, a vendor bill can no longer be updated. Click "
 ":guilabel:`Reset to draft` if changes are required."
-msgstr "一度確定すると、もう更新することはできません。変更が必要な場合は :guilabel:`ドラフトに戻す` をクリックして下さい。"
-
-#: ../../content/applications/finance/accounting/vendor_bills.rst:72
-msgid "Bill Payment"
-msgstr "仕入先請求書支払"
-
-#: ../../content/applications/finance/accounting/vendor_bills.rst:74
-msgid ""
-"Upon payment of the vendor bill, click on :guilabel:`Register Payment` to "
-"open a new payment window."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:76
+#: ../../content/applications/finance/accounting/vendor_bills.rst:99
+msgid "Payment and reconciliation"
+msgstr "支払と消込"
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:101
 msgid ""
-"Select the :guilabel:`Journal`, the :guilabel:`Payment Method`, the "
-":guilabel:`Amount` you wish to pay (full or partial payment), and the "
-":guilabel:`Currency`. In the case of a partial payment (when the "
-":guilabel:`Amount` paid is less than the total remaining amount on the "
-"vendor bill), the :guilabel:`Payment Difference` field displays the "
-"outstanding balance. You have two options:"
+"To register a payment, click on :guilabel:`Register Payment`. In the "
+":guilabel:`Register Payment` window, select the :guilabel:`Journal`, the "
+":guilabel:`Payment Method`, the :guilabel:`Amount`, and the "
+":guilabel:`Currency`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:82
+#: ../../content/applications/finance/accounting/vendor_bills.rst:105
 msgid ""
-":guilabel:`Keep open`: to keep the bill open and mark it with a "
-":guilabel:`Partial` banner;"
+"When the :guilabel:`Amount` paid is less than the total remaining amount on "
+"the vendor bill, the payment is :ref:`partial <accounting/payments/partial-"
+"payment>`, and the :guilabel:`Payment Difference` field displays the "
+"outstanding balance."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:83
-msgid ""
-":guilabel:`Mark as fully paid`: In this case, select an account in the "
-":guilabel:`Post Difference In` field and change the :guilabel:`Label` if "
-"needed. A journal entry will be created to balance the account receivable "
-"with the selected account."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/vendor_bills.rst:90
+#: ../../content/applications/finance/accounting/vendor_bills.rst:109
 msgid ""
 "The :guilabel:`Memo` field is filled automatically if the :guilabel:`Payment"
-" Reference` has been set correctly in the vendor bill. If the field is "
+" Reference` has been set correctly on the vendor bill. If the field is "
 "empty, select the vendor invoice number as a reference."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:94
+#: ../../content/applications/finance/accounting/vendor_bills.rst:113
 msgid ""
-"Once confirmed, an :guilabel:`In Payment` banner appears on the bill until "
-"it is :doc:`reconciled <bank/reconciliation>`."
+"Then click :guilabel:`Create payment`. An :guilabel:`In "
+"Payment`/:guilabel:`Partial` banner appears on the bill until it is "
+":doc:`reconciled <bank/reconciliation>` and its status updates to "
+":guilabel:`Paid`."
 msgstr ""
-"確認されると、 :doc:`消込<bank/reconciliation>` されるまで、請求書に :guilabel:`In Payment` "
-"のバナーが表示されます。"
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:98
+#: ../../content/applications/finance/accounting/vendor_bills.rst:118
+msgid ":doc:`payments`"
+msgstr ":doc:`支払`"
+
+#: ../../content/applications/finance/accounting/vendor_bills.rst:124
 msgid "Aged payable report"
 msgstr "買掛金年齢表レポート"
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:100
+#: ../../content/applications/finance/accounting/vendor_bills.rst:126
 msgid ""
-"To get an overview of your open vendor bills and their related due dates, "
-"you can use the **Aged Payable report**. Go to :menuselection:`Accounting "
-"--> Reporting --> Partner Reports: Aged payable`."
+"To get an overview of the open vendor bills and their due dates, go to "
+":menuselection:`Accounting --> Reporting --> Aged payable`."
 msgstr ""
-"未支払の取引先請求書と関連する支払期日の概要を知るには、**買掛金年齢表レポート**を使用することができます。menuselection:`会計 -->"
-" レポーティング --> 取引先レポート： 買掛金年齢表`をご覧ください。"
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:104
+#: ../../content/applications/finance/accounting/vendor_bills.rst:129
 msgid ""
-"Click on a vendor's name to open up the details of all outstanding bills, "
-"the amounts due, the due dates, etc."
-msgstr "仕入先名をクリックすると、未払の請求書、支払金額、支払期日などの詳細が表示されます。"
-
-#: ../../content/applications/finance/accounting/vendor_bills.rst:108
-msgid ""
-"By clicking the :guilabel:`Save` button, you can export the information "
-"available on the screen as a PDF or XLSX file and save it in the folder of "
-"your choice."
+"Click the :icon:`fa-caret-right` :guilabel:`(right arrow)` icon next to a "
+"vendor to view the details of all their outstanding bills, including the due"
+" dates and amounts."
 msgstr ""
-"guilabel:`保存`ボタンをクリックすると、画面上の情報をPDFまたはXLSXファイルとしてエクスポートし、任意のフォルダに保存することができます。"
 
-#: ../../content/applications/finance/accounting/vendor_bills.rst:110
+#: ../../content/applications/finance/accounting/vendor_bills.rst:133
 msgid ""
-"You might receive several bills for the same purchase order if your vendor "
-"is in back-order and is sending you invoices as they ship the products, or "
-"if your vendor is sending you a partial bill or asking for a deposit."
+"Click :guilabel:`PDF` or :guilabel:`XLSX` to generate a PDF or XLSX file, "
+"respectively."
 msgstr ""
-"仕入先がバックオーダ中で、プロダクトを出荷するたびに請求書を送ってきたり、仕入先が部分的な請求書を送ってきたり、デポジットを要求してきたりする場合、同じ購買オーダについて複数の請求書を受け取ることがあります。"
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:3
 msgid "Non-current assets and fixed assets"

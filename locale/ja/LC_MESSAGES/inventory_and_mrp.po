@@ -8,7 +8,7 @@
 # Yoshi Tashiro (Quartile) <tashiro@roomsfor.hk>, 2023
 # Martin Trigaux, 2023
 # Noma Yuki, 2024
-# Wil Odoo, 2024
+# Wil Odoo, 2025
 # Junko Augias, 2025
 # 
 #, fuzzy
@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-27 08:53+0000\n"
+"POT-Creation-Date: 2025-04-30 07:56+0000\n"
 "PO-Revision-Date: 2022-10-04 12:53+0000\n"
 "Last-Translator: Junko Augias, 2025\n"
 "Language-Team: Japanese (https://app.transifex.com/odoo/teams/41243/ja/)\n"
@@ -7766,204 +7766,192 @@ msgstr "インバウンド・アウトバンドフロー"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:8
 msgid ""
-"There are several ways to handle how a warehouse receives products "
-"(receipts) and ships products (deliveries). Depending on several factors, "
-"such as the type of products stocked and sold, warehouse size, and the "
-"amount of daily confirmed receipts and delivery orders, the way products are"
-" handled when coming in and out of the warehouse can vary a lot. Different "
-"settings can be configured for receipts and deliveries; they do not have to "
-"be configured to have the same number of steps."
+"Configuring inbound and outbound flows in Odoo is key to optimizing "
+"efficiency, traceability, and cost. Warehouse managers must balance speed "
+"and control, choosing between a streamlined process or added checkpoints."
 msgstr ""
-"倉庫へのプロダクトの入荷 (入荷) と出荷 (配送) の処理方法にはいくつかの方法があります。 "
-"在庫および販売する商品の種類、倉庫の規模、日次で確定する入荷オーダと配送オーダの量など、いくつかの要因によって、プロダクトの入出庫の処理方法は大きく異なります。"
-" 入荷と配送に対して異なる設定を行うことができます。同じステップ数で設定する必要はありません。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:12
+msgid ""
+"Odoo offers one-step, two-step, and three-step flows, with more steps "
+"providing greater control but increasing operations. The best setup depends "
+"on quality checks, packaging, and warehouse size."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:15
-msgid ""
-"`Using Routes (eLearning Tutorial) <https://www.odoo.com/slides/slide/using-"
-"routes-1018>`_"
+msgid "This guide helps businesses determine the most suitable configuration."
 msgstr ""
-"`ルートを使用する(eラーニングチュートリアル) <https://www.odoo.com/slides/slide/using-"
-"routes-1018>`_"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:16
-msgid ""
-"`Push & Pull Rules (eLearning Tutorial) "
-"<https://www.odoo.com/slides/slide/push-pull-rules-1024>`_"
-msgstr ""
-"`プッシュ& プル規則 (eラーニングチュートリアル) <https://www.odoo.com/slides/slide/push-pull-"
-"rules-1024>`_"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:20
-msgid "Choosing the right inventory flow to handle receipts and deliveries"
-msgstr "入荷と出荷を処理するための適切な在庫フローの選択"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:22
-msgid ""
-"By default, Odoo handles shipping and receiving in three different ways: in "
-"one, two, or three steps. The simplest configuration is one step, which is "
-"the default. Each additional step required for a warehouse for either the "
-"receiving or shipping process will add an additional layer of operations to "
-"perform before a product is either received or shipped. These configurations"
-" depend entirely on the requirements for the products stored, such as "
-"performing quality checks on received products, or using special packaging "
-"on shipped products."
-msgstr ""
-"デフォルトでは、Odooは出荷と入荷を3つの異なる方法で処理します。最もシンプルな設定は1ステップで、これがデフォルトです。倉庫で入荷または出荷プロセスに追加のステップが必要な場合は、プロダクトの入荷または出荷される前に実施するオペレーションが追加されます。これらの設定は、保管するプロダクトの要件に完全に依存します。例えば、入荷したプロダクトの品質チェックの実施や、出荷するプロダクトに特別なパッケージングを使用するなどです。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:30
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:18
 msgid "One-step flow"
 msgstr "1ステップフロー"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:32
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:20
 msgid ""
-"The receiving and shipping rules for a one-step configuration are as "
-"follows:"
-msgstr "1ステップ構成での入出荷規則は以下の通りです:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:34
-msgid ""
-"**Receipt**: Receive products directly into stock. No intermediate steps "
-"between receipt and stock occur, such as a transfer to a quality control "
-"location."
-msgstr "**入荷**:プロダクトを直接在庫として入荷します。品質チェック場所への転送など、入荷と在庫の間に中間ステップは発生しません。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:36
-msgid ""
-"**Shipping**: Ship products directly from stock. No intermediate steps "
-"between stock and shipping occur, such as a transfer to a packing location."
-msgstr "**配送**: 在庫から直接プロダクトを出荷します。在庫から出荷までの間、梱包場所への転送などの中間ステップは発生しません。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:38
-msgid ""
-"Can only be used if not using :abbr:`FIFO (First In, First Out)`, "
-":abbr:`LIFO (Last In, First Out)`, or :abbr:`FEFO (First Expired, First "
-"Out)` removal strategies."
+"The *one-step inventory flow* is the simplest option, with minimal handling "
+"steps and the least traceability. In this setup, products move directly from"
+" vendors to stock or from stock to customers, with Odoo only tracking when "
+"items enter or leave the warehouse. This makes it ideal for businesses with "
+"high-volume, low-risk products or fast-moving operations where additional "
+"validation steps aren’t necessary."
 msgstr ""
-":abbr:`FIFO (先入先出)`, :abbr:`LIFO (後入先出)`, または :abbr:`FEFO (使用期限順先出)` "
-"の払出方針を使用していない場合にのみ使用可能です。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:40
-msgid "Receipts and/or deliveries are handled quickly."
-msgstr "入荷および/または出荷は素早く処理されます。"
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:26
+msgid "**Receiving**: Products go directly into stock."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:41
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:27
+msgid "**Shipping**: Products ship directly from stock."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:28
 msgid ""
-"Recommended for small warehouses with low stock levels, and for non-"
-"perishable items."
-msgstr "在庫レベルの低い小規模な倉庫や生鮮食品以外の商品にお勧めです。"
+"**Best for**: Small warehouses, low stock levels, and non-perishable items, "
+"where minimal processing is needed before products are stored or shipped."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:42
-msgid "Items are received or shipped directly into/from stock."
-msgstr "商品は在庫から直接入荷または出荷されます。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:45
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:32
 msgid ":doc:`daily_operations/receipts_delivery_one_step`"
 msgstr ":doc:`daily_operations/receipts_delivery_one_step`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:48
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:35
 msgid "Two-step flow"
 msgstr "2ステップフロー"
 
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:37
+msgid ""
+"A *two-step flow* adds an input or output area for processing products "
+"before storage or shipment. Incoming goods can be unboxed and inspected "
+"before shelving, while outgoing shipments are sorted and consolidated before"
+" dispatch. This setup improves efficiency by assigning storage teams to "
+"picking and stocking, while dedicated teams handle unboxing, (possibly) "
+"packing, and final verification to reduce order fulfillment errors."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:43
+msgid ""
+"**Receiving**: Products move to an *input* area before being transferred "
+"into stock."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:45
+msgid ""
+"Until transferred, received products are not automatically reserved for "
+"manufacturing, shipping, or other operations."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:48
+msgid ""
+"**Shipping**: Products move to an *output* before shipping to allow for "
+":doc:`sorting or consolidation <picking_methods>`."
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:50
 msgid ""
-"The receiving and shipping rules for a two-step configuration are as "
-"follows:"
-msgstr "2ステップ構成の場合の入出荷規則は以下の通りです:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:52
-msgid ""
-"**Input + stock**: Bring products to an input location *before* moving into "
-"stock. Products can be organized by different internal storage locations, "
-"such as various shelves, freezers, and locked areas, before being stocked in"
-" the warehouse."
+"**Best for**: Large warehouses, high stock levels, bulky items, and "
+"workflows that separate receiving from storage to improve organization and "
+"efficiency."
 msgstr ""
-"**入力 + 在庫**: 在庫に入れる "
-"*前*に、プロダクトを入力場所に移動します。プロダクトは、倉庫に保管される前に、さまざまな棚、冷凍庫、施錠されたエリアなど、異なる内部保管場所に整理することができます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:55
-msgid ""
-"**Pick + ship**: Bring products to an output location before shipping. "
-"Packages can be organized by different carriers or shipping docks before "
-"being shipped."
-msgstr "**ピック + 出荷**: 出荷前にプロダクトを出荷場所に移動します。出荷前に、梱包を運送会社や配送ドックごとに整理することができます。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:57
-msgid ""
-"Minimum requirement to use lot numbers or serial numbers to track products "
-"with a :abbr:`FIFO (First In, First Out)`, :abbr:`LIFO (Last In, First Out)`"
-" or :abbr:`FEFO (First Expired, First Out)` removal strategy."
-msgstr ""
-":abbr:`FIFO (先入先出)`, :abbr:`LIFO (後入先出)` または :abbr:`FEFO (使用期限順先出)` "
-"払出方針のプロダクトを追跡するためのロット番号またはシリアル番号を使用するための最小条件。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:60
-msgid ""
-"Recommended for larger warehouses with high stock levels, or when stocking "
-"large items (such as mattresses, large furniture, heavy machinery, etc.)."
-msgstr "在庫量が多い大型倉庫、または大型商品(マットレス、大型家具、重機など)の在庫管理に最適です。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:62
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:83
-msgid ""
-"Products received will not be available for manufacturing, shipping, etc., "
-"until they are transferred into stock."
-msgstr "入荷プロダクトは、在庫に振替えられる(運送される)まで製造・出荷等ができません。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:66
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:54
 msgid ":doc:`daily_operations/receipts_delivery_two_steps`"
 msgstr ":doc:`daily_operations/receipts_delivery_two_steps`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:69
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:57
 msgid "Three-step flow"
 msgstr "3ステップフロー"
 
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:59
+msgid ""
+"A three-step flow builds on the two-step process by adding a quality check "
+"and packing area, enforcing stricter processes and improving oversight."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:63
+msgid ""
+"While this setup enhances process control, separating picking and packing "
+"requires validation at each step. If the same person handles both, it may "
+"cause redundancy and slow operations."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:66
+msgid ""
+"Quality checks and packing do not require a three-step flow. Enable "
+":doc:`quality control points "
+"<../../quality/quality_management/quality_control_points>` separately or "
+"activate the :ref:`Packages feature <inventory/warehouses_storage/enable-"
+"package>` in Odoo to incorporate these processes without adding extra "
+"transfer steps."
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:71
 msgid ""
-"The receiving and shipping rules for a three-step configuration are as "
-"follows:"
-msgstr "3ステップ構成の場合の入出荷規則は以下の通りです:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:73
-msgid ""
-"**Input + quality + stock**: Receive products at the input location, "
-"transfer them to a quality control area, and move the ones that pass "
-"inspection into stock."
-msgstr "**受入+品質+在庫*: 受入場所でプロダクトを受取り、品質管理エリアに転送し、検査に合格したものを在庫に移動します。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:75
-msgid ""
-"**Pick + pack + ship**: Pick products according to their removal strategy, "
-"pack them in a dedicated packing area, and bring them to an output location "
-"for shipping."
-msgstr "**ピック+梱包+出荷**: 払出方針に従ってプロダクトをピッキングし、専用梱包エリアで梱包し、出荷用に出荷ロケーションへ運びます。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:77
-msgid ""
-"Can be used when tracking products by lot or serial numbers when using a "
-":abbr:`FIFO (First In, First Out)`, :abbr:`LIFO (Last In, First Out)`, or "
-":abbr:`FEFO (First Expired, First Out)` removal strategy."
+"**Receiving**: Products follow a structured process: *input area* → *quality"
+" control* → *stock*."
 msgstr ""
-":abbr:`FIFO (先入先出)`, :abbr:`LIFO (後入後出)`, または :abbr:`FEFO (使用期限順先出)` "
-"払出方針を使用している際に、ロットまたはシリアル番号によってプロダクトを追跡する時に使用できます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:80
-msgid "Recommended for very large warehouses with very high stock levels."
-msgstr "在庫レベルの非常に高い大規模な倉庫にお勧めです。"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:81
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:72
 msgid ""
-"Required for any warehouse needing to perform quality control inspections "
-"before receiving items into stock."
-msgstr "在庫品を入荷する前に品質管理検査を行う必要がある倉庫に必要です。"
+"**Shipping**: Products are *picked*, *packed*, and then *shipped*, ensuring "
+"proper handling and organization."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:87
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:74
+msgid ""
+"**Best for**: Very large warehouses with strict quality control "
+"requirements, dedicated picking and packing workflows, and a need for clear "
+"traceability across multiple handling stages. Suitable when multiple teams "
+"manage different steps before products are stocked or shipped."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:79
 msgid ":doc:`daily_operations/receipts_three_steps`"
 msgstr ":doc:`daily_operations/receipts_three_steps`"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:88
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:80
 msgid ":doc:`daily_operations/delivery_three_steps`"
 msgstr ":doc:`daily_operations/delivery_three_steps`"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:83
+msgid "Add-ons"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:85
+msgid ""
+"To optimize each flow, Odoo provides additional features that can enhance "
+"the process."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:88
+msgid "Storage"
+msgstr "ストレージ"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:90
+msgid "To organize and store products efficiently, use:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:111
+msgid "Delivery"
+msgstr "配送"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:113
+msgid ""
+"Tailor the outgoing shipment process to fit the business needs. Picking "
+"methods and removal strategies control how products are reserved for orders,"
+" while cross-docking and dropshipping determine how they move. Configuring "
+"these options in Odoo ensures visibility into product movement and confirms "
+"that items reach customers efficiently."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:141
+msgid "Customization"
+msgstr "カスタマイズ"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:143
+msgid ""
+"Odoo's flexible framework enables businesses to tailor workflows to match "
+"specific operational needs."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations/cross_dock.rst:3
 msgid "Organize a cross-dock in a warehouse"
@@ -13620,48 +13608,311 @@ msgid ":doc:`multipack`"
 msgstr ":doc:`複数梱包`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:3
-msgid "How to get DHL credentials for integration with Odoo?"
-msgstr "Odooと統合用のDHL認証情報の取得方法"
+msgid "DHL integration"
+msgstr "DHL統合"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:5
-msgid "In order to use the Odoo DHL API, you will need:"
-msgstr "Odoo DHL APIを使用するには、以下が必要です:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:7
-msgid "A DHL.com SiteID"
-msgstr "A DHL.com SiteID"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:9
-msgid "A DHL Password"
-msgstr "DHLパスワード"
+msgid ""
+"DHL is one of the shipping carriers for which a *shipping connector* is "
+"available in Odoo's **Inventory** app. By enabling the shipping connector in"
+" the app's settings, and configuring at least one *shipping method*, the "
+"process of :doc:`calculating shipping rates <../setup_configuration>` and "
+":doc:`generating shipping labels <labels>` is greatly simplified."
+msgstr ""
+"DHLは、Odooの **在庫** アプリで利用できる *配送コネクタ* "
+"が利用できる運送会社の1つです。アプリの設定で配送コネクタを有効にし、少なくとも1つの *配送方法* を設定することで、:doc:`送料の計算 "
+"<../setup_configuration>` および :doc:`配送ラベルの生成 1` のプロセスが大幅に簡素化されます。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:11
-msgid "A DHL Account Number"
-msgstr "DHLアカウント番号"
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:15
 msgid ""
-"Getting SiteID and password for countries other than United States (UK and "
-"Rest of the world)"
-msgstr "米国以外の国（英国およびその他の国）のSiteIDとパスワードの取得"
+"While a variety of shipping connectors are available for different carriers,"
+" this documentation details the configuration settings specific to "
+"integrating DHL. For instructions on configuring the integration settings "
+"common to all shippers, see the documentation on :doc:`third-party shippers "
+"<third_party_shipper>`."
+msgstr ""
+"さまざまな運送会社に対応する多様な配送コネクタが利用可能ですが、このドキュメントでは、DHLとの統合に特化した設定の詳細を説明します。全ての配送業者に共通する統合設定の構成方法については、:doc:`サードパーティ配送業者に関するドキュメントを参照して下さい"
+" <third_party_shipper>` 。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:17
-msgid ""
-"You should contact DHL account manager and request integration for XML "
-"Express API. The presales should provide you live credentials."
-msgstr ""
-"DHLのアカウントマネジャーに連絡し、XML Express APIの統合をリクエストして下さい。プリセールスがライブ認証情報を提供するはずです。"
+msgid "Enable DHL shipping connector"
+msgstr "DHL配送コネクタを有効にする"
 
-#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:20
-msgid "Getting SiteID and Password for  United States"
-msgstr "米国のSiteIDとパスワードの取得"
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:19
+msgid ""
+"Before creating a DHL shipping method, enable the carrier's shipping "
+"connector. To do so, navigate to :menuselection:`Inventory app --> "
+"Configuration --> Settings`."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:22
 msgid ""
-"You need to write to xmlrequests@dhl.com along with your full Account "
-"details like account number, region, address, etc. to get API Access."
+"Scroll down to the :guilabel:`Shipping Connectors` section, and tick the "
+"checkbox next to :guilabel:`DHL Express Connector`. Finally, click "
+":guilabel:`Save` to apply the changes."
 msgstr ""
-"APIアクセスを取得するには、アカウント番号、地域、住所など、口座の詳細情報を添えて、xmlrequests@dhl.comに連絡して下さい。"
+":guilabel:`配送コネクタ` セクションまでスクロールダウンし、:guilabel:`DHL Expressコネクタ` "
+"の横にあるチェックボックスにチェックを入れます。最後に、:guilabel:`保存` をクリックして変更を適用します。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:25
+msgid ""
+"Once the connector has been enabled, a :icon:`fa-arrow-right` :guilabel:`DHL"
+" Shipping Methods` link appears below the setting. Click the link to open a "
+"page showing all shipping methods configured for DHL."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:30
+msgid "Configure DHL shipping method"
+msgstr "DHL配送方法を設定する"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:32
+msgid ""
+"After enabling the shipping connector for DHL, shipping methods can be "
+"configured for the carrier. Once configured, a shipping method can be added "
+"as a line item to sales orders (SOs), which allows for automatic computation"
+" of shipping rates, and generation of shipping labels."
+msgstr ""
+"DHLの配送コネクタを有効にすると、運送会社向けの配送方法の設定が可能になります。 "
+"配送方法が設定されると、販売オーダ(SO)に明細として追加できるようになり、送料の自動計算や配送ラベルの作成が可能になります。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:36
+msgid ""
+"To create a new DHL shipping method, navigate to :menuselection:`Inventory "
+"app --> Configuration --> Settings`. In the :guilabel:`Shipping Connectors` "
+"section, select the :guilabel:`DHL Shipping Methods` link below the "
+":guilabel:`DHL Express Connector` checkbox."
+msgstr ""
+"DHLの新しい配送方法を作成するには、:menuselection:`在庫アプリ --> 設定 --> 設定` "
+"に移動します。:guilabel:`配送コネクタ` セクションで、:guilabel:`DHL Expressコネクタ` チェックボックスの下にある "
+":guilabel:`DHL配送方法` リンクを選択します。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:41
+msgid ""
+"It is also possible to see existing shipping methods for every carrier, by "
+"navigating to :menuselection:`Inventory app --> Configuration --> Shipping "
+"Methods`."
+msgstr ""
+"また、:menuselection:`在庫アプリ --> 設定 --> 配送方法` に移動すると、各運送会社の既存の配送方法を確認することができます。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:44
+msgid ""
+"Click :guilabel:`New` to open a blank shipping method form. If a shipping "
+"method has already been created, it can be selected from this screen."
+msgstr ""
+":guilabel:`新規` をクリックすると、空の配送方法フォームが開きます。配送方法がすでに作成されている場合は、この画面から選択できます。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst-1
+msgid "The form for a DHL shipping method."
+msgstr "DHL配送方法用のフォーム"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:51
+msgid "General information"
+msgstr "一般情報"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:53
+msgid ""
+"Begin configuring the shipping method by entering its title in the "
+":guilabel:`Shipping Method` field."
+msgstr ":guilabel:`配送方法` フィールドに配送方法のタイトルを入力して、配送方法の設定を開始します。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:56
+msgid ""
+"In the :guilabel:`Provider` drop-down menu, select the :guilabel:`DHL` "
+"option. After doing so, a new :guilabel:`DHL Configuration` tab appears at "
+"the bottom of the form."
+msgstr ""
+":guilabel:`プロバイダ`ドロップダウンメニューで、:guilabel:`DHL` オプションを選択します。そうすると、フォームの下部に新しい "
+":guilabel:`DHL 設定` タブが表示されます。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:59
+msgid ""
+"All other fields in this section are identical on the shipping method forms "
+"for each shipping carrier. See the documentation on :doc:`third-party "
+"shippers <third_party_shipper>` for instructions on how to properly "
+"configure them."
+msgstr ""
+"このセクションの他の全てのフィールドは、各運送会社の配送方法フォームで同一です。それらを適切に設定する方法については、:doc:`サードバーティ配送業者"
+" <third_party_shipper>` のドキュメントを参照して下さい。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:64
+msgid "DHL Configuration"
+msgstr "DHLの設定"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:66
+msgid ""
+"The :guilabel:`DHL Configuration` tab on the shipping method form is used to"
+" connect the user's DHL account to Odoo, and configure the shipping method's"
+" details."
+msgstr ""
+"配送方法フォームの :guilabel:`DHL設定` タブは、ユーザの DHLアカウントをOdooに接続し、配送方法の詳細を設定するために使用します。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:70
+msgid "DHL SiteID, password, and account number"
+msgstr "DHL SiteID、パスワード、アカウント番号"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:72
+msgid ""
+"A DHL SiteID, password, and account number are used to link a DHL account "
+"with third-party services, like Odoo's **Inventory** app."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:76
+msgid ""
+"The SiteID and password are different credentials than the ones used to log "
+"in to a DHL account."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:78
+msgid "Here are two ways to obtain these DHL account credentials:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:80
+msgid ""
+"**If a DHL Express account is available**: Log into the `DHL Developer "
+"portal <https://developer.dhl.com/api-reference/dhl-express-mydhl-api#get-"
+"started-section/ user-guide%get-access>`_, and then `request a DHL API "
+"account number <https://developer.dhl. com/form/dhl-express-onboarding>`_."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:84
+msgid ""
+"**If a DHL Express account is unavailable**: Follow DHL's steps to `obtain a"
+" DHL Express account <https://developer.dhl.com/api-reference/dhl-express-"
+"mydhl-api#get-started-section/user-guide%get- "
+"access:~:text=around%20the%20world.-,User%20Guide,-Get%20Access>`_, and then"
+" follow the steps in the previous bullet."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:89
+msgid ""
+"Once the developer portal account has been confirmed, log in to the portal "
+"using the username and password. Click on the user avatar in the top-right "
+"corner of the screen to open the user dashboard."
+msgstr ""
+"開発者ポータルアカウントが確認されたら、ユーザ名とパスワードを使用してポータルにログインします。画面右上のユーザアバターをクリックして、ユーザダッシュボードを開きます。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:92
+msgid ""
+"On the dashboard, click on the :guilabel:`Apps` tab, and select an app. In "
+"the :guilabel:`Credentials` section, click the :guilabel:`Show key` button "
+"below the :guilabel:`API Key` and :guilabel:`API Secret` fields."
+msgstr ""
+"ダッシュボードで、:guilabel:`アプリ` タブをクリックし、アプリを選択します。:guilabel:`認証情報` "
+"セクションで、:guilabel:`APIキー` および :guilabel:`APIシークレット` フィールドの下にある "
+":guilabel:`キーを表示` ボタンをクリックします。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:96
+msgid ""
+"Return to the shipping method form in the Odoo database. Enter the *DHL API "
+"Key* in the :guilabel:`DHL SiteID` field, and the *API Secret* in the "
+":guilabel:`DHL Password` field."
+msgstr ""
+"Odooデータベースの配送方法フォームに戻ります。:guilabel:`DHL SiteID`フィールドに *DHL APIキー* "
+"を入力し、:guilabel:`DHLパスワード` フィールドに *APIシークレット* を入力します。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:100
+msgid "Shipping details"
+msgstr "配送詳細"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:102
+msgid ""
+"The rest of the fields in the :guilabel:`DHL Configuration` tab are used to "
+"configure the shipping method itself:"
+msgstr ":guilabel:`DHL設定` タブのその他のフィールドは、配送方法自体の設定に使用されます。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:105
+msgid ":guilabel:`Region`: the region in which the shipping method is used."
+msgstr ":guilabel:`地域`: その配送方法が使用される地域。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:106
+msgid ""
+":guilabel:`DHL Product`: the shipping service purchased from DHL (e.g. "
+"Express Worldwide)."
+msgstr ":guilabel:`DHLプロダクト`: DHLより購入された配送サービス (例: Express Worldwide)."
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:107
+msgid ""
+":guilabel:`DHL Package Type`: the type of DHL package used for delivery "
+"(e.g. DHL Box)."
+msgstr ":guilabel:`DHL梱包タイプ`: 配送に使用されるDHL梱包のタイプ (例: DHLボックス)"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:108
+msgid ""
+":guilabel:`Package Weight Unit`: the unit of measure used to display package"
+" weight."
+msgstr ":guilabel:`梱包重量単位`: パッケージの重量を表示する際に使用される単位"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:109
+msgid ""
+":guilabel:`Package Dimension Unit`: the unit of measure used to display "
+"package size."
+msgstr ":guilabel:`パッケージ寸法単位`：パッケージのサイズを表示する際に使用される単位"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:110
+msgid ""
+":guilabel:`Label Format`: the file format used to generate shipping labels."
+msgstr ":guilabel:`ラベルフォーマット`: 配送ラベルを生成するために使用されるファイルフォーマット"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:111
+msgid ""
+":guilabel:`Label Template`: the paper size used to print shipping labels."
+msgstr ":guilabel:`ラベルテンプレート`:  出荷ラベルの印刷に使用される用紙サイズ"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:114
+msgid ""
+"Before selecting service options for a shipping method, make sure those "
+"services are actually available for the DHL account. Available services "
+"depend on the contract negotiated with DHL."
+msgstr ""
+"配送方法のサービスオプションを選択する前に、それらのサービスがDHLアカウントで実際に利用可能であることを確認して下さい。利用可能なサービスは、DHLとの契約内容によって異なります。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:118
+msgid "Options"
+msgstr "オプション"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:120
+msgid ""
+"Additional settings are available in the :guilabel:`Options` section at the "
+"bottom of the :guilabel:`DHL Configuration` tab:"
+msgstr "追加の設定は、:guilabel:`DHL設定` タブの下部にある :guilabel:`オプション` セクションで利用できます。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:123
+msgid ""
+":guilabel:`Generate Return Label`: Enable this option to automatically "
+"generate a return label after validating a delivery order."
+msgstr ":guilabel:`返品ラベルを生成`: このオプションを有効にすると、配送オーダの検証後に返品ラベルが自動的に生成されます。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:125
+msgid ""
+":guilabel:`Dutiable Material`: Enable this option if the shipping method is "
+"liable to customs or other duties."
+msgstr ":guilabel:`関税対象物`: 配送方法が関税やその他の税金がかかる可能性がある場合は、このオプションを有効にして下さい。"
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:129
+msgid "Turn on the DHL Connection"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:131
+msgid ""
+"Once the DHL connection is set up, use the buttons at the top of the form to"
+" turn on or debug the connection."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:134
+msgid "**Unpublished/Published**: turns the connection on or off."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:135
+msgid ""
+"**Test Environment/Production Environment**: sets whether requests actually "
+"get sent to DHL."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dhl_credentials.rst:136
+msgid ""
+"**No Debug/Debug Requests**: determines whether error logging occurs for "
+"requests to DHL."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/invoicing.rst:3
 msgid "Shipping cost invoicing"
@@ -16095,21 +16346,22 @@ msgstr "Odooのビューロケーション"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:109
 msgid ""
-"Odoo databases include pre-configured view locations to organize the "
+"Odoo databases include preconfigured view locations to organize the "
 "hierarchy of locations. These provide helpful context, and distinguish "
 "between internal and external locations."
 msgstr ""
-"Odooデータベースにはロケーションの階層を整理するためのビューロケーションがあらかじめ設定されています。これらは有用なコンテキストを提供し、内部と外部のロケーションを区別します。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:112
 msgid ""
-"*Physical locations* serve as an umbrella for external locations, without "
-"changing a product's inventory value. (Inventory valuation changes occur "
-"when products move from internal to external locations)."
+"*Physical locations* group internal locations—such as secondary warehouses "
+"and subcontractor sites. Because :doc:`inventory valuation "
+"<../product_management/inventory_valuation/inventory_valuation_config>` "
+"changes only when goods move from internal to external locations, Odoo uses "
+"physical locations to track stock that is off-site or in transit without "
+"affecting valuation."
 msgstr ""
-"*物理的ロケーション*は、プロダクトの在庫価値を変えることなく、外部ロケーションの傘として機能します。(在庫評価の変更は、プロダクトが内部から外部ロケーションに移動するときに発生します)。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:119
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:121
 msgid ""
 "When moving products in warehouses `WH` and `WH2`, the items are not in "
 "either warehouse, but still belong to the company. While in transit, they "
@@ -16119,7 +16371,7 @@ msgstr ""
 "倉庫 `WH` と `WH2` にあるプロダクトを移動する場合、項目はどちらの倉庫にもありませんが、会社のものであることに変わりはありません。移動中は "
 ":guilabel:`積層ロケーション` タイプの `倉庫間移動`ロケーションに置かれます。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:123
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:125
 msgid ""
 "This location is under the view location, `Physical Locations`, indicating "
 "that `Inter-warehouse transit` is outside of a warehouse, but still part of "
@@ -16128,14 +16380,14 @@ msgid ""
 msgstr ""
 "このロケーションはビューロケーション、`物理的ロケーション`の下にあり、`倉庫間輸送`は倉庫の外ですが、会社の一部であることを示しています。これはプロダクトの在庫評価には影響しません。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:127
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:129
 msgid ""
 "*Partner locations* group customer and vendor locations (external locations)"
 " together. Transfers to these locations affect inventory valuation."
 msgstr ""
 "*取引先ロケーション*は、顧客と仕入先のロケーション(外部ロケーション)をグループ化したものです。これらの拠点への転送は在庫評価に影響します。"
 
-#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:129
+#: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management.rst:131
 msgid ""
 "*Virtual locations* are locations that do **not** exist physically, but it "
 "is where items that are not in inventory can be placed. These can be items "
