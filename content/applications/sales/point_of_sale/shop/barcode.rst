@@ -58,5 +58,5 @@ Log employees
 -------------
 
 You can also use a barcode scanner to log your employees. To do so, :ref:`restrict access
-<employee_login/configuration>` to the POS and :ref:`use barcodes to log your employees in
-<employee_login/badge>` your POS.
+<pos/employee_login/configuration>` to the POS and :ref:`use barcodes to log your employees in
+<pos/employee_login/badge>` your POS.
