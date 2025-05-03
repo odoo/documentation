@@ -67,5 +67,5 @@ Transfer` account.
           - **$1,000**
 
 .. seealso::
-   :doc:`reconciliation`
-   :doc:`reconciliation_models`
+   - :doc:`reconciliation`
+   - :doc:`reconciliation_models`
