@@ -21,7 +21,7 @@ Starting from the :menuselection:`Inventory`, :menuselection:`Manufacturing`,
 that already exists in the database and click into it's product form.
 
 Next, on the product form, enable reordering by checking the :guilabel:`Can be Purchased` option
-underneathe the :guilabel:`Product Name` field. Finally, set the :guilabel:`Product Type` to
+underneath the :guilabel:`Product Name` field. Finally, set the :guilabel:`Product Type` to
 `Storable Product` under the :guilabel:`General Information` tab.
 
 .. image:: reordering/product-configured-for-reordering.png
