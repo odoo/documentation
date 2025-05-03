@@ -205,10 +205,11 @@ A basic request could look like this:
 
 .. code-block:: js
 
+   import { rpc } from "@web/core/network/rpc";
+
    setup() {
-         this.rpc = useService("rpc");
          onWillStart(async () => {
-            const result = await this.rpc("/my/controller", {a: 1, b: 2});
+            const result = await rpc("/my/controller", {a: 1, b: 2});
             // ...
          });
    }
