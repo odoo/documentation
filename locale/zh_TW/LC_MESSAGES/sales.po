@@ -6,17 +6,17 @@
 # Translators:
 # 敬雲 林 <chingyun@yuanchih-consult.com>, 2024
 # Tiffany Chang, 2024
-# Wil Odoo, 2025
 # Tony Ng, 2025
+# Wil Odoo, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-27 16:07+0000\n"
+"POT-Creation-Date: 2025-04-30 14:37+0000\n"
 "PO-Revision-Date: 2024-10-08 06:34+0000\n"
-"Last-Translator: Tony Ng, 2025\n"
+"Last-Translator: Wil Odoo, 2025\n"
 "Language-Team: Chinese (Taiwan) (https://app.transifex.com/odoo/teams/41243/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -102,14 +102,15 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/shop/barcode.rst:10
 #: ../../content/applications/sales/point_of_sale/shop/customer_display.rst:12
 #: ../../content/applications/sales/point_of_sale/shop/ship_later.rst:10
+#: ../../content/applications/sales/sales/commissions.rst:14
 #: ../../content/applications/sales/sales/gelato.rst:15
 #: ../../content/applications/sales/sales/invoicing/proforma.rst:14
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:13
 #: ../../content/applications/sales/sales/products_prices/products/product_images.rst:14
 #: ../../content/applications/sales/sales/products_prices/products/variants.rst:34
 #: ../../content/applications/sales/sales/sales_quotations/pdf_quote_builder.rst:24
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:13
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:11
 #: ../../content/applications/sales/subscriptions/closing.rst:9
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:17
 msgid "Configuration"
 msgstr "配置"
 
@@ -12570,7 +12571,6 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/pricing/pricelists.rst:3
 #: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:3
-#: ../../content/applications/sales/subscriptions/products.rst:116
 msgid "Pricelists"
 msgstr "價格表"
 
@@ -15413,7 +15413,7 @@ msgid "Amazon.nl"
 msgstr "Amazon.nl"
 
 #: ../../content/applications/sales/sales/amazon_connector/features.rst:112
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:200
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:188
 #: ../../content/applications/sales/sales/shopee_connector/manage.rst:199
 msgid ":doc:`setup`"
 msgstr ":doc:`setup`"
@@ -15462,37 +15462,16 @@ msgstr ""
 
 #: ../../content/applications/sales/sales/amazon_connector/manage.rst:20
 msgid ""
-"The stock synchronization does **not** currently support selling the same "
-"product as :abbr:`FBM (Fulfilled By Merchant)` *and* :abbr:`FBA (Fulfilled "
-"By Amazon)`."
-msgstr ""
-
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:23
-msgid ""
-"At times, when stock is sent for all products, it triggers a stock problem "
-"with Amazon, where Amazon incorrectly thinks the :abbr:`FBM (Fulfilled By "
-"Merchant)` product has some quantity in :abbr:`FBM (Fulfilled By Merchant)`."
-msgstr ""
-
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:27
-msgid ""
-"As a result, Amazon then sells it as :abbr:`FBM (Fulfilled By Merchant)`, "
-"instead of taking from their own warehouse. Odoo developers are currently "
-"working on resolving this issue to avoid future discrepancies."
-msgstr ""
-
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:32
-msgid ""
 "When an order is cancelled in Amazon, and was already synchronized in Odoo, "
 "the corresponding sales order is automatically cancelled in Odoo."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:36
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:24
 #: ../../content/applications/sales/sales/shopee_connector/manage.rst:66
 msgid "Force synchronization"
 msgstr "強制同步"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:38
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:26
 msgid ""
 "In order to force the synchronization of an order, whose status has **not** "
 "changed since the previous synchronization, start by activating the "
@@ -15500,7 +15479,7 @@ msgid ""
 "(Amazon or Odoo)."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:42
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:30
 msgid ""
 "Then, navigate to the Amazon account in Odoo (:menuselection:`Sales app --> "
 "Configuration --> Settings --> Connectors --> Amazon Sync --> Amazon "
@@ -15508,7 +15487,7 @@ msgid ""
 "Last Order Sync`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:46
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:34
 #: ../../content/applications/sales/sales/shopee_connector/manage.rst:75
 msgid ""
 "Be sure to pick a date that occurs prior to the last status change of the "
@@ -15516,7 +15495,7 @@ msgid ""
 "occurs correctly."
 msgstr "請務必選擇需要同步及儲存的訂單上次狀態變更之前的日期。這會確保同步操作能夠正確運作。"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:51
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:39
 msgid ""
 "To immediately synchronize the orders of an Amazon account, switch to "
 ":ref:`developer mode <developer-mode>`, head to the Amazon account in Odoo, "
@@ -15524,11 +15503,11 @@ msgid ""
 "clicking :guilabel:`Sync Pickings`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:56
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:44
 msgid "Manage deliveries in FBM"
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:58
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:46
 msgid ""
 "Whenever an FBM (Fulfilled by Merchant) order is synchronized in Odoo, a "
 "picking is instantly created in the *Inventory* app, along with a sales "
@@ -15537,26 +15516,26 @@ msgid ""
 "backorders."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:62
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:50
 msgid ""
 "When a picking related to the order is confirmed, a notification is then "
 "sent to Amazon, who, in turn, notifies the customer that the order (or a "
 "part of it) is on its way."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:66
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:54
 msgid ""
 "Amazon requires users to provide a tracking reference with each delivery. "
 "This is needed to assign a carrier."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:69
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:57
 msgid ""
 "If the carrier doesn't automatically provide a tracking reference, one must "
 "be set manually. This rule applies to all Amazon marketplaces."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:73
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:61
 msgid ""
 "If the chosen carrier isn't supported by Odoo, a carrier with the same name "
 "can still be created (e.g. create a carrier named `easyship`). The name used"
@@ -15569,17 +15548,17 @@ msgid ""
 "to the customer."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:82
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:70
 msgid ""
 ":doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper`"
 msgstr ""
 ":doc:`../../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper`"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:87
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:75
 msgid "Manage errors when synchronizing deliveries"
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:89
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:77
 msgid ""
 "Sometimes, Amazon can fail to correctly process all the information sent by "
 "Odoo. In this case, Odoo sends an email listing all the shipments that "
@@ -15587,14 +15566,14 @@ msgid ""
 "are flagged with a :guilabel:`Synchronization with Amazon failed` tag."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:93
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:81
 msgid ""
 "Usually, the error can be corrected directly in the Amazon backend or in "
 "Odoo. If the problem is corrected in Odoo, synchronize the shipment again "
 "using the :guilabel:`Retry Amazon Sync` button."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:97
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:85
 msgid ""
 "It might happen that Odoo receives a notification from Amazon saying that "
 "some delivery information was not processed, but without specifying which "
@@ -15611,24 +15590,24 @@ msgstr ""
 "收到亞馬遜發出貨物已處理的通知，其標籤將變為 :guilabel:`已與亞馬遜同步`。為加快此過程，請在你的亞馬遜帳戶按一下 "
 ":guilabel:`同步訂單`，手動同步這些訂單，或按一下 :guilabel:`收回訂單` 並輸入相關的亞馬遜訂單參考。"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:106
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:94
 msgid "Follow deliveries in FBA"
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:108
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:96
 msgid ""
 "When an FBA (Fulfilled by Amazon) order is synchronized in Odoo, a stock "
 "move is recorded in the *Inventory* app for each sales order item. That way,"
 " it's saved in the system."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:111
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:99
 msgid ""
 "Inventory managers can access these stock moves by navigating to "
 ":menuselection:`Inventory app --> Reporting --> Moves History`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:114
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:102
 msgid ""
 "For FBA orders, the stock move is automatically created in Odoo by the "
 "Amazon connector, thanks to the shipping status of Amazon. When sending new "
@@ -15637,14 +15616,14 @@ msgid ""
 "location."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:119
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:107
 msgid ""
 "To follow *Amazon (FBA)* stock in Odoo, make an inventory adjustment after "
 "replenishing stock. An automated replenishment from reordering rules can "
 "also be triggered on the Amazon location."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:122
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:110
 msgid ""
 "The Amazon location is configurable by accessing the Amazon account managed "
 "in Odoo. To access Amazon accounts in Odoo navigate to :menuselection:`Sales"
@@ -15652,13 +15631,13 @@ msgid ""
 "Amazon Accounts`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:126
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:114
 msgid ""
 "All accounts of the same company use the same Amazon location, by default. "
 "However, it is possible to follow the stock filtered by marketplace."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:129
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:117
 msgid ""
 "To do that, first remove the marketplace, where the desired stock to follow "
 "separately can be found, from the list of synchronized marketplaces, which "
@@ -15666,28 +15645,28 @@ msgid ""
 "--> Settings --> Connectors --> Amazon Sync --> Amazon Accounts`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:134
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:122
 msgid ""
 "Next, create another registration for this account, and remove all "
 "marketplaces--- **except** the marketplace this is desired to be isolated "
 "from the others."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:137
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:125
 msgid ""
 "Lastly, assign another stock location to the second registration of the "
 "account."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:140
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:128
 msgid "Invoice and register payments"
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:143
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:131
 msgid "Issue invoices"
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:145
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:133
 msgid ""
 "Due to Amazon's policy of not sharing customer email addresses, it is "
 "**not** possible to send invoices directly to Amazon customers from Odoo. "
@@ -15695,111 +15674,111 @@ msgid ""
 "Odoo to the Amazon back-end."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:149
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:137
 msgid ""
 "Additionally, for B2B clients, it is currently required to manually retrieve"
 " VAT numbers from the Amazon back-end **before** creating an invoice in "
 "Odoo."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:153
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:141
 #: ../../content/applications/sales/sales/shopee_connector/manage.rst:155
 msgid "Register payments"
 msgstr "登記付款"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:155
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:143
 msgid ""
 "Since customers pay Amazon as an intermediary, creating a dedicated *Bank* "
 "journal (e.g. named `Amazon Payments`), with a dedicated *Bank and Cash* "
 "intermediary account is recommended."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:158
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:146
 msgid ""
 "Additionally, as Amazon makes a single monthly payment, selecting all the "
 "invoices linked to a single payment is necessary when registering payments."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:161
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:149
 msgid ""
 "To do that, use the appropriate :guilabel:`Journal` dedicated to Amazon "
 "payments, and select :guilabel:`Batch Deposit` as the :guilabel:`Payment "
 "Method`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:164
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:152
 #: ../../content/applications/sales/sales/shopee_connector/manage.rst:166
 msgid ""
 "Then, select all the generated payments, and click :menuselection:`Actions "
 "--> Create batch payment --> Validate`."
 msgstr "然後，選取所有產生的付款，並按一下 :menuselection:`操作 --> 建立大批付款 --> 驗證`。"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:168
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:156
 msgid ""
 "This same action can be performed with vendor bills from Amazon dedicated to"
 " commissions."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:170
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:158
 msgid ""
 "When the balance is received in the bank account at the end of the month, "
 "and the bank statements are recorded, credit the Amazon intermediary account"
 " by the amount received."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:174
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:162
 msgid "Follow Amazon sales in sales reporting"
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:176
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:164
 msgid ""
 "On the Amazon account profile in Odoo, a sales team is set under the "
 ":guilabel:`Order Follow-up` tab."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:179
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:167
 msgid ""
 "This gives quick access to important metrics related to sales reporting. By "
 "default, the Amazon account's sales team is shared between all of the "
 "company's accounts."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:182
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:170
 msgid ""
 "If desired, the sales team on the account can be changed for another, in "
 "order to perform a separate reporting for the sales of this account."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:186
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:174
 msgid "It is also possible to perform reporting on a per-marketplace basis."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:188
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:176
 msgid ""
 "First, remove the desired marketplace from the list of synchronized "
 "marketplaces."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:190
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:178
 msgid ""
 "To access the list of synchronized marketplaces in Odoo, navigate to "
 ":menuselection:`Sales app --> Configuration --> Settings --> Connectors --> "
 "Amazon Sync --> Amazon Accounts`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:193
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:181
 msgid ""
 "Then, create another registration for this account, and remove all other "
 "marketplaces **except** the one to isolate."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:196
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:184
 msgid ""
 "Lastly, assign another sales team to one of the two registrations of the "
 "account."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:199
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:187
 #: ../../content/applications/sales/sales/amazon_connector/setup.rst:154
 msgid ":doc:`features`"
 msgstr ""
@@ -16077,6 +16056,282 @@ msgid ""
 "Newly added marketplaces are automatically added to the list of synchronized"
 " marketplaces. If the new marketplace is not added to the list, it means "
 "that it is either incompatible or unavailable for the seller account."
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:3
+msgid "Commissions"
+msgstr "佣金"
+
+#: ../../content/applications/sales/sales/commissions.rst:7
+msgid ""
+"Commissions are a powerful tool to motivate sales team members. They "
+"incentivize performance, boost productivity, and encourage healthy "
+"competition. The *Commissions* feature in Odoo's **Sales** application "
+"provides a way to reward salespeople or sales teams based on their "
+"performance. This feature supports the creation of flexible, measurable "
+"commission structures that align with business goals, whether that means "
+"driving revenue, volume, profit, or recurring contracts."
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:16
+msgid ""
+"To enable the *Commissions* feature, navigate to :menuselection:`Sales app "
+"--> Configuration --> Settings`. Scroll to the :guilabel:`Invoicing` "
+"section, and tick the :guilabel:`Commissions` checkbox. Then, click "
+":guilabel:`Save`. Doing so causes a new :guilabel:`Commissions` menu to "
+"appear in the menu bar. To create a new commission plan, navigate to "
+":menuselection:`Commissions --> Comission Plans` and click :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:23
+msgid "Commission plan structure"
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:25
+msgid "Each commission plan is comprised of several components:"
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:27
+msgid ""
+":guilabel:`Based on`: Determines whether commissions are awarded based on "
+"progress toward :guilabel:`Targets` or :guilabel:`Achievements`"
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:29
+msgid ""
+":guilabel:`per`: Indicates whether the plan applies to individual "
+"salespeople or an entire sales team"
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:31
+msgid ""
+":guilabel:`Target Frequency`: Sets how often targets reset: **Monthly**, "
+"**Quarterly**, or **Yearly**."
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:33
+msgid ""
+":guilabel:`Achievements`: Determines what is being measured toward "
+"commissions."
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst-1
+msgid "A new commission plan detail form."
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:39
+msgid "Target-based commission plans"
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:41
+msgid ""
+"In a *Target* based commission plan, commissions are awarded based on the "
+"percentage of sales targets reached. Target based plans are ideal for "
+"setting clear, measurable goals, such as invoicing a specific amount in "
+"sales per quarter, then rewarding sales people progressively based on how "
+"close they come to reaching or exceeding that goal."
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:47
+msgid ""
+"Target based plans differ from *Achievement* based plans because they are "
+"based on reaching a fixed, predefined goal. They focus on goal-based "
+"incentives and performance milestones."
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:50
+msgid ""
+"To configure a new target based commission plan, navigate to the "
+":menuselection:`Sales app --> Commissions --> Commission Plans`, then click "
+":guilabel:`New`. Click in the :guilabel:`Based on` drop-down menu and select"
+" :guilabel:`Targets`. Then, select an option in the :guilabel:`per` field."
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:54
+msgid ""
+"In the :guilabel:`On Target Commission` field, set the payout amount for "
+"reaching `100%` of the target. Update the :guilabel:`Effective Period` "
+"fields to confirm the dates for this plan. Then, update the "
+":guilabel:`Target Frequency` field based on how often the targets should be "
+"set and evaluated."
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:59
+msgid "*Monthly*: short term goals with frequent payouts."
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:60
+msgid ""
+"*Quarterly*: aligns with business cycles and provides mid-range objectives."
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:61
+msgid "*Yearly*: long term sales goals for strategic planning."
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:63
+msgid ""
+"After the :guilabel:`Target Frequency` field is updated, the "
+":guilabel:`Targets` tab updates with a list of the appropriate time frame. "
+"For each :guilabel:`Period`, enter a :guilabel:`Target` goal."
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:66
+#: ../../content/applications/sales/sales/commissions.rst:116
+msgid ""
+"On the :guilabel:`Achievements` tab, add one or more :ref:`Achievement "
+"metric <sales/commissions/achievement-metric>` for this plan by clicking "
+":guilabel:`Add a new achievement`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:69
+#: ../../content/applications/sales/sales/commissions.rst:119
+msgid ""
+"Click the :guilabel:`Sales People` tab to assign this plan to the "
+"appropriate staff. Click either :guilabel:`Add a new Sales Person` to add "
+"them individually, or :guilabel:`Add Multiple Salespersons` to bulk add "
+"several at once."
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:74
+msgid ""
+"The :guilabel:`Add Multiple Salespersons` button is only available if "
+":doc:`../../general/developer_mode` is active."
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:78
+msgid "Levels"
+msgstr "等級"
+
+#: ../../content/applications/sales/sales/commissions.rst:80
+msgid ""
+"To provide additional incentive, *commission levels* can be added to "
+"*Target* based plans. These tiers allow salespeople to earn varying "
+"commission amounts based on their performance levels. Levels can start at "
+"`0%` and increase incrementally. This allows for salespeople to earn "
+"commission even if they do not achieve `100%` of the target, as well as the "
+"ability to achieve over `100%` of the target. Commission levels can be set "
+"from the :guilabel:`Commissions` tab when creating a commission plan."
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:87
+msgid ""
+"If no levels are added above 100%, salespeople are **not** able to earn "
+"above the stated commission."
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:90
+msgid ""
+"In the plan below, the levels start at `0%`, and continue until `300%`. If a"
+" salesperson exceeds `100%` of the expected target, their expected payout "
+"continues to increase up to `300%`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:0
+msgid "An example of commission levels, with levels above 100 percent."
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:97
+msgid "Achievement-based commission plans"
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:99
+msgid ""
+"In a *Achievement* based commission plan, salespeople earn a percentage of "
+"their invoice value as commission. Target based plans are ideal for "
+"rewarding sales activity consistently, regardless of specific goals. For "
+"example, offering a `5%` commission on all invoiced amounts, regardless of "
+"how much is sold."
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:105
+msgid ""
+"Achievement based plans differ from *Target* based plans because they are "
+"calculated based on actual achievements using a flat, consistent rate. They "
+"are beneficial for ongoing, non-goal based compensation plans."
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:109
+msgid ""
+"To configure a new target based commission plan, navigate to the "
+":menuselection:`Sales app --> Commissions --> Commission Plans`, then click "
+":guilabel:`New`. Click in the :guilabel:`Based on` drop-down and select "
+":guilabel:`Achievements`. Then, select an option in the :guilabel:`per` "
+"field."
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:113
+msgid ""
+"Update the :guilabel:`Effective Period` fields to confirm the dates for this"
+" plan. Then, update the :guilabel:`Target Frequency` field based on how "
+"often the targets should be set and evaluated."
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:126
+msgid "Achievements"
+msgstr "成就"
+
+#: ../../content/applications/sales/sales/commissions.rst:128
+msgid ""
+"Performance can be measured in several ways in performance plans. These are "
+"configured in the :guilabel:`Achievements` tab of each plan."
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:131
+msgid ":guilabel:`Amount Sold`: the total value of sales orders (SOs)."
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:132
+msgid ":guilabel:`Amount Invoiced`: the total value of confirmed invoices."
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:133
+msgid ":guilabel:`Quantity Sold`: the total number of units sold via |SOs|."
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:134
+msgid ":guilabel:`Quantity Invoiced`: the total number of units invoiced."
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:135
+msgid ""
+":guilabel:`Margin`: the profit margin (selling price minus cost price)."
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:136
+msgid ""
+":guilabel:`MRR`: the new *Monthly Recurring Revenue* from subscription "
+"sales. this option is **only** available if the :doc:`Subscriptions "
+"<../../sales/subscriptions>` app is installed."
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:140
+msgid ""
+"Regardless of what the plan is :guilabel:`Based on`, each plan needs both "
+"*Achievements* and *Targets* configured."
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:144
+msgid "Plan approval"
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:146
+msgid ""
+"After confirming the details of the new plan, click :guilabel:`Approve`. "
+"This moves the plan from the :guilabel:`Draft` stage into the "
+":guilabel:`Approved` stage."
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:150
+msgid ""
+"Commissions plans in the :guilabel:`Approved` stage **cannot** be edited. To"
+" edit an approved plan, it must first be :guilabel:`Reset to Draft`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/commissions.rst:153
+msgid ""
+"After a plan is approved, Odoo automatically tracks performance and "
+"calculates commissions based on the established parameters."
 msgstr ""
 
 #: ../../content/applications/sales/sales/gelato.rst:3
@@ -20146,11 +20401,11 @@ msgid ""
 "product's unit price."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/discounts.rst:42
+#: ../../content/applications/sales/sales/products_prices/prices/discounts.rst:44
 msgid "Discount button"
 msgstr "折扣按鈕"
 
-#: ../../content/applications/sales/sales/products_prices/prices/discounts.rst:44
+#: ../../content/applications/sales/sales/products_prices/prices/discounts.rst:46
 msgid ""
 "With the *Discounts* settings enabled, a :guilabel:`Discount` button appears"
 " at the bottom of sales orders."
@@ -20162,27 +20417,27 @@ msgid ""
 "Sales app."
 msgstr "Odoo 銷售應用程式中，位於銷售訂單表單底部的折扣按鈕。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/discounts.rst:50
+#: ../../content/applications/sales/sales/products_prices/prices/discounts.rst:52
 msgid ""
 "Clicking the :guilabel:`Discount` button on a sales order opens a pop-up "
 "window, where the :guilabel:`Discount` percentage, and options are "
 "configured:"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/discounts.rst:53
+#: ../../content/applications/sales/sales/products_prices/prices/discounts.rst:55
 msgid ""
 ":guilabel:`On All Order Lines`: Add the specified discount percentage "
 "(configured in the :guilabel:`Discount` field of the pop-up window) on all "
 "existing order lines of the sales order."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/discounts.rst:55
+#: ../../content/applications/sales/sales/products_prices/prices/discounts.rst:57
 msgid ""
 ":guilabel:`Global Discount`: Add a discount product line to the order, which"
 " has the cumulative value equivalent to the specified discount percentage."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/discounts.rst:59
+#: ../../content/applications/sales/sales/products_prices/prices/discounts.rst:61
 msgid ""
 "A global discount of 10% is added in the last line of a sales order with a "
 "subtotal of $4,200 by adding a discount line with a -$420 value (which is "
@@ -20195,7 +20450,7 @@ msgid ""
 "application."
 msgstr "Odoo 銷售應用程式中，套用了全域折扣選項的銷售訂單。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/discounts.rst:66
+#: ../../content/applications/sales/sales/products_prices/prices/discounts.rst:68
 msgid ""
 "Any product added (or removed) *after* the global discount line is added "
 "does **not** affect the discount value on the discount line. To include new "
@@ -20203,14 +20458,14 @@ msgid ""
 "current global discount line and repeat the steps."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/discounts.rst:70
+#: ../../content/applications/sales/sales/products_prices/prices/discounts.rst:72
 msgid ""
 ":guilabel:`Fixed Amount`: Add a monetary amount to the :guilabel:`Discount` "
 "field. Once applied, this amount is added to the order as a product line, "
 "with the monetary value subtracted from the order total."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/discounts.rst:75
+#: ../../content/applications/sales/sales/products_prices/prices/discounts.rst:77
 msgid ""
 "A fixed discount of $20 appears as a product line, with a negative "
 ":guilabel:`Unit Price`."
@@ -20222,7 +20477,7 @@ msgid ""
 "application."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/discounts.rst:81
+#: ../../content/applications/sales/sales/products_prices/prices/discounts.rst:83
 msgid ""
 "It is more beneficial to add a :guilabel:`Fixed Amount` discount after "
 "**all** desired products have been added to a sales order. If there are "
@@ -20244,10 +20499,6 @@ msgid ""
 "Odoo **Sales** has a useful pricelist feature that can be tailored to fit "
 "any unique pricing strategy. Pricelists suggest certain prices, but they can"
 " always be overridden on the sales order."
-msgstr ""
-
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:13
-msgid "Pricelists configuration"
 msgstr ""
 
 #: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:15
@@ -20344,11 +20595,11 @@ msgid ""
 "pricelist will apply under the :guilabel:`Country Groups` column."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:69
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:71
 msgid "Price Rules tab"
 msgstr "價格規則分頁"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:71
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:73
 msgid ""
 "In the :guilabel:`Price Rules` tab, each line creates a new record that will"
 " implement customized pricing to the sales order where the pricelist is "
@@ -20356,29 +20607,29 @@ msgid ""
 "opens a new pricelist rules form."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:75
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:77
 msgid ""
 "Then, select whether to apply this set of rules to a :guilabel:`Product` or "
 ":guilabel:`Category`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:77
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:79
 msgid "From here, there are several configuration options:"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:79
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:81
 msgid ""
 ":guilabel:`Product`: If selected in the :guilabel:`Apply To` field, use this"
 " field to choose one or more products to which this pricelist will apply."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:81
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:83
 msgid ""
 ":guilabel:`Category`: Select one or more product categories to which this "
 "pricelist will apply."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:82
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:84
 msgid ""
 ":guilabel:`Price Type`: Select whether the specialized pricing will fall "
 "under :guilabel:`Discount`, :guilabel:`Formula`, or :guilabel:`Fixed Price`."
@@ -20386,13 +20637,13 @@ msgid ""
 " to apply the pricelist."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:86
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:88
 msgid ""
 ":guilabel:`Discount`: Enter the percentage to be discounted. A mark-up can "
 "be configured by using a negative value in this field."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:90
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:92
 msgid ""
 "If a pricelist is applied to a sales quotation with the discount "
 ":guilabel:`Price Type` set as :guilabel:`Discount`, the discount will "
@@ -20408,61 +20659,61 @@ msgid ""
 "How a pricelist rule using Price Type: Discount appears on customer preview."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:99
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:101
 msgid ""
 ":guilabel:`Formula`: Calculate the pricelist rules based the following "
 "configuration:"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:101
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:103
 msgid ""
 ":guilabel:`Discount`: Percentage discount to be applied. Negative values can"
 " be entered to increase prices."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:105
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:107
 msgid ""
 "If a pricelist is applied to a sales quotation with the discount "
 ":guilabel:`Price Type` set as :guilabel:`Formula`, the discount will *not* "
 "be visible to the customer."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:108
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:110
 msgid ""
 ":guilabel:`Round off to`: Numerical value to act as round-off multiple, to "
 "be applied after discount. The rounding method sets the price so that it is "
 "a multiple of the value in this field."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:113
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:115
 msgid "Rounding is applied *after* the discount and *before* the extra fee."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:115
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:117
 msgid ""
 ":guilabel:`Extra Fee`: Fixed amount to be added or subtracted once "
 ":guilabel:`Discount` and :guilabel:`Round off to` have been applied."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:117
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:119
 msgid ""
 ":guilabel:`Fixed Price`: Enter fixed price for this pricelist. When applied,"
 " all product lines in the quotation form will be updated to this price."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:120
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:122
 msgid ""
 ":guilabel:`Min Qty`: Specify the minimum quantity of selected products for "
 "this pricelist to apply."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:122
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:124
 msgid ""
 ":guilabel:`Validity Period`: Specify the start and end date during which "
 "this pricelist can be applied to quotations."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:126
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:128
 msgid ""
 "To formulate a 100% markup (or two times the price of the product), with a "
 "$5 minimum margin, set the :guilabel:`Based price` field to :guilabel:`Sales"
@@ -20476,7 +20727,7 @@ msgid ""
 " Sales."
 msgstr "Odoo 銷售應用程式中，如何設定最低利潤額為 5 元、基於成本的加價。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:134
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:136
 msgid ""
 "To apply 20% discounts, with prices rounded up to 9.99, set the "
 ":guilabel:`Based on` field to :guilabel:`Sales Price`, the "
@@ -20491,33 +20742,32 @@ msgstr ""
 msgid "Example of a 20% discount with prices rounded to 9.99 in Odoo Sales."
 msgstr "Odoo 銷售應用程式中提供 20% 折扣、價格四捨五入至 9.99 結尾的範例。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:142
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:144
 msgid ""
 "To have prices that end in 9.99, set the :guilabel:`Rounding Method` to `10`"
 " and the :guilabel:`Extra Fee` to `-0.01`."
 msgstr ""
 "若想價格以 9.99 結尾，請將 :guilabel:`捨入方式` 設為 `10`，並將 :guilabel:`額外費用` 設為 `-0.01`。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:146
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:148
 msgid "Recurring Prices tab"
 msgstr "重複價格分頁"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:148
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:150
 msgid ""
-"Recurring prices are specifically used with :doc:`subscription products "
-"<../../../subscriptions/products>`. When configuring price rules in this "
-"tab, keep in mind that they will only apply to subscription products, or "
-"products with recurring prices enabled."
+"Time-based rules are used specifically with subscription products. Be sure "
+"to check out the Odoo :doc:`Subscriptions "
+"</applications/sales/subscriptions>` documentation for more information."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:152
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:153
 msgid ""
 "In the :guilabel:`Recurring Prices` tab, pricelists are configured with the "
 "same options as in the :guilabel:`Price Rules` tab, with additional columns "
 "for :guilabel:`Product Variants` add :guilabel:`Recurring Plan`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:156
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:157
 msgid ""
 ":guilabel:`Product Variants` are configured under products that have one or "
 "more values, such as color, size, etc. Once a product has been selected "
@@ -20525,7 +20775,7 @@ msgid ""
 "product variants to be included in the price rule."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:160
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:161
 msgid ""
 "Then, select the blank field in the :guilabel:`Recurring Plan` column to "
 "reveal a drop-down menu of pre-designated recurrence periods (e.g. "
@@ -20536,7 +20786,7 @@ msgstr ""
 msgid "The recurring prices tab in a pricelist configuration form."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:166
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:167
 msgid ""
 "New recurrence periods can also be created from this column. To do so, type "
 "in the name for the new :guilabel:`Recurring Plan`, then select "
@@ -20553,28 +20803,28 @@ msgstr ""
 msgid "Custom time period pop-up form in Odoo Sales."
 msgstr "Odoo 銷售應用程式中的自訂時間段彈出表單。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:178
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:179
 msgid ""
 "Lastly, add the desired price for this recurring price rule in the "
 ":guilabel:`Recurring Price` column."
 msgstr "最後，在 :guilabel:`重複價格` 直欄中，加入此重複價格規則所需的價格。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:182
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:183
 msgid ":doc:`../../../subscriptions`"
 msgstr ":doc:`../../../subscriptions`"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:185
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:186
 msgid "Rental rules tab"
 msgstr "租賃規則分頁"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:187
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:188
 msgid ""
 "Price rules can be configured for :doc:`rental products <../../../rental>` "
 "under the :guilabel:`Rental rules` tab, using the same methodology as the "
 ":guilabel:`Price Rules` and :guilabel:`Recurring Prices` tabs."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:191
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:192
 msgid ""
 "To add a rental rule, click :guilabel:`Add a line`, and select a desired "
 "product in the :guilabel:`Products` column. Then, select any specific "
@@ -20583,13 +20833,13 @@ msgstr ""
 "要新增租賃規則，請按一下 :guilabel:`新增資料行`，然後在 :guilabel:`產品` 直欄中選擇所需產品。之後，如有需要，可選擇任何特定的"
 " :guilabel:`變體`。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:194
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:195
 msgid ""
 "Next, designate a :guilabel:`Period` of time for the rental rule (e.g. "
 "`Daily`, `Hourly`, etc.)."
 msgstr "接下來，為租賃規則指定一個 :guilabel:`周期`（例如 `每天`、`每小時` 等）。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:196
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:197
 msgid ""
 "Lastly, configure a :guilabel:`Price` for the rental rule in the respective "
 "column."
@@ -20599,51 +20849,67 @@ msgstr "最後，在對應的直欄中，為租賃規則設定一個 :guilabel:`
 msgid "The rental tab in a pricelist configuration form."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:202
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:203
 msgid "Ecommerce Tab"
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:204
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:205
 msgid ""
 "Under the :guilabel:`Ecommerce` tab, price rules can be configured for "
 "products sold on an :doc:`Ecommerce website "
 "<../../../../websites/ecommerce/products>`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:207
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:208
 msgid ""
 "To enable the pricelist to be visible, select the target website in the "
 ":guilabel:`Website` field."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:209
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:210
 msgid ""
 "The :guilabel:`Selectable` can be enabled to allow the customer to choose "
 "this pricelist."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:211
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:212
 msgid ""
 "Finally, promotional and loyalty codes can be added to the "
 ":guilabel:`E-commerce Promotional Code` field."
 msgstr ""
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst-1
-msgid "The Ecommerce tab in a pricelist configuration form."
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:215
+msgid ""
+"Tick the :guilabel:`Selectable` checkbox to have this pricelist as a "
+"selectable option for customers to choose as they shop. If the "
+":guilabel:`Selectable` box is left unticked, customers **cannot** select "
+"this pricelist for themselves."
 msgstr ""
+"勾選 :guilabel:`可選取` 勾選方格後，可將此價目表設為可選取選項，供顧客在購物時選擇。如果不勾選 :guilabel:`可選取` "
+"方格，客戶便 **無法** 自行選擇此價目表。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:218
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:219
+msgid ""
+"Lastly, there is the option to add an :guilabel:`E-commerce Promotional "
+"Code`. To add a code, type in the desired promo code that, when entered "
+"during the checkout process, applies the pricelist to the customer, even if "
+"the customer does not fall into the previously-specified criteria."
+msgstr ""
+"最後，可選擇新增一個 "
+":guilabel:`電子商務促銷碼`。要新增促銷碼，請輸入想使用的促銷碼。若在結賬過程輸入此代碼，即使客戶不符合先前指定的條件，也可將價目表套用至該名客戶。"
+
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:224
 msgid "Customer pricelist application"
 msgstr "套用客戶價目表"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:220
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:226
 msgid ""
 "While the default pricelist applied to any customer is the :guilabel:`Public"
 " Pricelist`, Odoo provides the opportunity to directly apply a different "
 "pricelist to customers on their contact form."
 msgstr "雖然 :guilabel:`公用價目表` 是適用於所有客戶的預設價目表，但 Odoo 亦可讓你在客戶的聯絡表單上，直接套用不同的價目表。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:223
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:229
 msgid ""
 "To do that, open the desired customer's contact form, either by navigating "
 "to :menuselection:`Sales app --> Orders --> Customers` and selecting the "
@@ -20657,7 +20923,7 @@ msgstr ""
 msgid "Sample customer detail form in Odoo Sales."
 msgstr "Odoo 銷售應用程式中的範例客戶詳細資料表單。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:231
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:237
 msgid ""
 "On the desired customer's contact form, under the :guilabel:`Sales & "
 "Purchase` tab, in the :guilabel:`Sales` section, designate what pricelist "
@@ -20671,7 +20937,7 @@ msgstr ""
 msgid "The pricelist field in a customer detail form in Odoo Sales."
 msgstr "Odoo 銷售應用程式中，客戶詳細資料表單中的價目表欄位。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:240
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:246
 msgid ""
 "When a customer is added to the database, the default pricelist is "
 "automatically applied to them. There is **no way** to have a blank "
@@ -20681,7 +20947,7 @@ msgstr ""
 "將客戶新增至資料庫後，預設價目表會自動套用至他們。聯絡人表單的 *價目表* 欄位是 **不可** "
 "留空的。即使該欄位留空，再次開啟該聯絡人表單時，也會顯示預設價目表。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:244
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:250
 msgid ""
 "However, when that contact is added to a quotation, and the *Pricelist* "
 "field is auto-populated (based on the information from their contact form), "
@@ -20692,47 +20958,47 @@ msgstr ""
 "不過，當該聯絡人新增至報價單中，並自動填入 *價目表* 欄位時（根據聯絡人表單中的資訊），用戶仍可從 *價目表* "
 "欄位移除該預設價目表，此時報價單仍然可以進行確認，隨後轉換為銷售訂單。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:250
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:256
 msgid "Conditions"
 msgstr "條件"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:252
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:258
 msgid ""
 "At the bottom of the :guilabel:`Create Pricelist Rules` pop-up form is the "
 ":guilabel:`Conditions` section."
 msgstr ":guilabel:`建立價目表規則` 彈出表單的底部，是 :guilabel:`條件` 部分。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:255
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:261
 msgid ""
 "Here, start by selecting one of the options in the :guilabel:`Apply On` "
 "field:"
 msgstr "在此處，請先為 :guilabel:`套用至` 欄位，選擇其中一個選項："
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:257
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:263
 msgid ""
 ":guilabel:`All Products`: the advanced pricelist rule will be applied to all"
 " products."
 msgstr ":guilabel:`所有產品`：進階價目表規則會套用至所有產品。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:258
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:264
 msgid ""
 ":guilabel:`Product Category`: the advanced pricelist rule will be applied to"
 " a specific category of products."
 msgstr ":guilabel:`產品類別`：進階價目表規則將套用於指定類別的產品。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:260
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:266
 msgid ""
 ":guilabel:`Product`: the advanced pricelist rule will be applied to a "
 "specific product."
 msgstr ":guilabel:`產品`：進階價目表規則將套用於指定產品。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:261
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:267
 msgid ""
 ":guilabel:`Product Variant`: the advanced pricelist rule will be applied to "
 "a specific product variant."
 msgstr ":guilabel:`產品變體`：進階價目表規則將套用至指定的產品款式變體。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:264
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:270
 msgid ""
 "If any of those options, apart from :guilabel:`All Products`, are selected, "
 "a new option-specific field appears, in which the specific "
@@ -20742,7 +21008,7 @@ msgstr ""
 "如果選擇 :guilabel:`所有產品` 以外的任何選項，系統會按照特定選項，顯示一個新的欄位，在該處必須選擇指定的 "
 ":guilabel:`產品類別`、:guilabel:`產品` 或 :guilabel:`產品變體`。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:268
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:274
 msgid ""
 "Then, select a minimum quantity to be applied to the advanced pricelist rule"
 " in the :guilabel:`Min. Quantity` field. Lastly, select a range of dates for"
@@ -20751,7 +21017,7 @@ msgstr ""
 "之後，請在 :guilabel:`最低數量` 欄位中，選擇要套用高級價目表規則的最低購買數量。最後，在 :guilabel:`有效期` "
 "欄位中，選擇價目表項目生效的日期範圍。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:272
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:278
 msgid ""
 "Once all configurations are complete, either click :guilabel:`Save & Close` "
 "to save the advanced pricelist rule, or click :guilabel:`Save & New` to "
@@ -20760,17 +21026,17 @@ msgstr ""
 "完成所有配置後，按一下 :guilabel:`儲存並關閉`，以儲存進階價目表規則，或按一下 "
 ":guilabel:`儲存並新增`，以立即在新的表單上，建立另一個進階價目表規則。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:277
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:283
 msgid ""
 "If a price rule is set for a particular product, and another one for its "
 "product category, Odoo takes the rule of the product itself."
 msgstr "如果為某項特定產品設定了價格規則，並為該產品所屬的產品類別設定了另一個價格規則，Odoo 將會採用產品本身的規則。"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:281
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:287
 msgid ":doc:`/applications/sales/sales/products_prices/prices/currencies`"
 msgstr ":doc:`/applications/sales/sales/products_prices/prices/currencies`"
 
-#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:282
+#: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:288
 msgid ":doc:`/applications/websites/ecommerce/products/price_management`"
 msgstr ":doc:`/applications/websites/ecommerce/products/price_management`"
 
@@ -22892,7 +23158,7 @@ msgid ":doc:`../products_prices/prices/pricing`"
 msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:167
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:158
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:156
 msgid "Optional Products tab"
 msgstr "選購產品分頁"
 
@@ -23231,13 +23497,13 @@ msgstr ""
 
 #: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:328
 #: ../../content/applications/sales/sales/sales_quotations/get_paid_to_validate.rst:90
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:258
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:256
 msgid ":doc:`get_signature_to_validate`"
 msgstr ":doc:`get_signature_to_validate`"
 
 #: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:329
 #: ../../content/applications/sales/sales/sales_quotations/get_signature_to_validate.rst:78
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:259
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:257
 msgid ":doc:`get_paid_to_validate`"
 msgstr ":doc:`get_paid_to_validate`"
 
@@ -23575,7 +23841,6 @@ msgid "The online payment setting on quotation template forms in Odoo Sales."
 msgstr "Odoo 銷售應用程式中，報價單範本表單的線上付款設定。"
 
 #: ../../content/applications/sales/sales/sales_quotations/get_paid_to_validate.rst:43
-#: ../../content/applications/sales/subscriptions/payment_providers.rst:5
 msgid "Payment providers"
 msgstr "付款服務商"
 
@@ -23837,7 +24102,7 @@ msgstr ""
 ":guilabel:`產品` 直欄中，顯示一個空白欄位。"
 
 #: ../../content/applications/sales/sales/sales_quotations/optional_products.rst:27
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:179
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:177
 msgid ""
 "When clicked, a drop-down menu with products from the database appear. "
 "Select the desired product from the drop-down menu to add it as an optional "
@@ -24727,14 +24992,14 @@ msgid ""
 "every time a sales negotiation occurs."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:15
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:13
 msgid ""
 "To use quotation templates, begin by activating the setting in "
 ":menuselection:`Sales app --> Configuration --> Settings`, and scroll to the"
 " :guilabel:`Quotations &_Orders` heading."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:18
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:16
 msgid ""
 "Under the heading, tick the :guilabel:`Quotation Templates` checkbox. Doing "
 "so reveals a new :guilabel:`Default Template` field, in which a default "
@@ -24745,30 +25010,30 @@ msgstr ""
 msgid "How to enable quotation templates on Odoo Sales."
 msgstr "如何在 Odoo 銷售程式中，啟用報價單範本。"
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:25
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:23
 msgid ""
 "Upon activating the :guilabel:`Quotation Template` feature, an internal "
 ":icon:`fa-arrow-right` :guilabel:`Quotation Templates` link appears beneath "
 "the :guilabel:`Default Template` field."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:28
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:26
 msgid ""
 "Clicking this link reveals the :guilabel:`Quotation Templates` page, from "
 "which templates can be created, viewed, and edited."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:31
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:29
 msgid ""
 "Before leaving the :guilabel:`Settings` page, do not forget to click the "
 ":guilabel:`Save` button to save all changes made during the session."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:37
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:35
 msgid "Create quotation templates"
 msgstr "建立報價單範本"
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:39
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:37
 msgid ""
 "To create a quotation template, click the :guilabel:`Quotation Templates` "
 "link on the :guilabel:`Settings` page once :guilabel:`Quotation templates` "
@@ -24782,7 +25047,7 @@ msgstr ""
 msgid "Quotation templates page in the Odoo Sales application."
 msgstr "Odoo 銷售應用程式中的報價單範本頁面。"
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:47
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:45
 msgid ""
 "To create a new quotation template, click the :guilabel:`New` button, "
 "located in the upper-left corner. Doing so reveals a blank quotation "
@@ -24793,27 +25058,27 @@ msgstr ""
 msgid "Create a new quotation template on Odoo Sales."
 msgstr "在 Odoo 銷售應用程式中，建立新的報價單範本。"
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:53
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:51
 msgid ""
 "Start by entering a name for the template in the :guilabel:`Quotation "
 "Template` field."
 msgstr "首先，在 :guilabel:`報價單範本` 欄位中，輸入範本名稱。"
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:55
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:53
 msgid ""
 "Then, in the :guilabel:`Quotation Validity` field, designate how many days "
 "the quotation template will remain valid for, or leave the field on the "
 "default `0` to keep the template valid indefinitely."
 msgstr "然後，在 :guilabel:`報價單有效期` 欄位中，設定報價單範本將維持有效的天數，或將該欄位保留為預設值 `0`，使範本無限期有效。"
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:59
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:57
 msgid ""
 "Next, in the :guilabel:`Confirmation Mail` field, click the blank drop-down "
 "menu to select a preconfigured email template to be sent to customers upon "
 "confirmation of an order."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:63
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:61
 msgid ""
 "To create a new email template directly from the :guilabel:`Confirmation "
 "Mail` field, start typing the name of the new email template in the field, "
@@ -24824,13 +25089,13 @@ msgstr ""
 "欄位中，直接建立新的電子郵件範本，請在欄位中開始輸入新電郵範本的名稱，然後在顯示的下拉式功能表中選擇以下其中一項：:guilabel:`建立` 或 "
 ":guilabel:`建立並編輯⋯`。"
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:67
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:65
 msgid ""
 "Selecting :guilabel:`Create` creates the email template, which can be edited"
 " later."
 msgstr "選擇 :guilabel:`建立` 會建立電子郵件範本，並可於稍後編輯範本。"
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:69
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:67
 msgid ""
 "Selecting :guilabel:`Create and edit...` creates the email template, and a "
 ":guilabel:`Create Confirmation Mail` pop-up window appears, in which the "
@@ -24843,19 +25108,19 @@ msgid ""
 "Odoo Sales."
 msgstr "從 Odoo 銷售應用程式中的報價單範本表單建立確認郵件的彈出視窗。"
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:76
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:74
 msgid ""
 "When all modifications are complete, click :guilabel:`Save & Close` to save "
 "the email template and return to the quotation form."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:79
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:77
 msgid ""
 "If working in a multi-company environment, use the :guilabel:`Company` field"
 " to designate to which company this quotation template applies."
 msgstr "如果在多公司環境中操作，請使用 :guilabel:`公司` 欄位設定此報價單範本適用於哪一間公司。"
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:82
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:80
 msgid ""
 "If a journal is set in the :guilabel:`Invoicing Journal` field, all sales "
 "orders with this template will invoice in that specified journal. If no "
@@ -24865,7 +25130,7 @@ msgstr ""
 "如果有在 :guilabel:`開立發票日記賬` "
 "欄位設定日記賬，使用此範本的所有銷售訂單，都會使用該指定日記賬開立發票。如果此欄位中未設定日記賬，會使用序號最低的銷售日記賬。"
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:86
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:84
 msgid ""
 "If the :guilabel:`Online Signature` and/or :guilabel:`Online Payment` "
 "features are activated in the :guilabel:`Settings` (:menuselection:`Sales "
@@ -24875,13 +25140,13 @@ msgstr ""
 "如果在 :guilabel:`設定` 中（:menuselection:`銷售應用程式 --> 配置 --> 設定`）啟動了 "
 ":guilabel:`線上簽名` 及/或 :guilabel:`線上付款` 功能，這些選項將會在報價單範本表單上可用。"
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:90
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:88
 msgid ""
 "Check the box beside :guilabel:`Online Signature` to request an online "
 "signature from the customer to confirm an order."
 msgstr "勾選 :guilabel:`線上簽名` 旁邊的方格，可邀請客戶透過網上簽名確認訂單。"
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:93
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:91
 msgid ""
 "Check the box beside :guilabel:`Online Payment` to request an online payment"
 " from the customer to confirm an order. When :guilabel:`Online Payment` is "
@@ -24891,7 +25156,7 @@ msgstr ""
 "勾選 :guilabel:`線上付款` 旁邊的方格，可要求客戶透過網上付款去確認訂單。選用 :guilabel:`線上付款` "
 "時，會顯示一個新的百分比欄位，你可在該處輸入要求的付款百分比。"
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:97
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:95
 msgid ""
 "Both options, :guilabel:`Online Signature` and :guilabel:`Online Payment` "
 "can be enabled simultaneously, in which case the customer must provide "
@@ -24900,7 +25165,7 @@ msgstr ""
 ":guilabel:`線上簽名` 及 :guilabel:`線上付款` 兩個選項可同時啟用。在這種情況下，客戶必須 **同時** 提供簽名 **以及**"
 " 付款，才可確認訂單。"
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:101
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:99
 msgid ""
 "In the :guilabel:`Recurring Plan` field, choose from a variety of pre-"
 "configured amounts of time (e.g. :guilabel:`Monthly`, :guilabel:`Quarterly`,"
@@ -24909,7 +25174,7 @@ msgstr ""
 "在 :guilabel:`重複計劃` 欄位中，你可選擇各種預先配置的時間長度（例如 :guilabel:`每月`、:guilabel:`每季` "
 "等），以指定此報價單範本應使用的頻率。"
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:106
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:104
 msgid ""
 "The :guilabel:`Recurring Plan` field **only** applies to subscription plans."
 " For more information, check out the documentation on "
@@ -24918,11 +25183,11 @@ msgstr ""
 ":guilabel:`重複計劃` 欄位 **只限** "
 "定期訂購計劃適用。想知更多資訊，請參閱相關使用說明：:doc:`../../subscriptions/plans`。"
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:110
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:108
 msgid "Lines tab"
 msgstr "資料行分頁"
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:112
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:110
 msgid ""
 "In the :guilabel:`Lines` tab, products can be added to the quotation "
 "template by clicking :guilabel:`Add a product`, organized by clicking "
@@ -24934,7 +25199,7 @@ msgstr ""
 ":guilabel:`新增分節`（並拖放分節標題至適當位置）以整理報價單資料；按一下 "
 ":guilabel:`加入備註`，交代及進一步解釋其他資訊（例如保固詳情、條款等）。"
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:117
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:115
 msgid ""
 "To add a product to a quotation template, click :guilabel:`Add a product` in"
 " the :guilabel:`Lines` tab of a quotation template form. Doing so reveals a "
@@ -24943,14 +25208,14 @@ msgstr ""
 "若要將產品加入至報價單範本，請在報價單範本表單的 :guilabel:`資料行` 分頁中，按一下 :guilabel:`加入產品`。系統會在 "
 ":guilabel:`產品` 直欄顯示一個空白欄位。"
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:120
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:118
 msgid ""
 "When clicked, a drop-down menu with existing products in the database "
 "appears. Select the desired product from the drop-down menu to add it to the"
 " quotation template."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:123
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:121
 msgid ""
 "If the desired product is not readily visible, type the name of the desired "
 "product in the :guilabel:`Product` field, and the option appears in the "
@@ -24958,7 +25223,7 @@ msgid ""
 "More...` from the drop-down menu."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:128
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:126
 msgid ""
 "It is possible to add event-related products (booths and registrations) to "
 "quotation templates. To do so, click the :guilabel:`Product` field, type in "
@@ -24966,19 +25231,19 @@ msgid ""
 "drop-down menu."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:133
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:131
 msgid ""
 "When a product is added to a quotation template, the default "
 ":guilabel:`Quantity` is `1`, but that can be edited at any time."
 msgstr "將產品加入至報價單範本時，預設的 :guilabel:`數量` 是 `1`，但你可隨時編輯此值。"
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:136
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:134
 msgid ""
 "Then, drag and drop the product to the desired position, via the "
 ":guilabel:`six squares` icon, located to the left of each line item."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:139
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:137
 msgid ""
 "To add a *section*, which serves as a header to organize the lines of a "
 "sales order, click :guilabel:`Add a section` in the :guilabel:`Lines` tab. "
@@ -24989,14 +25254,14 @@ msgstr ""
 "**分節** 是用作整理銷售訂單資料行的小標題。要新增 *分節* ，請在 :guilabel:`資料行` 分頁中按一下 "
 ":guilabel:`加入分節`。按下時，會出現一個空白欄位，你可在該處輸入所需的分節名稱或小標題。輸入名稱後，按一下欄位外的其他位置，便可儲存分節名稱。"
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:144
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:142
 msgid ""
 "Then, drag and drop the section name to the desired position, via the "
 ":icon:`oi-apps` :guilabel:`(six squares)` icon, located to the left of each "
 "line item."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:147
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:145
 msgid ""
 "To add a note, which appears as a piece of text for the customer on the "
 "quotation, click :guilabel:`Add a note` in the :guilabel:`Lines` tab. When "
@@ -25004,34 +25269,34 @@ msgid ""
 " the note has been entered, click away to secure the note."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:151
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:149
 msgid ""
 "Then, drag and drop the note to the desired position, via the :icon:`oi-"
 "apps` :guilabel:`(six squares)` icon."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:154
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:152
 msgid ""
 "To delete any line item from the :guilabel:`Lines` tab (product, section, "
 "and/or note), click the :icon:`fa-trash` :guilabel:`(remove record)` icon on"
 " the far-right side of the line."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:160
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:158
 msgid ""
 "Using *optional products* is a marketing strategy that involves the cross-"
 "selling of products along with a core product. The aim is to offer useful "
 "and related products to customers, which may result in an increased sale."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:165
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:163
 msgid ""
 "If a customer wants to buy a car, they have the choice to order massaging "
 "seats as an additional product that compliments the car, or ignore the offer"
 " and buy the car alone."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:168
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:166
 msgid ""
 "Optional products appear as a section on the bottom of sales orders and "
 "eCommerce pages. Customers can immediately add them to their online sales "
@@ -25042,60 +25307,60 @@ msgstr "可選購產品會在銷售訂單及電子商務頁面底部，以一個
 msgid "Optional products appearing on a typical sales order with Odoo Sales."
 msgstr "選購產品在 Odoo 銷售應用程式的典型銷售訂單上顯示。"
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:174
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:172
 msgid ""
 "In the :guilabel:`Optional Products` tab, :guilabel:`Add a line` for each "
 "cross-selling product related to the original items in the :guilabel:`Lines`"
 " tab, if applicable."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:177
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:175
 msgid ""
 "Clicking :guilabel:`Add a line` reveals a blank field in the "
 ":guilabel:`Product` column."
 msgstr "按一下 :guilabel:`加入資料行` 後，系統會在 :guilabel:`產品` 直欄顯示一個空白欄位。"
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:182
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:180
 msgid ""
 "To delete any line item from the :guilabel:`Optional Products` tab, click "
 "the :icon:`fa-trash` :guilabel:`(remove record)` icon."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:186
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:184
 msgid "Optional products are **not** required to create a quotation template."
 msgstr "**並非必須** 要有可選購產品，才可建立報價單範本。"
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:189
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:187
 msgid "Terms & Conditions tab"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:191
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:189
 msgid ""
 "The :guilabel:`Terms & Conditions` tab provides the opportunity to add terms"
 " and conditions to the quotation template. To add terms and conditions, type"
 " the desired terms and conditions in this tab."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:195
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:193
 msgid ":doc:`../../../finance/accounting/customer_invoices/terms_conditions`"
 msgstr ":doc:`../../../finance/accounting/customer_invoices/terms_conditions`"
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:198
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:196
 msgid ""
 "Terms and conditions are **not** required to create a quotation template."
 msgstr "**並非必須** 要有條款及條件細則，才可建立報價單範本。"
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:201
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:199
 msgid "Use quotation templates"
 msgstr "使用報價單範本"
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:203
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:201
 msgid ""
 "When creating a quotation (:menuselection:`Sales app --> New`), choose a "
 "preconfigured template in the :guilabel:`Quotation Template` field."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:207
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:205
 msgid ""
 "The order of the templates in the :guilabel:`Quotation Template` field is "
 "determined by the order of the templates in the Quotation Templates form. "
@@ -25103,7 +25368,7 @@ msgid ""
 "affect anything else."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:211
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:209
 msgid ""
 "To view what the customer will see, click the :guilabel:`Preview` button at "
 "the top of the page to see how the quotation template appears on the front-"
@@ -25115,13 +25380,13 @@ msgstr ""
 msgid "Customer preview of a quotation template in Odoo Sales."
 msgstr "Odoo 銷售應用程式中，報價單範本的客戶預覽。"
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:218
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:216
 msgid ""
 "When all blocks and customizations are complete, click the :guilabel:`Save` "
 "button to save the configuration."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:221
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:219
 msgid ""
 "The blue banner located at the top of the quotation template preview can be "
 "used to quickly return :icon:`fa-arrow-right` :guilabel:`Back to edit mode`."
@@ -25129,11 +25394,11 @@ msgid ""
 "*Sales* application."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:226
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:224
 msgid "Mass cancel quotations/sales orders"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:228
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:226
 msgid ""
 "Cancel multiple quotations (or sales orders) by navigating to the "
 ":menuselection:`Sales app --> Orders --> Quotations` dashboard, landing, by "
@@ -25141,21 +25406,21 @@ msgid ""
 "checkboxes for the quotations to be canceled."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:233
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:231
 msgid ""
 "Select all records in the table by selecting the checkbox column header at "
 "the top-left of the table; the total number of selected items are displayed "
 "at the top of the page."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:236
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:234
 msgid ""
 "Then, with the desired quotations (or sales orders) selected from the list "
 "view on the :guilabel:`Quotations` page, click the :icon:`fa-cog` "
 ":guilabel:`Actions` button to reveal a drop-down menu."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:240
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:238
 msgid "From this drop-down menu, select :guilabel:`Cancel quotations`."
 msgstr ""
 
@@ -25165,20 +25430,20 @@ msgid ""
 " application."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:246
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:244
 msgid ""
 "This action can be performed for quotations in *any* stage, even if it is "
 "confirmed as a sales order."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:249
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:247
 msgid ""
 "Upon selecting the :guilabel:`Cancel quotations` option, a :guilabel:`Cancel"
 " quotations` confirmation pop-up window appears. To complete the "
 "cancellation, click the :guilabel:`Cancel quotations` button."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:254
+#: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:252
 msgid ""
 "An error pop-up message appears when attempting to cancel an order for an "
 "ongoing subscription that has an invoice."
@@ -26251,162 +26516,492 @@ msgstr ""
 "雖然用戶可在 Odoo 系統內，多次建立同一間 Shopee "
 "商店，但由於存取權杖的限制，同一時間只可以有一個安裝個體可以運行。為免出現訂單管理問題，每間商店應只同步一次。若要更新連線，請先手動讀取訂單資料，然後才重新建立連線。"
 
-#: ../../content/applications/sales/subscriptions.rst:5
+#: ../../content/applications/sales/subscriptions.rst:6
 msgid "Subscriptions"
 msgstr "訂閱"
 
-#: ../../content/applications/sales/subscriptions.rst:7
+#: ../../content/applications/sales/subscriptions.rst:8
 msgid ""
-"Odoo *Subscriptions* is used to run recurring businesses: :ref:`sell new "
-"contracts <subscriptions/quotations>`, :doc:`upsell customers "
-"</applications/sales/subscriptions/upselling>`, keep the churn under "
-"control, and :doc:`generate reports "
-"</applications/sales/subscriptions/reports>` on the main :abbr:`KPIs (Key "
-"Performance Indicators)`: :abbr:`MRR (Monthly Recurring Revenue)`, "
-":abbr:`ARR (Annual Recurring Revenue)`, retention, churn, etc."
+"The Odoo **Subscriptions** app is designed to manage recurring revenue "
+"through subscription-based products or services. It supports automated "
+"invoicing, renewal management, and customer lifecycle tracking."
 msgstr ""
-"Odoo *定期訂購* 應用程式，是用作營運經常性業務：包括 :ref:`銷售新合約 "
-"<subscriptions/quotations>`、:doc:`向客戶追加銷售 "
-"</applications/sales/subscriptions/upselling>`、控制客戶流失，以及為主要的績效指標 :abbr:`KPI "
-"(Key Performance Indicators)` :doc:`產生報告 "
-"</applications/sales/subscriptions/reports>`，例如每月經常收入 :abbr:`MRR (Monthly "
-"Recurring Revenue)`、每年經常收入 :abbr:`ARR (Annual Recurring "
-"Revenue)`、客戶留存率、客戶流失數據等。"
 
-#: ../../content/applications/sales/subscriptions.rst:15
+#: ../../content/applications/sales/subscriptions.rst:12
+msgid ""
+"Subscriptions can be created manually or automatically through online sales,"
+" with varying options for recurring billing. The app integrates with other "
+"Odoo modules such as **Invoicing**, **CRM**, **Sales**, and **Helpdesk** to "
+"support end-to-end subscription workflows."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:43
 msgid ""
 "`Odoo Tutorials: Subscriptions "
 "<https://www.odoo.com/slides/subscription-20>`_"
 msgstr "`Odoo 教學：定期訂購 <https://www.odoo.com/slides/subscription-20>`_"
 
-#: ../../content/applications/sales/subscriptions.rst:16
-msgid ":doc:`/applications/sales/subscriptions/products`"
-msgstr ":doc:`/applications/sales/subscriptions/products`"
-
-#: ../../content/applications/sales/subscriptions.rst:17
-msgid ":doc:`/applications/sales/subscriptions/ecommerce`"
-msgstr ":doc:`/applications/sales/subscriptions/ecommerce`"
-
-#: ../../content/applications/sales/subscriptions.rst:18
-msgid ":doc:`/applications/sales/subscriptions/plans`"
-msgstr ":doc:`/applications/sales/subscriptions/plans`"
-
-#: ../../content/applications/sales/subscriptions.rst:19
-msgid ":doc:`/applications/sales/subscriptions/upselling`"
-msgstr ":doc:`/applications/sales/subscriptions/upselling`"
-
-#: ../../content/applications/sales/subscriptions.rst:20
-msgid ":doc:`/applications/sales/subscriptions/renewals`"
-msgstr ":doc:`/applications/sales/subscriptions/renewals`"
-
-#: ../../content/applications/sales/subscriptions.rst:21
-msgid ":doc:`/applications/sales/subscriptions/closing`"
-msgstr ":doc:`/applications/sales/subscriptions/closing`"
-
-#: ../../content/applications/sales/subscriptions.rst:22
-msgid ":doc:`/applications/sales/subscriptions/automatic_alerts`"
-msgstr ":doc:`/applications/sales/subscriptions/automatic_alerts`"
-
-#: ../../content/applications/sales/subscriptions.rst:23
-msgid ":doc:`/applications/sales/subscriptions/scheduled_actions`"
-msgstr ":doc:`/applications/sales/subscriptions/scheduled_actions`"
-
-#: ../../content/applications/sales/subscriptions.rst:24
-msgid ":doc:`/applications/sales/subscriptions/reports`"
-msgstr ":doc:`/applications/sales/subscriptions/reports`"
-
-#: ../../content/applications/sales/subscriptions.rst:29
-msgid "Subscription quotations"
-msgstr "定期訂購報價"
-
-#: ../../content/applications/sales/subscriptions.rst:32
-msgid "Sales orders with a defined recurrence become subscriptions."
-msgstr "若銷售訂單設有已定義的重複周期，便會成為「定期訂購」（subscription，或稱訂閱）。"
-
-#: ../../content/applications/sales/subscriptions.rst:34
-msgid ""
-"To create a new subscription, click on :guilabel:`New` from the "
-"*Subscription* or the :doc:`Sales </applications/sales>` app. You can "
-"either:"
+#: ../../content/applications/sales/subscriptions.rst:46
+msgid "Set up recurring plans"
 msgstr ""
-"若要建立新的定期訂購，請在 *定期訂購* 或 :doc:`銷售 </applications/sales>` 應用程式中，按一下 "
-":guilabel:`新增`。你可選擇："
 
-#: ../../content/applications/sales/subscriptions.rst:37
+#: ../../content/applications/sales/subscriptions.rst:48
 msgid ""
-"Select a :doc:`subscription plan </applications/sales/subscriptions/plans>` "
-"to prefill the quotation instantly, or"
+"To get started with subscription products in Odoo, *recurring plans* "
+"(previously known as *recurrence periods*) must first be configured."
 msgstr ""
-"選擇一個 :doc:`定期訂購計劃 </applications/sales/subscriptions/plans>` 以立即預先填寫報價單，或"
 
-#: ../../content/applications/sales/subscriptions.rst:39
+#: ../../content/applications/sales/subscriptions.rst:51
 msgid ""
-"Fill out the quotation normally, making sure to select a recurrence and an "
-"end date if necessary and adding :doc:`recurrent products "
-"</applications/sales/subscriptions/products>`."
+"Recurring plans are the time windows in which subscriptions are active "
+"before they renew again. While a subscription is active, customers receive "
+"products or services, and may also have access to additional benefits such "
+"as support desk triage. In terms of payment, these recurring plans designate"
+" how often the customer is charged in order to maintain the benefits of "
+"their subscription."
 msgstr ""
-"如常填寫報價單，期間確保有選擇重複周期及結束日期（如有需要），並加入 :doc:`經常性產品 "
-"</applications/sales/subscriptions/products>`。"
 
-#: ../../content/applications/sales/subscriptions.rst:43
+#: ../../content/applications/sales/subscriptions.rst:56
 msgid ""
-"You can define different invoice and delivery addresses by enabling the "
+"To configure recurring plans, go to :menuselection:`Subscriptions app --> "
+"Configuration --> Recurring Plans`."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:59
+msgid ""
+"By default, the **Subscriptions** app includes a number of common recurring "
+"plans already available, such as :guilabel:`Monthly` and :guilabel:`Yearly`."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:62
+msgid ""
+"Create a new recurring plan by clicking :guilabel:`New` on the "
+":guilabel:`Recurring Plans` dashboard, to reveal a blank form where the plan"
+" :guilabel:`Name`, :guilabel:`DETAILS`, :guilabel:`SELF-SERVICE` and "
+":guilabel:`Pricing` field values are specified."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst-1
+msgid "A blank recurring plan form in the Odoo Subscriptions application."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:70
+msgid ""
+"The `Days` unit of measure *cannot* be used as a :guilabel:`Billing Period` "
+"for subscription products. The daily recurrence period in Odoo is designated"
+" for rentals, and **cannot** be added to subscription-based sales orders."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:74
+msgid ""
+"This limitation is there to avoid sales orders that would generate daily "
+"invoices."
+msgstr "此限制是為了避免銷售訂單每日生成發票。"
+
+#: ../../content/applications/sales/subscriptions.rst:77
+msgid "DETAILS section"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:79
+msgid ""
+"After giving the recurring plan a suitable :guilabel:`Name` (e.g. `Monthly`,"
+" `Bi-weekly`, `Quarterly`, etc.), proceed to the form's :guilabel:`DETAILS` "
+"section to fill out the following configuration fields:"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:83
+msgid ""
+":guilabel:`Billing Period`: determines the recurrence period of the "
+"recurring plan. Set the numerical value in the text field and contextualize "
+"the quantity with a unit of time in the corresponding drop-down menu, in "
+":guilabel:`Weeks`, :guilabel:`Months`, or :guilabel:`Years`."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:86
+msgid ""
+":guilabel:`Automatic Closing`: a numerical value, in days, where the "
+"subscription is set to close automatically if payment is not made."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:90
+msgid ""
+"If a subscription is set to renew on the 1st of every month, and the "
+":guilabel:`Automatic Closing` value is set to `15` :guilabel:`Days`, then "
+"the subscription will close on the 16th of that month if payment is not "
+"received."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:94
+msgid ""
+":guilabel:`Align to Period Start`: optionally force new and recurring "
+"subscription renewal dates under this plan to the first day of what is "
+"defined in the :guilabel:`Billing Period`."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:96
+msgid ""
+":guilabel:`Company`: optional assignment, if the database has :doc:`Multi-"
+"company <../general/multi_company>` functionality enabled. Assigning this "
+"value will make the recurring plan available for that company's location, "
+"specifically."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:99
+msgid ""
+":guilabel:`Invoice Email Template`: assigns a specific email template to be "
+"used in subscriptions invoicing communications. The default assignment here "
+"is `Invoice: Sending` which contains various dynamic fields that "
+"autopopulate specific variables across the :guilabel:`Subject` field and "
+":guilabel:`Content` tab, such as the customer's name, invoice number, total "
+"amount invoiced, etc."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:105
+msgid ""
+"Although this field is optional, it is recommended to use it since this type"
+" of communication fulfills good business practices around price "
+"transparency, regular customer communication (especially as it relates to "
+"charged amounts), and helps build contextual financial documentation around "
+"recurring revenues."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:0
+msgid ""
+"An email template in Odoo used to send subscriptions invoicing messages to "
+"customers."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:113
+msgid ""
+"The `Invoice: Sending` email template is accessible by clicking the "
+":icon:`fa-arrow-right` (:guilabel:`Internal link`) that appears after "
+"hovering over the :guilabel:`Invoice Email Template` drop-down field in the "
+":guilabel:`Recurring Plans` form."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:118
+msgid "SELF-SERVICE section"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:120
+msgid ""
+"The following optional fields enable customers to take administrative "
+"actions on their own subscriptions. Enabling any of these options may "
+"decrease customer service request volume or increase customer lifetime value"
+" (LTV)."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:124
+msgid ""
+":guilabel:`Closable`: checking this box will give customers the power to "
+"close their own subscriptions. Consider enabling this option to reduce "
+"customer service requests and improve the overall customer experience; "
+"customers that can manage their own subscriptions in this way helps offload "
+"tedious tasks for sales and support teams, and reduces the likelihood of "
+"negative reviews."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:130
+msgid ""
+"Although this option is generally advisable to enable, sales teams with "
+"strong customer offboarding processes may consider leaving this option "
+"unchecked in order to force an interaction that might save the subscription "
+"or a different form of recurring revenue (such as in the case of a lesser "
+"subscription or a new trial period with an alternative plan)."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:135
+msgid ""
+":guilabel:`Add Products`: allows customers to add new products or edit "
+"existing product quantities to their recurring sales orders, thereby "
+"enabling customer-driven upselling. When enabled, :doc:`Upsell quotations "
+"<subscriptions/upselling>` are generated in Odoo whenever a customer "
+"performs a quantitative adjustment on their sales order product lines."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:140
+msgid ""
+":guilabel:`Renew`: enabling this allows customers to manually create a "
+":doc:`Renewal quotation <subscriptions/renewals>` for their subscription."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:142
+msgid ""
+":guilabel:`Optional Plans`: adding values here from the drop-down field menu"
+" enables customers to switch their subscription plans, in which case a new "
+"subscription quotation or renewal quote is created to accommodate the change"
+" request."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:147
+msgid "Pricing tab"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:149
+msgid ""
+"Make product-specific pricing adjustments, as part of the recurring plan, by"
+" adding them to the :guilabel:`Pricing` tab order lines. Sequentially add "
+"the :guilabel:`Products`, along with any respective :guilabel:`Product "
+"Variants`, and then assign a :guilabel:`Pricelist` (if available) and a "
+":guilabel:`Recurring Price`."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:155
+msgid ""
+"Price rules that are added here take precedent over the default pricing "
+"information on the subscription product's form. This is meant to accommodate"
+" deals, discounts, and similar pricing adjustment strategies that would "
+"incentivize customers to purchase the recurring plan."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:160
+msgid "Smart buttons"
+msgstr "智能按鈕"
+
+#: ../../content/applications/sales/subscriptions.rst:162
+msgid ""
+"At the top of the individual :guilabel:`Recurring Plans` form, are two smart"
+" buttons to aid in navigating the recurring revenue sources attached to the "
+"plan:"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:165
+msgid ""
+":guilabel:`Subscriptions`: shows the number of active subscriptions sales "
+"orders that fall under the recurring plan. Clicking the button leads to a "
+"tabled list view, where each row hyperlinks to a respective subscriptions "
+"sales order."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:168
+msgid ""
+":guilabel:`Subscription Items`: lists all the individual recurring "
+"subscription services that are active, in an itemized fashion. "
+":guilabel:`Subscription` and :guilabel:`Customer` values will repeat it the "
+"customer ordered multiple subscriptions on the same sales order."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:173
+msgid "Product form configuration"
+msgstr "產品表格配置"
+
+#: ../../content/applications/sales/subscriptions.rst:175
+msgid ""
+"With recurring plans set up, create a subscription product by navigating to "
+":menuselection:`Subscriptions app --> Products --> Products`, and click "
+"either an existing product to edit, or make a new one by clicking "
+":guilabel:`New` to open up the subscription product's form."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:180
+msgid ""
+"By default, the :guilabel:`Subscriptions` option is already enabled, "
+"prompting Odoo to recognize it as a subscription product. Be sure to leave "
+"the :guilabel:`Subscriptions` and :guilabel:`Sales` options enabled."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst-1
+msgid "A basic subscription product form in Odoo Subscriptions application."
+msgstr "Odoo 定期訂購應用程式中的基本訂閱產品表單。"
+
+#: ../../content/applications/sales/subscriptions.rst:187
+msgid ""
+"On the product form, configure the following items in the :guilabel:`General"
+" Information` tab so the subscription product will function correctly:"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:190
+msgid ""
+":guilabel:`Product type`: this value is typically set to a "
+":guilabel:`Service`, however other product types may be used depending on "
+"the purpose of the subscription (e.g., physical product box subscriptions, "
+"eLearning course with supplemental physical goods, etc.)."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:193
+msgid ""
+":doc:`Invoicing policy <sales/invoicing/invoicing_policy>`: set this value "
+"to when the customer should be charged for their subscription."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:195
+msgid ""
+":guilabel:`Unit of Measure`: how the product should be counted in Odoo, for "
+"stock purposes. For most subscriptions, the :abbr:`UoM (Unit of Measure)` "
+"will be :guilabel:`Units`."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:197
+msgid ""
+":guilabel:`Sales Price`: enter the recurring cost of the subscription that "
+"the customer will pay per recurrence period."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:200
+msgid "Optionally set up information on the:"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:202
+msgid ""
+":guilabel:`Create on Order` field: this enables secondary actions in Odoo "
+"such as creating a new :guilabel:`Task` in a chosen :guilabel:`Project` "
+":icon:`fa-building-o`, :guilabel:`Event Registration` or :guilabel:`Course "
+"Access`. If none of the selectable actions in this field's drop-down menu "
+"are needed, then choose :guilabel:`Nothing` for the field' value."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:206
+msgid ""
+":doc:`Attributes & Variants <sales/products_prices/products/variants>` tab "
+"if the subscription contains multiple choices for customers (i.e. food "
+"delivery, tailored fashion boxes, etc.)."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:208
+msgid ""
+":guilabel:`Purchase` tab if the product is sourced from a vendor, such as "
+"part of reseller (retail) or subcontracting operations."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:211
+msgid ""
+"In the :guilabel:`Recurring Prices` tab, clarify the pricing options for the"
+" subscription. For each option available, click :guilabel:`Add a price rule`"
+" to add a new row."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:215
+msgid ""
+"Longer time :guilabel:`Recurring Plan` time periods are typically "
+"incentivized with cost savings. Consider dropping the total "
+":guilabel:`Recurring Price` values to offer customers a discount while "
+"supporting the business's financial runway."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:219
+msgid ""
+"Last, if the subscription is meant to be sold on the **eCommerce** website, "
+"click the :icon:`fa-globe` :menuselection:`Go To Website` smart button and "
+"in the product page header, click the gray slider from "
+":guilabel:`Unpublished` to the green :guilabel:`Published` status."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:226
+msgid "Create a subscriptions quotation"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:228
+msgid ""
+"Manually create a new customer subscription by navigating to either the "
+":menuselection:`Sales` or :menuselection:`Subscriptions` app dashboards, and"
+" then clicking :guilabel:`New`."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:232
+msgid ""
+"Products that have been marked as :guilabel:`Subscriptions` on their product"
+" forms, and are also sold on the **eCommerce** website will *automatically* "
+"create and confirm subscription quotations in the backend of Odoo."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:237
+msgid ""
+"Sales orders with a defined recurring plan automatically become "
+"subscriptions."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:239
+msgid ""
+"On the quotation form, fill in the necessary fields such as "
+":guilabel:`Customer` and :guilabel:`Recurring Plan`, as well as the "
+":guilabel:`Order Lines` tab."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:242
+msgid "Optionally, specify a:"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:244
+msgid ""
+":doc:`Quotation Template <sales/sales_quotations/quote_template>`, if one is"
+" readily available to help populate the form fields."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:246
+msgid ""
+":guilabel:`Expiration` date, to indicate when the subscription offer is no "
+"longer valid."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:249
+msgid ""
+"Expiration dates pair well with :doc:`discounts "
+"<sales/products_prices/prices/discounts>` to incentivize faster purchases, "
+"since the discount will expire with the quotation if it's not turned into a "
+"sales order within the specified date range."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:253
+msgid ""
+":doc:`Pricelist <sales/products_prices/prices/pricing>`, if one is available"
+" and appropriate to use (i.e., summer sale discount, VIP customer, etc.)."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:255
+msgid ""
+":guilabel:`Payment Terms`, to set a specified time window for when the "
+"subscription must be paid. This is not to be confused for when the quotation"
+" is *confirmed* and becomes a sales order, to where, payment may then be "
+"obtained immediately or within a certain amount of days, weeks, months, etc."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst-1
+msgid "A completed example of a new subscription quotation in Odoo."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:264
+msgid ""
+"Define different invoice and delivery addresses by enabling the "
 ":doc:`Customer Addresses "
 "</applications/finance/accounting/customer_invoices/customer_addresses>` "
 "feature."
 msgstr ""
-"你可啟用 :doc:`客戶地址 "
-"</applications/finance/accounting/customer_invoices/customer_addresses>` "
-"功能，定義不同的發票地址及送貨地址。"
 
-#: ../../content/applications/sales/subscriptions.rst:49
+#: ../../content/applications/sales/subscriptions.rst:270
 msgid "Confirmation"
 msgstr "確認"
 
-#: ../../content/applications/sales/subscriptions.rst:51
+#: ../../content/applications/sales/subscriptions.rst:272
 msgid ""
 "Send the quotation to the customer for confirmation by clicking on "
-":guilabel:`Send by email`, or confirm it immediately by clicking on "
+":guilabel:`Send By Email`, or confirm it immediately by clicking on "
 ":guilabel:`Confirm`."
-msgstr "按一下 :guilabel:`以電郵發送`，將報價單發送給客戶進行確認，或按 :guilabel:`確認` 以立即確認。"
-
-#: ../../content/applications/sales/subscriptions.rst:55
-msgid ""
-"Click on :guilabel:`Customer Preview` to preview the customer portal where "
-"the customer can view their quotation, sign and pay it, and communicate with"
-" you."
-msgstr "按一下 :guilabel:`客戶預覽` 以預覽客戶門戶網站，客戶可在該處查看報價單、簽名、付款以及與你溝通。"
-
-#: ../../content/applications/sales/subscriptions.rst:61
-msgid "Automatic payments"
-msgstr "自動付款"
-
-#: ../../content/applications/sales/subscriptions.rst:63
-msgid ""
-"You can require the customer to set an automatic payment method and pre-pay "
-"the subscription's first occurrence before they can confirm their quotation."
-" To do so, go to the :guilabel:`Other Info` tab of the quotation and check "
-"the :guilabel:`Payment` option in the :guilabel:`Online confirmation` field."
 msgstr ""
-"你可要求客戶設立自動付款方式，要求他們必須為訂購計劃的首段收費期預先付款，才可確認報價單。要執行此操作，請前往報價單的 :guilabel:`其他資訊`"
-" 分頁，然後啟用 :guilabel:`線上確認` 欄位中的 :guilabel:`付款` 選項。"
 
-#: ../../content/applications/sales/subscriptions.rst:68
+#: ../../content/applications/sales/subscriptions.rst:276
 msgid ""
-"If you leave :guilabel:`Payment` unchecked, the customer doesn't have to "
-"pre-pay to start the subscription. This means that the payment is not "
-"automatic and that the customer must pay each invoice manually."
-msgstr "如果不啟用 :guilabel:`付款`，客戶無需預先付款也可開始訂閱。這意味付款並非自動進行，此後客戶必須手動支付每張發票。"
-
-#: ../../content/applications/sales/subscriptions.rst:73
-msgid ""
-"If the online confirmation requires a pre-payment, your customer can select "
-"only the :ref:`payment providers <payment_providers/supported_providers>` "
-"that have the :ref:`tokenization feature <payment_providers/tokenization>`. "
-"This ensures that the customer is automatically charged at each new period."
+"Click on :guilabel:`Preview` to preview the customer portal where the "
+"customer can view their quotation, sign and pay it, and communicate with "
+"you."
 msgstr ""
-"若線上確認需要預先付款，客戶只可選用提供 :ref:`權杖化功能 <payment_providers/tokenization>` 的 "
-":ref:`付款服務商 <payment_providers/supported_providers>`。這可確保在每個新周期時，自動向客戶收費。"
+
+#: ../../content/applications/sales/subscriptions.rst:279
+msgid ""
+"If an :guilabel:`Online signature` or :guilabel:`Online payment` is required"
+" to confirm the quotation, set the checkboxes next to either (or both) of "
+"these labels in the :guilabel:`Other Info` tab, under the :guilabel:`SALES` "
+"section."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:284
+msgid ":doc:`/applications/finance/accounting/payments/online`"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:285
+msgid ""
+":doc:`Payment providers and payment methods "
+"</applications/finance/payment_providers>`"
+msgstr ""
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:3
 msgid "Automation rules"
@@ -26807,15 +27402,6 @@ msgid ":doc:`plans`"
 msgstr ":doc:`plans`"
 
 #: ../../content/applications/sales/subscriptions/automatic_alerts.rst:168
-#: ../../content/applications/sales/subscriptions/closing.rst:107
-#: ../../content/applications/sales/subscriptions/renewals.rst:130
-#: ../../content/applications/sales/subscriptions/reports.rst:405
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:188
-#: ../../content/applications/sales/subscriptions/upselling.rst:109
-msgid ":doc:`products`"
-msgstr ":doc:`products`"
-
-#: ../../content/applications/sales/subscriptions/automatic_alerts.rst:169
 msgid ":doc:`../../essentials/in_app_purchase`"
 msgstr ":doc:`../../essentials/in_app_purchase`"
 
@@ -27016,30 +27602,36 @@ msgstr "訂閱制產品可以像一般產品一樣，放在 Odoo *電子商務* 
 
 #: ../../content/applications/sales/subscriptions/ecommerce.rst:8
 msgid ""
-":doc:`Configure subscription products "
-"</applications/sales/subscriptions/products>`"
-msgstr ":doc:`配置定期訂購產品 </applications/sales/subscriptions/products>`"
+":doc:`Configure subscription products </applications/sales/subscriptions>`"
+msgstr ""
 
-#: ../../content/applications/sales/subscriptions/ecommerce.rst:11
+#: ../../content/applications/sales/subscriptions/ecommerce.rst:9
+msgid ""
+":doc:`Product variants "
+"</applications/sales/sales/products_prices/products/variants>`"
+msgstr ""
+":doc:`產品款式 </applications/sales/sales/products_prices/products/variants>`"
+
+#: ../../content/applications/sales/subscriptions/ecommerce.rst:12
 msgid "Selling eCommerce subscriptions"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/ecommerce.rst:13
+#: ../../content/applications/sales/subscriptions/ecommerce.rst:14
 msgid ""
-":doc:`Configure the subscription product <products>`  as a regular recurring"
-" sales product. To start selling the subscription in the eCommerce shop, "
-"click the :guilabel:`Go to Website` smart button to navigate to the product "
-"page."
+":doc:`Configure subscription products </applications/sales/subscriptions>` "
+"as a regular recurring sales product. To start selling the subscription in "
+"the eCommerce shop, click the :guilabel:`Go to Website` smart button to "
+"navigate to the product page."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/ecommerce.rst:17
+#: ../../content/applications/sales/subscriptions/ecommerce.rst:18
 msgid ""
 "From here, review the subscription product and its recurring periods. Then, "
 "toggle the switch in the upper-right corner from :guilabel:`Unpublished` to "
 ":guilabel:`Published`."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/ecommerce.rst:20
+#: ../../content/applications/sales/subscriptions/ecommerce.rst:21
 msgid ""
 "The new subscription product is now available to purchase on the eCommerce "
 "website, with options for the different recurring periods."
@@ -27047,259 +27639,6 @@ msgstr ""
 
 #: ../../content/applications/sales/subscriptions/ecommerce.rst-1
 msgid "Subscription product on eCommerce website."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:3
-msgid "Wire transfer"
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:5
-msgid ""
-"The *wire transfer* payment method allows for payment instructions to be "
-"shared with a customer after purchasing a product. With a subscription, "
-"these payment instructions are shared every time the payment is renewed."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:10
-msgid ""
-"The wire transfer payment method requires minimal setup, but in most cases, "
-"it is inefficient compared to other online payment providers. It is "
-"recommended to use another payment provider with subscriptions, due to wire "
-"transfers requiring manual confirmation for each payment."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:19
-msgid ""
-"To use the wire transfer payment method, first ensure the *Wire Transfer* "
-"payment method is enabled."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:21
-msgid ""
-"To do so, begin by navigating to the *Payment Providers* page in either the "
-"**Accounting**, **Website**, or **Sales** apps."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:24
-msgid ""
-"For example, navigate to :menuselection:`Accounting app --> Configuration "
-"--> Online Payments: Payment Providers`, then click the :guilabel:`Wire "
-"Transfer` card."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:28
-msgid ""
-"If the **Accounting** app is not installed, the *Payment Providers* page can"
-" also be reached by navigating to :menuselection:`Website app --> "
-"Configuration --> eCommerce: Payment Providers`, or :menuselection:`Sales "
-"app --> Configuration --> Online Payments: Payment Providers`."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:32
-msgid ""
-"Next, set the :guilabel:`State` to :guilabel:`Enabled` to enable wire "
-"transfers. Use the drop-down menus next to the :guilabel:`Company` and "
-":guilabel:`Website` fields to set where wire transfers can be used."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:36
-msgid ""
-"The options in the :guilabel:`Configuration` tab can be used to customize "
-"the wire transfer. Optionally tick the checkbox next to :guilabel:`Enable QR"
-" Codes` to enable the use of QR codes when paying by wire transfer, if "
-"desired."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:40
-msgid ""
-"Use the drop-down menu next to the :guilabel:`Communication` field to select"
-" the communication type used on sales orders. Choose :guilabel:`Based on "
-"Document Reference` to use the sales order (or invoice number), or "
-":guilabel:`Based on Customer ID` to use the customer identifier. With either"
-" method selected, communication is given to the customer, once they choose "
-"the wire transfer payment method."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:46
-msgid ""
-"The configuration options listed under the :guilabel:`Availability` section "
-"are used to set payment restrictions, and are optional. Use the "
-":guilabel:`Maximum Amount` field to set a maximum payment value, the "
-":guilabel:`Currencies` field to restrict any currencies from being used for "
-"payment, and the :guilabel:`Countries` field to restrict payment from any "
-"particular countries, if desired."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:51
-msgid ""
-"In the :guilabel:`Messages` tab, use the :guilabel:`Pending Message` field "
-"to add a message containing wire transfer information. This message is "
-"displayed to the customer after confirming their order, as well as if the "
-"order is marked as pending after the payment is processed."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:55
-msgid ""
-"If :doc:`a bank account <../../../finance/accounting/bank>` has already been"
-" defined, the account number is automatically added to the default message "
-"generated by Odoo. A bank account can also be added afterwards, and the "
-"message updates with the appropriate bank information by clicking :icon:`fa-"
-"refresh` :guilabel:`Reload pending message`."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:60
-msgid ""
-"Once all necessary configuration settings are complete, the :icon:`fa-eye-"
-"slash` :guilabel:`Unpublished` smart button located at the top of the page "
-"automatically changes to :icon:`fa-globe` :guilabel:`Published` to show the "
-"wire transfer payment option is now visible to customers. Only keep the "
-"payment method published if payments are ready to be received."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:66
-msgid ""
-"It is possible to keep the payment method enabled, but **not** visible to "
-"customers, until payments are ready to be received. To do that, set the "
-"smart button to :icon:`fa-eye-slash` :guilabel:`Unpublished` after setting "
-"the :guilabel:`State` to :guilabel:`Enabled`."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst-1
-msgid "The wire transfer card enabled and published."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:75
-msgid "Test mode"
-msgstr "測試模式"
-
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:77
-msgid ""
-"The wire transfer payment method can be tested before it is accessed by "
-"customers by selecting the :guilabel:`Test Mode` option in the "
-":guilabel:`State` field on the form. Upon selecting :guilabel:`Test Mode`, "
-"an orange :guilabel:`Test mode` banner appears in the upper-right corner of "
-"the form."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:82
-msgid ""
-"Next, enter the credentials for a bank account with accessible transactions "
-"in the :guilabel:`Messages` tab. To re-enable normal function after testing,"
-" change the :guilabel:`State` setting to :guilabel:`Enabled`."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:87
-msgid ""
-"By default, the payment provider remains :guilabel:`Unpublished` in "
-":guilabel:`Test Mode`, so it is not visible to visitors."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:91
-msgid ""
-"It is recommended to use the :guilabel:`Test Mode` setting on a duplicate "
-"(or test) database to avoid potential issues with invoice numbering."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:97
-msgid "Pay by wire transfer"
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:99
-msgid ""
-"With wire transfers :ref:`enabled and published <subscriptions/wire-"
-"transfer-configuration>`, customers see wire transfers as an available "
-"payment method at checkout when purchasing a product."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:102
-msgid ""
-"When this method is selected by a customer, they are shown the *Pending "
-"Message* set in the :ref:`wire transfer configuration page "
-"<subscriptions/wire-transfer-configuration>`, after confirming their "
-"purchase. Once the purchase is confirmed, a sales order is created."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst-1
-msgid "The wire transfer pending message shown to customers."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:111
-msgid ""
-"Online orders remain in the *Quotation sent* (i.e. unpaid order) stage until"
-" both the payment is received, *and* the order is confirmed manually, using "
-"the :guilabel:`Confirm` button on the sales order."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:115
-msgid ""
-"To begin processing the payment, navigate to :menuselection:`Sales app --> "
-"Orders --> Orders`, and click the corresponding sales order. Ensure the "
-"sales order is correct, then click :guilabel:`Confirm` to confirm the sales "
-"order."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:119
-msgid ""
-"Next, click the new :guilabel:`Create Invoice` button, then choose "
-":guilabel:`Regular invoice`, and click :guilabel:`Create Draft Invoice`. A "
-"draft of the invoice appears. Click :guilabel:`Confirm` to validate the "
-"invoice."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:123
-msgid ""
-"To send this invoice to the customer, click the :guilabel:`Send & Print` "
-"button. A :guilabel:`Send` pop-up window appears, with an email template "
-"configured, and a PDF invoice attached."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:126
-msgid ""
-"Ensure the information is correct, then click :guilabel:`Send & Print`. The "
-"pop-up window disappears, and the :guilabel:`Send & Print` button turns gray"
-" to show the invoice has been sent."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:130
-msgid ""
-"The default template for sending an invoice can be modified by navigating to"
-" :menuselection:`Settings app --> Companies --> Email Templates --> Review "
-"All Templates --> Invoice: Sending`."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:134
-msgid ""
-"Next, click the :guilabel:`Register payment` button on the invoice page. A "
-"pop-up window titled, :guilabel:`Register Payment`, appears with options for"
-" selecting the type of payment. In the :guilabel:`Journal` field, select "
-":guilabel:`Bank` from the drop-down menu. Next, set the :guilabel:`Payment "
-"Method` to :guilabel:`Manual`. Ensure the :guilabel:`Amount` and "
-":guilabel:`Payment Date` are correct, then click the :guilabel:`Create "
-"Payment` button."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst-1
-msgid "The register payment pop-up window."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:144
-msgid ""
-"The customer invoice is revealed with a green :guilabel:`In Payment` banner "
-"in the upper-right corner. At this point, the flow is now complete."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst-1
-msgid "The green in payment banner displayed on the invoice."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/payment_providers/wire_transfer.rst:152
-msgid ""
-"If payment has been received before sending the invoice, such as in cash, "
-"the payment can still be registered in Odoo by clicking the "
-":guilabel:`Register Payment` button, and creating the payment *before* "
-"clicking :guilabel:`Send & Print`. Now, when an invoice is sent using the "
-":guilabel:`Send & Print` button, a new line is automatically added to the "
-"invoice message, stating the invoice is already paid."
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/plans.rst:3
@@ -27522,322 +27861,6 @@ msgid ""
 "dashboard regardless of whether they were created in the *Subscriptions* app"
 " or the *Sales* app."
 msgstr "所有訂閱型訂單都會在 :guilabel:`定期訂購` Dashboard上顯示，不論是從 *定期訂購* 抑或 *銷售* 應用程式中建立。"
-
-#: ../../content/applications/sales/subscriptions/products.rst:3
-msgid "Subscription products"
-msgstr "定期訂購產品"
-
-#: ../../content/applications/sales/subscriptions/products.rst:5
-msgid ""
-"By closely integrating with the Odoo *Sales* app, the *Subscriptions* app "
-"enables users to sell subscription products alongside regular sales "
-"products. While regular products are sold on a one-time basis, subscription "
-"products are sold on a renewing basis, generating recurring revenue."
-msgstr ""
-"透過與 Odoo *銷售* 應用程式緊密整合， *定期訂購* "
-"應用程式讓使用者能夠在售賣正常產品的同時，銷售訂閱類型產品。常規產品是一次性完成銷售的，而訂閱制產品則是以續訂形式連續銷售，從而產生經常性收入。"
-
-#: ../../content/applications/sales/subscriptions/products.rst:9
-msgid "In Odoo, subscription products are also called *recurring* products."
-msgstr "在 Odoo 中，訂閱制產品也稱為 *經常性* 產品。"
-
-#: ../../content/applications/sales/subscriptions/products.rst:12
-msgid "Configure recurrence periods"
-msgstr "配置重複周期"
-
-#: ../../content/applications/sales/subscriptions/products.rst:14
-msgid ""
-"To get started with subscriptions, the *recurrence periods* must be properly"
-" configured, as needed."
-msgstr "開始使用訂閱制產品之前，必須根據需要，配置正確的 *重複周期* 。"
-
-#: ../../content/applications/sales/subscriptions/products.rst:16
-msgid ""
-"Recurrence periods are the time periods in which subscriptions renew. They "
-"designate how often the customer pays for (and receives) subscription "
-"products."
-msgstr "重複周期是服務計劃續訂的時間段。此周期會決定客戶付款及收取訂閱制產品的頻率。"
-
-#: ../../content/applications/sales/subscriptions/products.rst:19
-msgid ""
-"To configure recurrence periods, go to :menuselection:`Subscriptions app -->"
-" Configuration --> Recurrence periods`."
-msgstr "要設定重複周期，請前往 :menuselection:`定期訂購應用程式 --> 配置 --> 重複周期`。"
-
-#: ../../content/applications/sales/subscriptions/products.rst-1
-msgid "The recurrence periods page in Odoo Subscriptions application."
-msgstr "Odoo 定期訂購應用程式中的重複周期頁面。"
-
-#: ../../content/applications/sales/subscriptions/products.rst:26
-msgid ""
-"The *Subscriptions* app comes with some basic recurrence periods already "
-"configured:"
-msgstr "*定期訂購* 應用程式已預設了一些基本的重複周期："
-
-#: ../../content/applications/sales/subscriptions/products.rst:28
-msgid ":guilabel:`Monthly`"
-msgstr ":guilabel:`每月`"
-
-#: ../../content/applications/sales/subscriptions/products.rst:29
-msgid ":guilabel:`Quarterly`"
-msgstr ":guilabel:`每季`"
-
-#: ../../content/applications/sales/subscriptions/products.rst:30
-msgid ":guilabel:`Weekly`"
-msgstr ":guilabel:`每星期`"
-
-#: ../../content/applications/sales/subscriptions/products.rst:31
-msgid ":guilabel:`2 Weeks`"
-msgstr ":guilabel:`2 星期`"
-
-#: ../../content/applications/sales/subscriptions/products.rst:32
-msgid ":guilabel:`Yearly`"
-msgstr ":guilabel:`每年`"
-
-#: ../../content/applications/sales/subscriptions/products.rst:33
-msgid ":guilabel:`3 Years`"
-msgstr ":guilabel:`3 年`"
-
-#: ../../content/applications/sales/subscriptions/products.rst:34
-msgid ":guilabel:`5 Years`"
-msgstr ":guilabel:`5 年`"
-
-#: ../../content/applications/sales/subscriptions/products.rst:36
-msgid "New recurrence periods can be added and/or edited at any time."
-msgstr "使用者可以隨時新增及/或編輯現有的重複周期。"
-
-#: ../../content/applications/sales/subscriptions/products.rst:38
-msgid ""
-"To create a new recurrence period, click :guilabel:`New` on the "
-":guilabel:`Recurrence Periods` page. Doing so reveals a blank recurrence "
-"period form."
-msgstr "要建立新的重複周期，請按一下 :guilabel:`重複周期` 頁面上的 :guilabel:`新增`。系統會顯示一張空白的重複周期表格。"
-
-#: ../../content/applications/sales/subscriptions/products.rst-1
-msgid "A recurrence period form in Odoo Subscriptions application."
-msgstr "Odoo 定期訂購應用程式中的重複周期表單。"
-
-#: ../../content/applications/sales/subscriptions/products.rst:45
-msgid ""
-"Then, type in the :guilabel:`Name` and :guilabel:`Duration` of the "
-"recurrence period, and select the :guilabel:`Unit` that defines the "
-"duration."
-msgstr ""
-"然後，輸入重複周期的 :guilabel:`名稱` 及 :guilabel:`持續時間`，並選擇定義該持續時間的 :guilabel:`單位`。"
-
-#: ../../content/applications/sales/subscriptions/products.rst:49
-msgid ""
-"The unit :guilabel:`Days` *cannot* be used as a recurrence period on "
-"subscriptions. The daily recurrence is meant for rentals, and **cannot** be "
-"added on recurring subscription sales orders."
-msgstr ""
-"請留意，訂閱的重複周期 **不可** 設為 :guilabel:`天`。「每日」的重複周期只適用於租賃， **不可** 加入至定期訂購銷售訂單。"
-
-#: ../../content/applications/sales/subscriptions/products.rst:52
-msgid ""
-"This limitation is there to avoid sales orders that would generate daily "
-"invoices."
-msgstr "此限制是為了避免銷售訂單每日生成發票。"
-
-#: ../../content/applications/sales/subscriptions/products.rst:55
-msgid "Product form configuration"
-msgstr "產品表格配置"
-
-#: ../../content/applications/sales/subscriptions/products.rst:57
-msgid ""
-"To create a new subscription product, navigate to "
-":menuselection:`Subscriptions app --> Products --> Products`, and click "
-":guilabel:`New`."
-msgstr ""
-"要建立新的訂閱制產品，請前往 :menuselection:`定期訂購應用程式 --> 產品 --> 產品`，然後按一下 :guilabel:`新增`。"
-
-#: ../../content/applications/sales/subscriptions/products.rst:60
-msgid ""
-"Doing so reveals a blank product form, which can be configured and "
-"customized in a number of ways."
-msgstr "系統會顯示一個空白的產品表單，你可透過多種方式進行配置及自訂。"
-
-#: ../../content/applications/sales/subscriptions/products.rst:63
-msgid ""
-"By default, the :guilabel:`Recurring` option is already enabled, prompting "
-"Odoo to recognize it as a subscription product. Be sure to leave the "
-":guilabel:`Recurring` and :guilabel:`Can be Sold` options enabled."
-msgstr ""
-"預設情況下， :guilabel:`經常性` 選項會是已啟用，提示 Odoo 將產品識別為訂閱類型產品。請確保 :guilabel:`經常性` 及 "
-":guilabel:`可出售` 選項均已啟用。"
-
-#: ../../content/applications/sales/subscriptions/products.rst:67
-msgid ""
-"The :guilabel:`Product Type` field is set to :guilabel:`Service` by default,"
-" as well. However, subscription products *can* be set to other types, if "
-"needed."
-msgstr ""
-"同樣，在預設情況下，:guilabel:`產品類型` 欄位會設為 :guilabel:`服務`。不過，如果有需要，訂閱制產品 **可以** "
-"設定為其他類型。"
-
-#: ../../content/applications/sales/subscriptions/products.rst:71
-msgid ""
-"When creating a physical subscription product in the Odoo **Sales** "
-"application, the :guilabel:`Invoicing Policy` must be set to "
-":guilabel:`Ordered quantities`."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/products.rst:74
-msgid ""
-"Setting it to :guilabel:`Delivered quantities` causes issues with invoice "
-"creation, and disrupts the subscription process."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/products.rst:77
-msgid ""
-"Similarly, when creating a physical subscription product in the Odoo "
-"**Subscriptions** application, the :guilabel:`Invoicing Policy` must **not**"
-" be set to :guilabel:`Based on Delivered Quantity (Manual)` for the same "
-"reasons."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/products.rst-1
-msgid "A basic subscription product form in Odoo Subscriptions application."
-msgstr "Odoo 定期訂購應用程式中的基本訂閱產品表單。"
-
-#: ../../content/applications/sales/subscriptions/products.rst:86
-msgid "Time-based pricing"
-msgstr "基於時間價格"
-
-#: ../../content/applications/sales/subscriptions/products.rst:88
-msgid ""
-"Once the desired fields in the :guilabel:`General Information` tab have been"
-" entered, click the :guilabel:`Time-based pricing` tab on the product form."
-msgstr "在 :guilabel:`一般資訊` 分頁中完成輸入所需欄位後，請在產品表單上按一下 :guilabel:`以時間定價` 分頁。"
-
-#: ../../content/applications/sales/subscriptions/products.rst-1
-msgid ""
-"The time-based pricing tab on a subscription product form in Odoo "
-"Subscriptions."
-msgstr "Odoo 定期訂購中，訂閱產品表單上的「以時間定價」分頁。"
-
-#: ../../content/applications/sales/subscriptions/products.rst:95
-msgid ""
-"From here, click :guilabel:`Add a price` to begin defining recurring prices."
-msgstr "在此處，按一下 :guilabel:`新增價格`，以開始定義經常性價格。"
-
-#: ../../content/applications/sales/subscriptions/products.rst:97
-msgid ""
-"In the :guilabel:`Period` column, select a desired recurrence period. In the"
-" :guilabel:`Pricelist` column, select a pricelist, if needed. Then, in the "
-":guilabel:`Price` column, enter the price for that recurrence period."
-msgstr ""
-"在 :guilabel:`周期` 直欄中，選取所需的重複周期。如有需要，可在 :guilabel:`價格表` 直欄中，選擇適用的價格表。然後，在 "
-":guilabel:`價格` 直欄中，輸入該重複周期的價格。"
-
-#: ../../content/applications/sales/subscriptions/products.rst:102
-msgid ""
-":guilabel:`Daily` and :guilabel:`Hourly` periods **cannot** be used on "
-"recurring products."
-msgstr ":guilabel:`每日` 及 :guilabel:`每小時` 的周期 **不可** 用於經常性產品。"
-
-#: ../../content/applications/sales/subscriptions/products.rst:0
-msgid "The validation error pop-up window that appears in Odoo Subscriptions."
-msgstr "Odoo 定期訂購中顯示的驗證錯誤彈出視窗。"
-
-#: ../../content/applications/sales/subscriptions/products.rst:109
-msgid ""
-"There is *no limit* to how many lines can be added to the :guilabel:`Time-"
-"based pricing` table."
-msgstr "在 :guilabel:`以時間定價` 表格中，可新增的行數 *沒有上限* 。"
-
-#: ../../content/applications/sales/subscriptions/products.rst:112
-msgid ""
-"An existing product can be made into a subscription product, simply by "
-"marking it as :guilabel:`Recurring`, and configuring :guilabel:`Time-based "
-"pricing` on the product form."
-msgstr ""
-"現有的產品可以轉換成訂閱制產品。只需將產品標記為 :guilabel:`經常性`，並在產品表單上配置 :guilabel:`以時間定價` 即可。"
-
-#: ../../content/applications/sales/subscriptions/products.rst:118
-msgid ""
-":doc:`Pricelists <../sales/products_prices/prices/pricing>` can be used with"
-" subscription products to give special pricing to customers included in "
-"pricelists."
-msgstr ""
-":doc:`價格表 <../sales/products_prices/prices/pricing>` "
-"可與訂閱產品一起使用，為價格表中包含的客戶提供特別定價。"
-
-#: ../../content/applications/sales/subscriptions/products.rst:121
-msgid ""
-"This can be configured either in the :guilabel:`Time-based pricing` tab of "
-"the product form, or on the pricelist form in the *Sales* application."
-msgstr "這可以在產品表單的 :guilabel:`以時間定價` 分頁中配置，也可以在 *銷售* 應用程式中的價格表表單上配置。"
-
-#: ../../content/applications/sales/subscriptions/products.rst:124
-msgid ""
-"To create recurring price rules for specific pricelists in the "
-":guilabel:`Time-based pricing` tab of the product form, select a pricelist "
-"in the :guilabel:`Pricelist` column."
-msgstr ""
-"若要在產品表單的 :guilabel:`以時間定價` 分頁中，為特定價格表建立經常性價格規則，你可在 :guilabel:`價格表` "
-"直欄中，選取需要的價格表。"
-
-#: ../../content/applications/sales/subscriptions/products.rst-1
-msgid "Pricelists in the \"Time-based pricing\" tab of the product form."
-msgstr "產品表單「以時間定價」分頁中的價格表。"
-
-#: ../../content/applications/sales/subscriptions/products.rst:131
-msgid ""
-"When pricelists are added to the :guilabel:`Time-based pricing` tab, the "
-"pricelist form in the *Sales* app is automatically updated."
-msgstr "將價格表新增至 :guilabel:`以時間定價` 分頁時， *銷售* 應用程式中的價格表表單會自動更新。"
-
-#: ../../content/applications/sales/subscriptions/products.rst:134
-msgid ""
-"Time-based pricing rules can also be configured directly on the pricelist "
-"form."
-msgstr "以時間定價的規則，亦可直接在價格表表單上設定。"
-
-#: ../../content/applications/sales/subscriptions/products.rst:136
-msgid ""
-"To do this, go to :menuselection:`Sales app --> Products --> Pricelists`, "
-"and select a pricelist (or click :guilabel:`New` to create a new pricelist)."
-msgstr ""
-"要執行此操作，請前往 :menuselection:`銷售應用程式 --> 產品 --> 價格表`，然後選擇一張價格表（或按一下 "
-":guilabel:`新增` 建立新的價格表）。"
-
-#: ../../content/applications/sales/subscriptions/products.rst:140
-msgid ""
-"Pricelists are also accessible through the Odoo *Subscriptions* app by "
-"following the same menu steps."
-msgstr "你亦可透過 Odoo *定期訂購* 應用程式，按照相同的選單步驟，存取所需的價格表。"
-
-#: ../../content/applications/sales/subscriptions/products.rst:143
-msgid ""
-"Then, on the pricelist form, under the :guilabel:`Time-based rules` tab, "
-"click :guilabel:`Add a line`."
-msgstr "然後，在價格表表單的 :guilabel:`基於時間的規則` 分頁下，按一下 :guilabel:`加入資料行`。"
-
-#: ../../content/applications/sales/subscriptions/products.rst-1
-msgid "The time-based rules tab on a pricelist form in Odoo Sales."
-msgstr "Odoo 銷售應用程式中，價格表表單上的「基於時間的規則」分頁。"
-
-#: ../../content/applications/sales/subscriptions/products.rst:150
-msgid ""
-"Then, select a subscription product in the :guilabel:`Products` column, and "
-"select a recurrence period in the :guilabel:`Period` column. Lastly, enter a"
-" :guilabel:`Price` for that particular product and period. Add as many lines"
-" as needed."
-msgstr ""
-"然後，在 :guilabel:`產品` 直欄中選擇一項訂閱產品，並在 :guilabel:`周期` 直欄中選擇重複周期。最後，為該特定產品及周期輸入一個"
-" :guilabel:`價格`。你可根據需要，繼續加入更多資料行。"
-
-#: ../../content/applications/sales/subscriptions/products.rst:154
-msgid ""
-"When :guilabel:`Time-based rules` are added to the pricelist form, the "
-":guilabel:`Time-based pricing` tab of the product form is automatically "
-"updated."
-msgstr "當 :guilabel:`基於時間的規則` 新增至價格表表單時，產品表單的 :guilabel:`以時間定價` 分頁亦會自動更新。"
-
-#: ../../content/applications/sales/subscriptions/products.rst:158
-msgid ":doc:`ecommerce`"
-msgstr ":doc:`ecommerce`"
 
 #: ../../content/applications/sales/subscriptions/renewals.rst:3
 msgid "Renew subscriptions"
@@ -29212,7 +29235,7 @@ msgstr ""
 "舉例，如果下次發票日期是 7 月 1 日，而 :guilabel:`自動關閉` 設定為 `30 天`，則表示預定操作將於 8 月 1 "
 "日自動關閉訂購計劃。"
 
-#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:189
+#: ../../content/applications/sales/subscriptions/scheduled_actions.rst:188
 msgid ":doc:`automatic_alerts`"
 msgstr ":doc:`automatic_alerts`"
 
