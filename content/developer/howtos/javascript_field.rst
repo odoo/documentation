@@ -17,7 +17,7 @@ displaying "Late!" in red whenever the checkbox is checked.
       /** @odoo-module */
 
       import { registry } from "@web/core/registry";
-      import { BooleanField } from "@web/views/fields/boolean/boolean_field";
+      import { BooleanField, booleanField } from "@web/views/fields/boolean/boolean_field";
       import { Component, xml } from "@odoo/owl";
 
       class LateOrderBooleanField extends BooleanField {}
@@ -45,7 +45,11 @@ displaying "Late!" in red whenever the checkbox is checked.
    .. code-block::
       :caption: :file:`late_order_boolean_field.js`
 
-      registry.category("fields").add("late_boolean", LateOrderBooleanField);
+      registry.category("fields").add("late_boolean", {
+          ...booleanField,
+          component: LateOrderBooleanField,
+      });
+
 
 #. Add the widget in the view arch as an attribute of the field.
 
@@ -96,7 +100,12 @@ Assume that we want to create a field that displays a simple text in red.
    .. code-block:: js
       :caption: :file:`my_text_field.js`
 
-      registry.category("fields").add("my_text_field", MyTextField);
+      // Comment [DO NOT MERGE]: Not sure about standardFieldProps here.
+      registry.category("fields").add("my_text_field", {
+          ...standardFieldProps,
+          component: MyTextField,
+      });
+
 
    This maps the widget name in the arch to its actual component.
 
