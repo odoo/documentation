@@ -13,7 +13,7 @@ matching entries automatically.
 
 .. seealso::
    - `Odoo Tutorials: Bank reconciliation
-     <https://www.odoo.com/slides/slide/bank-reconciliation-2724>`_
+     <https://www.odoo.com/slides/slide/bank-reconciliation-6562>`_
    - :doc:`bank_synchronization`
    - :doc:`transactions`
 
