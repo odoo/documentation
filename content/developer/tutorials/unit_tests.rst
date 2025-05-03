@@ -46,7 +46,7 @@ Before knowing how to write tests, we need to know how to run them.
                         specifies if we want to include or exclude tests
                         matching this spec. The tag will match tags added on a
                         class with a @tagged decorator (all Test classes have
-                        'standard' and 'at_install' tags until explicitly
+                        'standard' and 'post_install' tags until explicitly
                         removed, see the decorator documentation). '*' will
                         match all tags. If tag is omitted on include mode, its
                         value is 'standard'. If tag is omitted on exclude
@@ -173,17 +173,16 @@ coming from modules your module doesn't depend on.
 
 .. code-block:: python
 
-  from odoo.tests.common import TransactionCase
-  from odoo.tests import tagged
+  from odoo.tests import tagged, TransactionCase
 
   # The CI will run these tests after all the modules are installed,
   # not right after installing the one defining it.
-  @tagged('post_install', '-at_install')  # add `post_install` and remove `at_install`
+  @tagged('post_install')  # this is the default
   class PostInstallTestCase(TransactionCase):
       def test_01(self):
           ...
 
-  @tagged('at_install')  # this is the default
+  @tagged('at_install', '-post_install')  # add `at_install` and remove `post_install`
   class AtInstallTestCase(TransactionCase):
       def test_01(self):
           ...
@@ -239,13 +238,12 @@ These test classes are built on top of the ``unittest`` python module.
 
 .. code-block:: python
 
-  from odoo.tests.common import TransactionCase
+  from odoo.tests import TransactionCase
   from odoo.exceptions import UserError
-  from odoo.tests import tagged
+
 
   # The CI will run these tests after all the modules are installed,
   # not right after installing the one defining it.
-  @tagged('post_install', '-at_install')
   class EstateTestCase(TransactionCase):
 
       @classmethod
