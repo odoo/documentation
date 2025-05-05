@@ -13,20 +13,19 @@ is the keyword or key phrase that is to be replaced. The substitution is the lon
 replaces the shortcut.
 
 .. image:: canned_responses/canned-response-sample.png
-   :align: center
    :alt: A live chat conversation using a canned response.
 
-Canned responses are available :ref:`to use <discuss/use-cases>` in *Live Chat* conversations, the
-*Discuss* app, and the *Chatter* composer. This includes direct message conversations, channel
-conversations, and *WhatsApp* messages.
+Canned responses are available :ref:`to use <discuss/use-cases>` in **Live Chat** conversations, the
+**Discuss** app, and the *Chatter* composer. This includes direct message conversations, channel
+conversations, and **WhatsApp** messages.
 
 .. _discuss/created-canned-response:
 
 Creating canned responses
 =========================
 
-Canned responses are managed through the *Discuss* application. To create a new canned response, or
-manage the list of existing responses, navigate to :menuselection:`Discuss app --> Configuration
+Canned responses are managed through the **Discuss** application. To create a new canned response,
+or manage the list of existing responses, navigate to :menuselection:`Discuss app --> Configuration
 --> Canned Responses`.
 
 Then, to create a new canned response, click :guilabel:`New` at the top-left of the list. Doing so
@@ -36,7 +35,6 @@ Canned responses consist of two main components, a *shortcut* the user enters, a
 *substitution* that replaces the shortcut.
 
 .. image:: canned_responses/shortcut-substitution.png
-   :align: center
    :alt: A list of canned responses emphasizing the shortcut and substitution fields.
 
 Type a shortcut command in the :guilabel:`Shortcut` field. Next, click on the
@@ -63,7 +61,7 @@ groups in the :guilabel:`Authorized Group` field that should have access.
    Canned responses created by the database are automatically credited as created by *OdooBot*. They
    must be assigned to an *authorized group* before they can be used by **any** users. To view the
    responses created by *OdooBot*, navigate to :menuselection:`Discuss app --> Configuration -->
-   Canned Responses`. Click into the :guilabel:`Search..` bar, and remove any filters.
+   Canned Responses`. Click into the search bar, and remove any filters.
 
 Lastly, the :guilabel:`Last Used` field keeps track of the date and time each response was most
 recently used. This field cannot be edited.
@@ -78,9 +76,9 @@ canned response available for others to use, they need to be shared.
 
 .. note::
    Users with *Administrator* access rights can view and edit canned responses created by other
-   users through the *Discuss* app. However, they are **only** able to use them if they are included
-   in an authorized group that has been designated on that canned responses item line, located on
-   the :guilabel:`Canned Responses` page.
+   users through the **Discuss** app. However, they are **only** able to use them if they are
+   included in an authorized group that has been designated on that canned responses item line,
+   located on the :guilabel:`Canned Responses` page.
 
 Access to shared responses is granted on the :ref:`groups <access-rights/groups>` level.
 
@@ -108,8 +106,8 @@ response.
 Use a canned response
 =====================
 
-Canned responses can be used in the *Discuss* app, in a *Live Chat* conversation, or on any record
-that contains a *Chatter* composer. This includes direct message conversations, channel
+Canned responses can be used in the **Discuss** app, in a **Live Chat** conversation, or on any
+record that contains a *Chatter* composer. This includes direct message conversations, channel
 conversations, and *WhatsApp* messages.
 
 To use a canned response, type a colon (`:`) into a *Chatter* composer or chat window, followed by
@@ -125,7 +123,6 @@ response can still be edited before it is sent.
    the shortcut.
 
    .. image:: canned_responses/canned-responses-using.png
-      :align: center
       :alt: A live chat window with a list of all available canned responses.
 
 .. seealso::
