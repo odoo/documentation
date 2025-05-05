@@ -1,3 +1,6 @@
+:show-content:
+:hide-toc:
+
 ============
 Appointments
 ============
@@ -147,9 +150,9 @@ If this feature is enabled, the appointment time slot is still considered *reser
 confirmed or rejected. Leave this checkbox blank to automatically accept meetings created from this
 appointment.
 
-The :guilabel:`Create Opportunities` feature adds a lead or opportunity to the **CRM** app for each
-scheduled appointment, which is assigned to the responsible user. Tick the :guilabel:`Create
-Opportunities` checkbox to enable this option.
+The :doc:`Create Opportunities <appointments/create-opps>` feature adds an opportunity to the
+**CRM** app for each scheduled appointment, which is assigned to the responsible user. Tick the
+:guilabel:`Create Opportunities` checkbox to enable this option.
 
 .. important::
    This field is only visible if the **CRM** app is installed on the database.
@@ -160,6 +163,8 @@ and the time frame.
 
 Tick the :guilabel:`Allow Guests` checkbox to grant customers the ability to add additional guests
 when registering for an appointment.
+
+.. _appointments/questions:
 
 Questions tab
 -------------
@@ -197,3 +202,8 @@ Publishing an appointment
 When an appointment is ready to publish, click the :guilabel:`Go to Website` smart button at the top
 of the record. Then, slide the :icon:`fa-toggle-off` :guilabel:`Unpublished` icon to
 :icon:`fa-toggle-on` :guilabel:`Published`.
+
+.. toctree::
+   :titlesonly:
+
+   appointments/create-opps
