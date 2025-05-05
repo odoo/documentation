@@ -16,8 +16,17 @@ replaces the shortcut.
    :alt: A live chat conversation using a canned response.
 
 Canned responses are available :ref:`to use <discuss/use-cases>` in **Live Chat** conversations, the
+<<<<<<< 01f0eca3f55619a38ff267fb4f9ee39a8919dd6d
 **Discuss** app, and the *Chatter*. Canned responses are also available in direct message
 conversations, channel conversations, and *WhatsApp* messages.
+||||||| 030b37d41c68b197bd2ce72f52dafdb906364448
+Canned responses are available :ref:`to use <discuss/use-cases>` in *Live Chat* conversations, the
+*Discuss* app, and the *Chatter* composer. This includes direct message conversations, channel
+conversations, and *WhatsApp* messages.
+=======
+**Discuss** app, and the *Chatter* composer. This includes direct message conversations, channel
+conversations, and **WhatsApp** messages.
+>>>>>>> f65d92bc116e5039abfae273e7730a6a92ea805d
 
 .. _discuss/created-canned-response:
 
@@ -61,7 +70,7 @@ groups in the :guilabel:`Authorized Group` field that should have access.
    Canned responses created by the database are automatically credited as created by *OdooBot*. They
    must be assigned to an *authorized group* before they can be used by **any** users. To view the
    responses created by *OdooBot*, navigate to :menuselection:`Discuss app --> Configuration -->
-   Canned Responses`. Click into the :guilabel:`Search..` bar, and remove any filters.
+   Canned Responses`. Click into the search bar, and remove any filters.
 
 Lastly, the :guilabel:`Last Used` field keeps track of the date and time each response was most
 recently used. This field cannot be edited.
@@ -106,10 +115,28 @@ response.
 Use a canned response
 =====================
 
+<<<<<<< 01f0eca3f55619a38ff267fb4f9ee39a8919dd6d
 To use a canned response in a conversation, click the :icon:`fa-plus-circle` :guilabel:`(plus)` icon
 in the message window. Then, click :guilabel:`Insert a Canned Response`. This opens a list of
 available canned responses. Either select a response from the list, or type the appropriate
 shortcut, then click the :icon:`fa-paper-plane` :guilabel:`(send)` icon or hit :kbd:`Enter`.
+||||||| 030b37d41c68b197bd2ce72f52dafdb906364448
+Canned responses can be used in the *Discuss* app, in a *Live Chat* conversation, or on any record
+that contains a *Chatter* composer. This includes direct message conversations, channel
+conversations, and *WhatsApp* messages.
+
+To use a canned response, type a colon (`:`) into a *Chatter* composer or chat window, followed by
+the shortcut. Then press :kbd:`Enter`. This replaces the shortcut with the substitution, though the
+response can still be edited before it is sent.
+=======
+Canned responses can be used in the **Discuss** app, in a **Live Chat** conversation, or on any
+record that contains a *Chatter* composer. This includes direct message conversations, channel
+conversations, and *WhatsApp* messages.
+
+To use a canned response, type a colon (`:`) into a *Chatter* composer or chat window, followed by
+the shortcut. Then press :kbd:`Enter`. This replaces the shortcut with the substitution, though the
+response can still be edited before it is sent.
+>>>>>>> f65d92bc116e5039abfae273e7730a6a92ea805d
 
 .. tip::
    Typing `::` in the *Chatter* composer, or chat window, on its own generates a drop-down list of
