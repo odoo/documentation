@@ -16,6 +16,7 @@ Tutorials
    tutorials/importable_modules
    tutorials/mixins
    tutorials/pdf_reports
+   tutorials/website_theme
 
 .. tip::
    If you are new to Odoo development, we recommend starting with the :doc:`setup guide
@@ -89,3 +90,9 @@ Expand your knowledge on the server framework
       :target: tutorials/pdf_reports
 
       Use QWeb, Odoo's powerful templating engine, to create custom PDF reports for your documents.
+
+   .. card:: Build a website theme
+      :target: tutorials/website_theme
+
+      Create a tailored website from scratch fully integrated with Odoo and editable via the Website
+      Builder.
