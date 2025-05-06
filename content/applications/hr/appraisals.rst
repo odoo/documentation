@@ -4,33 +4,21 @@
 Appraisals
 ==========
 
-In Odoo, the *Appraisals* application can be used to evaluate employee performance on a recurring
-basis. Managers can evaluate the performance of their employees, and also allow employees to do a
-self-assessment of their own. Appraisals are customizable, and can be set for any kind of schedule
-desired.
-
-Appraisals give employees valuable feedback, including actionable goals to work toward, and
-measurable skills to improve upon. Additionally, appraisals may form the basis for raises,
-promotions, and other benefits.
-
-Regular appraisals are good for both the employees and the company, since they can accurately
-measure performance based on company goals, and show employees where they need to improve.
-
 Configuration
 =============
 
 The :guilabel:`Configuration` menu in the *Appraisals* application is where the settings can be
-configured, feedback templates can be edited, frequencies can be set, evaluation scales can be
-managed, data for 360 feedback can be stored, and goal tags can be viewed/created.
+configured, feedback templates can be edited, evaluation scales can be managed, data for 360
+feedback can be stored, and goal tags can be viewed/created.
 
 Settings
---------
+========
 
 To access the *Settings* menu, navigate to :menuselection:`Appraisals application --> Configuration
 --> Settings`.
 
 Feedback templates
-~~~~~~~~~~~~~~~~~~
+------------------
 
 Feedback templates are form outlines used during an employee appraisal. Any edits made to a template
 are, ultimately, reflected in the appraisals sent to employees.
@@ -48,36 +36,8 @@ The :guilabel:`Manager Feedback Template` has the following sections: :guilabel:
 Any desired changes to the default feedback templates can be made by making changes directly in each
 template.
 
-Appraisals
-~~~~~~~~~~
-
-The :guilabel:`Appraisals` section of the settings menu determines the frequency that appraisals are
-performed, and if it is possible to request additional feedback.
-
-.. image:: appraisals/appraisals-setting.png
-   :align: center
-   :alt: The appraisals sections with the timeline filled in and 360 feedback enabled.
-
-.. _appraisals/appraisal-plan:
-
-Appraisals plans
-****************
-
-By default, appraisals are pre-configured to be automatically created six months after an employee
-is hired, with a second appraisal exactly six months after that.
-
-Once those two initial appraisals have been completed in the employee's first year, following
-appraisals are only created once a year (every twelve months).
-
-To modify this schedule, change the number of months in the blank fields under the
-:guilabel:`Appraisals Plans` section.
-
-.. important::
-   If the :guilabel:`Appraisals Plans` section is modified, **all** empty :guilabel:`Next Appraisal
-   Dates` are modified for **all** employees.
-
 360 feedback
-************
+============
 
 The :guilabel:`360 Feedback` option can be enabled to allow managers to request feedback from other
 employees using a different survey form, at any time, independent of the appraisal schedule.
@@ -98,7 +58,7 @@ document.
    *Surveys* application **must** be installed.
 
 Evaluation scale
-----------------
+================
 
 On each employee appraisal form, final rating options appear by default. To view and edit these
 options, navigate to :menuselection:`Appraisals application --> Configuration --> Evaluation Scale`.
@@ -119,7 +79,7 @@ of a rating, and drag the rating to the desired position on the list.
    :alt: The evaluation scale, with the new button and click and drag icons highlighted.
 
 360 feedback
-------------
+============
 
 The :guilabel:`360 Feedback` section displays information for all the surveys currently configured
 in the *Appraisals* application. To view the surveys, and their statistics, navigate to
@@ -171,6 +131,7 @@ document.
    In previous versions of Odoo, this section was referred to as :guilabel:`Surveys`.
 
 .. seealso::
+   - :doc:`appraisals/schedule_appraisals`
    - :doc:`appraisals/new_appraisals`
    - :doc:`appraisals/appraisal_templates`
    - :doc:`appraisals/goals`
@@ -180,6 +141,7 @@ document.
 .. toctree::
    :titlesonly:
 
+   appraisals/schedule_appraisals
    appraisals/new_appraisals
    appraisals/appraisal_templates
    appraisals/goals
