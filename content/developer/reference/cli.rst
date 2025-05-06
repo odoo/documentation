@@ -82,6 +82,18 @@ Running the server
     comma-separated list of modules to update before running the server.
     Use ``all`` for all modules. (requires :option:`-d`).
 
+.. option:: --reinit <modules>
+
+    A comma-separated list of modules to reinitialize before starting the server.
+    (requires :option:`-d`).
+
+    The reinitialization is similar to a simple upgrade without executing any upgrade script.
+    It loads data in ``init`` mode instead of ``update`` mode, primarily affecting records marked as ``'noupdate'``.
+    All modules that depend directly or indirectly on the specified ones will also be reinitialized.
+
+    This option is intended for debugging or development purposes only.
+    **Do not use it with a production database.**
+
 .. option:: --addons-path <directories>
 
     comma-separated list of directories in which modules are stored. These
