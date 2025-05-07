@@ -172,6 +172,7 @@ document.
 
 .. seealso::
    - :doc:`appraisals/new_appraisals`
+   - :doc:`appraisals/appraisal_templates`
    - :doc:`appraisals/goals`
    - :doc:`appraisals/appraisal_analysis`
    - :doc:`appraisals/skills_evolution`
@@ -180,6 +181,7 @@ document.
    :titlesonly:
 
    appraisals/new_appraisals
+   appraisals/appraisal_templates
    appraisals/goals
    appraisals/appraisal_analysis
    appraisals/skills_evolution
