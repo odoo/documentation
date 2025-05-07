@@ -82,6 +82,11 @@ Running the server
     comma-separated list of modules to update before running the server.
     Use ``all`` for all modules. (requires :option:`-d`).
 
+.. option:: --reinit <modules>
+
+    comma-separated list of modules to reinitialize before running the server
+    (requires :option:`-d`).
+
 .. option:: --addons-path <directories>
 
     comma-separated list of directories in which modules are stored. These
