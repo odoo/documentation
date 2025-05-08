@@ -24,7 +24,6 @@ products and increase your average cart sizes.
    :titlesonly:
 
    ecommerce/products
-   ecommerce/cart
    ecommerce/checkout
    ecommerce/payments
    ecommerce/shipping
