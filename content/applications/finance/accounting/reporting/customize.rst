@@ -313,3 +313,50 @@ use different **expression** labels.
 
 When using the **period comparison** feature found under the :guilabel:`Options` tab of an
 accounting report, all columns are repeated in and for each period.
+
+.. _customize-reports/lines_group_by:
+
+Lines grouping
+==============
+
+Once your report is filled with lines, you can group them. To do so, you'll need to define which
+attribute will determine the grouping. Any attribute can be picked even if it does not exist in
+the Journal Item model yet. You'll just have to know how to access it in such a case.
+
+Journal Item doesn't have the field
+-----------------------------------
+
+Toggle the debug mode and create a non stored related field in the Journal Item model by going to
+:menuselection:`Accounting --> Journal Items --> Debug icon --> Fields --> New`.
+
+The :guilabel:`Field Name` is a very important value as you will have to use it later in the
+report's grouping settings so remember it well.
+
+The :guilabel:`Related Field Definition` is the technical path from an existing field of the
+Journal Item to the attribute you want to group by. For example, if you wanted to group by the
+country of the commercial partner, the related field definition would be
+`partner_id.commecial_partner_id.country_id`.
+
+.. image:: customize/engine-groupby-nonstored-related-field.png
+   :align: center
+   :alt: Important values to set in your custom field.
+
+.. important::
+   The field must be on the Journal Item model, be non stored, and be related to the model of the
+   field you want to group by. For example `res.country` if you want to group by the country of
+   the commercial partner.
+
+Journal Item has the field
+--------------------------
+
+Jump in the options of the desired report and edit the :guilabel:`Group by` field of the line you
+want to edit the grouping. You should input the technical name of the field you want to use as
+grouping key. If you need to look it up in the list of fields, it's the value in the
+:guilabel:`Field Name` attribute.
+
+You might want to consider saving this modification as a report variant if you need to keep your
+root report intact.
+
+.. note::
+   This feature requires the report to have explicit report lines you can simply edit. The Deferred
+   Reports for example do not support it currently as they use dynamic lines that are generated.
