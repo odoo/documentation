@@ -1,12 +1,133 @@
-========
-Checkout
-========
+===================
+Ordering & Checkout
+===================
 
-Once customers have added their desired products to the cart, they can access it by clicking the
-:icon:`fa-shopping-cart` button in the header to start the checkout process. In Odoo eCommerce, this
-process consists of sequential :ref:`steps <ecommerce/checkout/steps>`, some of which support
-additional features. The related checkout pages can be :ref:`customized
-<ecommerce/checkout/customize_steps>` using the website editor.
+Odoo eCommerce provides several options to organize the ordering and checkout process. It offers
+different :ref:`order button <ecommerce/checkout/order-buttons>` options and sequential
+:ref:`checkout steps <ecommerce/checkout/steps>`, some of which support additional features.
+The related buttons and checkout pages can be customized using the website editor.
+
+.. _ecommerce/checkout/order-buttons:
+
+Order buttons
+=============
+
+To customize the ordering process in Odoo eCommerce, you can:
+
+- change the :ref:`Add to Cart <ecommerce/checkout/add-to-cart>` button's behaviour,
+- replace it by a :ref:`customized <ecommerce/checkout/prevent-sale>` button,
+- add a :ref:`Buy now <ecommerce/checkout/buy-now>` button, and
+- add an :ref:`Order again <ecommerce/checkout/re-order>` to the customer portal.
+
+.. _ecommerce/checkout/add-to-cart:
+
+Add to cart options
+-------------------
+
+Default add to cart behaviour
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When clicking the :guilabel:`Add to cart` button, different actions can be triggered. To configure
+them, go to :menuselection:`Website --> Configuration --> Settings`, scroll down to the
+:guilabel:`Shop - Checkout Process` section, and select one of the following options:
+
+- :guilabel:`Stay on Product Page`: The customer remains on the product's page.
+- :guilabel:`Go to cart`: The customer is immediately redirected to the cart.
+- :guilabel:`Let the user decide (dialog)`: The customer can choose if they want to go to the
+  cart (:guilabel:`Proceed to Checkout`) or if they prefer to stay on the product page
+  (:guilabel:`Continue Shopping`).
+
+.. note::
+   This dialog box always appears regardless of the configuration to suggest
+   :doc:`optional products <products/cross_upselling>`, if any.
+
+.. _ecommerce/checkout/prevent-sale:
+
+Button customization
+~~~~~~~~~~~~~~~~~~~~
+
+You can replace the :guilabel:`Add to Cart` button with a :guilabel:`Contact Us` button
+which redirects users to the default contact form.
+
+.. note::
+   Hiding the :guilabel:`Add to Cart` button is often used by businesses that want to display
+   an online catalog, but do not want to share prices publicly or if they prefer to create a
+   custom quotation.
+
+To do so, go to :menuselection:`Website --> Configuration --> Settings --> Shop - Products` and tick
+:guilabel:`Prevent Sale of Zero Priced Product`. As a result, a new :guilabel:`Button url` field
+appears to enter a redirect URL. Then, go to the product form or to a
+:doc:`pricelist </applications/sales/sales/products_prices/prices/pricing>`, and set the price of
+the product to `0`. You have to update the price manually for each relevant product.
+
+.. image:: cart/cart-contact-us.png
+   :alt: Contact us button on product page
+
+.. note::
+   The :guilabel:`Contact Us` button label and URL and the *Not Available For Sale* text beneath
+   the product title and description can both be modified on the product's page while in
+   :guilabel:`Edit` mode.
+
+Additional add to cart buttons
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can add additional :guilabel:`Add to Cart` buttons and link them to specific products on any
+page of the website.
+
+To add them, open the website editor and place the :guilabel:`Add to Cart Button` inner content
+building block. Once placed, click the button, scroll to the :guilabel:`Add to Cart Button`
+section and configure the following:
+
+- :guilabel:`Product`: Select the product to link the button with.
+- :guilabel:`Action`: Choose if it should be a :guilabel:`Add to Cart` or :ref:`Buy Now
+  <ecommerce/checkout/buy-now>` button.
+
+.. note::
+    If the product has variants, either choose one or leave the option on
+    :guilabel:`Visitor's Choice`, which prompts the customer to choose a variant
+    and then to :guilabel:`Proceed to Checkout` or :guilabel:`Continue Shopping`.
+
+    The default :guilabel:`Add to Cart` button does not offer those options, but its label can be
+    changed.
+
+.. tip::
+   While in :guilabel:`Edit` mode, it is also possible to show or hide the
+   :icon:`fa-shopping-cart` (:guilabel:`cart`) icon in the header of the page. Click the header,
+   and then the :icon:`fa-shopping-cart` (:guilabel:`cart`) button next to the
+   :guilabel:`Show Empty` option under the :guilabel:`Customize` tab.
+
+.. _ecommerce/checkout/buy-now:
+
+Buy now
+-------
+
+Enable the :guilabel:`Buy Now` button to take customers to the :ref:`review order
+<ecommerce/checkout/review_order>` step instead of adding the product to the cart. To do so,
+go to :menuselection:`Website --> Configuration --> Settings`. Under the :guilabel:`Shop - Checkout
+Process` section, tick the :guilabel:`Buy Now` feature. This button is an *additional* option and
+does not replace the :guilabel:`Add to Cart` button.
+
+.. tip::
+   Alternatively, the :guilabel:`Buy Now` button can be enabled from any product's page while
+   in :guilabel:`Edit` mode. In the :guilabel:`Customize` tab, click the :icon:`fa-bolt`
+   :guilabel:`Buy now` button next to :guilabel:`Cart`.
+
+.. image:: cart/cart-buy-now.png
+   :alt: Buy Now button
+
+.. _ecommerce/checkout/re-order:
+
+Re-order from portal
+--------------------
+
+Customers have the possibility to re-order items from previous sales orders on the customer
+portal. They can find the :guilabel:`Order Again` button on their sales order
+in the customer portal. To enable this function, go to :menuselection:`Website --> Configuration -->
+Settings`. Under the :guilabel:`Shop - Checkout Process` section, tick the
+:guilabel:`Re-order From Portal` feature.
+
+.. image:: cart/order-again-button.png
+   :alt: Re-order button
 
 .. _ecommerce/checkout/policy:
 
@@ -126,6 +247,10 @@ addresses are identical), and click :guilabel:`Confirm` to proceed to the next s
    For B2B customers, you can also :ref:`enable <ecommerce/checkout/customize_steps>` optional
    :guilabel:`VAT` and :guilabel:`Company name` fields by toggling the :guilabel:`Show B2B Fields`
    option in the website editor.
+
+   You can add a checkbox for users without an account to sign up for a newsletter. To do so,
+   go to :menuselection:`Website --> Configuration --> Settings`, scroll down to the
+   :guilabel:`Shop - Checkout Process` section, and enable the :guilabel:`Newsletter` feature.
 
 .. _ecommerce/checkout/extra_step:
 
