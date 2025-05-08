@@ -100,9 +100,9 @@ be downloaded from the `Odoo download page <https://www.odoo.com/page/download>`
    .. group-tab:: Debian/Ubuntu
 
       .. note::
-         Odoo {CURRENT_MAJOR_VERSION} 'deb' package currently supports `Debian Buster
-         <https://www.debian.org/releases/buster/>`_ and `Ubuntu 18.04
-         <https://releases.ubuntu.com/18.04>`_ or above.
+         Odoo {CURRENT_MAJOR_VERSION} 'deb' package currently supports `Debian Bookworm (12)
+         <https://www.debian.org/releases/bookworm/>`_ and `Ubuntu Jammy (22.04LTS)
+         <https://releases.ubuntu.com/jammy>`_ or above.
 
       Once downloaded, execute the following commands **as root** to install Odoo as a service,
       create the necessary PostgreSQL user, and automatically start the server:
