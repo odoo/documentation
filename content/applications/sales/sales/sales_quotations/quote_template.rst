@@ -11,7 +11,7 @@ Configuration
 =============
 
 To use quotation templates, begin by activating the setting in :menuselection:`Sales app -->
-Configuration --> Settings`, and scroll to the :guilabel:`Quotations &_Orders` heading.
+Configuration --> Settings`, and scroll to the :guilabel:`Quotations & Orders` heading.
 
 Under the heading, tick the :guilabel:`Quotation Templates` checkbox. Doing so reveals a new
 :guilabel:`Default Template` field, in which a default quotation template can be chosen from the
