@@ -179,7 +179,7 @@ Archive`.
 .. note::
    To restore an archived article, click :guilabel:`Search`. In the search bar, click
    :menuselection:`Filters --> Archived`. Select the article and go to :menuselection:`Actions -->
-   Unarchive`.
+   Unarchive`.knowledge/management/rights
 
 .. _knowledge/management/retrieve:
 
