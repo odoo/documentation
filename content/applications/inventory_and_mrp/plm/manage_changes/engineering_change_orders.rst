@@ -117,7 +117,8 @@ of these ways:
 
 #. From the revised |BOM|, click the |ECO| name (for example, `ECO005: Improve...`) in the
    breadcrumbs located in the top-left corner.
-#. From the :guilabel:`PLM Overview`,  select the |ECO| type in the :guilabel:
+#. From the :guilabel:`PLM Overview`, click the :guilabel:`Engineering Changes` button on the
+   :guilabel:`BOM Updates` Kanban card. Click the Kanban card for the appropriate |ECO| to open it.
 
 On the |ECO| form, a new :guilabel:`BoM Changes` tab displays the differences between the current
 |BOM| and the new version.
