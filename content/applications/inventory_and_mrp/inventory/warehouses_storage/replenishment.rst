@@ -38,6 +38,12 @@ manufacturing order (MO), with the best choice depending on the business process
 
       Manage long-term replenishment based on inputted sales forecasts, via a dashboard.
 
+   .. card:: Suggest quantities
+      :target: ../../purchase/advanced/suggest
+      :tag: Beginner-friendly
+
+      Suggest quantities to order based on a past sales.
+
 Replenishment strategies
 ========================
 
