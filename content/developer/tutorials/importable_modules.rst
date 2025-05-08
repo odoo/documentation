@@ -821,7 +821,7 @@ In data modules, it is possible to define server actions that behave as controll
 the website module is installed.
 
 When the website module is installed, server actions can be marked as `Available on the website`
-and given a path (the full path is always prefixed with `/actions` to avoid URL collisions);
+and given a path (the full path is always prefixed with `/website/action` to avoid URL collisions);
 the global `request` object is made available in the local scope of the code server action.
 
 The `request` object provides several methods to access the body of the request:
@@ -835,7 +835,7 @@ to return, one can assign a response-like object to the `response` variable, whi
 returned to the website automatically.
 
 Here is an example of a simple website controller that will return a list of properties
-when the URL `/actions/estate` is called:
+when the URL `/website/action/estate` is called:
 
 .. code-block:: xml
 
@@ -898,7 +898,7 @@ by using `sudo` to access records).
    #. add a record rule so that properties marked as `x_api_published` can be read by the
       public user
    #. add a server action to return a list of properties in JSON format when the URL
-      `/actions/api/estate` is called
+      `/website/action/estate` is called
 
 A sprinkle of JavaScript
 ========================
@@ -921,11 +921,9 @@ A very minimal tour with a single step can be added by adding this file in `stat
 
     registry.category("web_tour.tours").add('estate_tour', {
         url: "/web",
-        sequence: 170,
         steps: () => [{
         trigger: '.o_app[data-menu-xmlid="estate.menu_root"]',
         content: 'Start selling your properties from this app!',
-        position: 'bottom',
         }],
     });
 
@@ -942,6 +940,17 @@ You then need to include the file in the appropriate bundle in the manifest file
             ],
         },
     }
+
+You also need to add an xml record in a new estate_tour.xml file in the data folder so that your
+tour is displayed:
+
+.. code-block:: xml
+
+    <record id="estate_tour" model="web_tour.tour">
+        <field name="name">estate_tour</field>
+        <field name="sequence">2</field>
+        <field name="rainbow_man_message">Welcome! Happy exploring.</field>
+    </record>
 
 .. note::
     Unlike normal Python modules, glob expansion is not supported in importable modules;
