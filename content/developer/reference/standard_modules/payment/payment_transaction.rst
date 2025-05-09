@@ -13,6 +13,7 @@ Payment Transaction
    .. automethod:: _get_specific_rendering_values
    .. automethod:: _get_tx_from_notification_data
    .. automethod:: _handle_notification_data
+   .. automethod:: _compare_notification_data
    .. automethod:: _process_notification_data
    .. automethod:: _send_capture_request
    .. automethod:: _send_payment_request
