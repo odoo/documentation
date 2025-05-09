@@ -74,5 +74,4 @@ Guide for Ariva S series scales <https://www.mt.com/dam/RET_DOCS/Ariv.pdf>`_ and
 #. Press **>0<**.
 #. Press **>0<** again to :guilabel:`SAVE`; the scale restarts.
 #. Reboot the IoT box or :ref:`restart the Windows virtual IoT service <iot/windows_iot/restart>`.
-   The scale should then appear as `Toledo 8217`, as opposed to the previous display, where it
-   appeared as `Adam Equipment Serial`.
+   The scale should then appear as `Toledo 8217`.
