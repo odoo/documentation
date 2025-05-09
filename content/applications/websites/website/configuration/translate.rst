@@ -15,10 +15,10 @@ Install languages
 
 To allow translation of your website, you must first :doc:`install <../../../general/users/language>`
 the required languages and add them to your website. To do so, go to :menuselection:`Website -->
-Configuration --> Settings` and click :icon:`fa-arrow-right` :guilabel:`Install languages` in the
-:guilabel:`Website Info` section. In the dialog box that opens, select the :guilabel:`Languages` you
-want from the dropdown menu, tick the required :guilabel:`Websites to translate`, and
-click :guilabel:`Add`.
+Configuration --> Settings` and click :icon:`fa-arrow-right` :guilabel:`Install new languages` in
+the :guilabel:`Website Info` section. In the dialog box that opens, select the :guilabel:`Languages`
+you want from the dropdown menu, tick the required :guilabel:`Websites to translate`, and click
+:guilabel:`Add`.
 
 To edit your website's languages, go to :menuselection:`Website -–> Configuration -–> Settings` and
 add/remove the required languages in/from the :guilabel:`Languages` field in the
