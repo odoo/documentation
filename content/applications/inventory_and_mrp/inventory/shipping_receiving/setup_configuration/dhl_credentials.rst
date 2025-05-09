@@ -16,14 +16,15 @@ least one *shipping method*, the process of :doc:`calculating shipping rates
 Enable DHL shipping connector
 =============================
 
-Before creating a DHL shipping method, it is necessary to enable the carrier's shipping connector.
-To do so, navigate to :menuselection:`Inventory app --> Configuration --> Settings`.
+Before creating a DHL shipping method, enable the carrier's shipping connector. To do so, navigate
+to :menuselection:`Inventory app --> Configuration --> Settings`.
 
 Scroll down to the :guilabel:`Shipping Connectors` section, and tick the checkbox next to
 :guilabel:`DHL Express Connector`. Finally, click :guilabel:`Save` to apply the changes.
 
-Once the connector has been enabled, a :icon:`oi-arrow-right` :guilabel:`DHL Shipping Methods` link
-appears below. Click the link to open a page showing all shipping methods configured for DHL.
+Once the connector has been enabled, a :icon:`fa-arrow-right` :guilabel:`DHL Shipping Methods` link
+appears below the setting. Click the link to open a page showing all shipping methods configured for
+DHL.
 
 Configure DHL shipping method
 =============================
@@ -44,7 +45,6 @@ Click :guilabel:`New` to open a blank shipping method form. If a shipping method
 created, it can be selected from this screen.
 
 .. image:: dhl_credentials/dhl-form.png
-   :align: center
    :alt: The form for a DHL shipping method.
 
 General information
@@ -70,28 +70,21 @@ DHL SiteID, password, and account number
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A DHL SiteID, password, and account number are used to link a DHL account with third-party services,
-like Odoo's **Inventory** app. The SiteID and password are different credentials than the ones used
-to log in to a DHL account.
+like Odoo's **Inventory** app.
 
-To obtain a DHL SiteID, password, and account number, it is necessary to register on the `DHL API
-Developer Portal <https://developer.dhl.com/user/register>`_, by filling out the following
-information:
+.. important::
+   The SiteID and password are different credentials than the ones used to log in to a DHL account.
 
-- :guilabel:`First name`
-- :guilabel:`Last name`
-- :guilabel:`Email address`
-- :guilabel:`Username`
-- :guilabel:`Company Name`
-- :guilabel:`Country`
+Here are two ways to obtain these DHL account credentials:
 
-After filling out all of the fields, tick the :guilabel:`I have read and accept the terms of use and
-the privacy policy` checkbox, and click :guilabel:`Send` to register.
-
-After registering, a confirmation email is sent to verify the application. Click the link inside the
-email to activate the developer portal account, and set a password.
-
-This email also includes the account number for the developer portal account. Enter the number in
-the :guilabel:`DHL Account Number` field on the shipping method form.
+- **If a DHL Express account is available**: Log into the `DHL Developer portal
+  <https://developer.dhl.com/api-reference/dhl-express-mydhl-api#get-started-section/
+  user-guide%get-access>`_, and then `request a DHL API account number <https://developer.dhl.
+  com/form/dhl-express-onboarding>`_.
+- **If a DHL Express account is unavailable**: Follow DHL's steps to `obtain a DHL Express account
+  <https://developer.dhl.com/api-reference/dhl-express-mydhl-api#get-started-section/user-guide%get-
+  access:~:text=around%20the%20world.-,User%20Guide,-Get%20Access>`_, and then follow the steps in
+  the previous bullet.
 
 Once the developer portal account has been confirmed, log in to the portal using the username and
 password. Click on the user avatar in the top-right corner of the screen to open the user dashboard.
@@ -131,3 +124,13 @@ Additional settings are available in the :guilabel:`Options` section at the bott
   after validating a delivery order.
 - :guilabel:`Dutiable Material`: Enable this option if the shipping method is liable to customs or
   other duties.
+
+Turn on the DHL Connection
+==========================
+
+Once the DHL connection is set up, use the buttons at the top of the form to turn on or debug the
+connection.
+
+- **Unpublished/Published**: turns the connection on or off.
+- **Test Environment/Production Environment**: sets whether requests actually get sent to DHL.
+- **No Debug/Debug Requests**: determines whether error logging occurs for requests to DHL.
