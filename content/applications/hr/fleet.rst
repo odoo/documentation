@@ -55,32 +55,6 @@ for existing available cars in this field.
    available, an employee would not be able to request a new vehicle. If there are only 10 cars
    available, then the employee would be able to request a new vehicle.
 
-.. _fleet/manufacturers:
-
-Manufacturers
-=============
-
-Odoo *Fleet* comes pre-configured with sixty-six commonly used car and bicycle manufacturers in the
-database, along with their logos. To view the pre-loaded manufacturers, go to :menuselection:`Fleet
-app --> Configuration --> Manufacturers`.
-
-The manufacturers appear in an alphabetical list. Each manufacturer's card lists how many specific
-models are configured for each particular manufacturer. Odoo comes with forty-six preconfigured
-:doc:`models <fleet/models>` from four major auto manufacturers, and one major bicycle manufacturer:
-Audi, BMW, Mercedes, Opel (cars), and Eddy Merckx (bicycle).
-
-.. image:: fleet/manufacturer.png
-   :align: center
-   :alt: Manufacturer card with the amount of models listed.
-
-Add a manufacturer
-------------------
-
-To add a new manufacturer to the database, click :guilabel:`Create`. A manufacturer form will load.
-Only two pieces of information are needed, the :guilabel:`Name` of the manufacturer, and the logo.
-Type the name of the manufacturer in the name field, and select an image to upload for the logo.
-When the information is entered, click :guilabel:`Save`.
-
 .. seealso::
    - :doc:`fleet/models`
    - :doc:`fleet/new_vehicle`
