@@ -101,7 +101,7 @@ VoIP workflows
 ==============
 
  Here are a few commonly used workflows for Odoo |VOIP|. This technology is especially popular with
- sales teams, but can be useful for other teams as well.
+ sales teams and support teams, but can be useful for other teams as well.
 
 .. cards::
    .. card:: Sales teams and VoIP
@@ -110,7 +110,12 @@ VoIP workflows
 
       Learn how to use VoIP for a sales team. This includes making sales calls, handling
       follow-ups, and sending a sales quotation while on a call.
+   .. card:: Support queues and VoIP
+      :target: voip/sales_calls
+      :large:
 
+      Learn how to use VoIP for a support team. This includes joining a call queue as an agent and
+      handling support tickets that require calls.
 
 .. toctree::
    :titlesonly:
@@ -120,3 +125,4 @@ VoIP workflows
    voip/voip_widget
    voip/devices_integrations
    voip/sales_calls
+   voip/support_calls
