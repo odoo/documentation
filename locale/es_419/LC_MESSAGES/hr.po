@@ -5,8 +5,8 @@
 # 
 # Translators:
 # Wil Odoo, 2025
-# Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2025
 # Fernanda Alvarez, 2025
+# Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-04-30 14:37+0000\n"
 "PO-Revision-Date: 2024-10-08 06:34+0000\n"
-"Last-Translator: Fernanda Alvarez, 2025\n"
+"Last-Translator: Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2025\n"
 "Language-Team: Spanish (Latin America) (https://app.transifex.com/odoo/teams/41243/es_419/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2244,6 +2244,14 @@ msgid ""
 "everyone's hours, and gain insights on which employees are working overtime,"
 " or checking out of work earlier than expected."
 msgstr ""
+"La aplicación **Asistencias** de Odoo cumple la función de un reloj "
+"registrador. Los empleados pueden registrar su entrada y salida con un "
+":ref:`dispositivo específico en modo quiosco <attendances/kiosk-mode-entry>`"
+" y también pueden hacerlo :ref:`desde la base de datos <attendances/check-"
+"in>`. Los gerentes pueden visualizar quién está disponible en cualquier "
+"momento, crear reportes para conocer las horas de todos sus empleados y "
+"obtener información sobre quiénes están trabajando horas adicionales o "
+"registrando su salida antes de la hora correspondiente."
 
 #: ../../content/applications/hr/attendances.rst:17
 msgid "Access rights"
@@ -2254,6 +2262,8 @@ msgid ""
 "Understanding access rights is essential to navigating the **Attendances** "
 "application."
 msgstr ""
+"Es esencial entender los permisos de acceso para navegar por la aplicación "
+"**Asistencias**."
 
 #: ../../content/applications/hr/attendances.rst:21
 msgid ""
@@ -2262,12 +2272,19 @@ msgid ""
 "all users can access their own attendance records from their employee form "
 "in the **Employees** app."
 msgstr ""
+"Todos los usuarios de la base de datos pueden registrar su ingreso y su "
+"salida desde la base de datos sin necesitar acceso a la aplicación "
+"**Asistencias**. Además, todos los usuarios pueden ingresar a sus propios "
+"registros de asistencia desde el formulario de empleado en la aplicación "
+"**Empleados**."
 
 #: ../../content/applications/hr/attendances.rst:25
 msgid ""
 "Access to both the **Attendances** application, and the various features "
 "within the application is determined by access rights."
 msgstr ""
+"El acceso a la aplicación **Asistencias** y a las diferentes funciones "
+"dentro de la misma depende de los permisos de acceso."
 
 #: ../../content/applications/hr/attendances.rst:28
 msgid ""
@@ -2278,6 +2295,12 @@ msgid ""
 "settings. For the :guilabel:`Attendances` field, the options are either to "
 "leave the field blank or select :guilabel:`Administrator`."
 msgstr ""
+"Para visualizar los permisos de acceso de un usuario, vaya a "
+":menuselection:`Ajustes --> Usuarios y empresas: Usuarios`, y haga clic en "
+"uno. En la pestaña :guilabel:`Permisos de acceso`, que es visible de forma "
+"predeterminada, diríjase a la sección :guilabel:`RECURSOS HUMANOS` para ver "
+"la configuración. En el campo de :guilabel:`Asistencias`, puede dejar el "
+"campo vacío o seleccionar :guilabel:`Administrador`."
 
 #: ../../content/applications/hr/attendances.rst:34
 msgid ""
@@ -2288,6 +2311,12 @@ msgid ""
 "settings. If left blank, the user does **not** have access to the "
 "**Attendances** application."
 msgstr ""
+"Si selecciona la opción :guilabel:`Administrador`, el usuario tendrá acceso "
+"sin restricciones a la aplicación **Asistencias**. Podrá ver todos los "
+"registros de asistencia de los empleados, ingresar al *modo quiosco* desde "
+"la aplicación, acceder a todas las métricas de reportes y realizar "
+"modificaciones a los ajustes. Si se deja en blanco, el usuario **no** tendrá"
+" acceso a la aplicación **Asistencias**."
 
 #: ../../content/applications/hr/attendances.rst:40
 msgid ""
@@ -2296,6 +2325,10 @@ msgid ""
 "appears on the main database dashboard. An :guilabel:`Access Error` pop-up "
 "message appears, stating:"
 msgstr ""
+"Si un usuario **no** tiene permisos de :guilabel:`Administrador` para la "
+"aplicación **Asistencias**, entonces **no** podrán abrir la aplicación, "
+"aunque aparezca en su tablero inicial. Si la intentan abrir, aparecerá una "
+"ventana emergente con un :guilabel:`Error de acceso` que dirá:"
 
 #: ../../content/applications/hr/attendances.rst:44
 msgid ""
@@ -2303,6 +2336,9 @@ msgid ""
 "\"attendance_manager_id\" on Employee (hr.employee). Please contact your "
 "system administrator.`"
 msgstr ""
+"`No tiene los permisos necesarios para acceder a los campos "
+"\"attendance_manager_id\" en el Empleado (hr.employee). Contacte al "
+"administrador de su sistema.`"
 
 #: ../../content/applications/hr/attendances.rst:47
 msgid ""
@@ -2312,6 +2348,12 @@ msgid ""
 "circle` :guilabel:`(green circle)` that are always available at the top of "
 "the database."
 msgstr ""
+"Los usuarios que no tengan acceso a la aplicación **Asistencias** todavía "
+"pueden :doc:`registrar su entrada y salida "
+"<../hr/attendances/check_in_check_out>` del trabajo dentro de la base de "
+"datos usando el :icon:`fa-circle` :guilabel:`(círculo rojo)` o :icon:`fa-"
+"circle` :guilabel:`(círculo verde)` que siempre está disponible en la parte "
+"superior de la base de datos."
 
 #: ../../content/applications/hr/attendances.rst:55
 msgid "Approvers"
@@ -2325,6 +2367,13 @@ msgid ""
 "records **only** for the employees they are assigned to. This is the only "
 "exception where non-admin users can view records in the **Attendances** app."
 msgstr ""
+"Un aprobador es el usuario que se asigna para revisar y gestionar los "
+"registros de asistencia de un empleado. Esta persona por lo general es un "
+"gerente, pero esto no es necesario. Los aprobadores que no tengan permisos "
+"de administrador pueden acceder y modificar los registros de asistencia "
+"**solo** de los empleados a los que están asignados. Esta es la única "
+"excepción en la que usuarios que no son administradores pueden ever los "
+"registros de la aplicación **Asistencias**."
 
 #: ../../content/applications/hr/attendances.rst:62
 msgid ""
@@ -2336,6 +2385,13 @@ msgid ""
 " on the **Attendances** application dashboard as well as in the attendance "
 "reports, and make modifications to their records."
 msgstr ""
+"Para ver quién es el aprobador de asistencias de un empleado, vaya a "
+":menuselection:`la aplicación Empleados` y haga clic en uno. Haga clic en la"
+" pestaña :guilabel:`Información del trabajo`, diríjase a la sección "
+":guilabel:`APROBADORES` y seleccione el campo :guilabel:`Asistencia`. La "
+"persona seleccionada podrá ver los registros de asistencia de ese empleado, "
+"tanto en el tablero de la aplicación *Asistencias* como en los reportes de "
+"asistencia, además de que podrá modificar los registros."
 
 #: ../../content/applications/hr/attendances.rst:71
 msgid ""
@@ -2345,6 +2401,11 @@ msgid ""
 "menu. Navigate to the :menuselection:`Attendances application --> "
 "Configuration` to access the configuration menu."
 msgstr ""
+"Son pocas las configuraciones que se tienen que hacer en la aplicación "
+"**Asistencias**. En el menú Configuración deberá determinar la manera en que"
+" los usuarios registran su entrada y salida, cómo funcionan los quioscos y "
+"cómo se calculan las horas adicionales. Vaya a :menuselection:`Asistencias "
+"--> Configuración` para acceder al menú de configuración."
 
 #: ../../content/applications/hr/attendances.rst:77
 msgid ""
@@ -2353,6 +2414,10 @@ msgid ""
 "building-o` :guilabel:`(building)` icon apply to all companies within the "
 "database."
 msgstr ""
+"Cualquier ajuste que tenga el icono :icon:`fa-building-o` "
+":guilabel:`(edificio)` es una configuración específica para la empresa. Los "
+"ajustes que no tengan el icono :icon:`fa-building-o` :guilabel:`(edificio)` "
+"se aplicarán a todas las empresas de la base de datos."
 
 #: ../../content/applications/hr/attendances.rst:82
 msgid "Modes"
@@ -2365,6 +2430,10 @@ msgid ""
 "If this is not activated, users must use a kiosk to check in and out of "
 "work."
 msgstr ""
+":guilabel:`Asistencias desde el backend` :icon:`fa-building-o`: Habilite "
+"esta función para permitir que los usuarios registren su entrada y salida "
+"desde la base de datos de Odoo. Si no habilita la opción, los usuarios "
+"deberán utilizar un quiosco para registrar su asistencia."
 
 #: ../../content/applications/hr/attendances.rst:87
 msgid ""
@@ -2372,6 +2441,10 @@ msgid ""
 " to automatically check out employees according to their working schedule, "
 "after a buffer of time has passed."
 msgstr ""
+":guilabel:`Registro de salida automático` :icon:`fa-building-o`: Habilite "
+"esta función para registrar la salida de los empleados de forma automática "
+"según su horario de trabajo, después de que un periodo de tiempo haya "
+"pasado."
 
 #: ../../content/applications/hr/attendances.rst:89
 msgid ""
@@ -2380,6 +2453,10 @@ msgid ""
 "time, in hours, that must elapse after an employee's working hours have "
 "ended, before they are automatically checked out."
 msgstr ""
+":guilabel:`Tolerancia`: Este campo solo aparece cuando habilita la función "
+":guilabel:`Registro de salida automático` :icon:`fa-building-o`. Ingrese la "
+"cantidad de tiempo, en horas, que debe pasar para que el horario laboral del"
+" empleado termine antes de que se registre su salida de forma automática."
 
 #: ../../content/applications/hr/attendances.rst:94
 msgid ""
@@ -2388,6 +2465,10 @@ msgid ""
 "9:00 AM, and forgets to check-out at 5:00 PM. At 7:00 PM, they are "
 "automaticlaly checked out."
 msgstr ""
+"Cuando se habilita la opción :guilabel:`Registro de salida automático` y la "
+":guilabel:`Tolerancia` es de `2.00` horas, si un empleado que registra su "
+"entrada a las 9:00 a. m. y olvida registrar su salida a las 5:00 p. m., a "
+"las 7:00 p. m. se registrará su salida de forma automática."
 
 #: ../../content/applications/hr/attendances.rst:98
 msgid ""
@@ -2395,6 +2476,10 @@ msgid ""
 "to log any absences that are not associated with a time off request, such as"
 " vacation time or sick time, on the attendances report."
 msgstr ""
+":guilabel:`Gestión de ausencias` :icon:`fa-building-o`: Habilite esta "
+"función para registrar las ausencias que no estén relacionadas con una "
+"solicitud de tiempo personal, como tiempo de vacaciones o enfermedad, en el "
+"reporte de asistencias."
 
 #: ../../content/applications/hr/attendances.rst:103
 msgid "Extra Hours"
@@ -2406,6 +2491,9 @@ msgid ""
 "is calculated, including when extra time is counted and what time is not "
 "logged."
 msgstr ""
+"Esta sección especifica cómo se calcula el tiempo adicional (las horas "
+"extra), incluyendo cuándo se cuenta el tiempo adicional y qué tiempo no se "
+"registra."
 
 #: ../../content/applications/hr/attendances.rst:108
 msgid ""
@@ -2472,6 +2560,10 @@ msgid ""
 "time automatically approved, or :guilabel:`Approved by Manager` if all extra"
 " time should be reviewed and approved by a manager."
 msgstr ""
+":guilabel:`Validación de horas extra` :icon:`fa-building-o`: Puede habilitar"
+" la opción :guilabel:`Aprobada en automático` para que todas las horas extra"
+" se aprueben en automático, o la opción :guilabel:`Aprobado por el gerente` "
+"si todo el tiempo extra debe revisarlo y aprobarlo un gerente."
 
 #: ../../content/applications/hr/attendances.rst:133
 msgid ""
@@ -2488,6 +2580,8 @@ msgid ""
 "Approved extra hours can be :ref:`deducted from an approved time off request"
 " <time_off/deduct-extra-hours>`."
 msgstr ""
+"Las horas extra aprobadas se pueden :ref:`deducir de una solicitud de tiempo"
+" personal aprobada <time_off/deduct-extra-hours>`."
 
 #: ../../content/applications/hr/attendances.rst:141
 #: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:11
@@ -2509,6 +2603,13 @@ msgid ""
 "employee's check in and check out information is also visible on the "
 ":guilabel:`Overview` dashboard."
 msgstr ""
+"La aplicación **Asistencias** se abre de forma automática en el tablero "
+":guilabel:`Información general` con toda la información de entrada y salida "
+"del usuario que inició sesión. Si el usuario tiene :ref:`permisos de acceso "
+"<attendances/access-rights>` específicos o es :ref:`aprobador "
+"<attendances/approvers>` de otros empleados, entonces la información "
+"adicional de entrada y salida de esos empleados también aparecerá en el "
+"tablero :guilabel:`Información general`."
 
 #: ../../content/applications/hr/attendances.rst:150
 msgid "Views"
@@ -2521,6 +2622,11 @@ msgid ""
 "photo. To switch back to the Gantt chart, click the :guilabel:`Gantt` "
 "button, located next to the :guilabel:`List` button."
 msgstr ""
+"La vista predeterminada es la vista de gráfico de Gantt, si quiere "
+"cambiarlo, haga clic en el icono :guilabel:`Lista` ubicado en la esquina "
+"superior derecha del tablero, abajo de la foto del usuario. Para volver al "
+"gráfico de Gantt, haga clic en el botón :guilabel:`Gantt` que está ubicado "
+"junto al botón :guilabel:`Lista`."
 
 #: ../../content/applications/hr/attendances.rst:156
 msgid ""
@@ -2536,6 +2642,18 @@ msgid ""
 "button. This refreshes the dashboard, presenting information containing the "
 "current day's information."
 msgstr ""
+"La vista predeterminada proporciona la información del día actual. Para que "
+"aparezca la información de la :guilabel:`semana`, :guilabel:`mes` o "
+":guilabel:`año`, haga clic en el botón :guilabel:`Día` para abrir el menú "
+"desplegable que muestra esas otras opciones. Seleccione la vista deseada, "
+"después el tablero se actualizará y aparecerá la información seleccionada. "
+"Para cambiar el :guilabel:`día`, :guilabel:`semana`, :guilabel:`mes` o "
+":guilabel:`año` que aparecen, haga clic en los botones :guilabel:`(flecha "
+"izquierda)` o :icon:`oi-arrow-right` :guilabel:`(flecha derecha)` ubicados a"
+" cada lado del menú desplegable. Para regresar a una vista que incluya el "
+"día actual haga clic en el botón :guilabel:`Hoy` para actualizar el tablero "
+"y hacer que aparezca la información que incluye la información del día en "
+"curso."
 
 #: ../../content/applications/hr/attendances.rst:165
 msgid ""
@@ -2564,6 +2682,10 @@ msgid ""
 "rights>` and/or are :ref:`approvers <attendances/approvers>` for the "
 "employees with the errors."
 msgstr ""
+"Cualquier entrada que tenga errores aparecerá en rojo, lo que indica que es "
+"necesario que los resuelva un usuario con los :ref:`permisos de acceso "
+"<attendances/access-rights>` adecuados o que sea :ref:`aprobador "
+"<attendances/approvers>` de los empleados."
 
 #: ../../content/applications/hr/attendances.rst:180
 msgid "Filters and groups"
@@ -2578,6 +2700,13 @@ msgid ""
 ":guilabel:`Group By` options. Several preconfigured filters and groups are "
 "available to choose from, as well as an option to create custom ones."
 msgstr ""
+"Para filtrar los resultados en el tablero de información general, o para "
+"visualizar distintos grupos de información, haga clic en el botón :icon:`fa-"
+"caret-down` :guilabel:`(desplegar panel de búsqueda)` ubicado del lado "
+"derecho de la barra de :guilabel:`búsqueda` sobre el tablero. Seleccione una"
+" de las opciones disponibles de :guilabel:`Filtros` o :guilabel:`Agrupar "
+"por`. Hay varios filtros y grupos preconfigurados para elegir, así como una "
+"opción para crear filtros personalizados."
 
 #: ../../content/applications/hr/attendances.rst:189
 #: ../../content/applications/hr/payroll/reporting.rst:190
@@ -2939,6 +3068,11 @@ msgid ""
 "switch back to the graph view, click the :guilabel:`Graph` button, located "
 "next to the :guilabel:`Pivot Table` button."
 msgstr ""
+"La vista predeterminada es una :guilabel:`gráfica`. Para consultar los datos"
+" en una tabla dinámica, haga clic en el botón :guilabel:`Tabla dinámica` "
+"ubicado en la esquina superior derecha del reporte. Para volver a la vista "
+"de gráfica, haga clic en el botón :guilabel:`Gráfica` que se encuentra junto"
+" al botón :guilabel:`Tabla dinámica`."
 
 #: ../../content/applications/hr/attendances.rst:309
 msgid ""
@@ -3000,7 +3134,7 @@ msgstr ":doc:`attendances/kiosks`"
 
 #: ../../content/applications/hr/attendances.rst:328
 msgid ":doc:`attendances/management`"
-msgstr ""
+msgstr ":doc:`attendances/management`"
 
 #: ../../content/applications/hr/attendances.rst:329
 msgid ":doc:`attendances/hardware`"
@@ -3225,6 +3359,10 @@ msgid ""
 "access to the **Attendances** app, must sign in and out of work using a "
 "kiosk. The following are the physical requirements for setting up a kiosk."
 msgstr ""
+"Los empleados que **no** son usuarios de la base de datos, por lo que **no**"
+" tienen acceso a la aplicación **Asistencias**, deben registrar su entrada y"
+" salida del trabajo desde un quiosco. Los siguientes son requisitos físicos "
+"para configurar un quiosco."
 
 #: ../../content/applications/hr/attendances/hardware.rst:10
 msgid "Kiosk devices"
@@ -3252,6 +3390,9 @@ msgid ""
 ":ref:`configuration <attendances/kiosk-settings>` section of the "
 "**Attendances** app."
 msgstr ""
+"Un quiosco se usa para navegar a la página de internet que se especificó en "
+"la sección :ref:`Configuración <attendances/kiosk-settings>` de la "
+"aplicación **Asistencias**."
 
 #: ../../content/applications/hr/attendances/hardware.rst:20
 msgid "Kiosks are set up using one of the following types of devices:"
@@ -3275,6 +3416,9 @@ msgid ""
 "space. That is why most consider using a smaller device with a touchscreen "
 "as a kiosk."
 msgstr ""
+"Las pantallas táctiles son fáciles de usar, además de que las tabletas y los"
+" dispositivos móviles ocupan menos espacio. Por eso mucha gente considera "
+"usar un dispositivo móvil con pantalla táctil como quiosco."
 
 #: ../../content/applications/hr/attendances/hardware.rst:30
 msgid ""
@@ -3293,6 +3437,9 @@ msgid ""
 "Badges are a way for employees to quickly sign in and out from a kiosk, as "
 "badges are scanned by the kiosk's camera to identify the employee."
 msgstr ""
+"Los gafetes son una forma en la que los empleados pueden iniciar y cerrar "
+"sesión en el quiosco sin problema, ya que es rápido escanear los gafetes con"
+" la cámara del quiosco para identificar al empleado."
 
 #: ../../content/applications/hr/attendances/hardware.rst:40
 msgid ""
@@ -3300,6 +3447,10 @@ msgid ""
 "Next, click on the desired employee card to open the employee's form, then "
 "click the :guilabel:`Settings` tab."
 msgstr ""
+"Para generar un gafete, primero debe ir a la :menuselection:`aplicación "
+"Empleados`. Después, haga clic en la tarjeta de empleado deseada para abrir "
+"el formulario del empleado, después haga clic en la pestaña "
+":guilabel:`Ajustes`."
 
 #: ../../content/applications/hr/attendances/hardware.rst:43
 msgid ""
@@ -3447,6 +3598,9 @@ msgid ""
 "Odoo's **Attendances** app allows employees to check in and out of work "
 "directly from the database or a kiosk."
 msgstr ""
+"La aplicación **Asistencias** de Odoo permite que los empleados registren su"
+" entrada y salida del trabajo directamente desde la base de datos o el "
+"quiosco."
 
 #: ../../content/applications/hr/attendances/kiosks.rst:8
 msgid ""
@@ -3469,6 +3623,9 @@ msgid ""
 "Only employees with access to the Odoo database can check in and out from "
 "the **Attendances** app, and they are referred to as *users*."
 msgstr ""
+"Solo los empleados que tienen acceso a la base de datos de Odoo pueden "
+"registrar sus entradas y salidas desde la aplicación **Asistencias**. A "
+"estos empleados se les llama *usuarios*."
 
 #: ../../content/applications/hr/attendances/kiosks.rst:17
 msgid ""
@@ -3489,6 +3646,10 @@ msgid ""
 ":guilabel:`Settings` page, configure the :ref:`Modes section "
 "<attendances/kiosk-mode>` and the :ref:`attendances/kiosk-settings`."
 msgstr ""
+"Para usar los quioscos en la aplicación **Asistencias** vaya a "
+":menuselection:`la aplicación Asistencias --> Configuración`. En la página "
+":guilabel:`Ajustes` configure la :ref:`sección de Modos <attendances/kiosk-"
+"mode>` y la :ref:`attendances/kiosk-settings`."
 
 #: ../../content/applications/hr/attendances/kiosks.rst:28
 msgid ""
@@ -3500,7 +3661,7 @@ msgstr ""
 
 #: ../../content/applications/hr/attendances/kiosks.rst:34
 msgid "Modes section"
-msgstr ""
+msgstr "Sección de modos"
 
 #: ../../content/applications/hr/attendances/kiosks.rst:36
 msgid ""
@@ -3508,6 +3669,9 @@ msgid ""
 "for their name on the kiosk (:guilabel:`Manual Selection`), scanning an "
 "employee ID or key fob (:guilabel:`Barcode/RFID`). or both."
 msgstr ""
+"Determine cómo registrará su entrada un usuario desde el quiosco. Indique si"
+" tendrá que buscar su nombre en el quiosco (:guilabel:`Selección manual`), "
+"escanear su ID o clave FOB (:guilabel:`Código de barras / RFID`) o ambas."
 
 #: ../../content/applications/hr/attendances/kiosks.rst:40
 msgid ""
@@ -3517,12 +3681,19 @@ msgid ""
 ":guilabel:`Barcode/RFID and Manual Selection`, or :guilabel:`Manual "
 "Selection`."
 msgstr ""
+"En la página de ajustes use el menú desplegable del campo :guilabel:`Modo "
+"quiosco` :icon:`fa-building-o` en la sección :guilabel:`Modos` y haga la "
+"selección que desee. Las opciones que verá son :guilabel:`Código de "
+"barras/RFID`, :guilabel:`Código de barras/RFID y selección manual` y "
+":guilabel:`Selección manual`."
 
 #: ../../content/applications/hr/attendances/kiosks.rst:46
 msgid ""
 "The **Barcode** application **does not** need to be installed to use one of "
 "the Barcode/RFID settings."
 msgstr ""
+"La aplicación **Código de barras** **no** necesita estar instalada para usar"
+" las funciones de códigos de barras y RFID."
 
 #: ../../content/applications/hr/attendances/kiosks.rst:52
 msgid "Kiosk Settings section"
@@ -3542,6 +3713,10 @@ msgid ""
 "appears if one of the two *Barcode/RFID* selections were configured for the "
 ":ref:`Kiosk Mode <attendances/kiosk-mode>` setting."
 msgstr ""
+":guilabel:`Origen del código de barras` :icon:`fa-building-o`: Este ajuste "
+"**solo** aparece si se selecciona alguna de las opciones, *Código de "
+"barras/RFID* en el ajuste de :ref:`Modo de quiosco <attendances/kiosk-"
+"mode>`."
 
 #: ../../content/applications/hr/attendances/kiosks.rst:61
 msgid ""
@@ -3561,6 +3736,9 @@ msgid ""
 " check-in/check-out confirmation message remains on the kiosk screen before "
 "returning to the main check in screen."
 msgstr ""
+":guilabel:`Tiempo de visualización` :icon:`fa-building-o`: Establezca "
+"cuántos segundos el mensaje de confirmación de entrada y salida permanecerá "
+"en el quiosco antes de volver a la pantalla principal de entrada."
 
 #: ../../content/applications/hr/attendances/kiosks.rst:66
 msgid ""
@@ -3583,6 +3761,11 @@ msgid ""
 "When setting up a kiosk device, navigate to this unique web address in a web"
 " browser to present the **Attendances** app kiosk."
 msgstr ""
+":guilabel:`URL del quiosco de asistencia`: Odoo genera una dirección web "
+"(URL) única para usar un dispositivo como quiosco sin tener que iniciar "
+"sesión en la base de datos de Odoo. Al configurar un dispositivo de quiosco,"
+" vaya a esta dirección web única en un navegador web para abrir el quiosco "
+"de la aplicación **Asistencias**."
 
 #: ../../content/applications/hr/attendances/kiosks.rst:75
 msgid ""
@@ -3592,6 +3775,13 @@ msgid ""
 " :icon:`fa-refresh` :guilabel:`Generate new URL`, located beneath the link, "
 "to generate a new URL, and update the kiosk, accordingly."
 msgstr ""
+"Estas URL de quiosco **no** están protegidas por ningún tipo de código de "
+"acceso. Cualquier persona que tenga la URL puede acceder al quiosco de la "
+"aplicación **Asistencias**. Si la dirección se encuentra comprometida por "
+"cualquier motivo, por ejemplo, por una brecha de seguridad, haga clic en el "
+"botón :icon:`fa-refresh` :guilabel:`Generar una nueva URL para el modo "
+"quiosco` ubicado abajo del enlace, esto generará una nueva URL y actualizará"
+" el quiosco."
 
 #: ../../content/applications/hr/attendances/kiosks.rst:81
 msgid "Kiosk mode"
@@ -3661,6 +3851,8 @@ msgid ""
 "To exit *Kiosk Mode*, either close the tab in the web browser or return to "
 "the main log-in screen of Odoo."
 msgstr ""
+"Para salir del *modo quiosco* cierre la pestaña en el navegador o regrese a "
+"la pantalla principal de inicio de sesión de Odoo."
 
 #: ../../content/applications/hr/attendances/kiosks.rst:111
 msgid "Check in and out with a kiosk"
@@ -3675,6 +3867,9 @@ msgid ""
 "To check in or out using a badge, tap the :icon:`fa-barcode` :guilabel:`Scan"
 " your badge` image in the center of the kiosk."
 msgstr ""
+"Para registrar las entradas o salidas del trabajo con un gafete, haga clic "
+"en la imagen :icon:`fa-barcode` :guilabel:`Escanee su identificación` que "
+"aparece en el centro del quiosco."
 
 #: ../../content/applications/hr/attendances/kiosks.rst-1
 msgid "The Attendances Kiosk view displaying the scan badge image."
@@ -3710,6 +3905,8 @@ msgstr "RFID"
 msgid ""
 "To check in or out using an RFID key fob, scan the fob with an RFID reader."
 msgstr ""
+"Para registrar salidas o entradas con un llavero RFID, escanee el llavero "
+"con un lector de RFID."
 
 #: ../../content/applications/hr/attendances/kiosks.rst:133
 msgid ""
@@ -3739,6 +3936,10 @@ msgid ""
 " and a screen appears with all the employees that can be checked in or out. "
 "The **Employees** app dashboard has the same display."
 msgstr ""
+"Presione el botón :icon:`fa-user-o` :guilabel:`Identifíquese de forma "
+"manual` que aparece en el quiosco y aparecerá una pantalla con todos los "
+"empleados que pueden registrar sus entradas y salidas. El tablero de la "
+"aplicación **Empleados** tiene el mismo diseño."
 
 #: ../../content/applications/hr/attendances/kiosks.rst:145
 msgid ""
@@ -3750,13 +3951,16 @@ msgstr ""
 
 #: ../../content/applications/hr/attendances/kiosks.rst:148
 msgid "To find a specific person, either:"
-msgstr ""
+msgstr "Para encontrar a un empleado en específico puede:"
 
 #: ../../content/applications/hr/attendances/kiosks.rst:150
 msgid ""
 "Search: tap into the search bar and enter the desired person's name. As the "
 "name is typed in, the matching results are displayed on the screen."
 msgstr ""
+"Buscar: Presione la barra de búsqueda y escriba el nombre de la persona que "
+"busca. Conforme escriba el nombre, los resultados que coincidan se mostrarán"
+" en la pantalla."
 
 #: ../../content/applications/hr/attendances/kiosks.rst:152
 msgid ""
@@ -3765,6 +3969,11 @@ msgid ""
 " specific department. The number at the end of each listed department "
 "represents how many employees that department has."
 msgstr ""
+"Ordenar por departamento: Toque la selección que quiera en la sección de "
+"departamento que se encuentra en el lado izquierdo de la pantalla. De esta "
+"manera **solo** verá a los empleados de ese departamento específico. El "
+"número al final de cada departamento que aparece en la lista representa "
+"cuántos empleados tiene ese departamento."
 
 #: ../../content/applications/hr/attendances/kiosks.rst:157
 msgid "PIN"
@@ -3789,6 +3998,11 @@ msgid ""
 "appears above the numbers. When checking out, :guilabel:`(Employee) Please "
 "enter your PIN to check out` appears above the numbers."
 msgstr ""
+"Después de seleccionar al empleado, aparecerá un teclado numérico con un "
+"mensaje. Al registrar la entrada aparece el mensaje :guilabel:`(Empleado) "
+"Ingrese su PIN para registrar entrada` arriba de los números. Al registrar "
+"la salida aparece el mensaje :guilabel:`(Empleado) Ingrese su PIN para "
+"registrar salida` arriba de los números."
 
 #: ../../content/applications/hr/attendances/kiosks.rst:167
 msgid ""
@@ -3814,6 +4028,8 @@ msgid ""
 "When an employee checks in or out, a confirmation message appears, with all "
 "the check in or check out information."
 msgstr ""
+"Cuando un empleado registra su entrada y salida, aparece un mensaje de "
+"confirmación con toda la información de registro."
 
 #: ../../content/applications/hr/attendances/kiosks.rst:181
 msgid ""
@@ -3822,6 +4038,11 @@ msgid ""
 "out that day, an :guilabel:`Hours Previously Today: HH:MM` message also "
 "appears, showing the total hours logged earlier."
 msgstr ""
+"Al registrar la entrada, aparecerá el mensaje :guilabel:`Bienvenido "
+"(Empleado)` junto con la fecha y hora actual. Si el empleado ya registró su "
+"entrada o salida en el día, también aparecerá el mensaje :guilabel:`Horas "
+"previas de hoy: HH:MM`, que mostrará el total de horas que ya se "
+"registraron."
 
 #: ../../content/applications/hr/attendances/kiosks.rst:185
 msgid ""
@@ -3829,6 +4050,10 @@ msgid ""
 "date and time of check out. Beneath the message is an :guilabel:`Hours "
 "Today: HH:MM` field, with the total hours and minutes logged for the day."
 msgstr ""
+"Al registrar la salida, aparecerá el mensaje :guilabel:`Hasta pronto "
+"(Empleado)` junto con la fecha y hora actual. Abajo de ese mensaje aparecerá"
+" el campo :guilabel:`Horas de hoy: HH:MM`, que mostrará el total de horas y "
+"minutos que se registraron en el día."
 
 #: ../../content/applications/hr/attendances/kiosks.rst:189
 msgid ""
@@ -3836,6 +4061,9 @@ msgid ""
 "button. To exit the screen before the preset time in the kiosk, tap the "
 ":guilabel:`OK` button."
 msgstr ""
+"Abajo de los mensajes de \"bienvenido\" y \"nos vamos pronto\" hay un botón "
+"que lee :guilabel:`De acuerdo`. Para salir de la pantalla antes del tiempo "
+"predeterminado en el quiosco, haga clic en el botón :guilabel:`De acuerdo`."
 
 #: ../../content/applications/hr/attendances/kiosks.rst-1
 msgid "The goodbye message with all the employee's check out information."
@@ -3845,7 +4073,7 @@ msgstr ""
 
 #: ../../content/applications/hr/attendances/management.rst:3
 msgid "Work approvals and overtime"
-msgstr ""
+msgstr "Aprobaciones de trabajo y horas extras"
 
 #: ../../content/applications/hr/attendances/management.rst:5
 msgid ""
@@ -3853,10 +4081,13 @@ msgid ""
 "all logged attendances are correct, especially overtime hours and incomplete"
 " shifts."
 msgstr ""
+"La aplicación **Asistencias** de Odoo requiere supervisión de la gerencia "
+"para asegurar que todas las asistencias registradas sean correctas, sobre "
+"todo horas extra y turnos incompletos."
 
 #: ../../content/applications/hr/attendances/management.rst:11
 msgid "Management dashboard"
-msgstr ""
+msgstr "Tablero de gestión"
 
 #: ../../content/applications/hr/attendances/management.rst:13
 msgid ""
@@ -3865,6 +4096,10 @@ msgid ""
 "management dashboard. To access this, navigate to "
 ":menuselection:`Attendances app --> Management`."
 msgstr ""
+"Todos los registros de asistencia que requieren aprobación, usualmente "
+"debido a registros de trabajo o tiempo personal no aprobados, se gestionan "
+"desde un tablero de gestión centralizado. Para acceder a este tablero vaya a"
+" :menuselection:`la aplicación Asistencias --> Gestión`."
 
 #: ../../content/applications/hr/attendances/management.rst:17
 msgid ""
@@ -3873,35 +4108,47 @@ msgid ""
 "due to the two default filters in the search bar, the :guilabel:`To Approve`"
 " and :guilabel:`Active Employees`."
 msgstr ""
+"El tablero :guilabel:`Gestión` solo muestra los registros de asistencia para"
+" los empleados que deben aprobarse, en la vista de lista predeterminada. "
+"Esto se debe a los dos filtros predeterminados en la barra de búsqueda, "
+":guilabel:`Por aprobar` y :guilabel:`Empleados activos`."
 
 #: ../../content/applications/hr/attendances/management.rst:21
 msgid "Each attendance record displays the following information:"
-msgstr ""
+msgstr "Cada registro de asistencia muestra la información a continuación:"
 
 #: ../../content/applications/hr/attendances/management.rst:23
 msgid ":guilabel:`Employee`: the name of the employee"
-msgstr ""
+msgstr ":guilabel:`Empleado`: El nombre del empleado."
 
 #: ../../content/applications/hr/attendances/management.rst:24
 msgid ":guilabel:`Check In`: the date and time the employee checked in"
 msgstr ""
+":guilabel:`Registrar entrada`: La fecha y hora en la que el empleado "
+"registró su entrada."
 
 #: ../../content/applications/hr/attendances/management.rst:25
 msgid ":guilabel:`Check Out`: the date and time the employee checked out"
 msgstr ""
+":guilabel:`Registrar salida`: La fecha y hora en la que el empleado registró"
+" su salida."
 
 #: ../../content/applications/hr/attendances/management.rst:26
 msgid ""
 ":guilabel:`Worked Time`: the number of worked hours the employee logged"
 msgstr ""
+":guilabel:`Tiempo trabajado`: El total de horas de trabajo que el empleado "
+"registró."
 
 #: ../../content/applications/hr/attendances/management.rst:27
 msgid ":guilabel:`Worked Extra Hours`: the amount of overtime worked"
 msgstr ""
+":guilabel:`Horas extra trabajadas`: El total de horas extra que el empleado "
+"trabajó."
 
 #: ../../content/applications/hr/attendances/management.rst:28
 msgid ":guilabel:`Extra Hours`: the total extra hours logged"
-msgstr ""
+msgstr ":guilabel:`Horas extra`: El total de horas extra registradas."
 
 #: ../../content/applications/hr/attendances/management.rst:29
 msgid ""
@@ -3909,16 +4156,21 @@ msgid ""
 "attendance records that appear on this dashboard have a status of "
 ":guilabel:`To Approve`."
 msgstr ""
+":guilabel:`Estado de tiempo adicional`: El estado del registro de "
+"asistencia. Todos los registros que aparecen en este tablero tienen el "
+"estado :guilabel:`Por aprobar`."
 
 #: ../../content/applications/hr/attendances/management.rst-1
 msgid ""
 "The Attendances app Management dashboard, displaying entries needing "
 "approval."
 msgstr ""
+"Captura de pantalla del tablero de gestión de la aplicación Asistencias que "
+"muestra los registros que todavía necesitan aprobación."
 
 #: ../../content/applications/hr/attendances/management.rst:38
 msgid "Approvals and refusals"
-msgstr ""
+msgstr "Aprobaciones y rechazos"
 
 #: ../../content/applications/hr/attendances/management.rst:40
 msgid ""
@@ -3928,6 +4180,11 @@ msgid ""
 ":guilabel:`Refuse` buttons appear. Click the corresponding button to either "
 "approve or refuse the logged attendance record."
 msgstr ""
+"Los registros de asistencia se pueden aprobar y rechazar desde :ref:`el "
+"tablero de gestión <attendances/dashboard>`. En el lado de la derecha de "
+"cada registro aparecerán los botones :icon:`fa-check` :guilabel:`Aprobar` y "
+":icon:`fa-times` :guilabel:`Rechazar`. Haga clic en el botón correspondiente"
+" para aprobar o rechazar el registro de asistencia."
 
 #: ../../content/applications/hr/attendances/management.rst:46
 msgid ""
@@ -3935,10 +4192,13 @@ msgid ""
 ":guilabel:`Management` dashboard, it is **not** possible to view the details"
 " of the attendance record."
 msgstr ""
+"Al aprobar o rechazar registros de asistencia desde el tablero de "
+":guilabel:`gestión` **no** es posible ver los detalles del registro de "
+"asistencia."
 
 #: ../../content/applications/hr/attendances/management.rst:50
 msgid "Partial approvals"
-msgstr ""
+msgstr "Aprobaciones parciales"
 
 #: ../../content/applications/hr/attendances/management.rst:52
 msgid ""
@@ -3946,6 +4206,9 @@ msgid ""
 "and not the full amount. To approve only a portion of overtime, click into "
 "an attendance record to view the details."
 msgstr ""
+"Es posible aprobar solo una porción de las :guilabel:`Horas extra` aprobadas"
+" y no todas. Para aprobar solo una porción de las horas extra, haga clic en "
+"un registro de asistencia para ver los detalles."
 
 #: ../../content/applications/hr/attendances/management.rst:55
 msgid ""
@@ -3955,6 +4218,11 @@ msgid ""
 "difference between the :guilabel:`Worked Time` and :guilabel:`Extra Hours` "
 "fields."
 msgstr ""
+"Haga clic en el campo :guilabel:`Horas extra` e ingrese la cantidad de horas"
+" que va a aprobar. Después de editar el campo :guilabel:`Horas extra`, el "
+"campo :guilabel:`Horas extra trabajadas` se hará visible para mostrar la "
+"diferencia entre los campos :guilabel:`Tiempo trabajado` y :guilabel:`Horas "
+"extra`."
 
 #: ../../content/applications/hr/attendances/management.rst:60
 msgid ""
@@ -3965,6 +4233,12 @@ msgid ""
 ":guilabel:`Extra Hours` is five hours. The :guilabel:`worked Time` field "
 "**cannot** be modified."
 msgstr ""
+"El campo :guilabel:`Tiempo trabajado` es el total de horas que el empleado "
+"registró (la suma del :guilabel:`Tiempo trabajado` y las :guilabel:`Horas "
+"extra`) Por ejemplo, si está programado que un empleado trabaje ocho horas "
+"y, además, trabajó cinco horas extra, el :guilabel:`Tiempo trabajado` será "
+"trece horas y las :guilabel:`Horas extra` serán cinco horas. El "
+":guilabel:`Tiempo trabajado` **no** se puede modificar."
 
 #: ../../content/applications/hr/attendances/management.rst:65
 msgid ""
@@ -3974,16 +4248,23 @@ msgid ""
 ":guilabel:`Approve` button. The difference in hours appears in the "
 ":guilabel:`Extra Hours` field."
 msgstr ""
+"Haga clic en el icono :icon:`fa-check` :guilabel:`Aprobar` para aprobar las "
+":guilabel:`Horas extra` actualizadas. Una vez que se haya hecho la "
+"aprobación parcial, el campo :guilabel:`Horas extra trabajadas` desaparecerá"
+" junto con el botón :icon:`fa-check` :guilabel:`Aprobar`. La diferencia en "
+"horas aparecerá en el campo :guilabel:`Horas extra`."
 
 #: ../../content/applications/hr/attendances/management.rst:70
 msgid ""
 "Once overtime hours are partially approved, the status changes to "
 ":guilabel:`Approved`."
 msgstr ""
+"Una vez que se aprueben las horas extra de forma parcial, el estado cambiará"
+" a :guilabel:`Aprobado`."
 
 #: ../../content/applications/hr/attendances/management.rst-1
 msgid "A detailed attendance record."
-msgstr ""
+msgstr "Captura de pantalla de un registro de asistencia detallado."
 
 #: ../../content/applications/hr/attendances/management.rst:76
 msgid ""
@@ -3991,6 +4272,10 @@ msgid ""
 "clicking :icon:`fa-times` :guilabel:`Refuse`. The record can be modified as "
 "many times as needed."
 msgstr ""
+"Una vez que se aprueben las horas extra de forma parcial, puede rechazar el "
+"tiempo extra que quede haciendo clic en :icon:`fa-times` "
+":guilabel:`Rechazar`. El registro se puede modificar tantas veces como sea "
+"necesario"
 
 #: ../../content/applications/hr/attendances/management.rst:80
 msgid ""
@@ -3998,16 +4283,22 @@ msgid ""
 "needed. The method the employee checked-in to work is found on the "
 "individual record, in the :guilabel:`Mode` field."
 msgstr ""
+"A veces es necesario verificar la ubicación del empleado cuando registre su "
+"entrada. El método que haya usado el empleado al momento de registrar su "
+"entrada lo puede ver en su registro individual, en el campo "
+":guilabel:`Modo`."
 
 #: ../../content/applications/hr/attendances/management.rst:83
 msgid ""
 "The :guilabel:`Mode` field is not modifiable, as it only log the method the "
 "attendance record was created."
 msgstr ""
+"El campo :guilabel:`Modo` no se puede modificar, ya que solo registra el "
+"método con el que se creó el registro de asistencia."
 
 #: ../../content/applications/hr/attendances/management.rst:86
 msgid "The possible options are:"
-msgstr ""
+msgstr "Las opciones posibles son:"
 
 #: ../../content/applications/hr/attendances/management.rst:88
 msgid ""
@@ -4015,6 +4306,9 @@ msgid ""
 ":doc:`kiosk <kiosks>` device. The employee was present at the kiosk to "
 "check-in."
 msgstr ""
+":guilabel:`Quiosco`: El empleado registró su entrada o salida de forma "
+"física con un dispositivo de :doc:`quiosco <kiosks>` device. El empleado "
+"estaba ahí cuando registró su entrada desde el quiosco."
 
 #: ../../content/applications/hr/attendances/management.rst:90
 msgid ""
@@ -4023,16 +4317,23 @@ msgid ""
 "displayed on the detailed attendance record, the employee's location at the "
 "time of check-in can be determined."
 msgstr ""
+":guilabel:`Systray`: El empleado registró su entrada o salida :doc:`desde la"
+" base de datos <check_in_check_out>`. En el registro de asistencia podrá ver"
+" la :guilabel:`dirección IP` y determinar la ubicación del empleado cuando "
+"realizó su registro."
 
 #: ../../content/applications/hr/attendances/management.rst:93
 msgid ""
 ":guilabel:`Manual`: the record was created manually in the **Attendances** "
 "app. This is typically done by management, to add a missing record."
 msgstr ""
+":guilabel:`Manual`: El registro se creó de forma manual en la aplicación "
+"**Asistencias**. Usualmente esto lo hace la gerencia pare agregar un "
+"registro faltante."
 
 #: ../../content/applications/hr/attendances/management.rst:97
 msgid "Create attendance records"
-msgstr ""
+msgstr "Crear registros de asistencia"
 
 #: ../../content/applications/hr/attendances/management.rst:99
 msgid ""
@@ -4042,6 +4343,11 @@ msgid ""
 " to check in and out for shifts, as employees cannot retroactively create "
 "attendance records."
 msgstr ""
+"Cuando sea necesario, los usuarios con los :ref:`derechos de acceso "
+"<employees/work-info-tab>` suficientes pueden crear registros de asistencia "
+"de forma manual en la aplicación **Asistencias**. Esto puede ser necesario "
+"cuando los empleados olvidan registrar su entrada o salida, ya que los "
+"empleados no pueden crear crear registros de asistencia retroactivos."
 
 #: ../../content/applications/hr/attendances/management.rst:104
 msgid ""
@@ -4050,12 +4356,20 @@ msgid ""
 "corner. In the :guilabel:`Create` pop-up window, enter the following "
 "information on the form:"
 msgstr ""
+"Para agregar un registro de asistencia faltante, vaya a :menuselection:`la "
+"aplicación Asistencias --> Información general`. Haga clic en el botón "
+":guilabel:`Nuevo` en la esquina superior izquierda. En la ventana emergente "
+":guilabel:`Crear`, ingrese la información que se muestra a continuación en "
+"el formulario:"
 
 #: ../../content/applications/hr/attendances/management.rst:108
 msgid ""
 ":guilabel:`Employee`: select the employee the record is being created for. "
 "The signed-in user populates this field, by default."
 msgstr ""
+":guilabel:`Empleado`: Seleccione el empleado para el que está creando el "
+"registro. Este campo por defecto se llena con el usuario que haya iniciado "
+"sesión."
 
 #: ../../content/applications/hr/attendances/management.rst:110
 msgid ""
@@ -4063,6 +4377,10 @@ msgid ""
 " time, then click :icon:`fa-check` :guilabel:`Apply`. By default, the "
 "current date is selected, and the time is set to `00:00:00`."
 msgstr ""
+":guilabel:`Registrar entrada`: Con el modal de calendario, seleccione una "
+"fecha y hora en la que quiera registrar la entrada y luego haga clic en "
+":icon:`fa-check` :guilabel:`Aplicar`. Por defecto, la fecha seleccionada "
+"será la fecha actual y el tiempo será `00:00:00`."
 
 #: ../../content/applications/hr/attendances/management.rst:113
 msgid ""
@@ -4070,6 +4388,10 @@ msgid ""
 "and time, then click :icon:`fa-check` :guilabel:`Apply`. By default, the "
 "following date is selected, and the time is set to `00:00:00`."
 msgstr ""
+":guilabel:`Registrar salida`: Con el modal de calendario, seleccione una "
+"fecha y hora en la que quiera registrar la salida y luego haga clic en "
+":icon:`fa-check` :guilabel:`Aplicar`. Por defecto, la fecha seleccionada "
+"será la fecha del día siguiente y el tiempo será `00:00:00`."
 
 #: ../../content/applications/hr/attendances/management.rst:116
 msgid ""
@@ -4077,12 +4399,17 @@ msgid ""
 "difference from the selected :guilabel:`Check In` and :guilabel:`Check Out` "
 "times. This field **cannot** be modified."
 msgstr ""
+":guilabel:`Tiempo trabajado`: Este campo se llena en automático con la "
+"diferencia de los tiempos en los campos :guilabel:`Registrar entrada` y "
+":guilabel:`Registrar salida`. Este campo **no** se puede modificar."
 
 #: ../../content/applications/hr/attendances/management.rst:118
 msgid ""
 ":guilabel:`Extra Hours`: enter the number of overtime hours, if any, to be "
 "approved."
 msgstr ""
+":guilabel:`Horas extra`: Ingrese el número de horas extra que se deben "
+"aprobar, si es que las hay."
 
 #: ../../content/applications/hr/attendances/management.rst:121
 msgid ""
@@ -4090,12 +4417,18 @@ msgid ""
 "the system. However, it is possible to manually refuse them, as explained in"
 " the :ref:`Approvals and Refusals <attendances/approve-refuse>` section."
 msgstr ""
+"Después de que se agreguen las :guilabel:`Horas extra`, el sistema las "
+"aprueba de forma automática. Sin embargo, es posible rechazarlas de forma "
+"manual, como se explicó en la sección :ref:`Aprobaciones y rechazos "
+"<attendances/approve-refuse>`."
 
 #: ../../content/applications/hr/attendances/management.rst-1
 msgid ""
 "An Attendances app record form, filled out for Doris Cole for April 23, "
 "2025."
 msgstr ""
+"Captura de pantalla de un formulario de registro de la aplicación "
+"Asistencias con la información de Doris Cole para el 23 de abril de 2025."
 
 #: ../../content/applications/hr/employees.rst:7
 #: ../../content/applications/hr/payroll/payroll_localizations/united_arab_emirates.rst:35
@@ -4457,6 +4790,8 @@ msgid ""
 "All employees in the **Employees** app fall under specific departments "
 "within a company."
 msgstr ""
+"Todos los empleados en la aplicación **Empleados** pertenecen a ciertos "
+"departamentos de una empresa."
 
 #: ../../content/applications/hr/employees/departments.rst:8
 msgid "Create new departments"
@@ -4469,6 +4804,11 @@ msgid ""
 "to reveal a blank department form. Fill out the following information on the"
 " department form:"
 msgstr ""
+"Vaya a :menuselection:`Empleados --> Departamentos` para crear un nuevo "
+"departamento y después haga clic en el botón :guilabel:`Nuevo` que se "
+"encuentra en la esquina superior izquierda para abrir un formulario de "
+"departamento vacío. Complete la siguiente información en el formulario del "
+"departamento:"
 
 #: ../../content/applications/hr/employees/departments.rst:14
 msgid ":guilabel:`Department Name`: enter a name for the department."
@@ -4498,6 +4838,8 @@ msgid ""
 ":guilabel:`Company`: using the drop-down menu, select the company the "
 "department is part of. This field only appears in a multi-company database."
 msgstr ""
+":guilabel:`Empresa`: Seleccione la empresa que está buscando este puesto. "
+"Este campo solo aparecerá en bases de datos multiempresa."
 
 #: ../../content/applications/hr/employees/departments.rst:20
 msgid ""
@@ -17338,7 +17680,7 @@ msgstr ""
 
 #: ../../content/applications/hr/payroll/payroll_localizations.rst:5
 msgid "Payroll localizations"
-msgstr "Localización para Nómina"
+msgstr "Localización de nómina"
 
 #: ../../content/applications/hr/payroll/payroll_localizations.rst:7
 msgid ""
@@ -35440,7 +35782,7 @@ msgid ""
 ":guilabel:`Company`: select the company the job is for. This field only "
 "appears if using a multi-company database."
 msgstr ""
-":guilabel:`Emprese`: seleccione la empresa que está buscando este puesto. "
+":guilabel:`Empresa`: seleccione la empresa que está buscando este puesto. "
 "Este campo solo aparecerá en bases de datos multiempresa."
 
 #: ../../content/applications/hr/recruitment/new_job.rst:75

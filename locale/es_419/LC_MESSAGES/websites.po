@@ -3622,12 +3622,19 @@ msgid ""
 "**not** assigned to the website they are visiting, the user sees the "
 "website's default pricelist."
 msgstr ""
+"Si un usuario del portal tiene una lista de precios específica asignada a su"
+" perfil de contacto, entonces esa es la lista que se aplicará a su compra. "
+"Si esa lista de precios **no** está asignada al sitio web que el usuario "
+"está visitando, verá la lista de precios predeterminada del sitio web."
 
 #: ../../content/applications/websites/ecommerce/products/price_management.rst:107
 msgid ""
 "The default website pricelist is the first available pricelist assigned to a"
 " website, without the country group setting configured."
 msgstr ""
+"La lista de precios predeterminada para el sitio web es la primera lista "
+"disponible asignada a un sitio web que no tiene un grupo de países "
+"configurado."
 
 #: ../../content/applications/websites/ecommerce/products/price_management.rst:110
 msgid "Public, non-logged in users, see the website's default pricelist."
@@ -3643,12 +3650,20 @@ msgid ""
 " over the country-based pricelist, unless the assigned pricelist has a "
 "different country group."
 msgstr ""
+"Si una lista de precios incluye un grupo de países, Odoo verifica la "
+"dirección IP del visitante y aplica la lista correspondiente. Si un "
+"visitante tiene una lista de precios asignada en su perfil de contacto, esa "
+"lista tiene prioridad sobre la lista correspondiente al país, a menos que la"
+" lista de precios asignada tenga un grupo de países distinto."
 
 #: ../../content/applications/websites/ecommerce/products/price_management.rst:118
 msgid ""
 "A customer from the United States visits the website. They do not have a "
 "portal account. The :guilabel:`United States` pricelist is applied."
 msgstr ""
+"Un cliente de Estados Unidos visita el sitio web y no tiene una cuenta de "
+"portal, entonces se aplica la lista de precios \":guilabel:`Estados "
+"Unidos`\"."
 
 #: ../../content/applications/websites/ecommerce/products/price_management.rst:121
 msgid ""
@@ -3657,6 +3672,11 @@ msgid ""
 "assignment takes precedence over the country group assignation, so the "
 ":guilabel:`Loyal Customer Discount` is applied."
 msgstr ""
+"Otro visitante, que también es de Estados Unidos, tiene la lista de precios "
+"\":guilabel:`Descuento para clientes leales`\" asignada en su registro de "
+"contacto. Esta asignación tiene prioridad sobre la asignación del grupo de "
+"países, por lo que se aplica el precio de :guilabel:`descuento para clientes"
+" leales`."
 
 #: ../../content/applications/websites/ecommerce/products/price_management.rst:0
 msgid "An example of various pricelists assigned to a website."
@@ -3694,6 +3714,11 @@ msgid ""
 "feature is useful for companies that want to hide the prices of their "
 "products."
 msgstr ""
+"La función :guilabel:`Evitar la venta de un producto si su precio es cero` "
+"impide que los clientes compren un producto si su precio de venta es `0`. "
+"Cuando esta función está habilitada aparece el botón :guilabel:`Contáctenos`"
+" en vez del botón :guilabel:`Agregar al carrito`. Esta función es útil para "
+"las empresas que quieren ocultar los precios de sus productos."
 
 #: ../../content/applications/websites/ecommerce/products/price_management.rst:144
 msgid ""
@@ -3701,6 +3726,9 @@ msgid ""
 "Configuration --> Settings` and tick the :guilabel:`Prevent Sale of Zero "
 "Priced Product` checkbox, then click :guilabel:`Save`."
 msgstr ""
+"Para usar esta función, vaya a :menuselection:`Sitio web --> Configuración "
+"--> Ajustes`, seleccione la casilla :guilabel:`Evitar la venta de un "
+"producto si su precio es cero` y luego haga clic en :guilabel:`Guardar`."
 
 #: ../../content/applications/websites/ecommerce/products/price_management.rst:147
 msgid ""
@@ -7592,6 +7620,10 @@ msgid ""
 "on live chat conversations, as well as any additional comments submitted "
 "with the rating."
 msgstr ""
+"El reporte :guilabel:`Calificaciones de clientes` (:menuselection:`Chat en "
+"vivo --> Reportes --> Calificaciones de clientes`) muestra un resumen de las"
+" calificaciones recibidas en las conversaciones de chat en vivo, así como "
+"cualquier comentario adicional enviado con la calificación."
 
 #: ../../content/applications/websites/livechat/ratings.rst-1
 msgid "View of the customer ratings report in Odoo Live Chat."
@@ -13037,6 +13069,8 @@ msgid ""
 "The Plausible Analytics dashboard is also integrated into Odoo and can be "
 "accessed via :menuselection:`Website --> Reporting --> Analytics`."
 msgstr ""
+"El tablero analítico de Plausible también está integrado con Odoo y puede "
+"acceder a él desde :menuselection:`Sitio web --> Reportes --> Analítica`."
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:18
 msgid "Plausible.io"
@@ -13049,6 +13083,11 @@ msgid ""
 "domain. Odoo automatically creates and sets up your account. Start using it "
 "by going to :menuselection:`Website --> Reporting --> Analytics`."
 msgstr ""
+"Odoo aloja su propio servidor de Plausible.io y proporciona una solución "
+"gratuita lista para usar en las bases de datos de **Odoo en línea** que usan"
+" el dominio odoo.com. Odoo crea y configura su cuenta de manera automática, "
+"vaya a :menuselection:`Sitio web --> Reportes --> Analítica` para comenzar a"
+" usarla."
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:25
 msgid ""
@@ -13056,6 +13095,9 @@ msgid ""
 "(e.g., `example.com`), you need to create your own Plausible.io account and "
 "subscription."
 msgstr ""
+"Si utiliza un :doc:`nombre de dominio <../configuration/domain_names>` "
+"personalizado (como `ejemplo.com`), necesita crear su propia cuenta de "
+"Plausible.io y adquirir una suscripción."
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:27
 msgid ""
@@ -13119,6 +13161,8 @@ msgid ""
 "Create or sign in to a Plausible.io account using the following link: "
 "`<https://plausible.io/register>`_."
 msgstr ""
+"Cree o inicie sesión en una cuenta de Plausible.io mediante el siguiente "
+"enlace: `<https://plausible.io/register>`_."
 
 #: ../../content/applications/websites/website/reporting/analytics.rst:49
 msgid ""
@@ -14848,7 +14892,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/web_design/elements.rst:195
 msgid "Animations on hover (for images only)"
-msgstr ""
+msgstr "Animaciones al pasar el cursor por encima (solo para imágenes)"
 
 #: ../../content/applications/websites/website/web_design/elements.rst:197
 msgid ""

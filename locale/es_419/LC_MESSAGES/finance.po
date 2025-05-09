@@ -6,8 +6,8 @@
 # Translators:
 # Tiffany Chang, 2024
 # Wil Odoo, 2025
-# Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2025
 # Fernanda Alvarez, 2025
+# Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-04-30 14:37+0000\n"
 "PO-Revision-Date: 2024-10-08 06:34+0000\n"
-"Last-Translator: Fernanda Alvarez, 2025\n"
+"Last-Translator: Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2025\n"
 "Language-Team: Spanish (Latin America) (https://app.transifex.com/odoo/teams/41243/es_419/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16378,7 +16378,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:42
 msgid "PAIN file version"
-msgstr ""
+msgstr "Versión del archivo PAIN"
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:44
 msgid ""
@@ -16389,6 +16389,14 @@ msgid ""
 "in the :guilabel:`Incoming Payments` tab, set the :guilabel:`SEPA Pain "
 "version` field to :guilabel:`Updated 2023 (Pain 008.001.08)`."
 msgstr ""
+"Por defecto, los :ref:`los archivos XML que cumplen con las normas SEPA "
+"<accounting/batch_sdd/XML>` generados por Odoo usan el formato de "
+"domiciliación bancaria SEPA **PAIN.008.001.02**. Si su banco requiere la "
+"versión actualizada de 2023, vaya a :menuselection:`Contabilidad --> "
+"Configuración --> Diarios` y seleccione el diario :guilabel:`Banco`. "
+"Después, en la pestaña :guilabel:`Pagos entrantes` establezca el campo "
+":guilabel:`Versión Pain SEPA` como :guilabel:`Actualización del 2023 (Pain "
+"008.001.08)`."
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:51
 msgid ""
@@ -16396,6 +16404,10 @@ msgid ""
 "<https://www.europeanpaymentscouncil.eu/document-library/implementation-"
 "guidelines/sepa-direct-debit-core-customer-psp-implementation-0>`_."
 msgstr ""
+"`Directrices de implementación de la domiciliación bancaria SEPA del cliente"
+" a PSP <https://www.europeanpaymentscouncil.eu/document-"
+"library/implementation-guidelines/sepa-direct-debit-core-customer-psp-"
+"implementation-0>`_."
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:57
 msgid "SEPA Direct Debit Mandates"
@@ -16409,6 +16421,12 @@ msgid ""
 "mandate's unique identifier. The mandate form must be filled in and signed "
 "by the customer."
 msgstr ""
+"Un mandato de domiciliación bancaria es un documento legal que le da "
+"autorización a una empresa para realizar un cargo directo a los fondos de la"
+" cuenta bancaria de un cliente. Este mandato incluye información importante,"
+" como el nombre del cliente y código IBAN, la fecha de inicio y vencimiento "
+"del mandato, y el identificador único del mandato. El cliente debe llenar y "
+"firmar el formulario del mandato."
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:65
 msgid "Creating mandates"
@@ -16435,10 +16453,13 @@ msgid ""
 ":guilabel:`Send & Print` to email the mandate form to the customer for "
 "signature."
 msgstr ""
+"Haga clic en :guilabel:`Enviar e imprimir` (puede editar el correo si es "
+"necesario) y haga clic en :guilabel:`Enviar e imprimir` para enviar el "
+"formulario del mandato por correo electrónico al cliente para su firma."
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:73
 msgid "Click :guilabel:`Validate` to activate the mandate."
-msgstr ""
+msgstr "Haga clic en :guilabel:`Validar` para activar el mandato."
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:76
 msgid ""
@@ -16446,6 +16467,9 @@ msgid ""
 ":doc:`bank journal <../bank>` used to receive |sdd| payments for the "
 "mandate."
 msgstr ""
+"Debe definir un código IBAN válido en el campo :guilabel:`Número de cuenta` "
+"del :doc:`diario de banco <../bank>` para recibir pagos por domiciliación "
+"bancaria SEPA del mandato."
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:80
 msgid ""
@@ -16453,18 +16477,26 @@ msgid ""
 ":icon:`fa-cog` (:guilabel:`gear`) icon, then select :guilabel:`Mandate "
 "form`."
 msgstr ""
+"Para imprimir el mandato validado, haga clic en el icono :icon:`fa-cog` "
+"(:guilabel:`engranaje`) y después seleccione :guilabel:`Formulario de "
+"mandato`."
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:82
 msgid ""
 "The :guilabel:`SDD Scheme` depends on the type of customer: Select "
 ":guilabel:`CORE` for B2C customers and :guilabel:`B2B` for B2B customers."
 msgstr ""
+"El :guilabel:`esquema de SDD` depende del tipo de cliente: Seleccione "
+":guilabel:`CORE` para clientes B2C y :guilabel:`B2B` para clientes B2B."
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:84
 msgid ""
 "|sdd| mandates are created automatically for :doc:`online payments made with"
 " SDD <../../payment_providers/sdd>`."
 msgstr ""
+"Los mandatos de domiciliación bancaria SEPA se crean de forma automática "
+"para :doc:`pagos en línea realizados con domiciliación bancaria SEPA "
+"<../../payment_providers/sdd>`."
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:87
 msgid ""
@@ -16474,10 +16506,16 @@ msgid ""
 " use this payment method for :doc:`online purchases "
 "<../../payment_providers/sdd>`."
 msgstr ""
+"Una vez que el mandato de domiciliación bancaria SEPA esté activo, los pagos"
+" subsecuentes hechos por este medio se pueden generar a través de Odoo para "
+"después :ref:`subirlos a su interfaz de banca en línea "
+"<accounting/batch_sdd/XML>`. Los clientes con un mandato de domiciliación "
+"bancaria SEPA activo también pueden usar este método de pago para "
+":doc:`compras en línea <../../payment_providers/sdd>`."
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:93
 msgid "Closing or revoking a mandate"
-msgstr ""
+msgstr "Cerrar o revocar un mandato"
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:95
 msgid ""
@@ -16487,6 +16525,12 @@ msgid ""
 "Customers --> Direct Debit Mandates`, select the relevant mandate, and click"
 " :guilabel:`Close` or :guilabel:`Revoke`."
 msgstr ""
+"Los mandatos de domiciliación bancaria SEPA se cierran de forma automática "
+"después de su :guilabel:`Fecha de finalización`. Si este campo se deja en "
+"blanco, el mandato se mantendrá activo hasta que se cierre o se revoque. "
+"Para hacer este proceso, vaya a :menuselection:`Contabilidad --> Clientes "
+"--> Mandatos de domiciliación bancaria`, seleccione el mandato deseado y "
+"haga clic en :guilabel:`Cerrar` o :guilabel:`Revocar`."
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:100
 msgid ""
@@ -16497,10 +16541,17 @@ msgid ""
 "However, payments that have already been registered are still included in "
 "the next :ref:`SDD XML file <accounting/batch_sdd/XML>`."
 msgstr ""
+"Si selecciona **Cerrar** la fecha de finalización del mandato se actualizará"
+" a la fecha del día actual. Las facturas que se emitan después del día "
+"presente no se procesarán como pagos de domiciliación bancaria SEPA. Si "
+"selecciona **Revocar** el mandato se deshabilita de inmediato. Ya no se "
+"podrá registrar ningún pago por domiciliación bancaria SEPA. Sin embargo, "
+"los pagos que se hayan registrado antes todavía se incluirán en el siguiente"
+" archivo :ref:`XML de la domiciliación bancaria <accounting/batch_sdd/XML>`."
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:107
 msgid "Closed or revoked mandates cannot be reactivated."
-msgstr ""
+msgstr "Los mandatos cerrados o revocados no pueden volver a abrirse."
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:112
 msgid "Processing |sdd| payments"
@@ -16512,30 +16563,42 @@ msgid ""
 "file containing a batch of all posted |sdd| payments to your online banking "
 "interface. To do so, follow these steps:"
 msgstr ""
+"Todos los pagos registrados por domiciliación bancaria SEPA se pueden "
+"procesar al mismo tiempo si sube un archivo XML que incluya un lote de todos"
+" los pagos por domiciliación bancaria SEPA registrados a su interfaz de "
+"banca en línea. Para hacerlo, siga los pasos a continuación:"
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:117
 msgid ""
 ":ref:`Create a batch payment <accounting/batch/creation>` and include the "
 "|sdd| payments to collect."
 msgstr ""
+":ref:`Cree un pago por lote <accounting/batch/creation>` e incluya los pagos"
+" por domiciliación bancaria SEPA que debe recolectar."
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:121
 msgid ""
 "You can filter payments by SDD scheme using the :guilabel:`SDD CORE` and "
 ":guilabel:`SDD B2B` filters."
 msgstr ""
+"Puede filtrar los pagos por esquema de domiciliación bancaria SEPA usando "
+"los filtros :guilabel:`SDD CORE` y :guilabel:`SDD B2B`."
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:124
 msgid ""
 ":guilabel:`Validate` the batch payment. The XML file is generated "
 "automatically and available for download in the chatter."
 msgstr ""
+":guilabel:`Valide` el pago por lote. El archivo XML se genera de forma "
+"automática y estará disponible para descargar desde el chatter."
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:126
 msgid ""
 "Download the XML file and upload it to your online banking interface to "
 "process the payments."
 msgstr ""
+"Descargue el archivo XML y súbalo a su interfaz de banca en línea para "
+"procesar los pagos."
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:127
 msgid ""
@@ -16543,6 +16606,9 @@ msgid ""
 "transaction <../bank/reconciliation>` with the batch payment to mark the "
 "related invoices as :guilabel:`Paid`."
 msgstr ""
+"Una vez que se haya recibido el pago por lote de domiciliación bancaria "
+"SEPA, :doc:`concilie la transacción <../bank/reconciliation>` con el pago "
+"por lote para marcar todas las facturas relevantes como :guilabel:`Pagadas`."
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:132
 msgid ""
@@ -16550,10 +16616,17 @@ msgid ""
 "the :guilabel:`Collections` and :guilabel:`Invoices Paid` smart button on "
 "the :ref:`Direct Debit Mandate <accounting/batch_sdd/sdd_mandates>` form."
 msgstr ""
+"Para ver los pagos y las facturas vinculadas a un mandato de domiciliación "
+"bancaria SEPA en específico, haga clic en :guilabel:`Cobranza` y luego en el"
+" botón inteligente :guilabel:`Facturas pagadas` que aparece en el formulario"
+" del :ref:`mandato de domiciliación bancaria SEPA "
+"<accounting/batch_sdd/sdd_mandates>`."
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:135
 msgid "Click :guilabel:`Re-generate Export file` to regenerate the XML file."
 msgstr ""
+"Haga clic en  :guilabel:`Regenerar el archivo de exportación` para volver a "
+"generar el archivo XML."
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:138
 msgid ":doc:`batch`"
@@ -16563,6 +16636,8 @@ msgstr ":doc:`batch`"
 msgid ""
 ":doc:`SEPA Direct Debit for online payments <../../payment_providers/sdd>`"
 msgstr ""
+":doc:`Domiciliación bancaria SEPA para pagos en línea "
+"<../../payment_providers/sdd>`"
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:140
 msgid ""
@@ -16576,7 +16651,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:144
 msgid "|sdd| rejections"
-msgstr ""
+msgstr "Domiciliación bancaria SEPA rechazada"
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:146
 msgid ""
@@ -16588,6 +16663,14 @@ msgid ""
 " account, and a new transaction for a negative amount is created to reflect "
 "the |sdd| rejection."
 msgstr ""
+"Hay varios motivos por los cuales se puede rechazar una domiciliación "
+"bancaria SEPA, el más común son fondos insuficientes en la cuenta del "
+"cliente. Con la domiciliación bancaria SEPA, se hace un abono a la cuenta "
+"del receptor antes de que los fondos se carguen de la cuenta del cliente. "
+"Por eso, si un pago por domiciliación bancaria SEPA después se rechaza, el "
+"banco en automático quita el monto del pago de la cuenta receptora y se crea"
+" una nueva transacción por una cantidad negativa para reflejar el rechazo de"
+" la domiciliación bancaria SEPA."
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:152
 msgid ""
@@ -16595,6 +16678,10 @@ msgid ""
 ":ref:`outstanding accounts <accounting/bank/outstanding-accounts>` are "
 "configured or not for the |sdd| payment method."
 msgstr ""
+"Los rechazos de domiciliación bancaria SEPA se gestionan de forma diferente "
+"según si se configuraron :ref:`cuentas transitorias "
+"<accounting/bank/outstanding-accounts>` o no para el método de pago por "
+"domiciliación bancaria."
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:156
 msgid ""
@@ -16602,6 +16689,10 @@ msgid ""
 "transaction has already been :ref:`reconciled "
 "<accounting/reconciliation/reconcile>` with the payments or invoices."
 msgstr ""
+"Los procedimientos que se describen a continuación presumen que la "
+"transacción bancaria para el pago por domiciliación bancaria entrante ya se "
+":ref:`concilió <accounting/reconciliation/reconcile>` con los pagos o las "
+"facturas"
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:163
 msgid ""
@@ -16609,21 +16700,30 @@ msgid ""
 " configured for the |sdd| payment method, no journal entry is created. In "
 "this case, you must cancel and unreconcile the payment."
 msgstr ""
+"Si no se configura una ref:`cuenta transitoria <accounting/bank/outstanding-"
+"accounts>` para el método de pago por domiciliación bancaria SEPA, no se "
+"creará ningún asiento contable. En este caso, debe cancelar y romper la "
+"conciliación del pago."
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:167
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:186
 msgid "Access the invoice linked to the rejected |sdd| payment."
 msgstr ""
+"Acceda a la factura vinculada al pago por domiciliación bancaria rechazado."
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:168
 msgid ""
 "Click the :guilabel:`Payments` smart button to access the payment associated"
 " with the invoice."
 msgstr ""
+"Haga clic en el botón inteligente :guilabel:`Pagos` para acceder al pago "
+"asociado a la factura."
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:170
 msgid "Click :guilabel:`Reset to draft`, then :guilabel:`Cancel`."
 msgstr ""
+"Haga clic en :guilabel:`Restablecer a borrador` y después en "
+":guilabel:`Cancelar`."
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:171
 msgid ""
@@ -16631,6 +16731,10 @@ msgid ""
 ":guilabel:`(information)` icon in the footer of the :guilabel:`Invoice "
 "Lines` tab, then click :guilabel:`Unreconcile`."
 msgstr ""
+"Regrese a la factura y haga clic en el icono :icon:`fa-info-circle` "
+":guilabel:`(información)` que podrá encontrar en el pie de página de la "
+"pestaña :guilabel:`Líneas de factura` y después haga clic en "
+":guilabel:`Romper conciliación`."
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:173
 msgid ""
@@ -16640,6 +16744,12 @@ msgid ""
 " rejection with the debit (negative journal item) to the account receivable "
 "on the incoming bank transaction."
 msgstr ""
+":ref:`Acceda a la vista de conciliación del diario bancario "
+"<accounting/reconciliation/access>` y :ref:`concilie "
+"<accounting/reconciliation/reconcile>` la transacción creada para el rechazo"
+" de la domiciliación bancaria SEPA con el abono (un asiento de diario "
+"negativo) que se hizo a las cuentas por cobrar en la transacción bancaria "
+"entrante."
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:180
 msgid ""
@@ -16649,6 +16759,13 @@ msgid ""
 "with the rejected payment and reconcile the reversal of the journal entry "
 "with the transaction for the |sdd| rejection. To do so, follow these steps:"
 msgstr ""
+"Si se configura una :ref:`cuenta transitoria <accounting/bank/outstanding-"
+"accounts>` en el método de pago por domiciliación bancaria SEPA, los pagos "
+"por domiciliación bancaria sepa crearán asientos de diario. Si se rechaza un"
+" pago por este método, deberá revertir el asiento de diario relacionado con "
+"el pago rechazado y conciliar le reversión del asiento de diario con la "
+"transacción en la que se rechazó el pago por domiciliación bancaria SEPA. "
+"Para hacer esto, siga los siguientes pasos:"
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:187
 msgid ""
@@ -16656,12 +16773,17 @@ msgid ""
 "footer of the :guilabel:`Invoice Lines` tab, then click :guilabel:`View` to "
 "access the payment associated with the invoice."
 msgstr ""
+"Haga clic en el icono :icon:`fa-info-circle` :guilabel:`(información)` en el"
+" pie de página de la pestaña :guilabel:`Líneas de la orden` y después haga "
+"clic en :guilabel:`Ver` para acceder al pago asociado a la factura."
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:190
 msgid ""
 "Click the :guilabel:`Journal entry` smart button to access the related "
 "journal entry."
 msgstr ""
+"Haga clic en el botón inteligente :guilabel:`Asiento de diario` para acceder"
+" al asiento relacionado."
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:191
 msgid ""
@@ -16670,6 +16792,11 @@ msgid ""
 ":guilabel:`Reference` mentioning the initial journal entry. As a result, the"
 " invoice is marked as :guilabel:`Not paid`."
 msgstr ""
+"Haga clic en :guilabel:`Revertir asiento`, puede editar los campos en la "
+"ventana emergente si es necesario, y después haga clic en "
+":guilabel:`Revertir`. Se creará un asiento de reversión y en la "
+":guilabel:`referencia` se mencionará el asiento de diario inicial. Como "
+"resultado, la factura se marcará como :guilabel:`No pagada`."
 
 #: ../../content/applications/finance/accounting/payments/batch_sdd.rst:194
 msgid ""
@@ -16678,6 +16805,11 @@ msgid ""
 "<accounting/reconciliation/reconcile>` the transaction created for the |sdd|"
 " rejection with the reversal of the entry related to the payment."
 msgstr ""
+":ref:`Acceda a la vista de conciliación del diario bancario "
+"<accounting/reconciliation/access>` y :ref:`concilie "
+"<accounting/reconciliation/reconcile>` la transacción creada para el rechazo"
+" de la domiciliación bancaria SEPA con el asiento de anulación relacionado "
+"al pago."
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:3
 msgid "Follow-up on invoices"
@@ -16875,6 +17007,8 @@ msgid ""
 ":guilabel:`Reminders`: These are either :guilabel:`Automatic` or "
 ":guilabel:`Manual`."
 msgstr ""
+":guilabel:`Recordatorios`: Estos pueden sar :guilabel:`Automáticos` o "
+":guilabel:`Manuales`."
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:80
 msgid ""
@@ -16889,6 +17023,8 @@ msgstr ""
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:82
 msgid ":guilabel:`Responsible`: The user who handles the follow-up actions."
 msgstr ""
+":guilabel:`Responsable`: Este es el usuario que gestiona todas las acciones "
+"de seguimiento."
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:84
 msgid ""
@@ -16901,7 +17037,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:87
 msgid ":guilabel:`Print`"
-msgstr ""
+msgstr ":guilabel:`Imprimir`"
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:88
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:99
@@ -16913,11 +17049,11 @@ msgstr ":guilabel:`Correo electrónico`"
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:89
 msgid ":guilabel:`Sms`"
-msgstr ""
+msgstr ":guilabel:`SMS`"
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:90
 msgid ":guilabel:`By post`"
-msgstr ""
+msgstr ":guilabel:`Por correo postal`"
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:92
 msgid ""
@@ -16926,6 +17062,10 @@ msgid ""
 ":guilabel:`Send & Print` to send the :ref:`follow-up report "
 "<accounting/follow_up/follow-up-report>`."
 msgstr ""
+"Active la opción :guilabel:`Adjuntar facturas` y cambie la "
+":guilabel:`plantilla de contenido` si así lo desea, luego haga clic en "
+":guilabel:`Enviar` o en :guilabel:`Enviar e imprimir` para enviar el "
+":ref:`reporte de seguimiento <accounting/follow_up/follow-up-report>`."
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:98
 #: ../../content/applications/finance/accounting/vendor_bills/invoice_digitization.rst:101
@@ -16971,6 +17111,11 @@ msgid ""
 "cog` :guilabel:`(Actions)` and select :guilabel:`Process Follow-ups` to send"
 " them the :ref:`follow-up report <accounting/follow_up/follow-up-report>`."
 msgstr ""
+"Para tomar acciones de seguimiento para todos los clientes pertinentes, "
+"cambie a la vista de lista y seleccione aquellos que requieren seguimiento. "
+"Después, haga clic en :icon:`fa-cog` :guilabel:`(Acciones)` y seleccione "
+":guilabel:`Procesar seguimiento` para enviarles un :ref:`reporte de "
+"seguimiento <accounting/follow_up/follow-up-report>`."
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:123
 #: ../../content/applications/finance/accounting/taxes/avatax/avalara_portal.rst:144
@@ -17037,7 +17182,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:146
 msgid "Follow-up report"
-msgstr ""
+msgstr "Reporte se seguimiento"
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:148
 msgid ""
@@ -17047,6 +17192,13 @@ msgid ""
 "form. Then, click :icon:`fa-book` :guilabel:`Report: Customer Statement` and"
 " select :guilabel:`Follow-Up Report`."
 msgstr ""
+"Para obtener un resumen completo de las facturas que el cliente no ha pagado"
+" y separar aquellas que debe pagar en el futuro de aquellas de las que ya "
+"pasó su fecha de pago, haga clic en el botón inteligente :ref:`Estado de "
+"cuenta del cliente <accounting/follow_up/customer-statement>` que aparece en"
+" el formulario del cliente. Después, haga clic en :icon:`fa-book` "
+":guilabel:`Reportes: estado de cuenta del cliente` y seleccione "
+":guilabel:`Reporte de seguimiento`."
 
 #: ../../content/applications/finance/accounting/payments/follow_up.rst:153
 msgid ""
@@ -17054,6 +17206,9 @@ msgid ""
 ":menuselection:`Accounting --> Reporting --> Partner Ledger`. Then, click "
 ":icon:`fa-book` :guilabel:`Report:` and select :guilabel:`Follow-Up Report`."
 msgstr ""
+"Para ver el reporte de seguimiento de todos los clientes al mismo tiempo, "
+"vaya a :menuselection:`Contabilidad --> Reportes --> Libro mayor de la "
+"empresa`."
 
 #: ../../content/applications/finance/accounting/payments/forecast.rst:3
 msgid "Forecast future bills to pay"
@@ -25539,6 +25694,11 @@ msgid ""
 "report>` provides an overview of all outstanding bills to help ensure timely"
 " payment of the correct amounts."
 msgstr ""
+"Las facturas de proveedor se pueden registrar en Odoo de forma "
+"**automática** o **manual**. El :ref:`Reporte de cuentas por pagar vencidas "
+"<accounting/vendor_bills/age-payable-report>` le brinda un resumen de todas "
+"las cuentas pendientes para ayudarle a recibir los pagos con los montos "
+"correctos a tiempo."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:12
 msgid ""
@@ -25554,7 +25714,7 @@ msgstr ":doc:`/applications/inventory_and_mrp/purchase/manage_deals/manage`"
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:14
 msgid ":doc:`../accounting/customer_invoices/credit_notes`"
-msgstr ""
+msgstr ":doc:`../accounting/customer_invoices/credit_notes`"
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:19
 msgid "Bill creation"
@@ -25584,6 +25744,8 @@ msgstr ""
 #: ../../content/applications/finance/accounting/vendor_bills.rst:32
 msgid "either click :guilabel:`New` on the :guilabel:`Vendor Bills` journal;"
 msgstr ""
+"Puede hacer clic en :guilabel:`Nuevo` en el diario :guilabel:`Facturas de "
+"proveedor`."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:33
 msgid ""
@@ -25591,6 +25753,9 @@ msgid ""
 "the :guilabel:`Vendor Bills` journal, then :guilabel:`Bill` under the "
 ":guilabel:`New` section."
 msgstr ""
+"Puede hacer clic en el icono :icon:`fa-ellipsis-v` :guilabel:`(tres puntos "
+"verticales)` del diario :guilabel:`Facturas de proveedor` y luego en "
+":guilabel:`Factura (proveedor)` en la sección :guilabel:`Nuevo`."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:39
 msgid "Automatically"
@@ -25599,6 +25764,8 @@ msgstr "Automáticamente"
 #: ../../content/applications/finance/accounting/vendor_bills.rst:41
 msgid "Vendor bills can be automatically created through various methods:"
 msgstr ""
+"Las facturas de proveedor se pueden crear de forma automática por medio de "
+"diferentes métodos:"
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:43
 msgid ""
@@ -25607,24 +25774,37 @@ msgid ""
 "file, an automatic response notifies the sender that no document was "
 "received."
 msgstr ""
+"Enviar un correo electrónico a un :ref:`seudónimo de correo <invoice-"
+"digitization/email-alias>` asociado al diario de compra. Si el archivo que "
+"contiene el correo no es válido, el remitente recibirá una notificación "
+"automática por correo donde se les notificará que no se recibió el "
+"documento."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:46
 msgid ""
 "Uploading a PDF: To upload a bill, go to :menuselection:`Accounting --> "
 "Vendors --> Bills`, then click :guilabel:`Upload`."
 msgstr ""
+"Subir un PDF: para subir una factura, vaya a :menuselection:`Contabilidad "
+"--> Proveedores --> Facturas` y después haga clic en :guilabel:`Subir`."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:50
 msgid ""
 "Once the bill is uploaded, the PDF document appears on the right side of the"
 " screen, making it easy to fill in the bill information."
 msgstr ""
+"Una vez que se haya subido la factura, el documento PDF aparece en el lado "
+"derecho de la pantalla, para que sea fácil llenar la información de la "
+"factura."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:52
 msgid ""
 "Bills can be :doc:`digitized <vendor_bills/invoice_digitization>` for "
 "automatic completion."
 msgstr ""
+"Las facturas se pueden :doc:`digitalizar "
+"<vendor_bills/invoice_digitization>` para agilizar la completación "
+"automática."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:53
 msgid ""
@@ -25632,6 +25812,9 @@ msgid ""
 ":doc:`In-App Purchase (IAP) </applications/essentials/in_app_purchase>` "
 "credits."
 msgstr ""
+"Necesita créditos de :doc:`Compras dentro de la aplicación (IAP) "
+"</applications/essentials/in_app_purchase>` para usar servicios como la "
+"digitalización de facturas escaneadas o de PDF."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:56
 msgid ""
@@ -25641,18 +25824,23 @@ msgid ""
 "section, update the :guilabel:`Auto-post bills` field  with one of the "
 "following options:"
 msgstr ""
+"Para registrar facturas de algunos proveedores de forma automática, vaya a "
+":menuselection:`Contabilidad --> Proveedores --> Proveedores` y seleccione "
+"el proveedor relevante. En la sección :guilabel:`Automatización` de la "
+"pestaña :guilabel:`Contabilidad` actualice el campo :guilabel:`Registrar "
+"facturas en automático` con una de las opciones a continuación:"
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:61
 msgid ":guilabel:`Always`"
-msgstr ""
+msgstr ":guilabel:`Siempre`"
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:62
 msgid ":guilabel:`Ask after 3 validations without edits`"
-msgstr ""
+msgstr ":guilabel:`Preguntar después de 3 validaciones sin editar`"
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:63
 msgid ":guilabel:`Never`"
-msgstr ""
+msgstr ":guilabel:`Nunca`"
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:68
 msgid "Bill completion"
@@ -25672,6 +25860,9 @@ msgid ""
 "the information on the vendor's contact record as well as previous purchase "
 "orders and bills."
 msgstr ""
+":guilabel:`Proveedor`: Odoo completa en automático cierta información según "
+"la información que encuentre en el registro del contacto del proveedor, así "
+"como órdenes de compra o facturas antiguas."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:75
 msgid ""
@@ -25679,6 +25870,10 @@ msgid ""
 "vendor. This field is used to :ref:`match <accounting/payments/payments-"
 "matching>` the products when they are received."
 msgstr ""
+":guilabel:`Referencia de la factura`: Agregue la referencia de la orden de "
+"venta proporcionada por el proveedor. Este campo se usa para realizar la "
+":ref:`conciliación <accounting/payments/payments-matching>` de los productos"
+" cuando se reciban."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:77
 msgid ""
@@ -25686,22 +25881,30 @@ msgid ""
 " document automatically. The :guilabel:`Vendor` field should be completed "
 "before completing this field."
 msgstr ""
+":guilabel:`Autocompletar`: Seleccione una factura u orden de compra para que"
+" el documento se complete de forma automática. Debe haber completado el "
+"campo de :guilabel:`proveedor` antes de este campo."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:79
 msgid ":guilabel:`Bill Date`: Select the document's issuance date."
 msgstr ""
+":guilabel:`Fecha de factura`: Selecciona la fecha de emisión del documento."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:80
 msgid ""
 ":guilabel:`Accounting Date`: Update the document's accounting registration "
 "date if needed."
 msgstr ""
+":guilabel:`Fecha contable`: Actualiza la fecha en la que se registró el "
+"documento en contabilidad si es necesario."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:81
 msgid ""
 ":guilabel:`Payment Reference`: The :guilabel:`Memo` field automatically "
 "includes the payment reference once the payment is registered."
 msgstr ""
+":guilabel:`Referencia de pago`: El campo :guilabel:`Memorando` incluye en "
+"automático la referencia de pago una vez que el pago se haya registrado."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:83
 msgid ""
@@ -25710,18 +25913,26 @@ msgid ""
 "files (such as :ref:`NACHA <l10n_us/ach-electronic-transfers>` and "
 ":doc:`SEPA <payments/pay_sepa>`)."
 msgstr ""
+":guilabel:`Banco receptor`: Indica el número de cuenta al que se hará el "
+"pago. Este campo es necesario cuando se realiza un pago mediante archivos de"
+" pago por lote (como :ref:`NACHA <l10n_us/ach-electronic-transfers>` y "
+":doc:`SEPA <payments/pay_sepa>`)."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:86
 msgid ""
 ":guilabel:`Due Date` or :guilabel:`Payment Terms` must be specified for the "
 "bill payment."
 msgstr ""
+"La :guilabel:`Fecha de vencimiento` o los :guilabel:`Términos de pago` se "
+"deben especificar para la factura del pago."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:87
 msgid ""
 ":guilabel:`Journal`: Select which journal should record the bill and in "
 "which :doc:`currency <get_started/multi_currency>`."
 msgstr ""
+":guilabel:`Diario`: Seleccione en qué diario se debe registrar la factura y "
+"en qué :doc:`moneda <get_started/multi_currency>`."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:98
 msgid ""
@@ -25729,6 +25940,10 @@ msgid ""
 " click the :icon:`oi-view-list` :guilabel:`(bars)` icon to enter a "
 "description for the bill line without linking it to a product."
 msgstr ""
+"Si la línea de la factura no corresponde a un producto existente en la base "
+"de datos, haga clic en el icono :icon:`oi-view-list` :guilabel:`(barras)` "
+"para ingresar una descripción para la línea de la factura sin vincularla al "
+"producto."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:102
 msgid ""
@@ -25739,6 +25954,12 @@ msgid ""
 "Bill` to return to the vendor bill; the selected catalog items will appear "
 "in the vendor bill lines."
 msgstr ""
+"Haga clic en :doc:`Catálogo "
+"</applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/product_catalog>`"
+" para acceder al catálogo de productos y ver todos los artículos en una "
+"vista organizada. Una vez que haya seleccionado los productos y las "
+"cantidades, haga clic en :guilabel:`Regresar a la factura`. Los artículos "
+"que haya seleccionado en el catálogo aparecerán en las líneas de la factura."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:108
 msgid ""
@@ -25747,6 +25968,11 @@ msgid ""
 "sends partial bills or requests a deposit. In this case, multiple bills may "
 "have the same :guilabel:`Bill Reference`."
 msgstr ""
+"Es posible que se emitan varias facturas para la misma orden si el proveedor"
+" trabaja con órdenes parciales y envía facturas conforme envía los "
+"productos, si el proveedor envía órdenes parciales, o si solicita un "
+"depósito. En este caso, es posible que varias facturas tengan la misma "
+":guilabel:`Referencia de factura`."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:115
 msgid "Bill confirmation"
@@ -25759,12 +25985,19 @@ msgid ""
 " bill information. On confirmation, Odoo assigns each vendor bill a unique "
 "number from a defined :doc:`sequence <vendor_bills/sequence>`."
 msgstr ""
+"Haga clic en :guilabel:`Confirmar` cuando termine un documento. El estado "
+"del documento cambiará a :guilabel:`Registrado` y se creará un asiento "
+"contable de acuerdo a la información de la factura. Al confirmarlos, Odoo le"
+" asigna un número único de una :doc:`secuencia <vendor_bills/sequence>` "
+"definida a cada factura."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:122
 msgid ""
 "Once confirmed, a vendor bill can no longer be updated. Click "
 ":guilabel:`Reset to draft` if changes are required."
 msgstr ""
+"Las facturas confirmadas ya no se pueden actualizar. Si necesita hacer "
+"cambios, haga clic en :guilabel:`Restablecer a borrador`."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:130
 msgid ""
@@ -25772,6 +26005,9 @@ msgid ""
 "window, select the :guilabel:`Journal`, the :guilabel:`Payment Method`, the "
 ":guilabel:`Amount`, and the :guilabel:`Currency`."
 msgstr ""
+"Para registrar un pago, haga clic en :guilabel:`Pagar`. En la ventana "
+":guilabel:`Pagar` seleccione el :guilabel:`diario`, el :guilabel:`método de "
+"pago`, el :guilabel:`monto` y la :guilabel:`moneda`."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:134
 msgid ""
@@ -25780,6 +26016,10 @@ msgid ""
 "payment>`, and the :guilabel:`Payment Difference` field displays the "
 "outstanding balance."
 msgstr ""
+"Cuando el :guilabel:`monto` pagado es menor que el monto total restante en "
+"la factura del proveedor, el pago es :ref:`parcial "
+"<accounting/payments/partial-payment>` y el campo :guilabel:`Diferencia de "
+"pago` muestra el balance restante."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:138
 msgid ""
@@ -25787,6 +26027,10 @@ msgid ""
 " Reference` has been set correctly on the vendor bill. If the field is "
 "empty, select the vendor invoice number as a reference."
 msgstr ""
+"El campo :guilabel:`Memo` se completa de manera automática si la "
+":guilabel:`referencia de pago` está configurada de manera correcta en la "
+"factura del proveedor. Seleccione el número de factura del proveedor como "
+"referencia si el campo está vacío."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:142
 msgid ""
@@ -25795,6 +26039,10 @@ msgid ""
 ":doc:`reconciled <bank/reconciliation>` and its status updates to "
 ":guilabel:`Paid`."
 msgstr ""
+"Después haga clic en :guilabel:`Crear pago`. Aparecerá un listón "
+":guilabel:`En proceso de pago`/:guilabel:`Parcial` en la factura hasta que "
+"se :doc:`concilie <bank/reconciliation>` y el estado cambie a "
+":guilabel:`Pagado`."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:153
 msgid "Aged payable report"
@@ -25805,6 +26053,9 @@ msgid ""
 "To get an overview of the open vendor bills and their due dates, go to "
 ":menuselection:`Accounting --> Reporting --> Aged payable`."
 msgstr ""
+"Para obtener una vista general de las facturas de proveedor abiertas y sus "
+"fechas límite, vaya a :menuselection:`Contabilidad --> Reportes --> Cuentas "
+"por pagar vencidas`."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:158
 msgid ""
@@ -25812,6 +26063,9 @@ msgid ""
 "vendor to view the details of all their outstanding bills, including the due"
 " dates and amounts."
 msgstr ""
+"Haga clic en el icono :icon:`fa-caret-right` :guilabel:`(flecha derecha)` "
+"que se encuentra a un lado del proveedor para ver los detalles de todas las "
+"facturas pendientes, incluyendo la fecha final y las cantidades."
 
 #: ../../content/applications/finance/accounting/vendor_bills/assets.rst:3
 msgid "Non-current assets and fixed assets"
@@ -29266,10 +29520,17 @@ msgid ""
 " such as Point of Sale, eCommerce, etc., depending on a country's fiscal "
 "requirements."
 msgstr ""
+"Las localizaciones fiscales son módulos específicos para cada país que "
+"permiten cumplir con sus respectivos requisitos fiscales. La mayoría de "
+"estos módulos están relacionados a la aplicación Contabilidad, pero también "
+"son necesarios para otras aplicaciones como Punto de venta, Comercio "
+"electrónico, etc. según los requisitos fiscales de cada país."
 
 #: ../../content/applications/finance/fiscal_localizations.rst:13
 msgid ":doc:`../hr/payroll/payroll_localizations` are documented separately."
 msgstr ""
+"Encontrará información sobre la :doc:`../hr/payroll/payroll_localizations` "
+"por separado."
 
 #: ../../content/applications/finance/fiscal_localizations.rst:20
 msgid ""
@@ -29279,6 +29540,12 @@ msgid ""
 "of countries <fiscal_localizations/countries-list>` to view the currently "
 "supported countries and access their specific documentation."
 msgstr ""
+"Odoo instala de forma automática los módulos principales de la localización "
+"fiscal según el país de la empresa cuando la aplicación relacionada se "
+"instala. El resto de los módulos se pueden :ref:`instalar <general/install>`"
+" de forma manual. Consule la :ref:`lista de países "
+"<fiscal_localizations/countries-list>` para ver los países que tienen "
+"localización fiscal y acceder a la documentación específica de cada uno."
 
 #: ../../content/applications/finance/fiscal_localizations.rst:26
 msgid ""
@@ -29439,7 +29706,7 @@ msgstr "República Democrática del Congo"
 
 #: ../../content/applications/finance/fiscal_localizations.rst:74
 msgid ":doc:`Denmark <fiscal_localizations/denmark>`"
-msgstr ""
+msgstr ":doc:`Dinamarca <fiscal_localizations/denmark>`"
 
 #: ../../content/applications/finance/fiscal_localizations.rst:75
 msgid "Dominican Republic"
@@ -29531,7 +29798,7 @@ msgstr "Japón"
 
 #: ../../content/applications/finance/fiscal_localizations.rst:97
 msgid ":doc:`Jordan <fiscal_localizations/jordan>`"
-msgstr ""
+msgstr ":doc:`Jordania <fiscal_localizations/jordan>`"
 
 #: ../../content/applications/finance/fiscal_localizations.rst:98
 msgid "Kazakhstan"
@@ -46767,6 +47034,9 @@ msgid ""
 "<fiscal_localizations/packages>` is installed, you can export your "
 "accounting entries from Odoo to DATEV from the general ledger."
 msgstr ""
+"Suponiendo que instaló uno de los :ref:`paquetes de localización fiscal "
+"<fiscal_localizations/packages>` alemanes, puede exportar sus asientos de "
+"diario de Odoo a DATEV desde el libro mayor general."
 
 #: ../../content/applications/finance/fiscal_localizations/germany.rst:44
 msgid ""
@@ -51706,6 +51976,8 @@ msgid ""
 ":doc:`Jordan Payroll localization documentation "
 "<../../hr/payroll/payroll_localizations/jordan>`"
 msgstr ""
+":doc:`Documentación de la localización de nómina de Jordania "
+"<../../hr/payroll/payroll_localizations/jordan>`"
 
 #: ../../content/applications/finance/fiscal_localizations/jordan.rst:38
 msgid "Localization overview"
@@ -52060,13 +52332,15 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/jordan.rst:180
 msgid "Click :guilabel:`Send`."
-msgstr ""
+msgstr "Haga clic en :guilabel:`Enviar`."
 
 #: ../../content/applications/finance/fiscal_localizations/jordan.rst:181
 msgid ""
 "In the :guilabel:`Send` window, select :guilabel:`JoFotara (Jordan EDI)` and"
 " click :guilabel:`Send`."
 msgstr ""
+"En la ventana :guilabel:`Enviar` seleccione :guilabel:`JoFotara (Jordan "
+"EDI)` y haga clic en :guilabel:`Enviar`."
 
 #: ../../content/applications/finance/fiscal_localizations/jordan.rst:184
 msgid "When an invoice is sent to JoFotara, Odoo does the following:"
@@ -52121,6 +52395,13 @@ msgid ""
 "and arises between the values stores in Odoo and the values reported to "
 "ISTD, which can have an error margin of <0.001."
 msgstr ""
+"Existe una diferencia inherente en la forma en que se aproximan los valores "
+"en Odoo e ISTD debido a que las arquitecturas de los sistemas son "
+"diferentes. Los valores JOD en Odoo se almacenan y aproximan a tres "
+"decimales, mientras que ISTD espera que los valores tengan nueve decimales. "
+"Como resultado, es inevitable que haya una diferencia poco significativa "
+"entre los valores almacenados en Odoo y los valores reportados a ISTD. Esta "
+"diferencia puede tener un margen de error de <0.001."
 
 #: ../../content/applications/finance/fiscal_localizations/jordan.rst:209
 msgid "JoFotara State"
@@ -52181,6 +52462,13 @@ msgid ""
 "validation. Upon successful validation, the QR code from JoFotara is "
 "embedded in the debit or credit note PDF."
 msgstr ""
+"Para enviar una nota de débito o crédito a JoFotara, primero cree la "
+":ref:`nota de débito <accounting/credit_notes/issue-debit-note>` o la "
+":ref:`de crédito <accounting/credit_notes/issue-credit-note>`. En la ventana"
+" :guilabel:`Enviar`, haga clic en :guilabel:`JoFotara (Jordan EDI)` para "
+"enviarla para su validación en tiempo real. Una vez que se haya validado con"
+" éxito, el código QR de JoFotara se insertará en el PDF de la nota de débito"
+" o crédito."
 
 #: ../../content/applications/finance/fiscal_localizations/jordan.rst:240
 msgid ""
@@ -52222,7 +52510,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/jordan.rst:259
 msgid ":ref:`Discount types <sales/discounts/discount-button>`"
-msgstr ""
+msgstr ":ref:`Tipos de descuento <sales/discounts/discount-button>`"
 
 #: ../../content/applications/finance/fiscal_localizations/kenya.rst:3
 msgid "Kenya"
@@ -62490,6 +62778,9 @@ msgid ""
 " to :guilabel:`BACS Direct Debit` when :doc:`registering vendor payments "
 "<../accounting/payments>`."
 msgstr ""
+"Para generar archivos BACS para pagar facturas de clientes, configure el "
+":guilabel:`Método de pago` como :guilabel:`Domiciliación bancaria BACS` al "
+":doc:`registrar pagos de proveedor <../accounting/payments>`."
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:184
 msgid "Then, create a vendor batch payment:"
@@ -62588,6 +62879,9 @@ msgid ""
 "Method` to :guilabel:`BACS Direct Debit` when :doc:`registering invoice "
 "payments <../accounting/payments>`."
 msgstr ""
+"Para generar archivos BACS para pagar facturas de proveedores, configure el "
+":guilabel:`Método de pago` como :guilabel:`Domiciliación bancaria BACS` al "
+":doc:`registrar pagos de factura <../accounting/payments>`."
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:220
 msgid ""
@@ -66459,7 +66753,7 @@ msgstr ""
 
 #: ../../content/applications/finance/payment_providers.rst:0
 msgid ":doc:`SEPA Direct Debit <payment_providers/sdd>`"
-msgstr ""
+msgstr ":doc:`Domiciliación bancaria SEPA <payment_providers/sdd>`"
 
 #: ../../content/applications/finance/payment_providers.rst:0
 msgid ""
@@ -69207,6 +69501,9 @@ msgid ""
 "European Union that facilitates standardized and simplified electronic "
 "payments in euros across participating countries."
 msgstr ""
+"SEPA, o la Zona Única de Pagos en Euros, es una iniciativa de integración de"
+" pagos de la Unión Europea que busca estandarizar y simplificar los pagos "
+"electrónicos en euros en los países miembro."
 
 #: ../../content/applications/finance/payment_providers/sdd.rst:10
 msgid ""
@@ -69216,16 +69513,25 @@ msgid ""
 "authorizes the recipient to automatically initiate one-time or "
 ":doc:`recurring </applications/sales/subscriptions>` payments using |sdd|."
 msgstr ""
+"La domiciliación bancaria SEPA es un proveedor de pagos que permite cobrar "
+"próximos pagos de las cuentas bancarias de los clientes después de que hayan"
+" firmado un :ref:`mandato de domiciliación bancaria SEPA "
+"<accounting/batch_sdd/sdd_mandates>`. Este mandato autoriza que el receptor "
+"inicie de forma automática un pago único o :doc:`recurrente "
+"</applications/sales/subscriptions>` usando la domiciliación bancaria SEPA."
 
 #: ../../content/applications/finance/payment_providers/sdd.rst:16
 msgid ""
 "To use the SEPA Direct Debit (SDD) payment provider and create :ref:`SEPA "
 "Direct Debit mandates <accounting/batch_sdd/sdd_mandates>`:"
 msgstr ""
+"Para usar el proveedor de pago de domiciliación bancaria SEPA y crear "
+":ref:`mandatos de domiciliación bancaria SEPA "
+"<accounting/batch_sdd/sdd_mandates>`:"
 
 #: ../../content/applications/finance/payment_providers/sdd.rst:19
 msgid "The invoice being paid must be for an amount in euros."
-msgstr ""
+msgstr "La factura que se está pagando debe ser por una cantidad en euros."
 
 #: ../../content/applications/finance/payment_providers/sdd.rst:20
 msgid ""
@@ -69234,16 +69540,21 @@ msgid ""
 ":ref:`Accounting or Invoicing settings <accounting/batch_sdd/sepa-"
 "configuration>`."
 msgstr ""
+"La función :guilabel:`Domiciliación bancaria SEPA` debe estar habilitada y "
+"el :guilabel:`Identificador de acreedor` debe definirse en los :ref:`ajustes"
+" de Contabilidad o Facturación <accounting/batch_sdd/sepa-configuration>`."
 
 #: ../../content/applications/finance/payment_providers/sdd.rst:24
 msgid "To configure **SEPA Direct Debit**:"
-msgstr ""
+msgstr "Para configurar **la domiciliación bancaria SEPA**:"
 
 #: ../../content/applications/finance/payment_providers/sdd.rst:26
 msgid ""
 ":ref:`Navigate to the SEPA Direct Debit payment provider "
 "<payment_providers/supported_providers>`."
 msgstr ""
+":ref:`Vaya al proveedor de pago de domiciliación bancaria SEPA "
+"<payment_providers/supported_providers>`."
 
 #: ../../content/applications/finance/payment_providers/sdd.rst:27
 #: ../../content/applications/finance/payment_providers/wire_transfer.rst:32
@@ -69252,23 +69563,30 @@ msgid ""
 ":guilabel:`Communication` to be displayed alongside the payment instructions"
 " should be:"
 msgstr ""
+"En la pestaña :guilabel:`Configuración` seleccione si el memo o la "
+":guilabel:`Comunicación` que se debe mostrar junto con las instrucciones de "
+"pago debe ser:"
 
 #: ../../content/applications/finance/payment_providers/sdd.rst:30
 #: ../../content/applications/finance/payment_providers/wire_transfer.rst:35
 msgid ""
 ":guilabel:`Based on Document Reference`: the sales order or invoice number"
 msgstr ""
+":guilabel:`Según el documento de referencia`: La orden de venta o número de "
+"factura."
 
 #: ../../content/applications/finance/payment_providers/sdd.rst:31
 #: ../../content/applications/finance/payment_providers/wire_transfer.rst:36
 msgid ":guilabel:`Based on Customer ID`: the customer identifier"
-msgstr ""
+msgstr ":guilabel:`Según el ID del cliente`: El identificador del cliente."
 
 #: ../../content/applications/finance/payment_providers/sdd.rst:33
 msgid ""
 "Select the :guilabel:`Enable QR codes` check box to activate QR code "
 "payments."
 msgstr ""
+"Seleccione la casilla :guilabel:`Habilitar códigos QR` para activar los "
+"pagos mediante código QR."
 
 #: ../../content/applications/finance/payment_providers/sdd.rst:36
 #: ../../content/applications/finance/payment_providers/wire_transfer.rst:41
@@ -69276,6 +69594,8 @@ msgid ""
 ":doc:`Additional accounting setup "
 "<../accounting/customer_invoices/epc_qr_code>` is required to use QR codes."
 msgstr ""
+"Se requiere una :doc:`configuración adicional de Contabilidad "
+"<../accounting/customer_invoices/epc_qr_code>` para usar códigos QR."
 
 #: ../../content/applications/finance/payment_providers/sdd.rst:39
 msgid ""
@@ -69284,28 +69604,39 @@ msgid ""
 "the end of the checkout process on your ecommerce website or on the customer"
 " portal."
 msgstr ""
+"Edite las instrucciones de pago predeterminadas en la pestaña  "
+":guilabel:`Mensajes` para incluir su **número de cuenta bancaria**. Estas "
+"instrucciones se muestran al final del proceso de pago en su sitio de "
+"comercio electrónico o en el portal del cliente."
 
 #: ../../content/applications/finance/payment_providers/sdd.rst:45
 msgid ""
 "Leave the :guilabel:`Currencies` field set to the default :guilabel:`EUR` "
 "tag to ensure |sdd| is only available for payments in euros."
 msgstr ""
+"El campo :guilabel:`Monedas` debe conservar la etiqueta predeterminada "
+":guilabel:`EUR` para garantizar que la domiciliación bancaria SEPA solo esté"
+" disponible para pagos en euros."
 
 #: ../../content/applications/finance/payment_providers/sdd.rst:47
 msgid ""
 "The :guilabel:`Bank Account` defined for the :guilabel:`Payment Journal` "
 "must be a valid IBAN."
 msgstr ""
+"La :guilabel:`Cuenta bancaria` definida para el :guilabel:`Diario de pago` "
+"debe tener un código IBAN válido."
 
 #: ../../content/applications/finance/payment_providers/sdd.rst:50
 msgid ""
 "You can also test SEPA direct debit payments using the "
 ":ref:`payment_providers/test-mode`."
 msgstr ""
+"También puede probar los pagos por domiciliación bancaria SEPA con el "
+":ref:`payment_providers/test-mode`."
 
 #: ../../content/applications/finance/payment_providers/sdd.rst:56
 msgid "Online payments with |sdd|"
-msgstr ""
+msgstr "Pagos en línea con domiciliación bancaria SEPA"
 
 #: ../../content/applications/finance/payment_providers/sdd.rst:58
 msgid ""
@@ -69313,6 +69644,9 @@ msgid ""
 "IBAN to complete the :ref:`SEPA Direct Debit mandate "
 "<accounting/batch_sdd/sdd_mandates>`."
 msgstr ""
+"Los clientes que seleccionen domiciliación bancaria SEPA como método de pago"
+" deben ingresar su código IBAN para completar el :ref:`mandato de "
+"domiciliación bancaria SEPA <accounting/batch_sdd/sdd_mandates>`."
 
 #: ../../content/applications/finance/payment_providers/sdd.rst:61
 msgid ""
@@ -69326,6 +69660,17 @@ msgid ""
 "You can then collect them by :ref:`uploading them to your online banking "
 "interface <accounting/batch_sdd/XML>`."
 msgstr ""
+"El mandato de domiciliación bancaria SEPA se crea de forma automática en "
+":guilabel:`Borrador` según el código IBAN. Para validar la información, los "
+"clientes deben confirmar cada mandato nuevo; para esto, deben realizar una "
+"transferencia bancaria exitosa por la cantidad esperada **usando la "
+"referencia de pago especificada (en comunicación)**. Una vez que se reciba y"
+" concilie el pago inicial, el mandato se valida de forma automática y el "
+"estado se actualiza a :guilabel:`Activo`. Una vez que el mandato esté "
+"activo, se volverá a usar para todos los pagos subsecuentes que se hagan con"
+" el método de pago de domiciliación bancaria SEPA. Podrá recolectar los "
+"pagos :ref:`después de subirlos a su interfaz de banca en línea "
+"<accounting/batch_sdd/XML>`."
 
 #: ../../content/applications/finance/payment_providers/sdd.rst:70
 msgid ":doc:`../accounting/payments/batch_sdd`"
@@ -69337,6 +69682,10 @@ msgid ""
 " :doc:`stripe`, :doc:`adyen`, and :doc:`buckaroo`. In these cases, |sdd| "
 "mandates are handled externally by the payment provider."
 msgstr ""
+"La domiciliación bancaria SEPA también está disponible como método de pago "
+"con otros proveedores, como :doc:`stripe`, :doc:`adyen` y :doc:`buckaroo`. "
+"En estos casos, los mandatos de domiciliación bancaria SEPA los gestiona un "
+"proveedor de pagos externo."
 
 #: ../../content/applications/finance/payment_providers/stripe.rst:3
 msgid "Stripe"
@@ -69663,6 +70012,13 @@ msgid ""
 "the :guilabel:`Pay now` button at the end of the checkout process on your "
 "ecommerce website or on the customer portal."
 msgstr ""
+"El método de pago de **transferencia bancaria** le permite darle "
+"instrucciones de pago a los clientes, como los detalles de su banco y la "
+"referencia que se debe incluir con el pago. Estas instrucciones se muestran "
+"después de que el cliente selecciona :guilabel:`Transferencia bancaria` como"
+" método de pago y hace clic en el botón :guilabel:`Pagar ahora` al final del"
+" proceso de pago en el sitio web de su comercio electrónico o en el portal "
+"del cliente."
 
 #: ../../content/applications/finance/payment_providers/wire_transfer.rst-1
 msgid "Payment instructions on the customer portal"
@@ -69674,6 +70030,9 @@ msgid ""
 " efficient process-wise. It is recommended to set up a :doc:`payment "
 "provider <../payment_providers>` instead."
 msgstr ""
+"Si bien, este método es muy accesible y requiere una configuración mínima, "
+"el proceso es muy ineficiente. En su lugar, le recomendamos un "
+":doc:`proveedor de pago <../payment_providers>`. "
 
 #: ../../content/applications/finance/payment_providers/wire_transfer.rst:19
 msgid ""
@@ -69681,6 +70040,9 @@ msgid ""
 "stage until you receive the payment and manually :guilabel:`Confirm` the "
 "order."
 msgstr ""
+"Las órdenes en línea se quedan en la etapa de :guilabel:`cotización enviada`"
+" (es decir, orden no pagada) hasta que reciba el pago y :guilabel:`confirme`"
+" la orden de forma manual."
 
 #: ../../content/applications/finance/payment_providers/wire_transfer.rst:23
 msgid ""
@@ -69693,17 +70055,21 @@ msgstr ""
 
 #: ../../content/applications/finance/payment_providers/wire_transfer.rst:29
 msgid "To configure **Wire Transfer**:"
-msgstr ""
+msgstr "Para configurar la **transferencia bancaria**:"
 
 #: ../../content/applications/finance/payment_providers/wire_transfer.rst:31
 msgid ""
 ":ref:`Navigate to the Wire Transfer payment provider "
 "<payment_providers/supported_providers>`."
 msgstr ""
+":ref:`Vaya al proveedor de pago Transferencia bancaria "
+"<payment_providers/supported_providers>`."
 
 #: ../../content/applications/finance/payment_providers/wire_transfer.rst:38
 msgid "Enable :guilabel:`Enable QR codes` to activate QR code payments."
 msgstr ""
+"Habilite la opción :guilabel:`Habilitar códigos QR` para activar los pagos "
+"por código QR."
 
 #: ../../content/applications/finance/payment_providers/wire_transfer.rst:44
 msgid ""
@@ -69713,6 +70079,11 @@ msgid ""
 "can also add it afterward and update the message by clicking "
 ":guilabel:`Reload pending message`."
 msgstr ""
+"Defina las instrucciones de pago en la pestaña :guilabel:`Mensajes`. Si ya "
+"definió una :doc:`cuenta bancaria <../accounting/bank>`, el número de la "
+"cuenta se agrega de forma automática al mensaje predeterminado que genere "
+"Odoo. También puede agregar el número después, para actualizar el mensaje "
+"solo debe hacer clic en :guilabel:`Volver a cargar el mensaje pendiente`."
 
 #: ../../content/applications/finance/payment_providers/wire_transfer.rst:0
 msgid "Define payment instructions"
@@ -69723,6 +70094,8 @@ msgid ""
 "You can also test wire transfers using the :ref:`payment_providers/test-"
 "mode`."
 msgstr ""
+"También puede usar el :ref:`payment_providers/test-mode` para probar la "
+"transferencia bancaria."
 
 #: ../../content/applications/finance/payment_providers/worldline.rst:3
 msgid "Worldline"
