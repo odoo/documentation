@@ -95,15 +95,13 @@ component later. For example:
 
 .. code-block:: javascript
 
-    import { useService } from "@web/core/utils/hooks";
+    import { rpc } from "@web/core/network/rpc";
 
     class MyComponent extends Component {
       setup() {
-        const rpc = useService("rpc");
-
         onWillStart(async () => {
-          this.someValue = await rpc(...);
-        });
+          const result = await rpc(...);
+        })
       }
     }
 
@@ -623,11 +621,10 @@ argument and optionally, a ``params`` object can be given as a second argument.
 
 .. code-block:: javascript
 
-   // in setup
-   this.rpc = useService("rpc");
+  import { rpc } from "@web/core/network/rpc";
 
    // somewhere else, in an async function:
-   const result = await this.rpc("/my/route", { some: "value" });
+   const result = await rpc("/my/route", { some: "value" });
 
 .. note::
 

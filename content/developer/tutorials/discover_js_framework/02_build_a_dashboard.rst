@@ -199,22 +199,23 @@ Let's improve the dashboard by adding a few dashboard items to display *real* bu
 The `awesome_dashboard` addon provides a `/awesome_dashboard/statistics` route that is meant
 to return some interesting information.
 
-To call a specific controller, we need to use the :ref:`rpc service <frontend/services/rpc>`.
+To call a specific controller, we need to use the :ref:`rpc <frontend/services/rpc>` function.
 It only exports a single function that perform the request: :code:`rpc(route, params, settings)`.
 A basic request could look like this:
 
 .. code-block:: js
 
+   import { rpc } from "@web/core/network/rpc";
+   // ...
+
    setup() {
-         this.rpc = useService("rpc");
-         onWillStart(async () => {
-            const result = await this.rpc("/my/controller", {a: 1, b: 2});
-            // ...
-         });
+      onWillStart(async () => {
+         const result = await rpc("/my/controller", {a: 1, b: 2});
+      })
+      // ...
    }
 
-#. Update `Dashboard` so that it uses the `rpc` service.
-#. Call the statistics route `/awesome_dashboard/statistics` in the `onWillStart` hook.
+#. Update `Dashboard` so that it uses the `rpc` function and call the statistics route `/awesome_dashboard/statistics`.
 #. Display a few cards in the dashboard containing:
 
    - Number of new orders this month
@@ -227,7 +228,7 @@ A basic request could look like this:
    :align: center
 
 .. seealso::
-   `Code: rpc service <{GITHUB_PATH}/addons/web/static/src/core/network/rpc_service.js>`_
+   `Code: rpc <{GITHUB_PATH}/addons/web/static/src/core/network/rpc.js>`_
 
 5. Cache network calls, create a service
 ========================================
