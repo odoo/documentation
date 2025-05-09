@@ -1,86 +1,151 @@
-============
-New vehicles
-============
+===============
+Adding vehicles
+===============
 
-Odoo's *Fleet* app manages all vehicles, and the accompanying documentation that comes with vehicle
-maintenance, and drivers records.
+Odoo's **Fleet** app manages all vehicles, and the accompanying documentation that comes with
+vehicle maintenance and driver records.
 
 Upon opening the :menuselection:`Fleet` application, all vehicles are organized within the
-:guilabel:`Vehicles` dashboard, which is the default dashboard for the *Fleet* application. Each
-vehicle is displayed in its corresponding Kanban stage, based on its status. The default stages are
-:guilabel:`New Request`, :guilabel:`To Order`, :guilabel:`Registered`, and :guilabel:`Downgraded`.
+:guilabel:`Vehicles` dashboard, which is the default dashboard. Each vehicle is displayed in its
+corresponding Kanban stage, based on its status. The default stages are :guilabel:`New Request`,
+:guilabel:`To Order`, :guilabel:`Registered`, and :guilabel:`Downgraded`.
 
-To add a new vehicle to the fleet from the :guilabel:`Vehicles` page, click the :guilabel:`New`
+.. _fleet/settings:
+
+Settings
+========
+
+Before registering any vehicles, review two **Fleet** settings that directly affect day-to-day
+operations and employee benefits:
+
+- :ref:`End Date Contract Alert <fleet/end-contract>` — emails the contract's *Responsible* person a
+  set number of days before the vehicle agreement expires, so renewals or returns aren't missed.
+- :ref:`New Vehicle Request <fleet/request>` — (Belgian Payroll localization only) blocks employees
+  from requesting a new company car through the salary configurator, once the available vehicles
+  already exceeds the defined limit, helping control benefits costs.
+
+To access the settings menu, go to :menuselection:`Fleet app --> Configuration --> Settings`.
+
+.. _fleet/end-contract:
+
+End Date Contract Alert
+-----------------------
+
+The :guilabel:`End Date Contract Alert` field shows how many days before the end of a vehicle
+contract an alert should be sent. The :ref:`responsible parties <fleet/responsible>` receive an
+email informing them that a vehicle contract is about to expire in the number of days defined in
+this field.
+
+.. image:: new_vehicle/fleet-settings.png
+   :alt: Settings available for the Fleet application.
+
+.. _fleet/responsible:
+
+Responsible parties
+~~~~~~~~~~~~~~~~~~~
+
+To determine the responsible person is for a contract, open an individual contract. The person
+listed as :guilabel:`Responsible` under the :guilabel:`Contract Information` section of the contract
+receives the alert.
+
+To open a contract from a list of all contracts, navigate to :menuselection:`Fleet app --> Fleet -->
+Contracts` and all contracts appear in the list. Click on a :guilabel:`Contract` to open it. In the
+:guilabel:`Information` section of the contract, look under :guilabel:`Responsible` to see who
+receives expiration alerts.
+
+An individual contract can also be opened from a specific vehicle by navigating to
+:menuselection:`Fleet app --> Fleet --> Fleet` and clicking on an individual vehicle. On the vehicle
+form, click the :guilabel:`Contracts` smart button at the top of the page. Only contracts associated
+with the vehicle appear in the list. Click on an individual contract to open it. The
+:guilabel:`Responsible` person is listed on the contract.
+
+.. _fleet/request:
+
+New Vehicle Request (Belgian Payroll - Fleet)
+---------------------------------------------
+
+Enter the maximum fleet size that may be reached through the salary-configurator flow. When the
+total number of available vehicles (vehicles without an assigned driver) is equal to or below this
+limit, employees can request a new company car. Once the available vehicles exceeds the limit, the
+request option is hidden.
+
+.. example::
+   If the :guilabel:`New Vehicle Request` limit is set to 20 vehicles, and there are 25 vehicles
+   available, employees cannot request a new car and must select from the 25 already available. If
+   there are only 10 cars available, then the employee would be able to request a new vehicle.
+
+.. note::
+   This settings option **only** appears if the :guilabel:`Belgian-Payroll-Fleet` module is
+   installed for the Belgian localization.
+
+Add a vehicle
+=============
+
+To add a new vehicle to the fleet from the :guilabel:`Vehicles` dashboard, click the :guilabel:`New`
 button in the top-left corner, and a blank vehicle form loads. Then, proceed to enter the vehicle
 information on the vehicle form.
-
-The form auto-saves as data is entered. However, the form can be saved manually at any time by
-clicking the *save manually* option, represented by a :guilabel:`(cloud upload)` icon, located in
-the top-left corner of the page.
 
 .. _fleet/new_vehicle/vehicle-form:
 
 Vehicle form fields
 ===================
 
-- :guilabel:`Model`: select the vehicle's model from the drop-down menu. Once a model is selected,
-  additional fields may appear on the form.
-
-  If the model is not listed, type in the model name, and click either :guilabel:`Create "model"`,
-  or :guilabel:`Create and edit...` to :ref:`create a new model and edit the model details
-  <fleet/add-model>`.
-- :guilabel:`License Plate`: enter the vehicle's license plate number in this field.
-- :guilabel:`Tags`: select any tags from the drop-down menu, or type in a new tag. There is no limit
+- :guilabel:`Model`: Using the drop-down menu, select the vehicle's model. Once a model is selected,
+  additional fields may appear on the form. If the model is not listed, type in the model name, and
+  click either :guilabel:`Create "model"`, or :guilabel:`Create and edit...` to :ref:`create a new
+  model and edit the model details <fleet/add-model>`.
+- :guilabel:`License Plate`: Enter the vehicle's license plate number.
+- :guilabel:`Tags`: Select any tags from the drop-down menu, or type in a new tag. There is no limit
   on the amount of tags that can be selected.
 
 .. image:: new_vehicle/model.png
-   :align: center
    :alt: The new vehicle form, showing the model section.
 
 .. note::
-   The :guilabel:`Model` is the only required field on the new vehicle form. When a model is
+   The :guilabel:`Model` is the *only* required field on the new vehicle form. When a model is
    selected, other fields appear on the vehicle form, and relevant information auto-populates the
    fields that apply to the model. If some of the fields do not appear, this may indicate there is
    no model selected.
 
 .. _fleet/new_vehicle/new-driver:
 
-Driver section
---------------
+Driver
+------
 
 This section of the vehicle form relates to the person who is currently driving the car, as well as
 any plans for a change in the driver in the future, and when.
 
-- :guilabel:`Driver`: select the driver from the drop-down menu, or type in a new driver and click
-  either :guilabel:`Create "driver"` or :guilabel:`Create and edit...` to :ref:`create a new driver,
-  and edit the driver details <fleet/new_vehicle/add-driver>`.
+- :guilabel:`Driver`: Using the drop-down menu, select the driver for the vehicle. If the driver is
+  not listed, :ref:`create the new driver, and edit the driver details
+  <fleet/new_vehicle/add-driver>`.
 
   .. important::
-     A driver does **not** have to be an employee. When creating a new driver, the driver is added
-     to the *Fleet* application, **not** the *Employees* application.
+     A driver does *not* have to be an employee. When creating a new driver, the driver is added to
+     the **Fleet** app, *not* the **Employees** app.
 
-     If the *Contacts* application is installed, the driver information is also stored in the
-     *Contacts* application.
+     If the **Contacts** app is installed, the driver information is also stored there.
 
-- :guilabel:`Mobility Card`: if the selected driver has a mobility card listed on their employee
-  card in the *Employees* application, the mobility card number appears in this field. If there is
-  no mobility card listed, and one should be added, :ref:`edit the employee record
-  <employees/hr-settings>` in the *Employees* application.
-- :guilabel:`Future Driver`: if the next driver for the vehicle is known, select the next driver
+- :guilabel:`Mobility Card`: If the selected driver has a mobility card (such as a gas card) listed
+  on their employee record in the **Employees** application, the mobility card number automatically
+  appears in this field. If there is no mobility card listed, and one should be added, :ref:`edit
+  the employee record <employees/hr-settings>` in the **Employees** application.
+- :guilabel:`Future Driver`: If the next driver for the vehicle is known, select the next driver
   from the drop-down menu. Or, type in the next driver and click either :guilabel:`Create "future
   driver"` or :guilabel:`Create and edit...` to :ref:`create a new future driver, and edit the
   driver details <fleet/new_vehicle/add-driver>`.
-- :guilabel:`Plan To Change Car`: if the current driver set for this vehicle plans to change their
-  vehicle - either because they are waiting on a new vehicle that is being ordered, or this is a
-  temporary vehicle assignment, and they know which vehicle they are driving next - check this box.
-  Do **not** check this box if the current driver does not plan to change their vehicle.
-- :guilabel:`Assignment Date`: using the drop-down calendar, select when the vehicle is available
-  for another driver. Select the date by navigating to the correct month and year using the
-  :guilabel:`⬅️ (left arrow)` and :guilabel:`➡️ (right arrow)` icons. Then, click on the specific
-  day. If this field is left blank, that indicates the vehicle is currently available, and can be
-  reassigned to another driver. If it is populated, the vehicle is not available for another driver
-  until the selected date.
-- :guilabel:`Company`: select the company from the drop-down menu. This field only appears in a
+
+  .. note::
+     If this field is populated, a :guilabel:`Apply New Driver` button appears on the vehicle form.
+     Click the :guilabel:`Apply New Driver` button to change the driver information.
+
+- :guilabel:`Plan To Change Car`: Tick this box when the current driver already knows they'll switch
+  to another vehicle, whether they are awaiting an ordered car, using this one only temporarily, or
+  are leaving the company.
+- :guilabel:`Assignment Date`: Using the calendar selector, select when the vehicle is available for
+  another driver. If this field is left blank, that indicates the vehicle is currently available,
+  and can be assigned to another driver. If it is populated, the vehicle is not available for
+  another driver until the selected date.
+- :guilabel:`Company`: Select the company from the drop-down menu. This field only appears in a
   multi-company database.
 
 .. _fleet/new_vehicle/add-driver:
@@ -96,185 +161,51 @@ First, type in the name of the new driver in either the :guilabel:`Driver` or :g
 Driver` field, then click :guilabel:`Create and edit...`. A :guilabel:`Create Driver` or
 :guilabel:`Create Future Driver` form appears, depending on which field initiated the form.
 
-Both the :guilabel:`Create Driver` and :guilabel:`Create Future Driver` forms are identical.
-
-.. _fleet/new_vehicle/general-info:
+Both the :guilabel:`Create Driver` and :guilabel:`Create Future Driver` forms are identical, and are
+stored in the **Contacts** app. :doc:`Configure the new contact <../../essentials/contacts>`, then
+click :guilabel:`Save & Close`.
 
 .. note::
    Depending on the installed applications, different tabs or fields may be visible on the
    :guilabel:`Create Driver` and :guilabel:`Create Future Driver` forms.
 
-General information
-*******************
+.. _fleet/new_vehicle/general-info:
 
-Fill out the following information on the top-half of the form:
+Vehicle
+-------
 
-- :guilabel:`Individual` or :guilabel:`Company`: choose if the driver being added is an individual
-  driver or a company. Click the radio button to make a selection.
-
-  When a selection is made, some fields may disappear from the form. If any of the fields below are
-  not visible, that is because :guilabel:`Company` was selected instead of :guilabel:`Individual`.
-- :guilabel:`Name`: enter the name of the driver or company in this field.
-- :guilabel:`Company Name...`: using the drop-down menu, select the company the driver is associated
-  with.
-
-  If the :guilabel:`Company` radio button is selected at the top of the form, this field does not
-  appear.
-- :guilabel:`Contact`: enter the contact information in this section.
-
-  If desired, the :guilabel:`Contact` field can be changed to a different type of contact. Click on
-  :guilabel:`Contact` to reveal a drop-down menu. The available options to select are
-  :guilabel:`Contact`, :guilabel:`Invoice Address`, :guilabel:`Delivery Address`,
-  :guilabel:`Follow-up Address`, or :guilabel:`Other Address`.
-
-  If desired, select one of these other options for the :guilabel:`Contact` field, and enter the
-  corresponding information.
-
-  If the :guilabel:`Company` radio button is selected at the top of the form, this field is labeled
-  :guilabel:`Address` and cannot be modified.
-
-- :guilabel:`Tax ID`: enter the driver or company's tax ID in this field.
-- :guilabel:`Job Position`: enter the driver's job position in this field. If the
-  :guilabel:`Company` radio button is selected at the top of the form, this field does not appear.
-- :guilabel:`Phone`: enter the driver or company's phone number in this field.
-- :guilabel:`Mobile`: enter the driver or company's mobile number in this field.
-- :guilabel:`Email`: enter the driver or company's email address in this field.
-- :guilabel:`Website`: enter the driver or company's website address in this field.
-- :guilabel:`Title`: using the drop-down menu, select the driver's title in this field. The default
-  options are :guilabel:`Doctor`, :guilabel:`Madam`, :guilabel:`Miss`, :guilabel:`Mister`, and
-  :guilabel:`Professor`.
-
-  If the :guilabel:`Company` radio button is selected at the top of the form, this field does not
-  appear.
-- :guilabel:`Tags`: using the drop-down menu, select any tags that apply to the driver or company.
-
-  To add a new tag, type in the tag, then click :guilabel:`Create "tag"`.
-
-  There is no limit to the number of tags that can be selected.
-
-.. image:: new_vehicle/create-driver.png
-   :align: center
-   :alt: The top portion of the create driver form.
-
-Contacts & Addresses tab
-************************
-
-After completing the top-half of the :guilabel:`Create Driver` or :guilabel:`Create Future Driver`
-form, add any other contacts and addresses associated with the driver or company in this tab.
-
-To add a new contact, click the :guilabel:`Add` button, and a :guilabel:`Create Contact` pop-up
-window appears.
-
-Before entering the necessary information on the form, select the type of contact being added from a
-series radio button options located at the top of the form. Those options are:
-
-- :guilabel:`Contact`: select this option to add general contact details for employees of the
-  associated company.
-- :guilabel:`Invoice Address`: select this option to add a preferred address for all invoices. When
-  added to the form, this address is selected by default when sending an invoice to the associated
-  company.
-- :guilabel:`Delivery Address`: select this option to add a preferred address for all deliveries.
-  When added to the form, this address is selected by default when delivering an order to the
-  associated company.
-- :guilabel:`Follow-up Address`: select this option to add a preferred address for all follow-up
-  correspondence. When added to the form, this address is selected by default when sending reminders
-  about overdue invoices.
-- :guilabel:`Other Address`: select this option to add any other necessary addresses for the company
-  or driver.
-
-.. image:: new_vehicle/create-contact.png
-   :align: center
-   :alt: The create contact form with all parts filled in.
-
-Depending on the :guilabel:`Contact Type`, some optional fields may not be visible. The available
-fields are identical to the fields in the :ref:`general information
-<fleet/new_vehicle/general-info>` section of the new driver form.
-
-Add any notes to the :guilabel:`Internal notes...` section of the form.
-
-After entering all of the information, click either :guilabel:`Save & Close` to add the one new
-contact, or :guilabel:`Save & New` to add the current address record and create another address
-record.
-
-As contacts are added to this tab, each contact appears in a separate box, with an icon indicating
-what type of contact is listed.
-
-.. example::
-   An :guilabel:`Invoice Address` displays a :guilabel:`💲 (dollar sign)` icon inside that specific
-   address box, whereas a :guilabel:`Delivery Address` displays a :guilabel:`🚚 (truck)` icon
-   inside.
-
-   .. image:: new_vehicle/contacts-address.png
-     :align: center
-     :alt: The create contact form with all parts filled in.
-
-Sales & Purchase tab
-********************
-
-Enter the following sales and purchasing information, in the :guilabel:`Sales & Purchase` tab of the
-:guilabel:`Create Driver` or :guilabel:`Create Future Driver` pop-up form for the various sections
-below.
-
-Depending on the other installed applications, additional fields and sections may appear. The
-following are all default fields for the *Fleet* application **only**.
-
-Sales section
-^^^^^^^^^^^^^
-
-- :guilabel:`Salesperson`: using the drop-down menu, select the user who is the main point of
-  contact for sales with this driver's company.
-
-  This person **must** be an internal user of the company, meaning they can log into the database as
-  a user.
-
-Misc
-^^^^
-
-- :guilabel:`Company ID`: if the company has an ID number, **other than** its *tax ID*, enter it in
-  this field.
-- :guilabel:`Reference`: enter any text to give more information regarding the contact person. This
-  is an internal note to provide any additional information.
-
-  .. example::
-     A company has several people with the same name, John Smith. The :guilabel:`Reference` field
-     could state `John Smith at X205 - purchaser` to provide additional details.
-
-Internal Notes tab
-******************
-
-Add any notes that pertain to the driver, or any other necessary information, in this tab.
-
-Vehicle section
----------------
-
-This section of the vehicle form relates to the physical details of the vehicle.
-
-If a preexisting vehicle in the database was selected for the :guilabel:`Model` field in the top
-portion of the form, some fields may auto-populate, and additional fields may also appear.
+This section captures key physical details of a vehicle. Selecting an existing Model may auto-fill
+some fields.
 
 Fill in the following fields on the form:
 
-- :guilabel:`Category`: using the drop-down menu, select the vehicle category from the available
-  options. To create a new category, type in the new category name, then click :guilabel:`Create
-  "category"`.
-- :guilabel:`Order Date`: using the drop-down calendar, select the date the vehicle was ordered.
-- :guilabel:`Registration Date`: using the drop-down calendar, select the date the vehicle was
-  registered.
-- :guilabel:`Cancellation Date`: using the drop-down calendar, select the date the vehicle lease
-  expires, or when the vehicle is no longer available.
-- :guilabel:`Chassis Number`: enter the chassis number in the field. This is known in some countries
-  as the :abbr:`VIN (Vehicle Identification Number)` number.
-- :guilabel:`Last Odometer`: enter the last known odometer reading in the number field. Using the
+- :guilabel:`Category`: Using the drop-down menu, select the vehicle category from the available
+  options. If the **Inventory** app is installed, the category affects any configured :doc:`dispatch
+  management system
+  <../../inventory_and_mrp/inventory/shipping_receiving/setup_configuration/dispatch>`.
+- :guilabel:`Order Date`: Using the calendar selector, select the date the vehicle was ordered.
+  Keeping track of how long vehicles have been in the fleet can help when making decisions on
+  expensive repairs, or help decide when to surrender a vehicle.
+- :guilabel:`Registration Date`: Using the calendar selector, select the date the vehicle was
+  registered. Many regions require proper registration, so keeping track of registration dates is
+  important.
+- :guilabel:`Cancellation Date`: Using the calendar selector, select the date the vehicle lease
+  expires, or when the vehicle is no longer part of the fleet (e.g., sold, plates surrendered).
+- :guilabel:`Chassis Number`: Enter the chassis number in the field. This is known in some countries
+  as the :abbr:`VIN (Vehicle Identification Number)` number. Every vehicle has a unique number, so
+  in the event of a theft or accident, a vehicle can be identified with this unique number.
+- :guilabel:`Last Odometer`: Enter the last known odometer reading in the number field. Using the
   drop-down menu next to the number field, select whether the odometer reading is in kilometers
-  :guilabel:`(km)` or miles :guilabel:`(mi)`.
-- :guilabel:`Fleet Manager`: select the fleet manager from the drop-down menu, or type in a new
-  fleet manager, and click either :guilabel:`Create` or :guilabel:`Create and Edit`.
-- :guilabel:`Location`: type in the specific location where the vehicle is typically located in this
+  :guilabel:`(km)` or miles :guilabel:`(mi)`. Keeping track of a vehicle's mileage is crucial when
+  determining the value of the vehicle for both tax purposes and resale value.
+- :guilabel:`Fleet Manager`: Select the fleet manager from the drop-down menu, or type in a new
+  fleet manager, and click either :guilabel:`Create` or :guilabel:`Create and edit...`.
+- :guilabel:`Location`: Type in the specific location where the vehicle is typically located in this
   field. The entry should clearly explain where the vehicle can be found, such as `Main Garage` or
-  `Building 2 Parking Lot`.
+  `Building 2 Parking Lot`. This is crucial information for companies with many locations where
+  vehicles are stored.
 
 .. image:: new_vehicle/new-vehicle-type.png
-   :align: center
    :alt: The new vehicle form, showing the vehicle tax section.
 
 Tax Info tab
@@ -289,45 +220,52 @@ applications or localization settings.
 Fiscality
 ~~~~~~~~~
 
-- :guilabel:`Horsepower Taxation`: enter the amount that is taxed based on the size of the vehicle's
+- :guilabel:`Horsepower Taxation`: Enter the amount that is taxed based on the size of the vehicle's
   engine. This is determined by local taxes and regulations, and varies depending on the location.
   It is recommended to check with the accounting department to ensure this value is correct.
+- :guilabel:`Disallowed Expenses Rate`: Configure the dates and percentages of the vehicle-related
+  costs (fuel, maintenance, depreciation, etc.) that **cannot** be deducted from the company's
+  taxable income.
 
 Contract
 ~~~~~~~~
 
-- :guilabel:`First Contract Date`: select the start date for the vehicle's first contract using the
-  drop-down calendar. Typically this is the day the vehicle is purchased or leased.
-- :guilabel:`Catalog Value (VAT Incl.)`: enter the MSRP (Manufacturer's Suggested Retail Price) for
-  the vehicle at the time of purchase or lease.
-- :guilabel:`Purchase Value`: enter the purchase price or the value of the lease for the vehicle.
-- :guilabel:`Residual Value`: enter the current value of the vehicle.
+- :guilabel:`First Contract Date`: Select the start date for the vehicle's first contract using the
+  calendar selector. Typically this is the day the vehicle is purchased or leased.
+- :guilabel:`Catalog Value (VAT Incl.)`: Enter the :abbr:`MSRP (Manufacturer's Suggested Retail
+  Price)` for the vehicle at the time of purchase or lease.
+- :guilabel:`Purchase Value`: Enter the purchase price or the original value of the lease for the
+  vehicle.
+- :guilabel:`Residual Value`: Enter the current value of the vehicle.
 
 .. note::
    The values listed above affect the accounting department. It is recommended to check with the
    accounting department for more information and/or assistance with these values.
 
 .. image:: new_vehicle/new-vehicle-tax.png
-   :align: center
    :alt: The new vehicle form, showing the vehicle tax section.
 
 Model tab
 ---------
 
-If the model for the new vehicle is already configured in the database, the :guilabel:`Model` tab
-will be populated with the corresponding information. If the model is not already in the database
-and the :guilabel:`Model` tab needs to be configured, :ref:`configure the new vehicle model
-<fleet/add-model>`.
+If the model for the new vehicle is already configured in the database, the :guilabel:`MODEL` and
+:guilabel:`ENGINE` sections are populated with the corresponding information. If the model is *not*
+already in the database and the :guilabel:`Model` tab needs to be configured, :ref:`configure the
+new vehicle model <fleet/add-model>`.
 
 Check the information in the :guilabel:`Model` tab to ensure it is accurate. For example, the color
 of the vehicle, or if a trailer hitch is installed, are examples of common information that may need
 updating.
 
-.. image:: new_vehicle/model-tab.png
-   :align: center
-   :alt: The new vehicle form, showing the vehicle tax section.
-
 Note tab
 --------
 
 Enter any notes for the vehicle in this section.
+
+.. image:: new_vehicle/model-tab.png
+   :alt: The new vehicle form, showing the vehicle tax section.
+
+.. seealso::
+   - :doc:`../fleet/models`
+   - :doc:`../fleet/service`
+   - :doc:`../fleet/accidents`
