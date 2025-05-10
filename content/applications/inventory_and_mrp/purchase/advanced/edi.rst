@@ -13,13 +13,19 @@ In Odoo, a *purchase order* (PO) can be exported as an XML file and imported as 
 into another Odoo database, removing the need for manual entry of products, quantities, prices, and
 other key information.
 
-.. note::
-   Exported XMLs follow the `Order-X schema <https://fnfe-mpe.org/factur-x/order-x/>`_, a standard
-   commonly used in European countries. When exchanging data between two Odoo databases, this schema
-   remains compatible.
+The workflow in this document describes how buyers and sellers exchange data directly between their
+Odoo databases. As an alternative, sellers can receive a PDF version of the request for quotation
+(RFQ) by email and :ref:`upload it directly in their Sales dashboard
+<purchase/advanced/rfq-upload>`. **This method is simpler** but does not use the XML-based exchange
+described in the document.
 
-   However, implementing custom developments for software that does not support the Order-X schema
-   may introduce additional complexity.
+.. note::
+   Exported XMLs follow the `UBL schema
+   <https://docs.peppol.eu/poacc/upgrade-3/syntax/Order/tree/>`_. When exchanging data between two
+   Odoo databases, this schema remains compatible.
+
+   However, implementing custom developments for software that does not support the UBL schema may
+   introduce additional complexity.
 
 Roles and configuration
 =======================
@@ -31,9 +37,12 @@ configurations.
 Buyer database
 --------------
 
-The buyer database is responsible for creating and confirming purchase orders. Prerequisites include
-:ref:`installing <general/install>` the **Purchase** app and adding vendors (the sellers in this
-workflow) as :doc:`portal users <../../../general/users/portal>`.
+The buyer database is responsible for creating and confirming purchase orders. Prerequisites
+include:
+
+#. (required) :ref:`installing <general/install>` the **Purchase** app
+#. (optional) adding vendors (the sellers in this workflow) as :doc:`portal users
+   <../../../general/users/portal>`.
 
 Seller database
 ---------------
@@ -48,7 +57,7 @@ Buyer's process
 ---------------
 
 To begin, the buyer (in their database) navigates to the :menuselection:`Purchase` app to create a
-request for quotation (RFQ).
+:abbr:`RFQ (request for quotation)`.
 
 Set the :guilabel:`Vendor` to the portal user representing the seller, and :guilabel:`Confirm` the
 :abbr:`RFQ (request for quotation)`. Doing so converts it into a :doc:`purchase order
@@ -91,6 +100,8 @@ file.
 
 .. example::
    :download:`XML file <edi/P00017.xml>` for PO00017
+
+.. _purchase/advanced/rfq-upload:
 
 Upload file
 ~~~~~~~~~~~
