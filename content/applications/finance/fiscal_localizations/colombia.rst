@@ -146,20 +146,31 @@ scroll to the :guilabel:`Colombian Electronic Invoicing` section. Then, follow t
      .. image:: colombia/dian-credentials-configuration.png
         :alt: Colombian electronic invoicing credentials configured.
 
-#. Configure the |DIAN| environment; the |DIAN| electronic invoicing module offers three different
+#. Configure the |DIAN| environment; the |DIAN| electronic invoicing module offers four different
    |DIAN| environments to connect with:
+
+   - **DIAN demo mode**: This environment allows to test electronic invoicing workflows using
+     a demo digital certificate. Files are created and accepted automatically and are not sent
+     to any |DIAN| environment. Every internal validation can be tested. To activate it, tick the
+     :guilabel:`DIAN Demo Mode` checkbox.
+
+     .. note::
+        The :guilabel:`DIAN Demo Mode` checkbox is hidden from view when the :guilabel:`Test
+        environment` checkbox is enabled.
 
    - **Certification environment**: This environment is useful to pass the |DIAN| certification
      process and obtain the *Enabled* status to invoice from Odoo. To activate it, enable both the
      :guilabel:`Test environment` and the :guilabel:`Activate the certification process` checkboxes.
-
    - **Testing environment**: This environment allows reproducing electronic invoicing flows
      and validations in the |DIAN| testing portal. To activate it, enable only the :guilabel:`Test
      Environment` checkbox.
-
-   - **Production environment**: Activate production databases to generate valid electronic documents.
-     To activate it, disable both the :guilabel:`Test environment` and the :guilabel:`Activate the
+   - **Production environment**: This environment allows generating valid electronic documents. To
+     activate it, disable both the :guilabel:`Test environment` and the :guilabel:`Activate the
      certification process` checkboxes.
+
+     .. important::
+        Do not activate :guilabel:`DIAN Demo Mode` on a production database. This mode is intended
+        for use in test environments only.
 
 .. note::
    In a multi-company database, each company can have its own certificate.
