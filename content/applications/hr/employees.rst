@@ -27,6 +27,11 @@ reporting.
 
       Certify employees as subject matter experts with certifications.
 
+   .. card:: Badges
+      :target: employees/badges
+
+      Grant badges to employees for performance and achievements.
+
    .. card:: Equipment
       :target: employees/equipment
 
@@ -114,6 +119,7 @@ employee record.
    employees/onboarding
    employees/departments
    employees/certifications
+   employees/badges
    employees/equipment
    employees/offboarding
    employees/retention_report
