@@ -288,37 +288,12 @@ longer has an error, the entry appears in gray instead of red.
 To delete an entry, click the red :guilabel:`Delete` button on the pop-up window instead of making
 modifications to the entry.
 
-Reporting
-=========
-
-To view attendance reports, click :guilabel:`Reporting` in the top menu. The default report displays
-each employee's attendance information for the past 3 months, in a :guilabel:`Line Chart`.
-
-The default view is a :guilabel:`Graph`. To view the data in a pivot table, click the
-:guilabel:`Pivot Table` button on the top-right of the report. To switch back to the graph view,
-click the :guilabel:`Graph` button, located next to the :guilabel:`Pivot Table` button.
-
-To present different information, adjust the :ref:`filters and groups <attendances/filters-groups>`
-in the same way as in the :guilabel:`Overview` dashboard.
-
-The data can be presented in either a :guilabel:`Bar Chart`, :guilabel:`Line Chart`, :guilabel:`Pie
-Chart`, :guilabel:`Stacked` chart, or in :guilabel:`Descending` or :guilabel:`Ascending` order. To
-change the view to any of these charts, click the corresponding button above the displayed chart.
-
-To change the :guilabel:`Measures`, click the :guilabel:`Measures` button and select the desired
-measure from the drop-down menu.
-
-The report can also be inserted into a spreadsheet. Click the :guilabel:`Insert in Spreadsheet`
-button and a pop-up appears. Select the desired spreadsheet, and click :guilabel:`Confirm`.
-
-.. image:: attendances/reporting.png
-   :alt: The default report view, with all the optional view buttons highlighted.
-
 .. seealso::
    - :doc:`attendances/check_in_check_out`
    - :doc:`attendances/kiosks`
    - :doc:`attendances/management`
    - :doc:`attendances/hardware`
+   - :doc:`attendances/attendance_reporting`
 
 .. toctree::
    :titlesonly:
@@ -327,3 +302,4 @@ button and a pop-up appears. Select the desired spreadsheet, and click :guilabel
    attendances/kiosks
    attendances/management
    attendances/hardware
+   attendances/attendance_reporting
