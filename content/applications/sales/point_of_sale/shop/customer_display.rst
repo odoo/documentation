@@ -29,6 +29,12 @@ Local
 Connect a second screen to your POS and :ref:`open a POS session <pos/session-start>`. Then, click
 :guilabel:`Customer Screen` to open a new window to drag and drop onto the second screen.
 
+.. note::
+   For POS terminals running the Odoo Android app with dual-screen support, enable customer
+   displays by installing the `Point of Sale Mobile` module. Once installed, a `Customer Screen`
+   button will appear in the POS interface. Tapping this button will automatically activate the
+   customer display on the terminal's secondary screen.
+
 .. _customer_display/remote:
 
 Remote
