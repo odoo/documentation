@@ -2,13 +2,10 @@
 Reports
 =======
 
-Odoo *Live Chat* includes several reports that allow for the monitoring of operator performance and
-the identification of trends in customer conversations.
+Odoo **Live Chat** includes several reports that allow for the monitoring of operator performance
+and the identification of trends in customer conversations.
 
-Available reports
-=================
-
-The following reports are included in the *Live Chat* app:
+The following reports are included in the **Live Chat** app:
 
 - :ref:`Sessions History <livechat/sessions-history>`
 - :ref:`Session Statistics <livechat/session-statistics>`
@@ -16,7 +13,7 @@ The following reports are included in the *Live Chat* app:
 
 .. note::
    The *Live Chat Ratings Report* can also be accessed through the :guilabel:`Report` menu. For more
-   information on this report, and on the *Live Chat* rating process, see :doc:`Live Chat Ratings
+   information on this report, and on the **Live Chat** rating process, see :doc:`Live Chat Ratings
    <../livechat/ratings>`.
 
 To access a drop-down menu of all the available reports, navigate to :menuselection:`Live Chat app
@@ -25,47 +22,48 @@ To access a drop-down menu of all the available reports, navigate to :menuselect
 .. _livechat/sessions-history:
 
 Sessions History
-----------------
+================
 
 The *Sessions History* report displays an overview of live chat sessions, including session dates,
 participant name and country, session duration, the number of messages, and the rating. It also
 provides access to the complete transcripts of live chat sessions.
 
 To access this report, navigate to :menuselection:`Live Chat app --> Report --> Sessions History`.
+Each live chat session is represented by a Kanban card.
 
 .. image:: reports/sessions-history.png
-   :align: center
    :alt: Example of the Sessions History report from the Live Chat application.
+
+To view the transcript from a specific session, click the Kanban card. This opens the *Discuss*
+thread for the conversation.
+
+In the *Discuss* thread, the conversation view displays the entire transcript of the conversation.
+If the visitor left a rating, it is included at the end of the transcript.
+
+.. image:: reports/chat-transcript.png
+   :alt: View of the chat transcript in the Discuss application.
+
+Export sessions history
+-----------------------
 
 The information in this report can be exported, or inserted into a spreadsheet.
 
-Click the :guilabel:`⚙️ (gear)` icon to the right of the :guilabel:`History` page title, in the
-top-left corner. Doing so reveals a drop-down menu.
+On the *Sessions History* report, click the :icon:`oi-view-list` :guilabel:`(List)` icon to switch
+to list view. Next, click the :icon:`fa-cog` :guilabel:`(gear)` icon to the right of the
+:guilabel:`History` page title to reveal a drop-down menu.
 
 From the drop-down menu, click :guilabel:`Export All` to export all sessions to a spreadsheet, or
 :guilabel:`Insert list in spreadsheet` to insert the information in a new, or existing, spreadsheet.
 
 To only export select sessions, first select the desired sessions to be exported from the list, by
 clicking the checkbox to the left of each individual session. With the sessions selected, click the
-:guilabel:`⚙️ (gear) Actions` icon in the top-center of the page, and click :guilabel:`Export` or
+:icon:`fa-cog` :guilabel:`Actions` icon at the top of the page, and click :guilabel:`Export` or
 :guilabel:`Insert list in spreadsheet`.
-
-To view the transcript of an individual conversation, click anywhere on the entry line. This opens
-the *Discuss* thread for the conversation.
-
-In the *Discuss* thread, the conversation view displays the entire transcript of the conversation.
-At the top of the conversation, there is a list of the web pages the visitor browsed before
-beginning their chat session, along with corresponding time stamps. If the visitor left a rating, it
-is included at the end of the transcript.
-
-.. image:: reports/chat-transcript.png
-   :align: center
-   :alt: View of the chat transcript in the Discuss application.
 
 .. _livechat/session-statistics:
 
 Session Statistics
-------------------
+==================
 
 The *Session Statistics* report provides a statistical overview of live chat sessions. The default
 view for this report displays sessions grouped by the date of creation.
@@ -74,7 +72,6 @@ To access this report, navigate to :menuselection:`Live Chat app --> Reports -->
 Statistics`.
 
 .. figure:: reports/sessions-statistics.png
-   :align: center
    :alt: Example of the Sessions Statistics report from the Live Chat application.
 
    The stacked bar graph view of the *Session Statistics* report, with results grouped by Creation
@@ -102,7 +99,7 @@ report. The measures available for this report include:
 .. _livechat/operator-analysis:
 
 Operator Analysis
------------------
+=================
 
 The *Operator Analysis* report is used to monitor the performance of individual live chat operators.
 
@@ -124,68 +121,4 @@ report. The measures available for this report include:
 - :guilabel:`Count`: the total number of sessions.
 
 .. image:: reports/operator-analysis.png
-   :align: center
    :alt: Example of the Operator Analysis report from the Live Chat application.
-
-View and filter options
-=======================
-
-On any Odoo report, the view and filter options vary, depending on what data is being analyzed,
-measured, and grouped. See below for additional information on the available views for the *Live
-Chat* reports.
-
-.. note::
-   The :ref:`Sessions History <livechat/sessions-history>` report is **only** available in list
-   view.
-
-Pivot view
-----------
-
-The *pivot* view presents data in an interactive manner. The :ref:`Session Statistics
-<livechat/session-statistics>` and :ref:`Operator Analysis <livechat/operator-analysis>` reports are
-available in pivot view.
-
-The pivot view can be accessed on a report by selecting the :guilabel:`grid icon` at the top-right
-of the screen.
-
-To add a group to a row or column, click the :guilabel:`➕ (plus sign)` icon next to
-:guilabel:`Total`, and then select one of the groups from the drop-down menu that appears. To remove
-one, click the :guilabel:`➖ (minus sign)` icon, and de-select the appropriate option.
-
-Graph view
-----------
-
-The *graph* view presents data in either a *bar*, *line*, or *pie* chart. The :ref:`Session
-Statistics <livechat/session-statistics>` and :ref:`Operator Analysis <livechat/operator-analysis>`
-reports are available in graph view.
-
-Switch to the graph view by selecting the :guilabel:`line chart` icon at the top-right of the
-screen. To switch between the different charts, select the desired view's corresponding icon at the
-top-left of the chart, while in graph view.
-
-.. tip::
-   Both the bar chart and line chart can utilize the *stacked* view option. This presents two or
-   more groups of data on top of each other, instead of next to each other, making it easier to
-   compare data.
-
-Save and share a favorite search
---------------------------------
-
-The *Favorites* feature found on reports allows users to save their most commonly used filters,
-without having to reconstruct them every time they are needed.
-
-To create and save a filter to the *Favorites* section on the search bar drop-down menu, follow the
-steps below:
-
-#. Set the necessary parameters using the :guilabel:`Filters` and :guilabel:`Group By` options
-   available in the :guilabel:`Search...` bar drop-down menu and the :guilabel:`Measures` drop-down
-   menu at the top-left of the report.
-#. Click the :guilabel:`🔻(triangle pointed down)` icon next to the :guilabel:`Search...` bar to
-   open the drop-down menu.
-#. Under the :guilabel:`Favorites` heading, click :guilabel:`Save current search`.
-#. Rename the search.
-#. Select :guilabel:`Default filter` to have these filter settings automatically displayed when the
-   report is opened. Otherwise, leave it blank.
-#. Select :guilabel:`Shared` to make this filter available to all other database users. If this box
-   is not checked, the filter is only available to the user who creates it.
-#. Click :guilabel:`Save` to preserve the configuration for future use.
