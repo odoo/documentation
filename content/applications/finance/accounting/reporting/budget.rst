@@ -64,7 +64,7 @@ account(s) selected in the distribution are automatically updated. The :guilabel
 reflects the current result according to the items of confirmed journal entries for the associated
 :ref:`analytic account <accounting/analytic_accounting/analytic_accounts>`. In contrast, the
 :guilabel:`Committed` amount displays the full value of the :guilabel:`Achieved` amount, plus any
-confirmed sales or purchase orders that have not yet been invoiced or billed.
+confirmed purchase orders that have not yet been billed.
 
 .. note::
    - When a line in a request for quotation or purchase order includes an analytic distribution, a
