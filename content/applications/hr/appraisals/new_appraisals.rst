@@ -109,8 +109,9 @@ and their responses are then visible to the employee.
 Ask for feedback
 ----------------
 
-As part of the appraisal process, the manager can request feedback for an employee from anyone in
-the company about an employee. In Odoo, this is referred to as *360 Feedback*.
+As part of the appraisal process, the manager can :ref:`request feedback for an employee
+<appraisals/360-request-feedback>`  from anyone in the company about an employee. In Odoo, this is
+referred to as *360 Feedback*.
 
 Feedback is requested from coworkers and anyone else who works with the employee. This is to get a
 more well-rounded view of the employee, and aid in the manager's overall assessment.
@@ -118,25 +119,6 @@ more well-rounded view of the employee, and aid in the manager's overall assessm
 .. important::
    To request feedback, the appraisal **must** be confirmed. Once confirmed, an :guilabel:`Ask
    Feedback` button appears in the upper-left corner of the form.
-
-To request feedback from a colleague, click the :guilabel:`Ask Feedback` button, and an
-:guilabel:`Ask Feedback` email pop-up window appears, using the :guilabel:`Appraisal: Ask Feedback`
-email template.
-
-First, using the drop-down menu, select the employees being asked to provide feedback in the
-:guilabel:`Recipients` field. Multiple employees may be selected. Next, make any desired changes to
-the default message, and attach any relevant documents. To attach a document, click the
-:icon:`fa-paperclip` :guilabel:`Attachments` button, and a file explorer window appears. Navigate to
-the files, select them, then click :guilabel:`Open`.
-
-The :guilabel:`Answer Deadline` date is automatically set to the day after the :guilabel:`Appraisal
-Date` on the appraisal form. Using the calendar selector, modify the date, if desired.
-
-When the email is ready to send, click :guilabel:`Send`, and the feedback requests are sent to the
-specified employees.
-
-.. image:: new_appraisals/ask-feedback.png
-   :alt: The email pop-up when requesting feedback from other employees.
 
 .. _appraisals/review:
 
