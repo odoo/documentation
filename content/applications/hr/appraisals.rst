@@ -78,62 +78,11 @@ of a rating, and drag the rating to the desired position on the list.
    :align: center
    :alt: The evaluation scale, with the new button and click and drag icons highlighted.
 
-360 feedback
-============
-
-The :guilabel:`360 Feedback` section displays information for all the surveys currently configured
-in the *Appraisals* application. To view the surveys, and their statistics, navigate to
-:menuselection:`Appraisals application --> Configuration --> 360 Feedback`.
-
-.. image:: appraisals/survey-list.png
-   :align: center
-   :alt: A list view of all available surveys in the Appraisals application.
-
-Each appraisal (or survey) is presented in its own line on the :guilabel:`360 Feedback` page, along
-with various information related to that particular appraisal.
-
-Each appraisal includes the following information:
-
-- :guilabel:`Survey Name`: the name of the specific survey.
-- :guilabel:`Responsible`: the employee responsible for the survey, including the month and year
-  they were given that designation.
-- :guilabel:`Questions`: the number of questions in that particular survey.
-- :guilabel:`Average Duration`: the average time a user spends completing the survey.
-- :guilabel:`Registered`: the number of people who have been sent the survey.
-- :guilabel:`Completed`: the number of people who have completed the survey.
-
-Each appraisal also has two buttons at the end of each line: a :guilabel:`Test` button and a
-:guilabel:`See Results` button.
-
-To see what an appraisal looks like for the end user (i.e. an employee), click the :guilabel:`Test`
-button, and the appraisal loads in a new browser tab. The entire appraisal loads, and can be clicked
-through without having to enter any answers.
-
-To exit, close the tab. Or, click :guilabel:`This is a Test Survey. → Edit Survey` at the top of the
-page to be taken to the detail form for that particular survey.
-
-To view the results from everyone who completed an appraisal, click the :guilabel:`See Results`
-button. This presents all the answers for the survey in a new tab. Each question provides
-information on how many people responded to a question, and how many people skipped it. All answers
-for each question are visible.
-
-To exit, close the tab. Or, click :guilabel:`→ Edit Survey` at the top of the page to be taken to
-the detail form for that particular survey.
-
-In addition to viewing the responses from past appraisals and surveys, new surveys can also be
-created from the :guilabel:`360 Feedback` page. Simply click the :guilabel:`New` button in the
-top-left of the page to create a new survey.
-
-For more information on how to create a survey, refer to the :doc:`../marketing/surveys/create`
-document.
-
-.. note::
-   In previous versions of Odoo, this section was referred to as :guilabel:`Surveys`.
-
 .. seealso::
    - :doc:`appraisals/schedule_appraisals`
    - :doc:`appraisals/new_appraisals`
    - :doc:`appraisals/appraisal_templates`
+   - :doc:`appraisals/360`
    - :doc:`appraisals/goals`
    - :doc:`appraisals/appraisal_analysis`
    - :doc:`appraisals/skills_evolution`
@@ -144,6 +93,7 @@ document.
    appraisals/schedule_appraisals
    appraisals/new_appraisals
    appraisals/appraisal_templates
+   appraisals/360
    appraisals/goals
    appraisals/appraisal_analysis
    appraisals/skills_evolution
