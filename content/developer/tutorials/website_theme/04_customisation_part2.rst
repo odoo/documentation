@@ -29,8 +29,8 @@ that can be animated and customized with different colors.
 .. tip::
    | **Be careful,** there is a trick!
    | In your shape SVG file, you have to use the colors from the default Odoo palette.
-   | Here, I want it to match my primary color 3 (`#CEF8A1`). Therefore, in the SVG file, you must
-     use color 3 from Odoo's default palette (`#F6F6F6`).
+   | Here, I want it to match my primary color 1 (`#CEF8A1`). Therefore, in the SVG file, you must
+     use color 3 from Odoo’s default palette (`#3AADAA`).
 
 .. spoiler:: Solutions
 
@@ -64,9 +64,9 @@ that can be animated and customized with different colors.
       :caption: ``/website_airproof/data/pages/home.xml``
 
       <!-- Text-image block & Background shape -->
-      <section class="s_text_image o_cc o_cc5 o_colored_level pt120 pb96"
+      <section class="s_text_image o_cc o_cc3 o_colored_level pt120 pb96"
       data-snippet="s_image_text" data-name="Image - Text" style="background-color: rgb(41, 128,
-      187);" data-oe-shape-data="{'shape': 'illustration/airproof/waves', 'colors': {'c3': '#BBE1FA'},
+      187);" data-oe-shape-data="{'shape': 'illustration/airproof/waves', 'colors': {'c1': '#BBE1FA'},
       'flip': ['x']}">
          <div class="o_we_shape o_illustration_airproof_waves o_we_flip_x" style="background-image:
          url('/web_editor/shape/illustration%2Fairproof%2Fwaves.svg?c2=%23BBE1FA');
