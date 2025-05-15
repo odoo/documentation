@@ -38,8 +38,8 @@ multiple groups at once.
 
       <record id="base.user_admin" model="res.users">
           <field name="groups_id" eval="[
-              Command.link(ref('product_tutorial.sales_representative_group')),
-              Command.link(ref('product_tutorial.product_manager_group')),
+              Command.link(ref('product.sales_representative_group')),
+              Command.link(ref('product.product_manager_group')),
           ]"/>
       </record>
 
@@ -154,16 +154,16 @@ ACLs are implemented as records of the `ir.model.access` model whose key fields 
    The user group receiving the permissions. If not specified, the ACL applies to all users.
 
 .. example::
-   In the following example, we define ACLs to allow internal users to read the product catalog and
-   categories, but only product managers can create, update, or delete records.
+   In the following example, we define ACLs to allow all internal users to read and update the
+   product catalog, and read categories, but only product managers can create or delete records.
 
    .. code-block:: csv
 
       id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-      product_user,product.user,model_product,base.group_user,1,0,0,0
-      product_manager,product.manager,model_product,product_tutorial.product_manager_group,1,1,1,1
+      product_user,product.user,model_product,base.group_user,1,1,0,0
+      product_manager,product.manager,model_product,product.product_manager_group,1,1,1,1
       product_category_user,product.category.user,model_product_category,base.group_user,1,0,0,0
-      product_category_manager,product.category.manager,model_product_category,product_tutorial.product_manager_group,1,1,1,1
+      product_category_manager,product.category.manager,model_product_category,product.product_manager_group,1,1,1,1
 
    .. note::
       - Access rights are typically defined in CSV files named :file:`ir.model.access.csv` within
@@ -218,22 +218,130 @@ can do with them.
 Restrict record access
 ======================
 
-tmp
+While :abbr:`ACLs (Access Control Lists)` control access at the model level, **record rules**
+provide more granular security by filtering which specific records within a model a user can access.
+This fine-grained approach enables complex business rules, such as "this group of users can access
+all records, but this other group can only access their own records."
+
+Unlike ACLs which follow a default-deny approach, record rules follow a default-allow principle.
+This means that if no rule exists for a model and operation, all records are accessible to users who
+have the appropriate model-level permissions.
+
+Record rules are implemented as records of the `ir.rule` model and rely on search domains to filter
+records. Its key fields include:
+
+.. rst-class:: o-definition-list
+
+`name`
+   A descriptive, human-readable name for the rule.
+`model_id` (required)
+   The model to which the rule applies.
+`domain_force`
+   The search domain that filters which records are accessible.
+`groups`
+   The user groups to which the rule applies. If empty, the rule applies globally to all users.
+`perm_read`, `perm_write`, `perm_create`, `perm_unlink`
+   Whether the rule applies to the given operation.
+
+Record rules come in two types, which combine differently depending on their scope:
+
+- **Global rules** (no group specified): Apply to all users and are combined using **AND** logic
+  (intersection). A record must satisfy *all* applicable global rules to be accessible. Each new
+  global rule further restricts the accessible records.
+- **Group rules** (specific to some user groups): Apply only to members of the specified groups and
+  are combined using **OR** logic (union) within the same operation. A record is accessible if it
+  matches *any* of the applicable group rules. Each new group rule expands the set of accessible
+  records, but not beyond the bounds defined by global rules.
 
 .. example::
+   In the example below, we define record rules to control access to products based on their active
+   and publication status.
 
-   tmp
+   .. code-block:: xml
 
-.. todo: note: the rule is not global (ref below)
+      <record id="product.product_active_rule" model="ir.rule">
+          <field name="name">Product: Users can only access active products</field>
+          <field name="model_id" ref="model_product"/>
+          <field name="domain_force">[('active', '=', True)]</field>
+      </record>
 
-Our real estate app needs more granular control over property records. Let's define rules to ensure
-agents can only manage their assigned properties.
+      <record id="product.product_published_rule" model="ir.rule">
+          <field name="name">Product: Sales representatives can only access published products</field>
+          <field name="model_id" ref="model_product"/>
+          <field name="domain_force">[('is_published', '=', True)]</field>
+          <field name="groups" eval="[Command.link(ref('product.sales_representative_group'))]"/>
+          <field name="perm_write" eval="False"/>
+      </record>
+
+      <record id="product.product_manager_rule" model="ir.rule">
+          <field name="name">Product: Managers can access all products</field>
+          <field name="model_id" ref="model_product"/>
+          <field name="domain_force">[(1, '=', 1)]</field>
+          <field name="groups" eval="[Command.link(ref('product.product_manager_group'))]"/>
+      </record>
+
+   .. note::
+      - Unlike ACLs, record rules are defined in XML files, due to their more complex field values.
+      - The `product_active_rule` rule is not assigned to any group, making it a global rule. It
+        prevents users from accessing inactive products.
+      - The `product_published_rule` rule is assigned to the `sales_representative_group` group,
+        making it a group rule. It allows sales representatives to access inactive products, but
+        only if they are published.
+      - As `perm_<operation>` flags default to `True` and only `perm_write` is set to `False` for
+        `product_published_rule`, the rule leaves the write operation unaffected.
+      - The domain of the `product_manager_rule` rule is always true, which overrides the previous
+        rules. This rule allows managers to access all products, regardless of their active or
+        published status.
+
+.. seealso::
+   Reference documentation on :ref:`record rules <reference/security/rules>`.
+
+Our real estate app needs more granular control over property records. Let's define rules to tighten
+access to property records.
 
 .. exercise::
-   tmp
+   - Ensure real estate agents can only update their assigned properties or properties that are not
+     assigned to any agent. They should still be able to read all properties.
+   - Allow real estate managers to access all property records, regardless of assignment.
 
-.. todo: real estate agents can only manage (create/write/unlink) properties they are assigned to or that are not assigned
-.. todo: real estate managers can manage all properties
+   .. tip::
+      Verify that the rules work as expected by logging in as the agent and manager users.
+
+.. spoiler:: Solution
+
+   .. code-block:: python
+      :caption: `__manifest__.py`
+      :emphasize-lines: 4
+
+      'data': [
+          [...]
+          'security/res_groups.xml',
+          'security/ir_rule.xml',  # Depends on `res_groups.xml`.
+          [...]
+      ],
+
+   .. code-block:: xml
+      :caption: `security/ir_rule.xml`
+
+      <?xml version="1.0" encoding="utf-8"?>
+      <odoo>
+
+          <record id="real_estate.property_assignment_rule" model="ir.rule">
+              <field name="name">Real Estate: Agents can only update their assigned properties</field>
+              <field name="model_id" ref="model_real_estate_property"/>
+              <field name="domain_force">['|', ('salesperson_id', '=', False), ('salesperson_id', '=', user.id)]</field>
+              <field name="groups" eval="[Command.link(ref('real_estate.agent_group'))]"/>
+              <field name="perm_read" eval="False"/>
+          </record>
+
+          <record id="real_estate.property_manager_rule" model="ir.rule">
+              <field name="name">Real Estate: Managers can access all properties</field>
+              <field name="model_id" ref="model_real_estate_property"/>
+              <field name="domain_force">[(1, '=', 1)]</field>
+              <field name="groups" eval="[Command.link(ref('real_estate.manager_group'))]"/>
+          </record>
+
+      </odoo>
 
 .. _tutorials/server_framework_101/multi_company:
 
@@ -259,6 +367,7 @@ necessary.
 .. exercise::
    tmp
 
+.. todo: write on street field (res.partner)
 .. todo: sudo read setting set on company
 
 ----
