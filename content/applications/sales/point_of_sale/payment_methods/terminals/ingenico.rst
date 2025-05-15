@@ -26,7 +26,8 @@ Configure the Lane/Desk/Move 5000 terminals for Ingenico BENELUX
 
 #. Press the function button (:guilabel:`F` on Lane/5000, :guilabel:`⦿` on Desk/5000 and
    Move/5000).
-#. Go to :menuselection:`Kassa menu --> Settings Menu` and enter the settings password.
+#. Go to :menuselection:`Kassa menu --> Settings Menu` and enter the settings password (default:
+   `2009`).
 #. Select :guilabel:`Change Connection` and press :guilabel:`OK` on the next screen.
 #. Select :guilabel:`TCP/IP` and :guilabel:`IP-address`.
 #. On the next screen, enter the IP address of your IoT system.
