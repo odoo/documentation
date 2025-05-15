@@ -2,99 +2,123 @@
 Analytic accounting
 ===================
 
-Analytic accounting helps you track costs and revenues, as well as analyze the profitability of a
-project or service. When creating your journal entries, the analytic widget allows the distribution
-of costs in one or more analytic accounts.
+Analytic accounting helps track costs and revenues and analyze a project or service's profitability.
+When creating journal entries, costs can be :ref:`distributed
+<analytic_accounting/analytic-distribution>` across one or more analytic accounts.
 
-Configuration
-=============
+To enable the :guilabel:`Analytic Accounting` feature, go to :menuselection:`Accounting -->
+Configuration --> Settings` in the :guilabel:`Analytics` section.
 
-Enable the :guilabel:`Analytic Accounting` feature by going to :menuselection:`Accounting -->
-Configuration --> Settings --> Analytics`.
+.. seealso::
+   :doc:`Analytic budget <budget>`
+
+.. _analytic_accounting/analytic_accounts:
 
 Analytic accounts
 =================
 
-The analytic accounts give an overview of your costs and revenue.
+Analytic accounts give an overview of costs and revenue.
 
-Access your existing analytic accounts by going to :menuselection:`Accounting --> Configuration -->
-Analytic Accounting: Analytic Accounts`. To create a new analytic account, click :guilabel:`New`,
-and fill in the required information:
+To access analytic accounts, go to :menuselection:`Accounting --> Configuration --> Analytic
+Accounts`. To create a new analytic account, click :guilabel:`New`, and fill in the following
+information:
 
-- :guilabel:`Analytic Account`: add the name of your analytic account;
-- :guilabel:`Customer`: select the customer related to your project;
-- :guilabel:`Reference`: add a reference to make it easier to find the account when you are on your
-  bill;
-- :guilabel:`Plan`: add an :ref:`analytic plan <analytic_accounting/analytic_plans>`;
-- :guilabel:`Company`: if you are managing multiple companies, select the company for which the
-  analytic account will be used;
-- :guilabel:`Currency`: select the currency of the analytic account;
+- :guilabel:`Analytic Account`: Assign the name of the analytic account.
+- :guilabel:`Customer`: Select the customer linked to the project, if applicable.
+- :guilabel:`Reference`: Include a reference to make the account easier to find, if needed.
+- :guilabel:`Plan`: Link the :guilabel:`Analytic Account` to an :ref:`analytic plan
+  <analytic_accounting/analytic_plans>`.
+- :guilabel:`Company`: In a :doc:`multi-company </applications/general/multi_company>` environment,
+  select which company uses the analytic account.
+- :guilabel:`Currency`: Update the currency of the analytic account, if needed.
 
-Then, fill in your :doc:`budget <budget>` information.
+Then, the :doc:`budget <budget>` information can be filled in.
 
 .. _analytic_accounting/analytic_plans:
 
 Analytic plans
 ==============
 
-The analytic plans allow you to analyze your accounting. For example, to track costs and revenues by
-project or department.
+Analytic plans allow the company to analyze its accounting, such as tracking costs and revenues
+by project or department.
 
-You can access the analytic plans by going to :menuselection:`Accounting --> Configuration -->
-Analytic Accounting: Analytic Plans`. Click :guilabel:`New` to create a new plan.
+To access analytic plans, go to :menuselection:`Accounting --> Configuration --> Analytic Plans`.
+Click :guilabel:`New` to create a new plan, add a name and fill in the following information:
 
-.. image:: analytic_accounting/analytic_plans.png
-   :align: center
-   :alt: create an analytic plan
+- :guilabel:`Parent`: Link the plan to another analytic plan if a hierarchy between plans must be
+  built.
+- :guilabel:`Default Applicability`: Define how the plan is applied when creating a new journal
+  entry:
 
-The following information must be completed:
+  - :guilabel:`Optional`: Adding the analytic plan is not mandatory.
+  - :guilabel:`Mandatory`: The entry cannot be confirmed if no analytic account is selected.
+  - :guilabel:`Unavailable`: The plan is not available.
 
-- :guilabel:`Parent`: link your plan to another :guilabel:`Analytic Plan` to build a hierarchy
-  between your plans;
-- :guilabel:`Default Applicability`: decide how your plan behaves in the widget when creating a new
-  journal entry:
+- :guilabel:`Color`: Set a color for the tag related to this specific plan.
 
-   - :guilabel:`Optional`: if selected, it is not mandatory to add the analytic plan in the widget;
-   - :guilabel:`Mandatory`: if selected, an orange bullet is visible in the widget next to the plan
-     until the analytic distribution is done (the bullet then turns to green); it is not possible to
-     confirm the entry if no analytic account is selected;
-   - :guilabel:`Unavailable`: if selected, the plan is not available in the widget.
+Accounting plans' applicability can be specified in the :guilabel:`Applicability` tab:
 
-- :guilabel:`Color`: select the color of the tag related to this specific plan;
-- :guilabel:`Company`: add the company to which the plan applies;
-
-You can also fine-tune your plans' applicability by filling in the :guilabel:`Applicability` tab:
-
-- :guilabel:`Domain`: choose to which accounting document your plan applies;
-- :guilabel:`Financial Accounts Prefix`: select the prefix of the account(s) to which this plan
-  should be applied;
-- :guilabel:`Product Category`: decide to which product category the plan applies;
-- :guilabel:`Applicability`: decide how your plan behaves in the widget when creating a new journal
-   entry. The applicability you set here always overrides the default applicability.
+- :guilabel:`Domain`: Assign the plan to the appropriate accounting document.
+- :guilabel:`Financial Accounts Prefix`: Choose the account(s) prefix to which this plan will apply.
+- :guilabel:`Product Category`: Choose the product category to which the plan applies.
+- :guilabel:`Applicability`: Define how the plan is applied when creating a new journal entry. The
+  applicability set here always overrides the default applicability.
+- :guilabel:`Company`: In a :doc:`multi-company </applications/general/multi_company>` environment,
+  select which company uses the plan.
 
 Two smart buttons are available in the top-right corner:
 
-   - :guilabel:`Subplans`: can be created to have a more complex analytic structure. Click the
-     :guilabel:`Subplans` smart button, and then :guilabel:`New` to add a subplan;
-   - :guilabel:`Analytic Accounts`: to reach the analytic accounts related to the plan.
+- :guilabel:`Subplans`: To have a more complex analytic structure. Click :guilabel:`New` to add a
+  subplan.
+- :guilabel:`Analytic Accounts`: To access the :ref:`analytic accounts
+  <analytic_accounting/analytic_accounts>` linked to the plan.
 
 .. note::
-   - The analytic widget is prefilled based on the applicability, and the
-     :ref:`Analytic Distribution Models <analytic_distribution_models>`;
-   - Each analytic plan must have at least one analytic account.
+   Each analytic plan must have at least one analytic account.
+
+.. _analytic_accounting/analytic-distribution:
 
 Analytic distribution
 =====================
 
-Add a plan in the :guilabel:`Analytic` column when creating an invoice or bill. This field is
-mandatory only if you previously linked your analytic plan to at least one analytic account. After
-adding the plan, a **widget** opens where you can fill in the different information. You can add
-**tags** to reflect the related analytic accounts and decide how to split the costs between the
+The distribution of costs in one or more analytic accounts can be set in each :ref:`invoice/bill
+<analytic_accounting/distribution-invoices-bills>` or :ref:`in mass
+<analytic_accounting/distribution-mass>`.
+
+.. note::
+   The analytic distribution is prefilled based on the applicability and the :ref:`Analytic
+   Distribution Models <analytic_distribution_models>`.
+
+.. _analytic_accounting/distribution-invoices-bills:
+
+Analytic distribution on invoices or bills
+------------------------------------------
+
+To add analytic distribution, click the :guilabel:`Analytic Distribution` column when creating an
+:ref:`invoice <accounting/invoice/creation>` or :ref:`bill <accounting/vendor_bills/creation>`.
+
+.. note::
+   The :guilabel:`Analytic Distribution` field is mandatory only if the :ref:`analytic plan
+   <analytic_accounting/analytic_plans>` has been set as :guilabel:`Mandatory` in the
+   :guilabel:`Default Applicability` field.
+
+In the :guilabel:`Analytic` window, select the desired :guilabel:`Analytic Accounts` in the
+different :guilabel:`Analytic Plans` displayed in columns. Then, split the costs between the
 accounts by modifying the percentage.
 
-.. image:: analytic_accounting/analytic_distribution.png
-   :align: center
-   :alt: create a distribution template
+.. image:: analytic_accounting/analytic-distribution.png
+  :alt: create a distribution template
+
+.. _analytic_accounting/distribution-mass:
+
+Mass-edit analytic distribution
+-------------------------------
+
+To mass-edit analytic accounts in several entries simultaneously, go to :menuselection:`Accounting
+--> Accounting --> Journal items`, and select the ones that need to be updated. Click the
+:guilabel:`Analytic Distribution` column and add the required distribution in the
+:guilabel:`Analytic` column, then click the :icon:`oi-close` :guilabel:`(cross)` and
+:guilabel:`Confirm`. The analytic distribution is then added to the selected journal.
 
 .. _analytic_distribution_models:
 
@@ -105,27 +129,32 @@ The analytic distribution models automatically apply a specific distribution bas
 criteria.
 
 To create a new analytic distribution model, go to :menuselection:`Accounting --> Configuration -->
-Analytic Distribution Models`, click :guilabel:`New` and set the conditions your model has to meet
-to automatically apply:
+Analytic Distribution Models`, click :guilabel:`New`, and set the conditions the model has to meet
+to apply automatically:
 
-- :guilabel:`Accounts Prefix`: this analytic distribution will apply to all financial accounts
-  sharing the prefix specified;
-- :guilabel:`Partner`: select a partner for which the analytic distribution will be used;
-- :guilabel:`Partner Category`: this field is not visible by default: add it by clicking on the
-  columns selection button, and tick the :guilabel:`Partner Category` box. Add the partner category
-  for which the analytic distribution will be used;
-- :guilabel:`Product`: select a product for which the analytic distribution will be used;
-- :guilabel:`Product Category`: this field is not visible by default: add it by clicking on the
-  columns selection button, and tick the :guilabel:`Product Category` box. Select a product category
-  for which the analytic distribution will be used;
-- :guilabel:`Analytic`: add the analytic accounts and their distribution;
-- :guilabel:`Company`: select a company for which the analytic distribution will be used;
-- :guilabel:`Analytic Distribution`: if the above conditions are met, the :guilabel:`Analytic plan`
-  defined in this field as well as the distribution to be applied between the different analytic
-  accounts is selected automatically on the entry.
+- :guilabel:`Accounts Prefix`: Distribute to all financial accounts sharing the specified prefix.
+- :guilabel:`Partner`: Choose the partner associated with the analytic distribution.
+- :guilabel:`Product`: Use the distribution for the selected product.
+- :guilabel:`Company`: In a :doc:`multi-company </applications/general/multi_company>` environment,
+  select the company where the analytic distribution will apply.
+- :guilabel:`Analytic Distribution`: :ref:`Analytic distribution
+  <analytic_accounting/analytic-distribution>` that will be applied when the above conditions are
+  met.
+
+Then :guilabel:`Save`.
+
+To define more criteria, use the :icon:`oi-settings-adjust` :guilabel:`(adjust settings)` icon to
+reveal more columns or click :guilabel:`View`.
+
+- :guilabel:`Partner Category`: Add the partner category to which to apply the analytic
+  distribution.
+- :guilabel:`Product Category`: Select a product category linked to this analytic distribution.
 
 .. tip::
-   To **mass edit** several entries simultaneously, go to :menuselection:`Accounting --> Accounting
-   --> Journal items`, and select the ones that need to be updated. Add the required distribution in
-   the :guilabel:`Analytic Distribution` column, and click on the :guilabel:`floppy disk` icon to
-   save. The analytic distribution template pops up, and you can save it for later use.
+   Alternatively, it is possible to create an analytic distribution model from the
+   :guilabel:`Analytic` window by clicking :guilabel:`New Model`:
+
+   - either when creating an invoice/bill and filling in the :ref:`analytic distribution
+     <analytic_accounting/distribution-invoices-bills>`;
+   - or when :ref:`mass-editing analytic accounts <analytic_accounting/distribution-mass>` in
+     several entries simultaneously.
