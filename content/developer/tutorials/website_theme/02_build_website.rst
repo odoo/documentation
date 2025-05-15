@@ -34,33 +34,31 @@ as content in the page.
       :caption: ``/website_airproof/data/pages/home.xml``
 
       <?xml version="1.0" encoding="utf-8"?>
-      <odoo>
-         <data noupdate="1">
-            <!-- Deactivate default homepage -->
-            <record id="website.homepage" model="ir.ui.view">
-               <field name="active" eval="False"/>
-            </record>
-            <!-- Home -->
-            <record id="page_home" model="website.page">
-               <field name="name">Home</field>
-               <field name="is_published" eval="True"/>
-               <field name="key">website_airproof.page_home</field>
-               <field name="url">/</field>
-               <field name="type">qweb</field>
-               <field name="arch" type="xml">
-                  <t t-name="website_airproof.page_home">
-                     <t t-call="website.layout">
-                        <!-- Title -->
-                        <t t-set="additional_title">One step beyond the horizon | Airproof</t>
-                        <!-- Content -->
-                        <div id="wrap" class="oe_structure">
-                           <p>Hello</p>
-                        </div>
-                     </t>
+      <odoo noupdate="1">
+         <!-- Deactivate default homepage -->
+         <record id="website.homepage" model="ir.ui.view">
+            <field name="active" eval="False"/>
+         </record>
+         <!-- Home -->
+         <record id="page_home" model="website.page">
+            <field name="name">Home</field>
+            <field name="is_published" eval="True"/>
+            <field name="key">website_airproof.page_home</field>
+            <field name="url">/</field>
+            <field name="type">qweb</field>
+            <field name="arch" type="xml">
+               <t t-name="website_airproof.page_home">
+                  <t t-call="website.layout">
+                     <!-- Title -->
+                     <t t-set="additional_title">One step beyond the horizon | Airproof</t>
+                     <!-- Content -->
+                     <div id="wrap" class="oe_structure">
+                        <p>Hello</p>
+                     </div>
                   </t>
-               </field>
-            </record>
-         </data>
+               </t>
+            </field>
+         </record>
       </odoo>
 
 .. _tutorials/website_theme/build_website/media:
