@@ -420,6 +420,108 @@ Use the `icon` markup to add the class name of an icon. There are two icon sets 
 </developer/reference/user_interface/icons>`. Follow the icon with its name as a
 :ref:`contributing/rst/guilabel` in brackets as a descriptor.
 
+.. spoiler:: View RST supported Odoo Spreadsheets icons
+
+   .. hlist::
+      :columns: 2
+
+      - :icon:`os-see-records` :guilabel:`(os-see-records)`
+      - :icon:`os-global-filters` :guilabel:`(os-global-filters)`
+      - :icon:`os-clear-and-reload` :guilabel:`(os-clear-and-reload)`
+      - :icon:`os-export-xlsx` :guilabel:`(os-export-xlsx)`
+      - :icon:`os-open-read-only` :guilabel:`(os-open-read-only)`
+      - :icon:`os-open-dashboard` :guilabel:`(os-open-dashboard)`
+      - :icon:`os-open-read-write` :guilabel:`(os-open-read-write)`
+      - :icon:`os-import-xlsx` :guilabel:`(os-import-xlsx)`
+      - :icon:`os-undo` :guilabel:`(os-undo)`
+      - :icon:`os-redo` :guilabel:`(os-redo)`
+      - :icon:`os-cut` :guilabel:`(os-cut)`
+      - :icon:`os-copy-as-image` :guilabel:`(os-copy-as-image)`
+      - :icon:`os-paste` :guilabel:`(os-paste)`
+      - :icon:`os-clear` :guilabel:`(os-clear)`
+      - :icon:`os-freeze` :guilabel:`(os-freeze)`
+      - :icon:`os-unfreeze` :guilabel:`(os-unfreeze)`
+      - :icon:`os-formula` :guilabel:`(os-formula)`
+      - :icon:`os-hide-row` :guilabel:`(os-hide-row)`
+      - :icon:`os-unhide-row` :guilabel:`(os-unhide-row)`
+      - :icon:`os-hide-col` :guilabel:`(os-hide-col)`
+      - :icon:`os-unhide-col` :guilabel:`(os-unhide-col)`
+      - :icon:`os-insert-row` :guilabel:`(os-insert-row)`
+      - :icon:`os-insert-row-before` :guilabel:`(os-insert-row-before)`
+      - :icon:`os-insert-row-after` :guilabel:`(os-insert-row-after)`
+      - :icon:`os-insert-col` :guilabel:`(os-insert-col)`
+      - :icon:`os-insert-col-after` :guilabel:`(os-insert-col-after)`
+      - :icon:`os-insert-col-before` :guilabel:`(os-insert-col-before)`
+      - :icon:`os-insert-cell` :guilabel:`(os-insert-cell)`
+      - :icon:`os-insert-cell-shift-down` :guilabel:`(os-insert-cell-shift-down)`
+      - :icon:`os-insert-cell-shift-right` :guilabel:`(os-insert-cell-shift-right)`
+      - :icon:`os-delete-cell-shift-up` :guilabel:`(os-delete-cell-shift-up)`
+      - :icon:`os-delete-cell-shift-left` :guilabel:`(os-delete-cell-shift-left)`
+      - :icon:`os-insert-dropdown` :guilabel:`(os-insert-dropdown)`
+      - :icon:`os-insert-sheet` :guilabel:`(os-insert-sheet)`
+      - :icon:`os-paint-format` :guilabel:`(os-paint-format)`
+      - :icon:`os-conditional-format` :guilabel:`(os-conditional-format)`
+      - :icon:`os-clear-format` :guilabel:`(os-clear-format)`
+      - :icon:`os-bold` :guilabel:`(os-bold)`
+      - :icon:`os-italic` :guilabel:`(os-italic)`
+      - :icon:`os-underline` :guilabel:`(os-underline)`
+      - :icon:`os-strike` :guilabel:`(os-strike)`
+      - :icon:`os-text-color` :guilabel:`(os-text-color)`
+      - :icon:`os-fill-color` :guilabel:`(os-fill-color)`
+      - :icon:`os-merge-cell` :guilabel:`(os-merge-cell)`
+      - :icon:`os-align-left` :guilabel:`(os-align-left)`
+      - :icon:`os-align-center` :guilabel:`(os-align-center)`
+      - :icon:`os-align-right` :guilabel:`(os-align-right)`
+      - :icon:`os-align-top` :guilabel:`(os-align-top)`
+      - :icon:`os-align-middle` :guilabel:`(os-align-middle)`
+      - :icon:`os-align-bottom` :guilabel:`(os-align-bottom)`
+      - :icon:`os-wrapping-overflow` :guilabel:`(os-wrapping-overflow)`
+      - :icon:`os-wrapping-wrap` :guilabel:`(os-wrapping-wrap)`
+      - :icon:`os-wrapping-clip` :guilabel:`(os-wrapping-clip)`
+      - :icon:`os-borders` :guilabel:`(os-borders)`
+      - :icon:`os-border-hv` :guilabel:`(os-border-hv)`
+      - :icon:`os-border-h` :guilabel:`(os-border-h)`
+      - :icon:`os-border-v` :guilabel:`(os-border-v)`
+      - :icon:`os-border-external` :guilabel:`(os-border-external)`
+      - :icon:`os-border-left` :guilabel:`(os-border-left)`
+      - :icon:`os-border-top` :guilabel:`(os-border-top)`
+      - :icon:`os-border-right` :guilabel:`(os-border-right)`
+      - :icon:`os-border-bottom` :guilabel:`(os-border-bottom)`
+      - :icon:`os-border-clear` :guilabel:`(os-border-clear)`
+      - :icon:`os-border-type` :guilabel:`(os-border-type)`
+      - :icon:`os-border-color` :guilabel:`(os-border-color)`
+      - :icon:`os-border-no-color` :guilabel:`(os-border-no-color)`
+      - :icon:`os-plus` :guilabel:`(os-plus)`
+      - :icon:`os-minus` :guilabel:`(os-minus)`
+      - :icon:`os-list` :guilabel:`(os-list)`
+      - :icon:`os-arrow-down` :guilabel:`(os-arrow-down)`
+      - :icon:`os-arrow-up` :guilabel:`(os-arrow-up)`
+      - :icon:`os-arrow-right` :guilabel:`(os-arrow-right)`
+      - :icon:`os-smile` :guilabel:`(os-smile)`
+      - :icon:`os-meh` :guilabel:`(os-meh)`
+      - :icon:`os-frown` :guilabel:`(os-frown)`
+      - :icon:`os-green-dot` :guilabel:`(os-green-dot)`
+      - :icon:`os-yellow-dot` :guilabel:`(os-yellow-dot)`
+      - :icon:`os-red-dot` :guilabel:`(os-red-dot)`
+      - :icon:`os-sort-range` :guilabel:`(os-sort-range)`
+      - :icon:`os-filter-icon` :guilabel:`(os-filter-icon)`
+      - :icon:`os-check` :guilabel:`(os-check)`
+      - :icon:`os-number-formats` :guilabel:`(os-number-formats)`
+      - :icon:`os-font-size` :guilabel:`(os-font-size)`
+      - :icon:`os-split-text` :guilabel:`(os-split-text)`
+      - :icon:`os-display-header` :guilabel:`(os-display-header)`
+      - :icon:`os-cog` :guilabel:`(os-cog)`
+      - :icon:`os-plus-in-box` :guilabel:`(os-plus-in-box)`
+      - :icon:`os-group-rows` :guilabel:`(os-group-rows)`
+      - :icon:`os-ungroup-rows` :guilabel:`(os-ungroup-rows)`
+      - :icon:`os-group-columns` :guilabel:`(os-group-columns)`
+      - :icon:`os-ungroup-columns` :guilabel:`(os-ungroup-columns)`
+      - :icon:`os-data-validation` :guilabel:`(os-data-validation)`
+      - :icon:`os-thin-drag-handle` :guilabel:`(os-thin-drag-handle)`
+      - :icon:`os-short-thin-drag-handle` :guilabel:`(os-short-thin-drag-handle)`
+      - :icon:`os-insert-pivot` :guilabel:`(os-insert-pivot)`
+
+
 .. list-table::
   :class: o-showcase-table
 
