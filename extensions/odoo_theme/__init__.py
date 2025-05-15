@@ -115,7 +115,8 @@ def resolve(old_resolve, tree, docname, *args, **kwargs):
 def icon_role(name, rawtext, text, lineno, inliner, options=None, content=None):
     """ Implement an `icon` role for Odoo and Font Awesome icons. """
     for icon_class in text.split():
-        if not (icon_class.startswith('fa-') or icon_class.startswith('oi-')):
+        if not (icon_class.startswith('fa-') or icon_class.startswith('oi-') \
+            or icon_class.startswith('os-')):
             report_error = inliner.reporter.error(
                 f"'{icon_class}' is not a valid icon formatting class.", lineno=lineno
             )
@@ -125,7 +126,12 @@ def icon_role(name, rawtext, text, lineno, inliner, options=None, content=None):
         icon_html = f'<i class="oi {text}"></i>'
     elif text.startswith('fa-'):
         icon_html = f'<i class="fa {text}"></i>'
+    elif text.startswith('os-'):
+        icon_html = (
+            '<svg class="os-icon" aria-hidden="true" role="img">'
+                f'<use href="#{text[3:]}" />' # [3:] strips 'os-' specifier from svg id
+             '</svg>'                         # see ../static/img/odoo-spreadsheets-icons.svg
+        )
     else:
         icon_html = f'<i class="{text}"></i>'
-    node = nodes.raw('', icon_html, format='html')
-    return [node], []
+    return [nodes.raw('', icon_html, format='html')], []
