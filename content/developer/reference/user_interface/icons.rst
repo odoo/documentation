@@ -7,17 +7,22 @@ UI icons
 Odoo's user interface mostly relies on `FontAwesome4 icons <https://fontawesome.com/v4/icons/>`_.
 
 To cover FontAwesome's lack of iconography for specific functionalities, we designed our own
-icon-font. These icons can be rendered using the main `oi` class in conjunction with the specific
-icon class.
+icons: :ref:`Odoo UI icons <ui/odoo-ui-icons>` and :ref:`Odoo Spreadsheet icons
+<ui/odoo-spreadsheet-icons>`.
+
+.. _ui/odoo-ui-icons:
+
+Odoo UI icons
+=============
+
+The Odoo UI icons can be rendered using the main `oi` class in conjunction with the specific icon
+class.
 
 .. example::
 
    .. code-block:: html
 
       <i class="oi oi-odoo"/>
-
-Icons
-=====
 
 .. raw:: html
 
@@ -292,7 +297,7 @@ Icons
    </section>
 
 RTL adaptations
-===============
+---------------
 
 Directional icons have :abbr:`RTL (right-to-left)` adaptations which flip the icons by 180 degrees
 when an :abbr:`RTL (right-to-left)` language is selected.
@@ -356,5 +361,1075 @@ when an :abbr:`RTL (right-to-left)` language is selected.
               <code>oi-arrow-up-right</code>
           </div>
       </div>
+
+   </section>
+
+.. _ui/odoo-spreadsheet-icons:
+
+Odoo Spreadsheet icons
+======================
+
+The `Odoo Spreadsheet <{GITHUB_PATH}/addons/spreadsheet/static/src/o_spreadsheet>`_ icons are
+defined as `<svg>` elements and rendered using QWeb `templates
+<{OWL_PATH}/doc/reference/templates.md>`_.
+
+.. example::
+
+   .. code-block:: html
+
+      <t t-name="o-spreadsheet-Icon.GLOBAL_FILTERS">
+          <svg width="20" height="20" viewbox="0 0 20 20">
+              <path fill="currentColor" d="M1 3h12L7 9M5.5 6h3v11l-3-3M14 4h4v2h-4m-3 3h7v2h-7m0 3h7v2h-7"/>
+          </svg>
+      </t>
+
+.. raw:: html
+
+   <section class="row">
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#see-records"/>
+                    </svg>
+                </div>
+                <code>SEE_RECORDS</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#global-filters"/>
+                    </svg>
+                </div>
+                <code>GLOBAL_FILTERS</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#clear-and-reload"/>
+                    </svg>
+                </div>
+                <code>CLEAR_AND_RELOAD</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#export-xlsx"/>
+                    </svg>
+                </div>
+                <code>EXPORT_XLSX</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#open-read-only"/>
+                    </svg>
+                </div>
+                <code>OPEN_READ_ONLY</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#open-dashboard"/>
+                    </svg>
+                </div>
+                <code>OPEN_DASHBOARD</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#open-read-write"/>
+                    </svg>
+                </div>
+                <code>OPEN_READ_WRITE</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#import-xlsx"/>
+                    </svg>
+                </div>
+                <code>IMPORT_XLSX</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#undo"/>
+                    </svg>
+                </div>
+                <code>UNDO</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#redo"/>
+                    </svg>
+                </div>
+                <code>REDO</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#cut"/>
+                    </svg>
+                </div>
+                <code>CUT</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#copy-as-image"/>
+                    </svg>
+                </div>
+                <code>COPY_AS_IMAGE</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#paste"/>
+                    </svg>
+                </div>
+                <code>PASTE</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#clear"/>
+                    </svg>
+                </div>
+                <code>CLEAR</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#freeze"/>
+                    </svg>
+                </div>
+                <code>FREEZE</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#unfreeze"/>
+                    </svg>
+                </div>
+                <code>UNFREEZE</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#formula"/>
+                    </svg>
+                </div>
+                <code>FORMULA</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#hide-row"/>
+                    </svg>
+                </div>
+                <code>HIDE_ROW</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#unhide-row"/>
+                    </svg>
+                </div>
+                <code>UNHIDE_ROW</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#hide-col"/>
+                    </svg>
+                </div>
+                <code>HIDE_COL</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#unhide-col"/>
+                    </svg>
+                </div>
+                <code>UNHIDE_COL</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#insert-row"/>
+                    </svg>
+                </div>
+                <code>INSERT_ROW</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#insert-row-before"/>
+                    </svg>
+                </div>
+                <code>INSERT_ROW_BEFORE</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#insert-row-after"/>
+                    </svg>
+                </div>
+                <code>INSERT_ROW_AFTER</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#insert-col"/>
+                    </svg>
+                </div>
+                <code>INSERT_COL</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#insert-col-after"/>
+                    </svg>
+                </div>
+                <code>INSERT_COL_AFTER</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#insert-col-before"/>
+                    </svg>
+                </div>
+                <code>INSERT_COL_BEFORE</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#insert-cell"/>
+                    </svg>
+                </div>
+                <code>INSERT_CELL</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#insert-cell-shift-down"/>
+                    </svg>
+                </div>
+                <code>INSERT_CELL_SHIFT_DOWN</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#insert-cell-shift-right"/>
+                    </svg>
+                </div>
+                <code>INSERT_CELL_SHIFT_RIGHT</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#delete-cell-shift-up"/>
+                    </svg>
+                </div>
+                <code>DELETE_CELL_SHIFT_UP</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#delete-cell-shift-left"/>
+                    </svg>
+                </div>
+                <code>DELETE_CELL_SHIFT_LEFT</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#insert-dropdown"/>
+                    </svg>
+                </div>
+                <code>INSERT_DROPDOWN</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#insert-sheet"/>
+                    </svg>
+                </div>
+                <code>INSERT_SHEET</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#paint-format"/>
+                    </svg>
+                </div>
+                <code>PAINT_FORMAT</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#conditional-format"/>
+                    </svg>
+                </div>
+                <code>CONDITIONAL_FORMAT</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#clear-format"/>
+                    </svg>
+                </div>
+                <code>CLEAR_FORMAT</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#bold"/>
+                    </svg>
+                </div>
+                <code>BOLD</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#italic"/>
+                    </svg>
+                </div>
+                <code>ITALIC</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#underline"/>
+                    </svg>
+                </div>
+                <code>UNDERLINE</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#strike"/>
+                    </svg>
+                </div>
+                <code>STRIKE</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#text-color"/>
+                    </svg>
+                </div>
+                <code>TEXT_COLOR</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#fill-color"/>
+                    </svg>
+                </div>
+                <code>FILL_COLOR</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#merge-cell"/>
+                    </svg>
+                </div>
+                <code>MERGE_CELL</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#align-left"/>
+                    </svg>
+                </div>
+                <code>ALIGN_LEFT</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#align-center"/>
+                    </svg>
+                </div>
+                <code>ALIGN_CENTER</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#align-right"/>
+                    </svg>
+                </div>
+                <code>ALIGN_RIGHT</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#align-top"/>
+                    </svg>
+                </div>
+                <code>ALIGN_TOP</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#align-middle"/>
+                    </svg>
+                </div>
+                <code>ALIGN_MIDDLE</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#align-bottom"/>
+                    </svg>
+                </div>
+                <code>ALIGN_BOTTOM</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#wrapping-overflow"/>
+                    </svg>
+                </div>
+                <code>WRAPPING_OVERFLOW</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#wrapping-wrap"/>
+                    </svg>
+                </div>
+                <code>WRAPPING_WRAP</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#wrapping-clip"/>
+                    </svg>
+                </div>
+                <code>WRAPPING_CLIP</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#borders"/>
+                    </svg>
+                </div>
+                <code>BORDERS</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#border-hv"/>
+                    </svg>
+                </div>
+                <code>BORDER_HV</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#border-h"/>
+                    </svg>
+                </div>
+                <code>BORDER_H</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#border-v"/>
+                    </svg>
+                </div>
+                <code>BORDER_V</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#border-external"/>
+                    </svg>
+                </div>
+                <code>BORDER_EXTERNAL</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#border-left"/>
+                    </svg>
+                </div>
+                <code>BORDER_LEFT</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#border-top"/>
+                    </svg>
+                </div>
+                <code>BORDER_TOP</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#border-right"/>
+                    </svg>
+                </div>
+                <code>BORDER_RIGHT</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#border-bottom"/>
+                    </svg>
+                </div>
+                <code>BORDER_BOTTOM</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#border-clear"/>
+                    </svg>
+                </div>
+                <code>BORDER_CLEAR</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#border-type"/>
+                    </svg>
+                </div>
+                <code>BORDER_TYPE</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#border-color"/>
+                    </svg>
+                </div>
+                <code>BORDER_COLOR</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#border-no-color"/>
+                    </svg>
+                </div>
+                <code>BORDER_NO_COLOR</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#plus"/>
+                    </svg>
+                </div>
+                <code>PLUS</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#minus"/>
+                    </svg>
+                </div>
+                <code>MINUS</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#list"/>
+                    </svg>
+                </div>
+                <code>LIST</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#arrow-down"/>
+                    </svg>
+                </div>
+                <code>ARROW_DOWN</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#arrow-up"/>
+                    </svg>
+                </div>
+                <code>ARROW_UP</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#arrow-right"/>
+                    </svg>
+                </div>
+                <code>ARROW_RIGHT</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#smile"/>
+                    </svg>
+                </div>
+                <code>SMILE</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#meh"/>
+                    </svg>
+                </div>
+                <code>MEH</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#frown"/>
+                    </svg>
+                </div>
+                <code>FROWN</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#green-dot"/>
+                    </svg>
+                </div>
+                <code>GREEN_DOT</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#yellow-dot"/>
+                    </svg>
+                </div>
+                <code>YELLOW_DOT</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#red-dot"/>
+                    </svg>
+                </div>
+                <code>RED_DOT</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#sort-range"/>
+                    </svg>
+                </div>
+                <code>SORT_RANGE</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#filter-icon"/>
+                    </svg>
+                </div>
+                <code>FILTER_ICON</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#check"/>
+                    </svg>
+                </div>
+                <code>CHECK</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#number-formats"/>
+                    </svg>
+                </div>
+                <code>NUMBER_FORMATS</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#font-size"/>
+                    </svg>
+                </div>
+                <code>FONT_SIZE</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#split-text"/>
+                    </svg>
+                </div>
+                <code>SPLIT_TEXT</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#display-header"/>
+                    </svg>
+                </div>
+                <code>DISPLAY_HEADER</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#cog"/>
+                    </svg>
+                </div>
+                <code>COG</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#plus-in-box"/>
+                    </svg>
+                </div>
+                <code>PLUS_IN_BOX</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#group-rows"/>
+                    </svg>
+                </div>
+                <code>GROUP_ROWS</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#ungroup-rows"/>
+                    </svg>
+                </div>
+                <code>UNGROUP_ROWS</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#group-columns"/>
+                    </svg>
+                </div>
+                <code>GROUP_COLUMNS</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#ungroup-columns"/>
+                    </svg>
+                </div>
+                <code>UNGROUP_COLUMNS</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#data-validation"/>
+                    </svg>
+                </div>
+                <code>DATA_VALIDATION</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#thin-drag-handle"/>
+                    </svg>
+                </div>
+                <code>THIN_DRAG_HANDLE</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#short-thin-drag-handle"/>
+                    </svg>
+                </div>
+                <code>SHORT_THIN_DRAG_HANDLE</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#insert-pivot"/>
+                    </svg>
+                </div>
+                <code>INSERT_PIVOT</code>
+            </div>
+        </div>
 
    </section>
