@@ -51,7 +51,7 @@ On the |ECO| form, fill in the following fields accordingly:
 
    .. note::
       :guilabel:`Company` is only available to specify with multiple companies enabled. See
-      :doc:`../../../general/multi_company`.
+      :doc:`../../../general/companies/multi_company`.
 
 - :guilabel:`Responsible` represents the assignee in charge of this |ECO|. (Optional)
 - :guilabel:`Effective` specifies when the |ECO| becomes live. Choosing :guilabel:`As soon as
