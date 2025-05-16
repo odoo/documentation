@@ -582,7 +582,7 @@ information to complete the synchronization:
    In a multi-company setup, the following configurations are required in Odoo:
 
    - The user linked to the generated :ref:`API key <api/external_api/keys>` must have
-     :ref:`access <general/employee-access>` to the company intended for synchronization.
+     :ref:`access <general/companies/users>` to the company intended for synchronization.
    - This company must also be set as the user's :guilabel:`Default Company`, as Teledec always
      synchronizes with the user's default company.
 

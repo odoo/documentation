@@ -120,6 +120,15 @@ paid or refunded.
    entry. This safety mechanism can prevent some fiscal errors, but it is advised to lock your tax
    date manually before, as described above.
 
+.. important::
+   - Once the tax report for a period has been generated but not yet posted, additional invoices or
+     bills from that same period can still be posted and included in the closing entry. To do so,
+     click :icon:`oi-arrow-right` :guilabel:`Refresh` in the :guilabel:`Proposition of tax closing
+     journal entry`, or click :guilabel:`Closing Entry` again from the tax report.
+   - After the tax report has been posted for a period, Odoo locks the period and prevents the
+     creation of new journal entries involving VAT. Any corrections to customer invoices or vendor
+     bills must then be recorded in the following period.
+
 .. seealso::
    * :doc:`../taxes`
    * :doc:`../get_started`
