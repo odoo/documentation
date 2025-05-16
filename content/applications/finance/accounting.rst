@@ -52,6 +52,8 @@ accounts, smart matching suggestions, etc.
 
       Reporting, declarations, and analytic accounting
 
+.. _accounting/double-entry-booking:
+
 Double-entry bookkeeping
 ========================
 
@@ -65,6 +67,8 @@ always balance.
 
 .. seealso::
    :doc:`Accounting Cheat Sheet <accounting/get_started/cheat_sheet>`
+
+.. _accounting/accrual-cash:
 
 Accrual and cash basis
 ======================
@@ -86,6 +90,8 @@ accounts <accounting/get_started/chart_of_accounts>`, which is also useful to ge
 reports. Users can access several companies but can only work on a single company's accounting at a
 time.
 
+.. _accounting/multi-currency:
+
 Multi-currency environment
 ==========================
 
@@ -98,11 +104,60 @@ gains and losses after reconciling the journal items.
 .. seealso::
    :doc:`Manage a bank in a foreign currency <accounting/bank/foreign_currency>`
 
+.. _accounting/branch-management:
+
 Branch management
 =================
 
-Multiple branches can be managed thanks to multi-company hierarchies. This allows to post journal
-entries on each branch as well as setting up a common lock date managed by the main company.
+.. warning::
+   Adding a branch to a :doc:`company <../general/companies>` enables multi-company functions.
+
+   For more information, refer to `Odoo's pricing page <https://www.odoo.com/pricing-plan>`_ or
+   contact your account manager.
+
+The :ref:`branch <general/branches>` feature supports hierarchical company structures through
+:ref:`configurable settings <general/branches/configuration>`. It allows for tailored :ref:`access
+rights <general/branches/access-rights>`, entity-specific or :ref:`shared
+<general/branches/shared-records>` data visibility, and provides :ref:`individual and consolidated
+views <general/branches/consolidated-view>` across parent companies and their branches.
+
+.. note::
+   Branch :doc:`accounting <accounting>` and :doc:`fiscal localizations <fiscal_localizations>` are
+   set on the parent company.
+
+Main :doc:`companies </applications/general/companies>` and their branches follow several key rules:
+
+- The main company’s :doc:`chart of accounts <accounting/get_started/chart_of_accounts>`, :doc:`main
+  currency <accounting/get_started/multi_currency>`, and :doc:`taxes <accounting/taxes>` apply to
+  all branches, although branches can have their own journals.
+- The parent company manages a common :ref:`fiscal period <year-end/fiscal-years>`, so its lock and
+  closing dates apply across all branches. However, branches may set earlier lock dates if needed.
+- The main company can access all :doc:`reports <accounting/reporting>`, :doc:`invoices
+  <accounting/customer_invoices>`, :doc:`bills <accounting/vendor_bills>`, etc., from its branches,
+  while branches can only view their own data.
+- The main company and all branches must be located in the same country to ensure accounting
+  consistency.
+
+.. _accounting/branch/reporting:
+
+Reporting
+---------
+
+The parent company consolidates accounting operations from all branches, providing a centralised
+view of :doc:`financial reports <accounting/reporting>`, such as profit and loss or balance sheet.
+
+.. _accounting/branch/vat:
+
+VAT
+---
+
+Each company and branch must contain its own legal information, including the VAT number if
+applicable. Branches don't belong to the same VAT unit as the parent company.
+
+This configuration, specific to each company/branch, allows users to consult reports and
+:doc:`tax returns <accounting/reporting/tax_returns>` individually.
+
+.. _accounting/international-standards:
 
 International standards
 =======================
@@ -115,6 +170,8 @@ other requirements.
 .. seealso::
    :doc:`Fiscal localization packages <fiscal_localizations>`
 
+.. _accounting/accounts-receivable-payable:
+
 Accounts receivable and payable
 ===============================
 
@@ -124,6 +181,8 @@ vendor, or supplier.
 
 The **Partner Ledger** report displays the balance of your customers and suppliers. It is available
 by going to :menuselection:`Accounting --> Reporting --> Partner Ledger`.
+
+.. _accounting/reporting:
 
 Reporting
 =========
@@ -178,6 +237,8 @@ real-time:
 .. tip::
    :doc:`Create and customize reports <accounting/reporting/customize>` with Odoo's report engine.
 
+.. _accounting/tax-report:
+
 Tax report
 ----------
 
@@ -193,6 +254,8 @@ calculate the tax obligation.
    Depending on the country's localization, an XML version of the tax report can be generated to be
    uploaded to the VAT platform of the relevant taxation authority.
 
+.. _accounting/bank-synchronization:
+
 Bank synchronization
 ====================
 
@@ -203,6 +266,8 @@ into an online banking system or waiting for paper bank statements.
 .. seealso::
    :doc:`Bank synchronization <accounting/bank/bank_synchronization>`
 
+.. _accounting/inventory-valuation:
+
 Inventory valuation
 ===================
 
@@ -212,6 +277,8 @@ available methods are standard price, average price, :abbr:`LIFO (Last-In, First
 
 .. seealso::
    :doc:`../inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config`
+
+.. _accounting/retained-earnings:
 
 Retained earnings
 =================
@@ -224,6 +291,8 @@ and loss balance is automatically reported on the balance sheet report.
    :doc:`Accounting Cheat Sheet <accounting/get_started/cheat_sheet>`
 
 .. _fiduciaries:
+
+.. _accounting/fiduciaries:
 
 Fiduciaries
 ===========
