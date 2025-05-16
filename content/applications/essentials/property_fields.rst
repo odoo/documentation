@@ -191,12 +191,12 @@ models. Once set, the property is shared by all records that are linked to the s
             Candidate
           - :ref:`Job position <job-position/create-job-position>`
 
-            :ref:`Company <companies/manage>`
+            :ref:`Company <general/companies/company>`
 
-            :ref:`Company <companies/manage>`
+            :ref:`Company <general/companies/company>`
         * - :guilabel:`Repairs`
           - :ref:`Repair order <repairs/repair_orders/repair>`
-          - :ref:`Company <companies/manage>`
+          - :ref:`Company <general/companies/company>`
         * - :guilabel:`Sales` / etc.
           - Product
           - Category
