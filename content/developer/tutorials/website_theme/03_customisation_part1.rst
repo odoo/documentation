@@ -134,6 +134,8 @@ You can find the `logo
 
    - declare your :file:`website_templates.xml` file along with all the new ones in your
      :file:`manifest`.
+   - disable the options you don’t want in your header via the `presets
+     <{GITHUB_TUTO_PATH}/website_airproof/data/presets.xml>`_.
    - make the use of `primaries
      <{GITHUB_TUTO_PATH}/website_airproof/static/src/scss/primary_variables.scss>`_ like
      `header-template`, `navbar-font`, `header-font-size`...
