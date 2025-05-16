@@ -86,8 +86,8 @@ Background images
 Company logo
 ~~~~~~~~~~~~
 
-For the company logo, the use is a little bit different. First declare it within the `images.xml`
-library and then call it using the right template. For instance, to call inside the header, we will
+For the company logo, the use is a little bit different. First declare it within the `website.xml`
+file and then call it using the right template. For instance, to call inside the header, we will
 use `<t t-call="website.placeholder_header_brand">`.
 
 .. code-block:: xml
