@@ -11,3 +11,4 @@ Setup
    setup/device_troubleshooting
    setup/hardware
    setup/software
+   setup/operation_types
