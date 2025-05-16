@@ -476,7 +476,7 @@ page, directly from the edit panel.
 2. Group creation
 ~~~~~~~~~~~~~~~~~
 
-Add a group at the top of the list (feel free to the put it where needed in this list).
+Add a group at the top of the list (feel free to put it where needed in this list).
 
 .. code-block:: xml
    :caption: ``/website_airproof/views/snippets/options.xml``
