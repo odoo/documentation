@@ -15,7 +15,7 @@ Default taxes
 
 **Default taxes** define which taxes are automatically selected when creating a new product. They
 are also used to prefill the :guilabel:`Taxes` field when adding a new line on an invoice in
-:ref:`Accounting Firms <fiduciaries>` mode.
+:ref:`Accounting Firms <accounting/fiduciaries>` mode.
 
 .. image:: taxes/default-configuration.png
    :alt: Odoo fills out the Tax field automatically according to the Default Taxes

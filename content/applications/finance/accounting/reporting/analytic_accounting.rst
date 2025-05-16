@@ -28,9 +28,9 @@ information:
 - :guilabel:`Reference`: Include a reference to make the account easier to find if needed.
 - :guilabel:`Plan`: Link the :guilabel:`Analytic Account` to an :ref:`analytic plan
   <accounting/analytic_accounting/analytic_plans>`.
-- :guilabel:`Company`: In a :doc:`multi-company </applications/general/multi_company>` environment,
-  select the company using the analytic account. To make the analytic account accessible to all
-  companies, leave the field empty.
+- :guilabel:`Company`: In a :doc:`multi-company </applications/general/companies/multi_company>`
+  environment, select the company using the analytic account. To make the analytic account
+  accessible to all companies, leave the field empty.
 - :guilabel:`Currency`: Update the currency of the analytic account if needed.
 
 Then, the :doc:`budget <budget>` information can be filled in.
@@ -65,11 +65,11 @@ the following fields:
 - :guilabel:`Financial Accounts Prefixes`: Enter the prefix(es) of the account(s) to which the plan
   applies.
 - :guilabel:`Product Category`: Choose the product category to which the plan applies.
-- :guilabel:`Company`: In a :doc:`multi-company </applications/general/multi_company>` environment,
-  select the company using the plan. To make the analytic plan accessible to all companies, leave
-  the field empty.
 - :guilabel:`Applicability`: Define how the plan is applied when creating a new journal entry. The
   applicability set here always overrides the default applicability.
+- :guilabel:`Company`: In a :doc:`multi-company </applications/general/companies/multi_company>`
+  environment, select the company using the plan. To make the analytic plan accessible to all
+  companies, leave the field empty.
 
 Two smart buttons are available:
 
@@ -154,9 +154,9 @@ to apply automatically:
   partner.
 - :guilabel:`Product`: Apply the distribution model only to journal items involving a specific
   product.
-- :guilabel:`Company`: In a :doc:`multi-company </applications/general/multi_company>` environment,
-  apply the distribution model only to journal items involving a specific company. To apply it
-  across all companies, leave the field empty.
+- :guilabel:`Company`: In a :doc:`multi-company </applications/general/companies/multi_company>`
+  environment, apply the distribution model only to journal items involving a specific company. To
+  apply it across all companies, leave the field empty.
 - :guilabel:`Analytic Distribution`: :ref:`Analytic distribution
   <accounting/analytic_accounting/analytic-distribution>` that will be applied when the above
   conditions are met.
