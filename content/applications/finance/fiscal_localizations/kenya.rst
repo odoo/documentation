@@ -148,20 +148,17 @@ Multi-company
    :doc:`../../general/companies`
 
 If you have :ref:`multiple companies <accounting/multi-company>`, you can centralize and manage them
-all on a single Odoo database. The KRA identifies and differentiates the **main** company from
-its **subsidiaries** by using IDs. Furthermore, subsidiaries are classified as **branches** of the
-main company.
+all on a single Odoo database. The KRA identifies and differentiates the **parent** company from
+its **subsidiaries** by using IDs. Furthermore, subsidiaries are classified as :ref:`branches
+<general/companies/branches>` of the parent company.
 
 To configure the company's ID, open the **Settings** app, click :guilabel:`Update Info` in the
-:guilabel:`Companies` section, and search for the :guilabel:`eTIMS Branch Code` field. The **main
+:guilabel:`Companies` section, and search for the :guilabel:`eTIMS Branch Code` field. The **parent
 company** has a branch ID equal to `00` in a multi-company environment. Companies that are *not* the
-main company have a branch ID other than `00` and are assigned an ID by the KRA.
+parent company have a branch ID other than `00` and are assigned an ID by the KRA.
 
-To add a branch, go to the :guilabel:`Branches` tab in the **company settings** and click
-:guilabel:`Add a line`.
-
-To fetch the **branch ID** from the KRA for your non-main companies, ensure the main company has a
-Kenyan :guilabel:`Tax ID` and the OSCU device has been :ref:`initialized <kenya/initialization>`.
+To fetch the **branch ID** from the KRA for your non-parent companies, ensure the parent company has
+a Kenyan :guilabel:`Tax ID` and the OSCU device has been :ref:`initialized <kenya/initialization>`.
 Then, go to the :guilabel:`Branches` tab and click :guilabel:`Populate from KRA`.
 
 .. note::
@@ -184,29 +181,29 @@ KRA sequences
 .. important::
    Odoo invoice sequences and KRA sequences are **different**.
 
-In Odoo, invoice sequences depend on the **main company**. Main companies can see the invoices of
-branches, but branches **cannot** see the main company's invoices or those of other branches.
+In Odoo, invoice sequences depend on the **parent company**. Parent companies can see the invoices
+of branches, but branches **cannot** see the parent company's invoices or those of other branches.
 
 The KRA needs **independent** sequences per branch. Therefore, Odoo manages sequences individually
 per branch.
 
 .. example::
-   If you have a main company with two branches, the invoice sequence would be the following:
+   If you have a parent company with two branches, the invoice sequence would be the following:
 
    - Creating an invoice on **branch 1**: INV/2024/00001;
    - Creating an invoice on **branch 2**: INV/2024/00002;
-   - Creating an invoice on the **main company**: INV/2024/00003.
+   - Creating an invoice on the **parent company**: INV/2024/00003.
 
    This is how Odoo manages sequences to be compliant with the KRA regulations:
 
    - Creating an invoice on **branch 1**: INV/2024/00001;
    - Creating an invoice on **branch 2**: INV/2024/00001;
-   - Creating an invoice on the **main company**: INV/2024/00001.
+   - Creating an invoice on the **parent company**: INV/2024/00001.
 
 Insurance
 =========
 
-For **health service providers**, you can send insurance information about the main and branch
+For **health service providers**, you can send insurance information about the parent and branch
 companies and update it in eTIMS. To do so, go to :menuselection:`Accounting --> Configuration -->
 Settings`, scroll to the :guilabel:`Kenya eTIMS Integration` section, and fill in the
 :guilabel:`Code`, :guilabel:`Name`, and :guilabel:`Rate` fields. Click :guilabel:`Send Insurance
@@ -246,9 +243,9 @@ internal operations or stock adjustments; therefore, Odoo automatically sends th
 of the following conditions are met:
 
 #. No contact is set for the move;
-#. The contact is your main company or a branch of the main company.
+#. The contact is your parent company or a branch of the parent company.
 
-If the stock moves are **external operations** (e.g., to contacts that are not part of the main
+If the stock moves are **external operations** (e.g., to contacts that are not part of the parent
 company or its branches), the stock moves are automatically sent *after* the invoice is sent to
 eTIMS.
 

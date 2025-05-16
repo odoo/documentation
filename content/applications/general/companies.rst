@@ -4,252 +4,185 @@
 Companies
 =========
 
-A centralized management environment allows an administrator to select multiple companies
-simultaneously, and set their specific warehouses, customers, equipment, and contacts. It provides
-the ability to generate reports of aggregated figures without switching interfaces, which
-facilitates daily tasks, and enhances the overall management process.
+In Odoo, a company is an individual business entity that operates independently, with its own legal
+identity, financial records, and specific operational settings.
 
-.. warning::
-   Enabling multi-company functionality in an Odoo database on a *Standard* plan automatically
-   triggers an upsell to the *Custom* plan. This does not apply to databases on the *One-App Free*
-   plan.
+.. seealso::
+   - :ref:`general/companies/branches`
+   - :doc:`Multi-company <companies/multi_company>`
 
-   - **For yearly or multi-year contracts**: An upsell order is created with a 30-day limit.
-   - **For monthly contracts**: The subscription automatically switches to the *Custom* plan and
-     the new rate is applied when the next bill is generated.
+.. _general/companies/configuration:
 
-   For more information, refer to `Odoo's pricing page <https://www.odoo.com/pricing-plan>`_ or
-   contact your account manager.
+Configuration
+=============
 
-To create a new company, navigate to :menuselection:`Settings app --> Companies section`, and click
-:guilabel:`Manage Companies`. Then, click :guilabel:`New` to create a new company.
+To set up a company, follow these steps:
 
-Proceed to fill out the new company form that appears.
+#. :ref:`Configure the company details <general/companies/company>`.
+#. :ref:`Manage users and their access rights <general/companies/users>`.
+#. :ref:`Customize the document layout <general/companies/document-layout>`.
 
-.. tip::
-   To archive a company, navigate to :menuselection:`Settings app --> Companies section --> Manage
-   Companies`. Then, tick the checkbox to the left of the company to be archived. If the
-   :guilabel:`Companies` page is not in list view, click the :guilabel:`≣ (four bars)` icon, located
-   in the top-right corner of the page.
+.. _general/companies/company:
 
-   After selecting the appropriate company, click the :guilabel:`⚙️ Actions` icon, and select
-   :guilabel:`Archive` from the resulting drop-down menu.
+Company
+-------
 
-   To ensure all records related to the archived company are archived, contact Odoo's `Support Team
-   <https://www.odoo.com/help>`_.
+To create a company, open the Settings app, navigate to the :guilabel:`Companies` section, and click
+:icon:`oi-arrow-right` :guilabel:`Manage Companies`. In the :guilabel:`Companies` list view, click
+:guilabel:`New` and configure the following fields:
 
-   Should a record not be archived, there is a risk of reactivating the archived company, and
-   creating the upsell again.
+- :guilabel:`Company Name`
+- :guilabel:`Address`
+- :guilabel:`Tax ID`: tax identification number.
+- :guilabel:`LEI`: legal entity identifier.
+- :guilabel:`Company ID`: company's registry number, if different from :guilabel:`Tax ID`
+- :ref:`Currency <multi-currency/config-main-currency>`
+- :guilabel:`Phone` and :guilabel:`Mobile`
+- :guilabel:`Email`
+- :guilabel:`Website`
+- :guilabel:`Email Domain`
+- :guilabel:`Color`
 
-.. _companies/manage:
+Upload the company's logo and :guilabel:`Save`.
 
-Manage companies and records
-============================
+.. note::
+   - Alternatively, it is possible to create a company by going to :menuselection:`Settings -->
+     Users & Companies --> Companies`.
+   - The company's :guilabel:`General information` may vary based on the :doc:`fiscal localization
+     <../finance/fiscal_localizations>`.
 
-Go to :menuselection:`Settings app --> Companies section --> Manage Companies`. Then, either click
-:guilabel:`New`, and fill in the form with the company's information, or select a pre-existing
-company to edit it.
+.. _general/companies/users:
 
-.. image:: companies/company-info.png
-   :align: center
-   :alt: Overview of a new company's form in Odoo.
+Users
+-----
 
-.. tip::
-   Activate the :ref:`developer mode <developer-mode>` to set social media accounts and
-   company-specific email parameters. See this documentation on
-   :doc:`../marketing/social_marketing` and :doc:`email_communication`.
+After setting up a company, add :doc:`users <users>` and configure their :ref:`access
+<users/add-individual>` and :doc:`access rights <users/access_rights>`.
 
-   Companies also have a :guilabel:`Parent Company` set on the company form in :ref:`developer mode
-   <developer-mode>`.
+.. seealso::
+   :ref:`Users in multi-company environment <users/multi-companies>`
 
-Switch between companies
-------------------------
+.. _general/companies/document-layout:
 
-Switch between (or select) multiple companies, by clicking on the company name, located in the
-far-right corner of the header menu, anywhere throughout the database. Tick the checkboxes next to
-the desired company name(s) to activate them. The highlighted company represents the current
-environment that is in use. To switch environments, click on the desired company name.
+Document layout
+---------------
 
-.. example::
-   In the example below, the user has access to eight companies, two are activated, and the
-   environment the database is in belongs to: *My Company (San Francisco)*.
+Configure the :ref:`default layout <studio/pdf-reports/default-layout>` for all company documents.
 
-   .. image:: companies/multi-companies-menu-dashboard.png
-      :align: center
-      :alt: View of the companies menu through the main dashboard in Odoo.
-
-Share records
--------------
-
-Data (such as, products, contacts, and equipment) can be shared, or set to be shown for a specific
-company only. To do so, on their forms, choose between:
-
-- *A blank field*: the record is shared within all companies.
-- *Adding a company*: the record is visible to users logged in to that specific company.
-
-.. image:: companies/product-form-company.png
-   :align: center
-   :alt: View of a product's form emphasizing the company field in Odoo Sales.
-
-When an environment is selected from the top menu, along with an additional company, records are
-shared between the two companies.
+.. _general/companies/branches:
 
 Branches
 ========
 
-Branches are available to add to a company. Branches can be added by navigating to
-:menuselection:`Settings app --> Companies section --> Manage Companies`. Then, select the desired
-company from the list. From the company detail form, open the :guilabel:`Branches` tab. To add a
-branch, click :guilabel:`Add a line`, and fill out the :guilabel:`Create Branches` pop-up form that
-appears.
-
-.. image:: companies/add-branch.png
-   :align: center
-   :alt: Add a branch to a company with branches and add a line highlighted.
-
-.. tip::
-   Activate the :ref:`developer mode <developer-mode>` to set social media accounts and
-   company-specific email system parameters. See this documentation on
-   :doc:`../marketing/social_marketing` and :doc:`email_communication`.
-
-   Branches also have a :guilabel:`Parent Company` set on the branch form in :ref:`developer mode
-   <developer-mode>`. Accounting and fiscal localizations for the branch are set on the
-   :guilabel:`Parent Company`. To do so, select the company from the *company selector* in the top
-   menu, and go to :menuselection:`Settings app --> Accounting --> Fiscal Localization`.
-
-.. danger::
-   If the database is on the standard *Paid* pricing plan, adding a branch to a company triggers an
-   upsell. Since adding one or more branches turns the database into a multi-company setup, it
-   will need to switch to the *Custom* pricing plan. This does not affect databases on the *One-app
-   free* plan.
-
-   For more information on pricing, see `Odoo's pricing <https://www.odoo.com/pricing-plan>`_ page.
-
-.. _general/employee-access:
-
-Employee access
-===============
-
-Once companies are created, manage the employees' :doc:`Access Rights <users/access_rights>` for
-*Multi Companies*.
-
-To access the *Access Rights*, navigate to :menuselection:`Settings app --> Users section --> Manage
-Users`.
-
-From the :guilabel:`Users` page, select a user from the list to modify. Then, either change the
-fields for :guilabel:`Allowed Companies` or :guilabel:`Default Company`.
-
-Multiple companies can be set for :guilabel:`Allowed Companies`, and *only one* can be set as the
-:guilabel:`Default Company`.
-
-.. image:: companies/access-rights-multi-companies.png
-   :align: center
-   :alt: View of an user form emphasizing the multi companies field under the access rights tabs
-         in Odoo.
-
-If an administrator has multiple companies activated on the database, and is editing a record, the
-editing occurs on the record's related company.
-
-.. example::
-   If editing a sale order issued under `JS Store US`, while working on the `JS Store Belgium`
-   environment, the changes are applied under `JS Store US` (the company from which the sale order
-   was issued).
-
-When creating a record, the company taken into account is:
-
-- The current company selected in the company selector, in the upper-right hand of the screen (the
-  one that is highlighted/active)
-
-**OR**
-
-- No company is set (because none is set on the product and contact forms, for example)
-
-**OR**
-
-- The company set is the company linked to the document (the same as if a record is being edited)
-
-Document format
-===============
-
-To set document formats according to each company, *activate* and *select* the respective company,
-and, under the :menuselection:`Settings app --> Companies section`, click on :guilabel:`Configure
-Document Layout` and edit the information as needed.
-
-.. image:: companies/document-layout.png
-   :align: center
-   :alt: View of the settings page emphasizing the document layout field in Odoo.
-
-:guilabel:`Company Details` can be edited on the document layout. By default, this field is
-populated from the company information listed, when navigating here: :menuselection:`Settings app
---> Companies section --> Manage Companies`, and select a company from the list.
-
-.. _general/inter-company:
-
-Inter-company transactions
-==========================
-
-First, activate the :ref:`developer mode <developer-mode>`. Then, make sure each one of the
-companies is properly set in relation to:
-
-- :doc:`Chart of Accounts <../finance/accounting/get_started/chart_of_accounts>`
-- :doc:`Taxes <../finance/accounting/taxes>`
-- :doc:`Fiscal Positions <../finance/accounting/taxes/fiscal_positions>`
-- :doc:`Journals <../finance/accounting/bank>`
-- :doc:`Fiscal Localizations <../finance/fiscal_localizations>`
-- :doc:`Pricelists <../sales/sales/products_prices/prices/pricing>`
-
-Next, navigate to :menuselection:`Settings app --> Companies section --> Manage Companies`. Then,
-select the desired company from the list. On the company form, select the :guilabel:`Inter-Company
-Transactions` tab, on the individual company's detail form.
-
-With the respective company activated and selected, choose one of the following :guilabel:`Rule`
-options:
-
-- :guilabel:`Do not synchronize`: do not synchronize any inter-company transactions.
-- :guilabel:`Synchronized invoice/bills`: generates a bill/invoice when a company confirms a
-  bill/invoice for the selected company.
-- :guilabel:`Synchronize Sales Order`: generates a drafted sales order using the selected company
-  warehouse, when a sales order is confirmed for the selected company. If, instead of a drafted
-  sales order, it should be validated, enable :guilabel:`Automatic Validation`.\*
-- :guilabel:`Synchronize Purchase Order`: generates a drafted purchase order using the selected
-  company warehouse, when a purchase order is confirmed for the selected company. If, instead of a
-  drafted purchase order, it should be validated, enable :guilabel:`Automatic Validation`.\*
-- :guilabel:`Synchronize Sales and Purchase Order`: generates a drafted purchase/sales order using
-  the selected company warehouse, when a sales/purchase order is confirmed for the selected company.
-  If, instead of a drafted purchase/sales order, it should be validated, enable :guilabel:`Automatic
-  Validation`.\*
-
-  \* The given option needs to be selected, so :guilabel:`Automatic Validation` appears in the
-  configuration.
-
-.. image:: companies/inter-company-transactions.png
-   :align: center
-   :alt: View of the settings page emphasizing the inter company transaction field in Odoo.
+Branches represent subdivisions within a company, such as regional offices or departments, that
+operate under a common parent company. They support hierarchical company structures through
+:ref:`configurable settings <general/companies/branches/configuration>`, enabling
+:ref:`comprehensive or branch-specific views <general/companies/branches/consolidated-view>` with
+flexible :ref:`access control <general/companies/branches/user-access>`, :ref:`entity-specific or
+shared record visibility <general/companies/branches/shared-records>`, and customizable
+:ref:`reporting <general/companies/branches/reporting>`.
 
 .. note::
-   Products **must** be configured as :guilabel:`Can be sold` and shared between the companies. See
-   :doc:`../inventory_and_mrp/inventory/product_management/configure/type`.
-
-.. example::
-   :guilabel:`Synchronize invoice/bills`: an invoice posted on `JS Store Belgium`, for `JS Store
-   US`, automatically creates a vendor bill, and generates a drafted purchase/sales order using the
-   selected company warehouse, when a sales/purchase order is confirmed for the selected company.
-   If, instead of a drafted purchase/sales order, it should be validated, enable
-   :guilabel:`Automatic Validation`.
-
-   :guilabel:`Synchronize sales/purchase order`: when a sale order for `JS Store US` is confirmed on
-   `JS Store Belgium`, a purchase order on `JS Store Belgium` is automatically created (and
-   confirmed, if the :guilabel:`Automatic Validation` feature was enabled).
-
-.. tip::
-   Remember to test all workflows as a user *other* than the administrator.
+   Independent subsidiaries should be created as additional companies, not branches.
 
 .. seealso::
-   - :doc:`Multi-company Guidelines <../../developer/howtos/company>`
-   - :doc:`../finance/accounting/get_started/multi_currency`
+   - :doc:`Multi-company </applications/general/companies/multi_company>`
+   - :ref:`Branch accounting <accounting/branches>`
+
+.. _general/companies/branches/configuration:
+
+Configuration
+-------------
+
+Each branch is linked to its parent company but may contain different or specific information, such
+as its address or logo. A branch can be a parent company of branches at a lower level to create a
+multi-level architecture.
+
+.. important::
+   - Clarify the company's structure and hierarchy before creating companies and branches in Odoo. A
+     company defined as a parent cannot be converted into a branch later, as doing so may result in
+     :doc:`access rights <users/access_rights>` issues.
+   - Always create the parent company first.
+
+To create a branch, follow these steps in the Settings app:
+
+#. Navigate to the :guilabel:`Companies` section, click :icon:`oi-arrow-right` :guilabel:`Manage
+   Companies`, or go to :menuselection:`Settings --> Users & Companies --> Companies`.
+#. In the :guilabel:`Companies` list view, open the desired parent company form.
+#. In the :guilabel:`Branches` tab, click :guilabel:`Add a line` and fill in the :ref:`General
+   Information <general/companies/company>` fields in the :guilabel:`Create Branches` window.
+
+To create branches from a branch and create a multi-level architecture, click :guilabel:`Add a line`
+in the new branch's :guilabel:`Branches` tab.
+
+.. tip::
+   Activate the :ref:`developer mode <developer-mode>` to set :doc:`social media accounts
+   <../marketing/social_marketing>` and company-specific :doc:`email <email_communication>` system
+   parameters.
+
+.. warning::
+   Adding a branch to a company enables :doc:`multi-company <companies/multi_company>` functions.
+
+.. _general/companies/branches/consolidated-view:
+
+Comprehensive or branch-specific view
+-------------------------------------
+
+.. note::
+   Selecting the parent company automatically links all its branches, while selecting a branch
+   connects to that branch only. To switch between them, use the :ref:`company selector
+   <general/multi-company/company-selector>`.
+
+All configurations, except for :ref:`accounting <accounting/branches>` settings inherited from the
+parent company, must be set individually per branch. This allows for branch-specific setups such as
+:doc:`loyalty programs <../sales/point_of_sale/pricing/loyalty>`, :doc:`price lists
+<../sales/point_of_sale/pricing/pricelists>`, or :doc:`inventory locations
+<../inventory_and_mrp/inventory/warehouses_storage/inventory_management/use_locations>`.
+
+.. _general/companies/branches/user-access:
+
+User access
+~~~~~~~~~~~
+
+Like in a multi-company environment, parent companies and branches support flexible :ref:`user
+access <users/multi-companies>` control and :doc:`access rights <users/access_rights>`. User access
+can be granted or restricted at the parent company level, the branch level, or both. For example, a
+user can be limited to a specific branch, while an administrator with access to the parent company
+can manage all associated branches.
+
+.. _general/companies/branches/shared-records:
+
+Shared records
+~~~~~~~~~~~~~~
+
+In Odoo, some records are, by default, either specific to a single entity or shared across the
+parent company and all its branches.
+
+When creating a quotation, invoice, or vendor bill, the active company or branch is automatically
+selected and displayed in the :guilabel:`Company` field. If the active company is the parent company
+or one of its branches, then records specifically linked to that entity are accessible only within
+that entity and will only be visible when the company or branch is selected using the :ref:`company
+selector <general/multi-company/company-selector>`.
+
+In contrast, some records, such as :ref:`products or contacts
+<general/multi-company/shared-and-unshared-records>`, are not tied to any particular entity and are
+shared by default across the parent company and all its branches. However, they can be restricted to
+a single entity by setting the appropriate value in the :guilabel:`Company` field, if needed.
+
+.. seealso::
+   :ref:`Branches accounting <accounting/branches>`
+
+.. _general/companies/branches/reporting:
+
+Reporting
+~~~~~~~~~
+
+All :doc:`reports <../finance/accounting/reporting>` can be generated for the parent company alone
+or with its branches, based on :ref:`user access <general/multi-company/user-access>`.
 
 .. toctree::
    :titlesonly:
 
+   companies/multi_company
    companies/digest_emails
    companies/email_template
