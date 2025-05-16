@@ -443,11 +443,11 @@ Use the following code to add an option for your new custom header on the Websit
 .. code-block:: xml
    :caption: ``/website_airproof/views/website_templates.xml``
 
-   <template id="template_footer_opt" inherit_id="website.snippet_options" name="Footer Template - Option">
-      <xpath expr="//we-select[@data-variable='footer-template']" position="inside">
+   <template id="template_header_opt" inherit_id="website.snippet_options" name="Header Template - Option">
+      <xpath expr="//we-select[@data-variable='header-template']" position="inside">
          <we-button title="airproof"
-            data-customize-website-views="website_airproof.footer"
-            data-customize-website-variable="'airproof'"  data-img="/website_airproof/static/src/img/wbuilder/template_footer_opt.svg"/>
+            data-customize-website-views="website_airproof.header"
+            data-customize-website-variable="'airproof'"  data-img="/website_airproof/static/src/img/wbuilder/template_header_opt.svg"/>
       </xpath>
    </template>
 
@@ -666,12 +666,12 @@ active footer template first.
 .. code-block:: xml
    :caption: ``/website_airproof/views/website_templates.xml``
 
-   <template id="template_header_opt" inherit_id="website.snippet_options" name="Footer Template - Option">
+   <template id="template_footer_opt" inherit_id="website.snippet_options" name="Footer Template - Option">
       <xpath expr="//we-select[@data-variable='footer-template']" position="inside">
          <we-button title="airproof"
             data-customize-website-views="website_airproof.footer"
             data-customize-website-variable="'airproof'"
-            data-img="/website_airproof/static/src/img/wbuilder/template_header_opt.svg"/>
+            data-img="/website_airproof/static/src/img/wbuilder/template_footer_opt.svg"/>
       </xpath>
    </template>
 
