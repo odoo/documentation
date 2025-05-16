@@ -4,12 +4,10 @@
 Accounting and Invoicing
 ========================
 
-**Odoo Invoicing** is a standalone invoicing app to create invoices, send them to your customers,
-and manage payments.
-
-**Odoo Accounting** is a full featured accounting app. Accountant productivity is at the core of its
-development with features such as AI-powered invoice recognition, synchronization with your bank
-accounts, smart matching suggestions, etc.
+Odoo Invoicing is a standalone app designed to create invoices, send them to customers, and manage
+payments. It also handles flows involving vendor bills. On the other hand, the Accounting app is a
+comprehensive accounting solution that allows the same actions and includes additional features such
+as standard financial reports, bank reconciliation, budgets, asset management, and more.
 
 .. seealso::
    `Odoo Tutorials: Accounting <https://www.odoo.com/slides/accounting-19>`_
@@ -52,6 +50,8 @@ accounts, smart matching suggestions, etc.
 
       Reporting, declarations, and analytic accounting
 
+.. _accounting/double-entry-booking:
+
 Double-entry bookkeeping
 ========================
 
@@ -65,6 +65,8 @@ always balance.
 
 .. seealso::
    :doc:`Accounting Cheat Sheet <accounting/get_started/cheat_sheet>`
+
+.. _accounting/accrual-cash:
 
 Accrual and cash basis
 ======================
@@ -81,14 +83,18 @@ expense either when the transaction occurs (accrual basis) or when the payment i
 Multi-company
 =============
 
-Several companies can be managed within the same database. Each company has its :doc:`chart of
-accounts <accounting/get_started/chart_of_accounts>`, but it is possible to share accounts
-between them for scenarios in which such a configuration would be required. Users can then
-access several companies but only work on a single company's accounting at a time.
+:doc:`Multiple companies <../general/companies/multi_company>` can be managed within the same
+database. Each company has its own :doc:`chart of accounts
+<accounting/get_started/chart_of_accounts>`, but :ref:`accounts can be shared
+<consolidation_account_mapping>`, which is useful when viewing consolidation reports. Users can view
+records and reports from multiple companies simultaneously but can only work on a single company's
+accounting at a time.
 
 .. seealso::
-   - :ref:`Shared Accounts Feature <coa_shared_accounts>`
-   - :doc:`Consolidation <accounting/get_started/consolidation>`
+   - :doc:`Multi-company </applications/general/companies/multi_company>`
+   - :ref:`Inter-company transactions <general/multi-company/inter-company-transactions>`
+
+.. _accounting/multi-currency:
 
 Multi-currency environment
 ==========================
@@ -102,32 +108,80 @@ gains and losses after reconciling the journal items.
 .. seealso::
    :doc:`Manage a bank in a foreign currency <accounting/bank/foreign_currency>`
 
-Branch management
-=================
+.. _accounting/branches:
 
-Multiple branches can be managed thanks to multi-company hierarchies. This allows to post journal
-entries on each branch as well as setting up a common lock date managed by the main company.
+Branches
+========
+
+Parent :doc:`companies </applications/general/companies>` and their :ref:`branches
+<general/companies/branches>` can be managed within a single database, operating under shared
+accounting and reporting rules, including the following:
+
+- The parent company’s :doc:`chart of accounts <accounting/get_started/chart_of_accounts>`,
+  :doc:`main currency <accounting/get_started/multi_currency>`, and :doc:`taxes <accounting/taxes>`
+  apply to all branches.
+- Branches can manage their own dedicated journals and related records.
+- The parent company manages a common :ref:`fiscal period <year-end/fiscal-years>`, so its
+  :ref:`lock and closing dates <year-end/lock-everything-date>` apply across all branches. However,
+  branches may set earlier lock dates if needed.
+- The parent company can access all :doc:`reports <accounting/reporting>`, :doc:`invoices
+  <accounting/customer_invoices>`, :doc:`bills <accounting/vendor_bills>`, etc., from its branches,
+  while each branch can only view its own data.
+
+.. note::
+   The :doc:`Fiscal localization <fiscal_localizations>` package is set on the parent company.
+
+.. warning::
+   Adding a branch to a company enables :doc:`multi-company functions
+   <../general/companies/multi_company>`.
+
+   For more information, refer to `Odoo's pricing page <https://www.odoo.com/pricing-plan>`_ or
+   contact your Odoo account manager.
+
+.. _accounting/branch/reporting:
+
+Reporting
+---------
+
+The parent company consolidates accounting operations from all branches, providing a centralized
+view of :doc:`financial reports <accounting/reporting>`, such as profit and loss or balance sheets.
+
+.. _accounting/branch/vat:
+
+VAT
+---
+
+Each company and branch must be configured with its own legal information, including a VAT number
+when applicable. Depending on the structure, branches may share the parent company's VAT number or
+have their own, resulting in a common or separate :doc:`VAT return
+<accounting/reporting/tax_returns>`.
+
+This flexible setup allows users to generate individual reports and tax returns for each entity if
+needed.
+
+.. _accounting/international-standards:
 
 International standards
 =======================
 
-Odoo Accounting supports more than 70 countries. It provides the central standards and mechanisms
-common to all nations, and thanks to country-specific modules, local requirements are fulfilled.
-Fiscal positions exist to address regional specificities like the chart of accounts, taxes, or any
-other requirements.
+Odoo Accounting supports over 100 countries and provides standardized features and mechanisms
+applicable across all regions. Country-specific modules are included to comply with local accounting
+regulations. :doc:`Fiscal localizations <fiscal_localizations>` handle regional requirements, such
+as charts of accounts, taxes, or any other legal obligations.
 
-.. seealso::
-   :doc:`Fiscal localization packages <fiscal_localizations>`
+.. _accounting/accounts-receivable-payable:
 
 Accounts receivable and payable
 ===============================
 
-By default, there is a single account for the account receivable entries and one for the account
-payable entries. As transactions are linked to your **contacts**, you can run a report per customer,
-vendor, or supplier.
+By default, one account is designated for accounts receivable entries and another for accounts
+payable entries. As transactions are linked to **contacts**, it is possible to run a report per
+customer, vendor, or supplier.
 
-The **Partner Ledger** report displays the balance of your customers and suppliers. It is available
-by going to :menuselection:`Accounting --> Reporting --> Partner Ledger`.
+The **Partner Ledger** report displays the balance of customers and suppliers. To access it, go to
+:menuselection:`Accounting --> Reporting --> Partner Ledger`.
+
+.. _accounting/reporting:
 
 Reporting
 =========
@@ -144,7 +198,9 @@ real-time:
 |            +----------------------------------+
 |            | Cash flow statement              |
 |            +----------------------------------+
-|            | Tax report                       |
+|            | Executive summary                |
+|            +----------------------------------+
+|            | Tax return                       |
 |            +----------------------------------+
 |            | EC sales list                    |
 +------------+----------------------------------+
@@ -152,7 +208,7 @@ real-time:
 |            +----------------------------------+
 |            | Trial balance                    |
 |            +----------------------------------+
-|            | Journal report                   |
+|            | Journal audit                    |
 |            +----------------------------------+
 |            | Intrastat report                 |
 |            +----------------------------------+
@@ -166,13 +222,23 @@ real-time:
 +------------+----------------------------------+
 | Management | Invoice analysis                 |
 |            +----------------------------------+
+|            | Analytic report                  |
+|            +----------------------------------+
+|            | Audit trail                      |
+|            +----------------------------------+
+|            | Budget report                    |
+|            +----------------------------------+
 |            | Unrealized currency gains/losses |
+|            +----------------------------------+
+|            | Deferred revenue                 |
+|            +----------------------------------+
+|            | Deferred expense                 |
 |            +----------------------------------+
 |            | Depreciation schedule            |
 |            +----------------------------------+
 |            | Disallowed expenses              |
 |            +----------------------------------+
-|            | Budget analysis                  |
+|            | Loans analysis                   |
 |            +----------------------------------+
 |            | Product margins                  |
 |            +----------------------------------+
@@ -182,30 +248,31 @@ real-time:
 .. tip::
    :doc:`Create and customize reports <accounting/reporting/customize>` with Odoo's report engine.
 
-Tax report
+.. _accounting/tax-report:
+
+Tax return
 ----------
 
-Odoo computes all accounting transactions for the specific tax period and uses these totals to
-calculate the tax obligation.
-
-.. important::
-   Once the tax report has been generated for a period, Odoo locks it and prevents the creation of
-   new journal entries involving VAT. Any correction to customer invoices or vendor bills has to
-   be recorded in the next period.
+In the :ref:`Tax return <tax-returns/report>`, Odoo computes all accounting transactions for the
+specific tax period and uses these totals to calculate the tax obligation.
 
 .. note::
    Depending on the country's localization, an XML version of the tax report can be generated to be
    uploaded to the VAT platform of the relevant taxation authority.
 
+.. _accounting/bank-synchronization:
+
 Bank synchronization
 ====================
 
-The bank synchronization system directly connects with your bank institution to automatically
-import all transactions into your database. It gives an overview of your cash flow without logging
+The bank synchronization system directly connects with banking institutions to automatically
+import all transactions into the database. It gives an overview of the cash flow without logging
 into an online banking system or waiting for paper bank statements.
 
 .. seealso::
    :doc:`Bank synchronization <accounting/bank/bank_synchronization>`
+
+.. _accounting/inventory-valuation:
 
 Inventory valuation
 ===================
@@ -217,6 +284,8 @@ available methods are standard price, average price, :abbr:`LIFO (Last-In, First
 .. seealso::
    :doc:`../inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config`
 
+.. _accounting/retained-earnings:
+
 Retained earnings
 =================
 
@@ -227,19 +296,42 @@ and loss balance is automatically reported on the balance sheet report.
 .. seealso::
    :doc:`Accounting Cheat Sheet <accounting/get_started/cheat_sheet>`
 
-.. _fiduciaries:
+.. _accounting/fiduciaries:
 
 Fiduciaries
 ===========
 
 The :guilabel:`Accounting Firms` mode can be activated by going to :menuselection:`Accounting -->
-Configuration --> Settings --> Accounting Firms mode`. When enabled:
+Configuration --> Settings`. When enabled:
 
 - The document's sequence becomes editable on all documents;
 - The :guilabel:`Total (tax incl.)` field appears to speed up and control the encoding by automating
   line creation with the right account and tax;
 - :guilabel:`Invoice Date` and :guilabel:`Bill Date` are pre-filled when encoding a transaction.
 - A :guilabel:`Quick encoding` option is available for customer invoices and vendor bills.
+
+.. _accounting/accountant-access-rights:
+
+Accountant access rights
+========================
+
+To grant access to the company's accountant, :ref:`add the accountant as a new user
+<users/add-individual>` and configure the appropriate :doc:`access rights
+<../general/users/access_rights>` in the :guilabel:`Accounting` section to enable access to the
+company's financial data:
+
+- :guilabel:`Accounting`: Select :guilabel:`Accountant`.
+- :guilabel:`Bank`: Allow bank account validation.
+
+.. Note::
+   Adding an accountant as a new user in :doc:`Odoo Online <../../administration/odoo_online>` is
+   free if the accountant has an Odoo account registered with the same email address as the one
+   listed for the company user. However, :doc:`Odoo.sh <../../administration/odoo_sh>` and
+   :doc:`Odoo On-premise <../../administration/on_premise>` may involve extra charges for each
+   additional user. For more pricing information, see
+   `Odoo's pricing <https://www.odoo.com/pricing-plan>`_.
+
+For a multi-company environment, set the appropriate :ref:`access <users/multi-companies>`.
 
 .. toctree::
    :titlesonly:
