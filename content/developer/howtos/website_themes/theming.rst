@@ -678,7 +678,7 @@ structure below.
    <odoo noupdate="1">
       <record id="website.default_website" model="website">
          <field name="name">Airproof</field>
-         <field name="logo" type="base64" file="website_airproof/static/src/img/content/logo_pred.png"/>
+         <field name="logo" type="base64" file="website_airproof/static/src/img/content/logo_airproof.png"/>
          <field name="favicon" type="base64" file="website_airproof/static/description/favicon.png" />
          <field name="shop_ppg">18</field>
          <field name="shop_ppr">3</field>
