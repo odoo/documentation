@@ -333,6 +333,8 @@ Leave the field blank (:guilabel:`Unspecified`) for non-working days, such as Sa
    .. image:: new_employee/location.png
       :alt: A new work location form with all fields filled out.
 
+.. _employees/schedule:
+
 SCHEDULE
 --------
 
