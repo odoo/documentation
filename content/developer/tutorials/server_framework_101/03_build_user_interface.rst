@@ -594,8 +594,7 @@ before its operands`.
 .. seealso::
    - :ref:`Reference documentation on search views <reference/view_architectures/search>`
    - :ref:`Reference documentation on search domains <reference/orm/domains>`
-   - :ref:`Reference documentation of the list of reserved field names
-     <reference/orm/fields/reserved>`
+   - :ref:`The list of reserved field names <reference/orm/fields/reserved>`
 
 All the generic search view only allows for is searching on property names; that's the bare minimum.
 Let's enhance the search capabilities.

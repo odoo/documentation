@@ -134,7 +134,6 @@ create a model with some fields to represent real estate properties and their ch
       - :guilabel:`Name` (required)
       - :guilabel:`Description`
       - :guilabel:`Image` (max 600x400 pixels)
-      - :guilabel:`Active` (whether the property listing is active; defaults to true)
       - :guilabel:`State` (:guilabel:`New`, :guilabel:`Offer Received`, :guilabel:`Under Option`, or
         :guilabel:`Sold`; required; defaults to :guilabel:`New`)
       - :guilabel:`Type` (:guilabel:`House`, :guilabel:`Apartment`, :guilabel:`Office Building`,
@@ -146,6 +145,7 @@ create a model with some fields to represent real estate properties and their ch
       - :guilabel:`Garage` (whether there is a garage)
       - :guilabel:`Garden` (whether there is a garden)
       - :guilabel:`Garden Area` (in square meters; with help text)
+      - :guilabel:`Active` (whether the property listing is active; defaults to true)
 
    .. tip::
       - The class name doesn't matter, but the convention is to use the model's upper-cased `_name`
@@ -173,7 +173,6 @@ create a model with some fields to represent real estate properties and their ch
           name = fields.Char(string="Name", required=True)
           description = fields.Text(string="Description")
           image = fields.Image(string="Image")
-          active = fields.Boolean(string="Active", default=True)
           state = fields.Selection(
               string="State",
               selection=[
@@ -210,6 +209,7 @@ create a model with some fields to represent real estate properties and their ch
           garden_area = fields.Integer(
               string="Garden Area", help="The garden area excluding the building."
           )
+          active = fields.Boolean(string="Active", default=True)
 
 Congrats, you have just defined the first model of our real estate app! However, the changes have
 not yet been applied to the database. To do so, you must add the `-u real_estate` argument to the

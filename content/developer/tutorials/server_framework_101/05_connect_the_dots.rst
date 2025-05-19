@@ -111,7 +111,7 @@ Let's implement them.
 
    .. code-block:: python
       :caption: `real_estate_property.py`
-      :emphasize-lines: 1,9,14,17-28
+      :emphasize-lines: 1,9,14,18-29
 
       from odoo import api, fields, models
 
@@ -128,6 +128,7 @@ Let's implement them.
           )
           best_offer_amount = fields.Float(string="Best Offer", compute='_compute_best_offer_amount')
           tag_ids = fields.Many2many(string="Tags", comodel_name='real.estate.tag')
+          active = fields.Boolean(string="Active", default=True)
 
           @api.depends('floor_area', 'garden_area')
           def _compute_total_area(self):

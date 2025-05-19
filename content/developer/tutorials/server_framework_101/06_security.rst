@@ -261,13 +261,13 @@ Record rules come in two types, which combine differently depending on their sco
 
       <record id="product.product_active_rule" model="ir.rule">
           <field name="name">Product: Users can only access active products</field>
-          <field name="model_id" ref="model_product"/>
+          <field name="model_id" ref="product.model_product"/>
           <field name="domain_force">[('active', '=', True)]</field>
       </record>
 
       <record id="product.product_published_rule" model="ir.rule">
           <field name="name">Product: Sales representatives can only access published products</field>
-          <field name="model_id" ref="model_product"/>
+          <field name="model_id" ref="product.model_product"/>
           <field name="domain_force">[('is_published', '=', True)]</field>
           <field name="groups" eval="[Command.link(ref('product.sales_representative_group'))]"/>
           <field name="perm_write" eval="False"/>
@@ -275,7 +275,7 @@ Record rules come in two types, which combine differently depending on their sco
 
       <record id="product.product_manager_rule" model="ir.rule">
           <field name="name">Product: Managers can access all products</field>
-          <field name="model_id" ref="model_product"/>
+          <field name="model_id" ref="product.model_product"/>
           <field name="domain_force">[(1, '=', 1)]</field>
           <field name="groups" eval="[Command.link(ref('product.product_manager_group'))]"/>
       </record>
@@ -328,7 +328,7 @@ access to property records.
 
           <record id="real_estate.property_assignment_rule" model="ir.rule">
               <field name="name">Real Estate: Agents can only update their assigned properties</field>
-              <field name="model_id" ref="model_real_estate_property"/>
+              <field name="model_id" ref="real_estate.model_real_estate_property"/>
               <field name="domain_force">['|', ('salesperson_id', '=', False), ('salesperson_id', '=', user.id)]</field>
               <field name="groups" eval="[Command.link(ref('real_estate.agent_group'))]"/>
               <field name="perm_read" eval="False"/>
@@ -336,7 +336,7 @@ access to property records.
 
           <record id="real_estate.property_manager_rule" model="ir.rule">
               <field name="name">Real Estate: Managers can access all properties</field>
-              <field name="model_id" ref="model_real_estate_property"/>
+              <field name="model_id" ref="real_estate.model_real_estate_property"/>
               <field name="domain_force">[(1, '=', 1)]</field>
               <field name="groups" eval="[Command.link(ref('real_estate.manager_group'))]"/>
           </record>
@@ -348,9 +348,374 @@ access to property records.
 Separate company data
 =====================
 
-tmp
+In enterprise environments, organizations often need to manage multiple distinct entities within the
+same system. This approach allows different branches, subsidiaries, franchises, or even completely
+different companies to operate independently while sharing common resources and functionalities.
+
+In Odoo, the **multi-company** feature enables managing multiple companies within a single database.
+Each company can have its own configuration and data, while still allowing users to access data from
+multiple companies. This is implemented through several key mechanisms:
+
+- **Company field**: Adding a `company_id` many-to-one field to a model allows linking its records
+  to a specific company (represented by the generic `res.company` model). Records can be:
+
+  - **Company-specific**: When `company_id` has a value, making the record belong to one company.
+  - **Company-shared**: When `company_id` is empty, making the record accessible across all
+    companies.
+
+- **Company-dependent fields**: The `company_dependent=True` attribute set on a field creates a
+  separate value for each company. The values are stored in a JSON object in the database and the
+  right value is automatically retrieved based on the current company.
+- **Company context**: The `with_company(company)` model method changes the company context when
+  accessing data like company-dependent fields, allowing to retrieve values and trigger workflows
+  from a specific company's perspective.
+- **Context-aware dependencies**: The `@api.depends_context('company')` decorator ensures that
+  computed fields are computed depending on the current company (`self.env.company`).
+- **Company consistency checks**: The `check_company=True` attribute on a relational field ensures
+  that the linked records either belong to the same company, or are shared records. The check can be
+  made automatic by setting the `_check_company_auto=True` class attribute. Otherwise, the check
+  must be implemented manually by calling the `_check_company` model method.
+- **Company rules**: Record rules can be defined to restrict access to records based on the company
+  they belong to. When their domain is evaluated, the `company_ids` variable contains the companies
+  selected by the current user in the company switcher.
+
+.. example::
+   In the example below, we extend the product and product category models to support multi-company,
+   and define record rules to ensure proper data isolation between companies.
+
+   .. code-block:: python
+
+      class Product(models.Model):
+          _name = 'product'
+          _check_company_auto = True
+
+          company_id = fields.Many2one(string="Company", comodel_name='res.company')
+          price = fields.Float(string="Sales Price", required=True, default=100)
+          cost = fields.Float(string="Manufacturing Cost", company_dependent=True)
+          margin = fields.Float(
+              string="Profit Margin", compute='_compute_margin', inverse='_inverse_margin'
+          )
+          category_id = fields.Many2one(
+              string="Category",
+              comodel_name='product.category',
+              ondelete='restrict',
+              required=True,
+              default=lambda self: self.env.ref('product.category_apparel'),
+              check_company=True,
+          )
+
+          @api.depends('price', 'cost', 'company_id')
+          @api.depends_context('company')
+          def _compute_margin(self):
+              for product in self:
+                  product.margin = product.price - product.with_company(product.company_id).cost
+
+      class ProductCategory(models.Model):
+          _name = 'product.category'
+          _check_company_auto = True
+
+          company_id = fields.Many2one(
+              string="Company",
+              comodel_name='res.company',
+              required=True,
+              default=lambda self: self.env.company.id,
+          )
+          product_ids = fields.One2many(
+              string="Products", comodel_name='product', inverse_name='category_id', check_company=True
+          )
+
+   .. code-block:: xml
+
+      <record id="product.product_category_company_rule" model="ir.rule">
+          <field name="name">Product: Access product categories in own companies only</field>
+          <field name="model_id" ref="product.model_product_category"/>
+          <field name="domain_force">[('company_id', 'parent_of', company_ids)]</field>
+      </record>
+
+      <record id="product.product_company_rule" model="ir.rule">
+          <field name="name">Product: Access products in own companies only</field>
+          <field name="model_id" ref="product.model_product"/>
+          <field name="domain_force">['|', ('company_id', '=', False), ('company_id', 'parent_of', company_ids)]</field>
+      </record>
+
+   .. note::
+      - A `company_id` field is added to the `product` and `product.category` models, allowing them
+        to be company-specific.
+      - The `company_id` field is optional on the `product` model, allowing products to be shared
+        between companies. It is however required for the `product.category` model, making
+        categories company-specific.
+      - It's a good practice to provide a default value for the `company_id` field, as it eases the
+        creation of new records, especially since the company can be hidden from view when the user
+        doesn't have access to multiple companies.
+      - The `cost` field is company-dependent, giving each company its own cost value for the same
+        product.
+      - The `_compute_margin` method is decorated with `@api.depends_context('company')` to trigger
+        recomputation when switching companies. Although not strictly necessary in this case, it
+        also uses `with_company` to ensure retrieving cost values from te correct company.
+      - The `_check_company_auto=True` attribute is set on both models to ensure that relational
+        fields with the `check_company=True` attribute are properly checked. This prevents linking a
+        product to a category belonging to a different company.
+      - Multi-company rules are usually global, as additional group rules could otherwise bypass
+        them.
+      - The rules use the `parent_of` operator to allow accessing records from branches :dfn:`child
+        companies` of the current company.
+      - The rule for products is relaxed to allow access to both company-specific records and shared
+        records.
+
+.. seealso::
+   - Reference documentation on the :meth:`company_id <odoo.models.Model.company_id>` reserved
+     field.
+   - Reference documentation on the :meth:`with_company <odoo.models.Model.with_company>` method.
+   - Reference documentation on the :meth:`@api.depends_context <odoo.api.depends_context>`
+     decorator.
+   - Reference documentation on the :meth:`company <odoo.api.Environment.company>` environment
+     property.
+   - The :ref:`reference/howtos/company` how-to guide.
 
 Let's adapt our real estate app to support multiple agencies while keeping their data separate.
+
+.. exercise::
+   #. Create a second company and assign it to the admin user.
+   #. In the company switcher, tick the checkbox of the new company to have access to both companies
+      at once. Then, switch from one company to another by clicking on the company name.
+   #. Add support for the multi-company feature to the real estate app:
+
+      - Property and offer records should be company-specific.
+      - Property types and tags should be either company-specific or shared between companies.
+
+   #. Ensure cross-company consistency: It should not be possible to link a property to a type, tag,
+      user, or partner that belongs to a different company.
+   #. Prevent users from one company to access the properties, offers, types, and tags of another
+      company.
+   #. Add a new :guilabel:`Average Price` field to the property type model. It should compute the
+      average price of all properties of that type that are currently accessible to the user.
+
+   .. tip::
+      - Reminder: The sources for generic models can be found in the
+        `base <{GITHUB_PATH}/odoo/addons/base/>`_ module.
+      - For some models, you might prefer linking the company to the parent model's company, through
+        a related field, for example
+
+.. spoiler:: Solution
+
+   .. code-block:: xml
+      :caption: `data/res_company_data.xml`
+
+      <?xml version="1.0" encoding="utf-8"?>
+      <odoo>
+
+          <record id="real_estate.second_company" model="res.company">
+              <field name="name">YourSecondCompany</field>
+              <field name="partner_id" ref="real_estate.second_company_address"/>
+          </record>
+
+      </odoo>
+
+   .. code-block:: xml
+      :caption: `data/res_partner_data.xml`
+      :emphasize-lines: 7-9
+
+          [...]
+
+          <record id="real_estate.amyfromthevideos" model="res.partner">
+              <field name="name">AmyFromTheVideos</field>
+          </record>
+
+          <record id="real_estate.second_company_address" model="res.partner">
+              <field name="name">YourSecondCompany Address</field>
+          </record>
+
+      </odoo>
+
+   .. code-block:: python
+      :caption: `__manifest__.py`
+      :emphasize-lines: 4
+
+      'data': [
+          [...]
+          'data/res_partner_data.xml',
+          'data/res_company_data.xml',  # Depends on `res_partner_data.xml`.
+          [...]
+      ],
+
+   .. code-block:: xml
+      :caption: `security/res_users.xml`
+      :emphasize-lines: 5
+
+      [...]
+
+      <record id="base.user_admin" model="res.users">
+          <field name="groups_id" eval="[Command.link(ref('real_estate.manager_group'))]"/>
+          <field name="company_ids" eval="[Command.link(ref('real_estate.second_company'))]"/>
+      </record>
+
+      [...]
+
+   .. code-block:: python
+      :caption: `models/real_estate_property.py`
+      :emphasize-lines: 2,10,13,14-17,22,25-31
+
+      [...]
+      _check_company_auto = True
+
+      [...]
+      type_id = fields.Many2one(
+          string="Type",
+          comodel_name='real.estate.property.type',
+          ondelete='restrict',
+          required=True,
+          check_company=True,
+      )
+      [...]
+      address_id = fields.Many2one(string="Address", comodel_name='res.partner', check_company=True)
+      [...]
+      seller_id = fields.Many2one(
+          string="Seller", comodel_name='res.partner', required=True, check_company=True
+      )
+      salesperson_id = fields.Many2one(
+          string="Salesperson",
+          comodel_name='res.users',
+          default=lambda self: self.env.user,
+          check_company=True,
+      )
+      [...]
+      tag_ids = fields.Many2many(string="Tags", comodel_name='real.estate.tag', check_company=True)
+      company_id = fields.Many2one(
+          string="Company",
+          comodel_name='res.company',
+          required=True,
+          default=lambda self: self.env.company.id,
+      )
+
+   .. code-block:: xml
+      :caption: `views/real_estate_property_views.xml`
+      :emphasize-lines: 5
+
+      <record id="real_estate.property_form" model="ir.ui.view">
+          [...]
+              <group string="Listing Information">
+                  [...]
+                  <field name="company_id"/>
+                  <field name="active"/>
+              </group>
+          [...]
+      </record>
+
+   .. code-block:: python
+      :caption: `models/real_estate_offer.py`
+      :emphasize-lines: 1
+
+      company_id = fields.Many2one(related='property_id.company_id')
+
+   .. code-block:: python
+      :caption: `models/real_estate_property_type.py`
+      :emphasize-lines: 1,6,9-31
+
+      from odoo import api, fields, models
+
+
+      class RealEstatePropertyType(models.Model):
+          [...]
+          _check_company_auto = True
+
+          name = fields.Char(string="Name", required=True)
+          property_ids = fields.One2many(
+              string="Properties",
+              comodel_name='real.estate.property',
+              inverse_name='type_id',
+              check_company=True,
+          )
+          average_price = fields.Float(string="Average Price", compute='_compute_average_price')
+          company_id = fields.Many2one(
+              string="Company", comodel_name='res.company', default=lambda self: self.env.company.id
+          )
+
+          # In practice, this computation will not work in all cases. It is merely given as an exercise to
+          # understand the concept of multi-company, but it should not be used as-is in production.
+          @api.depends('property_ids.selling_price', 'company_id')
+          @api.depends_context('company')
+          def _compute_average_price(self):
+              for type in self:
+                  properties = type.property_ids.filtered(lambda p: p.company_id in self.env.companies)
+                  if properties:
+                      type.average_price = sum(properties.mapped('selling_price')) / len(properties)
+                  else:
+                      type.average_price = 0.0
+
+   .. code-block:: xml
+      :caption: `views/real_estate_property_type_views.xml`
+      :emphasize-lines: 5-6
+
+      <record id="real_estate.property_type_list" model="ir.ui.view">
+          [...]
+              <list editable="bottom">
+                  <field name="name"/>
+                  <field name="average_price"/>
+                  <field name="company_id"/>
+              </list>
+          [...]
+      </record>
+
+   .. code-block:: python
+      :caption: `models/real_estate_tag.py`
+      :emphasize-lines: 2,5-10
+
+      [...]
+      _check_company_auto = True
+
+      [...]
+      property_ids = fields.Many2many(
+          string="Properties", comodel_name='real.estate.property', check_company=True
+      )
+      company_id = fields.Many2one(
+          string="Company", comodel_name='res.company', default=lambda self: self.env.company.id
+      )
+
+   .. code-block:: xml
+      :caption: `views/real_estate_tag_views.xml`
+      :emphasize-lines: 6
+
+      <record id="real_estate.tag_list" model="ir.ui.view">
+          [...]
+              <list editable="bottom">
+                  <field name="name"/>
+                  <field name="color" widget="color_picker"/>
+                  <field name="company_id"/>
+              </list>
+          [...]
+      </record>
+
+   .. code-block:: xml
+      :caption: `security/ir_rule.xml`
+      :emphasize-lines: 3-25
+
+          [...]
+
+          <record id="real_estate.property_company_rule" model="ir.rule">
+              <field name="name">Real Estate: Access properties in own companies only</field>
+              <field name="model_id" ref="real_estate.model_real_estate_property"/>
+              <field name="domain_force">[('company_id', 'parent_of', company_ids)]</field>
+          </record>
+
+          <record id="real_estate.offer_company_rule" model="ir.rule">
+              <field name="name">Real Estate: Access offers in own companies only</field>
+              <field name="model_id" ref="real_estate.model_real_estate_offer"/>
+              <field name="domain_force">[('company_id', 'parent_of', company_ids)]</field>
+          </record>
+
+          <record id="real_estate.property_type_company_rule" model="ir.rule">
+              <field name="name">Real Estate: Access property types in own companies only</field>
+              <field name="model_id" ref="real_estate.model_real_estate_property_type"/>
+              <field name="domain_force">['|', ('company_id', '=', False), ('company_id', 'parent_of', company_ids)]</field>
+          </record>
+
+          <record id="real_estate.tag_company_rule" model="ir.rule">
+              <field name="name">Real Estate: Access tags in own companies only</field>
+              <field name="model_id" ref="real_estate.model_real_estate_tag"/>
+              <field name="domain_force">['|', ('company_id', '=', False), ('company_id', 'parent_of', company_ids)]</field>
+          </record>
+
+      </odoo>
 
 .. _tutorials/server_framework_101/bypass_security:
 
