@@ -275,12 +275,20 @@ Lastly, add your shape to the list of shapes available on the Website Builder.
 .. code-block:: xml
    :caption: ``/website_airproof/views/snippets/options.xml``
 
-   <template id="snippet_options_background_options" inherit_id="website.snippet_options_background_options" name="Shapes">
-       <xpath expr="//*[hasclass('o_we_shape_menu')]/*[last()]" position="after">
-           <we-select-page string="Theme">
-               <we-button data-shape="illustration/hexagons/01" data-select-label="Hexagon 01"/>
-           </we-select-page>
-       </xpath>
+   <template id="snippet_options_background_options" inherit_id="website.snippet_options_background_options" name="Airproof - Shapes">
+      <xpath expr="//*[hasclass('o_we_bg_shape_menu')]/header[hasclass('o_pager_nav')]//*[hasclass('o_pager_nav_btn')][last()]" position="after">
+         <button type="button" class="o_pager_nav_btn p-0 text-uppercase" data-scroll-to="x_wd_scroll_bgshapes_aiproof">
+            <span class="w-100">Airproof</span>
+         </button>
+      </xpath>
+      <xpath expr="//*[hasclass('o_we_bg_shape_menu')]/div[hasclass('o_pager_container')]" position="inside">
+         <div class="x_scroll_bgshapes_klingspor">
+            <we-title>Airproof</we-title>
+            <we-select-page string="Airproof">
+               <we-button data-shape="illustration/airproof/01" data-select-label="Airproof 01"/>
+            </we-select-page>
+         </div>
+      </xpath>
    </template>
 
 .. _website_themes/shapes/bg/custom/use:
@@ -292,8 +300,8 @@ In your XML pages, you can use your shape in the same way as the others.
 
 .. code-block:: xml
 
-    <section class="..." data-oe-shape-data="{'shape': 'illustration/hexagons/01', 'colors': 'c4': '#8595A2', 'c5': 'rgba(0, 255, 0)'}">
-        <div class="o_we_shape o_illustration_hexagons_01"/>
+    <section class="..." data-oe-shape-data="{'shape': 'illustration/airproof/01', 'colors': 'c4': '#8595A2', 'c5': 'rgba(0, 255, 0)'}">
+        <div class="o_we_shape o_illustration_airproof_01"/>
         <div class="container">
             <!-- Content -->
         </div>
