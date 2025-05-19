@@ -22,6 +22,8 @@ settings <configuration/settings>`. Then,
 #. Activate the :guilabel:`Log in with Employees` feature.
 #. Add the employees with **basic POS functionality** access in the :guilabel:`Basic rights` field.
 #. Add the employees with **extended POS functionalities** in the :guilabel:`Advanced rights` field.
+#. Add the employees with **minimal POS functionality** access in the :guilabel:`Minimal rights`
+   field.
 
 .. image:: employee_login/activate-setting.png
    :alt: setting to enable multiple cashiers in POS
