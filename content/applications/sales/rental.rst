@@ -1,3 +1,5 @@
+:show-content:
+
 ======
 Rental
 ======
@@ -11,7 +13,13 @@ returned, and invoice customers from this single platform.
    - `Odoo Rental: product page <https://www.odoo.com/app/rental>`_
    - `Odoo Tutorials: Rental <https://www.odoo.com/slides/rental-48>`_
 
-.. _rental/pricing:
+.. cards::
+
+   .. card:: Manage deposits
+      :target: rental/manage_deposits
+      :large:
+
+      Learn how to create a refundable deposit for rental products.
 
 Dashboard
 =========
@@ -65,6 +73,11 @@ Products`. By default, the :guilabel:`Can be Rented` search filter appears in th
 
 Each product kanban card displays that product's name, rental price, and product image (if
 applicable).
+
+.. seealso::
+   :doc:`rental/manage_deposits`
+
+.. _rental/pricing:
 
 Rental pricing
 ==============
@@ -136,7 +149,7 @@ Odoo always uses two rules to compute the price of a product when a rental order
    After an order is created, Odoo selects the second line as this is the cheapest option. The
    customer has to pay three times '3 days' to cover the rental's eight days, for a total of $750.
 
-.. _rental/customer-signature:
+.. _rental/order:
 
 Rental orders
 =============
@@ -184,6 +197,8 @@ product`, and selecting the desired rental product to add to the form.
 Once all the information has been entered correctly on the rental order form, click the
 :guilabel:`Send by Email` button to send the quotation to the customer, or click the
 :guilabel:`Confirm` button to confirm the order.
+
+.. _rental/customer-signature:
 
 Customer signature
 ==================
@@ -255,6 +270,8 @@ pop-up form that appears.
 
 Doing so places a :guilabel:`Picked-up` status banner on the rental order.
 
+.. _rental/return:
+
 Return products
 ===============
 
@@ -282,3 +299,6 @@ From this drop-down menu, hover over the :guilabel:`Print` option to reveal a su
 
 Odoo generates and downloads a PDF, detailing all information about the current status of the rented
 item(s).
+
+.. toctree::
+   rental/manage_deposits
