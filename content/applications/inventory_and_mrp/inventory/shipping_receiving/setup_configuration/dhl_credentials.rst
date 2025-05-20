@@ -22,9 +22,8 @@ to :menuselection:`Inventory app --> Configuration --> Settings`.
 Scroll down to the :guilabel:`Shipping Connectors` section, and tick the checkbox next to
 :guilabel:`DHL Express Connector`. Finally, click :guilabel:`Save` to apply the changes.
 
-Once the connector has been enabled, a :icon:`fa-arrow-right` :guilabel:`DHL Shipping Methods` link
-appears below the setting. Click the link to open a page showing all shipping methods configured for
-DHL.
+Then, click the :icon:`fa-arrow-right` :guilabel:`DHL Shipping Methods` link to open a page showing
+all shipping methods with the *Provider* set to DHL.
 
 Configure DHL shipping method
 =============================
@@ -66,35 +65,48 @@ DHL Configuration
 The :guilabel:`DHL Configuration` tab on the shipping method form is used to connect the user's DHL
 account to Odoo, and configure the shipping method's details.
 
-DHL SiteID, password, and account number
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+DHL developer credentials
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A DHL SiteID, password, and account number are used to link a DHL account with third-party services,
-like Odoo's **Inventory** app.
+To integrate DHL with Odoo, developer credentials must be retrieved from DHL's Developer Portal.
+These credentials are used to link the user's DHL account to Odoo's **Inventory** app.
 
 .. important::
-   The SiteID and password are different credentials than the ones used to log in to a DHL account.
+   The *SiteID* and *Password* are different credentials than the ones used to log in to a DHL
+   account.
 
-Here are two ways to obtain these DHL account credentials:
+With DHL Express Account
+************************
 
-- **If a DHL Express account is available**: Log into the `DHL Developer portal
-  <https://developer.dhl.com/api-reference/dhl-express-mydhl-api#get-started-section/
-  user-guide%get-access>`_, and then `request a DHL API account number <https://developer.dhl.
-  com/form/dhl-express-onboarding>`_.
-- **If a DHL Express account is unavailable**: Follow DHL's steps to `obtain a DHL Express account
-  <https://developer.dhl.com/api-reference/dhl-express-mydhl-api#get-started-section/user-guide%get-
-  access:~:text=around%20the%20world.-,User%20Guide,-Get%20Access>`_, and then follow the steps in
-  the previous bullet.
+If a DHL Express account is available, log into the `DHL Developer portal
+<https://developer.dhl.com/api-reference/dhl-express-mydhl-api#get-started-section/
+user-guide%get-access>`_ and `request a DHL API account number <https://developer.dhl.
+com/form/dhl-express-onboarding>`_.
 
-Once the developer portal account has been confirmed, log in to the portal using the username and
-password. Click on the user avatar in the top-right corner of the screen to open the user dashboard.
+Then, in Odoo, on the shipping method form, enter the *DHL API Key* in the :guilabel:`DHL SiteID`
+field, and the *API Secret* in the :guilabel:`DHL Password` field.
 
-On the dashboard, click on the :guilabel:`Apps` tab, and select an app. In the
-:guilabel:`Credentials` section, click the :guilabel:`Show key` button below the :guilabel:`API Key`
-and :guilabel:`API Secret` fields.
+Without DHL Express Account
+***************************
 
-Return to the shipping method form in the Odoo database. Enter the *DHL API Key* in the
-:guilabel:`DHL SiteID` field, and the *API Secret* in the :guilabel:`DHL Password` field.
+If a DHL Express account is **not** available:
+
+#. Begin by opening a `DHL Express account
+   <https://mydhl.express.dhl/gb/en/ship/open-account.html#/fs-step=connectors&fs-step=connectors>`_.
+#. Once the developer portal account has been confirmed, log in to the portal using the username and
+   password. Click the user avatar in the top-right corner of the screen to open the user dashboard.
+#. On the dashboard, open the :guilabel:`Apps` tab, and create an app. Follow the four steps in the
+   app creation flow (app name, needed apps, app status, confirmation) to complete the setup.
+
+   .. image:: dhl_credentials/create-dhl-app.png
+      :alt: Setup to create DHL account.
+
+#. After setting up the DHL Express account, go `here
+   <https://developer.dhl.com/user/login?destination=/form/dhl-express-onboarding>`_ to get the *DHL
+   API Key* and *API Secret* credentials.
+
+Then, in Odoo, on the shipping method form, enter the *DHL API Key* in the :guilabel:`DHL SiteID`
+field, and the *API Secret* in the :guilabel:`DHL Password` field.
 
 Shipping details
 ~~~~~~~~~~~~~~~~
@@ -128,9 +140,15 @@ Additional settings are available in the :guilabel:`Options` section at the bott
 Turn on the DHL Connection
 ==========================
 
-Once the DHL connection is set up, use the buttons at the top of the form to turn on or debug the
-connection.
+Once the DHL connection is set up, use the smart buttons at the top of the form to publish, turn on
+production mode or activate debug logging.
 
-- **Unpublished/Published**: turns the connection on or off.
-- **Test Environment/Production Environment**: sets whether requests actually get sent to DHL.
-- **No Debug/Debug Requests**: determines whether error logging occurs for requests to DHL.
+- :guilabel:`Unpublished`/:guilabel:`Published`: determines if this shipping method is available
+  on the user's **eCommerce** website.
+
+- :guilabel:`Test Environment`/:guilabel:`Production Environment`: determines whether label creation
+  is for testing and cancelled immediately (Test) or generate real shipping label that is charged
+  to DHL account (Production).
+- :guilabel:`No Debug`/:guilabel:`Debug Requests`: determines whether API requests and responses are
+  logged in Odoo (turn on :ref:`developer mode <developer-mode>` and go to :menuselection:`Settings
+  app --> Technical --> Logging`).
