@@ -9,10 +9,6 @@ into tasks, which are categorized on a whiteboard according to what production p
 
    The word **Kanban** comes from Japanese and refers to the "visual board" management method.
 
-.. seealso::
-   `Odoo Tutorials: Kanban Project Management
-   <https://www.odoo.com/slides/slide/kanban-project-management-1664>`_
-
 .. _project_management/configuration:
 
 Configuration
