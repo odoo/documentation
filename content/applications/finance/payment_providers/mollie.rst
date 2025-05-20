@@ -8,7 +8,7 @@ Configuration
 =============
 
 .. seealso::
-   - :ref:`payment_providers/add_new`
+   :ref:`payment_providers/add_new`
 
 Credentials tab
 ---------------
@@ -28,4 +28,69 @@ To retrieve your API key, log into your Mollie account, go to
    We recommend doing this on a test Odoo database, rather than on your main database.
 
 .. seealso::
-   - :doc:`../payment_providers`
+   :doc:`../payment_providers`
+
+Supported payment methods and features in Odoo
+==============================================
+
+.. note::
+   Mollie doesn't support manual capture, refunds, or tokenization.
+
+.. |V| replace:: :icon:`fa-check`
+.. |X| replace:: :icon:`fa-times`
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: auto
+
+   * - Payment method
+     - Currencies
+     - Countries
+   * - Bancontact
+     - EUR
+     - Belgium
+   * - Bank transfer
+     - EUR
+     - All
+   * - Belfius
+     - EUR
+     - Belgium
+   * - Card
+     - All
+     - All
+   * - EPS
+     - EUR
+     - Austria
+   * - iDEAL
+     - EUR
+     - Netherlands
+   * - KBC/CBC
+     - EUR
+     - Belgium
+   * - P24
+     - EUR, PLN
+     - Poland
+   * - PaySafeCard
+     - AED, AUD, BRL, CAD, CHF, CZK, DKK, EUR, GBP, GEL, GIP, HUF, ISK, KWD, MDL, MXN, NOK, NZD,
+       PEN, PLN, PYG, RON, RSD, SAR, SEK, TRY, USD, UYU
+     - Australia, Austria, Belgium, Brazil, Canada, Croatia, Cyprus, Czech Republic, Denmark,
+       Finland, France, Georgia, Germany, Gibraltar, Hungary, Iceland, Ireland, Italy, Kuwait,
+       Latvia, Liechtenstein, Lithuania, Luxembourg, Malta, Mexico, Moldova, Montenegro,
+       Netherlands, New Zealand, Norway, Paraguay, Peru, Poland, Portugal, Romania, Saudi Arabia,
+       Serbia, Slovakia, Slovenia, Spain, Sweden, Switzerland, Turkey, United Arab Emirates, United
+       Kingdom, United States, Uruguay
+   * - PayPal
+     - AUD, BRL, CAD, CHF, CZK, DKK, EUR, GBP, HKD, HUF, ILS, JPY, MXN, MYR, NOK, NZD, PHP, PLN,
+       RUB, SEK, SGD, THB, TWD, USD
+     - All
+   * - Sofort
+     - CHF, EUR
+     - Austria, Belgium, Germany, Italy, Netherlands, Poland, Spain, Switzerland, United Kingdom
+   * - TWINT
+     - CHF
+     - Switzerland
+   * - Trustly
+     - CZK, DKK, EUR, GBP, NOK, SEK
+     - Austria, Belgium, Denmark, Estonia, Finland, Germany, Latvia, Lithuania, Netherlands, Norway,
+       Spain, Sweden, United Kingdom

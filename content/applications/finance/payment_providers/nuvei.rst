@@ -45,43 +45,52 @@ Configuration on Odoo
    You can also test Nuvei using the :ref:`test mode <payment_providers/test-mode>` and your Sandbox
    Dashboard values.
 
-.. _payment_providers/nuvei/services:
-
-Payment methods
-===============
-
-Most Nuvei payment methods are **region specific**. The supported payment methods and brands for
-each country are listed below:
-
-+---------------------------------+----------------------------------+
-| **Argentina**                   | **Ecuador**                      |
-|                                 |                                  |
-| - Boleto                        | - Card (AMEX, Mastercard, Visa)  |
-| - Card (AMEX, Mastercard, Visa) | - AstroPay TEF (Banco Guayaquil, |
-|                                 |   Banco Pichincha, Facilito)     |
-+---------------------------------+----------------------------------+
-| **Brazil**                      | **Mexico**                       |
-|                                 |                                  |
-| - Boleto                        | - Card (AMEX, Mastercard, Visa)  |
-| - Card (AMEX, Mastercard, Visa) | - SPEI                           |
-| - Pix                           | - Oxxo Pay                       |
-+---------------------------------+----------------------------------+
-| **Canada**                      | **Peru**                         |
-|                                 |                                  |
-| - Card (AMEX, Mastercard, Visa) | - Card (AMEX, Mastercard, Visa)  |
-|                                 | - Boleto                         |
-+---------------------------------+----------------------------------+
-| **Chile**                       | **United States**                |
-|                                 |                                  |
-| - Card (AMEX, Mastercard, Visa) | - Card (AMEX, Mastercard, Visa)  |
-| - WebPay                        |                                  |
-+---------------------------------+----------------------------------+
-| **Colombia**                    | **Uruguay**                      |
-|                                 |                                  |
-| - Card (AMEX, Mastercard, Visa) | - Card (AMEX, Mastercard, Visa)  |
-| - PSE                           | - Local Payments (Abitab,        |
-|                                 |   RedPagos)                      |
-+---------------------------------+----------------------------------+
-
 .. seealso::
    :doc:`../payment_providers`
+
+.. _payment_providers/nuvei/services:
+
+Supported payment methods and features in Odoo
+==============================================
+
+.. note::
+   Nuvei doesn't support manual capture, refunds, or tokenization.
+
+.. |V| replace:: :icon:`fa-check`
+.. |X| replace:: :icon:`fa-times`
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: auto
+
+   * - Payment method
+     - Currencies
+     - Countries
+   * - AstroPay TEF
+     - USD
+     - Ecuador
+   * - Boleto
+     - BRL
+     - Brazil
+   * - Card (American Express, Mastercard, Visa)
+     - All
+     - Argentina, Brazil, Canada, Chile, Colombia, Ecuador, Mexico, Peru, United States, Uruguay
+   * - Local Payments
+     - UYU
+     - Uruguay
+   * - Oxxo Pay
+     - MXN
+     - Mexico
+   * - Pix
+     - BRL
+     - Brazil
+   * - PSE
+     - COP
+     - Colombia
+   * - SPEI
+     - USD, MXN
+     - Mexico
+   * - WebPay
+     - USD, CLP
+     - Chile

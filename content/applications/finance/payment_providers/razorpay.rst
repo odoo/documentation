@@ -52,3 +52,87 @@ Configuration on Odoo
 
 .. seealso::
    - :doc:`../payment_providers`
+
+Supported payment methods and features in Odoo
+==============================================
+
+.. |V| replace:: :icon:`fa-check`
+.. |X| replace:: :icon:`fa-times`
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: 10 25 25 8 8 8 8 8
+
+   * - Payment Method
+     - Currencies
+     - Countries
+     - Manual Capture
+     - Partial Capture
+     - Refunds
+     - Partial refunds
+     - Tokenization
+   * - Card
+     - All
+     - All
+     - |V|
+     - |X|
+     - |V|
+     - |V|
+     - |V|
+   * - EMI
+     - INR
+     - India
+     - |V|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - FPX
+     - MYR
+     - Malaysia
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - Netbanking
+     - INR
+     - India
+     - |V|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - Pay Later
+     - INR
+     - India
+     - |X|
+     - |X|
+     - |V|
+     - |X|
+     - |X|
+   * - PayNow
+     - SGD
+     - Singapore
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - UPI
+     - INR
+     - India
+     - |V|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - Wallets India
+     - INR
+     - India
+     - |X|
+     - |X|
+     - |V|
+     - |X|
+     - |X|
