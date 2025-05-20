@@ -18,7 +18,7 @@ click on :guilabel:`Create` to add new terms or click existing ones to modify th
 
 .. seealso::
    `Odoo Tutorials: Payment Terms
-   <https://www.odoo.com/slides/slide/payment-terms-1679?fullscreen=1>`_
+   <https://www.odoo.com/slides/slide/payment-terms-terms-and-conditions-6852>`_
 
 Once **Payment Terms** are defined, you can assign them to your vendor by default. To do so, go to
 :menuselection:`Vendors --> Vendors`, select a vendor, click the :guilabel:`Sales & Purchase` tab,
