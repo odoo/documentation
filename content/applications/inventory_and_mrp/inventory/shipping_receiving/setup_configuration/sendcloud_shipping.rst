@@ -91,6 +91,9 @@ Sendcloud account. Then, :ref:`configure Odoo fields
 <inventory/shipping_receiving/sendcloud-shipping-info>`, so Sendcloud can accurately pull shipping
 data to generate labels.
 
+.. seealso::
+   :ref:`Enable pickup points on websites <inventory/shipping_receiving/sendcloud-pickups>`
+
 .. _inventory/shipping_receiving/sendcloud-module:
 
 Install Sendcloud shipping module
@@ -115,7 +118,7 @@ Configuration --> Settings`. The :guilabel:`Sendcloud Connector` setting is foun
 
 After activating the :guilabel:`Sendcloud Connector`, click on the :guilabel:`Sendcloud Shipping
 Methods` link below the listed connector. Once on the :guilabel:`Shipping Methods` page, click
-:guilabel:`Create`.
+:guilabel:`New`.
 
 .. tip::
    :guilabel:`Shipping Methods` can also be accessed by going to :menuselection:`Inventory -->
@@ -129,8 +132,32 @@ Fill out the following fields in the :guilabel:`New Shipping Method` form:
   create a new product.
 - In the :guilabel:`SendCloud Configuration` tab, enter the :guilabel:`Sendcloud Public Key`.
 - In the :guilabel:`SendCloud Configuration` tab, enter the :guilabel:`Sendcloud Secret Key`.
-- Manually :guilabel:`Save` the form by clicking the cloud icon next to the :guilabel:`Shipping
-  Methods / New` breadcrumbs.
+
+.. _inventory/shipping_receiving/sendcloud-pickups:
+
+Pickup points
+~~~~~~~~~~~~~
+
+Sendcloud's `service point delivery
+<https://support.sendcloud.com/hc/en-us/articles/360026097951-FAQ-Service-Points>`_ lets customers
+choose a pickup location (such as a nearby shop or locker) instead of entering a private delivery
+address.
+
+To enable the feature, go to the shipping method form, and in the :guilabel:`SendCloud
+Configuration` tab, under the :guilabel:`Options` section, enable :guilabel:`Use Sendcloud
+Locations` feature.
+
+.. important::
+   Pickup point selection is only available through the **Website** app (the online checkout view).
+   It is not currently possible to select a pickup point manually through the **Sales** app (the
+   internal database view).
+
+   For example, if the customer selects a shipping method like *Sendcloud Mondial Relay*, they must
+   choose a pickup point during the checkout process on the website. If no pickup point is selected,
+   the delivery order cannot be validated in Odoo.
+
+Load shipping products
+~~~~~~~~~~~~~~~~~~~~~~
 
 After configuring and saving the form, follow these steps to load the shipping products:
 
