@@ -191,6 +191,6 @@ account's settings, and :guilabel:`Save`.
    * :doc:`../vendor_bills/deferred_expenses`
    * :doc:`../customer_invoices/deferred_revenues`
    * :doc:`../../fiscal_localizations`
-   * `Odoo Tutorials: Chart of accounts <https://www.odoo.com/slides/slide/chart-of-accounts-1630>`_
+   * `Odoo Tutorials: Chart of accounts <https://www.odoo.com/slides/slide/chart-of-accounts-6834>`_
    * `Odoo Tutorials: Update your chart of accounts
-     <https://www.odoo.com/slides/slide/update-your-chart-of-accounts-1658>`_
+     <https://www.odoo.com/slides/slide/update-your-chart-of-accounts-6391>`_
