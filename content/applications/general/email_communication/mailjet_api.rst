@@ -90,8 +90,10 @@ Identified Mail)`/:abbr:`DMARC (Domain-based Message Authentication, Reporting, 
 Conformance)` settings on the domain of the sender.
 
 .. seealso::
-   `Mailjet's SPF/DKIM/DMARC documentation <https://documentation.mailjet.com/hc/articles/
-   360042412734-Authenticating-Domains-with-SPF-DKIM>`_
+   - `Mailjet's SPF/DKIM documentation
+     <https://documentation.mailjet.com/hc/en-us/articles/360049641733-Authenticating-Domains-with-SPF-and-DKIM-A-Complete-Guide>`_
+   - `Mailjet's DMARC documentation
+     <https://documentation.mailjet.com/hc/en-us/articles/20531905163419-Understanding-DMARC>`_
 
 .. important::
    If the database is not using a custom domain, then in order to verify the sender's address, a
