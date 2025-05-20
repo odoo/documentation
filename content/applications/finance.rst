@@ -6,7 +6,8 @@ Finance
 
 .. toctree::
 
-    finance/accounting
-    finance/expenses
-    finance/payment_providers
-    finance/fiscal_localizations
+   finance/accounting
+   finance/expenses
+   finance/payment_providers
+   finance/fiscal_localizations
+   finance/esg
