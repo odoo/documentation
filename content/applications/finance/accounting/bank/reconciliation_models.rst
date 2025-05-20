@@ -11,7 +11,7 @@ conditions`.
 
 .. seealso::
    - :doc:`bank_synchronization`
-   - `Odoo Tutorials: Reconciliation models <https://www.odoo.com/slides/slide/reconciliation-models-1841?fullscreen=1>`_
+   - `Odoo Tutorials: Reconciliation models <https://www.odoo.com/slides/slide/reconciliation-models-6858>`_
 
 .. _models/type:
 
