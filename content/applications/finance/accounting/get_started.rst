@@ -183,7 +183,7 @@ Get started with Stripe and enable secure integrated credit and debit card payme
    * :doc:`bank/bank_synchronization`
    * :doc:`../fiscal_localizations`
    * `Odoo Tutorials: Accounting and Invoicing - Getting started [video]
-     <https://www.odoo.com/slides/slide/getting-started-1692>`_
+     <https://www.odoo.com/slides/slide/getting-started-7063>`_
 
 .. toctree::
    :titlesonly:
