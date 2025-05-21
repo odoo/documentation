@@ -107,7 +107,7 @@ portal to grant Odoo the **right to invoice** as an intermediary for your compan
    - :guilabel:`Name`:
 
      - :guilabel:`Production`: `ODOO S.A.`
-     - :guilabel:`Pre-production`: `OXXX_XXXXO S.A.`
+     - :guilabel:`Pre-production`: `OXXX_XXXXA.`
 
 #. Grant the following permissions by clicking the :icon:`fa-toggle-on` :guilabel:`(toggle-on)`
    icon:
