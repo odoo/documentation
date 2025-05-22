@@ -20,14 +20,13 @@ If the footswitch is a `supported device <https://www.odoo.com/page/iot-hardware
 need to take further action, since it'll be automatically detected when connected.
 
 .. image:: footswitch/footswitch-dropdown.png
-   :align: center
    :alt: Footswitch recognized on the IoT box.
 
 Link a footswitch to a work center in the Odoo Manufacturing app
 ================================================================
 
 To link a footswitch to an action, it first needs to be configured on a work center. Navigate to
-:menuselection:`Manufacturing app --> Configuration --> Work Centers`. From here, go to the desired
+:menuselection:`Manufacturing --> Configuration --> Work Centers`. From here, go to the desired
 :guilabel:`Work Center` in which the footswitch will be used, and add the device in the
 :guilabel:`IoT Triggers` tab, under the :guilabel:`Device` column, by selecting :guilabel:`Add a
 Line`. Doing so means the footswitch can be linked to an option in the :guilabel:`Action` column
@@ -35,18 +34,17 @@ drop-down, and optionally, a key can be added to trigger it. An example of an :g
 the *Manufacturing app* could be the :guilabel:`Validate` or :guilabel:`Mark as Done` buttons on a
 manufacturing work order.
 
-.. image:: footswitch/footswitch-example.png
-   :align: center
-   :alt: Footswitch trigger setup on the Odoo database.
-
 .. important::
-   It should be noted that the first listed trigger is chosen first. So, the order matters, and
-   these triggers can be dragged into any order. In the picture above, using the footswitch
-   automatically skips the part of the process that's currently being worked on.
+   Triggers are executed in the order they appear, with the first one taking priority. To reorder
+   the triggers, click the :icon:`oi-draggable` :guilabel:`(draggable)` icon to the left of each
+   trigger, and drag it to the desired position.
 
-.. note::
-   On the :guilabel:`Work Order` screen, a status graphic indicates whether the database is
-   correctly connected to the footswitch.
+.. tip::
+   - To identify the key assigned to each pedal, connect the footswitch to any computer and press
+     the pedals as if typing. Usually, the pedals are mapped by default to the keyboard keys `a`,
+     `b`, and `c`.
+   - The :guilabel:`Work Order` list includes a status indicator that shows whether the database is
+     successfully connected to the footswitch.
 
 .. seealso::
    :ref:`workcenter_iot`
