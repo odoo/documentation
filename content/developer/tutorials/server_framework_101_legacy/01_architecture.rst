@@ -1,8 +1,14 @@
-.. _tutorials/server_framework_101/01_architecture:
+.. _tutorials/server_framework_101_legacy/01_architecture:
 
 ================================
 Chapter 1: Architecture Overview
 ================================
+
+.. danger::
+   This tutorial is outdated. We recommend reading :doc:`../server_framework_101` instead.
+
+.. seealso::
+   :doc:`Homepage of the tutorial <../server_framework_101_legacy>`
 
 Multitier application
 =====================

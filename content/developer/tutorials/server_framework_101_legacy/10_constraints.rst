@@ -2,6 +2,12 @@
 Chapter 10: Constraints
 =======================
 
+.. danger::
+   This tutorial is outdated. We recommend reading :doc:`../server_framework_101` instead.
+
+.. seealso::
+   :doc:`Homepage of the tutorial <../server_framework_101_legacy>`
+
 The :doc:`previous chapter <09_actions>` introduced the ability to add
 some business logic to our model. We can now link buttons to business code, but how can we prevent
 users from entering incorrect data? For example, in our real estate module nothing prevents

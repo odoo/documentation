@@ -7,7 +7,7 @@ Build PDF Reports
    completed it and use the `estate` module you have built as a base for the exercises in this
    tutorial.
 
-We were previously :doc:`introduced to QWeb <server_framework_101/14_qwebintro>`
+We were previously :doc:`introduced to QWeb <server_framework_101_legacy/14_qwebintro>`
 where it was used to build a kanban view. Now we will expand on one of QWeb's
 other main uses: creating PDF reports. A common business requirement is the ability to create documents
 to send to customers and to use internally. These reports can be used to summarize and display
@@ -178,7 +178,7 @@ Its contents are all explained in :ref:`the documentation <reference/actions/rep
 An ``ir.actions.report`` is primarily used via the Print menu of a model's view. In the practical
 example, the ``binding_model_id`` specifies which model's views the report should show, and Odoo
 will auto-magically add it for you. Another common use case of the report action is to link it to
-a button as we learned in :doc:`server_framework_101/09_actions`. This is handy for reports
+a button as we learned in :doc:`server_framework_101_legacy/09_actions`. This is handy for reports
 that only make sense under specific conditions. For example, if we wanted to make a "Final Sale"
 report, then we can link it to a "Print Sale Info" button that appears in the form view only when
 the property is "Sold".

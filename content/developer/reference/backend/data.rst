@@ -76,6 +76,8 @@ following attributes:
 
     Requires an :term:`external id`, defaults to ``True``.
 
+.. _reference/data/field:
+
 ``field``
 ---------
 
@@ -202,6 +204,8 @@ Shortcuts
 Because some important structural models of Odoo are complex and involved,
 data files provide shorter alternatives to defining them using
 :ref:`record tags <reference/data/record>`:
+
+.. _reference/data/shortcuts/menuitem:
 
 ``menuitem``
 ------------

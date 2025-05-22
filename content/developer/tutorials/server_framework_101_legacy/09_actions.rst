@@ -2,6 +2,12 @@
 Chapter 9: Ready For Some Action?
 =================================
 
+.. danger::
+   This tutorial is outdated. We recommend reading :doc:`../server_framework_101` instead.
+
+.. seealso::
+   :doc:`Homepage of the tutorial <../server_framework_101_legacy>`
+
 So far we have mostly built our module by declaring fields and views. We just introduced business
 logic in the :doc:`previous chapter <08_compute_onchange>` thanks to
 computed fields and onchanges. In any real business scenario, we would want to link some business

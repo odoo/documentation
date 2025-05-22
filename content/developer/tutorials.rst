@@ -11,7 +11,6 @@ Tutorials
    tutorials/discover_js_framework
    tutorials/master_odoo_web_framework
    tutorials/define_module_data
-   tutorials/restrict_data_access
    tutorials/unit_tests
    tutorials/importable_modules
    tutorials/mixins
@@ -61,13 +60,6 @@ Expand your knowledge on the server framework
 
       Define master and demo data for an Odoo module, leveraging the strengths of the CSV and XML
       file formats to accommodate specific data requirements.
-
-   .. card:: Restrict access to data
-      :target: tutorials/restrict_data_access
-      :tag: Beginner
-
-      Implement security measures to restrict access to sensitive data with the help of groups,
-      access rights, and record rules.
 
    .. card:: Safeguard your code with unit tests
       :target: tutorials/unit_tests

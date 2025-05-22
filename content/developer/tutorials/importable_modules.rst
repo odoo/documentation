@@ -276,7 +276,7 @@ Security
 ========
 
 Security in data modules is exactly the same as for Python modules and can be found
-in :doc:`server_framework_101/04_securityintro`.
+in :doc:`server_framework_101_legacy/04_securityintro`.
 
 Refer to that tutorial for details.
 
@@ -296,8 +296,8 @@ Views
 Views are the UI components that allow users to interact with the data. They are defined
 in XML files and can be found in the :file:`views` directory of your module.
 
-Since views and actions are already defined in :doc:`server_framework_101/05_firstui` and
-:doc:`server_framework_101/06_basicviews`, we will not go into details here.
+Since views and actions are already defined in :doc:`server_framework_101_legacy/05_firstui` and
+:doc:`server_framework_101_legacy/06_basicviews`, we will not go into details here.
 
 .. exercise:: Add a basic UI to the `estate` module.
 
@@ -318,7 +318,7 @@ In a normal Python module, one could define new fields on a model to link it to 
 in a single line of code. In a data module, this is still possible but requires a bit more
 legwork since we can't use the same syntax as in Python.
 
-As in :doc:`server_framework_101/07_relations`, we will add some relations to our `estate`
+As in :doc:`server_framework_101_legacy/07_relations`, we will add some relations to our `estate`
 module. We will add links to:
 
 - the customer who bought the property

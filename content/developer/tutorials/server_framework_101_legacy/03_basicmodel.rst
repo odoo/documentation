@@ -2,6 +2,12 @@
 Chapter 3: Models And Basic Fields
 ==================================
 
+.. danger::
+   This tutorial is outdated. We recommend reading :doc:`../server_framework_101` instead.
+
+.. seealso::
+   :doc:`Homepage of the tutorial <../server_framework_101_legacy>`
+
 At the end of the :doc:`previous chapter <02_newapp>`, we were able to
 create an Odoo module. However, at this point it is still an empty shell which doesn't allow us to
 store any data. In our real estate module, we want to store the information related to the
