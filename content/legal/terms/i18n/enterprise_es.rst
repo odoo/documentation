@@ -13,7 +13,7 @@ Acuerdo de suscripción de Odoo Enterprise
 .. in some countries where Odoo has subsidiaries. Care must be taken to make the translation
 .. as accurate as possible in its intent and effects.
 
-.. note:: Version 10a - 2022-10-27
+.. note:: Version 10a.1 - 2025-01-08
 
 Al suscribirse a los servicios de Odoo Enterprise (en adelante “los Servicios”) proporcionados por
 Odoo SA y sus filiales (en adelante denominadas conjuntamente “Odoo SA”), relacionados con las
@@ -82,7 +82,7 @@ Versiones Cubiertas
 
 Plan de Suscripción
     Un Plan de Suscripción define un conjunto de Aplicaciones, funciones y soluciones de alojamiento
-    cubiertas por este Acuerdo, y se define por escrito al concluir este Acuerdo.
+    cubiertas por este Acuerdo, y se define por escrito al celebrar este Acuerdo.
 
 .. _enterprise_access_es:
 
@@ -283,7 +283,7 @@ plataforma de la nube de Odoo.
 
 Los cargos estándares de la suscripción de Odoo Enterprise y los Servicios están basados en la
 cantidad de Usuarios y el Plan de Suscripción utilizado por el Cliente, y se especifican por
-escrito al concluir el Acuerdo.
+escrito al celebrar este Acuerdo.
 
 Si durante el Plazo del Acuerdo, el Cliente tiene más Usuarios o utiliza funciones que requieren
 otro Plan de Suscripción diferente al especificado en el momento de la conclusión de este Acuerdo,
@@ -340,8 +340,8 @@ El Cliente se compromete a:
   presente Acuerdo, según las condiciones de pago especificadas en la
   factura correspondiente;
 
-- Notificar inmediatamente a Odoo SA cuando su número real de Usarios
-  exceda la cantidad especificada al momento de la conclusión del Acuerdo,
+- Notificar inmediatamente a Odoo SA cuando su número real de Usuarios
+  exceda la cantidad especificada al momento de la celebración del Acuerdo,
   y en este caso, pagar la tarifa adicional
   aplicable como se describe en la sección :ref:`charges_standard_es`;
 
