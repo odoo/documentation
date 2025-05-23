@@ -1,7 +1,7 @@
 .. _partnership_agreement_es:
 
 ===============================
-Odoo Partnership Agreement (ES)
+Acuerdo de Colaboración de Odoo
 ===============================
 
 .. only:: html
