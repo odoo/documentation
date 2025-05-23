@@ -4,6 +4,12 @@
 Changelog
 =========
 
+Odoo Online version 18.4
+========================
+
+- The `reinit` option is added to the CLI to reinitialize modules.
+  See `#206408 <https://github.com/odoo/odoo/pull/206408>`_.
+
 Odoo Online version 18.3
 ========================
 
