@@ -36,9 +36,7 @@ The list of applications shown is based on the applications installed on the dat
 After filling out all the necessary fields on the page, :icon:`fa-cloud-upload` :guilabel:`(Save
 manually)`. An invitation email is automatically sent to the user, using the email in the
 :guilabel:`Email Address` field. The user must click on the link included in the email to accept the
-invitation, and to create a database login. email is automatically sent to the user, using the email
-in the :guilabel:`Email Address` field. The user must click on the link included in the email to
-accept the invitation, and to create a database login.
+invitation, and to create a database login.
 
 .. image:: users/invitation-email.png
    :alt: View of a user's form with a notification that the invitation email has been sent in Odoo.
