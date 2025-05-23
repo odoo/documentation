@@ -258,7 +258,7 @@ Create your own template and add it to the list.
 Use the following code to add an option for your new custom mega menu on the Website Builder.
 
 .. code-block:: xml
-   :caption: ``/website_airproof/data/presets.xml``
+   :caption: ``/website_airproof/views/snippets/options.xml``
 
    <template id="snippet_options" inherit_id="website.snippet_options" name="Airproof - Mega Menu Options">
        <xpath expr="//*[@data-name='mega_menu_template_opt']/*" position="before">
