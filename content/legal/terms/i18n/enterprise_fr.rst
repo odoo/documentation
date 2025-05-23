@@ -1,8 +1,8 @@
 .. _enterprise_agreement_fr:
 
-===========================================
-Odoo Enterprise Subscription Agreement (FR)
-===========================================
+====================================
+Contrat d'Abonnement Odoo Enterprise
+====================================
 
 .. only:: html
 
