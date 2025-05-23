@@ -1,8 +1,8 @@
 .. _enterprise_agreement_pt:
 
-===========================================
-Odoo Enterprise Subscription Agreement (PT)
-===========================================
+=========================================
+Contrato de Assinatura do Odoo Enterprise
+=========================================
 
 .. only:: html
 

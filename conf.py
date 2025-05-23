@@ -327,29 +327,29 @@ latex_documents = [
      'terms_of_sale.tex', 'Odoo Terms of Sale', '', 'howto'),
 
     ('legal/terms/i18n/enterprise_tex_fr', 'odoo_enterprise_agreement_fr.tex',
-     'Odoo Enterprise Subscription Agreement (FR)', '', 'howto'),
+     "Contrat d'Abonnement Odoo Enterprise", '', 'howto'),
     ('legal/terms/i18n/partnership_tex_fr',
-     'odoo_partnership_agreement_fr.tex', 'Odoo Partnership Agreement (FR)', '', 'howto'),
+     'odoo_partnership_agreement_fr.tex', 'Contrat de Partenariat Odoo', '', 'howto'),
     ('legal/terms/i18n/terms_of_sale_fr', 'terms_of_sale_fr.tex',
      'Conditions Générales de Vente Odoo', '', 'howto'),
 
     ('legal/terms/i18n/enterprise_tex_nl', 'odoo_enterprise_agreement_nl.tex',
-     'Odoo Enterprise Subscription Agreement (NL)', '', 'howto'),
+     'Odoo Enterprise Abonnementsovereenkomst', '', 'howto'),
 
     ('legal/terms/i18n/enterprise_tex_de', 'odoo_enterprise_agreement_de.tex',
-     'Odoo Enterprise Subscription Agreement (DE)', '', 'howto'),
+     'Odoo Enterprise Abonnementsvertrag', '', 'howto'),
     ('legal/terms/i18n/terms_of_sale_de', 'terms_of_sale_de.tex',
      'Allgemeine Verkaufsbedingungen Odoo', '', 'howto'),
 
     ('legal/terms/i18n/enterprise_tex_es', 'odoo_enterprise_agreement_es.tex',
-     'Odoo Enterprise Subscription Agreement (ES)', '', 'howto'),
+     'Acuerdo de suscripción de Odoo Enterprise', '', 'howto'),
     ('legal/terms/i18n/partnership_tex_es',
-     'odoo_partnership_agreement_es.tex', 'Odoo Partnership Agreement (ES)', '', 'howto'),
+     'odoo_partnership_agreement_es.tex', 'Acuerdo de Colaboración de Odoo', '', 'howto'),
     ('legal/terms/i18n/terms_of_sale_es', 'terms_of_sale_es.tex',
      'Términos Generales de Venta Odoo', '', 'howto'),
 
     ('legal/terms/i18n/enterprise_tex_pt_BR', 'odoo_enterprise_agreement_pt_BR.tex',
-     'Odoo Enterprise Subscription Agreement (PT)', '', 'howto'),
+     'Contrato de Assinatura do Odoo Enterprise', '', 'howto'),
 ]
 
 # List of languages that have legal translations (excluding EN). The keys must be in
