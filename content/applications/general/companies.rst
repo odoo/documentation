@@ -41,7 +41,7 @@ Proceed to fill out the new company form that appears.
    Should a record not be archived, there is a risk of reactivating the archived company, and
    creating the upsell again.
 
-.. _companies/manage:
+.. _general/manage:
 
 Manage companies and records
 ============================
@@ -51,7 +51,6 @@ Go to :menuselection:`Settings app --> Companies section --> Manage Companies`. 
 company to edit it.
 
 .. image:: companies/company-info.png
-   :align: center
    :alt: Overview of a new company's form in Odoo.
 
 .. tip::
@@ -61,6 +60,8 @@ company to edit it.
 
    Companies also have a :guilabel:`Parent Company` set on the company form in :ref:`developer mode
    <developer-mode>`.
+
+.. _general/switch:
 
 Switch between companies
 ------------------------
@@ -75,8 +76,9 @@ environment that is in use. To switch environments, click on the desired company
    environment the database is in belongs to: *My Company (San Francisco)*.
 
    .. image:: companies/multi-companies-menu-dashboard.png
-      :align: center
       :alt: View of the companies menu through the main dashboard in Odoo.
+
+.. _general/share-records:
 
 Share records
 -------------
@@ -88,42 +90,114 @@ company only. To do so, on their forms, choose between:
 - *Adding a company*: the record is visible to users logged in to that specific company.
 
 .. image:: companies/product-form-company.png
-   :align: center
    :alt: View of a product's form emphasizing the company field in Odoo Sales.
 
 When an environment is selected from the top menu, along with an additional company, records are
 shared between the two companies.
 
+.. _general/branches:
+
 Branches
 ========
 
-Branches are available to add to a company. Branches can be added by navigating to
-:menuselection:`Settings app --> Companies section --> Manage Companies`. Then, select the desired
-company from the list. From the company detail form, open the :guilabel:`Branches` tab. To add a
-branch, click :guilabel:`Add a line`, and fill out the :guilabel:`Create Branches` pop-up form that
-appears.
+.. warning::
+   Adding a branch to a :doc:`company <../general/companies>` enables multi-company functions.
 
-.. image:: companies/add-branch.png
-   :align: center
-   :alt: Add a branch to a company with branches and add a line highlighted.
+The branch feature enables the creation of a hierarchical structure among different companies within
+a database, which helps manage a group with multiple subsidiaries or a company with various retail
+locations. Legally, a branch is a dependent extension of the main company, and Odoo follows the same
+logic.
+
+.. note::
+   For an independent subsidiary, it is preferable to create it as a new company.
+
+.. seealso::
+   - :doc:`Multi-company </applications/general/multi_company>`
+   - :ref:`Accounting branch management <accounting/branch-management>`
+
+.. _general/branches/configuration:
+
+Configuration
+-------------
+
+Each branch is linked to its parent company, but may contain different or specific information, such
+as its address or logo. A branch can be a parent company of branches at a lower level to create a
+multi-level architecture.
+
+.. note::
+   - The first company created should be the highest in the hierarchy.
+   - It is important to note that once a company has been created as a main company, it cannot be
+     defined as a branch afterwards. Errors in the record rules can lead to access rights issues. It
+     is therefore essential to be certain of the structure and hierarchy of each entity before
+     creating them as a company or branch.
+
+To create a branch, open the Settings app, navigate to the :guilabel:`Companies` section, and click
+:icon:`oi-arrow-right` :guilabel:`Manage Companies`. In the :guilabel:`Companies` list view, open
+the desired parent company form. Then, in the :guilabel:`Branches` tab, click :guilabel:`Add a line`
+and fill in the information in the :guilabel:`Create Branches` window.
+
+To create branches from a branch and create a multi-level architecture, click :guilabel:`Add a line`
+in the new branch's :guilabel:`Branches` tab.
+
+Branches can be accessed from the top-right corner of the main Odoo menu bar, where the active
+company is displayed. When the parent company is selected, all associated branches are automatically
+connected.
 
 .. tip::
-   Activate the :ref:`developer mode <developer-mode>` to set social media accounts and
-   company-specific email system parameters. See this documentation on
-   :doc:`../marketing/social_marketing` and :doc:`email_communication`.
+   - Activate the :ref:`developer mode <developer-mode>` to set social media accounts and
+     company-specific email system parameters. See this documentation on
+     :doc:`../marketing/social_marketing` and :doc:`email_communication`.
+   - A :guilabel:`Parent Company` field is available on the branch form in :ref:`developer mode
+     <developer-mode>`.
 
-   Branches also have a :guilabel:`Parent Company` set on the branch form in :ref:`developer mode
-   <developer-mode>`. Accounting and fiscal localizations for the branch are set on the
-   :guilabel:`Parent Company`. To do so, select the company from the *company selector* in the top
-   menu, and go to :menuselection:`Settings app --> Accounting --> Fiscal Localization`.
+.. _general/branches/access-rights:
 
-.. danger::
-   If the database is on the standard *Paid* pricing plan, adding a branch to a company triggers an
-   upsell. Since adding one or more branches turns the database into a multi-company setup, it
-   will need to switch to the *Custom* pricing plan. This does not affect databases on the *One-app
-   free* plan.
+Access rights
+-------------
 
-   For more information on pricing, see `Odoo's pricing <https://www.odoo.com/pricing-plan>`_ page.
+User :doc:`access </applications/general/users/access_rights>` can be restricted or granted to
+specific companies, including parent companies and branches, to limit visibility to records
+associated only with the companies users are authorized to access. As a result, records such as
+purchase orders, projects, and invoices are displayed based on the user’s profile and access rights.
+
+For example, certain users can be restricted to a specific shop, while an administrator with access
+to the parent company can manage all related shops and branches.
+
+To do so, open the Settings app, navigate to the :guilabel:`Users` section, and click
+:guilabel:`Manage Users`. Open the user form and add or remove companies in the :guilabel:`Allowed
+Companies` field.
+
+.. tip::
+   Alternatively, access can be set in :menuselection:`Settings --> Users & Companies -->
+   Users`.
+
+.. _general/branches/shared-records:
+
+Shared records
+--------------
+
+Each record strictly linked to a specific entity, whether a branch or parent company, is only
+accessible within that entity. For example, quotations, invoices, and vendor bills linked to a
+branch will only be visible when logged into that specific branch.
+
+In contrast, elements not tied to any particular entity, such as products or contacts, are shared
+across the parent company and all its branches.
+
+.. _general/branches/consolidated-view:
+
+Consolidated or branch view
+---------------------------
+
+Focusing on the parent company allows automatic connection to all related branches, providing a
+consolidated activity view across the entire database.
+
+Each branch operates in its own environment, where activities such as accounting, HR, inventory
+management, and production can be managed independently. By restricting user access, each branch can
+function like a standalone company.
+
+Except for :ref:`accounting <accounting/branch-management>` settings, inherited from the parent
+company, other configurations must be created or adjusted individually in each branch. This allows
+for branch-specific setups such as loyalty programs, price lists, or inventory locations.
 
 .. _general/employee-access:
 
@@ -143,7 +217,6 @@ Multiple companies can be set for :guilabel:`Allowed Companies`, and *only one* 
 :guilabel:`Default Company`.
 
 .. image:: companies/access-rights-multi-companies.png
-   :align: center
    :alt: View of an user form emphasizing the multi companies field under the access rights tabs
          in Odoo.
 
@@ -168,6 +241,8 @@ When creating a record, the company taken into account is:
 
 - The company set is the company linked to the document (the same as if a record is being edited)
 
+.. _general/document-format:
+
 Document format
 ===============
 
@@ -176,7 +251,6 @@ and, under the :menuselection:`Settings app --> Companies section`, click on :gu
 Document Layout` and edit the information as needed.
 
 .. image:: companies/document-layout.png
-   :align: center
    :alt: View of the settings page emphasizing the document layout field in Odoo.
 
 :guilabel:`Company Details` can be edited on the document layout. By default, this field is
@@ -223,7 +297,6 @@ options:
   configuration.
 
 .. image:: companies/inter-company-transactions.png
-   :align: center
    :alt: View of the settings page emphasizing the inter company transaction field in Odoo.
 
 .. note::
