@@ -4,6 +4,7 @@ Chapter 8: Inheritance
 
 tmp
 
+.. todo: inherit from base to add a is_property_address field on res.partner and a domain on address_id
 .. todo: inherit from mail.tread mixin and add a chatter
 .. todo: self.env._context
 .. todo: inherit from account.move

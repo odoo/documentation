@@ -48,10 +48,13 @@ multiple groups at once.
         :file:`security` directory.
       - For convenience, we reuse the `base.user_admin` record to assign the default admin user to
         the `sales_representative_group`.
+      - The `field` data operation accepts an `eval` attribute to evaluate Python expressions and
+        assign the result to the field.
       - The `groups_id` field is set using the `Command.link` method, like in business code.
 
 .. seealso::
-   Reference documentation on :ref:`user groups <reference/security/groups>`.
+   - Reference documentation on :ref:`user groups <reference/security/groups>`.
+   - Reference documentation on :doc:`data files <../../reference/backend/data>`.
 
 Now that we understand the purpose of groups, let's organize the users of our real estate app into
 meaningful roles.
@@ -300,8 +303,8 @@ Our real estate app needs more granular control over property records. Let's def
 access to property records.
 
 .. exercise::
-   - Ensure real estate agents can only update their assigned properties or properties that are not
-     assigned to any agent. They should still be able to read all properties.
+   - Ensure real estate agents can only update the properties assigned to them or not assigned to
+     any agent. They should still be able to read all properties.
    - Allow real estate managers to access all property records, regardless of assignment.
 
    .. tip::
@@ -366,9 +369,10 @@ multiple companies. This is implemented through several key mechanisms:
 - **Company-dependent fields**: The `company_dependent=True` attribute set on a field creates a
   separate value for each company. The values are stored in a JSON object in the database and the
   right value is automatically retrieved based on the current company.
-- **Company context**: The `with_company(company)` model method changes the company context when
-  accessing data like company-dependent fields, allowing to retrieve values and trigger workflows
-  from a specific company's perspective.
+- **Company context**: The `with_company(company)` model method returns a new recordset with the
+  current company changed to `company` in the environment. This is useful when accessing data like
+  company-dependent fields, allowing to retrieve values and trigger workflows from a specific
+  company's perspective.
 - **Context-aware dependencies**: The `@api.depends_context('company')` decorator ensures that
   computed fields are computed depending on the current company (`self.env.company`).
 - **Company consistency checks**: The `check_company=True` attribute on a relational field ensures
@@ -451,7 +455,7 @@ multiple companies. This is implemented through several key mechanisms:
         product.
       - The `_compute_margin` method is decorated with `@api.depends_context('company')` to trigger
         recomputation when switching companies. Although not strictly necessary in this case, it
-        also uses `with_company` to ensure retrieving cost values from te correct company.
+        also uses `with_company` to ensure retrieving cost values from the correct company.
       - The `_check_company_auto=True` attribute is set on both models to ensure that relational
         fields with the `check_company=True` attribute are properly checked. This prevents linking a
         product to a category belonging to a different company.
@@ -609,7 +613,7 @@ Let's adapt our real estate app to support multiple agencies while keeping their
 
    .. code-block:: python
       :caption: `models/real_estate_property_type.py`
-      :emphasize-lines: 1,6,9-31
+      :emphasize-lines: 1,6,9-30
 
       from odoo import api, fields, models
 
@@ -632,7 +636,7 @@ Let's adapt our real estate app to support multiple agencies while keeping their
 
           # In practice, this computation will not work in all cases. It is merely given as an exercise to
           # understand the concept of multi-company, but it should not be used as-is in production.
-          @api.depends('property_ids.selling_price', 'company_id')
+          @api.depends('property_ids.selling_price')
           @api.depends_context('company')
           def _compute_average_price(self):
               for type in self:
@@ -722,18 +726,138 @@ Let's adapt our real estate app to support multiple agencies while keeping their
 Bypass security checks
 ======================
 
-tmp
+Sometimes, an operation must go through even if the user does not have the right permissions. This
+is often the case for automated workflows or server actions that need to work on records regardless
+of the current user's permissions, or when performing operations on behalf of another user.
 
-.. todo: sudo
+To make these scenarios possible, the server framework provides the **sudo mode**, available through
+the `sudo` model method. This method returns a new version of the recordset that behaves as if it
+was accessed by the superuser. It bypasses all access rights and record rules, elevating the user's
+privileges in the scope of the operation.
 
-Let's apply security overrides in our real estate app to safely bypass restrictive checks when
-necessary.
+.. important::
+   Always use `sudo` with caution. Since it bypasses all security checks, it's your responsibility
+   to ensure the operation is safe. You should verify that the user is authorized through other
+   means, such as custom checks (API keys, authentication tokens, etc.) or by checking that the
+   operation is intended.
+
+The following model methods can be used to verify that the current user has the right to perform the
+given operation on a recordset:
+
+- :meth:`has_access(operation: str) <odoo.models.Model.has_access>`: Return `True` if the user has
+  the right to perform the operation on the recordset, `False` otherwise.
+- :meth:`check_access(operation: str) <odoo.models.Model.check_access>`: Raise an
+  :class:`AccessError <odoo.exceptions.AccessError>` if the user does not have the right to perform
+  the operation on the recordset.
+
+.. example::
+   In the following example, a mechanism is added to automatically archive a product category when
+   all its products are archived.
+
+   .. code-block:: python
+
+      def write(self, vals):
+          res = super().write(vals)
+          for product in self:
+              if not product.active and vals.get('active') is False:  # The product has been archived.
+                  if not product.category_id.product_ids:  # All the category's products are archived.
+                      # Archive the category in sudo mode to allow writing on the category.
+                      product.category_id.sudo().active = False
+          return res
+
+   .. note::
+      - Just like in views, inactive record are automatically excluded from searches by default.
+      - It is both necessary and safe to archive product categories in sudo mode, as the user might
+        have the right to write on products but not on product categories, while we want to archive
+        categories regardless of the user's permissions.
+      - A comment explaining the reason for using `sudo` is strongly recommended.
+      - Another good practice is to suffix variable names with `_sudo` when they hold a sudoed
+        recordset. As those recordsets remain in sudo mode during their lifetime, it's important to
+        be aware of their elevated privileges when performing further operations on them.
+
+.. seealso::
+   Reference documentation on the :meth:`sudo <odoo.models.Model.sudo>` method.
+
+You might have noticed that access errors are raised when you attempt to modify the street or
+address of a property while logged in as a non-admin, real estate agent. This is because we didn't
+explicitly grant real estate agents write access to the `res.partner` model. Let's see what we can
+do about that.
 
 .. exercise::
-   tmp
+   Rather than giving real estate agents write access to the `res.partner` model, which would allow
+   them to modify *any* partner, identify the specific flows that require partner modifications
+   regardless of the user's permissions, and add security bypasses where necessary.
 
-.. todo: write on street field (res.partner)
-.. todo: sudo read setting set on company
+   .. tip::
+      The `create` and `write` parent methods already perform access checks. Therefore, it's not
+      necessary to call `has_access` or `check_access` before or after calling them.
+
+.. spoiler:: Solution
+
+   .. code-block:: xml
+      :caption: `data/real_estate_property_data.xml`
+      :emphasize-lines: 3-4,9-10,15-16
+
+      <record id="real_estate.country_house" model="real.estate.property">
+          [...]
+          <!-- Clear to prevent the root user from being assigned. -->
+          <field name="salesperson_id" eval="None"/>
+      </record>
+
+      <record id="real_estate.loft" model="real.estate.property">
+          [...]
+          <!-- Clear to prevent the root user from being assigned. -->
+          <field name="salesperson_id" eval="None"/>
+      </record>
+
+      <record id="real_estate.mixed_use_commercial" model="real.estate.property">
+          [...]
+          <!-- Clear to prevent the root user from being assigned. -->
+          <field name="salesperson_id" eval="None"/>
+      </record>
+
+   .. code-block:: python
+      :caption: `models/real_estate_property.py`
+      :emphasize-lines: 4-6,9,11-16,20-25,27-28,32,34-36
+
+      @api.model_create_multi
+      def create(self, vals_list):
+          for vals in vals_list:
+              # Extract the street from the vals to set it directly on the address partner to avoid
+              # infinite recursion due to the street field being a stored related field.
+              street = vals.pop('street', None)
+              if not vals.get('address_id'):  # No address is provided at creation time.
+                  # Create and assign a new one based on the property name.
+                  address_sudo = self.env['res.partner'].sudo().create({
+                      'name': vals.get('name'),
+                      'street': street,
+                  })  # In sudo mode to allow real estate agents to create an address.
+                  vals['address_id'] = address_sudo.id
+              elif street:  # Both a street and the address partner are specified.
+                  address = self.env['res.partner'].browse(vals['address_id'])
+                  address.sudo().street = street
+          return super().create(vals_list)
+
+      def write(self, vals):
+          # Extract the street from the vals to set it directly on the address partner in sudo mode to
+          # allow real estate agents to update the address, and to avoid infinite recursion due to the
+          # street field being a stored related field.
+          if street := vals.pop('street', None):
+              self.address_id.sudo().street = street
+
+          res = super().write(vals)
+
+          if street:  # The street has been updated.
+              for property in self:
+                  if not property.address_id:  # The property has no address record.
+                      # Create and assign a new one based on the property name and the street.
+                      address_sudo = self.env['res.partner'].sudo().create({
+                          'name': property.name,
+                          'street': street,
+                      })  # In sudo mode to allow real estate agents to create an address.
+                      property.address_id = address_sudo.id
+          return res
+
 
 ----
 
