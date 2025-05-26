@@ -23,7 +23,6 @@ Report
     .. autofield:: filter_period_comparison
     .. autofield:: filter_growth_comparison
     .. autofield:: filter_journals
-    .. autofield:: filter_analytic
     .. autofield:: filter_hierarchy
     .. autofield:: filter_account_type
     .. autofield:: filter_partner
