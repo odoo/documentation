@@ -220,7 +220,7 @@ The blue banner located at the top of the quotation template preview can be used
 :icon:`fa-arrow-right` :guilabel:`Back to edit mode`. When clicked, Odoo returns to the quotation
 form in the back-end of the *Sales* application.
 
-Mass cancel quotations/sales orders
+Mass cancel quotations/sales orders **This section should be in another article, not in quotation templates; it is not related**
 ===================================
 
 Cancel multiple quotations (or sales orders) by navigating to the :menuselection:`Sales app -->
