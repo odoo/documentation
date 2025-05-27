@@ -114,7 +114,8 @@ Links
 
 Links are used to connect different pages and resources, guiding visitors and improving navigation.
 To add a link, type `/link`, then, in the pop-up that opens, enter the link's :guilabel:`Label` and
-add the :guilabel:`URL or Email`. Type `/` to search for a page and `#` to link to an anchor.
+add the :guilabel:`URL or Email`. Type `/` to search for a page and `#` to link to an :ref:`anchor
+<website/building_blocks/anchor>`.
 
 .. tip::
    By default, the :guilabel:`Style` field is set to :guilabel:`Link`. Select a different style to
