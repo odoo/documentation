@@ -257,6 +257,27 @@ and select the relevant media. In the :guilabel:`Customize` tab, use the followi
 .. note::
    Images must be in PNG or JPG format and with a minimum size of 1024x1024 to trigger the zoom.
 
+.. _ecommerce/products/products-block:
+
+Products block
+==============
+
+The :guilabel:`Products` :doc:`building block <../website/web_design/building_blocks>` is used to
+display a selection of products sold on your website.
+
+.. image:: products/products-block.png
+   :alt: Example of a products block
+
+By default, the block displays the :guilabel:`Newest Products`. To change which products are shown,
+go to the :guilabel:`Customize` tab's :guilabel:`Products` section and set the :guilabel:`Filter`
+field to :guilabel:`Recently Sold Products` or :guilabel:`Recently Viewed Products`.
+
+In addition, it is possible to display products from a specific category only using the
+:guilabel:`Category` field.
+
+You can also filter products by :guilabel:`Tags`, include :guilabel:`Variants`, and adjust the
+display by selecting a different :guilabel:`Template`.
+
 .. _ecommerce/products/product-variants:
 
 Product variants
