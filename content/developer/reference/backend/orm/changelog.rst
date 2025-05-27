@@ -4,6 +4,12 @@
 Changelog
 =========
 
+Odoo Online version 18.4
+========================
+
+- `translate=True` for `sanitize=True` html fields won't be automatically set to `translate=html_translate`
+  See `#208745 <https://github.com/odoo/odoo/pull/208745>`_.
+
 Odoo Online version 18.3
 ========================
 
