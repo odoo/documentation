@@ -2,6 +2,12 @@
 Chapter 7: Relations Between Models
 ===================================
 
+.. danger::
+   This tutorial is outdated. We recommend reading :doc:`../server_framework_101` instead.
+
+.. seealso::
+   :doc:`Homepage of the tutorial <../server_framework_101_legacy>`
+
 The :doc:`previous chapter <06_basicviews>` covered the creation of custom
 views for a model containing basic fields. However, in any real business scenario we need more than
 one model. Moreover, links between models are necessary. One can easily imagine one model containing

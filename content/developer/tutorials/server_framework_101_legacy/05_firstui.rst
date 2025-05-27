@@ -2,6 +2,12 @@
 Chapter 5: Finally, Some UI To Play With
 ========================================
 
+.. danger::
+   This tutorial is outdated. We recommend reading :doc:`../server_framework_101` instead.
+
+.. seealso::
+   :doc:`Homepage of the tutorial <../server_framework_101_legacy>`
+
 Now that we've created our new :doc:`model <03_basicmodel>` and its
 corresponding :doc:`access rights <04_securityintro>`, it is time to
 interact with the user interface.

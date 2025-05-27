@@ -191,7 +191,7 @@ When the data to create is more complex it can be useful, or even necessary, to 
 Data Extension
 ~~~~~~~~~~~~~~
 
-During the Core Training, we saw in the :doc:`server_framework_101/12_inheritance` chapter we
+During the Core Training, we saw in the :doc:`server_framework_101_legacy/12_inheritance` chapter we
 could inherit (extend) an existing view. This was a special case of data extension: any data can be
 extended in a module.
 

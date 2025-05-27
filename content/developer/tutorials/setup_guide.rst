@@ -10,8 +10,10 @@ Odoo community and Odoo employees alike, the preferred way is to perform a sourc
    Follow the :ref:`contributing/development/setup` section of the contributing guide to prepare
    your environment for pushing local changes to the Odoo repositories.
 
-Adapt the environment for the tutorials
-=======================================
+.. _tutorials/setup_guide/adapt_env:
+
+Adapt the environment to the tutorials
+======================================
 
 By now, you should have downloaded the source code into two local repositories, one for `odoo/odoo`
 and one for `odoo/enterprise`. These repositories are set up to push changes to pre-defined
@@ -29,10 +31,11 @@ will be part of the `addons-path` that references all directories containing Odo
 
    .. code-block:: console
 
-      $ git clone git@github.com:odoo/tutorials.git
+      $ git clone --branch {BRANCH} --single-branch git@github.com:odoo/tutorials.git
 
 #. Configure your fork and Git to push changes to your fork rather than to the main codebase. If you
-   work at Odoo, configure Git to push changes to the shared fork created on the account **odoo-dev**.
+   work at Odoo, configure Git to push changes to the shared fork created on the account
+   **odoo-dev**.
 
    .. tabs::
 
@@ -41,8 +44,8 @@ will be part of the `addons-path` that references all directories containing Odo
          #. Visit `github.com/odoo/tutorials <https://github.com/odoo/tutorials>`_ and click the
             :guilabel:`Fork` button to create a fork of the repository on your account.
 
-         #. In the command below, replace `<your_github_account>` with the name of the GitHub account
-            on which you created the fork.
+         #. In the command below, replace `<your_github_account>` with the name of the GitHub
+            account on which you created the fork.
 
             .. code-block:: console
 
@@ -58,57 +61,67 @@ will be part of the `addons-path` that references all directories containing Odo
             $ git remote set-url --push origin you_should_not_push_on_this_repository
 
 That's it! Your environment is now prepared to run Odoo from the sources, and you have successfully
-created a repository to serve as an addons directory. This will allow you to push your work to GitHub.
+created a local repository to serve as an addons directory. This will allow you to push your work to
+GitHub.
 
 .. important::
-
    **For Odoo employees only:**
 
-   #. Make sure to read very carefully :ref:`contributing/development/first-contribution`. In particular,
-      your branch name must follow our conventions.
+   #. Make sure to read very carefully :ref:`contributing/development/first-contribution`. In
+      particular:
 
-   #. Once you have pushed your first change to the shared fork on **odoo-dev**, create a
-      :abbr:`PR (Pull Request)`. Please put your quadrigram in the PR title (e.g., "abcd - Technical
-      Training").
+      - Your code must follow the :doc:`guidelines </contributing/development/coding_guidelines>`.
+      - Your commit messages must be :doc:`correctly written
+        </contributing/development/git_guidelines>`.
+      - Your branch name must follow our conventions.
 
-      This will enable you to share your upcoming work and receive feedback from your coaches. To ensure
-      a continuous feedback loop, we recommend pushing a new commit as soon as you complete a chapter
-      of the tutorial. Note that the PR is automatically updated with commits you push to **odoo-dev**,
-      you don't need to open multiple PRs.
-
+   #. Once you have pushed your first change to the shared fork on **odoo-dev**, create a **draft**
+      :abbr:`PR (Pull Request)` with your quadrigram in the title. This will enable you to share
+      your upcoming work and receive feedback from your coaches. To ensure a continuous feedback
+      loop, push a new commit as soon as you complete an exercise of a tutorial.
    #. At Odoo we use `Runbot <https://runbot.odoo.com>`_ extensively for our :abbr:`CI (Continuous
       Integration)` tests. When you push your changes to **odoo-dev**, Runbot creates a new build
-      and test your code. Once logged in, you will be able to see your branches `Tutorials project
-      <https://runbot.odoo.com/runbot/tutorials-12>`_.
+      and tests your code. Once logged in, you will be able to see your branch on the `Tutorials
+      project <https://runbot.odoo.com/runbot/tutorials-12>`_.
 
 .. note::
-
    The specific location of the repositories on your file system is not crucial. However, for the
    sake of simplicity, we will assume that you have cloned all the repositories under the same
    directory. If this is not the case, make sure to adjust the following commands accordingly,
    providing the appropriate relative path from the `odoo/odoo` repository to the
    `odoo/tutorials` repository.
 
-Run the server
-==============
+.. _tutorials/setup_guide/start_server:
 
-Launch with `odoo-bin`
-----------------------
+Start the server
+================
 
 Once all dependencies are set up, Odoo can be launched by running `odoo-bin`, the command-line
-interface of the server.
+interface of the server, and passing the comma-separated list of repositories with the `addons-path`
+argument. If you have access to the `odoo/enterprise` repository, add it to the `addons-path`.
 
-.. code-block:: console
+.. tabs::
 
-    $ cd $HOME/src/odoo/
-    $ ./odoo-bin --addons-path="addons/,../enterprise/,../tutorials" -d rd-demo
+   .. tab:: Run the community edition
+
+      .. code-block:: console
+
+         $ cd $HOME/src/odoo/
+         $ ./odoo-bin --addons-path="addons/,../tutorials" -d tutorials
+
+   .. tab:: Run the enterprise edition
+
+      .. code-block:: console
+
+         $ cd $HOME/src/odoo/
+         $ ./odoo-bin --addons-path="addons/,../enterprise/,../tutorials" -d tutorials
 
 There are multiple :ref:`command-line arguments <reference/cmdline/server>` that you can use to run
 the server. In this training you will only need some of them.
 
 .. option:: -d <database>
 
-   The database that is going to be used.
+   The database to use.
 
 .. option:: --addons-path <directories>
 
@@ -117,66 +130,59 @@ the server. In this training you will only need some of them.
 
 .. option:: --limit-time-cpu <limit>
 
-   Prevent the worker from using more than <limit> CPU seconds for each request.
+   Prevent the worker from using more than `<limit>` CPU seconds for each request.
 
 .. option:: --limit-time-real <limit>
 
-   Prevent the worker from taking longer than <limit> seconds to process a request.
+   Prevent the worker from taking longer than `<limit>` seconds to process a request.
 
 .. tip::
    - The :option:`--limit-time-cpu` and :option:`--limit-time-real` arguments can be used to prevent
      the worker from being killed when debugging the source code.
-   - | You may face an error similar to `AttributeError: module '<MODULE_NAME>' has no attribute
-       '<$ATTRIBUTE'>`. In this case, you may need to re-install the module with :command:`$ pip
-       install --upgrade --force-reinstall <MODULE_NAME>`.
-     | If this error occurs with more than one module, you may need to re-install all the
-       requirements with :command:`$ pip install --upgrade --force-reinstall -r requirements.txt`.
-     | You can also clear the python cache to solve the issue:
-
-       .. code-block:: console
-
-          $ cd $HOME/.local/lib/python3.8/site-packages/
-          $ find -name '*.pyc' -type f -delete
-
    - Other commonly used arguments are:
 
      - :option:`-i <odoo-bin --init>`: Install some modules before running the server
-       (comma-separated list). This is equivalent to going to :guilabel:`Apps` in the user interface,
+       (comma-separated list). This is equivalent to going to :guilabel:`Apps` in the user interface
        and installing the module from there.
      - :option:`-u <odoo-bin --update>`: Update some modules before running the server
-       (comma-separated list). This is equivalent to going to :guilabel:`Apps` in the user interface,
-       selecting a module, and upgrading it from there.
+       (comma-separated list). This is equivalent to going to :guilabel:`Apps` in the user interface
+       and updating the module from there.
+
+.. _tutorials/setup_guide/log_in:
 
 Log in to Odoo
---------------
+==============
 
-Open http://localhost:8069/ on your browser. We recommend using `Chrome
+Open http://localhost:8069/ in your browser. We recommend using `Chrome
 <https://www.google.com/intl/en/chrome/>`_, `Firefox <https://www.mozilla.org/firefox/new/>`_, or
 any other browser with development tools.
 
 To log in as the administrator user, use the following credentials:
 
-- email: `admin`
-- password: `admin`
+- Email: `admin`
+- Password: `admin`
 
-Enable the developer mode
-=========================
-
-The developer or debug mode is useful for training as it gives access to additional (advanced)
-tools. :ref:`Enable the developer mode <developer-mode>` now. Choose the method that you prefer;
-they are all equivalent.
+.. _tutorials/setup_guide/extra_tools:
 
 Extra tools
 ===========
+
+.. _tutorials/setup_guide/extra_tools/dev_mode:
+
+Developer mode
+--------------
+
+:ref:`Enable the developer mode <developer-mode>` to get access to developer-oriented tools in the
+interface.
+
+.. _tutorials/setup_guide/extra_tools/git_commands:
 
 Useful Git commands
 -------------------
 
 Here are some useful Git commands for your day-to-day work.
 
-- | Switch branches:
-  | When you switch branches, both repositories (odoo and enterprise) must be synchronized, i.e.
-    both need to be in the same branch.
+- Switch branches:
 
   .. code-block:: console
 
@@ -185,6 +191,10 @@ Here are some useful Git commands for your day-to-day work.
 
      $ cd $HOME/src/enterprise
      $ git switch {BRANCH}
+
+  .. important::
+     When you switch branches, both repositories (odoo and enterprise) must be synchronized, i.e.
+     both need to be in the same branch.
 
 - Fetch and rebase:
 
@@ -198,57 +208,53 @@ Here are some useful Git commands for your day-to-day work.
      $ git fetch --all --prune
      $ git rebase --autostash enterprise/{BRANCH}
 
-Code Editor
+.. _tutorials/setup_guide/extra_tools/code_editor:
+
+Code editor
 -----------
 
-If you are working at Odoo, many of your colleagues are using `VSCode
+You are free to choose your code preferred editor. Most Odoo developers use `VSCode
 <https://code.visualstudio.com>`_, `VSCodium <https://vscodium.com>`_ (the open source equivalent),
 `PyCharm <https://www.jetbrains.com/pycharm/download/#section=linux>`_, or `Sublime Text
-<https://www.sublimetext.com>`_. However, you are free to choose your preferred editor.
+<https://www.sublimetext.com>`_.
 
 It is important to configure your linters correctly. Using a linter helps you by showing syntax and
-semantic warnings or errors. Odoo source code tries to respect Python's and JavaScript's standards,
-but some of them can be ignored.
+semantic warnings or errors. For JavaScript, we use ESLint and you can find a `configuration file
+example here <https://github.com/odoo/odoo/wiki/Javascript-coding-guidelines#use-a-linter>`_.
 
-For Python, we use PEP8 with these options ignored:
-
-- `E501`: line too long
-- `E301`: expected 1 blank line, found 0
-- `E302`: expected 2 blank lines, found 1
-
-For JavaScript, we use ESLint and you can find a `configuration file example here
-<https://github.com/odoo/odoo/wiki/Javascript-coding-guidelines#use-a-linter>`_.
+.. _tutorials/setup_guide/extra_tools/psql_tools:
 
 Administrator tools for PostgreSQL
 ----------------------------------
 
-You can manage your PostgreSQL databases using the command line as demonstrated earlier or using
-a GUI application such as `pgAdmin <https://www.pgadmin.org/download/pgadmin-4-apt/>`_ or `DBeaver
-<https://dbeaver.io/>`_.
+You can manage your PostgreSQL databases using the command line or a GUI application such as
+`pgAdmin <https://www.pgadmin.org/download/pgadmin-4-apt/>`_ or `DBeaver <https://dbeaver.io/>`_.
 
-To connect the GUI application to your database we recommend you connect using the Unix socket.
+We recommend you connect the GUI application to your database using the Unix socket.
 
 - Host name/address: `/var/run/postgresql`
 - Port: `5432`
 - Username: `$USER`
 
-Python Debugging
+.. _tutorials/setup_guide/extra_tools/python_debugging:
+
+Python debugging
 ----------------
 
-When facing a bug or trying to understand how the code works, simply printing things out can go a
-long way, but a proper debugger can save a lot of time.
+When facing a bug or trying to understand how the code works, simply printing things out can help a
+lot, but a proper debugger can save a lot of time.
 
-You can use a classic Python library debugger (`pdb <https://docs.python.org/3/library/pdb.html>`_,
-`pudb <https://pypi.org/project/pudb/>`_ or `ipdb <https://pypi.org/project/ipdb/>`_), or you can
-use your editor's debugger.
+You can use your editor's debugger, or a classic Python library debugger (`pdb
+<https://docs.python.org/3/library/pdb.html>`_, `pudb <https://pypi.org/project/pudb/>`_, or `ipdb
+<https://pypi.org/project/ipdb/>`_).
 
-In the following example we use ipdb, but the process is similar with other libraries.
+In the following example, we use ipdb, but the process is similar to other libraries.
 
 #. Install the library:
 
    .. code-block:: console
 
-      pip install ipdb
+      $ pip install ipdb
 
 #. Place a trigger (breakpoint):
 

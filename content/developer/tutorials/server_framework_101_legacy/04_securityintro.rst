@@ -2,12 +2,18 @@
 Chapter 4: Security - A Brief Introduction
 ==========================================
 
+.. danger::
+   This tutorial is outdated. We recommend reading :doc:`../server_framework_101` instead.
+
+.. seealso::
+   :doc:`Homepage of the tutorial <../server_framework_101_legacy>`
+
 In the :doc:`previous chapter <03_basicmodel>`, we created our first table
 intended to store business data. In a business application such as Odoo, one of the first questions
 to consider is who\ [#who]_ can access the data. Odoo provides a security mechanism to allow access
 to the data for specific groups of users.
 
-The topic of security is covered in more detail in :doc:`../restrict_data_access`. This chapter aims
+The topic of security is covered in more detail in :doc:`restrict_data_access`. This chapter aims
 to cover the minimum required for our new module.
 
 Data Files (CSV)

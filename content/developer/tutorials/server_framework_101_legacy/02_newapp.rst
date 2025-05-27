@@ -2,6 +2,12 @@
 Chapter 2: A New Application
 ============================
 
+.. danger::
+   This tutorial is outdated. We recommend reading :doc:`../server_framework_101` instead.
+
+.. seealso::
+   :doc:`Homepage of the tutorial <../server_framework_101_legacy>`
+
 The purpose of this chapter is to lay the foundation for the creation of a completely new Odoo module.
 We will start from scratch with the minimum needed to have our module recognized by Odoo.
 In the upcoming chapters, we will progressively add features to build a realistic business case.
