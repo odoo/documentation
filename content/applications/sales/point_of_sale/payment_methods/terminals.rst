@@ -22,6 +22,7 @@ Then, follow the corresponding documentation to configure your device:
 
 - :doc:`Adyen configuration <terminals/adyen>`
 - :doc:`Ingenico configuration <terminals/ingenico>`
+- :doc:`Kpay configuration <terminals/kpay>`
 - :doc:`Mercado Pago configuration <terminals/mercado_pago>`
 - :doc:`Razorpay configuration <terminals/razorpay>`
 - :doc:`SIX configuration <terminals/six>`
@@ -52,6 +53,7 @@ Successful`.
 
    terminals/adyen
    terminals/ingenico
+   terminals/kpay
    terminals/mercado_pago
    terminals/razorpay
    terminals/six
