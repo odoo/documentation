@@ -109,17 +109,17 @@ Creating tasks from a website form
 If you have the Website app installed in your database, you can configure any form on your
 website to trigger the creation of tasks in a project.
 
-#. Go to the website page where you wish to add the the form and
-   :ref:`add the Form building block <websites/website/web_design/building_blocks>`.
+#. Go to the website page where you wish to add the form and :doc:`add the Form building block
+   </applications/websites/website/web_design/building_blocks>`.
 #. In the website editor, edit the following fields:
 
    - :guilabel:`Action`: select :guilabel:`Create a Task`.
    - :guilabel:`Project`: choose the project that you want the new tasks to be created in.
 
-#. :ref:`Customize the form <website/dynamic_content/form>`.
+#. :ref:`Customize the form <website/building_blocks/form>`.
 
 When the form is submitted, it automatically creates a project task. The task's content is defined
 by the form's corresponding fields.
 
 .. seealso::
-   :doc:`Dynamic website content <../../../websites/website/web_design/building_blocks/dynamic_content>`
+   :ref:`Website forms <website/building_blocks/form>`
