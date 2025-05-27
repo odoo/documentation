@@ -28,6 +28,11 @@ These guidelines should be applied to every new module and to all new developmen
 Module structure
 ================
 
+.. warning::
+
+    For modules developed by the community, it is strongly recommended to name
+    your module with a prefix like your company name.
+
 Directories
 -----------
 
