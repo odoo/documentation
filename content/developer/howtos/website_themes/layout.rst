@@ -412,7 +412,8 @@ Custom
 Create your own template and add it to the list.
 
 .. important::
-   Don't forget that you may need to disable the active header template first.
+   Don't forget that you may need to disable the active header template first before enabling the
+   custom one.
 
 **Option**
 
@@ -460,20 +461,13 @@ variables.
 .. code-block:: xml
    :caption: ``/website_airproof/views/website_templates.xml``
 
-   <record id="header" model="ir.ui.view">
-      <field name="name">Airproof Header</field>
-      <field name="type">qweb</field>
-      <field name="key">website_airproof.header</field>
-      <field name="inherit_id" ref="website.layout"/>
-      <field name="mode">extension</field>
-      <field name="arch" type="xml">
-         <xpath expr="//header//nav" position="replace">
-            <!-- Static Content -->
-            <!-- Components -->
-            <!-- Editable areas -->
-         </xpath>
-      </field>
-   </record>
+   <template id="header" inherit_id="website.layout" name="Airproof - Header" active="False">
+      <xpath expr="//header//nav" position="replace">
+         <!-- Static Content -->
+         <!-- Components -->
+         <!-- Editable areas -->
+      </xpath>
+   </template>
 
 .. _website_themes/layout/header/components :
 
@@ -659,19 +653,12 @@ active footer template first.
 .. code-block:: xml
     :caption: ``/website_airproof/views/website_templates.xml``
 
-    <record id="footer" model="ir.ui.view">
-       <field name="name">Airproof Footer</field>
-       <field name="type">qweb</field>
-       <field name="key">website_airproof.footer</field>
-       <field name="inherit_id" ref="website.layout"/>
-       <field name="mode">extension</field>
-       <field name="arch" type="xml">
-          <xpath expr="//div[@id='footer']" position="replace">
-             <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer">
-                <!-- Content -->
-             </div>
-          </xpath>
-       </field>
+    <template id="footer" inherit_id="website.layout" name="Airproof - Footer" active="False">
+      <xpath expr="//div[@id='footer']" position="replace">
+         <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer">
+            <!-- Content -->
+         </div>
+      </xpath>
     </record>
 
 .. _website_themes/layout/copyright :
