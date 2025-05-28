@@ -151,7 +151,7 @@ Time-based rules are used specifically with subscription products. Be sure to ch
 :doc:`Subscriptions </applications/sales/subscriptions>` documentation for more information.
 
 In the :guilabel:`Recurring Prices` tab, pricelists are configured with the same options as in the
-:guilabel:`Price Rules` tab, with additional columns for :guilabel:`Product Variants` add
+:guilabel:`Price Rules` tab, with additional columns for :guilabel:`Product Variants` and
 :guilabel:`Recurring Plan`.
 
 :guilabel:`Product Variants` are configured under products that have one or more values, such as
@@ -212,9 +212,9 @@ The :guilabel:`Selectable` can be enabled to allow the customer to choose this p
 Finally, promotional and loyalty codes can be added to the :guilabel:`E-commerce Promotional Code`
 field.
 
-Tick the :guilabel:`Selectable` checkbox to have this pricelist as a selectable option for
-customers to choose as they shop. If the :guilabel:`Selectable` box is left unticked, customers
-**cannot** select this pricelist for themselves.
+Tick the :guilabel:`Selectable` checkbox to have this pricelist as a selectable option for customers
+to choose as they shop. If the :guilabel:`Selectable` box is left unticked, customers **cannot**
+select this pricelist for themselves.
 
 Lastly, there is the option to add an :guilabel:`E-commerce Promotional Code`. To add a code, type
 in the desired promo code that, when entered during the checkout process, applies the pricelist to
