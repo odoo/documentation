@@ -5682,18 +5682,22 @@ msgid ""
 "decreases because the product is removed from stock and delivered to the "
 "customer location."
 msgstr ""
+"至於出貨方面， :ref:`出貨產品對平均成本估值 <inventory/avg_cost/definite_rule>` "
+"是沒有影響的。雖然平均成本估值不會重新計算，但由於產品已從庫存中移除，並交付至客戶所在地，因此庫存價值仍會減少。"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:157
 msgid ""
 "To demonstrate that the average cost valuation is not recalculated, examine "
 "the \"Deliver 10 tables\" example."
-msgstr ""
+msgstr "為顯示平均成本估值並不會重新計算，請參閱「交付 10 張桌子」的例子。"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:160
 msgid ""
 "Avg~Cost = \\frac{12 \\times $12 + (-10) \\times $12}{12-10} = \\frac{24}{2} = $12\n"
 "\n"
 msgstr ""
+"平均成本 = \\frac{12 \\times $12 + (-10) \\times $12}{12-10} = \\frac{$24}{2} = $12\n"
+"\n"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:163
 msgid ""
@@ -5701,27 +5705,30 @@ msgid ""
 "is `-10`. The previous average cost (`$12`) is used in lieu of a vendor's "
 "*purchase price*;"
 msgstr ""
+"由於要向客戶送遞 10 張桌子，所以 **進貨數量** 為 `-10` 。計算會採用之前的平均成本（ `$12` ），代替供應商的 **採購價格** ；"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:165
 msgid "The *incoming inventory value* is `-10 * $12 = -$120`;"
-msgstr ""
+msgstr "**進庫價值** 是 `-10 × $12 = -$120` ；"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:166
 msgid ""
 "The old *inventory value* (`$144`) is added to the *incoming inventory "
 "value* (`-$120`), so `$144 + -$120 = $24`;"
 msgstr ""
+"舊的 **庫存價值** （ `$144` ）會與新的 **庫存價值** （ `-$120` ）相加，得出 `$144 + -$120 = $24` ；"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:168
 msgid ""
 "Only `2` tables remain after shipping out `10` tables from `12`. So the "
 "current *inventory value* (`$24`) is divided by the on-hand quantity (`2`);"
 msgstr ""
+"在 `12` 張桌子運出 `10` 張後，只剩下 `2` 張桌子。因此，目前的 **庫存價值** （ `$24` ）會除以庫存數量（ `2` ）；"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:170
 msgid ""
 "`$24 / 2 = $12`, which is the same average cost as the previous operation."
-msgstr ""
+msgstr "`$24 ÷ 2 = $12` ，與上次操作的平均成本相同。"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:172
 msgid ""
@@ -5731,54 +5738,56 @@ msgid ""
 "topmost valuation layer, delivering `10` tables reduces the product's value "
 "by `-$120`."
 msgstr ""
+"若要在 Odoo 系統內驗證這一點，可前往 **銷售** 應用程式，執行銷售 `10` 張桌子，驗證送貨，然後前往 :menuselection:`庫存"
+" --> 報告 --> 庫存估值` 查看庫存估值記錄。在最上層的估值層，運出 `10` 張桌子會令產品價值減少，變化為 `-$120` 。"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:177
 msgid ""
 "**Note**: What is not represented in this stock valuation record is the "
 "revenue made from this sale, so this decrease is not a loss to the company."
-msgstr ""
+msgstr "**請留意：** 庫存估值記錄未有計及此次銷售的收入，因此這一項減值並非公司損失。"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:0
 msgid "Show how deliveries decrease inventory valuation."
-msgstr ""
+msgstr "顯示送貨操作如何降低庫存估值。"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:187
 msgid "Return items to supplier (use case)"
-msgstr ""
+msgstr "將物品退回供應商（使用例子）"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:189
 msgid ""
 "Because the price paid to suppliers can differ from the price the product is"
 " valued at with the |AVCO| method, Odoo handles returned items in a specific"
 " way."
-msgstr ""
+msgstr "使用 |AVCO| 方式為產品估值時，估值價格可能與支付給供應商的價格不同，Odoo 會以特別方式處理相關退貨物品。"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:192
 msgid ""
 "Products are returned to suppliers at the original purchase price, but;"
-msgstr ""
+msgstr "產品會按原本的採購價格退還給供應商，不過："
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:193
 msgid "The internal cost valuation remains unchanged."
-msgstr ""
+msgstr "內部成本估值保持不變。"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:195
 msgid ""
 "The above :ref:`example table <inventory/avg_cost/math_table>` is updated as"
 " follows:"
-msgstr ""
+msgstr "上述的 :ref:`示例 <inventory/avg_cost/math_table>` 會變成這樣："
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:198
 msgid "Qty*Avg Cost"
-msgstr ""
+msgstr "數量 × 平均成本"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:202
 msgid "Return 1 table bought at $10"
-msgstr ""
+msgstr "退還以 $10 購買的 1 張桌子"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:202
 msgid "-1 * $12"
-msgstr ""
+msgstr "-1 × $12"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:202
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:243
@@ -5796,6 +5805,8 @@ msgid ""
 "returned; the initial purchase price of `$10` is unrelated to the table's "
 "average cost."
 msgstr ""
+"換言之，Odoo 將退回供應商的產品，視為另一種形式的產品出庫。對 Odoo 系統而言，由於桌子的單位價值為 $12，因此產品退回時，庫存價值會相應減少"
+" `$12` ；而最初的採購價格 `$10` 已與桌子的平均成本無關。"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:211
 msgid ""
@@ -5804,6 +5815,9 @@ msgid ""
 "1 <inventory/avg_cost/ex-1>` by going to the :guilabel:`Inventory Overview`,"
 " clicking on :guilabel:`Receipts`, and selecting the desired receipt."
 msgstr ""
+"若要退回以 `$10` 價格購買的一張桌子，請前往 **庫存** 應用程式，找出在 :ref:`練習 1 "
+"<inventory/avg_cost/ex-1>` 中，購買 8 張桌子的收貨操作。方法是前往 :guilabel:`庫存概覽`，按一下 "
+":guilabel:`收貨`，然後選擇所需項目。"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:216
 msgid ""
@@ -5812,53 +5826,55 @@ msgid ""
 " shipment for the table. Select :guilabel:`Validate` to confirm the outgoing"
 " shipment."
 msgstr ""
+"之後，在已驗證的送貨單上，按一下 :guilabel:`退貨`，並在反向轉移視窗中，將數量修改為 `1` 。這樣會為該張桌子建立一項出庫運輸。選擇 "
+":guilabel:`驗證` 以確認出貨。"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:220
 msgid ""
 "Return to :menuselection:`Inventory --> Reporting --> Inventory Valuation` "
 "to see how the outgoing shipment decreases the inventory value by $12."
-msgstr ""
+msgstr "返回 :menuselection:`庫存 --> 報告 --> 庫存估值`，查看這項出貨如何使庫存價值減少了 $12。"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:0
 msgid "Inventory valuation for return."
-msgstr ""
+msgstr "退貨庫存估值。"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:230
 msgid "Eliminate stock valuation errors in outgoing products"
-msgstr ""
+msgstr "清除出庫產品的庫存估值錯誤"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:232
 msgid ""
 "Inconsistencies can occur in a company's inventory when the average cost "
 "valuation is recalculated on outgoing shipments."
-msgstr ""
+msgstr "為運出貨物重新計算平均成本估值時，公司的庫存數量可能會出現不一致。"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:235
 msgid ""
 "To demonstrate this error, the table below displays a scenario in which 1 "
 "table is shipped to a customer and another is returned to a supplier at the "
 "purchased price."
-msgstr ""
+msgstr "要理解這項錯誤，請參考下表的情況：公司已運送 1 張桌子給客戶，另一張桌子以採購價退回供應商。"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:239
 msgid "Qty*Price"
-msgstr ""
+msgstr "數量 × 價格"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:243
 msgid "Ship 1 product to customer"
-msgstr ""
+msgstr "向客戶運送 1 件產品"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:243
 msgid "-1 \\* $12"
-msgstr ""
+msgstr "-1 × $12"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:245
 msgid "Return 1 product initially bought at $10"
-msgstr ""
+msgstr "退回 1 件最初以 $10 購買的產品"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:245
 msgid "-1 \\* $10"
-msgstr ""
+msgstr "-1 × $10"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:245
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:290
@@ -5873,11 +5889,11 @@ msgstr "**0**"
 msgid ""
 "In the final operation above, the final inventory valuation for the table is"
 " `$2` even though there are `0` tables left in stock."
-msgstr ""
+msgstr "在最後一項操作中，雖然桌子的庫存已是 `0` 張，但桌子庫存的最終估值，竟變成了 `$2` 。"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:251
 msgid "Correct method"
-msgstr ""
+msgstr "正確方法"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:253
 msgid ""
@@ -5886,10 +5902,12 @@ msgid ""
 "internally at $12. The inventory value change represents a product worth $12"
 " no longer being accounted for in company assets."
 msgstr ""
+"使用平均成本為退貨進行估值。這並不表示公司當初用 $10 購買的產品，可以換回 $12；而是以 $10 退回的產品，其內部估值的價值為 "
+"$12。庫存價值的變化，代表價值 $12 的產品，不再計入公司資產。"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:258
 msgid "Anglo-Saxon accounting"
-msgstr ""
+msgstr "英式（Anglo-Saxon）會計"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:260
 msgid ""
@@ -5900,6 +5918,8 @@ msgid ""
 "account (called **stock input**) is credited and only reconciled once the "
 "vendor bill is received."
 msgstr ""
+"除使用 |AVCO| 外，使用 **英式（Anglo-Saxon）會計** 的公司，也會有一個暫存賬戶，用於追蹤支付給供應商的金額。供應商交付訂單時， "
+"**庫存價值** 會根據入庫產品的供應商價格而增加。暫存賬戶（稱為 **庫存輸入** ）會貸記相關價值，並只會在收到供應商賬單後，才進行對賬。"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:266
 msgid ""
@@ -5915,66 +5935,68 @@ msgid ""
 " a price difference between the price the product is **valued at** and the "
 "price it was bought for, a *price difference* account is created."
 msgstr ""
+"下表反映日記賬記項及賬戶。未收到供應商賬單時， **庫存輸入** 賬戶會暫存用於支付供應商的款項。若退貨產品的 **估值** "
+"與採購價格之間存在價格差異，為了平衡賬目，需要建立一個 **價格差異** 賬戶。"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:276
 msgid "Stock Input"
-msgstr ""
+msgstr "庫存輸入"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:276
 msgid "Price Diff"
-msgstr ""
+msgstr "價格差異"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:280
 msgid "Receive 8 tables at $10"
-msgstr ""
+msgstr "收到 8 張桌子，每張 $10"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:280
 msgid "($80)"
-msgstr ""
+msgstr "($80)"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:282
 msgid "Receive vendor bill $80"
-msgstr ""
+msgstr "收到供應商賬單，金額 $80"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:284
 msgid "Receive 4 tables at $16"
-msgstr ""
+msgstr "收到 4 張桌子，每張 $16"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:284
 msgid "($64)"
-msgstr ""
+msgstr "($64)"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:286
 msgid "Receive vendor bill $64"
-msgstr ""
+msgstr "收到供應商賬單，金額 $64"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:288
 msgid "Deliver 10 tables to customer"
-msgstr ""
+msgstr "向客戶交付 10 張桌子"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:290
 msgid "Return 1 table initially bought at $10"
-msgstr ""
+msgstr "退回以 $10 採購的 1 張桌子"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:290
 msgid "**$10**"
-msgstr ""
+msgstr "**$10**"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:290
 msgid "**$12**"
-msgstr ""
+msgstr "**$12**"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:292
 msgid "Receive vendor refund $10"
-msgstr ""
+msgstr "收到供應商退款 $10"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:292
 msgid "$2"
-msgstr ""
+msgstr "$2"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:296
 msgid "Product reception"
-msgstr ""
+msgstr "產品收貨"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:299
 msgid "Summary"
@@ -5991,6 +6013,10 @@ msgid ""
 "means the bill has been paid. **Stock Input** is reconciled once the vendor "
 "bill is received."
 msgstr ""
+"為產品收貨時，Odoo 會預先按收貨物品的價格，將相應金額撥入一個 :doc:`負債賬戶 "
+"</applications/finance/accounting/get_started/cheat_sheet>` ，即 **庫存輸入** "
+"，確保公司能夠支付採購貨物的款項。之後，收到賬單時，暫存賬戶的金額便會轉入 **應付款項** 。轉入此賬戶表示賬單已支付。收到供應商賬單後， "
+"**庫存輸入** 會即時進行對賬。"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:308
 msgid ""
@@ -6000,43 +6026,45 @@ msgid ""
 "**purchased for**, the **Inventory Valuation** account is unrelated to the "
 "crediting and debiting operations of the **Stock Input** account."
 msgstr ""
+"庫存估值是計算每種庫存產品內部估值的一種方法。由於產品的 **估值價格** 與實際的 **採購價格** 之間會有差異，因此 **庫存估值** "
+"賬戶的賬項，與 **庫存輸入** 賬戶的貸記及借記操作無關。"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:313
 msgid "To conceptualize all this, follow the breakdown below."
-msgstr ""
+msgstr "要理解這一切，請細閱下文的闡述。"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:316
 msgid "Accounts balanced at received products"
-msgstr ""
+msgstr "產品收貨時賬目平衡"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:318
 msgid ""
 "In this example, a company starts with zero units of a product, `table`, in "
 "stock. Then, 8 tables are received from the vendor:"
-msgstr ""
+msgstr "在此示例中，公司的產品 `桌子` 最初的庫存數量為零，其後從供應商收到 8 張桌子："
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:321
 msgid ""
 "The **Stock Input** account stores `$80` of credit owed to the vendor. The "
 "amount in this account is unrelated to the inventory value."
-msgstr ""
+msgstr "**庫存輸入** 賬戶會暫存欠供應商的貸記款項 `$80` 。此賬戶的金額與庫存價值無關。"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:323
 msgid ""
 "`$80` worth of tables came **in** (**debit** the *Inventory Value* account "
 "`$80`), and"
-msgstr ""
+msgstr "價值 `$80` 的桌子 **入庫** （ **庫存價值** 賬戶 **借記** `$80` ），及"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:324
 msgid ""
 "`$80` must be paid **out** for received goods (**credit** the *Stock Input* "
 "account `$80`)."
-msgstr ""
+msgstr "必須為已收貨的產品支付 `$80` （ **庫存輸入** 賬戶 **貸記** `$80` ）。"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:327
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:370
 msgid "In Odoo"
-msgstr ""
+msgstr "在 Odoo 系統內"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:329
 msgid ""
