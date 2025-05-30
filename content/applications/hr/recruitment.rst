@@ -4,49 +4,50 @@
 Recruitment
 ===========
 
-Odoo keeps all job applicants organized with a pre-configured series of steps and stages that each
-applicant goes through. Each stage has a specific step(s) that should be performed. These range from
+Odoo keeps all job applicants organized with a preconfigured series of steps and stages that each
+applicant goes through. Each stage has a specific steps that should be performed. These range from
 scheduling a phone call, conducting an interview, or sending a job offer, for example. This process
-is referred to as the 'applicant flow.'
+is referred to as the *applicant flow.*
 
 When an applicant applies for a job position, an *applicant card* is automatically created in Odoo's
-*Recruitment* app for that specific job position. As the applicant progresses through the
+**Recruitment** app for that specific job position. As the applicant progresses through the
 recruitment pipeline, the recruitment team moves their card from one stage to the next.
 
 :ref:`Stages can be configured <recruitment/modify-stages>` so that an email is automatically sent
-out using a set, pre-configured template as soon as an applicant's card enters a stage. These
+out using a set, preconfigured template as soon as an applicant's card enters a stage. These
 automated emails are defined on each stage in the applicant flow.
 
 The applicant flow explained in this document is the default flow in Odoo, and goes through the
-applicant flow when using the *Recruitment* application's default configuration. The applicant flow
-is able to be modified to suit the specific recruitment flow for any business.
+applicant flow when using the **Recruitment** application's default configuration. The applicant
+flow is able to be modified to suit the specific recruitment flow for any business.
 
 .. note::
    The applicant flow with all its stages are universal and applies to all job positions, unless
    specified. :ref:`A specific stage can be configured <recruitment/customize-stages>` to be
    job-specific, meaning that specific stage is only visible for that specific job position.
-   Otherwise, if a new stage is created, or an existing stage is modified, those changes are
-   visible on all job positions.
+   Otherwise, if a new stage is created, or an existing stage is modified, those changes are visible
+   on all job positions.
 
 .. _recruitment/settings:
 
 Settings
 ========
 
-Before creating a job position in Odoo, configure the necessary settings for the *Recruitment* app.
-To view and edit the settings, navigate to :menuselection:`Recruitment app --> Configuration -->
-Settings`. After any changes are made, click the :guilabel:`Save` button in the top-left corner to
-save all the changes.
+Before creating a job position in Odoo, configure the necessary settings for the **Recruitment**
+app. To view and edit the settings, navigate to :menuselection:`Recruitment app --> configuration
+ --> Settings`. After any changes are made, click the :guilabel:`Save` button in the top-left corner
+to save all the changes.
 
 Job posting
 -----------
 
-The :guilabel:`Job Posting` section of the *Recruitment* app settings has only one selection to
+The :guilabel:`Job Posting` section of the **Recruitment** app settings has only one selection to
 make. If job positions are to be posted to the company's website, enable the :guilabel:`Online
 Posting` option.
 
 .. note::
-   The :guilabel:`Online Posting` is only available if the *Website* application is also installed.
+   The :guilabel:`Online Posting` is only available if the **Website** application is also
+   installed.
 
 Recruitment process
 -------------------
@@ -66,9 +67,9 @@ Enable the :guilabel:`Send Interview Survey` option to send surveys to applicant
 :icon:`fa-arrow-right` :guilabel:`Interview Survey` link to navigate to a list of all created
 surveys.
 
-This list includes all surveys that were created in the database, not just surveys used in the
-*Recruitment* app. If no surveys have been created, the surveys list displays a :guilabel:`No Survey
-Found` message, and presents options to create a survey from several pre-configured survey
+This list includes all surveys that were created in the database, not only surveys used in the
+**Recruitment** app. If no surveys have been created, the surveys list displays a :guilabel:`No
+Survey Found` message, and presents options to create a survey from several preconfigured survey
 templates.
 
 .. seealso::
@@ -82,10 +83,10 @@ templates.
 Send SMS
 ~~~~~~~~
 
-It is possible to send text messages to applicants directly through the *Recruitment* app. To do so,
-enable the :guilabel:`Send SMS` option. This option requires credits to use, which can be obtained
-by clicking the :icon:`fa-arrow-right` :guilabel:`Buy credits` internal link that emerges when the
-feature is enabled.
+It is possible to send text messages to applicants directly through the **Recruitment** app. To do
+so, enable the :guilabel:`Send SMS` option. This option requires credits to use, which can be
+obtained by clicking the :icon:`fa-arrow-right` :guilabel:`Buy credits` internal link that emerges
+when the feature is enabled.
 
 .. seealso::
    For more information, refer to the :doc:`SMS pricing and FAQs
@@ -97,7 +98,7 @@ CV display
 ~~~~~~~~~~
 
 When applicants submit an application, one of the default required fields is a resumé, or :abbr:`CV
-(curriculum vitae)`. All resumés are stored in the *Documents* application, and are accessible on
+(curriculum vitae)`. All resumés are stored in the **Documents** application, and are accessible on
 the applicant's card.
 
 A resumé has the option to appear on the applicant's form, which can be viewed by clicking on the
@@ -118,7 +119,6 @@ applicant's card.
    the :guilabel:`Files` section of the chatter, below the applicant's card.
 
 .. image:: recruitment/cv-display.png
-   :align: center
    :alt: The resumé on an applicant's card, appearing on the right side.
 
 .. _recruitment/cv-ocr:
@@ -179,12 +179,11 @@ main dashboard. Click the :guilabel:`(#) New Applications` smart button on a job
 navigate to the Kanban view for all the applicants for that particular job position.
 
 .. image:: recruitment/new-applicants-button.png
-   :align: center
    :alt: Main dashboard view of job position card, showing new applications button.
 
 Inside the job application, the Kanban stages appear, with all the applicants populated in their
-respective columns, indicating what stage they are currently in. There are six default stages in
-Odoo:
+respective columns, indicating what stage they are currently in. In Odoo, six default stages are
+configured:
 
 - :ref:`New <recruitment/new>`
 - :ref:`Initial Qualification <recruitment/initial-qualification>`
@@ -199,7 +198,6 @@ for that column, click anywhere on the thin gray column that says the stage name
 expands, revealing the applicants.
 
 .. image:: recruitment/stages.png
-   :align: center
    :alt: Expand a folded column by clicking on it in the Kanban view.
 
 Each stage has a color-coded bar beneath the stage name, providing status information for the
@@ -215,7 +213,6 @@ lower-left of the applicant card. A status pop-up window appears. Click on the d
 the applicant. The status dot on the applicant card as well as the status bar updates.
 
 .. image:: recruitment/status-dots.png
-   :align: center
    :alt: The applicant card statuses, and status bar.
 
 .. tip::
@@ -227,8 +224,8 @@ the applicant. The status dot on the applicant card as well as the status bar up
 Customize stages
 ================
 
-Stages can be modified, added, or deleted to best meet the needs of the particular hiring steps of
-a business.
+Stages can be modified, added, or deleted to best meet the needs of the particular hiring steps of a
+business.
 
 New stage
 ---------
@@ -239,7 +236,6 @@ new column appears, and another new stage is available to create. If no new stag
 anywhere on the screen to exit the new stage creation.
 
 .. image:: recruitment/add-column.png
-   :align: center
    :alt: The plus sign to click to add a new column to the Kanban stages.
 
 .. _recruitment/modify-stages:
@@ -248,13 +244,12 @@ Modify stage
 ------------
 
 To modify the settings of a stage, hover over the name of the stage, and a :icon:`fa-cog`
-:guilabel:`(gear)` icon appears in the upper right hand side of the stage. Click on the
-:icon:`fa-cog` :guilabel:`(gear)` icon and a menu appears. Then click on the :guilabel:`Edit`
+:guilabel:`(Settings)` icon appears in the upper right hand side of the stage. Click on the
+:icon:`fa-cog` :guilabel:`(Settings)` icon and a menu appears. Then click on the :guilabel:`Edit`
 option. An :guilabel:`Edit: (Stage)` form appears. Make any desired modifications to the form, then
 click :guilabel:`Save & Close` when done.
 
 .. image:: recruitment/gear.png
-   :align: center
    :alt: The gear icon that appears when a column name is moused over, and the drop-down menu it
          displays when clicked.
 
@@ -285,7 +280,7 @@ The fields to be populated or modified are:
   If this is active, a :guilabel:`Points` field appears. Enter the amount of referral points the
   employee receives when an applicant enters this stage. The *Referrals* app must be installed in
   order to use this option.
-- :guilabel:`Tooltips` section: there are three pre-configured status labels (colored circles) for
+- :guilabel:`Tooltips` section: there are three preconfigured status labels (colored circles) for
   each applicant's card, indicating its status. These colors are displayed at the top of each stage
   to reflect the statuses of the applicants in the stage. The *names* for the label can be modified,
   but the label itself (the color) cannot. The default names and labels are: :guilabel:`In Progress`
@@ -297,9 +292,9 @@ Delete stage
 ------------
 
 If a stage is no longer needed, the stage can be deleted. To delete a stage, hover over the name of
-the stage, and a :icon:`fa-cog` :guilabel:`(gear)` icon appears. First, click on the :icon:`fa-cog`
-:guilabel:`(gear)` icon to reveal a drop-down menu, then click :guilabel:`Delete`. A
-:guilabel:`Confirmation` pop-up warning appears, asking :guilabel:`Are you sure you want to delete
+the stage, and a :icon:`fa-cog` :guilabel:`(Settings)` icon appears. First, click on the
+:icon:`fa-cog` :guilabel:`(Settings)` icon to reveal a drop-down menu, then click :guilabel:`Delete`.
+A :guilabel:`Confirmation` pop-up warning appears, asking :guilabel:`Are you sure you want to delete
 this column?` Click :guilabel:`Delete` to delete the column.
 
 .. important::
@@ -310,8 +305,8 @@ this column?` Click :guilabel:`Delete` to delete the column.
 Email templates
 ===============
 
-To communicate with the applicant, Odoo has several pre-configured email templates that can be used.
-The pre-configured email templates and when to use them are as follows:
+To communicate with the applicant, Odoo has several preconfigured email templates that can be used.
+The preconfigured email templates and when to use them are as follows:
 
 - :guilabel:`Recruitment: Applicant Acknowledgement`: this template is used to let the applicant
   know that their application was received. This email is automatically sent out once the applicant
@@ -337,7 +332,6 @@ To manually send an email, click :guilabel:`Send message` in the chatter. A text
 well as the applicant's email address.
 
 .. image:: recruitment/full-composer.png
-   :align: center
    :alt: Send an email from the chatter.
 
 Click the :icon:`fa-expand` :guilabel:`(expand)` full composer icon in the bottom right corner of
@@ -346,17 +340,17 @@ with the :guilabel:`Recipients` and :guilabel:`Subject` pre-populated. The appli
 is entered in the :guilabel:`Recipients` line, and the :guilabel:`Subject` is `(Job Position)`. The
 email body is empty by default.
 
-To use a pre-configured email template, click the field next to :guilabel:`Load template` in the
+To use a preconfigured email template, click the field next to :guilabel:`Load template` in the
 bottom section of the window. Select the email template to use from the drop-down menu.
 
 Pre-configured email templates may contain dynamic placeholders so unique information can be
-populated in the email for a more personalized message to the applicant. There are several
-pre-configured email templates to choose from. Depending on the template selected, the email subject
-and/or body may change.
+populated in the email for a more personalized message to the applicant. Several preconfigured email
+templates are available to choose from. Depending on the template selected, the email subject or
+body may change.
 
 .. note::
-   Only the email templates that are configured for the model load. There are other email templates
-   pre-configured in Odoo, but if they are not configured for the recruitment application, they do
+   Only the email templates that are configured for the model load. Other email templates come
+   preconfigured in Odoo, but if they are not configured for the recruitment application, they do
    not appear in the list of available templates.
 
 If any attachments are to be added, click the :guilabel:`Attachments` button in the lower left
@@ -369,9 +363,8 @@ Template` button in the bottom. To send the email, click :guilabel:`Send` and th
 the applicant. The email then appears in the chatter.
 
 .. image:: recruitment/send-survey.png
-   :align: center
    :alt: Send a custom survey, also referred to as an interview form, to an applicant using a
-         pre-configured template.
+         preconfigured template.
 
 .. seealso::
    - :doc:`recruitment/new_job`
