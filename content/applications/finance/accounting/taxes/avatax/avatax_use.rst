@@ -6,6 +6,8 @@ AvaTax is a tax calculation software that can be integrated with Odoo in the Uni
 Canada. Once the :doc:`integration setup <../avatax>` is complete, the calculated tax is simple and
 automatic.
 
+.. _accounting/avatax/tax-calculation:
+
 Tax calculation
 ===============
 
