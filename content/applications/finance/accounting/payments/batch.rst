@@ -49,7 +49,7 @@ Bank reconciliation
 -------------------
 
 Once the bank transactions :doc:`have been created <../bank/transactions>` in your database, you can
-:ref:`reconcile them with the batch payment <reconciliation/batch-payments>`.
+:ref:`reconcile <accounting/reconciliation/reconcile>` them with the batch payment.
 
 .. seealso::
    - :doc:`../payments`
