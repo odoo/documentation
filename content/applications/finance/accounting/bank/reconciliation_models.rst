@@ -2,111 +2,158 @@
 Reconciliation models
 =====================
 
-Reconciliation models are used to automate the :doc:`bank reconciliation <reconciliation>` process,
-which is especially handy when dealing with recurring entries like bank fees. Reconciliation models
-can also be helpful in handling :doc:`cash discounts <../customer_invoices/cash_discounts>`.
-
-Each model is created based on a :ref:`model type <models/type>` and :guilabel:`bank transaction
-conditions`.
+Reconciliation models are custom rules that complement the :ref:`default set of matching rules
+<accounting/reconciliation/reconcile>` and enable more advanced automation of the :doc:`bank
+reconciliation <reconciliation>` process. These models are especially useful when dealing with
+recurring flows like writing off bank fees or :doc:`cash discounts
+<../customer_invoices/cash_discounts>`.
 
 .. seealso::
-   - :doc:`bank_synchronization`
-   - `Odoo Tutorials: Reconciliation models <https://www.odoo.com/slides/slide/reconciliation-models-6858>`_
+   `Odoo Tutorials: Reconciliation models <https://www.odoo.com/slides/slide/reconciliation-models-6858>`_
 
-.. _models/type:
+.. _accounting/rec-models/config:
 
-Reconciliation model types
-==========================
+Configuration
+=============
 
-To access reconciliation models, go to the :guilabel:`Accounting Dashboard`, click on the
-:icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` menu on the bank journal and select
-:guilabel:`Models` under the :guilabel:`Reconciliation` section. For each reconciliation model, a
-:guilabel:`Type` must be set. Three types of models exist:
+To access reconciliation models, go to the :guilabel:`Accounting Dashboard`, click the
+:icon:`fa-ellipsis-v` :guilabel:`(dropdown menu)` menu on the bank journal, and select
+:guilabel:`Models` under the :guilabel:`Reconciliation` section.
 
-- :guilabel:`Button to generate counterpart entry`: a button is created in the resulting entry
-  section of the bank reconciliation view. If clicked, this button generates a counterpart entry to
-  reconcile with the active transaction based on the rules set in the model. The rules specified in
-  the model determine the counterpart entry's account(s), amount(s), label(s), and analytic
-  distribution;
-- :guilabel:`Rule to suggest counterpart entry`: used for recurring transactions to match the
-  transaction to a new entry based on conditions that must match the information on the transaction;
-- :guilabel:`Rule to match invoices/bills`: used for recurring transactions to match the transaction
-  to existing invoices, bills, or payments based on conditions that must match the information on
-  the transaction.
+To create a new reconciliation model, click :guilabel:`New`.
 
-Default reconciliation models
-=============================
+Reconciliation models can be either :guilabel:`Manual` or :guilabel:`Automated`. Manual
+reconciliation models appear as :ref:`possible action buttons
+<accounting/reconciliation/action-buttons>` when :doc:`reconciling <reconciliation>`. Automatic
+reconciliation models apply automatically to transactions that meet the reconciliation model's
+:ref:`matching conditions <accounting/rec-models/conditions>`.
 
-In Odoo, different models are available by default depending on the company's fiscal localization.
-These can be updated if needed. Users can also create their own reconciliation models by clicking
-:guilabel:`New`.
+Each reconciliation model is configured with :ref:`matching conditions
+<accounting/rec-models/conditions>` to identify the relevant bank transactions and :ref:`Counterpart
+Items <accounting/rec-models/counterpart>` to be generated during reconciliation.
+
+.. tip::
+   To create an activity on the transaction, select which type of activity to create in the
+   :guilabel:`Next Activity` field.
 
 .. important::
    If a record matches with several reconciliation models, the first one in the *sequence* of models
-   is applied. You can rearrange the order by dragging and dropping the handle next to the name.
+   is applied. Rearrange the order by dragging and dropping the handle next to the name.
 
    .. image:: reconciliation_models/list-view.png
       :alt: Rearrange the sequence of models in the list view.
 
-Invoices/Bills perfect match
-----------------------------
+.. _accounting/rec-models/conditions:
 
-This model should be at the top of the *sequence* of models, as it enables Odoo to suggest matching
-existing invoices or bills with a bank transaction based on set conditions.
+Matching conditions
+-------------------
 
-.. image:: reconciliation_models/invoices-bills-perfect-match.png
-   :alt: Set rules to trigger the reconciliation.
+A reconciliation model's matching conditions determine to which transactions it applies.
 
-Odoo automatically reconciles the payment when the :guilabel:`Auto-validate` option is selected, and
-the model conditions are perfectly met. In this case, it expects to find on the bank statement's
-line the invoice/payment's reference (as :guilabel:`Label` is selected) and the partner's name
-(as :guilabel:`Partner is set` is selected) to suggest the correct counterpart entry and reconcile
-the payment automatically.
+The following fields can be used to restrict the reconciliation model's availability to transactions
+that meet the conditions:
 
-Invoices/Bills partial match if underpaid
------------------------------------------
+- :guilabel:`Journals`
+- :guilabel:`Partners`
+- :guilabel:`Amount`: Select :guilabel:`Is lower than or equal to`, :guilabel:`Is greater than or
+  equal to`, or :guilabel:`Is between` and enter the amount(s).
+- :guilabel:`Label`: Select :guilabel:`Contains`, :guilabel:`Not Contains`, or :guilabel:`Match
+  Regex` and enter the transaction label's matching condition.
 
-This model suggests a customer invoice or vendor bill that partially matches the payment when the
-amount received is slightly lower than the invoice amount, for example in the case of
-**cash discounts**. The difference is reconciled with the account indicated in the
-:guilabel:`counterpart entries` tab.
+.. tip::
+   `Regular expressions <https://regexone.com/>`_, often abbreviated as **regex**, can be used in
+   Odoo in various ways to search, validate, and manipulate data. Regex can be powerful but also
+   complex, so it's essential to use it judiciously.
 
-The reconciliation model :guilabel:`Type` is :guilabel:`Rule to match invoices/bills`, and the
-:guilabel:`Payment tolerance` should be set.
-
-.. image:: reconciliation_models/partial-match.png
-   :alt: Set rules to trigger the reconciliation.
+   To use regular expressions in a reconciliation model, set the :guilabel:`Label` to
+   :guilabel:`Match Regex` and add an expression. Odoo automatically retrieves the transactions
+   that match the regex expression and the conditions specified in the reconciliation model.
 
 .. note::
-   The :guilabel:`Payment tolerance` is only applicable to lower payments. It is disregarded when an
-   overpayment is received.
+   A transaction must meet all conditions for the reconciliation model to be available for it. If no
+   condition is defined (i.e., if all fields are left blank), the reconciliation model will be
+   available for all transactions.
+
+.. _accounting/rec-models/counterpart:
+
+Counterpart items
+-----------------
+
+Each line in the :guilabel:`Counterpart items` tab creates a journal item with the specified
+details:
+
+- :guilabel:`Partner`: Select the partner, if any, to set on the journal item.
+- :guilabel:`Account`: Select the account, if any, to set on the journal item.
+- :guilabel:`Amount Type`: Select how the amount of the journal item should be calculated:
+
+  - :guilabel:`Fixed`: Use a fixed amount.
+  - :guilabel:`Percentage of balance`: Use a percentage of the remaining balance of the
+    transaction, regardless of the transaction total.
+  - :guilabel:`Percentage of statement line`: Use a percentage of the transaction total, regardless
+    of the remaining balance of the transaction.
+  - :guilabel:`From label`: Use a percentage from the transaction's label using regex.
+
+- :guilabel:`Amount`: Enter the amount to be used on the journal item. This field will be either a
+  fixed amount, percentage amount, or regex depending on the :guilabel:`Account Type`.
+- :guilabel:`Taxes`: Select a tax, if any, to set on the journal item. This field is hidden behind
+  the :icon:`oi-settings-adjust` :guilabel:`(settings adjust)` icon by default.
+- :guilabel:`Analytic`: Select an analytic distribution, if any, to set on the journal item.
+- :guilabel:`Label`: Enter a label, if any, to set on the journal item.
+
+.. note::
+   - While neither the :guilabel:`Partner` nor :guilabel:`Account` fields are mandatory, at least
+     one of the two must be set for the reconciliation model to work correctly.
+   - The reconciliation model can be used for :ref:`partner mapping <accounting/rec-models/partner>`
+     if the :guilabel:`Counterpart Items` include a :guilabel:`Partner` but no :guilabel:`Account`.
+
+.. _accounting/rec-models/defaults:
+
+Default reconciliation models
+=============================
+
+In Odoo, different models are available by default depending on the company's :doc:`fiscal
+localization <../../fiscal_localizations>`. These can be updated if needed. The following
+reconciliation models exist across most fiscal localizations.
+
+Internal Transfers
+------------------
+
+The :guilabel:`Internal Transfers` reconciliation model is used for making :doc:`internal transfers
+<internal_transfers>` from one bank or cash account to another by moving the entire transaction's
+balance to a liquidity or internal transfer account. To fully transfer the amount from one account
+to another, this reconciliation model must be used on both the incoming journal's transaction and
+the outgoing journal's transaction.
+
+.. seealso::
+   :doc:`internal_transfers`
+
+Bank Fees
+---------
+
+The :guilabel:`Bank Fees` reconciliation model generates a counterpart item that moves the remaining
+balance of a transaction to a bank fees account (that varies by :doc:`fiscal localization
+<../../fiscal_localizations>`) and includes "Bank Fees" in the :guilabel:`Label` of the new item
+that it creates. This reconciliation model is only applicable to transactions whose label contains
+"Bank Fees" due to its :ref:`matching conditions <accounting/rec-models/conditions>`.
+
+.. example::
+   An outgoing bank transaction for $103 is partially matched with a vendor bill for $100, leaving
+   $3 of the transaction still unreconciled. Use the :guilabel:`Bank Fees` reconciliation model to
+   create a new counterpart item for $3 and reconcile it with the remaining $3 of the bank
+   transaction.
+
+Cash Discount
+-------------
+
+The :guilabel:`Cash Discount` reconciliation model generates a counterpart item that moves the
+remaining balance of a transaction to a cash discount account (that varies by :doc:`fiscal
+localization <../../fiscal_localizations>`) and includes "Cash Discount" in the :guilabel:`Label` of
+the new item that it creates.
 
 .. seealso::
    :doc:`../customer_invoices/cash_discounts`
 
-Line with bank fees
--------------------
-
-This model suggests a counterpart entry according to the rules set in the model. In this case, the
-reconciliation model :guilabel:`Type` is :guilabel:`Rule to suggest counterpart entry`, and the
-:guilabel:`Label` can be used for example, to identify the information referring to the
-:guilabel:`Bank fees` in the label of the transaction.
-
-.. image:: reconciliation_models/bank-fees.png
-   :alt: Set rules to trigger the reconciliation.
-
-.. note::
-   `Regular expressions <https://regexone.com/>`_, often abbreviated as **Regex**, can be used in
-   Odoo in various ways to search, validate, and manipulate data within the system. Regex can be
-   powerful but also complex, so it's essential to use it judiciously and with a good understanding
-   of the patterns you're working with.
-
-   To use regular expressions in your reconciliation models, set the :guilabel:`Transaction Type`
-   to :guilabel:`Match Regex` and add your expression. Odoo automatically retrieves the
-   transactions that match your Regex expression and the conditions specified in your model.
-
-   .. image:: reconciliation_models/regex.png
-      :alt: Using Regex in Odoo
+.. _accounting/rec-models/partner:
 
 Partner mapping
 ===============
@@ -117,8 +164,8 @@ reconciliation. For example, you can create a partner mapping rule for incoming 
 specific reference numbers or keywords in the transaction description. When an incoming payment
 meets these criteria, Odoo automatically maps it to the corresponding customer's account.
 
-To create a partner mapping rule, go to the :guilabel:`Partner Mapping` tab and enter the
-:guilabel:`Find Text in Label`, :guilabel:`Find Text in Notes`, and :guilabel:`Partner`.
-
-.. image:: reconciliation_models/partner-mapping.png
-   :alt: defining partner mapping
+To create a partner mapping rule, configure any :ref:`matching conditions
+<accounting/rec-models/conditions>`, such as a specific transaction label, and then configure the
+:guilabel:`Partner` and any other relevant fields in the :ref:`Counterpart Items
+<accounting/rec-models/counterpart>` tab. Setting an :guilabel:`Account` is not mandatory for
+partner mapping.
