@@ -195,7 +195,8 @@ and region-specific tax calculations when items are sold, purchased, and invoice
 
 .. important::
    AvaTax is available for integration with databases/companies that have locations in Canada and/or
-   the United States. Reference the :ref:`avatax/fiscal_country` documentation for more information.
+   the United States. Reference the :ref:`accounting/avatax/fiscal_country` documentation for more
+   information.
 
 .. seealso::
    Refer to the documentation articles below to integrate and configure an AvaTax account with an
