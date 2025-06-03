@@ -31,7 +31,7 @@ page. When you :guilabel:`Save`, the product page is automatically published.
 .. tip::
    - You can also create a product from the backend by going to
      :menuselection:`Website --> eCommerce --> Products` and clicking :guilabel:`New`.
-   - Products created from the frontend are automatically :ref:`published <website/un-publish-page>`,
+   - Products created from the frontend are automatically :ref:`published <website/pages/un-publish-page>`,
      while products created from the backend are not. To publish a product, click the
      :guilabel:`Go to Website` smart button to access the product page, then toggle the switch from
      :guilabel:`Unpublished` to :guilabel:`Published`.
