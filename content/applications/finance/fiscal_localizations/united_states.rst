@@ -249,7 +249,8 @@ tax calculations when items are sold, purchased, and invoiced in the database.
 
 .. important::
    AvaTax is available for integration with databases/companies that have locations in the United
-   States and Canada. Reference the :ref:`avatax/fiscal_country` documentation for more information.
+   States and Canada. Reference the :ref:`accounting/avatax/fiscal_country` documentation for more
+   information.
 
 .. seealso::
    Refer to the documentation articles below to integrate and configure an AvaTax account with an
