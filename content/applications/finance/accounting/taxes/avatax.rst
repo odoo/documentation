@@ -13,7 +13,7 @@ transactions.
    *AvaTax* is only available for integration with databases/companies that have locations in the
    United States, Canada, and Brazil. This means the fiscal position/country of a database can only
    be set to the United States, Canada, or Brazil. For more information, reference this
-   documentation: :ref:`avatax/fiscal_country`.
+   documentation: :ref:`accounting/avatax/fiscal_country`.
 
 *AvaTax* accounts for location-based tax rates for each state, county, and city. It improves
 remittance accuracy by paying close attention to laws, rules, jurisdiction boundaries, and special
@@ -42,7 +42,8 @@ connect with Avalara to purchase a license: `Avalara: Let's Talk
 
 .. tip::
    Upon account setup, take note of the *AvaTax* :guilabel:`Account ID`. This will be needed in the
-   :ref:`Odoo setup <avatax/credentials>`. In Odoo, this number is the :guilabel:`API ID`.
+   :ref:`Odoo setup <accounting/avatax/credentials>`. In Odoo, this number is the :guilabel:`API
+   ID`.
 
 Then, `create a basic company profile
 <https://www.odoo.com/r/2k0>`_.
@@ -65,7 +66,7 @@ Follow the Avalara documentation for creating a basic company profile:
 #. `Add a marketplace to the company profile
    <https://www.odoo.com/r/QA5>`_.
 
-.. _avatax/create_avalara_credentials:
+.. _accounting/avatax/create_avalara_credentials:
 
 Connect to AvaTax
 -----------------
@@ -102,6 +103,8 @@ If this is an additional license key, ensure the previous connection can be brok
    Copy this key to a safe place. It is strongly encouraged to back up the license key for
    future reference. This key **cannot** be retrieved after leaving this screen.
 
+.. _accounting/avatax/odoo-configuration:
+
 Odoo configuration
 ==================
 
@@ -111,7 +114,7 @@ are made accurately.
 Verify that the Odoo database contains necessary data. The country initially set up in the database
 determines the fiscal position, and aids *AvaTax* in calculating accurate tax rates.
 
-.. _avatax/fiscal_country:
+.. _accounting/avatax/fiscal_country:
 
 Fiscal country
 --------------
@@ -210,7 +213,7 @@ and :guilabel:`Amazon/Avatax Bridge`, respectively.
    - :doc:`../../fiscal_localizations/brazil`
    - :doc:`../../fiscal_localizations/united_states`
 
-.. _avatax/credentials:
+.. _accounting/avatax/credentials:
 
 Odoo AvaTax settings
 --------------------
@@ -227,6 +230,8 @@ Odoo database.
 .. image:: avatax/avatax-configuration-settings.png
    :align: center
    :alt: Configure AvaTax settings
+
+.. _accounting/avatax/prerequisites:
 
 Prerequisites
 ~~~~~~~~~~~~~
@@ -253,7 +258,7 @@ Key` field.
    :guilabel:`Account ID` is listed first.
 
    To access the :guilabel:`License Key` see this documentation:
-   :ref:`avatax/create_avalara_credentials`.
+   :ref:`accounting/avatax/create_avalara_credentials`.
 
 For the :guilabel:`Company Code` field, enter the Avalara company code for the company being
 configured. Avalara interprets this as `DEFAULT`, if it is not set. The :guilabel:`Company Code` can
@@ -332,7 +337,7 @@ Sync parameters
 Upon finishing the configuration and settings of the *AvaTax* section, click the :guilabel:`Sync
 Parameters` button. This action synchronizes the exemption codes from *AvaTax*.
 
-.. _avatax/fiscal_positions:
+.. _accounting/avatax/fiscal_positions:
 
 Fiscal position
 ---------------
