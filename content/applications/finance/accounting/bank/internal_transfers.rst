@@ -26,7 +26,7 @@ select the :guilabel:`Internal Transfers` :doc:`reconciliation model <reconcilia
 button. This reconciliation model button writes the transaction off to the :guilabel:`Internal
 Transfer` account.
 
-.. tip::
+.. important::
    Remember to reconcile the transaction for both the outgoing transaction on the journal that sends
    the payment and the incoming transaction on the journal that receives the payment.
 
