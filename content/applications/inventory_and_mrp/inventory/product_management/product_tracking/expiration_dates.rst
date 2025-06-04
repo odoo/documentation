@@ -269,3 +269,17 @@ Then, click :guilabel:`Filters`, and choose :guilabel:`Expiration Alerts`.
 .. image:: expiration_dates/expiration-dates-expiration-alert.png
    :align: center
    :alt: Expiration alert for product past the expiration date.
+
+Expiration notifications
+------------------------
+
+Users can be notified when the expiration date for a product has passed. This can help keep specific
+employees up to date on the status of items under their purview.
+
+To configure a notification, navigate to :menuselection:`Inventory app --> Products --> Products`.
+Select a product configured with lot/serial numbers and expiration date tracking. Navigate to the
+:guilabel:`Inventory` tab. Under the :guilabel:`Logistics` section, select a user in the
+:guilabel:`Responsible` field.
+
+When the expiation date passes for a lot/serial number for this product, a notification is sent to
+the user in this field.
