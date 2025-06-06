@@ -152,7 +152,7 @@ Online payment providers
      -
      -
 
-.. |V| replace:: ✔
+.. |V| replace:: :icon:`fa-check`
 
 .. note::
    - Each provider has its own specific configuration flow, depending on which feature is
