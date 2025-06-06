@@ -89,14 +89,10 @@ local fiscal and accounting regulations:
   to Brazilian accounting standards
 - :ref:`Taxes <localizations/brazil/taxes>`: pre-configured tax rates, including standard VAT,
   zero-rated, and exempt options.
-- :ref:`Products <localizations/brazil/products>`
-- :ref:`Contacts <localizations/brazil/company-and-contacts>`
 - :ref:`Fiscal positions <localizations/brazil/fiscal-positions>`: automated tax adjustments based
   on customer or supplier registration status.
 - :doc:`Payroll </applications/hr/payroll>`
 - :doc:`Reporting <../accounting/reporting>`
-- :ref:`AvaTax integration <localizations/brazil/avatax-account>`
-- :ref:`Tax computation <localizations/brazil/tax-computation>`
 
 Sales taxes can be automatically computed, and electronic invoices for goods (NF-e) and services
 (NFS-e) can be sent using AvaTax (Avalara) through |API| calls. Moreover, taxes for services can be
@@ -148,111 +144,6 @@ the city where the service is offered.
 .. seealso::
    :doc:`Taxes functional documentation <../accounting/taxes>`
 
-.. _localizations/brazil/products:
-
-Products
---------
-
-To use the AvaTax integration on sales orders and invoices, enter the following information in the
-:guilabel:`Sales` tab of the product form under the :guilabel:`Brazil Accounting` section, based on
-how the product will be used.
-
-E-Invoice for goods (NF-e)
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-- :guilabel:`CEST Code`: code for products subject to ICMS tax substitution
-- :guilabel:`Mercosul NCM Code`: Mercosur Common Nomenclature Product Code
-- :guilabel:`Source of Origin`: origin of the product, which can be foreign or domestic, among other
-  possible options, depending on the specific use case
-- :guilabel:`SPED Fiscal Product Type`: fiscal product type according to SPED list table
-- :guilabel:`Purpose of Use`: intended purpose of use for this product
-
-.. image:: brazil/product-configuration.png
-   :alt: Product configuration.
-
-.. note::
-   Odoo automatically creates three products to be used for transportation costs associated with
-   sales. These are named :guilabel:`Freight`, :guilabel:`Insurance`, and :guilabel:`Other Costs`
-   and are already configured. If more need to be created, duplicate and use the same configuration:
-
-   - :guilabel:`Product Type` :guilabel:`Service`
-   - :guilabel:`Transportation Cost Type`: :guilabel:`Insurance`, :guilabel:`Freight`, or
-     :guilabel:`Other Costs`
-
-E-Invoice for services (NFS-e)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-- :guilabel:`Mercosul NCM Code`: Mercosur Common Nomenclature Product Code
-- :guilabel:`Purpose of Use`: intended purpose of use for this product
-- :guilabel:`Service Code Origin`: City Service Code where the provider is registered
-- :guilabel:`Labor Assignment`: checkbox to select if service involves labor
-- :guilabel:`Transport Cost Type`: type of transport costs to select
-- :guilabel:`Service Codes`: City Service Code where the service will be provided; if no code is
-  added, the :guilabel:`Service Code Origin` will be used.
-
-.. _localizations/brazil/company-and-contacts:
-
-Company and contacts
---------------------
-
-To use all the features of this fiscal localization, the following fields are required on the
-:doc:`company record </applications/general/companies>`:
-
-- :guilabel:`Name`
-- :guilabel:`Address`: add :guilabel:`City`, :guilabel:`State`, :guilabel:`Zip Code`,
-  :guilabel:`Country`
-
-  - In the :guilabel:`Street` field, enter the street name, number, and any additional address
-    information.
-  - In the :guilabel:`Street 2` field, enter the neighborhood.
-
-- :guilabel:`Identification Number`: :guilabel:`CNPJ` or :guilabel:`CPF`
-- :guilabel:`Tax ID`: associated with the identification type
-- :guilabel:`IE`: State registration
-- :guilabel:`IM`: Municipal registration
-- :guilabel:`SUFRAMA code`: Superintendence of the Manaus Free Trade Zone - add if applicable
-- :guilabel:`Phone`
-- :guilabel:`Email`
-
-   .. image:: brazil/contact-configuration.png
-      :alt: Company configuration.
-
-Configure the :guilabel:`Fiscal Information` within the :guilabel:`Sales and Purchase` tab:
-
-   - Add the :guilabel:`Fiscal Position` for :ref:`AvaTax Brazil
-     <localizations/brazil/fiscal-positions>`.
-   - :guilabel:`Tax Regime`: Federal Tax Regime
-   - :guilabel:`ICMS Taxpayer Type`: indicates :guilabel:`ICMS regime`, :guilabel:`Exempt status`,
-     or :guilabel:`Non-Taxpayer`
-   - :guilabel:`Main Activity Sector`
-
-   .. image:: brazil/contact-fiscal-configuration.png
-      :alt: Company fiscal configuration.
-
-Configure the following extra :guilabel:`Fiscal Information` to issue NFS-e:
-
-   - Add the :guilabel:`Fiscal Position` for :ref:`AvaTax Brazil
-     <localizations/brazil/fiscal-positions>`.
-   - :guilabel:`COFINS Details`: :guilabel:`Taxable, Not Taxable, Taxable with rate 0%, Exempt,
-     Suspended`
-   - :guilabel:`PIS Details` :guilabel:`Taxable, Not Taxable, Taxable with rate 0%, Exempt,
-     Suspended`
-   - :guilabel:`CSLL Taxable` if the company is subject to CSLL or not
-
-   .. image:: brazil/contact-fiscal-configuration-nfse.png
-      :alt: Company fiscal configuration for NFSe.
-
-.. note::
-   If it is a simplified regime, the ICMS rate under :menuselection:`Accounting --> Configuration
-   --> Settings --> Taxes --> AvaTax Brazil` must be configured.
-
-The same configuration applies to the relevant :doc:`contact <../../essentials/contacts>` form when
-using the AvaTax integration.
-
-.. note::
-   Select the :guilabel:`Company` option for a contact with a tax ID (CNPJ), or check
-   :guilabel:`Individual` for a contact with a CPF.
-
 .. _localizations/brazil/fiscal-positions:
 
 Fiscal positions
@@ -274,10 +165,110 @@ The :doc:`fiscal positions <../accounting/taxes/fiscal_positions>` can be config
 - or when creating a sales order or an invoice, in the :guilabel:`Other Info` tab under the
   :guilabel:`Invoicing` or :guilabel:`Accounting` section.
 
+.. _localizations/brazil/company-and-contacts:
+
+Company and contacts
+====================
+
+To use all the features of this fiscal localization, the following fields are required on the
+:doc:`company record </applications/general/companies>`:
+
+- :guilabel:`Name`
+- :guilabel:`Address`: add :guilabel:`City`, :guilabel:`State`, :guilabel:`Zip Code`,
+  :guilabel:`Country`
+
+  - In the :guilabel:`Street` field, enter the street name, number, and any additional address
+    information.
+  - In the :guilabel:`Street 2` field, enter the neighborhood.
+
+- :guilabel:`Identification Number`: :guilabel:`CNPJ` or :guilabel:`CPF`
+- :guilabel:`Tax ID`: associated with the identification type
+- :guilabel:`IE`: State registration
+- :guilabel:`IM`: Municipal registration
+- :guilabel:`SUFRAMA code`: Superintendence of the Manaus Free Trade Zone - add if applicable
+- :guilabel:`Phone`
+- :guilabel:`Email`
+
+Configure the :guilabel:`Fiscal Information` within the :guilabel:`Sales and Purchase` tab:
+
+   - Add the :guilabel:`Fiscal Position` for :ref:`AvaTax Brazil
+     <localizations/brazil/fiscal-positions>`.
+   - :guilabel:`Tax Regime`: Federal Tax Regime
+   - :guilabel:`ICMS Taxpayer Type`: indicates :guilabel:`ICMS regime`, :guilabel:`Exempt status`,
+     or :guilabel:`Non-Taxpayer`
+   - :guilabel:`Main Activity Sector`
+
+Configure the following extra :guilabel:`Fiscal Information` to issue NFS-e:
+
+   - Add the :guilabel:`Fiscal Position` for :ref:`AvaTax Brazil
+     <localizations/brazil/fiscal-positions>`.
+   - :guilabel:`COFINS Details`: :guilabel:`Taxable, Not Taxable, Taxable with rate 0%, Exempt,
+     Suspended`
+   - :guilabel:`PIS Details` :guilabel:`Taxable, Not Taxable, Taxable with rate 0%, Exempt,
+     Suspended`
+   - :guilabel:`CSLL Taxable` if the company is subject to CSLL or not
+
+.. note::
+   If it is a simplified regime, the ICMS rate must be configured under :menuselection:`Accounting
+   --> Configuration --> Settings`, in the :guilabel:`AvaTax Brazil` section of :guilabel:`Taxes`.
+
+The same configuration applies to the relevant :doc:`contact <../../essentials/contacts>` form when
+using the AvaTax integration.
+
+.. note::
+   Select the :guilabel:`Company` option for a contact with a tax ID (CNPJ), or check
+   :guilabel:`Individual` for a contact with a CPF.
+
+.. _localizations/brazil/products:
+
+Products
+========
+
+To use the AvaTax integration on sales orders and invoices, enter the following information in the
+:guilabel:`Sales` tab of the product form under the :guilabel:`Brazil Accounting` section, based on
+how the product will be used.
+
+.. _localizations/brazil/e-invoice-goods:
+
+E-Invoice for goods (NF-e)
+--------------------------
+
+- :guilabel:`CEST Code`: tax classification code identifying goods and products subject to tax
+  substitution under ICMS regulations and helps determine the applicable tax treatment and
+  procedures for specific items. The product's applicability to this requirement can be verified at
+  https://www.codigocest.com.br/.
+- :guilabel:`Mercosul NCM Code`: Mercosur Common Nomenclature Product Code
+- :guilabel:`Source of Origin`: origin of the product, which can be foreign or domestic, among other
+  possible options, depending on the specific use case
+- :guilabel:`SPED Fiscal Product Type`: fiscal product type according to SPED list table
+- :guilabel:`Purpose of Use`: intended purpose of use for this product
+
+.. note::
+   Odoo automatically creates three products to be used for transportation costs associated with
+   sales. These are named :guilabel:`Freight`, :guilabel:`Insurance`, and :guilabel:`Other Costs`
+   and are already configured. If more need to be created, duplicate and use the same configuration:
+
+   - :guilabel:`Product Type` :guilabel:`Service`
+   - :guilabel:`Transportation Cost Type`: :guilabel:`Insurance`, :guilabel:`Freight`, or
+     :guilabel:`Other Costs`
+
+.. _localizations/brazil/e-invoice-services:
+
+E-Invoice for services (NFS-e)
+------------------------------
+
+- :guilabel:`Mercosul NCM Code`: Mercosur Common Nomenclature Product Code
+- :guilabel:`Purpose of Use`: intended purpose of use for this product
+- :guilabel:`Service Code Origin`: City Service Code where the provider is registered
+- :guilabel:`Labor Assignment`: checkbox to select if service involves labor
+- :guilabel:`Transport Cost Type`: type of transport costs to select
+- :guilabel:`Service Codes`: City Service Code where the service will be provided; if no code is
+  added, the :guilabel:`Service Code Origin` will be used.
+
 .. _localizations/brazil/avatax-account:
 
 AvaTax integration
-------------------
+==================
 
 Avalara AvaTax is a tax calculation and electronic invoicing provider that can be integrated into
 Odoo to compute taxes automatically. It considers the company, contact (customer), product, and
@@ -301,12 +292,12 @@ invoice number range), an API call is made using credits from the `IAP credit ba
 .. _localizations/brazil/credential-configuration:
 
 Credential configuration
-~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------
 
 To activate AvaTax in Odoo, an account must be created. To do so, go to :menuselection:`Accounting
---> Configuration --> Settings --> Taxes`. In the :guilabel:`AvaTax Brazil` section, add the
-administration Email address for the AvaTax portal in :guilabel:`AvaTax Portal Email`, and click
-:icon:`fa-plug` :guilabel:`Create account`.
+--> Configuration --> Settings` and navigate to the :guilabel:`Taxes` section. In the
+:guilabel:`AvaTax Brazil` section, add the administration Email address for the AvaTax portal in
+:guilabel:`AvaTax Portal Email`, and click :icon:`fa-plug` :guilabel:`Create account`.
 
 .. warning::
    When **testing** or **creating a production** :guilabel:`AvaTax Portal Email` integration in a
@@ -349,7 +340,7 @@ After the account is created from Odoo, go to the Avalara Portal to set up the p
 .. _localizations/brazil/certificate-upload:
 
 A1 certificate upload
-~~~~~~~~~~~~~~~~~~~~~
+---------------------
 
 To issue electronic invoices, a certificate must be uploaded to the `AvaTax portal
 <https://portal.avalarabrasil.com.br/Login>`_.
@@ -445,9 +436,6 @@ if the :guilabel:`Use Documents?` field is selected on the journal.
 When issuing electronic and non-electronic invoices, the :guilabel:`Type` field selects the document
 type used when creating the invoice.
 
-.. image:: brazil/journal-configuration.png
-   :alt: Journal configuration with the Use Documents? field checked.
-
 .. note::
    When creating the journal, ensure the :guilabel:`Dedicated Credit Note Sequence` field in the
    :guilabel:`Accounting Information` section is unchecked, as in Brazil, sequences between
@@ -466,7 +454,7 @@ and taxes must be computed by Avalara. The following fields must be filled out:
 - :guilabel:`Document Type` set as :guilabel:`(55) Electronic Invoice (NF-e)` or :guilabel:`(SE)
   Electronic Service Invoice (NFS-e)`.
 
-And in the :guilabel:`Other Info` tab:
+:guilabel:`Other Info` tab:
 
 - :guilabel:`Fiscal Position` set as :guilabel:`Automatic Tax Mapping (Avalara Brazil)`.
 
@@ -476,12 +464,6 @@ government when the invoice is submitted:
 
 - :guilabel:`Freight Model` determines how the goods are planned to be transported - domestic.
 - :guilabel:`Transporter Brazil` determines who is doing the transportation.
-
-.. image:: brazil/invoice-info-needed.png
-   :alt: Invoice information needed to process an electronic invoice.
-
-.. image:: brazil/process-electronic-invoice.png
-   :alt: Process electronic invoice pop-up in Odoo.
 
 Then, click :guilabel:`Send`. In the :guilabel:`Print & Send` window, click :guilabel:`Process
 e-invoice` and any other options - :guilabel:`Download` or :guilabel:`Email`. Finally, click
@@ -544,9 +526,6 @@ To cancel an e-invoice for goods (NF-e) in Odoo, click :guilabel:`Request Cancel
 cancellation :guilabel:`Reason` on the pop-up that appears. To send this cancellation reason to the
 customer via Email, enable the :guilabel:`E-mail` checkbox.
 
-.. image:: brazil/invoice-cancellation.png
-   :alt: Invoice cancellation reason in Odoo.
-
 .. note::
    This is an electronic cancellation, which means that Odoo will send a request to the government
    to cancel the NF-e. It will then consume one |IAP| credit, as an |API| call occurs.
@@ -573,9 +552,6 @@ To do so in Odoo, click :guilabel:`Correction Letter` and add a correction :guil
 pop-up that appears. To send the correction reason to a customer via Email, enable the
 :guilabel:`E-mail` checkbox.
 
-.. image:: brazil/correction-letter.png
-   :alt: Correction letter reason in Odoo.
-
 .. note::
    Correction letters are only available for electronic invoices for goods (NF-e).
 
@@ -590,12 +566,6 @@ click the :icon:`fa-cog` (gear) icon, and select :guilabel:`Invalidate Number Ra
 :guilabel:`Invalidate Number Range (BR)` wizard, add the :guilabel:`Initial Number` and
 :guilabel:`End Number` of the range that should be cancelled, and enter an invalidation
 :guilabel:`Reason`.
-
-.. image:: brazil/range-number-invalidation.png
-   :alt: Number range invalidation selection in Odoo.
-
-.. image:: brazil/range-number-invalidation-wizard.png
-   :alt: Number range invalidation wizard in Odoo.
 
 .. note::
    Invalidate invoice number range documents are only available for electronic invoices for goods
@@ -626,10 +596,10 @@ These Brazilian-specific fields are:
 Point of sale NFC-e
 ===================
 
-The NFC-e is a legal document that supports selling goods or merchandise to the final customer.
-Like the :ref:`NF-e <localizations/brazil/e-invoice-goods-nf-e>`, the electronic customer invoice is
-also issued in XML file format and has an auxiliary document (DANFC-e) known as the *NFC-e Summary*.
-This electronic document can be issued through **Odoo Point of Sale app**.
+The NFC-e is a legal document that supports selling goods or merchandise to the final customer. Like
+the :ref:`NF-e <localizations/brazil/e-invoice-goods-nf-e>`, the electronic customer invoice is also
+issued in XML file format and has an auxiliary document (DANFC-e) known as the *NFC-e Summary*. This
+electronic document can be issued through **Odoo Point of Sale app**.
 
 Its legal validity is guaranteed by the digital signature and by each Brazilian state's SEFAZ
 (Secretaria da Fazenda).
@@ -643,7 +613,7 @@ Configuration
 -------------
 
 :ref:`Install <general/install>` the :guilabel:`Brazilian Accounting EDI for POS` (`l10nbr_edi_pos`)
-module.
+module and make sure to activate :ref:`AvaTax <localizations/brazil/avatax-account>`.
 
 .. _localizations/brazil/pos-csc-details:
 
@@ -655,8 +625,8 @@ section. In the :guilabel:`NFC-e configuration` section, complete the following 
 Security Code) fields:
 
 - :guilabel:`CSC ID`: The *CSC ID* or *CSC Token* is an identification of the taxpayer security
-  code, which can have 1 to 6 digits and is available on your state's website of State Department of
-  Finance (SEFAZ).
+  code, which can have 1 to 6 digits and is available on the official website of your state’s
+  Department of Finance (SEFAZ).
 - :guilabel:`CSC Number`: The *CSC Number* is a code of up to 36 characters that only you and the
   Department of Finance know. It is used to generate the QR Code of the NFC-e and ensure the
   authenticity of the DANFE.
@@ -670,56 +640,46 @@ Security Code) fields:
 Product configuration
 ---------------------
 
-First, :doc:`create a new product in POS <../../sales/point_of_sale/configuration>`, then in the
-:guilabel:`Sales` tab, configure the following :guilabel:`Brazil Accounting` fields:
-
-- :guilabel:`CEST Code`: A tax classification code identifying goods and products subject to tax
-  substitution under ICMS regulations. It helps determine the applicable tax treatment and
-  procedures for specific items. Check if the product is subject to this at
-  https://www.codigocest.com.br/.
-- :guilabel:`Mercosul NCM Code`: NCM (Nomenclatura Comun do Mercosul) code from the Mercosur list.
-- :guilabel:`Source of Origin`: Indicates whether the product is of foreign or national origin, with
-  different variations and characteristics depending on the product use case.
-- :guilabel:`SPED Fiscal Product Type`: Fiscal product type according to the SPED list table.
-- :guilabel:`Purpose of Use`: Shows what this product is used for.
+Access the relevant :doc:`product form in POS <../../sales/point_of_sale/configuration>`, then
+configure the :ref:`product <localizations/brazil/products>`'s :guilabel:`Brazil Accounting`
+fields.
 
 .. _localizations/brazil/pos-shop-configuration:
 
-Shop configuration
-------------------
+Point of sale
+-------------
 
-Go to :menuselection:`Point of Sale --> Configuration --> Point of Sales` and create a
-:guilabel:`New` shop. Choose an internal name for the new POS and save.
-
-Then, go to :menuselection:`Point of Sale --> Configuration --> Settings` and make sure that the
-correct Point of Sale is :doc:`selected at the top of the screen
-<../../sales/point_of_sale/configuration>`. Then, scroll to the :guilabel:`Accounting` section and
-configure the :guilabel:`Brazilian EDI` fields:
+Go to :menuselection:`Point of Sale --> Configuration --> Settings` and make sure that the relevant
+Point of Sale is :doc:`selected at the top of the screen <../../sales/point_of_sale/configuration>`.
+Then, scroll to the :guilabel:`Accounting` section and configure the :guilabel:`Brazilian EDI`
+fields:
 
 - :guilabel:`Series`
 - :guilabel:`Next number`: the next NFC-e number in the sequence to be issued, for instance, if the
   last number issued in SEFAZ is `100`, the *Next number* will be `101`.
 
-.. note::
-   For the production environment, make sure that this information is updated.
+.. _localizations/brazil/pos-workflow:
+
+Workflow
+--------
 
 .. _localizations/brazil/generate-nfc-e:
 
 Generating an NFC-e
--------------------
+~~~~~~~~~~~~~~~~~~~
 
-First, :ref:`open the Shop and make a sale <pos/session-start>`.
+To generate an NFC-e, follow these steps:
 
-After validating the payment, Odoo calculates taxes and issues an NFC-e. The valid NFC-e appears on
-the right side of the screen.
+#. :ref:`Open the relevant point of sale shop and make a sale <pos/session-start>`.
+#. Validate the payment to calculate taxes and issue an NFC-e. The valid NFC-e appears on the right
+   side of the screen.
 
 .. image:: brazil/l10n-br-nfce-succesfully-issued.png
    :alt: NFC-e Success in a POS session.
 
 .. note::
-   It is also possible to issue an NFC-e that identifies the customer by their CPF/CNPJ. To do so,
-   click :icon:`fa-user` :guilabel:`Customer`, search for the customer if they are already
-   registered, or click :guilabel:`Create`.
+   It is also possible to issue an NFC-e that identifies the customer by their CPF/CNPJ. To do
+   so, click :icon:`fa-user` :guilabel:`Customer`, search for the customer or create a new one.
 
    The following are mandatory fields to issue a CPF/CNPJ identified NFC-e:
 
@@ -727,49 +687,39 @@ the right side of the screen.
    - :guilabel:`City` and :guilabel:`State` where the invoice is being issued
    - :guilabel:`CPF/CNPJ`
 
-After saving the register, click :guilabel:`Validate`. The NFC-e appears, highlighting the
-customer's CPF on the print.
-
-Finally, select one of the two options to deliver the invoice to the customer:
-
-- :guilabel:`Print`
-- :guilabel:`Send via e-mail`
+#. Click :guilabel:`Validate`. The NFC-e appears, highlighting the customer's CPF on the print.
+#. Click :guilabel:`Print` or :guilabel:`Send via e-mail` to deliver the invoice to the customer.
 
 .. _localizations/brazil/nfc-e-print:
 
 NFC-e ticket print
-------------------
+~~~~~~~~~~~~~~~~~~
 
 After :ref:`generating and validating the NFC-e <localizations/brazil/generate-nfc-e>`, click
 :guilabel:`Print` to deliver the invoice.
 
-.. example::
-   .. figure:: brazil/l10n-br-nfc-e-print.png
-      :alt: Printed NFC-e ticket example.
-
-      This is the DANFC-e, the print of NFC-e when it is successfully issued, and shows all the
-      important information that is legally required.
-
-.. tip::
-   #. Using an :doc:`Odoo IoT Box <../../general/iot>` to integrate the print NFC-e through the
-      **Point of Sale** app is unnecessary.
-   #. The Odoo NFC-e feature works with any thermal printer.
+.. note::
+   The Odoo NFC-e feature is compatible with any thermal printer and does not require the use of an
+   :doc:`Odoo IoT Box <../../general/iot>`.
 
 .. _localizations/brazil/order-with-nfc-e-error:
 
 Re-issue PoS order with NFC-e error
------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If the NFC-e returns an error, correct the error first. Then, to re-issue the NFC-e, click the
-:icon:`fa-bars` :guilabel:`(menu)` icon and select :guilabel:`Orders`.
+If the NFC-e returns an error, follow these steps:
 
-Filter the list to show only :guilabel:`Paid` orders and click :guilabel:`Details`. The error will
-then be displayed, and the :guilabel:`Send NFC-e` button will be available.
+#. Correct the error.
+#. Re-issue the NFC-e by clicking the :icon:`fa-bars` :guilabel:`(menu)` icon and selecting
+   :guilabel:`Orders`.
+#. Filter the list to show only :guilabel:`Paid` orders and click :guilabel:`Details`. The error is
+   displayed.
+#. Click :guilabel:`Send NFC-e`.
 
 .. note::
-   If the error was fixed and the PoS Session was closed, Odoo indicates the tax adjustment on that
-   journal entry in the chatter. The order's journal entry shows that the taxes were not calculated
-   correctly. In that case, reprocessing the NFC-e is necessary.
+   If the error has been corrected and the PoS session is closed, Odoo logs the tax adjustment in
+   the chatter of the related journal entry. The journal entry for the order indicates that the
+   taxes were incorrectly calculated. In this case, reprocessing the NFC-e is required.
 
 .. image:: brazil/l10n-br-order-error-screen.png
    :alt: Point of sale order view form.
@@ -777,28 +727,18 @@ then be displayed, and the :guilabel:`Send NFC-e` button will be available.
 .. _localizations/brazil/nfc-e-refunds-cancellations:
 
 NFC-e refunds & cancellations
------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-*Refunds* can be created from Odoo, but *cancellations* must be done from the government portal.
-
-.. important::
-   SEFAZ only allows cancellation of an NFC-e **within 30 minutes** of its issuance on the SEFAZ
-   website. After this period, a manual refund must be processed, along with the issuance of a
-   *Return of Goods NF-e*.
-
-To issue a refund, click the :icon:`fa-bars` :guilabel:`(menu)` icon and select :guilabel:`Orders`.
-Filter the list to show only :guilabel:`Paid` orders, open the order, and click :guilabel:`Refund`.
-
-Choose the :guilabel:`Payment method` and :guilabel:`Amount`, then click :guilabel:`Refund payment`.
-
-.. note::
-   Alternatively, to reimburse and cancel the NFC-e through the backend, go to
-   :menuselection:`Point of Sale --> Orders --> Orders`. Open the order, select the customer,
-   and click :guilabel:`Payment` to reimburse. Then click :guilabel:`Invoice` to create the invoice
-   and issue the *Return of Goods NF-e*.
+:ref:`Refunds can be processed directly in Odoo <pos/refund>`, but *cancellations* must be performed
+through the official government portal.
 
 When the process is finalized, the approved return NF-e is created, meaning the **previous NFC-e is
 canceled**.
 
 .. image:: brazil/l10n-br-return-succeed.png
    :alt: Return of Goods NF-e Approved.
+
+.. important::
+   SEFAZ only allows cancellation of an NFC-e **within 30 minutes** of its issuance on the SEFAZ
+   website. After this period, a manual refund must be processed, along with the issuance of a
+   *Return of Goods NF-e*.

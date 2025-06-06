@@ -99,24 +99,26 @@ under the related product.
 Return and refund products
 ==========================
 
-To return and refund a product,
+To refund a returned product, follow these steps:
 
-#. :ref:`start a session <pos/session-start>` from the **POS dashboard**;
-#. click :guilabel:`Refund` and select the corresponding order;
-#. select the product and the quantity to refund using the keypad;
-#. click :guilabel:`Refund` to go back to the previous screen;
-#. once the order is completed, click :guilabel:`Payment` to proceed to the refund;
-#. click :guilabel:`Validate` and :guilabel:`New Order` to move on to the next customer.
+#. :ref:`Start a session <pos/session-start>` from the **POS dashboard**.
+#. Click :guilabel:`Actions`, then :icon:`fa-undo` :guilabel:`Refund`, and select the corresponding
+   order.
+#. Use the keypad to select the product and to update the quantity to refund, then click
+   :guilabel:`Refund`.
+#. Click :guilabel:`Payment` and select the appropriate refund payment method.
+#. Click :guilabel:`Validate` and print the receipt if needed.
+#. Click :guilabel:`New Order` to proceed to the next customer.
 
-.. image:: point_of_sale/refund.png
-   :alt: refund view from a POS
+.. tip::
+   To filter the **orders list** by :guilabel:`Order number`, :guilabel:`Receipt Number`,
+   :guilabel:`Date`, or :guilabel:`Customer`, enter a value in the search bar and choose the
+   relevant filter from the dropdown menu.
 
 .. note::
-   - You can filter the **orders list** by :guilabel:`Receipt Number`, :guilabel:`Date` or
-     :guilabel:`Customer` using the search bar.
-   - You can also refund a product by selecting the returned product from an open session, and
-     setting a negative quantity that equals the number of returned products. To do so, click
-     :guilabel:`Qty` and :guilabel:`+/-`, followed by the quantity of returned products.
+   Alternatively, a refund can be processed by selecting the returned product(s) from an open
+   session and setting a negative quantity equal to the number of returned items. To do so, click
+   :guilabel:`Qty` and :guilabel:`+/-`, and update the quantity accordingly.
 
 Once the return payment is validated, Odoo generates the required credit note, referencing the
 original receipt or invoice and partially or fully canceling the document.
