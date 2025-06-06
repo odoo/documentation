@@ -684,7 +684,7 @@ To set up the fiscal printer using the keyboard, follow these steps:
 #. Make sure the fiscal printer is set to its default state: printer on, start-up cycle complete,
    and no transaction in progress.
 #. Type `3333`.
-#. Press :guilabel:`Chiave`. The screen displays :guilabel:`Scleta Funzione`.
+#. Press :guilabel:`Chiave`. The screen displays :guilabel:`Scelta Funzione`.
 #. Type `34`. The screen displays :guilabel:`Web Server`.
 #. Press :guilabel:`Contante` 3 times until the screen displays :guilabel:`Web Server: SSL`.
 #. To turn the value `0` into a `1`, press :guilabel:`X`.
