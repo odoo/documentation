@@ -167,7 +167,7 @@ navigating the recurring revenue sources attached to the plan:
   a respective subscriptions sales order.
 - :guilabel:`Subscription Items`: lists all the individual recurring subscription services that are
   active, in an itemized fashion. :guilabel:`Subscription` and :guilabel:`Customer` values will
-  repeat it the customer ordered multiple subscriptions on the same sales order.
+  repeat if the customer ordered multiple subscriptions on the same sales order.
 
 Product form configuration
 ==========================
