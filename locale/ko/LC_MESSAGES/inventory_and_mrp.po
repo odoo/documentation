@@ -65,6 +65,9 @@ msgid ""
 "designated locations, scan product barcodes, and adjust quantities as "
 "needed."
 msgstr ""
+"*재고 조정* 또는 재고 감사란, 데이터베이스에 기록된 수량과 실물 제품 재고를 대조하여 확인하는 절차입니다. 정기적인 감사를 통해 재고"
+" 기록을 정확하게 관리하고 재고 불일치 발생을 방지하며 효율적으로 운영할 수 있습니다. 일반적인 창고 환경에서 관리자가 직원에게 재고 "
+"수량을 특정하여 지시하면, 직원이 지정된 위치로 이동하여 제품 바코드를 스캔하고 필요에 따라 수량을 조정합니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:11
 msgid ""
@@ -299,6 +302,9 @@ msgid ""
 " units in the adjustment. Additional products can be added to this "
 "adjustment by scanning the barcodes for those specific products."
 msgstr ""
+"아래의 재고 조정 예시에서는 출고지인 `WH/Stock/Shelf/1` 을 스캔하여 위치를 지정했습니다. 그런 다음, "
+"'[FURN_7888] 스크린이 있는 책상 스탠드' 품목 바코드를 세 번 스캔하여 개수를 늘리는 조정 작업을 했습니다. 이와 같이 "
+"조정하여 품목 바코드를 스캔하는 방식으로 품목을 추가할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/operations/adjustments.rst:0
 msgid "Barcode Inventory Client Action page with inventory adjustment."
@@ -10616,6 +10622,9 @@ msgid ""
 "high-volume, low-risk products or fast-moving operations where additional "
 "validation steps aren’t necessary."
 msgstr ""
+"*원스텝 재고 흐름* 은 가장 간단한 옵션으로, 처리 단계 및 추적 가능성이 가장 낮게 설정되어 있습니다. 이렇게 설정할 경우, 제품이 "
+"공급업체에서 재고로 또는 재고에서 고객에게 직접 이동하며, Odoo는 품목의 창고 입출고에 대해서만 추적합니다. 따라서 대량의 위험도가 "
+"낮은 제품이나 추가적인 검증 절차가 불필요한 신속한 운영 환경의 비즈니스에 이상적입니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:26
 msgid "**Receiving**: Products go directly into stock."
@@ -10648,6 +10657,10 @@ msgid ""
 "picking and stocking, while dedicated teams handle unboxing, (possibly) "
 "packing, and final verification to reduce order fulfillment errors."
 msgstr ""
+"*2단계 흐름* 에서는 입출고 영역이 추가되어 보관 또는 배송 전에 제품을 처리할 수 있습니다. 입고된 제품에 대해서는 진열 전에 개봉 "
+"및 검사가 가능하며, 출고된 제품은 발송 전에 분류 및 통합을 할 수 있습니다. 이와 같이 설정함으로써 효율성을 향상시킬 수 있으며, "
+"이를테면 보관 팀은 피킹 및 재고 관리에 배정되고, 별도 전담 팀이 개봉, (필요한 경우) 포장 및 최종 검증을 담당하여 주문 처리 "
+"오류를 줄일 수 있게 됩니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:43
 msgid ""
@@ -27302,6 +27315,8 @@ msgid ""
 " the |SO| which triggered its purchase. It can be used to fulfill that |SO|,"
 " or reserved for a different order."
 msgstr ""
+"공급업체에서 제품을 수령하면 예상 수량은 `0.00`으로 되돌아갑니다. 현재 보유 중인 재고는 1개이지만, |SO| 에 따로 예약이 되어"
+" 자동 구매로 연결되지는 않습니다. 해당 |SO|를 처리하거나 다른 주문을 예약도록 사용할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:208
 msgid "Trigger"
@@ -27717,6 +27732,9 @@ msgid ""
 "product's replenishment process. The total of these lead times, added to the"
 " current date, determines when Odoo checks for demanded stock."
 msgstr ""
+"*예상일* 은 지금 제품을 주문할 경우 가장 빨리 수령할 수 있는 제품 입고일입니다. 예상일 계산은 제품 보충과 관련된 프로세스에 "
+"소요되는 리드타임을 합산하여 계산됩니다. 해당 리드타임의 합계를 현재 날짜에 더하면 필요로 하는 재고를 Odoo에서 확인할 수 있는 "
+"시기가 결정됩니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:426
 msgid ""
@@ -33215,6 +33233,10 @@ msgid ""
 ":icon:`fa-trash-o` :guilabel:`(trash)` icon. To create a new time range, "
 "click :guilabel:`Add a line` at the bottom of the list."
 msgstr ""
+"새로운 근무 시간 자료를 만들려면 :guilabel:`신규` 버튼을 클릭한 후 이름을 지정하세요. 여기에서 :guilabel:`근무 "
+"시작일` 또는 :guilabel:`근무 종료일` 값을 수정하면 시간 범위를 조정할 수 있습니다. 줄을 제거하려면 :icon:`fa-"
+"trash-o` :guilabel:`(휴지통)` 아이콘을 클릭하세요. 새로운 시간 범위를 생성하려면 목록 하단의 :guilabel:`줄 "
+"추가 `를 클릭합니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:65
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:95
@@ -33873,6 +33895,9 @@ msgid ""
 "kits, and often include production operations and step-by-step guidelines, "
 "as well."
 msgstr ""
+"*자재 명세서*(또는 줄여서 *BoM*)는 특정한 구성품 및 그 수량을 문서화한 것으로, 제품 생산이나 수리에 필요한 요소에 대한 "
+"내용입니다. Odoo에서 |BoM| 은 생산된 제품 및 키트의 청사진과 같은 역할을 하며, 생산 작업 및 단계별 지침까지 포함하는 경우가"
+" 많습니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/basic_setup/bill_configuration.rst:15
 msgid "BoM setup"
@@ -41134,6 +41159,9 @@ msgid ""
 "created, a :guilabel:`Scraps` smart button appears at the top of the screen."
 " Click it to view a list of all scrap orders for the |MO|."
 msgstr ""
+":guilabel:`제품 폐기` 팝업창에 내용을 입력한 후 :guilabel:`제품 폐기` 버튼을 클릭합니다. 한 건 혹은 여러 건의 "
+"폐기주문서가 생성될 경우 화면 상단에 :guilabel:`폐기` 스마트 버튼이 나타납니다. 이 버튼을 클릭하면 해당 |MO| 에 대한 "
+"모든 폐기주문서 목록을 볼 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/split_merge.rst:3
 msgid "Split and merge manufacturing orders"
@@ -42346,6 +42374,10 @@ msgid ""
 " each discipline to focus only on those changes that require their domain "
 "expertise."
 msgstr ""
+"전자 칩 제조업체에서 사용되는 |ECO| 유형에는 다섯 가지가 있으며, 여기에는 `신제품 출시`, `BOM 업데이트`, `구성품 변경`,"
+" `제품 개선`, `펌웨어 업데이트` 가 포함되어 있습니다. 환경설정 작업을 통해 엔지니어는 |ECO| 유형이 `구성품 변경` 및 "
+"`펌웨어 업데이트` 인 경우에만 작업할 수 있으며, 설계자는 |ECO| 유형이 `신제품 출시` 인 경우에 이 내용을 확인하여 각 부서의 "
+"전문 지식을 요하는 변경 사항에만 집중할 수 있도록 합니다."
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:0
 msgid "Example of several custom ECO types."
@@ -43158,6 +43190,9 @@ msgid ""
 "instruction titled `New Step Suggestion:`, followed by the user-entered "
 "title. Click the line item to view the suggested changes."
 msgstr ""
+"수정된 |BOM| 에 있는 :guilabel:`작업` 탭으로 전환하여, :icon:`fa-list-ul` :guilabel:`(지침 "
+"표시)` 아이콘을 선택합니다. 이렇게 하면 작업용 :guilabel:`단계` 목록이 열리고, `새 단계 제안:` 이라는 제목의 최신 "
+"지침과 함께 사용자가 입력한 제목이 차례로 표시됩니다. 줄에 있는 항목을 클릭하면 제안 변경 사항을 확인할 수 있습니다."
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/engineering_change_orders.rst-1
 msgid "\"Show Instructions\" icon in the *Operations* tab of a BoM."
