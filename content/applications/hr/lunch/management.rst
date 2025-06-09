@@ -2,7 +2,7 @@
 Lunch management
 ================
 
-In Odoo's *Lunch* application, it is required to have someone manage the orders, vendors, and
+In Odoo's **Lunch** application, it is required to have someone manage the orders, vendors, and
 products. In addition, someone must be responsible for the orders, and notifying employees when
 their orders have arrived. This can be the same person.
 
@@ -11,16 +11,16 @@ Orders can be :ref:`cancelled <lunch/cancel>`, :ref:`sent to the vendor <lunch/s
 <lunch/notify>`, either from the :ref:`Today's Orders <lunch/todays-orders>` dashboard, or the
 :ref:`Control Vendors <lunch/control_vendors>` dashboard.
 
-To manage the *Lunch* app, users need the appropriate :guilabel:`Administrator` rights. These can be
-set by navigating to the :menuselection:`Settings app` and selecting :guilabel:`Manage Users`. Then,
-click on the desired user to view their access rights.
+To manage the **Lunch** app, users need the appropriate :guilabel:`Administrator` rights. These can
+be set by navigating to the :menuselection:`Settings app` and selecting :guilabel:`Manage Users`.
+Then, click on the desired user to view their access rights.
 
 For more information on access rights, refer to the :doc:`Access rights
 <../../general/users/access_rights/>` documentation.
 
 .. note::
    Only users with administration rights are able to view the :guilabel:`Manager` and
-   :guilabel:`Configuration` menus in the *Lunch* application.
+   :guilabel:`Configuration` menus in the **Lunch** application.
 
 .. _lunch/todays-orders:
 
@@ -47,7 +47,6 @@ The following information appears in the list:
   multi-company database.
 
 .. image:: management/today.png
-   :align: center
    :alt: The list that appears in the Today's Orders dashboard, with the filters and top column
          names highlighted.
 
@@ -56,19 +55,18 @@ The following information appears in the list:
 Cancel orders
 -------------
 
-All users can cancel an order, not just managers of the *Lunch* app.
+All users can cancel an order, not only managers of the **Lunch** app.
 
 To cancel an order from a vendor, individual products **must** be cancelled one at a time.
 
-On the :guilabel:`Today's Orders` dashboard, a :guilabel:`✖️ Cancel` button is shown at the
-far-right of each product line that can be cancelled. Click the :guilabel:`✖️ Cancel` button to
-cancel the order for that individual product.
+On the :guilabel:`Today's Orders` dashboard, a :icon:`fa-times` :guilabel:`Cancel` button is shown
+at the far-right of each product line that can be cancelled. Click the :icon:`fa-times`
+:guilabel:`Cancel` button to cancel the order for that individual product.
 
 .. note::
    Only products with a red :guilabel:`Status` tag of :guilabel:`Ordered` can be cancelled.
 
 .. image:: management/cancel.png
-   :align: center
    :alt: Order lines with the cancel button highlighted.
 
 .. _lunch/send-orders:
@@ -76,7 +74,7 @@ cancel the order for that individual product.
 Send orders
 -----------
 
-The first step in managing the *Lunch* app is to send the orders to the vendors.
+The first step in managing the **Lunch** app is to send the orders to the vendors.
 
 When orders are ready to be sent, the manager responsible for sending orders **must** send the
 orders to the vendor, outside of the database (call, online order, etc.).
@@ -86,11 +84,10 @@ next to each vendor's name and phone number.
 
 Once sent, the :guilabel:`Send Orders` button changes to a :guilabel:`Confirm Orders` button, and
 the :guilabel:`Status` column is updated from red :guilabel:`Ordered` tags to blue :guilabel:`Sent`
-tags, indicating the order has been sent to the vendor. Users who have placed orders in the *Lunch*
-app rely on the :guilabel:`Status` tags to track their orders.
+tags, indicating the order has been sent to the vendor. Users who have placed orders in the
+**Lunch** app rely on the :guilabel:`Status` tags to track their orders.
 
 .. image:: management/send.png
-   :align: center
    :alt: A vendor's order with the X Cancel and Send Orders buttons highlighted.
 
 .. _lunch/confirm-orders:
@@ -108,28 +105,28 @@ Once confirmed, the :guilabel:`Confirm Orders` button disappears, and the :guila
 is updated from blue :guilabel:`Sent` tags to green :guilabel:`Received` tags, indicating the vendor
 has delivered the orders.
 
-In addition, the :guilabel:`✖️ Cancel` button at the end of each product line changes to a
-:guilabel:`✉️ Send Notification` button.
+In addition, the :icon:`fa-times` :guilabel:`Cancel` button at the end of each product line changes
+to a :icon:`fa-envelope` :guilabel:`Send Notification` button.
 
 If needed, instead of confirming all of the individual products from a vendor, individual products
-can be confirmed one at a time. To confirm an individual product, click the :guilabel:`✔️ Confirm`
-button at the end of the individual product line. When confirming individual products with this
-method, the :guilabel:`Confirm Orders` button remains on the vendor line.
+can be confirmed one at a time. To confirm an individual product, click the :icon:`fa-check`
+:guilabel:`Confirm` button at the end of the individual product line. When confirming individual
+products with this method, the :guilabel:`Confirm Orders` button remains on the vendor line.
 
 .. image:: management/confirm.png
-   :align: center
    :alt: The Today's Orders dashboard, with the two different ways to confirm an order highlighted.
 
 .. example::
    A vendor receives an order for three pizzas, and an order of garlic knots. When the delivery is
-   made to the company, the *Lunch* manager notices the garlic knots are missing.
+   made to the company, the **Lunch** manager notices the garlic knots are missing.
 
    The manager first marks the three pizzas as received, by individually confirming the products
-   with the :guilabel:`✔️ Confirm` button at the end of each product line.
+   with the :icon:`fa-check` :guilabel:`Confirm`  button at the end of each product line.
 
-   Later, when the vendor delivers the garlic knots, the manager can either click the :guilabel:`✔️
-   Confirm` button at the end of the line for the garlic knots, or click the :guilabel:`Confirm
-   Orders` button that appears next to the vendor's name and phone number.
+   Later, when the vendor delivers the garlic knots, the manager can either click the
+   :icon:`fa-check` :guilabel:`Confirm`  button at the end of the line for the garlic knots, or
+   click the :guilabel:`Confirm Orders` button that appears next to the vendor's name and phone
+   number.
 
 .. _lunch/notify:
 
@@ -142,9 +139,9 @@ their orders have been delivered, and are ready to be picked up.
 Unlike sending and confirming orders, notifications must be sent individually, and cannot be sent in
 a batch.
 
-To notify the user their product has arrived, click the :guilabel:`✉️ Send Notification` button at
-the end of each product line. An email is sent to the user informing them their products have been
-delivered.
+To notify the user their product has arrived, click the :icon:`fa-envelope` :guilabel:`Send
+Notification` button at the end of each product line. An email is sent to the user informing them
+their products have been delivered.
 
 .. _lunch/control_vendors:
 
@@ -177,14 +174,13 @@ Orders can be :ref:`cancelled <lunch/cancel>`, :ref:`sent to the vendor <lunch/s
 dashboard.
 
 .. image:: management/control.png
-   :align: center
    :alt: A list view of all the orders as seen in the Control Vendors dashboard.
 
 .. note::
    The difference between the :ref:`Today's Orders <lunch/todays-orders>` dashboard and the
    :ref:`Control Vendors <lunch/control_vendors>` dashboard is that the *Today's Orders* dashboard
    **only** displays orders for the current day, while the :guilabel:`Control Vendors` dashboard
-   displays **all** orders made in the *Lunch* app.
+   displays **all** orders made in the **Lunch** app.
 
 .. seealso::
    - :doc:`../lunch`
