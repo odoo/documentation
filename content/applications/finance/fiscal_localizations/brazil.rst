@@ -173,8 +173,8 @@ E-Invoice for goods (NF-e)
 
    :guilabel:`Example Workflow:`
    Sales order confirmed → 1 credit (tax calculation)
-   Invoice created and confirmed → 1 credit (tax calculation)
-   Invoice submitted → 1 credit (tax calculation) + 1 credit (submit invoice)
+   Invoice created → 1 credit (tax calculation)
+   Invoice confirmed and submitted → 1 credit (tax calculation) + 1 credit (submit invoice)
    → Total: 4 credits
 
    :guilabel:`Occasional Operations: (Each step is billed separately)`
