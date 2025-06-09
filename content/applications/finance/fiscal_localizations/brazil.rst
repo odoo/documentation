@@ -178,9 +178,12 @@ E-Invoice for goods (NF-e)
    → Total: 4 credits
 
    :guilabel:`Occasional Operations: (Each step is billed separately)`
-   - Correction letter (Carta de Correção)
-   - Invoice cancellation
-   - Other tax validations
+   - :ref:`Correction letter (Carta de Correção) <localizations/brazil/correction-letter>`
+   - :ref:`Invoice cancellation <localizations/brazil/invoice-cancellation>`
+   - :ref:`Sales Refund via Credit Note <localizations/brazil/credit-notes>`
+   - :ref:`Sales Complementary Invoice via Debit Note <localizations/brazil/debit-notes>`
+   - :ref:`Invalidate invoice number range <localizations/brazil/invalidate-invoice-number-range>`
+   - Other tax validations.
 
 - :guilabel:`CEST Code`: code for products subject to ICMS tax substitution
 - :guilabel:`Mercosul NCM Code`: Mercosur Common Nomenclature Product Code
@@ -218,14 +221,17 @@ E-Invoice for services (NFS-e)
 
    :guilabel:`Example Workflow:`
    Sales order confirmed → 1 credit (tax calculation)
-   Invoice created and confirmed → 1 credit (tax calculation)
-   Invoice submitted → 1 credit (tax calculation) + 1 credit (submit invoice)
+   Invoice created → 1 credit (tax calculation)
+   Invoice confirmed and submitted → 1 credit (tax calculation) + 1 credit (submit invoice)
    → Total: 4 credits
 
    :guilabel:`Occasional Operations: (Each step is billed separately.)`
-   - Correction letter (Carta de Correção)
-   - Invoice cancellation
-   - Other actions requiring Avalara tax validation
+   - :ref:`Correction letter (Carta de Correção) <localizations/brazil/correction-letter>`
+   - :ref:`Invoice cancellation <localizations/brazil/invoice-cancellation>`
+   - :ref:`Sales Refund via Credit Note <localizations/brazil/credit-notes>`
+   - :ref:`Sales Complementary Invoice via Debit Note <localizations/brazil/debit-notes>`
+   - :ref:`Invalidate invoice number range <localizations/brazil/invalidate-invoice-number-range>`
+   - Other tax validations.
 
 - :guilabel:`Mercosul NCM Code`: Mercosur Common Nomenclature Product Code
 - :guilabel:`Purpose of Use`: intended purpose of use for this product
