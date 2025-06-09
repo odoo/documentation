@@ -160,6 +160,42 @@ how the product will be used.
 E-Invoice for goods (NF-e)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. important::
+   The :ref:`Avalara integration <localizations/brazil/avatax-account>` works on a credit-based
+   system, where each interaction with Avalara consumes one credit. Below are the main
+   credit-consuming operations:
+
+   **Sales application**
+
+   - Tax calculation on quotations and sales orders.
+
+   **Accounting application**
+
+   - Tax calculation on invoices.
+   - Electronic invoice submission (NF-e or NFS-e).
+
+   **Occasional operations**: (each step is billed separately)
+
+   - :ref:`Correction letter (Carta de Correção) <localizations/brazil/correction-letter>`
+   - :ref:`Invoice cancellation <localizations/brazil/invoice-cancellation>`
+   - :ref:`Sales refund via credit note <localizations/brazil/credit-notes>`
+   - :ref:`Sales complementary invoice via debit note <localizations/brazil/debit-notes>`
+   - :ref:`Invalidate invoice number range <localizations/brazil/invalidate-invoice-number>`
+   - Other tax validations.
+
+.. note::
+   If taxes are calculated in the **Sales** app, and the invoice is later issued in the
+   **Accounting** app, the calculation happens twice, consuming two credits.
+
+.. example::
+   | **Sales order confirmed**
+   | :icon:`fa-arrow-down` 1 credit (tax calculation)
+   | **Invoice created**
+   | :icon:`fa-arrow-down` 1 credit (tax calculation)
+   | **Invoice confirmed and submitted**
+   | :icon:`fa-arrow-down` 1 credit (tax calculation) + 1 credit (submit invoice)
+   | **Total: 4 credits**
+
 - :guilabel:`CEST Code`: code for products subject to ICMS tax substitution
 - :guilabel:`Mercosul NCM Code`: Mercosur Common Nomenclature Product Code
 - :guilabel:`Source of Origin`: origin of the product, which can be foreign or domestic, among other
@@ -181,6 +217,43 @@ E-Invoice for goods (NF-e)
 
 E-Invoice for services (NFS-e)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. important::
+   The :ref:`Avalara integration <localizations/brazil/avatax-account>` works on a credit-based
+   system, where each interaction with Avalara consumes 1 credit. Below are the main
+   credit-consuming operations:
+
+   **Sales application**
+
+   - Tax calculation on quotations and sales orders.
+
+   **Accounting application**
+
+   - Tax calculation on invoices.
+   - Electronic invoice submission (NF-e or NFS-e).
+   - Invoice status check (1 credit is consumed each time the invoice status is checked).
+
+   **Occasional operations**: (each step is billed separately)
+
+   - :ref:`Correction letter (Carta de Correção) <localizations/brazil/correction-letter>`
+   - :ref:`Invoice cancellation <localizations/brazil/invoice-cancellation>`
+   - :ref:`Sales refund via credit note <localizations/brazil/credit-notes>`
+   - :ref:`Sales complementary invoice via debit note <localizations/brazil/debit-notes>`
+   - :ref:`Invalidate invoice number range <localizations/brazil/invalidate-invoice-number>`
+   - Other tax validations.
+
+.. note::
+   If taxes are calculated in the **Sales** app, and the invoice is later issued in the
+   **Accounting** app, the calculation happens twice, consuming two credits.
+
+.. example::
+   | **Sales order confirmed**
+   | :icon:`fa-arrow-down` 1 credit (tax calculation)
+   | **Invoice created**
+   | :icon:`fa-arrow-down` 1 credit (tax calculation)
+   | **Invoice confirmed and submitted**
+   | :icon:`fa-arrow-down` 1 credit (tax calculation) + 1 credit (submit invoice)
+   | **Total: 4 credits**
 
 - :guilabel:`Mercosul NCM Code`: Mercosur Common Nomenclature Product Code
 - :guilabel:`Purpose of Use`: intended purpose of use for this product
@@ -633,6 +706,18 @@ This electronic document can be issued through **Odoo Point of Sale app**.
 
 Its legal validity is guaranteed by the digital signature and by each Brazilian state's SEFAZ
 (Secretaria da Fazenda).
+
+.. important::
+   The :ref:`Avalara integration <localizations/brazil/avatax-account>` operates on a credit-based
+   system. Each operation that involves communication with Avalara consumes one credit. The following
+   operations within the **Point of Sale** (POS) application are subject to credit consumption:
+
+   - Tax calculation at the time of sale
+   - Electronic invoice issuance (NFC-e)
+
+.. note::
+   Each step is billed separately. For example, calculating taxes and issuing an invoice for the
+   same POS transaction consume two credits.
 
 .. seealso::
    :doc:`Point of Sale <../../sales/point_of_sale>`
