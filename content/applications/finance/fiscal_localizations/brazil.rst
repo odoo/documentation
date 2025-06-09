@@ -682,7 +682,7 @@ Its legal validity is guaranteed by the digital signature and by each Brazilian 
 .. important::
    The Avalara integration operates on a credit-based system. Each operation that involves communication with Avalara consumes 1 credit. The following operations within the Point of Sale (POS) application are subject to credit consumption:
    - :guilabel:`Tax calculation at the time of sale`.
-   - :guilabel:`Electronic invoice issuance (NF-e)`.
+   - :guilabel:`Electronic invoice issuance (NFC-e)`.
 
    `Note:' Each step is billed separately. For example, calculating taxes and issuing an invoice for the same POS transaction will consume 2 credits.
 
