@@ -54,3 +54,207 @@ Configuration on Odoo
 
 .. seealso::
    :doc:`../payment_providers`
+
+Supported payment methods and features in Odoo
+==============================================
+
+.. |V| replace:: :icon:`fa-check`
+.. |X| replace:: :icon:`fa-times`
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: 10 25 25 8 8 8 8 8
+
+   * - Payment method
+     - Currencies
+     - Countries
+     - Manual capture
+     - Partial capture
+     - Refunds
+     - Partial refunds
+     - Tokenization
+   * - 7Eleven
+     - PHP
+     - Philippines
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - Akulaku PayLater
+     - IDR
+     - Indonesia
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - BCA
+     - IDR
+     - Indonesia
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - BRI
+     - IDR
+     - Indonesia
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - Bank Negara Indonesia
+     - IDR
+     - Indonesia
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - Bank Permata
+     - IDR
+     - Indonesia
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - Bank Syariah Indonesia
+     - IDR
+     - Indonesia
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - BillEase
+     - PHP
+     - Philippines
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - Card
+     - All
+     - All
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - Cashalo
+     - PHP
+     - Philippines
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - Cebuana
+     - PHP
+     - Philippines
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - CIMB Niaga
+     - IDR
+     - Indonesia
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - Dana
+     - IDR
+     - Indonesia
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - GCash
+     - PHP
+     - Philippines
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - GrabPay
+     - MYR, PHP, SGD
+     - Malaysia, Philippines, Singapore
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - JeniusPay
+     - IDR
+     - Indonesia
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - Kredivo
+     - IDR
+     - Indonesia
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - LinkAja
+     - IDR
+     - Indonesia
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - Mandiri
+     - IDR
+     - Indonesia
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - Maya
+     - PHP
+     - Philippines
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - OVO
+     - IDR
+     - Indonesia
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - QRIS
+     - IDR
+     - Indonesia
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - ShopeePay
+     - IDR, PHP
+     - Indonesia, Philippines
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
