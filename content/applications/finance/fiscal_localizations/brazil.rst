@@ -690,7 +690,7 @@ Its legal validity is guaranteed by the digital signature and by each Brazilian 
     - :guilabel:`Tax calculation at the time of sale`
     - :guilabel:`Electronic invoice issuance (NFC-e)`
 
-   `Note:' Each step is billed separately. For example, calculating taxes and issuing an invoice for the same POS transaction will consume 2 credits.
+   :guilabel:`Note:` Each step is billed separately. For example, calculating taxes and issuing an invoice for the same POS transaction will consume 2 credits.
 
 .. seealso::
    :doc:`Point of Sale <../../sales/point_of_sale>`
