@@ -461,7 +461,7 @@ variables.
 .. code-block:: xml
    :caption: ``/website_airproof/views/website_templates.xml``
 
-   <template id="header" inherit_id="website.layout" name="Airproof - Header" active="False">
+   <template id="header" inherit_id="website.layout" name="Airproof - Header" active="True">
       <xpath expr="//header//nav" position="replace">
          <!-- Static Content -->
          <!-- Components -->
@@ -653,7 +653,7 @@ active footer template first.
 .. code-block:: xml
     :caption: ``/website_airproof/views/website_templates.xml``
 
-    <template id="footer" inherit_id="website.layout" name="Airproof - Footer" active="False">
+    <template id="footer" inherit_id="website.layout" name="Airproof - Footer" active="True">
       <xpath expr="//div[@id='footer']" position="replace">
          <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer">
             <!-- Content -->
