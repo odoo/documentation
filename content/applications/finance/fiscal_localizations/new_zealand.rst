@@ -185,8 +185,8 @@ Accounting
 E-invoicing
 -----------
 
-Odoo allows :ref:`electronic invoicing <e-invoicing/configuration>` settings to be configured per
-contact.
+Odoo allows :ref:`electronic invoicing <accounting/e-invoicing/configuration>` settings to be
+configured per contact.
 
 .. image:: new_zealand/peppol_contact_new.png
    :alt: Peppol Contact.
