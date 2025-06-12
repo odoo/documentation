@@ -358,6 +358,8 @@ file should be :guilabel:`Discoverable` (accessible through browsing) or require
    permission to view or edit through the customer portal by clicking the :guilabel:`Documents`
    card.
 
+.. _documents/file-digitization:
+
 File digitization with AI
 =========================
 
