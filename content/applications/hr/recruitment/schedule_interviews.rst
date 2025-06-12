@@ -2,7 +2,7 @@
 Schedule interviews
 ===================
 
-Schedule in-person, virtual, and phone interviews with Odoo through the *Recruitment* app.
+Schedule in-person, virtual, and phone interviews with Odoo through the **Recruitment** app.
 
 An interview can be scheduled in one of two ways: either by the :ref:`recruitment team
 <recruitment/schedule_interviews/recruitment-scheduled>`, or by the :ref:`applicant
@@ -21,13 +21,13 @@ To schedule the interview, navigate to the applicant's card, by first going to t
 :guilabel:`Applications` page for that job position. Then, click the desired applicant's card to
 view their detailed applicant form.
 
-To schedule an phone, virtual, or in-person interview, click the :guilabel:`No Meeting` smart button
-at the top of the applicant's record.
+To schedule an phone, virtual, or in-person interview, click the :icon:`fa-calendar` :guilabel:`No
+Meeting` smart button at the top of the applicant's record.
 
 .. note::
-   The *Meetings* smart button displays :guilabel:`No Meeting` if no meetings are currently
-   scheduled. For applicants who are new to the :guilabel:`First Interview` stage, this is the
-   default.
+   The *Meetings* smart button displays :icon:`fa-calendar` :guilabel:`No Meeting` if no meetings
+   are currently scheduled. For applicants who are new to the :guilabel:`First Interview` stage,
+   this is the default.
 
    If there is one meeting already scheduled, the smart button displays *1 Meeting*, with the date
    of the upcoming meeting beneath it. If more than one meeting is scheduled, the button displays
@@ -41,7 +41,6 @@ To change the currently loaded meetings and events being displayed, uncheck an a
 calendar events are to be hidden. Only the checked attendees are visible on the calendar.
 
 .. image:: schedule_interviews/calendar.png
-   :align: center
    :alt: The calendar view, highlighting how to change the displayed meetings.
 
 To add a meeting to the calendar when in the *Day* or *Week* view, click on the start time of the
@@ -70,19 +69,20 @@ interview.
 After entering in a required name for the meeting, the fields available to modify on the
 :guilabel:`New Event` card are as follows:
 
-- :guilabel:`Meeting Title`: enter the subject for the meeting. This should clearly indicate the
-  purpose of the meeting. The default subject is the :guilabel:`Subject/Application Name` on the
+- :guilabel:`Meeting Title`: Enter the subject for the meeting. This should clearly indicate the
+  purpose of the meeting. The default subject is the :guilabel:`Candidate` name entered on the
   applicant's card.
-- :guilabel:`Start`: start and end date and times for the meeting. Clicking either of these fields
-  opens a calendar pop-up window. Click :guilabel:`Apply` to close the window.
-- :guilabel:`All Day`: tick the box to schedule an all-day interview. If this box is ticked, the
+- :guilabel:`Start`: Configure the start and end date and times for the meeting. Clicking either of
+  these fields opens a calendar pop-up window. Click :guilabel:`Apply` to close the window.
+- :guilabel:`All Day`: Tick the box to schedule an all-day interview. If this box is ticked, the
   :guilabel:`Start` field changes to :guilabel:`Start Date`.
-- :guilabel:`Attendees`: select the people who should attend the meeting. The default employee
-  listed is the person who created the meeting. Add as many other people as desired.
-- :guilabel:`Videocall URL`: if the meeting is virtual, or if there is a virtual option available,
+- :guilabel:`Attendees`: Select the people who should attend the meeting. The default attendees are
+  the prospective candidate, and the assigned recruiter for the job position. Add as many other
+  people as desired.
+- :guilabel:`Videocall URL`: If the meeting is virtual, or if there is a virtual option available,
   click :icon:`fa-plus` :guilabel:`Odoo meeting`, and a URL is automatically created for the
   meeting, which populates the field.
-- :guilabel:`Description`: enter a brief description in this field. There is an option to enter
+- :guilabel:`Description`: Enter a brief description in this field. There is an option to enter
   formatted text, such as numbered lists, headings, tables, links, photos, and more. Use the
   powerbox feature, by typing a `/` to reveal a list of options.
 
@@ -128,10 +128,6 @@ window. Enter any of the following additional fields:
 - :guilabel:`Tags`: select any tags for the meeting using the drop-down menu, or add a new tag by
   typing in the tag and clicking :guilabel:`Create "tag"`. There is no limit to the number of tags
   that can be used.
-- :guilabel:`Appointment`: if an appointment is associated with this meeting, select it from the
-  drop-down menu, or create a new appointment by typing in the appointment name, then clicking
-  :guilabel:`Create & Edit...` from the resulting drop-down men. A :guilabel:`Create Appointment`
-  form loads. Enter the information on the form, then click :guilabel:`Save & Close`.
 - :guilabel:`Privacy`: select if the organizer appears either :guilabel:`Available` or
   :guilabel:`Busy` for the duration of the meeting. Next, select the visibility of this meeting,
   using the drop-down menu to the right of the first selection. Options are :guilabel:`Public`,
@@ -148,7 +144,6 @@ window. Enter any of the following additional fields:
   reminders can be selected in this field.
 
 .. image:: schedule_interviews/new-event.png
-   :align: center
    :alt: A new meeting card with all the details populated, and ready to save.
 
 Send meeting to attendees
@@ -172,7 +167,6 @@ is needed, click the :guilabel:`Attachments` button, navigate to the file, then 
 :guilabel:`Open`. Once the email is ready to be sent, click :guilabel:`Send`.
 
 .. image:: schedule_interviews/email-event.png
-   :align: center
    :alt: Enter the information to send the event via email.
 
 To send the meeting via text message, click the :icon:`fa-mobile` :guilabel:`SMS` button next to
@@ -193,7 +187,6 @@ the text sent later, after any other messages are scheduled, or click :guilabel:
 the message immediately.
 
 .. image:: schedule_interviews/send-sms.png
-   :align: center
    :alt: Send a text message to the attendees of the meeting.
 
 .. note::
@@ -215,7 +208,7 @@ stage, the applicant receives a link to the recruitment team's calendar, and can
 interview on their own. The recruitment team's availability is reflected in the calendar.
 
 In order for applicants to be able to schedule their own interviews, a :ref:`stage must first be
-modified <recruitment/schedule_interviews/modify-stage>` in the *Recruitment* app.
+modified <recruitment/schedule_interviews/modify-stage>` in the **Recruitment** app.
 
 .. _recruitment/schedule_interviews/modify-stage:
 
@@ -232,7 +225,6 @@ drop-down menu appears. Then, click on the :guilabel:`Edit` option, and an :guil
 form appears.
 
 .. image:: schedule_interviews/edit-stage.png
-   :align: center
    :alt: The drop-down that appears after clicking the cog.
 
 The :guilabel:`Email Template` field is blank, by default. Using the drop-down menu, select
@@ -240,7 +232,6 @@ The :guilabel:`Email Template` field is blank, by default. Using the drop-down m
 :guilabel:`Save & Close` when done.
 
 .. image:: schedule_interviews/interview-template.png
-   :align: center
    :alt: The Recruitment: Schedule Interview email template populating the Email Template field.
 
 Send email
@@ -277,7 +268,6 @@ applicant, this step is not available. If the applicant does not wish to chose a
 can just click :guilabel:`See all availabilities` :icon:`fa-arrow-right`.
 
 .. image:: schedule_interviews/select-interviewer.png
-   :align: center
    :alt: The first screen seen after clicking 'Plan my interview', where the applicant selects their
          interviewer.
 
@@ -295,7 +285,6 @@ Then the applicant clicks on an available day on the calendar, signified by a sq
 date. Once a day is selected, they click on one of the available times to select that date and time.
 
 .. image:: schedule_interviews/select-date-time.png
-   :align: center
    :alt: The calendar screen with dates and times to schedule an interview.
 
 .. tip::
@@ -311,7 +300,6 @@ When everything is entered on the :guilabel:`Add more details about you` page, t
 the :guilabel:`Confirm Appointment` button, and the interview is scheduled.
 
 .. image:: schedule_interviews/confirmation.png
-   :align: center
    :alt: The confirmation page with all the details for the interview displayed.
 
 After confirming the interview, the applicant is taken to a confirmation page, where all the details
