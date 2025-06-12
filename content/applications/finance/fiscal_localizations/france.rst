@@ -101,8 +101,8 @@ To send invoices to Chorus Pro, the following configuration is required:
 
 #. :doc:`Install </applications/general/apps_modules>` the :guilabel:`France - Factur-X integration
    with Chorus Pro` (`l10n_fr_facturx_chorus_pro`) module.
-#. :ref:`Register <e-invoicing/peppol-registration>` with Peppol, as invoices are sent from Odoo to
-   Chorus Pro via the :ref:`Peppol <e-invoicing/peppol>` network.
+#. :ref:`Register <accounting/e-invoicing/peppol-registration>` with Peppol, as invoices are sent
+   from Odoo to Chorus Pro via the :ref:`Peppol <accounting/e-invoicing/peppol>` network.
 #. If you don’t already have a Chorus Pro account, go to the `Chorus Pro
    <https://portail.chorus-pro.gouv.fr/aife_csm>`_ page, click :guilabel:`Créer un compte`, and
    create one.
@@ -150,7 +150,7 @@ To send invoices to Chorus Pro, follow these steps:
 Once the invoice is sent, the Peppol status of the invoice is updated to :guilabel:`Done`.
 
 .. seealso::
-   :ref:`Peppol <e-invoicing/peppol>`
+   :ref:`Peppol <accounting/e-invoicing/peppol>`
 
 .. _localizations/france/fec:
 
