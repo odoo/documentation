@@ -2,30 +2,32 @@
 Functions
 =========
 
-Spreadsheet functions are divided in the following categories:
+**Odoo Spreadsheet** supports formulas and functions found in most spreadsheet solutions. This page
+presents the available functions by category. Odoo-specific functions are included both in the
+relevant category and in a dedicated :ref:`Odoo <spreadsheet/functions/odoo>` category:
 
-- :ref:`Array <functions/array>`
-- :ref:`Database <functions/database>`
-- :ref:`Date <functions/date>`
-- :ref:`Engineering <functions/engineering>`
-- :ref:`Filter <functions/filter>`
-- :ref:`Financial <functions/financial>`
-- :ref:`Info <functions/info>`
-- :ref:`Logical <functions/logical>`
-- :ref:`Lookup <functions/lookup>`
-- :ref:`Math <functions/math>`
-- :ref:`Misc <functions/misc>`
-- :ref:`Odoo <functions/odoo>`
-- :ref:`Operators <functions/operators>`
-- :ref:`Statistical <functions/statistical>`
-- :ref:`Text <functions/text>`
-- :ref:`Web <functions/web>`
+- :ref:`Array <spreadsheet/functions/array>`
+- :ref:`Database <spreadsheet/functions/database>`
+- :ref:`Date <spreadsheet/functions/date>`
+- :ref:`Engineering <spreadsheet/functions/engineering>`
+- :ref:`Filter <spreadsheet/functions/filter>`
+- :ref:`Financial <spreadsheet/functions/financial>`
+- :ref:`Info <spreadsheet/functions/info>`
+- :ref:`Logical <spreadsheet/functions/logical>`
+- :ref:`Lookup <spreadsheet/functions/lookup>`
+- :ref:`Math <spreadsheet/functions/math>`
+- :ref:`Operators <spreadsheet/functions/operators>`
+- :ref:`Parser <spreadsheet/functions/parser>`
+- :ref:`Statistical <spreadsheet/functions/statistical>`
+- :ref:`Text <spreadsheet/functions/text>`
+- :ref:`Web <spreadsheet/functions/web>`
+- :ref:`Odoo-specific functions <spreadsheet/functions/odoo>`
 
 .. note::
    Formulas containing functions that are not compatible with Excel are replaced by their evaluated
    result when exporting a spreadsheet.
 
-.. _functions/array:
+.. _spreadsheet/functions/array:
 
 Array
 =====
@@ -77,7 +79,7 @@ Array
    * - WRAPROWS(range, wrap_count, [pad_with])
      - `Excel WRAPROWS article <https://support.microsoft.com/office/wraprows-function-796825f3-975a-4cee-9c84-1bbddf60ade0>`_
 
-.. _functions/database:
+.. _spreadsheet/functions/database:
 
 Database
 ========
@@ -113,7 +115,7 @@ Database
    * - DVARP(database, field, criteria)
      - `Excel DVARP article <https://support.microsoft.com/office/dvarp-function-eb0ba387-9cb7-45c8-81e9-0394912502fc>`_
 
-.. _functions/date:
+.. _spreadsheet/functions/date:
 
 Date
 ====
@@ -148,12 +150,22 @@ Date
      - `Excel MINUTE article <https://support.microsoft.com/office/minute-function-af728df0-05c4-4b07-9eed-a84801a60589>`_
    * - MONTH(date)
      - `Excel MONTH article <https://support.microsoft.com/office/month-function-579a2881-199b-48b2-ab90-ddba0eba86e8>`_
+   * - MONTH.END(date)
+     - Last day of the month following a date (not compatible with Excel)
+   * - MONTH.START(date)
+     - First day of the month preceding a date (not compatible with Excel)
    * - NETWORKDAYS(start_date, end_date, [holidays])
      - `Excel NETWORKDAYS article <https://support.microsoft.com/office/networkdays-function-48e717bf-a7a3-495f-969e-5005e3eb18e7>`_
    * - NETWORKDAYS.INTL(start_date, end_date, [weekend], [holidays])
      - `Excel NETWORKDAYS.INTL article <https://support.microsoft.com/office/networkdays-intl-function-a9b26239-4f20-46a1-9ab8-4e925bfd5e28>`_
    * - NOW()
      - `Excel NOW article <https://support.microsoft.com/office/now-function-3337fd29-145a-4347-b2e6-20c904739c46>`_
+   * - QUARTER(date)
+     - Quarter of the year a specific date falls in (not compatible with Excel)
+   * - QUARTER.END(date)
+     - Last day of the quarter of the year a specific date falls in (not compatible with Excel)
+   * - QUARTER.START(date)
+     - First day of the quarter of the year a specific date falls in (not compatible with Excel)
    * - SECOND(time)
      - `Excel SECOND article <https://support.microsoft.com/office/second-function-740d1cfc-553c-4099-b668-80eaa24e8af1>`_
    * - TIME(hour, minute, second)
@@ -172,24 +184,14 @@ Date
      - `Excel WORKDAY.INTL article <https://support.microsoft.com/office/workday-intl-function-a378391c-9ba7-4678-8a39-39611a9bf81d>`_
    * - YEAR(date)
      - `Excel YEAR article <https://support.microsoft.com/office/year-function-c64f017a-1354-490d-981f-578e8ec8d3b9>`_
-   * - YEARFRAC(start_date, end_date, [day_count_convention])
-     - Exact number of years between two dates (not compatible with Excel)
-   * - MONTH.START(date)
-     - First day of the month preceding a date (not compatible with Excel)
-   * - MONTH.END(date)
-     - Last day of the month following a date (not compatible with Excel)
-   * - QUARTER(date)
-     - Quarter of the year a specific date falls in (not compatible with Excel)
-   * - QUARTER.START(date)
-     - First day of the quarter of the year a specific date falls in (not compatible with Excel)
-   * - QUARTER.END(date)
-     - Last day of the quarter of the year a specific date falls in (not compatible with Excel)
-   * - YEAR.START(date)
-     - First day of the year a specific date falls in (not compatible with Excel)
    * - YEAR.END(date)
      - Last day of the year a specific date falls in (not compatible with Excel)
+   * - YEAR.START(date)
+     - First day of the year a specific date falls in (not compatible with Excel)
+   * - YEARFRAC(start_date, end_date, [day_count_convention])
+     - Exact number of years between two dates (not compatible with Excel)
 
-.. _functions/engineering:
+.. _spreadsheet/functions/engineering:
 
 Engineering
 ===========
@@ -203,7 +205,7 @@ Engineering
    * - DELTA(number1, [number2])
      - `Excel DELTA article <https://support.microsoft.com/office/delta-function-2f763672-c959-4e07-ac33-fe03220ba432>`_
 
-.. _functions/filter:
+.. _spreadsheet/functions/filter:
 
 Filter
 ======
@@ -216,10 +218,14 @@ Filter
      - Description or link
    * - FILTER(range, condition1, [condition2, ...])
      - `Excel FILTER article <https://support.microsoft.com/office/filter-function-f4f7cb66-82eb-4767-8f7c-4877ad80c759>`_
+   * - ODOO.FILTER.VALUE(filter_name)
+     - Returns the current value of a spreadsheet filter (not compatible with Excel)
+   * - SORT(range, [sort_column, ...], [is_ascending, ...])
+     - `Excel SORT article <https://support.microsoft.com/en-us/office/sort-function-22f63bd0-ccc8-492f-953d-c20e8e44b86c>`_
    * - UNIQUE(range, [by_column], [exactly_once])
      - `Excel UNIQUE article <https://support.microsoft.com/office/unique-function-c5ab87fd-30a3-4ce9-9d1a-40204fb85e1e>`_
 
-.. _functions/financial:
+.. _spreadsheet/functions/financial:
 
 Financial
 =========
@@ -234,10 +240,10 @@ Financial
      - `Excel ACCRINTM article <https://support.microsoft.com/office/accrintm-function-f62f01f9-5754-4cc4-805b-0e70199328a7>`_
    * - AMORLINC(cost, purchase_date, first_period_end, salvage, period, rate, [day_count_convention])
      - `Excel AMORLINC article <https://support.microsoft.com/office/amorlinc-function-7d417b45-f7f5-4dba-a0a5-3451a81079a8>`_
-   * - COUPDAYS(settlement, maturity, frequency, [day_count_convention])
-     - `Excel COUPDAYS article <https://support.microsoft.com/office/coupdays-function-cc64380b-315b-4e7b-950c-b30b0a76f671>`_
    * - COUPDAYBS(settlement, maturity, frequency, [day_count_convention])
      - `Excel COUPDAYBS article <https://support.microsoft.com/office/coupdaybs-function-eb9a8dfb-2fb2-4c61-8e5d-690b320cf872>`_
+   * - COUPDAYS(settlement, maturity, frequency, [day_count_convention])
+     - `Excel COUPDAYS article <https://support.microsoft.com/office/coupdays-function-cc64380b-315b-4e7b-950c-b30b0a76f671>`_
    * - COUPDAYSNC(settlement, maturity, frequency, [day_count_convention])
      - `Excel COUPDAYSNC article <https://support.microsoft.com/office/coupdaysnc-function-5ab3f0b2-029f-4a8b-bb65-47d525eea547>`_
    * - COUPNCD(settlement, maturity, frequency, [day_count_convention])
@@ -286,20 +292,34 @@ Financial
      - `Excel NPER article <https://support.microsoft.com/office/nper-function-240535b5-6653-4d2d-bfcf-b6a38151d815>`_
    * - NPV(discount, cashflow1, [cashflow2, ...])
      - `Excel NPV article <https://support.microsoft.com/office/npv-function-8672cb67-2576-4d07-b67b-ac28acf2a568>`_
+   * - ODOO.ACCOUNT.GROUP(type)
+     - Returns the account ids of a given group (not compatible with Excel)
+   * - ODOO.CREDIT(account_codes, date_range, [offset], [company_id], [include_unposted])
+     - Get the total credit for the specified account(s) and period (not compatible with Excel)
+   * - ODOO.CURRENCY.RATE(currency_from, currency_to, [date])
+     - This function takes in two currency codes as arguments, and returns the exchange rate from the first currency to the second as float (not compatible with Excel)
+   * - ODOO.DEBIT(account_codes, date_range, [offset], [company_id], [include_unposted])
+     - Get the total debit for the specified account(s) and period (not compatible with Excel)
+   * - ODOO.BALANCE(account_codes, date_range, [offset], [company_id], [include_unposted])
+     - Get the total balance for the specified account(s) and period (not compatible with Excel)
+   * - ODOO.FISCALYEAR.END(day, [company_id])
+     - Returns the ending date of the fiscal year encompassing the provided date (not compatible with Excel)
+   * - ODOO.FISCALYEAR.START(day, [company_id])
+     - Returns the starting date of the fiscal year encompassing the provided date (not compatible with Excel)
    * - PDURATION(rate, present_value, future_value)
      - `Excel PDURATION article <https://support.microsoft.com/office/pduration-function-44f33460-5be5-4c90-b857-22308892adaf>`_
    * - PMT(rate, number_of_periods, present_value, [future_value], [end_or_beginning])
      - `Excel PMT article <https://support.microsoft.com/office/pmt-function-0214da64-9a63-4996-bc20-214433fa6441>`_
    * - PPMT(rate, period, number_of_periods, present_value, [future_value], [end_or_beginning])
      - `Excel PPMT article <https://support.microsoft.com/office/ppmt-function-c370d9e3-7749-4ca4-beea-b06c6ac95e1b>`_
-   * - PV(rate, number_of_periods, payment_amount, [future_value], [end_or_beginning])
-     - `Excel PV article <https://support.microsoft.com/office/pv-function-23879d31-0e02-4321-be01-da16e8168cbd>`_
    * - PRICE(settlement, maturity, rate, yield, redemption, frequency, [day_count_convention])
      - `Excel PRICE article <https://support.microsoft.com/office/price-function-3ea9deac-8dfa-436f-a7c8-17ea02c21b0a>`_
    * - PRICEDISC(settlement, maturity, discount, redemption, [day_count_convention])
      - `Excel PRICEDISC article <https://support.microsoft.com/office/pricedisc-function-d06ad7c1-380e-4be7-9fd9-75e3079acfd3>`_
    * - PRICEMAT(settlement, maturity, issue, rate, yield, [day_count_convention])
      - `Excel PRICEMAT article <https://support.microsoft.com/office/pricemat-function-52c3b4da-bc7e-476a-989f-a95f675cae77>`_
+   * - PV(rate, number_of_periods, payment_amount, [future_value], [end_or_beginning])
+     - `Excel PV article <https://support.microsoft.com/office/pv-function-23879d31-0e02-4321-be01-da16e8168cbd>`_
    * - RATE(number_of_periods, payment_per_period, present_value, [future_value], [end_or_beginning], [rate_guess])
      - `Excel RATE article <https://support.microsoft.com/office/rate-function-9f665657-4a7e-4bb7-a030-83fc59e748ce>`_
    * - RECEIVED(settlement, maturity, investment, discount, [day_count_convention])
@@ -310,10 +330,10 @@ Financial
      - `Excel SLN article <https://support.microsoft.com/office/sln-function-cdb666e5-c1c6-40a7-806a-e695edc2f1c8>`_
    * - SYD(cost, salvage, life, period)
      - `Excel SYD article <https://support.microsoft.com/office/syd-function-069f8106-b60b-4ca2-98e0-2a0f206bdb27>`_
-   * - TBILLPRICE(settlement, maturity, discount)
-     - `Excel TBILLPRICE article <https://support.microsoft.com/office/tbillprice-function-eacca992-c29d-425a-9eb8-0513fe6035a2>`_
    * - TBILLEQ(settlement, maturity, discount)
      - `Excel TBILLEQ article <https://support.microsoft.com/office/tbilleq-function-2ab72d90-9b4d-4efe-9fc2-0f81f2c19c8c>`_
+   * - TBILLPRICE(settlement, maturity, discount)
+     - `Excel TBILLPRICE article <https://support.microsoft.com/office/tbillprice-function-eacca992-c29d-425a-9eb8-0513fe6035a2>`_
    * - TBILLYIELD(settlement, maturity, price)
      - `Excel TBILLYIELD article <https://support.microsoft.com/office/tbillyield-function-6d381232-f4b0-4cd5-8e97-45b9c03468ba>`_
    * - VDB(cost, salvage, life, start, end, [factor], [no_switch])
@@ -329,7 +349,7 @@ Financial
    * - YIELDMAT(settlement, maturity, issue, rate, price, [day_count_convention])
      - `Excel YIELDMAT article <https://support.microsoft.com/office/yieldmat-function-ba7d1809-0d33-4bcb-96c7-6c56ec62ef6f>`_
 
-.. _functions/info:
+.. _spreadsheet/functions/info:
 
 Info
 ====
@@ -342,6 +362,8 @@ Info
      - Description or link
    * - CELL(info_type, reference)
      - `Excel CELL article <https://support.microsoft.com/office/cell-function-51bd39a5-f338-4dbe-a33f-955d67c2b2cf>`_
+   * - ISBLANK(value)
+     - `Excel IS article <https://support.microsoft.com/office/is-functions-0f2d7971-6019-40a0-a171-f2d869135665>`_
    * - ISERR(value)
      - `Excel IS article <https://support.microsoft.com/office/is-functions-0f2d7971-6019-40a0-a171-f2d869135665>`_
    * - ISERROR(value)
@@ -356,12 +378,10 @@ Info
      - `Excel IS article <https://support.microsoft.com/office/is-functions-0f2d7971-6019-40a0-a171-f2d869135665>`_
    * - ISTEXT(value)
      - `Excel IS article <https://support.microsoft.com/office/is-functions-0f2d7971-6019-40a0-a171-f2d869135665>`_
-   * - ISBLANK(value)
-     - `Excel IS article <https://support.microsoft.com/office/is-functions-0f2d7971-6019-40a0-a171-f2d869135665>`_
    * - NA()
      - `Excel NA article <https://support.microsoft.com/office/na-function-5469c2d1-a90c-4fb5-9bbc-64bd9bb6b47c>`_
 
-.. _functions/logical:
+.. _spreadsheet/functions/logical:
 
 Logical
 =======
@@ -393,7 +413,7 @@ Logical
    * - XOR(logical_expression1, [logical_expression2, ...])
      - `Excel XOR article <https://support.microsoft.com/office/xor-function-1548d4c2-5e47-4f77-9a92-0533bba14f37>`_
 
-.. _functions/lookup:
+.. _spreadsheet/functions/lookup:
 
 Lookup
 ======
@@ -420,12 +440,14 @@ Lookup
      - `Excel LOOKUP article <https://support.microsoft.com/office/lookup-function-446d94af-663b-451d-8251-369d5e3864cb>`_
    * - MATCH(search_key, range, [search_type])
      - `Excel MATCH article <https://support.microsoft.com/office/match-function-e8dffd45-c762-47d6-bf89-533f4a37673a>`_
-   * - PIVOT(pivot_id, measure_name, [domain_field_name, ...], [domain_value, ...])
-     - Get the value from a pivot (not compatible with Excel)
-   * - PIVOT.HEADER(pivot_id, [domain_field_name, ...], [domain_value, ...])
-     - Get the header of a pivot (not compatible with Excel)
-   * - PIVOT.TABLE(pivot_id, [row_count], [include_total], [include_column_titles])
+   * - OFFSET(reference, rows, cols, [height], [width])
+     - `Excel OFFSET article <https://support.microsoft.com/en-us/office/offset-function-c8de19ae-dd79-4b9b-a14e-b4d906d11b66>`_
+   * - PIVOT(pivot_id, [row_count], [include_total], [include_column_titles], [column_count])
      - Get a pivot table (not compatible with Excel)
+   * - PIVOT.HEADER(pivot_id, [domain_field_name, ...], [domain_value, ...])
+     - Get the header of a pivot table (not compatible with Excel)
+   * - PIVOT.VALUE(pivot_id, measure_name, [domain_field_name, ...], [domain_value, ...])
+     - Get the value from a pivot table (not compatible with Excel)
    * - ROW([cell_reference])
      - `Excel ROW article <https://support.microsoft.com/office/row-function-3a63b74a-c4d0-4093-b49a-e76eb49a6d8d>`_
    * - ROWS(range)
@@ -435,7 +457,7 @@ Lookup
    * - XLOOKUP(search_key, lookup_range, return_range, [if_not_found], [match_mode], [search_mode])
      - `Excel XLOOKUP article <https://support.microsoft.com/office/xlookup-function-b7fd680e-6d10-43e6-84f9-88eae8bf5929>`_
 
-.. _functions/math:
+.. _spreadsheet/functions/math:
 
 Math
 ====
@@ -486,10 +508,6 @@ Math
      - `Excel COUNTIF article <https://support.microsoft.com/office/countif-function-e0de10c6-f885-4e71-abb4-1f464816df34>`_
    * - COUNTIFS(criteria_range1, criterion1, [criteria_range2, ...], [criterion2, ...])
      - `Excel COUNTIFS article <https://support.microsoft.com/office/countifs-function-dda3dc6e-f74e-4aee-88bc-aa8c2a866842>`_
-   * - COUNTUNIQUE(value1, [value2, ...])
-     - Counts number of unique values in a range (not compatible with Excel)
-   * - COUNTUNIQUEIFS(range, criteria_range1, criterion1, [criteria_range2, ...], [criterion2, ...])
-     - Counts number of unique values in a range, filtered by a set of criteria (not compatible with Excel)
    * - CSC(angle)
      - `Excel CSC article <https://support.microsoft.com/office/csc-function-07379361-219a-4398-8675-07ddc4f135c1>`_
    * - CSCH(value)
@@ -516,6 +534,8 @@ Math
      - `Excel ISODD article <https://support.microsoft.com/office/isodd-function-1208a56d-4f10-4f44-a5fc-648cafd6c07a>`_
    * - LN(value)
      - `Excel LN article <https://support.microsoft.com/office/ln-function-81fe1ed7-dac9-4acd-ba1d-07a142c6118f>`_
+   * - LOG(value, [base])
+     - Get the logarithm of a number for a given base (not compatible with Excel)
    * - MOD(dividend, divisor)
      - `Excel MOD article <https://support.microsoft.com/office/mod-function-9b6cd169-b6ee-406a-a97b-edf2a9dc24f3>`_
    * - MUNIT(dimension)
@@ -544,6 +564,8 @@ Math
      - `Excel SEC article <https://support.microsoft.com/office/sec-function-ff224717-9c87-4170-9b58-d069ced6d5f7>`_
    * - SECH(value)
      - `Excel SECH article <https://support.microsoft.com/office/sech-function-e05a789f-5ff7-4d7f-984a-5edb9b09556f>`_
+   * - SEQUENCE(rows, [columns], [start], ][step])
+     - `Excel SEQUENCE article <https://support.microsoft.com/en-us/office/sequence-function-57467a98-57e0-4817-9f14-2eb78519ca90>`_
    * - SIN(angle)
      - `Excel SIN article <https://support.microsoft.com/office/sin-function-cf0e3432-8b9e-483c-bc55-a76651c95602>`_
    * - SINH(value)
@@ -563,53 +585,7 @@ Math
    * - TRUNC(value, [places])
      - `Excel TRUNC article <https://support.microsoft.com/office/trunc-function-8b86a64c-3127-43db-ba14-aa5ceb292721>`_
 
-.. _functions/misc:
-
-Misc
-====
-
-.. list-table::
-   :header-rows: 1
-   :stub-columns: 1
-
-   * - Name and arguments
-     - Description or link
-   * - FORMAT.LARGE.NUMBER(value, [unit])
-     - Apply a large number format (not compatible with Excel)
-
-.. _functions/odoo:
-
-Odoo
-====
-
-.. list-table::
-   :header-rows: 1
-   :stub-columns: 1
-
-   * - Name and arguments
-     - Description or link
-   * - ODOO.CREDIT(account_codes, date_range, [offset], [company_id], [include_unposted])
-     - Get the total credit for the specified account(s) and period (not compatible with Excel)
-   * - ODOO.DEBIT(account_codes, date_range, [offset], [company_id], [include_unposted])
-     - Get the total debit for the specified account(s) and period (not compatible with Excel)
-   * - ODOO.BALANCE(account_codes, date_range, [offset], [company_id], [include_unposted])
-     - Get the total balance for the specified account(s) and period (not compatible with Excel)
-   * - ODOO.FISCALYEAR.START(day, [company_id])
-     - Returns the starting date of the fiscal year encompassing the provided date (not compatible with Excel)
-   * - ODOO.FISCALYEAR.END(day, [company_id])
-     - Returns the ending date of the fiscal year encompassing the provided date (not compatible with Excel)
-   * - ODOO.ACCOUNT.GROUP(type)
-     - Returns the account ids of a given group (not compatible with Excel)
-   * - ODOO.CURRENCY.RATE(currency_from, currency_to, [date])
-     - This function takes in two currency codes as arguments, and returns the exchange rate from the first currency to the second as float (not compatible with Excel)
-   * - ODOO.LIST(list_id, index, field_name)
-     - Get the value from a list (not compatible with Excel)
-   * - ODOO.LIST.HEADER(list_id, field_name)
-     - Get the header of a list (not compatible with Excel)
-   * - ODOO.FILTER.VALUE(filter_name)
-     - Return the current value of a spreadsheet filter (not compatible with Excel)
-
-.. _functions/operators:
+.. _spreadsheet/functions/operators:
 
 Operators
 =========
@@ -651,7 +627,21 @@ Operators
    * - UPLUS(value)
      - A specified number, unchanged (not compatible with Excel)
 
-.. _functions/statistical:
+.. _spreadsheet/functions/parser:
+
+Parser
+======
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+
+   * - Name and arguments
+     - Description or link
+   * - CONVERT(number, from_unit, to_unit)
+     - `Excel CONVERT article <https://support.microsoft.com/en-us/office/convert-function-d785bef1-808e-4aac-bdcd-666c810f9af2>`_
+
+.. _spreadsheet/functions/statistical:
 
 Statistical
 ===========
@@ -666,14 +656,14 @@ Statistical
      - `Excel AVEDEV article <https://support.microsoft.com/office/avedev-function-58fe8d65-2a84-4dc7-8052-f3f87b5c6639>`_
    * - AVERAGE(value1, [value2, ...])
      - `Excel AVERAGE article <https://support.microsoft.com/office/average-function-047bac88-d466-426c-a32b-8f33eb960cf6>`_
-   * - AVERAGE.WEIGHTED(values, weights, [additional_values, ...], [additional_weights, ...])
-     - Weighted average (not compatible with Excel)
    * - AVERAGEA(value1, [value2, ...])
      - `Excel AVERAGEA article <https://support.microsoft.com/office/averagea-function-f5f84098-d453-4f4c-bbba-3d2c66356091>`_
    * - AVERAGEIF(criteria_range, criterion, [average_range])
      - `Excel AVERAGEIF article <https://support.microsoft.com/office/averageif-function-faec8e2e-0dec-4308-af69-f5576d8ac642>`_
    * - AVERAGEIFS(average_range, criteria_range1, criterion1, [criteria_range2, ...], [criterion2, ...])
      - `Excel AVERAGEIFS article <https://support.microsoft.com/office/averageifs-function-48910c45-1fc0-4389-a028-f7c5c3001690>`_
+   * - AVERAGE.WEIGHTED(values, weights, [additional_values, ...], [additional_weights, ...])
+     - Weighted average (not compatible with Excel)
    * - CORREL(data_y, data_x)
      - `Excel CORREL article <https://support.microsoft.com/office/correl-function-995dcef7-0c0a-4bed-a3fb-239d7b68ca92>`_
    * - COUNT(value1, [value2, ...])
@@ -736,10 +726,10 @@ Statistical
      - `Excel RANK article <https://support.microsoft.com/office/rank-function-6a2fc49d-1831-4a03-9d8c-c279cf99f723>`_
    * - RSQ(data_y, data_x)
      - `Excel RSQ article <https://support.microsoft.com/office/rsq-function-d7161715-250d-4a01-b80d-a8364f2be08f>`_
-   * - SMALL(data, n)
-     - `Excel SMALL article <https://support.microsoft.com/office/small-function-17da8222-7c82-42b2-961b-14c45384df07>`_
    * - SLOPE(data_y, data_x)
      - `Excel SLOPE article <https://support.microsoft.com/office/slope-function-11fb8f97-3117-4813-98aa-61d7e01276b9>`_
+   * - SMALL(data, n)
+     - `Excel SMALL article <https://support.microsoft.com/office/small-function-17da8222-7c82-42b2-961b-14c45384df07>`_
    * - SPEARMAN(data_y, data_x)
      - Compute the Spearman rank correlation coefficient of a dataset (not compatible with Excel)
    * - STDEV(value1, [value2, ...])
@@ -771,7 +761,7 @@ Statistical
    * - VARPA(value1, [value2, ...])
      - `Excel VARPA article <https://support.microsoft.com/office/varpa-function-59a62635-4e89-4fad-88ac-ce4dc0513b96>`_
 
-.. _functions/text:
+.. _spreadsheet/functions/text:
 
 Text
 ====
@@ -822,8 +812,10 @@ Text
      - `Excel TRIM article <https://support.microsoft.com/office/trim-function-410388fa-c5df-49c6-b16c-9e5630b479f9>`_
    * - UPPER(text)
      - `Excel UPPER article <https://support.microsoft.com/office/upper-function-c11f29b3-d1a3-4537-8df6-04d0049963d6>`_
+   * - VALUE(text)
+     - `Excel VALUE article <https://support.microsoft.com/en-us/office/value-function-257d0108-07dc-437d-ae1c-bc2d3953d8c2>`_
 
-.. _functions/web:
+.. _spreadsheet/functions/web:
 
 Web
 ===
@@ -836,3 +828,198 @@ Web
      - Description or link
    * - HYPERLINK(url, [link_label])
      - `Excel HYPERLINK article <https://support.microsoft.com/office/hyperlink-function-333c7ce6-c5ae-4164-9c47-7de9b76f577f>`_
+
+.. _spreadsheet/functions/odoo:
+
+Odoo-specific functions
+=======================
+
+This section contains functions that interact directly with your Odoo database.
+
+Array
+-----
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+
+   * - Name and arguments
+     - Description or link
+   * - ARRAY.CONSTRAIN(input_range, rows, columns)
+     - Returns a result array constrained to a specific width and height (not compatible with Excel)
+   * - FLATTEN(range, [range2, ...])
+     - Flattens all the values from one or more ranges into a single column (not compatible with Excel)
+
+Date
+----
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+
+   * - Name and arguments
+     - Description or link
+   * - MONTH.END(date)
+     - Last day of the month following a date (not compatible with Excel)
+   * - MONTH.START(date)
+     - First day of the month preceding a date (not compatible with Excel)
+   * - QUARTER(date)
+     - Quarter of the year a specific date falls in (not compatible with Excel)
+   * - QUARTER.END(date)
+     - Last day of the quarter of the year a specific date falls in (not compatible with Excel)
+   * - QUARTER.START(date)
+     - First day of the quarter of the year a specific date falls in (not compatible with Excel)
+   * - YEAR.END(date)
+     - Last day of the year a specific date falls in (not compatible with Excel)
+   * - YEAR.START(date)
+     - First day of the year a specific date falls in (not compatible with Excel)
+   * - YEARFRAC(start_date, end_date, [day_count_convention])
+     - Exact number of years between two dates (not compatible with Excel)
+
+Financial
+---------
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+
+   * - Name and arguments
+     - Description or link
+   * - ODOO.ACCOUNT.GROUP(type)
+     - Returns the account ids of a given group (not compatible with Excel)
+   * - ODOO.CREDIT(account_codes, date_range, [offset], [company_id], [include_unposted])
+     - Get the total credit for the specified account(s) and period (not compatible with Excel)
+   * - ODOO.CURRENCY.RATE(currency_from, currency_to, [date])
+     - This function takes in two currency codes as arguments, and returns the exchange rate from -the first currency to the second as float (not compatible with Excel)
+   * - ODOO.DEBIT(account_codes, date_range, [offset], [company_id], [include_unposted])
+     - Get the total debit for the specified account(s) and period (not compatible with Excel)
+   * - ODOO.BALANCE(account_codes, date_range, [offset], [company_id], [include_unposted])
+     - Get the total balance for the specified account(s) and period (not compatible with Excel)
+   * - ODOO.FISCALYEAR.START(day, [company_id])
+     - Returns the starting date of the fiscal year encompassing the provided date (not compatible with Excel)
+   * - ODOO.FISCALYEAR.END(day, [company_id])
+     - Returns the ending date of the fiscal year encompassing the provided date (not compatible with Excel)
+   * - ODOO.PARTNER.BALANCE(partner_ids, [account_codes], [date_range], [offset], [company_id], [include_unposted])
+     - Get the partner balance for the specified account(s) and period (not compatible with Excel)
+   * - ODOO.RESIDUAL([account_codes], [date_range], [offset], [company_id], [include_unposted])
+     - Get the residual amount for the specified account(s) and period (not compatible with Excel)
+
+Lookup
+------
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+
+   * - Name and arguments
+     - Description or link
+   * - PIVOT(pivot_id, [row_count], [include_total], [include_column_titles], [column_count])
+     - Get a pivot table (not compatible with Excel)
+   * - PIVOT.HEADER(pivot_id, [domain_field_name, ...], [domain_value, ...])
+     - Get the header of a pivot table (not compatible with Excel)
+   * - PIVOT.VALUE(pivot_id, measure_name, [domain_field_name, ...], [domain_value, ...])
+     - Get the value from a pivot table (not compatible with Excel)
+
+Math
+----
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+
+   * - Name and arguments
+     - Description or link
+   * - COUNTUNIQUE(value1, [value2, ...])
+     - Counts number of unique values in a range (not compatible with Excel)
+   * - COUNTUNIQUEIFS(range, criteria_range1, criterion1, [criteria_range2, ...], [criterion2, ...])
+     - Counts number of unique values in a range, filtered by a set of criteria (not compatible with Excel)
+
+Misc
+----
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+
+   * - Name and arguments
+     - Description or link
+   * - FORMAT.LARGE.NUMBER(value, [unit])
+     - Apply a large number format (not compatible with Excel)
+   * - ODOO.LIST(list_id, index, field_name)
+     - Get the value from a list (not compatible with Excel)
+   * - ODOO.LIST.HEADER(list_id, field_name)
+     - Get the header of a list (not compatible with Excel)
+
+Operators
+---------
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+
+   * - Name and arguments
+     - Description or link
+   * - ADD(value1, value2)
+     - Sum of two numbers (not compatible with Excel)
+   * - DIVIDE(dividend, divisor)
+     - One number divided by another (not compatible with Excel)
+   * - EQ(value1, value2)
+     - Equal (not compatible with Excel)
+   * - GT(value1, value2)
+     - Strictly greater than (not compatible with Excel)
+   * - GTE(value1, value2)
+     - Greater than or equal to (not compatible with Excel)
+   * - LT(value1, value2)
+     - Less than (not compatible with Excel)
+   * - LTE(value1, value2)
+     - Less than or equal to (not compatible with Excel)
+   * - MINUS(value1, value2)
+     - Difference of two numbers (not compatible with Excel)
+   * - MULTIPLY(factor1, factor2)
+     - Product of two numbers (not compatible with Excel)
+   * - NE(value1, value2)
+     - Not equal (not compatible with Excel)
+   * - POW(base, exponent)
+     - A number raised to a power (not compatible with Excel)
+   * - UMINUS(value)
+     - A number with the sign reversed (not compatible with Excel)
+   * - UNARY.PERCENT(percentage)
+     - Value interpreted as a percentage (not compatible with Excel)
+   * - UPLUS(value)
+     - A specified number, unchanged (not compatible with Excel)
+
+Statistical
+-----------
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+
+   * - Name and arguments
+     - Description or link
+   * - AVERAGE.WEIGHTED(values, weights, [additional_values, ...], [additional_weights, ...])
+     - Weighted average (not compatible with Excel)
+   * - GROWTH(known_data_y, [known_data_x], [new_data_x], [b])
+     - Fits points to exponential growth trend (not compatible with Excel)
+   * - MATTHEWS(data_x, data_y)
+     - Compute the Matthews correlation coefficient of a dataset (not compatible with Excel)
+   * - POLYFIT.COEFFS(data_y, data_x, order, [intercept])
+     - Compute the coefficients of polynomial regression of the dataset (not compatible with Excel)
+   * - POLYFIT.FORECAST(x, data_y, data_x, order, [intercept])
+     - Predict value by computing a polynomial regression of the dataset (not compatible with Excel)
+   * - SPEARMAN(data_y, data_x)
+     - Compute the Spearman rank correlation coefficient of a dataset (not compatible with Excel)
+   * - TREND(known_data_y, [known_data_x], [new_data_x], [b])
+     - Fits points to linear trend derived via least-squares (not compatible with Excel)
+
+Text
+----
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+
+   * - Name and arguments
+     - Description or link
+   * - JOIN(delimiter, value_or_array1, [value_or_array2, ...])
+     - Concatenates elements of arrays with delimiter (not compatible with Excel)
