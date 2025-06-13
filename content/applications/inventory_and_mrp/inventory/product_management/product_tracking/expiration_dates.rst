@@ -283,3 +283,8 @@ Select a product configured with lot/serial numbers and expiration date tracking
 
 When the expiation date passes for a lot/serial number for this product, a notification is sent to
 the user in this field.
+
+.. important::
+   If a :guilabel:`Default User` is set on the activity type, the user will be notified.
+   If no default user is configured there, the system will then assign the activity to the
+   :guilabel:`Responsible` user selected on the product's :guilabel:`Inventory` tab
