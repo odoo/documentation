@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-30 14:37+0000\n"
+"POT-Creation-Date: 2025-06-12 07:10+0000\n"
 "PO-Revision-Date: 2024-10-08 06:34+0000\n"
 "Last-Translator: Sarah Park, 2025\n"
 "Language-Team: Korean (https://app.transifex.com/odoo/teams/41243/ko/)\n"
@@ -4106,18 +4106,24 @@ msgstr ""
 "데이터베이스 하위 도메인이 `company-name.odoo.com` 이고 메일 환경 설정이 모두 기본 설정인 경우 모든 이메일은 "
 "`notifications@company-name.odoo.com` 를 통해 발송됩니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:21
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:22
 msgid ""
-"Only **one** subdomain can be used as a mailing server in Odoo. Subdomains "
-"for additional companies require an external email server with a custom "
-"domain."
+"This configuration is handled by the system parameter "
+"`mail.default.from_filter`. In case where the sender's domain do not match "
+"the value of this parameter, the notification address is used instead. "
+"Multiple values can be defined in this system parameter: comma-separated, "
+"domains or full email addresses are all allowed. Once an :ref:`outgoing mail"
+" server is configured <email-outbound-different-servers-personalized>`, the "
+"system parameter is no longer considered and the value used is the "
+":ref:`FROM filtering <email-outbound-different-servers-personalized-from-"
+"filtering>` of the mail server."
 msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst-1
 msgid "Odoo’s default outbound messages configuration."
 msgstr "Odoo 기본 발신 메시지 설정하기"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:27
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:33
 msgid ""
 "Emails are sent with `catchall@company-name.odoo.com` as the *reply-to* "
 "address. In addition, delivery errors are sent to `bounce@company-"
@@ -4126,7 +4132,7 @@ msgstr ""
 "이메일은 `catchall@company-name.odoo.com` 을 *reply-to* 주소로 전송됩니다. 또한 전송에 오류가 있을 "
 "경우 `bounce@company-name.odoo.com` 으로 반송됩니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:31
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:37
 msgid ""
 "The catchall, bounce, and notification addresses do not work like other "
 "aliases. They do not have the vocation to create records in a database. "
@@ -4137,11 +4143,11 @@ msgstr ""
 " 없습니다. 별칭으로 전송된 이메일은 자동으로 라우팅되어 기존 및 연결된 레코드에 회신을 하거나 데이터베이스에서 새로운 레코드를 "
 "생성합니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:38
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:44
 msgid "Using a custom domain to send emails"
 msgstr "사용자 지정 도메인을 사용하여 이메일 보내기"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:40
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:46
 msgid ""
 "The database can be configured to use a custom domain, in which case all "
 "default email addresses are built using the custom domain. If the custom "
@@ -4157,7 +4163,7 @@ msgstr ""
 "`bounce@company-name.com`이 됩니다. 사용자 지정 도메인은 Odoo의 이메일 서버 또는 외부 이메일 서버를 사용하여 "
 "이메일을 전송할 경우 활용할 수 있습니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:46
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:52
 msgid ""
 "This section assumes ownership of a custom domain. If not, a custom domain "
 "must be purchased from a domain registrar such as GoDaddy, Namecheap, or any"
@@ -4166,17 +4172,17 @@ msgstr ""
 "이 섹션에서는 사용자 지정 도메인에 대한 소유권이 있다는 것을 전제로 합니다. 도메인이 없을 경우에는 GoDaddy, Namecheap "
 "등의 도메인 등록 기관에서 사용자 지정 도메인을 구매해야 합니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:50
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:56
 msgid ""
 ":download:`Magic Sheet - Email domain configuration PDF "
 "<email_servers_outbound/magic-sheet-email-domain.pdf>`"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:56
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:62
 msgid "Using a custom domain with Odoo’s email server"
 msgstr "Odoo의 이메일 서버에서 사용자 지정 도메인 사용하기"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:58
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:64
 msgid ""
 "On **Odoo Online** or **Odoo.sh**, some configurations are mandatory in the "
 "custom domain's DNS to ensure good deliverability."
@@ -4184,7 +4190,7 @@ msgstr ""
 "**Odoo 온라인** 또는 **Odoo.sh** 에서는, 사용자 지정 도메인의 DNS에서 원활하게 전달될 수 있도록 필수적으로 일부 "
 "메뉴를 환경 설정해야 합니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:62
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:68
 msgid ""
 "Most of the configuration will be done on the domain provider’s side, and it"
 " might require some configuration on the mail server itself. **Some "
@@ -4193,7 +4199,7 @@ msgstr ""
 "대부분의 환경 설정은 도메인 공급업체 측에서 설정하며, 메일 서버 자체에서는 일부만 설정하면 됩니다. **일부 기술적인 지식이 "
 "필요합니다.**"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:65
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:71
 msgid ""
 "The first step is to configure the :ref:`SPF <email-domain-spf>` and "
 ":ref:`DKIM <email-domain-dkim>` to be compliant with Odoo’s mail server."
@@ -4201,7 +4207,7 @@ msgstr ""
 "첫 번째 단계로 :ref:`SPF <email-domain-spf>` 및 :ref:`DKIM <email-domain-dkim>` 를 "
 "Odoo 메일 서버와 호환되도록 설정합니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:68
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:74
 msgid ""
 "Next, the custom domain must be set as the alias domain of a company. Select"
 " the company, open the :guilabel:`Settings`, and add the custom domain under"
@@ -4210,7 +4216,7 @@ msgstr ""
 "다음으로 반드시 사용자 지정 도메인을 회사의 별칭 도메인으로 설정해야 합니다. 회사를 선택하고 :guilabel:`설정` 을 연 후 "
 ":guilabel:`별칭 도메인` 아래에 사용자 지정 도메인을 추가합니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:71
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:77
 msgid ""
 "After adding the alias domain, click the :icon:`oi-arrow-right` "
 "(:guilabel:`internal link`) icon to assign more companies to the custom "
@@ -4220,7 +4226,7 @@ msgstr ""
 "별칭 도메인을 추가한 후, 필요한 경우 :icon:`oi-arrow-right` (:guilabel:`내부 링크`) 아이콘을 클릭하면 "
 "사용자 지정 도메인에 다른 회사를 더 지정할 수 있습니다. :ref:`개발자 모드` 를 활성화할 경우 기본 별칭을 수정할 수도 있습니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:75
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:81
 msgid ""
 ":guilabel:`Bounce Alias`: the mailbox used to catch delivery errors and "
 "populate the :ref:`red envelope <email-issues-outgoing-delivery-failure>` on"
@@ -4229,17 +4235,17 @@ msgstr ""
 ":guilabel:`반송 별칭`: 전송 오류가 확인되면 해당 메시지에 :ref:`빨간 봉투 <email-issues-outgoing-"
 "delivery-failure>` 가 표시되도록 사용하는 메일함입니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:77
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:83
 msgid ""
 ":guilabel:`Catchall Alias`: the default mailbox used to centralize all "
 "replies."
 msgstr ":guilabel:`모든 별칭`: 모든 답신 메일을 중앙에서 관리하는 데 사용하는 기본 메일함입니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:78
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:84
 msgid ":guilabel:`Default From Alias`: the default sender address."
 msgstr ":guilabel:`기본 발신자 별칭`: 기본 발신 주소입니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:81
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:87
 msgid ""
 "At the creation of the first alias domain, all companies will use it. If you"
 " create a new company, the alias domain automatically set is the one with "
@@ -4249,7 +4255,7 @@ msgstr ""
 "처음으로 별칭 도메인을 생성하면 모든 회사에서 이 도메인을 사용하게 됩니다. 새 회사를 생성하면 별칭 도메인이 자동으로 설정되며 "
 "우선순위는 가장 낮게 설정됩니다 (`개발자 모드` 에 있는 별칭 도메인 목록에 표시됨)."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:85
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:91
 msgid ""
 "All email aliases (e.g., related to CRM or Helpdesk teams) must have their "
 "corresponding mailbox in the custom domain mail server."
@@ -4260,7 +4266,7 @@ msgstr ""
 msgid "Technical schema of external mail server configuration with Odoo."
 msgstr "Odoo에서 외부 메일 서버의 기술 스키마에 대한 환경설정"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:91
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:97
 msgid ""
 "To receive emails in the Odoo database within the corresponding chatter "
 "(CRM, invoices, sales orders, etc.), one of these three methods must be "
@@ -4268,23 +4274,23 @@ msgid ""
 msgstr ""
 "Odoo 데이터베이스에서 메시지창 (CRM, 청구서, 판매주문서 등)으로 이메일을 받으려면 다음에 있는 세 가지 방법 중에서 선택합니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:94
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:100
 msgid ""
 ":ref:`Redirections/forwarding <email-inbound-custom-domain-redirections>`,"
 msgstr ":ref:`리디렉션/전달 <email-inbound-custom-domain-redirections>`,"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:95
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:101
 msgid ""
 ":ref:`Incoming mail servers <email-inbound-custom-domain-incoming-server>`,"
 msgstr ":ref:`수신 메일 서버 <email-inbound-custom-domain-incoming-server>`,"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:96
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:102
 msgid ""
 ":ref:`MX record <email-inbound-custom-domain-mx>` (requires advanced "
 "technical knowledge)"
 msgstr ":ref:`MX 레코드 <email-inbound-custom-domain-mx>` (전문적인 기술 지식 필요)"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:98
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:104
 msgid ""
 "Using a custom domain implies that specific :ref:`local-parts <email-"
 "outbound-custom-domain-smtp-server-local-part>` might be used by Odoo to "
@@ -4293,18 +4299,18 @@ msgstr ""
 "사용자 지정 도메인에 있는 특정 :ref:` 로컬 파트 <email-outbound-custom-domain-smtp-server-"
 "local-part>` 를 통해 Odoo에서 이메일을 보낼 수 있습니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:104
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:110
 msgid "Sending emails with an external SMTP server"
 msgstr "외부 SMTP 서버로 이메일 보내기"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:107
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:113
 msgid ""
 "If utilizing your own outgoing mail server, it must be paired with your own "
 "domain, as updating the DNS of an Odoo subdomain is not feasible."
 msgstr ""
 "자체 발신 메일 서버를 사용하는 경우 Odoo 하위 도메인에 있는 DNS는 업데이트할 수 없으므로 자체 도메인과 페어링해야 합니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:110
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:116
 msgid ""
 "To add an external SMTP server in Odoo, open :guilabel:`Settings`, and "
 "enable the :guilabel:`Use Custom Email Servers` option found under the "
@@ -4312,7 +4318,7 @@ msgid ""
 "page to save the changes."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:114
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:120
 msgid ""
 "Returning to the :guilabel:`Emails` section, click :guilabel:`Outgoing Email"
 " Servers`, then `New` to create an outgoing mail server record. Most fields "
@@ -4323,7 +4329,7 @@ msgstr ""
 "메일 서버 레코드를 생성합니다. 대부분은 SMTP 서버에 대한 연결을 설정하는 데 사용하는 일반적인 매개변수입니다. 이메일 공급업체에서 "
 "제공한 값을 사용합니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:118
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:124
 msgid ""
 "Once completed, click :guilabel:`Test Connection`. Note that a successful "
 "test connection does not confirm that the email will go out as some "
@@ -4333,62 +4339,62 @@ msgstr ""
 "완료되면 :guilabel:`연결 테스트` 를 클릭합니다. 연결 테스트에 성공했다고 해서 이메일 전송이 보장되는 것은 아닙니다.공급자 "
 "측에서 계속 제한되는 항목이 있을 수 있으므로 공급자 문서를 참조하는 것이 좋습니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:125
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:131
 msgid "Local-part values"
 msgstr "로컬 파트 값"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:127
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:133
 msgid ""
 "Below are presented the different local-part values that can be used by Odoo"
 " to send emails. It might be required to whitelist them in your mail server:"
 msgstr ""
 "다음은 Odoo에서 이메일을 전송할 때 사용하는 다양한 로컬 파트 값입니다. 메일 서버에 있는 허용 목록에 이 값을 추가해야 합니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:130
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:136
 msgid "The Alias Domain Bounce Alias (default value = `bounce`),"
 msgstr "별칭 도메인 반송 별칭 (기본값 = `bounce`),"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:131
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:137
 msgid "The Alias Domain Default From (default value = `notifications`),"
 msgstr "별칭 도메인 기본 발신자 (기본값 = `notifications`),"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:132
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:138
 msgid ""
 "The default admin address `admin@company-name.odoo.com` or, if changed, the "
 "new value),"
 msgstr "기본 관리자 주소 `admin@company-name.odoo.com` 또는 변경된 경우 새로운 값"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:133
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:139
 msgid ""
 "The default Odoobot address `odoobot@company-name.odoo.com` or, if changed, "
 "the new value),"
 msgstr "기본 Odoobot 주소 `odoobot@company-name.odoo.com` 또는 변경된 경우 새로운 값"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:134
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:140
 msgid "The specific FROM defined on an email marketing campaign,"
 msgstr "이메일 마케팅 캠페인에 지정되어 있는 특정 발신자"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:135
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:141
 msgid "The specific FROM that can be defined in an email template."
 msgstr "이메일 템플릿에 지정되는 특정 발신자"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:138
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:144
 msgid ":doc:`google_oauth`"
 msgstr ":doc:`google_oauth`"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:139
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:145
 msgid ":doc:`azure_oauth`"
 msgstr ":doc:`azure_oauth`"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:144
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:150
 msgid "Setting up different servers for transactional and mass emails"
 msgstr "트랜잭션 및 대량 메일에 대해 각기 다른 서버 설정하기"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:149
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:155
 msgid "Personalized mail servers"
 msgstr "개인 맞춤형 메일 서버"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:151
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:157
 msgid ""
 "Transactional emails and mass mailings can be sent using separate email "
 "servers in Odoo. Doing so means day-to-day emails, quotations, or invoices "
@@ -4400,7 +4406,7 @@ msgstr ""
 "견적서 또는 청구서를 *거래 이메일* 로 처리하게 됩니다. *대량 발송 이메일* 는 청구서나 견적서를 일괄 발송하는 것과 같은 경우와 "
 "같이, 마케팅 자동화 또는 이메일 마케팅 애플리케이션에서 관리합니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:157
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:163
 msgid ""
 "You can use services like Gmail, Amazon SES, or Brevo for transactional "
 "emails, and services like Mailgun, Sendgrid, or Mailjet for mass mailings."
@@ -4408,7 +4414,7 @@ msgstr ""
 "트랜잭션 이메일용으로는 Gmail, Amazon SES 또는 Brevo와 같은 서비스를 사용하고 대량 메일에는 Mailgun, "
 "Sendgrid 또는 Mailjet과 같은 서비스를 사용할 수 있습니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:160
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:166
 msgid ""
 "First, activate the :ref:`developer-mode` and go to :menuselection:`Settings"
 " --> Technical --> Email: Outgoing Mail Servers`. There, add two outgoing "
@@ -4426,7 +4432,7 @@ msgstr ""
 msgid "Example of split between transaction and mass mailing mail servers."
 msgstr "트랜잭션 메일 서버와 대량 메일 서버가 분리되어 있는 예시"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:169
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:175
 msgid ""
 "Now, go to :menuselection:`Email Marketing --> Configuration --> Settings`, "
 "enable :guilabel:`Dedicated Server`, and select the appropriate email "
@@ -4441,17 +4447,17 @@ msgstr ""
 msgid "Dedicated mail server on Email Marketing app settings."
 msgstr "이메일 마케팅 앱 설정에 있는 전용 메일 서버"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:179
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:185
 msgid "FROM filtering"
 msgstr "발신자 필터"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:182
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:188
 msgid ""
 "It’s **highly recommended** to configure the FROM Filtering on the outgoing "
 "mail servers as per the instructions of your provider."
 msgstr "발신 메일 서버에서 서비스 제공업체의 지침에 따라서 발신자 필터를 설정하는 것을 **강력히 권장합니다**."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:185
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:191
 msgid ""
 "The :guilabel:`FROM Filtering` field allows for the use of a specific "
 "outgoing email server depending on the *From* email address or domain that "
@@ -4463,25 +4469,25 @@ msgstr ""
 "서버를 사용할 수 있습니다.이 값은 반드시 보낸 사람의 이메일 주소와 일치하고 발신 메일 서버 공급자 측에서 신뢰하는 **도메인 혹은 "
 "전체 이메일 주소** 여야 합니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:190
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:196
 msgid ""
 "If FROM filtering is not used, emails will go out using the notification "
 "address."
 msgstr "발신자 필터를 적용하지 않을 경우 이메일은 알림 주소를 통해 발송됩니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:193
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:199
 msgid ""
 "Some outgoing mail servers require a specific configuration of the FROM "
 "filter."
 msgstr "일부 발신 메일 서버에는 발신자 필터에 필요한 환경설정이 지정되어 있습니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:195
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:201
 msgid ""
 "When an email is sent from Odoo, the following sequence is used to choose "
 "the outgoing email server:"
 msgstr "Odoo에서 이메일을 전송하려면 다음과 같은 순서로 발신 이메일 서버를 선택합니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:197
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:203
 msgid ""
 "First, Odoo searches for a server that has the same FROM filtering value as "
 "the From value (i.e., email address) defined in the outgoing email. This "
@@ -4491,7 +4497,7 @@ msgstr ""
 "먼저 Odoo는 발신 이메일에 지정되어 있는 발신자 값 (예: 이메일 주소)과 동일한 발신자 필터 값이 있는 서버를 검색합니다. 이 설정"
 " 방식은 모든 사용자가 동일한 도메인을 공유하는 회사에서 로컬 파트가 다른 경우에 가장 유용하게 활용할 수 있습니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:202
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:208
 msgid ""
 "If the sender's email address is `test@example.com`, only an email server "
 "having a FROM filtering value equal to `test@example.com` or `example.com` "
@@ -4500,7 +4506,7 @@ msgstr ""
 "발신자의 이메일 주소가 `test@example.com` 인 경우 발신자 필터 값이 `test@example.com` 또는 "
 "`example.com` 인 이메일 서버만 사용할 수 있습니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:205
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:211
 msgid ""
 "If no server is found based on the first criteria, Odoo looks for the first "
 "server without a FROM filtering value set. The email will be overridden with"
@@ -4509,13 +4515,13 @@ msgstr ""
 "첫 번째 기준에 부합하는 서버가 검색되지 않는 경우 Odoo에서는 발신자 필터 값 설정을 해제한 후 나타나는 첫 번째 서버를 검색합니다."
 " 이메일은 알림 주소로 변경됩니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:208
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:214
 msgid ""
 "If no server is found based on the second criteria, Odoo uses the first "
 "server, and the email will be overridden with the notification address."
 msgstr "두 번째 기준에 따라 서버를 찾을 수 없는 경우 Odoo는 첫 번째 서버를 사용하게 되며 이메일은 알림 주소로 변경됩니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:212
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:218
 msgid ""
 "To determine which server is first, Odoo uses the priority value (the lower "
 "the value is, the higher the priority is). Failing to do so, the first "
@@ -4524,17 +4530,23 @@ msgstr ""
 "어떤 서버를 우선적으로 사용하게 할지 정하기 위해 Odoo에서는 우선순위 값을 사용합니다 (값이 낮을수록 우선순위가 높음). 이 방법 "
 "외에도 서버명을 기준으로 알파벳 순서에 따라 첫 번째 서버를 정합니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:216
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:222
+msgid ""
+"If there is no mail server, Odoo relies on the :ref:`system parameter "
+"<email-outbound-default-from-filtering>` value."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:225
 msgid ""
 "It is also possible to use Odoo's mail server for transactional emails in "
 "addition to mass mailings."
 msgstr "Odoo의 메일 서버는 대량 메일 외에 트랜잭션 이메일에도 사용할 수 있습니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:221
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:230
 msgid "Using an external email server and Odoo’s default server"
 msgstr "외부 이메일 서버와 Odoo 기본 서버 사용하기"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:223
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:232
 msgid ""
 "On Odoo Online and Odoo.sh, databases are started with Odoo's SMTP server. "
 "If no outgoing mail server is set, the default Odoo's SMTP server will be "
@@ -4549,7 +4561,7 @@ msgid ""
 "authentication."
 msgstr "Odoo 메일 서버에서 CLI 인증으로 메일 서버를 추가합니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:230
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:239
 msgid ""
 "If an outgoing mail server is used simultaneously with Odoo’s default server"
 " (CLI), the FROM filter of the outgoing mail server must contain a custom "
@@ -4567,14 +4579,14 @@ msgid ""
 "Mass mailing."
 msgstr "Odoo에서 트랜젝션 이메일용 메일 서버와 대량 메일용 메일 서버를 분리합니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:239
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:248
 msgid ""
 "On Odoo Online, the command line interface is equivalent to the default Odoo"
 " mail server, using the same limit as if there was no outgoing mail server "
 "in place."
 msgstr "Odoo 온라인에서 명령줄 인터페이스는 기본 Odoo 메일 서버와 동일하며, 발신 메일 서버가 없는 경우와 한도가 같습니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:243
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:252
 msgid ""
 "On Odoo Online, the page also shows your daily email usage and your daily "
 "limit. On Odoo.sh, you need to check on the monitor page the number of "
@@ -4583,13 +4595,13 @@ msgstr ""
 "Odoo 온라인에서는 이 페이지에서도 일일 이메일 사용량과 일일 한도가 표시됩니다. Odoo.sh에서는 모니터 페이지에서 전송된 발신 "
 "이메일 수를 확인해야 합니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:247
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:256
 msgid ""
 "On Odoo.sh, to use the command-line interface, an outgoing mail server can "
 "be configured on the configuration file."
 msgstr "Odoo.sh에서 명령줄 인터페이스를 사용하기 위해서는 환경 설정 파일에서 발신 메일 서버를 설정하면 됩니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:251
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:260
 msgid ""
 "Odoo’s mail server is meant for transactional emails and small-scale "
 "marketing campaigns. The :ref:`daily limit <email-issues-outgoing-delivery-"
@@ -4600,11 +4612,11 @@ msgstr ""
 ":ref:` 일일 한도 <email-issues-outgoing-delivery-failure-messages-limit>` 가 "
 "달라집니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:258
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:267
 msgid "Using a custom domain with an external email server"
 msgstr "외부 이메일 서버로 사용자 지정 도메인 사용하기"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:260
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:269
 msgid ""
 "Similar to the :ref:`previous chapter <email-outbound-different-servers-"
 "external-odoo>`, proper configuration might be needed to ensure that the "
@@ -4618,7 +4630,7 @@ msgstr ""
 "레코드 (SPF, DKIM 및 DMARC)를 올바르게 설정합니다. :ref:`가장 많이 선택하는 업체 <email-domain-"
 "providers-documentation>` 목록을 참조하세요."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:267
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:276
 msgid ""
 "DNS configuration is required when you use your own domain. If an external "
 "outgoing mail server is used, configuring the records as described in the "
@@ -4631,11 +4643,11 @@ msgstr ""
 "Odoo와 독립적이기 때문에 :doc:`메일 서버용 Odoo DNS 설정 문서 <email_domain>` 에 설명된 대로 레코드를 "
 "구성하더라도 기대하는 효과를 얻을 수 **없습니다.** Odoo에서는 Odoo 하위 도메인 설정을 하는 것이 허용되지 않습니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:276
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:285
 msgid "Port restriction"
 msgstr "포트 제한"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:278
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:287
 msgid ""
 "Port 25 is blocked for security reasons on Odoo Online and Odoo.sh. Try "
 "using port 465, 587, or 2525 instead."
@@ -4643,11 +4655,11 @@ msgstr ""
 "보안상의 이유로 Odoo 온라인 및 Odoo.sh에서 포트 25는 차단되어 있습니다. 대신 포트 465, 587 또는 2525를 사용해 "
 "보세요."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:284
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:293
 msgid "Alias domain"
 msgstr "별칭 도메인"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:286
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:295
 msgid ""
 "The catchall domain is company-specific. By default, all companies share "
 "Odoo’s subdomain (e.g., `company-name.odoo.com`), but each company may have "
@@ -4656,7 +4668,7 @@ msgstr ""
 "캐치올 도메인은 회사별로 다릅니다. 기본적으로 Odoo의 하위 도메인 (예: `company-name.odoo.com`)은 모든 회사에 "
 "공통적으로 적용되지만 회사에서 자체 사용자 지정 이메일 도메인을 둘 수 있습니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:289
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:298
 msgid ""
 "When the :ref:`developer-mode` is activated, the alias domain options are "
 "available by going to :menuselection:`Settings --> Technical --> Email: "
@@ -4665,7 +4677,7 @@ msgstr ""
 ":ref:`개발자 모드` 가 활성화되면 :menuselection:`설정 --> 기술 --> 이메일: 별칭 도메인` 에서 별칭 도메인 "
 "기능을 사용할 수 있습니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:293
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:302
 msgid ""
 "Any modification of the alias domain must be done very carefully. If one of "
 "the aliases (bounce, catchall, default from) is changed, all previous emails"
@@ -4674,7 +4686,7 @@ msgstr ""
 "별칭 도메인을 수정할 때는 매우 신중하게 진행하도록 합니다. 별칭 (반송, 캐치올, 발신 기본값)이 변경될 경우 이전 이메일이 새 "
 "별칭으로 제대로 리디렉션되지 않을 경우 모두 손실됩니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:297
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:306
 msgid ""
 "The :guilabel:`Default From Alias` field can be filled with a local-part of "
 "the email address (by default `notifications`) or a full email address. "
@@ -4684,11 +4696,11 @@ msgstr ""
 ":guilabel:`기본 발신자 별칭` 에는 이메일 주소의 로컬 부분 (기본적으로 `알림`) 또는 전체 이메일 주소가 입력됩니다. "
 "이메일의 `발신자` 헤더를 환경 설정에서 지정합니다. 전체 이메일 주소를 사용할 경우 모든 발신 이메일을 이 주소로 덮어씁니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:305
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:314
 msgid "Notification system"
 msgstr "알림 시스템"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:307
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:316
 msgid ""
 "When an email is sent from the chatter, customers can reply directly to it. "
 "If a customer replies directly to an email, the answer is logged in the same"
@@ -4697,7 +4709,7 @@ msgstr ""
 "메시지창에서 이메일을 발송하면 고객이 바로 답신을 할 수 있습니다. 고객이 이메일에 직접 답신할 경우 해당 답신 메일이 같은 메시지창에 "
 "기록되어 레코드와 관련된 메시지 스레드로 기능을 하게 됩니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:311
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:320
 msgid ""
 "Upon receiving the reply, Odoo then uses the subscribed followers (based on "
 "the subscribed subtypes) to send them a notification by email, or in the "
@@ -4706,7 +4718,7 @@ msgstr ""
 "답장을 받으면 Odoo는 구독한 팔로워 (구독한 하위 유형에 따라)를 대상으로 사용자의 기본 설정에 따라 이메일이나 Odoo 받은 "
 "편지함으로 알림을 보냅니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:315
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:324
 msgid ""
 "If a customer with the email address `“Mary” <mary@customer.example.com>` "
 "makes a direct reply to an email coming from the Odoo database, Odoo's "
@@ -4716,7 +4728,7 @@ msgstr ""
 "이메일 주소가 `“Mary” <mary@customer.example.com>` 인 고객이 Odoo 데이터베이스에서 받은 이메일에 직접 "
 "답장할 경우, Odoo에서는 스레드에 있는 모든 팔로워에게 이메일 내용을 다시 배포하는 것이 기본적인 동작으로 설정되어 있습니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:319
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:328
 msgid ""
 "As Mary’s domain does not belong to the alias domain, Odoo overrides the "
 "email address and uses the notification email address to notify the "
@@ -4730,7 +4742,7 @@ msgstr ""
 "`보낸 사람` 주소는 `mary@customer.example.com` 대신 `notifications@company-"
 "name.odoo.com` 값으로 재지정됩니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:325
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:334
 msgid ""
 "The address is constructed using the name of the sender and `{alias domain, "
 "default from alias}`@`{alias domain, domain name}`, by default, "
@@ -4739,22 +4751,19 @@ msgstr ""
 "주소는 발신자 이름과 `{별칭 도메인, 별칭에서 기본값}`@`{별칭 도메인, 도메인 주소}` 로 구성되어 있으며, 기본적으로 "
 "`notifications@company-name.odoo.com`으로 되어 있습니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:332
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:341
 msgid "Using a unique email address for all outgoing emails"
 msgstr "발신 이메일용 고유 이메일 주소 사용하기"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:334
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:343
 msgid ""
 "To force the email address from which emails are sent, activate the "
 ":ref:`developer-mode`, and go to :menuselection:`Settings --> Technical --> "
-"Email: Alias Domains`. On the :guilabel:`Default From Alias`, use the the "
-"local-part or a complete email address as the value."
+"Email: Alias Domains`. On the :guilabel:`Default From Alias`, use the local-"
+"part or a complete email address as the value."
 msgstr ""
-"이메일을 발송할 이메일 주소를 강제로 지정하려면 :ref:`개발자 모드` 를 활성화한 후 :menuselection:`설정 --> 기술 "
-"--> 이메일: 별칭 ​​도메인` 으로 이동합니다. :guilabel:`기본 발신자 별칭` 에서 로컬 부분 또는 전체 이메일 주소를 "
-"값으로 사용합니다."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:339
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:348
 msgid ""
 "If a **complete address** is used as the :guilabel:`Default From Alias` "
 "value, **all** outgoing emails will be overwritten by this address."
@@ -6187,16 +6196,19 @@ msgstr ""
 "(도메인 기반 메시지 인증, 보고 및 준수)` 항목을 설정해 두는 것이 좋습니다."
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:92
-#: ../../content/applications/general/email_communication/mailjet_api.rst:157
 msgid ""
-"`Mailjet's SPF/DKIM/DMARC documentation "
-"<https://documentation.mailjet.com/hc/articles/ 360042412734-Authenticating-"
-"Domains-with-SPF-DKIM>`_"
+"`Mailjet's SPF/DKIM documentation <https://documentation.mailjet.com/hc/en-"
+"us/articles/360049641733-Authenticating-Domains-with-SPF-and-DKIM-A-"
+"Complete-Guide>`_"
 msgstr ""
-"`Mailjet의 SPF/DKIM/DMARC 문서 <https://documentation.mailjet.com/hc/articles/ "
-"360042412734-Authenticating-Domains-with-SPF-DKIM>`_"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:96
+#: ../../content/applications/general/email_communication/mailjet_api.rst:94
+msgid ""
+"`Mailjet's DMARC documentation <https://documentation.mailjet.com/hc/en-"
+"us/articles/20531905163419-Understanding-DMARC>`_"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/mailjet_api.rst:98
 msgid ""
 "If the database is not using a custom domain, then in order to verify the "
 "sender's address, a temporary alias (of the three email addresses mentioned "
@@ -6206,11 +6218,11 @@ msgstr ""
 "데이터베이스에서 사용자 지정 도메인을 사용하지 않는 경우 발신자 주소를 확인하려면 임시 별칭 (위에 언급된 세 개의 이메일 주소 중)을 "
 "Odoo CRM에 설정하여 영업제안을 생성해야 합니다. 그러면 데이터베이스에서 인증용 이메일을 수신하여 계정을 확인할 수 있습니다."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:104
+#: ../../content/applications/general/email_communication/mailjet_api.rst:106
 msgid "Add a domain"
 msgstr "도메인 추가하기"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:106
+#: ../../content/applications/general/email_communication/mailjet_api.rst:108
 msgid ""
 "By adding an entire domain to the Mailjet account, all the sender addresses "
 "related to that domain are automatically validated for sending emails using "
@@ -6224,20 +6236,20 @@ msgstr ""
 "이동합니다. 그런 다음 :guilabel:`발신자 및 도메인` 섹션 아래에 있는 :guilabel:`발신자 도메인 또는 주소 추가` "
 "링크를 클릭합니다. 그런 다음 :guilabel:`도메인 추가` 를 클릭하여 사용자 지정 도메인을 추가합니다."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:113
+#: ../../content/applications/general/email_communication/mailjet_api.rst:115
 msgid ""
 "The domain needs to be added to the Mailjet account and then validated "
 "through the :abbr:`DNS (Domain Name System)`."
 msgstr "도메인을 Mailjet 계정에 추가한 다음 :abbr:`DNS (도메인 주소 시스템)` 를 통해 유효성을 검사해야 합니다."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:116
+#: ../../content/applications/general/email_communication/mailjet_api.rst:118
 msgid ""
 "After that, fill out the :guilabel:`Add a new Domain` page on Mailjet and "
 "click :guilabel:`Continue`."
 msgstr ""
 "그런 다음 Mailjet에서 :guilabel:`새 도메인 추가` 페이지를 만든 후 :guilabel:`계속` 을 클릭합니다."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:119
+#: ../../content/applications/general/email_communication/mailjet_api.rst:121
 msgid ""
 "After adding the domain, a validation page will populate. Unless the Odoo "
 "database is on-premise (in which case, choose :guilabel:`Option 1`), choose "
@@ -6253,11 +6265,11 @@ msgstr ""
 msgid "The TXT record information to input on the domain's DNS."
 msgstr "도메인의 DNS에 입력할 TXT 레코드 정보"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:128
+#: ../../content/applications/general/email_communication/mailjet_api.rst:130
 msgid "Setup in the domain's DNS"
 msgstr "도메인 DNS에 설정하기"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:130
+#: ../../content/applications/general/email_communication/mailjet_api.rst:132
 msgid ""
 "After getting the TXT record information from the Mailjet account, add a TXT"
 " record to the domain's :abbr:`DNS (Domain Name System)`. This process "
@@ -6271,11 +6283,11 @@ msgstr ""
 "공급업체 측에 문의하세요. TXT 레코드 정보는 :guilabel:`호스트` 및 :guilabel:`값` 으로 구성되어 있습니다. 이 "
 "내용을 TXT 레코드의 해당 항목에 붙여넣습니다."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:137
+#: ../../content/applications/general/email_communication/mailjet_api.rst:139
 msgid "Return to Mailjet account information"
 msgstr "Mailjet 계정 정보로 돌아가기"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:139
+#: ../../content/applications/general/email_communication/mailjet_api.rst:141
 msgid ""
 "After adding the TXT record to the domain's :abbr:`DNS (Domain Name "
 "System)`, navigate back to the Mailjet account. Then, navigate to "
@@ -6287,7 +6299,7 @@ msgstr ""
 ":menuselection:`계정 정보 --> 발신자 도메인 또는 주소 추가` 로 이동하여 :guilabel:`도메인` 옆에 있는 "
 "톱니바퀴 아이콘을 클릭한 후 :guilabel:`승인` 을 선택합니다."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:143
+#: ../../content/applications/general/email_communication/mailjet_api.rst:145
 msgid ""
 "This action can also be done by going to the `Sender domains & addresses "
 "<https://app.mailjet.com/ account/sender>`_ page on the Mailjet account "
@@ -6296,7 +6308,7 @@ msgstr ""
 "이 작업은 Mailjet 계정 정보의 `발신자 도메인 및 주소 <https://app.mailjet.com/ "
 "account/sender>`_ 페이지에 있는 :guilabel:`관리` 를 클릭하는 방법으로도 할 수 있습니다."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:146
+#: ../../content/applications/general/email_communication/mailjet_api.rst:148
 msgid ""
 "Next, click :guilabel:`Check Now` to validate the TXT record that was added "
 "on the domain. A success screen will appear if the domain is configured "
@@ -6309,7 +6321,7 @@ msgstr ""
 msgid "Check DNS record in Mailjet."
 msgstr "Mailjet에 있는 DNS 레코드를 확인합니다."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:152
+#: ../../content/applications/general/email_communication/mailjet_api.rst:154
 msgid ""
 "After successfully setting up the domain, there is an option to "
 ":guilabel:`Authenticate this domain (SPF/DKIM)`. This button populates "
@@ -6320,15 +6332,24 @@ msgstr ""
 ":abbr:`SPF (발신자 정책 프레임워크)` 및 :abbr:`DKIM (도메인키 식별 메일) 레코드가 입력되어 :abbr:`DNS "
 "(도메인 주소 시스템)` 공급업체 항목이 입력됩니다."
 
+#: ../../content/applications/general/email_communication/mailjet_api.rst:159
+msgid ""
+"`Mailjet's SPF/DKIM/DMARC documentation "
+"<https://documentation.mailjet.com/hc/articles/ 360042412734-Authenticating-"
+"Domains-with-SPF-DKIM>`_"
+msgstr ""
+"`Mailjet의 SPF/DKIM/DMARC 문서 <https://documentation.mailjet.com/hc/articles/ "
+"360042412734-Authenticating-Domains-with-SPF-DKIM>`_"
+
 #: ../../content/applications/general/email_communication/mailjet_api.rst-1
 msgid "Authenticate the domain with SPF/DKIM records in Mailjet."
 msgstr "Mailjet에서 SPF/DKIM 레코드로 도메인을 인증합니다."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:166
+#: ../../content/applications/general/email_communication/mailjet_api.rst:168
 msgid "Set up in Odoo"
 msgstr "Odoo에서 설정하기"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:168
+#: ../../content/applications/general/email_communication/mailjet_api.rst:170
 msgid ""
 "To complete the setup, navigate to the Odoo database and go to the "
 ":guilabel:`Settings`. With :ref:`developer-mode` turned on, go to the "
@@ -6340,7 +6361,7 @@ msgstr ""
 "상태에서 :menuselection:`기술 메뉴 ​​--> 이메일 --> 발신 메일 서버` 로 이동합니다. 그런 다음 "
 ":guilabel:`만들기` 버튼을 클릭하여 새로운 발신 서버 설정을 생성합니다."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:173
+#: ../../content/applications/general/email_communication/mailjet_api.rst:175
 msgid ""
 "Next, input the `SMTP server` (in-v3.mailjet.com), `port number` (587 or "
 "465), and `Security (SSL/TLS)` that was copied earlier from the Mailjet "
@@ -6354,7 +6375,7 @@ msgstr ""
 "확인할 수 있습니다. Mailjet에서 요구하지 않더라도 :abbr:`SSL (Secure Sockets "
 "Layer)`/:abbr:`TLS (Transport Layer Security)` 를 사용하는 것이 좋습니다."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:178
+#: ../../content/applications/general/email_communication/mailjet_api.rst:180
 msgid ""
 "For the :guilabel:`Username`, input the :guilabel:`API KEY`. For the "
 ":guilabel:`Password`, input the :guilabel:`SECRET KEY` that was copied from "
@@ -6366,7 +6387,7 @@ msgstr ""
 "Mailjet 계정에서 메모장으로 복사한 :guilabel:`보안 키` 를 입력합니다. 이와 같은 설정은 "
 ":menuselection:`Mailjet --> 계정 설정 --> SMTP 및 SEND API 설정` 에서 확인할 수 있습니다."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:183
+#: ../../content/applications/general/email_communication/mailjet_api.rst:185
 msgid ""
 "Then, if the Mailjet server is used for mass emailing, set the "
 ":guilabel:`Priority` value higher than that of any transactional email "
@@ -11637,16 +11658,8 @@ msgid ""
 "upload` :guilabel:`(Save manually)`. An invitation email is automatically "
 "sent to the user, using the email in the :guilabel:`Email Address` field. "
 "The user must click on the link included in the email to accept the "
-"invitation, and to create a database login. email is automatically sent to "
-"the user, using the email in the :guilabel:`Email Address` field. The user "
-"must click on the link included in the email to accept the invitation, and "
-"to create a database login."
+"invitation, and to create a database login."
 msgstr ""
-"페이지의 필수 필드를 모두 작성한 후 :icon:`fa-cloud-upload` :guilabel:`(수동 저장)` 을 클릭합니다. 초대"
-" 이메일은 :guilabel:`이메일 주소` 필드에 있는 이메일을 통해 자동으로 전송됩니다. 사용자는 반드시 반드시 이메일에 있는 링크를"
-" 클릭해야 초대를 수락하고 데이터베이스에서 로그인 정보를 생성할 수 있습니다. 이메일은 자동으로 전송되며, :guilabel:`이메일 "
-"주소` 필드에 입력된 이메일을 통해 전송됩니다. 사용자는 반드시 반드시 이메일에 있는 링크를 클릭해야 초대를 수락하고 데이터베이스에서 "
-"로그인 정보를 생성할 수 있습니다. "
 
 #: ../../content/applications/general/users.rst-1
 msgid ""
@@ -11654,7 +11667,7 @@ msgid ""
 " sent in Odoo."
 msgstr "Odoo에서 초대 이메일이 전송되었다는 알림이 나타나 있는 사용자 양식 모습"
 
-#: ../../content/applications/general/users.rst:47
+#: ../../content/applications/general/users.rst:45
 msgid ""
 "If the company is on a monthly subscription plan, the database automatically"
 " updates to reflect the added users. If the company is on a yearly or multi-"
@@ -11667,11 +11680,11 @@ msgstr ""
 "요금제를 사용하는 경우에는 데이터베이스에 만료일 안내 배너가 나타나게 됩니다. 요금제 견적서를 업그레이드하여 생성하려면 배너를 클릭하여 "
 "구독을 업데이트하세요. 또는 `고객 지원 티켓 <https://www.odoo.com/help>`_ 을 통해 상담을 받을 수도 있습니다."
 
-#: ../../content/applications/general/users.rst:54
+#: ../../content/applications/general/users.rst:52
 msgid "User type"
 msgstr "사용자 유형"
 
-#: ../../content/applications/general/users.rst:56
+#: ../../content/applications/general/users.rst:54
 msgid ""
 ":guilabel:`User Type` can be chosen on the :guilabel:`Manage Users` page by "
 "clicking on the search bar, and then :ref:`setting a filter "
@@ -11679,7 +11692,7 @@ msgid ""
 ":guilabel:`Portal User`."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:60
+#: ../../content/applications/general/users.rst:58
 msgid ""
 "Odoo databases have three types of users: :guilabel:`Internal User`, "
 ":guilabel:`Portal`, and :guilabel:`Public`. Users are considered *internal "
@@ -11689,7 +11702,7 @@ msgid ""
 ":doc:`users/portal`."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:65
+#: ../../content/applications/general/users.rst:63
 msgid ""
 "The :guilabel:`Portal` user option does **not** allow the administrator to "
 "choose access rights. These users have specific access rights pre-set (such "
@@ -11697,18 +11710,18 @@ msgid ""
 "usual Odoo groups."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:72
+#: ../../content/applications/general/users.rst:70
 msgid "Deactivate users"
 msgstr "사용자 비활성화"
 
-#: ../../content/applications/general/users.rst:74
+#: ../../content/applications/general/users.rst:72
 msgid ""
 "To deactivate (i.e. archive) a user, navigate to :menuselection:`Settings "
 "app --> Users section --> Manage Users`. Then, tick the checkbox to the left"
 " of the users to be deactivated."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:77
+#: ../../content/applications/general/users.rst:75
 msgid ""
 "After selecting the appropriate user to be archived, click the :icon:`fa-"
 "cog` :guilabel:`(Actions)` icon, and select :guilabel:`Archive` from the "
@@ -11716,7 +11729,7 @@ msgid ""
 ":guilabel:`Confirmation` pop-up window that appears."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:82
+#: ../../content/applications/general/users.rst:80
 msgid ""
 "**Never** deactivate the main/administrator user (admin). Making changes to "
 "admin users can have a detrimental impact on the database. This includes "
@@ -11728,11 +11741,11 @@ msgstr ""
 " 여기에는 데이터베이스에서 액세스 권한을 변경할 수 있는 사용자가 없게 되는 *관리자 권한 불가* 상태까지 있을 수 있습니다. 따라서 "
 "Odoo는 변경하기 전에 Odoo 비즈니스 분석 담당자 또는 지원 팀에 문의하는 것을 권장합니다."
 
-#: ../../content/applications/general/users.rst:88
+#: ../../content/applications/general/users.rst:86
 msgid "Error: too many users"
 msgstr "오류: 사용자가 너무 많습니다."
 
-#: ../../content/applications/general/users.rst:90
+#: ../../content/applications/general/users.rst:88
 msgid ""
 "If there are more users in an Odoo database than provisioned in the Odoo "
 "Enterprise subscription, the following message is displayed."
@@ -11743,7 +11756,7 @@ msgstr ""
 msgid "Too many users on a database error message."
 msgstr "데이터베이스 사용자가 너무 많다는 오류 메시지"
 
-#: ../../content/applications/general/users.rst:96
+#: ../../content/applications/general/users.rst:94
 msgid ""
 "When the message appears, the database administrator has 30 days to act "
 "before the database expires. The countdown is updated every day."
@@ -11751,11 +11764,11 @@ msgstr ""
 "이 메시지가 나타날 경우 데이터베이스 관리자는 데이터베이스가 만료되기 30일 이내에 조치를 취해야 합니다. 카운트다운은 매일 "
 "업데이트됩니다."
 
-#: ../../content/applications/general/users.rst:99
+#: ../../content/applications/general/users.rst:97
 msgid "To resolve the issue, either:"
 msgstr "문제를 해결하려면 다음 중에서 선택하세요;"
 
-#: ../../content/applications/general/users.rst:101
+#: ../../content/applications/general/users.rst:99
 msgid ""
 "Add more users to the subscription by clicking the :guilabel:`Upgrade your "
 "subscription` link displayed in the message to validate the upsell "
@@ -11764,12 +11777,12 @@ msgstr ""
 "구독에 사용자를 추가하려면 메시지에 표시된 :guilabel:`구독 업그레이드` 링크를 클릭한 후 구독 상향 변경 견적서를 확인하고 추가"
 " 사용자에 대한 비용을 결제하면 됩니다."
 
-#: ../../content/applications/general/users.rst:103
+#: ../../content/applications/general/users.rst:101
 msgid ""
 ":ref:`Deactivate users <users/deactivate>`, and reject the upsell quotation."
 msgstr ":ref:`사용자 비활성화 <users/deactivate>` 를 클릭하여 상향 변경 견적서를 거절합니다."
 
-#: ../../content/applications/general/users.rst:106
+#: ../../content/applications/general/users.rst:104
 msgid ""
 "If the company is on a monthly subscription plan, the database automatically"
 " updates to reflect the added users. If the company is on a yearly or multi-"
@@ -11782,18 +11795,18 @@ msgstr ""
 "요금제를 사용하는 경우에는 데이터베이스에 만료일 안내 배너가 나타나게 됩니다. 요금제 견적서를 업그레이드하여 생성하려면 배너를 클릭하여 "
 "구독을 업데이트하세요. 또는 `고객 지원 티켓 <https://www.odoo.com/help>`_ 을 통해 상담을 받을 수도 있습니다."
 
-#: ../../content/applications/general/users.rst:112
+#: ../../content/applications/general/users.rst:110
 msgid ""
 "Once the database has the correct number of users, the expiration message "
 "disappears automatically after a few days, when the next verification "
 "occurs."
 msgstr "데이터베이스에 사용자 수가 알맞게 있는 경우에는 만료 메시지는 며칠 후 다음 검증을 할 때 자동으로 사라집니다."
 
-#: ../../content/applications/general/users.rst:118
+#: ../../content/applications/general/users.rst:116
 msgid "Password management"
 msgstr "비밀번호 관리"
 
-#: ../../content/applications/general/users.rst:120
+#: ../../content/applications/general/users.rst:118
 msgid ""
 "Password management is an important part of granting users autonomous access"
 " to the database at all times. Odoo offers a few different methods to reset "
@@ -11802,7 +11815,7 @@ msgstr ""
 "비밀번호 관리는 사용자가 언제든 데이터베이스에 대한 자율적인 액세스를 할 수 있도록 권한을 부여한다는 점에서 중요한 기능입니다. "
 "Odoo에서는 몇 가지 다른 방법으로 사용자 비밀번호를 초기화할 수 있습니다."
 
-#: ../../content/applications/general/users.rst:124
+#: ../../content/applications/general/users.rst:122
 msgid ""
 "Odoo has a setting to specify the length needed for a password. This setting"
 " can be accessed by navigating to :menuselection:`Settings app --> "
@@ -11818,11 +11831,11 @@ msgid ""
 "Settings."
 msgstr "일반 설정의 권한 섹션에서 비밀번호 최소 길이가 강조 표시되어 있는 모습"
 
-#: ../../content/applications/general/users.rst:134
+#: ../../content/applications/general/users.rst:132
 msgid "Reset password"
 msgstr "비밀번호 초기화"
 
-#: ../../content/applications/general/users.rst:136
+#: ../../content/applications/general/users.rst:134
 msgid ""
 "Sometimes, users might wish to reset their personal password for added "
 "security, so they are the only ones with access to the password. Odoo offers"
@@ -11833,11 +11846,11 @@ msgstr ""
 "방법에는 두 가지가 있습니다. 한 가지는 사용자 측에서 처음부터 비밀번호를 초기화하는 방법이며, 다른 방법은 초기화를 할 수 있도록 "
 "관리자 측에서 설정해 주는 방법입니다."
 
-#: ../../content/applications/general/users.rst:143
+#: ../../content/applications/general/users.rst:141
 msgid "Enable password reset from login page"
 msgstr "로그인 페이지에서 비밀번호 초기화하기"
 
-#: ../../content/applications/general/users.rst:145
+#: ../../content/applications/general/users.rst:143
 msgid ""
 "It is possible to enable/disable password resets directly from the login "
 "page. This action is completed by the individual user, and this setting is "
@@ -11846,7 +11859,7 @@ msgstr ""
 "로그인 페이지에서 직접 비밀번호 초기화 기능을 활성화/비활성화할 수 있습니다. 이 작업은 개별 사용자가 진행하게 되면 기본적으로 설정 "
 "메뉴가 활성화되어 있습니다."
 
-#: ../../content/applications/general/users.rst:148
+#: ../../content/applications/general/users.rst:146
 msgid ""
 "To change this setting, go to :menuselection:`Settings app --> Permissions` "
 "section, activate :guilabel:`Password Reset`, and then click "
@@ -11859,7 +11872,7 @@ msgstr ""
 msgid "Enabling Password Reset in Odoo Settings."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:154
+#: ../../content/applications/general/users.rst:152
 msgid ""
 "On the login page, click :guilabel:`Reset Password` to initiate the password"
 " reset process, and have a reset-token sent to the email on file."
@@ -11867,11 +11880,11 @@ msgstr ""
 "로그인 페이지에서 :guilabel:`비밀번호 초기화` 를 클릭하면 비밀번호 초기화 프로세스가 시작되고 등록한 이메일로 초기화 토큰을 "
 "받을 수 있습니다."
 
-#: ../../content/applications/general/users.rst:160
+#: ../../content/applications/general/users.rst:158
 msgid "Send reset instructions"
 msgstr "초기화 안내 보내기"
 
-#: ../../content/applications/general/users.rst:162
+#: ../../content/applications/general/users.rst:160
 msgid ""
 "Go to :menuselection:`Settings app --> Users & Companies --> Users`, select "
 "the user from the list, and click on :guilabel:`Send Password Reset "
@@ -11881,7 +11894,7 @@ msgstr ""
 ":menuselection:`설정 앱 --> 사용자 및 회사 --> 사용자` 로 이동하여 목록에서 사용자를 선택한 후 사용자 양식에서 "
 ":guilabel:`비밀번호 재설정 안내 보내기` 를 클릭하세요. 이메일로 비밀번호 재설정 안내를 자동 전송합니다."
 
-#: ../../content/applications/general/users.rst:167
+#: ../../content/applications/general/users.rst:165
 msgid ""
 "The :guilabel:`Send Password Reset Instructions` button **only** appears if "
 "the Odoo invitation email has already been confirmed by the user. Otherwise,"
@@ -11890,7 +11903,7 @@ msgstr ""
 "사용자가 Odoo 초대 이메일을 ** 이미 확인한 경우에만** :guilabel:`비밀번호 초기화 안내 보내기` 버튼이 표시됩니다. "
 "확인하지 않았으면 :guilabel:`초대 이메일 다시 보내기` 버튼이 나타납니다."
 
-#: ../../content/applications/general/users.rst:171
+#: ../../content/applications/general/users.rst:169
 msgid ""
 "This email contains all the instructions needed to reset the password, along"
 " with a link redirecting the user to an Odoo login page."
@@ -11902,11 +11915,11 @@ msgstr ""
 msgid "Example of an email with a password reset link for an Odoo account."
 msgstr "Odoo 계정 비밀번호 초기화 링크가 첨부되어 있는 이메일 예시"
 
-#: ../../content/applications/general/users.rst:180
+#: ../../content/applications/general/users.rst:178
 msgid "Change user password"
 msgstr "사용자 비밀번호 변경"
 
-#: ../../content/applications/general/users.rst:182
+#: ../../content/applications/general/users.rst:180
 msgid ""
 "Go to :menuselection:`Settings app --> Users & Companies --> Users`, and "
 "select a user to access its form. Click on the :icon:`fa-cog` "
@@ -11924,20 +11937,20 @@ msgstr ""
 msgid "Change a user's password on Odoo."
 msgstr "Odoo에서 사용자 비밀번호를 변경합니다."
 
-#: ../../content/applications/general/users.rst:192
+#: ../../content/applications/general/users.rst:190
 msgid ""
 "This operation only modifies the password of the users locally, and does "
 "**not** affect their Odoo account."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:195
+#: ../../content/applications/general/users.rst:193
 msgid ""
 "If the Odoo password needs to be changed, use the :ref:`send the password "
 "reset <users/reset-password-email>`. Odoo.com passwords grant access to the "
 "*My Databases* page, and other portal features."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:199
+#: ../../content/applications/general/users.rst:197
 msgid ""
 "After clicking :guilabel:`Change Password`, the page is redirected to an "
 "Odoo login page where the database can be re-accessed using the new "
@@ -11946,11 +11959,11 @@ msgstr ""
 ":guilabel:`비밀번호 변경` 을 클릭하면 새 비밀번호로 데이터베이스에 다시 접속할 수 있도록 페이지가 Odoo 로그인 페이지로 "
 "리디렉션됩니다."
 
-#: ../../content/applications/general/users.rst:205
+#: ../../content/applications/general/users.rst:203
 msgid "Multi Companies"
 msgstr "여러 회사 관리"
 
-#: ../../content/applications/general/users.rst:207
+#: ../../content/applications/general/users.rst:205
 msgid ""
 "The :guilabel:`Multi Companies` field on a user form allows an administrator"
 " to provide access to multiple companies for users. To configure a multi-"
@@ -11963,7 +11976,7 @@ msgstr ""
 "사용자용으로 다중 회사 환경을 설정하려면 :menuselection:`설정 앱 --> 사용자 섹션 --> 사용자 관리` 로 이동하여 "
 "해당하는 사용자로 이동합니다. 그런 다음 사용자를 선택하여 사용자 양식을 열고 다중 회사 액세스로 환경 설정을 합니다."
 
-#: ../../content/applications/general/users.rst:212
+#: ../../content/applications/general/users.rst:210
 msgid ""
 "Under :guilabel:`Multi Companies` in the :guilabel:`Access Rights` tab, set "
 "the fields labeled :guilabel:`Allowed Companies` and :guilabel:`Default "
@@ -11972,7 +11985,7 @@ msgstr ""
 ":guilabel:`액세스 권한` 탭에 있는 :guilabel:`다중 회사` 에서 :guilabel:`허용된 회사` 및 "
 ":guilabel:`기본 회사` 로 제목이 지정되어 있는 항목을 설정합니다."
 
-#: ../../content/applications/general/users.rst:215
+#: ../../content/applications/general/users.rst:213
 msgid ""
 "The :guilabel:`Allowed Companies` field can contain multiple companies. "
 "These are the companies the user can access and edit, according to the set "
@@ -11984,7 +11997,7 @@ msgstr ""
 "수 있습니다. :guilabel:`기본 회사` 는 사용자가 로그인할 때마다 기본적으로 선택되는 회사입니다. 이 필드에 회사는 "
 "**하나**만 지정할 수 있습니다."
 
-#: ../../content/applications/general/users.rst:221
+#: ../../content/applications/general/users.rst:219
 msgid ""
 "If multi-company access is not configured correctly, it could lead to "
 "inconsistent multi-company behaviors. Because of this, only experienced Odoo"
@@ -12000,7 +12013,7 @@ msgstr ""
 msgid "View of a user's form emphasizing the multi companies field in Odoo."
 msgstr "Odoo에서 다중 회사 항목이 강조 표시되어 있는 사용자 양식 보기"
 
-#: ../../content/applications/general/users.rst:230
+#: ../../content/applications/general/users.rst:228
 msgid ":doc:`companies`"
 msgstr ":doc:`회사`"
 
