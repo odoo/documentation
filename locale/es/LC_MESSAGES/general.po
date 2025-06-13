@@ -27,7 +27,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-27 10:38+0000\n"
+"POT-Creation-Date: 2025-06-11 13:44+0000\n"
 "PO-Revision-Date: 2023-11-08 08:57+0000\n"
 "Last-Translator: Fernanda Alvarez, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/odoo/teams/41243/es/)\n"
@@ -4718,11 +4718,24 @@ msgstr ""
 "todas las configuraciones de correo son las predeterminadas, todos los "
 "correos se enviarán desde `notifications@nombre-de-la-empresa.odoo.com`."
 
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:22
+msgid ""
+"This configuration is handled by the system parameter "
+"`mail.default.from_filter`. In case where the sender's domain do not match "
+"the value of this parameter, the notification address is used instead. "
+"Multiple values can be defined in this system parameter: comma-separated, "
+"domains or full email addresses are all allowed. Once an :ref:`outgoing mail"
+" server is configured <email-outbound-different-servers-personalized>`, the "
+"system parameter is no longer considered and the value used is the "
+":ref:`FROM filtering <email-outbound-different-servers-personalized-from-"
+"filtering>` of the mail server."
+msgstr ""
+
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst-1
 msgid "Odoo’s default outbound messages configuration."
 msgstr "Configuración predeterminada de mensajes salientes de Odoo."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:23
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:33
 msgid ""
 "Emails are sent with `catchall@company-name.odoo.com` as the *reply-to* "
 "address. In addition, delivery errors are sent to `bounce@company-"
@@ -4732,7 +4745,7 @@ msgstr ""
 "empresa.odoo.com` como dirección de *respuesta*. Además, los errores de "
 "entrega se envían a `bounce@nombre-de-la-empresa.odoo.com`."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:27
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:37
 msgid ""
 "The catchall, bounce, and notification addresses do not work like other "
 "aliases. They do not have the vocation to create records in a database. "
@@ -4745,11 +4758,11 @@ msgstr ""
 "responderán a un registro existente y vinculado o crearán uno nuevo en la "
 "base de datos."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:34
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:44
 msgid "Using a custom domain to send emails"
 msgstr "Usar un dominio personalizado para enviar correos"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:36
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:46
 msgid ""
 "The database can be configured to use a custom domain, in which case all "
 "default email addresses are built using the custom domain. If the custom "
@@ -4769,7 +4782,7 @@ msgstr ""
 "correos electrónicos con los servidores de correo de Odoo y con un servidor "
 "externo."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:42
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:52
 msgid ""
 "This section assumes ownership of a custom domain. If not, a custom domain "
 "must be purchased from a domain registrar such as GoDaddy, Namecheap, or any"
@@ -4779,11 +4792,11 @@ msgstr ""
 "contrario es necesario que adquiera uno de algún registrador de dominios "
 "como GoDaddy, Namecheap u otro. "
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:48
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:58
 msgid "Using a custom domain with Odoo’s email server"
 msgstr "Usar un dominio personalizado con el servidor de correo de Odoo"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:50
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:60
 msgid ""
 "On **Odoo Online** or **Odoo.sh**, some configurations are mandatory in the "
 "custom domain's DNS to ensure good deliverability."
@@ -4792,7 +4805,7 @@ msgstr ""
 "ajustes en el DNS del dominio personalizado para garantizar que la entrega "
 "sea correcta. "
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:54
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:64
 msgid ""
 "Most of the configuration will be done on the domain provider’s side, and it"
 " might require some configuration on the mail server itself. **Some "
@@ -4802,7 +4815,7 @@ msgstr ""
 " es probable que deba haces ajustes en el servidor de correo. **Es necesario"
 " que cuente con cierto grado de conocimiento técnico.**"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:57
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:67
 msgid ""
 "The first step is to configure the :ref:`SPF <email-domain-spf>` and "
 ":ref:`DKIM <email-domain-dkim>` to be compliant with Odoo’s mail server."
@@ -4811,7 +4824,7 @@ msgstr ""
 ":ref:`DKIM <email-domain-dkim>` para que sean compatibles con el servidor de"
 " correo de Odoo."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:60
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:70
 msgid ""
 "Next, the custom domain must be set as the alias domain of a company. Select"
 " the company, open the :guilabel:`Settings`, and add the custom domain under"
@@ -4822,7 +4835,7 @@ msgstr ""
 ":guilabel:`ajustes` y agregue el dominio personalizado en el campo "
 ":guilabel:`Dominio del seudónimo`."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:63
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:73
 msgid ""
 "After adding the alias domain, click the :icon:`oi-arrow-right` "
 "(:guilabel:`internal link`) icon to assign more companies to the custom "
@@ -4835,7 +4848,7 @@ msgstr ""
 ":ref:`developer-mode` para modificar los seudónimos predeterminados si lo "
 "desea."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:67
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:77
 msgid ""
 ":guilabel:`Bounce Alias`: the mailbox used to catch delivery errors and "
 "populate the :ref:`red envelope <email-issues-outgoing-delivery-failure>` on"
@@ -4845,7 +4858,7 @@ msgstr ""
 "los errores de entrega y hacer que aparezca el :ref:`sobre rojo <email-"
 "issues-outgoing-delivery-failure>` en el mensaje correspondiente."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:69
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:79
 msgid ""
 ":guilabel:`Catchall Alias`: the default mailbox used to centralize all "
 "replies."
@@ -4853,13 +4866,13 @@ msgstr ""
 ":guilabel:`Seudónimo de catchall`: El buzón predeterminado utilizado para "
 "centralizar todas las respuestas."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:70
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:80
 msgid ":guilabel:`Default From Alias`: the default sender address."
 msgstr ""
 ":guilabel:`Seudónimo de origen predeterminado`: La dirección del remitente "
 "predeterminada. "
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:73
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:83
 msgid ""
 "At the creation of the first alias domain, all companies will use it. If you"
 " create a new company, the alias domain automatically set is the one with "
@@ -4871,7 +4884,7 @@ msgstr ""
 "automático es el de menor prioridad (como aparece en la lista de dominios "
 "del seudónimo en el :ref:`developer-mode`)."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:77
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:87
 msgid ""
 "All email aliases (e.g., related to CRM or Helpdesk teams) must have their "
 "corresponding mailbox in the custom domain mail server."
@@ -4886,7 +4899,7 @@ msgid "Technical schema of external mail server configuration with Odoo."
 msgstr ""
 "Esquema técnico de configuración del servidor de correo externo con Odoo."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:83
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:93
 msgid ""
 "To receive emails in the Odoo database within the corresponding chatter "
 "(CRM, invoices, sales orders, etc.), one of these three methods must be "
@@ -4896,21 +4909,21 @@ msgstr ""
 "chatter correspondiente (CRM, facturas, órdenes de venta...) debe utilizar "
 "uno de estos tres métodos:"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:86
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:96
 msgid ""
 ":ref:`Redirections/forwarding <email-inbound-custom-domain-redirections>`,"
 msgstr ""
 ":ref:`Redireccionamientos/reenvíos <email-inbound-custom-domain-"
 "redirections>`"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:87
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:97
 msgid ""
 ":ref:`Incoming mail servers <email-inbound-custom-domain-incoming-server>`,"
 msgstr ""
 ":ref:`Servidores de correo entrante <email-inbound-custom-domain-incoming-"
 "server>`"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:88
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:98
 msgid ""
 ":ref:`MX record <email-inbound-custom-domain-mx>` (requires advanced "
 "technical knowledge)"
@@ -4918,7 +4931,7 @@ msgstr ""
 ":ref:`Registro MX <email-inbound-custom-domain-mx>` (necesita contar con "
 "conocimientos técnicos avanzados)"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:90
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:100
 msgid ""
 "Using a custom domain implies that specific :ref:`local-parts <email-"
 "outbound-custom-domain-smtp-server-local-part>` might be used by Odoo to "
@@ -4928,11 +4941,11 @@ msgstr ""
 "locales <email-outbound-custom-domain-smtp-server-local-part>` específicas "
 "para enviar correos electrónicos."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:96
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:106
 msgid "Sending emails with an external SMTP server"
 msgstr "Enviar correos con un servidor SMTP externo"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:99
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:109
 msgid ""
 "If utilizing your own outgoing mail server, it must be paired with your own "
 "domain, as updating the DNS of an Odoo subdomain is not feasible."
@@ -4941,7 +4954,7 @@ msgstr ""
 "a su propio dominio, ya que no podrá modificar el DNS de un subdominio de "
 "Odoo."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:102
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:112
 msgid ""
 "To add an external SMTP server in Odoo, open :guilabel:`Settings`, and "
 "enable the :guilabel:`Use Custom Email Servers` option found under the "
@@ -4951,7 +4964,7 @@ msgstr ""
 "active la opción :guilabel:`Utilizar servidores de correo electrónico "
 "personalizados` que se encuentra en la sección :guilabel:`Conversaciones`."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:105
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:115
 msgid ""
 "Still under the :guilabel:`Discuss` section, click :guilabel:`Outgoing Email"
 " Servers`, then `New` to create an outgoing mail server record. Most fields "
@@ -4964,7 +4977,7 @@ msgstr ""
 "que se utilizan para configurar una conexión a un servidor SMTP, pero debe "
 "utilizar los valores que le proporcionó su proveedor de correo electrónico."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:109
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:119
 msgid ""
 "Once completed, click :guilabel:`Test Connection`. Note that a successful "
 "test connection does not confirm that the email will go out as some "
@@ -4977,11 +4990,11 @@ msgstr ""
 "por parte del proveedor. Le recomendamos que consulte la documentación de su"
 " proveedor."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:116
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:126
 msgid "Local-part values"
 msgstr "Valores locales"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:118
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:128
 msgid ""
 "Below are presented the different local-part values that can be used by Odoo"
 " to send emails. It might be required to whitelist them in your mail server:"
@@ -4990,18 +5003,18 @@ msgstr ""
 "podría utilizar para enviar correos electrónicos. Es posible que deba "
 "agregarlos a la lista de aprovación en su servidor de correo:"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:121
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:131
 msgid "The Alias Domain Bounce Alias (default value = `bounce`),"
 msgstr ""
 "El seudónimo de devolución del dominio (valor predeterminado = `bounce`)."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:122
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:132
 msgid "The Alias Domain Default From (default value = `notifications`),"
 msgstr ""
 "El seudónimo de envío predeterminado del dominio (valor predeterminado = "
 "`notifications`)."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:123
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:133
 msgid ""
 "The default admin address `admin@company-name.odoo.com` or, if changed, the "
 "new value),"
@@ -5009,7 +5022,7 @@ msgstr ""
 "La dirección de administrador predeterminada `admin@nombre-de-la-"
 "empresa.odoo.com` (o el nuevo valor en caso de que la haya cambiado)."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:124
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:134
 msgid ""
 "The default Odoobot address `odoobot@company-name.odoo.com` or, if changed, "
 "the new value),"
@@ -5017,35 +5030,35 @@ msgstr ""
 "La dirección de Odoobot predeterminada `odoobot@nombre-de-la-"
 "empresa.odoo.com` (o el nuevo valor en caso de que la haya cambiado)."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:125
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:135
 msgid "The specific FROM defined on an email marketing campaign,"
 msgstr ""
 "El DE específico definido en la campaña de marketing de correo electrónico. "
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:126
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:136
 msgid "The specific FROM that can be defined in an email template."
 msgstr ""
 "El DE específico que puede definir en una plantilla de correo electrónico."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:129
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:139
 msgid ":doc:`google_oauth`"
 msgstr ":doc:`google_oauth`"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:130
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:140
 msgid ":doc:`azure_oauth`"
 msgstr ":doc:`azure_oauth`"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:135
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:145
 msgid "Setting up different servers for transactional and mass emails"
 msgstr ""
 "Configurar distintos servidores para correos electrónicos transaccionales y "
 "masivos"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:140
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:150
 msgid "Personalized mail servers"
 msgstr "Servidores de correo personalizados"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:142
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:152
 msgid ""
 "Transactional emails and mass mailings can be sent using separate email "
 "servers in Odoo. Doing so means day-to-day emails, quotations, or invoices "
@@ -5061,7 +5074,7 @@ msgstr ""
 "masivos de facturas o cotizaciones, se gestionarán mediante la aplicación de"
 " Automatización de marketing o Marketing por correo electrónico."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:148
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:158
 msgid ""
 "You can use services like Gmail, Amazon SES, or Brevo for transactional "
 "emails, and services like Mailgun, Sendgrid, or Mailjet for mass mailings."
@@ -5070,7 +5083,7 @@ msgstr ""
 "electrónicos transaccionales y servicios como Mailgun, Sendgrid o Mailjet "
 "para envíos masivos."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:151
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:161
 msgid ""
 "First, activate the :ref:`developer-mode` and go to :menuselection:`Settings"
 " --> Technical --> Email: Outgoing Mail Servers`. There, add two outgoing "
@@ -5094,7 +5107,7 @@ msgstr ""
 "Ejemplo de división entre los servidores de correo transaccional y de correo"
 " masivo."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:160
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:170
 msgid ""
 "Now, go to :menuselection:`Email Marketing --> Configuration --> Settings`, "
 "enable :guilabel:`Dedicated Server`, and select the appropriate email "
@@ -5113,11 +5126,11 @@ msgstr ""
 "Servidor de correo dedicado en los ajustes de la aplicación Marketing por "
 "correo electrónico."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:171
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:181
 msgid "FROM filtering"
 msgstr "Filtro DE"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:174
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:184
 msgid ""
 "It’s **highly recommended** to configure the FROM Filtering on the outgoing "
 "mail servers as per the instructions of your provider."
@@ -5125,7 +5138,7 @@ msgstr ""
 "Le **recomendamos ampliamente** que configure el filtro DE en los servidores"
 " de correo saliente según las instrucciones de su proveedor."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:177
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:187
 msgid ""
 "The :guilabel:`FROM Filtering` field allows for the use of a specific "
 "outgoing email server depending on the *From* email address or domain that "
@@ -5139,7 +5152,7 @@ msgstr ""
 "dirección completa** que coincida con la dirección de correo del remitente y"
 " sea de confianza para el proveedor del servidor de correo saliente."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:182
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:192
 msgid ""
 "If FROM filtering is not used, emails will go out using the notification "
 "address."
@@ -5147,7 +5160,7 @@ msgstr ""
 "Los correos electrónicos se enviarán con la dirección de notificación en "
 "caso de que no utilice el filtro DE. "
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:185
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:195
 msgid ""
 "Some outgoing mail servers require a specific configuration of the FROM "
 "filter."
@@ -5155,7 +5168,7 @@ msgstr ""
 "Algunos servidores de correo saliente necesitan ajustes específicos en el "
 "filtro DE."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:187
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:197
 msgid ""
 "When an email is sent from Odoo, the following sequence is used to choose "
 "the outgoing email server:"
@@ -5163,7 +5176,7 @@ msgstr ""
 "Al enviar un correo electrónico desde Odoo se utiliza la siguiente secuencia"
 " para elegir el servidor de correo saliente:"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:189
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:199
 msgid ""
 "First, Odoo searches for a server that has the same FROM filtering value as "
 "the From value (i.e., email address) defined in the outgoing email. This "
@@ -5176,7 +5189,7 @@ msgstr ""
 "usuarios de una empresa comparten el mismo dominio pero tienen distintas "
 "partes locales."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:194
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:204
 msgid ""
 "If the sender's email address is `test@example.com`, only an email server "
 "having a FROM filtering value equal to `test@example.com` or `example.com` "
@@ -5186,7 +5199,7 @@ msgstr ""
 " solo podrá utilizar un servidor de correo electrónico que tenga un valor de"
 " filtrado DE igual a `prueba@ejemplo.com` o `ejemplo.com`."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:197
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:207
 msgid ""
 "If no server is found based on the first criteria, Odoo looks for the first "
 "server without a FROM filtering value set. The email will be overridden with"
@@ -5196,7 +5209,7 @@ msgstr ""
 "caso de que no encuentre ningún servidor con el primer criterio. El correo "
 "electrónico se reemplazará con la dirección de notificación."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:200
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:210
 msgid ""
 "If no server is found based on the second criteria, Odoo uses the first "
 "server, and the email will be overridden with the notification address."
@@ -5205,7 +5218,7 @@ msgstr ""
 "con el segundo criterio. El correo electrónico se reemplazará con la "
 "dirección de notificación."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:204
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:214
 msgid ""
 "To determine which server is first, Odoo uses the priority value (the lower "
 "the value is, the higher the priority is). Failing to do so, the first "
@@ -5216,7 +5229,13 @@ msgstr ""
 "primer servidor se determinará por los nombres de los servidores por orden "
 "alfabético."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:208
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:218
+msgid ""
+"If there is no mail server, Odoo relies on the :ref:`system parameter "
+"<email-outbound-default-from-filtering>` value."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:221
 msgid ""
 "It is also possible to use Odoo's mail server for transactional emails in "
 "addition to mass mailings."
@@ -5224,12 +5243,12 @@ msgstr ""
 "También puede utilizar el servidor de correo de Odoo para correos "
 "electrónicos transaccionales y para correos masivos."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:213
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:226
 msgid "Using an external email server and Odoo’s default server"
 msgstr ""
 "Usar un servidor de correo externo y el servidor predeterminado de Odoo"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:215
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:228
 msgid ""
 "On Odoo Online and Odoo.sh, databases are started with Odoo's SMTP server. "
 "If no outgoing mail server is set, the default Odoo's SMTP server will be "
@@ -5247,7 +5266,7 @@ msgstr ""
 "Agregar un servidor de correo mediante el servidor de correo de Odoo con la "
 "autenticación de la CLI."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:222
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:235
 msgid ""
 "If an outgoing mail server is used simultaneously with Odoo’s default server"
 " (CLI), the FROM filter of the outgoing mail server must contain a custom "
@@ -5269,7 +5288,7 @@ msgstr ""
 "División del servidor de correo de Odoo para correos electrónicos "
 "transaccionales y el servidor de correo para correos masivos. "
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:231
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:244
 msgid ""
 "On Odoo Online, the command line interface is equivalent to the default Odoo"
 " mail server, using the same limit as if there was no outgoing mail server "
@@ -5279,7 +5298,7 @@ msgstr ""
 "servidor de correo predeterminado de Odoo y utiliza el mismo límite, como si"
 " no hubiera un servidor de correo saliente configurado."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:235
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:248
 msgid ""
 "On Odoo Online, the page also shows your daily email usage and your daily "
 "limit. On Odoo.sh, you need to check on the monitor page the number of "
@@ -5289,7 +5308,7 @@ msgstr ""
 "su límite diario. En el caso de Odoo.sh, debe consultar el número de correos"
 " electrónicos enviados en la página de monitoreo."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:239
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:252
 msgid ""
 "On Odoo.sh, to use the command-line interface, an outgoing mail server can "
 "be configured on the configuration file."
@@ -5297,7 +5316,7 @@ msgstr ""
 "Para utilizar la interfaz de la línea de comandos en Odoo.sh puede "
 "configurar un servidor de correo saliente en el archivo de configuración."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:243
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:256
 msgid ""
 "Odoo’s mail server is meant for transactional emails and small-scale "
 "marketing campaigns. The :ref:`daily limit <email-issues-outgoing-delivery-"
@@ -5309,12 +5328,12 @@ msgstr ""
 "diario <email-issues-outgoing-delivery-failure-messages-limit>` depende del "
 "tipo de base de datos y las aplicaciones utilizadas."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:250
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:263
 msgid "Using a custom domain with an external email server"
 msgstr ""
 "Usar un dominio personalizado con un servidor de correo electrónico externo"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:252
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:265
 msgid ""
 "Similar to the :ref:`previous chapter <email-outbound-different-servers-"
 "external-odoo>`, proper configuration might be needed to ensure that the "
@@ -5332,7 +5351,7 @@ msgstr ""
 "lista con los proveedores más comunes <email-domain-providers-"
 "documentation>`."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:259
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:272
 msgid ""
 "DNS configuration is required when you use your own domain. If an external "
 "outgoing mail server is used, configuring the records as described in the "
@@ -5348,11 +5367,11 @@ msgstr ""
 "efecto deseado**, ya que es independiente de Odoo al usar un servidor de "
 "correo personalizado. Odoo no permite configurar su propio subdominio. "
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:268
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:281
 msgid "Port restriction"
 msgstr "Restricción del puerto"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:270
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:283
 msgid ""
 "Port 25 is blocked for security reasons on Odoo Online and Odoo.sh. Try "
 "using port 465, 587, or 2525 instead."
@@ -5360,11 +5379,11 @@ msgstr ""
 "El puerto 25 está bloqueado por motivos de seguridad en Odoo en línea y "
 "Odoo.sh, intente usar los puertos 465, 587 o 2525."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:276
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:289
 msgid "Alias domain"
 msgstr "Seudónimo del dominio"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:278
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:291
 msgid ""
 "The catchall domain is company-specific. By default, all companies share "
 "Odoo’s subdomain (e.g., `company-name.odoo.com`), but each company may have "
@@ -5375,7 +5394,7 @@ msgstr ""
 "empresa.odoo.com`) de forma predeterminada, pero cada empresa puede tener su"
 " propio dominio personalizado."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:281
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:294
 msgid ""
 "When the :ref:`developer-mode` is activated, the alias domain options are "
 "available by going to :menuselection:`Settings --> Technical --> Email: "
@@ -5385,7 +5404,7 @@ msgstr ""
 "de dominio del seudónimo desde :menuselection:`Ajustes --> Técnico --> "
 "Correo electrónico: Dominios del seudónimo`."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:285
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:298
 msgid ""
 "Any modification of the alias domain must be done very carefully. If one of "
 "the aliases (bounce, catchall, default from) is changed, all previous emails"
@@ -5396,7 +5415,7 @@ msgstr ""
 "correos electrónicos anteriores que no se redirijan correctamente a los "
 "nuevos seudónimos."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:289
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:302
 msgid ""
 "The :guilabel:`Default From Alias` field can be filled with a local-part of "
 "the email address (by default `notifications`) or a full email address. "
@@ -5410,11 +5429,11 @@ msgstr ""
 "Todas las direcciones de correo salientes se sobrescribirán con esta "
 "dirección si utiliza una dirección de correo electrónico completa. "
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:297
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:310
 msgid "Notification system"
 msgstr "Sistema de notificaciones"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:299
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:312
 msgid ""
 "When an email is sent from the chatter, customers can reply directly to it. "
 "If a customer replies directly to an email, the answer is logged in the same"
@@ -5425,7 +5444,7 @@ msgstr ""
 "respuesta se registrará en el mismo chatter y cumplirá con la función de un "
 "hilo de mensajes relacionado con el registro."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:303
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:316
 msgid ""
 "Upon receiving the reply, Odoo then uses the subscribed followers (based on "
 "the subscribed subtypes) to send them a notification by email, or in the "
@@ -5436,7 +5455,7 @@ msgstr ""
 " a su bandeja de entrada de Odoo, esto depende de las preferencias del "
 "usuario."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:307
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:320
 msgid ""
 "If a customer with the email address `“Mary” <mary@customer.example.com>` "
 "makes a direct reply to an email coming from the Odoo database, Odoo's "
@@ -5449,7 +5468,7 @@ msgstr ""
 "Odoo es redistribuir el contenido del correo al resto de los seguidores "
 "dentro del hilo."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:311
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:324
 msgid ""
 "As Mary’s domain does not belong to the alias domain, Odoo overrides the "
 "email address and uses the notification email address to notify the "
@@ -5466,7 +5485,7 @@ msgstr ""
 "`notifications@nombre-de-la-empresa.odoo.com` en lugar de "
 "`mary@cliente.ejemplo.com` de forma predeterminada."
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:317
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:330
 msgid ""
 "The address is constructed using the name of the sender and `{alias domain, "
 "default from alias}`@`{alias domain, domain name}`, by default, "
@@ -5477,27 +5496,21 @@ msgstr ""
 " lo que da `notifications@nombre-de-la-empresa.odoo.com` de forma "
 "predeterminada. "
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:324
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:337
 msgid "Using a unique email address for all outgoing emails"
 msgstr ""
 "Usar una sola dirección de correo electrónico para todos los correos "
 "salientes"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:326
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:339
 msgid ""
 "To force the email address from which emails are sent, activate the "
 ":ref:`developer-mode`, and go to :menuselection:`Settings --> Technical --> "
-"Email: Alias Domains`. On the :guilabel:`Default From Alias`, use the the "
-"local-part or a complete email address as the value."
+"Email: Alias Domains`. On the :guilabel:`Default From Alias`, use the local-"
+"part or a complete email address as the value."
 msgstr ""
-"Habilite el :ref:`developer-mode` para forzar la dirección de correo "
-"electrónico desde la que se envían los correos y vaya a "
-":menuselection:`Ajustes --> Técnico --> Correo electrónico: Dominios del "
-"seudónimo`. Después, utilice la parte local o una dirección de correo "
-"electrónico completa como valor en el campo :guilabel:`Seudónimo de origen "
-"predeterminado`. "
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:331
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:344
 msgid ""
 "If a **complete address** is used as the :guilabel:`Default From Alias` "
 "value, **all** outgoing emails will be overwritten by this address."
@@ -7154,17 +7167,19 @@ msgstr ""
 " remitente."
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:92
-#: ../../content/applications/general/email_communication/mailjet_api.rst:157
 msgid ""
-"`Mailjet's SPF/DKIM/DMARC documentation "
-"<https://documentation.mailjet.com/hc/articles/ 360042412734-Authenticating-"
-"Domains-with-SPF-DKIM>`_"
+"`Mailjet's SPF/DKIM documentation <https://documentation.mailjet.com/hc/en-"
+"us/articles/360049641733-Authenticating-Domains-with-SPF-and-DKIM-A-"
+"Complete-Guide>`_"
 msgstr ""
-"`Documentación de Mailjet sobre SPF/DKIM/DMARC "
-"<https://documentation.mailjet.com/hc/articles/ 360042412734-Authenticating-"
-"Domains-with-SPF-DKIM>`_"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:96
+#: ../../content/applications/general/email_communication/mailjet_api.rst:94
+msgid ""
+"`Mailjet's DMARC documentation <https://documentation.mailjet.com/hc/en-"
+"us/articles/20531905163419-Understanding-DMARC>`_"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/mailjet_api.rst:98
 msgid ""
 "If the database is not using a custom domain, then in order to verify the "
 "sender's address, a temporary alias (of the three email addresses mentioned "
@@ -7178,11 +7193,11 @@ msgstr ""
 "datos puede recibir el correo electrónico de verificación y verificar las "
 "cuentas."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:104
+#: ../../content/applications/general/email_communication/mailjet_api.rst:106
 msgid "Add a domain"
 msgstr "Agregar un dominio"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:106
+#: ../../content/applications/general/email_communication/mailjet_api.rst:108
 msgid ""
 "By adding an entire domain to the Mailjet account, all the sender addresses "
 "related to that domain are automatically validated for sending emails using "
@@ -7200,7 +7215,7 @@ msgstr ""
 ":guilabel:`Remitentes y dominios`. Después, haga clic en :guilabel:`Agregar "
 "dominio` para agregar su dominio personalizado."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:113
+#: ../../content/applications/general/email_communication/mailjet_api.rst:115
 msgid ""
 "The domain needs to be added to the Mailjet account and then validated "
 "through the :abbr:`DNS (Domain Name System)`."
@@ -7208,7 +7223,7 @@ msgstr ""
 "La cuenta de Mailjet necesita del dominio para luego validarlo a través del "
 ":abbr:`DNS (Sistema de nombres de dominio)`."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:116
+#: ../../content/applications/general/email_communication/mailjet_api.rst:118
 msgid ""
 "After that, fill out the :guilabel:`Add a new Domain` page on Mailjet and "
 "click :guilabel:`Continue`."
@@ -7216,7 +7231,7 @@ msgstr ""
 "Posteriormente, complete la página de :guilabel:`Agregar un nuevo dominio` "
 "en Mailjet y haga clic en :guilabel:`Continuar`."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:119
+#: ../../content/applications/general/email_communication/mailjet_api.rst:121
 msgid ""
 "After adding the domain, a validation page will populate. Unless the Odoo "
 "database is on-premise (in which case, choose :guilabel:`Option 1`), choose "
@@ -7236,11 +7251,11 @@ msgid "The TXT record information to input on the domain's DNS."
 msgstr ""
 "Información de registro TXT que se debe introducir en el DNS del dominio."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:128
+#: ../../content/applications/general/email_communication/mailjet_api.rst:130
 msgid "Setup in the domain's DNS"
 msgstr "Configuración en el DNS del dominio"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:130
+#: ../../content/applications/general/email_communication/mailjet_api.rst:132
 msgid ""
 "After getting the TXT record information from the Mailjet account, add a TXT"
 " record to the domain's :abbr:`DNS (Domain Name System)`. This process "
@@ -7257,11 +7272,11 @@ msgstr ""
 "consiste en el :guilabel:`alojamiento` y el :guilabel:`valor`. Péguelos en "
 "los campos correspondientes del registro TXT."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:137
+#: ../../content/applications/general/email_communication/mailjet_api.rst:139
 msgid "Return to Mailjet account information"
 msgstr "Regresar a la información de cuenta de Mailjet"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:139
+#: ../../content/applications/general/email_communication/mailjet_api.rst:141
 msgid ""
 "After adding the TXT record to the domain's :abbr:`DNS (Domain Name "
 "System)`, navigate back to the Mailjet account. Then, navigate to "
@@ -7275,7 +7290,7 @@ msgstr ""
 "de remitente`, haga clic en el icono de engranaje que se encuentra junto a "
 ":guilabel:`Dominio` y seleccione :guilabel:`Validar`."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:143
+#: ../../content/applications/general/email_communication/mailjet_api.rst:145
 msgid ""
 "This action can also be done by going to the `Sender domains & addresses "
 "<https://app.mailjet.com/ account/sender>`_ page on the Mailjet account "
@@ -7285,7 +7300,7 @@ msgstr ""
 "direcciones de remitentes <https://app.mailjet.com/ account/sender>`_ en la "
 "información de cuenta de Mailjet y hacer clic en :guilabel:`Gestionar`."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:146
+#: ../../content/applications/general/email_communication/mailjet_api.rst:148
 msgid ""
 "Next, click :guilabel:`Check Now` to validate the TXT record that was added "
 "on the domain. A success screen will appear if the domain is configured "
@@ -7299,7 +7314,7 @@ msgstr ""
 msgid "Check DNS record in Mailjet."
 msgstr "Revisar el registro del DNS en Mailjet."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:152
+#: ../../content/applications/general/email_communication/mailjet_api.rst:154
 msgid ""
 "After successfully setting up the domain, there is an option to "
 ":guilabel:`Authenticate this domain (SPF/DKIM)`. This button populates "
@@ -7312,15 +7327,25 @@ msgstr ""
 "Mail)` para ingresarlos en el proveedor de :abbr:`DNS (Sistema de nombres de"
 " dominio)`."
 
+#: ../../content/applications/general/email_communication/mailjet_api.rst:159
+msgid ""
+"`Mailjet's SPF/DKIM/DMARC documentation "
+"<https://documentation.mailjet.com/hc/articles/ 360042412734-Authenticating-"
+"Domains-with-SPF-DKIM>`_"
+msgstr ""
+"`Documentación de Mailjet sobre SPF/DKIM/DMARC "
+"<https://documentation.mailjet.com/hc/articles/ 360042412734-Authenticating-"
+"Domains-with-SPF-DKIM>`_"
+
 #: ../../content/applications/general/email_communication/mailjet_api.rst-1
 msgid "Authenticate the domain with SPF/DKIM records in Mailjet."
 msgstr "Autenticación del dominio con registros SPF/DKIM en Mailjet."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:166
+#: ../../content/applications/general/email_communication/mailjet_api.rst:168
 msgid "Set up in Odoo"
 msgstr "Configuración en Odoo"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:168
+#: ../../content/applications/general/email_communication/mailjet_api.rst:170
 msgid ""
 "To complete the setup, navigate to the Odoo database and go to the "
 ":guilabel:`Settings`. With :ref:`developer-mode` turned on, go to the "
@@ -7334,7 +7359,7 @@ msgstr ""
 " saliente`. Posteriormente, cree una nueva configuración de servidor "
 "saliente al hacer clic en el botón de :guilabel:`Crear`."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:173
+#: ../../content/applications/general/email_communication/mailjet_api.rst:175
 msgid ""
 "Next, input the `SMTP server` (in-v3.mailjet.com), `port number` (587 or "
 "465), and `Security (SSL/TLS)` that was copied earlier from the Mailjet "
@@ -7350,7 +7375,7 @@ msgstr ""
 ":abbr:`SSL (Capa de sockets seguros)`/:abbr:`TLS (Seguridad de la capa de "
 "transporte)` aunque no sean necesarios para utilizar Mailjet."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:178
+#: ../../content/applications/general/email_communication/mailjet_api.rst:180
 msgid ""
 "For the :guilabel:`Username`, input the :guilabel:`API KEY`. For the "
 ":guilabel:`Password`, input the :guilabel:`SECRET KEY` that was copied from "
@@ -7364,7 +7389,7 @@ msgstr ""
 "ajuestes en :menuselection:`Mailjet -->  Ajustes de cuenta --> Ajustes de "
 "API SMTP y ENVIAR`."
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:183
+#: ../../content/applications/general/email_communication/mailjet_api.rst:185
 msgid ""
 "Then, if the Mailjet server is used for mass emailing, set the "
 ":guilabel:`Priority` value higher than that of any transactional email "

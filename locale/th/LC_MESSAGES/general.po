@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-27 10:38+0000\n"
+"POT-Creation-Date: 2025-06-11 13:44+0000\n"
 "PO-Revision-Date: 2023-11-08 08:57+0000\n"
 "Last-Translator: Wil Odoo, 2025\n"
 "Language-Team: Thai (https://app.transifex.com/odoo/teams/41243/th/)\n"
@@ -4392,11 +4392,24 @@ msgstr ""
 "และการกำหนดค่าการส่งเมลทั้งหมดเป็นค่าเริ่มต้น อีเมลทั้งหมดจะถูกส่งจาก "
 "`notifications@company-name.odoo.com`"
 
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:22
+msgid ""
+"This configuration is handled by the system parameter "
+"`mail.default.from_filter`. In case where the sender's domain do not match "
+"the value of this parameter, the notification address is used instead. "
+"Multiple values can be defined in this system parameter: comma-separated, "
+"domains or full email addresses are all allowed. Once an :ref:`outgoing mail"
+" server is configured <email-outbound-different-servers-personalized>`, the "
+"system parameter is no longer considered and the value used is the "
+":ref:`FROM filtering <email-outbound-different-servers-personalized-from-"
+"filtering>` of the mail server."
+msgstr ""
+
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst-1
 msgid "Odoo’s default outbound messages configuration."
 msgstr "การกำหนดค่าข้อความขาออกเริ่มต้นของ Odoo"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:23
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:33
 msgid ""
 "Emails are sent with `catchall@company-name.odoo.com` as the *reply-to* "
 "address. In addition, delivery errors are sent to `bounce@company-"
@@ -4405,7 +4418,7 @@ msgstr ""
 "อีเมลจะถูกส่งโดยใช้ `catchall@company-name.odoo.com` เป็นที่อยู่ *ตอบกลับ* "
 "นอกจากนี้ ข้อผิดพลาดในการส่งจะถูกส่งไปยัง `bounce@company-name.odoo.com`"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:27
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:37
 msgid ""
 "The catchall, bounce, and notification addresses do not work like other "
 "aliases. They do not have the vocation to create records in a database. "
@@ -4417,11 +4430,11 @@ msgstr ""
 "อีเมลที่ส่งไปยังชื่อนั้นจะถูกส่งต่อโดยอัตโนมัติและจะตอบกลับไปยังบันทึกที่มีอยู่และเชื่อมโยง"
 " หรือจะสร้างบันทึกใหม่ในฐานข้อมูล"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:34
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:44
 msgid "Using a custom domain to send emails"
 msgstr "การใช้โดเมนที่กำหนดเองเพื่อส่งอีเมล"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:36
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:46
 msgid ""
 "The database can be configured to use a custom domain, in which case all "
 "default email addresses are built using the custom domain. If the custom "
@@ -4439,7 +4452,7 @@ msgstr ""
 "สามารถใช้โดเมนที่กำหนดเองได้เมื่อส่งอีเมลโดยใช้เซิร์ฟเวอร์อีเมลของ Odoo "
 "หรือเซิร์ฟเวอร์ภายนอก"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:42
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:52
 msgid ""
 "This section assumes ownership of a custom domain. If not, a custom domain "
 "must be purchased from a domain registrar such as GoDaddy, Namecheap, or any"
@@ -4449,11 +4462,11 @@ msgstr ""
 "ถ้าไม่เช่นนั้นจะต้องซื้อโดเมนที่กำหนดเองจากผู้ให้บริการจดทะเบียนโดเมน เช่น "
 "GoDaddy, Namecheap หรือผู้ให้บริการทางเลือกอื่น"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:48
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:58
 msgid "Using a custom domain with Odoo’s email server"
 msgstr "การใช้โดเมนที่กำหนดเองกับเซิร์ฟเวอร์อีเมลของ Odoo"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:50
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:60
 msgid ""
 "On **Odoo Online** or **Odoo.sh**, some configurations are mandatory in the "
 "custom domain's DNS to ensure good deliverability."
@@ -4461,7 +4474,7 @@ msgstr ""
 "ใน **Odoo Online** หรือ **Odoo.sh** การกำหนดค่าบางอย่างเป็นสิ่งจำเป็นใน DNS "
 "ของโดเมนที่กำหนดเอง เพื่อให้แน่ใจว่าสามารถส่งมอบได้ดี"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:54
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:64
 msgid ""
 "Most of the configuration will be done on the domain provider’s side, and it"
 " might require some configuration on the mail server itself. **Some "
@@ -4471,7 +4484,7 @@ msgstr ""
 "และอาจต้องมีการกำหนดค่าบางอย่างบนเซิร์ฟเวอร์อีเมลด้วย "
 "**ต้องมีความรู้ด้านเทคนิคบ้าง**"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:57
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:67
 msgid ""
 "The first step is to configure the :ref:`SPF <email-domain-spf>` and "
 ":ref:`DKIM <email-domain-dkim>` to be compliant with Odoo’s mail server."
@@ -4479,7 +4492,7 @@ msgstr ""
 "ขั้นตอนแรกคือการกำหนดค่า :ref:`SPF <email-domain-spf>` และ :ref:`DKIM "
 "<email-domain-dkim>` ให้สอดคล้องกับเซิร์ฟเวอร์อีเมลของ Odoo"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:60
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:70
 msgid ""
 "Next, the custom domain must be set as the alias domain of a company. Select"
 " the company, open the :guilabel:`Settings`, and add the custom domain under"
@@ -4489,7 +4502,7 @@ msgstr ""
 "เปิด :guilabel:`การตั้งค่า` และเพิ่มโดเมนที่กำหนดเองภายใต้ฟิลด์ "
 ":guilabel:`ชื่อโดเมน`"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:63
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:73
 msgid ""
 "After adding the alias domain, click the :icon:`oi-arrow-right` "
 "(:guilabel:`internal link`) icon to assign more companies to the custom "
@@ -4501,7 +4514,7 @@ msgstr ""
 "เพื่อกำหนดบริษัทเพิ่มเติมให้กับโดเมนที่กำหนดเองหากจำเป็น เปิดใช้งานโหมด "
 ":ref:`โหมดนักพัฒนา` เพื่อปรับเปลี่ยนชื่อเริ่มต้นหากต้องการ:"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:67
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:77
 msgid ""
 ":guilabel:`Bounce Alias`: the mailbox used to catch delivery errors and "
 "populate the :ref:`red envelope <email-issues-outgoing-delivery-failure>` on"
@@ -4511,7 +4524,7 @@ msgstr ""
 "และกรอก :ref:`ซองจดหมายสีแดง <email-issues-outgoing-delivery-failure>` "
 "ในข้อความที่เกี่ยวข้อง"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:69
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:79
 msgid ""
 ":guilabel:`Catchall Alias`: the default mailbox used to centralize all "
 "replies."
@@ -4519,11 +4532,11 @@ msgstr ""
 ":guilabel:`ชื่อ Catchall`: "
 "กล่องจดหมายเริ่มต้นที่ใช้เพื่อรวมคำตอบทั้งหมดไว้ด้วยกัน"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:70
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:80
 msgid ":guilabel:`Default From Alias`: the default sender address."
 msgstr ":guilabel:`ค่าเริ่มต้นจากชื่อ`: ที่อยู่ผู้ส่งเริ่มต้น"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:73
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:83
 msgid ""
 "At the creation of the first alias domain, all companies will use it. If you"
 " create a new company, the alias domain automatically set is the one with "
@@ -4534,7 +4547,7 @@ msgstr ""
 " ชื่อโดเมนที่ตั้งไว้โดยอัตโนมัติจะเป็นโดเมนที่มีลำดับความสำคัญต่ำที่สุด "
 "(โฆษณาจะแสดงในรายการชื่อโดเมนใน :ref:`โหมดนักพัฒนา`)"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:77
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:87
 msgid ""
 "All email aliases (e.g., related to CRM or Helpdesk teams) must have their "
 "corresponding mailbox in the custom domain mail server."
@@ -4546,7 +4559,7 @@ msgstr ""
 msgid "Technical schema of external mail server configuration with Odoo."
 msgstr "โครงร่างทางเทคนิคของการกำหนดค่าเซิร์ฟเวอร์เมลภายนอกด้วย Odoo"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:83
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:93
 msgid ""
 "To receive emails in the Odoo database within the corresponding chatter "
 "(CRM, invoices, sales orders, etc.), one of these three methods must be "
@@ -4555,20 +4568,20 @@ msgstr ""
 "หากต้องการรับอีเมลในฐานข้อมูล Odoo ภายในช่องแชทที่เกี่ยวข้อง (CRM, "
 "ใบแจ้งหนี้, ใบสั่งขาย ฯลฯ) จะต้องใช้หนึ่งในสามวิธีนี้:"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:86
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:96
 msgid ""
 ":ref:`Redirections/forwarding <email-inbound-custom-domain-redirections>`,"
 msgstr ""
 ":ref:`การเปลี่ยนเส้นทาง/การส่งต่อ <email-inbound-custom-domain-"
 "redirections>`,"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:87
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:97
 msgid ""
 ":ref:`Incoming mail servers <email-inbound-custom-domain-incoming-server>`,"
 msgstr ""
 ":ref:`เซิร์ฟเวอร์เมลขาเข้า <email-inbound-custom-domain-incoming-server>`,"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:88
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:98
 msgid ""
 ":ref:`MX record <email-inbound-custom-domain-mx>` (requires advanced "
 "technical knowledge)"
@@ -4576,7 +4589,7 @@ msgstr ""
 ":ref:`บันทึก MX <email-inbound-custom-domain-mx>` "
 "(ต้องมีความรู้ทางเทคนิคขั้นสูง)"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:90
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:100
 msgid ""
 "Using a custom domain implies that specific :ref:`local-parts <email-"
 "outbound-custom-domain-smtp-server-local-part>` might be used by Odoo to "
@@ -4585,11 +4598,11 @@ msgstr ""
 "การใช้โดเมนแบบกำหนดเองแสดงว่า Odoo อาจใช้ :ref:`local-parts <email-outbound-"
 "custom-domain-smtp-server-local-part>` เฉพาะเพื่อส่งอีเมล"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:96
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:106
 msgid "Sending emails with an external SMTP server"
 msgstr "การส่งอีเมลด้วยเซิร์ฟเวอร์ SMTP ภายนอก"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:99
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:109
 msgid ""
 "If utilizing your own outgoing mail server, it must be paired with your own "
 "domain, as updating the DNS of an Odoo subdomain is not feasible."
@@ -4597,7 +4610,7 @@ msgstr ""
 "หากใช้เซิร์ฟเวอร์เมลขาออกของคุณเอง จะต้องจับคู่กับโดเมนของคุณเอง "
 "เนื่องจากการอัปเดต DNS ของโดเมนย่อย Odoo ไม่สามารถทำได้"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:102
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:112
 msgid ""
 "To add an external SMTP server in Odoo, open :guilabel:`Settings`, and "
 "enable the :guilabel:`Use Custom Email Servers` option found under the "
@@ -4607,7 +4620,7 @@ msgstr ""
 " และเปิดใช้งานตัวเลือก :guilabel:`ใช้เซิร์ฟเวอร์อีเมลที่กำหนดเอง` "
 "ที่พบภายใต้ส่วน :guilabel:`แชท`"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:105
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:115
 msgid ""
 "Still under the :guilabel:`Discuss` section, click :guilabel:`Outgoing Email"
 " Servers`, then `New` to create an outgoing mail server record. Most fields "
@@ -4619,7 +4632,7 @@ msgstr ""
 "ฟิลด์ส่วนใหญ่เป็นพารามิเตอร์ทั่วไปที่ใช้ในการตั้งค่าการเชื่อมต่อกับเซิร์ฟเวอร์"
 " SMTP ใช้ค่าที่ผู้ให้บริการอีเมลของคุณให้มา"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:109
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:119
 msgid ""
 "Once completed, click :guilabel:`Test Connection`. Note that a successful "
 "test connection does not confirm that the email will go out as some "
@@ -4631,11 +4644,11 @@ msgstr ""
 " เนื่องจากอาจมีข้อจำกัดบางอย่างที่ยังคงอยู่ที่ฝั่งผู้ให้บริการ "
 "ดังนั้นขอแนะนำให้คุณดูเอกสารของผู้ให้บริการ"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:116
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:126
 msgid "Local-part values"
 msgstr "ค่า Local-part"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:118
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:128
 msgid ""
 "Below are presented the different local-part values that can be used by Odoo"
 " to send emails. It might be required to whitelist them in your mail server:"
@@ -4643,15 +4656,15 @@ msgstr ""
 "ด้านล่างนี้เป็นค่า local-part ต่างๆ ที่ Odoo สามารถใช้เพื่อส่งอีเมลได้ "
 "อาจจำเป็นต้องเพิ่มค่าเหล่านี้ลงในเซิร์ฟเวอร์อีเมลของคุณ:"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:121
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:131
 msgid "The Alias Domain Bounce Alias (default value = `bounce`),"
 msgstr "ชื่อโดเมนการตีกลับ (ค่าเริ่มต้น = `การตีกลับ`)"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:122
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:132
 msgid "The Alias Domain Default From (default value = `notifications`),"
 msgstr "ชื่อโดเมนค่าเริ่มต้นจาก (ค่าเริ่มต้น = `การแจ้งเตือน`)"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:123
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:133
 msgid ""
 "The default admin address `admin@company-name.odoo.com` or, if changed, the "
 "new value),"
@@ -4659,7 +4672,7 @@ msgstr ""
 "ที่อยู่ผู้ดูแลระบบเริ่มต้นคือ `admin@company-name.odoo.com` "
 "หรือถ้ามีการเปลี่ยนแปลง จะเป็นค่าใหม่"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:124
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:134
 msgid ""
 "The default Odoobot address `odoobot@company-name.odoo.com` or, if changed, "
 "the new value),"
@@ -4667,31 +4680,31 @@ msgstr ""
 "ที่อยู่ Odoobot เริ่มต้นคือ `odoobot@company-name.odoo.com` "
 "หรือถ้ามีการเปลี่ยนแปลง จะเป็นค่าใหม่"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:125
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:135
 msgid "The specific FROM defined on an email marketing campaign,"
 msgstr "เฉพาะ จาก ที่กำหนดไว้ในแคมเปญอีเมลมาร์เก็ตติ้ง"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:126
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:136
 msgid "The specific FROM that can be defined in an email template."
 msgstr "เฉพาะ จาก ที่สามารถกำหนดได้ในเทมเพลตอีเมล"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:129
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:139
 msgid ":doc:`google_oauth`"
 msgstr ":doc:`google_oauth`"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:130
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:140
 msgid ":doc:`azure_oauth`"
 msgstr ":doc:`azure_oauth`"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:135
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:145
 msgid "Setting up different servers for transactional and mass emails"
 msgstr "การตั้งค่าเซิร์ฟเวอร์ที่แตกต่างกันสำหรับอีเมลธุรกรรมและอีเมลกลุ่ม"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:140
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:150
 msgid "Personalized mail servers"
 msgstr "เซิร์ฟเวอร์เมลส่วนบุคคล"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:142
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:152
 msgid ""
 "Transactional emails and mass mailings can be sent using separate email "
 "servers in Odoo. Doing so means day-to-day emails, quotations, or invoices "
@@ -4705,7 +4718,7 @@ msgstr ""
 "*อีเมลส่งจดหมายกลุ่ม* รวมถึงการส่งใบแจ้งหนี้หรือใบเสนอราคาเป็นกลุ่ม "
 "จะถูกจัดการโดยแอปพลิเคชัน Marketing Automation หรืออีเมลมาร์เก็ตติ้ง"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:148
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:158
 msgid ""
 "You can use services like Gmail, Amazon SES, or Brevo for transactional "
 "emails, and services like Mailgun, Sendgrid, or Mailjet for mass mailings."
@@ -4713,7 +4726,7 @@ msgstr ""
 "คุณสามารถใช้บริการเช่น Gmail, Amazon SES หรือ Brevo สำหรับอีเมล์ธุรกรรม "
 "และบริการเช่น Mailgun, Sendgrid หรือ Mailjet สำหรับการส่งอีเมลกลุ่ม"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:151
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:161
 msgid ""
 "First, activate the :ref:`developer-mode` and go to :menuselection:`Settings"
 " --> Technical --> Email: Outgoing Mail Servers`. There, add two outgoing "
@@ -4734,7 +4747,7 @@ msgstr ""
 msgid "Example of split between transaction and mass mailing mail servers."
 msgstr "ตัวอย่างการแยกระหว่างเซิร์ฟเวอร์จดหมายธุรกรรมและจดหมายกลุ่ม"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:160
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:170
 msgid ""
 "Now, go to :menuselection:`Email Marketing --> Configuration --> Settings`, "
 "enable :guilabel:`Dedicated Server`, and select the appropriate email "
@@ -4751,11 +4764,11 @@ msgstr ""
 msgid "Dedicated mail server on Email Marketing app settings."
 msgstr "เซิร์ฟเวอร์อีเมลเฉพาะในการตั้งค่าแอปพลิเคชันอีเมลมาร์เก็ตติ้ง"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:171
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:181
 msgid "FROM filtering"
 msgstr "ตัวกรอง จาก"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:174
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:184
 msgid ""
 "It’s **highly recommended** to configure the FROM Filtering on the outgoing "
 "mail servers as per the instructions of your provider."
@@ -4763,7 +4776,7 @@ msgstr ""
 "**ขอแนะนำ** "
 "ให้กำหนดค่าการกรองจากบนเซิร์ฟเวอร์เมลขาออกตามคำแนะนำของผู้ให้บริการของคุณ"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:177
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:187
 msgid ""
 "The :guilabel:`FROM Filtering` field allows for the use of a specific "
 "outgoing email server depending on the *From* email address or domain that "
@@ -4776,26 +4789,26 @@ msgstr ""
 "**ค่าจะต้องเป็นโดเมนหรือที่อยู่ที่สมบูรณ์** "
 "ที่ตรงกับที่อยู่อีเมลของผู้ส่งและเป็นที่เชื่อถือในฝั่งของผู้ให้บริการเซิร์ฟเวอร์อีเมลขาออก"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:182
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:192
 msgid ""
 "If FROM filtering is not used, emails will go out using the notification "
 "address."
 msgstr "หากไม่ใช้ตัวกรองจาก อีเมลจะถูกส่งออกไปโดยใช้ที่อยู่การแจ้งเตือน"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:185
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:195
 msgid ""
 "Some outgoing mail servers require a specific configuration of the FROM "
 "filter."
 msgstr "เซิร์ฟเวอร์เมลขาออกบางตัวต้องมีการกำหนดค่าตัวกรอง จาก โดยเฉพาะ"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:187
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:197
 msgid ""
 "When an email is sent from Odoo, the following sequence is used to choose "
 "the outgoing email server:"
 msgstr ""
 "เมื่อส่งอีเมลจาก Odoo จะใช้ลำดับต่อไปนี้ในการเลือกเซิร์ฟเวอร์อีเมลขาออก:"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:189
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:199
 msgid ""
 "First, Odoo searches for a server that has the same FROM filtering value as "
 "the From value (i.e., email address) defined in the outgoing email. This "
@@ -4806,7 +4819,7 @@ msgstr ""
 "ที่อยู่อีเมล) ที่กำหนดไว้ในอีเมลขาออก "
 "การกำหนดค่านี้เหมาะสมหากผู้ใช้ทั้งหมดในบริษัทใช้โดเมนเดียวกันแต่มีส่วนภายในที่แตกต่างกัน"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:194
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:204
 msgid ""
 "If the sender's email address is `test@example.com`, only an email server "
 "having a FROM filtering value equal to `test@example.com` or `example.com` "
@@ -4816,7 +4829,7 @@ msgstr ""
 "จะใช้ได้เฉพาะเซิร์ฟเวอร์อีเมลที่มีค่าตัวกรอง จาก เท่ากับ `test@example.com` "
 "หรือ `example.com` เท่านั้น"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:197
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:207
 msgid ""
 "If no server is found based on the first criteria, Odoo looks for the first "
 "server without a FROM filtering value set. The email will be overridden with"
@@ -4826,7 +4839,7 @@ msgstr ""
 "จะค้นหาเซิร์ฟเวอร์แรกที่ไม่มีชุดค่าตัวกรอง จาก "
 "อีเมลจะถูกเขียนทับด้วยที่อยู่การแจ้งเตือน"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:200
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:210
 msgid ""
 "If no server is found based on the second criteria, Odoo uses the first "
 "server, and the email will be overridden with the notification address."
@@ -4834,7 +4847,7 @@ msgstr ""
 "หากไม่พบเซิร์ฟเวอร์ตามเกณฑ์ที่สอง Odoo จะใช้เซิร์ฟเวอร์แรก "
 "และอีเมลจะถูกแทนที่ด้วยที่อยู่การแจ้งเตือน"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:204
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:214
 msgid ""
 "To determine which server is first, Odoo uses the priority value (the lower "
 "the value is, the higher the priority is). Failing to do so, the first "
@@ -4844,7 +4857,13 @@ msgstr ""
 "(ยิ่งค่าต่ำ ลำดับความสำคัญก็จะยิ่งสูงขึ้น) หากไม่เป็นเช่นนั้น "
 "เซิร์ฟเวอร์แรกจะถูกกำหนดโดยใช้ชื่อของเซิร์ฟเวอร์ตามลำดับตัวอักษร"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:208
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:218
+msgid ""
+"If there is no mail server, Odoo relies on the :ref:`system parameter "
+"<email-outbound-default-from-filtering>` value."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:221
 msgid ""
 "It is also possible to use Odoo's mail server for transactional emails in "
 "addition to mass mailings."
@@ -4852,11 +4871,11 @@ msgstr ""
 "นอกจากนี้ยังสามารถใช้เซิร์ฟเวอร์เมลของ Odoo "
 "สำหรับการส่งอีเมลธุรกรรมนอกเหนือจากการส่งจดหมายกลุ่มได้อีกด้วย"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:213
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:226
 msgid "Using an external email server and Odoo’s default server"
 msgstr "การใช้เซิร์ฟเวอร์อีเมลภายนอกและเซิร์ฟเวอร์เริ่มต้นของ Odoo"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:215
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:228
 msgid ""
 "On Odoo Online and Odoo.sh, databases are started with Odoo's SMTP server. "
 "If no outgoing mail server is set, the default Odoo's SMTP server will be "
@@ -4874,7 +4893,7 @@ msgstr ""
 "การเพิ่มเซิร์ฟเวอร์อีเมลโดยใช้เซิร์ฟเวอร์อีเมลของ Odoo พร้อมการตรวจสอบสิทธิ์"
 " CLI"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:222
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:235
 msgid ""
 "If an outgoing mail server is used simultaneously with Odoo’s default server"
 " (CLI), the FROM filter of the outgoing mail server must contain a custom "
@@ -4895,7 +4914,7 @@ msgstr ""
 "การแยกเซิร์ฟเวอร์เมล Odoo "
 "สำหรับอีเมล์ธุรกรรมและเซิร์ฟเวอร์เมลสำหรับการส่งอีเมลกลุ่ม"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:231
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:244
 msgid ""
 "On Odoo Online, the command line interface is equivalent to the default Odoo"
 " mail server, using the same limit as if there was no outgoing mail server "
@@ -4904,7 +4923,7 @@ msgstr ""
 "ใน Odoo Online อินเทอร์เฟซบรรทัดคำสั่งจะเทียบเท่ากับเซิร์ฟเวอร์อีเมล Odoo "
 "เริ่มต้น โดยใช้ขีดจำกัดเดียวกันกับเมื่อไม่มีเซิร์ฟเวอร์อีเมลขาออก"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:235
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:248
 msgid ""
 "On Odoo Online, the page also shows your daily email usage and your daily "
 "limit. On Odoo.sh, you need to check on the monitor page the number of "
@@ -4914,7 +4933,7 @@ msgstr ""
 "หน้าดังกล่าวจะแสดงการใช้งานอีเมลรายวันและขีดจำกัดรายวันของคุณด้วย ใน Odoo.sh"
 " คุณต้องตรวจสอบจำนวนอีเมลขาออกที่ส่งออกไปในหน้ามอนิเตอร์"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:239
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:252
 msgid ""
 "On Odoo.sh, to use the command-line interface, an outgoing mail server can "
 "be configured on the configuration file."
@@ -4922,7 +4941,7 @@ msgstr ""
 "ใน Odoo.sh หากต้องการใช้อินเทอร์เฟซบรรทัดคำสั่ง "
 "คุณสามารถกำหนดค่าเซิร์ฟเวอร์เมลขาออกบนไฟล์กำหนดค่าได้"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:243
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:256
 msgid ""
 "Odoo’s mail server is meant for transactional emails and small-scale "
 "marketing campaigns. The :ref:`daily limit <email-issues-outgoing-delivery-"
@@ -4933,11 +4952,11 @@ msgstr ""
 ":ref:`ขีดจำกัดรายวัน <email-issues-outgoing-delivery-failure-messages-"
 "limit>` จะขึ้นอยู่กับประเภทฐานข้อมูลและแอปพลิเคชันที่ใช้"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:250
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:263
 msgid "Using a custom domain with an external email server"
 msgstr "การใช้โดเมนที่กำหนดเองกับเซิร์ฟเวอร์อีเมลภายนอก"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:252
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:265
 msgid ""
 "Similar to the :ref:`previous chapter <email-outbound-different-servers-"
 "external-odoo>`, proper configuration might be needed to ensure that the "
@@ -4952,7 +4971,7 @@ msgstr ""
 "(SPF, DKIM และ DMARC) รายชื่อผู้ให้บริการ "
 ":ref:`ที่พบบ่อยที่สุดมีให้ใช้งานแล้ว <email-domain-providers-documentation>`"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:259
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:272
 msgid ""
 "DNS configuration is required when you use your own domain. If an external "
 "outgoing mail server is used, configuring the records as described in the "
@@ -4968,11 +4987,11 @@ msgstr ""
 "เมื่อใช้เซิร์ฟเวอร์อีเมลที่กำหนดเอง Odoo ไม่อนุญาตให้กำหนดค่าโดเมนย่อยของ "
 "Odoo"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:268
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:281
 msgid "Port restriction"
 msgstr "ข้อจำกัดของพอร์ต"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:270
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:283
 msgid ""
 "Port 25 is blocked for security reasons on Odoo Online and Odoo.sh. Try "
 "using port 465, 587, or 2525 instead."
@@ -4980,11 +4999,11 @@ msgstr ""
 "พอร์ต 25 ถูกบล็อกด้วยเหตุผลด้านความปลอดภัยบน Odoo Online และ Odoo.sh "
 "ลองใช้พอร์ต 465, 587 หรือ 2525 แทน"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:276
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:289
 msgid "Alias domain"
 msgstr "นามแฝงโดเมน"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:278
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:291
 msgid ""
 "The catchall domain is company-specific. By default, all companies share "
 "Odoo’s subdomain (e.g., `company-name.odoo.com`), but each company may have "
@@ -4994,7 +5013,7 @@ msgstr ""
 "บริษัททั้งหมดจะใช้โดเมนย่อยของ Odoo ร่วมกัน (เช่น `company-name.odoo.com`) "
 "แต่บริษัทแต่ละแห่งอาจมีโดเมนอีเมลที่กำหนดเอง"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:281
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:294
 msgid ""
 "When the :ref:`developer-mode` is activated, the alias domain options are "
 "available by going to :menuselection:`Settings --> Technical --> Email: "
@@ -5003,7 +5022,7 @@ msgstr ""
 "เมื่อเปิดใช้งาน :ref:`โหมดนักพัฒนา` ตัวเลือกชื่อโดเมนจะพร้อมใช้งานโดยไปที่ "
 ":menuselection:`การตั้งค่า --> ทางเทคนิค --> อีเมล: ชื่อโดเมน`"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:285
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:298
 msgid ""
 "Any modification of the alias domain must be done very carefully. If one of "
 "the aliases (bounce, catchall, default from) is changed, all previous emails"
@@ -5013,7 +5032,7 @@ msgstr ""
 "หากมีการเปลี่ยนแปลงชื่อใดชื่อหนึ่ง (bounce, catchall, default from) "
 "อีเมลก่อนหน้าทั้งหมดที่ไม่ได้เปลี่ยนเส้นทางไปยังชื่อใหม่จะถูกลบไป"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:289
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:302
 msgid ""
 "The :guilabel:`Default From Alias` field can be filled with a local-part of "
 "the email address (by default `notifications`) or a full email address. "
@@ -5025,11 +5044,11 @@ msgstr ""
 "กำหนดค่าเพื่อกำหนดส่วนหัว `จาก` ของอีเมลของคุณ หากใช้ที่อยู่อีเมลแบบเต็ม "
 "อีเมลขาออกทั้งหมดจะถูกเขียนทับด้วยที่อยู่นี้"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:297
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:310
 msgid "Notification system"
 msgstr "ระบบแจ้งเตือน"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:299
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:312
 msgid ""
 "When an email is sent from the chatter, customers can reply directly to it. "
 "If a customer replies directly to an email, the answer is logged in the same"
@@ -5039,7 +5058,7 @@ msgstr ""
 "หากลูกค้าตอบกลับอีเมลโดยตรง คำตอบจะถูกบันทึกในช่องแชทดียวกัน "
 "จึงทำหน้าที่เป็นเธรดข้อความที่เกี่ยวข้องกับบันทึกนั้น"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:303
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:316
 msgid ""
 "Upon receiving the reply, Odoo then uses the subscribed followers (based on "
 "the subscribed subtypes) to send them a notification by email, or in the "
@@ -5050,7 +5069,7 @@ msgstr ""
 "เพื่อส่งการแจ้งเตือนผ่านอีเมลหรือในกล่องจดหมาย Odoo "
 "ขึ้นอยู่กับการตั้งค่าของผู้ใช้"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:307
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:320
 msgid ""
 "If a customer with the email address `“Mary” <mary@customer.example.com>` "
 "makes a direct reply to an email coming from the Odoo database, Odoo's "
@@ -5061,7 +5080,7 @@ msgstr ""
 "ตอบกลับอีเมลโดยตรงจากฐานข้อมูล Odoo พฤติกรรมเริ่มต้นของ Odoo "
 "ก็คือแจกจ่ายเนื้อหาอีเมลดังกล่าวให้กับผู้ติดตามคนอื่นๆ ทั้งหมดในเธรด"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:311
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:324
 msgid ""
 "As Mary’s domain does not belong to the alias domain, Odoo overrides the "
 "email address and uses the notification email address to notify the "
@@ -5077,7 +5096,7 @@ msgstr ""
 "`notifications@company-name.odoo.com` แทนที่จะเป็น "
 "`mary@customer.example.com`"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:317
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:330
 msgid ""
 "The address is constructed using the name of the sender and `{alias domain, "
 "default from alias}`@`{alias domain, domain name}`, by default, "
@@ -5087,23 +5106,19 @@ msgstr ""
 "alias}`@`{alias domain, domain name}` โดยค่าเริ่มต้นคือ "
 "`notifications@company-name.odoo.com`"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:324
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:337
 msgid "Using a unique email address for all outgoing emails"
 msgstr "การใช้ที่อยู่อีเมลที่ไม่ซ้ำกันสำหรับอีเมลขาออกทั้งหมด"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:326
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:339
 msgid ""
 "To force the email address from which emails are sent, activate the "
 ":ref:`developer-mode`, and go to :menuselection:`Settings --> Technical --> "
-"Email: Alias Domains`. On the :guilabel:`Default From Alias`, use the the "
-"local-part or a complete email address as the value."
+"Email: Alias Domains`. On the :guilabel:`Default From Alias`, use the local-"
+"part or a complete email address as the value."
 msgstr ""
-"หากต้องการบังคับให้ระบุที่อยู่อีเมลที่ส่งอีเมล ให้เปิดใช้งาน "
-":ref:`developer-mode` แล้วไปที่ :menuselection:`การตั้งค่า --> ทางเทคนิค -->"
-" อีเมล: ชื่อโดเมน` ใน :guilabel:`ค่าเริ่มต้นจากชื่อ` ให้ใช้ส่วน local- "
-"หรือที่อยู่อีเมลแบบเต็มเป็นค่า"
 
-#: ../../content/applications/general/email_communication/email_servers_outbound.rst:331
+#: ../../content/applications/general/email_communication/email_servers_outbound.rst:344
 msgid ""
 "If a **complete address** is used as the :guilabel:`Default From Alias` "
 "value, **all** outgoing emails will be overwritten by this address."
@@ -6676,17 +6691,19 @@ msgstr ""
 "Authentication, Reporting, and Conformance)` บนโดเมนของผู้ส่ง"
 
 #: ../../content/applications/general/email_communication/mailjet_api.rst:92
-#: ../../content/applications/general/email_communication/mailjet_api.rst:157
 msgid ""
-"`Mailjet's SPF/DKIM/DMARC documentation "
-"<https://documentation.mailjet.com/hc/articles/ 360042412734-Authenticating-"
-"Domains-with-SPF-DKIM>`_"
+"`Mailjet's SPF/DKIM documentation <https://documentation.mailjet.com/hc/en-"
+"us/articles/360049641733-Authenticating-Domains-with-SPF-and-DKIM-A-"
+"Complete-Guide>`_"
 msgstr ""
-"`เอกสาร SPF/DKIM/DMARC ของ Mailjet "
-"<https://documentation.mailjet.com/hc/articles/ 360042412734-Authenticating-"
-"Domains-with-SPF-DKIM>`_"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:96
+#: ../../content/applications/general/email_communication/mailjet_api.rst:94
+msgid ""
+"`Mailjet's DMARC documentation <https://documentation.mailjet.com/hc/en-"
+"us/articles/20531905163419-Understanding-DMARC>`_"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/mailjet_api.rst:98
 msgid ""
 "If the database is not using a custom domain, then in order to verify the "
 "sender's address, a temporary alias (of the three email addresses mentioned "
@@ -6698,11 +6715,11 @@ msgstr ""
 "Odoo ลูกค้าสัมพันธ์ เพื่อสร้างลูกค้าเป้าหมาย "
 "จากนั้นฐานข้อมูลจะสามารถรับอีเมลยืนยันและตรวจสอบบัญชีได้"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:104
+#: ../../content/applications/general/email_communication/mailjet_api.rst:106
 msgid "Add a domain"
 msgstr "เพิ่มโดเมน"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:106
+#: ../../content/applications/general/email_communication/mailjet_api.rst:108
 msgid ""
 "By adding an entire domain to the Mailjet account, all the sender addresses "
 "related to that domain are automatically validated for sending emails using "
@@ -6719,7 +6736,7 @@ msgstr ""
 ":guilabel:`ผู้ส่งและโดเมน` จากนั้นคลิกที่ :guilabel:`เพิ่มโดเมน` "
 "เพื่อเพิ่มโดเมนที่กำหนดเอง"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:113
+#: ../../content/applications/general/email_communication/mailjet_api.rst:115
 msgid ""
 "The domain needs to be added to the Mailjet account and then validated "
 "through the :abbr:`DNS (Domain Name System)`."
@@ -6727,7 +6744,7 @@ msgstr ""
 "จำเป็นต้องเพิ่มโดเมนในบัญชี Mailjet จากนั้นตรวจสอบความถูกต้องผ่าน :abbr:`DNS"
 " (Domain Name System)`"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:116
+#: ../../content/applications/general/email_communication/mailjet_api.rst:118
 msgid ""
 "After that, fill out the :guilabel:`Add a new Domain` page on Mailjet and "
 "click :guilabel:`Continue`."
@@ -6735,7 +6752,7 @@ msgstr ""
 "หลังจากนั้น กรอกหน้า :guilabel:`เพิ่มโดเมนใหม่` บน Mailjet และคลิก "
 ":guilabel:`ดำเนินการต่อ`"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:119
+#: ../../content/applications/general/email_communication/mailjet_api.rst:121
 msgid ""
 "After adding the domain, a validation page will populate. Unless the Odoo "
 "database is on-premise (in which case, choose :guilabel:`Option 1`), choose "
@@ -6753,11 +6770,11 @@ msgstr ""
 msgid "The TXT record information to input on the domain's DNS."
 msgstr "ข้อมูลบันทึก TXT ที่จะป้อนใน DNS ของโดเมน"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:128
+#: ../../content/applications/general/email_communication/mailjet_api.rst:130
 msgid "Setup in the domain's DNS"
 msgstr "ตั้งค่าใน DNS ของโดเมน"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:130
+#: ../../content/applications/general/email_communication/mailjet_api.rst:132
 msgid ""
 "After getting the TXT record information from the Mailjet account, add a TXT"
 " record to the domain's :abbr:`DNS (Domain Name System)`. This process "
@@ -6773,11 +6790,11 @@ msgstr ""
 " ประกอบด้วย :guilabel:`โฮสต์` และ :guilabel:`ค่า` "
 "วางข้อมูลเหล่านี้ลงในช่องที่เกี่ยวข้องในบันทึก TXT"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:137
+#: ../../content/applications/general/email_communication/mailjet_api.rst:139
 msgid "Return to Mailjet account information"
 msgstr "กลับไปที่ข้อมูลบัญชี Mailjet"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:139
+#: ../../content/applications/general/email_communication/mailjet_api.rst:141
 msgid ""
 "After adding the TXT record to the domain's :abbr:`DNS (Domain Name "
 "System)`, navigate back to the Mailjet account. Then, navigate to "
@@ -6790,7 +6807,7 @@ msgstr ""
 " เพิ่มโดเมนหรือที่อยู่ของผู้ส่ง` คลิกไอคอนรูปเฟืองถัดจาก :guilabel:`โดเมน` "
 "และเลือก :guilabel:`ถูกต้อง`"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:143
+#: ../../content/applications/general/email_communication/mailjet_api.rst:145
 msgid ""
 "This action can also be done by going to the `Sender domains & addresses "
 "<https://app.mailjet.com/ account/sender>`_ page on the Mailjet account "
@@ -6800,7 +6817,7 @@ msgstr ""
 "<https://app.mailjet.com/ account/sender>`_ บนข้อมูลบัญชี Mailjet และคลิกที่"
 " :guilabel:`จัดการ`"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:146
+#: ../../content/applications/general/email_communication/mailjet_api.rst:148
 msgid ""
 "Next, click :guilabel:`Check Now` to validate the TXT record that was added "
 "on the domain. A success screen will appear if the domain is configured "
@@ -6813,7 +6830,7 @@ msgstr ""
 msgid "Check DNS record in Mailjet."
 msgstr "ตรวจสอบบันทึก DNS ใน Mailjet"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:152
+#: ../../content/applications/general/email_communication/mailjet_api.rst:154
 msgid ""
 "After successfully setting up the domain, there is an option to "
 ":guilabel:`Authenticate this domain (SPF/DKIM)`. This button populates "
@@ -6825,15 +6842,25 @@ msgstr ""
 ":abbr:`SPF (Sender Policy Framework)` & :abbr:`DKIM (DomainKeys Identified "
 "Mail) เพื่อป้อนข้อมูลลงในผู้ให้บริการ :abbr:`DNS (Domain Name System)`"
 
+#: ../../content/applications/general/email_communication/mailjet_api.rst:159
+msgid ""
+"`Mailjet's SPF/DKIM/DMARC documentation "
+"<https://documentation.mailjet.com/hc/articles/ 360042412734-Authenticating-"
+"Domains-with-SPF-DKIM>`_"
+msgstr ""
+"`เอกสาร SPF/DKIM/DMARC ของ Mailjet "
+"<https://documentation.mailjet.com/hc/articles/ 360042412734-Authenticating-"
+"Domains-with-SPF-DKIM>`_"
+
 #: ../../content/applications/general/email_communication/mailjet_api.rst-1
 msgid "Authenticate the domain with SPF/DKIM records in Mailjet."
 msgstr "ตรวจสอบความถูกต้องของโดเมนด้วยบันทึก SPF/DKIM ใน Mailjet"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:166
+#: ../../content/applications/general/email_communication/mailjet_api.rst:168
 msgid "Set up in Odoo"
 msgstr "ตั้งค่าใน Odoo"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:168
+#: ../../content/applications/general/email_communication/mailjet_api.rst:170
 msgid ""
 "To complete the setup, navigate to the Odoo database and go to the "
 ":guilabel:`Settings`. With :ref:`developer-mode` turned on, go to the "
@@ -6846,7 +6873,7 @@ msgstr ""
 " :menuselection:`เมนูทางเทคนิค --> อีเมล --> เซิร์ฟเวอร์เมลขาออก` "
 "จากนั้นสร้างการกำหนดค่าเซิร์ฟเวอร์ขาออกใหม่โดยคลิกที่ปุ่ม :guilabel:`สร้าง`"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:173
+#: ../../content/applications/general/email_communication/mailjet_api.rst:175
 msgid ""
 "Next, input the `SMTP server` (in-v3.mailjet.com), `port number` (587 or "
 "465), and `Security (SSL/TLS)` that was copied earlier from the Mailjet "
@@ -6862,7 +6889,7 @@ msgstr ""
 "Sockets Layer)`/:abbr:`TLS (Transport Layer Security)` แม้ว่า Mailjet "
 "อาจไม่ต้องการก็ตาม"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:178
+#: ../../content/applications/general/email_communication/mailjet_api.rst:180
 msgid ""
 "For the :guilabel:`Username`, input the :guilabel:`API KEY`. For the "
 ":guilabel:`Password`, input the :guilabel:`SECRET KEY` that was copied from "
@@ -6876,7 +6903,7 @@ msgstr ""
 ":menuselection:`Mailjet --> การตั้งค่าบัญชี --> การตั้งค่า SMTP และ SEND "
 "API`"
 
-#: ../../content/applications/general/email_communication/mailjet_api.rst:183
+#: ../../content/applications/general/email_communication/mailjet_api.rst:185
 msgid ""
 "Then, if the Mailjet server is used for mass emailing, set the "
 ":guilabel:`Priority` value higher than that of any transactional email "
