@@ -159,6 +159,31 @@ how the product will be used.
 
 E-Invoice for goods (NF-e)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. important::
+   The Avalara integration works on a credit-based system, where each interaction with Avalara consumes 1 credit. Below are the main credit-consuming operations:
+
+   :guilabel:`Sales Application`:
+    - Tax calculation on quotations and sales orders.
+
+   :guilabel:`Accounting Application`:
+    - Tax calculation on invoices.
+    - Electronic invoice submission (NF-e or NFS-e).
+
+   :guilabel:`Note:` If you calculate taxes in Sales and later issue the invoice in Accounting, the calculation happens twice, consuming 2 credits.
+
+   :guilabel:`Example Workflow:`
+    Sales order confirmed → 1 credit (tax calculation)
+    Invoice created → 1 credit (tax calculation)
+    Invoice confirmed and submitted → 1 credit (tax calculation) + 1 credit (submit invoice)
+    → Total: 4 credits
+
+   :guilabel:`Occasional Operations: (Each step is billed separately)`
+    - :ref:`Correction letter (Carta de Correção) <localizations/brazil/correction-letter>`
+    - :ref:`Invoice cancellation <localizations/brazil/invoice-cancellation>`
+    - :ref:`Sales Refund via Credit Note <localizations/brazil/credit-notes>`
+    - :ref:`Sales Complementary Invoice via Debit Note <localizations/brazil/debit-notes>`
+    - :ref:`Invalidate invoice number range <localizations/brazil/invalidate-invoice-number-range>`
+    - Other tax validations.
 
 - :guilabel:`CEST Code`: code for products subject to ICMS tax substitution
 - :guilabel:`Mercosul NCM Code`: Mercosur Common Nomenclature Product Code
@@ -181,6 +206,32 @@ E-Invoice for goods (NF-e)
 
 E-Invoice for services (NFS-e)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. important::
+   The Avalara integration operates on a credit-based system, where each interaction with Avalara consumes 1 credit. Below are the main credit-consuming operations:
+
+   :guilabel:`Sales Application:`
+    - Tax calculation on quotations and sales orders.
+
+   :guilabel:`Accounting Application:`
+    - Tax calculation on invoices.
+    - Electronic invoice submission (NF-e or NFS-e).
+    - Invoice status check. (Each time you check the invoice status, 1 credit is consumed.)
+   
+   :guilabel:`Note:` If you calculate taxes in Sales and later issue the invoice in Accounting, the calculation happens twice — consuming 2 credits.
+
+   :guilabel:`Example Workflow:`
+    Sales order confirmed → 1 credit (tax calculation)
+    Invoice created → 1 credit (tax calculation)
+    Invoice confirmed and submitted → 1 credit (tax calculation) + 1 credit (submit invoice)
+    → Total: 4 credits
+
+   :guilabel:`Occasional Operations: (Each step is billed separately.)`
+    - :ref:`Correction letter (Carta de Correção) <localizations/brazil/correction-letter>`
+    - :ref:`Invoice cancellation <localizations/brazil/invoice-cancellation>`
+    - :ref:`Sales Refund via Credit Note <localizations/brazil/credit-notes>`
+    - :ref:`Sales Complementary Invoice via Debit Note <localizations/brazil/debit-notes>`
+    - :ref:`Invalidate invoice number range <localizations/brazil/invalidate-invoice-number-range>`
+    - Other tax validations.
 
 - :guilabel:`Mercosul NCM Code`: Mercosur Common Nomenclature Product Code
 - :guilabel:`Purpose of Use`: intended purpose of use for this product
@@ -633,6 +684,13 @@ This electronic document can be issued through **Odoo Point of Sale app**.
 
 Its legal validity is guaranteed by the digital signature and by each Brazilian state's SEFAZ
 (Secretaria da Fazenda).
+
+.. important::
+   The Avalara integration operates on a credit-based system. Each operation that involves communication with Avalara consumes 1 credit. The following operations within the Point of Sale (POS) application are subject to credit consumption:
+    - Tax calculation at the time of sale
+    - Electronic invoice issuance (NFC-e)
+
+   :guilabel:`Note:` Each step is billed separately. For example, calculating taxes and issuing an invoice for the same POS transaction will consume 2 credits.
 
 .. seealso::
    :doc:`Point of Sale <../../sales/point_of_sale>`
