@@ -256,3 +256,15 @@ Select a product configured with lot/serial numbers and expiration date tracking
 
 When the expiation date passes for a lot/serial number for this product, a notification is sent to
 the user in this field.
+
+.. note::
+   Once the expiration date is due, expiration alerts are created on the form view of the lot/serial
+   number of the product.
+
+   To customize these alerts, turn on :ref:`developer mode <developer-mode>`, go to
+   :menuselection:`Settings app --> Technical --> Activity Types`, and select the :guilabel:`Alert
+   Date Reached` alert.
+
+   The :guilabel:`Default User` assigned will be notified once the expiration date is reached. If no
+   default user is configured, the activity will be assigned to the :guilabel:`Responsible` user
+   selected on the product's :guilabel:`Inventory` tab.
