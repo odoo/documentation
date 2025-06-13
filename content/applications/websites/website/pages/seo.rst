@@ -72,7 +72,7 @@ image by clicking the upward arrow.
      shared.
    - If you change the title of a blog post or the name of a product, the changes apply
      automatically everywhere on your website. The old link still functions when external websites
-     use a :ref:`301 redirect <website/URL-redirection>`, maintaining the SEO link juice.
+     use a :ref:`301 redirect <website/pages/URL-redirection>`, maintaining the SEO link juice.
 
 Images
 ======
