@@ -85,7 +85,7 @@ The IoT box's IP address can be retrieved by:
      :scale: 75%
      :alt: POS display with IoT box's IP address
 
-- connecting the IoT box to a `supported receipt or label printer <https://www.odoo.com/fr_FR/app/iot-hardware>`_
+- connecting the IoT box to a `supported receipt or label printer <https://www.odoo.com/app/iot-hardware>`_
   with a USB cable: the IP address is automatically printed.
 - accessing the administrator interface of the router to which the IoT box is connected or using
   third-party software to scan the network.
