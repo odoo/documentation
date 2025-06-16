@@ -7,9 +7,9 @@
 # JH CHOI <hwangtog@gmail.com>, 2024
 # Martin Trigaux, 2024
 # Tiffany Chang, 2024
+# Wil Odoo, 2025
 # Daye Jeong, 2025
 # Sarah Park, 2025
-# Wil Odoo, 2025
 # 
 #, fuzzy
 msgid ""
@@ -18,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-06-12 07:10+0000\n"
 "PO-Revision-Date: 2024-10-08 06:34+0000\n"
-"Last-Translator: Wil Odoo, 2025\n"
+"Last-Translator: Sarah Park, 2025\n"
 "Language-Team: Korean (https://app.transifex.com/odoo/teams/41243/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2084,7 +2084,7 @@ msgstr "B 은행 계좌"
 
 #: ../../content/applications/finance/accounting/bank/internal_transfers.rst:70
 msgid ":doc:`reconciliation`"
-msgstr ""
+msgstr ":doc:`reconciliation`"
 
 #: ../../content/applications/finance/accounting/bank/internal_transfers.rst:71
 msgid ":doc:`reconciliation_models`"
@@ -9524,7 +9524,7 @@ msgstr "순서 재지정이 불가능합니다."
 #: ../../content/applications/finance/accounting/customer_invoices/sequence.rst:79
 #: ../../content/applications/finance/accounting/vendor_bills/sequence.rst:79
 msgid "When entries are before a lock date."
-msgstr ""
+msgstr "입력 날짜가 잠금 날짜 이전인 경우입니다."
 
 #: ../../content/applications/finance/accounting/customer_invoices/sequence.rst:80
 #: ../../content/applications/finance/accounting/vendor_bills/sequence.rst:80
@@ -15750,6 +15750,14 @@ msgid ""
 ":guilabel:`Achieved` amount, plus any confirmed purchase orders that have "
 "not yet been billed."
 msgstr ""
+"예산 상태가 :guilabel:`미결` 상태인 경우에는 :guilabel:`집행` 및 :guilabel:`달성` 이라는 두 개의 추가 "
+"열을 사용할 수 있게 됩니다. 이 열의 금액은 자동으로 산출되는 금액으로 전표에 있는 관련된 :ref:`분석 분포 "
+"<accounting/analytic_accounting/analytic-distribution>` 를 기준으로 계산됩니다. 예산 기간 "
+"중 전표의 :ref:`분석 분포 <accounting/analytic_accounting/analytic-distribution>` "
+"항목이 변경되면 분포에서 선택된 전표 계정에 대한 예산 열도 자동으로 업데이트됩니다. :guilabel:`달성` 금액은 연결된 "
+":ref:`분석 계정 <accounting/analytic_accounting/analytic_accounts>` 에 대한 전표 확정 "
+"항목에 따라 현재 기재된 내용이 반영됩니다. 반면, :guilabel:`집행` 금액은 :guilabel:`달성` 금액의 총액이 표시되며 "
+"구매발주서가 확정된 경우 아직 업체 청구서가 발행되기 전이라도 모두 표시됩니다."
 
 #: ../../content/applications/finance/accounting/reporting/budget.rst:70
 msgid ""
@@ -28355,6 +28363,8 @@ msgid ""
 " --> Payments`, selecting the payment(s), and clicking :menuselection:`Print"
 " --> Payment Receipt`."
 msgstr ""
+"송금 통지서는 사업체에 대한 지급 증빙으로 사용되는 문서입니다. Odoo에서는 :menuselection:`회계 --> 공급업체 --> "
+"결제` 로 이동하여 결제를 선택한 다음 :menuselection:`인쇄 --> 결제 영수증` 을 클릭하여 액세스할 수 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst-1
 msgid "Remittance advice example"
@@ -28516,6 +28526,9 @@ msgid ""
 " vendor. Open the :guilabel:`Accounting` tab, and, under the :guilabel:`Bank"
 " Accounts` section, click :guilabel:`Add a line` to fill in their:"
 msgstr ""
+":menuselection:`회계 --> 고객 --> 고객` 또는 :menuselection:`회계 --> 공급업체 --> 공급업체` 로"
+" 이동하여 고객 또는 공급업체를 선택합니다. :guilabel:`회계` 탭을 열고, :guilabel:`은행 계좌` 섹션에서 "
+":guilabel:`줄 추가` 를 클릭하여 다음 내용을 입력합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:447
 #: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:248
@@ -28568,6 +28581,8 @@ msgid ""
 " appear in your bank feed at the following bank feed iteration. You will "
 "need to reconcile it against the **batch payment** made in Odoo."
 msgstr ""
+"은행 포털에 파일을 업로드하면 다음 은행 피드를 반복 시 ABA 거래 라인이 은행 피드에 표시됩니다. Odoo에서 이루어진 **일괄 "
+"결제** 와 조정해야 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:476
 #: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:301
@@ -30366,7 +30381,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:67
 msgid "Sale modifications for Brazil"
-msgstr ""
+msgstr "브라질의 판매 변경 사항"
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:68
 msgid ":guilabel:`Brazil - Sale Subscription`"
@@ -31320,6 +31335,9 @@ msgid ""
 "Number` and :guilabel:`End Number` of the range that should be cancelled, "
 "and enter an invalidation :guilabel:`Reason`."
 msgstr ""
+"판매 전표에 지정된 번호는 현재 사용되지 않는 시퀀스이며 **동시에** 향후에도 사용할 계획이 없는 경우에는 정부에서 취소할 수 "
+"있습니다. 취소하려면 전표를 열고 톱니바퀴 아이콘을 클릭한 다음 '숫자 범위 무효 처리(BR)' 를 선택합니다. '숫자 범위 무효 "
+"처리(BR)' 마법사에서 취소할 범위에 있는 '시작 번호'와 '끝 번호' 를 추가한 후 무효 처리 사유를 입력합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst-1
 msgid "Number range invalidation selection in Odoo."
@@ -37585,7 +37603,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:733
 msgid "Warehouse configuration"
-msgstr ""
+msgstr "창고 환경설정"
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:735
 msgid ""
@@ -38835,7 +38853,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/france.rst:168
 msgid "FEC Import"
-msgstr ""
+msgstr "FEC 가져오기"
 
 #: ../../content/applications/finance/fiscal_localizations/france.rst:170
 msgid ""
@@ -48802,7 +48820,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:82
 msgid "GST Type"
-msgstr ""
+msgstr "GST 종류"
 
 #: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:83
 #: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:87
@@ -48831,7 +48849,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:93
 msgid "Zero Rated (Export) Sales"
-msgstr ""
+msgstr "영세율 (수출) 매출"
 
 #: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:96
 msgid "Zero/Import (0%) Purch"
@@ -49174,7 +49192,7 @@ msgstr "급여"
 
 #: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:355
 msgid "Employment Hero integration"
-msgstr ""
+msgstr "Employment Hero 통합"
 
 #: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:357
 msgid ""
@@ -51592,6 +51610,9 @@ msgid ""
 "QAP` and :guilabel:`XLSX` buttons are used to export an XLSX file, which can"
 " be processed using an *external* tool to convert it to the DAT format."
 msgstr ""
+"Odoo에서 DAT 파일을 직접 생성할 수는 없습니다. :guilabel:`SAWT 및 QAP 내보내기` 및 "
+":guilabel:`XLSX` 버튼을 통해 XLSX 파일을 내보내며, 이 파일은 *외부* 도구를 사용하여 DAT 형식으로 변환하여 "
+"처리합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/philippines.rst:182
 msgid "Check printing"
@@ -54475,6 +54496,8 @@ msgid ""
 "payments made to subcontractors under the scheme during the previous tax "
 "month:"
 msgstr ""
+"월별 반품은 공급업체 청구서 및 환불에 대해서만 적용됩니다. 전체 신고서를 |HMRC| 에 제출하려면 이전 과세 월 에 해당 세율에 따라"
+" 외주업체에 지급한 모든 금액을 보고할 수 있도록 몇 가지 단계를 거쳐야 합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/united_kingdom.rst:313
 msgid ":ref:`localization/united-kingdom/cis-contractor-setup`"
