@@ -184,9 +184,9 @@ You can:
 
 .. tip::
    To sort the values of a dynamic pivot table by measure for a specific dimension, right-click any
-   pivot table value, then click :icon:`oi-sort-range` and select :guilabel:`Ascending` or
-   :guilabel:`Descending` from the dropdown. To return to the default order, follow the same steps
-   then select :guilabel:`Unsorted` from the dropdown.
+   pivot table value, then click :icon:`os-sort-range` :guilabel:`Sort pivot` and select
+   :guilabel:`Ascending` or :guilabel:`Descending` from the dropdown. To return to the default
+   order, follow the same steps then select :guilabel:`No sorting` from the dropdown.
 
 .. _spreadsheet/dynamic-pivot-tables/manipulate-measures-calculated-measures:
 
