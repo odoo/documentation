@@ -10,7 +10,9 @@ Several elements from your Odoo database can be inserted into an Odoo spreadshee
 
 Each time a list, pivot table, or chart is inserted, a :ref:`data source
 <spreadsheet/insert/data-sources>` is created. This data source connects the spreadsheet to your
-Odoo database, retrieving up-to-date information every time the spreadsheet is opened or reloaded.
+Odoo database, retrieving up-to-date information every time the spreadsheet is opened, the browser
+page is reloaded, or data is manually refreshed by clicking :menuselection:`Data --> Refresh all
+data` from the menu bar.
 
 :ref:`Inserted lists <spreadsheet/insert/list>` and :ref:`inserted pivot tables
 <spreadsheet/insert/pivot-table>` use formulas with Odoo-specific :ref:`list functions
@@ -18,6 +20,10 @@ Odoo database, retrieving up-to-date information every time the spreadsheet is o
 <spreadsheet/insert/pivot-table-functions-static>` to retrieve data from your database and can be
 further manipulated in the spreadsheet. Certain elements of :ref:`inserted charts
 <spreadsheet/insert/chart>` can be modified, but no data manipulation or computation is possible.
+
+.. note::
+   Lists, pivot tables, and charts from different apps and models can be inserted into the same
+   spreadsheet.
 
 .. tip::
    If you intend to use :doc:`global filters <global_filters>` to dynamically filter Odoo data in
@@ -41,7 +47,8 @@ Data sources
 Data sources, which are created each time a :ref:`list <spreadsheet/insert/list>`, :ref:`pivot table
 <spreadsheet/insert/pivot-table>` or :ref:`graph <spreadsheet/insert/chart>` is inserted into an
 Odoo spreadsheet, connect the spreadsheet and the relevant :doc:`model
-<../../studio/models_modules_apps>` in your database.
+<../../studio/models_modules_apps>` in your database, keeping the data in the spreadsheet
+up-to-date.
 
 Each data source is defined by properties that can be accessed via the :guilabel:`Data` menu. Data
 sources are identified by their respective :icon:`oi-view-pivot` :guilabel:`(pivot table)`,
@@ -51,12 +58,17 @@ by their ID and name, e.g., :icon:`oi-view-pivot` *(#1) Sales Analysis by Produc
 .. image:: insert/data-menu.png
    :alt: Data sources listed in Data menu
 
-Clicking on a data source opens its properties in a pane to the right of the spreadsheet.
+Clicking on a data source opens the related properties in a pane on the right of the spreadsheet.
 
 .. tip::
-   Once the properties of a specific data source are open, they remain open even when navigating
-   between spreadsheet tabs. To close the properties pane, click the :icon:`fa-times`
-   :guilabel:`(close)` icon at the top right of the pane.
+   - The properties pane can also be opened by right-clicking any cell of an inserted list or pivot
+     table, then clicking :icon:`oi-view-list` :guilabel:`See list properties` or
+     :icon:`oi-view-pivot` :guilabel:`See pivot properties`, or by clicking the :icon:`fa-bars`
+     :guilabel:`(menu)` icon at the top right of an inserted chart, then clicking
+     :icon:`fa-pencil-square-o` :guilabel:`Edit`.
+   - Once the properties of a specific data source are open, they remain open even when navigating
+     between spreadsheet tabs. To close the properties pane, click the :icon:`fa-times`
+     :guilabel:`(close)` icon at the top right of the pane.
 
 .. note::
    Deleting an inserted list or pivot table, or deleting the sheet into which it was inserted, does
@@ -83,9 +95,9 @@ Insert a list
 
 To insert a list:
 
-#. With the list view selected, click the :icon:`fa-cog` :guilabel:`(Actions)` icon
-   beside the name of the view, then :menuselection:`Spreadsheet -->` :icon:`oi-view-list`
-   :menuselection:`Insert list in spreadsheet`.
+#. With the relevant list view open in your database, click the :icon:`fa-cog`
+   :guilabel:`(Actions)` icon beside the name of the view, then :menuselection:`Spreadsheet -->`
+   :icon:`oi-view-list` :menuselection:`Insert list in spreadsheet`.
 
    .. note::
       To insert only specific records, select the relevant records, click the :icon:`fa-cog`
@@ -139,6 +151,9 @@ name of the list followed by the list ID, e.g., *Quotations by Total (List #1)*.
 side of the screen shows the :ref:`list properties <spreadsheet/insert/list-properties>`.
 
 .. tip::
+   - To view an individual record of an inserted list, right-click on any cell of the relevant row,
+     then click :icon:`fa-eye` :guilabel:`See record`. To return to the spreadsheet, click the name
+     of the spreadsheet in the breadcrumbs at the top of the page.
    - To sever the link between an inserted list and your database, select the entire list,
      right-click and select :icon:`fa-clipboard` :guilabel:`Copy` then right-click again and select
      :menuselection:`Paste special --> Paste as value`.
@@ -183,7 +198,8 @@ List properties
 
 The list properties appear on the right side of the screen when a list is inserted. They can be
 accessed at any time via the :guilabel:`Data` menu by clicking the relevant list, as prefaced by
-the :icon:`oi-view-list` :guilabel:`(list)` icon.
+the :icon:`oi-view-list` :guilabel:`(list)` icon, or by right-clicking anywhere on the list and
+clicking :icon:`oi-view-list` :guilabel:`See list properties`.
 
 The following list properties are shown, some of which can be edited:
 
@@ -332,17 +348,14 @@ Insert a pivot table
 ====================
 
 .. tip::
-   When a pivot table is inserted into a spreadsheet, it is by default static. Converting a static
-   pivot table to a :doc:`dynamic pivot table <dynamic_pivot_tables>` ensures the pivot table can
-   expand to accommodate new data series, such as sales data for a new quarter, and allows you to
-   modify the dimensions (i.e., columns and rows) and measures.
-
-   It is therefore possible to insert a basic pivot table with minimal configuration and refine it
-   directly in the spreadsheet after converting it to a dynamic pivot table.
+   Converting an inserted pivot table to a :doc:`dynamic pivot table <dynamic_pivot_tables>` allows
+   you to add, remove, and manipulate dimensions (i.e., columns and rows) and measures. It is
+   therefore possible to insert a basic pivot table with minimal configuration, convert it to a
+   dynamic pivot table, then refine it directly in the spreadsheet.
 
 To insert a pivot table:
 
-#. With the pivot view selected, click :guilabel:`Insert in Spreadsheet`.
+#. With the relevant pivot view open in your database, click :guilabel:`Insert in Spreadsheet`.
 #. In the window that opens, edit the :guilabel:`Name of the pivot` if needed.
 
    This name is used in the sheet name and in the :ref:`pivot table properties
@@ -366,6 +379,18 @@ The pivot table is inserted into a new sheet in the spreadsheet. The sheet tab i
 shows the name of the pivot table followed by the pivot table ID, e.g., *Sales Analysis by Sales
 Team (Pivot #1)*. A pane on the right side of the screen shows the :ref:`pivot table properties
 <spreadsheet/insert/pivot-table-properties>`.
+
+.. tip::
+   - To view the records referenced by an individual cell of a pivot table, right-click on the cell,
+     then click :icon:`fa-eye` :guilabel:`See record`. To return to the spreadsheet, click the name
+     of the spreadsheet in the breadcrumbs at the top of the page.
+   - To sever the link between an inserted pivot table and your database, select the entire pivot
+     table, right-click and select :icon:`fa-clone` :guilabel:`Copy`, then right-click again and
+     select :menuselection:`Paste special --> Paste as value`.
+   - Do not modify the pivot table ID in the sheet name, as the inserted pivot table retains this ID
+     for the lifetime of the spreadsheet. This pivot table ID is used in the :ref:`spreadsheet
+     functions <spreadsheet/insert/pivot-table-functions-static>` that retrieve data from your
+     database.
 
 .. _spreadsheet/insert/pivot-table-functions-static:
 
@@ -394,9 +419,10 @@ The arguments of the functions are as follows:
   period targeted.
 
 .. tip::
-   To see the formulas of spreadsheet cells, click :menuselection:`View -->` :icon:`fa-eye`
-   :menuselection:`Show --> Formulas` on the menu bar. The example below shows the functions used to
-   retrieve headers and values for a static pivot table.
+   Clicking on an individual cell displays the related formula, if relevant, in the formula bar. To
+   display all the formulas of a spreadsheet at the same time, click :menuselection:`View -->`
+   :icon:`fa-eye` :menuselection:`Show --> Formulas` on the menu bar. The example below shows the
+   functions used to retrieve headers and values of a static pivot table.
 
    .. image:: insert/pivot-table-formulas.png
       :alt: Functions of a static pivot table
@@ -512,7 +538,7 @@ Insert a chart
 
 To insert a chart from an Odoo database into an Odoo spreadsheet:
 
-#. With the graph view selected, click :guilabel:`Insert in Spreadsheet`.
+#. With the relevant graph view open in your database, click :guilabel:`Insert in Spreadsheet`.
 #. In the window that opens, edit the :guilabel:`Name of the graph` if needed.
 
 #. Click :guilabel:`Blank spreadsheet` or select in which existing spreadsheet the chart should be
@@ -527,6 +553,14 @@ To insert a chart from an Odoo database into an Odoo spreadsheet:
 #. Click :guilabel:`Confirm`.
 
 Charts are inserted on the first sheet of the spreadsheet.
+
+.. tip::
+   Clicking on a data point in a chart opens the relevant list view in the database. In the example,q
+   clicking on :guilabel:`Jessica Childs` opens the list view of all sales by this salesperson that
+   match the domain of the chart.
+
+   .. image:: insert/clickable-link-chart.png
+      :alt: A clickable link to an Odoo menu plus clickable data point
 
 .. _spreadsheet/insert/chart-properties:
 
@@ -772,9 +806,9 @@ To insert a clickable link from a cell:
    right-click on the cell, then click :icon:`fa-link` :guilabel:`Insert link`. Next, depending on
    the desired outcome, perform one of the following actions:
 
-   - Click the :icon:`fa-bars` :guilabel:`(menu)` icon, then :guilabel:`Link an Odoo menu`. Select the relevant
-     menu item from the list or click :guilabel:`Search more` to choose from a list of all menu
-     items. Click :guilabel:`Confirm`.
+   - Click the :icon:`fa-bars` :guilabel:`(menu)` icon, then :guilabel:`Link an Odoo menu`. Select
+     the relevant menu item from the list or click :guilabel:`Search more` to choose from a list of
+     all menu items. Click :guilabel:`Confirm`.
    - Click the :icon:`fa-bars` :guilabel:`(menu)` icon, then :guilabel:`Link sheet`, then choose the
      relevant sheet from the current spreadsheet.
    - Under :guilabel:`Link`, type a URL.
@@ -797,14 +831,6 @@ To insert a clickable link from a chart to an Odoo menu item:
 
 Hover over the top right of the chart's box to see that a new :icon:`fa-external-link`
 :guilabel:`(external link)` icon has been added.
-
-.. tip::
-   Clicking on a data point in a chart opens the relevant list view in the database. In the example
-   clicking on :guilabel:`Jessica Childs` opens the list view of all sales by this salesperson that
-   match the domain of the chart.
-
-   .. image:: insert/clickable-link-chart.png
-      :alt: A clickable link to an Odoo menu plus clickable data point
 
 .. _spreadsheet/insert/financial-data:
 
