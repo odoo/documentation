@@ -256,6 +256,7 @@ languages_names = {
     'nl': 'NL',
     'pt_BR': 'PT',
     'ro': 'RO',
+    'ru': 'RU',
     'sv': 'SV',
     'th': 'TH',
     'uk': 'UA',
