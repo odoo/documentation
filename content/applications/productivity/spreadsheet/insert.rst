@@ -290,7 +290,7 @@ Duplicating a list via the list's properties creates an additional data source. 
 different manipulations to be performed on the same data within one spreadsheet.
 
 With the :ref:`list properties <spreadsheet/insert/list-properties>` open, click the :icon:`fa-cog`
-:guilabel:`(gear)` icon then :icon:`fa-clipboard` :guilabel:`Duplicate`.
+:guilabel:`(gear)` icon then :icon:`fa-clone` :guilabel:`Duplicate`.
 
 The new data source is assigned the next available list ID. For example, if no other lists have been
 inserted in the meantime, duplicating *List #1* results in the creation of *List #2*.
@@ -709,8 +709,6 @@ The :guilabel:`General` section allows you to modify the following elements:
   color.
 - :guilabel:`Chart title`: Edit the chart title, if needed. The font formatting, horizontal
   alignment, font size, and color of the title can be modified using the editor.
-- :guilabel:`Vertical axis position`: Choose whether the vertical axis is placed on the left or
-  right in line, column, and area charts.
 - :guilabel:`Legend position`: Change the position of the legend or opt to have no legend.
 - Enable :guilabel:`Show values` to add numeric values to the data points on the
   chart.

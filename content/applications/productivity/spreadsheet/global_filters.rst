@@ -126,7 +126,7 @@ With the :guilabel:`Filter properties` pane open:
    The :guilabel:`Period offset` option, which appears when a date field is chosen, enables
    comparisons to be made by shifting the time range by one or more periods in the past or future.
    By default, no period offset is defined. To define a period offset, select :guilabel:`Previous`
-   or `Next`, then select the desired number of periods in the past of future.
+   or :guilabel:`Next`, then select the desired number of periods in the past of future.
 
    .. tip::
 
