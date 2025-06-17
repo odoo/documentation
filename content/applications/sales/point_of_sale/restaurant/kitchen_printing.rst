@@ -45,8 +45,7 @@ to your installation:
    - :doc:`../configuration/epos_ssc`
 
 Set your printer to print specific products based on their POS category. To do so, click
-:guilabel:`Add a line` in the :guilabel:`Printed Product Categories` field. If you leave this field
-empty, all products are sent to the printer regardless of their POS category.
+:guilabel:`Add a line` in the :guilabel:`Printed Product Categories` field.
 
 .. image:: kitchen_printing/printer-setup.png
    :align: center
