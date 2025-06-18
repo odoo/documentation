@@ -137,8 +137,8 @@ Add videos as content.
 .. code-block:: xml
 
    <div class="media_iframe_video" data-oe-expression="...">
-       <div class="css_editable_mode_display">&nbsp;</div>
-       <div class="media_iframe_video_size" contenteditable="false">&nbsp;</div>
+       <div class="css_editable_mode_display" />
+       <div class="media_iframe_video_size" contenteditable="false" />
        <iframe src="..."
            frameborder="0"
            contenteditable="false"
