@@ -212,7 +212,7 @@ If necessary, disable the two-factor authentication enforcing policy option.
 .. code-block:: bash
 
     psql <database-name>
-    update res_users set top_secret='' where id=2;
+    update res_users set totp_secret='' where id=2;
 
 .. _website_themes/setup/getting_started :
 
