@@ -68,7 +68,7 @@ Work during a call
 Once the call with the customer begins, the support agent can still move about the Odoo database.
 Also, there are shortcut icons in the |VOIP| widget that the support agent can use to access common
 actions, like sending an email to the customer, or pulling up their profile. Learn more about
-:doc:`the documents a support agnet can access <voip_widget>` during a call.
+:doc:`the documents a support agent can access <voip_widget>` during a call.
 
 The support agent can also take some actions during the call:
 
