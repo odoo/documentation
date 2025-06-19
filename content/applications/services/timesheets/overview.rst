@@ -8,3 +8,4 @@ Overview
    :titlesonly:
 
    overview/time_off
+   overview/billing_rates
