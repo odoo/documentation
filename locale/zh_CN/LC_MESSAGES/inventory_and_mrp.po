@@ -24,8 +24,8 @@
 # Datasource International <Hennessy@datasourcegroup.com>, 2025
 # Raymond Yu <cl_yu@hotmail.com>, 2025
 # diaojiaolou <124412206@qq.com>, 2025
-# Chloe Wang, 2025
 # Wil Odoo, 2025
+# Chloe Wang, 2025
 # 
 #, fuzzy
 msgid ""
@@ -34,7 +34,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-06-12 07:10+0000\n"
 "PO-Revision-Date: 2024-10-08 06:34+0000\n"
-"Last-Translator: Wil Odoo, 2025\n"
+"Last-Translator: Chloe Wang, 2025\n"
 "Language-Team: Chinese (China) (https://app.transifex.com/odoo/teams/41243/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -3709,7 +3709,7 @@ msgstr "完成步骤后，进行测试扫描以验证 Cipherlab 扫描仪是否�
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:3
 msgid "Operation types and commands"
-msgstr ""
+msgstr "操作类型与指令"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:5
 msgid ""
@@ -3722,14 +3722,18 @@ msgid ""
 "workflow streamlining by putting operation barcodes in the appropriate "
 "physical location."
 msgstr ""
+"库存操作（如 :doc:`收货单与发货单 "
+"<../../inventory/shipping_receiving/daily_operations/receipts_delivery_one_step>`）以及指令操作（如确认调拨或将产品打包入库），均可通过"
+" **条码** "
+"应用扫描条码完成。该功能使员工无需触屏操作或使用电脑端的库存应用，即可处理各项任务和访问菜单，同时通过在实体位置张贴操作条码，实现工作流程的优化整合。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst-1
 msgid "Printable barcodes for Receipts, Delivery Orders, and Manufacturing."
-msgstr ""
+msgstr "可打印的收货单、发货单和生产单条码。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:18
 msgid "Configuring operations"
-msgstr ""
+msgstr "配置操作"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:20
 msgid ""
@@ -3740,12 +3744,15 @@ msgid ""
 "(WHOUT)*, and *Manufacturing (WHMANUF)*. The *Internal Transfers (WHINT)* "
 "and *Pick (WHPICK)* operations can also be enabled."
 msgstr ""
+"**库存** 和 **条码** 应用中的 *操作类型* "
+"定义了将改变库存产品状态的操作。可打印的操作类型取决于数据库的设置。默认情况下，可以打印*收货单（WHIN）*、*发货单（WHOUT）* "
+"和*生产单（WHMANUF）*的条码。*内部调拨（WHINT）* 和 *拣货（WHPICK）* 操作也可以启用。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:27
 msgid ""
 "Both *Internal Transfers (WHINT)* and *Pick (WHPICK)* operations require "
 ":doc:`location barcodes <software>` to scan."
-msgstr ""
+msgstr "*内部调拨（WHINT）*和*拣货（WHPICK）*操作都需要 :doc:`库位条码<software>`  进行扫描。"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:31
 msgid "Internal transfers"
@@ -18668,23 +18675,23 @@ msgstr "乌拉圭"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:183
 msgid "Complementary info"
-msgstr ""
+msgstr "补充信息"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:187
 msgid "Countries not listed here should be entered normally."
-msgstr ""
+msgstr "未列于此的国家/地区应正常填写。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:190
 msgid ""
 "For some countries, the zip code is not commonly requested. If empty, Odoo "
 "will use Envia's zip approximation services to get the zip code."
-msgstr ""
+msgstr "对于部分国家/地区，邮政编码通常无需填写。若留空，Odoo 将调用 Envia 的邮编近似查询服务自动获取。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:193
 msgid ""
 "For Colombia, the zip code is extracted from the city selected in `city_id` "
 "if the localization is installed, otherwise Odoo will use the zip field."
-msgstr ""
+msgstr "对于哥伦比亚，若本地化模块已安装，系统会从 city_id 所选城市中提取邮编；否则将直接使用邮编字段的值。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:197
 msgid ""
@@ -18692,6 +18699,8 @@ msgid ""
 "If `city_id` is set, it is used as the city field. If not set, then Odoo "
 "will try to use the city field."
 msgstr ""
+"哥伦比亚和墨西哥在 Odoo 中设有 city_id 城市列表。若已设置 "
+"city_id，该字段将作为城市字段使用；若未设置，则系统会尝试调用常规城市字段。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:201
 msgid ""
@@ -18700,6 +18709,8 @@ msgid ""
 "the **EDI for Mexico (Advanced Features)** module, the :guilabel:`Colony` "
 "field is required."
 msgstr ""
+"在墨西哥，部分承运商可能要求填写 :guilabel:`街区` "
+"字段（通常称为社区）。该字段并非强制项，但若启用**墨西哥电子数据交换（高级功能）**模块时，则必须填写 :guilabel:`街区` 字段。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:206
 msgid ""
@@ -18708,10 +18719,12 @@ msgid ""
 "number and `street_number2` is used for the complement. This logic also "
 "applies if the :guilabel:`Extended Addresses` module is installed."
 msgstr ""
+"巴西的地址字段按法规要求拆分：`street_name` 仅填写街道名称，`street_number1` 填写门牌号，`street_number2`"
+" 填写补充信息。若安装 :guilabel:`扩展地址` 模块，同样适用此逻辑。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:211
 msgid "Generate labels with Envia"
-msgstr ""
+msgstr "使用 Envia 生成标签"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:213
 msgid ""
@@ -18720,6 +18733,8 @@ msgid ""
 "documents are automatically generated in the chatter, which include the "
 "following:"
 msgstr ""
+"在 Odoo 中创建报价单时，添加发货和 :guilabel:`Envia.com "
+"发货产品`。然后，:guilabel:`验证`发货。发货标签文件会在聊天工具中自动生成，其中包括以下内容："
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:217
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:237
@@ -18731,7 +18746,7 @@ msgstr ":guilabel:`送货标签`，取决于包裹数量。"
 msgid ""
 ":guilabel:`Return label(s)` if the Envia.com connector is configured for "
 "returns."
-msgstr ""
+msgstr ":guilabel:`退货标签`（如果 Envia.com 连接器配置了退货标签）。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:221
 msgid ""
@@ -18740,6 +18755,8 @@ msgid ""
 "operations occur, the amount logged is calculated using Odoo's rate. Actual "
 "rates may vary."
 msgstr ""
+"生成物流标签时，Envia.com 将自动从配置账户扣费，最终金额会记录在消息动态中。若涉及多币种交易，记录金额将按 Odoo "
+"汇率折算（实际汇率可能存在波动）。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:225
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:241
@@ -18751,11 +18768,11 @@ msgid ""
 "Brazilian Authorities might request the invoice related to the shipping "
 "(NFe). It is recommended to physically attach the invoice of the order along"
 " with the label."
-msgstr ""
+msgstr "巴西海关可能要求提供货运关联发票（NFe），建议将订单发票与物流标签一并物理附随。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:232
 msgid "International shipping"
-msgstr ""
+msgstr "国际货运"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:234
 msgid ""
@@ -18763,17 +18780,19 @@ msgid ""
 "code` and the country of :guilabel:`Origin of Goods`, both can be found on "
 "the product's :guilabel:`Inventory` tab."
 msgstr ""
+"国际货运必须填写 :guilabel:`HS 编码` 和 :guilabel:`货物原产地`，这两个字段均可在产品的 :guilabel:`库存标签` "
+"页找到。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:238
 msgid "LTL shipments"
-msgstr ""
+msgstr "零担货运（LTL）"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:240
 msgid ""
 "LTL shipment labels can be generated through the Envia connector. The "
 "insurance for LTL shipments is based on the *insurance percentage* specified"
 " in the delivery method's form."
-msgstr ""
+msgstr "可通过 Envia 连接器生成零担货运标签，其保险费用基于货运方式表单中指定的*保险百分比*计算。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:244
 msgid ""
@@ -18781,7 +18800,7 @@ msgid ""
 "Odoo is required to send the UNSPSC code of the contents, as well as a unit "
 "of measure for transportation which is **X8A - Pallet de madera** by "
 "default."
-msgstr ""
+msgstr "在墨西哥，由于需为货件创建*提单*，Odoo 必须发送货物的 UNSPSC 编码及运输单位（默认单位为**X8A - 木质托盘**）。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:249
 msgid ""
@@ -18789,11 +18808,11 @@ msgid ""
 ":guilabel:`Envia Package Type` on the delivery method, which allows "
 "selecting additional services like lift assistance and deliveries during "
 "weekends."
-msgstr ""
+msgstr "在货运方式中选择 :guilabel:`Envia 包裹类型` 为托盘时，可启用附加服务（如升降机协助和周末配送等）。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:256
 msgid "Tracking and cancellation"
-msgstr ""
+msgstr "追踪与取消"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:258
 msgid ""
@@ -18802,10 +18821,12 @@ msgid ""
 "tracking link from the :doc:`customer portal "
 "<../../../../general/users/portal>`."
 msgstr ""
+"通过 Envia 注册的货件可通过以下方式追踪：在交货单上点击 :guilabel:`追踪` 智能按钮，或使用 "
+":doc:`客户门户<../../../../general/users/portal>` 中的追踪链接。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst-1
 msgid "Customer portal tracking."
-msgstr ""
+msgstr "客户门户追踪。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:266
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/sendcloud_shipping.rst:284
@@ -18824,16 +18845,17 @@ msgid ""
 "weight is the volume that a package occupies when in transit, i.e. the "
 "physical size of a package."
 msgstr ""
+"多数承运商采用多种重量计量标准：包括包裹内产品的实际重量，以及体积重量（即根据包裹运输时占据的空间体积计算得出的重量，也就是包裹物理尺寸换算的重量值）。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:276
 msgid ""
 "Due to volumetric weight, it is possible that the actual weight in the label"
 " is higher than the calculated value."
-msgstr ""
+msgstr "由于体积重量计算规则，标签显示的重量可能高于系统计算的实际重量值。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:280
 msgid "Which printing options are available?"
-msgstr ""
+msgstr "有哪些打印选项可用？"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:282
 msgid ""
@@ -18841,39 +18863,40 @@ msgid ""
 "printing options` for each of the carriers displayed, make sure to use the "
 "appropriate format for the chosen carrier."
 msgstr ""
+"在 Envia.com 平台的 :menuselection:`设置 --> 打印选项及承运商打印选项`中，请为每个显示的承运商选择对应的打印格式。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:286
 msgid "The needed service is not available"
-msgstr ""
+msgstr "所需服务不可用"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:288
 msgid "For available carriers, make sure that they are enabled through Envia."
-msgstr ""
+msgstr "对于可用承运商，请确保已在 Envia 平台启用相应服务。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:291
 msgid "Who will pay customs duties?"
-msgstr ""
+msgstr "关税由谁支付？"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:293
 msgid ""
 "It's important to make sure that if there are exports to other countries, "
 "use Envia's carrier settings to configure whether it is paid by the sender "
 "or the receiver."
-msgstr ""
+msgstr "如需向其他国家出口货物，务必通过 Envia 的承运商设置来配置关税支付方（发货方或收货方）。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:297
 msgid "What is \"Envia error\"?"
-msgstr ""
+msgstr "什么是“Envia错误”？"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:299
 msgid ""
 "It's a message that appears when there's an error in Envia. This message "
 "mentions what went wrong in their platform so it can be addressed."
-msgstr ""
+msgstr "该提示信息会在 Envia 平台出现错误时显示，其中会明确说明平台出现的具体问题以便进行排查处理。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:3
 msgid "FedEx integration"
-msgstr ""
+msgstr "FedEx 整合"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:5
 msgid ""
@@ -18883,6 +18906,9 @@ msgid ""
 "by enabling the FedEx *shipping connector*, then configuring at least one "
 "*shipping method*."
 msgstr ""
+"将 FedEx 账户与 Odoo **库存**应用整合后，即可实现：在 Odoo 系统中直接 :doc:`计算运费 "
+"<../setup_configuration>` 以及 :doc:`生成物流标签<labels>`。此功能需要通过启用 FedEx "
+"*物流连接器*，并配置至少一个*物流方式*来实现。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:11
 msgid ""
@@ -18890,10 +18916,12 @@ msgid ""
 "integration. See the documentation on :doc:`third-party shippers "
 "<third_party_shipper>` for general shipper integration instructions."
 msgstr ""
+"本文档包含 FedEx 整合的具体配置说明。如需了解通用承运商集成指南，请参阅 :doc:`第三方承运商<third_party_shipper>` "
+"相关说明文档。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:16
 msgid "Enable shipping connector"
-msgstr ""
+msgstr "启用物流连接器"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:18
 msgid ""
@@ -18902,6 +18930,8 @@ msgid ""
 "to the :guilabel:`Shipping Connectors` section, and tick the checkbox next "
 "to :guilabel:`FedEx Connector`."
 msgstr ""
+"要启用 FedEx 物流连接器，请前往 :menuselection:`库存应用 --> 配置 --> 设置`，向下滚动至 "
+":guilabel:`物流连接器` 部分，勾选 :guilabel:`FedEx 连接器` 旁的复选框。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:22
 msgid ""
@@ -18909,14 +18939,16 @@ msgid ""
 ":icon:`oi-arrow-right` :guilabel:`FedEx Shipping Methods` button appears "
 "below :guilabel:`FedEx Connector`."
 msgstr ""
+"最后，点击 :guilabel:`保存` 以应用更改。保存后，:guilabel:`FedEx 连接器` 下方将显示 :icon:`oi-arrow-"
+"right` :guilabel:`FedEx 物流方式` 按钮。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst-1
 msgid "The FedEx Shipping Methods button below the FedEx Connector."
-msgstr ""
+msgstr "FedEx 连接器下方的 FedEx 物流方式按钮。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:30
 msgid "Configure shipping method"
-msgstr ""
+msgstr "配置物流方式"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:32
 msgid ""
@@ -18924,7 +18956,7 @@ msgid ""
 "at least one shipping method. After doing so, the shipping method can be "
 "included in sales orders (SOs), and used to compute shipping costs, and "
 "print shipping labels."
-msgstr ""
+msgstr "启用 FedEx 物流连接器后，需配置至少一个物流方式。配置完成后，该物流方式即可用于销售订单（SO）中的运费计算和物流标签打印。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:36
 msgid ""
@@ -18933,13 +18965,15 @@ msgid ""
 "Methods` button below the :guilabel:`FedEx Connector` checkbox. Doing so "
 "opens a page that shows all existing FedEx shipping methods."
 msgstr ""
+"要启用物流方式，请前往 :menuselection:`库存应用 --> 配置 --> 设置`，点击 :guilabel:`FedEx 连接器` "
+"复选框下方的 :guilabel:`FedEx 物流方式` 按钮，页面将显示所有现有 FedEx 物流方式。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:41
 msgid ""
 "To see all shipping methods for every shipper with a connector enabled, "
 "navigate to :menuselection:`Inventory app --> Configuration --> Shipping "
 "Methods`."
-msgstr ""
+msgstr "要查看所有已启用连接器的承运商物流方式，请前往 :menuselection:`库存应用 --> 配置 --> 物流方式`。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/fedex.rst:44
 msgid ""
@@ -32150,7 +32184,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst-1
 msgid "A bill of materials for a PCB."
-msgstr ""
+msgstr "PCB的物料清单。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:58
 msgid ""
@@ -32160,6 +32194,8 @@ msgid ""
 "selecting :guilabel:`New`. From here, configure the product's specifications"
 " as needed."
 msgstr ""
+"在完成子级产品（如PCB板、键帽和键盘面板）的完整配置后，通过导航至 :menuselection:`生产应用 --> 产品 --> 产品` 并选择 "
+":guilabel:`新建` 来创建顶层产品（键盘）。在此根据需求配置产品规格。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:63
 msgid ""
@@ -32168,12 +32204,14 @@ msgid ""
 "select :guilabel:`New` to make a |BOM| for the top-level product. Add the "
 "sublevel products to this |BOM|, along with any other necessary components."
 msgstr ""
+"完成顶层产品（键盘）配置后，点击产品表单上的 :guilabel:`物料清单` 智能按钮，选择 :guilabel:`新建` 为该产品创建 "
+"|BOM|。在此 |BOM| 中添加子级产品及其他必要组件。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst-1
 msgid ""
 "A bill of materials for a keyboard, containing a bill of materials for a "
 "PCB."
-msgstr ""
+msgstr "包含 PCB 物料清单的键盘物料清单。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:71
 msgid "Manage production planning"
@@ -32183,7 +32221,7 @@ msgstr "管理生产计划"
 msgid ""
 "The two options below are two of the best ways to manage manufacturing order"
 " automation for products with multilevel |BOMs|."
-msgstr ""
+msgstr "以下两种方案是管理多级 |BOM| 产品生产订单自动化的最佳实践："
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:77
 msgid ""
@@ -32191,13 +32229,15 @@ msgid ""
 "manufactured components. If a BoM is being created to organize components or"
 " bundle sellable products, :doc:`use a kit <kit_shipping>` instead."
 msgstr ""
+"复杂 |BOM| 专用于管理需要生产组件的产品。若仅为组织组件或捆绑可售产品创建 BoM，建议 :doc:`使用套件<kit_shipping>` "
+"替代。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:81
 msgid ""
 "To automatically trigger manufacturing orders for sublevel products after "
 "confirming a manufacturing order for the main product, there are two "
 "options:"
-msgstr ""
+msgstr "确认主产品制造订单后自动触发子级产品制造订单，有两种选择："
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:84
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:153
@@ -32205,7 +32245,7 @@ msgid ""
 "**Option 1 (recommended):** Create *Reordering Rules* for the sublevel "
 "products and set both the minimum and maximum needed stock quantities to "
 "`0`."
-msgstr ""
+msgstr "**方案 1（推荐）：** 为子级产品创建*补货规则*，并将最小/最大库存量均设为 `0`。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:86
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:155
@@ -32214,6 +32254,8 @@ msgid ""
 ":guilabel:`Manufacture` routes under the :guilabel:`Inventory` tab of the "
 "sublevel product's product form."
 msgstr ""
+"**方案 2：** 在子级产品的 :guilabel:`库存` 标签页下，启用 :guilabel:`按订单补货（MTO）` 和 "
+":guilabel:`生产` 路线。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:90
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:159
@@ -32248,7 +32290,7 @@ msgstr "两种方法均需确保下级产品完全生产完成后，方可启动
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:101
 msgid "Multilevel BoM setup flow"
-msgstr ""
+msgstr "多级 BoM 设置流程"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:103
 msgid ""
@@ -32257,6 +32299,8 @@ msgid ""
 "<manufacturing/advanced/procurement-method>` (the recommended production "
 "plan), configure lead times, and set up production options."
 msgstr ""
+"以下部分详细说明如何设置多级物料清单（BoM）、设置初始库存、建立 :ref:`0/0/1 补货规则 "
+"<manufacturing/advanced/procurement-method>`（推荐的生产计划）、配置提前期以及设置生产选项。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:107
 msgid ""
@@ -32266,6 +32310,8 @@ msgid ""
 " approach for managing a multilevel |BOM|. This setup uses the "
 "**Inventory**, **Manufacturing**, and **Purchase** apps."
 msgstr ""
+"为子级产品创建 0/0/1 补货规则（最小库存设为0，最大库存设为0，自动补货数量设为1），无论它们是组件还是子装配件，这是管理多级 |BOM| "
+"的推荐方法。此设置需要使用 **库存**、**生产** 和 **采购** 应用。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:113
 msgid ""
@@ -32275,16 +32321,21 @@ msgid ""
 " help is needed during setup, consider purchasing a `success pack "
 "<https://www.odoo.com/pricing-packs>`_."
 msgstr ""
+"这只是在Odoo中设置多级 |BOM| "
+"的一个示例。请考虑配置过程中需要解决的任何特殊情况，并确保将其包含在设置中。如果在设置过程中需要任何特定帮助，可以考虑购买 "
+"`成功套餐<https://www.odoo.com/pricing-packs>`_。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:119
 msgid "Create the BoMs"
-msgstr ""
+msgstr "创建物料清单"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:121
 msgid ""
 "Follow the steps in the :ref:`Create a multilevel BoM "
 "<manufactuing/advanced/create-multilevel-bom>` section to build the |BOMs|."
 msgstr ""
+"按照 :ref:`创建多级物料清单 <manufactuing/advanced/create-multilevel-bom>` 部分的步骤来构建 "
+"|BOM|。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:124
 msgid ""
@@ -32293,16 +32344,18 @@ msgid ""
 "products that those are used for, then the |BOM| for that subassembly, and "
 "repeat until every level of the multilevel |BOM| is created."
 msgstr ""
+"请确保自下而上地构建多级 |BOM|。首先在 Odoo 中创建最低级别的组件产品，然后创建使用这些组件的子装配件产品，接着为该子装配件创建 "
+"|BOM|，重复此过程直到创建完多级 BOM| 的每一层。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:129
 msgid "Set the initial inventory"
-msgstr ""
+msgstr "设置初始库存"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:132
 msgid ""
 "If there's no initial inventory to configure, then skip this section and "
 "begin configuring the procurement method for the multilevel |BOM|."
-msgstr ""
+msgstr "若无需配置初始库存，请跳过本节直接开始配置多级|BOM|的补货方式。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:135
 msgid ""
@@ -32314,35 +32367,39 @@ msgid ""
 "variant <../../../sales/sales/products_prices/products/variants>` if that "
 "was configured, and then enter the quantity on hand."
 msgstr ""
+"为前一步配置的所有产品（包括组件、子装配件和最终产品）更新在手数量。要执行此操作，打开**库存**应用，通过筛选器、搜索栏或滚动查找产品。点击产品打开其表单，点击"
+" :guilabel:`在手数量` 智能按钮，如已配置 "
+":doc:`产品变体<../../../sales/sales/products_prices/products/variants>` "
+"请先选择相应变体，输入当前在手数量。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:148
 msgid "Configure the procurement method"
-msgstr ""
+msgstr "配置补货方式"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:150
 msgid ""
 "Now it is time to pick the procurement method this multilevel |BOM| uses. "
 "The two options below are preferred, but unique circumstances may lead to "
 "another procurement method making more sense."
-msgstr ""
+msgstr "现在需要选择此多级 |BOM| 使用的补货方式。以下两种方案为推荐选项，但特殊业务场景可能需要采用其他方式："
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:162
 msgid ""
 "Reordering rules are recommended because they do not tie the manufactured "
 "product to a specific sales order, allowing that manufactured product to "
 "fulfill a different sales order if the original gets cancelled."
-msgstr ""
+msgstr "推荐补货规则方案，因为不会将生产产品绑定到特定销售订单，当原订单取消时，已生产产品可用于履行其他订单。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:166
 msgid ""
 "Making the product to order is not recommended because the manufactured "
 "product cannot be used to fulfill another sales order. However, this could "
 "be helpful if strict tracking is necessary for the business."
-msgstr ""
+msgstr "不推荐按订单生产方案，因为生产产品无法用于其他订单，但适用于需要严格追踪的业务场景。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:171
 msgid "Enter vendor and manufacturing lead times"
-msgstr ""
+msgstr "设置供应商和生产提前期"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:173
 msgid ""
@@ -32354,33 +32411,36 @@ msgid ""
 " a multilevel |BOM| except the lowest level (when individual components are "
 "procured)."
 msgstr ""
+"Odoo "
+"通过供应商提前期和生产提前期来协调生产与采购活动，从而确保订单准时交付。需为采购的组件设置供应商提前期。此类组件可出现在多级|BOM|除最终产品外的任何层级。同时需为通过"
+" |BOM| 生产的产品设置生产提前期。此类产品可存在于多级 |BOM| 除最低层级（即单个组件采购层）外的任何层级。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:180
 msgid ":doc:`../../inventory/warehouses_storage/replenishment/lead_times`"
-msgstr ""
+msgstr ":doc:`../../inventory/warehouses_storage/replenishment/lead_times`"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:183
 msgid "Build out operations to handle the production flow"
-msgstr ""
+msgstr "构建生产流程操作体系"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:185
 msgid ""
 "First, determine the current manufacturing flow for the business, then match"
 " the corresponding Odoo setup. The list below are only some of the "
 "configuration pieces that could be involved in this step."
-msgstr ""
+msgstr "首先确定企业当前的生产流程，然后在 Odoo 中进行对应配置。以下是此步骤可能涉及的部分配置要素："
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:188
 msgid ""
 "**Manufacturing Steps**: Consider how many manufacturing steps are taken "
 "(one-, two-, or three-step manufacturing)."
-msgstr ""
+msgstr "**生产步骤**：考虑采用几级生产流程（单级、二级或三级生产体系）。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:190
 msgid ""
 "**Work Centers**: Decide if any :doc:`work centers <using_work_centers>` "
 "need to be configured."
-msgstr ""
+msgstr "**工作中心**：判断是否需要配置 :doc:`工作中心<using_work_centers>`。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:191
 msgid ""
@@ -32388,6 +32448,8 @@ msgid ""
 " needed (e.g., to handle seasonal demand), make a :doc:`master production "
 "schedule <../workflows/use_mps>` (MPS)."
 msgstr ""
+"**主生产计划**：如需手动规划生产订单（例如应对季节性需求），可制定 :doc:`主生产计划 "
+"<../workflows/use_mps>`（MPS）。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:195
 msgid ""
@@ -32395,10 +32457,12 @@ msgid ""
 "established flow into Odoo is the recommended approach for this step. Read "
 "more about :doc:`manufacturing in Odoo <../../manufacturing>`"
 msgstr ""
+"生产运营既是科学也是艺术，建议将已成熟的业务流程映射到 Odoo 系统中。更多信息请参阅 :doc:`Odoo "
+"生产模块文档<../../manufacturing>`"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:200
 msgid "Configuration summary"
-msgstr ""
+msgstr "配置概要"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:202
 msgid ""
@@ -32409,15 +32473,17 @@ msgid ""
 " manufacturing can begin, the top-level product can be included in an "
 "**eCommerce** store."
 msgstr ""
+"完成本流程配置后，系统将实现多级 |BOM| "
+"完整配置，且顶层产品已完成库存数量设置、补货方式配置、采购/生产提前期定义以及生产运营参数设定。至此，该顶层产品即可：加入销售订单、自动触发供应商采购或生产流程，并上架至**电子商务**店铺进行销售。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:208
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/edi.rst:123
 msgid ":doc:`../../../sales/sales/sales_quotations/create_quotations`"
-msgstr ""
+msgstr ":doc:`../../../sales/sales/sales_quotations/create_quotations`"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/sub_assemblies.rst:209
 msgid ":doc:`../../../websites/ecommerce/products/catalog`"
-msgstr ""
+msgstr ":doc:`../../../websites/ecommerce/products/catalog`"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:5
 msgid ""
@@ -32471,49 +32537,49 @@ msgstr "完整配置的工作中心表格示例。"
 msgid ""
 ":guilabel:`Work Center Name`: the label for the work center used to select "
 "it on a work order or on the reporting dashboards"
-msgstr ""
+msgstr ":guilabel:`工作中心名称`：用于在工作订单或报表仪表板中选择工作中心的标签。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:35
 msgid ""
 ":guilabel:`Tag`: reusable labels that can be used to sort work centers in "
 "list view"
-msgstr ""
+msgstr ":guilabel:`标签`：可重复使用的分类标记，用于在列表视图中对工作中心进行排序"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:36
 msgid ""
 ":guilabel:`Alternative Workcenters`: where a work order should be carried "
 "out if this work center is not available"
-msgstr ""
+msgstr ":guilabel:`备用工作中心`：当该工作中心不可用时，生产任务应转移至的工作中心"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:38
 msgid ""
 ":guilabel:`Code`: reference id for the work center that is displayed in the "
 "list view"
-msgstr ""
+msgstr ":guilabel:`代码`：在列表视图中显示的工作中心参考编号"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:39
 msgid ""
 ":guilabel:`Working Hours`: the hours that work center can be used during the"
 " week"
-msgstr ""
+msgstr ":guilabel:`工作时间`：该工作中心在每周可使用的运营时段"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:44
 msgid "Working hours"
-msgstr ""
+msgstr "工作小时数"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:46
 msgid ""
 "*Working hours* define when a work center should operate, based on a one- or"
 " two-week schedule. These hours also form the basis for calculating *overall"
 " equipment efficiency* (OEE)."
-msgstr ""
+msgstr "*工作时间* 基于单周或双周计划定义工作中心的运营时段，这些时间设置同时是计算 *设备综合效率*（OEE）的基础依据。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:50
 msgid ""
 "By default, Odoo uses the `Standard 40 hours/week` working hours, which "
 "expects work centers to operate between 8:00 AM and 5:00 PM on Monday "
 "through Friday."
-msgstr ""
+msgstr "Odoo 默认采用 `标准 40 小时/周` 工作制，预设工作中心运营时间为周一至周五上午 8:00 至下午 5:00。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:53
 msgid ""
@@ -32521,10 +32587,12 @@ msgid ""
 "Hours` value and click the :icon:`fa-arrow-right` (:guilabel:`Internal "
 "link`) icon to open the working hours form."
 msgstr ""
+"修改工作时间：将鼠标悬停于当前 :guilabel:`工作时间` 值上方，点击 :icon:`fa-arrow-"
+"right`(:guilabel:`内部链接`) 图标即可打开工作时间表单。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst-1
 msgid "The working hours form for Standard 40 hours/week."
-msgstr ""
+msgstr "标准 40 小时/周的工作时间表单"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:59
 msgid ""
@@ -32534,20 +32602,23 @@ msgid ""
 ":icon:`fa-trash-o` :guilabel:`(trash)` icon. To create a new time range, "
 "click :guilabel:`Add a line` at the bottom of the list."
 msgstr ""
+"创建新工作时间表：点击 :guilabel:`新建` 按钮并命名，通过编辑 :guilabel:`工作开始` 或 :guilabel:`工作结束` "
+"的值调整时间范围。点击 :icon:`fa-trash-o` :guilabel:`(删除)` 图标可移除某时段，点击列表底部的 "
+":guilabel:`添加行` 可创建新的时间段。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:65
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:95
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:205
 msgid ":doc:`../reporting/oee`"
-msgstr ""
+msgstr ":doc:`../reporting/oee`"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:66
 msgid ":doc:`../workflows/work_center_time_off`"
-msgstr ""
+msgstr ":doc:`../workflows/work_center_time_off`"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:69
 msgid "Set productivity standards and allowed employees"
-msgstr ""
+msgstr "设置生产效率标准与授权员工"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:71
 msgid ""
@@ -32556,6 +32627,7 @@ msgid ""
 "basis for calculating how much of the potential time the work center is "
 "being used and its operating costs."
 msgstr ""
+"在工作中心表单的 :guilabel:`基本信息` 标签页中，可为工作中心设定生产效率目标，这些目标将作为计算工作中心实际使用时间和运营成本的基础。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst-1
 msgid "The general information tab of the work center form."
@@ -32565,19 +32637,19 @@ msgstr "工作中心表格的一般信息选项卡。"
 msgid ""
 ":guilabel:`Time Efficiency`: a multiplier for how using this work center "
 "affects the normal speed of execution of a work order"
-msgstr ""
+msgstr ":guilabel:`时间效率`：表示该工作中心对工单执行速度的影响系数"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:82
 msgid ""
 "If a work center has older equipment and work orders take twice as long to "
 "produce, the `Time Efficiency` would be `50.00%`."
-msgstr ""
+msgstr "若某工作中心设备老旧导致工单生产耗时翻倍，则时间效率应设为`50.00%`。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:85
 msgid ""
 ":guilabel:`Capacity`: the number of products that can be processed at the "
 "work center simultaneously"
-msgstr ""
+msgstr ":guilabel:`产能`：该工作中心可同时处理的产品数量"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:88
 msgid ":guilabel:`OEE Target`: the target for efficiency at the work center"
@@ -32589,46 +32661,47 @@ msgid ""
 "be used for `7 hours per day`, the OEE would be `87.50%`. "
 ":math:`7/8*100=87.5`"
 msgstr ""
+"若某工作中心每日可用 `8 小时` 但预计仅使用 `7 小时`，则其 OEE 为`87.50%`（计算公式：:math:`7/8*100=87.5`）。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:97
 msgid ""
 ":guilabel:`Setup Time`: the time required before work can commence on a work"
 " order"
-msgstr ""
+msgstr ":guilabel:`准备时间`：工单开始前所需的准备时间"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:98
 msgid ""
 ":guilabel:`Cleanup Time`: breakdown or cleanup time required after a work "
 "order is finished"
-msgstr ""
+msgstr ":guilabel:`清理时间`：工单完成后所需的设备清理时间"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:99
 msgid ""
 ":guilabel:`Cost per hour`: the operating expense of that workstation. The "
 ":guilabel:`per employee` value is for estimating the average cost per "
 "employee."
-msgstr ""
+msgstr ":guilabel:`每小时成本`：该工作站的运营成本，其中 :guilabel:`每人成本` 用于估算员工平均成本。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:103
 msgid ":doc:`../basic_setup/mo_costs`"
-msgstr ""
+msgstr ":doc:`../basic_setup/mo_costs`"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:105
 msgid ""
 ":guilabel:`Allowed Employees`: the employees who can perform work at the "
 "work center. If blank, all employees are allowed."
-msgstr ""
+msgstr ":guilabel:`授权员工`：可在此工作中心操作的员工名单，若为空则表示所有员工均可操作。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:109
 msgid ""
 "If equipment at a work center requires a certification to operate, "
 ":guilabel:`Allowed Employees` could list only those employees who have the "
 "certification."
-msgstr ""
+msgstr "若工作中心设备需要持证操作，可在 :guilabel:`授权员工` 中仅列出持有相应认证的员工。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:113
 msgid "Set production capacities"
-msgstr ""
+msgstr "设置生产产能"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:115
 msgid ""
@@ -32637,18 +32710,20 @@ msgid ""
 "that a work center can produce different quantities of different products, "
 "select the :guilabel:`Specific Capacities` tab."
 msgstr ""
+"工作中心的 :guilabel:`产能` 设置用于定义该工作中心单次可生产的产品数量默认值。如需为不同产品设置不同产能，请选择 "
+":guilabel:`特定产能` 标签页。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst-1
 msgid ""
 "A work center form with different capacities specified for different "
 "products."
-msgstr ""
+msgstr "为不同产品设置不同产能的工作中心表单。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:123
 msgid ""
 "To specify production capacities in different measurements from a count of "
 "units, enable the *Units of Measure* feature in the **Inventory** app."
-msgstr ""
+msgstr "如需使用非标准单位来衡量产能，请在**库存**应用中启用*计量单位*功能。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:127
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:153
@@ -32757,7 +32832,7 @@ msgstr "工作中心计划"
 msgid ""
 "The currently scheduled work orders can be viewed by accessing "
 ":menuselection:`Manufacturing app --> Planning --> Planning by Workcenter`."
-msgstr ""
+msgstr "当前已排程的工单可通过 :menuselection:`生产应用 --> 计划 --> 按工作中心排程` 查看。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst-1
 msgid "The Gantt view of planning showing two assembly work centers."
@@ -32786,13 +32861,13 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst-1
 msgid "A work center form with smart buttons showing performance metrics."
-msgstr ""
+msgstr "显示性能指标智能按钮的工作中心表单。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:201
 msgid ""
 ":guilabel:`OEE`: overall equipment effectiveness, the percentage of time "
 "that the work center has been productive out of its available work hours."
-msgstr ""
+msgstr ":guilabel:`设备综合效率（OEE）`：工作中心实际生产时间占可用工时的百分比。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:207
 msgid ":guilabel:`Lost`: the amount of time lost due to work stoppages"
@@ -32812,7 +32887,7 @@ msgstr ":guilabel:`绩效`：实际工作时间，以预期时间的百分比表
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:213
 msgid "Use case: measuring performance by shift using work centers"
-msgstr ""
+msgstr "应用场景：按班次统计工作中心绩效"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:215
 msgid ""
@@ -32823,10 +32898,12 @@ msgid ""
 " can be done with any of the available :doc:`reporting "
 "<../../../essentials/reporting>` tools."
 msgstr ""
+"工作中心支持定义不同班次的工作时间，从而实现按班次追踪生产效率。配置方法：为每个班次创建独立的工作时间表，然后为每个班次复制对应的工作中心。完成配置后，可通过任意"
+" :doc:`报表<../../../essentials/reporting>` 工具进行班次生产率对比。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:221
 msgid "Working hours for multiple shifts"
-msgstr ""
+msgstr "多班次工作时间设置"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:223
 msgid ""
@@ -32835,17 +32912,19 @@ msgid ""
 "(:guilabel:`Internal link`), and then click the :guilabel:`New` button to "
 "create a new set of hours for the second shift."
 msgstr ""
+"创建多班次工作时间表，打开工作中心表单，点击 :guilabel:`工作时间` 字段的 :icon:`fa-arrow-"
+"right`(:guilabel:`内部链接`)，然后点击 :guilabel:`新建` 按钮为第二班次创建新时间表。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:228
 msgid ""
 "A manufacturer has two shifts: a day shift from 5 AM to 1 PM and a night "
 "shift from 1 PM to 9 PM. Starting from any existing work center, edit the "
 "existing working hours to match the day shift."
-msgstr ""
+msgstr "某制造商设有日班（早 5 点至下午 1 点）和夜班（下午 1 点至晚 9 点）。首先编辑现有工作中心的时间表匹配日班时段。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:0
 msgid "The working hours for a day shift"
-msgstr ""
+msgstr "日班工作时间表"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:234
 msgid ""
@@ -32854,14 +32933,17 @@ msgid ""
 "and change each :guilabel:`Work from` to 1 PM and :guilabel:`Work from` to 9"
 " PM."
 msgstr ""
+"保存日班设置后，点击 :icon:`fa-cog` :guilabel:`(设置)` 图标选择 "
+":guilabel:`复制`。将新时间表重命名为`夜班`，并将每个 :guilabel:`工作开始时间` 改为下午 1 "
+"点，:guilabel:`工作结束时间` 改为晚 9 点。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:0
 msgid "The working hours for a night shift"
-msgstr ""
+msgstr "夜班工作时间表"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:242
 msgid "Work centers for multiple shifts"
-msgstr ""
+msgstr "多班次工作中心配置"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:244
 msgid ""
@@ -32870,6 +32952,7 @@ msgid ""
 "duplicating each of the work centers that are used by both shifts, either on"
 " the individual work center forms, or directly from the list view."
 msgstr ""
+"复制工作中心：通过 :menuselection:`配置 --> 工作中心` 进入列表，为需要多班次运作的工作中心创建副本（可逐个复制或批量操作）。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:249
 msgid ""
@@ -32878,16 +32961,18 @@ msgid ""
 "select all. Then, click the :icon:`fa-cog` :guilabel:`Actions` button at the"
 " top of the list and select :guilabel:`Duplicate`."
 msgstr ""
+"批量复制方法：在列表视图勾选 :icon:`fa-check-square-o` :guilabel:`(复选框)` 全选目标工作中心，点击列表顶部的 "
+":icon:`fa-cog` :guilabel:`操作` 按钮选择 :guilabel:`复制`。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:255
 msgid ""
 "A manufacturer has two work centers, `Assembly Line 1` and `Assembly Line "
 "2`, and two working hours, `Day Shift` and `Night Shift`."
-msgstr ""
+msgstr "某制造商拥有 `组装线1` 和 `组装线2` 两个工作中心，以及 `日班` 和 `夜班` 两个班次。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:0
 msgid "Work centers copied for day and night shifts."
-msgstr ""
+msgstr "为日夜班复制的双版本工作中心。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:261
 msgid ""
@@ -32899,6 +32984,8 @@ msgid ""
 "manufacturing orders get assigned to both. Tags can also help make a visual "
 "distinction between each shift."
 msgstr ""
+"要为 `组装线 1` 和 `组装线 2` 创建各班次版本，请按以下步骤操作：先复制每个工作中心，选中首个工作中心后在其名称中加入班次标识（如 "
+"`组装线1-日班`）并分配对应班次的工作时间表。可选配置：将相反班次的工作中心设为备用工作中心，确保生产订单能分配到两个班次。此外，可通过标签功能实现不同班次的视觉区分。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:268
 msgid ""
@@ -32906,10 +32993,12 @@ msgid ""
 "chevron-right` :guilabel:`(right arrow)` buttons in the top left corner to "
 "move on to the next form in the list without returning to the list view."
 msgstr ""
+"通过表单左上角的 :icon:`oi-chevron-left` :guilabel:`(左箭头)` 和 :icon:`oi-chevron-"
+"right` :guilabel:`(右箭头)` 按钮可快速切换编辑多个表单。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:273
 msgid "Reports comparing different shifts"
-msgstr ""
+msgstr "班次对比报表"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:275
 msgid ""
@@ -32918,17 +33007,18 @@ msgid ""
 " of work orders that are being assigned each shift, the OEE, or actual time "
 "that each shift is taking to produce a product."
 msgstr ""
+"通过为不同班次创建独立工作中心后，按工作中心分类的报表将自动实现班次对比分析。该功能可用于比较：各班次分配的工单数量、设备综合效率（OEE）差异，以及不同班次生产同一产品的实际耗时等关键指标。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:280
 msgid ""
 "A report has been created to compare the time efficiency of two shifts "
 "producing the same product in the same work center."
-msgstr ""
+msgstr "同一工作中心两个班次生产相同产品的时间效率对比报表。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst-1
 msgid ""
 "A bar graph of two work centers with duration deviations of -6.50 and 15.00"
-msgstr ""
+msgstr "两个工作中心的柱状图显示时长偏差（-6.50 和 15.00）"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:286
 msgid ""
@@ -32938,6 +33028,9 @@ msgid ""
 ":guilabel:`Remove` icon on its right side. Next, click the "
 ":guilabel:`Measures` button and select :guilabel:`Duration Deviation (%)`"
 msgstr ""
+"要生成此报表，请导航至 :menuselection:`报表 --> 工单报表`，点击 :icon:`fa-filter` 筛选器右侧的 "
+":icon:`fa-x` :guilabel:`移除` 图标，清除待准备、等待中、待处理或进行中的状态筛选条件。接着点击 :guilabel:`指标` "
+"按钮并选择 :guilabel:`时长偏差率(%)`。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:291
 msgid ""
