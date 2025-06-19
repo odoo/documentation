@@ -63,7 +63,8 @@ Five methods are available to do this:
 .. note::
    The best method for you depends on your comfort level and technical expertise. For beginners,
    using a file upload or HTML tag might be easiest. Those options are convenient if you already use
-   Google Analytics or Tag Manager. You need to access your domain registrar's settings for domain
+   :ref:`Google Analytics <analytics/google-analytics>` or :ref:`Google Tag Manager
+   <analytics/google-tag-manager>`. You need to access your domain registrar's settings for domain
    verification.
 
 .. _GSC-HTML-file-upload:
@@ -94,6 +95,30 @@ have to put in your Odoo's Website Settings. Google verifies ownership by checki
 
 #. In Google Search Console, click :guilabel:`Verify`. If you perform the steps above correctly,
    verification should be done immediately.
+
+.. _website/google_search_console/HTML-tag:
+
+HTML tag
+--------
+
+This method involves copying a meta tag provided by Google and pasting it into your Odoo website.
+To verify your site ownership using an HTML tag, follow these instructions:
+
+#. Expand the HTML tag section.
+
+   .. image:: google_search_console/gsc-html-tag.png
+      :alt: Open HTML tag section.
+
+#. :guilabel:`Copy` the HTML tag to clipboard.
+#. On your Odoo website, click :guilabel:`Edit` in the upper-right corner, go to
+   the :guilabel:`Theme` tab, scroll down to the :guilabel:`Advanced` section, then
+   click :guilabel:`<head> and </body>` next to :guilabel:`Code Injection`.
+   Paste the copied tag into the first field (:guilabel:`<head>`), and click :guilabel:`Save`.
+
+   .. image:: google_search_console/gsc-paste-tag.png
+      :alt: Paste tag in head field.
+
+#. Return to :abbr:`GSC (Google Search Console)` and click :guilabel:`Verify`.
 
 .. seealso::
    :doc:`domain_names`
