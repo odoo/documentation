@@ -12,8 +12,8 @@
 # Martin Trigaux, 2024
 # philku79 <philip.kuss@gmx.de>, 2025
 # Chris Egal <sodaswed@web.de>, 2025
-# Larissa Manderfeld, 2025
 # Wil Odoo, 2025
+# Larissa Manderfeld, 2025
 # 
 #, fuzzy
 msgid ""
@@ -22,7 +22,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-06-12 07:10+0000\n"
 "PO-Revision-Date: 2024-10-08 06:34+0000\n"
-"Last-Translator: Wil Odoo, 2025\n"
+"Last-Translator: Larissa Manderfeld, 2025\n"
 "Language-Team: German (https://app.transifex.com/odoo/teams/41243/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -4484,7 +4484,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:3
 msgid "Operation types and commands"
-msgstr ""
+msgstr "Vorgangsarten und Befehle"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:5
 msgid ""
@@ -4497,14 +4497,23 @@ msgid ""
 "workflow streamlining by putting operation barcodes in the appropriate "
 "physical location."
 msgstr ""
+"Bestandsvorgänge wie :doc:`Wareneingänge und Lieferaufträge "
+"<../../inventory/shipping_receiving/daily_operations/receipts_delivery_one_step>`"
+" sowie Befehle wie die Validierung eines Transfers oder das Verpacken von "
+"Produkten können durch Scannen von Barcodes über die **Barcode**-App "
+"ausgeführt werden. Auf diese Weise können Mitarbeiter Aufgaben erledigen und"
+" auf Menüs zugreifen, ohne auf einen Bildschirm zu drücken oder die "
+"**Lager**-App auf einem Computer verwenden zu müssen. Durch das Anbringen "
+"von Barcodes für Vorgänge an den entsprechenden physischen Standorten wird "
+"der Arbeitsablauf optimiert."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst-1
 msgid "Printable barcodes for Receipts, Delivery Orders, and Manufacturing."
-msgstr ""
+msgstr "Druckbare Barcodes für Wareneingänge, Lieferaufträge und Fertigung."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:18
 msgid "Configuring operations"
-msgstr ""
+msgstr "Vorgänge konfigurieren"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:20
 msgid ""
@@ -4515,12 +4524,21 @@ msgid ""
 "(WHOUT)*, and *Manufacturing (WHMANUF)*. The *Internal Transfers (WHINT)* "
 "and *Pick (WHPICK)* operations can also be enabled."
 msgstr ""
+"*Vorgangsarten* in den Apps **Lager** und **Barcode** definieren Aktionen, "
+"die den Status von Produkten im Inventar ändern. Welche Vorgangsarten zum "
+"Drucken verfügbar sind, hängt von den Einstellungen der Datenbank ab. "
+"Standardmäßig können Barcodes für *Wareneingänge (WHIN*), *Lieferaufträge "
+"(WHOUT)* und *Fertigung (WHMANUF)* gedruckt werden. Die Vorgänge *Interne "
+"Transfers (WHINT)* und *Kommissionieren” (WHPICK)* können ebenfalls "
+"aktiviert werden."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:27
 msgid ""
 "Both *Internal Transfers (WHINT)* and *Pick (WHPICK)* operations require "
 ":doc:`location barcodes <software>` to scan."
 msgstr ""
+"Sowohl für *Interne Transfers (WHINT)* als auch für *Kommissionieren "
+"(WHPICK)* müssen :doc:`Barcodes für Lagerorte <software>` gescannt werden."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:31
 msgid "Internal transfers"
@@ -4535,6 +4553,12 @@ msgid ""
 ":guilabel:`Warehouse` section, tick the :guilabel:`Storage Locations` "
 "option."
 msgstr ""
+"Der Barcode für den Vorgang *Interne Transfers (WHINT)* ist verfügbar, wenn "
+"die Datenbank die Funktion *Lagerorte* verwendet, um die Position von "
+"Produkten im Lagerbestand zu kennzeichnen. Um diese Einstellung zu "
+"aktivieren, gehen Sie zu :menuselection:`Lager --> Konfiguration --> "
+"Einstellungen` und aktivieren Sie im Abschnitt :guilabel:`Lagerhaus` die "
+"Option :guilabel:`Lagerorte`."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:39
 msgid "Picking"
@@ -4552,22 +4576,37 @@ msgid ""
 " either :guilabel:`Pick then Deliver (2 steps)` or :guilabel:`Pick, Pack, "
 "then Deliver (3 steps)`."
 msgstr ""
+"Der Barcode für den Vorgang *Kommissionieren (WHPICK)* ist verfügbar, wenn "
+"die Datenbank die Funktion *Mehrstufige Routen* verwendet, die mit einem "
+"Kommissionierungsschritt konfiguriert ist. Um diese Einstellung zu "
+"aktivieren, gehen Sie zu :menuselection:`Lager --> Konfiguration --> "
+"Einstellungen` und aktivieren Sie im Abschnitt :guilabel:`Lagerhaus` die "
+"Option :guilabel:`Mehrstufige Routen` und speichern Sie. Klicken Sie "
+"anschließend auf :icon:`fa-arrow-right` :guilabel:`Lagerrouten festlegen`, "
+"um die Lagereinstellungen zu öffnen, und wählen Sie das Lagerhaus aus. "
+"Wählen Sie im Abschnitt :guilabel:`Warenausgänge` entweder "
+":guilabel:`Kommissionierung, dann Lieferung (2 Schritte)` oder "
+":guilabel:`Kommissionierung, Verpackung, dann Lieferung (3 Schritte)`."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:50
 msgid ""
 ":doc:`Two-step receipt and delivery "
 "<../../inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps>`"
 msgstr ""
+":doc:`Zweistufiger Wareneingang und Lieferung "
+"<../../inventory/shipping_receiving/daily_operations/receipts_delivery_two_steps>`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:52
 msgid ""
 ":doc:`Three-step delivery "
 "<../../inventory/shipping_receiving/daily_operations/delivery_three_steps>`"
 msgstr ""
+":doc:`Dreistufige Lieferung "
+"<../../inventory/shipping_receiving/daily_operations/delivery_three_steps>`"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:56
 msgid "Print barcodes for inventory commands and operations"
-msgstr ""
+msgstr "Barcodes für Lagerbefehle und Vorgänge drucken"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:58
 msgid ""
@@ -4577,6 +4616,12 @@ msgid ""
 " in the database. See :ref:`configuring operations "
 "<inventory/barcode/configure_operations>` to enable any missing operations."
 msgstr ""
+"Barcodes für Vorgänge und Befehle können jederzeit gedruckt werden. Diese "
+"Dokumente enthalten alle verfügbaren Bestandsbefehle, unabhängig davon, ob "
+"sie aktiviert sind, jedoch nur die Vorgänge, die derzeit in der Datenbank "
+"aktiviert sind. Siehe :ref:`Vorgänge konfigurieren "
+"<inventory/barcode/configure_operations>`, um fehlende Vorgänge zu "
+"aktivieren."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:64
 msgid ""
@@ -4585,6 +4630,11 @@ msgid ""
 "feature is enabled, but the *Pick (WHPICK)* operation will only be added if "
 "*Multi-Step Routes* are configured to have a picking step."
 msgstr ""
+"Das Dokument `print_inventory_commands_and_operation_types` zeigt immer den "
+"Befehl :guilabel:`VERPACKEN` an, unabhängig davon, ob die Funktion *Pakete* "
+"aktiviert ist, aber der Vorgang *Kommissionieren (WHPICK)* wird nur "
+"hinzugefügt, wenn *Mehrstufige Routen* so konfiguriert sind, dass sie einen "
+"Kommissionierschritt enthalten."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:70
 msgid ""
@@ -4593,10 +4643,15 @@ msgid ""
 "PDF. To turn this into a direct printing operation, :doc:`connect a printer "
 "<../../../general/iot/devices/printer>`."
 msgstr ""
+"Beim Drucken von Barcodes wird standardmäßig entweder eine PDF-Datei mit den"
+" ausgewählten Barcodes direkt heruntergeladen oder ein neuer Reiter mit "
+"einer herunterladbaren oder druckbaren PDF-Datei geöffnet. Um dies in einen "
+"direkten Druckvorgang umzuwandeln, :doc:`schließen Sie einen Drucker an "
+"<../../../general/iot/devices/printer>`."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:75
 msgid "When first opening Barcode"
-msgstr ""
+msgstr "Beim ersten Öffnen der Barcode-App"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:77
 msgid ""
@@ -4606,15 +4661,22 @@ msgid ""
 "print command and operation barcodes, but will no longer be displayed after "
 "the first time it is clicked."
 msgstr ""
+"Beim ersten Öffnen der **Barcode**-App wird eine Eingabeaufforderung mit "
+"Optionen zum Drucken von Barcodes für Befehle und Vorgänge sowie einige "
+"Beispiel-Barcodes zum Drucken und Testen angezeigt. Das Klicken auf diese "
+"Links ist der einfachste Weg, um Befehls- und Vorgangsbarcodes zu drucken, "
+"wird jedoch nach dem ersten Klicken nicht mehr angezeigt."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst-1
 msgid "A prompt to print demo data or barcodes for operations."
 msgstr ""
+"Eine Eingabeaufforderung zum Drucken von Demodaten oder Barcodes für "
+"Vorgänge."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:86
 #: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst:111
 msgid "From Inventory settings"
-msgstr ""
+msgstr "Über die Lagereinstellungen"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:88
 msgid ""
@@ -4625,14 +4687,20 @@ msgid ""
 "click :icon:`fa-print` :guilabel:`Print barcode commands and operation "
 "types`."
 msgstr ""
+"Wenn die Barcode-Druckaufforderung nicht verfügbar ist, können Barcodes für "
+"Bestandsbefehle und Vorgangsarten jederzeit über die Seite *Einstellungen* "
+"gedruckt werden. Gehen Sie zu :menuselection:`Lager --> Konfiguration --> "
+"Einstellungen` und klicken Sie im Abschnitt :guilabel:`Barcode` unter der "
+"Einstellung :guilabel:`Barcode-Scanner` auf :icon:`fa-print` "
+":guilabel:`Barcode-Befehle und Vorgangsarten drucken`."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst-1
 msgid "Link to print inventory operations and commands."
-msgstr ""
+msgstr "Link zum Drucken von Lagervorgängen und -befehlen."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:97
 msgid "Individual operations"
-msgstr ""
+msgstr "Einzelne Vorgänge"
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:99
 msgid ""
@@ -4642,10 +4710,17 @@ msgid ""
 "Configuration --> Operations Types` and tick the box by each operation type "
 "required."
 msgstr ""
+"Barcodes für einzelne Vorgänge, wie Wareneingänge und Fertigungsaufträge, "
+"können auch über das Konfigurationsmenü *Vorgangsarten* gedruckt werden. Um "
+"die zu druckenden Vorgänge auszuwählen, gehen Sie zu :menuselection:`Lager "
+"--> Konfiguration --> Vorgangsarten` und aktivieren Sie das Kontrollkästchen"
+" neben jeder gewünschten Vorgangsart."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst-1
 msgid "Available operations selected making a 'Print' button appear."
 msgstr ""
+"Verfügbare Vorgänge, die verursachen, dass eine „Drucken“-Schaltfläche "
+"erscheint."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:107
 msgid ""
@@ -53732,7 +53807,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/engineering_change_orders.rst:269
 msgid "View changes"
-msgstr ""
+msgstr "Änderungen anzeigen"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/engineering_change_orders.rst:271
 msgid ""
@@ -53741,6 +53816,10 @@ msgid ""
 "Engineering Changes` button represents the number of operational changes "
 "created."
 msgstr ""
+"Um die vorgeschlagenen Änderungen zu prüfen, gehen Sie zu "
+":menuselection:`PLM --> Übersicht`. Auf der Karte der Änderungsauftragsart "
+"`Stücklsitenänderungen` zeigt die Schaltfläche :guilabel:`# Technische "
+"Änderungen` die Anzahl der erstellen Betriebsänderungen an."
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/engineering_change_orders.rst:275
 msgid ""
@@ -53748,6 +53827,9 @@ msgid ""
 "view of the |ECO| type. To view the suggestion, select an |ECO| in the `New`"
 " stage."
 msgstr ""
+"Klicken Sie auf die Schaltfläche :guilabel:`# Technische Änderungen`, um die"
+" Kanban-Ansicht der Änderungsauftragsart an. Um den Vorschlag zu sehen, "
+"wählen Sie einen Änderungsauftrag aus der Phase `Neu`."
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/engineering_change_orders.rst:278
 msgid ""
@@ -53756,6 +53838,10 @@ msgid ""
 "button to navigate to the revised |BOM| and look into the proposed changes "
 "in greater detail."
 msgstr ""
+"Sehen Sie sich in der |ECO| eine Zusammenfassung der vorgeschlagenen "
+"Änderungen im Reiter :guilabel:`Vorgangsänderungen` an. Klicken Sie auf die "
+"Schaltfläche :guilabel:`Revision`, um zur überarbeiteten Stückliste zu "
+"navigieren und die vorgeschlagenen Änderungen im Detail zu betrachten."
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/engineering_change_orders.rst:283
 msgid ""
@@ -55013,7 +55099,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/edi.rst:120
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/edi.rst:120
 msgid "Uploaded SO in the seller's database."
-msgstr ""
+msgstr "Hochgeladener Verkaufsauftrag in der Datenbank des Verkäufers."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/procurement_expenses_report.rst:3
 msgid "Procurement expenses report"
@@ -55785,6 +55871,9 @@ msgid ""
 ":guilabel:`Select only one RfQ (exclusive)`: when a purchase order is "
 "confirmed, the remaining purchase orders are cancelled."
 msgstr ""
+":guilabel:`Nur eine Angebotsanfrage auswählen (exklusiv)`: Wenn ein "
+"Einkaufsauftrag bestätigt wird, werden die übrigen Einkaufsaufträge "
+"storniert."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:99
 msgid ""
@@ -55792,6 +55881,9 @@ msgid ""
 "confirmed, remaining purchase orders are **not** cancelled. Instead, "
 "multiple purchase orders are allowed."
 msgstr ""
+":guilabel:`Mehrere Angebotsanfragen auswählen (nicht-exklusiv)`: Wenn eine "
+"Bestellung bestätigt wird, werden verbleibende Bestellungen ***nicht** "
+"storniert. Stattdessen sind Mehrfachbestellungen erlaubt."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/blanket_orders.rst:102
 msgid ""
@@ -57620,6 +57712,12 @@ msgid ""
 "printable PDF of the quotation; or, once ready, click :guilabel:`Confirm "
 "Order` to confirm the purchase order."
 msgstr ""
+"Klicken Sie im neuen Formular Angebotsanfrage auf :guilabel:`Per E-Mail "
+"versenden`, um eine E-Mail an den aufgelisteten Lieferanten zu verfassen und"
+" zu senden. Klicken Sie auf :guilabel:`Angebotsanfrage drucken`, um ein "
+"druckbares PDF des Angebots zu generieren; oder klicken Sie, sobald Sie "
+"fertig sind, auf :guilabel:`Auftrag bestätigen`, um die Bestellung zu "
+"bestätigen."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/purchase_templates.rst:76
 msgid ""
@@ -57684,6 +57782,8 @@ msgid ""
 ":doc:`Configure product types and track quantities "
 "<../../../inventory_and_mrp/inventory/product_management/configure>`"
 msgstr ""
+":doc:`Produkttypen konfigurieren und Mengen verfolgen "
+"<../../../inventory_and_mrp/inventory/product_management/configure>`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst-1
 msgid "Required configuration for purchasable products."
@@ -57699,6 +57799,10 @@ msgid ""
 "line` to input the vendor and their price, to have this information auto-"
 "populate on an |RFQ| each time the product is listed."
 msgstr ""
+"Klicken Sie im Reiter :guilabel:`Einkauf` des Produktformulars auf "
+":guilabel:`Zeile hinzufügen`, um den Lieferanten und den Preis einzugeben, "
+"damit diese Informationen jedes Mal, wenn das Produkt aufgelistet wird, "
+"automatisch in eine Angebotsanfrage übernommen werden."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:52
 msgid ":doc:`../products/pricelist`"
@@ -59602,7 +59706,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/quality/quality_check_types/measure_check.rst:3
 msgid "Measure quality check"
-msgstr ""
+msgstr "Qualitätsprüfung „Messung“"
 
 #: ../../content/applications/inventory_and_mrp/quality/quality_check_types/measure_check.rst:9
 msgid ""
@@ -59726,7 +59830,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/quality/quality_check_types/measure_check.rst:70
 msgid "Process a Measure quality check"
-msgstr ""
+msgstr "Qualitätsprüfung „Messung“ verarbeiten"
 
 #: ../../content/applications/inventory_and_mrp/quality/quality_check_types/measure_check.rst:72
 #: ../../content/applications/inventory_and_mrp/quality/quality_check_types/pass_fail_check.rst:64

@@ -3888,6 +3888,11 @@ msgid ""
 " either :guilabel:`Pick then Deliver (2 steps)` or :guilabel:`Pick, Pack, "
 "then Deliver (3 steps)`."
 msgstr ""
+"*피킹(WHPICK)* 작업 바코드는 데이터베이스에서 피킹 단계에 *다단계 경로* 기능이 설정된 경우에 이용이 가능합니다. 이 설정을 "
+"활성화하려면 :menuselection:`재고 관리 앱 --> 환경설정 --> 설정` 으로 이동한 다음 :guilabel:`창고` "
+"섹션에서 :guilabel:`다단계 경로` 옵션을 선택한 후 저장합니다. 여기에서 :icon:`fa-arrow-right` "
+":guilabel:`창고 경로 설정` 을 클릭하여 창고 설정을 열고 창고를 선택하세요. :guilabel:`출고` 섹션에서 "
+":guilabel:`피킹 후 배송(2단계)` 또는 :guilabel:`피킹, 포장 후 배송(3단계)` 중 하나를 선택하세요."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/operation_types.rst:50
 msgid ""
@@ -4283,6 +4288,11 @@ msgid ""
 "is by scanning a barcode, while *optional scan* allows users to manually "
 "type in a barcode if necessary."
 msgstr ""
+"입고 및 출고 주문과 같은 작업 유형은 :ref:`개별적으로 환경설정할 수 "
+"있으며<inventory/product_management/operation-type-setting>` 일련번호 또는 로트번호가 필요 "
+"여부에 따라 다르게 지정합니다. 또한, 각 작업 유형의 *바코드* 탭에서는 로트번호 또는 일련번호 스캔을 필수 항목으로 지정할 지 여부를"
+" 설정할 수 있습니다. *스캔 필수* 는 필수 일련번호 또는 로트번호가 인식되는 방법으로 바코드 스캔만 가능하다는 의미이며, *스캔 "
+"선택* 은 필요한 경우 사용자가 바코드를 직접 입력할 수 있는 방식입니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/serial_numbers_lots.rst:51
 msgid ""
@@ -4548,6 +4558,10 @@ msgid ""
 "available information, and add that product to the receipt to track the "
 "quantity on hand in inventory."
 msgstr ""
+"현재 재고가 없는 품목을 스캔할 경우 품목이 존재하지 않는다는 메시지와 함께 :guilabel:`새 품목 만들기` 버튼 옵션이 "
+"표시됩니다. 이 버튼을 누르면 `바코드 조회 <https://www.barcodelookup.com/>` 데이터베이스에서 코드 및 형식이"
+" 일치하는 품목을 검색하고, 사용 가능한 정보를 활용하여 Odoo 데이터베이스에 새로운 품목에 대한 내용을 생성한 후, 해당 품목을 "
+"영수증에 추가하여 재고 수량을 추적합니다."
 
 #: ../../content/applications/inventory_and_mrp/barcode/setup/software.rst-1
 msgid "New product confirmation dialog."
@@ -9583,6 +9597,8 @@ msgid ""
 " a red :guilabel:`Expiration Alert` at the top of the page to indicate that "
 "the products in this lot are either expired or expiring soon."
 msgstr ""
+"로트/일련번호의 유효 기간이 경과한 경우에는 양식 페이지 상단에 빨간색 :guilabel:`만료 알림` 이 표시되어 해당 로트의 품목이 "
+"만료되었거나 곧 만료가 임박할 예정임을 알려줍니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/expiration_dates.rst:235
 msgid ""
@@ -10265,6 +10281,9 @@ msgid ""
 ":guilabel:`Traceability` section, tick the :guilabel:`Display Lots & Serial "
 "Numbers on Delivery Slips` checkbox, and click :guilabel:`Save`."
 msgstr ""
+"배송 전표에 로트번호를 넣으려면 :menuselection:`재고` 앱을 열고 :menuselection:`환경설정 --> 설정` 으로 "
+"이동합니다. :guilabel:`추적 가능성` 섹션까지 아래로 스크롤하여 :guilabel:`배송 전표에 로트 및 일련번호 표시` "
+"확인란에 표시한 다음 :guilabel:`저장` 을 클릭합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:354
 msgid ""
@@ -11122,6 +11141,9 @@ msgid ""
 ":guilabel:`Traceability` section, tick the :guilabel:`Display Lots & Serial "
 "Numbers on Delivery Slips` checkbox, and click :guilabel:`Save`."
 msgstr ""
+"배송 전표에 일련번호를 넣으려면 :menuselection:`재고` 앱을 열고 :menuselection:`환경설정 --> 설정` 으로 "
+"이동합니다. :guilabel:`추적 가능성` 섹션까지 아래로 스크롤하여 :guilabel:`배송 전표에 로트 및 일련번호 표시` "
+"확인란에 표시한 다음 :guilabel:`저장` 을 클릭합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/serial_numbers.rst:312
 msgid ""
@@ -11436,7 +11458,7 @@ msgstr ":doc:`daily_operations/delivery_three_steps`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:83
 msgid "Add-ons"
-msgstr ""
+msgstr "추가 기능"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:85
 msgid ""
@@ -14893,6 +14915,8 @@ msgid ""
 ":guilabel:`Actions` button, and click :guilabel:`Add to batch` from the "
 "resulting drop-down menu."
 msgstr ""
+"이동 목록에서, 선택한 전송 항목 왼족에 있는 확인란에 표시하면 배치에 포함됩니다. 그런 다음 :icon:`fa-cog` "
+":guilabel:`작업` 버튼으로 이동하여 드롭다운 메뉴가 나타나면 :guilabel:`배치에 추가` 를 클릭합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/batch.rst-1
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/picking_methods/cluster.rst:0
@@ -19540,6 +19564,8 @@ msgid ""
 "of measure for transportation which is **X8A - Pallet de madera** by "
 "default."
 msgstr ""
+"멕시코의 경우 선적용 *선하증권* 을 생성해야 하므로 Odoo는 기본적으로 **X8A - Pallet de madera** 운송 단위와 "
+"함께 내용품에 대한 UNSPSC 코드를 전송해야 합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/envia_shipping.rst:249
 msgid ""
@@ -21111,6 +21137,9 @@ msgid ""
 "and :guilabel:`Zip Prefixes`. Leave these fields empty if all locations "
 "apply."
 msgstr ""
+"**이커머스** 웹사이트에서 특정 목적지에 대한 배송을 제한하려면 배송 방법 양식의 :guilabel:`목적지 사용 가능 여부` 탭으로 "
+"이동하여 :guilabel:`국가`, :guilabel:`주`, :guilabel:`우편번호 앞자리` 를 지정합니다. 배송 방법을 모든 "
+"위치에 적용하려면 이 필드를 비워 둡니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/new_delivery_method.rst:132
 msgid "Calculate delivery cost"
@@ -24785,6 +24814,8 @@ msgid ""
 "the form's top row, and reveal any desired column by ticking the checkbox "
 "next to that option."
 msgstr ""
+"기본적으로 추가 열은 숨겨져 있습니다. 이러한 열을 표시하려면 양식의 맨 위 행의 가장 오른쪽에 있는 :icon:`oi-settings-"
+"adjust` :guilabel:`(조정)` 아이콘을 클릭한 후 해당 옵션 옆에 있는 확인란을 클릭하여 원하는 열을 표시합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/count_products.rst:72
 msgid "Create an inventory adjustment"
@@ -26959,7 +26990,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:184
 msgid "Buffer"
-msgstr ""
+msgstr "버퍼"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:186
 msgid "Impact on dates"
@@ -27944,6 +27975,8 @@ msgid ""
 ":guilabel:`Multiple Quantity` is set to `5`, and only 3 are needed, 5 "
 "products are replenished."
 msgstr ""
+":guilabel:`다중 수량`: 품목을 특정 수량만큼 주문해야 하는 경우 주문할 수량을 입력합니다. 예를 들어, "
+":guilabel:`다중 수량` 이 `5` 로 설정되어 있으면 3개만 필요한 경우에도 5개의 품목이 보충됩니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:122
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:122
@@ -28099,6 +28132,9 @@ msgid ""
 "replenish the product in one-unit increments, back up to the :guilabel:`Max`"
 " of `0.00`."
 msgstr ""
+"이와 같은 값을 사용하여 재정렬 규칙을 설정할 경우, |SO| 에서 품목 예상 수량이 :guilabel:`최소` 값인 `0.00` 아래로"
+" 떨어지게 되면 선택된 :guilabel:`경로` 를 활용하여 제품을 한 단위씩 보충하며 :guilabel:`최대` 값인 `0.00` 이"
+" 될 때까지 다시 보충합니다."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:195
 msgid ""
@@ -34053,11 +34089,11 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:95
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:205
 msgid ":doc:`../reporting/oee`"
-msgstr ""
+msgstr ":doc:`../reporting/oee`"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:66
 msgid ":doc:`../workflows/work_center_time_off`"
-msgstr ""
+msgstr ":doc:`../workflows/work_center_time_off`"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:69
 msgid "Set productivity standards and allowed employees"
@@ -34125,7 +34161,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:103
 msgid ":doc:`../basic_setup/mo_costs`"
-msgstr ""
+msgstr ":doc:`../basic_setup/mo_costs`"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:105
 msgid ""
@@ -34167,7 +34203,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:127
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:153
 msgid ":doc:`../../maintenance/add_new_equipment`"
-msgstr ""
+msgstr ":doc:`../../maintenance/add_new_equipment`"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/advanced_configuration/using_work_centers.rst:132
 msgid "Integrate IoT devices"
@@ -41481,6 +41517,8 @@ msgid ""
 "one for each unit in the original |MO|. All of the |MOs| are closed, since "
 "production is complete."
 msgstr ""
+"일련번호를 지정하고 생산 과정을 완료하려면 :guilabel:`생산` 버튼을 클릭합니다. 이렇게 하면 원래 |MO| 에 있는 단위를 "
+"기준으로 |MO| 가 개별 |MO| 로 하나씩 분할됩니다. 생산이 완료되어 모든 |MO| 가 닫힙니다."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/workflows/manufacture_lots_serials.rst-1
 msgid ""
@@ -43302,7 +43340,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:91
 msgid ":doc:`Approvals<../management/approvals>`"
-msgstr ""
+msgstr ":doc:`승인 <../management/approvals>`"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:96
 msgid "Verification stages"
@@ -43336,7 +43374,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:111
 msgid ":doc:`../management/approvals`"
-msgstr ""
+msgstr ":doc:`../management/approvals`"
 
 #: ../../content/applications/inventory_and_mrp/plm/manage_changes/eco_type.rst:116
 msgid "Closing stages"
@@ -47353,6 +47391,9 @@ msgid ""
 ":guilabel:`New`. Doing so opens the product form, where sales and purchasing"
 " data can be configured."
 msgstr ""
+"|RFQ| 에 품목 정보와 가격이 자동 입력되게 하려면 :menuselection:`매입 앱 --> 품목 --> 품목` 으로 이동하여 "
+"품목에 대한 환경설정을 합니다. 기존 품목을 선택하거나 :guilabel:`신규` 를 선택하여 새 품목을 만들 수도 있습니다. 이렇게 "
+"하면 판매 및 매입 데이터를 설정할 수 있는 품목 양식이 열립니다."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:27
 msgid ""
@@ -47657,7 +47698,7 @@ msgstr ":guilabel:`RFQ 인쇄` 를 클릭하면 |RFQ| PDF가 다운로드됩니�
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:188
 msgid ":doc:`../../../essentials/contacts`"
-msgstr ""
+msgstr ":doc:`../../../essentials/contacts`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/rfq.rst:191
 msgid "Confirm order"
@@ -48372,6 +48413,9 @@ msgid ""
 "Alternatively, find a product that already exists in the database and click "
 "into it's product form."
 msgstr ""
+":menuselection:`재고 관리`, :menuselection:`제조 관리`, :menuselection:`매입` 또는 "
+":menuselection:`판매` 앱에서 :menuselection:`품목 --> 품목` 으로 이동한 다음 :guilabel:`신규` "
+"를 클릭하여 새로운 품목을 생성합니다. 또는 데이터베이스에 기존에 존재하는 품목을 찾아서 품목 양식을 클릭합니다."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:31
 msgid ""

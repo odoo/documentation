@@ -1967,6 +1967,9 @@ msgid ""
 "everyone's hours, and gain insights on which employees are working overtime,"
 " or checking out of work earlier than expected."
 msgstr ""
+"Odoo **考勤** 应用功能相当于一个打卡钟。员工可通过使用 :ref:`处于终端模式的专用设备 <attendances/kiosk-mode-"
+"entry>` 记录上下班时间，也可直接在 :ref:`数据库中 <attendances/check-in>` "
+"打卡。管理人员能实时查看在岗人员、生成工时报表，并掌握员工加班或早退情况。"
 
 #: ../../content/applications/hr/attendances.rst:17
 msgid "Access rights"
@@ -1976,7 +1979,7 @@ msgstr "访问权限"
 msgid ""
 "Understanding access rights is essential to navigating the **Attendances** "
 "application."
-msgstr ""
+msgstr "理解权限设置是使用**考勤**应用的关键。"
 
 #: ../../content/applications/hr/attendances.rst:21
 msgid ""
@@ -1984,13 +1987,13 @@ msgid ""
 "database, without needing access to the **Attendances** app. Additionally, "
 "all users can access their own attendance records from their employee form "
 "in the **Employees** app."
-msgstr ""
+msgstr "所有数据库用户无需访问**考勤**应用即可直接打卡。此外，用户均可在**员工**应用的员工表单中查看自己的考勤记录。"
 
 #: ../../content/applications/hr/attendances.rst:25
 msgid ""
 "Access to both the **Attendances** application, and the various features "
 "within the application is determined by access rights."
-msgstr ""
+msgstr "对**考勤**应用及其功能的访问权限由权限设置决定。"
 
 #: ../../content/applications/hr/attendances.rst:28
 msgid ""
@@ -2001,6 +2004,8 @@ msgid ""
 "settings. For the :guilabel:`Attendances` field, the options are either to "
 "leave the field blank or select :guilabel:`Administrator`."
 msgstr ""
+"查看用户权限路径：:menuselection:`设置应用 --> 用户与公司 --> 用户`，选择具体用户后默认显示 :guilabel:`访问权限`"
+" 标签页。滚动至 :guilabel:`人力资源` 部分，其中 :guilabel:`考勤` 字段可选留空或设为 :guilabel:`管理员`。"
 
 #: ../../content/applications/hr/attendances.rst:34
 msgid ""
@@ -2011,6 +2016,8 @@ msgid ""
 "settings. If left blank, the user does **not** have access to the "
 "**Attendances** application."
 msgstr ""
+"选择 :guilabel:`管理员` 权限的用户可以完全访问整个 *考勤* "
+"应用程序，包括查看所有考勤记录、进入*终端模式*、访问报表数据及修改设置。如果留空，则用户**无法**访问**考勤**应用程序的权限。"
 
 #: ../../content/applications/hr/attendances.rst:40
 msgid ""
@@ -2019,13 +2026,15 @@ msgid ""
 "appears on the main database dashboard. An :guilabel:`Access Error` pop-up "
 "message appears, stating:"
 msgstr ""
+"如果用户**没有****考勤**应用程序的 :guilabel:`管理员` 权限，则**无法**打开该应用程序，即使它出现在主数据库仪表板上。弹出 "
+":guilabel:`访问错误` 消息，说明："
 
 #: ../../content/applications/hr/attendances.rst:44
 msgid ""
 "`You do not have enough rights to access the fields "
 "\"attendance_manager_id\" on Employee (hr.employee). Please contact your "
 "system administrator.`"
-msgstr ""
+msgstr "`您无权访问员工(hr.employee)中的\"attendance_manager_id\"字段，请联系系统管理员。"
 
 #: ../../content/applications/hr/attendances.rst:47
 msgid ""
@@ -2035,6 +2044,9 @@ msgid ""
 "circle` :guilabel:`(green circle)` that are always available at the top of "
 "the database."
 msgstr ""
+"无**考勤**应用访问权限的用户，仍可通过数据库顶部常驻的 :icon:fa-circle :guilabel:`(红色圆圈)` 或 :icon:fa-"
+"circle :guilabel:`(绿色圆圈)` 进行 :doc:`打卡 "
+"<../hr/attendances/check_in_check_out>`。"
 
 #: ../../content/applications/hr/attendances.rst:55
 msgid "Approvers"
@@ -2048,6 +2060,7 @@ msgid ""
 "records **only** for the employees they are assigned to. This is the only "
 "exception where non-admin users can view records in the **Attendances** app."
 msgstr ""
+"审批人指被指派审核员工考勤记录的用户（通常为经理，但非强制）。非管理员审批人**仅能**访问和修改被指派员工的记录，这是普通用户查看**考勤**应用数据的唯一例外情况。"
 
 #: ../../content/applications/hr/attendances.rst:62
 msgid ""
@@ -2059,6 +2072,9 @@ msgid ""
 " on the **Attendances** application dashboard as well as in the attendance "
 "reports, and make modifications to their records."
 msgstr ""
+"要查看员工的考勤审批人，请导航到 :menuselection:`员工应用程序`，然后点击特定员工。点击 :guilabel:`工作信息` "
+"选项卡，滚动到 :guilabel:`审批人` 部分，并选中 :guilabel:`考勤` "
+"字段。被选中的人可以在**考勤**应用程序仪表板和考勤报告中查看该员工的考勤记录，并对其记录进行修改。"
 
 #: ../../content/applications/hr/attendances.rst:69
 #: ../../content/applications/hr/attendances/kiosks.rst:22
@@ -2079,6 +2095,8 @@ msgid ""
 "menu. Navigate to the :menuselection:`Attendances application --> "
 "Configuration` to access the configuration menu."
 msgstr ""
+"**考勤**应用程序中需要的配置很少。确定员工的签到和签退方式、定义自助服务机的功能以及确定额外工时的计算方式都可以在配置菜单中进行设置。导航至 "
+":menuselection:`考勤应用程序 --> 配置` 访问配置菜单。"
 
 #: ../../content/applications/hr/attendances.rst:77
 msgid ""
@@ -2087,6 +2105,8 @@ msgid ""
 "building-o` :guilabel:`(building)` icon apply to all companies within the "
 "database."
 msgstr ""
+"带有 :icon:fa-building-o :guilabel:`(建构)` 图标的配置项是公司特定的配置。没有 :icon:fa-"
+"building-o :guilabel:`(建构)` 图标的配置项将应用于数据库中的所有公司。"
 
 #: ../../content/applications/hr/attendances.rst:84
 msgid "Modes"
@@ -2099,6 +2119,8 @@ msgid ""
 "If this is not activated, users must use a kiosk to check in and out of "
 "work."
 msgstr ""
+":guilabel:`后台考勤` :icon:`fa-building-o`：启用此功能将允许用户直接从 Odoo "
+"数据库进行上下班打卡。如果不启用此功能，用户必须使用终端机进行上下班打卡。"
 
 #: ../../content/applications/hr/attendances.rst:89
 msgid ""
@@ -2106,6 +2128,7 @@ msgid ""
 " to automatically check out employees according to their working schedule, "
 "after a buffer of time has passed."
 msgstr ""
+":guilabel:`自动签退` :icon:`fa-building-o`：启用此功能后，系统将在缓冲时间过后，根据员工的工作时间表自动为其签退。"
 
 #: ../../content/applications/hr/attendances.rst:91
 msgid ""
@@ -2114,6 +2137,8 @@ msgid ""
 "time, in hours, that must elapse after an employee's working hours have "
 "ended, before they are automatically checked out."
 msgstr ""
+":guilabel:`容忍时间`：此字段仅在启用 :guilabel:`自动签退` :icon:`fa-building-o` "
+"功能时显示。在此输入员工工作时间结束后，系统自动为其签退前需要等待的时间（以小时为单位）。"
 
 #: ../../content/applications/hr/attendances.rst:96
 msgid ""
@@ -2122,6 +2147,8 @@ msgid ""
 "9:00 AM, and forgets to check-out at 5:00 PM. At 7:00 PM, they are "
 "automaticlaly checked out."
 msgstr ""
+"当启用 :guilabel:`自动签退` 选项并将 :guilabel:`容忍时间` 设置为 `2.00` 小时后，假设某员工上午 9:00 "
+"打卡上班，但下午 5:00 忘记签退。系统将在晚上 7:00 自动为其签退。"
 
 #: ../../content/applications/hr/attendances.rst:100
 msgid ""
@@ -2129,6 +2156,7 @@ msgid ""
 "to log any absences that are not associated with a time off request, such as"
 " vacation time or sick time, on the attendances report."
 msgstr ""
+":guilabel:`缺勤管理` :icon:`fa-building-o`：启用此功能可在考勤报表中记录与请假申请（如休假或病假）无关的缺勤情况。"
 
 #: ../../content/applications/hr/attendances.rst:105
 msgid "Extra Hours"
@@ -2224,6 +2252,9 @@ msgid ""
 "and check-out information also appears on the :guilabel:`Overview` "
 "dashboard."
 msgstr ""
+"进入**考勤**应用时，系统会显示包含用户所有打卡记录的 :guilabel:`概览` 仪表板。如果用户具备必要的 :ref:`访问权限 "
+"<attendances/access-rights>` 或是特定员工的 :ref:`审批人 "
+"<attendances/approvers>`，这些员工的打卡信息也会显示在 :guilabel:`概览` 仪表板上。"
 
 #: ../../content/applications/hr/attendances.rst:151
 msgid ""
@@ -2234,6 +2265,9 @@ msgid ""
 "crosshairs` :guilabel:`(Focus Today)` button instantly returns the dashboard"
 " to the present date."
 msgstr ""
+"**考勤** 仪表板支持在 :icon:`fa-tasks` :guilabel:`(甘特图)` 和 :icon:`oi-view-list` "
+":guilabel:`(列表)` 视图间切换，并可选择分析时段。当前时段会以黄色高亮显示实时考勤记录，点击 :icon:`fa-crosshairs` "
+":guilabel:`(聚焦今日)` 按钮可立即跳转至当天数据。"
 
 #: ../../content/applications/hr/attendances.rst-1
 msgid ""
@@ -2261,7 +2295,7 @@ msgid ""
 "such as all automatic checkouts to determine which employees chronically "
 "forget to check-out, or by department, to determine which team is working "
 "the most overtime."
-msgstr ""
+msgstr "有时考勤主管和经理需要查看特定记录，例如：有自动签退记录（用于识别经常忘记签退的员工），按部门筛选（用于分析加班最多的团队）。"
 
 #: ../../content/applications/hr/attendances.rst:175
 msgid ""
@@ -2269,14 +2303,16 @@ msgid ""
 ":guilabel:`Filters` or :icon:`oi-group` :guilabel:`Group By`, or combine "
 "these both to present the desired information."
 msgstr ""
+"针对这些需求，可通过搜索栏选择 :icon:`fa-filter` :guilabel:`筛选条件` 或 :icon:`oi-group` "
+":guilabel:`分组条件`，也可组合使用这两种方式来呈现所需信息。"
 
 #: ../../content/applications/hr/attendances.rst:179
 msgid ":doc:`../essentials/search`"
-msgstr ""
+msgstr ":doc:`../essentials/search`"
 
 #: ../../content/applications/hr/attendances.rst:182
 msgid "High-value filters"
-msgstr ""
+msgstr "高价值筛选器"
 
 #: ../../content/applications/hr/attendances.rst:189
 msgid "Filter"
@@ -2284,7 +2320,7 @@ msgstr "筛选"
 
 #: ../../content/applications/hr/attendances.rst:190
 msgid "Common use case"
-msgstr ""
+msgstr "常见使用场景"
 
 #: ../../content/applications/hr/attendances.rst:191
 msgid "At Work"
@@ -2294,7 +2330,7 @@ msgstr "工作中"
 msgid ""
 "Verify employees still on-site before shutting down the building for the "
 "night, or to perform a head count."
-msgstr ""
+msgstr "在夜间关闭办公楼前确认仍在岗员工，执行人员清点。"
 
 #: ../../content/applications/hr/attendances.rst:194
 #: ../../content/applications/hr/lunch/orders.rst:84
@@ -2303,7 +2339,7 @@ msgstr "错误"
 
 #: ../../content/applications/hr/attendances.rst:195
 msgid "View all errors to correct them prior to payroll processing."
-msgstr ""
+msgstr "查看所有错误记录以便在薪资处理前修正。"
 
 #: ../../content/applications/hr/attendances.rst:196
 msgid "Automatically Checked-Out"
@@ -2313,7 +2349,7 @@ msgstr "自动签退"
 msgid ""
 "Perform an audit to determine employees who chronically forget to check-out "
 "of work."
-msgstr ""
+msgstr "审计经常忘记签退的员工。"
 
 #: ../../content/applications/hr/attendances.rst:198
 msgid "Date"
@@ -2321,21 +2357,21 @@ msgstr "日期"
 
 #: ../../content/applications/hr/attendances.rst:199
 msgid "Limit results to a specific pay-period or audit window."
-msgstr ""
+msgstr "将结果限定在特定薪资周期或审计时段。"
 
 #: ../../content/applications/hr/attendances.rst:200
 msgid "Active/Archived Employees"
-msgstr ""
+msgstr "在职/已存档员工"
 
 #: ../../content/applications/hr/attendances.rst:201
 msgid ""
 "Switch between current staff and former employees when auditing historical "
 "data."
-msgstr ""
+msgstr "审计历史数据时在当前员工与离职员工间切换。"
 
 #: ../../content/applications/hr/attendances.rst:204
 msgid "Insightful groupings"
-msgstr ""
+msgstr "智能分组"
 
 #: ../../content/applications/hr/attendances.rst:211
 msgid "Group by"
@@ -2343,7 +2379,7 @@ msgstr "分组"
 
 #: ../../content/applications/hr/attendances.rst:212
 msgid "When it helps"
-msgstr ""
+msgstr "适用场景"
 
 #: ../../content/applications/hr/attendances.rst:213
 #: ../../content/applications/hr/payroll/payroll_localizations/belgium.rst:977
@@ -2352,7 +2388,7 @@ msgstr "员工"
 
 #: ../../content/applications/hr/attendances.rst:214
 msgid "Review individual attendance records during a 1:1 meeting."
-msgstr ""
+msgstr "在1对1会议中查看个人考勤记录。"
 
 #: ../../content/applications/hr/attendances.rst:215
 msgid "Department"
@@ -2362,7 +2398,7 @@ msgstr "部门"
 msgid ""
 "Compare staffing levels and working hours to determine over-working and "
 "under-working teams."
-msgstr ""
+msgstr "对比人员配置与工时，识别工作超负荷或不足的团队。"
 
 #: ../../content/applications/hr/attendances.rst:217
 msgid "Manager"
@@ -2372,7 +2408,7 @@ msgstr "管理员"
 msgid ""
 "Determine where attendance follow-up questions can be directed to for an "
 "employee."
-msgstr ""
+msgstr "确定需要跟进考勤问题的员工对接人。"
 
 #: ../../content/applications/hr/attendances.rst:219
 msgid "Method"
@@ -2381,15 +2417,15 @@ msgstr "方法"
 #: ../../content/applications/hr/attendances.rst:220
 msgid ""
 "Spot trends in attendance methods to potentially resolve hardware issues."
-msgstr ""
+msgstr "发现考勤方式趋势以排查硬件问题。"
 
 #: ../../content/applications/hr/attendances.rst:221
 msgid "Date (Day/Week/Month)"
-msgstr ""
+msgstr "日期（日/周/月）"
 
 #: ../../content/applications/hr/attendances.rst:222
 msgid "Identify absenteeism spikes or seasonal patterns."
-msgstr ""
+msgstr "识别缺勤高峰或季节性规律。"
 
 #: ../../content/applications/hr/attendances.rst:227
 msgid "Attendance log details"
@@ -2403,6 +2439,8 @@ msgid ""
 "companies with hybrid working schedules, who may need to perform audits to "
 "ensure proper compliance."
 msgstr ""
+"Odoo "
+"会记录每次打卡的时间和位置信息（具体字段因打卡方式而异）。这些详细的考勤日志可确认员工在每个工作日的所在地点，特别适合需要审计混合办公合规性的企业。"
 
 #: ../../content/applications/hr/attendances.rst:234
 msgid "The detailed attendance log contains the following information:"
@@ -2420,20 +2458,20 @@ msgstr ":guilabel:`签到`：员工签到的日期和时间。"
 msgid ""
 ":guilabel:`Check Out`: the date and time the employee checked out. This "
 "**only** appears if the employee has checked out."
-msgstr ""
+msgstr ":guilabel:`签退时间`：员工签退的具体日期时间（**仅**当员工完成签退时显示）。"
 
 #: ../../content/applications/hr/attendances.rst:243
 msgid ""
 ":guilabel:`Worked Time`: the total amount of time the employee logged for "
 "the day, across multiple check-ins and outs. In an hour and minute format "
 "(HH:MM)."
-msgstr ""
+msgstr ":guilabel:`工作时长`：员工当天所有打卡记录累计的工作总时长（HH:MM格式）。"
 
 #: ../../content/applications/hr/attendances.rst:245
 msgid ""
 ":guilabel:`Worked Extra Hours`: approved overtime (shows **only** when "
 "present for the employee)."
-msgstr ""
+msgstr ":guilabel:`核准加班`：已批准的加班时长（**仅**当员工存在加班时显示）。"
 
 #: ../../content/applications/hr/attendances.rst:246
 msgid ""
@@ -2441,6 +2479,8 @@ msgid ""
 "working schedule (the :guilabel:`Worked Time` minus the approved "
 ":guilabel:`Worked Extra Hours`."
 msgstr ""
+":guilabel:`额外工时`：超出预期工作时间的无薪加班时长（即 :guilabel:`工作时长` 减去核准的 :guilabel:`核准加班` "
+"时长）。"
 
 #: ../../content/applications/hr/attendances.rst:250
 msgid "Check in/check out details"
@@ -2458,10 +2498,12 @@ msgid ""
 "<attendances/check-in>`, :ref:`Kiosk <attendances/kiosk-mode-entry>`, or "
 ":guilabel:`Manual` entry."
 msgstr ""
+":guilabel:`模式`：考勤提交方式，可能为：:ref:`系统托盘 <attendances/check-in>`、:ref:`终端机 "
+"<attendances/kiosk-mode-entry>`、:guilabel:`手动` 录入。"
 
 #: ../../content/applications/hr/attendances.rst:257
 msgid ":guilabel:`IP Address`: the device's IP address used to log in or out."
-msgstr ""
+msgstr ":guilabel:`IP 地址`：用于打卡的设备IP地址。"
 
 #: ../../content/applications/hr/attendances.rst:258
 msgid ""
@@ -2472,7 +2514,7 @@ msgstr ":guilabel:`Browser`：员工签到或签退时使用的网络浏览器�
 msgid ""
 ":guilabel:`Localisation`: the city and country associated with the "
 "computer's IP address."
-msgstr ""
+msgstr ":guilabel:`定位`：根据 IP 地址解析的城市与国家/地区。"
 
 #: ../../content/applications/hr/attendances.rst:260
 msgid ""
@@ -2482,6 +2524,8 @@ msgid ""
 "Coordinates`. This opens a map in a new browser tab, with the specific "
 "location pointed out."
 msgstr ""
+":guilabel:`GPS`坐标`：用户打卡时的具体经纬度。点击坐标下方的 :icon:`oi-arrow-right` "
+":guilabel:`查看地图` 按钮，将在新浏览器标签页打开标注具体位置的地图。"
 
 #: ../../content/applications/hr/attendances.rst-1
 msgid "The detailed information for an attendance entry."
@@ -2489,7 +2533,7 @@ msgstr "考勤记录的详细信息。"
 
 #: ../../content/applications/hr/attendances.rst:269
 msgid "Attendance errors"
-msgstr ""
+msgstr "考勤异常"
 
 #: ../../content/applications/hr/attendances.rst:271
 msgid ""
@@ -2498,12 +2542,14 @@ msgid ""
 "background. If in the :icon:`oi-view-list` :guilabel:`(List)` view, the "
 "entry text appears in red."
 msgstr ""
+"存在异常的记录会在概览仪表板显示为红色：:icon:`fa-tasks` :guilabel:`(甘特图)` 视图中显示红色背景。:icon:`oi-"
+"view-list` :guilabel:`(列表)` 视图中显示红色文本。"
 
 #: ../../content/applications/hr/attendances.rst:275
 msgid ""
 "An error occurs when an employee has checked in but not checked out within "
 "24 hours, or when a single check-in period exceeds 16 hours."
-msgstr ""
+msgstr "员工打卡后 24 小时内未签退，或单次打卡时段超过 16 小时，将触发异常。"
 
 #: ../../content/applications/hr/attendances.rst:278
 msgid ""
@@ -2530,7 +2576,7 @@ msgstr "弹出窗口中的所有信息都正确后，点击 :guilabel:`保存并
 msgid ""
 "To delete an entry, click the red :guilabel:`Delete` button on the pop-up "
 "window instead of making modifications to the entry."
-msgstr ""
+msgstr "如需删除记录，请点击弹窗中的红色 :guilabel:`删除` 按钮（而非修改记录）。"
 
 #: ../../content/applications/hr/attendances.rst:292
 msgid ":doc:`attendances/check_in_check_out`"
@@ -2550,11 +2596,11 @@ msgstr ":doc:`attendances/hardware`"
 
 #: ../../content/applications/hr/attendances.rst:296
 msgid ":doc:`attendances/attendance_reporting`"
-msgstr ""
+msgstr ":doc:`attendances/attendance_reporting`"
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:3
 msgid "Attendance reporting"
-msgstr ""
+msgstr "考勤报告"
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:5
 msgid ""
@@ -2564,10 +2610,12 @@ msgid ""
 "<attendances/overtime>`, and who is :ref:`not working their full shifts "
 "<attendances/absent>`."
 msgstr ""
+"**考勤** 应用报表可帮助管理者提前发现员工考勤问题，通过分析以下趋势提供洞察: ref:`加班较多的员工 "
+"<attendances/overtime>`，以及 :ref:`未完成完整班次的员工 <attendances/absent>`。"
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:11
 msgid "View report"
-msgstr ""
+msgstr "查看报告"
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:13
 msgid ""
@@ -2578,16 +2626,18 @@ msgid ""
 "columns are populated by the various attendance records. All entries are "
 "grouped by month."
 msgstr ""
+"点击顶部菜单的 :guilabel:报表，默认显示当前员工过去三个月的考勤数据（:icon:`oi-view-pivot` "
+":guilabel:`数据透视表` 格式）。行：按员工分组。列：各类考勤记录。所有数据按月聚合。"
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:18
 msgid "The columns presented are:"
-msgstr ""
+msgstr "包含以下列："
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:20
 msgid ""
 ":guilabel:`Worked Hours`: The total logged time the employee worked for the "
 "month."
-msgstr ""
+msgstr ":guilabel:`实际工时`：员工当月累计工作时间。"
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:21
 msgid ""
@@ -2595,18 +2645,19 @@ msgid ""
 "worked for the month, calculated from their :ref:`working schedule "
 "<employees/schedule>`, configured on their employee form."
 msgstr ""
+":guilabel:`预期工时`：根据员工表单中配置的 :ref:`工作时间表 <employees/schedule>` 计算的理论工作时间。"
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:24
 msgid ""
 ":guilabel:`Difference`: The difference from the :guilabel:`Expected Hours` "
 "and the :guilabel:`Worked Hours` for the employee that month."
-msgstr ""
+msgstr ":guilabel:`差异值`：当月 :guilabel:`预期工时` 与 :guilabel:`实际工时` 的差值。"
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:26
 msgid ""
 ":guilabel:`Balance`: The difference between the *approved* overtime, and the"
 " *total* overtime worked."
-msgstr ""
+msgstr ":guilabel:`核准差额`：*已批准* 加班时长与实际加班*总时长*的差值。"
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:29
 msgid ""
@@ -2624,7 +2675,7 @@ msgstr "默认报告视图，突出显示所有可选视图按钮。"
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:38
 msgid "Use case: monthly overtime"
-msgstr ""
+msgstr "使用场景：月度加班分析"
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:40
 msgid ""
@@ -2632,7 +2683,7 @@ msgid ""
 "employee salaries. When salaries exceed the expected amount, companies may "
 "see a rise in overhead costs when salary budgets are exceeded. This is why "
 "the attendance report is needed, to ensure no excessive overtime is logged."
-msgstr ""
+msgstr "加班直接影响企业人力成本（多数公司会编制薪资预算）。当实际薪资超出预算时，将导致运营成本上升。考勤报表的核心价值就在于监控异常加班情况。"
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:45
 msgid ""
@@ -2643,6 +2694,9 @@ msgid ""
 "Panel)` icon at the end of the search bar, then click :icon:`fa-caret-down` "
 ":guilabel:`Date`, and click the desired month."
 msgstr ""
+"查看指定月份员工加班数据步骤，进入考勤应用点击顶部菜单 :guilabel:`报表`。移除搜索栏默认的 :icon:`oi-group` "
+":guilabel:`日期: 月 > 员工` 分组。点击搜索栏末端的 :icon:`fa-caret-down` "
+":guilabel:`(展开搜索面板)` 图标。选择 :icon:`fa-caret-down` :guilabel:`日期`，并指定月份。"
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:50
 msgid ""
@@ -2652,6 +2706,8 @@ msgid ""
 ":guilabel:`Balance` attendance data for the selected month, grouped by "
 "employee."
 msgstr ""
+"接下来，点击左上角 :guilabel:`度量值` :icon:`fa-caret-down` 按钮，取消勾选 :guilabel:`预期工时` 和 "
+":guilabel:`实际工时`。系统将显示选定月份的 :guilabel:`差异值` 和 :guilabel:`核准差额` 数据（按员工分组）。"
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:55
 msgid ""
@@ -2660,6 +2716,8 @@ msgid ""
 ":guilabel:`Difference` column to sort by the amount of overtime. The highest"
 " positive number is the most overtime logged for that month."
 msgstr ""
+":guilabel:`差异值` 显示当月加班总时长，:guilabel:`核准差额`：未批准加班时长。点击 :guilabel:`差异值` "
+"列可排序，正数最大值即当月加班最多的员工。"
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:60
 msgid ""
@@ -2668,14 +2726,16 @@ msgid ""
 "overtime, with 10 hours and 25 minutes logged. Of that overtime, only 25 "
 "minutes was unapproved, for a total of ten paid overtime hours."
 msgstr ""
+"在以下示例中，4 月份共批准了 38 小时 53 分钟的加班。 :guilabel:`Michael Williams` 的加班时间最多，记录了 10 "
+"小时 25 分钟。在这些加班中，只有 25 分钟未经批准，总共有 10 个带薪加班小时。"
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:0
 msgid "The attendances report, showing only overtime for the month of April."
-msgstr ""
+msgstr "考勤报告，只显示四月份的加班情况。"
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:70
 msgid "Use case: absenteeism"
-msgstr ""
+msgstr "使用案例：缺勤"
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:72
 msgid ""
@@ -2684,6 +2744,7 @@ msgid ""
 " of work, or for working less hours than expected, without any approved time"
 " off."
 msgstr ""
+"当员工的:guilabel:`差异值` 显示为负数时，表明其实际工作时间未达到预期标准。这种情况可能源于忘记打卡操作，或是未经批准的情况下工作时间不足。"
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:76
 msgid ""
@@ -2692,6 +2753,8 @@ msgid ""
 ":guilabel:`Measures` :icon:`fa-caret-down` button in the upper-left corner, "
 "and ensure  **only** :guilabel:`Difference` is selected."
 msgstr ""
+"要分析最近三个月的考勤趋势数据，首先需打开**考勤**应用报表界面。接着点击左上角的 :guilabel:`度量值` :icon:`fa-caret-"
+"down`下拉按钮，确保**仅**勾选 :guilabel:`差异值` 这一指标。"
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:80
 msgid ""
@@ -2701,32 +2764,35 @@ msgid ""
 ":guilabel:`Difference` column name to sort by the total difference in logged"
 " hours from the expected hours."
 msgstr ""
+"接下来，通过点击行首的:icon:`fa-minus-square-o` :guilabel:`总计` 按钮重置行数据，再点击 :icon:`fa-"
+"plus-square`:guilabel:`总计` 并选择 :guilabel:`员工` 分组。点击 :guilabel:`差异值` "
+"列名即可按照实际工时与预期工时的总差值进行排序。"
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:85
 msgid ""
 "The employee who worked the least has the highest negative balance. Click on"
 " any of the numbers for the employee to view the detailed individual "
 "attendance records."
-msgstr ""
+msgstr "差异值负值最大的员工即为工时缺口最大的员工，点击任意数值即可查看该员工的详细考勤记录。"
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:89
 msgid ""
 "In the below example, the company has only been opened for two months, so "
 "data is only available for the last two months, even though the filter "
 ":guilabel:`Last 3 Months` is active."
-msgstr ""
+msgstr "在下方示例中，由于公司仅运营两个月，因此即使启用了:guilabel:`最近三个月` 筛选器，实际仅能查看两个月的数据。"
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:92
 msgid ""
 "From this report, it is determined that :guilabel:`Abigail Peterson` worked "
 "the least amount of hours over the past two months, working 25 hours less "
 "than was expected."
-msgstr ""
+msgstr "根据该报表显示，:guilabel:`Abigail Peterson` 在过去两个月的工作时长最少，比预期工时少了 25 小时。"
 
 #: ../../content/applications/hr/attendances/attendance_reporting.rst:0
 msgid ""
 "The attendance report showing the highest absences for the last two months."
-msgstr ""
+msgstr "展示最近两个月缺勤最严重员工的考勤报表。"
 
 #: ../../content/applications/hr/attendances/check_in_check_out.rst:3
 msgid "Check in and out"
@@ -2739,6 +2805,7 @@ msgid ""
 " application, or use a kiosk. For smaller companies, where every employee is"
 " also a user, this feature may be useful."
 msgstr ""
+"Odoo的**考勤**应用允许已登录数据库的用户无需进入**考勤**应用或使用终端机即可完成打卡操作。对于员工同时都是用户的小型企业来说，这一功能尤为实用。"
 
 #: ../../content/applications/hr/attendances/check_in_check_out.rst:9
 msgid ""
@@ -2749,6 +2816,9 @@ msgid ""
 "circle` :guilabel:`(green circle)` is visible. Click on the colored circle "
 "to reveal the attendance widget, enabling the user to check in or out."
 msgstr ""
+"用户可在 Odoo 主仪表板或任意应用界面完成打卡操作。位于顶部主菜单栏右上角（该菜单栏在所有应用界面均保持可见）的:icon:`fa-circle` "
+":guilabel:`(红色圆圈)` 或 :icon:`fa-circle` :guilabel:`(绿色圆圈)` "
+"即为打卡入口，点击该彩色圆圈即可展开打卡组件进行签到/签退操作。"
 
 #: ../../content/applications/hr/attendances/check_in_check_out.rst:18
 msgid "Check in"
@@ -2761,6 +2831,8 @@ msgid ""
 "and the attendance widget appears, displaying a green :guilabel:`Check in` "
 ":icon:`fa-sign-in` button."
 msgstr ""
+"当显示红色圆圈时，表示用户尚未签到。点击 :icon:`fa-circle` :guilabel:`(红色圆圈)` 将出现包含绿色 "
+":guilabel:`签到` :icon:`fa-sign-in`按钮的打卡组件。"
 
 #: ../../content/applications/hr/attendances/check_in_check_out.rst-1
 msgid "Top right main menu with check in button highlighted."
@@ -2770,13 +2842,13 @@ msgstr "右上角主菜单，签到按钮突出显示。"
 msgid ""
 "When the user checks in from the database, the **Attendances** app logs the "
 "location details for the user, including the IP Address and GPS coordinates."
-msgstr ""
+msgstr "用户通过数据库打卡时，**考勤**应用会记录包括IP地址和 GPS 坐标在内的详细位置信息。"
 
 #: ../../content/applications/hr/attendances/check_in_check_out.rst:31
 msgid ""
 "For the **Attendances** app to log the location details, the user must allow"
 " their computer to access their location information."
-msgstr ""
+msgstr "要使**考勤**应用记录位置信息，用户需授权其计算机访问位置信息服务。"
 
 #: ../../content/applications/hr/attendances/check_in_check_out.rst:34
 msgid ""
@@ -2798,6 +2870,9 @@ msgid ""
 ":icon:`fa-sign-in` button to a yellow :guilabel:`Check out` :icon:`fa-sign-"
 "out` button."
 msgstr ""
+"点击 :guilabel:`签到` :icon:`fa-sign-in` 按钮完成签到操作后，顶部菜单的 :icon:`fa-circle` "
+":guilabel:`(红色圆圈)` 将变为绿色，同时打卡组件界面同步更新。原有的绿色 :guilabel:`签到` :icon:`fa-sign-"
+"in` 按钮将替换为黄色 :guilabel:`签退` :icon:`fa-sign-out` 按钮，表示用户当前已签到。"
 
 #: ../../content/applications/hr/attendances/check_in_check_out.rst:45
 msgid "Click anywhere on the screen to close the attendance widget."
@@ -2862,7 +2937,7 @@ msgid ""
 "When the user checks out from the database, the **Attendances** app logs the"
 " location details for the user. This information is logged **only** if the "
 "user grants permission."
-msgstr ""
+msgstr "当用户通过数据库签退时，**考勤**应用同样会记录其位置信息（需用户授权后方可获取）。"
 
 #: ../../content/applications/hr/attendances/check_in_check_out.rst-1
 msgid ""
@@ -2877,6 +2952,8 @@ msgid ""
 "main **Attendances** dashboard, including check-ins and check-outs with no "
 "time value."
 msgstr ""
+"系统对用户每日的打卡次数不做限制，即使连续多次打卡且间隔时间为 00:00 "
+"也会被完整记录，所有打卡数据（包括零时长的记录）都会显示在**考勤**主仪表板中。"
 
 #: ../../content/applications/hr/attendances/hardware.rst:3
 msgid "Hardware"
@@ -3156,7 +3233,7 @@ msgstr ""
 msgid ""
 "The **Barcode** application **does not** need to be installed to use one of "
 "the Barcode/RFID settings."
-msgstr ""
+msgstr "**条形码** 应用的使用 **并不** 强制要求安装条形码/RFID相关模块。"
 
 #: ../../content/applications/hr/attendances/kiosks.rst:52
 msgid "Kiosk Settings section"
@@ -3757,6 +3834,9 @@ msgid ""
 "employee's real-time attendance and work location—data that drives payroll "
 "accuracy, capacity planning, and compliance reporting."
 msgstr ""
+"Odoo **员工** 模块集中管理着 :doc:`人事档案 <employees/new_employee>`、:doc:`雇佣合同 "
+"<payroll/contracts>` 和 :doc:`部门架构 <employees/departments>` "
+"等核心数据。正确配置该模块可确保仪表板实时显示每位员工的在岗状态和工作地点，这些关键数据直接影响薪资核算准确性、人力规划效率及合规性报告生成。"
 
 #: ../../content/applications/hr/employees.rst:53
 #: ../../content/applications/hr/fleet/new_vehicle.rst:16
@@ -3770,31 +3850,34 @@ msgstr "设置"
 msgid ""
 "To view and configure the available settings, navigate to "
 ":menuselection:`Employees app --> Configuration --> Settings`."
-msgstr ""
+msgstr "要查看和配置可用设置，请导航至 :menuselection:`员工应用 --> 配置 --> 设置`。"
 
 #: ../../content/applications/hr/employees.rst:61
 msgid ""
 ":guilabel:`Presence Display`: select how the employee's availability status "
 "is calculated."
-msgstr ""
+msgstr ":guilabel:`状态显示`：选择员工可用状态的判定方式。"
 
 #: ../../content/applications/hr/employees.rst:63
 msgid ""
 ":guilabel:`Based on attendances`: marked available when :ref:`checked into "
 "<attendances/check-in>` the **Attendances** app."
 msgstr ""
+":guilabel:`基于考勤记录`：当员工在**考勤**应用中 :ref:`完成签到 <attendances/check-in>` 时标记为在岗。"
 
 #: ../../content/applications/hr/employees.rst:65
 msgid ""
 ":guilabel:`Based on user status in system`: marked available when the "
 ":doc:`employee logs in to Odoo <attendances/check_in_check_out>`."
 msgstr ""
+":guilabel:`基于系统登录状态`：当员工 :doc:`登录 Odoo 系统 <attendances/check_in_check_out>` "
+"时标记为在岗。"
 
 #: ../../content/applications/hr/employees.rst:68
 msgid ""
 ":guilabel:`Advanced Presence Control`: when enabled, presence status can be "
 "calculated from operational signals rather than check-ins or logins:"
-msgstr ""
+msgstr ":guilabel:`高级在线状态控制`：启用后，可通过业务信号而非打卡/登录记录判定状态："
 
 #: ../../content/applications/hr/employees.rst:71
 msgid ""
@@ -3803,6 +3886,8 @@ msgid ""
 "Enter the minimum number of emails that must be sent in the :guilabel:`Sent "
 "Emails` field."
 msgstr ""
+":guilabel:`基于发送邮件数量`：当员工每小时发送邮件数达到设定值时标记为在岗，否则标记为离岗。在 :guilabel:`发送邮件数` "
+"字段输入要求的最低邮件发送量。"
 
 #: ../../content/applications/hr/employees.rst:74
 msgid ""
@@ -3811,6 +3896,8 @@ msgid ""
 "addresses in the :guilabel:`IP Addresses` field, separating each address "
 "with a comma."
 msgstr ""
+":guilabel:`基于IP地址`：仅当员工从指定的企业 IP 地址连接时标记为在岗。在 :guilabel:`IP 地址` 字段输入 IP "
+"地址（多个地址用逗号分隔）。"
 
 #: ../../content/applications/hr/employees.rst:78
 msgid ""
@@ -3819,6 +3906,9 @@ msgid ""
 "the display of :ref:`work experience <employees/resume>`, :ref:`skills "
 "<employees/skills>`, and :doc:`certifications <employees/certifications>`."
 msgstr ""
+":guilabel:`技能管理`：启用此选项可在员工档案中显示 :ref:`履历选项卡 <employees/resume>`，用于展示 "
+":ref:`工作经历 <employees/resume>`、:ref:`技能 <employees/skills>` 和 :doc:`证书 "
+"<employees/certifications>`。"
 
 #: ../../content/applications/hr/employees.rst:81
 msgid ""
@@ -3829,6 +3919,8 @@ msgid ""
 "displayed in the upper-right corner of the employee card, indicating their "
 "location by icon, and status by color."
 msgstr ""
+":guilabel:`远程办公`：启用此选项后，员工表单的 :ref:`工作信息 <employees/work-info-"
+"tab>` 选项卡将显示详细日程安排。启用后可为员工每个工作日设置具体工作地点，对应图标会显示在员工卡片右上角（图标表示地点，颜色表示状态）。"
 
 #: ../../content/applications/hr/employees.rst:88
 msgid ""
@@ -3836,22 +3928,24 @@ msgid ""
 "working from home that day. A :icon:`fa-building` :guilabel:`(building)` "
 "icon means the employee is scheduled to work at the office."
 msgstr ""
+"绿色 :icon:`fa-home` :guilabel:`(房屋)` 图标表示当日居家办公，:icon:`fa-"
+"building` :guilabel:`(建筑)` 图标表示计划在办公室工作。"
 
 #: ../../content/applications/hr/employees.rst:92
 msgid ""
 "The *color* of the icon indicates the employee's status, with green "
 "indicating present, yellow indicating absent, and gray indicating it is "
 "outside of the employee's working hours."
-msgstr ""
+msgstr "图标*颜色*代表员工状态：绿色表示在岗，黄色表示缺勤，灰色表示非工作时间。"
 
 #: ../../content/applications/hr/employees.rst:0
 msgid ""
 "Two employee Kanban cards displaying their working location and status."
-msgstr ""
+msgstr "两张展示员工工作地点和状态的看板卡片。"
 
 #: ../../content/applications/hr/employees.rst:99
 msgid "Work organization"
-msgstr ""
+msgstr "工作组织"
 
 #: ../../content/applications/hr/employees.rst:101
 msgid ""
@@ -3860,6 +3954,8 @@ msgid ""
 ":guilabel:`Appointment Resource Default Calendar`, and :guilabel:`Standard "
 "32 hours/week (4 work days, friday free)`."
 msgstr ""
+"通过下拉菜单选择默认的 "
+":guilabel:`公司工作时间`，默认可选方案包括：:guilabel:`标准40小时/周`、:guilabel:`预约资源默认日历`、:guilabel:`标准32小时/周`（4个工作日，周五休息）。"
 
 #: ../../content/applications/hr/employees.rst:105
 msgid ""
@@ -3868,16 +3964,18 @@ msgid ""
 "Working hours can be created and modified from both the **Payroll** and "
 "**Employees** apps."
 msgstr ""
+"所列工作时间选项与薪资应用中配置的 :ref:`工作时间表 <payroll/working-times>` "
+"同步，可通过**薪资**和**员工**应用创建或修改。"
 
 #: ../../content/applications/hr/employees.rst:110
 msgid "Employee update rights"
-msgstr ""
+msgstr "员工更新权限"
 
 #: ../../content/applications/hr/employees.rst:112
 msgid ""
 "Enable the :guilabel:`Employee Editing` option to allow employees to edit "
 "their own data on their employee record."
-msgstr ""
+msgstr "启用 :guilabel:`员工编辑` 选项，允许员工自行修改其档案数据。"
 
 #: ../../content/applications/hr/employees/badges.rst:5
 msgid ""
@@ -3886,28 +3984,30 @@ msgid ""
 "<../../sales/crm/optimize/gamification>`, through **eLearning** courses, or "
 "manually, as managers decide to award them."
 msgstr ""
+"在Odoo中，员工可通过以下方式获得徽章：自动获取（完成 :doc:`CRM应用创建的挑战 "
+"<../../sales/crm/optimize/gamification>`）、完成**在线学习**课程、由经理手动授予。"
 
 #: ../../content/applications/hr/employees/badges.rst:9
 msgid ""
 "Badges are a way to gamify the work day, can be created for any reason, and "
 "can be granted to any user."
-msgstr ""
+msgstr "徽章是工作场景的游戏化设计元素，可因任何原因创建并授予任意用户。"
 
 #: ../../content/applications/hr/employees/badges.rst:13
 msgid ""
 "Badges can **only** be awarded to :doc:`users of the database "
 "<../../general/users>`, *and* if the **eLearning** app is installed."
-msgstr ""
+msgstr "徽章**仅能**授予 :doc:`数据库用户 <../../general/users>`，*且*需安装**在线学习**应用。"
 
 #: ../../content/applications/hr/employees/badges.rst:17
 msgid "View available badges"
-msgstr ""
+msgstr "查看可用徽章"
 
 #: ../../content/applications/hr/employees/badges.rst:19
 msgid ""
 "To view the available badges that are configured by default, navigate to "
 ":menuselection:`Employees app --> Configuration --> Badges`."
-msgstr ""
+msgstr "前往 :menuselection:`员工应用 --> 配置 --> 徽章` 查看默认配置的徽章。"
 
 #: ../../content/applications/hr/employees/badges.rst:22
 msgid ""
@@ -3916,17 +4016,19 @@ msgid ""
 "awarded the badge for both the current month, and in total, appears, along "
 "with the badge description, and the avatar for each user who received the "
 "badge."
-msgstr ""
+msgstr "所有徽章以看板视图展示，包含：徽章 :guilabel:`名称` 和图像、当月及累计授予人数、徽章描述、获授用户的头像。"
 
 #: ../../content/applications/hr/employees/badges.rst:26
 msgid ""
 "Each badge has a :guilabel:`Grant` button to :ref:`award the badge "
 "<employees/grant_badge>` from the :guilabel:`Badges` dashboard."
 msgstr ""
+"每个徽章设有 :guilabel:`授予` 按钮，可直接从 :guilabel:`徽章` 看板 :ref:`颁发徽章 "
+"<employees/grant_badge>`。"
 
 #: ../../content/applications/hr/employees/badges.rst-1
 msgid "All the available badges, on the Badges dashboard."
-msgstr ""
+msgstr "徽章看板上的所有可用徽章。"
 
 #: ../../content/applications/hr/employees/badges.rst:33
 msgid "Create badges"
@@ -3938,6 +4040,7 @@ msgid ""
 "sufficient. This can be done from the :guilabel:`Badges` dashboard in the "
 "**Employees** app, or from the **CRM** app."
 msgstr ""
+"当默认徽章不满足需求时，可直接在数据库中创建新徽章。该操作可通过**员工**应用的 :guilabel:`徽章` 看板或 CRM 应用完成。"
 
 #: ../../content/applications/hr/employees/badges.rst:38
 msgid ""
@@ -3945,27 +4048,29 @@ msgid ""
 ":menuselection:`Employees app --> Configuration --> Badges`, then click the "
 ":guilabel:`New` button in the upper-left corner."
 msgstr ""
+"在**员工**应用中添加徽章步骤：前往 :menuselection:`员工应用 --> 配置 --> 徽章` 点击左上角 :guilabel:`新建`"
+" 按钮。"
 
 #: ../../content/applications/hr/employees/badges.rst:41
 msgid ""
 "Fill out the badge form as outlined in the :ref:`CRM documentation "
 "<crm/create-rewards>`."
-msgstr ""
+msgstr "按照 :ref:`CRM 文档 <crm/create-rewards>` 所述规范填写徽章表单。"
 
 #: ../../content/applications/hr/employees/badges.rst:44
 msgid ":ref:`CRM Gamification <crm/create-rewards>`"
-msgstr ""
+msgstr ":ref:`CRM 游戏化功能 <crm/create-rewards>`"
 
 #: ../../content/applications/hr/employees/badges.rst:47
 msgid "View employee badges"
-msgstr ""
+msgstr "查看员工徽章"
 
 #: ../../content/applications/hr/employees/badges.rst:49
 msgid ""
 "To view badges awarded to an employee, open the **Employees** app, and click"
 " on an employee record. Click on the :guilabel:`Received Badges` tab to view"
 " any awarded badges."
-msgstr ""
+msgstr "查看员工所获徽章路径，打开**员工**应用并选择员工档案，点击 :guilabel:`已获徽章` 选项卡。"
 
 #: ../../content/applications/hr/employees/badges.rst:53
 msgid ""
@@ -3973,10 +4078,12 @@ msgid ""
 " the :guilabel:`Settings` tab. Once a user is populated in the "
 ":guilabel:`Related User` field, the :guilabel:`Badges` tab appears."
 msgstr ""
+"若未显示该选项卡，说明 :guilabel:`设置` 选项卡中的 :guilabel:`关联用户` "
+"字段未填写。填写该字段后，:guilabel:`徽章` 选项卡将自动显示。"
 
 #: ../../content/applications/hr/employees/badges.rst:60
 msgid "Grant badges"
-msgstr ""
+msgstr "授予徽章"
 
 #: ../../content/applications/hr/employees/badges.rst:62
 msgid ""
@@ -3984,6 +4091,8 @@ msgid ""
 "the :guilabel:`Received Badges` tab. Click the :guilabel:`Grant a Badge` "
 "button to load a :guilabel:`Reward Employee` pop-up window."
 msgstr ""
+"授予徽章操作流程，打开员工档案并进入 :guilabel:`已获徽章` 选项卡。点击 :guilabel:`授予徽章` 按钮打开 "
+":guilabel:`奖励员工` 弹窗。"
 
 #: ../../content/applications/hr/employees/badges.rst:66
 msgid ""
@@ -3991,6 +4100,8 @@ msgid ""
 ":guilabel:`What are you thankful for?` field. The default options are "
 ":guilabel:`Good Job`, :guilabel:`Problem Solver`, and :guilabel:`Brilliant`."
 msgstr ""
+"通过下拉菜单在 :guilabel:`感谢原因？` "
+"字段选择要颁发的徽章，默认选项包括：:guilabel:`表现优异`、:guilabel:`问题解决者`、:guilabel:`才华横溢`。"
 
 #: ../../content/applications/hr/employees/badges.rst:71
 msgid ""
@@ -4000,6 +4111,7 @@ msgid ""
 "can be awarded at any time, it is advised to grant badges manually that are "
 "*not* associated with a challenge."
 msgstr ""
+"其他选项（如:guilabel:`入门`、:guilabel:`高级用户`、:guilabel:`社区英雄`）与挑战任务关联，通常通过完成挑战自动获取。虽然可随时授予这些徽章，但建议仅手动颁发*非*挑战关联的徽章。"
 
 #: ../../content/applications/hr/employees/badges.rst:76
 msgid ""
@@ -12746,7 +12858,7 @@ msgstr ""
 
 #: ../../content/applications/hr/payroll.rst:733
 msgid "Display section"
-msgstr ""
+msgstr "显示部分"
 
 #: ../../content/applications/hr/payroll.rst:735
 msgid ""
