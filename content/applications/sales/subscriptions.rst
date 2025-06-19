@@ -92,8 +92,8 @@ configuration fields:
      that month if payment is not received.
 
 - :guilabel:`Company`: optional assignment, if the database has :doc:`Multi-company
-  <../general/multi_company>` functionality enabled. Assigning this value will make the recurring
-  plan available for that company's location, specifically.
+  <../general/companies/multi_company>` functionality enabled. Assigning this value will make the
+  recurring plan available for that company's location, specifically.
 - :guilabel:`Invoice Email Template`: assigns a specific email template to be used in subscriptions
   invoicing communications. The default assignment here is `Invoice: Sending` which contains various
   dynamic fields that autopopulate specific variables across the :guilabel:`Subject` field and
