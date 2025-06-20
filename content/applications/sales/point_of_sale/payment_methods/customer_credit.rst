@@ -60,7 +60,7 @@ To use the customer account as a payment method for a purchase from the POS paym
 
 .. important::
    To effectively monitor and manage the customer’s unpaid debt, either :doc:`create an invoice
-   <../receipts_invoices>` for the order or install the :doc:`Accounting application
+   <../pos_invoices>` for the order or install the :doc:`Accounting application
    <../../../finance/accounting>`.
 
 Debt tracking

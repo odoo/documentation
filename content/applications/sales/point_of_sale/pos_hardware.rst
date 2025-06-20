@@ -52,7 +52,7 @@ Opening the customer display
 
 To open the customer display, follow these steps:
 
-#. :ref:`Open the POS register <pos/session-start>`.
+#. :ref:`Open the POS register <pos/open-register>`.
 #. Click the :icon:`fa-bars` (:guilabel:`hamburger menu`) icon.
 #. Click the :icon:`fa-desktop` (:guilabel:`Customer Display`) icon, which opens the customer
    display either in a new window to drag onto the second screen or directly onto the IoT-connected
@@ -71,7 +71,7 @@ support, follow these steps:
 
 #. :doc:`Activate the Point of Sale Mobile module <../../general/apps_modules>` to enable the
    customer display.
-#. :ref:`Open the POS register <pos/session-start>`.
+#. :ref:`Open the POS register <pos/open-register>`.
 #. Click the :icon:`fa-bars` (:guilabel:`hamburger menu`) icon.
 #. Click the :icon:`fa-desktop` (:guilabel:`Customer Display`) icon, which opens the customer
    display on the terminal's secondary screen.
@@ -162,7 +162,7 @@ turns green.
 Using a scale in PoS
 --------------------
 
-#. :ref:`Open the POS register <pos/session-start>`.
+#. :ref:`Open the POS register <pos/open-register>`.
 #. Select the product to weigh on the order screen or scan its barcode.
 #. Place the product on the scale and wait for the weight to be displayed in the popup window.
 #. Once the weight is determined, the price is automatically computed.
