@@ -151,13 +151,548 @@ Then, open your Adyen Merchant Account, go to :menuselection:`Account --> Settin
    :alt: Capture Delay settings in Adyen
 
 .. caution::
-   - If you configure Odoo to capture amounts manually, make sure to set the **Capture Delay** to
-     **manual** on Adyen. Otherwise, the transaction will be blocked in the authorized state in
-     Odoo.
+   If you configure Odoo to capture amounts manually, make sure to set the **Capture Delay** to
+   **manual** on Adyen. Otherwise, the transaction will be blocked in the authorized state in
+   Odoo.
 
 .. note::
-   - After **7 days**, if the transaction has not been captured yet, the customer has the right to
-     **revoke** it.
+   After **7 days**, if the transaction has not been captured yet, the customer has the right to
+   **revoke** it.
 
 .. seealso::
    :doc:`../payment_providers`
+
+Supported payment methods and features in Odoo
+==============================================
+
+.. |V| replace:: :icon:`fa-check`
+.. |X| replace:: :icon:`fa-times`
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: 10 25 25 8 8 8 8 8
+
+   * - Payment method
+     - Currencies
+     - Countries
+     - Manual capture
+     - Partial capture
+     - Refunds
+     - Partial refunds
+     - Tokenization
+   * - ACH Direct Debit
+     - USD
+     - Puerto Rico, United States
+     - |V|
+     - |X|
+     - |V|
+     - |V|
+     - |V|
+   * - Affirm
+     - USD
+     - USA
+     - |V|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - Afterpay (Clearpay)
+     - AUD, CAD, NZD, USD
+     - Australia, Canada, New Zealand, United States
+     - |V|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - Alipay
+     - All except CNY
+     - Australia, Austria, Belgium, Bulgaria, Canada, Croatia, Cyprus, Czech Republic, Denmark,
+       Estonia, Finland, France, Germany, Greece, Hong Kong, Hungary, Iceland, India, Indonesia,
+       Italy, Japan, Latvia, Lithuania, Luxembourg, Malaysia, Malta, Netherlands, New Zealand,
+       Norway, Philippines, Poland, Portugal, Puerto Rico, Romania, Singapore, Slovakia, Slovenia,
+       South Korea, Spain, Sweden, Switzerland, Taiwan, Thailand, United Kingdom, United States,
+       Vietnam
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - AlipayHK
+     - HKD
+     - Hong Kong
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - Alma
+     - EUR
+     - France
+     - |V|
+     - |V|
+     - |V|
+     - |V|
+     - |X|
+   * - BACS Direct Debit
+     - GBP
+     - United Kingdom
+     - |V|
+     - |X|
+     - |V|
+     - |V|
+     - |V|
+   * - Bancontact
+     - EUR
+     - Belgium
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |V|
+   * - Benefit
+     - BHD
+     - Bahrain
+     - |X|
+     - |X|
+     - |V|
+     - |X|
+     - |X|
+   * - Bizum
+     - EUR
+     - Spain
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - BLIK
+     - PLN
+     - Poland
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - Card
+     - All
+     - All
+     - |V|
+     - |V|
+     - |V|
+     - |V|
+     - |V|
+   * - Cash App Pay
+     - USD
+     - United States
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |V|
+   * - Clearpay
+     - GBP
+     - United Kingdom
+     - |V|
+     - |V|
+     - |V|
+     - |V|
+     - |X|
+   * - DANA
+     - IDR
+     - Indonesia
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |V|
+   * - DuitNow
+     - MYR
+     - MY
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - Elo
+     - All
+     - All
+     - |V|
+     - |V|
+     - |V|
+     - |V|
+     - |V|
+   * - EPS
+     - EUR
+     - Austria
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |V|
+   * - FPX
+     - MYR
+     - Malaysia
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - GCash
+     - PHP
+     - Philippines
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |V|
+   * - Giropay
+     - EUR
+     - Germany
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |V|
+   * - GoPay
+     - IDR
+     - Indonesia
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |V|
+   * - Hipercard
+     - All
+     - All
+     - |V|
+     - |V|
+     - |V|
+     - |V|
+     - |V|
+   * - iDEAL
+     - EUR
+     - Netherlands
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |V|
+   * - KakaoPay
+     - KRW
+     - South Korea
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |V|
+   * - Klarna
+     - AUD, CAD, CHF, CZK, DKK, EUR, GBP, NOK, NZD, PLN, SEK, USD
+     - Australia, Austria, Belgium, Canada, Czech Republic, Denmark, Finland, France, Germany,
+       Greece, Ireland, Italy, Netherlands, New Zealand, Norway, Poland, Portugal, Spain, Sweden,
+       Switzerland, United Kingdom, United States
+     - |V|
+     - |V|
+     - |V|
+     - |V|
+     - |V|
+   * - Klarna - Pay later
+     - CHF, DKK, EUR, GBP, NOK, PLN, SEK
+     - Austria, Belgium, Denmark, Finland, Germany, Netherlands, Norway, Poland, Sweden,
+       Switzerland, United Kingdom
+     - |V|
+     - |V|
+     - |V|
+     - |V|
+     - |V|
+   * - Klarna - Pay Now
+     - CHF, EUR, SEK
+     - Germany, Netherlands, Sweden, Switzerland
+     - |V|
+     - |V|
+     - |V|
+     - |V|
+     - |V|
+   * - Klarna - Pay over time
+     - UD, CAD, DKK, EUR, GBP, NOK, SEK, USD
+     - Australia, Austria, Canada, Czech Republic, Denmark, Finland, France, Germany, Greece,
+       Ireland, Italy, Netherlands, New Zealand, Norway, Portugal, Spain, Sweden, United Kingdom,
+       United States
+     - |V|
+     - |V|
+     - |V|
+     - |V|
+     - |V|
+   * - KNET
+     - KWD
+     - Kuwait
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - MB WAY
+     - EUR
+     - Portugal
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - MobilePay
+     - DKK, EUR, NOK, SEK
+     - Denmark, Finland
+     - |V|
+     - |V|
+     - |V|
+     - |V|
+     - |X|
+   * - MoMo
+     - VND
+     - Vietnam
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |V|
+   * - Multibanco
+     - EUR
+     - Portugal
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - Napas card
+     - VND
+     - Vietnam
+     - |X|
+     - |X|
+     - |V|
+     - |X|
+     - |X|
+   * - Online Banking Czech Republic
+     - CZK
+     - Czech Republic
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - Online Banking India
+     - INR
+     - India
+     - |X|
+     - |X|
+     - |V|
+     - |X|
+     - |V|
+   * - Online Banking Slovakia
+     - EUR
+     - Slovakia
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - Online Banking Thailand
+     - THB
+     - Thailand
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - Open Banking
+     - GBP
+     - Great Britain
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - P24 - Przelewy24
+     - EUR, PLN
+     - Poland
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |V|
+   * - PayBright
+     - CAD
+     - Canada
+     - |V|
+     - |V|
+     - |V|
+     - |V|
+     - |X|
+   * - PayNow
+     - SGD
+     - Singapore
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - PayPal
+     - All
+     - All
+     - |V|
+     - |V|
+     - |V|
+     - |V|
+     - |X|
+   * - PaySafeCard
+     - AED, AUD, BRL, CAD, CHF, CZK, DKK, EUR, GBP, GEL, GIP, HUF, ISK, KWD, MDL, MXN, NZD, PEN,
+       PLN, PYG, RON, RSD, SAR, SEK, TRY, USD, UYU
+     - Australia, Austria, Belgium, Brazil, Canada, Croatia, Cyprus, Czech Republic, Denmark,
+       Finland, France, Georgia, Germany, Gibraltar, Hungary, Iceland, Ireland, Italy, Kuwait,
+       Latvia, Liechtenstein, Lithuania, Luxembourg, Malta, Mexico, Moldova, Montenegro,
+       Netherlands, New Zealand, Norway, Paraguay, Peru, Poland, Portugal, Romania, Saudi Arabia,
+       Serbia, Slovakia, Slovenia, Spain, Sweden, Switzerland, Turkey, United Arab Emirates, United
+       Kingdom, United States, Uruguay
+     - |X|
+     - |X|
+     - |V|
+     - |X|
+     - |X|
+   * - Paytm
+     - INR
+     - India
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - Paytrail
+     - EUR
+     - Finland
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - Pix
+     - BRL
+     - Brazil
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - Prompt Pay
+     - THB
+     - Thailand
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - Ratepay
+     - EUR, CHF
+     - Austria, Germany, Netherlands, Switzerland
+     - |V|
+     - |V|
+     - |V|
+     - |V|
+     - |X|
+   * - Samsung Pay
+     - AUD, CAD, CHF, EUR, BGP, HKD, SEK, SGD, USD
+     - Australia, Canada, Honk Kong, Singapore, Spain, Sweden, Switzerland, United Kingdom, United
+       States
+     - |V|
+     - |V|
+     - |V|
+     - |V|
+     - |V|
+   * - SEPA Direct Debit
+     - EUR
+     - `SEPA countries
+       <https://www.europeanpaymentscouncil.eu/document-library/other/epc-list-sepa-scheme-countries>`_
+     - |V|
+     - |X|
+     - |V|
+     - |V|
+     - |V|
+   * - Sofort
+     - EUR, CHF
+     - Germany, Austria, Belgium, Netherlands, Spain, Switzerland, United Kingdom
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |V|
+   * - Swish
+     - SEK
+     - Sweden
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - Touch'n Go
+     - MYR
+     - Malaysia
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - Trustly
+     - CZK, DKK, EUR, GBP, NOK, SEK
+     - Austria, Denmark, Estonia, Finland, Germany, Latvia, Lithuania, Netherlands, Norway, Spain,
+       Sweden, United Kingdom
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - TWINT
+     - CHF
+     - CH
+     - |V|
+     - |V|
+     - |V|
+     - |V|
+     - |V|
+   * - Vipps
+     - NOK
+     - Norway
+     - |V|
+     - |V|
+     - |V|
+     - |V|
+     - |V|
+   * - WeChatPay
+     - AUD, CAD, CNY, EUR, GBP, HKD, JPY, NZD, SGD, USD
+     - All
+     - |X|
+     - |X|
+     - |V|
+     - |X|
+     - |X|
+   * - Wallets India
+     - INR
+     - India
+     - |X|
+     - |X|
+     - |V|
+     - |X|
+     - |X|
+   * - Walley
+     - DKK, EUR, NOK, SEK
+     - Denmark, Finland, Norway, Sweden
+     - |V|
+     - |V|
+     - |V|
+     - |V|
+     - |X|
+   * - Zip
+     - AUD, CAD, NZD, USD
+     - Australia, Canada, New Zealand, United States
+     - |V|
+     - |V|
+     - |V|
+     - |V|
+     - |V|
