@@ -4,7 +4,7 @@
 Cash machines
 =============
 
-Connecting and integrating a cash machine with a :ref:`POS system <pos/session-start>` enables
+Connecting and integrating a cash machine with a :ref:`POS system <pos/use/open-register>` enables
 automation of cash transactions, cash counting, and change return.
 
 .. _pos/cash_machines/configuration:
@@ -23,7 +23,7 @@ Configure the cash machine itself before setting it up in Odoo. Currently, Odoo 
 Use
 ===
 
-To process a :ref:`payment <pos/sell>` with a :ref:`configured cash machine
+To process a :ref:`payment <pos/use/sell>` with a :ref:`configured cash machine
 <pos/cash_machines/configuration>`, select the machine's :doc:`payment method <../payment_methods>`
 on the **payment screen**, then follow the instructions on the machine.
 

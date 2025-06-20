@@ -82,8 +82,8 @@ Create the payment method
    At least one bank account must be defined in the journal to allow QR code payments to be
    registered with bank apps.
 
-Once the payment method is created, go to the :ref:`POS' settings <configuration/settings>` and add
-the payment method to your POS under the :guilabel:`Payment` section.
+Once the payment method is created, go to the :ref:`POS' settings <pos/use/settings>` and add the
+payment method to your POS under the :guilabel:`Payment` section.
 
 .. image:: qr_code_payment/qr-configuration-setting.png
    :alt: Enable QR code payment method

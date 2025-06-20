@@ -34,7 +34,7 @@ To configure a QFPay payment terminal, follow these steps:
      refunds by QFPay.
    - Write the server address as follows: `https://yourdomain.odoo.com/qfpay/notify`.
    - If the terminal's IP address changes, update it in the :ref:`Odoo POS settings
-     <configuration/settings>` and request a new self-signed certificate from QFPay.
+     <pos/use/settings>` and request a new self-signed certificate from QFPay.
    - If a QFPay account already exists, contact `technical.support@qfpay.com` with the merchant
      information and server address.
 

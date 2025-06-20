@@ -29,7 +29,7 @@ Prerequisites
 Configure the payment method
 ----------------------------
 
-#. Enable the payment terminal :ref:`in the application settings <configuration/settings>` and
+#. Enable the payment terminal :ref:`in the application settings <pos/use/settings>` and
    :doc:`create a payment method for SIX terminals <../../payment_methods>`.
 #. Set the journal type as :guilabel:`Bank`.
 #. Fill in the :guilabel:`Outstanding Account` field.
@@ -59,6 +59,6 @@ Link the payment method to a POS
 
 Once the payment method is created, it can be selected in the POS settings. To do so,
 
-#. Go to the :ref:`POS' settings <configuration/settings>`.
+#. Go to the :ref:`POS' settings <pos/use/settings>`.
 #. Add the payment method under the :guilabel:`Payment methods` field within the :guilabel:`Payment`
    section.

@@ -4,7 +4,7 @@
 Payment terminals
 =================
 
-Connect and integrate a payment terminal to a :ref:`POS system <pos/session-start>` to accept
+Connect and integrate a payment terminal to a :ref:`POS system <pos/use/open-register>` to accept
 multiple payment options, including credit and debit cards.
 
 .. _pos/terminals/configuration:
@@ -41,7 +41,7 @@ To activate a payment terminal and allow processing payments with it, follow the
 Terminal use
 ============
 
-To process a :ref:`payment <pos/sell>` with a :ref:`configured terminal
+To process a :ref:`payment <pos/use/sell>` with a :ref:`configured terminal
 <pos/terminals/configuration>` for an order, select the terminal's :doc:`payment method
 <../payment_methods>` on the :guilabel:`Payment` screen, then follow the instructions on the
 terminal device.

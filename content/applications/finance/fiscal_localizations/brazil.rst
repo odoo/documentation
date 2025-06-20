@@ -723,7 +723,7 @@ Generating an NFC-e
 
 To generate an NFC-e, follow these steps:
 
-#. :ref:`Open the relevant point of sale shop and make a sale <pos/session-start>`.
+#. :ref:`Open the relevant point of sale shop and make a sale <pos/use/open-register>`.
 #. Validate the payment to calculate taxes and issue an NFC-e. The valid NFC-e appears on the right
    side of the screen.
 
@@ -782,8 +782,8 @@ If the NFC-e returns an error, follow these steps:
 NFC-e refunds & cancellations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:ref:`Refunds can be processed directly in Odoo <pos/refund>`, but *cancellations* must be performed
-through the official government portal.
+:ref:`Refunds can be processed directly in Odoo <pos/use/refund>`, but *cancellations* must be
+performed through the official government portal.
 
 When the process is finalized, the approved return NF-e is created, meaning the **previous NFC-e is
 canceled**.

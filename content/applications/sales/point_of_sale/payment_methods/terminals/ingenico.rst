@@ -41,13 +41,13 @@ At this point, the terminal restarts and should be displayed on the IoT system's
 Configure the payment method
 ----------------------------
 
-Enable the payment terminal :ref:`in the application settings <configuration/settings>` and
-:doc:`create the related payment method <../../payment_methods>`. Set the journal type as
-:guilabel:`Bank` and select :guilabel:`Ingenico` in the :guilabel:`Use a Payment Terminal` field.
-Then, select your terminal device in the :guilabel:`Payment Terminal Device` field.
+Enable the payment terminal :ref:`in the application settings <pos/use/settings>` and :doc:`create
+the related payment method <../../payment_methods>`. Set the journal type as :guilabel:`Bank` and
+select :guilabel:`Ingenico` in the :guilabel:`Use a Payment Terminal` field. Then, select your
+terminal device in the :guilabel:`Payment Terminal Device` field.
 
 .. image:: ingenico/payment-method.png
 
 Once the payment method is created, you can select it in your POS settings. To do so, go to the
-:ref:`POS' settings <configuration/settings>`, click :guilabel:`Edit`, and add the payment method
-under the :guilabel:`Payments` section.
+:ref:`POS' settings <pos/use/settings>`, click :guilabel:`Edit`, and add the payment method under
+the :guilabel:`Payments` section.
