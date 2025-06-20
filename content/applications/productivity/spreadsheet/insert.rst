@@ -8,6 +8,10 @@ Several elements from your Odoo database can be inserted into an Odoo spreadshee
 - pivot tables, i.e., data from a :ref:`pivot view <studio/views/reporting/pivot>`
 - charts, i.e., data from a :ref:`graph view <studio/views/reporting/graph>`
 
+.. note::
+   Lists, pivot tables, and charts from different apps and models can be inserted into the same
+   spreadsheet.
+
 Each time a list, pivot table, or chart is inserted, a :ref:`data source
 <spreadsheet/insert/data-sources>` is created. This data source connects the spreadsheet to your
 Odoo database, retrieving up-to-date information every time the spreadsheet is opened, the browser
@@ -20,10 +24,6 @@ data` from the menu bar.
 <spreadsheet/insert/pivot-table-functions-static>` to retrieve data from your database and can be
 further manipulated in the spreadsheet. Certain elements of :ref:`inserted charts
 <spreadsheet/insert/chart>` can be modified, but no data manipulation or computation is possible.
-
-.. note::
-   Lists, pivot tables, and charts from different apps and models can be inserted into the same
-   spreadsheet.
 
 .. tip::
    If you intend to use :doc:`global filters <global_filters>` to dynamically filter Odoo data in
@@ -45,10 +45,10 @@ Data sources
 ============
 
 Data sources, which are created each time a :ref:`list <spreadsheet/insert/list>`, :ref:`pivot table
-<spreadsheet/insert/pivot-table>` or :ref:`graph <spreadsheet/insert/chart>` is inserted into an
+<spreadsheet/insert/pivot-table>`, or :ref:`chart <spreadsheet/insert/chart>` is inserted into an
 Odoo spreadsheet, connect the spreadsheet and the relevant :doc:`model
-<../../studio/models_modules_apps>` in your database, keeping the data in the spreadsheet
-up-to-date.
+<../../studio/models_modules_apps>` in your database, ensuring the data stays up-to-date and
+allowing you to :ref:`access the underlying data <spreadsheet/insert/accessing-data>`.
 
 Each data source is defined by properties that can be accessed via the :guilabel:`Data` menu. Data
 sources are identified by their respective :icon:`oi-view-pivot` :guilabel:`(pivot table)`,
@@ -82,6 +82,26 @@ Clicking on a data source opens the related properties in a pane on the right of
       :alt: Warning message about unused list
 
    Deleting an inserted chart, on the other hand, also deletes the underlying data source.
+
+.. _spreadsheet/insert/accessing-data:
+
+Accessing underlying data
+-------------------------
+
+The underlying data of an inserted list, pivot table, or chart can be accessed at any time. To view:
+
+- an individual record of an **inserted list**, right-click any cell of the relevant row, then
+  select :icon:`fa-eye` :guilabel:`See record`
+- a list of records referenced by an individual cell of an **inserted pivot table**, right-click the
+  cell, then select :icon:`fa-eye` :guilabel:`See records`
+- a list of records represented by a data point of an **inserted chart**, click the data point.
+
+.. tip::
+   Use the middle mouse button or `Ctrl` + left-click (Microsoft/Linux), or `Command` + left-click
+   (Mac OS) to open the results in a new browser tab.
+
+To return to the spreadsheet after viewing the underlying data, click the name of the spreadsheet in
+the breadcrumbs at the top of the page.
 
 .. _spreadsheet/insert/list:
 
@@ -151,9 +171,6 @@ name of the list followed by the list ID, e.g., *Quotations by Total (List #1)*.
 side of the screen shows the :ref:`list properties <spreadsheet/insert/list-properties>`.
 
 .. tip::
-   - To view an individual record of an inserted list, right-click on any cell of the relevant row,
-     then click :icon:`fa-eye` :guilabel:`See record`. To return to the spreadsheet, click the name
-     of the spreadsheet in the breadcrumbs at the top of the page.
    - To sever the link between an inserted list and your database, select the entire list,
      right-click and select :icon:`fa-clipboard` :guilabel:`Copy` then right-click again and select
      :menuselection:`Paste special --> Paste as value`.
@@ -231,7 +248,7 @@ relevant.
 Manage an inserted list
 -----------------------
 
-Once a list from an Odoo database has been inserted into an Odoo spreadsheet, you can:
+After a list from an Odoo database has been inserted into an Odoo spreadsheet, you can:
 
 - :ref:`add records <spreadsheet/insert/list-add-records>`, i.e., rows
 - :ref:`add fields <spreadsheet/insert/list-add-fields>`, i.e., columns
@@ -381,9 +398,6 @@ Team (Pivot #1)*. A pane on the right side of the screen shows the :ref:`pivot t
 <spreadsheet/insert/pivot-table-properties>`.
 
 .. tip::
-   - To view the records referenced by an individual cell of a pivot table, right-click on the cell,
-     then click :icon:`fa-eye` :guilabel:`See record`. To return to the spreadsheet, click the name
-     of the spreadsheet in the breadcrumbs at the top of the page.
    - To sever the link between an inserted pivot table and your database, select the entire pivot
      table, right-click and select :icon:`fa-clone` :guilabel:`Copy`, then right-click again and
      select :menuselection:`Paste special --> Paste as value`.
@@ -476,7 +490,7 @@ To :ref:`duplicate <spreadsheet/insert/pivot-table-duplicate>` or :ref:`delete
 Manage an inserted pivot table
 ------------------------------
 
-Once a pivot table from an Odoo database has been inserted into an Odoo spreadsheet, you can:
+After a pivot table from an Odoo database has been inserted into an Odoo spreadsheet, you can:
 
 - :ref:`convert it to a dynamic pivot table <spreadsheet/dynamic-pivot-tables/create>` to be able to
   manipulate the dimensions and measures
@@ -555,7 +569,7 @@ To insert a chart from an Odoo database into an Odoo spreadsheet:
 Charts are inserted on the first sheet of the spreadsheet.
 
 .. tip::
-   Clicking on a data point in a chart opens the relevant list view in the database. In the example,q
+   Clicking on a data point in a chart opens the relevant list view in the database. In the example,
    clicking on :guilabel:`Jessica Childs` opens the list view of all sales by this salesperson that
    match the domain of the chart.
 
@@ -668,8 +682,22 @@ The :icon:`fa-sliders` :guilabel:`Configuration` tab includes the following sect
         .. image:: insert/chart-type-doughnut.png
            :alt: Doughnut chart icon
 
-        :guilabel:`Doughnut`: A variation of the pie chart with a hollow center, offering similar
+        :guilabel:`Doughnut`: a variation of the pie chart with a hollow center, offering similar
         use cases but with a modern aesthetic.
+
+     .. tab:: Hierarchical
+
+        .. image:: insert/chart-type-sunburst.png
+           :alt: Sunburst chart icon
+
+        :guilabel:`Sunburst`: a variation of the doughnut chart with hierarchical rings, showcasing
+        part-to-whole relationships across multiple levels.
+
+        .. image:: insert/chart-type-treemap.png
+           :alt: Treemap chart icon
+
+        :guilabel:`Treemap`: a multi-level rectangular chart that displays hierarchical data through
+        nested rectangles, ideal for illustrating proportions and categories.
 
      .. tab:: Miscellaneous
 
@@ -727,6 +755,12 @@ The :icon:`fa-sliders` :guilabel:`Configuration` tab includes the following sect
         :guilabel:`Geo`: visualizes data on a map using color variations to represent values or
         categories across different geographical regions.
 
+        .. image:: insert/chart-type-funnel.png
+           :alt: Geo chart icon
+
+        :guilabel:`Funnel`: visualizes data that progressively decreases over stages of a
+        process, with the option to display cumulative data for each stage.
+
 - :guilabel:`Domain`: the rules used to determine which records are shown. Click :ref:`Edit domain
   <search/custom-filters>` to add or edit rules.
 - :guilabel:`Link to Odoo menu`: to add a :ref:`clickable link <spreadsheet/insert/clickable-links>`
@@ -771,6 +805,42 @@ editor.
 
 Waterfall charts have a dedicated :guilabel:`Waterfall design` section.
 
+Manage an inserted chart
+------------------------
+
+After a chart from an Odoo database has been inserted into an Odoo spreadsheet, you can:
+
+- move the chart within the same sheet by selecting it, then dragging the chart to the desired
+  position
+- resize the chart by selecting it, then clicking and dragging the blue markers until the chart is
+  the desired size
+- hover over the chart, then click the :icon:`fa-bars` :guilabel:`(menu)` icon to reveal the
+  following options:
+
+  - :icon:`fa-clipboard` :guilabel:`Copy` or :icon:`os-cut` :guilabel:`Cut`: to copy or cut a chart
+    with the intention of pasting it *within the same spreadsheet*, click the relevant icon or use
+    the relevant keyboard shortcut. Paste the chart in the desired location by clicking
+    :menuselection:`Edit -->` :icon:`os-paste` :menuselection:`Paste` from the menu bar or use the
+    relevant keyboard shortcut.
+
+    .. note::
+       Copying/cutting and pasting a chart in this way maintains the link between the chart and your
+       database. The data in the pasted chart remains up-to-date, and clicking on a data point opens
+       the related list view in the database.
+
+  - :guilabel:`Copy as image`: to copy an image of a chart to your clipboard with the intention of
+    pasting it *in any location within or outside your spreadsheet*, click :guilabel:`Copy as
+    image`. Paste the image in the desired location using the paste function of the destination
+    program or the relevant keyboard shortcut.
+
+    .. note::
+       Copying and pasting a static image of a chart implies there is no longer any link between the
+       chart and your database.
+
+  - :icon:`fa-trash-o` :guilabel:`Delete`: delete a chart and its underlying :ref:`data source
+    <spreadsheet/insert/data-sources>` by clicking :icon:`fa-trash-o` :guilabel:`Delete`.
+    Alternatively, use your preferred keyboard command to delete a chart and its data source.
+
 .. _spreadsheet/insert/clickable-links:
 
 Insert clickable links
@@ -786,6 +856,9 @@ You can :ref:`insert a clickable link from any spreadsheet cell
 - another sheet inside the same spreadsheet
 - an external URL
 
+You can :ref:`insert a clickable link from any chart <spreadsheet/insert/clickable-links-chart>` to
+an Odoo menu item.
+
 .. note::
    - Clicking a link to a menu item provides the same result as navigating via the Odoo menu within
      an app, e.g., the menu item :guilabel:`Sales/Orders/Quotations` corresponds to the default view
@@ -794,8 +867,9 @@ You can :ref:`insert a clickable link from any spreadsheet cell
      starting from the view itself. However, as this method inserts each new link in a new sheet, it
      is more efficient to create links to specific views starting from the spreadsheet.
 
-You can :ref:`insert a clickable link from any chart <spreadsheet/insert/clickable-links-chart>` to
-an Odoo menu item.
+.. tip::
+   Use the middle mouse button or `Ctrl` + left-click (Microsoft/Linux), or `Command` + left-click
+   (Mac OS) to open clickable links in a new browser tab.
 
 .. _spreadsheet/insert/clickable-links-cell:
 
