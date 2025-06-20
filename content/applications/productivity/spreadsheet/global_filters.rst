@@ -17,7 +17,7 @@ customize the view to answer complex business questions spanning multiple data s
    .. image:: global_filters/dashboard-global-filters.png
       :alt: Global filters at the top of a dashboard
 
-Three types of global filters are available:
+Four types of global filters are available:
 
 - :ref:`Date <spreadsheet/global-filters/create-date>`: filters data based on a specific time range,
   with the options :guilabel:`Month / Quarter`, :guilabel:`Relative Period`, or :guilabel:`From /
@@ -27,6 +27,8 @@ Three types of global filters are available:
   related model.
 - :ref:`Text <spreadsheet/global-filters/create-text>`: filters data based on a string of text or a
   range of predefined values, e.g., a product reference or barcode.
+- :ref:`Yes/No <spreadsheet/global-filters/create-checkbox>`: filters data based on whether or not a
+  checkbox, or boolean, field is set, e.g., lead is active.
 
 Unlike the standard :icon:`fa-filter` :guilabel:`(Add filters)` spreadsheet function, which lets you
 sort and temporarily hide data, global filters act on the underlying :ref:`data sources
@@ -65,8 +67,9 @@ filter should act on, or match with.
 
 Field matching is further explained in the relevant sections on creating
 :ref:`Date <spreadsheet/global-filters/create-date>`,
-:ref:`Relation <spreadsheet/global-filters/create-relation>`, and
-:ref:`Text <spreadsheet/global-filters/create-text>` global filters.
+:ref:`Relation <spreadsheet/global-filters/create-relation>`,
+:ref:`Text <spreadsheet/global-filters/create-text>`, and
+:ref:`Yes/No <spreadsheet/global-filters/create-checkbox>` global filters.
 
 .. _spreadsheet/global-filters/create:
 
@@ -82,8 +85,8 @@ you are adding filters to a dashboard.
    :guilabel:`(Edit)` icon that appears when hovering over the dashboard name.
 
 To add a new filter, click :icon:`os-global-filters` :guilabel:`Filters`, then, under :guilabel:`Add
-a new filter...` click :guilabel:`Date`, :guilabel:`Relation`, or :guilabel:`Text` as appropriate.
-The :guilabel:`Filter properties` pane opens.
+a new filter...`, click :guilabel:`Date`, :guilabel:`Relation`, :guilabel:`Text`, or
+:guilabel:`Yes/No` as appropriate. The :guilabel:`Filter properties` pane opens.
 
 When saving a global filter, if any required information is missing or if any information provided
 in the :ref:`Field matching <spreadsheet/global-filters/field-matching>` section is not appropriate,
@@ -126,7 +129,7 @@ With the :guilabel:`Filter properties` pane open:
    The :guilabel:`Period offset` option, which appears when a date field is chosen, enables
    comparisons to be made by shifting the time range by one or more periods in the past or future.
    By default, no period offset is defined. To define a period offset, select :guilabel:`Previous`
-   or :guilabel:`Next`, then select the desired number of periods in the past of future.
+   or  :guilabel:`Next`, then select the desired number of periods in the past or future.
 
    .. tip::
 
@@ -213,9 +216,9 @@ Text
 ----
 
 .. note::
-   A :guilabel:`Text` filter can only match with a :ref:`Text (char)
-   <studio/fields/simple-fields-text>`, :ref:`Integer <studio/fields/simple-fields-integer>` or
-   :ref:`Decimal (float) <studio/fields/simple-fields-decimal>` field.
+   A :guilabel:`Text` filter can only match with a :ref:`Text
+   <studio/fields/simple-fields-text>` (char), :ref:`Integer <studio/fields/simple-fields-integer>`,
+   or :ref:`Decimal <studio/fields/simple-fields-decimal>` (float) field.
 
 With the :guilabel:`Filter properties` pane open:
 
@@ -237,7 +240,7 @@ With the :guilabel:`Filter properties` pane open:
       :alt: Global filters set on a pivot table
 
    In the :guilabel:`Filter properties`, the :guilabel:`Possible values` of the filter were
-   restricted to the range :guilabel:`'Products (List #1)'!A2:A34`. This corresponds to the range
+   restricted to the range `Products (List #1)'!A2:A34`. This corresponds to the range
    containing the :guilabel:`Display name` of the product on a list inserted in the spreadsheet.
 
    .. image:: global_filters/field-matching-text.png
@@ -245,12 +248,44 @@ With the :guilabel:`Filter properties` pane open:
       :scale: 80%
 
    With this configuration, the pivot table and chart can be filtered by product name by
-   selecting one of the predefined values available in the text filter. In this case,
+   selecting one of the predefined values available in the text filter. In the example,
    :guilabel:`Furniture` has already been selected as the :guilabel:`Product category`, meaning
    that only products of this category can be selected as possible values.
 
    Furthermore, if the values in the range have been retrieved dynamically from the database, as in
    this case, the text filter is also dynamic, i.e., will reflect changes made to those values.
+
+.. _spreadsheet/global-filters/create-checkbox:
+
+Yes/No
+------
+
+.. note::
+   A :guilabel:`Yes/No` filter can only match with a :ref:`Checkbox
+   <studio/fields/simple-fields-checkbox>` (boolean) field.
+
+With the :guilabel:`Filter properties` pane open:
+
+#. Enter a name for the new :guilabel:`Yes/No` filter in the :guilabel:`Label` field.
+#. Optionally, select :guilabel:`Is set` or :guilabel:`Is not set` as the :guilabel:`Default value`.
+#. In the :guilabel:`Field matching` section, for each data source, click below the data source name
+   and select the field the :guilabel:`Yes/No` filter should match with.
+#. Click :guilabel:`Save`.
+
+.. example::
+   In the example below, a :guilabel:`Yes/No` global filter was created to allow the user to see
+   all opportunities that are active, i.e., for which the :guilabel:`Active` checkbox is enabled
+   on the record, or all opportunities that are inactive, i.e., for which the :guilabel:`Active`
+   checkbox is disabled. Leaving the filter empty shows both active and inactive opportunities.
+
+   .. image:: global_filters/example-checkbox.png
+      :alt: Global filters set on a pivot table
+
+   In the :guilabel:`Field matching` section of the :guilabel:`Filter properties`, the field
+   :guilabel:`Active` was assigned as the matching field for the pivot table.
+
+   .. image:: global_filters/field-matching-checkbox.png
+      :alt: A yes/no filter with the Active field set as matching field
 
 Manage and use global filters
 =============================
@@ -265,8 +300,8 @@ It is possible to:
   .. tip::
      Reloading the browser will cause any global filters to reset to their initial state or default
      value, as relevant. To refresh data in an inserted list, pivot table, or chart without losing
-     global filters that have been applied, click :menuselection:`Data --> Refresh all data` from
-     the menu bar.
+     global filters that have been applied, click :menuselection:`Data -->` :icon:`os-refresh-data`
+     :menuselection:`Refresh all data` from the menu bar.
 
 - **Change the order** of existing filters by hovering over a filter and using the
   :icon:`os-thin-drag-handle` :guilabel:`(drag handle)` icon to change the position.
