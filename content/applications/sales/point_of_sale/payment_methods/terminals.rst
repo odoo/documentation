@@ -4,7 +4,7 @@
 Payment terminals
 =================
 
-Connect and integrate a payment terminal to a :ref:`POS system <pos/session-start>` to accept
+Connect and integrate a payment terminal to a :ref:`POS system <pos/open-register>` to accept
 multiple payment options, including credit and debit cards.
 
 .. _pos/terminals/configuration:
