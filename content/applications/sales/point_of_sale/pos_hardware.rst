@@ -33,26 +33,25 @@ Depending on the POS setup, the feature can be displayed directly on a secondary
 via USB-C or HDMI or on a screen connected through an IoT system.
 
 The feature is activated by default, but its background image can still be configured. To do so,
-navigate to the :ref:`POS settings <configuration/settings>` and scroll down to the
-:guilabel:`Connected Devices` section. Then, click :guilabel:`Upload your file` to set a background
-image.
+navigate to the :ref:`POS settings <pos/settings>` and scroll down to the :guilabel:`Connected
+Devices` section. Then, click :guilabel:`Upload your file` to set a background image.
 
 For displays connected using an :doc:`IoT system <../../general/iot>`:
 
-#. Navigate to the :ref:`POS settings <configuration/settings>`.
+#. Navigate to the :ref:`POS settings <pos/settings>`.
 #. Enable the :guilabel:`IoT Box` option to activate the IoT system in POS.
 #. Click :guilabel:`Save`, which activates the IoT app in Odoo.
 #. :doc:`Connect and configure an IoT system <../../general/iot/connect>` for a :doc:`display
    <../../general/iot/devices/screen>`.
-#. Return to the :ref:`POS settings <configuration/settings>` and select an IoT-connected screen
-   using the :guilabel:`Customer Display` field.
+#. Return to the :ref:`POS settings <pos/settings>` and select an IoT-connected screen using the
+   :guilabel:`Customer Display` field.
 
 Opening the customer display
 ----------------------------
 
 To open the customer display, follow these steps:
 
-#. :ref:`Open the POS register <pos/session-start>`.
+#. :ref:`Open the POS register <pos/open-register>`.
 #. Click the :icon:`fa-bars` (:guilabel:`hamburger menu`) icon.
 #. Click the :icon:`fa-desktop` (:guilabel:`Customer Display`) icon, which opens the customer
    display either in a new window to drag onto the second screen or directly onto the IoT-connected
@@ -71,7 +70,7 @@ support, follow these steps:
 
 #. :doc:`Activate the Point of Sale Mobile module <../../general/apps_modules>` to enable the
    customer display.
-#. :ref:`Open the POS register <pos/session-start>`.
+#. :ref:`Open the POS register <pos/open-register>`.
 #. Click the :icon:`fa-bars` (:guilabel:`hamburger menu`) icon.
 #. Click the :icon:`fa-desktop` (:guilabel:`Customer Display`) icon, which opens the customer
    display on the terminal's secondary screen.
@@ -101,7 +100,7 @@ Configuration
 Scale connection
 ~~~~~~~~~~~~~~~~
 
-#. :ref:`Access the POS settings <configuration/settings>`.
+#. :ref:`Access the POS settings <pos/settings>`.
 #. Scroll down to the :guilabel:`Connected Devices` section and enable :guilabel:`IoT Box`.
 #. Select the scale in the :guilabel:`Electronic Scale` field.
 #. Click :guilabel:`Save`.
@@ -162,7 +161,7 @@ turns green.
 Using a scale in PoS
 --------------------
 
-#. :ref:`Open the POS register <pos/session-start>`.
+#. :ref:`Open the POS register <pos/open-register>`.
 #. Select the product to weigh on the order screen or scan its barcode.
 #. Place the product on the scale and wait for the weight to be displayed in the popup window.
 #. Once the weight is determined, the price is automatically computed.

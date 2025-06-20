@@ -91,9 +91,8 @@ Payment method
 .. image:: mercado_pago/payment-method.png
    :alt: Form to create a new payment method.
 
-Select the payment method by going to the :ref:`POS' settings <configuration/settings>` and adding
-it to the payment method under the :guilabel:`Payment Methods` field of the :guilabel:`Payment`
-section.
+Select the payment method by going to the :ref:`POS' settings <pos/settings>` and adding it to the
+payment method under the :guilabel:`Payment Methods` field of the :guilabel:`Payment` section.
 
 .. important::
    Any action made on the terminal should trigger a notification on the POS interface. Ensure the

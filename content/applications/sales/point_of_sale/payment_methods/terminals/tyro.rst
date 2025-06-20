@@ -57,7 +57,7 @@ Add the payment method to a POS
 
 To add a **payment method** to your point of sale:
 
-#. Go to the :ref:`POS settings <configuration/settings>`.
+#. Go to the :ref:`POS settings <pos/settings>`.
 #. Select the POS in the :guilabel:`Point of Sale` field.
 #. Add the payment method under the :guilabel:`Payment Methods` field of the :guilabel:`Payment`
    section.
