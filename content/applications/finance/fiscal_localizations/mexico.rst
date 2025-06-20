@@ -1423,7 +1423,7 @@ to handle reversals of the sales entries when invoices are requested as well as 
 account for the new invoices.
 
 .. seealso::
-   :doc:`../../sales/point_of_sale/receipts_invoices`
+   :doc:`../../sales/point_of_sale/pos_invoices`
 
 .. _l10n/mx/pos/global-invoice:
 

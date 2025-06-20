@@ -1,42 +1,8 @@
-=====================
-Receipts and invoices
-=====================
-
-Receipts
+========
+Invoices
 ========
 
-Set up receipts by going to :menuselection:`Point of Sale --> Configuration --> Point of Sale`,
-selecting a POS, and scrolling down to the :guilabel:`Bills & Receipts` section.
-
-To **customize** the **header** and **footer**, activate :guilabel:`Header & Footer` and fill in
-both fields with the information to be printed on the receipts.
-
-To **print receipts** automatically once the payment is registered, enable the :guilabel:`Automatic
-Receipt Printing` setting.
-
-.. image:: receipts_invoices/receipt.png
-   :scale: 75%
-   :alt: POS receipt
-
-.. seealso::
-   - :ref:`pos/restaurant/bills`
-   - :doc:`configuration/epos_printers`
-
-Reprint a receipt
------------------
-
-From the POS interface, click :guilabel:`Orders`, open the dropdown selection menu next to the
-search bar, and change the default :guilabel:`All active orders` filter to :guilabel:`Paid`. Then,
-select the corresponding order and click :guilabel:`Print Receipt`.
-
-.. image:: receipts_invoices/print-receipt.png
-   :alt: Print receipt button from the backend
-
-.. note::
-   You can filter the list of orders using the search bar. Type in your reference and click
-   :guilabel:`Receipt Number`, :guilabel:`Date`, or :guilabel:`Customer`.
-
-.. _receipts-invoices/invoices:
+.. _pos_invoices/invoices:
 
 Invoices
 ========
@@ -46,9 +12,9 @@ upon payment and retrieve all past invoiced orders.
 
 .. note::
    An invoice created in a POS creates an entry into the corresponding :ref:`accounting journal
-   <cheat_sheet/journals>`, previously :ref:`set up <receipts_invoices/invoice_configuration>`.
+   <cheat_sheet/journals>`, previously :ref:`set up <pos_invoices/invoice_configuration>`.
 
-.. _receipts_invoices/invoice_configuration:
+.. _pos_invoices/invoice_configuration:
 
 Configuration
 -------------
@@ -58,7 +24,7 @@ To define what journals will be used for a specific POS, go to the :ref:`POS' se
 accounting journals used by default for orders and invoices in the :guilabel:`Default Journals`
 section.
 
-.. image:: receipts_invoices/invoice-config.png
+.. image:: pos_invoices/invoice-config.png
    :alt: accounting section in the POS settings
 
 Invoice a customer
@@ -83,7 +49,7 @@ To retrieve invoices from the **POS dashboard**,
 #. to access an order's invoice, open the **order form** by selecting the order, then click
    :guilabel:`Invoice`.
 
-.. image:: receipts_invoices/invoice-smart-button.png
+.. image:: pos_invoices/invoice-smart-button.png
    :alt: invoice smart button from an order form
 
 .. note::
@@ -101,7 +67,7 @@ invoice`. On the one hand, doing so generates an invoice available for download.
 the order status goes from :guilabel:`Paid` or :guilabel:`Posted` to :guilabel:`Invoiced` in the
 Odoo backend.
 
-.. image:: receipts_invoices/order-status.png
+.. image:: pos_invoices/order-status.png
    :alt: order status change
 
 To use this feature, you have to enable QR codes on receipts by going to :menuselection:`Point of
