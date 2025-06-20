@@ -58,8 +58,9 @@ to adjust cart items, apply discounts, set customers, etc., and the list of prod
 
    #. To change the **quantity**, click :guilabel:`Qty` and enter the number of products using the
       keypad.
-   #. To add a **discount** or modify the product **price**, click respectively :guilabel:`% Disc`
-      or :guilabel:`Price` and enter the amounts.
+   #. To add a **discount**, click :guilabel:`% Disc` and enter the discount value using the keypad.
+   #. To modify the product **price**, click :guilabel:`Price` and enter new product price using the
+      keypad.
 #. Once an order is completed, proceed to checkout by clicking :guilabel:`Payment`.
 
    #. Select the **payment method**.
@@ -118,40 +119,40 @@ for specific products and general notes for the entire order. To add a **custome
 
 #. Select a product from the cart.
 #. Click :guilabel:`Actions`.
-#. Select :guilabel:`Customer Note`, which opens a modal window in which to add or modify content
-   for the note.
+#. Select :guilabel:`Customer Note`, which opens a modal window to add or modify the note's content.
+
+.. note::
+   Product notes from an :doc:`imported SO <point_of_sale/shop/sales_order>` are displayed
+   identically in the cart.
 
 To add a **general note** for the complete order:
 
 #. Click :guilabel:`Actions` and
-#. Click :guilabel:`General Note`, which opens a modal window in which to add or modify content
-   for the note.
+#. Click :guilabel:`General Note`, which opens a modal window to add or modify the note's content.
 
-   - Manually type in the note content.
-   - Click the configured note model.
+   - Type the note directly into the window, or
+   - Use a configured note model to save time if the same content is frequently used. Click on the
+     desired note model to insert its text.
 
-To configure note models, go to :menuselection:`
+To set up note models:
 
-
-
-.. note::
-   - Product notes from an :doc:`imported SO <point_of_sale/shop/sales_order>` are displayed
-     identically in the cart.
-   - Save time by creating note models.
-
-.. image:: point_of_sale/customer-notes.png
-   :alt: Customer note button and notes (SO and POS session) on products in the cart
-   :scale: 50 %
+#. Navigate to :menuselection:`Configuration --> Note Models`.
+#. Click :guilabel:`New`.
+#. Enter the desired text for your note model and save it.
 
 Internal notes
 --------------
 
 In parallel, Internal Notes attach to items similarly but are destined to other users. For
-example, an additional information about an order for a cook, such as no tomato. That information,
+example, an additional information about an order for a cook, such as `no tomato`. That information,
 while useful, shouldn't be printed on the customer receipt. To add an **internal note**:
 
-#. Select an item from the cart
-#. Click :guilabel:`Internal Note` to add a note about that specific item.
+#. Select an item from the cart.
+#. Click :guilabel:`Internal Note`, which opens a modal window to add or modify the note's content.
+
+.. image:: point_of_sale/customer-notes.png
+   :alt: Customer note button and notes (SO and POS session) on products in the cart
+   :scale: 50 %
 
 .. _pos/refund:
 
@@ -188,54 +189,59 @@ original receipt or invoice and partially or fully canceling the document.
 Manage the cash register
 ========================
 
-To add or take out cash from the register, click the **menu icon** in the upper right corner of your
-screen and :guilabel:`Cash In/Out`.
+Odoo POS allows you to determine which coins and bills are allowed into a cash drawer. For example,
+bills over a specific amount could go directly into a safe; in this case, they couldn't be counted.
+To set up the allowed coins and bills:
 
-.. image:: point_of_sale/menu-button.png
-   :alt: Dropdown menu to close a POS session, reach the backend, add or take cash out or check
-         orders
+#. Navigate to :menuselection:`Configuration --> Coins/Bills`.
+#. Click :guilabel:`New` to add a new value.
+#. Select the POS where this value is available in the :guilabel:`Point of Sale` column.
 
-Doing so opens a pop-up window on which you can select :guilabel:`Cash In` or :guilabel:`Cash Out`,
-enter the amount and the reason, and click :guilabel:`Confirm`.
+To add or take out cash from the register:
+
+#. From an open session, click :icon:`fa-bars` (:guilabel:`hamburger menu`).
+#. Click :guilabel:`Cash In/Out`, which opens a modal window.
+#. Select :guilabel:`Cash In` or :guilabel:`Cash Out`.
+#. Enter the amount.
+#. Specify the reason for this addition or removal of cash.
+#. Finally, click :guilabel:`Confirm`.
+
+.. note::
+   Some users might not be allowed to do cash in or out actions depending on their :doc:`POS access
+   rights <point_of_sale/employee_login>`.
 
 .. _pos/session-close:
 
 Close the POS session
 =====================
 
-To close your session, click the **menu icon** in the upper right corner of your screen and
-:guilabel:`Close Session`.
+To close a session, click :icon:`fa-bars` (:guilabel:`hamburger menu`) and :guilabel:`Close
+Register`.
 
-Doing so opens the :guilabel:`Closing Control` pop-up screen. From this screen, you can retrieve
-various information:
+Doing so opens the :guilabel:`Closing Register` modal screen. From this screen, you can retrieve:
 
-- the number of orders made and the total amount made during the session;
-- the expected amounts grouped by payment method.
+- The number of orders and the total amount made during the session.
+- The expected amounts grouped by payment method.
 
-Before closing this window, count your cash using the calculator icon. Doing so opens a pop-up
-window that computes the total amount in the cash drawer depending on the coins and bills counted
-and added manually. Then, click :guilabel:`Confirm` or :guilabel:`Discard` to close the window. The
-computed amount is set in the :guilabel:`Counted` column, and the :guilabel:`Money Details` are
-specified in the **Notes** section.
-
-.. image:: point_of_sale/closing-control.png
-   :alt: How to close a POS session.
-
-Once you are done controlling the amounts, click :guilabel:`Close Session` to close and go back to
-the **POS dashboard**.
-
-.. note::
-   - To reach the backend without closing the session, click :guilabel:`Backend` on the dropdown
-     menu.
-   - To abort, click :guilabel:`Discard` on the pop-up window.
-   - Depending on your setup, you might only be allowed to close a session if the expected cash
-     revenue equals the counted cash. To close it anyway, click :guilabel:`Ok` on the
-     :guilabel:`Payments Difference` screen.
+#. Click :icon:`fa-money` (:guilabel:`money`) to specify the number of each coin and bill.
+#. Click :guilabel:`Confirm` to return to the previous modal window. The computed amount is set in
+   the :guilabel:`Cash Count` field, and the :guilabel:`Closing Details` are specified in the
+   :guilabel:`Closing Note` section.
+#. Click :guilabel:`Close Register` to close the register and post accounting entries.
 
 .. tip::
+   Click :icon:`fa-clone` (:guilabel:`clone`) to automatically fill in the field with the expected
+   amount.
+
+.. note::
+   - To abort, click :guilabel:`Discard` on the modal window.
+   - When the money counted does **not** match the expected amount, a :guilabel:`Payments
+     Difference` modal window automatically opens. Click :guilabel:`Proceed Anyway` to log the
+     difference for the books.
+   - In restaurant, closing the register when orders are still in draft is not allowed and opens a
+     modal window. Proceed with the remaining orders by clicking :guilabel:`Review Orders` or click
+     :guilabel:`Cancel Orders` to cancel all of them.
    - It is strongly advised to close your POS session at the end of each day.
-   - To look at all your previous sessions, go to :menuselection:`Point of Sale --> Orders -->
-     Sessions`.
 
 .. toctree::
    :titlesonly:
