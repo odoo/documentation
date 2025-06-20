@@ -58,17 +58,19 @@ by their ID and name, e.g., :icon:`oi-view-pivot` *(#1) Sales Analysis by Produc
 .. image:: insert/data-menu.png
    :alt: Data sources listed in Data menu
 
-Clicking on a data source opens the related properties in a pane on the right of the spreadsheet.
+Clicking on a data source opens the related properties in a panel on the right of the spreadsheet.
 
 .. tip::
-   - The properties pane can also be opened by right-clicking any cell of an inserted list or pivot
+   - The properties panel can also be opened by right-clicking any cell of an inserted list or pivot
      table, then clicking :icon:`oi-view-list` :guilabel:`See list properties` or
      :icon:`oi-view-pivot` :guilabel:`See pivot properties`, or by clicking the :icon:`fa-bars`
      :guilabel:`(menu)` icon at the top right of an inserted chart, then clicking
      :icon:`fa-pencil-square-o` :guilabel:`Edit`.
    - Once the properties of a specific data source are open, they remain open even when navigating
-     between spreadsheet tabs. To close the properties pane, click the :icon:`fa-times`
-     :guilabel:`(close)` icon at the top right of the pane.
+     between spreadsheet tabs. To close the properties panel, click the :icon:`fa-times`
+     :guilabel:`(close)` icon at the top right of the panel.
+   - Click :icon:`fa-thumb-tack` :guilabel:`(pin)` at the top of the properties panel to allow
+     another panel, such as the :doc:`global filters <global_filters>` panel, to open beside it.
 
 .. note::
    Deleting an inserted list or pivot table, or deleting the sheet into which it was inserted, does
@@ -165,7 +167,7 @@ To insert a list:
 #. Click :guilabel:`Confirm`.
 
 The list is inserted into a new sheet in the spreadsheet. The sheet tab in the bottom bar shows the
-name of the list followed by the list ID, e.g., *Quotations by Total (List #1)*. A pane on the right
+name of the list followed by the list ID, e.g., *Quotations by Total (List #1)*. A panel on the right
 side of the screen shows the :ref:`list properties <spreadsheet/insert/list-properties>`.
 
 .. tip::
@@ -334,7 +336,7 @@ To insert it, perform the following steps:
 #. Click :menuselection:`Data --> Re-insert list` from the menu bar, then select the appropriate
    list.
 #. Define the number of records to insert and click :guilabel:`Confirm`.
-#. Edit the :guilabel:`List Name` in the properties pane if needed.
+#. Edit the :guilabel:`List Name` in the properties panel if needed.
 #. Rename the sheet by right-clicking on the sheet tab, selecting :guilabel:`Rename`, and entering
    the new sheet name.
 
@@ -353,7 +355,7 @@ steps in any order:
 
 - Delete the spreadsheet table using your preferred means, e.g., via keyboard commands, spreadsheet
   menus, or by deleting the sheet. This deletes the visual representation of the data.
-- From the :ref:`properties pane <spreadsheet/insert/list-properties>` of the relevant list, click
+- From the :ref:`properties panel <spreadsheet/insert/list-properties>` of the relevant list, click
   the :icon:`fa-cog` :guilabel:`(gear)` icon then :icon:`fa-trash` :guilabel:`Delete`. This deletes
   the data source of the list from the spreadsheet.
 
@@ -390,7 +392,7 @@ To insert a pivot table:
 
 The pivot table is inserted into a new sheet in the spreadsheet. The sheet tab in the bottom bar
 shows the name of the pivot table followed by the pivot table ID, e.g., *Sales Analysis by Sales
-Team (Pivot #1)*. A pane on the right side of the screen shows the :ref:`pivot table properties
+Team (Pivot #1)*. A panel on the right side of the screen shows the :ref:`pivot table properties
 <spreadsheet/insert/pivot-table-properties>`.
 
 .. tip::
@@ -513,8 +515,8 @@ To duplicate a pivot table, perform the following steps:
    the :icon:`fa-cog` :guilabel:`(gear)` icon then :icon:`fa-clone` :guilabel:`Duplicate`.
 
    The duplicated pivot table is automatically inserted into a new sheet in the spreadsheet, with
-   the pivot table properties open in the right pane.
-#. Edit the :guilabel:`Name` in the properties pane and the sheet tab if needed.
+   the pivot table properties open in the right panel.
+#. Edit the :guilabel:`Name` in the properties panel and the sheet tab if needed.
 
 The new data source is assigned the next available pivot table ID. For example, if no other pivot
 tables have been inserted in the meantime, duplicating *Pivot #1* results in the creation of
@@ -537,7 +539,7 @@ following steps in any order:
 
 - Delete the spreadsheet table using your preferred means, e.g., via keyboard commands, spreadsheet
   menus, or by deleting the sheet. This deletes the visual representation of the data.
-- From the :ref:`properties pane <spreadsheet/insert/pivot-table-properties>` of the relevant pivot
+- From the :ref:`properties panel <spreadsheet/insert/pivot-table-properties>` of the relevant pivot
   table, click the :icon:`fa-cog` :guilabel:`(gear)` icon then :icon:`fa-trash` :guilabel:`Delete`.
   This deletes the data source of the pivot table.
 
@@ -725,6 +727,18 @@ The :icon:`fa-sliders` :guilabel:`Configuration` tab includes the following sect
         :guilabel:`Filled radar`: fills the area within the radar chart's polygon, emphasizing the
         overall magnitude of values across different attributes for comparison.
 
+        .. image:: insert/chart-type-geo.png
+           :alt: Geo chart icon
+
+        :guilabel:`Geo`: visualizes data on a map using color variations to represent values or
+        categories across different geographical regions.
+
+        .. image:: insert/chart-type-funnel.png
+           :alt: Funnel chart icon
+
+        :guilabel:`Funnel`: visualizes data that progressively decreases over stages of a
+        process, with the option to display cumulative data for each stage.
+
      .. tab:: Other
 
         When creating a chart from spreadsheet data, rather than inserting one from a graph view,
@@ -742,18 +756,6 @@ The :icon:`fa-sliders` :guilabel:`Configuration` tab includes the following sect
         :guilabel:`Scorecard`: used to summarize key performance indicators (KPIs) in a compact
         format, such as total sales or conversion rates, and compare to a baseline or a previous
         value.
-
-        .. image:: insert/chart-type-geo.png
-           :alt: Geo chart icon
-
-        :guilabel:`Geo`: visualizes data on a map using color variations to represent values or
-        categories across different geographical regions.
-
-        .. image:: insert/chart-type-funnel.png
-           :alt: Geo chart icon
-
-        :guilabel:`Funnel`: visualizes data that progressively decreases over stages of a
-        process, with the option to display cumulative data for each stage.
 
 - :guilabel:`Domain`: the rules used to determine which records are shown. Click :ref:`Edit domain
   <search/custom-filters>` to add or edit rules.
@@ -897,7 +899,7 @@ To insert a clickable link from a chart to an Odoo menu item:
    icon, then :icon:`fa-pencil-square-o` :guilabel:`Edit`. The chart properties appear at the right
    of the screen.
 #. At the bottom of the :icon:`fa-sliders` :guilabel:`Configuration` tab of the chart properties
-   pane, click under :guilabel:`Link to Odoo menu`, then select a menu.
+   panel, click under :guilabel:`Link to Odoo menu`, then select a menu.
 
 Hover over the top right of the chart's box to see that a new :icon:`fa-external-link`
 :guilabel:`(external link)` icon has been added.
