@@ -10,14 +10,13 @@ These filters are particularly useful for reports and dashboards as users can ea
 customize the view to answer complex business questions spanning multiple data sources.
 
 .. tip::
-   When a spreadsheet with global filters is added to a dashboard, the filters appear as dropdown
-   menus at the top of the dashboard. In a spreadsheet, they appear in a pane to the right of the
-   spreadsheet.
+   On a dashboard, global filters that have been :ref:`created in the underlying spreadsheet
+   <spreadsheet/global-filters/create>` are applied via the search bar at the top of the dashboard.
 
    .. image:: global_filters/dashboard-global-filters.png
       :alt: Global filters at the top of a dashboard
 
-Three types of global filters are available:
+Four types of global filters are available:
 
 - :ref:`Date <spreadsheet/global-filters/create-date>`: filters data based on a specific time range,
   with the options :guilabel:`Month / Quarter`, :guilabel:`Relative Period`, or :guilabel:`From /
@@ -27,6 +26,8 @@ Three types of global filters are available:
   related model.
 - :ref:`Text <spreadsheet/global-filters/create-text>`: filters data based on a string of text or a
   range of predefined values, e.g., a product reference or barcode.
+- :ref:`Yes/No <spreadsheet/global-filters/create-checkbox>`: filters data based on whether or not a
+  checkbox, or boolean, field is set, e.g., lead is active.
 
 Unlike the standard :icon:`fa-filter` :guilabel:`(Add filters)` spreadsheet function, which lets you
 sort and temporarily hide data, global filters act on the underlying :ref:`data sources
@@ -65,8 +66,9 @@ filter should act on, or match with.
 
 Field matching is further explained in the relevant sections on creating
 :ref:`Date <spreadsheet/global-filters/create-date>`,
-:ref:`Relation <spreadsheet/global-filters/create-relation>`, and
-:ref:`Text <spreadsheet/global-filters/create-text>` global filters.
+:ref:`Relation <spreadsheet/global-filters/create-relation>`,
+:ref:`Text <spreadsheet/global-filters/create-text>`, and
+:ref:`Yes/No <spreadsheet/global-filters/create-checkbox>` global filters.
 
 .. _spreadsheet/global-filters/create:
 
@@ -76,18 +78,26 @@ Create global filters
 Open the desired spreadsheet from the **Odoo Documents** app or via the **Odoo Dashboards** app if
 you are adding filters to a dashboard.
 
-.. tip::
-   To access the underlying spreadsheet of a dashboard, with the **Dashboards** app open,
-   :ref:`activate developer mode <developer-mode>`, then click the :icon:`fa-pencil`
-   :guilabel:`(Edit)` icon that appears when hovering over the dashboard name.
+To add a new filter, click :icon:`os-global-filters` :guilabel:`Filters` to open the
+:guilabel:`Filters` panel. Under :guilabel:`Create filter`, click :icon:`fa-calendar`
+:guilabel:`Date`, :icon:`fa-link` :guilabel:`Relation`, :icon:`fa-font` :guilabel:`Text`, or
+:icon:`fa-toggle-off` :guilabel:`Yes/No` as appropriate.
 
-To add a new filter, click :icon:`os-global-filters` :guilabel:`Filters`, then, under :guilabel:`Add
-a new filter...` click :guilabel:`Date`, :guilabel:`Relation`, or :guilabel:`Text` as appropriate.
-The :guilabel:`Filter properties` pane opens.
+.. note::
+   Depending on the data source(s) present in the spreadsheet, suggested :ref:`relation filters
+   <spreadsheet/global-filters/create-relation>` may be shown. Clicking on a suggested filter opens
+   the :guilabel:`Filter properties` panel with certain values preconfigured.
 
 When saving a global filter, if any required information is missing or if any information provided
 in the :ref:`Field matching <spreadsheet/global-filters/field-matching>` section is not appropriate,
 an error is shown stating :guilabel:`Some required fields are not valid`.
+
+.. tip::
+   - To access the underlying spreadsheet of a dashboard, :ref:`activate developer mode
+     <developer-mode>`, then click the :icon:`fa-pencil` :guilabel:`(Edit)` icon that appears when
+     hovering over the dashboard name in the left panel.
+   - Click :icon:`fa-thumb-tack` :guilabel:`(pin)` at the top of the :guilabel:`Filters` panel to
+     allow another panel, such as the :guilabel:`Filter properties` panel, to open beside it.
 
 .. _spreadsheet/global-filters/create-date:
 
@@ -98,35 +108,18 @@ Date
    A :guilabel:`Date` filter can only match with a :ref:`Date <studio/fields/simple-fields-date>`
    or :ref:`Date & Time <studio/fields/simple-fields-date-time>` field.
 
-With the :guilabel:`Filter properties` pane open:
+With the :guilabel:`Filter properties` panel open:
 
 #. Enter a name for the new date filter in the :guilabel:`Label` field.
-#. From the :guilabel:`Time range` dropdown menu, select one of the following:
-
-   - :guilabel:`Month / Quarter`: enables a dropdown menu of specific months and/or quarters and a
-     year selector for the year. The values :guilabel:`Months` and :guilabel:`Quarters` are enabled
-     by default. Disabling both of these values allows filtering by year only.
-
-     To set a :guilabel:`Default value`, enable
-     :guilabel:`Automatically filter on the current period` and choose whether to filter on the
-     current :guilabel:`Month`, :guilabel:`Quarter` or :guilabel:`Year`.
-
-   - :guilabel:`Relative Period`: enables a dropdown menu of specific time ranges relative to the
-     current date (e.g., :guilabel:`Year to Date`, :guilabel:`Last 7 Days`,
-     :guilabel:`Last 30 Days`, etc.).
-
-     To set a :guilabel:`Default value`, select one of the available values.
-
-   - :guilabel:`From / To`: enables :guilabel:`Date from...` and :guilabel:`Date to...` date
-     selection fields to define a specific time range (e.g., `06/05/2024` to `06/27/2024`).
-
+#. To set a :guilabel:`Default value`, select one of the available values, e.g, `Last 30 Days` or
+   `Month to Date`. When applying the global filter, any of the available values can be selected.
 #. In the :guilabel:`Field matching` section, for each data source, click beside :guilabel:`Date
    field` and select the field the filter should match with.
 
    The :guilabel:`Period offset` option, which appears when a date field is chosen, enables
    comparisons to be made by shifting the time range by one or more periods in the past or future.
    By default, no period offset is defined. To define a period offset, select :guilabel:`Previous`
-   or :guilabel:`Next`, then select the desired number of periods in the past of future.
+   or :guilabel:`Next`, then select the desired number of periods in the past or future.
 
    .. tip::
 
@@ -142,20 +135,19 @@ With the :guilabel:`Filter properties` pane open:
 #. Click :guilabel:`Save`.
 
 .. example::
-   In the example below, a :guilabel:`Date` global filter has been created to allow the pivot table
-   and chart to show sales data per quarter. If only a year is selected, data is shown for the
-   entire year.
+   In the example below, a :guilabel:`Date` global filter allows the pivot table and chart to show
+   sales data for any defined time period, in this case, `July 2025`. The :guilabel:`Custom Range`
+   always shows the actual dates corresponding to the chosen period; it can also be updated
+   directly.
 
    .. image:: global_filters/example-date.png
-      :alt: A date filter to filter on quarter and year
+      :alt: A date filter filters data for July 2025
 
    In the :guilabel:`Field matching` section of the :guilabel:`Filter properties`, the field
-   :guilabel:`Order Date` has been selected as the matching date field. A matching date field is not
-   needed for *List #1* as we will not use this filter on the data source in question.
+   :guilabel:`Order Date` has been selected as the matching date field.
 
    .. image:: global_filters/field-matching-date.png
       :alt: A date filter with the Order Date selected as the matching field
-      :scale: 80%
 
 .. _spreadsheet/global-filters/create-relation:
 
@@ -168,7 +160,7 @@ Relation
    <studio/fields/relational-fields-one2many>`, or :ref:`Many2Many
    <studio/fields/relational-fields-many2many>` field.
 
-With the :guilabel:`Filter properties` pane open:
+With the :guilabel:`Filter properties` panel open:
 
 #. Enter a name for the new relation filter in the :guilabel:`Label` field.
 
@@ -191,21 +183,19 @@ With the :guilabel:`Filter properties` pane open:
 #. Click :guilabel:`Save`.
 
 .. example::
-   In the example below, a :guilabel:`Relation` filter has been created to allow the pivot table
-   and chart to show sales data related to selected salespeople only. The *User* model was set as
-   the :guilabel:`Related model`.
+   In the example below, a :guilabel:`Relation` filter allows the pivot table and chart to show
+   sales data related to selected salespeople only. The *User* model is set as the
+   :guilabel:`Related model`.
 
    .. image:: global_filters/example-relation.png
       :alt: Relation filter set on a pivot table
 
    In the :guilabel:`Field matching` section of the :guilabel:`Filter properties`, the field
    :guilabel:`Salesperson` was automatically assigned as the matching field for both the pivot table
-   and the chart. A matching field is not needed for *List #1* as we will not use this filter on the
-   data source in question.
+   and the chart.
 
    .. image:: global_filters/field-matching-relation.png
       :alt: A relation filter with the User model configured
-      :scale: 80%
 
 .. _spreadsheet/global-filters/create-text:
 
@@ -213,15 +203,16 @@ Text
 ----
 
 .. note::
-   A :guilabel:`Text` filter can only match with a :ref:`Text (char)
-   <studio/fields/simple-fields-text>`, :ref:`Integer <studio/fields/simple-fields-integer>` or
-   :ref:`Decimal (float) <studio/fields/simple-fields-decimal>` field.
+   A :guilabel:`Text` filter can only match with a :ref:`Text
+   <studio/fields/simple-fields-text>` (char), :ref:`Integer <studio/fields/simple-fields-integer>`,
+   or :ref:`Decimal <studio/fields/simple-fields-decimal>` (float) field.
 
-With the :guilabel:`Filter properties` pane open:
+With the :guilabel:`Filter properties` panel open:
 
 #. Enter a name for the new text filter in the :guilabel:`Label` field.
 #. Optionally, enable :guilabel:`Restrict values to a range`. Doing so allows you to input a
-   spreadsheet range either by typing the range or selecting it from within the spreadsheet.
+   spreadsheet range either by typing the range or selecting it from the relevant sheet. The
+   referenced range must be in the same spreadsheet.
 #. Optionally, enter a :guilabel:`Default value`.
 #. In the :guilabel:`Field matching` section, for each data source click below the data source name
    and select the field the :guilabel:`Text` filter should match with.
@@ -229,28 +220,55 @@ With the :guilabel:`Filter properties` pane open:
 #. Click :guilabel:`Save`.
 
 .. example::
-   In the example below, a :guilabel:`Text` global filter was created to allow the user to select a
-   product from the :guilabel:`Product` filter and have both the pivot table and chart only show
-   sales data related to that specific product.
+   In the example below, a :guilabel:`Text` global filter allows the pivot table and chart to show
+   sales data only for products whose internal reference matches or contains the entered value, in
+   this case, `FURN`. Multiple values can be entered if desired.
 
    .. image:: global_filters/example-text.png
       :alt: Global filters set on a pivot table
 
-   In the :guilabel:`Filter properties`, the :guilabel:`Possible values` of the filter were
-   restricted to the range :guilabel:`'Products (List #1)'!A2:A34`. This corresponds to the range
-   containing the :guilabel:`Display name` of the product on a list inserted in the spreadsheet.
+   In the :guilabel:`Field matching` section of the :guilabel:`Filter properties`, the
+   :guilabel:`Internal Reference` of the :guilabel:`Product Variant` was selected as the matching
+   field for both the pivot table and the chart.
 
    .. image:: global_filters/field-matching-text.png
-      :alt: A text filter with a restricted range
-      :scale: 80%
+      :alt: A text filter matched to the product's internal reference
 
-   With this configuration, the pivot table and chart can be filtered by product name by
-   selecting one of the predefined values available in the text filter. In this case,
-   :guilabel:`Furniture` has already been selected as the :guilabel:`Product category`, meaning
-   that only products of this category can be selected as possible values.
+   .. tip::
+      If you selected :guilabel:`Restrict values to range` when configuring the text filter and
+      defined a range, you select the value of the text field from a dropdown.
 
-   Furthermore, if the values in the range have been retrieved dynamically from the database, as in
-   this case, the text filter is also dynamic, i.e., will reflect changes made to those values.
+.. _spreadsheet/global-filters/create-checkbox:
+
+Yes/No
+------
+
+.. note::
+   A :guilabel:`Yes/No` filter can only match with a :ref:`Checkbox
+   <studio/fields/simple-fields-checkbox>` (boolean) field.
+
+With the :guilabel:`Filter properties` pane open:
+
+#. Enter a name for the new :guilabel:`Yes/No` filter in the :guilabel:`Label` field.
+#. Optionally, select :guilabel:`Is set` or :guilabel:`Is not set` as the :guilabel:`Default value`.
+#. In the :guilabel:`Field matching` section, for each data source, click below the data source name
+   and select the field the :guilabel:`Yes/No` filter should match with.
+#. Click :guilabel:`Save`.
+
+.. example::
+   In the example below, a :guilabel:`Yes/No` global filter was created to allow the user to see
+   all active opportunities, i.e., for which the :guilabel:`Active` checkbox is enabled on the
+   record, or all inactive opportunities, i.e., for which the :guilabel:`Active` checkbox is
+   disabled. Leaving the filter empty shows both active and inactive opportunities.
+
+   .. image:: global_filters/example-boolean.png
+      :alt: Global filters set on a pivot table
+
+   In the :guilabel:`Field matching` section of the :guilabel:`Filter properties`, the field
+   :guilabel:`Active` was assigned as the matching field for the pivot table.
+
+   .. image:: global_filters/field-matching-checkbox.png
+      :alt: A yes/no filter with the Active field set as matching field
 
 Manage and use global filters
 =============================
@@ -265,8 +283,8 @@ It is possible to:
   .. tip::
      Reloading the browser will cause any global filters to reset to their initial state or default
      value, as relevant. To refresh data in an inserted list, pivot table, or chart without losing
-     global filters that have been applied, click :menuselection:`Data --> Refresh all data` from
-     the menu bar.
+     global filters that have been applied, click :menuselection:`Data -->` :icon:`os-refresh-data`
+     :menuselection:`Refresh all data` from the menu bar.
 
 - **Change the order** of existing filters by hovering over a filter and using the
   :icon:`os-thin-drag-handle` :guilabel:`(drag handle)` icon to change the position.
