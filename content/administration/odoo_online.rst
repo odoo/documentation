@@ -82,6 +82,10 @@ Download a ZIP file containing a backup of the database.
    Databases are backed up daily as per the `Odoo Cloud Hosting SLA
    <https://www.odoo.com/cloud-sla>`_.
 
+.. important::
+   - If the Download option is disabled, your database is too large to be downloaded via this method. 
+   Instead, contact Odoo Support so they can provide it another way.
+
 .. _odoo_online/domains:
 
 Domain names
