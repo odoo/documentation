@@ -907,9 +907,9 @@ Odoo supports the latest version of the following browsers.
 .. _CSRF: https://en.wikipedia.org/wiki/Cross-site_request_forgery
 .. _ARP spoofing: https://en.wikipedia.org/wiki/ARP_spoofing
 .. _Nginx termination example:
-    https://nginx.com/resources/admin-guide/nginx-ssl-termination/
+    https://docs.nginx.com/nginx/admin-guide/security-controls/terminating-ssl-http/
 .. _Nginx proxying example:
-    https://nginx.com/resources/admin-guide/reverse-proxy/
+    https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/
 .. _socat: http://www.dest-unreach.org/socat/
 .. _PostgreSQL connection settings:
 .. _listen to network interfaces:
