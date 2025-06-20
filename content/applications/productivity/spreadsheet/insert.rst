@@ -629,6 +629,8 @@ The :icon:`fa-sliders` :guilabel:`Configuration` tab includes the following sect
         :guilabel:`Stacked Column`: displays part-to-whole relationships within categories, such as
         regional contributions to total sales.
 
+     .. tab:: Bar
+
         .. image:: insert/chart-type-bar.png
            :alt: Bar chart icon
 
