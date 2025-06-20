@@ -212,7 +212,7 @@ extensions.append('sphinx.ext.graphviz' if shutil.which('dot') else 'graphviz_pl
 todo_include_todos = False
 
 intersphinx_mapping = {
-    'python': ('https://docs.python.org/3/', None),
+    'python': ('https://docs.python.org/3/', '../invs/python.inv'),
     # apparently local inventories are relative to the source dir?
     'werkzeug': ('https://werkzeug.palletsprojects.com/', '../invs/werkzeug.inv'),
 }
