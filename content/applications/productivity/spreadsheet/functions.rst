@@ -221,7 +221,7 @@ Filter
    * - ODOO.FILTER.VALUE(filter_name)
      - Returns the current value of a spreadsheet filter (not compatible with Excel)
    * - SORT(range, [sort_column, ...], [is_ascending, ...])
-     - `Excel SORT article <https://support.microsoft.com/en-us/office/sort-function-22f63bd0-ccc8-492f-953d-c20e8e44b86c>`_
+     - `Excel SORT article <https://support.microsoft.com/office/sort-function-22f63bd0-ccc8-492f-953d-c20e8e44b86c>`_
    * - UNIQUE(range, [by_column], [exactly_once])
      - `Excel UNIQUE article <https://support.microsoft.com/office/unique-function-c5ab87fd-30a3-4ce9-9d1a-40204fb85e1e>`_
 
@@ -408,6 +408,8 @@ Logical
      - `Excel NOT article <https://support.microsoft.com/office/not-function-9cfc6011-a054-40c7-a140-cd4ba2d87d77>`_
    * - OR(logical_expression1, [logical_expression2, ...])
      - `Excel OR article <https://support.microsoft.com/office/or-function-7d17ad14-8700-4281-b308-00b131e22af0>`_
+   * - SWITCH(expression, case1, value1, [case2, ...], [value2, ...], [default])
+     - `Excel SWITCH article <https://support.microsoft.com/office/switch-function-47ab33c0-28ce-4530-8a45-d532ec4aa25e>`_
    * - TRUE()
      - `Excel TRUE article <https://support.microsoft.com/office/true-function-7652c6e3-8987-48d0-97cd-ef223246b3fb>`_
    * - XOR(logical_expression1, [logical_expression2, ...])
@@ -441,7 +443,7 @@ Lookup
    * - MATCH(search_key, range, [search_type])
      - `Excel MATCH article <https://support.microsoft.com/office/match-function-e8dffd45-c762-47d6-bf89-533f4a37673a>`_
    * - OFFSET(reference, rows, cols, [height], [width])
-     - `Excel OFFSET article <https://support.microsoft.com/en-us/office/offset-function-c8de19ae-dd79-4b9b-a14e-b4d906d11b66>`_
+     - `Excel OFFSET article <https://support.microsoft.com/office/offset-function-c8de19ae-dd79-4b9b-a14e-b4d906d11b66>`_
    * - PIVOT(pivot_id, [row_count], [include_total], [include_column_titles], [column_count])
      - Get a pivot table (not compatible with Excel)
    * - PIVOT.HEADER(pivot_id, [domain_field_name, ...], [domain_value, ...])
@@ -565,7 +567,7 @@ Math
    * - SECH(value)
      - `Excel SECH article <https://support.microsoft.com/office/sech-function-e05a789f-5ff7-4d7f-984a-5edb9b09556f>`_
    * - SEQUENCE(rows, [columns], [start], ][step])
-     - `Excel SEQUENCE article <https://support.microsoft.com/en-us/office/sequence-function-57467a98-57e0-4817-9f14-2eb78519ca90>`_
+     - `Excel SEQUENCE article <https://support.microsoft.com/office/sequence-function-57467a98-57e0-4817-9f14-2eb78519ca90>`_
    * - SIN(angle)
      - `Excel SIN article <https://support.microsoft.com/office/sin-function-cf0e3432-8b9e-483c-bc55-a76651c95602>`_
    * - SINH(value)
@@ -639,7 +641,7 @@ Parser
    * - Name and arguments
      - Description or link
    * - CONVERT(number, from_unit, to_unit)
-     - `Excel CONVERT article <https://support.microsoft.com/en-us/office/convert-function-d785bef1-808e-4aac-bdcd-666c810f9af2>`_
+     - `Excel CONVERT article <https://support.microsoft.com/office/convert-function-d785bef1-808e-4aac-bdcd-666c810f9af2>`_
 
 .. _spreadsheet/functions/statistical:
 
@@ -813,7 +815,7 @@ Text
    * - UPPER(text)
      - `Excel UPPER article <https://support.microsoft.com/office/upper-function-c11f29b3-d1a3-4537-8df6-04d0049963d6>`_
    * - VALUE(text)
-     - `Excel VALUE article <https://support.microsoft.com/en-us/office/value-function-257d0108-07dc-437d-ae1c-bc2d3953d8c2>`_
+     - `Excel VALUE article <https://support.microsoft.com/office/value-function-257d0108-07dc-437d-ae1c-bc2d3953d8c2>`_
 
 .. _spreadsheet/functions/web:
 
