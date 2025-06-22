@@ -3216,7 +3216,7 @@ msgstr ""
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:129
 #: ../../content/applications/finance/accounting/customer_invoices/payment_terms.rst:130
 msgid "Due date"
-msgstr "期日"
+msgstr "支払期日"
 
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:100
 #: ../../content/applications/finance/accounting/customer_invoices/cash_discounts.rst:115
@@ -5599,7 +5599,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/customer_invoices/payment_terms.rst:78
 msgid "Terms are computed in the order of their due dates."
-msgstr "期日は期日の古い順に計算されます。"
+msgstr "支払条件行は、その支払期日の順に計算されます。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/payment_terms.rst:81
 msgid ""
@@ -5784,6 +5784,8 @@ msgid ""
 "number. By default, it uses the sequence format `INV/year/incrementing-"
 "number` (e.g., `INV/2025/00001`), which restarts from `00001` each year."
 msgstr ""
+"顧客請求書を確定すると、Odoo は固有の請求書参照番号を生成します。デフォルトでは、`INV/年/連番` (例: `INV/2025/00001`) "
+"という形式の番号が使用され、毎年 `00001` から再スタートします。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/sequence.rst:9
 msgid ""
@@ -5791,27 +5793,32 @@ msgid ""
 "<accounting/invoice/resequencing>` and its periodicity, and to :ref:`mass-"
 "resequence invoices <accounting/invoice/mass-resequencing>`."
 msgstr ""
+"ただし、:ref:`シーケンスのフォーマット <accounting/invoice/resequencing>` "
+"およびその周期設定を変更し、:ref:`顧客請求書をまとめて再付番 <accounting/invoice/mass-resequencing>` "
+"することができます。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/sequence.rst:13
 #: ../../content/applications/finance/accounting/vendor_bills/sequence.rst:14
 msgid "Changes made to reference numbers are logged in the chatter."
-msgstr ""
+msgstr "参照番号の変更は、チャターに記録されます。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/sequence.rst:18
 #: ../../content/applications/finance/accounting/vendor_bills/sequence.rst:19
 msgid "Changing the default sequence"
-msgstr ""
+msgstr "デフォルトのシーケンス(付番ルール)を変更する"
 
 #: ../../content/applications/finance/accounting/customer_invoices/sequence.rst:20
 msgid ""
 "To customize the default sequence, open the last confirmed invoice, click "
 ":guilabel:`Reset to Draft`, and edit the invoice's reference number."
 msgstr ""
+"デフォルトのシーケンス(付番ルール)をカスタマイズするには、最後に確定した顧客請求書を開き、 :guilabel:`ドラフトに戻す` "
+"をクリックして、顧客請求書の参照番号を編集します。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/sequence.rst-1
 #: ../../content/applications/finance/accounting/customer_invoices/sequence.rst-1
 msgid "Editing the reference number of an invoice."
-msgstr ""
+msgstr "顧客請求書の参照番号を編集します。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/sequence.rst:26
 msgid ""
@@ -5819,12 +5826,14 @@ msgid ""
 "invoices. For example, if the current invoice's month is added, the "
 "sequence's periodicity will change to every month instead of every year."
 msgstr ""
+"Odoo "
+"は、検出したフォーマットが今後のすべての顧客請求書にどのように適用されるかを説明します。たとえば、現在の請求書の月が追加された場合、シーケンス(付番ルール)の周期設定は「毎年」から「毎月」に変更されます。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/sequence.rst:34
 msgid ""
 "The sequence format can be edited directly when creating the first invoice "
 "of a given sequence period."
-msgstr ""
+msgstr "シーケンス期間の最初の請求書を作成する際に、シーケンスの形式を直接編集することができます。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/sequence.rst:40
 msgid "Mass-resequencing invoices"
@@ -5911,6 +5920,8 @@ msgid ""
 "sequence is highlighted in red in the :guilabel:`Customer Invoices` list. "
 "This visual marker is permanent and purely informational."
 msgstr ""
+"シーケンスの変更がどこから始まったかを示すために、新しいシーケンスの最初の請求書は、:guilabel:`顧客請求書` "
+"リストで赤くハイライトされます。この視覚的なマーカーは恒久的で、情報提供のみを目的としています。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/sequence.rst:70
 msgid ""
@@ -5922,6 +5933,9 @@ msgid ""
 "temporary and will disappear once the entry's accounting date is on or after"
 " the lock date."
 msgstr ""
+"新しいシーケンスに、開いている期間内の仕訳の欠落、取消、削除などの不規則性がある場合、会計ダッシュボードの :guilabel:`顧客請求書` 仕訳帳に"
+" :guilabel:`シーケンスの欠落` メッセージが表示されます。関連する請求書の詳細を表示するには、 :guilabel:`シーケンスの欠落` "
+"をクリックします。この視覚的なマーカーは一時的なもので、仕訳の会計日付がロック日付以降になると消えます。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/sequence.rst:77
 #: ../../content/applications/finance/accounting/vendor_bills/sequence.rst:77
@@ -5944,11 +5958,13 @@ msgid ""
 "doesn't align with the date in the new sequence, such as using a 2024 "
 "sequence (INV/2024/XXXXX) for an invoice dated in 2025."
 msgstr ""
+"範囲が無効な場合。たとえば、2025 年の顧客請求書に 2024 年のシーケンス (INV/2024/XXXXX) "
+"を使用する場合など、:guilabel:`請求日` が新しいシーケンスの日付と一致しない場合です。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/sequence.rst:85
 #: ../../content/applications/finance/accounting/vendor_bills/sequence.rst:85
 msgid "In these cases, a :guilabel:`Validation Error` message appears."
-msgstr ""
+msgstr "このような場合、:guilabel:`検証エラー` メッセージが表示されます。"
 
 #: ../../content/applications/finance/accounting/customer_invoices/snailmail.rst:5
 msgid "Snailmail"
@@ -6516,6 +6532,8 @@ msgid ""
 "`Odoo Tutorials: Accounting and Invoicing - Getting started [video] "
 "<https://www.odoo.com/slides/slide/getting-started-7063>`_"
 msgstr ""
+"`Odooチュートリアル: 会計と請求 - 始めましょう [動画] "
+"<https://www.odoo.com/slides/slide/getting-started-7063>`_"
 
 #: ../../content/applications/finance/accounting/get_started/avg_price_valuation.rst:3
 msgid "Average price on returned goods"
@@ -8016,12 +8034,16 @@ msgid ""
 "`Odoo Tutorials: Chart of accounts <https://www.odoo.com/slides/slide/chart-"
 "of-accounts-6834>`_"
 msgstr ""
+"`Odooチュートリアル: 勘定科目表 <https://www.odoo.com/slides/slide/chart-of-"
+"accounts-6834>`_"
 
 #: ../../content/applications/finance/accounting/get_started/chart_of_accounts.rst:186
 msgid ""
 "`Odoo Tutorials: Update your chart of accounts "
 "<https://www.odoo.com/slides/slide/update-your-chart-of-accounts-6391>`_"
 msgstr ""
+"`Odooチュートリアル: 勘定科目表を更新 <https://www.odoo.com/slides/slide/update-your-chart-"
+"of-accounts-6391>`_"
 
 #: ../../content/applications/finance/accounting/get_started/cheat_sheet.rst:7
 msgid "Accounting cheat sheet"
@@ -28912,7 +28934,7 @@ msgstr "デフォルト売掛金勘定"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:374
 msgid "Transfer Accounts"
-msgstr "転送アカウント"
+msgstr "振替勘定科目"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:375
 msgid "Conversion Rate"
