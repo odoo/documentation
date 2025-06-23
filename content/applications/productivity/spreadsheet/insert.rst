@@ -555,7 +555,7 @@ To insert a chart from an Odoo database into an Odoo spreadsheet:
 Charts are inserted on the first sheet of the spreadsheet.
 
 .. tip::
-   Clicking on a data point in a chart opens the relevant list view in the database. In the example,q
+   Clicking on a data point in a chart opens the relevant list view in the database. In the example,
    clicking on :guilabel:`Jessica Childs` opens the list view of all sales by this salesperson that
    match the domain of the chart.
 
