@@ -38,18 +38,17 @@ click :guilabel:`New`.
 Automatically
 -------------
 
-Vendor bills can be automatically created through various methods:
-
-- Emailing to an :ref:`email alias <invoice-digitization/email-alias>` associated with the purchase
-  journal. If the email does not contain a valid file, an automatic response notifies the sender
-  that no document was received.
-- Uploading a PDF: To upload a bill, go to :menuselection:`Accounting --> Vendors --> Bills`, then
-  click :guilabel:`Upload`.
+Vendor bills can be automatically created by sending an email to an :ref:`email alias
+<accounting/bill-digitization/email-alias>` associated with the purchase journal, or by
+:ref:`uploading a PDF <accounting/bill-digitization/manual-upload>`.
 
 .. note::
    - Once the bill is uploaded, the PDF document appears on the right side of the screen, making it
      easy to fill in the bill information.
-   - Bills can be :doc:`digitized <vendor_bills/invoice_digitization>` for automatic completion.
+   - Bills can be :doc:`digitized <vendor_bills/invoice_digitization>` for automatic
+     completion and :ref:`matched with purchase orders
+     <accounting/bill-digitization/vendor-bills-matching-po>` to replace OCR-detected data with the
+     existing purchase order's details.
    - Services such as digitizing scanned or PDF vendor bills in Odoo require :doc:`In-App
      Purchase (IAP) </applications/essentials/in_app_purchase>` credits.
 
@@ -61,6 +60,10 @@ following options:
 - :guilabel:`Always`
 - :guilabel:`Ask after 3 validations without edits`
 - :guilabel:`Never`
+
+.. seealso::
+   :ref:`Vendor bills matching with purchase orders
+   <accounting/bill-digitization/vendor-bills-matching-po>`
 
 .. _accounting/vendor_bills/bill-completion:
 
