@@ -187,6 +187,8 @@ Clicking :guilabel:`Print RFQ` downloads a PDF of the |RFQ|.
 .. seealso::
    :doc:`../../../essentials/contacts`
 
+.. _purchase/manage_deals/confirm-order:
+
 Confirm order
 -------------
 
