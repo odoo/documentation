@@ -34,8 +34,8 @@ tax, and click on :guilabel:`Save`.
 
 .. _taxes/list_activation:
 
-Activate sales taxes from the list view
-=======================================
+Activate taxes from the list view
+=================================
 
 As part of your :ref:`fiscal localization package <fiscal_localizations/packages>`, most of your
 country's sales taxes are already preconfigured on your database. However, only a few taxes are
