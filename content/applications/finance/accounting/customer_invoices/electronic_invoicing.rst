@@ -39,7 +39,6 @@ Odoo supports e-invoicing in many countries. Refer to the country's page for mor
 - :doc:`Norway <electronic_invoicing/norway>`
 - :doc:`Peru <electronic_invoicing/peru>`
 - :doc:`Poland <electronic_invoicing/poland>`
-- :doc:`Portugal <electronic_invoicing/portugal>`
 - :doc:`Romania <electronic_invoicing/romania>`
 - :doc:`Slovenia <electronic_invoicing/slovenia>`
 - :doc:`Spain <electronic_invoicing/spain>`
