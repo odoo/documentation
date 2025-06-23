@@ -32,8 +32,9 @@ Go to :menuselection:`Website --> Configuration --> Delivery Methods` and select
 in the list to :ref:`configure it <inventory/shipping_receiving/configure-delivery-method>`.
 
 .. seealso::
-   :doc:`Third-party shipping carriers
-   </applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper>`
+   - :doc:`Third-party shipping carriers
+     </applications/inventory_and_mrp/inventory/shipping_receiving/setup_configuration/third_party_shipper>`
+   - :doc:`Gelato </applications/sales/sales/gelato>`
 
 .. important::
    The field used to define additional fees **must** be filled **in your third-party delivery
