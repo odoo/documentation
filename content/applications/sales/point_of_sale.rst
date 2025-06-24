@@ -212,6 +212,7 @@ To get an overview of all orders, regardless of the session, click the vertical 
    :titlesonly:
 
    point_of_sale/configuration
+   point_of_sale/pos_hardware
    point_of_sale/employee_login
    point_of_sale/receipts_invoices
    point_of_sale/preparation
