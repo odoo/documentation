@@ -2,24 +2,30 @@
 Viva.com
 ========
 
-Connecting a **Viva.com** :doc:`payment terminal <../terminals>`  allows you to offer a fluid
-payment flow to your customers and ease the work of your cashiers.
+Connecting a **Viva.com** :doc:`payment terminal <../terminals>` gives customers a fluid payment
+flow and eases cashiers' work.
+
+.. important::
+   - Viva.com payment terminals do not require an :doc:`IoT Box </applications/general/iot>` to
+     operate.
+   - Many European countries support the use of Viva.com payment terminals. Check the `availability
+     of the Viva Terminal app in Europe <https://developer.viva.com/about-viva/>`_.
 
 .. note::
-   Viva.com lets you turn your phone into a mobile card reader: `Tap On Phone
+   Viva.com turns phones into card readers with `tapping options
    <https://www.viva.com/en-gb/blog/tap-on-phone-turn-your-phone-into-a-mobile-card-reader>`_.
 
 Configuration
 =============
 
-Start by creating your Viva.com account on `Viva.com website <https://www.viva.com>`_.
+Start by creating a Viva.com account on the `Viva.com website <https://www.viva.com>`_.
 
-Locate your Viva.com credentials
---------------------------------
+Viva.com account credentials
+----------------------------
 
-When configuring Viva.com in Point of Sale, you need to use specific credentials that are available
-in your Viva.com account. These credentials include your :ref:`Merchant ID <pos/viva_com/id-key>`,
-:ref:`API key <pos/viva_com/id-key>`, :ref:`POS API credentials <pos/viva_com/pos-api>`, and
+When configuring Viva.com in Odoo Point of Sale, use the specific credentials available in the
+created Viva.com account. These credentials include a :ref:`Merchant ID <pos/viva_com/id-key>`,
+:ref:`API key <pos/viva_com/id-key>`, :ref:`POS API credentials <pos/viva_com/pos-api>`, and a
 :ref:`Terminal ID <pos/viva_com/identifier>` number.
 
 .. _pos/viva_com/id-key:
@@ -27,9 +33,9 @@ in your Viva.com account. These credentials include your :ref:`Merchant ID <pos/
 Merchant ID and API key
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Locate your `Merchant ID and API key following the Viva documentation
-<https://developer.viva.com/getting-started/find-your-account-credentials/merchant-id-and-api-key/>`_.
-Then, save the keys and paste them into the Odoo :guilabel:`Merchant ID` and :guilabel:`API Key`
+Locate the `Merchant ID and API key
+<https://developer.viva.com/getting-started/find-your-account-credentials/merchant-id-and-api-key/>`_,
+then save the keys and paste them into the Odoo :guilabel:`Merchant ID` and :guilabel:`API Key`
 fields :ref:`when creating the payment method <pos/viva_com/method-creation>`.
 
 .. image:: viva_com/access-cred.png
@@ -43,13 +49,13 @@ fields :ref:`when creating the payment method <pos/viva_com/method-creation>`.
 POS API credentials
 ~~~~~~~~~~~~~~~~~~~
 
-Locate and generate your `POS API credentials following the Viva documentation
-<https://developer.viva.com/getting-started/find-your-account-credentials/pos-apis-credentials/>`_.
-Then, save the keys and paste them in the Odoo :guilabel:`Client secret` and :guilabel:`Client ID`
+Locate and generate the `POS API credentials
+<https://developer.viva.com/getting-started/find-your-account-credentials/pos-apis-credentials/>`_,
+then save the keys and paste them in the Odoo :guilabel:`Client secret` and :guilabel:`Client ID`
 fields :ref:`when creating the payment method <pos/viva_com/method-creation>`.
 
 .. warning::
-   These credentials are only displayed once. Ensure you keep a copy to secure them.
+   These credentials are only displayed once. Make sure to keep a copy to secure them.
 
 .. image:: viva_com/api-cred.png
    :alt: Client secret and client ID fields
@@ -63,21 +69,20 @@ fields :ref:`when creating the payment method <pos/viva_com/method-creation>`.
 Terminal ID
 ~~~~~~~~~~~
 
-Your terminal ID number is used to identify your terminal. To find it:
+The terminal ID number identifies the terminal. Follow these steps to find it:
 
 #. Go to your Viva.com account and select the relevant account.
 #. Go to :menuselection:`Sales --> Physical payments --> Card terminals` in the navigation menu.
-
-The terminal ID number is located under the :guilabel:`Terminal ID (TID)` column. Save it to paste
-it into the :guilabel:`Terminal ID` field :ref:`when creating the payment method
-<pos/viva_com/method-creation>`.
+#. Save the terminal ID number under the :guilabel:`Terminal ID (TID)` column.
+#. Paste the terminal ID number into the :guilabel:`Terminal ID` field :ref:`when creating the
+   payment method <pos/viva_com/method-creation>`.
 
 .. image:: viva_com/terminal-id.png
    :alt: Viva terminal ID
 
 .. _pos/viva_com/method-creation:
 
-Configure the payment method
+Payment method configuration
 ----------------------------
 
 #. :doc:`Activate the POS Viva.com module <../../../../general/apps_modules>` to enable the
@@ -102,19 +107,19 @@ Configure the payment method
 
 .. _pos/viva_com/webhook:
 
-Configure the webhook
+Webhook configuration
 ---------------------
 
-Webhooks allow you to receive real-time notifications whenever a transaction occurs within your
+Webhooks enable the reception of real-time notifications whenever a transaction occurs within your
 Viva.com account. Set them up for `payment transactions following the Viva.com documentation
 <https://developer.viva.com/webhooks-for-payments/transaction-payment-created/>`_.
 
 .. seealso::
    `Setting up webhooks <https://developer.viva.com/webhooks-for-payments/#setting-up-webhooks>`_
 
-Link the payment method to a POS
---------------------------------
+POS and Payment method link
+---------------------------
 
-Select the payment method in your POS settings once the payment method is created. To do so,
-go to the :ref:`POS' settings <configuration/settings>` and add the payment method under the
+To select a payment method after the :ref:`configuration <pos/viva_com/method-creation>`, go to the
+:ref:`POS settings <configuration/settings>` and add the payment method under the
 :guilabel:`Payment methods` field of the :guilabel:`Payment` section.
