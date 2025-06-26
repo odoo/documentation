@@ -289,6 +289,18 @@ is based on the PUC (Plan Unico de Cuentas).
 
 .. _localization/colombia/workflows:
 
+Multicurrency
+-------------
+The official exchange rate is provided by the `Banco de la República
+<https://suameca.banrep.gov.co/estadisticas-economicas/>`_.
+
+Go to :menuselection:`Accounting --> Configuration --> Settings --> Currencies: Automatic Currency
+Rates` to set an **Interval** for the exchange rate or select a different **service**.
+
+.. image::colombia/l10n-co-currency-rates.png
+   :align: center
+   :alt: Configuration for automatic currency rate for Colombia
+
 Main workflows
 ==============
 
