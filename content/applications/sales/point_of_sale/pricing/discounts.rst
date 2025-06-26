@@ -13,7 +13,7 @@ Apply manual discounts
 ======================
 
 If you seldom use discounts, applying manual ones might be the easiest
-solution for your Point of Sale.
+solution for your point of sale.
 
 You can either apply a discount on the whole order or on specific
 products inside an order.
@@ -34,7 +34,7 @@ Apply a global discount
 -----------------------
 
 To apply a discount on the whole order, go to :menuselection:`Point of
-Sales --> Configuration --> Point of Sale` and select your PoS.
+Sale --> Configuration --> Point of Sale` and select your PoS.
 
 Once on your PoS form, select *Global Discounts*, under the *Pricing* category.
 
@@ -62,7 +62,7 @@ Apply time-limited discounts
 ============================
 
 To activate time-limited discounts, you must activate the *Pricelists*
-feature. To do so, go to :menuselection:`Point of Sales -->
+feature. To do so, go to :menuselection:`Point of Sale -->
 Configuration --> Point of Sale` and open your PoS. Then, enable the
 pricelist feature.
 
@@ -98,4 +98,5 @@ pricelist.
    :align: center
    :alt: View of the button to use for time-limited discounts via the pos interface
 
-Click on it to instantly update the prices with the selected pricelist. Then, you can finalize the order.
+Click on it to instantly update the prices with the selected pricelist. Then, you can finalize the
+order.
