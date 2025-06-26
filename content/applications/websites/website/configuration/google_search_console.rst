@@ -39,7 +39,7 @@ This type of verification is usually simpler as you have multiple verification m
 using your existing Google Analytics or Tag Manager account. It also makes sense to view a section
 of your website separately. For example, if you work with a consultant on a specific part of your
 website, you might want to verify this part separately to limit access to your data. Enter the URL,
-e.g., `https://www.example.odoo.com` and click :guilabel:`Continue`.
+e.g., `https://example.odoo.com/` and click :guilabel:`Continue`.
 
 
 Site ownership verification
