@@ -224,8 +224,9 @@ the cancellation :guilabel:`Reason`, then click :guilabel:`Update Invoice`. The
 Employment Hero payroll
 =======================
 
-If your business is already up and running with :doc:`Employment Hero <employment_hero>`, you can
-use our connector as an alternative payroll solution.
+If your business is already up and running with :doc:`Employment Hero
+<../../hr/payroll/payroll_localizations/employment_hero>`, you can use our connector as an
+alternative payroll solution.
 
 .. important::
    To :ref:`configure the Employment Hero API <employment_hero/configuration>` for **Malaysia**, use
