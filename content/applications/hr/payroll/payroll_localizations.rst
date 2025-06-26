@@ -56,3 +56,4 @@ Payroll localization modules are available for the countries listed below.
    payroll_localizations/hong_kong
    payroll_localizations/jordan
    payroll_localizations/united_arab_emirates
+   payroll_localizations/employment_hero
