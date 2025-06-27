@@ -13,7 +13,7 @@ Scale
 Prerequisite
 ------------
 
-Connecting a scale requires the use of an Iot System.
+Connecting a scale requires the use of an IoT System.
 
 .. seealso::
    :doc:`../../general/iot/devices/scale`
@@ -50,7 +50,7 @@ Odoo setup
 ~~~~~~~~~~
 
 As scales are certified, Odoo must comply with specific requirements. If the database does not comply
-with the European regulation, a :icon:`fa-balance-scale` icon (:guilabel:`red scale`) is displayed
+with the European regulation, a :icon:`fa-balance-scale` icon is displayed
 in red. Clicking it opens a modal window stating the reason why the database isn't compliant. Click
 :guilabel:`Apply changes` to force the necessary changes onto the Odoo settings.
 
@@ -60,19 +60,19 @@ in red. Clicking it opens a modal window stating the reason why the database isn
 .. note::
    .. raw:: html
 
-      Once the database complies with the **European regulation**, the
+      Once the database complies with the European regulation, the scale icon changes its color
       <i class="fa fa-balance-scale" style="color:#d9555c;"></i> <i class="fa fa-arrow-right"></i>
       <i class="fa fa-balance-scale" style="color:#008818;"></i>
 
 
 
-- Customer et POS display: min 8 pouces
-
-
-Pour les trois décimal: clique apply changes et ça se fait tout seul
+- Customer and Point of Sale display must be minimum 8 inches
+- The weigh unit precision must be set to three decimal points
+- The code used with scales must be of the certified version. Any change in the code will invalidate the certification.
 
 
 Usage guidelines
+~~~~~~~~~~~~~~~~
 
-- quand tu pèses un produit, tu dois d'abord l'enlever avant d'en peser un deuxième
-- la balance doit repasser à zéro
+- When weighing a product remove it from the scale before weighing another one
+- The scale weight must change before weighing another product
