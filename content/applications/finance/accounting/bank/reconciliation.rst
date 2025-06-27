@@ -8,8 +8,8 @@ your business records, such as :doc:`customer invoices <../customer_invoices>`, 
 businesses, but it also offers several benefits, such as reduced risk of errors in financial
 reports, detection of fraudulent activities, and improved cash flow management.
 
-Thanks to the bank :doc:`reconciliation models <reconciliation_models>`, Odoo pre-selects the
-matching entries automatically.
+Thanks to the bank :doc:`reconciliation models <reconciliation_models>`, Odoo selects the matching
+entries automatically.
 
 .. seealso::
    - `Odoo Tutorials: Bank reconciliation
@@ -25,37 +25,60 @@ Bank reconciliation view
 To access a bank journal's **reconciliation view**, go to your :guilabel:`Accounting Dashboard` and
 either:
 
-- click the journal name (e.g., :guilabel:`Bank`) to display all transactions, including those
-  previously reconciled or
+- click the journal name (e.g., :guilabel:`Bank`) or its :guilabel:`Transactions` button to display
+  all transactions, including those previously reconciled, or
 - click the :guilabel:`Reconcile items` button to display all transactions Odoo pre-selected for
   reconciliation. You can remove the :guilabel:`Not Matched` filter from the search bar to include
   previously reconciled transactions.
 
 .. image:: reconciliation/bank-card.png
-   :alt: Reaching the bank reconciliation tool from your accounting dashboard
+   :alt: Reaching the bank reconciliation tool from the accounting dashboard
 
-The bank reconciliation view is structured into three distinct sections: transactions, counterpart
-entries, and resulting entry.
+The bank reconciliation view is composed of lines for each transaction of the journal with the
+newest displayed first. Each transaction has a date, a label, a partner (if any), :ref:`action
+buttons <accounting/reconciliation/action-buttons>` that execute different actions, and each line
+can be expanded to show additional information. **REMOVE?**
 
 .. image:: reconciliation/user-interface.png
    :alt: The user interface of the reconciliation view of a bank journal.
 
+.. _accounting/reconciliation/transactions:
+
 Transactions
-   The transactions section on the left shows all bank transactions, with the newest displayed
-   first. Click a transaction to select it.
+------------
 
-Counterpart entries
-   The counterpart entries section on the bottom right displays the options to match the selected
-   bank transaction. Multiple tabs are available, including
-   :ref:`reconciliation/existing-entries`, :ref:`reconciliation/batch-payments`,
-   :ref:`reconciliation/manual-operations`, and :guilabel:`Discuss`, which contains the chatter for
-   the selected bank transaction.
+Every transaction is linked to a journal entry that hits the journal's main account and its suspense
+account until it is fully reconciled, at which point the suspense account is replaced by the account
+of the reconciled entry. **Consider rewording**
 
-Resulting entry
-   The resulting entry section on the top right displays the selected bank transaction matched with
-   the counterpart entries and includes any remaining debits or credits. In this section, you can
-   validate the reconciliation or mark it as :guilabel:`To Check`. Any :ref:`reconciliation model
-   buttons <reconciliation/button>` are also available in the resulting entry section.
+Unreconciled transactions display the following information when expanded:
+
+- The date of the transaction
+- A button linked to the chatter. The icon of this button can vary:
+
+  - The :icon:`fa-comments-o` :guilabel:`(comments)` icon displays only on hover and indicates that
+    there is nothing to declare.
+  - The :icon:`fa-paperclip` :guilabel:`(attachments)` icon indicates that there is an attachment on
+    the journal entry.
+  - The :icon:`fa-clock-o` :guilabel:`(activities)` icon indicates that there is an activity
+    scheduled on the journal entry.
+
+- The label of the transaction
+- The partner of the transaction (if one is set)
+- Up to two :ref:`action buttons <accounting/reconciliation/action-buttons>`, depending on the
+  details of the transaction
+- The balance of the transaction
+
+.. note::
+   When the chatter of a transaction is open, the active transaction has a blue tag to indicate
+   which transaction's chatter is being displayed.
+
+.. _accounting/reconciliation/action-buttons:
+
+Possible action buttons
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Depending on the details of the transaction.
 
 .. _accounting/reconciliation/reconcile:
 
