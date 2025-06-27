@@ -26,7 +26,7 @@ Payroll localization modules are available for the countries listed below.
 - :doc:`Australia <payroll_localizations/australia>`
 - :doc:`Belgium <payroll_localizations/belgium>`
 - Bangladesh
-- Egypt
+- :doc:`Egypt <payroll_localizations/egypt>`
 - :doc:`Hong Kong <payroll_localizations/hong_kong>`
 - India
 - Indonesia
@@ -53,6 +53,7 @@ Payroll localization modules are available for the countries listed below.
 
    payroll_localizations/australia
    payroll_localizations/belgium
+   payroll_localizations/egypt
    payroll_localizations/hong_kong
    payroll_localizations/jordan
    payroll_localizations/united_arab_emirates
