@@ -12,10 +12,8 @@ hard-to-find data for a desired company.
    it with data.
 
 The information provided by partner autocomplete can include general information about the business
-(including full business name and logo), social media accounts, :guilabel:`Company type`,
-:guilabel:`Founded` information, :guilabel:`Sectors` information, the number of
-:guilabel:`Employees`, :guilabel:`Estimated revenue`, :guilabel:`Phone` number,
-:guilabel:`Timezone`, and :guilabel:`Technologies Used`.
+(including full business name and logo), :guilabel:`Phone` number, :guilabel:`Email`,
+:guilabel:`Tax ID`, address and UNSPSC activities as :guilabel:`Tags`.
 
 .. important::
    When getting a company's contact information make sure to be aware of the latest EU regulations.
@@ -45,13 +43,6 @@ For example, after typing `Odoo`, the following information populates:
 .. image:: partner_autocomplete/odoo-autocomplete.png
    :align: center
    :alt: Creating a new contact in Odoo
-
-In the chatter, the following information populates about the company, after clicking on the desired
-pre-populated contact:
-
-.. image:: partner_autocomplete/odoo-info-autocomplete.png
-   :align: center
-   :alt: View of the information being shown about odoo with the autocomplete option in Odoo
 
 .. tip::
    Partner Autocomplete also works if a :abbr:`VAT (value-added tax)` number is entered instead of
