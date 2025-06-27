@@ -62,79 +62,6 @@ go to :menuselection:`Website --> eCommerce --> Products`, click the :icon:`fa-c
    #. In the :guilabel:`Is Published` column, tick the box for any of the selected products, then
       :guilabel:`Confirm` to publish them.
 
-.. _ecommerce/products/shop-page:
-
-Shop page
-=========
-
-To customize the layout of the main :guilabel:`Shop` page or modify its content, click
-:guilabel:`Edit`. Go to the :guilabel:`Blocks` tab to add :doc:`building blocks
-<../../websites/website/web_design/building_blocks>` or to the
-:guilabel:`Customize` tab to change the page layout or add features:
-
-- :guilabel:`Layout`: Select :guilabel:`Grid` or :guilabel:`List`.
-
-   - :guilabel:`Size`: Set the number of products displayed per page and line.
-   - :guilabel:`Style`: Select :guilabel:`Default`, :guilabel:`Cards`, :guilabel:`Thumbnails`, or
-     :guilabel:`Grid`.
-   - :guilabel:`Image Size`: Choose the aspect ratio for the product images:
-     :guilabel:`Landscape (4/3)`, :guilabel:`Default (1/1)`, :guilabel:`Portrait (4/5)`, or
-     :guilabel:`Vertical (2/3)`. You can also adjust the display by changing the :guilabel:`Fill`
-     options to best fit your design preferences.
-
-- :guilabel:`Search Bar`: Toggle the switch to display a search bar at the top of the products
-   page.
-
-- :guilabel:`Prod. Desc.`: Toggle the switch to display the product description below the product's
-  name.
-
-- :guilabel:`Categories`: display product categories on the :guilabel:`Left`, on the
-  :guilabel:`Top`, or both. If :guilabel:`Left` is selected, you can enable
-  :guilabel:`Collapse Categories` to make the category menu collapsible.
-
-- :guilabel:`Datepicker`: Toggle the switch to display a date range calendar to check the
-  availability of rental products over a specific period. The
-  :doc:`Rental app <../../sales/rental>` must be installed to use this feature.
-
-- :guilabel:`Attributes`: Show product attributes on the :guilabel:`Left` and/or display a
-  :icon:`fa-sliders` (:guilabel:`dropdown toggle`) icon at the :guilabel:`Top` allowing customers to
-  filter products based on their attributes.
-
-  - :guilabel:`Price Filter`: Toggle the switch to display a :guilabel:`Price Range` bar, which
-    allows customers to filter products according to a specific price range by dragging adjustable
-    handles.
-  - :guilabel:`Product Tags`: Toggle the switch to display the :guilabel:`Product Template Tags` on
-    the product page and allow customers to filter products using those tags by going to the
-    :guilabel:`Tags` section in the left column.
-
-- :guilabel:`Top Bar`: Select :guilabel:`Sort By` to display a dropdown list in the top bar for
-  sorting products and/or :guilabel:`Layout` to allow customers to switch to the grid or list view
-  using the related icons.
-
-- :guilabel:`Default Sort`: Choose how products are sorted by default: :guilabel:`Featured`,
-  :guilabel:`Newest Arrivals`, :guilabel:`Name (A-Z)`, :guilabel:`Price - Low to High`, or
-  :guilabel:`Price - High to Low`.
-
-- :guilabel:`Buttons`:
-
-  - Select the :icon:`fa-shopping-cart` (:guilabel:`Shopping cart`) option to display an
-    :icon:`fa-shopping-cart` (:guilabel:`Add to cart`) icon on each product's image, which takes the
-    customer to the checkout page.
-
-.. _ecommerce/products/wishlist:
-
-  - Select the :icon:`fa-heart-o` (:guilabel:`Wishlist`) option to display an
-    :icon:`fa-shopping-cart` (:guilabel:`Add to wishlist`) icon on each product's image allowing
-    logged-in customers to save products to a wishlist.
-
-  - Select the :icon:`fa-exchange` (:guilabel:`Compare`) option to display the :icon:`fa-exchange`
-    (:guilabel:`Compare`) icon on each product's image allowing customers to :ref:`compare products
-    <ecommerce/products/product-comparison>` based on their attributes.
-
-.. tip::
-   To feature a product, go to the :ref:`product form <ecommerce/products/product-form>` and click
-   the :icon:`fa-star-o` (:guilabel:`Favorite`) icon next to the product's name.
-
 .. _ecommerce/products/product-page:
 
 Product page customization
@@ -226,6 +153,10 @@ Use the :guilabel:`Customize` tab to modify the page layout or add features:
    - Products with single values for their attributes do not generate variants but are still
      displayed in the :guilabel:`Product Specifications`.
 
+.. tip::
+   To feature a product, go to the :ref:`product form <ecommerce/products/product-form>` and click
+   the :icon:`fa-star-o` (:guilabel:`Favorite`) icon next to the product's name.
+
 .. _ecommerce/products/image-customization:
 
 Product images and videos
@@ -281,7 +212,7 @@ go to :menuselection:`Website --> eCommerce --> Attributes`, click on the attrib
 :guilabel:`Visible` or :guilabel:`Hidden` in the :guilabel:`eCommerce Filter Visibility` field.
 
 .. tip::
-   - To display the product attributes on :ref:`the main Shop page <ecommerce/products/shop-page>`,
+   - To display the product attributes on the main Shop page,
      set the :guilabel:`Attributes` feature to :guilabel:`Left` using the website editor.
    - To group attributes under the same section when
      :ref:`comparing products <ecommerce/products/product-comparison>`, go to the
