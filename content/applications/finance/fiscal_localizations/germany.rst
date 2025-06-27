@@ -5,10 +5,6 @@ Germany
 Accounting
 ==========
 
-.. seealso::
-   :doc:`Documentation on e-invoicing's legality and compliance in Germany
-   <../accounting/customer_invoices/electronic_invoicing/germany>`
-
 Chart of accounts
 -----------------
 
