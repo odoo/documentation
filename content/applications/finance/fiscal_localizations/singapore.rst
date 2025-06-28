@@ -17,9 +17,9 @@ Payments` section, activate the :guilabel:`QR Codes` feature.
 PayNow bank account configuration
 ---------------------------------
 
-Go to :menuselection:`Contacts --> Configuration --> Bank Accounts` and select the bank account for
-which you want to activate PayNow. Set the :guilabel:`Proxy Type` and fill in the :guilabel:`Proxy
-Value` field depending on the type you chose.
+Go to :menuselection:`Contacts --> Configuration --> Bank Accounts` and select the bank account to
+activate PayNow. Set the :guilabel:`Proxy Type` and fill in the :guilabel:`Proxy Value` field
+depending on the chosen type.
 
 .. important::
    - The account holder's country must be set to `Singapore` on its contact form.
@@ -59,10 +59,11 @@ generate the PayNow QR code.
 Employment Hero payroll
 =======================
 
-If your business is already up and running with :doc:`Employment Hero <employment_hero>`, you can
-use our connector as an alternative payroll solution.
+If your business is already up and running with :doc:`Employment Hero
+<../../hr/payroll/payroll_localizations/employment_hero>`, you can use our connector as an
+alternative payroll solution.
 
 .. important::
    To :ref:`configure the Employment Hero API <employment_hero/configuration>` for **Singapore**,
-   use the following value as :guilabel:`Payroll URL`: `https://apisg.yourpayroll.io/`.
+   use the following value as :guilabel:`Payroll URL`: `HTTPS://apisg.yourpayroll.io/`.
 
