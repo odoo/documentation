@@ -5,7 +5,7 @@ Recruitment flow
 When a prospective employee applies for a job in Odoo, there is a preconfigured process from the
 :ref:`initial inquiry <recruitment/new>` to the :ref:`creating of a new employee
 <recruitment/new-employee>` once hired. The following outlines the default recruitment process for
-Odoo's *Recruitment* application.
+Odoo's **Recruitment** application.
 
 .. important::
    The following is based on Odoo's default recruitment pipeline. Be advised that if
@@ -21,36 +21,32 @@ At the start of the process, all applicants appear in the :guilabel:`New` stage 
 :guilabel:`Applications` page, whether submitted online or if the applicant is :doc:`manually
 entered by a recruiter <add-new-applicants>`.
 
-When the applicant's card is created, Odoo automatically populates the
-:guilabel:`Subject/Application`, the :guilabel:`Applicant's Name`, :guilabel:`Email`, and
-:guilabel:`Mobile` number, on the applicant's card. This information is required when applying for
-a job position, by default.
+The :guilabel:`Candidate`, :guilabel:`Email`, and :guilabel:`Phone` number on the applicant's card
+are filled as soon as it is created. By default, these details are required for every job position.
 
 .. note::
    If the website application form is modified, different fields may be populated, based on what
-   information is requested on the website.
+   information is required on the website.
 
-If the applicant entered any information in the *Short Introduction* section of the online
-application, it populates the :guilabel:`Application Summary` tab at the bottom of the applicant's
-card.
+Anything typed in the *Short Introduction* section appears in the applicant's chatter as an
+:guilabel:`Other Information` note from :guilabel:`OdooBot`.
 
 Resumé
 ------
 
 If a resumé was attached to the online application, it appears in the :guilabel:`Files` section of
-the chatter, and is also stored in the *Documents* application.
+the chatter, and is also stored in the **Documents** application.
 
 To find the recruitment documents, navigate to the main :menuselection:`Documents app` dashboard,
 and click the :guilabel:`Recruitment` folder on the left-hand side. All recruitment documents are
 stored within that folder.
 
 If the :ref:`CV Display <recruitment/cv-display>` option was enabled in the :ref:`Settings
-<recruitment/settings>` of the *Recruitment* app, the resumé appears on the applicant's card, on the
-right-hand side.
+<recruitment/settings>` of the **Recruitment** app, the resumé appears on the applicant's card.
 
 .. note::
    Depending on the browser zoom level, or size of the browser screen, the resumé may appear below
-   the main applicant card information as a PDF link.
+   the main applicant card information as a PDF link, or on the right side as an image.
 
 Send interview
 --------------
@@ -58,7 +54,7 @@ Send interview
 At any point in the hiring process, an interview can be sent to the applicant to obtain more
 information. These interviews are custom-made, and can be formatted in a variety of ways.
 
-The *Surveys* application is **required** to send interviews to an applicant, so it **must** be
+The **Surveys** application is required to send interviews to an applicant, so it **must** be
 installed.
 
 Odoo uses the term *interview*, but these can be thought of as questionnaires, surveys, tests,
@@ -115,7 +111,8 @@ If the emailed interview must be completed by a specific date, enter that date i
 To do so, click the empty field next to :guilabel:`Answer deadline`, and a calendar selector
 appears. Use the :icon:`fa-chevron-left` :guilabel:`(left)` and :icon:`fa-chevron-right`
 :guilabel:`(right)` arrows, on either side of the month, to navigate to the desired month. Then,
-click on the desired day to select the date.
+click on the desired day to select the date. Next, select the time the interview is due, in the two
+fields at the bottom of the calendar selector.
 
 The :guilabel:`Mail Template` field is pre-populated, based on the configuration for the interview.
 A different template can be chosen from the drop-down menu, if desired. If a new template is
@@ -125,9 +122,8 @@ To send the email with the interview link to the applicant, click :guilabel:`Sen
 the email pop-up window.
 
 .. image:: recruitment-flow/send-survey.png
-   :align: center
    :alt: Send a custom survey, also referred to as an interview form, to an applicant using a
-         pre-configured template.
+         preconfigured template.
 
 .. _recruitment/initial-qualification:
 
@@ -137,9 +133,9 @@ Initial qualification
 If an applicant seems to be a good potential candidate, they are moved to the :guilabel:`Initial
 Qualification` stage.
 
-This stage exists to quickly sort candidates that have potential, from those that do not meet the
-requirements. No automatic actions, such as emails, are set for this stage. This stage simply
-informs the recruitment team to potentially set up a phone call or an interview with the candidate.
+This stage exists to sort candidates that have potential, from those that do not meet the
+requirements. No automatic actions, such as emails, are set for this stage. This stage informs the
+recruitment team to potentially set up a phone call or an interview with the candidate.
 
 .. note::
    In order to move an applicant's card from one stage to another, the applicant's card can either
@@ -154,7 +150,6 @@ informs the recruitment team to potentially set up a phone call or an interview 
    change appears in the chatter, as well.
 
   .. image:: recruitment-flow/stage-change.png
-     :align: center
      :alt: Change the stage of an applicant by clicking on the desired stage at the top of the
            applicant's card.
 
@@ -174,14 +169,10 @@ Alternatively, open the desired applicant's card from the :guilabel:`Application
 the :guilabel:`First Interview` stage on the status bar at the top of the individual applicant's
 card.
 
-.. image:: recruitment-flow/move.png
-   :align: center
-   :alt: An applicant's card moves from one stage to another by using the click and drag method.
-
 .. tip::
    The :guilabel:`First Interview` stage can be modified, so when the applicant's card moves to the
    :guilabel:`First Interview` stage, an email can be automatically sent to the applicant, stating
-   an interview is requested. In this pre-configured email template, a link to the recruiting team's
+   an interview is requested. In this preconfigured email template, a link to the recruiting team's
    calendar appears, allowing the applicant to schedule their interview.
 
    :ref:`Edit <recruitment/edit-stage>` the :guilabel:`First Interview` stage, and select the
