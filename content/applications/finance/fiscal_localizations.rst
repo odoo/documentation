@@ -188,4 +188,3 @@ Fiscal localization modules are available for the countries listed below.
    fiscal_localizations/united_states
    fiscal_localizations/uruguay
    fiscal_localizations/vietnam
-   fiscal_localizations/employment_hero
