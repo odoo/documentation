@@ -2,8 +2,9 @@
 Offer job positions
 ===================
 
-Once an applicant has successfully passed the various interview stages, the recruitment team is
-ready to send an offer for employment. The next step is to send the applicant a contract.
+After an applicant has successfully passed the various interview stages, the recruitment team is
+ready to send an offer for employment. The first step when offering a job position is to send the
+applicant a contract.
 
 .. seealso::
    Refer to the :doc:`recruitment <../recruitment>` documentation for details on the various stages
@@ -23,8 +24,17 @@ the top-right of the applicant's form.
 The next step is to send an offer to the applicant. Start by selecting the desired applicant's card
 to open their applicant form.
 
-On the applicant's form, click the :guilabel:`Generate Offer` button. A :guilabel:`Generate a
-Simulation Link` pop-up window appears.
+On the applicant's form, click the :guilabel:`Generate Offer` button to load the :guilabel:`Offer
+for (applicant's email)` page.
+
+.. important::
+   If the applicant does not have an email address listed on their applicant card, an
+   :guilabel:`Invalid Operation` pop-up window warning appears, stating: :guilabel:`Offer link can
+   not be send. The applicant needs to have a name and email.`
+
+   Click :guilabel:`Close`, then enter an email on the applicant's card. Once an email is entered,
+   click the :guilabel:`Generate Offer` button, and the :guilabel:`Offer for (applicant's email)`
+   page loads.
 
 Most fields are pre-populated with information from the job position. If any necessary fields are
 blank, or if any information needs to be updated, enter, or update, the relevant information in the
@@ -32,80 +42,79 @@ corresponding fields.
 
 .. note::
    Depending on the localization setting for the company, and which applications are installed, some
-   fields may not appear in the :guilabel:`Generate a Simulation Link` pop-up window.
+   fields may not appear on the :guilabel:`Offer for (applicant's email)` page.
 
-   For example, if the *Fleet* application is **not** installed, any fields related to vehicles do
+   For example, if the **Fleet** application is **not** installed, any fields related to vehicles do
    **not** appear.
 
 Universal fields
 ----------------
 
-The following fields appear in the :guilabel:`Generate a Simulation Link` pop-up window, regardless
-of the localization.
+The following fields appear in the :guilabel:`Offer for (applicant's email)` page, regardless of the
+localization.
 
-- :guilabel:`Contract Template`: the template currently being used to populate the
-  :guilabel:`Generate a Simulation Link` pop-up window. Use the drop-down menu to select a different
-  :guilabel:`Contract Template`, if desired.
+- :guilabel:`Title`: The name for the contract appears in a default `Offer for (applicant's email)`
+  format.
+- :guilabel:`Contract Template`: The template currently being used to populate the :guilabel:`Offer
+  for (applicant's email)` page. Use the drop-down menu to select a different :guilabel:`Contract
+  Template`, if desired.
 
   .. note::
-     To modify the template, hover over the current template name, and click the :icon:`oi-launch`
-     :guilabel:`Internal link` icon that appears to the right of the field. Make any desired
-     changes, then click :guilabel:`Save & Close`.
+     To modify the template, hover over the current template name, and click the
+     :icon:`fa-arrow-right` :guilabel:`(Internal link)` icon that appears to the right of the field.
+     Make any desired changes, then click :guilabel:`Save & Close`.
 
-- :guilabel:`Job Position`: the name of the :guilabel:`Job Position` being offered to the applicant.
-  The selections available in the drop-down menu correspond to the job position configured on the
-  main *Recruitment* dashboard.
-- :guilabel:`Job Title`: the selected :guilabel:`Job Position` populates this field, by default.
-  The title can be modified to suit the specific applicant's position and provide more details.
+- :guilabel:`Employer Budget`: The salary being offered to the applicant.
+- :guilabel:`Job Title`: The selected :guilabel:`Employee Job` populates this field, by default. The
+  title can be modified to suit the specific applicant's position and provide more details.
 
   .. example::
      An applicant is offered a marketing manager job at a shoe company, specifically for the
      children's line.
 
-     The :guilabel:`Job Position` selected from the drop-down menu is `Marketing Manager`, and the
+     The :guilabel:`Employee Job` selected from the drop-down menu is `Marketing Manager`, and the
      :guilabel:`Job Title` is modified for their specific responsibilities, `Marketing Manager:
      Children's Shoes`.
 
-- :guilabel:`Department`: the department the job position falls under.
-- :guilabel:`Contract Start Date`: the date the contract takes effect. The default date is the
-  current date. To modify the date, click on the displayed date to reveal a calendar popover window.
-  Navigate to the desired month, then click the day to select the date.
-- :guilabel:`Yearly Cost`: the annual salary being offered.
-- :guilabel:`Link Expiration Date`: the number of days the job offer is valid. The default
-  expiration date is `30` days. Modify the expiration date, if desired.
+- :guilabel:`Employee Job`: The name of the :guilabel:`Job Title` being offered to the applicant.
+  The selections available in the drop-down menu correspond to the job position configured on the
+  main **Recruitment** app dashboard.
+
+- :guilabel:`Department`: The department the job position falls under.
+- :guilabel:`Contract Start Date`: The date the proposed contract takes effect. The default date is
+  the current date. To modify the date, click on the displayed date to reveal a calendar popover
+  window. Navigate to the desired month, then click the day to select the date.
+- :guilabel:`Offer Create Date`: The day the offer is created, By default, the current date
+  populates this field and *cannot* be modified.
+- :guilabel:`Offer Validity Date`: The last day the offer is valid. After this date the contract
+  cannot be signed.
+- :guilabel:`Link`: The link to the contract being sent to the candidate.
+- :guilabel:`Validity Days Count`: The number of days the contract is valid. The default expiration
+  date is `30` days. Modify the expiration date, if desired.
+- :guilabel:`Applicant`: The name of the applicant appears in this field, and cannot be modified.
 
 Send offer
 ----------
 
-Once the :guilabel:`Generate a Simulation Link` pop-up window is complete, click :guilabel:`Send By
-Email` to reveal an email pop-up window.
+Once all desired modifications have been made to the :guilabel:`Offer for (applicant's email)` page,
+click the :guilabel:`Send By Email` button to reveal an email pop-up window.
 
-.. important::
-   If the applicant does not have an email address listed on their applicant card, a warning appears
-   in a red box at the bottom of the :guilabel:`Generate a Simulation Link` pop-up window, stating:
-   :guilabel:`The applicant does not have a valid email set. The Offer Link won't be able to be
-   completed.` Click :guilabel:`Discard`, then enter an email on the applicant's card. Once an email
-   is entered, click the :guilabel:`Generate Offer` button, and the email pop-up window loads again.
+The default `Recruitment: Your Salary Package` email template is used, and the :guilabel:`To`,
+:guilabel:`Subject`, and email body are pre-populated based on the email template.
 
-The default :guilabel:`Recruitment: Your Salary Package` email template is used (set in the
-:guilabel:`Load template` field), and the :guilabel:`Recipients`, :guilabel:`Subject`, and email
-body are pre-populated based on the email template.
-
-If any attachments need to be added, click the :icon:`fa-paperclip` :guilabel:`Attachments` button,
+If any attachments need to be added, click the :icon:`fa-paperclip` :guilabel:`(paperclip)` button,
 and a file explorer window appears. Navigate to the desired file, then click :guilabel:`Open` to
-attach it to the email. The attachment loads, and is listed above the :icon:`fa-paperclip`
-:guilabel:`Attachments` button.
+attach it to the email. The attachment loads, and is listed at the bottom of the email body.
 
 Once the email is ready to send, click :guilabel:`Send`. The email pop-up window closes, and an
-:guilabel:`Offers` smart button appears at the top of the applicant's card.
+:icon:`fa-handshake-o` :guilabel:`Offers` smart button appears at the top of the applicant's card.
 
 .. note::
-   To send an offer, ensure the *Sign* application is installed. This is necessary, so the offer can
-   be sent to the applicant by the recruiter, and they can actually sign the offer. The applicant
-   does **not** need any software installed to sign the offer.
+   To send an offer, ensure the **Sign** application is installed. This is necessary, so the offer
+   can be sent to the applicant by the recruiter, and they can actually sign the offer. The
+   applicant does **not** need any software installed to sign the offer.
 
 .. image:: offer_job_positions/send-offer.png
-   :align: center
    :alt: Send an email to the applicant with a link to the offered salary.
 
 Configure your package
@@ -122,29 +131,29 @@ Once the applicant is hired, the personal information entered on the webpage is 
 employee record, when created.
 
 Once all the information is completed, the applicant can then accept the offer by clicking the
-:guilabel:`Review Contract & Sign` button to accept the contract, and sign it using the *Sign*
+:guilabel:`Review Contract & Sign` button to accept the contract, and sign it using the **Sign**
 application.
+
+Management signatures
+---------------------
+
+Once the applicant has signed the contract, the next step is for the person responsible within the
+company (the :guilabel:`HR Responsible`) must then sign the contract.
+
+The person responsible for signing the contract receives an activity alert that their signature is
+requested of them in the **Sign** app.
 
 .. _recruitment/offer_job_positions/contract-signed:
 
 Contract signed
 ===============
 
-Once the applicant has accepted the offer and signed the contract, the next step is to move the
-applicant to the :guilabel:`Contract Signed` stage. This stage is folded in the Kanban view, by
-default.
-
-To move the applicant to that stage, drag-and-drop the applicant's card to the :guilabel:`Contract
-Signed` stage. If the stage is not visible, click the :icon:`fa-ellipsis-h` :guilabel:`(ellipsis)`
-button to the right of :guilabel:`Contract Proposal` on the applicant's form, and click
-:guilabel:`Contract Signed` from the resulting drop-down menu.
-
-Once the applicant is moved to the :guilabel:`Contract Signed` stage, a green :guilabel:`HIRED`
-banner appears in the top-right of the applicant's card and form.
+Once all parties have fully signed the contract, the applicant is automatically moved to the
+:guilabel:`Contract Signed` stage, and a green :guilabel:`HIRED` banner appears in the top-right of
+both the applicant's card and form.
 
 .. image:: offer_job_positions/hired.png
-   :align: center
-   :alt: Hired banner in the top right corner of applicant card.
+   :alt: Hired banner in the top-right corner of applicant card.
 
 .. _recruitment/new-employee:
 
@@ -159,4 +168,4 @@ An employee form appears, with information from the applicant's card, and the em
 Fill out the rest of the employee form. For detailed information on the fields, refer to the
 :doc:`../employees/new_employee` documentation.
 
-Once completed, the employee record is saved in the *Employees* app.
+Once completed, the employee record is saved in the **Employees** app.
