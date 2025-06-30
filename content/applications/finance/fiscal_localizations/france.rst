@@ -34,7 +34,7 @@ The following modules related to the French localization are available:
       - `l10n_fr_fec_import`
       - Import of standard FEC files, useful for importing accounting history.
     * - :guilabel:`France - VAT Anti-Fraud Certification for Point of Sale (CGI 286 I-3 bis)`
-      - `10n_fr_pos_cert`
+      - `l10n_fr_pos_cert`
       - :ref:`Point of Sale VAT anti-fraud certification
         <localizations/france/vat-anti-fraud-certification>`
 
