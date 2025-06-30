@@ -4,13 +4,13 @@ Refuse applicants
 
 At any point in the recruitment process, an applicant can be refused for a job position.
 
-To refuse an applicant, start by navigating to the applicant's card in the *Recruitment* app. This
+To refuse an applicant, start by navigating to the applicant's card in the **Recruitment** app. This
 is done in one of two ways:
 
 - Navigate to :menuselection:`Recruitment app --> Applications --> All Applications`. In the
   :guilabel:`Applications` list, click anywhere on the desired applicant's line to open that
   specific applicant's card.
-- Navigate to the main *ob Positions* dashboard by navigating to :menuselection:`Recruitment app
+- Navigate to the main *Job Positions* dashboard by navigating to :menuselection:`Recruitment app
   --> Applications --> By Job Position`. Next, click on the desired job position card, then click on
   the individual applicant card from the :guilabel:`Applications` page.
 
@@ -37,15 +37,13 @@ The default refuse reasons in Odoo, and their corresponding email templates, are
    * - Email Template
      - Refusal Reason
    * - :guilabel:`Recruitment: Refuse`
-     - | :guilabel:`Doesn't fit the job requirements`
-       | :guilabel:`Language issues`
-       | :guilabel:`Role already fulfilled`
+     - | :guilabel:`Does not fit the job requirements`
+       | :guilabel:`Job already fulfilled`
        | :guilabel:`Duplicate`
        | :guilabel:`Spam`
    * - :guilabel:`Recruitment: Not interested anymore`
-     - | :guilabel:`Refused by Applicant: don't like job`
-       | :guilabel:`Refused by Applicant: better offer`
-       | :guilabel:`Refused by Applicant: salary`
+     - | :guilabel:`Refused by applicant: job fit`
+       | :guilabel:`Refused by applicant: salary`
 
 Additional refusal reasons :ref:`can be created, and existing ones can be modified (or deleted)
 <recruitment/new-refuse>`.
@@ -58,8 +56,8 @@ Create or modify refuse reasons
 -------------------------------
 
 To view and configure refuse reasons, navigate to :menuselection:`Recruitment app --> Configuration
---> Applications: Refuse Reasons`. Doing so reveals the :guilabel:`Refuse Reasons` page, where all
-the existing refuse reasons are listed.
+--> Refuse Reasons`. Doing so reveals the :guilabel:`Refuse Reasons` page, where all the existing
+refusal reasons are listed.
 
 To create a new refuse reason from the :guilabel:`Refuse Reasons` page, click the :guilabel:`New`
 button in the top-left corner. A blank line appears at the bottom of the list, with an empty field
@@ -68,8 +66,8 @@ present in the :guilabel:`Description` column.
 Type in the new refuse reason in the field. It is recommended to enter a reason that is short and
 concise, such as `Offer expired` or `Withdrew application`.
 
-Then, in the :guilabel:`Email Template` field, click on the field to reveal a drop-down menu.
-Select an :guilabel:`Email Template` from the list to be used when this refuse reason is selected.
+Then, in the :guilabel:`Email Template` field, click on the field to reveal a drop-down menu. Select
+an :guilabel:`Email Template` from the list to be used when this refuse reason is selected.
 
 If a new :guilabel:`Email Template` is desired, type in the name for the new template in the field.
 Then, click :guilabel:`Create and edit...`, and a :guilabel:`Create Email Template` form pop-up
@@ -101,12 +99,11 @@ Send refusal email
 ==================
 
 After clicking the :guilabel:`Refuse` button on an applicant form, a :ref:`Refuse Reason
-<recruitment/refuse-reasons>` can be selected from the :guilabel:`refuse reason` pop-up window.
+<recruitment/refuse-reasons>` is then selected from the :guilabel:`Refuse Reason` pop-up window.
 Then, two fields appear below the selected refusal reason: :guilabel:`Send Email` and
 :guilabel:`Email Template`.
 
 .. image:: refuse_applicant/refuse-pop-up.png
-   :align: center
    :alt: The Refuse Reason pop-up window that appears when refusing an applicant.
 
 The applicant's email address automatically populates the :guilabel:`Send Email` field; additional
@@ -124,7 +121,6 @@ refusal email is sent to the applicant, and a red :guilabel:`Refused` banner app
 applicant's card in the top-right corner.
 
 .. image:: refuse_applicant/refuse.png
-   :align: center
    :alt: An applicant's card with the refused banner appearing in the top-right corner in red.
 
 View refused applicants
@@ -134,11 +130,14 @@ After refusal, the applicant's card is no longer visible in the job position's K
 it is still possible to view applicants who have been refused.
 
 To view only the refused applicants, go to :menuselection:`Recruitment app --> Applications --> By
-Job Positions`, or :menuselection:`Recruitment app --> Applications --> All Applications`.
+Job Positions`, or :menuselection:`Recruitment app --> Applications --> All Applications`. Both
+methods navigate to the :guilabel:`Applications` dashboard, the only difference is :guilabel:`By Job
+Positions` displays applicants in a Kanban view, while :guilabel:`All Applications` displays
+applicants in a list view.
 
-On the :guilabel:`Applications` page, click the :icon:`fa-caret-down` :guilabel:`(caret down)`
-button in the :guilabel:`Search...` bar, then click :guilabel:`Refused`, located under the
-:guilabel:`Filters` section.
+On the :guilabel:`Applications` page, click the :icon:`fa-caret-down` :guilabel:`(Toggle Search
+Panel)` button in the search bar, then click :guilabel:`Refused`, located under the
+:icon:`fa-funnel` :guilabel:`Filters` section.
 
 All applicants that have been refused for the job position appear on the :guilabel:`Applications`
 page for that position, organized by the stage they were in when they were refused.
