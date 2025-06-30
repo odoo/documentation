@@ -391,8 +391,8 @@ appears in the chatter.
    - :doc:`recruitment/schedule_interviews`
    - :doc:`recruitment/offer_job_positions`
    - :doc:`recruitment/refuse_applicant`
+   - :doc:`recruitment/applicant_analysis`
    - :doc:`recruitment/source_analysis`
-   - :doc:`recruitment/recruitment_analysis`
    - :doc:`recruitment/time_in_stage`
    - :doc:`recruitment/team_performance`
 
@@ -405,7 +405,7 @@ appears in the chatter.
    recruitment/schedule_interviews
    recruitment/offer_job_positions
    recruitment/refuse_applicant
+   recruitment/applicant_analysis
    recruitment/source_analysis
-   recruitment/recruitment_analysis
    recruitment/time_in_stage
    recruitment/team_performance
