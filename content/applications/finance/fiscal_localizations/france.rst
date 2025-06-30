@@ -42,7 +42,7 @@ The following modules related to the French localization are available:
       - Adds address fields required to comply with `Decree 2022-1299
         <https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000046383394>`_.
     * - :guilabel:`France - VAT Anti-Fraud Certification for Point of Sale (CGI 286 I-3 bis)`
-      - `10n_fr_pos_cert`
+      - `l10n_fr_pos_cert`
       - :ref:`Point of Sale VAT anti-fraud certification
         <localizations/france/vat-anti-fraud-certification>`
 
