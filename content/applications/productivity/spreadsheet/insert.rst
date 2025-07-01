@@ -135,14 +135,12 @@ To insert a list:
          One way to avoid this is to :ref:`add extra rows <spreadsheet/insert/list-add-records>`
          when inserting the list.
 
-#. Click :guilabel:`Blank spreadsheet` or select in which existing spreadsheet the list should be
-   inserted.
+#. Click :guilabel:`Blank spreadsheet` to create a new spreadsheet, or select in which existing
+   spreadsheet the list should be inserted.
 
    .. note::
-      New spreadsheets are saved in the **Odoo Documents** app in either the :icon:`fa-hdd-o`
-      :guilabel:`My Drive` personal workspace or, if :ref:`file centralization
-      <documents/file-centralization>` has been enabled for spreadsheets, in the
-      :guilabel:`Spreadsheet` workspace.
+      When inserting a list into a new spreadsheet, the spreadsheet is saved in the **Odoo
+      Documents** app in the :icon:`fa-hdd-o` :guilabel:`My Drive` personal workspace.
 
 #. Click :guilabel:`Confirm`.
 
@@ -364,14 +362,12 @@ To insert a pivot table:
    .. image:: insert/insert-pivot-table.png
       :alt: Inserting a pivot table in a spreadsheet
 
-#. Click :guilabel:`Blank spreadsheet` or select in which existing spreadsheet the pivot table
-   should be inserted.
+#. Click :guilabel:`Blank spreadsheet` to create a new spreadsheet, or select in which existing
+   spreadsheet the pivot table should be inserted.
 
    .. note::
-      New spreadsheets are saved in the **Odoo Documents** app in either the :icon:`fa-hdd-o`
-      :guilabel:`My Drive` personal workspace or, if :ref:`file centralization
-      <documents/file-centralization>` has been enabled for spreadsheets, in the
-      :guilabel:`Spreadsheet` workspace.
+      When inserting a pivot table into a new spreadsheet, the spreadsheet is saved in the **Odoo
+      Documents** app in the :icon:`fa-hdd-o` :guilabel:`My Drive` personal workspace.
 
 #. Click :guilabel:`Confirm`.
 
@@ -541,14 +537,12 @@ To insert a chart from an Odoo database into an Odoo spreadsheet:
 #. With the relevant graph view open in your database, click :guilabel:`Insert in Spreadsheet`.
 #. In the window that opens, edit the :guilabel:`Name of the graph` if needed.
 
-#. Click :guilabel:`Blank spreadsheet` or select in which existing spreadsheet the chart should be
-   inserted.
+#. Click :guilabel:`Blank spreadsheet` to create a new spreadsheet, or select in which existing
+   spreadsheet the chart should be inserted.
 
    .. note::
-      New spreadsheets are saved in the **Odoo Documents** app in either the :icon:`fa-hdd-o`
-      :guilabel:`My Drive` personal workspace or, if :ref:`file centralization
-      <documents/file-centralization>` has been enabled for spreadsheets, in the
-      :guilabel:`Spreadsheet` workspace.
+      When inserting a chart into a new spreadsheet, the spreadsheet is saved in the **Odoo
+      Documents** app in the :icon:`fa-hdd-o` :guilabel:`My Drive` personal workspace.
 
 #. Click :guilabel:`Confirm`.
 
