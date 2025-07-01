@@ -45,6 +45,12 @@ rate)` outcomes.
       Find out more about Odoo's SMS pricing, and check out some of the most frequently asked
       questions.
 
+   .. card:: Twilio
+      :target: sms_marketing/twilio
+
+      In some countries with stricter regulations, the out-of-the-box solution proposed by Odoo may
+      not work. In this case, you can use our Twilio integration to send SMS worldwide.
+
 SMS marketing dashboard
 =======================
 
@@ -81,3 +87,4 @@ detailed analysis.
    sms_marketing/marketing_campaigns
    sms_marketing/mailing_lists_blacklists
    sms_marketing/pricing_and_faq
+   sms_marketing/twilio
