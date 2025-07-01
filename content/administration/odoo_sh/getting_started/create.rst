@@ -1,4 +1,3 @@
-
 .. _odoosh-gettingstarted-create:
 
 ===================
