@@ -683,7 +683,7 @@ structure below.
          <field name="shop_ppg">18</field>
          <field name="shop_ppr">3</field>
          <field name="cookies_bar" eval="True" />
-         <field name="contact_us_button_url">/contact-us</field>
+         <field name="contact_us_link_url">/contact-us</field>
          <field name="social_facebook">https://www.facebook.com/Airproof</field>
          <field name="social_instagram">https://www.instagram.com/airproof</field>
          <field name="social_linkedin">https://www.linkedin.com/company/airproof</field>
@@ -710,7 +710,7 @@ structure below.
      - Number of products shown per rows (in a page) in the e-commerce
    * - cookies_bar
      - Enable/disable the cookies bar
-   * - contact_us_button_url
+   * - contact_us_link_url
      - URL of the `Contact us` page (For instance, used in the standard header templates).
    * - social_facebook
      - URL of a Facebook profile
