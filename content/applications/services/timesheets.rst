@@ -14,4 +14,5 @@ Timesheets
 .. toctree::
    :titlesonly:
 
-   timesheets/overview
+   timesheets/billing_rates
+   timesheets/time_off
