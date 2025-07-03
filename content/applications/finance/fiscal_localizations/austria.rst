@@ -23,6 +23,9 @@ localization.
    * - :guilabel:`Austrian SAF-T Export`
      - `l10n_at_saft`
      - Adds the SAF-T export.
+   * - :guilabel:`Austria - Security Regulation for Point of Sale`
+     - `l10n_at_pos`
+     - Adds RKSV compliance for POS.
 
 .. seealso::
    :doc:`Documentation on e-invoicing’s legality and compliance in Austria
@@ -129,3 +132,150 @@ the right side of the :guilabel:`PDF` button and select :guilabel:`SAF-T`.
 
 .. image:: austria/austria-saft-button.png
    :alt: The SAF-T button to export the file in XML format
+
+.. _austria/pos:
+
+Point of Sale
+=============
+
+RKSV
+----
+
+The **RKSV (Registrierkassensicherheitsverordnung)** is an Austrian regulation designed
+to secure cash registers and prevent tax fraud. It requires businesses to use tamper-proof
+electronic cash register systems, including :doc:`point of sale </applications/sales/point_of_sale>`
+systems.
+
+These systems must be equipped with a **Signature Creation Unit (SCU)**, which is
+responsible for signing each transaction. This ensures that the transaction data cannot be altered.
+Additionally, the regulation mandates periodic transaction data exports for audit purposes. Odoo
+provides a compliant solution through `fiskaly <https://fiskaly.com>`_, a *cloud-based solution*.
+
+Configuration
+~~~~~~~~~~~~~
+
+:ref:`Install <general/install>` the **Austria - Security Regulation for Point of Sale**
+(`l10n_at_pos`) module.
+
+.. tip::
+   If this module is not listed, :ref:`update the app list <general/install>`.
+
+Company information
+*******************
+
+Open the Settings app, navigate to the :guilabel:`Companies` section, and click
+:icon:`oi-arrow-right` :guilabel:`Update Info` to make sure the following information is up-to-date
+and correctly filled in:
+
+- :guilabel:`Company Name`
+- :guilabel:`Address`:
+
+  - :guilabel:`Street`
+  - :guilabel:`City`
+  - :guilabel:`State`
+  - :guilabel:`ZIP`
+  - :guilabel:`Country`
+
+- :guilabel:`VAT`
+
+To link your company to Fiskaly and use it in Odoo, open the :guilabel:`Fiskaly` tab and enable
+:icon:`fa-toggle-on` :guilabel:`Managed by Odoo`, which activates automatic integration management.
+
+If a Fiskaly account already exists with its own credentials, disable the toggle and configure the
+existing :guilabel:`Fiskaly credentials` manually.
+
+  .. image:: austria/management-toggle.png
+    :alt: Management toggle
+
+.. note::
+   For testing, ensure that :icon:`fa-toggle-on` :guilabel:`Test Fiskaly` is enabled to run the
+   integration without impacting the production server. Since test mode is enabled by default,
+   disable :icon:`fa-toggle-off` :guilabel:`Test Fiskaly` to switch to production mode.
+
+.. important::
+   Once the credentials are authenticated, the Fiskaly management option (by Odoo or custom) and the
+   mode (test or production) can no longer be modified.
+
+Click :guilabel:`Generate Credentials` to create a new organization in the Fiskaly system and
+generate the necessary credentials to run the service. Next, click :guilabel:`Authenticate Keys`
+to validate those credentials.
+
+Link a Fiskaly organization to FinanzOnline
+*******************************************
+
+To link the Fiskaly organization with the Austrian Ministry of Finance, FinanzOnline credentials
+must be provided. To do so, fill in the following information in your company's :guilabel:`Fiskaly`
+tab:
+
+- :guilabel:`Participant Identifier`
+- :guilabel:`User Identifier`
+- :guilabel:`User Pin`
+
+.. note::
+   FinanzOnline credentials can be accessed through an existing account or by `creating a new one
+   <https://finanzonline.bmf.gv.at/>`_ if it has not yet been set up.
+
+.. tip::
+   Random credentials can be used in **test mode**, but valid credentials are required in
+   **production mode**.
+
+Click :guilabel:`Authenticate FON` to link your Fiskaly organization to the Austrian Ministry of
+Finance and start regular point of sale operations.
+
+Digitally signatured receipts
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To ensure the integrity and authenticity of the receipts, the system will automatically sign them
+using the :abbr:`SCU (Signature Creation Unit)`. This process is done automatically in the
+background. The receipt will display an encrypted signature as a QR code containing the receipt
+number and information about the SCU used to sign the receipt.
+
+.. note::
+   - In cases where the SCU (Security Creation Unit) is unavailable, receipts may not display a QR
+     code. If this happens:
+
+     - Make sure the receipt includes a :guilabel:`Sicherheitseinrichtung ausgefallen` message,
+       which indicates that the system is linked to Fiskaly services, but the SCU is temporarily
+       unavailable.
+     - The system is not connected to Fiskaly services if this message is missing from the receipt.
+
+   - Orders that remain unsigned due to SCU unavailability can be signed manually. To do so, follow
+     these steps:
+
+     #. Go to :menuselection:`Point of Sale --> Orders --> Orders`.
+     #. To identify unsigned orders, click the :icon:`oi-settings-adjust` :guilabel:`(adjust
+        settings)` icon in the :guilabel:`Orders` list view to reveal the :guilabel:`Receipt
+        Signed?` column.
+     #. Select the unsigned orders, click :icon:`fa-cog` :guilabel:`Actions`, and select
+        :guilabel:`Sign Order`.
+
+DEP7 export
+~~~~~~~~~~~
+
+The exported :abbr:`DEP7 (Digitale Schnittstelle der Finanzverwaltung für Kassensysteme)` file
+allows authorities to verify transactions and ensure compliance with anti-fraud measures. Businesses
+must periodically generate it for audit purposes and submit it to the Austrian tax authorities upon
+request.
+
+To generate it, go to :menuselection:`Point of Sale --> Reporting --> DEP7 Reports`, and, in the
+:guilabel:`DEP7 Reports`, fill in the following mandatory fields:
+
+- :guilabel:`Start Datetime`: Exports data with dates on or after the given start date.
+- :guilabel:`End Datetime`: Exports data with dates on or before the given end date.
+- :guilabel:`Point of Sale`: Specify which point of sales data must be exported from.
+
+Then, click :guilabel:`Print` to download the PDF file with DEP7 data.
+
+.. image:: austria/dep7-reports.png
+   :alt: DEP7 Reports
+
+Monthly / Yearly closing receipts
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To print :guilabel:`Monthly/Yearly closing receipts`, :ref:`start a session <pos/session-start>`
+from the **POS dashboard** and click :guilabel:`Open Register` on the related point of sale. Click
+the :icon:`oi-view-list` icon in the top-right corner and select :guilabel:`Montly/Yearly Receipts`.
+
+In the :guilabel:`Print closing receipts` window, the last month is selected by default. To change
+it,  select :guilabel:`Monthly` or :guilabel:`Yearly`, then click the :icon:` fa-calendar-o` icon to
+select the desired month/year.
