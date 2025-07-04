@@ -18,7 +18,8 @@ To connect the POS with an :doc:`IoT system </applications/general/iot>`:
         - Instructions
       * - Printer
         - Connect a supported receipt printer to a :abbr:`USB (Universal Serial Bus)` port or
-          to the network, and power it on. Refer to :doc:`../restaurant/kitchen_printing`.
+          to the network, and power it on. Refer to :ref:`Order printing
+          <pos/restaurant/orders-printing>`.
       * - Cash drawer
         - The cash drawer should be connected to the printer with an RJ25 cable.
       * - Barcode scanner
