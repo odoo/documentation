@@ -23,12 +23,7 @@ This presents the data for the :icon:`fa-filter` :guilabel:`Last 365 Days Applic
 Hover the cursor over any column to view the specific numbers fort that column.
 
 .. image:: source_analysis/source-analysis.png
-   :align: center
    :alt: The default bar chart of the source analysis information.
-
-To view more details, view the :guilabel:`Source Analysis` report in a pivot table. To do so, click
-the :icon:`oi-view-pivot` :guilabel:`(Pivot)` icon in the top-right corner. The data is presented in
-a pivot table, with rows populated by job positions, and columns populated stages.
 
 Source effectiveness report
 ===========================
@@ -37,12 +32,16 @@ To identify which sources (e.g., job boards, social media, employee referrals, c
 produce the most hires, the pivot table view of the :guilabel:`Source Analysis` report can be
 configured to display further details.
 
+To view the :guilabel:`Source Analysis` report in a pivot table, click the :icon:`oi-view-pivot`
+:guilabel:`(Pivot)` icon in the top-right corner. The data is presented in a pivot table, with rows
+populated by job positions, and columns populated by stages.
+
 To expand this chart to show what specific sources the applicants came from, click the
 :icon:`fa-plus-square` :guilabel:`Total` box above the columns, to reveal a drop-down menu, and
 click :guilabel:`Source`.
 
 Each column is then grouped by the source, such as: :guilabel:`Search engine`, :guilabel:`Facebook`,
-:guilabel:`Newsletter`, etc. Each source displays a separate count for :guilabel:`Applicant`,
+:guilabel:`LinkedIn`, etc. Each source displays a separate count for :guilabel:`Applicant`,
 :guilabel:`Hired`, and :guilabel:`Refused`.
 
 This information, as presented, makes it difficult to view the specific numbers for each source.
@@ -50,7 +49,6 @@ Click the :icon:`fa-exchange` :guilabel:`(Flip axis)` icon, to swap the informat
 rows represent the source, and the columns represent the job positions, further divided by stage.
 
 .. image:: source_analysis/source-pivot.png
-   :align: center
    :alt: The axes flipped in the source analysis report, in pivot table view.
 
 In this view, the total number of applicants, hired employees, and refused applicants, are displayed
@@ -73,7 +71,6 @@ Once :guilabel:`Medium` is selected for one source, clicking into another row au
 the specific metrics for the mediums for that source.
 
 .. image:: source_analysis/medium.png
-   :align: center
    :alt: The sources rows, expanded to also show the medium for each source.
 
 .. note::
