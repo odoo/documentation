@@ -84,3 +84,23 @@ Terminal Identifier <adyen/identifier>`, and :guilabel:`Adyen Merchant Account`.
 Once the payment method is created, you can select it in your POS settings. To do so, go to the
 :ref:`POS' settings <configuration/settings>`, click :guilabel:`Edit`, and add the payment method
 under the :guilabel:`Payments` section.
+
+.. _adyen/tips:
+
+Tips
+====
+
+Odoo Point of Sale allows tipping with an Adyen terminal. To configure this option, go to the
+:ref:`POS settings <configuration/settings>`, enable the :ref:`Tips <pos/restaurant/tips>` and the
+:guilabel:`Add tip through payment terminal (Adyen)` settings, then click :guilabel:`Save`.
+
+To process tips with an Adyen terminal, follow these steps:
+
+#. Go to the relevant POS and :ref:`process an order <pos/restaurant/orders>`.
+#. Click :ref:`Payment <pos/restaurant/bills/payment>` and select the :ref:`relevant payment
+   method <adyen/method-creation>`. The :guilabel:`Adyen` terminal displays the transaction and
+   suggests adding tips.
+#. Add a tip amount on the terminal and validate.
+#. In Odoo POS, click :icon:`fa-heart` :guilabel:`Tip`, enter the tip amount, and click
+   :guilabel:`Ok`.
+#. Click :guilabel:`Close Tab` to validate the payment and the tip.

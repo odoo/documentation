@@ -110,7 +110,7 @@ device. Click the :guilabel:`Unlink` button next to each report to remove the li
    :alt: A list of reports currently linked to a printer in the IoT app.
 
 .. seealso::
-   :doc:`POS Order Printing <../../../sales/point_of_sale/restaurant/kitchen_printing>`
+   :ref:`POS Order Printing <pos/restaurant/orders-printing>`
 
 Potential issues
 ================
