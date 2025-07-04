@@ -9,22 +9,38 @@ With **Odoo Point of Sale**, run your shops and restaurants easily. The app work
 a web browser, even if you are temporarily offline. Product moves are automatically registered in
 your stock, you get real-time statistics, and your data is consolidated across all shops.
 
+POS types: retails, restaurant, self-ordering
+
+POS hardware: integrated directly or using an IoT system
+
+   Payment terminals
+   Cash drawer
+   Weighting scale
+   Barcode scanners
+   Kiosk
+   Display
+   Electronic shelf labels
+
 .. seealso::
-   - `Odoo Tutorials: Point of Sale Tutorials <https://www.odoo.com/slides/point-of-sale-28>`_
-   - :doc:`IoT Boxes Documentations </applications/general/iot>`
+   - `Odoo Tutorials: Point of Sale tutorials <https://www.odoo.com/slides/point-of-sale-28>`_
+   - :doc:`/applications/general/iot`
+
+POS could be for shops, restaurants, kiosks
 
 .. _pos/session-start:
 
 Start a session
 ===============
 
-From the **POS dashboard**, click :guilabel:`New Session`, and at the :guilabel:`Opening Cash
-Control` screen, click :guilabel:`Open Session` to start a POS session, or click :guilabel:`Continue
-Selling` if the session is already opened.
+From the POS dashboard, click :guilabel:`Open Register`, and at the :guilabel:`Opening Control`
+screen, ensure the :guilabel:`Opening cash` amount is correct and click :guilabel:`Open Register`
+again to start a POS session.
 
 .. note::
-   :doc:`Multiple users <point_of_sale/employee_login>` can be logged into the same session at the
-   same time. However, the session can only be opened once on the same browser.
+   - Once the session is open, :guilabel:`Open Register` is replaced by :guilabel:`Continue
+     Selling`.
+   - :doc:`Multiple users <point_of_sale/employee_login>` can be logged into the same session at the
+     same time. However, the session can only be opened once on the same browser.
 
 .. _pos/sell:
 
@@ -41,6 +57,7 @@ Once an order is completed, proceed to checkout by clicking :guilabel:`Payment`.
 
 .. image:: point_of_sale/pos-interface.png
    :alt: POS session interface.
+   :scale: 45 %
 
 .. tip::
    - You can use both `,` and `.` on your keyboard as decimal separators.
@@ -61,25 +78,31 @@ Registering your customer is necessary to :doc:`collect their loyalty points and
 <receipts-invoices/invoices>`.
 
 You can create customers from an :ref:`open POS session <pos/session-start>` by clicking
-:menuselection:`Customer --> Create`, and filling in the contact information. You can also create
-customers from the backend by going to :menuselection:`Point of Sale --> Orders --> Customers` and
-clicking :guilabel:`New`. Then, fill in the information and save.
+:guilabel:`Customer` and :guilabel:`Create`, and filling in the contact information. You can also
+create customers from the backend by going to :menuselection:`Point of Sale --> Orders -->
+Customers` and clicking :guilabel:`New`. Then, fill in the information and save.
 
-To set a customer during an order, access the list of customers by clicking :guilabel:`Customer` on
-the POS interface. You can also set a customer at the payment screen by clicking
-:guilabel:`Customer`.
+To set a customer, access the list of customers by clicking :guilabel:`Customer` on the POS
+interface or at the payment screen.
 
 .. _pos/customer-notes:
 
-Customer notes
-==============
+Notes
+=====
+
+Customer and General Notes
+--------------------------
+
+Customer and General notes are destined to the customer and printed on the receipt. For example,
+it could be a short instruction about the use of the product.
 
 You can add **customer notes** about specific products directly from an open :ref:`POS session
-<pos/session-start>`. For instance, to provide cleaning and maintenance tips. They can also be used
-to track a customer's particular request, such as not wanting the product to be assembled for them.
+<pos/session-start>`. For instance, to provide cleaning and maintenance tips.
 
-To do so, select a product and click :guilabel:`Customer Note` on the pad. Doing so opens a pop-up
-window in which you can add or modify content for the note.
+To do so, select a product and click :guilabel:`Actions` and :guilabel:`Customer Note`. Doing so
+opens a pop-up window in which you can add or modify content for the note.
+
+Click :guilabel:`Actions` and :guilabel:`General Note` to add a note regarding the complete order.
 
 .. note::
    Product notes from an :doc:`imported SO <point_of_sale/shop/sales_order>` are displayed
@@ -87,36 +110,47 @@ window in which you can add or modify content for the note.
 
 .. image:: point_of_sale/customer-notes.png
    :alt: Customer note button and notes (SO and POS session) on products in the cart
+   :scale: 50 %
 
 Customer notes appear on customers' receipts and invoices similarly to how they appear in the cart,
 under the related product.
 
-.. image:: point_of_sale/notes-receipt.png
-   :alt: Customer receipt with notes from an SO and from the customer note feature
+Internal Notes
+--------------
+
+In parallel, Internal Notes are added to items similarly but are destined to other users. For
+example, an additional information about an order for a cook, such as no tomato. That information,
+while useful, shouldn't be printed on the customer receipt.
+
+Select an item from the cart and click :guilabel:`Internal Note` to add a note about that specific
+item.
 
 .. _pos/refund:
 
 Return and refund products
 ==========================
 
-To return and refund a product,
+To refund a returned product, follow these steps:
 
-#. :ref:`start a session <pos/session-start>` from the **POS dashboard**;
-#. click :guilabel:`Refund` and select the corresponding order;
-#. select the product and the quantity to refund using the keypad;
-#. click :guilabel:`Refund` to go back to the previous screen;
-#. once the order is completed, click :guilabel:`Payment` to proceed to the refund;
-#. click :guilabel:`Validate` and :guilabel:`New Order` to move on to the next customer.
+#. :ref:`Start a session <pos/session-start>` from the **POS dashboard**.
+#. Click :guilabel:`Actions`, then :icon:`fa-undo` :guilabel:`Refund`, and select the corresponding
+   order.
+#. Select items and use the keypad to set the quantity to refund, then click :guilabel:`Refund`.
+#. Click :guilabel:`Payment` and select the appropriate refund payment method.
+#. Click :guilabel:`Validate` and print the receipt if needed.
+#. Click :guilabel:`New Order` to proceed to the next customer.
 
-.. image:: point_of_sale/refund.png
-   :alt: refund view from a POS
+.. tip::
+   - To filter the **orders list** by :guilabel:`Order number`, :guilabel:`Receipt Number`,
+     :guilabel:`Date`, or :guilabel:`Customer`, enter a value in the search bar and choose the
+     relevant filter from the dropdown menu.
+   - When the total amount is negative, adding a gift card to the cart automatically adjusts the
+     gift card balance to match that amount.
 
 .. note::
-   - You can filter the **orders list** by :guilabel:`Receipt Number`, :guilabel:`Date` or
-     :guilabel:`Customer` using the search bar.
-   - You can also refund a product by selecting the returned product from an open session, and
-     setting a negative quantity that equals the number of returned products. To do so, click
-     :guilabel:`Qty` and :guilabel:`+/-`, followed by the quantity of returned products.
+   Alternatively, a refund can be processed by selecting the returned product(s) from an open
+   session and setting a negative quantity equal to the number of returned items. To do so, click
+   :guilabel:`Qty` and :guilabel:`+/-`, and update the quantity accordingly.
 
 Once the return payment is validated, Odoo generates the required credit note, referencing the
 original receipt or invoice and partially or fully canceling the document.
