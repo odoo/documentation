@@ -27,8 +27,11 @@ Odoo Enterprise Subscription Agreement (NL)
         on all branches)
 .. v10: fall 2022 pricing change - removal of "per app" notions
 .. v10a: clarified wording for Section 5.1 "(at that time)"
+.. v11: add "25% extra fee for non-covered versions"; adapt Covered Version definition, service sections to
+        clarify what happens with non-covered versions;
+        for Data Protection, clarify that data deletion may be restricted by law (e.g. DK bookkeeping act)
 
-.. note:: Version 10a - 2022-10-27
+.. note:: Version 11 - 2025-07-04
 
 Door u op de Odoo Enterprise-diensten (de “Diensten”) te abonneren die door
 Odoo NV en haar dochterondernemingen (gezamenlijk “Odoo NV”) worden verleend
@@ -93,9 +96,8 @@ Bug
     voldoet).
 
 Ondersteunde Versies
-    Behalve anderluidende bepaling zijn de Diensten die op grond van deze
-    Overeenkomst worden verleend, uitsluitend van toepassing op de Ondersteunde
-    Versies van de Software, waaronder de 3 (drie) laatst uitgebrachte hoofdversies.
+    De 3 (drie) laatst uitgebrachte hoofdversies van de Software. Een nieuwe
+    hoofdversie wordt eenmaal per jaar uitgebracht.
 
 Abonnementsplan
     Een abonnementsplan bepaalt een reeks Apps, functies en hostingoplossingen
@@ -156,7 +158,7 @@ het door de partner verstrekte kanaal) te verhelpen en binnen de 2 werkdagen de
 behandeling van dergelijke door de Klant ingediende klachten aan te vatten.
 
 Zodra de Bug verholpen is, zal een passende oplossing aan de Klant worden
-meegedeeld. Indien de Klant een Ondersteunde Versie gebruikt, zal hem niet worden gevraagd
+meegedeeld. Indien de Klant geen Ondersteunde Versie gebruikt, zou hem gevraagd kunnen worden
 te upgraden naar een recentere Ondersteunde Versie van de Software als
 oplossing voor een Bug.
 
@@ -322,6 +324,12 @@ gelijk aan het toepasselijke tarief (op het moment van de afwijking van het opge
 aantal Gebruikers of Abonnementsplan) voor de bijkomende Gebruikers of
 het vereiste Abonnementsplan, voor de rest van de Looptijd.
 
+Eén keer per jaar, en niet eerder dan 3 maanden na de release van een nieuwe hoofdversie
+van de Software, gaat de Klant ermee akkoord om, indien de database van de Klant
+een versie ouder is dan de Ondersteunde Versies, een extra vergoeding te betalen van 25%
+van het op dat moment geldende, ongedisconteerde jaarlijkse tarief, gebaseerd op het huidige
+aantal Gebruikers en het Abonnementsplan van de Klant.
+
 Daarnaast worden de diensten voor Ondersteunde Extra Modules in rekening gebracht
 op basis van het aantal coderegels in deze modules. Wanneer de Klant kiest voor het onderhoud
 van de Ondersteunde Extra Modules, bedraagt het tarief de maandelijkse vergoeding per 100
@@ -341,8 +349,9 @@ een eenmalige extra vergoeding aanrekenen voor elke ontbrekende maand dekking.
 5.2 Verlengingskosten
 ---------------------
 
-Indien, bij verlenging zoals beschreven in de sectie :ref:`term_nl`, de
-kosten gedurende de vorige Looptijd lager zijn dan de meest
+Indien, bij verlenging zoals beschreven in sectie :ref:`term_nl`, de
+kosten (met uitzondering van extra vergoeding voor het gebruik van een
+niet-Ondersteunde Versie) gedurende de vorige Looptijd lager zijn dan de meest
 actuele geldende tarieven, zullen de kosten met maximaal 7% stijgen.
 
 .. _taxes_nl:
@@ -501,7 +510,9 @@ In het bijzonder verbindt Odoo NV zich ertoe:
 - (h) alle kopieën van de database van de Klant die in het bezit zijn van Odoo NV definitief
   te verwijderen, of dergelijke gegevens terug te geven, naar keuze van de Klant, bij
   beëindiging van deze Overeenkomst, met inachtneming van de termijnen die in het `Privacybeleid
-  <https://www.odoo.com/privacy>`_ van Odoo NV zijn bepaald.
+  <https://www.odoo.com/privacy>`_ van Odoo NV zijn bepaald, tenzij Odoo NV wettelijk verplicht
+  is de gegevens te bewaren. In dergelijke gevallen verbindt Odoo NV zich ertoe de persoonsgegevens
+  uitsluitend te verwerken voor de doeleinden en de duur die wettelijk vereist zijn.
 
 Met betrekking tot punten (d) tot (f) verbindt de klant zich ertoe Odoo NV te allen tijde te
 voorzien van nauwkeurige contactgegevens, die nodig zijn om de verantwoordelijke van de
