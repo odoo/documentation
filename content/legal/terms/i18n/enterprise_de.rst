@@ -14,10 +14,6 @@ Odoo Enterprise Abonnementsvertrag
    offizielle Verweis auf die Geschäftsbedingungen des "Odoo Enterprise Subscription Agreement" ist
    :ref:`die englische Original version <enterprise_agreement>`.
 
-.. warning::
-    DIESE VERSION IST NICHT AKTUELL, FÜR DIE AKTUELLE VERSION SIEHE :ref:`original english version
-    <enterprise_agreement>`.
-
 .. v6: add "App" definition + update pricing per-App
 .. v7: remove possibility of price change at renewal after prior notice
 .. 7.1: specify that 7% renewal increase applies to all charges, not just per-User.
@@ -28,8 +24,13 @@ Odoo Enterprise Abonnementsvertrag
 .. v9b: clarification that maintenance is opt-out + name of `cloc` command
 .. v9c: minor wording changes, tuned User definition, + copyright guarantee (re-application of v8a changes
         on all branches)
+.. v10: fall 2022 pricing change - removal of "per app" notions
+.. v10a: clarified wording for Section 5.1 "(at that time)"
+.. v11: add "25% extra fee for non-covered versions"; adapt Covered Version definition, service sections to
+        clarify what happens with non-covered versions;
+        for Data Protection, clarify that data deletion may be restricted by law (e.g. DK bookkeeping act)
 
-.. note:: Version 9c - 2020-06-15
+.. note:: Version 11 - 2025-07-04
 
 Indem Sie (der "Kunde") die Odoo Enterprise-Dienstleistungen (die "Dienstleistungen"), die von Odoo
 SA und seinen verbundenen Unternehmen (zusammen "Odoo SA") in Verbindung mit der Odoo Enterprise
@@ -60,8 +61,7 @@ Benutzer
 
 App
     Eine "App" ist eine spezielle Gruppe von Funktionen, die zur Installation in der Software zur
-    Verfügung steht und in der öffentlichen Preisliste der `Odoo SA-Website <https://www.odoo.com>`_
-    aufgeführt ist.
+    Verfügung steht.
 
 Odoo-Partner
     Ein Odoo-Partner ist ein Drittunternehmen oder eine Einzelperson, die vom Kunden ausgewählt
@@ -89,9 +89,13 @@ Bug
     Buchhaltungsanforderungen entspricht).
 
 Unterstützte Versionen
-    Sofern nicht anders angegeben, gelten die im Rahmen dieser Vereinbarung erbrachten
-    Dienstleistungen nur für die unterstützten Versionen der Software, zu denen die drei zuletzt
-    veröffentlichten Hauptversionen gehören.
+    Die drei zuletzt veröffentlichten Hauptversionen der Software. Eine neue Hauptversion wird
+    einmal pro Jahr veröffentlicht.
+
+Abonnementsplan
+    Ein Abonnementsplan bestimmt eine Reihe von Apps, Funktionen und Hosting-Lösungen, die unter
+    diese Vereinbarung fallen, und wird schriftlich bei dem Abschluss dieser Vereinbarung festgelegt.
+
 
 .. _enterprise_access_de:
 
@@ -122,8 +126,8 @@ Kunde verpflichtet sich, die Nutzung der Odoo Enterprise Edition Software und de
 einzustellen.
 
 Sollte der Kunde gegen die Bestimmungen dieses Abschnitts verstoßen, erklärt er sich bereit, Odoo SA
-eine zusätzliche Gebühr in Höhe von 300 % des geltenden Listenpreises für die tatsächliche Anzahl
-der Benutzer und installierten Apps zu zahlen.
+eine zusätzliche Gebühr in Höhe von 300% des geltenden Listenpreises für die tatsächliche Anzahl
+der Benutzer zu zahlen.
 
 .. _services_de:
 
@@ -143,8 +147,8 @@ mit einem Odoo-Partner - der vom Partner bereitgestellte Kanal), und mit der Bea
 von zwei Werktagen nach Eingang zu beginnen.
 
 Sobald der Fehler behoben ist, wird dem Kunden eine entsprechende Problemlösung mitgeteilt. Wenn der
-Kunde eine unterstützte Version Version verwendet, wird er nicht zu einem Upgrade auf eine neuere
-unterstützte Version der Software aufgefordert, um einen Fehler zu beheben.
+Kunde keine Unterstützte Version verwendet, könnte er gebeten werden, auf eine neuere
+Unterstützte Version der Software als Abhilfe für einen Bug zu aktualisieren.
 
 Wenn ein Fehler in einer unterstützten Version behoben wird, verpflichtet sich Odoo SA, den Fehler
 ebenfalls in allen neueren unterstützten Versionen der Software zu beheben.
@@ -290,26 +294,33 @@ Odoo Cloud-Plattform gehostet wird.
 ------------------
 
 Die Standardkosten für das Odoo Enterprise Abonnement und die Dienstleistungen basieren auf der
-Anzahl der Benutzer und der installierten Apps, die der Kunde nutzt, und werden bei
+Anzahl der Benutzer und dem vom Kunden gewählten Abonnementplan und werden bei
 Vertragsabschluss schriftlich festgehalten.
 
-Wenn der Kunde während der Laufzeit eine höhere Anzahl an Benutzern oder installierten Apps nutzt,
-als zum Zeitpunkt des Vertragsabschlusses angegeben, stimmt der Kunde zu, hierfür für den Rest der
-Laufzeit eine zusätzliche Gebühr in Höhe des zu Beginn der Laufzeit geltenden Listenpreises zu
-zahlen.
+Hat der Kunde während der Laufzeit mehr Benutzer oder nutzt Funktionen, die einen anderen
+Abonnementplan erfordern als zum Zeitpunkt des Vertragsabschlusses angegeben, so verpflichtet
+sich der Kunde, eine zusätzliche Gebühr in Höhe des zum Zeitpunkt der Abweichung geltenden
+Listenpreises für die zusätzlichen Benutzer oder den erforderlichen Abonnementplan zu zahlen,
+und zwar für den Rest der Laufzeit.
+
+Einmal pro Jahr, und nicht früher als 3 Monate nach der Veröffentlichung einer neuen Hauptversion
+der Software, wenn die Datenbank des Kunden eine Version älter als die Unterstützten Versionen ist,
+erklärt sich der Kunde bereit, eine zusätzliche Gebühr von 25% des zu diesem Zeitpunkt gültigen,
+unrabattierten jährlichen Listenpreises zu zahlen, basierend auf der aktuellen Anzahl der Benutzer
+und dem Abonnementplan des Kunden.
 
 Darüber hinaus werden die Kosten der Dienstleistungen im Zusammenhang mit unterstützten
 Zusatzmodulen basierend auf der Anzahl der Codezeilen in diesen Modulen berechnet. Entscheidet sich
-der Kunde für die Wartung von unterstützten Zusatzmodulen, beträgt die Gebühr monatlich 16,00 € pro
-100 Codezeilen (aufgerundet auf die nächsten Hundert), sofern bei Vertragsabschluss nichts anderes
-schriftlich vereinbart wurde. Codezeilen werden mit dem cloc-Befehl der Software gezählt und
+der Kunde für die Wartung von unterstützten Zusatzmodulen, beträgt die Gebühr monatlich pro
+100 Codezeilen (aufgerundet auf die nächsten Hundert), wie bei Vertragsabschluss schriftlich
+festgelegt. Codezeilen werden mit dem cloc-Befehl der Software gezählt und
 umfassen alle Textzeilen im Quellcode dieser Module, unabhängig von der Programmiersprache
 (Python, Javascript, XML etc.), ausgenommen Leerzeilen, Kommentarzeilen und Dateien, die bei der
 Installation oder Ausführung der Software nicht geladen werden.
 
 Wenn der Kunde ein Upgrade beantragt, kann Odoo SA für jedes unterstützte Zusatzmodul, das in den
-letzten 12 Monaten nicht durch eine Wartungsgebühr abgedeckt wurde, eine einmalige Zusatzgebühr von
-16,00 € pro 100 Codezeilen für jeden fehlenden Abdeckungsmonat erheben.
+letzten 12 Monaten nicht durch eine Wartungsgebühr abgedeckt wurde, eine einmalige Zusatzgebühr
+für jeden fehlenden Abdeckungsmonat erheben.
 
 .. _charges_renewal_de:
 
@@ -317,8 +328,8 @@ letzten 12 Monaten nicht durch eine Wartungsgebühr abgedeckt wurde, eine einmal
 -------------------------
 
 Bei einer Verlängerung gemäß Abschnitt :ref:`term_de` erhöhen sich die Gebühren um bis zu 7 %, wenn
-die während der vorherigen Laufzeit erhobenen Gebühren (mit Ausnahme etwaiger "Erstnutzerrabatte")
-unter dem jeweils gültigen Listenpreis liegen.
+die während der vorherigen Laufzeit erhobenen Gebühren (ohne zusätzliche Gebühr für die Nutzung
+nicht unterstützter Versionen) unter dem jeweils gültigen Listenpreis liegen.
 
 .. _taxes_de:
 
@@ -343,8 +354,8 @@ Der Kunde verpflichtet sich:
 
 - Odoo SA alle anfallenden Gebühren für die Dienstleistungen dieser Vereinbarung gemäß den bei der
   Unterzeichnung dieses Vertrages festgelegten Zahlungsbedingungen zu zahlen;
-- Odoo SA unverzüglich zu benachrichtigen, wenn die tatsächliche Anzahl der Benutzer oder der
-  installierten Apps die bei Vertragsabschluss angegebene Anzahl übersteigt, und in diesem Fall die
+- Odoo SA unverzüglich zu benachrichtigen, wenn die tatsächliche Anzahl der Benutzer
+  die beim Vertragsabschluss angegebene Anzahl übersteigt, und in diesem Fall die
   entsprechende Zusatzgebühr zu entrichten, wie in Abschnitt :ref:`charges_standard_de` beschrieben;
 - alle erforderlichen Maßnahmen zu ergreifen, um die unveränderte Ausführung des Teils der Software
   zu gewährleisten, der die Gültigkeit der Nutzung der Odoo Enterprise Edition prüft, wie in
@@ -371,7 +382,7 @@ Sollte der Kunde die Self-Hosting-Option gewählt haben, erklärt er sich des we
   Odoo SA nicht für Datenverluste haftbar gemacht werden kann;
 - Odoo SA den notwendigen Zugang zu gewähren, um die Gültigkeit der Nutzung der Odoo Enterprise
   Edition auf Anfrage überprüfen zu können (z.B. wenn die automatische Validierung für den Kunden
-  nicht funktioniert)
+  nicht funktioniert).
 
 .. _no_soliciting_de:
 
@@ -465,7 +476,9 @@ verpflichtet sich Odoo SA dazu:
 - (h) je nach Wahl des Kunden, alle Kopien der Datenbank des Kunden, die sich im Besitz von Odoo SA
   befinden, bei Beendigung dieser Vereinbarung entweder dauerhaft zu löschen oder zurückzugeben,
   unter Einhaltung der in der `Datenschutzrichtlinie <https://www.odoo.com/de_DE/privacy>`_ von
-  Odoo SA genannten Fristen
+  Odoo SA genannten Fristen, es sei denn, Odoo SA ist gesetzlich zur Speicherung der Daten verpflichtet.
+  In solchen Fällen verpflichtet sich Odoo SA, die personenbezogenen Daten ausschließlich für die
+  gesetzlich vorgeschriebenen Zwecke und Dauer zu verarbeiten.
 
 In Bezug auf die Punkte (d) bis (f) verpflichtet sich der Kunde, Odoo SA jederzeit genaue
 Kontaktinformationen zur Verfügung zu stellen, die für die Benachrichtigung des
@@ -560,15 +573,14 @@ des Gesamtbetrags, den der Kunde im Rahmen dieser Vereinbarung in den 12 Monaten
 Datum des Ereignisses, das einen solchen Anspruch begründet, gezahlt hat. Mehrfachansprüche führen
 nicht zu einer Ausweitung dieser Begrenzung.
 
-In keinem Fall haften die Parteien oder ihre verbundenen Unternehmen für indirekte, besondere,
-exemplarische, zufällige oder Folgeschäden jeglicher Art, einschließlich, aber nicht beschränkt auf
-Einnahmeverluste, Gewinne, Einsparungen, Geschäftsverluste oder andere finanzielle Verluste, Kosten
-für Stockungen oder Verzögerung, verlorene oder beschädigte Daten, die sich aus oder in Verbindung
-mit dieser Vereinbarung ergeben, unabhängig von der Form der Klage, ob auf vertraglicher Basis,
-aufgrund unerlaubter Handlung (einschließlich strikter Fahrlässigkeit) oder einer anderen
-rechtlichen oder gerechtfertigten Grundlage, selbst wenn eine Partei oder ihre Partner auf die
-Möglichkeit solcher Schäden hingewiesen wurden oder wenn das Rechtsmittel einer Partei oder ihrer
-Partner auf andere Weise seinen wesentlichen Zweck verfehlt.
+In keinem Fall haften eine der Parteien oder ihre verbundenen Unternehmen für indirekte, spezielle,
+beispielhafte, zufällige oder Folgeschäden jeglicher Art, einschließlich, aber nicht beschränkt auf
+Umsatzverluste, Gewinne, Einsparungen, Geschäftsverluste oder sonstige finanzielle Verluste,
+Stillstands- oder Verzögerungskosten, verlorene oder beschädigte Daten, die sich aus oder im
+Zusammenhang mit dieser Vereinbarung ergeben, unabhängig von der Form der Klage, ob aus Vertrag,
+unerlaubter Handlung oder anderweitig, selbst wenn eine Partei oder ihre verbundenen Unternehmen
+auf die Möglichkeit solcher Schäden hingewiesen wurden oder wenn ein Rechtsbehelf einer Partei
+oder ihrer verbundenen Unternehmen seinen wesentlichen Zweck verfehlt.
 
 .. _force_majeure_de:
 
