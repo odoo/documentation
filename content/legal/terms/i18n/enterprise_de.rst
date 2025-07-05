@@ -286,7 +286,7 @@ Odoo Cloud-Plattform gehostet wird.
 .. _charges_de:
 
 5. Kosten und Gebühren
-=======================
+======================
 
 .. _charges_standard_de:
 
@@ -585,7 +585,7 @@ oder ihrer verbundenen Unternehmen seinen wesentlichen Zweck verfehlt.
 .. _force_majeure_de:
 
 7.4 Höhere Gewalt
-------------------
+-----------------
 
 Keine der Parteien haftet gegenüber der anderen Partei für die Verzögerung oder das Nichterbringen
 einer Leistung aus dieser Vereinbarung, wenn die Ursache für die Verzögerung oder das Nichterbringen
