@@ -298,7 +298,7 @@ la Plate-forme Cloud d'Odoo.
 .. _charges_fr:
 
 5 Tarifs et Frais
-==================
+=================
 
 .. _charges_standard_fr:
 
