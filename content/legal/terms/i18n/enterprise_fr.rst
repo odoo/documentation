@@ -14,7 +14,7 @@ Contrat d'Abonnement Odoo Enterprise
     La seule référence officielle des termes du contrat “Odoo Enterprise Subscription Agreement”
     est la :ref:`version originale en anglais <enterprise_agreement>`.
 
-.. note:: Version 10a - 2022-10-27
+.. note:: Version 11 - 2025-07-04
 
 .. v6: add "App" definition + update pricing per-App
 .. v7: remove possibility of price change at renewal after prior notice
@@ -30,6 +30,9 @@ Contrat d'Abonnement Odoo Enterprise
 .. v10: fall 2022 pricing change - removal of "per app" notions
 .. v10.001FR: typo: removed 1 leftover 16€/10LoC price
 .. v10a: clarified wording for Section 5.1 "(at that time)"
+.. v11: add "25% extra fee for non-covered versions"; adapt Covered Version definition, service sections to
+        clarify what happens with non-covered versions;
+        for Data Protection, clarify that data deletion may be restricted by law (e.g. DK bookkeeping act)
 
 En vous abonnant aux services de Odoo Enterprise (les "Services") fournis par Odoo SA et ses filiales
 (collectivement, "Odoo SA") en relation avec Odoo Enterprise Edition ou Odoo Community Edition
@@ -88,8 +91,8 @@ Bug
     fonctionnalité spécifique à un pays ne répond plus aux exigences comptables légales de ce pays).
 
 Versions Couvertes
-    Sauf exception explicite, tous les Services dans le cadre du présent contrat s'appliquent uniquement aux Versions
-    Couvertes du Logiciel, qui comprennent les 3 plus récentes versions majeures.
+    Les 3 dernières versions majeures du Logiciel publiées. Une nouvelle version majeure est publiée une
+    fois par an.
 
 Formule d'Abonnement
     Une Formule d'Abonnement définit un ensemble d'Apps, fonctionnalités et solutions d'hébergement
@@ -148,8 +151,8 @@ un Partenaire Odoo, le canal prévu par le partenaire), et de commencer à trait
 du Client dans un délai de 2 jours ouvrables.
 
 Dès que le Bug est remédié, un correctif approprié sera communiqué au Client.
-Si le Client utilise une Version Couverte, il ne lui sera jamais demandé de passer à une Version Couverte
-plus récente pour obtenir un correctif.
+Si le Client n'utilise pas une Version Couverte, il peut lui être demandé de passer à une Version Couverte
+plus récente pour obtenir le correctif.
 
 Lorsqu'un Bug est corrigé dans une Version Couverte, Odoo SA s'engage à le corriger dans toutes
 les Versions Couvertes plus récentes du Logiciel.
@@ -312,6 +315,11 @@ en vigueur applicable (au moment de la divergence par rapport au nombre d'Utilis
 Formule d'Abonnement spécifiés) pour les utilisateurs supplémentaires ou la Formule d'Abonnement
 requise, pour le reste de la Durée.
 
+Une fois par an, et pas avant un délai de 3 mois suivant la publication d’une nouvelle version majeure du Logiciel,
+si la base de données du Client utilise une version antérieure aux Versions Couvertes, le Client accepte de payer
+des frais supplémentaires de 25 % du prix catalogue annuel non remisé applicable à ce moment,
+basés sur le nombre d’Utilisateurs et le Plan d’abonnement en vigueur  Client.
+
 Par ailleurs, les services concernant les Modules Supplémentaires Couverts sont facturés sur base
 du nombre de lignes de code dans ces modules. Lorsque le client opte pour l'abonnement de maintenance
 des Modules Supplémentaires Couverts, le coût mensuel est défini par 100 lignes de code (arrondi à la
@@ -332,7 +340,8 @@ supplémentaires uniques, pour chaque mois de maintenance manquant.
 --------------------------
 
 Lors de la reconduction telle que décrite à la section :ref:`term_fr`, si les tarifs appliqués
-pendant la Durée précédente du contrat sont inférieurs aux tarifs en vigueur les plus récents,
+pendant la Durée précédente du contrat (à l'exclusion des frais supplémentaires pour
+l'utilisation d'une version non-Couvertes) sont inférieurs aux tarifs en vigueur les plus récents,
 ces frais augmenteront de maximum 7 %.
 
 .. _taxes_fr:
@@ -476,10 +485,12 @@ En particulier, Odoo SA s'engage à:
 - (g) Fournir au Client toute information nécessaire à la démonstration de la conformité avec la
   Législation sur la Protection des Données, autoriser et contribuer de façon raisonnable à des
   audits, y compris des inspections, conduits ou mandatés par le Client dans ce but;
-- (h) Supprimer définitivement tout copie de la base de données du Client en possession d'Odoo SA,
+- (h) Supprimer définitivement toute copie de la base de données du Client en possession d'Odoo SA,
   ou retourner ces données, au choix du Client, lors de la résiliation de ce Contrat,
   en respect des délais indiqués dans la `Politique de Protection des Données <https://www.odoo.com/privacy>`_
-  d'Odoo SA ;
+  d'Odoo SA, à moins qu'Odoo SA ne soit légalement tenue de conserver les données. Dans de tels cas,
+  Odoo SA s'engage à traiter les données à caractère personnel uniquement aux fins et pour la durée
+  requises par la loi.
 
 Concernant les points (d) à (f), le Client s'engage à fournir à Odoo SA des informations de
 contact valables, tel que nécessaire pour toute notification auprès du responsable de protection des
