@@ -204,7 +204,7 @@ zonder dat daarvoor enige handmatige actie van de Klant nodig is.
 .. _upgrade_nl:
 
 4.3 Upgradediensten
---------------------
+-------------------
 
 .. _upgrade_odoo_nl:
 
@@ -559,7 +559,7 @@ Overlevende bepalingen:
 .. _warranties_nl:
 
 7.1 Garanties
---------------
+-------------
 
 Odoo NV bezit het auteursrecht of een gelijkwaardig recht [#cla_nl1]_ op 100 % van
 de code van de Software en bevestigt dat alle softwarebibliotheken die nodig zijn om de Software
