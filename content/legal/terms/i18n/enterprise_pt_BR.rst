@@ -13,7 +13,7 @@ Contrato de Assinatura do Odoo Enterprise
     valor legal. A única referência oficial aos termos do Contrato “Odoo Enterprise Subscription Agreement”
     é a :ref:`versão original em inglês <enterprise_agreement>`.
 
-.. note:: Versão 10a - 2022-10-27
+.. note:: Version 11 - 2025-07-04
 
 .. v6: add "App" definition + update pricing per-App
 .. v7: remove possibility of price change at renewal after prior notice
@@ -29,6 +29,9 @@ Contrato de Assinatura do Odoo Enterprise
 .. v10: fall 2022 pricing change - removal of "per app" notions
 .. v10.001FR: typo: removed 1 leftover 16€/10LoC price
 .. v10a: clarified wording for Section 5.1 "(at that time)"
+.. v11: add "25% extra fee for non-covered versions"; adapt Covered Version definition, service sections to
+        clarify what happens with non-covered versions;
+        for Data Protection, clarify that data deletion may be restricted by law (e.g. DK bookkeeping act)
 
 Ao assinar os serviços do Odoo Enterprise (os "Serviços") fornecidos pela Odoo SA e suas
 afiliadas (coletivamente, "Odoo SA") em relação ao Odoo Enterprise Edition ou Odoo
@@ -86,9 +89,8 @@ Bug
     quando um recurso específico do país não atende mais aos requisitos legais de contabilidade).
 
 Versões Cobertas
-    A menos que seja especificado, os Serviços fornecidos sob este Contrato são aplicáveis apenas
-    às Versões Cobertas do Software, que incluem as 3 versões principais lançadas mais
-    recentemente.
+    As 3 versões principais mais recentemente lançadas do Software. Uma nova versão principal
+    é lançada uma vez por ano.
 
 Plano de Assinatura
     Um Plano de Assinatura define um conjunto de Aplicativos, recursos e soluções de
@@ -140,7 +142,7 @@ de telefone listados em http://www.odoo.com/help, ou, ao trabalhar com um parcei
 fornecido pelo parceiro) e começar a lidar com essas solicitações do Cliente em 2 dias úteis.
 
 Assim que o Bug for corrigido, uma solução apropriada será comunicada ao Cliente. Se o
-Cliente estiver usando uma Versão Coberta, ele não será solicitado a atualizar para uma Versão
+Cliente não estiver usando uma Versão Coberta, ele poderá ser solicitado a atualizar para uma Versão
 Coberta mais recente do Software como solução para um Bug.
 
 Quando um Bug é corrigido em qualquer Versão Coberta, a Odoo SA se compromete a corrigir
@@ -300,6 +302,11 @@ concorda em pagar uma taxa extra equivalente ao preço de tabela aplicável (no 
 desvio do número especificado de Usuários ou Plano de Assinatura) para os Usuários adicionais
 ou o Plano de Assinatura necessário, pelo restante da Vigência.
 
+Uma vez por ano, e não antes de 3 meses após o lançamento de uma nova versão principal do Software,
+se a base de dados do Cliente estiver em uma versão mais antiga do que as Versões Cobertas,
+o Cliente concorda em pagar uma taxa extra de 25% do preço de tabela anual sem desconto aplicável
+naquele momento, com base no número atual de Usuários e no Plano de Assinatura do Cliente.
+
 Além disso, os serviços dos Módulos Extras Cobertos são cobrados com base no número de
 linhas de código nesses módulos. Quando o Cliente optar pela manutenção dos Módulos Extras
 Cobertos, a cobrança será mensal por 100 linhas de código (arredondadas para a próxima
@@ -319,7 +326,8 @@ uma taxa extra única para cada mês de cobertura faltante.
 -----------------------
 
 Após a renovação, conforme previsto na seção :ref:`term_pt`, se os preços aplicados
-durante a Vigência anterior forem inferiores ao preço de tabela aplicável mais atual, tais preços
+durante a Vigência anterior (excluindo qualquer taxa extra pelo uso de uma Versão
+não Coberta) forem inferiores ao preço de tabela aplicável mais atual, tais preços
 aumentarão em até 7%.
 
 .. _taxes_pt:
@@ -459,7 +467,9 @@ Em particular, a Odoo SA compromete-se a:
 - (h) excluir permanentemente todas as cópias da base de dados do Cliente em posse da Odoo
   SA, ou devolver tais dados, à escolha do Cliente, após a rescisão deste Contrato, sujeito
   aos atrasos especificados na `Política de Privacidade <https://www.odoo.com/privacy>`_
-  da Odoo SA;
+  da Odoo SA, a menos que a Odoo SA seja legalmente obrigada a reter os dados. Nesses casos,
+  a Odoo SA se compromete a processar os dados pessoais exclusivamente para os fins e pela
+  duração exigidos por lei.
 
 No que diz respeito às alíneas (d) a (f), o Cliente concorda em fornecer à Odoo SA informações
 de contato precisas em todos os momentos, conforme necessário para notificar o responsável pela

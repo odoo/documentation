@@ -13,7 +13,26 @@ Acuerdo de suscripción de Odoo Enterprise
 .. in some countries where Odoo has subsidiaries. Care must be taken to make the translation
 .. as accurate as possible in its intent and effects.
 
-.. note:: Version 10a.1 - 2025-01-08
+.. note:: Version 11 - 2025-07-04
+
+.. v6: add "App" definition + update pricing per-App
+.. v7: remove possibility of price change at renewal after prior notice
+.. 7.1: specify that 7% renewal increase applies to all charges, not just per-User.
+.. v8.0: adapt for "Self-Hosting" + "Data Protection" for GDPR
+.. v8a: minor wording changes, tuned User definition, + copyright guarantee
+.. v9.0: add "Working with an Odoo Partner" + Maintenance of [Covered] Extra Modules + simplifications
+.. v9a: clarification wrt second-level assistance for standard features
+.. v9b: clarification that maintenance is opt-out + name of `cloc` command (+ paragraph 5.1 was partially outdated in FR)
+.. v9c: minor wording changes, tuned User definition, + copyright guarantee (re-application of v8a changes
+        on all branches)
+.. v9c2: minor simplification in FR wording
+.. v10: fall 2022 pricing change - removal of "per app" notions
+.. v10.001FR: typo: removed 1 leftover 16€/10LoC price
+.. v10a: clarified wording for Section 5.1 "(at that time)"
+.. v10a.1: minor wording : celebrar/concluir
+.. v11: add "25% extra fee for non-covered versions"; adapt Covered Version definition, service sections to
+        clarify what happens with non-covered versions;
+        for Data Protection, clarify that data deletion may be restricted by law (e.g. DK bookkeeping act)
 
 Al suscribirse a los servicios de Odoo Enterprise (en adelante “los Servicios”) proporcionados por
 Odoo SA y sus filiales (en adelante denominadas conjuntamente “Odoo SA”), relacionados con las
@@ -76,9 +95,8 @@ Bug
     legales de contabilidad).
 
 Versiones Cubiertas
-    A menos que se especifique lo contrario, los Servicios proporcionados por en virtud de este
-    Acuerdo son únicamente aplicables a las versiones cubiertas del Software, las cuales incluyen
-    las últimas tres (3) versiones publicadas.
+    Las tres versiones principales más recientes del Software. Se publica una nueva versión
+    principal cada año.
 
 Plan de Suscripción
     Un Plan de Suscripción define un conjunto de Aplicaciones, funciones y soluciones de alojamiento
@@ -135,7 +153,7 @@ solicitudes del Cliente dentro de 2 días hábiles posteriores a la creación de
 Cliente.
 
 El Cliente recibirá una notificación de la solución adecuada una vez se haya solucionado el Bug. En
-caso que el Cliente esté usando una versión cubierta, no se le pedirá que actualice el Software a
+caso que el Cliente no esté usando una Versión Cubierta, se le podría pedir que actualice el Software a
 una versión más reciente como solución a un Bug.
 
 Cuando se corrige un Bug de cualquiera de las versiones cubiertas, Odoo SA se compromete a corregir
@@ -292,6 +310,12 @@ la lista de precios (en el momento de la desviación del número especificado de
 Plan de Suscripción) por los Usuarios adicionales o el Plan de Suscripción requerido,
 por el resto del Plazo.
 
+Una vez al año, y no antes de 3 meses después del lanzamiento de una nueva versión principal
+del Software, si la base de datos del Cliente se encuentra en una versión anterior a las
+Versiones Cubiertas, el Cliente acepta pagar una tarifa adicional del 25% del precio de lista
+anual sin descuento aplicable en ese momento, con base en el número actual de Usuarios y el
+Plan de Suscripción del Cliente.
+
 Además, los servicios de los Módulos Adicionales Cubiertos se cobran en función al número de
 líneas de código de estos módulos. Cuando el cliente opta por el mantenimiento de Módulos
 Adicionales Cubiertos, el costo es una tarifa mensual de 16 € por 100 líneas de código
@@ -311,9 +335,10 @@ tarifa adicional única, por cada mes faltante de cobertura.
 ------------------------
 
 Siguiendo la renovación descrita en la sección :ref:`term_es` del presente Acuerdo, si los cargos
-aplicados durante el Plazo anterior son
-más bajos que el precio aplicable en la lista de precios actual, dichos cargos podrán aumentar 7%
-como máximo.
+aplicados durante el Plazo anterior (excluyendo cualquier tarifa adicional por el uso de una
+Versión no Cubierta) son
+más bajos que el precio aplicable en la lista de precios actual, dichos cargos podrán aumentar
+hasta un 7%.
 
 .. _taxes_es:
 
@@ -466,7 +491,9 @@ protección de datos. En particular, Odoo SA se compromete a:
 - (h) eliminar permanentemente todas las copias de la base de datos del Cliente en posesión de
   Odoo SA, o devolver dichos datos, a elección del Cliente, a la terminación de este Acuerdo,
   sujeto a los retrasos especificados en la Política de privacidad
-  de Odoo SA (`Privacy <https://www.odoo.com/privacy>`__).
+  de Odoo SA (`Privacy <https://www.odoo.com/privacy>`__), a menos que Odoo SA esté legalmente
+  obligada a retener los datos. En tales casos, Odoo SA se compromete a procesar los datos
+  personales únicamente para los fines y durante la duración exigida por la ley.
 
 En relación a los puntos (d) y (f), el Cliente acepta proporcionar a Odoo SA información de contacto
 precisa en todo momento, según sea necesario para notificar al responsable de la Legislación de

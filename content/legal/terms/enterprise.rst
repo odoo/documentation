@@ -8,7 +8,7 @@ Odoo Enterprise Subscription Agreement
 
    `Download PDF <https://www.odoo.com/documentation/{CURRENT_BRANCH}/odoo_enterprise_agreement.pdf>`_
 
-.. note:: Version 10a - 2022-10-27
+.. note:: Version 11 - 2025-07-04
 
 .. v6: add "App" definition + update pricing per-App
 .. v7: remove possibility of price change at renewal after prior notice
@@ -22,6 +22,9 @@ Odoo Enterprise Subscription Agreement
         on all branches)
 .. v10: fall 2022 pricing change - removal of "per app" notions
 .. v10a: clarified wording for Section 5.1 "(at that time)"
+.. v11: add "25% extra fee for non-covered versions"; adapt Covered Version definition, service sections to
+        clarify what happens with non-covered versions;
+        for Data Protection, clarify that data deletion may be restricted by law (e.g. DK bookkeeping act)
 
 By subscribing to the Odoo Enterprise services (the "Services") provided by Odoo SA and its
 affiliates (collectively, "Odoo SA") in relation with Odoo Enterprise Edition or Odoo Community
@@ -78,9 +81,8 @@ Bug
     accounting requirements anymore).
 
 Covered Versions
-    Unless specified otherwise, the Services provided under this Agreement are applicable only
-    to the Covered Versions of the Software, which include the 3 most recently released major
-    versions.
+    The 3 most recently released major versions of the Software. A new major version is released
+    once per year.
 
 Subscription Plan
     A Subscription Plan defines a set of Apps, features and hosting solutions covered by this
@@ -134,7 +136,7 @@ or when working with an Odoo Partner, the channel provided by the partner), and 
 such Customer submissions within 2 business days.
 
 As soon as the Bug is fixed an appropriate remedy will be communicated to the Customer.
-If the Customer is using a Covered Version, they will not be asked to upgrade to a more recent
+If the Customer is not using a Covered Version, they might be asked to upgrade to a more recent
 Covered Version of the Software as a remedy to a Bug.
 
 When a Bug is fixed in any Covered Version, Odoo SA commits to fixing the Bug in all more recent
@@ -289,6 +291,11 @@ of conclusion of this Agreement, the Customer agrees to pay an extra fee equival
 list price (at the time of the deviation from the specified number of Users or Subscription Plan)
 for the additional Users or the required Subscription Plan, for the remainder of the Term.
 
+Once per year, and no earlier than 3 months after the release of a new major version of the Software,
+if the Customer’s database is on a version older than the Covered Versions, the Customer agrees
+to pay an extra fee of 25% of the undiscounted annual list price applicable at that time, based on
+the Customer's current number of Users and Subscription Plan.
+
 In addition, services for Covered Extra Modules are charged based on the number of lines of code
 in these modules. When the Customer opts for the maintenance of Covered Extra Modules, the charge
 is a monthly fee per 100 lines of code (rounded up to the next hundred), as
@@ -307,7 +314,8 @@ for each missing month of coverage.
 -------------------
 
 Upon renewal as covered in section :ref:`term`, if the charges applied during the previous Term
-are lower than the most current applicable list price, these charges will increase by up to 7%.
+(excluding any extra fee for use of a non-Covered Version) are lower than the most current
+applicable list price, these charges will increase by up to 7%.
 
 .. _taxes:
 
@@ -451,7 +459,9 @@ In particular, Odoo SA commits to:
 - (h) permanently delete all copies of the Customer's database in possession of Odoo SA,
   or return such data, at the Customer’s choice, upon termination of this Agreement,
   subject to the delays specified in Odoo SA's
-  `Privacy Policy <https://www.odoo.com/privacy>`_ ;
+  `Privacy Policy <https://www.odoo.com/privacy>`_ , unless Odoo SA is legally required
+  to retain the data. In such cases, Odoo SA commits to process the personal data solely
+  for the purposes and duration required by law.
 
 With regard to points (d) to (f), the Customer agrees to provide Odoo SA with accurate contact
 information at all times, as necessary to notify the Customer's Data Protection responsible.
