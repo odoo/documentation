@@ -53,7 +53,8 @@ number), then Odoo will open a group chat with all operators responsible for thi
    the help desk team and sales teams can chat on different channels.
 
 .. seealso::
-   :download:`Magic Sheet - WhatsApp configuration PDF <whatsapp/magic-sheet-whatsapp.pdf>`
+   `Magic Sheet - WhatsApp configuration [PDF]
+   <https://drive.google.com/drive/folders/1hHEYq6jxmqKGFOeM3UQ7vOfiF7KuGX5W>`_
 
 WhatsApp configuration in a Meta
 ================================
