@@ -53,8 +53,8 @@ This section assumes ownership of a custom domain. If not, a custom domain must 
 domain registrar such as GoDaddy, Namecheap, or any alternative provider.
 
 .. seealso::
-   :download:`Magic Sheet - Email domain configuration PDF
-   <email_servers_outbound/magic-sheet-email-domain.pdf>`
+   `Magic Sheet - Email domain name configuration [PDF]
+   <https://drive.google.com/drive/folders/1cW3watvBO4h190rz-a08AshUepVzDeg5>`_
 
 .. _email-outbound-custom-domain-odoo-server:
 
