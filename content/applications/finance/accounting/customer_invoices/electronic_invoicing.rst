@@ -41,7 +41,9 @@ Odoo supports e-invoicing in many countries. Refer to the country's page for mor
 - :doc:`Uruguay <electronic_invoicing/uruguay>`
 
 .. seealso::
-   :doc:`Fiscal localizations documentation <../../fiscal_localizations>`
+   - :doc:`Fiscal localizations documentation <../../fiscal_localizations>`
+   - `Magic Sheet - E-invoicing in Odoo [PDF]
+     <https://drive.google.com/drive/folders/1NGC_bVygboE0A7ge-O69TX7JwFPNBhhu>`_
 
 .. _e-invoicing/configuration:
 

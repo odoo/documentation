@@ -40,6 +40,8 @@ to your subscription, contact the database's account manager or Odoo partner for
    - `Odoo Tutorials: Internet of Things (IoT) Tutorials
      <https://www.odoo.com/slides/internet-of-things-iot-175>`_
    - `IoT system FAQ <https://www.odoo.com/app/iot-faq>`_
+   - `Magic Sheet - Odoo Internet of Things [PDF]
+     <https://drive.google.com/file/d/18D0VqlGvW6kUg-xKmyELrQqJ6J3bHKGy/view>`_
 
 .. cards::
 

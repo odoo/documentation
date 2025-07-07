@@ -13,8 +13,10 @@ However, you can use a custom domain name instead by :ref:`registering a free do
 domain name you already own <domain-name/existing>`.
 
 .. seealso::
-   `Odoo Tutorials: Register a free domain name [video]
-   <https://www.odoo.com/slides/slide/register-a-free-domain-name-1663>`_
+   - `Odoo Tutorials: Register a free domain name [video]
+     <https://www.odoo.com/slides/slide/register-a-free-domain-name-1663>`_
+   - `Magic Sheet - Website domain configuration [PDF]
+     <https://drive.google.com/drive/folders/1sXbp7sC6TKG2v-8hcRAMhA6ftKmRxba_>`_
 
 .. _domain-name/register:
 
