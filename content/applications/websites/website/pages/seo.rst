@@ -15,6 +15,10 @@ speed.
      <https://getbootstrap.com/>`_ to render efficiently according to the device: desktop, tablet,
      or mobile, which positively impacts ranking in search engines.
 
+.. seealso::
+   `Magic Sheet - Optimize your website [PDF]
+   <https://drive.google.com/drive/folders/1Ywip4tWF2DPkcBaEbeXJxIZg2CjkwKgb>`_
+
 Content optimization
 ====================
 
