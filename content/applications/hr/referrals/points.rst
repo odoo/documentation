@@ -2,12 +2,12 @@
 Referral points
 ===============
 
-The *Referrals* application allows employees to earn points that are then exchanged for
+The **Referrals** application allows employees to earn points that are then exchanged for
 :doc:`rewards <rewards>`.
 
-Current referral points can be viewed on the main *Referrals* app dashboard, which appears when the
-application is opened, after the :ref:`onboarding <referrals/onboarding>` slides have been viewed or
-skipped.
+Current referral points can be viewed on the main **Referrals** app dashboard, which appears when
+the application is opened, after the :ref:`onboarding <referrals/onboarding>` slides have been
+viewed or skipped.
 
 At the top, a summary of the user's current points is displayed. The left side of the summary
 displays the :guilabel:`Total` points earned, and the right side displays the points that are
@@ -22,33 +22,30 @@ been hired or refused, appear above :guilabel:`Ongoing`. The number of referrals
 hired, appear above :guilabel:`Successful`. The total number of referrals, both the ongoing and
 successful referrals combined, appears above :guilabel:`Referrals`.
 
-My referrals
-============
+My referral
+===========
 
 To see all the referrals, both ongoing and successful, click :guilabel:`Referrals`. The
 :guilabel:`My Referral` screen page displays all the referrals, with each individual referral housed
 in its own referral card.
 
-A successful referral displays a white :icon:`fa-check` :guilabel:`Hired` badge in the top-right
-corner of the card, along with a vertical green stripe on the left-side of the card. Referrals that
-are in process have a purple :guilabel:`In Progress` badge in the top-right corner.
+A successful referral displays a green :guilabel:`HIRED` banner in the top-right corner of the card.
+Referrals that are in process have a purple :guilabel:`ONGOING` badge in the top-right corner.
 
-Each referral card lists the name of the applicant, the subject/application title as it appears on
-the applicant card in the *Recruitment* app, the name of the job position, the person responsible
-for filling the role (i.e. the recruiter), and the points earned.
+Each referral card lists the name of the applicant, the name of the job position, the person
+responsible for filling the role (i.e. the recruiter), and the points earned.
 
 For referrals that have been hired, the selected avatar also appears on the card.
 
 .. image:: points/referrals.png
-   :align: center
-   :alt: Two referral cards, one hired and one in-progress.
+   :alt: Three referral cards, two hired and one in-progress.
 
 Points
 ------
 
 The points that can be earned for a referral are the same across all job positions. Each stage of
 the recruitment process has corresponding points assigned to it. The stages listed correspond to the
-stages configured in the *Recruitment* application.
+stages configured in the **Recruitment** application.
 
 On each individual referral card, beneath the points earned, is a progress bar that displays how
 many points have been earned out of the total possible points that can be earned, if the applicant
@@ -61,12 +58,12 @@ referral moves to that stage. If a stage has been achieved, and the points have 
 .. note::
    The preconfigured point structure for referrals is as follows:
 
-   - :guilabel:`Initial Qualification`: 1 point
-   - :guilabel:`First Interview`: 20 points
-   - :guilabel:`Second Interview`: 9 points
-   - :guilabel:`Contract Proposal`: 5 points
+   - :guilabel:`Initial Qualification`: 0 points
+   - :guilabel:`First Interview`: 5 points
+   - :guilabel:`Second Interview`: 15 points
+   - :guilabel:`Contract Proposal`: 20 points
    - :guilabel:`Contract Signed`: 50 points
 
    The default total points earned for a referral that is hired is 85 points. Modifications of the
-   points earned for each stage are made in the *Recruitment* application. Refer to the
+   points earned for each stage are made in the **Recruitment** application. Refer to the
    :ref:`Recruitment <recruitment/modify-stages>` documentation to modify the points for each stage.
