@@ -9,8 +9,10 @@ interactive features to create engaging email campaigns. The *Email Marketing* a
 detailed reporting metrics to track the campaigns' overall effectiveness.
 
 .. seealso::
-   `Odoo Tutorial: Email Marketing
-   <https://www.odoo.com/slides/slide/email-marketing-essentials-989?fullscreen=1>`_
+   - `Odoo Tutorial: Email Marketing
+     <https://www.odoo.com/slides/slide/email-marketing-essentials-989?fullscreen=1>`_
+   - `Magic Sheet - Email Marketing strategy [PDF]
+     <https://drive.google.com/drive/folders/1TqZfYCF-56yhUSDVyfFjkmB23RWaRBP7>`_
 
 .. cards::
 
