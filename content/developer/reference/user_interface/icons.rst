@@ -402,17 +402,6 @@ defined as `<svg>` elements and rendered using QWeb `templates
             <div class="card text-center">
                 <div class="p-2 mx-auto">
                     <svg class="os-icon" aria-hidden="true" role="img">
-                        <use href="#download"/>
-                    </svg>
-                </div>
-                <code>DOWNLOAD</code>
-            </div>
-        </div>
-
-        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
-            <div class="card text-center">
-                <div class="p-2 mx-auto">
-                    <svg class="os-icon" aria-hidden="true" role="img">
                         <use href="#global-filters"/>
                     </svg>
                 </div>
@@ -516,6 +505,17 @@ defined as `<svg>` elements and rendered using QWeb `templates
                     </svg>
                 </div>
                 <code>CUT</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#copy-as-image"/>
+                    </svg>
+                </div>
+                <code>COPY_AS_IMAGE</code>
             </div>
         </div>
 
@@ -1414,11 +1414,133 @@ defined as `<svg>` elements and rendered using QWeb `templates
             <div class="card text-center">
                 <div class="p-2 mx-auto">
                     <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#short-thin-drag-handle"/>
+                    </svg>
+                </div>
+                <code>SHORT_THIN_DRAG_HANDLE</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
                         <use href="#insert-pivot"/>
                     </svg>
                 </div>
                 <code>INSERT_PIVOT</code>
             </div>
         </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#new"/>
+                    </svg>
+                </div>
+                <code>NEW</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#copy-file"/>
+                    </svg>
+                </div>
+                <code>COPY_FILE</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#save"/>
+                    </svg>
+                </div>
+                <code>SAVE</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#version-history"/>
+                    </svg>
+                </div>
+                <code>VERSION_HISTORY</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#camera"/>
+                    </svg>
+                </div>
+                <code>CAMERA</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#download-as-json"/>
+                    </svg>
+                </div>
+                <code>DOWNLOAD_AS_JSON</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#add-to-dashboard"/>
+                    </svg>
+                </div>
+                <code>ADD_TO_DASHBOARD</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#odoo-list"/>
+                    </svg>
+                </div>
+                <code>ODOO_LIST</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#insert-list"/>
+                    </svg>
+                </div>
+                <code>INSERT_LIST</code>
+            </div>
+        </div>
+
+        <div class="o_icon_card col-6 col-sm-4 col-md-3 mb-3">
+            <div class="card text-center">
+                <div class="p-2 mx-auto">
+                    <svg class="os-icon" aria-hidden="true" role="img">
+                        <use href="#refresh-data"/>
+                    </svg>
+                </div>
+                <code>REFRESH_DATA</code>
+            </div>
+        </div>
+
 
    </section>
