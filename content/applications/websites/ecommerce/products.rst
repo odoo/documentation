@@ -131,10 +131,6 @@ To customize the layout of the main :guilabel:`Shop` page or modify its content,
     (:guilabel:`Compare`) icon on each product's image allowing customers to :ref:`compare products
     <ecommerce/products/product-comparison>` based on their attributes.
 
-.. tip::
-   To feature a product, go to the :ref:`product form <ecommerce/products/product-form>` and click
-   the :icon:`fa-star-o` (:guilabel:`Favorite`) icon next to the product's name.
-
 .. _ecommerce/products/product-page:
 
 Product page customization
