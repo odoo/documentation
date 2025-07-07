@@ -149,4 +149,7 @@ gives a full overview of the content and configuration in one sent email. Mail-T
 used to configure records for other, lesser-known providers.
 
 .. seealso::
-   `Using Mail-Tester to set SPF Records for specific carriers <https://www.mail-tester.com/spf/>`_
+   - `Using Mail-Tester to set SPF Records for specific carriers
+     <https://www.mail-tester.com/spf/>`_
+   - `Magic Sheet - SPF, DKIM and DMARC configuration [PDF]
+     <https://drive.google.com/drive/folders/1TJIXQpdR0VN8UQx5JP7q7vFuAr3e1Q3r>`_

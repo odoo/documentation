@@ -16,7 +16,9 @@ Get started by creating a :ref:`new campaign from scratch <marketing_automation/
 with a :ref:`campaign template <marketing_automation/campaign-templates>`.
 
 .. seealso::
-   `Odoo Tutorials: Marketing <https://www.odoo.com/slides/marketing-27>`_
+   - `Odoo Tutorials: Marketing <https://www.odoo.com/slides/marketing-27>`_
+   - `Magic Sheet - Marketing Automation [PDF]
+     <https://drive.google.com/drive/folders/1MMMGcYIG1tm160jC2JaXVc_D5b6x3cJd>`_
 
 .. cards::
 
