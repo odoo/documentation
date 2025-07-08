@@ -8,7 +8,7 @@ Odoo Enterprise Subscription Agreement
 
    `Download PDF <https://www.odoo.com/documentation/{CURRENT_BRANCH}/odoo_enterprise_agreement.pdf>`_
 
-.. note:: Version 11 - 2025-07-04
+.. note:: Version 11 - 2025-07-08
 
 .. v6: add "App" definition + update pricing per-App
 .. v7: remove possibility of price change at renewal after prior notice
@@ -25,6 +25,7 @@ Odoo Enterprise Subscription Agreement
 .. v11: add "25% extra fee for non-covered versions"; adapt Covered Version definition, service sections to
         clarify what happens with non-covered versions;
         for Data Protection, clarify that data deletion may be restricted by law (e.g. DK bookkeeping act)
+.. v11a: clarify fee for non-covered versions in 5.1
 
 By subscribing to the Odoo Enterprise services (the "Services") provided by Odoo SA and its
 affiliates (collectively, "Odoo SA") in relation with Odoo Enterprise Edition or Odoo Community
@@ -291,10 +292,17 @@ of conclusion of this Agreement, the Customer agrees to pay an extra fee equival
 list price (at the time of the deviation from the specified number of Users or Subscription Plan)
 for the additional Users or the required Subscription Plan, for the remainder of the Term.
 
+.. Non-covered versions: according to FP, this extra fee will be computed taking into account all
+   permanent changes to the per-user price, such as the Plan or any "light user discount".
+   But the wording of the "current per-user price" is meant to exclude discounts related to the
+   subscription period, such as first-year discount and multi-year discounts.
+   This per-user price is annualized: for monthly subs it gets multiplied by 12, and for
+   multi-year subs it's divided by the number of years.
+
 Once per year, and no earlier than 3 months after the release of a new major version of the Software,
 if the Customer’s database is on a version older than the Covered Versions, the Customer agrees
-to pay an extra fee of 25% of the undiscounted annual list price applicable at that time, based on
-the Customer's current number of Users and Subscription Plan.
+to pay an extra fee equal to 25% of the annualized price, calculated based on the Customer's
+current per-user price and number of Users.
 
 In addition, services for Covered Extra Modules are charged based on the number of lines of code
 in these modules. When the Customer opts for the maintenance of Covered Extra Modules, the charge
