@@ -14,7 +14,7 @@ Contrat d'Abonnement Odoo Enterprise
     La seule référence officielle des termes du contrat “Odoo Enterprise Subscription Agreement”
     est la :ref:`version originale en anglais <enterprise_agreement>`.
 
-.. note:: Version 11 - 2025-07-04
+.. note:: Version 11 - 2025-07-08
 
 .. v6: add "App" definition + update pricing per-App
 .. v7: remove possibility of price change at renewal after prior notice
@@ -33,6 +33,7 @@ Contrat d'Abonnement Odoo Enterprise
 .. v11: add "25% extra fee for non-covered versions"; adapt Covered Version definition, service sections to
         clarify what happens with non-covered versions;
         for Data Protection, clarify that data deletion may be restricted by law (e.g. DK bookkeeping act)
+.. v11a: clarify fee for non-covered versions in 5.1
 
 En vous abonnant aux services de Odoo Enterprise (les "Services") fournis par Odoo SA et ses filiales
 (collectivement, "Odoo SA") en relation avec Odoo Enterprise Edition ou Odoo Community Edition
@@ -315,10 +316,10 @@ en vigueur applicable (au moment de la divergence par rapport au nombre d'Utilis
 Formule d'Abonnement spécifiés) pour les utilisateurs supplémentaires ou la Formule d'Abonnement
 requise, pour le reste de la Durée.
 
-Une fois par an, et pas avant un délai de 3 mois suivant la publication d’une nouvelle version majeure du Logiciel,
+Une fois par an, et au plus tôt 3 mois après la sortie d'une nouvelle version majeure du Logiciel,
 si la base de données du Client utilise une version antérieure aux Versions Couvertes, le Client accepte de payer
-des frais supplémentaires de 25 % du prix catalogue annuel non remisé applicable à ce moment,
-basés sur le nombre d’Utilisateurs et le Plan d’abonnement en vigueur  Client.
+des frais supplémentaires équivalant à 25% du prix annualisé, calculés sur la base du prix par utilisateur
+et du nombre d'Utilisateurs actuels du Client.
 
 Par ailleurs, les services concernant les Modules Supplémentaires Couverts sont facturés sur base
 du nombre de lignes de code dans ces modules. Lorsque le client opte pour l'abonnement de maintenance
