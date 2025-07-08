@@ -30,8 +30,9 @@ Odoo Enterprise Abonnementsovereenkomst
 .. v11: add "25% extra fee for non-covered versions"; adapt Covered Version definition, service sections to
         clarify what happens with non-covered versions;
         for Data Protection, clarify that data deletion may be restricted by law (e.g. DK bookkeeping act)
+.. v11a: clarify fee for non-covered versions in 5.1
 
-.. note:: Version 11 - 2025-07-04
+.. note:: Version 11 - 2025-07-08
 
 Door u op de Odoo Enterprise-diensten (de “Diensten”) te abonneren die door
 Odoo NV en haar dochterondernemingen (gezamenlijk “Odoo NV”) worden verleend
@@ -326,9 +327,9 @@ het vereiste Abonnementsplan, voor de rest van de Looptijd.
 
 Eén keer per jaar, en niet eerder dan 3 maanden na de release van een nieuwe hoofdversie
 van de Software, gaat de Klant ermee akkoord om, indien de database van de Klant
-een versie ouder is dan de Ondersteunde Versies, een extra vergoeding te betalen van 25%
-van het op dat moment geldende, ongedisconteerde jaarlijkse tarief, gebaseerd op het huidige
-aantal Gebruikers en het Abonnementsplan van de Klant.
+een versie ouder is dan de Ondersteunde Versies, een extra vergoeding te betalen gelijk
+aan 25% van de geannualiseerde prijs, berekend op basis van de huidige prijs per
+gebruiker en het aantal Gebruikers van de Klant.
 
 Daarnaast worden de diensten voor Ondersteunde Extra Modules in rekening gebracht
 op basis van het aantal coderegels in deze modules. Wanneer de Klant kiest voor het onderhoud
