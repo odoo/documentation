@@ -12,7 +12,18 @@ Acuerdo de Colaboración de Odoo
 .. in some countries where Odoo has subsidiaries. Care must be taken to make the translation
 .. as accurate as possible in its intent and effects.
 
-.. note:: Versión 11 - 2023-05-19
+.. v6a: typo in section 4.4
+.. v7: introduce "Learning Partners" and a few related changes
+.. v8: simplified parts, clarified others, added trademark use restrictions, updated benefits
+.. v8a: minor clarifications and simplifications
+.. v9: added maintenance commission + obligations
+.. v9a: minor clarification to allow OE commission even without maintenance
+.. v9b: 2021-01-12 - update requirements for Partnership levels
+.. v10: 2023-01-09 - change Odoo SH commission rate to 50%
+.. v11: 2023-05-19 - updated partnership requirements, some clarifications
+.. v11.001ES: typo in spanish translation of v8 (24->12 meses)
+
+.. note:: Versión 11.001ES - 2023-05-19
 
 | ENTRE:
 |  Odoo S.A., una empresa que tiene su sede social en Chaussée de Namur, 40, 1367 Grand-Rosière,
@@ -325,7 +336,7 @@ de EL COLABORADOR se use solo para este fin, en la lista oficial de socios de OD
 Excepto cuando la otra Parte dé su consentimiento por escrito, cada Parte, sus afiliados y
 representantes acuerdan no captar u ofrecer empleo a ningún empleado de la otra Parte
 que participe en la realización o uso de los servicios de este contrato,
-durante la duración de este contrato y por un período de 24 meses a partir de la fecha de
+durante la duración de este contrato y por un período de 12 meses a partir de la fecha de
 resolución o expiración de este contrato.
 En caso de cualquier incumplimiento de las condiciones de esta sección que conduzca al despido de
 dicho empleado con este objetivo, la Parte incumplidora se compromete a pagar a la otra parte
