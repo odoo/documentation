@@ -224,6 +224,20 @@ Database
 
     port the database listens on, defaults to 5432
 
+.. option:: --db_replica_host <hostname>
+
+    host for the replica server
+
+    When set, it redirect all read-only transactions to this host, instead of of the primary
+    database at ``--db_host``.
+
+    The host can be set to an empty string or to the same value as ``--db_host`` to simulate a
+    replicated environnement, for development.
+
+.. option:: --db_replica_port <port>
+
+    port the replica database listens on, defaults to 5432
+
 .. option:: --db-filter <filter>
 
     hides databases that do not match ``<filter>``. The filter is a
