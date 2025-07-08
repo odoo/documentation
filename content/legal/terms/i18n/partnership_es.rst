@@ -325,7 +325,7 @@ de EL COLABORADOR se use solo para este fin, en la lista oficial de socios de OD
 Excepto cuando la otra Parte dé su consentimiento por escrito, cada Parte, sus afiliados y
 representantes acuerdan no captar u ofrecer empleo a ningún empleado de la otra Parte
 que participe en la realización o uso de los servicios de este contrato,
-durante la duración de este contrato y por un período de 24 meses a partir de la fecha de
+durante la duración de este contrato y por un período de 12 meses a partir de la fecha de
 resolución o expiración de este contrato.
 En caso de cualquier incumplimiento de las condiciones de esta sección que conduzca al despido de
 dicho empleado con este objetivo, la Parte incumplidora se compromete a pagar a la otra parte
