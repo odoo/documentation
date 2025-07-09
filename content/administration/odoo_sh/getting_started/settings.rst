@@ -241,7 +241,7 @@ Custom domains
 ==============
 
 To configure additional domains please refer to the corresponding branch's :ref:`settings tab
-<odoosh-gettingstarted-branches-tabs-settings>`.
+<odoo-sh/branches/tabs/settings>`.
 
 .. _odoosh-gettingstarted-settings-submodules:
 

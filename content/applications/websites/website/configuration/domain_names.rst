@@ -363,7 +363,7 @@ Map a domain name to an Odoo database
          :alt: Mapping a domain name to an Odoo.sh branch
 
       .. seealso::
-         :ref:`Odoo.sh branches: settings tab <odoosh-gettingstarted-branches-tabs-settings>`
+         :ref:`Odoo.sh branches: settings tab <odoo-sh/branches/tabs/settings>`
 
 .. _domain-name/ssl:
 
