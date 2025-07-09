@@ -8,7 +8,7 @@ Odoo Enterprise Subscription Agreement
 
    `Download PDF <https://www.odoo.com/documentation/{CURRENT_BRANCH}/odoo_enterprise_agreement.pdf>`_
 
-.. note:: Version 11 - 2025-07-08
+.. note:: Version 11 - 2025-07-09
 
 .. v6: add "App" definition + update pricing per-App
 .. v7: remove possibility of price change at renewal after prior notice
@@ -25,7 +25,7 @@ Odoo Enterprise Subscription Agreement
 .. v11: add "25% extra fee for non-covered versions"; adapt Covered Version definition, service sections to
         clarify what happens with non-covered versions;
         for Data Protection, clarify that data deletion may be restricted by law (e.g. DK bookkeeping act)
-.. v11a: clarify fee for non-covered versions in 5.1
+.. v11a, 11b: clarify fee for non-covered versions in 5.1, and delay after LTS release.
 
 By subscribing to the Odoo Enterprise services (the "Services") provided by Odoo SA and its
 affiliates (collectively, "Odoo SA") in relation with Odoo Enterprise Edition or Odoo Community
@@ -299,7 +299,7 @@ for the additional Users or the required Subscription Plan, for the remainder of
    This per-user price is annualized: for monthly subs it gets multiplied by 12, and for
    multi-year subs it's divided by the number of years.
 
-Once per year, and no earlier than 3 months after the release of a new major version of the Software,
+Once per year, and no earlier than 6 months after the release of a new major version of the Software,
 if the Customer’s database is on a version older than the Covered Versions, the Customer agrees
 to pay an extra fee equal to 25% of the annualized price, calculated based on the Customer's
 current per-user price and number of Users.
