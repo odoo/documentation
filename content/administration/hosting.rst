@@ -39,8 +39,8 @@ To Odoo Online
 To Odoo.sh
 ----------
 
-Follow the instructions found in :ref:`the Import your database section
-<odoo_sh_import_your_database>` of the Odoo.sh *Create your project* documentation.
+Follow the instructions found in :ref:`the Import a database section <odoo-sh/create/import>` of the
+Odoo.sh *Create a project* documentation.
 
 Transferring an Odoo Online database
 ====================================
@@ -82,8 +82,8 @@ To Odoo.sh
    next to the database name, then selecting :icon:`fa-cloud-download` :guilabel:`Download`. If the
    download fails due to the file being too large, `contact Odoo support
    <https://www.odoo.com/help>`_.
-#. Follow the instructions found in :ref:`the Import your database section
-   <odoo_sh_import_your_database>` of the Odoo.sh *Create your project* documentation.
+#. Follow the instructions found in :ref:`the Import a database section <odoo-sh/create/import>` of
+   the Odoo.sh *Create a project* documentation.
 
 Transferring an Odoo.sh database
 ================================
@@ -119,5 +119,5 @@ To Odoo Online
 To on-premise
 -------------
 
-#. Download a :ref:`backup of your Odoo.sh production database <odoo_sh_branches_backups>`.
+#. Download a :ref:`backup of your Odoo.sh production database <odoo-sh/branches/tabs/backups>`.
 #. Restore the database from the database manager on your local server using the backup.

@@ -120,5 +120,5 @@ button.
 .. _odoosh-gettingstarted-builds-dropdown-menu:
 
 In the dropdown menu of the build, you can access the same features than in :ref:`the branches view
-<odoosh-gettingstarted-branches-tabs>`: *Logs*, *Web Shell*, *Editor*, *Outgoing e-mails*. You also
+<odoo-sh/branches/tabs>`: *Logs*, *Web Shell*, *Editor*, *Outgoing e-mails*. You also
 have the possibility to *Download a dump* of the build's database.
