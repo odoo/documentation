@@ -29,9 +29,9 @@ Odoo Enterprise Abonnementsvertrag
 .. v11: add "25% extra fee for non-covered versions"; adapt Covered Version definition, service sections to
         clarify what happens with non-covered versions;
         for Data Protection, clarify that data deletion may be restricted by law (e.g. DK bookkeeping act)
-.. v11a: clarify fee for non-covered versions in 5.1
+.. v11a, 11b: clarify fee for non-covered versions in 5.1, and delay after LTS release.
 
-.. note:: Version 11 - 2025-07-08
+.. note:: Version 11 - 2025-07-09
 
 Indem Sie (der "Kunde") die Odoo Enterprise-Dienstleistungen (die "Dienstleistungen"), die von Odoo
 SA und seinen verbundenen Unternehmen (zusammen "Odoo SA") in Verbindung mit der Odoo Enterprise
@@ -304,7 +304,7 @@ sich der Kunde, eine zusätzliche Gebühr in Höhe des zum Zeitpunkt der Abweich
 Listenpreises für die zusätzlichen Benutzer oder den erforderlichen Abonnementplan zu zahlen,
 und zwar für den Rest der Laufzeit.
 
-Einmal pro Jahr, und nicht früher als 3 Monate nach der Veröffentlichung einer neuen Hauptversion
+Einmal pro Jahr, und nicht früher als 6 Monate nach der Veröffentlichung einer neuen Hauptversion
 der Software, wenn die Datenbank des Kunden eine Version älter als die Unterstützten Versionen ist,
 erklärt sich der Kunde bereit, eine zusätzliche Gebühr in Höhe von 25% des Jahrespreises zu zahlen,
 berechnet auf Basis des aktuellen Preises pro Benutzer und der Anzahl der Benutzer des Kunden.
