@@ -16,7 +16,7 @@ It also gives you the possibility to open terminals, Python consoles, Odoo Shell
    :align: center
 
 You can access the editor of a build through
-:ref:`the branches tabs <odoosh-gettingstarted-branches-tabs>`,
+:ref:`the branches tabs <odoo-sh/branches/tabs>`,
 :ref:`the builds dropdown menu <odoosh-gettingstarted-builds-dropdown-menu>`
 or by adding */odoo-sh/editor* to your build domain name
 (e.g. *https://odoo-addons-master-1.dev.odoo.com/odoo-sh/editor*).
@@ -139,7 +139,7 @@ In this last command,
    In other words, this means you can have multiple builds on the same branch, but on different revisions.
 
 Once your changes are pushed,
-according to your :ref:`branch push behavior <odoosh-gettingstarted-branches-tabs-settings>`,
+according to your :ref:`branch push behavior <odoo-sh/branches/tabs/settings>`,
 a new build may be created. You can continue to work in the editor you pushed from,
 as it will have the same revision as the new build that was created, but always make sure to be
 in an editor of a build using the latest revision of your branch.
