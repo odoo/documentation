@@ -2,563 +2,820 @@
 Branches
 ========
 
-Overview
-========
+The branches view provides an overview of the different branches in your repository.
 
-The branches view gives you an overview of the different branches your repository has.
-
-.. image:: branches/interface-branches.png
-   :align: center
-
-.. _odoosh-gettingstarted-branches-stages:
+.. _odoo-sh/branches/stages:
 
 Stages
 ======
 
-Odoo.sh offers three different stages for your branches: production, staging and development.
+Odoo.sh offers three different branch stages:
 
-You can change the stage of a branch by drag and dropping it into the stage section title.
+- :ref:`Production <odoo-sh/branches/stages/production>`
+- :ref:`Staging <odoo-sh/branches/stages/staging>`
+- :ref:`Development <odoo-sh/branches/stages/development>`
 
-.. image:: branches/interface-branches-stagechange.png
-   :align: center
+You can change the stage of a branch by dragging and dropping it under the desired stage.
 
-.. _stage_production:
+.. image:: branches/stages-move.gif
+   :alt: Changing the stage of a branch
+
+.. note::
+   - Development branches can be moved under :guilabel:`Staging`. If you try to move a development
+     branch under :guilabel:`Production`, a warning message will be displayed explaining that you
+     can only have one production branch per project.
+   - Staging branches can be moved under :guilabel:`Development`, but it is not possible to move
+     them under :guilabel:`Production`.
+   - The production branch can only be moved under :guilabel:`Development`. If you try to move it
+     under :guilabel:`Staging`, you can only perform a merge. Refer to the
+     :ref:`merging <odoo-sh/branches/stages/merging>` section for a detailed explanation of this
+     process.
+
+.. _odoo-sh/branches/stages/production:
 
 Production
 ----------
 
-This is the branch holding the code on which your production database runs.
-There can be only one production branch.
+The production branch contains the code used to run the production database. There can be only one
+production branch.
 
-When you push a new commit in this branch,
-your production server is updated with the code of the new revision and is then restarted.
+When you push a new commit to this branch, the production server is updated with the revised code
+and restarted.
 
-If your changes require the update of a module, such as a change in a form view,
-and you want it to be performed automatically,
-increase the version number of the module in its manifest (*__manifest__.py*).
-The platform will then take care to perform the update during which the
-instance will be held temporarily unavailable for maintenance reason.
+If the changes require a module update, such as changing a form view, and you want the update to
+be performed automatically, you can increase the module's version number in its manifest file
+(:file:`__manifest__.py`). The platform then performs the update, during which the instance will be
+held temporarily unavailable for maintenance reasons.
 
+This method is equivalent to upgrading the module using the :guilabel:`Apps` menu or the `-u` switch
+on :doc:`the command line <../../../developer/reference/cli>`.
 
-This method is equivalent to perform an upgrade of the module through the Apps menu,
-or through the :code:`-u` switch of
-:doc:`the command line </developer/reference/cli>`.
+.. note::
+   - If the changes prevent the server from restarting or if the module update fails, the server is
+     automatically reverted to the previous successful code revision, and the database is rolled
+     back to its previous state. Access to the failed update's log to troubleshoot it.
+   - The demo data is not loaded, as it is not intended for use on a production database. The `unit
+     tests <https://en.wikipedia.org/wiki/Unit_testing>`_ are not performed, as it would increase
+     the unavailability time of the production database during the update.
 
-In the case the changes in the commit prevent the server to restart,
-or if the modules update fails,
-the server is automatically reverted to the previous successful code revision and
-the database is roll-backed as it was before the update.
-You still have access to the log of the failed update, so you can troubleshoot it.
+Odoo.sh automatically backs up the production database. It keeps seven daily, four weekly, and three
+monthly backups. Each backup includes the database dump, the filestore (attachments and binary
+fields), logs, and sessions.
 
-The demo data is not loaded, as it is not meant to be used in a production database.
-The unit tests are not performed, as it would increase the unavailability time of the production
-database during the updates.
+.. warning::
+   When using **trial projects**, the production branch and all staging branches are automatically
+   set back to the development stage after **30 days**.
 
-Partners using trial projects should be aware their production branch, along with all the staging branches,
-will automatically be set back to the development stage after 30 days.
+.. _odoo-sh/branches/stages/staging:
 
 Staging
 -------
 
-Staging branches are meant to test your new features using the production data without compromising
-the actual production database with test records. They will create databases that are neutralized
-duplicates of the production database.
+Staging branches are meant to test new features using production data without compromising the
+actual production database with test records. They create neutralized duplicates of the production
+database.
 
-The neutralization includes:
+The neutralization disables:
 
-* Disabling scheduled actions. If you want to test them, you can trigger their action manually or
-  re-enable them. Be aware that the platform will trigger them less often if no one is using the
-  database in order to save up resources.
-* Disabling outgoing emails by intercepting them with a mailcatcher. An
-  :ref:`interface to view <odoosh-gettingstarted-branches-tabs-mails>` the emails sent by your
-  database is provided. That way, you do not have to worry about sending test emails to your contacts.
-* Setting payment providers and shipping providers in test mode.
-* Disabling IAP services
+- Scheduled actions
 
-The latest database will be kept alive indefinitely, older ones from the same branch may get garbage collected
-to make room for new ones. It will be valid for 3 months, after which you will be expected to rebuild the branch.
-If you make configuration or view changes in these databases, make sure to document them or write them directly
-in the modules of the branch, using XML data files overriding the default configuration or views.
+  .. note::
+     To test them, trigger them manually or re-enable them. Be aware that the platform will trigger
+     them less often if no one is using the database in order to save resources.
 
-The unit tests are not performed as, in Odoo, they currently rely on the demo data, which is not loaded in the
-production database. In the future, if Odoo supports to run the unit tests without the demo data,
-Odoo.sh will then consider running the tests on staging databases.
+- Outgoing emails
+
+  .. note::
+     They are instead intercepted using a mail catcher. An :ref:`interface to view the emails
+     <odoo-sh/branches/tabs/mails>` sent by the database is provided in your Odoo.sh project.
+     That way, no emails are sent to your contacts.
+
+- IAP services
+
+- Payment providers and shipping connectors
+
+  .. note::
+     They are put into test mode.
+
+If you configure or view changes in a staging database, make sure to record them (noting them step
+by step, reproducing in production, etc.) or write them directly in the branch's modules, using XML
+data files to override the default configuration or views. Check the :ref:`first module
+documentation <odoo-sh/module/add>` to view examples.
+
+.. note::
+   Unit tests are not performed. They rely on demo data, which is not loaded into the production and
+   staging databases. If Odoo starts supporting running the units without demo data, Odoo.sh will
+   then consider running the tests on staging databases.
+
+Staging databases are not automatically backed up. Nevertheless, you can restore a backup of the
+production database in a staging branch for testing purposes or to manually recover data that has
+been accidently deleted from the production database. It is possible to create manual backups of
+staging databases.
+
+.. _odoo-sh/branches/stages/development:
 
 Development
 -----------
 
-Development branches create new databases using the demo data to run the unit tests.
-The installed modules are the ones included in your branches. You can change this list of modules
-to install in your :ref:`project Settings <odoosh-gettingstarted-settings-modules-installation>`.
+Development branches create new databases using demo data to run the unit tests. The installed
+modules are those included in the branch. You can change this list of modules to install in the
+:doc:`project settings <settings>`.
 
-When you push a new commit in one of these branches,
-a new server is started, with a database created from scratch and the new revision of the branch.
-The demo data is loaded, and the unit tests are performed by default.
-This verifies your changes do not break any of the features tested by them. If you wish, you can
-disable the tests or allow specific tests to be run with custom tags in the :ref:`branch's settings
-<odoosh-gettingstarted-branches-tabs-settings>`.
+When pushing a commit to a development branch, a new server is started, with a database created from
+scratch, and the branch is updated. The demo data is loaded, and the unit tests are performed by
+default to verify that the changes do not break any of the features being tested. You can disable
+the tests or allow specific tests to be run with custom tags by going to the :ref:`branch's settings
+<odoo-sh/branches/tabs/settings>`.
 
-Similar to staging branches, the emails are not sent but are intercepted by a mailcatcher and
+Similarly to staging branches, emails are not sent but are intercepted by a mail catcher, and
 scheduled actions are not triggered as long as the database is not in use.
 
-The databases created for development branches are meant to live around three days.
-After that, they can be automatically garbage collected to make room for new databases without prior notice.
+Development databases are not automatically backed up, and manual backups are not possible.
 
-.. _odoosh-gettingstarted-branches-mergingbranches:
+.. warning::
+   Databases created for development branches are intended to last approximately three days. After
+   that, they can be automatically garbage-collected to make room for new databases without prior
+   notice.
 
-Merging your branches
----------------------
+.. _odoo-sh/branches/stages/merging:
 
-You can merge your branches easily by drag and dropping them into each other.
+Merging branches
+----------------
 
-.. image:: branches/interface-branches-merge.png
-   :align: center
+You can merge your branches by dragging and dropping them into each other.
 
-When you want to test the changes of your development branches with the production data,
-you can either:
+.. image:: branches/merging.gif
+   :alt: Merging branches into each other
 
-* merge the development branch into your staging branch, by drag and dropping it onto the desired staging branch,
-* drag and dropping the development branch on the staging section title, to make it become a staging branch.
+To test the changes of development branches with the production data, you can either:
 
-When your latest changes are ready for production,
-you can drag and drop your staging branch onto your production branch
-to merge and deploy in production your newest features.
+- Merge the development branch into a staging branch by dragging and dropping it onto the desired
+  branch; or
 
-If you are bold enough,
-you can merge your development branches into your production branch as well.
-It just means you skip the validation of your changes with the production data through a staging branch.
+  .. image:: branches/merging-into-staging.gif
+     :alt: Merging a development branch into a staging branch
 
-You can merge your development branches into each other, and your staging branches into each other.
+- Drag and drop the development branch under the :guilabel:`Staging` section to make it a staging
+  branch.
 
-Of course, you can also use :code:`git merge` directly on your workstation to merge your branches.
-Odoo.sh will be notified when new revisions have been pushed in your branches.
+  .. image:: branches/moving-to-staging.gif
+     :alt: Moving a development branch under staging
 
-Merging a staging branch in the production branch only merges the source code: Any configuration changes you made in the
-staging databases are not passed to the production database.
+When the changes are ready for production, drag and drop the staging branch into the production
+branch to merge and deploy them.
 
-If you test configuration changes in staging branches, and want them to be applied in the production, you have to either:
+.. note::
+   - You can merge development branches into the production branch directly. However, changes will
+     not be validated against the production data through a staging branch, so there is a higher
+     risk of encountering issues in the production database.
+   - You can merge development branches into each other, and staging branches into each other.
+   - You can also use `git merge` directly on your workstation to merge your branches. Odoo.sh is
+     notified when new revisions are pushed to your branches.
 
-* write the configuration changes in XML data files
-  overriding the default configuration or views in your branches,
-  and then increase the version of your module in its manifest (*__manifest__.py*) to trigger the update of the module
-  when you merge your staging branch in your production branch.
-  This is the best practice for a better scalability of your developments as you will use the Git versioning features
-  for all your configuration changes, and therefore have a traceability for your changes.
-* pass them manually from your staging to your production database, by copy/pasting them.
+Merging a staging branch into the production branch only merges the source code. Any changes made to
+the staging database are not passed to the production database. However, if you modify the code in
+the repository, it will be passed to the production branch when merging.
 
-.. _odoosh-gettingstarted-branches-tabs:
+If you test configuration changes in staging branches, and want them to be applied to the production
+branch, you have to, either:
+
+- Write the configuration changes in XML data files to overide the default configuration or views in
+  the branch, and then increase the version of the module in its manifest (:file:`__manifest__.py`)
+  to trigger the module update when merging the staging branch in the production branch.
+
+  .. note::
+     This method is recommended for better scalability of your developments, as you will use the Git
+     versioning features for all configuration changes, thereby ensuring traceability of your
+     changes.
+
+- Pass them manually from the staging database to the production one by copying and pasting them.
+
+.. _odoo-sh/branches/tabs:
 
 Tabs
 ====
 
+.. _odoo-sh/branches/tabs/history:
+
 History
 -------
 
-An overview of your branch history:
+The :guilabel:`History` tab gives an overview of the branch history:
 
-* The messages of the commits and their authors,
-* The various events linked to the platform, such as stage changes, database imports, backup restores.
+- The commit messages and their authors
+- The various events linked to the platform, such as stage changes, database imports, and backup
+  restores
 
-.. image:: branches/interface-branches-history.png
-   :align: center
+.. image:: branches/history-tab.gif
+   :alt: The branches' history tab
 
-For each event, a status is displayed in the top right-hand corner.
-It can provide information about the ongoing operation on the database (installation, update, backup import, ...),
-or its result (tests feedback, successful backup import, ...).
-When an operation is successful, you can access the database thanks to the *connect* button.
+A status in the top right corner of each event indicates the current operation on the database
+(e.g., installation, update, backup import) or its outcome (e.g., test feedback, successful backup
+import). If an operation is successful, a :guilabel:`Connect` button appears, allowing you to access
+the database.
 
-.. _odoosh-gettingstarted-branches-tabs-mails:
+.. _odoo-sh/branches/tabs/mails:
 
 Mails
 -----
 
-This tab contains the mail catcher. It displays an overview of the emails sent by your database.
-The mail catcher is available for your development and
-staging branches as the emails of your production database are really sent instead of being intercepted.
+The :guilabel:`Mails` tab contains the mail catcher, which provides an overview of emails sent by
+the database.
 
-.. image:: branches/interface-branches-mails.png
-   :align: center
-   :scale: 50%
+.. note::
+   The mail catcher is available for development and staging branches. Emails from the production
+   database are actually sent and are not intercepted by the mail catcher.
+
+.. image:: branches/mails-tab.png
+   :alt: The branches' mails tab
+
+.. _odoo-sh/branches/tabs/shell:
 
 Shell
 -----
 
-A shell access to your container. You can perform basic linux commands (:code:`ls`, :code:`top`)
-and open a shell on your database by typing :code:`psql`.
+The :guilabel:`Shell` tab provides shell access to the container.
 
-.. image:: branches/interface-branches-shell.png
-   :align: center
+Clicking :guilabel:`Shell` opens a new browser tab where you can run basic Linux commands (`ls`,
+`top`). You can open a shell on the database by running `psql`.
 
-You can open multiple tabs and drag-and-drop them to arrange the layout as you wish,
-for instance side by side.
+.. image:: branches/shell-tab.png
+   :alt: The branches' shell tab
 
-.. Note::
-  Long running shell instances are not guaranteed. Idle shells can be
-  disconnected at anytime in order to free up resources.
+.. tip::
+   You can open multiple shell tabs at once and arrange their layout by dragging and dropping them.
+
+.. note::
+   - Production instance shells are highlighted in red to emphasize the danger of manipulating
+     production instances directly, while staging/development instance shells are highlighted in
+     yellow.
+   - Long-running shell instances/idle shell sessions can be terminated at any time to free up
+     resources.
+
+.. _odoo-sh/branches/tabs/shell/commands:
+
+Commands
+~~~~~~~~
+
+Here is an overview of useful commands that you can run an Odoo.sh database terminal:
+
+- `odoo-bin shell`: to open an Odoo shell
+- `odoo-update`: to update modules in the database
+- `odoosh-restart`: to restart Odoo.sh services (http or cron)
+- `odoosh-storage`: to check the storage usage of your instance's container filesystem
+- `psql`: to open a database shell
+- `mutt`: to check how emails appear on text clients (staging and development instances)
+- `lnav ~/logs/odoo.log`: to navigate in your instance's :file:`odoo.log` file
+- `ncdu`: to launch the disk usage analyzer with an interactive interface
+- `grep`: to filter and find information in log or configuration files
+
+.. _odoo-sh/branches/tabs/editor:
 
 Editor
 ------
 
-An online integrated development environment (IDE) to edit the source code.
-You can also open terminals, Python consoles and even Odoo Shell consoles.
+Clicking :guilabel:`Editor` opens a new browser tab to access an online integrated development
+environment (IDE) to edit the source code. You can also open terminals, Python consoles, and Odoo
+shell consoles.
 
-.. image:: branches/interface-branches-editor.png
-   :align: center
+.. image:: branches/online-editor.png
+   :alt: The branches' editor tab
 
-You can open multiple tabs and drag-and-drop them to arrange the layout as you wish,
-for instance side by side.
+You can open multiple tabs and drag and drop them to arrange the layout as you wish.
 
-Monitoring
-----------
+.. seealso::
+   :doc:`Online editor documentation <online-editor>`.
 
-This link contains various monitoring metrics of the current build.
+.. _odoo-sh/branches/tabs/monitor:
 
-.. image:: branches/interface-branches-monitoring.png
-   :align: center
+Monitor
+-------
 
-You can zoom, change the time range or select a specific metric on each graph.
-On the graphs, annotations help you relate to changes on the build (database import, git push, etc...).
+The :guilabel:`Monitor` tab displays various performance monitoring metrics of the current build.
 
-.. _odoosh/logs:
+Zoom in with your cursor to adjust the time range or select it manually from the time range
+selector. It is also possible to change the time zone.
+
+.. image:: branches/monitor-time-zone.gif
+   :alt: The time range selector in the branches monitor tab
+
+.. note::
+   - Technical logs always use the :abbr:`UTC (Coordinated Universal Time)`. To analyze these logs
+     together with your monitoring metrics, ensure :abbr:`UTC (Coordinated Universal Time)` is
+     selected in the monitoring tool.
+   - Similarly, when sending a support ticket, ensure the information you share is based on
+     :abbr:`UTC (Coordinated Universal Time)`, as Odoo uses this time zone to investigate
+     performance issues.
+
+The information is aggregated periodically. When this is the case, a blue dotted line is displayed,
+along with the tag :guilabel:`Aggregate Date`. This means that the data before this date will appear
+flattened when compared to the data after this date. Therefore, when using the monitoring tool, it
+is recommended to focus on recent events to get the most detailed information possible.
+
+.. note::
+   Dotted Lines of other colors help you relate to other changes on the build (database import,
+   git push, etc.).
+
+.. image:: branches/monitor-aggregate-date.png
+   :alt: CPU monitoring aggregated data
+
+.. tip::
+   On each graph, an 𝕚 (:guilabel:`information`) icon is displayed in the top-left corner. Hover
+   your mouse over it to get more details about what the graph represents.
+
+.. _odoo-sh/branches/tabs/monitor/metrics:
+
+Metrics
+~~~~~~~
+
+.. _odoo-sh/branches/tabs/monitor/metrics/system:
+
+System
+******
+
+The :guilabel:`Memory` graph displays information about memory consumption:
+
+- :guilabel:`Memory container` represents Odoo workers and container processes.
+- :guilabel:`Memory postgresql` represents the database.
+
+.. image:: branches/monitor-memory-graph.png
+   :alt: The memory graph in the monitor tab
+
+The :guilabel:`CPU` graph displays information about CPU consumption:
+
+- :guilabel:`CPU http` represents Odoo workers.
+- :guilabel:`CPU cron/mail` represents scheduled actions and incoming emails.
+- :guilabel:`CPU postgresql` (database processes)
+- :guilabel:`CPU other` represents webshells, the editor, etc.
+
+.. image:: branches/monitor-cpu-graph.png
+   :alt: The cpu graph in the monitor tab
+
+The :guilabel:`Storage` graph displays information about the storage used:
+
+- :guilabel:`Container` represents the filestore, log files, and user files.
+- :guilabel:`Postgresql` represents the database and indexes.
+
+.. image:: branches/monitor-storage-graph.png
+   :alt: The storage graph in the monitor tab
+
+.. _odoo-sh/branches/tabs/monitor/metrics/http:
+
+HTTP
+****
+
+The :guilabel:`Requests` graph displays information about the number of HTTP requests per second:
+
+- :guilabel:`HTTP successes` represents successful requests.
+- :guilabel:`HTTP errors` represents failed requests (check :file:`odoo.log`).
+- :guilabel:`HTTP rate limited` represents declined requests, possibly due to lack of workers.
+
+.. image:: branches/monitor-requests-graph.png
+   :alt: The requests graph in the monitor tab
+
+The :guilabel:`Concurrent requests (max)` graph displays the maximum number of concurrent HTTP
+requests per second.
+
+.. image:: branches/monitor-concurrent-graph.png
+   :alt: The concurrent rquests graph in the monitor tab
+
+.. note::
+   Database workers determine the number of concurrent requests that can be managed simultaneously.
+   It is essential to have enough workers to handle all incoming requests as they arrive. However,
+   having additional workers beyond this does not improve the speed at which requests are processed.
+
+The :guilabel:`Average Response time` displays the average response time to HTTP requests (in
+milliseconds).
+
+.. image:: branches/monitor-response-graph.png
+   :alt: The average response time graph in the monitor tab
+
+.. _odoo-sh/branches/tabs/monitor/metrics/mails:
+
+Mails
+*****
+
+The :guilabel:`Incoming` graph displays data about the daily number of incoming emails:
+
+- :guilabel:`Received Emails` represents emails successfuly received.
+- :guilabel:`Received Emails bounced` represents emails unsuccessfully received.
+
+.. image:: branches/monitor-incoming-graph.png
+   :alt: The incoming graph in the monitor tab
+
+The :guilabel:`Outgoing` graph displays data about the daily number of outgoing emails:
+
+- :guilabel:`Sent Emails` represents emails successfully sent.
+- :guilabel:`Sent Emails bounced` represents emails unsuccessfully sent.
+
+.. image:: branches/monitor-outgoing-graph.png
+   :alt: The outgoing graph in the monitor tab
+
+.. _odoo-sh/branches/tabs/logs:
 
 Logs
 ----
 
-A viewer to have a look to your server logs.
+The :guilabel:`Logs` tab offers a real-time view of your server's logs.
 
-.. image:: branches/interface-branches-logs.png
-   :align: center
+.. image:: branches/logs-tab.png
+   :alt: The branches log tab
 
 Different logs are available:
 
-* install.log: The logs of the database installation. In a development branch, the logs of the tests are included.
-* pip.log: The logs of the Python dependencies installation.
-* odoo.log: The logs of the running server.
-* update.log: The logs of the database updates.
-* pg_long_queries.log: The logs of psql queries that take an unusual amount of time.
+- `pip.log`: the Python dependencies installation
+- `install.log`: the database installation (for development branches, tests are included)
+- `odoosh-import-database.log`: the last imported dump process
+- `odoo.log`: the running server
+- `update.log`: the database updates
+- `pg_slow_queries.log`: psql queries that take an unusual amount of time
+- `sh_webshell.log`:  the actions taken in the webshell
+- `sh_editor.log`: the actions taken in the editor
+- `neutralize.log`: the neutralization of the database (only staging)
 
-If new lines are added in the logs, they will be displayed automatically.
-If you scroll to the bottom, the browser will scroll automatically each time a new line is added.
+.. image:: branches/logs.gif
+   :alt: Logs scrolling automatically
 
-You can pause the logs fetching by clicking on the according button in the upper right corner of the view.
-The fetching is automatically stopped after 5 minutes. You can restart it using the play button.
+When new lines are added to the logs, they are displayed automatically. If you scroll to the bottom,
+the browser scrolls automatically each time a new line is added.
 
-.. _odoo_sh_branches_backups:
+You can pause the logs fetching process by clicking the :icon:`fa-pause` (:guilabel:`pause`) button
+in the upper right corner. Otherwise, the process stops after five minutes. You can restart it by
+clicking the :icon:`fa-play` (:guilabel:`play`) button.
+
+.. _odoo-sh/branches/tabs/backups:
 
 Backups
 -------
 
-A list of the backups available for download and restore, the ability to perform a manual backup and to import a
-database.
+The :guilabel:`Backups` tab lists the available backups to download and restore, lets you perform a
+manual backup and import a database.
 
-.. image:: branches/interface-branches-backups.png
-   :align: center
+.. image:: branches/backups-tab.png
+   :alt: The branches backups tab
 
-Odoo.sh makes daily backups of the production database. It keeps 7 daily, 4 weekly and 3 monthly backups.
-Each backup includes the database dump, the filestore (attachments, binary fields), logs and sessions.
+The production database is automatically backed up daily. Seven daily, four weekly, and three
+monthly backups are kept. Each backup includes the database dump, the filestore (attachments and
+binary fields), logs, and sessions.
 
-Staging and development databases are not backed up.
-You nevertheless have the possibility to restore a backup of the production database in your staging branches, for
-testing purposes, or to manually recover data that has been deleted by accident from the production database.
+.. note::
+   You can refer to `the estimated scheduling of automatic backups <https://docs.google.com/spreadsheets/d/e/2PACX-1vSJpyyyQ7kr5WSutkrDE3ybgpYySogseN7x2Og6fIbpPYABHe0q8xq0y0xh7P-QSHkX3RTTVqKMIExy/pubhtml?gid=0&single=true>`_
+   to gain a better understanding of how the system works. This file is updated daily, taking the
+   current day as the departure point.
 
-The list contains the backups kept on the server your production database is hosted on.
-This server only keeps one month of backups: 7 daily and 4 weekly backups.
+Staging and development databases are not automatically backed up. However, you can restore a backup
+of the production database in your staging branches, for testing purposes, or manually recover data
+that has been accidentally deleted from the production database.
 
-Dedicated backup servers keep the same backups, as well as 3 additional monthly backups.
-To restore or download one of these monthly backups, please `contact us <https://www.odoo.com/help>`_.
+The list contains the backups kept on the server of your production database. This server only keeps
+one month of backups: seven daily and four weekly backups.
 
-If you merge a commit updating the version of one or several modules (in :file:`__manifest__.py`), or their linked python
-dependencies (in :file:`requirements.txt`), then Odoo.sh performs a backup automatically (flagged with type Update in the list),
-as either the container will be changed by the installation of new pip packages, either the database itself will be
-changed with the module update triggered afterwards. In these two cases, we are doing a backup as it may potentially
-break things.
+Dedicated backup servers keep the same backups, as well as three additional monthly backups. To
+restore or download one of these monthly backups, contact `Odoo Support
+<https://www.odoo.com/help>`_.
 
-If you merge a commit that only changes some code without the above-mentioned modifications, then no backup is done
-by Odoo.sh, as neither the container nor the database is modified so the platform considers this safe enough. Of course,
-as an extra precaution, you can make a backup manually before making big changes in your production sources in case
-something goes wrong (those manual backups are available for about one week). To avoid abuse, we limit manual backups
-to 5 per day.
+When merging a commit updating the version of one or several modules (in :file:`__manifest__.py`),
+or their linked Python dependencies (in :file:`requirements.txt`), then Odoo.sh performs an
+automatic backup (flagged with type `Update` in the list), as either the container will be changed
+by the installation of new pip packages, either the database itself will be changed with the module
+update triggered afterwards. In these two cases, a backup is triggered as it may break something.
 
-The *import database* feature accepts database archives in the format provided by:
+If the merged commit does not update the version of a module or linked dependencies, then no backup
+is triggered by Odoo.sh, as neither the container nor the database is modified; therefore, the
+platform considers this safe enough. As an extra precaution, you can make a manual backup before
+modifiyng production sources.
 
-* the standard Odoo databases manager,
-  (available for on-premise Odoo servers under :code:`/web/database/manager`)
-* the Odoo online databases manager,
-* the Odoo.sh backup download button of this *Backups* tab,
-* the Odoo.sh dump download button in the :ref:`Builds view <odoosh-gettingstarted-builds>`.
+The purpose of manual backups is to create a specific snapshot of production or staging databases
+(not available for development). These remain available for seven days. However, there is a limit of
+five daily manual backups.
 
-.. _odoo_sh/upgrade:
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+
+   * - Stage
+     - Automatic backup
+     - Manual backup
+   * - Production
+     - Yes (up to 3 months)
+     - Yes (3 days)
+   * - Staging
+     - No
+     - Yes (3 days)
+   * - Development
+     - No
+     - No
+
+The :guilabel:`Import Database` feature accepts database archives from:
+
+- the standard Odoo database manager (available for on-premise Odoo servers under
+  `/web/database/manager`)
+- the Odoo Online databases manager
+- the Odoo.sh :guilabel:`Backups` tab (using the :icon:`fa-download` (:guilabel:`Download Options`)
+  button)
+- the Odoo.sh :doc:`Builds <builds>` view (by clicking :guilabel:`Download DB dump`)
+
+.. _odoo-sh/branches/tabs/upgrade:
 
 Upgrade
 -------
 
-Available for production and staging branches for valid projects.
+The :guilabel:`Upgrade` tab can be used to upgrade production and staging branches of valid
+projects. For more information about the upgrade process, refer to the :doc:`Upgrade documentation
+<../../upgrade>`.
 
-.. seealso::
-    :doc:`Upgrade documentation <../../upgrade>`
+.. image:: branches/upgrade-tab.png
+   :alt: The branches upgrade tab
 
-.. _odoosh-gettingstarted-branches-tabs-settings:
+.. _odoo-sh/branches/tabs/tools:
+
+Tools
+-----
+
+The :guilabel:`Tools` tab contains the code profiler. It is used to start a profiling session,
+recording the activities of Odoo workers running in the instance for a maximum of five minutes. You
+can choose to terminate the session earlier, as running the tool for a shorter duration reduces the
+amount of noise in the report.
+
+.. image:: branches/code-profiler.gif
+   :alt: Using the code profiler
+
+After each session, an interactive flame graph is created to help you visualize how the Odoo workers
+allocate their time.
+
+.. warning::
+   Running the profiler consumes a lot of server resources, so avoid letting it run for too long.
+   The goal is to record a specific action in your database.
+
+.. _odoo-sh/branches/tabs/settings:
 
 Settings
 --------
 
-Here you can find a couple of settings that only apply to the currently selected branch.
+The :guilabel:`Settings` tab lists the configuration options available for the currently selected
+branch. The options vary for each stage.
 
-.. image:: branches/interface-branches-settings.jpg
-   :align: center
+.. image:: branches/settings-tab.png
+   :alt: The branches settings tab
 
-**Behaviour upon new commit**
+.. _odoo-sh/branches/tabs/settings/commits:
 
-For development and staging branches, you can change the branch's behavior upon receiving a new
-commit. By default, a development branch will create a new build and a staging branch will update
-the previous build (see the :ref:`Production Stage <stage_production>`). This is especially useful
-should the feature you're working on require a particular setup or configuration, to avoid having
-to manually set it up again on every commit. If you choose new build for a staging branch, it will
-make a fresh copy from the production build every time a commit is pushed. A branch that is put
-back from staging to development will automatically be set to 'Do nothing'.
+Behavior upon new commits
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Modules installation**
+You can change the branch's behavior upon receiving a new commit for **development** and **staging**
+branches.
 
-Choose the modules to install automatically for your development builds.
+By default, a **development** branch creates a new build and a staging branch updates the previous
+build. This is useful if the feature you are working on requires a specific configuration, as you
+would not need to manually configure it again after every commit.
 
-.. image:: branches/interface-settings-modulesinstallation.png
-   :align: center
+If you select :guilabel:`New build` for a **staging** branch, a fresh copy of the production build
+is created every time a commit is pushed.
 
-* *Install only my modules* will install the modules of the branch only. This is the default option.
-  The :ref:`submodules <odoosh-advanced-submodules>` are excluded.
-* *Full installation (all modules)* will install the modules of the branch, the modules included in the submodules
-  and all standard modules of Odoo. When running the full installation, the test suite is disabled.
-* *Install a list of modules* will install the modules specified in the input just below this option.
-  The names are the technical name of the modules, and they must be comma-separated.
+A branch that is moved from **staging** to **development** is set automatically to :guilabel:`Do
+nothing`.
 
-If the tests are enabled, the standard Odoo modules suite can take up to 1 hour.
-This setting applies to development builds only.
-Staging builds duplicate the production build and the production build only installs base.
+.. _odoo-sh/branches/tabs/settings/installation:
 
+Module installation
+~~~~~~~~~~~~~~~~~~~
 
-**Test suite**
+You can choose which modules should be installed automatically for **development** branches.
 
-For development branches, you can choose to enable or disable the test suite. It's enabled by default.
-When the test suite is enabled, you can restrict them by specifying test tags :ref:`test tags
-<developer/reference/testing/selection>`.
+.. image:: branches/settings-module-installation.png
+   :alt: The settings tab module installation
 
-**Odoo Version**
+To change the default behavior, untick the :guilabel:`Use Default` option under
+:guilabel:`Development build behavior` and select one of the following options under
+:guilabel:`Module Installation`:
 
-For development branches only, you can change the version of Odoo, should you want to test upgraded code or develop
-features while your production database is in the process of being upgraded to a newer version.
+- :guilabel:`Install only my modules (does not include submodules)`: only installs the branch's
+  modules, excluding :doc:`submodules <../advanced/submodules>`. This is the default option.
+- :guilabel:`Full installation (no test suite)`: installs the branch's modules, submodules, and all
+  standard Odoo modules. When running the full installation, the test suite is disabled.
+- :guilabel:`Install a list of modules`: installs the specified modules. To do so, enter their
+  technical name, and separate them using commas (e.g., `sale_management,website,accountant`).
 
-In addition, for each version you have two options regarding the code update.
+.. note::
+   If the test suite is enabled, installing all standard Odoo modules can take up to one hour.
 
-* You can choose to benefit from the latest bug, security and performance fixes automatically. The
-  sources of your Odoo server will be updated weekly. This is the 'Latest' option.
-* You can choose to pin the Odoo sources to a specific revision by selecting them from a list of
-  dates. Revisions will expire after 3 months. You will be notified by mail when the expiration
-  date approaches and if you don't take action afterwards, you will automatically be set to the
-  latest revision.
+.. _odoo-sh/branches/tabs/settings/test:
 
-**Custom domains**
+Test suite
+~~~~~~~~~~
 
-Here you can configure additional domains for the selected branch. It's possible to add other
-*<name>.odoo.com* domains or your own custom domains. For the latter you have to:
+By default, the test suite for **development** branches is enabled. You can restrict which tests are
+run by entering :ref:`test tags <developer/reference/testing/selection>` and separating them using
+commas (e.g., `custom_tags,at_install,post_install`).
 
-* own or purchase the domain name,
-* add the domain name in this list,
-* in your registrar's domain name manager,
-  configure the domain name with a ``CNAME`` record set to your production database domain name.
+To disable the test suite entirely, untick :guilabel:`Validate the test suite on new builds`.
 
-For instance, to associate *www.mycompany.com* to your database *mycompany.odoo.com*:
+.. _odoo-sh/branches/tabs/settings/version:
 
-* in Odoo.sh, add *www.mycompany.com* in the custom domains of your project settings,
-* in your domain name manager (e.g. *godaddy.com*, *gandi.net*, *ovh.com*),
-  configure *www.mycompany.com* with a ``CNAME`` record with as value *mycompany.odoo.com*.
+Odoo version
+~~~~~~~~~~~~
 
-Bare domains (e.g. *mycompany.com*) are not accepted:
+You can change the version of Odoo for **development** branches, for example, to test upgraded code
+or develop features while your production database is in the process of being upgraded to a newer
+version, by selecting another :guilabel:`Version`.
 
-* they can only be configured using ``A`` records,
-* ``A`` records only accept IP addresses as value,
-* the IP address of your database can change, following an upgrade, a hardware failure or
-  your wish to host your database in another country or continent.
+By default, :guilabel:`Latest` is selected as the :guilabel:`Revision`, and the sources of your Odoo
+server are updated weekly automatically to benefit from the latest bug, security, and performance
+fixes.
 
-Therefore, bare domains could suddenly no longer work because of this change of IP address.
+To choose a specific revision instead, select it using the :guilabel:`Revision` field.
 
-In addition, if you would like both *mycompany.com* and *www.mycompany.com* to work with your database,
-having the first redirecting to the second is amongst the
-`SEO best practices <https://support.google.com/webmasters/answer/7451184?hl=en>`_
-(See *Provide one version of a URL to reach a document*)
-in order to have one dominant URL. You can therefore just configure *mycompany.com* to redirect to *www.mycompany.com*.
-Most domain managers have the feature to configure this redirection. This is commonly called a web redirection.
+.. warning::
+   Revisions expire after three months. You will be notified by email when the revision's expiration
+   date approaches. If you have not taken any action when it expires, the :guilabel:`Revision` field
+   is automatically set back to :guilabel:`Latest`.
 
-**HTTPS/SSL**
+.. image:: branches/settings-revisions.png
+   :alt: The settings tab revisions
 
-If the redirection is correctly set up, the platform will automatically generate an SSL certificate
-with `Let's Encrypt <https://letsencrypt.org/about/>`_ within the hour and your domain will be
-accessible through HTTPS.
+.. _odoo-sh/branches/tabs/settings/domain:
 
-While it is currently not possible to configure your own SSL certificates on the Odoo.sh platform
-we are considering the feature if there is enough demand.
+Custom domains
+~~~~~~~~~~~~~~
 
+You can configure additional `<name>.odoo.com` domains or your own custom domains for all branch
+types.
 
-**SPF and DKIM compliance**
+To use your own custom domain, it is necessary to:
 
-In case the domain of your users email addresses use SPF (Sender Policy Framework) or DKIM
-(DomainKeys Identified Mail), don't forget to authorize Odoo as a sending host in your domain name
-settings to increase the deliverability of your outgoing emails. The configuration steps are
-explained in the documentation about :ref:`SPF <email-domain-spf>` and :ref:`DKIM
-<email-domain-dkim>`.
+- Own or purchase the domain name.
+- Enter the domain name under :guilabel:`Custom domains` (e.g., `www.mycompany.com`), then click
+  :guilabel:`Add domain`.
+- Configure the domain name (e.g., `www.mycompany.com`) using your registrar's domain name manager
+  with a **CNAME** record value set to your production database domain name (e.g.,
+  `mycompany.odoo.com`).
 
-.. Warning::
-  Forgetting to configure your SPF or DKIM to authorize Odoo as a sending host can lead to the
-  delivery of your emails as spam in your contacts inbox.
+.. important::
+   Bare domains (e.g., `mycompany.com`) are not accepted. They can only be configured using **A**
+   records, which only accept IP addresses as their value. Therefore, a bare domain could suddenly
+   cease to function, as the IP address of a database can change (e.g., following an upgrade, a
+   hardware failure, a change of database hosting location).
+
+To have both your bare domain (e.g., `mycompany.com`) and *www* domain (e.g., `www.mycompany.com`)
+working, it is necessary to redirect the bare domain to the *www* domain. .com. Most domain managers
+provide a way to configure this redirection, commonly referred to as a web redirection.
+
+.. _odoo-sh/branches/tabs/settings/domain/https:
+
+HTTPS/SSL
+*********
+
+If the redirection is correctly set up, an SSL certificate is automatically generated using `Let's
+Encrypt <https://letsencrypt.org/about>`_ within the hour, meaning your domain will be accessible
+through HTTPS.
+
+.. _odoo-sh/branches/tabs/settings/domain/spf-dkim:
+
+SPF and DKIM compliance
+***********************
+
+If the domain of your email addresses uses the :abbr:`SPF (Sender Policy Framework)` or :abbr:`DKIM
+(DomainKeys Identified Mail)` authentication protocol, it is necessary to authorize Odoo as a
+sending host in the domain name settings to increase the deliverability of outgoing emails. For more
+information, refer to the :doc:`Configure DNS records to send emails in Odoo documentation
+<../../../applications/general/email_communication/email_domain>`.
+
+.. important::
+   If Odoo is not authorized as a sending host, your outgoing emails may be flagged as spam.
+
+.. _odoo-sh/branches/shell-commands:
 
 Shell commands
 ==============
 
-In the top right-hand corner of the view, different shell commands are available.
+In the top right corner of the view, several shell commands are displayed. The commands can be
+copied using the clipboard button and then used in a terminal. In addition, some of them can be used
+directly from Odoo.sh's interface.
 
-.. image:: branches/interface-branches-shellcommands.png
-   :align: center
+.. image:: branches/shell-commands.png
+   :alt: The branches shell commands shortcuts
 
-Each command can be copied in the clipboard to be used in a terminal,
-and some of them can be used directly from Odoo.sh by clicking the *run* button
-in such case a popup will prompt the user in order to define eventual placeholders
-such as ``<URL>``, ``<PATH>``, ...
+.. _odoo-sh/branches/shell-commands/clone:
 
 Clone
 -----
 
-Download the Git repository.
+The clone command is used to create a local copy of your Git repository.
 
-.. code-block:: bash
+.. example::
+   :command:`git clone --recurse-submodules --branch development git@github.com:my-organization/my-repository.git`
 
-  $ git clone --recurse-submodules --branch master git@github.com:odoo/odoo.git
+   - `--recurse-submodules` to download the submodules of your repository
+   - `--branch main` to check out to a specific branch of the repository (e.g., `development`)
 
-Clones the repository *odoo/odoo*.
+.. note::
+   The run button is not available as the command is used to create a local copy on your machine.
 
-* :code:`--recurse-submodules`: Downloads the submodules of your repository. Submodules included in the submodules are downloaded as well.
-* :code:`--branch`: checks out a specific branch of the repository, in this case *master*.
-
-The *run* button is not available for this command, as it is meant to be used on your machines.
+.. _odoo-sh/branches/shell-commands/fork:
 
 Fork
 ----
 
-Create a new branch based on the current branch.
+The fork command is used to create a new branch based on the current one.
 
-.. code-block:: bash
+.. example::
+   :command:`git checkout -b main-1 development && git push -u origin development-1`
 
-  $ git checkout -b feature-1 master
+   - :command:`git checkout -b main-1 main` a command to create a new branch (e.g., `development-1`)
+     based on the current branch (e.g., `development`)
+   - :command:`git push -u origin development-1` a command to upload the new branch (e.g.,
+     `development-1`) to the remote repository
 
-Creates a new branch called *feature-1* based on the branch *master*, and then checkouts it.
-
-.. code-block:: bash
-
-  $ git push -u origin feature-1
-
-Uploads the new branch *feature-1* on your remote repository.
+.. _odoo-sh/branches/shell-commands/merge:
 
 Merge
 -----
 
-Merge the current branch in another branch.
+The merge command is used to combine changes on one branch into another branch.
 
-.. code-block:: bash
+.. example::
+   :command:`git merge staging-1 && git push -u origin staging`
 
-  $ git merge staging-1
+   - :command:`git merge staging-1` a command to merge the changes of the current branch into
+     another branch (e.g., `staging-1`)
+   - :command:`git push -u origin staging` a command to upload the merged changes to the remote
+     repository branch (e.g., `staging`)
 
-Merges the branch *staging-1* in the current branch.
-
-.. code-block:: bash
-
-  $ git push -u origin master
-
-Uploads the changes you just added in the *master* branch on your remote repository.
+.. _odoo-sh/branches/shell-commands/ssh:
 
 SSH
 ---
 
-Setup
-~~~~~
+The SSH command is used to connect to a build using SSH.
 
-In order to use SSH, you have to set up your profile SSH public key (if it is not already done).
-To do so, follow these steps:
+To use the SSH command, it is necessary to set up an SSH key first. To do so:
 
-#. `Generate a new SSH key
-   <https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key>`_
-#. `Copy the SSH key to your clipboard
-   <https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account>`_
-   (only apply the step 1)
-#. Paste the copied content to your profile SSH keys and press "Add"
+- `Generate a new SSH key <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key>`_.
+- `Copy the SSH key to your clipboard <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account#adding-a-new-ssh-key-to-your-account>`_.
+- On Odoo.sh, click your GitHub user in the top-right corner and select :guilabel:`Profile`.
 
-   .. image:: branches/SSH-key-pasting.png
-      :align: center
+  .. image:: branches/ssh-profile.png
+     :alt: Accessing a user's profile
 
-#. The key should appear below
+- Paste the SSH key under the :guilabel:`Add a key manually` field and click :guilabel:`Add`.
 
-   .. image:: branches/SSH-key-appearing.png
-      :align: center
+  .. image:: branches/ssh-add-key.gif
+     :alt: Adding an SSH key manually
 
-Connection
-~~~~~~~~~~
+.. example::
+   :command:`ssh 25004381@my-user-my-repository-staging-25004381.dev.odoo.com`
 
-To connect to your builds using ssh use the following command in a terminal:
+   - `25004381` the build ID
+   - `my-user-my-repository-staging-25004381.dev.odoo.com` the domain used to connect to the build
 
-.. code-block:: bash
+Provided you have the necessary :ref:`access rights <odoosh-gettingstarted-settings-collaborators>`
+on the project, you will be granted SSH access to the build.
 
-  $ ssh <build_id>@<domain>
+.. note::
+   Long-running SSH connections are not guaranteed. Idle connections can be disconnected to free up
+   resources.
 
-You will find a shortcut for this command into the SSH tab in the upper right corner.
-
-.. image:: branches/SSH-panel.png
-   :align: center
-
-Provided you have the :ref:`correct access rights <odoosh-gettingstarted-settings-collaborators>` on the project,
-you'll be granted ssh access to the build.
-
-.. Note::
-  Long running ssh connections are not guaranteed. Idle connections will be
-  disconnected in order to free up resources.
+.. _odoo-sh/branches/shell-commands/submodule:
 
 Submodule
 ---------
 
-Add a branch from another repository in your current branch as a *submodule*.
+The submodule command is used to add a branch from another repository to your current branch as a
+submodule.
 
-*Submodules* allows you to use modules from other repositories in your project.
+.. seealso::
+   :doc:`Submodules documentation <../advanced/submodules>`
 
-The submodules feature is detailed in the chapter
-:ref:`Submodules <odoosh-advanced-submodules>` of this documentation.
+.. example::
+   :command:`git submodule add -b master <URL> <PATH> && git commit -a && git push -u origin staging`
 
-.. code-block:: bash
+   - :command:`git submodule add -b master <URL> <PATH>` a command to add a specific branch (e.g.,
+     `master`) of a repository (`<URL>`) as a submodule under the specified path (`<PATH>`) in
+     your current branch.
+   - :command:`git commit -a` a command to commit all current changes
+   - :command:`git push -u origin staging` a command to upload the changes of the current branch
+     (e.g., `staging`) to the remote repository.
 
-  $ git submodule add -b master <URL> <PATH>
-
-Adds the branch *master* of the repository *<URL>* as a submodule under the path *<PATH>* in your current branch.
-
-.. code-block:: bash
-
-  $ git commit -a
-
-Commits all your current changes.
-
-.. code-block:: bash
-
-  $ git push -u origin master
-
-Uploads the changes you just added in the *master* branch on your remote repository.
+.. _odoo-sh/branches/shell-commands/delete:
 
 Delete
 ------
 
-Delete a branch from your repository.
+The delete command is used to delete a branch from your repository.
 
-.. code-block:: bash
+.. note::
+   Once you delete a branch, there is no way to retrieve it unless a backup exists. Staging branches
+   are not automatically backed up, but can be manually. Development branches cannot be backed up.
 
-  $ git push origin :master
+.. example::
+   :command:`git push origin :staging && git branch -D staging`
 
-Deletes the branch in your remote repository.
+   - :command:`git push origin :staging` a command to delete a specific branch (e.g., `staging`) on
+     the remote repository
+   - :command:`git branch -D staging` a command to delete the specific branch on your local copy of
+     the repository
 
-.. code-block:: bash
-
-  $ git branch -D master
-
-Deletes the branch in your local copy of the repository.
+.. warning::
+   Before deleting a branch, refer to the :ref:`Backups section <odoo-sh/branches/tabs/backups>` to
+   better understand how they work and when you should create a manual backup.
