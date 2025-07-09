@@ -48,7 +48,7 @@ Go to :guilabel:`Apps` and click on :guilabel:`Update Apps List` in the menu. Se
 in the list and install it.
 
 .. seealso::
-   :doc:`Introduction to Odoo.sh <../../../administration/odoo_sh/overview/introduction>`
+   :doc:`Introduction to Odoo.sh <../../../administration/odoo_sh>`
 
 .. _website_themes/going_live/whats_next:
 

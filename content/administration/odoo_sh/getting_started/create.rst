@@ -1,205 +1,192 @@
+================
+Create a project
+================
 
-.. _odoosh-gettingstarted-create:
-
-===================
-Create your project
-===================
-
-Deploy your platform
-====================
-
-Go to `Odoo.sh <https://www.odoo.sh/>`_ and hit the *Deploy your platform* button.
-
-.. image:: create/deploy.png
-   :align: center
-
-Sign in with Github
-===================
-
-Sign in with your Github account. If you do not have an account yet, hit the *Create an account*
-link.
-
-.. image:: create/github-signin.png
-   :align: center
-
-Authorize Odoo.sh
+Deploy a platform
 =================
 
-Grant Odoo.sh the required accesses to your account by clicking the *Authorize* button.
+#. Visit `Odoo.sh <https://www.odoo.sh>`_ and click :guilabel:`Deploy your platform`.
 
-.. image:: create/github-authorize.png
-   :align: center
+   .. image:: create/deploy-button.png
+      :alt: The Deploy your platform button on Odoo.sh
 
-Odoo.sh basically needs:
+#. Sign in with a `GitHub <https://github.com>`_ account.
 
-* to know your Github login and email,
-* to create a new repository in case you decide to start from scratch,
-* to read your existing repositories, including the ones of your organizations, in case you want to
-  start from an existing repository,
-* to create a webhook to be notified each time you push changes,
-* to commit changes to make your deployment easier, merging branches or adding new `submodules
-  <https://git-scm.com/book/en/v2/Git-Tools-Submodules>`_ for example.
+   .. image:: create/github-sign-in.png
+      :alt: Signing in to GitHub
 
-Submit your project
-===================
+#. Authorize Odoo.sh by clicking :guilabel:`Authorize odoo` twice.
 
-Choose if you want to start from scratch by creating a new repository, or if you want to use an
-existing repository.
+   .. image:: create/github-authorize.png
+      :alt: Granting Odoo.sh permissions to perform actions and access data on GitHub
 
-Then, choose a name or select the repository you want to use.
+   .. image:: create/github-authorize.png
+      :alt: Granting Odoo.sh additional permissions to perform actions and access data on GitHub
 
-Choose the Odoo version you want to use. If you plan to import an existing database or an existing
-set of applications, you might need to choose the according version. If you start from scratch, use
-the latest version.
+   .. note::
+      Odoo.sh requests GitHub to:
 
-Enter your *subscription code*. This is also called *subscription referral*, *contract number* or
-*activation code*.
+      - Access your GitHub login and email.
+      - Create a new repository, in case you start from scratch.
+      - Access existing repositories, including organization ones, in case you start from an
+        existing repository.
+      - Create a webhook to notify you each time changes are pushed.
+      - Commit changes for easier deployment.
 
-It should be the code of your Enterprise subscription that includes Odoo.sh.
+#. Fill in the :guilabel:`Deploy your platform` form and click :guilabel:`Deploy`:
 
-Partners can use their partnership codes to start a trial. Should their clients start a project,
-they ought to get an Enterprise subscription including Odoo.sh and use its subscription code. The
-partner will get 50% of the amount back as commission. Contact your sales representative or account
-manager in order to get it.
+   - :guilabel:`Github repository`: to create a new repository, choose :guilabel:`New repository`
+     and enter a name; to use an existing one, choose :guilabel:`Existing repository` and select it.
+   - :guilabel:`Odoo Version`: select the major version of Odoo you want to use.
 
-When submitting the form, if you are notified your subscription is not valid, it either means:
+     .. tip::
+        - Use the latest major version of Odoo version when creating a new repository. If you are
+          planning to import an existing database or applications, it might be required that their
+          versions match.
+        - If you are starting on Odoo Online and plan to migrate to Odoo.sh later, create your
+          database using `odoo.com/start-lts <https://www.odoo.com/start-lts>`_ to ensure
+          compatibility, as minor versions are not supported by Odoo.sh.
 
-* it is not an existing subscription,
-* it is not a partnership subscription,
-* it is an enterprise subscription, but which does not include Odoo.sh,
-* it is neither a partnership subscription or an enterprise subscription (e.g. an online
-  subscription).
+   - :guilabel:`Subscription Code`: enter your Odoo Enterprise subscription code that includes
+     Odoo.sh. It is also sometimes called the *subscription referral*, *contract number*, or
+     *activation code*.
 
-In case of doubt with your subscription, please contact the `Odoo support
-<https://www.odoo.com/help>`_.
+      .. tip::
+         Partners can use their partnership codes to initiate a trial (trial builds are limited to 1
+         GB storage and two staging). If a client proceeds to start a project, they must subscribe
+         to an Odoo Enterprise plan that includes Odoo.sh hosting and use their subscription code.
 
-.. image:: create/deploy-form.png
-   :align: center
+   - :guilabel:`Hosting location`: select the region where your platform will be hosted.
 
-You're done !
-=============
+   .. image:: create/deploy-form.png
+      :alt: The Deploy your platform form
 
-You can start using Odoo.sh. Your first build is about to be created. You will soon be able to
-connect to your first database.
+.. _odoo-sh/create/import:
 
-.. image:: create/deploy-done.png
-   :align: center
+Import a database
+=================
 
-.. _odoo_sh_import_your_database:
+Once your platform is deployed, you can import a database into your Odoo.sh project, provided it
+uses a :doc:`supported version <../../supported_versions>` of Odoo.
 
-Import your database
-====================
+.. note::
+   Due to `Odoo's backup policy <https://www.odoo.com/cloud-sla>`_, the import process requires
+   **four times** the size of your database dump in available storage. For example, a 10 GB dump
+   file will require at least 40 GB of available space. We recommend allocating **more than four
+   times×** the dump size temporarily, then reducing storage after the import is complete.
 
-You can import your database in your Odoo.sh project as long as it is in a :doc:`supported version
-</administration/supported_versions>` of Odoo.
+   If your project is a trial created with a partnership code, you can only import database dumps up
+   to **1 GB** in size.
 
-Push your modules in production
--------------------------------
+Push modules in production
+--------------------------
 
-If you use community or custom modules, add them in a branch in your Github repository.
-Databases hosted on the Odoo.com online platform do not have any custom modules.
-Users of these databases can therefore skip this step.
+If you are using community or custom modules, add them to a branch in your GitHub repository.
 
-You can structure your modules as you wish, Odoo.sh will automatically detect the folders containing
-Odoo addons. For instance, you can put all your modules folder in the root directory of your
-repository, or group the modules in folders by categories that you define (accounting, project,
-...).
+.. note::
+   Databases hosted on Odoo Online do not support custom modules.
 
-For community modules available in public Git repositories,
-you can also consider to add them using :ref:`Submodules <odoosh-advanced-submodules>`.
+Odoo.sh automatically detects folders containing Odoo modules. You can organize them however you
+prefer. For example, you can place them directly in the root directory of your repository or group
+them by category (e.g., `accounting`, `project`, etc.).
 
-Then, either :ref:`make this branch the production branch <odoosh-gettingstarted-branches-stages>`,
-or :ref:`merge it into your production branch <odoosh-gettingstarted-branches-mergingbranches>`.
+For publicly available community modules, you may also consider using :doc:`submodules
+<../advanced/submodules>`.
 
 Download a backup
 -----------------
 
-On-premise databases
-~~~~~~~~~~~~~~~~~~~~
+.. tabs::
 
-Access the URL :file:`/web/database/manager` of your on-premise database and download a backup.
+   .. group-tab:: On-premise
 
-.. Warning::
+      Go to `/web/database/manager` on your on-premise Odoo instance and click :icon:`fa-floppy-o`
+      :guilabel:`Backup`.
 
-  If you cannot access the database manager, it may have been disabled by your system administrator.
-  See the :ref:`database manager security documentation <db_manager_security>`.
+      .. image:: create/on-premise-manager.png
+         :alt: The on-premise web manager interface
 
-You will need the master password of your database server. If you do not have it, contact your
-system administrator.
+      Select :guilabel:`zip (includes filestore)` as the :guilabel:`Backup Format`.
 
-.. image:: create/create-import-onpremise-backup.png
-   :align: center
+      .. image:: create/on-premise-backup.png
+         :alt: Downloading an on-premise database backup
 
-Choose a zip including the filestore as the backup format.
+      .. note::
+         - You will need the :guilabel:`Master Password` of your Odoo server. If you do not have it,
+           contact your system administrator.
+         - If you cannot access the database manager, it may have been disabled by your system
+           administrator. Refer to the :ref:`database manager security documentation
+           <db_manager_security>`.
 
-.. image:: create/create-import-onpremise-backup-dialog.png
-  :align: center
+   .. group-tab:: Odoo Online
 
-Odoo Online databases
-~~~~~~~~~~~~~~~~~~~~~
+      Log in to your portal account and navigate to the `My Databases page
+      <https://www.odoo.com/my/databases>`_, and download a backup by clicking the :icon:`fa-gear`
+      (:guilabel:`gear`) icon, then :icon:`fa-cloud-download` :guilabel:`Download`.
 
-`Access your databases manager <https://accounts.odoo.com/my/databases/manage>`_ and download a
-backup of your database.
+      .. image:: create/odoo-online-backup.png
+         :alt: Downloading an Odoo Online database backup
 
-.. image:: create/create-import-online-backup.png
-   :align: center
-
-.. Warning::
-
-  Online versions (e.g. *saas-**) are not supported on Odoo.sh.
+      .. warning::
+         Only major versions of Odoo are compatible with Odoo.sh.
 
 Upload the backup
 -----------------
 
-Then, in your Odoo.sh project, in the backups tab of your production branch, import the backup you
-just downloaded.
+In your Odoo.sh project, navigate to the :guilabel:`Backups` tab of your :guilabel:`Production`
+branch, and click :guilabel:`Import Database` to upload the backup you previously downloaded.
 
-.. image:: create/create-import-production.png
-   :align: center
+.. image:: create/import-database.png
+   :alt: Importing a database backup on Odoo.sh
 
-Once the backup imported, you can access the database using the *Connect* button in the history of
-the branch.
+Once the import is complete, you can access the database using the :guilabel:`Connect` button in the
+branch's :guilabel:`History` tab.
 
-.. image:: create/create-import-production-done.png
-   :align: center
+.. important::
+   Importing a backup **overwrites all data** currently in the branch. Consider downloading a manual
+   backup beforehand if you want to preserve the existing data.
 
-Check your outgoing email servers
----------------------------------
-
-There is a default mail server provided with Odoo.sh.
-To use it, there must be no enabled outgoing mail server configured in your database in
-:menuselection:`Settings --> Technical --> Outgoing Mail Servers` (:ref:`Developer mode
-<developer-mode>` must be activated).
-
-After the import of your database, all outgoing email servers are disabled so you use the Odoo.sh
-email server provided by default.
-
-.. warning::
-   Port 25 is (and will stay) closed. If you want to connect to an external SMTP server, you should
-   use ports 465 and 587.
-
-Check your scheduled actions
+Check outgoing email servers
 ----------------------------
 
-All scheduled actions are disabled after the import.
+Odoo.sh provides a default email server. To use it, ensure that **no outgoing mail server is
+enabled** in your database by enabling :ref:`developer mode <developer-mode>` and navigating to
+:menuselection:`Settings --> Technical --> Email: Outgoing Mail Servers`
 
-This is to prevent your newly imported database to perform actions that could impact your running
-production, such as sending the mails remaining in the queue, processing mass mailings, or
-third-party services synchronization (Calendars, files hosting, ...).
+After importing your database, all configured outgoing mail servers are **disabled**, and the
+default Odoo.sh server is used.
 
-If you plan to make the imported database your production, enable the scheduled actions you need.
-You can check what is enabled in the database of origin and enable the same actions in the imported
-database. Scheduled actions are located under :menuselection:`Settings --> Technical --> Automation
---> Scheduled Actions`.
+.. warning::
+   Port **25** is and will remain closed. If connecting to an external SMTP server, use port **465**
+   or **587**.
 
-Register your subscription
---------------------------
+Check scheduled actions
+-----------------------
 
-Your subscription is unlinked after the import.
+Scheduled actions are **disabled by default** after importing your database. This prevents your
+newly imported database from performing potentially disruptive operations such as:
 
-The imported database is considered a duplicate by default and the enterprise subscription is
-therefore removed, as you can only have one database linked per subscription.
+- sending queued emails,
+- triggering mass mailings, or
+- syncing with third-party services (e.g., calendars, cloud storage).
 
-If you plan to make it your production, unlink your former database from the subscription, and
-register the newly imported database. Read the :doc:`database registration documentation
-<../../on_premise>` for instructions.
+If you intend to use this imported database in production, **re-enable** only the scheduled actions
+you need by enabling :ref:`developer mode <developer-mode>` and going to :menuselection:`Settings
+--> Technical --> Automation: Scheduled Actions`.
+
+Register the subscription
+-------------------------
+
+After import, the database is considered a **duplicate** and will be unlinked from your enterprise
+subscription.
+
+.. note::
+   You are allowed only one active database per subscription.
+
+If you intend to make the imported database your production environment:
+
+#. Unlink your previous database from the subscription.
+#. Register the new one.
+
+Refer to the :doc:`database registration documentation <../../on_premise>` for step-by-step
+instructions.
