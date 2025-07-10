@@ -18,17 +18,18 @@ Plausible.io
 ============
 
 Odoo hosts its own Plausible.io server and provides a free and ready-to-use Plausible.io
-solution for **Odoo Online** databases that use the odoo.com domain. Odoo automatically creates and sets up
-your account. Start using it by going to :menuselection:`Website --> Reporting --> Analytics`.
+solution for **Odoo Online** databases that use the odoo.com domain. Odoo automatically creates and
+sets up your account. Start using it by going to :menuselection:`Website --> Reporting -->
+Analytics`.
 
 .. note::
-   - If you use a custom :doc:`domain name <../configuration/domain_names>` (e.g., `example.com`), you need to
-     create your own Plausible.io account and subscription.
+   - If you use a custom :doc:`domain name <../configuration/domain_names>` (e.g., `example.com`),
+     you need to create your own Plausible.io account and subscription.
    - **If you already have a Plausible.io account** and you want to connect it to your Odoo Online
      database, you must create two `ir.config.parameters` to use Plausible.io's servers. To do so,
      enable the :ref:`developer mode <developer-mode>` and go to :menuselection:`General Settings -->
-     Technical --> System Parameters`. Click :guilabel:`New` and fill in the following :guilabel:`Key`
-     and :guilabel:`Value` fields:
+     Technical --> System Parameters`. Click :guilabel:`New` and fill in the following
+     :guilabel:`Key` and :guilabel:`Value` fields:
 
      .. list-table::
         :header-rows: 1
@@ -42,25 +43,33 @@ your account. Start using it by going to :menuselection:`Website --> Reporting -
 
    Then, follow the steps below to connect your existing account with Plausible.io servers.
 
+   .. warning::
+      Deactivating the free Plausible.io account linked to your **Odoo Online** database
+      will also invalidate the existing keys, making them unusable. As a result, new
+      keys will be generated, and all historical data linked to the old keys will be lost. If you
+      plan to deactivate the account, it is recommended to back up your data locally beforehand.
+
 If your database is hosted on **Odoo.sh** or **On-premise**, or if you wish to use your own
 Plausible.io account, proceed as follows:
 
 #. Create or sign in to a Plausible.io account using the following link: `<https://plausible.io/register>`_.
-#. If you are creating a new account, go through the registration and activation steps. On the :guilabel:`Add website
-   info` page, add the :guilabel:`Domain` of your website without including `www` (e.g.,
-   `example.odoo.com`) and change the :guilabel:`Reporting Timezone`, if necessary. Click
-   :guilabel:`Install Plausible` to proceed to the next step. Ignore the :guilabel:`Manual installation`
-   instructions and click :guilabel:`Start collecting data`.
+#. If you are creating a new account, go through the registration and activation steps.
+   On the :guilabel:`Add website info` page, add the :guilabel:`Domain` of your website without
+   including `www` (e.g., `example.odoo.com`) and change the :guilabel:`Reporting Timezone`,
+   if necessary. Click :guilabel:`Install Plausible` to proceed to the next step. Ignore the
+   :guilabel:`Manual installation` instructions and click :guilabel:`Start collecting data`.
 #. Once done, click the Plausible.io logo in the upper-left part of the page to access your `list of
-   websites <https://plausible.io/sites>`_, then click the :icon:`fa-ellipsis-v` (:guilabel:`ellipsis`) icon next to the
-   website and select :icon:`fa-cog` :guilabel:`Settings` from the drop-down menu.
+   websites <https://plausible.io/sites>`_, then click the :icon:`fa-ellipsis-v`
+   (:guilabel:`ellipsis`) icon next to the website and select :icon:`fa-cog` :guilabel:`Settings`
+   from the drop-down menu.
 
    .. image:: analytics/plausible-gear-icon-settings.png
       :alt: Click the gear icon in the list of websites.
 
 #. In the sidebar, select :guilabel:`Visibility`, then click :guilabel:`Add Shared link`.
-#. Enter a :guilabel:`Name`, leave the :guilabel:`Password (optional)` field empty, as the Plausible analytics
-   dashboard integration in Odoo does not support it, then click :guilabel:`Create shared link`.
+#. Enter a :guilabel:`Name`, leave the :guilabel:`Password (optional)` field empty, as the Plausible
+   analytics dashboard integration in Odoo does not support it, then click :guilabel:`Create
+   shared link`.
 
 #. Copy the shared link.
 
@@ -75,7 +84,8 @@ Plausible.io account, proceed as follows:
    If you have :doc:`multiple websites <../configuration/multi_website>`, add your websites to your
    Plausible.io account by going to `<https://plausible.io/sites>`_ and clicking :guilabel:`+ Add
    Website`. In Odoo, in the **Website settings**, make sure to select the website in the
-   :guilabel:`Settings of Website` field at the top of the page before pasting the :guilabel:`Shared link`.
+   :guilabel:`Settings of Website` field at the top of the page before pasting the
+   :guilabel:`Shared link`.
 
 .. note::
    Odoo automatically pushes two custom goals: `Lead Generation` and `Shop`.
@@ -93,9 +103,9 @@ To follow your Odoo website's traffic with Google Analytics:
 #. Create or sign in to a Google account using the following link: `<https://analytics.google.com>`_.
 #. - If you are setting up Google Analytics for the first time, click :guilabel:`Start measuring`
      and go through the account creation step.
-   - If you already have a Google Analytics account, sign in and click the :icon:`fa-cog` icon in the
-     bottom-left corner of the page to access the **Admin** page. Then, click :guilabel:`+ Create` and select
-     :guilabel:`Property` from the drop-down menu.
+   - If you already have a Google Analytics account, sign in and click the :icon:`fa-cog` icon
+     in the bottom-left corner of the page to access the **Admin** page. Then, click
+     :guilabel:`+ Create` and select :guilabel:`Property` from the drop-down menu.
 
 #. Complete the next steps: `property creation <https://support.google.com/analytics/answer/9304153?hl=en/&visit_id=638278591144564289-3612494643&rd=2#property>`_,
    business details and business objectives.
@@ -119,7 +129,8 @@ To follow your Odoo website's traffic with Google Analytics:
    If you have :doc:`multiple websites <../configuration/multi_website>` with separate domains, it
    is recommended to create `one property <https://support.google.com/analytics/answer/9304153?hl=en/&visit_id=638278591144564289-3612494643&rd=2#property>`_
    per domain. In Odoo, in the **Website settings**, make sure to select the website in the
-   :guilabel:`Settings of Website` field at the top of the page before pasting the :guilabel:`Measurement ID`.
+   :guilabel:`Settings of Website` field at the top of the page before pasting the
+   :guilabel:`Measurement ID`.
 
 .. seealso::
    `Google documentation on setting up Analytics for a website
@@ -136,8 +147,8 @@ app, directly through the code injector.
 
 .. note::
    :abbr:`GTM (Google Tag Manager)` is not an analytics tool and does not offer reporting features;
-   it is used to collect data and works alongside Google Analytics to provide more detailed insights.
-   In order to use GTM properly, it is recommended to configure Google Analytics as well.
+   it is used to collect data and works alongside Google Analytics to provide more detailed
+   insights. In order to use GTM properly, it is recommended to configure Google Analytics as well.
 
    For more information refer to the `documentation on linking Google Analytics and
    Google Tag Manager <https://support.google.com/tagmanager/answer/9442095?hl=en>`_.
