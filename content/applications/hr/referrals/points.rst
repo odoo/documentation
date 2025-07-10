@@ -19,15 +19,15 @@ statuses beneath the avatar. The options are: :guilabel:`Referrals`, :guilabel:`
 
 The current number of referrals that are still active in the recruitment pipeline, but have not yet
 been hired or refused, appear above :guilabel:`Ongoing`. The number of referrals that have been
-hired, appear above :guilabel:`Successful`. The total number of referrals, both the ongoing and
+hired, appears above :guilabel:`Successful`. The total number of referrals, both the ongoing and
 successful referrals combined, appears above :guilabel:`Referrals`.
 
 My referrals
 ============
 
 To see all the referrals, both ongoing and successful, click :guilabel:`Referrals`. The
-:guilabel:`My Referral` screen page displays all the referrals, with each individual referral housed
-in its own referral card.
+:guilabel:`My Referral` screen page displays all referrals, with each individual referral housed in
+its own referral card.
 
 A successful referral displays a white :icon:`fa-check` :guilabel:`Hired` badge in the top-right
 corner of the card, along with a vertical green stripe on the left-side of the card. Referrals that
