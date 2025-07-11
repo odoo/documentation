@@ -3,13 +3,9 @@ Connect a scale
 ===============
 
 .. important::
-   - In EU member states, `certification is legally required
-     <https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2014.096.01.0107.01.ENG>`_
-     to use a scale as an integrated device.
-   - Odoo is not certified in several countries, including France, Germany, and Switzerland. If you
-     reside in one of these countries, you can still use a scale but without integration into your
-     Odoo database. Alternatively, you can acquire a *non-integrated* certified scale that prints
-     certified labels, which can then be scanned into your Odoo database.
+   In EU member states, `certification is legally required
+   <https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2014.096.01.0107.01.ENG>`_
+   to use a scale as an integrated device.
 
 To connect a scale to the IoT system, use a USB cable. In some cases, you may need a serial-to-US
 adapter to complete the connection. If the scale is `compatible with an IoT system
@@ -33,7 +29,8 @@ settings:
 #. Click :guilabel:`Save`.
 
 .. seealso::
-   :doc:`Connect an IoT system to a POS </applications/sales/point_of_sale/configuration/pos_iot>`
+   - :doc:`Connect an IoT system to a POS </applications/sales/point_of_sale/configuration/pos_iot>`
+   - :ref:`Configure a POS for a scale <pos/scale>`
 
 The scale is then available in all the :doc:`POS's sessions </applications/sales/point_of_sale>`.
 If a product is configured with a price per weight, selecting it on the :guilabel:`PoS screen` opens
