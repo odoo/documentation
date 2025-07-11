@@ -289,6 +289,37 @@ is based on the PUC (Plan Unico de Cuentas).
 
 .. _localization/colombia/workflows:
 
+<<<<<<< 3c486ba1831499ae422dc18c89754f7b885e7743
+||||||| fd73698b4c8475034fa2e594ba2600e19e71afac
+Multicurrency
+-------------
+
+The official exchange rate is provided by the `Banco de la República
+<https://suameca.banrep.gov.co/estadisticas-economicas/>`_.
+
+Go to :menuselection:`Accounting --> Configuration --> Settings --> Currencies: Automatic Currency
+Rates` to set an **Interval** for the exchange rate or select a different **service**.
+
+.. image::colombia/l10n-co-currency-rates.png
+   :align: center
+   :alt: Configuration for automatic currency rate for Colombia
+
+=======
+Multicurrency
+-------------
+
+The official exchange rate for Colombia is provided by the `Banco de la República
+<https://suameca.banrep.gov.co/estadisticas-economicas/>`_.
+
+To enable automatic exchange rate updates, follow these steps:
+
+#. Go to :menuselection:`Accounting --> Configuration --> Settings`.
+#. Navigate to the :guilabel:`Currencies` section and enable :guilabel:`Automatic Currency Rates`.
+#. Ensure that :guilabel:`[CO] Bank of the Republic` is selected as the :guilabel:`Service`.
+#. Select an :guilabel:`Interval` for how frequently the currency rate should be automatically
+   updated.
+
+>>>>>>> efd3724463b0e22acec75e09646657d71b61cff1
 Main workflows
 ==============
 
