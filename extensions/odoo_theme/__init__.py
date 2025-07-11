@@ -16,6 +16,8 @@ def setup(app):
     app.add_js_file('js/menu.js')
     app.add_js_file('js/page_toc.js')
     app.add_js_file('js/switchers.js')
+    app.add_js_file('js/turndown.js')
+    app.add_js_file('js/copy_page_md.js')
 
     roles.register_canonical_role('icon', icon_role)
 
