@@ -29,9 +29,9 @@ Creditor identifier
 -------------------
 
 To enable |sdd| for customer payments, go to :menuselection:`Accounting --> Configuration -->
-Settings`, scroll to the :guilabel:`Customer Payments` section, enable :guilabel:`SEPA Direct
-Deposit (SDD)`, and click :guilabel:`Save`. Then, scroll to the :guilabel:`Customer Payments`
-section again, set the company's :guilabel:`Creditor Identifier`, and click :guilabel:`Save`.
+Settings`, scroll to the :guilabel:`Customer Payments` section, enable :guilabel:`SEPA Direct Debit
+(SDD)`, and click :guilabel:`Save`. Then, scroll to the :guilabel:`Customer Payments` section again,
+set the company's :guilabel:`Creditor Identifier`, and click :guilabel:`Save`.
 
 .. tip::
    The creditor identifier is provided by your bank or the authority responsible for delivering
