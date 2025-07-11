@@ -11,4 +11,3 @@ Shop features
    shop/barcode
    shop/serial_numbers
    shop/ship_later
-   shop/customer_display
