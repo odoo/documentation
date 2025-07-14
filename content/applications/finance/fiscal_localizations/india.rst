@@ -425,125 +425,175 @@ Username`.
 File-in GST Return
 ------------------
 
-When the :guilabel:`GST E-Filing & Matching Feature` is enabled, you can file your GST return. Go
-to :menuselection:`Accounting --> Reporting --> India --> GST Return periods` and create a new
-**GST Return Period** if it does not exist. GST Return file-in is done in **three steps** in Odoo:
+When the :guilabel:`GST E-Filing & Matching Feature` is enabled, you can file your GST return.
+To do so, go to :menuselection:`Accounting --> Reporting --> Tax Report`.
+Select the relevant report (e.g., :guilabel:`GSTR-1`, :guilabel:`GSTR-2`) and click
+:guilabel:`Returns`.
+
+.. image:: india/gst-gstr-report-selection.png
+   :alt: GST GSTR report selection view
+
+This opens a wizard :guilabel:`Accounting Periods`, where the following parameters
+must be defined:
+
+- :guilabel:`Opening Date`: the date from which accounting is managed in Odoo.
+- :guilabel:`Fiscal Year End`: the end date of the fiscal year (e.g., :guilabel:`31 March`).
+- :guilabel:`GSTIN Periodicity`: the frequency of return filing (e.g., :guilabel:`Monthly`).
 
 .. note::
-   **Tax Return Periodicity** can be
-   :doc:`configured <../accounting/reporting/tax_returns>` according to the user's
-   needs.
+   The tax return periodicity can be
+   :doc:`configured <../accounting/reporting/tax_returns>` according to the company's needs.
 
 .. _india/gstr-1:
 
-Send GSTR-1
-~~~~~~~~~~~
+Filing GSTR-1
+~~~~~~~~~~~~~
 
-#. Click :guilabel:`GSTR-1 Report` to verify the :ref:`GSTR-1 <india/gstr-1_report>` report before
-   uploading it to the **GST portal**.
+#. Click :guilabel:`Review` to perform validation checks before submitting to the
+   :guilabel:`GST portal`.
 
-   .. image:: india/gst-gstr-1-verify.png
-      :alt: GSTR-1 verify
+   .. image:: india/gst-gstr-1-review.png
+      :alt: GSTR-1 Review
 
    .. note::
-      The system performs basic validations to ensure compliance with the GST portal's requirements.
+      The system performs basic validations to ensure compliance with GST portal requirements.
       Possible issues include:
 
-      - **Incorrect Tax Application:** The tax type does not match the :guilabel:`Fiscal Position`
-        (:guilabel:`CGST/SGST` applied instead of :guilabel:`IGST` for interstate transactions, or
-        :guilabel:`IGST` applied instead of :guilabel:`CGST/SGST` for intrastate transactions).
-      - **Missing HSN Code:** No HSN Code is defined for the product.
-      - **Invalid HSN Code for Services:** The HSN Code for a service does not start with "99" or is
-        incorrect.
-      - **Non-compliant UQC:** The Unit Quantity Code (UQC) does not meet Indian GST standards.
+      - **Incorrect Tax Application**: The tax type does not match the :guilabel:`Fiscal Position`
+        (:guilabel:`CGST/SGST` used instead of :guilabel:`IGST` for interstate transactions, or
+        vice versa).
+      - **Missing HSN Code**: No HSN code defined for the product.
+      - **Invalid HSN Code for Services**: HSN code for a service must start with "99".
+      - **Non-compliant UQC**: The Unit Quantity Code (UQC) does not meet Indian GST standards.
 
-      If any validation fails, the system alerts users with a warning, highlighting the
-      discrepancies and providing a direct link to the affected lines.
+      After clicking the :guilabel:`Review`, the system displays a notification where you can see
+      validation checks by clicking :guilabel:`See checks`.
 
-      .. image:: india/gst-gstr-1-validation.png
-         :alt: GSTR-1 validation warning
+      .. image:: india/gst-gstr-1-validation-checks.png
+         :alt: GSTR-1 Validation Checks
 
-#. Click :guilabel:`Generate` to view the report in **Spreadsheet view**.
 
-   .. image:: india/gst-gstr-1-generate.png
-      :alt: GSTR-1 generate
+#. Click the :icon:`fa-ellipsis-v` :guilabel:`(ellipsis)` icon next to the :guilabel:`Submit` button
+   to display additional options for GSTR-1.
 
-   .. image:: india/gst-gstr-1-spreadsheet-view.png
-      :alt: GSTR-1 Spreadsheet View
+   The dropdown includes the following actions:
 
-#. If the **GSTR-1** report is correct, then click :guilabel:`Push to GSTN` to send it to the **GST
-   portal**. The status of the :guilabel:`GSTR-1` report changes to :guilabel:`Sending`.
+   - :guilabel:`View Checks`: Opens a window listing all GST compliance checks, such as invalid HSN
+     codes or incorrect tax mappings. Click on each item to view the related invoice or correction.
+   - :guilabel:`Generate`: Downloads the GSTR-1 report as an :file:`.xlsx` file.
+   - :guilabel:`Reset`: Clears the current state and reverts the return to the initial stage.
+     This is useful if major corrections are required before submission.
+
+   .. tip::
+      Use these tools before submission to verify data accuracy and maintain GST compliance.
+
+#. When selecting :guilabel:`View Checks`, a list of validation messages appears.
+   Each line includes contextual buttons to help resolve or manage the issue.
+
+   .. image:: india/gst-gstr-1-view-checks.png
+      :alt: GSTR-1 validation checks
+
+   The following actions are available for each check:
+
+   - :icon:`fa-user-plus` :guilabel:`Approve`: Marks the validation check as acknowledged.
+     This confirms that the discrepancy has been reviewed and accepted.
+   - :icon:`fa-pencil-square-o` :guilabel:`Open form view`: Opens the related invoice, bill, or
+     record in form view for immediate editing or review.
+   - :icon:`fa-clock-o` :guilabel:`Schedule activity`: Schedules an activity on the related record
+     to follow up or assign it for approval.
+
+#. If the report passes validation, click :guilabel:`Submit` to send it to the GST portal.
+   The status changes to :guilabel:`Sending`.
 
    .. image:: india/gst-gstr-1-sending.png
-      :alt: GSTR-1 in the Sending Status
+      :alt: GSTR-1 status: sending
 
-#. After a few seconds, the status of the **GSTR-1** report changes to :guilabel:`Waiting for
-   Status`. It means that the **GSTR-1** report has been sent to the :guilabel:`GST Portal` and is
-   being verified on the :guilabel:`GST Portal`;
+#. After submission, the status changes to :guilabel:`Waiting for Status`.
+   The progress bar updates, and the :guilabel:`Sent` step turns green.
 
-   .. image:: india/gst-gstr-1-waiting.png
-      :alt: GSTR-1 in the Waiting for Status
+   .. image:: india/gst-gstr-1-waiting-for-status.png
+      :alt: GSTR-1 status: waiting for status
 
-#. Once more, after a few seconds, the status either changes to :guilabel:`Sent` or :guilabel:`Error
-   in Invoice`. The status :guilabel:`Error in Invoice` indicates that some of the invoices are not
-   correctly filled out to be validated by the **GST portal**;
+   .. note::
+      You can also see the json and status in the chatter by clicking on the filing
 
-   - If the state of the **GSTR-1** is :guilabel:`Sent`, it means your **GSTR-1** report is ready to
-     be filed on the **GST portal**.
+#. The final status is either:
+   - :guilabel:`Sent`: the report has been successfully uploaded and accepted by the GST portal.
 
      .. image:: india/gst-gstr-1-sent.png
-        :alt: GSTR-1 Sent
+        :alt: GSTR-1 status: sent
 
-   - If the state of the **GSTR-1** is :guilabel:`Error in Invoice`, invoices can be checked for
-     errors in the chatter. Once issues have been resolved, the user can click
-     :guilabel:`Push to GSTN` to submit the file again on the **GST portal**.
+   - :guilabel:`Error in Invoice`: one or more invoices failed validation on the GST portal.
 
-     .. image:: india/gst-gstr-1-error.png
-        :alt: GSTR-1 Error in Invoice
+     .. image:: india/gst-gstr-1-error-in-invoice.png
+        :alt: Error in invoice after GSTR-1 submission
 
-#. Click :guilabel:`Mark as Filed` after filing the **GSTR-1** report on the **GST portal**. The
-   status of the report changes to :guilabel:`Filed` in **Odoo**.
+     Review the chatter messages for detailed error descriptions. After corrections, click
+     :guilabel:`Push to GSTN` to resubmit.
+
+#. Click the :icon:`fa-ellipsis-v` :guilabel:`(ellipsis)` icon and select :guilabel:`Mark as filed`.
+   The report status updates to :guilabel:`Filed`.
 
    .. image:: india/gst-gstr-1-filed.png
-      :alt: GSTR-1 in the Filed Status
+      :alt: GSTR-1 marked as filed
 
-.. _india/gstr-2B:
+.. _india/gstr-2b:
 
-Receive GSTR-2B
-~~~~~~~~~~~~~~~
+Recieve GSTR-2B
+---------------
 
-Users can retrieve the **GSTR-2B Report** from the **GST portal**. This automatically reconciles
-the **GSTR-2B** report with your Odoo bills;
+Odoo allows users to retrieve and reconcile the **GSTR-2B report** directly from the **GST portal**.
 
-#. Click :guilabel:`Fetch GSTR-2B Summary` to retrieve the **GSTR-2B** summary. After a few seconds,
-   the status of the report changes to :guilabel:`Waiting for Reception`. This means Odoo is trying
-   to receive the **GSTR-2B** report from the **GST portal**;
+To do so, go to :menuselection:`Accounting --> Reporting --> Tax Report`, select :guilabel:`GSTR-2B`
+, and click :guilabel:`Reconcile` to open the GST reconciliation view.
 
-   .. image:: india/gst-gstr-2b-waiting.png
-      :alt: GSTR-2B in Waiting for Reception
+#. Click :guilabel:`Get E-Invoice` to retrieve raw e-invoices uploaded by vendors.
+   .. image:: india/gst-gstr-2b-get-e-invoice.png
+      :alt: GSTR-2B Get E-Invoice
 
-#. Once more, after a few seconds, the status of the **GSTR-2B** changes to the :guilabel:`Being
-   Processed`. It means Odoo is reconciling the **GSTR-2B** report with your Odoo bills;
+#. After fetching the e-invoices, click :guilabel:`Fetch GSTR-2B` to retrieve the GSTR-2B summary
+   from the GSTN portal.
 
-   .. image:: india/gst-gstr-2b-processed.png
-      :alt: GSTR-2B in Waiting for Reception
-
-#. Once it is done, the status of the **GSTR-2B** report changes to either :guilabel:`Matched` or
-   :guilabel:`Partially Matched`;
-
-   - If the status is :guilabel:`Matched`:
-
-      .. image:: india/gst-gstr-2b-matched.png
-         :alt: GSTR-2B Matched
-
-   - If the status is :guilabel:`Partially Matched`, you can review and modify the bills by
-     clicking :guilabel:`View Reconciled Bills`. This will display categorized discrepancies, such
-     as bills missing in Odoo or GSTR-2. After making the necessary corrections, click
-     :guilabel:`re-match` to update the reconciliation and ensure accuracy before finalizing the
+   - The status changes to :guilabel:`Waiting for Reception`, indicating Odoo is retrieving the
      report.
 
-      .. image:: india/gst-gstr-2b-partially.png
-         :alt: GSTR-2B Partially Matched
+     .. image:: india/gst-gstr-2b-waiting-for-reception.png
+        :alt: GSTR-2B status: Waiting for Reception
+
+#. Once the data is received, the status changes to :guilabel:`Being Processed`.
+   This indicates that Odoo is reconciling the GSTR-2B with both e-invoice data and
+   the purchase bills.
+
+   .. image:: india/gst-gstr-2b-being-processed.png
+      :alt: GSTR-2B status: Being Processed
+
+#. After processing, the status updates to one of the following:
+
+   - :guilabel:`Matched`: All invoices in GSTR-2B match with e-invoice data and Odoo bills.
+
+     .. image:: india/gst-gstr-2b-matched.png
+        :alt: GSTR-2B status: Matched
+
+   - :guilabel:`Partially Matched`: Some discrepancies exist between GSTR-2B, e-invoices.
+
+     .. image:: india/gst-gstr-2b-partially-matched.png
+        :alt: GSTR-2B status: Partially Matched
+
+     Click the :icon:`fa-ellipsis-v` :guilabel:`(ellipsis)` icon and select
+     :guilabel:`View Reconciled Bills` to review unmatched entries. Discrepancies may include:
+
+     - Invoices missing in Odoo.
+     - Invoices missing in the GSTR-2B report.
+     - Differences in tax values or invoice references.
+
+     .. image:: india/gst-gstr-2b-view-reconciled-bills.png
+        :alt: GSTR-2B View Reconciled Bills
+
+     After correcting the issues, click :guilabel:`Re-match` from the same menu to re-run
+     the reconciliation process.
+
+#. Once the reconciliation is complete and accurate, click :guilabel:`Mark Complete` to
+   finalize the report. The progress bar updates to the final stage: :guilabel:`Completed`.
 
 .. _india/gstr-3:
 
