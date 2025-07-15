@@ -15,27 +15,32 @@ learning experience enhances their attentiveness and fosters heightened producti
 .. seealso::
    `Odoo Tutorials: eLearning <https://www.odoo.com/slides/elearning-56>`_
 
+.. _elearning/courses:
+
 Courses
 =======
 
-By going to :menuselection:`eLearning --> Courses --> Courses`, you can get an overview of all your
-courses.
+To get an overview of all courses, go to :menuselection:`eLearning --> Courses --> Courses`.
 
-Click on a course title to edit your course on the back end. Click on :guilabel:`View course` to
-access your course on the front end.
+Click on a course card to edit the course on the back end. Click :guilabel:`View course` to access
+the course on the front end.
+
+.. _elearning/course-creation:
 
 Course creation
 ---------------
 
-Click :guilabel:`New` to create a new course. When the page pops up, you can add your
-:guilabel:`Course Title` and one or more :guilabel:`Tags` to describe your course. You can add an
-image to illustrate your course by hovering your mouse on the camera placeholder image and clicking
-on the edit icon. Four tabs allow you to edit your course further:
-:ref:`Content <elearning/content>`, :ref:`Description <elearning/description>`,
-:ref:`Options <elearning/options>`, and :ref:`Karma <elearning/karma>`.
+Click :guilabel:`New` to create a new course. In the form that opens, add a :guilabel:`Course Title`
+and one or more :guilabel:`Tags` to categorize the course and :ref:`allow users
+to filter courses based on their tags <elearning/course-groups>`.
+To add an image to illustrate the course, hover your mouse on the camera placeholder image and
+click on :icon:`fa-pencil` :guilabel:`(Edit)`.
+
+Four tabs allow you to edit your course further: :ref:`Content <elearning/content>`,
+:ref:`Description <elearning/description>`, :ref:`Options <elearning/options>`, and
+:ref:`Karma <elearning/karma>`.
 
 .. image:: elearning/elearning-course-creation.png
-   :align: center
    :alt: Create your elearning course.
 
 .. _elearning/content:
@@ -43,22 +48,21 @@ on the edit icon. Four tabs allow you to edit your course further:
 Content tab
 ~~~~~~~~~~~
 
-This tab allows you to manage your course content. Click on :guilabel:`Add Section` to divide your
-course into different sections. Click on :guilabel:`Add Content` to create
-:ref:`content <elearning/create-content>`. Click on :guilabel:`Add Certification` to assess the
-level of understanding of your attendees, certify their skills, and motivate them. **Certification**
-is part of the :doc:`Surveys <../marketing/surveys/create>` app.
+This tab allows you to manage the course content. Click :guilabel:`Add Section` to divide the
+course into different sections. Click :guilabel:`Add Content` to create :ref:`content items
+<elearning/content-creation>`. Click :guilabel:`Add Certification` to assess the attendees' level of
+understanding, certify their skills, and motivate them. **Certification** is part of the
+:doc:`Surveys <../marketing/surveys/create>` app.
 
 .. _elearning/description:
 
 Description tab
 ~~~~~~~~~~~~~~~
 
-You can add a short description or information related to your course in the :guilabel:`Description`
-tab. It appears under your course title on your website.
+You can add a short description or information related to the course in the :guilabel:`Description`
+tab. It appears under the course title on your website.
 
 .. image:: elearning/course-description.png
-   :align: center
    :alt: Add a description to your course.
 
 .. _elearning/options:
@@ -67,70 +71,122 @@ Options tab
 ~~~~~~~~~~~
 
 In the :guilabel:`Options` tab, different configurations are available:
-:ref:`Course <elearning/course>`,  :ref:`Communication <elearning/communication>`,
-:ref:`Access rights <elearning/access-rights>`, and :ref:`Display <elearning/display>`.
+:ref:`Course <elearning/options-course>`, :ref:`Access rights <elearning/options-access-rights>`,
+:ref:`Communication <elearning/options-communication>` and :ref:`Display
+<elearning/options-display>`.
 
 .. image:: elearning/options-tab.png
-   :align: center
    :alt: Overview of the Options tab
 
-.. _elearning/course:
+.. _elearning/options-course:
 
 Course
 ******
 
-Assign a :guilabel:`Responsible` user for your course. If you have multiple websites, use the
-:guilabel:`Website` field to only display the course on the selected website.
+Assign a :guilabel:`Responsible` user for the course. If you have multiple websites, use the
+:guilabel:`Website` field to display the course only on the selected website.
 
-.. _elearning/communication:
-
-Communication
-*************
-
-- :guilabel:`Allow Reviews`: tick the box to allow attendees to like and comment on your content and
-  to submit reviews on your course;
-- :guilabel:`Forum`: add a dedicated forum to your course (only shown if the **Forum** feature is
-  enabled in the app's settings);
-- :guilabel:`New Content Notification`: select an email template sent to your attendees when you
-  upload new content. Click on the internal link button (:guilabel:`➜`) to have access to the email
-  template editor;
-- :guilabel:`Completion Notification`: select an email template sent to your attendees once they
-  reach the end of your course. Click on the internal link button (:guilabel:`➜`) to access the
-  email template editor;
-
-.. _elearning/access-rights:
+.. _elearning/options-access-rights:
 
 Access rights
 *************
 
-- :guilabel:`Prerequisites`: set one or more courses that users are advised to complete before
-   accessing your course;
-- :guilabel:`Show course to`: define who can access your course and their content between
-  :guilabel:`Everyone`, :guilabel:`Signed In` or :guilabel:`Course Attendees`;
-- :guilabel:`Enroll Policy`: define how people enroll in your course. Select:
+- :guilabel:`Prerequisites`: Set one or more other courses that users are advised to complete before
+  accessing the course.
+- :guilabel:`Prerequisite Of`: If the course has been defined as a prerequisite for one or more
+  courses, this read-only field displays the course name(s).
+- :guilabel:`Show course to`: Define who can see the course on your website. Select one of the
+  following:
 
-   - :guilabel:`Open`: if you want your course to be available to anyone;
-   - :guilabel:`On Invitation`: if only people who received an invitation can enroll to your course.
-     If selected, fill in the :guilabel:`Enroll Message` explaining the course's enrollment process.
-     This message appears on your website under the course title;
-   - :guilabel:`On Payment`: if only people who bought your course can attend it. The
-     :guilabel:`Paid Courses` feature must be enabled to get this option. If you select
-     :guilabel:`On Payment`, you must add a :guilabel:`Product` for your course.
+  - :guilabel:`Everyone`: The course is publicly visible.
+  - :guilabel:`Signed In`: The course is only visible to users who are logged in.
+  - :guilabel:`Course Attendees`: The course is only visible to users who are already enrolled in
+    the course.
+  - :guilabel:`Anyone with the link`: The course can only be accessed via a direct link.
 
-      .. note::
-         Only products set up with :guilabel:`Course` as their :guilabel:`Product Type` are
-         displayed.
+- :guilabel:`Enroll Policy`: Define how people can enroll in the course. The choice of policy also
+  determines which internal eLearning users can add, i.e., manually enroll, attendees via the
+  :guilabel:`Add attendees` button or invite attendees to enroll via the :guilabel:`Invite` button.
 
-.. _elearning/display:
+   .. note::
+      Internal eLearning users have either `Officer` or `Manager` :doc:`access rights
+      </applications/general/users/access_rights>`.
+
+  Select one of the following:
+
+  - :guilabel:`Open`:
+
+    - Anyone who can see the course can enroll.
+    - Any eLearning Officer or eLearning Manager can add or invite internal or external
+      attendees.
+
+  - :guilabel:`On invitation`:
+
+    - Only people who have received an invitation can enroll in the course.
+    - If the course visibility is set to :guilabel:`Everyone`, :guilabel:`Signed In`, or
+      :guilabel:`Anyone with the link`, any non-invited person who logs in can request access to the
+      course via the course page. Enter an :guilabel:`Enroll Message` to explain how to enroll,
+      e.g., "Contact Responsible".
+
+      .. tip::
+         The request creates a to-do assigned to the course's :guilabel:`Responsible` user, allowing
+         them to :guilabel:`Grant Access` or :guilabel:`Refuse Access`. The to-do is visible to the
+         :guilabel:`Responsible` user and any eLearning Manager in the course's chatter, and the
+         :guilabel:`Responsible` user is notified via email. Either the :guilabel:`Responsible` user
+         or an eLearning Manager can grant access, in which case the requestor is automatically
+         enrolled in the course, or refuse access.
+
+    - Only the :guilabel:`Responsible` user for the course or an eLearning Manager can add or invite
+      internal or external attendees.
+
+  - :guilabel:`On payment`:
+
+    - This option is only shown if the :guilabel:`Paid courses` feature is enabled in the
+      :ref:`eLearning settings <elearning/settings>`.
+    - Anyone who can see the course can enroll in the course upon payment.
+    - Any eLearning Officer can *invite* internal or external attendees to enroll in the course.
+    - Only the :guilabel:`Responsible` user for the course or an eLearning Manager can *add*
+      attendees. Payment is not required when an attendee is added in this way.
+    - To set a course as :guilabel:`On payment`, a :guilabel:`Product` must be selected; only
+      products set up with :guilabel:`Course` as their :guilabel:`Product Type` are available for
+      selection.
+
+.. tip::
+   To add or invite an attendee, the attendee must be an existing contact or created as a new
+   contact. A person who creates a customer account on your website is automatically a contact.
+
+.. _elearning/options-communication:
+
+Communication
+*************
+
+- :guilabel:`Allow Reviews`: Enable this option to allow attendees to like, comment on, and submit
+  reviews for the course content.
+- :guilabel:`Forum`: Add a dedicated forum to the course. This option is only shown if the
+  :guilabel:`Forum` feature is enabled in the :ref:`eLearning settings <elearning/settings>`.
+- :guilabel:`New Content Notification`: Select an email template to send emails to attendees when
+  you upload new content items. Click on :icon:`oi-arrow-right` :guilabel:`Internal link` to access
+  the email template editor.
+- :guilabel:`Completion Notification`: Select an email template to send emails to attendees once
+  they reach the end of the course. Click on :icon:`oi-arrow-right` :guilabel:`Internal link` to
+  access the email template editor.
+
+.. note::
+   If the :guilabel:`Mailing` feature is enabled in the :ref:`eLearning settings
+   <elearning/settings>`, it is possible to send mass mailings to people enrolled in a course via a
+   :guilabel:`Contact Attendees` button at the top left of the course form. The button is only
+   visible to eLearning Officers who also have `User` :doc:`access rights
+   </applications/general/users/access_rights>` for Email Marketing and to eLearning Managers.
+
+.. _elearning/options-display:
 
 Display
 *******
 
-- :guilabel:`Training`: the course content appears as a training program, and the courses must be
+- :guilabel:`Training`: The course content appears as a training program, and the courses must be
   taken in the proposed order.
-- :guilabel:`Documentation`: the content is available in any order. If you choose this option, you
-  can choose which page should be promoted on the course homepage by using the
-  :guilabel:`Featured Content` field.
+- :guilabel:`Documentation`: The content is available in any order. Use the :guilabel:`Featured
+  Content` field to define which content items are promoted on the course homepage.
 
 .. _elearning/karma:
 
@@ -139,118 +195,192 @@ Karma tab
 
 This tab is about gamification to make eLearning fun and interactive.
 
-In the :guilabel:`Rewards` section, choose how many karma points you want to grant your students
+In the :guilabel:`Rewards` section, choose how many karma points you want to grant attendees
 when they :guilabel:`Review` or :guilabel:`Finish` a course.
 
-In the :guilabel:`Access Rights` section, define the karma needed to :guilabel:`Add Review`,
+In the :guilabel:`Access Rights` section, define the karma points needed to :guilabel:`Add Review`,
 :guilabel:`Add Comment`, or :guilabel:`Vote` on the course.
-
-.. note::
-   From your course, click the :guilabel:`Contact Attendees` button to reach people who are
-   enrolled in the course.
 
 .. _elearning/course-groups:
 
 Course groups
 -------------
 
-Use the **Course Groups** to inform users and allow them to filter the courses from the
-:guilabel:`All Courses` dashboard.
+**Course Groups** allow users to filter the :guilabel:`All Courses` dashboard on your website and
+find the course that meets their interests, needs, level, etc.
 
-You can manage them by going to :menuselection:`Configuration -->
-Course Groups`. Click :guilabel:`New` to create a new course group. Add the :guilabel:`Course Group
-Name`, tick the :guilabel:`Menu Entry` box to allow users to search by course group on the website,
-and add tags in the :guilabel:`Tag Name` column. For each tag, you can select a corresponding color.
+To manage them, go to :menuselection:`eLearning --> Configuration --> Course Groups`. Click
+:guilabel:`New` to create a new course group. Add the :guilabel:`Course Group Name`, enable
+:guilabel:`Menu Entry` to allow users to search by course group on the website, and add tags in
+the :guilabel:`Tag Name` column. For each tag, you can select a corresponding color.
+
+.. _elearning/settings:
 
 Settings
 --------
 
-You can enable different features to customize your courses by going to :menuselection:`eLearning
---> Configuration --> Settings`:
+The following options are available in the eLearning settings. Go to :menuselection:`eLearning -->
+Configuration --> Settings`, then enable the desired feature:
 
-- **Certifications**: to evaluate the knowledge of your attendees and certify their skills;
-- **Paid courses**: to sell access to your courses on your website and track revenues;
-- **Mailing**: to update all your attendees at once through mass mailings;
-- **Forum**: to create a community and let attendees answer each other's questions.
+- :guilabel:`Certifications`: Assess attendees' knowledge and provide official certification of
+  their skills.
+- :guilabel:`Paid Courses`: Sell course access directly through your website and track revenue.
 
-.. _elearning/create-content:
+  .. note::
+     Enabling :guilabel:`Paid Courses` automatically installs the :guilabel:`eCommerce` module,
+     which may impact your `pricing plan <https://www.odoo.com/pricing>`_.
+
+  .. seealso::
+     :doc:`eCommerce documentation </applications/websites/ecommerce>`
+
+- :guilabel:`Mailing`: Send mass mailings to keep all attendees informed and up to date.
+- :guilabel:`Forum`: Build a community space where attendees can ask questions and help each other.
+
+.. _elearning/content-creation:
 
 Content
 =======
 
-Manage your content by going to :menuselection:`eLearning --> Courses --> Contents`. Click
-:guilabel:`New` to create content. Add your :guilabel:`Content Title`, and if you want
-:ref:`Tags <elearning/tags>`, then fill in the related information among the different tabs.
+To manage course content, go to :menuselection:`eLearning --> Courses --> Contents`. Click
+:guilabel:`New` to create a content item. Add the :guilabel:`Content Title` and any desired
+:ref:`Tags <elearning/content-tags>`, then fill in the required information in the different tabs.
 
 .. image:: elearning/elearning-content-tab.png
-   :align: center
    :alt: Create your content.
+
+.. tip::
+   You can also create new content from within a course. Go to :menuselection:`eLearning --> Courses
+   --> Courses`, click the relevant course card, then click :guilabel:`Add content` at the bottom
+   of the :guilabel:`Content` tab.
+
+.. _elearning/content-document:
 
 Document tab
 ------------
 
-- :guilabel:`Course`: select the course your content belongs to;
-- :guilabel:`Content Type`: select the type of your content;
-- :guilabel:`Responsible`: add a responsible person for your content;
-- :guilabel:`Duration`: indicate the time required to complete the course;
-- :guilabel:`Allow Download`: allow users to download the content of the slide. This option is only
-  visible when the content is a document;
-- :guilabel:`Allow Preview`: the course is accessible by anyone.
-- :guilabel:`# of Public Views`: displays the number of views from non-enrolled participants;
+For each content type, provide the following information:
+
+- :guilabel:`Course`: Select the course to which the content item belongs.
+- :guilabel:`Content Type`: Select the relevant :ref:`content type <elearning/content-type>` and
+  provide the required information.
+- :guilabel:`Responsible`: Select the user responsible for the content item. By default, this is the
+  user who creates the course, but another user can be selected.
+- :guilabel:`Duration`: Enter the time required to complete the lesson.
+- :guilabel:`Allow Preview`: Enable this if the content should be accessible to anyone.
+
+.. note::
+   If the :ref:`Content Type <elearning/content-type>` is :guilabel:`Document`, enabling
+   :guilabel:`Allow Download` allows users to download the content.
+
+Two read-only fields provide data about how often the content item is viewed:
+
+- :guilabel:`# of Public Views`: displays the number of views from non-enrolled participants.
 - :guilabel:`# Total Views`: displays the total number of views (non-enrolled and enrolled
   participants).
+
+.. image:: elearning/elearning-document-tab.png
+   :alt: Provide information about the content.
+
+.. _elearning/content-type:
+
+Content types
+~~~~~~~~~~~~~
+
+You can add the following content types:
+
+- :guilabel:`Image`: To upload an image, select :guilabel:`Upload from Device`, click
+  :guilabel:`Upload your file`, then select the relevant file. Supported formats include JPG, JPEG,
+  PNG, SVG, GIF, and WEBP. The maximum file size is 25MB.
+
+  Alternatively, to add an image saved on Google Drive, select :guilabel:`Retrieve from Google
+  Drive`, then add the Google Drive link to the image.
+
+- :guilabel:`Article`: Articles are website pages that are customized using the website
+  builder on your website's front end.
+
+  With the :guilabel:`Course` selected, click the :guilabel:`Go to Website` smart button, then, at
+  the top-right of the screen, click :icon:`fa-pencil` :guilabel:`(Edit)`. Write the article's
+  content and :doc:`customize the page using the website builder </applications/websites/website/web_design>`.
+
+- :guilabel:`Document`: To upload a document, select :guilabel:`Upload from Device`, click
+  :guilabel:`Upload your file`, then select the relevant file. Only PDF documents can be uploaded.
+
+  Alternatively, to add a Google Slides presentation, Google Doc document, or Google Sheets
+  spreadsheet, click :guilabel:`Retrieve from Google Drive` and add the Google Drive link to the
+  file.
+
+- :guilabel:`Video`: Add the YouTube, Google Drive, or Vimeo link to the video.
+- :guilabel:`Quiz`: Open the :ref:`Quiz tab <elearning/content-quiz>` to create a quiz.
+
+.. _elearning/content-description:
 
 Description tab
 ---------------
 
-You can add a description of your content that appears front end in the :guilabel:`About` section of
-your course content.
+Add a description for the content. This text is displayed in the :guilabel:`About` section of the
+content item on your website.
+
+.. _elearning/content-additional-resources:
 
 Additional Resources tab
 ------------------------
 
 Click :guilabel:`Add a line` to add a link or a file that supports your participants' learning.
-It appears in the course content on your website.
+The resource appears in the course content on your website.
 
 .. image:: elearning/additional-content.png
-  :align: center
   :alt: Additional ressources
 
-.. _elearning/quiz:
+.. _elearning/content-quiz:
 
 Quiz tab
 --------
 
-From this tab you can create a quiz to assess your students at the end of the course.
+From this tab, you can create a quiz to assess your students at the end of the course.
 
-The :guilabel:`Points Rewards` section lets you give a specific number of karma points depending on
-how many tries they need to correctly answer the question. Then, create your questions and the
-possible answers by clicking on :guilabel:`Add a line`. A new window pops up, add the question by
-filling in the :guilabel:`Question Name` and add multiple answers by clicking on :guilabel:`Add a
-line`. Tick the :guilabel:`Is correct answer` to mark one or more answers as correct. You can also
-fill in the :guilabel:`Comment` field to display additional information when the answer is chosen by
-the participant.
+The :guilabel:`Points Rewards` section allows you to assign karma points based on how many attempts
+are needed to answer correctly. To create a question, click :guilabel:`Add a line`, enter the
+:guilabel:`Question Name`, and add possible answers. Mark the correct answer(s) by selecting
+:guilabel:`Is correct answer`. You can also use the :guilabel:`Comment` field to provide additional
+information when an answer is selected.
 
-.. _elearning/tags:
+.. _elearning/content-tags:
 
 Content Tags
 ------------
 
-The **Content Tags** help users to classify the content from the :guilabel:`Contents` dashboard.
+**Content Tags** are visible on the :guilabel:`Contents` dashboard of a course on your website, and
+can help users identify the kind of content a particular lesson contains, e.g., theory, or exercises.
 
-You can manage them by going to :menuselection:`eLearning --> Configuration --> Content Tags`. Click
+To manage content tags, go to :menuselection:`eLearning --> Configuration --> Content Tags`. Click
 :guilabel:`New` to create a new tag.
 
-Publish your content
-====================
+.. _elearning/publish-content:
 
-Everything created on the back end needs to be published from the front end. Unpublished content is
-always visible from your website but still needs to be published to be available to your audience.
+Publish courses and content
+===========================
 
-You must be on your website's front end to publish your content. To do so, click on the
-:guilabel:`Go To Website` smart button, and tick the :guilabel:`Publish` option available in the
-right-hand corner.
+Courses and content items must be published from the front end to be available to your audience.
+To access the front end, click the :guilabel:`Go to Website` smart button at the top of the course
+form or an individual content form.
+
+A course and its content items are published separately:
+
+- To publish a course, access the main course page, then toggle the switch in the
+  upper-right corner from :guilabel:`Unpublished` to :guilabel:`Published`.
+- To publish individual content items, click on an item to open it, then toggle the switch
+  from :guilabel:`Unpublished` to :guilabel:`Published`.
 
 .. image:: elearning/elearning-publish-button.png
-  :align: center
   :alt: Publish your content.
+
+.. tip::
+   When publishing a new course, publish the individual content items before publishing the course
+   itself. Published content is only available to your audience once the course it is part of is
+   published.
+
+To unpublish a course or an individual content item, open the course or item, then toggle the switch
+from :guilabel:`Published` to :guilabel:`Unpublished`.
+
+.. note::
+   Unpublishing a course renders the course *and* its content unavailable to your audience.
