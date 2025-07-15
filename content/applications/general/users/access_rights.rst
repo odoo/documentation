@@ -28,6 +28,8 @@ should not have access to.
    Once complete, click :guilabel:`Save` to save the changes, and implement the user as an
    administrator.
 
+.. _access-rights/user-permissions:
+
 Manage user permissions
 =======================
 
@@ -51,6 +53,8 @@ The :guilabel:`Administration` field in the :guilabel:`Access Rights` tab has th
 
 .. image:: access_rights/user-permissions-dropdown-menu.png
    :alt: The Sales apps drop-down menu to set the user's level of permissions.
+
+.. _access-rights/specific-user-permissions:
 
 Manage specific permissions
 ---------------------------
