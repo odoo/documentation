@@ -54,7 +54,7 @@ having moderator rights. They are also used to set user :ref:`ranks <forum/ranks
 .. important::
    - A user's karma points are shared across all forums, courses, etc., of a single Odoo website.
    - eLearning users can earn karma points through different :ref:`course interactions
-     <elearning/karma>` and by :ref:`completing quizzes <elearning/quiz>`.
+     <elearning/karma>` and by :ref:`completing quizzes <elearning/content-quiz>`.
 
 .. _forum/karma-gains:
 
