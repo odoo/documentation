@@ -62,6 +62,50 @@ Additionally, you can mark the project as :guilabel:`Favorite`, allowing you to 
 Further settings are available under the :guilabel:`Settings` tab. Most of them are *only* available
 depending on the activated apps.
 
+Visibility and collaboration
+----------------------------
+
+Odoo allows you to set visibility settings for each project, enabling you to make your project
+available to everyone in your organization or restrict access to certain internal or external users.
+
+To do so, go to the project's :guilabel:`Settings` tab and choose the desired :guilabel:`Visibility`
+option:
+
+- :guilabel:`Invited internal users (private)`: Only users following the project and users with the
+  Project Administrator :doc:`access right </applications/general/users/access_rights>` can
+  access the project and its tasks.
+- :guilabel:`All internal users`: All internal users can access the project and all of its tasks.
+- :guilabel:`Invited portal users and all internal users (public)`: All internal users can access
+  the project and all of its tasks. When following a project, :doc:`portal users
+  </applications/general/users/portal>` only have access to the specific tasks they are following.
+  This option is selected by default.
+
+Inviting external users
+-----------------------
+
+To invite external users, make sure that :guilabel:`Invited portal users and all internal users
+(public)` is selected, then click :guilabel:`Share Project` at the top of the project’s settings.
+The following options are available:
+
+- Copy and share the :guilabel:`Public Link` displayed at the top of the pop-up window. Anyone with
+  this link can access the project in read mode.
+- Or click :guilabel:`Add a line`, select a :guilabel:`Collaborator`, choose the
+  :guilabel:`Access Mode`, and check the box to send an invitation to their email address.
+
+  There are three types of :guilabel:`Access Mode` for collaborators:
+
+  - :guilabel:`Read`: Collaborators can view tasks but cannot edit them.
+  - :guilabel:`Edit with limited access`: Collaborators can view and edit the tasks they follow.
+  - :guilabel:`Edit`: Collaborators can view and edit all tasks.
+
+To revoke an invited collaborator's access, click :guilabel:`Share Project` at the top of the
+project’s settings, then click the :icon:`fa-trash-o` :guilabel:`(trash)` icon.
+
+.. note::
+   Internal users without access to the project can still access a task if the URL has been shared
+   with them. For projects set as :guilabel:`Invited internal users (private)`, they must also
+   be a follower of the task.
+
 Scheduling activities
 =====================
 
