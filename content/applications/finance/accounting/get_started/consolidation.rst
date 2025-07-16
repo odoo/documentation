@@ -8,15 +8,16 @@ own books, into a unified view, providing a "fair image" of the entire group's f
 It helps create a clear, comprehensive view of the group's financial performance by combining data
 from multiple companies.
 
-.. _consolidation_in_odoo:
-
-How it Works in Odoo
-====================
+.. note::
+   Consolidating companies involves **legally separate entities**, whereas :ref:`branches
+   <general/branches>` are **subdivisions** of a single legal entity which often share the
+   head office's resources (journals, taxes, accounts, fiscal positions) and are not consolidated in
+   the same way.
 
 .. _consolidation_tools:
 
-Consolidation Tools
--------------------
+Consolidation tools
+===================
 
 **Several tools** combined together will contribute to the construction of the financial
 consolidation:
@@ -34,6 +35,36 @@ consolidation:
 
    .. note:: :ref:`Import mapping <consolidation_import_account_mapping>` or merge existing
       accounts using the :ref:`merging tool <consolidation_merge_tool>` can simplify the process.
+
+   When multiple accounts from one company are mapped to a single account in another, it is then
+   possible to group the multiple accounts into a single line in the other company's reporting by
+   :ref:`grouping by <customize-reports/lines-group-by>` the *account code* (`account_code`) rather
+   than the *account ID* (`account_id`).
+
+   .. note::
+      Some reports, such as the :ref:`profit and loss <accounting/reporting/profit-and-loss>`, split
+      the lines into different sections by account type. When these reports are grouped by account
+      code, the section splits are maintained, but within each section, line grouping by account
+      code is respected.
+
+   .. example::
+      Belgian Company is a parent company with a subsidiary, American Company. American Company has
+      five income accounts:
+
+      - 400000 Product Sales - Domestic
+      - 400100 Product Sales - International
+      - 410000 Service Revenue - Consulting
+      - 420000 Subscription Revenue
+      - 430000 Freight & Handling Revenue
+
+      All five of the US income accounts correspond to one single income account (700000 Income) in
+      the Belgian Company.
+
+      For the Belgian Company's profit and loss report to show one line for all of the American
+      Company's combined income accounts related to the Belgian Company's single income account, all
+      five income accounts from the American Company must be mapped to The Belgian Company's 700000
+      Income account, and the report's lines must be :ref:`grouped by
+      <customize-reports/lines-group-by>` the account code.
 
    .. _consolidation_multi_ledgers:
 
@@ -101,18 +132,9 @@ consolidation:
    .. important::
       The rates used are those of the company currently selected.
 
-.. _consolidation_companies_vs_branches:
-
-Consolidating Companies vs. Branch Management
----------------------------------------------
-
-Consolidating companies involves **legally separate entities** whereas branches are
-**subdivisions** of a single legal entity which often share the head office's resources (journals,
-taxes, accounts, fiscal positions) and are not consolidated in the same way.
-
 .. _consolidation_merge_tool:
 
-Account Merging
+Account merging
 ===============
 
 Accounts can be merged to reduce the number of accounts and standardize them across companies. This
@@ -136,7 +158,7 @@ companies, just as if the account had been directly created to be shared.
 
 .. _consolidation_unmerge_tool:
 
-Account Unmerging
+Account unmerging
 =================
 
 Accounts can also be unmerged if needed.
@@ -162,7 +184,7 @@ shared account.
 
 .. _consolidation_import_account_mapping:
 
-Import a Mapping
+Import a mapping
 ================
 
 To **import an account mapping**, select all the related companies in the company selector at the
