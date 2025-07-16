@@ -71,6 +71,8 @@ Configure the :ref:`default layout <studio/pdf-reports/default-layout>` for all 
 
 .. _general/companies/branches:
 
+.. _general/branches:
+
 Branches
 ========
 
