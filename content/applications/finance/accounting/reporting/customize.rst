@@ -3,20 +3,21 @@ Custom reports
 ==============
 
 Odoo comes with a powerful and easy-to-use reporting framework. The engine allows you to create new
-reports, such as **tax reports**, or **balance sheets** and **income statements** with **specific
-groupings** and **layouts**.
+reports, such as tax reports, balance sheets, and income statements with specific groupings and
+layouts.
 
 .. important::
-   Activate the :ref:`developer mode <developer-mode>` to access the accounting report creation
-   interface.
+   Activate the :ref:`developer mode <developer-mode>` to access the accounting report
+   configuration.
 
-To create a new report, go to :menuselection:`Accounting --> Configuration --> Management:
-Accounting Reports`. From here, you can either create a :ref:`root report <customize-reports/root>`
-or a :ref:`variant <customize-reports/variants>`.
+To create a new report, go to :menuselection:`Accounting --> Configuration --> Accounting Reports`.
+From here, create either a :ref:`root report <customize-reports/root>` or a :ref:`variant
+<customize-reports/variants>`.
 
-.. image:: customize/engine-accounting-reports.png
-   :align: center
-   :alt: Accounting reports engine.
+.. tip::
+   - Consider saving modified reports as report variants to keep their root reports intact.
+   - To access an existing report's management interface from the report itself, click on the
+     :icon:`fa-cogs` :guilabel:`(gears)` icon.
 
 .. _customize-reports/root:
 
@@ -31,17 +32,13 @@ report itself.
    A tax report for Belgium and the US would both use the same generic version as a base and adapt
    it for their domestic regulations.
 
-When creating a new root report, you need to create a **menu item** for it. To do so, open the
-report and then, on that same report, click on :menuselection:`Action --> Create Menu Item`. Refresh
-the page; the report is now available under :menuselection:`Accounting --> Reporting`.
+Creating a menu item is required to access a new root report. To do so, open the report's
+configuration, click :guilabel:`Action`, :guilabel:`Create Menu Item`, and refresh the page. The
+report is now available under :menuselection:`Accounting --> Reporting`.
 
 .. note::
    Cases that require creating a new root report are rare, such as when a country's tax authorities
    require a new and specific type of report.
-
-.. image:: customize/engine-create-menu-item.png
-   :align: center
-   :alt: Create Menu Item button.
 
 .. _customize-reports/variants:
 
@@ -52,50 +49,49 @@ Variants are country-specific versions of root reports and, therefore, always re
 report. To create a variant, select a generic (root) report in the :guilabel:`Root Report` field
 when creating a new report.
 
-When a root report is opened from one of the accounting app's main menus, all its variants are
-displayed in the variant selector in the top right corner of the view.
+When a root report is opened from the Accounting app's :guilabel:`Reporting` menu, all of its
+variants are displayed in the report variant selector in the top right corner of the view.
 
 .. example::
-   In the following image, :guilabel:`VAT Report (BE)` is the variant of the root :guilabel:`Generic
-   Tax report`.
+   :guilabel:`VAT Report (BE)` is a variant of the root :guilabel:`Generic Tax report`.
 
    .. image:: customize/engine-variant.png
-      :align: center
       :alt: Report variant selection.
+
+.. _accounting/customize/lines:
 
 Lines
 =====
 
-After having created a report (either root or variant), you need to fill it with lines. You can
-either create a new one by clicking on :guilabel:`Add a line`, or modify an existing line by
-clicking on it. All lines *require* a :guilabel:`Name`, and can have an optional additional
-:guilabel:`Code` (of your choice) if you wish to use their value in formulas.
+After creating a report (either root or variant), the next step is to fill it with lines. To create
+a new line, click on :guilabel:`Add a line`. To modify an existing line, click on the line itself
+and edit the popup. All lines require a :guilabel:`Name` and can have an optional :guilabel:`Code`
+which allows using the line's value in formulas.
 
 .. image:: customize/engine-lines-options.png
-   :align: center
    :alt: Engine lines options.
 
 Expressions
 ===========
 
 Each line can contain one or multiple **expressions**. Expressions can be seen as **sub-variables**
-needed by a report line. To create an expression, click on :guilabel:`Add a line` *within* a line
-report.
+needed by a report line. To create an expression, click on :guilabel:`Add a line` *within* a line's
+popup.
 
-When creating an expression, you must attribute a :guilabel:`label` used to refer to that
-expression. Therefore, it has to be **unique** among the expressions of each line. Both a
-:guilabel:`Computation Engine` and a :guilabel:`Formula` must also be indicated. The **engine**
-defines how your **formula(s)** and **subformula(s)** are interpreted. It is possible to mix
-expressions using different computation engines under the same line if you need to.
+When creating an expression, you must enter a :guilabel:`Label` used to refer to that expression.
+The label must be unique among the expressions of each report line. Both the :guilabel:`Computation
+Engine` and the :guilabel:`Formula` fields must also be completed. The **computation engine**
+defines how the **formula(s)** and **subformula(s)** are interpreted. It is possible to mix
+expressions using different computation engines under the same line if needed.
 
 .. note::
    Depending on the engine, :guilabel:`subformulas` may also be required.
 
-'Odoo Domain' engine
---------------------
+Odoo Domain computation engine
+------------------------------
 
-With this engine, a formula is interpreted as an :ref:`Odoo domain <reference/orm/domains>`
-targeting `account.move.line` objects.
+When using the :guilabel:`Odoo Domain` computation engine, a formula is interpreted as an :ref:`Odoo
+domain <reference/orm/domains>` targeting `account.move.line` objects.
 
 The subformula allows you to define how the move lines matching the domain are used to compute the
 value of the expression:
@@ -112,39 +108,39 @@ value of the expression:
    Otherwise, it is `0`.
 
 `count_rows`
-   The result is the number of sub-lines of this expression. If the parent line has a group-by
-   value, this will correspond to the number of distinct grouping keys in the matched move lines.
-   Otherwise, it will be the number of matched move lines.
+   The result is the number of sub-lines of this expression. If the parent line has a :ref:`group-by
+   <customize-reports/lines-group-by>` value, this will correspond to the number of distinct
+   grouping keys in the matched move lines. Otherwise, it will be the number of matched move lines.
 
-You can also put a `-` sign at the beginning of the subformula to **reverse** the sign of the
-result.
+.. tip::
+   To **reverse** the sign of the result, put a `-` sign at the beginning of the subformula.
 
 .. image:: customize/engine-expressions.png
-   :align: center
    :alt: Expression line within a line report
 
-'Tax Tags' engine
------------------
+Tax Tags computation engine
+---------------------------
 
-A formula made for this engine consists of a name used to match tax tags. If such tags do not exist
-when creating the expression, they will be created.
+When using the :guilabel:`Tax Tags` computation engine, the contents of the :guilabel:`Formula`
+field are matched to tax tags. If such tags do not exist when creating the expression, they will be
+created.
 
 When evaluating the expression, the expression computation can roughly be expressed as: **(amount of
 the move lines with** `+` **tag)** `-` **(amount of the move lines with** `-` **tag)**.
 
 .. example::
-   If the formula is `tag_name`, the engine matches tax tags `+tag_name` and `-tag_name`, creating
-   them if necessary. To exemplify further: two tags are matched by the formula. If the formula
-   is `A`, it will require (and create, if needed) tags `+A` and `-A`.
+   If the :guilabel:`Formula` is set to `tag_name`, the engine matches tax tags `+tag_name` and
+   `-tag_name`, creating them if necessary. To exemplify further: two tags are matched by the
+   formula. If the formula is `A`, it will require (and create, if needed) tags `+A` and `-A`.
 
-'Aggregate Other Formulas' engine
----------------------------------
+Aggregate Other Formulas computation engine
+-------------------------------------------
 
-Use this engine when you need to perform arithmetic operations on the amounts obtained for other
-expressions. Formulas here are composed of references to expressions separated by one of the four
-basic arithmetic operators (addition `+`, subtraction `-`, division `/`, and multiplication `*`). To
-refer to an expression, type in its parent line's **code** followed by a period `.` and the
-expression's **label** (ex. **code.label**).
+The :guilabel:`Aggregate Other Formulas` computation engine performs arithmetic operations on the
+amounts obtained from other expressions. Formulas here are composed of references to expressions
+separated by one of the four basic arithmetic operators (addition `+`, subtraction `-`, division
+`/`, and multiplication `*`). To refer to an expression, type in its parent line's **code** followed
+by a period `.` and the expression's **label** (ex. **code.label**).
 
 **Subformulas** can be one of the following:
 
@@ -175,11 +171,11 @@ that currency.
 
 You can also use the `cross_report` subformula to match an expression found in another report.
 
-'Prefix of Account Codes' engine
---------------------------------
+Prefix of Account Codes computation engine
+------------------------------------------
 
-This engine is used to match amounts made on accounts using the prefixes of these accounts' codes as
-variables in an arithmetic expression.
+The :guilabel:`Prefix of Account Codes` computation engine is used to match amounts made on accounts
+using the prefixes of these accounts' codes as variables in an arithmetic expression.
 
 .. example::
    | `21`
@@ -226,9 +222,9 @@ accounts, where the same prefix might be used for different purposes across comp
 
 .. example::
    | `tag(25)`
-   | This formula matches accounts whose associated tags contain the one with id *25*.
+   | This formula matches accounts whose associated tags contain the one with ID *25*.
 
-If the tag you reference is defined in a data file, an xmlid can be used instead of the id.
+If the tag you reference is defined in a data file, an XMLID can be used instead of the ID.
 
 .. example::
    | `tag(my_module.my_tag)`
@@ -255,14 +251,13 @@ Prefix exclusion also works with tags.
    | This formula matches accounts with the tag *my_module.my_tag* and a code not starting with
      `10`.
 
+External Value computation engine
+---------------------------------
 
-'External Value' engine
------------------------
-
-The 'external value' engine is used to refer to **manual** and **carryover values**. Those values
-are not stored using `account.move.line`, but with `account.report.external.value`. Each of these
-objects directly points to the expression it impacts, so very little needs to be done about their
-selection here.
+The :guilabel:`External Value` computation engine is used to refer to **manual** and **carryover
+values**. Those values are not stored using `account.move.line`, but with
+`account.report.external.value`. Each of these objects directly points to the expression it impacts,
+so very little needs to be done about their selection here.
 
 **Formulas** can be one of the following:
 
@@ -288,15 +283,16 @@ Both subformulas can be mixed by separating them with a `;`.
 
 .. example::
    | `editable;rounding=2`
-   | is a correct subformula mixing both behaviors.
+   | This subformula shows the correct way to mix both behaviors.
 
-'Custom Python Function' engine
--------------------------------
+Custom Python Function computation engine
+-----------------------------------------
 
-This engine is a means for developers to introduce custom computation of expressions on a
-case-by-case basis. The formula is the name of a **python function** to call, and the subformula is
-a **key** to fetch in the **dictionary** returned by this function. Use it only if you are making a
-custom module of your own.
+The :guilabel:`Custom Python Function` computation engine is a means for developers to introduce
+custom computation of expressions on a case-by-case basis. The :guilabel:`Formula` is the name of a
+**python function** to call, and the :guilabel:`Subformula` is a **key** to fetch in the
+**dictionary** returned by this function. Use this computation engine only if making a custom
+module.
 
 Columns
 =======
@@ -308,8 +304,56 @@ field, then nothing is displayed for it in this column. If multiple columns are 
 use different **expression** labels.
 
 .. image:: customize/engine-columns.png
-   :align: center
    :alt: Columns of report.
 
 When using the **period comparison** feature found under the :guilabel:`Options` tab of an
 accounting report, all columns are repeated in and for each period.
+
+.. _customize-reports/lines-group-by:
+
+Line grouping
+=============
+
+Non-standard grouping is possible by adding or using existing fields on the *Journal Item* model,
+provided that the fields are related and non-stored.
+
+.. note::
+   Grouping lines requires the report to have explicit report lines that can be edited. The deferred
+   reports, for example, do not support grouping lines as they use dynamic lines that are generated.
+
+Create a new field on journal item
+----------------------------------
+
+To create a non-stored, related field in the *Journal Item* model, first go to
+:menuselection:`Accounting --> Journal Items`, and click the :icon:`fa-bug` :guilabel:`(bug)` icon,
+then click :guilabel:`Fields`. Click :guilabel:`New` to create a new field, and complete the
+following fields:
+
+- :guilabel:`Field Name`: a technical name for the field
+- :guilabel:`Field Label`: the label to be displayed for the field
+- :guilabel:`Field Type`: the type of field that this related field should point to
+- :guilabel:`Stored`: Leave this field unchecked as only non-stored fields can be used to group
+  lines.
+- :guilabel:`Related Model`: If the field type is :guilabel:`one2many`, :guilabel:`many2many`, or
+  :guilabel:`many2one`, select the model of the original field to group by.
+- :guilabel:`Related Field Definition`: the technical path to the field you want to group by
+
+  .. example::
+     To group by the sales team of the commercial partner, set the related field definition to
+     `move_id.team_id`.
+
+Group lines
+-----------
+
+To group lines, go to the :ref:`Lines <accounting/customize/lines>` tab of the desired report, click
+on the line you want to group, and edit the :guilabel:`Group by` field. Enter the technical name
+(:guilabel:`Field Name`) of the field to use as the grouping key.
+
+.. tip::
+   To find a list of all the model's fields and their technical names, go to
+   :menuselection:`Accounting --> Journal Items`, and click the :icon:`fa-bug` :guilabel:`(bug)`
+   icon, then click :guilabel:`Fields`. The technical name of each field is listed in the
+   :guilabel:`Field Name` column.
+
+.. seealso::
+   :ref:`Consolidation via grouping by account code <consolidation_account_mapping>`
