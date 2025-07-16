@@ -13019,6 +13019,9 @@ msgid ""
 "at which point it can be :doc:`reconciled <bank/reconciliation>` with the "
 "registered payment."
 msgstr ""
+"Odoo에서 고객 결제를 수표로 등록하더라도 자금이 즉시 이동되는 것은 아닙니다. 실제 결제 처리가 되려면 수표가 입금되어야 합니다. "
+"수표가 은행에 입금되면 :doc:` 은행 거래 <bank/transactions>` 로 표시되며, 이후 등록된 결제 내역과 "
+":doc:`조정 <bank/reconciliation>` 과정을 거치게 됩니다."
 
 #: ../../content/applications/finance/accounting/payments.rst:87
 msgid ""
@@ -21764,6 +21767,9 @@ msgid ""
 "Bill` to return to the vendor bill; the selected catalog items will appear "
 "in the vendor bill lines."
 msgstr ""
+"품목 카탈로그를 통해 모든 항목을 체계적으로 한눈에 확인하려면 :doc:`카탈로그` 를 클릭합니다. 품목과 수량을 선택한 후 "
+":guilabel:`청구서로 돌아가기` 를 클릭하면 공급업체 청구서로 돌아갑니다. 선택한 카탈로그 항목이 공급업체 청구서 내역에 "
+"표시됩니다."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:108
 msgid ""
@@ -21772,6 +21778,9 @@ msgid ""
 "sends partial bills or requests a deposit. In this case, multiple bills may "
 "have the same :guilabel:`Bill Reference`."
 msgstr ""
+"하나의 구매발주서에 대해 여러 건의 청구서가 발행되는 경우가 생길 수 있는데, 이는 이월 주문 방식을 채택 중인 공급업체에서 품목 출고 "
+"시에 청구서를 발행하는 경우이거나, 공급업체에서 부분적으로 청구서를 발행하는 경우, 혹은 보증금을 요청하는 경우 등이 이에 해당합니다.이"
+" 경우, 청구서는 여러 건이더라도 :guilabel:`청구서 참조` 항목은 모두 동일하게 됩니다."
 
 #: ../../content/applications/finance/accounting/vendor_bills.rst:115
 msgid "Bill confirmation"
@@ -30884,6 +30893,9 @@ msgid ""
 "retrieve the correct tax to be used and process the e-invoice afterward with"
 " the government."
 msgstr ""
+"Avalara AvaTax는 세금 계산 및 전자 청구서 발행용 서비스 업체로 Odoo와 통합하여 자동으로 세금을 계산할 수 있습니다. "
+"회사, 연락처(고객), 제품 및 거래 정보를 바탕으로 하여 정확하게 세무 업무를 진행할 수 있으며, 이후 정부 기관으로 전자 청구서 "
+"작업을 할 수 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:287
 msgid ""
@@ -30894,6 +30906,11 @@ msgid ""
 "Invalidate invoice number range), an API call is made using credits from the"
 " `IAP credit balance <https://iap.odoo.com/iap/in-app-services/819>`_."
 msgstr ""
+"이와 같이 통합하려면 세금 계산과 전자 청구서 발송용으로 :doc:`인앱 결제(IAP) "
+"<../../essentials/in_app_purchase>` 가 필요합니다. 세금 계산, 전자 문서(NF-e, NFS-e 등) 발송 "
+"또는 온라인 업무(NF-e 취소, 정정 서신, 청구서 번호 범위 무효화)를 할 수 있도록 `IAP 크레딧 잔액 "
+"<https://iap.odoo.com/iap/in-app-services/819>`_ 에 보유 중인 크레딧을 사용하여 API 호출 "
+"작업이 진행됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:294
 msgid "Odoo is a certified partner of Avalara Brazil."
@@ -30926,6 +30943,9 @@ msgid ""
 " the AvaTax portal in :guilabel:`AvaTax Portal Email`, and click :icon:`fa-"
 "plug` :guilabel:`Create account`."
 msgstr ""
+"Odoo에서 AvaTax를 활성화하려면 반드시 계정을 생성해야 합니다. 이를 위해서는 :menuselection:`회계 --> 환경설정 "
+"--> 설정 --> 세금` 으로 이동합니다. :guilabel:`AvaTax 브라질` 섹션에서 :guilabel:`AvaTax 포털 "
+"이메일` 에 AvaTax 포털 관리 이메일 주소를 추가하고 :icon:`fa-plug` :guilabel:`계정 만들기` 를 클릭합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:312
 msgid ""
@@ -30934,6 +30954,9 @@ msgid ""
 "address, as it is needed to log in to the Avalara Portal and set up the "
 "certificates, whether to test or use it on production."
 msgstr ""
+"샌드박스나 프로덕션 데이터베이스에서 :guilabel:`AvaTax 포털 이메일` 통합과 관련된 **테스트** 를 하거나 **프로덕션 "
+"생성** 을 하는 경우에는 실제 이메일 주소를 사용해야 합니다. 이메일 주소는 Avalara 포털에 로그인하여 인증서를 설정하는 데 "
+"필요하며, 테스트 또는 프로덕션 환경 여부와 상관없이 동일하게 적용됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:316
 msgid ""
@@ -31260,6 +31283,8 @@ msgid ""
 "invoice, the :guilabel:`Document Number` field is displayed, allocated as "
 "the first number to be used sequentially for subsequent invoices."
 msgstr ""
+"전자 청구서를 발행할 때 사용되는 청구서상의 모든 필드는 필요에 따라 판매주문서에서도 활용할 수 있습니다. 첫 번째 청구서를 생성할 때 "
+":guilabel:`문서 번호` 필드가 표시되며, 이는 후속 청구서에 순차적으로 사용될 첫 번째 번호로 지정됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:498
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:598
@@ -31768,6 +31793,9 @@ msgid ""
 ":guilabel:`Invoice` to create the invoice and issue the *Return of Goods "
 "NF-e*."
 msgstr ""
+"또는 백엔드를 통해 NFC-e에 대한 환불 및 취소 작업을 진행하려면 :menuselection:`POS --> 주문서 --> 주문서` "
+"로 이동합니다. 주문서를 열고 고객을 선택한 후 :guilabel:`결제` 를 클릭하여 환불합니다. 그런 다음 "
+":guilabel:`청구서` 를 클릭하여 청구서를 생성한 후 *반품 NF-e* 를 발행합니다."
 
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:800
 msgid ""
@@ -35455,6 +35483,9 @@ msgid ""
 "validation can be tested. To activate it, tick the :guilabel:`DIAN Demo "
 "Mode` checkbox."
 msgstr ""
+"**DIAN 데모 모드**: 이 환경에서는 데모 디지털 인증서를 활용하여 전자 청구서의 워크플로우를 테스트할 수 있습니다. 파일은 "
+"자동으로 생성 및 승인되며 |DIAN| 환경으로 전송되지 않습니다. 내부적인 승인 과정을 모두 테스트하는 것도 가능합니다. 이렇게 "
+"활성화하려면 :guilabel:`DIAN 데모 모드` 확인란에 표시하세요."
 
 #: ../../content/applications/finance/fiscal_localizations/colombia.rst:158
 msgid ""
@@ -36163,6 +36194,9 @@ msgid ""
 "regulations and has implemented robust measures to ensure clients' data is "
 "secure and compliant."
 msgstr ""
+"이 페이지에서는 Odoo가 덴마크 회계법 측면에서 어떻게 규정을 준수하고 있는지에 대해 간략히 설명되어 있으며, 특히 재무 거래 및 "
+"영수증의 보관 및 무결성에 관한 내용으 초점을 맞추고 있습니다. Odoo는 덴마크 규정 준수의 중요성을 인지하고 있으며 고객의 데이터에 "
+"대해 보안을 유지하고 규정을 준수할 수 있도록 강력한 조치를 구현했습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/denmark.rst:14
 msgid "Key requirements of the Danish Bookkeeping Act"
@@ -37692,6 +37726,10 @@ msgid ""
 "Certificates` in the :guilabel:`SRI Connection` section. Then, to create a "
 "new certificate, click :guilabel:`New` and fill out the following fields:"
 msgstr ""
+"SRI 인증서 파일을 업로드하려면 :menuselection:`회계 --> 환경설정 --> 설정` 으로 이동하여 :guilabel:` "
+"에콰도르 현지화` 섹션으로 스크롤한 후 :guilabel:`SRI 연결` 섹션에 있는 :icon:`oi-arrow-right` "
+":guilabel:`SRI 인증서` 를 클릭합니다. 이어서 새로운 인증서를 생성하려면, :guilabel:`신규` 를 클릭하고 다음의 "
+"필드를 입력합니다:"
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:721
 msgid ":guilabel:`Name`: The title of the certificate."
@@ -37993,6 +38031,9 @@ msgid ""
 "information. Credit notes cannot be created for *Consumidor Final* and can "
 "be managed :ref:`directly from the POS session <pos/refund>`."
 msgstr ""
+"고객이 이러한 방식으로 구매한 후 반품을 신용 전표로 요청하는 경우에는, 고객의 실제 연락처 정보에 있는 내용으로 신용 전표를 작성해야 "
+"합니다. 신용 전표는 *최종 소비자* 를 대상으로 생성할 수 없으며, 생성할 수 없으며, :ref:`POS 세션에서 직접 관리 가능합니다"
+" <pos/refund>."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:898
 msgid "Electronic invoice: specific customer"
@@ -40087,6 +40128,9 @@ msgid ""
 " sales data. Odoo complies with these legal requirements by providing a "
 "module and a downloadable certificate of conformity."
 msgstr ""
+"2018년 1월부로 프랑스 및 프랑스령 해외 영토(DOM-TOM)에서 신규 사기행위 방지법이 발효되었습니다. 이 법안은 판매 데이터의 "
+"무결성, 보안, 저장 및 보관에 대한 구체적인 요건을 명시하고 있습니다. Odoo에서는 해당 모듈 및 다운로드용 적합성 인증서를 제공하여"
+" 이러한 법적 요건을 준수할 수 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/france.rst:609
 msgid ""
@@ -44722,6 +44766,10 @@ msgid ""
 "can be filtered by period, compared against other periods, and exported in "
 "Excel and PDF formats, ensuring compliance with Jordanian tax laws."
 msgstr ""
+":doc:`부가가치세 요약 <../accounting/reporting/tax_returns>` 항목에서는 과세 대상, 영세 및 면세 "
+"거래에 대해 상세하게 내역을 확인할 수 있습니다. 다른 :doc:`재무 보고서 <../accounting/reporting>` 와 "
+"마찬가지로, 부가가치세 요약은 기간별로 필터하거나 다른 기간과 비교 또는Excel 및 PDF 형식으로 내보낼 수 있으므로 요르단 세법에 "
+"부합하게 진행할 수 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/jordan.rst:83
 msgid "E-invoicing with JoFotara"
@@ -44970,6 +45018,9 @@ msgid ""
 "cases where a technical error or timeout prevents Odoo from updating it "
 "automatically."
 msgstr ""
+":guilabel:`JoFotara 상태` 필드는 확정이 완료된 청구서의 :guilabel:`기타 정보` 탭에서 JoFotara 문서의 "
+"현재 상태를 나타냅니다. 해당 필드는 수동으로 변경할 수 있으며, 이를 통해 기술적 오류 또는 시간 초과로 인해 Odoo에서 자동으로 "
+"업데이트되지 못하는 경우에도 청구서의 실제 상태가 반영되도록 할 수 있습니다."
 
 #: ../../content/applications/finance/fiscal_localizations/jordan.rst:219
 msgid "Validating QR codes (Sanad app)"
@@ -45010,6 +45061,10 @@ msgid ""
 "validation. Upon successful validation, the QR code from JoFotara is "
 "embedded in the debit or credit note PDF."
 msgstr ""
+"JoFotara에 차변표 또는 신용 전표를 제출하려면 먼저 :ref:`차변표 <accounting/credit_notes/issue-"
+"debit-note>` 또는 :ref:`신용 전표 <accounting/credit_notes/issue-credit-note>` 를 "
+"생성합니다. :guilabel:`보내기` 창에서 :guilabel:`JoFotara(Jordan EDI)` 를 클릭하여 실시간 승인용으로"
+" 제출합니다. 승인이 완료되면 JoFotara의 QR 코드가 차변표 또는 신용 전표 PDF에 삽입됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/jordan.rst:240
 msgid ""
@@ -49091,6 +49146,9 @@ msgid ""
 "history. Businesses can then submit these values to the `IRD portal "
 "<https://myir.ird.govt.nz/_/>`_."
 msgstr ""
+"**GST** 신고서는 **IRD** 에 직접 제출되지 않습니다. 그 대신 Odoo에서는 각 섹션에 입력해야 하는 값을 자동으로 계산하여"
+" 데이터 감사 및 검토 옵션을 제공함으로써 데이터 내역을 더욱 명확하게 파악할 수 있게 해 줍니다. 회사에서 이 내역을 `IRD 포털 "
+"<https://myir.ird.govt.nz/_/>`_ 에 제출하면 됩니다."
 
 #: ../../content/applications/finance/fiscal_localizations/new_zealand.rst:171
 msgid ""
@@ -60616,6 +60674,9 @@ msgid ""
 "can also add it afterward and update the message by clicking "
 ":guilabel:`Reload pending message`."
 msgstr ""
+":guilabel:`메시지` 탭에 결제 지침을 지정합니다. :doc:`은행 계좌 <../accounting/bank>` 가 이미 입력되어"
+" 있는 경우에는, Odoo에서 생성되는 기본 메시지에 해당 계좌 번호가 자동으로 추가됩니다. 또는 계좌 번호를 나중에 추가하여 내용에 "
+"반영되도록 하는 것도 가능하며 이 경우 :guilabel:`보류 중인 메시지 다시 불러오기` 를 클릭하면 됩니다."
 
 #: ../../content/applications/finance/payment_providers/wire_transfer.rst:0
 msgid "Define payment instructions"
