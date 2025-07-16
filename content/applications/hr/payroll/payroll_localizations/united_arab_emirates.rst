@@ -86,6 +86,8 @@ found under the :guilabel:`Salary Information` tab:
     compensation amount by dividing the monthly salary by **30** and then multiplying it by **21**.
   - Tick this checkbox and directly set the actual :guilabel:`Daily Salary` so that it is used in
     the end of service calculation.
+  - Tick this checkbox and directly set the actual :guilabel:`Daily Salary` so that it is used in
+    the end of service calculation.
 
 Salary structures and salary rules
 ==================================
@@ -353,7 +355,7 @@ Instant Pay structure
 =====================
 
 This structure is used when off-cycle payslips are required to make payments to employees for
-special situations, such as one-time or advance salaries.  Examples of one-time payments include:
+special situations, such as one-time or advance salaries. Examples of one-time payments include:
 
 - Commissions
 - Bonuses
@@ -371,14 +373,14 @@ payroll officer can issue a salary advance using the following steps:
 
 #. Confirm the payslip and process the payment.
 
-In the next cycle, when a payslip is generated for the employee using the United Arab Emirates:
-Regular Pay structure, an other input of type Advance Recovery is automatically added for the same
+In the next cycle, when a payslip is generated for the employee using the `United Arab Emirates:
+Regular Pay` structure, another input type, `Advance Recovery` is automatically added for the same
 amount that was previously paid.
 
 .. tip::
    If the employee and payroll officer agree to recover the advance over two consecutive cycles, the
    payroll officer can adjust the Advance Recovery amount on the first payslip. The remaining
-   balance will be automatically added to the following cycle.
+   balance is automatically added to the following cycle.
 
 .. _payroll/l10n_ae/wps-reports:
 
