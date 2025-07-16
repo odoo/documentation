@@ -84,8 +84,8 @@ found under the :guilabel:`Salary Information` tab:
 
   - Do not tick this checkbox if the standard calculation is to be used. This computes the
     compensation amount by dividing the monthly salary by **30** and then multiplying it by **21**.
-  - Tick this checkbox and directly set the actual :guilabel:`Daily Salary` so that it is
-    used in the end of service calculation.
+  - Tick this checkbox and directly set the actual :guilabel:`Daily Salary` so that it is used in
+    the end of service calculation.
 
 Salary structures and salary rules
 ==================================
@@ -227,9 +227,8 @@ There are **3 cases** for the employee to have:
       The SLI is not mandatory in Odoo but can be done from the setup of the :ref:`time off types
       <time_off/time-off-types>`.
 
-#. **50% paid sick leave:** Same as the fully paid one, but the employees are eligible for
-   **30 days** from this leave type. These 30 days are counted after the first **15** fully paid
-   days.
+#. **50% paid sick leave:** Same as the fully paid one, but the employees are eligible for **30
+   days** from this leave type. These 30 days are counted after the first **15** fully paid days.
 #. **0% paid sick leave:** Same as the fully paid one, but the employees are eligible for **45
    days** from this leave type. These **45 days** are counted after the first **15/30**
    fully/half-paid days.
@@ -238,8 +237,7 @@ There are **3 cases** for the employee to have:
    As per the labor law of the United Arab Emirates, the 15, 30, 45 days are not specified as
    working days or calendar days so this point will rely on the company policy.
 
-The amount paid for the employee per sick leave day is counted as
-follows:
+The amount paid for the employee per sick leave day is counted as follows:
 
 .. math::
    :class: overflow-scroll
@@ -351,16 +349,36 @@ Two printout formats can be extracted from the payslip, it depends on the type o
 a *Monthly* payslip or an *End of Service* Payslip. It is triggered if the employee for the payslip
 is generated is archived during that month.
 
-Master report
-=============
+Instant Pay structure
+=====================
 
-The *Master report* provides a detailed view of the amounts paid to employees for a specific period
-based on the payslips that are generated for them during that period with payslip lines being set as
-columns in an Excel report.
+This structure is used when off-cycle payslips are required to make payments to employees for
+special situations, such as one-time or advance salaries.  Examples of one-time payments include:
 
-It is mainly used to make the auditing process for the human resources department easier and faster.
+- Commissions
+- Bonuses
+- Allowances
 
-To access this report, go to :menuselection:`Payroll --> Reporting --> Master Report`.
+Salary Advances
+===============
+
+Employees may request a portion of their salary before the end of the pay cycle. In such cases, the
+payroll officer can issue a salary advance using the following steps:
+
+#. Create an off-cycle payslip using the United Arab Emirates: Instant Pay structure.
+
+#. Add another input of type Salary Advance and specify the amount to be paid to the employee.
+
+#. Confirm the payslip and process the payment.
+
+In the next cycle, when a payslip is generated for the employee using the United Arab Emirates:
+Regular Pay structure, an other input of type Advance Recovery is automatically added for the same
+amount that was previously paid.
+
+.. tip::
+   If the employee and payroll officer agree to recover the advance over two consecutive cycles, the
+   payroll officer can adjust the Advance Recovery amount on the first payslip. The remaining
+   balance will be automatically added to the following cycle.
 
 .. _payroll/l10n_ae/wps-reports:
 
