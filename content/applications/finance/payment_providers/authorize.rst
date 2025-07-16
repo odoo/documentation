@@ -165,3 +165,39 @@ To import the data into Odoo:
 
 .. tip::
    List of `eCheck.Net return codes <https://support.authorize.net/knowledgebase/Knowledgearticle/?code=000001293>`_
+
+Supported payment methods and features in Odoo
+==============================================
+
+.. |V| replace:: :icon:`fa-check`
+.. |X| replace:: :icon:`fa-times`
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: 10 25 25 8 8 8 8 8
+
+   * - Payment Method
+     - Currencies
+     - Countries
+     - Manual Capture
+     - Partial Capture
+     - Refunds
+     - Partial refunds
+     - Tokenization
+   * - ACH Direct Debit
+     - USD
+     - Puerto Rico, United States
+     - |V|
+     - |X|
+     - |V|
+     - |X|
+     - |V|
+   * - Card
+     - All
+     - All
+     - |V|
+     - |X|
+     - |V|
+     - |X|
+     - |V|
