@@ -7,10 +7,10 @@ Products
 **Odoo eCommerce** allows you to :ref:`add products <ecommerce/products/add-products>` and manage
 your :ref:`product pages <ecommerce/products/product-page>` directly from the Website app. It also
 allows you to add :ref:`product variants <ecommerce/products/product-variants>` and
-:ref:`digital files <ecommerce/products/digital-files>`,
-:ref:`translating <ecommerce/products/translation>` the product page content,
-:ref:`managing stock <ecommerce/products/stock-management>`, and enabling
-:ref:`product comparisons <ecommerce/products/product-comparison>`.
+:ref:`digital files <ecommerce/products/digital-files>`, :ref:`translating
+<ecommerce/products/translation>` the product page content, :ref:`managing stock
+<ecommerce/products/stock-management>`, and enabling :ref:`product comparisons
+<ecommerce/products/product-comparison>`.
 
 .. _ecommerce/products/add-products:
 
@@ -61,75 +61,6 @@ go to :menuselection:`Website --> eCommerce --> Products`, click the :icon:`fa-c
    #. Select the products to publish by ticking their box.
    #. In the :guilabel:`Is Published` column, tick the box for any of the selected products, then
       :guilabel:`Confirm` to publish them.
-
-.. _ecommerce/products/shop-page:
-
-Shop page
-=========
-
-To customize the layout of the main :guilabel:`Shop` page or modify its content, click
-:guilabel:`Edit`. Go to the :guilabel:`Blocks` tab to add :doc:`building blocks
-<../../websites/website/web_design/building_blocks>` or to the
-:guilabel:`Customize` tab to change the page layout or add features:
-
-- :guilabel:`Layout`: Select :guilabel:`Grid` or :guilabel:`List`.
-
-   - :guilabel:`Size`: Set the number of products displayed per page and line.
-   - :guilabel:`Style`: Select :guilabel:`Default`, :guilabel:`Cards`, :guilabel:`Thumbnails`, or
-     :guilabel:`Grid`.
-   - :guilabel:`Image Size`: Choose the aspect ratio for the product images:
-     :guilabel:`Landscape (4/3)`, :guilabel:`Default (1/1)`, :guilabel:`Portrait (4/5)`, or
-     :guilabel:`Vertical (2/3)`. You can also adjust the display by changing the :guilabel:`Fill`
-     options to best fit your design preferences.
-
-- :guilabel:`Search Bar`: Toggle the switch to display a search bar at the top of the products
-   page.
-
-- :guilabel:`Prod. Desc.`: Toggle the switch to display the product description below the product's
-  name.
-
-- :guilabel:`Categories`: display product categories on the :guilabel:`Left`, on the
-  :guilabel:`Top`, or both. If :guilabel:`Left` is selected, you can enable
-  :guilabel:`Collapse Categories` to make the category menu collapsible.
-
-- :guilabel:`Datepicker`: Toggle the switch to display a date range calendar to check the
-  availability of rental products over a specific period. The
-  :doc:`Rental app <../../sales/rental>` must be installed to use this feature.
-
-- :guilabel:`Attributes`: Show product attributes on the :guilabel:`Left` and/or display a
-  :icon:`fa-sliders` (:guilabel:`dropdown toggle`) icon at the :guilabel:`Top` allowing customers to
-  filter products based on their attributes.
-
-  - :guilabel:`Price Filter`: Toggle the switch to display a :guilabel:`Price Range` bar, which
-    allows customers to filter products according to a specific price range by dragging adjustable
-    handles.
-  - :guilabel:`Product Tags`: Toggle the switch to display the :guilabel:`Product Template Tags` on
-    the product page and allow customers to filter products using those tags by going to the
-    :guilabel:`Tags` section in the left column.
-
-- :guilabel:`Top Bar`: Select :guilabel:`Sort By` to display a dropdown list in the top bar for
-  sorting products and/or :guilabel:`Layout` to allow customers to switch to the grid or list view
-  using the related icons.
-
-- :guilabel:`Default Sort`: Choose how products are sorted by default: :guilabel:`Featured`,
-  :guilabel:`Newest Arrivals`, :guilabel:`Name (A-Z)`, :guilabel:`Price - Low to High`, or
-  :guilabel:`Price - High to Low`.
-
-- :guilabel:`Buttons`:
-
-  - Select the :icon:`fa-shopping-cart` (:guilabel:`Shopping cart`) option to display an
-    :icon:`fa-shopping-cart` (:guilabel:`Add to cart`) icon on each product's image, which takes the
-    customer to the checkout page.
-
-.. _ecommerce/products/wishlist:
-
-  - Select the :icon:`fa-heart-o` (:guilabel:`Wishlist`) option to display an
-    :icon:`fa-shopping-cart` (:guilabel:`Add to wishlist`) icon on each product's image allowing
-    logged-in customers to save products to a wishlist.
-
-  - Select the :icon:`fa-exchange` (:guilabel:`Compare`) option to display the :icon:`fa-exchange`
-    (:guilabel:`Compare`) icon on each product's image allowing customers to :ref:`compare products
-    <ecommerce/products/product-comparison>` based on their attributes.
 
 .. _ecommerce/products/product-page:
 
@@ -298,7 +229,7 @@ go to :menuselection:`Website --> eCommerce --> Attributes`, click on the attrib
 :guilabel:`Visible` or :guilabel:`Hidden` in the :guilabel:`eCommerce Filter Visibility` field.
 
 .. tip::
-   - To display the product attributes on :ref:`the main Shop page <ecommerce/products/shop-page>`,
+   - To display the product attributes in the :doc:`product catalog <products/catalog>`,
      set the :guilabel:`Attributes` feature to :guilabel:`Left` using the website editor.
    - To group attributes under the same section when
      :ref:`comparing products <ecommerce/products/product-comparison>`, go to the
@@ -435,6 +366,27 @@ comparison summary.
      :ref:`attributes <ecommerce/products/product-variants>`.
    - Selecting the :icon:`fa-exchange` (:guilabel:`Compare`) option from a product page is also
      possible.
+
+.. _ecommerce/products/wishlists:
+
+Wishlists
+=========
+
+The :icon:`fa-heart-o` :guilabel:`Add to wishlist` button allows customers to add products
+to their wishlist, i.e., save them for later. To enable it, go to :menuselection:`Website -->
+Configuration --> Settings`, scroll down to the :guilabel:`Shop - Products` section, and enable
+:guilabel:`Wishlists`. The button is available on each product page and can be disabled in the
+:ref:`website editor <ecommerce/products/product-page>` if needed.
+
+.. image:: products/products-add-to-wishlist.png
+   :alt: Add to wishlist button
+
+.. tip::
+   - You can also display a :icon:`fa-heart-o` (:guilabel:`Wishlist`) button when hovering the mouse
+     over the product on the :ref:`shop page <ecommerce/catalog/additional-features>`.
+   - Customers can move products from their cart to their wishlist by clicking the :guilabel:`Save
+     for later` button in the :guilabel:`Order overview` :ref:`checkout step
+     <ecommerce/checkout/review_order>`.
 
 .. toctree::
    :titlesonly:
