@@ -11,8 +11,8 @@ Several elements from your Odoo database can be inserted into an Odoo spreadshee
 Each time a list, pivot table, or chart is inserted, a :ref:`data source
 <spreadsheet/insert/data-sources>` is created. This data source connects the spreadsheet to your
 Odoo database, retrieving up-to-date information every time the spreadsheet is opened, the browser
-page is reloaded, or data is manually refreshed by clicking :menuselection:`Data --> Refresh all
-data` from the menu bar.
+page is reloaded, or data is manually refreshed by clicking :menuselection:`Data -->`
+:icon:`os-refresh-data` :menuselection:`Refresh all data` from the menu bar.
 
 :ref:`Inserted lists <spreadsheet/insert/list>` and :ref:`inserted pivot tables
 <spreadsheet/insert/pivot-table>` use formulas with Odoo-specific :ref:`list functions
@@ -140,7 +140,7 @@ To insert a list:
 
    .. note::
       When inserting a list into a new spreadsheet, the spreadsheet is saved in the **Odoo
-      Documents** app in the :icon:`fa-hdd-o` :guilabel:`My Drive` personal workspace.
+      Documents** app in the :icon:`fa-hdd-o` :guilabel:`My Drive` personal folder.
 
 #. Click :guilabel:`Confirm`.
 
@@ -367,7 +367,7 @@ To insert a pivot table:
 
    .. note::
       When inserting a pivot table into a new spreadsheet, the spreadsheet is saved in the **Odoo
-      Documents** app in the :icon:`fa-hdd-o` :guilabel:`My Drive` personal workspace.
+      Documents** app in the :icon:`fa-hdd-o` :guilabel:`My Drive` personal folder.
 
 #. Click :guilabel:`Confirm`.
 
@@ -542,7 +542,7 @@ To insert a chart from an Odoo database into an Odoo spreadsheet:
 
    .. note::
       When inserting a chart into a new spreadsheet, the spreadsheet is saved in the **Odoo
-      Documents** app in the :icon:`fa-hdd-o` :guilabel:`My Drive` personal workspace.
+      Documents** app in the :icon:`fa-hdd-o` :guilabel:`My Drive` personal folder.
 
 #. Click :guilabel:`Confirm`.
 

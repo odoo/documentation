@@ -265,8 +265,8 @@ It is possible to:
   .. tip::
      Reloading the browser will cause any global filters to reset to their initial state or default
      value, as relevant. To refresh data in an inserted list, pivot table, or chart without losing
-     global filters that have been applied, click :menuselection:`Data --> Refresh all data` from
-     the menu bar.
+     global filters that have been applied, click :menuselection:`Data -->` :icon:`os-refresh-data`
+     :menuselection:`Refresh all data` from the menu bar.
 
 - **Change the order** of existing filters by hovering over a filter and using the
   :icon:`os-thin-drag-handle` :guilabel:`(drag handle)` icon to change the position.
