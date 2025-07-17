@@ -212,13 +212,12 @@ as:
   <ecommerce/cross_upselling/accessory>`;
 - :guilabel:`Promo Code`: to allow customers to redeem :ref:`gift cards <ewallet_gift/gift-cards>`
   or apply :doc:`discount codes <../../sales/sales/products_prices/loyalty_discount>`;
-- :guilabel:`Add to Wishlist`: To allow signed-in users to remove a product from their cart and add
-  it to their wishlist, go to :menuselection:`Website --> Configuration --> Settings`, scroll to
-  the :guilabel:`Shop - Products` section, and enable :guilabel:`Wishlists`. The :guilabel:`Add to
-  Wishlist` option is then enabled by default in the website editor.
+- :guilabel:`Add to Wishlist`: :ref:`Enable wishlists <ecommerce/products/wishlists>` to allow
+  signed-in users to remove a product from their cart and add it to their wishlist using the
+  :guilabel:`Save for later` option.
 
 .. note::
-   - If a :doc:`fiscal position <../../finance/fiscal_localizations>` is detected
+   - If a :doc:`fiscal position <../../finance/accounting/taxes/fiscal_positions>` is detected
      automatically, the product tax is determined based on the customer's IP address.
    - If the installed :doc:`payment provider <../../finance/payment_providers>` supports
      :ref:`express checkout <payment_providers/express_checkout>`, a dedicated button is displayed,
