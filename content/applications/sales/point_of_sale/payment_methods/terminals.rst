@@ -4,41 +4,42 @@
 Payment terminals
 =================
 
-Connecting and integrating a payment terminal with your POS system allows you to accept multiple
-payment options, including credit and debit cards, making the payment process more efficient.
+Connect and integrate a payment terminal to a POS system to accept multiple payment options,
+including credit and debit cards.
 
 .. _terminals/configuration:
 
 Configuration
 =============
 
-Go to the :ref:`application settings <configuration/settings>`, scroll down to the
-:guilabel:`Payment Terminals` section, and tick your terminal's checkbox.
+To enable and configure a payment terminal, follow these steps:
 
-.. image:: terminals/payment-terminals.png
-   :alt: checkbox in the settings to enable a payment terminal
+#. Go to the :ref:`POS settings <configuration/settings>` and scroll down to the :guilabel:`Payment
+   Terminals` section.
+#. Tick the desired terminal's checkbox:
 
-Then, follow the corresponding documentation to configure your device:
+   - :doc:`Adyen <terminals/adyen>`
+   - :doc:`Ingenico <terminals/ingenico>`
+   - :doc:`Mercado Pago <terminals/mercado_pago>`
+   - :doc:`Razorpay <terminals/razorpay>`
+   - :doc:`SIX <terminals/six>`
+   - :doc:`Stripe <terminals/stripe>`
+   - :doc:`Tyro <terminals/tyro>`
+   - :doc:`Viva.com <terminals/viva_com>`
+   - :doc:`Worldline <terminals/worldline>`
+#. Click :guilabel:`Save`.
 
-- :doc:`Adyen configuration <terminals/adyen>`
-- :doc:`Ingenico configuration <terminals/ingenico>`
-- :doc:`Mercado Pago configuration <terminals/mercado_pago>`
-- :doc:`Razorpay configuration <terminals/razorpay>`
-- :doc:`SIX configuration <terminals/six>`
-- :doc:`Stripe configuration <terminals/stripe>`
-- :doc:`Tyro configuration <terminals/tyro>`
-- :doc:`Viva.com configuration <terminals/viva_com>`
-- :doc:`Worldline configuration <terminals/worldline>`
-
-Once the terminal is configured, you can :doc:`create the corresponding payment method and add it to
-the POS <../payment_methods>`.
+Configuring a terminal requires :doc:`creating the corresponding payment method to add to a POS
+<../payment_methods>`.
 
 Pay with a payment terminal
 ===========================
 
-When processing a payment, select the terminal's payment method. Check the amount and
-click on :guilabel:`Send`. Once the payment is successful, the status changes to :guilabel:`Payment
-Successful`.
+To process a payment with a configured terminal, follow these steps:
+
+#. In Odoo, select the terminal's payment method.
+#. Follow the terminal's operation and validate the payment. Odoo integrates the payment in POS and
+   the status changes to :guilabel:`Payment Successful`.
 
 .. note::
    - | In case of connection issues between Odoo and the payment terminal, force the payment by
