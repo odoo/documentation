@@ -113,3 +113,4 @@ You can also create your own buttons to access more specific views:
 
    project_management/project_dashboard
    project_management/project_profitability
+   project_management/visibility_collaboration
