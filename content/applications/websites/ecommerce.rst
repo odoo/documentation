@@ -30,3 +30,4 @@ products and increase your average cart sizes.
    ecommerce/order_handling
    ecommerce/customer_accounts
    ecommerce/performance
+   ecommerce/google_merchant_center
