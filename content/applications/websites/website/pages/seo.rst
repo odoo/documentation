@@ -131,11 +131,25 @@ like the price and rating of a product:
 robots.txt
 ----------
 
-A robots.txt file tells search engine crawlers which URLs the crawler can access on your site, to
-index its content. This is used mainly to avoid overloading your site with requests.
+A `robots.txt` file instructs search engine crawlers which parts of a website they are permitted to
+access. Its primary purpose is to:
+
+ - **Prevent overloading the website:** By guiding crawlers away from certain sections, robots.txt
+   helps manage server load.
+ - **Control access to resources:** It can block crawlers from accessing media files
+   (images, videos), CSS stylesheets, and JavaScript files.
+ - **Control access to detailed descriptions:** It can prevent crawlers from reading the content
+   (text) of specific pages.
 
 When indexing your website, search engines take a first look at the robots.txt file. Odoo
 automatically creates one robot.txt file available on `mydatabase.odoo.com/robots.txt`.
+
+.. note::
+   Reputable bots adhere to robots.txt; others may require blocking via
+   :ref:`Cloudfare <domain-name/naked/cloudflare>` on your custom domain.
+
+Edit robots.txt
+~~~~~~~~~~~~~~~
 
 By editing a robots.txt file, you can control which site pages are accessible to search engine
 crawlers. To add custom instructions to the file, go to :menuselection:`Website --> Configuration
@@ -144,6 +158,33 @@ crawlers. To add custom instructions to the file, go to :menuselection:`Website 
 .. example::
    If you do not want the robots to crawl the `/about-us` page of your site, you can edit the
    robots.txt file to add `Disallow: /about-us`.
+
+Prevent a page from indexation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. important::
+   While `robots.txt` prevents content from being crawled, **it does not guarantee that a page**
+   **will not be indexed**. A page can still appear in search results if it is linked to from other
+   crawled pages (indexed by "reference"). Google generally does not recommend using robots.txt to
+   block webpages that you wish to keep out of search results entirely.
+
+To effectively prevent a page from appearing in search engine results, use one of the following
+methods:
+
+ - **noindex tag:** Implement a `noindex` meta tag within the HTML header of the page. This
+   explicitly tells search engines not to index the page.
+ - **Server codes (404 or 403):** Configure your server to return a 404 (Not Found) or 403
+   (Forbidden) HTTP status code for the page. These codes signal to search engines that the page
+   does not exist or is inaccessible, leading to its eventual removal from the index.
+ - **Google Search Console:** Use Google Search Console to request the removal of specific URLs from
+   Google's index.
+
+.. seealso::
+   :doc:`../configuration/google_search_console`
+
+.. note:: You can also :icon:`fa-toggle-on` or :icon:`fa-toggle-off` the index feature on the
+   :ref:`website/pages/page_properties` for pages listed in
+   :menuselection:`Website --> Site --> Pages`. For dynamic pages, this option is not yet available.
 
 Sitemap
 -------
