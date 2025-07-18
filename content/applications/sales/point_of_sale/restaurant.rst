@@ -289,7 +289,7 @@ the :guilabel:`Payment` section, enable :guilabel:`Tips`,  and click :guilabel:`
 .. important::
    - The :guilabel:`Add tip after payment` setting only works for a POS in the United States
      of America with an :doc:`Adyen <payment_methods/terminals/adyen>` or a :doc:`Stripe
-     <payment_methods/terminals/stripe>` :ref:`payment terminal <terminals/configuration>`.
+     <payment_methods/terminals/stripe>` :ref:`payment terminal <pos/terminals/configuration>`.
    - The :guilabel:`Add tip through payment terminal (Adyen)` setting only works with an
      :ref:`Adyen <adyen/tips>` terminal.
 
