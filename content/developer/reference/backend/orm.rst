@@ -1034,6 +1034,37 @@ and you can negate 1 using ``'!'`` (NOT).
 
 .. automethod:: odoo.fields.Domain.validate
 
+.. _reference/orm/dynamic_values:
+
+Dynamic time values
+~~~~~~~~~~~~~~~~~~~
+
+In the context of search domains, for
+:ref:`date and datetime fields <reference/fields/date>`, the value can be a
+moment relative to *now* in the timezone of the user. A simple language is
+provided to specify these dates. It is a space-separated string of terms.
+The first term is optional and is "today" (at midnight) or "now".
+Then, each term starts with "+" (add), "-" (subtract) or "=" (set), followed by
+an integer and date unit or a lower-case weekday.
+
+The date units are: "d" (days), "w" (weeks), "m" (months), "y" (years),
+"H" (hours), "M" (minutes), "S" (seconds).
+For weekdays, "+" and "-" mean next and previous weekday (unless we are already
+in that weekday) and "=" means in current week starting on Monday.
+When setting a date, the lower-units (hours, minutes and seconds) are set to 0.
+
+.. example::
+
+    .. code-block:: python
+
+        Domain('some_date', '<', 'now')  # now
+        Domain('some_date', '<', 'today')  # today at midnight
+        Domain('some_date', '<', '-3d +1H')  # now - 3 days + 1 hour
+        Domain('some_date', '<', '=3H')  # today at 3:00:00
+        Domain('some_date', '<', '=5d')  # 5th day of current month at midnight
+        Domain('some_date', '<', '=1m')  # January, same day of month at midnight
+        Domain('some_date', '>=', '=monday -1w')  # Monday of the previous week
+
 Unlink
 ------
 
