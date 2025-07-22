@@ -4,11 +4,24 @@
 Changelog
 =========
 
+Odoo version 19.0
+=================
+
+- Add support for ``GROUPING SETS`` for pivot views.
+  See `#194413 <https://github.com/odoo/odoo/pull/194413>`_.
+- Adding support for dynamic dates in domains.
+  See `#216665 <https://github.com/odoo/odoo/pull/216665>`_.
+- Deprecated `odoo.osv` in `#217708 <https://github.com/odoo/odoo/pull/217708>`_.
+- Deprecated `record._cr`, `record._context`, `record._uid` in `#193636 <https://github.com/odoo/odoo/pull/193636>`_.
+
+
 Odoo Online version 18.4
 ========================
 
 - The `reinit` option is added to the CLI to reinitialize modules.
   See `#206408 <https://github.com/odoo/odoo/pull/206408>`_.
+- Possibility to write and combine custom domains for injecting arbitrary SQL.
+  See `#205208 <https://github.com/odoo/odoo/pull/205208>`_.
 
 Odoo Online version 18.3
 ========================
