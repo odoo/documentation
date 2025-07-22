@@ -3,8 +3,9 @@ Forms spam protection
 =====================
 
 :ref:`Cloudflare Turnstile <cloudflare-turnstile>` and :ref:`Google reCAPTCHA v3 <google-recaptcha>`
-protect website forms against spam and abuse. They attempt to distinguish between human and bot
-submissions using non-interactive challenges based on telemetry and visitor behavior.
+protect website forms, web sign-up pages, and password reset pages against spam and abuse. They
+attempt to distinguish between human and bot submissions using non-interactive challenges based on
+telemetry and visitor behavior.
 
 .. important::
    We recommend using **Cloudflare Turnstile** as reCAPTCHA v3 may not be compliant with local data
@@ -13,7 +14,7 @@ submissions using non-interactive challenges based on telemetry and visitor beha
 .. note::
    All pages using the :guilabel:`Form`, :guilabel:`Newsletter Block`, :guilabel:`Newsletter Popup`
    snippets, and the eCommerce :guilabel:`Extra Step During Checkout` form are protected by both
-   tools.
+   tools. **Web sign-up pages** and **password reset pages** are also protected.
 
 .. seealso::
    - `Cloudflare Turnstile's documentation <https://developers.cloudflare.com/turnstile/>`_
