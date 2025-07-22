@@ -950,26 +950,20 @@ A domain can be a simple condition ``(field_expr, operator, value)`` where:
     ``=?``
         unset or equals to (returns true if ``value`` is either ``None`` or
         ``False``, otherwise behaves like ``=``)
-    ``=like``
+    ``=like`` (and ``not =like``)
         matches ``field_expr`` against the ``value`` pattern. An underscore
         ``_`` in the pattern stands for (matches) any single character; a
         percent sign ``%`` matches any string of zero or more characters.
-    ``like``
+    ``like`` (and ``not like``)
         matches ``field_expr`` against the ``%value%`` pattern. Similar to
         ``=like`` but wraps ``value`` with '%' before matching
-    ``not like``
-        doesn't match against the ``%value%`` pattern
-    ``ilike``
+    ``ilike`` (and ``not ilike``)
         case insensitive ``like``
-    ``not ilike``
-        case insensitive ``not like``
-    ``=ilike``
+    ``=ilike`` (and ``not =ilike``)
         case insensitive ``=like``
-    ``in``
+    ``in`` (and ``not in``)
         is equal to any of the items from ``value``, ``value`` should be a
         collection of items
-    ``not in``
-        is unequal to all of the items from ``value``
     ``child_of``
         is a child (descendant) of a ``value`` record (value can be either
         one item or a list of items).
@@ -984,17 +978,14 @@ A domain can be a simple condition ``(field_expr, operator, value)`` where:
         Takes the semantics of the model into account (i.e following the
         relationship field named by
         :attr:`~odoo.models.Model._parent_name`).
-    ``any``
+    ``any`` (and ``not any``)
         matches if any record in the relationship traversal through
         ``field_expr`` (:class:`~odoo.fields.Many2one`,
         :class:`~odoo.fields.One2many`, or :class:`~odoo.fields.Many2many`)
         satisfies the provided domain ``value``.
         The ``field_expr`` should be a field name.
-    ``not any``
-        matches if no record in the relationship traversal through
-        ``field_expr`` (:class:`~odoo.fields.Many2one`,
-        :class:`~odoo.fields.One2many`, or :class:`~odoo.fields.Many2many`)
-        satisfies the provided domain ``value``.
+    ``any!`` (and ``not any!``)
+        like ``any``, but bypasses access checks.
 
 * ``value``
     variable type, must be comparable (through ``operator``) to the named
