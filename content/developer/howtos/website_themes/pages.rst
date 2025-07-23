@@ -272,11 +272,11 @@ Create preset static page templates available from the New Page dialog window.
 **Declaration**
 
 The page templates has to be defined into the :file:`__manifest__.py` of the module through
-`new_page_templates`:
+`new_page_templates` and :file:`new_page_template_templates.xml`:
 
 .. code-block:: python
    :caption: `/website_airproof/__manifest__.py`
-   :emphasize-lines: 15-18
+   :emphasize-lines: 11,16-19
 
    {
       'name': 'Airproof Theme',
@@ -288,6 +288,7 @@ The page templates has to be defined into the :file:`__manifest__.py` of the mod
       'depends': ['website'],
       'data': [
          # ...
+         'views/new_page_template_templates.xml'
       ],
       'assets': {
          # ...
@@ -327,20 +328,22 @@ Instantiate each building block (modified or not) for the page template:
    <template id="new_page_template_s_airproof_text_block_h1" inherit_id="website_airproof.s_airproof_text_block_h1" primary="True"/>
    <template id="new_page_template_airproof_faq_s_title" inherit_id="website.s_title" primary="True"/>
 
-Then, create your page template with some `t-snippet-call` within an '#wrap' as explained above:
+Then, create your page template with some `t-snippet-call` within an `#wrap` as explained above:
 
 .. code-block:: xml
    :caption: `/website_airproof/views/new_page_template_templates.xml`
 
-   <div id="wrap">
-      <t t-snippet-call="website_airproof.new_page_template_airproof_faq_s_text_block_h1"/>
-      <t t-snippet-call="website_airproof.new_page_template_airproof_faq_s_title"/>
-      <t t-snippet-call="website_airproof.new_page_template_airproof_faq_s_faq_collapse"/>
-      <t t-snippet-call="website_airproof.new_page_template_airproof_faq_s_call_to_action"/>
-   </div>
+   <template id="new_page_template_sections_airproof_faq" name="Airproof - New Page Template FAQ">
+      <div id="wrap">
+         <t t-snippet-call="website_airproof.new_page_template_airproof_faq_s_text_block_h1"/>
+         <t t-snippet-call="website_airproof.new_page_template_airproof_faq_s_title"/>
+         <t t-snippet-call="website_airproof.new_page_template_airproof_faq_s_faq_collapse"/>
+         <t t-snippet-call="website_airproof.new_page_template_airproof_faq_s_call_to_action"/>
+      </div>
+   </template>
 
-Once the page template is created, it can be added to an existing group. Find below a list of the
-existing group:
+Once the page template is created, create a custom group and add it to the existing ones. Find below a list of the
+existing groups:
 
 .. code-block:: xml
    :caption: `/website/views/new_page_template_templates.xml`
@@ -360,7 +363,7 @@ Feel free to add custom groups to the list:
 .. code-block:: xml
    :caption: `/website_airproof/views/new_page_template_templates.xml`
 
-   <template id="new_pages_template_groups" inherit_id="website.new_pages_template_groups" name="Airproof - New Page Template Groups">
+   <template id="new_page_template_groups" inherit_id="website.new_page_template_groups" name="Airproof - New Page Template Groups">
       <xpath expr="//div[@id='custom']" position="after">
          <div id="airproof">Airproof</div>
       </xpath>
