@@ -38,7 +38,8 @@ recruitment process. The displayed information can be modified, if desired.
 
 In this example, there are 18 total applicants. Out of that, six have been hired, two have been
 refused, and ten are still in the recruitment pipeline. The :guilabel:`Experienced Developer`
-position has six total applicants, three of which were hired, one refused, and to still in progress.
+position has six total applicants, three of which were hired, one refused, and two still in
+progress.
 
 .. image:: applicant_analysis/pivot-view.png
    :alt: The detailed pivot table view.
