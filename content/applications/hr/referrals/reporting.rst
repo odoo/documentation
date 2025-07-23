@@ -27,14 +27,13 @@ Referral amounts for all stages are displayed, including :guilabel:`Not Hired` (
 
 Hover over any bar to view a popover containing specific data for that particular bar.
 
-In this view, it is easy to see which :guilabel:`Medium` is the most successful.
+In this view, it is clear which :guilabel:`Medium` is the most successful.
 
 .. example::
    In this example, both :guilabel:`Email` and :guilabel:`LinkedIn` are the mediums with the most
    referrals, but :guilabel:`Email` has the most referrals that were hired.
 
    .. image:: reporting/employee-report.png
-      :align: center
       :alt: The default report in the Referrals app.
 
 Use case: hired referrals
@@ -69,7 +68,6 @@ This information can be helpful to the recruitment team, so they can determine t
 referrers in the company, and who is the most successful in terms of hires.
 
 .. image:: reporting/employee-counts.png
-   :align: center
    :alt: The customized report showing which employees have the most referrals and hires.
 
 .. tip::
@@ -83,5 +81,5 @@ referrers in the company, and who is the most successful in terms of hires.
 
    Click :guilabel:`Confirm`, and the selected spreadsheet loads, with the new table in it.
 
-   The spreadsheet is stored in the *Documents* application. This application **must** be installed
-   to use the :guilabel:`Insert in Spreadsheet` option.
+   The spreadsheet is stored in the **Documents** application. This application **must** be
+   installed to use the :guilabel:`Insert in Spreadsheet` option.
