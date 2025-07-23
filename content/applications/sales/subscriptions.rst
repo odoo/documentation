@@ -292,6 +292,5 @@ tab, under the :guilabel:`SALES` section.
    subscriptions/upselling
    subscriptions/renewals
    subscriptions/closing
-   subscriptions/automatic_alerts
    subscriptions/scheduled_actions
    subscriptions/reports
