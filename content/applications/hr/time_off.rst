@@ -1,7 +1,7 @@
 :show-content:
 
 ========
-Time Off
+Time off
 ========
 
 Odoo's **Time Off** application serves as a centralized hub for all time-off-related information.
@@ -23,8 +23,11 @@ time off) are being used, :ref:`accrual plans <time_off/accrual-plans>` can be c
    sections require specific access rights.
 
    To better understand how access rights affect the **Time Off** app, refer to the
-   :doc:`employees/new_employee` document, specifically the section about configuring the work
-   information tab.
+   :doc:`employees/new_employee` document, specifically the section about configuring the *Work
+   Information* tab.
+
+.. seealso::
+   :doc:`../general/users/access_rights`
 
 Configuration
 =============
@@ -42,8 +45,8 @@ To view the currently configured time off types, navigate to :menuselection:`Tim
 Configuration --> Time Off Types`. The time off types are presented in a list view.
 
 The **Time Off** app comes with four preconfigured time off types: :guilabel:`Paid Time Off`,
-:guilabel:`Sick Time Off`, :guilabel:`Unpaid`, and :guilabel:`Compensatory Days`. These can be
-modified to suit business needs, or used as-is.
+:guilabel:`Sick Time Off`, :guilabel:`Unpaid`, :guilabel:`Compensatory Days`, and :guilabel:`Extra
+Hours`. These can be modified to suit business needs, or used as-is.
 
 Create time off type
 ~~~~~~~~~~~~~~~~~~~~
@@ -52,7 +55,7 @@ To create a new time off type, navigate to :menuselection:`Time Off app --> Conf
 Off Types`. From here, click the :guilabel:`New` button to reveal a blank time off type form.
 
 Enter the name for the particular type of time off in the blank line at the top of the form, such as
-`Sick Time` or `Vacation`. Then, enter the following information on the form.
+`Vacation` or `Bereavement`. Then, enter the following information on the form.
 
 .. note::
    The only **required** fields on the time off type form are the name of the :guilabel:`Time Off
@@ -60,8 +63,10 @@ Enter the name for the particular type of time off in the blank line at the top 
    :guilabel:`Time Off Requests` and :guilabel:`Allocation Requests` sections **must** be
    configured.
 
-Time Off Requests section
+Time off requests section
 *************************
+
+This section determines how approvals are handled for time off requests for this time off type.
 
 - :guilabel:`Approval`: select what specific kind of approval is required for the time off type. The
   options are:
@@ -75,11 +80,13 @@ Time Off Requests section
     is set on the *Work Information* tab on the :ref:`employee's form <employees/work-info-tab>`, is
     required to approve the time off request.
   - :guilabel:`By Employee's Approver and Time Off Officer`: Both the employee's :ref:`specified
-    time off approver<employees/work-info-tab>` and the :ref:`Time Off Officer
+    time off approver <employees/work-info-tab>` and the :ref:`Time Off Officer
     <time_off/time-off-officer>` are required to approve the time off request.
 
-Allocation Requests section
+Allocation requests section
 ***************************
+
+This section determines how allocation requests are handled for this time off type.
 
 - :guilabel:`Requires allocation`: If the time off must be allocated to employees, select
   :guilabel:`Yes`. If the time off can be requested without time off being previously allocated,
@@ -104,21 +111,32 @@ Allocation Requests section
 - :guilabel:`Approval`: Select the type of approvals required for the allocation of this particular
   time off type.
 
-  - :guilabel:`Approved by Time Off Officer` indicates the :ref:`Time Off Officer
-    <time_off/time-off-officer>` set on this form must approve the allocation.
-  - :guilabel:`No validation needed` indicates that no approvals are required.
+  - :guilabel:`No Validation`: No approvals are required when requesting additional allocations for
+    the time off type. The allocation request is automatically approved.
+  - :guilabel:`By Time Off Officer`: Only the specified :ref:`Time Off Officer
+    <time_off/time-off-officer>`, set on this form in the :guilabel:`Notified Time Off Officer`
+    field, is required to approve the allocation request. This option is selected, by default.
+  - :guilabel:`By Employee's Approver`: Only the employee's specified approver for time off, which
+    is set on the *Work Information* tab on the :ref:`employee's form <employees/work-info-tab>`, is
+    required to approve the allocation request.
+  - :guilabel:`By Employee's Approver and Time Off Officer`: Both the employee's :ref:`specified
+    time off approver <employees/work-info-tab>` and the :ref:`Time Off Officer
+    <time_off/time-off-officer>` are required to approve the allocation request.
+
 
 Configuration section
 *********************
 
-  .. _`time_off/time-off-officer`:
+This section determines all other details regarding the time off type, aside from approvals and
+allocations. This includes how the time off must be taken (hours, half days, or days), if the time
+off is visible to other users, and how the time off affects the **Payroll** app.
 
-- :guilabel:`Notified Time Off Officer`: Select the person who is notified and responsible for
+.. _`time_off/time-off-officer`:
+
+- :guilabel:`Notified Time Off Officer`: Select the user who is notified and responsible for
   approving requests and allocations for this specific type of time off.
 - :guilabel:`Take Time Off in`: Select the format the time off is requested in from the drop-down
-  menu.
-
-  The options are:
+  menu. The options are:
 
   - :guilabel:`Day`: if time off can only be requested in full day increments (8 hours).
   - :guilabel:`Half Day`: if time off can only be requested in half day increments (4 hours).
@@ -134,6 +152,19 @@ Configuration section
      request would be for three hours, since the two extra worked hours are used first, and deducted
      from the request.
 
+- :guilabel:`Public Holiday Included`: Enable this option if public holidays should be excluded from
+  a time off request.
+
+  .. example::
+     An employee in the United States requests time off for the week of July 4th, for a total of
+     five days. Since the 4th of July is a holiday in the United States, the time off request is
+     automatically modified for four days off instead of five. That is because the holiday is
+     included, and the user does not need to use their own vacation time for a public holiday.
+
+     This option reduces extra work for users, enabling them to make only one time off request for
+     the entire week, instead of making two separate requests, one for the days *before* the
+     holiday, and another one for the days *after* the holiday.
+
 - :guilabel:`Allow To Attach Supporting Document`: Enable this option to allow the employee to
   attach documents to the time off request. This is useful in situations where documentation is
   required, such as long-term medical leave.
@@ -146,11 +177,11 @@ Configuration section
   blank, the time off type applies to all companies in the database. This field **only** appears in
   a multi-company database.
 
-Negative Cap section
+Negative cap section
 ********************
 
 Enable the :guilabel:`Allow Negative Cap` option if employees are able to request more time off than
-they currently have, allowing a negative balance. If enabled, an :guilabel:`Amount in Negative`
+they currently have, allowing a negative balance. If enabled, an :guilabel:`Maximum Excess Amount`
 field appears. In this field, enter the maximum amount of negative time allowed, in days.
 
 .. example::
@@ -158,13 +189,12 @@ field appears. In this field, enter the maximum amount of negative time allowed,
    requires five days of time off.
 
    The `Vacation` time off type has the :guilabel:`Allow Negative Cap` option enabled, and the
-   :guilabel:`Amount in Negative` is set to five.
+   :guilabel:`Maximum Excess Amount` is set to five.
 
    These settings allow Sara to submit a request for five days of the `Vacation` time off type. If
    approved, her `Vacation` time off balance will be negative two (-2) days.
 
 .. image:: time_off/time-off-type-form-top.png
-   :align: center
    :alt: The top half of the time off type form, with all the information filled out for sick time
          off.
 
@@ -188,14 +218,13 @@ When an employee takes time off, and is also using timesheets, Odoo creates entr
 - :guilabel:`Task`: Select the task that appears in the timesheet for this time off type. The
   default options are: :guilabel:`Time Off`, :guilabel:`Meeting`, or :guilabel:`Training`.
 
-Display Option section
+Display option section
 **********************
 
 - :guilabel:`Color`: Select a color to be used in the **Time Off** app dashboard.
 - :guilabel:`Cover Image`: Select an icon to be used in the **Time Off** app dashboard.
 
 .. image:: time_off/time-off-type-form-bottom.png
-   :align: center
    :alt: The lower half of the time off type form, with all the information filled out for sick time
          off.
 
@@ -241,18 +270,17 @@ Enter the following information on the form:
   .. example::
      An employee is granted time off from an accrual plan configured to accrue one day of vacation
      for every five days worked. The accrual plan is based on the employee's worked time (the
-     :guilabel:`Based on worked time` checkbox is ticked).
+     :guilabel:`Based on worked time` checkbox is ticked), which means they **only** earn vacation
+     time for the five weekdays they work, *not* the entire seven day week period.
 
-     The employee works standard 40-hour weeks. According to the accrual plan, they should earn
-     four vacation days per month.
+     The employee works standard 40-hour weeks. According to the accrual plan, they should earn four
+     vacation days per month.
 
-     The employee takes five days off. The :ref:`time off type <time_off/time-off-types>` the
-     employee has taken has the :guilabel:`Kind of Time Off` configured as an :guilabel:`Absence`.
+     The employee takes five days off using a :ref:`time off type <time_off/time-off-types>` with
+     the :guilabel:`Kind of Time Off` set as an :guilabel:`Absence`. Because the plan grants
+     vacation only for worked time, those five days do not count toward accrual.
 
-     Since the accrual plan only grants time off based on the worked time, the employee does **not**
-     accrue a vacation day for the five days of time off that is considered an absence.
-
-     At the end of the month, the employee accrues only three days, instead of four.
+     As a result, the employee accrues only three vacation days that month instead of four.
 
 - :guilabel:`Milestone Transition`: This field is **only** visible after a minimum of two
   :ref:`rules <time_off/rules>` have been configured on the accrual plan. This selection determines
@@ -260,11 +288,10 @@ Enter the following information on the form:
   pay period, decide whether the employee changes milestones :guilabel:`Immediately` or
   :guilabel:`After this accrual's period` (after the current pay period).
 - :guilabel:`Company`: This field **only** appears in a multi-company database. Using the drop-down
-  menu, select the company the accrual plan applies to. If left blank, the accrual plan can be used
+  menu, select the company the accrual plan applies to. If left blank, the accrual plan is available
   for all companies.
 
 .. image:: time_off/accrual-plan-form.png
-   :align: center
    :alt: An accrual plan form with all the entries filled out.
 
 .. _time_off/rules:
@@ -278,6 +305,8 @@ To create a new rule, click the :guilabel:`New Milestone` button in the gray :gu
 section, and a :guilabel:`Create Milestone` modal form appears.
 
 Fill out the following fields on the form:
+
+.. _time_off/accrue:
 
 - :guilabel:`Employee accrue`: Select the parameters for earned time off in this section.
 
@@ -294,29 +323,33 @@ Fill out the following fields on the form:
   Depending on which option is selected, additional fields may appear. For example, if
   :guilabel:`Twice a month` is selected, two additional fields appear, to specify the two days of
   each month the milestone occurs.
-- :guilabel:`Cap accrued time`: If there is a maximum amount of days the employee can accrue with
+- :guilabel:`Cap accrued time`: If there is a maximum amount of time the employee can accrue with
   this plan, enable this option.
 
-  When enabled, two additional fields appear beneath it. Select the type of time period from the
-  drop-down menu, either :guilabel:`Days` or :guilabel:`Hours`.
+  When enabled, two additional fields appear to the right of the checkbox. The second field is
+  populated with either :guilabel:`Days` or :guilabel:`Hours`, matching the selection made in the
+  :ref:`Employee Accrue <time_off/accrue>` section.
 
-  Then, enter a numerical value in the field to specify the maximum amount of time that can be
-  accrued.
-- :guilabel:`Milestone reached`: Enter the number and value of the time period that must pass before
-  the employee starts to accumulate time off. The first value is numerical; enter a number in the
-  first field.
+  Enter a numerical value in the first field to specify the maximum amount of time that can be
+  accrued, in the specified increments.
+- :guilabel:`Start Accruing`: Enter the number and value of the time period that must pass before
+  the employee starts to accumulate time off.
 
-  Then, select the type of time period using the drop-down menu in the second field. The options
-  are: :guilabel:`Days`, :guilabel:`Months`, or :guilabel:`Years`.
+  Use the first field to enter a numerical value, then set the second field to the desired time
+  increment (either :guilabel:`Days`, :guilabel:`Months`, or :guilabel:`Years`).
 - :guilabel:`Carry over`: select how any unused time off is handled. The options are either:
 
-  - :guilabel:`None. Accrued time reset to 0`: Any unused time off is gone.
+  - :guilabel:`None. Accrued time reset to 0`: Any unused time off is lost.
   - :guilabel:`All accrued time carried over`: All unused time off is rolled over to the next
     calendar year.
   - :guilabel:`Carry over with a maximum`: Unused time off is rolled over to the next calendar year,
-    but there is a cap. An :guilabel:`Up to` field appears if this is selected. Enter the maximum
-    number of :guilabel:`Days` that can roll over to the following year. Any time off beyond this
-    parameter is lost.
+    but there is a cap. An :guilabel:`Up to` field appears if this is selected.
+
+    Enter the maximum number of :guilabel:`Hours` or :guilabel:`Days` that can roll over to the
+    following year. The presented time increment is determined by how the :ref:`Employee Accrue
+    <time_off/accrue>` section is configured.
+
+    Any time off beyond this parameter is lost.
 
 .. important::
    If the :guilabel:`Carry over` field is set to :guilabel:`None. Accrued time reset to 0`, that
@@ -338,24 +371,56 @@ Fill out the following fields on the form:
    The carry over set on the *rule* takes precedence over the carry over set on the *accrual plan
    form*.
 
+- :guilabel:`Milestone cap`: Tick this checkbox to set a limit on the total amount of time that can
+  be accrued every calendar year. Enter the total maximum number of :guilabel:`Hours` or
+  :guilabel:`Days` the employee can accrue during a year. The presented time increment is determined
+  by how the :ref:`Employee Accrue <time_off/accrue>`  section is configured.
+
+  If the :guilabel:`Carry over` field is set to :guilabel:`None. Accrued time reset to 0`, the
+  :guilabel:`Milestone cap` field does not appear.
+- :guilabel:`Carry Over Validity`: Tick this checkbox to set a time-limit on how long the employee
+  has to use any rolled over time off. First, set the second field to the desired time-period using
+  the drop-down menu, either :guilabel:`Days` or :guilabel:`Months`.
+
+  Next, enter the maximum number of :guilabel:`Days` or :guilabel:`Months` the employee has to use
+  their rolled over time off. After that time period passes, any unused rolled over time will
+  expire.
+
+  If the :guilabel:`Carry over` field is set to :guilabel:`None. Accrued time reset to 0`, the
+  :guilabel:`Carry Over Validity` field does not appear.
+
 Once the form is completed, click :guilabel:`Save & Close` to save the :guilabel:`Create Milestone`
 form, and close the modal, or click :guilabel:`Save & New` to save the form and create another
 milestone. Add as many milestones as desired.
 
-.. image:: time_off/milestone.png
-   :align: center
-   :alt: A milestone form with all the entries filled out.
+.. example::
+   This milestone form is configured so the employee earns five days a year. They start to earn this
+   time yearly, on January 1st.
+
+   The employee can never accrue more than 120 days of time off with this accrual plan. Anytime they
+   have 120 days banked, they will stop accruing more time off.
+
+   Additionally, they can roll over up to 100 days of time off to the next year, and they have three
+   months to use that rollover time.
+
+   Note that due to the :guilabel:`Capped accrued time` of 120 days, the employee cannot carry over
+   any time off that exceeds 120 days in total.
+
+   .. image:: time_off/milestone.png
+      :alt: A milestone form with all the entries filled out.
 
 .. _time_off/public-holidays:
 
 Public holidays
 ---------------
 
-To observe public or national holidays, and provide extra days off as holidays to employees,
-configure the observed *public holidays* in Odoo.
+Since holidays vary from country to country, or even city to city, there are no public holidays
+preconfigured in Odoo. To observe public or national holidays, and provide extra days off as
+holidays to employees, configure the observed public holidays in Odoo.
 
-It is important to configure these days in Odoo, so employees are aware of the days they have off,
-and do not request time off on days that are already set as a public holiday (non-working days).
+It is important to configure public holidays in Odoo, so employees are aware of the days they have
+off, and do not request time off on days that are already set as a public holiday (non-working
+days).
 
 Additionally, all public holidays configured in the **Time Off** app are also reflected in any app
 that uses working schedules, such as **Calendar**, **Planning**, **Manufacturing**, and more.
@@ -363,13 +428,11 @@ that uses working schedules, such as **Calendar**, **Planning**, **Manufacturing
 Due to Odoo's integration with other apps that use working schedules, it is considered best practice
 to ensure *all* public holidays are configured.
 
-Create public holiday
-~~~~~~~~~~~~~~~~~~~~~
+Create public holidays
+~~~~~~~~~~~~~~~~~~~~~~
 
 To create a public holiday, navigate to :menuselection:`Time Off app --> Configuration --> Public
-Holidays`.
-
-All currently configured public holidays appear in a list view.
+Holidays`. All currently configured public holidays appear in a default list view.
 
 Click the :guilabel:`New` button, and a new line appears at the bottom of the list.
 
@@ -381,7 +444,7 @@ Enter the following information on that new line:
 
   .. note::
      The :guilabel:`Company` field is hidden, by default. To view this field, click the
-     :icon:`oi-settings-adjust` :guilabel:`(additional options)` icon in the top-right corner of the
+     :icon:`oi-settings-adjust` :guilabel:`(settings adjusts)` icon in the top-right corner of the
      list, to the far-right of the column titles, and activate the :guilabel:`Company` selection
      from the drop-down menu that appears.
 
@@ -389,7 +452,7 @@ Enter the following information on that new line:
   starts, then click :icon:`fa-check` :guilabel:`Apply`. By default, this field is configured for
   the current date. The start time is set according to the start time for the company (according to
   the :ref:`working schedules <payroll/working-times>`). If the user's computer is set to a
-  different time zone, the start time is adjusted according, compared to the company's time zone.
+  different time zone, the start time is adjusted accordingly, compared to the company's time zone.
 - :guilabel:`End Date`: Using the date and time picker, select the date and time the holiday ends,
   then click :icon:`fa-check` :guilabel:`Apply`. By default, this field is configured for the
   current date, and the time is set to the end time for the company (according to the :ref:`working
@@ -415,7 +478,6 @@ Enter the following information on that new line:
   drop-down menu.
 
 .. image:: time_off/holidays.png
-   :align: center
    :alt: The list of public holidays in the configuration menu.
 
 Mandatory days
@@ -455,12 +517,10 @@ Enter the following information on that new line:
 - :guilabel:`End Date`: Using the calendar picker, select the date the mandatory day ends. If
   creating a single mandatory day, the end date should be the same as the start date.
 - :guilabel:`Color`: If desired, select a color from the available presented options. If no color is
-  desired, select the `No color` option, represented by a white box with a red line diagonally
-  across it. The selected color appears on the main **Time Off** app dashboard, in both the calendar
-  and in the legend.
+  desired, select the `No color` option, represented by a white box with. The selected color appears
+  on the main **Time Off** app dashboard, in both the calendar and in the legend.
 
 .. image:: time_off/mandatory.png
-   :align: center
    :alt: The Mandatory Days section with three configured days.
 
 Overview
@@ -468,22 +528,24 @@ Overview
 
 To view a color-coded schedule of the user's time off, and/or of the team managed by them, navigate
 to :menuselection:`Time Off app --> Overview`. This presents a calendar with the default filter of
-`My Team`, in a month view.
+`My Team`, in a quarterly (three month) view.
 
-To change the time period displayed, click on the :guilabel:`Month` button to reveal a drop-down
-menu. Then, select either :guilabel:`Day`, :guilabel:`Week`, or :guilabel:`Year` to present the
-calendar in that corresponding view.
+To change the time period displayed, click on the :icon:`fa-calendar` :guilabel:`(time period)`
+button to reveal a drop-down menu. Then, select either :guilabel:`Today`, :guilabel:`This week`,
+:guilabel:`This month`, :guilabel:`This year`, or a custom time period, to present the calendar in
+that corresponding view.
 
 To navigate forward or backward in time, in the selected increment (:guilabel:`Month`,
-:guilabel:`Week`, etc.), click the :guilabel:`← (left arrow)` or :guilabel:`→ (right arrow)` to move
-either forward or backward in that specified amount of time.
+:guilabel:`Week`, etc.), click the :icon:`oi-arrow-left` :guilabel:`(left arrow)` or
+:icon:`oi-arrow-right` :guilabel:`(right arrow)` buttons to move either forward or backward in that
+specified amount of time. For example, if :guilabel:`Month` is selected, the arrows adjust the view
+by one month.
 
-For example, if :guilabel:`Month` is selected, the arrows adjust the view by one month.
+To return to a view containing the current day, click the :icon:`fa-crosshairs` :guilabel:`(Focus
+Today)` button at any time.
 
-To return to a view containing the current day, click the :guilabel:`Today` button at any time.
-
-Team members are listed alphabetically on individual lines, and their requested time off,
-regardless of the status (*validated* or *to approve*), is visible on the calendar.
+Team members are listed alphabetically on individual lines, and their requested time off, regardless
+of the status (*validated* or *to approve*), is visible on the calendar.
 
 Each employee is color-coded. The employee's color is selected at random, and does *not* correspond
 to the type of time off they requested.
@@ -502,7 +564,6 @@ hours or days are listed, along with the start and end time of the time off. To 
 the time off request in a modal, click the :guilabel:`View` button.
 
 .. image:: time_off/overview.png
-   :align: center
    :alt: Overview of the user's team, with time off requests shown.
 
 .. _time_off/reporting:
@@ -516,7 +577,7 @@ taking, and what time off types are being used.
 
 Any report can be added to a spreadsheet, when in either the :icon:`fa-area-chart`
 :guilabel:`(Graph)` or :icon:`oi-view-pivot` :guilabel:`(Pivot)` view, through the *Insert in
-Spreadsheet* button that appears in the top-left of the report.
+Spreadsheet* button that appears in the top-left of a report.
 
 .. note::
    If the **Documents** app is installed, an option to add the report to a spreadsheet appears. If
@@ -525,8 +586,8 @@ Spreadsheet* button that appears in the top-left of the report.
 By employee
 -----------
 
-To view a report of employee time off requests, navigate to :menuselection:`Time Off app -->
-Reporting --> by Employee`.
+To view a list of employee time off requests, navigate to :menuselection:`Time Off app --> Reporting
+--> by Employee`.
 
 The default report presents the current year's data in a list view, displaying all the employees in
 alphabetical order. Each employee's line is collapsed by default. To expand a line, click anywhere
@@ -540,7 +601,6 @@ Days` off requested, the :guilabel:`Start Date`, :guilabel:`End Date`, :guilabel
 :guilabel:`Description`.
 
 .. image:: time_off/employee-report.png
-   :align: center
    :alt: Report of time off, shown by each employee in a list view.
 
 The report can be displayed in other ways, as well. Click the corresponding button option in the
@@ -555,13 +615,12 @@ detailed information on the reports and their various options, refer to the :doc
 By type
 -------
 
-To view a list of all time off, organized by time off type, navigate to :menuselection:`Time Off app
---> Reporting --> by Type`. This shows all time off requests in a default bar chart.
+To view a graph of all time off, organized by time off type, navigate to :menuselection:`Time Off
+app --> Reporting --> by Type`. This shows all time off requests in a default bar chart.
 
 Hover over a bar to view the :guilabel:`Duration (Days)` of that specific time off type.
 
 .. image:: time_off/bar-chart.png
-   :align: center
    :alt: The various time off types, and how many days requested, in a bar chart. Details are
          highlighted in a red box.
 
@@ -579,6 +638,19 @@ top-right corner of the page to view the data in that way. The various options a
 When a selection has been made, additional options appear for that particular selection. For more
 detailed information on the reports, and their various options, refer to the :doc:`reporting
 <../essentials/reporting>` documentation.
+
+Balance
+-------
+
+To view a pivot table of all time off balances, organized by time off type, then further organized
+by how many days and hours are :guilabel:`Left` and :guilabel:`Planned`, navigate to
+:menuselection:`Time Off app --> Reporting --> Balance`.
+
+This shows all time off balances in a default pivot table. The employees populate the rows, while
+the various time off types and balances populate the columns.
+
+.. image:: time_off/balance.png
+   :alt: The various time off balances, in a pivot table.
 
 .. seealso::
    - :doc:`time_off/allocations`
