@@ -131,7 +131,7 @@ Finally, make sure all your users refresh their Odoo page by pressing CTRL+F5.
 
    - All previous synchronizations are disconnected during the installation and will not work
      anymore. To view them, activate the :ref:`developer mode <developer-mode>` and go to
-     :menuselection:`Accounting --> Configuration --> Online Synchronization`). It is not possible
+     :menuselection:`Accounting --> Configuration --> Online Synchronization`. It is not possible
      to resynchronize these connections; you have to make new ones.
    - Do not uninstall the `account_online_sync` module, which is the previous module for online
      synchronization. The new one overrides it.
