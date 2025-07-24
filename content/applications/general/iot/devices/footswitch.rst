@@ -48,5 +48,10 @@ manufacturing work order.
    On the :guilabel:`Work Order` screen, a status graphic indicates whether the database is
    correctly connected to the footswitch.
 
+.. note::
+   To find what keys each pedal represents you can connect it to any computer and try to type with the footswitch.
+   The pedals often default to 'a', 'b' and 'c' keyboard keys.
+
+
 .. seealso::
    :ref:`workcenter_iot`
