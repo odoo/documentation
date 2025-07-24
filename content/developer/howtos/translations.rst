@@ -146,7 +146,7 @@ functions or python comprehensions.
 
 Lazy translations are bound to the module during their creation and the
 language is resolved when evaluating using ``str()``.
-Note that you can also pass a lazy translation to ``Envionrment._``
+Note that you can also pass a lazy translation to ``Environment._``
 to translate it without any magic language resolution.
 
 Variables
