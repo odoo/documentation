@@ -40,7 +40,7 @@ lists the most important of them.
      - Users of Odoo
    * - Translate Odoo
      - Translate the user interface and documentation of Odoo into different languages.
-     - * `Odoo project on Transifex <https://explore.transifex.com/odoo/>`_
+     - * `Odoo Translations <https://translate.odoo.com/>`_
      - Anyone fluent in multiple languages
    * - Contribute to the codebase
      - Submit pull requests to the Odoo GitHub repositories to fix bugs, add new features, or
