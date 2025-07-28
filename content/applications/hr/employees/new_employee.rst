@@ -258,6 +258,8 @@ this section to be visible.
   add the location, or :guilabel:`Create and edit...` to add the location, assign a :guilabel:`Work
   Address`, and a :guilabel:`Cover Image`.
 
+.. _employees/approvers:
+
 APPROVERS
 ---------
 
