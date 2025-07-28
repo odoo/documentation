@@ -2,22 +2,24 @@
 My time
 =======
 
-The *My Time* menu of the *Time Off* application houses all the various time off information for
-the signed-in user.
+The *My Time* menu of the **Time Off** app houses all the various time off information for the
+signed-in user.
 
-This includes the main *Time Off* dashboard, which displays an overview of the various time off
-balances, as well as time-off requests and allocations.
+This includes the main **Time Off** :ref:`dashboard <time_off/dashboard>`, which displays an
+overview of the various time off balances, as well as :ref:`time-off requests
+<time_off/my-time-off>` and :ref:`allocations <time_off/my-allocations>`.
 
 .. _time_off/dashboard:
 
 Dashboard
----------
+=========
 
-All users have access to the *Time Off* :guilabel:`Dashboard`, which is the first page that appears
-when the *Time Off* application is opened. The :guilabel:`Dashboard` can also be accessed at any
+All users have access to the **Time Off** :guilabel:`Dashboard`, which is the first page that
+appears when the **Time Off** app is opened. The :guilabel:`Dashboard` can also be accessed at any
 point in the application, by navigating to :menuselection:`Time Off app --> My Time --> Dashboard`.
 
-The current year is displayed, and the current day is highlighted in a red circle.
+The dashboard shows a summary of the user's time off, and the entire current year, with the current
+day highlighted in a red circle.
 
 To change the view, click on the :guilabel:`Year` button to reveal a drop-down menu. Then, select
 either :guilabel:`Day`, :guilabel:`Week`, or :guilabel:`Month` to present the calendar in that
@@ -44,7 +46,6 @@ off summary. The complete details are presented in a popover window, including t
 scheduled, :guilabel:`Planned` time off, and the currently :guilabel:`Available` time off.
 
 .. image:: my_time/balance-details.png
-   :align: center
    :alt: A view of the complete time off balance details in the popover window.
 
 A user can also select a future date to see an estimate of how much time they should accrue by that
@@ -79,16 +80,16 @@ Allocation Request` button to request more time off, and a :ref:`New Allocation
 <time_off/request-allocation>` pop-up window appears.
 
 .. image:: my_time/dashboard.png
-   :align: center
    :alt: Time off dashboard view with the legend, time off summaries, and view buttons highlighted.
 
 .. _time_off/my-time-off:
 
 My time off
------------
+===========
 
-To view a list of all the time off requests, navigate to :menuselection:`Time Off app --> My Time
---> My Time Off`. Here, all time off requests, both past and present, appear in a list view.
+To view a list of all the signed-in user's time off requests, navigate to :menuselection:`Time Off
+app --> My Time --> My Time Off`. Here, all time off requests, both past and present, appear in a
+list view, grouped by month.
 
 The list includes the following information for each request: the :guilabel:`Time Off Type`,
 :guilabel:`Description`, :guilabel:`Start Date`, :guilabel:`End Date`, :guilabel:`Duration`, and
@@ -97,17 +98,24 @@ The list includes the following information for each request: the :guilabel:`Tim
 A new time off request can be made from this view. Click the :guilabel:`New` button to
 :doc:`request_time_off`.
 
+.. image:: my_time/my-time.png
+   :alt: My Time list view with all requests.
+
 .. _time_off/my-allocations:
 
 My allocations
---------------
+==============
 
 To view a list of all allocations, navigate to :menuselection:`Time Off app --> My Time --> My
 Allocations`. All allocations and requested allocations appear in a list view.
 
 The information presented on the :guilabel:`My Allocations` page includes: :guilabel:`Time Off
-Type`, :guilabel:`Description`, :guilabel:`Amount`, :guilabel:`Allocation Type`, and
-:guilabel:`Status`.
+Type`, :guilabel:`Amount`, :guilabel:`Allocation Type`, :guilabel:`Accrual Plan`, and
+:guilabel:`Status`. If the signed-in user has the appropriate access rights, they may also see an
+option to :guilabel:`Approve` requests, if applicable.
 
 A new allocation request can be made from this view, as well. Click the :guilabel:`New` button to
 :ref:`request an allocation <time_off/request-allocation>`.
+
+.. image:: my_time/my-allocations.png
+   :alt: My Allocations list view with all requests.
