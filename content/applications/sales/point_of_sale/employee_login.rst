@@ -68,7 +68,14 @@ settings <configuration/settings>`. Then,
 
       - :ref:`Open a POS session <pos/session-start>`.
       - :ref:`Perform cash-in and cash-out operations <pos/cash-register>`.
+<<<<<<< 852c2c52d4a5338c3750799a43346067bf784539
       - Toggle the visibility of product and category images.
+||||||| 6ff7f9647020a980a3866d7c91e90d10a59267c6
+      - Lock the current POS session.
+      - Toggle the visibility of product and category images.
+=======
+      - Lock the current POS session.
+>>>>>>> b189b48192688ad982c184a38324895d3724098e
 
       **Sales transactions:**
 
