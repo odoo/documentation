@@ -550,13 +550,17 @@ widget set, some specific properties are available:
   :guilabel:`Decade`. If no value is selected, the user can navigate the date selector by decade.
 - :guilabel:`Warning for future dates`: Enable this property to display a warning icon if a future
   date is selected.
-- :guilabel:`Condensed display`: Enable this property to show days, months and hours with no leading
-  zeros, e.g., `4/2/2025 8:05:00` instead of `04/02/2025 08:05:00`.
+- :guilabel:`Date format`: By default the date will be shown as `Apr 2, 2025, 08:05 AM`.
+  Enable this property to show the date in the format `4/2/2025 08:05:00`.
+  The numeric mode is the format set on the current language. In this mode the seconds are always
+  shown.
+- :guilabel:`Show date`: This property is enabled by default for :guilabel:`Date & Time` fields.
+  Disable this property to show only the time.
 - :guilabel:`Show time`: This property is enabled by default for :guilabel:`Date & Time` fields. On
   a read-only field, disable the property to show only the date. This can keep a list view less
   cluttered, for example.
-- :guilabel:`Show seconds`: This property is enabled by default for :guilabel:`Date & Time` fields.
-  Disable the property to show only hours and minutes.
+- :guilabel:`Show seconds`: This property is disabled by default for :guilabel:`Date & Time` fields.
+  Enable the property to show the seconds.
 - :guilabel:`Time interval`: Enter a value to determine the minute intervals shown in the time
   selector. For example, enter 15 to allow quarter-hour intervals. The default value is set to 5
   minutes.

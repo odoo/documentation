@@ -667,6 +667,9 @@ Char (`char`)
 Date (`date`)
     This is the default field type for fields of type `date`. It consists of a text
     box and a date picker.
+    The field will show the date in a readable format like this: `Dec 19, 1997`.
+    The year will be hidden if it's the current one. When editing the field, the numeric format
+    will be shown. This format corresponds to the one set in the current language.
 
     - Supported field types: `date`
 
@@ -680,17 +683,26 @@ Date (`date`)
 
             <field name="datefield" options="{'min_date': 'today', 'max_date': '2023-12-31'}" />
 
-    - warn_future: displays a warning if the value is in the future (based on today).
+    - `warn_future`: displays a warning if the value is in the future (based on today).
 
         .. code-block:: xml
 
             <field name="datefield" options="{'warn_future': true}" />
 
+    - `numeric`: when set to true, it shows the date in the format set on the current language.
+      (default: `false`).
+
+        .. code-block:: xml
+
+            <field name="datefield" options="{'numeric': true}" />
+
 .. _reference/javascript_reference/datetime_field:
 
 Date & Time (`datetime`)
     This is the default field type for fields of type `datetime`. The values are always
-    in the client's timezone.
+    in the client's timezone. The displayed format has the same behaviour as the date
+    field, see :ref:`Date Field <reference/javascript_reference/date_field>` description.
+    The readable format looks like this: `Dec 19, 1997, 10:45 AM`.
 
     - Supported field types: `datetime`
 
@@ -706,13 +718,13 @@ Date & Time (`datetime`)
 
             <field name="datetimefield" options="{'rounding': 10}" />
 
-    - `show_seconds`: when set to false, it hides the seconds from the datetime field.
-      The field will still accept datetime values, but the seconds will be hidden in
-      the UI (default: `true`).
+    - `show_seconds`: when set to true, it shows the seconds from the datetime field.
+      The field will still accept datetime values, but the seconds will be shown in
+      the UI (default: `false`).
 
         .. code-block:: xml
 
-            <field name="datetimefield" widget="datetime" options="{'show_seconds': false}" />
+            <field name="datetimefield" widget="datetime" options="{'show_seconds': true}" />
 
     - `show_time`: when set to false, it hides the time part from the datetime field.
       The field will still accept datetime values, but the time part will be hidden in
@@ -721,6 +733,14 @@ Date & Time (`datetime`)
         .. code-block:: xml
 
             <field name="datetimefield" widget="datetime" options="{'show_time': false}" />
+
+    - `show_date`: when set to false, it hides the date part from the datetime field.
+      The field will still accept datetime values, but the date part will be hidden in
+      the UI (default: `true`).
+
+        .. code-block:: xml
+
+            <field name="datetimefield" widget="datetime" options="{'show_date': false}" />
 
 Date Range (`daterange`)
     This widget allows the user to select start and end date from a single picker.
