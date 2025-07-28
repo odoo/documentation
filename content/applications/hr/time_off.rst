@@ -63,6 +63,8 @@ Enter the name for the particular type of time off in the blank line at the top 
    :guilabel:`Time Off Requests` and :guilabel:`Allocation Requests` sections **must** be
    configured.
 
+.. _time_off/time-off-requests:
+
 Time off requests section
 *************************
 
@@ -122,7 +124,6 @@ This section determines how allocation requests are handled for this time off ty
   - :guilabel:`By Employee's Approver and Time Off Officer`: Both the employee's :ref:`specified
     time off approver <employees/work-info-tab>` and the :ref:`Time Off Officer
     <time_off/time-off-officer>` are required to approve the allocation request.
-
 
 Configuration section
 *********************
