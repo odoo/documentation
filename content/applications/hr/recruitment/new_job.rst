@@ -51,12 +51,6 @@ card to reveal several options, and then click :guilabel:`Configuration` to edit
 .. image:: new_job/edit-job.png
    :alt: Edit the job position card.
 
-.. note::
-   The top-right corner of the card has a toggle to publish the job position to the website. If the
-   job position is published, a green :guilabel:`Published` toggle is visible. If the job position
-   is *not* published a gray :guilabel:`Not Published` toggle appears. Click the toggle to publish
-   or unpublish the job position.
-
 Recruitment tab
 ~~~~~~~~~~~~~~~
 
