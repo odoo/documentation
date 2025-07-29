@@ -168,7 +168,7 @@ Schedule section
 
 - :guilabel:`Work Entry Source`: Select :guilabel:`Working Schedule`, which creates :doc:`work
   entries <../work_entries>`  based on the employee's assigned :ref:`working schedule
-  <payroll/working-times>` (e.g., 40 hours per week).
+  <employees/schedule>` (e.g., 40 hours per week).
 
   .. note::
      The Mexico payroll localization is currently not able to create work entries from the
