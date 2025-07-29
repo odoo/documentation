@@ -142,7 +142,7 @@ Schedule section
   payroll during the specified pay period. The options are:
 
   - :guilabel:`Working Schedule`: Based on the employee's assigned :ref:`working schedule
-    <payroll/working-times>` (e.g., 40 hours per week).
+    <employees/schedule>` (e.g., 40 hours per week).
   - :guilabel:`Attendances`: Based on :doc:`approved checked-in hours
     <../../attendances/management>` in the **Attendances** app.
   - :guilabel:`Planning`: Based on :ref:`scheduled shifts <planning/shifts>` in the **Planning**
