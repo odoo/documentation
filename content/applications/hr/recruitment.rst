@@ -35,31 +35,6 @@ app. To view and edit the settings, navigate to :menuselection:`Recruitment app 
 --> Settings`. After any changes are made, click the :guilabel:`Save` button in the top-left corner
 to save all the changes.
 
-Job posting
------------
-
-The :guilabel:`Job Posting` section of the **Recruitment** app settings has two configurations,
-enabling posting jobs on the company website, and on external job boards.
-
-If job positions are to be posted to the company's website, enable the :guilabel:`Online Posting`
-option.
-
-.. note::
-   The :guilabel:`Online Posting` is only available if the :doc:`Website <../websites/website>`
-   application is also installed.
-
-The **Recruitment** app can post job positions directly to a job board. To enable this, click
-:icon:`oi-arrow-right` :guilabel:`Choose a Job Board`, and the required module is presented, if not
-already installed. Click :guilabel:`Install` on the corresponding module, then the main Odoo
-dashboard loads after a successful installation.
-
-Open the **Recruitment** app, and navigate to :menuselection:`Recruitment app --> Configuration -->
-Settings`. The corresponding job board credentials are listed. Enter the :guilabel:`Username` and
-:guilabel:`Password` for the job board. Click the :guilabel:`Save` button after making any changes.
-
-.. note::
-   Currently, the only job board integration with Odoo is Monster.com.
-
 Process
 -------
 
@@ -387,6 +362,7 @@ appears in the chatter.
 
 .. seealso::
    - :doc:`recruitment/new_job`
+   - :doc:`recruitment/post_job`
    - :doc:`recruitment/add-new-applicants`
    - :doc:`recruitment/schedule_interviews`
    - :doc:`recruitment/offer_job_positions`
@@ -400,6 +376,7 @@ appears in the chatter.
    :titlesonly:
 
    recruitment/new_job
+   recruitment/post_job
    recruitment/recruitment-flow
    recruitment/add-new-applicants
    recruitment/schedule_interviews
