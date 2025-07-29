@@ -317,7 +317,7 @@ information on the blank contract template form that appears:
   <payroll/structure-types>` from the drop-down menu.
 - :guilabel:`Department`: Select the department the contract template applies to from the drop-down
   menu. If blank, the template applies to all departments.
-- :guilabel:`Job Position`: Select the :ref:`job position <payroll/job-positions>` the contract
+- :guilabel:`Job Position`: Select the :doc:`job position <../recruitment/new_job>` the contract
   template applies to from the drop-down menu. If blank, the template applies to all job positions.
 - :guilabel:`Contract Type`: Select the type of contract from the drop-down menu. This list is the
   same as the *employment type*.
