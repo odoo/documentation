@@ -4,354 +4,138 @@
 Payroll
 =======
 
-Odoo *Payroll* is used to process work entries and create payslips for employees. *Payroll* works in
-conjunction with other Odoo apps, such as *Employees*, *Time Off*, *Attendances*, and *Planning*.
+Odoo's **Payroll** app is used to calculate employees' worked time in conjunction with other Odoo
+apps, such as **Employees**, **Time Off**, **Attendances**, and **Planning**, and create
+corresponding payslips.
 
-The *Payroll* app helps ensure there are no issues or conflicts when validating work entries. It
-also handles country-specific localizations to ensure payslips follow local rules and taxes, and
-allows for salary assignments.
+When an employee is hired, they must sign a :doc:`contract <payroll/contracts>`. The contract
+outlines how the employee is compensated, including the salary structure and rules their pay is
+calculated from, when they work (their `working schedule`), and what benefits they receive.
+
+.. important::
+   It is critical to install the correct :doc:`country-specific localization
+   <payroll/payroll_localizations>`, as this configures all local and national rules, regulations,
+   and applicable taxes for the selected country.
+
+In addition to the employee contract, any :doc:`salary attachments <payroll/salary_attachments>`
+must be configured before running payroll.
+
+When it is time to run payroll according to the business's schedule (monthly, weekly, bi-weekly,
+etc.), :doc:`payslips <payroll/payslips>` can be created individually or in :doc:`groups
+<payroll/batches>`. Odoo calculates when the employees worked based on their :doc:`work entries
+<payroll/work_entries>`. Work entries are created according to their :doc:`contracts
+<payroll/contracts>`, based on information from the **Attendances**, **Planning**, or **Timesheets**
+apps. Any errors with work entries **must** be resolved *before* continuing to process payroll.
+
+After all issues or conflicts are resolved, payslips are :ref:`processed <payroll/process>`, and
+then :ref:`employees are paid <payroll/pay-employee>`, either with a wire transfer or a physical
+check.
+
+.. note::
+   It is possible to pay employees with cash, but this is not recommended.
 
 Settings
 ========
 
-Configure the *Payroll* app by navigating to :menuselection:`Payroll app --> Configuration -->
-Settings`. The various settings for accounting, localizations, time off, alerts, and payslips are
-specified here.
+Before running payroll, various settings for the **Payroll** app **must** be configured. Navigate to
+:menuselection:`Payroll app --> Configuration --> Settings`. The various settings for
+:ref:`accounting <payroll-accounting>`, :ref:`localizations <payroll-localizations>`, :ref:`time off
+<payroll-time-off>`, and :ref:`general payroll settings <payroll-payroll-settings>` are specified
+here.
 
 .. _payroll-accounting:
 
 Accounting
 ----------
 
-The accounting section of the configuration menu relates to three options:
+Configure the following in the accounting section of the configuration menu:
 
-- :guilabel:`Payroll Entries`: enable this option to post payroll slips in accounting.
-- :guilabel:`Payroll SEPA`: enable this option to create SEPA payments.
-- :guilabel:`Batch Account Move Lines`: enable this option to have a single account move line
-  created from all the accounting entries from the same period. This disables the generation of
-  single payments.
+- :guilabel:`Payroll Entries`: Enable this option to post payroll slips in the **Accounting** app,
+  in a `Salaries` box on the main dashboard.
+- :guilabel:`Payroll SEPA`: Enable this option to create :abbr:`SEPA (Single Euro Payments Area)`
+  payments.
+- :guilabel:`Batch Account Move Lines`: Enable this option to have a single account move line
+  created from all the accounting entries of the same period. This anonymizes accounting entries and
+  disables the creation of individual payments.
+
+.. _payroll-localizations:
+
+Localizations
+-------------
+
+*Localizations* are country-specific settings preconfigured in Odoo at the creation of the database,
+which account for all taxes, fees, and allowances for that particular country.
+
+The :guilabel:`Localization` section of the **Payroll** app :guilabel:`Settings` page includes
+specific settings that need to be configured for the specific country.
+
+The settings and options shown in this section vary, depending on the :doc:`localization enabled
+<payroll/payroll_localizations>` for the database.
+
+.. warning::
+   It is **not** recommended to alter the localization settings, unless specifically required due to
+   special circumstances. For example, a new law is passed that changes basic salary rules, or a
+   company is exempt from specific taxes.
+
+.. note::
+   Odoo can handle multi-company configurations. This is generally done when there is a main company
+   or office location, such as a headquarters, with other offices or branches located either in the
+   country or internationally, that fall under that main company or headquarters. In Odoo, each
+   company, including the headquarters, **must** be set up as its own company or branch using the
+   multi-company method.
+
+   Each company can have a different localization setting, since locations can vary worldwide, where
+   rules and laws differ.
+
+   For more information on companies, refer to the :doc:`companies <../general/companies>`
+   documentation, or the :doc:`multi-company <../general/companies/multi_company>` documentation,
+   which covers how to set up multiple companies.
+
+.. seealso::
+   :doc:`payroll/payroll_localizations`
+
+.. _payroll-time-off:
 
 Time off
 --------
 
-- :guilabel:`Deferred Time Off`: if time off is taken after payslips are validated, the time off
-  needs to be applied to the following pay period. Select the person that will be notified for
-  these specific time off situations using the drop-down menu in the :guilabel:`Responsible` field.
+:guilabel:`Deferred Time Off`: If time off is taken *after* payslips are validated, the time off
+must be applied to the following pay period to avoid cancelling then reprocessing payslips. Select
+the person responsible for these specific time off situations using the drop-down menu in the
+:guilabel:`Responsible` field.
 
-  .. example::
-     An employee is paid on the 15th of the month and the last day of the month. Payslips are
-     typically processed a day before.
+.. example::
+   An employee is paid on the 15th of the month and the last day of the month. Payslips are
+   typically processed one day before.
 
-     If an employee's payslip is approved and processed on the 30th, but that same employee takes an
-     unexpected sick day on the 31st, the time off needs to be logged.
+   An employee's payslip is approved and processed on the 30th, but that same employee took an
+   unexpected sick day on the 31st.
 
-     Since the employee is already paid for a regular work day on the 31st, to keep the time off
-     balances correct, the sick day is moved/applied to the 1st of the next month (the next pay
-     period).
+   Since the employee was already paid for a regular workday on the 31st, to keep the time off
+   balances correct, the sick day is applied to the 1st of the next month (during the next pay
+   period).
+
+.. _payroll-payroll-settings:
 
 Payroll
 -------
 
-- :guilabel:`Contract Expiration Notice Period`: enter the number of :guilabel:`Days` before a
-  contract expires, and Odoo notifies the responsible person about the upcoming expiration at that
-  time.
-- :guilabel:`Work Permit Expiration Notice Period`: enter the number of :guilabel:`Days` before a
-  work permit expires, and Odoo notifies the responsible person about the upcoming expiration at
-  that time.
-- :guilabel:`Payslip PDF Display`: enable this option to show the payslip's PDF when the state is
+The payroll section allows for the installation of a :doc:`payroll localization
+<payroll/payroll_localizations>`. Click :icon:`oi-arrow-right` :guilabel:`Choose a Payroll
+Localization` and a Kanban view of all available payroll localizations loads. Click
+:guilabel:`Install` on the desired localization to install it. If a localization has been installed,
+only a :guilabel:`Module Info` button appears for that specific localization.
+
+Once a localization has been installed, configure the following fields:
+
+- :guilabel:`Contract Expiration Notice Period`: Enter the number of :guilabel:`Days` before a
+  contract expires, when Odoo notifies the responsible person about the upcoming expiration.
+- :guilabel:`Payslip PDF Display`: Enable this option to show the payslip's PDF when the state is
   validated.
-
-.. _payroll/working-times:
-
-Working schedules
------------------
-
-When creating payslips, it is sometimes necessary to add other entries for specific circumstances,
-like expenses, reimbursements, or deductions. These other inputs can be configured by navigating to
-:menuselection:`Payroll app --> Configuration --> Salary --> Other Input Types`.
-
-To create a new input type, click the :guilabel:`New` button. Enter the :guilabel:`Description`, the
-:guilabel:`Code`, and which structure it applies to in the :guilabel:`Availability in Structure`
-field.
-
-.. important::
-   The :guilabel:`Code` is used in the salary rules to compute payslips. If the
-   :guilabel:`Availability in Structure` field is left blank, it indicates that the new input type
-   is available for all payslips and is not exclusive to a specific structure.
-
-.. _payroll/salary-attachment-types:
-
-Salary package configurator
-===========================
-
-The various options under the :guilabel:`Salary Package Configurator` section of the
-:menuselection:`Payroll app --> Configuration --> Salary Package Configurator` menu all affect an
-employee's potential salary.
-
-Depending on what information an employee enters (such as deductions, dependents, etc.), their
-salary is adjusted accordingly. When an applicant applies for a job on the company website, the
-sections under :guilabel:`Salary Package Configurator` directly affect what the applicant sees, and
-what is populated, as the applicant enters information.
-
-Benefits
---------
-
-When offering potential employees a position, there can be certain benefits set in Odoo, in addition
-to the salary, to make an offer more appealing (such as extra time off, the use of a company car,
-reimbursement for a phone or internet, etc.).
-
-To view the benefits, go to :menuselection:`Payroll app --> Configuration --> Salary Package
-Configurator: Benefits`. Benefits are grouped by :guilabel:`Structure type`, and the benefit listed
-for a particular structure type is only available for that specific structure.
-
-.. image:: payroll/benefits.png
-   :align: center
-   :alt: A list view of all the benefits available for each structure type.
-
-.. example::
-   A company has two structure types, one labeled :guilabel:`Employee`, and another labeled
-   :guilabel:`Intern`. The :guilabel:`Employee` structure type contains the benefit of using a
-   company car, while the :guilabel:`Intern` structure type has a meal voucher benefit available.
-
-   A person hired under the :guilabel:`Employee` structure type can use the company car benefit, but
-   cannot have meal vouchers. A person hired under the :guilabel:`Intern` structure type would have
-   meal voucher benefits available to them, not the use of a company car.
-
-To make a new benefit, click the :guilabel:`New` button, and enter the information in the fields on
-the blank benefits form.
-
-The various fields for creating a benefit are as follows:
-
-General information section
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-- :guilabel:`Contract Related Field`: select from the drop-down menu a field from the contract.
-  The choosen value from the employee will be recorded to that field.
-- :guilabel:`Benefits`: enter the name for the benefit. This field is required.
-- :guilabel:`Benefit Type`: select from the drop-down menu what type of benefit it is. Select from
-  :guilabel:`Monthly Benefit in Kind`, :guilabel:`Monthly Benefit in Net`, :guilabel:`Monthly
-  Benefit in Cash`, :guilabel:`Yearly Benefits in Cash`, or :guilabel:`Non Financial Benefits`. This
-  field is required.
-- :guilabel:`Cost Field`: select from the drop-down menu a field from the contract. The field will
-  define the cost of the benefit and by extention the impact on the salary,
-  :guilabel:`Wage`, :guilabel:`Wage with Holidays`, and :guilabel:`Work time rate`. Depending on the
-  localization settings, additional options are available.
-- :guilabel:`Related Type`: select from the drop-down menu what type of benefit it is. Select from
-  :guilabel:`Monthly Benefit in Kind`, :guilabel:`Monthly Benefit in Net`, :guilabel:`Monthly
-  Benefit in Cash`, :guilabel:`Yearly Benefits in Cash`, or :guilabel:`Non Financial Benefits`. This
-  field is required.
-- :guilabel:`Impacts Net Salary`: tick the checkbox if the benefit should impact the employee's net
-  salary.
-- :guilabel:`Requested Documents`: select any document that is required to be submitted for this
-  benefit, from the drop-down menu.
-- :guilabel:`Mandatory Benefits`: using the drop-down menu, select the benefit that is required in
-  order for this specific benefit to be offered to the employee.
-
-  For example, a benefit for car insurance would populate `Company Car` in this field. This would
-  allow the car insurance benefit to **only** be displayed if the employee has selected/enabled the
-  benefit of a company car.
-- :guilabel:`Salary Structure Type`: select from the drop-down menu which salary structure type this
-  benefit applies to. This field is required.
-- :guilabel:`Unit of Measure`: select the metric that the benefit is granted, using the drop-down
-  menu. The options are :guilabel:`Days`, :guilabel:`Percent`, or :guilabel:`Currency`.
-
-.. image:: payroll/new-benefit.png
-   :align: center
-   :alt: A new benefit form filled out for an internet subscription.
-
-Display section
-~~~~~~~~~~~~~~~
-
-- :guilabel:`Show Name`: tick the checkbox to have the benefit name appear in the salary package
-  configurator.
-- :guilabel:`Display Type`: select from the drop-down menu how this benefit is displayed. The
-  options are :guilabel:`Always Selected`, :guilabel:`Dropdown`, :guilabel:`Dropdown Group`,
-  :guilabel:`Slider`, :guilabel:`Radio Buttons`, :guilabel:`Manual Input`, or :guilabel:`Text`. This
-  field is required.
-
-  Depending on the selection made, additional configurations need to be made. For example, if
-  :guilabel:`Radio Buttons` is selected, the individual radio buttons must be entered.
-- :guilabel:`Icon`: an icon from the `Font Awesome 4 library <https://fontawesome.com/v4/icons/>`_
-  can be visible for this benefit. Enter the text code for the icon in this field. For example, to
-  display a suitcase icon, the code `fa fa-suitcase` is entered on this line.
-- :guilabel:`Hide Description`: tick the checkbox to hide the benefit description if the benefit is
-  not selected by the employee.
-- :guilabel:`Folded`: if the benefit should be folded, or hidden, because it is dependant on another
-  benefit selection, tick the checkbox. The following fields appear when this is active:
-
-  - :guilabel:`Fold Label`: enter a name for the folded section of the benefit.
-  - :guilabel:`Fold Res Field`: select the contract field this benefit is tied to using the
-    drop-down menu. If this field is selected on the contract, then this benefit becomes visible.
-
-Activity section
-~~~~~~~~~~~~~~~~
-
-- :guilabel:`Activity Type`: from the drop-down menu, select the activity type that is automatically
-  created when this benefit is selected by the employee.
-- :guilabel:`Activity Creation`: select when the activity is created, either when the
-  :guilabel:`Employee signs his contract`, or when the :guilabel:`Contract is countersigned`. Click
-  the radio button next to the desired selection.
-- :guilabel:`Activity Creation Type`: select the parameters for when the activity is created, either
-  :guilabel:`When the benefit is set` or :guilabel:`When the benefit is modified`. Click the radio
-  button next to the desired selection.
-- :guilabel:`Assigned to`: select the user the activity is automatically assigned to, using the
-  drop-down menu.
-
-Sign section
-~~~~~~~~~~~~
-
-- :guilabel:`Template to Sign`: if the employee is required to sign a document when selecting this
-  benefit, select the document template from the drop-down menu.
-
-  For example, a benefit regarding the use of a company car may require the employee to sign a
-  document acknowledging the company's car policies.
-
-Description tab
-~~~~~~~~~~~~~~~
-
-Provide any additional information in this tab to help clarify the benefit.
-
-Personal info
--------------
-
-Every employee in Odoo has an *employee card* which is created when a candidate becomes an
-employee. This card includes all of their personal information, resume, work information, and
-documents.
-
-The personal information is gathered from the salary package configurator section that a
-candidate fills out after being offered a position. This personal information is then transferred to
-the employee card when they are hired.
-
-To view an employee's card, go to the main :menuselection:`Employees` app dashboard, and click on
-the employee's card.
-
-.. note::
-   An employee card can be thought of as an employee personal file.
-
-The :guilabel:`Personal Info` section lists all of the fields that are available to enter on the
-employee's card. To access this section, go to :menuselection:`Payroll app --> Configuration -->
-Salary Package Configurator: Personal Info`.
-
-.. image:: payroll/personal-info.png
-   :align: center
-   :alt: A list of all the personal information that appears on the employee card to enter.
-
-To edit a personal info entry, select an entry from the list on the :guilabel:`Personal Info` page,
-and modify the personal info on the form that appears.
-
-To create a new personal info entry, click the :guilabel:`New` button.
-
-The required fields, aside from entering the :guilabel:`Information` name, are :guilabel:`Related
-Model`, :guilabel:`Related Field`, and :guilabel:`Category`.
-
-Select a :guilabel:`Related Model` from the drop-down menu. :guilabel:`Employee` populates the field
-by default, but the :guilabel:`Bank Account` option is also available if the information is related
-to a bank account, instead.
-
-Select a :guilabel:`Related Field` from the drop-down menu that best describes what kind of personal
-information this entry is, and where it is stored in the backend. Then, select a
-:guilabel:`Category` from the drop-down menu that the personal information should be under, such as
-:guilabel:`Address` or :guilabel:`Personal Documents`.
-
-The two most important fields on the personal info form are :guilabel:`Is Required` and
-:guilabel:`Display Type`.
-
-Checking the :guilabel:`Is Required` box makes the field mandatory on the employee's card. The
-:guilabel:`Display Type` drop-down menu allows for the information to be entered in a variety of
-ways, like a :guilabel:`Text` box, to a customizable :guilabel:`Radio` button, a
-:guilabel:`Checkbox`, a :guilabel:`Document`, and more.
-
-.. image:: payroll/personal-new.png
-   :align: center
-   :alt: New personal information entry.
-
-Resumé
-------
-
-The resumé section, housed within the salary package configurator section of the settings menu, is
-how salary information rules are configured when offering a position to potential employees.
-
-When an offer is sent to a prospective employee, the values for the offer are computed from these
-settings, and appear on the offer page.
-
-To configure this section, navigate to :menuselection:`Payroll app --> Configuration --> Salary
-Package Configurator: Resumé`.
-
-By default, there are three :guilabel:`Salary Structure Types` pre-configured in Odoo:
-:guilabel:`Worker`, :guilabel:`Employee`, and :guilabel:`None`.
-
-Each :guilabel:`Salary Structure Type` has several rules configured. These affect how an offer is
-calculated using that particular :guilabel:`Salary Structure Type`.
-
-To create a new rule, click the :guilabel:`New` button, and a blank :guilabel:`Contract Salary
-Resumé` form loads.
-
-Enter the following information on the form:
-
-- :guilabel:`Information`: type in a name for this field.
-- :guilabel:`Category`: select the category this value is housed under, using the drop-down menu.
-  The default options are :guilabel:`Monthly Salary`, :guilabel:`Monthly Benefits`,
-  :guilabel:`Yearly Benefits`, and :guilabel:`Total`.
-
-  New categories can be made if needed.
-
-  Click the :guilabel:`New` button, then enter the name for the new category in the :guilabel:`Name`
-  field. Next, select the :guilabel:`Periodicity` from the drop-down menu, either
-  :guilabel:`Monthly` or :guilabel:`Yearly`. Last, enter a number for the sequence. This corresponds
-  to where this rule appears in the  :guilabel:`Salary Structure Type` rule list.
-
-  Finally, click :guilabel:`Save & Close`.
-- :guilabel:`Impacts Monthly Total`: tick the checkbox if this value is added in the monthly total
-  calculation.
-- :guilabel:`Unit of Measure`: select what kind of value this rule is, either :guilabel:`Currency`,
-  :guilabel:`Days`, or :guilabel:`Percent`.
-
-  :guilabel:`Currency` is for a set monetary value, :guilabel:`Days` is for compensation in the form
-  of time off, and :guilabel:`Percent` is for a monetary value awarded that is based upon another
-  metric, such as commissions.
-- :guilabel:`Salary Structure Type`: select which :guilabel:`Salary Structure Type` this rule is
-  nested under, from the drop-down menu.
-- :guilabel:`Value Type`: select how the value is computed, using the drop-down menu. The default
-  options are :guilabel:`Fixed Value`, :guilabel:`Contract Value`, :guilabel:`Payslip Value`,
-  :guilabel:`Sum of Benefits Values`, and :guilabel:`Monthly Total`.
-- :guilabel:`Code`: select the code this rule applies to from the drop-down menu.
-
-.. image:: payroll/resume-net.png
-   :align: center
-   :alt: The net wage rule form filled out, with all the information for net pay.
-
-Jobs
-====
-
-Since the *Payroll* application is responsible for paying employees for specific job positions, the
-complete list of job positions can be found in both the *Payroll* and *Recruitment* applications.
-
-.. _payroll/job-positions:
-
-Job positions
--------------
-
-The job positions listed in the *Payroll* application are identical to the job positions listed in
-the *Recruitment* application. If a new job position is added in the *Recruitment* application, it
-is also visible in the *Payroll* application, and vice versa.
-
-To view the job positions, navigate to :menuselection:`Payroll app --> Configuration --> Jobs: Job
-Positions`.
-
-A list of all the job positions appear, along with the corresponding department, on the
-:guilabel:`Job Position` page.
-
-.. image:: payroll/job-positions.png
-   :align: center
-   :alt: A list of all the job positions and corresponding departments.
-
-To create a new job description, click the :guilabel:`New` button and a job form appears.
-
-Enter the information on the form for the new position. The information is identical as to the
-information entered when creating a new job position in the *Recruitment* application.
-
-Refer to the :doc:`../hr/recruitment/new_job` documentation for more details on how to fill out this
-form.
+- :guilabel:`Work Permit Expiration Notice Period`: Enter the number of :guilabel:`Days` before a
+  work permit expires, when Odoo notifies the responsible person about the upcoming expiration.
+- :guilabel:`YTD Reset Date`: Enter the date when the :abbr:`YTD (Year To Date)` is reset to. By
+  default, this field is set to January 1st.
 
 .. seealso::
    - :doc:`payroll/contracts`
