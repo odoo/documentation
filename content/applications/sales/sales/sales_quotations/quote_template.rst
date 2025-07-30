@@ -96,14 +96,6 @@ Both options, :guilabel:`Online Signature` and :guilabel:`Online Payment` can be
 simultaneously, in which case the customer must provide **both** a signature **and** a payment to
 confirm an order.
 
-In the :guilabel:`Recurring Plan` field, choose from a variety of pre-configured amounts of time
-(e.g. :guilabel:`Monthly`, :guilabel:`Quarterly`, etc.) to designate how often this quotation
-template should occur.
-
-.. note::
-   The :guilabel:`Recurring Plan` field **only** applies to subscription plans. For more
-   information, check out the documentation on :doc:`../../subscriptions/plans`.
-
 Lines tab
 ---------
 
