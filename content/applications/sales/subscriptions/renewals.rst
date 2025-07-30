@@ -126,4 +126,3 @@ related to this specific subscription.
 
 .. seealso::
    - :doc:`../subscriptions`
-   - :doc:`plans`
