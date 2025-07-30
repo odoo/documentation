@@ -164,5 +164,4 @@ If :guilabel:`Create next activity` is selected in the :guilabel:`Action To Do` 
 
 .. seealso::
   - :doc:`../subscriptions`
-  - :doc:`plans`
   - :doc:`../../essentials/in_app_purchase`
