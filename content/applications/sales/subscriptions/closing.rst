@@ -20,8 +20,6 @@ customer portal.
    :align: center
    :alt: The Closable option on a recurring plan form in Odoo Subscriptions.
 
-.. seealso::
-   :doc:`Configure recurring plans <plans>`
 
 Close a subscription
 ====================
@@ -103,4 +101,3 @@ In addition, the specified :guilabel:`Close Reason` appears on the subscription 
 
 .. seealso::
    - :doc:`../subscriptions`
-   - :doc:`plans`

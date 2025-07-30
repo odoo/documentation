@@ -15,29 +15,29 @@ for recurring billing. The app integrates with other Odoo modules such as **Invo
 
 .. cards::
 
-   .. card:: Subscription plans
-      :target: subscriptions/plans
-      :large:
-
-      Customize subscription plan templates tailored to various product offerings
-
    .. card:: Renew a subscription
-      :target: subscriptions/plans
+      :target: subscriptions/renewals
       :large:
 
       Understand the core management activity for subscriptions
 
    .. card:: Upsell a subscription
-      :target: subscriptions/plans
+      :target: subscriptions/upselling
       :large:
 
       Offer more value for current subscribers on the same sales order
 
-   .. card:: Integrate subscriptions with eCommerce
-      :target: subscriptions/plans
+   .. card:: Close a subscription
+      :target: subscriptions/closing
       :large:
 
-      Offer subscription products with an Odoo **eCommerce** app integration
+      Customize subscription plan templates tailored to various product offerings
+
+   .. card:: eCommerce integration
+      :target: subscriptions/ecommerce
+      :large:
+
+      Offer subscription products through your Odoo eCommerce store
 
 .. seealso::
    - `Odoo Tutorials: Subscriptions <https://www.odoo.com/slides/subscription-20>`_
@@ -288,7 +288,6 @@ tab, under the :guilabel:`SALES` section.
    :titlesonly:
 
    subscriptions/ecommerce
-   subscriptions/plans
    subscriptions/upselling
    subscriptions/renewals
    subscriptions/closing
