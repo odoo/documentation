@@ -62,6 +62,6 @@ The Odoo mobile apps are available for download on the `Google Play Store
 <https://apps.apple.com/app/odoo/id1272543640>`_.
 
 .. important::
-   The iOS app cannot be updated and will be deprecated at some point in the future.
+   The iOS app might not be updated and might be deprecated at some point in the future.
 
 While the store apps support multi-accounts, they are not compatible with SS0 authentication.
