@@ -213,7 +213,7 @@ Here are a few things to take into consideration before writing a test
 
 .. note:: Remember that ``onchange`` only applies in the Form views, not by changing the attributes
   in python. This also applies in the tests. If you want to emulate a Form view, you can use
-  ``odoo.tests.common.Form``.
+  ``odoo.tests.Form``.
 
 The tests should be in a ``tests`` folder at the root of your module. Each test file name
 should start with `test_` and be imported in the ``__init__.py`` of the test folder. You shouldn't
