@@ -105,4 +105,3 @@ Status`.
 
 .. seealso::
    - :doc:`../subscriptions`
-   - :doc:`plans`

@@ -184,4 +184,11 @@ For example, if the next invoice date is July 1st, and the :guilabel:`Automatic 
 
 .. seealso::
    - :doc:`../subscriptions`
+<<<<<<< 5375ccbec2c4d12c83e2966fc176f05f0e9c94b7
    - :doc:`plans`
+||||||| 5e37078ad18cbd7bfc69f23afbd800a4a0aa6831
+   - :doc:`plans`
+   - :doc:`automatic_alerts`
+=======
+   - :doc:`automatic_alerts`
+>>>>>>> f6c5e2ee5513af7ef25588c7a0332ffca091fcad
