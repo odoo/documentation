@@ -224,7 +224,7 @@ your :guilabel:`Bank` journal on your dashboard.
    :alt: Import CODA files
 
 .. seealso::
-   :ref:`Import bank files <transactions/import>`
+   :ref:`Import bank files <accounting/transactions/import>`
 
 .. _belgium/soda:
 

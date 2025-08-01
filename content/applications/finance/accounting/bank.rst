@@ -30,7 +30,7 @@ Connect a bank for automatic synchronization
 --------------------------------------------
 
 To connect your bank account to your database, go to :menuselection:`Accounting --> Configuration
---> Add a Bank Account`, select your bank in the list, click on :guilabel:`Connect`, and follow the
+--> Add a Bank Account`, select your bank in the list, click :guilabel:`Connect`, and follow the
 instructions.
 
 .. seealso::
@@ -45,7 +45,7 @@ If your banking institution is not available in Odoo, or if you don't want to co
 account to your database, you can configure your bank account manually.
 
 To manually add a bank account, go to :menuselection:`Accounting --> Configuration --> Add a Bank
-Account`, click on :guilabel:`Record transactions manually` (at the bottom right), fill out the bank
+Account`, click :guilabel:`Record transactions manually` (at the bottom right), fill out the bank
 information, and click :guilabel:`Create`.
 
 .. note::
@@ -59,7 +59,7 @@ Create a cash journal
 ---------------------
 
 To create a new cash journal, go to :menuselection:`Accounting --> Configuration --> Accounting:
-Journals`, click on :guilabel:`Create` and select :guilabel:`Cash` in the :guilabel:`Type` field.
+Journals`, click :guilabel:`Create` and select :guilabel:`Cash` in the :guilabel:`Type` field.
 
 For more information on the accounting information fields, read the
 :ref:`accounting/bank/configuration` section of this page.
@@ -125,8 +125,8 @@ You can edit the currency used to enter the transactions.
 Account number
 --------------
 
-If you need to **edit your bank account details**, click on the external link arrow next to your
-:guilabel:`Account Number`. On the account page, click on the external link arrow next to your
+If you need to **edit your bank account details**, click the external link arrow next to your
+:guilabel:`Account Number`. On the account page, click the external link arrow next to your
 :guilabel:`Bank` and update your bank information accordingly. These details are used when
 registering payments.
 
