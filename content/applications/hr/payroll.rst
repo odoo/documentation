@@ -31,37 +31,6 @@ The accounting section of the configuration menu relates to three options:
   created from all the accounting entries from the same period. This disables the generation of
   single payments.
 
-.. _payroll-localizations:
-
-Localizations
--------------
-
-*Localizations* are country-specific settings pre-configured in Odoo at the creation of the
-database, which account for all taxes, fees, and allowances for that particular country.
-
-The :guilabel:`Localization` section of the *Payroll* app :guilabel:`Settings` page may include
-specific settings that need to be set for the specific country. This selection also provides a
-detailed view of all benefits provided to employees.
-
-The settings and options shown in this section varies, depending on the localization enabled for the
-database.
-
-.. warning::
-   It is **not** recommended to alter the localization settings, unless specifically required.
-
-.. note::
-   Odoo can handle a multi-company configuration. This is generally done when there is a main
-   company or office location, such as a headquarters, and there are other offices/branches around
-   the country or globe, that fall under that main company or headquarters. In Odoo, each company,
-   including the headquarters, would be set up as their own company/branch using the multi-company
-   method.
-
-   Each individual company can have a different localization setting, since locations can vary
-   anywhere in the world, where rules and laws differ.
-
-   For more information on companies, refer to the :doc:`Companies <../general/companies>`
-   documentation, which covers how to set up companies.
-
 Time off
 --------
 
