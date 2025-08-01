@@ -85,6 +85,8 @@ Once an |sdd| mandate is active, subsequent |sdd| payments can be generated via 
 active |sdd| mandate can also use this payment method for :doc:`online purchases
 <../../payment_providers/sdd>`.
 
+.. _accounting/batch_sdd/close-revoke-mandate:
+
 Closing or revoking a mandate
 -----------------------------
 
@@ -100,7 +102,8 @@ date. However, payments that have already been registered are still included in 
 XML file <accounting/batch_sdd/XML>`.
 
 .. warning::
-   Closed or revoked mandates cannot be reactivated.
+   - Mandates are automatically closed 36 months after the date of the last collection.
+   - Closed or revoked mandates cannot be reactivated.
 
 .. _accounting/batch_sdd/XML:
 
