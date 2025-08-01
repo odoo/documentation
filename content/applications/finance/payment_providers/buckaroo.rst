@@ -35,3 +35,88 @@ Configuration on Odoo
 
 .. seealso::
    :doc:`../payment_providers`
+
+Supported payment methods and features in Odoo
+==============================================
+
+.. note::
+   Buckaroo doesn't support manual capture, refunds, or tokenization.
+
+.. |V| replace:: :icon:`fa-check`
+.. |X| replace:: :icon:`fa-times`
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: auto
+
+   * - Payment method
+     - Currencies
+     - Countries
+   * - AfterPay
+     - EUR
+     - Austria, Belgium, Finland, Germany, Netherlands
+   * - Alipay
+     - All
+     - All
+   * - Bancontact
+     - EUR
+     - Belgium
+   * - Bank reference
+     - All
+     - All
+   * - Belfius
+     - EUR
+     - Belgium, Netherlands
+   * - Billink
+     - EUR
+     - Belgium, Netherlands
+   * - Card
+     - All
+     - All
+   * - Cartes Bancaires
+     - EUR
+     - France
+   * - EPS
+     - EUR
+     - Austria
+   * - iDEAL
+     - EUR
+     - Netherlands
+   * - in3
+     - EUR
+     - Netherlands
+   * - KBC/CBC
+     - EUR
+     - Belgium
+   * - Klarna
+     - AUD, CAD, CHF, CZK, DKK, EUR, GBP, NOK, NZD, PLN, SEK, USD
+     - Australia, Austria, Belgium, Canada, Czech Republic, Denmark, Finland, France, Germany,
+       Greece, Ireland, Italy, Netherlands, New Zealand, Norway, Poland, Portugal, Spain, Sweden,
+       Switzerland, United Kingdom, United States
+   * - P24
+     - EUR, PLN
+     - Poland
+   * - PayPal
+     - CHF, DKK, EUR, GBP, NOK, PLN, USD
+     - All
+   * - PostePay
+     - EUR
+     - Italy
+   * - SEPA Direct Debit
+     - EUR
+     - `SEPA countries
+       <https://www.europeanpaymentscouncil.eu/document-library/other/epc-list-sepa-scheme-countries>`_
+   * - Sofort
+     - CHF, EUR
+     - Austria, Belgium, Germany, Italy, Netherlands, Poland, Spain, Switzerland, United Kingdom
+   * - Tinka
+     - EUR
+     - Netherlands
+   * - Trustly
+     - CZK, DKK, EUR, GBP, NOK, SEK
+     - Austria, Belgium, Denmark, Estonia, Finland, Germany, Latvia, Lithuania, Netherlands, Norway,
+       Spain, Sweden, United Kingdom
+   * - WeChatPay
+     - AUD, CAD, CNY, EUR, GBP, HKD, JPY, NZD, SGD, USD
+     - All
