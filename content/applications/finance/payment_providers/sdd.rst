@@ -9,8 +9,8 @@ facilitates standardized and simplified electronic payments in euros across part
 
 SEPA Direct Debit (SDD) is a payment provider that allows future payments to be collected from
 customers' bank accounts based on a signed :ref:`SEPA Direct Debit mandate
-<accounting/batch_sdd/sdd_mandates>`. This mandate authorizes the recipient to automatically
-initiate one-time or :doc:`recurring </applications/sales/subscriptions>` payments using |sdd|.
+<accounting/batch_sdd/sdd_mandates>`. This is particularly useful for recurring payments based on a
+:doc:`subscription </applications/sales/subscriptions>`.
 
 .. important::
    To use the SEPA Direct Debit (SDD) payment provider and create :ref:`SEPA Direct Debit mandates
@@ -21,7 +21,12 @@ initiate one-time or :doc:`recurring </applications/sales/subscriptions>` paymen
      :guilabel:`Creditor Identifier` must be defined in the :ref:`Accounting or Invoicing settings
      <accounting/batch_sdd/sepa-configuration>`.
 
-To configure **SEPA Direct Debit**:
+.. _sdd/configuration:
+
+Configuration
+=============
+
+To configure **SEPA Direct Debit**, follow these steps:
 
 #. :ref:`Navigate to the SEPA Direct Debit payment provider <payment_providers/supported_providers>`.
 #. In the :guilabel:`Configuration` tab, select whether the memo or :guilabel:`Communication` to be
@@ -60,16 +65,19 @@ Customers selecting |sdd| as a payment method are prompted to enter their IBAN t
 
 The |sdd| mandate is then automatically created in :guilabel:`Draft` based on the provided IBAN. To
 validate the information, customers must confirm each new mandate with a successful bank transfer of
-the expected amount **using the specified payment reference (communication)**. Once this initial
-payment is received and reconciled, the mandate is automatically validated and updated to the
-:guilabel:`Active` status. Once a mandate is active, it is reused for all subsequent payments made
-with the |sdd| payment method. You can then collect them by :ref:`uploading them to your online
-banking interface <accounting/batch_sdd/XML>`.
+the expected amount **using the specified payment reference (communication)** defined in the
+:ref:`SEPA Direct Debit payment provider's form <sdd/configuration>`. Once this initial payment is
+received and :doc:`reconciled <../accounting/bank/reconciliation>`, the mandate is automatically
+validated and updated to the :guilabel:`Active` status. Once a mandate is active, it is reused for
+all subsequent payments made with the |sdd| payment method. You can then collect them by
+:ref:`uploading them to your online banking interface <accounting/batch_sdd/XML>`.
 
 .. seealso::
    :doc:`../accounting/payments/batch_sdd`
 
 .. note::
-   |sdd| is also available as a payment method through other providers, such as :doc:`stripe`,
-   :doc:`adyen`, and :doc:`buckaroo`. In these cases, |sdd| mandates are handled externally by the
-   payment provider.
+   - Mandates are automatically :ref:`closed <accounting/batch_sdd/close-revoke-mandate>` 36 months
+     after the date of the last collection.
+   - |sdd| is also available as a payment method through other providers, such as
+     :doc:`adyen`, :doc:`buckaroo`, and :doc:`stripe`. In these cases, |sdd| mandates are handled
+     externally by the payment provider.
