@@ -19,7 +19,7 @@ not require frequent password updates like regular accounts.
 
 To create an **API user**, proceed as follows:
 
-#. Log into your `Worldline Merchant Portal <https://merchant-portal.preprod.worldline-solutions.com/dashboard>`_,
+#. Log into your `Worldline Merchant Portal <https://merchant-portal.worldline-solutions.com/>`_,
    click the :icon:`fa-th` (:guilabel:`menu`) icon, and select :guilabel:`Back Office`.
 #. Go to :menuselection:`Configuration --> Users` and click on :guilabel:`New User`.
 #. Configure the following fields:
@@ -30,7 +30,10 @@ To create an **API user**, proceed as follows:
    #. Enable :guilabel:`Special user for API`.
 
 .. tip::
-   If you have already set up a user, make sure it is activated without any error.
+   - If you have already set up a user, make sure it is activated without any error.
+   - To test the payment flow with Worldline, use their `test environment
+     <https://merchant-portal.preprod.worldline-solutions.com/>`_ together with the :ref:`test mode
+     <payment_providers/test-mode>`.
 
 .. _worldline/set-up:
 
