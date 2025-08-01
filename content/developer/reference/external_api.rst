@@ -1,22 +1,22 @@
-============
-External API
-============
+================
+External RPC API
+================
+
+.. deprecated:: 19.0
 
 Odoo is usually extended internally via modules, but many of its features and
 all of its data are also available from the outside for external analysis or
 integration with various tools. Part of the :ref:`reference/orm/model` API is
 easily available over XML-RPC_ and accessible from a variety of languages.
 
-.. important::
-   Starting with PHP8, the XML-RPC extension may not be available by default.
-   Check out the `manual <https://www.php.net/manual/en/xmlrpc.installation.php>`_
-   for the installation steps.
+Starting with PHP8, the XML-RPC extension may not be available by default.
+Check out the `manual <https://www.php.net/manual/en/xmlrpc.installation.php>`_
+for the installation steps.
 
-.. note::
-   Access to data via the external API is only available on *Custom* Odoo pricing plans. Access to
-   the external API is not available on *One App Free* or *Standard* plans. For more information
-   visit the `Odoo pricing page <https://www.odoo.com/pricing-plan>`_ or reach out to your Customer
-   Success Manager.
+Access to data via the external API is only available on *Custom* Odoo pricing plans. Access to
+the external API is not available on *One App Free* or *Standard* plans. For more information
+visit the `Odoo pricing page <https://www.odoo.com/pricing-plan>`_ or reach out to your Customer
+Success Manager.
 
 .. seealso::
    - :doc:`Tutorial on web services <../howtos/web_services>`
