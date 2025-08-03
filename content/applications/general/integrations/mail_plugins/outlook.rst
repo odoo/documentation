@@ -54,6 +54,8 @@ then on :guilabel:`Add from file...`
    :align: center
    :alt: Custom add-ins in Outlook
 
+Note: in some cases, the Get Add-ins button may be unavailable. If you see this issue, navigate to aka.ms/olksideload
+
 For the next step, attach the `manifest.xml` file downloaded above, and press :guilabel:`OK`. Next,
 read the warning and click on :guilabel:`Install`.
 
