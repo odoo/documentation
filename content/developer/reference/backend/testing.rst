@@ -759,7 +759,7 @@ You can then update :file:`__manifest__.py` to add :file:`your_tour.js` in the a
         'data/your_tour.xml',
      ],
      'assets': {
-         'web.assets_backend': [
+         'web.assets_frontend': [
              'your_module/static/src/js/tours/your_tour.js',
          ],
      },
