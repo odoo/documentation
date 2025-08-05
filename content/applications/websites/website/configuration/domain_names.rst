@@ -450,3 +450,8 @@ the one you want to configure. In the :guilabel:`Domain` field, enter the addres
    :guilabel:`Company` under :menuselection:`Website --> Configuration --> Settings`. Doing so
    indicates Odoo which URL to use as the :ref:`base URL <domain-name/web-base-url>` according to
    the company in use.
+
+.. tip::
+   When migrating from an existing website, make sure to set up the necessary redirects before
+   adding your domain name. For example, if a previous URL like `/path/about/something` existed,
+   redirect it to the new corresponding page, such as `/something`.
