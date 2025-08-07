@@ -45,9 +45,9 @@ Analytics`.
 
    .. warning::
       Deactivating the free Plausible.io account linked to your **Odoo Online** database
-      will also invalidate the existing keys, making them unusable. As a result, new
-      keys will be generated, and all historical data linked to the old keys will be lost. If you
-      plan to deactivate the account, it is recommended to back up your data locally beforehand.
+      will also remove the existing keys. As a result, new keys will be generated, while all
+      historical data will remain associated with the old keys. If you plan to deactivate the
+      account, it is recommended to save the existing keys to preserve access to that data.
 
 If your database is hosted on **Odoo.sh** or **On-premise**, or if you wish to use your own
 Plausible.io account, proceed as follows:
