@@ -15,8 +15,9 @@ Create a template
 =================
 
 Any spreadsheet can be saved as a template. Open the relevant spreadsheet or :ref:`create a new one
-<documents/spreadsheet>`. From the menu bar, click :menuselection:`File --> Save as template`.
-Modify the default :guilabel:`Template Name` if needed and click :guilabel:`Confirm`.
+<documents/spreadsheet>`. From the menu bar, click :menuselection:`File -->` :icon:`os-save`
+:menuselection:`Save as template`. Modify the default :guilabel:`Template Name` if needed and
+click :guilabel:`Confirm`.
 
 .. important::
    Once a spreadsheet is saved as a template, any further changes to the open spreadsheet are
@@ -64,5 +65,6 @@ Various actions are possible:
   :guilabel:`Actions`, then :guilabel:`Delete`.
 
 .. tip::
-   Use the download button under the :guilabel:`Spreadsheet file` column to export a template in
-   JSON format. The file can be imported into another database.
+   Click on the link in the :guilabel:`Spreadsheet file` column to download a template in
+   `.osheet.json` format. The file can then be :ref:`uploaded into another database
+   <spreadsheet/manage-spreadsheets/transfer>`.
