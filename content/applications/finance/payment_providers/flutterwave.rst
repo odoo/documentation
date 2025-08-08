@@ -41,4 +41,89 @@ Configuration on Odoo
       Flutterwave Dashboard and then to :menuselection:`Settings --> Account Settings`.
 
 .. seealso::
-   - :doc:`../payment_providers`
+   :doc:`../payment_providers`
+
+Supported payment methods and features in Odoo
+==============================================
+
+.. |V| replace:: :icon:`fa-check`
+.. |X| replace:: :icon:`fa-times`
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: 10 25 25 8 8 8 8 8
+
+   * - Payment method
+     - Currencies
+     - Countries
+     - Manual capture
+     - Partial capture
+     - Refunds
+     - Partial refunds
+     - Tokenization
+   * - Bank account
+     - All
+     - All
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - Bank transfer
+     - INR, NGN
+     - All
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - Card
+     - All
+     - All
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |V|
+   * - Credit Payment
+     - All
+     - All
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - MobileMoney
+     - GHS, RWF, UGX, XAF, XOF, ZMW
+     - Cameroon, Côte d'Ivoire, Ghana, Mali, Rwanda, Senegal, Uganda, Zambia
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - MPesa
+     - KES
+     - Kenya
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - PayPal
+     - CAD, CLP, COP, EGP, EUR, GBP, GHS, GNF, KES, MAD, MWK, NGN, RWF, SLL, STD, TZS, UGX, USD,
+       XAF, XOF, ZAR, ZMW
+     - All
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - USSD
+     - All
+     - All
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|

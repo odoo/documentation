@@ -117,3 +117,266 @@ To allow customers to use the Apple Pay button to pay their eCommerce orders, go
    - :ref:`Express checkout and Google Pay <payment_providers/express_checkout>`
    - :doc:`../payment_providers`
    - :doc:`Use Stripe as a payment terminal in Point of Sale <../../sales/point_of_sale/payment_methods/terminals/stripe>`
+
+Supported payment methods and features in Odoo
+==============================================
+
+.. |V| replace:: :icon:`fa-check`
+.. |X| replace:: :icon:`fa-times`
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: 10 25 25 8 8 8 8 8
+
+   * - Payment method
+     - Currencies
+     - Countries
+     - Manual capture
+     - Partial capture
+     - Refunds
+     - Partial refunds
+     - Tokenization
+   * - ACH Direct Debit
+     - USD
+     - Puerto Rico, United States
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |V|
+   * - Affirm
+     - CAD, USD
+     - Canada, United States
+     - |V|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - Afterpay
+     - AUD, CAD, NZD, USD
+     - Australia, Canada, New Zealand, United States
+     - |V|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - Alipay
+     - All
+     - All
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - BACS Direct Debit
+     - GBP
+     - United Kingdom
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |V|
+   * - Bancontact
+     - EUR
+     - Belgium
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |V|
+   * - BECS Direct Debit
+     - AUD
+     - Australia
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |V|
+   * - Boleto
+     - BRL
+     - Brazil
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - Card
+     - All
+     - All
+     - |V|
+     - |X|
+     - |V|
+     - |V|
+     - |V|
+   * - Cash App Pay
+     - USD
+     - United States
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |V|
+   * - Clearpay
+     - GBP
+     - United Kingdom
+     - |V|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - EPS
+     - EUR
+     - Austria
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - FPX
+     - MYR
+     - Malaysia
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - GrabPay
+     - MYR, PHP, SGD
+     - Malaysia, Philippines, Singapore
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - iDEAL
+     - EUR
+     - Netherlands
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |V|
+   * - Klarna
+     - AUD, CAD, CHF, CZK, DKK, EUR, GBP, NOK, NZD, PLN, SEK, USD
+     - Australia, Austria, Belgium, Canada, Czech Republic, Denmark, Finland, France, Germany,
+       Greece, Ireland, Italy, Netherlands, New Zealand, Norway, Poland, Portugal, Spain, Sweden,
+       Switzerland, United Kingdom, United States
+     - |V|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - MobilePay
+     - DKK, EUR, NOK, SEK
+     - Denmark, Finland
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - Multibanco
+     - EUR
+     - Portugal
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - P24
+     - EUR, PLN
+     - Poland
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - PayNow
+     - SGD
+     - Singapore
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - PayPal
+     - All
+     - All
+     - |V|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - Pix
+     - BRL
+     - Brazil
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - Prompt Pay
+     - THB
+     - Thailand
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - Revolut Pay
+     - GBP
+     - United Kingdom
+     - |V|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - SEPA Direct Debit
+     - EUR
+     - `SEPA countries
+       <https://www.europeanpaymentscouncil.eu/document-library/other/epc-list-sepa-scheme-countries>`_
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |V|
+   * - Sofort
+     - CHF, EUR
+     - Austria, Belgium, Germany, Italy, Netherlands, Poland, Spain, Switzerland, United Kingdom
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |V|
+   * - Twint
+     - CHF
+     - Switzerland
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - UPI
+     - INR
+     - India
+     - |V|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - WeChat Pay
+     - AUD, CAD, CNY, EUR, GBP, HKD, JPY, NZD, SGD, USD
+     - All
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |X|
+   * - Zip
+     - AUD, CAD, NZD, USD
+     - Australia, Canada, New Zealand, United States
+     - |X|
+     - |X|
+     - |V|
+     - |V|
+     - |X|

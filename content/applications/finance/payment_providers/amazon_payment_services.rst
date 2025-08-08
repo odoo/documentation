@@ -42,3 +42,45 @@ Configuration on Odoo
    :guilabel:`Access Code`, :guilabel:`SHA Request Phrase` and :guilabel:`SHA Response Phrase` with
    the values you saved at the step :ref:`payment_providers/aps/configure-dashboard`.
 #. Configure the rest of the options to your liking.
+
+.. seealso::
+   :doc:`../payment_providers`
+
+Supported payment methods and features in Odoo
+==============================================
+
+.. note::
+   Amazon Payment Services doesn't support manual capture, refunds, or tokenization.
+
+.. |V| replace:: :icon:`fa-check`
+.. |X| replace:: :icon:`fa-times`
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: auto
+
+   * - Payment method
+     - Currencies
+     - Countries
+   * - Benefit
+     - BHD
+     - Bahrain
+   * - Card
+     - All
+     - All
+   * - KNET
+     - KWD
+     - Kuwait
+   * - Mada
+     - SAR
+     - Saudi Arabia, United Arab Emirates
+   * - Meeza
+     - All
+     - All
+   * - NAPS
+     - All
+     - All
+   * - OmanNet
+     - All
+     - All

@@ -38,3 +38,31 @@ Configuration on Odoo
 .. seealso::
    - :doc:`../payment_providers`
    - `Mercado Pago Odoo webinar <https://www.youtube.com/watch?v=CX8vPHMb1ic>`_
+
+Supported payment methods and features in Odoo
+==============================================
+
+.. note::
+   Mercado Pago doesn't support manual capture, refunds, or tokenization.
+
+.. |V| replace:: :icon:`fa-check`
+.. |X| replace:: :icon:`fa-times`
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: auto
+
+   * - Payment method
+     - Currencies
+     - Countries
+   * - Card
+     - ARS, BOB, BRL, CLF, CLP, COP, CRC, CUC, CUP, DOP, EUR, GRQ, HNL, MXN, NIO, PAB, PEN, PYG,
+       USD, UYU, VEF, VES
+     - All
+   * - Bank transfer
+     - INR, NGN
+     - All
+   * - Paypal
+     - All
+     - All

@@ -69,3 +69,160 @@ To set up Worldline in Odoo:
 
 .. seealso::
    :doc:`../payment_providers`
+
+Supported payment methods and features in Odoo
+==============================================
+
+.. |V| replace:: :icon:`fa-check`
+.. |X| replace:: :icon:`fa-times`
+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: 10 25 25 8 8 8 8 8
+
+   * - Payment method
+     - Currencies
+     - Countries
+     - Manual capture
+     - Partial capture
+     - Refunds
+     - Partial refunds
+     - Tokenization
+   * - Alipay+
+     - AUD, CHF, DKK, EUR, GBP, HKD, KRW, MYR, NOK, PHP, SEK, THB, USD
+     - Australia, Austria, Belgium, Bulgaria, Costa Rica, Croatia, Cyprus, Denmark, Estonia,
+       Finland, France, Germany, Greece, Hong Kong, Hungary, Iceland, Ireland, Italy, Latvia,
+       Liechtenstein, Lithuania, Luxembourg, Malaysia, Malta, Netherlands, Norway, Philippines,
+       Poland, Portugal, Romania, Slovakia, South Korea, Spain, Sweden, Switzerland, Thailand,
+       United Kingdom
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - Bancontact
+     - EUR
+     - Belgium
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |V|
+   * - Bizum
+     - EUR
+     - Spain
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - Card
+     - All
+     - All
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |V|
+   * - Cofidis
+     - EUR
+     - Belgium, France
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - EPS
+     - EUR
+     - Austria
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - Floa Bank
+     - EUR
+     - Brazil, France, Italy, Portugal, Spain
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - iDEAL
+     - EUR
+     - Netherlands
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - Klarna
+     - AUD, CAD, CHF, CZK, DKK, EUR, GBP, NOK, NZD, PLN, SEK, USD
+     - Australia, Austria, Belgium, Canada, Czech Republic, Denmark, Finland, France, Germany,
+       Greece, Ireland, Italy, Netherlands, New Zealand, Norway, Poland, Portugal, Spain, Sweden,
+       Switzerland, United Kingdom, United States
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - MB WAY
+     - EUR
+     - Portugal
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - Multibanco
+     - EUR
+     - Portugal
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - P24
+     - EUR, PLN
+     - Poland
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - PayPal
+     - All
+     - All
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - PostFinance Pay
+     - CHF, EUR
+     - Austria, Belgium, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, Estonia, Finland,
+       France, Germany, Greece, Hungary, Ireland, Italy, Latvia, Lithuania, Luxembourg, Malta,
+       Netherlands, Poland, Portugal, Romania, Slovakia, Slovenia, Spain, Sweden, Switzerland,
+       United Kingdom
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |V|
+   * - Twint
+     - CHF
+     - Switzerland
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+   * - WeChat Pay
+     - AUD, CAD, CNY, EUR, GBP, HKD, JPY, NZD, SGD, USD
+     - All
+     - |X|
+     - |X|
+     - |X|
+     - |X|
+     - |X|
