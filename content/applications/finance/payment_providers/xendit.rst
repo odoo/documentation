@@ -7,8 +7,10 @@ several Southeast Asian countries. It allows businesses to accept credit cards a
 local payment methods.
 
 .. note::
-    Credit card payments are processed through Odoo, while all other payment methods are handled via
-    Xendit's website.
+    * Credit card payments are processed through Odoo, while all other payment methods are handled
+      via Xendit's website.
+    * Xendit supports card payment tokenization, provided the customer has requested Merchant
+      Initiated Transaction (MIT) from `Xendit Support <https://www.xendit.co/en/contact/>`_.
 
 .. _payment_providers/xendit/configure_dashboard:
 
