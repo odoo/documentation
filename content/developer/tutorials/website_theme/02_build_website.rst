@@ -23,12 +23,12 @@ as content in the page.
 .. spoiler:: Solutions
 
    .. code-block:: python
-         :caption: ``/website_airproof/__manifest__.py``
+      :caption: ``/website_airproof/__manifest__.py``
 
-         'data': [
-            # Pages
-            'data/pages/home.xml',
-         ]
+      'data': [
+         # Pages
+         'data/pages/home.xml',
+      ]
 
    .. code-block:: xml
       :caption: ``/website_airproof/data/pages/home.xml``
@@ -107,18 +107,21 @@ Based on the Airproof design, add the following elements to the homepage :
   - For this section, you don't want the future user to be able to edit it via the Website Builder.
   - Put an opacity filter on the background image of the 3 boxes.
 
-- Create another section containing the title and icons.
+- Create another section containing a title and icons using the grid system.
 
 You can use these `images <{GITHUB_TUTO_PATH}/website_airproof/static/src/img/content>`_ and `icons
 <{GITHUB_TUTO_PATH}/website_airproof/static/src/img/content/icons>`_.
 
 .. seealso::
-   See reference documentation on how to :ref:`write standard snippets
-   <website_themes/building_blocks/layout>`.
+   See reference documentation on how to :ref:`write standard building blocks
+   <website_themes/building_blocks/layout>` and how to use the
+   :ref:`grid layout <website_themes/building_blocks/layout/grid>`.
 
-.. image:: 02_build_website/building-blocks.png
-   :alt: Airproof building blocks.
-   :scale: 75%
+.. image:: 02_build_website/building-block-column.png
+   :alt: Airproof building block column layout.
+
+.. image:: 02_build_website/building-block-grid.png
+   :alt: Airproof building block grid layout.
 
 .. tip::
    To determine the code needed to create your building blocks :
@@ -143,6 +146,9 @@ For now, the client is fine with the default header but has requested some navig
 
 The client has requested the following changes:
 
+- Add the `Airproof logo
+  <{GITHUB_TUTO_PATH}/website_airproof/static/src/img/content/branding/airproof-logo.svg>`_. At the
+  same time, set the name and favicon of the website.
 - Remove the link to the homepage and the shop.
 - Add a link to the future “About us” page.
 - Replace the default blog item with a dropdown to display the different blogs: “Our latest news”
@@ -150,6 +156,7 @@ The client has requested the following changes:
 - Add a mega-menu “Waterproof drones” to display the different products.
 
 .. seealso::
+   - See how to set up the :ref:`website settings <theming/module/website>` (including the logo).
    - You can find the original mega-menu templates code in Odoo :
      `odoo/addons/website/views/snippets/s_mega_menu_**.xml
      <{GITHUB_PATH}/addons/website/views/snippets>`_
@@ -164,7 +171,28 @@ The client has requested the following changes:
    - Create the different products via the backend. You can use these `product pictures
      <{GITHUB_TUTO_PATH}/website_airproof/static/src/img/content>`_.
 
+.. note::
+   - If you want to make the logo available in the Media dialog, you have to add the record image.
+   - It could be interesting to put a :ref:`noupdate <website_themes/pages/theme_pages/noupdate>` on
+     the navigation so that the changes made later by your client won’t be overwritten if you have
+     to update the module.
+
 .. spoiler:: Solutions
 
-   Find the solution in our Airproof example on `menu.xml
-   <{GITHUB_TUTO_PATH}/website_airproof/data/menu.xml>`_.
+   To complete this exercise, you need to:
+
+   #. Add the logo and favicon in the right folder.
+   #. Put the website records in a :file:`website.xml` file:
+
+      .. code-block:: xml
+         :caption: ``/website_airproof/data/website.xml``
+
+         <record id="website.default_website" model="website">
+            <field name="name">Airproof</field>
+            <field name="logo" type="base64" file="website_airproof/static/src/img/content/branding/airproof-logo.svg"/>
+            <field name="favicon" type="base64" file="website_airproof/static/description/airproof-favicon.png" />
+         </record>
+
+   #. Declare your :file:`website.xml` file in :file:`__manifest__.py`.
+   #. Create your menu as in the `menu.xml <{GITHUB_TUTO_PATH}/website_airproof/data/menu.xml>`_
+      from our Airproof example.

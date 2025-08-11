@@ -21,11 +21,12 @@ using `XPath`. Following the Airproof design, let's begin by modifying the shop 
 #. Apply all changes in your :file:`website_sale_templates.xml` file. Start by:
 
    - Add a banner.
-   - Adapt the layout of the e-commerce category filtering on the left.
+   - Adapt the filtering on the left.
    - Remove the search bar (you can remove it from both the shop and the product pages at the same
      time).
    - Move the breadcrumb.
    - Hide the list or grid view option.
+   - Display only 3 products per row.
    - Create the appropriate design and information for the product cards.
 
 .. image:: 05_dynamic_templates/airproof-shop-page.png
@@ -41,7 +42,8 @@ using `XPath`. Following the Airproof design, let's begin by modifying the shop 
 .. spoiler:: Solutions
 
    Find the solution in our Airproof example on `presets.xml
-   <{GITHUB_TUTO_PATH}/website_airproof/data/presets.xml>`_, `website_sale_templates.xml
+   <{GITHUB_TUTO_PATH}/website_airproof/data/presets.xml>`_, `website.xml
+   <{GITHUB_TUTO_PATH}/website_airproof/data/website.xml>`_, `website_sale_templates.xml
    <{GITHUB_TUTO_PATH}/website_airproof/views/website_sale_templates.xml>`_ part *shop page*, and
    `shop.scss <{GITHUB_TUTO_PATH}/website_airproof/static/src/scss/pages/shop.scss>`_.
 
@@ -54,11 +56,13 @@ The client is thrilled with the shop modifications. Next, let's apply our design
 pages. Based on the Airproof design below, adapt a few elements including:
 
 - Remove the search bar (if not done with the previous exercise).
+- Move the breadcrumb.
 - Remove the quantity selector, Terms and Conditions, and share icons.
 - Update the :guilabel:`Add to cart` button icon.
-- Insert a title above the product specifications (this section appears only when the product
-  has one variant per attribute).
-- Design the appropriate layout for the carousel.
+- Enable the accordion "*More information*".
+- Insert the product specifications (section that only appears when the product has just one variant
+  per attribute) into the accordion containing the "*more information*" section.
+- Design the appropriate layout for the product images carousel.
 - Add a title and apply the previously created product template to the `Alternative products`
   section (ensure alternative products are assigned on the product in the backend for this section
   to appear).
