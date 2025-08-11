@@ -69,25 +69,27 @@ Create a custom header
 With variables, presets, and custom SCSS in place, it's time to refine the layout and add key
 cross-page elements, starting with the header.
 
-Based on the Airproof design, create a custom header with the following elements:
+#. Based on the Airproof design, create a custom header with the following elements:
 
-- A centered logo. Ensure to declare the logo so that it appears automatically in the header.
-- A custom shopping cart icon.
-- A login/user as a button.
-- Navigation text to 14px.
+   - A custom shopping cart icon.
+   - A login/user as a button.
+   - Navigation text to 14px.
 
-You can find the `logo
-<{GITHUB_TUTO_PATH}/website_airproof/static/src/img/content/branding/airproof-logo.svg>`_,
-`cart icon <{GITHUB_TUTO_PATH}/website_airproof/static/src/img/content/icons/shopping.svg>`_ and
-`template illustration
-<{GITHUB_TUTO_PATH}/website_airproof/static/src/img/wbuilder/template-header-opt.svg>`_.
+   You can find the `cart icon
+   <{GITHUB_TUTO_PATH}/website_airproof/static/src/img/content/icons/shopping.svg>`_ and `template
+   illustration <{GITHUB_TUTO_PATH}/website_airproof/static/src/img/wbuilder/template-header-opt.svg>`_.
+
+#. In order for the client to find the mega menu you previously created for him, turn it into a
+   template that can be found through the website builder.
+#. Place your new header over the content of your homepage.
 
 .. seealso::
    See reference documentation on how to:
 
    - create :ref:`custom headers <website_themes/layout/header/custom>`,
    - do a :ref:`website_themes/layout/xpath`,
-   - declare a :ref:`website_themes/media/images/use/logo`.
+   - create a :ref:`mega menu template <website_themes/navigation/mega_menu/custom>`,
+   - create a :ref:`header overlay <website_themes/pages/theme_pages/header_overlay>`.
 
 .. image:: 03_customisation_part1/header.png
 
@@ -106,11 +108,16 @@ You can find the `logo
      variables` and :file:`primary variables` (font, colors, size...). You can use them to help you
      with this exercise.
 
+.. note::
+   Ensure that you properly call every template in your header (like the shopping cart, language
+   selector, call to action, etc.), so everything will remain editable via the website builder and
+   all options will be available.
+
 .. spoiler:: Solutions
 
    Find the solution in our Airproof example for:
 
-   - the xml structure and to add the template to the options list on
+   - the xml structure and how to add the header and mega menu template to the options list on
      `website_template.xml <{GITHUB_TUTO_PATH}/website_airproof/views/website_templates.xml>`_.
    - disable the default header:
 
@@ -120,16 +127,6 @@ You can find the `logo
         <!-- Disable default header -->
         <record id="website.template_header_default" model="ir.ui.view">
            <field name="active" eval="False"/>
-        </record>
-
-   - record the logo:
-
-     .. code-block:: xml
-        :caption: ``/website_airproof/data/images.xml``
-
-        <!-- Set as the logo of the website -->
-        <record id="website.default_website" model="website">
-           <field name="logo" type="base64" file="website_airproof/static/src/img/content/branding/airproof-logo.svg"/>
         </record>
 
    - declare your :file:`website_templates.xml` file along with all the new ones in your
@@ -144,6 +141,15 @@ You can find the `logo
      `$navbar-light-color`, `$navbar-light-hover-color`, `$navbar-padding-y`...
    - add some `scss <{GITHUB_TUTO_PATH}/website_airproof/static/src/scss/layout/header.scss>`_
      rules.
+   - to place the header over the content, add the right field to the home page:
+
+     .. code-block:: xml
+        :caption: ``/website_airproof/data/pages/home.xml``
+        :emphasize-lines: 3
+
+        <!-- Home -->
+        <record id="page_home" model="website.page">
+           <field name="header_overlay" eval="True"/>
 
 .. _tutorials/website_theme/customisation_part1/custom_footer:
 
@@ -178,6 +184,7 @@ You will find the `icons here <{GITHUB_TUTO_PATH}/website_airproof/static/src/im
 
      .. code-block:: python
          :caption: ``/website_airproof/__manifest__.py``
+         :emphasize-lines: 2
 
          'depends': ['website_sale', 'website_sale_wishlist', 'website_blog',
          'website_mass_mailing'],
@@ -215,8 +222,8 @@ can freely drag & drop onto different pages.
 Based on the Airproof design, create a custom carousel snippet to showcase drones. Then, add it as
 cover section on your homepage.
 
-#. Create the snippet template and add it to the list of building blocks available in the website
-   builder. Here you will find the `images
+#. Create the snippet template. Then, add it to the list of building blocks available in the website
+   builder. Place it in its own category. Here you will find the `images
    <{GITHUB_TUTO_PATH}/website_airproof/static/src/img/snippets/s_airproof_caroussel>`_ and
    `snippet illustration
    <{GITHUB_TUTO_PATH}/website_airproof/static/src/img/wbuilder/s-airproof-snippet.svg>`_.
@@ -227,8 +234,10 @@ cover section on your homepage.
 
    .. image:: 03_customisation_part1/custom-building-block.png
 
-#. Add an option in the Website Builder to allow users to choose between a blue or green bubble
-   shadow.
+#. Add two options in the Website Builder for the bubbles:
+
+   - Allow users to choose only between a blue or green shadow.
+   - Offer a range of possible margins between the bubbles.
 
    .. seealso::
       See reference documentation on how to add :ref:`snippet options
@@ -264,18 +273,14 @@ cover section on your homepage.
 
            <!-- Add custom snippets to the builder -->
            <template id="snippets" inherit_id="website.snippets" name="Airproof - Custom Snippets">
-              <xpath expr="//*[@id='default_snippets']" position="before">
-                 <t id="x_theme_snippets">
-                    <div id="x_airproof_snippets" class="o_panel">
-                       <div class="o_panel_header">Airproof</div>
-                       <div class="o_panel_body">
-                          <!-- Carousel snippet -->
-                          <t t-snippet="website_airproof.s_airproof_carousel"
-                          t-thumbnail="/website_airproof/static/src/img/wbuilder/s-airproof-snippet.svg">
-                             <keywords>Carousel block</keywords>
-                          </t>
-                       </div>
-                    </div>
+              <xpath expr="//snippets[@id='snippet_groups']/*[1]" position="before">
+                 <t snippet-group="airproof" t-snippet="website.s_snippet_group" string="Airproof"
+                 t-thumbnail="/website_airproof/static/src/img/wbuilder/s-airproof-snippet.svg"/>
+              </xpath>
+              <xpath expr="//snippets[@id='snippet_structure']/*[1]" position="before">
+                 <t t-snippet="website_airproof.s_airproof_carousel" string="Custom snippet"
+                 group="airproof">
+                   <keywords>Carousel block</keywords>
                  </t>
               </xpath>
            </template>
@@ -289,13 +294,19 @@ cover section on your homepage.
          <template id="snippet_options" inherit_id="website.snippet_options" name="Airproof -
          Snippets Options">
             <xpath expr="." position="inside">
-               <!-- *** Carousel snippet : blue or green bubble *** -->
                <div data-selector=".x_bubble_item">
+                  <!-- Bubble shadow color -->
                   <we-button-group string="Bubble shadow">
                      <we-button data-select-class="x_bubble1">Blue</we-button>
                      <we-button data-select-class="x_bubble2">Green</we-button>
                   </we-button-group>
+                  <!-- Bubble spacing -->
+                  <we-range string="Bubble Spacing" data-select-class="mb-1|mb-2|mb-3|mb-4|mb-5"/>
                </div>
+            </xpath>
+            <xpath expr="//div[@data-js='Box'][@data-selector='section .row > div']" position="attributes">
+               <!-- Disable standard shadow & borders for bubbles -->
+               <attribute name="t-attf-data-exclude" add=".x_bubble_item" separator=", "/>
             </xpath>
          </template>
 
