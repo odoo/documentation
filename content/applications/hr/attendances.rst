@@ -242,9 +242,10 @@ Main details
   employee has checked out.
 - :guilabel:`Worked Time`: the total amount of time the employee logged for the day, across multiple
   check-ins and outs. In an hour and minute format (HH:MM).
-- :guilabel:`Worked Extra Hours`: approved overtime (shows **only** when present for the employee).
-- :guilabel:`Extra Hours`: unpaid overtime hours worked beyond the expected working schedule (the
-  :guilabel:`Worked Time` minus the approved :guilabel:`Worked Extra Hours`.
+- :guilabel:`Worked Extra Hours`: unpaid overtime hours worked beyond the expected working schedule
+  (shows **only** when present for the employee).
+- :guilabel:`Extra Hours`: approved overtime (the :guilabel:`Worked Time` minus the approved
+  :guilabel:`Worked Extra Hours`.
 
 Check in/check out details
 --------------------------
