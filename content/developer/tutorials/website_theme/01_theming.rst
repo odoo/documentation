@@ -55,7 +55,8 @@ Based on the Airproof design, create your :file:`primary_variables.scss` file an
 following elements:
 
 - Headings font family : Space Grotesk
-- Content font family : Lato
+- Content font family : Lato. For this, use these `2 woff files
+  <{GITHUB_TUTO_PATH}/website_airproof/static/fonts>`_.
 - The color palette name and the 5 main colors that compose it: `#000000`, `#BBE1FA`, `#CEF8A1`,
   `#FFFFFF`, `#0B8EE6`
 - Header & Footer : Use one of the default templates for the moment, we will create a custom header
@@ -78,7 +79,8 @@ color palette includes your specified colors.
    throughout the creation of your website.
 
 .. note::
-   The font families are from `Google fonts <https://fonts.google.com/>`_.
+   For font families you can either use `Google fonts <https://fonts.google.com/>`_ (via URL) or add
+   your own :ref:`fonts <theming/module/variables/fonts/custom>`.
 
 .. spoiler:: Solutions
 
@@ -88,7 +90,10 @@ color palette includes your specified colors.
       the `primary_variables.scss
       <{GITHUB_TUTO_PATH}/website_airproof/static/src/scss/primary_variables.scss>`_ file from our
       example module.
-   #. Declare your file in the :file:`__manifest__.py` as indicated in the documentation.
+   #. Load your custom font in a `font.scss
+      <{GITHUB_TUTO_PATH}/website_airproof/static/src/scss/font.scss>`_ file.
+   #. Declare the 2 files you just created in :file:`__manifest__.py` as indicated in the
+      documentation.
    #. Install your module via your script. In our example, it looks like this:
 
    .. code-block:: xml
@@ -114,6 +119,7 @@ Based on the Airproof design, define the following elements:
   - h4 : 1.75rem
   - h5 : 1.5rem
   - h6 : 1.25rem
+  - Display 1 : 6.25rem (Who will be useful for the main title of your homepage)
 
 - Inputs border radius : 10px
 - Inputs border color : black

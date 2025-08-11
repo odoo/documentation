@@ -62,41 +62,75 @@ that can be animated and customized with different colors.
 
    .. code-block:: xml
       :caption: ``/website_airproof/data/pages/home.xml``
+      :emphasize-lines: 4-7
 
       <!-- Text-image block & Background shape -->
       <section class="s_text_image o_cc o_cc3 o_colored_level pt120 pb96"
-      data-snippet="s_image_text" data-name="Image - Text" style="background-color: rgb(41, 128,
-      187);" data-oe-shape-data="{'shape': 'illustration/airproof/waves', 'colors': {'c1': '#BBE1FA'},
-      'flip': ['x']}">
+      data-snippet="s_image_text" data-name="Image - Text" style="background-color: rgb(41, 128, 187);"
+      data-oe-shape-data="{'shape': 'illustration/airproof/waves', 'colors': {'c1': '#BBE1FA'}, 'flip': ['x']}">
          <div class="o_we_shape o_illustration_airproof_waves o_we_flip_x" style="background-image:
          url('/web_editor/shape/illustration%2Fairproof%2Fwaves.svg?c2=%23BBE1FA');
          background-position: 100% 100%;"/>
          [...]
       </section>
 
-.. _tutorials/website_theme/customisation_part2/background_gradient:
+.. _tutorials/website_theme/customisation_part2/custom_gradient:
 
-Add a background gradient
-=========================
+Create a custom gradient
+========================
 
-Apply a custom background gradient to your ”*Latest products*” block, transitioning from blue
-`rgb(11, 142, 230)` to dark blue `rgb(41, 128, 187)`.
+Next, let's add gradients to backgrounds. To enhance the page's dynamism, apply a gradient from blue
+`rgb(11, 142, 230)` to dark blue `rgb(41, 128, 187)` to your ”*Latest products*” block. But before
+that, add the gradient to the website builder so that the client can easily reuse it.
 
 .. seealso::
-   See reference documentation on how to use :doc:`/developer/howtos/website_themes/gradients`.
+   See reference documentation on how to apply :doc:`gradients
+   </developer/howtos/website_themes/gradients>` and how to create :ref:`custom gradients
+   <website_themes/gradients/custom>`.
 
 .. spoiler:: Solutions
 
-   .. code-block:: xml
-      :caption: ``/website_airproof/data/pages/home.xml``
+   #. Create and declare a :file:`gradients.xml` file and add the custom gradient.
 
-      <!-- Latest products section -->
-      <section class="s_parallax o_colored_level o_cc o_cc5 s_parallax_no_overflow_hidden pt40 pb32"
-      data-scroll-background-ratio="0" data-snippet="s_parallax" data-name="Parallax"
-      style="background-image: linear-gradient(0deg, rgb(41, 128, 187) 0%, rgb(11, 142, 230) 100%)
-      !important;">
-         [...]
-      </section>
+      .. code-block:: python
+         :caption: ``/website_airproof/__manifest__.py``
+
+         'data': [
+            # Gradients
+           'data/gradients.xml',
+         ]
+
+      .. code-block:: xml
+         :caption: ``/website_airproof/data/gradients.xml``
+
+         <record id="colorpicker" model="ir.ui.view">
+           <field name="key">website_airproof.colorpicker</field>
+           <field name="name">Custom Gradients</field>
+           <field name="type">qweb</field>
+           <field name="inherit_id" ref="web_editor.colorpicker"/>
+           <field name="arch" type="xml">
+               <xpath expr="//div[@data-name='predefined_gradients']/t[@t-set='gradients']" position="after">
+                   <t t-set="gradients" t-value="gradients + ['linear-gradient(0deg, rgb(41, 128, 187) 0%,
+                   rgb(11, 142, 230) 100%)']"/>
+               </xpath>
+           </field>
+         </record>
+
+   #. Apply it to the ”*Latest products*” section.
+
+      .. code-block:: xml
+         :caption: ``/website_airproof/data/pages/home.xml``
+         :emphasize-lines: 7
+
+         <!-- Latest products section -->
+         <section data-snippet="s_dynamic_snippet_products" class="s_dynamic_snippet_products s_dynamic
+         s_dynamic_empty pt32 pb32 o_colored_level s_product_product_airproof o_dynamic_snippet_empty o_cc o_cc5"
+         data-custom-template-data="{}" data-name="Produits" data-product-category-id="all"
+         data-show-variants="" data-number-of-records="16" data-filter-id="3" data-carousel-interval="5000"
+         data-template-key="website_airproof.dynamic_filter_template_product_product_airproof"
+         style="background-image: linear-gradient(0deg, rgb(41, 128, 187) 0%, rgb(11, 142, 230) 100%) !important;">
+            [...]
+         </section>
 
 .. _tutorials/website_theme/customisation_part2/animations:
 
@@ -190,3 +224,49 @@ new page link to the menu. The client has the following requests for their conta
 
    Find the solution in our Airproof example on `contact.xml
    <{GITHUB_TUTO_PATH}/website_airproof/data/pages/contact.xml>`_.
+
+.. _tutorials/website_theme/customisation_part2/page_template:
+
+Create a page template
+======================
+
+You don't have the time to create all the service pages for the client. No worries! Create a
+template page that the client can use to build their own service pages.
+
+This page should be composed as follows:
+
+- a :guilabel:`Parallax` building block,
+- a :guilabel:`Key benefits` building block with the title replaced by "*Discover our service*",
+- a :guilabel:`Call to action` building block,
+- your custom carousel snippet.
+
+.. seealso::
+   See reference documentation on how to create :ref:`page templates
+   <website_themes/pages/theme_pages/page_templates>`.
+
+.. image:: 04_customisation_part2/page-template.png
+   :scale: 75%
+
+.. spoiler:: Solutions
+
+   #. Create your :file:`new_page_template_templates.xml` file and discover its content in our
+      `Airproof example <{GITHUB_TUTO_PATH}/website_airproof/views/new_page_template_templates.xml>`_.
+   #. Don't forget to declare your file in the :file:`__manifest__.py` file and define what the
+      template page contains.
+
+      .. code-block:: python
+         :caption: ``/website_airproof/__manifest__.py``
+
+         'data': [
+            # ...
+            'views/new_page_template_templates.xml',
+         ],
+         'assets': {
+            # ...
+         },
+         'new_page_templates': {
+            'airproof': {
+               'services': ['s_parallax', 's_airproof_key_benefits_h2', 's_call_to_action',
+               's_airproof_carousel']
+            }
+         },
