@@ -16,7 +16,7 @@ content and layout needs.
 Add a building block
 ====================
 
-To add a block to a :doc:`website page <../pages>`, access the page, click :guilabel:`Edit`, then
+To add a block to a :doc:`website page <../structure/pages>`, access the page, click :guilabel:`Edit`, then
 drag and drop the desired building block into the appropriate location. Two types of building blocks
 are available: :guilabel:`Categories` and :guilabel:`Inner Content`. :guilabel:`Inner Content`
 building blocks can only be added into :guilabel:`Categories` building blocks.
