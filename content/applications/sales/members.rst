@@ -68,7 +68,7 @@ Publish members directory
 
 To publish a list of active members on the website, the *Online Members Directory* application must
 first be :ref:`installed <general/install>`. After installing the module, add the `/members` page to
-the website's menu by :doc:`editing the website menu <../websites/website/pages/header_footer>`.
+the website's menu by :doc:`editing the website menu <../websites/website/structure/header_footer>`.
 
 .. image:: members/membership-directory-app.png
    :align: center
