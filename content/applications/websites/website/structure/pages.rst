@@ -14,7 +14,7 @@ contain fixed content that does not change dynamically. You can manually create 
 their URLs, and adapt their :ref:`properties <website/pages/page_management>` as needed. **Dynamic**
 pages, on the other hand, are generated dynamically. All pages generated automatically by Odoo, for
 example, when you install an app or module (e.g., `/shop` or `/blog`) or publish a new product or
-:doc:`blog post <../blog>`, are dynamic pages and are therefore managed differently.
+:doc:`blog post <../../blog>`, are dynamic pages and are therefore managed differently.
 
 .. _website/pages/page_creation:
 
@@ -44,7 +44,7 @@ page, proceed as follows:
 
   #. Enter a :guilabel:`Page Title`; this title is used in the menu and the page's URL.
   #. Click :guilabel:`Create`.
-  #. If needed, :doc:`customize the page's content and appearance <web_design>` using the website
+  #. If needed, :doc:`customize the page's content and appearance <../web_design>` using the website
      editor, then click :guilabel:`Save`.
   #. :ref:`Publish <website/pages/un-publish-page>` the page.
 
@@ -131,7 +131,7 @@ Duplicating pages
 To duplicate a page, access the page, then go to :menuselection:`Site --> Properties`, and click
 :guilabel:`Duplicate Page`. Enter a :guilabel:`Page Name`, then click :guilabel:`OK`. By default,
 the new page is added after the duplicated page in the menu, but you can remove it from the menu or
-change its position using the :doc:`menu editor <pages/header_footer>`.
+change its position using the :doc:`menu editor <header_footer>`.
 
 .. _website/pages/delete-page:
 
@@ -158,7 +158,7 @@ URL redirect mapping consists in sending visitors and search engines to a URL di
 the one they initially requested. This technique is used, for example, to prevent broken links when
 you :ref:`delete a page <website/pages/delete-page>`,
 :ref:`modify its URL <website/pages/page_properties>`, or migrate your site from another platform to
-an Odoo :doc:`domain <configuration/domain_names>`. It can also be used to improve :doc:`pages/seo`.
+an Odoo :doc:`domain <../configuration/domain_names>`. It can also be used to improve :doc:`seo`.
 
 To access existing URL redirections and create new ones, :doc:`activate the developer mode
 </applications/general/developer_mode>` and go to :menuselection:`Website --> Configuration -->
@@ -205,10 +205,4 @@ Toggle the :guilabel:`Activate` switch to deactivate the redirection.
 
 .. seealso::
    - `Google documentation on redirects and search <https://developers.google.com/search/docs/crawling-indexing/301-redirects>`_
-   - :doc:`pages/seo`
-
-.. toctree::
-   :titlesonly:
-
-   pages/header_footer
-   pages/seo
+   - :doc:`seo`

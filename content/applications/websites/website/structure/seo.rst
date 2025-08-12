@@ -189,7 +189,7 @@ methods:
 
 .. seealso::
    - :doc:`../configuration/google_search_console`
-   - :doc:`../pages`
+   - :doc:`pages`
 
 Sitemap
 -------

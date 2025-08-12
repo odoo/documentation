@@ -298,7 +298,7 @@ The eCommerce-related fields to translate are:
 
 .. note::
    - Having untranslated content on a web page may be detrimental to the user experience and
-     :doc:`SEO <../../websites/website/pages/seo>`. You can use the
+     :doc:`SEO <../../websites/website/structure/seo>`. You can use the
      :doc:`Translate <../website/configuration/translate>` feature to translate the page's content.
    - To check the language(s) of your website, go to :menuselection:`Website --> Configuration -->
      Settings` and go to the :guilabel:`Website Info` section.
