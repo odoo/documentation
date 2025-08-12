@@ -246,7 +246,7 @@ display it only when filtering by that specific category.
 
 .. tip::
    - Adding content to an eCommerce category page helps improve the :doc:`SEO
-     <../../website/pages/seo>` strategy. Using keywords linked to the products or the
+     <../../website/structure/seo>` strategy. Using keywords linked to the products or the
      eCommerce categories can also increase organic traffic. Additionally, each category has its
      own specific URL that can be pointed to and is indexed by search engines.
    - eCommerce categories can also be added as :ref:`mega menu items
