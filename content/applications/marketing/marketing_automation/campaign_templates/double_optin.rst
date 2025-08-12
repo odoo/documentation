@@ -82,7 +82,7 @@ website homepage. Click on the button to edit the button text and URL.
 
 .. tip::
    To provide a streamlined experience for the contact, consider :doc:`creating a page on the
-   website <../../../websites/website/pages>` that expresses gratitude to the contact for
+   website <../../../websites/website/structure/pages>` that expresses gratitude to the contact for
    confirming their subscription to the mailing list. Add the link to that page in the URL of the
    confirmation button.
 
