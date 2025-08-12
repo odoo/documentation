@@ -109,7 +109,7 @@ Alternatively, replace the default content of these pages using XPath.
    </template>
 
 .. seealso::
-   - :doc:`Odoo Documentation on SEO <../../../applications/websites/website/pages/seo>`
+   - :doc:`Odoo Documentation on SEO </applications/websites/website/structure/seo>`
 
 .. _website_themes/pages/theme_pages :
 
