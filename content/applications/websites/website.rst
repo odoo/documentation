@@ -19,8 +19,8 @@ with other Odoo apps to expand your website's functionality.
 
       Design your website using building blocks and website themes.
 
-   .. card:: Pages
-      :target: website/pages
+   .. card:: Structure
+      :target: website/structure
       :large:
 
       Manage website pages, menus, and search engine optimization.
@@ -57,7 +57,7 @@ with other Odoo apps to expand your website's functionality.
    :titlesonly:
 
    website/web_design
-   website/pages
+   website/structure
    website/configuration
    website/reporting
    website/mail_groups
