@@ -267,10 +267,22 @@ Once the options are set, click :guilabel:`Save` to save the favorited search.
 
 .. image:: search/favorites.png
    :alt: Saving a favorite search on the Sales Analysis report.
+   :scale: 80%
 
-Saved favorites can be accessed by clicking the :icon:`fa-trash` :guilabel:`(delete)` icon in the
-search bar, then selecting the saved filter in the :guilabel:`Favorites` drop-down menu. To remove a
-saved favorite, click the :icon:`fa-trash` :guilabel:`(delete)` icon next to the favorited search.
+Favorited searches can be accessed by clicking the :icon:`fa-caret-down` :guilabel:`(dropdown)` icon
+in the search bar, then selecting the saved search under :icon:`fa-star` :guilabel:`Favorites`.
+
+.. tip::
+   Favorited searches that are only visible to the current user, i.e., that are not shared, are
+   shown first; any shared searches, whether created by the current user or another user, are
+   shown in a second section.
+
+To edit a favorited search, select the relevant saved search, hover over the :icon:`fa-star`
+:guilabel:`(star)` icon beside the search name in the search bar, then click the :icon:`fa-cog`
+:guilabel:`(cog)` icon. Modify the conditions as needed, then click :guilabel:`Confirm`.
+
+To delete a favorited search, click the :icon:`fa-caret-down` :guilabel:`(dropdown)` icon in the
+search bar, then click the :icon:`fa-trash` :guilabel:`(delete)` icon next to the saved search.
 
 .. tip::
    To view *all* favorited searches, first activate :ref:`developer-mode`, and navigate to
