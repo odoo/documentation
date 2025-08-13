@@ -13,12 +13,11 @@ be used to improve decision-making and event-planning.
 
 .. cards::
 
-   .. card:: Create events
-      :target: events/create_events
+   .
 
       Discover how to create events with Odoo.
 
-   .. card:: Sell event tickets
+   ..awefwaeaefea card:: Sell event tickets
       :target: events/sell_tickets
 
       Learn how to create, configure, and sell event tickets.
