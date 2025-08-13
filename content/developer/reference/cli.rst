@@ -419,7 +419,7 @@ Developer features
     comma-separated list of features. For development purposes only. Do not use it in production.
     Possible features are:
 
-    * ``all``: alias for xml,reload,qweb
+    * ``all``: alias for xml,reload,qweb,access
 
     * ``xml``: read QWeb template from xml file directly instead of database.
       Once a template has been modified in database, it will be not be read from
@@ -436,6 +436,9 @@ Developer features
     * ``replica``: simulate :option:`--db_replica_host` but connect to the same datbase server as
       :option:`--db_host`, this makes it possible to test read-only features without the need to set
       up a replicated database.
+
+    * ``access``: log the traceback next to the AccessError when it results in a 403 - Forbidden
+      HTTP response.
 
 
 .. _reference/cmdline/server/http:
