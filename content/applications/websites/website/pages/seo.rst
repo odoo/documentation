@@ -131,19 +131,65 @@ like the price and rating of a product:
 robots.txt
 ----------
 
-A robots.txt file tells search engine crawlers which URLs the crawler can access on your site, to
-index its content. This is used mainly to avoid overloading your site with requests.
+A `robots.txt` file instructs search engine crawlers which parts of a website they are permitted to
+access. Its primary purpose is to:
 
-When indexing your website, search engines take a first look at the robots.txt file. Odoo
-automatically creates one robot.txt file available on `mydatabase.odoo.com/robots.txt`.
+ - **Prevent overloading the website:** By guiding crawlers away from certain sections, robots.txt
+   helps manage server load.
+ - **Control access to resources and detailed descriptions:** It can prevent crawlers from accessing
+   media files (images, videos), CSS stylesheets, and JavaScript files, and from reading the content
+   (text) of specific pages.
+
+When indexing your website, search engines first look at the robots.txt file. Odoo automatically
+creates one robot.txt file available on `mydatabase.odoo.com/robots.txt`.
+
+.. note::
+   Reputable bots adhere to robots.txt; others may require blocking via
+   :ref:`Cloudflare <domain-name/naked/cloudflare>` on your custom domain.
+
+Edit robots.txt
+~~~~~~~~~~~~~~~
 
 By editing a robots.txt file, you can control which site pages are accessible to search engine
 crawlers. To add custom instructions to the file, go to :menuselection:`Website --> Configuration
 --> Settings`, scroll down to the :guilabel:`SEO` section, and click :guilabel:`Edit robots.txt`.
 
 .. example::
-   If you do not want the robots to crawl the `/about-us` page of your site, you can edit the
+   If you do not want robots to crawl the `/about-us` page of your site, you can edit the
    robots.txt file to add `Disallow: /about-us`.
+
+.. important::
+   While `robots.txt` prevents content from being crawled, **it does not guarantee that a page
+   will not be indexed**. A page can still appear in search results if it is linked to from other
+   crawled pages (indexed by "reference"). Google generally does not recommend using robots.txt to
+   block webpages that you wish to keep out of search results entirely.
+
+Prevent a page from being indexed
+---------------------------------
+
+To effectively prevent a page from appearing in search engine results, use one of the following
+methods:
+
+ - **noindex tag:** Access the page's :ref:`properties <website/pages/page_properties>` and toggle
+   the :guilabel:`Indexed` switch off.
+
+   .. note::
+      This option is not yet available for :ref:`dynamic pages <website/pages/page_type>`.
+
+ - **404 or 403:** Configure the page to return a 404 (Not Found) or 403 (Forbidden) HTTP status
+   code. These codes signal to search engines that the page does not exist or is inaccessible,
+   leading to its eventual removal from the index.
+
+    - **404:** :ref:`Configure a 404 redirection. <website/pages/URL-redirection>`
+    - **403:** Access the page's :ref:`properties <website/pages/page_properties>`
+      and toggle the :guilabel:`Visibility` switch off or :ref:`unpublish the page <website/pages/un-publish-page>`.
+
+ - **Google Search Console:** Use Google Search Console to request the removal of specific URLs from
+   Google's index.
+
+.. seealso::
+   - :doc:`../configuration/google_search_console`
+   - :doc:`../pages`
 
 Sitemap
 -------
