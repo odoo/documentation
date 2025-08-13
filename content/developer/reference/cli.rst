@@ -431,9 +431,6 @@ Developer features
 
     * ``qweb``: break in the evaluation of QWeb template when a node contains ``t-debug='debugger'``
 
-    * ``(i)p(u)db``: start the chosen python debugger in the code when an
-      unexpected error is raised before logging and returning the error.
-
     * ``werkzeug``: display the full traceback on the frontend page in case of exception
 
     * ``replica``: simulate :option:`--db_replica_host` but connect to the same datbase server as
