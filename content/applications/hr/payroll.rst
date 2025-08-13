@@ -4,17 +4,18 @@
 Payroll
 =======
 
-Odoo *Payroll* is used to process work entries and create payslips for employees. *Payroll* works in
-conjunction with other Odoo apps, such as *Employees*, *Time Off*, *Attendances*, and *Planning*.
+Odoo **Payroll** is used to process work entries and create payslips for employees. **Payroll**
+works in conjunction with other Odoo apps, such as **Employees**, **Time Off**, **Attendances**, and
+**Planning**.
 
-The *Payroll* app helps ensure there are no issues or conflicts when validating work entries. It
-also handles country-specific localizations to ensure payslips follow local rules and taxes, and
-allows for salary assignments.
+The **Payroll** app helps ensure there are no issues or conflicts when validating work entries. It
+also handles :doc:`country-specific localizations <payroll_localizations>` to ensure payslips follow
+local rules and taxes, and allows for salary assignments.
 
 Settings
 ========
 
-Configure the *Payroll* app by navigating to :menuselection:`Payroll app --> Configuration -->
+Configure the **Payroll** app by navigating to :menuselection:`Payroll app --> Configuration -->
 Settings`. The various settings for accounting, localizations, time off, alerts, and payslips are
 specified here.
 
@@ -36,10 +37,10 @@ The accounting section of the configuration menu relates to three options:
 Localizations
 -------------
 
-*Localizations* are country-specific settings pre-configured in Odoo at the creation of the
+*Localizations* are country-specific settings preconfigured in Odoo at the creation of the
 database, which account for all taxes, fees, and allowances for that particular country.
 
-The :guilabel:`Localization` section of the *Payroll* app :guilabel:`Settings` page may include
+The :guilabel:`Localization` section of the **Payroll** app :guilabel:`Settings` page may include
 specific settings that need to be set for the specific country. This selection also provides a
 detailed view of all benefits provided to employees.
 
@@ -53,7 +54,7 @@ database.
    Odoo can handle a multi-company configuration. This is generally done when there is a main
    company or office location, such as a headquarters, and there are other offices/branches around
    the country or globe, that fall under that main company or headquarters. In Odoo, each company,
-   including the headquarters, would be set up as their own company/branch using the multi-company
+   including the headquarters, must be set up as their own company/branch using the multi-company
    method.
 
    Each individual company can have a different localization setting, since locations can vary
@@ -61,6 +62,9 @@ database.
 
    For more information on companies, refer to the :doc:`Companies <../general/companies>`
    documentation, which covers how to set up companies.
+
+.. seealso::
+   :doc:`payroll_localizations`
 
 Time off
 --------
@@ -243,7 +247,7 @@ Off`, :guilabel:`Training`, or :guilabel:`Public Holiday`.
 Work entry types
 ----------------
 
-When creating a work entry in the *Payroll* application, or when an employee enters new time off types
+When creating a work entry in the **Payroll** application, or when an employee enters new time off types
 in *Time Off* application, a :guilabel:`Work Entry Type` needs to be selected. The list of
 :guilabel:`Work Entry Types` is automatically created based on localization settings set in the
 database.
@@ -577,7 +581,7 @@ Top section
 - :guilabel:`Appears on payslip`: tick the checkbox to have the rule appear on employee printed
   payslip.
 - :guilabel:`View on Employer Cost Dashboard`: tick the checkbox to have the rule appear on the
-  :guilabel:`Employer Cost` report, located on the *Payroll* app dashboard.
+  :guilabel:`Employer Cost` report, located on the **Payroll** app dashboard.
 - :guilabel:`View on Payroll Reporting`: tick the checkbox to have the rule appear on payroll
   reports.
 
@@ -893,17 +897,17 @@ Enter the following information on the form:
 Jobs
 ====
 
-Since the *Payroll* application is responsible for paying employees for specific job positions, the
-complete list of job positions can be found in both the *Payroll* and *Recruitment* applications.
+Since the **Payroll** application is responsible for paying employees for specific job positions, the
+complete list of job positions can be found in both the **Payroll** and *Recruitment* applications.
 
 .. _payroll/job-positions:
 
 Job positions
 -------------
 
-The job positions listed in the *Payroll* application are identical to the job positions listed in
+The job positions listed in the **Payroll** application are identical to the job positions listed in
 the *Recruitment* application. If a new job position is added in the *Recruitment* application, it
-is also visible in the *Payroll* application, and vice versa.
+is also visible in the **Payroll** application, and vice versa.
 
 To view the job positions, navigate to :menuselection:`Payroll app --> Configuration --> Jobs: Job
 Positions`.
