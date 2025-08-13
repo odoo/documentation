@@ -236,6 +236,14 @@ Database
 
     port the database listens on, defaults to 5432
 
+.. option:: --db_replica_host <hostname>
+
+    host for the replica database server, disabled when not set / empty
+
+.. option:: --db_replica_port <port>
+
+    the port the replica database listens on, defaults to :option:`--db_port`
+
 .. option:: --db-filter <filter>
 
     hides databases that do not match ``<filter>``. The filter is a
