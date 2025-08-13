@@ -419,7 +419,7 @@ Developer features
     comma-separated list of features. For development purposes only. Do not use it in production.
     Possible features are:
 
-    * ``all``: all the features below are activated
+    * ``all``: alias for xml,reload,qweb
 
     * ``xml``: read QWeb template from xml file directly instead of database.
       Once a template has been modified in database, it will be not be read from
