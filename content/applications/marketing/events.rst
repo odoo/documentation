@@ -54,7 +54,7 @@ awefaewfawae
       Analyze the financial success of events with Odoo.
 
 Events dashboard
-================
+================awefewafawfwafe
 
 When the **Events** application is opened, Odoo reveals the main :guilabel:`Events` dashboard, which
 can be viewed in a number of different ways. Those different view options are accessible from the
