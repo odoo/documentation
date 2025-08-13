@@ -6,7 +6,7 @@ Events
 
 Explore the various aspects of the Odoo **Events** detailed dashboard, and useful settings, that can
 be utilized to generate and gather valuable data about events (and their attendees), which can then
-be used to improve decision-making and event-planning.
+be used to improve decision-making and event-planning. 
 
 .. seealso::
    `Odoo Tutorials: Events <https://www.odoo.com/slides/surveys-63>`_
