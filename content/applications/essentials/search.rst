@@ -197,8 +197,8 @@ Previous Period` and :guilabel:`(Time Filter): Previous Year`.
 
 .. important::
    For some reports, the :guilabel:`Comparison` section **only** appears in the search bar drop-down
-    menu if one (or more) time periods have been selected in the :guilabel:`Filters` column. This is
-    because there is nothing to compare if no time period is specified.
+   menu if one (or more) time periods have been selected in the :guilabel:`Filters` column. This is
+   because there is nothing to compare if no time period is specified.
 
    Additionally, some reports only allow use of the :guilabel:`Comparison` feature when the
    :icon:`fa-pie-chart` :guilabel:`(Pie Chart)` graph type or the :icon:`oi-view-pivot`
@@ -260,19 +260,47 @@ following options:
 
 - :guilabel:`Filter name`: Name of the favorited search.
 - :guilabel:`Default filter`: Sets the favorited search as the default filter for the view.
-- :guilabel:`Shared`: Makes the favorited search available to all users. Otherwise, by default, the
-  favorited search is only available to the user who created it.
 
 Once the options are set, click :guilabel:`Save` to save the favorited search.
 
 .. image:: search/favorites.png
    :alt: Saving a favorite search on the Sales Analysis report.
+   :scale: 80%
 
-Saved favorites can be accessed by clicking the :icon:`fa-trash` :guilabel:`(delete)` icon in the
-search bar, then selecting the saved filter in the :guilabel:`Favorites` drop-down menu. To remove a
-saved favorite, click the :icon:`fa-trash` :guilabel:`(delete)` icon next to the favorited search.
+Favorited searches are accessed by clicking the :icon:`fa-caret-down` :guilabel:`(dropdown)` icon
+in the search bar, and are shown under :icon:`fa-star` :guilabel:`Favorites`. Searches that are only
+visible to the current user, i.e., that are not shared, are shown first, while any :ref:`shared
+favorites <search/favorites-share>`, whether created by the current user or another user, are shown
+in a second section.
+
+To edit, archive, or remove a favorited search, hover over the search name in the list of favorites
+and click :icon:`fa-pencil` :guilabel:`(Edit favorite)`. The following fields can be modified:
+:guilabel:`Filter Name`, :ref:`Shared with <search/favorites-share>`, :guilabel:`Default Filter`,
+:guilabel:`Domain`. To archive or remove the favorite, click :icon:`fa-cog` :guilabel:`(Actions)`
+then :icon:`oi-archive` :guilabel:`Archive` or :icon:`fa-trash` :guilabel:`Delete`, as appropriate.
 
 .. tip::
-   To view *all* favorited searches, first activate :ref:`developer-mode`, and navigate to
-   :menuselection:`Settings app --> Technical --> User Interface: User-defined Filters`. From here,
-   all favorited searches can be viewed, edited, archived, or deleted.
+   - When a favorited search is in use, additional filters or groups can be used to further refine
+     the search. The conditions applied by the favorited search can also be modified by hovering
+     over the :icon:`fa-star` :guilabel:`(star)` beside the search name then clicking the
+     :icon:`fa-cog` :guilabel:`(cog)` icon. These changes only affect the current search.
+   - To edit the grouping or sorting of a favorited search, :ref:`activate developer mode
+     <developer-mode>` when editing the search, then modify the :guilabel:`Context` or
+     :guilabel:`Sort` fields as needed.
+   - To view *all* favorited searches, with developer mode activated, navigate to
+     :menuselection:`Settings app --> Technical --> User-defined Filters`. From here, all favorited
+     searches can be viewed, edited, archived, or deleted.
+
+.. _search/favorites-share:
+
+Share a favorited search
+------------------------
+
+By default, a favorited search is only available to the user who created it. To share a favorited
+search with other users, click :guilabel:`Edit` when creating the favorite, or, for an existing
+favorite, click :icon:`fa-pencil` :guilabel:`(Edit favorite)` after hovering over the search name in
+the list of favorites.
+
+In the :guilabel:`Shared with` field, select the relevant users from the drop-down menu, then click
+:icon:`fa-cloud-upload` :guilabel:`(Save manually)`. The favorite is now visible for all selected
+users under :icon:`fa-star` :guilabel:`Favorites`.
