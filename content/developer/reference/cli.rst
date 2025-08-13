@@ -436,6 +436,10 @@ Developer features
 
     * ``werkzeug``: display the full traceback on the frontend page in case of exception
 
+    * ``replica``: simulate :option:`--db_replica_host` but connect to the same datbase server as
+      :option:`--db_host`, this makes it possible to test read-only features without the need to set
+      up a replicated database.
+
 
 .. _reference/cmdline/server/http:
 
