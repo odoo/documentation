@@ -14,6 +14,7 @@ be used to improve decision-making and event-planning.
 .. cards::
 
    .
+awefaewfawae
 
       Discover how to create events with Odoo.
 
