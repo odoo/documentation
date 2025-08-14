@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-04-30 14:37+0000\n"
-"PO-Revision-Date: 2025-08-12 22:50+0000\n"
+"PO-Revision-Date: 2025-08-14 22:51+0000\n"
 "Last-Translator: \"Chloe Wang (chwa)\" <chwa@odoo.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
 "projects/odoo-18-doc/studio/zh_Hans/>\n"
@@ -1054,6 +1054,9 @@ msgid ""
 "implementation process. If not properly configured, webhooks may disrupt the"
 " Odoo database and can take time to revert."
 msgstr ""
+"*强烈建议*在决定使用网络钩子和整个实施过程中咨询开发人员、解决方案架构师或其"
+"他技术人员。如果配置不当，网络钩子可能会扰乱 Odoo "
+"数据库，并可能需要一段时间才能恢复。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:10
 msgid ""
@@ -1062,6 +1065,10 @@ msgid ""
 " sends data to an Odoo webhook's URL (the \"trigger\") with a data file (the"
 " \"payload\"), Odoo responds with a predefined action in the database."
 msgstr ""
+"网络钩子可在**定制**中创建，是通过用户定义的 HTTP "
+"回调由外部事件触发的自动化规则。当外部系统向 Odoo 网络钩子的 "
+"URL（“触发器”）发送数据和数据文件（“有效载荷”）时，Odoo "
+"会在数据库中响应预定义的操作。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:14
 msgid ""
@@ -1070,6 +1077,9 @@ msgid ""
 "an external POS system, a webhook can instantly update Odoo's inventory, "
 "ensuring system synchronization."
 msgstr ""
+"与预定操作或手动 API "
+"调用不同，网络钩子可实现实时通信和自动化。例如，如果外部销售点系统确认了销售"
+"订单，网络钩子可立即更新 Odoo 的库存，确保系统同步。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:19
 msgid ""
@@ -1081,7 +1091,7 @@ msgstr ""
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:24
 msgid "Create a webhook in Studio"
-msgstr ""
+msgstr "在定制中创建网络钩子"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:26
 msgid ""
@@ -1089,6 +1099,8 @@ msgid ""
 "their :ref:`trigger <studio/webhooks/webhook_trigger>` and their "
 ":ref:`actions <studio/webhooks/webhook_action>`."
 msgstr ""
+"Webhooks 在 **定制**中配置，其设置分为 :ref:`触发器 <studio/webhooks/"
+"webhook_trigger>` 和 :ref:`操作 <studio/webhooks/webhook_action>`。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:30
 msgid ""
@@ -1097,6 +1109,10 @@ msgid ""
 "<https://www.postman.com/>`_. :ref:`Custom target records or actions  "
 "<studio/webhooks/webhook-example>` may require programming skills."
 msgstr ""
+"在连接 Odoo 数据库时，在 Odoo "
+"中设置网络钩子无需编码，但测试需要使用外部工具，如 `Postman <https://"
+"www.postman.com/>`_。 :ref:`自定义目标记录或操作 <studio/webhooks/webhook-"
+"example>` 可能需要编程技能。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:33
 msgid ""
@@ -1105,12 +1121,15 @@ msgid ""
 "model's technical name (which may be required for proper payload "
 "configuration)."
 msgstr ""
+":ref:`激活开发者模式 <developer-"
+"mode>`，以修改网络钩子目标模型（如销售订单或联系信息），并查找模型的技术名称"
+"（正确的有效载荷配置可能需要该名称）。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:40
 #: ../../content/applications/studio/automated_actions/webhooks.rst:127
 #: ../../content/applications/studio/automated_actions/webhooks.rst:208
 msgid "Set the webhook's trigger"
-msgstr ""
+msgstr "设置网络钩子触发器"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:42
 msgid ""
@@ -1121,13 +1140,19 @@ msgid ""
 " be logged (which would track the webhook's call history for "
 "troubleshooting)."
 msgstr ""
+"要使用 **定制**创建网络钩子，请 :ref:`开启定制 <studio/access>`，点击 "
+":guilabel:`Webhooks`，然后点击 "
+":guilabel:`新建`。在此，为网络钩子命名，必要时修改网络钩子的模型（目标数据库"
+"条目的类型），并切换是否记录对网络钩子 URL "
+"的调用（这将追踪网络钩子的调用历史，以便排除故障）。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:47
 msgid ""
 "The webhook's URL is automatically generated. This is the URL that should be"
 " used for testing the webhook and connecting it to the external system that "
 "will send updates to the database."
-msgstr ""
+msgstr "网络钩子的 URL 会自动生成。该 URL "
+"用于测试网络钩子，并将其连接到将向数据库发送更新的外部系统。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:51
 msgid ""
@@ -1135,6 +1160,9 @@ msgid ""
 "Sharing it online or without caution can provide unintended access to the "
 "Odoo database. Click :guilabel:`Rotate Secret` to change the URL if needed."
 msgstr ""
+"该网络钩子的URL属于**机密**信息，需严格保管。若在线泄露或随意分享，"
+"可能导致他人非法访问 Odoo 数据库。若需变更 URL，请点击 "
+":guilabel:`轮换密钥`按钮。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:55
 msgid ""
@@ -1144,6 +1172,10 @@ msgid ""
 "URL. If the system sending the webhook is an Odoo database, then make sure "
 "that the `id` and `model` appear in the payload."
 msgstr ""
+"最后，如果发送网络钩子的系统不是 Odoo，请调整 :guilabel:`目标记录` 操作，"
+"以查找调用网络钩子 URL 时 API 调用有效载荷中包含的 JSON 记录。"
+"如果发送网络钩子的系统是 Odoo 数据库，则应确保 `id` 和 `model` "
+"出现在有效负载中。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:61
 msgid ""
@@ -1154,6 +1186,11 @@ msgid ""
 "order webhook uses the *Sales Order* model, but the technical name "
 "`sale.order` is used in the payload."
 msgstr ""
+"虽然 :guilabel:`模型` 已在 Odoo "
+"中设置，但必须在有效载荷中包含模型的技术名称。将鼠标悬停在模型名称上，"
+"然后点击 :icon:`fa-arrow-right`:guilabel:`（内部链接）` 图标，即可在 "
+":guilabel:`模型` 字段中找到该技术名称。例如，销售订单网络钩子使用 *销售订单* "
+"模型，但在有效载荷中使用了技术名称 `sale.order`。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:68
 msgid ""
@@ -1161,12 +1198,14 @@ msgid ""
 "format should not be used. Instead, use `model.browse(i)` or "
 "`model.search(i)`."
 msgstr ""
+"在 Odoo 数据库中创建记录时，不应使用目标记录的默认格式。请使用 "
+"`model.browse(i)` 或 `model.search(i)`。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:74
 #: ../../content/applications/studio/automated_actions/webhooks.rst:149
 #: ../../content/applications/studio/automated_actions/webhooks.rst:220
 msgid "Set the webhook's action"
-msgstr ""
+msgstr "设置网络钩子操作"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:76
 msgid ""
@@ -1174,12 +1213,15 @@ msgid ""
 "an action` under the :guilabel:`Actions To Do` tab. Click the action's "
 ":guilabel:`Type` and set the fields as needed."
 msgstr ""
+"要在配置网络钩子时设置网络钩子的操作，请点击 "
+":guilabel:`要执行的操作`选项卡下的:guilabel:`添加操作`。点击操作的 "
+":guilabel:`类型` 并根据需要设置字段。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:82
 #: ../../content/applications/studio/automated_actions/webhooks.rst:164
 #: ../../content/applications/studio/automated_actions/webhooks.rst:254
 msgid "Test the webhook"
-msgstr ""
+msgstr "测试网络钩子"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:85
 msgid ""
@@ -1188,6 +1230,9 @@ msgid ""
 "through a `POST` API request. Consider using a tool like `Postman "
 "<https://www.postman.com/>`_ so less technical skills are required."
 msgstr ""
+"测试网络钩子需要设置网络钩子、向网络钩子发送测试有效载荷，以及通过 `POST` "
+"API 请求发送有效载荷的外部工具或系统。可以考虑使用像 `Postman <https://"
+"www.postman.com/>`_ 这样的工具，这样所需的技术技能就会更少。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:89
 msgid ""
@@ -1196,6 +1241,9 @@ msgid ""
 "implementation can begin with the other tool to automatically send those "
 "webhook calls into Odoo using the webhook's URL."
 msgstr ""
+"如果在测试过程中返回了`200 OK` 或`status: ok`消息，则说明网络钩子在 Odoo "
+"端运行正常。从这里开始，就可以使用其他工具，使用网络钩子的 URL "
+"自动将这些网络钩子调用发送到 Odoo。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:93
 msgid ""
@@ -2890,14 +2938,17 @@ msgid ""
 "the report by clicking :guilabel:`Print preview` on the left side of the "
 "screen."
 msgstr ""
+"在 "
+":guilabel:`配置文档布局`窗口右侧的报告预览中，您可以看到不同设置对报告布局的"
+"影响。创建或编辑报告时，点击屏幕左侧的 :guilabel:`打印预览` 可以预览报告。"
 
 #: ../../content/applications/studio/pdf_reports.rst:23
 msgid "Use the following settings:"
-msgstr ""
+msgstr "使用以下设置："
 
 #: ../../content/applications/studio/pdf_reports.rst:27
 msgid ":guilabel:`Layout`: Seven layouts are available:"
-msgstr ""
+msgstr ":guilabel:`Layout`： 有七种布局可供选择："
 
 #: ../../content/applications/studio/pdf_reports.rst:31
 msgid "Light"
@@ -3544,7 +3595,7 @@ msgstr ""
 
 #: ../../content/applications/studio/pdf_reports.rst:477
 msgid "You can switch conditions using the editor to preview their output:"
-msgstr ""
+msgstr "您可以使用编辑器切换条件，预览它们的输出结果："
 
 #: ../../content/applications/studio/pdf_reports.rst:0
 msgid "Output preview if there are no tags."
@@ -3555,7 +3606,9 @@ msgid ""
 "If you wish to have multiple options, you can also use `t-elif` directives "
 "to add intermediary conditions. For example, this is how the title of sales "
 "order reports changes based on the condition of the underlying document."
-msgstr ""
+msgstr "如果希望有多个选项，也可以使用 `t-elif` "
+"指令添加中间条件。例如，销售订单报告的标题就是这样根据基础文档的条件而变化的"
+"。"
 
 #: ../../content/applications/studio/pdf_reports.rst:495
 msgid ""
@@ -3574,6 +3627,10 @@ msgid ""
 "directive and accompanying `t-options` attributes provides better sizing and"
 " positioning control."
 msgstr ""
+"在报告中处理图片可能具有挑战性，因为对图片大小和行为的精确控制并不总是显而易"
+"见的。你可以使用报告编辑器插入图片字段（通过使用 :ref:`字段指令 <studio/"
+"pdf-reports/add-field>`），但使用 `t-field` 指令和附带的 `t-options` 属性在 "
+"XML 中插入图片可以提供更好的大小和定位控制。"
 
 #: ../../content/applications/studio/pdf_reports.rst:507
 msgid ""
