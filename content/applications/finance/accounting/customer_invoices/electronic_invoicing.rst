@@ -62,30 +62,12 @@ Odoo supports, among others, the following formats.
 Configuration
 =============
 
-.. _accounting/e-invoicing/national-electronic-invoicing:
-
-National e-invoicing format
----------------------------
-
-Depending on your company's country (e.g., :doc:`Italy <../../fiscal_localizations/italy>`,
-:doc:`Spain <../../fiscal_localizations/spain>`, :doc:`Mexico <../../fiscal_localizations/mexico>`,
-etc.), it may be required to issue e-invoicing documents in a specific format for all invoices. In
-this case, define a default e-invoicing format for the sales journal.
-
-To do so, go to :menuselection:`Accounting --> Configuration --> Journals`, open the sales journal,
-go to the :guilabel:`Advanced Settings` tab, and enable the formats needed for this journal.
-
-.. _accounting/e-invoicing/e-invoicing format:
-
-Customer-specific e-invoicing format
-------------------------------------
-
 By default, the format available in the :ref:`send window <accounting/e-invoicing/generation>`
 depends on the customer's country.
 
 To define a specific e-invoicing format for a customer, go to :menuselection:`Accounting -->
-Customers --> Customers`, open the customer form, go to the :guilabel:`Accounting` tab, and select
-the appropriate :guilabel:`Format` in the :guilabel:`Electronic invoicing` section.
+Customers --> Customers`, access the customer form, go to the :guilabel:`Accounting` tab, and select
+the appropriate :guilabel:`Format` in the :guilabel:`Customer invoices` section.
 
 .. _accounting/e-invoicing/generation:
 
@@ -127,87 +109,25 @@ post.
 Registration
 ------------
 
-To register to Peppol, go to :menuselection:`Accounting --> Configuration --> Settings` and scroll
-to the :guilabel:`PEPPOL Electronic Document Invoicing` section.
-
-By default, Peppol is set to demo mode in Odoo. :ref:`Demo
-<accounting/e-invoicing/peppol-registration-demo>` mode simulates Peppol transactions without
-affecting real data, while :ref:`production <accounting/e-invoicing/peppol-registration-production>`
-mode is used in production environments.
-
-.. _accounting/e-invoicing/peppol-registration-demo:
-
-Demo mode
-~~~~~~~~~
-
-Registering in demo mode allows for a complete simulation of the Peppol workflow in Odoo, including
-invoice sending and receiving and bill receiving. However, no communication with the Peppol network
-occurs, so actions like partner verification are not performed.
-
-The following fields in the :guilabel:`PEPPOL Electronic Document Invoicing` section are usually
-prefilled with demo data. Update or complete them as needed:
+To register on Peppol, go to :menuselection:`Accounting --> Configuration --> Settings`, scroll
+to the :guilabel:`PEPPOL Electronic Document Invoicing` section, and fill in the following
+information:
 
 - :guilabel:`Peppol EAS`: Peppol Electronic Address Scheme, which usually depends on the
-  company's country. This field is often prefilled with your country's most commonly used EAS code.
-  For example, the preferred EAS code for most companies in Belgium is `0208`.
+  company's country. This field is often prefilled with your country's most commonly used EAS
+  code. For example, the preferred EAS code for most companies in Belgium is `0208`.
 - :guilabel:`Peppol Endpoint`: usually a Company Registry number or a VAT number
 - :guilabel:`Mobile Number`, including the country code (e.g., `+32` in Belgium)
 - :guilabel:`Primary contact email`
-
-To set the demo mode, click :guilabel:`Validate registration (Demo)`. The :guilabel:`Application
-status` is then :guilabel:`Active (Demo)`.
-
-Test mode
-~~~~~~~~~
-
-For **advanced users only**, running tests on Peppol's test network is possible using the test mode.
-The server allows users to register on Peppol and to send/receive test invoices with other
-participants. To do so, follow these steps:
-
-#. Deregister from the demo mode: Go to the :guilabel:`PEPPOL Electronic Document Invoicing`
-   section in the :guilabel:`Settings` and click :guilabel:`Deregister from Peppol`.
-#. Enable :ref:`developer mode <developer-mode>`, open the Settings app, then go to
-   :menuselection:`Settings --> Technical --> System Parameters` and search for
-   :guilabel:`account_peppol.edi.mode`.
-#. Open the parameter and change the :guilabel:`Value` to `test`.
-#. Go back to the :guilabel:`PEPPOL Electronic Document Invoicing` section in the
-   :guilabel:`Settings` and click :guilabel:`Validate registration (Test)`.
-#. Update the :guilabel:`Mobile Number` and click :guilabel:`Verify mobile number`.
-#. A text message containing a code is sent to the mobile number provided to finalize the
-   verification process.
-#. Enter the code and click :guilabel:`Confirm`.
-
-.. _accounting/e-invoicing/peppol-registration-production:
-
-Production mode
-~~~~~~~~~~~~~~~
-
-To switch from the demo mode to the production mode, follow these steps:
-
-#. Deregister from the demo mode: Go to the :guilabel:`PEPPOL Electronic Document Invoicing` section
-   in the :guilabel:`Settings` and click :guilabel:`Deregister from Peppol`.
-#. Enable :ref:`developer mode <developer-mode>`, open the Settings app, then go to
-   :menuselection:`Settings --> Technical --> System Parameters` and search for
-   :guilabel:`account_peppol.edi.mode`.
-#. Open the parameter and change the :guilabel:`Value` to `prod`.
-#. Go back to the :guilabel:`Peppol Electronic Document Invoicing` section in the
-   :guilabel:`Settings` and fill in the following information:
-
-   - :guilabel:`Peppol EAS`: Peppol Electronic Address Scheme, which usually depends on the
-     company's country. This field is often prefilled with your country's most commonly used EAS
-     code. For example, the preferred EAS code for most companies in Belgium is `0208`.
-   - :guilabel:`Peppol Endpoint`: usually a Company Registry number or a VAT number
-   - :guilabel:`Mobile Number`, including the country code (e.g., `+32` in Belgium)
-   - :guilabel:`Primary contact email`
-   - :guilabel:`Migration key`: If you are migrating from another access point, copy the key from
-     the previous provider.
+- :guilabel:`Migration key`: If you are migrating from another access point, copy the key from the
+  previous provider.
 
 #. Click :guilabel:`Validate registration`.
 
-.. seealso::
-   - `Peppol EAS - European Commision <https://ec.europa.eu/digital-building-blocks/wikis/display/DIGITAL/Code+lists/>`_
-   - `Peppol endpoint - OpenPeppol eDEC Code Lists <https://docs.peppol.eu/edelivery/codelists/>`_
-     (open the "Participant Identifier Schemes" as HTML page)
+   .. seealso::
+      - `Peppol EAS - European Commision <https://ec.europa.eu/digital-building-blocks/wikis/display/DIGITAL/Code+lists/>`_
+      - `Peppol endpoint - OpenPeppol eDEC Code Lists <https://docs.peppol.eu/edelivery/codelists/>`_
+        (open the "Participant Identifier Schemes" as HTML page)
 
 To request and receive a verification code, follow these steps:
 
@@ -219,8 +139,7 @@ To request and receive a verification code, follow these steps:
 
 #. A text message containing a code is sent to the mobile number provided to finalize the
    verification process.
-#. Enter the code and click :guilabel:`Confirm`.
-#. The registration is then pending activation.
+#. Enter the code and click :guilabel:`Confirm`. The registration is then pending activation.
 #. Select another purchase journal in the :guilabel:`Incoming Invoices Journal` field if necessary.
 
    .. image:: electronic_invoicing/peppol-registration-pending.png
@@ -234,11 +153,23 @@ To request and receive a verification code, follow these steps:
 
 All invoices and vendor bills can then be sent directly using Peppol.
 
+.. note::
+   - To update the :guilabel:`Primary contact email`, modify it and click :guilabel:`Update contact
+     details`.
+   - If you are using an access point from a previous provider, make sure to deregister from it
+     first, then register with your new access point, unless it's Hermes (BOSA). If using Hermes
+     (BOSA), no action is needed; the migration is handled automatically.
+
 .. tip::
-   To manually trigger the scheduled action used to check the Peppol registration status, enable
-   :ref:`developer mode <developer-mode>`, open the Settings app, go to :menuselection:`Settings
-   --> Technical --> Scheduled actions`, and search for :guilabel:`Peppol: update participant
-   status`. Open the scheduled action, then click :guilabel:`Run Manually`.
+   - To manually trigger the scheduled action used to check the Peppol registration status, enable
+     :ref:`developer mode <developer-mode>`, open the Settings app, go to :menuselection:`Settings
+     --> Technical --> Scheduled actions`, and search for :guilabel:`Peppol: update participant
+     status`. Open the scheduled action, then click :guilabel:`Run Manually`.
+   - To try Peppol without sending real data, use the demo mode by setting the
+     :guilabel:`account_peppol.edi.mode` system parameter to `demo`.
+   - For advanced testing on Peppol's dedicated test network, use the test mode by setting the
+     :guilabel:`account_peppol.edi.mode` system parameter to `test`. This option is intended for
+     experienced users only.
 
 .. _accounting/e-invoicing/contact-verification:
 
@@ -248,7 +179,7 @@ Contact verification
 Before sending an invoice to a contact using Peppol, make sure the contact is registered as a Peppol
 participant. To do so, follow these steps:
 
-#. Go to :menuselection:`Accounting --> Customers --> Customers` and open the customer's form.
+#. Go to :menuselection:`Accounting --> Customers --> Customers` and access the customer's form.
 #. In the :guilabel:`Accounting tab`, check the following information in the :guilabel:`Electronic
    Invoicing` section:
 
@@ -257,15 +188,15 @@ participant. To do so, follow these steps:
    - :guilabel:`Peppol e-address (EAS)`: Select the relevant EAS code in the dropdown list.
    - :guilabel:`Peppol Endpoint`: Enter the customer's endpoint identifier.
 
-#. Click :guilabel:`Verify`. If the contact is found on the Peppol network, its :guilabel:`Peppol
-   endpoint validity` is marked as :guilabel:`Valid`.
+#. Click :guilabel:`Verify`. Its :guilabel:`Peppol endpoint validity` is marked as :guilabel:`Valid`
+   if the contact is found on the Peppol network.
 
    .. image:: electronic_invoicing/customer-form.png
       :alt: verify contact registration
 
 .. important::
    While Odoo prefills both the EAS code and the endpoint number based on the information available
-   for a contact, it is recommended to verify these details directly with the contact.
+   for a contact, verifying these details with the contact is recommended.
 
 .. _accounting/e-invoicing/send-invoices:
 
@@ -276,7 +207,7 @@ To set Peppol as a default format for sending invoices, go to :menuselection:`Ac
 Configuration --> Settings`. In the :guilabel:`Customer Invoices` section, enable the
 :guilabel:`Peppol format` option and :guilabel:`Save`.
 
-Posted invoices sent via Peppol are marked as :guilabel:`Ready to send` in the invoice's
+Posted invoices to be sent via Peppol are marked as :guilabel:`Ready to send` in the invoice's
 :guilabel:`Peppol status` field.
 
 .. note::
@@ -318,9 +249,10 @@ contact's access point.
 Receive vendor bills
 --------------------
 
-New documents received via Peppol are checked daily. Any received documents are automatically
-imported, and corresponding vendor bills are created as drafts, appearing in the vendor bills list
-view.
+New documents received via Peppol are checked multiple times a day. Received documents are
+automatically imported into the purchase journal set in the :guilabel:`PEPPOL Electronic Document
+Invoicing` section, and corresponding vendor bills are created as drafts and appear in the vendor
+bills list view.
 
 .. tip::
    To manually trigger the scheduled action to retrieve incoming Peppol documents, go to the
@@ -328,3 +260,17 @@ view.
 
    .. image:: electronic_invoicing/peppol-fetch-bills.png
       :alt: Fetch bills from Peppol
+
+.. _accounting/e-invoicing/peppol-deregister:
+
+Peppol deregistration from Odoo
+-------------------------------
+
+Only one Peppol receiver registration can be active for each Peppol endpoint identifier at a time.
+To stop using Odoo as the Peppol access point, e.g., to switch to another provider or reconfigure
+the registration for a new database, you must first deregister from Peppol. To do so, go to
+:menuselection:`Accounting --> Configuration --> Settings`, scroll down to the :guilabel:`PEPPOL
+Electronic Invoicing` section, click :guilabel:`Remove from Peppol`, and confirm.
+
+Once removed, the Peppol registration is deleted from the database, and documents can no longer be
+sent or received via Peppol in Odoo.
