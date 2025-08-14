@@ -238,8 +238,19 @@ Incoming mail servers
 As mentioned earlier, using redirections is the recommended method to receive emails in Odoo.
 However, it is also possible to set up incoming mail servers. Using this method means creating an
 incoming email server for each mailbox on your server, catchall, bounce, and every alias of the
-database, in order to fetch all incoming emails. Incoming mail servers are created by going to
-:menuselection:`Settings --> Technical --> Emails: Incoming Mail Servers`.
+database, in order to fetch all incoming emails.
+
+.. warning::
+   Odoo's *Incoming Mail Servers* feature is designed for shared inboxes (e.g.,
+   `sales@yourcompany.com` or `support@yourcompany.com`) to route messages to team pipelines,
+   tickets, or documents.
+
+   Using personal email addresses (e.g., `mitchell.admin@yourcompany.com`) as incoming mail servers
+   is **not** recommended. Doing so can lead to increased security risks, unintended message
+   routing, privacy issues, and difficulties syncing replies correctly.
+
+Incoming mail servers are created by going to :menuselection:`Settings --> Technical --> Emails:
+Incoming Mail Servers`.
 
 .. important::
    We recommend using the IMAP protocol over the POP protocol, as IMAP fetches all unread emails,
@@ -297,8 +308,8 @@ Infinite email loops
 ====================
 
 In some cases, infinite mailing loops can be created. Odoo provides some protection against such
-loops, ensuring the same sender cannot send too many emails **that would create records** to an alias in
-a specific time span.
+loops, ensuring the same sender cannot send too many emails **that would create records** to an
+alias in a specific time span.
 
 By default, an email address can send up to 20 emails in 120 minutes. If more emails are sent, they
 are blocked and the sender receives the following message:
@@ -313,10 +324,6 @@ To change the default behavior, enable :ref:`developer-mode`, then go to :menuse
   number of minutes as the :guilabel:`Value` (`120` is the default behavior).
 - For the second parameter, enter `mail.gateway.loop.threshold` as the :guilabel:`Key` and choose a
   number of emails as the :guilabel:`Value` (`20` is the default behavior).
-
-.. important::
-   These parameters are only used to prevent the creation of new records. They **do not prevent
-   replies** from being added to the chatter.
 
 Allow alias domain system parameter
 ===================================
