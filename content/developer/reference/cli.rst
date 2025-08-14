@@ -236,6 +236,14 @@ Database
 
     port the database listens on, defaults to 5432
 
+.. option:: --db_replica_host <hostname>
+
+    host for the replica database server, disabled when not set / empty
+
+.. option:: --db_replica_port <port>
+
+    port the replica database listens on, defaults to :option:`--db_port`
+
 .. option:: --db-filter <filter>
 
     hides databases that do not match ``<filter>``. The filter is a
@@ -411,7 +419,7 @@ Developer features
     comma-separated list of features. For development purposes only. Do not use it in production.
     Possible features are:
 
-    * ``all``: all the features below are activated
+    * ``all``: alias for xml,reload,qweb,access
 
     * ``xml``: read QWeb template from xml file directly instead of database.
       Once a template has been modified in database, it will be not be read from
@@ -423,10 +431,14 @@ Developer features
 
     * ``qweb``: break in the evaluation of QWeb template when a node contains ``t-debug='debugger'``
 
-    * ``(i)p(u)db``: start the chosen python debugger in the code when an
-      unexpected error is raised before logging and returning the error.
-
     * ``werkzeug``: display the full traceback on the frontend page in case of exception
+
+    * ``replica``: simulate :option:`db_replica_host` but connect to the same datbase server as
+      :option:`db_host`, this makes it possible to test read-only features without the need to setup
+      a replicated database.
+
+    * ``access``: log the traceback next to the AccessError when it results as a 403 - Forbidden
+      HTTP response.
 
 
 .. _reference/cmdline/server/http:
