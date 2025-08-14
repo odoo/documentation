@@ -260,19 +260,43 @@ following options:
 
 - :guilabel:`Filter name`: Name of the favorited search.
 - :guilabel:`Default filter`: Sets the favorited search as the default filter for the view.
-- :guilabel:`Shared`: Makes the favorited search available to all users. Otherwise, by default, the
-  favorited search is only available to the user who created it.
 
 Once the options are set, click :guilabel:`Save` to save the favorited search.
 
 .. image:: search/favorites.png
    :alt: Saving a favorite search on the Sales Analysis report.
+   :scale: 80%
 
-Saved favorites can be accessed by clicking the :icon:`fa-trash` :guilabel:`(delete)` icon in the
-search bar, then selecting the saved filter in the :guilabel:`Favorites` drop-down menu. To remove a
-saved favorite, click the :icon:`fa-trash` :guilabel:`(delete)` icon next to the favorited search.
+Favorited searches can be accessed by clicking the :icon:`fa-caret-down` :guilabel:`(dropdown)` icon
+in the search bar, then selecting the saved search under :icon:`fa-star` :guilabel:`Favorites`.
+
+To edit or delete a favorited search, hover over the search name in the list of favorites and click
+:icon:`fa-pencil` :guilabel:`Edit favorite`. Modify any element of the favorite as desired.
+Alternatively, to delete the favorite, click :icon:`fa-cog` :guilabel:`Actions` then
+:icon:`fa-trash` :guilabel:`Delete`.
 
 .. tip::
-   To view *all* favorited searches, first activate :ref:`developer-mode`, and navigate to
-   :menuselection:`Settings app --> Technical --> User Interface: User-defined Filters`. From here,
-   all favorited searches can be viewed, edited, archived, or deleted.
+   - Favorited searches that are only visible to the current user, i.e., that are not shared, are
+     shown first in the list of favorites; any :ref:`shared searches <search/favorites-share>`,
+     whether created by the current user or another user, are shown in a second section.
+   - To view *all* favorited searches, first activate :ref:`developer-mode`, and navigate to
+     :menuselection:`Settings app --> Technical --> User Interface: User-defined Filters`. From
+     here, all favorited searches can be viewed, edited, archived, or deleted.
+
+.. _search/favorites-share:
+
+Share a favorited search
+------------------------
+
+By default, a favorited search is only available to the user who created it. To share a favorited
+search with other users, click :guilabel:`Edit` when creating the favorite, or, for an existing
+favorite, click :icon:`fa-pencil` :guilabel:`Edit favorite` after hovering over the search name in
+the list of favorites.
+
+In the :guilabel:`Shared with` field, select the relevant users from the drop-down menu, then click
+:icon:`fa-cloud-upload` :guilabel:`Save manually`. The favorite is now visible for all selected
+users under :icon:`fa-star` :guilabel:`Favorites`.
+
+.. image:: search/favorites-shared.png
+   :alt: Sharing a search with multiple users.
+   :scale: 80%
