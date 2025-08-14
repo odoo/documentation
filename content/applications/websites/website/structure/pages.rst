@@ -206,9 +206,3 @@ Toggle the :guilabel:`Activate` switch to deactivate the redirection.
 .. seealso::
    - `Google documentation on redirects and search <https://developers.google.com/search/docs/crawling-indexing/301-redirects>`_
    - :doc:`pages/seo`
-
-.. toctree::
-   :titlesonly:
-
-   pages/header_footer
-   pages/seo
