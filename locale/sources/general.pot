@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-15 11:05+0000\n"
+"POT-Creation-Date: 2025-08-18 08:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2132,6 +2132,10 @@ msgstr ""
 msgid "`Using Mail-Tester to set SPF Records for specific carriers <https://www.mail-tester.com/spf/>`_"
 msgstr ""
 
+#: ../../content/applications/general/email_communication/email_domain.rst:154
+msgid "`Magic Sheet - SPF, DKIM and DMARC configuration [PDF] <https://drive.google.com/drive/folders/1TJIXQpdR0VN8UQx5JP7q7vFuAr3e1Q3r>`_"
+msgstr ""
+
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:3
 msgid "Manage inbound messages"
 msgstr ""
@@ -2418,60 +2422,72 @@ msgid "Incoming mail servers"
 msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:238
-msgid "As mentioned earlier, using redirections is the recommended method to receive emails in Odoo. However, it is also possible to set up incoming mail servers. Using this method means creating an incoming email server for each mailbox on your server, catchall, bounce, and every alias of the database, in order to fetch all incoming emails. Incoming mail servers are created by going to :menuselection:`Settings --> Technical --> Emails: Incoming Mail Servers`."
+msgid "As mentioned earlier, using redirections is the recommended method to receive emails in Odoo. However, it is also possible to set up incoming mail servers. Using this method means creating an incoming email server for each mailbox on your server, catchall, bounce, and every alias of the database, in order to fetch all incoming emails."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:245
-msgid "We recommend using the IMAP protocol over the POP protocol, as IMAP fetches all unread emails, while POP fetches all the emails' history and then tags them as deleted in your mailbox."
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:244
+msgid "Odoo's *Incoming Mail Servers* feature is designed for shared inboxes (e.g., `sales@yourcompany.com` or `support@yourcompany.com`) to route messages to team pipelines, tickets, or documents."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:249
-msgid "It is also possible to connect a mailbox through :doc:`Gmail with Google OAuth <google_oauth>` or :doc:`Outlook with Microsoft Azure OAuth <azure_oauth>`."
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:248
+msgid "Using personal email addresses (e.g., `mitchell.admin@yourcompany.com`) as incoming mail servers is **not** recommended. Doing so can lead to increased security risks, unintended message routing, privacy issues, and difficulties syncing replies correctly."
 msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_inbound.rst:252
+msgid "Incoming mail servers are created by going to :menuselection:`Settings --> Technical --> Emails: Incoming Mail Servers`."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:256
+msgid "We recommend using the IMAP protocol over the POP protocol, as IMAP fetches all unread emails, while POP fetches all the emails' history and then tags them as deleted in your mailbox."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:260
+msgid "It is also possible to connect a mailbox through :doc:`Gmail with Google OAuth <google_oauth>` or :doc:`Outlook with Microsoft Azure OAuth <azure_oauth>`."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:263
 msgid "Regardless of the protocol chosen, emails are fetched using the *Mail: Fetchmail Service* scheduled action."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:255
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:266
 msgid "Additionally, using an incoming mail server in Odoo gives the opportunity to create new records in a specified model. Each incoming mail server can create records in a different model."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:259
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:270
 msgid "Emails received on `task@company-name.com` are fetched by the Odoo database. All fetched emails will create a new project task in the database."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:268
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:279
 msgid "MX record"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:270
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:281
 msgid "A third option is to create a MX record in your DNS zone which specifies the mail server managing emails sent to your domain. **Advanced technical knowledge is required.**"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:274
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:285
 msgid "This configuration only works with a subdomain on the Odoo Online or Odoo.sh infrastructure (e.g., `@mail.mydomain.com`)"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:277
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:288
 msgid "Below are presented some specifications depending on the hosting type:"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:281
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:292
 #: ../../content/applications/general/email_communication/faq.rst:296
 msgid "Odoo Online"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:283
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:294
 msgid "The custom subdomain must be added to your :doc:`Odoo Portal <../../websites/website/configuration/domain_names>`."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:286
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:297
 #: ../../content/applications/general/email_communication/faq.rst:301
 msgid "Odoo.sh"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:288
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:299
 msgid "The custom subdomain must be added to the :doc:`settings of the project <../../../administration/odoo_sh/getting_started/settings>`:"
 msgstr ""
 
@@ -2479,15 +2495,15 @@ msgstr ""
 msgid "Adding a custom subdomain for mail to Odoo.sh project settings."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:297
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:308
 msgid "Infinite email loops"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:299
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:310
 msgid "In some cases, infinite mailing loops can be created. Odoo provides some protection against such loops, ensuring the same sender cannot send too many emails **that would create records** to an alias in a specific time span."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:303
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:314
 msgid "By default, an email address can send up to 20 emails in 120 minutes. If more emails are sent, they are blocked and the sender receives the following message:"
 msgstr ""
 
@@ -2495,47 +2511,43 @@ msgstr ""
 msgid "Bounce email received after attempting contact too many times an alias."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:309
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:320
 msgid "To change the default behavior, enable :ref:`developer-mode`, then go to :menuselection:`Settings --> Technical --> Parameters: System Parameters` to add two parameters."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:312
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:323
 msgid "For the first parameter, enter `mail.gateway.loop.minutes` as the :guilabel:`Key` and choose a number of minutes as the :guilabel:`Value` (`120` is the default behavior)."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:314
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:325
 msgid "For the second parameter, enter `mail.gateway.loop.threshold` as the :guilabel:`Key` and choose a number of emails as the :guilabel:`Value` (`20` is the default behavior)."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:318
-msgid "These parameters are only used to prevent the creation of new records. They **do not prevent replies** from being added to the chatter."
-msgstr ""
-
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:322
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:329
 msgid "Allow alias domain system parameter"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:324
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:331
 msgid "Incoming aliases are set in the Odoo database to create records by receiving incoming emails. To view aliases set in the Odoo database, first activate the :ref:`developer mode <developer-mode>`. Then, go to :menuselection:`Settings app --> Technical --> Aliases`."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:328
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:335
 msgid "The following system parameter, `mail.catchall.domain.allowed`, set with allowed alias domain values, separated by commas, filters out correctly addressed emails to aliases. Setting the domains for which the alias can create a ticket, lead, opportunity, etc., eliminates false positives where email addresses with only the prefix alias, not the domain, are present."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:333
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:340
 msgid "In some instances, matches have been made in the Odoo database when an email is received with the same alias prefix and a different domain on the incoming email address. This is true in the sender, recipient, and :abbr:`CC (Carbon Copy)` email addresses of an incoming email."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:338
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:345
 msgid "When Odoo receives emails with the `commercial` prefix alias in the sender, recipient, or :abbr:`CC (Carbon Copy)` email addresses (e.g. commercial\\@example.com), the database falsely treats the email as the full `commercial` alias, with a different domain, and therefore, creates a ticket/lead/opportunity/etc."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:343
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:350
 msgid "To add the `mail.catchall.domain.allowed` system parameter, first, activate the :ref:`developer mode <developer-mode>`. Then, go to :menuselection:`Settings app --> Technical --> System Parameters`. Click :guilabel:`New`. Then, type in `mail.catchall.domain.allowed` for the :guilabel:`Key` field."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:347
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:354
 msgid "Next, for the :guilabel:`Value` field, add the domains separated by commas. Manually :icon:`fa-cloud-upload` :guilabel:`(Save)`, and the system parameter takes immediate effect."
 msgstr ""
 
@@ -2543,11 +2555,11 @@ msgstr ""
 msgid "mail.catchall.domain.allowed system parameter set."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:354
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:361
 msgid "Local-part based incoming detection"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers_inbound.rst:356
+#: ../../content/applications/general/email_communication/email_servers_inbound.rst:363
 msgid "When creating a new alias, there is an option to enable :guilabel:`Local-part based incoming detection`. If enabled, Odoo only requires the local-part to match for routing an incoming email. If this feature is turned off, Odoo requires the whole email address to match for routing an incoming email."
 msgstr ""
 
@@ -2600,7 +2612,7 @@ msgid "This section assumes ownership of a custom domain. If not, a custom domai
 msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:56
-msgid ":download:`Magic Sheet - Email domain configuration PDF <email_servers_outbound/magic-sheet-email-domain.pdf>`"
+msgid "`Magic Sheet - Email domain name configuration [PDF] <https://drive.google.com/drive/folders/1cW3watvBO4h190rz-a08AshUepVzDeg5>`_"
 msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers_outbound.rst:62
@@ -4865,6 +4877,10 @@ msgstr ""
 msgid "`IoT system FAQ <https://www.odoo.com/app/iot-faq>`_"
 msgstr ""
 
+#: ../../content/applications/general/iot.rst:43
+msgid "`Magic Sheet - Odoo Internet of Things [PDF] <https://drive.google.com/file/d/18D0VqlGvW6kUg-xKmyELrQqJ6J3bHKGy/view>`_"
+msgstr ""
+
 #: ../../content/applications/general/iot/connect.rst:3
 msgid "IoT system connection to Odoo"
 msgstr ""
@@ -5965,107 +5981,79 @@ msgstr ""
 msgid "In EU member states, `certification is legally required <https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2014.096.01.0107.01.ENG>`_ to use a scale as an integrated device."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:9
-msgid "Odoo is not certified in several countries, including France, Germany, and Switzerland. If you reside in one of these countries, you can still use a scale but without integration into your Odoo database. Alternatively, you can acquire a *non-integrated* certified scale that prints certified labels, which can then be scanned into your Odoo database."
-msgstr ""
-
-#: ../../content/applications/general/iot/devices/scale.rst:14
+#: ../../content/applications/general/iot/devices/scale.rst:10
 msgid "To connect a scale to the IoT system, use a USB cable. In some cases, you may need a serial-to-US adapter to complete the connection. If the scale is `compatible with an IoT system <https://www.odoo.com/page/iot-hardware>`_, no additional setup is required; the scale is automatically detected as soon as it is connected. If the scale is not detected, reboot the IoT box or :ref:`restart the Windows virtual IoT service <iot/windows_iot/restart>` and :ref:`update the scale's drivers <iot_updating_iot/handlers>`."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:22
+#: ../../content/applications/general/iot/devices/scale.rst:18
 msgid "If the scale still does not function after updating the drivers, it might not be `compatible with the Odoo IoT system <https://www.odoo.com/page/iot-hardware>`_. In such cases, a different scale must be used."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:26
-msgid "Once the scale is connected to the IoT system, follow these steps to configure it in the POS settings:"
+#: ../../content/applications/general/iot/devices/scale.rst:22
+msgid "Once the scale is connected to the IoT system, :ref:`configure it in the POS settings <pos/scale>`."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:29
-msgid ":ref:`Access the POS settings <configuration/settings>` and select your POS, or click the vertical ellipsis button (:guilabel:`⋮`) on a POS card and click :guilabel:`Edit`."
-msgstr ""
-
-#: ../../content/applications/general/iot/devices/scale.rst:31
-msgid "Scroll down to the :guilabel:`Connected Devices` section and enable :guilabel:`IoT Box`."
-msgstr ""
-
-#: ../../content/applications/general/iot/devices/scale.rst:32
-msgid "Select the scale in the :guilabel:`Electronic Scale` field."
-msgstr ""
-
-#: ../../content/applications/general/iot/devices/scale.rst:33
-msgid "Click :guilabel:`Save`."
-msgstr ""
-
-#: ../../content/applications/general/iot/devices/scale.rst:36
+#: ../../content/applications/general/iot/devices/scale.rst:25
 msgid ":doc:`Connect an IoT system to a POS </applications/sales/point_of_sale/configuration/pos_iot>`"
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:38
-msgid "The scale is then available in all the :doc:`POS's sessions </applications/sales/point_of_sale>`. If a product is configured with a price per weight, selecting it on the :guilabel:`PoS screen` opens the scale popup. The cashier can then weigh the product to automatically add the correct price to the cart."
-msgstr ""
-
-#: ../../content/applications/general/iot/devices/scale.rst:-1
-msgid "Electronic Scale dashboard view when no items are being weighed."
-msgstr ""
-
-#: ../../content/applications/general/iot/devices/scale.rst:48
+#: ../../content/applications/general/iot/devices/scale.rst:28
 msgid "Ariva S scales"
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:50
+#: ../../content/applications/general/iot/devices/scale.rst:30
 msgid "For Ariva S series scales (manufactured by Mettler-Toledo, LLC.) to function with IoT systems, a specific setting must be modified, and a dedicated Mettler USB-to-proprietary RJ45 cable is required."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:54
+#: ../../content/applications/general/iot/devices/scale.rst:34
 msgid "The official Mettler USB-to-RJ45 cable (Mettler part number 72256236) must be used. Contact Mettler or a partner to purchase an authentic cable. **No other** cable works for this configuration."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:58
+#: ../../content/applications/general/iot/devices/scale.rst:38
 msgid "To configure the Ariva S scale for IoT system recognition, refer to page 17 of `Mettler's Setup Guide for Ariva S series scales <https://www.mt.com/dam/RET_DOCS/Ariv.pdf>`_ and follow these steps:"
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:61
+#: ../../content/applications/general/iot/devices/scale.rst:41
 msgid "Hold the **>T<** button for eight seconds, or until :guilabel:`CONF` appears."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:62
+#: ../../content/applications/general/iot/devices/scale.rst:42
 msgid "Press **>T<** until :guilabel:`GRP 3` appears, then press **>0<** to confirm."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:63
+#: ../../content/applications/general/iot/devices/scale.rst:43
 msgid "At step :guilabel:`3.1`, make sure the value is set to :guilabel:`1` (USB Virtual COM ports) by pressing **>T<** to cycle through the options."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:65
+#: ../../content/applications/general/iot/devices/scale.rst:45
 msgid "Press **>0<** until :guilabel:`3.6` (if available, otherwise skip the next step)."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:66
+#: ../../content/applications/general/iot/devices/scale.rst:46
 msgid "At step :guilabel:`3.6`, make sure the value is set to :guilabel:`3` (8217 Mettler-Toledo (WO)) by pressing **>T<** to cycle through the options."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:68
+#: ../../content/applications/general/iot/devices/scale.rst:48
 msgid "Press **>0<** (multiple times if necessary) until :guilabel:`GRP 4` appears."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:69
+#: ../../content/applications/general/iot/devices/scale.rst:49
 msgid "Press **>T<** until :guilabel:`EXIT` appears."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:72
+#: ../../content/applications/general/iot/devices/scale.rst:52
 msgid "Do **not** make any other changes unless otherwise needed."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:74
+#: ../../content/applications/general/iot/devices/scale.rst:54
 msgid "Press **>0<**."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:75
+#: ../../content/applications/general/iot/devices/scale.rst:55
 msgid "Press **>0<** again to :guilabel:`SAVE`; the scale restarts."
 msgstr ""
 
-#: ../../content/applications/general/iot/devices/scale.rst:76
+#: ../../content/applications/general/iot/devices/scale.rst:56
 msgid "Reboot the IoT box or :ref:`restart the Windows virtual IoT service <iot/windows_iot/restart>`. The scale should then appear as `Toledo 8217`, as opposed to the previous display, where it appeared as `Adam Equipment Serial`."
 msgstr ""
 
