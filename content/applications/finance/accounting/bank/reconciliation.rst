@@ -60,6 +60,10 @@ journal's main account and its suspense account until it is fully reconciled. At
 suspense account is replaced with the account of the counterpart item or, in the case of
 :ref:`manual matching <accounting/reconciliation/set-account>`, the selected account.
 
+.. seealso::
+   - :ref:`Duplicate transactions <accounting/bank-synchronization/duplicate-transactions>`
+   - :ref:`Missing transactions <accounting/bank-synchronization/missing-transactions>`
+
 .. _accounting/reconciliation/action-buttons:
 
 Possible action buttons
