@@ -45,6 +45,8 @@ with actual bank statements.
 Configuration
 =============
 
+.. _accounting/pay_sepa/activate-sepa:
+
 Activate SEPA Credit Transfer (SCT)
 -----------------------------------
 
@@ -57,6 +59,8 @@ SCT option when paying your vendor.
    According to the localization package installed, the **SEPA Direct Debit** and **SEPA Credit
    Transfer** modules may be installed by default. If not, they need to be :ref:`installed <general/install>`.
 
+.. _accounting/pay_sepa/activate-sepa-bank-journal:
+
 Activate SEPA payment methods on banks
 --------------------------------------
 
@@ -66,6 +70,8 @@ present, add :guilabel:`SEPA Credit Transfer` under :guilabel:`Payment Method`.
 
 Make sure to specify the IBAN account number (domestic account numbers do not work with SEPA) and
 the BIC (bank identifier code) in the :guilabel:`Journal Entries` tab.
+
+.. _accounting/pay_sepa/registering-payments-sepa:
 
 Registering payments
 --------------------

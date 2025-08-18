@@ -44,6 +44,10 @@ Transactions
    The transactions section on the left shows all bank transactions, with the newest displayed
    first. Click a transaction to select it.
 
+.. seealso::
+   - :ref:`Duplicate transactions <accounting/bank-synchronization/duplicate-transactions>`
+   - :ref:`Missing transactions <accounting/bank-synchronization/missing-transactions>`
+
 Counterpart entries
    The counterpart entries section on the bottom right displays the options to match the selected
    bank transaction. Multiple tabs are available, including

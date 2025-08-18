@@ -2,98 +2,69 @@
 Salt Edge
 =========
 
-**Salt Edge** is a third-party provider that aggregates banking information
-from your bank accounts. It supports ~5000 institutions in more than 50
-countries.
-
-Odoo can synchronize directly with your bank to get all bank statements imported
-automatically into your database.
+`Salt Edge <https://www.saltedge.com/>`_ is a free third-party provider that aggregates banking data
+from various financial institutions. It supports around 5,000 institutions across more than 50
+countries. Odoo uses Salt Edge to synchronize with supported banks automatically and import all bank
+transactions into its database.
 
 .. seealso::
    - :doc:`../bank_synchronization`
-   - :doc:`../transactions`
+   - `Countries and connected banks with Salt Edge
+     <https://www.saltedge.com/products/account_information/coverage>`_
+
+.. _accounting/bank-synchronization/saltedge/configuration:
 
 Configuration
 =============
 
-Link your bank accounts with Odoo
----------------------------------
+.. _accounting/bank-synchronization/saltedge/odoo-connection:
 
-#. Start synchronization by clicking on :menuselection:`Accounting --> Configuration
-   --> Add a Bank Account`.
-#. Select the institution you want to synchronize. You can see if Salt Edge is the
-   third party provider of the institution by selecting it.
-#. After giving your phone number, you are asked for an email address. This email
-   address is used to create your Salt Edge account. Please make sure you enter a
-   valid email address, as otherwise, you will not be able to access your Salt Edge
-   account.
+Connection with Odoo
+--------------------
 
-   .. image:: saltedge/saltedge-contact-email.png
-      :alt: Email address to provide to Salt Edge for the creation of your account.
+When :ref:`connecting a bank to Odoo <accounting/bank-synchronization/first-synchronization>`,
+verify that the third-party provider is Salt Edge and follow the steps from the bank's login page.
 
-#. After entering your email address, you are redirected to Salt Edge to continue
-   the synchronization process.
+.. tip::
+   - Make sure the consent checkbox is enabled so Odoo can access your information.
+   - Select all accounts that need access and synchronization, including those from other banking
+     institutions.
 
-   .. image:: saltedge/saltedge-login-page.png
-      :alt: Salt Edge Login page.
+.. seealso::
+   :ref:`Update synchronization credentials <accounting/bank-synchronization/update-credentials>`
 
-#. Make sure you give your consent by checking the consent checkbox.
+.. _accounting/bank-synchronization/saltedge/troubleshooting:
 
-   .. image:: saltedge/saltedge-give-consent.png
-      :alt: Salt Edge give consent page.
+Troubleshooting
+===============
 
-#. Complete the synchronization by following the steps.
+.. seealso::
+   :ref:`Bank synchronization troubleshooting <accounting/bank-synchronization/troubleshooting>`
 
+.. _accounting/bank-synchronization/saltedge/troubleshooting/deleting-error:
 
-Update your credentials
------------------------
+Why is there an error when deleting a synchronization in Odoo?
+--------------------------------------------------------------
 
-To update your Salt Edge credentials or modify the synchronization settings, activate the
-:ref:`developer mode <developer-mode>`, go to :menuselection:`Accounting --> Configuration -->
-Online Synchronization`, and select the institution you want to update credentials. Click
-:guilabel:`Update Credentials` to start the flow and follow the steps.
+Odoo can't permanently delete the connection established with the banking institution. However,
+it revokes consent, which prevents Odoo from accessing the account. The error message indicates that
+the consent has been revoked, but the record could not be deleted as it remains in Salt Edge.
 
-Don't forget to check the consent checkbox. Otherwise, Odoo may not be able to access
-your information.
+To delete the connection, connect to the `Salt Edge account <https://www.saltedge.com/dashboard>`_
+and manually remove the synchronization. Once this is done, the record can be deleted in Odoo.
 
-Fetch new accounts
-------------------
+.. _accounting/bank-synchronization/saltedge/troubleshooting/account-already-synchronized:
 
-To add new online accounts to your connection, activate the :ref:`developer mode <developer-mode>`,
-go to :menuselection:`Accounting --> Configuration --> Online Synchronization`, and select the
-institution to fetch the new accounts. Click :guilabel:`Fetch Accounts` to start the flow and
-follow the steps.
+I have an error saying that this account has already been synchronized
+----------------------------------------------------------------------
 
-.. note::
-   Don't forget to check the consent checkbox. Otherwise, Odoo may not be able to access your
-   information.
+The bank account has already been synchronized with Salt Edge. Access the Salt Edge `dashboard
+<https://www.saltedge.com/dashboard>`_ to check if a connection with the same credentials exists.
+There are two options:
 
-FAQ
-===
-
-I have an error when I try to delete my synchronization within Odoo
--------------------------------------------------------------------
-
-Odoo can't permanently delete the connection you have created with the banking institution. However,
-it can revoke the consent you gave so that Odoo won't be able to access your account anymore. The
-error you are seeing is probably a message telling you that the consent was revoked, but the record
-could not be deleted as it still exists within Salt edge. If you want to remove the connection
-completely, please connect to your `Salt Edge account <https://www.saltedge.com/dashboard>`_
-and manually delete your synchronization. Once this is done, you can go back to Odoo to delete the
-record.
-
-I have an error saying that I have already synchronized this account
---------------------------------------------------------------------
-
-You have probably already synchronized your bank account with Salt Edge, please check on your
-`dashboard <https://www.saltedge.com/dashboard>`_ that you don't already have a connection with the
-same credentials.
-
-If you already have a synchronization with the same credentials present on your Salt Edge
-dashboard and this synchronization has not been created with Odoo, delete it and create it from your
-Odoo database.
-
-If you already have a connection with the same credentials present on your Salt Edge dashboard
-and this synchronization was created with Odoo, activate the :ref:`developer
-mode <developer-mode>`, go to :menuselection:`Accounting --> Configuration --> Online
-Synchronization`, and click :guilabel:`Update Credentials` to reactivate the connection.
+- If a connection with the same credentials exists in Salt Edge but has not been synchronized with
+  Odoo, delete the existing connection and create a new one from the Odoo database.
+- If a connection with the same credentials exists in Salt Edge and has already been synchronized
+  with Odoo, activate the :ref:`developer mode <developer-mode>`, go to :menuselection:`Accounting
+  --> Configuration --> Online Synchronization`, and click :guilabel:`Update Credentials` to
+  reactivate the connection.
