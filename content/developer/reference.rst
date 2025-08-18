@@ -17,4 +17,5 @@ Reference
    reference/cli
    reference/upgrades
    reference/external_api
+   reference/external_rpc_api
    reference/extract_api
