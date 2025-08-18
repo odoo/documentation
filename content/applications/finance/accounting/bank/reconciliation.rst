@@ -55,10 +55,30 @@ expanded to show additional information and buttons.
 Transactions
 ------------
 
+<<<<<<< 9a4029373476cd18f64fbeadf040d0f2a7c9a2c9
 Every :doc:`transaction <transactions>` is linked to a journal entry that debits/credits the
 journal's main account and its suspense account until it is fully reconciled. At that point, the
 suspense account is replaced with the account of the counterpart item or, in the case of
 :ref:`manual matching <accounting/reconciliation/set-account>`, the selected account.
+||||||| 6121497185404327defd9137544f8e852a23e172
+Counterpart entries
+   The counterpart entries section on the bottom right displays the options to match the selected
+   bank transaction. Multiple tabs are available, including
+   :ref:`reconciliation/existing-entries`, :ref:`reconciliation/batch-payments`,
+   :ref:`reconciliation/manual-operations`, and :guilabel:`Discuss`, which contains the chatter for
+   the selected bank transaction.
+=======
+.. seealso::
+   - :ref:`Duplicate transactions <accounting/bank-synchronization/duplicate-transactions>`
+   - :ref:`Missing transactions <accounting/bank-synchronization/missing-transactions>`
+
+Counterpart entries
+   The counterpart entries section on the bottom right displays the options to match the selected
+   bank transaction. Multiple tabs are available, including
+   :ref:`reconciliation/existing-entries`, :ref:`reconciliation/batch-payments`,
+   :ref:`reconciliation/manual-operations`, and :guilabel:`Discuss`, which contains the chatter for
+   the selected bank transaction.
+>>>>>>> abf42bc7c3b5f50f8185a370341476087d224831
 
 .. _accounting/reconciliation/action-buttons:
 
