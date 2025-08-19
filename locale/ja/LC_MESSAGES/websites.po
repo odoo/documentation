@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-08-18 08:33+0000\n"
-"PO-Revision-Date: 2025-08-18 12:53+0000\n"
+"PO-Revision-Date: 2025-08-19 22:50+0000\n"
 "Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-18-doc/"
 "websites/ja/>\n"
@@ -933,6 +933,11 @@ msgid ""
 "wishlists>` to allow signed-in users to remove a product from their cart and "
 "add it to their wishlist using the :guilabel:`Save for later` option."
 msgstr ""
+":guilabel:`ウィッシュリストに追加`: :ref:`ウィッシュリストを有効にする <"
+"ecommerce/products/wishlists>` "
+"により、ログインしたユーザは、:guilabel:`いったん保存` "
+"オプションを使用して、カートからプロダクトを削除し、ウィッシュリストに追加す"
+"ることができます。"
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:220
 msgid ""
@@ -940,6 +945,9 @@ msgid ""
 "fiscal_positions>` is detected automatically, the product tax is determined "
 "based on the customer's IP address."
 msgstr ""
+":doc:`会計ポジション <../../finance/accounting/taxes/fiscal_positions>` "
+"が自動的に検出された場合、プロダクトの税は顧客の IP "
+"アドレスに基づいて決定されます。"
 
 #: ../../content/applications/websites/ecommerce/checkout.rst:222
 msgid ""
@@ -1637,7 +1645,7 @@ msgstr ""
 
 #: ../../content/applications/websites/ecommerce/performance.rst:39
 msgid "Email queue optimization"
-msgstr ""
+msgstr "送信予約メール(メールキュー)の最適化"
 
 #: ../../content/applications/websites/ecommerce/performance.rst:41
 msgid ""
@@ -1646,6 +1654,9 @@ msgid ""
 "bottleneck, potentially slowing down the checkout process for other "
 "customers."
 msgstr ""
+"フラッシュセール(例：イベントチケット販売)やアクセスが急増するウェブサイトで"
+"は、注文確認メールの送信がパフォーマンスのボトルネックとなり、他の顧客のチェ"
+"ックアウト処理が遅くなる可能性があります。"
 
 #: ../../content/applications/websites/ecommerce/performance.rst:45
 msgid ""
@@ -1654,27 +1665,37 @@ msgid ""
 "Send pending emails` scheduled action, which sends queued emails as soon as "
 "possible."
 msgstr ""
+"このパフォーマンス問題を改善するために、注文確認メールはキューに追加され、注"
+"文処理フローとは別に非同期で処理されるようにできます。この処理は、 "
+":guilabel:`販売: 保留中のメールを送信` "
+"というスケジュールされたアクションによって管理され、可能な限り早くメールを送"
+"信します。"
 
 #: ../../content/applications/websites/ecommerce/performance.rst:49
 msgid "To enable asynchronous email sending:"
-msgstr ""
+msgstr "非同期メール送信を有効にする方法："
 
 #: ../../content/applications/websites/ecommerce/performance.rst:51
 msgid ""
 "Enable the :doc:`developer mode </applications/general/developer_mode>`."
-msgstr ""
+msgstr ":doc:`開発者モード </applications/general/developer_mode>`を有効にします。"
 
 #: ../../content/applications/websites/ecommerce/performance.rst:52
 msgid ""
 "Go to :menuselection:`Apps`, remove the :guilabel:`Apps` filter, and install "
 "the :guilabel:`Sales - Async Emails` module."
 msgstr ""
+":menuselection:`アプリ`に移動し、:guilabel:`アプリ`フィルタを解除して、:guila"
+"bel:`販売 - 非同期Eメール` モジュールをインストールします。"
 
 #: ../../content/applications/websites/ecommerce/performance.rst:54
 msgid ""
 "Go to :menuselection:`Settings --> Technical --> System Parameters` and set "
 "the :guilabel:`sale.async_emails` system parameter to `True`."
 msgstr ""
+":menuselection:`管理設定 --> 技術設定 --> システムパラメータ` "
+"に移動し、:guilabel:`sale.async_emails` システムパラメータを "
+"`True`に設定します。"
 
 #: ../../content/applications/websites/ecommerce/performance.rst:56
 msgid ""
@@ -1682,6 +1703,10 @@ msgid ""
 "ensure that the :guilabel:`Sales: Send pending emails` scheduled action is "
 "enabled."
 msgstr ""
+":menuselection:`管理設定 --> 技術設定 --> "
+"スケジュールされたアクション`に行き、スケジュールされたアクション "
+":guilabel:`販売: "
+"保留中のEメールを送信`が有効化されていることを確認してください。"
 
 #: ../../content/applications/websites/ecommerce/performance.rst:60
 msgid ""
@@ -1689,6 +1714,10 @@ msgid ""
 "few minutes. It is recommended only for high-traffic websites, as it can "
 "introduce unnecessary delays for e-commerce websites with moderate traffic."
 msgstr ""
+"この機能を有効にすると、注文確認メールや請求書メールの送信が数分遅れる可能性"
+"があります。このため、高トラフィックなウェブサイトでのみ使用することを推奨し"
+"ます。トラフィックが中程度のECサイトでは、不要な遅延を引き起こす可能性がある"
+"ため、注意が必要です。"
 
 #: ../../content/applications/websites/ecommerce/products.rst:5
 msgid "Products"
@@ -1759,6 +1788,12 @@ msgid ""
 "button to access the product page, then toggle the switch "
 "from :guilabel:`Unpublished` to :guilabel:`Published`."
 msgstr ""
+"フロントエンドから作成されたプロダクトは、自動的に :ref:`公開済 <website/"
+"pages/un-publish-page>` "
+"になります。一方、バックエンドから作成されたプロダクトは公開されません。プロ"
+"ダクトを公開するには、:guilabel:`ウェブサイトへ移動` "
+"スマートボタンをクリックしてプロダクトページにアクセスし、:guilabel:`非公開`"
+"を :guilabel:`公開` に切り替えてください。"
 
 #: ../../content/applications/websites/ecommerce/products.rst:40
 msgid ""
@@ -2252,11 +2287,11 @@ msgid ""
 "product page. For multiple attributes, you can combine them to create "
 "specific variants."
 msgstr ""
-":ref:`プロダクトフォーム <ecommerce/products/product-form>` にアクセス"
-"し、:guilabel:`属性とバリエーション` タブを開きます。ここで属性と値を追加し、"
-"顧客がプロダクトページでプロダクトのバリエーションを設定および選択できるよう"
-"にします。複数の属性がある場合は、それらを組み合わせて特定のバリエーションを"
-"作成することができます。"
+":ref:`プロダクトフォーム <ecommerce/products/product-form>` "
+"にアクセスし、:guilabel:`属性とバリアント` "
+"タブを開きます。ここで属性と値を追加し、顧客がプロダクトページでプロダクトの"
+"バリエーションを設定および選択できるようにします。複数の属性がある場合は、そ"
+"れらを組み合わせて特定のバリアントを作成することができます。"
 
 #: ../../content/applications/websites/ecommerce/products.rst:227
 msgid ""
@@ -2276,6 +2311,9 @@ msgid ""
 "catalog>`, set the :guilabel:`Attributes` feature to :guilabel:`Left` using "
 "the website editor."
 msgstr ""
+":doc:`プロダクトカタログ <products/"
+"catalog>`に商品属性を表示するには、ウェブサイトエディタを使用して、:guilabel:"
+"`属性` 機能を :guilabel:`左`に設定してください。"
 
 #: ../../content/applications/websites/ecommerce/products.rst:234
 msgid ""
@@ -2587,7 +2625,7 @@ msgstr ""
 
 #: ../../content/applications/websites/ecommerce/products.rst:373
 msgid "Wishlists"
-msgstr ""
+msgstr "ウィッシュリスト"
 
 #: ../../content/applications/websites/ecommerce/products.rst:375
 msgid ""
@@ -2599,10 +2637,18 @@ msgid ""
 "and can be disabled in the :ref:`website editor <ecommerce/products/product-"
 "page>` if needed."
 msgstr ""
+":icon:`fa-heart-o` :guilabel:`ウィッシュリストに追加` "
+"ボタンを使用すると、顧客はプロダクトをウィッシュリストに追加、つまり後で購入"
+"するために保存することができます。この機能を有効にするには、:menuselection:`"
+"ウェブサイト --> 設定 --> 管理設定`に移動し、:guilabel:`ショップ - "
+"プロダクト`セクションまでスクロールして、:guilabel:`ウィッシュリスト`を有効に"
+"してください。このボタンは各プロダクトページに表示され、必要に応じて :ref:`"
+"ウェブサイトエディタ <ecommerce/products/product-page>` "
+"で無効にすることができます。"
 
 #: ../../content/applications/websites/ecommerce/products.rst:-1
 msgid "Add to wishlist button"
-msgstr ""
+msgstr "「ウィッシュリストに追加」ボタン"
 
 #: ../../content/applications/websites/ecommerce/products.rst:385
 msgid ""
@@ -2610,6 +2656,9 @@ msgid ""
 "hovering the mouse over the product on the :ref:`shop page <ecommerce/"
 "catalog/additional-features>`."
 msgstr ""
+":ref:`ショップページ <ecommerce/catalog/additional-features>` "
+"でプロダクトにマウスを置くと、:icon:`fa-heart-o` "
+"(:guilabel:`ウィッシュリスト`) ボタンを表示することもできます。"
 
 #: ../../content/applications/websites/ecommerce/products.rst:387
 msgid ""
@@ -2617,6 +2666,10 @@ msgid ""
 "the :guilabel:`Save for later` button in the :guilabel:`Order "
 "overview` :ref:`checkout step <ecommerce/checkout/review_order>`."
 msgstr ""
+"顧客は、:guilabel:`ご注文の概要` :ref:`チェックアウトステップ <ecommerce/"
+"checkout/review_order>` の :guilabel:`いったん保存` "
+"ボタンをクリックして、カートからウィッシュリストにプロダクトを移動することが"
+"できます。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:3
 msgid "Catalog"
@@ -2629,6 +2682,10 @@ msgid ""
 "navigation paths. Essentially, the eCommerce catalog is the shop page of "
 "your website."
 msgstr ""
+"eコマースカタログには、顧客が閲覧できるプロダクトが表示されます。これは、プロ"
+"ダクトカテゴリ、利用可能なオプション、ソート、ナビゲーションパスを使用して整"
+"理されています。基本的に、eコマースカタログはウェブサイトのショップページです"
+"。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:9
 msgid ""
@@ -2640,6 +2697,13 @@ msgid ""
 "use :ref:`additional features <ecommerce/catalog/additional-features>` "
 "according to your needs."
 msgstr ""
+"プロダクトカタログには、:ref:`トップバー <ecommerce/catalog/top-bar>`、:ref:`"
+"サイドパネル <ecommerce/catalog/side-panel>`、および:ref:`"
+"プロダクトリストエリア <ecommerce/catalog/product-listing>`が含まれます。"
+"Odoo を使用すると、:ref:`レイアウトをカスタマイズ <ecommerce/catalog/"
+"customize-layout>`、:ref:`カテゴリおよび属性 <ecommerce/catalog/categories>` "
+"でフィルタリング、および必要に応じて :ref:`追加機能 <ecommerce/catalog/"
+"additional-features>` を使用することができます。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:16
 msgid ""
@@ -2647,10 +2711,13 @@ msgid ""
 "to the shop page, click :guilabel:`Edit` in the upper-right corner, and "
 "navigate to the :guilabel:`Customize` tab."
 msgstr ""
+"ウェブサイトエディタを使用して、ショップページをカスタマイズすることができま"
+"す。ショップページにアクセスするには、ショップページに移動し、右上隅にある "
+":guilabel:`編集` をクリックし、:guilabel:`カスタマイズ` タブに移動します。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:22
 msgid "Top bar"
-msgstr ""
+msgstr "トップバー"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:24
 msgid ""
@@ -2658,10 +2725,14 @@ msgid ""
 "display options <ecommerce/catalog/sort-by-and-display-option>`, "
 "and :ref:`category quick access <ecommerce/catalog/categories>`."
 msgstr ""
+"上部のバーには、検索バー、通貨選択、:ref:`並べ替えおよび表示オプション <"
+"ecommerce/catalog/sort-by-and-display-option>`、および :ref:`"
+"カテゴリクイックアクセス <ecommerce/catalog/categories>` "
+"を含めることができます。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:31
 msgid "Sort-by search and display options"
-msgstr ""
+msgstr "並べ替え検索および表示オプション"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:33
 msgid ""
@@ -2671,36 +2742,42 @@ msgid ""
 "the :ref:`Layout <ecommerce/catalog/layout>` buttons in the :guilabel:`Top "
 "Bar`."
 msgstr ""
+":guilabel:`検索バー`の表示/非表示を切り替えたり、:ref:`カテゴリ <ecommerce/"
+"catalog/categories>` および/または :ref:`属性 <ecommerce/catalog/attributes>`"
+" を表示したり、:guilabel:`並べ替え`、および :ref:`レイアウト <ecommerce/"
+"catalog/layout>` ボタンを有効または無効にできます。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:38
 msgid ""
 "The :guilabel:`Sort-by` button is toggled by default, and customers can "
 "choose between the following :guilabel:`Default Sort` options:"
 msgstr ""
+":guilabel:`並べ替え` ボタンはデフォルトでオンになっており、顧客は次の "
+":guilabel:`デフォルトの並べ替え` オプションから選択できます。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:41
 msgid ":guilabel:`None`"
-msgstr ""
+msgstr ":guilabel:`なし`"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:42
 msgid ":guilabel:`Featured`"
-msgstr ""
+msgstr ":guilabel:`おすすめ`"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:43
 msgid ":guilabel:`Newest Arrivals`"
-msgstr ""
+msgstr ":guilabel:`新着商品`"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:44
 msgid ":guilabel:`Name (A-Z)`"
-msgstr ""
+msgstr ":guilabel:`名称 (A-Z)`"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:45
 msgid ":guilabel:`Price - Low to High`"
-msgstr ""
+msgstr ":guilabel:`価格 - 安い順`"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:46
 msgid ":guilabel:`Price - High to Low`"
-msgstr ""
+msgstr ":guilabel:`価格 - 安い順`"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:48
 msgid ""
@@ -2714,10 +2791,13 @@ msgid ""
 "catalog/side-panel>`, you can disable all related options in the website "
 "editor."
 msgstr ""
+"トップバーまたは :ref:`サイドパネル <ecommerce/catalog/side-panel>` "
+"を表示したくない場合は、ウェブサイトエディタで関連するオプションをすべて無効"
+"にしてください。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:57
 msgid "Side panel"
-msgstr ""
+msgstr "サイドパネル"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:59
 msgid ""
@@ -2726,6 +2806,10 @@ msgid ""
 "shop page, you can activate various filters, such as the :ref:`attribute "
 "<ecommerce/catalog/attributes>` filter."
 msgstr ""
+"サイドパネルには、プロダクトカテゴリを整理するための高度なフィルタリングツー"
+"ルがあります。ショップページをさらに :ref:`カテゴリ分け <ecommerce/catalog/"
+"categories>` するには、:ref:`属性 <ecommerce/catalog/attributes>` "
+"フィルタなどのさまざまなフィルタを有効化できます。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:63
 msgid ""
@@ -2734,28 +2818,36 @@ msgid ""
 "period. The :doc:`Rental app <../../../sales/rental>` must be installed to "
 "use this feature."
 msgstr ""
+"また、:guilabel:`日付表示` "
+"オプションを追加して、指定した期間のレンタルプロダクトの空き状況を確認できる"
+"日付範囲カレンダーを表示することもできます。この機能を使用するには、:doc:`"
+"レンタルアプリ <../../../sales/rental>` をインストールする必要があります。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:67
 msgid ""
 "It is also possible to toggle the :guilabel:`Collapsible sidebar` switch to "
 "make the side panel manually collapsible."
-msgstr ""
+msgstr "また、:guilabel:`折りたたみ可能なサイドバー` "
+"スイッチを切り替えることで、サイドパネルを手動で折りたたむこともできます。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:71
 msgid ""
 "To use a price range or tags filter, you have to enable :ref:`attributes "
 "<ecommerce/catalog/attributes>` first."
 msgstr ""
+"価格帯やタグのフィルタを使用するには、まず :ref:`属性 <ecommerce/catalog/"
+"attributes>` を有効にする必要があります。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:77
 msgid "Product categorization in catalog"
-msgstr ""
+msgstr "カタログ内でのプロダクトのカテゴリ分け"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:79
 msgid ""
 "eCommerce categories are used to organize products into groups, making it "
 "easier for customers to browse the online store."
-msgstr ""
+msgstr "eコマースカテゴリで、プロダクトをグループに整理することで、顧客がオンラインス"
+"トアで商品を閲覧しやすくします。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:82
 msgid ""
@@ -2764,6 +2856,10 @@ msgid ""
 "add a :guilabel:`Name`, optionally enter a :guilabel:`Parent Category`, and "
 "write a :guilabel:`Category Description`, if needed."
 msgstr ""
+"eコマースカテゴリを作成するには、:menuselection:`ウェブサイト --> eコマース "
+"--> eコマースカテゴリ`を選択し、:guilabel:`新規` "
+"をクリックします。カテゴリフォームで、:guilabel:`名前`を追加し、必要に応じて "
+":guilabel:`親カテゴリ`を入力し、:guilabel:`カテゴリ説明` を記入します。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:87
 msgid ""
@@ -2772,10 +2868,15 @@ msgid ""
 "the :guilabel:`Sales` tab, navigate to the :guilabel:`Ecommerce shop` "
 "section, and select the :guilabel:`Categories` it belongs to."
 msgstr ""
+"eコマースカテゴリを使用するには、:menuselection:`ウェブサイト --> eコマース "
+"--> "
+"プロダクト`に移動し、変更するプロダクトを選択し、:guilabel:`販売`タブに移動し"
+"、:guilabel:`eコマースショップ`セクションに移動し、それが属する:guilabel:`カ"
+"テゴリ`を選択してください。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:92
 msgid "A single product can belong to multiple eCommerce categories."
-msgstr ""
+msgstr "1つのプロダクトは複数のeコマースカテゴリに属することができます。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:94
 msgid ""
@@ -2788,6 +2889,14 @@ msgid ""
 "option :guilabel:`Collapsible Category Recursive` appears, allowing you to "
 "collapse the category in the side panel."
 msgstr ""
+"カテゴリを設定し、関連するプロダクトに割り当てたら、メインショップページに移"
+"動し、ウェブサイトエディタを開きます。:guilabel:`カテゴリ` "
+"オプションでは、:guilabel:`左`、つまり :ref:`サイドパネル <ecommerce/catalog/"
+"side-panel>`、または :guilabel:`トップ`、つまり :ref:`トップバー <ecommerce/"
+"catalog/top-"
+"bar>`、あるいはその両方にメニューを表示することができます。:guilabel:`左`カテ"
+"ゴリを選択すると、:guilabel:`折りたたみ可能なカテゴリ再帰`オプションが表示さ"
+"れ、サイドパネルでカテゴリを折りたたむことができます。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:-1
 msgid "Categories options for your eCommerce website"
@@ -2809,6 +2918,11 @@ msgid ""
 "eCommerce --> Products`, select a product, and click "
 "the :guilabel:`Attributes & Variants` tab. Add as many attributes as desired."
 msgstr ""
+"属性は、色や素材など、プロダクトの特性を指します。一方、バリアントは、属性の"
+"さまざまな組み合わせを指します。属性とバリアントを設定するには、:menuselectio"
+"n:`ウェブサイト --> eコマース --> プロダクト` "
+"を選択し、プロダクトを選択して、:guilabel:`属性とバリアント`タブをクリックし"
+"ます。必要なだけ属性を追加します。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:118
 msgid ":doc:`../../../sales/sales/products_prices/products/variants`"
@@ -2825,16 +2939,23 @@ msgid ""
 "(:ref:`side panel <ecommerce/catalog/side-panel>`) and/or :guilabel:`Top` "
 "(:ref:`top bar <ecommerce/catalog/top-bar>`)."
 msgstr ""
+"属性フィルタリングを有効にするには、メインショップページに移動し、ウェブサイ"
+"トエディタを開き、:guilabel:`属性` フィールドを :guilabel:`左` (:ref:`"
+"サイドパネル <ecommerce/catalog/side-panel>`) および/または :guilabel:`上` "
+"(:ref:`トップバー <ecommerce/catalog/top-bar>`) に設定します。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:129
 msgid ""
 "When attribute filtering is enabled in the top bar, customers must click "
 "the :icon:`fa-sliders` (:guilabel:`dropdown toggle`) button to access it."
 msgstr ""
+"トップバーで属性フィルタリングが有効になっている場合、顧客は :icon:`fa-"
+"sliders` (:guilabel:`ドロップダウントグル`) "
+"ボタンをクリックしてアクセスする必要があります。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:132
 msgid "When enabling :guilabel:`Attributes`, more options become available:"
-msgstr ""
+msgstr ":guilabel:`属性` を有効にすると、さらに多くのオプションが利用可能になります。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:134
 msgid ""
@@ -2853,6 +2974,11 @@ msgid ""
 "products using those tags by going to the :guilabel:`Tags` section in "
 "the :ref:`side panel <ecommerce/catalog/side-panel>`."
 msgstr ""
+":guilabel:`プロダクトタグフィルタ`: スイッチを切り替えて、ショップページに "
+":guilabel:`プロダクトタグ` を表示し、顧客が :ref:`サイドパネル <ecommerce/"
+"catalog/side-panel>` の :guilabel:`タグ` "
+"セクションに移動して、それらのタグを使用してプロダクトをフィルタリングできる"
+"ようにします。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:142
 msgid ""
@@ -2863,28 +2989,39 @@ msgid ""
 "Variants` tab and view a summary of all selected products in "
 "the :guilabel:`All Products` tab."
 msgstr ""
+"eコマースでタグを使用したい場合は、:menuselection:`eコマース --> "
+"プロダクトタグ`に移動し、:guilabel:`新規`をクリックしてください。"
+"プロダクトタグフォームの "
+":guilabel:`プロダクトテンプレート`タブで、指定したタグにリンクするプロダクト"
+"を追加してください。また、:guilabel:`プロダクトバリアント` "
+"タブでプロダクトのバリアントを追加し、:guilabel:`すべてのプロダクト`タブで選"
+"択したすべてのプロダクトの概要を表示することもできます。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:147
 msgid ""
 "Price filtering works independently from attributes and, therefore, can be "
 "enabled on its own, if desired."
-msgstr ""
+msgstr "価格フィルタリングは属性とは独立して機能するため、必要に応じて単独で有効にす"
+"ることができます。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:153
 msgid "Product listing area"
-msgstr ""
+msgstr "プロダクトリスティングエリア"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:155
 msgid ""
 "You can customize the layout of the entire shop page, as well as that "
 "of :ref:`individual category pages <ecommerce/catalog/customize-layout>`."
 msgstr ""
+"ショップページ全体のレイアウト、および :ref:`個々のカテゴリページ <ecommerce/"
+"catalog/customize-layout>` のレイアウトをカスタマイズすることができます。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:159
 msgid ""
 "It is also possible to customize individual :ref:`product pages <ecommerce/"
 "products/product-form>`."
-msgstr ""
+msgstr "個々の :ref:`プロダクトページ <ecommerce/products/product-form>` "
+"をカスタマイズすることも可能です。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:163
 msgid ""
@@ -2892,10 +3029,13 @@ msgid ""
 "and-display-option>`, and set the default layout to either :guilabel:`Grid` "
 "or :guilabel:`List` view."
 msgstr ""
+"ウェブサイトエディタで、:ref:`レイアウト <ecommerce/catalog/sort-by-and-"
+"display-option>` を選択し、デフォルトのレイアウトを :guilabel:`グリッド` "
+"または :guilabel:`リスト` ビューに設定します。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:166
 msgid "Use the following options to further adjust the layout:"
-msgstr ""
+msgstr "以下のオプションを使用して、レイアウトをさらに調整してください："
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:168
 msgid ""
@@ -2905,7 +3045,7 @@ msgstr ""
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:169
 msgid ":guilabel:`Gap`: Define the gap between the products."
-msgstr ""
+msgstr ":guilabel:`間隔`: プロダクト間の間隔を定義します。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:170
 msgid ""
@@ -2924,12 +3064,17 @@ msgid ""
 "also adjust the display by changing the :guilabel:`Fill` options to fit your "
 "design preferences best."
 msgstr ""
+":guilabel:`画像サイズ`: プロダクト画像のアスペクト比を選択してください: "
+":guilabel:`横長 (4/3)`、:guilabel:`デフォルト (1/1)`、:guilabel:`縦長 (4/"
+"5)`、または :guilabel:`縦長 (2/3)`。また、:guilabel:`塗りつぶし` "
+"オプションを変更して、デザインに合わせて表示を調整することもできます。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:177
 msgid ""
 "Toggle the :guilabel:`Prod. Desc.` switch to display the product description "
 "below the product's name."
-msgstr ""
+msgstr ":guilabel:`プロダクト説明` "
+"スイッチを切り替えて、プロダクトの名前の下にプロダクトの説明を表示します。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:181
 msgid ""
@@ -2948,6 +3093,12 @@ msgid ""
 "extreme left or right, and `<` `>` allow to move it one row to the left or "
 "right."
 msgstr ""
+"さらに、ショップページでプロダクトの位置を手動で変更することもできます。これ"
+"を行うには、メインのショップページに移動し、プロダクトをクリックして、ウェブ"
+"サイトエディタを開きます。:guilabel:`Product` "
+"セクションでは、矢印を使用してプロダクトの順番を変更できます。<<` `>>` "
+"ボタンでプロダクトを左端または右端に、`<` `>` で 1 "
+"行左または右に、それぞれ移動できます。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:190
 msgid ""
@@ -2955,6 +3106,10 @@ msgid ""
 "going to :menuselection:`Website --> eCommerce --> Products`, switching to "
 "the list view, and dragging and dropping the products within the list."
 msgstr ""
+"また、menuselection:`ウェブサイト --> eコマース --> "
+"プロダクト`に移動し、リスト表示に切り替えて、リスト内のプロダクトをドラッグ＆"
+"ドロップすることで、ショップページ上のプロダクトの位置を変更することもできま"
+"す。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:195
 msgid "Product highlight"
@@ -2970,6 +3125,13 @@ msgid ""
 "as :guilabel:`Sale`, :guilabel:`Sold out`, :guilabel:`Out of stock` "
 "or :guilabel:`New!`."
 msgstr ""
+"ショップページでプロダクトをより目立たせるために、プロダクトをハイライトする"
+"ことができます。これを行うには、ウェブサイトエディタに移動し、ハイライトする"
+"プロダクトをクリックします。:guilabel:`プロダクト`セクションでは、グリッドを"
+"クリックしてプロダクト画像のサイズを選択したり、:guilabel:`リボン "
+"`を追加したりすることができます。これにより、:guilabel:`セール`、:guilabel:`"
+"完売`、:guilabel:`在庫切れ`、:guilabel:`New!`などのバナーがプロダクト画像に表"
+"示されます。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:-1
 msgid "Ribbon highlight"
@@ -2983,24 +3145,33 @@ msgid ""
 "and a :guilabel:`Text` label. To edit the ribbon, click the :icon:`fa-pencil-"
 "square-o` (:guilabel:`Edit`) icon next to the :guilabel:`Ribbon` label."
 msgstr ""
+"新しいリボンを作成するには、:guilabel:`リボン` フィールドの横にある緑色の "
+":icon:`fa-plus` (:guilabel:`作成`) "
+"アイコンをクリックします。次に、:guilabel:`リボン名`を追加し、その "
+":guilabel:`位置`を定義し、:guilabel:`背景`と "
+":guilabel:`テキスト`ラベルを選択します。リボンを編集するには、:guilabel:`リボ"
+"ン`ラベルの横にある :icon:`fa-pencil-square-o` (:guilabel:`編集`) "
+"アイコンをクリックします。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:-1
 msgid "Create a new ribbon."
-msgstr ""
+msgstr "新規リボンを作成します。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:214
 msgid "The ribbon is now available for all the eCommerce products."
-msgstr ""
+msgstr "リボンは、すべての e コマースプロダクトでご利用いただけるようになりました。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:217
 msgid "There are other ways to create a new ribbon:"
-msgstr ""
+msgstr "新しいリボンは他の方法でも作成できます："
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:219
 msgid ""
 "Go to :menuselection:`Website --> eCommerce --> Product Ribbons` and "
 "click :guilabel:`New`."
 msgstr ""
+":menuselection:`ウェブサイト --> eコマース --> プロダクトリボン` に行き、 "
+":guilabel:`新規`をクリックします。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:220
 msgid ""
@@ -3008,6 +3179,9 @@ msgid ""
 "the product form, and under the :guilabel:`Sales` tab, change or create the "
 "ribbon in the :guilabel:`Ribbon` field."
 msgstr ""
+":doc:`開発者モード <../../../general/developer_mode>` "
+"を有効化し、プロダクトフォームにアクセスして、:guilabel:`販売` "
+"タブで、:guilabel:`リボン` フィールドのリボンを変更または作成してください。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:224
 msgid ""
@@ -3018,16 +3192,24 @@ msgid ""
 "ribbon in the :guilabel:`Variant Ribbon` field of the :guilabel:`Sales` "
 "section."
 msgstr ""
+"特定の :ref:`プロダクトバリアント <ecommerce/products/product-variants>` "
+"にリボンを追加することもできます。これを行うには、:menuselection:`"
+"ウェブサイト --> eコマース --> プロダクト` "
+"に移動し、プロダクトを選択します。:guilabel:`バリアント` "
+"スマートボタンをクリックし、バリアントを選択して、:guilabel:`販売` "
+"セクションの :guilabel:`バリアントリボン` フィールドにリボンを追加します。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:233
 msgid "Shop and category page design"
-msgstr ""
+msgstr "ショップおよびカテゴリページデザイン"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:235
 msgid ""
 "Use :doc:`building blocks <../../website/web_design/building_blocks>` to add "
 "content on the shop and/or category page."
 msgstr ""
+":doc:`ビルディングブロック <../../website/web_design/building_blocks>` "
+"を使用して、ショップページやカテゴリページにコンテンツを追加します。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:238
 msgid ""
@@ -3038,10 +3220,16 @@ msgid ""
 "page or to the area below the category's name at the top or beneath the "
 "product list to display it only when filtering by that specific category."
 msgstr ""
+"カタログの上部および/または下部セクションは、ショップ全体のページ用にも、特定"
+"のカテゴリ用にもカスタマイズできます。後者の場合、そのブロックは該当のカテゴ"
+"リでフィルタされたときのみ表示されます。これを行うには、ブロックをページの最"
+"上部または最下部に移動すれば、ショップ全体のページに表示されます。あるいは、"
+"カテゴリ名の下(ページ上部)や、プロダクトリストの下(ページ下部)に配置すること"
+"で、そのカテゴリでフィルタされたときにのみ表示されます。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:0
 msgid "Place building block in the header or footer."
-msgstr ""
+msgstr "ヘッダーまたはフッターにビルディングブロックを配置します。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:248
 msgid ""
@@ -3051,12 +3239,20 @@ msgid ""
 "each category has its own specific URL that can be pointed to and is indexed "
 "by search engines."
 msgstr ""
+"eコマースカテゴリページにコンテンツを追加すると、:doc:`SEO <../../website/"
+"pages/seo>` 戦略の改善に役立ちます。プロダクトや "
+"eコマースカテゴリにリンクされたキーワードを使用すると、検索エンジン経由の自然"
+"なアクセス(オーガニックトラフィック)も増加します。さらに、各カテゴリには、検"
+"索エンジンによってインデックスが作成され、参照できる固有のURLが割り当てられて"
+"います。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:252
 msgid ""
 "eCommerce categories can also be added as :ref:`mega menu items <website/"
 "header_footer/mega-menus>` for quick access."
 msgstr ""
+"eコマースカテゴリは、クイックアクセス用に :ref:`メガメニュー項目 <website/"
+"header_footer/mega-menus>` として追加することもできます。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:258
 msgid "Additional features"
@@ -3070,28 +3266,39 @@ msgid ""
 "desired feature buttons. All three buttons appear when hovering the mouse "
 "over a product's image."
 msgstr ""
+":guilabel:`カートに追加`や :guilabel:`ウィッシュリスト`ボタン、 "
+":guilabel:`比較リスト`などの追加機能ボタンにアクセスして有効にすることができ"
+"ます。これを行うには、ウェブサイトエディタを開き、目的の機能ボタンをクリック"
+"します。プロダクトの画像にマウスを置くと、3つのボタンすべてが表示されます。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:265
 msgid ""
 ":icon:`fa-shopping-cart` (:guilabel:`Add to cart`): adds a button "
 "to :doc:`add the product to the cart <../checkout>`;"
 msgstr ""
+":icon:`fa-shopping-cart` (:guilabel:`カートに追加`): :doc:`"
+"カートにプロダクトを追加する <../checkout>` ボタンを追加します。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:267
 msgid ""
 ":icon:`fa-exchange` (:guilabel:`Compare`): adds a button to compare products "
 "based on their price, variant, etc.;"
 msgstr ""
+":icon:`fa-exchange` (:guilabel:`比較`): "
+"価格、バリアントなどに基づいてプロダクトを比較するためのボタンを追加します。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:269
 msgid ""
 ":icon:`fa-heart-o` (:guilabel:`Wishlist`): adds a button to :ref:`wishlist "
 "<ecommerce/products/wishlists>` the product."
 msgstr ""
+":icon:`fa-heart-o` (:guilabel:`ウィッシュリスト`): プロダクトを :ref:`"
+"ウィッシュリスト <ecommerce/products/wishlists>` "
+"に追加するボタンを追加します。"
 
 #: ../../content/applications/websites/ecommerce/products/catalog.rst:274
 msgid ":doc:`Products <../products>`"
-msgstr ""
+msgstr ":doc:`../products`"
 
 #: ../../content/applications/websites/ecommerce/products/cross_upselling.rst:3
 msgid "Cross-selling and upselling"
@@ -4544,8 +4751,9 @@ msgid ""
 "the :guilabel:`Publish` option available in the right-hand corner."
 msgstr ""
 "コンテンツを公開するには、ウェブサイトのフロントエンドにアクセスする必要があ"
-"ります。公開するには、:guilabel:`ウェブサイトに移動` スマートボタンをクリック"
-"し、右隅にある :guilabel:`公開` オプションにチェックを入れます。"
+"ります。公開するには、:guilabel:`ウェブサイトへ移動` "
+"スマートボタンをクリックし、右隅にある :guilabel:`公開` "
+"オプションにチェックを入れます。"
 
 #: ../../content/applications/websites/elearning.rst:-1
 msgid "Publish your content."
@@ -5852,6 +6060,12 @@ msgid ""
 "Click the :icon:`fa-refresh` :guilabel:`(refresh)` icon to the right of the "
 "color bubbles to reset the colors to the default selection."
 msgstr ""
+":guilabel:`ライブチャットボタン色`は、ウェブサイトに表示されるライブチャット"
+"ボタンの色を変更します。色を変更するには、色のバブルをクリックして色選択ウィ"
+"ンドウを開き、色のグラデーションに沿って円をクリックしてドラッグします。完了"
+"したら、選択ウィンドウの外をクリックしてください。色バブルの右にある :icon"
+":`fa-refresh` :guilabel:`(リフレッシュ)` "
+"アイコンをクリックすると、色をデフォルトの選択に戻します。"
 
 #: ../../content/applications/websites/livechat.rst:113
 msgid ""
@@ -5860,34 +6074,42 @@ msgid ""
 "selection window that appears when either of the color bubbles are clicked. "
 "Different options are available, depending on the operating system."
 msgstr ""
+"ボタンまたはヘッダーの色の選択は、スライダーを使用して手動で、"
+"またはいずれかのカラーバブルをクリックすると表示されるポップアップカラー選択"
+"ウィンドウから RGB、HSL、または HEX "
+"カラーコードのエントリを使用して行うことができます。オペレーティングシステム"
+"に応じて、さまざまなオプションが利用可能です。"
 
 #: ../../content/applications/websites/livechat.rst:119
 msgid ""
 "With the following settings, the live chat button appears on the website as "
 "shown:"
-msgstr ""
+msgstr "以下の設定を行うと、ライブチャットボタンがウェブサイトに次のように表示されま"
+"す："
 
 #: ../../content/applications/websites/livechat.rst:121
 msgid ":guilabel:`Notification text`: \"Have a Question? Chat with us.\""
-msgstr ""
+msgstr ":guilabel:`通知テキスト`: "
+"\"ご質問がありますか?チャットでお問い合わせください。\""
 
 #: ../../content/applications/websites/livechat.rst:122
 msgid ":guilabel:`Livechat Button Color`: set to purple"
-msgstr ""
+msgstr ":guilabel:`ライブチャットボタン色`: 紫に設定"
 
 #: ../../content/applications/websites/livechat.rst:0
 msgid "View of an Odoo website emphasizing the livechat button."
-msgstr ""
+msgstr "ライブチャットボタンを強調したOdooのウェブサイト。"
 
 #: ../../content/applications/websites/livechat.rst:128
 msgid "Livechat window"
-msgstr ""
+msgstr "ライブチャットウィンドウ"
 
 #: ../../content/applications/websites/livechat.rst:130
 msgid ""
 "The :guilabel:`Livechat Window` is the space where the live chat "
 "conversation with website visitors takes place."
-msgstr ""
+msgstr ":guilabel:`ライブチャットウィンドウ` "
+"は他のウェブサイト訪問者とのライブチャットの会話が行われるスペースです。"
 
 #: ../../content/applications/websites/livechat.rst:133
 msgid ""
@@ -5896,6 +6118,11 @@ msgid ""
 "by a live chat operator, and acts as both a greeting and an invitation to "
 "continue the conversation."
 msgstr ""
+":guilabel:`ウェルカムメッセージ` "
+"を編集して、訪問者が新しいチャットセッションを開始したときに表示されるメッセ"
+"ージを変更します。このメッセージは、あたかもライブチャットのオペレータから送"
+"られたかのように表示され、挨拶と会話を始めるきっかけの両方の役割を果たします"
+"。"
 
 #: ../../content/applications/websites/livechat.rst:137
 msgid ""
@@ -5903,6 +6130,9 @@ msgid ""
 "in the box where visitors type their replies. This message prompts the "
 "visitor to initiate the chat."
 msgstr ""
+":guilabel:`チャット入力プレースホルダ` "
+"を編集して、訪問者が返信を入力するボックスに表示されるテキストを変更します。"
+"このメッセージは、訪問者にチャットを開始するよう促します。"
 
 #: ../../content/applications/websites/livechat.rst:140
 msgid ""
@@ -5910,46 +6140,60 @@ msgid ""
 "The :guilabel:`Channel Header Color` can be changed following the same steps "
 "as the :ref:`Livechat button <livechat/livechat-button>`."
 msgstr ""
+"*チャネルヘッダー* "
+"は、チャットウィンドウの上部にある色付きのバーです。:guilabel:`チャネルヘッダ"
+"ーの色` は、:ref:`ライブチャットボタン <livechat/livechat-button>` "
+"と同じ手順で変更できます。"
 
 #: ../../content/applications/websites/livechat.rst:147
 msgid "The live chat window with a purple channel header and placeholder text."
-msgstr ""
+msgstr "紫色のチャネルヘッダーとプレースホルダーテキストを含むライブチャットウィンド"
+"ウ。"
 
 #: ../../content/applications/websites/livechat.rst:147
 msgid ""
 "The live chat window with a purple channel header and placeholder text that "
 "reads, \"Say Something...\""
-msgstr ""
+msgstr "紫色のチャネルヘッダーと「何かお書きください...」というプレースホルダテキスト"
+"が表示されたライブチャットウィンドウ。"
 
 #: ../../content/applications/websites/livechat.rst:153
 msgid "Channel Rules tab"
-msgstr ""
+msgstr "チャネル規則タブ"
 
 #: ../../content/applications/websites/livechat.rst:155
 msgid ""
 "To configure which website user actions open the live chat window, go to "
 "the :guilabel:`Channel Rules` tab on the live chat channel detail form."
 msgstr ""
+"ライブチャットウィンドウを開くウェブサイト上のユーザアクションを設定するには"
+"、ライブチャットチャネルの詳細フォームの :guilabel:`チャネル規則` "
+"タブに移動します。"
 
 #: ../../content/applications/websites/livechat.rst:158
 msgid ""
 "To create a new channel rule, click :guilabel:`Add a line`. This opens "
 "the :guilabel:`Create Rules` pop-up window."
 msgstr ""
+"新しいチャネル規則を作成するには、 :guilabel:`明細追加` "
+"をクリックします。これにより、 :guilabel:`規則を作成` "
+"ポップアップウィンドウが開きます。"
 
 #: ../../content/applications/websites/livechat.rst:-1
 msgid "View of a channel's rules form for Odoo Live Chat."
-msgstr ""
+msgstr "Odooライブチャットのチャネルの規則フォームの表示。"
 
 #: ../../content/applications/websites/livechat.rst:165
 msgid "Create new rules"
-msgstr ""
+msgstr "新しい規則を作成する"
 
 #: ../../content/applications/websites/livechat.rst:167
 msgid ""
 "Fill out the fields on the :guilabel:`Create Rules` pop-up window as "
 "instructed below, then click :guilabel:`Save & Close`."
 msgstr ""
+":guilabel:`規則を作成`ポップアップウィンドウのフィールドに、以下の指示に従っ"
+"て入力し、:guilabel:`保存して閉じる`をクリックしてください。"
 
 #: ../../content/applications/websites/livechat.rst:172
 msgid "Live Chat Button"
@@ -5959,17 +6203,20 @@ msgstr "Webチャットボタン"
 msgid ""
 "The *Livechat Button* is the icon that appears in the bottom-right corner of "
 "the website. Select from one of the following display options:"
-msgstr ""
+msgstr "*ライブチャットボタン* "
+"は、ウェブサイトの右下隅に表示されるアイコンです。以下の表示オプションからい"
+"ずれかを選択してください："
 
 #: ../../content/applications/websites/livechat.rst:177
 msgid ":guilabel:`Show`: displays the chat button on the page."
-msgstr ""
+msgstr ":guilabel:`表示`: ページにチャットボタンを表示します。"
 
 #: ../../content/applications/websites/livechat.rst:178
 msgid ""
 ":guilabel:`Show with notification`: displays the chat button, as well as a "
 "floating text bubble next to the button."
-msgstr ""
+msgstr ":guilabel:`通知付きで表示`: "
+"チャットボタンと、その横にはフローティングテキストバブルを表示します。"
 
 #: ../../content/applications/websites/livechat.rst:180
 msgid ""
@@ -5978,10 +6225,13 @@ msgid ""
 "the :guilabel:`Open automatically timer` field, that appears when this "
 "option is selected)."
 msgstr ""
+":guilabel:`自動的に開く`: ボタンを表示し、指定した時間("
+"このオプションを選択すると表示される :guilabel:`自動的に開くタイマー` "
+"フィールドで指定)後にチャットウィンドウを自動的に開きます。"
 
 #: ../../content/applications/websites/livechat.rst:183
 msgid ":guilabel:`Hide`: hides the chat button on the page."
-msgstr ""
+msgstr ":guilabel:`非表示`: ページ上のチャットボタンを非表示にします。"
 
 #: ../../content/applications/websites/livechat.rst:185
 msgid "Chatbot"
@@ -5994,12 +6244,19 @@ msgid ""
 "operators are active, check the box labeled :guilabel:`Enabled only if no "
 "operator`."
 msgstr ""
+"このチャネルに :doc:`チャットボット <livechat/chatbots>` "
+"を含めるには、ドロップダウンメニューから選択してください。オペレータがいなく"
+"なったときにのみチャットボットを有効にする場合は、:guilabel:`オペレータがいな"
+"い場合にのみ有効` チェックボックスをオンにしてください。"
 
 #: ../../content/applications/websites/livechat.rst:191
 msgid ""
 "The :guilabel:`Enabled only if no operator` field is **only** visible if a "
 "chatbot is selected in the :guilabel:`Chatbot` field."
 msgstr ""
+":guilabel:`オペレータがいない場合にのみ有効` "
+"フィールドは、:guilabel:`チャットボット` "
+"フィールドでチャットボットが選択されている場合にのみ表示されます。"
 
 #: ../../content/applications/websites/livechat.rst:194
 msgid "URL Regex"
@@ -6011,18 +6268,26 @@ msgid ""
 "In the :guilabel:`URL Regex` field, input the relative URL of the page where "
 "the chat button should appear."
 msgstr ""
+"*URL Regex* は、この規則を適用するウェブページを指定します。:guilabel:`URL "
+"Regex` フィールドに、チャットボタンを表示するページの相対 URL "
+"を入力してください。"
 
 #: ../../content/applications/websites/livechat.rst:200
 msgid ""
 "For example, to apply the rule to the URL, `https://mydatabse.odoo.com/"
 "shop`, enter `/shop` to the :guilabel:`URL Regex` field."
 msgstr ""
+"たとえば、URL`https://mydatabse.odoo.com/"
+"shop`に規則を適用するには、:guilabel:`URL Regex` フィールドに `/shop` "
+"と入力します。"
 
 #: ../../content/applications/websites/livechat.rst:203
 msgid ""
 "To apply the rule to *all* pages on the database, enter `/` in "
 "the :guilabel:`URL Regex` field."
 msgstr ""
+"データベースの *すべての* ページにこの規則を適用するには、:guilabel:`URL "
+"Regex` フィールドに `/` を入力してください。"
 
 #: ../../content/applications/websites/livechat.rst:206
 msgid "Open automatically timer"
@@ -6035,6 +6300,10 @@ msgid ""
 "the :guilabel:`Live Chat Button` for this rule is set to :guilabel:`Open "
 "automatically`."
 msgstr ""
+"このフィールドは、チャットウィンドウが開くまでにページが開いているべき時間 "
+"(秒単位) を指定します。このフィールドは、この規則の "
+":guilabel:`ライブチャットボタン` が :guilabel:`自動的に開く` "
+"に設定されている場合にのみ表示されます。"
 
 #: ../../content/applications/websites/livechat.rst:212
 msgid "Country"
@@ -6046,6 +6315,11 @@ msgid ""
 "countries, add them to the :guilabel:`Country` field. If this field is left "
 "blank, the channel is available to all site visitors, regardless of location."
 msgstr ""
+"このチャネルを特定の国のサイト訪問者に **のみ** "
+"利用可能にする場合は、:guilabel:`国` "
+"フィールドに国名を追加してください。このフィールドを空白のままにすると、ロケ"
+"ーションに関係なく、すべてのサイト訪問者がチャネルを利用できるようになります"
+"。"
 
 #: ../../content/applications/websites/livechat.rst:219
 msgid ""
@@ -6054,10 +6328,15 @@ msgid ""
 "*Odoo Online* databases, *On-Premise* databases require "
 "additional :doc:`setup steps </administration/on_premise/geo_ip>`."
 msgstr ""
+"訪問者の地理的なロケーションを追跡するには、*GeoIP* "
+"をデータベースにインストールする必要があります。この機能は *Odoo オンライン* "
+"データベースにはデフォルトでインストールされていますが、*オンプレミス* "
+"データベースでは追加の :doc:`セットアップ手順 </administration/on_premise/"
+"geo_ip>` が必要です。"
 
 #: ../../content/applications/websites/livechat.rst:226
 msgid "Widget tab"
-msgstr ""
+msgstr "ウィジェットタブ"
 
 #: ../../content/applications/websites/livechat.rst:228
 msgid ""
@@ -6065,6 +6344,11 @@ msgid ""
 "embeddable code snippet for external, non-Odoo websites. This code can be "
 "added to a website to provide access to a live chat window."
 msgstr ""
+"ライブチャットチャネルの詳細フォームの :guilabel:`ウィジェット` タブには、"
+"Odoo "
+"以外の外部ウェブサイトに埋め込むことができるコードスニペットが用意されていま"
+"す。このコードをウェブサイトに追加することで、ライブチャットウィンドウにアク"
+"セスできるようになります。"
 
 #: ../../content/applications/websites/livechat.rst:233
 msgid ""
@@ -6074,6 +6358,12 @@ msgid ""
 "the :guilabel:`Channel` field, select the channel to add to the site. "
 "Click :guilabel:`Save` to apply."
 msgstr ""
+"ライブチャットウィジェットは、Odoo で作成したウェブサイトに、:menuselection:`"
+"ウェブサイトアプリ --> 設定 --> 管理設定` "
+"の順に選択して追加できます。次に、:menuselection:`Eメール& "
+"マーケティング`セクションまでスクロールします。 "
+":guilabel:`チャネル`フィールドで、サイトに追加するチャネルを選択します。 "
+":guilabel:`保存`をクリックして適用します。"
 
 #: ../../content/applications/websites/livechat.rst:238
 msgid ""
@@ -6081,6 +6371,10 @@ msgid ""
 "first :icon:`fa-clipboard` :guilabel:`(copy)` icon on the :guilabel:`Widget` "
 "tab, and paste the code into the `<head>` tag on the site."
 msgstr ""
+"サードパーティのプラットフォームで作成したウェブサイトにウィジェットを追加す"
+"るには、:guilabel:`ウィジェット`タブで最初の :icon:`fa-clipboard` "
+":guilabel:`(コピー)` アイコンをクリックし、サイトの `<head>` "
+"タグにコードを貼り付けます。"
 
 #: ../../content/applications/websites/livechat.rst:242
 msgid ""
@@ -6089,10 +6383,14 @@ msgid ""
 "the :guilabel:`Widget` tab. This link can be sent directly to a customer. "
 "When they click the link, they are redirected to a new chat window."
 msgstr ""
+"同様に、顧客にライブチャットセッションを送信するには、:guilabel:`ウィジェット"
+"` タブにある 2 番目の :icon:`fa-clipboard` :guilabel:`(コピー)` "
+"アイコンをクリックします。このリンクは顧客に直接送信できます。顧客がリンクを"
+"クリックすると、新しいチャットウィンドウにリダイレクトされます。"
 
 #: ../../content/applications/websites/livechat.rst:-1
 msgid "View of the widget tab for Odoo Live Chat."
-msgstr ""
+msgstr "Odooライブチャットのウィジェットタブの表示。"
 
 #: ../../content/applications/websites/livechat.rst:250
 msgid ":doc:`../productivity/discuss`"
@@ -6100,19 +6398,19 @@ msgstr ":doc:`../productivity/discuss`"
 
 #: ../../content/applications/websites/livechat.rst:251
 msgid ":doc:`livechat/responses`"
-msgstr ""
+msgstr ":doc:`ライブチャット/応答`"
 
 #: ../../content/applications/websites/livechat.rst:252
 msgid ":doc:`livechat/ratings`"
-msgstr ""
+msgstr ":doc:`ライブチャット/評価`"
 
 #: ../../content/applications/websites/livechat.rst:253
 msgid ":doc:`livechat/chatbots`"
-msgstr ""
+msgstr ":doc:`ライブチャット/チャットボット`"
 
 #: ../../content/applications/websites/livechat.rst:254
 msgid ":doc:`livechat/participate`"
-msgstr ""
+msgstr ":doc:`ライブチャット/参加`"
 
 #: ../../content/applications/websites/livechat/chatbots.rst:3
 msgid "Chatbots"
@@ -6126,6 +6424,12 @@ msgid ""
 "through a series of questions and answers the same way a live team member "
 "would."
 msgstr ""
+"*チャットボット* "
+"とは、実際の人間との会話を模倣するように設計されたプログラムです。チャットボ"
+"ットには、あらかじめ用意された一連の手順(スクリプト)が割り当てられており、訪"
+"問者の反応を予測して、それに応じた質問と回答の流れを進められるようになってい"
+"ます。まるで実際の担当者が対応しているかのように、訪問者を会話の流れへと導い"
+"ていきます。"
 
 #: ../../content/applications/websites/livechat/chatbots.rst:10
 msgid ""
@@ -6134,28 +6438,37 @@ msgid ""
 "can vary based on several criteria, including the webpage where it is "
 "located, and the information it captures."
 msgstr ""
+"チャットボットは、顧客サポート、リードの創出、連絡先情報の収集など、さまざま"
+"な役割に合わせてカスタマイズできます。各チャットボットの目標は、それが配置さ"
+"れているウェブページや取得する情報など、いくつかの基準に基づいて異なります。"
 
 #: ../../content/applications/websites/livechat/chatbots.rst:-1
 #: ../../content/applications/websites/livechat/responses.rst:0
 msgid ""
 "View of the chat window with a helpdesk ticket created in Odoo Live Chat."
-msgstr ""
+msgstr "Odooライブチャットで作成されたヘルプデスクチケットを含むチャットウィンドウの"
+"表示。"
 
 #: ../../content/applications/websites/livechat/chatbots.rst:18
 msgid "Build a chatbot"
-msgstr ""
+msgstr "チャットボットを作成する"
 
 #: ../../content/applications/websites/livechat/chatbots.rst:20
 msgid ""
 "Before creating a new chatbot, the **Live Chat** application must first "
 "be :ref:`installed <general/install>`."
 msgstr ""
+"新しいチャットボットを作成する前に、まず**ライブチャット**アプリケーションを "
+":ref:`インストール <general/install>` してください。"
 
 #: ../../content/applications/websites/livechat/chatbots.rst:23
 msgid ""
 "After the **Live Chat** application has been installed on the database, go "
 "to :menuselection:`Live Chat app --> Configuration --> Chatbots`."
 msgstr ""
+"**ライブチャット** "
+"アプリケーションがデータベースにインストールされたら、:menuselection:`"
+"ライブチャットアプリ --> 設定 --> チャットボット` の順に移動します。"
 
 #: ../../content/applications/websites/livechat/chatbots.rst:27
 msgid ""
@@ -6164,6 +6477,11 @@ msgid ""
 "few basic steps, including asking for a visitor's email address, and "
 "forwarding the conversation to an operator."
 msgstr ""
+"**ライブチャット** アプリがインストールされると、*ウェルカムボット* "
+"という名前のサンプルチャットボットが作成されます。このチャットボットには、"
+"訪問者に E "
+"メールアドレスを尋ね、会話をオペレータに転送するなどの基本的な手順を実行する"
+"、あらかじめ設定されたスクリプトが組み込まれています。"
 
 #: ../../content/applications/websites/livechat/chatbots.rst:31
 msgid ""
@@ -6171,14 +6489,17 @@ msgid ""
 "edited or removed, and new steps can be added to customize the script, as "
 "needed."
 msgstr ""
+"*ウェルカムボット* "
+"をベースとして使用できます。既存のステップは編集または削除でき、必要に応じて"
+"新しいステップを追加してスクリプトをカスタマイズできます。"
 
 #: ../../content/applications/websites/livechat/chatbots.rst:34
 msgid "*Welcome Bot* can be deleted or archived, if necessary."
-msgstr ""
+msgstr "*ウェルカムボット* は、必要に応じて削除またはアーカイブすることができます。"
 
 #: ../../content/applications/websites/livechat/chatbots.rst:0
 msgid "View of the Welcome Bot script in Odoo Live Chat."
-msgstr ""
+msgstr "Odooライブチャットのウェルカムボットスクリプトの表示。"
 
 #: ../../content/applications/websites/livechat/chatbots.rst:39
 msgid ""
@@ -6186,6 +6507,10 @@ msgid ""
 "(:menuselection:`Live Chat app --> Configuration --> Chatbots`) and "
 "click :guilabel:`New` to open a blank chatbot details page."
 msgstr ""
+"新しいチャットボットを作成するには、:guilabel:`チャットボット` ページ "
+"(:menuselection:`ライブチャットアプリ --> 設定 --> チャットボット`) "
+"に移動し、:guilabel:`新規` "
+"をクリックして、空白のチャットボットの詳細ページを開きます。"
 
 #: ../../content/applications/websites/livechat/chatbots.rst:42
 msgid ""
@@ -6193,10 +6518,13 @@ msgid ""
 "on the right. Click on the :icon:`fa-pencil` :guilabel:`(pencil)` icon that "
 "appears to add a photo."
 msgstr ""
+":guilabel:`チャットボット名`フィールドに名前を入力し、右側の画像にカーソルを"
+"合わせます。表示される :icon:`fa-pencil` "
+":guilabel:`(鉛筆)`アイコンをクリックして、写真を追加します。"
 
 #: ../../content/applications/websites/livechat/chatbots.rst:46
 msgid "Chatbot scripts"
-msgstr ""
+msgstr "チャットボットスクリプト"
 
 #: ../../content/applications/websites/livechat/chatbots.rst:48
 msgid ""
@@ -6205,6 +6533,10 @@ msgid ""
 "lines of dialog. Each line is designed to either deliver or capture "
 "information."
 msgstr ""
+"新しいチャットボットを作成して名前を付けたら、次のステップはスクリプトの作成"
+"です。チャットボットとの会話は、対応するスクリプトに沿って進行します。このス"
+"クリプトは複数のセリフ(ダイアログ)で構成されており、それぞれのセリフは、情報"
+"を提供するか、情報を取得することを目的として設計されています。"
 
 #: ../../content/applications/websites/livechat/chatbots.rst:52
 msgid ""
@@ -6214,6 +6546,11 @@ msgid ""
 "filled out for each line of text (dialog) that the chatbot could potentially "
 "deliver during the conversation."
 msgstr ""
+"チャットボット用のスクリプトを作成するには、チャットボットの詳細ページの "
+":guilabel:`スクリプト` 内で :guilabel:`明細追加` をクリックします。すると、 "
+":guilabel:`スクリプトステップを作成` "
+"ポップアップウィンドウが表示されます。このフォームは、チャットボットが会話中"
+"に発話する可能性のある各セリフ(テキスト行)ごとに入力する必要があります。"
 
 #: ../../content/applications/websites/livechat/chatbots.rst:57
 msgid ""
@@ -6221,10 +6558,14 @@ msgid ""
 "Then, select an option from the :guilabel:`Step Type` and :ref:`Only If "
 "<livechat/chatbots/only-if>` drop-down menus."
 msgstr ""
+"まず、:guilabel:`メッセージ` "
+"フィールドにメッセージの内容を入力します。次に、:guilabel:`ステップタイプ` "
+"および :ref:`条件付き<livechat/chatbots/only-if>` "
+"ドロップダウンメニューからオプションを選択します。"
 
 #: ../../content/applications/websites/livechat/chatbots.rst:61
 msgid "Step types"
-msgstr ""
+msgstr "ステップタイプ"
 
 #: ../../content/applications/websites/livechat/chatbots.rst:63
 msgid ""
@@ -6232,6 +6573,9 @@ msgid ""
 "message. The available options in the :guilabel:`Step Type` drop-down menu "
 "are detailed below."
 msgstr ""
+":guilabel:`ステップタイプ`は、メッセージの目的によって選択します。:guilabel:`"
+"ステップタイプ`ドロップダウンメニューで選択できるオプションの詳細は、以下のと"
+"おりです。"
 
 #: ../../content/applications/websites/livechat/chatbots.rst:67
 msgid "Text"
@@ -7157,13 +7501,15 @@ msgstr ""
 #: ../../content/applications/websites/livechat/reports.rst:77
 msgid ""
 "Example of the Sessions Statistics report from the Live Chat application."
-msgstr ""
+msgstr "ライブチャットアプリケーションのセッション統計レポートの例。"
 
 #: ../../content/applications/websites/livechat/reports.rst:77
 msgid ""
 "The stacked bar graph view of the *Session Statistics* report, with results "
 "grouped by Creation Date (hour), then by rating."
-msgstr ""
+msgstr "*セッション統計* "
+"レポートの積み重ね棒グラフビューで、結果は作成日時(時間)でグループ化され、次"
+"に評価でグループ化されています。"
 
 #: ../../content/applications/websites/livechat/reports.rst:80
 #: ../../content/applications/websites/livechat/reports.rst:112

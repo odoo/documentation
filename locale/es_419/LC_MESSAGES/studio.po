@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-08-18 08:33+0000\n"
-"PO-Revision-Date: 2025-08-18 22:50+0000\n"
+"PO-Revision-Date: 2025-08-19 22:50+0000\n"
 "Last-Translator: \"Fernanda Alvarez (mfar)\" <mfar@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
 "odoo-18-doc/studio/es_419/>\n"
@@ -1803,6 +1803,10 @@ msgid ""
 "details, including a HTTP response code, indicate whether or not the webhook "
 "is functioning correctly."
 msgstr ""
+"El visualizador de :guilabel:`respuestas` que se encuentra en la parte "
+"inferior de la pantalla de Postman indica si el webhook está funcionando "
+"correctamente o no, así como algunos detalles y el código de estado de "
+"respuesta HTTP."
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:120
 msgid ""
@@ -1810,6 +1814,9 @@ msgid ""
 "properly on Odoo's side. From here, implementation can begin with the other "
 "system to automatically send the API requests to the Odoo webhook's URL."
 msgstr ""
+"Los mensajes `200 OK` y `status: ok` indican que el webhook funciona de "
+"forma correcta en Odoo. Ahora podrás implementarlo en el otro sistema para "
+"enviar las solicitudes API a la URL del webhook de Odoo en automático."
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:124
 msgid ""
@@ -1819,12 +1826,20 @@ msgid ""
 "the fields found in the JSON file are properly mapped in the webhook's "
 "configuration and in the system sending the test call."
 msgstr ""
+"Si aparece otra respuesta, el número asociado con ella te ayudará a "
+"identificar el problema. Por ejemplo, el mensaje `500 Internal Server Error` "
+"indica que Odoo no pudo interpretar la llamada. En este caso, asegúrate de "
+"que los campos del archivo JSON están correctamente vinculados en la "
+"configuración del webhook y en el sistema que envía la llamada de prueba."
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:130
 msgid ""
 "Turning on call logging in the webhook's configuration in Odoo provides "
 "error logs if the webhook is not functioning as intended."
 msgstr ""
+"Si activas el registro de llamadas en la configuración del webhook en Odoo "
+"podrás consultar el registro de los errores si el webhook no funciona como "
+"debería."
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:134
 msgid "Implement a webhook in an external system"
@@ -1836,6 +1851,10 @@ msgid ""
 "it in the system that sends data to the Odoo database, making sure the "
 "`POST` API requests are sent to the webhook's URL."
 msgstr ""
+"Una vez que hayas creado el webhook con éxito en Odoo y lo hayas probado, "
+"deberás implementarlo en el sistema que envía los datos a la base de datos "
+"de Odoo. Asegúrate de que las solicitudes `POST`a la API se envíen a la URL "
+"del webhook."
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:142
 msgid "Webhook use cases"
@@ -1848,6 +1867,10 @@ msgid ""
 "webhook. `Postman <https://www.postman.com/>`_ is used to send the test "
 "payload."
 msgstr ""
+"A continuación encontrarás dos ejemplos del uso de webhooks en Odoo. Cada "
+"ejemplo cuenta con una carga de prueba y podrás encontrarlas en la sección "
+"\"Prueba del webhook\". El servicio que utilizaremos para enviar estas "
+"cargas es `Postman <https://www.postman.com/>`_."
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:149
 msgid "Update a sales order's currency"
@@ -1860,6 +1883,10 @@ msgid ""
 "includes that sales order number (which is identified by the payload's `id` "
 "record)."
 msgstr ""
+"Este webhook actualiza una orden de venta en la aplicación **Ventas** a `USD`"
+" cuando el sistema externo envía una solicitud `POST` de API a la URL del "
+"webhook que incluye el número de esa orden de venta (que se identifica por "
+"el registro `id` de la carga)."
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:155
 msgid ""
@@ -1867,6 +1894,10 @@ msgid ""
 "mother company located inside the United States or during mergers when "
 "consolidating data into one Odoo database."
 msgstr ""
+"Esto podría ser útil para las filiales que no están ubicadas en los Estados "
+"Unidos pero que sí tienen una empresa matriz ubicada en ese país o al "
+"consolidar datos en una base de datos de Odoo durante alguna fusión o "
+"adquisición."
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:159
 #: ../../content/applications/studio/automated_actions/webhooks.rst:221
@@ -1893,12 +1924,16 @@ msgid ""
 "Click :guilabel:`New`. The :guilabel:`Trigger` is set to :guilabel:`On "
 "webhook` by default."
 msgstr ""
+"Haz clic en :guilabel:`Nuevo`. El :guilabel:`activador` está configurado con "
+"la opción :guilabel:`Al usar webhook` de forma predeterminada."
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:166
 msgid ""
 "Set the :guilabel:`Target Record` to "
 "`model.env[payload.get('model')].browse(int(payload.get('id')))`, where:"
 msgstr ""
+"Configura :guilabel:`Registro objetivo` con el valor `model.env"
+"[payload.get('model')].browse(int(payload.get('id')))`, donde:"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:169
 msgid ""
@@ -1906,6 +1941,9 @@ msgid ""
 "in the payload, i.e., `sale.order`, which is the technical name of the "
 "*Sales Order* model."
 msgstr ""
+"`payload.get('model')` obtiene el valor relacionado con la clave de `model` "
+"en la carga; en este caso es `sale.order`, que es el nombre técnico del "
+"modelo *Orden de venta*."
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:171
 msgid ""
@@ -1913,12 +1951,18 @@ msgid ""
 "payload, i.e., the number of the target sales order in your Odoo database "
 "with the `S` and leading zeros removed."
 msgstr ""
+"`payload.get('id')` obtiene el valor relacionado con la clave de `id` en la "
+"carga; en este caso es el número de la orden de venta objetivo en tu base de "
+"datos Odoo, pero elimina la `S` y los ceros a la izquierda."
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:174
 msgid ""
 "`int` converts the retrieved id to an integer (i.e., a whole number) because "
 "the method `browse()` can only be used with an integer."
 msgstr ""
+"`int` convierte el id recuperado a un valor de tipo integer (es decir, un "
+"número entero) porque el método `browse()` solo es compatible con los "
+"enteros."
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:177
 #: ../../content/applications/studio/automated_actions/webhooks.rst:231
@@ -1936,6 +1980,8 @@ msgid ""
 "In the :guilabel:`Action details` section, select :guilabel:`Update`, choose "
 "the field :guilabel:`Currency`, and select :guilabel:`USD`."
 msgstr ""
+"Selecciona :guilabel:`Actualizar` en la sección :guilabel:`Detalles de la "
+"acción`, elige el campo :guilabel:`Moneda` y selecciona :guilabel:`USD`."
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:181
 #: ../../content/applications/studio/automated_actions/webhooks.rst:256
@@ -1957,6 +2003,8 @@ msgid ""
 "With `Postman <https://www.postman.com/>`_ open, create a new HTTP request "
 "and set its method to :guilabel:`POST`."
 msgstr ""
+"Abre `Postman <https://www.postman.com/>`_, crea una nueva petición HTTP y "
+"selecciona :guilabel:`POST` como método."
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:190
 #: ../../content/applications/studio/automated_actions/webhooks.rst:265
@@ -1964,6 +2012,8 @@ msgid ""
 "Copy the URL of the Odoo webhook using the :icon:`fa-"
 "link` :guilabel:`(link)` icon and paste it into the URL field in Postman."
 msgstr ""
+"Copia la URL del webhook de Odoo con el icono :icon:`fa-link` "
+":guilabel:`(enlace)`y pégalo en el campo URL de Postman."
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:193
 #: ../../content/applications/studio/automated_actions/webhooks.rst:268
@@ -1971,6 +2021,8 @@ msgid ""
 "Set the file type to :guilabel:`JSON`, then copy this code, i.e., the "
 "payload, and paste it into the code editor:"
 msgstr ""
+"Elige :guilabel:`JSON` como tipo de archivo, luego copia este código (es la "
+"carga) y pégalo en el editor de código:"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:203
 msgid ""
@@ -1979,6 +2031,11 @@ msgid ""
 "without the `S` or any zeros before the number. For example, a sales order "
 "with the number `S00007` should be entered as `7` in Postman."
 msgstr ""
+"Elige una orden de venta para probar el webhook en tu base de datos de Odoo. "
+"Una vez que hayas pegado el código, reemplaza `SALES ORDER NUMBER` con el "
+"número de la orden de venta sin la `S` ni los ceros antes del número. Por "
+"ejemplo, para ingresar la orden de venta con el número `S00007`, en Postman "
+"tendrías que escribir `7`."
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:207
 #: ../../content/applications/studio/automated_actions/webhooks.rst:282
@@ -1988,6 +2045,10 @@ msgid ""
 "If a message other than `200 OK` or `status: ok` is returned, the number "
 "associated with the message helps to identify the problem."
 msgstr ""
+"Revisa el :ref:`visualizador de respuestas <studio/webhooks/test-webhook-"
+"response>` en Postman para determinar si el webhook funciona correctamente. "
+"Si en la pantalla no aparece el mensaje `200 OK` o `status: ok`, entonces el "
+"código de la respuesta te ayudará a identificar el problema."
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:214
 msgid "Create a new contact"
@@ -2000,12 +2061,19 @@ msgid ""
 "that includes the contact's information. This could be helpful for "
 "automatically creating new vendors or customers."
 msgstr ""
+"Este webhook utiliza código personalizado para crear un nuevo contacto en "
+"una base de datos de Odoo cuando el sistema externo envía una solicitud de "
+"API `POST` a la URL del webhook que incluye la información del contacto. "
+"Esto podría ser útil para crear nuevos proveedores o clientes en automático."
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:225
 msgid ""
 "Open the **Contacts** app, then :ref:`open Studio <studio/access>` and "
 "click :guilabel:`Webhooks`. The *Contact* model is selected by default."
 msgstr ""
+"Abre la aplicación **Contactos**, luego :ref:`abre Studio <studio/access>` y "
+"haz clic en :guilabel:`Webhooks`. El modelo *Contacto* está seleccionado de "
+"forma predeterminada."
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:228
 msgid ""
@@ -2014,28 +2082,39 @@ msgid ""
 "webhook what needs to be retrieved from the payload and in which model the "
 "record needs to be created."
 msgstr ""
+"El :guilabel:`registro objetivo` debe ser `model.browse([2])`. Funcionará "
+"como marcador de posición, ya que el código en la acción automatizada le "
+"dice al webhook qué necesita obtener de la carga y en qué modelo debe crear "
+"el registro."
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:232
 msgid "In the :guilabel:`Type` section, click :guilabel:`Execute Code`."
-msgstr ""
+msgstr "Haz clic en :guilabel:`Ejecutar código` en la sección :guilabel:`Tipo`."
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:233
 msgid ""
 "Copy this code and paste it into the code editor in the :guilabel:`Code` tab "
 "of the :guilabel:`Action details` section:"
 msgstr ""
+"Copia este código y pégalo en el editor de código en la pestaña "
+":guilabel:`Código` de la sección :guilabel:`Detalles de la acción`:"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:263
 msgid ""
 "In `Postman <https://www.postman.com/>`_, create a new HTTP request and set "
 "its method to :guilabel:`POST`."
 msgstr ""
+"Crea una nueva petición HTTP en `Postman <https://www.postman.com/>`_ y "
+"configura su método con :guilabel:`POST`."
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:279
 msgid ""
 "In the pasted code, replace the `CONTACT NAME`, `CONTACTEMAIL@EMAIL.COM`, "
 "and `CONTACT PHONE NUMBER` with a new contact's information."
 msgstr ""
+"Reemplaza `CONTACT NAME` (nombre del contacto), `CONTACTEMAIL@EMAIL.COM`("
+"correo del contacto) y `CONTACT PHONE NUMBER` (teléfono del contacto) con la "
+"información del nuevo contacto en el código que pegaste."
 
 #: ../../content/applications/studio/fields.rst:3
 msgid "Fields and widgets"
