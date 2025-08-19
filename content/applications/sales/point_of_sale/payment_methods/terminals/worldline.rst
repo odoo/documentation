@@ -2,92 +2,89 @@
 Worldline
 =========
 
-Connecting a payment terminal allows you to offer a fluid payment flow to your customers and ease
-the work of your cashiers.
+Connect a Worldline payment terminal to an Odoo point of sale and offer payment solutions for
+customer transactions.
 
 .. important::
-   - Worldline payment terminals require an :doc:`IoT Box </applications/general/iot>`.
-   - Worldline is currently only available in Belgium, the Netherlands and Luxembourg.
-   - Odoo is compatible with Worldline terminals that use the CTEP protocol (e.g., the Yomani XR and
-     Yoximo terminals). If you have any doubts, contact your payment provider to ensure your
-     terminal's compatibility.
+   - Connecting a Worldline payment terminal to Odoo requires an :doc:`IoT system
+     </applications/general/iot/connect>`. For more information, refer to the :doc:`IoT
+     documentation </applications/general/iot>`.
+   - Worldline is only available in **Belgium**, **the Netherlands**, and **Luxembourg** with Odoo.
+   - Odoo is compatible with Worldline terminals that use the CTEP protocol (e.g., the **Yomani XR**
+     and **Yoximo** terminals). Contact the payment provider to confirm the terminal's
+     compatibility when in doubt.
 
-Configuration
-=============
+.. _pos/worldline/configuration:
 
-Connect an IoT system
----------------------
+Worldline configuration
+=======================
 
-Connecting a Worldline Payment Terminal to Odoo is a feature that requires an IoT system. For more
-information on how to connect one to your database, please refer to the
-:doc:`IoT documentation </applications/general/iot>`.
+First, enable the Worldline payment terminal in the :ref:`POS settings <configuration/settings>`
+under :guilabel:`Payment Terminals`. Then :doc:`connect the IoT Box to Odoo
+</applications/general/iot/connect>` and follow these steps on the terminal:
 
-Configure the protocol
-----------------------
+#. **Configure the ECR protocol**:
 
-From your terminal, click on :menuselection:`"." --> 3 --> stop --> 3 --> 0 --> 9`. Enter the
-technician password **"1235789"** and click on :menuselection:`OK --> 4 --> 2`. Then, click on
-:menuselection:`Change --> CTEP (as Protocole ECR) --> OK`. Click on **OK** thrice on the subsequent
-screens (*CTEP ticket ECR*, *ECR ticket width*, and *Character set*). Finally, press **Stop** three
-times; the terminal automatically restarts.
+   #. Press :menuselection:`"." --> 3 --> Stop --> 3 --> 0 --> 9`.
+   #. Enter the technician password **1235789** and press **OK**.
+   #. Press :menuselection:`4 --> 2 --> CTEP (ECR PROTOCOL)`. Press **OK** to confirm each of the
+      following checks: **CTEP TICKET ECR**, **ECR TICKET WIDTH**, and **CHARACTER SET**.
+   #. Press **Stop** three times; the terminal restarts automatically.
+#. **Set the hostname**:
 
-Set the IP address
-------------------
+   #. Press :menuselection:`"." --> 3 --> Stop --> 3 --> 0 --> 9`.
+   #. Enter the technician password **1235789** and press **OK**.
+   #. Press :menuselection:`4 --> 9 --> TCP/IP (ECR PHYSICAL CONF.)` and press **OK** twice.
+   #. Enter the IoT's IP address on the **HOSTNAME** screen by confirming each number with **OK**
+      until the colon symbol.
+   #. Press **OK** twice.
+#. **Set the port number**:
 
-From your terminal, click on :menuselection:`"." --> 3 --> stop --> 3 --> 0 --> 9`. Enter the
-technician password **"1235789"** and click on :menuselection:`OK --> 4 --> 9`. Then, click on
-:menuselection:`Change --> TCP/IP` (*TCP physical configuration* screen) :menuselection:`--> OK -->
-OK` (*TCP Configuration client* screen).
+   #. Enter **9001** on the **NETWORK DOMAIN NAME** screen and press **OK** twice.
+   #. Press **Stop** three times; the terminal restarts automatically.
 
-Finally, set up the hostname and port number.
-
-Hostname
-~~~~~~~~
-
-| To set up the hostname, enter your IoT system's IP address' sequence numbers and press **OK** at
-  each "." until you reach the colon symbol.
-| Then, press **OK** twice.
-
-.. example::
-   | Here's an IP address sequence: `10.30.19.4:8069`.
-   | On the *Hostname screen*, type :menuselection:`10 --> OK --> 30 --> OK --> 19 --> OK --> 4
-     --> OK --> OK`.
-
-.. tip::
-   Your IoT system's IP address is available on the :ref:`IoT system's card in the IoT app
-   <iot/connect/IoT-form>`.
-
-Port number
-~~~~~~~~~~~
-
-On the *Port number* screen, enter **9001** (or **9050** for Windows) and click on
-:menuselection:`OK` (*ECR protocol SSL no*) :menuselection:`--> OK`. Click on **Stop** three times;
-the terminal automatically restarts.
+The terminal is now active and displays the **READ CARD** screen.
 
 .. warning::
-   For the :doc:`Windows virtual IoT </applications/general/iot>`, the `9050` port must be added
-   as a :ref:`Windows Firewall exception <iot/windows-iot/firewall>`.
+   The `9050` port must be added as a :ref:`Windows Firewall exception <iot/windows-iot/firewall>`
+   for the :doc:`Windows virtual IoT </applications/general/iot>`.
 
-Configure the payment method
-----------------------------
+.. note::
+   Enter **9050** on the **NETWORK DOMAIN NAME** screen when using a :ref:`Windows virtual IoT
+   system <iot/windows-iot/installation>`.
 
-Enable the payment terminal :ref:`in the application settings <configuration/settings>` and
-:doc:`create the related payment method <../../payment_methods>`. Set the journal type as
-:guilabel:`Bank` and select :guilabel:`Worldline` in the :guilabel:`Use a Payment Terminal` field.
-Then, select your terminal device in the :guilabel:`Payment Terminal Device` field.
+.. example::
+   Here's an IP address sequence: `10.30.19.4:8069`.
+   On the **HOSTNAME** screen, type :menuselection:`10 --> OK --> 30 --> OK --> 19 --> OK --> 4
+   --> OK --> OK`.
 
-.. image:: worldline/worldline-payment-terminals.png
+.. tip::
+   In the IoT app, open the :ref:`IoT system's card <iot/connect/IoT-form>` to view its IP address
+   and check the terminal's connection status.
 
-Once the payment method is created, you can select it in your POS settings. To do so, go to the
-:ref:`POS' settings <configuration/settings>`, click :guilabel:`Edit`, and add the payment method
-under the :guilabel:`Payments` section.
+.. _pos/worldline/odoo-configuration:
+
+Odoo configuration
+==================
+
+To connect the Worldline terminal with Odoo Point of Sale, follow these steps:
+
+#. Go to :menuselection:`Point of Sale --> Configuration --> Payment Methods` and :doc:`create a
+   payment method <../../payment_methods>`.
+#. Set the :guilabel:`Journal` field to :guilabel:`Bank`.
+#. Set the :guilabel:`Integration` field to :guilabel:`Terminal`.
+#. Set the :guilabel:`Integrate with` field to :guilabel:`Worldline`.
+#. Select the configured device in the :guilabel:`Payment Terminal Device` field and save.
+#. Go to :menuselection:`Point of Sale --> Configuration --> Settings` and add the created payment
+   method to the :guilabel:`Payment Methods` list to make it available in the POS interface.
+#. Click :guilabel:`Save`.
 
 .. _worldline/yomani-info:
 
 .. tip::
-   - Technician password: `1235789`
-   - To reach Wordline's technical assistance, call `02 727 61 11` and choose "merchant". Your call
-     is automatically transferred to the desired service.
-   - Configure the cashier terminal if you have both a customer and a cashier terminal.
+   - To reach Wordline's technical assistance, `visit their website
+     <https://worldline.com/en/home/main-navigation/git>`_ and click :guilabel:`Get in touch`
+     under :guilabel:`Merchants`.
+   - Configure the cashier terminal if both a customer and a cashier terminal are in use.
    - To avoid blocking the terminal, check the initial configuration beforehand.
-   - Set a fixed IP to your IoT Box’s router to prevent losing the connexion.
+   - Set a fixed IP address on the IoT Box’s router to prevent connection loss.
