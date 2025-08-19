@@ -4,19 +4,19 @@
 Payment terminals
 =================
 
-Connect and integrate a payment terminal to a POS system to accept multiple payment options,
-including credit and debit cards.
+Connect and integrate a payment terminal to a :ref:`POS system <pos/session-start>` to accept
+multiple payment options, including credit and debit cards.
 
-.. _terminals/configuration:
+.. _pos/terminals/configuration:
 
 Configuration
 =============
 
-To enable and configure a payment terminal, follow these steps:
+To activate a payment terminal and allow processing payments, follow these steps:
 
-#. Go to the :ref:`POS settings <configuration/settings>` and scroll down to the :guilabel:`Payment
-   Terminals` section.
-#. Tick the desired terminal's checkbox:
+#. Go to :menuselection:`Point of Sale --> Configuration --> Settings` and scroll down to the
+   :guilabel:`Payment Terminals` section.
+#. Select the preferred terminal from the options below:
 
    - :doc:`Adyen <terminals/adyen>`
    - :doc:`Ingenico <terminals/ingenico>`
@@ -29,24 +29,27 @@ To enable and configure a payment terminal, follow these steps:
    - :doc:`Worldline <terminals/worldline>`
 #. Click :guilabel:`Save`.
 
-Configuring a terminal requires :doc:`creating the corresponding payment method to add to a POS
-<../payment_methods>`.
+The terminal is now available as a payment method in all points of sale. To configure a terminal and
+process payments, create the :doc:`corresponding payment method <../payment_methods>`, then add it
+to a POS.
 
-Pay with a payment terminal
-===========================
+.. _pos/terminals/terminal-use:
 
-To process a payment with a configured terminal, follow these steps:
+Terminal use
+============
 
-#. In Odoo, select the terminal's payment method.
-#. Follow the terminal's operation and validate the payment. Odoo integrates the payment in POS and
-   the status changes to :guilabel:`Payment Successful`.
+To process a payment with a :ref:`configured terminal <pos/terminals/configuration>`, open the POS
+register, and follow these steps:
+
+#. On the :guilabel:`Payment` screen, select the terminal's :doc:`payment method
+   <../payment_methods>`.
+#. Follow the instructions on the terminal device and validate the payment.
+
+Odoo integrates the payment in POS and changes the payment status to :guilabel:`Payment Successful`.
 
 .. note::
-   - | In case of connection issues between Odoo and the payment terminal, force the payment by
-       clicking on :guilabel:`Force Done`, which allows you to validate the order.
-     | This option is only available after receiving an error message informing you that the
-       connection failed.
-   - To cancel the payment request, click on :guilabel:`Cancel`.
+   - Connection issues between Odoo and the payment terminal result in transaction cancellation.
+   - To cancel the payment request sent mistakenly, click :guilabel:`Cancel`.
 
 .. toctree::
    :titlesonly:
