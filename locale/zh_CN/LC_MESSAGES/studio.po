@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-08-18 08:33+0000\n"
-"PO-Revision-Date: 2025-08-19 22:50+0000\n"
+"PO-Revision-Date: 2025-08-20 22:51+0000\n"
 "Last-Translator: \"Chloe Wang (chwa)\" <chwa@odoo.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
 "projects/odoo-18-doc/studio/zh_Hans/>\n"
@@ -1327,6 +1327,10 @@ msgid ""
 "find the technical name of the model and fields, which may be needed to "
 "configure the payload."
 msgstr ""
+":ref:` 在创建网络钩子之前激活开发者模式 <developer-mode>`，可以更灵活地选择 "
+":doc:`自动化规则的目标模型 <.../"
+"models_modules_apps>`。它还支持您找到模型和字段的技术名称，这可能是配置有效载"
+"荷所需要的。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:47
 msgid ""
@@ -1336,27 +1340,34 @@ msgid ""
 "example, a sales order webhook uses the *Sales Order* model, but the "
 "technical name `sale.order` is used in the payload."
 msgstr ""
+"要查找模型的技术名称，请在激活开发者模式后将鼠标悬停在模型名称上，然后点击 "
+":icon:`fa-arrow-right`:guilabel:`（内部链接）`。技术名称可在 :guilabel:`模型`"
+" 字段中找到。例如，销售订单网络钩子使用 *销售订单* 模型，"
+"但在有效载荷中使用了技术名称 `sale.order`。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:52
 msgid "To create a webhook in **Studio**, proceed as follows:"
-msgstr ""
+msgstr "在**Studio**中创建网络钩子的步骤如下："
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:54
 msgid ""
 ":ref:`Open Studio <studio/access>` and click :guilabel:`Webhooks`, "
 "then :guilabel:`New`."
 msgstr ""
+":ref:`打开 Studio <studio/access>` 并点击 :guilabel:`网络钩子`，然后点击 "
+":guilabel:`新建`。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:55
 msgid "Give the webhook a clear, meaningful name that identifies its purpose."
-msgstr ""
+msgstr "给网络钩子起一个清晰、有意义的名字，以明确其目的。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:56
 msgid ""
 "If needed, and provided developer mode is activated, select the "
 "appropriate :guilabel:`Model` from the dropdown. If developer mode is not "
 "activated, the automation rule targets the current model by default."
-msgstr ""
+msgstr "如果需要，并已激活开发者模式，请从下拉菜单中选择相应的 "
+":guilabel:`模型`。如果未激活开发者模式，自动化规则默认以当前模型为目标。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:60
 msgid ""
@@ -1365,6 +1376,9 @@ msgid ""
 "when implementing the webhook in the external system that will send updates "
 "to the database."
 msgstr ""
+"网络钩子的 URL 会自动生成，但可根据需要通过点击 :guilabel:`轮换密钥` "
+"进行更改。这是在外部系统中实施网络钩子时应使用的 "
+"URL，该系统将向数据库发送更新。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:65
 msgid ""
@@ -1373,12 +1387,16 @@ msgid ""
 "database. If the URL is updated after the initial implementation, make sure "
 "to update it in the external system."
 msgstr ""
+"此 URL 具有**机密性**，需谨慎处理。"
+"在网络上或不加防范地分享可能会导致意外访问 Odoo 数据库。如果 URL "
+"在初始部署后有更新，请务必在外部系统中同步更新。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:69
 msgid ""
 "If desired, enable :guilabel:`Log Calls` to track the history of API "
 "requests made to the webhook's URL, e.g., for troubleshooting purposes."
-msgstr ""
+msgstr "如需要，请启用 :guilabel:`记录调用` 以追踪向网络钩子的 URL 发送的 API "
+"请求的历史记录，例如，用于故障排除。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:72
 msgid ""
@@ -1387,6 +1405,9 @@ msgid ""
 "API request is made to the webhook's URL. If the system sending the webhook "
 "is an Odoo database, ensure that the `id` and `model` appear in the payload."
 msgstr ""
+"如果发送网络钩子的系统并非 Odoo，请调整 :guilabel:`目标记录`的代码，使其能在 "
+"API 请求发送至网络钩子 URL 时，从有效负载中寻找相应的 JSON 记录。"
+"如果发送网络钩子的系统是 Odoo 数据库，请确保 id 和 model 出现在有效负载中。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:77
 msgid ""
@@ -1394,24 +1415,30 @@ msgid ""
 "`model.browse(i)` or `model.search(i)` instead of the "
 "default :guilabel:`Target Record` format."
 msgstr ""
+"如果该网络钩子用于在 Odoo 数据库中创建记录，请使用 `model.browse(i)` 或 "
+"`model.search(i)`，而不是默认的 :guilabel:`目标记录`格式。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:80
 msgid ""
 "Click :guilabel:`Add an action` in the :guilabel:`Actions To Do` tab to "
 "define the :ref:`actions <studio/automated-actions/action>` to be executed."
 msgstr ""
+"点击 :guilabel:`待办操作` 选项卡中的 :guilabel:`添加操作` 以定义要执行的 "
+":ref:`操作 <studio/automated-actions/action>`。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:82
 msgid ""
 "Before implementing the webhook in the external system, :ref:`test <studio/"
 "webhooks/test-webhook>` it to ensure it works as intended."
-msgstr ""
+msgstr "在外部系统中实施网络钩子之前，请 :ref:`测试<studio/webhooks/test-webhook>` "
+"以确保其按预期运行。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:86
 msgid ""
 "Webhooks can also be created via the :guilabel:`Automations` menu in "
 "**Studio** by selecting the trigger :guilabel:`On webhook`."
-msgstr ""
+msgstr "网络钩子也可通过**Studio**中的 :guilabel:`自动化`菜单选择触发器 "
+":guilabel:`收到网络钩子时`来创建。"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:88
 msgid ""
@@ -3735,13 +3762,13 @@ msgstr ""
 
 #: ../../content/applications/studio/pdf_reports.rst:326
 msgid "Add or edit a dynamic table"
-msgstr ""
+msgstr "添加或编辑动态表"
 
 #: ../../content/applications/studio/pdf_reports.rst:329
 msgid ""
 "Only relations of type `one2many` or `many2many` can be displayed as dynamic "
 "tables."
-msgstr ""
+msgstr "只有 `one2many` 或 `many2many` 类型的关系才能显示为动态表。"
 
 #: ../../content/applications/studio/pdf_reports.rst:330
 msgid ""
@@ -3749,7 +3776,8 @@ msgid ""
 "than a dynamic table you add yourself. For such tables, it is possible to "
 "insert or delete columns; it is not possible to move columns or to insert, "
 "move or delete rows."
-msgstr ""
+msgstr "标准报表中现有的动态表比自己添加的动态表结构更复杂。对于这类表格，可以插入或"
+"删除列，但不能移动列或插入、移动或删除行。"
 
 #: ../../content/applications/studio/pdf_reports.rst:334
 msgid ""
@@ -3758,6 +3786,9 @@ msgid ""
 "will be based on and press `Enter`. Once the table has been added, you can "
 "start editing it."
 msgstr ""
+"要添加动态表，请键入 `/`，然后选择 :guilabel:`动态表格` "
+"指令。在打开的列表中，选择或搜索表格将基于的关系，然后按 "
+"`回车`。表格添加完成后，就可以开始编辑了。"
 
 #: ../../content/applications/studio/pdf_reports.rst:338
 msgid ""
@@ -3765,6 +3796,8 @@ msgid ""
 "a :ref:`static table <studio/pdf-reports/static-table>`. It is also possible "
 "to insert static rows that will appear above or below the generated rows."
 msgstr ""
+"您可以使用表格工具插入、移动和删除列，就像 :ref:`静态表 <studio/pdf-reports/"
+"static-table>`一样。还可以插入静态行，这些行将出现在生成行的上方或下方。"
 
 #: ../../content/applications/studio/pdf_reports.rst:342
 msgid ""
@@ -3780,13 +3813,14 @@ msgstr ""
 
 #: ../../content/applications/studio/pdf_reports.rst:349
 msgid "Replace the :guilabel:`Column name` label by the label of your choice."
-msgstr ""
+msgstr "用您选择的标签替换 :guilabel:`列名` 标签。"
 
 #: ../../content/applications/studio/pdf_reports.rst:352
 msgid ""
 "The default row automatically iterates over the field's content, generating "
 "a row on the report for each field value (e.g., one row per order line)."
-msgstr ""
+msgstr "默认行会自动遍历字段内容，为每个字段值在报告中生成一行（例如，每个订单行生成"
+"一行）。"
 
 #: ../../content/applications/studio/pdf_reports.rst:356
 msgid "Formatting"
@@ -3797,14 +3831,16 @@ msgid ""
 "To format text in the report, select it, then format it using the options in "
 "the :doc:`text editor </applications/essentials/html_editor>`."
 msgstr ""
+"要格式化报告中的文本，请选择文本，然后使用 :doc:`文本编辑器</applications/"
+"essentials/html_editor>` 中的选项格式化文本。"
 
 #: ../../content/applications/studio/pdf_reports.rst:0
 msgid "Format text using the text editor."
-msgstr ""
+msgstr "使用文本编辑器设置文本格式。"
 
 #: ../../content/applications/studio/pdf_reports.rst:367
 msgid "Editing the report's XML"
-msgstr ""
+msgstr "编辑报告的 XML"
 
 #: ../../content/applications/studio/pdf_reports.rst:370
 msgid ""
@@ -3812,6 +3848,9 @@ msgid ""
 "<../../../administration/upgrade>`. If this happens, simply copy your "
 "changes from the old database into your upgraded database."
 msgstr ""
+"直接修改 XML 可能会在 :doc:`升级 <.../../../administration/upgrade>` "
+"时导致报告问题。如果出现这种情况，只需将旧数据库中的更改复制到升级后的数据库"
+"中即可。"
 
 #: ../../content/applications/studio/pdf_reports.rst:374
 msgid ""
@@ -3921,20 +3960,21 @@ msgid ""
 "positioning control."
 msgstr ""
 "在报告中处理图片可能具有挑战性，因为对图片大小和行为的精确控制并不总是显而易"
-"见的。你可以使用报告编辑器插入图片字段（通过使用 :ref:`字段指令 <studio/pdf-"
-"reports/add-field>`），但使用 `t-field` 指令和附带的 `t-options` 属性在 XML "
-"中插入图片可以提供更好的大小和定位控制。"
+"见的。您可以使用报告编辑器插入图片字段（通过使用 :ref:`字段指令 <studio/"
+"pdf-reports/add-field>`），但使用 `t-field` 指令和附带的 `t-options` 属性在 "
+"XML 中插入图片可以提供更好的大小和定位控制。"
 
 #: ../../content/applications/studio/pdf_reports.rst:507
 msgid ""
 "For example, the following code outputs the field `image_128` of the line's "
 "product as a 64px-wide image (with an automatic height based on the image's "
 "aspect ratio)."
-msgstr ""
+msgstr "例如，以下代码会将该行产品的字段 `image_128`输出为 64px "
+"宽的图片（根据图片的宽高比自动调整高度）。"
 
 #: ../../content/applications/studio/pdf_reports.rst:514
 msgid "The following options are available for image widgets:"
-msgstr ""
+msgstr "图像部件有以下选项："
 
 #: ../../content/applications/studio/pdf_reports.rst:516
 msgid ""
@@ -4603,7 +4643,8 @@ msgstr "图形"
 msgid ""
 "The :guilabel:`Graph` :icon:`fa-area-chart` view is used to showcase data "
 "from records in a bar, line, or pie chart."
-msgstr ""
+msgstr ":guilabel:`图表` :icon:`fa-area-"
+"chart`视图用于以条形图、折线图或饼图显示记录数据。"
 
 #: ../../content/applications/studio/views.rst:356
 msgid ""
