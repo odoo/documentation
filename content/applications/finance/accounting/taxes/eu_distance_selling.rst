@@ -13,6 +13,8 @@ must charge VAT per the VAT rate applicable in the buyer's country.
 .. note::
    This remains applicable even if the vendor is located outside of the European Union.
 
+.. _accounting/taxes/eu-distance-selling-configuration:
+
 Configuration
 =============
 
