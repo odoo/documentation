@@ -23,7 +23,7 @@ the warehouse form, which contains the following fields:
   characters). The short name for the default warehouse in Odoo is `WH`.
 
   .. important::
-     The :guilabel:`Short Name` appears on warehouse documents, so it is recommended to use an
+     The :guilabel:`Short Name` appears on warehouse documents, so it is recommended to use a
      memorable one, like "WH[first letters of location]" (e.g. `WHA`, `WHB`, etc.).
 
 - :guilabel:`Address` (*required field*): the address of the warehouse. To change the warehouse
