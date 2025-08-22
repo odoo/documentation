@@ -54,4 +54,4 @@ To adapt the content of the page according to your needs, click the :guilabel:`E
    You could add a link to this page in your website's footer, for example.
 
 .. seealso::
-   :doc:`Pages <../pages>`
+   :doc:`Pages <../structure/pages>`

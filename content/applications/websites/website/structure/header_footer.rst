@@ -79,7 +79,7 @@ Adding menu items
 -----------------
 
 By default, pages are added to the menu as drop-down menu items when
-:doc:`they are created <../pages>`. To add a new menu item, follow these steps:
+:doc:`they are created <../structure/pages>`. To add a new menu item, follow these steps:
 
 #. Go to :menuselection:`Website --> Site --> Menu Editor`.
 #. In the menu editor, click :guilabel:`Add Menu Item`.
