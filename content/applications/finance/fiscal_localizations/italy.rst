@@ -592,32 +592,21 @@ Process
 
 .. _italy/digital-signature:
 
-Digital qualified signature
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Qualified electronic signature
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-For invoices and bills intended for the :abbr:`PA (Public Administration)`, a **Digital Qualified
-Signature** is required for all files sent through the :abbr:`SdI (Sistema di Interscambio)`. The
-XML file must be certified using a certificate that is either:
+Invoices and bills intended for the :abbr:`PA (Public Administration)` must include a **qualified
+electronic signature** when submitted through the :abbr:`SdI (Sistema di Interscambio)`. This
+signature is automatically applied in the :abbr:`XAdES (XML Advanced Electronic Signature)` format
+when the invoice's partner has a 6-digit long :guilabel:`Destination Code` (which indicates a
+:abbr:`PA (Public Administration)` business).
 
-- a **smart card**;
-- a **USB token**;
-- an :abbr:`HSM (Hardware Security Module)`.
-
-.. warning::
-   Odoo **cannot** digitally sign documents for you. When a 6-digit long :guilabel:`Codice
-   Destinatario` is detected, then the :abbr:`EDI (Electronic Data Interchange)` process stops, and
-   the invoice is set on the :guilabel:`Requires user signature` state. You can download the
-   document in XML, sign it with any :guilabel:`Digital Qualified Signature` provider's external
-   program and send it through the :abbr:`AdE (Agenzia Delle Entrate)` portal.
+.. note::
+   When such an invoice is transmitted to the Tax Agency, the generated `.xml` file is signed on the
+   Odoo servers, returned to the database, and attached to the invoice automatically.
 
 Acceptance or Refusal
 ~~~~~~~~~~~~~~~~~~~~~
-
-.. warning::
-   As Odoo does not handle sending signed invoices to :abbr:`PA (Public Administration)` businesses,
-   these states cannot be directly triggered by Odoo. When you upload the invoice on the :abbr:`AdE
-   (Agenzia Delle Entrate)` portal, Odoo receives notifications about it, putting the correct
-   :guilabel:`SdI State` on the invoice.
 
 After receiving the invoice through the :abbr:`SdI (Sistema di Interscambio)`, the :abbr:`PA (Public
 Administration)` business has 15 days to accept the invoice. If it does, then the process ends here.
