@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-08-18 08:00+0000\n"
-"PO-Revision-Date: 2025-08-19 01:20+0000\n"
+"PO-Revision-Date: 2025-08-22 01:20+0000\n"
 "Last-Translator: \"Fernanda Alvarez (mfar)\" <mfar@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
 "odoo-17-doc/administration/es_419/>\n"
@@ -1346,7 +1346,9 @@ msgstr "Estos son los respectivos directorios de Odoo.sh:"
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:73
 msgid "Both Python 2.7 and 3.5 are installed in the containers. However:"
-msgstr "Se instala Python 2.7 y 3.5 en los contenedores, pero:"
+msgstr ""
+"Python 2.7 y 3.5 se instala en los contenedores, pero toma en cuenta las "
+"siguientes consideraciones:"
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:75
 msgid ""
@@ -1373,8 +1375,8 @@ msgid ""
 "While accessing a container with the shell, you can access the database "
 "using *psql*."
 msgstr ""
-"Al acceder a un contenedor con el shell, puede acceder a la base de datos "
-"con *psql*."
+"Al acceder a un contenedor mediante el shell, puedes acceder a la base de "
+"datos con *psql*."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:92
 msgid ""
@@ -1383,32 +1385,32 @@ msgid ""
 "statements leading to changes (*UPDATE*, *DELETE*, *ALTER*, ...), especially "
 "for your production database."
 msgstr ""
-"**Advertencia:** `use transacciones <https://www.postgresql.org/docs/current/"
+"**Advertencia:** `Usa transacciones <https://www.postgresql.org/docs/current/"
 "static/sql-begin.html>`_ (*BEGIN...COMMIT/ROLLBACK*) para cada declaración "
-"*sql* que produzca cambios (*UPDATE*, *DELETE*, *ALTER*, etc.), en especial "
-"en su base de datos de producción."
+"*sql* que ocasiona cambios (*UPDATE*, *DELETE*, *ALTER*, etc.), en especial "
+"en tu base de datos de producción."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:97
 msgid ""
 "The transaction mechanism is your safety net in case of mistake. You simply "
 "have to rollback your changes to revert your database to its previous state."
 msgstr ""
-"El mecanismo de transacción es su red de seguridad en caso de que ocurra un "
-"error, solo debe revertir sus cambios para restaurar su base de datos a un "
-"estado anterior."
+"El mecanismo de transacción actúa como red de seguridad en caso de que "
+"ocurra un error, solo debes revertir los cambios para restaurar la base de "
+"datos a su estado anterior."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:100
 msgid ""
 "For example, it may happen that you forget to set your *WHERE* condition."
-msgstr "Por ejemplo, tal vez olvidó establecer su condición *WHERE*."
+msgstr "Por ejemplo, tal vez olvidaste definir la condición *WHERE*."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:111
 msgid ""
 "In such a case, you can rollback to revert the unwanted changes that you "
 "just mistakenly did, and rewrite the statement:"
 msgstr ""
-"En ese caso, puede revertir para anular los cambios no deseados que hizo por "
-"accidente y volver a escribir la declaración:"
+"En ese caso, puedes realizar una reversión para anular los cambios que "
+"hiciste por accidente y luego volver a escribir la declaración:"
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:122
 msgid ""
@@ -1427,8 +1429,8 @@ msgid ""
 "In addition, when possible, use your staging databases to test your "
 "statements first. It gives you an extra safety net."
 msgstr ""
-"Además, cuando sea posible, utilice sus bases de datos de prueba para probar "
-"sus declaraciones, esto proporciona una red de seguridad adicional."
+"Además, cuando sea posible, usa tus bases de datos de prueba para probar las "
+"declaraciones primero, ya que esto te dará una red de seguridad adicional."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:129
 msgid "Run an Odoo server"
@@ -1440,8 +1442,8 @@ msgid ""
 "able to access it from the outside world with a browser, but you can for "
 "instance:"
 msgstr ""
-"Puede iniciar una instancia de servidor de Odoo desde el shell del "
-"contenedor. No podrá acceder a ella con un navegador, pero puede:"
+"Puedes iniciar una instancia del servidor de Odoo desde el shell de un "
+"contenedor. No podrás acceder a ella desde un navegador, pero puedes:"
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:134
 msgid "use the Odoo shell,"
@@ -1474,25 +1476,25 @@ msgid ""
 "``--stop-after-init`` will immediately shutdown the server instance after it "
 "completed the operations you asked."
 msgstr ""
-"``--stop-after-init`` cerrará de inmediato la instancia del servidor tras "
-"completar las operaciones que le pidió."
+"``--stop-after-init`` cerrará la instancia del servidor de inmediato luego "
+"de completar las operaciones que solicitaste."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:169
 msgid ""
 "More options are available and detailed in the :doc:`CLI documentation </"
 "developer/reference/cli>`."
 msgstr ""
-"Hay más opciones disponibles, estas se describen en la :doc:`documentación "
-"de la interfaz de línea de comandos </developer/reference/cli>`."
+"Consulta la :doc:`documentación de la interfaz de la línea de comandos </"
+"developer/reference/cli>` para conocer otras opciones y leer sobre ellas."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:172
 msgid ""
 "You can find in the logs (*~/logs/odoo.log*) the addons path used by Odoo.sh "
 "to run your server. Look for \"*odoo: addons paths*\":"
 msgstr ""
-"En los registros (*~/logs/odoo.log*) puede encontrar la ruta de complementos "
-"que Odoo.sh utiliza para ejecutar su servidor. Busque \"*odoo: addons "
-"paths*\":"
+"En los registros (*~/logs/odoo.log*) puedes encontrar la ruta de los "
+"complementos que Odoo.sh utiliza para ejecutar tu servidor. Busca "
+"\"*odoo: addons paths*\":"
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:181
 msgid ""
@@ -1501,14 +1503,14 @@ msgid ""
 "be effective in the database. Always, make your tests in your staging "
 "databases."
 msgstr ""
-"**Tenga precaución**, en particular con su base de datos de producción. Las "
-"operaciones que realice al ejecutar esta instancia de servidor de Odoo no "
-"están aisladas y los cambios serán efectivos en la base de datos. Siempre "
-"haga sus pruebas en sus bases de datos de prueba."
+"**Ten cuidado**, sobre todo con tu base de datos de producción. Las "
+"operaciones que hagas al ejecutar esta instancia del servidor de Odoo no "
+"están aisladas y los cambios se aplicarán directamente en la base de datos. "
+"Siempre haz tus pruebas en bases de datos que no son de producción."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:186
 msgid "Debugging in Odoo.sh"
-msgstr "Depuración de bugs en Odoo.sh"
+msgstr "Depuración de errores y bugs en Odoo.sh"
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:188
 msgid ""
@@ -1516,18 +1518,18 @@ msgid ""
 "This article only explains the specificities and limitations of the Odoo.sh "
 "platform, and assumes that you already know how to use a debugger."
 msgstr ""
-"La depuración de bugs de una compilación de Odoo.sh no es muy diferente a "
-"alguna otra aplicación de Python. Este artículo solo explica las "
-"especificaciones y limitaciones de la plataforma de Odoo.sh, además, asume "
-"que ya sabe cómo usar un depurador."
+"Depurar una compilación de Odoo.sh no es muy diferente a hacerlo en otra "
+"aplicación de Python. Este artículo solo explica las particularidades y "
+"limitaciones de la plataforma Odoo.sh, además de que asume que ya sabes cómo "
+"usar un depurador."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:190
 msgid ""
 "If you don't know how to debug a Python application yet, there are multiple "
 "introductory courses that can be easily found on the Internet."
 msgstr ""
-"Si aún no sabe cómo depurar bugs de una aplicación de Python, hay varios "
-"cursos introductorios que puede encontrar en internet con facilidad."
+"Si todavía no sabes cómo depurar una aplicación de Python, hay muchos cursos "
+"introductorios que puedes encontrar en internet con facilidad."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:192
 msgid ""
@@ -1545,24 +1547,24 @@ msgid ""
 "`pdb <https://docs.python.org/3/library/pdb.html>`_ is installed by default "
 "in every container."
 msgstr ""
-"En cada contenedor se instala `pdb <https://docs.python.org/3/library/"
-"pdb.html>`_ de forma predeterminada."
+"`pdb <https://docs.python.org/3/library/pdb.html>`_ está instalado de forma "
+"predeterminada en cada contenedor."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:197
 msgid ""
 "If you want to use `pudb <https://pypi.org/project/pudb/>`_ or `ipdb "
 "<https://pypi.org/project/ipdb/>`_ you have to install it before."
 msgstr ""
-"Si desea usar `pudb <https://pypi.org/project/pudb/>`_ o `ipdb <https://"
-"pypi.org/project/ipdb/>`_, debe instalarlos antes."
+"Si quieres usar `pudb <https://pypi.org/project/pudb/>`_ o `ipdb <https://"
+"pypi.org/project/ipdb/>`_, primero debes instalarlos."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:199
 msgid "To do so, you have two options:"
-msgstr "Para hacerlo, tiene dos opciones:"
+msgstr "Tienes dos opciones para hacerlo:"
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:201
 msgid "temporary (only in the current build):"
-msgstr "de forma temporal (solo en la compilación actual):"
+msgstr "De forma temporal (solo en la compilación actual):"
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:207
 msgid "or"
@@ -1573,13 +1575,13 @@ msgid ""
 "permanent: add ``pudb`` or ``ipdb`` to your project ``requirements.txt`` "
 "file."
 msgstr ""
-"de forma permanente si agrega ``pudb`` o ``ipdb`` al archivo "
-"``requirements.txt`` de su proyecto."
+"de forma permanente al agregar ``pudb`` o ``ipdb`` al archivo "
+"``requirements.txt`` de tu proyecto."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:216
 msgid "Then edit the code where you want to trigger the debugger and add this:"
 msgstr ""
-"Luego edite el código en el que desea activar el depurador y agregue lo "
+"Después, edita el código donde quieres activar el depurador y agrega lo "
 "siguiente:"
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:224
@@ -1587,44 +1589,43 @@ msgid ""
 "The condition :code:`sys.__stdin__.isatty()` is a hack that detects if you "
 "run Odoo from a shell."
 msgstr ""
-"La condición :code:`sys.__stdin__.isatty()` detecta si está ejecutando Odoo "
+"La condición :code:`sys.__stdin__.isatty()` detecta si estás ejecutando Odoo "
 "desde un shell."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:226
 msgid "Save the file and then run the Odoo Shell:"
-msgstr "Guarde el archivo y ejecute el shell de Odoo:"
+msgstr "Guarda el archivo y ejecuta el shell de Odoo:"
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:232
 msgid ""
 "Finally, *via* the Odoo Shell, you can trigger the piece of code/function/"
 "method you want to debug."
 msgstr ""
-"Por último, *a través* del shell de Odoo, puede activar el código, función o "
-"método que desea depurar."
+"Por último, *a través* del shell de Odoo, puedes activar el fragmento de "
+"código, función o método que quieras depurar."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:-1
 msgid "Console screenshot showing ``pdb`` running in an Odoo.sh shell."
 msgstr ""
-"Captura de pantalla de la consola que muestra el ``pdb`` en ejecución en un "
+"Captura de pantalla de la consola que muestra a ``pdb`` en ejecución en un "
 "shell de Odoo.sh."
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:6
 msgid "Frequent Technical Questions"
-msgstr "Preguntas técnicas más frecuentes"
+msgstr "Preguntas técnicas frecuentes"
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:9
 msgid "\"Scheduled actions do not run at the exact time they were expected\""
 msgstr ""
-"\"Las acciones planificadas no se ejecutan en el momento exacto en que se "
-"esperaban\""
+"\"Las acciones programadas no se ejecutan en el momento exacto esperado\""
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:11
 msgid ""
 "On the Odoo.sh platform, we cannot guarantee an exact running time for "
 "scheduled actions."
 msgstr ""
-"En la plataforma de Odoo.sh, no podemos garantizar un tiempo de ejecución "
-"exacto para las acciones planificadas."
+"No podemos garantizar un tiempo exacto de ejecución para las acciones "
+"programadas en la plataforma de Odoo.sh."
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:13
 msgid ""
@@ -1643,12 +1644,12 @@ msgstr ""
 msgid ""
 "Do not expect any scheduled action to be run more often than every 5 min."
 msgstr ""
-"No espere que ninguna acción planificada se ejecute con una frecuencia mayor "
+"No esperes que ninguna acción programada se ejecute con una frecuencia mayor "
 "a cada 5 minutos."
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:19
 msgid "Are there \"best practices\" regarding scheduled actions?"
-msgstr "¿Hay \"mejores prácticas\" respecto a las acciones planificadas?"
+msgstr "¿Las acciones programadas tienen buenas prácticas que debería seguir?"
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:21
 msgid ""
@@ -1656,18 +1657,18 @@ msgid ""
 "crons).** Therefore, you must keep this fact in mind when developing your "
 "own crons."
 msgstr ""
-"**Odoo.sh siempre limita el tiempo de ejecución de las acciones planificadas "
-"(*también conocidas como* crons).** Por lo tanto, debe tener esto en cuenta "
-"cuando desarrolle sus propios crons."
+"**Odoo.sh siempre limita el tiempo de ejecución de las acciones programadas "
+"(*también llamadas* crons)**, así que debes tener esto en cuenta cuando "
+"desarrolles tus propios crons."
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:24
 msgid "We advise that:"
-msgstr "Le aconsejamos lo siguiente:"
+msgstr "Te aconsejamos lo siguiente:"
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:26
 msgid "Your scheduled actions should work on small batches of records."
 msgstr ""
-"Sus acciones planificadas deben trabajar en pequeños lotes de registros."
+"Tus acciones programadas deben trabajar con pequeños lotes de registros."
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:27
 msgid ""
@@ -1675,9 +1676,9 @@ msgid ""
 "this way, if they get interrupted by the time-limit, there is no need to "
 "start over."
 msgstr ""
-"Sus acciones planificadas deben confirmar su trabajo después de procesar "
-"cada lote. De esta forma, si las interrumpe el límite de tiempo, no es "
-"necesario volver a empezar."
+"Tus acciones programadas deben confirmar su trabajo después de procesar cada "
+"lote, así no tendrás que empezar de nuevo si el límite de tiempo las "
+"interrumpe."
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:29
 msgid ""
@@ -1685,14 +1686,13 @@ msgid ""
 "1077421/3332416>`_: they must not cause side-effects if they are started "
 "more often than expected."
 msgstr ""
-"Sus acciones planificadas deben ser `idempotentes <https://stackoverflow.com/"
-"a/1077421/3332416>`_. No deben causar efectos secundarios si se activan con "
-"una mayor frecuencia a la esperada."
+"Tus acciones planificadas deben ser `idempotentes <https://stackoverflow.com/"
+"a/1077421/3332416>`_. No deben causar efectos secundarios si las ejecutas "
+"más seguido de lo esperado."
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:36
 msgid "How can I automate tasks when an IP address change occurs?"
-msgstr ""
-"¿Cómo puedo automatizar tareas cuando ocurre un cambio de dirección IP?"
+msgstr "¿Cómo puedo automatizar tareas cuando la dirección IP cambia?"
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:38
 msgid ""
@@ -1715,10 +1715,9 @@ msgid ""
 "address change (e.g., sending an email, contacting a firewall API, "
 "configuring database objects, etc.)"
 msgstr ""
-"Este mecanismo permite que pueda aplicar acciones personalizadas como "
-"respuesta al cambio de dirección IP (por ejemplo, enviar un correo "
-"electrónico, contactar una API de firewall, configurar objetos de la base de "
-"datos, etc.)."
+"Este mecanismo permite aplicar acciones personalizadas en respuesta al "
+"cambio de dirección IP (por ejemplo, enviar un correo, contactar una API de "
+"firewall, configurar objetos en la base de datos, etc.)."
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:46
 msgid ""
@@ -1726,13 +1725,13 @@ msgid ""
 "internally by the platform itself and returns a `403` response if accessed "
 "through any other means."
 msgstr ""
-"Por motivos de seguridad, solo es posible acceder a la ruta `/_odoo.sh/ip-"
-"change` desde la plataforma y devuelve la respuesta `403` si intenta acceder "
-"por otros medios."
+"Por motivos de seguridad, la ruta `/_odoo.sh/ip-change` solo es accesible de "
+"forma interna por la propia plataforma y devuelve una respuesta `403` al "
+"intentar acceder por otros medios."
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:49
 msgid "Here is a pseudo-implementation example:"
-msgstr "Este es un ejemplo de pseudo-implementación:"
+msgstr "Este es un ejemplo de pseudoimplementación:"
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:6
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:249
@@ -1746,8 +1745,8 @@ msgid ""
 "to copy-paste all their code."
 msgstr ""
 "Un `submódulo de Git <https://git-scm.com/book/es/v2/Herramientas-de-Git-"
-"Subm%C3%B3dulos>`_ le permite integrar otros proyectos de Git en su código "
-"sin necesidad de copiar y pegar todo el código."
+"Subm%C3%B3dulos>`_ te permite integrar otros proyectos de Git en tu código "
+"sin que tengas que copiar y pegar todo el código."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:14
 msgid ""
@@ -1817,51 +1816,53 @@ msgid ""
 "You can nevertheless do so :ref:`with Git <odoosh-advanced-submodules-"
 "withgit>`."
 msgstr ""
-"Por ahora, no es posible agregar repositorios **privados** con este método "
-"pero puede hacerlo :ref:`con Git <odoosh-advanced-submodules-withgit>`."
+"Por el momento no es posible agregar repositorios **privados** con este "
+"método, pero puedes hacerlo :ref:`con Git <odoosh-advanced-submodules-"
+"withgit>`."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:43
 msgid ""
 "On Odoo.sh, in the branches view of your project, choose the branch in which "
 "you want to add a submodule."
 msgstr ""
-"En Odoo.sh, en la vista de ramas de su proyecto, elija la rama en la que "
-"desea agregar un submódulo."
+"Elige la rama a la que quieres agregar un submódulo desde la vista de ramas "
+"de tu proyecto en Odoo.sh."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:45
 msgid ""
 "In the upper right corner, click on the *Submodule* button, and then on "
 "*Run*."
 msgstr ""
-"En la esquina superior derecha, haga clic en el botón de *Submódulo* y luego "
-"en *Ejecutar*."
+"Haz clic en el botón *Submódulo* que se encuentra en la esquina superior "
+"derecha y luego en *Ejecutar*."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:50
 msgid "A dialog with a form is shown. Fill the inputs as follows:"
 msgstr ""
-"Aparecerá un cuadro de diálogo con un formulario. Complete los campos como "
-"se indica a continuación:"
+"Aparecerá un cuadro de diálogo con un formulario. Completa los campos con la "
+"siguiente información:"
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:52
 msgid "Repository URL: The SSH URL of the repository."
-msgstr "URL del repositorio: la URL SSH del repositorio."
+msgstr "URL del repositorio: La URL SSH del repositorio."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:53
 msgid "Branch: The branch you want to use."
-msgstr "Rama: la rama que desea utilizar."
+msgstr "Rama: La rama que quieres utilizar."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:54
 msgid ""
 "Path: The folder in which you want to add this submodule in your branch."
-msgstr "Ruta: la carpeta en la que desea agregar este submódulo en su rama."
+msgstr ""
+"Ruta: La carpeta en la que quieres agregar este submódulo dentro de tu rama."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:59
 msgid ""
 "On Github, you can get the repository URL with the *Clone or download* "
 "button of the repository. Make sure to *use SSH*."
 msgstr ""
-"En GitHub, puede obtener la URL del repositorio con el botón de *Clonar o "
-"descargar* del repositorio. Asegúrese de *usar SSH*."
+"En GitHub puedes obtener la URL del repositorio con el botón *Clonar o "
+"descargar* del repositorio. Asegúrate de *usar SSH*."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:67
 msgid "With Git (advanced)"
@@ -1872,19 +1873,20 @@ msgid ""
 "In a terminal, in the folder where your Git repository is cloned, checkout "
 "the branch in which you want to add a submodule:"
 msgstr ""
-"En una terminal, en la carpeta donde se clonó su repositorio de Git, "
-"diríjase a la rama en la que desea agregar un submódulo:"
+"En la terminal, dirígete a la carpeta donde clonaste su repositorio de Git "
+"y, con el comando checkout, ve a la rama a la que quieres agregar un "
+"submódulo:"
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:76
 msgid "Then, add the submodule using the command below:"
-msgstr "Luego, agregue el submódulo con el siguiente comando:"
+msgstr "Luego, agrega el submódulo con el siguiente comando:"
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:82
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:94
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:360
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:498
 msgid "Replace"
-msgstr "Reemplace"
+msgstr "Reemplaza"
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:84
 msgid ""
@@ -1892,37 +1894,37 @@ msgid ""
 "repository you want to add as submodule,"
 msgstr ""
 "*<git@yourprovider.com>:<username/repository.git>* con la URL SSH del "
-"repositorio que desea agregar como submódulo."
+"repositorio que quieres agregar como submódulo."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:85
 msgid "*<branch>* by the branch you want to use in the above repository,"
 msgstr ""
-"*<branch>* con la rama que desea usar en el repositorio mencionado en el "
+"*<branch>* con la rama que quieres usar en el repositorio mencionado en el "
 "punto anterior."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:86
 msgid "*<path>* by the folder in which you want to add this submodule."
-msgstr "*<path>* con la carpeta en la que desea agregar este submódulo."
+msgstr "*<path>* con la carpeta a la que quieres agregar este submódulo."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:88
 msgid "Commit and push your changes:"
-msgstr "Confirme y suba sus cambios:"
+msgstr "Confirma y sube tus cambios con los comandos `commit` y `push`:"
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:96
 msgid ""
 "<remote> by the repository on which you want to push your changes. For a "
 "standard Git setup, this is *origin*."
 msgstr ""
-"<remote> con el repositorio al que desea subir sus cambios. Para una "
-"configuración estándar de Git, este es el *origen*."
+"<remote> con el repositorio al que quieres subir tus cambios. En una "
+"configuración estándar de Git, corresponde al *origen*."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:97
 msgid ""
 "<branch> by the branch on which you want to push your changes. Most likely "
 "the branch you used :code:`git checkout` on in the first step."
 msgstr ""
-"<branch> con la rama a la que desea subir sus cambios. Es muy probable que "
-"sea la rama en la que usó el comando :code:`git checkout` en el primer paso."
+"<branch> con la rama a la que quieres subir tus cambios. Es muy probable que "
+"sea la rama que usaste con el comando :code:`git checkout` en el primer paso."
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:100
 msgid ""
@@ -1972,8 +1974,8 @@ msgid ""
 "The branches view gives you an overview of the different branches your "
 "repository has."
 msgstr ""
-"La vista de ramas le proporciona información general de las distintas ramas "
-"de su repositorio."
+"La vista de ramas te proporciona información general sobre las ramas de tu "
+"repositorio."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:16
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:41
@@ -1985,16 +1987,16 @@ msgid ""
 "Odoo.sh offers three different stages for your branches: production, staging "
 "and development."
 msgstr ""
-"Odoo.sh le ofrece tres diferentes etapas para sus ramas: producción, prueba "
-"y desarrollo."
+"Odoo.sh cuenta con tres etapas distintas que podrás usar en tus ramas: "
+"producción, prueba y desarrollo."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:20
 msgid ""
 "You can change the stage of a branch by drag and dropping it into the stage "
 "section title."
 msgstr ""
-"Puede cambiar la etapa de una rama al arrastrarla y soltarla en el título de "
-"la sección de etapa."
+"Puedes cambiar la etapa de una rama si la arrastras y la sueltas en el "
+"título de la sección correspondiente a la etapa."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:28
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:44
@@ -2007,15 +2009,15 @@ msgid ""
 "This is the branch holding the code on which your production database runs. "
 "There can be only one production branch."
 msgstr ""
-"Esta es la rama que contiene el código en el que se ejecuta su base de datos "
-"de producción. Solo puede existir una rama de producción."
+"Esta es la rama que contiene el código con el que se ejecuta tu base de "
+"datos de producción y solo puede haber una rama de este tipo."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:33
 msgid ""
 "When you push a new commit in this branch, your production server is updated "
 "with the code of the new revision and is then restarted."
 msgstr ""
-"Cuando confirma sus cambios en esta rama, su servidor de producción se "
+"Cuando confirmas tus cambios en esta rama, tu servidor de producción se "
 "actualiza con el código de la nueva revisión y luego se reinicia."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:36
@@ -2039,9 +2041,9 @@ msgid ""
 "Apps menu, or through the :code:`-u` switch of :doc:`the command line </"
 "developer/reference/cli>`."
 msgstr ""
-"Este método es equivalente a realizar una actualización del módulo mediante "
-"el menú \"aplicaciones\" o con :code:`-u` en la :doc:`línea de comandos </"
-"developer/reference/cli>`."
+"Este método es equivalente a realizar una actualización del módulo desde el "
+"menú de Aplicaciones o con el parámetro :code:`-u` en la :doc:`línea de "
+"comandos </developer/reference/cli>`."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:47
 msgid ""
@@ -2064,10 +2066,10 @@ msgid ""
 "database. The unit tests are not performed, as it would increase the "
 "unavailability time of the production database during the updates."
 msgstr ""
-"Los datos de demostración no se cargan, pues no se deben usar en una base de "
-"datos de producción. No se realizan pruebas unitarias debido a que "
-"incrementarían el tiempo en el que la base de datos de producción no está "
-"disponible durante las actualizaciones."
+"Los datos de demostración no se cargan, ya que no están pensados para su uso "
+"en las bases de datos de producción, y las pruebas unitarias no se ejecutan, "
+"ya que aumentarían el tiempo de indisponibilidad de la base de datos de "
+"producción durante las actualizaciones."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:57
 msgid ""
@@ -2076,8 +2078,8 @@ msgid ""
 "development stage after 30 days."
 msgstr ""
 "Los usuarios que utilizan proyectos de prueba deben tomar en cuenta que su "
-"rama de producción, junto con todas las ramas de prueba, volverán de forma "
-"automática a la etapa de desarrollo después de 30 días."
+"rama de producción, junto con todas las ramas de prueba, volverán a la etapa "
+"de desarrollo de manera automática después de 30 días."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:61
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:63
@@ -2092,14 +2094,14 @@ msgid ""
 "They will create databases that are neutralized duplicates of the production "
 "database."
 msgstr ""
-"Las ramas de prueba son para probar sus nuevas funciones con los datos de "
-"producción, sin comprometer la base de datos de producción real con "
-"registros de prueba. Crearán bases de datos que son duplicados neutralizados "
-"de la base de datos de producción."
+"Las ramas de prueba sirven para que pruebes tus nuevas funciones con los "
+"datos de producción sin comprometer la base de datos de producción real con "
+"registros de prueba. Estas ramas crearán bases de datos que son duplicados "
+"neutralizados de la base de datos de producción."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:67
 msgid "The neutralization includes:"
-msgstr "La neutralización incluye:"
+msgstr "La neutralización hace lo siguiente:"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:69
 msgid ""
@@ -2120,19 +2122,18 @@ msgid ""
 "emails sent by your database is provided. That way, you do not have to worry "
 "about sending test emails to your contacts."
 msgstr ""
-"Deshabilitar correos electrónicos salientes al interceptarlos con "
-"mailcatcher. Se le proporciona una :ref:`interfaz para visualizar <odoosh-"
-"gettingstarted-branches-tabs-mails>` los correos electrónicos que envió su "
-"base de datos. De esta forma, no debe preocuparse de enviar correos "
-"electrónicos de prueba a sus contactos."
+"Desactiva los correos salientes al interceptarlos con un mailcatcher. Hay "
+"una :ref:`interfaz para ver <odoosh-gettingstarted-branches-tabs-mails>` los "
+"correos enviados desde tu base de datos, así no tienes que preocuparte por "
+"enviar correos de prueba a tus contactos."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:75
 msgid "Setting payment providers and shipping providers in test mode."
-msgstr "Ajustes de proveedores de pago y de envío en el modo de prueba."
+msgstr "Proveedores de pago y de envío en modo de prueba."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:76
 msgid "Disabling IAP services"
-msgstr "Deshabilitar servicios de compras dentro de la aplicación."
+msgstr "Deshabilita los servicios de compras dentro de la aplicación."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:78
 msgid ""
@@ -2178,9 +2179,9 @@ msgid ""
 "Settings <odoosh-gettingstarted-settings-modules-installation>`."
 msgstr ""
 "Las ramas de desarrollo crean nuevas bases de datos con los datos de "
-"demostración para ejecutar pruebas unitarias. Los módulos instalados son los "
-"que usted incluye en sus ramas. Puede cambiar la lista de módulos a instalar "
-"en sus :ref:`ajustes de proyecto <odoosh-gettingstarted-settings-modules-"
+"demostración para realizar las pruebas unitarias. Los módulos instalados son "
+"los que están en tus ramas y puedes cambiar la lista de módulos a instalar "
+"en los :ref:`ajustes del proyecto <odoosh-gettingstarted-settings-modules-"
 "installation>`."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:94
@@ -2245,8 +2246,8 @@ msgid ""
 "merge the development branch into your staging branch, by drag and dropping "
 "it onto the desired staging branch,"
 msgstr ""
-"Fusionar la rama de desarrollo con su rama de prueba. Arrástrela y suéltela "
-"en la rama de prueba deseada."
+"Fusionar la rama de desarrollo con tu rama de prueba, solo arrástrala y "
+"suéltala en la rama de prueba deseada."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:121
 msgid ""
@@ -2356,7 +2357,7 @@ msgstr "El resumen del historial de su rama incluye:"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:159
 msgid "The messages of the commits and their authors,"
-msgstr "Los mensajes de las confirmaciones y sus autores."
+msgstr "Los mensajes de las confirmaciones (o commits) y sus autores."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:160
 msgid ""
@@ -2527,10 +2528,10 @@ msgid ""
 "upper right corner of the view. The fetching is automatically stopped after "
 "5 minutes. You can restart it using the play button."
 msgstr ""
-"Puede pausar la recuperación de registros si hace clic en el botón "
-"correspondiente en la esquina superior derecha de la vista. La recuperación "
-"se detiene en automático después de 5 minutos y puede reiniciarla al hacer "
-"clic en el botón de Iniciar."
+"Puedes pausar la captura de registros al hacer clic en el botón "
+"correspondiente en la esquina superior derecha de la vista. La captura se "
+"detiene de manera automática después de 5 minutos y puedes reanudarla con el "
+"botón \"Iniciar\"."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:249
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:118
@@ -2760,10 +2761,10 @@ msgid ""
 "hour. This setting applies to development builds only. Staging builds "
 "duplicate the production build and the production build only installs base."
 msgstr ""
-"Si se habilitan las pruebas, el conjunto de módulos estándar de Odoo puede "
-"tardar hasta 1 hora. Este ajuste solo aplica a compilaciones de desarrollo. "
-"Las compilaciones de prueba duplican la compilación de producción y la "
-"compilación de producción solo instala la base."
+"Si las pruebas están habilitadas, el conjunto de módulos estándar de Odoo "
+"puede tardar hasta 1 hora. Esto solo aplica en las compilaciones de "
+"desarrollo. Las compilaciones de prueba duplican la compilación de "
+"producción y la compilación de producción solo instala el módulo base."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:339
 msgid "**Test suite**"
@@ -2792,10 +2793,10 @@ msgid ""
 "you want to test upgraded code or develop features while your production "
 "database is in the process of being upgraded to a newer version."
 msgstr ""
-"Solo puede cambiar la versión de Odoo en las ramas de desarrollo si desea "
-"probar un código actualizado o desarrollar otras funciones mientras su base "
-"de datos de producción está en el proceso de actualización a una nueva "
-"versión."
+"Solo para las ramas de desarrollo, puedes cambiar la versión de Odoo si "
+"deseas probar código actualizado o desarrollar funciones mientras tu base de "
+"datos de producción está en proceso de actualización a una versión más "
+"reciente."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:350
 msgid ""
@@ -2842,7 +2843,7 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:364
 msgid "own or purchase the domain name,"
-msgstr "Ser propietario o comprar el nombre de dominio."
+msgstr "Ser propietario del nombre de dominio o adquirirlo."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:365
 msgid "add the domain name in this list,"
@@ -2889,7 +2890,7 @@ msgstr "No se aceptan los dominios simples (por ejemplo, *miempresa.com*):"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:377
 msgid "they can only be configured using ``A`` records,"
-msgstr "Solo se pueden configurar al usar registros ``A``."
+msgstr "Solo puedes configurarlos con registros ``A``."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:378
 msgid "``A`` records only accept IP addresses as value,"
@@ -3109,7 +3110,7 @@ msgid ""
 "github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-"
 "new-ssh-key>`_"
 msgstr ""
-"`Genere una nueva clave SSH <https://docs.github.com/es/authentication/"
+"`Genera una nueva clave SSH <https://docs.github.com/es/authentication/"
 "connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-"
 "ssh-agent#generating-a-new-ssh-key>`_."
 
@@ -3388,9 +3389,9 @@ msgid ""
 "you can then ask for a rebuild when you want to restart with a new copy of "
 "the production."
 msgstr ""
-"Pueda probar todo lo que quiera en la misma base de datos de prueba y luego "
-"pueda solicitar una nueva compilación cuando quiera volver a empezar con una "
-"nueva copia de la producción. "
+"Que puedas hacer todas las pruebas que quieras en la misma base de datos de "
+"prueba y luego solicites una nueva compilación cuando quieras volver a "
+"empezar con una nueva copia de producción."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:77
 msgid ""
@@ -3434,9 +3435,10 @@ msgid ""
 "can take up to 1 hour to be ready. This is due to the large number of tests "
 "set in the default Odoo modules suite."
 msgstr ""
-"Según la lista de módulos a instalar y probar, una compilación de desarrollo "
-"puede tardar hasta una hora en estar lista. Esto se debe al gran número de "
-"pruebas establecidas en el conjunto de módulos predeterminado de Odoo."
+"Dependiendo de la lista de módulos a instalar y probar, una compilación de "
+"desarrollo puede tardar hasta 1 hora en completarse debido a la gran "
+"cantidad de pruebas incluidas en el conjunto predeterminado de módulos de "
+"Odoo."
 
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:94
 msgid "Features"
@@ -3487,11 +3489,10 @@ msgid ""
 "*Web Shell*, *Editor*, *Outgoing e-mails*. You also have the possibility to "
 "*Download a dump* of the build's database."
 msgstr ""
-"En el menú desplegable de la compilación, puede acceder a las mismas "
-"funciones que en la :ref:`vista de las ramas <odoosh-gettingstarted-branches-"
+"En el menú desplegable de la compilación puedes acceder a las mismas "
+"funciones que en la :ref:`vista de ramas <odoosh-gettingstarted-branches-"
 "tabs>`: *Registros*, *Webshell*, *Editor*, *Correos de salida*. También "
-"tiene la posibilidad de *descargar un dump* de la base de datos de la "
-"compilación."
+"puedes *descargar un dump* de la base de datos de la compilación."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:6
 msgid "Create your project"
@@ -3566,9 +3567,9 @@ msgid ""
 "new `submodules <https://git-scm.com/book/en/v2/Git-Tools-Submodules>`_ for "
 "example."
 msgstr ""
-"hacer cambios que faciliten su proceso de despliegue, fusionar ramas o "
-"agregar nuevos `submódulos <https://git-scm.com/book/es/v2/Herramientas-de-"
-"Git-Subm%C3%B3dulos>`_."
+"Hacer cambios y commits que faciliten tu proceso de despliegue, como "
+"fusionar ramas o agregar nuevos `submódulos <https://git-scm.com/book/es/v2/"
+"Herramientas-de-Git-Subm%C3%B3dulos>`_."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:44
 msgid "Submit your project"
@@ -3695,10 +3696,10 @@ msgid ""
 "repository. Databases hosted on the Odoo.com online platform do not have any "
 "custom modules. Users of these databases can therefore skip this step."
 msgstr ""
-"Si usa módulos comunitarios o personalizados, agréguelos a una rama en su "
-"repositorio de GitHub. Las bases de datos en la plataforma en línea de "
-"Odoo.com no cuentan con módulos personalizados. Los usuarios con este tipo "
-"de bases de datos pueden omitir este paso."
+"Si usas módulos de Community o personalizados, agrégalos a una rama de tu "
+"repositorio en GitHub. Las bases de datos alojadas en la plataforma en línea "
+"de Odoo.com no tienen módulos personalizados, así que los usuarios de esas "
+"bases pueden omitir este paso."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:103
 msgid ""
@@ -3822,11 +3823,10 @@ msgid ""
 "in :menuselection:`Settings --> Technical --> Outgoing Mail Servers` "
 "(:ref:`Developer mode <developer-mode>` must be activated)."
 msgstr ""
-"Hay un servidor de correo predeterminado con Odoo.sh. Para usarlo, no debe "
-"tener habilitado ningún servidor de correo saliente configurado en su base "
-"de datos en :menuselection:`Ajustes --> Técnico --> Servidores de correo "
-"saliente` (el :ref:`modo de desarrollador <developer-mode>` debe estar "
-"activo)."
+"Odoo.sh incluye un servidor de correo predeterminado. Para usarlo, no debe "
+"haber ningún servidor de correo saliente habilitado en tu base de datos en "
+":menuselection:`Ajustes --> Técnico --> Servidores de correo saliente` ("
+"debes habilitar el :ref:`modo de desarrollador <developer-mode>`)."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:174
 msgid ""
@@ -3860,10 +3860,10 @@ msgid ""
 "the queue, processing mass mailings, or third-party services synchronization "
 "(Calendars, files hosting, ...)."
 msgstr ""
-"Esto es para prevenir que su nueva base de datos importada realice acciones "
-"que puedan afectar su proceso de producción, como enviar correos pendientes, "
-"procesar envíos masivos o sincronizar servicios de terceros (calendarios, "
-"alojamiento de archivos, etc...)."
+"Esto evita que tu base de datos recién importada realice acciones que puedan "
+"afectar tu proceso de producción, como enviar correos pendientes, procesar "
+"envíos masivos o sincronizar servicios externos (calendarios, alojamiento de "
+"archivos, etc...)."
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:190
 msgid ""
@@ -4149,7 +4149,7 @@ msgstr "Suba la rama de desarrollo"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:155
 msgid "Stage the changes to be committed"
-msgstr "Indique los cambios que se van a realizar."
+msgstr "Prepara los cambios para hacer tu commit."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:161
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:395
@@ -4158,7 +4158,7 @@ msgstr "Confirme los cambios."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:167
 msgid "Push your changes to your remote repository"
-msgstr "Envíe los cambios a su repositorio remoto."
+msgstr "Sube tus cambios a tu repositorio remoto."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:169
 msgid "From an Odoo.sh editor terminal:"
@@ -4190,9 +4190,9 @@ msgid ""
 "You need to specify *-u origin feature-1* for the first push only. From that "
 "point, to push your future changes from your computer, you can simply use"
 msgstr ""
-"Es necesario especificar *-u origin feature-1* solo en el primer push. "
-"Después, para enviar los futuros cambios desde su computadora, puede "
-"utilizar el siguiente comando:"
+"Solo necesitas especificar *-u origin feature-1* en el primer push. Después, "
+"para enviar los próximos cambios desde tu computadora, puedes utilizar el "
+"siguiente comando:"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:197
 msgid "Test your module"
@@ -4427,8 +4427,8 @@ msgid ""
 "then, open the file *models/models.py* using the editor of your choice, such "
 "as *Atom*, *Sublime Text*, *PyCharm*, *vim*, ..."
 msgstr ""
-"después abra el archivo *models/models.py* con el editor de su preferencia, "
-"puede ser  *Atom*, *Sublime Text*, *PyCharm*, *vim*, ..."
+"Después, abre el archivo *models/models.py* con el editor que quieras, como "
+"*Atom*, *Sublime Text*, *PyCharm*, *vim*, etc."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:323
 msgid "Then, after the description field"
@@ -4460,7 +4460,7 @@ msgid ""
 "and modify a view stored in database."
 msgstr ""
 "Estos cambios alteran la estructura de la base de datos al agregar una "
-"columna en una tabla y modifican una vista almacenada en la base de datos. "
+"columna en una tabla y modifican una vista almacenada en la base de datos."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:352
 msgid ""
@@ -4476,9 +4476,9 @@ msgid ""
 "platform when you push your changes, increase your module version in its "
 "manifest."
 msgstr ""
-"Si desea que la actualización se realice de forma automática por la "
-"plataforma de Odoo.sh cuando suba sus cambios, mejore la versión de su "
-"módulo en su manifiesto. "
+"Si quieres que la plataforma de Odoo.sh actualice tu módulo en automático "
+"cuando envíes tus cambios, aumenta la versión del módulo en el archivo "
+"manifest."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:358
 msgid "Open the module manifest *__manifest__.py*."
@@ -4495,7 +4495,7 @@ msgid ""
 "module upon the new revision deployment."
 msgstr ""
 "La plataforma detectará el cambio de versión y activará la actualización del "
-"módulo después del despliegue de la nueva revisión. "
+"módulo después del despliegue de la nueva revisión."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:375
 msgid "Browse to your Git folder."
@@ -4547,9 +4547,9 @@ msgid ""
 "by default, you can define a *requirements.txt* file listing the external "
 "libraries your modules depends on."
 msgstr ""
-"Si desea usar una biblioteca externa de Python que no está instalada de "
-"manera predeterminada, puede definir un archivo *requirements.txt* con una "
-"lista de las bibliotecas externas de las que dependa su módulo. "
+"Si quieres usar una biblioteca externa de Python que no está instalada de "
+"forma predeterminada puedes definir un archivo *requirements.txt* con la "
+"lista de bibliotecas externas de las que depende tu módulo."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:432
 msgid ""
@@ -4568,7 +4568,7 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:436
 msgid "**PostgreSQL extensions** are not supported on Odoo.sh."
-msgstr "Odoo.sh no es compatible con las **extensiones PostgreSQL**. "
+msgstr "Odoo.sh no es compatible con las **extensiones de PostgreSQL**."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:437
 msgid ""
@@ -4591,8 +4591,8 @@ msgid ""
 "The feature is explained in this section by using the `Unidecode library "
 "<https://pypi.python.org/pypi/Unidecode>`_ in your module."
 msgstr ""
-"Está función se explica en esta sección usando la `biblioteca Unidecode "
-"<https://pypi.python.org/pypi/Unidecode>`_ en su módulo. "
+"Esta función se explica en esta sección usando la `biblioteca Unidecode "
+"<https://pypi.python.org/pypi/Unidecode>`_ en tu módulo."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:444
 msgid "Create a file *requirements.txt* in the root folder of your repository"
@@ -4621,8 +4621,8 @@ msgid ""
 "Then use the library in your module, for instance to remove accents from "
 "characters in the name field of your model."
 msgstr ""
-"Luego, use la biblioteca en su módulo para quitar acentos de caracteres en "
-"el nombre del campo de su modelo. "
+"Luego usa la biblioteca en tu módulo. Por ejemplo, puedes eliminar acentos "
+"de los caracteres en el campo de nombre de tu modelo."
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:459
 msgid "Open the file *models/models.py*."
@@ -4719,9 +4719,9 @@ msgid ""
 "For production builds, the source code is read-only, because applying local "
 "changes on a production server is not a good practice."
 msgstr ""
-"Para compilaciones de producción, el código fuente debe ser solo de lectura "
-"porque aplicar cambios locales a un servidor de producción no es una buena "
-"práctica. "
+"El código fuente en las compilaciones de producción es de solo lectura, ya "
+"que aplicar cambios locales en un servidor de producción no es una buena "
+"práctica."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:59
 msgid "The source code of your Github repository is located under */src/user*,"
@@ -4730,7 +4730,7 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:60
 msgid "The source code of Odoo is located under"
-msgstr "El código fuente de Odoo está ubicado en "
+msgstr "El código fuente de Odoo está ubicado en:"
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:62
 msgid "*/src/odoo* (`odoo/odoo <https://github.com/odoo/odoo>`_),"
@@ -4755,8 +4755,8 @@ msgid ""
 "To open a file in the editor, just double-click on it in the file browser "
 "panel on the left."
 msgstr ""
-"Para abrir un archivo en el editor, solo haga doble clic en panel de "
-"navegación de archivos ubicado a la izquierda. "
+"Para abrir un archivo en el editor solo tienes que hacer doble clic sobre él "
+"en el panel del explorador de archivos ubicado a la izquierda."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:71
 msgid ""
@@ -4764,9 +4764,8 @@ msgid ""
 "menu :menuselection:`File --> Save .. File` or by hitting the :kbd:`Ctrl+S` "
 "shortcut."
 msgstr ""
-"Puede comenzar a hacer los cambios que desee. Para guardarlos, vaya al "
-"menú :menuselection:`Archivo --> Guardar .. Archivo` o con el "
-"atajo :kbd:`Ctrl+S`. "
+"Haz los cambios necesarios y luego ve al menú :menuselection:`Archivo --> "
+"Guardar archivo` para guardarlos o usa el atajo :kbd:`Ctrl+S`."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:77
 msgid ""
@@ -4774,10 +4773,10 @@ msgid ""
 "will detect it and reload automatically so your changes are reflected "
 "immediately, without having to restart the server manually."
 msgstr ""
-"Si guarda un archivo Python que está en la ruta de complementos de su "
-"servidor de Odoo, este lo detectará y lo volverá a cargar en automático para "
-"que sus cambios se apliquen en seguida sin tener que reiniciar el servidor "
-"de forma manual. "
+"Si guardas un archivo Python que está en la ruta de complementos de tu "
+"servidor de Odoo, el sistema lo detectará y lo volverá a cargar de manera "
+"automática para aplicar tus cambios de inmediato sin que tengas que "
+"reiniciar el servidor manualmente."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:84
 msgid ""
@@ -4854,9 +4853,9 @@ msgid ""
 "push the changes, most-likely the current branch if you work in a "
 "development build."
 msgstr ""
-"<branch>debe reemplazarse por el nombre de la rama a la cuál quiera subir "
-"los cambios, probablemente sea la rama actual si trabaja en una compilación "
-"de desarrollo.  "
+"<branch> debe ser el nombre de la rama a la que quieres subir los cambios. "
+"Es muy probable que sea la rama actual si estás trabajando en una "
+"compilación de desarrollo."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:124
 msgid ""
@@ -4980,10 +4979,10 @@ msgid ""
 "ipython.readthedocs.io/en/stable/config/integrating.html#rich-display>`_ "
 "mentioned above."
 msgstr ""
-"La clase :code:`Pretty` le da la posibilidad de mostrar fácilmente listas y "
-"dicts de una manera bonita usando el `rich display <https://"
+"La clase :code:`Pretty` te permite mostrar listas y diccionarios con "
+"facilidad de forma llamativa mediante la `visualización enriquecida <https://"
 "ipython.readthedocs.io/en/stable/config/integrating.html#rich-display>`_ "
-"mencionado anteriormente. "
+"antes mencionada."
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:192
 msgid ""
@@ -5019,9 +5018,9 @@ msgid ""
 "and assigned automatically. However, when you change your project name, only "
 "future builds will use the new name."
 msgstr ""
-"Las direcciones de sus compilaciones de prueba y de desarrollo derivan de "
-"este nombre y se asignan automáticamente. Sin embargo, cuando cambia el "
-"nombre del proyecto solo las compilaciones futuras usarán el nuevo nombre. "
+"Las direcciones de tus compilaciones de prueba y de desarrollo se derivan de "
+"este nombre y se asignan en automático. Sin embargo, cuando cambias el "
+"nombre del proyecto solo las próximas compilaciones usarán el nuevo nombre."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:29
 msgid "Collaborators"
@@ -5186,7 +5185,7 @@ msgstr "Acceso público "
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:209
 msgid "Allow public access to your development builds."
-msgstr "Permita que el público acceda a sus compilaciones de desarrollo. "
+msgstr "Habilita el acceso público a tus compilaciones de desarrollo."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:214
 msgid ""
@@ -5248,14 +5247,12 @@ msgstr ":guilabel:`ci/odoo.sh (dev)`: Estado de una compilación de desarrollo."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:235
 msgid ":guilabel:`ci/odoo.sh (staging)`: status of a staging build"
-msgstr ""
-":guilabel:`ci/odoo.sh (staging)`: Estado de una compilación de despliegue. "
+msgstr ":guilabel:`ci/odoo.sh (staging)`: Estado de una compilación de prueba."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:236
 msgid ":guilabel:`ci/odoo.sh (production)`: status of a production build"
 msgstr ""
-":guilabel:`ci/odoo.sh (production)`:  Estado de una compilación de "
-"producción."
+":guilabel:`ci/odoo.sh (production)`: Estado de una compilación de producción."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:237
 msgid ""
@@ -5263,7 +5260,7 @@ msgid ""
 "will push a test status on the last commit of your repository"
 msgstr ""
 ":guilabel:`ci/odoo.sh (test_ci)`: Probar el token desde la página de ajustes "
-"enviará un estado de prueba a la última confirmación de su repositorio."
+"enviará un estado de prueba a la última confirmación de tu repositorio."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:241
 msgid "Custom domains"
@@ -5283,8 +5280,8 @@ msgid ""
 "Configure the deploy keys for the private repositories you use as submodules "
 "in your branches to allow Odoo.sh to download them."
 msgstr ""
-"Configure el despliegue de claves para los repositorios privados que usa "
-"como submódulos en sus ramas para permitirle a Odoo.sh descargarlos. "
+"Configura las llaves de despliegue para los repositorios privados que usas "
+"como submódulos en tus ramas, así Odoo.sh podrá descargarlos."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:255
 msgid ""
@@ -5292,10 +5289,9 @@ msgid ""
 "looking on how to set up your submodules, instructions are available in the "
 "chapter :ref:`Submodules <odoosh-advanced-submodules>` of this documentation."
 msgstr ""
-"Estos ajustes se requieren solo para **repositorios privados**. Si quiere "
-"saber como configurar sus submódulos, las instrucciones están disponibles en "
-"el capítulo :ref:`Submódulos <odoosh-advanced-submodules>` de esta "
-"documentación. "
+"Estos ajustes solo son necesarios para los **repositorios privados**. Si "
+"buscas cómo configurar tus submódulos, consulta el capítulo :ref:`Submódulos "
+"<odoosh-advanced-submodules>` de esta documentación."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:262
 msgid ""
@@ -5389,7 +5385,7 @@ msgstr "Esta sección muestra el tamaño de almacenaje que utiliza su proyecto."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:294
 msgid "Storage size is computed as follows:"
-msgstr "El tamaño de almacenaje se calcula de la siguiente manera: "
+msgstr "El tamaño de almacenamiento se calcula de la siguiente manera:"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:296
 msgid "the size of the PostgreSQL database"
@@ -5417,8 +5413,8 @@ msgid ""
 "Should your production database size grow to exceed what's provisioned in "
 "your subscription, it will automatically be synchronized with it."
 msgstr ""
-"Si el tamaño de su base de datos de producción excede lo que cubre su "
-"suscripción, esta se sincronizará automáticamente con el nuevo tamaño. "
+"Si el tamaño de tu base de datos de producción aumenta y supera lo "
+"estipulado por tu suscripción, se sincronizará automáticamente con ella."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:308
 msgid "Database Workers"
@@ -5430,10 +5426,10 @@ msgid ""
 "increase the load your production database is able to handle. If you add "
 "more, it will automatically be synchronized with your subscription."
 msgstr ""
-"Aquí se pueden configurar trabajadores adicionales a la base de datos. Más "
-"trabajadores ayudan a incrementar la carga de producción de lo que su base "
-"de datos es capaz de manejar. Si quiere agregar más, se sincronizará "
-"automáticamente con su suscripción. "
+"Aquí puedes configurar workers adicionales para la base de datos. Tener más "
+"workers permite que la base de datos de producción trabaje con una carga más "
+"grande. Si agregas más, esto se sincronizará en automático con tu "
+"suscripción."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:318
 msgid ""
@@ -5460,9 +5456,9 @@ msgid ""
 "the same time. If you add more, it will automatically be synchronized with "
 "your subscription."
 msgstr ""
-"Las ramas adicionales de prueba le permiten desarrollar y probar mas "
-"características al mismo tiempo. Si agrega más, se sincronizará "
-"automáticamente con su suscripción. "
+"Las ramas adicionales de prueba te permiten desarrollar y probar más "
+"funciones al mismo tiempo. Si agregas más, se sincronizarán automáticamente "
+"con tu suscripción."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:333
 msgid "Activation"
@@ -5661,7 +5657,9 @@ msgstr ""
 
 #: ../../content/administration/on_premise.rst:-1
 msgid "Too many users on a database error message"
-msgstr "Mensaje de error en la base de datos debido a demasiados usuarios."
+msgstr ""
+"Captura de pantalla del mensaje de error en la base de datos debido a "
+"demasiados usuarios."
 
 #: ../../content/administration/on_premise.rst:79
 msgid ""
@@ -6073,10 +6071,9 @@ msgid ""
 "machine on which Odoo runs and the one on which PostgreSQL runs, then "
 "configure Odoo to connect to its end of the tunnel"
 msgstr ""
-"Solo acepte conexiones de bucle de retorno y `use un túnel SSH`_ entre la "
-"máquina en la que se ejecuta Odoo se ejecutar y en la que se ejecuta "
-"PostgreSQL. Después configure Odoo para que se vincule a su extremo del "
-"túnel."
+"Acepta solo las conexiones de bucle invertido y `usa un túnel SSH`_ entre la "
+"máquina en la que ejecutas Odoo y en la que ejecutas PostgreSQL. Después, "
+"configura Odoo para conectarlo al extremo del túnel."
 
 #: ../../content/administration/on_premise/deploy.rst:90
 msgid ""
@@ -6084,10 +6081,10 @@ msgid ""
 "ssl (see `PostgreSQL connection settings`_ for details), then configure Odoo "
 "to connect over the network"
 msgstr ""
-"Acepte conexiones a la máquina en la que Odoo está instalado, es probable "
-"que sea mediante SSL (consulte los `ajustes de conexión con PostgreSQL`_ "
-"para obtener más detalles), luego configure Odoo para conectarse a través de "
-"la red."
+"Acepta conexiones a la máquina que tiene Odoo instalado, posiblemente a "
+"través de SSL (consulta los `ajustes de conexión de PostgreSQL`_ para "
+"obtener más detalles) y luego configura Odoo para conectarse a través de la "
+"red."
 
 #: ../../content/administration/on_premise/deploy.rst:95
 #: ../../content/administration/on_premise/deploy.rst:145
@@ -6102,7 +6099,7 @@ msgstr "Permita la conexión tcp en localhost."
 
 #: ../../content/administration/on_premise/deploy.rst:98
 msgid "Allow tcp connection from 192.168.1.x network"
-msgstr "Permita la conexión tcp desde la red 192.168.1.x."
+msgstr "Permite la conexión tcp desde la red 192.168.1.x."
 
 #: ../../content/administration/on_premise/deploy.rst:100
 msgid "in ``/etc/postgresql/<YOUR POSTGRESQL VERSION>/main/pg_hba.conf`` set:"
@@ -6127,11 +6124,11 @@ msgid ""
 "cmdline/server/database>` when your Postgres deployment is not local and/or "
 "does not use the installation defaults."
 msgstr ""
-"Odoo se conecta a un servidor PostgreSQL local mediante un socket UNIX a "
-"través del puerto 5432 de forma predeterminada. Puede anular esto si "
-"usa :ref:`las opciones de la base de datos <reference/cmdline/server/"
-"database>` cuando el despliegue de PostgreSQL no es local o no usa la "
-"configuración de instalación predeterminada."
+"Odoo se conecta a un servidor local de PostgreSQL mediante un socket UNIX en "
+"el puerto 5432 de forma predeterminada. Puedes modificar esto con :ref:`las "
+"opciones de la base de datos <reference/cmdline/server/database>` si tu "
+"despliegue de PostgreSQL no es local o no usa la configuración de "
+"instalación predeterminada."
 
 #: ../../content/administration/on_premise/deploy.rst:126
 msgid ""
@@ -6181,11 +6178,11 @@ msgstr ""
 
 #: ../../content/administration/on_premise/deploy.rst:142
 msgid "the PostgreSQL user *must not* be a superuser"
-msgstr "El usuario de PostgreSQL **no debe** ser un superusuario. "
+msgstr "El usuario de PostgreSQL *no debe* ser un superusuario."
 
 #: ../../content/administration/on_premise/deploy.rst:147
 msgid "connect to a PostgreSQL server on 192.168.1.2"
-msgstr "Conéctese a un servidor PostgreSQL en 192.168.1.2."
+msgstr "Conéctate a un servidor de PostgreSQL en 192.168.1.2."
 
 #: ../../content/administration/on_premise/deploy.rst:148
 msgid "port 5432"
@@ -6215,10 +6212,10 @@ msgid ""
 "chosen out of 'disable', 'allow', 'prefer', 'require', 'verify-ca' or "
 "'verify-full'"
 msgstr ""
-"Desde Odoo 11.0 puede hacer uso de la conexión SSL entre Odoo y PostgreSQL. "
-"En Odoo, `db_sslmode` controla la seguridad SSL de la conexión con un valor "
-"que puede ser 'disable', 'allow', 'prefer', 'require', 'verify-ca' o 'verify-"
-"full'."
+"Desde Odoo 11.0 puedes utilizar la conexión SSL entre Odoo y PostgreSQL. En "
+"Odoo, db_sslmode controla la seguridad SSL de la conexión y puede tener uno "
+"de los siguientes valores: disable, allow, prefer, require, verify-ca o "
+"verify-full."
 
 #: ../../content/administration/on_premise/deploy.rst:175
 msgid ""
@@ -6336,8 +6333,9 @@ msgid ""
 "A heavy worker, when all computed field are well designed, SQL requests are "
 "well designed, ... is estimated to consume around 1GB of RAM"
 msgstr ""
-"Se estima que un worker pesado consume alrededor de 1 GB de RAM una vez que "
-"todos los campos calculados y las peticiones SQL están bien diseñadas, etc."
+"Se estima que un worker para solicitudes pesadas consume aproximadamente 1 "
+"GB de RAM, suponiendo que los campos calculados y las consultas SQL están "
+"bien diseñadas."
 
 #: ../../content/administration/on_premise/deploy.rst:220
 msgid ""
@@ -6403,7 +6401,7 @@ msgid ""
 "We'll use 8 workers + 1 for cron. We'll also use a monitoring system to "
 "measure cpu load, and check if it's between 7 and 7.5 ."
 msgstr ""
-"Usaremos 8 workers + 1 para el cron.  También usaremos un sistema de "
+"Usaremos 8 workers + 1 para el cron. También usaremos un sistema de "
 "monitoreo para medir la carga del CPU y verificar que se encuentre entre 7 y "
 "7.5."
 
@@ -6437,8 +6435,8 @@ msgid ""
 "Enable Odoo's :option:`proxy mode <odoo-bin --proxy-mode>`. This should only "
 "be enabled when Odoo is behind a reverse proxy"
 msgstr ""
-"Habilite el :option:`modo proxy <odoo-bin --proxy-mode>` de Odoo. Solo "
-"debería estar habilitado cuando Odoo se encuentre detrás de un proxy inverso."
+"Habilita el :option:`modo proxy <odoo-bin --proxy-mode>` de Odoo. Solo debe "
+"estar habilitado cuando Odoo se sitúa detrás de un proxy inverso."
 
 #: ../../content/administration/on_premise/deploy.rst:269
 msgid "Set up the SSL termination proxy (`Nginx termination example`_)"
@@ -6447,7 +6445,7 @@ msgstr ""
 
 #: ../../content/administration/on_premise/deploy.rst:270
 msgid "Set up the proxying itself (`Nginx proxying example`_)"
-msgstr "Configure el proxy (`ejemplo de Nginx del proxy`_)."
+msgstr "Configura el proxy (`ejemplo de proxy para Nginx`_)."
 
 #: ../../content/administration/on_premise/deploy.rst:271
 msgid ""
@@ -6532,9 +6530,9 @@ msgid ""
 "creation of workers anymore it can not setup cron or livechat workers"
 msgstr ""
 "Sin embargo, el servidor WSGI solo mostrará el punto de conexión HTTP "
-"principal para el cliente web, sitio web y servicio web API. Odoo ya no "
-"controla la creación de workers, así que ya no puede configurar el cron o "
-"los workers del chat en vivo."
+"principal para el cliente web, el sitio web y la API del servicio web API. "
+"Odoo ya no controla la creación de workers, así que ya no podrá configurar "
+"los workers del cron ni de Chat en vivo."
 
 #: ../../content/administration/on_premise/deploy.rst:400
 msgid "Cron Workers"
@@ -6563,10 +6561,10 @@ msgid ""
 "cli options."
 msgstr ""
 "En sistemas de tipo Linux es recomendable utilizar el servidor multiprocesos "
-"en lugar del multihilos para aprovechar mejor el hardware e incrementar la "
-"estabilidad, por ejemplo, use las opciones :option:`--workers=-1 <odoo-bin --"
-"workers>` y :option:`--max-cron-threads=n <odoo-bin --max-cron-threads>` de "
-"la línea de comandos.    "
+"en lugar del servidor multihilos para aprovechar mejor el hardware e "
+"incrementar la estabilidad. Para ello, puedes utilizar las opciones "
+":option:`--workers=-1 <odoo-bin --workers>` y :option:`--max-cron-threads=n "
+"<odoo-bin --max-cron-threads>` de la línea de comandos."
 
 #: ../../content/administration/on_premise/deploy.rst:415
 msgid ""
@@ -6839,11 +6837,10 @@ msgid ""
 "data contain default logins and passwords that can be used to get into your "
 "systems and cause significant trouble, even on staging/dev systems."
 msgstr ""
-"**No** instale los datos de demostración en servidores con acceso a "
-"internet. Las bases de datos con información de prueba incluyen usuarios "
-"predeterminados y contraseñas que se pueden usar para ingresar a sus "
-"sistemas. Esto puede causar muchos problemas, incluso en sistemas de "
-"preproducción o de desarrollo. "
+"**No** instales los datos de demostración en los servidores que tienen "
+"acceso por internet. Las bases con datos de demostración incluyen usuarios y "
+"contraseñas predeterminadas que pueden ser explotados para acceder a tu "
+"sistema y ocasionar problemas, incluso en entornos de prueba o desarrollo."
 
 #: ../../content/administration/on_premise/deploy.rst:574
 msgid ""
@@ -6895,9 +6892,9 @@ msgid ""
 "via GitHub or by downloading the latest version from https://www.odoo.com/"
 "page/download or http://nightly.odoo.com"
 msgstr ""
-"Mantenga las instalaciones actualizadas e instale con regularidad las "
-"versiones más recientes, ya sea a través de GitHub o descárguelas de https://"
-"www.odoo.com/page/download o http://nightly.odoo.com."
+"Mantén las instalaciones actualizadas. Instala las versiones más recientes "
+"con frecuencia, ya sea a través de GitHub o descárgalas de https://"
+"www.odoo.com/es/page/download o http://nightly.odoo.com."
 
 #: ../../content/administration/on_premise/deploy.rst:596
 msgid ""
@@ -7049,10 +7046,9 @@ msgid ""
 "hardening review of the server should be conducted and is outside of the "
 "scope of this guide."
 msgstr ""
-"Le recomendamos que despliegue Odoo en Linux y no en Windows. Sin embargo, "
-"si decide hacerlo en una plataforma de Windows, deberá realizar una revisión "
-"de seguridad exhaustiva del servidor. Ese proceso no está descrito en esta "
-"guía."
+"Te recomendamos que despliegues Odoo en Linux en lugar de Windows. Si "
+"decides usar Windows deberás hacer una revisión exhaustiva de seguridad en "
+"el servidor, pero no describimos ese proceso en esta guía."
 
 #: ../../content/administration/on_premise/deploy.rst:660
 msgid "Blocking Brute Force Attacks"
@@ -7177,10 +7173,11 @@ msgid ""
 "each request, otherwise users will be blocked as they won't be allowed to "
 "choose the database themselves."
 msgstr ""
-"Asegúrese de configurar el parámetro ``db_name`` apropiado (y también "
-"``dbfilter``, si así lo desea) para que el sistema pueda determinar la base "
-"de datos objetivo de cada solicitud. De lo contrario, se bloqueará a los "
-"usuarios, ya que no se les permitirá que elijan la base de datos."
+"Asegúrate de configurar el parámetro ``db_name`` correcto (y también "
+"``dbfilter`` en caso de que sea necesario) para que el sistema pueda "
+"determinar la base de datos de destino en cada solicitud; de lo contrario, "
+"los usuarios quedarán bloqueados porque no podrán elegir una base de datos "
+"por su cuenta."
 
 #: ../../content/administration/on_premise/deploy.rst:729
 msgid ""
@@ -7227,10 +7224,11 @@ msgid ""
 "administrators of an Odoo on-premise database detailing how to manually "
 "reset and re-encrypt the master password."
 msgstr ""
-"Pueden haber casos en los que la contraseña principal se pierde o ya no es "
-"segura y necesita cambiarse. El siguiente proceso es para administradores "
-"del sistema de una base de datos de Odoo local y se muestra cómo cambiar y "
-"volver a encriptar la contraseña principal de nuevo de forma manual."
+"Es posible que en algunos casos pierdas la contraseña maestra o se vea "
+"comprometida y sea necesario restablecerla. El siguiente proceso está "
+"dirigido a los administradores de sistemas con una base de datos de Odoo "
+"alojada de forma local y detalla cómo cambiar y volver a cifrarla "
+"manualmente."
 
 #: ../../content/administration/on_premise/deploy.rst:753
 msgid ""
@@ -7247,10 +7245,10 @@ msgid ""
 "password is implemented by default, so there is a secure master password for "
 "any Odoo on-premise deployment."
 msgstr ""
-"Al crear una base de datos local se generará una contraseña principal "
-"aleatoria, la cual Odoo recomienda usar para asegurar la base de datos. Esta "
-"contraseña se implementa de forma automática, así que hay una contraseña "
-"maestra segura para cada entorno de Odoo local."
+"Crear una nueva base de datos local genera una contraseña maestra aleatoria "
+"y Odoo recomienda usarla para proteger la base de datos. Esta contraseña se "
+"implementa de forma predeterminada, por lo que todas las implementaciones "
+"locales de Odoo cuentan con una contraseña maestra segura."
 
 #: ../../content/administration/on_premise/deploy.rst:761
 msgid ""
@@ -7414,9 +7412,9 @@ msgid ""
 "edit the configuration file. To modify the configuration file, enter the "
 "following command: :command:`sudo nano /etc/odoo.conf`"
 msgstr ""
-"Conéctese a la terminal del servidor de Odoo a través del protocolo Secure "
-"Shell (SSH) y edite el archivo de configuración. Para modificar el archivo "
-"de configuración use el comando :command:`sudo nano /etc/odoo.conf`."
+"Conéctate a la terminal del servidor de Odoo mediante el protocolo Secure "
+"Shell (SSH) y edita el archivo de configuración. Para modificarlo, ingresa "
+"el siguiente comando: :command:`sudo nano /etc/odoo.conf`"
 
 #: ../../content/administration/on_premise/deploy.rst:820
 msgid ""
@@ -7425,11 +7423,11 @@ msgid ""
 "password can be anything, as long as it is saved temporarily. Make sure to "
 "modify all characters after the `=`."
 msgstr ""
-"Luego de abrir el archivo de configuración, modifique la línea de la "
+"Luego de abrir el archivo de configuración, modifica la línea de la "
 "contraseña maestra `admin_passwd = $pbkdf2-sha…` a `admin_passwd = "
-"newpassword1234`. Elija la contraseña que desee, siempre y cuando la "
-"almacene de forma temporal. Asegúrese de modificar todos los caracteres "
-"después del `=`."
+"newpassword1234`. La contraseña puede ser cualquiera, siempre que la guardes "
+"de forma temporal. Asegúrate de modificar todos los caracteres después de "
+"`=`."
 
 #: ../../content/administration/on_premise/deploy.rst:832
 msgid ""
@@ -7742,8 +7740,8 @@ msgid ""
 "Edit a web page to include some geo-ip information such as the country name "
 "of the current request IP address. To do so:"
 msgstr ""
-"Edite una página web para incluir alguna información geo-ip, como el nombre "
-"del país de la dirección IP de la solicitud actual. Para ello"
+"Edita una página web para incluir información geo-ip, como el nombre del "
+"país de la dirección IP de la solicitud actual. Para ello:"
 
 #: ../../content/administration/on_premise/geo_ip.rst:44
 msgid "Go to your website. Open the web page that you want to test ``GeoIP``."
@@ -7904,11 +7902,12 @@ msgid ""
 "the `wkhtmltopdf wiki <https://github.com/odoo/odoo/wiki/Wkhtmltopdf>`_ for "
 "more details on the various versions."
 msgstr ""
-"`wkhtmltopdf` no está instalado mediante **pip** y debe instalarse de forma "
+"`wkhtmltopdf` no está instalado mediante **pip** y debes instalarlo de forma "
 "manual en la `versión 0.12.6 <https://github.com/wkhtmltopdf/packaging/"
 "releases/tag/0.12.6.1-3>`_ para que sea compatible con los encabezados y "
-"pies de páginas. Consulte esta `wiki <https://github.com/odoo/odoo/wiki/"
-"Wkhtmltopdf>`_ para obtener más detalles sobre las diferentes versiones."
+"pies de páginas. Consulta la `wiki de wkhtmltopdf <https://github.com/odoo/"
+"odoo/wiki/Wkhtmltopdf>`_ para obtener más detalles sobre las diferentes "
+"versiones."
 
 #: ../../content/administration/on_premise/packages.rst:63
 msgid "Repository"
@@ -7963,9 +7962,9 @@ msgid ""
 "as a service, create the necessary PostgreSQL user, and automatically start "
 "the server:"
 msgstr ""
-"Ya que lo haya descargado, ejecute los siguientes comandos **como root** "
-"para instalar Odoo como un servicio, cree el usuario PostgreSQL necesario e "
-"inicie el servidor de manera automática."
+"Una vez que hayas descargado los paquetes, ejecuta los siguientes comandos **"
+"como root** para instalar Odoo como servicio, crear el usuario necesario de "
+"PostgreSQL e iniciar el servidor de manera automática:"
 
 #: ../../content/administration/on_premise/packages.rst:117
 msgid ""
@@ -7983,10 +7982,10 @@ msgid ""
 "exist in Debian Buster nor Ubuntu 18.04, which could cause problems with the "
 "`l10n_mx_edi` module. If needed, install it manually with the following:"
 msgstr ""
-"El paquete Python `num2words`  es necesario para renderizar cantidades "
-"textuales, sin embargo, no existe en Debian Buster ni en Ubuntu 18.04, lo "
-"cual puede causar problemas con el módulo `l10n_mx_edi`. Si lo necesita, "
-"instálelo de manera manual con esto:"
+"El paquete `num2words` para Python es necesario para mostrar cantidades en "
+"texto y no existe en Debian Buster ni en Ubuntu 18.04, lo que podría "
+"ocasionar problemas con el módulo `l10n_mx_edi`. Si lo necesitas, instálalo "
+"de forma manual con el siguiente comando:"
 
 #: ../../content/administration/on_premise/packages.rst:135
 msgid "Odoo 17 'rpm' package supports Fedora 38."
@@ -8007,11 +8006,10 @@ msgid ""
 "a number of limitations and risks associated with deploying Odoo on a "
 "Windows platform."
 msgstr ""
-"El paquete de Windows está disponible para propósitos de prueba o para "
-"utilizarse en instancias de un solo usuario local, pero no se recomienda su "
-"uso para la implementación de producción puesto que existen varias "
-"limitaciones y riesgos asociados con el despliegue de Odoo en una plataforma "
-"de Windows.  "
+"El paquete para Windows sirve para realizar pruebas o ejecutar instancias "
+"locales de un solo usuario, pero no se recomienda su uso en producción "
+"debido a varias limitaciones y riesgos asociados con el despliegue de Odoo "
+"en Windows."
 
 #: ../../content/administration/on_premise/packages.rst:155
 msgid ""
@@ -8080,10 +8078,10 @@ msgid ""
 "settings using :ref:`command-line parameters <reference/cmdline>` without "
 "needing to edit a configuration file."
 msgstr ""
-"También hace que el iniciar y detener Odoo sea más flexible y explícito que "
-"los servicios que las instalaciones en paquete configuraron. También permite "
-"sobreescribir los ajustes usando  :ref:`parámetros de líneas de "
-"comando<reference/cmdline>` sin tener que editar el archivo de configuración."
+"También hace que iniciar y detener Odoo sea más flexible y explícito que con "
+"los servicios configurados por las instalaciones en paquete. También permite "
+"sobrescribir los ajustes mediante :ref:`parámetros de la línea de comandos <"
+"reference/cmdline>` sin tener que editar el archivo de configuración."
 
 #: ../../content/administration/on_premise/source.rst:15
 msgid ""
@@ -8155,11 +8153,10 @@ msgid ""
 "source code or when following the :doc:`Getting Started developer tutorial </"
 "developer/tutorials/server_framework_101>`."
 msgstr ""
-"Para clonar un repositorio de Git, elija entre clonar con HTTPS o con SSH. "
-"La mejor opción es HTTPS en la mayoría de los casos, pero debe elegir SSH si "
-"desea contribuir al código fuente de Odoo o cuando empiece con "
-"el :doc:`Tutorial de inicio para desarrolladores </developer/tutorials/"
-"server_framework_101>`."
+"Para clonar un repositorio de Git, elige si hacerlo con HTTPS o con SSH. La "
+"mejor opción es HTTPS en la mayoría de los casos, pero debes usar SSH si "
+"quieres contribuir al código fuente de Odoo o cuando si utilizas el :doc:`"
+"tutorial para desarrolladores </developer/tutorials/server_framework_101>`."
 
 #: ../../content/administration/on_premise/source.rst:56
 #: ../../content/administration/on_premise/source.rst:74
@@ -8406,8 +8403,8 @@ msgid ""
 "Using pip may lead to security issues and broken dependencies; only do this "
 "if you know what you are doing."
 msgstr ""
-"El uso de pip podría ocasionar errores de seguridad y dependencias "
-"incumplidas. Solo haga esto si conoce el procedimiento con exactitud. "
+"Usar pip puede ocasionar problemas de seguridad y dependencias rotas; hazlo "
+"solo si conoces el procedimiento con exactitud."
 
 #: ../../content/administration/on_premise/source.rst:296
 msgid ""
@@ -8468,9 +8465,9 @@ msgid ""
 "(:file:`CommunityPath`) and run **pip** on the requirements file to install "
 "the requirements for the current user."
 msgstr ""
-"Navegue a la ruta de su instalación de Odoo Community "
-"(:file:`CommunityPath`) y ejecute **pip** en el archivo de requerimientos "
-"para instalar los requerimientos para el usuario actual"
+"Ve a la ruta de la instalación de Odoo Community (:file:`CommunityPath`) y "
+"ejecuta **pip** en el archivo de requerimientos para instalar las "
+"dependencias para el usuario actual."
 
 #: ../../content/administration/on_premise/source.rst:330
 msgid ""
@@ -8640,7 +8637,7 @@ msgid ""
 msgstr ""
 "Donde `CommunityPath` es la ruta de la instalación de Odoo Community, "
 "`dbuser` es el inicio de sesión de PostgreSQL, `dbpassword` es la contraseña "
-"de PostgreSQL y `mydb` es la base de datos de  PostgreSQL."
+"de PostgreSQL y `mydb` es el nombre de la base de datos de PostgreSQL."
 
 #: ../../content/administration/on_premise/source.rst:481
 msgid ""
@@ -8674,8 +8671,7 @@ msgstr ""
 #: ../../content/administration/on_premise/source.rst:491
 msgid ""
 ":doc:`The list of CLI arguments for odoo-bin </developer/reference/cli>`"
-msgstr ""
-":doc:`La lista de argumentos CLI para odoo-bin </developer/reference/cli>`."
+msgstr ":doc:`Lista de argumentos CLI para odoo-bin </developer/reference/cli>`"
 
 #: ../../content/administration/on_premise/update.rst:6
 msgid "Bugfix updates"
@@ -8859,10 +8855,10 @@ msgid ""
 "on your installation, and to store it somewhere safe, on a different "
 "computer."
 msgstr ""
-"El procedimiento de actualización es seguro y no debería alterar sus datos. "
-"Sin embargo, recomendamos que haga una copia de seguridad de toda su base de "
-"datos antes de realizar cualquier cambio en su instalación. Almacénela en un "
-"lugar seguro, en una computadora distinta."
+"El procedimiento de actualización es bastante seguro y no debería alterar "
+"tus datos. Sin embargo, siempre es mejor que hagas una copia de seguridad "
+"completa de la base de datos antes de realizar cualquier cambio en tu "
+"instalación y la guardes en un lugar seguro, en otra computadora."
 
 #: ../../content/administration/on_premise/update.rst:83
 msgid ""
@@ -9309,9 +9305,9 @@ msgid ""
 "mandatory upgrade will be automatically carried out. You are in control of "
 "the process as long as the deadline is not reached."
 msgstr ""
-"Recibirá una notificación en su base de datos unas semanas antes de que la "
-"actualización obligatoria ocurra de manera automática. Usted tiene el "
-"control del proceso siempre y cuando  no haya llegado a la fecha límite."
+"Recibirás una notificación en tu base de datos unas semanas antes de que "
+"ocurra la actualización obligatoria de forma automática. Tú tienes el "
+"control del proceso mientras no haya llegado la fecha límite."
 
 #: ../../content/administration/upgrade.rst:0
 msgid "The upgrade message prompt on the top right of the database"
@@ -9483,11 +9479,11 @@ msgid ""
 "<https://www.odoo.sh/project>`_."
 msgstr ""
 "La `página de actualización <https://upgrade.odoo.com>`_ es la plataforma "
-"principal para solicitar una base de datos actualizada. Según el tipo de "
-"alojamiento que use podrá realizar la actualización desde la línea de "
-"comandos (local), el `gestor de bases de datos <https://www.odoo.com/my/"
-"databases>`_ de Odoo en línea o su `proyecto de Odoo.sh <https://www.odoo.sh/"
-"project>`_."
+"principal para solicitar una base de datos actualizada. El tipo de "
+"alojamiento que utilices determinará la manera en la que puedes realizar la "
+"actualización, por ejemplo, desde la línea de comandos (local), el `gestor "
+"de bases de datos <https://www.odoo.com/my/databases>`_ de Odoo en línea o "
+"tu `proyecto de Odoo.sh <https://www.odoo.sh/project>`_."
 
 #: ../../content/administration/upgrade.rst:103
 msgid ""
@@ -9515,10 +9511,10 @@ msgid ""
 "account. Databases not on the most recent version of Odoo display an arrow "
 "in a circle icon next to their name, indicating that they can be upgraded."
 msgstr ""
-"El administrador de la base de datos muestra todas las bases de datos "
-"vinculadas a la cuenta del usuario. Las bases de datos que no están en la "
-"versión más reciente de Odoo muestran un ícono de una flecha en un círculo "
-"junto a su nombre, indicando que se pueden actualizar."
+"El gestor de bases de datos muestra todas las bases de datos asociadas con "
+"la cuenta del usuario. Las bases de datos que no están en la versión más "
+"reciente de Odoo muestran un icono con una flecha dentro de un círculo junto "
+"a su nombre para indicar que se pueden actualizar."
 
 #: ../../content/administration/upgrade.rst:0
 msgid ""
@@ -9649,9 +9645,8 @@ msgid ""
 "The standard upgrade process can be initiated by entering the following "
 "command line on the machine where the database is hosted:"
 msgstr ""
-"Puede iniciar el proceso de actualización estándar al escribir el siguiente "
-"comando en la línea de comandos de la máquina donde se encuentra alojada la "
-"base de datos."
+"Puedes iniciar el proceso de actualización estándar al escribir el siguiente "
+"comando en la línea de comandos de la máquina que aloja la base de datos:"
 
 #: ../../content/administration/upgrade.rst:173
 msgid "This command has some requirements on the environment it runs in:"
@@ -9737,9 +9732,9 @@ msgid ""
 "the upgrade server. Therefore, the upgraded database does not contain the "
 "production filestore."
 msgstr ""
-"Por motivos de almacenaje, debe subir la copia de su base de datos sin un "
-"repositorio de archivos al servidor de actualización. Por lo tanto, la base "
-"de datos actualizada no contiene el repositorio de archivos de producción. "
+"Por motivos de almacenamiento, la copia de la base de datos se envía al "
+"servidor de actualización sin el repositorio de archivos. Por lo tanto, la "
+"base de datos actualizada no contiene el repositorio de producción."
 
 #: ../../content/administration/upgrade.rst:205
 msgid ""
@@ -9747,9 +9742,9 @@ msgid ""
 "the production filestore to be able to perform tests in the same conditions "
 "as it would be in the new version."
 msgstr ""
-"Antes de restaurar la base de datos actualizada, su repositorio de archivos "
-"debe estar unido a al repositorio de archivos de producción para que pueda "
-"realizar las pruebas bajo las mismas condiciones que la nueva versión. "
+"Antes de restaurar la base de datos actualizada, su almacenamiento de "
+"archivos debe combinarse con el de producción para poder realizar las "
+"pruebas en las mismas condiciones que en la nueva versión."
 
 #: ../../content/administration/upgrade.rst:208
 msgid "The upgraded database contains:"
@@ -9845,9 +9840,9 @@ msgid ""
 "synchronization, contact your bank synchronization provider to get sandbox "
 "credentials."
 msgstr ""
-"La sincronización bancaria se deshabilita. En caso de que desee probarla, "
-"póngase en contacto con su proveedor de sincronización bancaria para que le "
-"proporcione las credenciales del entorno de prueba. "
+"La sincronización bancaria se desactiva. Si quieres probarla, contacta a tu "
+"proveedor de sincronización bancaria para que te proporcione las "
+"credenciales del entorno de prueba."
 
 #: ../../content/administration/upgrade.rst:245
 msgid ""
@@ -10065,7 +10060,7 @@ msgid ""
 "Server actions in the action menu on form views, as well as by selecting "
 "multiple records on list views"
 msgstr ""
-"Acciones del servidor en el menú de acción desde las vistas de formulario, "
+"Acciones del servidor en el menú de acciones de las vistas de formulario, "
 "así como al seleccionar varios registros en las vistas de lista."
 
 #: ../../content/administration/upgrade.rst:312
@@ -10195,11 +10190,10 @@ msgid ""
 "update. In case of success, a backup of the database before the upgrade is "
 "created."
 msgstr ""
-"La base de datos no está disponible durante todo el proceso. Si ocurre algún "
-"error, la plataforma revierte la actualización de forma automática, como si "
-"se tratara de una actualización regular. En caso de que el proceso sea "
-"exitoso, se crea una copia de seguridad de la base de datos antes de la "
-"actualización."
+"La base de datos no estará disponible durante el proceso. Si ocurre algún "
+"error, la plataforma revierte la actualización de forma automática, igual "
+"que en una actualización regular. En caso de que el proceso sea exitoso, se "
+"crea una copia de seguridad de la base de datos previa a la actualización."
 
 #: ../../content/administration/upgrade.rst:366
 msgid ""
@@ -10278,9 +10272,9 @@ msgid ""
 "Odoo is **free**, including any support required to rectify potential "
 "discrepancies in the upgraded database."
 msgstr ""
-"Con Odoo Enterprise, actualizar la base de datos a la versión más reciente "
-"es **gratis** e incluye cualquier tipo de soporte requerido para rectificar "
-"posibles discrepancias en la base de datos actualizada. "
+"Con Odoo Enterprise, actualizar una base de datos a la versión más reciente "
+"de Odoo es **gratis** e incluye cualquier tipo de soporte necesario para "
+"corregir posibles discrepancias en la base de datos actualizada."
 
 #: ../../content/administration/upgrade.rst:404
 msgid ""
@@ -10288,10 +10282,10 @@ msgid ""
 "available in the :ref:`Odoo Enterprise Subscription Agreement <upgrade>`. "
 "However, this section clarifies what upgrade services you can expect."
 msgstr ""
-"Tiene disponible información acerca de los servicios de actualización que "
-"incluye la Licencia Enterprise en el  :ref:`Acuerdo de Suscripción de Odoo "
+"La información sobre los servicios de actualización incluidos en la licencia "
+"Enterprise está disponible en el :ref:`contrato de suscripción de Odoo "
 "Enterprise <upgrade>`. Sin embargo, esta sección aclara qué servicios de "
-"actualización puede esperar."
+"actualización puedes esperar."
 
 #: ../../content/administration/upgrade.rst:411
 msgid "Upgrade services covered by the SLA"
@@ -10303,8 +10297,8 @@ msgid ""
 "hosted (On-Premise) can benefit from upgrade services at all times for:"
 msgstr ""
 "Las bases de datos alojadas en las plataformas en la nube de Odoo (Odoo en "
-"línea y Odoo.sh) o que se alojan a si mismas (Local) se pueden beneficiar de "
-"los servicios de actualización en todo momento para: "
+"línea y Odoo.sh) o en servidores propios (local, también \"On premise\") "
+"pueden aprovechar los servicios de actualización en todo momento para:"
 
 #: ../../content/administration/upgrade.rst:416
 msgid "the upgrade of all **standard applications**;"
@@ -10316,9 +10310,9 @@ msgid ""
 "as Studio is still installed and the respective subscription is still "
 "active; and"
 msgstr ""
-"actualizar todas las **personalizaciones creadas con la aplicación Studio**, "
-"siempre y cuando Studio siga instalado y la suscripción correspondiente siga "
-"activa; y "
+"Actualizar todas las **personalizaciones creadas con la aplicación Studio**, "
+"siempre y cuando Studio siga instalada y la suscripción correspondiente siga "
+"activa."
 
 #: ../../content/administration/upgrade.rst:419
 msgid ""
@@ -10334,9 +10328,9 @@ msgid ""
 "database (standard modules and data) to make it compatible with the version "
 "targeted by the upgrade."
 msgstr ""
-"Los servicios de actualización se limitan a una conversión técnica y la "
-"adaptación de una base de datos (módulos estándar y datos) para hacerlos "
-"compatibles con la versión objetivo de la actualización. "
+"Los servicios de actualización se limitan a la conversión técnica y "
+"adaptación de una base de datos (módulos estándar y datos) para hacerla "
+"compatible con la versión objetivo de la actualización."
 
 #: ../../content/administration/upgrade.rst:428
 msgid "Upgrade services not covered by the SLA"
@@ -10345,14 +10339,15 @@ msgstr "Servicios de actualización que no cubre el SLA"
 #: ../../content/administration/upgrade.rst:430
 msgid "The following upgrade-related services are **not** included:"
 msgstr ""
-"Los siguientes servicios relacionados con la actualización **no** incluyen: "
+"Los siguientes servicios relacionados con la actualización **no** están "
+"incluidos:"
 
 #: ../../content/administration/upgrade.rst:432
 msgid ""
 "the **cleaning** of pre-existing data and configurations while upgrading;"
 msgstr ""
-"la **limpieza** de datos y configuraciones pre-existentes al momento de "
-"actualizar; "
+"**Limpieza** de datos y configuraciones preexistentes al momento de "
+"actualizar."
 
 #: ../../content/administration/upgrade.rst:433
 msgid ""
@@ -10366,8 +10361,8 @@ msgstr ""
 #: ../../content/administration/upgrade.rst:435
 msgid "**training** on using the upgraded version's features and workflows."
 msgstr ""
-"**capacitación** para usar las funciones de la versión actualizada y flujos "
-"de trabajo. "
+"**Capacitación** para usar las funciones y flujos de trabajo de la versión "
+"actualizada."
 
 #: ../../content/administration/upgrade.rst:438
 msgid ":doc:`Odoo.sh documentation <odoo_sh>`"
