@@ -210,34 +210,81 @@ taxes. If new taxes are created, these fields must be set. To do so, go to
 Odoo supports four groups of :guilabel:`SAT Tax Types`: :guilabel:`IVA`, :guilabel:`ISR`,
 :guilabel:`IEPS`, and :guilabel:`Local Taxes`.
 
+If the factor type is **Quota** then the tax calculation computation should be set as 
+**Custom Formula**.
+
+.. example::
+   In order to input the calculation for quotas, the tax should have the 
+   :guilabel:`format:`: `result = quantity * 6.455`
+   Where only quotas that are tied to the quantity can be used, as for the number, it should
+   be the value of the quota.
+
 .. tip::
    Mexico manages two different kinds of 0% VAT to accommodate two scenarios:
 
    - For *0% VAT*, set the :guilabel:`Factor Type` as :guilabel:`Tasa`
    - For *VAT Exempt*, set the :guilabel:`Factor Type` as :guilabel:`Exento`
 
+.. note::
+   Local taxes are generated in a separate node in the |XML| file, these do not get validated
+   by the |PAC|.
+
 .. _l10n/mx/tax-object:
+
 
 Tax object
 ~~~~~~~~~~
 
 One requirement of the CFDI 4.0 is that the resulting XML file handles the breakdown of taxes of the
-operation in accordance with the regulation. There are three different possible values that are
+operation in accordance with the regulation. There are eight different possible values that are
 added in the XML file:
 
-- `01`: Not subject to tax: This value is added automatically if the invoice line doesn't contain
+- `01`: No tax Object: This value is added automatically if the invoice line doesn't contain
   any taxes.
-- `02`: Subject to tax: This is the default configuration of any invoice line that contains taxes.
-- `03`: Subject to tax and not forced to break down: This value can be triggered on demand for
-  certain customers to replace the value `02`.
+- `02`: Tax Object: This is the default configuration of any invoice line that contains taxes.
+- `03`: Tax Object and doesn't require breakdown: This can only be added manually.
+- `04`: Tax Object and doesn't have tax: This can only be added manually.
+- `05`: Tax Object, VAT for PODEBI: This can only be added manually.
+- `06`: VAT Object, No VAT forwarded: This object will be selected when there is an ISR withholding and
+  no VAT tax.
+- `07`: No VAT forwarded, IEPS breakdown: This object will be selected when there is an ISR withholding,
+  IEPS tax and no VAT tax.
+- `08`: No VAT forwarded, IEPS breakdown: This object can only be added manually.
 
-To use the `03` value for a contact, navigate to the contact's :guilabel:`Sales & Purchase` tab, and
-activate the :guilabel:`No Tax Breakdown` checkbox under the :guilabel:`Fiscal Information` section.
+.. warning::
+   Using either 01, 03, 04 or 05 will remove the tax node from the XML.
 
 .. important::
-   The :guilabel:`No Tax Breakdown` value applies **only** to specific fiscal regimes and/or taxes.
-   Consult your accountant first to see if it is needed for your business before making any
-   modification.
+   The :guilabel:`IEPS breakdown` status affects the behavior of the tax objects due to the missing IEPS
+   when the breakdown does not happen.
+
+.. _l10n/mx/local-taxes:
+
+Local Taxes
+~~~~~~~~~~~
+
+Local Taxes such as *ISH*, *Cedullar* and others require their own node in the XML file and do not
+necesarilly follow regular taxes's logic.
+
+When configuring a local tax, the name of the tax will be used in the local tax complement and the rate
+will be either be carried forward or will be a withholding depending if the number is positive or negative.
+
+
+.. _l10n/mx/ieps-breakdown:
+
+IEPS Breakdown
+~~~~~~~~~~~~~~
+
+By default Odoo hides the IEPS in the invoices so that the subtotal on which the VAT is calculated includes
+the amount of IEPS, this is to ensure that Fiscal Regimes that don't require it, don't recieve it.
+
+It is possible to make the IEPS visible in the XML by selecting the :guilabel:`IEPS Breakdown` checkbox
+inside each contact on the :guilabel:`Sales & Purchase` tab.
+
+.. important::
+   When using either :doc:`eCommerce invoicing <../../mx/ecommerce> or the :doc:`Self invoicing portal 
+   <../../mx/pos/portal>`, the customer will have the option to decide whether or not to have the 
+   IEPS breakdown.
 
 .. _l10n/mx/tax-config:
 
@@ -252,6 +299,27 @@ Impuestos en Base a Flujo de Efectivo`) in the journal entry when reclassifying 
 delete this account**.
 
 .. _l10n/mx/products:
+
+Withholdings
+------------
+
+By default Odoo includes withholdings with special distributions to distribute the VAT that is
+accounted for.
+
+When registering an invoice, the withholdings have to be added with their corresponding VAT, for
+example the 10.67% WH that corresponds to lease actually corresponds to 16% VAT 2/3 H which means
+that both must be on a lease vendor bill to ensure correct accounting. It is recommended to use
+fiscal positions.
+The reason for using both taxes is that the cash basis entry generated will properly split the
+distribution.
+
+Here is an example using both mentioned taxes and an amount of 10000 MXN:
+
+.. image:: mexico/mx-withholdings-cash-basis.png
+   :alt: Cash Basis entry with VAT split between paid and due.
+
+.. note::
+   Withholdings |CFDI| is not currently supported. Consult with an accountant the proper distribution.
 
 Products
 --------
@@ -408,18 +476,25 @@ there are two types of payments:
 The difference lies in the :guilabel:`Due Date` or
 :doc:`../accounting/customer_invoices/payment_terms` of the invoice.
 
-To configure |PUE| invoices, navigate to :menuselection:`Accounting --> Customers --> Invoices`,
-and either select an invoice :guilabel:`Due Date` within the same month, or choose
-:guilabel:`Payment terms` that do not imply changing the due month (i.e., :guilabel:`Immediate
+The payment policy is a selectable field on the invoice and can be manually set to the
+required policy, however if no policy is selected, Odoo will compute an automatic policy based
+on the following general rules:
+
+The value will be set to |PUE| if the due date in which the payment is expected is withing the
+current month, in case the date is outside the current month, the policy will be set to |PPD|
+instead.
+
+
+To make sure that payment terms don't cause unwanted policies navigate to :menuselection:`Accounting
+--> Customers --> Invoices`, and either select an invoice :guilabel:`Due Date` within the same month,
+or choose :guilabel:`Payment terms` that do not imply changing the due month (i.e., :guilabel:`Immediate
 Payment`, or :guilabel:`15 Days` or :guilabel:`21 Days`, as long as they fall within the current
 month).
 
 .. image:: mexico/mx-pue-payment.png
    :alt: Example of an invoice with the PUE requirements.
 
-To configure |PPD| invoices, navigate to :menuselection:`Accounting --> Customers --> Invoices`, and
-select an invoice with a :guilabel:`Due Date` after the first day of the following month. This also
-applies if your :guilabel:`Payment Term` is due in the following month.
+If the invoice has a due date outside the current month, it will default to |PPD|.
 
 .. image:: mexico/mx-ppd-payment.png
    :alt: Example of an invoice with the PPD requirements.
@@ -470,7 +545,14 @@ both the invoice and the payment.
 
 Similar to an invoice or credit note, the PDF and XML can be sent to the final customer. To do so,
 click the :icon:`fa-cog` :guilabel:`(gear)` icon to open the actions drop-down menu and select
-:guilabel:`Send receipt by email`.
+:guilabel:`Send receipt by email` from the payment view.
+
+Regardless of whether the payment was created with or without reconciliation, it is possible to
+download the payment PDF from the :guilabel:`CFDI` tab on the invoice by clicking the :guilabel:`print`
+button.
+
+.. image:: mexico/mx-print-payment.png
+   :alt: Example of the print button on the CFDI tab.
 
 .. _l10n/mx/invoice-cancellations:
 
@@ -484,6 +566,9 @@ there are two requirements for this:
 - All cancellation requests require a *cancellation reason*.
 - After 24 hours from the invoice creation, the client must be asked to approve the cancellation. If
   there is no response within 72 hours, the cancellation is processed automatically.
+
+Invoice cancellations are updated automatically on Odoo but can take some time, to check the status
+of the cancellation just press the :guilabel:`Update SAT` button.
 
 Invoice cancellations can be made for one of the following reasons:
 
@@ -588,8 +673,9 @@ Like with invoices, go to the payment and click :guilabel:`Update SAT` in order 
 :guilabel:`SAT Status` and :guilabel:`Status` to :guilabel:`Cancelled`.
 
 .. note::
-   Just like invoices, when creating a new payment complement, you can add the relation of the
-   original document, by adding a `04|` plus the fiscal folio in the :guilabel:`CFDI Origin` field.
+   Just like invoices, when creating a new payment complement, it is possible to add the relation 
+   of the original document, by adding a `04|` plus the fiscal folio in the :guilabel:`CFDI Origin`
+   field.
    This action cancels the invoice and marks the :guilabel:`Reason` as :guilabel:`01 - Invoice
    issued with errors (with related document)`.
 
@@ -753,8 +839,8 @@ This can be done for :guilabel:`Vendor Bills` too.
 
 .. tip::
 
-   To retrieve the :guilabel:`Fiscal Folio`, drag and drop XML files for already created draft
-   invoices.
+   To retrieve the :guilabel:`Fiscal Folio`, drag and drop XML files as a log note in the chatter for
+   previously created draft invoices.
 
 .. _l10n/mx/cfdi:
 
@@ -777,14 +863,14 @@ final XML will override the data in the invoice contact and will add the followi
 .. image:: mexico/mx-cfdi-to-public.png
    :alt: CFDI to Public Checkbox
 
-.. important::
-   If your contact :guilabel:`Country` is empty, the final invoice is considered as a *CFDI to
-   Public* for national customers. A non-blocking warning will be displayed before signing the
-   document.
-
 If the final customer doesn't share any details, create a generic :guilabel:`Customer`. The name
 cannot be `PUBLICO EN GENERAL` or an error will be triggered (it can be, for example, `CLIENTE
 FINAL`).
+
+.. warning::
+   By default sending the invoice is not allowed if the partner does not have either the `Country`
+   or `Zip code`set, however this is not required if the :guilabel:`CFDI to public` checkbox 
+   is active.
 
 .. seealso::
    `Regla 2.7.1.21 Expedición de comprobantes en operaciones con el público en general.
@@ -990,13 +1076,13 @@ vendor bills are provided to the |SAT|.
 .. note::
    Since July 2025 the new 2025 version of the report is available.
 
-Unlike other reports, the |DIOT| is uploaded to a software provided by the |SAT| that contains the
+Unlike other reports, the |DIOT| is uploaded to a website provided by the |SAT| that contains the
 A-29 form. In Odoo, you can download the records of your transactions as a TXT file that can be
 uploaded to the form, avoiding direct capture of this data.
 
 The transactions file contains the total amount of your payments registered in vendor bills, broken
-down into the corresponding types of IVA. The :guilabel:`VAT` and :guilabel:`Country` is mandatory
-for all vendors.
+down into the corresponding types of IVA. The :guilabel:`VAT`, :guilabel:`Country` and
+:guilabel:`Type of operation`fields are mandatory for all vendors.
 
 To download the |DIOT| report as a TXT file, go to :menuselection:`Accounting --> Reports --> Tax
 Return`. Select the desired month, click :icon:`fa-cog` :guilabel:`(action menu)`, and select
@@ -1044,6 +1130,7 @@ type A1. While the current CFDI is 4.0, the external trade is currently on versi
 .. important::
    Before installing, make sure your business needs to use this feature. Consult your accountant
    first, if needed, before installing any modules.
+   The :guilabel:`CFDI to public` checkbox must be ticked when creating foreign invoices.
 
 Configuration
 ~~~~~~~~~~~~~
@@ -1238,7 +1325,7 @@ The eCommerce adaptation of the Mexican Localization provides and extra step to 
 comply with the |SAT| requirements on :doc:`eCommerce  <../../websites/ecommerce>` by retrieving
 the customer data after the **Checkout** and even allowing for the signature of **automatic
 invoices** after the payment is processed, as well as sending customers the files via email and
-granting them access to retrieve their PDF & XML files from their own customer portal.
+granting them access to retrieve their PDF file from their own customer portal.
 
 .. _l10n/mx/ecommerce/flow:
 
@@ -1249,13 +1336,15 @@ During the regular checkout process, a new :guilabel:`Invoicing Info` step appea
 possible to request an invoice or not. If :guilabel:`No` is selected, a **CFDI to Public** is
 created,. If :guilabel:`Yes` is selected, the :guilabel:`RFC`, :guilabel:`Fiscal Regime`,
 and :guilabel:`Usage` are required in order to get all information in the sales order, where its
-status will change to :guilabel:`To Invoice`.
+status will change to :guilabel:`To Invoice`. 
+Additionally the customer can decide whether or not to request :doc:`IEPS Breakdown 
+<../../mx/ieps-breakdown>`.
 
 .. important::
    Make sure to add a :guilabel:`UNSPSC code` to the :ref:`shipping product
    <ecommerce/checkout/delivery>`.
 
-If you enable the :guilabel:`Automatic Invoicing` in :menuselection:`Settings --> Website -->
+If the :guilabel:`Automatic Invoicing` is enabled in :menuselection:`Settings --> Website -->
 Invoicing`, the electronic document will be signed automatically.
 
 .. _l10n/mx/subscriptions:
@@ -1266,6 +1355,10 @@ Subscriptions
 While handling subscriptions, all the sales fields are used to create the recurrent invoices. These
 are automatically signed and sent via email with the PDF and XML attached with no additional manual
 actions required.
+
+.. important::
+   All invoices generated by the subscription app will always be automatically signed with no
+   exceptions.
 
 .. _l10n/mx/inventory:
 
@@ -1377,6 +1470,15 @@ unlike other documents, is created in a delivery order instead of an invoice or 
 Odoo can create XML and PDF files with (or without) ground transport, and can process materials that
 are treated as *Dangerous Hazards*.
 
+In order to print the PDF, the delivery order must be signed by the government and then it can
+be printed using the :guilabel:`Print Carta Porte`button on the delivery order.
+
+The PDF file contains a QR code to verify the CCP code for the authorities.
+
+In order to transport goods between warehouses, the logistic route must contain a **Delivery** type
+of operation, see :doc:`Inter-warehouse replenishment 
+<../../inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses>`
+
 .. note::
    In order to use this feature, the :guilabel:`Mexico - Electronic Delivery Guide`
    `l10n_mx_edi_stock` module must be installed.
@@ -1385,7 +1487,8 @@ are treated as *Dangerous Hazards*.
    and :doc:`Sales <../../sales/sales>` apps installed.
 
 .. important::
-   Odoo does not support Carta Porte type document type "I" (Ingreso), air, or marine transport.
+   Odoo does not support Carta Porte type document type "I" (Ingreso), air, train or marine 
+   transport.
    Consult your accountant first if this feature is needed before doing any modifications.
 
 Configuration
@@ -1530,4 +1633,4 @@ Type` is :guilabel:`Pedimento`, two new fields appear: :guilabel:`Pedimento Numb
 
 .. tip::
    The field :guilabel:`Pedimento Number` should follow the pattern `xx xx xxxx xxxxxxx`. For
-   example, `15 48 3009 0001235`.
+   example, `15 48 3009 0001235` with **Two** spaces between text.
