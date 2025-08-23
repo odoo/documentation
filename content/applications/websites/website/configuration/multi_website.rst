@@ -9,14 +9,14 @@ help avoid confusion and make it easier to tailor your digital outreach strategi
 target audience.
 
 Each website can be designed and configured independently with its own :doc:`domain name
-<domain_names>`, :doc:`theme <../web_design/themes>`, :doc:`pages <../pages>`, :doc:`menus
-<../pages/header_footer>`, :doc:`languages <translate>`, :doc:`products
+<domain_names>`, :doc:`theme <../web_design/themes>`, :doc:`pages <../structure/pages>`, :doc:`menus
+<../structure/header_footer>`, :doc:`languages <translate>`, :doc:`products
 <../../ecommerce/products>`, assigned sales team, etc. They can also
 :ref:`share content and pages <multi-website/website_content>`.
 
 .. tip::
    Duplicate content (i.e., pages and content shared between multiple websites) can have a negative
-   impact on :doc:`../pages/seo`.
+   impact on :doc:`../structure/seo`.
 
 Website creation
 ================
