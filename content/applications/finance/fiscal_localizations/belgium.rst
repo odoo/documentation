@@ -576,8 +576,8 @@ IoT box, you must contact us through our `support contact form <https://www.odoo
 provide the following information:
 
 - your VAT number;
-- your company's name, address, and legal structure; and
-- the Mac address of your IoT Box.
+- your company's name, address, and legal structure;
+- the identifier of your IoT Box.
 
 Once your IoT box is certified, :doc:`connect <../../general/iot/connect>` it to your database. To
 verify that the IoT Box recognizes the FDM, go to the IoT homepage and scroll down the
