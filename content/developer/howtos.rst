@@ -14,7 +14,6 @@ How-to guides
    howtos/frontend_owl_components
    howtos/website_themes
 
-   howtos/web_services
    howtos/company
    howtos/create_reports
    howtos/accounting_localization
@@ -68,11 +67,6 @@ Server-side development
 =======================
 
 .. cards::
-
-   .. card:: Web services
-      :target: howtos/web_services
-
-      Learn more about Odoo's web services.
 
    .. card:: Multi-company guidelines
       :target: howtos/company
