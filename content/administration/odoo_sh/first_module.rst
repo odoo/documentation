@@ -7,7 +7,7 @@ Overview
 
 This chapter helps you to create your first Odoo module and deploy it in your Odoo.sh project.
 
-This tutorial requires :ref:`you created a project on Odoo.sh <odoosh-gettingstarted-create>`, and
+This tutorial requires you created a project on Odoo.sh, and
 you know your Github repository's URL.
 
 Basic use of Git and Github is explained.
@@ -85,7 +85,7 @@ From the Odoo.sh editor, in a terminal:
 
   $ odoo-bin scaffold my_module ~/src/user/
 
-Or, from your computer, if you have an :doc:`installation of Odoo <../../on_premise/source>`:
+Or, from your computer, if you have an installation of Odoo:
 
 .. code-block:: bash
 
