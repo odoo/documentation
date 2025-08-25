@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-08-18 08:33+0000\n"
-"PO-Revision-Date: 2025-08-21 20:52+0000\n"
+"PO-Revision-Date: 2025-08-25 22:50+0000\n"
 "Last-Translator: \"Chloe Wang (chwa)\" <chwa@odoo.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
 "projects/odoo-18-doc/studio/zh_Hans/>\n"
@@ -4062,6 +4062,11 @@ msgid ""
 "records>`, :ref:`timeline <studio/views/timeline>`, and :ref:`reporting "
 "<studio/views/reporting>`."
 msgstr ""
+"视图是显示 :doc:`模型 <models_modules_apps>` "
+"中所含数据的界面。一个模型可以有多个视图，它们只是显示相同数据的不同方式。在 "
+"Studio 中，视图分为四类： :ref:`常规<studio/views/general>`、:ref:`多个记录 <"
+"studio/views/multiple-records>`、:ref:`时间线 <studio/views/timeline>` 和 "
+":ref:`报告 <studio/views/reporting>`。"
 
 #: ../../content/applications/studio/views.rst:12
 msgid ""
@@ -4070,6 +4075,9 @@ msgid ""
 "(:guilabel:`ellipsis`) icon next to the desired view, and "
 "click :guilabel:`Set as Default`."
 msgstr ""
+"要更改模型的默认视图，请 :ref:`进入Studio <studio/access>`，前往 "
+":guilabel:`视图`选项卡，点击目标视图旁的 :icon:fa-"
+"ellipsis-v（:guilabel:`省略号`）图标，然后点击 :guilabel:`设为默认`。"
 
 #: ../../content/applications/studio/views.rst:15
 msgid ""
@@ -4077,6 +4085,9 @@ msgid ""
 "the :ref:`Developer mode <developer-mode>`, go to the view you want to edit, "
 "select the :guilabel:`View` tab, and click :guilabel:`</> XML`."
 msgstr ""
+"您可以使用内置的XML编辑器修改视图：:ref:`激活开发者模式 <developer-"
+"mode>`，进入您要编辑的视图，选择 :guilabel:`视图`标签页，然后点击 "
+":guilabel:`</> XML`。"
 
 #: ../../content/applications/studio/views.rst:20
 msgid ""
@@ -4088,6 +4099,10 @@ msgid ""
 "corresponding XPath, which defines the modified part of the view, are "
 "automatically generated."
 msgstr ""
+"如果您使用XML编辑器编辑视图，请避免直接修改标准视图和继承视图，因为在更新或模"
+"块升级期间，这些更改会被重置并丢失。务必确保您选择正确的Studio继承视图：例如"
+"，当您通过在Studio中拖放新字段来修改视图时，系统会自动生成一个特定的Studio继"
+"承视图及其对应的XPath（用于定义视图的修改部分）。"
 
 #: ../../content/applications/studio/views.rst:30
 msgid "General views"
@@ -4132,7 +4147,8 @@ msgstr ""
 msgid ""
 "To add a button, click :guilabel:`Add a button` at the top of the form, "
 "enter a :guilabel:`Label`, and select the button's action:"
-msgstr ""
+msgstr "要添加按钮，请点击表单顶部的 :guilabel:`添加按钮`，输入 "
+":guilabel:`标签`，并选择按钮的操作："
 
 #: ../../content/applications/studio/views.rst:51
 #: ../../content/applications/studio/views.rst:155
@@ -4140,13 +4156,15 @@ msgid ""
 ":guilabel:`Run a Server Action`: select the :ref:`server action <reference/"
 "actions/server>` to be executed from the dropdown list;"
 msgstr ""
+":guilabel:`运行服务器操作`：从下拉列表中选择要执行的 :ref:`服务器操作 <"
+"reference/actions/server>`；"
 
 #: ../../content/applications/studio/views.rst:53
 #: ../../content/applications/studio/views.rst:157
 msgid ""
 ":guilabel:`Call a method`: specify an existing Python method already defined "
 "in Odoo."
-msgstr ""
+msgstr ":guilabel:`调用方法`：指定 Odoo 中已定义的现有 Python 方法。"
 
 #: ../../content/applications/studio/views.rst:55
 msgid ""
@@ -4277,6 +4295,8 @@ msgid ""
 "either :guilabel:`Add record at the bottom`, :guilabel:`Add record on top` "
 "or :guilabel:`Open form view` under :guilabel:`When Creating Record`."
 msgstr ""
+"要直接在视图中创建和编辑记录，请在 :guilabel: `创建记录时`下选择:guilabel: "
+"`在底部添加记录`、:guilabel: `在顶部添加记录` 或:guilabel: `打开表单视图`。"
 
 #: ../../content/applications/studio/views.rst:146
 msgid ""
@@ -4327,6 +4347,9 @@ msgid ""
 "a map. For example, it is used in the Field Service app to plan an itinerary "
 "between different tasks."
 msgstr ""
+":guilabel:`地图` :icon:`fa-map-marker` "
+"视图用于在地图上显示记录。例如，它在现场服务应用程序中用于规划不同任务之间的"
+"行程。"
 
 #: ../../content/applications/studio/views.rst:180
 msgid ""
@@ -4334,6 +4357,8 @@ msgid ""
 "the *Contact* model is required to activate the view, as the contact address "
 "is used to position records on the map."
 msgstr ""
+"要激活视图，需要与 *联系人* 模型链接的 :ref:`Many2One 字段 <studio/fields/"
+"relational-fields-many2one>`，因为联系人地址用于在地图上定位记录。"
 
 #: ../../content/applications/studio/views.rst:183
 msgid ""
@@ -4380,6 +4405,10 @@ msgid ""
 "view. You can modify the :guilabel:`Start Date Field` and :guilabel:`Stop "
 "Date Field` after activating the view."
 msgstr ""
+"首次激活某个时间线视图时，您需要选择模型上的 :ref:`日期 <studio/fields/"
+"simple-fields-date>` 或 :ref:`日期和时间 <studio/fields/simple-fields-date-"
+"time>` 字段用于定义记录开始和停止的时间，以便在视图中显示这些记录。"
+"您可以在激活视图后修改 :guilabel:`开始日期字段` 和 :guilabel:`停止日期字段`。"
 
 #: ../../content/applications/studio/views.rst:213
 msgid "Calendar"
@@ -4389,7 +4418,7 @@ msgstr "日历"
 msgid ""
 "The :guilabel:`Calendar` :icon:`fa-calendar` view is used to overview and "
 "manage records inside a calendar."
-msgstr ""
+msgstr ":guilabel:`日历` :icon:`fa-calendar` 视图用于概览和管理日历中的记录。"
 
 #: ../../content/applications/studio/views.rst:218
 msgid ""
@@ -4429,6 +4458,8 @@ msgid ""
 "a :ref:`Checkbox field <studio/fields/simple-fields-checkbox>` that "
 "specifies if the event lasts the whole day."
 msgstr ""
+"要在日历顶部显示持续一整天的事件，请选择 :ref:`复选框字段 <studio/fields/"
+"simple-fields-checkbox>`，指定事件是否持续一整天。"
 
 #: ../../content/applications/studio/views.rst:236
 msgid ""
@@ -4448,6 +4479,10 @@ msgid ""
 "an :guilabel:`End Date Field`, the :guilabel:`Delay Field` will not be taken "
 "into account."
 msgstr ""
+"您也可以使用 :guilabel:`延迟字段` 来显示事件的持续时间（小时），"
+"方法是在模型上选择指定事件持续时间的 :ref:`小数 <studio/fields/simple-fields-"
+"decimal>` 或 :ref:`整数 <studio/fields/simple-fields-integer>` 字段。但是，"
+"如果您设置了 :guilabel:`结束日期字段` 字段，则不会考虑 :guilabel:`延迟字段`。"
 
 #: ../../content/applications/studio/views.rst:0
 msgid "Calendar Event model's Calendar view"
@@ -4463,6 +4498,9 @@ msgid ""
 "life cycle of records over a time period. For example, it is used in the "
 "Subscriptions app to view the subscriptions' retention rate."
 msgstr ""
+":guilabel:`同类群组` :icon:`oi-view-cohort` "
+"视图用于检查记录在一段时间内的生命周期。例如，它在订阅应用程序中用于查看订阅"
+"的保留率。"
 
 #: ../../content/applications/studio/views.rst:260
 msgid ""

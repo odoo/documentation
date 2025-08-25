@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-08-18 08:33+0000\n"
-"PO-Revision-Date: 2025-08-21 20:52+0000\n"
+"PO-Revision-Date: 2025-08-25 22:51+0000\n"
 "Last-Translator: \"Chloe Wang (chwa)\" <chwa@odoo.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
 "projects/odoo-18-doc/services/zh_Hans/>\n"
@@ -4457,7 +4457,7 @@ msgstr ":guilabel:`标签`：标签用于说明工单的内容。一张工单可
 msgid ""
 ":guilabel:`Customers`: Individual contacts or companies may be selected in "
 "this field."
-msgstr ""
+msgstr ":guilabel:`客户`：可在此字段中选择单个联系人或公司。"
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:57
 msgid ""
@@ -4466,12 +4466,15 @@ msgid ""
 "specific line on a sales order, which must be indicated on the ticket in "
 "the :guilabel:`Sales Order Items` field."
 msgstr ""
+":guilabel:`服务`：此字段仅在团队启用**工时单**应用程序时可用。这允许工单直接"
+"链接到销售订单上的特定行，该行必须在工单上的 :guilabel:`销售订单项目` "
+"字段中标明。"
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:62
 msgid ""
 "A support team needs to address urgent issues for VIP customers within one "
 "business day."
-msgstr ""
+msgstr "支持团队需要在一个工作日内解决 VIP 客户的紧急问题。"
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:64
 msgid ""
@@ -4501,12 +4504,15 @@ msgid ""
 "reach that stage, in order to satisfy the |SLA| policy. Any stage assigned "
 "to a team may be selected for the :guilabel:`Reach Stage` field."
 msgstr ""
+"*目标*是指为满足 |SLA| 策略，工单需要达到的阶段以及为达到该阶段所分配的时间。"
+"分配给团队的任何处理阶段都可以被选为 :guilabel:`达成阶段`字段的值。"
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:81
 msgid ""
 "Time spent in stages selected in the :guilabel:`Excluding Stages` field are "
 "**not** included in the calculation of the |SLA| deadline."
-msgstr ""
+msgstr "在 :guilabel:`排除阶段`字段中所选阶段内花费的时间，不会计入 |SLA| "
+"截止日期的计算。"
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:85
 msgid ""
@@ -4516,17 +4522,23 @@ msgid ""
 "before work on a ticket has begun, and would have `In Progress` as "
 "the :guilabel:`Reach Stage`."
 msgstr ""
+"例如，一个名为 `8小时内关闭`的 |SLA| 策略，用于追踪工单完成前的工作时间，其 "
+":guilabel:`达成阶段`应设为`已解决`。同时，另一个名为`2天内开始`的 |SLA| "
+"策略，用于追踪工单开始处理前的工作时间，其 "
+":guilabel:`达成阶段`则应设为`处理中`。"
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:91
 msgid "Meet SLA deadlines"
-msgstr ""
+msgstr "达成SLA期限"
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:93
 msgid ""
 "As soon as it is determined that a ticket fits the criteria of an |SLA| "
 "policy, a deadline is calculated. The deadline is based on the creation date "
 "of the ticket, as well as the targeted working hours."
-msgstr ""
+msgstr "一旦确定某个工单符合 |SLA| "
+"策略的条件，系统就会计算出截止日期。该截止日期基于工单的创建日期以及目标工作"
+"时间进行计算。"
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:98
 msgid ""
@@ -4535,35 +4547,42 @@ msgid ""
 "the value set in the :guilabel:`Company Working Hours` field "
 "under :menuselection:`Settings app --> Employees --> Work Organization`."
 msgstr ""
+"|SLA| 策略中 "
+":guilabel:`工作时间`字段旁标明的值将用于确定截止日期。默认情况下，该值由 "
+":menuselection:`设置应用 --> 员工 --> 工作安排` 下的 "
+":guilabel:`公司工作时间`字段决定。"
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:102
 msgid ""
 "The deadline is then added to the ticket, as well as a tag indicating the "
 "name of the |SLAs| applied."
-msgstr ""
+msgstr "截止日期随后会被添加到工单上，同时还会添加一个显示所应用 |SLA| 名称的标签。"
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:-1
 msgid ""
 "View of a ticket's form emphasizing an open SLA deadline on a ticket in Odoo "
 "Helpdesk."
-msgstr ""
+msgstr "Odoo 服务台工单表单视图，突出显示了工单上一个未完成的 SLA 截止日期。"
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:108
 msgid ""
 "When a ticket satisfies an |SLA| policy, the |SLA| tag turns green, and the "
 "deadline disappears from view on the ticket."
-msgstr ""
+msgstr "当工单满足 |SLA| 策略时，|SLA| "
+"标签会变为绿色，并且截止日期会从工单视图中消失。"
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:-1
 msgid "View of a ticket's form emphasizing a satisfied SLA in Odoo Helpdesk."
-msgstr ""
+msgstr "Odoo服务台工单表单视图，突出显示了一个已满足的SLA。"
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:115
 msgid ""
 "If a ticket fits the criteria for more than one |SLA|, the earliest "
 "occurring deadline is displayed on the ticket. After that deadline has "
 "passed, the next deadline is displayed."
-msgstr ""
+msgstr "如果一个工单同时符合多个 |SLA| "
+"策略的条件，工单上会显示最早到期的那个截止日期。在该截止日期过后，才会显示下"
+"一个截止日期。"
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:118
 msgid ""
@@ -4572,15 +4591,18 @@ msgid ""
 "failed, the red tag stays on the ticket, even after the ticket is moved to "
 "the :guilabel:`Reach Stage`."
 msgstr ""
+"如果超过了 |SLA| 截止日期，而工单仍未进入:guilabel:`达成阶段`，则 |SLA| "
+"标签会变为红色。在 |SLA| "
+"失败后，即使工单后续进入了:guilabel:`达成阶段`，该红色标签仍会保留在工单上。"
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:-1
 msgid ""
 "View of a ticket's form with a failing and passing SLA in Odoo Helpdesk."
-msgstr ""
+msgstr "Odoo服务台工单表单视图，同时显示失败和已达成的SLA。"
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:128
 msgid "Analyze SLA performance"
-msgstr ""
+msgstr "分析 SLA 绩效"
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:130
 msgid ""
@@ -4589,6 +4611,9 @@ msgid ""
 "to the report, and corresponding pivot table, by going "
 "to :menuselection:`Helpdesk app --> Reporting --> SLA Status Analysis`."
 msgstr ""
+":guilabel:`SLA状态分析` 报告用于追踪 |SLA| "
+"的达成速度以及团队成员个人的绩效表现。要访问该报告及其对应的数据透视表，"
+"请前往 :menuselection:`服务台应用 --> 报告 --> SLA状态分析`。"
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:135
 msgid "Pivot view"
@@ -4601,6 +4626,10 @@ msgid ""
 "in progress, or have satisfied a policy are listed. By default, they are "
 "grouped by team and ticket count."
 msgstr ""
+"默认情况下，报告以 :guilabel:`数据透视表`视图显示。报告中会列出所有相关的 "
+"|SLA| "
+"策略，这些策略下的工单状态包括：失败、进行中或已满足。默认情况下，这些策略按"
+"团队和工单数量进行分组。"
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:144
 msgid "View of the SLA status analysis report in Odoo Helpdesk."
