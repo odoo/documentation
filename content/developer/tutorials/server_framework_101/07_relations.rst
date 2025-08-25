@@ -184,7 +184,7 @@ operations like ``recs1 | recs2``.
     Tip: in the view, use the ``widget="many2many_tags"`` attribute as demonstrated
     `here <https://github.com/odoo/odoo/blob/5bb8b927524d062be32f92eb326ef64091301de1/addons/crm_iap_lead_website/views/crm_reveal_views.xml#L36>`__.
     The ``widget`` attribute will be explained in detail in :doc:`a later chapter of the training <11_sprinkles>`.
-    For now, you can try to adding and removing it and see the result ;-)
+    For now, you can try adding and removing it and see the result ;-)
 
 One2many
 ========
