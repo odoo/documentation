@@ -287,6 +287,8 @@ With the :guilabel:`Filter properties` pane open:
    .. image:: global_filters/field-matching-checkbox.png
       :alt: A yes/no filter with the Active field set as matching field
 
+.. _spreadsheet/global-filters/manage:
+
 Manage and use global filters
 =============================
 
