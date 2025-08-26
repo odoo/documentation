@@ -28,6 +28,8 @@ should not have access to.
    Once complete, click :guilabel:`Save` to save the changes, and implement the user as an
    administrator.
 
+.. _access-rights/user-permissions:
+
 Manage user permissions
 =======================
 
