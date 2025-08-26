@@ -33,13 +33,17 @@ With Odoo Spreadsheet, you can:
 The Spreadsheet module is part of **Odoo Documents**.
 
 .. note::
-   Odoo spreadsheets serve as the foundation for the dashboards available in **Odoo Dashboards**. On
-   a dashboard, charts and data tables are used to display dynamic Odoo data and provide an overview
-   of key business metrics.
+   Odoo spreadsheets serve as the foundation for the :doc:`dashboards available in Odoo Dashboards
+   <../../applications/productivity/dashboards>`. On a dashboard, charts and data tables are used to
+   display dynamic Odoo data and provide an overview of key business metrics.
 
-   Standard, pre-configured dashboards can be customized by editing the dashboard's underlying
-   spreadsheet via Dashboards. Custom dashboards can also be created from scratch, starting
-   from an Odoo spreadsheet; any subsequent modifications are performed via Dashboards.
+   :ref:`Standard, pre-configured dashboards
+   <dashboards/consult-dashboards/standard>` can be :ref:`customized
+   <build_and_customize_dashboards/customize>` by editing the dashboard's underlying spreadsheet via
+   Dashboards. :ref:`Custom dashboards
+   <build_and_customize_dashboards/build>` can also be created from scratch, starting from an Odoo
+   spreadsheet; any subsequent :ref:`modifications <build_and_customize_dashboards/customize>` are
+   performed via Dashboards.
 
 .. _spreadsheet/create-new:
 
@@ -125,16 +129,9 @@ spreadsheet via the :guilabel:`File` menu:
 - :icon:`fa-print` :guilabel:`Print`: prints a copy of the spreadsheet on a connected printer.
 - :icon:`os-cog` :guilabel:`Settings`: allows you to view and change the :ref:`locale
   <spreadsheet/manage-spreadsheets/regional-settings>` of the current spreadsheet.
-- :icon:`os-add-to-dashboard` :guilabel:`Add to dashboard`: allows you to turn the current
-  spreadsheet into a new dashboard that is accessible via Odoo Dashboards. The following fields must
-  be completed: :guilabel:`Dashboard Name`, the :guilabel:`Dashboard Section` in which the new
-  dashboard will be saved, and :guilabel:`Access Groups` to determine which user groups can access
-  the dashboard.
-
-  .. note::
-     When a spreadsheet is converted into a dashboard, the original spreadsheet is deleted from Odoo
-     Spreadsheet. However, it is still possible to edit the dashboards's underlying spreadsheet via
-     Odoo Dashboards.
+- :icon:`os-add-to-dashboard` :guilabel:`Add to dashboard`: :ref:`converts
+  <spreadsheet/manage-spreadsheets/convert-to-dashboard>` the current spreadsheet into an Odoo
+  dashboard.
 
 .. _spreadsheet/manage-spreadsheets/version-history:
 
@@ -201,3 +198,30 @@ right of the spreadsheet. To change the locale, select the appropriate locale fr
 
    If no :icon:`fa-globe` :guilabel:`(globe)` icon is shown, this means the spreadsheet's locale is
    the same as that of your user profile.
+
+.. _spreadsheet/manage-spreadsheets/convert-to-dashboard:
+
+Convert a spreadsheet into a dashboard
+--------------------------------------
+
+A user with the appropriate :ref:`access rights <access-rights/groups>` can convert an Odoo
+spreadsheet into a dashboard that is then accessible via
+:doc:`Odoo Dashboards <../../../applications/productivity/dashboards>`. To do so:
+
+#. Click :menuselection:`File -->` :icon:`os-add-to-dashboard` :menuselection:`Add to dashboard`
+   from the menu bar.
+#. Enter the :guilabel:`Dashboard Name`.
+#. Select the relevant :guilabel:`Dashboard Section` from the dropdown or, to create a new dashboard
+   section, type the name of the new section, then click :guilabel:`Create`.
+#. If necessary, modify the :guilabel:`Access Groups` to determine which :ref:`user groups
+   <dashboards/access-and-sharing>` can access the dashboard.
+#. Click :guilabel:`Create`.
+
+.. tip::
+   - By default, the first tab of the spreadsheet serves as the front end of the dashboard.
+   - It is also possible to convert a spreadsheet to a dashboard from within the :ref:`Dashboard
+     configuration settings <dashboards/configuration>`, by directly adding the spreadsheet to
+     an existing or new dashboard section.
+   - After a spreadsheet has been converted to a dashboard, it is deleted from Odoo Documents. Any
+     subsequent :ref:`modifications <build_and_customize_dashboards/customize>` need to be made via
+     Odoo Dashboards.
