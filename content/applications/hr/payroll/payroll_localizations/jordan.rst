@@ -21,111 +21,184 @@ Configuration
      - Description
    * - :guilabel:`Jordan - Payroll`
      - `l10n_jo_hr_payroll`
-     - Payroll module supporting basic calculation, tax income brackets, and national contribution
-       tax and social security
+     - Includes all salary rules, leave logic, and compensation rules compliant with Jordan Labor
+       Law.
    * - :guilabel:`Jordan - Payroll with Accounting`
      - `l10n_jo_hr_payroll_account`
-     - Bridge module between **Payroll** and **Accounting**
+     - Adds account mappings related to payroll calculations.
 
 .. seealso::
    :doc:`Jordan fiscal localization documentation <../../../finance/fiscal_localizations/jordan>`
 
-Basic calculations
-==================
+Employee overview
+=================
 
-The Jordan **Payroll** localization package in Odoo provides foundational payroll management tools
-that are compliant with Jordan's labor laws and regulations. Key features include:
+The following contractual information related to employees working in Jordan is found under the
+`Payroll` tab in the **Employees** app:
 
-- **Basic salary calculations**: Odoo supports the computation of employee salaries based on
-  predefined salary structures, ensuring accurate payroll processing.
-- **Social security contributions**: It handles social security deductions for employees and
-  employer contributions, aligning with local regulations.
-- **Taxation support**: The system is configured to handle income tax calculations in Jordan,
-  including deductions based on progressive tax brackets as required by Jordanian labor and tax
-  laws.
-- **Custom allowances and deductions**: The localization supports additional allowances, deductions,
-  or overtime as part of payroll computation.
+- :guilabel:`Is Blind`: If marked *True*, the employee's full salary will be tax-exempt.
+- :guilabel:`Has Dependents`: If the employee has dependents, such as a spouse, children, or
+  parents, they will receive an additional exemption on their taxable salary.
+- :guilabel:`Is Eligible for EOS`: Some employees might not be eligible for the end-of-service
+  benefit, and by default, it is set to *True*.
+- :guilabel:`Annual Leave Balance`: This displays the available balance of annual leave days for the
+  employee, the time off type that is considered *Annual leave* is defined in the payroll settings
+  with the field *Annual Leave Time-off Type*.
+- :guilabel:`Non-resident`: Non-residents of Jordan who have an income from a Jordanian source are
+  *not* eligible for the personal exemption.
+- :guilabel:`Number of Leave days`: This is used to calculate the annual leave days provision amount
+  and it has a default value of 14.
 
-These features ensure businesses can manage payroll effectively and comply with Jordanian-specific
-legal requirements. For enhanced functionality, businesses may leverage Odoo's flexibility to
-customize payroll workflows.
+Social Insurance
+================
 
-Social security
-===============
+Social insurance rules calculate the contribution amounts that are to be paid by the employer and
+employee to the :abbr:`Social Security Corporation (SSC)`. This is only available for Jordanian
+employees.
 
-The Jordan **Payroll** localization package in Odoo simplifies social security management by
-automating calculations for both employees and employers. Contributions are based on a percentage of
-the employee's basic salary, with a maximum insurable wage cap in line with Jordanian Social
-Security Corporation (SSC) regulations.
+The employer contributes 14.25% of the employee's salary to the :abbr:`Social Security Corporation
+(SSC)`, while the employee contributes 7.5% of their salary, which is deducted from their payslip.
 
-Employee contributions
-----------------------
+For both employer and employee contributions, the base amount on which they are calculated is bound
+by a cap that gets updated every year.
 
-Odoo calculates the employee's social security deduction as 7.5% of their basic salary, up to the
-insurable wage cap of 3,000 JOD. If the employee's salary exceeds this cap, the deduction is based
-on the capped amount. This ensures compliance with :abbr:`SSC (Jordanian Social Security
-Corporation)` requirements and reflects accurately on the employee's payslip.
+Leaves
+======
 
-Employer contributions
-----------------------
+The following leave types are available to employees working in Jordan:
 
-For employers, Odoo computes social security contributions as 14.25% of the employee's basic salary,
-also capped at 3,000 JOD. Like the employee contributions, if the salary exceeds this cap, the
-employer's contribution is calculated based on the capped amount. These contributions include
-pensions, workplace injury insurance, and other mandated benefits.
+- :guilabel:`Annual leave`: Employee's are eligible for 21 days of annual leave, and if the employee
+  requires more days, they have to be requested from HR managers accordingly.
 
-Key features
-------------
+.. important::
+   Since the annual leave is fully paid, it is not connected to a salary rule, but it will appear on
+   the worked days on the payslip form and on the PDF printout.
 
-- **Capped contributions**: The system ensures that both employee and employer contributions are
-  aligned with the SSC-mandated insurance cap.
-- **Automated calculations**: Contributions are automatically calculated and included in payroll,
-  reducing errors and administrative work.
-- **Compliance with regulations**: Odoo's configuration ensures full compliance with Jordanian
-  social security laws, reflecting the correct rates and caps for both sides.
+- :guilabel:`Sick leave`: Employee's working in Jordan are entitled to 14 days of paid sick leave
+  per year, with the possibility of an additional 14 days if hospitalized. No deductions are applied
+  to the employee in those cases.
 
-Income tax calculation
-======================
+- :guilabel:`Other leave types`: These leave types are fully paid and do not affect the final
+  payslip, but are tracked for reporting purposes:
 
-The Jordan **Payroll** localization package automates income tax calculations using progressive tax
-brackets, ensuring compliance with Jordanian labor laws. The system applies income tax rates based
-on the employee's annual gross income, with higher brackets subject to increased percentages. The
-calculations are divided into six brackets, and the appropriate tax is deducted monthly.
+  - :guilabel:`Maternity leave`
+  - :guilabel:`Paternity Leave`
+  - :guilabel:`Pilgrimage Leave`
+  - :guilabel:`Study leave`
+
+Income Tax
+==========
+
+In Jordan, employees are subject to a progressive income tax system, where tax rates increase with
+higher annual income brackets.
 
 Tax brackets
 ------------
 
-- **5% bracket**: Applicable to annual gross income up to 5,000 JOD. Odoo calculates 5% of the
-  income within this range. If the gross income is below 5,000 JOD, the entire amount is taxed at
-  5%.
-- **10% bracket**: Applicable to annual gross income between 5,001 and 10,000 JOD. Only the portion
-  of income exceeding 5,000 JOD is taxed at 10%. For example, if the gross income is 7,000 JOD, only
-  2,000 JOD is taxed at 10%.
-- **15% bracket**: Applicable to annual gross income between 10,001 and 15,000 JOD. The portion of
-  income exceeding 10,000 JOD up to 15,000 JOD is taxed at 15%. For instance, if the gross income is
-  12,000 JOD, only 2,000 JOD is taxed at 15%.
-- **20% bracket**: Applicable to annual gross income between 15,001 and 20,000 JOD. Income within
-  this range is taxed at 20%, with deductions automatically adjusted by Odoo.
-- **25% bracket**: Applicable to annual gross income between 20,001 and 1,000,000 JOD. Income beyond
-  20,000 JOD up to 1,000,000 JOD is taxed at 25%. For higher incomes, Odoo ensures accurate
-  calculations by applying the cap of this range.
-- **30% bracket**: Applicable to annual gross income exceeding 1,000,000 JOD. Any income above this
-  amount is taxed at 30%, with the system ensuring accurate monthly deductions for high-income
-  earners.
+Depending on the annual income of the employee, the following rates apply:
 
-Automated process
------------------
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 0
 
-Odoo determines the appropriate tax bracket for each employee based on their gross annual income and
-applies the corresponding rates. These deductions are prorated and deducted monthly, simplifying
-payroll management and ensuring compliance.
+   * - Taxable Bracket
+     - Range
+   * - 5%
+     - 0-5,000
+   * - 10%
+     - 5,001 - 10,000
+   * - 15%
+     - 10,001 - 15,000
+   * - 20%
+     - 15,001 - 20,000
+   * - 25%
+     - 20,001 - 1,000,000
+   * - 30%
+     - More than 1,000,000
 
-Key features
-------------
+.. note::
+   Tax brackets are applied progressively. This means each portion of an employee's income is taxed
+   at its respective rate within each bracket, rather than their entire income being taxed at the
+   rate of the highest bracket they fall into.
 
-- **Progressive tax system**: Calculates taxes for each income range individually, ensuring fairness
-  and accuracy.
-- **Automated deductions**: Ensures a smooth payroll workflows with accurate and timely monthly tax
-  deductions.
-- **Alignment with Jordanian regulations**: Fully complies with Jordanian tax laws, minimizing
-  manual intervention and errors.
+Exemptions
+----------
+
+Several factors contribute to exempting part of an employee's gross income, including:
+
+- **Jordanian residency**: Residents are entitled to a yearly exemption of 12,000 JOD.
+- **Blindness**: Individuals who are blind are fully exempt from income tax.
+- **Dependents**: An additional 12,000 JOD exemption per year for employees with dependents.
+
+Overtime
+========
+
+Employees are entitled to additional pay for overtime worked, depending on when the overtime hours
+are worked:
+
+- On working days: Overtime is paid at 1.25 times the regular hourly wage.
+- On rest days: Overtime is compensated at 1.5 times the regular hourly wage.
+
+These percentages are recorded in the input parameters model.
+
+.. note::
+   The number of overtime hours is registered as other inputs directly on payslips
+
+Provisions
+==========
+
+Provisions are the amounts computed by the employer to account for the payments made to the employee
+for :abbr:`end-of-service (EOS)` benefits or annual leaves. It is computed on a monthly basis.
+
+- **End of service benefit provision**: This is computed by dividing the monthly gross salary by 12
+
+  .. math::
+
+     \frac{\text{Basic} + \text{Allowances}}{12}
+
+- **Annual leave provision**: This is computed by dividing the gross salary by 30 to get the daily
+  salary, then multiplying that by the number of leave days, and dividing the result by 12.
+
+  .. math::
+
+     \left(\frac{\text{Basic} + \text{Allowances}}{30}\right)
+     \times
+     \left(\frac{\text{Number of Leave Days}}{12}\right)
+
+End of Service
+==============
+
+At the end of the employee's service, if they are eligible for end-of-service benefits, they should
+receive the following two benefits:
+
+- **Unused leaves compensation**: The Annual Leave Balance is shown on the employee's record. It is
+  based on the annual leave type defined in the **Payroll** app settings and is calculated as the
+  total remaining allocations for that specific leave type assigned to the employee.
+
+  The balance represents the total remaining leave allocated to the employee but does not reflect
+  the portion of leave days the employee has earned up to the current month.
+
+  When calculating the benefit value, the deserved leave balance is determined based on the portion
+  of the year worked. The benefit value is then calculated by multiplying this deserved balance by
+  the employee's daily rate.
+
+  .. example::
+     If an employee is entitled to 14 leave days per year and has worked for 6 months, they deserve
+     7 leave days so far. If their daily rate is 50 JOD, the benefit value is: 7 days × 50 JOD = 350
+     JOD
+
+  .. important::
+     The flow mentioned above requires the allocation for the annual leave to be given fully upfront
+     in the beginning of the year for that employee
+
+- **End of Service Benefit**: The calculation begins by determining the total number of days the
+  employee has worked at the company, starting from their joining date up to their last working day.
+
+  The total service duration is calculated out of a 365-day year.
+
+  The resulting period in years is then multiplied by the employee's gross salary, which includes
+  the basic salary and the allowances defined in the payroll tab on the employee record.
+
+  .. math::
+
+   (\text{Basic} + \text{Allowances}) \times \left(\frac{\text{Number of Days}}{365}\right)
