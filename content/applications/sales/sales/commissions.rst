@@ -152,3 +152,6 @@ the :guilabel:`Draft` stage into the :guilabel:`Approved` stage.
 
 After a plan is approved, Odoo automatically tracks performance and calculates commissions based on
 the established parameters.
+
+.. seealso::
+   :doc:`Commissions <../../hr/payroll/commissions>`
