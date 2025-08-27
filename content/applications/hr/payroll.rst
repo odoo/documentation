@@ -897,6 +897,7 @@ form.
    - :doc:`payroll/work_entries`
    - :doc:`payroll/salary_attachments`
    - :doc:`payroll/payslips`
+   - :doc:`payroll/batches`
    - :doc:`payroll/reporting`
    - :doc:`payroll/work_entry_analysis`
    - :doc:`payroll/salary_attachment`
@@ -909,6 +910,7 @@ form.
    payroll/work_entries
    payroll/salary_attachments
    payroll/payslips
+   payroll/batches
    payroll/reporting
    payroll/work_entry_analysis
    payroll/salary_attachment
