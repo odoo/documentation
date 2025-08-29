@@ -62,7 +62,7 @@ redirects as well as your domain name.
 
    **SEO & Redirects**
 
-   - :doc:`../../../applications/websites/website/pages/seo`
+   - :doc:`/applications/websites/website/structure/seo`
    - :ref:`website/pages/URL-redirection`
 
    **Domain name**
