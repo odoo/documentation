@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-08-18 08:33+0000\n"
-"PO-Revision-Date: 2025-08-25 22:50+0000\n"
+"PO-Revision-Date: 2025-08-29 22:50+0000\n"
 "Last-Translator: \"Chloe Wang (chwa)\" <chwa@odoo.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.odoo.com/"
 "projects/odoo-18-doc/studio/zh_Hans/>\n"
@@ -2628,6 +2628,9 @@ msgid ""
 "the :ref:`developer mode <developer-mode>` and edit the :guilabel:`Technical "
 "Name`."
 msgstr ""
+":guilabel:`标签`：字段在用户界面上的名称。这不是 PostgreSQL "
+"数据库中使用的名称。要查看和更改后者，请激活 :ref:`开发者模式 <developer-"
+"mode>` 并编辑 :guilabel:`技术名称`。"
 
 #: ../../content/applications/studio/fields.rst:519
 msgid ""
@@ -3994,29 +3997,35 @@ msgstr "图像部件有以下选项："
 msgid ""
 "`width`: width of the image, usually in pixels or CSS length units (e.g., "
 "`rem`) (leave empty for auto-width)."
-msgstr ""
+msgstr "`宽度`：图像的宽度，通常以像素或CSS长度单位（如`rem`）表示（留空则为自动宽度"
+"）。"
 
 #: ../../content/applications/studio/pdf_reports.rst:518
 msgid ""
 "`height`: height of the image, usually in pixels or CSS length units (e.g., "
 "`rem`) (leave empty for auto-height)."
-msgstr ""
+msgstr "`height`：图像的高度，通常以像素或CSS长度单位（如`rem`）表示（留空则为自动高"
+"度）。"
 
 #: ../../content/applications/studio/pdf_reports.rst:520
 msgid ""
 "`class`: CSS classes applied on the `img` tag; `Bootstrap classes <https://"
 "getbootstrap.com/docs/5.1/content/tables>`_ are available."
 msgstr ""
+"`class`：应用于`img` 标签的CSS类；可使用`Bootstrap类 <https://"
+"getbootstrap.com/docs/5.1/content/tables>`_。"
 
 #: ../../content/applications/studio/pdf_reports.rst:522
 msgid "`alt`: alternative text of the image"
-msgstr ""
+msgstr "`alt`：图像的替代文本。"
 
 #: ../../content/applications/studio/pdf_reports.rst:523
 msgid ""
 "`style`: style attribute; it allows you to override styles more freely than "
 "with `Bootstrap classes <https://getbootstrap.com/docs/5.1/content/tables>`_."
 msgstr ""
+"`style`：样式属性；与`Bootstrap 类 <https://getbootstrap.com/docs/5.1/"
+"content/tables>`_ 相比，它允许您更自由地覆写样式。"
 
 #: ../../content/applications/studio/pdf_reports.rst:526
 msgid ""
@@ -4024,18 +4033,21 @@ msgid ""
 "within quotes, e.g., `t-options-width=\"'64px'\"` (or, alternatively, a "
 "valid Python expression)."
 msgstr ""
+"这些属性必须包含字符串，即引号内再嵌套引号的文本，例如`t-options-width="
+"\"'64px'\"` （或者，也可以是一个有效的Python表达式）。"
 
 #: ../../content/applications/studio/pdf_reports.rst:530
 msgid ""
 "The image widget cannot be used on an `img` tag. Instead, set the `t-field` "
 "directive on a `span` (for inline content) or `div` (for block content) node."
-msgstr ""
+msgstr "图像控件不能用于`img`标签。而应在`span` （用于内联内容）或`div` "
+"（用于块级内容）节点上设置`t-field`指令。"
 
 #: ../../content/applications/studio/pdf_reports.rst:533
 msgid ""
 "For example, let's add a column with the product image in the quotation "
 "table:"
-msgstr ""
+msgstr "例如，让我们在报价单表格中添加一个包含产品图片的列："
 
 #: ../../content/applications/studio/pdf_reports.rst:561
 msgid ""
@@ -4043,10 +4055,12 @@ msgid ""
 "the Bootstrap classes used in `t-options-class` create a thumbnail-like "
 "border with rounded corners and a shadow."
 msgstr ""
+"`t-options-width`属性将图片宽度限制为64像素，而`t-options-"
+"class`中使用的Bootstrap类则创建了一个带有圆角和阴影的缩略图样式边框。"
 
 #: ../../content/applications/studio/pdf_reports.rst:0
 msgid "Add a column with the product image in the quotation table."
-msgstr ""
+msgstr "在报价表中添加包含产品图片的列。"
 
 #: ../../content/applications/studio/views.rst:3
 msgid "Views"
@@ -4172,6 +4186,9 @@ msgid ""
 "its :guilabel:`Label` or :guilabel:`Class` (either `btn-primary` or `btn-"
 "secondary`) in the :guilabel:`Properties` tab."
 msgstr ""
+"要更改按钮的标签或样式，请点击该按钮，并在 :guilabel:`属性`标签页中编辑其 "
+":guilabel:`标签` 或 :guilabel:`类` （例如 `btn-primary` 或 `btn-"
+"secondary`）。"
 
 #: ../../content/applications/studio/views.rst:57
 msgid ""
@@ -4247,6 +4264,9 @@ msgid ""
 "business flows by moving records across stages or as an alternative way to "
 "display records inside *cards*."
 msgstr ""
+":guilabel:`看板`:icon:`oi-view-kanban` "
+"视图通常用于支持业务流程（通过在各阶段之间移动记录），或作为一种在*卡片*内显"
+"示记录的替代方式。"
 
 #: ../../content/applications/studio/views.rst:118
 msgid ""
@@ -4320,7 +4340,8 @@ msgstr "要更改记录的默认排序方式，在:guilabel:`排序方式`下选
 msgid ""
 "To add a button, click :guilabel:`Add a button` at the top of the list, "
 "enter a :guilabel:`Label`, and select the button's action:"
-msgstr ""
+msgstr "要添加按钮，请点击列表顶部的 :guilabel:`添加按钮`，输入 "
+":guilabel:`标签`，并选择按钮的操作："
 
 #: ../../content/applications/studio/views.rst:160
 msgid ""
@@ -4328,6 +4349,10 @@ msgid ""
 "records manually, add an :ref:`Integer field <studio/fields/simple-fields-"
 "integer>` with the :guilabel:`Handle` widget."
 msgstr ""
+"要添加一个 :icon:`oi-"
+"draggable`（:guilabel:`拖拽手柄`）图标以手动重排记录顺序，请添加一个 :ref:`"
+"整数 <studio/fields/simple-fields-integer>` 字段，并为其设置 "
+":guilabel:`手柄`控件。"
 
 #: ../../content/applications/studio/views.rst:0
 msgid "Drag handle icon enabling to sort records manually in List view"
