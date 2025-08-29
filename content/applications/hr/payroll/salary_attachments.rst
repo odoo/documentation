@@ -7,10 +7,10 @@ whether voluntary or required.
 
 When the deduction is voluntary, they are typically considered *deductions*. When the deduction is
 court-ordered, or involuntary, it is sometimes referred to as a *wage garnishment*. In Odoo, these
-are all universally called, *salary attachments*.
+are all universally called *salary attachments*.
 
-Note that salary attachments could also be used to give recurring amount of money to employees.
-Like bonus divided in multiple parts.
+Note that salary attachments could also be used to give recurring amounts of money to employees,
+like a bonus divided in multiple payments.
 
 .. _payroll/salary-attachment/types:
 
@@ -18,12 +18,14 @@ Salary attachment types
 =======================
 
 To view the currently configured salary attachment types, navigate to :menuselection:`Payroll app
---> Configuration --> Salary Attachment Types`. The default salary attachment types are:
-:guilabel:`Attachment of Salary`, :guilabel:`Assignment of Salary`, and :guilabel:`Child Support`.
+--> Configuration --> Other Input Types`. This displays *all* other salary inputs, not just the
+various salary attachments.
 
-Each salary attachment type displays the :guilabel:`Name` of the attachment type, the
-:guilabel:`Code` used when calculating payslips, a checkbox to indicate if there is :guilabel:`No
-End Date`, and whether it is :guilabel:`Country` specific (or universal).
+The three default salary attachment types that appear in this list are: :guilabel:`Attachment of
+Salary`, :guilabel:`Assignment of Salary`, and :guilabel:`Child Support`.
+
+Each salary attachment type displays the :guilabel:`Name` of the attachment type, and the
+:guilabel:`Code` used when calculating payslips.
 
 .. image:: salary_attachments/attachment-types.png
    :alt: The default salary attachment types.
@@ -32,7 +34,7 @@ Create new salary attachment types
 ----------------------------------
 
 .. danger::
-   Upon installation of the **Payroll** application, the pre-configured default salary attachment
+   Upon installation of the **Payroll** application, the preconfigured default salary attachment
    types are linked to a variety of rules that are linked to various salary structures, as well as
    the installed :ref:`localization package <fiscal_localizations/packages>`.
 
@@ -45,14 +47,12 @@ Create new salary attachment types
    in the salary computation.
 
 To make a new type of salary attachment, click the :guilabel:`New` button, and a blank
-:guilabel:`Salary Attachment Types` form loads. Enter the :guilabel:`Name` for the new salary
-attachment type in the corresponding field. Next, enter the :guilabel:`Code` used in the salary
-rules to compute payslips. Last, tick the :guilabel:`No End Date` checkbox if this salary attachment
-never expires.
-
-If in a multi-company database, with locations in multiple countries, a :guilabel:`Country` field
-also appears on the :guilabel:`Salary Attachment Types` form. Select the country the attachment
-applies to, or leave blank if it is universal.
+:guilabel:`Other Input Types` form loads. Enter the :guilabel:`Description` for the new salary
+attachment type in the corresponding field. Next, tick the :guilabel:`Available in attachments`
+checkbox, indicating it is available to use as a salary attachment. Enter the :guilabel:`Code` used
+in the salary rules to compute payslips. Lastly, if the salary attachment type should **only** be
+used in a specific payroll structure, use the drop-down menu in the :guilabel:`Available in
+Structure` field, and select the specific structure.
 
 .. _payroll/salary-attachment/create:
 
@@ -65,7 +65,10 @@ app --> Contracts --> Salary Attachments`.
 
 All salary attachments appear in a default list view, and displays the name of the
 :guilabel:`Employees`, :guilabel:`Description`, the salary attachment :guilabel:`Type`, the
-:guilabel:`Monthly Amount`, :guilabel:`Start Date`, and current :guilabel:`Status`.
+:guilabel:`payslips Amount`, :guilabel:`Start Date`, and current :guilabel:`Status`.
+
+At the end of each line is a :guilabel:`Related Payslips` button. Click this to view all payslips
+containing the corresponding salary attachment.
 
 To create a new salary attachment, click the :guilabel:`New` button in the top-left corner, and a
 blank :guilabel:`Salary Attachment` form loads. Enter the following information on the form:
@@ -78,16 +81,21 @@ blank :guilabel:`Salary Attachment` form loads. Enter the following information 
 - :guilabel:`Start Date`: Using the calendar selector, select the date the salary attachment goes
   into effect.
 - :guilabel:`Estimated End Date`: This field is **not** modifiable, and **only** appears after the
-  :guilabel:`Monthly Amount` field is populated. This field is the estimated date when the salary
-  attachment will be completed. Today's date populates the field by default. Then, when the
+  :guilabel:`Payslip Amount` field is populated. This field is the estimated date when the salary
+  attachment is completed. Today's date populates the field by default. Then, when the
   :guilabel:`Total Amount` field is populated, this date is updated.
 - :guilabel:`Document`: If any documentation is needed, such as a court order, click the
   :guilabel:`Upload your file` button, and a file explorer window loads. Select the desired document
   to attach it to the record. Only **one** document can be attached to a salary attachment.
-- :guilabel:`Monthly Amount`: Enter the amount taken out of each paycheck every month in this field.
-- :guilabel:`Total Amount`: This field **only** appears if the :ref:`salary attachment type
-  <payroll/salary-attachment/types>` has no end date (the :guilabel:`No End Date` option is
-  **not** ticked.)
+- :guilabel:`No End Date`: Tick this checkbox if the salary attachment runs indefinitely. If ticked,
+  the :guilabel:`Total Amount` field is hidden from view.
+- :guilabel:`Payslip Amount`: Enter the amount taken out of each paycheck in this field.
+- :guilabel:`Total Amount`: Enter the total amount to be paid for the salary attachment. Note that
+  this field **only** appears if the :guilabel:`No End Date` option is **not** ticked.
+- :guilabel:`Negative Amount`: Tick this checkbox if the salary attachment
+- :guilabel:`Occurrences`: This field is **not** editable, and only appears once both the
+  :guilabel:`Payslip Amount` and :guilabel:`Total Amount` fields are populated. The number indicates
+  the amount of payslips needed to complete the salary attachment.
 
 .. image:: salary_attachments/salary-attachment-form.png
    :alt: The salary attachment form with all fields filled out.
@@ -112,9 +120,12 @@ Salary attachments can have one of three statuses: *Running*, *Completed*, or *C
 the current status of all salary attachments, navigate to :menuselection:`Payroll app --> Contracts
 --> Salary Attachments`.
 
-All salary attachments appear in the order they were configured. To view the salary attachments by
-a particular metric, such as the :guilabel:`Status`, or :guilabel:`Type`, click on the column title
-to sort by that specific column.
+All salary attachments appear in chronological order, by :guilabel:`Start Date`, with the most
+recent appearing at the top. To view the salary attachments by a particular metric, such as the
+:guilabel:`Status`, or :guilabel:`Type`, click on the column title to sort by that specific column.
+
+.. image:: salary_attachments/attachments-list.png
+   :alt: All salary attachments, organized by start date.
 
 Completed salary attachments
 ----------------------------
