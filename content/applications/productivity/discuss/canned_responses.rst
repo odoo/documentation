@@ -45,9 +45,6 @@ Type a shortcut command in the :guilabel:`Shortcut` field. Next, click on the
    to use the responses, it prevents the list of responses from becoming disorganized and
    overwhelming.
 
-In the :guilabel:`Description` field, add any information that provides context for this response,
-such as guidelines for when it should or should not be used.
-
 The :guilabel:`Created by` field automatically populates with the name of the user that creates a
 new response. This field cannot be edited.
 
@@ -61,7 +58,7 @@ groups in the :guilabel:`Authorized Group` field that should have access.
    Canned responses created by the database are automatically credited as created by *OdooBot*. They
    must be assigned to an *authorized group* before they can be used by **any** users. To view the
    responses created by *OdooBot*, navigate to :menuselection:`Discuss app --> Configuration -->
-   Canned Responses`. Click into the :guilabel:`Search..` bar, and remove any filters.
+   Canned Responses`.
 
 Lastly, the :guilabel:`Last Used` field keeps track of the date and time each response was most
 recently used. This field cannot be edited.
