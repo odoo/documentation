@@ -27,10 +27,10 @@ Compliance with Finnish e-invoicing regulations
 Odoo invoicing module makes it easy for businesses to adhere to Finland's e-invoicing regulations.
 Here is how Odoo ensures compliance:
 
-- **Supported formats**: Odoo supports the e-invoicing formats widely used in Finland, including
-  TEAPPSXML, Finvoice, and the standardized XML in :abbr:`UBL (Universal Business Language)` format
-  required for Peppol compliance. This ensures compatibility with Finnish platforms such as Handi
-  for public sector invoicing and eKuitti for enhanced receipt management and e-invoicing.
+- **Supported formats**: Odoo supports the standardized XML in :abbr:`UBL (Universal Business
+  Language)` format required for Peppol compliance. This ensures compatibility with regulations for
+  sending invoices to the Finnish government, as well as sending invoices to customers and receiving
+  invoices from vendors.
 - **Secure storage and retrieval**: In accordance with Finnish regulations requiring businesses to
   store invoices for a minimum of seven years, Odoo securely archives all invoices in a tamper-proof
   system, allowing for easy retrieval during audits.
