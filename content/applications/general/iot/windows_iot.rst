@@ -34,14 +34,11 @@ Installation
 
 To install the Windows virtual IoT on a Windows computer:
 
-#. Access `Odoo's download page <https://odoo.com/download>`_ and download the Odoo installation
-   package for Windows **matching your database's version**.
+#. Download the `IoT installation package for Windows
+   <https://nightly.odoo.com/master/nightly/iot/odoo_iot_setup_18.5a1.20250819.exe>`_
 #. Open the downloaded :file:`.exe` file, allow the app to make changes to your device, select
    a language, and click :guilabel:`OK`.
 #. Click :guilabel:`Next`, then :guilabel:`I Agree` to accept the terms and conditions and continue.
-#. Select :guilabel:`Odoo IoT` from the :guilabel:`Select the type of install` dropdown list. The
-   following components should be selected: Odoo Server, Odoo IoT, Nginx WebServer, and Ghostscript
-   interpreter.
 #. Verify you have the required space on your computer and click :guilabel:`Next`.
 #. In the :guilabel:`Destination folder`, enter C:\\odoo and click :guilabel:`Install`.
 
@@ -49,16 +46,13 @@ To install the Windows virtual IoT on a Windows computer:
       Do not install Odoo's Windows virtual IoT in any Windows user directory, as this can cause
       issues with :ref:`iot/https_certificate_iot/generation`.
 
-#. Once the installation is complete, click :guilabel:`Next`.
 #. Set up GPL Ghostscript: Click :guilabel:`Next`, agree to the terms and conditions, click
    :guilabel:`Install`, then :guilabel:`Finish`.
-#. Click :guilabel:`Next`, :guilabel:`Next`, and :guilabel:`Finish` to complete the setup. The
+#. Click :guilabel:`Next` and :guilabel:`Finish` to complete the setup. The
    :ref:`IoT system's homepage <iot/windows-iot/homepage>` automatically opens in a web browser with
    the URL `http://localhost:8069`.
 
-   .. tip::
-      If the web browser does not show anything, :ref:`restart <iot/windows_iot/restart>` the
-      Windows virtual IoT service.
+#. :ref:`Restart <iot/windows_iot/restart>` the Windows virtual IoT service.
 
 #. Check that you can access the :ref:`IoT system's homepage <iot/windows-iot/homepage>` in a web
    browser:
