@@ -124,26 +124,25 @@ page object.
 .. code-block:: xml
    :caption: ``/website_airproof/data/pages/about_us.xml``
 
-   <odoo>
-      <data noupdate="1">
-         <record id="page_about_us" model="website.page">
-               <field name="name">About us</field>
-               <field name="is_published" eval="True"/>
-               <field name="key">website_airproof.page_about_us</field>
-               <field name="url">/about-us</field>
-               <field name="website_id" eval="1" />
-               <field name="type">qweb</field>
-               <field name="arch" type="xml">
-                  <t t-name="website_airproof.page_about_us">
-                     <t t-call="website.layout">
-                        <div id="wrap" class="oe_structure">
-                           <!-- Content -->
-                        </div>
-                     </t>
-                  </t>
-               </field>
-         </record>
-      </data>
+   <?xml version="1.0" encoding="utf-8"?>
+   <odoo noupdate="1">
+      <record id="page_about_us" model="website.page">
+         <field name="name">About us</field>
+         <field name="is_published" eval="True"/>
+         <field name="key">website_airproof.page_about_us</field>
+         <field name="url">/about-us</field>
+         <field name="website_id" eval="1" />
+         <field name="type">qweb</field>
+         <field name="arch" type="xml">
+            <t t-name="website_airproof.page_about_us">
+               <t t-call="website.layout">
+                  <div id="wrap" class="oe_structure">
+                     <!-- Content -->
+                  </div>
+               </t>
+            </t>
+         </field>
+      </record>
    </odoo>
 
 .. admonition:: Multiwebsite and `website_id`
@@ -327,8 +326,10 @@ Instantiate each building block (modified or not) for the page template:
 .. code-block:: xml
    :caption: `/website_airproof/views/new_page_template_templates.xml`
 
-   <template id="new_page_template_s_airproof_text_block_h1" inherit_id="website_airproof.s_airproof_text_block_h1" primary="True"/>
+   <template id="new_page_template_airproof_faq_s_text_block_h1" inherit_id="website_airproof.s_airproof_text_block_h1" primary="True"/>
    <template id="new_page_template_airproof_faq_s_title" inherit_id="website.s_title" primary="True"/>
+   <template id="new_page_template_airproof_faq_s_faq_collapse" inherit_id="website.s_faq_collapse" primary="True"/>
+   <template id="new_page_template_airproof_faq_s_call_to_action" inherit_id="website.s_call_to_action" primary="True"/>
 
 Then, create your page template with some `t-snippet-call` within an `#wrap` as explained above:
 
