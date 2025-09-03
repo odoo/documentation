@@ -139,13 +139,13 @@ Available manifest fields are:
     string representing the name of a function defined inside the module's
     ``__init__.py``.
 
-    ``pre_init_hook`` takes a cursor as its only argument, this function is
+    ``pre_init_hook`` takes an env as its only argument, this function is
     executed prior to the module's installation.
 
-    ``post_init_hook`` takes a cursor and a registry as its arguments, this
+    ``post_init_hook`` takes an env as its only argument, this
     function is executed right after the module's installation.
 
-    ``uninstall_hook`` takes a cursor and a registry as its arguments, this
+    ``uninstall_hook`` takes an env as its only argument, this
     function is executed after the module's uninstallation.
 
     These hooks should only be used when setup/cleanup required for this module
