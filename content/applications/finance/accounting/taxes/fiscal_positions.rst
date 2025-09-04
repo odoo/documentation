@@ -3,11 +3,11 @@ Fiscal positions (tax and account mapping)
 ==========================================
 
 Default taxes and accounts are set on products and customers to create new transactions on the fly.
-However, depending on the customers' and providers' localization and business type, using different
+However, depending on the customers' and vendors' location and business type, using different
 taxes and accounts for a transaction might be necessary.
 
-**Fiscal positions** allow the creation of rules to adapt the taxes and accounts used for a
-transaction automatically.
+**Fiscal positions** allow the creation of rules to adapt the taxes and the income and expense
+accounts used for a transaction automatically.
 
 They can be applied :ref:`automatically <fiscal_positions/automatic>`, :ref:`manually
 <fiscal_positions/manual>`, or :ref:`assigned to a partner <fiscal_positions/partner>`.
@@ -16,38 +16,39 @@ They can be applied :ref:`automatically <fiscal_positions/automatic>`, :ref:`man
    Several default fiscal positions are available as part of your :ref:`fiscal localization
    package <fiscal_localizations/packages>`.
 
+.. _fiscal_positions/configuration:
+
 Configuration
 =============
 
- .. _fiscal_positions/mapping:
-
-Tax and account mapping
------------------------
-
 To edit or create a fiscal position, go to :menuselection:`Accounting --> Configuration --> Fiscal
-Positions`, and open the entry to modify or click on :guilabel:`New`.
+Positions`, and open the record to modify or click :guilabel:`New`.
 
-The mapping of taxes and accounts is based on the default taxes and accounts defined in the
-product form.
+.. tip::
+   If any notes are legally required when using this fiscal position, add them in the
+   :guilabel:`Legal Notes...` field below the :ref:`tax mapping <fiscal_positions/tax-mapping>`
+   section to display them on quotations, sales orders, invoices, and bills.
 
-- To map to another tax or account, fill out the right column (:guilabel:`Tax to Apply`/
-  :guilabel:`Account to Use Instead`).
+.. _fiscal_positions/tax-mapping:
 
-.. image:: fiscal_positions/fiscal-positions-tax-mapping.png
-   :align: center
-   :alt: Example of a fiscal position's tax mapping
+Tax mapping
+-----------
+
+Fiscal positions are required to map taxes. :ref:`Tax mapping <taxes/tax-mapping>` is configured on
+taxes themselves.
+
+.. _fiscal_positions/account-mapping:
+
+Account mapping
+---------------
+
+Account mapping is based on the income and expense accounts defined on the product or product
+category. To map to another account, select the account to be replaced in the left column
+(:guilabel:`Account on Product`) and select the account to use instead in the right column
+(:guilabel:`Account to Use Instead`).
 
 .. image:: fiscal_positions/fiscal-positions-account-mapping.png
-   :align: center
    :alt: Example of a fiscal position's account mapping
-
-- To remove a tax, leave the field :guilabel:`Tax to Apply` empty.
-- To replace a tax with several other taxes, add multiple lines using the same :guilabel:`Tax on
-  Product`.
-
-.. note::
-   The mapping only works with *active* taxes. Therefore, make sure they are active by going to
-   :menuselection:`Accounting --> Configuration --> Taxes`.
 
 Application
 ===========
@@ -68,7 +69,6 @@ From there, several conditions can be activated:
   selected country or country group.
 
 .. image:: fiscal_positions/fiscal-positions-automatic.png
-   :align: center
    :alt: Example of a fiscal position automatic application settings
 
 .. note::
@@ -91,12 +91,11 @@ From there, several conditions can be activated:
 Manual application
 ------------------
 
-To manually select a fiscal position, open a sales order, invoice, or bill, go to the
-:guilabel:`Other Info` tab and select the desired :guilabel:`Fiscal Position` before adding product
-lines.
+To manually select a fiscal position, open a sales order, purchase order, invoice, or bill, go to
+the :guilabel:`Other Info` tab and select the desired :guilabel:`Fiscal Position` before adding
+product lines.
 
 .. image:: fiscal_positions/fiscal-positions-manual.png
-   :align: center
    :alt: Selection of a fiscal position on a sales order, invoice, or bill
 
 .. _fiscal_positions/partner:
@@ -109,8 +108,11 @@ To define which fiscal position must be used by default for a specific partner, 
 :guilabel:`Sales & Purchase` tab, and select the :guilabel:`Fiscal Position`.
 
 .. image:: fiscal_positions/fiscal-positions-customer.png
-   :align: center
    :alt: Selection of a fiscal position on a customer
+
+.. tip::
+   To view all partners at once instead of only customers, remove the :guilabel:`Customer Invoices`
+   filter or use the **Contacts** application.
 
 .. seealso::
 
