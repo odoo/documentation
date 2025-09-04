@@ -137,8 +137,8 @@ business's financial activities.
 Closing the GST report
 **********************
 
-The :ref:`tax return periodicity <tax-returns/periodicity>` must be set up before submitting the
-:ref:`tax return <tax-returns/report>` (**GST report**) to the **IRD**.
+The :ref:`tax return periodicity <accounting/tax-returns/periodicity>` must be set up before
+submitting the :ref:`tax return <accounting/tax-returns/report>` (**GST report**) to the **IRD**.
 
 .. seealso::
    :doc:`Year-end closing documentation
