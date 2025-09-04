@@ -135,18 +135,15 @@ Available manifest fields are:
     Person or entity in charge of the maintenance of this module, by default
     it is assumed that the author is the maintainer.
 ``{pre_init, post_init, uninstall}_hook`` (``str``)
-    Hooks for module installation/uninstallation, their value should be a
+    Hooks for module installation/uninstallation. Their value should be a
     string representing the name of a function defined inside the module's
-    ``__init__.py``.
+    ``__init__.py``. The function should take an environment as its only argument.
 
-    ``pre_init_hook`` takes a cursor as its only argument, this function is
-    executed prior to the module's installation.
+    ``pre_init_hook`` is executed prior to the module's installation.
 
-    ``post_init_hook`` takes a cursor and a registry as its arguments, this
-    function is executed right after the module's installation.
+    ``post_init_hook`` is executed right after the module's installation.
 
-    ``uninstall_hook`` takes a cursor and a registry as its arguments, this
-    function is executed after the module's uninstallation.
+    ``uninstall_hook`` is executed after the module's uninstallation.
 
     These hooks should only be used when setup/cleanup required for this module
     is either extremely difficult or impossible through the api.
