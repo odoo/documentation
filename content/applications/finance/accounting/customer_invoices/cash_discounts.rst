@@ -137,9 +137,9 @@ Discount` checkbox enabled, and select one of the three following options:
               - €100 + (21% of €100)
 
 .. note::
-   - :ref:`Tax grids <tax-returns/tax-grids>`, which are used for the tax report, are correctly
-     computed according to the :ref:`type of tax reduction <cash-discounts/tax-reductions>` you
-     configured.
+   - :ref:`Tax grids <accounting/tax-returns/tax-grids>`, which are used for the tax report, are
+     correctly computed according to the :ref:`type of tax reduction
+     <cash-discounts/tax-reductions>` you configured.
    - The **type of cash discount tax reduction** may be correctly pre-configured, depending on your
      :ref:`fiscal localization package <fiscal_localizations/packages>`.
 
