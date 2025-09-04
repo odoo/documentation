@@ -20,9 +20,9 @@ are also used to prefill the :guilabel:`Taxes` field when adding a new line on a
 .. image:: taxes/default-configuration.png
    :alt: Odoo fills out the Tax field automatically according to the Default Taxes
 
-To change your **default taxes**, go to :menuselection:`Accounting --> Configuration --> Settings
---> Taxes --> Default Taxes`, select the appropriate taxes for your default sales tax and purchase
-tax, and click on :guilabel:`Save`.
+To change your **default taxes**, go to :menuselection:`Accounting --> Configuration --> Settings`,
+scroll down to the :guilabel:`Taxes` section, select the appropriate default sales and purchase
+taxes in the :guilabel:`Default Taxes` field, and click on :guilabel:`Save`.
 
 .. image:: taxes/default-taxes.png
    :alt: Define which taxes to use by default on Odoo
@@ -172,6 +172,46 @@ Tax scope
 
 The :guilabel:`Tax Scope` restricts the use of taxes to a type of product, either **goods** or
 **services**.
+
+.. _taxes/tax-mapping:
+
+Tax mapping
+-----------
+
+Taxes can be combined with :doc:`fiscal positions <taxes/fiscal_positions>` to map taxes to each
+other so that the correct tax is applied based on the customer's or vendor's location and business
+type.
+
+When configuring a tax, leave the :guilabel:`Fiscal Position` field blank to apply the tax across
+all fiscal positions or select specific fiscal positions where this tax should be used. If one or
+multiple fiscal positions are selected, use the :guilabel:`Replaces` field to select all of the
+taxes that this tax should replace for the selected fiscal position(s).
+
+To replace one tax with multiple other taxes, configure each of the replacement taxes to replace the
+default product tax.
+
+.. example::
+   As a sales tax, the :guilabel:`0% Exports` tax applies to quotations, sales orders, and invoices
+   that use the :guilabel:`Foreign Trade` fiscal position. On those records, any time that the
+   :guilabel:`15%` tax would be used, the :guilabel:`0% Exports` tax is used instead.
+
+.. note::
+   Since the first fiscal position in the sequence is considered the company's default, the taxes
+   set on products are expected to be used with that fiscal position, so the :guilabel:`Replaces`
+   field is not displayed on it.
+
+   .. image:: taxes/tax-mapping-example.png
+      :alt: The **0% Exports** tax record
+
+.. tip::
+   To more easily view which taxes are replaced, use the :icon:`oi-settings-adjust`
+   :guilabel:`adjust settings` in the taxes list view and display the :guilabel:`Replaces` field.
+
+   .. image:: taxes/tax-mapping-list.png
+      :alt: The **Replaces** field shown in the list view
+
+.. note::
+   Tax mapping only works with :ref:`taxes/active` taxes.
 
 .. _taxes/definition-tab:
 
