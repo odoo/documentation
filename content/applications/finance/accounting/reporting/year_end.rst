@@ -107,21 +107,31 @@ To set a :guilabel:`Lock Everything` date, go to :menuselection:`Accounting --> 
 Dates`. In the :guilabel:`Lock Journal Entries` window, set the :guilabel:`Lock Everything` date and
 :guilabel:`Save`.
 
-.. note::
-   Users with :guilabel:`Administrator` access rights to the Accounting app can create exceptions.
-   To do so:
+After setting the :guilabel:`Lock Everything` date, an :ref:`exception
+<year-end/lock-date-exception>` can be made if a modification is necessary.
 
-   #. After setting the :guilabel:`Lock Everything` date, reopen the :guilabel:`Lock Journal
-      Entries` window and remove the :guilabel:`Lock Everything` date.
-   #. In the :guilabel:`Exception` banner, choose if this exception should be set :guilabel:`for me`
-      (the current user) or :guilabel:`for everyone` and how long it should last.
-   #. A :guilabel:`Reason` for this exception can be added.
-   #. All of this information is logged in the chatter of the :doc:`company record
-      </applications/general/companies>`.
+.. _year-end/lock-date-exception:
+
+Lock date exception
+*******************
+
+Users with :ref:`Administrator <accounting/accountant-access-rights>` access rights to the
+Accounting app can create exceptions. To do so:
+
+#. After setting and saving a lock date, go to :menuselection:`Accounting --> Accounting --> Lock
+   Dates`. In the :guilabel:`Lock Journal Entries` window, remove the :guilabel:`Lock Everything`
+   date.
+#. In the :guilabel:`Exception` banner, choose if this exception should be set :guilabel:`for me`
+   (the current user) or :guilabel:`for everyone`, and how long it should last.
+#. A :guilabel:`Reason` for this exception can be added.
+#. All of this information is logged in the chatter of the :doc:`company record
+   </applications/general/companies>`.
 
 .. tip::
-   To remove the :guilabel:`Lock Everything` date after it has been saved, configure the exception
-   to apply :guilabel:`for everyone` and set the duration to :guilabel:`forever`.
+   To remove a lock date after it has been saved, configure the exception to apply :guilabel:`for
+   everyone` and set the duration to :guilabel:`forever`. This does not apply to the
+   :guilabel:`Hard Lock` date, which is irreversible to ensure inalterability and to meet accounting
+   requirements in certain countries.
 
 .. _year-end/current-year-earnings:
 

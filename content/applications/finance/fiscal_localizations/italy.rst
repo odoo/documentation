@@ -140,9 +140,10 @@ position, these are automatically activated in the tax list.
 Tax grids
 ---------
 
-The Italian localization has a specific :ref:`tax grid <tax-returns/tax-grids>` section for
-**reverse charge** taxes. These tax grids are identifiable by the :ref:`VJ <italy/grids>` tag, and
-can be found by going to :menuselection:`Accounting --> Reporting --> Audit Reports: Tax Report`.
+The Italian localization has a specific :ref:`tax grid <accounting/tax-returns/tax-grids>` section
+for **reverse charge** taxes. These tax grids are identifiable by the :ref:`VJ <italy/grids>` tag,
+and can be found by going to :menuselection:`Accounting --> Reporting --> Audit Reports: Tax
+Report`.
 
 .. image:: italy/grids.png
    :alt: Reverse charge tax grid from the VJ section of the Tax Declaration
