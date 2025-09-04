@@ -58,6 +58,8 @@ in your database, if applicable. To add a form to a website page, drag and drop 
 .. image:: building_blocks/form-block.png
    :alt: Example of a form block
 
+.. _website/building_blocks/action:
+
 Action
 ~~~~~~
 
