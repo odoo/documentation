@@ -253,8 +253,8 @@ real-time:
 Tax return
 ----------
 
-In the :ref:`Tax return <tax-returns/report>`, Odoo computes all accounting transactions for the
-specific tax period and uses these totals to calculate the tax obligation.
+In the :ref:`Tax return <accounting/tax-returns/report>`, Odoo computes all accounting transactions
+for the specific tax period and uses these totals to calculate the tax obligation.
 
 .. note::
    Depending on the country's localization, an XML version of the tax report can be generated to be
@@ -320,7 +320,7 @@ To grant access to the company's accountant, :ref:`add the accountant as a new u
 <../general/users/access_rights>` in the :guilabel:`Accounting` section to enable access to the
 company's financial data:
 
-- :guilabel:`Accounting`: Select :guilabel:`Accountant`.
+- :guilabel:`Accounting`: Select :guilabel:`Administrator`.
 - :guilabel:`Bank`: Allow bank account validation.
 
 .. Note::
