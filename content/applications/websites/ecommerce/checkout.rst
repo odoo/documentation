@@ -120,53 +120,6 @@ Customers can reorder items from a previous sales order:
   .. image:: checkout/cart-quick-reorder.png
      :alt: Quick reorder button
 
-.. _ecommerce/checkout/policy:
-
-Checkout policy
-===============
-
-To allow customers to checkout as guests or force them to sign in/create an account, go to
-:menuselection:`Website --> Configuration --> Settings`, scroll down to the :guilabel:`eCommerce`
-section, and configure the :guilabel:`Sign in/up at checkout` setting. The following options are
-available:
-
-- :guilabel:`Optional`: Customers can check out as guests and register later via the order
-  confirmation email to track their order.
-- :guilabel:`Disabled`: Customers can check out as guests without creating an account.
-- :guilabel:`Mandatory`: Customers must sign in or create an account at the :ref:`Order summary
-  <ecommerce/checkout/review_order>` step to complete their purchase.
-
-B2B access management
----------------------
-
-To restrict checkout to selected B2B customers:
-
-#. Go to :menuselection:`Website --> Configuration --> Settings` and enable the
-   :ref:`Mandatory <ecommerce/checkout/policy>` option in the :guilabel:`eCommerce`
-   section.
-#. In the :guilabel:`General` section of the settings, set the :guilabel:`Customer Account` option
-   to :guilabel:`On invitation`.
-#. Go to :menuselection:`Website --> eCommerce --> Customers`, switch to the :guilabel:`List` view,
-   and select the customers you wish to grant access to your :doc:`portal
-   <../../general/users/portal>`.
-#. Click the :icon:`fa-cog` :guilabel:`Actions` button, then :guilabel:`Grant portal access`.
-#. Review the selected customers in the :guilabel:`Portal Access Management` pop-up and click
-   :guilabel:`Grant Access`.
-
-Once done, the relevant customers receive an email confirming their account creation, including
-instructions on setting a password and activating their account.
-
-.. note::
-   - You can revoke access or re-invite a customer using the related buttons in the
-     :guilabel:`Portal Access Management` pop-up.
-   - Users can only have one :doc:`portal access <../../general/users/portal>` per email.
-   - Settings are website-specific, so you could set up a B2C website that allows guest checkout and
-     a B2B website with mandatory sign-in.
-
-.. seealso::
-   - :doc:`Customer accounts documentation <customer_accounts>`
-   - :doc:`Portal access documentation <../../general/users/portal>`
-
 .. _ecommerce/checkout/steps:
 
 Checkout steps
@@ -188,6 +141,11 @@ checkout options.
 
 .. note::
    Content added through building blocks is **specific** to each step.
+
+.. tip::
+   Restrict access to the :ref:`shop <ecommerce/customer_accounts/shop-access>` and :ref:`checkout
+   <ecommerce/customer_accounts/checkout-access>` for specific customers, e.g., in a B2B business
+   setup.
 
 .. _ecommerce/checkout/review_order:
 
