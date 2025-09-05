@@ -895,6 +895,7 @@ form.
 .. seealso::
    - :doc:`payroll/contracts`
    - :doc:`payroll/work_entries`
+   - :doc:`payroll/time_off_to_report`
    - :doc:`payroll/salary_attachments`
    - :doc:`payroll/payslips`
    - :doc:`payroll/batches`
@@ -909,6 +910,7 @@ form.
 
    payroll/contracts
    payroll/work_entries
+   payroll/time_off_to_report
    payroll/salary_attachments
    payroll/payslips
    payroll/batches
