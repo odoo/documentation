@@ -114,15 +114,23 @@ Static vs. Dynamic
 
 .. _website_themes/setup/databases/views/standard_vs_inherited :
 
-Standard vs. Inherited
-**********************
+Base vs. Inherited vs. Duplicated
+*********************************
 
-- **Standard views** are base views implemented by Odoo. They are directly derived from their model.
-  You should never change them as they allow updating an Odoo database without overwriting a
-  client's modifications.
-- **Inherited views** are duplicated views. Modifications always take place in an inherited view. If
-  there is a duplicate view, there will be two views with the same name in the database, but the
-  duplicated view will not have an ID like for standard view.
+- **Base view:** View natively implemented by Odoo. It is directly derived from their model.
+  A base view should never be altered as it allows updating an Odoo database without overwriting a
+  client's modification.
+
+Modifications always take place in either a duplicated or inherited view with some differences:
+
+- **Inherited view** always has an `inherit_id` and applies modifications based on the source
+  code of the base view it inherits from.
+- **Duplicated view** is a duplication from another one. Most of the time this kind of view is
+  created by Odoo when the end-user applies modifications through the Website Builder. This
+  mechanism prevents data loss when the module is updated because only the source view will be
+  updated, not the duplicated one. If a duplicated view exists, both the original view and the
+  duplicated one are visible in the list but only the duplicated one has an `external_id` (an
+  `external_id` set means that the view has been created by the source code of a module).
 
 .. _website_themes/setup/databases/import :
 
@@ -143,7 +151,8 @@ Dump
 Odoo SaaS
 *********
 
-Go to `<database_url>/saas_worker/dump`.
+#. Log in to a user account with sufficient access rights.
+#. Go to `<database_url>/saas_worker/dump`.
 
 .. _website_themes/setup/databases/import/sh :
 
