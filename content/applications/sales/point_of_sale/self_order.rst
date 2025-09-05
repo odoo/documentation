@@ -34,8 +34,9 @@ You can choose from:
         with the generated QR codes.
 
       .. note::
-         In **restaurants**, printing or downloading QR codes generates as many QR codes as the
-         number of available tables. In **shops**, it generates only one generic QR code.
+         In :ref:`restaurants <pos/restaurant/floors>`, printing or downloading QR codes generates
+         as many QR codes as the number of available tables. In **shops**, it generates only one
+         generic QR code.
 
       .. tip::
          To customize QR codes,
