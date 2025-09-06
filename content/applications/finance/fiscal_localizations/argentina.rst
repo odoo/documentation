@@ -696,9 +696,9 @@ Taxes` and removing the default :guilabel:`Sale or Purchase` filter. To verify t
 <general/install>`:
 
 Journal entries are *not* created when payments are posted unless :ref:`outstanding accounts
-<accounting/bank/outstanding-accounts>` are set up. Thus, for this feature to work properly, it is
-important to verify that *all* payment methods within the bank journals have an outstanding payment
-and receipt account set.
+<accounting/journals/outstanding-accounts>` are set up. Thus, for this feature to work properly, it
+is important to verify that *all* payment methods within the bank journals have an outstanding
+payment and receipt account set.
 
 .. image:: argentina/l10n-ar-outstanding-payments.png
    :alt: An outstanding payment account must be set.
