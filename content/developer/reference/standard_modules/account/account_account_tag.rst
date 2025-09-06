@@ -11,5 +11,4 @@ Account Tag
     .. autofield:: applicability
     .. autofield:: color
     .. autofield:: active
-    .. autofield:: tax_negate
     .. autofield:: country_id
