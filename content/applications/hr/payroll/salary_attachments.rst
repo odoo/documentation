@@ -163,6 +163,3 @@ Any salary attachment can be cancelled at any time. To cancel a salary attachmen
 individual attachment record from the main :guilabel:`Salary Attachment` dashboard to open the
 record. From the :guilabel:`Salary Attachment` record, click the :guilabel:`Cancel` button to cancel
 the salary attachment, and stop having the designated money taken out of future paychecks.
-
-.. seealso::
-   :doc:`salary_attachment`
