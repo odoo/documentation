@@ -16,7 +16,7 @@ and the data is further organized by that selected metric. The default options a
 Entry Type`, :guilabel:`Employee`, and :guilabel:`Department`. If in a multi-company database, a
 :guilabel:`Company` option also appears.
 
-Work entry analysis comparison
+Work entry analysis
 ==============================
 
 It is possible to compare the work entries from one time period to a previous time period. To view
