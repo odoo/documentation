@@ -427,6 +427,76 @@ Potential issues
     :guilabel:`CodaBox` section, click on :guilabel:`Manage Connection`, then click on
     :guilabel:`Revoke`.
 
+.. _belgium/codaclean:
+
+Codaclean
+---------
+
+**Codaclean** is a service that allows Belgian companies and accounting firms to access bank
+information and statements. Odoo provides a way to import such statements and their transactions
+automatically.
+
+.. _belgium/codaclean-configuration:
+
+Configuration
+~~~~~~~~~~~~~
+
+.. note::
+   Make sure to :ref:`install <general/install>` the :guilabel:`Codaclean` (`l10n_be_codaclean`)
+   module.
+
+
+.. _belgium/codaclean-configuration-connection:
+
+Connection with Odoo
+********************
+
+To connect Odoo with Codaclean, follow these steps:
+
+#. Open the Settings app, navigate to the :ref:`Companies <general/companies/company>` section, and
+   click :icon:`oi-arrow-right` :guilabel:`Manage Companies` to make sure the company's
+   :guilabel:`Country` is set to :guilabel:`Belgium`.
+#. Go to :menuselection:`Accounting --> Configuration --> Settings` and scroll to the
+   :guilabel:`Codaclean` section.
+#. Click :guilabel:`Manage Connection` to open the connection wizard, enter the Codaclean
+   :guilabel:`Username` and :guilabel:`Password` and click :guilabel:`Connect`.
+
+The :guilabel:`Status` is updated to :guilabel:`Connected`.
+
+.. tip::
+   Once the connection is established, the :guilabel:`Manage Connection` wizard provides two options:
+
+   - Update Codaclean credentials: Enter the new :guilabel:`Username` and :guilabel:`Password`, then
+     click :guilabel:`Change Credentials`.
+   - Remove Codaclean connection: Click :guilabel:`Disconnect`; no :guilabel:`Username` or
+     :guilabel:`Password` is required.
+
+.. _belgium/codaclean-configuration-journal:
+
+Journal creation
+****************
+
+A specific bank journal must be created for Codaclean synchronization. To do so, :doc:`create a new
+bank journal <../accounting/bank>`, make sure to enter the correct IBAN in the :guilabel:`Bank
+Account Number` field, and select :guilabel:`Codaclean Syncronization` in the :guilabel:`Bank Feeds`
+field.
+
+.. tip::
+   For bank transactions in different currencies, it is recommended to create a separate journal for
+   each currency, using the same bank account.
+
+.. _belgium/codaclean-synchronization:
+
+Synchronization
+~~~~~~~~~~~~~~~
+
+Once the connection is established, Odoo is synchronized with Codaclean, and new CODA files received
+via Codaclean are checked every twelve hours.
+
+.. tip::
+   To manually check for new CODA files, go to the Accounting Dashboard and click :guilabel:`Fetch
+   from Codaclean` on the relevant :ref:`journal <belgium/codaclean-configuration-journal>` .
+
 Electronic invoicing
 ====================
 
