@@ -2,12 +2,20 @@
 Work entries
 ============
 
-Work entries are created automatically in the *Payroll* app, based on the employee's :ref:`salary
-structure type <payroll/structure-types>`, and from the *Planning*, *Attendances*, and *Time Off*
-applications.
+The **Payroll** app automatically creates work entries based on the employee's :ref:`salary
+structure type <payroll/structure-types>`, and from the **Planning**, **Attendances**, and **Time
+Off** applications.
 
-The *Work Entries* dashboard of the *Payroll* application provides a visual overview of the
-individual work entries for every employee.
+Work entries provide the **Payroll** app with the worked hours used to compute employee paychecks,
+if the employee's salary is based on work entries, as opposed to a salaried position.
+
+.. _payroll/work-entry-dashboard:
+
+Work entry dashboard
+====================
+
+The *Work Entries* dashboard of the **Payroll** app provides a visual overview of the individual
+work entries for every employee.
 
 To open the dashboard, navigate to :menuselection:`Payroll app --> Work Entries --> Work Entries`.
 
@@ -15,72 +23,72 @@ On the :guilabel:`Work Entry` dashboard, work entries appear in alphabetical ord
 first name of the employees. The entire month is displayed, with the current day highlighted in pale
 yellow.
 
-If any entries have :ref:`conflicts <payroll/conflicts>` that need to be resolved, the dashboard
-defaults to filter only the :guilabel:`Conflicting` entries.
-
-To remove the filter from the :guilabel:`Search...` bar to view all work entries, click the
-:guilabel:`✖️ (remove)` icon on the :guilabel:`Conflicting` filter in the :guilabel:`Search...` bar,
-and all work entries appear in the list.
+The :guilabel:`Work Entry` dashboard has a default :guilabel:`Conflicting` filter, which displays
+only work entries with :ref:`conflicts <payroll/conflicts>` to be resolved.
 
 .. image:: work_entries/work-entries-overview.png
-   :align: center
    :alt: Conflicts dashboard view showing all employee's conflicts in work entries.
+
+.. tip::
+   Remove the default :guilabel:`Conflicting` filter from the search bar to view *all* work entries.
 
 .. _payroll/adjust-view:
 
-To change the view, so only the entries for a single day, week, or month are shown, click on
-:guilabel:`Month`. A drop-down menu appears with the options of :guilabel:`Day`, :guilabel:`Week`,
-or :guilabel:`Month`. Click on one of the options to only display data for that specific selection.
+Adjust view
+-----------
 
-Use the :guilabel:`⬅️ (left arrow)` and :guilabel:`➡️ (right arrow)` icons on the left and right
-side of the :guilabel:`Month` button to adjust the displayed dates. The arrows adjust the date based
-on the type of time selected.
+To change the view so that only the entries for a single day, week, month, quarter, or year are
+shown, click the :icon:`fa-calendar` :guilabel:`(Month)(Year)` button. A drop-down menu appears with
+the options of :guilabel:`Today`, :guilabel:`This week`, :guilabel:`This month`, :guilabel:`This
+quarter`, or :guilabel:`This year`. Click on one of the options to only display data for that
+specific selection.
+
+Use the :icon:`oi-arrow-left` :guilabel:`(left arrow)` and :icon:`oi-arrow-right` :guilabel:`(right
+arrow)` buttons to adjust the displayed dates. The arrows adjust the date based on the type of time
+selected.
 
 For example, if :guilabel:`Month` is selected, the arrows move one month with each click of the
 arrow. If :guilabel:`Week` or :guilabel:`Day` is selected, the time moves by either a week or a day
 for each click of the arrow, respectively.
 
-At any point, to return to a view containing the current day, click the :guilabel:`Today` button.
+At any point, to return to a view containing the current day, click the :icon:`fa-crosshairs`
+:guilabel:`(Focus Today)` button.
 
 .. _payroll/new-work-entry:
 
 Add a new work entry
 ====================
 
-If a work entry is missing and needs to be added, such as sick time, or if an employee forgot to
-clock in and out for a shift, click :guilabel:`New` on the :guilabel:`Work Entry` dashboard, to
-create a new work entry.
+If a work entry is missing, such as sick time, or if an employee forgot to clock in and out for a
+shift, a new work entry must be created for the missing shift.
 
-A :guilabel:`Create` work entry pop-up form appears.
+Click :guilabel:`New` on the :ref:`work entry dashboard <payroll/work-entry-dashboard>`, and a blank
+:guilabel:`Create` work entry pop-up form appears. Enter the following information on the form:
 
-Enter the following information on the form:
-
-- :guilabel:`Description`: enter a short description for the work entry, such as `Sick Time`. If
-  this field is left blank, it automatically populates once an employee is selected. The default
-  entry is `Attendance: (Employee)`.
-- :guilabel:`Employee`: select the employee the work entry is for, using the drop-down menu.
-- :guilabel:`Work Entry Type`: select the :ref:`work entry type <payroll/work-entries>` using the
+- :guilabel:`Description`: Enter a short description for the work entry, such as `Sick Time`. The
+  default entry is `Attendance: (Employee)`.
+- :guilabel:`Employee`: Select the employee the work entry is for, using the drop-down menu.
+- :guilabel:`Work Entry Type`: Select the :ref:`work entry type <payroll/work-entries>` using the
   drop-down menu.
-- :guilabel:`From` and :guilabel:`To`: enter the start (:guilabel:`From`) and end (:guilabel:`To`)
+- :guilabel:`From` and :guilabel:`To`: Enter the start (:guilabel:`From`) and end (:guilabel:`To`)
   dates and times for the work entry.
 
   First, click on either the :guilabel:`From` or :guilabel:`To` line to reveal a calendar pop-up
-  window. Select the date by navigating to the correct month and year, using the :guilabel:`< (left
-  arrow)` and :guilabel:`> (right arrow)` icons, then click on the specific day.
+  window. Select the date by navigating to the correct month, then click on the specific day to
+  select it.
 
   Next, select the time, by clicking on either the hour or minute fields at the bottom of the
-  calendar, and select the desired time for both the hour and minutes.
+  calendar, and set the desired time.
 
-  When the date and time are correct for the entry, click the :guilabel:`Apply` button.
-- :guilabel:`Duration`: displays the hours based on the :guilabel:`To` and :guilabel:`From` entries.
-  Modifying this field modifies the :guilabel:`To` field (the :guilabel:`From` field does not
-  change).
+  When the date and time for the entry are correct, click the :guilabel:`Apply` button.
+- :guilabel:`Duration`: This field displays the hours based on the :guilabel:`To` and
+  :guilabel:`From` entries. Modifying this field modifies the :guilabel:`To` field (the
+  :guilabel:`From` field does not change).
 
 Once the desired information is entered, click :guilabel:`Save & Close` to save the entry, and close
 the pop-up form.
 
 .. image:: work_entries/create.png
-   :align: center
    :alt: Filling in the work entry Create form in Odoo.
 
 .. _payroll/conflicts:
@@ -88,9 +96,9 @@ the pop-up form.
 Conflicts
 =========
 
-A conflict appears for any request that has not been approved, such as sick time or vacation, or if
-there are any errors on the work entry, such as required fields being left blank. Conflicts are
-required to be resolved before payslips can be generated.
+A conflict occurs when a request has not been approved, such as sick time or vacation, or if there
+are any errors on the work entry. Conflicts that span the current pay period being processed
+**must** be resolved before payslips can be generated.
 
 Any work entry that has a conflict to be resolved is indicated on the main :guilabel:`Work Entry`
 dashboard, which can be accessed by navigating to :menuselection:`Payroll app --> Work Entries -->
@@ -101,48 +109,61 @@ entry. Click on an individual work entry to see the date and time for the specif
 click :guilabel:`Edit` to view the conflict details in a pop-up window.
 
 .. image:: work_entries/conflict-pop-up.png
-   :align: center
    :alt: A row of conflicts, with one entry showing details for the conflict.
 
 The conflict is briefly explained in an orange text box in the :guilabel:`Open` pop-up window that
 appears.
 
-The :guilabel:`Description`, :guilabel:`Employee`, and :guilabel:`Work Entry Type` are listed on
-the left side of the pop-up window. The :guilabel:`From` and :guilabel:`To` date and time range, as
-well as the total time (in hours) in the :guilabel:`Duration` field, appears on the right side.
-
-If the conflict is due to a time off request that has not been approved yet, a :guilabel:`Time Off`
-field appears on the left side, with the type of time off requested in the description.
-
-.. image:: work_entries/conflict-details.png
-   :align: center
-   :alt: The detailed conflict pop-up window that appears when Edit is clicked.
+The :guilabel:`Description`, :guilabel:`Employee`, and :guilabel:`Work Entry Type` are listed on the
+left side of the pop-up window. The :guilabel:`From` and :guilabel:`To` date and time range, as well
+as the total time (in hours) in the :guilabel:`Duration` field, appears on the right side.
 
 Time off conflicts
 ------------------
 
-The most common work entry conflicts are for time off requests that have been submitted, but not yet
-approved, which results in duplicate work entries for that employee (one for time off and another
+The most common work entry conflicts are for time off requests. Odoo automatically generates work
+entries for specific time periods. When time off is requested after these work entries are
+generated, it results in duplicate work entries for that employee (one for time off and another
 for regular work).
 
 If there is a conflict because a time off request is in the system for the same time that a regular
-work entry already exists, the time off request is entered in the :guilabel:`Time Off` field.
+work entry already exists, the time off request is entered in a :guilabel:`Time Off` field.
 
-The time off conflict can be resolved either on the work entry pop-up window, or on a detailed time
-off request pop-up window.
+Conflicts can be resolved either directly on the work entry or in the detailed time off request
+form.
+
+.. _payroll/time-off-work-entry:
 
 Resolve on work entry
 ~~~~~~~~~~~~~~~~~~~~~
 
-To resolve the time off conflict on this work entry pop-up window, click the :guilabel:`Approve Time
-Off` button to approve the time off request, and resolve the work entry conflict.
+If no additional details are needed to determine if a time off request should be approved or
+refused, the time off conflict can be resolved directly from the work entry pop-up window.
 
-The :guilabel:`Approve Time Off` and :guilabel:`Refuse Time Off` buttons disappear. Click the
-:guilabel:`Save & Close` button to close the pop-up window. The conflict disappears from the
-:guilabel:`Work Entry` dashboard, since the conflict is resolved.
+Click either the :guilabel:`Refuse Time Off` or :guilabel:`Approve Time Off` buttons to refuse or
+approve the time off request, then the two buttons disappear. Click the :guilabel:`Save & Close`
+button to close the pop-up window.
+
+The conflict disappears from the :guilabel:`Work Entry` dashboard, since the conflict is now
+resolved.
+
+.. image:: work_entries/conflict-details.png
+   :alt: The detailed conflict pop-up window that appears when the Edit button is clicked.
+
+.. note::
+   If the time off is approved, the status of the work entry conflict changes to
+   :guilabel:`Cancelled`. If the time off is refused, the status changes to :guilabel:`Draft`.
+
+.. _payroll/time-off-request-form:
 
 Resolve on time off request
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If more details are needed to make a decision about the time off request, hover over the entry in
+the :guilabel:`Time Off` field, and click the :icon:`fa-external-link` :guilabel:`(Internal Link)`
+icon that appears at the end of the line. This causes an :guilabel:`Open: Time Off` pop-up window to
+load, with all the time off request details. Click either the :guilabel:`Approve` or
+:guilabel:`Refuse` buttons to approve or refuse the request.
 
 To resolve the time off conflict on the detailed time off request pop-up window, click the
 :guilabel:`Internal Link` button at the end of the :guilabel:`Time Off` entry line, and the time off
@@ -151,9 +172,8 @@ request details appear in a new pop-up window. The request can be modified, if n
 Click the :guilabel:`Approve` button to approve the request, then click the :guilabel:`Save & Close`
 button to save the changes, and go back to the work entry conflict pop-up window.
 
-.. image:: work_entries/time-off-details.png
-   :align: center
-   :alt: The detailed time off request form.
+.. image:: work_entries/entry-details.png
+   :alt: The detailed time off request information.
 
 Now, the :guilabel:`Approve Time Off` button is hidden, only the :guilabel:`Refuse Time Off` button
 is visible.
@@ -170,92 +190,44 @@ it has been resolved.
 Regenerate work entries
 =======================
 
-When regenerating work entries, any manual changes, such as resolved conflicts, are overwritten,
-and work entries are regenerated (or recreated) from the applications that created them.
+After conflicts are resolved, the affected work entries must be regenerated. This recreates the
+specified work entries, and overwrites the previously conflicting work entries.
 
-This method for correcting a large amount of conflicts is recommended to keep all records correct.
 While :ref:`conflicts <payroll/conflicts>` *can* be resolved individually, if the conflicts are
-caused from another application, it is best practice to ensure the records in the other applications
-are also correct. That is why it is recommended to resolve these conflicts in the applications that
-created the conflict.
-
-Another reason this method is recommended is because, when work entries are regenerated, the
-conflicts reappear, if the issue in the related application is **not** resolved.
+caused from another application, such as **Planning** or **Attendances**, it is best practice to
+correct the record in the application causing the conflict. The reason this method is recommended is
+because, if the issue in the related application is **not** resolved, when work entries are
+regenerated, the conflicts reappear.
 
 First, ensure the issues are resolved in the specific applications that caused the work entry
-conflicts.
+conflicts. Once the conflicts have been resolved in the corresponding apps, open the work entry
+dashboard by navigating to :menuselection:`Payroll app --> Work Entries --> Work Entries`.
 
-Next, click the :guilabel:`Regenerate Work Entries` button at the top of the :guilabel:`Work
-Entries` dashboard, and a :guilabel:`Work Entry Regeneration` pop-up window appears.
+Click the :guilabel:`Regenerate Work Entries` button at the top of the :guilabel:`Work Entries`
+dashboard, and a :guilabel:`Work Entry Regeneration` pop-up window appears.
 
-Select the :guilabel:`Employees` to regenerate work entries for from the drop-down menu, and adjust
+Select the :guilabel:`Employees` to regenerate work entries for, using the drop-down menu. Adjust
 the :guilabel:`From` and :guilabel:`To` fields, so the correct date range is displayed.
 
 Click the :guilabel:`Regenerate Work Entries` button, and the work entries are recreated. Once
 finished, the pop-up window closes.
 
 .. image:: work_entries/regenerate-details.png
-   :align: center
    :alt: Regenerate a work entry for a particular employee.
 
 .. example::
-   An employee has incorrect work entries generated from the *Planning* app because they were
-   incorrectly assigned to two work stations simultaneously. This should be fixed in the *Planning*
-   app, instead of the *Payroll* app.
+   An employee has incorrect work entries generated from the **Planning** app because they were
+   incorrectly assigned to two work stations simultaneously. This should be fixed in the
+   **Planning** app, instead of the **Payroll** app.
 
-   To correct this issue, modify the employee's schedule in the *Planning* app, so they are
-   correctly assigned to only one work station. Then, in the *Payroll* app, regenerate work entries
-   for that employee, for that specific time period.
+   To correct this issue, modify the employee's schedule in the **Planning** app, so they are
+   correctly assigned to only one work station. Then, in the **Payroll** app, regenerate work
+   entries for that employee, for that specific time period.
 
-   The *Payroll* app then pulls the new, corrected data form the *Planning* app, and recreates the
-   correct work entries for that employee. All conflicts for that employee are now resolved.
+   The **Payroll** app then pulls the new, corrected data form the **Planning** app, and recreates
+   the correct work entries for that employee. All conflicts for that employee are now resolved.
 
-Generating payslips
-===================
+.. seealso::
+   :doc:`payslips`
 
-To generate payslips, :ref:`navigate to the time period <payroll/adjust-view>` the payslips should
-be generated for. Ensure the :guilabel:`Conflicting` filter is removed. When the desired pay period
-is displayed, click the :guilabel:`Generate Payslips` button.
-
-.. tip::
-   If the :guilabel:`Generate Payslips` button is not active (appears pale purple, instead of dark
-   purple), that indicates there are conflicts, or the date selected includes dates in the future.
-   Resolve all conflicts before generating payslips.
-
-When the :guilabel:`Generate Payslips` button is clicked, a batch entry appears on a separate page
-for the time period selected.
-
-The batch name populates the :guilabel:`Batch Name` field in a default `From (date) to (date)`
-format.
-
-The date range to which the payslips apply appears in the :guilabel:`Period` field, and the company
-appears in the :guilabel:`Company` field. It is **not** possible to make changes to this form.
-
-Click the :guilabel:`Create Draft Entry` button to create the payslips for the batch.
-
-Click the :guilabel:`Payslips` smart button at the top of the page to view all the payslips for the
-batch.
-
-.. image:: work_entries/generate-payslips.png
-   :align: center
-   :alt: Information that appears when generating payslips.
-
-Printing payslips
------------------
-
-To print payslips, first view the individual payslips by clicking the :guilabel:`Payslips` smart
-button on the batch form.
-
-Next, select the payslips to print from the :guilabel:`Payslips` list. Click the box next to each
-payslip to print, or click the box to the left of the :guilabel:`Reference` column title, to select
-all the payslips in the list at once.
-
-Click the :guilabel:`Print` button, and a PDF file is created with all the specified payslips.
-
-.. image:: work_entries/print-payslips.png
-   :align: center
-   :alt: Print button for printing the payslips.
-
-.. note::
-   The :guilabel:`Print` button does **not** appear until at least one payslip is selected in the
-   list.
+   :doc:`batches`
