@@ -8,13 +8,11 @@ Odoo is usually extended internally via modules, but many of its features and al
 also available externally for analysis or integration with various other softwares. Part of the
 :ref:`reference/orm/model` API is easily available over HTTP via the ``/json/2`` endpoint.
 
-.. note::
-
+.. tip::
    The actual models, fields and methods available are specific to every database and can be
    consulted on their ``/doc`` page.
 
 .. note::
-
    Access to data via the external API is only available on *Custom* Odoo pricing plans. Access to
    the external API is not available on *One App Free* or *Standard* plans. For more information
    visit the `Odoo pricing page <https://www.odoo.com/pricing-plan>`_ or reach out to your Customer
@@ -22,6 +20,8 @@ also available externally for analysis or integration with various other softwar
 
 API
 ===
+
+.. _reference/external_api/request:
 
 Request
 -------
@@ -31,9 +31,9 @@ Post a JSON object at the ``/json/2/<model>/<method>`` URL.
 **HTTP Headers**
 
 :Host: Required, the hostname of the server.
-:Autorization: Required, ``bearer`` followed by an API key.
+:Autorization: Required, ``bearer`` followed by an :ref:`API key <reference/external_api/api_key>`.
 :Content-Type: Required, ``application/json``, a charset is recommended.
-:X-Odoo-Database: Optional, the name of the database on which to connect.
+:X-Odoo-Database: Optional, the name of the database to connect to.
 :User-Agent: Recommended, the name of your software.
 
 **URL Path**
@@ -43,33 +43,33 @@ Post a JSON object at the ``/json/2/<model>/<method>`` URL.
 
 **Body JSON object**
 
-:ids: An array of record ids on which to execute the method.
+:ids: An array of record ids on which to execute the method. Empty or omitted when calling an
+      ``@api.model``-decorated method.
 :context: Optional, an object of additional values. e.g. ``{"lang": "en_US"}``.
-:*param*: As many time as needed, a value for the method's *param* parameter.
+:*param*: As many time as needed, the method's parameters.
 
-The ``ids`` must be absent or empty when calling a ``@api.model``-decorated method.
+.. example::
+   .. code:: http
 
-**Example**
+       POST /json/2/res.partner/search_read HTTP/1.1
+       Host: mycompany.example.com
+       X-Odoo-Database: mycompany
+       Authorization: bearer 6578616d706c65206a736f6e20617069206b6579
+       Content-Type: application/json; charset=utf-8
+       User-Agent: mysoftware python-requests/2.25.1
 
-.. code:: http
+       {
+           "context": {
+               "lang": "en_US"
+           },
+           "domain": [
+               ["name", "ilike", "%deco%"],
+               ["is_company", "=", true]
+           ],
+           "fields": ["name"]
+       }
 
-    POST /json/2/res.partner/search_read HTTP/1.1
-    Host: mycompany.example.com
-    X-Odoo-Database: mycompany
-    Authorization: bearer 6578616d706c65206a736f6e20617069206b6579
-    Content-Type: application/json; charset=utf-8
-    User-Agent: mysoftware python-requests/2.25.1
-
-    {
-        "context": {
-            "lang": "en_US"
-        },
-        "domain": [
-            ["name", "ilike", "%deco%"],
-            ["is_company", "=", true]
-        ],
-        "fields": ["name"]
-    }
+.. _reference/external_api/response:
 
 Response
 --------
@@ -77,50 +77,17 @@ Response
 In case of **success**, a **200** status with the JSON-serialized return value of the called method
 in the body.
 
-.. code:: http
+.. example::
+   .. code:: http
 
-   HTTP/1.1 200 OK
-   Content-Type: application/json; charset=utf-8
-
-   [
-      {"id": 25, "name": "Deco Addict"}
-   ]
-
-In case of **error**, a **4xx**/**5xx** status with a JSON-serialized error object in the body.
-
-.. tabs::
-
-   .. code-tab:: http
-
-      HTTP/1.1 401 Unauthorized
+      HTTP/1.1 200 OK
       Content-Type: application/json; charset=utf-8
 
-      {
-        "name": "werkzeug.exceptions.Unauthorized",
-        "message": "Invalid apikey",
-        "arguments": ["Invalid apikey", 401],
-        "context": {},
-        "debug": "Traceback (most recent call last):\n  File \"/opt/Odoo/community/odoo/http.py\", line 2212, in _transactioning\n    return service_model.retrying(func, env=self.env)\n  File \"/opt/Odoo/community/odoo/service/model.py\", line 176, in retrying\n    result = func()\n  File \"/opt/Odoo/community/odoo/http.py\", line 2177, in _serve_ir_http\n    self.registry['ir.http']._authenticate(rule.endpoint)\n  File \"/opt/Odoo/community/odoo/addons/base/models/ir_http.py\", line 274, in _authenticate\n    cls._authenticate_explicit(auth)\n  File \"/opt/Odoo/community/odoo/addons/base/models/ir_http.py\", line 283, in _authenticate_explicit\n    getattr(cls, f'_auth_method_{auth}')()\n  File \"/opt/Odoo/community/odoo/addons/base/models/ir_http.py\", line 240, in _auth_method_bearer\n    raise werkzeug.exceptions.Unauthorized(\nwerkzeug.exceptions.Unauthorized: 401 Unauthorized: Invalid apikey\n"
-      }
+      [
+         {"id": 25, "name": "Deco Addict"}
+      ]
 
-   .. tab:: Debug
-
-      .. code::
-
-         Traceback (most recent call last):
-           File "/opt/Odoo/community/odoo/http.py", line 2212, in _transactioning
-             return service_model.retrying(func, env=self.env)
-           File "/opt/Odoo/community/odoo/service/model.py", line 176, in retrying
-             result = func()
-           File "/opt/Odoo/community/odoo/http.py", line 2177, in _serve_ir_http
-             self.registry['ir.http']._authenticate(rule.endpoint)
-           File "/opt/Odoo/community/odoo/addons/base/models/ir_http.py", line 274, in _authenticate
-             cls._authenticate_explicit(auth)
-           File "/opt/Odoo/community/odoo/addons/base/models/ir_http.py", line 283, in _authenticate_explicit
-             getattr(cls, f'_auth_method_{auth}')()
-           File "/opt/Odoo/community/odoo/addons/base/models/ir_http.py", line 240, in _auth_method_bearer
-             raise werkzeug.exceptions.Unauthorized(
-         werkzeug.exceptions.Unauthorized: 401 Unauthorized: Invalid apikey
+In case of **error**, a **4xx**/**5xx** status with a JSON-serialized error object in the body.
 
 :name: The fully qualified name of the Python exception that occured.
 :message: The exception message, usually the same as `arguments[0]`.
@@ -128,16 +95,54 @@ In case of **error**, a **4xx**/**5xx** status with a JSON-serialized error obje
 :context: The context used by the request.
 :debug: The exception traceback, for debugging purpose.
 
+.. example::
+
+   .. tabs::
+
+      .. tab:: HTTP
+         .. code:: http
+
+            HTTP/1.1 401 Unauthorized
+            Content-Type: application/json; charset=utf-8
+
+            {
+              "name": "werkzeug.exceptions.Unauthorized",
+              "message": "Invalid apikey",
+              "arguments": ["Invalid apikey", 401],
+              "context": {},
+              "debug": "Traceback (most recent call last):\n  File \"/opt/Odoo/community/odoo/http.py\", line 2212, in _transactioning\n    return service_model.retrying(func, env=self.env)\n  File \"/opt/Odoo/community/odoo/service/model.py\", line 176, in retrying\n    result = func()\n  File \"/opt/Odoo/community/odoo/http.py\", line 2177, in _serve_ir_http\n    self.registry['ir.http']._authenticate(rule.endpoint)\n  File \"/opt/Odoo/community/odoo/addons/base/models/ir_http.py\", line 274, in _authenticate\n    cls._authenticate_explicit(auth)\n  File \"/opt/Odoo/community/odoo/addons/base/models/ir_http.py\", line 283, in _authenticate_explicit\n    getattr(cls, f'_auth_method_{auth}')()\n  File \"/opt/Odoo/community/odoo/addons/base/models/ir_http.py\", line 240, in _auth_method_bearer\n    raise werkzeug.exceptions.Unauthorized(\nwerkzeug.exceptions.Unauthorized: 401 Unauthorized: Invalid apikey\n"
+            }
+
+      .. tab:: Debug
+         .. code::
+
+            Traceback (most recent call last):
+              File "/opt/Odoo/community/odoo/http.py", line 2212, in _transactioning
+                return service_model.retrying(func, env=self.env)
+              File "/opt/Odoo/community/odoo/service/model.py", line 176, in retrying
+                result = func()
+              File "/opt/Odoo/community/odoo/http.py", line 2177, in _serve_ir_http
+                self.registry['ir.http']._authenticate(rule.endpoint)
+              File "/opt/Odoo/community/odoo/addons/base/models/ir_http.py", line 274, in _authenticate
+                cls._authenticate_explicit(auth)
+              File "/opt/Odoo/community/odoo/addons/base/models/ir_http.py", line 283, in _authenticate_explicit
+                getattr(cls, f'_auth_method_{auth}')()
+              File "/opt/Odoo/community/odoo/addons/base/models/ir_http.py", line 240, in _auth_method_bearer
+                raise werkzeug.exceptions.Unauthorized(
+            werkzeug.exceptions.Unauthorized: 401 Unauthorized: Invalid apikey
+
 Configuration
 =============
+
+.. _reference/external_api/api_key:
 
 API Key
 -------
 
 An API key must be set in the ``Authorization`` request header, as a bearer token.
 
-Create a new API key for a user via :guilabel:`Preferences`, :guilabel:`Account Security`, and
-:guilabel:`New API Key`.
+Create a new API key for a user via :menuselection:`Preferences --> Account Security -->
+New API Key`.
 
 .. have the three images appear next to each other
 .. list-table::
@@ -154,33 +159,31 @@ Create a new API key for a user via :guilabel:`Preferences`, :guilabel:`Account 
 Both a description and a duration are needed to create a new API key. The description makes it
 possible to identify the key, and to determine later whether the key is still in use or should be
 removed. The duration determines the lifetime of the key, after which the key becomes invalid. It is
-recommended to set a short duration (typically 1 day) for interactive usage. For security reasons,
-It is not possible to create keys that last for more than 3 months. This means that long lasting
-keys must be rotated at least once every 3 months.
+recommended to set a short duration (typically one day) for interactive usage. For security reasons,
+it is not possible to create keys that last for more than three months. This means that long lasting
+keys must be rotated at least once every three months.
 
-The :guilabel:`Generate Key` button creates a strong 160-bits random key. Its value appears on
-screen, this is the only time and place the key is visible on screen. It must be copied, kept secret
-and stored somewhere secure. If it ever gets compromised or lost, then it must be removed.
+The :guilabel:`Generate Key` button creates a strong 160-bits random key. The key value is displayed
+only once during creation and cannot be retrieved later. Copy the key immediately and store it
+securely. If the key is compromised or lost, delete it immediately and generate a new one.
 
-Please refer to OWASP's `Secrets Management Cheat Sheet`_ for further guidance on the management of
-API keys.
+Please refer to `OWASP's Secrets Management Cheat Sheet
+<https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html#secrets-management-cheat-sheet>`_
+for further guidance on the management of API keys.
 
-.. _Secrets Management Cheat Sheet: https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html#secrets-management-cheat-sheet
-
+.. _reference/external_api/access_rights:
 
 Access Rights
 -------------
 
-The JSON-2 API uses the standard :ref:`security <reference/security>` model of Odoo. All operations
+The JSON-2 API uses the standard :ref:`security models of Odoo <reference/security>`. All operations
 are validated against the access rights, record rules and field accesses of the user.
 
 For **interactive usage**, such as discovering the API or running one-time scripts, it is fine to
 use a **personal account**.
 
 For **extended automated usage**, such as an integration with another software, it is recommended to
-create and use **dedicated bot users**.
-
-Using dedicated bot users has several benefits:
+create and use **dedicated bot users**. Using dedicated bot users has several benefits:
 
 * The minimum required permissions can be granted to the bot, limiting the impact if the API key
   gets compromised.
@@ -188,52 +191,53 @@ Using dedicated bot users has several benefits:
   of the account getting compromised.
 * The :ref:`reference/fields/automatic/log_access` use the bot account. No user is impersonalized.
 
+.. _reference/external_api/database:
 
 Database
 --------
 
 Depending on the deployment, the ``Host`` and/or ``X-Odoo-Database`` request headers might be
 required. The ``Host`` header is required by HTTP/1.1 and is needed on servers where Odoo is
-installed next to other web applications, so a web-server/reverse-proxy is able to route the request
-to the Odoo server. The ``X-Odoo-Database`` header is required when a single Odoo server hosts
-multiple databases, and that :ref:`dbfilter` wasn't configured to use the ``Host`` header.
+installed next to other web applications, so that a web-server/reverse-proxy is able to route the
+request to the Odoo server. The ``X-Odoo-Database`` header is required when a single Odoo server
+hosts multiple databases and the :ref:`dbfilter` wasn't configured to use the ``Host`` header.
 
 Most HTTP client libraries automatically set the ``Host`` header using the connection URL.
 
+.. _reference/external_api/transaction:
 
 Transaction
 ===========
 
 All calls to the JSON-2 endpoint run in their own SQL transaction. The transaction is committed in
-case of success, and is discarded in case of error. Using the JSON-2 API, it is not possible to
-chain multiple calls inside a single transaction. It means that one must be cautious when doing
-multiple consecutive calls, as the database might be modified by other concurrent transactions. This
-is especially dangerous when doing operations related to reservations, payments, and the such.
+case of success and is discarded in case of error. Using the JSON-2 API, it is not possible to chain
+multiple calls inside a single transaction. It means that one must be cautious when making multiple
+consecutive calls, as the database might be modified by other concurrent transactions. This is
+especially dangerous when performing operations related to reservations, payments, and such.
 
-The solution is to always call a single method that does all the related operations in a single
+The solution is to always call a single method that performs all the related operations in a single
 transaction. This way, the data is guaranteed to stay consistent: either everything is done
 (success, commit), or nothing is done (error, rollback).
 
-In the ORM, the ``search_read`` method is an example of a single method that does multiple
+In the ORM, the ``search_read`` method is an example of a single method that performs multiple
 operations (``search`` then ``read``) in a single transaction. If a concurrent request removes one
 of the records ``search`` retrieves, then there is a risk that subsequent calls to ``read`` fail for
-a missing record error. Such problem cannot occurs in ``search_read``, as the system guarantees
+a missing record error. Such a problem cannot occur in ``search_read``, as the system guarantees
 proper isolation between transactions.
 
-In business models those methods are often prefixed by ``action_``, such as
-``sale.order/action_confirm``, which verifies that a sale order is valid before confirming it.
+In business models, those methods are often prefixed by ``action_``, such as
+``sale.order``'s ``action_confirm`` method, which verifies that a sales order is valid before
+confirming it.
 
-When no method exists for a set of related operations, it is possible to create a new one in a
-dedicated module.
+When no method exists for a set of related operations, a new one can be created in a dedicated
+module.
 
 .. seealso::
+   - :doc:`Tutorial to create a module <../tutorials/server_framework_101>`
+   - PostgreSQL - Transaction Isolation - `Repeatable Read
+     <https://www.postgresql.org/docs/current/transaction-iso.html#XACT-REPEATABLE-READ>`_
 
-   :doc:`Tutorial to create a module <../tutorials/server_framework_101>`
-
-   PostgreSQL - Transaction Isolation - `Repeatable Read`_
-
-   .. _repeatable read: https://www.postgresql.org/docs/current/transaction-iso.html#XACT-REPEATABLE-READ
-
+.. _reference/external_api/code_example:
 
 Code Example
 ============
@@ -282,7 +286,6 @@ documentation is be available at https://mycompany.example.com/doc
       res_read.raise_for_status()
       names = res_read.json()
       print(names)
-
 
    .. code-tab:: javascript
 
@@ -351,7 +354,6 @@ documentation is be available at https://mycompany.example.com/doc
           --silent \
           --fail-with-body
 
-
 The above example is equivalent to running::
 
    Model = self.env["res.partner"].with_context({"lang": "en_US"})
@@ -364,12 +366,14 @@ then in a new transaction::
    names = records.read(["name"])
    return json.dumps(names)
 
+.. _reference/external_api/dynamic_doc:
 
 Dynamic Documentation
 =====================
 
 Under construction
 
+.. _reference/external_api/migration:
 
 Migrating from XML-RPC / JSON-RPC
 =================================
@@ -382,7 +386,6 @@ db (database) and object. All three services are deprecated.
 
    The other controllers ``@route(type='jsonrpc')`` (known until Odoo 18 as ``type='json'``) are not
    subject to this deprecation notice.
-
 
 Common service
 --------------
@@ -542,4 +545,3 @@ Using JSON-2:
            "load": None,
        },
    ).json()
-
