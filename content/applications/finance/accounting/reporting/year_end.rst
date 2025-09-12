@@ -47,7 +47,7 @@ Before closing a fiscal year, ensure that everything is accurate and up-to-date:
 - Confirm that all :doc:`vendor bills  <../vendor_bills>` have been created and confirmed.
 - Ensure the accuracy of all :doc:`expenses <../../expenses>` and validate them.
 - Check that all :doc:`received payments <../payments>` have been encoded and confirmed.
-- Close all :ref:`suspense accounts <accounting/bank/suspense>`.
+- Close all :ref:`suspense accounts <accounting/journals/bank-cash-cc>`.
 - Book all :doc:`depreciation <../vendor_bills/assets>` and :doc:`deferred revenue
   <../customer_invoices/deferred_revenues>` entries.
 
