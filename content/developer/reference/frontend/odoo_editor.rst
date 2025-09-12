@@ -124,8 +124,8 @@ There are three ways to filter commands:
    :ref:`command <reference/frontend/odoo_editor/powerbox/command>`'s
    `isDisabled` entry.
 #. The user can filter commands by simply typing text after opening the
-   Powerbox. It will fuzzy-match that text with the names of the categories and
-   commands.
+   Powerbox. It will fuzzy-match that text with the names, categories and
+   descriptions of the commands.
 
 .. image:: odoo_editor/powerbox-filtered.png
    :align: center
