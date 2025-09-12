@@ -15,12 +15,17 @@ reporting.
    .. card:: New employees
       :target: employees/new_employee
 
-      Set up new employee records
+      Set up new employee records.
 
    .. card:: Departments
       :target: employees/departments
 
       Create and manage the departments employees are a part of.
+
+   .. card:: Contracts
+      :target: payroll/contracts
+
+      Manage and create employee contracts.
 
    .. card:: Certifications
       :target: employees/certifications
