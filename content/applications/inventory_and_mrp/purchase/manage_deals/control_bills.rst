@@ -1,53 +1,41 @@
-=====================
-Bill control policies
-=====================
+================
+Control policies
+================
 
 .. _purchase/manage_deals/control-bills:
 
 .. |PO| replace:: :abbr:`PO (Purchase Order)`
 .. |POs| replace:: :abbr:`POs (Purchase Orders)`
 
-In Odoo's *Purchase* app, the *bill control* policy determines the quantities billed by vendors on
-every purchase order (PO), for either ordered or received quantities.
+In Odoo's **Purchase** app, the *Control Policy* determines the quantities billed by vendors on
+every purchase order (PO). For example, choosing *On ordered quantities* means the bill is based on
+ordered items, even if they have not been received yet.
 
-The policy selected in the *Purchase* app settings acts as the default value, and is applied to any
-new product created.
+The control policy is selected on the *Product* record.
 
 Configuration
 =============
 
-To configure the *bill control* policy, navigate to :menuselection:`Purchase app --> Configuration
---> Settings`, and scroll down to the :guilabel:`Invoicing` section. Under :guilabel:`Bill Control`,
-select either :guilabel:`Ordered quantities` or :guilabel:`Received quantities`. Then, click
-:guilabel:`Save`.
+To configure the control policy for a product, navigate to :menuselection:`Purchse app --> Prodcuts
+--> Products`, then click on a product record to open it. Click to the :guilabel:`Purchase` tab.
+Scroll to the :guilabel:`Vendor Bills` section. Under :guilabel:`Control Policy`, tick the radio
+button for either :guilabel:`On ordered quantities` or :guilabel:`On recieved quantities`.
 
-.. image:: control_bills/control-bills-selected-policy.png
-   :align: center
-   :alt: Selected bill control policy in Purchase app settings.
+- :guilabel:`On ordered quantities`: Creates a vendor bill as soon as a |PO| is confirmed. The
+  products and quantities in the |PO| are used to generate a draft bill.
+- :guilabel:`On received quantities`: A bill is created only *after* part of the total order has
+  been received. The products and quantities received are used to generate a draft bill. An error
+  message appears if creation of a vendor bill is attempted without receiving anything.
 
-- :guilabel:`Ordered quantities`: creates a vendor bill as soon as a |PO| is confirmed. The products
-  and quantities in the |PO| are used to generate a draft bill.
-- :guilabel:`Received quantities`: a bill is created only *after* part of the total order has been
-  received. The products and quantities received are used to generate a draft bill. An error message
-  appears if creation of a vendor bill is attempted without receiving anything.
+The default control policy for a product is determined by the :guilabel:`Product Type`:
 
-  .. image:: control_bills/control-bills-error-message-popup.png
-     :align: center
-     :alt: Bill control policy draft bill error message.
+- **Services**: The default control policy is *On ordered quantities*.
+- **Goods**: The default control policy is *On delivered quantities*
 
-.. note::
-   If a specific product should use a different control policy than selected in the *Purchase* app
-   settings, the :guilabel:`Bill Control` policy for that product can be changed from its product
-   form.
+Pay vendor bills with 3-way matching
+====================================
 
-   To do that, navigate to :menuselection:`Purchase app --> Products --> Products`, and select a
-   product. From the product form, click the :guilabel:`Purchase` tab. Under the :guilabel:`Vendor
-   Bills` section, modify the selection in the :guilabel:`Control Policy` field.
-
-3-way matching
-==============
-
-The *3-way matching* feature ensures vendor bills are only paid once some (or all) of the products
+The *3-way matching* feature ensures vendor bills are only paid once some, or all, of the products
 included in the |PO| have been received.
 
 To activate *3-way matching*, navigate to :menuselection:`Purchase app --> Configuration -->
@@ -55,15 +43,7 @@ Settings`, and scroll down to the :guilabel:`Invoicing` section. Then, tick the 
 :guilabel:`3-way matching` to enable the feature, and click :guilabel:`Save`.
 
 .. image:: control_bills/control-bills-three-way-matching.png
-   :align: center
    :alt: Enabled 3-way matching feature in Purchase app settings.
-
-.. important::
-   The :guilabel:`3-way matching` feature **only** works with the :guilabel:`Bill Control` policy
-   set to :guilabel:`Received quantities`.
-
-Pay vendor bills with 3-way matching
-------------------------------------
 
 When *3-way matching* is enabled, vendor bills display a :guilabel:`Should Be Paid` field under the
 :guilabel:`Other Info` tab. When a new vendor bill is created, the field is set to :guilabel:`Yes`,
@@ -78,18 +58,15 @@ Paid` field.
 
 .. important::
    The |PO| selected from the list **must not** be billed yet, or an :guilabel:`Invalid Operation`
-   pop-up window appears. This occurs for |POs| with a :guilabel:`Received quantities` policy, and a
-   :guilabel:`Fully Billed` :guilabel:`Billing Status`.
+   pop-up window appears.
 
    .. image:: control_bills/control-bills-invalid-operation.png
-      :align: center
       :alt: Invalid Operation pop-up window for billed Purchase Order.
 
 Click the drop-down menu next to :guilabel:`Should Be Paid` to view the available options:
 :guilabel:`Yes`, :guilabel:`No`, and :guilabel:`Exception`.
 
 .. image:: control_bills/control-bills-should-be-paid.png
-   :align: center
    :alt: Should Be Paid field status on draft vendor bill.
 
 .. note::
@@ -131,7 +108,6 @@ Orders --> Purchase Orders`, and select a |PO| to view.
 Click the :guilabel:`Other Information` tab, and locate the :guilabel:`Billing Status` field.
 
 .. image:: control_bills/control-bills-billing-status.png
-   :align: center
    :alt: Billing status field on a purchase order form.
 
 The table below details the different values the :guilabel:`Billing Status` field could read, and
