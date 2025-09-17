@@ -38,7 +38,7 @@ The following modules are automatically installed with the Mexican localization:
      - Includes all the technical and functional requirements to generate and validate
        :doc:`electronics documents <../accounting/customer_invoices/electronic_invoicing>` — based
        on the technical documentation published by the |SAT|. This allows you to send invoices (with
-       or without addedums) and payment complements to the government.
+       or without addendums) and payment complements to the government.
    * - :guilabel:`Odoo Mexican Localization Reports`
      - `l10n_mx_reports`
      - Adapts reports for Mexico's electronic accounting: chart of accounts, trial balance, and
@@ -67,7 +67,8 @@ if meeting a specific requirement for the business.
    * - :guilabel:`Mexico - Electronic Delivery Guide`
      - `l10n_mx_edi_stock`
      - Lets you create a *Carta Porte*: A bill of lading that proves to the government you are
-       sending goods between A & B with a signed electronic document.
+       sending goods between A & B with a signed electronic document. It will also install the
+       :doc:`Fleet <../../hr/fleet>` app.
    * - :guilabel:`Odoo Mexico Localization for Stock/Landing`
      - `l10n_mx_edi_landing`
      - Allows managing customs numbers related to landed costs in electronic documents.
@@ -83,14 +84,6 @@ if meeting a specific requirement for the business.
      - `l10n_mx_edi_website_sale`
      - Adds extra fields to the :doc:`eCommerce <../../websites/ecommerce>` module to comply with
        the Mexican electronic invoicing requirements
-   * - :guilabel:`Employees - Mexico`
-     - `l10n_mx_hr`
-     - Adds extra fields to the :doc:`Employees <../../hr/employees>` module to comply with local
-       information for employees.
-   * - :guilabel:`Mexico - Payroll with Accounting`
-     - `l10n_mx_hr_payroll_account`
-     - Adds the required rules and parameters to manage local payroll calculation with the
-       :doc:`Payroll <../../hr/payroll>` app.
 
 .. _l10n/mx/video-tutorials:
 
@@ -298,8 +291,8 @@ IEPS breakdown
 ~~~~~~~~~~~~~~
 
 By default Odoo hides the |IEPS| in the invoices so that the subtotal on which the VAT is calculated
-includes the amount of |IEPS|, this is to ensure that Fiscal Regimes that don't require it, don't
-recieve it.
+includes the amount of |IEPS|, this is to ensure that Fiscal Regimes that do not require it, do not
+receive it.
 
 It is possible to make the |IEPS| visible in the XML by selecting the :guilabel:`IEPS Breakdown`
 checkbox inside each contact on the :guilabel:`Sales & Purchase` tab.
@@ -498,16 +491,25 @@ Credit notes
 
 While an invoice is a document type "I" (Ingreso), a credit note is a document type "E" (Egreso).
 
-The only addition to the :doc:`standard flow for credit notes
+An addition to the :doc:`standard flow for credit notes
 <../accounting/customer_invoices/credit_notes>` is that, as a requirement of the |SAT|, there has to
 be a relation between a credit note and an invoice through the fiscal folio.
 
 Because of this requirement, the field :guilabel:`CFDI Origin` adds this relation with a `01|`,
-followed by the fiscal folio of the original invoice.
+followed by the fiscal folio of the original :abbr:`UUID (universally unique identifier)`.
 
 .. tip::
    For the :guilabel:`CFDI Origin` field to be automatically added, use the :guilabel:`Add Credit
    Note` button from the invoice, instead of creating it manually.
+
+Generally credit notes reverse the main sales account defined in the journal, but it is also
+possible to globally assign an account to all credit notes. To do so, go to
+:menuselection:`Accounting --> Configuration --> Settings` and set the :guilabel:`Credit notes`
+account under the :guilabel:`Default Accounts` section.
+
+.. note::
+   On the default configuration, the credit notes account is set as :guilabel:`402.01.01 Returns,
+   discounts or bonuses over sales and/or services at the general rate`.
 
 .. _l10n/mx/vendor-bills:
 
@@ -521,9 +523,10 @@ bill **Must be in draft state** for the update to happen.
 
 .. tip::
    When clicking :guilabel:`Update SAT`, the :guilabel:`SAT status` field on the invoice will
-   confirm if the XML file is **Validated** in the |SAT|, this is also true for vendor bills.
+   confirm if the XML file is **Validated** by the |SAT|, this is also true for vendor bills.
 
-See also :doc:`../accounting/vendor_bills`
+.. seealso::
+   :doc:`../accounting/vendor_bills`
 
 .. _l10n/mx/payments:
 
@@ -694,7 +697,7 @@ tab.
 
    - The invoice is labeled as *No Cancelable* in the `SAT Website <https://www.sat.gob.mx/home>`_.
      due to the fact that it has a valid related document: Either another invoice linked with the
-     :guilabel:`CFDI Origin` field or a Payment Complemement. If so, you need to cancel any other
+     :guilabel:`CFDI Origin` field or a Payment Complement. If so, you need to cancel any other
      related document first.
    - The cancellation request is still being processed by the |SAT|. If so, wait a few minutes and
      try again.
@@ -815,8 +818,8 @@ product `Discounts`, make sure that it has a valid :guilabel:`Tax` (usually :gui
 `16%`).
 
 After this, create and sign the invoice via |CFDI|, and add the `Discounts` product at the bottom.
-In the XML the discount should be subtracted from the first invoice line available, Odoo will try to
-subtract from each line the total amount in order until all the discount has been applied.
+In the XML, Odoo will distribute the discount between the lines evenly, while any math differences
+will be added in a rounding product.
 
 .. tip::
    A `Discount` and `UNSPSC Product Category` for each product variant related to :guilabel:`Gift
@@ -829,11 +832,11 @@ Down payments
 
 A common practice in Mexico is the usage of :doc:`down payments
 <../../sales/sales/invoicing/down_payment>`. It's usage primarily consists of cases where you
-receive a payment for a good or service where either the product or the price (or both) hasn't been
-determinated at the moment.
+receive a payment for a good or service where either the product or the price (or both) has not been
+fully determined.
 
-The |SAT| allows two diferent ways to handle this process: both of them involve linking all invoices
-to each other with the :guilabel:`CFDI Origin` field.
+The |SAT| allows two different ways to handle this process: both of them involve linking all
+invoices to each other with the :guilabel:`CFDI Origin` field.
 
 .. note::
    For this process, the :doc:`Sales <../../sales>` app must be installed.
@@ -912,11 +915,11 @@ Addendas and complements can be included in the XML. To add one, go to :menusele
 injected. Additional fields beyond standard Odoo may be required.
 
 .. warning::
-   This section might require techincal knowledge as well as technical debt, it is recommended to
-   ask your account manager for the best technical assistance.
+   This section might require technical knowledge and may risk adding technical debt; it is
+   recommended to ask your account manager for the best technical advice.
 
 Once the desired nodes are created, they can be selected on each contact to make them appear on
-every invoice addressed to that contact. By default all the selected nodes will be added
+every invoice addressed to that contact. By default, all the selected nodes will be added
 automatically on every invoice.
 
 It is also possible to just select the nodes as needed on every invoice by selecting the
@@ -1348,13 +1351,14 @@ and creating global invoices.
 Point of sale flow
 ------------------
 
-Other than the standard :doc:`Point of Sale configuration
-<../../sales/point_of_sale/configuration>`, the only requirement for the Mexican localization is the
-additional fact that each payment method needs to be configured with a correct :guilabel:`Payment
-Way`.
+On top of the standard :doc:`Point of Sale configuration <../../sales/point_of_sale/configuration>`,
+the Mexican localization requires each payment method to be configured with a correct
+:guilabel:`Payment Way` as well as a :guilabel:`Re-invoicing account` to handle the accounting for
+invoices with the invoicing portal.
 
 .. tip::
-   By default Odoo creates preconfigured payment methods for cash, credit card, and debit card.
+   By default, Odoo creates pre-configured payment methods for cash, credit card, and debit card and
+   assigns the :guilabel:`402.04.01 Re-invoicing` account as default for re-invoicing.
 
 While selling on the **Point of Sale**, click the :guilabel:`Customer` button to either create or
 select a customer. Here it is possible to review customer invoicing information (such as the |RFC|
@@ -1406,6 +1410,10 @@ URL. To do so, follow these steps:
 Customers who scan this QR code or follow the URL will access to a menu where they can add their
 fiscal information, including the *Usage* and *Fiscal Regime* once they enter the five digit code
 that is also provided on the receipt.
+
+On the journal entries of the session, the previously selected **Re-invoicing account** will be used
+to handle reversals of the sales entries when invoices are requested as well as be used as a sales
+account for the new invoices.
 
 .. seealso::
    :doc:`../../sales/point_of_sale/receipts_invoices`
@@ -1521,8 +1529,8 @@ goods.
 
 According to the `Annex 20 <http://omawww.sat.gob.mx/tramitesyservicios/Paginas/anexo_20.htm>`_ of
 CFDI 4.0, in documents where the invoiced goods come from a first-hand import operation, the
-:guilabel:`Customs Number` field, needs to be added to all lines of products involved with the
-operation.
+:guilabel:`Customs Number` field needs to be added to all lines of products involved with the
+operation, as does the date of the document.
 
 .. note::
    To do so, the :guilabel:`Odoo Mexico Localization for Stock/Landing` `l10n_mx_edi_landing` module
@@ -1542,23 +1550,34 @@ In order to track the correct customs number for a specific invoice, Odoo uses :
 :menuselection:`Inventory --> Configuration --> Settings`, and in the :guilabel:`Valuation` section,
 make sure that :guilabel:`Landed Costs` is activated.
 
-Begin by creating a **service-type** product called, `Pedimento`. In the :guilabel:`Purchase` tab,
-activate :guilabel:`Is a Landed Cost`, and select a :guilabel:`Default Split Method`.
+.. Tip::
+   It is recommended to add a :guilabel:`Default Journal` to automatically fill the mandatory
+   :guilabel:`Journal` field on landed costs even though landed costs that only add customs numbers
+   without adding :guilabel:`Additional Costs` do not create journal entries.
 
-Then, configure the **goods-type** products that hold the customs numbers. To do so, create the
-products, and make sure the :guilabel:`Product Category` has the following configuration:
+Configure the **goods-type** products that hold the customs numbers. To do so, create the products
+and complete these three requirements:
+
+- :guilabel:`Tracking` **must** be set to either :guilabel:`By Lots` or :guilabel:`By Unique Serial
+  Number` but **not** :guilabel:`By Quantity`.
+- :guilabel:`Invoicing Policy` **must** be set to :guilabel:`Delivered quantities`.
+- :doc:`Valuation by lots/serial numbers
+  <../../inventory_and_mrp/inventory/product_management/inventory_valuation/valuation_by_lots>`
+  **must** be enabled.
+
+This will make the field :guilabel:`Customs invoicing` available on the :guilabel:`Accounting` tab.
+Enable the field to use customs numbers with this product.
+
+It is important to make sure the product has a :guilabel:`Product Category` and has the following
+configuration:
 
 - :guilabel:`Costing Method`: Either :guilabel:`FIFO` or :guilabel:`AVCO`
-- :guilabel:`Inventory Valuation`: :guilabel:`Automated`
-- :guilabel:`Stock Valuation Account`: :guilabel:`115.01.01 Inventory`
-- :guilabel:`Stock Journal`: :guilabel:`Inventory Valuation`
-- :guilabel:`Stock Input Account`: :guilabel:`115.05.01 Goods in transit`
-- :guilabel:`Stock Output Account`: :guilabel:`115.05.01 Goods in transit`
+- :guilabel:`Inventory Valuation`: Either :guilabel:`Periodic` or :guilabel:`Perpetual`
 
 .. note::
-   Setting the :guilabel:`Inventory Valuation` to :guilabel:`Automated` requires first enabling the
-   feature. Go to :menuselection:`Accounting --> Configuration --> Settings`, and in the
-   :guilabel:`Stock Valuation` section, enable :guilabel:`Automatic Accounting`.
+   The feature works regardless of whether the :doc:`inventory valuation
+   <../../inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation>`
+   is set to either :guilabel:`Periodic (at closing)` or :guilabel:`Perpetual (at invoicing)`.
 
 .. image:: mexico/mx-landing-configuration.png
    :alt: Storable products general configuration.
@@ -1574,28 +1593,40 @@ After configuring the product, follow the standard :doc:`purchase flow
 
 Create a purchase order from :menuselection:`Purchase --> Orders --> Purchase Order`. Then, confirm
 the order to display a :guilabel:`Receipt` smart button. Click on the :guilabel:`Receipt` smart
-button and :guilabel:`Validate` the receipt.
+button, add the lots or serial numbers and :guilabel:`Validate`.
 
 Go to :menuselection:`Inventory --> Operations --> Landed Costs`, and create a new record. In the
-:guilabel:`Transfer`, add the receipt that was just validated, add the :guilabel:`Customs number`
-and in the :guilabel:`Additional Costs` tab, add the :guilabel:`Pedimento` product.
+:guilabel:`Transfer`, add the receipt that was just validated, and add the :guilabel:`Customs
+number`.
 
-Optionally, it is possible to add a cost amount. After this, :guilabel:`Validate` the landed cost.
-Once :guilabel:`Posted`, all products related to that receipt have the customs number assigned.
+.. tip::
+   While it is possible to add costs related to the customs number at this stage of the process, it
+   is highly recommended to create a landed cost from a vendor bill from your customs agent. Learn
+   more about :doc:`Landed Costs here
+   <../../inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs>`.
 
 .. warning::
-   The :guilabel:`Pedimento Number` field is not editable once it is set, so be careful when
-   associating the correct number with the transfer(s).
+   The :guilabel:`Customs number` field is not editable once it is set, and cannot be repeated,
+   however it is possible to fix the number on the lot or serial number later by selecting a
+   different landed cost.
 
 .. image:: mexico/mx-landing-inventory.png
    :alt: Customs number on a landed costs Inventory record.
 
+The customs number assigned to a specific lot or serial number can be found on the its registry on
+:menuselection:`Inventory --> Products --> Lots/Serial Numbers`. The :guilabel:`L10N Mx Edi Landed
+Cost` field can be edited at any time to fix any mistakes that could have occurred when registering
+the landed cost. Editing the :guilabel:`L10N Mx Edi Landed Cost` field automatically updates the
+:guilabel:`Customs number` and the name of the lot or serial number.
+
 Next, create a sales order and confirm it. Click on the :guilabel:`Delivery` smart button that
-appears, and :guilabel:`Validate` the delivery order.
+appears, and carefully review the assigned lots/serial numbers to make sure they are the desired
+values, after that :guilabel:`Validate` the delivery order.
 
 Finally, :ref:`create an invoice from the sales order <accounting/inv-process/so>`, and confirm it.
-The invoice line related to the product has a customs number on it. This number matches the customs
-number added in the landed cost record created earlier.
+The invoice lines are created according to the distribution of the delivery order, in cases where
+more than one customs number were selected, Odoo will split the invoice lines by quantity and
+customs numbers.
 
 .. image:: mexico/mx-landing-invoice.png
    :alt: Customs number on confirmed sales order product.
@@ -1605,8 +1636,8 @@ number added in the landed cost record created earlier.
 Delivery guide
 --------------
 
-A `Carta Porte <https://www.sat.gob.mx/consultas/68823/complemento-carta-porte->`_ is a bill of
-lading: a document that states the type, quantity, and destination of goods being carried.
+A `Carta Porte <https://www.sat.gob.mx/portal/public/tramites/complemento-carta-porte>`_ is a bill
+of lading: a document that states the type, quantity, and destination of goods being carried.
 
 On July 17th, 2024, version 3.1 of this |CFDI| was implemented for all transportation providers,
 intermediaries, and owners of goods. Odoo is able to generate a document type "T" (Traslado), which,
@@ -1618,11 +1649,15 @@ are treated as *Dangerous Hazards*.
 In order to print the PDF, the delivery order must be signed by the government and then it can be
 printed using the :guilabel:`Print Carta Porte` button on the delivery order.
 
-The PDF file contains a QR code to verify the CCP code for the authorities.
+.. tip::
+   The PDF file contains a QR code to verify the CCP code for the authorities.
 
 In order to transport goods between warehouses, the logistic route must contain a **Delivery** type
-of operation, see :doc:`Inter-warehouse replenishment
-<../../inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses>`
+of operation.
+
+.. seealso::
+   :doc:`Inter-warehouse replenishment
+   <../../inventory_and_mrp/inventory/warehouses_storage/replenishment/resupply_warehouses>`
 
 .. note::
    In order to use this feature, the :guilabel:`Mexico - Electronic Delivery Guide`
@@ -1649,8 +1684,8 @@ shipments or delivery orders
   <http://omawww.sat.gob.mx/cartaporte/Paginas/documentos/PreguntasFrecuentes_Autotransporte.pdf>`_.
 - :guilabel:`Federal Transport` is used when the :guilabel:`Distance to Destination` exceeds 30 km.
 
-Other than the standard requirements of regular invoicing (the |RFC| of the customer, the UNSPSC
-code, etc.), if you are using *No Federal Highways*, no external configuration is needed.
+For No Federal Highways, no other configuration is required beyond the standard requirements of
+regular invoicing (the |RFC| of the customer, the UNSPSC code, etc.).
 
 For *Federal Transport*, several configurations have to be added to contacts, vehicle setups, and
 products. Those configurations are then included in the XML and PDF files.
@@ -1664,28 +1699,35 @@ with the `Official SAT Catalog for Carta Porte
 <http://omawww.sat.gob.mx/tramitesyservicios/Paginas/catalogos_emision_cfdi_complemento_ce.htm>`_.
 
 .. tip::
-   The field, :guilabel:`Locality`, is optional for both addresses.
+   The :guilabel:`Locality` field is optional for both addresses.
 
 .. important::
    The origin address used for the delivery guide is set in :menuselection:`Inventory -->
    Configuration --> Warehouses`. While this is set as the company address by default, you can
    change it to your correct warehouse address.
 
-Another addition to this feature is the :guilabel:`Vehicle Setups` menu found in
-:menuselection:`Inventory --> Settings --> Vehicle Setups`. This menu lets you add all the
-information related to the vehicle used for the delivery order.
+This feature requires the use of :doc:`Fleet <../../hr/fleet/new_vehicle>` to manage vehicles. The
+vehicle setup is managed directly on the vehicle, and all the required fields are only visible after
+checking the :guilabel:`L10N Mx Is Freight Vehicle` field.
 
-All fields are mandatory to create a correct delivery guide.
+Checking the :guilabel:`L10N Mx Is Freight Vehicle` field displays the :guilabel:`MX Parameters` tab
+where the mandatory fields are required to create a correct delivery guide. Additionally the vehicle
+**must** contain a :guilabel:`License Plate`, a :guilabel:`Model Year`, and a :guilabel:`Driver`.
 
 .. tip::
-   The fields, :guilabel:`Vehicle Plate Number` and :guilabel:`Number Plate`, must contain between 5
+   The :guilabel:`Vehicle Plate Number` and :guilabel:`Number Plate` fields must contain between 5
    and 7 characters.
 
-In the :guilabel:`Intermediaries` section, add the operator of the vehicle. The only mandatory
-fields for this contact are the :guilabel:`VAT` and :guilabel:`Operator Licence`.
+The main driver of the vehicle is set directly on the :guilabel:`Driver` field, and it is possible
+to add more vehicle operators in the :guilabel:`Intermediaries` section. The only mandatory fields
+for driver contacts are the :guilabel:`VAT` and :guilabel:`Operator License`.
 
 .. image:: mexico/mx-delivery-guide-vehicle.png
    :alt: Delivery guide vehicle configuration.
+
+.. tip::
+   If the vehicle is rented or more intermediaries are required, it is possible to add them in the
+   :guilabel:`Intermediaries` field.
 
 Products
 ********
@@ -1695,18 +1737,19 @@ this, there are two extra configurations for products involved in delivery guide
 
 - The :guilabel:`Product Type` must be set as :guilabel:`Storable Product` for stock movements to be
   created.
-- In the :guilabel:`Inventory` tab, the field :guilabel:`Weight` must be more than `0`.
+- In the :guilabel:`Inventory` tab, the :guilabel:`Weight` field must be more than `0`.
 
 .. warning::
-   Creating a delivery guide of a product with the value `0` will trigger an error. As the
-   :guilabel:`Weight` has been already stored in the delivery order, it is needed to return the
-   products and create the delivery order (and delivery guide) again with the correct amounts.
+   Creating a delivery guide of a product with the :guilabel:`Weight` set to `0` will trigger an
+   error. As the :guilabel:`Weight` is immediately stored in the delivery order, it is then
+   necessary to return the products and recreate the delivery order (and delivery guide) with the
+   correct values.
 
 Sales and inventory flow
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-To create a delivery guide, first, first create and confirm a sales order from :menuselection:`Sales
---> Sales Order`. Click the :guilabel:`Delivery` smart button that is generated, and
+To create a delivery guide, first create and confirm a sales order from :menuselection:`Sales -->
+Sales Order`. Click the :guilabel:`Delivery` smart button that is generated, and
 :guilabel:`Validate` the transfer.
 
 After the status is set to :guilabel:`Done`, you can edit the transfer, and select the
@@ -1717,17 +1760,27 @@ click :guilabel:`Generate Delivery Guide`. The resulting XML can be found in the
 
 .. note::
    Other than the :guilabel:`UNSPSC` on all products, delivery guides that use :guilabel:`No Federal
-   Highways` do not require any special configuration to be sent to the government.
+   Highways` do not require any special configuration to be sent to the government, as they are a
+   type "T" CFDI with no delivery guide complement.
 
-If using the :guilabel:`Federal Transport` :guilabel:`Transport Type`, the tab :guilabel:`MX EDI`
-appears. There, enter a value in :guilabel:`Distance to Destination (KM)` greater than `0`, and
-select the :guilabel:`Vehicle Setup` used for this delivery.
+If using the :guilabel:`Federal Transport` :guilabel:`Transport Type`, the :guilabel:`Vehicle Setup`
+is displayed to be selected.
+The :guilabel:`Gross vehicle weight` is taken from the :guilabel:`Vehicle setup` configuration where
+it is possible to add additional :guilabel:`Extra weight` to account for the drivers and luggage.
 
-Finally, add a :guilabel:`Gross Vehicle Weight` and click :guilabel:`Generate Delivery Guide`.
+.. note::
+   Odoo will calculate the :guilabel:`Gross vehicle weight` with the following formula:
 
-.. tip::
-   Delivery Guides can also be created from :guilabel:`Receipts`, either from the Inventory app or
-   by the standard flow of the Purchase app.
+   .. math::
+      Gross vehicle weight = Vehicle weight + (Weight + Extra Weight) / 1000
+
+Every delivery requires a value in :guilabel:`Distance to Destination (KM)` greater than `0`.
+Finally, enter the :guilabel:`Delivery Date` and click :guilabel:`Generate Delivery Guide`.
+
+.. note::
+   By default the :guilabel:`Scheduled Date` is filled and represents the time at which the shipment
+   leaves the warehouse and the :guilabel:`Delivery Date` is the time that the shipment is expected
+   to arrive at its destination. These values are declared in both the XML and PDF.
 
 Dangerous hazards
 *****************
@@ -1749,8 +1802,8 @@ First, select the product from :menuselection:`Inventory --> Products --> Produc
    hazard (for example *01010101*). If it is not dangerous, enter `0` in the :guilabel:`Hazardous
    Material Designation Code` field.
 
-In :menuselection:`Inventory --> Settings --> Vehicle Setup`, complete the :guilabel:`Environment
-Insurer` and :guilabel:`Environment Insurance Policy` well. After this, continue with the regular
+In :guilabel:`MX Parameters`, complete the :guilabel:`Environment
+Insurer` and :guilabel:`Environment Insurance Policy` as well. After this, continue with the regular
 process to create a delivery guide.
 
 Imports and Exports
@@ -1774,9 +1827,9 @@ fields:
 - :guilabel:`Customs Document Identification`
 
 Then, when creating a :guilabel:`Delivery Guide` for a receipt where the :guilabel:`Customs Document
-Type` is :guilabel:`Pedimento`, two new fields appear: :guilabel:`Pedimento Number` and
+Type` is :guilabel:`Customs number`, two new fields appear: :guilabel:`Customs Number` and
 :guilabel:`Importer`.
 
 .. tip::
-   The field :guilabel:`Pedimento Number` should follow the pattern `xx xx xxxx xxxxxxx`. For
-   example, `15 48 3009 0001235` with **Two** spaces between text.
+   The field :guilabel:`Customs Number` should follow the pattern `xx xx xxxx xxxxxxx`. For example,
+   `15 48 3009 0001235` with **Two** spaces between text.
