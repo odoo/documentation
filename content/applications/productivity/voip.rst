@@ -123,6 +123,7 @@ VoIP workflows
 
    voip/onsip
    voip/axivox
+   voip/didww
    voip/voip_widget
    voip/devices_integrations
    voip/sales_calls
