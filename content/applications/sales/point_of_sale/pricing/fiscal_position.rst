@@ -27,7 +27,7 @@ Then, set a default fiscal position that should be applied to all sales in the s
 
 According to the :doc:`fiscal localization package <../../../finance/fiscal_localizations>`
 activated, several fiscal positions are preconfigured and can be set and used in POS. However, you
-can also :ref:`create new fiscal positions <fiscal_positions/mapping>`.
+can also :ref:`create new fiscal positions <fiscal_positions/configuration>`.
 
 .. note::
    If you do not set a fiscal position, the tax remains as defined in the **customer taxes** field
