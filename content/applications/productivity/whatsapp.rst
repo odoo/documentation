@@ -56,8 +56,8 @@ number), then Odoo will open a group chat with all operators responsible for thi
    `Magic Sheet - WhatsApp configuration [PDF]
    <https://drive.google.com/drive/folders/1hHEYq6jxmqKGFOeM3UQ7vOfiF7KuGX5W>`_
 
-WhatsApp configuration in a Meta
-================================
+WhatsApp configuration in Meta
+==============================
 
 A WhatsApp integration with Odoo uses a standard :abbr:`API (Application Programming Interface)`
 connection, and is configured on Meta in the following steps:
@@ -206,8 +206,8 @@ test message.
 
 .. note::
    If the browser is not on the :guilabel:`Quickstart` page for WhatsApp, navigate to
-   `<https://developers.facebook.com/apps>`_ and click on the app that is being configured, (the
-   app name is `Odoo` if the instructions above were followed).
+   `<https://developers.facebook.com/apps>`_ and click on the app that is being configured, (the app
+   name is `Odoo` if the instructions above were followed).
 
    Then, in the menu on the left-hand side of the page, click the :guilabel:`v (menu toggle)` icon
    next to the :guilabel:`WhatsApp` section heading. A small menu will open, containing the
@@ -410,8 +410,8 @@ depending on the verification method chosen. Enter that verification code into t
 :guilabel:`Verification code` field and click :guilabel:`Next` to finish.
 
 .. warning::
-   If a payment method has not been added, this is necessary to proceed. `Visit Meta's
-   documentation on how to add a payment method in Meta's Business Manager
+   If a payment method has not been added, this is necessary to proceed. `Visit Meta's documentation
+   on how to add a payment method in Meta's Business Manager
    <https://www.facebook.com/business/help/915454841921082?id=180505742745347>`_. This is part of
    Meta's fraud detection system, in order to ensure that the account/company are real a payment
    method is required to proceed.
@@ -460,6 +460,7 @@ permissions:
 - `business_management`
 - `whatsapp_business_messaging`
 - `whatsapp_business_management`
+- `whatsapp_business_manage_events`
 
 When permissions are set, click :guilabel:`Generate token`. Copy the token value that populates on
 the screen that follows.
@@ -548,10 +549,10 @@ action will apply to for this template.
 
 .. tip::
    These models can also be accessed in :ref:`developer mode <developer-mode>`. On a contact form
-   (or similar relevant form in Odoo), navigate to the model that is referenced, and hover over
-   any field name. A box of backend information will reveal itself with the specific Odoo
-   :guilabel:`Model` name in the backend. Search (using the front-end name) for this model in the
-   :guilabel:`Applies to` drop-down menu in the WhatsApp template.
+   (or similar relevant form in Odoo), navigate to the model that is referenced, and hover over any
+   field name. The backend information box displays the Odoo :guilabel:`Model` name. Search (using
+   the front-end name) for this model in the :guilabel:`Applies to` drop-down menu in the WhatsApp
+   template.
 
 .. warning::
    Often when changing the model or :guilabel:`Applies to` field, the :guilabel:`Phone Field` may
@@ -774,8 +775,7 @@ Enter the :guilabel:`Name` of the template and then select the :guilabel:`Langua
 template.
 
 .. note::
-   Multiple languages can be selected by typing the language names and selecting the other
-   languages as needed.
+   Multiple languages can be selected.
 
 .. image:: whatsapp/template-config.png
    :alt: Template configuration options listed, with Marketing, Utility, Name and Language
