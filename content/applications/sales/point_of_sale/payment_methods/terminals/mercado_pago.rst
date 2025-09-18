@@ -6,7 +6,7 @@ Connecting a payment terminal allows you to offer a fluid payment flow to your c
 the work of your cashiers.
 
 .. important::
-   Only **Point Smart** payment terminals in **Argentina**, **Brazil**, and **Mexico** are
+   Only **Point Smart** payment terminals in **Argentina**, **Colombia**, **Peru**, **Chile**, **Uruguay**, **Brazil**, and **Mexico** are
    supported. They can be purchased on `Mercado Pago's website
    <https://www.mercadopago.com.mx/herramientas-para-vender/lectores-point>`_.
 
