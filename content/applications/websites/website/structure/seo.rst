@@ -65,21 +65,8 @@ keywords to drive your web traffic. The more keywords are present on your webpag
 .. tip::
    It is strongly recommended to only use one H1 title per page for SEO.
 
-Image for social share
-----------------------
-
-When you share your page on social media, your logo image is selected, but you can upload any other
-image by clicking the upward arrow.
-
-.. Note::
-   - The :guilabel:`Social Preview` card displays how the page's information would appear when
-     shared.
-   - If you change the title of a blog post or the name of a product, the changes apply
-     automatically everywhere on your website. The old link still functions when external websites
-     use a :ref:`301 redirect <website/pages/URL-redirection>`, maintaining the SEO link juice.
-
 Images
-======
+------
 
 The size of images has a significant impact on page speed, which is an essential criterion for
 search engines to optimize SEO ranking.
@@ -97,39 +84,56 @@ efficiently.
 **To modify an image** from your website, select the image, click :guilabel:`Edit`, then go to the
 :guilabel:`Customize` tab, and adapt the :guilabel:`Format` in the :guilabel:`Image` section.
 
-.. image:: seo/image-format.png
-   :alt: automated image compression
-
 .. important::
    Alt tags are used to provide context to what an image is displaying, informing search engine
    crawlers and allowing them to index an image correctly. Adding alt tags keywords in the
    :guilabel:`Description` field is essential from an SEO perspective. This description is added to
    the HTML code of your image, and it is shown when the image cannot be displayed.
 
-Advanced features
-=================
+Image for social share
+~~~~~~~~~~~~~~~~~~~~~~
 
-Structured data markup
-----------------------
+When you share your page on social media, your logo image is selected, but you can upload any other
+image by clicking the upward arrow.
 
-Structured data markup is used to generate rich snippets in search engine results. It is a way for
-websites to send structured data to search engine robots, helping them understand your content and
-create well-presented search results.
+.. Note::
+   - The :guilabel:`Social Preview` card displays how the page's information would appear when
+     shared.
+   - If you change the title of a blog post or the name of a product, the changes apply
+     automatically everywhere on your website. The old link still functions when external websites
+     use a :ref:`301 redirect <website/pages/URL-redirection>`, maintaining the SEO link juice.
 
-By default, Google supports many `rich snippets <https://developers.google.com/search/blog/2009/05/introducing-rich-snippets>`_
-for content types, including Reviews, People, Products, Businesses, Events, and Organizations.
+Sitemap
+=======
 
-Microdata is a set of tags, introduced with HTML5, that help search engines better understand your
-content and display it in a relevant way. Odoo implements microdata as defined in the schema.org
-`specification <https://schema.org/docs/gs.html>`_ for events, eCommerce products, forum posts, and
-contact addresses. This allows your product pages to be displayed in Google using extra information
-like the price and rating of a product:
+The sitemap points out website pages and their relation to each other to search engine robots. Odoo
+generates a `/sitemap.xml` file, including all URLs. For performance reasons, this file is cached
+and updated every 12 hours.
 
-.. image:: seo/data-markup.png
-   :alt: snippets in search engine results
+.. note::
+   If your website has a lot of pages, Odoo automatically creates a Sitemap Index file, respecting
+   the `sitemaps.org protocol <http://www.sitemaps.org/protocol.html>`_, grouping sitemap URLs in
+   45000 chunks per file.
+
+Every sitemap entry has three attributes that are computed automatically:
+
+- `<loc>`: the URL of a page.
+- `<lastmod>`: last modification date of the resource, computed automatically based on the related
+  object. For a page related to a product, this could be the last modification date of the product
+  or the page.
+- `<priority>`: modules may implement their priority algorithm based on their content (for example,
+  a forum might assign a priority based on the number of votes on a specific post). The priority of
+  a static page is defined by its priority field, which is normalized (16 is the default).
+
+.. tip::
+   To prevent pages from appearing in a sitemap, go to :menuselection:`Site --> Properties`, and
+   toggle off the :guilabel:`Indexed` feature.
+
+     .. image:: seo/page-properties.png
+        :alt: toggle off the “Indexed” field
 
 robots.txt
-----------
+==========
 
 A `robots.txt` file instructs search engine crawlers which parts of a website they are permitted to
 access. Its primary purpose is to:
@@ -148,7 +152,7 @@ creates one robot.txt file available on `mydatabase.odoo.com/robots.txt`.
    :ref:`Cloudflare <domain-name/naked/cloudflare>` on your custom domain.
 
 Edit robots.txt
-~~~~~~~~~~~~~~~
+---------------
 
 By editing a robots.txt file, you can control which site pages are accessible to search engine
 crawlers. To add custom instructions to the file, go to :menuselection:`Website --> Configuration
@@ -163,6 +167,45 @@ crawlers. To add custom instructions to the file, go to :menuselection:`Website 
    will not be indexed**. A page can still appear in search results if it is linked to from other
    crawled pages (indexed by "reference"). Google generally does not recommend using robots.txt to
    block webpages that you wish to keep out of search results entirely.
+
+Indexation
+==========
+
+Website indexation is the process by which search engines, such as Google, discover, analyze, and
+store information about a website's content in their database. Search engine bots, known as crawlers
+or spiders, visit web pages and follow links to collect data, including text, images, and other
+media. The purpose of indexation is to make a website's content searchable and discoverable to
+users. Without being indexed, a website or a specific page on that site will not appear in search
+engine results, regardless of how relevant or well-designed it is. Indexation is a fundamental step
+in :abbr:`SEO (Search Engine Optimization)`, serving as the foundation for a website's visibility
+and organic traffic.
+
+.. note::
+   **When creating your Odoo website, this one will not appear directly on search engines.** Your
+   previous website may still appear instead of the new one. Google controls the indexing process,
+   which can take several days or weeks. You can connect Search Console through Odoo settings and
+   request indexing for specific URLs, though this does not guarantee faster results.
+
+SEO impact when migrating your existing website to Odoo
+-------------------------------------------------------
+
+In most cases, migrating to Odoo will not negatively impact your SEO. While no platform can
+guarantee that rankings will remain unchanged, following best practices significantly reduces the
+risk.
+
+To preserve your SEO:
+
+- Keep your existing content.
+
+- Implement :ref:`redirects <website/pages/URL-redirection>` from old URLs to their new counterparts.
+
+- Monitor traffic and indexation to make sure that everything is going well, using :doc:`../configuration/google_search_console`.
+
+By following all these steps, search engines can properly index your site and maintain your
+visibility.
+
+.. note::
+   It is normal to experience a traffic decrease in the firsts days.
 
 Prevent a page from being indexed
 ---------------------------------
@@ -191,34 +234,42 @@ methods:
    - :doc:`../configuration/google_search_console`
    - :doc:`pages`
 
-Sitemap
--------
+Prevent the website of a test database from appearing in search results
+-----------------------------------------------------------------------
 
-The sitemap points out website pages and their relation to each other to search engine robots. Odoo
-generates a `/sitemap.xml` file, including all URLs. For performance reasons, this file is cached
-and updated every 12 hours.
+To prevent a test database website from appearing in search engine results, add any placeholder
+value in the domain field. Go to :menuselection:`Configuration --> Settings`, then in
+the :guilabel:`Website Info` section, add a random value in the :guilabel:`Domain` field. Doing so
+automatically inserts the following tag into the page source:
 
-.. note::
-   If your website has a lot of pages, Odoo automatically creates a Sitemap Index file, respecting
-   the `sitemaps.org protocol <http://www.sitemaps.org/protocol.html>`_, grouping sitemap URLs in
-   45000 chunks per file.
+.. code-block:: html
 
-Every sitemap entry has three attributes that are computed automatically:
+       <meta name="robots" content="noindex"/>
 
-- `<loc>`: the URL of a page.
-- `<lastmod>`: last modification date of the resource, computed automatically based on the related
-  object. For a page related to a product, this could be the last modification date of the product
-  or the page.
-- `<priority>`: modules may implement their priority algorithm based on their content (for example,
-  a forum might assign a priority based on the number of votes on a specific post). The priority of
-  a static page is defined by its priority field, which is normalized (16 is the default).
+This tag instructs search engines not to index the site. After applying the change, it may take
+several days or weeks for search engines to update their results and remove the test website.
 
-.. tip::
-   To prevent pages from appearing in a sitemap, go to :menuselection:`Site --> Properties`, click
-   the :guilabel:`Publish` tab, and turn off the :guilabel:`Indexed` feature.
+Advanced features
+=================
 
-     .. image:: seo/page-properties.png
-        :alt:  disabling the “Indexed” checkbox
+Structured data markup
+----------------------
+
+Structured data markup is used to generate rich snippets in search engine results. It is a way for
+websites to send structured data to search engine robots, helping them understand your content and
+create well-presented search results.
+
+By default, Google supports many `rich snippets <https://developers.google.com/search/blog/2009/05/introducing-rich-snippets>`_
+for content types, including Reviews, People, Products, Businesses, Events, and Organizations.
+
+Microdata is a set of tags, introduced with HTML5, that help search engines better understand your
+content and display it in a relevant way. Odoo implements microdata as defined in the schema.org
+`specification <https://schema.org/docs/gs.html>`_ for events, eCommerce products, forum posts, and
+contact addresses. This allows your product pages to be displayed in Google using extra information
+like the price and rating of a product:
+
+.. image:: seo/rich-snippet.png
+   :alt: snippets in search engine results
 
 Hreflang HTML tags
 ------------------
