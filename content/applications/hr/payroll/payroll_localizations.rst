@@ -93,7 +93,7 @@ Payroll localization modules are available for the countries listed below.
 - Switzerland
 - Türkiye
 - :doc:`United Arab Emirates <payroll_localizations/united_arab_emirates>`
-- United States
+- :doc:`United States <payroll_localizations/united_states>`
 
 .. toctree::
    :titlesonly:
@@ -104,4 +104,5 @@ Payroll localization modules are available for the countries listed below.
    payroll_localizations/hong_kong
    payroll_localizations/jordan
    payroll_localizations/united_arab_emirates
+   payroll_localizations/united_states
    payroll_localizations/employment_hero
