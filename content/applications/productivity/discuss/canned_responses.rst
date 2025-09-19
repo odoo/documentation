@@ -52,7 +52,7 @@ To :ref:`share <discuss/sharing-responses>` this response with other users, sele
 groups in the :guilabel:`Authorized Group` field that should have access.
 
 .. warning::
-   If the :guilabel:`Authorized Group` field is left blank, the response can **only** be used by the
+   If the :guilabel:`Authorized Group` field is set as :guilabel:`🔒 Private`, the response can **only** be used by the
    user that created it.
 
    Canned responses created by the database are automatically credited as created by *OdooBot*. They
