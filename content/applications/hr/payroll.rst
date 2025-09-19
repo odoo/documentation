@@ -901,6 +901,7 @@ form.
    - :doc:`payroll/batches`
    - :doc:`payroll/commissions`
    - :doc:`payroll/reporting`
+   - :doc:`payroll/headcount`
    - :doc:`payroll/work_entry_analysis`
    - :doc:`payroll/payroll_localizations`
 
@@ -915,5 +916,6 @@ form.
    payroll/batches
    payroll/commissions
    payroll/reporting
+   payroll/headcount
    payroll/work_entry_analysis
    payroll/payroll_localizations
