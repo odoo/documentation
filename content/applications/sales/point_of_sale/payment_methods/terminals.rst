@@ -26,6 +26,7 @@ To activate a payment terminal and allow processing payments with it, follow the
    - :doc:`Adyen <terminals/adyen>`
    - :doc:`Ingenico <terminals/ingenico>`
    - :doc:`Mercado Pago <terminals/mercado_pago>`
+   - :doc:`Pine Labs <terminals/pine_labs>`
    - :doc:`Razorpay <terminals/razorpay>`
    - :doc:`SIX <terminals/six>`
    - :doc:`Stripe <terminals/stripe>`
@@ -57,6 +58,7 @@ Once the transaction is successful, the payment is automatically validated in Po
    terminals/adyen
    terminals/ingenico
    terminals/mercado_pago
+   terminals/pine_labs
    terminals/razorpay
    terminals/six
    terminals/stripe
