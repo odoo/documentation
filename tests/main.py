@@ -18,20 +18,23 @@ CUSTOM_RST_DIRECTIVES = [
 ]
 
 ADDITIONAL_CHECKERS = [
-    checkers.resource_files.check_resource_file_referenced
+    checkers.resource_files.check_image_size,
+    checkers.resource_files.check_image_color_depth,
+    checkers.resource_files.check_resource_file_name,
+    checkers.resource_files.check_resource_file_referenced,
 ]
 
 
 def run_additional_checks(argv=None):
     _enabled_checkers, args = sphinxlint.parse_args(argv)
     for path in chain.from_iterable(sphinxlint.walk(path, args.ignore) for path in args.paths):
-        if path.startswith('content') and not path.endswith('.rst'):
+        if 'content/' in path and not path.endswith('.rst'):  # Leave root and locale files alone.
             for checker in ADDITIONAL_CHECKERS:
                 checker(path)
 
 
 """
-The following checkers are selected for `make test`.
+The following built-in checkers are enabled for `make test`:
 - backtick-before-role: Search for roles preceded by a backtick.
 - bad-dedent: Check for mis-alignment in indentation in code blocks.
 - carriage-return: Check for carriage returns (\r) in lines.
@@ -55,13 +58,11 @@ The following checkers are selected for `make test`.
 - role-without-backticks: Search roles without backticks.
 - trailing-whitespace: Check for trailing whitespaces at end of lines.
 - unbalanced-inline-literals-delimiters: Search for unbalanced inline literals delimiters.
----
-- all the checkers defined in checkers/* files.
 
-The following checkers are only selected for `make review`.
-- line-too-long: Check for line length.
+All the custom checkers defined in checkers/* files are also enabled, except for the following ones,
+which are only enabled for `make review`:
+- line-too-long: Check for line lengths.
 - early-line-break: Check for early line breaks.
-
 """
 if __name__ == '__main__':
     # Patch sphinxlint's global constants to include our custom directives and parse their content.
@@ -87,10 +88,5 @@ if __name__ == '__main__':
         if os.getenv('REVIEW') == '1':  # Enable checkers for `make review`.
             setattr(sphinxlint.check_line_too_long, 'enabled', True)
             setattr(checkers.rst_style.check_early_line_breaks, 'enabled', True)
-            ADDITIONAL_CHECKERS.extend([
-                checkers.resource_files.check_image_size,
-                checkers.resource_files.check_image_color_depth,
-                checkers.resource_files.check_resource_file_name,
-            ])
         run_additional_checks()
         sys.exit(sphinxlint.main())
