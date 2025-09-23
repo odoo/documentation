@@ -940,7 +940,7 @@ Grid tables represent the rendered table and are more visual to work with.
 .. _contributing/rst/code-blocks:
 
 Code blocks
-===========
+==========
 
 Use the `code-block` directive to show example code. Specify the language (e.g., python, xml, etc.)
 to format the code according to the language's syntax rules.
