@@ -11,11 +11,11 @@ regions are supported by DIDWW's services.
 DIDWW setup
 ===========
 
-After verifying country coverage and avaiabilty, create an account with `DIDWW
+After verifying country coverage and availability, create an account with `DIDWW
 <https://www.didww.com/>`_. Then navigate to the `DIDWW Dashboard
 <https://my.didww.com/#/dashboard>`_.
 
-To transfer existing numbers from an existing telephone network servicer provider, follow the steps
+To transfer existing numbers from an existing telephone network service provider, follow the steps
 outlined on the `DIDWW website <https://doc.didww.com/phone-numbers/number-porting/index.html>`_.
 
 Purchase new numbers
@@ -51,7 +51,7 @@ Configure or add the following parameters:
 
 - :guilabel:`Allowed Codecs`: `OPUS`, `PCMU`, `PCMA`, `telephone-event`, `g722`, `g729`.
 - :guilabel:`Allowed media types`: `SRTP-DTLS`
-- :guilabel:`Default media type`: `STRP-DTLS`
+- :guilabel:`Default media type`: `SRTP-DTLS`
 - :guilabel:`Transport protocol`: `UDP`, `TCP`, `WSS`, `TLS`
 
 .. image:: didww/sip-device-route.png
@@ -59,8 +59,8 @@ Configure or add the following parameters:
 
 .. tip::
    If no phone number available from drop-down selection in *Inbound and Outbound DID/Caller ID*
-   selection, the :guilabel:`Inbounch voice trunk` needs to be modified. Navigate to the dashboard,
-   then click :guilabel:`My Numbers`. Scroll to :guilabel:`Configuration`.In the :guilabel:`Inbound
+   selection, the :guilabel:`Inbound voice trunk` needs to be modified. Navigate to the dashboard,
+   then click :guilabel:`My Numbers`. Scroll to :guilabel:`Configuration`. In the :guilabel:`Inbound
    voice trunk` field, select :guilabel:`phone.systems`.
 
 Odoo setup
@@ -75,10 +75,10 @@ Under :guilabel:`PBX Server IP`, enter `sip.phone.systems`.
 .. image:: didww/new-provider.png
    :alt: The VoIP providers page in Odoo.
 
-To configure a user's VoIP provider, click the user avatar in the top-right of the database, then
-click :guilabel:`My Profile`. Click into the :guilabel:`VoIP` tab, then under the :guilabel:`Voip
-Provider` field, select :guilabel:`DIDWW`. Finally, enter the :guilabel:`Voip Username` and
-:guilabel:`Voip Secret`, then save.
+To configure a user's VoIP provider, click the user avatar icon in the top-right corner of the
+database, and then choose :guilabel:`My Preferences` from the sub-menu. Then click into the
+:guilabel:`VoIP` tab, and under the :guilabel:`Voip Provider` field, select :guilabel:`DIDWW`.
+Finally, enter the :guilabel:`Voip Username` and :guilabel:`Voip Secret`, then save.
 
 .. image:: didww/odoo-credentials.png
    :alt: DIDWW provider, username, and secret credentials entered.
