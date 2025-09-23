@@ -75,10 +75,10 @@ Under :guilabel:`PBX Server IP`, enter `sip.phone.systems`.
 .. image:: didww/new-provider.png
    :alt: The VoIP providers page in Odoo.
 
-To configure a user's VoIP provider, click the user avatar in the top-right of the database, then
-click :guilabel:`My Preferences`. Click into the :guilabel:`VoIP` tab, then under the :guilabel:`Voip
-Provider` field, select :guilabel:`DIDWW`. Finally, enter the :guilabel:`Voip Username` and
-:guilabel:`Voip Secret`, then save.
+To configure a user's VoIP provider, click the user avatar icon in the top-right corner of the
+database, and then choose :guilabel:`My Preferences` from the sub-menu. Then click into the
+:guilabel:`VoIP` tab, and under the :guilabel:`Voip Provider` field, select :guilabel:`DIDWW`.
+Finally, enter the :guilabel:`Voip Username` and :guilabel:`Voip Secret`, then save.
 
 .. image:: didww/odoo-credentials.png
    :alt: DIDWW provider, username, and secret credentials entered.
