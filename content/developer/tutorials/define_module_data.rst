@@ -28,8 +28,7 @@ more...
 Demo Data
 ---------
 
-In additional to master data, which are requirements for a module to work properly, we also like
-having data for demonstration purposes:
+In addition to master data, which is required for a module to work properly, we can also provide data for demonstration purposes:
 
 * Help the sales representatives make their demos quickly.
 * Have a set of working data for developers to test new features and see how these new features look
