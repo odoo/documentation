@@ -19,7 +19,7 @@
 3. See [this guide](https://www.odoo.com/documentation/latest/contributing/documentation.html)
    for more detailed instructions.
 
-Optional: place your local copy of the `odoo/odoo` and `odoo/upgrade-util` repositories in
+Optional: Place your local copy of the `odoo/odoo` and `odoo/upgrade-util` repositories in
 the parent directory or in the root directory of the documentation to build the latter
 with the documented Python docstrings.
 
