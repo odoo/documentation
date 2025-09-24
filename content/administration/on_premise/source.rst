@@ -300,7 +300,7 @@ Dependencies
 
             .. code-block:: console
 
-               $ sudo apt install python3-pip libldap2-dev libpq-dev libsasl2-dev
+               $ sudo apt install python3-pip libcairo2-dev libldap2-dev libpq-dev libsasl2-dev
 
             Odoo dependencies are listed in the :file:`requirements.txt` file located at the root of
             the Odoo Community directory.
