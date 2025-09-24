@@ -14,6 +14,8 @@ Discover our user guides and configuration tutorials per application.
 .. toctree::
     :maxdepth: 2
 
+    applications/tests
+    applications/tests_no_h1
     applications/essentials
     applications/finance
     applications/sales
