@@ -746,7 +746,7 @@ database option.
 
 .. code-block:: console
 
-   $ odoo-bin --addons-path <PATH,...>  neutralize -d <database>
+   $ odoo-bin --addons-path=<PATH,...>  neutralize -d <database>
 
 .. option:: -d <database, --database <database>
 
