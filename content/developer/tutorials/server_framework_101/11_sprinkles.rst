@@ -516,4 +516,4 @@ Looking good? If not, don't worry, the :doc:`next chapter
 <12_inheritance>` doesn't require stat buttons ;-)
 
 .. _order_by:
-    https://www.postgresql.org/docs/12/queries-order.html
+    https://www.postgresql.org/docs/15/queries-order.html
