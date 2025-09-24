@@ -211,7 +211,7 @@ It is also worth noting that a computed field can depend on another computed fie
 smart enough to correctly recompute all the dependencies in the right order... but sometimes at the
 cost of degraded performance.
 
-In general performance must always be kept in mind when defining computed fields. The more
+In general, performance must always be kept in mind when defining computed fields. The more
 complex is your field to compute (e.g. with a lot of dependencies or when a computed field
 depends on other computed fields), the more time it will take to compute. Always take some time to
 evaluate the cost of a computed field beforehand. Most of the time it is only when your code
