@@ -10,7 +10,7 @@ Change hosting solution
 The instructions to change the hosting type of a database depend on the current solution used and to
 which solution the database should be moved.
 
-Transferring an on-premise database
+Transferring an on-premises database
 ===================================
 
 To Odoo Online
@@ -47,7 +47,7 @@ Transferring an Odoo Online database
 
 .. important::
    Odoo Online's :ref:`intermediary versions <supported_versions>` are not supported by Odoo.sh or
-   on-premise. Therefore, if the database to transfer is running an intermediary version, it must be
+   on-premises. Therefore, if the database to transfer is running an intermediary version, it must be
    upgraded first to the next :ref:`major version <supported_versions>`, waiting for its release if
    necessary.
 
@@ -64,7 +64,7 @@ Transferring an Odoo Online database
       the Customer Service Manager or `contact Odoo support <https://www.odoo.com/help>`_ to
       complete the subscription transfer.
 
-To on-premise
+To on-premises
 -------------
 
 #. Download a database backup by signing in to `the Odoo Online database manager
@@ -116,7 +116,7 @@ To Odoo Online
      switch from the Odoo.sh server to the Odoo Online servers.
    - Databases are **not reachable** during their migration.
 
-To on-premise
+To on-premises
 -------------
 
 #. Download a :ref:`backup of your Odoo.sh production database <odoo_sh_branches_backups>`.
