@@ -877,7 +877,7 @@ Symbols and Conventions
     - When defining *report* model (SQL views e.i.) : use
       ``<related_base_model>.report.<action>``, based on the Transient convention.
 
-- Odoo Python Class : use camelcase (Object-oriented style).
+- Odoo Python Class : use Pascal case (Object-oriented style).
 
 
 .. code-block:: python
@@ -886,7 +886,7 @@ Symbols and Conventions
         ...
 
 - Variable name :
-    - use camelcase for model variable
+    - use Pascal case for model variable
     - use underscore lowercase notation for common variable.
     - suffix your variable name with *_id* or *_ids* if it contains a record id or list of id. Don't use ``partner_id`` to contain a record of res.partner
 
@@ -1017,7 +1017,7 @@ Javascript coding guidelines
 - ``use strict;`` is recommended for all javascript files
 - Use a linter (jshint, ...)
 - Never add minified Javascript Libraries
-- Use camelcase for class declaration
+- Use Pascal case for class declaration
 
 More precise JS guidelines are detailed in the `github wiki  <https://github.com/odoo/odoo/wiki/Javascript-coding-guidelines>`_.
 You may also have a look at existing API in Javascript by looking Javascript
