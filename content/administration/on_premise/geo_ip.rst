@@ -47,7 +47,7 @@ request IP address. To do so:
 
    .. code-block:: xml
 
-       <h1 class="text-center" t-esc="request.geoip.country.name or 'geoip failure'"/>
+       <h1 class="text-center" t-out="request.geoip.country.name or 'geoip failure'"/>
 
 #. Save and refresh the page.
 
