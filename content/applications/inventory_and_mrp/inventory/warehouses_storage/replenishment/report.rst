@@ -119,8 +119,8 @@ In each line of the replenishment report, clicking the :icon:`fa-info-circle` :g
 icon opens the :guilabel:`Replenishment Information` pop-up window, which displays the *lead times*
 and *forecasted date*.
 
-For detailed information on how to use this feature for replenishment, go to the :ref:`Just in time
-logic <inventory/warehouses_storage/just-in-time>` section.
+For detailed information on how to use this feature for replenishment, go to the :doc:`just-in-time
+<just_in_time>` section.
 
 Select a warehouse
 ------------------

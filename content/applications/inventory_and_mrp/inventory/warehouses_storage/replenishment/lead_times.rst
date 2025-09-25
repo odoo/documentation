@@ -168,8 +168,8 @@ confirm a request for quotation (RFQ) and when to expect the goods.
      - Arrival date of the products. Calculated by *Order Deadline* + *Vendor Lead Time*
 
 In addition, Odoo has global security lead times, which are buffers that widen the
-:ref:`just-in-time <inventory/warehouses_storage/just-in-time>` (JIT) forecast window. The security
-lead times affect **only** replenishment methods that use :doc:`pull rules
+:doc:`just-in-time <just_in_time>` (JIT) forecast window. The security lead times affect **only**
+replenishment methods that use :doc:`pull rules
 <../../shipping_receiving/daily_operations/use_routes>`—for example :doc:`reordering rules
 <reordering_rules>` or :doc:`make to order (MTO) <mto>`. They do not change the interval between
 *Order Deadline* and *Expected Arrival*.
