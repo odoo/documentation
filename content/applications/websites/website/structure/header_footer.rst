@@ -7,6 +7,8 @@ the :ref:`menu <website/header_footer/header-content>`, the search bar, the sign
 button, etc. The footer is displayed at the bottom of a web page and usually contains information
 such as contact details, links, legal notices, and other options.
 
+.. _website/header_footer/header-design:
+
 Header design
 =============
 
@@ -149,6 +151,8 @@ editor, then, in the :guilabel:`Mega Menu` section:
 - Pick the :guilabel:`Size`: either :guilabel:`Full-Width` or :guilabel:`Narrow`.
 
 To finalize changes, click on :guilabel:`Save`.
+
+.. _website/header_footer/footer-design:
 
 Footer design
 =============
