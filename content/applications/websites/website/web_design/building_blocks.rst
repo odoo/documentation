@@ -112,6 +112,47 @@ new (or any other) field on the form, select the field, then use the options ava
 
 Once you have made the desired changes, click :guilabel:`Save`.
 
+Add an Odoo contact form on a non-Odoo website
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can display an Odoo contact form on another website using an iframe. Follow these steps:
+
+- **Prepare the Odoo form**
+
+Create a contact form in Odoo removing the header and footer. Delete all information on the page.
+
+
+- **Generate an iframe code**
+
+Use an iframe generator to create embeddable code like `La Digitale.dev <https://ladigitale.dev/digitools/generateur-iframe>`_
+or `iFrame Generator <https://www.iframe-generator.com/>`_ . Copy the URL of the Odoo form page and
+paste it into the generator. Adjust the width and height for proper display.
+
+
+- **Add the iframe to the non-Odoo website**
+
+Provide the generated iframe code to the webmaster of this website. If you are editing the website
+yourself: open the page’s HTML (in the code editor or CMS) and insert the iframe code at the
+position where the form should be displayed.
+
+.. example::
+   Example of iframe code:
+
+   .. code-block:: html
+
+       <iframe src="https://example.com/odoo-form"
+               style="border:0;"
+               name="odooForm"
+               scrolling="no"
+               frameborder="0"
+               marginheight="0"
+               marginwidth="0"
+               height="400px"
+               width="600px"
+               allowfullscreen>
+        </iframe>
+
+
 .. _website/building_blocks/embed_code:
 
 Embed code
