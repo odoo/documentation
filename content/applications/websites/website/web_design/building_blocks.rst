@@ -52,7 +52,8 @@ Form
 ----
 
 The :guilabel:`Form` block is used to collect information from website visitors and create records
-in your database, if applicable.
+in your database, if applicable. To add a form to a website page, drag and drop the
+:guilabel:`Contact & Forms` category, then select the :guilabel:`Form block`.
 
 .. image:: building_blocks/form-block.png
    :alt: Example of a form block
@@ -111,6 +112,40 @@ new (or any other) field on the form, select the field, then use the options ava
 - Add an :ref:`animation <website/elements/animations>`.
 
 Once you have made the desired changes, click :guilabel:`Save`.
+
+Add an Odoo contact form on a non-Odoo website
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can display an Odoo contact form on another website using an iframe. To do so, follow these
+steps:
+
+#. **Prepare the Odoo form:** Create a contact form on a page in Odoo Website and remove the
+   :ref:`header design <website/header_footer/header-design>` and the :ref:`footer design
+   <website/header_footer/footer-design>`. Make sure only the contact form remains on the page.
+#. **Generate an embeddable code:** Copy the URL of the Odoo form page and paste it into an iframe
+   generator, such as `La Digitale.dev <https://ladigitale.dev/digitools/generateur-iframe>`_ or
+   `iFrame Generator <https://www.iframe-generator.com/>`_ . Adjust the width and height for proper
+   display.
+#. **Add the embedded code to the non-Odoo website:** Open the relevant page’s HTML (in the code
+   editor or CMS) and insert the embedded code where the form should be displayed.
+
+.. example::
+   Example of an embedded code:
+
+   .. code-block:: html
+
+       <iframe src="https://example.com/odoo-form"
+               style="border:0;"
+               name="odooForm"
+               scrolling="no"
+               frameborder="0"
+               marginheight="0"
+               marginwidth="0"
+               height="400px"
+               width="600px"
+               allowfullscreen>
+        </iframe>
+
 
 .. _website/building_blocks/embed_code:
 
