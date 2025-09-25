@@ -383,8 +383,8 @@ While formatting the template differently would prevent such vulnerabilities.
 
     <div t-name="secure_template">
         <div id="information-bar">
-            <div class="info"><t t-esc="message" /></div>
-            <div class="subject"><t t-esc="subject" /></div>
+            <div class="info"><t t-out="message" /></div>
+            <div class="subject"><t t-out="subject" /></div>
         </div>
     </div>
 

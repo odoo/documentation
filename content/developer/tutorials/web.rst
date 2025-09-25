@@ -613,7 +613,7 @@ with the template modified to:
 .. code-block:: xml
 
     <t t-name="HomePageTemplate">
-        <div>Hello <t t-esc="name"/></div>
+        <div>Hello <t t-out="name"/></div>
     </t>
 
 will result in:
@@ -631,7 +631,7 @@ essentially be that set up by :func:`~odoo.Widget.init`):
 .. code-block:: xml
 
     <t t-name="HomePageTemplate">
-        <div>Hello <t t-esc="widget.name"/></div>
+        <div>Hello <t t-out="widget.name"/></div>
     </t>
 
 ::
@@ -683,7 +683,7 @@ The ``t-esc`` directive can be used to output text:
 
 .. code-block:: xml
 
-    <div>Hello <t t-esc="name"/></div>
+    <div>Hello <t t-out="name"/></div>
 
 It takes a Javascript expression which is evaluated, the result of the
 expression is then HTML-escaped and inserted in the document. Since it's an
@@ -692,13 +692,13 @@ complex expression like a computation:
 
 .. code-block:: xml
 
-    <div><t t-esc="3+5"/></div>
+    <div><t t-out="3+5"/></div>
 
 or method calls:
 
 .. code-block:: xml
 
-    <div><t t-esc="name.toUpperCase()"/></div>
+    <div><t t-out="name.toUpperCase()"/></div>
 
 Outputting HTML
 ~~~~~~~~~~~~~~~
@@ -753,7 +753,7 @@ bind to each item during iteration.
     <div>
         <t t-foreach="names" t-as="name">
             <div>
-                Hello <t t-esc="name"/>
+                Hello <t t-out="name"/>
             </div>
         </t>
     </div>
@@ -886,7 +886,7 @@ Exercise
                         <t t-foreach="widget.products" t-as="product">
                             <span class="oe_products_item"
                                   t-attf-style="background-color: {{ widget.color }};">
-                                <t t-esc="product"/>
+                                <t t-out="product"/>
                             </span>
                             <br/>
                         </t>
@@ -1602,7 +1602,7 @@ Exercises
                 </t>
                 <t t-name="PetToy">
                     <div class="oe_petstore_pettoy">
-                        <p><t t-esc="item.name"/></p>
+                        <p><t t-out="item.name"/></p>
                         <p><img t-att-src="'data:image/jpg;base64,'+item.image"/></p>
                     </div>
                 </t>
@@ -1744,7 +1744,7 @@ attributes are:
 
             <t t-name="PetToy">
                 <div class="oe_petstore_pettoy" t-att-data-id="item.id">
-                    <p><t t-esc="item.name"/></p>
+                    <p><t t-out="item.name"/></p>
                     <p><img t-attf-src="data:image/jpg;base64,{{item.image}}"/></p>
                 </div>
             </t>
