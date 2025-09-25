@@ -405,6 +405,8 @@ the information.
     Depending on the localization setting, other fields may be present. For example, for the United
     States, a :guilabel:`SSN No` (Social Security Number) field is present.
 
+.. _employees/private-contact:
+
 PRIVATE CONTACT
 ---------------
 
