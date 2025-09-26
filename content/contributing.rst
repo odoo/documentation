@@ -3,7 +3,7 @@
 
 ============
 Contributing
-============
+===========
 
 First off, **thank you** for landing here and considering contributing to Odoo!
 
