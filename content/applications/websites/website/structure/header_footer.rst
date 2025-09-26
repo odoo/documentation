@@ -77,8 +77,8 @@ you can:
 
 .. _website/header_footer/menu-items:
 
-Adding menu items
------------------
+Add menu items
+--------------
 
 By default, pages are added to the menu as drop-down menu items when
 :doc:`they are created <../structure/pages>`. To add a new menu item, follow these steps:
@@ -151,6 +151,26 @@ editor, then, in the :guilabel:`Mega Menu` section:
 - Pick the :guilabel:`Size`: either :guilabel:`Full-Width` or :guilabel:`Narrow`.
 
 To finalize changes, click on :guilabel:`Save`.
+
+Hide a dynamic menu item for non-logged in users
+------------------------------------------------
+
+To hide a dynamic menu item (i.e., a menu item generated automatically by Odoo, for example, when
+you install an app or module, such as `Events`, `Courses`, etc.) for non-logged in users, follow
+these steps:
+
+#. :ref:`Enable developer mode <developer-mode>`.
+#. Go to :menuselection:`Website --> Configuration --> Menus`.
+#. Expand the list of menus for the relevant website if needed, then click the menu item you wish to
+   hide.
+#. In the :guilabel:`Visible Groups` section, click :guilabel:`Add a line` under
+   :guilabel:`Group Name`.
+#. Search for the group :guilabel:`User types / Portal`, select it, then click :guilabel:`Select`.
+#. Save.
+
+.. tip::
+   To hide the `Shop` menu item, :doc:`restrict ecommerce access to logged-in users
+   <../../ecommerce/customer_accounts>`.
 
 .. _website/header_footer/footer-design:
 
