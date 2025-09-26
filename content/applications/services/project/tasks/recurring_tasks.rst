@@ -12,8 +12,10 @@ creation of those tasks.
 Configuration
 =============
 
-To enable recurring tasks, go to :menuselection:`Project --> Configuration --> Settings`, then
-activate :guilabel:`Recurring Tasks`, and press :guilabel:`Save`.
+To use task dependencies in a project, go to :guilabel:`Project`, click the :icon:`fa-ellipsis-v`
+(:guilabel:`vertical ellipsis`) icon on one of your projects, and click on :guilabel:`Settings`.
+Click on the :guilabel:`Settings` tab, look for :guilabel:`Tasks Management` and make sure
+:guilabel:`Recurring Tasks` is enabled.
 
 Set up task recurrence
 ----------------------
