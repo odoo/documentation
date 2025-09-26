@@ -167,3 +167,15 @@ section of the :guilabel:`Customize` tab in the website editor:
 - Hide or show the footer by toggling the :guilabel:`Page visibility` switch.
 
 To finalize changes, click on :guilabel:`Save`.
+
+Hide a dynamic menu
+===================
+
+To hide a dynamic menu (events, eLearning, appointments) for non-logged users, enable debug mode, go
+to :menuselection:`Configuration --> Menus`, and select the menu you want to hide. On the
+:guilabel:`Visible Groups` section, under :guilabel:`Group Name` add User types / Portal.
+
+.. tip::
+   To hide the /shop page of your eCommerce for non-logged users, go to
+   :menuselection:`Configuration --> Settings`, in the :guilabel:`Privacy` section, go to
+   :guilabel:`Ecommerce Access` and toggle on :icon:`fa-toggle-on` :guilabel:`Logged in users`.
