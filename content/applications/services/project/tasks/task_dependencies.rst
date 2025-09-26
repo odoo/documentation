@@ -6,8 +6,10 @@ Odoo Project allows you to break down projects into tasks and establish relation
 tasks to determine the order in which they are executed. Task dependencies ensure that certain tasks
 begin only after the preceding tasks are completed.
 
-To enable task dependencies in projects, go to :menuselection:`Project --> Configuration -->
-Settings`, enable :guilabel:`Task Dependencies`, and click :guilabel:`Save`.
+To use task dependencies in a project, go to :guilabel:`Project`, click the :icon:`fa-ellipsis-v`
+(:guilabel:`vertical ellipsis`) icon on one of your projects, and click on :guilabel:`Settings`.
+Click on the :guilabel:`Settings`. Click on the :guilabel:`Settings` tab, look for :guilabel:`Tasks
+Management` and make sure :guilabel:`Task Dependencies` is enabled.
 
 Set task dependencies
 =====================

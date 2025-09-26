@@ -68,9 +68,14 @@ Milestones
 ----------
 
 This section is only visible if :doc:`milestones </applications/sales/sales/invoicing/milestone>`
-have been enabled in the Project’s app settings. Click :guilabel:`Add Milestone` to create a new
-milestone. Click a milestone in the checklist to edit it, enable its checkbox to mark it as
-completed, or click the :icon:`fa-trash` (:guilabel:`trash`) icon to remove it.
+have been enabled in the project you're browsing: go to :guilabel:`Project`, click the
+:icon:`fa-ellipsis-v` (:guilabel:`vertical ellipsis`) icon on one of your projects, and click on
+:guilabel:`Settings`. Click on the :guilabel:`Settings` tab, look for :guilabel:`Tasks Management`
+and make sure :guilabel:`Milestones` is enabled.
+
+In a project's Dashboard, click :guilabel:`Add Milestone` to create a new milestone. Click a
+milestone in the checklist to edit it, enable its checkbox to mark it as completed, or click the
+:icon:`fa-trash` (:guilabel:`trash`) icon to remove it.
 
 The milestones are displayed in red if they’re past their deadline, or in green if they are ready to
 be marked as reached (i.e. tasks linked to the milestone that have been marked with :guilabel:`done`
