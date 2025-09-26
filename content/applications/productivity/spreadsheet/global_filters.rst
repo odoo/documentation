@@ -252,6 +252,8 @@ With the :guilabel:`Filter properties` pane open:
    Furthermore, if the values in the range have been retrieved dynamically from the database, as in
    this case, the text filter is also dynamic, i.e., will reflect changes made to those values.
 
+.. _spreadsheet/global-filters/manage:
+
 Manage and use global filters
 =============================
 
