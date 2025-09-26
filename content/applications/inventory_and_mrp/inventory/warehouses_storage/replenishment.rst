@@ -27,6 +27,13 @@ manufacturing order (MO), with the best choice depending on the business process
 
       Automatically suggest or generate POs or MOs when stock falls below a minimum level.
 
+   .. card:: Just in time logic
+      :target: replenishment/just_in_time
+      :tag: Recommended
+      :large:
+
+      Avoid overstocking by placing order precisely to meet deadlines.
+
    .. card:: MTO
       :target: replenishment/mto
       :tag: Beginner-friendly
@@ -67,8 +74,8 @@ Key points include:
 - :ref:`Manual reordering rules <inventory/warehouses_storage/manual-rr>`: Generate suggestions in
   the replenishment report for user review, allowing adjustments and batch orders while meeting
   deadlines.
-- :ref:`Just-in-time logic <inventory/warehouses_storage/just-in-time>`: A strategy to replenish
-  only what is needed to prevent overstocking.
+- :doc:`Just in time logic <replenishment/just_in_time>`: A strategy to replenish only what is
+  needed to prevent overstocking.
 
 .. seealso::
    - :doc:`replenishment/reordering_rules`
@@ -119,6 +126,7 @@ disrupts its manual replenishment method.
 
    replenishment/mto
    replenishment/reordering_rules
+   replenishment/just_in_time
    replenishment/report
    replenishment/lead_times
    replenishment/resupply_warehouses
