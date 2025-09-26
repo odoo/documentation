@@ -117,9 +117,9 @@ Now that we have created our assets bundle, we need to create a
                 <head>
                     <script type="text/javascript">
                         var odoo = {
-                            csrf_token: "<t t-nocache="The csrf token must always be up to date." t-esc="request.csrf_token(None)"/>",
+                            csrf_token: "<t t-out="request.csrf_token(None)"/>",
                             debug: "<t t-out="debug"/>",
-                            __session_info__: <t t-esc="json.dumps(session_info)"/>,
+                            __session_info__: <t t-out="json.dumps(session_info)"/>,
                         };
                     </script>
                     <t t-call-assets="your_module.assets_standalone_app" />
