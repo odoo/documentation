@@ -177,8 +177,8 @@ that, click the :guilabel:`Body` tab and select the :guilabel:`raw` option. Set 
 .. code-block:: json
 
    {
-       "model": "sale.order",
-       "id": "SALES ORDER NUMBER"
+       "_model": "sale.order",
+       "_id": "SALES ORDER NUMBER"
    }
 
 From here, choose a sales order to test the webhook on. If it is not possible to test in a live
