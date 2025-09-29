@@ -1,6 +1,6 @@
-=======================
-Moves history dashboard
-=======================
+====================
+Moves history report
+====================
 
 The *Moves History* report in Odoo *Inventory* provides a detailed record of product movements
 (containing past and current locations), lot numbers, and reasons for movement. Reports can be
@@ -11,7 +11,8 @@ inventory turnover, and identifying any discrepancies in inventory.
    The reporting feature is only accessible to users with :doc:`admin access
    <../../../../general/users/access_rights>`.
 
-To access the stock report, go to :menuselection:`Inventory app --> Reporting --> Moves History`.
+To access the moves history report, go to :menuselection:`Inventory app --> Reporting --> Moves
+History`.
 
 .. image:: moves_history/moves-history.png
    :align: center
@@ -19,8 +20,8 @@ To access the stock report, go to :menuselection:`Inventory app --> Reporting --
 
 .. _inventory/warehouses_storage/moves-history-report:
 
-Navigate the moves history report
-=================================
+Navigate the report
+===================
 
 In the report, the columns represent:
 
