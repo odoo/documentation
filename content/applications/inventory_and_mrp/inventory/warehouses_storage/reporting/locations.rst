@@ -1,16 +1,17 @@
-===================
-Locations dashboard
-===================
+================
+Locations report
+================
 
-The *Locations* dashboard in the **Inventory** application provides an overview of on-hand storage
+The *Locations* report in the **Inventory** application provides an overview of on-hand storage
 locations for company products. Use this report to see where stock is stored, identify
 :ref:`misplaced items <inventory/warehouse_storage/stranded>`, or view past inventory to see product
 locations on specific dates.
 
-To access the locations report, the *Storage Locations* feature must be enabled. To do that, go to
-:menuselection:`Inventory app --> Configuration --> Settings`. In the :guilabel:`Warehouse` section,
-tick the checkbox for :guilabel:`Storage Locations`, and click :guilabel:`Save`. Then, access the
-locations dashboard by navigating to :menuselection:`Inventory app --> Reporting --> Locations`.
+To access the  *Locations* report, the *Storage Locations* feature must be enabled. To do that, go
+to :menuselection:`Inventory app --> Configuration --> Settings`. In the :guilabel:`Warehouse`
+section, tick the checkbox for :guilabel:`Storage Locations`, and click :guilabel:`Save`. Then,
+access the main :guilabel:`Locations` report by navigating to :menuselection:`Inventory app -->
+Reporting --> Locations`.
 
 .. note::
    The *Reporting* menu in **Inventory** is only accessible to users with :doc:`admin access
@@ -18,10 +19,10 @@ locations dashboard by navigating to :menuselection:`Inventory app --> Reporting
 
 .. _inventory/warehouses_storage/locations-report:
 
-Navigate the locations dashboard
-================================
+Navigate the report
+===================
 
-By default, the :guilabel:`Locations` dashboard lists all on-hand products in stock (in the
+By default, the :guilabel:`Locations` report lists all on-hand products in stock (in the
 :guilabel:`Product` column), along with the following information:
 
 - :guilabel:`Location`: current storage location. If a product is stored at `Shelf 1` and `Shelf 2`,
@@ -77,12 +78,12 @@ empty locations, click into the search bar and select the :guilabel:`Empty Locat
 Generate reports
 ================
 
-After learning how to :ref:`navigate the locations dashboard
+After learning how to :ref:`navigate the locations report
 <inventory/warehouses_storage/locations-report>`, it can be used to create and share different
 reports.
 
-A few common reports that can be created using the :guilabel:`Locations` dashboard are detailed
-below.
+A few common reports that can be created using the :guilabel:`Locations` report are
+detailed below.
 
 Dead stock report
 -----------------
