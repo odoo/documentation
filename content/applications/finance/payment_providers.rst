@@ -16,6 +16,7 @@ Online payments
    payment_providers/buckaroo
    payment_providers/demo
    payment_providers/flutterwave
+   payment_providers/iyzico
    payment_providers/mercado_pago
    payment_providers/mollie
    payment_providers/nuvei
@@ -100,6 +101,12 @@ Online payment providers
    * - :doc:`Flutterwave <payment_providers/flutterwave>`
      - The provider's website
      - |V|
+     -
+     -
+     -
+   * - :doc:`Iyzico <payment_providers/iyzico>`
+     - The provider's website
+     -
      -
      -
      -
