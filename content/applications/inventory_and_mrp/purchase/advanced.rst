@@ -12,3 +12,4 @@ Advanced
    advanced/vendor_costs_report
    advanced/procurement_expenses_report
    advanced/edi
+   advanced/purchase_dashboard
