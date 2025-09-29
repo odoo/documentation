@@ -1,5 +1,5 @@
 =========================
-Stock valuation dashboard
+Stock valuation reporting
 =========================
 
 .. |SVLs| replace:: :abbr:`SVLs (stock valuation layers)`
@@ -27,13 +27,13 @@ valuation methods <inventory/warehouses_storage/costing_methods>` used in Odoo: 
 valuation method chosen for a product impacts the calculation of several fields in the stock
 valuation reports.
 
-Open the dashboard
-==================
+Open the reporting screen
+=========================
 
-Odoo's *Stock Valuation* dashboard displays the financial value of all tracked inventory, according
-to each product's stock valuation method. This report can provide insights into potential issues in
-the supply chain, such as sunken purchase costs or delays in profitability. To access the dashboard,
-go to :menuselection:`Inventory app --> Reporting --> Valuation`.
+Odoo's *Stock Valuation* reporting screen displays the financial value of all tracked inventory,
+according to each product's stock valuation method. This can provide insights into potential issues
+in the supply chain, such as sunken purchase costs or delays in profitability. To access stock
+valuation reporting, go to :menuselection:`Inventory app --> Reporting --> Valuation`.
 
 .. important::
    The :menuselection:`Reporting` menu in **Inventory** is only accessible to users with
