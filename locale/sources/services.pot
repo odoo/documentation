@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 18.0\n"
+"Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-18 08:33+0000\n"
+"POT-Creation-Date: 2025-09-30 10:33+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -321,7 +321,7 @@ msgid "Helpdesk"
 msgstr ""
 
 #: ../../content/applications/services/helpdesk.rst:8
-msgid "Odoo **Helpdesk** is a ticket-based customer support application. Multiple teams can be configured and managed in one dashboard, each with their own pipeline for tickets submitted by customers. Pipelines are organized in customizable stages that enable teams to track, prioritize, and solve customer issues quickly and efficiently."
+msgid "Odoo **Helpdesk** is a ticket-based customer support application. Multiple teams can be configured and managed in one dashboard, each with their own pipeline for tickets submitted by customers. Pipelines are organized in customizable stages that enable teams to track, prioritize, and solve customer issues efficiently."
 msgstr ""
 
 #: ../../content/applications/services/helpdesk.rst:16
@@ -408,96 +408,116 @@ msgstr ""
 msgid "When tickets are received, they need to be assigned to a member of the team. This is done either manually on each individual ticket, or through :guilabel:`Automatic Assignment`. Check the :guilabel:`Automatic Assignment` checkbox to enable this feature for the team."
 msgstr ""
 
+#: ../../content/applications/services/helpdesk.rst:94
+msgid "If an employee has time off scheduled in the **Time Off** application, they are **not** assigned tickets during that time. If no employees are currently available, the system looks ahead on the calendar until there is a match."
+msgstr ""
+
 #: ../../content/applications/services/helpdesk.rst:-1
 msgid "View of a Helpdesk team settings page emphasizing the automatic assignment features in Odoo\n"
 "Helpdesk."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk.rst:97
+#: ../../content/applications/services/helpdesk.rst:103
+msgid "Assign tickets based on workload"
+msgstr ""
+
+#: ../../content/applications/services/helpdesk.rst:105
 msgid "Select one of the following assignment methods, based on how the workload should be allocated across the team:"
 msgstr ""
 
-#: ../../content/applications/services/helpdesk.rst:100
-msgid ":guilabel:`Each user is assigned an equal number of tickets`: Tickets are assigned to team members based on total ticket count, regardless of the number of open or closed tickets they are currently assigned."
-msgstr ""
-
-#: ../../content/applications/services/helpdesk.rst:103
-msgid ":guilabel:`Each user has an equal number of open tickets`: Tickets are assigned to team members based on how many open tickets they are currently assigned."
-msgstr ""
-
-#: ../../content/applications/services/helpdesk.rst:107
-msgid "When :guilabel:`Each user is assigned an equal number of tickets` is selected, the overall number of tickets assigned to team members is the same, but it does **not** consider the current workload."
+#: ../../content/applications/services/helpdesk.rst:108
+msgid ":guilabel:`Each user is assigned an equal number of tickets`: Tickets are assigned to team members based on total unassigned ticket count, regardless of the number of open or closed tickets they are currently assigned."
 msgstr ""
 
 #: ../../content/applications/services/helpdesk.rst:111
-msgid "When :guilabel:`Each user has an equal number of open tickets` is selected, it ensures a balanced workload among team members, as it takes the current number of active tickets into account."
+msgid ":guilabel:`Each user has an equal number of open tickets`: Tickets are assigned to team members based on how many open tickets they are currently assigned."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk.rst:114
-msgid "Finally, add the :guilabel:`Team Members` who are to be assigned tickets for this team. Leave the field empty to include all employees who have the proper assignments and access rights configured in their user account settings."
+#: ../../content/applications/services/helpdesk.rst:115
+msgid "When :guilabel:`Each user is assigned an equal number of tickets` is selected, the overall number of tickets assigned to team members is the same, but it does **not** consider the current workload."
 msgstr ""
 
 #: ../../content/applications/services/helpdesk.rst:119
-msgid "If an employee has time off scheduled in the **Time Off** application, they are **not** assigned tickets during that time. If no employees are available, the system looks ahead until there is a match."
+msgid "When :guilabel:`Each user has an equal number of open tickets` is selected, it ensures a balanced workload among team members, as it takes the current number of active tickets into account."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk.rst:124
-msgid ":ref:`Manage users <users/add-individual>`"
+#: ../../content/applications/services/helpdesk.rst:122
+msgid "Add the :guilabel:`Team Members` who are to be assigned tickets for this team. Leave the field empty to include all employees who have the proper assignments and access rights configured in their user account settings."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk.rst:125
-msgid ":doc:`Access rights <../general/users/access_rights>`"
+#: ../../content/applications/services/helpdesk.rst:127
+msgid "Assign tickets based on expertise"
 msgstr ""
 
-#: ../../content/applications/services/helpdesk.rst:128
-msgid "Merge tickets"
+#: ../../content/applications/services/helpdesk.rst:129
+msgid "To assign tickets to team members based on their expertise, and the associated tag on the tickets, select :guilabel:`Dispatch tickets based on tags` under :guilabel:`Automatic Assignment`. Then, click :guilabel:`Configure tags handled by team members`."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk.rst:130
-msgid "If duplicate tickets are found in **Helpdesk**, they can be combined into a single ticket using the *merge* feature."
-msgstr ""
-
-#: ../../content/applications/services/helpdesk.rst:134
-msgid "The *merge* feature is **only** accessible if the :doc:`Data Cleaning <../productivity/data_cleaning>` application is installed on the database."
+#: ../../content/applications/services/helpdesk.rst:133
+msgid "Click :guilabel:`New` to create a new :guilabel:`Ticket Tag`, such as `Pricing` or `IT`. Select one or more :guilabel:`Team Members` from the drop-down list. Click :guilabel:`Save` when finished."
 msgstr ""
 
 #: ../../content/applications/services/helpdesk.rst:137
-msgid "To merge two or more tickets, navigate to :menuselection:`Helpdesk app --> Tickets --> All Tickets`. Identify the tickets to be merged, and tick the checkbox at the far-left of each ticket to select them. Then, click the :icon:`fa-cog` :guilabel:`Actions` icon, and select :guilabel:`Merge` from the drop-down menu. Doing so opens a new page where the selected tickets are listed with their :guilabel:`Similarity` rating. From here, click either :ref:`Merge <data_cleaning/merge-records>` to combine the tickets, or :guilabel:`DISCARD`."
+msgid "If a ticket has no tag set, the ticket remains unassigned."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk.rst:145
-msgid "Convert tickets to opportunities"
+#: ../../content/applications/services/helpdesk.rst:140
+msgid ":ref:`Manage users <users/add-individual>`"
 msgstr ""
 
-#: ../../content/applications/services/helpdesk.rst:147
-msgid "Some tickets may be better handled by the sales team, rather than the support team. In this case, tickets can be converted to *opportunities* and assigned to a sales team for follow-up."
+#: ../../content/applications/services/helpdesk.rst:141
+msgid ":doc:`Access rights <../general/users/access_rights>`"
 msgstr ""
 
-#: ../../content/applications/services/helpdesk.rst:151
-msgid "This feature is **only** available if the :doc:`CRM <../sales/crm>` app is installed."
+#: ../../content/applications/services/helpdesk.rst:144
+msgid "Merge tickets"
+msgstr ""
+
+#: ../../content/applications/services/helpdesk.rst:146
+msgid "If duplicate tickets are found in **Helpdesk**, they can be combined into a single ticket using the *merge* feature."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk.rst:150
+msgid "The *merge* feature is **only** accessible if the :doc:`Data Cleaning <../productivity/data_cleaning>` application is installed on the database."
 msgstr ""
 
 #: ../../content/applications/services/helpdesk.rst:153
-msgid "To convert a ticket to an opportunity, first navigate to a ticket, either from a team's pipeline, or by navigating to :menuselection:`Helpdesk app --> Tickets` and clicking a ticket to open it."
+msgid "To merge two or more tickets, navigate to :menuselection:`Helpdesk app --> Tickets --> All Tickets`. Identify the tickets to be merged, and tick the checkbox at the far-left of each ticket to select them. Then, click the :icon:`fa-cog` :guilabel:`Actions` icon, and select :guilabel:`Merge` from the drop-down menu. Doing so opens a new page where the selected tickets are listed with their :guilabel:`Similarity` rating. From here, click either :ref:`Merge <data_cleaning/merge-records>` to combine the tickets, or :guilabel:`DISCARD`."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk.rst:156
-msgid "At the top of the ticket, click the :guilabel:`Convert to Opportunity` button."
+#: ../../content/applications/services/helpdesk.rst:161
+msgid "Convert tickets to opportunities"
 msgstr ""
 
-#: ../../content/applications/services/helpdesk.rst:159
-msgid "If :doc:`leads <../sales/crm/acquire_leads/convert>` are enabled on the **CRM** app, tickets are converted to *leads*, and the button reads :guilabel:`Convert to Lead`."
+#: ../../content/applications/services/helpdesk.rst:163
+msgid "Some tickets may be better handled by the sales team, rather than the support team. In this case, tickets can be converted to *opportunities* and assigned to a sales team for follow-up."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk.rst:162
-msgid "This opens the :guilabel:`Convert to Opportunity` pop-up. Fill in or select the following information on the pop-up:"
-msgstr ""
-
-#: ../../content/applications/services/helpdesk.rst:165
-msgid ":guilabel:`Customer`: Select whether to :guilabel:`Create a new customer`, :guilabel:`Link to an existing customer`, or :guilabel:`Do not link to a customer`. If :guilabel:`Link to a customer` is chosen, select the appropriate customer name from the :guilabel:`Customer` drop-down."
+#: ../../content/applications/services/helpdesk.rst:167
+msgid "This feature is **only** available if the :doc:`CRM <../sales/crm>` app is installed."
 msgstr ""
 
 #: ../../content/applications/services/helpdesk.rst:169
+msgid "To convert a ticket to an opportunity, first navigate to a ticket, either from a team's pipeline, or by navigating to :menuselection:`Helpdesk app --> Tickets` and clicking a ticket to open it."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk.rst:172
+msgid "At the top of the ticket, click the :guilabel:`Convert to Opportunity` button."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk.rst:175
+msgid "If :doc:`leads <../sales/crm/acquire_leads/convert>` are enabled on the **CRM** app, tickets are converted to *leads*, and the button reads :guilabel:`Convert to Lead`."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk.rst:178
+msgid "This opens the :guilabel:`Convert to Opportunity` pop-up. Fill in or select the following information on the pop-up:"
+msgstr ""
+
+#: ../../content/applications/services/helpdesk.rst:181
+msgid ":guilabel:`Customer`: Select whether to :guilabel:`Create a new customer`, :guilabel:`Link to an existing customer`, or :guilabel:`Do not link to a customer`. If :guilabel:`Link to a customer` is chosen, select the appropriate customer name from the :guilabel:`Customer` drop-down."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk.rst:185
 msgid ":guilabel:`Sales Team`: Specify which :guilabel:`Sales Team` and :guilabel:`Salesperson` this created opportunity is assigned to."
 msgstr ""
 
@@ -505,15 +525,15 @@ msgstr ""
 msgid "The convert to opportunity pop-up window."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk.rst:175
+#: ../../content/applications/services/helpdesk.rst:191
 msgid "After completing the form, click :guilabel:`Convert to Opportunity`. Doing so creates a new opportunity in the **CRM** app. The original ticket is linked in the chatter of the new opportunity for traceability."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk.rst:180
+#: ../../content/applications/services/helpdesk.rst:196
 msgid "After the ticket is converted to an opportunity, the ticket is archived."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk.rst:183
+#: ../../content/applications/services/helpdesk.rst:199
 msgid "`Odoo Tutorials: Helpdesk <https://www.odoo.com/slides/helpdesk-51>`_"
 msgstr ""
 
