@@ -72,7 +72,7 @@ TM-Intelligent printers, like :guilabel:`Epson TM-M30 iii`, are :doc:`compatible
 </applications/general/iot/connect>`.
 
 .. tip::
-  Update the printer firmware before enabling the print confirmations.
+  Update the printer firmware before enabling the print confirmations  .
 
 .. seealso::
    :doc:`epos_printers`
