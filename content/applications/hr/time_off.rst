@@ -153,14 +153,15 @@ off is visible to other users, and how the time off affects the **Payroll** app.
      request would be for three hours, since the two extra worked hours are used first, and deducted
      from the request.
 
-- :guilabel:`Public Holiday Included`: Enable this option if public holidays should be excluded from
-  a time off request.
+- :guilabel:`Public Holiday Included`: Enable this option if public holidays should be included in
+  time off requests.
 
   .. example::
      An employee in the United States requests time off for the week of July 4th, for a total of
      five days. Since the 4th of July is a holiday in the United States, the time off request is
-     automatically modified for four days off instead of five. That is because the holiday is
-     included, and the user does not need to use their own vacation time for a public holiday.
+     automatically modified to use four vacation days and one public holiday, instead of five
+     vacation days. That is because the holiday is included, and the user does not need to use their
+     own vacation time for a public holiday.
 
      This option reduces extra work for users, enabling them to make only one time off request for
      the entire week, instead of making two separate requests, one for the days *before* the
