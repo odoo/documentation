@@ -1,114 +1,96 @@
-===================================
-Non-current assets and fixed assets
-===================================
+============
+Fixed assets
+============
 
-**Non-current Assets**, also known as **long-term assets**, are investments that are expected to be
-realized after one year. They are capitalized rather than being expensed and appear on the company's
-balance sheet. Depending on their nature, they may undergo **depreciation**.
+A fixed asset is something of value - such as a tool, a building, or intellectual property - which your
+company uses for its operations. The value of a fixed asset can fluctuate over time, typically
+decreasing every month or year through *depreciation entries*. Odoo can help you automatically
+create depreciation entries and keep track of your assets' value through the Asset view.
 
-**Fixed Assets** are a type of Non-current Assets and include the properties bought for their
-productive aspects, such as buildings, vehicles, equipment, land, and software.
+Purchase a fixed asset
+======================
 
-For example, let's say we buy a car for $ 27,000. We plan to amortize it over five years, and we
-will sell it for $ 7,000 afterward. Using the linear, or straight-line, depreciation method,
-$ 4,000 are expensed each year as **depreciation expenses**. After five years, the **Accumulated
-Depreciation** amount reported on the balance sheet equals $ 20,000, leaving us with $ 7,000 of
-**Not Depreciable Value**, or Salvage value.
+To register the purchase of a fixed asset in Odoo, :ref:`create a vendor bill<accounting/vendor_bills>`,
+filling in the details of the purchase such as the supplier, the asset's price as the product price,
+the quantity, and any taxes.
 
-Odoo Accounting handles depreciation by creating all depreciation entries automatically in *draft
-mode*. They are then posted periodically.
+.. important::
+   Instead of the default Expense account, select a Fixed Asset account to hold
+   the value of the asset.
 
-Odoo supports the following **Depreciation Methods**:
-
-- Straight Line
-- Declining
-- Declining Then Straight Line
+.. image:: assets/assets02.png
+   :align: center
+   :alt: Selection of an Assets Account on a draft bill in Odoo Accounting
 
 .. note::
-   The server checks once a day if an entry must be posted. It might then take up to 24 hours before
-   you see a change from *draft* to *posted*.
+   If no appropriate account exists in the Chart of Accounts yet,
+   :ref:`create one <accounting/get_started/chart_of_accounts>` with type *Fixed Assets*.
 
-Prerequisites
-=============
+Create a Fixed Assets account
+-----------------------------
 
-Such transactions must be posted on an **Assets Account** rather than on the default
-expense account.
-
-Configure an Assets Account
----------------------------
-
-To configure your account in the **Chart of Accounts**, go to :menuselection:`Accounting -->
-Configuration --> Chart of Accounts`, click on *Create*, and fill out the form.
+Go to :menuselection:`Accounting --> Configuration --> Chart of Accounts`,
+click on *Create*, and fill out the form.
 
 .. image:: assets/assets01.png
    :align: center
    :alt: Configuration of an Assets Account in Odoo Accounting
 
 .. note::
-   This account's type must be either *Fixed Assets* or *Non-current Assets*.
+   Choose *Fixed Assets* as the account's type.
 
-Post an expense to the right account
-------------------------------------
+Set a default Fixed Assets account on a product
+-----------------------------------------------
 
-Select the account on a draft bill
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+It is possible to set a Fixed Assets account as the default purchase account on a product. This
+account will be automatically used on that product in vendor bills, instead of the default Expense
+account.
 
-On a draft bill, select the right account for all the assets you are buying.
-
-.. image:: assets/assets02.png
-   :align: center
-   :alt: Selection of an Assets Account on a draft bill in Odoo Accounting
-
-.. _product-assets-account:
-
-Choose a different Expense Account for specific products
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Start editing the product, go to the *Accounting* tab, select the right **Expense Account**, and
-save.
+In the product, go to the *Accounting* tab, and choose the appropriate account in the **Expense Account** field.
 
 .. image:: assets/assets03.png
    :align: center
    :alt: Change of the Assets Account for a product in Odoo
 
+
+Depreciate a fixed asset
+========================
+
+Assets typically need to be depreciated, i.e. their value reduced over time, through *depreciation
+entries*.
+
+Odoo can automatically generate and post depreciation entries through the **Asset** feature.
+
+
+Create an Asset
+---------------
+
 .. tip::
-   It is possible to :ref:`automate the creation of assets entries <assets-automation>` for these
-   products.
+   Creating an **Asset** does not register the purchase of a fixed asset: it just eases the creation
+   of depreciation entries for an already-purchased asset. Before creating an **Asset**, first register
+   the purchase of the asset in a vendor bill.
 
-.. _journal-assets-account:
+Go to :menuselection:`Accounting --> Accounting --> Assets` and click on *Create*.
 
-Change the account of a posted journal item
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-To do so, open your Purchases Journal by going to :menuselection:`Accounting --> Accounting -->
-Purchases`, select the journal item you want to modify, click on the account, and select the right
-one.
-
-.. image:: assets/assets04.png
+.. image:: assets/assets05.png
    :align: center
-   :alt: Modification of a posted journal item's account in Odoo Accounting
+   :alt: Assets entry in Odoo Accounting
 
-Assets entries
-==============
+Fill in the following elements of the form:
 
-.. _create-assets-entry:
+* Original value: The value of the asset before depreciation. This would normally be the price at
+  which the asset was bought.
+* Acquisition date: The date at which the asset was valued at its original value.
 
-Create a new entry
-------------------
 
-An **Asset entry** automatically generates all journal entries in *draft mode*. They are then posted
+An **Asset** automatically generates all journal entries in *draft mode*. They are then posted
 one by one at the right time.
 
-To create a new entry, go to :menuselection:`Accounting --> Accounting --> Assets`, click on
-*Create*, and fill out the form.
 
 Click on **select related purchases** to link an existing journal item to this new entry. Some
 fields are then automatically filled out, and the journal item is now listed under the **Related
 Purchase** tab.
 
-.. image:: assets/assets05.png
-   :align: center
-   :alt: Assets entry in Odoo Accounting
 
 Once done, you can click on *Compute Depreciation* (next to the *Confirm* button) to generate all
 the values of the **Depreciation Board**. This board shows you all the entries that Odoo will post
