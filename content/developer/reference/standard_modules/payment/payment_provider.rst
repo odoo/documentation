@@ -23,4 +23,3 @@ Payment Provider
    .. automethod:: _parse_response_content
    .. automethod:: _parse_response_error
    .. automethod:: _send_api_request
-   .. automethod:: _should_build_inline_form
