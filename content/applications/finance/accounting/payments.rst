@@ -91,6 +91,8 @@ payment method.
 
 .. _accounting/payments/from-invoice-bill:
 
+.. _finance/accounting/register-payment-invoice-bill:
+
 Registering payment from an invoice or bill
 ===========================================
 
