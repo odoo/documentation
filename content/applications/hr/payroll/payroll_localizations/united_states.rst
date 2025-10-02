@@ -515,7 +515,7 @@ If everything seems correct on the journal entry draft, post the journal entries
 Register Payments
 -----------------
 
-After the :ref:`journla entries <payroll/journal>` are validated, Odoo can generate payments.
+After the :ref:`journal entries <payroll/journal>` are validated, Odoo can generate payments.
 
 .. important::
    To generate payments from payslips,employee's **must** have a *trusted* bank account. If the
