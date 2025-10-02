@@ -389,27 +389,6 @@ to a normal string to "strip" the safety flag e.g. `str(content)` in Python and
     escaped, while in Javascript will yield a :js:class:`String` where the
     other operand was *not* escaped before the concatenation.
 
-Deprecated output directives
-----------------------------
-
-.. rst-class:: o-definition-list
-
-``esc``
-    An alias for ``out``, would originally HTML-escape its input. Not yet
-    formally deprecated as the only difference between ``out`` and ``esc`` is
-    that the latter is a bit unclear / incorrect.
-``raw``
-    A version of ``out`` which *never* escapes its content. Content is emitted
-    as-is, whether it's safe or not.
-
-    .. deprecated:: 15.0
-
-        Use ``out`` with a :class:`markupsafe.Markup` value instead.
-
-        ``t-raw`` was deprecated because as the code *producting* the content
-        evolves it can be hard to track that it's going to be used for markup,
-        leading to more complicated reviews and more dangerous lapses.
-
 Python
 ======
 
