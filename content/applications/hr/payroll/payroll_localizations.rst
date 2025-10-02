@@ -82,7 +82,7 @@ Payroll localization modules are available for the countries listed below.
 - Lithuania
 - Luxembourg
 - Malaysia
-- Mexico
+- :doc:`Mexico <payroll_localizations/mexico>`
 - Morocco
 - Netherlands
 - Pakistan
@@ -103,6 +103,7 @@ Payroll localization modules are available for the countries listed below.
    payroll_localizations/egypt
    payroll_localizations/hong_kong
    payroll_localizations/jordan
+   payroll_localizations/mexico
    payroll_localizations/united_arab_emirates
    payroll_localizations/united_states
    payroll_localizations/employment_hero
