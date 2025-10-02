@@ -2,127 +2,94 @@
 Renew subscriptions
 ===================
 
-The foundation of any subscription business model is recurring payments. This is when customers
-reliably pay a regular amount at specific intervals, in exchange for access to a subscription
-product or service.
-
-Subscription renewal is the process customers follow when they willingly choose to continue
-participating in, and paying for, a subscription product or service.
-
-Subscribers experience the renewal process at different intervals -- weekly, monthly, annually, etc.
--- depending on the duration of the agreed-upon contract.
-
-Most companies that offer subscriptions prefer to automate the renewal process for customers.
-However, manual subscription renewals are still used in some cases.
+Subscription renewal is the process customers follow when they willingly choose to continue a
+subscription product or service. Subscribers go through the renewal process at different intervals
+-- weekly, monthly, annually, etc. -- depending on the duration of the agreed-upon contract. Most
+companies that offer subscriptions prefer to automate the renewal process for customers. However,
+manual subscription renewals are still used in some cases.
 
 With the Odoo **Subscriptions** application, a company can manage all of its subscriptions in one
-place. Renewals can be processed automatically, or manually, include additional products or upsells
-per renewal order, and be filtered in batch views to quickly locate customers who need to renew
-their subscriptions.
+place. Renewals can be processed automatically or manually, include additional products or upsells
+per renewal order, and be filtered in batch views to locate customers who need to renew their
+subscriptions.
 
-Subscription renewals
-=====================
+Create a renewal manually
+=========================
 
-In order to renew a subscription, a quotation with a subscription product **must** be confirmed,
-with a configured *Recurring Plan* selected.
+In order to create a renewal quotation, there are certain prerequisites that a subscription must
+meet.
 
-To open a subscription quotation, navigate to :menuselection:`Subscriptions app --> Subscriptions
---> Quotations`, and select the desired quotation from the list. Or, create a new one by clicking
-:guilabel:`New` to open a new quotation form.
+- A quotation with a subscription product must be confirmed.
+- A configured *recurring plan* must be selected.
+- Payment from the customer for the initial subscription must be invoiced and registered.
 
-.. note::
-  - Only a singular product is required.
-  - A subscription service counts as a product, as it is considered a recurring product.
-
-Subscription quotations **must** be confirmed, and payment from the customer for the
-initial subscription **must** be invoiced and registered in order to successfully open a *Renewal
-Quotation*.
-
-.. seealso::
-   For more information on the above process of confirming quotations and invoicing payments,
-   see:
-   - :doc:`../sales/sales_quotations/create_quotations`
-   - :doc:`../sales/sales_quotations/get_paid_to_validate`
-
-Once the payment from the subscription quotation is confirmed, the quotation turns into a sales
-order. An :guilabel:`In Progress` tag is applied to the sales order form, and a series of buttons
-also appear at the top of the sales order, including a :guilabel:`Renew` button.
+To check if an existing subscription quotation meets the prerequisites, navigate to
+:menuselection:`Subscriptions app --> Subscriptions --> Quotations` and select the desired quotation
+from the list. Properly configured subscriptions show as being in the :guilabel:`Sales Order` stage,
+have an :guilabel:`In Progress` tag, and have the :guilabel:`Renew` button in the row of buttons
+directly above the order form.
 
 .. image:: renewals/renew-button.png
   :align: center
   :alt: Renew button on subscription sales order with Odoo Subscriptions.
 
 When the :guilabel:`Renew` button is clicked, Odoo instantly presents a new renewal quotation,
-complete with a :guilabel:`Renewal Quotation` tag.
+complete with a :guilabel:`Renewal Quotation` tag. Important reference information like the start
+date and next invoice date are automatically added to the renewal quotation's chatter.
 
-.. image:: renewals/renewal-quotation.png
-  :align: center
-  :alt: Renewal quotation in the Odoo Subscriptions application.
+From here, follow the standard sales flow to :ref:`confirm the quotation
+<sales/sales_quotations/send-and-confirm>`, :doc:`invoice the order
+<../../sales/sales/invoicing/invoicing_policy>`, and :ref:`register payment
+<finance/accounting/register-payment-invoice-bill>`.
 
-From here, a standard sales flow can occur to confirm the quotation. This typically begins
-by clicking :guilabel:`Send by Email`, which sends a copy of the quotation to the customer, by
-email, for them to confirm, and eventually, pay for.
-
-.. note::
-  In the chatter of the :guilabel:`Renewal Quotation`, it is mentioned that this subscription is
-  the renewal of the subscription from the original sales order.
-
-Once the :guilabel:`Renewal Quotation` is confirmed, it becomes a sales order, and a
-:guilabel:`Sales History` smart button appears at the top of the page.
-
-.. image:: renewals/sales-history-smart-button.png
-  :align: center
-  :alt: Sales History smart button in the Odoo Subscriptions application.
-
-When that :guilabel:`Sales History` smart button is clicked, Odoo reveals a separate page,
-showcasing the different sales orders attached to this subscription, along with their individual
-:guilabel:`Subscription Status`.
+Once the renewal quotation is confirmed, it becomes a sales order and a :icon:`fa-usd`
+:guilabel:`Sales History` smart button appears at the top of the page. When the :icon:`fa-usd`
+:guilabel:`Sales History` smart button is clicked, Odoo loads a new page showcasing the different
+sales orders attached to this subscription, along with their individual :guilabel:`Subscription
+Status`.
 
 .. image:: renewals/sales-history-page.png
   :align: center
   :alt: Renewal quotation in the Odoo Subscriptions application.
 
-Additionally, once the :guilabel:`Renewal Quotation` is confirmed, an :guilabel:`MRR` smart button
-also appears at the top of the sales order.
-
-.. image:: renewals/mrr-smart-button.png
-  :align: center
-  :alt: MRR smart button in the Odoo Subscriptions application.
-
-When clicked, Odoo reveals an :guilabel:`MRR Analysis` page, detailing the monthly recurring revenue
-related to this specific subscription.
-
 .. important::
-   On rare occasions, automatic payment can fail, which results in a *Payment Failure* tag on the
-   top-right of the sales order, if there is an error in the payment method.
+   On rare occasions, automatic payments can fail to register properly, which results in a
+   :guilabel:`Payment Failure` tag on the sales order and the :guilabel:`Contract in exception`
+   checkbox being automatically ticked in the :guilabel:`Subscription` section of the sales order's
+   :guilabel:`Other Info` tab.
 
-   This is done to prevent the system from charging the customer again the next time a scheduled
-   action is run. Because the status of the payment is unknown, Odoo requests a manual operation to
-   check if the payment has been made, before the payment can be used again.
+   Being marked :guilabel:`Contract in exception` prevents scheduled actions from running, which
+   keeps the system from accidentally double-charging the customer if the automatic payment actually
+   went through. Because the status of the payment failed to register with the system, users must
+   manually check if the payment has been made before automatic payments and other scheduled actions
+   can resume.
 
    To do this, navigate to :menuselection:`Subscriptions app --> Subscriptions --> Quotations`.
-   Click into the desired subscription, then check the *Chatter* to see if the payment was made.
+   Click into the desired subscription, then check the Chatter to see if the payment was made.
 
-   If the payment was **not** made, first enter :doc:`debug mode <../../general/developer_mode>`.
+   If the payment *was not* made, first enter :doc:`developer mode <../../general/developer_mode>`.
    Then, click the :guilabel:`Other Info` tab, and untick the checkbox next to :guilabel:`Contract
-   in exception`. Reload the sales order, and the :guilabel:`Payment Failure` tag is gone.
+   in exception`. Reload the sales order and confirm that the :guilabel:`Payment Failure` tag is
+   gone.
 
-   If the payment **was** made, a new invoice must be made and posted manually. This automatically
-   updates the next invoice date of the subscription. Once created, enter :doc:`debug mode
-   <../../general/developer_mode>`, and navigate to the new sales order. Click the :guilabel:`Other
-   Info` tab, and untick the checkbox next to :guilabel:`Contract in exception`.
-   Reload the sales order, and the :guilabel:`Payment Failure` tag is gone.
+   If the payment *was* made, a new invoice must be made and posted manually. This automatically
+   updates the next invoice date of the subscription. Once the invoice is created, enter
+   :doc:`developer mode <../../general/developer_mode>` and navigate to the new sales order. Click
+   the :guilabel:`Other Info` tab, and untick the checkbox next to :guilabel:`Contract in
+   exception`. Reload the sales order and confirm that the :guilabel:`Payment Failure` tag is gone.
 
    .. figure:: renewals/contract-in-exception.png
       :align: center
-      :alt: The "contract in exception" option selected with the "payment failure" tag shown.
+      :alt: The contract in exception option selected with the payment failure tag shown.
 
-      The :guilabel:`contract in exception`` option selected with the :guilabel:`payment failure`
-      tag shown.
+      The :guilabel:`Contract in exception` option selected with the :guilabel:`Payment Failure` tag
+      shown.
 
-   In both cases, once the :guilabel:`Contract in exception` option is no longer selected, Odoo
-   handles renewals automatically again. If the subscription remains in *payment failure*, it is
-   skipped by Odoo until the sales order is closed.
+   In both cases, once the :guilabel:`Contract in exception` checkbox is no longer ticked, Odoo
+   handles renewals automatically again. If the subscription remains in :guilabel:`Payment Failure`,
+   it is ignored by Odoo until the sales order is closed.
 
 .. seealso::
    - :doc:`../subscriptions`
+   - :doc:`../sales/sales_quotations/create_quotations`
+   - :doc:`../sales/sales_quotations/get_paid_to_validate`
