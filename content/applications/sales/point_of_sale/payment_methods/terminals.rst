@@ -33,8 +33,7 @@ To activate a payment terminal and allow processing payments with it, follow the
    - :doc:`Tyro <terminals/tyro>`
    - :doc:`Viva.com <terminals/viva_com>`
    - :doc:`Worldline <terminals/worldline>`
-#. Go to :menuselection:`Point of Sale --> Configuration --> Settings` and add the payment method
-   to the :guilabel:`Payment Methods` list to make it available in the POS interface.
+#. Save.
 
 .. _pos/terminals/terminal-use:
 
