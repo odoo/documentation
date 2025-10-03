@@ -160,8 +160,7 @@ can access from the top menu.
 
 .. important::
    Even though the profiler has been designed to be as light as possible, it can still impact
-   performance, especially when using the :ref:`Sync collector
-   <performance/profiling/collectors/sync>`. Keep that in mind when analyzing speedscope results.
+   performance. Keep that in mind when analyzing speedscope results.
 
 .. _performance/profiling/collectors:
 
@@ -175,7 +174,7 @@ individually enabled from the user interface through their dedicated toggle butt
 :ref:`developer mode tools <developer-mode/tools>`, or from Python code through their key or
 class.
 
-There are currently four collectors available in Odoo:
+There are currently three collectors available in Odoo:
 
 .. list-table::
    :header-rows: 1
@@ -196,10 +195,6 @@ There are currently four collectors available in Odoo:
      - :guilabel:`Record qweb`
      - `qweb`
      - `QwebCollector`
-   * - :ref:`Sync collector <performance/profiling/collectors/sync>`
-     - No
-     - `traces_sync`
-     - `SyncCollector`
 
 By default, the profiler enables the SQL and the Periodic collectors. Both when it is enabled from
 the user interface or Python code.
@@ -252,26 +247,13 @@ It is mainly useful for optimizing views.
 
 .. autoclass:: QwebCollector
 
-.. _performance/profiling/collectors/sync:
-
-Sync collector
-~~~~~~~~~~~~~~
-
-This collector saves the stack for every function's call and return and runs on the same thread,
-which greatly impacts performance.
-
-It can be useful to debug and understand complex flows, and follow their execution in the code. It
-is however not recommended for performance analysis because the overhead is high.
-
-.. autoclass:: SyncCollector
-
 .. _performance/profiling/pitfalls:
 
 Performance pitfalls
 --------------------
 
-- Be careful with randomness. Multiple executions may lead to different results. E.g., a garbage
-  collector being triggered during execution.
+- Be careful with randomness. Multiple executions may lead to different results. E.g., other
+  processes or threads running on the system during the profiling.
 - Be careful with blocking calls. In some cases, external `c_call` may take some time before
   releasing the GIL, thus leading to unexpected long frames with the :ref:`Periodic collector
   <performance/profiling/collectors/periodic>`. This should be detected by the profiler and give a
