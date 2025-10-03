@@ -91,8 +91,18 @@ configuration fields:
      Closing` value is set to `15` :guilabel:`Days`, then the subscription will close on the 16th of
      that month if payment is not received.
 
-- :guilabel:`Align to Period Start`: optionally force new and recurring subscription renewal dates
-  under this plan to the first day of what is defined in the :guilabel:`Billing Period`.
+- :guilabel:`Align to Period Start`: sets new and recurring subscription plans to bill on the first
+  day of the next :guilabel:`Billing Period`. When a subscription plan is purchased in the middle
+  of a billing period, the invoice shows a reduced cost.
+
+  .. example::
+     On the 15th of July, a customer purchases a monthly subscription for a streaming service.
+     Selecting :guilabel:`Align to Period Start` for this recurring plan ensures that all
+     subscriptions are billed on the 1st of each month. Their subscription begins as soon as
+     payment is confirmed. The quotation shows the full cost of the subscription for July 1 - 31,
+     but the invoice shows an adjusted cost for July 15 - 31. On the 1st of August, the customer is
+     charged the full price for the month's subscription.
+
 - :guilabel:`Company`: optional assignment, if the database has :doc:`Multi-company
   <../general/companies/multi_company>` functionality enabled. Assigning this value will make the
   recurring plan available for that company's location, specifically.
