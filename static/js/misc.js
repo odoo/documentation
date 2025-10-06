@@ -67,7 +67,7 @@
         });
     }
     function checks_handling() {
-        // NOTE: used by cheat_sheet.rst
+        // NOTE: used by accounting cheat_sheet.rst
         var $section = $('.checks-handling');
         if (!$section.length) { return; }
 

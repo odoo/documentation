@@ -1,6 +1,6 @@
 /* global Immutable, React */
 (function () {
-    // NOTE: used by cheat_sheet.rst
+    // NOTE: used by accounting cheat_sheet.rst
     'use strict';
 
     function highlight(primary, secondary) {

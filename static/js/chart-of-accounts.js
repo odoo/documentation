@@ -1,7 +1,7 @@
 /* global Immutable, React */
 /* global createAtom */
 (function () {
-    // NOTE: used by cheat_sheet.rst
+    // NOTE: used by accounting cheat_sheet.rst
     'use strict';
 
     var data = createAtom();

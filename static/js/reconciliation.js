@@ -1,5 +1,5 @@
 (function () {
-    // NOTE: cheat_sheet.rst
+    // NOTE: used by accounting cheat_sheet.rst
     document.addEventListener('DOMContentLoaded', function () {
         var $rec = $('#reconciliation .reconciliation-example');
         if (!$rec.length) { return; }
