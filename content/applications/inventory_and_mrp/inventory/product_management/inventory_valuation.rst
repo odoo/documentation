@@ -7,6 +7,7 @@ Inventory valuation
 .. toctree::
    :titlesonly:
 
+   inventory_valuation/cheat_sheet
    inventory_valuation/inventory_valuation_config
    inventory_valuation/using_inventory_valuation
    inventory_valuation/landed_costs

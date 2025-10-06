@@ -6,7 +6,7 @@
     });
 
     function highlight() {
-        // NOTE: used by double-entry.rst
+        // NOTE: used by valuation cheat_sheet.rst
         $('.highlighter-list').each(function () {
             var $this = $(this),
                 $target = $($this.data('target'));
@@ -34,7 +34,7 @@
      *  - automatically select first control on startup
      */
     function alternatives() {
-        // NOTE: used by double-entry.rst & valuation_methods pages
+        // NOTE: used by valuation cheat_sheet.rst
         $('dl.alternatives').each(function (index) {
             var $list = $(this),
                 $contents = $list.children('dd');
@@ -51,7 +51,18 @@
 
                     label.appendChild(input);
                     label.appendChild(document.createTextNode(' '));
-                    label.appendChild(document.createTextNode(this.textContent));
+
+                    // Hack to bold the definition since we have to strip rST formatting
+                    const [headText, tailText] = this.textContent.split(':', 2);
+                    if (tailText) {
+                        const bold = document.createElement('b'),
+                              defined = document.createTextNode(`${headText}:`);
+                        bold.appendChild(defined);
+                        label.appendChild(bold);
+                    }
+
+                    label.appendChild(document.createTextNode(tailText || headText));
+                    label.normalize();
 
                     return label;
                 }))
@@ -67,7 +78,7 @@
         });
     }
     function checks_handling() {
-        // NOTE: used by cheat_sheet.rst
+        // NOTE: used by accounting cheat_sheet.rst
         var $section = $('.checks-handling');
         if (!$section.length) { return; }
 
