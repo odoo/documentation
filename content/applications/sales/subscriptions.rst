@@ -80,9 +80,9 @@ After giving the recurring plan a suitable :guilabel:`Name` (e.g. `Monthly`, `Bi
 `Quarterly`, etc.), proceed to the form's :guilabel:`DETAILS` section to fill out the following
 configuration fields:
 
-- :guilabel:`Billing Period`: determines the recurrence period of the recurring plan. Set the
-  numerical value in the text field and contextualize the quantity with a unit of time in the
-  corresponding drop-down menu, in :guilabel:`Weeks`, :guilabel:`Months`, or :guilabel:`Years`.
+- :guilabel:`Billing Period`: determines the frequency with which the subscription is billed. Set
+  the unit of time (:guilabel:`Weeks`, :guilabel:`Months`, or :guilabel:`Years`) in the drop-down
+  menu and the numerical value in the corresponding text field.
 - :guilabel:`Automatic Closing`: a numerical value, in days, where the subscription is set to close
   automatically if payment is not made.
 
@@ -92,16 +92,17 @@ configuration fields:
      that month if payment is not received.
 
 - :guilabel:`Align to Period Start`: sets new and recurring subscription plans to bill on the first
-  day of the next :guilabel:`Billing Period`. When a subscription plan is purchased in the middle
-  of a billing period, the invoice shows a reduced cost.
+  day of the next :guilabel:`Billing Period`. When a subscription plan is purchased in the middle of
+  a billing period, the invoice shows a reduced cost. Setting a custom period start dates (such as
+  the 5th of each month) requires custom development and is not available by default.
 
   .. example::
      On the 15th of July, a customer purchases a monthly subscription for a streaming service.
-     Selecting :guilabel:`Align to Period Start` for this recurring plan ensures that all
-     subscriptions are billed on the 1st of each month. Their subscription begins as soon as
-     payment is confirmed. The quotation shows the full cost of the subscription for July 1 - 31,
-     but the invoice shows an adjusted cost for July 15 - 31. On the 1st of August, the customer is
-     charged the full price for the month's subscription.
+     Selecting :guilabel:`Align to Period Start` for this recurring plan configures this
+     subscription to bill on the 1st of each month. The subscription begins as soon as payment is
+     confirmed. The quotation shows the full cost of the subscription for July 1 - 31, but the
+     invoice shows an adjusted cost for July 15 - 31. On the 1st of August, the customer is charged
+     the full price for the month's subscription.
 
 - :guilabel:`Company`: optional assignment, if the database has :doc:`Multi-company
   <../general/companies/multi_company>` functionality enabled. Assigning this value will make the
