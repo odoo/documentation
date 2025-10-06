@@ -11,8 +11,8 @@ assigning a monetary value to account for inventory is known as *stock valuation
 This value is often reported for accounting purposes. For instance, an insurance company may want to
 know the value of goods stored in a warehouse, in the event of a flood or fire.
 
-:doc:`Stock valuation <../../product_management/inventory_valuation/using_inventory_valuation>`
-typically utilizes one of two accounting systems:
+:doc:`Stock valuation <../../inventory_valuation/cheat_sheet>` typically utilizes one of two
+accounting systems:
 
 - **Perpetual**: The inventory is constantly (perpetually) being updated, and the value is
   constantly changing.
@@ -21,11 +21,10 @@ typically utilizes one of two accounting systems:
 
 Using :ref:`tracked inventory <inventory/product_management/tracking-inventory>` in Odoo
 necessitates a *perpetual* inventory accounting system because of the need to know when and where
-inventory exists, and how much of it is available or forecasted. There are a few common :ref:`stock
-valuation methods <inventory/warehouses_storage/costing_methods>` used in Odoo: *standard price*,
-*average cost* (AVCO), and *first in, first out* (FIFO) accounting. It is important to know that the
-valuation method chosen for a product impacts the calculation of several fields in the stock
-valuation reports.
+inventory exists, and how much of it is available or forecasted. There are a few common valuation
+methods used in Odoo: *standard price*, *average cost* (AVCO), and *first in, first out* (FIFO)
+accounting. It is important to know that the valuation method chosen for a product impacts the
+calculation of several fields in the stock valuation reports.
 
 Open the dashboard
 ==================

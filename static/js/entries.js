@@ -2,7 +2,7 @@
 /* global createAtom, findAncestor */
 (function () {
     'use strict';
-    // NOTE: cheat_sheet.rst
+    // NOTE: used by accounting cheat_sheet.rst
 
     var data = createAtom();
     data.addWatch('chart', function (k, m, prev, next) {

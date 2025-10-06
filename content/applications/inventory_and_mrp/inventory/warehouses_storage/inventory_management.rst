@@ -64,8 +64,7 @@ field, there are:
      View locations should **not** contain products, but it is possible to move them there.
 
 - :guilabel:`Internal Location`: storage locations within the warehouse. Items stored in these
-  locations are accounted for in :doc:`inventory valuation
-  <../product_management/inventory_valuation/using_inventory_valuation>`.
+  locations are accounted for in :doc:`inventory valuation <../inventory_valuation/cheat_sheet>`.
 
 - :guilabel:`Customer Location`: where sold products are tracked; items here are no longer in stock.
 
@@ -110,10 +109,9 @@ Odoo databases include preconfigured view locations to organize the hierarchy of
 provide helpful context, and distinguish between internal and external locations.
 
 - *Physical locations* group internal locations—such as secondary warehouses and subcontractor
-  sites. Because :doc:`inventory valuation
-  <../product_management/inventory_valuation/inventory_valuation_config>` changes only when goods
-  move from internal to external locations, Odoo uses physical locations to track stock that is
-  off-site or in transit without affecting valuation.
+  sites. Because :doc:`inventory valuation <../inventory_valuation/cheat_sheet>` changes only when
+  goods move from internal to external locations, Odoo uses physical locations to track stock that
+  is off-site or in transit without affecting valuation.
 
 .. _inventory/warehouses_storage/interwarehouse-transit:
 

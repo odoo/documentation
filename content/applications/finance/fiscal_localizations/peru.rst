@@ -1003,12 +1003,11 @@ Several configurations related to the product or product category are necessary 
 
 - **Automatic inventory valuation**: For storable goods (:dfn:`products with tracked inventory`),
   use :doc:`automatic inventory valuation
-  <../../inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config>`.
-  Once automatic inventory valuation is enabled, this valuation method can be enabled for
-  a product's :ref:`product category <inventory/warehouses_storage/valuation-on-product-category>`.
+  <../../inventory_and_mrp/inventory/inventory_valuation/cheat_sheet>`. Once automatic inventory
+  valuation is enabled, this valuation method can be enabled for a product's product category.
 
 - **Costing method:** Storable goods must use a :doc:`costing method
-  <../../inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config>`
+  <../../inventory_and_mrp/inventory/inventory_valuation/cheat_sheet>`
   **other** than :guilabel:`Standard Price`, as the journal entries generated from stock moves are
   used to populate the |PLE| reports.
 
@@ -1041,7 +1040,7 @@ Generate a .txt file for permanent inventory Kardex reports
 |PLE| 12.1 and 13.1 come as two separate books. The books need to be downloaded in `.txt` file
 format from Odoo, and then they should be submitted to the |SUNAT| |PLE| software.
 
-On the :ref:`Inventory Valuation Report <inventory/management/reporting/valuation-report>`, click
+On the :ref:`Inventory Valuation Report <inventory/product_management/valuation-report>`, click
 the :guilabel:`PLE Reports` button. Then, select the :guilabel:`Period` and choose a report to
 export: either the :guilabel:`PLE 12.1` or :guilabel:`PLE 13.1`. Odoo generates a `.txt` file
 for the chosen report.
