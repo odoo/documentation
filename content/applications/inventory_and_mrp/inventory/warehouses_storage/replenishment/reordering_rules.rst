@@ -422,7 +422,7 @@ Example where visibility days is triggered
 ------------------------------------------
 
 A product shipped from Asia has a combined vendor lead time of 30 days and a shipping cost of $100
-(including :doc:`landed costs <../../product_management/inventory_valuation/landed_costs>` and
+(including :doc:`landed costs <../../inventory_valuation/landed_costs>` and
 tariffs).
 
 - November 4: Current date. The forecasted date is December 4 (30 days later).

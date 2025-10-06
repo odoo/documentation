@@ -1,0 +1,128 @@
+/* Used in valuation cheat_sheet.rst */
+
+/* Prevent titles from wrapping upwards */
+h3 { clear: both !important; }
+
+.full-width { width: 100% !important; }
+
+.accounting-entries, .journal-entries, .values-table {
+    border: 1px solid #d5d5d5;
+    background-color: #f8f8f8;
+    margin: 0px auto;
+}
+
+/* Costing methods table - see misc.js */
+.alternatives-controls {
+    padding-bottom: 24px;
+    label {
+        display: block;
+    }
+}
+dl.alternatives > dt {
+    display: none;
+}
+dl.alternatives > dd {
+    display: none;
+    margin-left: 0;
+}
+.values-table {
+    text-align: right;
+    tr > th:first-of-type {
+        text-align: left;
+    }
+}
+
+/* Accounting methods table - see valuation-accounting.js */
+.accounting-entries {
+    th, td {
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+    }
+    thead th, tr > td {
+        padding-left: 48px;
+    }
+    tbody th {
+        font-weight: normal;
+    }
+    .parent-line { background-color: #fafafa; }
+    .child-line { background-color: #f0f0f0; }
+}
+.entries-listing {
+    padding: .5rem;
+}
+#accounting-entries-controls label,
+#journaling-entries-controls label {
+    display: block;
+}
+
+/* Highlighting of selected options - see misc.js */
+label:hover, .highlighter-list li:hover {
+    background-color: hsl(0, 0%, 94%);
+    cursor: pointer;
+}
+.related {
+    background-color: hsl(317deg 16% 90%) !important;
+    border: 1px solid #000000 !important;
+    transition: .3s;
+}
+.secondary {
+    background-color: hsl(180deg 67% 94%) !important;
+    transition: .3s;
+}
+.highlight-op {
+    background-color: hsl(317deg 16% 90%) !important;
+    transition: .3s;
+}
+.highlighter-target {
+    th {
+        font-weight: 400;
+    }
+    .related {
+        /*background-color: #eee !important;*/
+        color: #7A436B !important;
+    }
+    .secondary {
+        background-color: #eee !important;
+        color: #7A436B !important;
+    }
+}
+
+/* Static tables */
+.feature-table, .config-table {
+    table {
+        /* width: unset; */
+        margin: auto;
+        white-space: nowrap;
+        text-align: center;
+    }
+    tbody td:first-child {
+        text-align: left;
+    }
+}
+.config-table {
+    font-size: 90%;
+}
+
+.accounting-app-paragraph:hover ~ .feature-table tr > td:first-child:has(+ td .good),
+.inventory-app-paragraph:hover ~ .feature-table tr > td:first-child:has(+ td + td .good)
+{ font-weight: bold; }
+
+.feature-table {
+    td { width: 32px; }
+    td:has(.good) { background-color: #d9ead3 !important; }
+    td:has(.meh)  { background-color: #fce5cd !important; }
+    td:has(.bad)  { background-color: #f4cccc !important; }
+}
+.config-table {
+    th, td {
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+    }
+    td:has(.washed) { color: var(--bs-gray); }
+}
+
+.yellow,   td:has(.yellow),   th:has(.yellow)   { background-color: #fff2cc !important; }
+.green,    td:has(.green),    th:has(.green)    { background-color: #d9ead3 !important; }
+.blue,     td:has(.blue),     th:has(.blue)     { background-color: #cfe2f3 !important; }
+.darkblue, td:has(.darkblue), th:has(.darkblue) { background-color: #6d9eeb !important; }
+.purple,   td:has(.purple),   th:has(.purple)   { background-color: #d9d2e9 !important; }

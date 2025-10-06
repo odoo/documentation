@@ -1553,7 +1553,7 @@ Configuration
 ~~~~~~~~~~~~~
 
 In order to track the correct customs number for a specific invoice, Odoo uses :doc:`landed costs
-<../../inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs>`. Go to
+<../../inventory_and_mrp/inventory/inventory_valuation/landed_costs>`. Go to
 :menuselection:`Inventory --> Configuration --> Settings`, and in the :guilabel:`Valuation` section,
 make sure that :guilabel:`Landed Costs` is activated.
 
@@ -1569,8 +1569,7 @@ and complete these three requirements:
   Number` but **not** :guilabel:`By Quantity`.
 - :guilabel:`Invoicing Policy` **must** be set to :guilabel:`Delivered quantities`.
 - :doc:`Valuation by lots/serial numbers
-  <../../inventory_and_mrp/inventory/product_management/inventory_valuation/valuation_by_lots>`
-  **must** be enabled.
+  <../../inventory_and_mrp/inventory/inventory_valuation/valuation_by_lots>` **must** be enabled.
 
 This will make the field :guilabel:`Customs invoicing` available on the :guilabel:`Accounting` tab.
 Enable the field to use customs numbers with this product.
@@ -1583,8 +1582,8 @@ configuration:
 
 .. note::
    The feature works regardless of whether the :doc:`inventory valuation
-   <../../inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation>`
-   is set to either :guilabel:`Periodic (at closing)` or :guilabel:`Perpetual (at invoicing)`.
+   <../../inventory_and_mrp/inventory/inventory_valuation/cheat_sheet>` is set to either
+   :guilabel:`Periodic (at closing)` or :guilabel:`Perpetual (at invoicing)`.
 
 .. image:: mexico/mx-landing-configuration.png
    :alt: Storable products general configuration.
@@ -1610,7 +1609,7 @@ number`.
    While it is possible to add costs related to the customs number at this stage of the process, it
    is highly recommended to create a landed cost from a vendor bill from your customs agent. Learn
    more about :doc:`Landed Costs here
-   <../../inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs>`.
+   <../../inventory_and_mrp/inventory/inventory_valuation/landed_costs>`.
 
 .. warning::
    The :guilabel:`Customs number` field is not editable once it is set, and cannot be repeated,

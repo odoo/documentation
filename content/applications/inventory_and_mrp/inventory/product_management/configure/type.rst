@@ -164,7 +164,7 @@ documents.
    * - :doc:`Use inventory adjustments <../../warehouses_storage/inventory_management/count_products>`
      - Yes
      - No
-   * - :doc:`Use inventory valuation <../inventory_valuation/using_inventory_valuation>`
+   * - :doc:`Use inventory valuation <../../inventory_valuation/cheat_sheet>`
      - Yes
      - No
    * - :ref:`Create transfer <inventory/product_management/transfer-store>`
@@ -344,6 +344,6 @@ Inventory reports
   on that product's specific moves history.
 - :guilabel:`Moves Analysis`: This report provides a pivot table view of inventory transfers by
   operation type.
-- :ref:`Stock Valuation report <inventory/management/reporting/valuation-report>`: A detailed record
-  of the monetary value of all tracked inventory.
+- :ref:`Stock Valuation report <inventory/product_management/valuation-report>`: A
+  detailed record of the monetary value of all tracked inventory.
 

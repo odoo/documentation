@@ -36,8 +36,7 @@ In the report itself, the columns represent:
 
   .. seealso::
      - :ref:`Compute average cost inventory valuation per unit <inventory/avg_cost/formula>`
-     - :doc:`Inventory valuation methods
-       <../../product_management/inventory_valuation/inventory_valuation_config>`
+     - :doc:`Inventory valuation methods <../../inventory_valuation/cheat_sheet>`
 
 - :guilabel:`On Hand`: current quantity of products. Click the :icon:`fa-pencil`
   :guilabel:`(pencil)` icon to :doc:`modify the on-hand quantity
