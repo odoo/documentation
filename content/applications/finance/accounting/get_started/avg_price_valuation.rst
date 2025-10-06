@@ -25,14 +25,8 @@ valuation <inventory/avg_price/leaving_inventory>`.
 
 .. note::
    This document addresses a specific use case for theoretical purposes. For instructions on how to
-   set up and use |AVCO|, refer to the :doc:`inventory valuation configuration
-   <../../../inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config>`
-   doc.
-
-.. seealso::
-   - :doc:`Using inventory valuation
-     <../../../inventory_and_mrp/inventory/product_management/inventory_valuation/using_inventory_valuation>`
-   - :ref:`Other inventory valuation methods <inventory/warehouses_storage/costing_methods>`
+   set up and use |AVCO|, refer to the :doc:`inventory valuation cheat sheet
+   <../../../inventory_and_mrp/inventory/inventory_valuation/cheat_sheet>`.
 
 Configuration
 =============
@@ -43,8 +37,8 @@ product category page, set :guilabel:`Costing Method` to `Average Cost (AVCO)` a
 :guilabel:`Inventory Valuation` to `Automated`.
 
 .. seealso::
-   :doc:`Inventory valuation configuration
-   <../../../inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config>`
+   :doc:`Inventory valuation cheat sheet
+   <../../../inventory_and_mrp/inventory/inventory_valuation/cheat_sheet>`
 
 Using average cost valuation
 ============================
@@ -70,7 +64,7 @@ When new products arrive, the new average cost for each product is recomputed us
 - **Purchase Price**: estimated price of products at the reception of products (since vendor bills
   may arrive later). The amount includes not only the price for the products, but also added costs,
   such as shipping, taxes, and :doc:`landed costs
-  <../../../inventory_and_mrp/inventory/product_management/inventory_valuation/landed_costs>`. At
+  <../../../inventory_and_mrp/inventory/inventory_valuation/landed_costs>`. At
   reception of the vendor bill, this price is adjusted;
 - **Final Qty**: quantity of on-hand stock after the stock move.
 
@@ -262,9 +256,6 @@ In addition to using |AVCO|, companies that use **Anglo-Saxon accounting** also 
 account that tracks the amount to be paid to vendors. Once a vendor delivers an order, **inventory
 value** increases based on the vendor price of the products that have entered the stock. The holding
 account (called **stock input**) is credited and only reconciled once the vendor bill is received.
-
-.. seealso::
-   - :ref:`Anglo-Saxon vs. Continental <inventory/warehouses_storage/accounting-types>`
 
 The table below reflects journal entries and accounts. The *stock input* account stores the money
 intended to pay vendors when the vendor bill has not yet been received. To balance accounts when

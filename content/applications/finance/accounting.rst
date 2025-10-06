@@ -282,7 +282,7 @@ available methods are standard price, average price, :abbr:`LIFO (Last-In, First
 :abbr:`FIFO (First-In, First-Out).`
 
 .. seealso::
-   :doc:`../inventory_and_mrp/inventory/product_management/inventory_valuation/inventory_valuation_config`
+   :doc:`../inventory_and_mrp/inventory/inventory_valuation/cheat_sheet`
 
 .. _accounting/retained-earnings:
 

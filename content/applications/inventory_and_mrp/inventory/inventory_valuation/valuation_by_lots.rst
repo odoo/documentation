@@ -2,19 +2,19 @@
 Valuation by lots/serial numbers
 ================================
 
-Track :doc:`inventory valuation <using_inventory_valuation>` by :doc:`lots or serial numbers
-<../../product_management/product_tracking>` to:
+Track :doc:`inventory valuation <cheat_sheet>` by :doc:`lots or serial numbers
+<../product_management/product_tracking>` to:
 
 #. :ref:`Compare and differentiate purchasing cost <inventory/product_management/view-valuation>`,
    based on lot or serial numbers.
 #. Track the actual cost of manufactured products, based on the real cost of each tracked component
    used.
 #. Depreciate specific lot or serial numbers when they :doc:`sit in stock for too long
-   <../../warehouses_storage/reporting/aging>`.
+   <../warehouses_storage/reporting/aging>`.
 
 .. important::
-   Please read this :doc:`introduction to inventory valuation <inventory_valuation_config>` before
-   setting up valuation by lot/serial numbers.
+   Please read this :doc:`introduction to inventory valuation <cheat_sheet>` before setting up
+   valuation by lot/serial numbers.
 
 Configuration
 =============
@@ -25,15 +25,12 @@ feature <inventory/product_management/enable-lot-serial>`. After that, go to
 a new product, by clicking :guilabel:`New`.
 
 On the product form, in the :guilabel:`Category` field, choose a product category. Ensure the
-product category's :ref:`Costing Method <inventory/warehouses_storage/costing_methods>` is set to
-*First In First Out (FIFO)* or *Average Cost (AVCO)*.
+product category's :guilabel:`Costing Method` is set to *First In First Out (FIFO)* or
+*Average Cost (AVCO)*.
 
 .. tip::
    To check the costing method set on the product category, hover over the :guilabel:`Category`
    field, and click the :icon:`oi-arrow-right` :guilabel:`(Internal Link)` icon.
-
-.. seealso::
-   :ref:`Costing methods <inventory/warehouses_storage/costing_methods>`
 
 Next, activate the product to be tracked by lots or serial numbers by ticking the :guilabel:`Track
 Inventory` checkbox. Then, click the adjacent field that appears, and choose either :guilabel:`By
@@ -109,7 +106,7 @@ Create new lot/serial number
 ----------------------------
 
 Creating a new lot/serial number through an :doc:`inventory adjustment
-<../../warehouses_storage/inventory_management/count_products>` assigns the same value as the cost
+<../warehouses_storage/inventory_management/count_products>` assigns the same value as the cost
 on the product form.
 
 To make an inventory adjustment, and assign a lot number, go to :menuselection:`Inventory app -->
@@ -187,7 +184,7 @@ On the resulting :guilabel:`Stock Valuation` report, click the search bar, and i
 
 .. tip::
    Click the :icon:`fa-plus` :guilabel:`(plus)` icon to the right of a collapsed lot number line to
-   :ref:`manually modify the cost <inventory/product_management/update-unit-price>`.
+   manually modify the cost.
 
    This is useful for adjusting individual lot prices when a purchase order or bill includes
    multiple lots/serial numbers, as initial prices are identical upon reception.
