@@ -9,17 +9,60 @@ to the ePOS printer.
 Configuration
 =============
 
-To use an ePos printer in Point of Sale:
+To use an ePos printer in a Point of Sale, you need to set your printer up first, in order to get a
+certified domain that will allow printing from your browser.
 
-#. :ref:`Access the POS settings <configuration/settings>`.
-#. Activate the :guilabel:`ePos Printer` feature.
-#. Fill in the field with your ePos IP address.
+1. Access the printer homepage by entering its IP address in a web browser.
+
+.. note::
+   When the printer connects to a network, it automatically prints a ticket with its IP address.
+
+2. Go to the :guilabel:`Advanced Settings` menu.
+
+.. image:: epos_printers/epos_homepage.png
+   :alt: Epson ePos printer homepage
+
+3. Login using the :guilabel:`Administrator Login` button.
+
+.. image:: epos_printers/admin_login.png
+   :alt: Button to access the administrator login of the Epson ePos printer
+
+4. Go to the :guilabel:`Network Security` tab.
+5. Under :guilabel:`SSL/TLS`, click on :guilabel:`Automatic Certificate Update`.
+6. Finally, enable :guilabel:`Automatic Update of CA-signed certificates` and :guilabel:`Update time`
+   (you may also set a time that's not within your business hours).
+
+.. image:: epos_printers/auto_cert_update.png
+   :alt: Enable Automatic Certificate Update on the Epson ePos printer
+
+7. Click on :guilabel:`Next`, your printer will restart.
+
+You will now set et a time server on your printer: this will ensure that the certificate is always valid.
+
+8. Go to the :guilabel:`Device Management` tab.
+9. Under :guilabel:`Date and Time`, click on :guilabel:`Time Server`.
+10. Select :guilabel:`Use` for :guilabel:`Use Time Server`, set `be.pool.ntp.org` (or any valid time server)
+    as :guilabel:`Time Server Address`, and set :guilabel:`Update Interval (min)` to `10`.
+
+.. image:: epos_printers/time_server.png
+   :alt: Enable Time Server on the Epson ePos printer
+
+11. Click on :guilabel:`Ok`, the printer will apply the configuration.
+
+Now, go back to Odoo Point of Sale:
+
+12. :ref:`Access the POS settings <configuration/settings>`.
+13. Activate the :guilabel:`ePos Printer` feature.
+14. Fill in the field with your ePos serial number. When clicking outside of the field, Odoo will
+    automatically copmute the certified domain url.
 
 .. image:: epos_printers/setting.png
    :alt: setting to enable the ePos printer feature
 
 .. note::
-   When the printer connects to a network, it automatically prints a ticket with its IP address.
+   You can find the :guilabel:`administrator password` and the :guilabel:`serial number` on the
+   label at the back of your printer.
+
 
 Directly supported ePOS printers
 ================================
