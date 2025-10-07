@@ -88,7 +88,7 @@ Payroll localization modules are available for the countries listed below.
 - Pakistan
 - Poland
 - Romania
-- Saudi Arabia
+- :doc:`Saudi Arabia <payroll_localizations/saudi_arabia>`
 - Slovakia
 - Switzerland
 - Türkiye
@@ -104,6 +104,7 @@ Payroll localization modules are available for the countries listed below.
    payroll_localizations/hong_kong
    payroll_localizations/jordan
    payroll_localizations/mexico
+   payroll_localizations/saudi_arabia
    payroll_localizations/united_arab_emirates
    payroll_localizations/united_states
    payroll_localizations/employment_hero
