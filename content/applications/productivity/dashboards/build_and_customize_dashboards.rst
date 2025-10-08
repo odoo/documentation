@@ -2,7 +2,7 @@
 Build and customize dashboards
 ==============================
 
-In addition to consulting :ref:`standard dashboards <dashboards/consult-dashboards/standard>`, users
+In addition to consulting :ref:`standard dashboards <dashboards/standard>`, users
 with the appropriate :ref:`access rights <dashboards/access-and-sharing/customize-configure-build>`
 can :ref:`build custom dashboards from scratch <build_and_customize_dashboards/build>` or
 :ref:`customize existing dashboards <build_and_customize_dashboards/customize>` to respond to
@@ -99,19 +99,22 @@ This stage involves:
 Customize a dashboard
 =====================
 
-Dashboards are customized by editing the dashboard's underlying spreadsheet.
-
-.. important::
-   When customizing a :ref:`standard dashboard <dashboards/consult-dashboards/standard>`, it is
-   highly recommended to :ref:`duplicate the dashboard
-   <build_and_customize_dashboards/customize/duplicate-dashboard>` and make any changes on
-   the underlying spreadsheet of the duplicated version. Standard dashboards are reinstalled at
-   each Odoo version upgrade, meaning any customizations on the original version are lost.
+A dashboard can be customized by :ref:`opening its underlying spreadsheet
+<build_and_customize_dashboards/customize/open-spreadsheet>`, i.e., the Odoo spreadsheet from which
+the dashboard has been created, and :ref:`making any desired changes
+<dashboards/customize-dashboard/edit-spreadsheet>`.
 
 .. _build_and_customize_dashboards/customize/open-spreadsheet:
 
 Open the underlying spreadsheet
 -------------------------------
+
+.. important::
+   When customizing a :ref:`standard dashboard <dashboards/standard>`, it is highly recommended to
+   :ref:`duplicate the dashboard <build_and_customize_dashboards/customize/duplicate-dashboard>`
+   and make any changes on the underlying spreadsheet of the duplicated version. Standard
+   dashboards are reinstalled at each Odoo version upgrade, meaning any customizations on the
+   original version are lost.
 
 To open a dashboard's underlying spreadsheet:
 
@@ -120,12 +123,12 @@ To open a dashboard's underlying spreadsheet:
    :icon:`fa-pencil` :guilabel:`Edit`.
 
 .. tip::
-   - Users who do not have the appropriate :ref:`access rights
-     <dashboards/access-and-sharing/customize-configure-build>` to customize a dashboard can still
-     access a read-only version of the dashboard's underlying spreadsheet.
    - To temporarily unpublish a dashboard while you make changes, disable :guilabel:`Is Published`
      *before* editing the dashboard, making note to republish it when the customization has been
      finalized.
+   - Users who do not have the appropriate :ref:`access rights
+     <dashboards/access-and-sharing/customize-configure-build>` to customize a dashboard can still
+     access a read-only version of the dashboard's underlying spreadsheet.
    - With :ref:`developer mode <developer-mode>` activated, click on the :icon:`fa-pencil`
      :guilabel:`(Edit)` icon beside the name of a dashboard in the left panel to open its underlying
      spreadsheet.
@@ -146,7 +149,7 @@ The spreadsheet that opens typically consists of at least two sheets:
    :guilabel:`(list)` or :icon:`fa-bar-chart` :guilabel:`(chart)` icon, followed by their ID and
    name, e.g., :icon:`oi-view-pivot` *(#1) Sales Analysis by Product*.
 
-   For :ref:`standard dashboards <dashboards/consult-dashboards/standard>`, while the data sources
+   For :ref:`standard dashboards <dashboards/standard>`, while the data sources
    are still active and visible in the :menuselection:`Data` menu, the corresponding lists and pivot
    tables have been removed from the spreadsheet for better performance and a neater appearance.
 
@@ -187,10 +190,12 @@ Dashboards can be customized in various ways, such as by:
   or to other sheets within the same spreadsheet.
 
 .. tip::
-   Dashboard elements that are no longer needed can be deleted from the spreadsheet. If, after
-   deleting a dashboard element, a :ref:`data source <spreadsheet/insert/data-sources>` is no longer
-   being used in the spreadsheet, this is indicated by a :icon:`fa-exclamation-triangle`
-   :guilabel:`(warning)` icon in the :guilabel:`Data` menu.
+   - The first tab of the spreadsheet serves as the front end of the dashboard. Any tables or charts
+     that should be visible on the final dashboard need to be added to this sheet.
+   - Dashboard elements that are no longer needed can be deleted from the spreadsheet. If, after
+     deleting a dashboard element, a :ref:`data source <spreadsheet/insert/data-sources>` is no
+     longer being used in the spreadsheet, this is indicated by a :icon:`fa-exclamation-triangle`
+     :guilabel:`(warning)` icon in the :guilabel:`Data` menu.
 
    .. image:: build_and_customize_dashboards/list-deleted.png
       :alt: Warning to indicate data source no longer used in spreadsheet
@@ -198,10 +203,14 @@ Dashboards can be customized in various ways, such as by:
 .. _dashboards/customize-dashboard/edit-spreadsheet-new-odoo-data:
 
 Insert new Odoo data
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
-Inserting new Odoo data into a dashboard's underlying spreadsheet requires starting from the
-relevant Odoo view. To do so:
+New Odoo data, such as lists, pivot tables, or charts, can be inserted into a dashboard, starting
+from the relevant list view, pivot view, or graph view. Concretely, a list or pivot table is
+inserted into a new sheet in the dashboard's underlying spreadsheet; a chart is inserted on the
+first sheet of the spreadsheet.
+
+To insert new data:
 
 #. With the relevant list view, pivot view or graph view open in your database, proceed as follows:
 
@@ -215,8 +224,8 @@ relevant Odoo view. To do so:
 #. Click the :guilabel:`Dashboards` tab then select in which dashboard the list, pivot table, or
    chart should be inserted.
 
-A list or pivot table is inserted into a new sheet in the dashboard's underlying spreadsheet; a
-chart is inserted on the first sheet of the spreadsheet.
+The dashboard's underlying spreadsheet opens, with the new data inserted either on a new sheet (list
+or pivot table) or on the first sheet (chart).
 
 .. seealso::
    :doc:`Inserting Odoo data into a spreadsheet
