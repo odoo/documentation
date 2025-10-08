@@ -2,7 +2,7 @@
 Build and customize dashboards
 ==============================
 
-In addition to consulting :ref:`standard dashboards <dashboards/consult-dashboards/standard>`, users
+In addition to consulting :ref:`standard dashboards <dashboards/standard>`, users
 with the appropriate :ref:`access rights <dashboards/access-and-sharing/customize-configure-build>`
 can :ref:`build custom dashboards from scratch <build_and_customize_dashboards/build>` or
 :ref:`customize existing dashboards <build_and_customize_dashboards/customize>` to respond to
@@ -102,11 +102,11 @@ Customize a dashboard
 Dashboards are customized by editing the dashboard's underlying spreadsheet.
 
 .. important::
-   When customizing a :ref:`standard dashboard <dashboards/consult-dashboards/standard>`, it is
-   highly recommended to :ref:`duplicate the dashboard
-   <build_and_customize_dashboards/customize/duplicate-dashboard>` and make any changes on
-   the underlying spreadsheet of the duplicated version. Standard dashboards are reinstalled at
-   each Odoo version upgrade, meaning any customizations on the original version are lost.
+   When customizing a :ref:`standard dashboard <dashboards/standard>`, it is highly recommended to
+   :ref:`duplicate the dashboard <build_and_customize_dashboards/customize/duplicate-dashboard>` and
+   make any changes on the underlying spreadsheet of the duplicated version. Standard dashboards are
+   reinstalled at each Odoo version upgrade, meaning any customizations on the original version are
+   lost.
 
 .. _build_and_customize_dashboards/customize/open-spreadsheet:
 
@@ -146,7 +146,7 @@ The spreadsheet that opens typically consists of at least two sheets:
    :guilabel:`(list)` or :icon:`fa-bar-chart` :guilabel:`(chart)` icon, followed by their ID and
    name, e.g., :icon:`oi-view-pivot` *(#1) Sales Analysis by Product*.
 
-   For :ref:`standard dashboards <dashboards/consult-dashboards/standard>`, while the data sources
+   For :ref:`standard dashboards <dashboards/standard>`, while the data sources
    are still active and visible in the :menuselection:`Data` menu, the corresponding lists and pivot
    tables have been removed from the spreadsheet for better performance and a neater appearance.
 

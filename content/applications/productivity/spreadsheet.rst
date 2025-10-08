@@ -43,9 +43,8 @@ The Spreadsheet module is part of **Odoo Documents**.
    display dynamic Odoo data and provide an overview of key business metrics.
 
    :ref:`Standard, pre-configured dashboards
-   <dashboards/consult-dashboards/standard>` can be :ref:`customized
-   <build_and_customize_dashboards/customize>` by editing the dashboard's underlying spreadsheet via
-   Dashboards. :ref:`Custom dashboards
+   <dashboards/standard>` can be :ref:`customized <build_and_customize_dashboards/customize>` by
+   editing the dashboard's underlying spreadsheet via Dashboards. :ref:`Custom dashboards
    <build_and_customize_dashboards/build>` can also be created from scratch, starting from an Odoo
    spreadsheet; any subsequent :ref:`modifications <build_and_customize_dashboards/customize>` are
    performed via Dashboards.
