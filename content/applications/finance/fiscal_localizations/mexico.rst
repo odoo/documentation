@@ -85,6 +85,10 @@ if meeting a specific requirement for the business.
      - Adds extra fields to the :doc:`eCommerce <../../websites/ecommerce>` module to comply with
        the Mexican electronic invoicing requirements
 
+.. seealso::
+   Payroll module information is available :doc:`here
+   <../../hr/payroll/payroll_localizations/mexico>`.
+
 .. _l10n/mx/video-tutorials:
 
 Video tutorials
@@ -95,7 +99,7 @@ this page are also available in video format, please check out the following:
 
 - `Odoo Smart Tutorial - Mexican localization
   <https://www.odoo.com/es/slides/smart-tutorial-localizacion-de-mexico-173>`_
-- `Basic configurations and Youtube playlist
+- `Basic configurations and YouTube playlist
   <https://www.youtube.com/watch?v=TjWddMtQRfc&list=PL1-aSABtP6ACcwRzy_cdx-avDoNfSvooD&index=22>`_
 
 .. _l10n/mx/overview:
@@ -113,8 +117,11 @@ foreign trade, and enable the creation of delivery guides.
    In order to electronically sign any documents in Odoo, the Sign application must be installed.
 
 .. seealso::
-   :doc:`Documentation on e-invoicing's legality and compliance in Mexico
-   <../accounting/customer_invoices/electronic_invoicing/mexico>`
+
+   - :doc:`Documentation on e-invoicing's legality and compliance in Mexico
+     <../accounting/customer_invoices/electronic_invoicing/mexico>`
+   - :doc:`Mexican Payroll signing and configurations
+     <../../hr/payroll/payroll_localizations/mexico>`
 
 .. _l10n/mx/requirements:
 
