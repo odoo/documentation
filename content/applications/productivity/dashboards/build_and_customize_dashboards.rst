@@ -14,8 +14,8 @@ Build a dashboard
 =================
 
 In its most simple terms, building a dashboard involves :doc:`inserting Odoo data into a spreadsheet
-<../../../applications/productivity/spreadsheet/insert>` then :ref:`converting that spreadsheet into
-a dashboard <spreadsheet/manage-spreadsheets/convert-to-dashboard>`.
+<../spreadsheet/insert>` then :ref:`converting that spreadsheet into
+a dashboard <spreadsheet/get-started/convert-to-dashboard>`.
 
 However, to build a dashboard that delivers relevant and valuable insights, it is important to
 consider the process in terms of three key stages: :ref:`preparation
@@ -33,10 +33,10 @@ This stage involves:
 - defining the purpose of the dashboard, in other words, the business questions it needs to answer,
   and deciding what data would answer those questions;
 - determining where to find the relevant Odoo data and deciding which :doc:`type of view
-  <../../../applications/studio/views>` (i.e., list, pivot table, or chart) is most suited for the
+  <../../studio/views>` (i.e., list, pivot table, or chart) is most suited for the
   data analysis needed;
 - preparing the Odoo data by refining the views to focus on the most relevant information, e.g., by
-  using :doc:`search filters <../../../applications/essentials/search>`, by making only certain list
+  using :doc:`search filters <../../essentials/search>`, by making only certain list
   fields visible, or by deciding which dimensions and measures a pivot table should use;
 - sourcing any other information needed to support the dashboard.
 
@@ -47,14 +47,13 @@ Data insertion and manipulation
 
 This stage involves:
 
-- :doc:`inserting the prepared lists, pivot tables or charts
-  <../../../applications/productivity/spreadsheet/insert>` into the spreadsheet you will use to
-  build your dashboard;
+- :doc:`inserting the prepared lists, pivot tables or charts <../spreadsheet/insert>` into the
+  spreadsheet you will use to build your dashboard;
 - manipulating the data, if needed, to be able to draw the necessary insights. This may involve
   performing calculations or creating custom metrics using :doc:`standard or Odoo-specific functions
-  and formulas <../../../applications/productivity/spreadsheet/functions>`, referencing data from
+  and formulas <../spreadsheet/work_with_data/functions>`, referencing data from
   various sources within the spreadsheet, or :doc:`converting static pivot tables to dynamic pivot
-  tables <../../../applications/productivity/spreadsheet/dynamic_pivot_tables>`.
+  tables <../spreadsheet/work_with_data/dynamic_pivot_tables>`.
 
 .. _build_and_customize_dashboards/build-visualization:
 
@@ -72,11 +71,11 @@ This stage involves:
 - :ref:`inserting clickable links <spreadsheet/insert/clickable-links>`, if relevant, to provide
   access to Odoo menu items, URLs, or other sheets within the same spreadsheet if these should also
   be accessible from the front end of your dashboard;
-- :doc:`creating global filters <../../../applications/productivity/spreadsheet/global_filters>` to
+- :doc:`creating global filters <../spreadsheet/work_with_data/global_filters>` to
   allow users to tailor the view to their needs;
 - :ref:`converting the spreadsheet into a dashboard
-  <spreadsheet/manage-spreadsheets/convert-to-dashboard>`, determining whether to add the dashboard
-  to an existing or new dashboard section, and :ref:`managing access rights to the dashboard
+  <spreadsheet/get-started/convert-to-dashboard>`, determining whether to add the dashboard to an
+  existing or new dashboard section, and :ref:`managing access rights to the dashboard
   <dashboards/access-and-sharing/manage-view-access>`.
 
 .. tip::
@@ -184,7 +183,7 @@ Dashboards can be customized in various ways, such as by:
 - adding new tables and charts based on previously inserted or :ref:`newly inserted Odoo data
   <dashboards/customize-dashboard/edit-spreadsheet-new-odoo-data>`. This requires a similar approach
   to :ref:`building a dashboard from scratch <build_and_customize_dashboards/build>`;
-- :doc:`adding new global filters <../../../applications/productivity/spreadsheet/global_filters>`
+- :doc:`adding new global filters <../spreadsheet/work_with_data/global_filters>`
   or editing or deleting existing ones;
 - :ref:`adding or editing clickable links <spreadsheet/insert/clickable-links>` to Odoo menus, URLs,
   or to other sheets within the same spreadsheet.
@@ -229,4 +228,4 @@ or pivot table) or on the first sheet (chart).
 
 .. seealso::
    :doc:`Inserting Odoo data into a spreadsheet
-   <../../../applications/productivity/spreadsheet/insert>`
+   <../spreadsheet/insert>`
