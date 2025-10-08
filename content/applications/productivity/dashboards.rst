@@ -87,13 +87,14 @@ help tailor the view to answer specific business questions.
 Apply filters
 ~~~~~~~~~~~~~
 
-If :doc:`global filters <spreadsheet/global_filters>` are available for a dashboard, a search bar
-above the dashboard allows you to filter the entire dashboard for the selected values.
+If :doc:`global filters <spreadsheet/work_with_data/global_filters>` are available for a dashboard,
+a search bar above the dashboard allows you to filter the entire dashboard for the selected values.
 
 .. tip::
    - Global filters are available for all :ref:`standard dashboards <dashboards/standard>`.
-     Additional :doc:`global filters can be added <spreadsheet/global_filters>` by a user with the
-     appropriate :ref:`access rights <dashboards/access-and-sharing/customize-configure-build>`.
+     Additional :doc:`global filters can be added <spreadsheet/work_with_data/global_filters>` by a
+     user with the appropriate :ref:`access rights
+     <dashboards/access-and-sharing/customize-configure-build>`.
    - It is also possible to :ref:`search for values <search/values>` by typing directly in the
      search bar; the search categories shown reflect the available global filters.
 
@@ -341,7 +342,7 @@ actions are possible:
        :ref:`user group <access-rights/groups>`. Edit this if needed via the
        :guilabel:`Configuration` settings of the relevant dashboard section.
      - It is also possible to :ref:`convert a spreadsheet into a dashboard
-       <spreadsheet/manage-spreadsheets/convert-to-dashboard>` and add it to a dashboard section
+       <spreadsheet/get-started/convert-to-dashboard>` and add it to a dashboard section
        starting from the spreadsheet in the Documents app.
 
 .. _dashboards/access-and-sharing:
