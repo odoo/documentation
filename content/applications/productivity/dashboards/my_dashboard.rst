@@ -4,17 +4,25 @@ My Dashboard
 
 **My Dashboard** allows you to centralize the :doc:`Odoo views <../../studio/views>` you consult
 most regularly, making it possible to see critical tasks at a glance without having to first
-navigate through multiple apps. Unlike other Odoo dashboards, My Dashboard is not based on **Odoo
-Spreadsheet**.
+navigate through multiple apps.
+
+My Dashboard is empty until at least one view has been added.
+
+   .. image:: my_dashboard/my-dashboard.png
+      :alt: Example of views added to My Dashboard
 
 Views inserted in My Dashboard are fully dynamic and retain many features of the source view, e.g.,
 sorting of lists, changing the measures used for a pivot table or cohort view, changing the chart
 type, or clicking on a value or data point to view the underlying record(s).
 
 .. tip::
-   It is not possible to change the domain, i.e., the filtering or grouping, of a view that has been
-   added to My Dashboard. To change the domain, make the necessary changes in the original view,
-   then re-insert the view in My Dashboard and delete the originally inserted view.
+   - It is not possible to change the domain, i.e., the :doc:`filtering or grouping
+     <../../essentials/search>`, of a view that has been added to My Dashboard. To change the
+     domain, make the necessary changes in the original view, then re-insert the view in My
+     Dashboard and delete the originally inserted view.
+   - Unlike other Odoo dashboards, My Dashboard is not based on **Odoo Spreadsheet**.
+
+.. _dashboards/my-dashboard/add-views:
 
 Add views
 =========
@@ -41,6 +49,8 @@ The added view is now visible as a widget in My Dashboard in the Dashboards app.
 
 .. tip::
    If added views are not showing in My Dashboard, refresh the browser page.
+
+.. _dashboards/my-dashboard/layout:
 
 Customize layout
 ================
