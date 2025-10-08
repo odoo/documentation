@@ -26,8 +26,8 @@ further manipulated in the spreadsheet. Certain elements of :ref:`inserted chart
    spreadsheet.
 
 .. tip::
-   If you intend to use :doc:`global filters <global_filters>` to dynamically filter Odoo data in
-   a spreadsheet or dashboard, do not use the same conditions to establish the initial list, pivot
+   If you intend to use :doc:`global filters <work_with_data/global_filters>` to dynamically filter
+   Odoo data in a spreadsheet or dashboard, do not use the same conditions to establish the initial list, pivot
    table, or chart in your database.
 
 It is also possible to:
@@ -35,7 +35,7 @@ It is also possible to:
 - :ref:`add clickable links <spreadsheet/insert/clickable-links>` to Odoo menu items, to other
   sheets of the same spreadsheet, or to external URLs
 - :ref:`insert financial data <spreadsheet/insert/financial-data>` from your Odoo database using
-  Odoo-specific spreadsheet :doc:`functions <functions>`
+  Odoo-specific spreadsheet :doc:`functions <work_with_data/functions>`
 - paste data from another Odoo spreadsheet, Excel spreadsheet, or Google Sheet directly into any
   Odoo spreadsheet
 
@@ -151,7 +151,7 @@ side of the screen shows the :ref:`list properties <spreadsheet/insert/list-prop
 .. tip::
    - To view an individual record of an inserted list, right-click on any cell of the relevant row,
      then click :icon:`fa-eye` :guilabel:`See record`. To return to the spreadsheet, click the name
-     of the spreadsheet in the breadcrumbs at the top of the page.
+     of the spreadsheet in the breadcrumbs at the top of the view.
    - To sever the link between an inserted list and your database, select the entire list,
      right-click and select :icon:`fa-clipboard` :guilabel:`Copy` then right-click again and select
      :menuselection:`Paste special --> Paste as value`.
@@ -164,8 +164,8 @@ side of the screen shows the :ref:`list properties <spreadsheet/insert/list-prop
 List functions
 --------------
 
-When a list is inserted into a spreadsheet, the following :doc:`functions <functions>` are used to
-retrieve the header and field values, respectively:
+When a list is inserted into a spreadsheet, the following :doc:`functions
+<work_with_data/functions>` are used to retrieve the header and field values, respectively:
 
 .. code-block:: text
 
@@ -211,8 +211,8 @@ The following list properties are shown, some of which can be edited:
   :ref:`Edit domain <search/custom-filters>` to add or edit rules.
 
   .. note::
-     When :doc:`global filters <global_filters>` are used, this domain is combined with the selected
-     values of the global filter before the data is loaded into the spreadsheet.
+     When :doc:`global filters <work_with_data/global_filters>` are used, this domain is combined
+     with the selected values of the global filter before the data is loaded into the spreadsheet.
 
 - :guilabel:`Sorting`: how the data is sorted, if applicable. To add a sorting rule, click
   :guilabel:`Add`, select the field, then choose whether sorting should be :guilabel:`Ascending` or
@@ -346,10 +346,11 @@ Insert a pivot table
 ====================
 
 .. tip::
-   Converting an inserted pivot table to a :doc:`dynamic pivot table <dynamic_pivot_tables>` allows
-   you to add, remove, and manipulate dimensions (i.e., columns and rows) and measures. It is
-   therefore possible to insert a basic pivot table with minimal configuration, convert it to a
-   dynamic pivot table, then refine it directly in the spreadsheet.
+   Converting an inserted pivot table to a :doc:`dynamic pivot table
+   <work_with_data/dynamic_pivot_tables>` allows you to add, remove, and manipulate dimensions
+   (i.e., columns and rows) and measures. It is therefore possible to insert a basic pivot table
+   with minimal configuration, convert it to a dynamic pivot table, then refine it directly in the
+   spreadsheet.
 
 To insert a pivot table:
 
@@ -379,7 +380,7 @@ Team (Pivot #1)*. A pane on the right side of the screen shows the :ref:`pivot t
 .. tip::
    - To view the records referenced by an individual cell of a pivot table, right-click on the cell,
      then click :icon:`fa-eye` :guilabel:`See record`. To return to the spreadsheet, click the name
-     of the spreadsheet in the breadcrumbs at the top of the page.
+     of the spreadsheet in the breadcrumbs at the top of the view.
    - To sever the link between an inserted pivot table and your database, select the entire pivot
      table, right-click and select :icon:`fa-clone` :guilabel:`Copy`, then right-click again and
      select :menuselection:`Paste special --> Paste as value`.
@@ -394,8 +395,8 @@ Pivot table functions
 ---------------------
 
 An inserted pivot table that has not been converted to a :doc:`dynamic pivot table
-<dynamic_pivot_tables>` uses the following :doc:`functions <functions>` to retrieve the header and
-field values, respectively:
+<work_with_data/dynamic_pivot_tables>` uses the following :doc:`functions
+<work_with_data/functions>` to retrieve the header and field values, respectively:
 
       .. code-block:: text
 
@@ -449,7 +450,7 @@ The following pivot table properties are shown, some of which can be edited:
      If you attempt to make changes to the columns, rows, or measures of a pivot table that has just
      been inserted into a spreadsheet, an error appears at the top right of the screen.
 
-      .. image:: dynamic_pivot_tables/pivot-table-error.png
+      .. image:: insert/pivot-table-error.png
          :alt: Error message when trying to manipulate static pivot table
 
      To be able to manipulate a pivot table's properties, convert a static pivot table to a
@@ -459,8 +460,8 @@ The following pivot table properties are shown, some of which can be edited:
   :ref:`Edit domain <search/custom-filters>` to add or edit rules.
 
   .. note::
-     When :doc:`global filters <global_filters>` are used, this domain is combined with the selected
-     values of the global filter before the data is loaded into the spreadsheet.
+     When :doc:`global filters <work_with_data/global_filters>` are used, this domain is combined
+     with the selected values of the global filter before the data is loaded into the spreadsheet.
 
 To :ref:`duplicate <spreadsheet/insert/pivot-table-duplicate>` or :ref:`delete
 <spreadsheet/insert/pivot-table-delete>` a pivot table's data source, click the :icon:`fa-cog`
@@ -490,8 +491,8 @@ Duplicating a pivot table via the pivot table's properties creates an additional
 allows for different manipulations to be performed on the same data within one spreadsheet.
 
 For example, you can see the same data aggregated by different dimensions or use :doc:`global
-filters <global_filters>` to offset the date and create pivot tables that compare the current
-period's data with a previous period.
+filters <work_with_data/global_filters>` to offset the date and create pivot tables that compare the
+current period's data with a previous period.
 
 To duplicate a pivot table, perform the following steps:
 
@@ -511,7 +512,7 @@ tables have been inserted in the meantime, duplicating *Pivot #1* results in the
      not create a new data source. Any changes made to the pivot table's properties would therefore
      impact any copies of the pivot table.
    - When a pivot table is duplicated, the new pivot table is by default a :doc:`dynamic pivot table
-     <dynamic_pivot_tables>`.
+     <work_with_data/dynamic_pivot_tables>`.
 
 .. _spreadsheet/insert/pivot-table-delete:
 
@@ -546,7 +547,9 @@ To insert a chart from an Odoo database into an Odoo spreadsheet:
 
 #. Click :guilabel:`Confirm`.
 
-Charts are inserted on the first sheet of the spreadsheet.
+Charts are inserted on the first sheet of the spreadsheet. A pane on the right side of the screen
+shows the :ref:`chart properties <spreadsheet/visualize/chart-properties>`, where various aspects of
+the chart's configuration and design can be modified.
 
 .. tip::
    Clicking on a data point in a chart opens the relevant list view in the database. In the example,
@@ -555,215 +558,6 @@ Charts are inserted on the first sheet of the spreadsheet.
 
    .. image:: insert/clickable-link-chart.png
       :alt: A clickable link to an Odoo menu plus clickable data point
-
-.. _spreadsheet/insert/chart-properties:
-
-Chart properties
-----------------
-
-When you insert a chart into a spreadsheet, the chart properties appear on the right side of the
-screen. Access these at any time via the :guilabel:`Data` menu by clicking the relevant chart, as
-prefaced by the :icon:`fa-bar-chart` :guilabel:`(chart)` icon. Alternatively, hover over the chart
-then click the :icon:`fa-bars` :guilabel:`(menu)` icon and click :icon:`fa-pencil-square-o`
-:guilabel:`Edit`.
-
-In the chart properties, the :icon:`fa-sliders` :guilabel:`Configuration` and :icon:`fa-paint-brush`
-:guilabel:`Design` tabs let you modify various elements of the chart.
-
-Configuration
-~~~~~~~~~~~~~
-
-The :icon:`fa-sliders` :guilabel:`Configuration` tab includes the following sections:
-
-- :guilabel:`Chart type`: the type of chart. By default, this indicates the type of chart you
-  selected in the graph view in the database before inserting the chart in the spreadsheet.
-
-  After a chart has been inserted, more chart types are available. Click the dropdown menu to
-  select the most appropriate chart type for the data.
-
-  .. note::
-     The chart types in the :guilabel:`Other` tab below are only available when creating a chart
-     from spreadsheet data; an inserted chart cannot be converted to a chart type shown in that tab.
-     All other chart types are available for both inserted charts and when creating a chart directly
-     from spreadsheet data.
-
-  .. tabs::
-
-     .. tab:: Line
-
-        .. image:: insert/chart-type-line.png
-           :alt: Line chart icon
-
-        :guilabel:`Line`: best for showing trends or changes over time, such as sales
-        growth across months or temperature variations.
-
-        .. image:: insert/chart-type-line-stacked.png
-           :alt: Stacked line chart icon
-
-        :guilabel:`Stacked Line`: useful for visualizing cumulative trends where multiple series
-        contribute to a total, like revenue by department over time.
-
-        .. image:: insert/chart-type-line-combo.png
-           :alt: Combo chart icon
-
-        :guilabel:`Combo`: combines multiple chart types (e.g., bars and lines) to compare different
-        data types or highlight key metrics alongside trends.
-
-     .. tab:: Column
-
-        .. image:: insert/chart-type-column.png
-           :alt: Column chart icon
-
-        :guilabel:`Column`: ideal for comparing values across discrete categories, such as sales per
-        product or revenue by region.
-
-        .. image:: insert/chart-type-column-stacked.png
-           :alt: Stacked column chart icon
-
-        :guilabel:`Stacked Column`: displays part-to-whole relationships within categories, such as
-        regional contributions to total sales.
-
-     .. tab:: Bar
-
-        .. image:: insert/chart-type-bar.png
-           :alt: Bar chart icon
-
-        :guilabel:`Bar`: similar to a column chart but horizontal, making it better for comparing
-        long category names or datasets.
-
-        .. image:: insert/chart-type-bar-stacked.png
-           :alt: Stacked bar chart icon
-
-        :guilabel:`Stacked Bar`: highlights cumulative contributions across categories, often used
-        in demographic or resource allocation analysis.
-
-     .. tab:: Area
-
-        .. image:: insert/chart-type-area.png
-           :alt: Area chart icon
-
-        :guilabel:`Area`: similar to a line chart but fills the area beneath the lines to emphasize
-        magnitude, perfect for cumulative metrics over time.
-
-        .. image:: insert/chart-type-area-stacked.png
-           :alt: Stacked area chart icon
-
-        :guilabel:`Stacked Area`: visualizes the composition of changes over time, such as market
-        share by product category.
-
-     .. tab:: Pie
-
-        .. image:: insert/chart-type-pie.png
-           :alt: Pie chart icon
-
-        :guilabel:`Pie`: best for showing proportions or percentages of a whole, such as market
-        share or budget allocation.
-
-        .. image:: insert/chart-type-doughnut.png
-           :alt: Doughnut chart icon
-
-        :guilabel:`Doughnut`: A variation of the pie chart with a hollow center, offering similar
-        use cases but with a modern aesthetic.
-
-     .. tab:: Miscellaneous
-
-        .. image:: insert/chart-type-scatter.png
-           :alt: Scatter chart icon
-
-        :guilabel:`Scatter`: ideal for analyzing relationships or correlations between two numerical
-        variables, such as price vs. quantity sold.
-
-        .. image:: insert/chart-type-waterfall.png
-           :alt: Waterfall chart icon
-
-        :guilabel:`Waterfall`: ideal for visualizing cumulative effects of sequential positive and
-        negative values, such as profit/loss analysis.
-
-        .. image:: insert/chart-type-population-pyramid.png
-           :alt: Population pyramid chart icon
-
-        :guilabel:`Population Pyramid`: a specialized chart for comparing distributions, often used
-        in demographics, such as age and gender group analysis.
-
-        .. image:: insert/chart-type-radar.png
-           :alt: Radar chart icon
-
-        :guilabel:`Radar`: displays multivariate data as a polygon on axes radiating from a center,
-        allowing for profile comparisons across multiple variables.
-
-        .. image:: insert/chart-type-filled-radar.png
-           :alt: Filled radar chart icon
-
-        :guilabel:`Filled radar`: fills the area within the radar chart's polygon, emphasizing the
-        overall magnitude of values across different attributes for comparison.
-
-     .. tab:: Other
-
-        When creating a chart from spreadsheet data, rather than inserting one from a graph view,
-        the following chart types are also available:
-
-        .. image:: insert/chart-type-gauge.png
-           :alt: Gauge chart icon
-
-        :guilabel:`Gauge`: displays progress toward a goal or a single key metric, such as
-        performance against a target.
-
-        .. image:: insert/chart-type-scorecard.png
-           :alt: Scorecard icon
-
-        :guilabel:`Scorecard`: used to summarize key performance indicators (KPIs) in a compact
-        format, such as total sales or conversion rates, and compare to a baseline or a previous
-        value.
-
-        .. image:: insert/chart-type-geo.png
-           :alt: Geo chart icon
-
-        :guilabel:`Geo`: visualizes data on a map using color variations to represent values or
-        categories across different geographical regions.
-
-- :guilabel:`Domain`: the rules used to determine which records are shown. Click :ref:`Edit domain
-  <search/custom-filters>` to add or edit rules.
-- :guilabel:`Link to Odoo menu`: to add a :ref:`clickable link <spreadsheet/insert/clickable-links>`
-  from a chart to an Odoo menu item, i.e., a specific view of a model.
-
-Design
-~~~~~~
-
-Depending on the chart type, the :icon:`fa-paint-brush` :guilabel:`Design` tab has one or more
-sections.
-
-The :guilabel:`General` section allows you to modify the following elements:
-
-- :guilabel:`Background color`: Add or change the background color by clicking on the color dot.
-  Choose one of the standard colors or click the :icon:`fa-plus` icon to manually select a custom
-  color.
-- :guilabel:`Chart title`: Edit the chart title, if needed. The font formatting, horizontal
-  alignment, font size, and color of the title can be modified using the editor.
-- :guilabel:`Legend position`: Change the position of the legend or opt to have no legend.
-- Enable :guilabel:`Show values` to add numeric values to the data points on the
-  chart.
-
-The :guilabel:`Data Series` section allows you to modify the following elements:
-
-- :guilabel:`Series color`: With the relevant data series selected, change the color of the related
-  data points on the chart by clicking on the color dot circle. Choose one of the standard colors or
-  click the :icon:`fa-plus` icon to manually select a custom color.
-- :guilabel:`Series name`: Edit the name of a data series, if needed.
-- :guilabel:`Serie type`: For each data series of a :guilabel:`Combo` chart, determine whether the
-  series is shown as a :guilabel:`Bar` or :guilabel:`Line`.
-- :guilabel:`Vertical axis`: For the selected data series of a :guilabel:`Line`, :guilabel:`Area`,
-  or :guilabel:`Column` chart, select whether it should be displayed on the :guilabel:`Left`
-  (primary) or :guilabel:`Right` (secondary) vertical axis.
-- :guilabel:`Trend line`: With the relevant data series selected, enable :guilabel:`Show trend line`
-  then select the type of trend line from the dropdown; the options are :guilabel:`Linear`,
-  :guilabel:`Exponential`, :guilabel:`Polynomial`, :guilabel:`Logarithmic`, and :guilabel:`Trailing
-  moving average`. The color of the trend line can be changed by clicking on the color circle.
-
-The :guilabel:`Axes` section allows you add a title to one or both axes of a chart. The font
-formatting, horizontal alignment, font size, and color of the title can be modified using the
-editor.
-
-Waterfall charts have a dedicated :guilabel:`Waterfall design` section.
 
 .. _spreadsheet/insert/clickable-links:
 
