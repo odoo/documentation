@@ -103,9 +103,10 @@ In addition to consulting a dashboard for a high-level overview of key business 
 possible to interact with the dashboard for a more detailed analysis:
 
 - **Filter data**: Most standard dashboards have one or more :doc:`global filters
-  <spreadsheet/global_filters>`, shown as dropdown menus, at the top of the dashboard. These filters
-  allow all the data on the dashboard to be filtered at the same time, for example, to show data
-  only for a specific period of time, or for one or more salespeople or customers.
+  <spreadsheet/work_with_data/global_filters>`, shown as dropdown menus, at the top of the
+  dashboard. These filters allow all the data on the dashboard to be filtered at the same time, for
+  example, to show data only for a specific period of time, or for one or more salespeople or
+  customers.
 
 - **Open underlying database records**: To access database records referenced by a dashboard, click
   on the relevant value in a table or on a data point on a chart. Doing so opens either the
@@ -203,7 +204,7 @@ actions are possible:
        :ref:`user group <access-rights/groups>`. Edit this if needed via the configuration page of
        the relevant dashboard section.
      - It is also possible to :ref:`convert a spreadsheet into a dashboard
-       <spreadsheet/manage-spreadsheets/convert-to-dashboard>` and add it to a dashboard section
+       <spreadsheet/get-started/convert-to-dashboard>` and add it to a dashboard section
        starting from the spreadsheet in the Documents app.
 
 .. _dashboards/access-and-sharing:
