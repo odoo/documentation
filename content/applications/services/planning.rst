@@ -107,7 +107,7 @@ To create individual :guilabel:`Working Hours`, for example, for employees worki
    **Payroll**, if the employee's contract is configured to generate work entries based on shifts.
 
 .. seealso::
-   :ref:`Payroll documentation on working schedules <payroll/working-times>`
+   :doc:`../hr/payroll/working_schedules`
 
 Planning roles
 ~~~~~~~~~~~~~~
