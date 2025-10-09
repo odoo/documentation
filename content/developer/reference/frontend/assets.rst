@@ -94,10 +94,7 @@ know:
 - `web.assets_frontend`: this bundle is about all that is specific to the public
   website: ecommerce, portal, forum, blog, ...
 
-- `web.qunit_suite_tests`: all javascript qunit testing code (tests, helpers, mocks)
-
-- `web.qunit_mobile_suite_tests`: mobile specific qunit testing code
-
+- `web.assets_unit_tests`: all javascript unit testing code (tests, helpers, mocks)
 
 Operations
 ----------
