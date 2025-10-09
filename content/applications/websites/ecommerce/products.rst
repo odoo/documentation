@@ -10,7 +10,7 @@ allows you to add :ref:`product variants <ecommerce/products/product-variants>` 
 :ref:`digital files <ecommerce/products/digital-files>`, :ref:`translating
 <ecommerce/products/translation>` the product page content, :ref:`managing stock
 <ecommerce/products/stock-management>`, and enabling :ref:`product comparisons
-<ecommerce/products/product-comparison>`.
+<ecommerce/products/product-comparison>`. abc
 
 .. _ecommerce/products/add-products:
 
