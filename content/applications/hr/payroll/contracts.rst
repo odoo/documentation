@@ -3,8 +3,8 @@ Contracts
 =========
 
 Every employee in Odoo is required to have a running contract in order to be paid. A contract
-outlines the terms of an employee's position, their compensation, working hours, and any
-other relevant details pertaining to their compensation.
+outlines the terms of an employee's position, their compensation, working hours, and any other
+relevant details pertaining to their compensation.
 
 .. important::
    Contract documents (PDFs) are uploaded and organized using the **Documents** application, and are
@@ -138,8 +138,8 @@ employee is paid. Fill in the following fields in this tab:
   correct if this field is modified.
 - :guilabel:`Monthly Cost (Real)`: This field automatically updates after the :guilabel:`Schedule
   Pay` and :guilabel:`Wage` fields are entered. This amount is the total monthly cost for the
-  employer. This field **cannot** be modified, and is calculated based on the :guilabel:`Yearly
-  Cost (Real)`.
+  employer. This field **cannot** be modified, and is calculated based on the :guilabel:`Yearly Cost
+  (Real)`.
 
 .. figure:: contracts/salary-info.png
    :alt: The Salary Information tab filled out.
@@ -152,14 +152,8 @@ information (refer to the :doc:`country-specific localization document <payroll_
 more information), any part time work information, and notes. Fill out the following fields in this
 tab:
 
-- :guilabel:`Contract Template`: Using the drop-down menu, select a contract template to use when
-  making an offer to an applicant.
-
-  .. note::
-     Contract templates are typically created through the **Payroll** app configuration menu, and
-     stored in the **Documents** app. To view the contract templates, and to create new ones,
-     navigate to :menuselection:`Payroll app --> Configuration --> Templates`.
-
+- :guilabel:`Contract Template`: Using the drop-down menu, select a :ref:`contract template
+  <payroll/contract-template>` to use when making an offer to an applicant.
 - :guilabel:`Originated Offer`: This field automatically populates with the original offer sent to
   the employee. This field is **not** modifiable, and is only populated if applicable.
 - :guilabel:`Part Time`: Tick the checkbox if the contract is for part time work. Once enabled, a
@@ -209,8 +203,8 @@ templates are uploaded, modified, and stored.
 
 .. important::
    The :guilabel:`PDF Template` fields are only visible if the **Sign** app is installed, along with
-   the :guilabel:`hr_contract_salary` and :guilabel:`hr_contract_salary_payroll`
-   :doc:`modules <../../general/apps_modules>`.
+   the :guilabel:`hr_contract_salary` and :guilabel:`hr_contract_salary_payroll` :doc:`modules
+   <../../general/apps_modules>`.
 
 .. figure:: contracts/signatories.png
    :alt: The Signatories tab with the roles specified for signing.
@@ -278,6 +272,105 @@ the database when there is a signature requested of them.
 After all required parties have signed the contract, the status changes to :guilabel:`Fully Signed`.
 
 All status changes happen automatically as the document is signed.
+
+.. _payroll/contract-template:
+
+Contract Templates
+==================
+
+Contract templates are typically created through the **Payroll** app configuration menu, and stored
+in the **Documents** app.
+
+.. important::
+   To access contract templates, the **Salary Configurator** (`hr_contract_salary`) module **must**
+   be :ref:`installed <general/install>`.
+
+To view all the current contract templates in the database, navigate to :menuselection:`Payroll app
+--> Configuration --> Templates`.
+
+On the :guilabel:`Contract Templates` page, all current contract templates appear in a list view. To
+view the details of a contract template, click anywhere on the line to open the contract form. The
+contract template can be modified from this form. Proceed to make any desired changes to the
+contract.
+
+To create a new contract template, click the :guilabel:`New` button. Then, enter the following
+information on the blank contract template form that appears:
+
+- :guilabel:`Contract Reference`: Enter a brief description for the template. This should be clear
+  and easily understood, as this name appears in the **Recruitment** application, as well.
+- :guilabel:`Working Schedule`: Select the desired working schedule the contract applies to from the
+  drop-down menu. If a new working schedule is needed, create a :ref:`new working schedule
+  <payroll/new-working-schedule>`.
+- :guilabel:`Work Entry Source`: Select how the work entries are generated. Choices are either:
+
+  - :guilabel:`Working Schedule`: Work entries are generated based on the selected working schedule.
+  - :guilabel:`Attendances`: Work entries are generated based on the employee's attendance, as they
+    are logged in the *A*ttendances** application. Refer to the :ref:`Attendances
+    <attendances/check-in>` documentation for information on checking in and out.
+  - :guilabel:`Planning`: Work entries are generated based on the employee's planning in the
+    **Planning** application.
+
+- :guilabel:`Salary Structure Type`: Select the :ref:`salary structure type
+  <payroll/structure-types>` from the drop-down menu.
+- :guilabel:`Department`: Select the department the contract template applies to from the drop-down
+  menu. If blank, the template applies to all departments.
+- :guilabel:`Job Position`: Select the :ref:`job position <payroll/job-positions>` the contract
+  template applies to from the drop-down menu. If blank, the template applies to all job positions.
+- :guilabel:`Contract Type`: Select the type of contract from the drop-down menu. This list is the
+  same as the *employment type*.
+- :guilabel:`Wage on Payroll`: Enter the monthly wage in the field.
+- :guilabel:`HR Responsible`: Select the employee responsible for validating contracts, using this
+  template, from the drop-down menu.
+
+.. image:: contracts/contract-template.png
+   :alt: A new contract template form, with the fields filled in.
+
+Salary information tab
+----------------------
+
+- :guilabel:`Wage Type`: Select either :guilabel:`Fixed Wage` or :guilabel:`Hourly Wage` from the
+  drop-down menu.
+- :guilabel:`Schedule Pay`: Using the drop-down menu, select how often the employee is paid. Options
+  include :guilabel:`Annually`, :guilabel:`Semi-annually`, :guilabel:`Quarterly`,
+  :guilabel:`Bi-monthly`, :guilabel:`Monthly`, :guilabel:`Semi-monthly`, :guilabel:`Bi-weekly`,
+  :guilabel:`Weekly`, or :guilabel:`Daily`.
+- :guilabel:`Wage`:Eenter the gross wage. The time period presented in this field is based on what
+  is selected for the :guilabel:`Scheduled Pay` field. It is recommended to populate the
+  :guilabel:`Yearly Cost (Real)` field *first*, since that entry updates this field automatically.
+- :guilabel:`Yearly Cost (Real)`: Enter the total yearly cost the employee costs the employer. When
+  this value is entered, the :guilabel:`Monthly Cost (Real)` is automatically updated.
+- :guilabel:`Monthly Cost (Real)`: This field is **not** editable. The value is automatically
+  populated after the :guilabel:`Yearly Cost (Real)` is entered.
+
+.. important::
+   The :guilabel:`Schedule Pay`, :guilabel:`Wage`, and :guilabel:`Yearly Cost (Real)` fields are all
+   linked. If any of these fields are updated, the other two fields automatically update to reflect
+   the change. It is best practice to check these three fields if any modifications have been made,
+   to ensure they are accurate.
+
+.. image:: contracts/salary-information.png
+   :alt: The salary information tab, with the fields filled in.
+
+Benefits and deductions
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Depending on the :doc:`payroll localization <payroll_localizations>` for the company, the entries
+presented in this section either vary, or may not appear at all. For example, some entries may
+pertain to retirement accounts, health insurance benefits, and commuter benefits.
+
+Enter the monetary amounts or percentages to specify how much of the employee's salary goes to the
+various benefits and deductions.
+
+Signatories tab
+---------------
+
+This tab outlines which documents the employee must sign to either accept a new offer or an updated
+contract.
+
+- :guilabel:`New Contract PDF Template`: Select the default document that a new employee has to sign
+  to accept an offer.
+- :guilabel:`Contract Update PDF Template`: Select the default document that a current employee has
+  to sign to update their contract.
 
 .. seealso::
    - :doc:`../../productivity/documents`
