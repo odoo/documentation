@@ -9,6 +9,8 @@ time periods, etc., and is useful for creating pricing strategies and optimizing
 Odoo **Sales** has a useful pricelist feature that can be tailored to fit any unique pricing
 strategy. Pricelists suggest certain prices, but they can always be overridden on the sales order.
 
+.. _sales/products/pricelist-configuration:
+
 Configuration
 =============
 
@@ -199,26 +201,10 @@ Lastly, configure a :guilabel:`Price` for the rental rule in the respective colu
 .. image:: pricing/sales-pricelist-rental.png
    :alt: The rental tab in a pricelist configuration form.
 
-Ecommerce Tab
--------------
+.. seealso::
+   :doc:`Ecommerce price configuration </applications/websites/ecommerce/products/prices>`
 
-Under the :guilabel:`Ecommerce` tab, price rules can be configured for products sold on an
-:doc:`Ecommerce website <../../../../websites/ecommerce/products>`.
-
-To enable the pricelist to be visible, select the target website in the :guilabel:`Website` field.
-
-The :guilabel:`Selectable` can be enabled to allow the customer to choose this pricelist.
-
-Finally, promotional and loyalty codes can be added to the :guilabel:`E-commerce Promotional Code`
-field.
-
-Tick the :guilabel:`Selectable` checkbox to have this pricelist as a selectable option for customers
-to choose as they shop. If the :guilabel:`Selectable` box is left unticked, customers **cannot**
-select this pricelist for themselves.
-
-Lastly, there is the option to add an :guilabel:`E-commerce Promotional Code`. To add a code, type
-in the desired promo code that, when entered during the checkout process, applies the pricelist to
-the customer, even if the customer does not fall into the previously-specified criteria.
+.. _sales/products/customer-pricelist-application:
 
 Customer pricelist application
 ==============================
@@ -285,4 +271,4 @@ rule on a fresh form.
 
 .. seealso::
    - :doc:`/applications/sales/sales/products_prices/prices/currencies`
-   - :doc:`/applications/websites/ecommerce/products/price_management`
+   - :doc:`/applications/websites/ecommerce/products/prices`
