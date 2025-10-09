@@ -75,8 +75,8 @@ like this:
             'web/static/src/js/webclient.js',
             'web/static/src/xml/webclient.xml',
         ],
-        'web.qunit_suite_tests': [
-            'web/static/src/js/webclient_tests.js',
+        'web.assets_unit_tests': [
+            'web/static/src/js/webclient.test.js',
         ],
     },
 
@@ -94,10 +94,7 @@ know:
 - `web.assets_frontend`: this bundle is about all that is specific to the public
   website: ecommerce, portal, forum, blog, ...
 
-- `web.qunit_suite_tests`: all javascript qunit testing code (tests, helpers, mocks)
-
-- `web.qunit_mobile_suite_tests`: mobile specific qunit testing code
-
+- `web.assets_unit_tests`: all javascript unit testing code (tests, helpers, mocks)
 
 Operations
 ----------
