@@ -56,7 +56,7 @@ Linking Odoo to GMC
 
 .. important::
    To activate the :abbr:`GMC (Google Merchant Center)` integration in your Odoo database, at least
-   one :ref:`pricelist <ecommerce/pricelists>` must be assigned to your website.
+   one :ref:`pricelist <ecommerce/prices/pricelists>` must be assigned to your website.
 
 #. Navigate to :menuselection:`Website --> Configuration --> Settings`, scroll to the
    :guilabel:`SEO - Search Engine Optimization` section, and enable
@@ -106,8 +106,8 @@ Currencies
 
 It is also possible to create different feeds for different currencies, which allows customers
 to view prices in their local currency. To enable this feature, create a :ref:`pricelist
-<ecommerce/pricelists>` with the foreign currency in Odoo. Then, go to the :guilabel:`Products` tab
-in :abbr:`GMC`, click :guilabel:`Manage
+<ecommerce/prices/pricelists>` with the foreign currency in Odoo. Then, go to the
+:guilabel:`Products` tab in :abbr:`GMC`, click :guilabel:`Manage
 product sources`, and choose a :guilabel:`Products source`. Navigate to the
 :guilabel:`Data source setup` tab, click :guilabel:`Show advanced options`, and choose a
 :guilabel:`Currency`.
