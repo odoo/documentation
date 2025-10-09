@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-09-30 10:33+0200\n"
-"PO-Revision-Date: 2025-10-07 03:10+0000\n"
+"PO-Revision-Date: 2025-10-09 03:11+0000\n"
 "Last-Translator: \"Kwanghee Park (kwpa)\" <kwpa@odoo.com>\n"
 "Language-Team: Korean <https://translate.odoo.com/projects/odoo-19-doc/"
 "studio/ko/>\n"
@@ -776,7 +776,7 @@ msgstr ""
 #: ../../content/applications/studio/automated_actions/webhooks.rst:127
 #: ../../content/applications/studio/automated_actions/webhooks.rst:208
 msgid "Set the webhook's trigger"
-msgstr ""
+msgstr "웹훅 트리거 설정"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:42
 msgid "To create a webhook with **Studio**, :ref:`open Studio <studio/access>`, click :guilabel:`Webhooks`, then :guilabel:`New`. From here, name the webhook, modify the webhook's model (the kind of database entry to be targeted) if needed, and toggle whether calls made to the webhook URL should be logged (which would track the webhook's call history for troubleshooting)."
@@ -806,7 +806,7 @@ msgstr ""
 #: ../../content/applications/studio/automated_actions/webhooks.rst:149
 #: ../../content/applications/studio/automated_actions/webhooks.rst:220
 msgid "Set the webhook's action"
-msgstr ""
+msgstr "웹훅 동작 설정"
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:76
 msgid "To set a webhook's action while configuring a webhook, click :guilabel:`Add an action` under the :guilabel:`Actions To Do` tab. Click the action's :guilabel:`Type` and set the fields as needed."
@@ -829,6 +829,12 @@ msgstr ""
 #: ../../content/applications/studio/automated_actions/webhooks.rst:93
 msgid "If any other responses are returned, the number sent in the response helps to identify the problem. For example, a `500 Internal Server Error` means that Odoo could not interpret the call properly. If this gets returned, ensure the fields found in the JSON file are properly mapped in the webhook's configuration and in the system sending the test call. Turning on call logging in the webhook's configuration provides error logs if the webhook is not functioning as intended."
 msgstr ""
+"다른 응답이 반환되는 경우, 응답에서 전송된 번호를 통해 문제를 식별할 수 "
+"있습니다. 예를 들어, `500 내부 서버 오류` 는 Odoo에서 호출을 제대로 해석하지 "
+"못한다는 의미입니다. 이 응답이 반환되는 경우 JSON 파일에서 찾은 필드가 웹훅 "
+"설정과 테스트 호출을 보내는 시스템에서 제대로 매핑되었는지 확인하세요. 웹훅 "
+"환경설정에서 호출 로깅을 켜면 웹훅이 의도한 대로 작동하지 않을 경우 오류 "
+"로그가 표시됩니다."
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:100
 msgid "Implement the webhook"
@@ -920,6 +926,12 @@ msgstr ""
 #: ../../content/applications/studio/automated_actions/webhooks.rst:184
 msgid "From here, choose a sales order to test the webhook on. If it is not possible to test in a live Odoo database, consider creating a demo database with a sample sales order and the webhook that was configured. Replace `SALES ORDER NUMBER` with the sales order's number without the `S` or any zeros before the number. For example, a sales order with the number `S00007` should be entered as `7` in Postman. Finally, click :guilabel:`Send` in Postman."
 msgstr ""
+"여기에서 웹훅을 테스트할 판매 주문을 선택하세요. Odoo 라이브 "
+"데이터베이스에서 테스트할 수 없는 경우 판매주문서 샘플과 웹훅 환경설정을 "
+"사용하여 데모 데이터베이스를 생성하도록 합니다. `판매주문서 번호` 에서 `S` "
+"또는 숫자 앞에 있는 0을 제외한 판매 주문 번호로 변경합니다. 예를 들어, "
+"판매주문서 번호가 `S00007`인 경우 Postman에서는 `7` 로 입력해야 합니다. "
+"마지막으로 Postman에서 :guilabel:`보내기` 를 클릭합니다."
 
 #: ../../content/applications/studio/automated_actions/webhooks.rst:190
 msgid "If a message saying `200 OK` or `status: ok` gets returned, then the webhook is functioning properly on Odoo's side. The test sales order's currency is updated. From here, implementation can begin with the other tool to automatically send those webhook calls into Odoo using the webhook's URL."
