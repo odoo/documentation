@@ -48,12 +48,8 @@ redirects users to the default contact form.
    Removing the ability to add products to the cart is often used by businesses that want to display
    an online catalog but cannot share prices publicly (e.g., to offer custom or variable pricing).
 
-To do so, go to :menuselection:`Website --> Configuration --> Settings`. Under the
-:guilabel:`eCommerce` section, enable :guilabel:`Prevent Sale of Zero Priced Product`, and enter
-the redirect URL in the :guilabel:`Button URL` field.
-
-Then, for all products that should display the :guilabel:`Contact Us` button, set their price to
-`0` using the product form or a :doc:`pricelist <../../sales/sales/products_prices/prices/pricing>`.
+To display the :guilabel:`Contact Us` button and a note saying `Not Available For Sale` , you need
+to :ref:`hide your prices <ecommerce/prices/hide-prices>` on your product page.
 
 .. image:: checkout/cart-contact-us.png
    :alt: Contact us button on product page
