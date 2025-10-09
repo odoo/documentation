@@ -25,7 +25,6 @@ products and increase your average cart sizes.
 
    ecommerce/products
    ecommerce/checkout
-   ecommerce/payments
    ecommerce/shipping
    ecommerce/order_handling
    ecommerce/customer_accounts
