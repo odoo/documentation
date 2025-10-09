@@ -453,13 +453,13 @@ Enter the following information on that new line:
 - :guilabel:`Start Date`: Using the date and time picker, select the date and time the holiday
   starts, then click :icon:`fa-check` :guilabel:`Apply`. By default, this field is configured for
   the current date. The start time is set according to the start time for the company (according to
-  the :ref:`working schedules <payroll/working-times>`). If the user's computer is set to a
+  the :doc:`working schedules <payroll/working_schedules>`). If the user's computer is set to a
   different time zone, the start time is adjusted accordingly, compared to the company's time zone.
 - :guilabel:`End Date`: Using the date and time picker, select the date and time the holiday ends,
   then click :icon:`fa-check` :guilabel:`Apply`. By default, this field is configured for the
-  current date, and the time is set to the end time for the company (according to the :ref:`working
-  schedules <payroll/working-times>`). If the user's computer is set to a different time zone, the
-  start time is adjusted accordingly, compared to the company's time zone.
+  current date, and the time is set to the end time for the company (according to the :doc:`working
+  schedules <payroll/working_schedules>`). If the user's computer is set to a different time zone,
+  the start time is adjusted accordingly, compared to the company's time zone.
 
   .. example::
      A company located in San Francisco operates from 9:00 AM - 6:00 PM, with an eight hour work day
