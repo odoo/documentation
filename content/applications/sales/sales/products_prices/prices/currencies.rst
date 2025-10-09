@@ -159,6 +159,8 @@ and :guilabel:`...per Unit` fields to ensure all the auto-populated information 
    example, if the main currency is set to `USD`, the columns are titled :guilabel:`Unit per USD`
    and :guilabel:`USD per Unit`.
 
+.. _sales/products/currencies/currency-specific-pricelists:
+
 Currency-specific pricelists
 ============================
 

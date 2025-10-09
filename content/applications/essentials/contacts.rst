@@ -118,6 +118,8 @@ Next, is the :guilabel:`Sales & Purchases` tab, which only appears when the *Sal
 The :guilabel:`Fiscal Position` can be set on the :guilabel:`Sales & Purchases` tab. Select a
 :guilabel:`Fiscal Position` from the drop-down menu.
 
+.. _essentials/contacts/sales-section:
+
 Sales section
 ~~~~~~~~~~~~~
 
