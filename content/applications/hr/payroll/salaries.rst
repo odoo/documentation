@@ -81,7 +81,7 @@ Proceed to enter the following information in the fields:
   from the drop-down menu. All available working hours for the currently selected company appear in
   the drop-down menu. The default working hours are the :guilabel:`Standard 40 hours/week` option.
   If the needed working hours do not appear in the list, a :ref:`new set of default working hours
-  can be created <new-default-working-hours>`.
+  can be created <payroll/new-default-working-hours>`.
 - :guilabel:`Regular Pay Structure`: Type in the name for the regular pay structure. It is used as
   the default option when generating payslips.
 - :guilabel:`Default Work Entry Type`: Select the default work entry type which is used to create
@@ -90,7 +90,7 @@ Proceed to enter the following information in the fields:
 .. image:: salaries/new-structure.png
    :alt: New structure type form to fill out when creating a new structure type.
 
-.. _new-default-working-hours:
+.. _payroll/new-default-working-hours:
 
 New default working hours
 -------------------------
