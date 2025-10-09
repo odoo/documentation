@@ -207,17 +207,18 @@ proceed as follows:
 Test mode
 ---------
 
-If you wish to try the payment provider as a test, set the :guilabel:`State` field in the payment
-provider form to :guilabel:`Test mode`, then enter your provider's test/sandbox credentials in the
-:guilabel:`Credentials` tab.
+.. warning::
+   We recommend using the test mode on a **duplicate** or a **test** database to avoid potential
+   issues with invoice numbering.
+
+To try a payment provider without affecting live transactions, set the :guilabel:`State` field in
+the payment provider form to :guilabel:`Test mode`. Then, enter the **provider's dedicated test or
+sandbox credentials** in the :guilabel:`Credentials` tab. Each payment provider has its own separate
+test account or environment for this purpose.
 
 .. note::
    By default, the payment provider remains **unpublished** in test mode so that it's not visible to
    visitors.
-
-.. warning::
-   We recommend using the test mode on a duplicate or a test database to avoid potential issues
-   with your invoice numbering.
 
 .. _payment_providers/payment_methods:
 
@@ -333,8 +334,8 @@ Transaction` button.
    - The funds are likely not reserved forever. After a certain time, they may be automatically
      released back to the customer's payment method. Refer to your payment provider's documentation
      for the exact reservation duration.
-   - Odoo does not support this feature for all payment providers, but some allow the manual capture
-     from their website interface.
+   - :doc:`payment_providers/adyen` and :doc:`payment_providers/stripe` allow to capture payments
+     manually directly from their website interface.
 
 .. _payment_providers/refunds:
 
@@ -350,8 +351,8 @@ not need to be enabled first. To refund a customer payment, navigate to it and c
      optionally be refunded, too. These providers have the value **Full and partial** in the
      :ref:`table above <payment_providers/online_providers>`. The providers that only support
      refunding the total amount have the value **Full only**.
-   - Odoo does not support this feature for all payment providers, but some allow to refund payments
-     from their website interface.
+   - :doc:`payment_providers/adyen` and :doc:`payment_providers/stripe` allow to refund payments
+     directly from their website interface.
 
 .. _payment_providers/express_checkout:
 
