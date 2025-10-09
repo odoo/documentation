@@ -224,6 +224,8 @@ column.
    Similar product variant creation processes are accessible through the Purchase, Inventory, and
    eCommerce applications.
 
+.. _products/variants/configure-variants:
+
 Configure variants
 ------------------
 

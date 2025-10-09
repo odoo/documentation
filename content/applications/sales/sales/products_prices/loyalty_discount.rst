@@ -15,6 +15,8 @@ To begin using discount and loyalty programs, navigate to :menuselection:`Sales 
 Gift Card` setting by checking the box next to the feature. Finally, click :guilabel:`Save` to save
 the changes.
 
+.. _sales/products/loyalty-programs:
+
 Configure discount and loyalty programs
 =======================================
 
