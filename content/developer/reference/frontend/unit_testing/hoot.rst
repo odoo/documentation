@@ -15,12 +15,12 @@ key features are:
 
 As such, it has been integrated as a :file:`lib/` in the Odoo codebase and exports 2 main modules:
 
-- :file:`@odoo/hoot-dom`: (can be used in production code) helpers to:
+- :file:`@odoo/hoot-dom`: (can be used in tours) helpers to:
 
     - **interact** with the DOM, such as :js:meth:`click` and :js:meth:`press`;
     - **query** elements from the DOM, such as :js:meth:`queryAll` and :js:meth:`waitFor`;
 
-- :file:`@odoo/hoot`: (only to be used in tests) all the test framework features:
+- :file:`@odoo/hoot`: (only to be used in unit tests) all the test framework features:
 
     - `test`, `describe` and `expect`
     - test hooks like `after` and `afterEach`
