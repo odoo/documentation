@@ -66,52 +66,18 @@ Payroll
 Working schedules
 -----------------
 
-To view the currently configured working schedules, go to :menuselection:`Payroll app -->
-Configuration --> Work Entries --> Working Schedules`. The working schedules that are available for
-an employee's contracts are found in this list.
+When creating payslips, it is sometimes necessary to add other entries for specific circumstances,
+like expenses, reimbursements, or deductions. These other inputs can be configured by navigating to
+:menuselection:`Payroll app --> Configuration --> Salary --> Other Input Types`.
 
-Working schedules are company-specific. Each company **must** identify each type of working schedule
-they use. If the database is created for only one company, the company column is not available.
+To create a new input type, click the :guilabel:`New` button. Enter the :guilabel:`Description`, the
+:guilabel:`Code`, and which structure it applies to in the :guilabel:`Availability in Structure`
+field.
 
-.. example::
-   An Odoo database containing multiple companies that use a standard 40-hour work week needs to
-   have a separate working schedule entry for each company that uses the 40-hour standard work week.
-
-   A database with five companies that all use a standard 40-hour work week needs to have five
-   separate 40-hour working schedules configured.
-
-.. image:: payroll/working-schedules.png
-   :align: center
-   :alt: All working schedules available to use currently set up in the database for the company.
-
-.. _payroll/new-working-schedule:
-
-New working schedule
-~~~~~~~~~~~~~~~~~~~~
-
-To create a new working schedule, click the :guilabel:`New` button, and enter the information on the
-form.
-
-The fields are auto-populated for a regular 40-hour work week but can be modified. First, change the
-name of the working time by modifying the text in the :guilabel:`Name` field. Next, make any
-adjustments to the days and times that apply to the new working time.
-
-In the :guilabel:`Working Hours` tab, modify the :guilabel:`Day of Week`, :guilabel:`Day Period`,
-and :guilabel:`Work Entry Type` selections by clicking on the drop-down menus in each column and
-making the desired selection. The :guilabel:`Work From` and :guilabel:`Work To` columns are modified
-by typing in the time.
-
-.. note::
-   The :guilabel:`Work From` and :guilabel:`Work To` times must be in a 24-hour format. For example,
-   `2:00 PM` would be entered as `14:00`.
-
-If the working time should be in a two-week configuration, click the :guilabel:`Switch to 2 weeks
-calendar` button in the top-left. This creates entries for an :guilabel:`Even week` and an
-:guilabel:`Odd week`.
-
-.. image:: payroll/new-working-schedule.png
-   :align: center
-   :alt: New working schedule form.
+.. important::
+   The :guilabel:`Code` is used in the salary rules to compute payslips. If the
+   :guilabel:`Availability in Structure` field is left blank, it indicates that the new input type
+   is available for all payslips and is not exclusive to a specific structure.
 
 .. _payroll/salary-attachment-types:
 
@@ -391,6 +357,7 @@ form.
    - :doc:`payroll/contracts`
    - :doc:`payroll/salaries`
    - :doc:`payroll/work_entries`
+   - :doc:`payroll/working_schedules`
    - :doc:`payroll/time_off_to_report`
    - :doc:`payroll/salary_attachments`
    - :doc:`payroll/payslips`
@@ -407,6 +374,7 @@ form.
    payroll/contracts
    payroll/salaries
    payroll/work_entries
+   payroll/working_schedules
    payroll/time_off_to_report
    payroll/salary_attachments
    payroll/payslips
