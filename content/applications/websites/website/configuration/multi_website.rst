@@ -131,7 +131,7 @@ Pricing
 -------
 
 Products can be priced differently based on the website using :ref:`pricelists
-<ecommerce/pricelists>`. The following configuration is required:
+<ecommerce/prices/selectable-pricelists>`. The following configuration is required:
 
 #. Go to :menuselection:`Website --> Configuration --> Settings`.
 #. Scroll down to the :guilabel:`Shop - Products` section and select the :guilabel:`Pricelists`
