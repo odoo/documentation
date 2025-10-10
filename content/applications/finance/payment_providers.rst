@@ -19,6 +19,7 @@ Online payments
    payment_providers/mercado_pago
    payment_providers/mollie
    payment_providers/nuvei
+   payment_providers/paymob
    payment_providers/paypal
    payment_providers/razorpay
    payment_providers/stripe
@@ -116,6 +117,12 @@ Online payment providers
      -
      -
    * - :doc:`Nuvei <payment_providers/nuvei>`
+     - The provider's website
+     -
+     -
+     -
+     -
+   * - :doc:`Paymob <payment_providers/paymob>`
      - The provider's website
      -
      -
@@ -469,6 +476,7 @@ payments from other payments.
    - :doc:`payment_providers/mercado_pago`
    - :doc:`payment_providers/mollie`
    - :doc:`payment_providers/nuvei`
+   - :doc:`payment_providers/paymob`
    - :doc:`payment_providers/paypal`
    - :doc:`payment_providers/razorpay`
    - :doc:`payment_providers/stripe`
