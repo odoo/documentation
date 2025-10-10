@@ -413,6 +413,8 @@ adding or removing a payment provider's supported currencies or countries is pos
      remains available, even though it is possible the payment will be refused at a later stage
      should the country or currency not be supported.
 
+.. _payment_providers/maximum_amount:
+
 Maximum amount
 --------------
 
