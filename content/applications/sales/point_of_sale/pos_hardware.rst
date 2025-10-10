@@ -67,7 +67,7 @@ Same device
 To open the customer display on a second screen connected to a POS system using an HDMI or USB-C
 cable, follow these steps:
 
-#. :ref:`Open a POS session <pos/session-start>`.
+#. :ref:`Open the POS register <pos/open-register>`.
 #. Click the :icon:`fa-bars` (:guilabel:`hamburger menu`) icon.
 #. Click the :icon:`fa-desktop` (:guilabel:`Customer Display`) icon, which opens a new window to
    drag onto the second screen.
@@ -76,7 +76,7 @@ For POS terminals running the Odoo Android app with dual-screen support,
 
 #. :doc:`Activate the Point of Sale Mobile module <../../general/apps_modules>` to enable the
    customer display.
-#. :ref:`Open a POS session <pos/session-start>`.
+#. :ref:`Open the POS register <pos/open-register>`.
 #. Click the :icon:`fa-bars` (:guilabel:`hamburger menu`) icon.
 #. Click the :icon:`fa-desktop` (:guilabel:`Customer Display`) icon, which opens the customer
    display on the terminal's secondary screen.
@@ -105,7 +105,7 @@ IOT-connected screen
 
 To open the customer display onto an IoT-connected screens:
 
-#. :ref:`Open a POS session <pos/session-start>`.
+#. :ref:`Open the POS register <pos/open-register>`.
 #. Click the :icon:`fa-bars` (:guilabel:`hamburger menu`) icon.
 #. Click the :icon:`fa-desktop` (:guilabel:`Customer Display`) icon, which opens the customer
    display onto the IoT-connected screen.
@@ -203,7 +203,7 @@ turns green.
 Using a scale in PoS
 --------------------
 
-#. :ref:`Open a POS session <pos/session-start>`.
+#. :ref:`Open the POS register <pos/open-register>`.
 #. Select the product to weigh on the order screen or scan its barcode.
 #. Place the product on the scale and wait for the weight to be displayed in the popup window.
 #. Once the weight is determined, the price is automatically computed.

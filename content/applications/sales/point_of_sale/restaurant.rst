@@ -40,7 +40,7 @@ Floors and tables
 =================
 
 The :guilabel:`Floor plan` view is the first screen displayed when :ref:`accessing the POS register
-<pos/session-start>`. It enables managing restaurant floors and tables, and monitoring
+<pos/open-register>`. It enables managing restaurant floors and tables, and monitoring
 table status in real time (occupancy, reservations, and kitchen orders).
 
 .. example::
@@ -100,7 +100,7 @@ plan`:
 From the POS frontend
 ~~~~~~~~~~~~~~~~~~~~~
 
-To create floors and tables from the frontend, :ref:`open the POS register <pos/session-start>`,
+To create floors and tables from the frontend, :ref:`open the POS register <pos/open-register>`,
 click the :icon:`fa-bars` (:guilabel:`hamburger menu`) icon in the top right corner of the
 :guilabel:`Floor plan` view, then :guilabel:`Edit Plan`. To configure the :guilabel:`Floor plan`,
 follow the next steps:
@@ -133,7 +133,7 @@ follow the next steps:
 Order management
 ================
 
-To take an order, :ref:`open the POS register <pos/session-start>` and follow these steps:
+To take an order, :ref:`open the POS register <pos/open-register>` and follow these steps:
 
 #. Select a :ref:`floor plan <pos/restaurant/floors>` and click a table or click the
    :icon:`fa-plus-circle` (:guilabel:`order`) button at the top to create a direct sales order.
