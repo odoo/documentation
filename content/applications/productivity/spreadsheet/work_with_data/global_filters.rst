@@ -4,7 +4,7 @@ Global filters
 
 Global filters, represented by the :icon:`os-global-filters` :guilabel:`Filters` icon at the top
 right of an Odoo spreadsheet, allow you to apply one or more filters to all the Odoo data that has
-been :doc:`inserted in that spreadsheet <insert>`.
+been :doc:`inserted in that spreadsheet <../insert>`.
 
 These filters are particularly useful for reports and dashboards as users can easily and dynamically
 customize the view to answer complex business questions spanning multiple data sources.
