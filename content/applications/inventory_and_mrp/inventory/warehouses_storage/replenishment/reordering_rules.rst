@@ -77,13 +77,10 @@ the :guilabel:`Purchase` checkbox is enabled under the product name. In the :gui
 tab, add at least one vendor to the :doc:`vendor pricelist <../../../purchase/products/pricelist>`.
 Odoo uses the vendor at the top of the list to generate |RFQs| when reordering rules are triggered.
 
-In the :guilabel:`Inventory` tab's :guilabel:`Routes` field, tick the :guilabel:`Buy` checkbox.
-
 .. seealso::
    :doc:`Vendor pricelist <../../../purchase/products/pricelist>`
 
-If the product is manufactured, :ref:`install <general/install>` the **Manufacturing** app, and in
-the :guilabel:`Inventory` tab's :guilabel:`Routes` field, tick the :guilabel:`Manufacture` checkbox.
+If the product is manufactured, :ref:`install <general/install>` the **Manufacturing** app.
 
 Next, ensure at least one :doc:`bill of materials
 <../../../manufacturing/basic_setup/bill_configuration>` (BoM) is displayed in the :guilabel:`Bill
@@ -98,8 +95,8 @@ button, then click :guilabel:`New` to configure a new |BoM|.
 
 .. _inventory/warehouses_storage/rr-fields:
 
-Create new reordering rules
----------------------------
+Create a reordering rule
+------------------------
 
 To create a new reordering rule, navigate to :menuselection:`Inventory app --> Operations -->
 Replenishment`, then click :guilabel:`New`, and fill out the following fields for the new reordering
@@ -111,9 +108,6 @@ rule line item:
   triggered. When forecasted stock falls below this number, a replenishment order for the product is
   created.
 - :guilabel:`Max`: The maximum quantity at which the stock is replenished.
-- :guilabel:`Multiple Quantity`: If the product should be ordered in specific quantities, enter the
-  number that should be ordered. For example, if the :guilabel:`Multiple Quantity` is set to `5`,
-  and only 3 are needed, 5 products are replenished.
 
 .. figure:: reordering_rules/reordering-rule-form.png
    :alt: The form for creating a new reordering rule.
@@ -135,6 +129,7 @@ For advanced usage, learn about the following reordering rule fields:
 - :ref:`Preferred route <inventory/warehouses_storage/route>`
 - :ref:`Vendor <inventory/warehouses_storage/set-vendor>`
 - :ref:`Bill of materials <inventory/warehouses_storage/set-bom-field>`
+- :ref:`Multiple <inventory/warehouses_storage/multiple>`
 - :ref:`Procurement group <inventory/warehouses_storage/procurement-grp>`
 
 .. note::
@@ -199,6 +194,44 @@ is used to replenish the product in one-unit increments, back up to the :guilabe
    Once the product is received from the vendor, the forecasted quantity returns to `0.00`. There is
    now one unit on-hand, but it is not reserved for the |SO| which triggered its purchase. It can be
    used to fulfill that |SO|, or reserved for a different order.
+
+.. _inventory/warehouses_storage/multiple:
+
+Multiple
+--------
+
+The :guilabel:`Multiple` field on the replenishment report (:menuselection:`Inventory app -->
+Operations --> Replenishment`) defines the unit used when replenishing a product. Odoo rounds the
+ordered quantity *up* to the nearest multiple that meets or slightly exceeds the :guilabel:`Max`
+quantity set on the reordering rule. If no multiples apply, select :guilabel:`Units`.
+
+.. example::
+   A vendor sells soda only in cases of six cans, but your company tracks quantities per can.
+   Setting the :guilabel:`Multiple` to `6` ensures soda is ordered in multiples of six (6, 12,
+   18...).
+
+   For a reordering rule with the :guilabel:`Min` = `10` and :guilabel:`Max` = `40`:
+
+   - If the forecasted quantity is `10`, the amount :guilabel:`To Order` is `30`, a multiple of six
+     that will bring the :guilabel:`On Hand` quantity to exactly the maximum.
+   - If the forecasted quantity is `8`, the quantity needed to reach the max is `32`. But 32 is not
+     a multiple of six, so Odoo rounds the :guilabel:`To Order` quantity up to `36`. This will cause
+     the :guilabel:`On Hand` quantity to slightly exceed the maximum.
+
+   .. image:: reordering_rules/multiple.png
+      :alt: Reordering rule with the Multiple set to 6.
+
+.. note::
+   If the maximum is exceeded, expect to see a :icon:`fa-warning` warning indicating the possibility
+   of excessive stock.
+
+Configuration
+~~~~~~~~~~~~~
+
+Multiples are based on defined :doc:`packagings <../../product_management/configure/packaging>`.
+Only packaging types listed on the product's :doc:`vendor pricelist
+<../../../purchase/products/pricelist>` appear as options in the :guilabel:`Multiple` field when
+configuring reordering rules.
 
 .. _inventory/warehouses_storage/trigger:
 
