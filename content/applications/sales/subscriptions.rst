@@ -182,6 +182,11 @@ subscription product will function correctly:
 - :guilabel:`Sales Price`: enter the recurring cost of the subscription that the customer will pay
   per recurrence period.
 
+.. important::
+   When creating a subscription for a physical good, selecting the wrong :guilabel:`Invoicing
+   Policy` will lead to errors when creating invoices. Physical products must be set to
+   :guilabel:`Ordered quantities`.
+
 Optionally set up information on the :doc:`Attributes & Variants
 <sales/products_prices/products/variants>` tab if the subscription contains multiple choices for
 customers (i.e. food delivery, tailored fashion boxes, etc.).
