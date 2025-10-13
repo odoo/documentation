@@ -17,8 +17,8 @@ Configuration --> Automation Rules`. This is where all the automation rules for 
 found.
 
 The :guilabel:`Automation Rules` page shows each rule's :guilabel:`Name`, :guilabel:`Action To Do`,
-what the automated rule will :guilabel:`Trigger On`, and the :guilabel:`Company` to which the rule
-applies.
+what the automated rule is set to :guilabel:`Trigger On`, and the :guilabel:`Company` to which the
+rule applies.
 
 To view or modify any existing automation rule, simply click the desired rule from this page.
 
@@ -88,7 +88,7 @@ Action section
 
 The :guilabel:`Action` section dictates what action occurs when an automated rule is triggered.
 
-In the :guilabel:`Action To Do` field, choose the action that will occur once the automated rule is
+In the :guilabel:`Action To Do` field, choose the action that occurs once the automated rule is
 triggered. When clicked, the following options become available on a drop-down menu:
 
 - :guilabel:`Create next activity`: creates the next activity to occur, which is configured in the
@@ -125,14 +125,13 @@ In the :guilabel:`Trigger On` field, decide whether the automated rule should be
    trigger has been configured for the rule.
 
 .. warning::
-   When the :guilabel:`Trigger Now` button is clicked, Odoo will trigger the action on *all* linked
+   When the :guilabel:`Trigger Now` button is clicked, Odoo triggers the action on *all* linked
    subscriptions, regardless of possible timed conditions.
 
 .. note::
    Sending a SMS text message in Odoo requires In-App Purchase (IAP) credit or tokens. For more
-   information on :abbr:`IAP (In-App Purchase)`, visit :doc:`../../essentials/in_app_purchase`.
-   For more information on sending SMS messages, visit
-   :doc:`../../marketing/sms_marketing`.
+   information on :abbr:`IAP (In-App Purchase)`, visit :doc:`../../essentials/in_app_purchase`. For
+   more information on sending SMS messages, visit :doc:`../../marketing/sms_marketing`.
 
 If :guilabel:`Timed Condition` is selected in the :guilabel:`Trigger On` field, the following fields
 appear:
@@ -141,7 +140,7 @@ appear:
   action is created upon subscription creation *and* updates.
 - :guilabel:`Delay After Trigger`: select a delayed amount of time (:guilabel:`Minutes`,
   :guilabel:`Hours`, :guilabel:`Days`, or :guilabel:`Months`) for Odoo to wait before triggering the
-  configured action. If a negative number is entered, the "delay" will occur *before* the
+  configured action. If a negative number is entered, the "delay" occurs *before* the
   :guilabel:`Trigger Date`.
 
 Activity section
