@@ -18,8 +18,8 @@ Website` smart button to navigate to the product page.
 From here, review the subscription product and its recurring periods. Then, toggle the switch in the
 upper-right corner from :guilabel:`Unpublished` to :guilabel:`Published`.
 
-The new subscription product is now available to purchase on the eCommerce website, with options
-for the different recurring periods.
+The new subscription product is now available to purchase on the eCommerce website, with options for
+the different recurring periods.
 
 .. image:: ecommerce/subscription-product.png
    :align: center

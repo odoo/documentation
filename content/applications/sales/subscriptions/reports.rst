@@ -32,8 +32,8 @@ Filters and Group By
 --------------------
 
 *Filters* are used to narrow down metrics to show specific analytics, whereas groupings (via the
-*Group By* option) are used to gather the data from specific sections into groups for more
-organized analysis.
+*Group By* option) are used to gather the data from specific sections into groups for more organized
+analysis.
 
 This section refers to both filters and groupings, as a combination of the two can be saved in the
 *Favorites* section.
@@ -208,8 +208,8 @@ Reporting pages
 In the Odoo **Subscriptions** app, there are four different reporting pages available.
 
 To access, analyze, and customize various reports related to subscriptions, navigate to
-:menuselection:`Subscriptions app`, and click the :guilabel:`Reporting` drop-down menu in the
-header to reveal the following reporting pages:
+:menuselection:`Subscriptions app --> Reporting` drop-down menu in the header to reveal the
+following reporting pages:
 
 - :guilabel:`Subscriptions`
 - :guilabel:`Retention`
@@ -237,8 +237,8 @@ The following filters are also present in the search bar: :guilabel:`In Progress
    :align: center
    :alt: The default view of the Subscriptions Analysis reporting page in Odoo Subscriptions.
 
-When the :guilabel:`Measures` button on the :guilabel:`Subscriptions Analysis` page is
-clicked, a series of metric-related options becomes available as a drop-down menu.
+When the :guilabel:`Measures` button on the :guilabel:`Subscriptions Analysis` page is clicked, a
+series of metric-related options becomes available as a drop-down menu.
 
 .. image:: reports/subscriptions-analysis-measures.png
    :align: center
@@ -368,8 +368,8 @@ Breakdown` reporting page are:
 MRR analysis
 ------------
 
-To access the :guilabel:`MRR Analysis` reporting page, navigate to :menuselection:`Subscriptions
-app --> Reporting --> MRR Timeline`.
+To access the :guilabel:`MRR Analysis` reporting page, navigate to :menuselection:`Subscriptions app
+--> Reporting --> MRR Timeline`.
 
 By default, the data displayed on the :guilabel:`MRR Analysis` reporting page is in graph view, with
 the :guilabel:`Line Chart` option, :guilabel:`Stacked` option, and :guilabel:`Cumulative` option
