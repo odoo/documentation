@@ -205,20 +205,17 @@ subscription product functions correctly:
 - :guilabel:`Sales Price`: sets the recurring cost of the subscription that the customer pays per
   recurrence period.
 
-Additionally, the following may be used to further customize the subscription product.
+.. important::
+   When creating a subscription for a physical good, selecting the wrong :guilabel:`Invoicing
+   Policy` will lead to errors when creating invoices. Physical products must be set to
+   :guilabel:`Ordered quantities`.
 
-- The :guilabel:`Create on Order` options: enables secondary actions in Odoo such as creating a new
-  :guilabel:`Task` in a chosen :guilabel:`Project` :icon:`fa-building-o`, :guilabel:`Event
-  Registration` or :guilabel:`Course Access`. If none of the selectable actions in this field's
-  drop-down menu are needed, it may be set to :guilabel:`Nothing`.
-- The :guilabel:`Is Published` field under the :guilabel:`Sales` tab: adds the subscription as a
-  product customers can purchase from the eCommerce website.
-- The :guilabel:`Recurring Prices` tab: allows different pricing options for the subscription. For
-  each desired option, click :guilabel:`Add a line` to add a new row.
-- The :doc:`Attributes & Variants <sales/products_prices/products/variants>` tab: enables multiple
-  choices for customers (i.e. food delivery, tailored fashion boxes, etc.).
-- The :guilabel:`Purchase` tab: sets up purchasing information if the product is sourced from a
-  vendor, as with reseller (retail) or subcontracting operations.
+Optionally set up information on the :doc:`Attributes & Variants
+<sales/products_prices/products/variants>` tab if the subscription contains multiple choices for
+customers (i.e. food delivery, tailored fashion boxes, etc.).
+
+In the :guilabel:`Recurring Prices` tab, clarify the pricing options for the subscription. For each
+option available, click :guilabel:`Add a price rule` to add a new row.
 
 .. tip::
    Longer :guilabel:`Recurring Plan` time periods usually feature discounts to incentivize customers
