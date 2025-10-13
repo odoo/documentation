@@ -129,7 +129,7 @@ Online payment providers
      -
      -
    * - :doc:`PayPal <payment_providers/paypal>`
-     - The provider's website
+     - Odoo
      -
      -
      -
