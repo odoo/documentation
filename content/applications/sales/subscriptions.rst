@@ -48,48 +48,48 @@ Set up recurring plans
 To get started with subscription products in Odoo, *recurring plans* (previously known as
 *recurrence periods*) must first be configured.
 
-Recurring plans are the time windows in which subscriptions are active before they renew again.
-While a subscription is active, customers receive products or services, and may also have access to
-additional benefits such as support desk triage. In terms of payment, these recurring plans
-designate how often the customer is charged in order to maintain the benefits of their subscription.
+Recurring plans are the time periods when subscriptions are active before they need to be renewed
+again. While a subscription is active, customers receive products or services, and may also have
+access to additional benefits like support desk triage. Recurring plans also set the interval when
+the customer is charged in order to maintain their subscription.
 
 To configure recurring plans, go to :menuselection:`Subscriptions app --> Configuration -->
 Recurring Plans`.
 
-By default, the **Subscriptions** app includes a number of common recurring plans already available,
-such as :guilabel:`Monthly` and :guilabel:`Yearly`.
+The **Subscriptions** app includes :guilabel:`Monthly`, :guilabel:`6 Months`, and :guilabel:`Yearly`
+as default recurring plan options.
 
 Create a new recurring plan by clicking :guilabel:`New` on the :guilabel:`Recurring Plans`
-dashboard, to reveal a blank form where the plan :guilabel:`Name`, :guilabel:`DETAILS`,
-:guilabel:`SELF-SERVICE` and :guilabel:`Pricing` field values are specified.
+dashboard. A new recurring plan form is generated with the :guilabel:`Name` and some
+:guilabel:`DETAILS` filled out by default. These can all be changed freely.
 
 .. image:: subscriptions/recurring-plan-blank-form.png
    :alt: A blank recurring plan form in the Odoo Subscriptions application.
 
 .. important::
-   The `Days` unit of measure *cannot* be used as a :guilabel:`Billing Period` for subscription
-   products. The daily recurrence period in Odoo is designated for rentals, and **cannot** be added
-   to subscription-based sales orders.
-
-   This limitation is there to avoid sales orders that would generate daily invoices.
+   `Days` *is not* available as an option in the :guilabel:`Billing Period` drop-down menu.
+   Recurring plans cannot be configured to bill on a daily basis.
 
 DETAILS section
 ---------------
 
-After giving the recurring plan a suitable :guilabel:`Name` (e.g. `Monthly`, `Bi-weekly`,
-`Quarterly`, etc.), proceed to the form's :guilabel:`DETAILS` section to fill out the following
-configuration fields:
+After giving the recurring plan a :guilabel:`Name`, the plan can be customized by filling out the
+fields in the :guilabel:`DETAILS` section. Only the :guilabel:`Billing Period` field is mandatory
+for a recurring plan to be saved.
 
-- :guilabel:`Billing Period`: determines the frequency with which the subscription is billed. Set
-  the unit of time (:guilabel:`Weeks`, :guilabel:`Months`, or :guilabel:`Years`) in the drop-down
-  menu and the numerical value in the corresponding text field.
-- :guilabel:`Automatic Closing`: a numerical value, in days, where the subscription is set to close
-  automatically if payment is not made.
+- :guilabel:`Billing Period`: determines the interval which the subscription is billed. Set the unit
+  of time (:guilabel:`Weeks`, :guilabel:`Months`, or :guilabel:`Years`) in the drop-down menu and
+  the numerical value in the corresponding text field.
+
+The following fields allow for further customization and refinement of the recurring plan.
+
+- :guilabel:`Automatic Closing`: sets how many days it takes for the subscription to automatically
+   close if payment is not made.
 
   .. example::
-     If a subscription is set to renew on the 1st of every month, and the :guilabel:`Automatic
-     Closing` value is set to `15` :guilabel:`Days`, then the subscription will close on the 16th of
-     that month if payment is not received.
+     If a subscription is set to renew on the 1st of every month, and :guilabel:`Automatic Closing`
+     is set to `15` :guilabel:`Days`, then the subscription closes on the 16th of that month if
+     payment is not received.
 
 - :guilabel:`Align to Period Start`: sets new and recurring subscription plans to bill on the first
   day of the next :guilabel:`Billing Period`. When a subscription plan is purchased in the middle of
@@ -99,24 +99,24 @@ configuration fields:
   .. example::
      On the 15th of July, a customer purchases a monthly subscription for a streaming service.
      Selecting :guilabel:`Align to Period Start` for this recurring plan configures this
-     subscription to bill on the 1st of each month. The subscription begins as soon as payment is
-     confirmed. The quotation shows the full cost of the subscription for July 1 - 31, but the
-     invoice shows an adjusted cost for July 15 - 31. On the 1st of August, the customer is charged
-     the full price for the month's subscription.
+     subscription to bill on the 1st of each month instead of the 15th. The subscription begins as
+     soon as payment is confirmed. The quotation shows the full cost of the subscription for July 1
+     - 31, but the invoice shows an adjusted cost for July 15 - 31. On the 1st of August, the
+     customer is charged the full price for the month's subscription.
 
-- :guilabel:`Company`: optional assignment, if the database has :doc:`Multi-company
-  <../general/companies/multi_company>` functionality enabled. Assigning this value will make the
-  recurring plan available for that company's location, specifically.
+- :guilabel:`Company`: makes the recurring plan only available for the chosen company. By default,
+   this option is blank and the recurring plan is available to all companies. Only one company may
+   be chosen for this option. :doc:`Multi-company <../general/companies/multi_company>`
+   functionality must be enabled to use this option.
 - :guilabel:`Invoice Email Template`: assigns a specific email template to be used in subscriptions
-  invoicing communications. The default assignment here is `Invoice: Sending` which contains various
-  dynamic fields that autopopulate specific variables across the :guilabel:`Subject` field and
-  :guilabel:`Content` tab, such as the customer's name, invoice number, total amount invoiced, etc.
+  invoicing communications. The default is `Invoice: Sending` which contains dynamic fields that
+  autopopulate specific variables across the :guilabel:`Subject` field and :guilabel:`Content` tab,
+  such as the customer's name, invoice number, total amount invoiced, etc.
 
   .. tip::
-     Although this field is optional, it is recommended to use it since this type of communication
-     fulfills good business practices around price transparency, regular customer communication
-     (especially as it relates to charged amounts), and helps build contextual financial
-     documentation around recurring revenues.
+     Although this field is optional, using it is recommended since this type of communication
+     fulfills good business practices around price transparency, regular communication (especially
+     as relates to invoiced amounts), and financial documentation around recurring revenues.
 
      .. figure:: subscriptions/subscriptions-invoice-email-template.png
         :alt: An email template in Odoo used to send subscriptions invoicing messages to customers.
@@ -132,27 +132,25 @@ The following optional fields enable customers to take administrative actions on
 subscriptions. Enabling any of these options may decrease customer service request volume or
 increase customer lifetime value (LTV).
 
-- :guilabel:`Closable`: checking this box will give customers the power to close their own
-  subscriptions. Consider enabling this option to reduce customer service requests and improve the
-  overall customer experience; customers that can manage their own subscriptions in this way helps
-  offload tedious tasks for sales and support teams, and reduces the likelihood of negative reviews.
+- :guilabel:`Closable`: gives customers the power to close their own subscriptions without having to
+  get assistance from sales or support teams.
 
   .. tip::
-     Although this option is generally advisable to enable, sales teams with strong customer
-     offboarding processes may consider leaving this option unchecked in order to force an
-     interaction that might save the subscription or a different form of recurring revenue (such as
-     in the case of a lesser subscription or a new trial period with an alternative plan).
+     Although enabling this may reduce service requests and improve the customer experience, sales
+     teams with strong customer offboarding processes may consider leaving this option unchecked to
+     create more interactions that might save the subscription or a different form of recurring
+     revenue (such as in the case of a lesser subscription or a new trial period with an alternative
+     plan).
 
 - :guilabel:`Add Products`: allows customers to add new products or edit existing product quantities
   to their recurring sales orders, thereby enabling customer-driven upselling. When enabled,
-  :doc:`Upsell quotations <subscriptions/upselling>` are generated in Odoo whenever a customer
-  performs a quantitative adjustment on their sales order product lines.
-
-- :guilabel:`Renew`: enabling this allows customers to manually create a :doc:`Renewal quotation
+  :doc:`Upsell quotations <subscriptions/upselling>` are generated whenever a customer performs a
+  quantitative adjustment on their sales order product lines.
+- :guilabel:`Renew`: allows customers to manually create a :doc:`Renewal quotation
   <subscriptions/renewals>` for their subscription.
-- :guilabel:`Optional Plans`: adding values here from the drop-down field menu enables customers to
-  switch their subscription plans, in which case a new subscription quotation or renewal quote is
-  created to accommodate the change request.
+- :guilabel:`Optional Plans`: allows customers to switch their subscription plans from the current
+  recurring plan to one of the values chosen here. This generates a new subscription or renewal
+  quote to accommodate the change request.
 
 Pricing tab
 -----------
@@ -177,103 +175,79 @@ navigating the recurring revenue sources attached to the plan:
   the recurring plan. Clicking the button leads to a tabled list view, where each row hyperlinks to
   a respective subscriptions sales order.
 - :guilabel:`Subscription Items`: lists all the individual recurring subscription services that are
-  active, in an itemized fashion. :guilabel:`Subscription` and :guilabel:`Customer` values will
-  repeat if the customer ordered multiple subscriptions on the same sales order.
+  active, in an itemized fashion. :guilabel:`Subscription` and :guilabel:`Customer` values repeat if
+  the customer ordered multiple subscriptions on the same sales order.
 
 Product form configuration
 ==========================
 
 With recurring plans set up, create a subscription product by navigating to
-:menuselection:`Subscriptions app --> Products --> Products`, and click either an existing product
-to edit, or make a new one by clicking :guilabel:`New` to open up the subscription product's form.
+:menuselection:`Subscriptions app --> Products --> Products`. Edit an existing product to edit or
+make a new one by clicking :guilabel:`New` to open up the subscription product's form.
 
 .. note::
-   By default, the :guilabel:`Subscriptions` option is already enabled, prompting Odoo to recognize
-   it as a subscription product. Be sure to leave the :guilabel:`Subscriptions` and
-   :guilabel:`Sales` options enabled.
+   When making a product in the **Subscriptions** app, the :guilabel:`Subscriptions` option is
+   enabled by default. Both the :guilabel:`Subscriptions` and :guilabel:`Sales` options enabled to
+   sell the product as a subscription product.
 
 .. image:: subscriptions/subscription-product-form.png
-   :alt: A basic subscription product form in Odoo Subscriptions application.
+   :alt: A basic subscription product form in the Odoo Subscriptions application.
 
 On the product form, configure the following items in the :guilabel:`General Information` tab so the
-subscription product will function correctly:
+subscription product functions correctly:
 
-- :guilabel:`Product type`: this value is typically set to a :guilabel:`Service`, however other
-  product types may be used depending on the purpose of the subscription (e.g., physical product box
-  subscriptions, eLearning course with supplemental physical goods, etc.).
-- :doc:`Invoicing policy <sales/invoicing/invoicing_policy>`: set this value to when the customer
-  should be charged for their subscription.
-- :guilabel:`Unit of Measure`: how the product should be counted in Odoo, for stock purposes. For
-  most subscriptions, the :abbr:`UoM (Unit of Measure)` will be :guilabel:`Units`.
-- :guilabel:`Sales Price`: enter the recurring cost of the subscription that the customer will pay
-  per recurrence period.
+- :guilabel:`Product Type`: sets the product type to a physical good, a provided service, or a
+  combination of both. This is typically set to a :guilabel:`Service` by default.
+- :doc:`Invoicing Policy <sales/invoicing/invoicing_policy>`: sets when the customer is charged for
+  their subscription, such as when the good or service is rendered, when the order is placed, etc.
+- :guilabel:`Unit of Measure`: determines how the product should be counted in Odoo, for stock
+  purposes. For most subscriptions, the :abbr:`UoM (Unit of Measure)` is :guilabel:`Units`.
+- :guilabel:`Sales Price`: sets the recurring cost of the subscription that the customer pays per
+  recurrence period.
 
-Optionally set up information on the:
+Additionally, the following may be used to further customize the subscription product.
 
-- :guilabel:`Create on Order` field: this enables secondary actions in Odoo such as creating a new
+- The :guilabel:`Create on Order` options: enables secondary actions in Odoo such as creating a new
   :guilabel:`Task` in a chosen :guilabel:`Project` :icon:`fa-building-o`, :guilabel:`Event
   Registration` or :guilabel:`Course Access`. If none of the selectable actions in this field's
-  drop-down menu are needed, then choose :guilabel:`Nothing` for the field' value.
-- :doc:`Attributes & Variants <sales/products_prices/products/variants>` tab if the subscription
-  contains multiple choices for customers (i.e. food delivery, tailored fashion boxes, etc.).
-- :guilabel:`Purchase` tab if the product is sourced from a vendor, such as part of reseller
-  (retail) or subcontracting operations.
-
-In the :guilabel:`Recurring Prices` tab, clarify the pricing options for the subscription. For each
-option available, click :guilabel:`Add a price rule` to add a new row.
+  drop-down menu are needed, it may be set to :guilabel:`Nothing`.
+- The :guilabel:`Is Published` field under the :guilabel:`Sales` tab: adds the subscription as a
+  product customers can purchase from the eCommerce website.
+- The :guilabel:`Recurring Prices` tab: allows different pricing options for the subscription. For
+  each desired option, click :guilabel:`Add a line` to add a new row.
+- The :doc:`Attributes & Variants <sales/products_prices/products/variants>` tab: enables multiple
+  choices for customers (i.e. food delivery, tailored fashion boxes, etc.).
+- The :guilabel:`Purchase` tab: sets up purchasing information if the product is sourced from a
+  vendor, as with reseller (retail) or subcontracting operations.
 
 .. tip::
-   Longer time :guilabel:`Recurring Plan` time periods are typically incentivized with cost savings.
-   Consider dropping the total :guilabel:`Recurring Price` values to offer customers a discount
-   while supporting the business's financial runway.
-
-Last, if the subscription is meant to be sold on the **eCommerce** website, click the
-:icon:`fa-globe` :menuselection:`Go To Website` smart button and in the product page header, click
-the gray slider from :guilabel:`Unpublished` to the green :guilabel:`Published` status.
+   Longer :guilabel:`Recurring Plan` time periods usually feature discounts to incentivize customers
+   to lock in a price and create a predictable revenue stream for businesses.
 
 .. _subscriptions/quotations:
 
-Create a subscriptions quotation
-================================
+Manually creating a subscriptions quotation
+===========================================
 
-Manually create a new customer subscription by navigating to either the :menuselection:`Sales` or
-:menuselection:`Subscriptions` app dashboards, and then clicking :guilabel:`New`.
+A new customer subscription can be created by going to either the :menuselection:`Sales`` or
+:menuselection:`Subscriptions` app dashboards, then clicking :guilabel:`New`. On the quotation form,
+fill in the necessary fields such as :guilabel:`Customer` and :guilabel:`Recurring Plan`, as well as
+the :guilabel:`Order Lines` tab.
 
-.. note::
-   Products that have been marked as :guilabel:`Subscriptions` on their product forms, and are also
-   sold on the **eCommerce** website will *automatically* create and confirm subscription quotations
-   in the backend of Odoo.
+Additionally, any of the following can also be added to the quotation:
 
-.. important::
-   Sales orders with a defined recurring plan automatically become subscriptions.
-
-On the quotation form, fill in the necessary fields such as :guilabel:`Customer` and
-:guilabel:`Recurring Plan`, as well as the :guilabel:`Order Lines` tab.
-
-Optionally, specify a:
-
-- :doc:`Quotation Template <sales/sales_quotations/quote_template>`, if one is readily available to
-  help populate the form fields.
-- :guilabel:`Expiration` date, to indicate when the subscription offer is no longer valid.
+- :guilabel:`Expiration` date: indicates when the subscription offer is no longer valid.
 
   .. tip::
      Expiration dates pair well with :doc:`discounts <sales/products_prices/prices/discounts>` to
-     incentivize faster purchases, since the discount will expire with the quotation if it's not
-     turned into a sales order within the specified date range.
+     incentivize faster purchases, since the discount expires with the quotation if it is not turned
+     into a sales order within the specified date range.
 
-- :doc:`Pricelist <sales/products_prices/prices/pricing>`, if one is available and appropriate to
-  use (i.e., summer sale discount, VIP customer, etc.).
-- :guilabel:`Payment Terms`, to set a specified time window for when the subscription must be paid.
-  This is not to be confused for when the quotation is *confirmed* and becomes a sales order, to
-  where, payment may then be obtained immediately or within a certain amount of days, weeks, months,
-  etc.
+- :guilabel:`Payment Terms`: specifies a time frame by which the subscription must be paid once
+  confirmed as a sales order.
 
 .. image:: subscriptions/new-subscription-form.png
    :alt: A completed example of a new subscription quotation in Odoo.
-
-.. tip::
-   Define different invoice and delivery addresses by enabling the :doc:`Customer Addresses
-   </applications/finance/accounting/customer_invoices/customer_addresses>` feature.
 
 .. _subscriptions/confirmation:
 
@@ -281,15 +255,20 @@ Confirmation
 ============
 
 Send the quotation to the customer for confirmation by clicking on :guilabel:`Send By Email`, or
-confirm it immediately by clicking on :guilabel:`Confirm`.
-
-.. tip::
-   Click on :guilabel:`Preview` to preview the customer portal where the customer can view their
-   quotation, sign and pay it, and communicate with you.
+confirm it immediately by clicking on :guilabel:`Confirm`. Click on :guilabel:`Preview` to preview
+the customer portal where the customer can view their quotation, sign and pay it, and communicate
+with you.
 
 If an :guilabel:`Online signature` or :guilabel:`Online payment` is required to confirm the
 quotation, set the checkboxes next to either (or both) of these labels in the :guilabel:`Other Info`
 tab, under the :guilabel:`SALES` section.
+
+Automatically created subscriptions quotations
+==============================================
+
+Products that have been marked as :guilabel:`Subscriptions` on their product forms, and are also
+sold on the **eCommerce** website *automatically* create and confirm subscription quotations in
+Odoo. Sales orders with defined recurring plans automatically become subscriptions.
 
 .. seealso::
    - :doc:`/applications/finance/accounting/payments/online`

@@ -16,8 +16,8 @@ Upselling may prove beneficial to the following customer types:
    | For brand new customers unfamiliar with the company/brand, a new, attractive tactic must be
      employed to entice them to purchase a more expensive product/service.
 
-     In these instances, discounts can be useful. Typically, subscriptions end after a certain period
-     of time.
+     In these instances, discounts can be useful. Typically, subscriptions end after a certain
+     period of time.
 
      So, if these more expensive products/services are offered to new customers at a discount, it
      can result in a sale, while establishing a strong sense of trust between the customer and the
