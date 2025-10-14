@@ -65,6 +65,6 @@ posted.
 Loans Analysis Report
 ---------------------
 
-By going to :menuselection:`Accounting --> Reporting --> Loans Analysis`, you can access a
+By going to :menuselection:`Accounting --> Review --> Loans Analysis`, you can access a
 report with a pivot view of your ongoing loans. By default, the report shows the principal,
-interest, and total payment for each year for the loan duration.
+interest, and total payment for each year for the duration of the loan.
