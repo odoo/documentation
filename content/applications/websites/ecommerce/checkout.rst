@@ -146,8 +146,8 @@ checkout options.
 
 .. tip::
    Restrict access to the :ref:`shop <ecommerce/customer_accounts/shop-access>` and :ref:`checkout
-   <ecommerce/customer_accounts/checkout-access>` for specific customers, e.g., in a B2B business
-   setup.
+   <ecommerce/customer_accounts/checkout-access>` for specific customers, e.g., in a :doc:`B2B
+   <b2b_b2c>` business setup.
 
 .. _ecommerce/checkout/review_order:
 
@@ -195,8 +195,7 @@ addresses are identical), and click :guilabel:`Confirm` to proceed to the next s
 
 .. tip::
    - For B2B customers, you can also :ref:`enable <ecommerce/checkout/customize_steps>` optional
-     :guilabel:`VAT` and :guilabel:`Company name` fields by toggling the :guilabel:`Show B2B Fields`
-     option in the website editor.
+     :ref:`B2B fields <ecommerce/b2b_b2c/b2b-fields>` in the website editor.
    - You can add a checkbox for users without an account to sign up for a newsletter. To do so, go
      to :menuselection:`Website --> Configuration --> Settings`. Under the :guilabel:`Shop -
      Checkout Process` section, enable the :guilabel:`Newsletter` feature and select a
