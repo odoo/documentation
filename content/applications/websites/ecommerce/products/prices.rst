@@ -22,8 +22,8 @@ To add a tax on a product, you can either set a tax in the :guilabel:`Customer T
 .. _ecommerce-price-management-tax-display:
 
 Choosing the displayed price tax usually depends on a country's regulations or the type of customers
-(B2B vs. B2C). To select the type of price displayed, go to :menuselection:`Website -->
-Configuration --> Settings`, select the website, scroll down to the
+(:doc:`B2B vs. B2C <../b2b_b2c>`). To select the type of price displayed, go to
+:menuselection:`Website --> Configuration --> Settings`, select the website, scroll down to the
 :guilabel:`Shop - Products` section, and under :guilabel:`Display Product Prices` select between:
 
 - :guilabel:`Tax Excluded`: the price displayed on the website is tax-excluded, and the tax is
@@ -35,9 +35,12 @@ Configuration --> Settings`, select the website, scroll down to the
    website in the database.
 
 .. tip::
-   Switch the :ref:`Tax indication <ecommerce/products/product-presentation>` toggle on in the
-   website editor to explicitly indicate if the price is `Tax excluded` or `Tax included` on the
-   product page.
+   - Switch the :ref:`Tax indication <ecommerce/products/product-presentation>` toggle on in the
+     website editor to explicitly indicate if the price is `Tax excluded` or `Tax included` on the
+     product page.
+   - Enable specific :ref:`B2B fields <ecommerce/b2b_b2c/b2b-fields>` in the :ref:`delivery step
+     <ecommerce/checkout/delivery>` during the checkout using the :doc:`website editor
+     </applications/websites/website/web_design>`.
 
 .. _ecommerce/prices/price-per-unit:
 
@@ -305,8 +308,8 @@ Rules` configuration.
 Hide prices
 ===========
 
-Some businesses, such as B2B shops or companies that sell luxury or custom items, often prefer to
-showcase their products online without displaying their prices.
+Some businesses, such as :ref:`B2B shops <ecommerce/b2b_b2c/prices>` or companies that sell luxury
+or custom items, often prefer to showcase their products online without displaying their prices.
 
 To hide product prices on the ecommerce, go to :menuselection:`Website --> Configuration -->
 Settings`, enable :guilabel:`Prevent Sale of Zero Priced Product` in the :guilabel:`Shop -
