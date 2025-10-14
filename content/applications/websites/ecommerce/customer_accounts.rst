@@ -6,7 +6,7 @@ Using customer accounts for an ecommerce shop enables you to :ref:`manage custom
 <ecommerce/customer_accounts/account-creation>`, control access to the :ref:`shop
 <ecommerce/customer_accounts/shop-access>`, the :ref:`checkout
 <ecommerce/customer_accounts/checkout-access>`, or the :ref:`customer portal <portal/access>`,
-and support both B2B and B2C operations.
+and support both :doc:`B2B and B2C operations <b2b_b2c>`.
 
 After logging in, customers can access their :doc:`customer portal <../../general/users/portal>`
 by clicking their username in the top-right corner of the screen and selecting :guilabel:`My
@@ -35,6 +35,8 @@ of the following options:
 - :guilabel:`Free sign up`: Every website visitor can create an account and sign in. They will
   get access to the :doc:`portal <../../general/users/portal>` by default.
 
+.. _ecommerce/customer_accounts/grant-access:
+
 To send an email invitation to a customer:
 
 - Go to :menuselection:`Website --> eCommerce --> Customers`.
@@ -56,9 +58,9 @@ instructions on setting a password and activating their account.
 .. note::
    - When selecting the :guilabel:`Free sign up`, a clickable :guilabel:`Don't have an account?`
      link appears under the login form on the website.
-   - The :guilabel:`On invitation` option is especially useful for B2B businesses that prefer
-     to keep :ref:`prices hidden <ecommerce/prices/hide-prices>` on the website and grant access
-     only to invited customers.
+   - The :guilabel:`On invitation` option is especially useful for :ref:`B2B
+     <ecommerce/b2b_b2c/prices>` businesses that prefer to keep :ref:`prices hidden
+     <ecommerce/prices/hide-prices>` on the website and grant access only to invited customers.
 
 .. tip::
    It is possible to configure a website form with a :guilabel:`Create a Customer` :ref:`action
@@ -119,6 +121,8 @@ available:
    - To use the :ref:`wishlist <ecommerce/products/wishlists>` feature, customers must
      create an account to save their favorite items for later.
 
+.. _ecommerce/customer_accounts/multiple-websites:
+
 Multi-website account
 =====================
 
@@ -128,5 +132,5 @@ websites, allowing each customer to use a single account. To do so, go to :menus
 Customer Accounts` option.
 
 .. note::
-   When operating both B2B and B2C online shops, it's recommended to use separate websites for each
-   business model.
+   When operating both :ref:`B2B and B2C online shops <ecommerce/b2b_b2c/multiple-websites>`, it is
+   recommended to use separate websites for each business model.

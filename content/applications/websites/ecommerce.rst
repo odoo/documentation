@@ -27,6 +27,7 @@ products and increase your average cart sizes.
    ecommerce/checkout
    ecommerce/shipping
    ecommerce/order_handling
+   ecommerce/b2b_b2c
    ecommerce/customer_accounts
    ecommerce/performance
    ecommerce/google_merchant_center
