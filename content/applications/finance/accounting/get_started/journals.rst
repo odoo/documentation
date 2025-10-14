@@ -18,11 +18,6 @@ records:
    each for a unique bank account, or two separate sales journals to track :abbr:`B2B (business to
    business)` versus :abbr:`B2C (business to customer)` income.
 
-.. _accounting/journals/configuration:
-
-Configuration
-=============
-
 Each card on the :guilabel:`Accounting Dashboard` represents a journal. To edit the configuration of
 a journal, click the :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` on the journal card, then
 click :guilabel:`Configuration`. Alternatively, go to :menuselection:`Accounting --> Configuration
@@ -62,7 +57,7 @@ The :guilabel:`Advanced Settings` tab contains more technical options:
 .. _accounting/journals/bank-cash-cc:
 
 Bank, cash, and credit card journals
-------------------------------------
+====================================
 
 Bank, cash, and credit card journals share the following features:
 
@@ -103,7 +98,7 @@ available depending on the journal type. If desired, set :ref:`outstanding accou
 .. _accounting/journals/outstanding-accounts:
 
 Outstanding accounts
-~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 By default, payments in Odoo do not create journal entries, but they can be configured to create
 journal entries by using **outstanding accounts** on :ref:`bank <accounting/journals/bank>` and
@@ -117,14 +112,14 @@ journal entries by using **outstanding accounts** on :ref:`bank <accounting/jour
 These accounts are usually of :ref:`type <chart-of-account/type>` :guilabel:`Current Assets` and
 :guilabel:`Current Liabilities`.
 
-Payments that are registered in Odoo are posted to the outstanding receipts and outstanding accounts
-until they are reconciled. At any moment, the outstanding receipts account's balance in the general
-ledger shows the balance of registered incoming payments that have not yet been reconciled, and the
-outstanding payments account's balance in the general ledger shows the balance of registered
+Payments that are registered in Odoo are posted to the outstanding receipts and outstanding payments
+accounts until they are reconciled. At any moment, the outstanding receipts account's balance in the
+general ledger shows the balance of registered incoming payments that have not yet been reconciled,
+and the outstanding payments account's balance in the general ledger shows the balance of registered
 outgoing payments that have not yet been reconciled.
 
 Configuration
-*************
+~~~~~~~~~~~~~
 
 To configure outstanding accounts, go to :menuselection:`Accounting --> Configuration --> Journals`
 and select or create a bank or cash journal. In the :guilabel:`Incoming Payments` and
@@ -142,7 +137,7 @@ entries.
 .. _accounting/journals/bank:
 
 Bank
-~~~~
+----
 
 Bank journals are used to record journal entries related to :doc:`bank transactions
 <../bank/transactions>` and incoming and outgoing :doc:`payments <../payments>`. The following
@@ -170,7 +165,7 @@ outgoing payment files, such as :doc:`SEPA <../payments/pay_sepa>` or :ref:`NACH
 .. _accounting/journals/cash:
 
 Cash
-~~~~
+----
 
 Cash journals are used to record journal entries related to cash :doc:`transactions
 <../bank/transactions>`. The following fields are specific to cash journals:
@@ -187,7 +182,7 @@ Only manual payment methods are available for cash journals.
 .. _accounting/journals/credit:
 
 Credit card
-~~~~~~~~~~~
+-----------
 
 Credit card journals are used to record journal entries related to credit cards. The following
 fields are specific to credit card journals:
@@ -202,12 +197,12 @@ Only manual payment methods are available for credit card journals.
 .. _accounting/journals/sales-purchase-misc:
 
 Sales, purchase, and miscellaneous journals
--------------------------------------------
+===========================================
 
 .. _accounting/journals/sales:
 
 Sales
-~~~~~
+-----
 
 Sales journals, also known as income journals, are used to record journal entries related to
 :doc:`customer invoices <../customer_invoices>`. The following fields are specific to customer
@@ -235,7 +230,7 @@ refer to that particular invoice when making a payment:
 .. _accounting/journals/purchase:
 
 Purchase
-~~~~~~~~
+--------
 
 Purchase journals are used to record journal entries related to :doc:`vendor bills
 <../vendor_bills>`. The following fields are specific to purchase journals:
@@ -255,7 +250,7 @@ Purchase journals are used to record journal entries related to :doc:`vendor bil
 .. _accounting/journals/misc:
 
 Miscellaneous
-~~~~~~~~~~~~~
+-------------
 
 Miscellaneous journals are used to record journal entries that are not related to any of the other
 journal types such as tax closing journal entries.
