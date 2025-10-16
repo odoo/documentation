@@ -2,12 +2,12 @@
 Scoring surveys
 ===============
 
-To measure a survey participant's performance, knowledge, or overall satisfaction, Odoo ascribes
+To measure a survey participant's performance, knowledge, or overall satisfaction, Odoo assigns
 points to survey answers. At the end of the survey, these points are summed up, resulting in the
 participant's final score.
 
 To add points to questions, open the :guilabel:`Surveys` application, choose the desired survey
-form, and then click on the :guilabel:`Options` tab. Under the :guilabel;`Scoring` section, choose
+form, and then click on the :guilabel:`Options` tab. Under the :guilabel:`Scoring` section, choose
 between :guilabel:`Scoring with answers at the end` or :guilabel:`Scoring without answers at the
 end`.
 
@@ -33,11 +33,11 @@ When enabling the :guilabel:`Is a certification` option, choose a :guilabel:`Cer
 template`. The certification will automatically be emailed using this email template to users who
 pass the survey with a final score that is greater than or equal to the set :guilabel:`Success %`.
 
-In the :guilabel:`Candidates` section, participants can be required to log in to take the survey.
-If the :guilabel:`Login Required` setting is enabled, two new options appear: the
-:guilabel:`Attempts Limit` checkbox, which limits the number of times a participant can attempt
-the survey, and the option to :guilabel:`Give Badge`, located beneath the :guilabel:`Certification`
-options in the :guilabel:`Scoring` section.
+In the :guilabel:`Candidates` section, participants can be required to log in to take the survey. If
+the :guilabel:`Login Required` setting is enabled, two new options appear: the :guilabel:`Attempts
+Limit` checkbox, which limits the number of times a participant can attempt the survey, and the
+option to :guilabel:`Give Badge`, located beneath the :guilabel:`Certification` options in the
+:guilabel:`Scoring` section.
 
 .. image:: scoring/required-score-login.png
    :align: center
