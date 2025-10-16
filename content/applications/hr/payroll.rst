@@ -396,7 +396,7 @@ form.
    - :doc:`payroll/payslips`
    - :doc:`payroll/batches`
    - :doc:`payroll/commissions`
-   - :doc:`payroll/reporting`
+   - :doc:`payroll/payroll_analysis`
    - :doc:`payroll/headcount`
    - :doc:`payroll/work_entry_analysis`
    - :doc:`payroll/payroll_localizations`
@@ -412,7 +412,7 @@ form.
    payroll/payslips
    payroll/batches
    payroll/commissions
-   payroll/reporting
+   payroll/payroll_analysis
    payroll/headcount
    payroll/work_entry_analysis
    payroll/payroll_localizations
