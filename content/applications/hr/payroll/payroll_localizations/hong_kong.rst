@@ -271,7 +271,7 @@ There are two checkboxes to be considered when setting up the work entry type:
    :alt: Hong Kong Work Entry Type.
 
 .. seealso::
-   :ref:`Creating and configuring work entry types <payroll/work-entries>`
+   :ref:`Creating and configuring work entry types <payroll/work-entry-types>`
 
 Understanding 713 Ordinance
 ===========================
