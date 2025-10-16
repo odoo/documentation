@@ -475,8 +475,8 @@ Enter the following information on that new line:
 - :guilabel:`Working Hours`: If the holiday should only apply to employees who have a specific set
   of working hours, select the working hours from the drop-down menu. If left blank, the holiday
   applies to all employees.
-- :guilabel:`Work Entry Type`: If using the **Payroll** app, this field defines how the :ref:`work
-  entries <payroll/work-entries>` for the holiday appear. Select the work entry type from the
+- :guilabel:`Work Entry Type`: If using the **Payroll** app, this field defines how the :doc:`work
+  entries <payroll/work_entries>` for the holiday appear. Select the work entry type from the
   drop-down menu.
 
 .. image:: time_off/holidays.png
