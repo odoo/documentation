@@ -38,7 +38,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-29 07:37+0000\n"
+"POT-Creation-Date: 2025-10-16 14:19+0000\n"
 "PO-Revision-Date: 2023-11-08 08:57+0000\n"
 "Last-Translator: Wil Odoo, 2025\n"
 "Language-Team: Finnish (https://app.transifex.com/odoo/teams/41243/fi/)\n"
@@ -727,7 +727,8 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/austria.rst:45
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:8
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:251
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:530
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:442
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:600
 #: ../../content/applications/finance/fiscal_localizations/brazil.rst:39
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:22
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:768
@@ -13363,6 +13364,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/accounting/taxes/avatax.rst:108
+#: ../../content/applications/finance/payment_providers/razorpay.rst:68
 msgid "Odoo configuration"
 msgstr ""
 
@@ -23121,6 +23123,7 @@ msgid "Configuration of a SODA journal."
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/belgium.rst:347
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:491
 msgid "Synchronization"
 msgstr "Synkronointi"
 
@@ -23265,14 +23268,114 @@ msgid ""
 "then click on :guilabel:`Revoke`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:431
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:433
+msgid "Codaclean"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:435
+msgid ""
+"**Codaclean** is a service that allows Belgian companies and accounting "
+"firms to access bank information and statements. Odoo provides a way to "
+"import such statements and their transactions automatically."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:445
+msgid ""
+"Make sure to :ref:`install <general/install>` the :guilabel:`Codaclean` "
+"(`l10n_be_codaclean`) module."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:452
+msgid "Connection with Odoo"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:454
+msgid "To connect Odoo with Codaclean, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:456
+msgid ""
+"Open the Settings app, navigate to the :ref:`Companies <general/companies/"
+"company>` section, and click :icon:`oi-arrow-right` :guilabel:`Manage "
+"Companies` to make sure the company's :guilabel:`Country` is set "
+"to :guilabel:`Belgium`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:459
+msgid ""
+"Go to :menuselection:`Accounting --> Configuration --> Settings` and scroll "
+"to the :guilabel:`Codaclean` section."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:461
+msgid ""
+"Click :guilabel:`Manage Connection` to open the connection wizard, enter the "
+"Codaclean :guilabel:`Username` and :guilabel:`Password` and "
+"click :guilabel:`Connect`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:464
+msgid "The :guilabel:`Status` is updated to :guilabel:`Connected`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:467
+msgid ""
+"Once the connection is established, the :guilabel:`Manage Connection` wizard "
+"provides two options:"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:469
+msgid ""
+"Update Codaclean credentials: Enter the new :guilabel:`Username` "
+"and :guilabel:`Password`, then click :guilabel:`Change Credentials`."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:471
+msgid ""
+"Remove Codaclean connection: Click :guilabel:`Disconnect`; "
+"no :guilabel:`Username` or :guilabel:`Password` is required."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:477
+msgid "Journal creation"
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:479
+msgid ""
+"A specific bank journal must be created for Codaclean synchronization. To do "
+"so, :doc:`create a new bank journal <../accounting/bank>`, make sure to "
+"enter the correct IBAN in the :guilabel:`Bank Account Number` field, and "
+"select :guilabel:`Codaclean Syncronization` in the :guilabel:`Bank Feeds` "
+"field."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:485
+msgid ""
+"For bank transactions in different currencies, it is recommended to create a "
+"separate journal for each currency, using the same bank account."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:493
+msgid ""
+"Once the connection is established, Odoo is synchronized with Codaclean, and "
+"new CODA files received via Codaclean are checked every twelve hours."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:497
+msgid ""
+"To manually check for new CODA files, go to the Accounting Dashboard and "
+"click :guilabel:`Fetch from Codaclean` on the relevant :ref:`journal "
+"<belgium/codaclean-configuration-journal>` ."
+msgstr ""
+
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:501
 #: ../../content/applications/finance/fiscal_localizations/malaysia.rst:153
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:259
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:308
 msgid "Electronic invoicing"
 msgstr "Sähköinen laskutus"
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:433
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:503
 msgid ""
 "Odoo supports the **Peppol BIS Billing 3.0 (UBL)** electronic invoicing "
 "format. To enable it for a customer, go to :menuselection:`Accounting --> "
@@ -23281,41 +23384,41 @@ msgid ""
 "3.0` format."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:438
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:508
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:202
 msgid ":doc:`../accounting/customer_invoices/electronic_invoicing`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:443
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:513
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:256
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:399
 msgid "Cash discount"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:445
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:515
 msgid ""
 "In Belgium, if an early payment discount is offered on an invoice, the tax "
 "is calculated based on the discounted total amount, whether the customer "
 "benefits from the discount or not."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:448
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:518
 msgid ""
 "To apply the right tax amount and report it correctly in your VAT return, "
 "set the tax reduction as :guilabel:`Always (upon invoice)`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:452
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:522
 #: ../../content/applications/finance/fiscal_localizations/canada.rst:262
 #: ../../content/applications/finance/fiscal_localizations/united_states.rst:405
 msgid ":doc:`../accounting/customer_invoices/cash_discounts`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:457
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:527
 msgid "Fiscal certification: POS restaurant"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:459
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:529
 msgid ""
 "In Belgium, the owner of a cooking business such as a restaurant or food "
 "truck is required by law to use a government-certified **Cash Register "
@@ -23323,7 +23426,7 @@ msgid ""
 "(excluding VAT, drinks, and take-away food) exceed 25,000 euros."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:463
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:533
 msgid ""
 "This government-certified system entails the use of a :ref:`certified POS "
 "system <belgium/certified-pos>`, along with a device called a :ref:`Fiscal "
@@ -23331,80 +23434,80 @@ msgid ""
 "<belgium/vat>`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:468
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:538
 msgid ""
 "Do not forget to register as *foodservice industry manager* on the `Federal "
 "Public Service Finance registration form <https://"
 "www.systemedecaisseenregistreuse.be/fr/enregistrement>`_."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:474
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:544
 msgid "Certified POS system"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:476
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:546
 msgid ""
 "The Odoo POS system is certified for databases hosted on **Odoo Online**, "
 "**Odoo.sh**, and **On-Premise**."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:480
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:550
 msgid ":doc:`/administration/supported_versions`"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:482
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:552
 msgid ""
 "A `certified POS system <https://www.systemedecaisseenregistreuse.be/"
 "systemes-certifies>`_ must adhere to rigorous government regulations, which "
 "means it operates differently from a non-certified POS."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:486
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:556
 msgid "On a certified POS, you cannot:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:488
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:558
 msgid ""
 "Set up and use the **global discounts** feature (the `pos_discount` module "
 "is blacklisted and cannot be activated)."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:490
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:560
 msgid ""
 "Set up and use the **loyalty programs** feature (the `pos_loyalty` module is "
 "blacklisted and cannot be activated)."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:492
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:562
 msgid ""
 "Reprint receipts (the `pos_reprint` module is blacklisted and cannot be "
 "activated)."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:493
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:563
 msgid "Modify prices in order lines."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:494
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:564
 msgid "Modify or delete order lines in POS orders."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:495
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:565
 msgid "Sell products without a valid VAT number."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:496
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:566
 msgid "Use a POS that is not connected to an IoT box."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:498
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:568
 msgid ""
 "The :doc:`cash rounding <../../sales/point_of_sale/pricing/cash_rounding>` "
 "feature must be activated and set to a :guilabel:`Rounding Precision` of "
 "`0,05` and a :guilabel:`Rounding Method` set as :guilabel:`Half-Up`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:501
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:571
 msgid ""
 "Taxes must be set as included in the price. To set it up, go "
 "to :menuselection:`Point of Sale --> Configuration --> Settings`, and from "
@@ -23413,7 +23516,7 @@ msgid ""
 "click :guilabel:`Advanced Options` and enable :guilabel:`Included in Price`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:505
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:575
 msgid ""
 "At the start of a POS session, users must click :guilabel:`Work in` to clock "
 "in. Doing so allows the registration of POS orders. If users are not clocked "
@@ -23421,17 +23524,17 @@ msgid ""
 "Out` to clock out at the end of the session."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:510
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:580
 msgid ""
 "If you configure a POS to work with a :abbr:`FDM (Fiscal Data Module)`, you "
 "cannot use it again without it."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:516
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:586
 msgid "Fiscal Data Module (FDM)"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:518
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:588
 msgid ""
 "An FDM, or **black box**, is a government-certified device that works "
 "together with the Point of Sale application and saves your POS orders "
@@ -23440,7 +23543,7 @@ msgid ""
 "verify that all revenue is declared."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:524
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:594
 msgid ""
 "Only the FDM from **Boîtenoire.be** with the `FDM certificate number BMC04 "
 "<https://www.systemedecaisseenregistreuse.be/fr/systemes-"
@@ -23448,37 +23551,37 @@ msgid ""
 "(GCV BMC) <https://www.boîtenoire.be/contact>`_ to order one."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:532
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:602
 msgid ""
 "Before setting up your database to work with an FDM, ensure you have the "
 "following hardware:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:534
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:604
 msgid "a **Boîtenoire.be** (certificate number BMC04) FDM;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:535
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:605
 msgid "an RS-232 serial null modem cable per FDM;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:536
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:606
 msgid "an RS-232 serial-to-USB adapter per FDM;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:537
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:607
 msgid "an :ref:`IoT Box <belgium/iotbox>` (one IoT box per FDM); and"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:538
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:608
 msgid "a receipt printer."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:543
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:613
 msgid "Black box module"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:545
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:615
 msgid ""
 "As a pre-requisite, :ref:`activate <general/install>` the `Belgian "
 "Registered Cash Register` module (technical name: `pos_blackbox_be`)."
@@ -23488,7 +23591,7 @@ msgstr ""
 msgid "black box modules for belgian fiscal certification"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:551
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:621
 msgid ""
 "Once the module is activated, add your VAT number to your company "
 "information. To set it up, go to :menuselection:`Settings --> Companies --> "
@@ -23503,25 +23606,25 @@ msgstr ""
 msgid "ISNZ or BIS number field on employee form"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:561
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:631
 msgid ""
 "To input your information, click on your avatar, go to :menuselection:`My "
 "Profile --> Preference tab`, and enter your INSZ or BIS number in the "
 "designated field."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:565
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:635
 msgid ""
 "You must configure the :abbr:`FDM (Fiscal Data Module)` directly in the "
 "production database. Utilizing it in a testing environment may result in "
 "incorrect data being stored within the FDM."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:571
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:641
 msgid "IoT Box"
 msgstr "IoT Box"
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:573
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:643
 msgid ""
 "In order to use an :abbr:`FDM (Fiscal Data Module)`, you need a registered "
 "IoT Box. To register your IoT box, you must contact us through our `support "
@@ -23529,19 +23632,19 @@ msgid ""
 "information:"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:577
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:647
 msgid "your VAT number;"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:578
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:648
 msgid "your company's name, address, and legal structure; and"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:579
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:649
 msgid "the Mac address of your IoT Box."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:581
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:651
 msgid ""
 "Once your IoT box is certified, :doc:`connect <../../general/iot/connect>` "
 "it to your database. To verify that the IoT Box recognizes the FDM, go to "
@@ -23553,7 +23656,7 @@ msgstr ""
 msgid "Hardware status page on a registered IoT Box"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:588
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:658
 msgid ""
 "Then, add the IoT to your POS. To do so, go to :menuselection:`Point of Sale "
 "--> Configuration --> Point of Sale`, select your POS, scroll down to "
@@ -23561,17 +23664,17 @@ msgid ""
 "Lastly, add the FMD in the :guilabel:`Fiscal Data Module` field."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:593
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:663
 msgid ""
 "To be able to use an FDM, you must at least connect one :guilabel:`Receipt "
 "Printer`."
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:598
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:668
 msgid "VAT signing card"
 msgstr ""
 
-#: ../../content/applications/finance/fiscal_localizations/belgium.rst:600
+#: ../../content/applications/finance/fiscal_localizations/belgium.rst:670
 msgid ""
 "When you open a POS session and make your initial transaction, you are "
 "prompted to enter the PIN provided with your :abbr:`VSC (VAT signing card)`. "
@@ -29829,7 +29932,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:612
-#: ../../content/applications/finance/payment_providers.rst:225
+#: ../../content/applications/finance/payment_providers.rst:226
 msgid "Payment methods"
 msgstr "Maksutavat"
 
@@ -30266,7 +30369,6 @@ msgstr ""
 #: ../../content/applications/finance/payment_providers/buckaroo.rst:27
 #: ../../content/applications/finance/payment_providers/flutterwave.rst:29
 #: ../../content/applications/finance/payment_providers/mercado_pago.rst:30
-#: ../../content/applications/finance/payment_providers/razorpay.rst:37
 #: ../../content/applications/finance/payment_providers/xendit.rst:39
 msgid "Configuration on Odoo"
 msgstr ""
@@ -47329,26 +47431,28 @@ msgstr ""
 msgid "Test mode"
 msgstr "Testitila"
 
-#: ../../content/applications/finance/payment_providers.rst:210
+#: ../../content/applications/finance/payment_providers.rst:211
 msgid ""
-"If you wish to try the payment provider as a test, set the :guilabel:`State` "
-"field in the payment provider form to :guilabel:`Test mode`, then enter your "
-"provider's test/sandbox credentials in the :guilabel:`Credentials` tab."
+"We recommend using the test mode on a **duplicate** or a **test** database "
+"to avoid potential issues with invoice numbering."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:215
+#: ../../content/applications/finance/payment_providers.rst:214
+msgid ""
+"To try a payment provider without affecting live transactions, set "
+"the :guilabel:`State` field in the payment provider form to :guilabel:`Test "
+"mode`. Then, enter the **provider's dedicated test or sandbox credentials** "
+"in the :guilabel:`Credentials` tab. Each payment provider has its own "
+"separate test account or environment for this purpose."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers.rst:220
 msgid ""
 "By default, the payment provider remains **unpublished** in test mode so "
 "that it's not visible to visitors."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:219
-msgid ""
-"We recommend using the test mode on a duplicate or a test database to avoid "
-"potential issues with your invoice numbering."
-msgstr ""
-
-#: ../../content/applications/finance/payment_providers.rst:227
+#: ../../content/applications/finance/payment_providers.rst:228
 msgid ""
 "Each payment provider is related to a list of supported payment methods; the "
 "methods listed in the :guilabel:`Payment methods` field in "
@@ -47358,7 +47462,7 @@ msgid ""
 "button of the related method."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:233
+#: ../../content/applications/finance/payment_providers.rst:234
 msgid ""
 "Payment methods are displayed on your website based on their sequence order. "
 "To reorder them, click :guilabel:`Enable Payment Methods` in the payment "
@@ -47366,11 +47470,11 @@ msgid ""
 "the payment methods in the desired order."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:238
+#: ../../content/applications/finance/payment_providers.rst:239
 msgid "Icons and brands"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:240
+#: ../../content/applications/finance/payment_providers.rst:241
 msgid ""
 "The icons displayed next to the payment method on your website are either "
 "the icons of the brands activated for the payment method or, if there aren't "
@@ -47381,14 +47485,14 @@ msgid ""
 "on the payment method."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:246
+#: ../../content/applications/finance/payment_providers.rst:247
 msgid ""
 "To modify a payment method's icon, hover your mouse over the image in the "
 "upper-right corner of the payment method's form and click the pencil icon "
 "(:guilabel:`✎`)."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:249
+#: ../../content/applications/finance/payment_providers.rst:250
 msgid ""
 "Select the :guilabel:`Brands` tab to view the brands that have been "
 "activated for the payment method. The brands and their related icons are "
@@ -47398,11 +47502,11 @@ msgid ""
 "right corner and click the pencil icon (:guilabel:`✎`)."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:256
+#: ../../content/applications/finance/payment_providers.rst:257
 msgid "Advanced configuration"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:258
+#: ../../content/applications/finance/payment_providers.rst:259
 msgid ""
 "To configure payment methods further, go to :menuselection:`Accounting --> "
 "Configuration --> Payment Methods`, :menuselection:`Website --> "
@@ -47412,7 +47516,7 @@ msgid ""
 "the :guilabel:`Configuration` tab to adapt the features."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:265
+#: ../../content/applications/finance/payment_providers.rst:266
 msgid ""
 "Each payment method is preconfigured in a way that aligns with the payment "
 "providers' behavior and their integration with Odoo. Any change to this "
@@ -47420,7 +47524,7 @@ msgid ""
 "test database first."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:268
+#: ../../content/applications/finance/payment_providers.rst:269
 msgid ""
 "Modifications to the payment method's configuration only work to the extent "
 "of the method's and provider's capabilities. For example, "
@@ -47430,11 +47534,11 @@ msgid ""
 "does not support it will not produce the intended results."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:277
+#: ../../content/applications/finance/payment_providers.rst:278
 msgid "Tokenization"
 msgstr "Pääsytunnisteiden muodostaminen"
 
-#: ../../content/applications/finance/payment_providers.rst:279
+#: ../../content/applications/finance/payment_providers.rst:280
 msgid ""
 ":ref:`If the payment provider supports this feature <payment_providers/"
 "online_providers>`, customers can save their payment method details for "
@@ -47443,7 +47547,7 @@ msgid ""
 "Methods`."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:284
+#: ../../content/applications/finance/payment_providers.rst:285
 msgid ""
 "In this case, a **payment token** is created in Odoo to be used as a payment "
 "method for subsequent payments without the customer having to enter their "
@@ -47451,18 +47555,18 @@ msgid ""
 "conversion rate and subscriptions that use recurring payments."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:289
+#: ../../content/applications/finance/payment_providers.rst:290
 msgid ""
 "To add or delete their saved payment method details, customers can "
 "click :guilabel:`Manage payment methods` in the :ref:`customer portal <users-"
 "portal-payment-methods>`."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:292
+#: ../../content/applications/finance/payment_providers.rst:293
 msgid "PCI DSS and Attestation of Compliance"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:294
+#: ../../content/applications/finance/payment_providers.rst:295
 msgid ""
 "Odoo is not `PCI <https://www.pcisecuritystandards.org>`_ DSS-certified "
 "because it does not store cardholder data or process payments. Instead, it "
@@ -47475,11 +47579,11 @@ msgid ""
 "Questionnaire)`."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:305
+#: ../../content/applications/finance/payment_providers.rst:306
 msgid "Manual capture"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:307
+#: ../../content/applications/finance/payment_providers.rst:308
 msgid ""
 ":ref:`If the payment provider supports this feature <payment_providers/"
 "online_providers>`, you can authorize and capture payments in two steps "
@@ -47488,7 +47592,7 @@ msgid ""
 "Manually`."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:312
+#: ../../content/applications/finance/payment_providers.rst:313
 msgid ""
 "When you authorize a payment, the funds are reserved on the customer's "
 "payment method but not immediately charged. They are charged when you "
@@ -47497,38 +47601,38 @@ msgid ""
 "helpful in many situations:"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:317
+#: ../../content/applications/finance/payment_providers.rst:318
 msgid ""
 "Receive the payment confirmation and wait until the order is shipped to "
 "capture the payment."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:318
+#: ../../content/applications/finance/payment_providers.rst:319
 msgid ""
 "Review and verify that orders are legitimate before the payment is completed "
 "and the fulfillment process starts."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:320
+#: ../../content/applications/finance/payment_providers.rst:321
 msgid ""
 "Avoid potentially high refund fees for refunded payments: payment providers "
 "will not charge you for voiding an authorization."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:322
+#: ../../content/applications/finance/payment_providers.rst:323
 msgid ""
 "Hold a security deposit to return later, minus any deductions (e.g., in case "
 "of damages)."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:324
+#: ../../content/applications/finance/payment_providers.rst:325
 msgid ""
 "To capture the payment after it was authorized, go to the related sales "
 "order or invoice and click the :guilabel:`Capture Transaction` button. To "
 "release the funds, click the :guilabel:`Void Transaction` button."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:329
+#: ../../content/applications/finance/payment_providers.rst:330
 msgid ""
 "Some payment providers support capturing only part of the authorized amount. "
 "The remaining amount can then be either captured or voided. These providers "
@@ -47537,31 +47641,31 @@ msgid ""
 "capturing or voiding the total amount have the value **Full only**."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:333
+#: ../../content/applications/finance/payment_providers.rst:334
 msgid ""
 "The funds are likely not reserved forever. After a certain time, they may be "
 "automatically released back to the customer's payment method. Refer to your "
 "payment provider's documentation for the exact reservation duration."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:336
+#: ../../content/applications/finance/payment_providers.rst:337
 msgid ""
-"Odoo does not support this feature for all payment providers, but some allow "
-"the manual capture from their website interface."
+":doc:`payment_providers/adyen` and :doc:`payment_providers/stripe` allow to "
+"capture payments manually directly from their website interface."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:342
+#: ../../content/applications/finance/payment_providers.rst:343
 msgid "Refunds"
 msgstr "Hyvitykset"
 
-#: ../../content/applications/finance/payment_providers.rst:344
+#: ../../content/applications/finance/payment_providers.rst:345
 msgid ""
 "If your payment provider supports this feature, you can refund payments "
 "directly from Odoo. It does not need to be enabled first. To refund a "
 "customer payment, navigate to it and click the :guilabel:`Refund` button."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:349
+#: ../../content/applications/finance/payment_providers.rst:350
 msgid ""
 "Some payment providers support refunding only part of the amount. The "
 "remaining amount can then optionally be refunded, too. These providers have "
@@ -47570,17 +47674,17 @@ msgid ""
 "amount have the value **Full only**."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:353
+#: ../../content/applications/finance/payment_providers.rst:354
 msgid ""
-"Odoo does not support this feature for all payment providers, but some allow "
-"to refund payments from their website interface."
+":doc:`payment_providers/adyen` and :doc:`payment_providers/stripe` allow to "
+"refund payments directly from their website interface."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:359
+#: ../../content/applications/finance/payment_providers.rst:360
 msgid "Express checkout"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:361
+#: ../../content/applications/finance/payment_providers.rst:362
 msgid ""
 ":ref:`If the payment provider supports this feature <payment_providers/"
 "online_providers>`, you can allow customers to use the :guilabel:`Google "
@@ -47590,22 +47694,22 @@ msgid ""
 "just have to validate the payment on Google's or Apple's payment form."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:367
+#: ../../content/applications/finance/payment_providers.rst:368
 msgid ""
 "To enable this feature, go to the :guilabel:`Configuration` tab of the "
 "selected payment provider and enable :guilabel:`Allow Express Checkout`."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:371
+#: ../../content/applications/finance/payment_providers.rst:372
 msgid ""
 "All prices shown on the express checkout payment form always include taxes."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:374
+#: ../../content/applications/finance/payment_providers.rst:375
 msgid "Availability"
 msgstr "Saatavuus"
 
-#: ../../content/applications/finance/payment_providers.rst:376
+#: ../../content/applications/finance/payment_providers.rst:377
 msgid ""
 "You can adapt the payment provider's availability by specifying "
 "the :guilabel:`Maximum amount` allowed and modifying "
@@ -47613,11 +47717,11 @@ msgid ""
 "the :guilabel:`Configuration` tab."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:383
+#: ../../content/applications/finance/payment_providers.rst:384
 msgid "Currencies and countries"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:385
+#: ../../content/applications/finance/payment_providers.rst:386
 msgid ""
 "All payment providers have a different list of available currencies and "
 "countries. They serve as a first filter during payment operations, i.e., the "
@@ -47628,14 +47732,14 @@ msgid ""
 "supported currencies or countries is possible."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:393
+#: ../../content/applications/finance/payment_providers.rst:394
 msgid ""
 ":ref:`Payment methods <payment_providers/payment_methods>` also have their "
 "own list of available currencies and countries that serves as another filter "
 "during payment operations."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:395
+#: ../../content/applications/finance/payment_providers.rst:396
 msgid ""
 "If the list of supported currencies or countries is empty, it means the list "
 "is too long to be displayed, or Odoo does not have information on that "
@@ -47644,18 +47748,18 @@ msgid ""
 "currency not be supported."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:401
+#: ../../content/applications/finance/payment_providers.rst:402
 msgid "Maximum amount"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:403
+#: ../../content/applications/finance/payment_providers.rst:404
 msgid ""
 "You can restrict the :guilabel:`Maximum Amount` that can be paid with the "
 "selected provider. Leave the field to `0.00` to make the payment provider "
 "available regardless of the payment amount."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:407
+#: ../../content/applications/finance/payment_providers.rst:408
 msgid ""
 "This feature is not intended to work on pages that allow the customer to "
 "update the payment amount, e.g., the **Donation** snippet and the "
@@ -47663,11 +47767,11 @@ msgid ""
 "shipping>` are enabled."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:414
+#: ../../content/applications/finance/payment_providers.rst:415
 msgid "Payment journal"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:416
+#: ../../content/applications/finance/payment_providers.rst:417
 msgid ""
 "A :doc:`payment journal <accounting/bank>` must be defined for the payment "
 "provider to record the payments on an **outstanding account**. By default, "
@@ -47676,25 +47780,25 @@ msgid ""
 "selected payment provider and select another :guilabel:`Payment journal`."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:422
+#: ../../content/applications/finance/payment_providers.rst:423
 msgid "The payment journal must be a :guilabel:`Bank` journal."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:423
+#: ../../content/applications/finance/payment_providers.rst:424
 msgid "The same journal can be used for several payment providers."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:424
+#: ../../content/applications/finance/payment_providers.rst:425
 msgid ""
 "Payment journals must only be configured if the :doc:`Invoicing or "
 "Accounting app <accounting>` is installed."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:428
+#: ../../content/applications/finance/payment_providers.rst:429
 msgid "Accounting perspective"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:430
+#: ../../content/applications/finance/payment_providers.rst:431
 msgid ""
 "From an accounting perspective, there are two types of online payment "
 "workflows: the payments that are directly deposited into your bank account "
@@ -47706,7 +47810,7 @@ msgid ""
 "accountant for advice."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:437
+#: ../../content/applications/finance/payment_providers.rst:438
 msgid ""
 "By default, the :guilabel:`Bank Account` defined for the :ref:`payment "
 "journal <payment_providers/journal>` is used, but you can also specify "
@@ -47718,71 +47822,71 @@ msgstr ""
 msgid "Define an outstanding account for a payment provider."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:446
+#: ../../content/applications/finance/payment_providers.rst:447
 msgid ":doc:`payment_providers/wire_transfer`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:447
+#: ../../content/applications/finance/payment_providers.rst:448
 msgid ":doc:`payment_providers/sdd`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:448
+#: ../../content/applications/finance/payment_providers.rst:449
 msgid ":doc:`payment_providers/adyen`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:449
+#: ../../content/applications/finance/payment_providers.rst:450
 msgid ":doc:`payment_providers/alipay`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:450
+#: ../../content/applications/finance/payment_providers.rst:451
 msgid ":doc:`payment_providers/authorize`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:451
+#: ../../content/applications/finance/payment_providers.rst:452
 msgid ":doc:`payment_providers/asiapay`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:452
+#: ../../content/applications/finance/payment_providers.rst:453
 msgid ":doc:`payment_providers/buckaroo`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:453
+#: ../../content/applications/finance/payment_providers.rst:454
 msgid ":doc:`payment_providers/demo`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:454
+#: ../../content/applications/finance/payment_providers.rst:455
 msgid ":doc:`payment_providers/mercado_pago`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:455
+#: ../../content/applications/finance/payment_providers.rst:456
 msgid ":doc:`payment_providers/mollie`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:456
+#: ../../content/applications/finance/payment_providers.rst:457
 msgid ":doc:`payment_providers/ogone`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:457
+#: ../../content/applications/finance/payment_providers.rst:458
 msgid ":doc:`payment_providers/paypal`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:458
+#: ../../content/applications/finance/payment_providers.rst:459
 msgid ":doc:`payment_providers/razorpay`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:459
+#: ../../content/applications/finance/payment_providers.rst:460
 msgid ":doc:`payment_providers/sips`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:460
+#: ../../content/applications/finance/payment_providers.rst:461
 msgid ":doc:`payment_providers/stripe`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:461
+#: ../../content/applications/finance/payment_providers.rst:462
 msgid ":doc:`payment_providers/xendit`"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers.rst:462
+#: ../../content/applications/finance/payment_providers.rst:463
 msgid ":doc:`accounting/bank`"
 msgstr ""
 
@@ -47818,7 +47922,7 @@ msgstr ""
 #: ../../content/applications/finance/payment_providers/mercado_pago.rst:39
 #: ../../content/applications/finance/payment_providers/mollie.rst:31
 #: ../../content/applications/finance/payment_providers/paypal.rst:121
-#: ../../content/applications/finance/payment_providers/razorpay.rst:54
+#: ../../content/applications/finance/payment_providers/razorpay.rst:86
 #: ../../content/applications/finance/payment_providers/sdd.rst:58
 #: ../../content/applications/finance/payment_providers/sips.rst:32
 #: ../../content/applications/finance/payment_providers/stripe.rst:118
@@ -48250,7 +48354,6 @@ msgstr ""
 #: ../../content/applications/finance/payment_providers/asiapay.rst:47
 #: ../../content/applications/finance/payment_providers/flutterwave.rst:36
 #: ../../content/applications/finance/payment_providers/mercado_pago.rst:36
-#: ../../content/applications/finance/payment_providers/razorpay.rst:44
 #: ../../content/applications/finance/payment_providers/xendit.rst:45
 msgid "Configure the rest of the options to your liking."
 msgstr ""
@@ -49360,83 +49463,170 @@ msgstr "Razorpay"
 #: ../../content/applications/finance/payment_providers/razorpay.rst:5
 msgid ""
 "`Razorpay <https://razorpay.com/>`_ is an online payments provider "
-"established in India and covering more than 100 payment methods."
+"established in India that supports more than 100 payment methods."
 msgstr ""
 
 #: ../../content/applications/finance/payment_providers/razorpay.rst:11
-msgid "Configuration on Razorpay Dashboard"
+msgid "Create a Razorpay account with Odoo (Indian companies only)"
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers/razorpay.rst:13
+#: ../../content/applications/finance/payment_providers/razorpay.rst:14
+msgid "This method is only available for Indian companies."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/razorpay.rst:15
 msgid ""
-"Log into `Razorpay Dashboard <https://dashboard.razorpay.com/>`_ and go "
-"to :menuselection:`Settings --> API Keys`. Generate the new keys and copy "
-"the values of the :guilabel:`Key Id` and :guilabel:`Secret Key` fields and "
-"save them for later."
+"This flow does not support the :ref:`test mode <payment_providers/test-"
+"mode>`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/razorpay.rst:17
+msgid ""
+":ref:`Navigate to the Razorpay payment provider <payment_providers/"
+"supported_providers>` and click :guilabel:`Connect`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/razorpay.rst:19
+msgid ""
+"Go through the account creation process and enter the verification codes "
+"when prompted."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/razorpay.rst:22
+msgid ""
+"If you already have a Razorpay account, enter your Razorpay credentials, "
+"select the account you want to link to your Odoo database (if applicable), "
+"then click :guilabel:`Continue`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/razorpay.rst:25
+msgid ""
+"At the end of the process, click :guilabel:`Authorize`. If all required "
+"information has been submitted, you are then redirected to Odoo, and the "
+"payment provider is :guilabel:`Enabled`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/razorpay.rst:32
+msgid "Manual credentials and webhook input"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/razorpay.rst:37
+msgid "Razorpay configuration"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/razorpay.rst:39
+msgid ""
+"`Create a Razorpay account <https://accounts.razorpay.com/>`_ if necessary "
+"and log into the `Razorpay Dashboard <https://dashboard.razorpay.com/>`_."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/razorpay.rst:41
+msgid "Go to the :guilabel:`Payments` tab at the top of the page."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/razorpay.rst:42
+msgid ""
+"Toggle the :guilabel:`Test Mode` switch in the left menu to try the "
+"integration without charging customers. Toggle it off once you are ready to "
+"accept real payments."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/razorpay.rst:44
+msgid ""
+"Click :guilabel:`Account & Settings` in the left menu, then, "
+"under :guilabel:`Website and app settings`, select `API Keys <https://"
+"dashboard.razorpay.com/app/website-app-settings/api-keys>`_."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/razorpay.rst:46
+msgid ""
+"Copy the values of the :guilabel:`Key Id` and :guilabel:`Secret Key` fields "
+"and save them for later."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/razorpay.rst:48
+msgid ""
+"Click :guilabel:`Account & Settings` in the left menu, then, "
+"under :guilabel:`Website and app settings`, select `Webhooks <https://"
+"dashboard.razorpay.com/app/website-app-settings/webhooks>`_."
 msgstr ""
 
 #: ../../content/applications/finance/payment_providers/razorpay.rst:0
 msgid ""
-"Go to :menuselection:`Settings --> Webhooks`, click on :guilabel:`Create New "
-"Webhook`, and enter your Odoo database URL followed by `/payment/razorpay/"
-"webhook` in the :guilabel:`Webhook URL` text field."
+"Click :guilabel:`Add New Webhook`, then enter your Odoo database URL "
+"followed by `/payment/razorpay/webhook` in the :guilabel:`Webhook URL` field."
 msgstr ""
 
 #: ../../content/applications/finance/payment_providers/razorpay.rst:0
 msgid "For example: `https://example.odoo.com/payment/razorpay/webhook`."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers/razorpay.rst:20
+#: ../../content/applications/finance/payment_providers/razorpay.rst:53
 msgid ""
 "Fill the :guilabel:`Secret` field with a password of your choice and save it "
 "for later."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers/razorpay.rst:21
+#: ../../content/applications/finance/payment_providers/razorpay.rst:54
 msgid ""
-"Make sure "
-"the :guilabel:`payment.authorized`, :guilabel:`payment.captured`, :guilabel:`payment.failed`, :guilabel:`refund.failed` "
-"and :guilabel:`refund.processed` checkboxes are ticked."
+"Enable the following "
+"events: :guilabel:`payment.authorized`, :guilabel:`payment.captured`, :guilabel:`payment.failed`, :guilabel:`refund.failed`, "
+"and :guilabel:`refund.processed`."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers/razorpay.rst:24
-msgid "Click on :guilabel:`Create Webhook` to finalize the configuration."
+#: ../../content/applications/finance/payment_providers/razorpay.rst:56
+msgid "Click :guilabel:`Create Webhook` to finalize the configuration."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers/razorpay.rst:29
+#: ../../content/applications/finance/payment_providers/razorpay.rst:61
 msgid ""
-"The :guilabel:`Recurring payments` feature must be activated if you want to "
-"make recurring payments. Send a request to the `Razorpay Support team "
-"<https://razorpay.com/support/#request>`_ to enable recurring payments."
+"The `Recurring payments <https://razorpay.com/docs/payments/recurring-"
+"payments/>`_ feature must be activated to accept recurring payments. To "
+"enable this feature, submit a request to the `Razorpay Support team <https://"
+"razorpay.com/support/#request>`_."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers/razorpay.rst:39
+#: ../../content/applications/finance/payment_providers/razorpay.rst:70
+msgid "Activate :ref:`developer mode <developer-mode>`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/razorpay.rst:71
 msgid ""
-":ref:`Navigate to the payment provider Razorpay <payment_providers/add_new>` "
-"and change its state to :guilabel:`Enabled`."
+":ref:`Navigate to the Razorpay payment provider <payment_providers/add_new>`."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers/razorpay.rst:41
+#: ../../content/applications/finance/payment_providers/razorpay.rst:72
 msgid ""
 "In the :guilabel:`Credentials` tab, fill the :guilabel:`Key "
 "Id`, :guilabel:`Key Secret`, and :guilabel:`Webhook Secret` with the values "
-"you saved at the step :ref:`payment_providers/razorpay/configure_dashboard`."
+"you saved during :ref:`payment_providers/razorpay/configure_dashboard`."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers/razorpay.rst:47
-msgid "If you configure Odoo to capture amounts manually:"
+#: ../../content/applications/finance/payment_providers/razorpay.rst:75
+msgid "Configure the remaining options as needed."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers/razorpay.rst:49
+#: ../../content/applications/finance/payment_providers/razorpay.rst:76
 msgid ""
-"Be aware that the **manual voiding** of a transaction is not supported by "
-"Razorpay."
+"Set the :guilabel:`State` field to :guilabel:`Enabled` (or :guilabel:`Test "
+"Mode` if you are trying Razorpay as a :ref:`test <payment_providers/test-"
+"mode>`)."
 msgstr ""
 
-#: ../../content/applications/finance/payment_providers/razorpay.rst:50
+#: ../../content/applications/finance/payment_providers/razorpay.rst:80
 msgid ""
-"After **five days**, if the transaction hasn't been captured yet, it'll "
-"automatically be **voided**."
+"If you configure Odoo to :ref:`capture amounts manually <payment_providers/"
+"manual_capture>`:"
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/razorpay.rst:82
+msgid "**Manual voiding** of a transaction is not supported by Razorpay."
+msgstr ""
+
+#: ../../content/applications/finance/payment_providers/razorpay.rst:83
+msgid ""
+"Transactions that remain uncaptured for more than **five days** are "
+"automatically **voided**."
 msgstr ""
 
 #: ../../content/applications/finance/payment_providers/sdd.rst:3
