@@ -115,6 +115,8 @@ Default taxes
 In the :guilabel:`View` menu of an account, select a **default tax** to be applied when this
 account is chosen for a product sale or purchase.
 
+.. _chart-of-account/tags:
+
 Tags
 ----
 
