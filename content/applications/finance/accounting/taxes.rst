@@ -127,16 +127,19 @@ Tax computation
    | 1,000       | 1,000       | 111.11   | 1,111.11 |
    +-------------+-------------+----------+----------+
 
-- **Python code**
+- **Custom Formula**
 
-  A tax defined as **Python code** consists of two snippets of Python code that are executed in a
-  local environment containing data such as the unit price, product or partner.
-  :guilabel:`Python Code` defines the amount of the tax, and :guilabel:`Applicable Code` defines if
-  the tax is to be applied. The formula is found at the bottom of the :guilabel:`Definition` tab.
+  The tax amount is computed according to a Python expression defined in the :guilabel:`Formula`
+  field. This should be a Python expression which can use the following variables:
+
+  - `price_unit`: the unit price of the product
+  - `base`: the taxable basis on which the tax is applied, can differ from the
+    `price_unit`, for example if other taxes are applied first
+  - `quantity`: the quantity of the product
+  - `product`: the product record
 
 .. example::
-   :guilabel:`Python Code`: `result = price_unit * 0.10`
-   :guilabel:`Applicable Code`: `result = true`
+   :guilabel:`Formula`: `price_unit * 0.10`
 
 .. _taxes/active:
 
