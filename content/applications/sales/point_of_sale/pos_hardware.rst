@@ -65,7 +65,9 @@ To open the customer display, follow these steps:
    - :doc:`configuration/pos_iot`
    - :doc:`../../general/iot`
 
-For POS terminals running the Odoo Android app with dual-screen support,
+For POS terminals running the
+`Odoo <https://play.google.com/store/apps/details?id=com.odoo.mobile>`_ Android app with dual-screen
+support, follow these steps:
 
 #. :doc:`Activate the Point of Sale Mobile module <../../general/apps_modules>` to enable the
    customer display.
