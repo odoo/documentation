@@ -277,12 +277,12 @@ Lastly, add your shape to the list of shapes available on the Website Builder.
 
    <template id="snippet_options_background_options" inherit_id="website.snippet_options_background_options" name="Airproof - Shapes">
       <xpath expr="//*[hasclass('o_we_bg_shape_menu')]/header[hasclass('o_pager_nav')]//*[hasclass('o_pager_nav_btn')][last()]" position="after">
-         <button type="button" class="o_pager_nav_btn p-0 text-uppercase" data-scroll-to="x_wd_scroll_bgshapes_aiproof">
+         <button type="button" class="o_pager_nav_btn p-0 text-uppercase" data-scroll-to="x_scroll_bgshapes_airproof">
             <span class="w-100">Airproof</span>
          </button>
       </xpath>
       <xpath expr="//*[hasclass('o_we_bg_shape_menu')]/div[hasclass('o_pager_container')]" position="inside">
-         <div class="x_scroll_bgshapes_klingspor">
+         <div class="x_scroll_bgshapes_airproof">
             <we-title>Airproof</we-title>
             <we-select-page string="Airproof">
                <we-button data-shape="illustration/airproof/01" data-select-label="Airproof 01"/>
