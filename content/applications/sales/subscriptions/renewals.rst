@@ -92,37 +92,5 @@ also appears at the top of the sales order.
 When clicked, Odoo reveals an :guilabel:`MRR Analysis` page, detailing the monthly recurring revenue
 related to this specific subscription.
 
-.. important::
-   On rare occasions, automatic payment can fail, which results in a *Payment Failure* tag on the
-   top-right of the sales order, if there is an error in the payment method.
-
-   This is done to prevent the system from charging the customer again the next time a scheduled
-   action is run. Because the status of the payment is unknown, Odoo requests a manual operation to
-   check if the payment has been made, before the payment can be used again.
-
-   To do this, navigate to :menuselection:`Subscriptions app --> Subscriptions --> Quotations`.
-   Click into the desired subscription, then check the *Chatter* to see if the payment was made.
-
-   If the payment was **not** made, first enter :doc:`debug mode <../../general/developer_mode>`.
-   Then, click the :guilabel:`Other Info` tab, and untick the checkbox next to :guilabel:`Contract
-   in exception`. Reload the sales order, and the :guilabel:`Payment Failure` tag is gone.
-
-   If the payment **was** made, a new invoice must be made and posted manually. This automatically
-   updates the next invoice date of the subscription. Once created, enter :doc:`debug mode
-   <../../general/developer_mode>`, and navigate to the new sales order. Click the :guilabel:`Other
-   Info` tab, and untick the checkbox next to :guilabel:`Contract in exception`.
-   Reload the sales order, and the :guilabel:`Payment Failure` tag is gone.
-
-   .. figure:: renewals/contract-in-exception.png
-      :align: center
-      :alt: The "contract in exception" option selected with the "payment failure" tag shown.
-
-      The :guilabel:`contract in exception`` option selected with the :guilabel:`payment failure`
-      tag shown.
-
-   In both cases, once the :guilabel:`Contract in exception` option is no longer selected, Odoo
-   handles renewals automatically again. If the subscription remains in *payment failure*, it is
-   skipped by Odoo until the sales order is closed.
-
 .. seealso::
    - :doc:`../subscriptions`
