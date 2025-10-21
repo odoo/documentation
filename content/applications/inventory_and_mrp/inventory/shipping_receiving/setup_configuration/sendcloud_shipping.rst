@@ -6,10 +6,6 @@ Sendcloud is a shipping service aggregator that facilitates the integration of E
 carriers with Odoo. Once integrated, users can select shipping carriers on inventory operations in
 their Odoo database.
 
-.. seealso::
-   `Sendcloud integration documentation <https://support.sendcloud.com/hc/en-us/articles
-   /360059470491-Odoo-integration>`_
-
 Setup in Sendcloud
 ==================
 
