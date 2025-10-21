@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-30 10:33+0200\n"
+"POT-Creation-Date: 2025-10-20 14:56+0200\n"
 "PO-Revision-Date: 2025-10-03 15:45+0000\n"
 "Last-Translator: \"Tiffany Chang (tic)\" <tic@odoo.com>\n"
 "Language-Team: Ukrainian <https://translate.odoo.com/projects/odoo-19-doc/"
@@ -21,10 +21,10 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 "
-"? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > "
-"14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % "
-"100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 "X-Generator: Weblate 5.12.2\n"
 
 #: ../../content/applications/sales.rst:5
@@ -75,6 +75,7 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/configuration/epos_printers.rst:10
 #: ../../content/applications/sales/point_of_sale/employee_login.rst:17
 #: ../../content/applications/sales/point_of_sale/online_food_delivery.rst:35
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:13
 #: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:9
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:13
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:20
@@ -94,9 +95,8 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/pricing/loyalty.rst:9
 #: ../../content/applications/sales/point_of_sale/pricing/pricelists.rst:12
 #: ../../content/applications/sales/point_of_sale/receipts_invoices.rst:54
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:58
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:173
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:284
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:81
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:435
 #: ../../content/applications/sales/point_of_sale/self_order.rst:9
 #: ../../content/applications/sales/point_of_sale/shop/barcode.rst:10
 #: ../../content/applications/sales/point_of_sale/shop/ship_later.rst:10
@@ -3992,7 +3992,7 @@ msgstr ""
 
 #: ../../content/applications/sales/crm/performance/win_loss.rst:458
 #: ../../content/applications/sales/crm/performance/win_loss.rst:640
-#: ../../content/applications/sales/point_of_sale/self_order.rst:127
+#: ../../content/applications/sales/point_of_sale/self_order.rst:128
 msgid "Click :guilabel:`Add`."
 msgstr ""
 
@@ -8636,7 +8636,7 @@ msgid ":ref:`Close the current POS session <pos/session-close>`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/employee_login.rst:99
-#: ../../content/applications/sales/point_of_sale/self_order.rst:169
+#: ../../content/applications/sales/point_of_sale/self_order.rst:170
 msgid "Usage guidelines"
 msgstr ""
 
@@ -9313,6 +9313,225 @@ msgid ""
 "the :guilabel:`Payments` section."
 msgstr ""
 
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:3
+msgid "Customer account"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:5
+msgid ""
+"The **Customer account** feature allows customers to use their account to "
+"make purchases. They can deposit money for future purchases or select their "
+"account as a :doc:`payment method <../payment_methods>` to purchase items on "
+"credit and :ref:`settle the debt later <pos/settle_debt>` through a point-of-"
+"sale transaction or via an issued invoice."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:15
+msgid ""
+"To allow customers to pay using their customer account, :doc:`create a "
+"payment method <../payment_methods>` and configure it as follows:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:18
+msgid ""
+"Enable :guilabel:`Identify Customer` to force the :ref:`selection of a "
+"customer <pos/customers>` to allow using this payment method."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:20
+msgid ""
+"Keep the :guilabel:`Journal` field blank to use the customer's receivable "
+"account."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:21
+msgid ""
+"Select the points of sale where this payment method is available in "
+"the :guilabel:`Point of Sale` field."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:25
+msgid ""
+"Set a maximum sales credit to prevent customers from exceeding a defined "
+"credit limit. Once the maximum credit amount is reached, the selected "
+"customer button turns orange and a :icon:`fa-warning` (:guilabel:`warning "
+"sign`) icon appears next to the customer’s name as a warning. However, this "
+"warning does **not** prevent a sale from proceeding."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:31
+msgid ":doc:`../../../finance/accounting/payments`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:32
+msgid ":doc:`../../../finance/accounting/get_started/chart_of_accounts`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:35
+msgid "Payment process"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:38
+msgid "Deposit money"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:40
+msgid "To deposit money to the customer account from the POS interface:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:42
+msgid "Click :guilabel:`Customer` and locate the desired customer in the list."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:43
+msgid ""
+"Click the :icon:`fa-bars` (:guilabel:`hamburger menu`) icon, then "
+"select :guilabel:`Deposit money`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:45
+msgid "Choose the payment method."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:46
+msgid ""
+"When redirected to the payment screen, enter the amount to deposit using the "
+"keypad."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:47
+msgid ":guilabel:`Validate` the transaction."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:48
+msgid "Click :guilabel:`Yes` on the popup window to confirm."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:51
+msgid "Customer account as payment method"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:53
+msgid ""
+"To use the customer account as a payment method for a purchase from the POS "
+"payment screen:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:55
+msgid ""
+"Select the payment method :ref:`created for the customer account <pos/"
+"payment_method/configuration>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:57
+msgid ""
+"Click :icon:`fa-user` :guilabel:`Customer` to open the customer list and "
+"select the customer."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:58
+msgid "Click the :guilabel:`Invoice` button."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:59
+msgid ":guilabel:`Validate` the purchase."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:62
+msgid ""
+"To effectively monitor and manage the customer’s unpaid debt, "
+"either :doc:`create an invoice <../receipts_invoices>` for the order or "
+"install the :doc:`Accounting application <../../../finance/accounting>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:67
+msgid "Debt tracking"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:69
+msgid ""
+"When a customer pays using their customer account, the purchase amount is "
+"recorded as debt until it is paid off. To keep track of a customer’s debt, "
+"consult their customer statement in the backend or their profile in an open "
+"session."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:73
+msgid ""
+"To access the :guilabel:`Customer Statement` report, go "
+"to :menuselection:`Point of Sale --> Orders --> Customers`, select a "
+"customer to open their form, and click the :guilabel:`Customer Statements` "
+"smart button."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:77
+msgid ""
+"To view the total amount due or deposited by a customer from an open "
+"session, access the customer list by clicking :guilabel:`Customer` and "
+"search for the desired customer; the amount due or deposited is displayed "
+"next to their name."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:-1
+msgid "customer list and summary of their customer accounts"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:86
+msgid ":doc:`../../../finance/accounting/payments/follow_up`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:89
+msgid ""
+"When a customer is related to a company, the customer statement report might "
+"be related to the company itself, and not the customer."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:95
+msgid "Due amount settlement"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:97
+msgid ""
+"To settle a customer's due amount, :ref:`register the payment from the "
+"invoice <accounting/payments/from-invoice-bill>` or, from the POS interface, "
+"follow these steps:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:100
+msgid ""
+"Click :guilabel:`Customer` and search for the desired customer in the list."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:101
+msgid ""
+"Click the :icon:`fa-bars` (:guilabel:`hamburger menu`) icon next to the "
+"customer's name."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:102
+msgid "Select :guilabel:`Settle orders` or :guilabel:`Settle invoices`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:103
+msgid "Select the orders or invoices to settle."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:104
+msgid "Click :guilabel:`Payment` and select the relevant payment method."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:105
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:409
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:463
+msgid "Click :guilabel:`Validate`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/customer_credit.rst:106
+msgid ""
+"Click :guilabel:`Yes` on the popup window to confirm the deposit of the "
+"payment received from the customer."
+msgstr ""
+
 #: ../../content/applications/sales/point_of_sale/payment_methods/qr_code_payment.rst:3
 msgid "QR code payments"
 msgstr ""
@@ -9630,10 +9849,12 @@ msgid "Enable the relevant terminal."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:20
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:50
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_com.rst:80
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:73
 #: ../../content/applications/sales/point_of_sale/pos_hardware.rst:105
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:126
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:149
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:339
 #: ../../content/applications/sales/sales/products_prices/products/product_images.rst:115
 msgid "Click :guilabel:`Save`."
 msgstr ""
@@ -9663,45 +9884,49 @@ msgid ":doc:`Mercado Pago <terminals/mercado_pago>`"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:29
-msgid ":doc:`QFPay configuration <terminals/qfpay>`"
+msgid ":doc:`Pine Labs <terminals/pine_labs>`"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:30
-msgid ":doc:`Razorpay <terminals/razorpay>`"
+msgid ":doc:`QFPay <terminals/qfpay>`"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:31
-msgid ":doc:`SIX <terminals/six>`"
+msgid ":doc:`Razorpay <terminals/razorpay>`"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:32
-msgid ":doc:`Stripe <terminals/stripe>`"
+msgid ":doc:`SIX <terminals/six>`"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:33
-msgid ":doc:`Tyro <terminals/tyro>`"
+msgid ":doc:`Stripe <terminals/stripe>`"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:34
-msgid ":doc:`Viva.com <terminals/viva_com>`"
+msgid ":doc:`Tyro <terminals/tyro>`"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:35
-msgid ":doc:`Worldline <terminals/worldline>`"
+msgid ":doc:`Viva.com <terminals/viva_com>`"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:36
+msgid ":doc:`Worldline <terminals/worldline>`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:37
 msgid ""
 "Go to :menuselection:`Point of Sale --> Configuration --> Settings` and add "
 "the payment method to the :guilabel:`Payment Methods` list to make it "
 "available in the POS interface."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:42
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:43
 msgid "Terminal use"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:44
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:45
 msgid ""
 "To process a :ref:`payment <pos/sell>` with a :ref:`configured terminal <pos/"
 "terminals/configuration>` for an order, select the terminal's :doc:`payment "
@@ -9709,19 +9934,19 @@ msgid ""
 "the instructions on the terminal device."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:49
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:50
 msgid ""
 "Once the transaction is successful, the payment is automatically validated "
 "in Point of Sale."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:52
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:53
 msgid ""
 "Connection issues between Odoo and the payment terminal result in "
 "transaction cancellation."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:53
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals.rst:54
 msgid "To cancel the payment request, click :guilabel:`Cancel`."
 msgstr ""
 
@@ -9882,7 +10107,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/adyen.rst:91
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:281
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:432
 msgid "Tips"
 msgstr "Чайові"
 
@@ -10024,9 +10249,10 @@ msgstr "Mercado Pago"
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:9
 msgid ""
-"Only **Point Smart** payment terminals in **Argentina**, **Brazil**, and "
-"**Mexico** are supported. They can be purchased on `Mercado Pago's website "
-"<https://www.mercadopago.com.mx/herramientas-para-vender/lectores-point>`_."
+"Only **Point Smart** payment terminals in Argentina, Brazil, Chile, "
+"Colombia, Mexico, Peru, and Uruguay are supported. They can be purchased on "
+"`Mercado Pago's website <https://www.mercadopago.com.mx/herramientas-para-"
+"vender/lectores-point>`_."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/mercado_pago.rst:14
@@ -10207,6 +10433,128 @@ msgid ""
 "credentials>` is correctly configured if you are not notified."
 msgstr ""
 
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:3
+msgid "Pine Labs"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:5
+msgid ""
+"`Pine Labs <https://www.pinelabs.com/instore-pos-machine>`_ offers in-store "
+"payment solutions for customer transactions through several `physical "
+"terminals <https://www.pinelabs.com/contact-sales?"
+"tab=new&form=instorepayments>`_."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:10
+msgid "The Odoo Pine Labs module is only available for Indian companies."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:11
+msgid ""
+"Pine Labs terminals accept credit/debit cards (Visa, MasterCard, and RuPay) "
+"and UPI QR codes by swiping, scanning, or tapping."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:17
+msgid "Pine Labs credentials"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:19
+msgid ""
+"`Create a Pine Labs account and order at least one terminal <https://"
+"www.pinelabs.com/contact-sales?tab=new>`_. The system then sends an email "
+"with the following credentials:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:23
+msgid "Merchant ID"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:24
+msgid "Store ID"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:25
+msgid "Client ID"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:26
+msgid "Security Token"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:31
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:61
+msgid "Odoo configuration"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:33
+msgid ""
+"To enable Pine Labs in Odoo, first :ref:`install the POS Pine Labs module "
+"<general/install>` to make it visible in the list of payment terminals. "
+"Then, follow these steps to connect the Pine Labs terminal with Odoo Point "
+"of Sale:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:37
+msgid ""
+"Go to :menuselection:`Point of Sale --> Configuration --> Settings`, scroll "
+"down to the :guilabel:`Payment Terminals` section, enable the "
+"relevant :ref:`payment terminal <pos/terminals/configuration>`, and "
+"click :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:40
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/qfpay.rst:56
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_com.rst:60
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:65
+msgid ""
+"Go to :menuselection:`Point of Sale --> Configuration --> Payment Methods` "
+"and :doc:`create a payment method <../../payment_methods>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:42
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/qfpay.rst:58
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_com.rst:62
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:67
+msgid "Set the :guilabel:`Journal` field to :guilabel:`Bank`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:43
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/qfpay.rst:60
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_com.rst:64
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:68
+msgid "Set the :guilabel:`Integration` field to :guilabel:`Terminal`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:44
+msgid "Set the :guilabel:`Integrate with` field to :guilabel:`Pine Labs`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:45
+msgid ""
+"Paste the copied :ref:`credentials <pos/pine-labs/credentials>` in their "
+"corresponding fields."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:46
+msgid ""
+"Select the preferred payment mode in the :guilabel:`Pine Labs Allowed "
+"Payment Modes` field and save."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:48
+msgid ""
+"Go to :menuselection:`Point of Sale --> Configuration --> Settings` and add "
+"the created payment method to the :guilabel:`Payment Methods` list to use it "
+"in a POS."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/pine_labs.rst:53
+msgid ""
+"Enable the :guilabel:`Pine Labs Test Mode` to test transaction processes "
+"with a device."
+msgstr ""
+
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/qfpay.rst:3
 msgid "QFPay"
 msgstr ""
@@ -10322,30 +10670,10 @@ msgid ""
 "the :guilabel:`QFPay` terminal, and click :guilabel:`Save`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/qfpay.rst:56
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_com.rst:60
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:65
-msgid ""
-"Go to :menuselection:`Point of Sale --> Configuration --> Payment Methods` "
-"and :doc:`create a payment method <../../payment_methods>`."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/qfpay.rst:58
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_com.rst:62
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:67
-msgid "Set the :guilabel:`Journal` field to :guilabel:`Bank`."
-msgstr ""
-
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/qfpay.rst:59
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_com.rst:63
 msgid ""
 "Select the desired point of sale in the :guilabel:`Point of Sale` field."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/qfpay.rst:60
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/viva_com.rst:64
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:68
-msgid "Set the :guilabel:`Integration` field to :guilabel:`Terminal`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/qfpay.rst:61
@@ -11192,10 +11520,6 @@ msgstr ""
 msgid ""
 "To check the terminal's connection status, open the IoT app and click "
 "the :ref:`IoT system's card <iot/connect/IoT-form>`."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:61
-msgid "Odoo configuration"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment_methods/terminals/worldline.rst:63
@@ -12697,7 +13021,7 @@ msgid ""
 "According to the :doc:`fiscal localization package <../../../finance/"
 "fiscal_localizations>` activated, several fiscal positions are preconfigured "
 "and can be set and used in POS. However, you can also :ref:`create new "
-"fiscal positions <fiscal_positions/mapping>`."
+"fiscal positions <fiscal_positions/configuration>`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/pricing/fiscal_position.rst:33
@@ -13251,13 +13575,13 @@ msgid ":ref:`Organizing the floors and tables <pos/restaurant/floors>`;"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/restaurant.rst:8
-msgid ":ref:`Taking orders <pos/restaurant/orders>`;"
+msgid ":ref:`Managing orders <pos/restaurant/orders>`;"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/restaurant.rst:9
 msgid ""
-":ref:`Communicating with the kitchen or bar through the POS <pos/restaurant/"
-"orders-printing>`;"
+":ref:`Notifying the kitchen or bar through the POS <pos/restaurant/orders-"
+"printing>`;"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/restaurant.rst:10
@@ -13270,185 +13594,220 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/restaurant.rst:12
 msgid ""
-":doc:`Setting different taxes for takeaway food <pricing/fiscal_position>`."
+":doc:`Setting different taxes for takeout orders <pricing/fiscal_position>`."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/restaurant.rst:14
 msgid ""
-"Three main buttons in the POS register allow for navigating between "
-"the :ref:`Floor plan <pos/restaurant/floors>` view, tables, and :ref:`orders "
-"<pos/restaurant/orders>`:"
+"Three main buttons in the POS interface allow for navigating between tables, "
+"the register, and orders:"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/restaurant.rst:17
 msgid ""
-":guilabel:`Plan`: Access the :ref:`Floor plan <pos/restaurant/floors>` view."
+":guilabel:`Tables`: Access the :ref:`Floor plan <pos/restaurant/floors>` "
+"view to manage table occupancy."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:18
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:19
 msgid ""
-":guilabel:`Table`: Enter a table or order number, then "
-"click :guilabel:`Jump` to access them. The button's label updates to display "
-"the selected number. When applicable, click :guilabel:`Book table` to "
-"confirm the table's occupancy."
+":guilabel:`Register`: Access the :ref:`POS register <pos/restaurant/orders>` "
+"to process orders."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:21
-msgid ""
-":icon:`fa-plus-circle` (:guilabel:`order`): :ref:`Create a direct sales "
-"order <pos/restaurant/orders>` that is not linked to any table. Each click "
-"generates the next order in the sequence. Click :guilabel:`Release Order` to "
-"cancel the order (if no products have been added) and return to "
-"the :ref:`Floor plan <pos/restaurant/floors>` view."
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:20
+msgid ":guilabel:`Orders`: Access the overview of all orders."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:27
-msgid ""
-"When :guilabel:`Table Booking` is enabled in the :ref:`POS settings "
-"<configuration/settings>`, a :guilabel:`Booking` button appears on the main "
-"interface for viewing and managing bookings."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:29
-msgid ""
-"Entering a number through the :guilabel:`Table` button that does not match "
-"an existing table number creates a direct sales order."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:33
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:23
 msgid ""
 "To configure restaurant-specific settings, the :guilabel:`Is a Bar/"
-"Restaurant` setting under the :guilabel:`Restaurant Mode` section must be "
+"Restaurant` setting under the :guilabel:`Point of Sale` section must be "
 "enabled in the :ref:`POS settings <configuration/settings>`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:40
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:28
+msgid ""
+"When :guilabel:`Booking` is enabled in the :ref:`POS settings <configuration/"
+"settings>`, a :ref:`Booking <pos/restaurant/floors/booking>` button appears "
+"on the main interface for viewing and managing bookings."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:35
+msgid "Default start screen"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:37
+msgid ""
+"To define the point of sale's default start screen, go to the :ref:`POS "
+"settings <configuration/settings>`, scroll down to the :guilabel:`PoS "
+"Interface` section, and set the :guilabel:`Default Screen` setting "
+"to :guilabel:`Tables` (i.e., :ref:`Floor plan <pos/restaurant/floors>` view) "
+"or :ref:`Register <pos/restaurant/orders>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:45
 msgid "Floors and tables"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:42
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:47
 msgid ""
-"The :guilabel:`Floor plan` view is the first screen displayed "
-"when :ref:`accessing the POS register <pos/session-start>`. It enables "
-"managing restaurant floors and tables, and monitoring table status in real "
-"time (occupancy, reservations, and kitchen orders)."
+"The :guilabel:`Floor plan` view allows for managing restaurant floors and "
+"tables and monitoring table status in real time (occupancy, reservations, "
+"kitchen orders) using the following action buttons:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:51
+msgid ""
+":icon:`fa-plus` :guilabel:`New Order`: :ref:`Create a direct sales order "
+"<pos/restaurant/orders/process>` that is not linked to any table. Take the "
+"order, click :guilabel:`Set Table` to assign it to an existing table, or "
+"click :guilabel:`Set Tab` to record the open order's name."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:55
+msgid ""
+"Buttons for navigating between :ref:`configured floors <pos/restaurant/"
+"floors/backend>` (e.g., :guilabel:`Main Floor/Patio`)."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:57
+msgid ""
+":icon:`fa-hashtag` (:guilabel:`Table Selector`): Enter an existing table "
+"number and click :guilabel:`Jump` to access it."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:61
+msgid ""
+"Selecting a table on the :guilabel:`Floor plan` view or accessing it through "
+"the :guilabel:`Table Selector` automatically confirms the table's occupancy."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:63
+msgid ""
+"To order free physical QR codes adapted to the floor plan, activate "
+"the :doc:`QR menu </applications/sales/point_of_sale/self_order>` setting, "
+"then click  :icon:`fa-qrcode` :guilabel:`Get QR Codes` in "
+"the :guilabel:`Floor plan` view. This `offer <https://www.odoo.com/app/point-"
+"of-sale-restaurant-qr-code>`_ is available worldwide and for all "
+"subscription types."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/restaurant.rst:0
 msgid "example of a floor plan view with visual keys to understand it."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:51
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:74
 msgid "Table 101: The table is currently available but booked for 15:00."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:52
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:75
 msgid "Table 102: The table is booked, and an order is sent to the kitchen."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:53
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:76
 msgid "Table 103: The 12:00 table is running late."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:54
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:77
 msgid "Table 104: The table has a pending order."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:55
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:78
 msgid "Table 105: The table is available."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:60
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:83
 msgid ""
-"Creating floors and tables allows managing table selection and :ref:`orders "
-"<pos/restaurant/orders>`."
+"Creating floors and tables allows for managing table selection "
+"and :ref:`orders <pos/restaurant/orders>`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:66
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:89
 msgid "From the POS backend"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:68
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:91
 msgid ""
 "To create floors and tables from the backend, go to :menuselection:`Point of "
 "Sale --> Configuration --> Floor Plans`, and click :guilabel:`New`. Follow "
 "the next steps to configure the :guilabel:`Floor plan`:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:72
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:95
 msgid "Enter a :guilabel:`Floor Name`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:73
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:96
 msgid "Select the related :guilabel:`Point of Sales`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:74
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:97
 msgid ""
 "Optionally, hover the mouse over the placeholder image and click "
 "the :icon:`fa-pencil` (:guilabel:`Edit`) icon to add a background image to "
 "the restaurant layout."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:76
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:99
 msgid "Click :guilabel:`Add a line` to create and configure a table:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:78
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:101
 msgid "Enter a :guilabel:`Table Number`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:79
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:102
 msgid "Fill in the number of :guilabel:`Seats`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:80
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:103
 msgid "Set the table's :guilabel:`Shape`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:81
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:104
 msgid ""
 "Optionally, activate additional settings by clicking the :icon:`oi-settings-"
 "adjust` (:guilabel:`settings`) icon:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:84
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:107
 msgid ""
 "Adjust the :guilabel:`Height`, :guilabel:`Width`, and :guilabel:`Color`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:85
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:108
 msgid "Tick the :guilabel:`Active` checkbox to make a table available or not."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:86
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:109
 msgid "Save."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:89
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:112
 msgid ""
-"Enable the :guilabel:`Table Booking` setting to assign "
+"Enable the :ref:`Booking <pos/restaurant/floors/booking>` setting to assign "
 "an :guilabel:`Appointment resource` and make a table bookable."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:91
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:114
 msgid ""
 "Click the :icon:`fa-trash-o` (:guilabel:`trash`) icon to delete a table."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:94
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:117
 msgid ""
-"To create a :guilabel:`Floor plan` quickly, go to the :guilabel:`Restaurant "
-"Mode` section of the :ref:`POS settings <configuration/settings>`. "
+"To create a :guilabel:`Floor plan` quickly, go to the :guilabel:`Point of "
+"Sale` section of the :ref:`POS settings <configuration/settings>`. "
 "Under :guilabel:`Floors & Tables Map`, type the floor name in "
 "the :guilabel:`Floors` field, and press `Enter`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:101
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:124
 msgid "From the POS frontend"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:103
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:126
 msgid ""
 "To create floors and tables from the frontend, :ref:`open the POS register "
 "<pos/session-start>`, click the :icon:`fa-bars` (:guilabel:`hamburger menu`) "
@@ -13457,22 +13816,22 @@ msgid ""
 "the next steps:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:108
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:131
 msgid "Click the :icon:`fa-plus` (:guilabel:`Add Floor`) icon to add a floor."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:109
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:132
 msgid "Enter a :guilabel:`Floor name` and click :guilabel:`Apply`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:110
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:133
 msgid ""
 "Click the :icon:`fa-paint-brush` (:guilabel:`Change Floor Background`) icon "
 "to select a background color, or click :icon:`fa-camera` :guilabel:`File` to "
 "upload an image."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:112
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:135
 msgid ""
 "Optionally, click the :icon:`fa-pencil-square-o` (:guilabel:`Rename`) icon "
 "to rename the :guilabel:`Floor plan`, the :icon:`fa-files-o` "
@@ -13480,149 +13839,363 @@ msgid ""
 "(:guilabel:`Delete`) icon to delete it."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:115
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:138
 msgid ""
 "Click :icon:`fa-plus-circle` :guilabel:`Table` to add a new table. To edit a "
 "table, select it and click one of the following icons:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:118
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:141
 msgid ":icon:`fa-user` (:guilabel:`Seats`): Add or change the number of seats."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:119
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:142
 msgid ""
 ":icon:`fa-square-o` (:guilabel:`Square`) or :icon:`fa-circle-o` "
 "(:guilabel:`Round`): Change the table's shape."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:121
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:144
 msgid ""
 ":icon:`fa-paint-brush` (:guilabel:`Change Floor Background`): Change the "
 "table's color."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:122
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:145
 msgid ""
 ":icon:`fa-pencil-square-o` (:guilabel:`Rename`): Change the table number."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:123
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:146
 msgid ""
 ":icon:`fa-copy` (:guilabel:`Clone`): Clone the table's attributes using the "
 "following table number."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:125
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:148
 msgid ":icon:`fa-trash` (:guilabel:`Delete`): Remove the table."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:129
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:152
 msgid "Removing a table or a floor is permanent."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:134
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:157
+msgid "Booking"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:159
+msgid ""
+"The :guilabel:`Booking` setting allows for creating and managing "
+"reservations for a designated point of sale directly from the POS interface."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:163
+msgid ""
+"Enabling the :guilabel:`Booking` setting automatically installs "
+"the :doc:`Appointments </applications/productivity/appointments>` app."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:169
+msgid "Booking configuration"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:171
+msgid "To enable and configure the bookings, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:173
+msgid ""
+"Go to the :ref:`POS settings <configuration/settings>`, scroll down to "
+"the :guilabel:`PoS Interface` section, and enable :guilabel:`Booking`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:175
+msgid ""
+"Enter a name in the :guilabel:`Appointment type` field and "
+"click :guilabel:`Create and edit`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:176
+msgid ""
+"Configure the :ref:`Appointment type <appointments/configure>` form and "
+"click :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:177
+msgid "Click :guilabel:`Save` in the POS settings."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:180
+msgid ""
+"To ensure that only existing resources can be booked for a specific point of "
+"sale, set the :guilabel:`Book` field to :guilabel:`Resources` in "
+"the :guilabel:`Appointment type` form and select tables. Then, "
+"enable :guilabel:`Manage Capacities` to define the maximum amount each "
+"resource can handle."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:186
+msgid ""
+"To accommodate a booking that exceeds the capacity of a single table, click "
+"the :icon:`fa-cubes` (:guilabel:`Resources`) icon in "
+"the :guilabel:`Appointment Type` form, select a table, and add additional "
+"tables in the :guilabel:`Linked Resource` field to merge them."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:191
+msgid ":doc:`/applications/productivity/appointments`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:196
+msgid "Booking management"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:198
+msgid ""
+"To manage table bookings from the POS interface, click :guilabel:`Booking`, "
+"then:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:200
+msgid ""
+"Click :guilabel:`New` to create a booking. Add a name, the date and time, "
+"number of guests, phone number, duration, and :ref:`resources <appointments/"
+"resources>`, then click :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:202
+msgid ""
+"Click a booking to :guilabel:`Edit` or :guilabel:`Delete` it. Click a stage "
+"name (e.g., :guilabel:`Booked`, :guilabel:`Checked-In`, or :guilabel:`No "
+"Show`) or drag the booking card to move it to the relevant stage."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:207
+msgid ""
+"To quickly edit a booking from the :ref:`Floor plan <pos/restaurant/floors>` "
+"view, click the booking notification on the booked table."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:213
 msgid "Order management"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:136
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:215
 msgid ""
-"To take an order, :ref:`open the POS register <pos/session-start>` and "
-"follow these steps:"
+"The POS register allows for :ref:`processing <pos/restaurant/orders/"
+"process>` and :ref:`transferring <pos/restaurant/floors/transfer>` orders, "
+"defining :ref:`presets <pos/restaurant/orders/preset>`, and "
+"managing :ref:`courses <pos/restaurant/orders/courses>`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:138
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:222
+msgid "Order process"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:224
+msgid "To process an order from the POS register, follow these steps:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:226
+msgid "Click products to add them to the cart."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:227
+msgid "Define how the order is handled:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:229
 msgid ""
-"Select a :ref:`floor plan <pos/restaurant/floors>` and click a table or "
-"click the :icon:`fa-plus-circle` (:guilabel:`order`) button at the top to "
-"create a direct sales order."
+"Click :guilabel:`Set Table` to link the order to a table. Enter a table "
+"number and click :guilabel:`Assign`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:140
-msgid "Add products to the order."
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:231
+msgid ""
+"Click :guilabel:`Set Tab` to enter the open order's name and "
+"click :guilabel:`Apply`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:141
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:232
 msgid "Click :guilabel:`Order` to validate the order."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:143
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:234
 msgid ""
 "When ready, :ref:`process the order payment <pos/restaurant/bills/payment>`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:146
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:237
 msgid ""
-"To cancel a processed order, click :guilabel:`Actions`, "
-"then :guilabel:`Cancel Order`. If an :ref:`order printer is configured <pos/"
-"restaurant/orders-printing>`, a cancellation ticket is automatically printed."
+"Clicking :guilabel:`Order` redirects to the :ref:`Floor plan <pos/restaurant/"
+"floors>` view if :guilabel:`Tables` is selected as the :ref:`default start "
+"screen <pos/restaurant/default>`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:149
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:241
 msgid ""
-"To switch to another table order, click the button with the table number at "
-"the top of the POS interface, enter a table number, and "
-"click :guilabel:`Jump`."
+"To cancel an order, click the :icon:`fa-ellipsis-v` (:guilabel:`Actions`) "
+"icon, then :guilabel:`Cancel Order`. If an :ref:`order printer is configured "
+"<pos/restaurant/orders-printing>`, a cancellation ticket is automatically "
+"printed for an order sent to the kitchen."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:151
-msgid "Click :guilabel:`Release table` to cancel a table's occupancy."
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:245
+msgid ""
+"After selecting a table in the :ref:`Floor plan <pos/restaurant/floors>` "
+"view, click :guilabel:`Release table` in the cart to cancel the table's "
+"occupancy. This action is available when the cart is empty."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:152
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:248
 msgid ""
 ":ref:`Configure a printer <pos/restaurant/orders-printing>` to send an order "
 "to the kitchen printer when clicking :guilabel:`Order`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:158
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:254
 msgid "Order transfer"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:160
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:256
 msgid ""
-"To transfer an order to another table from the :ref:`POS interface <pos/"
-"restaurant/orders>`, click :guilabel:`Actions`, then :guilabel:`Transfer/"
-"Merge`, and choose the target table in the :ref:`Floor plan <pos/restaurant/"
-"floors>` view:"
+"To transfer an order to another table from the :ref:`POS register <pos/"
+"restaurant/orders>`, click the :icon:`fa-ellipsis-v` (:guilabel:`Actions`) "
+"icon, then :guilabel:`Transfer/Merge`, and choose the target table in "
+"the :ref:`Floor plan <pos/restaurant/floors>` view:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:164
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:260
 msgid "Select an available table to transfer customers and their orders."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:165
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:261
 msgid "Select an occupied table to merge customers and their orders."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:170
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:266
+msgid "Presets"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:268
+msgid ""
+"Presets are used to apply preconfigured settings to orders and determine "
+"whether an order is for :guilabel:`Dine In`, :guilabel:`Takeout`, "
+"or :guilabel:`Delivery`. They also control whether customer contact "
+"information is required and apply capacity limits based on opening hours and "
+"order quantity."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:273
+msgid ""
+"To use preconfigured presets, go to the :ref:`POS settings <configuration/"
+"settings>` and enable the :guilabel:`Take out / Delivery / Members` setting "
+"under the :guilabel:`Point of Sale` section. Set the :guilabel:`Default` "
+"field to the preferred preset, then save. From the :ref:`register <pos/"
+"restaurant/orders>`, select the relevant preset, and :ref:`process the order "
+"<pos/restaurant/orders/process>`:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:279
+msgid ""
+":guilabel:`Dine In`: Assign a :ref:`table or open a tab <pos/restaurant/"
+"orders/process>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:280
+msgid ""
+":guilabel:`Takeout`: Enter the order's name and click :guilabel:`Apply`, "
+"then select a date and a time slot."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:282
+msgid ""
+":guilabel:`Delivery`: Select an existing customer, or "
+"click :guilabel:`Create` to add one. Then, select a time slot."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:286
+msgid "Click the preset button to switch to another one."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:289
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:364
+msgid ":doc:`/applications/sales/point_of_sale/preparation`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:290
+msgid ":doc:`/applications/sales/point_of_sale/online_food_delivery`"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:295
+msgid "Courses"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:297
+msgid ""
+"The :guilabel:`Course` button allows for splitting orders into multiple "
+"courses, sending each course to the kitchen sequentially."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:300
+msgid ""
+"To split an order into courses from the :ref:`register <pos/restaurant/"
+"orders>`, click :guilabel:`Course` and add products. Repeat the action as "
+"many times as needed, then click :guilabel:`Order` to send the order to the "
+"kitchen, which also fires the first course."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:304
+msgid ""
+"When ready for the second course, retrieve the order from the :ref:`Floor "
+"plan <pos/restaurant/floors>` view or the :guilabel:`Orders` overview, and "
+"click :guilabel:`Fire Course 2`. Repeat the action as many times as needed."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:309
+msgid ""
+"Alternatively, click :guilabel:`Course` as often as needed to display the "
+"desired number of courses in the cart. Then, click each course, add "
+"products, and click :guilabel:`Order`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:311
+msgid ""
+"To transfer a product or an entire course into another course, select it in "
+"the cart, click the :icon:`fa-ellipsis-v` (:guilabel:`Actions`) icon, "
+"then :icon:`fa-arrow-down` :guilabel:`Transfer course`, and select the "
+"preferred course."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:318
 msgid "Order printing"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:175
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:320
 msgid ""
 "To enable sending orders to a kitchen or a bar printer, :doc:`connect a "
 "printer <configuration/epos_printers>` to Odoo, go to the :ref:`POS settings "
 "<configuration/settings>`, and follow these steps:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:179
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:324
 msgid ""
 "Scroll down to the :guilabel:`Preparation` section and enable "
 "the :guilabel:`Preparation Printers` setting."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:181
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:326
 msgid ""
 "Type the printer's name in the :guilabel:`Printers` field and "
 "click :guilabel:`Create and edit`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:182
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:327
 msgid "On the printer setup form, select the :guilabel:`Printer Type`:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:184
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:329
 msgid ""
 "If the printer is connected to an :doc:`IoT system </applications/general/"
 "iot>`, select :guilabel:`Use a printer connected to the IoT`, and choose the "
@@ -13630,42 +14203,38 @@ msgid ""
 "process requires the IoT app and an IoT system."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:188
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:333
 msgid ""
 "If using an :doc:`Epson printer that does not require an IoT system "
 "connection <configuration/epos_printers>`, select :guilabel:`Use an Epson "
 "printer` and enter the :guilabel:`Epson Printer IP Address`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:191
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:336
 msgid ""
 "Define the product categories to be printed by clicking :guilabel:`Add a "
 "line` in the :guilabel:`Printed Product Categories` field and selecting the "
 "preferred category from the popover."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:194
-msgid "Click :guilabel:`Save & Close`."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:195
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:340
 msgid ""
 "In the :ref:`POS settings <configuration/settings>`, click :guilabel:`Save`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:197
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:342
 msgid ""
 "The printer is then connected to the point of sale and can print kitchen "
 "orders and order receipts."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:200
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:345
 msgid ""
 "Printing kitchen orders requires assigning a :guilabel:`PoS Product "
 "Category`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:201
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:346
 msgid ""
 "To create a :guilabel:`Printed Product Category` on the :guilabel:`Add: "
 "Printed Product Categories` popover, click :guilabel:`New`. Enter a name, "
@@ -13674,158 +14243,166 @@ msgid ""
 "product availability, then click :guilabel:`Save & Close`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:207
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:352
 msgid ""
 "To access all preparation printers from the :ref:`POS settings "
 "<configuration/settings>`, scroll down to the :guilabel:`Preparation` "
-"section, and click :icon:`oi-arrow-right` :guilabel:`Printers`. "
+"section and click :icon:`oi-arrow-right` :guilabel:`Printers`. "
 "Alternatively, go to :menuselection:`Point of Sale --> Orders --> "
 "Preparations Printers`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:213
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:356
+msgid ""
+"After :ref:`processing an order <pos/restaurant/orders/process>`, click "
+"the :icon:`fa-cutlery` (:guilabel:`order`) icon in the :ref:`POS register "
+"<pos/restaurant/orders>` next to :guilabel:`Payment` to reprint a duplicate "
+"of the last kitchen order."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:361
 msgid ":doc:`Connect an IoT system to a POS <configuration/pos_iot>`"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:214
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:362
 msgid ":doc:`/applications/general/iot/devices/printer`"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:215
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:363
 msgid ":doc:`/applications/general/iot/connect`"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:216
-msgid ":doc:`/applications/sales/point_of_sale/preparation`"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:221
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:369
 msgid "Bills and payment"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:226
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:374
 msgid "Bill splitting"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:228
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:376
 msgid ""
 "To allow bill splitting, go to :menuselection:`Point of Sale --> "
 "Configuration --> Settings`, and enable :guilabel:`Allow Bill Splitting` "
-"under the :guilabel:`Restaurant Mode` section."
+"under the :guilabel:`Point of Sale` section."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:231
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:379
 msgid ""
-"To split a bill from the :ref:`POS interface <pos/restaurant/orders>`, "
-"follow these steps:"
+"To split a bill from the :ref:`POS register <pos/restaurant/orders>`, follow "
+"these steps:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:233
-msgid "Click :guilabel:`Actions`, then :guilabel:`Split`."
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:381
+msgid ""
+"Click the :icon:`fa-ellipsis-v` (:guilabel:`Actions`) icon, "
+"then :guilabel:`Split`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:234
-msgid "Select at least one product and click :guilabel:`Split Order`."
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:382
+msgid "Select at least one product and perform one of the following actions:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:235
-msgid "Proceed with the :ref:`payment <pos/restaurant/bills/payment>`."
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:384
+msgid ""
+":guilabel:`Payment`: Process the direct payment for the selected product(s)."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:236
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:385
+msgid ":guilabel:`Split Order`: Create a sub-order."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:386
+msgid ":guilabel:`Transfer`: Transfer one or all products to another table."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:387
+msgid "Process the :ref:`payment <pos/restaurant/bills/payment>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:388
 msgid ""
 "Click :icon:`fa-chevron-right` :guilabel:`Continue` and repeat the process "
 "for each guest."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:239
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:391
 msgid ""
 "Splitting a bill requires ordering at least two products and creates a sub-"
 "order, which must be paid before returning to the main order."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:241
-msgid ""
-"Clicking :guilabel:`Split Order` without selecting any product creates an "
-"empty sub-order."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:246
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:397
 msgid "Order payment"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:248
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:399
 msgid ""
-"To proceed with the order payment from the :ref:`POS interface <pos/"
+"To proceed with the order payment from the :ref:`POS register <pos/"
 "restaurant/orders>`, follow these steps:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:251
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:402
 msgid "Click :guilabel:`Payment`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:252
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:403
 msgid "Select a :doc:`payment method <payment_methods>`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:253
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:404
 msgid "Optionally, select a customer and send an invoice to them:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:255
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:406
 msgid ""
 "Click :icon:`fa-user` :guilabel:`Customer` to select or create a customer "
 "account."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:256
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:407
 msgid ""
 "Enable :icon:`fa-file-text-o` :guilabel:`Invoice` to allow sending an "
 "invoice to the customer."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:258
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:312
-msgid "Click :guilabel:`Validate`."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:263
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:414
 msgid "Receipt printing"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:265
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:416
 msgid ""
 "To allow receipt printing, go to :menuselection:`Point of Sale --> "
 "Configuration --> Settings`, and enable :guilabel:`Early Receipt Printing` "
-"under the :guilabel:`Restaurant Mode` section."
+"under the :guilabel:`Point of Sale` section."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:268
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:419
 msgid ""
 "After a successful :ref:`order payment <pos/restaurant/bills/payment>`, "
 "click :icon:`fa-print` :guilabel:`Print Full Receipt` to generate and print "
 "a bill."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:272
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:423
 msgid ""
 "If a printer is :doc:`configured and linked <configuration/epos_printers>` "
 "to a point of sale, the receipt is automatically printed upon payment "
 "confirmation."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:276
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:427
 msgid ":doc:`/applications/sales/point_of_sale/receipts_invoices`"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:286
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:437
 msgid ""
 "To allow tipping in a POS, go to the :ref:`POS settings <configuration/"
 "settings>`, scroll down to the :guilabel:`Payment` section, "
-"enable :guilabel:`Tips`,  and click :guilabel:`Save`."
+"enable :guilabel:`Tips`, and click :guilabel:`Save`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:290
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:441
 msgid ""
 "The :guilabel:`Add tip after payment` setting only works for a POS in the "
 "United States of America with an :doc:`Adyen <payment_methods/terminals/"
@@ -13833,59 +14410,60 @@ msgid ""
 "terminal <pos/terminals/configuration>`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:293
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:444
 msgid ""
 "The :guilabel:`Add tip through payment terminal (Adyen)` setting only works "
 "with an :ref:`Adyen <adyen/tips>` terminal."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:297
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:448
 msgid ""
 "Saving the :guilabel:`Tips` setting automatically fills the :guilabel:`Tip "
 "product` field with the preconfigured :guilabel:`[TIPS] Tips` product, which "
 "is only used for tips. When selecting another product in the :guilabel:`Tip "
 "product` field, the chosen product is no longer available on the :ref:`POS "
-"interface <pos/restaurant/orders>`."
+"register <pos/restaurant/orders>`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:301
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:452
 msgid "Choose only one tip product per POS."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:306
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:457
 msgid "Tip and payment"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:308
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:459
 msgid ""
 "To process a tip during :ref:`payment <pos/restaurant/bills/payment>`, "
 "follow these steps:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:310
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:461
 msgid ""
 "Click :icon:`fa-heart` :guilabel:`Tip`, add the amount, then "
 "click :guilabel:`Ok`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:311
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:462
 msgid ""
 "Select a :doc:`payment method <payment_methods>` for the order and the tip."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:315
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:466
 msgid ""
 "If the order and the tip are paid using different payment methods, select "
-"a :doc:`payment method <payment_methods>` for the order, click :icon:`fa-"
-"heart` :guilabel:`Tip`, add the tip amount, and click :guilabel:`Ok`. Then, "
-"select a payment method for the tip and :guilabel:`Validate` the payment."
+"a :doc:`payment method <payment_methods>` for the order first. Then, select "
+"a payment method for the tip, click :icon:`fa-heart` :guilabel:`Tip`, add "
+"the tip amount, and click :guilabel:`Ok`. Finally, :guilabel:`Validate` the "
+"payment."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:321
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:472
 msgid "Tip after payment (US only)"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:323
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:474
 msgid ""
 "To allow tipping after payment for a POS in the United States of America, "
 "ensure the :guilabel:`Add tip after payment` setting is enabled in "
@@ -13893,34 +14471,34 @@ msgid ""
 "payment, follow these steps:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:327
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:478
 msgid ""
 "On the :guilabel:`Payment` screen, select a :guilabel:`Card` payment method "
 "linked to a :doc:`Stripe <payment_methods/terminals/stripe>` or :doc:`Adyen "
 "<payment_methods/terminals/adyen>` terminal."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:330
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:481
 msgid ""
 "Click :guilabel:`Close Tab` and select the relevant option in "
 "the :guilabel:`Add a tip` screen:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:332
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:483
 msgid ""
 ":guilabel:`15%`, :guilabel:`20%`, or :guilabel:`25%`: Tip rates based on "
 "order total."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:333
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:484
 msgid ":guilabel:`No Tip`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:334
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:485
 msgid ":guilabel:`Tip Amount`: Enter the relevant amount in the field."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant.rst:335
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:486
 msgid "Click :guilabel:`Settle` to validate."
 msgstr ""
 
@@ -13952,7 +14530,7 @@ msgid "You can choose from:"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/self_order.rst:22
-#: ../../content/applications/sales/point_of_sale/self_order.rst:173
+#: ../../content/applications/sales/point_of_sale/self_order.rst:174
 msgid "QR menu"
 msgstr ""
 
@@ -13982,273 +14560,273 @@ msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/self_order.rst:37
 msgid ""
-"In **restaurants**, printing or downloading QR codes generates as many QR "
-"codes as the number of available tables. In **shops**, it generates only one "
-"generic QR code."
+"In :ref:`restaurants <pos/restaurant/floors>`, printing or downloading QR "
+"codes generates as many QR codes as the number of available tables. In "
+"**shops**, it generates only one generic QR code."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:41
+#: ../../content/applications/sales/point_of_sale/self_order.rst:42
 msgid "To customize QR codes,"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:43
+#: ../../content/applications/sales/point_of_sale/self_order.rst:44
 msgid "Scan the relevant QR code to acquire its URL."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:44
+#: ../../content/applications/sales/point_of_sale/self_order.rst:45
 msgid ""
 "Use a QR code generator (e.g., `QR code monkey <https://www.qrcode-"
 "monkey.com>`_ or `QR code generator <https://www.qr-code-generator.com>`_) "
 "to create a custom QR code."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:47
-#: ../../content/applications/sales/point_of_sale/self_order.rst:188
+#: ../../content/applications/sales/point_of_sale/self_order.rst:48
+#: ../../content/applications/sales/point_of_sale/self_order.rst:189
 msgid "Kiosk"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:49
+#: ../../content/applications/sales/point_of_sale/self_order.rst:50
 msgid ""
 "When :guilabel:`Kiosk` is selected, customers can access the menu or product "
 "catalog, place orders, and pay from a self-ordering kiosk."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:55
+#: ../../content/applications/sales/point_of_sale/self_order.rst:56
 msgid ""
 "Once a self-ordering type is selected, the :ref:`additional settings <pos/"
 "self_order/add-settings>` update to fit the selected type's needs."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:61
+#: ../../content/applications/sales/point_of_sale/self_order.rst:62
 msgid "Additional settings"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:65
+#: ../../content/applications/sales/point_of_sale/self_order.rst:66
 msgid "Home buttons"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:67
+#: ../../content/applications/sales/point_of_sale/self_order.rst:68
 msgid ""
 "The :guilabel:`Home buttons` are displayed on the kiosk or mobile device "
 "interfaces when customers are self-ordering. To set them up, click :icon:`fa-"
 "arrow-right` :guilabel:`Home buttons`. Then,"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:71
+#: ../../content/applications/sales/point_of_sale/self_order.rst:72
 msgid "Click :guilabel:`New` to add a new button."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:72
+#: ../../content/applications/sales/point_of_sale/self_order.rst:73
 msgid "Set the :guilabel:`Label`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:73
+#: ../../content/applications/sales/point_of_sale/self_order.rst:74
 msgid ""
 "Enter a :guilabel:`URL` preceded by `https://` to redirect customers to a "
 "specific URL when clicking the button. For instance, you might want to "
 "redirect them to a campaign video for a new product or to a contest page."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:76
+#: ../../content/applications/sales/point_of_sale/self_order.rst:77
 msgid ""
 "In the same :guilabel:`URL` column, enter `/products` to create a button "
 "that redirects customers to the product catalog."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:78
+#: ../../content/applications/sales/point_of_sale/self_order.rst:79
 msgid ""
 "Select the :guilabel:`Points of Sale` to ensure this button only appears on "
 "the selected POS' self-ordering interface."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:80
+#: ../../content/applications/sales/point_of_sale/self_order.rst:81
 msgid "Select a predefined :guilabel:`Style` from the dropdown menu."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:83
+#: ../../content/applications/sales/point_of_sale/self_order.rst:84
 msgid ""
 "Leaving the :guilabel:`Points of Sale` field empty shares the button with "
 "all POS."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:84
+#: ../../content/applications/sales/point_of_sale/self_order.rst:85
 msgid ""
 "The :guilabel:`Preview` column automatically updates,  giving you a glimpse "
 "of the button's appearance based on its configuration."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:87
+#: ../../content/applications/sales/point_of_sale/self_order.rst:88
 msgid "Service location and payment options"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:89
+#: ../../content/applications/sales/point_of_sale/self_order.rst:90
 msgid ""
 "Set where the service occurs by selecting :guilabel:`Table` "
 "or :guilabel:`Pickup zone` under the :guilabel:`Service` field."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:91
+#: ../../content/applications/sales/point_of_sale/self_order.rst:92
 msgid ""
 "Define when and how customers pay in the :guilabel:`Pay after` field. "
 "Customers can pay after :guilabel:`Each meal` or for :guilabel:`Each order`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:93
+#: ../../content/applications/sales/point_of_sale/self_order.rst:94
 msgid ""
 "The service location and payment options available depend on the type of "
 "self-ordering service and POS:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:96
+#: ../../content/applications/sales/point_of_sale/self_order.rst:97
 msgid "**QR menu + Ordering**:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:98
+#: ../../content/applications/sales/point_of_sale/self_order.rst:99
 msgid ""
 "**Restaurants**: Customers can be served at their table or the pickup zone."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:100
+#: ../../content/applications/sales/point_of_sale/self_order.rst:101
 msgid "When served at their table, they can pay after each meal or each order."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:101
+#: ../../content/applications/sales/point_of_sale/self_order.rst:102
 msgid "When served at the pickup zone, they can only pay after each order."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:102
+#: ../../content/applications/sales/point_of_sale/self_order.rst:103
 msgid ""
 "**Shops**: Customers can only be served at the pickup zone and pay after "
 "each order."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:103
+#: ../../content/applications/sales/point_of_sale/self_order.rst:104
 msgid ""
 "Regardless of the type of POS, customers can pay :doc:`online </applications/"
 "finance/payment_providers>` or using any configured :doc:`payment method "
 "<payment_methods>`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:107
+#: ../../content/applications/sales/point_of_sale/self_order.rst:108
 msgid "**Kiosk**:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:109
+#: ../../content/applications/sales/point_of_sale/self_order.rst:110
 msgid ""
 "Regardless of the type of POS, customers can either be served at their table "
 "or in the pickup zone, but they must pay after each order."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:111
+#: ../../content/applications/sales/point_of_sale/self_order.rst:112
 msgid ""
 "The kiosk self-ordering only works with :doc:`Adyen <payment_methods/"
 "terminals/adyen>` and :doc:`Stripe <payment_methods/terminals/stripe>` "
 "terminals."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:113
+#: ../../content/applications/sales/point_of_sale/self_order.rst:114
 msgid "The :guilabel:`Online Payment` feature is not supported."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:116
+#: ../../content/applications/sales/point_of_sale/self_order.rst:117
 msgid ":doc:`../../finance/payment_providers`"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:117
+#: ../../content/applications/sales/point_of_sale/self_order.rst:118
 msgid ":doc:`payment_methods`"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:119
+#: ../../content/applications/sales/point_of_sale/self_order.rst:120
 msgid "Language"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:121
+#: ../../content/applications/sales/point_of_sale/self_order.rst:122
 msgid ""
 "This option allows you to enable multiple languages for the self-ordering "
 "interface. The suggested languages are those already installed in Odoo. To "
 "expand the selection, add more languages:"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:125
+#: ../../content/applications/sales/point_of_sale/self_order.rst:126
 msgid "Click :icon:`fa-arrow-right` :guilabel:`Add Languages`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:126
+#: ../../content/applications/sales/point_of_sale/self_order.rst:127
 msgid "Add as many languages as needed to the :guilabel:`Languages` field."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:128
+#: ../../content/applications/sales/point_of_sale/self_order.rst:129
 msgid "Add those languages to the :guilabel:`Available` field."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:131
+#: ../../content/applications/sales/point_of_sale/self_order.rst:132
 msgid ":doc:`../../general/users/language`"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:133
+#: ../../content/applications/sales/point_of_sale/self_order.rst:134
 msgid "Splash screens"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:135
+#: ../../content/applications/sales/point_of_sale/self_order.rst:136
 msgid ""
 "Splash screens are introductory screens displayed when the self-ordering "
 "interface or kiosk is launched. They typically contain branding, welcome "
 "messages, or usage instructions."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:138
+#: ../../content/applications/sales/point_of_sale/self_order.rst:139
 msgid ""
 "To add a splash screen image, click :icon:`fa-paperclip` :guilabel:`Add "
 "images`, select and open an image."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:140
+#: ../../content/applications/sales/point_of_sale/self_order.rst:141
 msgid ""
 "To remove a splash screen image, hover over the image and click :icon:`fa-"
 "times` (:guilabel:`Delete`)."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:144
+#: ../../content/applications/sales/point_of_sale/self_order.rst:145
 msgid "You can add multiple splash screen images at once."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:146
+#: ../../content/applications/sales/point_of_sale/self_order.rst:147
 msgid "Eat in/ Take out"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:148
+#: ../../content/applications/sales/point_of_sale/self_order.rst:149
 msgid ""
 "Activate this setting to :doc:`adjust the tax rate <pricing/"
 "fiscal_position>` based on whether customers dine in or take their order to "
 "go. Then,"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:151
+#: ../../content/applications/sales/point_of_sale/self_order.rst:152
 msgid ""
 "Fill in the field with an existing :guilabel:`Alternative Fiscal Position`;"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:152
+#: ../../content/applications/sales/point_of_sale/self_order.rst:153
 msgid ""
 "Create and set up a new fiscal position by filling in the field and "
 "clicking :guilabel:`Create & Edit`; or"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:154
+#: ../../content/applications/sales/point_of_sale/self_order.rst:155
 msgid ""
 "Create and set up a new fiscal position by clicking :icon:`fa-arrow-"
 "right` :guilabel:`Fiscal Positions`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:158
+#: ../../content/applications/sales/point_of_sale/self_order.rst:159
 msgid ":doc:`pricing/fiscal_position`"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:161
+#: ../../content/applications/sales/point_of_sale/self_order.rst:162
 msgid "Preview"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:163
+#: ../../content/applications/sales/point_of_sale/self_order.rst:164
 msgid ""
 "Review the interface before making the self-ordering feature available to "
 "customers to ensure all settings are applied correctly. Click :icon:`fa-"
@@ -14257,71 +14835,71 @@ msgid ""
 "settings>` are correctly applied."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:175
+#: ../../content/applications/sales/point_of_sale/self_order.rst:176
 msgid "On the POS user's end, access the self-ordering interface by"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:177
+#: ../../content/applications/sales/point_of_sale/self_order.rst:178
 msgid "Scanning a downloaded or printed QR code; or"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:178
+#: ../../content/applications/sales/point_of_sale/self_order.rst:179
 msgid ""
 "Clicking the :icon:`fa-ellipsis-v` (:guilabel:`vertical ellipsis`) icon on "
 "the POS card, then :guilabel:`Mobile Menu`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:181
-#: ../../content/applications/sales/point_of_sale/self_order.rst:209
+#: ../../content/applications/sales/point_of_sale/self_order.rst:182
+#: ../../content/applications/sales/point_of_sale/self_order.rst:210
 msgid "On the customers' end,"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:183
+#: ../../content/applications/sales/point_of_sale/self_order.rst:184
 msgid ""
 "Access the self-ordering interface by scanning a downloaded or printed QR "
 "code."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:184
+#: ../../content/applications/sales/point_of_sale/self_order.rst:185
 msgid ""
 "Click the :ref:`home button <pos/self_order/add-settings>` to reach the menu "
 "or catalog."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:185
-#: ../../content/applications/sales/point_of_sale/self_order.rst:213
+#: ../../content/applications/sales/point_of_sale/self_order.rst:186
+#: ../../content/applications/sales/point_of_sale/self_order.rst:214
 msgid "Select the items and click :guilabel:`Order` to place an order."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:186
-#: ../../content/applications/sales/point_of_sale/self_order.rst:214
+#: ../../content/applications/sales/point_of_sale/self_order.rst:187
+#: ../../content/applications/sales/point_of_sale/self_order.rst:215
 msgid ""
 "Follow the instructions on-screen to assign a table and pay for the order."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:190
+#: ../../content/applications/sales/point_of_sale/self_order.rst:191
 msgid "On the POS user's end,"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:192
+#: ../../content/applications/sales/point_of_sale/self_order.rst:193
 msgid "Click :guilabel:`Start Kiosk`."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:193
+#: ../../content/applications/sales/point_of_sale/self_order.rst:194
 msgid "Open the provided URL on the self-ordering kiosk(s)."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:195
+#: ../../content/applications/sales/point_of_sale/self_order.rst:196
 msgid "Click the provided URL to open the kiosk in a new tab;"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:196
+#: ../../content/applications/sales/point_of_sale/self_order.rst:197
 msgid ""
 "Click :guilabel:`Install App` to install the kiosk module on your self-"
 "ordering kiosk; or"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:197
+#: ../../content/applications/sales/point_of_sale/self_order.rst:198
 msgid ""
 "Click :guilabel:`Open on IoT Box` if your kiosk is :doc:`connected to an IoT "
 "system <../../general/iot/connect>`"
@@ -14331,19 +14909,19 @@ msgstr ""
 msgid "Popup window to open the kiosk"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:204
+#: ../../content/applications/sales/point_of_sale/self_order.rst:205
 msgid ""
 "Once a session is open, :guilabel:`Start Kiosk` switches to :guilabel:`Open "
 "Kiosk` on the POS card."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:206
+#: ../../content/applications/sales/point_of_sale/self_order.rst:207
 msgid ""
 "Click :guilabel:`Open Kiosk` on the POS card to reopen the popup window and "
 "access the self-ordering interface."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:211
+#: ../../content/applications/sales/point_of_sale/self_order.rst:212
 msgid ""
 "Click the :ref:`home button <pos/self_order/add-settings>` from a self-"
 "ordering kiosk to reach the menu or product catalog."
@@ -14353,11 +14931,11 @@ msgstr ""
 msgid "kiosk end-screen for customers"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:221
+#: ../../content/applications/sales/point_of_sale/self_order.rst:222
 msgid "A POS session must be open for customers to place an order."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/self_order.rst:222
+#: ../../content/applications/sales/point_of_sale/self_order.rst:223
 msgid ""
 "Once an order is placed, it is automatically sent to :doc:`the preparation "
 "screen <preparation>` and added to the list of POS orders."
@@ -23243,22 +23821,22 @@ msgid ""
 "internal notes about the quotation and/or customer, if desired."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:286
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:288
 msgid "Sending and confirming quotations"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:288
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:290
 msgid ""
 "Once all the necessary fields and tabs have been configured, it is time to "
 "send the quotation to the customer for confirmation. Upon confirmation, the "
 "quotation turns into an official sales order."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:291
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:293
 msgid "At the top of the form, there is a series of buttons:"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:293
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:295
 msgid ""
 ":guilabel:`Send by Email`: When clicked, a pop-up window appears with the "
 "customer's name and email address in the :guilabel:`Recipients` field, the "
@@ -23266,15 +23844,15 @@ msgid ""
 "default message in the body of the email, which can be modified, if needed."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:298
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:306
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:300
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:308
 msgid ""
 "Below that, a PDF copy of the quotation is attached. When ready, "
 "click :guilabel:`Send` to send the quotation, via email, to the customer, so "
 "they can review and confirm it."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:300
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:302
 msgid ""
 ":guilabel:`Send PRO-FORMA Invoice`: This button **only** appears if the *Pro-"
 "Forma Invoice* setting has been enabled. When clicked, a pop-up window "
@@ -23284,13 +23862,13 @@ msgid ""
 "the email, which can be modified, if needed."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:308
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:310
 msgid ""
 ":guilabel:`Confirm`: When clicked, the quotation is confirmed, and the "
 "status changes to :guilabel:`Sales Order`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:310
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:312
 msgid ""
 ":guilabel:`Preview`: When clicked, Odoo reveals a preview of the quotation "
 "the customer sees when they log into their customer portal. Click "
@@ -23298,29 +23876,29 @@ msgid ""
 "the preview page, in the blue banner, to return to the quotation form."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:313
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:315
 msgid ":guilabel:`Cancel`: When clicked, the quotation is canceled."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:316
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:318
 msgid ""
 "If the *Lock Confirmed Sales* setting is enabled, the sales order "
 "becomes :guilabel:`Locked`, and is indicated as such on the sales order form."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:319
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:321
 msgid ""
 "At this point, the quotation has been confirmed, turned into a sales order, "
 "and is now ready to be invoiced and paid for."
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:322
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:324
 msgid ""
 "For more information about invoicing, refer to the :doc:`Invoice based on "
 "delivered or ordered quantities <../invoicing/invoicing_policy>`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:326
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:328
 #: ../../content/applications/sales/sales/sales_quotations/deadline.rst:56
 #: ../../content/applications/sales/sales/sales_quotations/get_paid_to_validate.rst:89
 #: ../../content/applications/sales/sales/sales_quotations/get_signature_to_validate.rst:77
@@ -23329,27 +23907,27 @@ msgstr ""
 msgid ":doc:`quote_template`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:327
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:329
 msgid ":doc:`deadline`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:328
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:330
 #: ../../content/applications/sales/sales/sales_quotations/get_paid_to_validate.rst:90
 #: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:248
 msgid ":doc:`get_signature_to_validate`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:329
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:331
 #: ../../content/applications/sales/sales/sales_quotations/get_signature_to_validate.rst:78
 #: ../../content/applications/sales/sales/sales_quotations/quote_template.rst:249
 msgid ":doc:`get_paid_to_validate`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:330
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:332
 msgid ":doc:`pdf_quote_builder`"
 msgstr ""
 
-#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:331
+#: ../../content/applications/sales/sales/sales_quotations/create_quotations.rst:333
 msgid ":doc:`../invoicing/proforma`"
 msgstr ""
 
@@ -26180,10 +26758,10 @@ msgstr ""
 
 #: ../../content/applications/sales/subscriptions.rst:83
 msgid ""
-":guilabel:`Billing Period`: determines the recurrence period of the "
-"recurring plan. Set the numerical value in the text field and contextualize "
-"the quantity with a unit of time in the corresponding drop-down menu, "
-"in :guilabel:`Weeks`, :guilabel:`Months`, or :guilabel:`Years`."
+":guilabel:`Billing Period`: determines the frequency with which the "
+"subscription is billed. Set the unit of time "
+"(:guilabel:`Weeks`, :guilabel:`Months`, or :guilabel:`Years`) in the drop-"
+"down menu and the numerical value in the corresponding text field."
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions.rst:86
@@ -26202,12 +26780,26 @@ msgstr ""
 
 #: ../../content/applications/sales/subscriptions.rst:94
 msgid ""
-":guilabel:`Align to Period Start`: optionally force new and recurring "
-"subscription renewal dates under this plan to the first day of what is "
-"defined in the :guilabel:`Billing Period`."
+":guilabel:`Align to Period Start`: sets new and recurring subscription plans "
+"to bill on the first day of the next :guilabel:`Billing Period`. When a "
+"subscription plan is purchased in the middle of a billing period, the "
+"invoice shows a reduced cost. Setting a custom period start dates (such as "
+"the 5th of each month) requires custom development and is not available by "
+"default."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:96
+#: ../../content/applications/sales/subscriptions.rst:100
+msgid ""
+"On the 15th of July, a customer purchases a monthly subscription for a "
+"streaming service. Selecting :guilabel:`Align to Period Start` for this "
+"recurring plan configures this subscription to bill on the 1st of each "
+"month. The subscription begins as soon as payment is confirmed. The "
+"quotation shows the full cost of the subscription for July 1 - 31, but the "
+"invoice shows an adjusted cost for July 15 - 31. On the 1st of August, the "
+"customer is charged the full price for the month's subscription."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions.rst:107
 msgid ""
 ":guilabel:`Company`: optional assignment, if the database has :doc:`Multi-"
 "company <../general/companies/multi_company>` functionality enabled. "
@@ -26215,7 +26807,7 @@ msgid ""
 "company's location, specifically."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:99
+#: ../../content/applications/sales/subscriptions.rst:110
 msgid ""
 ":guilabel:`Invoice Email Template`: assigns a specific email template to be "
 "used in subscriptions invoicing communications. The default assignment here "
@@ -26225,7 +26817,7 @@ msgid ""
 "total amount invoiced, etc."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:105
+#: ../../content/applications/sales/subscriptions.rst:116
 msgid ""
 "Although this field is optional, it is recommended to use it since this type "
 "of communication fulfills good business practices around price transparency, "
@@ -26240,7 +26832,7 @@ msgid ""
 "customers."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:113
+#: ../../content/applications/sales/subscriptions.rst:124
 msgid ""
 "The `Invoice: Sending` email template is accessible by clicking "
 "the :icon:`fa-arrow-right` (:guilabel:`Internal link`) that appears after "
@@ -26248,11 +26840,11 @@ msgid ""
 "the :guilabel:`Recurring Plans` form."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:118
+#: ../../content/applications/sales/subscriptions.rst:129
 msgid "SELF-SERVICE section"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:120
+#: ../../content/applications/sales/subscriptions.rst:131
 msgid ""
 "The following optional fields enable customers to take administrative "
 "actions on their own subscriptions. Enabling any of these options may "
@@ -26260,7 +26852,7 @@ msgid ""
 "(LTV)."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:124
+#: ../../content/applications/sales/subscriptions.rst:135
 msgid ""
 ":guilabel:`Closable`: checking this box will give customers the power to "
 "close their own subscriptions. Consider enabling this option to reduce "
@@ -26270,7 +26862,7 @@ msgid ""
 "negative reviews."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:130
+#: ../../content/applications/sales/subscriptions.rst:141
 msgid ""
 "Although this option is generally advisable to enable, sales teams with "
 "strong customer offboarding processes may consider leaving this option "
@@ -26279,7 +26871,7 @@ msgid ""
 "subscription or a new trial period with an alternative plan)."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:135
+#: ../../content/applications/sales/subscriptions.rst:146
 msgid ""
 ":guilabel:`Add Products`: allows customers to add new products or edit "
 "existing product quantities to their recurring sales orders, thereby "
@@ -26288,13 +26880,13 @@ msgid ""
 "performs a quantitative adjustment on their sales order product lines."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:140
+#: ../../content/applications/sales/subscriptions.rst:151
 msgid ""
 ":guilabel:`Renew`: enabling this allows customers to manually create "
 "a :doc:`Renewal quotation <subscriptions/renewals>` for their subscription."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:142
+#: ../../content/applications/sales/subscriptions.rst:153
 msgid ""
 ":guilabel:`Optional Plans`: adding values here from the drop-down field menu "
 "enables customers to switch their subscription plans, in which case a new "
@@ -26302,11 +26894,11 @@ msgid ""
 "request."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:147
+#: ../../content/applications/sales/subscriptions.rst:158
 msgid "Pricing tab"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:149
+#: ../../content/applications/sales/subscriptions.rst:160
 msgid ""
 "Make product-specific pricing adjustments, as part of the recurring plan, by "
 "adding them to the :guilabel:`Pricing` tab order lines. Sequentially add "
@@ -26315,7 +26907,7 @@ msgid ""
 "a :guilabel:`Recurring Price`."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:155
+#: ../../content/applications/sales/subscriptions.rst:166
 msgid ""
 "Price rules that are added here take precedent over the default pricing "
 "information on the subscription product's form. This is meant to accommodate "
@@ -26323,18 +26915,18 @@ msgid ""
 "incentivize customers to purchase the recurring plan."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:160
+#: ../../content/applications/sales/subscriptions.rst:171
 msgid "Smart buttons"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:162
+#: ../../content/applications/sales/subscriptions.rst:173
 msgid ""
 "At the top of the individual :guilabel:`Recurring Plans` form, are two smart "
 "buttons to aid in navigating the recurring revenue sources attached to the "
 "plan:"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:165
+#: ../../content/applications/sales/subscriptions.rst:176
 msgid ""
 ":guilabel:`Subscriptions`: shows the number of active subscriptions sales "
 "orders that fall under the recurring plan. Clicking the button leads to a "
@@ -26342,7 +26934,7 @@ msgid ""
 "sales order."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:168
+#: ../../content/applications/sales/subscriptions.rst:179
 msgid ""
 ":guilabel:`Subscription Items`: lists all the individual recurring "
 "subscription services that are active, in an itemized "
@@ -26351,11 +26943,11 @@ msgid ""
 "order."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:173
+#: ../../content/applications/sales/subscriptions.rst:184
 msgid "Product form configuration"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:175
+#: ../../content/applications/sales/subscriptions.rst:186
 msgid ""
 "With recurring plans set up, create a subscription product by navigating "
 "to :menuselection:`Subscriptions app --> Products --> Products`, and click "
@@ -26363,7 +26955,7 @@ msgid ""
 "clicking :guilabel:`New` to open up the subscription product's form."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:180
+#: ../../content/applications/sales/subscriptions.rst:191
 msgid ""
 "By default, the :guilabel:`Subscriptions` option is already enabled, "
 "prompting Odoo to recognize it as a subscription product. Be sure to leave "
@@ -26374,13 +26966,13 @@ msgstr ""
 msgid "A basic subscription product form in Odoo Subscriptions application."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:187
+#: ../../content/applications/sales/subscriptions.rst:198
 msgid ""
 "On the product form, configure the following items in the :guilabel:`General "
 "Information` tab so the subscription product will function correctly:"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:190
+#: ../../content/applications/sales/subscriptions.rst:201
 msgid ""
 ":guilabel:`Product type`: this value is typically set to "
 "a :guilabel:`Service`, however other product types may be used depending on "
@@ -26388,30 +26980,30 @@ msgid ""
 "eLearning course with supplemental physical goods, etc.)."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:193
+#: ../../content/applications/sales/subscriptions.rst:204
 msgid ""
 ":doc:`Invoicing policy <sales/invoicing/invoicing_policy>`: set this value "
 "to when the customer should be charged for their subscription."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:195
+#: ../../content/applications/sales/subscriptions.rst:206
 msgid ""
 ":guilabel:`Unit of Measure`: how the product should be counted in Odoo, for "
 "stock purposes. For most subscriptions, the :abbr:`UoM (Unit of Measure)` "
 "will be :guilabel:`Units`."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:197
+#: ../../content/applications/sales/subscriptions.rst:208
 msgid ""
 ":guilabel:`Sales Price`: enter the recurring cost of the subscription that "
 "the customer will pay per recurrence period."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:200
+#: ../../content/applications/sales/subscriptions.rst:211
 msgid "Optionally set up information on the:"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:202
+#: ../../content/applications/sales/subscriptions.rst:213
 msgid ""
 ":guilabel:`Create on Order` field: this enables secondary actions in Odoo "
 "such as creating a new :guilabel:`Task` in a "
@@ -26421,27 +27013,27 @@ msgid ""
 "choose :guilabel:`Nothing` for the field' value."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:206
+#: ../../content/applications/sales/subscriptions.rst:217
 msgid ""
 ":doc:`Attributes & Variants <sales/products_prices/products/variants>` tab "
 "if the subscription contains multiple choices for customers (i.e. food "
 "delivery, tailored fashion boxes, etc.)."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:208
+#: ../../content/applications/sales/subscriptions.rst:219
 msgid ""
 ":guilabel:`Purchase` tab if the product is sourced from a vendor, such as "
 "part of reseller (retail) or subcontracting operations."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:211
+#: ../../content/applications/sales/subscriptions.rst:222
 msgid ""
 "In the :guilabel:`Recurring Prices` tab, clarify the pricing options for the "
 "subscription. For each option available, click :guilabel:`Add a price rule` "
 "to add a new row."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:215
+#: ../../content/applications/sales/subscriptions.rst:226
 msgid ""
 "Longer time :guilabel:`Recurring Plan` time periods are typically "
 "incentivized with cost savings. Consider dropping the "
@@ -26449,7 +27041,7 @@ msgid ""
 "supporting the business's financial runway."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:219
+#: ../../content/applications/sales/subscriptions.rst:230
 msgid ""
 "Last, if the subscription is meant to be sold on the **eCommerce** website, "
 "click the :icon:`fa-globe` :menuselection:`Go To Website` smart button and "
@@ -26457,54 +27049,54 @@ msgid ""
 "from :guilabel:`Unpublished` to the green :guilabel:`Published` status."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:226
+#: ../../content/applications/sales/subscriptions.rst:237
 msgid "Create a subscriptions quotation"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:228
+#: ../../content/applications/sales/subscriptions.rst:239
 msgid ""
 "Manually create a new customer subscription by navigating to either "
 "the :menuselection:`Sales` or :menuselection:`Subscriptions` app dashboards, "
 "and then clicking :guilabel:`New`."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:232
+#: ../../content/applications/sales/subscriptions.rst:243
 msgid ""
 "Products that have been marked as :guilabel:`Subscriptions` on their product "
 "forms, and are also sold on the **eCommerce** website will *automatically* "
 "create and confirm subscription quotations in the backend of Odoo."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:237
+#: ../../content/applications/sales/subscriptions.rst:248
 msgid ""
 "Sales orders with a defined recurring plan automatically become "
 "subscriptions."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:239
+#: ../../content/applications/sales/subscriptions.rst:250
 msgid ""
 "On the quotation form, fill in the necessary fields such "
 "as :guilabel:`Customer` and :guilabel:`Recurring Plan`, as well as "
 "the :guilabel:`Order Lines` tab."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:242
+#: ../../content/applications/sales/subscriptions.rst:253
 msgid "Optionally, specify a:"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:244
+#: ../../content/applications/sales/subscriptions.rst:255
 msgid ""
 ":doc:`Quotation Template <sales/sales_quotations/quote_template>`, if one is "
 "readily available to help populate the form fields."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:246
+#: ../../content/applications/sales/subscriptions.rst:257
 msgid ""
 ":guilabel:`Expiration` date, to indicate when the subscription offer is no "
 "longer valid."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:249
+#: ../../content/applications/sales/subscriptions.rst:260
 msgid ""
 "Expiration dates pair well with :doc:`discounts <sales/products_prices/"
 "prices/discounts>` to incentivize faster purchases, since the discount will "
@@ -26512,13 +27104,13 @@ msgid ""
 "specified date range."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:253
+#: ../../content/applications/sales/subscriptions.rst:264
 msgid ""
 ":doc:`Pricelist <sales/products_prices/prices/pricing>`, if one is available "
 "and appropriate to use (i.e., summer sale discount, VIP customer, etc.)."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:255
+#: ../../content/applications/sales/subscriptions.rst:266
 msgid ""
 ":guilabel:`Payment Terms`, to set a specified time window for when the "
 "subscription must be paid. This is not to be confused for when the quotation "
@@ -26530,31 +27122,31 @@ msgstr ""
 msgid "A completed example of a new subscription quotation in Odoo."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:264
+#: ../../content/applications/sales/subscriptions.rst:275
 msgid ""
 "Define different invoice and delivery addresses by enabling "
 "the :doc:`Customer Addresses </applications/finance/accounting/"
 "customer_invoices/customer_addresses>` feature."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:270
+#: ../../content/applications/sales/subscriptions.rst:281
 msgid "Confirmation"
 msgstr "Підтвердження"
 
-#: ../../content/applications/sales/subscriptions.rst:272
+#: ../../content/applications/sales/subscriptions.rst:283
 msgid ""
 "Send the quotation to the customer for confirmation by clicking "
 "on :guilabel:`Send By Email`, or confirm it immediately by clicking "
 "on :guilabel:`Confirm`."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:276
+#: ../../content/applications/sales/subscriptions.rst:287
 msgid ""
 "Click on :guilabel:`Preview` to preview the customer portal where the "
 "customer can view their quotation, sign and pay it, and communicate with you."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:279
+#: ../../content/applications/sales/subscriptions.rst:290
 msgid ""
 "If an :guilabel:`Online signature` or :guilabel:`Online payment` is required "
 "to confirm the quotation, set the checkboxes next to either (or both) of "
@@ -26562,11 +27154,11 @@ msgid ""
 "section."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:284
+#: ../../content/applications/sales/subscriptions.rst:295
 msgid ":doc:`/applications/finance/accounting/payments/online`"
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions.rst:285
+#: ../../content/applications/sales/subscriptions.rst:296
 msgid ""
 ":doc:`Payment providers and payment methods </applications/finance/"
 "payment_providers>`"
@@ -26740,7 +27332,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/closing.rst:103
-#: ../../content/applications/sales/subscriptions/renewals.rst:128
+#: ../../content/applications/sales/subscriptions/renewals.rst:93
 #: ../../content/applications/sales/subscriptions/reports.rst:403
 #: ../../content/applications/sales/subscriptions/scheduled_actions.rst:195
 #: ../../content/applications/sales/subscriptions/upselling.rst:107
@@ -26803,212 +27395,162 @@ msgstr ""
 
 #: ../../content/applications/sales/subscriptions/renewals.rst:5
 msgid ""
-"The foundation of any subscription business model is recurring payments. "
-"This is when customers reliably pay a regular amount at specific intervals, "
-"in exchange for access to a subscription product or service."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/renewals.rst:9
-msgid ""
 "Subscription renewal is the process customers follow when they willingly "
-"choose to continue participating in, and paying for, a subscription product "
-"or service."
+"choose to continue a subscription product or service. Subscribers go through "
+"the renewal process at different intervals -- weekly, monthly, annually, "
+"etc. -- depending on the duration of the agreed-upon contract. Most "
+"companies that offer subscriptions prefer to automate the renewal process "
+"for customers. However, manual subscription renewals are still used in some "
+"cases."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/renewals.rst:12
-msgid ""
-"Subscribers experience the renewal process at different intervals -- weekly, "
-"monthly, annually, etc. -- depending on the duration of the agreed-upon "
-"contract."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/renewals.rst:15
-msgid ""
-"Most companies that offer subscriptions prefer to automate the renewal "
-"process for customers. However, manual subscription renewals are still used "
-"in some cases."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/renewals.rst:18
+#: ../../content/applications/sales/subscriptions/renewals.rst:11
 msgid ""
 "With the Odoo **Subscriptions** application, a company can manage all of its "
-"subscriptions in one place. Renewals can be processed automatically, or "
+"subscriptions in one place. Renewals can be processed automatically or "
 "manually, include additional products or upsells per renewal order, and be "
-"filtered in batch views to quickly locate customers who need to renew their "
+"filtered in batch views to locate customers who need to renew their "
 "subscriptions."
 msgstr ""
 
+#: ../../content/applications/sales/subscriptions/renewals.rst:17
+msgid "Create a renewal manually"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/renewals.rst:19
+msgid ""
+"In order to create a renewal quotation, there are certain prerequisites that "
+"a subscription must meet."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/renewals.rst:22
+msgid "A quotation with a subscription product must be confirmed."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/renewals.rst:23
+msgid "A configured *recurring plan* must be selected."
+msgstr ""
+
 #: ../../content/applications/sales/subscriptions/renewals.rst:24
-msgid "Subscription renewals"
+msgid ""
+"Payment from the customer for the initial subscription must be invoiced and "
+"registered."
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/renewals.rst:26
 msgid ""
-"In order to renew a subscription, a quotation with a subscription product "
-"**must** be confirmed, with a configured *Recurring Plan* selected."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/renewals.rst:29
-msgid ""
-"To open a subscription quotation, navigate to :menuselection:`Subscriptions "
-"app --> Subscriptions --> Quotations`, and select the desired quotation from "
-"the list. Or, create a new one by clicking :guilabel:`New` to open a new "
-"quotation form."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/renewals.rst:34
-msgid "Only a singular product is required."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/renewals.rst:35
-msgid ""
-"A subscription service counts as a product, as it is considered a recurring "
-"product."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/renewals.rst:37
-msgid ""
-"Subscription quotations **must** be confirmed, and payment from the customer "
-"for the initial subscription **must** be invoiced and registered in order to "
-"successfully open a *Renewal Quotation*."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/renewals.rst:42
-msgid ""
-"For more information on the above process of confirming quotations and "
-"invoicing payments, see: - :doc:`../sales/sales_quotations/"
-"create_quotations` - :doc:`../sales/sales_quotations/get_paid_to_validate`"
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/renewals.rst:47
-msgid ""
-"Once the payment from the subscription quotation is confirmed, the quotation "
-"turns into a sales order. An :guilabel:`In Progress` tag is applied to the "
-"sales order form, and a series of buttons also appear at the top of the "
-"sales order, including a :guilabel:`Renew` button."
+"To check if an existing subscription quotation meets the prerequisites, "
+"navigate to :menuselection:`Subscriptions app --> Subscriptions --> "
+"Quotations` and select the desired quotation from the list. Properly "
+"configured subscriptions show as being in the :guilabel:`Sales Order` stage, "
+"have an :guilabel:`In Progress` tag, and have the :guilabel:`Renew` button "
+"in the row of buttons directly above the order form."
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/renewals.rst:-1
 msgid "Renew button on subscription sales order with Odoo Subscriptions."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/renewals.rst:55
+#: ../../content/applications/sales/subscriptions/renewals.rst:36
 msgid ""
 "When the :guilabel:`Renew` button is clicked, Odoo instantly presents a new "
-"renewal quotation, complete with a :guilabel:`Renewal Quotation` tag."
+"renewal quotation, complete with a :guilabel:`Renewal Quotation` tag. "
+"Important reference information like the start date and next invoice date "
+"are automatically added to the renewal quotation's chatter."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/renewals.rst:40
+msgid ""
+"From here, follow the standard sales flow to :ref:`confirm the quotation "
+"<sales/sales_quotations/send-and-confirm>`, :doc:`invoice the order <../../"
+"sales/sales/invoicing/invoicing_policy>`, and :ref:`register payment "
+"<finance/accounting/register-payment-invoice-bill>`."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/renewals.rst:45
+msgid ""
+"Once the renewal quotation is confirmed, it becomes a sales order and "
+"a :icon:`fa-usd` :guilabel:`Sales History` smart button appears at the top "
+"of the page. When the :icon:`fa-usd` :guilabel:`Sales History` smart button "
+"is clicked, Odoo loads a new page showcasing the different sales orders "
+"attached to this subscription, along with their "
+"individual :guilabel:`Subscription Status`."
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/renewals.rst:-1
 msgid "Renewal quotation in the Odoo Subscriptions application."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/renewals.rst:62
+#: ../../content/applications/sales/subscriptions/renewals.rst:56
 msgid ""
-"From here, a standard sales flow can occur to confirm the quotation. This "
-"typically begins by clicking :guilabel:`Send by Email`, which sends a copy "
-"of the quotation to the customer, by email, for them to confirm, and "
-"eventually, pay for."
+"On rare occasions, automatic payments can fail to register properly, which "
+"results in a :guilabel:`Payment Failure` tag on the sales order and "
+"the :guilabel:`Contract in exception` checkbox being automatically ticked in "
+"the :guilabel:`Subscription` section of the sales order's :guilabel:`Other "
+"Info` tab."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/renewals.rst:61
+msgid ""
+"Being marked :guilabel:`Contract in exception` prevents scheduled actions "
+"from running, which keeps the system from accidentally double-charging the "
+"customer if the automatic payment actually went through. Because the status "
+"of the payment failed to register with the system, users must manually check "
+"if the payment has been made before automatic payments and other scheduled "
+"actions can resume."
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/renewals.rst:67
 msgid ""
-"In the chatter of the :guilabel:`Renewal Quotation`, it is mentioned that "
-"this subscription is the renewal of the subscription from the original sales "
-"order."
+"To do this, navigate to :menuselection:`Subscriptions app --> Subscriptions "
+"--> Quotations`. Click into the desired subscription, then check the Chatter "
+"to see if the payment was made."
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/renewals.rst:70
 msgid ""
-"Once the :guilabel:`Renewal Quotation` is confirmed, it becomes a sales "
-"order, and a :guilabel:`Sales History` smart button appears at the top of "
-"the page."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/renewals.rst:-1
-msgid "Sales History smart button in the Odoo Subscriptions application."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/renewals.rst:77
-msgid ""
-"When that :guilabel:`Sales History` smart button is clicked, Odoo reveals a "
-"separate page, showcasing the different sales orders attached to this "
-"subscription, along with their individual :guilabel:`Subscription Status`."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/renewals.rst:85
-msgid ""
-"Additionally, once the :guilabel:`Renewal Quotation` is confirmed, "
-"an :guilabel:`MRR` smart button also appears at the top of the sales order."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/renewals.rst:-1
-msgid "MRR smart button in the Odoo Subscriptions application."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/renewals.rst:92
-msgid ""
-"When clicked, Odoo reveals an :guilabel:`MRR Analysis` page, detailing the "
-"monthly recurring revenue related to this specific subscription."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/renewals.rst:96
-msgid ""
-"On rare occasions, automatic payment can fail, which results in a *Payment "
-"Failure* tag on the top-right of the sales order, if there is an error in "
-"the payment method."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/renewals.rst:99
-msgid ""
-"This is done to prevent the system from charging the customer again the next "
-"time a scheduled action is run. Because the status of the payment is "
-"unknown, Odoo requests a manual operation to check if the payment has been "
-"made, before the payment can be used again."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/renewals.rst:103
-msgid ""
-"To do this, navigate to :menuselection:`Subscriptions app --> Subscriptions "
-"--> Quotations`. Click into the desired subscription, then check the "
-"*Chatter* to see if the payment was made."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/renewals.rst:106
-msgid ""
-"If the payment was **not** made, first enter :doc:`debug mode <../../general/"
-"developer_mode>`. Then, click the :guilabel:`Other Info` tab, and untick the "
-"checkbox next to :guilabel:`Contract in exception`. Reload the sales order, "
-"and the :guilabel:`Payment Failure` tag is gone."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/renewals.rst:110
-msgid ""
-"If the payment **was** made, a new invoice must be made and posted manually. "
-"This automatically updates the next invoice date of the subscription. Once "
-"created, enter :doc:`debug mode <../../general/developer_mode>`, and "
-"navigate to the new sales order. Click the :guilabel:`Other Info` tab, and "
+"If the payment *was not* made, first enter :doc:`developer mode <../../"
+"general/developer_mode>`. Then, click the :guilabel:`Other Info` tab, and "
 "untick the checkbox next to :guilabel:`Contract in exception`. Reload the "
-"sales order, and the :guilabel:`Payment Failure` tag is gone."
+"sales order and confirm that the :guilabel:`Payment Failure` tag is gone."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/renewals.rst:75
+msgid ""
+"If the payment *was* made, a new invoice must be made and posted manually. "
+"This automatically updates the next invoice date of the subscription. Once "
+"the invoice is created, enter :doc:`developer mode <../../general/"
+"developer_mode>` and navigate to the new sales order. Click "
+"the :guilabel:`Other Info` tab, and untick the checkbox next "
+"to :guilabel:`Contract in exception`. Reload the sales order and confirm "
+"that the :guilabel:`Payment Failure` tag is gone."
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/renewals.rst:0
 msgid ""
-"The \"contract in exception\" option selected with the \"payment failure\" "
-"tag shown."
+"The contract in exception option selected with the payment failure tag shown."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/renewals.rst:120
+#: ../../content/applications/sales/subscriptions/renewals.rst:85
 msgid ""
-"The :guilabel:`contract in exception`` option selected with "
-"the :guilabel:`payment failure` tag shown."
+"The :guilabel:`Contract in exception` option selected with "
+"the :guilabel:`Payment Failure` tag shown."
 msgstr ""
 
-#: ../../content/applications/sales/subscriptions/renewals.rst:123
+#: ../../content/applications/sales/subscriptions/renewals.rst:88
 msgid ""
-"In both cases, once the :guilabel:`Contract in exception` option is no "
-"longer selected, Odoo handles renewals automatically again. If the "
-"subscription remains in *payment failure*, it is skipped by Odoo until the "
-"sales order is closed."
+"In both cases, once the :guilabel:`Contract in exception` checkbox is no "
+"longer ticked, Odoo handles renewals automatically again. If the "
+"subscription remains in :guilabel:`Payment Failure`, it is ignored by Odoo "
+"until the sales order is closed."
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/renewals.rst:94
+msgid ":doc:`../sales/sales_quotations/create_quotations`"
+msgstr ""
+
+#: ../../content/applications/sales/subscriptions/renewals.rst:95
+msgid ":doc:`../sales/sales_quotations/get_paid_to_validate`"
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/reports.rst:3
