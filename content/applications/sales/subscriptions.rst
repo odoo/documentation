@@ -284,3 +284,4 @@ Odoo. Sales orders with defined recurring plans automatically become subscriptio
    subscriptions/automatic_alerts
    subscriptions/scheduled_actions
    subscriptions/reports
+   subscriptions/automatic_payments
