@@ -54,6 +54,10 @@ Configure or add the following parameters:
 - :guilabel:`Default media type`: `SRTP-DTLS`
 - :guilabel:`Transport protocol`: `UDP`, `TCP`, `WSS`, `TLS`
 
+.. important::
+   The SRTP media encryption and TLS SIP transport are disabled by default in DIDWW. Contact the
+   DIDWW sales team sales@didww.com to allow traffic encryption for your account.
+
 .. image:: didww/sip-device-route.png
    :alt: The settings for a new contact method in DIDWW.
 
@@ -62,6 +66,12 @@ Configure or add the following parameters:
    selection, the :guilabel:`Inbound voice trunk` needs to be modified. Navigate to the dashboard,
    then click :guilabel:`My Numbers`. Scroll to :guilabel:`Configuration`. In the :guilabel:`Inbound
    voice trunk` field, select :guilabel:`phone.systems`.
+
+Lastly, verify that the DID number is selected in the *Inbound Calls* section of the SIP Device
+Route settings.
+
+.. image:: didww/did-number.png
+   :alt: The DID numbers field in DIDWW.
 
 Odoo setup
 ==========
