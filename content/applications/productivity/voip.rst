@@ -71,8 +71,7 @@ Odoo:
 
 To add the credentials for the alternate provider, go to the **Settings** app and search for `VoIP`.
 In the :guilabel:`Integrations` section under :guilabel:`VoIP`, click :guilabel:`Manage Providers`.
-And then, click :guilabel:`New` and enter the requested information (like the websocket's URL). Note
-that the :guilabel:`OnSIP Domain` field is where the domain created by the alternate provider goes.
+And then, click :guilabel:`New` and enter the requested information (like the websocket's URL).
 
 If any issues with the |VOIP| service provider are encountered, then reach out to their support
 team. If any issues when setting up the |VOIP| service provider are encountered in Odoo, then follow
