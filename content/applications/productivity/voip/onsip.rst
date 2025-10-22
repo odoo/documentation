@@ -33,30 +33,31 @@ Configuration
 =============
 
 To configure the Odoo database to connect to OnSIP services, first navigate to the
-:menuselection:`Apps application` from the main Odoo dashboard. Then, remove the default `Apps`
-filter from the :guilabel:`Search...` bar, and search for `OnSIP`.
+:menuselection:`Apps application` from the main Odoo dashboard. Then, search for `phone`.
 
-Next, activate the :guilabel:`VOIP OnSIP` module.
+Next, activate the :guilabel:`Phone` module.
 
-.. image:: onsip/install-onsip.png
+.. image:: onsip/install-voip.png
    :align: center
-   :alt: View of OnSIP app in the app search results.
+   :alt: View of Odoo Phone in the app search results.
 
 Odoo VoIP setting
 -----------------
 
-After installing the *VOIP OnSIP* module, go to the :menuselection:`Settings app`, scroll down to
-the :guilabel:`Integrations` section, and locate the :guilabel:`VoIP` fields. Then, proceed to fill
-in those three fields with the following information:
+After installing the *Phone* module, go to the :menuselection:`Phone app`, click on
+:guilabel:`Configuration` in the top bar menu, then on :guilabel:`Providers` fields. Then, create
+a new entry for OnSIP if it doesn't exist yet and fill the fields with the following information:
 
-- :guilabel:`OnSIP Domain`: the domain that was assigned when creating an account on `OnSIP
+- :guilabel:`PBX Server IP`: the domain that was assigned when creating an account on `OnSIP
   <https://www.onsip.com/>`_.
 - :guilabel:`WebSocket`: `wss://edge.sip.onsip.com`
 - :guilabel:`VoIP Environment`: :guilabel:`Production`
 
+You can configure the other fields according to your own preferences.
+
 .. image:: onsip/voip-setting.png
    :align: center
-   :alt: VoIP configuration settings in Odoo Settings app.
+   :alt: Provider configuration in Odoo Phone.
 
 .. tip::
    To access the OnSIP domain, navigate to `OnSIP <https://www.onsip.com/>`_ and log in. Then, click
@@ -73,6 +74,9 @@ in those three fields with the following information:
       :alt: Domain setting revealed (highlighted) on administrative panel of OnSIP management
             console.
 
+   To enable compatibility with Odoo Phone, make sure that you set the `Auth username` field to the
+   same value as the `Username` field.
+
 Odoo user setting
 -----------------
 
@@ -82,15 +86,15 @@ configured in the Odoo user's settings/preferences.
 To do that, navigate to :menuselection:`Settings app --> Manage Users --> Select the User`.
 
 On the user form, click :guilabel:`Edit` to configure the user's OnSIP account. Then, click the
-:guilabel:`Preferences` tab, and scroll to the :guilabel:`VoIP Configuration` section.
+:guilabel:`Preferences` tab, and scroll to the :guilabel:`VoIP` section.
 
-In this section, fill in the fields with OnSIP credentials.
+In this section, select the provider you just configured and fill in the fields with OnSIP
+credentials.
 
 Fill in the following fields with the associated credentials listed below:
 
-- :guilabel:`Voip Username` = OnSIP :guilabel:`Username`
-- :guilabel:`OnSIP Auth Username` = OnSIP :guilabel:`Auth Username`
-- :guilabel:`VoIP Secret` = OnSIP :guilabel:`SIP Password`
+- :guilabel:`Username` = OnSIP :guilabel:`Username`
+- :guilabel:`Secret` = OnSIP :guilabel:`SIP Password`
 
 .. tip::
    The OnSIP extension can be found in the *User* banner line above the tabs.
@@ -131,7 +135,7 @@ window (or tab), and try again.
 
 .. image:: onsip/onsip04.png
    :align: center
-   :alt: Missing parameter message in the Odoo VoIP widget.
+   :alt: Missing parameter message in the Odoo Phone widget.
 
 Incorrect number
 ~~~~~~~~~~~~~~~~
@@ -147,7 +151,7 @@ For example, `16505555555` (where `1` is the international prefix for the United
 
 .. image:: onsip/onsip05.png
    :align: center
-   :alt: Incorrect number message populated in the Odoo VoIP widget.
+   :alt: Incorrect number message populated in the Odoo Phone widget.
 
 .. seealso::
    For a list of comprehensive country codes, visit: `https://countrycode.org
@@ -157,7 +161,7 @@ OnSIP on mobile phone
 =====================
 
 In order to make and receive phone calls when the user is not in front of Odoo on their computer, a
-softphone app on a mobile phone can be used in parallel with Odoo *VoIP*.
+softphone app on a mobile phone can be used in parallel with Odoo *Phone*.
 
 This is useful for convenient, on-the-go calls, and to make sure incoming calls are heard. Any SIP
 softphone will work.
