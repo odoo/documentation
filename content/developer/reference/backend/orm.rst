@@ -1227,18 +1227,20 @@ When using :attr:`~odoo.models.Model._inherit` but leaving out
 :attr:`~odoo.models.Model._name`, the new model replaces the existing one,
 essentially extending it in-place. This is useful to add new fields or methods
 to existing models (created in other modules), or to customize or reconfigure
-them (e.g. to change their default sort order)::
+them (e.g. to change their default sort order)
+
+.. code-block:: python
 
     class Extension0(models.Model):
-    _name = 'extension.0'
-    _description = 'Extension zero'
+        _name = 'extension.0'
+        _description = 'Extension zero'
 
-    name = fields.Char(default="A")
+        name = fields.Char(default="A")
 
     class Extension0(models.Model):
-    _inherit = ['extension.0']
+        _inherit = 'extension.0'
 
-    description = fields.Char(default="Extended")
+        description = fields.Char(default="Extended")
 
 .. code-block:: python3
 
@@ -1270,7 +1272,9 @@ model.
 
 The main difference is in the meaning. When using Delegation, the model
 **has one** instead of **is one**, turning the relationship in a composition
-instead of inheritance::
+instead of inheritance
+
+.. code-block:: python
 
     class Screen(models.Model):
         _name = 'delegation.screen'
@@ -1338,7 +1342,9 @@ In that case, the attributes of the field are taken from the parent class
 and overridden by the ones given in subclasses.
 
 For instance, the second class below only adds a tooltip on the field
-``state``::
+``state``
+
+.. code-block:: python
 
     class FirstFoo(models.Model):
         state = fields.Selection([...], required=True)
