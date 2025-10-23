@@ -105,6 +105,8 @@ Vendors are added with the **Contacts** app. Refer to the :doc:`documentation
    Different tabs or fields may be visible on the :guilabel:`Create Vendor` form, depending on what
    other applications are installed.
 
+.. _fleet/view-services:
+
 View services
 =============
 
