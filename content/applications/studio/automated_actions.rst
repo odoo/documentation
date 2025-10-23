@@ -322,12 +322,24 @@ Select an existing sequence or, to create a new sequence:
 
 #. Click :guilabel:`Search more`, then click :guilabel:`New`.
 #. In the window that opens, enter the :guilabel:`Name` of the sequence.
-#. Configure the sequence, adding a :guilabel:`Prefix` and/or :guilabel:`Suffix` as desired.
+#. In the :guilabel:`Sequence` tab, configure the sequence:
+
+   - :guilabel:`Prefix`: characters added *before* the next number in the sequence.
+   - :guilabel:`Suffix`: characters added *after* the next number in the sequence.
+   - :guilabel:`Sequence Size`: determines the number of digits in every number in the sequence. If
+     needed, leading zeros are added before the number to achieve the indicated sequence size, e.g.,
+     for a sequence size of `5`, the first number in the sequence is `00001`.
+   - :guilabel:`Step`: determines the increments between the numbers in the sequence.
+   - :guilabel:`Next Number`: the next number that will be used in the sequence, without leading
+     zeros.
 
    .. tip::
-      Use dynamic placeholders like :guilabel:`Current Year with Century: %(year)s` in the
-      :guilabel:`Prefix` and/or :guilabel:`Suffix` to create sequences with elements like current
-      year, month, etc. Possible placeholders are shows at the bottom of the window.
+      - Use dynamic placeholders like `%(year)s` or `%(month)s` as a :guilabel:`Prefix` and/or
+        :guilabel:`Suffix` to create sequences with elements like current year, month, etc. Possible
+        placeholders are shown at the bottom of the window.
+      - To use sub-sequences, e.g., to have the sequence restart each year or each month, enable
+        :guilabel:`Use subsequences per date_range`, then :guilabel:`Add a line` for each date
+        range and indicate the :guilabel:`Next Number` for the range.
 
 #. Click :guilabel:`Save`.
 
@@ -336,7 +348,9 @@ Select an existing sequence or, to create a new sequence:
    customer is created, set the :guilabel:`Sequence` field to :guilabel:`Reference`, then, in the
    dropdown, click :guilabel:`Search more`. Click :guilabel:`New` to create a new sequence.
 
-   In the example, each new customer receives a sequential reference with the prefix `
+   In the example, each new customer receives a sequential reference with the prefix
+   `#-REF-%(year)s-`, where `%(year)s` is the current year including the century, and the suffix
+   `/CL`, e.g., `#-REF-2025-00001/CL`, `#-REF-2025-00002/CL`, etc.
 
    .. image:: automated_actions/update-record-sequence.png
       :alt: Example of an Update Record action using a sequence

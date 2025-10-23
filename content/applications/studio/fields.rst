@@ -386,6 +386,9 @@ being edited. The record's name from the other model is then displayed on the re
      creation`.
    - To prevent users from opening records in a pop-up window, tick :guilabel:`Disable opening`.
    - To help users only select the right record, click on :guilabel:`Domain` to create a filter.
+   - To only trigger the search for a linked record after a minimum number of characters has been
+     entered, enter the desired number in the :guilabel:`Typeahead search` field. In situations
+     where the data set is large, this can enhance both search relevancy and performance.
 
 - :guilabel:`Badge`: displays the value inside a rounded shape, similar to a tag. The value cannot
   be edited on the UI.
@@ -446,6 +449,11 @@ records on the current model. Many2Many fields can use :guilabel:`Disable creati
 
    .. image:: fields/many2many-diagram.png
       :alt: Diagram showing many2many relationships
+
+.. tip::
+   To only trigger the search for the linked record after a minimum number of characters has been
+   entered, enter the desired number in the :guilabel:`Typeahead search` field. In situations where
+   the data set is large, this can enhance both search relevancy and performance.
 
 - :guilabel:`Checkboxes`: users can select several values using checkboxes.
 - :guilabel:`Tags`: users can select several values appearing in rounded shapes, also known as
