@@ -208,6 +208,8 @@ data files provide shorter alternatives to defining them using
 
 Defines an ``ir.ui.menu`` record with a number of defaults and fallbacks:
 
+.. rst-class:: o-definition-list
+
 ``parent``
     * If a ``parent`` attribute is set, it should be the :term:`external id`
       of an other menu item, used as the new item's parent
@@ -239,6 +241,8 @@ Defines an ``ir.ui.menu`` record with a number of defaults and fallbacks:
 Creates a :ref:`QWeb view <reference/view_architectures/qweb>` requiring only the ``arch``
 section of the view, and allowing a few *optional* attributes:
 
+.. rst-class:: o-definition-list
+
 ``id``
     the view's :term:`external identifier`
 ``name``, ``inherit_id``, ``priority``
@@ -249,13 +253,61 @@ section of the view, and allowing a few *optional* attributes:
     as a primary
 ``groups``
     comma-separated list of group :term:`external identifiers`
-``page``
-    if set to ``"True"``, the template is a website page (linkable to,
-    deletable)
-``optional``
-    ``enabled`` or ``disabled``, whether the view can be disabled (in the
-    website interface) and its default status. If unset, the view is always
-    enabled.
+``active``
+    indicates whether the view is active. If inactive, its XPath rules won’t be
+    applied, which is thus mainly relevant for views with ``inherit_id``
+
+    .. note::
+
+        Defining the ``active`` value on the ``<template>`` node itself comes
+        with a subtlety: it is only considered when creating the record. On
+        subsequent updates, the view will be updated but not its ``active``
+        status.
+
+.. _reference/data/asset:
+
+``asset``
+---------
+
+Creates an :ref:`asset <frontend/assets/ir_asset>`.
+
+.. example::
+    .. code-block:: xml
+
+        <asset id="website_something.some_style_asset" name="Some style asset" active="False">
+            <bundle>web.assets_frontend</bundle>
+            <path>website_something/static/src/some_style.scss</path>
+        </asset>
+
+**Attributes**
+
+.. rst-class:: o-definition-list
+
+``id``
+    the asset's :term:`external identifier`
+``name``
+    same as the corresponding field on ``ir.asset``
+``active`` (optional)
+    indicates whether the asset is active
+
+    .. note::
+
+        Same as ``<template>``, defining the ``active`` value on the ``<asset>``
+        node itself comes with a subtlety: it is only considered when creating
+        the record. On subsequent updates, the asset will be updated but not its
+        ``active`` status.
+
+**Child elements**
+
+.. rst-class:: o-definition-list
+
+``<bundle>`` and ``<path>``
+    required to define the corresponding fields on ``ir.asset`` (the
+    ``directive`` field can be controlled using the ``directive`` attribute on
+    the ``<bundle>`` child)
+
+``<field>`` (optional)
+    just like in a normal ``<record>``, to define more field values as needed
 
 .. _reference/data/csvdatafiles:
 
