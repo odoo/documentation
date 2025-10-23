@@ -365,3 +365,15 @@ manifest counterparts.
 `sequence` (default= `16`)
     Loading order of the asset records (ascending). A sequence lower than 16 means
     that the asset will be processed *before* the ones declared in the manifest.
+
+.. seealso::
+
+    Note that the ``ir.asset`` use case is mainly for website-related
+    applications, as it allows for conditional assets (for example, when a style
+    option is enabled).
+
+    In such cases, the ``<asset id="...">`` syntax should be preferred over the
+    ``<record id="..." model="ir.asset">`` syntax when defining the record in
+    XML.
+
+    See :ref:`reference/data/asset`, especially about the ``active`` value.
