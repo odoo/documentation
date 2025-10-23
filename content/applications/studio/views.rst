@@ -53,15 +53,24 @@ contacts, sales orders, products, etc.
   - :guilabel:`Call a method`: specify an existing Python method already defined in Odoo.
 
 - To change a button's label or style, click the button and edit its :guilabel:`Label` or
-  :guilabel:`Class` (either `btn-primary` or `btn-secondary`) in the :guilabel:`Properties` tab.
+  :guilabel:`Class` (either `btn-primary` for a *primary* button or `btn-secondary` for a
+  *secondary* button) in the :guilabel:`Properties` tab.
+
+  .. tip::
+     *Primary* buttons represent the main action(s) the user can take in a specific view, e.g.,
+     :guilabel:`Send` a request for quotation, and are more visually prominent. *Secondary* buttons
+     offer alternative or less common actions, e.g., :guilabel:`Print` or :guilabel:`Preview` a
+     request for quotation, and are less visually prominent. By default, a new button is styled as a
+     secondary button.
+
 - To add a smart button, click the :icon:`fa-plus-square` (:guilabel:`plus`) icon in the top-right
   corner of the form. Enter a :guilabel:`Label`, choose an :guilabel:`Icon`, and select a
   :ref:`related field <studio/fields/relational-fields-related-field>`.
 
 .. example::
 
-   .. image:: views/form-sales-order.png
-      :alt: Sales order model's Form view
+   .. image:: views/form-new-quotation.png
+      :alt: Quotation Template model's Form view
 
 .. _studio/views/general/activity:
 
