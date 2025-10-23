@@ -750,6 +750,14 @@ By reading the source code, templates related to options are easily found.
    <template id="..." inherit_id="..." name="..." active="True"/>
    <template id="..." inherit_id="..." name="..." active="False"/>
 
+.. seealso::
+
+   In such cases, the ``<template id="...">`` syntax should be preferred over
+   the ``<record id="..." model="ir.ui.view">`` syntax when defining the record
+   in XML.
+
+   See :ref:`reference/data/template`, especially about the ``active`` value.
+
 .. _theming/module/views/presets:
 
 Presets
