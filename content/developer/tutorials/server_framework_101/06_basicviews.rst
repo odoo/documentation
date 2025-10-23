@@ -44,7 +44,7 @@ lists all the fields to display in the table (where each field is a column):
     </list>
 
 A simple example can be found
-`here <https://github.com/odoo/odoo/blob/18.0/addons/crm/views/crm_lost_reason_views.xml#L45-L53>`__.
+`here <https://github.com/odoo/odoo/blob/09c59012bf80d2ccbafe21c39e604d6cfda72924/addons/crm/data/crm_stage_data.xml>`__.
 
 .. exercise:: Add a custom list view.
 
@@ -115,7 +115,7 @@ It is possible to use regular HTML tags such as ``div`` and ``h1`` as well as th
 (Odoo provides some built-in classes) to fine-tune the look.
 
 A simple example can be found
-`here <https://github.com/odoo/odoo/blob/6da14a3aadeb3efc40f145f6c11fc33314b2f15e/addons/crm/views/crm_lost_reason_views.xml#L16-L44>`__.
+
 
 .. exercise:: Add a custom form view.
 
