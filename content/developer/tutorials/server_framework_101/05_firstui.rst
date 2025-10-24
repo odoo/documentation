@@ -18,8 +18,7 @@ Data Files (XML)
 In :doc:`04_securityintro`, we added data through a CSV file. The CSV
 format is convenient when the data to load has a simple format. When the format is more complex
 (e.g. load the structure of a view or an email template), we use the XML format. For example,
-this
-`data file <https://github.com/odoo/odoo/blob/09c59012bf80d2ccbafe21c39e604d6cfda72924/addons/crm/data/crm_stage_data.xml>`__
+this`data file <https://github.com/odoo/odoo/blob/09c59012bf80d2ccbafe21c39e604d6cfda72924/addons/crm/data/crm_stage_data.xml#L12-L29>`__
 contains HTML tags. While it would be possible to load such data through a CSV file, it is more
 convenient to use an XML file.
 
