@@ -32,8 +32,8 @@ automatically send reminders to make sure that deadlines are met.
 To do so, go to :menuselection:`Accounting --> Configuration --> Settings`, navigate to the
 :guilabel:`Tax Return Periodicity` section, and update the following fields, if needed:
 
-- :guilabel:`Periodicity`: Define whether the tax return is submitted monthly or quarterly.
-- :guilabel:`Reminder`: Define when Odoo should send reminders to submit the tax return.
+- :guilabel:`Periodicity`: Define the tax return periodicity.
+- :guilabel:`Deadline`: Define when Odoo should send reminders to submit the tax return.
 - :guilabel:`Journal`: Update the journal where the tax return is recorded, if needed.
 
 .. note::
@@ -133,10 +133,8 @@ report) <accounting/tax-returns/vat-report>` and :ref:`advance payments
    - If the :guilabel:`Deadline` date has passed, it appears in red.
 
 .. tip::
-   - To export all tax returns from the selected period, click the :icon:`fa-cog` (:guilabel:`gear`)
-     icon, then click :guilabel:`Export all` to download the tax returns XLSX.
-   - All status changes are logged in the chatter. Click on any tax return or advance payment line
-     to view the chatter.
+   To export all tax returns from the selected period, click the :icon:`fa-cog` (:guilabel:`gear`)
+   icon, then click :icon:`fa-upload` :guilabel:`Export All` to download the tax returns XLSX.
 
 .. _accounting/tax-returns/vat-report:
 
@@ -164,7 +162,7 @@ fill in the required :guilabel:`Dates`. Then, click :guilabel:`Generate Return`.
 returns can be generated:
 
 - :guilabel:`Annual Closing: Corporate Tax`
-- :guilabel:`VAT` (return)
+- :guilabel:`VAT` (return)/:guilabel:`Tax`
 - :guilabel:`VAT Listing` (Belgium-specific)
 - :guilabel:`EC Sales List` (EU-specific)
 - :guilabel:`Advance Payment` (Belgium-specific)
@@ -175,12 +173,12 @@ returns can be generated:
 Review
 ******
 
-To start the review of a tax return, click :guilabel:`Review` on the relevant tax return line:
+To start the review of a tax return, click on the relevant tax return line:
 
-- If all automatic tax validation checks have passed, the tax return has completed the
-  :guilabel:`Review` step, and the tax return can be :ref:`submitted
-  <accounting/tax-returns/vat-return-submit>`. If needed, click :guilabel:`See Checks` to view all
-  checks.
+- If all automatic tax validation checks have passed, click :guilabel:`Validate` to complete the
+  :guilabel:`Review` step. The :ref:`Lock Tax Return <accounting/tax-returns/lock-date>` date is
+  automatically updated, and the closing journal entry is posted in the :guilabel:`Tax Returns`
+  journal. The tax return can then be :ref:`submitted <accounting/tax-returns/vat-return-submit>`.
 - If any automatic tax validation checks are pending, the :guilabel:`Tax Checks` view displays the
   following, depending on the :doc:`fiscal localization <../../fiscal_localizations>`:
 
@@ -196,35 +194,36 @@ To start the review of a tax return, click :guilabel:`Review` on the relevant ta
   - :guilabel:`Taxes and countries matching`: Taxes applied on invoices and bills must match the
     customer’s country.
 
-  Each check card is either marked with a :icon:`fa-check` :guilabel:`(pass)` or :icon:`fa-times`
-  :guilabel:`(fail)`. Once a check is passed, the line turns green. If a check fails, there are two
-  options:
+  Each check card is either highlighted in green (Reviewed or Supervised), red (Anomaly) or
+  grey (To review). If a check fails, there are two options:
 
   - Click on the failed check's card to fix the issue.
-  - Click :guilabel:`Validate` to pass the check without fixing the issue.
+  - Click :guilabel:`Anomaly` and select :guilabel:`Reviewed` or :guilabel:`Supervised` to pass the
+    check without fixing the issue.
 
-  The following actions can be performed on each check card:
+  Once all checks have passed, click :guilabel:`Validate`. Then, depending on the :doc:`fiscal
+  localization <../../fiscal_localizations>`, click :guilabel:`Lock` in the :guilabel:`Lock` window.
 
-  - Add a check approver: Hover over the relevant check card and click the :icon:`fa-user-plus`
-    :guilabel:`(user-plus)` icon to add the approver who confirms the review. The check approver's
-    name is then displayed on the check card.
-  - Add notes and a note approver: Click the :icon:`fa-pencil-square-o` :guilabel:`(pencil-square)`
-    icon to access the check form view, where notes and an approver's name can be added. The notes
-    approver's name is then displayed on the check card.
-  - Manage activities: Click the :icon:`fa-clock-o` :guilabel:`(clock)` icon to schedule a new
-    activity or the :icon:`fa-check` :guilabel:`(check)` icon to view planned activities.
-
-  Once all checks have passed, click :guilabel:`Review`.
+  On validating the tax return, the :ref:`Lock Tax Return <accounting/tax-returns/lock-date>` date
+  is automatically updated, and the closing journal entry is posted in the :guilabel:`Tax Returns`
+  journal.
 
 .. tip::
-   - To view all the validation checks for a tax return, click the :icon:`fa-ellipsis-v`
-     :guilabel:`(vertical ellipsis)` icon on the corresponding tax return line in the
-     :guilabel:`Tax Return` view and select :guilabel:`View Checks`.
-   - Once a tax report has been reviewed but not yet submitted, additional invoices or bills from
-     that period can still be posted and included in the closing entry. To do so, click the
-     :icon:`fa-ellipsis-v` :guilabel:`(vertical ellipsis)` icon on the relevant tax return line in
-     the :guilabel:`Tax return` view and select :guilabel:`Reset` to review checks before submitting
-     the tax return.
+   - To add customized checks, activate :ref:`developer mode <developer-mode>`, and go to
+     :menuselection:`Accounting --> Configuration --> Check`. Then, click :guilabel:`New` and
+     complete the necessary fields.
+   - All check status changes are logged in the chatter.
+
+.. note::
+   If the :guilabel:`Lock Tax Return` date is not locked before reviewing the tax return, the
+   fiscal period is automatically locked on the same date as the accounting date of the closing
+   journal entry. While this feature helps prevent certain fiscal errors, it is recommended to set
+   the :ref:`Lock Tax Return date <accounting/tax-returns/lock-date>` manually beforehand.
+
+.. important::
+   After the tax report for a period has been posted, that period is locked to prevent new
+   VAT-related journal entries from being created. Corrections to customer invoices or vendor bills
+   must be recorded in the following period.
 
 .. _accounting/tax-returns/vat-return-submit:
 
@@ -240,12 +239,9 @@ proceed as follows:
    return line to preview the tax return report.
 #. Once the tax return report has been verified, go back to the :guilabel:`Tax Return` view and
    click :guilabel:`Submit`.
-#. In the pop-up window, follow the local :guilabel:`Instructions`, and click :guilabel:`Mark as
-   Submitted` or :ref:`Mark Paid <accounting/tax-returns/vat-return-pay>`.
-
-On submitting the tax return, the :ref:`Lock Tax Return <accounting/tax-returns/lock-date>` date is
-automatically updated, and the closing journal entry is posted in the :guilabel:`Tax Returns`
-journal.
+#. If a :guilabel:`Submission Instructions` pop-up window appears, follow the local
+   :guilabel:`Instructions`, and click :guilabel:`Mark as Submitted` or :ref:`Mark
+   Paid <accounting/tax-returns/vat-return-pay>`.
 
 The submitted tax return contains all the values tax authorities need, and the amount to be paid or
 refunded.
@@ -262,18 +258,6 @@ refunded.
        using a :ref:`lock date exception <year-end/lock-date-exception>` to reset a tax return entry
        to draft.
 
-.. note::
-   If the :guilabel:`Lock Tax Return` date is not locked before submitting the tax return, the
-   fiscal period is automatically locked on the same date as the accounting date of the closing
-   journal entry. While this feature helps prevent certain fiscal errors, it is recommended to set
-   the :ref:`Lock Tax Return date <accounting/tax-returns/lock-date>` manually beforehand.
-
-.. important::
-   After the tax report for a period has been posted, that period is locked to prevent new
-   VAT-related journal entries from being created. Corrections to customer invoices or vendor bills
-   must be recorded
-   in the following period.
-
 .. _accounting/tax-returns/vat-return-pay:
 
 Pay
@@ -282,11 +266,13 @@ Pay
 Once a tax return is submitted, a :guilabel:`Payment` window appears if a tax payment is required.
 It displays all necessary payment details to complete the transaction, including a QR code
 for the banking app, if available for the country's :doc:`fiscal localization
-<../../fiscal_localizations>` package. There are two options:
+<../../fiscal_localizations>` package. There are three options:
 
 - Click :guilabel:`Mark Paid` after completing the payment: the corresponding tax return line
   disappears from the :guilabel:`Tax Return` view.
-- Click :guilabel:`Pay Later`: the corresponding tax return line remains visible in the
+- Click :guilabel:`Send` to email all payment information. Once sent, the tax return completes the
+  :guilabel:`Pay` step, and its corresponding line disappears from the :guilabel:`Tax Return` view.
+- Click :guilabel:`Discard`: the corresponding tax return line remains visible in the
   :guilabel:`Tax Return` view, indicating the amount due. Click the :icon:`fa-paperclip`
   :guilabel:`(paperclip)` icon to access the PDF and XLSX files of the submitted tax return.
 
@@ -311,7 +297,10 @@ available:
 
 - Click :guilabel:`Mark Paid` once the payment is processed: The corresponding advance tax payment
   line disappears from the :guilabel:`Tax Return` view.
-- Click :guilabel:`Pay Later`: The corresponding advance tax payment line remains visible in the
+- Click :guilabel:`Send` to email all payment information. Once sent, the advance tax payment
+  completes the :guilabel:`Pay` step, and its corresponding line disappears from the :guilabel:`Tax
+  Return` view.
+- Click :guilabel:`Discard`: The corresponding advance tax payment line remains visible in the
   :guilabel:`Tax Return` view.
 
 .. tip::
