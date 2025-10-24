@@ -150,14 +150,14 @@ Shift templates
 
 To create a shift template, click :guilabel:`New` on any schedule, then fill in the
 :ref:`details of the shift <planning/create-shift>`. In order for the shift to be saved as a
-template, tick :guilabel:`Save as Template`.
+template, click :guilabel:`Save Template`.
 
 .. image:: planning/save-template.png
-   :alt: Shift form with the option `save template` ticked.
+   :alt: Shift form.
 
 Alternatively, you can go to :menuselection:`Planning --> Configuration --> Shift Templates`, then
-click :guilabel:`New`. Fill in the :guilabel:`Start Hour` and :guilabel:`Shift Duration`. The
-shift’s :guilabel:`End Time` is then calculated based on the :guilabel:`Working Hours`, taking into
+click :guilabel:`New`. Fill in the :guilabel:`Start Hour` and :guilabel:`Span`. The shift’s
+:guilabel:`End Time` is then calculated based on the :guilabel:`Working Hours`, taking into
 account working time as well as breaks.
 
 .. example::
@@ -222,8 +222,9 @@ fill in the following details:
   work on the selected project.
 - :guilabel:`Sales Order Item`: If the Sales app is installed in your database, this field allows
   you to link a sales order to the shift.
-- :guilabel:`Repeat`: Tick the checkbox and configure the :guilabel:`Repeat Every` field according
-  to your needs. The following rules apply to recurring shifts:
+- :guilabel:`Repeat`: Click the :icon:`fa-repeat` :guilabel:`(repeat)` button and configure the
+  :guilabel:`Repeat every` fields according to your needs. The following rules apply to recurring
+  shifts:
 
   - All fields (e.g., :guilabel:`Resource`, :guilabel:`Role`, :guilabel:`Project`) are copied from
     the original shift except for the date, which is adjusted according to the
@@ -234,9 +235,6 @@ fill in the following details:
     go to :menuselection:`Planning --> Configuration --> Settings` and edit the
     :guilabel:`Recurring Shifts`.
 
-- :guilabel:`Save as Template`: When this option is ticked, a shift template is created with the
-  same :guilabel:`Start and End hours`, :guilabel:`Allocated time`, :guilabel:`Role`,
-  and :guilabel:`Project`.
 - :guilabel:`Additional note sent to the employee`: Click on the field to add a note.
 - :guilabel:`Date`: Choose the date and time of your shift. This is the only mandatory field when
   creating a shift.
