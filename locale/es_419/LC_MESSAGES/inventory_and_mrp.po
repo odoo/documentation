@@ -28,7 +28,7 @@ msgstr ""
 "Project-Id-Version: Odoo 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-20 14:56+0200\n"
-"PO-Revision-Date: 2025-10-22 03:10+0000\n"
+"PO-Revision-Date: 2025-10-24 03:10+0000\n"
 "Last-Translator: \"Fernanda Alvarez (mfar)\" <mfar@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
 "odoo-19-doc/inventory_and_mrp/es_419/>\n"
@@ -10333,6 +10333,11 @@ msgid ""
 "Products --> Products`, and select the desired product, or create a new "
 "product, by clicking :guilabel:`New`."
 msgstr ""
+"Para activar la valuación por números de serie o lotes, primero activa la "
+"función :ref:`Lotes y números de serie <inventory/product_management/enable-"
+"lot-serial>`. Luego, ve a :menuselection:`Inventario --> Productos --> "
+"Productos` y selecciona el producto que quieras o haz clic en "
+":guilabel:`Nuevo` para crear uno."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/inventory_valuation/valuation_by_lots.rst:27
 msgid ""
@@ -11724,6 +11729,11 @@ msgid ""
 "numbers can be assigned to newly-received or manufactured batches of this "
 "product."
 msgstr ""
+"Ve a la pestaña :guilabel:`Información general` del formulario del producto. "
+"Selecciona la casilla del campo :guilabel:`Rastrear inventario` y elige "
+":guilabel:`Por lotes` en el menú desplegable. Ahora podrás asignar números "
+"de lote nuevos o existentes a los artículos recibidos o fabricados de este "
+"producto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:53
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/reassign.rst:48
@@ -12292,6 +12302,10 @@ msgid ""
 "product, and can be selected when :ref:`assigning lot numbers to products on "
 "a receipt <inventory/product_management/assign-lots>`."
 msgstr ""
+"Después de crear, guardar y asignar un nuevo número de lote al producto, "
+"este número queda guardado como un lote existente vinculado al producto y "
+"puedes seleccionarlo al :ref:`asignar números de lote a productos en una "
+"recepción <inventory/product_management/assign-lots>`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/product_management/product_tracking/lots.rst:293
 msgid "Manage lots for different operations types"
@@ -13850,6 +13864,12 @@ msgid ""
 "Odoo ensures visibility into product movement and confirms that items reach "
 "customers efficiently."
 msgstr ""
+"Adapta el proceso de envío de salida a las necesidades de tu negocio. Los "
+"métodos de recolección y las estrategias de remoción controlan cómo se "
+"reservan los productos para las órdenes, mientras que el envío directo "
+"determina cómo se trasladan. Configurar estas opciones en Odoo garantiza "
+"visibilidad sobre el movimiento de los productos y confirma que los "
+"artículos lleguen a los clientes de forma eficiente."
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping_receiving/daily_operations.rst:136
 msgid "Customization"
@@ -31875,6 +31895,9 @@ msgid ""
 "recommended to use a memorable one, like \"WH[first letters of location]\" "
 "(e.g. `WHA`, `WHB`, etc.)."
 msgstr ""
+"El :guilabel:`nombre corto` aparece en los documentos del almacén, así que "
+"te recomendamos usar uno fácil de recordar, como "
+"\"WH[primeras letras de la ubicación]\" (por ejemplo, `WHA`, `WHB`, etc.)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_management/warehouses.rst:29
 msgid ""
@@ -32102,6 +32125,9 @@ msgid ""
 ":doc:`Just in time logic <replenishment/just_in_time>`: A strategy to "
 "replenish only what is needed to prevent overstocking."
 msgstr ""
+":doc:`Lógica justo a tiempo <replenishment/just_in_time>`: Es una estrategia "
+"para reabastecer solo lo necesario y evitar que haya productos de más en el "
+"inventario."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.rst:81
 msgid ":doc:`replenishment/reordering_rules`"
@@ -32209,7 +32235,7 @@ msgstr ":doc:`../../manufacturing/workflows/use_mps`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/just_in_time.rst:3
 msgid "Just in time logic"
-msgstr ""
+msgstr "Lógica justo a tiempo (o just-in-time)"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/just_in_time.rst:8
 msgid ""
@@ -32240,6 +32266,14 @@ msgid ""
 "or :ref:`manufacturing lead times <inventory/warehouses_storage/manuf-lt>` "
 "for production. This works with both automatic and manual reordering rules."
 msgstr ""
+"La fecha pronosticada es la **fecha más temprana posible** para recibir un "
+"producto si el proceso de reabastecimiento comienza de inmediato. Esta se "
+"calcula sumando los plazos de entrega vinculados al proceso, como los :ref:`"
+"plazos de entrega del proveedor <inventory/warehouses_storage/purchase-lt>` "
+"y los :ref:`retrasos de compra <inventory/warehouses_storage/purchase-"
+"security-lt>` para compras, o los :ref:`plazos de entrega de fabricación <"
+"inventory/warehouses_storage/manuf-lt>` para producción. Esto funciona con "
+"reglas de reabastecimiento automáticas y manuales."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/just_in_time.rst:22
 msgid ""
@@ -32249,10 +32283,17 @@ msgid ""
 "work perfectly fine without them. Keeping delivery dates on |SOs| as their "
 "*creation date* ensures purchases are immediately triggered when needed."
 msgstr ""
+"Si aplicar la lógica justo a tiempo te parece arriesgado, considera agregar "
+"tiempo adicional o :doc:`ajustar los plazos de entrega <lead_times>` para "
+"que haya más flexibilidad. Aunque los plazos de entrega y la lógica justo a "
+"tiempo te brindan más control, las reglas de reabastecimiento funcionan bien "
+"sin ellos. Mantener las fechas de entrega en las órdenes de venta como su *"
+"fecha de creación* garantiza que las compras se activen de inmediato cuando "
+"sea necesario."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/just_in_time.rst:30
 msgid "Forecasted date and to order quantity"
-msgstr ""
+msgstr "Fecha pronosticada y cantidad por ordenar"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/just_in_time.rst:32
 msgid ""
@@ -32275,12 +32316,21 @@ msgid ""
 "the desired reordering rule. The :guilabel:`Replenishment Information` pop-"
 "up window displays the :guilabel:`Forecasted Date` and various lead times."
 msgstr ""
+"Para ver la fecha pronosticada, ve a :menuselection:`Inventario --> "
+"Operaciones --> Reabastecimiento` para abrir el :doc:`reporte de "
+"reabastecimiento <report>`, luego haz clic en el icono :icon:`fa-info-circle`"
+" :guilabel:`(info)` de la regla de reordenamiento que quieras. La ventana "
+"emergente :guilabel:`Información de reabastecimiento` muestra la :guilabel:`"
+"fecha pronosticada` y varios plazos de entrega."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/just_in_time.rst:41
 msgid ""
 "The just-in-time logic ensures replenishment occurs only when required to "
 "meet forecasted demand, reducing the risk of overstocking."
 msgstr ""
+"La lógica justo a tiempo garantiza que el reabastecimiento ocurra solo "
+"cuando sea necesario para cubrir la demanda pronosticada, lo que reduce el "
+"riesgo de que haya existencias de más en el inventario."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/just_in_time.rst:45
 msgid ""
@@ -32289,6 +32339,10 @@ msgid ""
 "date, see :ref:`Visibility Days <inventory/warehouses_storage/visibility-"
 "days>`"
 msgstr ""
+"La lógica justo a tiempo determina el momento exacto del reabastecimiento. "
+"Consulta :ref:`Días de visibilidad <inventory/warehouses_storage/visibility-"
+"days>` si quieres extender esta lógica para considerar también la demanda a "
+"corto plazo más allá de la fecha pronosticada."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/just_in_time.rst:49
 msgid ""
@@ -32296,18 +32350,27 @@ msgid ""
 "replenishment is triggered immediately to prevent shortages. If the quantity "
 "falls below the minimum after the forecasted date, replenishment is deferred."
 msgstr ""
+"Si la cantidad pronosticada cae por debajo del mínimo en la fecha "
+"pronosticada, el reabastecimiento se activa de inmediato para evitar que "
+"falten existencias. Si cae por debajo del mínimo después de la fecha "
+"pronosticada, el reabastecimiento se retrasa."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/just_in_time.rst:53
 msgid ""
 "The :guilabel:`To Order` quantity is defined as the total demand on the "
 "forecasted date."
 msgstr ""
+"La cantidad :guilabel:`Por ordenar` se define como la demanda total en la "
+"fecha pronosticada."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/just_in_time.rst:55
 msgid ""
 "By scheduling purchase orders according to combined lead times, Odoo "
 "minimizes inventory while ensuring that future demand is met on time."
 msgstr ""
+"Al programar las órdenes de compra según los plazos de entrega combinados, "
+"Odoo minimiza el inventario y garantiza que la demanda futura se cubra a "
+"tiempo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/just_in_time.rst:59
 msgid ""
@@ -32319,14 +32382,15 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/just_in_time.rst:61
 msgid "Vendor lead time is 4 days, and the days to purchase is 2 days."
 msgstr ""
+"El plazo de entrega del proveedor es de 4 días y los días para comprar son 2."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/just_in_time.rst:62
 msgid "Today's date is October 2."
-msgstr ""
+msgstr "La fecha actual es 2 de octubre."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/just_in_time.rst:63
 msgid "These add up to 6 days, making the forecasted date, October 8."
-msgstr ""
+msgstr "Estos suman 6 días, lo que da una fecha pronosticada del 8 de octubre."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/just_in_time.rst:65
 msgid ""
@@ -32334,6 +32398,9 @@ msgid ""
 "today). This demand will appear on the replenishment report today, in "
 "the :guilabel:`To Order` field."
 msgstr ""
+"Una orden de venta confirmada por 5 unidades tiene fecha de entrega el 8 de "
+"octubre (6 días desde hoy). Esta demanda aparece en el reporte de "
+"reabastecimiento, en el campo :guilabel:`Por ordenar`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/just_in_time.rst:68
 msgid ""
@@ -32342,6 +32409,10 @@ msgid ""
 "fall within the forecasted date window, ensuring orders are placed precisely "
 "when needed."
 msgstr ""
+"Sin embargo, si la fecha de entrega fuera después del 8 de octubre, aún no "
+"aparecería en el reporte. Odoo solo muestra las cantidades por reabastecer "
+"cuando entran en la ventana de fecha pronosticada, lo que garantiza que las "
+"órdenes ocurran justo cuando se necesitan."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/just_in_time.rst:0
 msgid "Show forecasted date in Odoo."
@@ -32355,18 +32426,24 @@ msgid ""
 "quantity. To access the forecasted report, click :icon:`fa-area-"
 "chart` :guilabel:`(area chart)` icon on the replenishment report."
 msgstr ""
+"Las órdenes de venta programadas después de la :guilabel:`fecha pronosticada`"
+" no están incluidas en las cantidades del :guilabel:`pronóstico` de una "
+"regla de reordenamiento. Sin embargo, sí aparecen en el reporte de "
+"pronóstico, ya que este refleja la cantidad pronosticada a largo plazo. Para "
+"acceder al reporte de pronóstico, haz clic en el icono :icon:`fa-area-chart` "
+":guilabel:`(gráfico de área)` en el reporte de reabastecimiento."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/just_in_time.rst:82
 msgid ":doc:`Reordering Rules <reordering_rules>`"
-msgstr ""
+msgstr ":doc:`Reglas de reordenamiento <reordering_rules>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/just_in_time.rst:83
 msgid ":doc:`Replenishment Report <report>`"
-msgstr ""
+msgstr ":doc:`Reporte de reabastecimiento <report>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/just_in_time.rst:84
 msgid ":doc:`Lead Times <lead_times>`"
-msgstr ""
+msgstr ":doc:`Plazos de entrega <lead_times>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:3
 msgid "Lead times"
@@ -32788,6 +32865,14 @@ msgid ""
 "order (MTO) <mto>`. They do not change the interval between *Order Deadline* "
 "and *Expected Arrival*."
 msgstr ""
+"Además, Odoo tiene plazos de entrega de seguridad globales, que son márgenes "
+"que amplían la ventana de pronóstico de la :doc:`lógica justo a tiempo "
+"<just_in_time>` (JIT, por sus siglas en inglés). Estos plazos de seguridad "
+"**solo** afectan a los métodos de reabastecimiento que usan :doc:`reglas de "
+"tipo pull <../../shipping_receiving/daily_operations/use_routes>`, como las "
+":doc:`reglas de reordenamiento <reordering_rules>` o la estrategia de :doc:`"
+"fabricación bajo pedido <mto>`. No modifican el intervalo entre la *fecha "
+"límite de la orden* y la *entrega esperada*."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/lead_times.rst:178
 msgid ":doc:`PO scheduling with reordering rules <reordering_rules>`"
@@ -33408,6 +33493,11 @@ msgid ""
 "needed to fulfill a sales order (SO) or as a component in a manufacturing "
 "order (MO)."
 msgstr ""
+"La estrategia *Reabastecer sobre pedido*, también conocida como *MTO* ("
+"fabricación bajo pedido o make to order, por sus siglas en inglés), es una "
+"estrategia de reabastecimiento que crea una orden en borrador cada vez que "
+"esta necesita un producto para cumplir con una orden de venta o como "
+"componente en una orden de fabricación."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:17
 msgid ""
@@ -33431,6 +33521,11 @@ msgid ""
 "normally. Otherwise, the |RFQ| or |MO| is generated and directly linked to "
 "the originating |SO| through a smart button."
 msgstr ""
+"Si hay existencias disponibles, el sistema no genera ninguna solicitud de "
+"cotización ni orden de fabricación, y la venta avanza con normalidad. Si no "
+"hay existencias, entonces sí genera la solicitud de cotización o la orden de "
+"fabricación y la vincula directamente con la orden de venta de origen "
+"mediante un botón inteligente."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:24
 msgid ""
@@ -33447,6 +33542,10 @@ msgid ""
 "cancelled. If the demand changes, update the document instead of cancelling "
 "it."
 msgstr ""
+"La solicitud de cotización o la orden de fabricación generada por MTO está "
+"diseñada para cumplir con la orden de venta original. Por lo general debes "
+"confirmar estos documentos o ajustarlos en lugar de cancelarlos. Si la "
+"demanda cambia, actualiza el documento en lugar de cancelarlo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:32
 msgid ""
@@ -33454,6 +33553,10 @@ msgid ""
 "replacement. A new replenishment document must be created manually, but it "
 "**cannot** be linked back to the original |SO| through the smart button."
 msgstr ""
+"Al cancelar una solicitud de cotización o una orden de fabricación, Odoo no "
+"genera un reemplazo de forma automática. Debes crear un nuevo documento de "
+"reabastecimiento de forma manual, pero este **no** podrá estar vinculado a "
+"la orden de venta original mediante el botón inteligente."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/mto.rst:36
 msgid "Finally, click :guilabel:`Save` to save the change."
@@ -33852,7 +33955,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:38
 msgid ":doc:`Just in time logic <just_in_time>`"
-msgstr ""
+msgstr ":doc:`Lógica justo a tiempo <just_in_time>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:39
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:140
@@ -34075,6 +34178,10 @@ msgid ""
 "and :guilabel:`To Order` fields are calculated using on-hand quantities and "
 "future demand, see :doc:`Just in time logic <just_in_time>`"
 msgstr ""
+"Consulta la sección :doc:`Lógica justo a tiempo <just_in_time>` para "
+"aprender cómo se calculan los campos :guilabel:`A la mano`, "
+":guilabel:`Pronóstico` y :guilabel:`Por ordenar` con base en las cantidades "
+"a la mano y la demanda futura."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:133
 msgid "For advanced usage, learn about the following reordering rule fields:"
@@ -34748,7 +34855,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:390
 msgid ":doc:`Just-in-time logic <just_in_time>`"
-msgstr ""
+msgstr ":doc:`Lógica justo a tiempo <just_in_time>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:395
 msgid "Visibility days"
@@ -34776,6 +34883,10 @@ msgid ""
 "determines when replenishment is triggered, refer to the :doc:`Just-in-time "
 "logic <just_in_time>`"
 msgstr ""
+"Los días de visibilidad amplían la lógica estándar de reabastecimiento justo "
+"a tiempo, ya que consideran la demanda más allá de la fecha pronosticada. "
+"Consulta la :doc:`lógica justo a tiempo <just_in_time>` para entender mejor "
+"cómo Odoo determina cuándo activar el reabastecimiento."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/reordering_rules.rst:407
 msgid ""
@@ -35293,6 +35404,8 @@ msgid ""
 "For detailed information on how to use this feature for replenishment, go to "
 "the :doc:`just-in-time <just_in_time>` section."
 msgstr ""
+"Consulta la sección :doc:`Lógica justo a tiempo <just_in_time>` si quieres "
+"conocer más sobre cómo usar esta función para el reabastecimiento."
 
 #: ../../content/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment/report.rst:126
 msgid "Select a warehouse"
@@ -44743,7 +44856,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:3
 msgid "Delays"
-msgstr ""
+msgstr "Atrasos"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:11
 msgid ""
@@ -44752,42 +44865,56 @@ msgid ""
 "its deadline, the deadline is highlighted in red to draw attention to the "
 "delay."
 msgstr ""
+"La aplicación *Manufactura* de Odoo muestra los *atrasos* en las órdenes de "
+"fabricación mediante el filtro :guilabel:`Producciones retrasadas`. Si la "
+"fecha final de la orden de fabricación supera su fecha límite, esta aparece "
+"en rojo para señalar el retraso."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:-1
 msgid "The delayed production filter in Odoo."
-msgstr ""
+msgstr "El filtro de producción retrasada en Odoo."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:19
 msgid "Deadline calculation"
-msgstr ""
+msgstr "Cálculo de plazos límite"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:21
 msgid ""
 "The |MO| deadline depends on how the |MO| was created, and is calculated as "
 "follows:"
 msgstr ""
+"La fecha límite de la orden de fabricación depende de cómo se creó esta "
+"orden y se calcula de la siguiente forma:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:23
 msgid ""
 "**Make To Order**: the |MO| deadline is the *Sales Order Delivery Date*."
 msgstr ""
+"**Fabricación bajo pedido**: La fecha límite de la orden de fabricación es "
+"la *fecha de entrega de la orden de venta*."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:24
 msgid ""
 "**Replenishment**: the |MO| deadline is *today + Manufacturing Lead Time*."
 msgstr ""
+"**Reabastecimiento**: La fecha límite de la orden de fabricación es *hoy + "
+"plazo de entrega de fabricación*."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:25
 msgid "**Manually created MO**: the deadline field remains empty."
 msgstr ""
+"**Orden de fabricación creada de forma manual**: El campo de fecha límite "
+"permanece vacío."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:28
 msgid "The |MO| *deadline* is not the same as the |MO| *end date*."
 msgstr ""
+"La *fecha límite* de la orden de fabricación no es la misma que la *fecha de "
+"finalización* de la orden de fabricación."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:30
 msgid "The end date is computed as:"
-msgstr ""
+msgstr "La fecha de finalización se calcula así:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:32
 msgid ""
@@ -44796,22 +44923,32 @@ msgid ""
 " +\\text{Total duration of all operations}\n"
 "\n"
 msgstr ""
+"\\text{Fecha de finalización} =\n"
+"\\text{Fecha de inicio programada}\n"
+"+\\text{Duración total de todas las operaciones}\n"
+"\n"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:40
 msgid "Several additional filters are available to help track delays:"
 msgstr ""
+"Hay varios filtros adicionales para ayudarte a llevar seguimiento de los "
+"retrasos:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:42
 msgid ""
 ":guilabel:`Delayed Productions`: the |MO|'s *scheduled start date* is later "
 "than the deadline."
 msgstr ""
+":guilabel:`Producciones retrasadas`: La *fecha de inicio programada* de la "
+"orden de fabricación es posterior a la fecha límite."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:43
 msgid ""
 ":guilabel:`Late`: the |MO|'s *scheduled end date* exceeds the deadline, "
 "highlighted in red."
 msgstr ""
+":guilabel:`Atrasada`: La *fecha de finalización programada* de la orden de "
+"fabricación supera la fecha límite y aparece en rojo."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:44
 msgid ""
@@ -44820,48 +44957,64 @@ msgid ""
 "manufacturing order for components is scheduled to end *after* the |MO| "
 "deadline."
 msgstr ""
+":guilabel:`Disponibilidad tardía`: Uno o más de los componentes necesarios "
+"no están disponibles antes de la fecha límite. Por ejemplo, una orden de "
+"compra o de fabricación confirmada para esos componentes está programada "
+"para terminar *después* de la fecha límite de la orden de fabricación."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:47
 msgid ""
 ":guilabel:`Components Available`: all components are available to begin "
 "production."
 msgstr ""
+":guilabel:`Componentes disponibles`: Todos los componentes están disponibles "
+"para iniciar la producción."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:50
 msgid "Use case"
-msgstr ""
+msgstr "Caso de uso"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:52
 msgid "Consider an |MO| with a deadline of **September 17th**:"
 msgstr ""
+"Imagina una orden de fabricación con fecha límite del **17 de septiembre**:"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:54
 msgid ""
 "If production on the |MO| starts after September 17th, it appears in "
 "the :guilabel:`Delayed Productions` filter."
 msgstr ""
+"Si la producción de la orden de fabricación inicia después del 17 de "
+"septiembre, aparece en el filtro :guilabel:`Producciones retrasadas`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:56
 msgid ""
 "If required components are scheduled to arrive after September 17th, the |"
 "MO| appears in the :guilabel:`Late Availability` filter."
 msgstr ""
+"Si los componentes necesarios llegan después del 17 de septiembre, la orden "
+"de fabricación aparece en el filtro :guilabel:`Disponibilidad tardía`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:58
 msgid ""
 "If the |MO| has a scheduled end date after September 17th, it appears in "
 "the :guilabel:`Late` filter."
 msgstr ""
+"Si la orden de fabricación tiene una fecha de finalización programada "
+"posterior al 17 de septiembre, aparece en el filtro :guilabel:`Atrasada`."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:-1
 msgid "An MO with the deadline emphasized."
-msgstr ""
+msgstr "Una orden de fabricación con el plazo resaltado."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/delayed.rst:64
 msgid ""
 "By combining these indicators, planners can quickly identify where "
 "production is at risk of missing delivery commitments."
 msgstr ""
+"Al combinar estos indicadores, los planificadores pueden identificar dónde "
+"corre riesgo la producción de incumplir los compromisos de entrega con "
+"rapidez."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/reporting/oee.rst:3
 msgid "Overall equipment effectiveness"
@@ -55641,7 +55794,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:3
 msgid "Suggest quantities based on historical demand"
-msgstr ""
+msgstr "Sugerir cantidades según la demanda histórica"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:7
 msgid ""
@@ -55649,20 +55802,25 @@ msgid ""
 "feature recommends quantities to order on requests for quotations (RFQs) "
 "based on historical demand."
 msgstr ""
+"Para una estrategia de reabastecimiento simple basada en reglas push, la "
+"función *Sugerir* recomienda las cantidades que debes ordenar en las "
+"solicitudes de cotización según la demanda histórica."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:11
 msgid "Key parameters"
-msgstr ""
+msgstr "Parámetros clave"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:13
 msgid "*Replenish for*: future coverage window (days)."
-msgstr ""
+msgstr "*Reabastecer para*: Ventana de cobertura futura (en días)."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:14
 msgid ""
 "*Based on*: period that defines historical demand: last 7 days, 30 days, 3 "
 "months, 12 months, or the same month or quarter the previous year."
 msgstr ""
+"*Basado en*: El periodo que define la demanda histórica: últimos 7 días, 30 "
+"días, 3 meses, 12 meses o el mismo mes o trimestre del año anterior."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:16
 msgid ""
@@ -55671,10 +55829,15 @@ msgid ""
 "determine how much of the demand should be replenished. (e.g., input `120%` "
 "if sales are projected to grow 20% more than the previous period)"
 msgstr ""
+"*Factor*: El porcentaje de crecimiento o disminución (100% de forma "
+"predeterminada). Después de obtener el total del periodo, multiplica la "
+"demanda histórica por este porcentaje para determinar cuánto se debe "
+"reabastecer (por ejemplo, ingresa `120%` si proyectas un crecimiento del 20% "
+"sobre el periodo anterior)."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:21
 msgid "Demand calculation"
-msgstr ""
+msgstr "Cálculo de la demanda"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:23
 msgid ""
@@ -55686,6 +55849,13 @@ msgid ""
 "the number of days in the *Based on* period. Lastly, that value is "
 "multiplied by the *Factor* to determine volume."
 msgstr ""
+"Para obtener la *demanda diaria promedio*, Odoo suma todas las :ref:`"
+"entregas validadas <inventory/delivery/one-step>`, los :ref:`componentes "
+"consumidos en órdenes de fabricación <manufacturing/basic_setup/setup-"
+"components>` o los usados para :doc:`reabastecer a los subcontratistas <../"
+"../manufacturing/subcontracting/subcontracting_resupply>` en el periodo *"
+"Basado en*, y divide ese total entre los días del mismo periodo. Luego, "
+"multiplica el valor por el *factor* para obtener el volumen."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:31
 msgid ""
@@ -55693,26 +55863,35 @@ msgid ""
 "an *In* field appears. Choose a specific warehouse or leave blank to use all "
 "warehouses to calculate demand accordingly."
 msgstr ""
+"El campo *En* aparece en una configuración :ref:`multialmacenes <purchase/"
+"advanced/example-wh-suggestion>`. Elige un almacén específico o déjalo vacío "
+"para usar todos los almacenes en el cálculo de la demanda."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:35
 msgid ""
 "Average~Daily~Demand = \\frac{Delivered~or~Consumed~Items}{Based~on~Days} "
 "\\times Factor"
 msgstr ""
+"Demanda~diaria~promedio = \\frac"
+"{Artículos~entregados~o~consumidos}{Basado~en~días} \\times Factor"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:41
 msgid "Recommended quantity"
-msgstr ""
+msgstr "Cantidad recomendada"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:43
 msgid ""
 "To find the suggested quantity, Odoo multiplies the average by *Replenish "
 "for* days to get the recommended quantity."
 msgstr ""
+"Para obtener la cantidad sugerida, Odoo multiplica el promedio por los días "
+"de *Reabastecimiento para* y así calcula la cantidad recomendada."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:46
 msgid "Recommended~Quantity = Average~Daily~Demand \\times Replenish~for~Days"
 msgstr ""
+"Cantidad~recomendada = Demanda~diaria~promedio \\times "
+"Días~de~reabastecimiento"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:52
 msgid ""
@@ -55720,56 +55899,75 @@ msgid ""
 "`19` units to *Replenish for* `14` days *Based on* the past month's `40` "
 "delivered units."
 msgstr ""
+"En el :ref:`ejemplo 1 <purchase/advanced/example-suggestion>`, Odoo "
+"recomienda `19` unidades en *reabastecer para* `14` días *basado en* las `40`"
+" unidades entregadas el mes anterior."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:56
 msgid "Prerequisite setup"
-msgstr ""
+msgstr "Configuración previa necesaria"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:58
 msgid ""
 "**Purchase** and **Inventory** apps must be :ref:`installed <general/"
 "install>`."
 msgstr ""
+"Debes tener las aplicaciones **Compras** e **Inventario** :ref:`instaladas <"
+"general/install>`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:59
 msgid ""
 ":ref:`Validate at least one delivery order <inventory/delivery/one-step>` "
 "for each product."
 msgstr ""
+":ref:`Valida al menos una orden de entrega <inventory/delivery/one-step>` "
+"por producto."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:61
 msgid ""
 "Ensures there is a past delivery record so the system can calculate average "
 "daily demand."
 msgstr ""
+"Esto garantiza que haya un registro de entrega anterior para que el sistema "
+"pueda calcular la demanda diaria promedio."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:63
 msgid ""
 ":ref:`Add a vendor to the vendor pricelist <purchase/manage_deals/vendor-"
 "pricelist>` with a purchase price for each product."
 msgstr ""
+":ref:`Agrega un proveedor a la lista de precios de proveedor <purchase/"
+"manage_deals/vendor-pricelist>` con un precio de compra para cada producto."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:66
 msgid ""
 "The *Suggest* feature is vendor-specific, so each product needs a matching "
 "vendor for accurate purchase quantity and price calculations."
 msgstr ""
+"La función *Sugerir* es específica por proveedor, por lo que cada producto "
+"necesita tener un proveedor asociado para calcular con precisión la cantidad "
+"y el precio de compra."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:69
 msgid ""
 "Set the *Product Type* to *Goods* and ensure the product is :ref:`Tracked by "
 "quantity <inventory/product_management/manufacture>`."
 msgstr ""
+"Configura el *tipo de producto* como *Bienes* y asegúrate de que el producto "
+"esté :ref:`rastreado por cantidad <inventory/product_management/"
+"manufacture>`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:72
 msgid ""
 "Ensures the system can manage stock levels and calculate recommended "
 "replenishment quantities for tangible items."
 msgstr ""
+"Asegura que el sistema gestione los niveles de inventario y calcule las "
+"cantidades de reabstecimiento recomendadas para artículos tangibles."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:76
 msgid "Suggest quantities to order"
-msgstr ""
+msgstr "Sugerir cantidades para ordenar"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:78
 msgid ""
@@ -55777,32 +55975,46 @@ msgid ""
 "the :menuselection:`Purchase` app. Create a :guilabel:`New` |RFQ| or select "
 "an existing one."
 msgstr ""
+"Para sugerir cantidades según las ventas pasadas, ve a la aplicación "
+":menuselection:`Compras` y crea una nueva :guilabel:`nueva` solicitud de "
+"cotización o selecciona una existente."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:81
 msgid "In the |RFQ|, set the :guilabel:`Vendor` field to the chosen supplier."
 msgstr ""
+"Configura el campo :guilabel:`Proveedor` de la solicitud de cotización con "
+"el proveedor elegido."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:83
 msgid ""
 "In the :guilabel:`Products` tab, click the :guilabel:`Catalog` button to "
 "view that vendor's items."
 msgstr ""
+"Haz clic en el botón :guilabel:`Catálogo` en la pestaña :guilabel:`Productos`"
+" para ver los artículos de ese proveedor."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:86
 msgid ""
 "Verify that each product in the catalog is configured with the chosen vendor."
 msgstr ""
+"Verifica que cada producto del catálogo esté configurado con el proveedor "
+"seleccionado."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:89
 msgid ""
 "By default, products listed in the product catalog are filtered by vendor."
 msgstr ""
+"De forma predeterminada, los productos que aparecen en el catálogo se "
+"filtran por proveedor."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:91
 msgid ""
 "Remove the filter in the search bar to view all items or use the built-"
 "in :icon:`oi-group` :guilabel:`Group By` for :guilabel:`Product Category`."
 msgstr ""
+"Elimina el filtro de la barra de búsqueda para ver todos los artículos o usa "
+":icon:`oi-group` :guilabel:`Agrupar por` con :guilabel:`Categoría del "
+"producto`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:94
 msgid ""
@@ -55810,32 +56022,44 @@ msgid ""
 "corner to open the :guilabel:`Suggest Quantities based on Sales & Demands` "
 "pop-up window. Complete its fields as follows:"
 msgstr ""
+"Dentro del :guilabel:`catálogo`, haz clic en :guilabel:`Sugerir` en la "
+"esquina superior izquierda para abrir la ventana emergente :guilabel:`"
+"Sugerir cantidades basadas en ventas y demandas`. Completa los campos de la "
+"siguiente manera:"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:98
 msgid ":guilabel:`Replenish for`: Number of days intended to stock products."
 msgstr ""
+":guilabel:`Reabastecer para`: El número de días que deseas mantener los "
+"productos en existencia."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:99
 msgid ":guilabel:`Based on`: There are two inputs:"
-msgstr ""
+msgstr ":guilabel:`Basado en`: Tiene dos campos:"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:101
 msgid ""
 "Period: select the time frame that represents historical demand "
 "(e.g., :guilabel:`Last 30 Days`, :guilabel:`April 2024`)."
 msgstr ""
+"Periodo: Elige el intervalo que representa la demanda histórica (por "
+"ejemplo, :guilabel:`Últimos 30 días`, :guilabel:`Abril de 2024`)."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:104
 msgid ""
 "Growth factor %: scale the demand up or down (e.g., 120% for 20% growth, 30% "
 "for 70% drop)."
 msgstr ""
+"% de factor de crecimiento : Ajusta la demanda hacia arriba o hacia abajo ("
+"por ejemplo, 120% para un crecimiento del 20%, 30% para una caída del 70%)."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:106
 msgid ""
 "The total in the lower-right corner shows the order value. Odoo multiplies "
 "the vendor's *Unit Price* by the suggested quantity."
 msgstr ""
+"El total en la esquina inferior derecha muestra el valor de la orden. Odoo "
+"multiplica el *precio unitario* del proveedor por la cantidad sugerida."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:109
 msgid ""
@@ -55844,10 +56068,15 @@ msgid ""
 "in the catalog. Adjust amounts if needed, then click :guilabel:`Back to "
 "Quotation` to confirm the final numbers on the |RFQ|."
 msgstr ""
+"Luego de confirmar los parámetros, haz clic en :guilabel:`Calcular` para "
+"completar las cantidades recomendadas en el catálogo de forma automática. "
+"Ajusta las cantidades en caso de que sea necesario y luego haz clic en "
+":guilabel:`Volver a la cotización` para confirmar los valores finales en la "
+"solicitud de cotización."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:116
 msgid "Recommend at 100% growth"
-msgstr ""
+msgstr "Recomendación al 100% de crecimiento"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:118
 msgid ""
@@ -55855,66 +56084,72 @@ msgid ""
 "days of historical data, assuming the revenue growth is the same this month, "
 "at 100%."
 msgstr ""
+"Una empresa necesita reabastecer orquídeas para 14 días, tomando como "
+"referencia los últimos 30 días de datos históricos, asumiendo que los "
+"ingresos crecen al mismo ritmo este mes, al 100%."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:-1
 msgid "Compute suggestion for example 1."
-msgstr ""
+msgstr "Calcular sugerencia para el ejemplo 1."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:124
 msgid "Delivered/consumed within the period:"
-msgstr ""
+msgstr "Entregas y consumos durante el periodo:"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:126
 msgid "20 units delivered 15 days ago in a `WH/OUT` operation."
-msgstr ""
+msgstr "20 unidades entregadas hace 15 días en una operación `WH/SALIDA`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:127
 msgid "20 units delivered 1 day ago"
-msgstr ""
+msgstr "20 unidades entregadas hace 1 día."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:128
 msgid "Total: 40 units in the last 30 days"
-msgstr ""
+msgstr "Total: 40 unidades en los últimos 30 días."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:131
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:168
 msgid "Variables"
-msgstr ""
+msgstr "Variables"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:133
 msgid "Replenish for: 14 days"
-msgstr ""
+msgstr "Reabastecimiento para: 14 días"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:134
 msgid "Based on: 30 days"
-msgstr ""
+msgstr "Basado en: 30 días"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:136
 msgid "total delivered/consumed in the period: 40 units"
-msgstr ""
+msgstr "Total entregado y consumido en el periodo: 40 unidades"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:138
 msgid "Factor: 100%"
-msgstr ""
+msgstr "Factor: 100%"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:140
 msgid "Average~Daily~Demand = \\frac{40}{30}  \\approx 1.33 \\text{ units/day}"
 msgstr ""
+"Demanda~diaria~promedio = \\frac{40}{30}  \\approx 1.33 \\text{ unidades/día}"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:145
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:182
 msgid "Suggested quantity"
-msgstr ""
+msgstr "Cantidad sugerida"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:147
 msgid ""
 "Suggested~Quantity = 1.33 \\times 14 \\approx 18.67 \\text{ (rounded to 19 "
 "units)}"
 msgstr ""
+"Cantidad~sugerida = 1.33 \\times 14 \\approx 18.67 \\text{ (redondeada a 19 "
+"unidades)}"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:154
 msgid "Suggestion to purchase 19 units."
-msgstr ""
+msgstr "Sugerencia para comprar 19 unidades."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:154
 msgid ""
@@ -55922,10 +56157,13 @@ msgid ""
 "\\times 19 = $57`, which is the total amount displayed in "
 "the :guilabel:`Suggest Quantities based on Sales & Demands` pop-up window."
 msgstr ""
+"Sugerencia para comprar 19 orquídeas. Como el *precio unitario* es $3, "
+":math:`$3 \\times 19 = $57`, que es el total que aparece en la ventana "
+"emergente :guilabel:`Sugerir cantidades basadas en ventas y demandas`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:159
 msgid "Recommend at 120% growth"
-msgstr ""
+msgstr "Recomendación al 120% de crecimiento"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:161
 msgid ""
@@ -55933,22 +56171,25 @@ msgid ""
 "week's sales. Since a local event is coming up, the company expects 120% "
 "growth."
 msgstr ""
+"La empresa revisa las ventas de la semana anterior para planear la compra de "
+"rosas este mes. Pronto habrá un evento local muy importante, así que esperan "
+"un crecimiento del 120%."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:-1
 msgid "Compute suggestion for example 2."
-msgstr ""
+msgstr "Calcular sugerencia para el ejemplo 2."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:170
 msgid "Replenish for 30 days"
-msgstr ""
+msgstr "Reabastecimiento para: 30 días"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:171
 msgid "Based on: 7 days"
-msgstr ""
+msgstr "Basado en: 7 días"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:173
 msgid "total delivered/consumed in the past week: 166 units"
-msgstr ""
+msgstr "Total entregado y consumido en la última semana: 166 unidades"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:175
 msgid "Factor: 120%"
@@ -55959,26 +56200,32 @@ msgid ""
 "Average~Daily~Demand = \\frac{166}{7} \\times 1.20 \\approx 28.46 "
 "\\text{ units/day}"
 msgstr ""
+"Demanda~diaria~promedio = \\frac{166}{7} \\times 1.20 \\approx 28.46 \\text{ "
+"unidades/día}"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:184
 msgid ""
 "Suggested~Quantity = 28.46 \\times 30 \\approx 853.8 \\text{ (rounded to 854 "
 "units)}"
 msgstr ""
+"Cantidad~sugerida = 28.46 \\times 30 \\approx 853.8 \\text{ (redondeada a "
+"854 unidades)}"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:191
 msgid "Suggestion to purchase 854 roses."
-msgstr ""
+msgstr "Sugerencia para comprar 854 rosas."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:191
 msgid ""
 "Suggestion to purchase 854 roses. Each rose costs $4.58 with the chosen "
 "vendor, so :math:`$4.58 \\times 854 = $3911.32`."
 msgstr ""
+"Sugerencia para comprar 854 rosas. Cada rosa cuesta $4.58 con el proveedor "
+"elegido, así que :math:`$4.58 \\times 854 = $3911.32`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:197
 msgid "Recommend from specific warehouse"
-msgstr ""
+msgstr "Recomendación desde un almacén específico"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:199
 msgid ""
@@ -55987,6 +56234,10 @@ msgid ""
 "particularly helpful when multiple warehouses serve different communities, "
 "franchises, or branch stores."
 msgstr ""
+"Cuando una empresa tiene varios almacenes, analiza las cantidades entregadas "
+"o consumidas en un almacén específico para hacer que los resultados sean más "
+"precisos. Esto es muy útil cuando varios almacenes atienden distintas "
+"comunidades, franquicias o sucursales."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:203
 msgid ""
@@ -55994,6 +56245,9 @@ msgid ""
 "warehouses_storage/inventory_management/warehouses>` and deliveries "
 "or :abbr:`MOs (manufacturing orders)` are validated in each warehouse."
 msgstr ""
+"Para esto, asegúrate de :doc:`tener varios almacenes configurados <../../"
+"inventory/warehouses_storage/inventory_management/warehouses>` y que las "
+"entregas u órdenes de fabricación estén validadas en cada almacén."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:207
 msgid ""
@@ -56002,6 +56256,10 @@ msgid ""
 "the product line, and then clicking :guilabel:`Suggest` in the upper-left "
 "corner."
 msgstr ""
+"Ve a la ventana de sugerencias. Para ello, ve a la aplicación "
+":menuselection:`Compras`, haz clic en la solicitud de cotización deseada, "
+"presiona el botón :guilabel:`Catálogo` en la línea de producto y luego haz "
+"clic en :guilabel:`Sugerir` en la esquina superior izquierda."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:211
 msgid ""
@@ -56010,11 +56268,17 @@ msgid ""
 "only in the specific warehouse, or leave the field blank to observe "
 "quantities across all warehouses."
 msgstr ""
+"El campo :guilabel:`En` aparece cuando hay varios almacenes configurados. "
+"Ahí puedes seleccionar un almacén específico para analizar las cantidades "
+"consumidas solo en ese almacén o dejar el campo vacío para ver las "
+"cantidades de todos los almacenes."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:-1
 msgid ""
 "Show In field in the popup, displaying different warehouses to choose from."
 msgstr ""
+"Visualización del campo En en la ventana emergente, con distintos almacenes "
+"para elegir."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:219
 msgid "Best practices"
@@ -56022,7 +56286,7 @@ msgstr "Mejores prácticas"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:221
 msgid "Validate historical data"
-msgstr ""
+msgstr "Validar datos históricos"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:223
 msgid ""
@@ -56030,34 +56294,44 @@ msgid ""
 "other inventory actions that consume quantities. For delivery orders, the "
 "*Effective Date* field is considered the date the quantities were consumed."
 msgstr ""
+"Los pronósticos están basados en las órdenes de entrega validadas, las "
+"órdenes de fabricación y otras acciones de inventario que consumen "
+"cantidades. En el caso de las órdenes de entrega, el campo *Fecha efectiva* "
+"se considera la fecha en que se consumieron las cantidades."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:0
 msgid "Example of effective date field."
-msgstr ""
+msgstr "Ejemplo del campo Fecha efectiva."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:230
 msgid "Maintain accurate vendor pricelists"
-msgstr ""
+msgstr "Mantener listas de precios de proveedores actualizadas"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:232
 msgid ""
 "Review and update vendor pricelists to reflect the latest pricing and "
 "supplier information to ensure correct suggestions."
 msgstr ""
+"Revisa y actualiza las listas de precios de los proveedores para reflejar "
+"los precios y la información más recientes y así garantizar que las "
+"sugerencias sean correctas."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:235
 msgid "Test sales projections based on seasonality"
-msgstr ""
+msgstr "Probar proyecciones de ventas según la estacionalidad"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:237
 msgid ""
 "Reference prior months or quarters to capture seasonal fluctuations and "
 "experiment with growth and decline factors to project sales."
 msgstr ""
+"Consulta los meses o trimestres anteriores para captar variaciones "
+"estacionales y ajusta los factores de crecimiento o disminución para "
+"proyectar las ventas."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:240
 msgid "Review suggestions critically"
-msgstr ""
+msgstr "Revisar las sugerencias con criterio"
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/suggest.rst:242
 msgid ""
@@ -56065,6 +56339,9 @@ msgid ""
 "judgment. Market changes, promotions, and upcoming events can affect actual "
 "demand."
 msgstr ""
+"Aunque la herramienta te proporcionará una recomendación base, siempre "
+"aplica tu criterio comercial. Los cambios en el mercado, las promociones y "
+"los próximos eventos pueden influir en tu demanda real."
 
 #: ../../content/applications/inventory_and_mrp/purchase/advanced/vendor_costs_report.rst:3
 msgid "Vendor costs report"
@@ -57325,7 +57602,7 @@ msgstr ":doc:`blanket_orders`"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:3
 msgid "Control policies"
-msgstr ""
+msgstr "Políticas de control"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:10
 msgid ""
@@ -57334,10 +57611,14 @@ msgid ""
 "ordered quantities* means the bill is based on ordered items, even if they "
 "have not been received yet."
 msgstr ""
+"En la aplicación **Compras** de Odoo, la *política de control* determina las "
+"cantidades que los proveedores facturan en cada orden de compra . Por "
+"ejemplo, elegir *sobre cantidades pedidas* significa que la factura estará "
+"basada en los artículos ordenados, incluso si aún no los recibes."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:14
 msgid "The control policy is selected on the *Product* record."
-msgstr ""
+msgstr "Selecciona la política de control en el registro del *producto*."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:19
 msgid ""
@@ -57348,6 +57629,13 @@ msgid ""
 "the radio button for either :guilabel:`On ordered quantities` "
 "or :guilabel:`On recieved quantities`."
 msgstr ""
+"Para configurar la política de control de un producto, ve a :menuselection:`"
+"Compras --> Productos --> Productos`, luego haz clic en el registro de un "
+"producto para abrirlo. Abre la pestaña :guilabel:`Compras` y dirígete a la "
+"sección :guilabel:`Facturas de proveedor`. Una vez allí, busca :guilabel:`"
+"Política de control` y selecciona el botón de opción correspondiente a "
+":guilabel:`Sobre cantidades pedidas` o :guilabel:`Sobre cantidades "
+"recibidas`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:24
 msgid ""
@@ -57355,6 +57643,9 @@ msgid ""
 "is confirmed. The products and quantities in the |PO| are used to generate a "
 "draft bill."
 msgstr ""
+":guilabel:`Sobre cantidades ordenadas`: Crea una factura de proveedor al "
+"confirmar una orden de compra. Los productos y cantidades en la orden de "
+"compra se usan para generar una factura en borrador."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:26
 msgid ""
@@ -57363,20 +57654,30 @@ msgid ""
 "used to generate a draft bill. An error message appears if creation of a "
 "vendor bill is attempted without receiving anything."
 msgstr ""
+":guilabel:`Sobre cantidades recibidas`: Crea una factura solo *después* de "
+"recibir parte de la orden total. Los productos y cantidades recibidas se "
+"usan para generar una factura en borrador. Aparecerá un mensaje de error si "
+"intentas crear una factura de proveedor sin haber recibido nada."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:30
 msgid ""
 "The default control policy for a product is determined by "
 "the :guilabel:`Product Type`:"
 msgstr ""
+"La política de control predeterminada de un producto depende del :guilabel:`"
+"tipo de producto`:"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:32
 msgid "**Services**: The default control policy is *On ordered quantities*."
 msgstr ""
+"**Servicios**: La política de control predeterminada es *Sobre cantidades "
+"ordenadas*."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:33
 msgid "**Goods**: The default control policy is *On delivered quantities*"
 msgstr ""
+"**Bienes**: La política de control predeterminada es *Sobre cantidades "
+"entregadas*."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:36
 msgid "Pay vendor bills with 3-way matching"
@@ -57387,6 +57688,9 @@ msgid ""
 "The *3-way matching* feature ensures vendor bills are only paid once some, "
 "or all, of the products included in the |PO| have been received."
 msgstr ""
+"La función de *conciliación de tres vías* garantiza que las facturas de "
+"proveedor solo se paguen una vez que hayas recibido algunos o todos los "
+"productos incluidos en la orden de compra."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:41
 msgid ""
@@ -57443,6 +57747,8 @@ msgid ""
 "The |PO| selected from the list **must not** be billed yet, or "
 "an :guilabel:`Invalid Operation` pop-up window appears."
 msgstr ""
+"La orden de compra seleccionada de la lista **no debe** estar facturada "
+"todavía o aparecerá la ventana emergente :guilabel:`Operación no válida`."
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:0
 msgid "Invalid Operation pop-up window for billed Purchase Order."
@@ -57592,7 +57898,7 @@ msgstr "Sobre cantidades recibidas"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:122
 msgid "On ordered quantities"
-msgstr "Sobre cantidades pedidas"
+msgstr "Sobre cantidades ordenadas"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/control_bills.rst:123
 msgid "Nothing to Bill"
@@ -57805,7 +58111,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:76
 msgid "Ordered quantities"
-msgstr "Cantidades pedidas"
+msgstr "Cantidades ordenadas"
 
 #: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:78
 msgid ""
@@ -62318,6 +62624,9 @@ msgid ""
 "This step can be customized to provide instructions about where to add the "
 "labels on a product."
 msgstr ""
+":guilabel:`Imprimir etiqueta` abre una ventana emergente desde la que puedes "
+"imprimir etiquetas. Puedes personalizar este paso para proporcionar "
+"instrucciones sobre dónde colocar las etiquetas en un producto."
 
 #: ../../content/applications/inventory_and_mrp/quality/quality_management/quality_checks.rst:55
 msgid ""
