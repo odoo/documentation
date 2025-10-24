@@ -1425,10 +1425,15 @@ The `field` element can have the following attributes:
    number of pixels required to display a date, so we can ensure that a column for a date field
    doesn't take more space than what is strictly necessary, thus leaving the extra space for the
    other columns. However, the framework can't guess the adequate width for every field types. For
-   instance, char fields can be used to encode large values, or 3-letter country codes. In the
-   latter case, one can set the width directly in the arch (e.g. `width="40px"`). It represents
-   the width (always in pixels) required to render the values inside the cells. The width of the
-   column will then be the sum of the given value and the cells' left and right paddings.
+   instance, char fields can be used to encode large values, or 3-letter country codes.
+
+   The `width` attribute can be used to specify the ideal width for a given column. It allows to
+   specify a fixed width (e.g. `width="40px"`), a minimal width (e.g. `width="[40px]"`) or minimal
+   and maximal widths (e.g. `width="[40px,70px]"`). Those widths represent the space required to
+   render the values inside the cells. The width of the column will then be the sum of the given
+   value and the cells' left and right paddings.
+
+   Note: those widths are always in pixels, so "px" can be omitted (e.g. `width="30"`).
 
    :requirement: Optional
    :type: str
