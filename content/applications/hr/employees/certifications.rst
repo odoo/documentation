@@ -68,7 +68,7 @@ employees who must renew.
 Log a certification
 ===================
 
-To log a certification for an employee, navigate to :menuselection:`Employees app --> Reporting -->
+To log a certification for an employee, navigate to :menuselection:`Employees app --> Learning -->
 Certifications`. Click :guilabel:`New`, and a blank certification form loads. Enter the following
 information on the form:
 
@@ -113,8 +113,8 @@ information on the form:
   - :guilabel:`Course`: Select this option to have the certification appear in the *Resume* section
     of the employee form, and **not** appear on the *Employee Certifications* report. Once this
     option is selected, a :guilabel:`Course` field appears beneath the :guilabel:`Display Type`
-    field. Using the drop-down menu, select the corresponding **eLearning** course the employee took.
-    This field **only** appears if the **eLearning** app is installed.
+    field. Using the drop-down menu, select the corresponding **eLearning** course the employee
+    took. This field **only** appears if the **eLearning** app is installed.
 
 - :guilabel:`Description`: Enter a description for the certification in this field.
 - :guilabel:`Duration`: Click into the first field, and a calendar pop-over window appears. Click on
