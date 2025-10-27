@@ -20,19 +20,19 @@ Configuration
 =============
 
 To use packagings, navigate to :menuselection:`Inventory app --> Configuration --> Settings`. Then,
-under the :guilabel:`Products` heading, enable the :guilabel:`Product Packagings` feature, and click
-:guilabel:`Save`.
+under the :guilabel:`Products` heading, enable the :guilabel:`Units of Measure & Packagings`
+feature, and click :guilabel:`Save`.
 
 .. image:: packaging/enable-packagings.png
    :align: center
-   :alt: Enable packagings by selecting "Product Packagings".
+   :alt: Enable packagings by selecting Units of Measure & Packagings.
 
 .. _inventory/product_management/packaging-setup:
 
 Create packaging
 ================
 
-Packagings can be created directly on the product form, or from the :guilabel:`Product Packagings`
+Packagings can be created directly on the product form, or from the :guilabel:`Units & Packagings`
 page.
 
 From product form
@@ -41,50 +41,53 @@ From product form
 Create packagings on a product form by going to :menuselection:`Inventory app --> Products -->
 Products`, and select the desired product.
 
-Under the :guilabel:`Inventory` tab, scroll down to the :guilabel:`Packaging` section, and click
-:guilabel:`Add a line`. In the table, fill out the following fields:
+To specify a sales packaging, open the :guilabel:`Sales` tab, then specify :guilabel:`Packagings` in
+the :guilabel:`Upsell & Cross-Sell` section. Specify existing packagings or create new ones by
+clicking :guilabel:`Create and edit`. When :guilabel:`Create and edit` is clicked, a
+:guilabel:`Create Packagings` box opens, where information about the packaging can be specified:
 
-- :guilabel:`Packaging` (required): name of packaging that appears on sales/purchase orders as a
+- :guilabel:`Unit Name` (required): name of packaging that appears on sales/purchase orders as a
   packaging option for the product.
-- :guilabel:`Contained quantity` (required): amount of product in the packaging.
-- :guilabel:`Unit of Measure` (required): measurement unit for quantifying the product.
-- :guilabel:`Sales`: check this option for packagings intended for use on sales orders.
-- :guilabel:`Purchase`: check this option for packagings intended for use on purchase orders.
-
-.. note::
-   Access additional fields in the :guilabel:`Packaging` table below by clicking the |adjust| icon
-   to the far-right of the column titles in the :guilabel:`Packaging` section, and selecting the
-   desired options from the drop-down menu that appears.
-
-- :guilabel:`Barcode`: identifier for tracing packaging in stock moves or pickings, using the
+- :guilabel:`Quantity` (required): amount of product in the packaging.
+- :guilabel:`Reference Unit` (required): measurement unit for quantifying the product.
+- :guilabel:`Package Type`: package type used to set custom dimensions and limits. See
+  :ref:`package type <inventory/warehouses_storage/package-type>` to learn more.
+- :guilabel:`Barcodes`: identifier for tracing packaging in stock moves or pickings, using the
   :ref:`Barcode app <barcode/operations/intro>`. Leave blank if not in use.
-- :guilabel:`Company`: indicates the packaging is only available at the selected company. Leave
-  blank to make the packaging available across all companies.
+
+.. image:: packaging/create-sales-packagings.png
+   :alt: Create a new packaging in the Create Packagings box.
+
+To specify a purchase packaging for a vendor, open the :guilabel:`Purchase` tab, then add a vendor.
+Update the :guilabel:`Unit` field to specify a purchase packaging for that vendor. Specify existing
+packagings here, or create new ones by clicking :guilabel:`Create and edit`. When :guilabel:`Create
+and edit` is clicked, the :guilabel:`Create Unit` box opens. The fields in this box are the same as
+for the :guilabel:`Create Packagings` box above.
 
 .. example::
-   To create a packaging type for six units of the product, `Grape Soda`, begin by clicking
-   :guilabel:`Add a line`. In the line, name the :guilabel:`Packaging` `6-pack`, and set the
-   :guilabel:`Contained quantity` to `6`. Repeat this process for additional packagings.
+   To create a purchase packaging type for six units of the product, `Grape Soda`, begin by clicking
+   :guilabel:`Add a line` in the :guilabel:`Purchase` tab. Specify a :guilabel:`Vendor`. Specify
+   `6-pack` in the :guilabel:`Unit` field, then click :guilabel:`Create and edit`. In the
+   :guilabel:`Create Unit` box, specify a quantity and reference unit (in this case, `6` `Units`),
+   then click :guilabel:`Save`. Repeat this process for additional packagings.
 
-   .. image:: packaging/create-product-packaging.png
-      :align: center
-      :alt: Create 6-pack case for product.
+   .. image:: packaging/create-purchase-packagings.png
+      :alt: Create purchase packagings for product.
 
-From product packagings page
+From units & packagings page
 ----------------------------
 
 To view all packagings that have been created, go to :menuselection:`Inventory app --> Configuration
---> Product Packagings`. Doing so reveals the :guilabel:`Product Packagings` page with a complete
+--> Units & Packagings`. Doing so reveals the :guilabel:`Units & Packagings` page with a complete
 list of all packagings that have been created for all products. Create new packagings by clicking
 :guilabel:`New`.
 
 .. example::
    Two soda products, `Grape Soda` and `Diet Coke`, have three types of packagings configured. On
-   the :guilabel:`Product Packagings` page, each product can be sold as a `6-Pack` that contains 6
+   the :guilabel:`Units & Packagings` page, each product can be sold as a `6-Pack` that contains 6
    products, as a `12-Pack` of 12 products, or as a `Case` of 32 products.
 
    .. image:: packaging/packagings.png
-      :align: center
       :alt: List of different packagings for products.
 
 Partial reservation
@@ -96,7 +99,7 @@ flexibility expedites order fulfillment by allowing the immediate shipment of av
 awaiting the rest.
 
 To configure packaging reservation methods, go to :menuselection:`Inventory app --> Configuration
---> Product Categories`. Then, click :guilabel:`New`, or select the desired product category.
+--> Products --> Categories`. Then, click :guilabel:`New`, or select the desired product category.
 
 On the product category's form, in the :guilabel:`Logistics` section, :guilabel:`Reserve Packagings`
 can be set to :guilabel:`Reserve Only Full Packagings` or :guilabel:`Reserve Partial Packagings`.
@@ -129,61 +132,11 @@ Apply packagings
 
 When creating a sales order in the :menuselection:`Sales` app, specify the packagings that should be
 used for the product. The chosen packaging is displayed on the :abbr:`SO (Sales Order)` under the
-:guilabel:`Packaging` field.
+:guilabel:`Units` field.
 
 .. example::
    18 cans of the product, `Grape Soda`, is packed using three 6-pack packagings.
 
    .. image:: packaging/packagings-sales-order.png
-      :align: center
       :alt: Assign packagings on the Sales Order Line.
-
-.. _inventory/product_management/packaging-route:
-
-Routes for packaging
-====================
-
-When receiving packagings, by default, they follow the warehouse's :doc:`configured reception route
-<../../shipping_receiving/daily_operations>`. To **optionally** set up a packaging-specific route,
-go to :menuselection:`Inventory app --> Configuration --> Routes`.
-
-.. important::
-   The *Product Packagings*, *Storage Locations*, and *Multi-Step Routes* features (found by going
-   to :menuselection:`Inventory app --> Configuration --> Settings`) **must** be activated, and
-   saved.
-
-.. seealso::
-   :doc:`../../shipping_receiving/daily_operations/use_routes`
-
-Create route
-------------
-
-On the :guilabel:`Routes` page, click :guilabel:`New`, or select a route that is **not** for a
-warehouse. Next, in the :guilabel:`Applicable on` section, tick the :guilabel:`Packagings` checkbox.
-
-.. figure:: packaging/route.png
-   :align: center
-   :alt: Create route for a packaging.
-
-   Route with "Packagings" selected, with "Products" and "Warehouses" not selected.
-
-.. _inventory/product_management/route-on-packaging:
-
-Apply route on packaging
-------------------------
-
-Then, to apply the route, go to :menuselection:`Inventory app --> Products --> Products`, and select
-the product that uses packaging.
-
-In the product form, switch to the :guilabel:`Inventory` tab. In the :guilabel:`Packaging` section
-that contains :ref:`configured packagings <inventory/product_management/packaging-setup>`, click the
-|adjust| icon. Tick the :guilabel:`Routes` checkbox to make the column visible in the
-:guilabel:`Packaging` table.
-
-In the :guilabel:`Routes` field, select the packaging-specific route. Repeat these steps for all
-packaging intended to use the route.
-
-.. image:: packaging/apply-route.png
-   :align: center
-   :alt: Set route on a packaging.
 
