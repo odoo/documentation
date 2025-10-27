@@ -27,8 +27,7 @@ follows:
 #. Indicate that you sell products online, and enter :guilabel:`Your store's website`.
 #. Click :guilabel:`Continue`, then click :guilabel:`Continue to Merchant Center`.
 #. Enter your business details by adding the :guilabel:`Business name` and the
-   :guilabel:`Registered country`, then click the :guilabel:`Continue to Merchant Center` button
-   twice.
+   :guilabel:`Registered country`, then click the :guilabel:`Continue to Merchant Center` button.
 #. Add the relevant information and click :guilabel:`Continue`, or click :guilabel:`Do it later`
    to skip this step for now.
 #. Go to the :guilabel:`Business info` tab in the left menu, and click :guilabel:`Confirm online
@@ -51,27 +50,37 @@ follows:
 .. seealso::
    `Google Merchant Center Help <https://support.google.com/merchants/answer/12564959?hl=en>`_
 
+.. _ecommerce/google_merchant_center/linking-odoo-to-gmc:
+
 Linking Odoo to GMC
 ===================
 
 .. important::
-   To activate the :abbr:`GMC (Google Merchant Center)` integration in your Odoo database, at least
-   one :ref:`pricelist <ecommerce/prices/pricelists>` must be assigned to your website.
+   To use the :abbr:`GMC (Google Merchant Center)` integration in your Odoo database, at least
+   one :ref:`pricelist <ecommerce/prices/pricelists>` must be assigned to the website.
 
 #. Navigate to :menuselection:`Website --> Configuration --> Settings`, scroll to the
-   :guilabel:`SEO - Search Engine Optimization` section, and enable
-   :guilabel:`Google Merchant Center Data Source`.
-#. Click the :guilabel:`Copy file link`, then :guilabel:`Save`.
+   :guilabel:`Tracking & SEO` section, and enable :guilabel:`Google Merchant Center`, and
+   :guilabel:`Save`.
 
    .. note::
-      By enabling the :guilabel:`Google Merchant Center Data Source` option, your website will
+      By enabling the :guilabel:`Google Merchant Center` option, your website will
       generate a dynamic `/gmc.xml` feed containing essential product information and availability.
-      This feed can be :ref:`customized <ecommerce/GMC/localized-feed>` to include multiple
-      languages and pricelists, ensuring your products are displayed correctly for different regions
-      and audiences.
 
+#. Click :guilabel:`Manage feeds`.
+#. In the :guilabel:`Product Feeds` pop-up window, select a :ref:`pricelist
+   <ecommerce/prices/pricelists>`, a :ref:`language <language/add>` and :ref:`categories
+   <ecommerce/catalog/categories>`, and :guilabel:`Save`.
+
+   .. note::
+      You must first enable the corresponding :doc:`language </applications/general/users/language>`
+      in the website's settings and/or create a :ref:`pricelist <ecommerce/prices/pricelists>`
+      in the foreign currency with the :ref:`Selectable <ecommerce/prices/selectable-pricelists>`
+      option enabled.
+
+#. Once done, click :guilabel:`Copy URL` on the corresponding feed.
 #. Go to the :abbr:`GMC (Google Merchant Center)` dashboard, navigate to the
-   :menuselection:`Your business --> Products` tab in the left menu, and click :guilabel:`Add
+   :menuselection:`Products & store --> Products` tab in the left menu, and click :guilabel:`Add
    products`.
 #. Choose :guilabel:`Add products from a file` and paste the URL of the copied file.
 
@@ -80,37 +89,20 @@ Linking Odoo to GMC
       able to proceed without selecting at least one target country. If necessary, enter
       a :guilabel:`feed label` as well.
 
-      .. image:: google_merchant_center/gmc-select-countries.png
-         :alt: Select countries in GMC.
+      .. image:: google_merchant_center/gmc-feed-creation.png
+         :alt: Select countries, purpose and feed label in GMC.
 
 #. Click :guilabel:`Continue`.
 
-.. _ecommerce/GMC/localized-feed:
-
-Localized feeds
-===============
-
-Languages/regions
------------------
-
-It is helpful to create language-specific feeds for each country/language you sell in. To add a
-new feed, go to :guilabel:`Products` on the :abbr:`GMC` dashboard, click :guilabel:`Add products`,
-and select :guilabel:`Add another product source` from the dropdown menu.
-
-.. note::
-   The selected :doc:`language </applications/general/users/language>` must first be enabled in
-   your website's settings.
-
-Currencies
-----------
-
-It is also possible to create different feeds for different currencies, which allows customers
-to view prices in their local currency. To enable this feature, create a :ref:`pricelist
-<ecommerce/prices/pricelists>` with the foreign currency in Odoo. Then, go to the
-:guilabel:`Products` tab in :abbr:`GMC`, click :guilabel:`Manage
-product sources`, and choose a :guilabel:`Products source`. Navigate to the
-:guilabel:`Data source setup` tab, click :guilabel:`Show advanced options`, and choose a
-:guilabel:`Currency`.
+.. tip::
+   - Create as many feeds as needed, and on the :abbr:`GMC (Google Merchant Center)` dashboard,
+     create several :guilabel:`Product sources`. To do so, expand the :icon:`fa-caret-down`
+     :guilabel:`Products & store` menu, go to :guilabel:`Products`, click the :icon:`fa-caret-down`
+     :guilabel:`Add products` dropdown menu, and select :guilabel:`Add another product source`.
+   - To manually change the currency of the feed, go to the :guilabel:`Products` tab in :abbr:`GMC
+     (Google Merchant Center)`, click :guilabel:`Manage product sources`, and choose a
+     :guilabel:`Products source`. Navigate to the :guilabel:`Data source setup` tab, click
+     :guilabel:`Show advanced options`, and choose a :guilabel:`Currency`.
 
 .. seealso::
    `Google Merchant Center Product Feed Specifications <https://support.google.com/merchants/answer/7052112>`_.
