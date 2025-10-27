@@ -1249,6 +1249,9 @@ will yield::
 
     {'name': "A", 'description': "Extended"}
 
+.. warning:: When :attr:`~odoo.models.Model._inherit` is set to a string,
+    then :attr:`~odoo.models.Model._name` is set to the same value,
+    unless `_name` is explicitly set.
 
 .. note::
 
