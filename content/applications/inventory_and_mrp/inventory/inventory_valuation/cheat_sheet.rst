@@ -8,6 +8,10 @@ Valuation cheat sheet
 
 .. rst-class:: full-width
 
+   .. important::
+      This documentation is for Odoo 19 or later.
+      :ref:`Discover why we changed. <changes-in-19>`
+
 
 Costing Methods
 ===============
@@ -345,7 +349,7 @@ Reporting
 In Inventory
 ------------
 
-Open :menuselection:`Inventory -- > Reporting --> Stock` to view your current inventory level and
+Open :menuselection:`Inventory --> Reporting --> Stock` to view your current inventory level and
 valuation for each product, or to review historical data as of a previous date.
 
 .. h:div:: doc-aside
@@ -406,3 +410,47 @@ and :ref:`Journal Entries Configuration <journal-entries>` sections.
 .. h:div:: doc-aside
 
   .. image:: cheat_sheet/valuation-accounting.png
+
+
+.. _changes-in-19:
+
+Changes in Odoo 19
+==================
+
+Before Odoo 19, the Perpetual accounting method was implemented by posting real-time accounting
+entries at each stock movement. That created a lot of journal items in accounting, which was an
+issue for performance, general ledger clarity and auditability.
+
+Since Odoo 19, the Perpetual method impacts the stock valuation account at the invoice level. The
+closing entry is then used to manage bills to receive, invoices to issue, deferred revenues, prepaid
+expenses, and other gaps between inventory values and accounting ones.
+
+.. h:div:: feature-table doc-aside
+
+  +-----------------------+--------------------------------+--------------------------------+
+  |                       | Odoo 18                        | Odoo 19                        |
+  +=======================+================================+================================+
+  | Periodic Continental  | :meh:`Manual closing`          | :good:`Automated closing`      |
+  +-----------------------+--------------------------------+--------------------------------+
+  | Periodic Anglo-Saxon  | :bad:`Not supported`           | :good:`Fully supported`        |
+  +-----------------------+--------------------------------+--------------------------------+
+  | Perpetual Continental | :meh:`Manual closing`          | :good:`✓`                      |
+  +-----------------------+--------------------------------+--------------------------------+
+  | Perpetual Anglo-Saxon | :meh:`Manual closing`          | :good:`✓`                      |
+  +-----------------------+--------------------------------+--------------------------------+
+  | Accounting valuation  | :meh:`Requires inventory`      | :good:`Accounting only`        |
+  +-----------------------+--------------------------------+--------------------------------+
+  | Perpetual Entries     | :good:`Invoices + every moves` | :good:`Invoices + one closing` |
+  +-----------------------+--------------------------------+--------------------------------+
+  | Invoices to issue     | :bad:`✗`                       | :good:`✓`                      |
+  +-----------------------+--------------------------------+--------------------------------+
+  | Prepaid expenses      | :bad:`✗`                       | :good:`✓`                      |
+  +-----------------------+--------------------------------+--------------------------------+
+  | Bills to receive      | :bad:`✗`                       | :good:`✓`                      |
+  +-----------------------+--------------------------------+--------------------------------+
+  | Deferred revenues     | :bad:`✗`                       | :good:`✓`                      |
+  +-----------------------+--------------------------------+--------------------------------+
+  | Performance           | :bad:`Slower`                  | :good:`Faster`                 |
+  +-----------------------+--------------------------------+--------------------------------+
+  | General ledger        | :good:`More journal entries`   | :good:`Fewer journal entries`  |
+  +-----------------------+--------------------------------+--------------------------------+
