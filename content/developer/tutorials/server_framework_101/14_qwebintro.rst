@@ -44,7 +44,7 @@ looks like:
 
     <kanban>
         <templates>
-            <t t-name="kanban-box">
+            <t t-name="kanban-card">
                 <div>
                     <field name="name"/>
                 </div>
@@ -55,9 +55,9 @@ looks like:
 Let's break down this example:
 
 - ``<templates>``: defines a list of :ref:`reference/qweb` templates. Kanban views *must* define at
-  least one root template ``kanban-box``, which will be rendered once for each record.
-- ``<t t-name="kanban-box">``: ``<t>`` is a placeholder element for QWeb directives. In this case,
-  it is used to set the ``name`` of the template to ``kanban-box``
+  least one root template ``kanban-card``, which will be rendered once for each record.
+- ``<t t-name="kanban-card">``: ``<t>`` is a placeholder element for QWeb directives. In this case,
+  it is used to set the ``name`` of the template to ``kanban-card``
 - ``<field name="name"/>``: this will add the ``name`` field to the view.
 
 .. exercise:: Make a minimal kanban view.
@@ -76,7 +76,7 @@ conditionally, we can use the ``t-if`` directive (see :ref:`reference/qweb/condi
     <kanban>
         <field name="state"/>
         <templates>
-            <t t-name="kanban-box">
+            <t t-name="kanban-card">
                 <div>
                     <field name="name"/>
                     <div t-if="record.state.raw_value == 'new'">
