@@ -57,7 +57,7 @@ can be done in a few steps:
 
       <kanban js_class="custom_kanban">
           <templates>
-              <t t-name="kanban-box">
+              <t t-name="kanban-card">
                   <!--Your comment-->
               </t>
           </templates>
