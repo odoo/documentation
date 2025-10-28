@@ -23,6 +23,7 @@ Online payments
    payment_providers/paymob
    payment_providers/paypal
    payment_providers/razorpay
+   payment_providers/redsys
    payment_providers/stripe
    payment_providers/worldline
    payment_providers/xendit
@@ -146,6 +147,12 @@ Online payment providers
      - |V|
      - Full only
      - Full and partial
+     -
+   * - :doc:`Redsys <payment_providers/redsys>`
+     - The provider's website
+     -
+     -
+     -
      -
    * - :doc:`Stripe <payment_providers/stripe>`
      - Odoo
@@ -489,6 +496,7 @@ payments from other payments.
    - :doc:`payment_providers/paymob`
    - :doc:`payment_providers/paypal`
    - :doc:`payment_providers/razorpay`
+   - :doc:`payment_providers/redsys`
    - :doc:`payment_providers/stripe`
    - :doc:`payment_providers/worldline`
    - :doc:`payment_providers/xendit`
