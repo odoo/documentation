@@ -165,9 +165,9 @@ as:
   <ecommerce/cross_upselling/accessory>`;
 - :guilabel:`Promo Code`: to allow customers to redeem :ref:`gift cards <ewallet_gift/gift-cards>`
   or apply :doc:`discount codes <../../sales/sales/products_prices/loyalty_discount>`;
-- :guilabel:`Add to Wishlist`: :ref:`Enable wishlists <ecommerce/products/wishlists>` to allow
-  signed-in users to remove a product from their cart and add it to their wishlist using the
-  :guilabel:`Save for later` option.
+- :guilabel:`Add to Wishlist`: :ref:`Enable wishlists
+  <ecommerce/products/additional_features/wishlists>` to allow signed-in users to remove a product
+  from their cart and add it to their wishlist using the :guilabel:`Save for later` option.
 
 .. note::
    - If a :doc:`fiscal position <../../finance/accounting/taxes/fiscal_positions>` is detected
