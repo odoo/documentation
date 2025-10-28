@@ -8,9 +8,8 @@ Products
 your :ref:`product pages <ecommerce/products/product-page>` directly from the Website app. It also
 allows you to add :ref:`product variants <ecommerce/products/product-variants>` and
 :ref:`digital files <ecommerce/products/digital-files>`, :ref:`translating
-<ecommerce/products/translation>` the product page content, :ref:`managing stock
-<ecommerce/products/stock-management>`, and enabling :ref:`product comparisons
-<ecommerce/products/product-comparison>`.
+<ecommerce/products/translation>` the product page content, and :ref:`managing stock
+<ecommerce/products/stock-management>`.
 
 .. _ecommerce/products/add-products:
 
@@ -118,7 +117,7 @@ Use the :guilabel:`Customize` tab to modify the page layout or add features:
    - :guilabel:`Share`: Add social media and email icon buttons allowing customers to share the
      product through those channels.
 
-- :guilabel:`Select Quantity`: Toggle the switch to allow customers to select the product quantity
+- :guilabel:`Quantity`: Toggle the switch to allow customers to select the product quantity
   they want to purchase.
 
 - :guilabel:`Tax Indication`: Toggle the switch to indicate if the price is
@@ -136,21 +135,21 @@ Use the :guilabel:`Customize` tab to modify the page layout or add features:
    - :guilabel:`Buy Now`: Add a :icon:`fa-bolt` :guilabel:`Buy Now` option to take the customer to
      the checkout page.
    - :guilabel:`Wishlist`: Add an :icon:`fa-heart-o` :guilabel:`Add to wishlist` option allowing
-     logged-in customers to save products in a wishlist.
+     logged-in customers to save products in a :ref:`wishlist
+     <ecommerce/products/additional_features/wishlists>`.
    - :guilabel:`Compare`: Add a :icon:`fa-exchange` :guilabel:`Compare` option, allowing customers
-     to :ref:`compare products <ecommerce/products/product-comparison>` based on their attributes.
+     to :ref:`compare products <ecommerce/products/additional_features/product-comparison>`
+     based on their attributes.
 
 - :guilabel:`Specification`: Select :guilabel:`Bottom of Page` to display a detailed list of the
   attributes and their values available for the product. This option only works for products with
   :ref:`variants <ecommerce/products/product-variants>` if the
-  :ref:`Product comparison tool <ecommerce/products/product-comparison>` is enabled in the Website
-  :guilabel:`Settings`.
+  :ref:`Product comparison tool <ecommerce/products/additional_features/product-comparison>` is
+  enabled in the Website :guilabel:`Settings`.
 
 .. note::
-   - :guilabel:`Variants`, :icon:`fa-heart-o` :guilabel:`Wishlist`, and :icon:`fa-exchange`
-     :guilabel:`Compare` options must be enabled by going to
-     :menuselection:`Website --> Configuration --> Settings`, in the :guilabel:`Shop - Products`
-     section.
+   - :guilabel:`Product Variants` must be enabled by going to :menuselection:`Website -->
+     Configuration --> Settings`, in the :guilabel:`eCommerce` section.
    - Enabled functions apply to all product pages.
    - Products with single values for their attributes do not generate variants but are still
      displayed in the :guilabel:`Product Specifications`.
@@ -234,9 +233,9 @@ go to :menuselection:`Website --> eCommerce --> Attributes`, click on the attrib
    - To display the product attributes in the :doc:`product catalog <products/catalog>`,
      set the :guilabel:`Attributes` feature to :guilabel:`Left` using the website editor.
    - To group attributes under the same section when
-     :ref:`comparing products <ecommerce/products/product-comparison>`, go to the
-     :guilabel:`eCommerce Category` field and either select an :doc:`existing category or create a
-     new one <../../websites/ecommerce/products>`.
+     :ref:`comparing products <ecommerce/products/additional_features/product-comparison>`, go to
+     the :guilabel:`eCommerce Category` field and either select an :doc:`existing category or create
+     a new one <../../websites/ecommerce/products>`.
 
 .. note::
    Two attribute values are needed to make the filter visible.
@@ -345,54 +344,10 @@ In the :guilabel:`Inventory Defaults` sub-section, fill in those fields:
   on the product page. The available quantity is calculated based on the :guilabel:`On hand`
   quantity minus the quantity already reserved for outgoing transfers.
 
-.. _ecommerce/products/product-comparison:
-
-Product comparison
-==================
-
-To allow website visitors to compare products based on their attributes, go to
-:menuselection:`Website --> Configuration --> Settings`, scroll down to the
-:guilabel:`Shop - Products` section, and enable :guilabel:`Product Comparison Tool`.
-
-The :icon:`fa-exchange` (:guilabel:`Compare`) icon is now available on each product card on the main
-shop page when customers hover their mouse over it. To compare products, customers can click the
-:icon:`fa-exchange` (:guilabel:`Compare`) option on the products they want to compare, then click
-:icon:`fa-exchange` :guilabel:`Compare` in the pop-up window at the bottom of the page to reach the
-comparison summary.
-
-.. image:: products/products-compare.png
-   :alt: Product comparison window
-
-.. note::
-   - The :guilabel:`Product Comparison Tool` is only available for products with
-     :ref:`attributes <ecommerce/products/product-variants>`.
-   - Selecting the :icon:`fa-exchange` (:guilabel:`Compare`) option from a product page is also
-     possible.
-
-.. _ecommerce/products/wishlists:
-
-Wishlists
-=========
-
-The :icon:`fa-heart-o` :guilabel:`Add to wishlist` button allows customers to add products
-to their wishlist, i.e., save them for later. To enable it, go to :menuselection:`Website -->
-Configuration --> Settings`, scroll down to the :guilabel:`Shop - Products` section, and enable
-:guilabel:`Wishlists`. The button is available on each product page and can be disabled in the
-:ref:`website editor <ecommerce/products/product-page>` if needed.
-
-.. image:: products/products-add-to-wishlist.png
-   :alt: Add to wishlist button
-
-.. tip::
-   - You can also display a :icon:`fa-heart-o` (:guilabel:`Wishlist`) button when hovering the mouse
-     over the product on the :ref:`shop page <ecommerce/catalog/additional-features>`.
-   - Customers can move products from their cart to their wishlist by clicking the :guilabel:`Save
-     for later` button in the :guilabel:`Order overview` :ref:`checkout step
-     <ecommerce/checkout/review_order>`.
-
 .. toctree::
    :titlesonly:
 
    products/catalog
    products/prices
    products/cross_upselling
+   products/additional_features
