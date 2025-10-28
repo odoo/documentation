@@ -9,9 +9,8 @@ is the shop page of your website.
 The product catalog includes a :ref:`top bar <ecommerce/catalog/top-bar>`, a :ref:`side panel
 <ecommerce/catalog/side-panel>`, and a :ref:`product listing area
 <ecommerce/catalog/product-listing>`. With Odoo, you can :ref:`customize the layout
-<ecommerce/catalog/customize-layout>`, filter by :ref:`categories and attributes
-<ecommerce/catalog/categories>`, and use :ref:`additional features
-<ecommerce/catalog/additional-features>` according to your needs.
+<ecommerce/catalog/customize-layout>`, and filter by :ref:`categories and attributes
+<ecommerce/catalog/categories>`.
 
 You can customize the shop page using the website editor. To access it, go to the shop page,
 click :guilabel:`Edit` in the upper-right corner, and navigate to the :guilabel:`Customize` tab.
@@ -191,42 +190,6 @@ the extreme left or right, and `<` `>` allow to move it one row to the left or r
    :menuselection:`Website --> eCommerce --> Products`, switching to the list view, and
    dragging and dropping the products within the list.
 
-Product highlight
------------------
-
-You can highlight products to make them more visible on the shop page. To do so, go
-to the website editor and click the product to highlight. In the :guilabel:`Product` section, you
-can choose the size of the product image by clicking the grid, and you can also add a
-:guilabel:`Ribbon`. This displays a banner across the product's image, such as :guilabel:`Sale`,
-:guilabel:`Sold out`, :guilabel:`Out of stock` or :guilabel:`New!`.
-
-.. image:: catalog/catalog-product-highlighting.png
-   :alt: Ribbon highlight
-
-To create a new ribbon, click the green :icon:`fa-plus` (:guilabel:`Create`) icon next to the
-:guilabel:`Ribbon` field. Then add a :guilabel:`Ribbon name`, define its :guilabel:`Position`,
-and choose a :guilabel:`Background` and a :guilabel:`Text` label. To edit the ribbon, click the
-:icon:`fa-pencil-square-o` (:guilabel:`Edit`) icon next to the :guilabel:`Ribbon` label.
-
-.. image:: catalog/catalog-ribbons.png
-   :alt: Create a new ribbon.
-
-The ribbon is now available for all the eCommerce products.
-
-.. tip::
-   - There are other ways to create a new ribbon:
-
-     - Go to :menuselection:`Website --> eCommerce --> Product Ribbons` and click :guilabel:`New`.
-     - Activate the :doc:`developer mode <../../../general/developer_mode>`, access the product
-       form, and under the :guilabel:`Sales` tab, change or create the ribbon in the
-       :guilabel:`Ribbon` field.
-
-   - It is also possible to add ribbons for specific :ref:`product variants
-     <ecommerce/products/product-variants>`. To do so, go to :menuselection:`Website -->
-     eCommerce --> Products` and select a product. Click the :guilabel:`Variants` smart button,
-     choose a variant, and add a ribbon in the :guilabel:`Variant Ribbon` field of the
-     :guilabel:`Sales` section.
-
 .. _ecommerce/catalog/customize-layout:
 
 Shop and category page design
@@ -252,23 +215,6 @@ display it only when filtering by that specific category.
    - eCommerce categories can also be added as :ref:`mega menu items
      <website/header_footer/mega-menus>` for quick access.
 
-.. _ecommerce/catalog/additional-features:
-
-Additional features
-===================
-
-You can access and enable additional feature buttons such as a :guilabel:`Add to cart` or
-:guilabel:`Wishlist` button or a :guilabel:`Comparison list`. To do so, open the website editor,
-click the desired feature buttons. All three buttons appear when hovering the mouse over
-a product's image.
-
-- :icon:`fa-shopping-cart` (:guilabel:`Add to cart`): adds a button to
-  :doc:`add the product to the cart <../checkout>`;
-- :icon:`fa-exchange` (:guilabel:`Compare`): adds a button to compare products based on
-  their price, variant, etc.;
-- :icon:`fa-heart-o` (:guilabel:`Wishlist`): adds a button to :ref:`wishlist
-  <ecommerce/products/wishlists>` the product.
-
-
 .. seealso::
-   :doc:`Products <../products>`
+   - :doc:`Products <../products>`
+   - :doc:`additional_features`

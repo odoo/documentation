@@ -116,8 +116,8 @@ available:
 .. note::
    - Settings are specific to each website, allowing you to configure a B2C website with guest
      checkout and a B2B website that requires customers to sign in.
-   - To use the :ref:`wishlist <ecommerce/products/wishlists>` feature, customers must
-     create an account to save their favorite items for later.
+   - To use the :ref:`wishlist <ecommerce/products/additional_features/wishlists>` feature,
+     customers must create an account to save their favorite items for later.
 
 Multi-website account
 =====================
