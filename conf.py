@@ -192,6 +192,8 @@ extensions = [
 
     # Strange html domain logic used in memento pages
     'html_domain',
+
+    'badges',
 ]
 
 if odoo_dir_in_path:
