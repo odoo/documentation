@@ -4,6 +4,11 @@
 Changelog
 =========
 
+Odoo Online version 19.1
+========================
+
+- New API for ir.config_parameter. See `#223180 <https://github.com/odoo/odoo/pull/223180>`_.
+
 Odoo version 19.0
 =================
 
