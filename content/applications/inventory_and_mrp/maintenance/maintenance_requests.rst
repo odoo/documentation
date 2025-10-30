@@ -9,8 +9,37 @@ maintenance on them. This can include preventive maintenance, intended to preven
 breaking down, or corrective maintenance, which is used to fix equipment that is broken or otherwise
 unusable.
 
-In Odoo *Maintenance*, users can create *maintenance requests* to schedule and track the progress of
-equipment and work center maintenance.
+In Odoo **Maintenance**, users can create *maintenance requests* to schedule and track the progress
+of equipment and work center maintenance.
+
+Maintenance access rights
+=========================
+
+To create a maintenance request for equipment, a user has to have access to the equipment they are
+submitting the request for. This can be done in one of two ways:
+
+ - If a user is granted :guilabel:`Equipment Manager` level access rights for the **Maintenance**
+   app, they have access to all of the equipment in the app. To view or edit the access rights for a
+   user, navigate to :menuselection:`Settings --> Manager Users` and click a user's profile to open
+   it. On the :guilabel:`Access Rights` tab, scroll to the :guilabel:`Supply Chain` section, and in
+   the :guilabel:`Maintenance` field, select :guilabel:`Equipment Manager` from the drop-down menu.
+
+   .. image:: maintenance_requests/equipment-manager.png
+      :alt: The Supply Chain access rights on a user record.
+
+ - If a user does not require full access to all equipment, they can be assigned as a *Follower* to
+   one or more pieces of equipment. This allows them to create maintenance requests for that piece
+   of equipment, without altering access rights. To add a user as a follower, navigate to
+   :menuselection:`Maintenance --> Equipment --> Machines & Tools`, and click on a piece of
+   equipment to open it. In the *chatter* for the record, click on the :icon:`fa-user`
+   :guilabel:`(user)` icon to open the list of followers. Click :guilabel:`Add Followers`. On the
+   :guilabel:`Add followers to this document` pop-up, select the appropriate user from the
+   :guilabel:`Followers` drop-down. To send a message alerting users that they have been added as a
+   follower, slide the :guilabel:`Notify Recipients` toggle to active. When finished, click
+   :guilabel:`Add Followers`.
+
+   .. image:: maintenance_requests/add-followers.png
+      :alt: The followers list on an equipment record, with the add followers button highlighted.
 
 Create maintenance request
 ==========================
@@ -32,7 +61,7 @@ Depending on the option selected in the :guilabel:`For` field, the next field is
 :guilabel:`Equipment` or :guilabel:`Work Center`. Using the drop-down menu for either field, select
 a piece of equipment or a work center.
 
-If the *Custom Maintenance Worksheets* setting is enabled in the *Maintenance* app's settings, a
+If the *Custom Maintenance Worksheets* setting is enabled in the **Maintenance** app's settings, a
 :guilabel:`Worksheet Template` field appears below the :guilabel:`Equipment` or :guilabel:`Work
 Center` field. If necessary, use this field to select a worksheet to be filled out by the employee
 performing the maintenance.
@@ -67,9 +96,10 @@ other maintenance from being scheduled at the specified work center while the ma
 being processed.
 
 The :guilabel:`Priority` field is used to communicate the importance (or urgency) of the maintenance
-request. Assign the request a priority between zero and three :guilabel:`⭐⭐⭐ (stars)`, by clicking
-on the desired star number. Requests assigned a higher priority appear above those with a lower
-priority, on the Kanban board used to track the progression of maintenance requests.
+request. Assign the request a priority between zero and three :icon:`fa-star` :guilabel:`(star)`
+icons, by clicking on the desired star number. Requests assigned a higher priority appear above
+those with a lower priority, on the Kanban board used to track the progression of maintenance
+requests.
 
 In the :guilabel:`Notes` tab at the bottom of the form, enter any relevant details about the
 maintenance request (why the maintenance issue arose, when it occurred, etc.).
