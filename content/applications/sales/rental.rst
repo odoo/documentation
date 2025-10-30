@@ -33,10 +33,6 @@ Upon opening the *Rental* application, the :guilabel:`Rental Orders` dashboard i
 In the default kanban view, all rentals are visible. Each rental card displays the customer name,
 the price of the rental, the related sales order number, along with the status of the rental.
 
-.. note::
-   Rental kanban cards that do **not** display a rental status means those rentals have confirmed
-   quotations, but have not been picked up yet.
-
 On the left sidebar, the :guilabel:`Rental Status` for each rental can be found. Beneath that, the
 :guilabel:`Invoice Status` of the rentals is accessible. Clicking any option in the left sidebar
 filters the displayed rentals on the dashboard.
@@ -53,13 +49,11 @@ navigate to :menuselection:`Rental app --> Configuration --> Settings`.
 
 In the :guilabel:`Rental` section, there are options to configure :guilabel:`Default Delay Costs`
 and :guilabel:`Default Padding Time`. There is also the option to activate :guilabel:`Rental
-Transfers` and :guilabel:`Digital Documents`.
+Transfers`.
 
 - :guilabel:`Default Delay Costs` are additional costs for late returns.
 - :guilabel:`Default Padding Time` represents the minimum amount of time between two rentals.
 - :guilabel:`Rental Transfers` means stock deliveries and receipts can be used for rental orders.
-- :guilabel:`Digital Documents` allows users to upload documents for customers to sign prior to
-   confirming their rental.
 
 In the :guilabel:`Rent Online` section, there are options to configure a :guilabel:`Minimal Rental
 Duration` and designate :guilabel:`Unavailability days`, or days during which pickup and return are
@@ -69,7 +63,7 @@ Rental products
 ===============
 
 To view all products that can rented in the database, navigate to :menuselection:`Rentals app -->
-Products`. By default, the :guilabel:`Can be Rented` search filter appears in the search bar.
+Products`. By default, the :guilabel:`Rental` search filter appears in the search bar.
 
 Each product kanban card displays that product's name, rental price, and product image (if
 applicable).
@@ -85,7 +79,7 @@ Rental pricing
 To adjust the rental pricing on a product, go to the :guilabel:`Products` page in the *Rental* app,
 then select the desired product or click :guilabel:`New` to create a new product from scratch.
 
-On the product form, ensure the :guilabel:`Can be Rented` checkbox is ticked. Then, open the
+On the product form, ensure the :guilabel:`Rental` checkbox is ticked. Then, open the
 :guilabel:`Rental prices` tab.
 
 .. image:: rental/rental-prices-tab.png
@@ -93,9 +87,9 @@ On the product form, ensure the :guilabel:`Can be Rented` checkbox is ticked. Th
    :alt: How the Settings page appears in the Odoo Rental application.
 
 .. note::
-   If creating a rental product outside of the *Rental* app, just ensure the :guilabel:`Can be
-   Rented` checkbox is ticked on the product form. By default, this checkbox is ticked whenever a
-   product is created directly in the *Rental* application.
+   If creating a rental product outside of the *Rental* app, just ensure the :guilabel:`Rental`
+   checkbox is ticked on the product form. By default, this checkbox is ticked whenever a product is
+   created directly in the *Rental* application.
 
 Pricing
 -------
@@ -115,17 +109,17 @@ Lastly, enter the desired :guilabel:`Price` for that specific :guilabel:`Period`
    There is no limit to how many pricing lines can be added. Multiple pricing options for rental
    products are typically used to give discounts for customers who agree to longer rental durations.
 
-To delete any rental pricing option, click the :guilabel:`🗑️ (trash)` icon, and that row is
-deleted.
+To delete any rental pricing option, click the :icon:`fa-trash-o` :guilabel:`(Delete icon)`, and that
+row is deleted.
 
 Reservations
 ------------
 
 Under the :guilabel:`Reservations` section of the :guilabel:`Rental prices` tab, there is the option
-to configure additional fines for any :guilabel:`Extra Hour` or :guilabel:`Extra Day` that the
+to configure additional fines for any :guilabel:`Hourly Fine` or :guilabel:`Daily Fine` that the
 customer takes to return a rental.
 
-There is also the option to set a :guilabel:`Security Time`, expressed in hours, to make the rental
+There is also the option to set the :guilabel:`Reserve product` time, expressed in hours, to make the rental
 product temporarily unavailable between two rental orders. Such a feature may prove useful if
 maintenance or cleaning is required between rentals.
 
@@ -195,49 +189,48 @@ product`, and selecting the desired rental product to add to the form.
    :guilabel:`Ok`, and Odoo recalculates the rental price accordingly.
 
 Once all the information has been entered correctly on the rental order form, click the
-:guilabel:`Send by Email` button to send the quotation to the customer, or click the
-:guilabel:`Confirm` button to confirm the order.
+:guilabel:`Send` button to send the quotation to the customer, or click the :guilabel:`Confirm`
+button to confirm the order.
 
 .. _rental/customer-signature:
 
 Customer signature
 ==================
 
-Upon confirming a rental order, the :guilabel:`Sign Documents` button appears. This gives the
-ability to request the customer sign a rental agreement, outlining the arrangement between the
-company and customer, *before* they pick up the rental product(s).
+If signatures are required, go to :icon:`fa-cog` :guilabel:`(Actions icon)`, and click
+:guilabel:`Request Signature`. This gives the ability to request the customer sign a rental
+agreement, outlining the arrangement between the company and customer, *before* they pick up the
+rental product(s).
+
+.. image:: rental/request-signature.png
+   :align: center
+   :alt: The Request Signature option in the Odoo Rental application.
 
 Such documents can ensure everything is returned on-time and in its original condition.
 
-.. important::
-   The :guilabel:`Sign Documents` button/option **only** appears if the :guilabel:`Digital
-   Documents` feature has been activated in the *Rental* application settings. To do so, navigate to
-   :menuselection:`Rental app --> Configuration --> Settings`, activate :guilabel:`Digital
-   Documents`, and click :guilabel:`Save`.
-
 .. note::
-   This feature also requires the :doc:`Sign <../productivity/sign>` app. If necessary, Odoo
-   automatically installs it after activating the :guilabel:`Digital Documents` setting.
+   This feature also requires the :doc:`Sign <../productivity/sign>` app.
 
-To request a customer signature on a rental agreement, select a confirmed rental order, and click
-the :guilabel:`Sign Documents` button to reveal a :guilabel:`Sign Documents` pop-up window.
+To request a customer signature on a rental agreement, select a confirmed rental order and, from the
+:icon:`fa-cog` :guilabel:`(Actions icon)` menu, click :guilabel:`Request Signature` to reveal a
+:guilabel:`Sign Documents` pop-up window.
 
 .. image:: rental/sign-documents-popup.png
    :align: center
    :alt: The Sign Documents pop-up window that appears in the Odoo Rental application.
 
-From here, select the desired document from the :guilabel:`Document Template` field. Then, click
-:guilabel:`Sign Document`. Doing so reveals a :guilabel:`New Signature Request` pop-up window.
+From here, select the desired document from the :guilabel:`Template` field. Doing so reveals a
+:guilabel:`New Signature Request` pop-up window.
 
 .. image:: rental/new-signature-request-form.png
    :align: center
    :alt: The New Signature Request pop-up window that appears in the Odoo Rental application.
 
 Upon confirming the information in the :guilabel:`New Signature Request` pop-up form, click
-:guilabel:`Sign Now` to initiate the signing process.
+:guilabel:`Send` to initiate the signing process.
 
-A separate page is then revealed, showcasing the document to be signed, which is accessible to the
-customer via the customer portal.
+A link to the signature request will appear in the record's Chatter. The document is accessible
+to the customer via the customer portal.
 
 Odoo guides the customer through the signing process with clear, clickable indicators, and allows
 them to create electronic signatures to quickly complete the form.
@@ -288,7 +281,7 @@ Pickup and return receipts can be printed for customers when they pick up and/or
 products.
 
 To print pickup and/or return receipts, navigate to the appropriate rental order, click the
-:guilabel:`⚙️ (gear)` icon to reveal a drop-down menu.
+:icon:`fa-cog` :guilabel:`(Actions icon)` to reveal a drop-down menu.
 
 .. image:: rental/print-pickup-return-receipt.png
    :align: center
