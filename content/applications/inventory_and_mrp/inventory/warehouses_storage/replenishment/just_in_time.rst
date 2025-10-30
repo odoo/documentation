@@ -43,8 +43,8 @@ reducing the risk of overstocking.
 
 .. note::
    Just-in-time logic determines the exact timing of replenishment. If you want to extend this logic
-   to also consider near-future demand beyond the forecast date, see :ref:`Visibility Days
-   <inventory/warehouses_storage/visibility-days>`
+   to also consider near-future demand beyond the forecast date, see :ref:`Horizon Days
+   <inventory/warehouses_storage/horizon-days>`
 
 If the forecasted quantity falls below the minimum on the forecasted date, replenishment is
 triggered immediately to prevent shortages. If the quantity falls below the minimum after the
