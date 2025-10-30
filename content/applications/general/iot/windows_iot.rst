@@ -97,7 +97,7 @@ steps:
 
    .. note::
       Other ports may be necessary depending on your IoT devices. For example, for the
-      :doc:`/applications/sales/point_of_sale/payment_methods/terminals/worldline` payment terminal,
+      :doc:`/applications/sales/point_of_sale/payment_methods/terminals/worldline_axepta` payment terminal,
       add the `9050` port.
 
 #. On the :guilabel:`Action` page, select :guilabel:`Allow the connection` and click

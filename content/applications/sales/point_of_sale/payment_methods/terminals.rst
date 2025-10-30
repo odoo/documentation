@@ -24,7 +24,7 @@ To activate a payment terminal and allow processing payments with it, follow the
    complete the terminal-specific configuration:
 
    - :doc:`Adyen <terminals/adyen>`
-   - :doc:`Ingenico <terminals/ingenico>`
+   - :doc:`Axepta BNP Paribas <terminals/worldline_axepta>`
    - :doc:`Mercado Pago <terminals/mercado_pago>`
    - :doc:`Pine Labs <terminals/pine_labs>`
    - :doc:`QFPay <terminals/qfpay>`
@@ -33,7 +33,7 @@ To activate a payment terminal and allow processing payments with it, follow the
    - :doc:`Stripe <terminals/stripe>`
    - :doc:`Tyro <terminals/tyro>`
    - :doc:`Viva.com <terminals/viva_com>`
-   - :doc:`Worldline <terminals/worldline>`
+   - :doc:`Worldline <terminals/worldline_axepta>`
 #. Save.
 
 .. _pos/terminals/terminal-use:
@@ -56,7 +56,6 @@ Once the transaction is successful, the payment is automatically validated in Po
    :titlesonly:
 
    terminals/adyen
-   terminals/ingenico
    terminals/mercado_pago
    terminals/pine_labs
    terminals/qfpay
@@ -65,4 +64,4 @@ Once the transaction is successful, the payment is automatically validated in Po
    terminals/stripe
    terminals/tyro
    terminals/viva_com
-   terminals/worldline
+   terminals/worldline_axepta
