@@ -29,8 +29,8 @@ file or folder to move it to another folder or section.
 .. tip::
    - Use the :ref:`search bar <search/values>` to quickly find specific items.
    - The :doc:`chatter <discuss/chatter>` tracks changes to folders and files and allows
-     communication with internal users and external contacts. Click the :icon:`fa-info-circle`
-     (:guilabel:`Info & Tags`) button in the upper-right corner next to the view to access it.
+     communication with internal users and external contacts. Open the :ref:`Details panel
+     <documents/details-panel>` to access it.
 
 .. seealso::
    :doc:`Sign documentation <sign>`
@@ -52,21 +52,26 @@ adjust this delay, go to :menuselection:`Documents --> Configuration --> Setting
 File centralization
 -------------------
 
-Enabling file centralization for a specific app automatically organizes all associated files into
-dedicated folders. To do so, go to :menuselection:`Documents --> Configuration --> Settings`. For
-example, enabling :guilabel:`Human Resources` makes HR documents automatically available in the
-:guilabel:`HR` folder, while documents related to Payroll are automatically available in the
-:guilabel:`Payroll` sub-folder. Select the desired folder from the dropdown list and select the
-:ref:`Tags <documents/tags>` to be added to the relevant files.
+File centralization allows for automatically organizing all files associated with a specific app
+into dedicated folders. It is enabled by default for each app upon installation. To disable file
+centralization, modify the default folder, or configure the tags to be added to the app-specific
+files, go to :menuselection:`Documents --> Configuration --> Settings`, and edit the relevant
+setting under the :guilabel:`File Centralization` section.
 
 .. tip::
-   When centralizing accounting files, click :guilabel:`Journals` to configure specific
-   sub-folders for individual journals.
+   - File centralization cannot be disabled for :guilabel:`Accounting` documents. A sub-folder is
+     automatically created for each journal type (e.g., Sales, Purchase, Bank, etc.), and the
+     journal name is added as a tag on each document. Click :guilabel:`Journals` to edit the list of
+     journals to synchronize and define their corresponding folders and tags.
+   - For :guilabel:`Human Resources` files, a sub-folder is automatically created for each employee,
+     and specific tags are added to the files based on the document type (e.g.,
+     :guilabel:`Contracts`, :guilabel:`Payslips`, etc.). You can also create additional
+     :guilabel:`Employee Subfolders` automatically by entering the desired folder names, separated
+     by commas.
 
 .. note::
-   - Changing the folder or tags does not affect existing files; the changes will apply only to
-     newly created ones.
-   - If file centralization is enabled for an app, deleting a record in that app moves its
+   - Changing the folder or tags only affects new files; existing files remain unchanged.
+   - When file centralization is enabled for an app, deleting a record in that app moves its
      attachments to the trash in the Documents app.
 
 .. _documents/folders:
@@ -91,16 +96,8 @@ icon above the tree. The following options are available in the menu:
 - :icon:`fa-download` :guilabel:`Download`: Download the folder as a .zip file, including its files
   and sub-folders.
 - :icon:`fa-pencil-square-o` :guilabel:`Rename`: Modify the folder's name.
-- :icon:`fa-share-alt` :guilabel:`Share`: :ref:`Share the folder or manage its access rights
+- :icon:`fa-share-alt` :guilabel:`Share`: :ref:`Share the folder and manage its access rights
   <documents/access-rights>`.
-- :icon:`fa-external-link-square` :guilabel:`Add shortcut`: This option is only available for
-  sub-folders and allows to create a shortcut to a sub-folder.
-
-  - If you have editing permissions, the shortcut is created in the same folder.
-  - If you don't have editing permissions, the shortcut appears in the :icon:`fa-hdd-o`
-    :guilabel:`My Drive` section.
-
-  You can then drag and drop it into the desired folder.
 - :icon:`fa-star-o` :guilabel:`Add star`: Mark a folder as a favorite for quicker access. This
   setting is user-specific and does not affect other users' workspaces. You can then use the
   :ref:`Starred filter <search/favorites>` to navigate to your favorite folders quickly.
@@ -114,9 +111,23 @@ icon above the tree. The following options are available in the menu:
 - :icon:`fa-cog` :guilabel:`Automations`: Create :doc:`automation rules
   </applications/studio/automated_actions>`.
 
-.. important::
-   Setting up automation rules requires activating :doc:`/applications/studio`, which may impact
-   your `pricing plan <https://www.odoo.com/pricing>`_.
+  .. important::
+     Setting up automation rules requires activating :doc:`/applications/studio`, which may impact
+     your `pricing plan <https://www.odoo.com/pricing>`_.
+
+- :guilabel:`AI Auto-sort`: Use Odoo AI to automatically organize the files in the folder and
+  trigger actions based on the provided AI prompt. Add the corresponding actions for your prompt in
+  the lower section of the popup. This option requires the **Odoo AI** app to be installed.
+
+.. tip::
+   Switch to the list view to:
+
+   - manage multiple folders at once.
+   - :icon:`fa-upload` :guilabel:`Export` or :icon:`oi-view-list` :guilabel:`Insert in spreadsheet`
+     one or multiple folders.
+   - quickly execute actions such as :guilabel:`Share`, :guilabel:`Download`, :guilabel:`Rename`,
+     etc. Hover over a folder line and click the corresponding icon at the end of the line to
+     perform the desired action.
 
 .. _documents/documents:
 
@@ -154,26 +165,25 @@ Managing files
 Several buttons are available in the top bar when opening a file:
 
 - the :icon:`fa-cog` :guilabel:`Actions` menu, which includes the options described below
-- :guilabel:`Share`: to :ref:`share the file or manage its access rights <documents/access-rights>`
+- :guilabel:`Share`: to :ref:`share the file and manage its access rights <documents/access-rights>`
 - :guilabel:`Download`
 - any :ref:`buttons defined for the folder <documents/folders>`
 
 The following options are available in the :icon:`fa-cog` :guilabel:`Actions` menu:
 
-- :icon:`fa-files-o` :guilabel:`Duplicate`: Create a copy of the file.
+- :icon:`fa-files-o` :guilabel:`Duplicate`: Create a copy of the file. In the popup, select or
+  create the destination folder, then click :guilabel:`Duplicate in` *destination folder's name*.
 - :icon:`fa-trash` :guilabel:`Move to Trash`: Move the file to the :ref:`trash
   <documents/deletion-delay>`.
 - :icon:`fa-pencil-square-o` :guilabel:`Rename`
 - :icon:`fa-info-circle` :guilabel:`Info & tags`: View the file's :ref:`details
   <documents/details-panel>` and chatter.
+- :icon:`fa-sign-in` :guilabel:`Move`: Move the file to another folder. In the popup, select or
+  create the destination folder, then click :guilabel:`Move to` *destination folder's name*.
 - :icon:`fa-external-link-square` :guilabel:`Create shortcut`: A shortcut is a pointer to a file,
-  allowing access from multiple folders without duplicating the file.
-
-  - If you have editing permissions, the shortcut is created in the same folder.
-  - If you don't have editing permissions, the shortcut appears in the :icon:`fa-hdd-o`
-    :guilabel:`My Drive` section.
-
-  You can then drag and drop it into the desired folder.
+  allowing access from multiple folders without duplicating the file. In the popup, select or
+  create the destination folder, then click :guilabel:`Create a shortcut in` *destination
+  folder's name*.
 - :icon:`fa-history` :guilabel:`Manage versions`: View all versions of the file in upload order,
   download a specific version, or upload a new one as needed.
 - :icon:`fa-lock` :guilabel:`Lock`: Protect the file from any modifications.
@@ -182,8 +192,16 @@ The following options are available in the :icon:`fa-cog` :guilabel:`Actions` me
 - :icon:`fa-scissors` :guilabel:`Split PDF`: :ref:`Split a PDF file <documents/pdfs>`.
 
 .. tip::
-   You can use folder-specific :ref:`email aliases <documents/email-aliases>` to automatically save
-   files sent to the alias into the corresponding folder.
+   - You can use folder-specific :ref:`email aliases <documents/email-aliases>` to automatically
+     save files sent to the alias into the corresponding folder.
+   - Switch to the list view to:
+
+     - manage multiple files at once.
+     - :icon:`fa-upload` :guilabel:`Export` or :icon:`oi-view-list` :guilabel:`Insert in spreadsheet`
+       one or multiple files.
+     - quickly perform actions such as :guilabel:`Share`, :guilabel:`Download`, :guilabel:`Rename`,
+       etc. Hover over a file line and click the corresponding icon at the end of the line to
+       perform the desired action.
 
 .. _documents/pdfs:
 
@@ -258,9 +276,9 @@ To send a reminder email for all requested files, click the :icon:`fa-ellipsis-v
 Details panel
 =============
 
-To view a folder's or file's information and tags, select the folder or file, then click
-the :icon:`fa-cog` icon (for folders) or :icon:`fa-cog` :guilabel:`Actions` button (for
-files) and select :icon:`fa-info-circle` :guilabel:`Info & Tags`.
+To view a folder's or file's information and tags, select the folder or file, then click the
+:icon:`fa-cog` icon (for folders) or :icon:`fa-cog` :guilabel:`Actions` button (for files) and
+select :icon:`fa-info-circle` :guilabel:`Info & Tags`.
 
 .. tip::
    Alternatively, for folders, you can also click the :icon:`fa-info-circle`
@@ -275,6 +293,7 @@ The details panel allows the following:
   required user from the dropdown list. The contact is a person who only has :guilabel:`Viewer`
   :ref:`access rights <documents/access-rights>` to the file or folder, e.g., an existing supplier
   in the database.
+- Access the :doc:`chatter </applications/essentials/activities>`.
 
 To close the details panel, click the :icon:`fa-remove` (:guilabel:`remove`) button in the
 upper-right corner.
@@ -301,6 +320,10 @@ folder. To set up an email alias for a folder, follow these steps:
    </applications/essentials/activities>` when a file is received via the alias.
 #. Optionally, select the :ref:`Tags <documents/tags>` to automatically apply to the files
    created through the alias.
+
+.. note::
+   Emails sent to the alias without attachments are converted into files, using the email subject as
+   the file name.
 
 .. seealso::
    :doc:`/applications/general/email_communication/email_servers_inbound`
@@ -337,8 +360,8 @@ desired record.
 
 .. _documents/access-rights:
 
-Share and access rights
-=======================
+Sharing and access rights
+=========================
 
 .. note::
    You can only share folders and files and edit their access rights if you have editing rights.
@@ -349,10 +372,23 @@ Access rights can be set on:
   :guilabel:`Share`.
 - files: Open the file and click :guilabel:`Share` in the top bar.
 
-In the :guilabel:`Share` pop-up, click :guilabel:`Invite people` to grant access to specific users
-or contacts. Select their name from the dropdown menu or enter their email address in the
-:guilabel:`People` field, then set the :guilabel:`Role` field to :guilabel:`Viewer` or
-:guilabel:`Editor`.
+.. tip::
+   Switch to the list view to share or manage the access rights of multiple filers or folders at
+   once.
+
+To grant access to specific users or contacts, follow these steps:
+
+#. In the :icon:`fa-user-plus` (:guilabel:`Invite people`) field, select the users or contacts you
+   want to grant access to from the dropdown menu or enter their email address.
+
+   .. note::
+      :guilabel:`Access through link` must be enabled first before granting access to external
+      contacts.
+
+#. Set the :guilabel:`Role` field to :guilabel:`Viewer` or :guilabel:`Editor`.
+#. If desired, toggle the :guilabel:`Notify` switch off to avoid sending a notification email.
+#. Click :guilabel:`Share` to grant access (with or without a notification) or :guilabel:`Copy
+   Links` to copy the sharing link to the clipboard.
 
 .. tip::
    To remove a permission or set an expiration date for it, hover the mouse over the relevant
@@ -362,23 +398,37 @@ or contacts. Select their name from the dropdown menu or enter their email addre
    .. image:: documents/remove-permission.png
       :alt: Hover the mouse over a permission to reveal the buttons.
 
-To set :guilabel:`General access` for :guilabel:`Internal users` or :guilabel:`Anyone with the
-link`, select :guilabel:`Viewer`, :guilabel:`Editor`, or :guilabel:`None` (to restrict access
-completely). For :guilabel:`Anyone with the link`, you can further specify whether the folder or
-file should be :guilabel:`Discoverable` (accessible through browsing) or require that users
-:guilabel:`Must have the link to access` it.
+To configure :guilabel:`General access` for :guilabel:`Internal users` or :guilabel:`Access through
+link`, select :guilabel:`Viewer`, :guilabel:`Editor`, or :guilabel:`None` (to completely restrict
+access). For :guilabel:`Access through link`, you can also specify whether the folder or file should
+be :guilabel:`Discoverable` (i.e., accessible through browsing). Click :guilabel:`Save`
+to apply the changes, then :guilabel:`Copy Links` to copy the sharing link to the clipboard.
 
 .. note::
-   - Public users :guilabel:`Must have the link to access` a folder or file on the portal when
-     connecting for the first time.
-   - Each folder and file URL includes the access rights that have been set for it. When you
-     share a folder, the person you share it with is directed to a dedicated portal where they can
-     view the files in that folder, excluding any with restricted access.
+   - Each folder and file URL includes the access rights assigned to it. When you share a link to a
+     folder, recipients are directed to a dedicated portal where they can view the files in that
+     folder, excluding any with restricted access.
+   - :doc:`Portal users </applications/general/users/portal>` can access folders and files they have
+     permission to view or edit through the customer portal by clicking the :guilabel:`Documents`
+     card.
 
-.. tip::
-   :doc:`Portal users </applications/general/users/portal>` can access folders and files they have
-   permission to view or edit through the customer portal by clicking the :guilabel:`Documents`
-   card.
+Managing files across apps
+==========================
+
+You can save files to or attach existing files in the Documents app from any record.
+
+- To save an attachment to the Documents app, hover over an attachment in the record's chatter
+  and click the :icon:`fa-hdd-o` (:guilabel:`Add to Documents`) icon.
+
+- To attach a file to a record from the record's chatter, click the :guilabel:`Add from Documents`
+  icon, select the desired file, and click :guilabel:`Add from Documents` to add the
+  raw file, or :guilabel:`Paste Link(s)` to insert a link to the file (and preserve the document's
+  :ref:`access rights <documents/access-rights>`).
+
+- To insert a file from Documents into the :doc:`Odoo rich-text editor
+  </applications/essentials/html_editor>`, type `/file`, then select the desired file, and click
+  :guilabel:`Add from Documents` to add the raw file, or :guilabel:`Paste Link(s)` to insert a link
+  to the file (and preserve the document's :ref:`access rights <documents/access-rights>`).
 
 .. _documents/file-digitization:
 
