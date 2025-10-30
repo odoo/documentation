@@ -33,8 +33,8 @@ By default, the quantity in the :guilabel:`To Order` field is the quantity requi
 the field and changing the value. To replenish a product manually, click :icon:`fa-truck`
 :guilabel:`Order`.
 
-Click :icon:`fa-bell-slash` :guilabel:`Snooze` to temporarily deactivate the reordering rule for
-the set period, hiding the entry from the replenishment dashboard, when it is supposed to appear.
+Click :icon:`fa-bell-slash` :guilabel:`Snooze` to temporarily deactivate the reordering rule for the
+set period, hiding the entry from the replenishment dashboard, when it is supposed to appear.
 
 .. tip::
    Defining a :guilabel:`Vendor` allows filtering or grouping demands by the vendor. This simplifies
@@ -69,7 +69,9 @@ Horizon days
 *Horizon days* determine how many days ahead Odoo checks if the forecasted quantity will drop below
 reordering rule's minimum. The feature is meant to help users plan replenishment in advance, by
 increasing the :ref:`forecasted date <inventory/warehouses_storage/forecasted-date>` on the
-:doc:`replenishment report <report>`.
+:doc:`replenishment report <report>`. Horizon days look ahead a specified number of days and trigger
+reordering rules as soon as the forecasted quantity falls below the minimum within that window, even
+if no replenishment is needed today.
 
 .. example::
    Setting horizon days to `7` ensures all manual reordering rules set to trigger within the next
@@ -79,14 +81,6 @@ increasing the :ref:`forecasted date <inventory/warehouses_storage/forecasted-da
 To set horizon days, go to :menuselection:`Inventory app --> Operations --> Replenishment`, and
 click :icon:`fa-angle-double-right` :icon:`fa-folder` :guilabel:`Manual` in the left sidebar. In the
 menu that appears, set the number of :guilabel:`Horizon` days.
-
-Both horizon days and :ref:`visibility days <inventory/warehouses_storage/visibility-days>` allow
-Odoo to anticipate future demand, but they work differently:
-
-- **Visibility days**: only checks future demand if a replenishment would have been triggered today.
-- **Horizon days**: looks ahead a specified number of days and triggers reordering rules as soon as
-  the forecasted quantity falls below the minimum within that window — even if no replenishment is
-  needed today.
 
 .. example::
    - Current date: Feb 18
