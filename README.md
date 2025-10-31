@@ -1,38 +1,67 @@
 # Odoo documentation
 
-## Build the documentation locally
+## Build the documentation
 
 ### Requirements
 
-- Git
-- Python 3.6, 3.7, or 3.8
-- Python dependencies listed in the file `requirements.txt`.
+- [Git](https://git-scm.com/install)
+- [Python 3.10 to 3.14](https://www.python.org/downloads/).
 - Make
-- A local copy of the [odoo/odoo repository](https://github.com/odoo/odoo) (optional)
-- A local copy of the [odoo/upgrade-util repository](https://github.com/odoo/upgrade-util) (optional)
+- Python dependencies from `requirements.txt` (see instructions below)
+- A local copy of the [odoo/odoo](https://github.com/odoo/odoo) repository (optional)
+- A local copy of the [odoo/upgrade-util](https://github.com/odoo/upgrade-util) repository
+  (optional)
 
-### Instructions
+### Quick start
 
-1. In a terminal, navigate to the root directory of the documentation and build it `make`.
-   Additional commands are available with `make help`.
-2. Open the file `documentation/_build/html/index.html` in your web browser.
-3. See [this guide](https://www.odoo.com/documentation/latest/contributing/documentation.html)
-   for more detailed instructions.
+1. Create and activate a virtual environment.
+   - On Linux and macOS: `python3 -m venv .venv && source .venv/bin/activate`
+   - On Windows (PowerShell): `py3 -m venv .venv; .\.venv\Scripts\Activate.ps1`
+2. Install the Python dependencies: `pip install -r requirements.txt`
+3. Build the documentation: `make html` (see more commands with `make help`)
+4. Open `documentation/_build/html/index.html` in your web browser.
 
-Optional: place your local copy of the `odoo/odoo` and `odoo/upgrade-util` repositories in
-the parent directory or in the root directory of the documentation to build the latter
-with the documented Python docstrings.
+### Additional build options
+
+- `make fast` to build the documentation with a shallow menu (faster).
+- `make clean` to delete the build files.
+- `make test` to run the guidelines tests.
+- `make html CURRENT_LANG=fr` to build the documentation only in French.
+- `make html CURRENT_LANG=fr LANGUAGES=en,fr,de` to build the documentation in French and enable the
+  language switcher, with the specified LANGUAGES as available languages. This command must be
+  invoked for each CURRENT_LANG you want to build.
+- `make html VERSIONS=17.0,18.0,saas-18.4,19.0,master` to build the documentation in the **current
+  version** and enable the version switcher, with the specified VERSIONS as available versions. This
+  command must be invoked for each of the VERSIONS you want to build.
+
+The list of available languages can be found in `conf.py`, in the `languages_names` variable.
+
+When building the documentation for a specific language or version, the build files are created in
+`documentation/_build/html/<language>/`, `documentation/_build/html/<version>/` or
+`documentation/_build/html/<version>/<language>/`.
+
+### Using local Odoo sources
+
+If you have local checkouts of `odoo/odoo` and/or `odoo/upgrade-util`, place them either:
+- as siblings of this repository (in the parent directory), or
+- inside the `documentation` directory.
+
+When present in one of these locations, the build will include Python docstrings from those
+repositories if their version matches the documentation's version.
+
+### Troubleshooting
+
+- Verify your Python version: `python3 --version` (must be 3.10–3.14)
+- Ensure your virtual environment is active and dependencies are installed.
+- If you have made changes to the file structure, try `make clean` before building.
+- If the language or version switchers redirect to a missing file, check that you have built the
+  documentation for all available languages and versions.
+- The "Developer" documentation is only available in English.
 
 ## Contribute to the documentation
 
-For contributions to the content of the documentation, please refer to the
+For contributions to the content of the documentation, see the
 [Introduction Guide](https://www.odoo.com/documentation/latest/contributing/documentation.html).
 
-To **report a content issue**, **request new content** or **ask a question**, use the
-[repository's issue tracker](https://github.com/odoo/documentation/issues).
-
-## Learn More
-
-To learn more about Odoo, in addition to the documentation, have a look at
-[the official eLearning](https://odoo.com/slides) and
-[Scale-up, The Business Game](https://www.odoo.com/page/scale-up-business-game).
+To report a content issue, request new content, or ask a question, use the
+[issue tracker](https://github.com/odoo/documentation/issues).
