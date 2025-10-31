@@ -225,6 +225,10 @@ Python code
    can be defined as a :ref:`Fixed <taxes/computation/fixed>` tax. Doing so is strongly recommended
    over defining a :guilabel:`Python Code` tax.
 
+.. note::
+   To use :guilabel:`Custom Formula` taxes, :ref:`install <general/install>` the :guilabel:`Define
+   Taxes as Python Code` (`account_python_tax`) module.
+
 A tax defined as :guilabel:`Python Code` consists of two snippets of Python code that are executed
 in a local environment that can access the unit price, quantity, product, and partner.
 :guilabel:`Python Code` defines the amount of the tax, and :guilabel:`Applicable Code` defines
@@ -387,8 +391,6 @@ tax-inclusive.
    For a guide on configuring tax-excluded and tax-included prices for B2B and B2C customers,
    see :doc:`taxes/B2B_B2C`.
 
-   .. image:: taxes/toggle-button.png
-
 .. _taxes/base-subsequent:
 
 Affect base of subsequent taxes
@@ -396,8 +398,8 @@ Affect base of subsequent taxes
 
 If this setting is enabled, any subsequent tax applied on the same product line that has
 :ref:`taxes/base-affected` will be based on a modified sales price. The exact behavior depends on
-whether the tax with :guilabel:`Affect base of subsequent taxes` is :ref:`taxes/included-in-price`
-or not.
+whether the tax with :guilabel:`Affect base of subsequent taxes` is :ref:`Included in Price
+<taxes/included-in-price>` or not.
 
 .. tabs::
    .. tab:: Tax-excluded
