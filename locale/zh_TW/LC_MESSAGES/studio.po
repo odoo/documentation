@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Odoo 19.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-20 14:56+0200\n"
-"PO-Revision-Date: 2025-10-31 03:11+0000\n"
+"PO-Revision-Date: 2025-10-31 22:02+0000\n"
 "Last-Translator: \"Tony Ng (ngto)\" <ngto@odoo.com>\n"
 "Language-Team: Chinese (Traditional Han script) <https://translate.odoo.com/"
 "projects/odoo-19-doc/studio/zh_Hant/>\n"
@@ -1880,8 +1880,8 @@ msgstr ":guilabel:`文字` "
 msgid ""
 ":guilabel:`Badge`: displays the value inside a rounded shape, similar to a "
 "tag. The value cannot be edited on the UI, but a default value can be set."
-msgstr ":guilabel:`徽章`：在圓圈內顯示資料值，類似標籤。該值不可在操作介面上編輯，但"
-"可設定預設值。"
+msgstr ":guilabel:`徽章`：以圓角形狀顯示資料值，類似標籤。該值不可在操作介面上編輯，"
+"但可設定預設值。"
 
 #: ../../content/applications/studio/fields.rst:38
 #: ../../content/applications/studio/fields.rst:70
@@ -2535,7 +2535,7 @@ msgstr "為協助使用者選取正確的記錄，請按一下 :guilabel:`範圍
 msgid ""
 ":guilabel:`Badge`: displays the value inside a rounded shape, similar to a "
 "tag. The value cannot be edited on the UI."
-msgstr ":guilabel:`徽章`：在圓圈內顯示資料值，類似標籤。該值不可在操作介面上編輯。"
+msgstr ":guilabel:`徽章`：以圓角形狀顯示資料值，類似標籤。該值不可在操作介面上編輯。"
 
 #: ../../content/applications/studio/fields.rst:397
 msgid "One2Many (`one2many`)"
@@ -2546,17 +2546,20 @@ msgid ""
 "The :guilabel:`One2Many` field is used to display the existing relations "
 "between a record on the current model and multiple records from another "
 "model."
-msgstr ""
+msgstr ":guilabel:`一對多` "
+"（One2Many）欄位可用作顯示目前模型內的記錄與另一模型中多項記錄之間，已存在的"
+"現有關係。"
 
 #: ../../content/applications/studio/fields.rst:403
 msgid ""
 "You could add a :guilabel:`One2Many` field on the *Contact* model to look at "
 "**one** customer's **many** sales orders."
-msgstr ""
+msgstr "例如，你可在 **聯絡人** 模型中加入 :guilabel:`一對多` 欄位，便可查看 **一名**"
+" 個別客戶的 **多張** 銷售單。"
 
 #: ../../content/applications/studio/fields.rst:0
 msgid "Diagram showing a one2many relationship"
-msgstr ""
+msgstr "展示一對多關係的示意圖"
 
 #: ../../content/applications/studio/fields.rst:410
 msgid ""
@@ -2565,16 +2568,20 @@ msgid ""
 "many2one>`. One2Many relations do not exist independently: a reverse-search "
 "of existing Many2One relations is performed."
 msgstr ""
+"要使用 :guilabel:`一對多` 欄位，兩個模型必須已透過 :ref:`多對一欄位 <studio/"
+"fields/relational-fields-many2one>` "
+"連結。一對多關係不會獨立存在，系統會進行反向搜尋，尋找目前已有的多對一關係。"
 
 #: ../../content/applications/studio/fields.rst:417
 msgid "Lines (`one2many`)"
-msgstr ""
+msgstr "資料行（`one2many`）"
 
 #: ../../content/applications/studio/fields.rst:419
 msgid ""
 "The :guilabel:`Lines` field is used to create a table with rows and columns "
 "(e.g., the lines of products on a sales order)."
-msgstr ""
+msgstr ":guilabel:`資料行` "
+"欄位是用於建立由資料列（橫列）及直欄構成的表格，例如銷售單的產品資料行。"
 
 #: ../../content/applications/studio/fields.rst:423
 msgid ""
@@ -2583,14 +2590,17 @@ msgid ""
 "clicks on :guilabel:`Add a line`, click on :guilabel:`Edit Form View` "
 "instead."
 msgstr ""
+"若要修改直欄，請按一下 :guilabel:`資料行` 欄位，然後按 "
+":guilabel:`編輯列表檢視`。若要編輯使用者按下 :guilabel:`加入資料行` "
+"時彈出的表單，請按一下 :guilabel:`編輯表單檢視`。"
 
 #: ../../content/applications/studio/fields.rst:0
 msgid "Example of a Lines field"
-msgstr ""
+msgstr "資料行欄位範例"
 
 #: ../../content/applications/studio/fields.rst:435
 msgid "Many2Many (`many2many`)"
-msgstr ""
+msgstr "多對多（`many2many`）"
 
 #: ../../content/applications/studio/fields.rst:437
 msgid ""
@@ -2600,6 +2610,11 @@ msgid ""
 "opening`, :guilabel:`Domain`, just like :ref:`Many2One fields <studio/fields/"
 "relational-fields-many2one>`."
 msgstr ""
+":guilabel:`多對多` "
+"（Many2Many）欄位用於將另一模型中的多項記錄，連結至目前模型中的多項記錄。與 "
+":ref:`多對一 <studio/fields/relational-fields-many2one>` 欄位一樣，"
+"多對多欄位也可使用 :guilabel:`禁止建立` 、 :guilabel:`禁止開啟` 及 "
+":guilabel:`範圍` 功能。"
 
 #: ../../content/applications/studio/fields.rst:443
 msgid ""
@@ -2608,15 +2623,18 @@ msgid ""
 "single user to be assigned to **many** tasks and **many** users to be "
 "assigned to a single task."
 msgstr ""
+"舉例，在 **任務** 模型中， :guilabel:`受指派人` 欄位是一個指向 **聯絡人** "
+"模型的 :guilabel:`多對多` 欄位。這樣便可允許一名使用者被指派至 **多項** "
+"任務，同時也允許 **多名** 使用者被指派至同一個任務。"
 
 #: ../../content/applications/studio/fields.rst:0
 msgid "Diagram showing many2many relationships"
-msgstr ""
+msgstr "展示多對多關係的示意圖"
 
 #: ../../content/applications/studio/fields.rst:450
 msgid ""
 ":guilabel:`Checkboxes`: users can select several values using checkboxes."
-msgstr ""
+msgstr ":guilabel:`勾選方格`：使用者可使用勾選方格，選取多個值。"
 
 #: ../../content/applications/studio/fields.rst:451
 msgid ""
@@ -2624,10 +2642,12 @@ msgid ""
 "shapes, also known as *tags*. This has the same effect as selecting "
 "the :ref:`Tags field <studio/fields/relational-fields-tags>`."
 msgstr ""
+":guilabel:`標籤`：使用者可選取多個以圓角形狀顯示的值，這些值也稱為「標籤」。"
+"這與選用 :ref:`標籤 <studio/fields/relational-fields-tags>` 欄位的效果相同。"
 
 #: ../../content/applications/studio/fields.rst:458
 msgid "Tags (`many2many`)"
-msgstr ""
+msgstr "標籤（`many2many`）"
 
 #: ../../content/applications/studio/fields.rst:460
 msgid ""
@@ -2639,27 +2659,34 @@ msgid ""
 "effects as described under :ref:`Many2Many <studio/fields/relational-fields-"
 "many2many>`."
 msgstr ""
+":guilabel:`標籤` 欄位可用於顯示多個來自另一模型的值，這些值以圓角形狀顯示，"
+"也稱為 **標籤** 。此欄位類型是 :ref:`多對多欄位 <studio/fields/relational-"
+"fields-many2many>`，預設已選取 :guilabel:`標籤` 小工具。故此， "
+":guilabel:`勾選方格` 及 :guilabel:`多對多` 小工具的效果，與 :ref:`多對多 <"
+"studio/fields/relational-fields-many2many>` 章節所述相同。"
 
 #: ../../content/applications/studio/fields.rst:467
 msgid ""
 "To display tags with different background colors, tick :guilabel:`Use "
 "colors`."
-msgstr ""
+msgstr "若要使用不同背景顏色顯示不同標籤，請勾選 :guilabel:`使用顏色`。"
 
 #: ../../content/applications/studio/fields.rst:0
 msgid "Example of a Tags field"
-msgstr ""
+msgstr "標籤欄位範例"
 
 #: ../../content/applications/studio/fields.rst:477
 msgid "Related Field (`related`)"
-msgstr ""
+msgstr "相關欄位（`related`）"
 
 #: ../../content/applications/studio/fields.rst:479
 msgid ""
 "A :guilabel:`Related Field` is not a relational field per se; no "
 "relationship is created between models. It uses an existing relationship to "
 "fetch and display information from another record."
-msgstr ""
+msgstr ":guilabel:`相關欄位` "
+"本身並非一個關係欄位，不會在模型之間建立任何關係。它利用已有的關係，讀取其他"
+"記錄的資料，然後顯示。"
 
 #: ../../content/applications/studio/fields.rst:483
 msgid ""
@@ -2667,6 +2694,8 @@ msgid ""
 "the :guilabel:`Related Field` `partner_id.email` by "
 "selecting :guilabel:`Customer` and then :guilabel:`Email`."
 msgstr ""
+"舉例，若要在 **銷售單** 模型中顯示客戶的電郵地址，可選擇 :guilabel:`客戶`，"
+"然後選擇 :guilabel:`電郵`，以使用「partner_id.email」 :guilabel:`相關欄位`。"
 
 #: ../../content/applications/studio/fields.rst:489
 msgid "Properties"
@@ -2674,14 +2703,15 @@ msgstr "屬性"
 
 #: ../../content/applications/studio/fields.rst:492
 msgid "General properties"
-msgstr ""
+msgstr "一般屬性"
 
 #: ../../content/applications/studio/fields.rst:494
 msgid ""
 ":guilabel:`Invisible`: Enable this property when it is not necessary for "
 "users to view a field on the UI. This helps declutter the UI by only showing "
 "the essential fields depending on a specific situation."
-msgstr ""
+msgstr ":guilabel:`隱藏`：若使用者無需在操作介面看到該欄位，便可啟用此屬性。這有助簡"
+"化使用者操作介面，只會顯示個別情況需要顯示的欄位。"
 
 #: ../../content/applications/studio/fields.rst:498
 msgid ""
@@ -2689,18 +2719,20 @@ msgid ""
 "hidden fields in Studio, click on a view's :guilabel:`View` tab and "
 "enable :guilabel:`Show Invisible Elements`."
 msgstr ""
+":guilabel:`隱藏` 屬性在 Studio 內也適用。若要在 Studio 模式下查看隱藏欄位，"
+"請按一下檢視畫面的 :guilabel:`檢視` 分頁，然後啟用 :guilabel:`顯示隱藏元素`。"
 
 #: ../../content/applications/studio/fields.rst:501
 msgid ""
 ":guilabel:`Required`: Enable this property if a field should always be "
 "completed by the user before being able to proceed."
-msgstr ""
+msgstr ":guilabel:`必填`：若使用者必須先完成填寫該欄位才可繼續操作，可啟用此屬性。"
 
 #: ../../content/applications/studio/fields.rst:504
 msgid ""
 ":guilabel:`Readonly`: Enable this property if users should not be able to "
 "modify a field."
-msgstr ""
+msgstr ":guilabel:`唯讀`：若不應讓使用者修改該欄位，可啟用此屬性。"
 
 #: ../../content/applications/studio/fields.rst:507
 msgid ""
@@ -2708,6 +2740,8 @@ msgid ""
 "and :guilabel:`Readonly` for specific records only by clicking "
 "on :guilabel:`Conditional` and creating a filter."
 msgstr ""
+"你可按一下 :guilabel:`條件規則` 建立篩選器，選擇只為個別記錄啟用 "
+":guilabel:`隱藏` 、 :guilabel:`必填` 及 :guilabel:`唯讀` 屬性。"
 
 #: ../../content/applications/studio/fields.rst:511
 msgid ""
@@ -2715,6 +2749,9 @@ msgid ""
 "appears when :guilabel:`Individual` is selected, as that field would not be "
 "helpful for a :guilabel:`Company` contact."
 msgstr ""
+"舉例，在 **聯絡人** 模型的 **表單** 檢視畫面中，:guilabel:`職稱` "
+"欄位只會在選擇了 :guilabel:`個人` 時才會顯示，因為該欄位不適用於 "
+":guilabel:`公司` 聯絡人。"
 
 #: ../../content/applications/studio/fields.rst:515
 msgid ""
@@ -2723,6 +2760,9 @@ msgid ""
 "the :ref:`developer mode <developer-mode>` and edit the :guilabel:`Technical "
 "Name`."
 msgstr ""
+":guilabel:`顯示標籤`：使用者操作介面所顯示的欄位名稱，而非在 PostgreSQL "
+"資料庫中使用的名稱。若要查看或變更資料庫中使用的技術名稱，請啟動 :ref:`"
+"開發人員模式 <developer-mode>`，然後編輯 :guilabel:`技術名稱`。"
 
 #: ../../content/applications/studio/fields.rst:519
 msgid ""
@@ -2730,31 +2770,38 @@ msgid ""
 "description. The text is displayed inside a tooltip box when hovering with "
 "your mouse over the question mark beside the field's label."
 msgstr ""
+":guilabel:`幫助提示`：若想提供註釋，解釋欄位的用途，可加入工具提示描述。使用"
+"者以滑鼠停留在欄位顯示標籤旁邊的問號圖示時，便會出現提示文字，以工具提示方塊"
+"顯示。"
 
 #: ../../content/applications/studio/fields.rst:523
 msgid ""
 ":guilabel:`Widget`: To change the default appearance or functionality of a "
 "field, select one of the available widgets."
-msgstr ""
+msgstr ":guilabel:`小工具`：若要變更欄位的預設外觀或功能，可選用其中一個可用的小工具"
+"。"
 
 #: ../../content/applications/studio/fields.rst:526
 msgid ""
 ":guilabel:`Placeholder`: To provide an example of how a field should be "
 "completed, add placeholder text. The text appears in light gray until a "
 "value is entered."
-msgstr ""
+msgstr ":guilabel:`佔位符`：若想提供如何填寫欄位的範例，可加入佔位文字。使用者輸入資"
+"料值之前，佔位文字會在欄位內，以淺灰色顯示。"
 
 #: ../../content/applications/studio/fields.rst:529
 msgid ""
 ":guilabel:`Default value`: To display a default value in a field when a "
 "record is created, add a value."
-msgstr ""
+msgstr ":guilabel:`預設值`：若要在建立記錄時，在欄位中顯示預設值，可加入此值。"
 
 #: ../../content/applications/studio/fields.rst:532
 msgid ""
 ":guilabel:`Allow visibility to groups`: To limit which users can view the "
 "field, select one or more user access :ref:`groups <access-rights/groups>`."
 msgstr ""
+":guilabel:`允許向群組顯示`：若想限制哪些使用者可看見此欄位，可選取一個或多個"
+"「使用者存取 :ref:`群組 <access-rights/groups>` 」。"
 
 #: ../../content/applications/studio/fields.rst:534
 msgid ""
@@ -2762,16 +2809,20 @@ msgid ""
 "seeing the field, select one or more user access :ref:`groups <access-rights/"
 "groups>`."
 msgstr ""
+":guilabel:`禁止向群組顯示`：若想防止部份使用者看見此欄位，可選取一個或多個「"
+"使用者存取 :ref:`群組 <access-rights/groups>` 」。"
 
 #: ../../content/applications/studio/fields.rst:540
 msgid "Properties for Date & Time fields"
-msgstr ""
+msgstr "日期時間欄位屬性"
 
 #: ../../content/applications/studio/fields.rst:542
 msgid ""
 "For :guilabel:`Date & Time` fields that have the :guilabel:`Date & Time` "
 "or :guilabel:`Date Range` widget set, some specific properties are available:"
 msgstr ""
+"設定了 :guilabel:`日期時間` 或 :guilabel:`日期範圍` 小工具的 "
+":guilabel:`日期時間` 欄位，可使用以下特別屬性："
 
 #: ../../content/applications/studio/fields.rst:545
 msgid ""
@@ -2781,6 +2832,10 @@ msgid ""
 "or :guilabel:`Decade`. If no value is selected, the user must select a day "
 "in the date selector."
 msgstr ""
+":guilabel:`最小精確度`：決定使用者在日期選擇器中，必須選取的最小日期單位。"
+"此值可以是 :guilabel:`日` 、 :guilabel:`月` 、 :guilabel:`年` 或 "
+":guilabel:`十年`。若未有設定任何值，使用者使用日期選擇器時，必須選擇一天（即"
+"一個日子）。"
 
 #: ../../content/applications/studio/fields.rst:548
 msgid ""
@@ -2790,12 +2845,17 @@ msgid ""
 "or :guilabel:`Decade`. If no value is selected, the user can navigate the "
 "date selector by decade."
 msgstr ""
+":guilabel:`最大精確度`：決定使用者在日期選擇器中，可用作導航的最大日期單位。"
+"此值可以是 :guilabel:`日` 、 :guilabel:`月` 、 :guilabel:`年` 或 "
+":guilabel:`十年`。若未有設定任何值，使用者可按十年為單位，瀏覽及導航至不同日"
+"期。"
 
 #: ../../content/applications/studio/fields.rst:551
 msgid ""
 ":guilabel:`Warning for future dates`: Enable this property to display a "
 "warning icon if a future date is selected."
-msgstr ""
+msgstr ":guilabel:`警告未來日期`：啟用此屬性後，若選取了未來日期，系統會顯示警告圖示"
+"。"
 
 #: ../../content/applications/studio/fields.rst:553
 msgid ""
@@ -2804,13 +2864,17 @@ msgid ""
 "08:05:00`. The numeric mode is the format set on the current language. In "
 "this mode the seconds are always shown."
 msgstr ""
+":guilabel:`日期格式`：預設情況下，日期會顯示為 `Apr 2, 2025, 08:05 AM` "
+"。啟用此屬性後，可將日期改為以 `4/2/2025 08:05:00` "
+"格式顯示。數字的格式會按照目前語言所設定的格式。此模式會永遠顯示秒數。"
 
 #: ../../content/applications/studio/fields.rst:557
 msgid ""
 ":guilabel:`Show date`: This property is enabled by default "
 "for :guilabel:`Date & Time` fields. Disable this property to show only the "
 "time."
-msgstr ""
+msgstr ":guilabel:`顯示日期`： :guilabel:`日期時間` "
+"欄位預設會啟用此屬性。停用此屬性後，只會顯示時間。"
 
 #: ../../content/applications/studio/fields.rst:559
 msgid ""
@@ -2819,19 +2883,24 @@ msgid ""
 "property to show only the date. This can keep a list view less cluttered, "
 "for example."
 msgstr ""
+":guilabel:`顯示時間`： :guilabel:`日期時間` "
+"欄位預設會啟用此屬性。對於唯讀欄位，停用此屬性會只顯示日期。舉例，如此設定可"
+"使列表檢視畫面較簡潔。"
 
 #: ../../content/applications/studio/fields.rst:562
 msgid ""
 ":guilabel:`Show seconds`: This property is disabled by default "
 "for :guilabel:`Date & Time` fields. Enable the property to show the seconds."
-msgstr ""
+msgstr ":guilabel:`顯示秒數`： :guilabel:`日期時間` "
+"欄位預設不會啟用此屬性。啟用此屬性後，會顯示秒數。"
 
 #: ../../content/applications/studio/fields.rst:564
 msgid ""
 ":guilabel:`Time interval`: Enter a value to determine the minute intervals "
 "shown in the time selector. For example, enter 15 to allow quarter-hour "
 "intervals. The default value is set to 5 minutes."
-msgstr ""
+msgstr ":guilabel:`時間間隔`：此值決定時間選擇器所顯示的分鐘間隔。例如：輸入「15」"
+"可設定每隔 15 分鐘有可選時間。預設值為 5 分鐘。"
 
 #: ../../content/applications/studio/fields.rst:567
 msgid ""
@@ -2840,6 +2909,9 @@ msgid ""
 "current date is always the earliest accepted date, enter `today`. On the "
 "date selector, dates prior to the earliest accepted date are grayed out."
 msgstr ""
+":guilabel:`最早接受日期`：日期選擇器可選取的最早日期，以 ISO 格式輸入，即 "
+"`YYYY-MM-DD` （年年年年-月月-日日）。若最早接受的日期必定是目前日期，請輸入 "
+"`today` （今天）。在日期選擇器中，最早接受日期之前的日期會以灰色顯示。"
 
 #: ../../content/applications/studio/fields.rst:571
 msgid ""
@@ -2848,6 +2920,9 @@ msgid ""
 "is always the latest accepted date, enter `today`. On the date selector, "
 "dates later than the latest accepted date are grayed out."
 msgstr ""
+":guilabel:`最遲接受日期`：日期選擇器可選取的最遲日期，以 ISO 格式輸入，即 "
+"`YYYY-MM-DD` （年年年年-月月-日日）。若最遲接受的日期必定是目前日期，請輸入 "
+"`today` （今天）。在日期選擇器中，最遲接受日期之後的日期會以灰色顯示。"
 
 #: ../../content/applications/studio/models_modules_apps.rst:3
 msgid "Models, modules, and apps"
@@ -4048,7 +4123,7 @@ msgstr ""
 
 #: ../../content/applications/studio/views.rst:3
 msgid "Views"
-msgstr "檢視"
+msgstr "檢視畫面"
 
 #: ../../content/applications/studio/views.rst:5
 msgid ""
@@ -4060,6 +4135,11 @@ msgid ""
 "records>`, :ref:`timeline <studio/views/timeline>`, and :ref:`reporting "
 "<studio/views/reporting>`."
 msgstr ""
+"檢視畫面是一種介面，用以顯示 :doc:`模型 <models_modules_apps>` "
+"所裝載的資料。一個模型可以有多個不同檢視畫面，而不同檢視畫面只是顯示相同數據"
+"的不同方式。在 Studio 中，檢視畫面分為 4 個類別： :ref:`一般 <studio/views/"
+"general>` 、 :ref:`多項記錄 <studio/views/multiple-records>` 、 :ref:`時間線 "
+"<studio/views/timeline>` ，以及 :ref:`報告 <studio/views/reporting>`。"
 
 #: ../../content/applications/studio/views.rst:12
 msgid ""
@@ -4068,6 +4148,9 @@ msgid ""
 "(:guilabel:`ellipsis`) icon next to the desired view, and "
 "click :guilabel:`Set as Default`."
 msgstr ""
+"要更改模型的預設檢視畫面，請 :ref:`進入 Studio 模式 <studio/access>`，前往 "
+":guilabel:`檢視畫面`，按一下想要的檢視畫面旁邊的 :icon:`fa-ellipsis-v` "
+"(:guilabel:`省略號`) 圖示，然後按 :guilabel:`設為預設`。"
 
 #: ../../content/applications/studio/views.rst:15
 msgid ""
@@ -4075,6 +4158,9 @@ msgid ""
 "the :ref:`Developer mode <developer-mode>`, go to the view you want to edit, "
 "select the :guilabel:`View` tab, and click :guilabel:`</> XML`."
 msgstr ""
+"你可使用內置的 XML 編輯器修改檢視畫面。方法是 :ref:`啟動開發人員模式 "
+"<developer-mode>`，進入想編輯的檢視畫面，選擇 :guilabel:`檢視` 分頁，然後按 "
+":guilabel:`</> XML`。"
 
 #: ../../content/applications/studio/views.rst:20
 msgid ""
@@ -4086,6 +4172,12 @@ msgid ""
 "corresponding XPath, which defines the modified part of the view, are "
 "automatically generated."
 msgstr ""
+"使用 XML "
+"編輯器編輯檢視畫面時，請避免直接修改標準及繼承的檢視畫面，因為系統進行更新或"
+"模組升級期間，這些變更會被重設，最後遺失。請務必確保選用正確的 Studio "
+"繼承檢視畫面：例如，若想在 Studio 中拖放新欄位去修改檢視畫面，"
+"系統會自動產生一個特定的 Studio 繼承檢視畫面，以及其對應的 "
+"XPath（用於定義檢視畫面被修改的部份）。"
 
 #: ../../content/applications/studio/views.rst:30
 msgid "General views"
@@ -4098,7 +4190,7 @@ msgstr "一般檢視畫面"
 msgid ""
 "The settings described below are found under the view's :guilabel:`View` tab "
 "unless specified otherwise."
-msgstr ""
+msgstr "下文描述的設定，可在檢視畫面的 :guilabel:`檢視` 分頁中找到，除非另有註明。"
 
 #: ../../content/applications/studio/views.rst:39
 msgid "Form"
@@ -4108,13 +4200,15 @@ msgstr "表單"
 msgid ""
 "The :guilabel:`Form` :icon:`fa-address-card` view is used when creating and "
 "editing records, such as contacts, sales orders, products, etc."
-msgstr ""
+msgstr ":guilabel:`表單` :icon:`fa-address-card` "
+"檢視畫面會在建立及編輯記錄時使用，例如聯絡人、銷售單、產品等。"
 
 #: ../../content/applications/studio/views.rst:44
 msgid ""
 "To structure a form, drag and drop the :guilabel:`Tabs and Columns` element "
 "found under the :guilabel:`+ Add` tab."
-msgstr ""
+msgstr "若要編輯表單的結構，請在 :guilabel:`+ 新增` 分頁下，拖放 "
+":guilabel:`分頁及直欄` 元素。"
 
 #: ../../content/applications/studio/views.rst:46
 msgid ""
@@ -4122,12 +4216,15 @@ msgid ""
 "untick :guilabel:`Can Create`, :guilabel:`Can Edit`, :guilabel:`Can Delete` "
 "or :guilabel:`Can Duplicate`."
 msgstr ""
+"若想禁止使用者建立、編輯、刪除或複製記錄，可取消勾選 :guilabel:`可建立` 、 "
+":guilabel:`可編輯` 、 :guilabel:`可刪除` 或 :guilabel:`可複製`。"
 
 #: ../../content/applications/studio/views.rst:48
 msgid ""
 "To add a button, click :guilabel:`Add a button` at the top of the form, "
 "enter a :guilabel:`Label`, and select the button's action:"
-msgstr ""
+msgstr "要加入按鈕，請在表單頂部，按一下 :guilabel:`加入按鈕`，然後輸入按鈕的 "
+":guilabel:`標籤`，並選擇按鈕的操作："
 
 #: ../../content/applications/studio/views.rst:51
 #: ../../content/applications/studio/views.rst:155
@@ -4135,13 +4232,15 @@ msgid ""
 ":guilabel:`Run a Server Action`: select the :ref:`server action <reference/"
 "actions/server>` to be executed from the dropdown list;"
 msgstr ""
+":guilabel:`運行伺服器操作`：從下拉式選單中，選擇要執行的 :ref:`伺服器操作 <"
+"reference/actions/server>`。"
 
 #: ../../content/applications/studio/views.rst:53
 #: ../../content/applications/studio/views.rst:157
 msgid ""
 ":guilabel:`Call a method`: specify an existing Python method already defined "
 "in Odoo."
-msgstr ""
+msgstr ":guilabel:`召用方法`：指定要執行的、已在 Odoo 系統中定義的現有 Python 方法。"
 
 #: ../../content/applications/studio/views.rst:55
 msgid ""
@@ -4149,6 +4248,9 @@ msgid ""
 "its :guilabel:`Label` or :guilabel:`Class` (either `btn-primary` or `btn-"
 "secondary`) in the :guilabel:`Properties` tab."
 msgstr ""
+"要更改按鈕的標籤或樣式，請按一下該按鈕，前往 :guilabel:`屬性` 分頁，"
+"然後編輯其 :guilabel:`標籤` 或 :guilabel:`類` （即 class 樣式，只會是 `btn-"
+"primary` 或 `btn-secondary` ）。"
 
 #: ../../content/applications/studio/views.rst:57
 msgid ""
@@ -4157,10 +4259,13 @@ msgid ""
 "an :guilabel:`Icon`, and select a :ref:`related field <studio/fields/"
 "relational-fields-related-field>`."
 msgstr ""
+"要加入智能按鈕，請在表單右上角，按一下 :icon:`fa-plus-square` "
+"(:guilabel:`加號`) 圖示，然後輸入 :guilabel:`標籤`，選擇 :guilabel:`圖示`，"
+"並選取 :ref:`相關欄位 <studio/fields/relational-fields-related-field>`。"
 
 #: ../../content/applications/studio/views.rst:0
 msgid "Sales order model's Form view"
-msgstr ""
+msgstr "銷售單模型的表單檢視畫面"
 
 #: ../../content/applications/studio/views.rst:69
 msgid "Activity"
@@ -4171,14 +4276,17 @@ msgid ""
 "The :guilabel:`Activity` :icon:`fa-clock-o` view is used to schedule and "
 "have an overview of activities (emails, calls, etc.) linked to records."
 msgstr ""
+":guilabel:`活動` :icon:`fa-clock-o` "
+"檢視畫面可用作安排與記錄相關聯的活動（例如電子郵件、通話等），以及概覽這些活"
+"動。"
 
 #: ../../content/applications/studio/views.rst:75
 msgid "This view can only be modified within Studio by editing the XML code."
-msgstr ""
+msgstr "此檢視畫面只可在 Studio 模式中，透過編輯 XML 程式碼去更改。"
 
 #: ../../content/applications/studio/views.rst:0
 msgid "Lead/Opportunity model's Activity view"
-msgstr ""
+msgstr "潛在客戶/商機模型的活動檢視畫面"
 
 #: ../../content/applications/studio/views.rst:85
 msgid "Search"
@@ -4188,7 +4296,8 @@ msgstr "搜尋"
 msgid ""
 "The :guilabel:`Search` :icon:`oi-search` view is added on top of other views "
 "to filter, group, and search records."
-msgstr ""
+msgstr ":guilabel:`搜尋` :icon:`oi-search` "
+"檢視畫面可加入至其他檢視畫面，用作篩選、分組及搜尋記錄。"
 
 #: ../../content/applications/studio/views.rst:90
 msgid ""
@@ -4196,17 +4305,20 @@ msgid ""
 "using :guilabel:`Separators`, go to the :guilabel:`+ Add` tab and drag and "
 "drop them under :guilabel:`Filters`."
 msgstr ""
+"要加入自訂的 :guilabel:`篩選器` 並使用 :guilabel:`分隔線` 整理結構，請前往 "
+":guilabel:`+ 新增` 分頁，將相關項目拖放至 :guilabel:`篩選器` 下。"
 
 #: ../../content/applications/studio/views.rst:92
 msgid ""
 "To add an existing field under the search dropdown menu, go to "
 "the :guilabel:`+ Add` tab and drag and drop it "
 "under :guilabel:`Autocompletion Fields`."
-msgstr ""
+msgstr "要在搜尋下拉選單中加入現有欄位，請前往 :guilabel:`+ 新增` 分頁，"
+"並將相關項目拖放至 :guilabel:`自動完成欄位` 下。"
 
 #: ../../content/applications/studio/views.rst:0
 msgid "Project model's Search view on the Kanban view"
-msgstr ""
+msgstr "專案模型的看板檢視模式下的搜尋檢視畫面"
 
 #: ../../content/applications/studio/views.rst:103
 msgid "Multiple records views"
@@ -4222,6 +4334,9 @@ msgid ""
 "business flows by moving records across stages or as an alternative way to "
 "display records inside *cards*."
 msgstr ""
+":guilabel:`看板` :icon:`oi-view-kanban` "
+"檢視畫面經常用作支援業務流程（可將記錄移動至不同階段），或作為一種替代顯示方"
+"式，以 **卡片** 形式顯示各項記錄。"
 
 #: ../../content/applications/studio/views.rst:118
 msgid ""
@@ -4229,38 +4344,42 @@ msgid ""
 "on mobile devices instead of the :ref:`List view <studio/views/multiple-"
 "records/list>`."
 msgstr ""
+"若模型設有 :guilabel:`看板` "
+"檢視畫面，使用流動裝置時會預設使用，用以顯示數據，而非使用 :ref:`"
+"列表檢視模式 <studio/views/multiple-records/list>`。"
 
 #: ../../content/applications/studio/views.rst:121
 msgid ""
 "To prevent users from creating new records, untick :guilabel:`Can Create`."
-msgstr ""
+msgstr "若要防止使用者建立新的記錄，可取消勾選 :guilabel:`可建立`。"
 
 #: ../../content/applications/studio/views.rst:122
 msgid ""
 "To create records directly within the view, in a minimalistic form, "
 "enable :guilabel:`Quick Create`."
-msgstr ""
+msgstr "若要在檢視畫面中，直接以簡約表單建立記錄，可啟用 :guilabel:`快速建立`。"
 
 #: ../../content/applications/studio/views.rst:124
 #: ../../content/applications/studio/views.rst:151
 msgid ""
 "To set a default grouping for records, select a field "
 "under :guilabel:`Default Group By`."
-msgstr ""
+msgstr "若要設定記錄的預設分組方式，請在 :guilabel:`預設分組依據` 下，選擇一個欄位。"
 
 #: ../../content/applications/studio/views.rst:0
 msgid "Project model's Kanban view"
-msgstr ""
+msgstr "專案模型的看板檢視畫面"
 
 #: ../../content/applications/studio/views.rst:134
 msgid "List"
-msgstr "清單"
+msgstr "列表"
 
 #: ../../content/applications/studio/views.rst:136
 msgid ""
 "The :guilabel:`List` :icon:`oi-view-list` view is used to overview many "
 "records at once, look for records, and edit simple records."
-msgstr ""
+msgstr ":guilabel:`列表` :icon:`oi-view-list` "
+"檢視畫面可用於同時概覽眾多記錄、查找記錄，以及編輯簡單的記錄。"
 
 #: ../../content/applications/studio/views.rst:139
 msgid ""
@@ -4268,6 +4387,8 @@ msgid ""
 "untick :guilabel:`Can Create`, :guilabel:`Can Edit`, :guilabel:`Can Delete`, "
 "or :guilabel:`Can Duplicate`."
 msgstr ""
+"若想禁止使用者建立、編輯、刪除或複製記錄，可取消勾選 :guilabel:`可建立` 、 "
+":guilabel:`可編輯` 、 :guilabel:`可刪除` 或 :guilabel:`可複製`。"
 
 #: ../../content/applications/studio/views.rst:141
 msgid ""
@@ -4275,22 +4396,27 @@ msgid ""
 "either :guilabel:`Add record at the bottom`, :guilabel:`Add record on top` "
 "or :guilabel:`Open form view` under :guilabel:`When Creating Record`."
 msgstr ""
+"要在檢視畫面中直接建立及編輯記錄，請在 :guilabel:`建立記錄時` 之下，選擇 "
+":guilabel:`新記錄加入至底部` 、 :guilabel:`新記錄加入至頂部` 或 "
+":guilabel:`開啟表單檢視畫面`。"
 
 #: ../../content/applications/studio/views.rst:146
 msgid ""
 "This prevents users from opening records in :ref:`Form view <studio/views/"
 "general/form>` from the :guilabel:`List` view."
 msgstr ""
+"這會防止使用者在 :guilabel:`列表` 檢視模式中，以 :ref:`表單檢視畫面 <studio/"
+"views/general/form>` 開啟記錄查看。"
 
 #: ../../content/applications/studio/views.rst:149
 msgid "To edit several records at once, tick :guilabel:`Enable Mass Editing`."
-msgstr ""
+msgstr "要一次過編輯多項記錄，可勾選 :guilabel:`啟用大批編輯`。"
 
 #: ../../content/applications/studio/views.rst:150
 msgid ""
 "To change the way records are sorted by default, select a field "
 "under :guilabel:`Sort By`."
-msgstr ""
+msgstr "要更改記錄的預設排序方式，請在 :guilabel:`排序依據` 下，選擇一個欄位。"
 
 #: ../../content/applications/studio/views.rst:152
 msgid ""
